@@ -17,7 +17,7 @@ A library module is a piece of reusable code provided by an extension that is em
 
 The library module is structured as a [CommonJS module](https://nodejs.org/api/modules.html#modules-commonjs-modules). Within a CommonJS module, the following variables are available for usage:
 
-## [!DNL require]
+## `require`
 
 A `require` function is available for you to access:
 
@@ -31,7 +31,7 @@ var cookie = require('@adobe/reactor-cookie');
 cookie.set('foo', 'bar');
 ```
 
-## [!DNL module]
+## `module`
 
 A free variable named `module` is available which allows you to export the module's API.
 
@@ -41,7 +41,7 @@ Example usage:
 module.exports = function(…) { … }
 ```
 
-## [!DNL exports]
+## `exports` {#exports-variable}
 
 A free variable named `exports` is available which allows you to export the module's API.
 

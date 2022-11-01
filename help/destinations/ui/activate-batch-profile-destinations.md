@@ -48,7 +48,6 @@ Use the check boxes to the left of the segment names to select the segments that
 >id="platform_destinations_activate_schedule"
 >title="Schedule"
 >abstract="Use the pencil icon to set the file export type (full files or incremental files) and the export frequency."
->additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Learn more in documentation"
 
 [!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations in the form of [!DNL CSV] files. In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
 
@@ -117,6 +116,11 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 1. Select **[!UICONTROL Create]** to save the schedule.
 
 ### Export incremental files {#export-incremental-files}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_datasets_exportoptions"
+>title="File export options for datasets"
+>abstract="Select **Export incremental files** to export only the data which was added to the dataset since the last export. <br> The first incremental file export includes all the data in the dataset, acting as a backfill. Future incremental files include only the data which was added to the dataset since the first export."
 
 Select **[!UICONTROL Export incremental files]** to trigger an export where the first file is a full snapshot of all profile qualifications for the selected segment, and subsequent files are incremental profile qualifications since the previous export.
 
@@ -203,6 +207,12 @@ For profile-based destinations, you must select the profile attributes that you 
 >
 > Adobe Experience Platform prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
+>[!IMPORTANT] 
+>
+>Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.status` to your file exports. Instead, you need to manually paste the value `xdm: segmentMembership.status` into the schema field, as shown below.
+>
+>![Screen recording showing the segment membership workaround in the mapping step of the activation workflow.](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+
 File exports will vary in the following ways, depending on whether `segmentMembership.status` is selected:
 * If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
 * If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
@@ -215,7 +225,6 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 >id="platform_destinations_activate_mandatorykey"
 >title="About mandatory attributes"
 >abstract="Select the XDM schema attributes that all exported profiles should include. Profiles without the mandatory key are not exported to the destination. Not selecting a mandatory key exports all qualified profiles regardless of their attributes."
->additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Learn more in documentation"
 
 A mandatory attribute is a user-enabled checkbox which ensures all profile records contain the selected attribute. For example: all exported profiles contain an email address.​
 
@@ -231,7 +240,6 @@ It is recommended that one of the attributes is a [unique identifier](../../dest
 >id="platform_destinations_activate_deduplicationkey"
 >title="About deduplication keys"
 >abstract="Eliminate multiple records of the same profile in the export files by selecting a deduplication key. Select a single namespace or up to two XDM schema attributes as a deduplication key. Not selecting a deduplication key may lead to duplicate profile entries in the export files."
->additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Learn more in documentation"
 
 A deduplication key is a user-defined primary key which determines the identity by which users want their profiles to be deduplicated.​
 

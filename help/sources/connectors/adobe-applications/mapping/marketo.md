@@ -6,7 +6,12 @@ topic-legacy: overview
 description: The tables below contains the mappings between the fields in the Marketo datasets and their corresponding XDM fields.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 ---
-# [!DNL Marketo Engage] field mappings
+# [!DNL Marketo Engage] field mappings {#marketo-engage-field-mappings}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_marketo_mapping"
+>title="Marketo source field mappings"
+>abstract="To establish a source connection between Marketo and Platform, the Marketo source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Platform."
 
 The tables below contain the mappings between the fields in the nine [!DNL Marketo] datasets and their corresponding Experience Data Model (XDM) fields.
 

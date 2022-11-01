@@ -1,58 +1,62 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The latest release notes for Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: June 22, 2022**
+**Release date: October 26, 2022**
+
+New features in Adobe Experience Platform:
+
+- [Customer-managed keys](#cmk)
 
 Updates to existing features in Adobe Experience Platform:
 
-- [[!DNL Data Science Workspace]](#dsw)
-- [[!DNL Destinations]](#destinations)
+- [Data collection](#data-collection)
+- [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
-- [Real-Time Customer Data Platform Connections](#data-collection)
 - [Sources](#sources)
 
-## [!DNL Data Science Workspace] {#dsw}
+## Customer-managed keys {#cmk}
 
-Data Science Workspace uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions. One of the ways Data Science Workspace accomplishes this is through the use of JupyterLab. JupyterLab is a web-based user interface for <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter notebooks, code, and data.
+All data stored on Adobe Experience Platform is encrypted at rest using system-level keys. If you are using an application built on top of Platform, you can now opt to use your own encryption keys instead, giving you greater control over your data security.
+
+See the overview on [customer-managed keys](../../landing/governance-privacy-security/customer-managed-keys.md) for details on the feature.
+
+## Data collection {#data-collection}
+
+Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+**New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| JupyterLab Launcher | The JupyterLab Launcher now includes starters for Spark 3.2 notebooks. Spark 2.4 notebook starters are now replaced by Spark 3.2 notebooks and will be a part of this release. |
-| Spark 3.2 | New Scala (Spark) and PySpark recipes now use Spark 3.2 |
-| Kernels | Scala (Spark) notebooks are now authored via the Scala kernel. PySpark notebooks are now authored via the Python Kernel. The Spark and PySpark kernel are deprecated and set to be removed in a subsequent release. |
-| Recipes | New PySpark and Spark recipes now follow the Docker workflow similar to Python and R recipes. |
+| Sensitive data handling for datastreams | Datastreams now leverage several Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../edge/datastreams/overview.md#sensitive) for more information.  |
+| [!DNL Splunk] extension for event forwarding | You can now send data to [!DNL Splunk] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Splunk] extension overview](../../tags/extensions/web/splunk/overview.md) for more information. |
+| [!DNL Zendesk] extension for event forwarding | You can now send data to [!DNL Zendesk] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Zendesk] extension overview](../../tags/extensions/web/zendesk/overview.md) for more information. |
 
 {style="table-layout:auto"}
-
-For more general information on Data Science Workspace, see the [overview documentation](../../data-science-workspace/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
-**New or updated features**
-
-| Feature | Description |
-| ----------- | ----------- |
-| (Beta) Destination SDK support for [[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) file-based destinations and [configurable file names](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration). | You can now use the Destination SDK to create Google Cloud Storage destinations and define custom file names for exported files, via file name macros. <br><br> File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.|
-| Segment column in dataflow runs to batch destinations | For dataflow runs to batch destinations, the UI now displays the name of the segment associated with each dataflow run. Read more about [dataflow runs to batch destinations](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations). |
-
-{style="table-layout:auto"}
-
-**New destinations**
+**New or updated destinations**
 
 | Destination | Description |
 | ----------- | ----------- |
-| [(Beta) Google Ad Manager 360](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | The [!DNL Google Ad Manager 360] connection enables batch upload for [!DNL publisher provided identifiers] (PPID) into [!DNL Google Ad Manager 360], via [!DNL Google Cloud Storage] <br><br>This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Google Ad Manager 360] connection, contact your Adobe representative and provide your [!DNL IMS Organization ID]. |
-| [[!DNL Medallia]](/help/destinations/catalog/voice/medallia-connector.md) | Activate profiles for targeted Medallia surveys and feedback collection to better understand customer needs and expectations. |
-|[[!DNL Adobe Advertising Cloud DSP]](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md)|The Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) destination allows you to share authenticated first-party segments with approved advertisers and users for campaign activation with DSP.|
+| [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | Line is a popular communication platform that connects people, services and information and has grown from a chat app into a hub for entertainment, social, and day-to-day activities. |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 is a cloud-based business application platform that combines Enterprise Resource Planning (ERP) and Customer Relationship Management (CRM) along with productivity applications and AI tools, to bring end-to-end smoother and more controlled operations, better growth potential and reduced costs. |
+| [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | The [!DNL (Beta) Adobe Commerce] destination connector lets you select one or more Real-Time CDP segments to activate to your [!DNL Adobe Commerce] account to deliver a dynamic personalized experience for your shoppers. Within [!DNL Adobe Commerce], you can then select those Real-Time CDP segments to personalize unique offers in the cart such as 'buy 2 get 1 free,'. You also can display hero banners and modify product pricing through promotional offers, all customized to Adobe Real-Time CDP segments. |
 
 {style="table-layout:auto"}
+
+**New or updated documentation**
+
+| Documentation | Description |
+| ----------- | ----------- |
+| [Destinations guardrails](../../destinations/guardrails.md)| This page provides default usage and rate limits with regard to activation behavior. |
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
@@ -60,37 +64,13 @@ For more general information on destinations, refer to the [destinations overvie
 
 XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
 
-**New XDM components**
+**Updated XDM components**
 
 | Component type | Name | Description |
 | --- | --- | --- |
-| Class | [[!UICONTROL Medication]](https://github.com/adobe/xdm/blob/master/components/classes/medication.schema.json) | A healthcare industry class that captures details about a substance used for medical treament, especially a medicine or drug. |
-| Class | [[!UICONTROL Plan]](https://github.com/adobe/xdm/blob/master/components/classes/plan.schema.json) | A healthcare industry class that captures details about a medical plan, such as a health plan or insurance plan. |
-| Class | [[!UICONTROL Provider]](https://github.com/adobe/xdm/blob/master/components/classes/provider.schema.json) | A healthcare industry class that captures details about a healthcare provider. |
-| Class | [[!UICONTROL Payer]](https://github.com/adobe/xdm/blob/master/components/classes/payer.schema.json) | A healthcare industry class that captures details about an insurance company. |
-| Class | [[!UICONTROL Live Event Schedule]](https://github.com/adobe/xdm/blob/master/components/classes/live-event-schedule.json) | A sports and entertainment industry class that captures details about a live event schedule, such as a traveling concert schedule or a sports team's schedule. |
-| Class | [[!UICONTROL Location]](https://github.com/adobe/xdm/blob/master/components/classes/location.json) | A sports and entertainment industry class that captures the location of a live event, such as a concert hall or sports arena. |
-| Field group | [[!UICONTROL Healthcare medication]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json) | A field group for the [!UICONTROL Medication] class that captures details about the medication such as brand name, lot number, and quantity. |
-| Field group | [[!UICONTROL Healthcare Plan Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/plan/healthcare-plan-details.schema.json) | A field group for the [!UICONTROL Plan] class that captures details such as network, type, and active status. |
-| Field group | [[!UICONTROL Healthcare Provider]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | A field group for the [!UICONTROL Provider] class that captures details of an individual health professional or a health facility organization licensed to provide healthcare diagnosis and treatment services. |
-| Field group | [[!UICONTROL Healthcare Member Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | A field group for the [!UICONTROL XDM Individual Profile] class that captures details of a person that has or will receive a service or care, such as contact information, primary care physician, and plan information. |
-| Field group | [[!UICONTROL Sitetool Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json) | A field group for the [!UICONTROL XDM ExperienceEvent] class that captures information collected by sitetools such as chatbot, survey, and so on. |
-| Field group | [[!UICONTROL Live Event Ticket Purchase]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-live-event-ticket-purchase.json) | A field group for the [!UICONTROL XDM ExperienceEvent] class that captures the purchase history for tickets to a live event, such as a concert or sports game. |
-| Field group | [[!UICONTROL Sports and Entertainment Event Schedule]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/live-event-schedule/sports-entertainment-event-schedule.schema.json) | A field group for the [!UICONTROL Live Event Schedule] class that captures further details about the schedule, such as the attraction name, door opening times, and more. |
-| Field group | [[!UICONTROL Sports Entertainment Event Venue]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/location/sports-entertainment-event-venue.schema.json) | A field group for the [!UICONTROL Location] class that captures further details about the event venue, such as seating capacity and Designated Market Areas (DMAs). |
-| Global schema | (Several) | New global schemas are available for destinations metrics for RTCDP Insights. See the following [pull request](https://github.com/adobe/xdm/pull/1560) for more details. |
-
-{style="table-layout:auto"}
-
-**Updated XDM components**
-
-| Component type | Name | Update description |
-| --- | --- | --- |
-| Behavior | [[!UICONTROL Time-series Schema]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | Added a media states-update event type. |
-| Field group | [[!UICONTROL Lodging Reservation]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json) | Added a lodging checkout property. |
-| Data type | [[!UICONTROL Media information]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Added states-start and states-end fields. |
-| Extension | [[!UICONTROL Workfront Change Event]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Added two fields used to store attributes to help identify the user and the time of a create event. |
-| Extension | [[!UICONTROL Adobe CJM ExperienceEvent - Message interaction details]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/message-interaction.schema.json) | Added subscription, consent, custom email, and additional data information in the landing page object. |
+| Data type | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Updated the `authorized` field from a boolean type to a string. `season` and `episode` have been changed from integers to strings. |
+| Data type | [[!UICONTROL Advertising details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` has been renamed to `friendlyName`, and `ID` has been renamed to `name`. |
+| Data type | [[!UICONTROL Error details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` has been renamed to `name`. |
 
 {style="table-layout:auto"}
 
@@ -104,26 +84,12 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 
 | Feature | Description |
 | --- | --- |
-| Ad hoc schema labeling | Manage access to sensitive data by applying labels to data fields of ad hoc schemas that are automatically generated through Query Service CTAS queres. You can restrict the usage of certain fields, or datasets, of ad hoc schemas to control access to both sensitive personal data and personally identifiable information. By using the attribute-based access control capability you can you label ad hoc schema fields through the Platform UI. |
-| `FLATTEN` setting | When connecting to a database through third-party BI tools, the `FLATTEN` setting flattens nested data structures into separate columns where the attribute name becomes the column name that holds the row values. This improves the usability of ad hoc schemas and reduces the required workload to retrieve, analyze, transform and report data in BI tools that do not support nested data structures. |
+| Query accelerated reporting insights data model | As part of the Data Distiller SKU, the query accelerated store allows you to reduce the time and processing power required to gain critical insights from your data. With the query accelerated store you can build a custom data model and/or extend on existing Adobe Real-Time Customer Data Platform data models to improve your reporting insights and their visualizations. See the [query accelerated store reporting insights document](https://experienceleague.adobe.com/docs/experience-platform/query/query-accelerated-store/reporting-insights-data-model.html) to learn more about this feature.  |
 
 {style="table-layout:auto"}
 
 For more information on Query Services, refer to the [Query Service overview](../../query-service/home.md).
-
-## Real-Time Customer Data Platform Connections {#data-collection}
-
-Real-Time Customer Data Platform Connections provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
-
-**New features**
-
-| Feature | Description |
-| --- | --- |
-| [Access Type configuration for datastreams](../../edge/datastreams/overview.md#create)| When creating a new datastream, you can now select what type of requests you want the Edge Network to accept: <ul><li>**[!UICONTROL Mixed Authentication]**: When this option is selected, the Edge Network accepts both authenticated and unauthenticated requests. Select this option when you plan to use the Web SDK or [Mobile SDK](https://aep-sdks.gitbook.io/docs/), along with the [Server API](../../server-api/overview.md). </li><li>**[!UICONTROL Authenticated Only]**: When this option is selected, the Edge Network only accepts authenticated requests. Select this option when you plan to use only the Server API and want to prevent any unauthenticated requests from being processed by the [!DNL Edge Network]. </li></ul> |
-|[Render propositions](../../edge/personalization/rendering-personalization-content.md#applypropositions) in single-page applications without incrementing metrics. | The newly added `applyPropositions` command allows you to render or execute an array of propositions from [!DNL Target] into single-page applications, without incrementing the [!DNL Analytics] and [!DNL Target] metrics. This increases reporting accuracy. |
-|[Mobile-to-web and cross-domain ID sharing](../../edge/identity/id-sharing.md) | The Adobe Experience Platform Web SDK now supports visitor ID sharing capabilities that enable you to deliver personalized experiences more accurately, between mobile apps and mobile web content, and across domains. |
-
-For more information, please see the [Real-Time CDP Connections overview](../../rtcdp-connections/home.md).
+New features in Adobe Experience Platform:
 
 ## Sources {#sources}
 
@@ -131,10 +97,11 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
+**Updated features**
+
 | Feature | Description |
-| --- | --- |
-| Beta release of [!DNL Mixpanel] source | You can now use the [!DNL Mixpanel] source to ingest analytics data from your [!DNL Mixpanel] account to Experience Platform. See the [[!DNL Mixpanel] source documentation](../../sources/connectors/analytics/mixpanel.md) for more information. |
+| --- | --- | 
+| Beta availability of Adobe Workfront source | Use the [Adobe Workfront source](../../sources/connectors/adobe-applications/workfront.md) to bring your Workfront data to Experience Platform and perform use cases such as combining your work records with third-party data, applying historical and time-series analytics on work records, and querying work data using standard SQL. For more information, read the guide on [creating a Workfront source connection in the UI](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
+| Beta availability of Oracle Service Cloud source | Use the Oracle Service Cloud source to ingest data from your Oracle Service Cloud account to Experience Platform. For more information, read the documentation on the [Oracle Service Cloud source](../../sources/connectors/customer-success/oracle-service-cloud.md). |
 
-{style="table-layout:auto"}
-
-To learn more about sources, see the [sources overview](../../sources/home.md).
+To learn more about sources, read the [sources overview](../../sources/home.md).

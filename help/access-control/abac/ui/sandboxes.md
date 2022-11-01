@@ -6,10 +6,6 @@ exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
 ---
 # Manage Sandboxes
 
->[!IMPORTANT]
->
->Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
-
 Sandboxes are virtual partitions within a single instance of Experience Platform, which allow for seamless integration with the development process of your digital experience applications. All content and actions taken within a sandbox are confined to only that sandbox and do not affect any other sandboxes. For more information on sandboxes, see the [Sandboxes overview](../../../sandboxes/home.md).
 
 ## Configure sandboxes

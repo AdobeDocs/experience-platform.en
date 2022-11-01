@@ -73,7 +73,7 @@ The **[!UICONTROL mapping]** interface provides you with a comprehensive tool to
 
 ![map-csv-to-xdm](../images/ui/mapping/map-csv-to-xdm.png)
 
-### Understanding the mapping interface
+### Understanding the mapping interface {#mapping-interface}
 
 The mapping interface includes a dashboard that provides information on the health of your mapping fields within the context of the ingestion workflow. The dashboard displays the following details regarding your mapping fields:
 
@@ -143,7 +143,7 @@ When finished, select the schema icon to close the target schema interface.
 
 #### Calculated fields {#calculated-fields}
 
-Calculated fields allow for values to be created based on the attributes in the input schema. These values can then be assigned to attributes in the target schema and be provided a name and description to allow for easier reference.
+Calculated fields allow for values to be created based on the attributes in the input schema. These values can then be assigned to attributes in the target schema and be provided a name and description to allow for easier reference. Calculated fields have a maximum length of 4096 characters.
 
 To create a calculated field, select **[!UICONTROL New field type]** and then select **[!UICONTROL Add calculated field]**
 

@@ -54,7 +54,7 @@ The following table displays the sample data contained in the `_profilefoundatio
 
 >[!NOTE]
 >
->For brevity, the tenet ID `_profilefoundationreportingstg` has been omitted from the start of the namespace in the column titles and subsequent mentions throughout the document. 
+>For brevity, the tenant ID `_profilefoundationreportingstg` has been omitted from the start of the namespace in the column titles and subsequent mentions throughout the document. 
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|

@@ -112,15 +112,10 @@ See the documentations on [XDM Business Person Details](../../../../xdm/field-gr
 | `Company` | `b2b.companyName` |
 | `Website` | `b2b.companyWebsite` |
 | `ConvertedContactId` | `b2b.convertedContactKey.sourceID` |
-| `"Salesforce"` | `b2b.convertedContactKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `b2b.convertedContactKey.sourceInstanceID` |
-| `concat(ConvertedContactId,\"@${CRM_ORG_ID}.Salesforce\")` | `b2b.convertedContactKey.sourceKey` |
+| `iif(ConvertedContactId != null && ConvertedContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `b2b.convertedContactKey` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `"Lead"` | `b2b.personType` |
-| `ConvertedContactId` | `personComponents.sourceConvertedContactKey.sourceID` |
-| `"Salesforce"` | `personComponents.sourceConvertedContactKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `personComponents.sourceConvertedContactKey.sourceInstanceID` |
-| `concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")` | `personComponents.sourceConvertedContactKey.sourceKey` |
+| `iif(ConvertedContactId != null && ConvertedContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", ConvertedContactId, "sourceKey", concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personComponents.sourceConvertedContactKey` |
 
 {style="table-layout:auto"}
 

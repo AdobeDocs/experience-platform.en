@@ -38,27 +38,49 @@ For information on building segment definitions using the API, see the tutorial 
 >
 >In the event a schema is extended, all future uploads must update newly added fields accordingly. For more information on customizing [!DNL Experience Data Model] (XDM), visit the [Schema Editor tutorial](../xdm/tutorials/create-schema-ui.md).
 >
->Additionally, if time-to-live (TTL) is enabled on the dataset, this could affect the membership of the created segment. For more information about TTL and how it can affect segmentation, please read the [Profile Service TTL guide](../profile/apply-ttl.md).
+>Additionally, if an Experience Event expiration value is enabled on the dataset, this could affect the membership of the created segment. Please read the guide on [Experience Event expirations](../profile/event-expirations.md) for more information on how this feature can affect segmentation.
 
-## Evaluate segments
+## Evaluate segments {#evaluate-segments}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation"
+>title="Evaluation methods"
+>abstract="Platform currently supports three methods of evaluating segments: streaming segmentation, batch segmentation, and edge segmentation."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_streaming"
+>title="Streaming evaluation"
+>abstract="Streaming segmentation is an ongoing data selection process that updates your segments in response to user activity."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Evaluate events in near real-time with streaming segmentation"
 
 Platform currently supports three methods of evaluating segments: streaming segmentation, batch segmentation, and edge segmentation.
 
-### Streaming segmentation
+### Streaming segmentation {#streaming}
 
 Streaming segmentation is an ongoing data selection process that updates your segments in response to user activity. Once a segment has been built and saved, the segment definition is applied against incoming data to [!DNL Real-time Customer Profile]. Segment additions and removals are processed regularly, ensuring your target audience remains relevant. 
 
 To learn more about streaming segmentation, please read the [streaming segmentation documentation](./api/streaming-segmentation.md).
 
-### Batch segmentation
+### Batch segmentation {#batch}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_batch"
+>title="Batch evaluation"
+>abstract="As an alternative to an ongoing data selection process, batch segmentation moves all profile data at once through segment definitions to produce corresponding audiences. Once created, the segment is saved and stored so that you can export it for use."
 
 As an alternative to an ongoing data selection process, batch segmentation moves all profile data at once through segment definitions to produce corresponding audiences. Once created, this segment is saved and stored so that you can export it for use. 
 
 Batch segments are automatically evaluated every 24 hours. If you want to evaluate a batch segment on demand, you can use a segment job. To learn more about segment jobs, please read the [segment jobs documentation](./api/segment-jobs.md).
 
-### Edge segmentation
+### Edge segmentation {#edge}
 
-Edge segmentation is the ability to evaluate segments in Platform instantaneously on Experience Edge, enabling same page and next page personalization use cases. 
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_edge"
+>title="Edge evaluation"
+>abstract="Edge segmentation is the ability to evaluate segments in Platform instantaneously on Experience Edge, enabling same-page and next-page personalization use cases."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Edge segmentation UI guide"
+
+Edge segmentation is the ability to evaluate segments in Platform instantaneously [on Experience Edge](../edge/home.md), enabling same-page and next-page personalization use cases. 
 
 To learn more about edge segmentation, please read either the [API documentation](./api/edge-segmentation.md) or the [UI documentation](./ui/edge-segmentation.md).
 

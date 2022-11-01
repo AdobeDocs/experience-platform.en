@@ -15,7 +15,7 @@ Data Prep is an Adobe Experience Platform service that allows you to map, transf
 >* [Data Prep mapping functions](../../data-prep/functions.md)
 >* [Handling data formats with Data Prep](../../data-prep/data-handling.md)
 
-This guide covers how to map your data within the Data Collection UI. To follow along with the steps, start the process of creating a datastream up to (and including) the [basic configuration step](./overview.md#create).
+This guide covers how to map your data within the UI. To follow along with the steps, start the process of creating a datastream up to (and including) the [basic configuration step](./overview.md#create).
 
 For a quick demonstration of the Data Prep for Data Collection process, refer to the following video:
 
@@ -125,7 +125,7 @@ To capture properties from an XDM object data element, the same rules apply to t
 
 You can select the option to upload the object as a file, or paste the raw object into the provided textbox instead. If the JSON is valid, a preview schema is displayed in the right panel. Select **[!UICONTROL Next]** to continue.
 
-![JSON sample of expected incoming data](../images/datastreams/data-prep/select-data.png)
+![JSON sample of expected incoming data](../assets/datastreams/data-prep/select-data.png)
 
 ## [!UICONTROL Mapping]
 
@@ -138,25 +138,25 @@ The **[!UICONTROL Mapping]** step appears, allowing you to map the fields in you
 
 To get started, select **[!UICONTROL Add new mapping]** to create a new mapping row.
 
-![Adding a new mapping](../images/datastreams/data-prep/add-new-mapping.png)
+![Adding a new mapping](../assets/datastreams/data-prep/add-new-mapping.png)
 
-Select the source icon (![Source icon](../images/datastreams/data-prep/source-icon.png)), and in the dialog that appears select the source field that you want to map in the provided canvas. Once you have chosen a field, use the **[!UICONTROL Select]** button to continue.
+Select the source icon (![Source icon](../assets/datastreams/data-prep/source-icon.png)), and in the dialog that appears select the source field that you want to map in the provided canvas. Once you have chosen a field, use the **[!UICONTROL Select]** button to continue.
 
-![Selecting the field to be mapped in the source schema](../images/datastreams/data-prep/source-mapping.png)
+![Selecting the field to be mapped in the source schema](../assets/datastreams/data-prep/source-mapping.png)
 
-Next, select the schema icon (![Schema icon](../images/datastreams/data-prep/schema-icon.png)) to open a similar dialog for the target event schema. Choose the field that you want to map the data to before confirming with **[!UICONTROL Select]**.
+Next, select the schema icon (![Schema icon](../assets/datastreams/data-prep/schema-icon.png)) to open a similar dialog for the target event schema. Choose the field that you want to map the data to before confirming with **[!UICONTROL Select]**.
 
-![Selecting the field to be mapped in the target schema](../images/datastreams/data-prep/target-mapping.png)
+![Selecting the field to be mapped in the target schema](../assets/datastreams/data-prep/target-mapping.png)
 
 The mapping page reappears with the completed field mapping shown. The **[!UICONTROL Mapping progress]** section updates to reflect the total number of fields that have been successfully mapped.
 
-![Field successfully mapped with progress reflected](../images/datastreams/data-prep/field-mapped.png)
+![Field successfully mapped with progress reflected](../assets/datastreams/data-prep/field-mapped.png)
 
 >[!TIP]
 >
 >If you want to map an array of objects (in the source field) to an array of different objects (in the target field), add `[*]` after the array name in the source and destination field paths, as shown below.
 >
->![Array object mapping](../images/datastreams/data-prep/array-object-mapping.png)
+>![Array object mapping](../assets/datastreams/data-prep/array-object-mapping.png)
 
 ### Import existing mapping rules {#import-mapping}
 
@@ -168,11 +168,11 @@ If you have previously created a datastream, you can re-use its configured mappi
 
 To start, select **[!UICONTROL Import Mapping]**.
 
-![Image showing the [!UICONTROL Import Mapping] button being selected](../images/datastreams/data-prep/import-mapping-button.png)
+![Image showing the [!UICONTROL Import Mapping] button being selected](../assets/datastreams/data-prep/import-mapping-button.png)
 
 In the dialog that appears, select the datastream whose mapping rules you want to import. Once the datastream is chosen, select **[!UICONTROL Preview]**.
 
-![Image showing an existing datastream being selected](../images/datastreams/data-prep/select-mapping-rules.png)
+![Image showing an existing datastream being selected](../assets/datastreams/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -180,7 +180,7 @@ In the dialog that appears, select the datastream whose mapping rules you want t
 
 The next screen shows a preview of the saved mapping rules for the selected datastream. Make sure that the displayed mappings are what you expect, and then select **[!UICONTROL Import]** to confirm and add the mappings to the new datastream.
 
-![Image showing the mapping rules to be imported](../images/datastreams/data-prep/import-mapping-rules.png)
+![Image showing the mapping rules to be imported](../assets/datastreams/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -192,8 +192,8 @@ Continue following the above steps to map the rest of the fields to the target s
 
 Once the required fields count reaches zero and you are satisfied with your mapping, select **[!UICONTROL Save]** to finalize your changes.
 
-![Mapping complete](../images/datastreams/data-prep/mapping-complete.png)
+![Mapping complete](../assets/datastreams/data-prep/mapping-complete.png)
 
 ## Next steps
 
-This guide covered how to map your data to XDM when setting up a datastream in the Data Collection UI. If you were following general datastreams tutorial, you can now return to the step on [viewing datastream details](./overview.md).
+This guide covered how to map your data to XDM when setting up a datastream in the UI. If you were following general datastreams tutorial, you can now return to the step on [viewing datastream details](./overview.md).

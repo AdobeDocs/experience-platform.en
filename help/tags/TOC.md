@@ -13,7 +13,7 @@ solution: Data Collection
 * Getting started {#get-started}
   * [Quickstart guide](./quick-start/quick-start.md)
   * [Implementation guides](./quick-start/implementation-guides.md)
-* Data Collection UI {#ui}
+* UI guides {#ui}
   * [Overview](./ui/managing-resources/overview.md)
   * Extensions {#extensions}
     * [Overview](./ui/managing-resources/extensions/overview.md)
@@ -56,7 +56,6 @@ solution: Data Collection
   * [Overview](./ui/administration/overview.md)
   * [Companies and properties](./ui/administration/companies-and-properties.md)
   * [User permissions](./ui/administration/user-permissions.md)
-  * [Manage permissions](./ui/administration/manage-permissions.md)
 * Extensions {#extensions}
   * [Overview](./extensions/overview.md)
   * Adobe extensions {#adobe}
@@ -107,6 +106,9 @@ solution: Data Collection
     * Common Analytics Plugins {#plugins}
       * [Overview](./extensions/web/plugins/overview.md)
       * [Release notes](./extensions/web/plugins/release-notes.md)
+    * Common Web SDK Plugins {#web-sdk-plugins}
+      * [Overview](./extensions/web/web-sdk-plugins/overview.md)
+      * [Release notes](./extensions/web/web-sdk-plugins/release-notes.md)
     * Core {#core}
       * [Overview](./extensions/web/core/overview.md)
       * [Event forwarding](./extensions/web/core/event-forwarding.md)
@@ -119,9 +121,13 @@ solution: Data Collection
     * Google Data Layer {#google-data-layer}
       * [Overview](./extensions/web/google-data-layer/overview.md)
       * [Release notes](./extensions/web/google-data-layer/release-notes.md)
-    * [!DNL YouTube] video tracking extension {#youtube}
+    * [!DNL Splunk] {#splunk}
+      * [Overview](./extensions/web/splunk/overview.md)
+    * [!DNL YouTube] video tracking {#youtube}
       * [Overview](./extensions/web/youtube/overview.md)
       * [Release notes](./extensions/web/youtube/release-notes.md)
+    * [!DNL Zendesk] Events API {#zendesk}
+      * [Overview](./extensions/web/zendesk/overview.md)
   * [Third-party extensions](./extensions/3rd-party-extensions.md)
 * Extension development {#extension-dev}
   * [Overview](./extension-dev/overview.md)
@@ -194,6 +200,7 @@ solution: Data Collection
 * [Deprecating support for Internet Explorer 10 and 11](./ie-deprecation.md)
 * Release notes {#release-notes}
   * [Latest](./release-notes/current.md)
+  * [2021 release notes](./release-notes/2021.md)
   * [2020 release notes](./release-notes/2020.md)
   * [2019 release notes](./release-notes/2019.md)
   * [2018 release notes](./release-notes/2018.md)

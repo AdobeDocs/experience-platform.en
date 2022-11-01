@@ -15,7 +15,7 @@ This guide provides an overview of the different types of permissions available 
 
 >[!NOTE]
 >
->For steps on how to configure permissions for users using Admin Console, please refer to the tutorial on [managing permissions for tags](./manage-permissions.md).
+>For steps on how to configure permissions for users using Admin Console, please refer to the tutorial on [managing permissions for data collection](../../../collection/permissions.md).
 
 ## Permission types
 
@@ -36,7 +36,7 @@ By default, product profiles grant access to all properties that exist within yo
 
 ### Property rights {#property-rights}
 
-Any property that you create in the Data Collection UI becomes available in Admin Console, allowing you to group the property with specific property rights in the same product profile.
+Any tag property that you create in the UI becomes available in Admin Console, allowing you to group the property with specific property rights in the same product profile.
 
 For example, if a given product profile does not have access to Property A1, users who belong to that profile cannot see or modify any settings within Property A1.
 
@@ -46,7 +46,7 @@ The following table outlines the available property rights and the functionaliti
 
 | Property right | Description |
 | --- | --- |
-| **Develop** | This allows you to perform the following actions:<ul><li>Create rules and data elements</li><li>Create libraries and build them in existing development environments</li><li>Submit a library for approval</li></ul>Most day-to-day tasks in the Data Collection UI require this right. |
+| **Develop** | This allows you to perform the following actions:<ul><li>Create rules and data elements</li><li>Create libraries and build them in existing development environments</li><li>Submit a library for approval</li></ul>Most day-to-day tasks in the UI require this right. |
 | **Approve** | This allows you to take a submitted library and build to the staging environment. You can also approve a library for publishing once testing has been completed. |
 | **Publish** | This allows you to publish approved libraries to the production environment. |
 | **Manage Extensions** | This allows you to perform the following actions: <ul><li>Install new extensions to a property</li><li>Modify the configuration for an already installed extension</li><li>Delete an extension</li></ul>See the extensions overview documentation for [more information on extensions](../managing-resources/extensions/overview.md). This role typically belongs to IT or Marketing, depending on your organization. |
@@ -115,4 +115,4 @@ The following table provides some examples of the types of roles you might have 
 
 ## Next steps
 
-This document provided an overview of the available permissions for tags in Experience Platform. For steps on how to configure product profiles for tags in Adobe Admin Console, see the guide on [managing user permissions](./manage-permissions.md).
+This document provided an overview of the available permissions for tags in Experience Platform. For steps on how to configure product profiles for tags in Adobe Admin Console, see the guide on [managing user permissions for data collection](../../../collection/permissions.md).
