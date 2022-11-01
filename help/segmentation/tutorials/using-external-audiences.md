@@ -40,10 +40,6 @@ To create an identity namespace, follow the instructions in the [identity namesp
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
 
->[!NOTE]
->
->In order to start use custom namespaces with external audiences, you will need to create a support ticket. Please contact your Adobe representative for more details.
-
 ## Create a schema for the segment metadata
 
 After creating an identity namespace, you need to create a new schema for the segment you will create.

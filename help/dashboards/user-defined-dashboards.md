@@ -3,11 +3,7 @@ title: User-defined Dashboards
 description: Learn how to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 ---
-# User-defined dashboards (Beta)
-
->[!IMPORTANT]
->
->The user-defined dashboards feature is in beta. Its features and documentation are subject to change.
+# User-defined dashboards
 
 Adobe Experience Platform Dashboards helps you to expedite insights and customize visualization through the user-defined dashboards feature. This feature enables you to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics relevant to your organization.
 
@@ -31,9 +27,18 @@ The [!UICONTROL Create dashboard] dialog appears. Enter a human-friendly, descri
 
 The newly created blank dashboard appears with your chosen name in the top left corner of the view.
 
-## Create a widget
+## Create a widget {#create-widget}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_udd_maxwidgets"
+>title="Maximum number of widgets"
+>abstract="User-defined dashboards support up to ten widgets. After you have added ten widgets to your dashboard, the [!UICONTROL Add new widget] option is disabled and appears gray."
 
 From your new dashboard view, select **[!UICONTROL Add new widget]** to begin the widget creation process.
+
+>[!IMPORTANT]
+>
+>User-defined dashboards support up to ten widgets. After you have added ten widgets to your dashboard, the [!UICONTROL Add new widget] option is disabled and appears gray.
 
 ![The new empty dashboard with Add new widget highlighted.](./images/user-defined-dashboards/add-new-widget.png)
 
@@ -104,6 +109,8 @@ Select **[!UICONTROL Cancel]** to return to your custom dashboard.
 Widgets can be re-arranged and resized while in this workspace. Select **[!UICONTROL Save]** to preserve your dashboard name and configured layout.
 
 ![The user-defined dashboard with a custom widget and the save button highlighted.](./images/user-defined-dashboards/user-defined-dashboard.png)
+
+To ensure that each query for an Adobe Real-Time Customer Data Platform insights dashboard has enough resources to execute efficiently, the API tracks resource usage by assigning concurrency slots to each query. The system can process up to four concurrent queries, and therefore four concurrent query slots are available at any given time. Queries are put into a queue based on concurrency slots, then wait in the queue until enough concurrency slots are available.
 
 ## Next steps
 

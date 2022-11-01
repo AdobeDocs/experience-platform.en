@@ -7,7 +7,7 @@ exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
 
 >[!IMPORTANT]
 >
->This class is intended to be used by organizations with access to [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). You must have access to Real-time CDP B2B Edition in order for this class to participate in [Real-time Customer Profile](../../../profile/home.md).
+>This class is intended to be used by organizations with access to [Adobe Real-Time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). You must have access to Real-Time CDP B2B Edition in order for this class to participate in [Real-time Customer Profile](../../../profile/home.md).
 
 [!UICONTROL XDM Business Opportunity] is a standard Experience Data Model (XDM) class that captures the minimum required properties of a business opportunity.
 
@@ -29,4 +29,4 @@ exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
 
 {style="table-layout:auto"}
 
-See the guide on [schema relationships in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) to learn how this class conceptually relates to the other B2B classes and how you can establish these relationships in the Adobe Experience Platform UI.
+See the guide on [schema relationships in Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md) to learn how this class conceptually relates to the other B2B classes and how you can establish these relationships in the Adobe Experience Platform UI.

@@ -40,6 +40,10 @@ Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Ado
 
 ### Select data
 
+>[!IMPORTANT]
+>
+>The report suites listed on the screen may come from various regions. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform cross regions. Please ensure this is permitted by your company.
+
 The **[!UICONTROL Analytics source add data]** step provides you with a list of [!DNL Analytics] report suite data to create a source connection with. 
 
 A report suite is a container of data that forms the basis of [!DNL Analytics] reporting. An organization can have many report suites, each containing different datasets. 
@@ -52,7 +56,7 @@ Multiple in-bound connections can be made to bring multiple report suites into t
 
 >[!NOTE]
 >
->Data from multiple report suites can be enabled for Real-time Customer Data Profile only if there are no data conflicts, such as two custom properties (eVars, lists and props) that have different meaning.
+>Data from multiple report suites can be enabled for Real-time Customer Profile only if there are no data conflicts, such as two custom properties (eVars, lists and props) that have different meaning.
 
 To create an [!DNL Analytics] source connection, select a report suite and then select **[!UICONTROL Next]** to proceed.
 
@@ -150,7 +154,12 @@ The following documentation provides further resources on understanding Data Pre
 * [Data Prep mapping functions](../../../../../data-prep/functions.md)
 * [Add calculated fields](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### Filtering for [!DNL Profile Service] (Beta)
+### Filtering for [!DNL Profile Service] (Beta) {#filtering-for-profile}
+
+>[!CONTEXTUALHELP]
+>id="platform_data_prep_analytics_filtering"
+>title="Create filter rules"
+>abstract="Define row and column-level filtering rules when sending data to Real-time Customer Profile. Use row-level filtering to apply conditions and dictate which data to **include for Profile ingestion**. Use column-level filtering to select the columns of data that you want to **exclude for Profile ingestion**. Filtering rules do not apply to data sent to data lake."
 
 >[!IMPORTANT]
 >
@@ -159,6 +168,10 @@ The following documentation provides further resources on understanding Data Pre
 Once you have completed mappings for your [!DNL Analytics] report suite data, you can apply filtering rules and conditions to selectively include or exclude data from ingestion to the [!DNL Profile Service]. Support for filtering is only available for [!DNL Analytics] data and data is only filtered prior to entering [!DNL Profile.] All data are ingested into the data lake.
 
 #### Row-level filtering
+
+>[!IMPORTANT]
+>
+>Use row-level filtering to apply conditions and dictate which data to **include for Profile ingestion**. Use column-level filtering to select the columns of data that you want to **exclude for Profile ingestion**.
 
 You can filter data for [!DNL Profile] ingestion at the row-level and the column-level. Row-level filtering allows you to define criteria such as string contains, equals to, begins, or ends with. You can also use row-level filtering to join conditions using `AND` as well as `OR`, and negate conditions using `NOT`. 
 

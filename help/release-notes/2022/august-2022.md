@@ -34,13 +34,13 @@ Attribution AI is used to attribute credits to touchpoints leading to conversion
 
 {style="table-layout:auto"}
 
-**Note**: Attribution AI will not be available with existing Healthcare Shield or Privacy Shield customers until further notice.
+**Note**: Attribution AI will not be available with existing Healthcare Shield customers until further notice.
  
 For more information on Attribution AI, please see the [Attribution AI](../../intelligent-services/attribution-ai/overview.md) overview.
 
 ### Customer AI
 
-Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale.
+Customer AI available in Real-Time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale.
 
 **Updated features**
 
@@ -50,7 +50,7 @@ Customer AI available in Real-time Customer Data Platform, is used to generate c
 
 {style="table-layout:auto"}
 
-**Note**: Customer AI will not be available with existing Healthcare Shield or Privacy Shield customers until further notice.
+**Note**: Customer AI will not be available with existing Healthcare Shield customers until further notice.
  
 For more information on Customer AI, please see the [Customer AI](../../intelligent-services/customer-ai/overview.md) overview.
 

@@ -69,6 +69,8 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
+        "name": "Sample dataset",
+        "description: "A sample dataset with a sample description.",
         "fields": [],
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
@@ -119,15 +121,14 @@ Using the [!DNL Catalog] API, you can inspect an existing dataset to determine w
 GET /dataSets/{DATASET_ID}
 ```
 
-|Parameter|Description|
-|---|---|
-|`{DATASET_ID}`|The ID of a dataset you want to inspect.|
+| Parameter | Description |
+| --------- | ----------- |
+| `{DATASET_ID}` | The ID of a dataset you want to inspect.|
 
 **Request**
 
 ```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
+curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -190,11 +191,11 @@ Under the `tags` property, you can see that `unifiedProfile` is present with the
 
 ### Disable the dataset for Profile
 
-In order to configure a Profile-enabled dataset for updates, you must first disable the `unifiedProfile` tag and then re-enable it alongside the `isUpsert` tag. This is done using two PATCH requests, once to disable and one to re-enable.
+In order to configure a Profile-enabled dataset for updates, you must first disable the `unifiedProfile` and `unifiedIdentity` tags and then re-enable them alongside the `isUpsert` tag. This is done using two PATCH requests, once to disable and one to re-enable.
 
 >[!WARNING]
 >
->Data ingested into the dataset while it is disabled will not be ingested into the Profile Store. It is recommended to avoid ingesting data into the dataset until it has been re-enabled for Profile.
+>Data ingested into the dataset while it is disabled will not be ingested into the Profile Store. You should avoid ingesting data into the dataset until it has been re-enabled for Profile.
 
 **API format**
 
@@ -202,30 +203,38 @@ In order to configure a Profile-enabled dataset for updates, you must first disa
 PATCH /dataSets/{DATASET_ID}
 ```
 
-|Parameter|Description|
-|---|---|
-|`{DATASET_ID}`|The ID of a dataset you want to update.|
+| Parameter | Description |
+| --------- | ----------- |
+|`{DATASET_ID}` | The ID of the dataset you want to update.|
 
 **Request**
 
-The first PATCH request body includes a `path` to `unifiedProfile` setting the `value` to `enabled:false` in order to disable the tag.
+The first PATCH request body includes a `path` to `unifiedProfile` and a `path` to `unifiedIdentity`, setting the `value` to `enabled:false` for both of these paths in order to disable the tags.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "replace", "path": "/tags/unifiedProfile", "value": ["enabled:false"] }
+        { 
+            "op": "replace", 
+            "path": "/tags/unifiedProfile", 
+            "value": ["enabled:false"] 
+        },
+        {
+            "op": "replace",
+            "path": "/tags/unifiedIdentity",
+            "value": ["enabled:false"]
+        }
       ]'
 ```
 
 **Response**
 
-A successful PATCH request returns HTTP Status 200 (OK) and an array containing the ID of the updated dataset. This ID should match the one sent in the PATCH request. The `unifiedProfile` tag has now been disabled.
+A successful PATCH request returns HTTP Status 200 (OK) and an array containing the ID of the updated dataset. This ID should match the one sent in the PATCH request. The `unifiedProfile` and `unifiedIdentity` tags have now been disabled.
 
 ```json
 [
@@ -237,35 +246,53 @@ A successful PATCH request returns HTTP Status 200 (OK) and an array containing 
 
 An existing dataset can be enabled for Profile and attribute updates using a single PATCH request.
 
+>[!IMPORTANT]
+>
+>When enabling your dataset for Profile, please ensure the schema the dataset is associated with is **also** Profile-enabled. If the schema is not Profile-enabled, the dataset will **not** appear as Profile-enabled within the Platform UI.
+
 **API format**
 
 ```http
 PATCH /dataSets/{DATASET_ID}
 ```
 
-|Parameter|Description|
-|---|---|
-|`{DATASET_ID}`|The ID of a dataset you want to update.|
+| Parameter | Description |
+| --------- | ----------- |
+|`{DATASET_ID}` | The ID of a dataset you want to update. |
 
 **Request**
 
-The request body includes a `path` to `unifiedProfile` setting the `value` to include the `enabled` and `isUpsert` tags, both set to `true`.
+The request body includes a `path` to `unifiedProfile` setting the `value` to include the `enabled` and `isUpsert` tags, both set to `true`, and a `path` to `unifiedIdentity` setting the `value` to include the `enabled` tag set to `true`.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/tags/unifiedProfile", "value": ["enabled:true","isUpsert:true"] },
+        { 
+            "op": "add", 
+            "path": "/tags/unifiedProfile", 
+            "value": [
+                "enabled:true",
+                "isUpsert:true"
+            ] 
+        },
+        {
+            "op": "add",
+            "path": "/tags/unifiedIdentity",
+            "value": [
+                "enabled:true"
+            ]
+        }
       ]'
 ```
 
 **Response**
-A successful PATCH request returns HTTP Status 200 (OK) and an array containing the ID of the updated dataset. This ID should match the one sent in the PATCH request. The `unifiedProfile` tag has now been enabled and configured for attribute updates.
+
+A successful PATCH request returns HTTP Status 200 (OK) and an array containing the ID of the updated dataset. This ID should match the one sent in the PATCH request. The `unifiedProfile` tag and `unifiedIdentity` tag have now been enabled and configured for attribute updates.
 
 ```json
 [

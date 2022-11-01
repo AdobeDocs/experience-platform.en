@@ -76,7 +76,7 @@ Alloy is the code name for Adobe Experience Platform Web SDK. It is used within 
 
 ## Do customers need to buy Adobe Experience Platform to use the [!DNL Web SDK]?
 
-No. Any Adobe Digital Experience customer can use the Adobe Experience Platform Web SDK free of charge. Customers who wish to use the [!DNL Web SDK] will need to configure the right permissions to create schemas, datasets, identity namespaces, and datastreams in the Adobe Experience Platform Data Collection UI.
+No. Any Adobe Digital Experience customer can use the Adobe Experience Platform Web SDK free of charge. Customers who wish to use the [!DNL Web SDK] will need to configure the right permissions to create schemas, datasets, identity namespaces, and datastreams in the Data Collection UI or Experience Platform UI.
 
 For more information on configuring these permissions see our documentation on [data collection permissions management](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
 
@@ -129,7 +129,7 @@ No. You can download the `alloy.js` file yourself.
 
 However:
 
-* Adobe Experience Platform Web SDK requires something called a Datastream ID so the edge network can identify the stream and determine what to do with the data. This ID is created within Experience Platform. This doesn't mean you have to use the Data Collection UI to create properties or deploy the JavaScript code, but you do need to use tags to create a configuration ID.
+* Adobe Experience Platform Web SDK requires something called a Datastream ID so the edge network can identify the stream and determine what to do with the data. This ID is created within Experience Platform. This doesn't mean you have to use the UI to create properties or deploy the JavaScript code, but you do need to use tags to create a configuration ID.
 
 * Tags are not only the best available tag and SDK manager, it makes it very easy to deploy `alloy.js` and map data to XDM schemas. If you decide not to use tags, you will have to manage deploying `alloy.js`, eventing, and mapping your data into XDM before sending it. This is a _much_ more difficult process than using tags.
 
@@ -137,7 +137,7 @@ However:
 
 ## What is event forwarding?
 
-If you use our SDKs and send XDM to the Experience Edge, these new features event forwarding allows you to install new server-side extensions and map that data to anything--and send it anywhere--from our edge network. Think of it as “data collection as a service”. This will be available for a cost, as well as being bundled as part of Adobe Experience Platform.
+If you use our SDKs and send XDM to the Experience Edge, these new features event forwarding allows you to install new server-side extensions and map that data to anything--and send it anywhere--from our edge network. Think of it as "data collection as a service". This will be available for a cost, as well as being bundled as part of Adobe Experience Platform.
 
 ## What is a CNAME or First Party Domain and why does it matter?
 
@@ -145,13 +145,17 @@ More information about a CNAME is available in the [Adobe documentation](https:/
 
 ## Does the Adobe Experience Platform Web SDK use cookies? If so, what cookies does it use?
 
-Yes, currently the Web SDK uses anywhere between 1-4 cookies depending on your implementation. Below is a list of the 4 cookies that you might see with the Web SDK and the way that they are used:
+Yes, currently the Web SDK uses anywhere between one to seven cookies depending on your implementation. Below is a list of the cookies that you might see with the Web SDK and the way that they are used:
 
-**kndct_orgid_identity:** The identity cookie is used to store the ECID, as well as some other information related to the ECID.
-
-**kndctr_orgid_consent:** This cookie stores the user's consent preference for the website.
-
-**kndctr_orgid_cluster:** This cookie stores the Experience Edge region that is serving the current user's requests. The region is used in the URL path so that Experience Edge can route the request to the correct region. This cookie has a 30 minutes lifetime, so that if a user connects with a different IP address, the request can be routed to the closest region.
+|**Name**|**maxAge**|**Friendly age**|**Description**|
+|---|---|---|---|
+|**kndct_orgid_identity**|34128000|395 days|The identity cookie stores the ECID, as well as other information related to the ECID.|
+|**kndctr_orgid_consent_check**|7200|2 hours|This cookie stores the user’s consent preference for the website.|
+|**kndctr_orgid_consent**|15552000|180 days|This session-based cookie signals the server to look up the consent preferences server side.|
+|**kndctr_orgid_cluster**|1800|30 minutes|This cookie stores the Experience Edge region that is serving the current user’s requests. The region is used in the URL path so that Experience Edge can route the request to the correct region. This cookie has a 30 minutes lifetime, so that if a user connects with a different IP address, the request can be routed to the closest region.|
+|**mbox**|63072000|2 years|This cookie appears when the Target migration setting is set to true. This will allow the Target [mbox cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) to be set by the Web SDK.|
+|**mboxEdgeCluster**|1800|30 minutes|This cookie appears when the Target migration setting is set to true. This cookie allows the Web SDK to communicate the correct edge cluster to at.js so that Target profiles can stay in sync as users navigate across a site.|
+|**AMCV_###@AdobeOrg**|34128000|395 days|This cookie only appears when ID migration on the Adobe Experience Platform Web SDK is enabled. This cookie helps when transitioning to Web SDK while some parts of the site are still using visitor.js. See the [idMigrationEnabled documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#identity-options) to read more about this setting.|
 
 When using the Web SDK, the Edge Network sets one or more of the cookies above. The Edge Network sets all the cookies with the `secure` and `sameSite="none"` attributes.
 

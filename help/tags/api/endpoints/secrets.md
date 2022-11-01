@@ -640,7 +640,7 @@ A successful response returns the details of the secret, with its status reset t
 
 ## Reauthorize an `oauth2-google` secret {#reauthorize}
 
-Each `oauth2-google` secret contains a `meta.token_url_expires_at` property that indicates when the authorization URL will expire. After this time, the secret must be reauthorized in order for it to renew the authentication process.
+Each `oauth2-google` secret contains a `meta.authorization_url_expires_at` property that indicates when the authorization URL will expire. After this time, the secret must be reauthorized in order for it to renew the authentication process.
 
 To reauthorize an `oauth2-google` secret, make a PATCH request for the secret in question.
 
@@ -682,7 +682,7 @@ curl -X PATCH \
 
 **Response**
 
-A successful response returns the details of the updated secret. From here, you must copy and paste the `meta.token_url` into a browser to complete the authorization process.
+A successful response returns the details of the updated secret. From here, you must copy and paste the `meta.authorization_url` into a browser to complete the authorization process.
 
 ```json
 {
@@ -738,8 +738,8 @@ A successful response returns the details of the updated secret. From here, you 
       "property": "https://reactor.adobe.io/secrets/SE5fdfa4c0a2d8404e8b1bc38827cc41c9/property" 
     }, 
     "meta": { 
-      "token_url": "https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=434635668552-0qvlu519fdjtnkvk8hu8c8dj8rg3723r.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Freactor.adobe.io%2Foauth2%2Fcallback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fadwords&state=state", 
-      "token_url_expires_at": "2021-07-15T20:00:25.628Z" 
+      "authorization_url": "https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=434635668552-0qvlu519fdjtnkvk8hu8c8dj8rg3723r.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Freactor.adobe.io%2Foauth2%2Fcallback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fadwords&state=state", 
+      "authorization_url_expires_at": "2021-07-15T20:00:25.628Z" 
     } 
   } 
 }

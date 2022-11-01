@@ -12,7 +12,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## Installation
 
-In order to install the extension, navigate to the extension catalog in the Data Collection UI and select Adobe Client Data Layer.
+In order to install the extension, navigate to the extension catalog in the Experience Platform UI or Data Collection UI and select Adobe Client Data Layer.
 
 ![ACDL Extension view in Catalog](./images/catalog.png)
 
