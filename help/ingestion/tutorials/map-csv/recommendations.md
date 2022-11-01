@@ -29,13 +29,13 @@ In the Experience Platform UI, select **[!UICONTROL Sources]** in the left navig
 
 The **[!UICONTROL Map CSV XDM schema]** workflow appears, starting on the **[!UICONTROL Dataflow detail]** step.
 
-Select **[!UICONTROL Create a new schema using ML recommendations]**, causing new controls to appear. Choose the appropriate class for the CSV data you want to map ([!UICONTROL Profile] or [!UICONTROL ExperienceEvent]), and use the dropdown menu to select the relevant industry for your business. If your organization operates under a [business-to-business (B2B)](../../../xdm/tutorials/relationship-b2b.md) model, select the **[!UICONTROL B2B data]** checkbox.
+Select **[!UICONTROL Create a new schema using ML recommendations]**, causing new controls to appear. Choose the appropriate class for the CSV data you want to map ([!UICONTROL Profile] or [!UICONTROL ExperienceEvent]). You can optionally use the dropdown menu to select the relevant industry for your business, or leave it blank if the provided categories do not apply to you. If your organization operates under a [business-to-business (B2B)](../../../xdm/tutorials/relationship-b2b.md) model, select the **[!UICONTROL B2B data]** checkbox.
 
 ![The [!UICONTROL Dataflow detail] step with the ML recommendation option selected. [!UICONTROL Profile] is selected for the class and [!UICONTROL Telecommunications] selected for the industry](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
 
 From here, provide a name for the schema that will be created from the CSV data, and a name for the output dataset that will contain the data ingested under that schema.
 
-You can optionally configure the following additional features for the dataflow:
+You can optionally configure the following additional features for the dataflow before proceeding:
 
 | Input name | Description |
 | --- | --- |
