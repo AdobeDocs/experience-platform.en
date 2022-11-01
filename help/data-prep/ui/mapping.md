@@ -73,7 +73,7 @@ The **[!UICONTROL mapping]** interface provides you with a comprehensive tool to
 
 ![map-csv-to-xdm](../images/ui/mapping/map-csv-to-xdm.png)
 
-### Understanding the mapping interface
+### Understanding the mapping interface {#mapping-interface}
 
 The mapping interface includes a dashboard that provides information on the health of your mapping fields within the context of the ingestion workflow. The dashboard displays the following details regarding your mapping fields:
 
