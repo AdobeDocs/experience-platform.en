@@ -41,7 +41,7 @@ For more information on audit logs in Platform, refer to the [audit logs overvie
 >
 >The Related accounts feature is available for customers of the Real-Time CDP B2B Edition only.
 
-B2B enterprises often have their customer information stored in multiple systems, each including only partial or even conflicting data for the same real-world business entity. This creates a massive challenge of arriving at an accurate view of their customers, therefore reducing the efficiency and effectiveness of their B2B marketing and sales efforts. With the release of related accounts, [!DNL Real-time CDP B2B] now shows you a list of accounts that are similar to the account you are browsing. You can include the related accounts in your segment definitions to broaden your reach or apply wider criteria in your segments. 
+B2B enterprises often have their customer information stored in multiple systems, each including only partial or even conflicting data for the same real-world business entity. This creates a massive challenge of arriving at an accurate view of their customers, therefore reducing the efficiency and effectiveness of their B2B marketing and sales efforts. With the release of related accounts, [!DNL Real-Time CDP B2B] now shows you a list of accounts that are similar to the account you are browsing. You can include the related accounts in your segment definitions to broaden your reach or apply wider criteria in your segments. 
 
 Read more about the feature in the following documentation pages:
 
@@ -49,7 +49,7 @@ Read more about the feature in the following documentation pages:
 - [Related accounts tab in the Account profile UI guide](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
 - [How to use related accounts in segment definitions](../../rtcdp/segmentation/b2b.md#related-accounts)
 
-To learn more about Real-time CDP B2B Edition, see the [overview](../../rtcdp/overview.md).
+To learn more about Real-Time CDP B2B Edition, see the [overview](../../rtcdp/overview.md).
 
 ## Alerts {#alerts}
 

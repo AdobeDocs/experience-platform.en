@@ -1,6 +1,6 @@
 ---
 title: Adobe Advertising Cloud DSP connection
-description: Adobe Advertising Cloud DSP is an integrated destination for the [!DNL Adobe Real-time Customer Data Profile], allowing you to share authenticated first-party segments with approved advertisers and users for campaign activation.
+description: Adobe Advertising Cloud DSP is an integrated destination for Adobe Real-Time Customer Data Platform, allowing you to share authenticated first-party segments with approved advertisers and users for campaign activation.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
 ---
 # Adobe Advertising Cloud DSP connection
@@ -19,7 +19,7 @@ To help you better understand how and when you should use the Advertising Cloud 
 
 ### Brand advertising use case
 
-An online retailer wants to retarget its high value customers through a display campaign without using cookies for targeting. The retailer shares a segment consisting of the hashed email IDs of its high value customers from its [!DNL Real-Time CDP] account to its DSP account. DSP then converts the hashed email IDs to authenticated [!DNL RampIDs] through a partnership between DSP and LiveRamp. The resulting [!DNL RampIDs] can be used in a display campaign to target the audience.
+An online retailer wants to retarget its high value customers through a display campaign without using cookies for targeting. The retailer shares a segment consisting of the hashed email IDs of its high value customers from its Adobe Real-Time Customer Data Platform (Real-Time CDP) account to its DSP account. DSP then converts the hashed email IDs to authenticated [!DNL RampIDs] through a partnership between DSP and LiveRamp. The resulting [!DNL RampIDs] can be used in a display campaign to target the audience.
 
 ### Agency use case
 
@@ -27,7 +27,7 @@ A media agency with a DSP account is running a retargeting campaign on behalf of
 
 ## Prerequisites {#prerequisites}
 
-* DSP account-level and campaign-level settings to enable segment sharing with [!DNL LiveRamp RampID], which will translate customer data to [!DNL RampIDs] to create targetable segments. Your DSP account team will perform this configuration. [!DNL RampID] is available via a partnership between DSP and [!DNL LiveRamp], and you don’t need your own [!DNL LiveRamp] membership to use it.
+* DSP account-level and campaign-level settings to enable segment sharing with [!DNL LiveRamp RampID], which will translate customer data to [!DNL RampIDs] to create targetable segments. Your DSP account team will perform this configuration. [!DNL RampID] is available via a partnership between DSP and [!DNL LiveRamp], and you don't need your own [!DNL LiveRamp] membership to use it.
 * The Experience Cloud organization ID for the Experience Platform account. You can find your ID on your [!DNL Real-Time CDP] user profile page.
 * A [[!DNL Real-Time CDP] source in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) to receive segments for campaign activation. Your DSP account team will create the source using your Experience Cloud organization ID.
 * The source key for the DSP account or advertiser, which is generated when a [[!DNL Real-Time CDP] source is created in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Your DSP account team will share this key with you. You'll use it within Experience Platform to create a destination connection to the Advertising Cloud DSP destination, as [explained below](#authenticate).

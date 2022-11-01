@@ -28,4 +28,4 @@ The [!UICONTROL Compute hours] widget uses a line graph to visualize your organi
 >
 >The [!UICONTROL Compute hours] widget is only applicable to customers with the Data Distiller license for batch queries.
 
-![The license usage dashboard with the Compute hours widget highlighted.](../images/data-distiller/compute-hours.png)
+![The license usage dashboard with the compute hours widget highlighted.](../images/data-distiller/compute-hours.png)
