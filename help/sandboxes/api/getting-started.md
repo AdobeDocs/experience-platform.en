@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics;sandbox developer guide
 solution: Experience Platform
-title: Sandbox API Guide
+title: Getting started with the Sandbox API
 topic-legacy: developer guide
 description: The Sandbox API allows developers to programmatically manage sandboxes in Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
 ---
-# Sandbox API guide
+# Getting started with the Sandbox API
 
 Sandboxes in Adobe Experience Platform provide isolated development environments that allow you to test features, run experiments, and make custom configurations without impacting your production environment.
 
 This developer guide provides steps to help you use the Sandbox API to manage sandboxes in Experience Platform, and includes sample API calls for performing various operations.
 
-## Getting started with the Sandbox API
+## Prerequisites
 
 In order to manage sandboxes for your IMS Organization, you must have Sandbox Administration permissions. Users without access permissions can only use the [available sandboxes endpoint](./available.md) to list active sandboxes for the current user. See the [access control overview](../../access-control/home.md) for more information on how to assign sandbox permissions for Experience Platform.
 
@@ -26,7 +26,7 @@ This guide requires you to have completed the [authentication tutorial](https://
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* x-gw-ims-org-id: `{ORG_ID}`
 
 In addition to the authentication headers, all requests require a header that specifies the name of the sandbox the operation will take place in:
 

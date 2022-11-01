@@ -34,7 +34,7 @@ curl -X GET \
   https://reactor.adobe.io/companies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -52,7 +52,7 @@ A successful response returns a list of companies that you have access to.
       "attributes": {
         "created_at": "2020-08-13T17:13:30.667Z",
         "name": "Example Company",
-        "org_id": "{IMS_ORG}",
+        "org_id": "{ORG_ID}",
         "updated_at": "2020-08-13T17:13:30.667Z",
         "token": "d5a4f682bbae",
         "cjm_enabled": false,
@@ -124,7 +124,7 @@ curl -X GET \
   https://reactor.adobe.io/companies/COdb0cd64ad4524440be94b8496416ec7d \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -141,7 +141,7 @@ A successful response returns the details of the company.
     "attributes": {
       "created_at": "2020-08-13T17:13:30.667Z",
       "name": "Example Company",
-      "org_id": "{IMS_ORG}",
+      "org_id": "{ORG_ID}",
       "updated_at": "2020-08-13T17:13:30.667Z",
       "token": "d5a4f682bbae",
       "cjm_enabled": false,

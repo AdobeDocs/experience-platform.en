@@ -148,7 +148,7 @@ All the data in Adobe Experience Platform complies with a standardized XDM schem
 If you don't immediately find the data you need, but it exists outside Adobe Experience Platform, it's a relatively simple task to ingest additional datasets, which will also transform into the standardized XDM schema.  
 You can use [!DNL Jupyter Notebook] to simplify data pre-processing - possibly starting with a notebook template or a notebook you've used previously for propensity to buy.  
 
-![](./images/home/notebook_templates.png)
+![](./images/home/notebook_templates-new.png)
 
 ### Author the recipe
 

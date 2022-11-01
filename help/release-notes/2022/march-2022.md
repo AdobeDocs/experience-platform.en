@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes
-description: The latest release notes for Adobe Experience Platform.
+title: Adobe Experience Platform Release Notes March 2022
+description: The March 2022 release notes for Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 ---
 # Adobe Experience Platform release notes 
@@ -19,7 +19,6 @@ Updates to existing features in Adobe Experience Platform:
 - [Data collection](#data-collection)
 - [[!DNL Query Service]](#query-service)
 - [Sources](#sources)
-<!-- - [Experience Data Model (XDM)](#xdm) -->
 
 ## Audit Logs {#audit-logs}
 
@@ -42,7 +41,7 @@ For more information on audit logs in Platform, refer to the [audit logs overvie
 >
 >The Related accounts feature is available for customers of the Real-Time CDP B2B Edition only.
 
-B2B enterprises often have their customer information stored in multiple systems, each including only partial or even conflicting data for the same real-world business entity. This creates a massive challenge of arriving at an accurate view of their customers, therefore reducing the efficiency and effectiveness of their B2B marketing and sales efforts. With the release of related accounts, [!DNL Real-time CDP B2B] now shows you a list of accounts that are similar to the account you are browsing. You can include the related accounts in your segment definitions to broaden your reach or apply wider criteria in your segments. 
+B2B enterprises often have their customer information stored in multiple systems, each including only partial or even conflicting data for the same real-world business entity. This creates a massive challenge of arriving at an accurate view of their customers, therefore reducing the efficiency and effectiveness of their B2B marketing and sales efforts. With the release of related accounts, [!DNL Real-Time CDP B2B] now shows you a list of accounts that are similar to the account you are browsing. You can include the related accounts in your segment definitions to broaden your reach or apply wider criteria in your segments. 
 
 Read more about the feature in the following documentation pages:
 
@@ -50,7 +49,7 @@ Read more about the feature in the following documentation pages:
 - [Related accounts tab in the Account profile UI guide](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
 - [How to use related accounts in segment definitions](../../rtcdp/segmentation/b2b.md#related-accounts)
 
-To learn more about Real-time CDP B2B Edition, see the [overview](../../rtcdp/overview.md).
+To learn more about Real-Time CDP B2B Edition, see the [overview](../../rtcdp/overview.md).
 
 ## Alerts {#alerts}
 
@@ -109,22 +108,10 @@ Platform provides a suite of technologies that allow you to collect client-side 
 
 | Feature | Description |
 | --- | --- |
-| Global datastream settings | You can now configure several new global settings when configuring a datastream: geo location, first-party ID cookie, and third-party ID sync. See the section on [configuring a datastream](../../edge/fundamentals/datastreams.md#configure) in the Datastreams UI guide for more information. |
+| Global datastream settings | You can now configure several new global settings when configuring a datastream: geo location, first-party ID cookie, and third-party ID sync. See the section on [configuring a datastream](../../edge/datastreams/overview.md#create) in the Datastreams UI guide for more information. |
 |[Edge Network Server API](../../server-api/overview.md)|The Server API allows customers to interact with the Experience Platform Edge Network using a new, authenticated endpoint, to power a variety of data collection, personalization, advertising and marketing use cases.|
 
 For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
-
-<!-- ## Experience Data Model (XDM) {#xdm}
-
-Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
-
-| Feature | Description |
-| --- | --- |
-| Add or remove individual standard fields for a schema | The Schema Editor UI now allows you to add portions of standard field groups to your schemas, providing more flexibility for the fields you choose to include without needing to build custom resources from scratch.<br><br>You can now also define ad-hoc custom fields directly within the schema structure and assign them to a new or existing custom field group without needing to create or edit the field group beforehand.<br><br>See the guide on [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information on these new workflows. |
-
-{style="table-layout:auto"}
-
-For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
 
 ## Query Service {#query-service}
 

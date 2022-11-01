@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes
-description: The latest release notes for Adobe Experience Platform.
+title: Adobe Experience Platform Release Notes January 2022
+description: The January 2022 release notes for Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
 ---
 # Adobe Experience Platform release notes 

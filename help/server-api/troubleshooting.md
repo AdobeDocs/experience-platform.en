@@ -1,8 +1,6 @@
 ---
 title: Troubleshooting
-description: Learn how to troubleshoot errors when using the Adobe Experience Platform Edge Network Server API
-seo-description: Learn how to troubleshoot errors when using the Adobe Experience Platform Edge Network Server API
-keywords: edge network;gateway;api;troubleshoot;errors;griffon
+description: Learn how to troubleshoot errors when using the Edge Network Server API.
 exl-id: f0223fca-30ec-4229-93a5-3faa6cef5482
 ---
 # Troubleshooting

@@ -1,23 +1,21 @@
 ---
 title: Authentication
-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
-seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
-keywords: data collection; authentication; Adobe Experience Platform Edge Network api; authorization
+description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
 ---
 # Authentication {#authentication}
 
 ## Overview 
 
-The [!DNL Adobe Experience Platform Edge Network Server API] handles both authenticated and unauthenticated data collection, depending on the source of events and the API collection domain.
+The [!DNL Edge Network Server API] handles both authenticated and unauthenticated data collection, depending on the source of events and the API collection domain.
 
-For each request, the [!DNL Server API] verifies the datastream `access_type` setting.
+For each request, the [!DNL Server API] verifies the datastream [!DNL access type] setting. Using this setting, customers can configure a datastream to accept either authenticated data, or both authenticated and unauthenticated data. By default, both types of data are accepted.
 
-Using this setting, customers can configure a datastream to accept either authenticated data, or both authenticated and unauthenticated data. By default, both types of data are accepted.
+For details on configuring the datastream access type, see the documentation on how to [create and configure a datastream](../edge/datastreams/overview.md#create).
 
-Below is a summary of the behavior, based on the `access_type` configuration and the endpoint on which the request is received.
+Below is a summary of the behavior, based on the datastream [!DNL Access Type] configuration and the endpoint on which the request is received.
 
-| `access_type`     | edge.adobedc.net              | server.adobedc.net    |
+| [!DNL Access Type]    | edge.adobedc.net              | server.adobedc.net    |
 |-----------------|-------------------------------|-----------------------|
 | mixed (default) | Does not authenticate request  | Authenticates request |
 | authenticated   | Authenticates request         | Authenticates request |
@@ -38,7 +36,7 @@ In order to make calls to Platform APIs, you must first complete the [authentica
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
-*   x-gw-ims-org-id: `{IMS_ORG}`
+*   x-gw-ims-org-id: `{ORG_ID}`
 
 Resources in Experience Platform can be isolated to specific virtual sandboxes. In requests to Platform APIs, you can specify the name and ID of the sandbox that the operation will take place in. These are optional parameters.
 

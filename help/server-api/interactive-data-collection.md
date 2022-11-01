@@ -1,8 +1,6 @@
 ---
 title: Interactive data collection
-description: Learn how the Adobe Experience Platform Edge Network Server API performs interactive data collection
-seo-description: Learn how the Adobe Experience Platform Edge Network Server API performs interactive data collection
-keywords: data collection;collection;experience platform edge network;api;interactive data collection
+description: Learn how the Adobe Experience Platform Edge Network Server API performs interactive data collection.
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
 ---
 # Interactive data collection
@@ -24,9 +22,9 @@ POST /ee/v2/interact
 ### Request {#request}
 
 ```shell
-curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}" 
+curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}" 
 -H "Authorization: Bearer {TOKEN}" 
--H "x-gw-ims-org-id: {IMS_ORG_ID}" 
+-H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}" 
 -H "Content-Type: application/json" 
 -d '{

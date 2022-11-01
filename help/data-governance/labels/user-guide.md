@@ -68,7 +68,7 @@ The **[!UICONTROL Show Inherited Labels]** toggle is on by default, which allows
 
 ![Hide inherited labels](../images/labels/inherited-labels.png)
 
-## Manage labels at the field level
+## Manage labels at the dataset field level
 
 Continuing the workflow for [adding and editing data usage labels at the dataset level](#add-labels), you can also manage field-level labels within the **[!UICONTROL Data Governance]** workspace for that dataset. 
 
@@ -94,7 +94,18 @@ You can repeat these steps to continue adding and editing field-level labels for
 
 It is important to remember that inheritance moves from the top-level down only (dataset → fields), meaning that labels applied at the field level are not propagated to other fields or datasets.
 
-## Manage custom labels
+## Manage labels at the schema level
+
+You can add labels directly to a schema or fields within that schema. Any fields applied at the schema level will propagate to all datasets based on that schema.
+
+See the tutorial on [managing schema-level labels](../../xdm/tutorials/labels.md) for more information.
+
+## Manage custom labels {#manage-custom-labels}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_createlabels"
+>title="Create labels"
+>abstract="Labels allow you to categorize datasets and fields according to usage policies that apply to that data. Platform provides a standard set of labels for you to use, but you can also create custom labels that are specific to your organization."
 
 You can create your own custom usage labels within the **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI. Select **[!UICONTROL Policies]** in the left-navigation, then select **[!UICONTROL Labels]** to view a list of existing labels. From here, select **[!UICONTROL Create label]**.
 

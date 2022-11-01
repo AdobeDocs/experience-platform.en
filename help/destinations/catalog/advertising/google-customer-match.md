@@ -129,11 +129,17 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 * **[!UICONTROL Name]**: provide a name for this destination connection
 * **[!UICONTROL Description]**: provide a description for this destination connection
-* **[!UICONTROL Account ID]**: your Google customer client ID. The format of the ID is xxx-xxx-xxxx.
+* **[!UICONTROL Account ID]**: your [Google Ads customer ID](https://support.google.com/google-ads/answer/1704344?hl=en). The format of the ID is xxx-xxx-xxxx. If you are using the [!DNL Google Ads Manager Account (My Client Center)], do not use your Manager Account ID. Use the [Google Ads customer ID](https://support.google.com/google-ads/answer/1704344?hl=en) instead.
 
 >[!IMPORTANT]
 >
 > * The **[!UICONTROL Combine with PII]** marketing action is selected by default for the [!DNL Google Customer Match] destination and cannot be removed.
+
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
 ## Activate segments to this destination {#activate}
 

@@ -2,15 +2,30 @@
 audience: user
 user-guide-title: Access Control in Adobe Experience Platform Help
 breadcrumb-title: Access Control Guide
-user-guide-description: Leverage product profiles in Adobe Admin Console to link users with permissions and sandboxes.
+user-guide-description: Use product profiles in Adobe Admin Console to manage user permissions. Learn how to assign users to products and sandboxes.
 feature: Access Control
 ---
 
 # Access control {#access-control}
 
 * [Access control overview](home.md)
-* Field Level Access Control {#flac}
-  * [Overview](flac/overview.md)
+* Attribute-based access control {#abac}
+  * [Overview](abac/overview.md)
+  * [End-to-end guide](abac/end-to-end-guide.md)
+  * Permissions {#permissions-ui}
+    * [Browse](abac/ui/browse.md)
+    * [Labels](abac/ui/labels.md)
+    * [Permissions](abac/ui/permissions.md)
+    * [Policies](abac/ui/policies.md)
+    * [Roles](abac/ui/roles.md)
+    * [Sandboxes](abac/ui/sandboxes.md)
+    * [Users](abac/ui/users.md)
+  * Attribute-based access control API {#abac-api}
+    * [Overview](abac/api/overview.md)
+    * [Getting started](abac/api/getting-started.md)
+    * [Roles](abac/api/roles.md)
+    * [Policies](abac/api/policies.md)
+    * [Products](abac/api/products.md)
 * Access control UI {#ui}
   * [Overview](ui/overview.md)
   * [Select a product profile](ui/browse.md)

@@ -14,6 +14,10 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 With the [!DNL Marketo] source connector, you can bring B2B data from [!DNL Marketo] to Platform and keep this data up to date using Platform-connected applications.
 
+>[!IMPORTANT]
+>
+>You must have access to [Adobe Real-Time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) to use all Marketo datasets for segmentation with the [Real-time Customer Profile](../../../../profile/home.md). Without Real-Time CDP B2B Edition, you can still use the Marketo source to bring data from the people and activities datasets to Real-time Customer Profile for segmentation.
+
 This document provides an overview of the [!DNL Marketo] source connector, including information about how to authenticate the connector, how to map [!DNL Marketo] fields to Experience Data Model (XDM), and the connector's data latency.
 
 ## Authenticate your [!DNL Marketo] connector
@@ -24,7 +28,11 @@ See the steps outlined in the [Authenticate your Marketo source connector](./mar
 
 ## Set up Adobe Organization Mapping
 
-Before you can establish mapping sets for [!DNL Marketo], you must first set up Adobe Organization Mapping. For detailed steps on how to complete this, see the guide on [setting up Adobe Organization Mapping for [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html ).
+Before you can establish mapping sets for [!DNL Marketo], you must first set up Adobe Organization Mapping. For detailed steps on how to complete this, see the guide on [setting up Adobe Organization Mapping for [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+
+## Set up B2B namespaces and schema auto-generation utility
+
+Next, use the B2B namespace and schema auto-generation utility to set up your Platform developer console and Postman environment. This allows you to auto-populate your B2B namespaces and schemas. For detailed instructions, see the guide on [setting up your B2B namespaces and schema auto-generation utility](./marketo-namespaces.md)
 
 ## Experience Data Model (XDM)
 
@@ -68,4 +76,4 @@ The following documentation provides further information on creating a [!DNL Mar
 * For information on the underlying setup for the B2B namespaces and schemas used with [!DNL Marketo], see the documentation for [B2B namespaces and schemas](./marketo-namespaces.md).
 * For information on finding your [!DNL Marketo] munchkin ID and generating your credentials, see the [[!DNL Marketo] authentication guide](./marketo-auth.md).
 * For information on the specific mapping rules that apply to [!DNL Marketo] datasets, see the documentation on [[!DNL Marketo] field mappings](../mapping/marketo.md).
-* For general information on [!DNL Real-time Customer Data Platform B2B Edition] and its features, see the documentation on [[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
+* For general information on [!DNL Real-Time Customer Data Platform B2B Edition] and its features, see the documentation on [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).

@@ -21,7 +21,7 @@ Follow the [Experience Platform API authentication tutorial](https://www.adobe.c
 From the tutorial you should now have the following values:
 
 - `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.
-- `{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.
+- `{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.
 - `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.
 
 - Link to a Docker image of an intelligent service
@@ -55,12 +55,12 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d `{JSON_PAYLOAD}`
 ```
 
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
-`{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
 `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.  
 `{JSON_PAYLOAD}`: The configuration of our MLInstance. The example we use in our tutorial is shown here:
 
@@ -168,12 +168,12 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY' \
   -d `{JSON PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
 `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.  
 `{JSON_PAYLOAD}`: Experiment object that is created. The example we use in our tutorial is shown here:
@@ -224,13 +224,13 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}`
 
 ```
 
-`{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
 `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.  
 `{JSON_PAYLOAD}`: Data set to be posted. The example we use in our tutorial is shown here:
@@ -312,13 +312,13 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experimentRun.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}'
 ```
 
 `{EXPERIMENT_ID}`: The ID corresponding to the Experiment you want to target. This can be found in the response when creating your Experiment.  
-`{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
 `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.  
 `{JSON_PAYLOAD}`: To create a training run, you will have to include the following in the body:
@@ -382,14 +382,14 @@ The status of the Experiment run can be queried with the `{EXPERIMENT_RUN_ID}`.
 curl -X GET \
   https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs/{EXPERIMENT_RUN_ID}/status \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}'
 ```
 
 `{EXPERIMENT_ID}`: The ID that represents the Experiment.  
 `{EXPERIMENT_RUN_ID}`: The ID that represents the Experiment Run.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
-`{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
 `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.  
 
 **Response**
@@ -447,12 +447,12 @@ In order to get the trained Model created above during training, we make the fol
 curl -X GET \
   'https://platform.adobe.io/data/sensei/models/?property=experimentRunId=={EXPERIMENT_RUN_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 `{EXPERIMENT_RUN_ID}`: The ID corresponding to the Experiment Run you want to target. This can be found in the response when creating your Experiment Run.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
-`{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
 
 The response represents the trained Model that was created.
 
@@ -494,12 +494,12 @@ If you want to stop execution of a scheduled Experiment before its `endTime`, th
 curl -X DELETE \
   'https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 `{EXPERIMENT_ID}`:  The ID corresponding to the Experiment.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
-`{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
 
 >[!NOTE]
 >

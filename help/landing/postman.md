@@ -46,9 +46,9 @@ To learn more about the Postman UI and its available features, visit the [Postma
 
 >[!WARNING]
 >
->As noted in the Adobe I/O access token generation Postman collection, the denoted generation methods are suitable for **non-production use**. Local signing loads a JavaScript library from a third-party host, and remote signing sends the private key to a web service that is owned and operated by Adobe. While Adobe does not store this private key, production keys should never be shared with anyone.
+>As noted in the Identity Management Service (IMS) Postman collection, the denoted generation methods are suitable for **non-production use**. Local signing loads a JavaScript library from a third-party host, and remote signing sends the private key to a web service that is owned and operated by Adobe. While Adobe does not store this private key, production keys should never be shared with anyone.
 
-The video below uses the [Adobe I/O access token generation collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Adobe%20IO%20Access%20Token%20Generation.postman_collection.json) which can be downloaded from the public GitHub repository.
+The video below uses the [Identity Management Service (IMS) Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) which can be downloaded from the public GitHub repository.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 

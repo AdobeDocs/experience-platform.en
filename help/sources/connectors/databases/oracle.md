@@ -21,7 +21,7 @@ The documentation below provides information on how to connect [!DNL Oracle] to 
 ## Connect [!DNL Oracle] to [!DNL Platform] using APIs
 
 - [Create an Oracle base connection using the Flow Service API](../../tutorials/api/create/databases/oracle.md)
-- [Explore the data structure and contents of a database source using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
+- [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL Oracle] to [!DNL Platform] using the UI

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
 title: Preview Sample Status (Profile Preview) API Endpoint
-description: Using the preview sample status endpoint, part of the Real-time Customer Profile API, you can preview the latest successful sample of your Profile data, list profile distribution by dataset and by identity, and generate reports showing dataset overlap, identity overlap, and unknown profiles.
+description: The preview sample status endpoint of the Real-time Customer Profile API allows you to preview the latest successful sample of your Profile data, list profile distribution by dataset and by identity, and generate reports showing dataset overlap, identity overlap, and unstitched profiles.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
 ---
 # Preview sample status endpoint (Profile preview)
@@ -58,7 +58,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/previewsamplestatus \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -129,7 +129,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset?date=2020-08-01 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -228,7 +228,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -297,7 +297,7 @@ The response includes a `data` array, with individual objects containing the det
 
 ## Generate the dataset overlap report
 
-The dataset overlap report provides visibility into the composition of your organization's Profile Store by exposing the datasets that contribute most to your addressable audience (merged profiles). In addition to providing insights into your data, this report can help you take actions to optimize license usage, such as setting a TTL for certain datasets.
+The dataset overlap report provides visibility into the composition of your organization's Profile Store by exposing the datasets that contribute most to your addressable audience (merged profiles). In addition to providing insights into your data, this report can help you take actions to optimize license usage, such as setting expirations for certain datasets.
 
 You can generate the dataset overlap report by performing a GET request to the `/previewsamplestatus/report/dataset/overlap` endpoint.
 
@@ -323,7 +323,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=2021-12-29 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
 
 **Response**
@@ -389,7 +389,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace/overlap?date=2021-12-29 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
 
 **Response**
@@ -459,44 +459,44 @@ This report provides the following information:
 * There are 24 profiles that are composed of `AAID` and `ECID` identity namespaces.
 * There are 6,565 profiles that include only an `ECID` identity.
 
-## Generate the unknown profiles report
+## Generate the unstitched profiles report
 
-You can gain further visibility into the composition of your organization's Profile Store through the unknown profiles report. An "unknown profile" refers to any profile that is both unstitched and inactive for a given time period. An "unstitched" profile is a profile that contains only one profile fragment, while an "inactive" profile is any profile that has not added new events for the specified time period. The unknown profiles report provides a breakdown of profiles for a period of 7, 30, 60, 90, and 120 days.
+You can gain further visibility into the composition of your organization's Profile Store through the unstitched profiles report. An "unstitched" profile is a profile that contains only one profile fragment. An "unknown" profile is a profile that is associated with pseudonymous identity namespaces such as `ECID` and `AAID`. Unknown profiles are inactive, which means they have not added new events for the specified time period. The unstitched profiles report provides a breakdown of profiles for a period of 7, 30, 60, 90, and 120 days.
 
-You can generate the unknown profiles report by performing a GET request to the `/previewsamplestatus/report/unknownProfiles` endpoint.
+You can generate the unstitched profiles report by performing a GET request to the `/previewsamplestatus/report/unstitchedProfiles` endpoint.
 
 **API format**
 
 ```http
-GET /previewsamplestatus/report/unknownProfiles
+GET /previewsamplestatus/report/unstitchedProfiles
 ```
 
 **Request**
 
-The following request returns the unknown profiles report.
+The following request returns the unstitched profiles report.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unknownProfiles \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unstitchedProfiles \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
 
 **Response**
 
-A successful request returns HTTP Status 200 (OK) and the unknown profiles report. 
+A successful request returns HTTP Status 200 (OK) and the unstitched profiles report. 
 
 >[!NOTE]
 >
->For the purposes of this guide, the report has been truncated to include only `"120days"` and "`7days`" time periods. The full unknown profiles report provides a breakdown of profiles for a period of 7, 30, 60, 90, and 120 days.
+>For the purposes of this guide, the report has been truncated to include only `"120days"` and "`7days`" time periods. The full unstitched profiles report provides a breakdown of profiles for a period of 7, 30, 60, 90, and 120 days.
 
 ```json
 {
   "data": {
       "totalNumberOfProfiles": 63606,
       "totalNumberOfEvents": 130977,
-      "unknownProfiles": {
+      "unstitchedProfiles": {
           "120days": {
               "countOfProfiles": 1644,
               "eventsAssociated": 26824,
@@ -541,16 +541,16 @@ A successful request returns HTTP Status 200 (OK) and the unknown profiles repor
 
 |Property|Description|
 |---|---|
-|`data`|The `data` object contains the information returned for the unknown profiles report.|
-|`totalNumberOfProfiles`|The total count of unique profiles in the Profile Store. This is equivalent to the addressable audience count. It includes both known and unknown profiles.|
+|`data`|The `data` object contains the information returned for the unstitched profiles report.|
+|`totalNumberOfProfiles`|The total count of unique profiles in the Profile Store. This is equivalent to the addressable audience count. It includes both known and unstitched profiles.|
 |`totalNumberOfEvents`|The total number of ExperienceEvents in the Profile Store.|
-|`unknownProfiles`|An object containing a breakdown of unknown profiles (unstitched and inactive) by time period. The unknown profiles report provides a breakdown of profiles for 7, 30, 60, 90, and 120 day time periods.|
-|`countOfProfiles`|The count of unknown profiles for the time period or the count of unknown profiles for the namespace. |
+|`unstitchedProfiles`|An object containing a breakdown of unstitched profiles by time period. The unstitched profiles report provides a breakdown of profiles for 7, 30, 60, 90, and 120 day time periods.|
+|`countOfProfiles`|The count of unstitched profiles for the time period or the count of unstitched profiles for the namespace. |
 |`eventsAssociated`|The number of ExperienceEvents for the time range or the number of events for the namespace.|
-|`nsDistribution`|An object containing individual identity namespaces with the distribution of unknown profiles and events for each namespace. Note: Adding together the total `countOfProfiles` for each identity namespace in the `nsDistribution` object equals the `countOfProfiles` for the time period. The same is true for `eventsAssociated` per namespace and the total `eventsAssociated` per time period.|
+|`nsDistribution`|An object containing individual identity namespaces with the distribution of unstitched profiles and events for each namespace. Note: Adding together the total `countOfProfiles` for each identity namespace in the `nsDistribution` object equals the `countOfProfiles` for the time period. The same is true for `eventsAssociated` per namespace and the total `eventsAssociated` per time period.|
 |`reportTimestamp`|The timestamp of the report.|
 
-### Interpreting the unknown profiles report
+### Interpreting the unstitched profiles report
 
 The results of the report can provide insight into how many unstitched and inactive profiles your organization has within its Profile Store.
 
@@ -580,9 +580,9 @@ Consider the following excerpt from the `data` object:
 This report provides the following information:
 
 * There are 1,782 profiles that contain only one profile fragment and have no new events for the past seven days.
-* There are 29,151 ExperienceEvents associated with the 1,782 unknown profiles.
-* There are 1,734 unknown profiles containing a single profile fragment from the identity namespace of ECID.
-* There are 28,591 events associated with the 1,734 unknown profiles that contain a single profile fragment from the identity namespace of ECID.
+* There are 29,151 ExperienceEvents associated with the 1,782 unstitched profiles.
+* There are 1,734 unstitched profiles containing a single profile fragment from the identity namespace of ECID.
+* There are 28,591 events associated with the 1,734 unstitched profiles that contain a single profile fragment from the identity namespace of ECID.
 
 ## Next steps
 

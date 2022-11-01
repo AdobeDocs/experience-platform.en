@@ -33,9 +33,9 @@ Refer to the table below for information about the destination export type and f
 > 
 >To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
-### Connection parameters {#parameters}
+### Authentication information {#authentication-information}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_rsa"
@@ -44,24 +44,19 @@ To connect to this destination, follow the steps described in the [destination c
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
->title="SSH key"
->abstract="The SSH key requires a Base64 string."
-
-When [connecting](../../ui/connect-destination.md) to this destination, you must provide the following information:
-
-#### Authentication information {#authentication-information}
+>title="Private SSH key"
+>abstract="The private SSH key must be formatted as a Base64-encoded string and must not be password-protected."
 
 If you select the **[!UICONTROL Basic authentication]** type to connect to your SFTP location:
 
-![SFTP destination basic authentication](../..//assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![SFTP destination basic authentication](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL Host]**: The address of your SFTP storage location;
 * **[!UICONTROL Username]**: The username to log into your SFTP storage location;
 * **[!UICONTROL Password]**: The password to log into your SFTP storage location.
-* **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64] encoded string.
-  * Example: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. See below an example of a correctly formatted PGP key, wwith the middle part shortened for brevity.
+* **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64-encoded] string. View an example of a correctly formatted, base64-encoded key in the documentation link below. The middle part is shortened for brevity.
 
-    ![PGP key](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+![Image showing an example of a correctly formatted and base64-encrypted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 If you select the **[!UICONTROL SFTP with SSH key]** authentication type to connect to your SFTP location:
@@ -71,13 +66,13 @@ If you select the **[!UICONTROL SFTP with SSH key]** authentication type to conn
 * **[!UICONTROL Domain]**: Fill in the IP address or the domain name of your SFTP account
 * **[!UICONTROL Port]**: The port used by your SFTP storage location;
 * **[!UICONTROL Username]**: The username to log into your SFTP storage location;
-* **[!UICONTROL SSH Key]**: The SSH key to log into your SFTP storage location.
+* **[!UICONTROL SSH Key]**: The private SSH key used to log into your SFTP storage location. The private key must be formatted as a Base64-encoded string and must not be password-protected.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64] encoded string.
-  * Example: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. See below an example of a correctly formatted PGP key, wwith the middle part shortened for brevity.
+  * Example: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. See below an example of a correctly formatted PGP key, with the middle part shortened for brevity.
 
-    ![PGP key](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+    ![PGP key](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
     
-#### Destination details {#destination-details}
+### Destination details {#destination-details}
 
 After establishing the authentication connection to the SFTP location, provide the following information for the destination:
 

@@ -14,7 +14,7 @@ To address this need, the [!UICONTROL Schemas] workspace in the Adobe Experience
 
 >[!NOTE]
 >
->You can also use the Schema Registry API to export other resources in addition to schemas, including classes, schema field groups, and data types. See the guide on the [export/import endpoints](../api/export-import.md) for more information.
+>You can also use the Schema Registry API to export other resources in addition to schemas, including classes, schema field groups, and data types. See the [export endpoint guide](../api/export.md) for more information.
 
 ## Prerequisites
 
@@ -202,7 +202,7 @@ Note that each instance of your organization's tenant ID appears as `<XDM_TENANT
 
 ## Import the resource using the API
 
-Once you have copied the export JSON for the schema, you can use it as the payload for a POST request to the `/import` endpoint in the Schema Registry API. See the section on [importing an XDM resource in the API](../api/export-import.md#import) for details on how to configure the call to send the schema to the desired IMS Org and sandbox.
+Once you have copied the export JSON for the schema, you can use it as the payload for a POST request to the `/rpc/import` endpoint in the Schema Registry API. See the [import endpoint guide](../api/import.md) for details on how to configure the call to send the schema to the desired IMS Org and sandbox.
 
 ## Next steps
 

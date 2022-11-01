@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform Data Ingestion Help
 breadcrumb-title: Data Ingestion Guide
-user-guide-description: Bring your data into Platform through batch or streaming ingestion.
+user-guide-description: Bring your data into Experience Platform through batch or streaming ingestion.
 feature: Data Ingestion
 ---
 
@@ -20,7 +20,10 @@ feature: Data Ingestion
   - [Partial batch ingestion](batch-ingestion/partial.md)
   - [Troubleshooting](batch-ingestion/troubleshooting.md)
 - Tutorials {#tutorials}
-  - [Map a CSV file to XDM](tutorials/map-a-csv-file.md)
+  - Map a CSV file to XDM {#map-csv}
+    - [Overview](./tutorials/map-csv/overview.md)
+    - [Map a CSV file to an existing schema](./tutorials/map-csv/existing-schema.md)
+    - [Map a CSV file using AI-generated recommendations](./tutorials/map-csv/recommendations.md)
   - [Ingest batch data using the UI](tutorials/ingest-batch-data.md)
   - [Create an authenticated streaming connection](tutorials/create-authenticated-streaming-connection.md)
   - [Create a streaming connection (API)](tutorials/create-streaming-connection.md)
@@ -35,6 +38,7 @@ feature: Data Ingestion
   - [Retrieve failed batches](quality/retrieve-failed-batches.md)
   - [Streaming ingestion validation](quality/streaming-validation.md)
   - [Data ingestion notifications](quality/subscribe-events.md)
+- [Guardrails for data ingestion](guardrails.md)
 - [Source connectors](source-connectors.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

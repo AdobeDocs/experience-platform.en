@@ -23,7 +23,7 @@ The Adobe Experience Platform Web SDK supports two types of Analytics logging fo
 | Server-side Analytics logging | All Analytics hits sent through the Edge Network are augmented with Target details on the server side, without having to go through the hit stitching process.  | 
 | Client-side Analytics logging | Target data is returned on the client side, allowing you to manually augment and send data to Analytics using the [Data Insertion API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html).| 
 
-The logging method is determined by whether you have Adobe Analytics enabled on your configured [datastream](../../../fundamentals/datastreams.md):
+The logging method is determined by whether you have Adobe Analytics enabled on your configured [datastream](../../../datastreams/overview.md):
 
 ![Logging method decision flow](../assets/analytics-logging.png)
 

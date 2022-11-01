@@ -52,15 +52,33 @@ Target your existing followers and customers in Twitter and create relevant re-m
 > 
 >To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
-### Connection parameters {#parameters}
+### Authenticate to destination {#authenticate}
 
-While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
+1. Find the [!DNL Twitter Custom Audiences] destination in the destination catalog and select **[!UICONTROL Set Up]**.
+2. Select **[!UICONTROL Connect to destination]**.
+  ![Authenticate to LinkedIn](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
+3. Enter your Twitter credentials and select **Log In**.
+
+### Fill in destination details {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_twitter_accountid"
+>title="Account ID"
+>abstract="Your Twitter Ads account ID. This can be found in your Twitter Ads settings."
+
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Account ID]**: Your [!DNL Twitter Ads] account ID. This can be found in your [!DNL Twitter Ads] settings.
+
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
 ## Activate segments to this destination {#activate}
 

@@ -11,7 +11,7 @@ exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 
 >[!IMPORTANT]
 >
-> This destination is available only to [Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
+> This destination is available only to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 
 The HTTP API destination is an [!DNL Adobe Experience Platform] streaming destination that helps you send profile data to third-party HTTP endpoints.
 
@@ -87,6 +87,11 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authentication information {#authentication-information}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_clientcredentialstype"
+>title="Client credentials type"
+>abstract="Select **Body Form Encoded** to include the client ID and client secret in the body of the request or **Basic Authorization** to include client ID and client secret in an authorization header. View examples in the documentation."
+
 #### Bearer token authentication {#bearer-token-authentication}
 
 If you select the **[!UICONTROL Bearer token]** authentication type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
@@ -117,11 +122,6 @@ If you select the **[!UICONTROL OAuth 2 Password]** authentication type to conne
 
 #### OAuth 2 Client Credentials authentication {#oauth-2-client-credentials-authentication}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_http_clientcredentialstype"
->title="Client credentials type"
->abstract="Select **Body Form Encoded** to include the client ID and client secret in the body of the request or **Basic Authorization** to include client ID and client secret in an authorization header. View examples in the documentation."
-
 If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
 
 ![Image of the UI screen where you can connect to the HTTP API destination, using OAuth 2 with Client Credentials authentication](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
@@ -133,7 +133,7 @@ If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication typ
   * **[!UICONTROL Body Form Encoded]**: In this case, the [!DNL client ID] and [!DNL client secret] are included *in the body of the request* sent to your destination. For an example, see the [Supported authentication types](#supported-authentication-types) section.
   * **[!UICONTROL Basic Authorization]**: In this case, the [!DNL client ID] and [!DNL client secret] are included *in an `Authorization` header* after being base64 encoded and sent to your destination. For an example, see the [Supported authentication types](#supported-authentication-types) section.
 
-### Destination details {#destination-details}
+### Fill in destination details {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
@@ -160,7 +160,7 @@ If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication typ
 >title="Query Parameters"
 >abstract="Optionally, you can add query parameters to the HTTP endpoint URL. Format the query parameters you use like this: `parameter1=value&parameter2=value`."
 
-After establishing the authentication connection to the HTTP endpoint, provide the following information for the destination:
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
 ![Image of the UI screen showing completed fields for the HTTP destination details](../../assets/catalog/http/http-api-destination-details.png)
 
@@ -171,6 +171,12 @@ After establishing the authentication connection to the HTTP endpoint, provide t
 * **[!UICONTROL Query parameters]**: Optionally, you can add query parameters to the HTTP endpoint URL. Format the query parameters you use like this: `parameter1=value&parameter2=value`.
 * **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the segments you are exporting. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
 * **[!UICONTROL Include Segment Timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the segments were created and updated, as well as the UNIX timestamp when the segments were mapped to the destination for activation. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
+
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
 ## Activate segments to this destination {#activate}
 
@@ -319,6 +325,6 @@ Below are further examples of exported data, depending on the UI settings you se
 
 ## Limits and retry policy {#limits-retry-policy}
 
-In 95 percent of the time, Experience Platform attempts to offer a throughput latency of less than 10 minutes for successfully sent messages with a rate of less than 10.000 requests per second for each dataflow to an HTTP destination.
+In 95 percent of the time, Experience Platform attempts to offer a throughput latency of less than 10 minutes for successfully sent messages with a rate of less than 10 thousand requests per second for each dataflow to an HTTP destination.
 
 In case of failed requests to your HTTP API destination, Experience Platform stores the failed requests and retries twice to send the requests to your endpoint.

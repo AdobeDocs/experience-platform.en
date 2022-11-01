@@ -9,10 +9,6 @@ exl-id: aad6b6f7-622c-4ab6-bf6d-1221fe1132d1
 ---
 # Create a [!DNL Generic OData] source connection in the UI
 
->[!NOTE]
->
-> The [!DNL Generic OData] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Generic Open Data Protocol] (hereinafter referred to as "[!DNL OData]") source connector using the [!DNL Platform] user interface.
 
 ## Getting started

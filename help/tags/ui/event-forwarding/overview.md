@@ -43,7 +43,7 @@ While tags collects event data directly from your site or native mobile applicat
 
 ### Properties {#properties}
 
-Event forwarding maintains its own store of properties separate from tags, which you can view in the Data Collection UI by selecting **[!UICONTROL Event Forwarding]** in the left navigation.
+Event forwarding maintains its own store of properties separate from tags, which you can view in the Experience Platform UI or Data Collection UI by selecting **[!UICONTROL Event Forwarding]** in the left navigation.
 
 ![Event forwarding properties in the Data Collection UI](../../images/ui/event-forwarding/overview/properties.png)
 
@@ -61,7 +61,7 @@ The types of data elements that are available in event forwarding are limited to
 
 While data elements themselves are created and configured the same way in event forwarding as they are for tags, there are some important syntax differences when it comes to how they reference data from Platform Edge Network.
 
-#### Referencing data from Platform Edge Network {#edge}
+#### Referencing data from Platform Edge Network {#data-element-path}
     
 To reference data from Platform Edge Network, you must create a data element that provides a valid path to that data. When creating the data element in the UI, select **[!UICONTROL Core]** for the extension and **[!UICONTROL Path]** for the type.
 
@@ -71,7 +71,7 @@ The **[!UICONTROL Path]** value for the data element must follow the pattern `ar
 
 ### Rules {#rules}
 
-Creating rules in event forwarding properties works in a similar way to tags, with the key difference being that you cannot select events as rule components. Instead, an event forwarding rule processes all events it receives from the [datastream](../../../edge/fundamentals/datastreams.md) and forwards those events to destinations if certain conditions are satisfied.
+Creating rules in event forwarding properties works in a similar way to tags, with the key difference being that you cannot select events as rule components. Instead, an event forwarding rule processes all events it receives from the [datastream](../../../edge/datastreams/overview.md) and forwards those events to destinations if certain conditions are satisfied.
 
 ![Event forwarding rules in the Data Collection UI](../../images/ui/event-forwarding/overview/rules.png)
 

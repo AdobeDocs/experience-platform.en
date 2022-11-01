@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes
-description: Experience Platform release notes November 18, 2019
+title: Adobe Experience Platform Release Notes November 2019
+description: The November 2019 release notes for Adobe Experience Platform.
 doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
@@ -11,7 +11,7 @@ exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
 **Release date: November 18, 2019**
 
 New features in Adobe Experience Platform:  
-* [[!DNL Real-time Customer Data Platform]](#rtcdp)
+* [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Sources]](#sources)
 
@@ -21,48 +21,48 @@ Updates to existing features:
 * [[!DNL Real-time Customer Profile]](#profile) 
 * [[!DNL Segmentation Service]](#segmentation)
 
-## [!DNL Real-time Customer Data Platform] {#rtcdp}
+## [!DNL Real-Time Customer Data Platform] {#rtcdp}
 
-Built on Adobe Experience Platform, the Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and unknown data to activate customer profiles with intelligent decisioning throughout the customer journey. Real-time CDP combines multiple enterprise data sources to create unified profiles in real time that can be used to provide one-to-one personalized customer experiences across all channels and devices.
+Built on Adobe Experience Platform, the Real-Time Customer Data Platform (Real-Time CDP) helps companies bring together known and unknown data to activate customer profiles with intelligent decisioning throughout the customer journey. Real-Time CDP combines multiple enterprise data sources to create unified profiles in real time that can be used to provide one-to-one personalized customer experiences across all channels and devices.
 
-[!DNL Real-time Customer Data Platform] includes tools for data governance, identity management, advanced segmentation, and data science so that you can build profiles and define audiences, as well as derive rich insights while being able to enforce strict data governance policies.
+[!DNL Real-Time Customer Data Platform] includes tools for data governance, identity management, advanced segmentation, and data science so that you can build profiles and define audiences, as well as derive rich insights while being able to enforce strict data governance policies.
 
 Adobe connects to a large ecosystem of partners, not to mention native integrations with Adobe Experience Cloud, so you can seamlessly activate these audiences and deliver great customer experiences across all channels, from on-site or in-app personalization to email, paid media, call centers, connected devices, and more.
 
-With Real-time CDP, you can:
+With Real-Time CDP, you can:
 
 * Achieve a single view of your customer with streaming collection of customer data from across the enterprise.
 * Responsibly manage profiles with trusted governance and privacy controls for known and unknown identifiers.
 * Generate actionable insights and scale audiences with AI and machine learning powered by Adobe Sensei and built for marketers.
 * Deliver personalized experiences in realtime across all channels and destinations.
 
-For more information, see the [Real-time Customer Data Platform documentation](../../rtcdp/overview.md).
+For more information, see the [Real-Time Customer Data Platform documentation](../../rtcdp/overview.md).
 
 **Key features**
 
 |Feature|Description|
 |---|---|
-|Destinations|Pre-built integrations with destination platforms supported by Adobe’s [!DNL Real-time Customer Data Platform] that activate data to those partners in a seamless way. See [Destinations](#destinations) below for more information.|
-|Home page metrics dashboard|The Real-time Customer Data Platform (Real-time CDP) home page includes a metrics dashboard that shows information about profiles and segments. The home page also contains links to learning materials. See the section on [Real-time Customer Data Platform metrics](#real-time-customer-data-platform-metrics) below.|
+|Destinations|Pre-built integrations with destination platforms supported by Adobe’s [!DNL Real-Time Customer Data Platform] that activate data to those partners in a seamless way. See [Destinations](#destinations) below for more information.|
+|Home page metrics dashboard|The Real-Time Customer Data Platform (Real-Time CDP) home page includes a metrics dashboard that shows information about profiles and segments. The home page also contains links to learning materials. See the section on [Real-Time Customer Data Platform metrics](#real-time-customer-data-platform-metrics) below.|
 |Sources|You can ingest data from a variety of sources such as Adobe Solutions, cloud-based storage, third party software, and your CRM. See the [Sources](#sources) section below to learn more.|
 
-**[!DNL Real-time Customer Data Platform] metrics**
+**[!DNL Real-Time Customer Data Platform] metrics**
 
-The Real-time Customer Data Platform (Real-time CDP) home page, which includes a metrics dashboard, appears when you log in to Real-time CDP.
+The Real-Time Customer Data Platform (Real-Time CDP) home page, which includes a metrics dashboard, appears when you log in to Real-Time CDP.
 
-The home page is only one of the places where metric cards appear. Real-time CDP provides metric cards throughout your experience. These metrics inform you about the data, profile, and segment audiences in the system. 
+The home page is only one of the places where metric cards appear. Real-Time CDP provides metric cards throughout your experience. These metrics inform you about the data, profile, and segment audiences in the system. 
 
-If there is no data in the system when you log in to Real-time CDP, the dashboard on the home page does not appear. In this case, the home page provides learning material for a first time user experience. As data is collected, the dashboard automatically updates to display information about that data. 
+If there is no data in the system when you log in to Real-Time CDP, the dashboard on the home page does not appear. In this case, the home page provides learning material for a first time user experience. As data is collected, the dashboard automatically updates to display information about that data. 
 
-To learn more, see the [Real-time Customer Data Platform metrics overview](../../rtcdp/home-page-dashboards.md)
+To learn more, see the [Real-Time Customer Data Platform metrics overview](../../rtcdp/home-page-dashboards.md)
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] are pre-built integrations with destination platforms supported by Adobe’s Real-time Customer Data Platform that activate data to those partners in a seamless way. For more information, read the [Destinations overview](../../destinations/home.md) article.
+[!DNL Destinations] are pre-built integrations with destination platforms supported by Adobe’s Real-Time Customer Data Platform that activate data to those partners in a seamless way. For more information, read the [Destinations overview](../../destinations/home.md) article.
 
 **Available destinations**
 
-With the November release, Adobe's Real-time Customer Data Platform supports the following destinations:
+With the November release, Adobe's Real-Time Customer Data Platform supports the following destinations:
 
 * Advertising: [!DNL Google]
 * Email marketing: Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]

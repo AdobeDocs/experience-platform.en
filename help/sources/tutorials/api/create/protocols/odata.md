@@ -9,10 +9,6 @@ exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
 ---
 # Create a [!DNL Generic OData] base connection using the [!DNL Flow Service] API
 
->[!NOTE]
->
->The [!DNL Generic OData] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
 This tutorial walks you through the steps to create a base connection for [!DNL Generic OData] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
@@ -62,7 +58,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -99,4 +95,7 @@ A successful response returns the newly created connection, including its unique
 
 ## Next steps
 
-By following this tutorial, you have created an [!DNL OData] connection using the [!DNL Flow Service] API and have obtained the connection's unique ID value. You can use this ID in the next tutorial as you learn how to [explore protocols applications using the Flow Service API](../../explore/protocols.md).
+By following this tutorial, you have created a [!DNL Generic REST OData] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
+
+* [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
+* [Create a dataflow to bring protocols data to Platform using the [!DNL Flow Service] API](../../collect/protocols.md)

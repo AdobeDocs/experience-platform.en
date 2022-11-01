@@ -1,12 +1,12 @@
 ---
 keywords: rtcdp segments;segment builder rtcdp;rtcdp segment;customer ai rtcdp
-title: Customer AI in Real-time Customer Data Platform
+title: Customer AI in Real-Time Customer Data Platform
 description: An overview of Customer AI and how it can assist with generating scores for specific outcomes such as conversions or churn.
 exl-id: 40210196-3c02-4d82-8692-628f2a46b3b5
 ---
-# Customer AI in Real-time Customer Data Platform
+# Customer AI in Real-Time Customer Data Platform
 
-Customer AI, an embedded AI feature in Real-time Customer Data Platform, enables marketers to generate individual level scores for a specific outcome such as conversions or churn.
+Customer AI, an embedded AI feature in Adobe Real-Time Customer Data Platform, enables marketers to generate individual level scores for a specific outcome such as conversions or churn.
 
 With the help of influential factors, Customer AI can tell you what a customer is likely to do and why. Additionally, you can benefit from Customer AI predictions and insights to personalize customer experiences by serving the most appropriate offers and messaging. Customer AI can assist with:
 

@@ -213,14 +213,6 @@ The `sendEvent` command returns a promise that is resolved with a `result` objec
 >
 >`destinations` is currently in Beta. The documentation and functionality are subject to change.
 
-**inferences**: Real-time machine learning insights. [Learn more about real-time Machine Learning.](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/real-time-machine-learning/home.html?lang=en)
-
->[!WARNING]
->
->`inferences` is currently in Beta. The documentation and functionality are subject to change.
-
-
-
 ## Modifying events globally {#modifying-events-globally}
 
 If you want to add, remove, or modify fields from the event globally, you can configure an `onBeforeEventSend` callback.  This callback is called every time an event is sent.  This callback is passed in an event object with an `xdm` field.  Modify `content.xdm` to change the data that is sent with the event.

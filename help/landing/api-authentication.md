@@ -14,7 +14,7 @@ This document provides a step-by-step tutorial for gaining access to an Adobe Ex
 
 * `{ACCESS_TOKEN}`
 * `{API_KEY}`
-* `{IMS_ORG}`
+* `{ORG_ID}`
 
 To maintain the security of your applications and users, all requests to Adobe I/O APIs must be authenticated and authorized using standards such as OAuth and JSON Web Tokens (JWT). A JWT is used along with client-specific information to generate your personal access token.
 
@@ -55,7 +55,7 @@ Your [!DNL Admin Console] administrator must also add you as a user to the same 
 >
 >If you are following this document from the [Privacy Service API guide](../privacy-service/api/getting-started.md), you can now return to that guide to generate the access credentials unique to [!DNL Privacy Service].
 
-After you have been given developer and user access to Platform through [!DNL Admin Console], the next step is to generate your `{IMS_ORG}` and `{API_KEY}` credentials in Adobe Developer Console. These credentials only need to be generated once and can be reused in future Platform API calls.
+After you have been given developer and user access to Platform through [!DNL Admin Console], the next step is to generate your `{ORG_ID}` and `{API_KEY}` credentials in Adobe Developer Console. These credentials only need to be generated once and can be reused in future Platform API calls.
 
 ### Add Experience Platform to a project
 
@@ -80,7 +80,7 @@ From here, follow the steps outlined in the tutorial on [adding an API to a proj
 Once the API has been added to the project, the **[!UICONTROL Experience Platform API]** page for the project displays the following credentials that are required in all calls to Experience Platform APIs:
 
 * `{API_KEY}` ([!UICONTROL Client ID])
-* `{IMS_ORG}` ([!UICONTROL Organization ID])
+* `{ORG_ID}` ([!UICONTROL Organization ID])
 
 ![](././images/api-authentication/api-key-ims-org.png)
 
@@ -112,7 +112,7 @@ The page updates to show the generated JWT, along with a sample cURL command tha
 
 ## Generate an access token
 
-Once you have generated a JWT, you can use it in an API call to generate your `{ACCESS_TOKEN}`. Unlike the values for `{API_KEY}` and `{IMS_ORG}`, a new token must be generated every 24 hours to continue using Platform APIs.
+Once you have generated a JWT, you can use it in an API call to generate your `{ACCESS_TOKEN}`. Unlike the values for `{API_KEY}` and `{ORG_ID}`, a new token must be generated every 24 hours to continue using Platform APIs.
 
 **Request**
 
@@ -163,7 +163,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Response**

@@ -30,7 +30,15 @@ Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning an
 
 Adobe Experience Platform [!DNL Segmentation Service] allows users to divide their customers into smaller groups that share similar traits. These segments can subsequently be evaluated to provide better analysis on your [!DNL Real-time Customer Profile] data. [!DNL Query Service] can be used to provide this analysis by running queries on this segment data within the [!DNL Data Lake]. Please read the [!DNL Segmentation Service] overview for more information about segmentation, and the [!DNL Profile Query Language] (PQL) guide for more information on how to analyze segments.
 
-### Looker BI use case
+## Use cases
+
+[!DNL Query Service] provides a flexible approach to your data processing that serves many purposes. Amongst others, it can ease the burden of segmentation from marketers, and help generate actionable audiences and meaningful business insights. The following use cases offer more indepth examples of the power of [!DNL Query Service].
+
+### Adobe Analytics browse abandonment
+
+This [browse abandonment example centers on using Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) data to create a particular actionable audience. [!DNL Query Service] accommodates complex logic for segmentation to calculate various personalized attributes for use downstream, or to greatly simplify how you build out your segments. 
+
+### Looker BI dashboards
 
 With Adobe Experience Platform, you can ingest, store, structure, and pull all stored datasets — including behavioral, CRM, and point-of-sale data. Using [!DNL Experience Platform's Query Service], you can query on these datasets and answer specific questions about the business and then start generating impactful insights. The following video demonstrates the value of building dashboards in business intelligence (BI) tools using [!DNL Query Service].
 

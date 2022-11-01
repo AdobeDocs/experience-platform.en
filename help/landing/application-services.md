@@ -11,5 +11,5 @@ Adobe has built several application services on top of Experience Platform. You 
 
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html) 
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
-* [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning.html)
-* [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../rtcdp/overview.md)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html)
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)

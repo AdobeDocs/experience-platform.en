@@ -6,7 +6,7 @@ topic-legacy: troubleshooting
 description: This document provides answers to frequently asked questions about sources on Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 ---
-# (Beta) Sources troubleshooting guide
+# Sources troubleshooting guide
 
 This document provides answers to frequently asked questions about sources on Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Platform] services, including those that are encountered across all [!DNL Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 

@@ -27,7 +27,7 @@ In the [!DNL Experience Platform] UI, select **[!UICONTROL Policies]** to open t
 
 ![](../images/policies/browse-policies.png)
 
-If you have access to consent policies (currently in beta), select the **[!UICONTROL Consent policies]** toggle to view them in the [!UICONTROL Browse] tab.
+If you have access to consent policies, select the **[!UICONTROL Consent policies]** toggle to view them in the [!UICONTROL Browse] tab.
 
 ![](../images/policies/consent-policy-toggle.png)
 
@@ -73,11 +73,11 @@ The **[!UICONTROL Browse]** tab reappears, which now lists the newly created pol
 
 ![](../images/policies/created-policy.png)
 
-### Create a consent policy (Beta) {#consent-policy}
+### Create a consent policy {#consent-policy}
 
 >[!IMPORTANT]
 >
->Consent policies are currently in beta and your organization may not have access to them yet.
+>Consent policies are currently only available for organizations that have purchased Healthcare Shield.
 
 If you chose to create a consent policy, a new screen appears that allows you to configure the new policy.
 
@@ -125,6 +125,10 @@ You can continue adding and adjusting conditions and consent attributes to the p
 The consent policy is now created, and its status is set to [!UICONTROL Disabled] by default. To enable the policy right away, select the **[!UICONTROL Status]** toggle in the right rail.
 
 ![](../images/policies/enable-consent-policy.png)
+
+#### Verify policy enforcement
+
+After you have created and enabled a consent policy, you can preview how it affects your consented audiences when activating segments to destinations. See the section on [consent policy evaluation](../enforcement/auto-enforcement.md#consent-policy-evaluation) for more information.
 
 ## Enable or disable a policy {#enable}
 

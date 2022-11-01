@@ -16,7 +16,7 @@ Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to d
 
 >[!NOTE]
 >
->Streaming segmentation works on all data that was ingested using a streaming source. Segments ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation.
+>Streaming segmentation works on all data that was ingested using a streaming source. Data ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation.
 >
 >Additionally, segments evaluated with streaming segmentation may drift between ideal and actual membership if the segment is based off of another segment that is evaluated using batch segmentation. For example, if Segment A is based off of Segment B, and Segment B is evaluated using batch segmentation, since Segment B only updates every 24 hours, Segment A will move further away from the actual data until it re-syncs with the Segment B update.
 
@@ -61,9 +61,9 @@ After creating a streaming-enabled segment, you can view details of that segment
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-Specifically, details about the **[!UICONTROL total qualified audience size]** are shown. The **[!UICONTROL Total qualified audience size]** shows the total number of qualified audiences from the last completed segment job run. If a segment job wasn't completed within the last 24 hours, the number of audiences will be taken from an estimate instead.
+Specifically, the **[!UICONTROL Total qualified]** metric is displayed, which shows the total number of qualified audiences, based on batch and streaming evaluations for this segment.
 
-Underneath is a line graph that shows the number of segments that were qualified and disqualified in the last 24 hours. The dropdown can be adjusted to show the last 24 hours, last week, or last 30 days.
+Underneath is a line graph that shows the number of new audiences that were updated in the last 24 hours using the streaming evaluation method. The dropdown can be adjusted to show the last 24 hours, last week, or last 30 days. The **[!UICONTROL New audience updated]** metric is based on the change in audience size during the selected time range, as evaluated by streaming segmentation. This metric does not include the total qualified audience from the daily segment batch evaluation.
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ Underneath is a line graph that shows the number of segments that were qualified
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
-Additional information about the last segment evaluation can be found by selecting the information bubble.
+Additional information about the last segment evaluation can be found by selecting the information bubble next to **[!UICONTROL Total qualified]**.
 
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
@@ -95,15 +95,13 @@ For most instances, streaming segmentation unqualification happens in real-time.
 
 ### What data does streaming segmentation work on?
 
-Streaming segmentation works on all data that was ingested using a streaming source. Segments ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation.
+Streaming segmentation works on all data that was ingested using a streaming source. Segments ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation. Events streamed into the system with a timestamp older than 24 hours will be processed in the subsequent batch job.
 
 ### How are segments defined as batch or streaming segmentation?
 
 A segment is defined as either batch or streaming segmentation based on a combination of query type and event history duration. A list of which segments will be evaluated as a streaming segment can be found in the [streaming segmentation query types section](#query-types).
 
-### Can a user define a segment as batch or streaming segmentation?
-
-At this time, the user cannot define whether a segment is evaluated using batch or streaming ingestion, as the system will automatically determine which method the segment will be evaluated with. 
+Please note that if a segment contains **both** an `inSegment` expression and a direct single-event chain, it cannot qualify for streaming segmentation. If you want to have this segment qualify for streaming segmentation, you should make the direct single-event chain its own segment.
 
 ### Why does the number of "total qualified" segments keep increasing while the number under "Last X days" remains at zero within the segment details section?
 

@@ -15,7 +15,7 @@ Debugging is disabled by default, but can be toggled on in four different ways:
 * query string parameter
 * Toggling on Enable Debugging in Adobe Experience Platform Debugger. Adobe Experience Platform is a powerful tool that examines your webpages and helps you debug implementation issues with your Experience Cloud products. Adobe Experience Platform Debugger is available as both a [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/) extension. Debugging can be enabled from the configuration tab of the AEP Web SDK section. 
 
-![](../images/enable-debugging.png)
+![](../assets/enable-debugging.png)
 
 ## Toggling debugging with the Configure command
 
@@ -70,9 +70,13 @@ It's often helpful to access some of the details behind the library you have loa
 ```js
 alloy("getLibraryInfo").then(function(result) {
   console.log(result.libraryInfo.version);
+  console.log(result.libraryInfo.commands);
+  console.log(result.libraryInfo.configs);
 });
 ```
 
 Currently, the provided `libraryInfo` object contains the following properties:
 
-* `version` This is the version of the loaded library. For example, if the version of the library being loaded were 1.0.0, the value would be `1.0.0`. When the library is run inside the tag extension (named "AEP Web SDK"), the version is the library version and the tag extension version joined with a "+" sign. For example, if the version of the library were 1.0.0, and the version of the tag extension were 1.2.0, the value would be `1.0.0+1.2.0`.
+* `version`: This is the version of the loaded library. For example, if the version of the library being loaded were 1.0.0, the value would be `1.0.0`. When the library is run inside the tag extension (named "AEP Web SDK"), the version is the library version and the tag extension version joined with a "+" sign. For example, if the version of the library were 1.0.0, and the version of the tag extension were 1.2.0, the value would be `1.0.0+1.2.0`.
+* `commands`: These are all of the available commands supported by the loaded library. 
+* `configs`: These are all of the current configs in the loaded library.

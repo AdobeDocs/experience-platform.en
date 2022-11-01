@@ -46,7 +46,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Response**
@@ -94,12 +94,12 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d '{
     "companyContexts": [
       {
         "namespace": "imsOrgID",
-        "value": "{IMS_ORG}"
+        "value": "{ORG_ID}"
       }
     ],
     "users": [
@@ -137,10 +137,11 @@ curl -X POST \
         ]
       }
     ],
-    "include": ["Analytics", "AudienceManager"],
+    "include": ["Analytics", "AudienceManager","profileService"],
     "expandIds": false,
     "priority": "normal",
     "analyticsDeleteMethod": "anonymize",
+    "mergePolicyId": 124,
     "regulation": "ccpa"
 }'
 ```
@@ -153,6 +154,7 @@ curl -X POST \
 | `expandIDs` | An optional property that, when set to `true`, represents an optimization for processing the IDs in the applications (currently only supported by [!DNL Analytics]). If omitted, this value defaults to `false`. |
 | `priority` | An optional property used by Adobe Analytics that sets the priority for processing requests. Accepted values are `normal` and `low`. If `priority` is omitted, the default behavior is `normal`. |
 | `analyticsDeleteMethod` | An optional property that specifies how Adobe Analytics should handle the personal data. Two possible values are accepted for this attribute: <ul><li>`anonymize`: All data referenced by the given collection of user IDs is made anonymous. If `analyticsDeleteMethod` is omitted, this is the default behavior.</li><li>`purge`: All data is removed completely.</li></ul> |
+| `mergePolicyId` | When making privacy requests for Real-time Customer Profile (`profileService`), you can optionally provide the ID of the specific [merge policy](../../profile/merge-policies/overview.md) that you want to use for ID stitching. By specifying a merge policy, privacy requests can include segment information when returning data on a customer. Only one merge policy can be specified per request. If no merge policy is provided, segmentation information is not included in the response. |
 | `regulation` **(Required)** | The regulation for the privacy job. The following values are accepted: <ul><li>`gdpr` (European Union)</li><li>`ccpa` (California)</li><li>`lgpd_bra` (Brazil)</li><li>`nzpa_nzl` (New Zealand)</li><li>`pdpa_tha` (Thailand)</li></ul> |
 
 {style="table-layout:auto"}
@@ -240,7 +242,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/privacy/jobs/6fc09b53-c24f-4a6c-9ca2-c6076b0842b6 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Response**

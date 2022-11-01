@@ -30,7 +30,7 @@ In order to make calls to [!DNL Platform] APIs, you must first complete the [aut
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
@@ -93,7 +93,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
   -H 'Cache-Control: no-cache' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -155,7 +155,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
   -H 'Content-Type: application/json' \
   -H 'cache-control: no-cache' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -199,7 +199,7 @@ This error is shown if the IMS Org ID is either missing from the payload is inva
     "status": 400,
     "title": "Invalid XDM Message Format",
     "report": {
-        "message": "inletId: [{INLET_ID}] imsOrgId: [{IMS_ORG}@AdobeOrg] Message has an absent or wrong ims org in the header"
+        "message": "inletId: [{INLET_ID}] imsOrgId: [{ORG_ID}@AdobeOrg] Message has an absent or wrong ims org in the header"
     }
 }
 ```
@@ -214,7 +214,7 @@ This error is shown if the `schemaRef` for the `xdmMeta` is missing.
     "status": 400,
     "title": "Invalid XDM Message Format",
     "report": {
-        "message": "inletId: [{INLET_ID}] imsOrgId: [{IMS_ORG}@AdobeOrg] Message has unknown xdm format"
+        "message": "inletId: [{INLET_ID}] imsOrgId: [{ORG_ID}@AdobeOrg] Message has unknown xdm format"
     }
 }
 ```

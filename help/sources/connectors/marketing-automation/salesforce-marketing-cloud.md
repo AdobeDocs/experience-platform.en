@@ -36,7 +36,7 @@ A list of IP addresses must be added to an allow list prior to working with sour
 The documentation below provides information on how to connect [!DNL Salesforce Marketing Cloud] to Platform using APIs:
 
 * [Create a Salesforce Marketing Cloud base connection using the Flow Service API](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
-* [Explore the data structure and contents of a marketing automation source using the Flow Service API](../../tutorials/api/explore/marketing-automation.md)
+* [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 * [Create a dataflow for a marketing automation source using the Flow Service API](../../tutorials/api/collect/marketing-automation.md)
 
 ## Connect [!DNL Salesforce Marketing Cloud] to Platform using the UI

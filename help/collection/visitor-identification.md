@@ -7,9 +7,7 @@ exl-id: aa2f3b83-5cc8-4e02-9119-edfd5e212588
 ---
 # Visitor identification
 
-## Overview {#overview}
-
-The Edge Network Server API supports [visitor identification via First-Party ID ([!DNL FPID])](visitor-identification-fpid.md)
+The Edge Network Server API supports [visitor identification via First-Party ID ([!DNL FPID])](visitor-identification-fpid.md).
 
 All user identities should be supplied in the `identityMap` field group. This field group is included in the AEP Web SDK `ExperienceEvent` mixin.
 

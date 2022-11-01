@@ -25,13 +25,13 @@ To configure the extension, open the [!UICONTROL Extensions] tab, hover over the
 
 ### at.js Settings
 
-All of your at.js settings, with the exception of the Timeout are automatically retrieved from your at.js configuration in the Target user interface. The extension only retrieves settings from the Target user interface when it is first added, so all settings should be managed in the Data Collection UI if additional updates are needed.
+All of your at.js settings, with the exception of the Timeout are automatically retrieved from your at.js configuration in the Target user interface. The extension only retrieves settings from the Target user interface when it is first added, so all settings should be managed in the UI if additional updates are needed.
 
 The following configuration options are available:
 
 #### Client Code
 
-The client code is Target’s account identifier. This should almost always be left as the default value.
+The client code is Target's account identifier. This should almost always be left as the default value.
 
 Can be changed using data elements.
 
@@ -135,7 +135,7 @@ Here are some things to keep in mind when using the pre-hiding snippet:
   * When the global mbox response has been received
   * When the global mbox request times out
   * When the snippet itself times out
-* The “Fire Global Mbox” action should be used on all pages using the pre-hiding snippet to minimize the duration of the pre-hiding.
+* The "Fire Global Mbox" action should be used on all pages using the pre-hiding snippet to minimize the duration of the pre-hiding.
 
 The pre-hiding code snippet is as follows and can be minified. The configurable options are at the end:
 

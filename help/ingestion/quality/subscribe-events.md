@@ -36,7 +36,7 @@ The following JSON is an example of a notification payload that would be sent to
   "event": {
     "xdm:ingestionId": "01EGK8H8HF9JGFKNDCABHGA24G",
     "xdm:customerIngestionId": "01EGK8H8HF9JGFKNDCABHGA24G",
-    "xdm:imsOrg": "{IMS_ORG}",
+    "xdm:imsOrg": "{ORG_ID}",
     "xdm:completed": 1598374341560,
     "xdm:datasetId": "5e55b556c2ae4418a8446037",
     "xdm:eventCode": "ing_load_failure",
@@ -46,7 +46,7 @@ The following JSON is an example of a notification payload that would be sent to
     "transformedTime": 1598374342621,
     "header": {
       "_adobeio": {
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "providerMetadata": "aep_observability_catalog_events",
         "eventCode": "platform_event"
       }

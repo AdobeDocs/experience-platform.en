@@ -1,69 +1,31 @@
 ---
-title: Release Notes for Tags
-description: The latest release notes for tags in Adobe Experience Platform.
+title: Release Notes for Tags and Event Forwarding
+description: The latest release notes for tags and event forwarding in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 ---
-# Release notes for tags in Adobe Experience Platform
+# Release notes for tags and event forwarding
 
->[!NOTE]
->
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
+## October 26, 2022
 
-## November 15, 2021
+* **Sensitive data handling for datastreams**: Datastreams now leverage several Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../edge/datastreams/overview.md#sensitive) for more information.
+* **[!DNL Splunk] extension for event forwarding**: You can now send data to [!DNL Splunk] using an [event forwarding](../ui/event-forwarding/overview.md) extension. See the [[!DNL Splunk] extension overview](../extensions/web/splunk/overview.md) for more information.
+* **[!DNL Zendesk] extension for event forwarding**: You can now send data to [!DNL Zendesk] using an [event forwarding](../ui/event-forwarding/overview.md) extension. See the [[!DNL Zendesk] extension overview](../extensions/web/zendesk/overview.md) for more information.
 
-**Accept ES6 code in Tags** – Extensions and custom code containing ES6 code can now be used in Tags. In the extension catalog you will see an ES6+ label inside the card of each extension that contains ES6 code. IE10 and IE11 do not support ES6 code. Before using ES6 code in your Tags libraries, do your due dilligence.
+## September 28, 2022
 
-**Using Terser as JavaScript compressor** – Uglifier was replaced with Terser. Starting from this release, all Tags libraries are minified by Terser.
+* **Adobe Experience Platform left nav integration**: All capabilities that were previously exclusive to the Data Collection UI (including tags and event forwarding) are now also available through the left navigation in the Experience Platform UI, under the category **[!UICONTROL Data Collection]**. This eliminates the need to switch between UIs when working with data collection capabilities in Platform.
+* **User attribution in tags and event forwarding**: When listing available properties in tags and event forwarding, each listed property now shows when it was last updated and by whom.
+* **[[!DNL Snap Conversions API] extension](https://exchange.adobe.com/apps/ec/108550) for event forwarding**: You can now send data to the [!DNL Snapchat Conversions API] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. For more information on how to authenticate and use the API, refer to the [[!DNL Snapchat Marketing API] documentation](https://marketingapi.snapchat.com/docs/conversion.html).
 
-## October 21, 2021
+## July 27, 2022
 
-**Send data to authenticated endpoints in event forwarding** – Using secrets, you can send data to endpoints that require the following authentication protocols:
+* Access to tags and event forwarding capabilities is now managed through Adobe Admin Console under the card for Adobe Experience Platform Data Collection. See the guide on [data collection permissions](../../collection/permissions.md) for more information.
+* Support for Internet Explorer 10 and 11 has been [deprecated](../ie-deprecation.md).
 
-* **[!UICONTROL Token]**: A single string of characters representing an authentication token value.
-* **[!UICONTROL Simple HTTP]**: Contains two string attributes for a username and password.
-* **[!UICONTROL OAuth2]**: Contains several attributes to support the [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) spec.
+## June 22, 2022
 
-For more information, see the guides on [managing secrets in the Data Collection UI](../ui/event-forwarding/secrets.md) or [managing secrets in the Reactor API](../api/guides/secrets.md).
+New extensions have been released:
 
-## July 19, 2021
-
-**Adjustments to "Manage Properties" right** - The Manage Properties right encountered an issue where a user had the permission to create a new property but could not see it after it was created (as outlined in the community thread [here](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176)). A fix is now live with permissions being enforced as described in the article.
-
->[!NOTE]
->
->If you assign the new "Edit Property" right to a user group, the UI will not update to enable the fields in the property configuration screen. A fix for this issue will be implemented in an upcoming release.
-
-## May 17, 2021
-
-**Better handling of unsaved changes** - It used to be that whenever you navigated away from a settings view (extensions, data elements, and rule components), you'd get a prompt on whether you wanted to discard your changes. But the logic for determining that wasn't great, so most of the time you got prompted to save changes even though there weren't any.  That's been fixed.  From now on, you should only see that prompt when you have actually made changes.
-
-## May 10th, 2021
-
-**Simplified Publishing** - Building to the staging environment is no longer required.  If you have the appropriate rights, you can skip the Submitted state entirely and publish directly from Development as long as you’ve had a successful build and there are no other libraries upstream.
-
-## April 22nd, 2021
-
-**Data Collection in Adobe Experience Platform** - Sending data to Adobe is not just about deploying tags to your site or configuration to your app.  Usage of the Experience Platform SDKs and the Edge Network require access to other Platform capabilities.  This used to require logging into a few different tools, but now they are together in one place.
-
-Data Collection in Platform consists of six capabilities, and your newly streamlined navigation will only contain the items that your company and user account have access to.  Some of the capability names have also been updated to match Experience Platform's naming patterns.
-
-* Client (formerly accessed as Client Side)
-* Datastreams (formerly accessed as Edge Configurations)
-* Server (formerly accessed as Server Side)
-* App Configurations
-* Schemas
-* Identities
-
-Look forward to more updates as Experience Platform and Data Collection continue to evolve.
-
-## February 18th, 2021
-
-* Updated the Data Collection UI to react-spectrum v3
-* Updated extension cards to the latest Spectrum patterns
-* Increased the size of name fields throughout the app
-
-## January 13th, 2021
-
-**General Availability: Event Forwarding** Send event-level data to the Adobe Experience Platform Edge Network then use event forwarding to transform, enrich, and send that data to a non-Adobe endpoint using Adobe's servers, not the client, with low latency.
-
-See the [event forwarding overview](../ui/event-forwarding/overview.md) and [getting started guide](../ui/event-forwarding/getting-started.md) for more information.
+* [Google Data Layer tag extension](../extensions/web/google-data-layer/overview.md): Allows you to use a Google data layer in your tags implementation.
+* [Google Ads Enhanced Conversions event forwarding extension](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html): Allows you to enhance your Google Ads conversions in real time.
+* [Mailchimp event forwarding extension](../extensions/web/mailchimp/overview.md): Sends events to the Mailchimp Marketing API which can trigger emails for Mailchimp marketing campaigns, journeys, or transactions.

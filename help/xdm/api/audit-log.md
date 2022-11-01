@@ -41,7 +41,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.schemas.50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -54,7 +54,7 @@ A successful response returns a chronological list of changes made to the resour
   {
     "id": "https://ns.adobe.com/{TENANT_ID}/schemas/50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330",
     "updatedUser": "{USER_ID}",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "updatedTime": "02-19-2021 05:43:56",
     "requestId": "a14NMF0jd6BIfyXaHdTDl4bC4R0r9rht",
     "clientId": "{CLIENT_ID}",
@@ -72,7 +72,7 @@ A successful response returns a chronological list of changes made to the resour
   {
     "id": "https://ns.adobe.com/{TENANT_ID}/schemas/50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330",
     "updatedUser": "{USER_ID}",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "updatedTime": "02-19-2021 05:43:56",
     "requestId": "pFQbgmWrdbJrNB9GdxTSGECpXYWspu68",
     "clientId": "{CLIENT_ID}",

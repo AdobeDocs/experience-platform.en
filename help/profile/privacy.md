@@ -14,7 +14,7 @@ This document covers essential concepts related to processing privacy requests f
 
 >[!NOTE]
 >
->This guide only covers how to make privacy requests for the Profile data store in Experience Platform. If you also plan to make privacy requests for the Platform Data Lake, refer to the guide on [privacy request processing in the Data Lake](../catalog/privacy.md) in addition to this tutorial.
+>This guide only covers how to make privacy requests for the Profile data store in Experience Platform. If you also plan to make privacy requests for the Platform data lake, refer to the guide on [privacy request processing in the data lake](../catalog/privacy.md) in addition to this tutorial.
 >
 >For steps on how to make privacy requests for other Adobe Experience Cloud applications, refer to the [Privacy Service documentation](../privacy-service/experience-cloud-apps.md).
 
@@ -40,9 +40,7 @@ The sections below outline how to make privacy requests for [!DNL Real-time Cust
 
 >[!IMPORTANT]
 >
->Privacy Service is only able to process [!DNL Profile] data using a merge policy that does not perform identity stitching. If you are using the UI to confirm whether your privacy requests are being processed, ensure that you are using a policy with "[!DNL None]" as its [!UICONTROL ID stitching] type. In other words, you cannot use a merge policy where [!UICONTROL ID stitching] is set to "[!UICONTROL Private graph]".
->
->![The ID stitching of the merge policy is set to None](./images/privacy/no-id-stitch.png)
+>Privacy Service is only able to process [!DNL Profile] data using a merge policy that does not perform identity stitching. See the section on [merge policy limitations](#merge-policy-limitations) for more information.
 >
 >It is also important to note that the amount of time a privacy request can take to complete cannot be guaranteed. If changes occur in your [!DNL Profile] data while a request is still processing, whether or not those records are processed also cannot be guaranteed.
 
@@ -54,7 +52,11 @@ When creating job requests in the API, any IDs provided within `userIDs` must us
 >
 >You may need to provide more than one ID for each customer, depending on the identity graph and how your profile fragments are distributed in Platform datasets. See the next section [profile fragments](#fragments) for more information.
 
-In addition, the `include` array of the request payload must include the product values for the different data stores the request is being made to. When making requests to the [!DNL Data Lake], the array must include the value "ProfileService".
+In addition, the `include` array of the request payload must include the product values for the different data stores the request is being made to. To delete the profile data associated with an identity, the array must include the value `ProfileService`. To delete the customer's identity graph associations, the array must include the value `identity`.
+
+>[!NOTE]
+>
+>See the section on [profile requests and identity requests](#profile-v-identity) later in this document for more detailed information on the effects of using `ProfileService` and `identity` within the `include` array.
 
 The following request creates a new privacy job for a single customer's data in the [!DNL Profile] store. Two identity values are provided for the customer in the `userIDs` array; one using the standard `Email` identity namespace, and the other using a custom `Customer_ID` namespace. It also includes the product value for [!DNL Profile] (`ProfileService`) in the `include` array:
 
@@ -63,13 +65,13 @@ curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
     "companyContexts": [
       {
         "namespace": "imsOrgID",
-        "value": "{IMS_ORG}"
+        "value": "{ORG_ID}"
       }
     ],
     "users": [
@@ -90,7 +92,7 @@ curl -X POST \
         ]
       }
     ],
-    "include": ["ProfileService"],
+    "include": ["ProfileService","identity"],
     "expandIds": false,
     "priority": "normal",
     "regulation": "ccpa"
@@ -103,7 +105,7 @@ curl -X POST \
 
 ### Using the UI
 
-When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under **[!UICONTROL Products]** in order to process jobs for data stored in the [!DNL Data Lake] or [!DNL Real-time Customer Profile], respectively.
+When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under **[!UICONTROL Products]** in order to process jobs for data stored in the data lake or [!DNL Real-time Customer Profile], respectively.
 
 ![An access job request being created in the UI, with the Profile option selected under Products](./images/privacy/product-value.png)
 
@@ -123,24 +125,37 @@ One of the datasets uses `customer_id` as its primary identifier, whereas the ot
 
 To ensure that your privacy requests process all relevant customer attributes, you must provide the primary identity values for all applicable datasets where those attributes may be stored (up to a maximum of nine IDs per customer). See the section on identity fields in the [basics of schema composition](../xdm/schema/composition.md#identity) for more information on fields that are commonly marked as identities.
 
-## Delete request processing
+## Delete request processing {#delete}
 
-When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed from the [!DNL Data Lake] or [!DNL Profile] store once the privacy job has completed. While the delete job is still processing, the data is soft-deleted and is therefore not accessible by any [!DNL Platform] service. Refer to the [[!DNL Privacy Service] documentation](../privacy-service/home.md#monitor) for more information on tracking job statuses.
+When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed once the privacy job has completed.
 
->[!IMPORTANT]
->
->While a successful delete request removes the collected attribute data for a customer (or set of customers), the request does not remove the associations established in the identity graph.
->
->For example, a delete request that uses a customer's `email_id` and `customer_id` removes all attribute data stored under those IDs. However, any data which is thereafter ingested under the same `customer_id` will still be associated with the appropriate `email_id`, as the association still exists.
->
->Additionally, Privacy Service is only able to process [!DNL Profile] data using a merge policy that does not perform identity stitching. If you are using the UI to confirm whether your privacy requests are being processed, ensure that you are using a policy with "[!DNL None]" as its [!UICONTROL ID stitching] type. In other words, you cannot use a merge policy where [!UICONTROL ID stitching] is set to "[!UICONTROL Private graph]".
+Depending on whether you also included Identity Service (`identity`) and the data lake (`aepDataLake`) as products in your privacy request for Profile (`ProfileService`), different sets of data related to the profile are removed from the system at potentially different times:
+
+| Products included | Effects |
+| --- | --- |
+| `ProfileService` only | The profile is immediately deleted as soon as Platform sends the confirmation that the deletion request was received. However, the profile's identity graph still remains, and the profile can potentially be reconstructed as new data with the same identities is ingested. The data associated with the profile also remains in the data lake. |
+| `ProfileService` and `identity` | The profile and its associated identity graph are immediately deleted as soon as Platform sends the confirmation that the deletion request was received. The data associated with the profile remains in the data lake. |
+| `ProfileService` and `aepDataLake` | The profile is immediately deleted as soon as Platform sends the confirmation that the deletion request was received. However, the profile's identity graph still remains, and the profile can potentially be reconstructed as new data with the same identities is ingested.<br><br>When the data lake product responds that the request was received and is currently processing, the data associated with the profile is soft-deleted and is therefore not accessible by any [!DNL Platform] service. Once the job is completed, the data is removed from the data lake completely. |
+| `ProfileService`, `identity`, and `aepDataLake` | The profile and its associated identity graph are immediately deleted as soon as Platform sends the confirmation that the deletion request was received.<br><br>When the data lake product responds that the request was received and is currently processing, the data associated with the profile is soft-deleted and is therefore not accessible by any [!DNL Platform] service. Once the job is completed, the data is removed from the data lake completely. |
+
+Refer to the [[!DNL Privacy Service] documentation](../privacy-service/home.md#monitor) for more information on tracking job statuses.
+
+### Profile requests versus identity requests {#profile-v-identity}
+
+If a delete request is made for Profile (`ProfileService`) but not Identity Service (`identity`), the resulting job removes the collected attribute data for a customer (or set of customers) but does not remove the associations established in the identity graph.
+
+For example, a delete request that uses a customer's `email_id` and `customer_id` removes all attribute data stored under those IDs. However, any data which is thereafter ingested under the same `customer_id` will still be associated with the appropriate `email_id`, as the association still exists.
+
+To remove the profile and all identity associations for a given customer, make sure to include both Profile and Identity Service as target products in your delete requests.
+
+### Merge policy limitations {#merge-policy-limitations}
+
+Privacy Service is only able to process [!DNL Profile] data using a merge policy that does not perform identity stitching. If you are using the UI to confirm whether your privacy requests are being processed, ensure that you are using a policy with **[!DNL None]** as its [!UICONTROL ID stitching] type. In other words, you cannot use a merge policy where [!UICONTROL ID stitching] is set to [!UICONTROL Private graph].
 >
 >![The ID stitching of the merge policy is set to None](./images/privacy/no-id-stitch.png)
-
-In future releases, [!DNL Platform] will send confirmation to [!DNL Privacy Service] after data has been physically deleted.
 
 ## Next steps
 
 By reading this document, you have been introduced to the important concepts involved with processing privacy requests in [!DNL Experience Platform]. It is recommended that you continue reading the documentation provided throughout this guide in order to deepen your understanding of how to manage identity data and create privacy jobs.
 
-For information on processing privacy requests for [!DNL Platform] resources not used by [!DNL Profile], see the document on [privacy request processing in the Data Lake](../catalog/privacy.md).
+For information on processing privacy requests for [!DNL Platform] resources not used by [!DNL Profile], see the document on [privacy request processing in the data lake](../catalog/privacy.md).

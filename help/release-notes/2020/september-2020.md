@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes
-description: Experience Platform release notes September 9, 2020
+title: Adobe Experience Platform Release Notes September 2020
+description: The September 2020 release notes for Adobe Experience Platform.
 doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
@@ -34,7 +34,7 @@ See the [Data Governance overview](../../data-governance/home.md) for more infor
 
 ## Destinations {#destinations}
 
-In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+In [Real-Time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **New features**
 

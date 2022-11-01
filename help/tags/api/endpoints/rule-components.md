@@ -9,7 +9,7 @@ In data collection tags, [rules](./rules.md) control the behavior of the resourc
 
 >[!NOTE]
 >
->This document covers how to manage rule components in the Reactor API. For details on how to interact with rules and rule components in the Data Collection UI, please refer to the [UI guide](../../ui/managing-resources/rules.md).
+>This document covers how to manage rule components in the Reactor API. For details on how to interact with rules and rule components in the UI, please refer to the [UI guide](../../ui/managing-resources/rules.md).
 
 Rule components have three basic types:
 
@@ -56,7 +56,7 @@ curl -X GET \
   https://reactor.adobe.io/rules/RL14dc6a8c37b14b619ddb2b3ba489a1f51/rule_components \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -191,7 +191,7 @@ curl -X GET \
   https://reactor.adobe.io/rule_components/RC7be169fcfd534ffc82acc7bffdc50128 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -317,7 +317,7 @@ curl -X POST \
   https://reactor.adobe.io/rules/RLf7b4f416b2e04ae1ba857ae681fee5bc/rule_components \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -490,7 +490,7 @@ curl -X PATCH \
   https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -631,7 +631,7 @@ curl -X DELETE \
   https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Response**
@@ -671,7 +671,7 @@ curl -X GET \
   https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04/rules \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -775,7 +775,7 @@ curl -X GET \
   https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04/extension \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -895,7 +895,7 @@ curl -X GET \
   https://reactor.adobe.io/rule_components/RC3d0805fde85d42db8988090bc074bb44/origin \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

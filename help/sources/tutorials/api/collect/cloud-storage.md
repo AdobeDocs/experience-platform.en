@@ -13,7 +13,7 @@ This tutorial covers the steps for retrieving data from a cloud storage source a
 
 >[!NOTE]
 >
->In order to create a dataflow, you must already have a valid base connection ID with any of the following cloud storage sources on Platform:<ul><li>[[!DNL Amazon S3]](../create/cloud-storage/s3.md)</li><li>[[!DNL Apache HDFS]](../create/cloud-storage/hdfs.md)</li><li>[[!DNL Azure Blob]](../create/cloud-storage/blob.md)</li><li>[[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)</li><li>[[!DNL FTP]](../create/cloud-storage/ftp.md)</li><li>[[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)</li><li>[[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)</li><li>[[!DNL SFTP]](../create/cloud-storage/sftp.md)</li></ul>
+>In order to create a dataflow, you must already have a valid base connection ID with a cloud storage source. If you do not have this ID, then see the [sources overview](../../../home.md#cloud-storage) for a list of cloud storage sources that you can create a base connection with.
 
 ## Getting started
 
@@ -32,9 +32,9 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 ## Create a source connection {#source}
 
-You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
+You can create a source connection by making a POST request to the `sourceConnections` endpoint of [!DNL Flow Service] API while providing your base connection ID, the path to the source file that you want to ingest, and your source's corresponding connection specification ID.
 
-To create a source connection, you must also define an enum value for the data format attribute.
+When creating a source connection, you must also define an enum value for the data format attribute.
 
 Use the following the enum values for file-based sources:
 
@@ -46,8 +46,71 @@ Use the following the enum values for file-based sources:
 
 For all table-based sources, set the value to `tabular`.
 
-- [Create a source connection using custom delimited files](#using-custom-delimited-files)
-- [Create a source connection using compressed files](#using-compressed-files)
+**API format**
+
+```http
+POST /sourceConnections
+```
+
+**Request**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Cloud Storage source connection",
+      "description: "Source connection for a cloud storage source",
+      "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
+      "data": {
+          "format": "delimited",
+          "properties": {
+              "columnDelimiter": "{COLUMN_DELIMITER}",
+              "encoding": "{ENCODING}",
+              "compressionType": "{COMPRESSION_TYPE}"
+          }
+      },
+      "params": {
+          "path": "/acme/summerCampaign/account.csv",
+          "type": "file"
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Property | Description |
+| --- | --- |
+| `baseConnectionId` | The base connection ID of your cloud storage source. |
+| `data.format` | The format of the data you want to bring to Platform. Supported values are: `delimited`, `JSON`, and `parquet`. |
+| `data.properties` | (Optional) A set of properties that you can apply to your data while creating a source connection. |
+| `data.properties.columnDelimiter` | (Optional) A single character column delimiter that you can specify when collecting flat files. Any single character value is a permissible column delimiter. If not provided, a comma (`,`) is used as the default value. **Note**: The `columnDelimiter` property can only be used when ingesting delimited files. |
+| `data.properties.encoding` | (Optional) A property that defines the encoding type to be used when ingesting your data to Platform. The supported encoding types are: `UTF-8` and `ISO-8859-1`. **Note**: The `encoding` parameter is only available when ingesting delimited CSV files. Other file types will be ingested with the default encoding, `UTF-8`. |
+| `data.properties.compressionType` | (Optional) A property that defines the compressed file type for ingestion. The supported compressed file types are: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, and `tar`. **Note**: The `compressionType` property can only be used when ingesting delimited or JSON files. |
+| `params.path` | The path of the source file you are accessing. This parameter points to an individual file or an entire folder.  **Note**: You can use an asterisk in place of the file name to specify the ingestion of an entire folder. For example: `/acme/summerCampaign/*.csv` will ingest the entire `/acme/summerCampaign/` folder.  |
+| `params.type` | The file type of the source data file you are ingesting. Use type `file` to ingest an individual file and use type `folder` to ingest an entire folder. |
+| `connectionSpec.id` | The connection specification ID associated with your specific cloud storage source. See the [appendix](#appendix) for a list of connection spec IDs. |
+
+**Response**
+
+A successful response returns the unique identifier (`id`) of the newly created source connection. This ID is required in a later step to create a dataflow.
+
+```json
+{
+    "id": "26b53912-1005-49f0-b539-12100559f0e2",
+    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
+}
+```
+
+### Use regular expressions to select a specific set of files for ingestion {#regex}
+
+You can use regular expressions to ingest a particular set of files from your source to Platform when creating a source connection.
 
 **API format**
 
@@ -55,116 +118,75 @@ For all table-based sources, set the value to `tabular`.
 POST /sourceConnections
 ```
 
-### Create a source connection using custom delimited files {#using-custom-delimited-files}
-
 **Request**
 
-You can ingest a delimited file with a custom delimiter by specifying a `columnDelimiter` as a property. Any single character value is a permissible column delimiter. If unprovided, a comma `(,)` is used as the default value.
-
-The following example request creates a source connection for a delimited file type using tab-separated values.
+In the example below, regular expression is used in the file path to specify ingestion of all CSV files that have `premium` in their name.
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Cloud storage source connection for delimited files",
-        "description": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
-        "data": {
-            "format": "delimited",
-            "columnDelimiter": "\t"
-        },
-        "params": {
-            "path": "/ingestion-demos/leads/tsv_data/*.tsv",
-            "recursive": "true"
-        },
-        "connectionSpec": {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Cloud Storage source connection",
+      "description: "Source connection for a cloud storage source",
+      "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
+      "data": {
+          "format": "delimited"
+      },
+      "params": {
+          "path": "/acme/summerCampaign/*premium*.csv",
+          "type": "folder"
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
 ```
 
-| Property | Description |
-| --- | --- |
-| `baseConnectionId` | The unique connection ID of the third-party cloud storage system you are accessing. |
-| `data.format` | An enum value that defines the data format attribute. |
-| `data.columnDelimiter` | You can use any single character column delimiter to collect flat files. This property is only required when ingesting CSV or TSV files. |
-| `params.path` | The path of the source file you are accessing. |
-| `connectionSpec.id` | The connection spec ID associated with your specific third-party cloud storage system. See the [appendix](#appendix) for a list of connection spec IDs. |
+### Configure a source connection to ingest data recursively
 
-**Response**
+When creating a source connection, you can use the `recursive` parameter to ingest data from deeply nested folders.
 
-A successful response returns the unique identifier (`id`) of the newly created source connection. This ID is required in a later step to create a dataflow.
+**API format**
 
-```json
-{
-    "id": "26b53912-1005-49f0-b539-12100559f0e2",
-    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
-}
+```http
+POST /sourceConnections
 ```
-
-### Create a source connection using compressed files {#using-compressed-files}
 
 **Request**
 
-You can also ingest compressed JSON or delimited files by specifying its `compressionType` as a property. The list of supported compressed file types are:
-
-- `bzip2`
-- `gzip`
-- `deflate`
-- `zipDeflate`
-- `tarGzip`
-- `tar`
-
-The following example request creates a source connection for a compressed delimited file using a `gzip` file type.
+In the example below, the `recursive: true` parameter informs [!DNL Flow Service] to read all subfolders recursively during the ingestion process.
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Cloud storage source connection for compressed files",
-        "description": "Cloud storage source connection for compressed files",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
-        "data": {
-            "format": "delimited",
-            "properties": {
-                "compressionType": "gzip"
-            }
-        },
-        "params": {
-            "path": "/compressed/files.gzip"
-        },
-        "connectionSpec": {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "version": "1.0"
-        }
-     }'
-```
-
-| Property | Description |
-| --- | --- |
-| `data.properties.compressionType` | Determines the compressed file type for ingestion. This property is only required when ingesting compressed JSON or delimited files. |
-
-**Response**
-
-A successful response returns the unique identifier (`id`) of the newly created source connection. This ID is required in a later step to create a dataflow.
-
-```json
-{
-    "id": "26b53912-1005-49f0-b539-12100559f0e2",
-    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
-}
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Cloud Storage source connection",
+      "description: "Source connection for a cloud storage source with recursive ingestion",
+      "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
+      "data": {
+          "format": "delimited"
+      },
+      "params": {
+          "path": "/acme/summerCampaign/customers/premium/buyers/recursive",
+          "type": "folder",
+          "recursive": true
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
 ```
 
 ## Create a target XDM schema {#target-schema}
@@ -200,7 +222,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -225,7 +247,7 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
-|`data.schema.version` | The version of the schema. This value must be set `application/vnd.adobe.xed-full+json;version=1`, which returns the latest minor version of the schema. |
+| `data.schema.version` | The version of the schema. This value must be set `application/vnd.adobe.xed-full+json;version=1`, which returns the latest minor version of the schema. |
 | `params.dataSetId` | The ID of the target dataset. |
 | `connectionSpec.id` | The fixed connection spec ID to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
@@ -263,7 +285,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -335,9 +357,15 @@ GET /flowSpecs?property=name=="CloudStorageToAEP"
 curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/flowSpecs?property=name==%22CloudStorageToAEP%22' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
+>[!NOTE]
+>
+>The JSON response payload below is hidden for brevity. Select "payload" to see the response payload.
+
++++ View payload
 
 **Response**
 
@@ -345,128 +373,214 @@ A successful response returns the details of the dataflow specification responsi
 
 ```json
 {
-    "items": [
-        {
-            "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
-            "name": "CloudStorageToAEP",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "sourceConnectionSpecIds": [
-                "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
-                "ecadc60c-7455-4d87-84dc-2a0e293d997b",
-                "b7829c2f-2eb0-4f49-a6ee-55e33008b629",
-                "4c10e202-c428-4796-9208-5f1f5732b1cf",
-                "fb2e94c9-c031-467d-8103-6bd6e0a432f2",
-                "32e8f412-cdf7-464c-9885-78184cb113fd",
-                "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-                "998b8ae3-cec0-43b7-8abe-40b1eb4ee069",
-                "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8"
-            ],
-            "targetConnectionSpecIds": [
-                "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
-            ],
-            "transformationSpecs": [
-                {
-                    "name": "Mapping",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines various params required for different mapping from source to target",
-                        "properties": {
-                            "mappingId": {
-                                "type": "string"
-                            },
-                            "mappingVersion": {
-                                "type": "string"
-                            }
-                        }
-                    }
-                }
-            ],
-            "scheduleSpec": {
-                "name": "PeriodicSchedule",
-                "type": "Periodic",
-                "spec": {
-                    "$schema": "http://json-schema.org/draft-07/schema#",
-                    "type": "object",
-                    "properties": {
-                        "startTime": {
-                            "description": "epoch time",
-                            "type": "integer"
-                        },
-                        "endTime": {
-                            "description": "epoch time",
-                            "type": "integer"
-                        },
-                        "interval": {
-                            "type": "integer"
-                        },
-                        "frequency": {
-                            "type": "string",
-                            "enum": [
-                                "minute",
-                                "hour",
-                                "day",
-                                "week"
-                            ]
-                        },
-                        "backfill": {
-                            "type": "boolean",
-                            "default": true
-                        }
-                    },
-                    "required": [
-                        "startTime",
-                        "frequency",
-                        "interval"
-                    ],
-                    "if": {
-                        "properties": {
-                            "frequency": {
-                                "const": "minute"
-                            }
-                        }
-                    },
-                    "then": {
-                        "properties": {
-                            "interval": {
-                                "minimum": 15
-                            }
-                        }
-                    },
-                    "else": {
-                        "properties": {
-                            "interval": {
-                                "minimum": 1
-                            }
-                        }
-                    }
-                }
-            },
-            "permissionsInfo": {
-                "view": [
-                    {
-                        "@type": "lowLevel",
-                        "name": "EnterpriseSource",
-                        "permissions": [
-                            "read"
-                        ]
-                    }
-                ],
-                "manage": [
-                    {
-                        "@type": "lowLevel",
-                        "name": "EnterpriseSource",
-                        "permissions": [
-                            "write"
-                        ]
-                    }
-                ]
-            }
-        }
+  "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
+  "name": "CloudStorageToAEP",
+  "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+  "version": "1.0",
+  "attributes": {
+    "isSourceFlow": true,
+    "flacValidationSupported": true,
+    "frequency": "batch",
+    "notification": {
+      "category": "sources",
+      "flowRun": {
+        "enabled": true
+      }
+    }
+  },
+  "sourceConnectionSpecIds": [
+    "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
+    "ecadc60c-7455-4d87-84dc-2a0e293d997b",
+    "b7829c2f-2eb0-4f49-a6ee-55e33008b629",
+    "4c10e202-c428-4796-9208-5f1f5732b1cf",
+    "fb2e94c9-c031-467d-8103-6bd6e0a432f2",
+    "32e8f412-cdf7-464c-9885-78184cb113fd",
+    "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+    "998b8ae3-cec0-43b7-8abe-40b1eb4ee069",
+    "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8",
+    "54e221aa-d342-4707-bcff-7a4bceef0001",
+    "c85f9425-fb21-426c-ad0b-405e9bd8a46c",
+    "26f526f2-58f4-4712-961d-e41bf1ccc0e8"
+  ],
+  "targetConnectionSpecIds": [
+    "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
+  ],
+  "permissionsInfo": {
+    "view": [
+      {
+        "@type": "lowLevel",
+        "name": "EnterpriseSource",
+        "permissions": [
+          "read"
+        ]
+      }
+    ],
+    "manage": [
+      {
+        "@type": "lowLevel",
+        "name": "EnterpriseSource",
+        "permissions": [
+          "write"
+        ]
+      }
     ]
+  },
+  "optionSpec": {
+    "name": "OptionSpec",
+    "spec": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "errorDiagnosticsEnabled": {
+          "title": "Error diagnostics.",
+          "description": "Flag to enable detailed and sample error diagnostics summary.",
+          "type": "boolean",
+          "default": false
+        },
+        "partialIngestionPercent": {
+          "title": "Partial ingestion threshold.",
+          "description": "Percentage which defines the threshold of errors allowed before the run is marked as failed.",
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    }
+  },
+  "scheduleSpec": {
+    "name": "PeriodicSchedule",
+    "type": "Periodic",
+    "spec": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "startTime": {
+          "description": "epoch time",
+          "type": "integer"
+        },
+        "frequency": {
+          "type": "string",
+          "enum": [
+            "once",
+            "minute",
+            "hour",
+            "day",
+            "week"
+          ]
+        },
+        "interval": {
+          "type": "integer"
+        },
+        "backfill": {
+          "type": "boolean",
+          "default": true
+        }
+      },
+      "required": [
+        "startTime",
+        "frequency"
+      ],
+      "if": {
+        "properties": {
+          "frequency": {
+            "const": "once"
+          }
+        }
+      },
+      "then": {
+        "allOf": [
+          {
+            "not": {
+              "required": [
+                "interval"
+              ]
+            }
+          },
+          {
+            "not": {
+              "required": [
+                "backfill"
+              ]
+            }
+          }
+        ]
+      },
+      "else": {
+        "required": [
+          "interval"
+        ],
+        "if": {
+          "properties": {
+            "frequency": {
+              "const": "minute"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "interval": {
+              "minimum": 15
+            }
+          }
+        },
+        "else": {
+          "properties": {
+            "interval": {
+              "minimum": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  "transformationSpec": [
+    {
+      "name": "Mapping",
+      "spec": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "description": "defines various params required for different mapping from source to target",
+        "properties": {
+          "mappingId": {
+            "type": "string"
+          },
+          "mappingVersion": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  ],
+  "runSpec": {
+      "name": "ProviderParams",
+      "spec": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "description": "defines various params required for creating flow run.",
+        "properties": {
+          "startTime": {
+            "type": "integer",
+            "description": "An integer that defines the start time of the run. The value is represented in Unix epoch time."
+          },
+          "windowStartTime": {
+            "type": "integer",
+            "description": "An integer that defines the start time of the window against which data is to be pulled. The value is represented in Unix epoch time."
+          },
+          "windowEndTime": {
+            "type": "integer",
+            "description": "An integer that defines the end time of the window against which data is to be pulled.  The value is represented in Unix epoch time."
+          }
+        },
+        "required": [
+          "startTime",
+          "windowStartTime",
+          "windowEndTime"
+        ]
+      }
+    }
 }
 ```
+
++++
 
 ## Create a dataflow
 
@@ -501,7 +615,7 @@ POST /flows
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/flows' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{

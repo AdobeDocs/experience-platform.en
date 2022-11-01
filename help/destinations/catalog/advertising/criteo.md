@@ -18,11 +18,12 @@ Criteo powers trusted and impactful advertising to bring richer experiences to e
 
 * You need to have an administrator user account on [Criteo Management Center](https://marketing.criteo.com).
 * You'll need your Criteo Advertiser ID (ask your Criteo contact if you don't have this ID).
+* You'll need to provide [!DNL GUM caller ID], in case you want to use [!DNL GUM ID] as identifier.
 
 ## Limitations {#limitations}
 
-* Criteo does not currently support removing users from audiences.
-* Criteo only accepts [!DNL SHA-256]-hashed and plain-text emails (to be transformed into [!DNL SHA-256] before sending). Please do not send any PII (Personal Identifiable Information, such as individual's names or phone numbers).
+* Criteo only accepts [!DNL SHA-256]-hashed and plain-text emails (to be transformed into [!DNL SHA-256] before sending). Please do not send any PII (Personal Identifiable Information, such as individuals' names or phone numbers).
+* Criteo needs at least one identifier to be provided by the client. It prioritizes [!DNL GUM ID] as identifier over hashed email as it contributes to better matching rate.
 
 ![Prerequisites](../../assets/catalog/advertising/criteo/prerequisites.png)
 
@@ -33,6 +34,7 @@ Criteo supports the activation of identities described in the table below. Learn
 | Target Identity | Description | Considerations |
 | --- | --- | --- |
 | `email_sha256` | Email addresses hashed with the SHA-256 algorithm | Both plain text and SHA-256-hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the [!UICONTROL Apply transformation] option, to have Platform automatically hash the data on activation. |
+| `gum_id` | Criteo [!DNL GUM] cookie identifier | [!DNL GUM IDs] allow clients to maintain a correspondence between their user identification system and Criteo's user identification ([!DNL UID]). If the identifier type is `gum_id`, an additional parameter, the [!DNL GUM Caller ID], must also be included. Please reach out to your Criteo account team for the appropriate [!DNL GUM Caller ID] or to get more information on this [!DNL GUM ID] sync, if needed.|
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -90,8 +92,14 @@ After authenticating to the destination, please fill in the following connection
 | --- | --- | --- |
 | Name | A name to help you recognize this destination in the future. The name you choose here will be the [!DNL Audience] name in Criteo Management Center and cannot be modified at later stage. | Yes |
 | Description | A description to help you identify this destination in the future. | No |
-| API Version | Criteo API Version. Please select Preview. | Yes |
 | Advertiser ID | Criteo Advertiser ID of your organization. Please contact your Criteo account manager to obtain this information. | Yes |
+| Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] of your organization. Please reach out to your Criteo account team for the appropriate [!DNL GUM Caller ID] or to get more information on this [!DNL GUM] sync, if needed. | Yes, whenever [!DNL GUM ID] is provided as an identifier |
+
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
 ## Activate segments to this destination {#activate-segments}
 
@@ -105,24 +113,60 @@ Read [Activate profiles and segments to streaming segment export destinations](.
 
 You can see the exported segments in the [Criteo management center](https://marketing.criteo.com/audience-manager/dashboard).
 
-The request body received by the [!DNL Criteo] connection looks similar to this:
+The request body of adding a user profile received by the [!DNL Criteo] connection looks similar to this:
 
 ```json
-{ 
-  "data": { 
-    "type": "ContactlistWithUserAttributesAmendment", 
-    "attributes": { 
-      "operation": "add", 
-      "identifierType": "sha256email", 
-      "identifiers": [ 
-        { 
-          "identifier": "1c8494bbc4968277345133cca6ba257b9b3431b8a84833a99613cf075a62a16d", 
-          "attributes": [{ "key": "customValue", "value": "1" }] 
-        } 
-      ] 
-    } 
-  } 
-} 
+{
+  "data": {
+    "type": "ContactlistWithUserAttributesAmendment",
+    "attributes": {
+      "operation": "add",
+      "identifierType": "gum",
+      "gumCallerId": "123",
+      "identifiers": [
+        {
+          "identifier": "456",
+          "attributes": [
+            { "key": "ctoid_GumCaller", "value": "123" },
+            { "key": "ctoid_Gum", "value": "456" },
+            {
+              "key": "ctoid_HashedEmail",
+              "value": "98833030dc03751f2b2c1a0017078975fdae951aa6908668b3ec422040f2d4be"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+The request body of removing user profile  received by the [!DNL Criteo] connection looks similar to this:
+
+```json
+{
+  "data": {
+    "type": "ContactlistWithUserAttributesAmendment",
+    "attributes": {
+      "operation": "remove",
+      "identifierType": "gum",
+      "gumCallerId": "123",
+      "identifiers": [
+        {
+          "identifier": "456",
+          "attributes": [
+            { "key": "ctoid_GumCaller", "value": "123" },
+            { "key": "ctoid_Gum", "value": "456" },
+            {
+              "key": "ctoid_HashedEmail",
+              "value": "98833030dc03751f2b2c1a0017078975fdae951aa6908668b3ec422040f2d4be"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
 ```
 
 ## Data usage and governance {#data-usage}
@@ -132,4 +176,4 @@ All Adobe Experience Platform destinations are compliant with data usage policie
 ## Additional resources
 
 * [Criteo Help Center](https://help.criteo.com/kb/en)
-* [Criteo Developer Portal](https://developers.criteo.com/marketing-solutions/v2022.04/reference/modifyaudienceuserswithattributes)
+* [Criteo Developer Portal](https://developers.criteo.com)

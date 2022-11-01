@@ -36,19 +36,22 @@ In order to successfully make calls to any Experience Platform API endpoints, pl
 
 In order for a segment to be evaluated using edge segmentation, the query must conform to the following guidelines:
 
-| Query type | Details | Example |
-| ---------- | ------- | ------- |
-| Single event | Any segment definition that refers to a single incoming event with no time restriction. | People who have added an item to their cart. |
-| Single event that refers to a profile | Any segment definition that refers to one or more profile attributes and a single incoming event with no time restriction. | People who live in the USA that visited the homepage. |
-| Negated single event with a profile attribute | Any segment definition that refers to a negated single incoming event and one or more profile attributes | People who live in the USA and have **not** visited the homepage. | 
-| Single event within a 24-hour time window | Any segment definition that refers to a single incoming event within 24 hours. | People who visited the homepage in the last 24 hours. |
-| Single event with a profile attribute within a 24-hour time window | Any segment definition that refers to one or more profile attributes and a single incoming event within 24 hours. | People who live in the USA that visited the homepage in the last 24 hours. |
-| Negated single event with a profile attribute within a 24-hour time window | Any segment definition that refers to one or more profile attributes and a negated single incoming event within 24 hours. | People who live in the USA and have **not** visited the homepage in the last 24 hours. |
-| Frequency event within a 24-hour time window | Any segment definition that refers to an event that takes place a certain number of times within a time window of 24 hours. | People who visited the homepage **at least** five times in the last 24 hours. |
-| Frequency event with a profile attribute within a 24-hour time window | Any segment definition that refers to one or more profile attributes and an event that takes place a certain number of times within a time window of 24 hours. | People from the USA who visited the homepage **at least** five times in the last 24 hours. |
-| Negated frequency event with a profile within a 24-hour time window | Any segment definition that refers to one or more profile attributes and a negated event that takes place a certain number of times within a time window of 24 hours. | People who have not visited the homepage **more** than five times in the last 24 hours. |
-| Multiple incoming hits within a time profile of 24 hours | Any segment definition that refers to multiple events that occur within a time window of 24 hours. | People that visited the homepage **or** visited the checkout page within the last 24 hours. |
-| Multiple events with a profile within a 24-hour time window | Any segment definition that refers to one or more profile attributes and multiple events that occur within a time window of 24 hours. | People from the USA that visited the homepage **and** visited the checkout page within the last 24 hours. |
+| Query type | Details | Example | PQL example |
+| ---------- | ------- | ------- | ----------- |
+| Single event | Any segment definition that refers to a single incoming event with no time restriction. | People who have added an item to their cart. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
+| Single profile | Any segment definitions that refers to a single profile-only attribute | People who live in the USA. | `homeAddress.countryCode = "US"` |
+| Single event that refers to a profile | Any segment definition that refers to one or more profile attributes and a single incoming event with no time restriction. | People who live in the USA that visited the homepage. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
+| Negated single event with a profile attribute | Any segment definition that refers to a negated single incoming event and one or more profile attributes | People who live in the USA and have **not** visited the homepage. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
+| Single event within a time window | Any segment definition that refers to a single incoming event within a set period of time. | People who visited the homepage in the last 24 hours. | `chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
+| Single event with a profile attribute within a time window | Any segment definition that refers to one or more profile attributes and a single incoming event within a set period of time. | People who live in the USA that visited the homepage in the last 24 hours. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
+| Negated single event with a profile attribute within a time window | Any segment definition that refers to one or more profile attributes and a negated single incoming event within a period of time. | People who live in the USA and have **not** visited the homepage in the last 24 hours. | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)]))` | 
+| Frequency event within a 24-hour time window | Any segment definition that refers to an event that takes place a certain number of times within a time window of 24 hours. | People who visited the homepage **at least** five times in the last 24 hours. | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
+| Frequency event with a profile attribute within a 24-hour time window | Any segment definition that refers to one or more profile attributes and an event that takes place a certain number of times within a time window of 24 hours. | People from the USA who visited the homepage **at least** five times in the last 24 hours. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
+| Negated frequency event with a profile within a 24-hour time window | Any segment definition that refers to one or more profile attributes and a negated event that takes place a certain number of times within a time window of 24 hours. | People who have not visited the homepage **more** than five times in the last 24 hours. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] ))` |
+| Multiple incoming hits within a time profile of 24 hours | Any segment definition that refers to multiple events that occur within a time window of 24 hours. | People that visited the homepage **or** visited the checkout page within the last 24 hours. | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` | 
+| Multiple events with a profile within a 24-hour time window | Any segment definition that refers to one or more profile attributes and multiple events that occur within a time window of 24 hours. | People from the USA that visited the homepage **and** visited the checkout page within the last 24 hours. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
+| Segment of segments | Any segment definition that contains one or more batch or streaming segments. | People who live in the USA and are in the segment "existing segment". | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
+| Query that refers to a map | Any segment definition that refers to a map of properties. | People who have added to their cart based on external segment data. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
 Additionally, the segment **must** be tied to a merge policy that is active on edge. For more information about merge policies, please read the [merge policies guide](../../profile/api/merge-policies.md).
 
@@ -71,7 +74,7 @@ curl -X GET \
   'https://platform.adobe.io/data/core/ups/segment/definitions?evaluationInfo.synchronous.enabled=true' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -88,7 +91,7 @@ A successful response returns an array of segments in your IMS Organization that
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG_ID}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
                 "sandboxName": "",
@@ -122,7 +125,7 @@ A successful response returns an array of segments in your IMS Organization that
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG_ID}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
                 "sandboxName": "",
@@ -186,7 +189,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'  \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "schema": {
@@ -214,7 +217,7 @@ A successful response returns the details of the newly created segment definitio
         "name": "_xdm.context.profile"
     },
     "ttlInDays": 30,
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",
         "sandboxName": "{SANDBOX_NAME}",

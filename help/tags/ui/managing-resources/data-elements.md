@@ -126,11 +126,16 @@ return eventType; // if this data element is called from a "DOM Ready" event, th
 
 You can then use this in custom scripts by using the `_satellite` object syntax:
 
-`_satellite.getVar('data element name', event);`
+```javascript
+// event refers to the calling rule's event
+var rule = _satellite.getVar('return event rule', event);
+```
 
-When using the `%..%` notation, you only need to specify the data element name. You don't need to specify `event`.
+When using percent (`%`) syntax, you only need to specify the data element name. You don't need to specify `event`.
 
-`%data element name%`
+```text
+%data element name%
+```
 
 ### DOM attribute
 
@@ -150,7 +155,7 @@ Get the value of:
 
 Any available JavaScript object or variable can be referenced using the path field.
 
-If you want to collect JavaScript variables or object properties in your markup and use them with any of your extensions or rules, data elements can be used to capture these values. This way, you can refer to the data element throughout your rules, and if the source of the data ever changes, you only need to change your reference to the source (the data element) in one place within the Data Collection UI.
+If you want to collect JavaScript variables or object properties in your markup and use them with any of your extensions or rules, data elements can be used to capture these values. This way, you can refer to the data element throughout your rules, and if the source of the data ever changes, you only need to change your reference to the source (the data element) in one place.
 
 For example, let's say your markup contains a JavaScript variable called `Page_Name`, like this:
 
@@ -202,7 +207,7 @@ Only the name section is necessary and any special designators like "?" or "=" s
 
 ### Random number
 
-Use this data element to generate a random number. It’s often used for sampling data or creating IDs, such as a Hit ID. The random number can also be used to obfuscate or salt sensitive data. Some examples might include:
+Use this data element to generate a random number. It's often used for sampling data or creating IDs, such as a Hit ID. The random number can also be used to obfuscate or salt sensitive data. Some examples might include:
 
 * Generate a Hit ID
 * Concatenate the number to a user token or timestamp to ensure uniqueness
@@ -246,7 +251,7 @@ Some common use cases include:
 
 ## Built-in data elements
 
-You must create custom data element in the Data Collection UI if you previously used any of the following data elements:
+You must create additional custom data elements if you previously used any of the following data elements:
 
 * URI
 * Protocol

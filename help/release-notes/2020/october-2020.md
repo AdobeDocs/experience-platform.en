@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes
-description: Experience Platform release notes October, 2020
+title: Adobe Experience Platform Release Notes October 2020
+description: The October 2020 release notes for Adobe Experience Platform.
 doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527

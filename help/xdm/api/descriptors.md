@@ -37,7 +37,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
@@ -104,7 +104,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors/f3a1dfa38a4871cf4442a33074c1f9406a593407 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -122,7 +122,7 @@ A successful response returns the details of the descriptor, including its `@typ
   "xdm:property": "xdm:code",
   "xdm:isPrimary": false,
   "createdUser": "{CREATED_USER}",
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "createdClient": "{CREATED_CLIENT}",
   "updatedUser": "{UPDATED_USER}",
   "created": 1548899346989,
@@ -156,7 +156,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
       {
@@ -220,7 +220,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "@type": "xdm:descriptorIdentity",
@@ -268,7 +268,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors/ca921946fb5281cbdb8ba5e07087486ce531a1f2  \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -305,7 +305,7 @@ An identity descriptor signals that the "[!UICONTROL sourceProperty]" of the "[!
 
 | Property | Description |
 | --- | --- |
-| `@type` | The type of descriptor being defined. |
+| `@type` | The type of descriptor being defined. For an identity descriptor, this value must be set to `xdm:descriptorIdentity`. |
 | `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
 | `xdm:sourceVersion` | The major version of the source schema. |
 | `xdm:sourceProperty` | The path to the specific property that will be the identity. Path should begin with a "/" and not end with one. Do not include "properties" in the path (e.g. use "/personalEmail/address" instead of "/properties/personalEmail/properties/address") |
@@ -335,19 +335,24 @@ Friendly name descriptors allow a user to modify the `title`, `description`, and
     "click": "Mouse Click",
     "addCart": "Add to Cart",
     "checkout": "Cart Checkout"
+  },
+  "xdm:excludeMetaEnum": {
+    "web.formFilledOut": "Web Form Filled Out",
+    "media.ping": "Media ping"
   }
 }
 ```
 
 | Property | Description |
 | --- | --- |
-| `@type` | The type of descriptor being defined. |
+| `@type` | The type of descriptor being defined. For a friendly name descriptor, this value must be set to `xdm:alternateDisplayInfo`. |
 | `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
 | `xdm:sourceVersion` | The major version of the source schema. |
-| `xdm:sourceProperty` | The path to the specific property that will be the identity. Path should begin with a "/" and not end with one. Do not include "properties" in the path (e.g. use "/personalEmail/address" instead of "/properties/personalEmail/properties/address") |
+| `xdm:sourceProperty` | The path to the specific property whose details you want to modify.The path should begin with a slash (`/`) and not end with one. Do not include `properties` in the path (for example, use `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
 | `xdm:title` | The new title you wish to display for this field, written in Title Case. |
 | `xdm:description` | An optional description can be added along with the title. |
-| `meta:enum` | If the field indicated by `xdm:sourceProperty` is a string field, `meta:enum` determines the list of suggested values for the field in the [!DNL Experience Platform] UI. It is important to note that `meta:enum` does not declare an enumeration or provide any data validation for the XDM field.<br><br>This should only be used for core XDM fields defined by Adobe. If the source property is a custom field defined by your organization, you should instead edit the field's `meta:enum` property directly through a PATCH request to the field's parent resource.  |
+| `meta:enum` | If the field indicated by `xdm:sourceProperty` is a string field, `meta:enum` can be used to add suggested values for the field in the Segmentation UI. It is important to note that `meta:enum` does not declare an enumeration or provide any data validation for the XDM field.<br><br>This should only be used for core XDM fields defined by Adobe. If the source property is a custom field defined by your organization, you should instead edit the field's `meta:enum` property directly through a PATCH request to the field's parent resource. |
+| `meta:excludeMetaEnum` | If the field indicated by `xdm:sourceProperty` is a string field that has existing suggested values provided under a `meta:enum` field, you can include this object in a friendly name descriptor to exclude some or all of these values from segmentation. The key and value for each entry must match those included in the original `meta:enum` of the field in order for the entry to be excluded.  |
 
 {style="table-layout:auto"}
 
@@ -371,7 +376,7 @@ Relationship descriptors describe a relationship between two different schemas, 
 
 | Property | Description |
 | --- | --- |
-| `@type` | The type of descriptor being defined. |
+| `@type` | The type of descriptor being defined. For a relationship descriptor, this value must be set to `xdm:descriptorOneToOne`. |
 | `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
 | `xdm:sourceVersion` | The major version of the source schema. |
 | `xdm:sourceProperty` | Path to the field in the source schema where the relationship is being defined. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address"). |
@@ -381,10 +386,9 @@ Relationship descriptors describe a relationship between two different schemas, 
 
 {style="table-layout:auto"}
 
-
 #### Reference identity descriptor
 
-Reference identity descriptors provide a reference context to the primary identity of a schema field, allowing it to be referenced by fields in other schemas. Fields must already be labeled with an identity descriptor before a reference descriptor can be applied to them.
+Reference identity descriptors provide a reference context to the primary identity of a schema field, allowing it to be referenced by fields in other schemas. The destination schema must already have a primary identity field defined before it can be referred to by other schemas through this descriptor.
 
 ```json
 {
@@ -398,8 +402,32 @@ Reference identity descriptors provide a reference context to the primary identi
 
 | Property | Description |
 | --- | --- |
-| `@type` | The type of descriptor being defined. |
+| `@type` | The type of descriptor being defined. For a reference identity descriptor, this value must be set to `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
 | `xdm:sourceVersion` | The major version of the source schema. |
-| `xdm:sourceProperty` | Path to the field in the source schema where the descriptor is being defined. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address"). |
+| `xdm:sourceProperty` | Path to the field in the source schema that will be used to refer to the destination schema. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
 | `xdm:identityNamespace` | The identity namespace code for the source property. |
+
+{style="table-layout:auto"}
+
+#### Deprecated field descriptor
+
+You can [deprecate a field within a custom XDM resource](../tutorials/field-deprecation.md#custom) by adding a `meta:status` attribute set to `deprecated` to the field in question. If you want to deprecate fields provided by standard XDM resources in your schemas, however, you can assign a deprecated field descriptor to the schema in question to achieve the same effect. Using the [correct `Accept` header](../tutorials/field-deprecation.md#verify-deprecation), you can then view which standard fields are deprecated for a schema when looking it up in the API.
+
+```json
+{
+  "@type": "xdm:descriptorDeprecated",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/c65ddf08cf2d4a2fe94bd06113bf4bc4c855e12a936410d5",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/faxPhone"
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `@type` | The type of descriptor. For a field deprecation descriptor, this value must be set to `xdm:descriptorDeprecated`. |
+| `xdm:sourceSchema` | The URI `$id` of the schema you are applying the descriptor to. |
+| `xdm:sourceVersion` | The version of the schema you are applying the descriptor to. Should be set to `1`. |
+| `xdm:sourceProperty` | The path to the property within the schema that you are applying the descriptor to. If you want to apply the descriptor to multiple properties, you can provide a list of paths in the form of an array (for example, `["/firstName", "/lastName"]`). |
+
+{style="table-layout:auto"}

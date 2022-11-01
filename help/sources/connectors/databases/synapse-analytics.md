@@ -21,7 +21,7 @@ The documentation below provides information on how to connect [!DNL Azure Synap
 ## Connect [!DNL Azure Synapse Analytics] to [!DNL Platform] using APIs
 
 - [Create an Azure Synapse Analytics base connection using the Flow Service API](../../tutorials/api/create/databases/synapse-analytics.md)
-- [Explore the data structure and contents of a database source using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
+- [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL Azure Synapse Analytics] to [!DNL Platform] using the UI

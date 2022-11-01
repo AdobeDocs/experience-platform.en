@@ -18,4 +18,6 @@ feature: Data Prep
   - [Data Prep UI guide](./ui/mapping.md)
 - [Handling data formats](./data-handling.md)
 - [Mapping sets](mapping-set.md)
+- [Stream upserts](upserts.md)
+- [Troubleshooting guide](troubleshooting-guide.md)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

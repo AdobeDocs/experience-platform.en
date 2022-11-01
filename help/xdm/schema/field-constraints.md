@@ -16,7 +16,7 @@ Before using this guide, please review the [basics of schema composition](./comp
 
 If you plan on defining your own field types in the API, it is strongly recommended that you start with the [Schema Registry developer guide](../api/getting-started.md) to learn how to create field groups and data types to include your custom fields in. If you are using the Experience Platform UI to create your schemas, see the guide on [defining fields in the UI](../ui/fields/overview.md) to learn how implement constraints on fields that you define within custom field groups and data types.
 
-## Base structure and examples
+## Base structure and examples {#basic-types}
 
 XDM is built on top of JSON Schema, and therefore XDM fields inherit a similar syntax when defining their type. Understanding how different field types are represented in JSON Schema can help indicate the base constraints of each type.
 
@@ -142,11 +142,11 @@ The sections below describe how each XDM type maps to other common serialization
 * [Scala, .NET, and CosmosDB](#scala)
 * [MongoDB, Aerospike, and Protobuf 2](#mongo)
 
->[!IMPORTANT]
+>[!NOTE]
 >
 >Among the standard XDM types listed in the tables below, the [!UICONTROL Map] type is also included. Maps are used in standard schemas when data is represented as keys that map to certain values, or where keys cannot reasonably be included in a static schema and must be treated as data values.
 >
->Map-type fields are reserved for industry and vendor schema usage and therefore cannot be used in custom resources that you define. The map type's inclusion in the tables below is only intended to help you determine how to map your existing data to XDM if it is currently stored in any of the formats listed below.
+>Many standard XDM components use map types, and you can also [define custom map fields](../tutorials/custom-fields-api.md#maps) if desired. The map type's inclusion in the tables below is intended to help you determine how to map your existing data to XDM if it is currently stored in any of the formats listed below.
 
 ### Parquet, Spark SQL, and Java {#parquet}
 

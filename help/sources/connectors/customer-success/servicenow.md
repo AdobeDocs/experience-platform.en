@@ -21,7 +21,7 @@ The documentation below provides information on how to connect [!DNL ServiceNow]
 ## Connect [!DNL ServiceNow] to [!DNL Platform] using APIs
 
 - [Create a ServiceNow base connection using the Flow Service API](../../tutorials/api/create/customer-success/servicenow.md)
-- [Explore the data structure and contents of a customer success source using the Flow Service API](../../tutorials/api/explore/customer-success.md)
+- [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a customer success source using the Flow Service API](../../tutorials/api/collect/customer-success.md)
 
 ## Connect [!DNL ServiceNow] to [!DNL Platform] using the UI

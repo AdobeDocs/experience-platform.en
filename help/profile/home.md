@@ -13,11 +13,24 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 The relationship between Real-time Customer Profile and other services within Experience Platform is highlighted in the following diagram:
 
-![](images/profile-overview/profile-in-platform.png) 
+![The relationship between Real-time Customer Profile and other services in Adobe Experience Platform. This diagram shows that Profile is one of the core components of Adobe Experience Platform.](images/profile-overview/profile-in-platform.png) 
 
 ## Understanding profiles
 
 [!DNL Real-time Customer Profile] merges data from various enterprise systems and then provides access to that data in the form of customer profiles with related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels. The following sections highlight some of the core concepts that you must understand in order to effectively build and maintain profiles within Platform.
+
+### Profile entity composition
+
+A Real-time Customer Profile is composed of a main entity, called the **primary entity**, and various supporting entities. The primary entity is composed of traits, behaviors, and segment memberships of a profile. Other entities allow the segmentation engine to utilize data outside of the primary entity of the profile, and include the following:
+
+- **Dimensional entity**: The entity that is used to simplify the data modelling process for information shared across events or profile records. This is also known as the lookup entity or classification entity.
+- **B2B entity**: Entities that describe the profile's relationship with business-to-business accounts and opportunities.
+
+![A diagram explaining the composition of the profile entity.](./images/profile-overview/profile-entity-composition.png) 
+
+>[!IMPORTANT]
+>
+>Since dimensional and B2B entities only exist outside the primary entity, these are only used for batch segmentation.
 
 ### Profile data store
 
@@ -109,9 +122,9 @@ Data Governance is a series of strategies and technologies used to manage custom
 
 As it relates to accessing data, data governance plays a key role within [!DNL Experience Platform] at various levels: 
 
-*   Data usage labeling 
-*   Data access policies 
-*   Access control on data for marketing actions
+-   Data usage labeling 
+-   Data access policies 
+-   Access control on data for marketing actions
 
 Data Governance is managed at several points. These include deciding what data is ingested into [!DNL Platform] and what data is accessible after ingestion for a given marketing action. For more information, begin by reading the [data governance overview](../data-governance/home.md).
 

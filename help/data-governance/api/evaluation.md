@@ -51,7 +51,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/sampleMarketingAction/constraints?duleLabels=C1,C3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -64,7 +64,7 @@ A successful response includes a `violatedPolicies` array, which contains the de
     "timestamp": 1551134846737,
     "clientId": "{CLIENT_ID}",
     "userId": "{USER_ID}",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "marketingActionRef": "https://platform.adobe.io/marketingActions/custom/sampleMarketingAction",
     "duleLabels": [
         "C1",
@@ -97,7 +97,7 @@ A successful response includes a `violatedPolicies` array, which contains the de
                     }
                 ]
             },
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "created": 1550703519823,
             "createdClient": "{CREATED_CLIENT}",
             "createdUser": "{CREATED_USER}",
@@ -139,7 +139,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -172,7 +172,7 @@ A successful response includes a `violatedPolicies` array, which contains the de
     "timestamp": 1556324277895,
     "clientId": "{CLIENT_ID}",
     "userId": "{USER_ID}",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting",
     "duleLabels": [
         "C1",
@@ -318,7 +318,7 @@ A successful response includes a `violatedPolicies` array, which contains the de
                     }
                 ]
             },
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "created": 1551141210463,
             "createdClient": "{CREATED_CLIENT}",
             "createdUser": "{CREATED_USER}",
@@ -371,7 +371,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
         {
@@ -423,7 +423,7 @@ Comparing the example response below to the [response involving only datasets](#
     "timestamp": 1556325503038,
     "clientId": "{CLIENT_ID}",
     "userId": "{USER_ID}",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting",
     "duleLabels": [
         "C2",
@@ -539,7 +539,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/bulk-eval \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -592,7 +592,7 @@ A successful response returns an array of evaluation results; one for each polic
       "timestamp": 1595866566165,
       "clientId": "{CLIENT_ID}",
       "userId": "{USER_ID}",
-      "imsOrg": "{IMS_ORG}",
+      "imsOrg": "{ORG_ID}",
       "sandboxName": "prod",
       "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting",
       "duleLabels": [
@@ -609,7 +609,7 @@ A successful response returns an array of evaluation results; one for each polic
       "timestamp": 1595866566165,
       "clientId": "{CLIENT_ID}",
       "userId": "{USER_ID}",
-      "imsOrg": "{IMS_ORG}",
+      "imsOrg": "{ORG_ID}",
       "sandboxName": "prod",
       "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting",
       "duleLabels": [
@@ -657,7 +657,7 @@ A successful response returns an array of evaluation results; one for each polic
             ]
           },
           "id": "76131228-7654-11e8-adc0-fa7ae01bbebc",
-          "imsOrg": "{IMS_ORG}",
+          "imsOrg": "{ORG_ID}",
           "created": 1529696681413,
           "createdClient": "{CLIENT_ID}",
           "createdUser": "{USER_ID}",

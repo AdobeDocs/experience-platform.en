@@ -84,13 +84,7 @@ Identities are referenced in API calls either by their composite identity or XID
 
 ## How does Identity Service handle personally identifiable information (PII)?
 
-Identity Service creates a strong, one-way cryptographic hash of PII prior to persisting values. Identity data in the "Phone" and "Email" namespaces are automatically hashed using SHA-256, with "Email" values automatically converted to lowercase prior to hashing.
-
-## Should I encrypt all PII before sending to Platform?
-
-You do not need to manually encrypt PII data before ingesting it into Platform. By applying the `I1` data usage label to all applicable data fields, Platform automatically converts these fields into hashed ID values upon ingestion.
-
-For steps on how to apply and manage data usage labels, see the [data usage labels tutorial](../data-governance/labels/user-guide.md).
+Identity Service has standard namespaces to support the ingestion of hashed identity values for phone numbers and emails. However, you are responsible for the hashing of values. To learn more about hashing data that is ingested into Platform, see the [[!DNL Data Prep] mapping functions guide](../data-prep/functions.md#hashing).
 
 ## Are there any considerations when hashing PII-based identities?
 

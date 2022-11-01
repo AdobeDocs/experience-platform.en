@@ -52,7 +52,7 @@ In order to make calls to Platform APIs, you must first complete the [authentica
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
-*   x-gw-ims-org-id: `{IMS_ORG}`
+*   x-gw-ims-org-id: `{ORG_ID}`
 
 Resources in Experience Platform can be isolated to specific virtual sandboxes. In requests to Platform APIs, you can specify the name and ID of the sandbox that the operation will take place in. These are optional parameters.
 
@@ -87,7 +87,7 @@ GET /connectionSpecs
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
 --header 'accept: application/json' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
@@ -138,7 +138,7 @@ POST /connections
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -178,7 +178,7 @@ POST /sourceConnections
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -237,7 +237,7 @@ POST /connections
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -300,7 +300,7 @@ POST /targetConnections
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "Amazon Kinesis/ Azure Event Hubs target connection",
@@ -362,7 +362,7 @@ curl -X POST \
 'https://platform.adobe.io/data/foundation/flowservice/flows' \
 -H 'Authorization: Bearer {ACCESS_TOKEN}' \
 -H 'x-api-key: {API_KEY}' \
--H 'x-gw-ims-org-id: {IMS_ORG}' \
+-H 'x-gw-ims-org-id: {ORG_ID}' \
 -H 'x-sandbox-name: {SANDBOX_NAME}' \
 -H 'Content-Type: application/json' \
 -d  '{
@@ -434,7 +434,7 @@ PATCH /flows
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'If-Match: "{ETAG}"' \
@@ -465,10 +465,17 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]
 ```
 
-*   `{DATAFLOW_ID}`: Use the data flow you obtained in the previous step.
-*   `{ETAG}`: Use the etag that you obtained in the previous step.
-*   `{SEGMENT_ID}`: Provide the segment ID that you want to export to this destination. To retrieve segment IDs for the segments that you want to activate, go to **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, select **[!UICONTROL Segmentation Service API]** in the left navigation menu, and look for the `GET /segment/definitions` operation in **[!UICONTROL Segment Definitions]**.
-*   `{PROFILE_ATTRIBUTE}`: For example, `personalEmail.address` or `person.lastName`
+| Property | Description |
+| --------- | ----------- |
+|`{DATAFLOW_ID}`| In the URL, use the ID of the dataflow that you created in the previous step. |
+|`{ETAG}` | Get the `{ETAG}` from the response in the previous step, [Create a dataflow](#create-dataflow). The response format in the previous step has escaped quotes. You must use the unescaped values in the header of the request. See the example below: <br> <ul><li>Response example: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Value to use in your request: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> The etag value updates with every successful update of a dataflow. |
+| `{SEGMENT_ID}`| Provide the segment ID that you want to export to this destination. To retrieve segment IDs for the segments that you want to activate, see [retrieve a segment definition](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in the Experience Platform API reference. |
+| `{PROFILE_ATTRIBUTE}`| For example, `"person.lastName"` |
+| `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. To add a segment to a dataflow, use the `add` operation. |
+| `path` | Defines the part of the flow that is to be updated. When adding a segment to a dataflow, use the path specified in the example. |
+| `value` | The new value you want to update your parameter with. |
+| `id` | Specify the ID of the segment you are adding to the destination dataflow.  |
+| `name` | *Optional*. Specify the name of the segment you are adding to the destination dataflow. Note that this field is not mandatory and you can successfully add a segment to the destination dataflow without providing its name. |
 
 **Response**
 
@@ -494,7 +501,7 @@ GET /flows
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --header 'x-sandbox-name: prod' \
 --header 'If-Match: "{ETAG}"' 
@@ -591,7 +598,7 @@ The returned response should include in the `transformations` parameter the segm
 }
 ```
 
-## Using Postman collections to connect to streaming destinations  {#collections}
+## Using [!DNL Postman] collections to connect to streaming destinations  {#collections}
 
 To connect to the streaming destinations described in this tutorial in a more streamlined way, you can use [[!DNL Postman]](https://www.postman.com/). 
 
@@ -606,17 +613,21 @@ Click [here](../assets/api/streaming-destination/DestinationPostmanCollection.zi
 
 Each collection includes the necessary requests and environment variables, for [!DNL AWS Kinesis], and [!DNL Azure Event Hub], respectively.
 
-### How to use the Postman collections
+### How to use the [!DNL Postman] collections {#how-to-use-postman-collections}
 
 To successfully connect to the destinations using the attached [!DNL Postman] collections, follow these steps:
 
 * Download and install [!DNL Postman];
 * [Download](../assets/api/streaming-destination/DestinationPostmanCollection.zip) and unzip the attached collections;
-* Import the collections from their corresponding folders into Postman;
+* Import the collections from their corresponding folders into [!DNL Postman];
 * Fill in the environment variables according to the instructions in this article;
-* Run the [!DNL API] requests from Postman, based on the instructions in this article.
+* Run the [!DNL API] requests from [!DNL Postman], based on the instructions in this article.
 
-## Next steps
+## API error handling {#api-error-handling}
+
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide for more information on interpreting error responses.
+
+## Next steps {#next-steps}
 
 By following this tutorial, you have successfully connected Platform to one of your preferred streaming destinations and set up a data flow to the respective destination. Outgoing data can now be used in the destination for customer analytics or any other data operations you may wish to perform. See the following pages for more details:
 

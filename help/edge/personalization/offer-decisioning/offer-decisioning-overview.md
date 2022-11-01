@@ -47,7 +47,7 @@ It is important to understand the following terminology when working with Offer 
 
   ![](assets/decision-scope-copy.png)
 
-* **Datastreams:** For more information, please read the [datastreams](../../fundamentals/datastreams.md) documentation.
+* **Datastreams:** For more information, please read the [datastreams](../../datastreams/overview.md) documentation.
 
 * **Identity**: For more information, please read this documentation outlining how [Platform Web SDK uses Identity Service](../../identity/overview.md).
 
@@ -55,11 +55,11 @@ It is important to understand the following terminology when working with Offer 
 
 To enable Offer Decisioning, perform the following steps:
 
-1. Enabled Adobe Experience Platform in your [datastream](../../fundamentals/datastreams.md) and check the "Offer Decisioning" box
+1. Enabled Adobe Experience Platform in your [datastream](../../datastreams/overview.md) and check the "Offer Decisioning" box
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Follow the instructions to [install the SDK](../../fundamentals/installing-the-sdk.md) (The SDK can be installed standalone or through the [Data Collection UI](https://experience.adobe.com/#/data-collection/). See the [tags quick start guide](../../../tags/quick-start/quick-start.md)) for more information.
+1. Follow the instructions to [install the SDK](../../fundamentals/installing-the-sdk.md) (The SDK can be installed standalone or through the UI. See the [tags quick start guide](../../../tags/quick-start/quick-start.md)) for more information.
 1. [Configure the SDK](../../fundamentals/configuring-the-sdk.md) for Offer Decisioning. Additional Offer Decisioning specific steps are provided below.
 
    * Install the standalone SDK

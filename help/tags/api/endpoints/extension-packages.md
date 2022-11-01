@@ -11,7 +11,7 @@ exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
 
 An extension package represents an [extension](./extensions.md) as authored by an extension developer. An extension package defines additional capabilities that can be made available to tag users. Most commonly these capabilities come in the form of [rule components](./rule-components.md) (events, conditions, and actions) and [data elements](./data-elements.md), but can also include main modules and shared modules.
 
-Extension packages are displayed in the extension catalog within the Data Collection UI for users to install. Adding an extension package to a property is accomplished by creating an extension with a link to the extension package.
+Extension packages are displayed in the extension catalog within the Data Collection UI and Adobe Experience Platform UI for users to install. Adding an extension package to a property is accomplished by creating an extension with a link to the extension package.
 
 An extension package belongs to the [company](./companies.md) of the developer who created it.
 
@@ -66,7 +66,7 @@ curl -X GET \
   https://reactor.adobe.io/extension_packages \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -252,7 +252,7 @@ curl -X GET \
   https://reactor.adobe.io/extension_packages/EP75db2452065b44e2b8a38ca883ce369a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -485,7 +485,7 @@ curl -X POST \
   https://reactor.adobe.io/extension_packages \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: multipart/form-data' \
   -F 'package=@"/Users/temp/extension-package.zip"'
 ```
@@ -722,7 +722,7 @@ curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: multipart/form-data' \
   -F 'package=@"/Users/temp/extension-package.zip"'
 ```
@@ -961,7 +961,7 @@ curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/vnd.api+json' \
   -d '{
         "data": {
@@ -1206,7 +1206,7 @@ curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/vnd.api+json' \
   -d '{
         "data": {
@@ -1297,7 +1297,7 @@ curl -X GET \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172/versions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

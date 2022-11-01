@@ -36,7 +36,7 @@ In order to make calls to [!DNL Platform] APIs, you must first complete the [aut
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
@@ -73,7 +73,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/segment/definitions/24379cae-726a-4987-b7b9-79c32cddb5c1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -88,7 +88,7 @@ A successful response returns the details of the segment definition.
         "name": "_xdm.context.profile"
     },
     "ttlInDays": 90,
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "name": "Cart abandons in CA",
     "description": "",
     "expression": {
@@ -140,7 +140,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/config/mergePolicies/2b43d78d-0ad4-4c1e-ac2d-574c09b01119 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -151,7 +151,7 @@ A successful response returns the details of the merge policy.
 ```json
 {
     "id": "2b43d78d-0ad4-4c1e-ac2d-574c09b01119",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "schema": {
         "name": "_xdm.context.profile"
     },
@@ -206,7 +206,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty/constraints
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -235,7 +235,7 @@ A successful response returns the URI for the marketing action, the data usage l
   "timestamp": 1556324277895,
   "clientId": "{CLIENT_ID}",
   "userId": "{USER_ID}",
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty",
   "duleLabels": [
     "C1",
@@ -334,7 +334,7 @@ A successful response returns the URI for the marketing action, the data usage l
           }
         ]
       },
-      "imsOrg": "{IMS_ORG}",
+      "imsOrg": "{ORG_ID}",
       "created": 1565651746693,
       "createdClient": "{CREATED_CLIENT}",
       "createdUser": "{CREATED_USER",

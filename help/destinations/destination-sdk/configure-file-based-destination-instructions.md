@@ -1,15 +1,11 @@
 ---
 description: This page lists and describes the steps to configure a file-based destination using Destination SDK.
-title: (Beta) Use Destination SDK to configure a file-based destination
+title: Use Destination SDK to configure a file-based destination
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
 ---
-# (Beta) Use Destination SDK to configure a file-based destination
+# Use Destination SDK to configure a file-based destination
 
 ## Overview {#overview}
-
->[!IMPORTANT]
->
->The functionality to configure and submit file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 This page describes how to use the information in [Configuration options in Destinations SDK](./configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [file-based destination](../../destinations/destination-types.md#file-based). The steps are laid out in sequential order below.
 
@@ -104,10 +100,6 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }
@@ -255,8 +247,9 @@ Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION
 * If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration, see the following sections for the authentication types supported by Destination SDK for file-based destinations:
   
   * [Amazon S3 authentication](authentication-configuration.md#s3)
-  * [Azure connection string](authentication-configuration.md#blob)
-  * [Azure service principal](authentication-configuration.md#adls)
+  * [Azure Blob](authentication-configuration.md#blob)
+  * [Azure Data Lake Storage](authentication-configuration.md#adls)
+  * [Google Cloud Storage](authentication-configuration.md#gcs)
   * [SFTP authentication with SSH key](authentication-configuration.md#sftp-ssh)
   * [SFTP authentication with password](authentication-configuration.md#sftp-password)
 
@@ -274,8 +267,16 @@ As part of the process to test your destination, you must use the Experience Pla
 
 ## Step 5: Publish your destination {#publish-destination}
 
+>[!NOTE]
+>
+>This step is not required if you are creating a private destination for your own use, and are not looking to publish it in the destinations catalog for other customers to use.
+
 After configuring and testing your destination, use the [destination publishing API](./destination-publish-api.md) to submit your configuration to Adobe for review.
 
 ## Step 6: Document your destination {#document-destination}
+
+>[!NOTE]
+>
+>This step is not required if you are creating a private destination for your own use, and are not looking to publish it in the destinations catalog for other customers to use.
 
 If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md).

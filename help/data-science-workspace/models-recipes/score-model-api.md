@@ -24,12 +24,12 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
 `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.  
 `{JSON_PAYLOAD}`: Experiment Run object to be sent. The example we use in our tutorial is shown here:
@@ -112,12 +112,12 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experimentRun.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
 `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.  
 `{EXPERIMENT_ID}`: The ID corresponding to the Experiment you want to target. This can be found in the response when creating your Experiment.  
@@ -177,12 +177,12 @@ To get Experiment Runs for scheduled Experiments, the query is shown below:
 curl -X GET \
   'https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 `{EXPERIMENT_ID}`:  The ID corresponding to the Experiment the Run is under.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
-`{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
 
 Since there are multiple Experiment Runs for a specific Experiment, the response returned will have an array of Run IDs.
 
@@ -220,12 +220,12 @@ If you want to stop execution of a scheduled Experiment before its `endTime`, th
 curl -X DELETE \
   'https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 `{EXPERIMENT_ID}`:  The ID corresponding to the Experiment.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
-`{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
 
 >[!NOTE]
 >

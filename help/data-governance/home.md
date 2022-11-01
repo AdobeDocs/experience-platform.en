@@ -75,7 +75,7 @@ An example of a marketing action might be the desire to export a dataset to a th
 There are two types of policies available:
 
 * **[!UICONTROL Data governance policy]**: Restrict data activation based on the marketing action being performed and the data usage labels carried by the data in question.
-* **[!UICONTROL Consent policy] (Beta)**: Filter the profiles that can be activated to [destinations](../destinations/home.md) based on your customers' consent or preferences.
+* **[!UICONTROL Consent policy]**: Filter the profiles that can be activated to [destinations](../destinations/home.md) based on your customers' consent or preferences.
 
 Once data usage labels have been applied, data stewards can create policies using the [!DNL Policy Service] API or the [!DNL Experience Platform] user interface. For more information on data usage policies and marketing actions, see the [policies overview](./policies/overview.md).
 

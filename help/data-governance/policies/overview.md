@@ -13,7 +13,7 @@ In order for data usage labels to effectively support data compliance, data usag
 There are two types of policies available:
 
 * **[!UICONTROL Data governance policy]**: Restrict data activation based on the marketing action being performed and the data usage labels carried by the data in question.
-* **[!UICONTROL Consent policy] (Beta)**: Filter the profiles that can be activated to [destinations](../../destinations/home.md) based on your customers' consent or preferences
+* **[!UICONTROL Consent policy]**: Filter the profiles that can be activated to [destinations](../../destinations/home.md) based on your customers' consent or preferences
 
 This document provides a high-level overview of data usage policies, and provides links to further documentation for working with policies in the UI or API.
 

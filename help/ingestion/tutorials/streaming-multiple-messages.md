@@ -65,7 +65,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -124,7 +124,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -241,7 +241,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -300,7 +300,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       }
@@ -370,7 +370,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -419,7 +419,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmSchema": {
           "name": "_xdm.context.experienceevent"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -468,15 +468,15 @@ The response payload includes a status for each message along with a GUID in the
         },
         {
             "statusCode": 400,
-            "message": "inletId: [9b0cb233972f3b0092992284c7353f5eead496218e8441a79b25e9421ea127f5] imsOrgId: [{IMS_ORG}] Message has unknown xdm format"
+            "message": "inletId: [9b0cb233972f3b0092992284c7353f5eead496218e8441a79b25e9421ea127f5] imsOrgId: [{ORG_ID}] Message has unknown xdm format"
         },
         {
             "statusCode": 400,
-            "message": "inletId: [9b0cb233972f3b0092992284c7353f5eead496218e8441a79b25e9421ea127f5] imsOrgId: [{IMS_ORG}] Message has an absent or wrong ims org in the header"
+            "message": "inletId: [9b0cb233972f3b0092992284c7353f5eead496218e8441a79b25e9421ea127f5] imsOrgId: [{ORG_ID}] Message has an absent or wrong ims org in the header"
         },
         {
             "statusCode": 400,
-            "message": "inletId: [9b0cb233972f3b0092992284c7353f5eead496218e8441a79b25e9421ea127f5] imsOrgId: [{IMS_ORG}] Message has unknown xdm format"
+            "message": "inletId: [9b0cb233972f3b0092992284c7353f5eead496218e8441a79b25e9421ea127f5] imsOrgId: [{ORG_ID}] Message has unknown xdm format"
         }
     ]
 }

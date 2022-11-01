@@ -7,17 +7,32 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 ---
-# Define a relationship between two schemas using the [!DNL Schema Editor]
+# Define a one-to-one relationship between two schemas using the [!DNL Schema Editor] {#relationship-ui}
 
->[!NOTE]
->
->If you are using Real-time Customer Data Platform B2B Edition, see the guide on [creating B2B relationships](./relationship-b2b.md) instead.
+>[!CONTEXTUALHELP]
+>id="platform_schemas_relationships"
+>title="Schema relationships"
+>abstract="Schemas belonging to different classes can be contextually linked through relationship fields, allowing you to build more complex segmentation rules. See the documentation for more information on schema relationships."
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_1to1_reference_schema"
+>title="Reference schema"
+>abstract="Select the schema that you want to establish a relationship with. This schema can be a different class from the current schema. See the documentation for more information on schema relationships."
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_1to1_identity_namespace"
+>title="Reference identity namespace"
+>abstract="The namespace (type) for the reference schema's primary identity field. The reference schema must have an established primary identity field in order to participate in a relationship. See the documentation for more information on schema relationships."
 
 The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
 
 While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. To establish a relationship between two schemas belonging to different classes, a dedicated relationship field must be added to a source schema, which references the identity of a destination schema.
 
 This document provides a tutorial for defining a relationship between two schemas using the Schema Editor in the [!DNL Experience Platform] user interface. For steps on defining schema relationships using the API, see the tutorial on [defining a relationship using the Schema Registry API](relationship-api.md).
+
+>[!NOTE]
+>
+>For steps on how to create a many-to-one relationship in Adobe Real-Time Customer Data Platform B2B Edition, see the guide on [creating B2B relationships](./relationship-b2b.md).
 
 ## Getting started
 
@@ -98,6 +113,10 @@ The updated `favoriteHotel` field appears in the canvas. Select **[!UICONTROL Sa
 ## Define a relationship field for the source schema {#relationship-field}
 
 Once your source schema has a dedicated reference field defined, you can designate it as a relationship field.
+
+>[!NOTE]
+>
+>The steps below cover how to define a relationship field using the right-rail controls in the canvas. If you have access to Real-Time CDP B2B Edition, you can also define a one-to-one relationship using the [same dialog](./relationship-b2b.md#relationship-field) as when creating many-to-one relationships.
 
 Select the `favoriteHotel` field in the canvas, then scroll down under **[!UICONTROL Field properties]** until the **[!UICONTROL Relationship]** checkbox appears. Select the checkbox to reveal the required parameters for configuring a relationship field.
 

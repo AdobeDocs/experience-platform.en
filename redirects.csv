@@ -1,4 +1,21 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/map-a-csv-file.html,https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/map-csv/existing-schema.html
+https://experienceleague.adobe.com/docs/experience-platform/profile/apply-ttl.html,https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html
+https://experienceleague.adobe.com/docs/experience-platform/query/api/alert-subscriptions.html,https://experienceleague.adobe.com/docs/experience-platform/query/api/getting-started.html
+https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/packages.html,https://experienceleague.adobe.com/docs/experience-platform/query/packages.html
+https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/ttl.html,https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/dataset-expiration.html
+https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/ttl.html,https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html
+https://experienceleague.adobe.com/docs/experience-platform/tags/admin/manage-permissions.html,https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html
+https://experienceleague.adobe.com/docs/experience-platform/query/derived-attributes.html,https://experienceleague.adobe.com/docs/experience-platform/query/derived-attributes/overview.html
+https://experienceleague.adobe.com/docs/experience-platform/rtcdp-connections/(*),https://experienceleague.adobe.com/docs/experience-platform/collection/
+https://experienceleague.adobe.com/docs/experience-platform/query/sample-queries/adobe-target.html, https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/activity-analysis-with-adobe-target.html
+https://experienceleague.adobe.com/docs/experience-platform/catalog/data-protection.html,https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/encryption.html
+https://experienceleague.adobe.com/docs/experience-platform/privacy/data-hygiene-api.html,https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/overview.html
+https://experienceleague.adobe.com/docs/experience-platform/query/get-started/use-case.html,https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/abandoned-cart.html
+https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html,https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/overview.html
+https://experienceleague.adobe.com/docs/experience-platform/query/audit-log-guide.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-governance/audit-log-guide.html
+https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/abandoned-cart.html,https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/abandoned-browse.html
+https://experienceleague.adobe.com/docs/experience-platform/query/quickstart.html,https://experienceleague.adobe.com/docs/experience-platform/query/get-started/prerequisites.html
 https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/extend-soft-enum.html,https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/suggested-values.html
 https://experienceleague.adobe.com/docs/experience-platform/privacy/api/jobs.html,https://experienceleague.adobe.com/docs/experience-platform/privacy/api/privacy-jobs.html
 https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-match.html,https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-match/overview.html
@@ -325,3 +342,7 @@ https://experienceleague.adobe.com/docs/experience-platform/destinations/api/ema
 https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/experience-event.html,https://experienceleague.adobe.com/docs/experience-platform/query/sample-queries/experience-event.html
 https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/adobe-analytics.html,https://experienceleague.adobe.com/docs/experience-platform/query/sample-queries/adobe-analytics.html
 https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/adobe-target.html,https://experienceleague.adobe.com/docs/experience-platform/query/sample-queries/adobe-target.html
+https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/api/developer-tools-reference/sample-template-api.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/api/developer-tools-reference/streaming-destination-testing-api/sample-template-api.html
+https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/api/developer-tools-reference/render-template-api.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/api/developer-tools-reference/streaming-destination-testing-api/render-template-api.html
+https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/api/developer-tools-reference/destination-testing-api.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/api/developer-tools-reference/streaming-destination-testing-api/destination-testing-api.html
+https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/api/developer-tools-reference/sample-profile-generation-api.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/api/developer-tools-reference/streaming-destination-testing-api/sample-profile-generation-api.html

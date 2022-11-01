@@ -45,7 +45,7 @@ For detailed steps on acquiring your credentials, see the [[!DNL Zoho CRM] authe
 The documentation below provides information on how to connect [!DNL Zoho CRM] to Platform using APIs or the user interface:
 
 - [Create a [!DNL Zoho CRM] base connection using the Flow Service API](../../tutorials/api/create/crm/zoho.md)
-- [Explore the data structure and contents of a CRM source using the Flow Service API](../../tutorials/api/explore/crm.md)
+- [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a CRM source using the Flow Service API](../../tutorials/api/collect/crm.md)
 
 ## Connect [!DNL Zoho CRM] to [!DNL Platform] using the UI

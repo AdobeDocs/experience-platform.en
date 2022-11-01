@@ -34,7 +34,7 @@ The following subsections outline how to enable Analytics client-side logging fo
 
 ### Enable Analytics client-side logging {#enable-analytics-client-side-logging}
 
-To consider Analytics client-side logging enabled for your implementation, you must disable the Adobe Analytics configuration in your [datastream](../../../fundamentals/datastreams.md).
+To consider Analytics client-side logging enabled for your implementation, you must disable the Adobe Analytics configuration in your [datastream](../../../datastreams/overview.md).
 
 ![Analytics datastream configuration disabled](../assets/disable-analytics-datastream.png)
 
@@ -130,7 +130,7 @@ The following is an example of an `interact` response when Analytics client-side
 }
 ```
 
-Propositions for Form-based Experience Composer activities can contain both content and click metric items under the same proposition. Thus, instead of having a single analytics token for content display in `scopeDetails.characteristics.analyticsToken` property, these can have both a display and a click analytics token specified under `scopeDetails.characteristics.analyticsTokens` object, in `display` and `click` properties, correspondingly.
+Propositions for Form-based Experience Composer activities can contain both content and click metric items under the same proposition. Thus, instead of having a single analytics token for content display in `scopeDetails.characteristics.analyticsToken` property, these can have both a display and a click analytics token specified in `scopeDetails.characteristics.analyticsDisplayToken` and `scopeDetails.characteristics.analyticsClickToken` properties, correspondingly.
 
 ```json
 {
@@ -156,14 +156,10 @@ Propositions for Form-based Experience Composer activities can contain both cont
               }
             ],
             "characteristics": {
-              "eventTokens": {
-                "display": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
-                "click": "E0gb6q1+WyFW3FMbbQJmrg=="
-              },
-              "analyticsTokens": {
-                "display": "434689:0:0|2,434689:0:0|1",
-                "click": "434689:0:0|32767"
-              }
+               "displayToken": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
+               "clickToken": "E0gb6q1+WyFW3FMbbQJmrg==",
+               "analyticsDisplayToken": "434689:0:0|2,434689:0:0|1", 
+               "analyticsClickToken": "434689:0:0|32767"
             }
           },
           "items": [
@@ -202,11 +198,11 @@ Propositions for Form-based Experience Composer activities can contain both cont
 }
 ```
 
-All the values from `scopeDetails.characteristics.analyticsToken`, as well as `scopeDetails.characteristics.analyticsTokens.display` (for displayed content) and `scopeDetails.characteristics.analyticsTokens.click` (for click metrics) are the A4T payloads that need to be collected and included as `tnta` tag in the [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) call.
+All the values from `scopeDetails.characteristics.analyticsToken`, as well as `scopeDetails.characteristics.analyticsDisplayToken` (for displayed content) and `scopeDetails.characteristics.analyticsClickToken` (for click metrics) are the A4T payloads that need to be collected and included as `tnta` tag in the [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) call.
 
 >[!IMPORTANT]
 >
->Note that some `analyticsToken`/`analyticsTokens` properties can contain multiple tokens, concatenated as a single comma-delineated string.
+>The `analyticsToken`, `analyticsDisplayToken`, `analyticsClickToken` properties can contain multiple tokens, concatenated as a single comma-delineated string.
 >
 >In the implementation examples provided in the next section, multiple Analytics tokens are being collected iteratively. To concatenate an array of Analytics tokens, use a function similar this:
 >
@@ -337,13 +333,10 @@ From here, you must implement code to execute the propositions and construct a p
         }
       ],
       "characteristics": {
-        "eventTokens": {
-          "display": "91TS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqgEt==",
-          "click": "Tagb6q1+WyFW3FMbbQJrtg=="
-        },
-        "analyticsTokens": {
-          "display": "434688:0:0|2,434688:0:0|1",
-          "click": "434688:0:0|32767"
+          "displayToken": "91TS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqgEt==",
+          "clickToken": "Tagb6q1+WyFW3FMbbQJrtg==",
+          "analyticsDisplayTokens": "434688:0:0|2,434688:0:0|1",
+          "analyticsClickTokens": "434688:0:0|32767"
         }
       }
     },
@@ -385,14 +378,14 @@ function getDisplayAnalyticsPayload(proposition) {
     return;
   }
   var characteristics = proposition.scopeDetails.characteristics;
-  if (characteristics.analyticsTokens) {
-    return characteristics.analyticsTokens.display;
+  if (characteristics.analyticsDisplayToken) {
+    return characteristics.analyticsDisplayToken;
   }
   return characteristics.analyticsToken;
 }
 ```
 
-A proposition can have different types of items, as indicated by the `schema` property of the item in question. There are four proposition item schemas supported for Form-Based Experience Composer activities: 
+A proposition can have different types of items, as indicated by the `schema` property of the item in question. There are four proposition item schemas supported for Form-Based Experience Composer activities:
 
 ```javascript
 var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
@@ -413,8 +406,8 @@ function getClickAnalyticsPayload(proposition) {
     return;
   }
   var characteristics = proposition.scopeDetails.characteristics;
-  if (characteristics.analyticsTokens) {
-    return characteristics.analyticsTokens.click;
+  if (characteristics.analyticsClickToken) {
+    return characteristics.analyticsClickToken;
   }
   return characteristics.analyticsToken;
 }
@@ -430,8 +423,8 @@ In summary, the following steps must be executed when applying Form-Based Experi
 1. Collect the Analytics display tokens from the SDK response and construct a payload for the Analytics hit;
 1. Send the payload to Analytics using the [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
 1. If there are any click metrics in delivered propositions, click listeners should be setup so that when a click is performed, it sends the `decisioning.propositionInteract` notification event. The `onBeforeEventSend` handler should be configured so that when intercepting `decisioning.propositionInteract` events, the following actions happen:
-    1. Collecting the click Analytics tokens from `xdm._experience.decisioning.propositions`
-    1. Sending the click Analytics hit with the collected Analytics payload via [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
+   1. Collecting the click Analytics tokens from `xdm._experience.decisioning.propositions`
+   1. Sending the click Analytics hit with the collected Analytics payload via [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
 
 ```javascript
 alloy("sendEvent", {

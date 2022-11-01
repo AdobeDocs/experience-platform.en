@@ -421,7 +421,7 @@ The `inline` function separates the elements of an array of structs and generate
 
 The `inline` function **cannot** be placed in a select list where there are other generator functions.
 
-By default, the columns produced are named “col1”, “col2”, and so on. If the expression is `NULL` then no rows are produced.
+By default, the columns produced are named "col1", "col2", and so on. If the expression is `NULL` then no rows are produced.
 
 >[!TIP]
 >
@@ -442,7 +442,7 @@ The example returns the following:
 
 This second example further demonstrates the concept and application of the `inline` function. The data model for the example is illustrated in the image below.
 
-![A schema diagram for the productListItems](../images/sql/productListItems.png)
+![A schema diagram for productListItems.](../images/sql/productListItems.png)
 
 **Example**
 
@@ -453,7 +453,7 @@ select inline(productListItems) from source_dataset limit 10;
 The values taken from the `source_dataset` are used to populate the target table.
 
 |         SKU         |  _experience                      | quantity | priceTotal   |
-|---------------------+-----------------------------------+----------+--------------|
+|---------------------|-----------------------------------|----------|--------------|
 | product-id-1        | ("("("(A,pass,B,NULL)")")")       |     5    |  10.5        |
 | product-id-5        | ("("("(A, pass, B,NULL)")")")     |          |              |
 | product-id-2        | ("("("(AF, C, D,NULL)")")")       |      6   |  40          |
@@ -478,9 +478,33 @@ SET property_key = property_value
 
 To return the value for any setting, use `SET [property key]` without a `property_value`.
 
-## PostgreSQL commands
+## [!DNL PostgreSQL] commands
 
-The sub-sections below cover the PostgreSQL commands supported by Query Service.
+The sub-sections below cover the [!DNL PostgreSQL] commands supported by Query Service.
+
+### ANALYZE TABLE
+
+The `ANALYZE TABLE` command computes statistics for a table on the accelerated store. The statistics are calculated on executed CTAS or ITAS queries for a given table on accelerated store.
+
+**Example**
+
+```sql
+ANALYZE TABLE <original_table_name>
+```
+
+The following is a list of statistical calculations that are available after using the `ANALYZE TABLE` command:-
+
+| Calculated values | Description |
+|---|---|
+| `field`  | The name of the column in a table.  |
+| `data-type` | The acceptable type of data for each column. |
+| `count` | The number of rows that contain a non-null value for this field. |
+| `distinct-count` | The number of unique or distinct values for this field. |
+| `missing` | The number of rows that have a null value for this field. |
+| `max` | The maximum value from the analyzed table.  |
+| `min` | The minimum value from the analyzed table. |
+| `mean` | The average value of the analyzed table.  |
+| `stdev` | The standard deviation of the analyzed table. |
 
 ### BEGIN
 
@@ -547,25 +571,23 @@ EXECUTE name [ ( parameter ) ]
 The `EXPLAIN` command displays the execution plan for the supplied statement. The execution plan shows how the tables referenced by the statement will be scanned.  If multiple tables are referenced, it will show what join algorithms are used to bring together the required rows from each input table.
 
 ```sql
-EXPLAIN option statement
+EXPLAIN statement
 ```
 
-Where `option` can be one of:
+Use the `FORMAT` keyword with the `EXPLAIN` command to define the format of the response.
 
 ```sql
-ANALYZE
-FORMAT { TEXT | JSON }
+EXPLAIN FORMAT { TEXT | JSON } statement
 ```
 
 | Parameters | Description|
 | ------ | ------ |
-| `ANALYZE` | If the `option` contains `ANALYZE`, the run times and other statistics are shown. |
-| `FORMAT` | If the `option` contains `FORMAT`, it specifies the output format, which can be `TEXT` or `JSON`. Non-text output contains the same information as the text output format, but is easier for programs to parse. This parameter defaults to `TEXT`. |
+| `FORMAT` | Use the `FORMAT` command to specify the output format. The available options are `TEXT` or `JSON`. Non-text output contains the same information as the text output format, but is easier for programs to parse. This parameter defaults to `TEXT`. |
 | `statement` | Any `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, or `CREATE MATERIALIZED VIEW AS` statement, whose execution plan you want to see. |
 
 >[!IMPORTANT]
 >
->Keep in mind that the statement is actually executed when the `ANALYZE` option is used. Although `EXPLAIN` discards any output that a `SELECT` returns, other side effects of the statement happen as usual. 
+>Any output that a `SELECT` statement might return is discarded when run with the `EXPLAIN` keyword. Other side effects of the statement happen as usual.
 
 **Example**
 
@@ -579,7 +601,7 @@ EXPLAIN SELECT * FROM foo;
 
                        QUERY PLAN
 ---------------------------------------------------------
- Seq Scan on foo  (cost=0.00..155.00 rows=10000 width=4)
+ Seq Scan on foo (dataSetId = "6307eb92f90c501e072f8457", dataSetName = "foo") [0,1000000242,6973776840203d3d,6e616c58206c6153,6c6c6f430a3d4d20,74696d674c746365]
 (1 row)
 ```
 
@@ -649,7 +671,7 @@ More information about the standard SELECT query parameters can be found in the 
 | Parameters | Description|
 | ------ | ------ |
 | `TEMPORARY` or `TEMP` | An optional parameter. If specified, the table that is created will be a temporary table. |
-| `UNLOGGED` | An optional parameter. If specified, the table that is created as will be an unlogged table. More information about unlogged tables can be found in the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `UNLOGGED` | An optional parameter. If specified, the table that is created as will be an unlogged table. More information about unlogged tables can be found in the [[!DNL PostgreSQL] documentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | The name of the table to be created. |
 
 **Example**
@@ -708,7 +730,7 @@ COPY query
 >
 >The complete output path will be `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
-### ALTER TABLE
+### ALTER TABLE {#alter-table}
 
 The `ALTER TABLE` command lets you add or drop primary or foreign key constraints as well as add columns to the table.
 
@@ -718,28 +740,55 @@ The `ALTER TABLE` command lets you add or drop primary or foreign key constraint
 The following SQL queries show examples of adding or dropping constraints to a table. 
 
 ```sql
-ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY ( column_name )
 
-ALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY column_name NAMESPACE namespace
+ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
 
-ALTER TABLE table_name DROP CONSTRAINT constraint_name PRIMARY KEY ( column_name )
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY IDENTITY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name )
+ALTER TABLE table_name ADD CONSTRAINT IDENTITY ( column_name ) NAMESPACE namespace
+
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT FOREIGN KEY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY IDENTITY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 ```
 
 | Parameters | Description|
 | ------ | ------ |
 | `table_name` | The name of the table which you are editing. |
-| `constraint_name` | The name of the constraint that you want to add or delete. |
 | `column_name` | The name of the column that you are adding a constraint to. |
 | `referenced_table_name` | The name of the table that is referenced by the foreign key. |
 | `primary_column_name` | The name of the column that is referenced by the foreign key. |
 
+
 >[!NOTE]
 >
->The table schema should be unique and not shared among multiple tables. Additionally, the namespace is mandatory for primary key constraints.
+>The table schema should be unique and not shared among multiple tables. Additionally, the namespace is mandatory for primary key, primary identity, and identity constraints.
+
+#### Add or drop primary and secondary identities
+
+The `ALTER TABLE` command allows you to add or delete constraints for both primary and secondary identity table columns directly through SQL.
+
+The following examples adds a primary identity and a secondary identity by adding constraints.
+
+```sql
+ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
+ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
+```
+
+Identities can also be removed by dropping constraints, as seen in the example below.
+
+```sql
+ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
+ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
+```
+
+See the document on [setting identities in an ad hoc datasets](../data-governance/ad-hoc-schema-identities.md) for more detailed information.
 
 #### ADD COLUMN
 
@@ -750,6 +799,23 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
+
+##### Supported data types
+
+The following table lists the accepted data types for adding columns to a table with [!DNL Postgres SQL], XDM, and the [!DNL Accelerated Database Recovery] (ADR) in Azure SQL.
+
+|---| PSQL client | XDM | ADR | Description |
+|---|---|---|---|---|
+|1| `bigint` | `int8` | `bigint` | A numerical data type used to store large integers ranging from –9,223,372,036,854,775,807 to 9,223,372,036,854,775,807 in 8 bytes. |
+|2| `integer` | `int4` | `integer` | A numerical data type used to store integers ranging from -2,147,483,648 to 2,147,483,647 in 4 bytes. |
+|3| `smallint` | `int2` | `smallint` | A numerical data type used to store integers ranging from -32,768 to 215-1 32,767 in 2 bytes.  |
+|4| `tinyint` | `int1` | `tinyint` | A numerical data type used to store integers ranging from 0 to 255 in 1 byte. |
+|5| `varchar(len)` | `string` | `varchar(len)` | A character data type that is of variable-size. `varchar` is best used when the sizes of the column data entries vary considerably. |
+|6| `double` | `float8` | `double precision` | `FLOAT8` and `FLOAT` are valid synonyms for `DOUBLE PRECISION`. `double precision` is a floating-point data type. Floating-point values are stored in 8 bytes. |
+|7| `double precision` | `float8` | `double precision` | `FLOAT8` is a valid synonym for `double precision`.`double precision` is a floating-point data type. Floating-point values are stored in 8 bytes. |
+|8| `date` | `date` | `date` | The `date` data type are 4-byte stored calendar date values without any timestamp information. The range of valid dates is from 01-01-0001 to 12-31-9999. |
+|9| `datetime` | `datetime` | `datetime` | A data type used to store an instant in time expressed as a calendar date and time of day. `datetime` includes the qulaifiers of: year, month, day, hour, second, and fraction. A `datetime` declaration can include any subset of these time units that are joined in that sequence, or even comprise only a single time unit. |
+|10| `char(len)` | `string` | `char(len)` | The `char(len)` keyword is used to indicate that the item is fixed-length character. |
 
 #### ADD SCHEMA
 

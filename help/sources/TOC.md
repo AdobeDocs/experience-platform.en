@@ -2,31 +2,37 @@
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Source Connectors Guide
-user-guide-description: Ingest data from a variety of sources or structure, label, and enhance already ingested data.
+user-guide-description: Ingest data from a variety of sources. Learn how to structure, label, and enhance already ingested data.
 feature: Sources
 ---
 
-# Source connectors {#sources}
+# Sources {#sources}
 
-- [Source connectors overview](home.md)
+- [Sources overview](home.md)
 - Available source connectors {#connectors}
   - Adobe applications {#adobe-applications}
-    - [Analytics Classifications source connector](connectors/adobe-applications/classifications.md)
-    - [Analytics source connector](connectors/adobe-applications/analytics.md)
-    - [Audience Manager source connector](connectors/adobe-applications/audience-manager.md)
-    - [Customer attributes source connector](connectors/adobe-applications/customer-attributes.md)
+    - [Analytics Classifications source](connectors/adobe-applications/classifications.md)
+    - [Analytics source](connectors/adobe-applications/analytics.md)
+    - [Audience Manager source](connectors/adobe-applications/audience-manager.md)
+    - [Adobe Campaign Managed Cloud Services source](connectors/adobe-applications/campaign.md)
+    - [Customer attributes source](connectors/adobe-applications/customer-attributes.md)
+    - [Data Collection source](connectors/adobe-applications/data-collection.md)
+    - [Workfront source](connectors/adobe-applications/workfront.md)
     - Field mappings {#mapping}
       - [Analytics field mappings](connectors/adobe-applications/mapping/analytics.md)
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)
       - [Target field mappings](connectors/adobe-applications/mapping/target.md)
       - [Marketo Engage field mappings](connectors/adobe-applications/mapping/marketo.md)
+      - [Microsoft Dynamics field mappings](connectors/adobe-applications/mapping/dynamics.md)
       - [Salesforce field mappings](connectors/adobe-applications/mapping/salesforce.md)
     - Marketo {#marketo}
       - [Marketo Engage connector](connectors/adobe-applications/marketo/marketo.md)
       - [Marketo Engage authentication guide](connectors/adobe-applications/marketo/marketo-auth.md)
       - [B2B namespaces and schemas](connectors/adobe-applications/marketo/marketo-namespaces.md)
   - Advertising {#advertising}
-    - [Google AdWords connector](connectors/advertising/ads.md)
+    - [Google Ads connector](connectors/advertising/ads.md)
+  - Analytics {#analytics}
+    - [Mixpanel connector](connectors/analytics/mixpanel.md)
   - Cloud storage {#cloud-storage}
     - [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
     - [Amazon S3 connector](connectors/cloud-storage/s3.md)
@@ -50,8 +56,10 @@ feature: Sources
     - [Veeva CRM connector](connectors/crm/veeva.md)
     - [Zoho CRM connector](connectors/crm/zoho.md)
   - Customer success {#customer-success}
+    - [Oracle Service Cloud](connectors/customer-success/oracle-service-cloud.md)
     - [Salesforce Service Cloud connector](connectors/customer-success/salesforce-service-cloud.md)
     - [ServiceNow connector](connectors/customer-success/servicenow.md)
+    - [Zendesk connector](connectors/customer-success/zendesk.md)
   - Databases {#databases}
     - [Amazon Redshift connector](connectors/databases/redshift.md)
     - [Apache Hive on Azure HDInsights connector](connectors/databases/hive.md)
@@ -71,6 +79,7 @@ feature: Sources
     - [Phoenix connector](connectors/databases/phoenix.md)
     - [PostgreSQL connector](connectors/databases/postgres.md)
     - [Snowflake connector](connectors/databases/snowflake.md)
+    - [Teradata Vantage connector](connectors/databases/teradata-vantage.md)
   - eCommerce {#ecommerce}
     - [Shopify connector](connectors/ecommerce/shopify.md)
   - Local system {#local-system}
@@ -91,7 +100,9 @@ feature: Sources
 - API tutorials {#api-tutorials}
   - Create a base connection {#create}
     - Advertising {#advertising}
-      - [Google AdWords](tutorials/api/create/advertising/ads.md)
+      - [Google Ads](tutorials/api/create/advertising/ads.md)
+    - Analytics {#analytics}
+      - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
       - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -114,8 +125,10 @@ feature: Sources
       - [Veeva CRM](tutorials/api/create/crm/veeva.md)
       - [Zoho CRM](tutorials/api/create/crm/zoho.md)
     - Customer success {#customer-success}
+      - [Oracle Service Cloud](tutorials/api/create/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
+      - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
     - Databases {#databases}
       - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
       - [Apache Hive on Azure HDInsights](tutorials/api/create/databases/hive.md)
@@ -134,6 +147,7 @@ feature: Sources
       - [Phoenix](tutorials/api/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/api/create/databases/postgres.md)
       - [Snowflake](tutorials/api/create/databases/snowflake.md)
+      - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
       - [SQL Server](tutorials/api/create/databases/sql-server.md)
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
@@ -161,6 +175,7 @@ feature: Sources
     - [Explore marketing automation data](tutorials/api/explore/marketing-automation.md)
     - [Explore payment data](tutorials/api/explore/payments.md)
     - [Explore protocol data](tutorials/api/explore/protocols.md)
+    - [Explore data tables](tutorials/api/explore/tabular.md)
   - Collect data {#collect}
     - [Collect advertising data](tutorials/api/collect/advertising.md)
     - [Collect cloud storage data](tutorials/api/collect/cloud-storage.md)
@@ -172,9 +187,12 @@ feature: Sources
     - [Collect payment data](tutorials/api/collect/payments.md)
     - [Collect protocol data](tutorials/api/collect/protocols.md)
     - [Collect streaming data](tutorials/api/collect/streaming.md)
+  - [On-demand ingestion](tutorials/api/on-demand-ingestion.md)
+  - [Filter data at the source level](tutorials/api/filter.md)
   - [Monitor dataflows](tutorials/api/monitor.md)
   - [Update accounts](tutorials/api/update.md)
   - [Update dataflows](tutorials/api/update-dataflows.md)
+  - [Retry failed dataflow runs](tutorials/api/retry-flows.md)
   - [Delete accounts](tutorials/api/delete.md)
   - [Delete dataflows](tutorials/api/delete-dataflows.md)
 - UI tutorials {#ui-tutorials}
@@ -183,11 +201,14 @@ feature: Sources
       - [Adobe Analytics (report-suite data)](tutorials/ui/create/adobe-applications/analytics.md)
       - [Adobe Analytics (classifications data)](tutorials/ui/create/adobe-applications/classifications.md)
       - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
-      - [Adobe Campaign Managed Services](tutorials/ui/create/adobe-applications/campaign.md)
+      - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
       - [Customer attributes](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
-    - Advertising {#create}
-      - [Google AdWords](tutorials/ui/create/advertising/ads.md)
+      - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
+    - Advertising {#advertising}
+      - [Google Ads](tutorials/ui/create/advertising/ads.md)
+    - Analytics {#analytics}
+      - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
       - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
@@ -211,8 +232,10 @@ feature: Sources
       - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
       - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
     - Customer Success {#customer-success}
+      - [Oracle Service Cloud](tutorials/ui/create/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
+      - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
     - Databases {#databases}
       - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
       - [Apache Hive on Azure HDInsights](tutorials/ui/create/databases/hive.md)
@@ -232,6 +255,7 @@ feature: Sources
       - [Phoenix](tutorials/ui/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - [Snowflake](tutorials/ui/create/databases/snowflake.md)
+      - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
     - Local system {#local-system}
@@ -251,6 +275,7 @@ feature: Sources
       - [HTTP API](tutorials/ui/create/streaming/http.md)
   - Configure a dataflow {#dataflow}
     - [Advertising connection dataflow](tutorials/ui/dataflow/advertising.md)
+    - [Analytics connection dataflow](tutorials/ui/dataflow/analytics.md)
     - [Batch cloud storage connection dataflow](tutorials/ui/dataflow/batch/cloud-storage.md)
     - [Streaming cloud storage connection dataflow](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
     - [Consent & Preferences connection dataflow](tutorials/ui/dataflow/consent-and-preferences.md)
@@ -261,7 +286,7 @@ feature: Sources
     - [Marketing automation connection dataflow](tutorials/ui/dataflow/marketing-automation.md)
     - [Payment connection dataflow](tutorials/ui/dataflow/payments.md)
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
-  - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
+  - [Create a sources dataflow using templates in the UI](tutorials/ui/templates.md)
   - [Monitor batch dataflows](tutorials/ui/monitor.md)
   - [Monitor streaming dataflows](tutorials/ui/monitor-streaming.md)
   - [Update accounts](tutorials/ui/update.md)
@@ -269,23 +294,26 @@ feature: Sources
   - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
   - [Subscribe to sources alerts](tutorials/ui/alerts.md)
-- Sources SDK {#sdk}
+- Self-Serve Sources (Batch SDK) {#sdk}
   - [Overview](sources-sdk/overview.md)
-  - [Configuration options](sources-sdk/config/config.md)
-  - [Configure authentication specification](sources-sdk/config/authspec.md)
-  - [Configure source specification](sources-sdk/config/sourcespec.md)
-  - [Configure explore specification](sources-sdk/config/explorespec.md)
-  - [Sources SDK API overview](sources-sdk/api/api-overview.md)
-  - [Getting started](sources-sdk/api/getting-started.md)
-  - [Create a connection specification](sources-sdk/api/create.md)
-  - [Update a connection specification](sources-sdk/api/update-connection-specs.md)
-  - [Update a flow specification](sources-sdk/api/update-flow-specs.md)
-  - [Submit your source](sources-sdk/api/submit.md)
-  - [Document your source in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
-  - [Use the GitHub web interface to create a sources documentation page](sources-sdk/documentation/github.md)
-  - [Use a text editor in your local environment to create a sources documentation page](sources-sdk/documentation/text-editor.md)
-  - [Documentation self-service API template](sources-sdk/documentation/template.md)
-  - [Documentation self-service UI template](sources-sdk/documentation/ui-template.md)
+  - Configure your connection specification {#config}
+    - [Configuration options](sources-sdk/config/config.md)
+    - [Configure authentication specification](sources-sdk/config/authspec.md)
+    - [Configure source specification](sources-sdk/config/sourcespec.md)
+    - [Configure explore specification](sources-sdk/config/explorespec.md)
+  - Self-Serve Sources (Batch SDK) API guide {#self-serve-api}
+    - [Self-Serve Sources (Batch SDK) API overview](sources-sdk/api/api-overview.md)
+    - [Getting started](sources-sdk/api/getting-started.md)
+    - [Create a connection specification](sources-sdk/api/create.md)
+    - [Update a connection specification](sources-sdk/api/update-connection-specs.md)
+    - [Update a flow specification](sources-sdk/api/update-flow-specs.md)
+    - [Submit your source](sources-sdk/api/submit.md)
+  - Documentation guide {#documentation}
+    - [Document your source in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
+    - [Use the GitHub web interface to create a sources documentation page](sources-sdk/documentation/github.md)
+    - [Use a text editor in your local environment to create a sources documentation page](sources-sdk/documentation/text-editor.md)
+    - [Documentation self-service API template](sources-sdk/documentation/template.md)
+    - [Documentation self-service UI template](sources-sdk/documentation/ui-template.md)
 - [Flow run notifications](notifications.md)
 - [IP address allow list](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)

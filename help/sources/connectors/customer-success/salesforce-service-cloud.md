@@ -21,7 +21,7 @@ The documentation below provides information on how to connect [!DNL Salesforce 
 ## Connect [!DNL Salesforce Service Cloud ]to [!DNL Platform] using APIs
 
 - [Create a Salesforce Service Cloud base connection using the Flow Service API](../../tutorials/api/create/customer-success/salesforce-service-cloud.md)
-- [Explore the data structure and contents of a customer success source using the Flow Service API](../../tutorials/api/explore/customer-success.md)
+- [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a customer success source using the Flow Service API](../../tutorials/api/collect/customer-success.md)
 
 ## Connect [!DNL Salesforce Service Cloud] to [!DNL Platform] using the UI

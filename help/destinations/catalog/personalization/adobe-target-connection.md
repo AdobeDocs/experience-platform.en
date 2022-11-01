@@ -6,19 +6,41 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 ---
 # Adobe Target connection {#adobe-target-connection}
 
+## Destination changelog {#changelog}
+
+>[!IMPORTANT]
+>
+>With the beta release of the enhanced Adobe Target V2 destination connector, you might be seeing two Adobe Target cards in the destinations catalog.
+>The Adobe Target V2 destination connector is currently in beta and only available to a select number of customers. In addition to the functionality provided by the Adobe V1 card, the Target V2 connector adds a [mapping step](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) to the activation workflow, which allows you to map profile attributes to Adobe Target, enabling attribute-based same-page and next-page personalization.
+
+![Image of the two Adobe Target destination cards in a side-by-side view.](/help/destinations/assets/catalog/personalization/adobe-target-connection/adobe-target-side-by-side-view.png)
+
 ## Overview {#overview}
 
 Adobe Target is an application that provides real-time, AI-powered personalization and experimentation capabilities in all inbound customer interactions across websites, mobile apps, and more.
 
-Adobe Target is a personalization connection in Adobe Experience Platform.
+Adobe Target is a personalization connection in the Adobe Experience Platform destinations catalog.
 
 ## Prerequisites {#prerequisites}
 
-This integration is powered by the [Adobe Experience Platform Web SDK](../../../edge/home.md). You must be using this SDK to use this destination.
+### Datastream ID {#datastream-id}
+
+When configuring the Adobe Target connection to [use a datastream ID](#parameters), you must have the [Adobe Experience Platform Web SDK](../../../edge/home.md) implemented.
+
+Configuring the Adobe Target connection without using a datastream ID does not require you to implement the Web SDK.
 
 >[!IMPORTANT]
 >
->Before creating an [!DNL Adobe Target] connection, read the guide on how to [configure personalization destinations for same-page and next-page personalization](../../ui/configure-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components.
+>Before creating an [!DNL Adobe Target] connection, read the guide on how to [configure personalization destinations for same-page and next-page personalization](../../ui/configure-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components. Same-page and next-page personalization requires you to use a datastream ID when configuring the Adobe Target connection.
+
+### Prerequisites in Adobe Target {#prerequisites-in-adobe-target}
+
+In Adobe Target, make sure that your user has:
+
+* Access to the [default workspace](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#default-workspace);
+* The **Approver** [role](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#roles-and-permissions).
+
+Read more about granting permissions for [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=en#section_8C425E43E5DD4111BBFC734A2B7ABC80) and for [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=en#roles-permissions).
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -42,8 +64,8 @@ A home rental and sales company wants to personalize their home page with a bann
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="About datastream IDs"
->abstract="This option determines in which data collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. You must configure a datastream before you can configure your destination."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Learn how to configure a datastream"
+>abstract="This option determines in which data collection datastream the segments will be included. The drop-down menu shows only datastreams which have the Target configuration enabled. To use edge segmentation, you must select a datastream ID. Selecting None disables all use cases that use edge segmentation."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Learn more about selecting datastreams"
 
 >[!IMPORTANT]
 > 
@@ -59,7 +81,18 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 *  **Name**: Fill in the preferred name for this destination.
 *  **Description**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
-*  **Datastream ID**: This determines in which Data Collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../edge/fundamentals/datastreams.md) for more details.
+*  **Datastream ID**: This determines in which Data Collection datastream the segments will be included. The drop-down menu shows only datastreams that have the Target destination enabled. See [configuring a datastream](../../../edge/datastreams/overview.md#target) for detailed information on how to configure a datastream for Adobe Target.
+    * **[!UICONTROL None]**: Select this option if you need to configure Adobe Target personalization but you cannot implement the [Experience Platform Web SDK](../../../edge/home.md). When using this option, segments exported from Experience Platform to Target only support next-session personalization, and edge segmentation is disabled. See the table below for more information.
+    
+|No datastream selected|Datastream selected|
+|---|---|
+|<ul><li>[Edge segmentation](../../../segmentation/ui/edge-segmentation.md) is not supported.</li><li>[Same-page and next-page personalization](../../ui/configure-personalization-destinations.md) are not supported.</li><li>You can share segments to the Adobe Target connection only for the *default production sandbox*.</li><li>To configure next-session personalization without using a datastream ID, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul>|<ul><li>Edge segmentation works as expected.</li><li>[Same-page and next-page personalization](../../ui/configure-personalization-destinations.md) are supported.</li><li>Segment sharing is supported for other sandboxes.</li></ul>|
+
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
 ## Activate segments to this destination {#activate}
 

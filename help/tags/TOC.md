@@ -13,7 +13,7 @@ solution: Data Collection
 * Getting started {#get-started}
   * [Quickstart guide](./quick-start/quick-start.md)
   * [Implementation guides](./quick-start/implementation-guides.md)
-* Data Collection UI {#ui}
+* UI guides {#ui}
   * [Overview](./ui/managing-resources/overview.md)
   * Extensions {#extensions}
     * [Overview](./ui/managing-resources/extensions/overview.md)
@@ -51,11 +51,11 @@ solution: Data Collection
   * [Overview](./ui/event-forwarding/overview.md)
   * [Getting started](./ui/event-forwarding/getting-started.md)
   * [Configuring secrets](./ui/event-forwarding/secrets.md)
+  * [Monitoring (Beta)](./ui/event-forwarding/monitoring.md)
 * Administration {#admin}
   * [Overview](./ui/administration/overview.md)
   * [Companies and properties](./ui/administration/companies-and-properties.md)
   * [User permissions](./ui/administration/user-permissions.md)
-  * [Manage permissions](./ui/administration/manage-permissions.md)
 * Extensions {#extensions}
   * [Overview](./extensions/overview.md)
   * Adobe extensions {#adobe}
@@ -100,22 +100,34 @@ solution: Data Collection
     * Adobe Target v2 {#target-v2}
       * [Overview](./extensions/web/target-v2/overview.md)
       * [Release notes](./extensions/web/target-v2/release-notes.md)
+    * [!DNL BrightCove] video tracking {#brightcove}
+      * [Overview](./extensions/web/brightcove/overview.md)
+      * [Release notes](./extensions/web/brightcove/release-notes.md)
     * Common Analytics Plugins {#plugins}
       * [Overview](./extensions/web/plugins/overview.md)
       * [Release notes](./extensions/web/plugins/release-notes.md)
+    * Common Web SDK Plugins {#web-sdk-plugins}
+      * [Overview](./extensions/web/web-sdk-plugins/overview.md)
+      * [Release notes](./extensions/web/web-sdk-plugins/release-notes.md)
     * Core {#core}
       * [Overview](./extensions/web/core/overview.md)
       * [Event forwarding](./extensions/web/core/event-forwarding.md)
       * [Release notes](./extensions/web/core/release-notes.md)
+    * [!DNL Mailchimp] Edge {#mailchimp-edge}
+      * [Overview](./extensions/web/mailchimp/overview.md)
     * [!DNL Marketo Munchkin] {#marketo}
       * [Overview](./extensions/web/marketo/overview.md)
       * [Release notes](./extensions/web/marketo/release-notes.md)
-    * [!DNL BrightCove] video tracking {#brightcove}
-      * [Overview](./extensions/web/brightcove/overview.md)
-      * [Release notes](./extensions/web/brightcove/release-notes.md)
-    * [!DNL YouTube] video tracking extension {#youtube}
+    * Google Data Layer {#google-data-layer}
+      * [Overview](./extensions/web/google-data-layer/overview.md)
+      * [Release notes](./extensions/web/google-data-layer/release-notes.md)
+    * [!DNL Splunk] {#splunk}
+      * [Overview](./extensions/web/splunk/overview.md)
+    * [!DNL YouTube] video tracking {#youtube}
       * [Overview](./extensions/web/youtube/overview.md)
       * [Release notes](./extensions/web/youtube/release-notes.md)
+    * [!DNL Zendesk] Events API {#zendesk}
+      * [Overview](./extensions/web/zendesk/overview.md)
   * [Third-party extensions](./extensions/3rd-party-extensions.md)
 * Extension development {#extension-dev}
   * [Overview](./extension-dev/overview.md)
@@ -185,8 +197,10 @@ solution: Data Collection
     * [Secrets](./api/guides/secrets.md)
 * [FAQ](./faq.md)
 * [Terminology updates](./term-updates.md)
+* [Deprecating support for Internet Explorer 10 and 11](./ie-deprecation.md)
 * Release notes {#release-notes}
   * [Latest](./release-notes/current.md)
+  * [2021 release notes](./release-notes/2021.md)
   * [2020 release notes](./release-notes/2020.md)
   * [2019 release notes](./release-notes/2019.md)
   * [2018 release notes](./release-notes/2018.md)

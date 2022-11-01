@@ -57,7 +57,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty/constraints?duleLabels=C1,C3 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -70,7 +70,7 @@ A successful response returns the URL for the marketing action, the usage labels
     "timestamp": 1565727821209,
     "clientId": "string",
     "userId": "string",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "marketingActionRef": "https://platform-stage.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty",
     "duleLabels": [
         "C1",
@@ -103,7 +103,7 @@ A successful response returns the URL for the marketing action, the usage labels
                     }
                 ]
             },
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "created": 1565651746693,
             "createdClient": "{CREATED_CLIENT}",
             "createdUser": "{CREATED_USER",
@@ -149,7 +149,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty/constraints
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -189,7 +189,7 @@ A successful response returns the URL for the marketing action, the usage labels
     "timestamp": 1556324277895,
     "clientId": "{CLIENT_ID}",
     "userId": "{USER_ID}",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty",
     "duleLabels": [
         "C1",
@@ -343,7 +343,7 @@ A successful response returns the URL for the marketing action, the usage labels
                     }
                 ]
             },
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "created": 1565651746693,
             "createdClient": "{CREATED_CLIENT}",
             "createdUser": "{CREATED_USER",

@@ -1,0 +1,15 @@
+isIgnored,isCustom,fieldGroupId,fieldGroupName,fieldPath,displayName,fieldDescription,dataType,isRequired,isArray,isIdentity,identityNamespace,isPrimaryIdentity,min,max,enum,stringPattern,format,minLength,maxLength,properties,$ref,comment
+TRUE,,,,,,,,,,,,,,,,,,,,,,https://ns.adobe.com/xdm/context/profile~My Schema Generated From CSV~This is a sample schema generated from a provided csv template
+,FALSE,https://ns.adobe.com/xdm/context/profile-person-details,Demographic Details,person/name/firstName,My first name,,string,,,,,,,,,,,,,,,
+,FALSE,,Demographic Details,person/name/lastName,,,string,,,,,,,,,,,,,,,
+,TRUE,,Demographic Details,person/name/_ddgxdmint/nickName,,,string,TRUE,,,,,,,,,,,,,,
+,TRUE,,,_ddgxdmint/customField1,my custom field1,Sample custom field1,string,TRUE,,TRUE,email,TRUE,,,,,,,,,,
+,TRUE,,,_ddgxdmint/customField2/customerField22,my custom field22,Sample custom field22,string,TRUE,,,,,,,,,,,,,,
+,TRUE,,,_ddgxdmint/customField3,my custom field3,Sample custom field3,number,,,,,,0,10,,,,,,,,
+,TRUE,,,_ddgxdmint/customField4,my custom field4,Sample custom field4,string,,,,,,,,"[""one"", ""two"",""three""]",,,,,,,
+,TRUE,,,_ddgxdmint/customField5,my custom field5,Sample custom field5,string,,TRUE,,,,,,,,,,,,,
+,TRUE,,,_ddgxdmint/customField6,my custom field6,Sample custom field6,string,,,,,,,,,,date,,,,,
+,TRUE,,SampleFieldGroup,_ddgxdmint/customField7,my custom field7,Sample custom field7,object,,,,,,,,,,,,,"{""myField"": {""type"": ""string""}}",,
+,TRUE,,SampleFieldGroup,_ddgxdmint/customField8,my custom field8,Sample custom field8,object,,TRUE,,,,,,,,,,,,https://ns.adobe.com/xdm/context/person,
+,TRUE,,Loyalty Details,loyalty/_ddgxdmint/joinDate,,,string,,,,,,,,,,,,,,,
+,FALSE,,Loyalty Details,all,,,,,,,,,,,,,,,,,,

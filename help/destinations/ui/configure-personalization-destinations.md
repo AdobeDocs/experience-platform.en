@@ -2,12 +2,16 @@
 keywords: personalization; target; destination; personalizationo destinations; configure personalization destinations; same page; next page;
 title: Configure personalization destinations for same-page and next-page personalization
 type: Tutorial
-seo-title: Configure personalization destinations for same-page and next-page personalization.
 description: Learn how to configure personalization destinations for same-page and next-page personalization.
-seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
 ---
 # Configure personalization destinations for same-page and next-page personalization
+
+## Overview {#overview}
+
+>[!NOTE]
+>
+>When [configuring the Adobe Target connection](../catalog/personalization/adobe-target-connection.md) without using a datastream ID, the use cases described in this article are not supported.
 
 Adobe Experience Platform uses [edge segmentation](../../segmentation/ui/edge-segmentation.md) to enable customers to create and target audience segments at high scale, in real time.
 
@@ -31,7 +35,7 @@ When configuring the datastream, under **[!UICONTROL Adobe Experience Platform]*
 
 ![Datastream configuration](../assets/ui/configure-personalization-destinations/datastream-config.png)
 
-For more details on how to set up a datastream, follow the instructions described in the [Platform Web SDK documentation](../../edge/fundamentals/datastreams.md).
+For more details on how to set up a datastream, follow the instructions described in the [Platform Web SDK documentation](../../edge/datastreams/overview.md).
 
 ## Step 2: Configure your personalization destination {#configure-destination}
 

@@ -39,7 +39,7 @@ The list of supported namespaces are as follows:
 
 | Namespace | Description |
 | --------- | ----------- |
-| Emails (SHA256, lowercased) | A namespace for pre-hashed email address. Values provided in this namespace are converted to lowercase before hashing with SHA256. Leading and trailing spaces need to be trimmed before an email address is normalized. This setting cannot be changed retroactively. See the following document on [SHA256 hashing support](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) for more information. |
+| Emails (SHA256, lowercased) | A namespace for pre-hashed email address. Values provided in this namespace are converted to lowercase before hashing with SHA256. Leading and trailing spaces need to be trimmed before an email address is normalized. This setting cannot be changed retroactively. Platform offers two methods of supporting hashing upon data collection, through [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) and through [data prep](../../../data-prep/functions.md#hashing). |
 | Phone (SHA256_E.164)| A namespace that represents raw phone numbers that need to be hashed using both SHA256 and E.164 format. |
 | ECID | A namespace that represents an Experience Cloud ID (ECID) value. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the [ECID overview](../../../identity-service/ecid.md) for more information. |
 | Apple IDFA (ID for Advertisers) | A namespace that represents Apple ID for Advertisers. See the following document on [interest-based ads](https://support.apple.com/en-us/HT202074) for more information. |
@@ -108,7 +108,13 @@ To connect a partner using their [!UICONTROL connect ID], enter their unique ID 
 
 ![connect-partner.png](./images/connect-partner.png)
 
-### Create feed
+### Create feed {#create-feed}
+
+>[!CONTEXTUALHELP]
+>id="platform_segment_match_marketing"
+>title="Restricted marketing use cases"
+>abstract="Restricted marketing use cases help provide guidance to your partners to ensure shared segments are properly used per your data governance restrictions."
+>text="Learn more in documentation"
 
 A **feed** is a grouping of data (segments), the rules for how that data can be exposed or used, and the configurations that determine how your data is matched against your partners' data. A feed can be managed independently and exchanged with other Platform users through [!DNL Segment Match].
 

@@ -144,7 +144,7 @@ These attributes can also be viewed as a JSON object by selecting to **[!UICONTR
 
 ### Events tab
 
-The **[!UICONTROL Events]** tab contains data related to ExperienceEvents associated with the customer. This could include email opens, cart activities, page views, and more. Selecting **[!UICONTROL View all]** for any individual event provides additional fields and values captures as part of the event.
+The **[!UICONTROL Events]** tab contains data from the 100 most recent ExperienceEvents associated with the customer. This data could include email opens, cart activities, and page views. Selecting **[!UICONTROL View all]** for any individual event provides additional fields and values captures as part of the event.
 
 Events can also be viewed as a JSON object by selecting to **[!UICONTROL View JSON]**. This is helpful for understanding how events are captured in Platform.
 

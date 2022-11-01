@@ -27,5 +27,5 @@ The documentation below provides information on how to connect a [!DNL Generic R
 ## Connect [!DNL Generic REST API] to [!DNL Platform] using APIs
 
 - [Create a generic REST API base connection using the Flow Service API](../../tutorials/api/create/protocols/generic-rest.md)
-- [Explore the data structure and contents of a protocols source using the Flow Service API](../../tutorials/api/explore/protocols.md)
+- [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a protocols source using the Flow Service API](../../tutorials/api/collect/protocols.md)

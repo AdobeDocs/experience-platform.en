@@ -60,26 +60,26 @@ The following request creates a base connection for [!DNL Snowflake]:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Snowflake base connection",
-        "description": "Snowflake base connection",
-        "auth": {
-            "specName": "Basic Authentication for Snowflake,
-            "params": {
-                "connectionString": "{CONNECTION_STRING}"
-            }
-        },
-        "connectionSpec": {
-            "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Snowflake base connection",
+      "description": "Snowflake base connection",
+      "auth": {
+          "specName": "ConnectionString,
+          "params": {
+              "connectionString": "jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}"
+          }
+      },
+      "connectionSpec": {
+          "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Property | Description |
@@ -98,4 +98,7 @@ A successful response returns the newly created connection, including its unique
 }
 ```
 
-By following this tutorial, you have created a [!DNL Snowflake] connection using the [!DNL Flow Service] API, and have obtained the connection's unique ID value. You can use this connection ID in the next tutorial as you learn how to [explore databases using the Flow Service API](../../explore/database-nosql.md).
+By following this tutorial, you have created a [!DNL Snowflake] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
+
+* [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
+* [Create a dataflow to bring database data to Platform using the [!DNL Flow Service] API](../../collect/database-nosql.md)

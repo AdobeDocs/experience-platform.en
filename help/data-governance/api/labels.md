@@ -38,7 +38,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -63,7 +63,7 @@ A successful response returns a list of custom labels retrieved from the system.
             "category": "Custom",
             "friendlyName": "Banking Information",
             "description": "Data containing banking information for a customer.",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "sandboxName": "{SANDBOX_NAME}",
             "created": 1594396718731,
             "createdClient": "{CLIENT_ID}",
@@ -82,7 +82,7 @@ A successful response returns a list of custom labels retrieved from the system.
             "category": "Custom",
             "friendlyName": "Purchase History Data",
             "description": "Data containing information on past transactions",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "sandboxName": "{SANDBOX_NAME}",
             "created": 1594397415663,
             "createdClient": "{CLIENT_ID}",
@@ -124,7 +124,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom/L2' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -138,7 +138,7 @@ A successful response returns the details of the custom label.
     "category": "Custom",
     "friendlyName": "Purchase History Data",
     "description": "Data containing information on past transactions",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "sandboxName": "{SANDBOX_NAME}",
     "created": 1594397415663,
     "createdClient": "{CLIENT_ID}",
@@ -177,7 +177,7 @@ curl -X PUT \
   'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom/L3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "L3",
@@ -204,7 +204,7 @@ A successful response returns the details of custom label, with HTTP code 200 (O
   "category": "Custom",
   "friendlyName": "Payment Plan",
   "description": "Data containing information on selected payment plans.",
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "sandboxName": "{SANDBOX_NAME}",
   "created": 1529696681413,
   "createdClient": "{CLIENT_ID}",

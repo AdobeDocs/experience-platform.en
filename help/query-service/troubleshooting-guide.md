@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;tr
 solution: Experience Platform
 title: Query Service Troubleshooting Guide
 topic-legacy: troubleshooting
-description: This document contains information on common error codes you encounter and the possible causes.
+description: This document contains common questions and answers related to Query Service. Topics include, exporting data, third-party tools, and PSQL errors.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
 # [!DNL Query Service] troubleshooting guide
@@ -89,15 +89,15 @@ The following steps describe how to display a tabular view of a dataset through 
 - After logging into Experience Platform, select **[!UICONTROL Datasets]** in the left navigation of the UI to navigate to [!UICONTROL Datasets] dashboard.
 - The datasets [!UICONTROL Browse] tab opens. You can use the search bar to refine the available options. Select a dataset from the list displayed.
 
-![A dataset highlighted in the Platform UI.](./images/troubleshooting/dataset-selection.png)
+![The Datasets dashboard in the Platform UI with the search bar and a dataset highlighted.](./images/troubleshooting/dataset-selection.png)
 
-- The [!UICONTROL Datasets activity] screen appears. Select [!UICONTROL Preview dataset] to open a dialog of the XDM schema and tabular view of flattened data from the selected dataset. More details can be found in the [preview a dataset documentation](../catalog/datasets/user-guide.md#preview-a-dataset)
+- The [!UICONTROL Datasets activity] screen appears. Select **[!UICONTROL Preview dataset]** to open a dialog of the XDM schema and tabular view of flattened data from the selected dataset. More details can be found in the [preview a dataset documentation](../catalog/datasets/user-guide.md#preview-a-dataset)
 
-![The XDM schema and tabular view of the flattened data.](./images/troubleshooting/dataset-preview.png)
+![The Dataset activity tab of the Datasets dashboard with Preview dataset highlighted.](./images/troubleshooting/dataset-preview.png)
 
 - Select any field from the schema to display its contents in a flattened column. The name of the column is displayed above its contents on the right side of the page. You should copy this name to use for querying this dataset.
 
-![The column name of a nested dataset highlighted in the UI.](./images/troubleshooting/column-name.png)
+![The XDM schema and tabular view of the flattened data. The column name of a nested dataset is highlighted in the UI.](./images/troubleshooting/column-name.png)
 
 See the documentation for full guidance on [how to work with nested data structures](./best-practices/nested-data-structures.md) using the Query Editor or a third-party client.
 +++
@@ -124,12 +124,12 @@ There can be any number of reasons for a query to be stuck while processing. To 
 - Navigate to [https://www.adobe.com/](https://www.adobe.com/) in your web browser.
 - On the right side of the top navigation bar, select **[!UICONTROL Sign In]**.
 
-![The Adobe website with sign in highlighted.](./images/troubleshooting/adobe-sign-in.png)
+![The Adobe website with Sign in highlighted.](./images/troubleshooting/adobe-sign-in.png)
 
 - Use your Adobe ID and password that is registered with your Adobe license.
 - Select **[!UICONTROL Help & Support]** from the top navigation bar. 
 
-![The top navigation bar dropdown menu with help and support highlighted.](./images/troubleshooting/help-and-support.png)
+![The top navigation bar dropdown menu with Help and support, Enterprise support and Contact us highlighted.](./images/troubleshooting/help-and-support.png)
 
 A dropdown banner appears containing a [!UICONTROL Help and support] section. Select **[!UICONTROL Contact us]** to open the Adobe Customer Care Virtual Assistant, or select **[!UICONTROL Enterprise support]** for dedicated help for large organizations.
 +++
@@ -267,18 +267,32 @@ This feature is currently a work-in-progress. Details will be made available in 
 Query Service provides several built-in SQL helper functions to extend SQL functionality. See the document for a complete list of the [SQL functions supported by Query Service](./sql/spark-sql-functions.md).
 +++
 
+### Are all native [!DNL Spark SQL] functions supported or are users restricted to only the wrapper [!DNL Spark SQL] functions provided by Adobe?
+
++++Answer
+As yet, not all open-source [!DNL Spark SQL] functions have been tested on data lake data. Once tested and confirmed, they will be added to the supported list. Please refer the [list of supported [!DNL Spark SQL] functions](./sql/spark-sql-functions.md) to check for a specific function. 
++++
+
+### Can users define their own user defined functions (UDF) that can be used across other queries?
+
++++Answer
+Due to data security considerations, the custom definition of UDFs is not allowed.
++++
+
 ### What should I do if my scheduled query fails?
 
 +++Answer
 First, check the logs to find out the details of the error. The FAQ section on [finding errors within logs](#error-logs) provides more information on how to do this.
 
 You should also check the documentation for guidance on how to perform [scheduled queries in the UI](./ui/user-guide.md#scheduled-queries) and through [the API](./api/scheduled-queries.md). 
+
+The following is a list of considerations for scheduled queries when using the [!DNL Query Editor]. They do not apply to the [!DNL Query Service] API:<br/>You can only add a schedule to a query that has already been created, saved, and run.<br/>You **cannot** add a schedule to a parameterized query.<br/>Scheduled queries **cannot** contain an anonymous block.<br/>You can only schedule **one** query template using the UI. If you want to add additional schedules to a query template, you will need to use the API. If a schedule has already been added using the API, you will not be able to add additional schedules using the UI.
 +++
 
 ### What does the "Session Limit Reached" error mean?
 
 +++Answer
-"Session Limit Reached" means that the maximum number of Query Service sessions allowed for your organization has been reached. Please connect with your organization’s Adobe Experience Platform administrator.
+"Session Limit Reached" means that the maximum number of Query Service sessions allowed for your organization has been reached. Please connect with your organization's Adobe Experience Platform administrator.
 +++
 
 ### How does the query log handle queries relating to a deleted dataset? 
@@ -461,11 +475,17 @@ WHERE T2.ID IS NULL
 
 +++
 
+### Can I create a dataset using a CTAS query with a double underscore name like those displayed in the UI? For example: `test_table_001`.
+
++++Answer
+No, this is an intentional limitation across Experience Platform that applies to all Adobe services, including Query Service. A name with two underscores is acceptable as a schema and dataset name, but the table name for the dataset can only contain a single underscore. 
++++
+
 ## Exporting data {#exporting-data}
 
 This section provides information on exporting data and limits.
 
-### Is there a way to extract data from Query Service after query processing and save the results in a CSV file?
+### Is there a way to extract data from Query Service after query processing and save the results in a CSV file? {#export-csv}
 
 +++Answer
 Yes. Data can be extracted from Query Service and there is also the option to store the results in CSV format via a SQL command. 
@@ -487,6 +507,26 @@ FROM <table_name>
 No. There is currently no feature available for the extraction of ingested data.
 +++
 
+### Why is the Analytics data connector not returning data?
+
++++Answer
+A common cause for this problem is querying time-series data without a time filter. For example:
+
+```sql
+SELECT * FROM prod_table LIMIT 1;
+```
+
+Should be written as:
+
+```sql
+SELECT * FROM prod_table
+WHERE
+timestamp >= to_timestamp('2022-07-22')
+and timestamp < to_timestamp('2022-07-23');
+```
+
++++
+
 ## Third-party tools {#third-party-tools}
 
 This section includes information on the use of third-party tools such as PSQL and Power BI.
@@ -500,7 +540,14 @@ Yes, you can connect multiple third-party desktop clients to Query Service. See 
 ### Is there a way to connect Query Service once for continuous use with a third-party tool?
 
 +++Answer
-Yes, third-party desktop clients can be connected to Query Service through a one-time setup of non-expiring credentials. Non-expiring credentials can be generated by an authorized user and will receive them in a JSON file downloaded to their local machine. Full [guidance on how to create and download non-expiring credentials](./ui/credentials.md#non-expiring-credentials) can be found in the documentation.
+Yes, third-party desktop clients can be connected to Query Service through a one-time setup of non-expiring credentials. Non-expiring credentials can be generated by an authorized user and received in a JSON file that is automatically downloaded to their local machine. Full [guidance on how to create and download non-expiring credentials](./ui/credentials.md#non-expiring-credentials) can be found in the documentation.
++++
+
+### Why are my non-expiring credentials are not working?
+
++++Answer
+The value for non-expiring credentials are the concatenated arguments from the `technicalAccountID` and the `credential` taken from the configuration JSON file. The password value takes the form: `{{technicalAccountId}:{credential}}`.
+See the documentation for more information on how to [connect to external clients with credentials](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
 +++
 
 ### What kind of third-party SQL editors can I connect to Query Service Editor?

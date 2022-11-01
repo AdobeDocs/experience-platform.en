@@ -40,10 +40,6 @@ To create an identity namespace, follow the instructions in the [identity namesp
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
 
->[!NOTE]
->
->In order to start use custom namespaces with external audiences, you will need to create a support ticket. Please contact your Adobe representative for more details.
-
 ## Create a schema for the segment metadata
 
 After creating an identity namespace, you need to create a new schema for the segment you will create.
@@ -107,7 +103,7 @@ A sample of the external audience payload's metadata can be seen below:
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
         "source": {
             "name": "Sample External Audience"
@@ -214,7 +210,7 @@ A sample of the external audience membership payload can be seen below:
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
         "source": {
             "name": "Sample External Audience Membership"

@@ -64,7 +64,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -102,4 +102,9 @@ A successful response returns the newly created connection, including its unique
 }
 ```
 
-By following this tutorial, you have created a [!DNL Salesforce Marketing Cloud] connection using the [!DNL Flow Service] API, and have obtained the connection's unique ID value. You can use this connection ID in the next tutorial as you learn how to [explore marketing automation systems using the Flow Service API](../../explore/marketing-automation.md).
+## Next steps
+
+By following this tutorial, you have created a [!DNL Salesforce Marketing Cloud] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
+
+* [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
+* [Create a dataflow to bring marketing automation data to Platform using the [!DNL Flow Service] API](../../collect/marketing-automation.md)

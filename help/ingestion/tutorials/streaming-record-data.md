@@ -20,31 +20,9 @@ This tutorial requires a working knowledge of various Adobe Experience Platform 
   - [Schema Registry developer guide](../../xdm/api/getting-started.md): A comprehensive guide that covers each of the available endpoints of the [!DNL Schema Registry] API and how to make calls to them. This includes knowing your `{TENANT_ID}`, which appears in calls throughout this tutorial, as well as knowing how to create schemas, which is used in creating a dataset for ingestion.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
 
-The following sections provide additional information that you will need to know in order to successfully make calls to streaming ingestion APIs.
+### Using Platform APIs
 
-### Reading sample API calls
-
-This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
-
-### Gather values for required headers
-
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
-
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
-
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-- x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE]
->
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
-
-All requests that contain a payload (POST, PUT, PATCH) require an additional header:
-
-- Content-Type: application/json
+For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../landing/api-guide.md).
 
 ## Compose a schema based off of the [!DNL XDM Individual Profile] class
 
@@ -63,7 +41,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "type": "object",
@@ -132,7 +110,7 @@ A successful response returns HTTP status 201 with details of your newly created
         "union"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:xdmType": "object",
     "meta:registryMetadata": {
         "repo:createDate": 1551376506996,
@@ -164,7 +142,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "@type":"xdm:descriptorIdentity",
@@ -205,7 +183,7 @@ A successful response returns HTTP status 201 with information on the newly crea
     "@id": "17aaebfa382ce8fc0a40d3e43870b6470aab894e1c368d16",
     "meta:containerId": "tenant",
     "version": "1",
-    "imsOrg": "{IMS_ORG}"
+    "imsOrg": "{ORG_ID}"
 }
 ```
 
@@ -230,7 +208,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d ' {
     "name": "Dataset name",
@@ -297,8 +275,9 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
-        "datasetId": "{DATASET_ID}"
+        "imsOrgId": "{ORG_ID}",
+        "datasetId": "{DATASET_ID}",
+        "flowId": "{FLOW_ID}",
     },
     "body": {
         "xdmMeta": {
@@ -336,7 +315,7 @@ If you want to include a source name, the following example shows how you would 
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
         "source": {
             "name": "Sample source name"
@@ -396,7 +375,7 @@ You can review the previously ingested record data with the following GET reques
 curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email'\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

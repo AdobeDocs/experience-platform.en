@@ -29,11 +29,11 @@ POST /authoring/destinations
 
 The following request creates a new streaming destination configuration, configured by the parameters provided in the payload. The payload below includes all parameters for streaming destinations accepted by the `/authoring/destinations` endpoint. Note that you do not have to add all parameters on the call and that the template is customizable, according to your API requirements.
 
-```json
+```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -142,13 +142,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`customerDataFields.isRequired` | Boolean | Indicates if this field is required in the destination setup workflow. |
 |`customerDataFields.enum` | String | Renders the custom field as a dropdown menu and lists the options available to the user. |
 |`customerDataFields.pattern` | String | Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field. |
-|`uiAttributes.documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) for your destination. Use `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `https://www.adobe.com/go/destinations-moviestar-en`. |
+|`uiAttributes.documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) for your destination. Use `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `https://www.adobe.com/go/destinations-moviestar-en`. Note that this link works only after Adobe sets your destination live and the documentation is published.|
 |`uiAttributes.category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 |`uiAttributes.connectionType` | String | `Server-to-server` is currently the only available option. |
 |`uiAttributes.frequency` | String | `Streaming` is currently the only available option. |
 |`identityNamespaces.externalId.acceptsAttributes` | Boolean | Indicates if your destination accepts standard profile attributes. Usually, these attributes are highlighted in our partners' documentation. |
 |`identityNamespaces.externalId.acceptsCustomNamespaces` | Boolean | Indicates if customers can set up custom namespaces in your destination. |
-|`identityNamespaces.externalId.allowedAttributesTransformation` | String | _Not shown in example configuration_. Used, for example, when the [!DNL Platform] customer has plain email addresses as an attribute and your platform only accepts hashed emails. This is where you would provide the transformation that needs to be applied (for example, transform the email to lowercase, then hash).   |
+|`identityNamespaces.externalId.transformation` | String | _Not shown in example configuration_. Used, for example, when the [!DNL Platform] customer has plain email addresses as an attribute and your platform only accepts hashed emails. This is where you would provide the transformation that needs to be applied (for example, transform the email to lowercase, then hash).   |
 |`identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Used for cases when your platform accepts [standard identity namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (for example, IDFA), so you can restrict Platform users to only selecting these identity namespaces. <br> When you use `acceptedGlobalNamespaces`, you can use `"requiredTransformation":"sha256(lower($))"` to lowercase and hash email addresses or phone numbers. |
 |`destinationDelivery.authenticationRule` | String | Indicates how [!DNL Platform] customers connect to your destination. Accepted values are `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` if Platform customers log into your system via a username and password, a bearer token, or another method of authentication. For example, you would select this option if you also selected `authType: OAUTH2` or `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> Use `PLATFORM_AUTHENTICATION` if there is a global authentication system between Adobe and your destination and the [!DNL Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must create a credentials object using the [Credentials](./credentials-configuration-api.md) configuration. </li><li>Use `NONE` if no authentication is required to send data to your destination platform. </li></ul> |
 |`destinationDelivery.destinationServerId` | String | The `instanceId` of the [destination server template](./destination-server-api.md) used for this destination. |
@@ -165,7 +165,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`aggregation.bestEffortAggregation.maxUsersPerRequest` | Integer | Experience Platform can aggregate multiple exported profiles in a single HTTP call. Specify the maximum number of profiles that your endpoint should receive in a single HTTP call. Note that this is a best effort aggregation. For example, if you specify the value 100, Platform might send any number of profiles smaller than 100 on a call. <br> If your server does not accept multiple users per request, set this value to 1. |
 |`aggregation.bestEffortAggregation.splitUserById` | Boolean | Use this flag if the call to the destination should be split by identity. Set this flag to `true` if your server only accepts one identity per call, for a given namespace. |
 |`aggregation.configurableAggregation.splitUserById` | Boolean | See parameter in example configuration [here](./destination-configuration.md#example-configuration). Use this flag if the call to the destination should be split by identity. Set this flag to `true` if your server only accepts one identity per call, for a given namespace. |
-|`aggregation.configurableAggregation.maxBatchAgeInSecs` | Integer | <ul><li>*Minimum value: 1800*</li><li>*Maximum value: 3600*</li><li>See parameter in example configuration [here](./destination-configuration.md#example-configuration). Configure a value between the minimum and maximum accepted values. Together with `maxNumEventsInBatch`, this parameter determines how long Experience Platform should wait until sending an API call to your endpoint. <br> For example, if you use the maximum value for both parameters, Experience Platform will wait either 3600 seconds OR until there are 10.000 qualified profiles before making the API call, whichever happens first. </li></ul>|
+|`aggregation.configurableAggregation.maxBatchAgeInSecs` | Integer | <ul><li>*Minimum value: 1800*</li><li>*Maximum value: 3600*</li><li>See parameter in example configuration [here](./destination-configuration.md#example-configuration). Configure a value between the minimum and maximum accepted values. Together with `maxNumEventsInBatch`, this parameter determines how long Experience Platform should wait until sending an API call to your endpoint. <br> For example, if you use the maximum value for both parameters, Experience Platform will wait either 3600 seconds OR until there are 10 thousand qualified profiles before making the API call, whichever happens first. </li></ul>|
 |`aggregation.configurableAggregation.maxNumEventsInBatch` | Integer | <ul><li>*Minimum value: 1000*</li><li>*Maximum value: 10000*</li><li>See parameter in example configuration [here](./destination-configuration.md#example-configuration). Configure a value between the minimum and maximum accepted values. For a description of this parameter, see `maxBatchAgeInSecs` just above.</li></ul>  |
 |`aggregation.configurableAggregation.aggregationKey` | Boolean | See parameter in example configuration [here](./destination-configuration.md#example-configuration). Allows you to aggregate the exported profiles mapped to the destination based on the parameters below: <br> <ul><li>segment ID</li><li> segment status </li><li> identity namespace </li></ul> |
 |`aggregation.configurableAggregation.aggregationKey.includeSegmentId` | Boolean | See parameter in example configuration [here](./destination-configuration.md#example-configuration). Set this to `true` if you want to group profiles exported to your destination by segment ID. |
@@ -194,7 +194,14 @@ POST /authoring/destinations
 
 The following request creates a new [!DNL Amazon S3] file-based destination configuration, configured by the parameters provided in the payload. The payload below includes all parameters for file-based destinations accepted by the `/authoring/destinations` endpoint. Note that you do not have to add all parameters on the call and that the template is customizable, according to your API requirements.
 
-```json
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
 {
         "name": "S3 Destination with CSV Options",
         "description": "S3 Destination with CSV Options",
@@ -446,7 +453,7 @@ The following request will retrieve the list of destination configurations that 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -575,13 +582,13 @@ The following response returns HTTP status 200 with a list of destination config
 |`customerDataFields.isRequired` | Boolean | Indicates if this field is required in the destination setup workflow. |
 |`customerDataFields.enum` | String | Renders the custom field as a dropdown menu and lists the options available to the user. |
 |`customerDataFields.pattern` | String | Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field. |
-|`uiAttributes.documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) for your destination. Use `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `https://www.adobe.com/go/destinations-moviestar-en` |
+|`uiAttributes.documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) for your destination. Use `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `https://www.adobe.com/go/destinations-moviestar-en`. Note that this link works only after Adobe sets your destination live and the documentation is published. |
 |`uiAttributes.category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
 |`uiAttributes.connectionType` | String | `Server-to-server` is currently the only available option. |
 |`uiAttributes.frequency` | String | `Streaming` is currently the only available option. |
 |`identityNamespaces.externalId.acceptsAttributes` | Boolean | Indicates if your destination accepts standard profile attributes. Usually, these attributes are highlighted in our partners' documentation. |
 |`identityNamespaces.externalId.acceptsCustomNamespaces` | Boolean | Indicates if customers can set up custom namespaces in your destination. Read more about [custom namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#manage-namespaces) in Adobe Experience Platform. |
-|`identityNamespaces.externalId.allowedAttributesTransformation` | String | _Not shown in example configuration_. Used, for example, when the [!DNL Platform] customer has plain email addresses as an attribute and your platform only accepts hashed emails. This is where you would provide the transformation that needs to be applied (for example, transform the email to lowercase, then hash).   |
+|`identityNamespaces.externalId.transformation` | String | _Not shown in example configuration_. Used, for example, when the [!DNL Platform] customer has plain email addresses as an attribute and your platform only accepts hashed emails. This is where you would provide the transformation that needs to be applied (for example, transform the email to lowercase, then hash).   |
 |`identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Used for cases when your platform accepts [standard identity namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (for example, IDFA), so you can restrict Platform users to only selecting these identity namespaces. |
 |`destinationDelivery.authenticationRule` | String | Indicates how [!DNL Platform] customers connect to your destination. Accepted values are `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` if Platform customers log into your system via a username and password, a bearer token, or another method of authentication. For example, you would select this option if you also selected `authType: OAUTH2` or `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> Use `PLATFORM_AUTHENTICATION` if there is a global authentication system between Adobe and your destination and the [!DNL Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must create a credentials object using the [Credentials](./authentication-configuration.md) configuration. </li><li>Use `NONE` if no authentication is required to send data to your destination platform. </li></ul> |
 |`destinationDelivery.destinationServerId` | String | The `instanceId` of the [destination server template](./destination-server-api.md) used for this destination. |
@@ -617,7 +624,7 @@ The following request updates an existing destination configuration, configured 
 
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destinations/b0780cb5-2bb7-4409-bf2c-c625ca818588 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -771,7 +778,7 @@ GET /authoring/destinations/{INSTANCE_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/b0780cb5-2bb7-4409-bf2c-c625ca818588 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -930,7 +937,7 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinations/b0780cb5-2bb7-4409-bf2c-c625ca818588 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```

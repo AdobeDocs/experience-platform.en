@@ -30,7 +30,7 @@ In order to make calls to [!DNL Experience Platform] APIs, you must first comple
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox in which the operation will take place:
 
@@ -49,6 +49,7 @@ Now that you understand what headers to use, you are ready to begin making calls
 - [Scheduled queries](scheduled-queries.md)
 - [Runs for scheduled queries](runs-scheduled-queries.md)
 - [Query templates](query-templates.md)
+<!-- - [Alert subscriptions](./alert-subscriptions.md) -->
 
 ## Next steps
 

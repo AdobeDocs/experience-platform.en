@@ -10,7 +10,7 @@ exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
 
 >[!IMPORTANT]
 >
-> This destination is available only to [Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
+> This destination is available only to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 
 The [!DNL Kinesis Data Streams] service by [!DNL Amazon Web Services] allows you to collect and process large streams of data records in real time.
 
@@ -80,6 +80,8 @@ The example below displays the minimum access rights required to successfully ex
 | `kinesis:PutRecord` | An action that writes a single data record into a Kinesis data stream. |
 | `kinesis:PutRecords` | An action that writes multiple data records into a Kinesis data stream in a single call. |
 
+{style="table-layout:auto"}
+
 For more information on controlling access for [!DNL Kinesis] data streams, read the following [[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
 ## Connect to the destination {#connect}
@@ -92,6 +94,15 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authentication information {#authentication-information}
 
+Input the fields below and select **[!UICONTROL Connect to destination]**:
+
+![Image of the UI screen showing completed fields for the Amazon Kinesis authentication details](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
+
+* **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!UICONTROL Region]**: Indicate which [!DNL Amazon Web Services] region to stream data to.
+
+### Fill in destination details {#destination-details}
+
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
 >title="Include Segment Names"
@@ -102,16 +113,7 @@ To connect to this destination, follow the steps described in the [destination c
 >title="Include Segment Timestamps"
 >abstract="Toggle if you want the data export to include the UNIX timestamp when the segments were created and updated, as well as the UNIX timestamp when the segments were mapped to the destination for activation. View the documentation for a data export example with this option selected."
 
-Input the fields below and select **[!UICONTROL Connect to destination]**:
-
-![Image of the UI screen showing completed fields for the Amazon Kinesis authentication details](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
-
-* **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL Region]**: Indicate which [!DNL Amazon Web Services] region to stream data to.
-
-### Destination details {#destination-details}
-
-After establishing the authentication connection to the Amazon Kinesis destination, provide the following information for the destination:
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
 ![Image of the UI screen showing completed fields for the Amazon Kinesis destination details](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
 
@@ -128,6 +130,12 @@ After establishing the authentication connection to the Amazon Kinesis destinati
 >Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
+
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
 ## Activate segments to this destination {#activate}
 
@@ -272,7 +280,7 @@ Below are further examples of exported data, depending on the UI settings you se
 
 ## Limits and retry policy {#limits-retry-policy}
 
-In 95 percent of the time, Experience Platform attempts to offer a throughput latency of less than 10 minutes for successfully sent messages with a rate of less than 10.000 requests per second for each dataflow to an HTTP destination.
+In 95 percent of the time, Experience Platform attempts to offer a throughput latency of less than 10 minutes for successfully sent messages with a rate of less than 10 thousand requests per second for each dataflow to an HTTP destination.
 
 In case of failed requests to your HTTP API destination, Experience Platform stores the failed requests and retries twice to send the requests to your endpoint.
 

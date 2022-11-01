@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;query;query editor;Query Editor;Query editor;
 solution: Experience Platform
-title: Query Service UI Guide
+title: Query Service Credentials Guide
 topic-legacy: guide
 description: Adobe Experience Platform Query Service provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your IMS Organization.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
@@ -76,9 +76,9 @@ The configuration JSON file contains information such as technical account name,
 
 After you have saved your generated credentials, select **[!UICONTROL Close]**. You can now see a list of all your non-expiring credentials.
 
-![The Queries dashboard Credentials tab with the Non-expiring Credentials section expanded.](../images/ui/credentials/list-credentials.png)
+![The Queries dashboard Credentials tab with the Non-expiring Credentials section highlighted.](../images/ui/credentials/list-credentials.png)
 
-You can either edit or delete your non-expiring credentials. To edit a non-expiring credential, select the pencil icon (![](../images/ui/credentials/edit-icon.png)). To delete a non-expiring credential, select the delete icon (![](../images/ui/credentials/delete-icon.png)).
+You can either edit or delete your non-expiring credentials. To edit a non-expiring credential, select the pencil icon (![A pencil icon.](../images/ui/credentials/edit-icon.png)). To delete a non-expiring credential, select the delete icon (![A trash can icon.](../images/ui/credentials/delete-icon.png)).
 
 When editing a non-expiring credential, a modal appears. You can provide the following details to update:
 
@@ -96,13 +96,14 @@ You can use either the expiring or non-expiring credentials to connect with exte
 
 The image indicates the location of each parameter found in the UI except for the password of the non-expiring credentials. While non-expiring credentials are provided by their JSON configuration files, you can view your expiring credentials under the **Credentials** tab in the UI.
 
-![](../images/ui/credentials/expiring-credentials.png)
+![The Queries workspace Credentials tab with the Expiring credentials section highlighted.](../images/ui/credentials/expiring-credentials.png)
 
 The table below outlines the parameters that are typically required to connect to external clients.
 
 >[!NOTE]
 >
 >When connecting to a host using non-expiring credentials, it is still necessary to use all the parameters listed in the [!UICONTROL EXPIRING CREDENTIALS] section except for the password and username.
+>The format for entering your username and password uses colon separated values as seen in this example `username:{your_username}` and `password:{password_string}`.
 
 | Parameter | Description |
 |---|---|

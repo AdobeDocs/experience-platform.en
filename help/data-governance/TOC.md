@@ -9,6 +9,7 @@ feature: Data Governance
 # Adobe Experience Platform Data Governance {#data-governance}
 
 * [Data Governance overview](home.md)
+* [End-to-end guide](./e2e.md)
 * Data usage labels {#labels}
   * [Overview](labels/overview.md)
   * [Labels glossary](labels/reference.md)
