@@ -34,6 +34,7 @@ feature: Queries
   - [Query templates](ui/query-templates.md)
   - [Using Query Service credentials](ui/credentials.md)
   - [Generating datasets from query results](ui/create-datasets.md)
+- [Monitor queries](monitor-queries.md)
 - Query accelerated store{#query-accelerated-store}
   - [Reporting insights data model](query-accelerated-store/reporting-insights-data-model.md)
 - Best practices {#best-practices}
