@@ -28,6 +28,7 @@ feature: Queries
   - [Scheduled queries](api/scheduled-queries.md)
   - [Runs for scheduled queries](api/runs-scheduled-queries.md)
   - [Query templates](api/query-templates.md)
+  - [Alert subscriptions](api/alert-subscriptions)
 - Query Service UI {#ui}
   - [UI overview](ui/overview.md)
   - [Query Editor user guide](ui/user-guide.md)
