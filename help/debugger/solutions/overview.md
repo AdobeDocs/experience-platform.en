@@ -19,11 +19,13 @@ The Adobe Experience Platform Web SDK screen shows information about the Adobe E
 
 The Analytics screen provides information about your [Analytics](https://experienceleague.adobe.com/docs/analytics.html) implementation.
 
-![](images/analytics.jpg)
+![](../images/analytics.jpg)
 
 ## Target {#section-988873ba5ede4317953193bd7ac5474c}
 
 Use the Target screen to view [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html) requests or [mboxTrace](https://experienceleague.adobe.com/docs/target/using/activities/troubleshoot-activities/content-trouble.html#section_256FCF7C14BB435BA2C68049EF0BA99E) response details.
+
+See the guide on [using Debugger for Target implementations](./target.md) for more information.
 
 ## Audience Manager {#section-1d4484f8b46f457f859ba88039a9a585}
 

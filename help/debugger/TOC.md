@@ -12,11 +12,13 @@ feature: Debugger
 * [Install the extension](./install-debugger.md)
 * [Configure the extension](./configure-debugger.md)
 * [Summary tab](./summary.md)
-* [Solutions tab](./solutions.md)
+* Solutions tab {#solutions}
+  * [Overview](./solutions/overview.md)
+  * [Adobe Target](./solutions/target.md)
 * [Logs tab](./logs.md)
 * [Network tab](./network.md)
 * [Events tab](./events.md)
-* Auditor {#auditor}
+* Auditor tab {#auditor}
   * [Overview](./auditor/overview.md)
   * [Tag consistency tests](./auditor/tag-consistency.md)
   * [Tag presence tests](./auditor/tag-presence.md)
