@@ -94,7 +94,7 @@ See the Mobile SDK documentation for [configuring the Consent mobile extension](
 
 You can ingest XDM-compliant consent data from a CSV file by using batch ingestion. This can be useful if you have a backlog of previously collected consent data that has yet to be integrated into your customer profiles.
 
-Follow the tutorial on [mapping a CSV file to XDM](../../../../ingestion/tutorials/map-a-csv-file.md) to learn how to convert your data fields to XDM and ingest them into Platform. When selecting the [!UICONTROL Destination] for the mapping, ensure that you select the **[!UICONTROL Use existing dataset]** option and choose the [!DNL Profile]-enabled consent dataset you created earlier.
+Follow the tutorial on [mapping a CSV file to XDM](../../../../ingestion/tutorials/map-csv/overview.md) to learn how to convert your data fields to XDM and ingest them into Platform. When selecting the [!UICONTROL Destination] for the mapping, ensure that you select the **[!UICONTROL Use existing dataset]** option and choose the [!DNL Profile]-enabled consent dataset you created earlier.
 
 ## Test your implementation {#test-implementation}
 
