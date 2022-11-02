@@ -10,7 +10,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 
 ## Contact {#contact}
 
-Read the [XDM Business Person Details schema field group](../../../../xdm/field-groups/profile/business-person-details.md) and [XDM Business Person Components schema field group](../../../../xdm/field-groups/profile/business-person-components.md) guides for more information on XDM field groups.
+Read the [XDM Individual Profile overview](../../../../xdm/classes/individual-profile.md) for more information on the XDM class. For more information on the XDM field groups, read the [XDM Business Person Details schema field group](../../../../xdm/field-groups/profile/business-person-details.md) guide and [XDM Business Person Components schema field group](../../../../xdm/field-groups/profile/business-person-components.md) guide.
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
@@ -70,7 +70,7 @@ Read the [XDM Business Person Details schema field group](../../../../xdm/field-
 
 ## Lead {#lead}
 
-Read the [XDM Business Person Details overview schema field group](../../../../xdm/field-groups/profile/business-person-details.md) and [XDM Business Person Components schema field group](../../../../xdm/field-groups/profile/business-person-components.md) guides for more information on XDM field groups.
+Read the [XDM Individual Profile overview](../../../../xdm/classes/individual-profile.md) for more information on the XDM class. For more information on the XDM field groups, read the [XDM Business Person Details schema field group](../../../../xdm/field-groups/profile/business-person-details.md) guide and [XDM Business Person Components schema field group](../../../../xdm/field-groups/profile/business-person-components.md) guide.
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |

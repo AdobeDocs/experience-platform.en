@@ -353,7 +353,7 @@ Read the [XDM Business Opportunity Person Relation overview](../../../../xdm/cla
 
 ## Persons {#persons}
 
-Read the [XDM Business Person Details schema field group](../../../../xdm/field-groups/profile/business-person-details.md) guide and [XDM Business Person Components schema field group](../../../../xdm/field-groups/profile/business-person-components.md) guide for more information on the XDM field groups.
+Read the [XDM Individual Profile overview](../../../../xdm/classes/individual-profile.md) for more information on the XDM class. For more information on the XDM field groups, read the [XDM Business Person Details schema field group](../../../../xdm/field-groups/profile/business-person-details.md) guide and [XDM Business Person Components schema field group](../../../../xdm/field-groups/profile/business-person-components.md) guide.
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
