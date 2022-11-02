@@ -119,11 +119,6 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
 ### Export incremental files {#export-incremental-files}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_datasets_exportoptions"
->title="File export options for datasets"
->abstract="Select **Export incremental files** to export only the data which was added to the dataset since the last export. <br> The first incremental file export includes all the data in the dataset, acting as a backfill. Future incremental files include only the data which was added to the dataset since the first export."
-
 Select **[!UICONTROL Export incremental files]** to trigger an export where the first file is a full snapshot of all profile qualifications for the selected segment, and subsequent files are incremental profile qualifications since the previous export.
 
 >[!IMPORTANT]
