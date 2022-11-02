@@ -1,13 +1,13 @@
 ---
 title: Pega Profile Connector
-description: Use the Pega Profile Connector for S3 in Adobe Experience Platform to export full and/or incremental profile data to Amazon S3 cloud storage. In Pega Customer Decision Hub, data jobs can be scheduled in Customer Profile Designer to import profile data periodically from Amazon S3 storage. 
+description: Use the Pega Profile Connector for S3 in Adobe Experience Platform to export full or incremental, or both, profile data to Amazon S3 cloud storage. In Pega Customer Decision Hub, data jobs can be scheduled in Customer Profile Designer to import profile data periodically from Amazon S3 storage. 
 ---
 
 # Pega Profile Connector
 
 ## Overview {#overview}
 
-Use the [!DNL Pega Profile Connector] in Adobe Experience Platform to create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export profile data to CSV files from Adobe Experience Platform into your own S3 buckets. In [!DNL Pega Customer Decision Hub], data jobs can be scheduled to import this profile data from S3 storage to update the Pega Customer Decision Hub profile. This connector helps setup initial export of profile data and also helps sync up new profiles periodically into Pega Customer Decision Hub.  Having up-to-date data in Customer Decision Hub provides a better and updated view of your customer data for Next Best Action decisioning.
+Use the [!DNL Pega Profile Connector] in Adobe Experience Platform to create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export profile data to CSV files from Adobe Experience Platform into your own S3 buckets. In [!DNL Pega Customer Decision Hub], you can schedule data jobs to import this profile data from S3 storage to update the Pega Customer Decision Hub profile. This connector helps setup initial export of profile data and also helps sync up new profiles periodically into Pega Customer Decision Hub.  Having up-to-date data in Customer Decision Hub provides a better and updated view of your customer base for next-best-action decisioning.
 
 >[!IMPORTANT]
 >
@@ -23,7 +23,7 @@ A marketer wants to initially setup Pega Customer Decision Hub with profile data
 
 ### Use case 2
 
-A marketer wants up-to-date profile data from Adobe Experience Platform available in Pega Customer Decision Hub that enhances the Pega Customer Decision Hub profiles on an ongoing basis.
+A marketer wants up-to-date profile data from Adobe Experience Platform available in Pega Customer Decision Hub that enhances the Pega insights around customer profiles on an ongoiung basis.
 
 ## Prerequisites {#prerequisites}
 
@@ -116,10 +116,10 @@ See [Activate audience data to batch profile export destinations](../../ui/activ
 
 For [!DNL Pega Profile Connector] destinations, [!DNL Platform] creates a `.csv` file in Amazon S3 storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
 
-A successful import of profile data from S3 to Pega Customer Decision Hub would insert data in the Pega Customer profile datastore. The imported Customer profile data can be validated in Pega Customer Profile Designer , as shown below.
+A successful import of profile data from S3 inserts data in the Pega Customer profile datastore. The imported Customer profile data can be validated in Pega Customer Profile Designer , as shown in the following figure.
 ![Image of the UI screen where you can validate Adobe profile data in Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
-In Pega Customer Decision Hub, Data Administrators can configure data jobs in Customer Profile Designer to import profile data periodically from S3 as shown below.
+In Pega Customer Decision Hub, Data Administrators can configure data jobs in Customer Profile Designer to import profile data periodically from S3 as shown in the following figure.
 ![Image of the UI screen to configure data jobs in Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
 
 
