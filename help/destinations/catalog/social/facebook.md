@@ -159,7 +159,6 @@ When you are finished providing details for your destination connection, select 
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Origin of audience"
 >abstract="Choose how the customer data in the segment was originally collected. The data will be displayed in Facebook when a user is targeted by the segment"
->additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"

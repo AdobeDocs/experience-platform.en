@@ -1,7 +1,13 @@
 source,dest
 https://experienceleague.adobe.com/docs/experience-platform/debugger/solutions.html,https://experienceleague.adobe.com/docs/experience-platform/debugger/solutions/overview.html
+https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/map-a-csv-file.html,https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/map-csv/existing-schema.html
+https://experienceleague.adobe.com/docs/experience-platform/profile/apply-ttl.html,https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html
+https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/packages.html,https://experienceleague.adobe.com/docs/experience-platform/query/packages.html
+https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/ttl.html,https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/dataset-expiration.html
+https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/ttl.html,https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html
+https://experienceleague.adobe.com/docs/experience-platform/tags/admin/manage-permissions.html,https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html
 https://experienceleague.adobe.com/docs/experience-platform/query/derived-attributes.html,https://experienceleague.adobe.com/docs/experience-platform/query/derived-attributes/overview.html
-https://experienceleague.adobe.com/docs/experience-platform/collection/(*),https://experienceleague.adobe.com/docs/experience-platform/rtcdp-connections/
+https://experienceleague.adobe.com/docs/experience-platform/rtcdp-connections/(*),https://experienceleague.adobe.com/docs/experience-platform/collection/
 https://experienceleague.adobe.com/docs/experience-platform/query/sample-queries/adobe-target.html, https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/activity-analysis-with-adobe-target.html
 https://experienceleague.adobe.com/docs/experience-platform/catalog/data-protection.html,https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/encryption.html
 https://experienceleague.adobe.com/docs/experience-platform/privacy/data-hygiene-api.html,https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/overview.html

@@ -9,10 +9,6 @@ exl-id: 561bf948-fc92-4401-8631-e2a408667507
 ---
 # Create an [!DNL Azure Data Explorer] source connection in the UI
 
->[!NOTE]
->
-> The [!DNL Azure Data Explorer] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Azure Data Explorer] (hereinafter referred to as "[!DNL Data Explorer]") source connector using the [!DNL Platform] user interface.
 
 ## Getting started

@@ -2,13 +2,17 @@
 audience: user
 user-guide-title: Adobe Experience Platform Query Service Help
 breadcrumb-title: Query Service Guide
-user-guide-description: Use standard SQL to query data in Platform Data Lake.
+user-guide-description: Use standard SQL to query data within the data lake in Experience Platform.
 feature: Queries
 ---
 
 # Adobe Experience Platform Query Service {#query}
 
 - [Query Service overview](home.md)
+- [Query Service packaging](packages.md)
+- [Query Service guardrails](guardrails.md)
+- Data Distiller {#data-distiller}
+  - [Licence usage](data-distiller/licence-usage.md)
 - Get started {#get-started}
   - [Prerequisites](get-started/prerequisites.md)
 - Use cases {#use-cases}
@@ -24,12 +28,16 @@ feature: Queries
   - [Scheduled queries](api/scheduled-queries.md)
   - [Runs for scheduled queries](api/runs-scheduled-queries.md)
   - [Query templates](api/query-templates.md)
+  - [Alert subscriptions](api/alert-subscriptions.md)
 - Query Service UI {#ui}
   - [UI overview](ui/overview.md)
   - [Query Editor user guide](ui/user-guide.md)
   - [Query templates](ui/query-templates.md)
   - [Using Query Service credentials](ui/credentials.md)
   - [Generating datasets from query results](ui/create-datasets.md)
+- [Monitor queries](monitor-queries.md)
+- Query accelerated store{#query-accelerated-store}
+  - [Reporting insights data model](query-accelerated-store/reporting-insights-data-model.md)
 - Best practices {#best-practices}
   - [General guidance for query execution](best-practices/writing-queries.md)
   - [Guidance for data asset organization](./best-practices/organize-data-assets.md)
@@ -51,11 +59,13 @@ feature: Queries
   - [Spark SQL functions](sql/spark-sql-functions.md)
   - [Metadata commands](sql/metadata.md)
   - [Prepared statements](sql/prepared-statements.md)
+  - [Dataset samples](sql/dataset-samples.md)
 - Connect clients to Query Service {#clients}
   - [Client connections overview](clients/overview.md)
   - [SSL modes](./clients/ssl-modes.md)
   - [Aqua Data Studio](clients/aqua-data-studio.md)
-  - [Db Visualizer](./clients/dbvisulaizer.md)
+  - [DbVisualizer](./clients/dbvisulaizer.md)
+  - [Jupyter Notebook](clients//jupyter-notebook.md)
   - [Looker](clients/looker.md)
   - [Postico](clients/postico.md)
   - [Power BI](clients/power-bi.md)

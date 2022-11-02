@@ -31,9 +31,13 @@ To learn more about the different mapping functions, please read the [mapping fu
 
 ### Calculated fields
 
-Calculated fields allow for values to be created based on the attributes in the input schema. These values can then be assigned to attributes in the target schema and be provided a name and description to allow for easier reference.
+Calculated fields allow for values to be created based on the attributes in the input schema. These values can then be assigned to attributes in the target schema and be provided a name and description to allow for easier reference. Calculated fields have a maximum length of 4096 characters.
 
-To learn more about calculated fields, please read the [calculated fields guide guide](./functions.md#calculated-fields).
+To learn more about calculated fields, please read the [calculated fields guide](./functions.md#calculated-fields).
+
+### Escape special characters
+
+You can escape special characters in a field by using `${...}`. However, JSON files that contain fields with a period (`.`) are not supported by this mechanism. When interacting with hierarchies, if a child attribute has a period (`.`), you must use a backslash (`\`) to escape special characters. For example, `address` is an object that contains the attribute `street.name`, this can then be referred to as `address.street\.name` instead of `address.street.name`.
 
 ## Mapping set
 

@@ -2,13 +2,17 @@
 audience: user
 user-guide-title: Adobe Experience Platform Release Notes
 breadcrumb-title: Platform Release Notes
-user-guide-description: Monthly release notes for Adobe Experience Platform.
+user-guide-description: Find monthly release notes for Adobe Experience Platform.
 ---
 
 # Adobe Experience Platform release notes {#release-notes}
 
 * [Current Platform Release Notes](latest/latest.md)
 * 2022 {#2022}
+  * [October 2022](2022/october-2022.md)
+  * [September 2022](2022/september-2022.md)
+  * [August 2022](2022/august-2022.md)
+  * [July 2022](2022/july-2022.md)
   * [June 2022](2022/june-2022.md)
   * [May 2022](2022/may-2022.md)
   * [April 2022](2022/april-2022.md)

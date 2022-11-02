@@ -31,7 +31,7 @@ To understand the difference between connections and extensions, see [Connection
 * [Pinterest Customer List connection](pinterest.md)
 * [(Beta) Snapchat Ads connection](snap-inc.md)
 * [The Trade Desk connection](tradedesk.md)
-* [The Trade Desk CRM connection](tradedesk-emails.md)
+* [(Beta) The Trade Desk CRM connection](tradedesk-emails.md)
 * [Yahoo/Verizon DataX](datax.md)
 
 ### Extensions

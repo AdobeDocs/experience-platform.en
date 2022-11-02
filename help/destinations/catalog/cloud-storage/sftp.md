@@ -6,13 +6,30 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 ---
 # SFTP connection
 
+## Destination changelog {#changelog}
+
+>[!IMPORTANT]
+>
+>With the beta release of the export datasets functionality and the improved file export functionality, you may now be seeing two [!DNL SFTP] cards in the destinations catalog.
+>* If you are already exporting files to the **[!UICONTROL SFTP]** destination: Please create new dataflows to the new **[!UICONTROL SFTP beta]** destination.
+>* If you have not yet created any dataflows to the **[!UICONTROL SFTP]** destination, please use the new **[!UICONTROL SFTP beta]** card to export files to **[!UICONTROL SFTP]**.
+
+![Image of the two SFTP destination cards in a side-by-side view.](/help/destinations/assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
+
+Improvements in the new [!DNL SFTP] destination card include:
+
+* [Dataset export support](/help/destinations/ui/export-datasets.md).
+* Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+* Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+
 ## Overview {#overview}
 
 Create a live outbound connection to your SFTP server to periodically export delimited data files from Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
-> While Experience Platform supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL Azure Blob].
+> While Experience Platform supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL SFTP].
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -54,10 +71,9 @@ If you select the **[!UICONTROL Basic authentication]** type to connect to your 
 * **[!UICONTROL Host]**: The address of your SFTP storage location;
 * **[!UICONTROL Username]**: The username to log into your SFTP storage location;
 * **[!UICONTROL Password]**: The password to log into your SFTP storage location.
-* **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64] encoded string.
-  * Example: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. See below an example of a correctly formatted PGP key, with the middle part shortened for brevity.
+* **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64-encoded] string. View an example of a correctly formatted, base64-encoded key in the documentation link below. The middle part is shortened for brevity.
 
-    ![PGP key](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+![Image showing an example of a correctly formatted and base64-encrypted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 If you select the **[!UICONTROL SFTP with SSH key]** authentication type to connect to your SFTP location:
@@ -90,6 +106,10 @@ After establishing the authentication connection to the SFTP location, provide t
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
+
+## (Beta) Export datasets {#export-datasets}
+
+This destination supports dataset exports. For complete information on how to set up dataset exports, read the [export datasets tutorial](/help/destinations/ui/export-datasets.md).
 
 ## Exported data {#exported-data}
 

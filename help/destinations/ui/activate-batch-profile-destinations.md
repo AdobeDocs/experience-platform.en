@@ -10,6 +10,8 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>
+>Some customers participating in the improved file export functionality beta program are seeing the new **[!UICONTROL Mapping]** step as part of their activation workflow to the [new beta cloud storage destinations](/help/release-notes/2022/october-2022.md#destinations). Please also note the [known limitations](#known-limitations) as part of the release.
 
 ## Overview {#overview}
 
@@ -48,7 +50,6 @@ Use the check boxes to the left of the segment names to select the segments that
 >id="platform_destinations_activate_schedule"
 >title="Schedule"
 >abstract="Use the pencil icon to set the file export type (full files or incremental files) and the export frequency."
->additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Learn more in documentation"
 
 [!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations in the form of [!DNL CSV] files. In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
 
@@ -152,13 +153,13 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 >title="Configure file name"
 >abstract="For file-based destinations, a unique file name is generated per segment. Use the file name editor to create and edit a unique file name or keep the default name."
 
-The default file names consist of destination name, segment ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files.
+For most destinations, the default file names consist of destination name, segment ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files. Note that some destination developers might select to have different default file name append options shown for their destinations.
 
 Select the pencil icon to open a modal window and edit the file names. File names are limited to 255 characters.
 
 >[!NOTE]
 >
->The image below shows how file names can be edited for Amazon S3 destinations but the process is identical for all batch destinations (for example SFTP or Azure Blob Storage).
+>The image below shows how file names can be edited for [!DNL Amazon S3] destinations but the process is identical for all batch destinations (for example SFTP, [!DNL Azure Blob Storage], or [!DNL Google Cloud Storage]).
 
 ![Image highlighting the pencil icon, which is used to configure file names.](../assets/ui/activate-batch-profile-destinations/configure-name.png)
 
@@ -168,9 +169,17 @@ In the file name editor, you can select different components to add to the file 
 
 The destination name and segment ID cannot be removed from file names. In addition to these, you can add the following:
 
-* **[!UICONTROL Segment name]**: You can append the segment name to the file name.
-* **[!UICONTROL Date and time]**: Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export.
-* **[!UICONTROL Custom text]**: Add custom text to the file names.
+|File name option | Description |
+|---------|----------|
+| **[!UICONTROL Segment name]** | The name of the exported segment. |
+| **[!UICONTROL Date and time]** | Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export. |
+| **[!UICONTROL Custom text]** | Any custom text that you want to add to the file names. |
+| **[!UICONTROL Destination ID]** | The ID of the destination dataflow you use to export the segment. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
+| **[!UICONTROL Destination name]** | The name of the destination dataflow you use to export the segment. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
+| **[!UICONTROL Organization name]** | Your organization name within Experience Platform. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
+| **[!UICONTROL Sandbox name]** | The ID of the sandbox you use to export the segment. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
+
+{style="table-layout:auto"}
 
 Select **[!UICONTROL Apply changes]** to confirm your selection.
 
@@ -183,7 +192,6 @@ Once you have finished configuring all your segments, select **[!UICONTROL Next]
 ## Select profile attributes {#select-attributes}
 
 For profile-based destinations, you must select the profile attributes that you want to send to the target destination.
-
 
 1. In the **[!UICONTROL Select attributes]** page, select **[!UICONTROL Add new field]**.
     
@@ -203,6 +211,12 @@ For profile-based destinations, you must select the profile attributes that you 
 >
 > Adobe Experience Platform prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
+>[!IMPORTANT] 
+>
+>Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.status` to your file exports. Instead, you need to manually paste the value `xdm: segmentMembership.status` into the schema field, as shown below.
+>
+>![Screen recording showing the segment membership workaround in the mapping step of the activation workflow.](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+
 File exports will vary in the following ways, depending on whether `segmentMembership.status` is selected:
 * If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
 * If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
@@ -215,7 +229,6 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 >id="platform_destinations_activate_mandatorykey"
 >title="About mandatory attributes"
 >abstract="Select the XDM schema attributes that all exported profiles should include. Profiles without the mandatory key are not exported to the destination. Not selecting a mandatory key exports all qualified profiles regardless of their attributes."
->additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Learn more in documentation"
 
 A mandatory attribute is a user-enabled checkbox which ensures all profile records contain the selected attribute. For example: all exported profiles contain an email address.​
 
@@ -231,7 +244,6 @@ It is recommended that one of the attributes is a [unique identifier](../../dest
 >id="platform_destinations_activate_deduplicationkey"
 >title="About deduplication keys"
 >abstract="Eliminate multiple records of the same profile in the export files by selecting a deduplication key. Select a single namespace or up to two XDM schema attributes as a deduplication key. Not selecting a deduplication key may lead to duplicate profile entries in the export files."
->additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Learn more in documentation"
 
 A deduplication key is a user-defined primary key which determines the identity by which users want their profiles to be deduplicated.​
 
@@ -372,6 +384,75 @@ Adobe recommends selecting an identity namespace such as a [!DNL CRM ID] or emai
 >
 > For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing action, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
+## (Beta) Mapping {#mapping}
+
+>[!IMPORTANT] 
+> 
+>Select beta customers can view an improved **[!UICONTROL Mapping]** step which replaces the [Select profile attributes](#select-attributes) step described further above. This new **[!UICONTROL Mapping]** step allows you to edit the headers of exported files to any custom names that you desire.
+> 
+> The functionality and documentation are subject to change. Contact your Adobe representative or Customer Care if you would like access to this beta program.
+
+In this step, you must select the profile attributes that you want to add to the files exported to the target destination. To select profile attributes and identities for export: 
+
+1. In the **[!UICONTROL Mapping]** page, select **[!UICONTROL Add new field]**.
+    
+    ![Add new field control highlighted in the mapping workflow.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
+
+1. Select the arrow to the right of the **[!UICONTROL Source field]** entry.
+
+    ![Select source field control highlighted in the mapping workflow.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
+
+1. In the **[!UICONTROL Select source field]** page, select the profile attributes and identities that you want to include in the exported files to the destination, then choose **[!UICONTROL Select]**.
+
+    >[!TIP] 
+    > 
+    >You can use the search field to narrow down your selection, as shown in the image below.
+
+    ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
+
+
+1. The field you selected for export now appears in the mapping view. If you wish, you can edit the name of the header in the exported file. To do this, select the icon on the target field.
+
+    ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
+
+1. In the **[!UICONTROL Select target field]** page, type in the desired name of the header in your exported file, then choose **[!UICONTROL Select]**.
+
+    ![Modal window showing a typed-in friendly name for a header.](../assets/ui/activate-batch-profile-destinations/select-target-field-mapping.png)
+
+1. The field you selected for export now appears in the mapping view and shows the edited header in the exported file.
+
+    ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. (Optional) You can select your exported field to be a [mandatory key](#mandatory-keys) or a [deduplication key](#deduplication-keys).
+
+    ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-mandatory-deduplication-key.png)
+
+1. To add more fields for exporting, repeat the steps above.
+
+### Known limitations {#known-limitations}
+
+The new **[!UICONTROL Mapping]** page has the following known limitations:
+
+#### Segment membership attribute cannot be selected through the mapping workflow
+
+Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.status` to your file exports. Instead, you need to manually paste the value `xdm: segmentMembership.status` into the schema field, as shown below.
+
+![Screen recording showing the segment membership workaround in the mapping step of the activation workflow.](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
+
+File exports will vary in the following ways, depending on whether `segmentMembership.status` is selected:
+* If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
+* If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
+
+#### Identity namespaces cannot currently be selected for exports
+
+Selecting identity namespaces for export, as shown in the image below, is currently not supported. Selecting any identity namespaces for export will result in an error in the **[!UICONTROL Review]** step.
+
+![Unsupported mapping showing identity exports](/help/destinations/assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+
+As a temporary workaround if you need to add identity namespaces to your exported files during the beta, you can either:
+* Use the legacy cloud storage destinations for the dataflows where you want to include identity namespaces in the exports
+* Upload identities as attributes into Experience Platform, to then export them to your cloud storage destinations.
+
 ## Review {#review}
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
@@ -388,11 +469,10 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## Verify segment activation {#verify}
 
-
-For email marketing destinations and cloud storage destinations, Adobe Experience Platform creates a `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The default file format is:
+For email marketing destinations and cloud storage destinations, Adobe Experience Platform creates a `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location according to the schedule you set in the workflow. The default file format is:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
-The files you would receive on three consecutive days could look like this:
+For example, if you selected a daily export frequency, the files you would receive on three consecutive days could look like this:
 
 ```console
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
