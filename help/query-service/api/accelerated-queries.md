@@ -72,7 +72,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 
 | Property | Description |
 |---|---|
-| `dbName`  | The value for `dbName` should take the format of `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. The database provided must exist within the accelerated store or the request will result in an error. |
+| `dbName`  | The name of the database you are making an accelerated query to. The value for `dbName` should take the format of `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. The database provided must exist within the accelerated store or the request will result in an error. |
 | `sql`  | An SQL statement string. The maximum size allowed is 1000000 characters.  |
 | `templateId` | The unique identifier of a query created and saved as a template when a POST request is made to the `/templates` endpoint. |
 | `name` | An optional human-friendly, descriptive name for the accelerated query.  |
