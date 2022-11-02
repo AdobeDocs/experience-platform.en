@@ -42,7 +42,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
  -H 'Accept: application/json' \
  -d '
  {
-   "dbName": "prod:qsaccel",
+   "dbName": {SANDBOX_NAME:ACCELERATED_STORE_DATABASE.ACCELERATED_STORE_SCHEMA},
    "sql": "SELECT * FROM accounts;",
    "name": "Sample Accelerated Query",
    "description": "A sample of an accelerated query."
@@ -62,7 +62,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
  -H 'Accept: application/json' \
  -d '
  {
-   "dbName": "prod:qsaccel",
+   "dbName": {SANDBOX_NAME:ACCELERATED_STORE_DATABASE.ACCELERATED_STORE_SCHEMA},
    "templateId": "5d8228e7-4200-e3de-11e9-7f27416c5f0d",
    "name": "Sample Accelerated Query",
    "description": "A sample of an accelerated query."
@@ -72,7 +72,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 
 | Property | Description |
 |---|---|
-| `dbName`  | The name of the database you are making an accelerated query to. The `dbName` is a combination of the sandbox name and the database name with a `qsaccel` suffix. This required value should be in the format of `[sandbox-name]:[dbString]qsaccel`. The sandbox name is not necessary if you are using a production sandbox. |
+| `dbName`  | The `{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}` provided should exist within the accelerated store. Otherwise, the request will result in an error. |
 | `sql`  | An SQL statement string. The maximum size allowed is 1000000 characters.  |
 | `templateId` | The unique identifier of a query created and saved as a template when a POST request is made to the `/templates` endpoint. |
 | `name` | An optional human-friendly, descriptive name for the accelerated query.  |
@@ -187,7 +187,7 @@ A successful response returns HTTP status 200 with the ad hoc schema created by 
         ...
     ],
   "request": {
-    "dbName": "prod:qsaccel",
+    "dbName": {SANDBOX_NAME:ACCELERATED_STORE_DATABASE.ACCELERATED_STORE_SCHEMA},
     "sql": "SELECT * FROM accounts;",
     "name": "Sample Accelerated Query",
     "description": "A sample of an accelerated query."
