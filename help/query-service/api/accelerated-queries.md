@@ -72,7 +72,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 
 | Property | Description |
 |---|---|
-| `dbName`  | The `{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}` provided should exist within the accelerated store. Otherwise, the request will result in an error. |
+| `dbName`  | The value for `dbName` should take the format of `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. The database provided must exist within the accelerated store or the request will result in an error. |
 | `sql`  | An SQL statement string. The maximum size allowed is 1000000 characters.  |
 | `templateId` | The unique identifier of a query created and saved as a template when a POST request is made to the `/templates` endpoint. |
 | `name` | An optional human-friendly, descriptive name for the accelerated query.  |
@@ -187,7 +187,7 @@ A successful response returns HTTP status 200 with the ad hoc schema created by 
         ...
     ],
   "request": {
-    "dbName": {SANDBOX_NAME:ACCELERATED_STORE_DATABASE.ACCELERATED_STORE_SCHEMA},
+    "dbName": "acmesbox1:acmeacceldb:accmeaggschema",
     "sql": "SELECT * FROM accounts;",
     "name": "Sample Accelerated Query",
     "description": "A sample of an accelerated query."
