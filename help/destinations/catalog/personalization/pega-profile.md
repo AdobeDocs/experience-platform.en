@@ -23,7 +23,7 @@ A marketer wants to initially setup Pega Customer Decision Hub with profile data
 
 ### Use case 2
 
-A marketer wants up-to-date profile data from Adobe Experience Platform available in Pega Customer Decision Hub that enhances the Pega insights around customer profiles on an ongoiung basis.
+A marketer wants up-to-date profile data from Adobe Experience Platform available in Pega Customer Decision Hub that enhances the Pega insights around customer profiles on an ongoing basis.
 
 ## Prerequisites {#prerequisites}
 
