@@ -29,12 +29,14 @@ feature: Queries
   - [Runs for scheduled queries](api/runs-scheduled-queries.md)
   - [Query templates](api/query-templates.md)
   - [Accelerated queries](api/accelerated-queries.md)
+  - [Alert subscriptions](api/alert-subscriptions.md)
 - Query Service UI {#ui}
   - [UI overview](ui/overview.md)
   - [Query Editor user guide](ui/user-guide.md)
   - [Query templates](ui/query-templates.md)
   - [Using Query Service credentials](ui/credentials.md)
   - [Generating datasets from query results](ui/create-datasets.md)
+- [Monitor queries](monitor-queries.md)
 - Query accelerated store{#query-accelerated-store}
   - [Reporting insights data model](query-accelerated-store/reporting-insights-data-model.md)
 - Best practices {#best-practices}

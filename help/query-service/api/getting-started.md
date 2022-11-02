@@ -50,7 +50,7 @@ Now that you understand what headers to use, you are ready to begin making calls
 - [Runs for scheduled queries](runs-scheduled-queries.md)
 - [Query templates](query-templates.md)
 - [Accelerated queries](./accelerated-queries.md)
-<!-- - [Alert subscriptions](./alert-subscriptions.md) -->
+- [Alert subscriptions](./alert-subscriptions.md)
 
 ## Next steps
 
