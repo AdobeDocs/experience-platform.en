@@ -1,6 +1,6 @@
 ---
-Title: Pega Profile Connector
-Description: Use the Pega Profile Connector for S3 in Adobe Experience Platform to export full and/or incremental profile data to Amazon S3 cloud storage. In Pega Customer Decision Hub, data jobs can be scheduled in Customer Profile Designer to import profile data periodically from Amazon S3 storage. 
+title: Pega Profile Connector
+description: Use the Pega Profile Connector for S3 in Adobe Experience Platform to export full and/or incremental profile data to Amazon S3 cloud storage. In Pega Customer Decision Hub, data jobs can be scheduled in Customer Profile Designer to import profile data periodically from Amazon S3 storage. 
 ---
 
 # Pega Profile Connector
@@ -100,7 +100,7 @@ To configure details for the destination, fill in the required fields and select
 
 ### Enable alerts {#enable-alerts}
 
-You can enable alerts to receive notifications on the status of the file exports to your destination. Select an alert from the list to subscribe to receive notifications on the status of your file exports. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
