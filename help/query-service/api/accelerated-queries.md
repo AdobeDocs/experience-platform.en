@@ -1,8 +1,8 @@
 ---
-title: Accelerated Queries API Endpoint
+title: Accelerated Queries Endpoint
 description: Learn how to access to query accelerated store in a stateless manner to quickly return results based on aggregated data. This document provides a sample HTTP request and response for the Query Service accelerated-queries endpoint.
 ---
-# Accelerated queries API endpoint
+# Accelerated queries endpoint
 
 As part of the Data Distiller SKU, the [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/) allows you to make stateless queries to the accelerated store. The returned results are based on aggregated data. The decreased latency of results allows for a more interactive exchange of information. The accelerated queries APIs are also used to power [user-defined dashboards](../../dashboards/user-defined-dashboards.md).
 
@@ -14,7 +14,7 @@ The Data Distiller SKU is required to use the query accelerated store. Please se
 
 The following sections detail the API calls necessary to access the query accelerated store in a stateless manner through the Query Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
-## Run an accelerated query
+## Run an accelerated query {run-accelerated-query}
 
 Make a POST request to the `/accelerated-queries` endpoint to run an accelerated query. The query is either contained directly in the request payload or referenced with a template ID. 
 
