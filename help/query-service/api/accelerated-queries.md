@@ -14,7 +14,7 @@ The Data Distiller SKU is required to use the query accelerated store. Please se
 
 The following sections detail the API calls necessary to access the query accelerated store in a stateless manner through the Query Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
-## Run an accelerated query {run-accelerated-query}
+## Run an accelerated query {#run-accelerated-query}
 
 Make a POST request to the `/accelerated-queries` endpoint to run an accelerated query. The query is either contained directly in the request payload or referenced with a template ID. 
 
