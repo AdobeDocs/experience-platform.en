@@ -1,6 +1,6 @@
 ---
 title: Accelerated Queries API Endpoint
-description: Learn how to access to query accelerated store in a stateless manner to quickly return results based on aggregated data. This document provides sample HTTP requests and responses for the Query Service accelerated-queries endpoint.
+description: Learn how to access to query accelerated store in a stateless manner to quickly return results based on aggregated data. This document provides a sample HTTP request and response for the Query Service accelerated-queries endpoint.
 ---
 # Accelerated queries API endpoint
 
@@ -75,6 +75,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 | `dbName`  | The name of the database you are making an accelerated query to. The `dbName` is a combination of the sandbox name and the database name with a `qsaccel` suffix. This required value should be in the format of `[sandbox-name]:[dbString]qsaccel`. The sandbox name is not necessary if you are using a production sandbox. |
 | `sql`  | An SQL statement string. The maximum size allowed is 1000000 characters.  |
 | `templateId` | The unique identifier of a query created and saved as a template when a POST request is made to the `/templates` endpoint. |
+| `name` | An optional human-friendly, descriptive name for the accelerated query.  |
 | `description` | An optional comment on the intent of the query to help other users understand its purpose. The maximum size allowed is 1000 bytes.  |
 
 **Response**
@@ -198,7 +199,7 @@ A successful response returns HTTP status 200 with the ad hoc schema created by 
 |---|---|
 | `queryId`  | The ID value of the query created. | 
 | `resultsMeta`  | This object contains the metadata for each column returned in results so users know the name and type of each column. | 
-| `resultsMeta._adhoc`  | An ad-hoc Experience Data Model (XDM) schema with fields that are namespaced for usage only by a single dataset  | 
+| `resultsMeta._adhoc`  | An ad-hoc Experience Data Model (XDM) schema with fields that are namespaced for usage only by a single dataset.  | 
 | `resultsMeta._adhoc.type`  | The data type of the ad hoc schema. | 
 | `resultsMeta._adhoc.meta:xdmType`  | This is a system-generated value for the XDM field type. For more information on the available types see the documentation on [available XDM types](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). | 
 | `resultsMeta._adhoc.properties`  | These are the column names of the queried dataset. | 
