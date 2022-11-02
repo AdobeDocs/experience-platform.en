@@ -42,7 +42,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
  -H 'Accept: application/json' \
  -d '
  {
-   "dbName": {SANDBOX_NAME:ACCELERATED_STORE_DATABASE.ACCELERATED_STORE_SCHEMA},
+   "dbName": "acmesbox1:acmeacceldb:accmeaggschema",
    "sql": "SELECT * FROM accounts;",
    "name": "Sample Accelerated Query",
    "description": "A sample of an accelerated query."
@@ -62,7 +62,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
  -H 'Accept: application/json' \
  -d '
  {
-   "dbName": {SANDBOX_NAME:ACCELERATED_STORE_DATABASE.ACCELERATED_STORE_SCHEMA},
+   "dbName": "acmesbox1:acmeacceldb:accmeaggschema",
    "templateId": "5d8228e7-4200-e3de-11e9-7f27416c5f0d",
    "name": "Sample Accelerated Query",
    "description": "A sample of an accelerated query."
