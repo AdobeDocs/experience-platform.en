@@ -33,7 +33,7 @@ Use the [Audience Manager](https://experienceleague.adobe.com/docs/audience-mana
 
 ## Adobe Experience Platform Tags {#section-ee80a9c509f2462c89c1e5bd8d05d7c8}
 
-Use the Adobe Experience Platform Tags section to view tag requests. You can also select **[!UICONTROL Configuration]** to configure [embed codes](../tags/ui/publishing/environments.md#embed-code). You can edit, replace, or add more embed codes from within Experience Platform Debugger . If you sign in, you can select an alternate property using the dropdowns.
+Use the Adobe Experience Platform Tags section to view tag requests. You can also select **[!UICONTROL Configuration]** to configure [embed codes](../../tags/ui/publishing/environments.md#embed-code). You can edit, replace, or add more embed codes from within Experience Platform Debugger . If you sign in, you can select an alternate property using the dropdowns.
 
 ## Experience Cloud ID Service {#section-a96c32f8e63a4991abb296f6e8ea01cf}
 
