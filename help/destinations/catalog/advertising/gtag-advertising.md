@@ -6,6 +6,10 @@ exl-id: 14a466f2-78a0-4493-93cd-3dcdae048042
 ---
 # Google gtag extension {#gtag-advertising-extension}
 
+>[!IMPORTANT]
+>
+>The Google gtag extension described here has been deprecated and replaced by the [[!DNL Google Global Site Tag (gtag)]](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) extension developed by Acronym. You can find the [!DNL Google Global Site Tag (gtag)] extension in the [[!DNL Tags Data Collection UI]](/help/tags/home.md).
+
 ## Overview {#overview}
 
 Load Google's `gtag.js` into your site to send event data to [!DNL Google Analytics], Google Ads, and [!DNL Google Marketing Platform]. This extension only adds the gtag code to your site. You will need to use other Google extensions to add events and actions that will use gtag.
