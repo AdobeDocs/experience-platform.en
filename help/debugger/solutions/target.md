@@ -84,7 +84,7 @@ The following values are captured:
 | [!DNL Screen Width] | The width of the screen in pixels. |
 | [!DNL Supplemental Data ID] | A system-generated ID used to match visitors with corresponding Adobe Target and Adobe Analytics calls. See the [A4T troubleshooting guide](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/troubleshoot-a4t/a4t-troubleshooting.html?#section_75002584FA63456D8D9086172925DD8D) for more information. |
 | [!DNL vst] | ??? |
-| [!DNL webGLRenderer] | ??? |
+| [!DNL webGLRenderer] | Provides information on the WebGL renderer used on the page, if applicable. |
 
 To view the details for a parameter on a particular network event, select the table cell in question. A popover appears providing further information on the parameter, including a description and its value. If the value is a JSON object, the dialog includes a fully navigable view of the object's structure.
 
