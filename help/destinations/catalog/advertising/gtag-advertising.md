@@ -8,7 +8,7 @@ exl-id: 14a466f2-78a0-4493-93cd-3dcdae048042
 
 >[!IMPORTANT]
 >
->The Google gtag extension described here has been deprecated and replaced by the [[!DNL Google Global Site Tag (gtag)]](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) extension developed by Acronym. You can find the [!DNL Google Global Site Tag (gtag)] extension in the [[!DNL Tags Data Collection UI]](/help/tags/home.md).
+>The Google gtag extension described here has been deprecated and replaced by the [[!DNL Google Global Site Tag (gtag)]](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) extension developed by [!DNL Acronym]. You can find the [!DNL Google Global Site Tag (gtag)] extension within the [[!UICONTROL Tags]](../../../tags/home.md) workspace in the Data Collection UI or Experience Platform UI.
 
 ## Overview {#overview}
 
