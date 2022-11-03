@@ -52,3 +52,11 @@ A query can be evaluated with edge segmentation if it meets any of the criteria 
 ## Next steps
 
 This guide explains how to evaluate segments with edge segmentation on Adobe Experience Platform. To learn more about using the Experience Platform user interface, please read the [Segmentation user guide](./overview.md). To learn how to perform similar actions and work with segments using Experience Platform APIs, please visit the [edge segmentation API guide](../api/edge-segmentation.md).
+
+## Appendix
+
+The following section lists frequently asked questions regarding edge segmentation:
+
+### How long does it take for a segment to be available on Edge?
+
+It takes up to one hour for a segment to be available on Edge.
