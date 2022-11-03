@@ -33,27 +33,22 @@ Since sending conversion events involves both a client-side and server-side impl
 
 To send a conversion event from on a website, Google Global Site Tag (gtag) must be deployed. You can achieve this using tags by configuring and installing the Google Global Site Tag (gtag) extension.
 
-### Install the Google Global Site Tag extension
+### Configure and install the Google Global Site Tag extension
 
-Find the extension in the tags catalog and select Install. 
+Navigate to the Data Collection UI or Experience Platform and select **[!UICONTROL Tags]** in the left navigation. Select the tag property you wish to install the extension on, then select **[!UICONTROL Extensions]** in the left navigation. Under the **[!UICONTROL Catalog]** tab, locate the [!UICONTROL Google Global Site Tag (gtag)] extension and select **[!UICONTROL Install]**.
 
-Graphical user interface, application
+![](../../../images/extensions/google-ads-enhanced-conversions/install-gtag-extension.png)
 
-Description automatically generated 
- 
-### Configure the extension 
+The installation dialog appears. From here, select **[!UICONTROL Add Account]** and provide the following values when prompted:
 
-Select Configure and populate the three required fields: Account Name, Account ID, and select Google Ads (AdWords) for Product. 
+| Account property | Description |
+| --- | --- |
+| Account Name | A unique name for the account. This name is only used within the tags UI. |
+| Account ID | Your Google Ads account ID. To find this value, log into Google Ads and navigate to: **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Install the Tag yourself]**. The account ID string can be found in the code snippet window that starts with `AW-` or `d`. |
+| Product | Select **[!UICONTROL Google Ads (AdWords)]**. |
 
-To find the Account ID log into Google Ads and navigate to: Tools and Settings 🡪 Conversions 🡪Select a conversion action 🡪 Tag Setup 🡪 Install the Tag yourself 🡪 find the string in the code snippet window that starts with AW- or d 
+When finished, select **[!UICONTROL Add Account]**, then select **[!UICONTROL Save]**.
 
-Select "Add Account" and then "Save to Library" 
- 
-Graphical user interface, application, Teams
-
-Description automatically generated 
-
- 
 ### Add a send conversion action {#conversion-action-tags}
 
 Navigate to or create a Tags rule that listens to the conversion you'd like to enhance and select the Plus icon to add a new action. Select Google Global Site Tag (gtag) extension from the Extension dropdown.  
@@ -72,9 +67,7 @@ Pro Tip: While you're in the Tag setup area of your Google Ads account, make sur
 
 Select Keep Changes and Save to Library 
 
-A screenshot of a computer
-
-Description automatically generated 
+[[A screenshot of a computer]]
 
 Publish a new Tags build. 
 
@@ -94,12 +87,9 @@ In the pop-up modal, select each secret you want to create, select the Google Ac
 
 Repeat this step until all the secrets have been created. 
  
-Graphical user interface, text, application
-
-Description automatically generated 
+[[Graphical user interface, text, application]]
  
 ### Create a Google OAuth 2 data element that references the secret 
- 
 
 Select on Data Element in the left rail menu of event forwarding and select "Add Data Element" 
 
@@ -107,20 +97,14 @@ Name the data element and select "Secret" in the "Data Element Type" dropdown me
 
 Select the appropriate Google OAuth 2 secret for each environment and select "Save to Library" 
 
-Graphical user interface, text, application, email
-
-Description automatically generated 
+[[Graphical user interface, text, application, email]]
 
 
-### Install the Enhanced Conversions extension
+### Configure and install the Enhanced Conversions extension
 
 Find the extension in the event forwarding catalog and select Install. 
 
-Graphical user interface, application
-
-Description automatically generated 
-
-### Configure the extension 
+[[Graphical user interface, application]]
 
 Select Configure and populate the two required fields: Customer ID and Secret.  
 
