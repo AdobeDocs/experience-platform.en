@@ -176,8 +176,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
         "schemaMetadata": {
             "primaryKey": [],
             "delta": [],
-            "dule": [],
-            "gdpr": []
+            "dule": []
         },
         "schemaRef": {
             "id": "https://ns.adobe.com/xdm/context/experienceevent",

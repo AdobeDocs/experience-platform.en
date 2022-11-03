@@ -56,8 +56,8 @@ Refer to the table below for information about the destination export type and f
 >
 >Google has simplified the process to connect external audience management platforms to Google Ad Manager 360. You can now go through the process to link to Google Ad Manager 360 in a self-service manner. Read [Segments from data management platforms](https://support.google.com/admanager/answer/3289669?hl=en) in the Google documentation. You should have the IDs listed below at hand.
 
-* **Account ID**: Adobe’s account ID with Google. Account ID: 87933855.
-* **Customer ID**: Adobe’s customer account ID with Google. Customer ID: 89690775.
+* **Account ID**: Adobe's account ID with Google. Account ID: 87933855.
+* **Customer ID**: Adobe's customer account ID with Google. Customer ID: 89690775.
 * **Network code**: This is your [!DNL Google Ad Manager] network identifier, found under **[!UICONTROL Admin > Global settings]** in the Google interface, as well as in the URL.
 * **Audience Link ID**: This is a specific identifier associated with your [!DNL Google Ad Manager] network (not your [!DNL Network code]), also found under **[!UICONTROL Admin > Global settings]** in the Google interface.
 * Your account type. DFP by Google or AdX buyer.
@@ -75,7 +75,7 @@ To connect to this destination, follow the steps described in the [destination c
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
 * **[!UICONTROL Access key ID]**: A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Platform.
-* **[!UICONTROL Secret access key]**: A 40-character, base-64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Platform.
+* **[!UICONTROL Secret access key]**: A 40-character, base64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Platform.
 
 For more information about these values, see the [Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guide. For steps on how to generate your own access key ID and secret access key, refer to the [[!DNL Google Cloud Storage] source overview](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 

@@ -52,7 +52,7 @@ To connect to this destination, follow the steps described in the [destination c
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
 * **[!UICONTROL Access key ID]**: A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Platform. For information on how to obtain this value, read the [prerequisites](#prerequisites) section above.
-* **[!UICONTROL Secret access key]**: A 40-character, base-64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Platform. For information on how to obtain this value, read the [prerequisites](#prerequisites) section above.
+* **[!UICONTROL Secret access key]**: A 40-character, base64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Platform. For information on how to obtain this value, read the [prerequisites](#prerequisites) section above.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64-encoded] string. View an example of a correctly formatted, base64-encoded key in the documentation link below. The middle part is shortened for brevity.
 
     ![Image showing an example of a correctly formatted and base64-encrypted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
