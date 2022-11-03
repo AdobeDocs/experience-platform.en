@@ -122,7 +122,13 @@ A successful import of profile data from S3 inserts data in the Pega Customer pr
 In Pega Customer Decision Hub, Data Administrators can configure data jobs in Customer Profile Designer to import profile data periodically from S3 as shown in the following figure.
 ![Image of the UI screen to configure data jobs in Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
 
+## Additional resources {#additional-resources}
 
+See [Import data jobs](https://academy.pega.com/topic/import-data-jobs/v1)) in [!DNL Pega Customer Decision Hub].
+
+## Data usage and governance {#data-usage-governance}
+
+All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [Data Governance overview](/help/data-governance/home.md).
 
 
 
