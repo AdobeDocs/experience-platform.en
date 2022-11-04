@@ -54,7 +54,7 @@ The following sections provide information on how attribute-based access control
 
 Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration. Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe Experience Cloud, instead of Product Profiles in the Adobe Admin Console, to manage permissions for users, functionality, labels, and other resources in your organization.
 
-Limited availability for attribute-based access control is available to customers who purchase Healthcare and/or Privacy Shields. The features of this functionality include:
+There is limited availability to attribute-based access control for customers who purchase Healthcare and/or Privacy Shields. The features of this functionality include:
 
 * Permissions interface: Provides an interface for you to define user roles, permissions and policies for attribute-based access control.
 
