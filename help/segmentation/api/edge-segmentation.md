@@ -253,3 +253,11 @@ A successful response returns the details of the newly created segment definitio
 Now that you know how to create edge-segmentation-enabled segments, you can use them to enable same-page and next-page personalization use cases. 
 
 To learn how to perform similar actions and work with segments using the Adobe Experience Platform user interface, please visit the [Segment Builder user guide](../ui/segment-builder.md).
+
+## Appendix
+
+The following section lists frequently asked questions regarding edge segmentation:
+
+### How long does it take for a segment to be available on the Edge Network?
+
+It takes up to one hour for a segment to be available on the Edge Network.
