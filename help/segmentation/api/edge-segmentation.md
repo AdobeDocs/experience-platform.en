@@ -258,6 +258,6 @@ To learn how to perform similar actions and work with segments using the Adobe E
 
 The following section lists frequently asked questions regarding edge segmentation:
 
-### How long does it take for a segment to be available on Edge?
+### How long does it take for a segment to be available on the Edge Network?
 
-It takes up to one hour for a segment to be available on Edge.
+It takes up to one hour for a segment to be available on the Edge Network.
