@@ -47,71 +47,57 @@ The installation dialog appears. From here, select **[!UICONTROL Add Account]** 
 | Account ID | Your Google Ads account ID. To find this value, log into Google Ads and navigate to: **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Install the Tag yourself]**. The account ID string can be found in the code snippet window that starts with `AW-` or `d`. |
 | Product | Select **[!UICONTROL Google Ads (AdWords)]**. |
 
+{style="table-layout:auto"}
+
 When finished, select **[!UICONTROL Add Account]**, then select **[!UICONTROL Save]**.
 
 ### Add a send conversion action {#conversion-action-tags}
 
-Navigate to or create a Tags rule that listens to the conversion you'd like to enhance and select the Plus icon to add a new action. Select Google Global Site Tag (gtag) extension from the Extension dropdown.  
+After installing the extension, you can start including conversion actions in your tag rules. When creating or editing a rule that listens to the conversion you'd like to enhance, select **[!UICONTROL Add]** under [!UICONTROL Actions]. In the next dialog, select **[!UICONTROL Google Global Site Tag (gtag)]** from the [!UICONTROL Extension] dropdown, then select **[!UICONTROL Send an event]** under [!UICONTROL Action Type].
 
-Complete, at minimum, these fields: 
+![](../../../images/extensions/google-ads-enhanced-conversions/select-action.png)
 
-Event Name (Action): Enter "conversion" as the value 
+Additional control appear that allow you to configure the [!DNL gtag] event. At a minimum, the following fields must be filled out: 
 
-Add a new field where the key is "transaction_id" and the value is a data element that contains the transaction ID value.  
+1. **[!UICONTROL Event Name (Action)]**: Enter `conversion` as the value.
+1. Add a new field where the key is `transaction_id` and the value is a [data element](../../../ui/managing-resources/data-elements.md) that contains the [transaction ID](https://support.google.com/google-ads/answer/6386790) value.
+1. **[!UICONTROL Conversion Label]**: Enter the appropriate conversion label from your Google Ads account. To find this value, log into Google Ads and navigate to **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Use Google Tag Manager]**. The conversion label can be found under [!DNL Instructions]. 
+    >[!IMPORTANT]
+    >
+    >While you are in the tag setup area of your Google Ads account, make sure that enhanced conversions is enabled by reviewing and accepting the Terms of Service, selecting **[!DNL Turn on enhanced conversions]**, and selecting **[!DNL API]** as the implementation method. 
 
-Conversion Label: Enter the appropriate conversion label from your Google Ads account 
+When you are finished configuring the action, select **[!UICONTROL Keep Changes]** to add the action to the rule configuration. When you are satisfied with the rule, select **[!UICONTROL Save to Library]**. 
 
-To find the Conversion Label log into Google Ads and navigate to: Tools and Settings 🡪 Conversions 🡪Select a conversion action 🡪 Tag Setup 🡪 Use Google Tag Manager 🡪 find Conversion Label under Instructions 
-
-Pro Tip: While you're in the Tag setup area of your Google Ads account, make sure that "Turn on enhanced conversions" is enabled by: reviewing and accepting the Terms of Service, checking the "Turn on enhanced conversions" box, and selecting "API" as the Implementation method. 
-
-Select Keep Changes and Save to Library 
-
-[[A screenshot of a computer]]
-
-Publish a new Tags build. 
+Finally, publish a new [build](../../../ui/publishing/builds.md) to enable the changes to the library.
 
 ## Send first-party data using event forwarding 
 
-To enhance your client-side conversions using event forwarding, use the Enhanced Conversions extension. Before configuring the extension and adding a Send Conversion action, however, you must create an access token in event forwarding to authenticate to Google Ads API. See the section on [sending a conversion using event forwarding](#conversion-event-forwarding) for more information.
+Once you are sending conversion events from the client side, you can enhance these conversions using the Enhanced Conversions event forwarding extension.
 
-### Create a Google OAuth 2 secret 
+### Create a Google OAuth 2 secret and data element {#create-secret-data-element}
 
-Select on Secrets in the left rail menu of event forwarding and select "Add Secret". 
+Before configuring the extension, you must create an access token in event forwarding to authenticate to Google Ads API.
 
-Select a Target Environment and name the secret(s).  
+See the guide on [creating event forwarding secrets](../../../ui/event-forwarding/secrets.md) for detailed steps. Ensure that you select **[!UICONTROL Google OAuth 2]** as the secret type. Continue following the prompts,  and when asked to select a Google Account profile, select the account that has access to the conversion action you are configuring. 
 
-Select Google OAuth 2 as the Type and select "Create Secret(s)" 
-
-In the pop-up modal, select each secret you want to create, select the Google Account profile that has access to Conversion Action you're configuring, and select "Continue". 
-
-Repeat this step until all the secrets have been created. 
- 
-[[Graphical user interface, text, application]]
- 
-### Create a Google OAuth 2 data element that references the secret 
-
-Select on Data Element in the left rail menu of event forwarding and select "Add Data Element" 
-
-Name the data element and select "Secret" in the "Data Element Type" dropdown menu 
-
-Select the appropriate Google OAuth 2 secret for each environment and select "Save to Library" 
-
-[[Graphical user interface, text, application, email]]
-
+Once the secret is created, [create a new data element](../../../ui/managing-resources/data-elements.md#create-a-data-element) and select **[!UICONTROL Secret]** for the data element type. Select the appropriate Google OAuth 2 secret for each environment and select **[!UICONTROL Save to Library]**. 
 
 ### Configure and install the Enhanced Conversions extension
 
-Find the extension in the event forwarding catalog and select Install. 
+Find the extension in the event forwarding catalog and select **[!UICONTROL Install]**. 
 
-[[Graphical user interface, application]]
+![](../../../images/extensions/google-ads-enhanced-conversions/install-enhanced-conversions.png)
 
-Select Configure and populate the two required fields: Customer ID and Secret.  
+To configure the extension, you must populate the two required fields:
 
-To find Customer log into Google Ads and navigate to: Help 🡪 Customer ID 
-Pro tip: The value for the Secret is the Google OAuth 2 data element you created previously 
+1. **[!UICONTROL Customer ID]**: The ID that uniquely identifies your Google Ads account. To find this value, log into Google Ads and navigate to **[!DNL Help]** > **[!DNL Customer ID]**.
+1. **[!UICONTROL Access Token Data Element]**: Select the data element icon (![Data element icon](../../../images/extensions/google-ads-enhanced-conversions/data-element-icon.png)) and choose the Google OAuth 2 secret data element that you [configured in the previous step](#create-secret-data-element) from the menu.
+
+When finished, select **[!UICONTROL Save]** to install the extension.
 
 ### Add a Send Conversion action {#conversion-action-event-forwarding}
+
+After installing the extension, you can start including [!UICONTROL Send Conversion] actions in your event forwarding rules. When creating or editing a rule that listens to the conversion you'd like to enhance, select **[!UICONTROL Add]** under [!UICONTROL Actions]. In the next dialog, select **[!UICONTROL Google Ads Enhanced Conversions]** from the [!UICONTROL Extension] dropdown, then select **[!UICONTROL Send an event]** under [!UICONTROL Action Type].
 
 Navigate to or create an event forwarding rule that listens to the conversion you'd like to enhance and select the Plus icon to add a new action. Select **[!UICONTROL Google Ads Enhanced Conversions]** extension from the Extension dropdown.  
 
