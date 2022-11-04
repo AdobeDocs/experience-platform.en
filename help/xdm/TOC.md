@@ -19,14 +19,19 @@ feature: Schemas
     * [Overview](./schema/industries/overview.md)
     * [Retail](./schema/industries/retail.md)
     * [Financial services](./schema/industries/financial.md)
+    * [Healthcare](./schema/industries/healthcare.md)
     * [Telecommunications](./schema/industries/telecom.md)
     * [Travel and hospitality](./schema/industries/travel-hospitality.md)
   * [XDM field dictionary](schema/field-dictionary.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
+  * [Medication](./classes/medication.md)
+  * [Payer](./classes/payer.md)
+  * [Plan](./classes/plan.md)
   * [Policy](./classes/policy.md)
   * [Product](./classes/product.md)
+  * [Provider](./classes/provider.md)
   * [Segment definition](./classes/segment-definition.md)
   * B2B classes {#b2b}
     * [XDM Business Account](./classes/b2b/business-account.md)
@@ -39,12 +44,13 @@ feature: Schemas
     * [XDM Business Marketing List Members](./classes/b2b/business-marketing-list-members.md)
 * Field groups {#field-groups}
   * XDM Individual Profile {#profile}
+    * [Consents and Preferences](./field-groups/profile/consents.md)
     * [Demographic Details](./field-groups/profile/demographic-details.md)
     * [IAB TCF 2.0 Consent](./field-groups/profile/iab.md)
     * [IdentityMap](./field-groups/profile/identitymap.md)
+    * [Healthcare Member Details](./field-groups/profile/healthcare-member-details.md)
     * [Loyalty Details](./field-groups/profile/loyalty-details.md)
     * [Personal Contact Details](./field-groups/profile/personal-contact-details.md)
-    * [Consents and Preferences](./field-groups/profile/consents.md)
     * [Segment Membership Details](./field-groups/profile/segmentation.md)
     * [Telecom Subscription](./field-groups/profile/telecom-subscription.md)
     * [Work Contact Details](./field-groups/profile/work-contact-details.md)
@@ -52,6 +58,8 @@ feature: Schemas
     * [XDM Business Person Details](./field-groups/profile/business-person-details.md)
   * XDM ExperienceEvent {#event}
     * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
+    * [Advertising Details](./field-groups/event/advertising-details.md)
+    * [Application Details](./field-groups/event/application-details.md)
     * [Balance Transfers](./field-groups/event/balance-transfers.md)
     * [Campaign Marketing Details](./field-groups/event/campaign-marketing-details.md)
     * [Card Actions](./field-groups/event/card-actions.md)
@@ -67,6 +75,7 @@ feature: Schemas
     * [Lodging Reservation](./field-groups/event/lodging-reservation.md)
     * [Quote Request Details](./field-groups/event/quote-request-details.md)
     * [Reservation Details](./field-groups/event/reservation-details.md)
+    * [Sitetool Details](./field-groups/event/sitetool-details.md)
     * [Support Site Search](./field-groups/event/support-site-search.md)
     * [Upgrade Details](./field-groups/event/upgrade-details.md)
     * [Upsell Details](./field-groups/event/upsell-details.md)
@@ -75,11 +84,19 @@ feature: Schemas
     * [XDM Business Campaign Details](./field-groups/b2b-campaign/details.md)
   * XDM Business Campaign Members {#b2b-campaign-members}
     * [XDM Business Campaign Members Details](./field-groups/b2b-campaign-members/details.md)
+  * Medication {#medication}
+    * [Healthcare medication](./field-groups/medication/healthcare-medication.md)
+  * Plan {#plan}
+    * [Healthcare Plan Details](./field-groups/plan/healthcare-plan-details.md)
   * Product {#product}
     * [Product Catalog](./field-groups/product/product-catalog.md)
     * [Product Category](./field-groups/product/product-category.md)
+  * Provider {#provider}
+    * [Healthcare Provider](./field-groups/provider/healthcare-provider.md)
   * [Field group name updates](./field-groups/name-updates.md)
 * Data types {#data-types}
+  * [Account Details](./data-types/account-details.md)
+  * [Ad break](./data-types/ad-break.md)
   * [Application](./data-types/application.md)
   * [Beacon](./data-types/beacon.md)
   * [Browser details](./data-types/browser-details.md)
@@ -105,6 +122,7 @@ feature: Schemas
   * [Geo Shape](./data-types/geo-shape.md)
   * [Identity](./data-types/identity.md)
   * [Impressions](./data-types/impressions.md)
+  * [Implementation details](./data-types/implementation-details.md)
   * [Internal site search](./data-types/internal-site-search.md)
   * [Key Value Pair](./data-types/key-value-pair.md)
   * [Marketing](./data-types/marketing.md)
@@ -172,7 +190,7 @@ feature: Schemas
   * [Deprecate an XDM field](tutorials/field-deprecation.md)
   * [Define a schema relationship in the UI](tutorials/relationship-ui.md)
   * [Define a schema relationship in the API](tutorials/relationship-api.md)
-  * [Define a schema relationship in Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
+  * [Define a schema relationship in Real-Time CDP B2B Edition](tutorials/relationship-b2b.md)
   * [Manage data usage labels for a schema](tutorials/labels.md)
   * [Create an ad hoc schema](tutorials/ad-hoc.md)
 * [Troubleshooting guide](troubleshooting-guide.md)

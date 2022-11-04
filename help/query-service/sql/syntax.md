@@ -421,7 +421,7 @@ The `inline` function separates the elements of an array of structs and generate
 
 The `inline` function **cannot** be placed in a select list where there are other generator functions.
 
-By default, the columns produced are named “col1”, “col2”, and so on. If the expression is `NULL` then no rows are produced.
+By default, the columns produced are named "col1", "col2", and so on. If the expression is `NULL` then no rows are produced.
 
 >[!TIP]
 >
@@ -442,7 +442,7 @@ The example returns the following:
 
 This second example further demonstrates the concept and application of the `inline` function. The data model for the example is illustrated in the image below.
 
-![A schema diagram for the productListItems](../images/sql/productListItems.png)
+![A schema diagram for productListItems.](../images/sql/productListItems.png)
 
 **Example**
 
@@ -478,9 +478,33 @@ SET property_key = property_value
 
 To return the value for any setting, use `SET [property key]` without a `property_value`.
 
-## PostgreSQL commands
+## [!DNL PostgreSQL] commands
 
-The sub-sections below cover the PostgreSQL commands supported by Query Service.
+The sub-sections below cover the [!DNL PostgreSQL] commands supported by Query Service.
+
+### ANALYZE TABLE
+
+The `ANALYZE TABLE` command computes statistics for a table on the accelerated store. The statistics are calculated on executed CTAS or ITAS queries for a given table on accelerated store.
+
+**Example**
+
+```sql
+ANALYZE TABLE <original_table_name>
+```
+
+The following is a list of statistical calculations that are available after using the `ANALYZE TABLE` command:-
+
+| Calculated values | Description |
+|---|---|
+| `field`  | The name of the column in a table.  |
+| `data-type` | The acceptable type of data for each column. |
+| `count` | The number of rows that contain a non-null value for this field. |
+| `distinct-count` | The number of unique or distinct values for this field. |
+| `missing` | The number of rows that have a null value for this field. |
+| `max` | The maximum value from the analyzed table.  |
+| `min` | The minimum value from the analyzed table. |
+| `mean` | The average value of the analyzed table.  |
+| `stdev` | The standard deviation of the analyzed table. |
 
 ### BEGIN
 
@@ -547,25 +571,23 @@ EXECUTE name [ ( parameter ) ]
 The `EXPLAIN` command displays the execution plan for the supplied statement. The execution plan shows how the tables referenced by the statement will be scanned.  If multiple tables are referenced, it will show what join algorithms are used to bring together the required rows from each input table.
 
 ```sql
-EXPLAIN option statement
+EXPLAIN statement
 ```
 
-Where `option` can be one of:
+Use the `FORMAT` keyword with the `EXPLAIN` command to define the format of the response.
 
 ```sql
-ANALYZE
-FORMAT { TEXT | JSON }
+EXPLAIN FORMAT { TEXT | JSON } statement
 ```
 
 | Parameters | Description|
 | ------ | ------ |
-| `ANALYZE` | If the `option` contains `ANALYZE`, the run times and other statistics are shown. |
-| `FORMAT` | If the `option` contains `FORMAT`, it specifies the output format, which can be `TEXT` or `JSON`. Non-text output contains the same information as the text output format, but is easier for programs to parse. This parameter defaults to `TEXT`. |
+| `FORMAT` | Use the `FORMAT` command to specify the output format. The available options are `TEXT` or `JSON`. Non-text output contains the same information as the text output format, but is easier for programs to parse. This parameter defaults to `TEXT`. |
 | `statement` | Any `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, or `CREATE MATERIALIZED VIEW AS` statement, whose execution plan you want to see. |
 
 >[!IMPORTANT]
 >
->Keep in mind that the statement is actually executed when the `ANALYZE` option is used. Although `EXPLAIN` discards any output that a `SELECT` returns, other side effects of the statement happen as usual. 
+>Any output that a `SELECT` statement might return is discarded when run with the `EXPLAIN` keyword. Other side effects of the statement happen as usual.
 
 **Example**
 
@@ -579,7 +601,7 @@ EXPLAIN SELECT * FROM foo;
 
                        QUERY PLAN
 ---------------------------------------------------------
- Seq Scan on foo  (cost=0.00..155.00 rows=10000 width=4)
+ Seq Scan on foo (dataSetId = "6307eb92f90c501e072f8457", dataSetName = "foo") [0,1000000242,6973776840203d3d,6e616c58206c6153,6c6c6f430a3d4d20,74696d674c746365]
 (1 row)
 ```
 
@@ -649,7 +671,7 @@ More information about the standard SELECT query parameters can be found in the 
 | Parameters | Description|
 | ------ | ------ |
 | `TEMPORARY` or `TEMP` | An optional parameter. If specified, the table that is created will be a temporary table. |
-| `UNLOGGED` | An optional parameter. If specified, the table that is created as will be an unlogged table. More information about unlogged tables can be found in the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `UNLOGGED` | An optional parameter. If specified, the table that is created as will be an unlogged table. More information about unlogged tables can be found in the [[!DNL PostgreSQL] documentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | The name of the table to be created. |
 
 **Example**

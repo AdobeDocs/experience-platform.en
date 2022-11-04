@@ -1,15 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;Data Landing Zone;data landing zone
-solution: Experience Platform
 title: Connect Data Landing Zone to Platform using the UI
-topic-legacy: overview
-type: Tutorial
 description: Learn how to create a Data Landing Zone source connector using the Platform user interface.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
 ---
 # Connect [!DNL Data Landing Zone] to Platform using the UI
 
-[!DNL Data Landing Zone] is a cloud-based data storage facility for temporary file storage provisioned with Adobe Experience Platform. Data is automatically deleted from the [!DNL Data Landing Zone] after seven days.
+[!DNL Data Landing Zone] is a secure, cloud-based file storage facility to bring files into Adobe Experience Platform. Data is automatically deleted from the [!DNL Data Landing Zone] after seven days.
 
 This tutorial provides steps for creating a [!DNL Data Landing Zone] source connection using the Platform user interface.
 
@@ -32,7 +29,24 @@ Under the [!UICONTROL cloud storage] category, select [!DNL Data Landing Zone] a
 
 The [!UICONTROL Add data] step appears, providing you with an interface to select and preview the data you want to bring to Platform.
 
+* The left part of the interface is a folder browser, providing you with a list of files from your container that you can then bring to Platform.
+* The right part of the interface lets you preview up to 100 rows of data from a compatible file.
+
+Select the file that you want to bring to Platform and allow for a few moments for the right interface to update into a preview screen.
+
 ![add-data](../../../../images/tutorials/create/dlz/add-data.png)
+
+>[!TIP]
+>
+>Platform auto-detects property information of the file you selected, including information on the file's data format, designated column delimiter, and compression type.
+
+The preview interface allows you to inspect the contents and structure of a file. By default, the preview interface displays the first file in the folder you selected.
+
+To preview a different file, select the preview icon beside the name of the file you want to inspect.
+
+When finished, select **[!UICONTROL Next]**.
+
+![file-detection](../../../../images/tutorials/create/dlz/file-detection.png)
 
 For a detailed, step-by-step guide on how to create a dataflow for a cloud storage source, see the tutorial on [creating a cloud storage dataflow to bring data to Platform](../../dataflow/batch/cloud-storage.md).
 

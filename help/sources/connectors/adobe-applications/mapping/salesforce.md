@@ -10,6 +10,8 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 
 ## Contact {#contact}
 
+Read the [XDM Individual Profile overview](../../../../xdm/classes/individual-profile.md) for more information on the XDM class. For more information on the XDM field groups, read the [XDM Business Person Details schema field group](../../../../xdm/field-groups/profile/business-person-details.md) guide and [XDM Business Person Components schema field group](../../../../xdm/field-groups/profile/business-person-components.md) guide.
+
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
 | `AccountId` | `b2b.accountKey.sourceID`|
@@ -68,6 +70,8 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 
 ## Lead {#lead}
 
+Read the [XDM Individual Profile overview](../../../../xdm/classes/individual-profile.md) for more information on the XDM class. For more information on the XDM field groups, read the [XDM Business Person Details schema field group](../../../../xdm/field-groups/profile/business-person-details.md) guide and [XDM Business Person Components schema field group](../../../../xdm/field-groups/profile/business-person-components.md) guide.
+
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
 | `City`| `workAddress.city`|
@@ -108,19 +112,16 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `Company` | `b2b.companyName` |
 | `Website` | `b2b.companyWebsite` |
 | `ConvertedContactId` | `b2b.convertedContactKey.sourceID` |
-| `"Salesforce"` | `b2b.convertedContactKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `b2b.convertedContactKey.sourceInstanceID` |
-| `concat(ConvertedContactId,\"@${CRM_ORG_ID}.Salesforce\")` | `b2b.convertedContactKey.sourceKey` |
+| `iif(ConvertedContactId != null && ConvertedContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `b2b.convertedContactKey` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `"Lead"` | `b2b.personType` |
-| `ConvertedContactId` | `personComponents.sourceConvertedContactKey.sourceID` |
-| `"Salesforce"` | `personComponents.sourceConvertedContactKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `personComponents.sourceConvertedContactKey.sourceInstanceID` |
-| `concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")` | `personComponents.sourceConvertedContactKey.sourceKey` |
+| `iif(ConvertedContactId != null && ConvertedContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", ConvertedContactId, "sourceKey", concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personComponents.sourceConvertedContactKey` |
 
 {style="table-layout:auto"}
 
 ## Account {#account}
+
+Read the [XDM Business Account details overview](../../../../xdm/classes/b2b/business-account.md) for more information on the XDM class.
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
@@ -176,6 +177,8 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 
 ## Opportunity {#opportunity}
 
+Read the [XDM Business Opportunity overview](../../../../xdm/classes/b2b/business-opportunity.md) for more information on the XDM class.
+
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityKey.sourceType` |
@@ -215,6 +218,8 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 
 ## Opportunity contact role {#opportunity-contact-role}
 
+Read the [XDM Business Opportunity Person Relation class overview](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) for more information on the XDM class.
+
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityPersonKey.sourceType` |
@@ -238,6 +243,8 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 {style="table-layout:auto"}
 
 ## Campaign {#campaign}
+
+Read the [XDM Business Campaign class overview](../../../../xdm/classes/b2b/business-campaign.md) for more information on the XDM class. For more information on the XDM field groups, read the [XDM Business Campaign details schema field group](../../../../xdm/field-groups/b2b-campaign/details.md) guide.
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
@@ -268,6 +275,8 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 
 ## Campaign member {#campaign-member}
 
+Read the [XDM Business Campaign Members overview](../../../../xdm/classes/b2b/business-campaign-members.md) for more information on the XDM class. For more information on the XDM field groups, read the [XDM Business Campaign Member details schema field group](../../../../xdm/field-groups/b2b-campaign/details.md) document.
+
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
@@ -291,6 +300,8 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `Type` | `b2b.personType` |
 
 ## Account contact relation {#account-contact-relation}
+
+Read the [XDM Business Account Person Relation class](../../../../xdm/classes/b2b/business-account-person-relation.md) for more information on the XDM class. 
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |

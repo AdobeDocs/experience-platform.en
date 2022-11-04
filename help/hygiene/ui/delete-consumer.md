@@ -2,14 +2,12 @@
 title: Delete Consumer Records
 description: Learn how to delete consumer records in the Adobe Experience Platform UI.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-hide: true
-hidefromtoc: true
 ---
 # Delete consumer records
 
 >[!IMPORTANT]
 >
->Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Shield for Healthcare.
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
 
 The [[!UICONTROL Data Hygiene] workspace](./overview.md) in the Adobe Experience Platform UI allows you to delete consumer records that are participating in Identity Service and Real-time Customer Profile.
 
@@ -31,7 +29,7 @@ To start the process, select **[!UICONTROL Create request]** from the main page 
 
 ![Image showing the [!UICONTROL Create request] button being selected](../images/ui/delete-consumer/create-request-button.png)
 
-The request creation dialog appears. By default, the **[!UICONTROL Consumer]** option is selected under the **[!UICONTROL Action]** section. Leave this option selected.
+The request creation dialog appears. By default, the **[!UICONTROL Consumer]** option is selected under the **[!UICONTROL Requested Action]** section. Leave this option selected.
 
 ![Image showing the  consumer option selected in the creation dialog](../images/ui/delete-consumer/consumer-action.png)
 
@@ -124,7 +122,7 @@ To add more identities, select the plus icon (![Image of the plus icon](../image
 
 ## Submit the request (#submit)
 
-Once you have finished adding identities to the request, select **[!UICONTROL Submit]**.
+Once you have finished adding identities to the request, under **[!UICONTROL Request settings]**, provide a name and optional description for the request before selecting **[!UICONTROL Submit]**.
 
 ![Image showing the [!UICONTROL Submit] button being selected](../images/ui/delete-consumer/submit.png)
 
@@ -132,16 +130,14 @@ You are asked to confirm the list of identities whose data you want to delete. S
 
 ![Image showing the confirmation dialog](../images/ui/delete-consumer/confirm-request.png)
 
-After the request is submitted, a work order is created and appears on the [!UICONTROL Consumer] tab of the [!UICONTROL Data Hygiene] workspace. From here, you can monitor the work order's status as it processes the request. Most consumer deletion work orders will take several days to complete.
+After the request is submitted, a work order is created and appears on the [!UICONTROL Consumer] tab of the [!UICONTROL Data Hygiene] workspace. From here, you can monitor the work order's status as it processes the request.
+
+>[!NOTE]
+>
+>Refer to the overview section on [timelines and transparency](../home.md#consumer-delete-transparency) for details on how consumer deletes are processed once they are executed.
 
 ## Next steps
 
 This document covered how to delete consumer records in the Experience Platform UI. For information on how to perform other data hygiene tasks in the UI, refer to the [data hygiene UI overview](./overview.md).
 
-<!--
-
-Paragraph below should be commented out until workorder.md will be added to the TOC.
-
 To learn how to delete consumer records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
-
--->

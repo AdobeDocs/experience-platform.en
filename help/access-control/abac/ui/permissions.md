@@ -8,10 +8,6 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 
 >[!IMPORTANT]
 >
->Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
-
->[!IMPORTANT]
->
 >Access control uses user ID (an internal unique id assigned to a user) for granting permissions. When an organization is migrated from Adobe ID to Business ID, all permissions set for its users will be lost because the user ID changes and access control will use the newly generated user ID. If your organization is migrated to Business ID, please contact your Adobe representative to migrate your user ID from Adobe ID to Business ID.
 
 Permissions is the area of Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application.
@@ -145,9 +141,21 @@ To remove a user group from a role, select the **X** icon next to the user group
 
 The **[!UICONTROL Remove user group]** dialogue appears, prompting you to confirm deletion. 
 
-![flac-confirm-user-groups -delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
+![flac-confirm-user-groups-delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
 
 You will be returned to the **[!UICONTROL User groups]** tab.
+
+## Adding users to Experience Platform through a product profile
+
+To add a user to a product profile, log into the Admin Console and select **[!UICONTROL Add users]**
+
+![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
+
+The **[!UICONTROL Add users to your team]** dialogue appears. Enter the users email address, first name (optional) and last name (optional).
+
+Select the pencil icon to select products and user groups, select **[!UICONTROL Adobe Exoerience Platform]**, then select **[!UICONTROL AEP-Default-All-Users]**, then select  **[!UICONTROL Save]**.
+
+![product-profile](../../images/flac-ui/product-profile.png)
 
 ## Next steps
 

@@ -18,7 +18,6 @@ Create audiences from your customer lists, people who've visited your site or pe
 * The user would need to authenticate with a Pinterest account which has access to the advertiser account they want to add an audience to. Details on sharing advertiser accounts can be found [here](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). Specifically, the user would need the "audience" access levels.
 * Details on customer list identity formats can be found [here](https://help.pinterest.com/en/business/article/audience-targeting). 
 
-
 ## Supported identities {#supported-identities}
 
 The [!DNL Pinterest Customer List] destination supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
@@ -67,6 +66,12 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Advertiser ID]**: Your Pinterest advertiser ID.
+
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
 ## Activate segments to this destination {#activate}
 

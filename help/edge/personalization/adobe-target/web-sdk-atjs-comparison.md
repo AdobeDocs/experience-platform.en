@@ -1014,8 +1014,8 @@ alloy("sendEvent", {
 adobe.target.getOffer({
    mbox: "target-global-mbox",
    params: {
-     "entity.productName": "T-shirt",
-     "entity.productId": "1234"
+     "entity.name": "T-shirt",
+     "entity.id": "1234"
    },
    success: console.log,
    error: console.error
@@ -1030,8 +1030,8 @@ adobe.target.getOffers({
       execute: {
         pageLoad: {
           parameters: {
-            "entity.productName": "T-shirt",
-            "entity.productId": "1234"
+            "entity.name": "T-shirt",
+            "entity.id": "1234"
           }
         }
     }
@@ -1056,8 +1056,8 @@ alloy("sendEvent", {
   data: {
     __adobe: {
       target: {
-        "entity.productName": "T-shirt",
-        "entity.productId": "1234"
+        "entity.name": "T-shirt",
+        "entity.id": "1234"
       }
     }
   }

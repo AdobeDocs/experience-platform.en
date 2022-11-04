@@ -60,7 +60,8 @@ Refer to the table below for information about the destination export type and f
 
 >[!NOTE]
 >
->The allow list is mandatory before setting up your first [!DNL Google Ads] destination in Platform. Please ensure the allow list process described below has been completed by [!DNL Google] before creating a destination.
+>Allow-listing is mandatory before setting up your first [!DNL Google Ads] destination in Platform. Please ensure the allow-listing process described below has been completed by [!DNL Google] before creating a destination.
+>The exception to this rule is for [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) customers. If you have already created a connection to this Google destination in Audience Manager, then it is not necessary to go through the allow-listing process again and you can proceed to the next steps.
 
 Before creating the [!DNL Google Ads] destination in Platform, you must contact [!DNL Google] for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact [!DNL Google] and provide the following information:
 
@@ -85,6 +86,12 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 *  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
 *  **[!UICONTROL Account Type]**: AdWords is the only available option.
 *  **[!UICONTROL Account ID]**: Fill in your account ID with [!DNL Google Ads]. The ID format is typically 123-456-7890.
+
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
 ## Activate segments to this destination {#activate}
 

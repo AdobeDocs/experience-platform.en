@@ -11,6 +11,7 @@ feature: Web SDK
 
 * [Platform Web SDK overview](home.md)
 * Fundamentals {#fundamentals}
+  * [Supported use cases](fundamentals/supported-use-cases.md)
   * [Prerequisites](fundamentals/prerequisite.md)
   * [Install the SDK](fundamentals/installing-the-sdk.md)
   * [Configure the SDK](fundamentals/configuring-the-sdk.md)
@@ -19,9 +20,10 @@ feature: Web SDK
   * [Debugging](fundamentals/debugging.md)
   * [Configure a CSP](fundamentals/configuring-a-csp.md)
   * [Interact with multiple properties](fundamentals/interacting-with-multiple-properties.md)
-  * [Supported use cases](fundamentals/supported-use-cases.md)
+  * [User-Agent Client Hints](fundamentals/user-agent-client-hints.md)
 * Datastreams {#datastreams}
   * [Overview](./datastreams/overview.md)
+  * [Configure a datastream](./datastreams/configure.md)
   * [Data Prep for Data Collection](./datastreams/data-prep.md)
 * Identity {#identity}
   * [Overview](identity/overview.md)
@@ -38,6 +40,7 @@ feature: Web SDK
     * [Sending data to Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
 * Personalization {#personalization}
   * [Render personalized content](personalization/rendering-personalization-content.md)
+  * [Personalization via hybrid implementation](personalization/hybrid-personalization.md)
   * [Manage flicker](personalization/manage-flicker.md)
   * Adobe Target {#adobe-target}
     * [Overview](personalization/adobe-target/target-overview.md)

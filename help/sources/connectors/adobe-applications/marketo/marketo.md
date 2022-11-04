@@ -16,7 +16,7 @@ With the [!DNL Marketo] source connector, you can bring B2B data from [!DNL Mark
 
 >[!IMPORTANT]
 >
->You must have access to [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) in order for Marketo Engage to participate in [Real-time Customer Profile](../../../../profile/home.md).
+>You must have access to [Adobe Real-Time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) to use all Marketo datasets for segmentation with the [Real-time Customer Profile](../../../../profile/home.md). Without Real-Time CDP B2B Edition, you can still use the Marketo source to bring data from the people and activities datasets to Real-time Customer Profile for segmentation.
 
 This document provides an overview of the [!DNL Marketo] source connector, including information about how to authenticate the connector, how to map [!DNL Marketo] fields to Experience Data Model (XDM), and the connector's data latency.
 
@@ -76,4 +76,4 @@ The following documentation provides further information on creating a [!DNL Mar
 * For information on the underlying setup for the B2B namespaces and schemas used with [!DNL Marketo], see the documentation for [B2B namespaces and schemas](./marketo-namespaces.md).
 * For information on finding your [!DNL Marketo] munchkin ID and generating your credentials, see the [[!DNL Marketo] authentication guide](./marketo-auth.md).
 * For information on the specific mapping rules that apply to [!DNL Marketo] datasets, see the documentation on [[!DNL Marketo] field mappings](../mapping/marketo.md).
-* For general information on [!DNL Real-time Customer Data Platform B2B Edition] and its features, see the documentation on [[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
+* For general information on [!DNL Real-Time Customer Data Platform B2B Edition] and its features, see the documentation on [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).

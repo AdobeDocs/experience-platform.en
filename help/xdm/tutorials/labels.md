@@ -7,7 +7,7 @@ exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 
 >[!IMPORTANT]
 >
->Schema-based labeling is part of [attribute-based access control](../../access-control/abac/overview.md), which is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
+>Schema-based labeling is part of [attribute-based access control](../../access-control/abac/overview.md), which is currently available in a limited release for US-based healthcare customers. This capability will be available to all Adobe Real-Time Customer Data Platform customers once it is fully released.
 
 All data that is brought into Adobe Experience Platform is constrained by Experience Data Model (XDM) schemas. This data may be subject to usage restrictions defined by your organization or by legal regulations. To account for this, the Platform allows you to restrict the usage of certain datasets and fields through the use of [data usage labels](../../data-governance/labels/overview.md).
 
@@ -27,7 +27,12 @@ This guide requires a working understanding of the following components of Adobe
   * [Schema Editor](../ui/overview.md): Learn how to create and manage schemas and other resources in the Platform UI.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Provides the infrastructure for enforcing data usage restrictions on Platform operations, using policies that define which marketing actions can (or cannot) be performed on labeled data.
 
-## Select a schema or field to add labels to
+## Select a schema or field to add labels to {#select-schema-field}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_editgovernancelabels"
+>title="Edit governance labels"
+>abstract="Apply a label to a schema field to indicate the usage policies that apply to the data contained in that specific field."
 
 To start adding labels, you must first [select an existing schema to edit](../ui/resources/schemas.md#edit) or [create a new schema](../ui/resources/schemas.md#create) to view its structure in the Schema Editor.
 

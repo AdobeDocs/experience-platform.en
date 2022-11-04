@@ -48,7 +48,7 @@ Once your build has been deployed to the Adobe-managed host, the CDN distributes
 >
 >For Adobe-managed hosts, the very first published library to any new environment can take up to five minutes to propagate out to the global CDN. 
 
-When an edge node receives a request for a specific file (such as your library build), the node first checks the time-to-live (TTL) value on the file. If the TTL has not expired, the edge node serves the cached version. If the TTL has expired, then the edge node requests a new copy from the nearest origin, serves that refreshed copy, and then caches the refreshed copy with a new TTL.
+When an edge node receives a request for a specific file (such as your library build), the node first checks the expiration time on the file. If the time has not expired, the edge node serves the cached version. If the time has expired, then the edge node requests a new copy from the nearest origin, serves that refreshed copy, and then caches the refreshed copy with a new expiration time.
 
 >[!NOTE]
 >
@@ -70,7 +70,7 @@ These staggered cache invalidations give the origin server groups time to replic
 
 Library builds are also cached on the browser through the use of the `cache-control` HTTP header. When using Adobe-managed hosts, you do not have control over the headers returned in API responses, so the Adobe default for caching is used. In other words, you cannot utilize custom headers for Adobe-managed hosts. If you require a custom `cache-control` header, you may want to consider [self-hosting](self-hosting-libraries.md) instead.
 
-The time-to-live (TTL) for your browser-cached library build (determined by the `cache-control` header) will vary depending on the tag environment you are using:
+The expiration time for your browser-cached library build (determined by the `cache-control` header) will vary depending on the tag environment you are using:
 
 | Environment | `cache-control` value |
 | --- | --- |
@@ -82,9 +82,9 @@ As the table above indicates, browser caching is not supported on development an
 
 Cache-control headers are only applied for the main library build. Any sub-resources below the main library are always considered net-new, and therefore there is no need to cache them on the browser.
 
-## Using Adobe-managed hosting in the Data Collection UI
+## Using Adobe-managed hosting in the UI
 
-When you first create a property in the [Data Collection UI](https://experience.adobe.com/#/data-collection/), an Adobe-managed host is automatically created for you. All available environments that have immediately usable properties are also assigned to the Adobe-managed host by default.
+When you first create a property in the Platform UI or Data Collection UI, an Adobe-managed host is automatically created for you. All available environments that have immediately usable properties are also assigned to the Adobe-managed host by default.
 
 >[!NOTE]
 >

@@ -205,6 +205,7 @@ curl -X POST \
             "username": "John Doe",
             "encrypted_private_key": "{PRIVATE_KEY}",
             "server": "https://example.com",
+            "skip_symlinks": true,
             "path": "assets",
             "port": 22
           },
@@ -221,6 +222,7 @@ curl -X POST \
 | `attributes.path` | The path to append to the `server` URL. |
 | `attributes.port` | An integer indicating the specific server port to be used. |
 | `attributes.server` | The host URL for the server. |
+| `attributes.skip_symlinks`<br><br>(For SFTP hosts only) | By default, all SFTP hosts use symbolic links (symlinks) to reference library builds that are saved to the server. However, not all servers support the use of symlinks. When this attribute is included and set to `true`, the host uses a copy operation to update the build assets directly instead of using symlinks. |
 | `attributes.username` | An optional user name for authentication. |
 | `type` | The type of resource being updated. For this endpoint, the value must be `hosts`. |
 
@@ -242,6 +244,7 @@ A successful response return the details of the newly created host.
       "path": "assets",
       "port": 22,
       "status": "pending",
+      "skip_symlinks": true,
       "type_of": "sftp",
       "updated_at": "2020-12-14T17:42:07.033Z",
       "username": "John Doe"
@@ -331,6 +334,7 @@ A successful response returns the details of the updated host.
       "path": null,
       "port": null,
       "status": "succeeded",
+      "skip_symlinks": true,
       "type_of": "sftp",
       "updated_at": "2020-12-14T17:42:45.696Z",
       "username": null

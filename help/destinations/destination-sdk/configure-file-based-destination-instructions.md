@@ -1,15 +1,11 @@
 ---
 description: This page lists and describes the steps to configure a file-based destination using Destination SDK.
-title: (Beta) Use Destination SDK to configure a file-based destination
+title: Use Destination SDK to configure a file-based destination
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
 ---
-# (Beta) Use Destination SDK to configure a file-based destination
+# Use Destination SDK to configure a file-based destination
 
 ## Overview {#overview}
-
->[!IMPORTANT]
->
->The functionality to configure and submit file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 This page describes how to use the information in [Configuration options in Destinations SDK](./configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [file-based destination](../../destinations/destination-types.md#file-based). The steps are laid out in sequential order below.
 
@@ -104,10 +100,6 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }

@@ -1,8 +1,8 @@
 ---
 description: This page explains how to use the /testing/destinationInstance API endpoint to view the complete details of your testing results. This API endpoint returns the same result as you would obtain when using the Flow Service API to monitor dataflows.
 title: View detailed activation results
+exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
 ---
-
 # View detailed activation results {#view-test-results}
 
 ## Overview {#overview}
@@ -36,7 +36,7 @@ Before you can use the `/testing/destinationInstance` endpoint, make sure you me
 
 Once you have [validated your destination configuration](file-based-destination-testing-api.md), you can view detailed activation results by making a GET request to the `authoring/testing/destinationInstance/` endpoint and providing the destination instance ID of the destination that you are testing, and the flow run IDs of the activated segments.
 
-You can find the complete API URL that you need to use, in the `results` property returned in the [response of the destination testing call](file-based-destination-testing-api.md).
+You can find the complete API URL that you need to use in the `results` property returned in the [response of the destination testing call](file-based-destination-testing-api.md).
 
 **API format**
 

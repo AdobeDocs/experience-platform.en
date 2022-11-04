@@ -5,6 +5,14 @@ exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
 ---
 # Common Analytics Plugins release notes
 
+## June 03, 2022
+
+### Common Analytics Plugins Extension 3.0.7
+
+#### Features
+
+* Plugins that set cookies now use the secure flag
+
 ## June 23, 2021
 
 ### Common Analytics Plugins Extension 3.0.6

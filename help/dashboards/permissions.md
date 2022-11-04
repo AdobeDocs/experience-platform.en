@@ -50,7 +50,7 @@ The following access-control matrix provides a breakdown of which permissions ar
 | [!DNL Dashboards] [!DNL Inventory] <br/>(the browse tab) | ENABLED | N/A | N/A | N/A |
 | [!DNL Dashboards] [!DNL Integrations] tab <br/>(used to install Power BI) | ENABLED | **At least one REQUIRED** |N/A | N/A |
 | Power BI Install button & workflow | ENABLED | N/A | **REQUIRED** | N/A |
-| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] dashbaords.<br/>The ability to edit widget schemas and add new attributes for widget customization | **Manage-standard-dashboard REQUIRED**  | **REQUIRED (for each respective dashboard)** | N/A | N/A |
+| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] dashboards.<br/>The ability to edit widget schemas and add new attributes for widget customization | **Manage-standard-dashboard REQUIRED**  | **REQUIRED (for each respective dashboard)** | N/A | N/A |
 | [!DNL License Usage Dashboard] |  N/A | N/A | N/A | ENABLED |
 
 {style="table-layout:auto"}

@@ -48,8 +48,7 @@ For more information on how to manage and interact with schemas in Platform, ref
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Data behaviors"
->abstract="Data intended for use in Experience Platform is grouped into three behavior types: record, time-series, and ad hoc. Record schemas provide information about the attributes of a subject, while time-series schemas capture a snapshot of the system at the time an action was taken. Ad hoc schemas capture fields that are namespaces for use only by a single dataset."
->text="See the documentation for more information on data behaviors in Platform."
+>abstract="Data intended for use in Experience Platform is grouped into three behavior types: record, time-series, and ad hoc. Record schemas provide information about the attributes of a subject, while time-series schemas capture a snapshot of the system at the time an action was taken. Ad hoc schemas capture fields that are namespaces for use only by a single dataset. See the documentation for more information on data behaviors in Platform."
 
 Data intended for use in Experience Platform is grouped into three behavior types:
 
