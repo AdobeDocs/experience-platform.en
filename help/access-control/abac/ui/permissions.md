@@ -149,7 +149,7 @@ The **[!UICONTROL Remove user group]** dialogue appears, prompting you to confir
 
 You will be returned to the **[!UICONTROL User groups]** tab.
 
-## Adding users to product profile
+## Adding users to Experience Platform through a product profile
 
 To add a user to a product profile, log into the Admin Console and select **[!UICONTROL Add users]**
 
@@ -157,7 +157,7 @@ To add a user to a product profile, log into the Admin Console and select **[!UI
 
 The **[!UICONTROL Add users to your team]** dialogue appears. Enter the users email address, first name (optional) and last name (optional).
 
-Select the pencil icon to select products and user groups, select **[!UICONTROL Adobe Exoerience Platform]**, then select **[!UICONTROL Default Production All Access]**, then select  **[!UICONTROL Save]**.
+Select the pencil icon to select products and user groups, select **[!UICONTROL Adobe Exoerience Platform]**, then select **[!UICONTROL AEP-Default-All-Users]**, then select  **[!UICONTROL Save]**.
 
 ![product-profile](../../images/flac-ui/product-profile.png)
 

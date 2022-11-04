@@ -14,7 +14,7 @@ Attribute-based access control is a capability of Adobe Experience Platform that
 
 This functionality allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments.
 
-Through attribute-based access control, administrators of your organization can control users’ access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
+Through attribute-based access control, administrators of your organization can control users' access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
 ## Attribute-based access control terminology
 
@@ -54,11 +54,11 @@ The following sections provide information on how attribute-based access control
 
 Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration. Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe Experience Cloud, instead of Product Profiles in the Adobe Admin Console, to manage permissions for users, functionality, labels, and other resources in your organization.
 
-The attribute-based access control functionality is currently available in beta. The features of this functionality include:
+Limited availability for attribute-based access control is available to customers who purchase Healthcare and/or Privacy Shields. The features of this functionality include:
 
 * Permissions interface: Provides an interface for you to define user roles, permissions and policies for attribute-based access control.
 
-* Labeling: Add, edit, remove labels to user roles, schema fields, and segments in order to leverage access control policies. 
+* Labeling: Add, edit, remove labels to user roles, schema fields, segments, and other supported objects in order to leverage access control policies. 
 
 The administration workflows for all Experience Platform-powered applications from Admin Console to the new Permissions interface are being switched.
 
