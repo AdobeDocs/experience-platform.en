@@ -48,8 +48,7 @@ Both record and time series schemas contain a map of identities (`xdm:identityMa
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="Identities in schemas"
->abstract="Identities are key fields within a schema that can be used to identify a subject, such as an email address or a marketing ID. These fields are used to construct the identity graph for each individual and build customer profiles."
->text="See the documentation for more information on identities in schemas."
+>abstract="Identities are key fields within a schema that can be used to identify a subject, such as an email address or a marketing ID. These fields are used to construct the identity graph for each individual and build customer profiles. See the documentation for more information on identities in schemas."
 
 Schemas are used for ingesting data into [!DNL Experience Platform]. This data can be used across multiple services to create a single, unified view of an individual entity. Therefore, it is important when thinking about schemas to think about customer identities and which fields can be used to identify a subject regardless of where the data may be coming from. 
 
@@ -163,6 +162,11 @@ Schemas are composed using the following formula:
 
 ### Class {#class}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class"
+>title="Class"
+>abstract="Every schema is based on a single class. The class defines the schema's behavior and the common properties that all schemas based on that class must contain. See the documentation to learn more about how classes are involved in schema composition."
+
 Composing a schema begins by assigning a class. Classes define the behavioral aspects of the data the schema will contain (record or time-series). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged. 
 
 A schema's class determines which field groups will be eligible for use in that schema. This is discussed in more detail in the [next section](#field-group). 
@@ -176,6 +180,11 @@ The following screenshot demonstrates how classes are represented in the Platfor
 For the most up-to-date list of available standard XDM classes, refer to the [official XDM repository](https://github.com/adobe/xdm/tree/master/components/classes). Alternatively, you can refer to the guide on [exploring XDM components](../ui/explore.md) if you prefer to view resources in the UI.
 
 ### Field group {#field-group}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup"
+>title="Field group"
+>abstract="Field groups are reusable components that allow you to extend schemas with additional attributes. Most field groups are only compatible with certain classes. You can use standard field groups defined by Adobe or you can manually define your own custom field groups. See the documentation to learn more about how field groups are involved in schema composition."
 
 A field group is a reusable component that defines one or more fields that implement certain functions such as personal details, hotel preferences, or address. Field groups are intended to be included as part of a schema that implements a compatible class. 
 

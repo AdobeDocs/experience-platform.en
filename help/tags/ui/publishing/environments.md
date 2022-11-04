@@ -85,7 +85,7 @@ Select **[!UICONTROL Host]** to choose a pre-configured host for the environment
 
 ![](./images/environments/select-host.png)
 
-When a build is created, that build is delivered to the location you specified for the assigned host. For information on how to create and configure hosts in the Data Collection UI, refer to the [hosts overview](./hosts/hosts-overview.md).
+When a build is created, that build is delivered to the location you specified for the assigned host. For information on how to create and configure tag hosts, refer to the [hosts overview](./hosts/hosts-overview.md).
 
 ### Archive setting {#archive}
 

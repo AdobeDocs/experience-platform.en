@@ -26,5 +26,5 @@ The documentation below provides information on how to connect [!DNL Veeva CRM] 
 
 ## Connect [!DNL Veeva CRM] to [!DNL Platform] using the UI
 
-- [Create a Microsoft Dynamics source connection in the UI](../../tutorials/ui/create/crm/veeva.md)
+- [Create a Veeva CRM source connection in the UI](../../tutorials/ui/create/crm/veeva.md)
 - [Create a dataflow for a CRM source connection in the UI](../../tutorials/ui/dataflow/crm.md)

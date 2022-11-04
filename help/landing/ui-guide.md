@@ -148,13 +148,13 @@ The **[!UICONTROL Schemas]** section lets you create and manage Experience Data 
 
 The **[!UICONTROL Datasets]** section lets you create and manage datasets. More information about datasets can be found in the [datasets user guide](../catalog/datasets/user-guide.md).
 
-The **[!UICONTROL Queries]** section lets you create and manage queries, log SQL queries made by Adobe Experience Platform Query Service, and view your PostgreSQL credentials. More information about queries can be found in the [Query Service user guide](../query-service/ui/overview.md).
+The **[!UICONTROL Queries]** section lets you create and manage queries, log SQL queries made by Adobe Experience Platform Query Service, and view your [!DNL PostgreSQL] credentials. More information about queries can be found in the [Query Service user guide](../query-service/ui/overview.md).
 
 The **[!UICONTROL Monitoring]** section lets you monitor batch and streaming ingestion. More information about monitoring can be found in the [monitoring data ingestion user guide](../ingestion/quality/monitor-data-ingestion.md).
 
 ### [!UICONTROL Decisioning]
 
-Offer Decisioning is an Application Service integrated with Adobe Experience Platform. It allows you to use Experience Platform to deliver the best offer and experience to your customers across all touch points at the right time. To learn more about Offer Decisioning, including working with [!UICONTROL Offers] and [!UICONTROL Activities] visit the [Offer Decisioning documentation](https://experienceleague.adobe.com/docs/offer-decisioning.html).
+Adobe Journey Optimizer is an application service built on top of Experience Platform. It allows you to use powerful decisioning technologies to deliver the best offer and experience to your customers across all touch points at the right time. To learn more about Journey Optimizer, including working with [!UICONTROL Offers] and [!UICONTROL Activities] visit the [Journey Optimizer documentation](https://experienceleague.adobe.com/docs/journey-optimizer.html).
 
 ### [!UICONTROL Administration]
 

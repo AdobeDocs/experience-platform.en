@@ -85,7 +85,7 @@ If you select to hash the email addresses yourself, make sure to comply with the
 > 
 >To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
 The video below also demonstrates the steps to configure a [!DNL LinkedIn Matched Audiences] destination and activate segments.
 
@@ -93,15 +93,33 @@ The video below also demonstrates the steps to configure a [!DNL LinkedIn Matche
 
 >[!NOTE]
 >
->The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, refer to the [destination configuration tutorial](../../ui/connect-destination.md). 
+>The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, refer to the [destination configuration tutorial](../../ui/connect-destination.md).
 
-### Connection parameters {#parameters}
+### Authenticate to destination {#authenticate}
 
-While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
+1. Find the [!DNL LinkedIn Matched Audiences] destination in the destination catalog and select **[!UICONTROL Set Up]**.
+2. Select **[!UICONTROL Connect to destination]**. 
+  ![Authenticate to LinkedIn](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
+3. Enter your LinkedIn credentials and select **Log In**.
 
-* **[!UICONTROL Name]**: a name by which you will recognize this destination in the future.
-* **[!UICONTROL Description]**: a description that will help you identify this destination in the future.
-* **[!UICONTROL Account ID]**: your [!DNL LinkedIn Campaign Manager Account ID]. You can find this ID in your [!DNL LinkedIn Campaign Manager] account.
+### Fill in destination details {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_linkedin_accountid"
+>title="Account ID"
+>abstract="Your LinkedIn Campaign Manager Account ID. You can find this ID in your LinkedIn Campaign Manager account."
+
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
+
+* **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+* **[!UICONTROL Account ID]**: Your [!DNL LinkedIn Campaign Manager Account ID]. You can find this ID in your [!DNL LinkedIn Campaign Manager] account.
+
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
 ## Activate segments to this destination {#activate}
 

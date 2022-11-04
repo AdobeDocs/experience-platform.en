@@ -26,7 +26,13 @@ For example, two profile fragments may contain different primary IDs but they sh
 
 ![](images/identity-service-stitching.png)
 
-### Identity types
+### Identity types {#identity-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_create_namespace"
+>title="Specify identity type"
+>abstract="The identity type controls whether or not data is stored to the identity graph. Non-people identifiers will not be stored, and all other identity types will."
+>text="Learn more in documentation"
 
 Data can be identified by several different identity types. The identity type is specified at the time the identity namespace is created and controls whether or not the data is persisted to the identity graph and any special instructions for how that data should be handled. All identity types except **Non-people identifier** follow the same behavior of stitching a namespace and its corresponding ID value to an identity graph cluster. Data is not stitched together when using **Non-people identifier**.
 

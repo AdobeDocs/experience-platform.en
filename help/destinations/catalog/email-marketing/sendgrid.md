@@ -71,8 +71,9 @@ Marketing teams using SendGrid can create a mailing list within SendGrid and pop
 > 
 >To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). Steps specific to this destination are illustrated in detail below.
+### Authenticate to destination {#authenticate}
 
 1. Within the [!DNL Adobe Experience Platform] console, navigate to **Destinations**.
 
@@ -89,7 +90,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 ![](../../assets/catalog/email-marketing/sendgrid/05.jpg)
 
-### Connection parameters {#parameters}
+### Fill in destination details {#destination-details}
 
 While [setting up](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) this destination, you must provide the following information:
 
@@ -97,6 +98,12 @@ While [setting up](https://experienceleague.adobe.com/docs/experience-platform/d
 *  **[!UICONTROL Description]**: An optional description that will help you identify this destination in the future.
 
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
+
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
 ## Activate segments to this destination {#activate}
 

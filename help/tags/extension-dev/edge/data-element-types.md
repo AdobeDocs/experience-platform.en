@@ -23,7 +23,7 @@ This document covers how to define data element types for an edge extension in A
 
 Data element types typically consist of the following:
 
-1. A view shown within the Data Collection UI that allows users to modify settings for the data element.
+1. A view shown within the Experience Platform UI and Data Collection UI that allows users to modify settings for the data element.
 2. A library module emitted within the tag runtime library to interpret the settings and retrieve pieces of data.
 
 Should you want to allow users to retrieve a piece of data from the custom data layer, your module may look like this example.

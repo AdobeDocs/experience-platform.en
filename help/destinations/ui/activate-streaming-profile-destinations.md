@@ -23,15 +23,15 @@ To activate data to destinations, you must have successfully [connected to a des
 
 1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
     
-    ![Destination Catalog tab](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
+    ![Image showing the destination catalog tab.](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
 1. Select **[!UICONTROL Activate segments]** on the card corresponding to the destination where you want to activate your segments, as shown in the image below.
 
-    ![Activate segments button](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+    ![Image highlighting the activate segments control in the destinations catalog tab.](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
 
 1. Select the destination connection that you want to use to activate your segments, then select **[!UICONTROL Next]**.
 
-    ![Select destination](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
+    ![Image showing a selection of two destinations that you can connect to.](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
 1. Move to the next section to [select your segments](#select-segments).
 
@@ -39,13 +39,13 @@ To activate data to destinations, you must have successfully [connected to a des
 
 Use the check boxes to the left of the segment names to select the segments that you want to activate to the destination, then select **[!UICONTROL Next]**.
 
-![Select segments](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
+![Image highlighting the checkboxes selection in the Select segments step of the activation workflow.](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
 
 ## Select profile attributes {#select-attributes}
 
-Select the profile attributes that you want to send to the target destination.
+In the **[!UICONTROL Mapping]** step, select the profile attributes that you want to send to the target destination.
 
->[!NOTE] 
+>[!NOTE]
 >
 > Adobe Experience Platform prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
@@ -53,19 +53,19 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 * If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
 * If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
 
-![recommended attributes](../assets/ui/activate-streaming-profile-destinations/attributes-default.png) 
+![Image showing the prefilled, recommended attributes in the mapping step.](../assets/ui/activate-streaming-profile-destinations/attributes-default.png) 
 
 1. In the **[!UICONTROL Select attributes]** page, select **[!UICONTROL Add new field]**.
     
-    ![Add new mapping](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
+    ![Image highlighting the Add new field control in the mapping step.](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
 
 1. Select the arrow to the right of the **[!UICONTROL Schema field]** entry.
 
-    ![Select source field](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
+    ![Image highlighting the how to select a source field in the mapping step.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
 1. In the **[!UICONTROL Select field]** page, select the XDM attributes that you want to send to the destination, then choose **[!UICONTROL Select]**.
 
-    ![Select source field page](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+    ![Image showing a selection of XDM fields that you can select as source fields.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
 
 1. To add more mappings, repeat steps 1 to 3, then select **[!UICONTROL Next]**.
@@ -78,11 +78,11 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 >
 >In this step, Adobe Experience Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
  
-![data policy violation](../assets/common/data-policy-violation.png)
+![Image showing a data policy violation in the review step.](../assets/common/data-policy-violation.png)
 
 If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
-![Review](../assets/ui/activate-streaming-profile-destinations/review.png)
+![Image showing the review step of the activation workflow.](../assets/ui/activate-streaming-profile-destinations/review.png)
 
 ## Verify segment activation {#verify}
 

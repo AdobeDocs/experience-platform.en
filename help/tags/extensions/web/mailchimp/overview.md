@@ -6,6 +6,7 @@ feature: Data Collection, Event Forwarding
 level: Beginner
 role: User, Developer, Admin
 topic: Integrations
+exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
 ---
 # Mailchimp event forwarding extension overview
 

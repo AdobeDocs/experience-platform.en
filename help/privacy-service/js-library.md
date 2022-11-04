@@ -42,7 +42,7 @@ To start using the [!DNL Privacy JS Library], you must install it onto your mach
 * Install using npm by running the following command: `npm install @adobe/adobe-privacy`
 * Download from the [Experience Cloud GitHub repository](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
-You can also install the library through a tag extension in the Data Collection UI. See the overview on the [Adobe Privacy tag extension](../tags/extensions/web/privacy/overview.md) for more information.
+You can also install the library through a tag extension. See the overview on the [Adobe Privacy tag extension](../tags/extensions/web/privacy/overview.md) for more information.
 
 ## Instantiate the [!DNL Privacy JS Library]
 

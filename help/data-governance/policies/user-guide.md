@@ -77,7 +77,7 @@ The **[!UICONTROL Browse]** tab reappears, which now lists the newly created pol
 
 >[!IMPORTANT]
 >
->Consent policies are currently only available for organizations that have purchased Adobe Shield for Healthcare.
+>Consent policies are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
 
 If you chose to create a consent policy, a new screen appears that allows you to configure the new policy.
 

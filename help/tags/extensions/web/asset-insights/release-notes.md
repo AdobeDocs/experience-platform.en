@@ -17,7 +17,7 @@ exl-id: cee35b44-2249-47c6-80d6-8b4eaa9802df
 
 - This extension is intended to be used together with AEM Asset Insights.
 - More specifically, it replaces the ***pageTracker*** process and page code.
-- When configured in the Data Collection UI, this extension sends AEM Asset Impression and Click metrics to Adobe Analytics, which will then automatically be imported back into the Asset Insights reports in AEM.
+- When configured and activated, this extension sends AEM Asset Impression and Click metrics to Adobe Analytics, which will then automatically be imported back into the Asset Insights reports in AEM.
 
 **Bug Fixes**
 

@@ -64,7 +64,7 @@ Refer to the table below for information about the destination export type and f
 > 
 >To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). In the configure destination workflow, fill in the fields listed in the two sections below.
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
 ### Authenticate to destination {#authenticate}
 
@@ -78,7 +78,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 ### Fill in destination details {#destination-details}
 
-To configure details for the destination, fill in the required fields and select **[!UICONTROL Next]**.
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -86,6 +86,12 @@ To configure details for the destination, fill in the required fields and select
 *  **[!UICONTROL Import API Name]**: Obtain from your Medallia delivery team. Name of the Medallia Import API (also known as Web Feed) to be used in this connection. You can activate different segments to different Import APIs to trigger different survey programs.
 
 ![Image showing the destination details screen for this destination.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
+
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
 ## Activate segments to this destination {#activate}
 

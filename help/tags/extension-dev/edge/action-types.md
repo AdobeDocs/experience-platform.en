@@ -23,7 +23,7 @@ This document covers how to define action types for an edge extension in Adobe E
 
 Action types typically consist of the following:
 
-1. A view shown within the Data Collection UI that allows users to modify settings for the action.
+1. A view shown within the Experience Platform UI and Data Collection UI that allows users to modify settings for the action.
 2. A library module emitted within the tag runtime library to interpret the settings and perform an action.
 
 For example, a module to forward some data to a third-party party endpoint may look like this.

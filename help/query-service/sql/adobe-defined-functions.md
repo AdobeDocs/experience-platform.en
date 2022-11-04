@@ -12,6 +12,10 @@ Adobe-defined functions, herein referred to as ADFs, are prebuilt functions in A
 
 This document provides information for Adobe-defined functions available in [!DNL Query Service].
 
+>[!NOTE]
+>
+>The Experience Cloud ID (ECID) is also known as MCID and continues to be used in namespaces.
+
 ## Window functions {#window-functions}
 
 The majority of the business logic requires gathering the touchpoints for a customer and ordering them by time. This support is provided by [!DNL Spark] SQL in the form of window functions. Window functions are part of standard SQL and are supported by many other SQL engines.

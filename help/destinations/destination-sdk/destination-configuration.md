@@ -29,7 +29,7 @@ This is an example configuration of a fictional streaming destination, Moviestar
    ],
    "customerDataFields":[
       {
-         "name":"endpointsInstance",
+         "name":"endpointRegion",
          "type":"string",
          "title":"Select Endpoint",
          "description":"Moviestar manages several instances across the globe for REST endpoints that our customers are provisioned for. Select your endpoint in the dropdown list.",
@@ -152,9 +152,13 @@ Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 auth
 
 ## Customer data fields {#customer-data-fields}
 
-Use this section to ask users to fill in custom fields, specific to your destination, when connecting to the destination in the Experience Platform UI. The configuration is reflected in the authentication flow as shown below:
+Use this section to ask users to fill in custom fields, specific to your destination, when connecting to the destination in the Experience Platform UI. The configuration is reflected in the authentication flow as shown below.
 
 ![Custom field authentication flow](./assets/custom-field-authentication-flow.png)
+
+>[!TIP]
+>
+>You can access and use the customer inputs from customer data fields in templating. Use the macro `{{customerData.name}}`. For example, if you ask users to input a Customer ID field, with the name `userId`, you can access it in templating by using the macro `{{customerData.userId}}`. View an example of how a customer data field is used in the URL of your API endpoint, in the [destination server configuration](/help/destinations/destination-sdk/server-and-template-configuration.md#server-specs).
 
 |Parameter | Type | Description|
 |---------|----------|------|
@@ -172,10 +176,12 @@ Use this section to ask users to fill in custom fields, specific to your destina
 
 This section refers to the UI elements in the configuration above that Adobe should use for your destination in the Adobe Experience Platform user interface. See below:
 
+![Image of UI attributes configuration.](/help/destinations/destination-sdk/assets/ui-attributes-configuration.png)
+
 |Parameter | Type | Description|
 |---------|----------|------|
 |`documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) for your destination. Use `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `http://www.adobe.com/go/destinations-moviestar-en`. Note that this link works only after Adobe sets your destination live and the documentation is published. |
-|`category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
+|`category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br> Note that you can currently select only one category per destination.|
 |`connectionType` | String | `Server-to-server` is currently the only available option. |
 |`frequency` | String | Refers to the type of data export supported by the destination. Supported values: <ul><li>`Streaming`</li><li>`Batch`</li></ul>|
 
@@ -195,7 +201,6 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 |`identityRequired` | Boolean | Use `true` if users should be able to map identity namespaces from Experience Platform to your desired schema. |
 
 {style="table-layout:auto"}
-
 
 ## Identities and attributes {#identities-and-attributes}
 
@@ -274,7 +279,7 @@ This option allows you to:
 
 >[!NOTE]
 >
->When using the configurable aggregation option for your destination, be mindful of the minimum and maximum values that you can use for the two parameters `maxBatchAgeInSecs` (minimum 1.800 and maximum 3.600) and `maxNumEventsInBatch` (minimum 1.000, maximum 10.000).
+>When using the configurable aggregation option for your destination, be mindful of the minimum and maximum values that you can use for the two parameters `maxBatchAgeInSecs` (minimum 1,800 and maximum 3,600) and `maxNumEventsInBatch` (minimum 1,000, maximum 10,000).
 
 For detailed explanations of the aggregation parameters, refer to the [Destinations API endpoint operations](./destination-configuration-api.md) reference page, where each parameter is described.
 

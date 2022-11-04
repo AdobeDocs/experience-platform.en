@@ -22,7 +22,7 @@ For each of the following use cases, a parameterized SQL query example is provid
 
 ## Objectives
 
-An attribution use case uses Adobe Analytics data to help associate customer actions to a successful outcome. This association is a critical part of understanding the factors that influence customer experiences. Attribution analysis data can be used to understand the significance of a customer’s touch point during the customer journey.
+An attribution use case uses Adobe Analytics data to help associate customer actions to a successful outcome. This association is a critical part of understanding the factors that influence customer experiences. Attribution analysis data can be used to understand the significance of a customer's touch point during the customer journey.
 
 The query examples contained in this document support various use cases for first touch and last touch attribution with different expiration settings. This guide illustrates the following key concepts:
 
@@ -63,6 +63,10 @@ The results for the attribution queries are given in either the `first_touch` or
 First touch attribution accredits 100% of the responsibility for a successful outcome to the initial channel that the consumer encountered. This SQL example is used to highlight the interaction that led to a subsequent series of customer actions. 
 
 The query below returns the first touch attribution value and details of the channel in the target [!DNL Experience Event] dataset. It also returns a `struct` object for the selected channel with the first touch value, timestamp, and attribution for each row.
+
+>[!NOTE]
+>
+>The Experience Cloud ID (ECID) is also known as MCID and continues to be used in namespaces.
 
 **Query syntax**
 

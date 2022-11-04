@@ -1,9 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;data prep;api guide;schemas;
-solution: Experience Platform
-title: Schemas API Endpoint
-topic-legacy: schemas
-description: You can use the `/functions` endpoint in the Adobe Experience Platform API to validate your mapping expressions and list available mapping set functions.
+title: Functions API Endpoint
+description: You can use the `/functions` endpoint in the Data Prep API to validate your mapping expressions and list available mapping set functions.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 ---
 # Functions endpoints
