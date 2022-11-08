@@ -38,7 +38,7 @@ Next, using the dropdown select the **Matches**.
 
 ![flac-policy-matches-dropdown](../../images/flac-ui/flac-policy-matches-dropdown.png)
 
-Next, using the dropdown, select the **User**.
+Next, using the dropdown, select the type of labels (Core or Custom) to match against those in the **User** roles.
 
 ![flac-policy-user-dropdown](../../images/flac-ui/flac-policy-user-dropdown.png)
 
