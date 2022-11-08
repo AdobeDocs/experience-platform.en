@@ -2,8 +2,8 @@
 keywords: crm;CRM;crm destinations;Microsoft Dynamics 365;Microsoft Dynamics 365 crm destination
 title: Microsoft Dynamics 365 connection
 description: The Microsoft Dynamics 365 destination allows you to export your account data and activate it within Microsoft Dynamics 365 for your business needs.
+exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
 ---
-
 # [!DNL Microsoft Dynamics 365] connection
 
 ## Overview {#overview}

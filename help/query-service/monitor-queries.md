@@ -1,6 +1,7 @@
 ---
 title: Monitor Queries
 description: Learn how to monitor queries through the Query Service UI.
+exl-id: 4640afdd-b012-4768-8586-32f1b8232879
 ---
 # Monitor queries
 
@@ -116,4 +117,3 @@ You can copy the query SQL to your clipboard from this view. Select the copy ico
 Select **[!UICONTROL Query]** to return to the schedule details screen, or **[!UICONTROL Scheduled Queries]** to return to the [!UICONTROL Scheduled Queries] tab.
 
 ![The run details screen with Query highlighted.](./images/monitor-queries/return-navigation.png)
-

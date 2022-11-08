@@ -1,6 +1,7 @@
 ---
 title: Zendesk event forwarding extension
 description: Zendesk event forwarding extension for Adobe Experience Platform.
+exl-id: 22e94699-5b84-4a73-b007-557221d3e223
 ---
 # [!DNL Zendesk] Events API extension overview
 

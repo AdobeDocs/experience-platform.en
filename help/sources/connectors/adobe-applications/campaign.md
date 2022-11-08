@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;Adobe Campaign Managed Cloud Services;campaign;campaign managed services
 title: Adobe Campaign Managed Cloud Services
 description: Learn how to connect Campaign Managed Cloud Services to Platform using the user interface
+exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
 ---
 # Adobe Campaign Managed Cloud Services
 
