@@ -110,3 +110,7 @@ The number of total qualified segments is drawn from the daily segmentation job,
 The number under the "Last X days" **only** includes audiences that are qualified in streaming segmentation, and **only** increases if you have streamed data into the system and it counts toward that streaming definition. This value is **only** shown for streaming segments. As a result, this value **may** display as 0 for batch segments.
 
 As a result, if you see that the number under "Last X days" is zero, and the line graph is also reporting zero, you have **not** streamed any profiles into the system that would qualify for that segment.
+
+### How long does it take for a segment to be available?
+
+It takes up to one hour for a segment to be available.
