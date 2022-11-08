@@ -1,13 +1,15 @@
 ---
 title: Pega Profile Connector
-description: Use the Pega Profile Connector for S3 in Adobe Experience Platform to export full or incremental, or both, profile data to Amazon S3 cloud storage. In Pega Customer Decision Hub, data jobs can be scheduled in Customer Profile Designer to import profile data periodically from Amazon S3 storage. 
+description: Use the Pega Profile Connector for Amazon S3 in Adobe Experience Platform to export full or incremental, or both, profile data to Amazon S3 cloud storage. In Pega Customer Decision Hub, data jobs can be scheduled in Customer Profile Designer to import profile data periodically from Amazon S3 storage. 
 ---
 
 # Pega Profile Connector
 
 ## Overview {#overview}
 
-Use the [!DNL Pega Profile Connector] in Adobe Experience Platform to create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export profile data to CSV files from Adobe Experience Platform into your own S3 buckets. In [!DNL Pega Customer Decision Hub], you can schedule data jobs to import this profile data from S3 storage to update the Pega Customer Decision Hub profile. This connector helps setup initial export of profile data and also helps sync up new profiles periodically into Pega Customer Decision Hub.  Having up-to-date data in Customer Decision Hub provides a better and updated view of your customer base for next-best-action decisioning.
+Use the [!DNL Pega Profile Connector] in Adobe Experience Platform to create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export profile data to CSV files from Adobe Experience Platform into your own S3 buckets. In [!DNL Pega Customer Decision Hub], you can schedule data jobs to import this profile data from S3 storage to update the [!DNL Pega Customer Decision Hub] profile.
+
+This connector helps setup initial export of profile data and also helps sync up new profiles periodically into [!DNL Pega Customer Decision Hub].  Having up-to-date data in Customer Decision Hub provides a better and updated view of your customer base for next-best-action decisioning.
 
 >[!IMPORTANT]
 >
@@ -19,7 +21,7 @@ To help you better understand how and when you should use the [!DNL  Pega Profil
 
 ### Use case 1
 
-A marketer wants to initially setup Pega Customer Decision Hub with profile data loaded from Adobe Experience Platform. This is an initial full load followed by delta loads on a scheduled basis.
+A marketer wants to initially set up Pega Customer Decision Hub with profile data loaded from Adobe Experience Platform. This is an initial full load followed by delta loads on a scheduled basis.
 
 ### Use case 2
 
@@ -27,7 +29,7 @@ A marketer wants up-to-date profile data from Adobe Experience Platform availabl
 
 ## Prerequisites {#prerequisites}
 
-Before you can use this destination to export data out of Adobe Experience Platform and import profiles into Pega [!DNL Pega Customer Decision Hub], make sure you complete the following prerequisites:
+Before you can use this destination to export data out of Adobe Experience Platform and import profiles into [!DNL Pega Customer Decision Hub], make sure you complete the following prerequisites:
 
 * Configure [!DNL Amazon S3] bucket and the folder path to be used for export and import of data files.
 * Configure the [!DNL Amazon S3] access key and [!DNL Amazon S3] secret key: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon S3] account.
@@ -49,7 +51,7 @@ Before you can use this destination to export data out of Adobe Experience Platf
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).|
 | Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
@@ -116,10 +118,10 @@ See [Activate audience data to batch profile export destinations](../../ui/activ
 
 For [!DNL Pega Profile Connector] destinations, [!DNL Platform] creates a `.csv` file in Amazon S3 storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
 
-A successful import of profile data from S3 inserts data in the Pega Customer profile datastore. The imported Customer profile data can be validated in Pega Customer Profile Designer , as shown in the following figure.
+A successful import of profile data from S3 inserts data in the Pega Customer profile datastore. The imported customer profile data can be validated in Pega Customer Profile Designer , as shown in the following figure.
 ![Image of the UI screen where you can validate Adobe profile data in Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
-In Pega Customer Decision Hub, Data Administrators can configure data jobs in Customer Profile Designer to import profile data periodically from S3 as shown in the following figure.
+In Pega Customer Decision Hub, data administrators can configure data jobs in Customer Profile Designer to import profile data periodically from S3 as shown in the following figure. See the [additional resources](#additional-resources) for more information about how to configure data jobs to import profile data from Amazon S3.
 ![Image of the UI screen to configure data jobs in Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
 
 ## Additional resources {#additional-resources}
