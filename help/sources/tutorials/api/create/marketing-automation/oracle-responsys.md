@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;oracle;
 title: (Beta) Create an Oracle Responsys Base Connection Using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Oracle Responsys using the Flow Service API.
+exl-id: 76659f5a-c923-488c-88f6-1919bc6a7bb5
 ---
 # (Beta) Create an [!DNL Oracle Responsys] base connection using the [!DNL Flow Service] API
 
