@@ -9,7 +9,7 @@ description: Learn how to connect Adobe Experience Platform to Oracle Responsys 
 >
 >The [!DNL Oracle Responsys] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-This tutorial provides steps to create an [[!DNL Oracle Responsys]](../../../../connectors/marketing-automation/oracle-responsys.md) source connection using the Adobe Experience Platform user interface.
+This tutorial provides you with steps to create an [[!DNL Oracle Responsys]](../../../../connectors/marketing-automation/oracle-responsys.md) source connection using the Adobe Experience Platform user interface.
 
 ## Getting started
 
@@ -54,7 +54,7 @@ To use an existing account, select the [!DNL Oracle Responsys] account you want 
 
 ### New account
 
-If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and the appropriate values for your [!DNL Oracle Responsys] credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
+To create a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and the appropriate values for your [!DNL Oracle Responsys] credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
 ![The new account authentication screen for Oracle Responsys.](../../../../images/tutorials/create/oracle-eloqua/new.png)
 
