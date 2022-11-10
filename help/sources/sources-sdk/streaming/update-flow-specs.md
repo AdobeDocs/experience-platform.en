@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: Update flow specifications using the Flow Service API
+title: Update flow specifications for Streaming SDK using the Flow Service API
 topic-legacy: developer guide
 description: The following document provides steps on how to retrieve and update flow specifications using the Flow Service API for Self-Serve Sources (Streaming SDK).
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
