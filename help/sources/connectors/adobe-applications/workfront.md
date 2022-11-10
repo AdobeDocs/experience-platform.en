@@ -1,7 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics;
 title: (Beta) Adobe Workfront Source
-description: Adobe Workfront is a marketing work management application that helps you manage the entire lifecycle of work in one place. Workfront includes reporting and analytics tools that you can use to better understand and optimize the flow of work in your organization. 
+description: Adobe Workfront is a marketing work management application that helps you manage the entire lifecycle of work in one place. Workfront includes reporting and analytics tools that you can use to better understand and optimize the flow of work in your organization.
+exl-id: ea714278-d84d-4929-9a34-81fc5fb70871
 ---
 # (Beta) Adobe Workfront source
 

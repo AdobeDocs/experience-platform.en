@@ -1,6 +1,7 @@
 ---
 title: Zendesk event forwarding extension
 description: Zendesk event forwarding extension for Adobe Experience Platform.
+exl-id: 22e94699-5b84-4a73-b007-557221d3e223
 ---
 # [!DNL Zendesk] Events API extension overview
 
@@ -47,7 +48,7 @@ Under **[!UICONTROL Zendesk Domain]**, enter the value for your Zendesk subdomai
 
 ## Configure an event forwarding rule
 
-Start creating a new event forwarding rule [rule](../../../ui/managing-resources/rules.md) and configure its conditions as desired. When selecting the actions for the rule, select the [!UICONTROL Splunk] extension, then select the [!UICONTROL Create Event] action type.
+Start creating a new event forwarding rule [rule](../../../ui/managing-resources/rules.md) and configure its conditions as desired. When selecting the actions for the rule, select the [!UICONTROL Zendesk] extension, then select the [!UICONTROL Create Event] action type.
 
 ![Define Rule](../../../images/extensions/zendesk/rule.png)
 
