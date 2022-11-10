@@ -10,6 +10,21 @@ There are several destination types in Experience Platform, with slightly differ
 
 You can find detailed information about profile export behavior per destination type in the sections below:
 
+## Microbatching
+
+Experience Platform destinations export data to API-based integrations as HTTPS calls. Once the destinations service is notified by other upstream services that profiles have been updated as a result of batch ingestion, batch segmentation, streaming segmentation or identity graph changes, data is exported and sent to streaming destinations.
+
+The process by which profiles are aggregated into HTTPS messages before being dispatched to destination API endpoints is called *microbatching*. 
+
+Take the Facebook destination as an example - data is sent in an aggregated fashion, where the destinations service takes all the incoming data from the profile service upstream and aggregates it by one of the following, before dispatching it to Facebook: 
+
+* Number of records (maximum of 10.000) or
+* Window interval (30 minutes) 
+  
+Whichever of the thresholds above is first met triggers an export to Facebook. So, in the Facebook Custom Audiences dashboard, you might be seeing audiences coming in from Experience Platform in 10.000 records increments. You might be seeing 10.000 records every 10-15 minutes because the data gets processed and aggregated faster than the 30 minutes export interval, and gets sent faster, so about every 10-15 minutes until all records have been processed. If there are insufficient records to make up a 10.000 batch, then the current number of records will be sent as is, so you will see smaller batches sent to Facebook as well.
+
+The aggregation policy is configurable, and destination developers can decide how to configure the aggregation policy to best meet the capacity and limitations of the API endpoints downstream. Read more about [aggregation policy](/help/destinations/destination-sdk/destination-configuration.md#aggregation) in the Destination SDK documentation. 
+
 ## Streaming profile export (enterprise) destinations {#streaming-profile-destinations}
 
 Experience Platform optimizes the profile export behavior to your enterprise destination, to only export data to your API endpoint when relevant updates to a profile have occurred following segment qualification or other significant events. Profiles are exported to your destination in the following situations:
@@ -22,7 +37,7 @@ In all the cases described above, only the profiles where relevant updates have 
 
 Note that the all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
 
-### What determines a data export and what is included in the export {#what-determines-export-what-is-included}
+### What determines a data export and what is included in the export
 
 Regarding the data that is exported for a given profile, it is important to understand the two different concepts of *what determines a data export to your enterprise destination* and *which data is included in the export*.
 
@@ -40,7 +55,7 @@ A profile export to the destination can be determined by a profile qualifying fo
 
 From a profile attributes point of view, any changes to the four attributes mapped above will determine a destination export and any of the four mapped attributes present on the profile will be present in the data export.
 
-## Streaming segment export destinations {#streaming-profile-destinations}
+## Streaming segment export destinations
 
 Destination examples: advertising, social, etc.
 
@@ -54,7 +69,7 @@ In all the cases described above, only the profiles where relevant updates have 
 
 Note that the all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
 
-### What determines a data export and what is included in the export {#what-determines-export-what-is-included}
+### What determines a data export and what is included in the export
 
 Regarding the data that is exported for a given profile, it is important to understand the two different concepts of what determines a data export to your streaming API destination and which data is included in the export.
 
@@ -67,3 +82,11 @@ Regarding the data that is exported for a given profile, it is important to unde
 A profile export to the destination can be determined by a profile qualifying for or exiting one of the three mapped segments. If a profile qualified for Customer with DeLorean Cars segment, this will trigger an export. The other segments ("City - Dallas" and "Basic Site Active") might be exported as well in case the profile has that segment present with one of the possible statuses (realized, existing, exited). Unmapped segments (like Science fiction fans) will not be exported
 
 From a profile attributes point of view, any changes to the four attributes mapped above will determine a destination export and any of the four mapped attributes present on the profile will be present in the data export.
+
+## Batch (file-based destinations)
+
+Add information about how data is exported to batch destinations:
+
+Describe technical workings behind full exports
+Describe technical workings behind incremental exports
+How are these two different? different pipelines? 
