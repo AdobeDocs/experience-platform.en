@@ -38,7 +38,7 @@ Next, using the dropdown select the **Matches**.
 
 ![flac-policy-matches-dropdown](../../images/flac-ui/flac-policy-matches-dropdown.png)
 
-Next, using the dropdown, select the **User**.
+Next, using the dropdown, select the type of label (**[!UICONTROL Core label]** or **[!UICONTROL Custom label]**) to match the label assigned to the User in roles.
 
 ![flac-policy-user-dropdown](../../images/flac-ui/flac-policy-user-dropdown.png)
 
