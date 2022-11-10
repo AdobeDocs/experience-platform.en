@@ -12,7 +12,9 @@ To use Platform Debugger for Target, the website must be using the [at.js librar
 
 ## Initializing Platform Debugger
 
-Open the website you want to test in a browser, and then open the Platform Debugger extension. If Platform Debugger detects that a compatible version of at.js is running on the site, an Adobe Target symbol appears in the left navigation. Select this tab to view more details.
+Open the website you want to test in a browser, and then open the Platform Debugger extension.
+
+Select **[!DNL Target]** in the left navigation. If Platform Debugger detects that a compatible version of at.js is running on the site, Adobe Target implementation details are shown.
 
 ![The Target view selected in Platform Debugger, indicating that Adobe Target is active on the currently viewed browser page](../images/solutions/target/target-initialized.png)
 
@@ -25,7 +27,7 @@ Information about the implementation's global configuration is displayed at the 
 | Name | Description |
 | --- | --- |
 | Client Code | A unique ID that identifies your organization.|
-| Version | The version of the at.js library currently installed on the website.|
+| Version | The version of the Adobe Target library currently installed on the website.|
 | Global Request Name | The name of the [global mbox](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/?) for the Target implementation, the default name being `target-global-mbox`. |
 | Page Load Event | A boolean value indicating whether a [page load event](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/how-atjs-works/#atjs-2x-diagrams) has taken place. Page load events are only supported for at.js 2.x. For non-compatible versions, this value defaults to `None`.|
 
@@ -57,33 +59,32 @@ The following values are captured:
 | [!DNL Timestamp] | A timestamp of when the request (or event) took place, within the browser's timezone. |
 | [!DNL Time Since Page Load] | The elapsed time since the page initially loaded at the time of the request. |
 | [!DNL Initiator] | The initiator of the request. In other words, who made the request? |
-| [!DNL clientCode] | ??? |
-| [!DNL requestType] | ??? |
+| [!DNL clientCode] | The identifier for your organization's account as recognized by Target.  |
+| [!DNL requestType] | The API that was used for the request. If using at.js 1.x, the value is `/json`. If using at.js 2.x, the value is `delivery`. |
 | [!DNL Audience Manager Blob] | Provides information on encrypted Audience Manager metadata referred to as the "blob". |
 | [!DNL Audience Location Hint] | The data collection region ID. This is a numeric identifier for the geographic location of a particular ID service data center. For more information, see the Audience Manager documentation on [DCS Region IDs, Locations, and Host Names](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html) and the Experience Cloud Identity Service guide on [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html?lang=en#reference-a761030ff06c4439946bb56febf42d4c). |
 | [!DNL Browser Height] | The browser height in pixels. |
 | [!DNL Browser Time Offset] | The browser's time offset associated with its timezone. |
 | [!DNL Browser Width] | The browser width in pixels. |
-| [!DNL clientCode] | ??? |
 | [!DNL Color Depth] | The color depth of the screen. |
 | [!DNL context] | An object that contains contextual information about the browser used to make the request, including screen dimensions and client platform. |
-| [!DNL execute] | ??? |
+| [!DNL prefetch] | The parameters that are used in during `prefetch` processing. |
+| [!DNL execute] | The parameters that are used during `execute` processing. |
 | [!DNL Experience Cloud Visitor ID] | If one is detected, provides information on the [Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) that is assigned to the current site visitor. |
-| [!DNL experienceCloud] | ??? |
+| [!DNL experienceCloud] | Holds the Experience Cloud IDs for this specific user session: an A4T [supplemental data ID](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?#section_2C1F745A2B7D41FE9E30915539226E3A), and a [visitor ID (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html). |
 | [!DNL id] | The [Target ID](https://developers.adobetarget.com/api/delivery-api/#section/Identifying-Visitors/Target-ID) for the visitor. |
 | [!DNL Mbox Host] | The [host](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) that the Target request was made to. |
-| [!DNL Mbox PC] | ??? |
-| [!DNL Mbox Referrer] | ??? |
+| [!DNL Mbox PC] | A string that encapsulates the [`mbox`](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/) session ID and the [Adobe Target Edge](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#concept_0AE2ED8E9DE64288A8B30FCBF1040934) location hint. This value is used by at.js to ensure that the session and Edge location remain sticky.  |
+| [!DNL Mbox Referrer] | The URL referrer for the specific [`mbox`](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/) request. |
 | [!DNL Mbox URL] | The URL for the [`mbox`](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/) server. |
 | [!DNL Mbox Version] | The version of [`mbox`](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/) being used. |
 | [!DNL mbox3rdPartyId] | The [`mbox3rdPartyId`](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html) assigned to the current visitor. |
-| [!DNL mboxRid] | ??? |
-| [!DNL prefetch] | ??? |
+| [!DNL mboxRid] | The [`mbox`](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/) request ID. |
 | [!DNL requestId] | A unique ID for the request. |
 | [!DNL Screen Height] | The height of the screen in pixels. |
 | [!DNL Screen Width] | The width of the screen in pixels. |
 | [!DNL Supplemental Data ID] | A system-generated ID used to match visitors with corresponding Adobe Target and Adobe Analytics calls. See the [A4T troubleshooting guide](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/troubleshoot-a4t/a4t-troubleshooting.html?#section_75002584FA63456D8D9086172925DD8D) for more information. |
-| [!DNL vst] | ??? |
+| [!DNL vst] | The [Experience Cloud Identity Service API configuration](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html). |
 | [!DNL webGLRenderer] | Provides information on the WebGL renderer used on the page, if applicable. |
 
 To view the details for a parameter on a particular network event, select the table cell in question. A popover appears providing further information on the parameter, including a description and its value. If the value is a JSON object, the dialog includes a fully navigable view of the object's structure.
@@ -98,6 +99,6 @@ Select **[!DNL Configuration]** to enable or disable a selection of additional d
 
 | Debugging tool | Description |
 | --- | --- |
-| [!DNL Target Console Logging] | When enabled, allows you access at.js logs in the browser's network tab. This feature can also be enabled by adding an `mboxDebug` query param (with any value) to the browser URL. |
+| [!DNL Target Console Logging] | When enabled, allows you access at.js logs in the browser's console tab. This feature can also be enabled by adding an `mboxDebug` query param (with any value) to the browser URL. |
 | [!DNL Target Diable] | When enabled, all Target functionalities are disabled on the page. This can be used to determine if a Target-specific offer is what is causing the issue on the page. |
 | [!DNL Target Trace] | **Note**: You must be logged in to enable this feature.<br><br>When enabled, tracking tokens are sent with every quest, and a trace object is returned in each response. `at.js` parses the response `window.__targetTraces`. Each trace object contains the same information as the [[!DNL Network Requests] tab], with the following additions:<ul><li>A profile snapshot, allowing you to see attributes before and after requests.</li><li>Matched and unmatched [activities](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html), showing why the current profile did or did not qualify for specific activities.<ul><li>This can help identify which audiences a profile is qualifying for at a given point, and why.</li><li>Target docs contain more info on different activity types</li></ul></li></ul> |
