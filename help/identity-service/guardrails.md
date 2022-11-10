@@ -77,3 +77,5 @@ When a full graph is updated with a new identity, these two rules work in tandem
 >[!NOTE]
 >
 >If the identity designated to be deleted is linked to multiple other identities in the graph, then the links connecting that identity will also be deleted.
+
+![An example of the oldest identity being deleted to accommodate the latest identity](./images/graph-limits-v2.png)
