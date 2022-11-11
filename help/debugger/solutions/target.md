@@ -1,6 +1,7 @@
 ---
 title: Test an Adobe Target Implementation with Adobe Experience Platform Debugger
 description: Learn how to use Adobe Experience Platform Debugger to test and debug a website that is enabled with Adobe Target.
+exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
 ---
 # Test an Adobe Target implementation with Adobe Experience Platform Debugger
 
