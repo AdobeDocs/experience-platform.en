@@ -17,7 +17,7 @@ The [!UICONTROL B2B Source] data type allows you to to use the original string I
 | --- | --- | --- |
 | `sourceID` | String | A unique ID for the source record. |
 | `sourceInstanceID` | String | The instance or organization ID of the source data. |
-| `sourceKey` | String | A unique identifier composed of the `sourceId`, `sourceInstanceId`, and `sourceType` concatenated together in the following format: `[sourceID]@$[sourceInstanceID].[sourceType]`.<br><br>Some source connectors like Marketo concatenate this value automatically for certain identifiers. Others must be concatenated manually using the [Data Prep `concat` function](../../data-prep/functions.md#string), for example: `concat(id,"@${ORG_ID}.Marketo")` |
+| `sourceKey` | String | A unique identifier composed of the `sourceId`, `sourceInstanceId`, and `sourceType` concatenated together in the following format: `[sourceID]@[sourceInstanceID].[sourceType]`.<br><br>Some source connectors like Marketo concatenate this value automatically for certain identifiers. Others must be concatenated manually using the [Data Prep `concat` function](../../data-prep/functions.md#string), for example: `concat(id,"@${ORG_ID}.Marketo")` |
 | `sourceType` | String | The name of the platform that provides the source data. |
 
 {style="table-layout:auto"}
