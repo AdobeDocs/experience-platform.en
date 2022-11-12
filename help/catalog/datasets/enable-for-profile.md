@@ -169,8 +169,7 @@ curl -X GET \
         "schemaMetadata": {
             "primaryKey": [],
             "delta": [],
-            "dule": [],
-            "gdpr": []
+            "dule": []
         },
         "schemaRef": {
             "id": "https://ns.adobe.com/xdm/context/experienceevent",

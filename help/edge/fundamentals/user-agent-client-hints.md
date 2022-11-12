@@ -1,9 +1,9 @@
 ---
-title: User-Agent Client Hints 
+title: User-Agent Client Hints
 description: Learn how User-Agent Client Hints work in Web SDK
-keywords: user-agent;client hints; string; user-agent string; low entropy; high entropy 
+keywords: user-agent;client hints; string; user-agent string; low entropy; high entropy
+exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
 ---
-
 # User-Agent Client Hints
 
 ## Overview {#overview}

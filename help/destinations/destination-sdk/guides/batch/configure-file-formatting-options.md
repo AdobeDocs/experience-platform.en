@@ -1,6 +1,7 @@
 ---
 description: Configure file formatting options for file-based destinations
 title: Learn how to use Destination SDK to configure file formatting options for file-based destinations.
+exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
 ---
 # Configure file formatting options for file-based destinations
 
