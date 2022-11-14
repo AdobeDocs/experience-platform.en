@@ -12,8 +12,6 @@ Each destination is different, so there isn't a one-size-fits-all setup across a
 
 File-based destinations (S3, SFTP, most email marketing destinations such as Adobe Campaign, Eloqua, SFMC): Identity setup in most of these destinations is open as long as a primary key is specified. Note that only a single identity can be selected in an export. When you select an identity for export, it is automatically selected as a mandatory attribute and deduplication key.
 
-
-
 As a workaround, you can add more identities to the export, if these are set as attributes. See below an example for email address.
 
 ## API-based streaming destinations

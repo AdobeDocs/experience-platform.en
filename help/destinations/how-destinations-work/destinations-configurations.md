@@ -6,17 +6,17 @@ description: Learn which export settings in destinations are configurable on a d
 
 When thinking about the export behavior to Experience Platform destinations, you need to consider three separate levels on which configurations act.
 
-* On a first level, some of the settings related to profile export behavior and configuration settings are common across all destinations belonging to a destination type. 
-* On a second level, other settings are particular and can be customized on a destination level by the destination developers authoring destinations using Destination SDK. 
+* On a first level, some of the settings related to profile export behavior and configuration settings are common across all destinations belonging to a destination type. These cannot be edited by destination developers or users.
+* On a second level, other settings can be customized on a destination level by the destination developer when authoring destinations using Destination SDK. 
 * On a third level, there are the configuration settings that users can set in the activation workflows.
 
-![Diagram showing the interplay between common and configurable export settings for destinations](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram-updated.png)
+![Diagram showing the interplay between common and configurable export settings for destinations](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
 
 This page lists all the common and the configurable export settings for destinations.
 
 ## Common export settings across destination types
 
-Destination export behavior is consistent across destination types with regard to what triggers a destination export and what is included in the destination exports. Destination exports are triggered by notifications that the destinations service receives from the Profile service upstream. What is included in the destination exports varies slightly between destination types. [Read more](/help/destinations/how-destinations-work/profile-export-behavior.md) about the common export behavior patterns.
+Destination export behavior is consistent across destination types with regard to what triggers a destination export and what is included in the destination exports. Destination exports are triggered by notifications that the destinations service receives from the Profile service upstream. What is included in the destination exports varies slightly between destination types. [Read more](/help/destinations/how-destinations-work/profile-export-behavior.md) about the common export behavior patterns. These settings cannot be edited by destination developers or users.
 
 ## Customizable export settings by destination developers
 
@@ -24,11 +24,12 @@ Destination developers using Destination SDK have great flexibility to configure
 
 * Determine which attributes and identities can be exported out of Experience Platform to the destination.
 * Set an aggregation policy, which determines how long Experience Platform should wait when aggregating HTTP messages to be sent to API integrations. Destination developers can configure different aggregation types to determine how many profiles should be included in outgoing HTTP messages and how long Experience Platform should wait until dispatching the HTTP message. Find extensive information about the [aggregation policy configuration options](/help/destinations/destination-sdk/destination-configuration.md#aggregation) available to destination developers in the Destination SDK documentation.
+* Determine if HTTP message exports should include profiles that qualify for segments, that are removed from segments, or both.
 * Determine which file name and file formatting configurations should be available to users when exporting files.
 
 ## Settings on a dataflow level customizable by users 
 
-On top of the fixed settings that depend on destination type and the settings configured by the destination developer, there are certain export settings that users can configure in the activation workflow. These settings relate to the export schedule for a certain dataflow, the attributes and identity fields that should be exported, or the file formatting options for exported files.
+On top of the non-editable settings that depend on destination type and the settings configured by the destination developer, there are certain export settings that users can configure in the activation workflow. These settings relate to the export schedule for a certain dataflow, the attributes and identity fields that should be exported in a dataflow, or the file formatting options for exported files.
 
 The settings that are available to users when connecting to a destination depend on how the destination was configured by the destination developer and which settings they made available to users.
 
