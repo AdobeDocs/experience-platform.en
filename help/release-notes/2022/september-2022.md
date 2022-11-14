@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes September 2022
 description: The September 2022 release notes for Adobe Experience Platform.
+exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
 ---
 # Adobe Experience Platform release notes 
 
@@ -56,7 +57,7 @@ For more information on Attribution AI, the [Attribution AI overview](../../inte
 
 ### Customer AI
 
-Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale.
+Customer AI available in Real-Time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale.
 
 | Feature | Description |
 | --- | --- |
@@ -214,7 +215,7 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 
 For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../../query-service/home.md).
 
-<!-- See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more. -->
+See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more.
 
 ## Sources {#sources}
 

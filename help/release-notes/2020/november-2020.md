@@ -100,7 +100,7 @@ For more information, please read the document on [creating a recipe using Jupyt
 
 ## [!DNL Destinations] Service {#destinations}
 
-In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+In [Real-Time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **New destinations**
 
@@ -114,7 +114,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 
 | Feature | Description |
 | ------- | ----------- |
-| Destination details UX updates | Real-time CDP's destination workflow now includes inline monitoring so you can see which batch activations were successful. This feature will enable users to resolve issues directly in the workflow for batch destinations via alerts and a monitoring dashboard to track errors in the processing pipeline.  |
+| Destination details UX updates | Real-Time CDP's destination workflow now includes inline monitoring so you can see which batch activations were successful. This feature will enable users to resolve issues directly in the workflow for batch destinations via alerts and a monitoring dashboard to track errors in the processing pipeline.  |
 | File encryption | For file-based destinations, users can now add encryption to their exported files. |
 | File scheduling | For both email-based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
 | Mandatory fields | Users can mark fields as mandatory, ensuring that only fields that contain the mandatory field are exported. |

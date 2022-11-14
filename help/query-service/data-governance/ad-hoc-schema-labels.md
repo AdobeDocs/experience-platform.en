@@ -50,13 +50,13 @@ To edit data labels for your ad hoc schema, select the [!UICONTROL Labels] tab. 
 
 ## Edit labels for the schema or field
 
-To edit the labels for the entire schema, select the pencil icon (![](../images/data-governance/edit-icon.png)) to the side of the schema’s name under the [!UICONTROL Labels] tab.
+To edit the labels for the entire schema, select the pencil icon (![A pencil icon.](../images/data-governance/edit-icon.png)) to the side of the schema's name under the [!UICONTROL Labels] tab.
 
 ![The labels view in the schemas workspace with the pencil icon highlighted.](../images/data-governance/edit-entire-schema-labels.png)
 
 To apply a label to an existing field, select one or more fields from the list followed by [!UICONTROL Edit governance labels] in the right sidebar.
 
-![The labels view in the schemas workspace with the 'Edit governance labels' option highlighted in the rights hand sidebar.](../images/data-governance/edit-governance-labels.png) 
+![The labels view in the schemas workspace with the 'Edit governance labels' option highlighted in the right hand sidebar.](../images/data-governance/edit-governance-labels.png) 
 
 ## Edit labels popover
 

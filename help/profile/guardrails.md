@@ -130,7 +130,7 @@ The [!DNL Profile] store data model consists of two core entity types:
 
 ### Profile fragments
 
-In this document, there are several guardrails that refer to "profile fragments." In Experience Platform, multiple profile fragments are merged together to form the Real-time Customer Profile. Each fragment represents a unique primary identity and the corresponding record or event data for that ID within a given dataset. To learn more about profile fragments, refer to the [Profile overview](home.md#profile-fragments-vs-merged-profiles).
+In this document, there are several guardrails that refer to "profile fragments." In Experience Platform, multiple profile fragments are merged together to form the Real-time Customer Profile. Each fragment represents a unique primary identity and the corresponding record or complete set of event data for that ID within a given dataset. To learn more about profile fragments, refer to the [Profile overview](home.md#profile-fragments-vs-merged-profiles).
 
 ### Merge policies {#merge-policies}
 
@@ -138,6 +138,4 @@ When bringing data together from multiple sources, merge policies are the rules 
 
 ### Adobe Analytics report suite datasets in Platform {#aa-datasets}
 
-A maximum of one (1) Adobe Analytics report suite dataset should be enabled for Profile. This is a soft limit, meaning that you are able to enable more than one Analytics dataset for Profile, but it is not recommended as it may have unintended consequences for your data. This is due to the differences between Experience Data Model (XDM) schemas, which provide the semantic structure for data in Experience Platform and allow for consistency in data interpretation, and the customizable nature of eVars and conversion variables in Adobe Analytics. 
-
-For example, in Adobe Analytics a single organization may have multiple report suites. If report suite A designates eVar 4 as "internal search term" and report suite B designates eVar 4 as "referring domain", these values will both be ingested into the same field in Profile, causing confusion and degrading data quality.
+Multiple report suites can be enabled for Profile as long as all data conflicts are resolved. You can use the Data Prep functionality to resolve data conflicts across eVars, Lists, and Props. To learn more about how to use the Data Prep functionality, please read the [Adobe Analytics connector UI guide](../sources/tutorials/ui/create/adobe-applications/analytics.md). 

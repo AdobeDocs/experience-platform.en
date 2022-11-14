@@ -8,6 +8,12 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## Version 2.14.1 - October 13, 2022
+
+* Fixed an issue where the Web SDK does not honor the ID from the Experience Cloud ID Service.
+
+Contains version 2.13.1 of the Adobe Experience Platform Web SDK Library.
+
 ## Version 2.14.0 - September 28, 2022
 
 * Added new `targetMigrationEnabled` configuration that enables page by page full migration.

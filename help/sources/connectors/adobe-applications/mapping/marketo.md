@@ -6,7 +6,12 @@ topic-legacy: overview
 description: The tables below contains the mappings between the fields in the Marketo datasets and their corresponding XDM fields.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 ---
-# [!DNL Marketo Engage] field mappings
+# [!DNL Marketo Engage] field mappings {#marketo-engage-field-mappings}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_marketo_mapping"
+>title="Marketo source field mappings"
+>abstract="To establish a source connection between Marketo and Platform, the Marketo source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Platform."
 
 The tables below contain the mappings between the fields in the nine [!DNL Marketo] datasets and their corresponding Experience Data Model (XDM) fields.
 
@@ -17,6 +22,8 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 ## Activities {#activities}
 
 The [!DNL Marketo] source now supports additional standard activities. To use standard activities, you must update your schema using the [schema auto-generation utility](../marketo/marketo-namespaces.md) because if you create new `activities` dataflow without updating your schema, the mapping templates will fail as the new target fields will not be present in your schema. If you choose not to update your schema, you can still create a new dataflow and dismiss any errors. However, any new or updated fields will not be ingested into Platform.
+
+See the documentation on [XDM Experience Event class](../../../../xdm/classes/experienceevent.md) for more information on the XDM Class and XDM Field Group(s).
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -125,6 +132,8 @@ The [!DNL Marketo] source now supports additional standard activities. To use st
 
 ## Programs {#programs}
 
+Read the [XDM Business Campaign overview](../../../../xdm/classes/b2b/business-campaign.md) for more information on the XDM class. For more information on the XDM field groups, read the [Business Campaign Details schema field group](../../../../xdm/field-groups/b2b-campaign/details.md) guide.
+
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignKey.sourceType` |
@@ -153,6 +162,8 @@ The [!DNL Marketo] source now supports additional standard activities. To use st
 {style="table-layout:auto"}
 
 ## Program memberships {#program-memberships}
+
+Read the [XDM Business Campaign Members overview](../../../../xdm/classes/b2b/business-campaign-members.md) for more information on the XDM class. For more information on the XDM field groups, read the [XDM Business Campaign Member Details schema field group](../../../../xdm/field-groups/b2b-campaign-members/details.md) guide.
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -185,6 +196,8 @@ The [!DNL Marketo] source now supports additional standard activities. To use st
 
 ## Companies {#companies}
 
+Read the [XDM Business Account overview](../../../../xdm/classes/b2b/business-account.md) for more information on the XDM class.
+
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
@@ -215,6 +228,8 @@ The [!DNL Marketo] source now supports additional standard activities. To use st
 
 ## Static lists {#static-lists}
 
+Read the [XDM Business Marketing List overview](../../../../xdm/classes/b2b/business-marketing-list.md) for more information on the XDM class.
+
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListKey.sourceType` |
@@ -230,6 +245,8 @@ The [!DNL Marketo] source now supports additional standard activities. To use st
 {style="table-layout:auto"}
 
 ## Static list memberships {#static-list-memberships}
+
+Read the [XDM Business Marketing List Members overview](../../../../xdm/classes/b2b/business-marketing-list-members.md) for more information on the XDM Class.
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -249,6 +266,8 @@ The [!DNL Marketo] source now supports additional standard activities. To use st
 >[!IMPORTANT]
 >
 >The named accounts dataset is only necessary with Marketo's account-based marketing (ABM) feature. If you are not using ABM, then you do not need to set up mappings for named accounts.
+
+Read the [XDM Business Account overview](../../../../xdm/classes/b2b/business-account.md) for more information on the XDM class.
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -275,6 +294,8 @@ The [!DNL Marketo] source now supports additional standard activities. To use st
 {style="table-layout:auto"}
 
 ## Opportunities {#opportunities}
+
+Read the [XDM Business Opportunity overview](../../../../xdm/classes/b2b/business-opportunity.md) for more information on the XDM class.
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -311,6 +332,8 @@ The [!DNL Marketo] source now supports additional standard activities. To use st
 
 ## Opportunity contact roles {#opportunity-contact-roles}
 
+Read the [XDM Business Opportunity Person Relation overview](../../../../xdm/classes/b2b/business-account-person-relation.md) for more information on the XDM class.
+
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
@@ -329,6 +352,8 @@ The [!DNL Marketo] source now supports additional standard activities. To use st
 {style="table-layout:auto"}
 
 ## Persons {#persons}
+
+Read the [XDM Individual Profile overview](../../../../xdm/classes/individual-profile.md) for more information on the XDM class. For more information on the XDM field groups, read the [XDM Business Person Details schema field group](../../../../xdm/field-groups/profile/business-person-details.md) guide and [XDM Business Person Components schema field group](../../../../xdm/field-groups/profile/business-person-components.md) guide.
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
