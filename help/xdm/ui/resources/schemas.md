@@ -174,9 +174,9 @@ After providing a display name and data type for the field, the next step is to 
 >
 >This section only covers how to assign the field to a custom field group. If you want to extend a standard field group with the new custom field instead, see the section on [adding custom fields to standard field groups](#custom-fields-for-standard-groups).
 
-Under **[!UICONTROL Assign to]**, select **[!UICONTROL Field Group]**. If your schema uses a standard class, this will be the only available option and will be selected by default.
+Under **[!UICONTROL Assign to]**, select **[!UICONTROL Field Group]**. If your schema uses a standard class, this is the only available option and is selected by default.
 
-Next, you must select a field group for the new field to be associated with. Start typing in the name of the field group, and if you have previously [created custom field groups](./field-groups.md#create) they will appear in the dropdown list. Alternatively, you can type a unique name to create a new field group instead.
+Next, you must select a field group for the new field to be associated with. Start typing in the name of the field group in the provided text input. If you have any existing custom field groups that match the input, they will appear in the dropdown list. Alternatively, you can type a unique name to create a new field group instead.
 
 ![Select field group](../../images/ui/resources/schemas/select-field-group.png)
 
@@ -184,7 +184,7 @@ Next, you must select a field group for the new field to be associated with. Sta
 >
 >If you select an existing custom field group, any other schemas that employ that field group will also inherit the newly added field after you save your changes. For this reason, only select an existing field group if you want this type of propagation. Otherwise, you should opt to create a new custom field group instead.
 
-When finished, select **[!UICONTROL Apply]**.
+After selecting the field group from the list, select **[!UICONTROL Apply]**.
 
 ![Apply field](../../images/ui/resources/schemas/apply-field.png)
 
