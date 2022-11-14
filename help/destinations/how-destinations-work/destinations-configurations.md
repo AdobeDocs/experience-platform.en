@@ -2,13 +2,14 @@
 title: Configurable and common export settings in destinations
 description: Learn which export settings in destinations are configurable on a destination level and which are fixed and cannot be edited.
 ---
+
 # Configurable and common export settings in destinations
 
 When thinking about the export behavior to Experience Platform destinations, you need to consider three separate levels on which configurations act.
 
-* On a first level, some of the settings related to profile export behavior and configuration settings are common across all destinations belonging to a destination type. These cannot be edited by destination developers or users.
+* On a first level, some of the settings related to profile export behavior and configuration settings are common across all destinations belonging to a destination type. These cannot be edited by destination developers or Real-time CDP users.
 * On a second level, other settings can be customized on a destination level by the destination developer when authoring destinations using Destination SDK. 
-* On a third level, there are the configuration settings that users can set in the activation workflows.
+* On a third level, there are the configuration settings that Real-time CDP users can set in the activation workflows.
 
 ![Diagram showing the interplay between common and configurable export settings for destinations](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
 
@@ -16,7 +17,7 @@ This page lists all the common and the configurable export settings for destinat
 
 ## Common export settings across destination types
 
-Destination export behavior is consistent across destination types with regard to what triggers a destination export and what is included in the destination exports. Destination exports are triggered by notifications that the destinations service receives from the Profile service upstream. What is included in the destination exports varies slightly between destination types. [Read more](/help/destinations/how-destinations-work/profile-export-behavior.md) about the common export behavior patterns. These settings cannot be edited by destination developers or users.
+Destination export behavior is consistent across destination types with regard to what triggers a destination export and what is included in the destination exports. Destination exports are triggered by notifications that the destinations service receives from the Profile service upstream. What is included in the destination exports varies slightly between destination types. Read more about the [common export behavior patterns](/help/destinations/how-destinations-work/profile-export-behavior.md). These settings cannot be edited by destination developers or users.
 
 ## Customizable export settings by destination developers
 
@@ -44,7 +45,6 @@ Read more about the different options and steps available in the activation work
 * [Activate audience data to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [Export files on-demand to batch destinations](/help/destinations/ui/export-file-now.md)
 * [(Beta) Export datasets to cloud storage destinations](/help/destinations/ui/export-datasets.md)
-
 
 ## Next steps
 
