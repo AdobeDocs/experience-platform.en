@@ -49,6 +49,10 @@ The following takes place when a [dataset expiration request](./ui/dataset-expir
 
 ### Consumer deletes {#consumer-delete-transparency}
 
+>[!IMPORTANT]
+>
+>Consumer deletes are only available for organizations that have purchased Adobe Healthcare Shield.
+
 The following takes place when a [consumer delete request](./ui/delete-consumer.md) is created:
 
 | Stage | Time after request submission | Description |
