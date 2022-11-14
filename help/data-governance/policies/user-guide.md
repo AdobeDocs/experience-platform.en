@@ -90,7 +90,12 @@ Consent policies are comprised of two logical components:
 * **[!UICONTROL If]**: The condition that will trigger the policy check. This can be based on a certain marketing action being performed, the presence of certain data usage labels, or a combination of the two.
 * **[!UICONTROL Then]**: The consent attributes that must be present for a profile to be included in the action that triggered the policy.
 
-#### Configure conditions
+#### Configure conditions {#consent-conditions}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentif"
+>title="If condition"
+>abstract="Start by defining the conditions which will trigger the policy check. Conditions can include certain marketing actions being taken, certain data governance labels being present, or a combination of both."
 
 Under the **[!UICONTROL If]** section, select the marketing actions and/or data usage labels that should trigger this policy. Select **[!UICONTROL View all]** and **[!UICONTROL Select labels]** to view the full lists of available marketing actions and labels, respectively.
 
@@ -102,7 +107,12 @@ If you select more than one condition, you can use the icon that appears between
 
 ![](../images/policies/and-or-selection.png)
 
-#### Select consent attributes
+#### Select consent attributes {#consent-attributes}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentthen"
+>title="Then condition"
+>abstract="Once your 'If' condition has been defined, use the 'Then' section to select at least one consent attribute from the union schema. This is the attribute that must be present in order for profiles to be included in the action governed by this policy."
 
 Under the **[!UICONTROL Then]** section, select at least one consent attribute from the union schema. This is the attribute that must be present in order for profiles to be included in the action governed by this policy. You can choose one of the provided options from the list, or select **[!UICONTROL View all]** to choose the attribute directly from the union schema.
 

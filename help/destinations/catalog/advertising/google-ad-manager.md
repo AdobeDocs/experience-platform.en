@@ -16,6 +16,8 @@ Note the following details that are specific to [!DNL Google Ad Manager] destina
 
 * Activated audiences are created programmatically in the [!DNL Google] platform.
 * [!DNL Platform] does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
+* After mapping a segment to a [!DNL Google Ad Manager] destination, the segment name appears immediately in the [!DNL Google Ad Manager] user interface.
+* Segment population needs 24-48 hours to appear in [!DNL Google Ad Manager]. Additionally, segments must have an audience size of at least 50 profiles in order to be displayed in [!DNL Google Ad Manager]. Segments with audience sizes smaller than 50 profiles will not be populated in [!DNL Google Ad Manager].
 
 ## Supported Identities {#supported-identities}
 
@@ -57,8 +59,8 @@ If you are looking to create your first destination with [!DNL Google Ad Manager
 
 Before creating the [!DNL Google Ad Manager] destination in Platform, you must contact [!DNL Google] for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact [!DNL Google] and provide the following information:
 
-* **Account ID**: Adobe’s account ID with Google. Account ID: 87933855.
-* **Customer ID**: Adobe’s customer account ID with Google. Customer ID: 89690775.
+* **Account ID**: Adobe's account ID with Google. Account ID: 87933855.
+* **Customer ID**: Adobe's customer account ID with Google. Customer ID: 89690775.
 * **Network code**: This is your [!DNL Google Ad Manager] network identifier, found under **[!UICONTROL Admin > Global settings]** in the Google interface, as well as in the URL.
 * **Audience Link ID**: This is a specific identifier associated with your [!DNL Google Ad Manager] network (not your [!DNL Network code]), also found under **[!UICONTROL Admin > Global settings]** in the Google interface.
 * Your account type. DFP by Google or AdX buyer.
