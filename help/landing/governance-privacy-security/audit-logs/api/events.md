@@ -7,7 +7,7 @@ description: Learn how to retrieve audit events in Experience Platform using the
 ---
 # Audit events endpoints
 
-Audit events provide insights into the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type for various features in Adobe Experience Platform. The `/audit/events` endpoint in the [!DNL Audit Query API] allows you to programmatically retrieve event data for your organization's activity in [!DNL Platform].
+Audit events provide insights into the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type for various features in Adobe Experience Platform. The `/audit/events` endpoint in the [!DNL Audit Query] API allows you to programmatically retrieve event data for your organization's activity in [!DNL Platform].
 
 ## Getting started
 
@@ -53,7 +53,7 @@ A successful response returns the resulting datapoints for the metrics and filte
          "eventType": "Core",
          "id": "32b72208-3035-4bc6-b434-39e34401a864",
          "version": "1.0",
-         "imsOrgId": "{IMS_ORG}",
+         "imsOrgId": "{ORGANIZATION_ID}",
          "sandboxName": "prod",
          "region": "VA7",
          "requestId": "5NphpgUQdQnjTWOcS9DSMs2wD1EUMlYG",
@@ -74,7 +74,7 @@ A successful response returns the resulting datapoints for the metrics and filte
          "eventType": "Core",
          "id": "a178736a-8fa1-47da-bac5-b0d9e741e414",
          "version": "1.0",
-         "imsOrgId": "{IMS_ORG}",
+         "imsOrgId": "{ORGANIZATION_ID}",
          "sandboxName": "prod",
          "region": "VA7",
          "requestId": "7AlGIAhWvaEzYWHLzvuf26AAFAkqSyKg",
@@ -95,7 +95,7 @@ A successful response returns the resulting datapoints for the metrics and filte
          "eventType": "Core",
          "id": "ccfe8c77-9b93-481d-a561-0b2edf3b77dc",
          "version": "1.0",
-         "imsOrgId": "{IMS_ORG}",
+         "imsOrgId": "{ORGANIZATION_ID}",
          "sandboxName": "prod",
          "region": "VA7",
          "requestId": "hArqS4CAa8wfRPnKuxV4yaA82atxwzYu",
@@ -139,7 +139,7 @@ A successful response returns the resulting datapoints for the metrics and filte
 | `customerAuditLogList` | An array whose objects represent each of the events specified in the request. Each object contains information about the filter configuration and returned event data. |
 | `userEmail` | The email of the user who performed the event. |
 | `eventType` | The type of event. The types of events include `Core` and `Enhanced`.|
-| `imsOrgId` | The IMS Org ID for the organization that the event took place under. |
+| `imsOrgId` | The ID of the organization that the event took place under. |
 | `permissionResource` | The product or capability that provided the permission perform the action. A resource can be any of the following: <br/><ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
 | `permissionType` | The permission type involved with the action. |
 | `assetType` | The type of Platform resource that the action was performed on. |
@@ -149,8 +149,6 @@ A successful response returns the resulting datapoints for the metrics and filte
 | `status` | The status of the action. A status can be any of the following: <br/></li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
 
 {style="table-layout:auto"}
-
-"Activation" "ActivationAssociation" "AnalyticsSource" "AudienceManagerSource" "BizibleSource" "CustomerAttributesSource" "Dataset" "EnterpriseSource" "LaunchSource" "MarketoSource" "ProductProfile" "ProfileConfig" "Sandbox" "Schema" "Segment" "StreamingSource"
 
 ## Export a list of audit events
 

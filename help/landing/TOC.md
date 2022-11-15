@@ -52,6 +52,10 @@ user-guide-description: Learn how Experience Platform can deliver personalized e
     * [Integrate the Platform Web SDK to process consent and preference data](./governance-privacy-security/consent/sdk.md) 
   * Audit logs {#audit-logs}
     * [Overview](./governance-privacy-security/audit-logs/overview.md)
+    * Audit Query API {#audit-api}
+      * [Overview](./governance-privacy-security/audit-logs/api/overview.md)
+      * [Getting started](./governance-privacy-security/audit-logs/api/getting-started.md)
+      * [Events](./governance-privacy-security/audit-logs/api/events.md)
   * [Data encryption](./governance-privacy-security/encryption.md)
   * [Customer-managed keys](./governance-privacy-security/customer-managed-keys.md)
 * License usage and guardrails {#license}
