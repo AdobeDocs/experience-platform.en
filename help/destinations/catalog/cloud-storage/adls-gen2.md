@@ -1,6 +1,7 @@
 ---
 title: (Beta) Azure Data Lake Storage Gen2 connection
 description: Learn how to connect to Azure Data Lake Storage Gen2 to activate segments and export datasets.
+exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
 ---
 # (Beta) [!DNL Azure Data Lake Storage Gen2] connection
 

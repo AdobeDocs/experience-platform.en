@@ -1,6 +1,7 @@
 ---
 title: Map a CSV File to an XDM Schema using AI-Generated Recommendations (Beta)
 description: This tutorial covers how to map a CSV file to an XDM schema using AI-generated recommendations.
+exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
 ---
 # Map a CSV file to an XDM schema using AI-generated recommendations (Beta)
 

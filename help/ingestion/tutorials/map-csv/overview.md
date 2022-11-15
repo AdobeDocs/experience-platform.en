@@ -1,6 +1,7 @@
 ---
 title: Map a CSV File to an XDM Schema
 description: This tutorial covers how to map a CSV file to an XDM schema using the Adobe Experience Platform user interface.
+exl-id: b80ab18f-9f4d-4044-b11d-238e9a45710f
 ---
 # Map a CSV file to an XDM schema
 

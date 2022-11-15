@@ -1,6 +1,7 @@
 ---
 title: Adobe Campaign Managed Cloud Services connection
-description: Adobe Campaign Managed Cloud Services provides a platform for designing cross-channel customer experiences and an environment for visual campaign orchestration, real-time interaction management and cross channel execution. 
+description: Adobe Campaign Managed Cloud Services provides a platform for designing cross-channel customer experiences and an environment for visual campaign orchestration, real-time interaction management and cross channel execution.
+exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
 ---
 # Adobe Campaign Managed Cloud Services connection {#adobe-campaign-managed-services}
 

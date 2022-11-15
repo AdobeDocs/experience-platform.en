@@ -1,6 +1,7 @@
 ---
 description: Learn how to configure file formatting options when activating data to file-based destinations
 title: (Beta) Configure file formatting options for file-based destinations
+exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 ---
 # (Beta) Configure file formatting options for file-based destinations
 
@@ -88,4 +89,4 @@ Example output with **[!UICONTROL False]** selected: `"male ","John","TestLastNa
 
 ### Next steps {#next-steps}
 
-After reading this document, you now know how to configure file export options for your CSV data files to tailor the file contents to the requirements of your downstream file reception system. Next, you can read the [file-based destinations activation tutorial](/help/destinations/ui/activate-batch-profile-destinations.md) to start exporting files to your preferred cloud storage location. 
+After reading this document, you now know how to configure file export options for your CSV data files to tailor the file contents to the requirements of your downstream file reception system. Next, you can read the [file-based destinations activation tutorial](/help/destinations/ui/activate-batch-profile-destinations.md) to start exporting files to your preferred cloud storage location.

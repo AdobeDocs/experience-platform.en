@@ -1,6 +1,7 @@
 ---
 title: Common Web SDK Plugins Extension Overview
 description: Learn about the Common Web SDK Plugins tag extension in Adobe Experience Platform.
+exl-id: 6052603b-1537-4dc7-9278-969d892ca15b
 ---
 # Common Web SDK Plugins extension overview
 

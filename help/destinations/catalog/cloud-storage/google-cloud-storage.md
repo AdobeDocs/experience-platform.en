@@ -1,6 +1,7 @@
 ---
 title: (Beta) Google Cloud Storage connection
 description: Learn how to connect to Google Cloud Storage and activate segments or export datasets.
+exl-id: ab274270-ae8c-4264-ba64-700b118e6435
 ---
 # (Beta) [!DNL Google Cloud Storage] connection
 
