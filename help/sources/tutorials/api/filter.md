@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;flow service;Flow Service API;sources;Sources
 title: Filter Row-Level Data For A Source Using The Flow Service API
 description: This tutorial covers the steps on how to filter data at the source level using the Flow Service API
+exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
 ---
 # Filter row-level data for a source using the [!DNL Flow Service] API
 

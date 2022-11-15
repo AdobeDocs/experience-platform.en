@@ -16,7 +16,13 @@ Sandboxes partition a single Platform instance into separate virtual environment
 
 Sandboxes are virtual partitions within a single instance of Experience Platform. Each sandbox maintains its own independent library of Platform resources (including schemas, datasets, profiles, and so on). All content and actions taken within a sandbox are confined to only that sandbox and do not affect any other sandboxes. See the [sandboxes overview](home.md) for more information.
 
-## What types of sandboxes are available, and what are their differences?
+## What types of sandboxes are available, and what are their differences? {#sandbox-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtypes"
+>title="Sandbox Type"
+>abstract="The sandbox type indicates whether this is a production or development sandbox. Production sandboxes include live data and development sandboxes are used for testing and development."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="Create a sandbox in the UI"
 
 There are two sandbox types available in Experience Platform:
 
