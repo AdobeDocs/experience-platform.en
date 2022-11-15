@@ -100,11 +100,13 @@ The configured key appears in the list of keys for the vault.
 
 Once you have your key vault configured, the next step is to register for the CMK application that will link to your [!DNL Azure] tenant.
 
->[!NOTE]
->
->Registering the CMK app requires you to make calls to Platform APIs. For details on how to gather the required authentication headers to make these calls, see the [Platform API authentication guide](../../landing/api-authentication.md).
->
->While the authentication guide provides instructions on how to generate your own unique value for the required `x-api-key` request header, all API operations in this guide use the static value `acp_provisioning` instead. You must still provide your own values for `{ACCESS_TOKEN}` and `{ORG_ID}`, however.
+### Getting started
+
+Registering the CMK app requires you to make calls to Platform APIs. For details on how to gather the required authentication headers to make these calls, see the [Platform API authentication guide](../../landing/api-authentication.md).
+
+While the authentication guide provides instructions on how to generate your own unique value for the required `x-api-key` request header, all API operations in this guide use the static value `acp_provisioning` instead. You must still provide your own values for `{ACCESS_TOKEN}` and `{ORG_ID}`, however.
+
+Finally, in the request path for all API calls in this guide, `platform` must be followed by a dash and the region code assigned to your organization: `nld2` for NLD2 or `aus5` for AUS5 (for example: `platform-aus5`). If you do not know your organization's region, please contact your system administrator.
 
 ### Fetch an authentication URL
 
@@ -174,8 +176,6 @@ Once you have obtained the key vault URI, you can send it using a POST request t
 
 **Request**
 
-The following request creates a new CMK configuration job. Note that in the request path, `platform` must be followed by a dash and the region code assigned to your organization: `platform-nld2` for NLD2 or `platform-aus5` for AUS5. If you do not know your organization's region, please contact your system administrator.
-
 ```shell
 curl -X POST \
   https://platform-nld2.adobe.io/data/infrastructure/manager/customer/config \ 
@@ -232,7 +232,7 @@ To check the status of the configuration request, you can make a GET request.
 
 **Request**
 
-You must append the `name` of the configuration you want to check to the path (`config1` in the example below) and include a `configType` query parameter set to `BYOK_CONFIG`. Similar to the [previous API call](#send-to-adobe), you must also include the appropriate region code for your organization in the request path.
+You must append the `name` of the configuration you want to check to the path (`config1` in the example below) and include a `configType` query parameter set to `BYOK_CONFIG`.
 
 ```shell
 curl -X GET \
