@@ -138,18 +138,19 @@ A successful response returns the resulting datapoints for the metrics and filte
 | --- | --- |
 | `customerAuditLogList` | An array whose objects represent each of the events specified in the request. Each object contains information about the filter configuration and returned event data. |
 | `userEmail` | The email of the user who performed the event. |
-| `eventType` | The type of event. |
+| `eventType` | The type of event. The types of events include `Core` and `Enhanced`.|
 | `imsOrgId` | The IMS Org ID for the organization that the event took place under. |
-| `authId` | The authorization ID for the audit event. |
-| `permissionResource` | The product or capability that provided the permission perform the action. |
+| `permissionResource` | The product or capability that provided the permission perform the action. A resource can be any of the following: <br/><ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
 | `permissionType` | The permission type involved with the action. |
 | `assetType` | The type of Platform resource that the action was performed on. |
 | `assetId` | A unique identifier for the Platform resource that the action was performed on. |
 | `assetName` | The name of the Platform resource that the action was performed on. |
-| `action` | The type of action that was recorded for the event. |
-| `status` | The status of the action. |
+| `action` | The type of action that was recorded for the event. An action can be any of the following: <br/><ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
+| `status` | The status of the action. A status can be any of the following: <br/></li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
 
 {style="table-layout:auto"}
+
+"Activation" "ActivationAssociation" "AnalyticsSource" "AudienceManagerSource" "BizibleSource" "CustomerAttributesSource" "Dataset" "EnterpriseSource" "LaunchSource" "MarketoSource" "ProductProfile" "ProfileConfig" "Sandbox" "Schema" "Segment" "StreamingSource"
 
 ## Export a list of audit events
 
