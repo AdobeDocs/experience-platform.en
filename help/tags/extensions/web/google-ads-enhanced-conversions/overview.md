@@ -30,6 +30,10 @@ Enhanced conversions leverage the [!DNL Google Ads] API to add first-party data 
 
 Since sending conversion events involves both a client-side and server-side implementation, this document covers the prerequisite steps for setting up the client-side [[!DNL Google Global Site Tag] (gtag) extension](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) in addition to the [!DNL Enhanced Conversions] extension for event forwarding.
 
+The following video provides an introduction to the [!DNL Enhanced Conversions] extension and walks through the implementation steps at a high level:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
+
 ## Send a conversion using tags
 
 To send a conversion event from on a website, [!DNL Google Global Site Tag] (gtag) must be deployed. You can achieve this using tags by configuring and installing the [!DNL Google Global Site Tag] (gtag) extension.
