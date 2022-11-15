@@ -33,12 +33,12 @@ Once provided, you must structure your private Git repository like so:
 
 | Artifacts (file names) | Description | Example |
 | --- | --- | --- |
-| {your_source} | The name of your source. This folder should contain all artifacts related to your source, within your private Git repository. | `mailchimp-members`|
-| {your_source}-category.txt | The category to which your source belongs, formatted as a text file. **Note**: If you believe that your source does not fit in any of the above categories, please contact your Adobe representative to discuss. | `mailchimp-members-category.txt` Inside the file, please specify the category of your source, like: `streaming`. |
-| {your_source}-description.txt | A brief description of your source. | [!DNL Mailchimp Members] is marketing automation source that you can use to bring [!DNL Mailchimp Members] data to Experience Platform. |
+| {your_source} | The name of your source. This folder should contain all artifacts related to your source, within your private Git repository. | `medallia`|
+| {your_source}-category.txt | The category to which your source belongs, formatted as a text file. **Note**: If you believe that your source does not fit in any of the above categories, please contact your Adobe representative to discuss. | `medallia-category.txt` Inside the file, please specify the category of your source, like: `streaming`. |
+| {your_source}-description.txt | A brief description of your source. | [!DNL Medallia] is marketing automation source that you can use to bring [!DNL Medallia] data to Experience Platform. |
 | {your_source}-icon.svg | The image to be used to represent your source in the Experience Platform sources catalog. This icon must be an SVG file. |
-| {your_source}-label.txt | The name of your source as it should appear in the Experience Platform sources catalog. | Mailchimp Members | 
-| {your_source}-connectionSpec.json | A JSON file that contains the connection specification of your source. This file is not initially required as you will be populating your connection specification as you complete this guide. | `mailchimp-members-connectionSpec.json` |
+| {your_source}-label.txt | The name of your source as it should appear in the Experience Platform sources catalog. | Medallia | 
+| {your_source}-connectionSpec.json | A JSON file that contains the connection specification of your source. This file is not initially required as you will be populating your connection specification as you complete this guide. | `medallia-connectionSpec.json` |
 
 {style="table-layout:auto"}
 
@@ -235,13 +235,13 @@ A successful response returns the newly created connection specification, includ
       "id": "bdb5b792-451b-42de-acf8-15f3195821de",
       "createdAt": 1667536504101,
       "updatedAt": 1667536504101,
-      "createdBy": "31DBA95B5833E4E60A494124@AdobeID",
-      "updatedBy": "31DBA95B5833E4E60A494124@AdobeID",
-      "createdClient": "exc_app",
-      "updatedClient": "exc_app",
+      "createdBy": "{CREATED_BY}",
+      "updatedBy": "{UPDATED_BY}",
+      "createdClient": "{CREATED_CLIENT}",
+      "updatedClient": "{CREATED_CLIENT}",
       "sandboxId": "d537df80-c5d7-11e9-aafb-87c71c35cac8",
       "sandboxName": "prod",
-      "imsOrgId": "DFAF48815CD097F30A494219@AdobeOrg",
+      "imsOrgId": "{ORG_ID}",
       "name": "generic-streaming",
       "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
       "version": "1.0",
