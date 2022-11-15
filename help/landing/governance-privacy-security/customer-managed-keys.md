@@ -9,6 +9,14 @@ Data stored on Adobe Experience Platform is encrypted at rest using system-level
 
 This document covers the process for enabling the customer-managed keys (CMK) feature in Platform.
 
+## Prerequisites
+
+In order to enable CMK, you must have access to **all** of the following features in [!DNL Microsoft Azure]:
+
+* [Role-based access control policies](https://learn.microsoft.com/en-us/azure/role-based-access-control/) (not to be confused with the same feature in Experience Platform)
+* [Key Vault soft-delete](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [Purge protection](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+
 ## Process summary
 
 CMK is included in the Healthcare Shield and the Privacy and Security Shield offerings from Adobe. After your organization purchases a license for one of these offerings, you can begin a one-time process for setting up the feature.
@@ -19,7 +27,7 @@ CMK is included in the Healthcare Shield and the Privacy and Security Shield off
 
 The process is as follows:
 
-1. [Configure an [!DNL Microsoft Azure] Key Vault](#create-key-vault) based on your organization's policies, then [generate an encryption key](#generate-a-key) that will ultimately be shared with Adobe.
+1. [Configure an [!DNL Azure] Key Vault](#create-key-vault) based on your organization's policies, then [generate an encryption key](#generate-a-key) that will ultimately be shared with Adobe.
 1. Use API calls to [set up the CMK app](#register-app) with your [!DNL Azure] tenant. 
 1. Use API calls to [send your encryption key ID to Adobe](#send-to-adobe) and start the enablement process for the feature.
 1. [Check the status of the configuration](#check-status) to verify whether CMK has been enabled.
@@ -106,7 +114,7 @@ To start the registration process, make a GET request to the app registration en
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/infrastructure/manager/byok/app-registration \ 
+  https://platform-ndl2.adobe.io/data/infrastructure/manager/byok/app-registration \ 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: acp_provisioning' \
   -H 'x-gw-ims-org-id: {ORG_ID}'
@@ -166,9 +174,11 @@ Once you have obtained the key vault URI, you can send it using a POST request t
 
 **Request**
 
+The following request creates a new CMK configuration job. Note that in the request path, `platform` must be followed by a dash and the region code assigned to your organization: `platform-nld2` for NLD2 or `platform-aus5` for AUS5. If you do not know your organization's region, please contact your system administrator.
+
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/infrastructure/manager/customer/config \ 
+  https://platform-nld2.adobe.io/data/infrastructure/manager/customer/config \ 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: acp_provisioning' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -178,7 +188,7 @@ curl -X POST \
         "imsOrgId": "{ORG_ID}",
         "configData": {
           "providerType": "AZURE_KEYVAULT",
-          "keyVaultIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4"
+          "keyVaultKeyIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4"
         }
       }'
 ```
@@ -188,7 +198,7 @@ curl -X POST \
 | `name` | A name for the configuration. Ensure that you remember this value as it will be required to check the configuration's status at a [later step](#check-status). The value is case-sensitive. |
 | `type` | The configuration type. Must be set to `BYOK_CONFIG`. |
 | `imsOrgId` | Your IMS Organization ID. This must be the same value as provided under the `x-gw-ims-org-id` header. |
-| `configData` | Contains the following details about the configuration:<ul><li>`providerType`: Must be set to `AZURE_KEYVAULT`.</li><li>`keyVaultIdentifier`: The key vault URI that you copied [earlier](#send-to-adobe).</li></ul> |
+| `configData` | Contains the following details about the configuration:<ul><li>`providerType`: Must be set to `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier`: The key vault URI that you copied [earlier](#send-to-adobe).</li></ul> |
 
 **Response**
 
@@ -222,11 +232,11 @@ To check the status of the configuration request, you can make a GET request.
 
 **Request**
 
-You must append the `name` of the configuration you want to check to the path (`config1` in the example below) and include a `configType` query parameter set to `BYOK_CONFIG`.
+You must append the `name` of the configuration you want to check to the path (`config1` in the example below) and include a `configType` query parameter set to `BYOK_CONFIG`. Similar to the [previous API call](#send-to-adobe), you must also include the appropriate region code for your organization in the request path.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/infrastructure/manager/customer/config/config1?configType=BYOK_CONFIG \ 
+  https://platform-nld2.adobe.io/data/infrastructure/manager/customer/config/config1?configType=BYOK_CONFIG \ 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: acp_provisioning' \
   -H 'x-gw-ims-org-id: {ORG_ID}'
