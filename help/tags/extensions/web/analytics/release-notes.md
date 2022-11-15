@@ -5,10 +5,20 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 ---
 # Adobe Analytics extension release notes
 
+The following is a list of release notes for the Adobe Analytics tag extension.
+
 >[!NOTE]
 >
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
->
+>The Analytics tag extension if often updated in response to updates to the [AppMeasurement JavaScript library](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html). Refer to the [AppMeasurement release notes](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) for details on the specific versions mentioned below.
+
+## September 23, 2022
+
+**Adobe Analytics Extension 1.9.1**
+
+**Features**:
+
+* Upgraded to AppMeasurement v2.23.0.
+* The extension can now collect high-entropy [user-agent client hints](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) as supported by the latest version of AppMeasurement.
 
 ## February 28, 2022
 
@@ -156,7 +166,7 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 * Updated the Adobe Analytics extension to support DIL 9.2 for Audience Manager
 
 * Updated extension to support [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)    
-* Removed the following checkbox since it’s not supported anymore: "Do not attach the destination publishing IFRAME to the DOM or fire destinations"
+* Removed the following checkbox since it's not supported anymore: "Do not attach the destination publishing IFRAME to the DOM or fire destinations"
  
 ## June 4, 2019
 
