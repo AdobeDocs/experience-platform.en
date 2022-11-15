@@ -118,6 +118,8 @@ solution: Data Collection
     * [!DNL Marketo Munchkin] {#marketo}
       * [Overview](./extensions/web/marketo/overview.md)
       * [Release notes](./extensions/web/marketo/release-notes.md)
+    * Google Ads Enhanced Conversions {#google-ads-enhanced-conversions}
+      * [Overview](./extensions/web/google-ads-enhanced-conversions/overview.md)
     * Google Data Layer {#google-data-layer}
       * [Overview](./extensions/web/google-data-layer/overview.md)
       * [Release notes](./extensions/web/google-data-layer/release-notes.md)

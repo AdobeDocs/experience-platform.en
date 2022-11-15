@@ -1,6 +1,7 @@
 ---
 title: Splunk Extension Overview
 description: Learn about the Splunk extension for event forwarding in Adobe Experience Platform.
+exl-id: 653b5897-493b-44f2-aeea-be492da2b108
 ---
 # Splunk extension overview
 
