@@ -21,7 +21,7 @@ Destination export behavior is consistent across destination types with regard t
 
 ## Customizable export settings by destination developers
 
-Destination developers using Destination SDK have great flexibility to configure destinations based on the downstream capabilities of the API endpoints and file reception systems. Based on the downstream capabilities, destination developers have the following configuration options available when configuring a destination using Destination SDK:
+Destination developers using [Destination SDK](/help/destinations/destination-sdk/overview.md) have great flexibility to configure destinations based on the downstream capabilities of the API endpoints and file reception systems. Based on the downstream capabilities, destination developers have the following configuration options available when configuring a destination using Destination SDK:
 
 * Determine which attributes and identities can be exported out of Experience Platform to the destination.
 * Set an aggregation policy, which determines how long Experience Platform should wait when aggregating HTTP messages to be sent to API integrations. Destination developers can configure different aggregation types to determine how many profiles should be included in outgoing HTTP messages and how long Experience Platform should wait until dispatching the HTTP message. Find extensive information about the [aggregation policy configuration options](/help/destinations/destination-sdk/destination-configuration.md#aggregation) available to destination developers in the Destination SDK documentation.
@@ -48,4 +48,6 @@ Read more about the different options and steps available in the activation work
 
 ## Next steps
 
-After reading this document, you now know which export settings for destinations are common across destination types, which can be configured on an individual destination level by developers, and which settings are available to users in the activation workflow. For destination developers, you can get started with [Destination SDK](/help/destinations/destination-sdk/overview.md). For users looking to activate data, you can check out all the available destinations in the [catalog](/help/destinations/catalog/overview.md).
+After reading this document, you now know which export settings for destinations are common across destination types, which can be configured on an individual destination level by developers, and which settings can be edited to users in the activation workflow. 
+
+For destination developers, you can [get started](/help/destinations/destination-sdk/getting-started.md) with Destination SDK. For users looking to activate data, you can check out all the available destinations in the [catalog](/help/destinations/catalog/overview.md).
