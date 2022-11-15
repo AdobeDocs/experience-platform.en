@@ -68,7 +68,7 @@ The following filters apply to dataset expiration requests:
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Number of identities"
->abstract="The number of identities that were requested to be deleted as part of this work order. The identities included in the count may not necessarily exist in the affected datasets. To learn more, refer to the data hygiene UI guide."
+>abstract="The number of identities whose records were requested to be updated or deleted as part of this work order. The identities included in the count may not necessarily exist in the affected datasets. To learn more, refer to the data hygiene UI guide."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"

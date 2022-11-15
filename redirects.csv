@@ -1,4 +1,5 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/debugger/solutions.html,https://experienceleague.adobe.com/docs/experience-platform/debugger/solutions/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/map-a-csv-file.html,https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/map-csv/existing-schema.html
 https://experienceleague.adobe.com/docs/experience-platform/profile/apply-ttl.html,https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html
 https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/packages.html,https://experienceleague.adobe.com/docs/experience-platform/query/packages.html
