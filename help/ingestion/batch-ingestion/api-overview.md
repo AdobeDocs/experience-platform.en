@@ -103,7 +103,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
+| `{FILE_NAME}` | The name of the file you want to upload. Ensure that you use a unique file name so that it does not clash with another file for the batch of files being submitted. |
 
 **Request**
 
@@ -238,7 +238,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
+| `{FILE_NAME}` | The name of the file you want to upload. Ensure that you use a unique file name so that it does not clash with another file for the batch of files being submitted. |
 
 **Request**
 
@@ -411,7 +411,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
+| `{FILE_NAME}` | The name of the file you want to upload. Ensure that you use a unique file name so that it does not clash with another file for the batch of files being submitted. |
 
 **Request**
 
@@ -629,7 +629,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
+| `{FILE_NAME}` | The name of the file you want to upload. Ensure that you use a unique file name so that it does not clash with another file for the batch of files being submitted. |
 
 **Request**
 
@@ -851,7 +851,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
+| `{FILE_NAME}` | The name of the file you want to upload. Ensure that you use a unique file name so that it does not clash with another file for the batch of files being submitted. |
 
 **Request**
 
