@@ -1,6 +1,7 @@
 ---
 title: Google Ads Enhanced Conversions Extension
 description: Learn about the Google Ads Enhanced Conversions extension for event forwarding in Adobe Experience Platform.
+exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
 ---
 # [!DNL Google Ads] Enhanced Conversions extension
 
