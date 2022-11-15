@@ -1,18 +1,17 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-solution: Experience Platform
 title: Getting Started with Self-Serve Sources (Streaming SDK)
-topic-legacy: developer guide
 description: This document provides an introduction to the prerequisite information you need to know before attempting to create a new source using Self-Serve Sources (Streaming SDK).
-exl-id: ba131442-ff20-4854-87fe-918aa313382d
+hide: true
+hidefromtoc: true
 ---
 # Getting Started with Self-Serve Sources (Streaming SDK)
 
-Self-Serve Sources (Streaming SDK) allows you to integrate your own REST-based source to bring batch data to Adobe Experience Platform. This document provides an introduction to the core concepts you need to know before attempting to make calls to the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Self-Serve Sources (Streaming SDK) allows you to integrate your own source to bring streaming data to Adobe Experience Platform. This document provides an introduction to the core concepts you need to know before attempting to make calls to the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Prerequisites
 
-To use Self-Serve Sources (Streaming SDK), you must ensure that you have access to an IMS Organization Sandbox provisioned with Adobe Experience Platform Sources.
+To use Self-Serve Sources (Streaming SDK), you must ensure that you have access to a sandbox organization provisioned with Adobe Experience Platform Sources.
 
 This guide also requires a working understanding of the following components of Adobe Experience Platform:
 

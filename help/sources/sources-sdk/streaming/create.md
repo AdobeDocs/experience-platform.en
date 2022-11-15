@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-solution: Experience Platform
 title: Create a new connection specification for Streaming SDK using the Flow Service API
-topic-legacy: tutorial
 description: The following document provides steps on how to create a connection specification using the Flow Service API and integrate a new source through Self-Serve Sources.
-exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
+hide: true
+hidefromtoc: true
 ---
 # Create a new connection specification using the [!DNL Flow Service] API
 
@@ -18,7 +17,7 @@ Before continuing, please review the [getting started guide](./getting-started.m
 
 ## Collect artifacts
 
-In order to create a new batch source using Self-Serve Sources, you must first coordinate with Adobe, request a private Git repository, and align with Adobe on the details regarding the label, description, category, and icon for your source.
+In order to create a new streaming source using Self-Serve Sources, you must first coordinate with Adobe, request a private Git repository, and align with Adobe on the details regarding the label, description, category, and icon for your source.
 
 Once provided, you must structure your private Git repository like so:
 
@@ -132,11 +131,11 @@ Once you have acquired the connection specification template, you can now start 
 
 A connection specification can be divided into three distinct parts: the authentication specifications, the source specifications, and the explore specifications. 
 
-See the following documents for instructions on how to populate the values of each part of a connection specification:
+See the following documents for more information on the sections of a connection specification:
 
-* [Configure your authentication specification]
-* [Configure your source specification]
-* [Configure your explore specification]
+* [Configure your authentication specification](../config/authspec.md)
+* [Configure your source specification](../config/sourcespec.md)
+* [Configure your explore specification](../config/explorespec.md)
 
 With your specification information updated, you can submit the new connection specification by making a POST request to the `/connectionSpecs` endpoint of the [!DNL Flow Service] API.
 

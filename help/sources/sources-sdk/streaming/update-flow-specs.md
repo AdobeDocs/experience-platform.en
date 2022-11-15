@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 title: Update flow specifications for Streaming SDK using the Flow Service API
-topic-legacy: developer guide
 description: The following document provides steps on how to retrieve and update flow specifications using the Flow Service API for Self-Serve Sources (Streaming SDK).
-exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
+hide: true
+hidefromtoc: true
 ---
 # Update flow specifications using the [!DNL Flow Service] API
 
@@ -19,7 +19,7 @@ Before continuing, please review the [getting started guide](./getting-started.m
 
 ## Look up a flow specification {#lookup}
 
-Sources created with the `generic-rest-extension` template all use the `RestStorageToAEP` flow specification. This flow specification can be retrieved by making a GET request to the `/flowSpecs/` endpoint, and providing the `flowSpec.id` of `e77fde5a-22a8-11ed-861d-0242ac120002`.
+Sources created with the `generic-streaming` template all use the `GenericStreamingAEP` flow specification. This flow specification can be retrieved by making a GET request to the `/flowSpecs/` endpoint, and providing the `flowSpec.id` of `e77fde5a-22a8-11ed-861d-0242ac120002`.
 
 **API format**
 
@@ -141,11 +141,11 @@ A successful response returns the details of the queried flow specification.
 
 ## Update a flow specification {#update}
 
-You can update the fields of a connection specification through a PUT operation. When updating a connection specification through a PUT request, the body must include all of the fields that would be required when creating a new connection specification in a POST request.
+You can update the fields of a flow specification through a PUT operation. When updating a flow specification through a PUT request, the body must include all of the fields that would be required when creating a new flow specification in a POST request.
 
 >[!IMPORTANT]
 >
->You must update the list of `sourceConnectionSpecIds` of the flow specification that corresponds to a new source every time a new source is created. This ensures that your new source is supported by an existing flow specification, thus allowing you to complete the dataflow creation process with your new source.
+>When you create a connection specification for a new source, you must add its spec ID to the `sourceConnectionSpecIds` array of the flow specifications that correspond to your source. This ensures that your new source is supported by an existing flow specification, thus allowing you to complete the dataflow creation process with your new source.
 
 **API format**
 
