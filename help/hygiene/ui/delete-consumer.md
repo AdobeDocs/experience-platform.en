@@ -5,11 +5,14 @@ exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 ---
 # Delete consumer records
 
+The [[!UICONTROL Data Hygiene] workspace](./overview.md) in the Adobe Experience Platform UI allows you to delete consumer records that are participating in Identity Service and Real-time Customer Profile.
+
 >[!IMPORTANT]
 >
 >Consumer delete requests are only available for organizations that have purchased **Adobe Healthcare Shield**.
-
-The [[!UICONTROL Data Hygiene] workspace](./overview.md) in the Adobe Experience Platform UI allows you to delete consumer records that are participating in Identity Service and Real-time Customer Profile.
+>
+>
+>Consumer deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
 
 ## Prerequisites
 
