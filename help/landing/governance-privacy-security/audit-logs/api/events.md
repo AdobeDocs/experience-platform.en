@@ -29,7 +29,7 @@ GET /audit/events
 
 **Request**
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/audit/events
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -168,7 +168,7 @@ GET /audit/export
 
 **Request**
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/audit/events
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
