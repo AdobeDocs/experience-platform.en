@@ -100,6 +100,8 @@ solution: Data Collection
     * Adobe Target v2 {#target-v2}
       * [Overview](./extensions/web/target-v2/overview.md)
       * [Release notes](./extensions/web/target-v2/release-notes.md)
+    * Azure Event Hubs {#azure-event-hubs}
+      * [Overview](./extensions/web/azure-event-hubs/overview.md)
     * [!DNL BrightCove] video tracking {#brightcove}
       * [Overview](./extensions/web/brightcove/overview.md)
       * [Release notes](./extensions/web/brightcove/release-notes.md)
