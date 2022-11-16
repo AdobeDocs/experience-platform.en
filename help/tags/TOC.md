@@ -100,8 +100,6 @@ solution: Data Collection
     * Adobe Target v2 {#target-v2}
       * [Overview](./extensions/web/target-v2/overview.md)
       * [Release notes](./extensions/web/target-v2/release-notes.md)
-    * Azure Event Hubs {#azure-event-hubs}
-      * [Overview](./extensions/web/azure-event-hubs/overview.md)
     * [!DNL BrightCove] video tracking {#brightcove}
       * [Overview](./extensions/web/brightcove/overview.md)
       * [Release notes](./extensions/web/brightcove/release-notes.md)
@@ -115,16 +113,18 @@ solution: Data Collection
       * [Overview](./extensions/web/core/overview.md)
       * [Event forwarding](./extensions/web/core/event-forwarding.md)
       * [Release notes](./extensions/web/core/release-notes.md)
-    * [!DNL Mailchimp] Edge {#mailchimp-edge}
-      * [Overview](./extensions/web/mailchimp/overview.md)
-    * [!DNL Marketo Munchkin] {#marketo}
-      * [Overview](./extensions/web/marketo/overview.md)
-      * [Release notes](./extensions/web/marketo/release-notes.md)
     * Google Ads Enhanced Conversions {#google-ads-enhanced-conversions}
       * [Overview](./extensions/web/google-ads-enhanced-conversions/overview.md)
     * Google Data Layer {#google-data-layer}
       * [Overview](./extensions/web/google-data-layer/overview.md)
       * [Release notes](./extensions/web/google-data-layer/release-notes.md)
+    * [!DNL Mailchimp] Edge {#mailchimp-edge}
+      * [Overview](./extensions/web/mailchimp/overview.md)
+    * [!DNL Marketo Munchkin] {#marketo}
+      * [Overview](./extensions/web/marketo/overview.md)
+      * [Release notes](./extensions/web/marketo/release-notes.md)
+    * [!UICONTROL Microsoft Azure] {#azure}
+      * [Overview](./extensions/web/azure/overview.md)
     * [!DNL Splunk] {#splunk}
       * [Overview](./extensions/web/splunk/overview.md)
     * [!DNL YouTube] video tracking {#youtube}
