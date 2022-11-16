@@ -9,7 +9,7 @@ description: Use the Pega Profile Connector for Amazon S3 in Adobe Experience Pl
 
 Use the [!DNL Pega Profile Connector] in Adobe Experience Platform to create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export profile data to CSV files from Adobe Experience Platform into your own S3 buckets. In [!DNL Pega Customer Decision Hub], you can schedule data jobs to import this profile data from S3 storage to update the [!DNL Pega Customer Decision Hub] profile.
 
-This connector helps setup initial export of profile data and also helps sync up new profiles periodically into [!DNL Pega Customer Decision Hub].  Having up-to-date data in Customer Decision Hub provides a better and updated view of your customer base for next-best-action decisioning.
+This connector helps set up the initial export of profile data and also helps sync up new profiles periodically into [!DNL Pega Customer Decision Hub].  Having up-to-date data in Customer Decision Hub provides a better and updated view of your customer base for next-best-action decisioning.
 
 >[!IMPORTANT]
 >
@@ -73,7 +73,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 ### Fill in destination details {#destination-details}
 
-After establishing the authentication connection to the [!DNL Amazon S3], provide the following information for the destination:
+After establishing the authentication connection to [!DNL Amazon S3], provide the following information for the destination:
 
 ![Image of the UI screen showing completed fields for the Pega Profile Connector destination details](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png)
 
@@ -126,7 +126,7 @@ In Pega Customer Decision Hub, data administrators can configure data jobs in Cu
 
 ## Additional resources {#additional-resources}
 
-See [Import data jobs](https://academy.pega.com/topic/import-data-jobs/v1)) in [!DNL Pega Customer Decision Hub].
+See [Import data jobs](https://academy.pega.com/topic/import-data-jobs/v1) in [!DNL Pega Customer Decision Hub].
 
 ## Data usage and governance {#data-usage-governance}
 
