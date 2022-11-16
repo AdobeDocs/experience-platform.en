@@ -10,6 +10,9 @@ The `/workorder` endpoint in the Data Hygiene API allows you to programmatically
 >[!IMPORTANT]
 >
 >Consumer delete requests are only available for organizations that have purchased **Adobe Healthcare Shield**.
+>
+>
+>Consumer deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
 
 ## Getting started
 

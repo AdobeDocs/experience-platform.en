@@ -14,7 +14,11 @@ Adobe Experience Platform provides a robust set of tools to manage large, compli
 Platform's data hygiene capabilities allow you to manage your stored consumer data through the following:
 
 * Scheduling automated dataset expirations
-* Deleting consumer data based on ingested identities
+* Deleting individual consumer data from your records
+
+>[!IMPORTANT]
+>
+>Consumer deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead.
 
 These activities can be performed using the [[!UICONTROL Data Hygiene] UI workspace](#ui) or the [Data Hygiene API](#api). When a data hygiene job executes, the system provides transparency updates at each step of process. See the section on [timelines and transparency](#timelines-and-transparency) for more information on how each job type is represented in the system.
 
