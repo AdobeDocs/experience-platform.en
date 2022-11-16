@@ -34,7 +34,7 @@ Start creating a new event forwarding rule rule and configure its conditions a
 
 The right panel updates to show configuration options for how the data should be sent. Specifically, you must assign [data elements](../../../ui/managing-resources/data-elements.md) to the various properties that represent your [!DNL Event Hub] configuration.
 
-![The [!UICONTROL Send Data to Event Hubs] action type being selected for a rule in the Data Collection UI.](../../../images/extensions/azure/event-hub-details.png)
+![The configuration options for the [!UICONTROL Send Data to Event Hubs] action type shown in the UI.](../../../images/extensions/azure/event-hub-details.png)
 
 **[!UICONTROL Event Hub Details]**
 
