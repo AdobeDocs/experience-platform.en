@@ -29,8 +29,38 @@ tqdm
 
 ## Import analytics tables from Platform into Jupyter Notebook {#import-analytics-tables}
 
-To generate a propensity score model, analytics data stored in Platform must be imported into Jupyter Notebook. This example use case imports a customer behavior dataset from Luma, a fictitious clothing store. As Platform data is stored using the Experience Data Model (XDM)format, a sample JSON object must be generated that conforms to the schema's structure. See the documentation for instructions on how to [generate the sample JSON object]../../xdm/ui/sample.md).
+To generate a propensity score model, analytics data stored in Platform must be imported into Jupyter Notebook. From a Python 3 Jupyter Notebook connected to Query Service, the following commands imports a customer behavior dataset from Luma, a fictitious clothing store. As Platform data is stored using the Experience Data Model (XDM)format, a sample JSON object must be generated that conforms to the schema's structure. See the documentation for instructions on how to [generate the sample JSON object](../../xdm/ui/sample.md).
 
-From your connected Python 3 Jupyter Notebook,  
+![The Jupyter Notebook dashboard with several commands highlighted.](../images/use-cases/jupyter-commands.png)
+
+The output displays a tabluarized view of all columns from Luma's behavioral dataset within the Jupyter Notebook dashboard.
+
+![The tabularized output of Luma's imported customer behavior dataset within Jupyter Notebook.](../images/use-cases/behavioural-dataset-results.png)
+
+### Prepare the data for machine learning
+
+A target column must be identified to train a machine learning model. As propensity to buy is the goal for this use case, the `cja_action` column is chosen as the target column from the Luma results. The value `productPurchase` is the indicator for a customer purchase. The `purchase_value` and `purchase_num` columns are also {PLACEHOLDER removed } as they are directly related to the product purchase action.
+
+The commands to carry out these actions are as follows:
+
+```python
+#define the target label for prediction
+df['target'] = (df['cja_action'] == 'productPurchase').astype(int)
+#remove columns that are dependant to the label
+df.drop(['cja_action','purchase_value'], axis=1,inplace=True)
+```
+
+Next, the data from the Luma dataset must be transformed into appropriate representations. Two steps are required: 
+
+1. Transform the columns representing numbers into numeric columns. To do this explicitly convert the data type in the `dataframe`.
+1. Transform categorical columns into numeric columns as well.
+
+```python
+#convert columns that represent numbers
+num_cols = ['purchase_num', 'value_cart', 'value_lifetime'  
+df[num_cols] = (df[num_cols].apply(pdto_numeric, errors='coerce')
+```
+
+A technique called One-hot encoding is used to convert the categorical data variables for use with machine and deep learning algorithms. This in turn improves predictions as well as the classification accuracy of a model. Use the `Sklearn` library to represent each categorical value in a separate column.
 
 
