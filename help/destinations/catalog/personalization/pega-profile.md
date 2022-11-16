@@ -114,6 +114,10 @@ When you are finished providing details for your destination connection, select 
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
 
+### Map attributes and identities {#map}
+
+In the **[!UICONTROL Mapping]** step, you can select which attribute and identity fields to export for your profiles. You can also select to change the headers in the exported file to any friendly name that you wish. For more information, view the [mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in the activate batch destinations UI tutorial.
+
 ## Exported data / Validate data export {#exported-data}
 
 For [!DNL Pega Profile Connector] destinations, [!DNL Platform] creates a `.csv` file in Amazon S3 storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
