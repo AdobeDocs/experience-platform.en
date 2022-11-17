@@ -28,7 +28,7 @@ Since the extension does not have any configuration properties, it is immediatel
 
 ## Configure an event forwarding rule {#rule}
 
-Start creating a new event forwarding rule rule and configure its conditions as desired. When selecting the actions for the rule, select **[!UICONTROL Microsoft Azure]** for the extension, then select **[!UICONTROL Send Data to Event Hubs]** for action type.
+Start creating a new event forwarding rule and configure its conditions as desired. When selecting the actions for the rule, select **[!UICONTROL Microsoft Azure]** for the extension, then select **[!UICONTROL Send Data to Event Hubs]** for action type.
 
 ![The [!UICONTROL Send Data to Event Hubs] action type being selected for a rule in the Data Collection UI.](../../../images/extensions/azure/select-action-type.png)
 
@@ -42,8 +42,8 @@ The right panel updates to show configuration options for how the data should be
 | --- | --- |
 | [!UICONTROL Namespace] | The name of the [!DNL Event Hubs] namespace that you created when [setting up the event hub](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace). |
 | [!UICONTROL Name] | The name of the event hub. |
-| [!UICONTROL SAS Authorization Rule Name] | The name of the shared access authorization rule for your entire [!DNL Event Hubs] namespace or the specific event hub instance that you want send data to. See the appendix section on [obtaining SAS authorization values](#sas) for more information. |
-| [!UICONTROL SAS Access Key] | The primary key of the shared access authorization rule for your entire [!DNL Event Hubs] namespace or the specific event hub instance that you want send data to. See the appendix section on [obtaining SAS authorization values](#sas) for more information. |
+| [!UICONTROL SAS Authorization Rule Name] | The name of the shared access authorization rule for your entire [!DNL Event Hubs] namespace or the specific event hub instance that you want to send data to. See the appendix section on [obtaining SAS authorization values](#sas) for more information. |
+| [!UICONTROL SAS Access Key] | The primary key of the shared access authorization rule for your entire [!DNL Event Hubs] namespace or the specific event hub instance that you want to send data to. See the appendix section on [obtaining SAS authorization values](#sas) for more information. |
 | [!UICONTROL Partition ID] | [!DNL Event Hubs] allows you to [send events directly to specific partitions](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/event-hubs/partitioning-in-event-hubs-and-kafka). To leverage this feature, provide the ID of the partition that you want to receive the events. |
 
 {style="table-layout:auto"}
@@ -62,7 +62,7 @@ Finally, publish a new event forwarding [build](../../../ui/publishing/builds.md
 
 ## Next steps
 
-This guide covered how send data to [!DNL Event Hubs] using the [!DNL Microsoft Azure] event forwarding extension. For more information on event forwarding capabilities in Experience Platform, refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md).
+This guide covered how to send data to [!DNL Event Hubs] using the [!DNL Microsoft Azure] event forwarding extension. For more information on event forwarding capabilities in Experience Platform, refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md).
 
 ## Appendix: Obtain SAS authorization values {#sas}
 
