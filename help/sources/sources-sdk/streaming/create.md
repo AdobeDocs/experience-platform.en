@@ -147,7 +147,7 @@ POST /connectionSpecs
 
 **Request**
 
-The following request is an example of a fully-authored connection specification for a [!DNL MailChimp] source:
+The following request is an example of a fully-authored connection specification for a streaming source:
 
 ```shell
 curl -X POST \
