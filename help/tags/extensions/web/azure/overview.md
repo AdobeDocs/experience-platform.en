@@ -20,7 +20,7 @@ In order to use this extension, you must have a valid [!DNL Azure] account with 
 
 To install the Microsoft [!DNL Azure] extension, navigate to the Data Collection UI or Experience Platform UI and select **[!UICONTROL Event Forwarding]** from the left navigation. From here, select a property to add the extension to, or create a new property instead.
 
-Once you have selected or created the desired property, select **[!UICONTROL Extensions]** in the left navigation, then select the **[!UICONTROL Catalog]** tab. Search for [!UICONTROL Microsoft Azure] card, then select **[!UICONTROL Install]**.
+Once you have selected or created the desired property, select **[!UICONTROL Extensions]** in the left navigation, then select the **[!UICONTROL Catalog]** tab. Search for the [!UICONTROL Microsoft Azure] card, then select **[!UICONTROL Install]**.
 
 ![The [!UICONTROL Install] button being selected for the [!UICONTROL Microsoft Azure] extension in the Data Collection UI.](../../../images/extensions/azure/install.png)
 
