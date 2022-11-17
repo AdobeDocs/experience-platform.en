@@ -1,7 +1,6 @@
 ---
 title: Determine A Propensity Score Using A Machine Learning Generated Predictive Model
 description: Learn how to use Query Service to enable machine learning on Experience Platform data to generate a predictive model. This document demonstrates how to use Platform data to predict a customers' propensity to purchase on each visit.
-exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
 ---
 # Determine a propensity score using a machine-learning generated predictive model
 
@@ -37,7 +36,7 @@ The output displays a tabluarized view of all columns from Luma's behavioral dat
 
 ![The tabularized output of Luma's imported customer behavior dataset within Jupyter Notebook.](../images/use-cases/behavioural-dataset-results.png)
 
-### Prepare the data for machine learning
+## Prepare the data for machine learning
 
 A target column must be identified to train a machine learning model. As propensity to buy is the goal for this use case, the `analytic_action` column is chosen as the target column from the Luma results. The value `productPurchase` is the indicator for a customer purchase. The `purchase_value` and `purchase_num` columns are also {PLACEHOLDER removed } as they are directly related to the product purchase action.
 
@@ -72,13 +71,13 @@ cat_columns= list(set(df.columns) - set(num_cols + ['target']))
 #get the dataframe with categorical columns only
 df_cat = df.loc[:,cat_columns]
 
-#initialize sklearn's One Hot Encoder
+#initialize sklearn's OneHotEncoder
 enc = OneHotEncoder(handle_unknown='ignore')
 
 #fit the data into the encoder
 enc.fit(df_cat)
 
-#define one hot encoder's columns names
+#define OneHotEncoder's columns names
 ohc_columns = [[c+'='+c_ for c_ in cat] for c, cat in zip(cat_columns, enc. categories_)]
 ohc_columns = [item for sublist in ohc_columns for item in sublist]
 
@@ -150,7 +149,7 @@ A vertical bar chart visualization of results is seen below:
 
 Several patterns can be discerened from the bar chart. The channels Point of sale (POS) and Call topics as reimbursement are the most important factors that decide a purchasing behavior. While the Call topics as complaints and invoices are important roles to define the not purchasing behavior. These are quantifiable, actionable insights that marketers can leverage to conduct marketing campaigns to address the propensity to purchase of these customers.
 
-### Working on Sampled Data: Bootstrapping
+## Working on Sampled Data: Bootstrapping
 
 In the case that data sizes are too large for your local machine to store the data for model training, you can take samples instead of the full data from Query Service. To know how much data is needed to sample from Query Service, you can apply a technique called bootstrapping. In this regard, bootstrapping means that the model is trained multiple times with various samples, and the variance of the model's accuracies among difference samples is inspected. To adjust the propensity model example given above, first encapsulate the whole machine learning workflow into a function. The code is as follows:
 
@@ -172,13 +171,13 @@ def end_to_end_pipeline(df):
     #get the data frame with categorical columns only
     df_cat = df.loc[:,cat_columns]
     
-    #initialize sklearn's One Hot Encoder
+    #initialize sklearn's OneHotEncoder
     enc = OneHotEncoder(handle_unknown='ignore')
     
     #fit the data into the encoder
     enc.fit(df_cat)
     
-    #define one hot encoder's columns names
+    #define OneHotEncoder's columns names
     ohc_columns = [[c+'='+c_ for c_ in cat] for c,cat in zip(cat_columns, enc. categories_)]
     ohc_columns = [item for sublist in ohc_columns for item in sublist]
     
@@ -222,4 +221,94 @@ The bootstrapped model's accuracies are then sorted. After which, the 10th and 9
 ![The print command to display the confidence interval of the propensity score.](../images/use-cases/confidence-interval.png)
 
 The above figure states that if you only take 1000 rows to train your models, you can expect the accuracies to fall between approximately 84% and 88%. You can adjust the LIMIT clause in Query Service queries based on your needs to ensure the performance of the models.
+
+## Use Query Service to apply the trained model
+
+After the trained model has been created, it must be applied to the data held in Experience Platform. To do this, the logic of the machine learning pipeline must be converted to SQL. The two key components of this transition are as follows:
+
+<!-- The Logistics Regression Machine Learning classification algorithm that used to predict the probability of a categorical dependent variable. I -->
+
+- Firstly, SQL must take the place of the Logistics Regression module to obtain the probability of a prediction label. The model created by Logistics Regression produced the regression model `y = wX + c`  where weights `w` and intercept `c` are the output of the model. SQL features can be used to multiply the weights to obtain a probability. 
+
+- Secondly, the engineering process achieved in Python with one hot encoding must also be incorporated into SQL. For example, in the original database, we have `geo_county` column to store the county but the column is converted to `geo_county=Bexar`, `geo_county=Dallas`, `geo_county=DeKalb`. The following SQL statement conducts the same transformation, where `w1`, `w2`, `w3` could be substituted with the weights learned from the model in Python:
+
+```sql
+SELECT  CASE WHEN geo_state = 'Bexar' THEN FLOAT(w1) ELSE 0 END AS f1,
+        CASE WHEN geo_state = 'Dallas' THEN FLOAT(w2) ELSE 0 END AS f2,
+        CASE WHEN geo_state = 'Bexar' THEN FLOAT(w3) ELSE 0 END AS f3,
+``` 
+
+For numerical features you can directly multiply the columns with the weights, as seen in the SQL statement below.
+
+```sql
+SELECT FLOAT(purchase_num) * FLOAT(w4) AS f4,
+```
+
+After the numbers have been obtained, they can be ported to a sigmoid function where the Logistics Regression algorithm produces the final predictions. In the statement below, `intercept` is the number of the intercept in the regression.
+         
+```sql
+SELECT CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + f4 + FLOAT(intercept)))) > 0.5 THEN 1 ELSE 0 END AS Prediction;
+```
+ 
+### An end-to-end example
+
+In a situation where you have two columns (`c1` and `c2`), if `c1` has two categories and the logistic regression is trained with the following function:
+ 
+```python
+y = 0.1 x "c1=category 1"+ 0.2 x* "c1=category 2" +0.3 x c2+0.4
+```
+ 
+The equivalent in SQL is as follows:
+
+```sql
+SELECT
+  CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + FLOAT(0.4)))) > 0.5 THEN 1 ELSE 0 END AS Prediction
+FROM
+  (
+    SELECT
+      CASE WHEN c1 = 'Cateogry 1' THEN FLOAT(0.1) ELSE 0 END AS f1,
+      CASE WHEN c1 = 'Cateogry 2' THEN FLOAT(0.2) ELSE 0 END AS f2,
+      FLOAT(c2) * FLOAT(0.3) AS f3
+    FROM TABLE
+  )
+```
+ 
+The Python code to automate the translation process is as follows:
+
+```python
+def generate_lr_inference_sql(ohc_columns, num_cols, clf, db):
+    features_sql = []
+    category_sql_text = "case when {col} = '{val}' then float({coef}) else 0 end as f{name}"
+    numerical_sql_text = "float({col}) * float({coef}) as f{name}"
+    for i, (column, coef) in enumerate(zip(ohc_columns+num_cols, clf.coef_[0])):
+        if i < len(ohc_columns):
+            col,val = column.split('=')
+            val = val.replace("'","%''%")
+            sql = category_sql_text.format(col=col,val=val,coef=coef,name=i+1)
+        else:
+            sql = numerical_sql_text.format(col=column,coef=coef,name=i+1)
+        features_sql.append(sql)
+    features_sum = '+'.join(['f{}'.format(i) for i in range(1,len(features_sql)+1)])
+    final_sql = '''
+    select case when 1/(1 + EXP(-({features} + float({intercept})))) > 0.5 then 1 else 0 end as Prediction
+    from
+        (select {cols}
+        from {db})
+    '''.format(features=features_sum,cols=",".join(features_sql),intercept=clf.intercept_[0],db=db)
+    return final_sql
+```
+
+When SQL is used to infer the database, the output is as follows:
+
+```python
+sql = generate_lr_inference_sql(ohc_columns, num_cols, clf, "fdu_luma_raw")
+cur.execute(sql)    
+samples = [r for r in cur]
+colnames = [desc[0] for desc in cur.description]
+pd.DataFrame(samples,columns=colnames)
+```
+
+![The tabularized results of teh database inference using SQL.](../images/use-cases/inference-results.png)
+
+
 
