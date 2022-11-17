@@ -1,12 +1,9 @@
 ---
-title: Determine A Propensity Score With Query Service Using A Predictive Model Generated On Your Machine Learning Framework
+title: Determine A Propensity Score Using A Machine Learning Generated Predictive Model
 description: Learn how to use Query Service to enable machine learning on Experience Platform data to generate a predictive model. This document demonstrates how to use Platform data to predict a customers' propensity to purchase on each visit.
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
 ---
-# Determine a propensity score with Query Service using a predictive model generated on your machine learning framework
-
-<!-- title: Calculate Propensity Score With Query Service And Machine Learning -->
-<!-- Calculate a propensity score with Query Service and machine learning -->
+# Determine a propensity score using a machine-learning generated predictive model
 
 Query Service has access to large volumes of records stored on Adobe Experience Platform that can be leveraged using machine learning to generate propensity scores. This guide explains how to use Query Service to provide Platform data to train a machine learning model in a computational notebook. The model can then be used to predict a customers' propensity to purchase for each visit.
 
