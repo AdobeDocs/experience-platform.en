@@ -1,9 +1,12 @@
 ---
-title: Calculate Propensity Score With Query Service And Machine Learning
+title: Determine A Propensity Score With Query Service Using A Predictive Model Generated On Your Machine Learning Framework
 description: Learn how to use Query Service to enable machine learning on Experience Platform data to generate a predictive model. This document demonstrates how to use Platform data to predict a customers' propensity to purchase on each visit.
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
 ---
-# Calculate propensity score with Query Service and machine learning
+# Determine a propensity score with Query Service using a predictive model generated on your machine learning framework
+
+<!-- title: Calculate Propensity Score With Query Service And Machine Learning -->
+<!-- Calculate a propensity score with Query Service and machine learning -->
 
 Query Service has access to large volumes of records stored on Adobe Experience Platform that can be leveraged using machine learning to generate propensity scores. This guide explains how to use Query Service to provide Platform data to train a machine learning model in a computational notebook. The model can then be used to predict a customers' propensity to purchase for each visit.
 
@@ -29,7 +32,7 @@ tqdm
 
 ## Import analytics tables from Platform into Jupyter Notebook {#import-analytics-tables}
 
-To generate a propensity score model, analytics data stored in Platform must be imported into Jupyter Notebook. From a Python 3 Jupyter Notebook connected to Query Service, the following commands imports a customer behavior dataset from Luma, a fictitious clothing store. As Platform data is stored using the Experience Data Model (XDM)format, a sample JSON object must be generated that conforms to the schema's structure. See the documentation for instructions on how to [generate the sample JSON object](../../xdm/ui/sample.md).
+To generate a propensity score model, a projection of the analytics data stored in Platform must be imported into Jupyter Notebook. From a Python 3 Jupyter Notebook connected to Query Service, the following commands imports a customer behavior dataset from Luma, a fictitious clothing store. As Platform data is stored using the Experience Data Model (XDM)format, a sample JSON object must be generated that conforms to the schema's structure. See the documentation for instructions on how to [generate the sample JSON object](../../xdm/ui/sample.md).
 
 ![The Jupyter Notebook dashboard with several commands highlighted.](../images/use-cases/jupyter-commands.png)
 
@@ -39,15 +42,15 @@ The output displays a tabluarized view of all columns from Luma's behavioral dat
 
 ### Prepare the data for machine learning
 
-A target column must be identified to train a machine learning model. As propensity to buy is the goal for this use case, the `cja_action` column is chosen as the target column from the Luma results. The value `productPurchase` is the indicator for a customer purchase. The `purchase_value` and `purchase_num` columns are also {PLACEHOLDER removed } as they are directly related to the product purchase action.
+A target column must be identified to train a machine learning model. As propensity to buy is the goal for this use case, the `analytic_action` column is chosen as the target column from the Luma results. The value `productPurchase` is the indicator for a customer purchase. The `purchase_value` and `purchase_num` columns are also {PLACEHOLDER removed } as they are directly related to the product purchase action.
 
 The commands to carry out these actions are as follows:
 
 ```python
 #define the target label for prediction
-df['target'] = (df['cja_action'] == 'productPurchase').astype(int)
+df['target'] = (df['analytic_action'] == 'productPurchase').astype(int)
 #remove columns that are dependant to the label
-df.drop(['cja_action','purchase_value'], axis=1,inplace=True)
+df.drop(['analytic_action','purchase_value'], axis=1,inplace=True)
 ```
 
 Next, the data from the Luma dataset must be transformed into appropriate representations. Two steps are required: 
@@ -158,10 +161,10 @@ In the case that data sizes are too large for your local machine to store the da
 def end_to_end_pipeline(df):
     
     #define the target label for prediction
-    df['target'] = (df['cja_action'] == 'product Purchase').astype(int)
+    df['target'] = (df['analytic_action'] == 'product Purchase').astype(int)
     
     #remove columns that are dependent to the label
-    df.drop(['cja_action','purchase_value'],axis-1,inplace=True)
+    df.drop(['analytic_action','purchase_value'],axis-1,inplace=True)
     
     num_cols = ['purchase_num','value_cart','value_lifetime']
     df[num_cols] = df[num_cols].apply(pd.to_numeric, errors='coerce')
