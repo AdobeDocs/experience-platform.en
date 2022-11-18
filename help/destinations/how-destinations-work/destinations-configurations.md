@@ -13,15 +13,15 @@ When thinking about the export behavior to Experience Platform destinations, you
 
 ![Diagram showing the interplay between common and configurable export settings for destinations](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
 
-This page lists all the common and the configurable export settings for destinations.
+This page describes or links out to all the common and the configurable export settings for destinations, on the three levels outlined above.
 
 ## Common export settings across destination types
 
-Destination export behavior is consistent across destination types with regard to what triggers a destination export and what is included in the destination exports. Destination exports are triggered by notifications that the destinations service receives from the Profile service upstream. What is included in the destination exports varies slightly between destination types. Read more about the [common export behavior patterns](/help/destinations/how-destinations-work/profile-export-behavior.md). These settings cannot be edited by destination developers or users.
+Destination export behavior is consistent across destination types with regard to what triggers a destination export and what is included in the destination exports. Destination exports are triggered by notifications that the destinations service receives from the [upstream Real-time Customer Profile service](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=en#adobe-experience-platform-%26-applications-detailed-architecture-diagram). What is included in the destination exports varies slightly between destination types. Read more about the [common export behavior patterns](/help/destinations/how-destinations-work/profile-export-behavior.md). These settings cannot be edited by destination developers or Real-time CDP users.
 
 ## Customizable export settings by destination developers
 
-Destination developers using [Destination SDK](/help/destinations/destination-sdk/overview.md) have great flexibility to configure destinations based on the downstream capabilities of the API endpoints and file reception systems. Based on the downstream capabilities, destination developers have the following configuration options available when configuring a destination using Destination SDK:
+Destination developers can use [Destination SDK](/help/destinations/destination-sdk/overview.md) to create custom or productized destinations. [Destination SDK](/help/destinations/destination-sdk/overview.md) provides developers with great flexibility to configure destinations based on the downstream capabilities of the API endpoints and file reception systems. Based on the downstream capabilities, destination developers have the following configuration options available when configuring a destination using Destination SDK:
 
 * Determine which attributes and identities can be exported out of Experience Platform to the destination.
 * Set an aggregation policy, which determines how long Experience Platform should wait when aggregating HTTP messages to be sent to API integrations. Destination developers can configure different aggregation types to determine how many profiles should be included in outgoing HTTP messages and how long Experience Platform should wait until dispatching the HTTP message. Find extensive information about the [aggregation policy configuration options](/help/destinations/destination-sdk/destination-configuration.md#aggregation) available to destination developers in the Destination SDK documentation.
@@ -36,7 +36,7 @@ The settings that are available to users when connecting to a destination depend
 
 For example, for streaming destinations, a destination developer may configure which identities their destination accepts and only those identities will be displayed to the user in the activation workflow. 
 
-Similarly, for file-based destinations, the destination developer may determine which filename append options they want to make available for their destination, or which file formatting options they want to make available, and the user will be able to select from these options only.
+Similarly, for file-based destinations, the destination developer may determine which [filename append options](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) they want to make available for their destination, or which [file formatting options](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md) they want to make available, and the user will be able to select from these options only.
 
 Read more about the different options and steps available in the activation workflow:
 
