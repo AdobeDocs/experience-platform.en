@@ -12,7 +12,17 @@ Data ingestion allows you to ingest your data to Adobe Experience Platform. You 
 
 This user guide provides steps on how to monitor your data within Adobe Experience Platform user interface. This guide requires you to have an Adobe ID and access to Adobe Experience Platform.
 
-## Monitor streaming end-to-end data ingestion
+## Monitor streaming end-to-end data ingestion {#monitor-streaming-end-to-end-data-ingestion}
+
+>[!CONTEXTUALHELP]
+>id="platform_ingestion_streaming_ingestionrate"
+>title="Ingestion rate"
+>abstract="The number of events that are successfully processed per second."
+>text="Learn more in the documentation"
+
+>[!TIP]
+>
+>To calculate the total events on a particular date, use the expression of: `total events / day = ingestion rate * 60 * 60 * 24`.
 
 In the [Experience Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** on the left navigation menu, followed by **[!UICONTROL Streaming end-to-end]**.
 
