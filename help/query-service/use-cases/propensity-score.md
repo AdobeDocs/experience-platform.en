@@ -56,7 +56,7 @@ Next, the data from the Luma dataset must be transformed into appropriate repres
 
 ```python
 #convert columns that represent numbers
-num_cols = ['purchase_num','value_cart','value_lifetime']
+num_cols = ['purchase_num', 'value_cart', 'value_lifetime']
 df[num_cols] = df[num_cols].apply(pd.to_numeric, errors='coerce')
 ```
 
@@ -105,7 +105,7 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.33, random_state=42)
 
-clf = LogisticRegression(max_iter=2000,random_state=0).fit(X_train, y_train)
+clf = LogisticRegression(max_iter=2000, random_state=0).fit(X_train, y_train)
 
 print("Test data accuracy: {}".format(clf.score(X_test, y_test)))
 ```
@@ -181,7 +181,7 @@ SELECT CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + f4 + FLOAT(intercept)))) > 0.5 T
 In a situation where you have two columns (`c1` and `c2`), if `c1` has two categories and the logistic regression is trained with the following function:
  
 ```python
-y = 0.1 x "c1=category 1"+ 0.2 x* "c1=category 2" +0.3 x c2+0.4
+y = 0.1 * "c1=category 1"+ 0.2 * "c1=category 2" + 0.3 * c2 + 0.4
 ```
  
 The equivalent in SQL is as follows:
