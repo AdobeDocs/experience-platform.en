@@ -181,7 +181,7 @@ SELECT CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + f4 + FLOAT(intercept)))) > 0.5 T
 In a situation where you have two columns (`c1` and `c2`), if `c1` has two categories and the logistic regression is trained with the following function:
  
 ```python
-y = 0.1 * "c1=category 1"+ 0.2 * "c1=category 2" + 0.3 * c2 + 0.4
+y = 0.1 * "c1=category 1"+ 0.2 * "c1=category 2" +0.3 * c2+0.4
 ```
  
 The equivalent in SQL is as follows:
