@@ -1,10 +1,10 @@
 ---
 title: Determine A Propensity Score Using A Machine Learning Generated Predictive Model
-description: Learn how to use Query Service to apply your predictive model to Platform data. This document demonstrates how to use Platform data to predict a customers' propensity to purchase on each visit.
+description: Learn how to use Query Service to apply your predictive model to Platform data. This document demonstrates how to use Platform data to predict a customer's propensity to purchase on each visit.
 ---
-# Determine a propensity score using a machine-learning generated predictive model
+# Determine a propensity score using a machine-learning-generated predictive model
 
-Query Service has access to large volumes of records stored on Adobe Experience Platform that can be leveraged by your machine learning platform to generate predictive models such as propensity scores. This guide explains how to use Query Service to provide Platform data to your machine learning platform to train a machine learning model in a computational notebook. The trained model can be applied to data using SQL to predict a customers' propensity to purchase for each visit.
+Using Query Service, you can leverage Experience Platform data in your machine learning platforms to generate predictive models such as propensity scores. This guide explains how to use Query Service to send data to your machine learning platform in order to train a model in a computational notebook. The trained model can be applied to data using SQL to predict a customer's propensity to purchase for each visit.
 
 ## Getting started
 
@@ -26,26 +26,26 @@ numpy
 tqdm
 ```
 
-## Import analytics tables from Platform into Jupyter Notebook {#import-analytics-tables}
+## Import analytics tables from Platform into [!DNL Jupyter Notebook] {#import-analytics-tables}
 
-To generate a propensity score model, a projection of the analytics data stored in Platform must be imported into Jupyter Notebook. From a Python 3 Jupyter Notebook connected to Query Service, the following commands imports a customer behavior dataset from Luma, a fictitious clothing store. As Platform data is stored using the Experience Data Model (XDM) format, a sample JSON object must be generated that conforms to the schema's structure. See the documentation for instructions on how to [generate the sample JSON object](../../xdm/ui/sample.md).
+To generate a propensity score model, a projection of the analytics data stored in Platform must be imported into [!DNL Jupyter Notebook]. From a [!DNL Python] 3 [!DNL Jupyter Notebook] connected to Query Service, the following commands imports a customer behavior dataset from Luma, a fictitious clothing store. As Platform data is stored using the Experience Data Model (XDM) format, a sample JSON object must be generated that conforms to the schema's structure. See the documentation for instructions on how to [generate the sample JSON object](../../xdm/ui/sample.md).
 
-![The Jupyter Notebook dashboard with several commands highlighted.](../images/use-cases/jupyter-commands.png)
+![The [!DNL Jupyter Notebook] dashboard with several commands highlighted.](../images/use-cases/jupyter-commands.png)
 
-The output displays a tabluarized view of all columns from Luma's behavioral dataset within the Jupyter Notebook dashboard.
+The output displays a tabularized view of all columns from Luma's behavioral dataset within the [!DNL Jupyter Notebook] dashboard.
 
-![The tabularized output of Luma's imported customer behavior dataset within Jupyter Notebook.](../images/use-cases/behavioural-dataset-results.png)
+![The tabularized output of Luma's imported customer behavior dataset within [!DNL Jupyter Notebook].](../images/use-cases/behavioural-dataset-results.png)
 
 ## Prepare the data for machine learning {#prepare-data-for-machine-learning}
 
-A target column must be identified to train a machine learning model. As propensity to buy is the goal for this use case, the `analytic_action` column is chosen as the target column from the Luma results. The value `productPurchase` is the indicator for a customer purchase. The `purchase_value` and `purchase_num` columns are also removed as they are directly related to the product purchase action.
+A target column must be identified to train a machine learning model. As propensity to buy is the goal for this use case, the `analytic_action` column is chosen as the target column from the Luma results. The value `productPurchase` is the indicator of a customer purchase. The `purchase_value` and `purchase_num` columns are also removed as they are directly related to the product purchase action.
 
 The commands to carry out these actions are as follows:
 
 ```python
 #define the target label for prediction
 df['target'] = (df['analytic_action'] == 'productPurchase').astype(int)
-#remove columns that are dependent to the label
+#remove columns that are dependent on the label
 df.drop(['analytic_action','purchase_value'],axis=1,inplace=True)
 ```
 
@@ -89,12 +89,12 @@ X = pd.DataFrame( np.concatenate((enc.transform(df_cat).toarray(),df[num_cols]),
 y = df['target']
 ```
 
-The data defined as X is tabularized and appears as below:
+The data defined as `X` is tabularized and appears as below:
 
-![The tabularized output of X within Jupyter Notebook.](../images/use-cases/x-output-table.png)
+![The tabularized output of X within [!DNL Jupyter Notebook].](../images/use-cases/x-output-table.png)
 
 
-Now that the necessary data for machine learning is availalble, it can fit the preconfigured machine learning models in Python's `sklearn` library. [!DNL Logistics Regression] is used to train the propensity model and allows you to see the accuracy for test data. In this case it is approximately 85%.
+Now that the necessary data for machine learning is available, it can fit the preconfigured machine learning models in [!DNL Python]'s `sklearn` library. [!DNL Logistics Regression] is used to train the propensity model and allows you to see the accuracy of test data. In this case, it is approximately 85%.
 
 The [!DNL Logistic Regression] algorithm and the train-test split method, used to estimate the performance of machine learning algorithms, are imported in the code block below:
 
@@ -110,7 +110,7 @@ clf = LogisticRegression(max_iter=2000, random_state=0).fit(X_train, y_train)
 print("Test data accuracy: {}".format(clf.score(X_test, y_test)))
 ```
 
-The test data accuracy is: 0.8518518518518519.
+The test data accuracy is 0.8518518518518519.
 
 Through the use of Logistics Regression, you can visualize the reasons for a purchase and sort the features that determine propensity by their ranked importance in descending orders. The first columns denote a higher causation that leads to the purchasing behavior. The latter columns indicate factors that do not lead to purchasing behavior.
 
@@ -148,15 +148,15 @@ A vertical bar chart visualization of results is seen below:
 
 ![The visualization of the top 10 features that define a propensity to buy or not to buy.](../images/use-cases/visualized-results.png)
 
-Several patterns can be discerned from the bar chart. The channels Point of sale (POS) and Call topics as reimbursement are the most important factors that decide a purchasing behavior. While the Call topics as complaints and invoices are important roles to define the not purchasing behavior. These are quantifiable, actionable insights that marketers can leverage to conduct marketing campaigns to address the propensity to purchase of these customers.
+Several patterns can be discerned from the bar chart. The channel's Point of sale (POS) and Call topics as reimbursement are the most important factors that decide a purchasing behavior. While the Call topics as complaints and invoices are important roles to define the not purchasing behavior. These are quantifiable, actionable insights that marketers can leverage to conduct marketing campaigns to address the propensity to purchase of these customers.
 
 ## Use Query Service to apply the trained model {#use-query-service-to-apply-trained-model}
 
 After the trained model has been created, it must be applied to the data held in Experience Platform. To do this, the logic of the machine learning pipeline must be converted to SQL. The two key components of this transition are as follows:
 
-- Firstly, SQL must take the place of the Logistics Regression module to obtain the probability of a prediction label. The model created by Logistics Regression produced the regression model `y = wX + c`  where weights `w` and intercept `c` are the output of the model. SQL features can be used to multiply the weights to obtain a probability. 
+- First, SQL must take the place of the [!DNL Logistics Regression] module to obtain the probability of a prediction label. The model created by Logistics Regression produced the regression model `y = wX + c`  where weights `w` and intercept `c` are the output of the model. SQL features can be used to multiply the weights to obtain a probability. 
 
-- Secondly, the engineering process achieved in Python with one hot encoding must also be incorporated into SQL. For example, in the original database, we have `geo_county` column to store the county but the column is converted to `geo_county=Bexar`, `geo_county=Dallas`, `geo_county=DeKalb`. The following SQL statement conducts the same transformation, where `w1`, `w2`, `w3` could be substituted with the weights learned from the model in Python:
+- Secondly, the engineering process achieved in [!DNL Python] with one hot encoding must also be incorporated into SQL. For example, in the original database, we have `geo_county` column to store the county but the column is converted to `geo_county=Bexar`, `geo_county=Dallas`, `geo_county=DeKalb`. The following SQL statement conducts the same transformation, where `w1`, `w2`, and `w3` could be substituted with the weights learned from the model in [!DNL Python]:
 
 ```sql
 SELECT  CASE WHEN geo_state = 'Bexar' THEN FLOAT(w1) ELSE 0 END AS f1,
@@ -164,7 +164,7 @@ SELECT  CASE WHEN geo_state = 'Bexar' THEN FLOAT(w1) ELSE 0 END AS f1,
         CASE WHEN geo_state = 'Bexar' THEN FLOAT(w3) ELSE 0 END AS f3,
 ``` 
 
-For numerical features you can directly multiply the columns with the weights, as seen in the SQL statement below.
+For numerical features, you can directly multiply the columns with the weights, as seen in the SQL statement below.
 
 ```sql
 SELECT FLOAT(purchase_num) * FLOAT(w4) AS f4,
@@ -178,7 +178,7 @@ SELECT CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + f4 + FLOAT(intercept)))) > 0.5 T
  
 ### An end-to-end example
 
-In a situation where you have two columns (`c1` and `c2`), if `c1` has two categories and the [!DNL Logistic Regression] algorithm is trained with the following function:
+In a situation where you have two columns (`c1` and `c2`), if `c1` has two categories, the [!DNL Logistic Regression] algorithm is trained with the following function:
  
 ```python
 y = 0.1 * "c1=category 1"+ 0.2 * "c1=category 2" +0.3 * c2+0.4
@@ -199,7 +199,7 @@ FROM
   )
 ```
  
-The Python code to automate the translation process is as follows:
+The [!DNL Python] code to automate the translation process is as follows:
 
 ```python
 def generate_lr_inference_sql(ohc_columns, num_cols, clf, db):
@@ -240,14 +240,14 @@ The tabularized results display the propensity to buy for each customer session 
 
 ## Working on sampled data: Bootstrapping {#working-on-sampled-data}
 
-In the case that data sizes are too large for your local machine to store the data for model training, you can take samples instead of the full data from Query Service. To know how much data is needed to sample from Query Service, you can apply a technique called bootstrapping. In this regard, bootstrapping means that the model is trained multiple times with various samples, and the variance of the model's accuracies among difference samples is inspected. To adjust the propensity model example given above, first encapsulate the whole machine learning workflow into a function. The code is as follows:
+In the case that data sizes are too large for your local machine to store the data for model training, you can take samples instead of the full data from Query Service. To know how much data is needed to sample from Query Service, you can apply a technique called bootstrapping. In this regard, bootstrapping means that the model is trained multiple times with various samples, and the variance of the model's accuracies among different samples is inspected. To adjust the propensity model example given above, first, encapsulate the whole machine learning workflow into a function. The code is as follows:
 
 ```python
 def end_to_end_pipeline(df):
     
     #define the target label for prediction
     df['target'] = (df['analytic_action'] == 'productPurchase').astype(int)
-    #remove columns that are dependent to the label
+    #remove columns that are dependent on the label
     df.drop(['analytic_action','purchase_value'],axis=1,inplace=True)
     
     num_cols = ['purchase_num','value_cart','value_lifetime']
@@ -284,7 +284,7 @@ def end_to_end_pipeline(df):
     return clf.score(X_test, y_test)
 ```
 
-This function can then be run multiple times in a loop, for example 10 times. The difference to the previous code is that the sample now is not taken from the whole table but only a sample of rows. For example, the sample code below only takes 1000 rows. The accuracies for each iteration can be stored. 
+This function can then be run multiple times in a loop, for example, 10 times. The difference to the previous code is that the sample now is not taken from the whole table but only a sample of rows. For example, the sample code below only takes 1000 rows. The accuracies for each iteration can be stored. 
 
 ```python
 from tqdm import tqdm
@@ -309,7 +309,7 @@ for i in tqdm(range(100)):
 bootstrap_accuracy = np.sort(bootstrap_accuracy)
 ```
 
-The bootstrapped model's accuracies are then sorted. After which, the 10th and 90th quantile of the model's accuracies become a 95% Confidence Interval for the model's accuracies with the given sample size.
+The bootstrapped model's accuracies are then sorted. After which, the 10th and 90th quantiles of the model's accuracies become a 95% Confidence Interval for the model's accuracies with the given sample size.
 
 ![The print command to display the confidence interval of the propensity score.](../images/use-cases/confidence-interval.png)
 
