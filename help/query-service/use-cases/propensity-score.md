@@ -1,10 +1,10 @@
 ---
 title: Determine A Propensity Score Using A Machine Learning Generated Predictive Model
-description: Learn how to use Query Service to enable machine learning on Experience Platform data to generate a predictive model. This document demonstrates how to use Platform data to predict a customers' propensity to purchase on each visit.
+description: Learn how to use Query Service to apply your predictive model to Platform data. This document demonstrates how to use Platform data to predict a customers' propensity to purchase on each visit.
 ---
 # Determine a propensity score using a machine-learning generated predictive model
 
-Query Service has access to large volumes of records stored on Adobe Experience Platform that can be leveraged using machine learning to generate propensity scores. This guide explains how to use Query Service to provide Platform data to train a machine learning model in a computational notebook. The model can then be used to predict a customers' propensity to purchase for each visit.
+Query Service has access to large volumes of records stored on Adobe Experience Platform that can be leveraged by your machine learning platform to generate predictive models such as propensity scores. This guide explains how to use Query Service to provide Platform data to your machine learning platform to train a machine learning model in a computational notebook. The trained model can be applied to data using SQL to predict a customers' propensity to purchase for each visit.
 
 ## Getting started
 
@@ -28,7 +28,7 @@ tqdm
 
 ## Import analytics tables from Platform into Jupyter Notebook {#import-analytics-tables}
 
-To generate a propensity score model, a projection of the analytics data stored in Platform must be imported into Jupyter Notebook. From a Python 3 Jupyter Notebook connected to Query Service, the following commands imports a customer behavior dataset from Luma, a fictitious clothing store. As Platform data is stored using the Experience Data Model (XDM)format, a sample JSON object must be generated that conforms to the schema's structure. See the documentation for instructions on how to [generate the sample JSON object](../../xdm/ui/sample.md).
+To generate a propensity score model, a projection of the analytics data stored in Platform must be imported into Jupyter Notebook. From a Python 3 Jupyter Notebook connected to Query Service, the following commands imports a customer behavior dataset from Luma, a fictitious clothing store. As Platform data is stored using the Experience Data Model (XDM) format, a sample JSON object must be generated that conforms to the schema's structure. See the documentation for instructions on how to [generate the sample JSON object](../../xdm/ui/sample.md).
 
 ![The Jupyter Notebook dashboard with several commands highlighted.](../images/use-cases/jupyter-commands.png)
 
@@ -38,7 +38,7 @@ The output displays a tabluarized view of all columns from Luma's behavioral dat
 
 ## Prepare the data for machine learning {#prepare-data-for-machine-learning}
 
-A target column must be identified to train a machine learning model. As propensity to buy is the goal for this use case, the `analytic_action` column is chosen as the target column from the Luma results. The value `productPurchase` is the indicator for a customer purchase. The `purchase_value` and `purchase_num` columns are also {PLACEHOLDER removed } as they are directly related to the product purchase action.
+A target column must be identified to train a machine learning model. As propensity to buy is the goal for this use case, the `analytic_action` column is chosen as the target column from the Luma results. The value `productPurchase` is the indicator for a customer purchase. The `purchase_value` and `purchase_num` columns are also removed as they are directly related to the product purchase action.
 
 The commands to carry out these actions are as follows:
 
@@ -60,7 +60,7 @@ num_cols = ['purchase_num', 'value_cart', 'value_lifetime']
 df[num_cols] = df[num_cols].apply(pd.to_numeric, errors='coerce')
 ```
 
-A technique called One-hot encoding is used to convert the categorical data variables for use with machine and deep learning algorithms. This in turn improves predictions as well as the classification accuracy of a model. Use the `Sklearn` library to represent each categorical value in a separate column.
+A technique called *one hot encoding* is used to convert the categorical data variables for use with machine and deep learning algorithms. This in turn improves predictions as well as the classification accuracy of a model. Use the `Sklearn` library to represent each categorical value in a separate column.
 
 ```python
 from sklearn.preprocessing import OneHotEncoder
@@ -96,7 +96,7 @@ The data defined as X is tabularized and appears as below:
 
 Now that the necessary data for machine learning is availalble, it can fit the preconfigured machine learning models in Python's `sklearn` library. [!DNL Logistics Regression] is used to train the propensity model and allows you to see the accuracy for test data. In this case it is approximately 85%.
 
-The Logistic Regression algorithm and the train-test split method, used to estimate the performance of machine learning algorithms, are imported in the code block below:
+The [!DNL Logistic Regression] algorithm and the train-test split method, used to estimate the performance of machine learning algorithms, are imported in the code block below:
 
 ```python
 from sklearn.linear_model import LogisticRegression
@@ -178,7 +178,7 @@ SELECT CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + f4 + FLOAT(intercept)))) > 0.5 T
  
 ### An end-to-end example
 
-In a situation where you have two columns (`c1` and `c2`), if `c1` has two categories and the logistic regression is trained with the following function:
+In a situation where you have two columns (`c1` and `c2`), if `c1` has two categories and the [!DNL Logistic Regression] algorithm is trained with the following function:
  
 ```python
 y = 0.1 * "c1=category 1"+ 0.2 * "c1=category 2" +0.3 * c2+0.4
@@ -313,6 +313,6 @@ The bootstrapped model's accuracies are then sorted. After which, the 10th and 9
 
 ![The print command to display the confidence interval of the propensity score.](../images/use-cases/confidence-interval.png)
 
-The above figure states that if you only take 1000 rows to train your models, you can expect the accuracies to fall between approximately 84% and 88%. You can adjust the LIMIT clause in Query Service queries based on your needs to ensure the performance of the models.
+The above figure states that if you only take 1000 rows to train your models, you can expect the accuracies to fall between approximately 84% and 88%. You can adjust the `LIMIT` clause in Query Service queries based on your needs to ensure the performance of the models.
 
 
