@@ -224,7 +224,7 @@ For more information on profile fragments, refer to the section on [profile frag
 
 To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 
-![](../images/profiles/identity-overlap.png)
+![The Profiles dashboard overview with the Identity overlap widget highlighted.](../images/profiles/identity-overlap.png)
 
 ### [!UICONTROL Single identity profiles] {#single-identity-profiles}
 
