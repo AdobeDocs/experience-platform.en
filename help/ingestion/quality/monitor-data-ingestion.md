@@ -19,6 +19,7 @@ This user guide provides steps on how to monitor your data within Adobe Experien
 >title="Ingestion rate"
 >abstract="The number of events that are successfully processed per second."
 >text="Learn more in the documentation"
+>additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="Monitor dataflows for sources in the UI"
 
 >[!TIP]
 >
