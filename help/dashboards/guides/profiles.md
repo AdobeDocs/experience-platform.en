@@ -29,7 +29,7 @@ To navigate to the Profiles dashboard within the Platform UI, select **[!UICONTR
 >
 >If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the Profiles dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with Real-time Customer Profile.
 
-![](../images/profiles/dashboard-overview.png)
+![The Experience Platform Profiles dashboard with Profiles and Overview highlighted.](../images/profiles/dashboard-overview.png)
 
 ### Modifying the Profiles dashboard
 
@@ -136,7 +136,7 @@ See the [section on merge policies earlier in this document](#merge-policies) to
 >
 >Another common reason is due to the differences between the time when the dashboard snapshot is taken and the time when the sample job is run for the [!UICONTROL Browse] tab. You can see when the [!UICONTROL Profile count] widget was last updated by looking at the timestamp on the widget. To learn more about how the sample job is triggered on the [!UICONTROL Browse] tab, see the [profile count section in the Real-time Customer Profile UI guide](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
-![](../images/profiles/profile-count.png)
+![The Experience Platform Profiles dashboard with the Profile count widget highlighted.](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Profile count trend] {#profile-count-trend}
 
