@@ -18,7 +18,7 @@ This guide provides step-by-step instructions for customizing how dashboard data
 
 From any dashboard (for example, the [!UICONTROL Profiles] dashboard), you can select **[!UICONTROL Modify dashboard]** in order to resize and reorder existing widgets.
 
-![](../images/customization/modify-dashboard.png)
+![The Profiles dashboard with Modify dashboard highlighted.](../images/customization/modify-dashboard.png)
 
 ## Reorder widgets
 
