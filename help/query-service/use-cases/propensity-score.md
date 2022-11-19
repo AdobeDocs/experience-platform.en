@@ -1,6 +1,7 @@
 ---
 title: Determine A Propensity Score Using A Machine Learning Generated Predictive Model
 description: Learn how to use Query Service to apply your predictive model to Platform data. This document demonstrates how to use Platform data to predict a customer's propensity to purchase on each visit.
+exl-id: 29587541-50dd-405c-bc18-17947b8a5942
 ---
 # Determine a propensity score using a machine-learning-generated predictive model
 
@@ -314,5 +315,3 @@ The bootstrapped model's accuracies are then sorted. After which, the 10th and 9
 ![The print command to display the confidence interval of the propensity score.](../images/use-cases/confidence-interval.png)
 
 The above figure states that if you only take 1000 rows to train your models, you can expect the accuracies to fall between approximately 84% and 88%. You can adjust the `LIMIT` clause in Query Service queries based on your needs to ensure the performance of the models.
-
-
