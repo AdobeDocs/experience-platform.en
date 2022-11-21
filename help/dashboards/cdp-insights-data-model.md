@@ -264,7 +264,7 @@ The namespace-segment model is comprised of the following datasets:
 
 The image below contains the relevant data fields in each dataset.
 
-![An ERD of the segment model.](./images/cdp-insights/namespace-segment-model.png)
+![An ERD of the namespace-segment model.](./images/cdp-insights/namespace-segment-model.png)
 
 #### Profiles by identity for a segment use case
 
@@ -300,7 +300,7 @@ The overlap namespace model is comprised of the following datasets:
 
 The image below contains the relevant data fields in each dataset.
 
-![An ERD of the segment model.](./images/cdp-insights/overlap-namespace-model.png)
+![An ERD of the overlap namespace model.](./images/cdp-insights/overlap-namespace-model.png)
 
 #### Identity overlap (profiles) use case
 
@@ -368,7 +368,7 @@ The overlap namespace by segment model is comprised of the following datasets:
 
 The image below contains the relevant data fields in each dataset.
 
-![An ERD of the segment model.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![An ERD of the overlap namespace by segment model.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
 
 #### Identity overlap (segments) use case
 
