@@ -4,7 +4,7 @@ description: The November 2022 release notes for Adobe Experience Platform.
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: November 30, 2022**
+**Release date: November 23, 2022**
 
 Updates to existing features in Adobe Experience Platform:
 
