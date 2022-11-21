@@ -8,13 +8,13 @@ description: Learn about the AWS extension for event forwarding in Adobe Experie
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
-[[!DNL Amazon Web Services] (AWS)](https://aws.amazon.com/) is a cloud computing platform that offers a wide variety of services such as distributed computing, database storage, and content delivery, and customer relationship management (CRM).
+[[!DNL Amazon Web Services] (AWS)](https://aws.amazon.com/) is a cloud computing platform that offers a wide variety of services such as distributed computing, database storage, content delivery, and customer relationship management (CRM).
 
 The AWS [event forwarding](../../../ui/event-forwarding/overview.md) extension leverages [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) to send events from the Adobe Experience Platform Edge Network to AWS for further processing. This guide covers how to install the extension and employ its capabilities in an event forwarding rule.
 
 ## Prerequisites
 
-You must have an AWS account in order to use this extension. Before installing, you must also have an existing [!DNL Kinesis] data stream. If you do not have a pre-existing data stream, see the AWS documentation on [creating a new data stream using the AWS Management Console](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
+You must have an AWS account with an existing [!DNL Kinesis] data stream in order to use this extension. If you do not have a pre-existing data stream, see the AWS documentation on [creating a new data stream using the AWS Management Console](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
 
 ## Install the extension {#install}
 
@@ -24,7 +24,7 @@ Once you have selected or created the desired property, select **[!UICONTROL Ex
 
 ![The [!UICONTROL Install] button being selected for the [!UICONTROL AWS] extension in the Data Collection UI.](../../../images/extensions/aws/install.png)
 
-On the next screen, you must provide the connection credentials for your AWS account. Specifically, you must provided your AWS access key ID and secret access key. If you do not know these values, see the AWS documentation on [how to obtain your access key ID and secret access key](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
+On the next screen, you must provide the connection credentials for your AWS account. Specifically, you must provide your AWS access key ID and secret access key. If you do not know these values, see the AWS documentation on [how to obtain your access key ID and secret access key](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
 
 ![The access key ID and secret access key added in the extension configuration view.](../../../images/extensions/aws/credentials.png)
 
@@ -36,7 +36,7 @@ When finished, select **[!UICONTROL Save]** and the extension is installed.
 
 ## Configure an event forwarding rule {#rule}
 
-After installing the extension, start creating a new event forwarding [rule](../../../ui/managing-resources/rules.md) and configure its conditions as desired. When selecting the actions for the rule, select the **[!UICONTROL AWS]** extension, then select the **[!UICONTROL Send Data to Kinesis Data Stream]** action type.
+After installing the extension, start creating a new event forwarding [rule](../../../ui/managing-resources/rules.md) and configure its conditions as desired. When configuring the actions for the rule, select the **[!UICONTROL AWS]** extension, then select the **[!UICONTROL Send Data to Kinesis Data Stream]** action type.
 
 ![The [!UICONTROL Send Data to Kinesis Data Stream] action type being selected for a rule in the Data Collection UI.](../../../images/extensions/aws/select-action-type.png)
 
