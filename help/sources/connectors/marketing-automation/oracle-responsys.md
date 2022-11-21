@@ -2,6 +2,8 @@
 keywords: Experience Platform;home;popular topics;oracle;oracle responsys;responsys
 title: (Beta) Oracle Responsys Source Overview
 description: Learn how to connect Oracle Responsys to Adobe Experience Platform using APIs or the user interface.
+hide: true
+hidefromtoc: true
 exl-id: 806ae7e2-d4af-47d5-a3aa-561b69acc836
 ---
 # (Beta) [!DNL Oracle Responsys] source
