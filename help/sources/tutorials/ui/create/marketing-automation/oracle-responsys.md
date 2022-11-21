@@ -2,6 +2,8 @@
 keywords: Experience Platform;home;popular topics;sources;connectors;oracle;
 title: (Beta) Create an Oracle Responsys source connection using Platform UI
 description: Learn how to connect Adobe Experience Platform to Oracle Responsys using Platform UI.
+hide: true
+hidefromtoc: true
 exl-id: 9ec5e1c2-3d9e-4729-be81-89a85d5ea782
 ---
 # (Beta) Create an [!DNL Oracle Responsys] source connection using Platform UI
