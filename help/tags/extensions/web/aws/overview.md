@@ -8,43 +8,64 @@ description: Learn about the AWS extension for event forwarding in Adobe Experie
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
-Amazon Web Services (AWS) is a cloud computing platform provided by Amazon that includes a mixture of infrastructure-as-a-service (IaaS), platform-as-a-service (PaaS) and packaged-software-as-a-service (SaaS) offerings. AWS services can offer an organization tools such as compute power, database storage and content delivery services.
-The AWS [event forwarding](../../../ui/event-forwarding/overview.md) extension leverages the [Kinesis Data Streams](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) service to send events from the Adobe Experience Platform Edge Network to AWS for further processing.
+[[!DNL Amazon Web Services] (AWS)](https://aws.amazon.com/) is a cloud computing platform that offers a wide variety of services such as distributed computing, database storage, and content delivery, and customer relationship management (CRM).
+
+The AWS [event forwarding](../../../ui/event-forwarding/overview.md) extension leverages [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) to send events from the Adobe Experience Platform Edge Network to AWS for further processing. This guide covers how to install the extension and employ its capabilities in an event forwarding rule.
 
 ## Prerequisites
 
-In order to use this extension, you must...
-
-You must have an AWS account in order to use this extension.
-You also need to [create a kinesis data stream using the AWS Management Console](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
+You must have an AWS account in order to use this extension. Before installing, you must also have an existing [!DNL Kinesis] data stream. If you do not have a pre-existing data stream, see the AWS documentation on [creating a new data stream using the AWS Management Console](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
 
 ## Install the extension {#install}
 
-To install the AWS extension in the UI, navigate to Event Forwarding and select a property to add the extension to, or create a new property instead.
-Once you have selected or created the desired property, navigate to Extensions > Catalog. Search for "Microsoft Azure", and then select Install on the Azure Extension.
-Inside the extension configuration view, you need to provide the connection credentials. [Learn how to get your access key ID and secret access key](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
-An access policy needs to be attached to the user used to generate the access key ID ad the access key. The policy needs to be configured so that it gives access rights to the Kinesis data stream. Check the Example 2 in this [page](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html#kinesis-using-iam-examples) to see how the policy needs to look.
+To install the AWS extension, navigate to the Data Collection UI or Experience Platform UI and select **[!UICONTROL Event Forwarding]** from the left navigation. From here, select a property to add the extension to, or create a new property instead.
+
+Once you have selected or created the desired property, select **[!UICONTROL Extensions]** in the left navigation, then select the **[!UICONTROL Catalog]** tab. Search for the [!UICONTROL AWS] card, then select **[!UICONTROL Install]**.
+
+![The [!UICONTROL Install] button being selected for the [!UICONTROL AWS] extension in the Data Collection UI.](../../../images/extensions/aws/install.png)
+
+On the next screen, you must provide the connection credentials for your AWS account. Specifically, you must provided your AWS access key ID and secret access key. If you do not know these values, see the AWS documentation on [how to obtain your access key ID and secret access key](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
+
+![The access key ID and secret access key added in the extension configuration view.](../../../images/extensions/aws/credentials.png)
+
+>[!IMPORTANT]
+>
+>An access policy needs to be attached to the AWS account used to generate the access credentials. This policy must be configured to grant access rights to send data to the [!DNL Kinesis] data stream. Refer to **Example 2** in the AWS document on [example policies for [!DNL Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html#kinesis-using-iam-examples) to see how the policy should be defined.
+
+When finished, select **[!UICONTROL Save]** and the extension is installed.
 
 ## Configure an event forwarding rule {#rule}
 
-Start creating a new event forwarding [rule](../../../ui/managing-resources/rules.md) and configure its conditions as desired. When selecting the actions for the rule, select the Microsoft Azure extension, then select the Send Data to Event Hubs action type.
+After installing the extension, start creating a new event forwarding [rule](../../../ui/managing-resources/rules.md) and configure its conditions as desired. When selecting the actions for the rule, select the **[!UICONTROL AWS]** extension, then select the **[!UICONTROL Send Data to Kinesis Data Stream]** action type.
 
-When setting up the action configuration, you are prompted to assign data elements to the various properties that will be sent to the Azure event hub:
+![The [!UICONTROL Send Data to Kinesis Data Stream] action type being selected for a rule in the Data Collection UI.](../../../images/extensions/aws/select-action-type.png)
 
-### Kinesis Data Stream Details
+The right panel updates to show configuration options for how the data should be sent. Specifically, you must assign [data elements](../../../ui/managing-resources/data-elements.md) to the various properties that represent your [!DNL Event Hub] configuration.
 
-Stream Name - The name of the stream to put the data record into.
+![The configuration options for the [!UICONTROL Send Data to Kinesis Data Stream] action type shown in the UI.](../../../images/extensions/aws/data-stream-details.png)
 
-AWS Region - The AWS region where the Kinesis data stream is created.
+**[!UICONTROL Kinesis Data Stream Details]**
 
-Partition Key - A partition key is used to group data by shard within a stream.
+| Input | Description |
+| --- | --- |
+| [!UICONTROL Stream Name] | The name of the stream to put the data record into. |
+| [!UICONTROL AWS Region] | The AWS region where the [!DNL Kinesis] data stream is created. |
+| [!UICONTROL Partition Key] | The [partition key](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) that the extension will use when sending data to the data stream.<br><br>[!DNL Kinesis Data Streams] segregates the data records belonging to a stream into multiple shards. It uses the partition key that is sent with each data record to determine which shard a given data record belongs to.<br><br>A good partition key for distributing customers might be the customer number, since it is different for each customer. A poor partition key might their zip code because they all may live in the same area nearby. In general, you should choose a partition key that has the highest range of different potential values.<br><br>See the AWS article on [scaling your [!DNL Kinesis] data streams](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/) for best practices on managing partition keys. |
 
-Kinesis Data Streams segregates the data records belonging to a stream into multiple shards. It uses the partition key that is associated with each data record to determine which shard a given data record belongs to. When an application puts data into a stream, it must specify a partition key.
+{style="table-layout:auto"}
 
-A good partition key for distributing customers might be the customer number, since it is different for each customer. A poor partition key might their zip code because they all live in the same area nearby. The simple rule is that you should choose a Partition Key that has a range of different values.
+**[!UICONTROL Data]**
 
-Read more about how to scale your Kinesis data streams.
+| Input | Description |
+| --- | --- |
+| [!UICONTROL Payload] | This field contains the data that will be forwarded to the [!DNL Kinesis] data stream, in JSON format.<br><br>Under the **[!UICONTROL Raw]** option, you can paste the JSON object directly into the provided text field, or you can select the data element icon (![Dataset icon](../../../images/extensions/aws/data-element-icon.png)) to select from a list of existing data elements to represent the payload.<br><br>You can also use the **[!UICONTROL JSON Key-Value Pairs Editor]** option to manually add each key/value pair through a UI editor. Each value can be represented by a raw input, or a data element can be selected instead. |
 
-### Data
+{style="table-layout:auto"}
 
-Payload - This field contains the data that will be forwarded to the Kinesis Data Stream. The data can be a JSON, or a data element.
+When finished, select **[!UICONTROL Keep Changes]** to add the action to the rule configuration. When you are satisfied with the rule, select **[!UICONTROL Save to Library]**. 
+
+Finally, publish a new event forwarding [build](../../../ui/publishing/builds.md) to enable the changes to the library.
+
+## Next steps
+
+This guide covered how to send data to [!DNL Kinesis Data Streams] using the AWS event forwarding extension. For more information on event forwarding capabilities in Experience Platform, refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md).
