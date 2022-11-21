@@ -5,7 +5,7 @@ description: Learn how to bring streaming data from a source to Adobe Experience
 hide: true
 hidefromtoc: true
 ---
-# Create a *YOURSOURCE* source connection for streaming data in the UI
+# Create a source connection and dataflow to stream *YOURSOURCE* data using the UI
 
 *As you go through this template, replace or delete all the paragraphs in italics (starting with this one).*
 
@@ -42,28 +42,24 @@ Under the **Streaming** category, select *YOURSOURCE*, and then select **[!UICON
 >
 >The screenshots used below are examples. When creating your documentation, please replace the images with screenshots of your actual source. You can use the same mark up pattern and color, as well as the same file names. Please ensure that your screenshot captures the entire Platform UI screen. For information on how to upload your screenshots, see the guide on [submitting your documentation for review](./github.md).
 
-![catalog](../assets/streaming/catalog.png)
+![The Experience Platform sources catalog](../assets/streaming/catalog.png)
 
 ## Select data
 
-the **[!UICONTROL Select data]** step appears, providing an interface for you to select which data stream you will bring to Platform.
+The **[!UICONTROL Select data]** step appears, providing an interface for you to select the data that you bring to Platform.
 
 * The left part of the interface is a browser that allows you to view the available data streams within your account;
 * The right part of the interface lets you preview up to 100 rows of data from a JSON file.
 
-![catalog](../assets/streaming/catalog.png)
-
-Select the data stream that you want to use, and then select **[!UICONTROL Choose file]** to upload a sample schema.
-
-<!-- >[!TIP]
->
->If your data is XDM compliant, you can skip uploading a sample schema, and select **[!UICONTROL Next]** to proceed. -->
+Select **[!UICONTROL Upload files]** to upload a JSON file from your local system. Alternatively, you can drag and drop the JSON file you want to upload into the [!UICONTROL Drag and drop files] panel.
 
 ![add-data](../assets/streaming/add-data.png)
 
-Once your schema uploads, the preview interface updates to display a preview of the schema you uploaded. The preview interface allows you to inspect the contents and structure of a file. You can also use the [!UICONTROL Search field] utility to access specific items from within your schema.
+Once your file uploads, the preview interface updates to display a preview of the schema you uploaded. The preview interface allows you to inspect the contents and structure of a file. You can also use the [!UICONTROL Search field] utility to access specific items from within your schema.
 
 When finished, select **[!UICONTROL Next]**.
+
+![preview](../assets/streaming/preview.png)
 
 ## Dataflow detail
 
@@ -77,9 +73,11 @@ When finished, select **[!UICONTROL Next]**.
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
-Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../data-prep/ui/mapping.md).
+Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
+
+![mapping](../assets/streaming/mapping.png)
 
 ## Review
 

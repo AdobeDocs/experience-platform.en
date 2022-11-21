@@ -5,7 +5,7 @@ description: Learn how to bring streaming data from a source to Adobe Experience
 hide: true
 hidefromtoc: true
 ---
-# Create a *YOURSOURCE* connection for streaming data using the [!DNL Flow Service] API
+# Create a source connection and dataflow to stream *YOURSOURCE* data using the [!DNL Flow Service] API
 
 *As you go through this template, replace or delete all the paragraphs in italics (starting with this one).*
 

@@ -9,6 +9,16 @@ hidefromtoc: true
 
 Self-Serve Sources (Streaming SDK) allows you to integrate your own source to bring streaming data to Adobe Experience Platform. This document provides an introduction to the core concepts you need to know before attempting to make calls to the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
+## High-level process
+
+The step-by-step process to configure your source in Experience Platform is outlined below:
+
+* [Create a new connection specification for Streaming SDK](create.md)
+* [Update the streaming flow specification with your new connection specification ID](update-flow-specs.md)
+* [Test and submit your streaming source](submit.md)
+* [Document your streaming source in the API](streaming-template-api.md)
+* [Document your streaming source in the UI](streaming-template-ui.md)
+
 ## Prerequisites
 
 To use Self-Serve Sources (Streaming SDK), you must ensure that you have access to a sandbox organization provisioned with Adobe Experience Platform Sources.
