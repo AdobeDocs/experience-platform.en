@@ -11,11 +11,10 @@ feature: Destinations
 * [Destinations overview](./home.md)
 * [Destination types and categories](./destination-types.md)
 * [Destinations (Activation) guardrails](./guardrails.md)
-* How destinations work
+* How destinations work {#how-destinations-work}
   * Configurable and hardcoded data export settings
   * Profile export behavior to different destination types
   * Identities and destinations
-  * Latency causes when exporting data to your destination
 * API tutorials {#api}
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
     * [Connect to batch cloud storage and email marketing destinations and activate data using the Flow Service API](./api/connect-activate-batch-destinations.md)
