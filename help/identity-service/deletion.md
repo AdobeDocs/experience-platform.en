@@ -53,11 +53,13 @@ The [Data Hygiene workspace](../hygiene/ui/overview.md) in the Platform UI allow
 
 ## Dataset deletions 
 
-Dataset deletion for Identity Service can be executed by making delete requests to the Catalog Service, either API or UI. Dataset deletion can also be done through dataset expirations in Data Hygiene.
+Dataset deletion for Identity Service can be executed by making delete requests to the Catalog Service. Dataset deletion can also be done through dataset expirations in Data Hygiene.
 
 ## Identity graph changes
 
-All dataset deletion mechanisms simply work by deleting linkages across multiple identities. When an identity no longer has at least one valid linkage with another identity, then the identity itself will no longer exist in Identity Service Identity Graphs. Below is an outline of the potential impacts deletions may have on identity graphs. 
+All dataset deletion mechanisms involve the deletion of linkages between multiple identities. An identity must have at least one valid link with another identity, and when this does not exist, the identity is removed from the identity graph.
+
+Below is an outline of the potential impacts that deletions may have on identity graphs. 
 
 ### No change in graphs
 
