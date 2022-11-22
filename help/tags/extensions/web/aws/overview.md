@@ -36,7 +36,7 @@ When finished, select **[!UICONTROL Save]** and the extension is installed.
 
 ## Configure an event forwarding rule {#rule}
 
-After installing the extension, start creating a new event forwarding [rule](../../../ui/managing-resources/rules.md) and configure its conditions as desired. When configuring the actions for the rule, select the **[!UICONTROL AWS]** extension, then select **[!UICONTROL Send Data to Kinesis Data Stream]** for the action type.
+After installing the extension, create a new event forwarding [rule](../../../ui/managing-resources/rules.md) and configure its conditions as desired. When configuring the actions for the rule, select the **[!UICONTROL AWS]** extension, then select **[!UICONTROL Send Data to Kinesis Data Stream]** for the action type.
 
 ![The [!UICONTROL Send Data to Kinesis Data Stream] action type being selected for a rule in the Data Collection UI.](../../../images/extensions/aws/select-action-type.png)
 
