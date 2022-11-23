@@ -11,11 +11,11 @@ This document covers the process for enabling the customer-managed keys (CMK) fe
 
 ## Prerequisites
 
-In order to enable CMK, you must have access to **all** of the following features in [!DNL Microsoft Azure]:
+In order to enable CMK, your [!DNL Azure] Key Vault must be configured with the following settings:
 
-* [Role-based access control policies](https://learn.microsoft.com/en-us/azure/role-based-access-control/) (not to be confused with the same feature in Experience Platform)
-* [Key Vault soft-delete](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [Purge protection](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+* [Enable purge protection](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+* [Enable soft-delete](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [Configure access using [!DNL Azure] role-based access control](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 
 ## Process summary
 
