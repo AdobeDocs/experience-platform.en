@@ -106,7 +106,7 @@ Registering the CMK app requires you to make calls to Platform APIs. For details
 
 While the authentication guide provides instructions on how to generate your own unique value for the required `x-api-key` request header, all API operations in this guide use the static value `acp_provisioning` instead. You must still provide your own values for `{ACCESS_TOKEN}` and `{ORG_ID}`, however.
 
-Finally, in the request path for all API calls in this guide, `platform` must be followed by a dash and the region code assigned to your organization: `nld2` for NLD2 or `aus5` for AUS5 (for example: `platform-aus5`). If you do not know your organization's region, please contact your system administrator.
+In all API calls shown in this guide, `platform.adobe.io` is used as the root path, which defaults to the VA7 region. If your organization uses a different region, `platform` must be followed by a dash and the region code assigned to your organization: `nld2` for NLD2 or `aus5` for AUS5 (for example: `platform-aus5.adobe.io`). If you do not know your organization's region, please contact your system administrator.
 
 ### Fetch an authentication URL
 
@@ -116,7 +116,7 @@ To start the registration process, make a GET request to the app registration en
 
 ```shell
 curl -X GET \
-  https://platform-ndl2.adobe.io/data/infrastructure/manager/byok/app-registration \ 
+  https://platform.adobe.io/data/infrastructure/manager/byok/app-registration \ 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: acp_provisioning' \
   -H 'x-gw-ims-org-id: {ORG_ID}'
@@ -178,7 +178,7 @@ Once you have obtained the key vault URI, you can send it using a POST request t
 
 ```shell
 curl -X POST \
-  https://platform-nld2.adobe.io/data/infrastructure/manager/customer/config \ 
+  https://platform.adobe.io/data/infrastructure/manager/customer/config \ 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: acp_provisioning' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -236,7 +236,7 @@ You must append the `name` of the configuration you want to check to the path (`
 
 ```shell
 curl -X GET \
-  https://platform-nld2.adobe.io/data/infrastructure/manager/customer/config/config1?configType=BYOK_CONFIG \ 
+  https://platform.adobe.io/data/infrastructure/manager/customer/config/config1?configType=BYOK_CONFIG \ 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: acp_provisioning' \
   -H 'x-gw-ims-org-id: {ORG_ID}'
