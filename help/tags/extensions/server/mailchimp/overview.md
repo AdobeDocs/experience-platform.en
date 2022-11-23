@@ -45,7 +45,7 @@ To find the API key for your account, select your profile icon in the Mailchimp 
 
 Select **Extras**, then **API keys**:
 
-![Extras menu, API keys link](../../../images/extensions/mailchimp/menu-API-keys.png)
+![Extras menu, API keys link](../../../images/extensions/server/mailchimp/menu-API-keys.png)
 
 Under **Your API keys**, you can choose an existing key or you an select **Create A Key** to create a new one. You can create a new key to use specifically with this extension. Copy the API key and save it for a later step. For more details, see the Mailchimp documentation on how to [generate your API key](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
 
@@ -81,7 +81,7 @@ Next, [create a data element](../../../ui/managing-resources/data-elements.md#cr
 
 In the same event forwarding property, select **[!UICONTROL Extensions],** then **[!UICONTROL Catalog]** to display the extensions available for installation. From here, search for the Mailchimp extension and select **[!UICONTROL Install]**.
 
-![Install Mailchimp extension](../../../images/extensions/mailchimp/install.png)  
+![Install Mailchimp extension](../../../images/extensions/server/mailchimp/install.png)  
 
 The configuration screen appears. Under **[!UICONTROL Mailchimp Server Prefix Domain Name]**, enter the domain you copied earlier from your Mailchimp account, including your unique domain prefix.
 
@@ -89,7 +89,7 @@ The configuration screen appears. Under **[!UICONTROL Mailchimp Server Prefix Do
 >
 >Do not include `http://` or `https://` in this field.
 
-![Extension configuration](../../../images/extensions/mailchimp/mailchimp-domain.png)  
+![Extension configuration](../../../images/extensions/server/mailchimp/mailchimp-domain.png)  
 
 Under **[!UICONTROL Mailchimp token]**, select the data element icon and choose the `Mailchimp Token` data element you created earlier. Select **[!UICONTROL Save]** to save the changes.
 
@@ -103,7 +103,7 @@ The data required by this extension can be sent from Web SDK as either XDM data 
 
 For example, if a customer makes a purchase or registers for an event on your site, you could send a confirmation email through Mailchimp with this extension. Once you send the required information from Web SDK to the Edge Network, the extension triggers the email with Mailchimp.
 
-![Add Event action configuration](../../../images/extensions/mailchimp/action-configurations.png)  
+![Add Event action configuration](../../../images/extensions/server/mailchimp/action-configurations.png)  
 
 ### Data elements
 
@@ -128,7 +128,7 @@ The table below provides more detail for each possible value.
 
 In your event forwarding property, you can create a data element for each of the fields outlined above. Once created, you can reference the data elements in the [!UICONTROL Add Event] action of this extension.
 
-![Add Event action configuration](../../../images/extensions/mailchimp/action-configurations.png)  
+![Add Event action configuration](../../../images/extensions/server/mailchimp/action-configurations.png)  
 
 You can now use this extension and the Add Event action to trigger Mailchimp emails for your audiences.
 
@@ -136,6 +136,6 @@ You can now use this extension and the Add Event action to trigger Mailchimp ema
 
 When working with event forwarding extensions, the [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) is very useful. In the Logs section, under Edge logs you can see the requests made by your event forwarding rules after they are triggered. The following screenshots shows a request being made to the Mailchimp API by the extension.
 
-![Adobe Experience Platform Debugger](../../../images/extensions/mailchimp/debugger-edge-logs.png)  
+![Adobe Experience Platform Debugger](../../../images/extensions/server/mailchimp/debugger-edge-logs.png)  
 
 In the Mailchimp dashboard, on the Activity Feed view of your Audience or Audience Member, a list of events for that Audience or Audience Member is provided. This should match the events sent by the extension and show any optional data sent, along with the email or campaign they received. See the [Mailchimp Automation help guides](https://mailchimp.com/help/automation/) for more details.
