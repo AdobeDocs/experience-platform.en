@@ -59,83 +59,83 @@ solution: Data Collection
 * Extensions {#extensions}
   * [Overview](./extensions/overview.md)
   * Tag (client-side) extensions {#client}
-    * [Overview](./extensions/web/overview.md)
+    * [Overview](./extensions/client/overview.md)
     * Adobe Analytics {#analytics}
-      * [Overview](./extensions/web/analytics/overview.md)
-      * [Shared modules](./extensions/web/analytics/shared-modules.md)
-      * [Release notes](./extensions/web/analytics/release-notes.md)
+      * [Overview](./extensions/client/analytics/overview.md)
+      * [Shared modules](./extensions/client/analytics/shared-modules.md)
+      * [Release notes](./extensions/client/analytics/release-notes.md)
     * Adobe Analytics Product String {#product-string}
-      * [Overview](./extensions/web/product-string/overview.md)
-      * [Release notes](./extensions/web/product-string/release-notes.md)    
+      * [Overview](./extensions/client/product-string/overview.md)
+      * [Release notes](./extensions/client/product-string/release-notes.md)    
     * Adobe Audience Manager {#audience-manager}
-      * [Overview](./extensions/web/audience-manager/overview.md)
+      * [Overview](./extensions/client/audience-manager/overview.md)
     * Adobe Client Data Layer {#client-data-layer}
-      * [Overview](./extensions/web/client-data-layer/overview.md)
-      * [Release notes](./extensions/web/client-data-layer/release-notes.md)
+      * [Overview](./extensions/client/client-data-layer/overview.md)
+      * [Release notes](./extensions/client/client-data-layer/release-notes.md)
     * Adobe ContextHub {#contexthub}
-      * [Overview](./extensions/web/contexthub/overview.md)
+      * [Overview](./extensions/client/contexthub/overview.md)
     * Adobe Experience Cloud ID Service {#id-service}
-      * [Overview](./extensions/web/id-service/overview.md)
-      * [Release notes](./extensions/web/id-service/release-notes.md)
+      * [Overview](./extensions/client/id-service/overview.md)
+      * [Release notes](./extensions/client/id-service/release-notes.md)
     * Adobe Experience Platform Demo {#platform-demo}
-      * [Overview](./extensions/web/platform-demo/overview.md)
+      * [Overview](./extensions/client/platform-demo/overview.md)
     * Adobe Experience Platform Web SDK {#sdk}
-      * [Overview](./extensions/web/sdk/overview.md)
+      * [Overview](./extensions/client/sdk/overview.md)
     * Adobe Experience Manager Asset Insights {#asset-insights}
-      * [Overview](./extensions/web/asset-insights/overview.md)
-      * [Release notes](./extensions/web/asset-insights/release-notes.md)
+      * [Overview](./extensions/client/asset-insights/overview.md)
+      * [Release notes](./extensions/client/asset-insights/release-notes.md)
     * Adobe Media Analytics for Audio and Video {#media-analytics}
-      * [Overview](./extensions/web/media-analytics/overview.md)
-      * [Release notes](./extensions/web/media-analytics/release-notes.md)
+      * [Overview](./extensions/client/media-analytics/overview.md)
+      * [Release notes](./extensions/client/media-analytics/release-notes.md)
     * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
-      * [Overview](./extensions/web/media-analytics-3x/overview.md)
-      * [Release notes](./extensions/web/media-analytics-3x/release-notes.md)
+      * [Overview](./extensions/client/media-analytics-3x/overview.md)
+      * [Release notes](./extensions/client/media-analytics-3x/release-notes.md)
     * Adobe Privacy {#privacy}
-      * [Overview](./extensions/web/privacy/overview.md)
+      * [Overview](./extensions/client/privacy/overview.md)
     * Adobe Target {#target}
-      * [Overview](./extensions/web/target/overview.md)
-      * [Release notes](./extensions/web/target/release-notes.md)
+      * [Overview](./extensions/client/target/overview.md)
+      * [Release notes](./extensions/client/target/release-notes.md)
     * Adobe Target v2 {#target-v2}
-      * [Overview](./extensions/web/target-v2/overview.md)
-      * [Release notes](./extensions/web/target-v2/release-notes.md)
+      * [Overview](./extensions/client/target-v2/overview.md)
+      * [Release notes](./extensions/client/target-v2/release-notes.md)
     * [!DNL BrightCove] video tracking {#brightcove}
-      * [Overview](./extensions/web/brightcove/overview.md)
-      * [Release notes](./extensions/web/brightcove/release-notes.md)
+      * [Overview](./extensions/client/brightcove/overview.md)
+      * [Release notes](./extensions/client/brightcove/release-notes.md)
     * Common Analytics Plugins {#plugins}
-      * [Overview](./extensions/web/plugins/overview.md)
-      * [Release notes](./extensions/web/plugins/release-notes.md)
+      * [Overview](./extensions/client/plugins/overview.md)
+      * [Release notes](./extensions/client/plugins/release-notes.md)
     * Common Web SDK Plugins {#web-sdk-plugins}
-      * [Overview](./extensions/web/web-sdk-plugins/overview.md)
-      * [Release notes](./extensions/web/web-sdk-plugins/release-notes.md)
+      * [Overview](./extensions/client/web-sdk-plugins/overview.md)
+      * [Release notes](./extensions/client/web-sdk-plugins/release-notes.md)
     * Core {#core}
-      * [Overview](./extensions/web/core/overview.md)
-      * [Release notes](./extensions/web/core/release-notes.md)
+      * [Overview](./extensions/client/core/overview.md)
+      * [Release notes](./extensions/client/core/release-notes.md)
     * Google Data Layer {#google-data-layer}
-      * [Overview](./extensions/web/google-data-layer/overview.md)
-      * [Release notes](./extensions/web/google-data-layer/release-notes.md)
+      * [Overview](./extensions/client/google-data-layer/overview.md)
+      * [Release notes](./extensions/client/google-data-layer/release-notes.md)
     * [!DNL Marketo Munchkin] {#marketo}
-      * [Overview](./extensions/web/marketo/overview.md)
-      * [Release notes](./extensions/web/marketo/release-notes.md)
+      * [Overview](./extensions/client/marketo/overview.md)
+      * [Release notes](./extensions/client/marketo/release-notes.md)
     * [!DNL YouTube] video tracking {#youtube}
-      * [Overview](./extensions/web/youtube/overview.md)
-      * [Release notes](./extensions/web/youtube/release-notes.md)
+      * [Overview](./extensions/client/youtube/overview.md)
+      * [Release notes](./extensions/client/youtube/release-notes.md)
   * Event forwarding (server-side) extensions {#server}
     * Adobe Experience Platform Cloud Connector {#cloud-connector}
-      * [Overview](./extensions/web/cloud-connector/overview.md)
+      * [Overview](./extensions/client/cloud-connector/overview.md)
     * [!DNL AWS] {#aws}
-      * [Overview](./extensions/web/aws/overview.md)
+      * [Overview](./extensions/client/aws/overview.md)
     * Core {#core}
-      * [Overview](./extensions/web/core/event-forwarding.md)
+      * [Overview](./extensions/client/core/event-forwarding.md)
     * Google Ads Enhanced Conversions {#google-ads-enhanced-conversions}
-      * [Overview](./extensions/web/google-ads-enhanced-conversions/overview.md)
+      * [Overview](./extensions/client/google-ads-enhanced-conversions/overview.md)
     * [!DNL Mailchimp] Edge {#mailchimp-edge}
-      * [Overview](./extensions/web/mailchimp/overview.md)
+      * [Overview](./extensions/client/mailchimp/overview.md)
     * [!UICONTROL Microsoft Azure] {#azure}
-      * [Overview](./extensions/web/azure/overview.md)
+      * [Overview](./extensions/client/azure/overview.md)
     * [!DNL Splunk] {#splunk}
-      * [Overview](./extensions/web/splunk/overview.md)
+      * [Overview](./extensions/client/splunk/overview.md)
     * [!DNL Zendesk] Events API {#zendesk}
-      * [Overview](./extensions/web/zendesk/overview.md)
+      * [Overview](./extensions/client/zendesk/overview.md)
 * Extension development {#extension-dev}
   * [Overview](./extension-dev/overview.md)
   * [Getting started](./extension-dev/getting-started.md)

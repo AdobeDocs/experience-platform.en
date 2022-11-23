@@ -125,7 +125,7 @@ After the exchange artifact is successfully saved on the environment, the secret
 
 ## Referencing secrets {#referencing-secrets}
 
-In order to reference a secret, you must create a data element of type "[!UICONTROL Secret]" (provided by the [[!UICONTROL Core] extension](../../extensions/web/core/overview.md)) on an event forwarding property. When configuring this data element, you are prompted to indicate which secret to use for each environment. You can then create rules that reference a secret data element, such as within the header for an HTTP call.
+In order to reference a secret, you must create a data element of type "[!UICONTROL Secret]" (provided by the [[!UICONTROL Core] extension](../../extensions/client/core/overview.md)) on an event forwarding property. When configuring this data element, you are prompted to indicate which secret to use for each environment. You can then create rules that reference a secret data element, such as within the header for an HTTP call.
 
 ![Secret data element](../../images/api/guides/secrets/data-element.png)
 

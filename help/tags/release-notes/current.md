@@ -8,8 +8,8 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 ## October 26, 2022
 
 * **Sensitive data handling for datastreams**: Datastreams now leverage several Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../edge/datastreams/overview.md#sensitive) for more information.
-* **[!DNL Splunk] extension for event forwarding**: You can now send data to [!DNL Splunk] using an [event forwarding](../ui/event-forwarding/overview.md) extension. See the [[!DNL Splunk] extension overview](../extensions/web/splunk/overview.md) for more information.
-* **[!DNL Zendesk] extension for event forwarding**: You can now send data to [!DNL Zendesk] using an [event forwarding](../ui/event-forwarding/overview.md) extension. See the [[!DNL Zendesk] extension overview](../extensions/web/zendesk/overview.md) for more information.
+* **[!DNL Splunk] extension for event forwarding**: You can now send data to [!DNL Splunk] using an [event forwarding](../ui/event-forwarding/overview.md) extension. See the [[!DNL Splunk] extension overview](../extensions/client/splunk/overview.md) for more information.
+* **[!DNL Zendesk] extension for event forwarding**: You can now send data to [!DNL Zendesk] using an [event forwarding](../ui/event-forwarding/overview.md) extension. See the [[!DNL Zendesk] extension overview](../extensions/client/zendesk/overview.md) for more information.
 
 ## September 28, 2022
 
@@ -26,6 +26,6 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 
 New extensions have been released:
 
-* [Google Data Layer tag extension](../extensions/web/google-data-layer/overview.md): Allows you to use a Google data layer in your tags implementation.
+* [Google Data Layer tag extension](../extensions/client/google-data-layer/overview.md): Allows you to use a Google data layer in your tags implementation.
 * [Google Ads Enhanced Conversions event forwarding extension](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html): Allows you to enhance your Google Ads conversions in real time.
-* [Mailchimp event forwarding extension](../extensions/web/mailchimp/overview.md): Sends events to the Mailchimp Marketing API which can trigger emails for Mailchimp marketing campaigns, journeys, or transactions.
+* [Mailchimp event forwarding extension](../extensions/client/mailchimp/overview.md): Sends events to the Mailchimp Marketing API which can trigger emails for Mailchimp marketing campaigns, journeys, or transactions.
