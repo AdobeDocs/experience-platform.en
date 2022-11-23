@@ -247,36 +247,40 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ```json
 {
-    "items": [
-        {
-            "createdAt": 1583971856947,
-            "updatedAt": 1583971856947,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT}",
-            "id": "77a05521-91d6-451c-a055-2191d6851c34",
-            "name": "Another new sample connection (Experience Event)",
-            "description": "Sample description",
-            "connectionSpec": {
-                "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-                "version": "1.0"
-            },
-            "state": "enabled",
-            "auth": {
-                "specName": "Streaming Connection",
-                "params": {
-                    "sourceId": "Sample connection (ExperienceEvent)",
-                    "inletUrl": "https://dcs.adobedc.net/collection/a868e1ce678a911ef1482b083329af3cafa4bafdc781285f25911eaae9e00eb2",
-                    "inletId": "a868e1ce678a911ef1482b083329af3cafa4bafdc781285f25911eaae9e00eb2",
-                    "dataType": "xdm",
-                    "name": "Sample connection (ExperienceEvent)"
-                }
-            },
-            "version": "\"56008aee-0000-0200-0000-5e697e150000\"",
-            "etag": "\"56008aee-0000-0200-0000-5e697e150000\""
+  "items": [
+    {
+      "id": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+      "createdAt": 1669238699119,
+      "updatedAt": 1669238699119,
+      "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
+      "updatedBy": "28AF22BA5DE6B0B40A494036@AdobeID",
+      "createdClient": "exc_app",
+      "updatedClient": "exc_app",
+      "sandboxId": "d537df80-c5d7-11e9-aafb-87c71c35cac8",
+      "sandboxName": "prod",
+      "imsOrgId": "DFAF48815CD097F30A494219@AdobeOrg",
+      "name": "ACME Streaming Connection XDM Data",
+      "description": "ACME streaming connection for customer data",
+      "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+      },
+      "state": "enabled",
+      "auth": {
+        "specName": "Streaming Connection",
+        "params": {
+          "sourceId": "ACME Streaming Connection XDM Data",
+          "inletUrl": "https://dcs-int.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec",
+          "authenticationRequired": false,
+          "inletId": "667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec",
+          "dataType": "xdm",
+          "name": "ACME Streaming Connection XDM Data"
         }
-    ]
+      },
+      "version": "\"f50185ed-0000-0200-0000-637e8fad0000\"",
+      "etag": "\"f50185ed-0000-0200-0000-637e8fad0000\""
+    }
+  ]
 }
 ```
 
