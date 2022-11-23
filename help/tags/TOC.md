@@ -58,7 +58,7 @@ solution: Data Collection
   * [User permissions](./ui/administration/user-permissions.md)
 * Extensions {#extensions}
   * [Overview](./extensions/overview.md)
-  * Adobe extensions {#adobe}
+  * Extensions {#adobe}
     * [Overview](./extensions/web/overview.md)
     * Adobe Analytics {#analytics}
       * [Overview](./extensions/web/analytics/overview.md)
