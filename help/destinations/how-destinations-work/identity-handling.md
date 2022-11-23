@@ -20,7 +20,7 @@ Note that only a single identity from the [identity namespace](/help/identity-se
 
 ![An identity selected as mandatory attribute and deduplication key.](/help/destinations/assets/how-destinations-work/selected-identity.png)
 
-As a workaround, you can add more identities to the export if these are set as attributes. See below an example where the XDM attribute email address was selected for export, in addition to the identity namespace `Phone_E.164`.
+As a workaround, you can add more identities to the export if these are have been ingested into Experience Platform as attributes. See below an example where the XDM attribute email address was selected for export, in addition to the identity namespace `Phone_E.164`.
 
 ![Example of email address attribute selected for export.](/help/destinations/assets/how-destinations-work/email-selected.png)
 
@@ -28,7 +28,9 @@ As a workaround, you can add more identities to the export if these are set as a
 
 [API-based streaming destinations](/help/destinations/destination-types.md#streaming-destination) built with [Destination SDK](/help/destinations/destination-sdk/overview.md) (for example Facebook, Google Customer Match, Pinterest, Braze, and others) only support specific IDs for export. For detailed information about the specific identities that can be exported to each destination, read the *supported identities* section in each destination documentation page (for example, see the [supported identities section](/help/destinations/catalog/advertising/pinterest.md) in the Pinterest destination page). 
 
-Note, however, that you have the flexibility to use data from either private graphs or from attributes (with the caveats on arrays in attributes mentioned above).
+Note, however, that you have the flexibility to use data from either private graphs or from attributes as identities. This means that you can map XDM attributes to the identity field required by the destination. See below an example for the Pinterest destination, where the XDM attribute email is mapped to the required Pinterest identity `pinterest_audience`.
+
+![Example of email address attribute mapped to identity field for Pinterest destination.](/help/destinations/assets/how-destinations-work/email-mapped-to-identity.png)
 
 ### Advertising destinations relying on third-party cookie integrations {#third-party-cookie-destinations}
 

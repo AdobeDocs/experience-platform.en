@@ -4,32 +4,42 @@ description: Learn how profile export behavior varies between the different inte
 ---
 # Profile export behavior for different destination types
 
-There are several destination types in Experience Platform, with slightly different export patterns, as shown in the diagram below: 
+There are several destination types in Experience Platform, as shown in the diagram below. These destinations have slightly different export patterns, as described in the sections further below.
 
-![Types of destinations diagram](/help/destinations/assets/how-destinations-work/types-of-destinations.png)
+>[!IMPORTANT]
+>
+>This documentation page only describes the profile export behavior for the connections highlighted in the left of the diagram.
 
-You can find detailed information about profile export behavior per destination type in the sections below:
+![Types of destinations diagram](/help/destinations/assets/how-destinations-work/types-of-destinations-v3.png)
 
 ## Microbatching and aggregation policy
+
+Before diving into specific information per destination type, it is important to understand the concepts of microbatching and aggregation policy for streaming destinations.
 
 Experience Platform destinations export data to API-based integrations as HTTPS calls. Once the destinations service is notified by other upstream services that profiles have been updated as a result of batch ingestion, batch segmentation, streaming segmentation or identity graph changes, data is exported and sent to streaming destinations.
 
 The process by which profiles are aggregated into HTTPS messages before being dispatched to destination API endpoints is called *microbatching*. 
 
-Take the Facebook destination as an example - data is sent in an aggregated fashion, where the destinations service takes all the incoming data from the profile service upstream and aggregates it by one of the following, before dispatching it to Facebook: 
+Take the [Facebook destination](/help/destinations/catalog/social/facebook.md) as an example - data is sent in an aggregated fashion, where the destinations service takes all the incoming data from the profile service upstream and aggregates it by one of the following, before dispatching it to Facebook: 
 
 * Number of records (maximum of 10.000) or
-* Window interval (30 minutes) 
+* Time window interval (30 minutes) 
   
-Whichever of the thresholds above is first met triggers an export to Facebook. So, in the Facebook Custom Audiences dashboard, you might be seeing audiences coming in from Experience Platform in 10.000 records increments. You might be seeing 10.000 records every 10-15 minutes because the data gets processed and aggregated faster than the 30 minutes export interval, and gets sent faster, so about every 10-15 minutes until all records have been processed. If there are insufficient records to make up a 10.000 batch, then the current number of records will be sent as is, so you will see smaller batches sent to Facebook as well.
+Whichever of the thresholds above is first met triggers an export to Facebook. So, in the Facebook Custom Audiences dashboard, you might see audiences coming in from Experience Platform in 10.000 records increments. You might be seeing 10.000 records every 10-15 minutes because the data gets processed and aggregated faster than the 30 minutes export interval, and gets sent faster, so about every 10-15 minutes until all records have been processed. If there are insufficient records to make up a 10.000 batch, then the current number of records will be sent as is when the time window threshold is met, so you might see smaller batches sent to Facebook as well.
 
-As another example, consider the HTTP API destination, which has a best effort aggregation. with `maxUsersPerRequest: 10`. This means that a maximum of ten profiles will be aggregated before an HTTP call is fired to this destination.
+As another example, consider the [HTTP API destination](/help/destinations/catalog/streaming/http-destination.md), which has a best effort aggregation. with `maxUsersPerRequest: 10`. This means that a maximum of ten profiles will be aggregated before an HTTP call is fired to this destination, but Experience Platform tries to dispatch profiles to the destination as soon as the destinations service receives updated re-evaluation information from an upstream service. 
 
-The aggregation policy is configurable, and destination developers can decide how to configure the aggregation policy to best meet the capacity and limitations of the API endpoints downstream. Read more about [aggregation policy](/help/destinations/destination-sdk/destination-configuration.md#aggregation) in the Destination SDK documentation. 
+The aggregation policy is configurable, and destination developers can decide how to configure the aggregation policy to best meet the rate limitations of the API endpoints downstream. Read more about [aggregation policy](/help/destinations/destination-sdk/destination-configuration.md#aggregation) in the Destination SDK documentation. 
 
 ## Streaming profile export (enterprise) destinations {#streaming-profile-destinations}
 
-Experience Platform optimizes the profile export behavior to your [enterprise destination](/help/destinations/destination-types.md#streaming-profile-export), to only export data to your API endpoint when relevant updates to a profile have occurred following segment qualification or other significant events. Profiles are exported to your destination in the following situations:
+>[!IMPORTANT]
+>
+> Enterprise destinations are available only to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
+
+The [enterprise destinations](/help/destinations/destination-types.md#streaming-profile-export) in Experience Platform are Amazon Kinesis, Azure Event Hubs, and HTTP API.
+
+Experience Platform optimizes the profile export behavior to your enterprise destination, to only export data to your API endpoint when relevant updates to a profile have occurred following segment qualification or other significant events. Profiles are exported to your destination in the following situations:
 
 * The profile update was determined by a change in segment membership for at least one of the segments mapped to the destination. For example, the profile has qualified for one of the segments mapped to the destination or has exited one of the segments mapped to the destination.
 * The profile update was determined by a change in the [identity map](/help/xdm/field-groups/profile/identitymap.md). For example, a profile who had already qualified for one of the segments mapped to the destination has been added a new identity in the identity map attribute.
@@ -57,11 +67,13 @@ A profile export to the destination can be determined by a profile qualifying fo
 
 From a profile attributes point of view, any changes to the four attributes mapped above will determine a destination export and any of the four mapped attributes present on the profile will be present in the data export.
 
-## Streaming segment export destinations
+## Streaming API-based destinations {streaming-api-based-destinations}
+
+The profile export behavior for streaming destinations such as Facebook, Trade Desk, and other API-based integrations is identical to the above.
 
 Destination examples: advertising, social, etc.
 
-Experience Platform optimizes the profile export behavior to your streaming destination, to only export data to your API endpoint when relevant updates to a profile have occurred following segment qualification or other significant events. Profiles are exported to your destination in the following situations:
+Experience Platform optimizes the profile export behavior to your streaming destination, to only export data to streaming API-based destinations when relevant updates to a profile have occurred following segment qualification or other significant events. Profiles are exported to your destination in the following situations:
 
 * The profile update was determined by a change in segment membership for at least one of the segments mapped to the destination. For example, the profile has qualified for one of the segments mapped to the destination or has exited one of the segments mapped to the destination.
 * The profile update was determined by a change in the [identity map](/help/xdm/field-groups/profile/identitymap.md) for an identity namespace that is marked for export for this destination instance. For example, a profile who had already qualified for one of the segments mapped to the destination has been added a new identity in the identity map attribute.
