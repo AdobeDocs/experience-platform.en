@@ -1,6 +1,7 @@
 ---
 title: AWS Extension Overview
 description: Learn about the AWS extension for event forwarding in Adobe Experience Platform.
+exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
 ---
 # [!DNL AWS] extension overview
 

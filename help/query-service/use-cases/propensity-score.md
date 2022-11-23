@@ -5,7 +5,9 @@ exl-id: 29587541-50dd-405c-bc18-17947b8a5942
 ---
 # Determine a propensity score using a machine-learning-generated predictive model
 
-Using Query Service, you can leverage Experience Platform data in your machine learning platforms to generate predictive models such as propensity scores. This guide explains how to use Query Service to send data to your machine learning platform in order to train a model in a computational notebook. The trained model can be applied to data using SQL to predict a customer's propensity to purchase for each visit.
+Using Query Service you can leverage predictive models, such as propensity scores, built on your machine learning platform to analyse Experience Platform data.
+
+This guide explains how to use Query Service to send data to your machine learning platform in order to train a model in a computational notebook. The trained model can be applied to data using SQL to predict a customer's propensity to purchase for each visit.
 
 ## Getting started
 
