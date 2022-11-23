@@ -1,53 +1,28 @@
 ---
 keywords: Experience Platform;home;popular topics;streaming connection;create streaming connection;api guide;tutorial;create a streaming connection;streaming ingestion;ingestion;
-solution: Experience Platform
 title: Create an HTTP API Streaming Connection Using the API
-topic-legacy: tutorial
-type: Tutorial
 description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 ---
 
-# Creating an [!DNL HTTP API] streaming connection using the API
+# Create an [!DNL HTTP API] streaming connection using the [!DNL Flow Service] API
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) to walk you through the steps to create a streaming connection using the Flow Service API.
+This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) to walk you through the steps to create a streaming connection using the [!DNL Flow Service] API.
 
 ## Getting started
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
 
 Additionally, creating a streaming connection requires you to have a target XDM schema and a dataset. To learn how to create these, please read the tutorial on [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md) or the tutorial on [streaming time-series data](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
-The following sections provide additional information that you will need to know in order to successfully make calls to streaming ingestion APIs.
+### Using Platform APIs
 
-### Reading sample API calls
-
-This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
-
-### Gather values for required headers
-
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
-
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{ORG_ID}`
-
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-- x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE]
->
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../../../../sandboxes/home.md). 
-
-All requests that contain a payload (POST, PUT, PATCH) require an additional header:
-
-- Content-Type: application/json
+For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
 
 ## Create a base connection
 
@@ -65,7 +40,11 @@ POST /flowservice/connections
 
 **Request**
 
-In order to create a streaming connection, the provider ID and connection specification ID must be provided as part of the POST request. The provider ID is `521eee4d-8cbe-4906-bb48-fb6bd4450033` and the connection specification ID is `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+To create a base connection, make a POST request to the `/connections` endpoint while providing a name for your connection, the data type, and HTTP API the connection specification ID. This ID is `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+
+>[!BEGINTABS]
+
+>[!TAB XDM]
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -75,29 +54,56 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-     "name": "Sample streaming connection",
-     "description": "Sample description",
-     "connectionSpec": {
-         "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-         "version": "1.0"
-     },
-     "auth": {
-         "specName": "Streaming Connection",
-         "params": {
-             "sourceId": "Sample connection",
-             "dataType": "xdm",
-             "name": "Sample connection"
-         }
-     }
- }'
+    "name": "ACME Streaming Connection XDM Data",
+    "description": "ACME streaming connection for customer data",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    },
+    "auth": {
+      "specName": "Streaming Connection",
+      "params": {
+        "dataType": "xdm"
+      }
+    }
+  }'
 ```
 
+>[!TAB Raw data]
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+    "name": "ACME Streaming Connection Raw Data",
+    "description": "ACME streaming connection for customer data",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    },
+    "auth": {
+      "specName": "Streaming Connection",
+      "params": {
+        "dataType": "raw"
+      }
+    }
+  }'
+```
+
+>[!ENDTABS]
+
 | Property | Description |
-| -------- | ----------- |
+| --- | --- |
+| `name` |
+| `description` |
+| `connectionSpec.id` | The connection specification `id` for streaming connections. |
 | `auth.params.sourceId` | The ID of the streaming connection you want to create. |
 | `auth.params.dataType` | The data type for the streaming connection. This value must be `xdm`. |
 | `auth.params.name` | The name of the streaming connection you want to create. |
-| `connectionSpec.id` | The connection specification `id` for streaming connections. |
 
 **Response**
 
@@ -112,7 +118,7 @@ A successful response returns HTTP status 201 with details of the newly created 
 
 | Property | Description |
 | -------- | ----------- |
-| `id` | The `id` of your newly created connection. This will herein be referred to as `{CONNECTION_ID}`. |
+| `id` | The `id` of your newly created connection. |
 | `etag` | An identifier assigned to the connection, specifying the revision of the connection. |
 
 ### Authenticated connection
@@ -127,7 +133,9 @@ POST /flowservice/connections
 
 **Request**
 
-In order to create a streaming connection, the provider ID and connection specification ID must be provided as part of the POST request. The provider ID is `521eee4d-8cbe-4906-bb48-fb6bd4450033` and the connection specification ID is `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+>[!BEGINTABS]
+
+>[!TAB XDM]
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -137,8 +145,8 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-     "name": "Sample streaming connection",
-     "description": "Sample description",
+     "name": "ACME Streaming Connection XDM Data Authenticated",
+     "description": "ACME streaming connection for customer data",
      "connectionSpec": {
          "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
          "version": "1.0"
@@ -155,6 +163,35 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  }
 ```
 
+>[!TAB Raw data]
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+     "name": "ACME Streaming Connection Raw Data Authenticated",
+     "description": "ACME streaming connection for customer data",
+     "connectionSpec": {
+         "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+         "version": "1.0"
+     },
+     "auth": {
+         "specName": "Streaming Connection",
+         "params": {
+             "sourceId": "Sample connection",
+             "dataType": "raw",
+             "name": "Sample connection",
+             "authenticationRequired": true
+         }
+     }
+ }
+```
+
+>[!ENDTABS]
 
 | Property | Description |
 | -------- | ----------- |
@@ -214,10 +251,10 @@ A successful response returns HTTP status 200 with detailed information about th
         {
             "createdAt": 1583971856947,
             "updatedAt": 1583971856947,
-            "createdBy": "{API_KEY}",
-            "updatedBy": "{API_KEY}",
-            "createdClient": "{USER_ID}",
-            "updatedClient": "{USER_ID}",
+            "createdBy": "{CREATED_BY}",
+            "updatedBy": "{UPDATED_BY}",
+            "createdClient": "{CREATED_CLIENT}",
+            "updatedClient": "{UPDATED_CLIENT}",
             "id": "77a05521-91d6-451c-a055-2191d6851c34",
             "name": "Another new sample connection (Experience Event)",
             "description": "Sample description",
@@ -255,6 +292,10 @@ POST /flowservice/sourceConnections
 
 **Request**
 
+>[!BEGINTABS]
+
+>[!TAB XDM]
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
@@ -264,15 +305,38 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "name": "Sample source connection",
-    "description": "Sample source connection description",
-    "baseConnectionId": "{BASE_CONNECTION_ID}",
-    "connectionSpec": {
-        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-        "version": "1.0"
-    }
-}'
+      "name": "<name>",
+      "description": "<description>",
+      "baseConnectionId": "<baseConnectionId>",
+      "connectionSpec": {
+          "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+          "version": "1.0"
+      }
+    }'
 ```
+
+>[!TAB Raw data]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+      "name": "<name>",
+      "description": "<description>",
+      "baseConnectionId": "<baseConnectionId>",
+      "connectionSpec": {
+          "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+          "version": "1.0"
+      }
+    }'
+```
+
+>[!ENDTABS]
 
 **Response**
 
@@ -322,19 +386,23 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "name": "Sample target connection",
-    "description": "Sample target connection description",
-    "connectionSpec": {
-        "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
-        "version": "1.0"
-    },
-    "data": {
-        "format": "parquet_xdm"
-    },
-    "params": {
-        "dataSetId": "{DATASET_ID}"
-    }
-}'
+      "name": "Streaming target connection",
+      "description": "Streaming target connection",
+      "connectionSpec": {
+          "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+          "version": "1.0"
+      },
+      "data": {
+          "format": "parquet_xdm",
+          "schema": {
+              "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
+              "version": "application/vnd.adobe.xed-full+json;version=1"
+          }
+      },
+      "params": {
+          "dataSetId": "5f7187bac6d00f194fb937c0"
+      }
+  }'
 ```
 
 **Response**
@@ -364,31 +432,31 @@ POST /mappingSets
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/mappingSets' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "version": 0,
-        "xdmSchema": "_{TENANT_ID}.schemas.e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
-        "xdmVersion": "1.0",
-        "mappings": [
-            {
-                "destinationXdmPath": "person.name.firstName",
-                "sourceAttribute": "firstName",
-                "identity": false,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "person.name.lastName",
-                "sourceAttribute": "lastName",
-                "identity": false,
-                "version": 0
-            }
-        ]
-    }'
+  'https://platform.adobe.io/data/foundation/mappingSets' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "version": 0,
+      "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
+      "xdmVersion": "1.0",
+      "mappings": [
+          {
+              "destinationXdmPath": "person.name.firstName",
+              "sourceAttribute": "firstName",
+              "identity": false,
+              "version": 0
+          },
+          {
+              "destinationXdmPath": "person.name.lastName",
+              "sourceAttribute": "lastName",
+              "identity": false,
+              "version": 0
+          }
+      ]
+  }'
 ```
 
 | Property | Description |
@@ -422,6 +490,10 @@ POST /flows
 
 **Request**
 
+>[!BEGINTABS]
+
+>[!TAB XDM]
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -431,29 +503,57 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "name": "HTTP API streaming dataflow",
-        "description": "HTTP API streaming dataflow",
-        "flowSpec": {
-            "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
-            "version": "1.0"
-        },
-        "sourceConnectionIds": [
-            "63070871-ec3f-4cb5-af47-cf7abb25e8bb"
-        ],
-        "targetConnectionIds": [
-            "98a2a72e-a80f-49ae-aaa3-4783cc9404c2"
-        ],
-        "transformations": [
-            {
-            "name": "Mapping",
-            "params": {
-                "mappingId": "380b032b445a46008e77585e046efe5e",
-                "mappingVersion": 0
-            }
-            }
-        ]
+      "name": "<name>",
+      "description": "<description>",
+      "flowSpec": {
+        "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
+        "version": "1.0"
+      },
+      "sourceConnectionIds": [
+        "<sourceConnectionId>"
+      ],
+      "targetConnectionIds": [
+        "<targetConnectionId>"
+      ]
     }'
 ```
+
+>[!TAB Raw data]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+      "name": "<name>",
+      "description": "<description>",
+      "flowSpec": {
+        "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
+        "version": "1.0"
+      },
+      "sourceConnectionIds": [
+        "<sourceConnectionId>"
+      ],
+      "targetConnectionIds": [
+        "<targetConnectionId>"
+      ],
+      "transformations": [
+        {
+          "name": "Mapping",
+          "params": {
+            "mappingId": "<mappingId>",
+            "mappingVersion": <mappingVersion>
+          }
+        }
+      ]
+    }'
+```
+
+>[!ENDTABS]
 
 | Property | Description |
 | --- | --- |
@@ -502,9 +602,9 @@ If the `Authorization` header is not present, or an invalid/expired access token
 }
 ```
 
-### Post raw data to be ingested to Platform {#ingest-data}
+### Post rdata to be ingested to Platform {#ingest-data}
 
-Now that you've created your flow, you can send your JSON message to the streaming endpoint you previously created.
+Now that you've creted your flow, you can send your JSON message to the streaming endpoint you previously created.
 
 **API format**
 
@@ -519,6 +619,39 @@ POST /collection/{CONNECTION_ID}
 **Request**
 
 The example request ingests raw data to the streaming endpoint that was previously created.
+
+>[!BEGINTABS]
+
+>[!TAB XDM]
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
+  -d '{
+      "header": {
+        "schemaRef": {
+          "id": "<schemaRefId>",
+          "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+        },
+        "flowId": "<flowId>",
+        "datasetId": "<dataSetId>"
+      },
+      "body": {
+        "xdmMeta": {
+          "schemaRef": {
+            "id": "<schemaRefId>",
+            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+          }
+        },
+        "xdmEntity": {
+          <json of mapping of xdm fields to their value>
+        }
+      }
+    }'
+```
+
+>[!TAB Raw data]
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
