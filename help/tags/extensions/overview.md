@@ -13,4 +13,4 @@ exl-id: 2433a64f-66f2-4c21-bdec-c6b8e1658b2b
 Learn about the available tag extensions in the [!DNL Adobe Experience Platform] extensions library.
 
 * [Adobe Extensions overview](./web/overview.md)
-* [Third-Party Extensions](./3rd-party-extensions.md)
+<!-- * [Third-Party Extensions](./3rd-party-extensions.md) -->
