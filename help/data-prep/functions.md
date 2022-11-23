@@ -229,6 +229,11 @@ For information on the object copy feature, see the section [below](#object-copy
 
 ### User agent functions {#user-agent}
 
+Any of the user agent functions contained in the table below can return either of the following values:
+
+* Phone - A mobile device with a small screen (commonly < 7")
+* Mobile - A mobile device that is yet to be identified. This mobile device can be an eReader, a tablet, a phone, a watch, etc.
+
 >[!NOTE]
 >
 >Please scroll left/right to view the full contents of the table.

@@ -3,7 +3,12 @@ title: Asynchronous Deployment
 description: Learn how to asynchronously deploy Adobe Experience Platform tag libraries on your website.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 ---
-# Asynchronous deployment
+# Asynchronous deployment {#asynchronous-deployment}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_asynchronous_deployment"
+>title="Asynchronous deployment"
+>abstract="If this option is enabled, when this script tag is parsed the browser will begin loading the JavaScript file, but instead of waiting for the library to be loaded and executed, it will continue to parse and render the rest of the document. This can improve web page performance but has important implications when it comes to how certain rules are executed. See the documentation for details."
 
 >[!NOTE]
 >

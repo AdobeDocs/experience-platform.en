@@ -41,29 +41,6 @@ The result is cross channel campaigns that are more consistent across the Adobe 
 
 [Learn more on Adobe Campaign integration with Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
 
-
-## Prerequisites {#prerequisites}
-
-In order for Campaign to be able to retrieve data from Adobe Experience Platform, you need to create a Campaign API project, and ask Customer Care to add the associated Client ID to an allow list.
-
->[!NOTE]
->
->Global information on how to create an API project are detailed in [this documentation](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman.html)
-
-1. Log in to [Adobe Developer Console](https://console.adobe.io/) and create a new project.
-
-1. Select **[!UICONTROL Add API]** and choose **[!UICONTROL Adobe Campaign]**.
-
-    ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/create-api.png)
-
-1. Generate a key pair.
-
-1. Select the `<Instance Name> - admin` product profile and select **[!UICONTROL Save configured API]**.
-
-1. Your API project is created. Note down the **[!UICONTROL Client ID]** displayed in your project. Reach out to Adobe Customer Care and ask them to add your Client ID to an allow list.
-
-    ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/client-id.png)
-
 ## Supported identities {#supported-identities}
 
 *Adobe Campaign Managed Cloud Services* supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
