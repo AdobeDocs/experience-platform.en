@@ -128,7 +128,7 @@ solution: Data Collection
       * [Overview](./extensions/server/core/overview.md)
     * Google Ads Enhanced Conversions {#google-ads-enhanced-conversions}
       * [Overview](./extensions/server/google-ads-enhanced-conversions/overview.md)
-    * [!DNL Mailchimp] Edge {#mailchimp-edge}
+    * [!DNL Mailchimp] Edge {#mailchimp}
       * [Overview](./extensions/server/mailchimp/overview.md)
     * [!UICONTROL Microsoft Azure] {#azure}
       * [Overview](./extensions/server/azure/overview.md)

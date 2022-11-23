@@ -97,7 +97,7 @@ The extension is now installed and configured for use in your property.
 
 ## Data collection
 
-When using this extension in a [rule](../../../ui/managing-resources/rules.md), there are several data values that the extension sends to Mailchimp with each event. For a typical implementation, you can configure the [Adobe Experience Platform Web SDK extension](../sdk/overview.md) to send that data to [!DNL Platform Edge Network] for use by the extension in the event forwarding property.
+When using this extension in a [rule](../../../ui/managing-resources/rules.md), there are several data values that the extension sends to Mailchimp with each event. For a typical implementation, you can configure the [Adobe Experience Platform Web SDK extension](../../client/sdk/overview.md) to send that data to [!DNL Platform Edge Network] for use by the extension in the event forwarding property.
 
 The data required by this extension can be sent from Web SDK as either XDM data or non-XDM data. See the documentation to learn more about [sending XDM data](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
 
