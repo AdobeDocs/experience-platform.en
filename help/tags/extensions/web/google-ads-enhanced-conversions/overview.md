@@ -1,6 +1,7 @@
 ---
 title: Google Ads Enhanced Conversions Extension
 description: Learn about the Google Ads Enhanced Conversions extension for event forwarding in Adobe Experience Platform.
+exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
 ---
 # [!DNL Google Ads] Enhanced Conversions extension
 
@@ -28,6 +29,10 @@ Enhanced conversions leverage the [!DNL Google Ads] API to add first-party data 
 >To associate the client-side conversion event with the first-party data sent from event forwarding, the `transaction_ID` must be the same in both calls. For more information on where this value must be provided for each service, see the sections on configuring conversion actions for [tags](#conversion-action-tags) and [event forwarding](#conversion-action-event-forwarding), respectively.
 
 Since sending conversion events involves both a client-side and server-side implementation, this document covers the prerequisite steps for setting up the client-side [[!DNL Google Global Site Tag] (gtag) extension](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) in addition to the [!DNL Enhanced Conversions] extension for event forwarding.
+
+The following video provides an introduction to the [!DNL Enhanced Conversions] extension and walks through the implementation steps at a high level:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
 
 ## Send a conversion using tags
 
