@@ -58,7 +58,7 @@ solution: Data Collection
   * [User permissions](./ui/administration/user-permissions.md)
 * Extensions {#extensions}
   * [Overview](./extensions/overview.md)
-  * Tag (client-side) extensions {#client}
+  * Tag extensions (client-side) {#client}
     * [Overview](./extensions/client/overview.md)
     * Adobe Analytics {#analytics}
       * [Overview](./extensions/client/analytics/overview.md)
@@ -119,23 +119,23 @@ solution: Data Collection
     * [!DNL YouTube] video tracking {#youtube}
       * [Overview](./extensions/client/youtube/overview.md)
       * [Release notes](./extensions/client/youtube/release-notes.md)
-  * Event forwarding (server-side) extensions {#server}
+  * Event forwarding extensions (server-side) {#server}
     * Adobe Experience Platform Cloud Connector {#cloud-connector}
-      * [Overview](./extensions/client/cloud-connector/overview.md)
+      * [Overview](./extensions/server/cloud-connector/overview.md)
     * [!DNL AWS] {#aws}
-      * [Overview](./extensions/client/aws/overview.md)
+      * [Overview](./extensions/server/aws/overview.md)
     * Core {#core}
-      * [Overview](./extensions/client/core/event-forwarding.md)
+      * [Overview](./extensions/server/core/overview.md)
     * Google Ads Enhanced Conversions {#google-ads-enhanced-conversions}
-      * [Overview](./extensions/client/google-ads-enhanced-conversions/overview.md)
+      * [Overview](./extensions/server/google-ads-enhanced-conversions/overview.md)
     * [!DNL Mailchimp] Edge {#mailchimp-edge}
-      * [Overview](./extensions/client/mailchimp/overview.md)
+      * [Overview](./extensions/server/mailchimp/overview.md)
     * [!UICONTROL Microsoft Azure] {#azure}
-      * [Overview](./extensions/client/azure/overview.md)
+      * [Overview](./extensions/server/azure/overview.md)
     * [!DNL Splunk] {#splunk}
-      * [Overview](./extensions/client/splunk/overview.md)
+      * [Overview](./extensions/server/splunk/overview.md)
     * [!DNL Zendesk] Events API {#zendesk}
-      * [Overview](./extensions/client/zendesk/overview.md)
+      * [Overview](./extensions/server/zendesk/overview.md)
 * Extension development {#extension-dev}
   * [Overview](./extension-dev/overview.md)
   * [Getting started](./extension-dev/getting-started.md)
