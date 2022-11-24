@@ -5,13 +5,11 @@ exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
 ---
 # Adobe Experience Platform Destination SDK
 
-## Overview {#destinations-sdk}
-
 Adobe Experience Platform Destination SDK is a suite of configuration APIs that allow you to configure destination integration patterns for Experience Platform to deliver audience and profile data to your endpoint or storage location, based on data and authentication formats of your choice. The configurations are stored in Experience Platform and can be retrieved via API for additional updates.
 
 The Destination SDK documentation provides instructions for you to use the Adobe Experience Platform Destination SDK to configure, test and release a productized destination integration with Adobe Experience Platform, and have your destination become part of the ever-growing destinations catalog. By using Destination SDK, you can also create your own custom private destination to export data tailored to your needs.
 
-![Screenshot from the Experience Platform UI, showing the destinations catalog](./assets/destinations-catalog-overview.png)
+![Screenshot from the Experience Platform UI, showing the destinations catalog](assets/destinations-catalog-overview.png)
 
 ## Productized and custom integrations {#productized-custom-integrations}
 
@@ -20,17 +18,19 @@ The Destination SDK documentation provides instructions for you to use the Adobe
 > This functionality to create private custom destinations is available only to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 
 As a Destination SDK partner, you can benefit from adding your productized destination to the [Experience Platform catalog](/help/destinations/catalog/overview.md):
+
 1. Standardize integration configurations across customers with pre-configured parameters and simplify the setup experience for customers.
 2. Introduce a branded destination card in the Experience Platform destinations catalog for simplified customer setup and awareness.
 3. Be featured as a productized destination integration with Adobe Experience Platform & Adobe Real-Time Customer Data Platform.
 
-As an Experience Platform customer, you can also author an own private custom destination, which can best suit your activation needs.
+As an Experience Platform customer, you can also author your own private custom destination, which can best suit your activation needs.
 
-![An overview diagram showing how destination developers interact with Destination SDK and how Real-Time CDP customers benefit from productized and private destinations.](./assets/destination-sdk-visual.png)
+![Overview diagram showing how destination developers interact with Destination SDK and how Real-Time CDP customers benefit from productized and private destinations.](assets/destination-sdk-visual.png)
 
-## Types of integrations supported {#supported-integration-types}
+## Supported integration types {#supported-integration-types}
 
 Through Destination SDK, Adobe Experience Platform supports real-time integrations with destinations that have a REST API endpoint. The real-time integration with Experience Platform supports capabilities like:
+
 * Message transformation and aggregation
 * Profile backfill
 * Configurable metadata integration to initialize audience setup and data transfer
@@ -38,6 +38,7 @@ Through Destination SDK, Adobe Experience Platform supports real-time integratio
 * A suite of testing & validation APIs for you to test and iterate your destination configurations
 
 Through Destination SDK, you can also set up integrations to periodically export files to the storage location of your choice. The real-time integration with Experience Platform supports capabilities like:
+
 * File export in several supported formats (CSV, Parquet, JSON)
 * Configurable file formatting options, which allow you to structure the format of the exported files to meet your downstream requirements.
 
@@ -46,7 +47,6 @@ Read about the technical requirements on the destinations side in the [integrati
 ## Get access to Destination SDK {#get-access}
 
 Destination SDK access varies based on your status as a partner or Experience Platform, Real-Time CDP customer. Please see the table below for more information.
-
 
 |Type of partner or customer | How to access Destination SDK |
 ---------|----------|

@@ -172,14 +172,21 @@ feature: Destinations
 * Destination SDK {#destination-sdk}
     * [Overview](./destination-sdk/overview.md)
     * [Integration prerequisites](./destination-sdk/integration-prerequisites.md)
+    * Functionality {#functionality}
+        * [Configuration options](./destination-sdk/configuration-options.md)
+        * Destination server components {#destination-server}
+            * [Server specs](./destination-sdk/functionality/server-specs.md)
+            * [Templating specs](./destination-sdk/functionality/templating-specs.md)
+            * [Message format](./destination-sdk/functionality/message-format.md)
+            * [File formatting configuration](./destination-sdk/functionality/file-formatting.md)
     * [Getting started](./destination-sdk/getting-started.md)
     * Destination SDK functionality {#functionality}
-      * [Configuration options](./destination-sdk/configuration-options.md)
+      
       * [Streaming destination configuration](./destination-sdk/destination-configuration.md)
       * [File-based destination configuration](./destination-sdk/file-based-destination-configuration.md)
       * [Streaming destinations server and template specs](./destination-sdk/server-and-template-configuration.md)
       * [File-based destinations server and file specs](./destination-sdk/server-and-file-configuration.md)
-      * [Message format](./destination-sdk/message-format.md)
+      
       * [Audience metadata management](./destination-sdk/audience-metadata-management.md)
       * Authentication {#authentication}
         * [Authentication configuration](./destination-sdk/authentication-configuration.md)

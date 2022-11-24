@@ -16,16 +16,17 @@ To understand the message format and profile configuration and transformation pr
 
 ## Overview {#overview}
 
-Use the content on this page together with the rest of the [configuration options for partner destinations](./configuration-options.md). This page addresses the message format and the profile transformation in data exported from Adobe Experience Platform to destinations. The other page addresses specifics about connecting and authenticating to your destination.
+Use the content on this page together with the rest of the [configuration options for partner destinations](configuration-options.md). This page addresses the message format and the profile transformation in data exported from Adobe Experience Platform to destinations. The other page addresses specifics about connecting and authenticating to your destination.
 
 Adobe Experience Platform exports data to a significant number of destinations, in various data formats. Some examples of destination types are advertising platforms (Google), social networks (Facebook), and cloud storage locations (Amazon S3, Azure Event Hubs).
 
 Experience Platform can adjust the message format of exported profiles to match the expected format on your side. To understand this customization, the following concepts are important:
+
 * The source (1) and target (2) XDM schema in Adobe Experience Platform
 * The expected message format on the partner side (3), and 
-* The transformation layer between XDM schema and expected message format, which you can define by creating a [message transformation template](./message-format.md#using-templating).
+* The transformation layer between XDM schema and expected message format, which you can define by creating a [message transformation template](message-format.md#using-templating).
 
-![Schema to JSON transformation](./assets/transformations-3-steps.png)
+![Schema to JSON transformation](assets/transformations-3-steps.png)
 
 Experience Platform uses XDM schemas to describe the structure of data in a consistent and reusable way.
 
@@ -39,11 +40,11 @@ Users who want to activate data to your destination need to map the fields in th
 
 **Target XDM schema (2)**: Based on the JSON standard schema (3) of your destination's expected format and the attributes that your destination can interpret, you can define profile attributes and identities in your target XDM schema. You can do this in the destinations configuration, in the [schemaConfig](./destination-configuration.md#schema-configuration) and [identityNamespaces](./destination-configuration.md#identities-and-attributes) objects.
 
-**JSON standard schema of your destination profile attributes (3)**: This example represents a [JSON schema](https://json-schema.org/learn/miscellaneous-examples.html) of all the profile attributes that your platform supports and their types (for example: object, string, array). Example fields that your destination could support could be `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, and so on. You need a [message transformation template](./message-format.md#using-templating) to tailor the data exported out of Experience Platform to your expected format.
+**JSON standard schema of your destination profile attributes (3)**: This example represents a [JSON schema](https://json-schema.org/learn/miscellaneous-examples.html) of all the profile attributes that your platform supports and their types (for example: object, string, array). Example fields that your destination could support could be `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, and so on. You need a [message transformation template](message-format.md#using-templating) to tailor the data exported out of Experience Platform to your expected format.
 
 Based on the schema transformations described above, here is how a profile configuration changes between the source XDM schema and a sample schema on the partner side:
 
-![Transformations message example](./assets/transformations-with-examples.png)
+![Transformations message example](assets/transformations-with-examples.png)
 
 ## Getting started - transforming three basic attributes {#getting-started}
 
@@ -853,6 +854,7 @@ If you use [configurable aggregation](./destination-configuration.md#configurabl
 **Input**
 
 Consider the four profiles below, where:
+
 * the first two are part of the segment with the segment ID `788d8874-8007-4253-92b7-ee6b6c20c6f3` 
 * the third profile is part of the segment with the segment ID `8f812592-3f06-416b-bd50-e7831848a31a`
 * the fourth profile is part of both segments above.

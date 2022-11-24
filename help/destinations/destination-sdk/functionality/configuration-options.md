@@ -5,8 +5,6 @@ exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
 ---
 # Configuration options in Destination SDK
 
-## Overview {#overview}
-
 The destinations service in Adobe Experience Platform uses configuration endpoints for several components that build up the destinations functionality. Combined, these components allow Experience Platform to connect to destination platforms, send custom messages, export custom files, and activate profile data across the digital ecosystem. The configurations used in Adobe Experience Platform Destination SDK are:
 
 * **Destination configuration**: Contains basic information about your destination. This configuration includes the identity types that your destination can support, the desired format of exported files (for file-based destinations), and various UI attributes for your destination card in the Adobe Experience Platform user interface.
@@ -17,7 +15,7 @@ The destinations service in Adobe Experience Platform uses configuration endpoin
 * **Authentication configuration**: These settings define how Adobe Experience Platform users connect to your destination.
 * **Audience metadata configuration**: This configuration endpoint allows you to configure how audiences/segments are programmatically created, updated, or deleted in your destination. For batch destinations, it allows you to set up a notification whenever files are successfully delivered to your destination.
 
-![Diagram showing the Destination SDK configuration endpoints and how these are used together.](./assets/self-service-configuration.png)
+![Diagram showing the Destination SDK configuration endpoints and how these are used together.](assets/self-service-configuration.png)
 
 ## Related links {#related-links}
 
