@@ -153,7 +153,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "Sample connection",
+             "sourceId": "{SOURCE_ID}",
              "dataType": "xdm",
              "name": "Sample connection",
              "authenticationRequired": true
@@ -285,7 +285,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ## Create a source connection {#source}
 
-After creating your base connection, you will need to create a source connection. When creating a source connection, you'll need the `id` value from your created base connection.
+To create a source connection, make a POST request to the `/sourceConnections` endpoint while providing your base connection ID.
 
 **API format**
 
@@ -294,10 +294,6 @@ POST /flowservice/sourceConnections
 ```
 
 **Request**
-
->[!BEGINTABS]
-
->[!TAB XDM]
 
 ```shell
 curl -X POST \
@@ -317,29 +313,6 @@ curl -X POST \
       }
     }'
 ```
-
->[!TAB Raw data]
-
-```shell
-curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
-      "name": "<name>",
-      "description": "<description>",
-      "baseConnectionId": "<baseConnectionId>",
-      "connectionSpec": {
-          "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-          "version": "1.0"
-      }
-    }'
-```
-
->[!ENDTABS]
 
 **Response**
 
@@ -506,7 +479,7 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
       "name": "ACME Streaming Dataflow",
-      "description": "ACME streaming dataflow for customer rdata",
+      "description": "ACME streaming dataflow for customer data",
       "flowSpec": {
         "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
         "version": "1.0"
@@ -575,38 +548,10 @@ A successful response returns HTTP status 201 with details of your newly created
 }
 ```
 
-## Next steps
 
-By following this tutorial, you have created a streaming HTTP connection, enabling you to use the streaming endpoint to ingest data into Platform. For instructions to create a streaming connection in the UI, please read the [creating a streaming connection tutorial](../../../ui/create/streaming/http.md).
+## Post data to be ingested to Platform {#ingest-data}
 
-To learn how to stream data to Platform, please read either the tutorial on [streaming time series data](../../../../../ingestion/tutorials/streaming-time-series-data.md) or the tutorial on [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md).
-
-## Appendix
-
-This section provides supplemental information on creating streaming connections using the API.
-
-### Sending messages to an authenticated streaming connection
-
-If a streaming connection has authentication enabled, the client will be required to add the `Authorization` header to their request. 
-
-If the `Authorization` header is not present, or an invalid/expired access token is sent, an HTTP 401 Unauthorized response will be returned, with a similar response as below:
-
-**Response**
-
-```json
-{
-    "type": "https://ns.adobe.com/adobecloud/problem/data-collection-service-authorization",
-    "status": "401",
-    "title": "Authorization",
-    "report": {
-        "message": "[id] Ims service token is empty"
-    }
-}
-```
-
-### Post data to be ingested to Platform {#ingest-data}
-
-Now that you've creted your flow, you can send your JSON message to the streaming endpoint you previously created.
+Now that you've created your flow, you can send your JSON message to the streaming endpoint you previously created.
 
 **API format**
 
@@ -619,8 +564,6 @@ POST /collection/{BASE_CONNECTION_ID}
 | `{BASE_CONNECTION_ID}` | The `id` value of your newly created streaming connection. |
 
 **Request**
-
-The example request ingests raw data to the streaming endpoint that was previously created.
 
 >[!BEGINTABS]
 
@@ -692,3 +635,33 @@ A successful response returns HTTP status 200 with details of the newly ingested
 | `{BASE_CONNECTION_ID}` | The ID of the previously created streaming connection. |
 | `xactionId` | A unique identifier generated server-side for the record you just sent. This ID helps Adobe trace this record's lifecycle through various systems and with debugging. |
 | `receivedTimeMs` | A timestamp (epoch in milliseconds) that shows what time the request was received. |
+
+
+## Next steps
+
+By following this tutorial, you have created a streaming HTTP connection, enabling you to use the streaming endpoint to ingest data into Platform. For instructions to create a streaming connection in the UI, please read the [creating a streaming connection tutorial](../../../ui/create/streaming/http.md).
+
+To learn how to stream data to Platform, please read either the tutorial on [streaming time series data](../../../../../ingestion/tutorials/streaming-time-series-data.md) or the tutorial on [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md).
+
+## Appendix
+
+This section provides supplemental information on creating streaming connections using the API.
+
+### Sending messages to an authenticated streaming connection
+
+If a streaming connection has authentication enabled, the client will be required to add the `Authorization` header to their request. 
+
+If the `Authorization` header is not present, or an invalid/expired access token is sent, an HTTP 401 Unauthorized response will be returned, with a similar response as below:
+
+**Response**
+
+```json
+{
+    "type": "https://ns.adobe.com/adobecloud/problem/data-collection-service-authorization",
+    "status": "401",
+    "title": "Authorization",
+    "report": {
+        "message": "[id] Ims service token is empty"
+    }
+}
+```
