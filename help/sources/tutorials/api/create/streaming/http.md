@@ -5,7 +5,7 @@ description: This tutorial will help you begin using streaming ingestion APIs, p
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 ---
 
-# Create an [!DNL HTTP API] streaming connection using the [!DNL Flow Service] API
+# Create an HTTP API streaming connection using the [!DNL Flow Service] API
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
@@ -32,6 +32,8 @@ A base connection specifies the source and contains the information required to 
 
 Non-authenticated connections are the standard streaming connection you can create when you want to stream data into Platform.
 
+To create a non-authenticated base connection, make a POST request to the `/connections` endpoint while providing a name for your connection, the data type, and the HTTP API connection specification ID. This ID is `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+
 **API format**
 
 ```http
@@ -40,7 +42,7 @@ POST /flowservice/connections
 
 **Request**
 
-To create a base connection, make a POST request to the `/connections` endpoint while providing a name for your connection, the data type, and HTTP API the connection specification ID. This ID is `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+The following request creates a base connection for HTTP API.
 
 >[!BEGINTABS]
 
@@ -101,7 +103,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | `name` | The name of your base connection. Ensure that the name of your base connection is descriptive as you can use this to look up information on your base connection. |
 | `description` | (Optional) A property that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID that corresponds with HTTP API. This ID is `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.  |
-| `auth.params.dataType` | The data type for the streaming connection. This value must be `xdm`. |
+| `auth.params.dataType` | The data type for the streaming connection. Supported values include: `xdm` and `raw`. |
 | `auth.params.name` | The name of the streaming connection you want to create. |
 
 **Response**
@@ -117,12 +119,15 @@ A successful response returns HTTP status 201 with details of the newly created 
 
 | Property | Description |
 | -------- | ----------- |
-| `id` | The `id` of your newly created connection. |
-| `etag` | An identifier assigned to the connection, specifying the revision of the connection. |
+| `id` | The `id` of your newly created base connection. |
+| `etag` | An identifier assigned to the connection, specifying the version of the base connection. |
 
 ### Authenticated connection
 
 Authenticated connections should be used when you need to differentiate between records coming from trusted and un-trusted sources. Users who want to send information with Personally Identifiable Information (PII) should create an authenticated connection when streaming information to Platform.
+
+To create an authenticated base connection, you must specify your source ID and whether authentication is required when making a POST request to the `/connections` endpoint.
+
 
 **API format**
 
@@ -131,6 +136,8 @@ POST /flowservice/connections
 ```
 
 **Request**
+
+The following request creates an authenticated base connection for HTTP API.
 
 >[!BEGINTABS]
 
@@ -195,10 +202,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | Property | Description |
 | -------- | ----------- |
 | `auth.params.sourceId` | The ID of the streaming connection you want to create. |
-| `auth.params.dataType` | The data type for the streaming connection. This value must be `xdm`. |
-| `auth.params.name` | The name of the streaming connection you want to create. |
 | `auth.params.authenticationRequired` | The parameter that specifies that the created streaming connection |
-| `connectionSpec.id` | The connection specification `id` for streaming connections. |
 
 **Response**
 
@@ -210,11 +214,6 @@ A successful response returns HTTP status 201 with details of the newly created 
   "etag": "\"f50185ed-0000-0200-0000-637e8fad0000\""
 }
 ```
-
-| Property | Description |
-| -------- | ----------- |
-| `id` | The `id` of your newly created connection. This will herein be referred to as `{BASE_CONNECTION_ID}`. |
-| `etag` | An identifier assigned to the connection, specifying the revision of the connection. |
 
 ## Get streaming endpoint URL
 
@@ -251,13 +250,13 @@ A successful response returns HTTP status 200 with detailed information about th
       "id": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
       "createdAt": 1669238699119,
       "updatedAt": 1669238699119,
-      "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-      "updatedBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-      "createdClient": "exc_app",
-      "updatedClient": "exc_app",
-      "sandboxId": "d537df80-c5d7-11e9-aafb-87c71c35cac8",
-      "sandboxName": "prod",
-      "imsOrgId": "DFAF48815CD097F30A494219@AdobeOrg",
+      "createdBy": "acme@AdobeID",
+      "updatedBy": "acme@AdobeID",
+      "createdClient": "{CREATED_CLIENT}",
+      "updatedClient": "{UPDATEDD_CLIENT}",
+      "sandboxId": "{SANDBOX_ID}",
+      "sandboxName": "{SANDBOX_NAME}",
+      "imsOrgId": "{ORG_ID}}",
       "name": "ACME Streaming Connection XDM Data",
       "description": "ACME streaming connection for customer data",
       "connectionSpec": {
@@ -341,9 +340,7 @@ For detailed steps on how to create a target dataset, see the tutorial on [creat
 
 ## Create a target connection {#target}
 
-A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated to the Data Lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
-
-You now have the unique identifiers a target schema a target dataset and the connection spec ID to the Data Lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
+A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, make POST request to `/targetConnections` while providing IDs for your target dataset and target XDM schema. During this step, you must also provide the data lake connection specification ID. This ID is `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **API format**
 
@@ -448,10 +445,13 @@ A successful response returns details of the newly created mapping including its
   "version": 0,
   "createdDate": 1669249214031,
   "modifiedDate": 1669249214031,
-  "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-  "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
+  "createdBy": "acme@AdobeID",
+  "modifiedBy": "acme@AdobeID"
 }
 ```
+
+| Property | Description |
+| --- | --- |
 
 ## Create a dataflow
 
