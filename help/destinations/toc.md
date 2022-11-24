@@ -175,10 +175,25 @@ feature: Destinations
     * Functionality {#functionality}
         * [Configuration options](./destination-sdk/configuration-options.md)
         * Destination server components {#destination-server}
-            * [Server specs](./destination-sdk/functionality/server-specs.md)
-            * [Templating specs](./destination-sdk/functionality/templating-specs.md)
-            * [Message format](./destination-sdk/functionality/message-format.md)
-            * [File formatting configuration](./destination-sdk/functionality/file-formatting.md)
+            * [Server specs](./destination-sdk/functionality/destination-server/server-specs.md)
+            * [Templating specs](./destination-sdk/functionality/destination-server/templating-specs.md)
+            * [Message format](./destination-sdk/functionality/destination-server/message-format.md)
+            * [File formatting configuration](./destination-sdk/functionality/destination-server/file-formatting.md)
+        * Destination configuration components {#destination-configuration}
+            * [Customer authentication configuration]()
+            * [Customer data fields]()
+            * [UI attributes]()
+            * [Schema configuration]()
+            * [Identities and attributes]()
+            * [Destination delivery]()
+            * [Segment mapping]()
+            * [Aggregation policy]()
+            * [Batch configuration]()
+            * [Historical profile qualifications]()
+
+
+
+
     * [Getting started](./destination-sdk/getting-started.md)
     * Destination SDK functionality {#functionality}
       
