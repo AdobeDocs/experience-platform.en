@@ -42,7 +42,7 @@ To install the Splunk Event Collector extension in the UI, navigate to **Event F
 
 Once you have selected or created the desired property, navigate to **Extensions** > **Catalog**. Search for "[!DNL Splunk]", and then select **[!DNL Install]** on the Splunk Extension.
 
-![Install button for the Splunk extension being selected in the UI](../../../images/extensions/splunk/install.png)
+![Install button for the Splunk extension being selected in the UI](../../../images/extensions/server/splunk/install.png)
 
 ## Configure the Splunk extension {#configure_extension}
 
@@ -52,17 +52,17 @@ Once you have selected or created the desired property, navigate to **Extensions
 
 Select **Extensions** in the left navigation. Under **Installed**, select **Configure** on the Splunk extension.
 
-![Configure button for the Splunk extension being selected in the UI](../../../images/extensions/splunk/configure.png)
+![Configure button for the Splunk extension being selected in the UI](../../../images/extensions/server/splunk/configure.png)
 
 For **[!UICONTROL HTTP Event Collector URL]**, enter your Splunk platform instance address and port. Under **[!UICONTROL Access Token]**, enter your [!DNL Event Collector Token] value. When finished, select **[!UICONTROL Save]**.
 
-![Configuration options filled out in the UI](../../../images/extensions/splunk/input.png)
+![Configuration options filled out in the UI](../../../images/extensions/server/splunk/input.png)
 
 ## Configure an event forwarding rule {#config_rule}
 
 Start creating a new event forwarding rule [rule](../../../ui/managing-resources/rules.md) and configure its conditions as desired. When selecting the actions for the rule, select the [!UICONTROL Splunk] extension, then select the [!UICONTROL Create Event] action type. Additional controls appear to further configure the Splunk Event.
 
-![Define Action Configuration](../../../images/extensions/splunk/action-configurations.png)
+![Define Action Configuration](../../../images/extensions/server/splunk/action-configurations.png)
 
 The next step is to map the Splunk event properties to data elements that you have previously created. The supported optional mappings based on the input event data that can be set up are given below. Refer to the [Splunk documentation](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/FormateventsforHTTPEventCollector#Event_metadata) for further details.
 
@@ -80,7 +80,7 @@ The next step is to map the Splunk event properties to data elements that you ha
 
 After creating and executing the event forwarding rule, validate whether the event sent to the Splunk API is displayed as expected in the Splunk UI. If the event collection and Experience Platform integration were successful, you will see events within the Splunk console like so:
 
-![Event data appearing in the Splunk UI during validation](../../../images/extensions/splunk/splunk-data.png)
+![Event data appearing in the Splunk UI during validation](../../../images/extensions/server/splunk/splunk-data.png)
 
 ## Next steps
 

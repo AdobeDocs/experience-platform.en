@@ -23,11 +23,11 @@ To install the [!DNL AWS] extension, navigate to the Data Collection UI or Exper
 
 Once you have selected or created the desired property, select **[!UICONTROL Extensions]** in the left navigation, then select the **[!UICONTROL Catalog]** tab. Search for the [!UICONTROL AWS] card, then select **[!UICONTROL Install]**.
 
-![The [!UICONTROL Install] button being selected for the [!UICONTROL AWS] extension in the Data Collection UI.](../../../images/extensions/aws/install.png)
+![The [!UICONTROL Install] button being selected for the [!UICONTROL AWS] extension in the Data Collection UI.](../../../images/extensions/server/aws/install.png)
 
 On the next screen, you must provide the connection credentials for your [!DNL AWS] account. Specifically, you must provide your [!DNL AWS] access key ID and secret access key. If you do not know these values, see the [!DNL AWS] documentation on [how to obtain your access key ID and secret access key](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
 
-![The access key ID and secret access key added in the extension configuration view.](../../../images/extensions/aws/credentials.png)
+![The access key ID and secret access key added in the extension configuration view.](../../../images/extensions/server/aws/credentials.png)
 
 >[!IMPORTANT]
 >
@@ -39,11 +39,11 @@ When finished, select **[!UICONTROL Save]** and the extension is installed.
 
 After installing the extension, create a new event forwarding [rule](../../../ui/managing-resources/rules.md) and configure its conditions as desired. When configuring the actions for the rule, select the **[!UICONTROL AWS]** extension, then select **[!UICONTROL Send Data to Kinesis Data Stream]** for the action type.
 
-![The [!UICONTROL Send Data to Kinesis Data Stream] action type being selected for a rule in the Data Collection UI.](../../../images/extensions/aws/select-action-type.png)
+![The [!UICONTROL Send Data to Kinesis Data Stream] action type being selected for a rule in the Data Collection UI.](../../../images/extensions/server/aws/select-action-type.png)
 
 The right panel updates to show configuration options for how the data should be sent. Specifically, you must assign [data elements](../../../ui/managing-resources/data-elements.md) to the various properties that represent your [!DNL Event Hub] configuration.
 
-![The configuration options for the [!UICONTROL Send Data to Kinesis Data Stream] action type shown in the UI.](../../../images/extensions/aws/data-stream-details.png)
+![The configuration options for the [!UICONTROL Send Data to Kinesis Data Stream] action type shown in the UI.](../../../images/extensions/server/aws/data-stream-details.png)
 
 **[!UICONTROL Kinesis Data Stream Details]**
 
@@ -59,7 +59,7 @@ The right panel updates to show configuration options for how the data should be
 
 | Input | Description |
 | --- | --- |
-| [!UICONTROL Payload] | This field contains the data that will be forwarded to the [!DNL Kinesis] data stream, in JSON format.<br><br>Under the **[!UICONTROL Raw]** option, you can paste the JSON object directly into the provided text field, or you can select the data element icon (![Dataset icon](../../../images/extensions/aws/data-element-icon.png)) to select from a list of existing data elements to represent the payload.<br><br>You can also use the **[!UICONTROL JSON Key-Value Pairs Editor]** option to manually add each key-value pair through a UI editor. Each value can be represented by a raw input, or a data element can be selected instead. |
+| [!UICONTROL Payload] | This field contains the data that will be forwarded to the [!DNL Kinesis] data stream, in JSON format.<br><br>Under the **[!UICONTROL Raw]** option, you can paste the JSON object directly into the provided text field, or you can select the data element icon (![Dataset icon](../../../images/extensions/server/aws/data-element-icon.png)) to select from a list of existing data elements to represent the payload.<br><br>You can also use the **[!UICONTROL JSON Key-Value Pairs Editor]** option to manually add each key-value pair through a UI editor. Each value can be represented by a raw input, or a data element can be selected instead. |
 
 {style="table-layout:auto"}
 
