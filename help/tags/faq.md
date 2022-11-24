@@ -100,4 +100,4 @@ See the guide on [managing permissions](../collection/permissions.md) to learn h
 
 ## What if I have other questions?
 
-If you have other questions, you can ask on the [Adobe Experience Platform Data Collection community page](https://adobe.com/go/launchme) on Experience League, or join the [official Slack group for tag developers](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
+If you have other questions, you can ask on the [Adobe Experience Platform Data Collection community page](https://adobe.com/go/launchme) on Experience League, or join the [community Slack workspace](http://join.connectionsdevs.chat) for developers & technical implementation topics.
