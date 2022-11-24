@@ -35,7 +35,7 @@ If a specified event occurs, the conditions are evaluated, then the specified ac
 
 * **Conditions**: Narrow the event by configuring any conditions that must be true for an event to trigger the rule. An exception is defined as a NOT condition. Multiple conditions are joined by an AND.
 
-The events that are available depend on which extensions are installed. For information about the events in the Core extension, see [Core extension event types](../../extensions/web/core/overview.md#core-extension-event-types).
+The events that are available depend on which extensions are installed. For information about the events in the Core extension, see [Core extension event types](../../extensions/client/core/overview.md#core-extension-event-types).
 
 ### Actions (then)
 
