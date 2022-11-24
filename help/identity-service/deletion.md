@@ -7,7 +7,7 @@ description: There are many reasons why you may want to remove identities or the
 
 Adobe Experience Platform Identity Service provides you with a comprehensive view of your customers and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time. 
 
-Through identity graphs, Identity Service is able to visualize how different identities are linked together to create a comprehensive view of a customer. Identity Service stores information on the links established between two identities, when two or more identities are received within a row of data. 
+Through identity graphs, Identity Service is able to visualize how different identities are linked together to create a comprehensive view of a customer. When two or more identities are received within a row of data, Identity Service stores information on the links established between the two identities.
 
 There are many reasons why you may want to remove identities or their explicit links in Experience Platform. This document provides an overview of the various mechanisms available to you to leverage your management of your identity graph data.
 
