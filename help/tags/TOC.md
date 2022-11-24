@@ -60,13 +60,22 @@ solution: Data Collection
   * [Overview](./extensions/overview.md)
   * Tag extensions (client-side) {#client}
     * [Overview](./extensions/client/overview.md)
+    * [Accessible Site Speed Metrics](https://exchange.adobe.com/apps/ec/103053)
+    * [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)
+    * [Action Page Refresh](https://exchange.adobe.com/apps/ec/102848)
+    * [Adform Website Tracking](https://exchange.adobe.com/apps/ec/103195)
+    * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)
     * Adobe Analytics {#analytics}
       * [Overview](./extensions/client/analytics/overview.md)
       * [Shared modules](./extensions/client/analytics/shared-modules.md)
       * [Release notes](./extensions/client/analytics/release-notes.md)
+    * [Adobe Analytics & Adobe Target](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
+    * [Adobe Analytics & Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)
+    * [Adobe Analytics & Salesforce](https://exchange.adobe.com/apps/ec/101530)
     * Adobe Analytics Product String {#product-string}
       * [Overview](./extensions/client/product-string/overview.md)
       * [Release notes](./extensions/client/product-string/release-notes.md)    
+    * [Adobe Analytics Product String Builder](https://exchange.adobe.com/apps/ec/101461)
     * Adobe Audience Manager {#audience-manager}
       * [Overview](./extensions/client/audience-manager/overview.md)
     * Adobe Client Data Layer {#client-data-layer}
@@ -74,6 +83,7 @@ solution: Data Collection
       * [Release notes](./extensions/client/client-data-layer/release-notes.md)
     * Adobe ContextHub {#contexthub}
       * [Overview](./extensions/client/contexthub/overview.md)
+    * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
     * Adobe Experience Cloud ID Service {#id-service}
       * [Overview](./extensions/client/id-service/overview.md)
       * [Release notes](./extensions/client/id-service/release-notes.md)
@@ -84,6 +94,7 @@ solution: Data Collection
     * Adobe Experience Manager Asset Insights {#asset-insights}
       * [Overview](./extensions/client/asset-insights/overview.md)
       * [Release notes](./extensions/client/asset-insights/release-notes.md)
+    * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
     * Adobe Media Analytics for Audio and Video {#media-analytics}
       * [Overview](./extensions/client/media-analytics/overview.md)
       * [Release notes](./extensions/client/media-analytics/release-notes.md)
@@ -92,32 +103,99 @@ solution: Data Collection
       * [Release notes](./extensions/client/media-analytics-3x/release-notes.md)
     * Adobe Privacy {#privacy}
       * [Overview](./extensions/client/privacy/overview.md)
+    * [Adobe Report Suite Selector](https://exchange.adobe.com/apps/ec/100640)
     * Adobe Target {#target}
       * [Overview](./extensions/client/target/overview.md)
       * [Release notes](./extensions/client/target/release-notes.md)
     * Adobe Target v2 {#target-v2}
       * [Overview](./extensions/client/target-v2/overview.md)
       * [Release notes](./extensions/client/target-v2/release-notes.md)
+    * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)
+    * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
+    * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)
+    * [Airbrake JS Notifier](https://exchange.adobe.com/apps/ec/103342)
+    * [Amplitude](https://exchange.adobe.com/apps/ec/108010)
+    * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)
+    * [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)
+    * [Awin Conversion Tag](https://exchange.adobe.com/apps/ec/103240)
+    * [Beemray Human Context](https://exchange.adobe.com/apps/ec/101063)
+    * [Bing Ads Universal Event Tracking](https://exchange.adobe.com/apps/ec/100154)
+    * [Branch](https://exchange.adobe.com/apps/ec/101382)
     * [!DNL BrightCove] video tracking {#brightcove}
       * [Overview](./extensions/client/brightcove/overview.md)
       * [Release notes](./extensions/client/brightcove/release-notes.md)
+    * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
+    * [Channel Source Identifier](https://exchange.adobe.com/apps/ec/101412)
+    * [Cheetah Experiences](https://exchange.adobe.com/apps/ec/102759)
+    * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
     * Common Analytics Plugins {#plugins}
       * [Overview](./extensions/client/plugins/overview.md)
       * [Release notes](./extensions/client/plugins/release-notes.md)
     * Common Web SDK Plugins {#web-sdk-plugins}
       * [Overview](./extensions/client/web-sdk-plugins/overview.md)
       * [Release notes](./extensions/client/web-sdk-plugins/release-notes.md)
+    * [Concat](https://exchange.adobe.com/apps/ec/104690)
+    * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
+    * [Cookie Consent Management by Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/107037)
     * Core {#core}
       * [Overview](./extensions/client/core/overview.md)
       * [Release notes](./extensions/client/core/release-notes.md)
+    * [Custom Debug Logger](https://exchange.adobe.com/apps/ec/104698)
+    * [Customer Recognition](https://exchange.adobe.com/apps/ec/100688)
+    * [Data Element Assistant (DEA)](https://exchange.adobe.com/apps/ec/101413)
+    * [Data Layer Manager](https://exchange.adobe.com/apps/ec/101462)
+    * [Decibel](https://exchange.adobe.com/apps/ec/100913)
+    * [Demandbase](https://exchange.adobe.com/apps/ec/101605)
+    * [Differential Privacy](https://exchange.adobe.com/apps/ec/104535)
+    * [Dynamic Media Viewers](https://exchange.adobe.com/apps/ec/103048)
+    * [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)
+    * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)
+    * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
+    * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
+    * [Genesys Predictive Engagement](https://exchange.adobe.com/apps/ec/106148)
     * Google Data Layer {#google-data-layer}
       * [Overview](./extensions/client/google-data-layer/overview.md)
       * [Release notes](./extensions/client/google-data-layer/release-notes.md)
+    * [Google Global Site Tag (gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
+    * [InMoment](https://exchange.adobe.com/apps/ec/100847)
+    * [JSON Helper](https://exchange.adobe.com/apps/ec/106449)
+    * [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/sdi-toolkit)dobe.com/apps/ec/101523)
+    * [KickFire](https://exchange.adobe.com/apps/ec/101621)
+    * [Mapping Table](https://exchange.adobe.com/apps/ec/103136)
     * [!DNL Marketo Munchkin] {#marketo}
       * [Overview](./extensions/client/marketo/overview.md)
       * [Release notes](./extensions/client/marketo/release-notes.md)
+    * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)
+    * [Monita](https://exchange.adobe.com/apps/ec/106544)
+    * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
+    * [OneTrust Consent Management for Cookies](https://exchange.adobe.com/apps/ec/100340)
+    * [Pepperjam](https://exchange.adobe.com/apps/ec/103587)
+    * [Persado Connect](https://exchange.adobe.com/apps/ec/103745)
+    * [Pinterest Conversion Tracking](https://exchange.adobe.com/apps/ec/100523)
+    * [Pixel Loader](https://exchange.adobe.com/apps/ec/100152)
+    * [Qualtrics Website Feedback](https://exchange.adobe.com/apps/ec/101569)
+    * [Quantum Metric](https://exchange.adobe.com/apps/ec/101535)
+    * [Resolve Momentum](https://exchange.adobe.com/apps/ec/108352)
+    * [Rokt](https://exchange.adobe.com/apps/ec/107591)
+    * [SDI Survey](https://exchange.adobe.com/apps/ec/102991)
+    * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
+    * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
+    * [SPA View Change Event](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
+    * [Storage Spanner](https://exchange.adobe.com/apps/ec/102990)
+    * [TAGS by Loop Horizon](https://exchange.adobe.com/apps/ec/106092)
+    * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)
+    * [Tealium Data Enrichment](https://exchange.adobe.com/apps/ec/104217)
+    * [TMMData Foundation Platform](https://exchange.adobe.com/apps/ec/100148)
+    * [TrustArc Cookie Consent Manager](https://exchange.adobe.com/apps/ec/107037)
+    * [Vimeo Playback](https://exchange.adobe.com/apps/ec/108937)
+    * [Web Vitals](https://exchange.adobe.com/apps/ec/106769)
+    * [XDM Composer](https://exchange.adobe.com/apps/ec/106062)
+    * [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062)
+    * [Yext Conversion Tracking](https://exchange.adobe.com/apps/ec/103174)
+    * [[!DNL Youtube] Playback](https://exchange.adobe.com/apps/ec/103174)
     * [!DNL YouTube] video tracking {#youtube}
       * [Overview](./extensions/client/youtube/overview.md)
+    * [TMMData Foundation Platform](https://exchange.adobe.com/apps/ec/100148)
       * [Release notes](./extensions/client/youtube/release-notes.md)
   * Event forwarding extensions (server-side) {#server}
     * Adobe Experience Platform Cloud Connector {#cloud-connector}
@@ -132,6 +210,8 @@ solution: Data Collection
       * [Overview](./extensions/server/mailchimp/overview.md)
     * [!UICONTROL Microsoft Azure] {#azure}
       * [Overview](./extensions/server/azure/overview.md)
+    * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
+    * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
     * [!DNL Splunk] {#splunk}
       * [Overview](./extensions/server/splunk/overview.md)
     * [!DNL Zendesk] Events API {#zendesk}
