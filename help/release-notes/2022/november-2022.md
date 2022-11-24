@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes November 2022
 description: The November 2022 release notes for Adobe Experience Platform.
+exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
 ---
 # Adobe Experience Platform release notes 
 
@@ -34,7 +35,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 | Feature | Description |
 | --- | --- |
-| Assign fields to custom classes when adding directly to a schema | When [adding an individual field directly to a schema](../../xdm/ui/resources/schemas.md#add-individual-fields), previously you could only assign the field to a field group as its parent resource. Now, in addition to field groups, you can [assign the field to a custom class](../../xdm/ui/resources/schemas.md.md#add-to-class) as its parent resource instead. |
+| Assign fields to custom classes when adding directly to a schema | When [adding an individual field directly to a schema](../../xdm/ui/resources/schemas.md#add-individual-fields), previously you could only assign the field to a field group as its parent resource. Now, in addition to field groups, you can [assign the field to a custom class](../../xdm/ui/resources/schemas.md#add-to-class) as its parent resource instead. |
 
 {style="table-layout:auto"}
 
