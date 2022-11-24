@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes November 2022
 description: The November 2022 release notes for Adobe Experience Platform.
+exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
 ---
 # Adobe Experience Platform release notes 
 
