@@ -180,7 +180,9 @@ feature: Destinations
             * [Message format](./destination-sdk/functionality/destination-server/message-format.md)
             * [File formatting configuration](./destination-sdk/functionality/destination-server/file-formatting.md)
         * Destination configuration components {#destination-configuration}
-            * [Customer authentication configuration]()
+            * Customer authentication configuration
+                * [Customer authentication configuration](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
+                * [OAuth2 authentication](./destination-sdk/oauth2-authentication.md)
             * [Customer data fields]()
             * [UI attributes]()
             * [Schema configuration]()
@@ -205,7 +207,7 @@ feature: Destinations
       * [Audience metadata management](./destination-sdk/audience-metadata-management.md)
       * Authentication {#authentication}
         * [Authentication configuration](./destination-sdk/authentication-configuration.md)
-        * [OAuth 2 authentication](./destination-sdk/oauth2-authentication.md)
+
       * Developer tools {#developer-tools}
         * [Create and test a message transformation template](./destination-sdk/create-template.md)
         * [Test your destination configuration](./destination-sdk/test-destination.md)
