@@ -98,10 +98,9 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | Property | Description |
 | --- | --- |
-| `name` |
-| `description` |
-| `connectionSpec.id` | The connection specification `id` for streaming connections. |
-| `auth.params.sourceId` | The ID of the streaming connection you want to create. |
+| `name` | The name of your base connection. Ensure that the name of your base connection is descriptive as you can use this to look up information on your base connection. |
+| `description` | (Optional) A property that you can include to provide more information on your base connection. |
+| `connectionSpec.id` | The connection specification ID that corresponds with HTTP API. This ID is `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.  |
 | `auth.params.dataType` | The data type for the streaming connection. This value must be `xdm`. |
 | `auth.params.name` | The name of the streaming connection you want to create. |
 
@@ -111,8 +110,8 @@ A successful response returns HTTP status 201 with details of the newly created 
 
 ```json
 {
-    "id": "77a05521-91d6-451c-a055-2191d6851c34",
-    "etag": "\"a500e689-0000-0200-0000-5e31df730000\""
+  "id": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+  "etag": "\"f50185ed-0000-0200-0000-637e8fad0000\""
 }
 ```
 
@@ -207,14 +206,14 @@ A successful response returns HTTP status 201 with details of the newly created 
 
 ```json
 {
-    "id": "77a05521-91d6-451c-a055-2191d6851c34",
-    "etag": "\"a500e689-0000-0200-0000-5e31df730000\""
+  "id": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+  "etag": "\"f50185ed-0000-0200-0000-637e8fad0000\""
 }
 ```
 
 | Property | Description |
 | -------- | ----------- |
-| `id` | The `id` of your newly created connection. This will herein be referred to as `{CONNECTION_ID}`. |
+| `id` | The `id` of your newly created connection. This will herein be referred to as `{BASE_CONNECTION_ID}`. |
 | `etag` | An identifier assigned to the connection, specifying the revision of the connection. |
 
 ## Get streaming endpoint URL
@@ -224,17 +223,17 @@ With the base connection created, you can now retrieve your streaming endpoint U
 **API format**
 
 ```http
-GET /flowservice/connections/{CONNECTION_ID}
+GET /flowservice/connections/{BASE_CONNECTION_ID}
 ```
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | The `id` value of the connection you previously created. |
+| `{BASE_CONNECTION_ID}` | The `id` value of the connection you previously created. |
 
 **Request**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID} \
+curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -309,9 +308,9 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-      "name": "<name>",
-      "description": "<description>",
-      "baseConnectionId": "<baseConnectionId>",
+      "name": "ACME Streaming Source Connection for Customer Data",
+      "description": "A streaming source connection for ACME XDM Customer Data",
+      "baseConnectionId": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
       "connectionSpec": {
           "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
           "version": "1.0"
@@ -348,8 +347,8 @@ A successful response returns HTTP status 201 with detailed of the newly created
 
 ```json
 {
-    "id": "63070871-ec3f-4cb5-af47-cf7abb25e8bb",
-    "etag": "\"28000b90-0000-0200-0000-6091b0150000\""
+  "id": "34ece231-294d-416c-ad2a-5a5dfb2bc69f",
+  "etag": "\"d505125b-0000-0200-0000-637eb7790000\""
 }
 ```
 
@@ -390,21 +389,20 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-      "name": "Streaming target connection",
-      "description": "Streaming target connection",
-      "connectionSpec": {
-          "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
-          "version": "1.0"
-      },
+      "name": "ACME Streaming Target Connection",
+      "description": "ACME Streaming Target Connection",
       "data": {
-          "format": "parquet_xdm",
           "schema": {
-              "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
-              "version": "application/vnd.adobe.xed-full+json;version=1"
+              "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+              "version": "application/vnd.adobe.xed-full+json;version=1.0"
           }
       },
       "params": {
-          "dataSetId": "5f7187bac6d00f194fb937c0"
+          "dataSetId": "637eb7fadc8a211b6312b65b"
+      },
+          "connectionSpec": {
+          "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+          "version": "1.0"
       }
   }'
 ```
@@ -415,8 +413,8 @@ A successful response returns HTTP status 201 with details of the newly created 
 
 ```json
 {
-    "id": "98a2a72e-a80f-49ae-aaa3-4783cc9404c2",
-    "etag": "\"0500b73f-0000-0200-0000-6091b0b90000\""
+  "id": "07f2f6ff-1da5-4704-916a-c615b873cba9",
+  "etag": "\"340680f7-0000-0200-0000-637eb8730000\""
 }
 ```
 
@@ -444,7 +442,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
       "version": 0,
-      "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
+      "xdmSchema": "https://ns.adobe.com/aepstreamingservicesint/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
       "xdmVersion": "1.0",
       "mappings": [
           {
@@ -473,12 +471,12 @@ A successful response returns details of the newly created mapping including its
 
 ```json
 {
-    "id": "380b032b445a46008e77585e046efe5e",
-    "version": 0,
-    "createdDate": 1604960750613,
-    "modifiedDate": 1604960750613,
-    "createdBy": "{CREATED_BY}",
-    "modifiedBy": "{MODIFIED_BY}"
+  "id": "79a623960d3f4969835c9e00dc90c8df",
+  "version": 0,
+  "createdDate": 1669249214031,
+  "modifiedDate": 1669249214031,
+  "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
+  "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
 }
 ```
 
@@ -496,7 +494,7 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB XDM]
+>[!TAB Without transformations]
 
 ```shell
 curl -X POST \
@@ -507,22 +505,22 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-      "name": "<name>",
-      "description": "<description>",
+      "name": "ACME Streaming Dataflow",
+      "description": "ACME streaming dataflow for customer rdata",
       "flowSpec": {
         "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
         "version": "1.0"
       },
       "sourceConnectionIds": [
-        "<sourceConnectionId>"
+        "34ece231-294d-416c-ad2a-5a5dfb2bc69f"
       ],
       "targetConnectionIds": [
-        "<targetConnectionId>"
+        "07f2f6ff-1da5-4704-916a-c615b873cba9"
       ]
     }'
 ```
 
->[!TAB Raw data]
+>[!TAB With transformations]
 
 ```shell
 curl -X POST \
@@ -572,8 +570,8 @@ A successful response returns HTTP status 201 with details of your newly created
 
 ```json
 {
-    "id": "ab03bde0-86f2-45c7-b6a5-ad8374f7db1f",
-    "etag": "\"1200c123-0000-0200-0000-6091b1730000\""
+  "id": "f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2",
+  "etag": "\"dc0459ae-0000-0200-0000-637ebaec0000\""
 }
 ```
 
@@ -606,19 +604,19 @@ If the `Authorization` header is not present, or an invalid/expired access token
 }
 ```
 
-### Post rdata to be ingested to Platform {#ingest-data}
+### Post data to be ingested to Platform {#ingest-data}
 
 Now that you've creted your flow, you can send your JSON message to the streaming endpoint you previously created.
 
 **API format**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/{BASE_CONNECTION_ID}
 ```
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | The `id` value of your newly created streaming connection. |
+| `{BASE_CONNECTION_ID}` | The `id` value of your newly created streaming connection. |
 
 **Request**
 
@@ -683,7 +681,7 @@ A successful response returns HTTP status 200 with details of the newly ingested
 
 ```json
 {
-    "inletId": "{CONNECTION_ID}",
+    "inletId": "{BASE_CONNECTION_ID}",
     "xactionId": "1584479347507:2153:240",
     "receivedTimeMs": 1584479347507
 }
@@ -691,6 +689,6 @@ A successful response returns HTTP status 200 with details of the newly ingested
 
 | Property | Description |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | The ID of the previously created streaming connection. |
+| `{BASE_CONNECTION_ID}` | The ID of the previously created streaming connection. |
 | `xactionId` | A unique identifier generated server-side for the record you just sent. This ID helps Adobe trace this record's lifecycle through various systems and with debugging. |
 | `receivedTimeMs` | A timestamp (epoch in milliseconds) that shows what time the request was received. |
