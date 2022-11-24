@@ -195,9 +195,9 @@ solution: Data Collection
     * [[!DNL Youtube] Playback](https://exchange.adobe.com/apps/ec/103174)
     * [!DNL YouTube] video tracking {#youtube}
       * [Overview](./extensions/client/youtube/overview.md)
-    * [TMMData Foundation Platform](https://exchange.adobe.com/apps/ec/100148)
       * [Release notes](./extensions/client/youtube/release-notes.md)
   * Event forwarding extensions (server-side) {#server}
+    * [Overview](./extensions/server/overview.md)
     * Adobe Experience Platform Cloud Connector {#cloud-connector}
       * [Overview](./extensions/server/cloud-connector/overview.md)
     * [!DNL AWS] {#aws}
