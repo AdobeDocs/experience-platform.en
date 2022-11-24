@@ -618,6 +618,8 @@ curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076
   }'
 ```
 
+>[!ENDTABS]
+
 **Response**
 
 A successful response returns HTTP status 200 with details of the newly ingested information.
