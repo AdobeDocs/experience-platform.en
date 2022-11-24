@@ -21,9 +21,9 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 | Feature | Description |
 | --- | --- |
-| [!DNL AWS] extension for event forwarding | You can now send data to [!DNL Amazon Web Services] ([!DNL AWS]) using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL AWS] extension overview](../../tags/extensions/web/aws/overview.md) for more information. |
-| [!DNL Google Ads Enhanced Conversions] extension for event forwarding | You can now send conversion data to [!DNL Google Ads] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Google Ads Enhanced Conversions] extension overview](../../tags/extensions/web/google-ads-enhanced-conversions/overview.md) for more information. |
-| [!DNL Microsoft Azure] extension for event forwarding | You can now send data to [!DNL Microsoft Azure] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Microsoft Azure] extension overview](../../tags/extensions/web/azure/overview.md) for more information. |
+| [!DNL AWS] extension for event forwarding | You can now send data to [!DNL Amazon Web Services] ([!DNL AWS]) using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL AWS] extension overview](../../tags/extensions/server/aws/overview.md) for more information. |
+| [!DNL Google Ads Enhanced Conversions] extension for event forwarding | You can now send conversion data to [!DNL Google Ads] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Google Ads Enhanced Conversions] extension overview](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) for more information. |
+| [!DNL Microsoft Azure] extension for event forwarding | You can now send data to [!DNL Microsoft Azure] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Microsoft Azure] extension overview](../../tags/extensions/server/azure/overview.md) for more information. |
 
 For more information on Platform's data collection capabilities, see the [data collection overview](../../collection/home.md).
 
