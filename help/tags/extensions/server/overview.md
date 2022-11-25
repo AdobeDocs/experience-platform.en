@@ -1,6 +1,7 @@
 ---
 title: Event Forwarding Extensions Reference
 description: Find documentation for event forwarding extensions in Adobe Experience Platform.
+exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
 ---
 # Event forwarding extensions reference
 
