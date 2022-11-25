@@ -80,7 +80,7 @@ A successful response returns an array containing the read-only, system-generate
 
 ### Initiate export job {#initiate}
 
-Once you have a union-persisting dataset, you can create an export job to persist the Profile data to the dataset by making a POST request to the `/export/jobs` endpoint in the Real-time Customer Profile API and providing the details of the data you wish to export in the body of the request.
+Once you have a union-persisting dataset, you can create an export job to persist the Profile data to the dataset by making a POST request to the `/export/jobs` endpoint in the Segmentation Service API and providing the details of the data you wish to export in the body of the request.
 
 **API format**
 
