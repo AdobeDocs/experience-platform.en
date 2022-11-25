@@ -363,7 +363,7 @@ curl -X POST \
       "description": "ACME Streaming Target Connection",
       "data": {
           "schema": {
-              "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+              "id": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
               "version": "application/vnd.adobe.xed-full+json;version=1.0"
           }
       },
@@ -412,7 +412,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
       "version": 0,
-      "xdmSchema": "https://ns.adobe.com/aepstreamingservicesint/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+      "xdmSchema": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
       "xdmVersion": "1.0",
       "mappings": [
           {
@@ -572,7 +572,7 @@ POST /collection/{BASE_CONNECTION_ID}
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
   -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
+  -H 'x-adobe-flow-id: f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
   -d '{
       "header": {
         "schemaRef": {
