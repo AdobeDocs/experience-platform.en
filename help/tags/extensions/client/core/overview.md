@@ -128,7 +128,7 @@ A direct call event bypasses event detection and lookup systems. Direct call rul
 
 When defining a direct call event, you must specify a string that will act as this event's identifier. If a [trigger direct call action](#direct-call-action) containing the same identifier is fired, then any direct call event rules listening for that identifier will run.
 
-![Screenshot of a Direct Call event in the Data Collection UI](../../../images/extensions/core/direct-call-event.png)
+![Screenshot of a Direct Call event in the Data Collection UI](../../../images/extensions/client/core/direct-call-event.png)
 
 #### Element Exists
 
@@ -628,7 +628,7 @@ setTimeout(function() {
 
 This action triggers all rules that use a specific [direct call event](#direct-call-event). When configuring the action, you must provide the identifier string for the direct call event you want to trigger. Optionally, you can also pass data to the direct call event via a `detail` object, which can contain a custom set of key-value pairs.
 
-![Screenshot of a Trigger Direct Call action in the Data Collection UI](../../../images/extensions/core/direct-call-action.png)
+![Screenshot of a Trigger Direct Call action in the Data Collection UI](../../../images/extensions/client/core/direct-call-action.png)
 
 The action maps directly to the [`track` method](../../../ui/client-side/satellite-object.md?lang=en#track) in the `satellite` object, which can be accessed by client-side code.
 
