@@ -32,10 +32,10 @@ Privacy Service processes customer requests to access, opt out of sale, or delet
 | Deletion in Privacy Service | Description |
 | --- | --- |
 | Path | Privacy Service |
-| Accepted use cases | Data privacy requests (GDPR, CCPA) only |
+| Accepted use cases | Data privacy requests (GDPR, CCPA) only. |
 | Estimated latency | Days to weeks |
-| Services impacted | Identity Service, Real-time Customer Profile, data lake |
-| Deletion patterns | Delete identity and all linkages completely from Identity Service | 
+| Services impacted | Identity Service, Real-time Customer Profile, data lake. |
+| Deletion patterns | Delete identity and all linkages completely from Identity Service. | 
 
 {style="table-layout:auto"}
 
@@ -46,10 +46,10 @@ The [Data Hygiene workspace](../hygiene/ui/overview.md) in the Platform UI allow
 | Deletion in Data Hygiene | Description |
 | --- | --- |
 | Path | Data Hygiene |
-| Accepted use cases | Management of data stored in Experience Platform |
+| Accepted use cases | Management of data stored in Experience Platform. |
 | Estimated latency | Days |
 | Services impacted | Identity Service, Real-time Customer Profile, data lake |
-| Deletion patterns | Delete an identity and all of its corresponding links completely from Identity Service, across all datasets or for a single dataset | 
+| Deletion patterns | Delete an identity and all of its corresponding links completely from Identity Service, across all datasets or for a single dataset. | 
 
 {style="table-layout:auto"}
 
@@ -64,10 +64,10 @@ You can use the Catalog Service to submit requests for dataset deletion. For mor
 | Deletion in Catalog Service | Description |
 | --- | --- |
 | Path | Catalog Service API or Datasets UI |
-| Accepted use cases | Delete full datasets and their associated identity information in Platform |
+| Accepted use cases | Delete full datasets and their associated identity information in Platform. |
 | Estimated latency | Days |
-| Services impacted | Identity Service, Real-time Customer Profile, data lake |
-| Deletion pattern | Delete linked identities from Identity Service established by a particular dataset |
+| Services impacted | Identity Service, Real-time Customer Profile, data lake. |
+| Deletion pattern | Delete linked identities from Identity Service established by a particular dataset. |
 
 {style="table-layout:auto"}
 
@@ -78,10 +78,10 @@ The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Adob
 | Deletion in Data Hygiene | Description |
 | --- | --- |
 | Path | Data Hygiene | 
-| Accepted use cases | Management of data stored in Experience Platform | 
+| Accepted use cases | Management of data stored in Experience Platform. | 
 | Estimated latency | Days |
-| Services impacted | Identity Service, Real-time Customer Profile, data lake |
-| Deletion pattern | Delete linked identities from Identity Service established by a particular dataset, based on expiration schedule |
+| Services impacted | Identity Service, Real-time Customer Profile, data lake. |
+| Deletion pattern | Delete linked identities from Identity Service established by a particular dataset, based on expiration schedule. |
 
 {style="table-layout:auto"}
 
