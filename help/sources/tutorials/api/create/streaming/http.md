@@ -534,7 +534,7 @@ curl -X POST \
 | --- | --- |
 | `name` | The name of your dataflow. Ensure that the name of your dataflow is descriptive as you can use this to look up information on your dataflow. |
 | `description` | (Optional) A property that you can include to provide more information on your dataflow. |
-| `flowSpec.id` | The flow specification ID for [!DNL HTTP API]. This ID is: `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. |
+| `flowSpec.id` | The flow specification ID for [!DNL HTTP API]. To create a dataflow with transformations, you must use  `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. To create a dataflow without transformations, use `d8a6f005-7eaf-4153-983e-e8574508b877`. |
 | `sourceConnectionIds` | The [source connection ID](#source) retrieved in an earlier step. |
 | `targetConnectionIds` | The [target connection ID](#target) retrieved in an earlier step. |
 | `transformations.params.mappingId` | The [mapping ID](#mapping) retrieved in an earlier step.|
