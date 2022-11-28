@@ -268,7 +268,7 @@ A successful response returns HTTP status 200 with detailed information about th
         "specName": "Streaming Connection",
         "params": {
           "sourceId": "ACME Streaming Connection XDM Data",
-          "inletUrl": "https://dcs-int.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec",
+          "inletUrl": "https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec",
           "authenticationRequired": false,
           "inletId": "667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec",
           "dataType": "xdm",
@@ -511,17 +511,17 @@ curl -X POST \
         "version": "1.0"
       },
       "sourceConnectionIds": [
-        "<sourceConnectionId>"
+        "34ece231-294d-416c-ad2a-5a5dfb2bc69f"
       ],
       "targetConnectionIds": [
-        "<targetConnectionId>"
+        "07f2f6ff-1da5-4704-916a-c615b873cba9"
       ],
       "transformations": [
         {
           "name": "Mapping",
           "params": {
-            "mappingId": "<mappingId>",
-            "mappingVersion": <mappingVersion>
+            "mappingId": "79a623960d3f4969835c9e00dc90c8df",
+            "mappingVersion": 0
           }
         }
       ]
@@ -532,6 +532,8 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
+| `name` | The name of your dataflow. Ensure that the name of your dataflow is descriptive as you can use this to look up information on your dataflow. |
+| `description` | (Optional) A property that you can include to provide more information on your dataflow. |
 | `flowSpec.id` | The flow specification ID for [!DNL HTTP API]. This ID is: `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. |
 | `sourceConnectionIds` | The [source connection ID](#source) retrieved in an earlier step. |
 | `targetConnectionIds` | The [target connection ID](#target) retrieved in an earlier step. |
@@ -556,12 +558,12 @@ Now that you've created your flow, you can send your JSON message to the streami
 **API format**
 
 ```http
-POST /collection/{BASE_CONNECTION_ID}
+POST /collection/{INLET_URL}
 ```
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | The `id` value of your newly created streaming connection. |
+| `{INLET_URL}` | Your streaming endpoint URL. You can retrieve this URL by making a GET request to the `/connections` endpoint while providing your base connection ID. |
 
 **Request**
 
@@ -570,36 +572,48 @@ POST /collection/{BASE_CONNECTION_ID}
 >[!TAB XDM]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
   -H 'Content-Type: application/json' \
   -H 'x-adobe-flow-id: f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
   -d '{
-      "header": {
-        "schemaRef": {
-          "id": "<schemaRefId>",
-          "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
-        },
-        "flowId": "<flowId>",
-        "datasetId": "<dataSetId>"
-      },
-      "body": {
-        "xdmMeta": {
+        "header": {
           "schemaRef": {
-            "id": "<schemaRefId>",
+            "id": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
-          }
+          },
+          "flowId": "f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2",
+          "datasetId": "604a18a3bae67d18db6d258c"
         },
-        "xdmEntity": {
-          <json of mapping of xdm fields to their value>
+        "body": {
+          "xdmMeta": {
+            "schemaRef": {
+              "id": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+              "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+            }
+          },
+          "xdmEntity": {
+            "_id": "http-source-connector-acme-01",
+            "person": {
+              "name": {
+                "firstName": "suman",
+                "lastName": "nolan"
+              }
+            },
+            "workEmail": {
+              "primary": true,
+              "address": "suman@acme.com",
+              "type": "work",
+              "status": "active"
+            }
+          }
         }
-      }
-    }'
+      }'
 ```
 
 >[!TAB Raw data]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
   -H 'Content-Type: application/json' \
   -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
   -d '{
