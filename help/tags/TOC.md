@@ -149,6 +149,7 @@ solution: Data Collection
     * [Differential Privacy](https://exchange.adobe.com/apps/ec/104535)
     * [Dynamic Media Viewers](https://exchange.adobe.com/apps/ec/103048)
     * [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)
+    * [Facebook Pixel](https://exchange.adobe.com/apps/ec/102804)
     * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)
     * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
     * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
@@ -204,6 +205,7 @@ solution: Data Collection
       * [Overview](./extensions/server/aws/overview.md)
     * Core {#core}
       * [Overview](./extensions/server/core/overview.md)
+    * [Facebook Conversions API](https://exchange.adobe.com/apps/ec/105509)
     * Google Ads Enhanced Conversions {#google-ads-enhanced-conversions}
       * [Overview](./extensions/server/google-ads-enhanced-conversions/overview.md)
     * [!DNL Mailchimp] Edge {#mailchimp}
