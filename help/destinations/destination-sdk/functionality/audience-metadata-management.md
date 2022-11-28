@@ -1,11 +1,8 @@
 ---
 description: Use audience metadata templates to programmatically create, update, or delete audiences in your destination. Adobe provides an extensible audience metadata template, which you can configure based on the specifications of your marketing API. After you define, test, and submit the template, it will be used by Adobe to structure the API calls to your destination.
 title: Audience metadata management
-exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
 ---
-# Audience metadata management {#audience-metadata-management}
-
-## Overview {#overview}
+# Audience metadata management
 
 Use audience metadata templates to programmatically create, update, or delete audiences in your destination. Adobe provides an extensible audience metadata template, which you can configure based on the specifications of your marketing API. After you define, test, and submit the configuration, it will be used by Adobe to structure the API calls to your destination.
 
@@ -15,7 +12,7 @@ You can configure the functionality described in this document by using the `/au
 
 Depending on your API configuration, you may or may not need to use the audience metadata management endpoint as you configure your destination in Experience Platform. Use the decision tree diagram below to understand when to use the audience metadata endpoint and how to configure an audience metadata template for your destination.
 
-![Decision tree diagram](./assets/audience-metadata-decision-tree.png)
+![Decision tree diagram](assets/audience-metadata-decision-tree.png)
 
 ## Use cases supported by audience metadata management {#use-cases}
 
@@ -31,7 +28,7 @@ When activating segments to your destination in the Experience Platform user int
 
 If segments and other metadata need to be created by partners or users manually in your destination, then users must manually fill in the segment mapping ID field in the activation workflow to sync the segment metadata between your destination and Experience Platform.
 
-![Input mapping ID](./assets/input-mapping-id.png)
+![Input mapping ID](assets/input-mapping-id.png)
 
 ### Use case 3 - Your destination accepts the Experience Platform segment ID, users don't need to manually input mapping ID  
 

@@ -5,8 +5,6 @@ exl-id: 7a4edf8d-f905-4d55-a25d-4b9c6063ff88
 ---
 # Rate limiting and retry policy for streaming destinations built with Destination SDK
 
-## Overview {#overview}
-
 Partner-built destinations can return various errors and have different rate limiting policies. This page explains how Experience Platform handles different types of errors returned by streaming destinations.
 
 When configuring a destination using Destination SDK, you can select between two aggregation types - [best effort aggregation](/help/destinations/destination-sdk/destination-configuration.md#best-effort-aggregation) and [configurable aggregation](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation). Depending on the aggregation type that you select, read below how Experience Platform handles errors and rate limitations.

@@ -1,0 +1,26 @@
+---
+description: Learn how to configure the audience metadata settings for destinations built with Destination SDK.
+title: Audience metadata configuration
+---
+
+# Audience metadata configuration
+
+This section of the destination configuration relates to how segment metadata like segment names or IDs should be shared between Experience Platform and your destination.
+
+Through the `audienceTemplateId`, this section also ties together this configuration with the [audience metadata configuration](./audience-metadata-management.md).
+
+```json
+   "audienceMetadataConfig":{
+       "mapExperiencePlatformSegmentName":false,
+       "mapExperiencePlatformSegmentId":false,
+       "mapUserInput":false,
+       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
+   }
+```
+
+|Parameter | Type | Description|
+|---------|----------|------|
+|`mapExperiencePlatformSegmentName` | Boolean | Controls whether the segment mapping id in the destination activation workflow is the Experience Platform segment name. |
+|`mapExperiencePlatformSegmentId` | Boolean | Controls whether the segment mapping id in the destination activation workflow is the Experience Platform segment ID. |
+|`mapUserInput` | Boolean | Controls whether the segment mapping id in the destination activation workflow is input by user. |
+|`audienceTemplateId` | Boolean | The `instanceId` of the [audience metadata template](./audience-metadata-management.md) used for this destination. To set up an audience metadata template, read the [audience metadata API reference](./audience-metadata-api.md).|

@@ -90,7 +90,6 @@ To set up [!DNL Azure Data Lake Storage] (ADLS) authentication for your destinat
 ]
 ```
 
-
 ## SFTP with password authentication
 
 [!DNL SFTP] authentication with password is supported for file-based destinations in Experience Platform.
@@ -108,9 +107,6 @@ To set up SFTP authentication with password for your destination, configure the 
    }
 ]
 ```
-
-
-
 
 ## SFTP with SSH key authentication
 

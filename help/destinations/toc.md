@@ -183,18 +183,18 @@ feature: Destinations
             * Customer authentication configuration
                 * [Customer authentication configuration](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
                 * [OAuth2 authentication](./destination-sdk/oauth2-authentication.md)
-            * [Customer data fields]()
-            * [UI attributes]()
-            * [Schema configuration]()
-            * [Identities and attributes]()
-            * [Destination delivery]()
-            * [Segment mapping]()
-            * [Aggregation policy]()
-            * [Batch configuration]()
-            * [Historical profile qualifications]()
-
-
-
+            * [Customer data fields](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
+            * [UI attributes](./destination-sdk/functionality/destination-configuration/ui-attributes.md)
+            * [Schema configuration](./destination-sdk/functionality/destination-configuration/schema-configuration.md)
+            * [Identities and attributes](./destination-sdk/functionality/destination-configuration/identities-attributes.md)
+            * [Destination delivery](./destination-sdk/functionality/destination-configuration/destination-delivery.md)
+            * [Audience metadata configuration](./destination-sdk/functionality/destination-configuration/audience-metadata-configuration.md)
+            * [Aggregation policy](./destination-sdk/functionality/destination-configuration/aggregation-policy.md)
+            * [Batch configuration](./destination-sdk/functionality/destination-configuration/batch-configuration.md)
+            * [Historical profile qualifications](./destination-sdk/functionality/destination-configuration/historical-profile-qualifications.md)
+      * [Rate limiting and retry policy for streaming destinations](./destination-sdk/functionality/rate-limiting-retry-policy.md)
+      * [Supported transformation functions](./destination-sdk/functionality/supported-functions.md)
+      * [Audience metadata management](./destination-sdk/functionality/audience-metadata-management.md)
 
     * [Getting started](./destination-sdk/getting-started.md)
     * Destination SDK functionality {#functionality}
@@ -204,7 +204,7 @@ feature: Destinations
       * [Streaming destinations server and template specs](./destination-sdk/server-and-template-configuration.md)
       * [File-based destinations server and file specs](./destination-sdk/server-and-file-configuration.md)
       
-      * [Audience metadata management](./destination-sdk/audience-metadata-management.md)
+
       * Authentication {#authentication}
         * [Authentication configuration](./destination-sdk/authentication-configuration.md)
 
@@ -243,8 +243,8 @@ feature: Destinations
         * [Configure an Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
         * [Configure an SFTP destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
     * Reference {#reference}
-      * [Rate limiting and retry policy for streaming destinations](./destination-sdk/rate-limiting-retry-policy.md)
-      * [Supported transformation functions](./destination-sdk/supported-functions.md)
+
+
     * Document your destination {#document-destination}
       * [Document your destination in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Use the GitHub web interface to create a destination documentation page](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
