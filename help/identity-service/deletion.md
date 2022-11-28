@@ -34,7 +34,7 @@ Privacy Service processes customer requests to access, opt out of sale, or delet
 | Path | Privacy Service |
 | Accepted use cases | Data privacy requests (GDPR, CCPA) only |
 | Estimated latency | Days to weeks |
-| Services impacted |
+| Services impacted | Identity Service, Real-time Customer Profile, data lake |
 | Deletion patterns | Delete identity and all linkages completely from Identity Service | 
 
 {style="table-layout:auto"}
