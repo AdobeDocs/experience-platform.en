@@ -43,7 +43,9 @@ The expected latency for Analytics Data on Platform is outlined in the table bel
 | New data to [!DNL Real-time Customer Profile] (A4T **not** enabled) | < 2 minutes |
 | New data to [!DNL Real-time Customer Profile] (A4T **is** enabled) | < 15 minutes |
 | New data to Data Lake | < 90 minutes |
-| Backfill data (13 Months of Data or 10 Billion events, whichever is lower) | < 4 weeks |
+| Backfill data of less than 10 Billion events | < 4 weeks |
+
+Analytics backfills are always 13 months, with no limits on the number of rows. The limit of 10 billion events mentioned in the table above is strictly with respect to expected latency.
 
 >[!NOTE]
 >
