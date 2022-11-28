@@ -11,17 +11,20 @@ The Experience Platform [!DNL Pebble] implementation has some changes, compared 
 
 ## Where to use {#where-to-use}
 
-Use the supported functions listed further below on this page when [creating a message transformation template](./create-template.md) for the data exported out of Experience Platform to your destination. The message transformation template is used in the [destination server configuration](./server-and-template-configuration.md) for streaming destinations.
+Use the supported functions listed further below on this page when [creating a message transformation template](./create-template.md) for the data exported out of Experience Platform to your destination. 
+
+The message transformation template is used in the [destination server configuration](./server-and-template-configuration.md) for streaming destinations.
 
 ## Prerequisites {#prerequisites}
 
-To understand the concepts and functions in this reference page, read the [message format](/help/destinations/destination-sdk/message-format.md) document first. You need to understand the [structure of a profile](/help/destinations/destination-sdk/message-format.md#profile-structure) in Experience Platform before you can use [!DNL Pebble] templates to transform and the exported data.
+To understand the concepts and functions in this reference page, read the [message format](destination-server/message-format.md) document first. You need to understand the [structure of a profile](destination-server/message-format.md#profile-structure) in Experience Platform before you can use [!DNL Pebble] templates to transform and the exported data.
 
-Before you advance to the functions documented below, review the templating examples in the section [Using a templating language for the identity, attributes, and segment membership transformations](/help/destinations/destination-sdk/message-format.md#using-templating). The examples in there start off very simple and increase in complexity.
+Before you advance to the functions documented below, review the templating examples in the section [Using a templating language for the identity, attributes, and segment membership transformations](destination-server/message-format.md#using-templating). The examples in there start off very simple and increase in complexity.
 
 ## Supported [!DNL Pebble] functions {#supported-functions}
 
 From the [!DNL Pebble] tags section, Destination SDK only supports:
+
 * [filter](https://pebbletemplates.io/wiki/tag/filter/)
 * [for](https://pebbletemplates.io/wiki/tag/for/)
 * [if](https://pebbletemplates.io/wiki/tag/if/)
@@ -31,8 +34,8 @@ From the [!DNL Pebble] tags section, Destination SDK only supports:
 >
 >Using `for` is different when iterating through *array* or *map* elements in a template. When you iterate through an array, you can obtain the element directly. When you iterate through a map, you obtain each map entry, which has a key-value pair.
 >
-> * For an example of an array element, think about the identities in an [identityMap](./message-format.md#identities) namespace, where you could iterate through elements such as `identityMap.gaid`, `identityMap.email`, or similar.
-> * For an example of a map element, think about [segmentMembership](./message-format.md#segment-membership).
+> * For an example of an array element, think about the identities in an [identityMap](destination-server/message-format.md#identities) namespace, where you could iterate through elements such as `identityMap.gaid`, `identityMap.email`, or similar.
+> * For an example of a map element, think about [segmentMembership](destination-server/message-format.md#segment-membership).
 
 From the [!DNL Pebble] filter section, Destination SDK supports all functions. An example further below shows how the `date` function can be used within Destination SDK.
 
@@ -189,4 +192,4 @@ added: <111111><333333>;|removed: <222222>;
 You now know which [!DNL Pebble] functions are supported in Destination SDK, as well as how to use them to adjust the format of the exported data to fit your needs. Next, you should review the following pages:
 
 * [Create and test a message transformation template](/help/destinations/destination-sdk/create-template.md)
-* [Render template API operations](/help/destinations/destination-sdk/render-template-api.md)
+* [Render template API operations](./destination-sdk/render-template-api.md)

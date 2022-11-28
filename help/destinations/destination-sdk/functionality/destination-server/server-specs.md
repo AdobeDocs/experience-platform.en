@@ -9,7 +9,7 @@ When creating a new destination, you can configure the destination server specs 
 
 Destination SDK supports multiple destination server types. When creating a new destination, use one of the server type configurations described below, depending on your integration requirements.
 
-## URL-based destination server
+## URL-based destination server {#url-destination-server}
 
 URL-based destination servers allow you to activate data from Adobe Experience Platform to your destination via HTTP exports. The server configuration contains information about the server receiving the messages (the server on your side).
 
@@ -18,20 +18,21 @@ This process delivers user data as a series of HTTP messages to your destination
 The sample below shows a correct destination server configuration for a URL-based destination.
 
 ```json
-
-"name":"Example URL-based destination server name",
-"destinationServerType":"URL_BASED",
-"urlBasedDestination":{
-    "url":{
-        "templatingStrategy":"PEBBLE_V1",
-        "value":"https://api.moviestar.com/data/{{customerData.endpointRegion}}/items"
-        }
-    }
+{
+   "name":"Example URL-based destination server name",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"https://api.example.com/data/{{customerData.endpointRegion}}/items"
+      }
+   }
+}
 ```
 
 |Parameter | Type | Description|
 |---|---|---|
-|`name` | String | *Required.* Represents a friendly name of your server, visible only to Adobe. This name is not visible to partners or customers. Example `Moviestar destination server`.  |
+|`name` | String | *Required.* Represents a friendly name of your server, visible only to Adobe. This name is not visible to partners or customers. Example: `Moviestar destination server`. |
 |`destinationServerType` | String | *Required.* Set to `URL_BASED` for streaming destinations.|
 |`templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if you are using a macro instead of a fixed value in the `value` field. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
 |`value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to. |
@@ -46,18 +47,18 @@ The sample below shows a correct destination server configuration for an Amazon 
 
 ```json
 {
-    "name": "S3 destination",
-    "destinationServerType": "FILE_BASED_S3",
-    "fileBasedS3Destination": {
-        "bucket": {
-            "templatingStrategy": "PEBBLE_V1",
-            "value": "{{customerData.bucket}}"
-        },
-        "path": {
-            "templatingStrategy": "PEBBLE_V1",
-            "value": "{{customerData.path}}"
-        }
-    }
+   "name":"S3 destination",
+   "destinationServerType":"FILE_BASED_S3",
+   "fileBasedS3Destination":{
+      "bucket":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.bucket}}"
+      },
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      }
+   }
 }
 ```
 
@@ -69,7 +70,6 @@ The sample below shows a correct destination server configuration for an Amazon 
 |`fileBasedS3Destination.bucket.value`|String|The name of the [!DNL Amazon S3] bucket to be used by this destination.|
 |`fileBasedS3Destination.path.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
 |`fileBasedS3Destination.path.value`|String|The path to the destination folder that will host the exported files.|
-|`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
 {style="table-layout:auto"}
 
@@ -92,8 +92,8 @@ The sample below shows a correct destination server configuration for an SFTP de
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.hostName}}"
       },
-      "port": 22,
-      "encryptionMode" : "PGP"
+      "port":22,
+      "encryptionMode":"PGP"
    }
 }
 ```
@@ -108,7 +108,6 @@ The sample below shows a correct destination server configuration for an SFTP de
 |`fileBasedSftpDestination.hostName.value`|String|The host name of the destination storage.|
 |`port`|Integer|The SFTP file server port.|
 |`encryptionMode`|String|Indicates whether to use file encryption. Supported values: <ul><li>PGP</li><li>None</li></ul>|
-|`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
 {style="table-layout:auto"}
 
@@ -137,7 +136,6 @@ The sample below shows a correct destination server configuration for an [!DNL A
 |`destinationServerType`|String|Set this value according to your destination platform. For [!DNL Azure Data Lake Storage] destinations, set this to `FILE_BASED_ADLS_GEN2`.|
 |`fileBasedAdlsGen2Destination.path.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
 |`fileBasedAdlsGen2Destination.path.value`|String|The path to the destination folder that will host the exported files.|
-|`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
 {style="table-layout:auto"}
 
@@ -172,7 +170,6 @@ The sample below shows a correct destination server configuration for an [!DNL A
 |`fileBasedAzureBlobDestination.path.value`|String|The path to the destination folder that will host the exported files.|
 |`fileBasedAzureBlobDestination.container.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
 |`fileBasedAzureBlobDestination.container.value`|String|The name of the [!DNL Azure Blob Storage] container to be used by this destination.|
-|`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
 {style="table-layout:auto"}
 
@@ -202,7 +199,6 @@ The sample below shows a correct destination server configuration for a [!DNL Da
 |`destinationServerType`|String|Set this value according to your destination platform. For [!DNL Data Landing Zone] destinations, set this to `FILE_BASED_DLZ`.|
 |`fileBasedDlzDestination.path.templatingStrategy`|String| *Required.*  Use `PEBBLE_V1`.|
 |`fileBasedDlzDestination.path.value`|String|The path to the destination folder that will host the exported files.|
-|`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
 {style="table-layout:auto"}
 
@@ -237,6 +233,5 @@ The sample below shows a correct destination server configuration for a [!DNL Go
 |`fileBasedGoogleCloudStorageDestination.bucket.value`|String|The name of the [!DNL Google Cloud Storage] bucket to be used by this destination.|
 |`fileBasedGoogleCloudStorageDestination.path.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
 |`fileBasedGoogleCloudStorageDestination.path.value`|String|The path to the destination folder that will host the exported files.|
-|`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
 {style="table-layout:auto"}

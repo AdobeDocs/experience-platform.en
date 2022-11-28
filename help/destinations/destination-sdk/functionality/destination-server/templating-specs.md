@@ -5,7 +5,9 @@ title: Templating specs for destinations created with Destination SDK
 
 # Templating specs
 
-The template spec allows you to configure how to format the exported message to your destination. Adobe uses a templating language similar to [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) to transform the fields from the XDM schema into a format supported by your destination.
+The template spec allows you to configure how to format the exported message to your destination.
+
+Adobe uses a templating language similar to [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) to transform the fields from the XDM schema into a format supported by your destination.
 
 ![Template configuration highlighted](assets/template-configuration.png)
 
@@ -34,9 +36,9 @@ The template spec allows you to configure how to format the exported message to 
 
 |Parameter | Type | Description|
 |---|---|---|
-|`httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+|`httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Supported methods: `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 |`templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
-|`value` | String | *Required.* This string is the character-escaped version that transforms Platform customers' data to the format your service expects. <br> For information how to write the template, read the [Using templating section](./message-format.md#using-templating). <br> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). <br> For an example of a simple transformation, refer to the [Profile Attributes](./message-format.md#attributes) transformation. |
+|`value` | String | *Required.* This string is the character-escaped version that transforms Platform customer data into the format expected by your destination. <br> For information on how to write the template, read the section on [using templating](message-format.md#using-templating). <br> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). <br> For an example of a simple transformation, refer to the [profile attributes](message-format.md#attributes) transformation. |
 |`contentType` | String | *Required.* The content type that your server accepts. This value is most likely `application/json`. |
 
 {style="table-layout:auto"}

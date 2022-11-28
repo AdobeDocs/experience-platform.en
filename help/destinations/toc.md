@@ -197,16 +197,6 @@ feature: Destinations
 
     * [Getting started](./destination-sdk/getting-started.md)
     * Destination SDK functionality {#functionality}
-      
-      * [Streaming destination configuration](./destination-sdk/destination-configuration.md)
-      * [File-based destination configuration](./destination-sdk/file-based-destination-configuration.md)
-      * [Streaming destinations server and template specs](./destination-sdk/server-and-template-configuration.md)
-      * [File-based destinations server and file specs](./destination-sdk/server-and-file-configuration.md)
-      
-
-      * Authentication {#authentication}
-        * [Authentication configuration](./destination-sdk/authentication-configuration.md)
-
       * Developer tools {#developer-tools}
         * [Create and test a message transformation template](./destination-sdk/create-template.md)
         * [Test your destination configuration](./destination-sdk/test-destination.md)

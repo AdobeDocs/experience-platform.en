@@ -1,13 +1,12 @@
 ---
 description: Learn how Experience Platform handles different types of errors returned by streaming destinations and how it retries to send data to the destination platform.
 title: Rate limiting and retry policy for streaming destinations built with Destination SDK
-exl-id: 7a4edf8d-f905-4d55-a25d-4b9c6063ff88
 ---
 # Rate limiting and retry policy for streaming destinations built with Destination SDK
 
 Partner-built destinations can return various errors and have different rate limiting policies. This page explains how Experience Platform handles different types of errors returned by streaming destinations.
 
-When configuring a destination using Destination SDK, you can select between two aggregation types - [best effort aggregation](/help/destinations/destination-sdk/destination-configuration.md#best-effort-aggregation) and [configurable aggregation](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation). Depending on the aggregation type that you select, read below how Experience Platform handles errors and rate limitations.
+When configuring a destination using Destination SDK, you can select between two aggregation types - [best effort aggregation](destination-configuration/aggregation-policy.md#best-effort-aggregation) and [configurable aggregation](destination-configuration/aggregation-policy.md#configurable-aggregation). Depending on the aggregation type that you select, read below how Experience Platform handles errors and rate limitations.
 
 ## Best effort aggregation {#best-effort-aggregation}
 
@@ -18,8 +17,8 @@ For any HTTP calls made to your destination that fail, Experience Platform attem
 In the case of destination platforms set up with configurable aggregation, Experience Platform distinguishes between the error type returned by your platform:
 
 * Errors where Experience Platform retries to send the data to your platform:
-  * HTTP response codes 420 and 429
-  * HTTP response codes greater than 500
+    * HTTP response codes 420 and 429
+    * HTTP response codes greater than 500
 * Errors where Experience Platform *does not* retry to send the data to your platform: all the other ones returned by your platform
 
 ### Retry approach described {#retry-approach}
@@ -37,5 +36,5 @@ The Experience Platform approach for configurable aggregation is described below
 
 You now know how Experience Platform handles errors and rate limiting from destination platforms, depending on the aggregation policy you selected when you configured your streaming destination. Next, you can review the following documentation:
 
-* [Test your destination configuration](/help/destinations/destination-sdk/test-destination.md)
+* [Test your destination configuration](./destination-sdk/test-destination.md)
 * [Submit for review a destination authored in Destination SDK](/help/destinations/destination-sdk/submit-destination.md)

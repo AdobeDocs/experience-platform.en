@@ -15,7 +15,7 @@ You can modify several properties of the exported files to match the requirement
 
 ## File configurations with CSV options and `templatingStrategy` set to `NONE` {#file-configuration-templating-none}
 
-In the configuration example below, all the CSV options are fixed. The export settings defined in each of the `csvOptions` parameters are final and users cannot modify them.
+In the configuration example below, all the CSV options are predefined. The export settings defined in each of the `csvOptions` parameters are final and users cannot modify them.
 
 ```json
 "fileConfigurations": {
@@ -83,42 +83,43 @@ In the configuration example below, all the CSV options are fixed. The export se
 
 ## File configurations with CSV options and `templatingStrategy` set to `PEBBLE_V1` {#file-configuration-templating-pebble}
 
-In the configuration example below, none of the CSV options are fixed. The `value` in each of the `csvOptions` parameters is configured in a corresponding customer data field through the `/destinations` endpoint (for example `customerData.quote` for the `quote` file formatting option) and users can use the Experience Platform UI to select between the various options you configure in the corresponding customer data field.
+In the configuration example below, none of the CSV options are predefined. The `value` in each of the `csvOptions` parameters is configured in a corresponding customer data field through the `/destinations` endpoint (for example `customerData.quote` for the `quote` file formatting option) and users can use the Experience Platform UI to select between the various options you configure in the corresponding customer data field.
 
 ```json
-
-  "fileConfigurations": {
-    "compression": {
-      "templatingStrategy": "PEBBLE_V1",
-      "value": "{% if customerData contains 'compression' and customerData.compression is not empty %}{{customerData.compression}}{% else %}NONE{% endif %}"
-    },
-    "fileType": {
-      "templatingStrategy": "PEBBLE_V1",
-      "value": "{{customerData.fileType}}"
-    },
-    "csvOptions": {
-      "sep": {
-        "templatingStrategy": "PEBBLE_V1",
-        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'delimiter' %}{{customerData.csvOptions.delimiter}}{% else %},{% endif %}"
+{
+   "fileConfigurations":{
+      "compression":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% if customerData contains 'compression' and customerData.compression is not empty %}{{customerData.compression}}{% else %}NONE{% endif %}"
       },
-      "quote": {
-        "templatingStrategy": "PEBBLE_V1",
-        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'quote' %}{{customerData.csvOptions.quote}}{% else %}\"{% endif %}"
+      "fileType":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.fileType}}"
       },
-      "escape": {
-        "templatingStrategy": "PEBBLE_V1",
-        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'escape' %}{{customerData.csvOptions.escape}}{% else %}\\{% endif %}"
-      },
-      "nullValue": {
-        "templatingStrategy": "PEBBLE_V1",
-        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'nullValue' %}{{customerData.csvOptions.nullValue}}{% else %}null{% endif %}"
-      },
-      "emptyValue": {
-        "templatingStrategy": "PEBBLE_V1",
-        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
+      "csvOptions":{
+         "sep":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'delimiter' %}{{customerData.csvOptions.delimiter}}{% else %},{% endif %}"
+         },
+         "quote":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'quote' %}{{customerData.csvOptions.quote}}{% else %}\"{% endif %}"
+         },
+         "escape":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'escape' %}{{customerData.csvOptions.escape}}{% else %}\\{% endif %}"
+         },
+         "nullValue":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'nullValue' %}{{customerData.csvOptions.nullValue}}{% else %}null{% endif %}"
+         },
+         "emptyValue":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
+         }
       }
-    }
-  }
+   }
+}
 ```
 
 ## Complete reference and examples for supported file formatting options {#file-formatting-reference-and-example}

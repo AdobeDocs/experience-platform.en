@@ -5,7 +5,9 @@ title: Customer authentication configuration
 
 # Customer authentication configuration
 
-The customer authentication configuration section in the destinations configuration generates the [Configure new destination](./help/destinations/ui/connect-destination.md) page in the Experience Platform user interface, where users connect Experience Platform to the accounts they have with your destination. Depending on which authentication option you indicate in the `authType` field, the Experience Platform page is generated for the users as shown below.
+The customer authentication configuration section in the destinations configuration generates the [Configure new destination](./help/destinations/ui/connect-destination.md) page in the Experience Platform user interface, where users connect Experience Platform to the accounts they have with your destination.
+
+Depending on which authentication option you indicate in the `authType` field, the Experience Platform page is generated for the users as shown below.
 
 ## Bearer authentication
 
