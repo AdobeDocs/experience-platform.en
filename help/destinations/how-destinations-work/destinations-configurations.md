@@ -5,13 +5,13 @@ description: Learn which export settings in destinations are configurable on a d
 
 # Configurable and common export settings in destinations
 
-When thinking about the export behavior to Experience Platform destinations, you need to consider three separate levels on which configurations are set.
+When thinking about the export behavior to Experience Platform destinations, you need to consider three separate levels on which configurations act.
 
 * On a first level, some of the settings related to profile export behavior and configuration settings are common across all destinations belonging to a destination type. These settings cannot be edited by destination developers or Real-time CDP users.
 * On a second level, some settings can be customized on a destination level by the destination developer when authoring destinations using Destination SDK. 
 * On a third level, there are configuration settings that Real-time CDP users can set in the activation workflows.
 
-![Diagram showing the interplay between common and configurable export settings for destinations](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
+![Diagram showing the interplay between common and configurable export settings for destinations](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram-v2.png)
 
 This page describes or links out to all the common and the configurable export settings for destinations, on the three levels outlined above.
 
@@ -32,7 +32,7 @@ Destination developers can use [Destination SDK](/help/destinations/destination-
 
 ## Settings on a dataflow level customizable by users {#settings-on-dataflow-level}
 
-On top of the non-editable settings that depend on destination type and the settings configured by the destination developer, there are certain export settings that users can configure in the activation workflow. These settings relate to the export schedule for a certain dataflow, the attributes and identity fields that should be exported in a dataflow, or the file formatting options for exported files.
+On top of the non-editable settings that depend on destination type and the settings configured by the destination developer, there are certain export settings that users can configure in the activation workflow. These settings relate to the export schedule for a certain dataflow to a destination, the attributes and identity fields that should be exported in a dataflow, or the file formatting options for exported files.
 
 The settings that are available to users when connecting to a destination depend on how the destination was configured by the destination developer and which settings they made available to users.
 

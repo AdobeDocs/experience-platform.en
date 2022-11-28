@@ -14,7 +14,7 @@ Each destination in the [catalog](/help/destinations/catalog/overview.md) is sli
 
 ## File-based destinations {#file-based}
 
-[File-based destinations](/help/destinations/destination-types.md#file-based) (for example Amazon S3, SFTP, most email marketing destinations such as Adobe Campaign, Oracle Eloqua, Salesforce Marketing Cloud): Identity setup in most of these destinations is open as long as a primary key is specified. 
+For [file-based destinations](/help/destinations/destination-types.md#file-based) (for example Amazon S3, SFTP, most email marketing destinations such as Adobe Campaign, Oracle Eloqua, Salesforce Marketing Cloud), the identity setup in most of these destinations is open as long as a deduplication (primary) key is specified. 
 
 Note that only a single identity from the [identity namespace](/help/identity-service/ui/identity-graph-viewer.md#access-identity-graph-viewer) can be selected in an export. When you select an identity for export, it is automatically selected as a [mandatory attribute](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) and [deduplication key](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
 
@@ -28,7 +28,11 @@ As a workaround, you can add more identities to the export if these are have bee
 
 [API-based streaming destinations](/help/destinations/destination-types.md#streaming-destination) built with [Destination SDK](/help/destinations/destination-sdk/overview.md) (for example Facebook, Google Customer Match, Pinterest, Braze, and others) only support specific IDs for export. For detailed information about the specific identities that can be exported to each destination, read the *supported identities* section in each destination documentation page (for example, see the [supported identities section](/help/destinations/catalog/advertising/pinterest.md) in the Pinterest destination page). 
 
-Note, however, that you have the flexibility to use data from either private graphs or from attributes as identities. This means that you can map XDM attributes to the identity field required by the destination. See below an example for the Pinterest destination, where the XDM attribute email is mapped to the required Pinterest identity `pinterest_audience`.
+Note, however, that you have the flexibility to use data from either private graphs or from attributes as identities. This means that you can map XDM attributes to the identity field required by the destination. See below an example for the Pinterest destination, where the XDM attribute `personalEmail.address` is mapped to the required Pinterest identity `pinterest_audience`.
+
+>[!TIP]
+>
+>When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option to have Experience Platform automatically hash the data on activation. Read more about the **[!UICONTROL Apply transformation]** option in the [streaming destinations activation tutorial](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation).
 
 ![Example of email address attribute mapped to identity field for Pinterest destination.](/help/destinations/assets/how-destinations-work/email-mapped-to-identity.png)
 
@@ -58,3 +62,9 @@ When configuring a datastream as described in the documentation linked above, yo
 ![Table with all supported identities](/help/destinations/assets/how-destinations-work/identities-table.png)
 
 -->
+
+## Next steps {#next-steps}
+
+After reading this document, you now know how to find out which identities are supported for individual destinations. You now also know how identity selection works for each destination type. 
+
+Next, you can read about which [export settings](/help/destinations/how-destinations-work/destinations-configurations.md) for destinations are common across destination types, which can be configured on an individual destination level by developers, and which settings can be edited by users in the activation workflow.

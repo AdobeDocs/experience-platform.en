@@ -8,9 +8,9 @@ There are several destination types in Experience Platform, as shown in the diag
 
 >[!IMPORTANT]
 >
->This documentation page only describes the profile export behavior for the connections highlighted in the left of the diagram.
+>This documentation page only describes the profile export behavior for the connections highlighted at the bottom of the diagram.
 
-![Types of destinations diagram](/help/destinations/assets/how-destinations-work/types-of-destinations-v3.png)
+![Types of destinations diagram](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
 ## Microbatching and aggregation policy
 
@@ -104,3 +104,4 @@ Add information about how data is exported to batch destinations:
 Describe technical workings behind full exports
 Describe technical workings behind incremental exports
 How are these two different? different pipelines? 
+
