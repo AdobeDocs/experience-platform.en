@@ -6,7 +6,7 @@ description: The Audit Query API allows you to retrieve metric data for various 
 
 Adobe Experience Platform allows you to audit user activity for various services and capabilities in the form of audit events logs. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type.
 
-This developer guide provides steps to help you use the Audit Query API to manage audit events in Experience Platform, and includes sample API calls for performing various operations.
+The Audit Query API allows you to audit user activity for various services and capabilities in the form of audit event logs. This document provides an introduction to the core concepts you need to know before attempting to make calls to the Audit Query API.
 
 ## Prerequisites
 

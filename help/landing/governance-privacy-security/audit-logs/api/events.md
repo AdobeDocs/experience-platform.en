@@ -4,7 +4,7 @@ description: Learn how to retrieve audit events in Experience Platform using the
 ---
 # Audit events endpoint
 
-Audit events provide insights into the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type for various features in Adobe Experience Platform. The `/audit/events` endpoint in the [!DNL Audit Query] API allows you to programmatically retrieve event data for your organization's activity in [!DNL Platform].
+Audit logs are used to provide details of user activity for various services and capabilities. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type. The `/audit/events` endpoint in the [!DNL Audit Query] API allows you to programmatically retrieve event data for your organization's activity in [!DNL Platform].
 
 ## Getting started
 
