@@ -23,7 +23,7 @@ To install the Microsoft [!DNL Azure] extension, navigate to the Data Collection
 
 Once you have selected or created the desired property, select **[!UICONTROL Extensions]** in the left navigation, then select the **[!UICONTROL Catalog]** tab. Search for the [!UICONTROL Microsoft Azure] card, then select **[!UICONTROL Install]**.
 
-![The [!UICONTROL Install] button being selected for the [!UICONTROL Microsoft Azure] extension in the Data Collection UI.](../../../images/extensions/azure/install.png)
+![The [!UICONTROL Install] button being selected for the [!UICONTROL Microsoft Azure] extension in the Data Collection UI.](../../../images/extensions/server/azure/install.png)
 
 Since the extension does not have any configuration properties, it is immediately added to the list of installed extensions. You can now start using [!DNL Event Hub] action types when configuring event forwarding rules.
 
@@ -31,11 +31,11 @@ Since the extension does not have any configuration properties, it is immediatel
 
 Start creating a new event forwarding rule and configure its conditions as desired. When selecting the actions for the rule, select **[!UICONTROL Microsoft Azure]** for the extension, then select **[!UICONTROL Send Data to Event Hubs]** for action type.
 
-![The [!UICONTROL Send Data to Event Hubs] action type being selected for a rule in the Data Collection UI.](../../../images/extensions/azure/select-action-type.png)
+![The [!UICONTROL Send Data to Event Hubs] action type being selected for a rule in the Data Collection UI.](../../../images/extensions/server/azure/select-action-type.png)
 
 The right panel updates to show configuration options for how the data should be sent. Specifically, you must assign [data elements](../../../ui/managing-resources/data-elements.md) to the various properties that represent your [!DNL Event Hub] configuration.
 
-![The configuration options for the [!UICONTROL Send Data to Event Hubs] action type shown in the UI.](../../../images/extensions/azure/event-hub-details.png)
+![The configuration options for the [!UICONTROL Send Data to Event Hubs] action type shown in the UI.](../../../images/extensions/server/azure/event-hub-details.png)
 
 **[!UICONTROL Event Hub Details]**
 

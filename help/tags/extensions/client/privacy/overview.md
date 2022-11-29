@@ -21,7 +21,7 @@ This guide covers how to install and configure the Adobe Privacy extension in th
 
 Select **[!UICONTROL Extensions]** in the left navigation, followed by the **[!UICONTROL Catalog]** tab. Use the search bar to narrow down the list of available extensions until you locate Adobe Privacy. Select **[!UICONTROL Install]** to continue.
 
-![Install the extension](../../../images/extensions/privacy/install.png)
+![Install the extension](../../../images/extensions/client/privacy/install.png)
 
 The next screen allows you to configure which sources and solutions you want the extension to collect IDs from. The following solutions are supported for the extension:
 
@@ -33,15 +33,15 @@ The next screen allows you to configure which sources and solutions you want the
 
 Select one or more solutions, then select **[!UICONTROL Update]**.
 
-![Select solutions](../../../images/extensions/privacy/select-solutions.png)
+![Select solutions](../../../images/extensions/client/privacy/select-solutions.png)
 
 The screen updates to show inputs for the required configuration parameters based on the solutions you selected.
 
-![Required properties](../../../images/extensions/privacy/required-properties.png)
+![Required properties](../../../images/extensions/client/privacy/required-properties.png)
 
 Using the dropdown menu below, you can also add additional solution-specific parameters to the configuration.
 
-![Optional properties](../../../images/extensions/privacy/optional-properties.png)
+![Optional properties](../../../images/extensions/client/privacy/optional-properties.png)
 
 >[!NOTE]
 >
@@ -49,7 +49,7 @@ Using the dropdown menu below, you can also add additional solution-specific par
 
 Once you have finished adding parameters for your selected solutions, select **[!UICONTROL Save]** to save the configuration.
 
-![Optional properties](../../../images/extensions/privacy/save-config.png)
+![Optional properties](../../../images/extensions/client/privacy/save-config.png)
 
 ## Using the extension {#using}
 
@@ -67,7 +67,7 @@ When using the Adobe Privacy tag extension, you must provide the required callba
 
 Start the process of creating a new data element by selecting **[!UICONTROL Data Elements]** in the left navigation, followed by **[!UICONTROL Add Data Element]**. Once you are on the configuration screen, select **[!UICONTROL Core]** for the extension and **[!UICONTROL Custom Code]** for the data element type. From here, select **[!UICONTROL Open Editor]** in the right panel.
 
-![Select data element type](../../../images/extensions/privacy/data-element-type.png)
+![Select data element type](../../../images/extensions/client/privacy/data-element-type.png)
 
 In the dialog that appears, define a JavaScript function that will handle the retrieved identities. The callback must accept a single object-type argument (`ids` in the example below). The function can then handle the IDs however you wish, and can also invoke any variables and functions that are globally available on your site for further processing.
 
@@ -77,7 +77,7 @@ In the dialog that appears, define a JavaScript function that will handle the re
 
 When finished, select **[!UICONTROL Save]**.
 
-![Define callback function](../../../images/extensions/privacy/define-custom-code.png)
+![Define callback function](../../../images/extensions/client/privacy/define-custom-code.png)
 
 You can continue creating other custom-code data elements if you require different callbacks for different events.
 
@@ -87,15 +87,15 @@ After configuring a callback data element to handle retrieved IDs, you can creat
 
 When configuring the action for the rule, select **[!UICONTROL Adobe Privacy]** for the extension. For the action type, select one of the [three functions](#using) provided by the extension.
 
-![Select action type](../../../images/extensions/privacy/action-type.png)
+![Select action type](../../../images/extensions/client/privacy/action-type.png)
 
-The right panel prompts you to select a data element that will serve as the action's callback. Select the database icon (![Database Icon](../../../images/extensions/privacy/database.png)) and choose the data element you created earlier from the list. Select **[!UICONTROL Keep Changes]** to continue.
+The right panel prompts you to select a data element that will serve as the action's callback. Select the database icon (![Database Icon](../../../images/extensions/client/privacy/database.png)) and choose the data element you created earlier from the list. Select **[!UICONTROL Keep Changes]** to continue.
 
-![Select data element](../../../images/extensions/privacy/add-data-element.png)
+![Select data element](../../../images/extensions/client/privacy/add-data-element.png)
 
 From here, you can continue configuring the rule so that the Adobe Privacy action  fires under the events and conditions you require. When you are satisfied, select **[!UICONTROL Save]**.
 
-![Save the rule](../../../images/extensions/privacy/save-rule.png)
+![Save the rule](../../../images/extensions/client/privacy/save-rule.png)
 
 You can now add the rule to a library to deploy as a build on your website for testing. See the overview on the [tags publishing flow](../../../ui/publishing/overview.md) for more information.
 
