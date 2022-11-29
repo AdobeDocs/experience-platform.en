@@ -1,6 +1,7 @@
 ---
 title: (Beta) Adobe Commerce Destination Connector
 description: Learn how Adobe Commerce and Real-Time CDP merchants can personalize the shopping experience by delivering highly relevant site content and promotions, customized to customer segments built and managed within Real-Time CDP.
+exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
 ---
 # (Beta) Adobe Commerce connection {#adobe-commerce}
 
@@ -36,7 +37,7 @@ Beta customers should have access to:
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
 - [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)
-- [Adobe Commerce Cloud version 2.4.3 or higher](https://business.adobe.com/products/magento/magento-commerce.html)
+- [Adobe Commerce Cloud version 2.4.4 or higher](https://business.adobe.com/products/magento/magento-commerce.html)
 
 In Experience Platform, create the following:
 
@@ -86,7 +87,7 @@ Read [Activate profiles and segments to profile request destinations](../../ui/a
 
 Now that you have configured the [!DNL Commerce] destination within Experience Platform, you need to configure the [!DNL Commerce Admin] to import the Real-Time CDP segments you created. See the [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html) to learn more.
 
-## Validate data export {#exported-data}
+## Validate audience activation in Commerce {#exported-data}
 
 After you activate Real-Time CDP segments to your [!DNL Adobe Commerce] account, you will see those segments available in the [!DNL Admin] when you create a Cart Price Rule:
 

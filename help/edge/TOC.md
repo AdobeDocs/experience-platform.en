@@ -40,6 +40,7 @@ feature: Web SDK
     * [Sending data to Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
 * Personalization {#personalization}
   * [Render personalized content](personalization/rendering-personalization-content.md)
+  * [Personalization via hybrid implementation](personalization/hybrid-personalization.md)
   * [Manage flicker](personalization/manage-flicker.md)
   * Adobe Target {#adobe-target}
     * [Overview](personalization/adobe-target/target-overview.md)

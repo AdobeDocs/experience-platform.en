@@ -1,6 +1,7 @@
 ---
 title: Query Accelerated Store Reporting Insights
 description: Learn how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards.
+exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
 ---
 # Query accelerated store reporting insights 
 

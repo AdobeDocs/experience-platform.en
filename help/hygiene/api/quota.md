@@ -1,12 +1,13 @@
 ---
 title: Quota API Endpoint
 description: The /quota endpoint in the Data Hygiene API allows you to monitor your data hygiene usage against your organization's monthly quota limits for each job type.
+exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
 ---
 # Quota endpoint
 
 >[!IMPORTANT]
 >
->Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Healthcare Shield.
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
 
 The `/quota` endpoint in the Data Hygiene API allows you to monitor your data hygiene usage against your organization's quota limits for each job type.
 

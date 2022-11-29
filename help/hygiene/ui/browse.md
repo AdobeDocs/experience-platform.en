@@ -13,7 +13,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 
 >[!IMPORTANT]
 >
->Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Healthcare Shield.
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
 
 When a data hygiene request is sent to the system, a work order is created to execute the requested task. A work order represents a specific data hygiene process, such as a scheduled dataset expiration, which includes its current status and other related details.
 
@@ -68,7 +68,7 @@ The following filters apply to dataset expiration requests:
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Number of identities"
->abstract="The number of identities that were requested to be deleted as part of this work order. The identities included in the count may not necessarily exist in the affected datasets. To learn more, refer to the data hygiene UI guide."
+>abstract="The number of identities whose records were requested to be updated or deleted as part of this work order. The identities included in the count may not necessarily exist in the affected datasets. To learn more, refer to the data hygiene UI guide."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"

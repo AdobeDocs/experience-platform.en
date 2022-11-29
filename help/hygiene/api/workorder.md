@@ -5,11 +5,14 @@ exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 ---
 # Work order endpoint
 
+The `/workorder` endpoint in the Data Hygiene API allows you to programmatically manage consumer delete requests in Adobe Experience Platform.
+
 >[!IMPORTANT]
 >
->Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Healthcare Shield.
-
-The `/workorder` endpoint in the Data Hygiene API allows you to programmatically manage consumer delete requests in Adobe Experience Platform.
+>Consumer delete requests are only available for organizations that have purchased **Adobe Healthcare Shield**.
+>
+>
+>Consumer deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
 
 ## Getting started
 

@@ -1,6 +1,7 @@
 ---
 title: Query Service Packages
 description: The following document outlines the packages of capabilities and products available for Query Service and highlights the differences between ad hoc and batch queries.
+exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
 ---
 # Query Service packages
 

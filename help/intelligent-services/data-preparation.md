@@ -350,7 +350,7 @@ If you are ingesting data from a local CSV file, you can skip ahead to the next 
 
 #### Map and ingest data {#ingest}
 
-After creating a CEE schema and dataset, you can start mapping your data tables to the schema and ingest that data into Platform. See the tutorial on [mapping a CSV file to an XDM schema](../ingestion/tutorials/map-a-csv-file.md) for steps on how to perform this in the UI. You can use the following [sample JSON file](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) to test the ingestion process before using your own data.
+After creating a CEE schema and dataset, you can start mapping your data tables to the schema and ingest that data into Platform. See the tutorial on [mapping a CSV file to an XDM schema](../ingestion/tutorials/map-csv/overview.md) for steps on how to perform this in the UI. You can use the following [sample JSON file](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) to test the ingestion process before using your own data.
 
 Once a dataset has been populated, the same dataset can be used to ingest additional data files.
 

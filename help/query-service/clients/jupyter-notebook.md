@@ -1,6 +1,7 @@
 ---
 title: Connect Jupyter Notebook to Query Service
 description: Learn how to connect Jupyter Notebook with Adobe Experience Platform Query Service.
+exl-id: 358eab67-538f-4ada-931f-783b92db4a1c
 ---
 # Connect [!DNL Jupyter Notebook] to Query Service
 
