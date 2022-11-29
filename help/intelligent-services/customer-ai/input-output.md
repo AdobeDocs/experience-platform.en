@@ -27,45 +27,45 @@ Here are example configurations for your first model.  In this model, we will bu
 | Step | Define | Example |
 | ---- | ------ | ------- |
 | Set Up | Specify basic information about the model | Name: Give_your_model_a_name <br> Model Type: Conversion 
-| Select Data |Specify datasets used to build the model | Dataset: Select your Adobe Analytics dataset <br> Identity: Ensure the identity column for each dataset is set to be a common identity  
-
-Define Goal |Define goal, eligible population, custom events, and profile attributes 
+| Select Data |Specify datasets used to build the model | Dataset: Select your Adobe Analytics dataset <br> Identity: Ensure the identity column for each dataset is set to be a common identity.
+| Define Goal | Define goal, eligible population, custom events, and profile attributes
 
 Prediction Goal: Select commerce.purchases.value exists 
 
 Outcome window: 30 days 
 
-Set Options | Setup schedule for model refresh and enable scores for Profile 
-
-Schedule: Weekly 
+| Set Options | Setup schedule for model refresh and enable scores for Profile | Schedule: Weekly 
 
 Enable for profile: This must be enabled for model output to be used in segmentation.  
 
- 
-
-Data overview (Bonnie) 
-
- 
+## Data overview
 
 The following sections outline the different required events, inputs, and outputs utilized in Customer AI. 
 
-Customer AI works by analyzing the following types of datasets to predict churn or conversion propensity scores: 
+Customer AI works by analyzing one of the following datasets to predict churn or conversion propensity scores:
 
-Adobe Analytics data using the Analytics source connector 
-
-Adobe Audience Manager data using the Audience Manager source connector 
-
-Experience Event (EE) dataset 
-
-Consumer Experience Event (CEE) dataset 
+- Adobe Analytics data using the [Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+- Adobe Audience Manager data using the [Audience Manager source connector](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
+- Experience Event (EE) dataset
+- Consumer Experience Event (CEE) dataset
 
 You can add multiple datasets from different sources if each of the datasets share the same identity type (namespace) such as an ECID. For more information on adding multiple datasets, visit the Customer AI user guide. 
 
-IMPORTANT 
-
-Source connectors take up to four weeks to backfill data. If you recently set up a connector you should verify that the dataset has the minimum length of data required for Customer AI. Please review the historical data section to verify you have enough data for your prediction goal. 
+>[!IMPORTANT]
+>
+>Source connectors take up to four weeks to backfill data. If you recently set up a connector you should verify that the dataset has the minimum length of data required for Customer AI. Please review the [historical data](#data-requirements) section to verify you have enough data for your prediction goal.
 
 The following table outlines some common terminology used in this document: 
+
+| Term | Definition |
+| --- | --- |
+| [Experience Data Model (XDM)](../../xdm/home.md) | XDM is the foundational framework that allows Adobe Experience Cloud, powered by Adobe Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Platform services. |
+| XDM Schema | Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data. Before data can be ingested into Platform, a schema must be composed to describe the data’s structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base XDM class and zero or more schema field groups. |
+| XDM class | All XDM schemas describe data that can be categorized as record or time series. The data behavior of a schema is defined by the schema’s class, which is assigned to a schema when it is first created. XDM classes describe the smallest number of properties a schema must contain in order to represent a particular data behavior. |
+| [Field groups](../../xdm/schema/composition.md) | A component that define one or more fields in a schema. Field groups enforce how their fields appear in the schema’s hierarchy, and therefore exhibit the same structure in every schema that they are included in. Field groups are only compatible with specific classes, as identified by their `meta:intendedToExtend` attribute. |
+| [Data type](../../xdm/schema/composition.md) | A component that can also provide one or more fields for a schema. However, unlike field groups, data types are not constrained to a particular class. This makes data types a more flexible option to describe common data structures that are reusable across multiple schemas with potentially different classes. The data types outlined in this document are supported by both the CEE and Adobe Analytics schemas. |
+| Churn | A measurement of the percentage of accounts that cancel or choose not to renew their subscriptions. A high churn rate can negatively impact Monthly Recurring Revenue (MRR) and can also indicate dissatisfaction with a product or service. |
+| [Real-time Customer Profile](../../profile/home.md) | Real-time Customer Profile provides a centralized consumer profile for targeted and personalized experience management. Each profile contains data that is aggregated across all systems, as well as actionable timestamped accounts of events involving the individual that have taken place in any of the systems you use with Experience Platform. |
 
 @Serah Metpalli Leave the current table there with a few edits:  
 
