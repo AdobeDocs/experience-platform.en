@@ -30,7 +30,7 @@ To install the Zendesk extension in the UI, navigate to **Event Forwarding** and
 
 Once you have selected or created the desired property, navigate to **Extensions** > **Catalog**. Search for "[!DNL Zendesk]", and then select **[!DNL Install]** on the Zendesk Extension.
 
-![Install button for the Zendesk extension being selected in the UI](../../../images/extensions/zendesk/install.png)
+![Install button for the Zendesk extension being selected in the UI](../../../images/extensions/server/zendesk/install.png)
 
 ## Configure the extension {#configure}
 
@@ -40,21 +40,21 @@ Once you have selected or created the desired property, navigate to **Extensions
 
 Select **Extensions** in the left navigation. Under **Installed**, select **Configure** on the Zendesk extension.
 
-![Configure button for the Zendesk extension being selected in the UI](../../../images/extensions/zendesk/configure.png)
+![Configure button for the Zendesk extension being selected in the UI](../../../images/extensions/server/zendesk/configure.png)
 
 Under **[!UICONTROL Zendesk Domain]**, enter the value for your Zendesk subdomain. Under **[!UICONTROL Zendesk Token]**, select the secret you created earlier that contains the API token.
 
-![Configuration options filled out in the UI](../../../images/extensions/zendesk/input.png)
+![Configuration options filled out in the UI](../../../images/extensions/server/zendesk/input.png)
 
 ## Configure an event forwarding rule
 
 Start creating a new event forwarding rule [rule](../../../ui/managing-resources/rules.md) and configure its conditions as desired. When selecting the actions for the rule, select the [!UICONTROL Zendesk] extension, then select the [!UICONTROL Create Event] action type.
 
-![Define Rule](../../../images/extensions/zendesk/rule.png)
+![Define Rule](../../../images/extensions/server/zendesk/rule.png)
 
 When setting up the action configuration, you are prompted to assign data elements to the various properties that will be sent to Zendesk.
 
-![Define Action Configuration](../../../images/extensions/zendesk/action-configurations.png)
+![Define Action Configuration](../../../images/extensions/server/zendesk/action-configurations.png)
 
 These data elements should be mapped as referenced below.
 
@@ -101,11 +101,11 @@ If the event collection and Adobe Experience Platform integration are successful
 
 Profiles:
 
-![Zendesk Profiles page](../../../images/extensions/zendesk/zendesk-profiles.png)
+![Zendesk Profiles page](../../../images/extensions/server/zendesk/zendesk-profiles.png)
 
 Events:
 
-![Zendesk Events page](../../../images/extensions/zendesk/zendesk-events.png)
+![Zendesk Events page](../../../images/extensions/server/zendesk/zendesk-events.png)
 
 ## Request limits {#limits}
 

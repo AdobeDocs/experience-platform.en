@@ -42,7 +42,7 @@ To send a conversion event from on a website, [!DNL Google Global Site Tag] (gta
 
 Navigate to the [!UICONTROL Data Collection] UI or Experience Platform UI and select **[!UICONTROL Tags]** in the left navigation. Select the tag property you wish to install the extension on, then select **[!UICONTROL Extensions]** in the left navigation. Under the **[!UICONTROL Catalog]** tab, locate the [!UICONTROL Google Global Site Tag (gtag)] extension and select **[!UICONTROL Install]**.
 
-![The [!UICONTROL Google Global Site Tag (gtag)] extension being selected under the [!UICONTROL Extensions] view in the [!UICONTROL Data Collection] UI.](../../../images/extensions/google-ads-enhanced-conversions/install-gtag-extension.png)
+![The [!UICONTROL Google Global Site Tag (gtag)] extension being selected under the [!UICONTROL Extensions] view in the [!UICONTROL Data Collection] UI.](../../../images/extensions/server/google-ads-enhanced-conversions/install-gtag-extension.png)
 
 The installation dialog appears. From here, select **[!UICONTROL Add Account]** and provide the following values when prompted:
 
@@ -60,7 +60,7 @@ When finished, select **[!UICONTROL Add Account]**, then select **[!UICONTROL Sa
 
 After installing the extension, you can start including conversion actions in your tag rules. When creating or editing a rule that listens to the conversion you would like to enhance, select **[!UICONTROL Add]** under [!UICONTROL Actions]. In the next dialog, select **[!UICONTROL Google Global Site Tag (gtag)]** from the [!UICONTROL Extension] dropdown, then select **[!UICONTROL Send an event]** under [!UICONTROL Action Type].
 
-![The [!UICONTROL Send an event] action type being selected within the action configuration view of the rule editing workflow.](../../../images/extensions/google-ads-enhanced-conversions/select-client-action.png)
+![The [!UICONTROL Send an event] action type being selected within the action configuration view of the rule editing workflow.](../../../images/extensions/server/google-ads-enhanced-conversions/select-client-action.png)
 
 Additional controls appear that allow you to configure the [!DNL gtag] event. At a minimum, the following fields must be filled out: 
 
@@ -91,12 +91,12 @@ Once the secret is created, [create a new data element](../../../ui/managing-res
 
 Find the [!UICONTROL Google Ads Enhanced Conversions] extension in the event forwarding catalog and select **[!UICONTROL Install]**. 
 
-![The [!UICONTROL Google Ads Enhanced Conversions] extension being selected under the [!UICONTROL Extensions] view in the [!UICONTROL Data Collection] UI.](../../../images/extensions/google-ads-enhanced-conversions/install-enhanced-conversions.png)
+![The [!UICONTROL Google Ads Enhanced Conversions] extension being selected under the [!UICONTROL Extensions] view in the [!UICONTROL Data Collection] UI.](../../../images/extensions/server/google-ads-enhanced-conversions/install-enhanced-conversions.png)
 
 To configure the extension, you must populate the two required fields:
 
 1. **[!UICONTROL Customer ID]**: The ID that uniquely identifies your [!DNL Google Ads] account. To find this value, log into [!DNL Google Ads] and navigate to **[!DNL Help]** > **[!DNL Customer ID]**.
-1. **[!UICONTROL Access Token Data Element]**: Select the data element icon (![Data element icon](../../../images/extensions/google-ads-enhanced-conversions/data-element-icon.png)) and choose the Google OAuth 2 secret data element that you [configured in the previous step](#create-secret-data-element) from the menu.
+1. **[!UICONTROL Access Token Data Element]**: Select the data element icon (![Data element icon](../../../images/extensions/server/google-ads-enhanced-conversions/data-element-icon.png)) and choose the Google OAuth 2 secret data element that you [configured in the previous step](#create-secret-data-element) from the menu.
 
 When finished, select **[!UICONTROL Save]** to install the extension.
 
@@ -104,7 +104,7 @@ When finished, select **[!UICONTROL Save]** to install the extension.
 
 After the extension is installed, you can start to include [!UICONTROL Send Conversion] actions in your event forwarding rules. When creating or editing a rule that listens to the conversion you'd like to enhance, select **[!UICONTROL Add]** under [!UICONTROL Actions]. In the next dialog, select **[!UICONTROL Google Ads Enhanced Conversions]** from the [!UICONTROL Extension] dropdown, then select **[!UICONTROL Send Conversion]** under [!UICONTROL Action Type].
 
-![The [!UICONTROL Send Conversion] action type being selected within the action configuration view of the rule editing workflow.](../../../images/extensions/google-ads-enhanced-conversions/select-server-action.png)
+![The [!UICONTROL Send Conversion] action type being selected within the action configuration view of the rule editing workflow.](../../../images/extensions/server/google-ads-enhanced-conversions/select-server-action.png)
 
 New controls appear in the right panel that allow you to configure your conversion. At a minimum, the following fields must be completed:
 
@@ -127,7 +127,7 @@ New controls appear in the right panel that allow you to configure your conversi
 >
 >User identification data must be hashed before it is sent to Google. If the data is not hashed when event forwarding receives it, select the **[!UICONTROL Normalize & Hash]** toggle on a given field to instruct the extension to hash the value.
 >
->![The [!UICONTROL Normalize & Hash] toggle enabled for the [!UICONTROL Email] input within the [!UICONTROL Send Conversion] action configuration form.](../../../images/extensions/google-ads-enhanced-conversions/hash-user-id-values.png)
+>![The [!UICONTROL Normalize & Hash] toggle enabled for the [!UICONTROL Email] input within the [!UICONTROL Send Conversion] action configuration form.](../../../images/extensions/server/google-ads-enhanced-conversions/hash-user-id-values.png)
 
 When finished, select **[!UICONTROL Keep Changes]** to add the action to the rule configuration. When you are satisfied with the rule, select **[!UICONTROL Save to Library]**. 
 
