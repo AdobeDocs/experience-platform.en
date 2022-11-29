@@ -56,6 +56,7 @@ user-guide-description: Learn how Experience Platform can deliver personalized e
       * [Overview](./governance-privacy-security/audit-logs/api/overview.md)
       * [Getting started](./governance-privacy-security/audit-logs/api/getting-started.md)
       * [Events](./governance-privacy-security/audit-logs/api/events.md)
+      * [Export](./governance-privacy-security/audit-logs/api/export.md)
   * [Data encryption](./governance-privacy-security/encryption.md)
   * [Customer-managed keys](./governance-privacy-security/customer-managed-keys.md)
 * License usage and guardrails {#license}
