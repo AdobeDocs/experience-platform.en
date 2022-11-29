@@ -10,7 +10,12 @@ exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 
 Adobe Experience Platform Query Service allows you to connect with external clients. You can connect to these external clients by using either expiring credentials or non-expiring credentials.
 
-## Expiring credentials
+## Expiring credentials {#expiring-credentials}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryservice_expiringcredentials"
+>title="Client's SSL mode?"
+>abstract="SSL must be enabled in clients connected to Query Service. Ensure the SSL mode is set to 'require'."
 
 You can use expiring credentials to quickly set up a connection to an external client.
 
@@ -90,7 +95,7 @@ When editing a non-expiring credential, a modal appears. You can provide the fol
 
 Once you have provided all the required details, select **[!UICONTROL Update account]** to complete the update to your credentials.
 
-## Using credentials to connect to external clients
+## Use credentials to connect to external clients {#use-credential-to-connect}
 
 You can use either the expiring or non-expiring credentials to connect with external clients, such as Aqua Data Studio, Looker, or Power BI. The method of input for these credentials will vary depending on the external client. Refer to the external client's documentation for specific instructions on the use of these credentials.
 
