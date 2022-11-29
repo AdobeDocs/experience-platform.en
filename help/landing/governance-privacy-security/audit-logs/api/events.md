@@ -1,11 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics
-solution: Experience Platform
 title: Audit events API Endpoint
-topic-legacy: developer guide
 description: Learn how to retrieve audit events in Experience Platform using the Audit Query API.
 ---
-# Audit events endpoints
+# Audit events endpoint
 
 Audit events provide insights into the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type for various features in Adobe Experience Platform. The `/audit/events` endpoint in the [!DNL Audit Query] API allows you to programmatically retrieve event data for your organization's activity in [!DNL Platform].
 
@@ -23,9 +20,13 @@ You can retrieve events data by making a GET request to the `/audit/events` endp
 GET /audit/events
 ```
 
+The [[!DNL Audit Query] API](https://developer.adobe.com/experience-platform-apis/references/audit-query) supports the use of query parameters to page and filter results when listing events.
+
 | Parameter | Description |
-| --------- | ----------- |
-| `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the section on [query parameters](./appendix.md#query) for more information. |
+| --- | --- |
+| `limit` | The maximum number of records to be returned in the response. The default `limit` is 50. |
+| `start` | A pointer to the first item for the returned search results. To access the next page of results, this parameter should increment by the same amount indicated by limit. Example: To access the next page of results for a request with limit=50, use the parameter start=50, then start=100 for the page after that, and so on. |
+| `queryId` | When making a query to the /audit/events endpoint, the response includes a queryId string property. To make the same query in a separate call, you can include the Id value as a single query parameter instead of manually configuring the search parameters again. |
 
 **Request**
 
@@ -109,7 +110,7 @@ A successful response returns the resulting datapoints for the metrics and filte
          "status": "Allow",
          "failureCode": "",
          "timestamp": "2021-08-04T20:58:07.750+0000"
-       {
+       }
      ]    
    },
    "_links": {

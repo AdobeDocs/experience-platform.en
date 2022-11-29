@@ -1,19 +1,16 @@
 ---
-keywords: Experience Platform;home;popular topics;date range
-solution: Experience Platform
 title: Getting Started with the Audit Query API
-topic-legacy: developer guide
 description: The Audit Query API allows you to retrieve metric data for various Adobe Experience Platform features. This document provides an introduction to the core concepts you need to know before attempting to make calls to the Audit Query API.
 ---
 # Getting started with the Audit Query API
 
 Adobe Experience Platform allows you to audit user activity for various services and capabilities in the form of audit events logs. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type.
 
-This developer guide provides steps to help you use the Audit Query API to manage audit queries in Experience Platform, and includes sample API calls for performing various operations.
+This developer guide provides steps to help you use the Audit Query API to manage audit events in Experience Platform, and includes sample API calls for performing various operations.
 
 ## Prerequisites
 
-In order to manage audit queries, you must have the **[!UICONTROL View User Activity Log]** access control permission granted (found under the [!UICONTROL Data Governance] category). To learn how to manage individual permissions for Platform features, please refer to the [access control documentation](../../../../access-control/home.md).
+In order to manage audit events, you must have the **[!UICONTROL View User Activity Log]** access control permission granted (found under the [!UICONTROL Data Governance] category). To learn how to manage individual permissions for Platform features, please refer to the [access control documentation](../../../../access-control/home.md).
 
 ### Reading sample API calls
 
