@@ -34,4 +34,4 @@ All requests that contain a payload (POST, PUT, and PATCH) require an additional
 
 ## Next steps
 
-To begin making calls using the [!DNL Audit Query] API, proceed to the [events endpoint guide](./events.md).
+To begin making calls using the [!DNL Audit Query] API, please refer to the [events endpoint guide](./events.md) and the [export endpoint guide](./export.md).

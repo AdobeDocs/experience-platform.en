@@ -20,7 +20,7 @@ You can retrieve events data by making a GET request to the `/audit/events` endp
 GET /audit/events
 ```
 
-The [[!DNL Audit Query] API](https://developer.adobe.com/experience-platform-apis/references/audit-query) supports the use of query parameters to page and filter results when listing events.
+The [!DNL Audit Query] API] supports the use of query parameters to page and filter results when listing events.
 
 | Parameter | Description |
 | --- | --- |
@@ -32,7 +32,7 @@ The [[!DNL Audit Query] API](https://developer.adobe.com/experience-platform-api
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/audit/events
+  https://platform.adobe.io/data/foundation/audit/events?limit=10
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -141,12 +141,12 @@ A successful response returns the resulting datapoints for the metrics and filte
 | `userEmail` | The email of the user who performed the event. |
 | `eventType` | The type of event. The types of events include `Core` and `Enhanced`.|
 | `imsOrgId` | The ID of the organization that the event took place under. |
-| `permissionResource` | The product or capability that provided the permission perform the action. A resource can be any of the following: <br/><ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
+| `permissionResource` | The product or capability that provided the permission perform the action. A resource can be any of the following: <ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
 | `permissionType` | The permission type involved with the action. |
 | `assetType` | The type of Platform resource that the action was performed on. |
 | `assetId` | A unique identifier for the Platform resource that the action was performed on. |
 | `assetName` | The name of the Platform resource that the action was performed on. |
-| `action` | The type of action that was recorded for the event. An action can be any of the following: <br/><ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
-| `status` | The status of the action. A status can be any of the following: <br/></li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
+| `action` | The type of action that was recorded for the event. An action can be any of the following: <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
+| `status` | The status of the action. A status can be any of the following: </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
 
 {style="table-layout:auto"}
