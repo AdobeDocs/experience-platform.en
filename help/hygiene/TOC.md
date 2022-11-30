@@ -13,7 +13,7 @@ feature: Data Hygiene
   * [Overview](./ui/overview.md)
   * [Browse existing work orders](./ui/browse.md)
   * [Manage dataset expirations](./ui/dataset-expiration.md)
-  * [Delete records](./ui/delete-consumer.md)
+  * [Delete records](./ui/record-delete.md)
 * Data Hygiene API {#api}
   * [Overview](./api/overview.md)
   * [Dataset expirations](./api/dataset-expiration.md)

@@ -81,11 +81,11 @@ Select the ID of a listed work order to view its details.
 
 Depending on the type of work order selected, different information and controls are provided. These are covered in the sections below.
 
-### Record delete details {#consumer-delete}
+### Record delete details {#record-delete}
 
 The details of a record delete request include its current status and the time elapsed since the request was made. Each request also includes a **[!UICONTROL Status by service]** section which provides individual status details on each downstream service involved in the deletion. On the right rail, you can use controls to update the name and description of the work order.
 
-![Image showing the details page for a record delete work order](../images/ui/browse/consumer-delete-details.png)
+![Image showing the details page for a record delete work order](../images/ui/browse/record-delete-details.png)
 
 ### Dataset expiration details {#dataset-expiration}
 
@@ -98,4 +98,4 @@ The details page for a dataset expiration provides information on its basic attr
 This guide covered how to view and manage existing data hygiene work orders in the Platform UI. For information on creating your own work orders, refer to the following documentation:
 
 * [Manage dataset expirations](./dataset-expiration.md)
-* [Manage record deletes](./delete-consumer.md)
+* [Manage record deletes](./record-delete.md)

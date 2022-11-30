@@ -57,7 +57,7 @@ The following takes place when a [dataset expiration request](./ui/dataset-expir
 >
 >Record deletes are only available for organizations that have purchased Adobe Healthcare Shield.
 
-The following takes place when a [record delete request](./ui/delete-consumer.md) is created:
+The following takes place when a [record delete request](./ui/record-delete.md) is created:
 
 | Stage | Time after request submission | Description |
 | --- | --- | --- |
