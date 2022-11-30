@@ -166,19 +166,19 @@ The following examples demonstrate the use of a simple formula which helps you d
 
 - Version 1: 
 
-    *  To decide the minimum length of data required: 
+    -  To decide the minimum length of data required: 
 
-    * The minimum data required to create features is 30 days. Compare the eligibility lookback window* with 30 days: 
+    - The minimum data required to create features is 30 days. Compare the eligibility lookback window* with 30 days: 
 
-    * If the eligibility lookback window is greater than 30 days, the data requirement = eligibility lookback window + outcome window 
+    - If the eligibility lookback window is greater than 30 days, the data requirement = eligibility lookback window + outcome window 
 
-    * Otherwise, the data requirement = 30 days + outcome window 
+    - Otherwise, the data requirement = 30 days + outcome window 
 
-    * If there is more than one condition for defining the eligible population, the eligibility lookback window is the longest one 
+    - If there is more than one condition for defining the eligible population, the eligibility lookback window is the longest one 
 
 - Version 2: 
 
-    * Minimum length of data required = Max (Any date length used for the definition of eligible population, 30 days) + outcome window 
+    - Minimum length of data required = Max (Any date length used for the definition of eligible population, 30 days) + outcome window 
 
 >[!NOTE] 
 >
@@ -188,29 +188,29 @@ The following examples demonstrate the use of a simple formula which helps you d
 
 * You want to predict whether a customer is likely to purchase a watch in the next 30 days for those who have some web activity in the last 60 days. 
 
-    * Eligibility lookback window = 60 days 
+    - Eligibility lookback window = 60 days 
 
-    * Outcome window = 30 days 
+    - Outcome window = 30 days 
 
-    * Data required = 60 days + 30 days = 90 days 
+    - Data required = 60 days + 30 days = 90 days 
 
 - You want to predict whether the user is likely to purchase a watch in the next 7 days without providing an explicit eligible population. In this case, the eligible population defaults to “those who have had activity in the last 45 days” and the outcome window is 7 days.  
 
-    * Eligibility lookback window = 45 days 
+    - Eligibility lookback window = 45 days 
 
-    * Outcome window = 7 days 
+    - Outcome window = 7 days 
 
-    * Data required = 45 days + 7 days = 52 days 
+    - Data required = 45 days + 7 days = 52 days 
 
 - You want to predict whether the customer is likely to purchase a watch in the next 7 days for those who have some web activity in the last 7 days.  
 
-    * Eligibility lookback window = 7 days 
+    - Eligibility lookback window = 7 days 
 
-    * Minimum data required to create features = 30 days 
+    - Minimum data required to create features = 30 days 
 
-    * Outcome window = 7 days 
+    - Outcome window = 7 days 
 
-    * Data required = 30 days + 7 days = 37 days 
+    - Data required = 30 days + 7 days = 37 days 
 
 Apart from the minimum data required, Customer AI also works best with recent data. In this use case, Customer AI is doing a prediction for the future based on a user’s recent behavioral data. In other words, more recent data is likely to yield a more accurate prediction. 
 
