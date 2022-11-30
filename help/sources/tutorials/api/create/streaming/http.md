@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;streaming connection;create streaming connection;api guide;tutorial;create a streaming connection;streaming ingestion;ingestion;
-title: Create an HTTP API Streaming Connection Using the API
-description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
+title: Create an HTTP API Streaming Connection Using The Flow Service API
+description: This tutorial provides steps on how to create a streaming connection using the HTTP API source for both raw and XDM data using the Flow Service API
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 ---
 
@@ -253,10 +253,10 @@ A successful response returns HTTP status 200 with detailed information about th
       "createdBy": "acme@AdobeID",
       "updatedBy": "acme@AdobeID",
       "createdClient": "{CREATED_CLIENT}",
-      "updatedClient": "{UPDATEDD_CLIENT}",
+      "updatedClient": "{UPDATED_CLIENT}",
       "sandboxId": "{SANDBOX_ID}",
       "sandboxName": "{SANDBOX_NAME}",
-      "imsOrgId": "{ORG_ID}}",
+      "imsOrgId": "{ORG_ID}",
       "name": "ACME Streaming Connection XDM Data",
       "description": "ACME streaming connection for customer data",
       "connectionSpec": {
