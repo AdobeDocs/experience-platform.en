@@ -75,10 +75,10 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 The namespace model is comprised of the following datasets: 
 
-- `adwh_fact_profile_by_namespace`
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_fact_profile_by_namespace`
 - `adwh_dim_merge_policies`
+- `adwh_dim_namespaces`
 
 The image below contains the relevant data fields in each dataset.
 
@@ -143,9 +143,9 @@ GROUP BY
 The segment model is comprised of the following datasets: 
 
 - `adwh_dim_date`
+- `adwh_fact_profile_by_segment`
 - `adwh_dim_merge_policies`
 - `adwh_dim_segments`
-- `adwh_fact_profile_by_segment`
 - `adwh_dim_br_segment_destinations`
 - `adwh_dim_destination`
 - `adwh_dim_destination_platform` 
@@ -254,9 +254,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 The namespace-segment model is comprised of the following datasets:
 
 - `adwh_dim_date`
-- `adwh_dim_merge_policies`
 - `adwh_dim_namespaces`
 - `adwh_fact_profile_by_segment_and_namespace`
+- `adwh_dim_merge_policies`
 - `adwh_dim_segments`
 - `adwh_dim_br_segment_destinations`
 - `adwh_dim_destination`
@@ -294,7 +294,7 @@ GROUP BY adwh_dim_namespaces.namespace_description;
 The overlap namespace model is comprised of the following datasets: 
 
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_dim_overlap_namespaces`
 - `adwh_fact_profile_overlap_of_namespace`
 - `adwh_dim_merge_policies`
 
@@ -358,7 +358,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 The overlap namespace by segment model is comprised of the following datasets: 
 
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_dim_overlap_namespaces`
 - `adwh_fact_profile_overlap_of_namespace_by_segment`
 - `adwh_dim_merge_policies`
 - `adwh_dim_segments`
