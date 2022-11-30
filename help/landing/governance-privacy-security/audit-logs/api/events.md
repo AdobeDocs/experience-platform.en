@@ -20,7 +20,7 @@ You can retrieve events data by making a GET request to the `/audit/events` endp
 GET /audit/events
 ```
 
-The [!DNL Audit Query] API] supports the use of query parameters to page and filter results when listing events.
+The [!DNL Audit Query] API supports the use of query parameters to page and filter results when listing events.
 
 | Parameter | Description |
 | --- | --- |
