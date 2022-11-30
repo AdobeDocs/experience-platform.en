@@ -1,6 +1,6 @@
 ---
 title: Work order API Endpoint
-description: The /workorder endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for consumer identities.
+description: The /workorder endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for  identities.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 ---
 # Work order endpoint
@@ -18,9 +18,9 @@ The `/workorder` endpoint in the Data Hygiene API allows you to programmatically
 
 The endpoint used in this guide is part of the Data Hygiene API. Before continuing, please review the [overview](./overview.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-## Create a record delete request {#delete-consumers}
+## Create a record delete request {#create}
 
-You can delete one or more consumer identities from a single dataset or all datasets by making a POST request to the `/workorder` endpoint.
+You can delete one or more identities from a single dataset or all datasets by making a POST request to the `/workorder` endpoint.
 
 **API format**
 
@@ -30,7 +30,7 @@ POST /workorder
 
 **Request**
 
-Depending on the value of the `datasetId` provided in the request payload, the API call will delete consumer identities from all datasets or a single dataset that you specify. The following request deletes three consumer identities from a specific dataset.
+Depending on the value of the `datasetId` provided in the request payload, the API call will delete identities from all datasets or a single dataset that you specify. The following request deletes three identities from a specific dataset.
 
 ```shell
 curl -X POST \
@@ -43,7 +43,7 @@ curl -X POST \
   -d '{
         "action": "delete_identity",
         "datasetId": "c48b51623ec641a2949d339bad69cb15",
-        "displayName": "Example Consumer Delete Request",
+        "displayName": "Example Record Delete Request",
         "description": "Cleanup identities required by Jira request 12345.",
         "identities": [
           {
@@ -93,7 +93,7 @@ A successful response returns the details of the record delete.
   "status": "received",
   "createdBy": "{USER_ID}",
   "datasetId": "c48b51623ec641a2949d339bad69cb15",
-  "displayName": "Example Consumer Delete Request",
+  "displayName": "Example Record Delete Request",
   "description": "Cleanup identities required by Jira request 12345."
 }
 ```
@@ -114,7 +114,7 @@ A successful response returns the details of the record delete.
 
 ## Retrieve the status of a record delete (#lookup)
 
-After [creating a record delete request](#delete-consumers), you can check on its status using a GET request.
+After [creating a record delete request](#create), you can check on its status using a GET request.
 
 **API format**
 
@@ -154,7 +154,7 @@ A successful response returns the details of the delete operation, including its
   "status": "received",
   "createdBy": "{USER_ID}",
   "datasetId": "c48b51623ec641a2949d339bad69cb15",
-  "displayName": "Example Consumer Delete Request",
+  "displayName": "Example Record Delete Request",
   "description": "Cleanup identities required by Jira request 12345.",
   "productStatusDetails": [
     {

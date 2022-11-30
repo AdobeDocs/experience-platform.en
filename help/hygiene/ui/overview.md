@@ -15,7 +15,7 @@ exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 >title="Recent Data Hygiene Work Orders"
 >abstract="This widget shows the five most recently created or updated Data Hygiene work orders, depending on the option you select on the top right. For more information on your Data Hygiene processes, select **Data Hygiene** in the left navigation."
 
-The **[!UICONTROL Data Hygiene]** workspace in the Adobe Experience Platform UI allows you to create and monitor various data hygiene tasks, including deleting consumer identities and scheduling dataset expirations.
+The **[!UICONTROL Data Hygiene]** workspace in the Adobe Experience Platform UI allows you to create and monitor various data hygiene tasks, including deleting records and scheduling dataset expirations.
 
 This guide covers how to manage data hygiene tasks in the Platform UI. For information on how to perform these tasks using API calls, see the [Data Hygiene API guide](../api/overview.md).
 

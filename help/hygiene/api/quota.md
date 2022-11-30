@@ -37,7 +37,7 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | Parameter | Description |
 | --- | --- |
-| `{QUOTA_TYPE}` | An optional query parameter that specifies the type of quota to retrieve. If no `quotaType` parameter is provided, all quota values are returned in the API response. Accepted type values include:<ul><li>`expirationDatasetQuota`: Dataset expirations</li><li>`deleteIdentityWorkOrderDatasetQuota`: Consumer deletions</li><li>`fieldUpdateWorkOrderDatasetQuota`: Field updates</li></ul> |
+| `{QUOTA_TYPE}` | An optional query parameter that specifies the type of quota to retrieve. If no `quotaType` parameter is provided, all quota values are returned in the API response. Accepted type values include:<ul><li>`expirationDatasetQuota`: Dataset expirations</li><li>`deleteIdentityWorkOrderDatasetQuota`: Record deletes</li><li>`fieldUpdateWorkOrderDatasetQuota`: Field updates</li></ul> |
 
 **Request**
 
@@ -75,6 +75,6 @@ A successful response returns the details of your data hygiene quotas.
 
 | Property | Description |
 | --- | --- |
-| `quotas` | Lists the quota information for each data hygiene job type. Each quota object contains the following properties:<ul><li>`name`: The data hygiene job type:<ul><li>`expirationDatasetQuota`: Dataset expirations</li><li>`deleteIdentityWorkOrderDatasetQuota`: Consumer deletions</li></ul></li><li>`description`: A description of the data hygiene job type.</li><li>`consumed`: The number of jobs of this type run in the current monthly period.</li><li>`quota`: The quota limit for this job type. For record deletes and field updates, this represents the number of jobs that can be run for each monthly period. For dataset expirations, this represents the number of jobs that can be concurrently active at any given time.</li></ul> |
+| `quotas` | Lists the quota information for each data hygiene job type. Each quota object contains the following properties:<ul><li>`name`: The data hygiene job type:<ul><li>`expirationDatasetQuota`: Dataset expirations</li><li>`deleteIdentityWorkOrderDatasetQuota`: Record deletes</li></ul></li><li>`description`: A description of the data hygiene job type.</li><li>`consumed`: The number of jobs of this type run in the current monthly period.</li><li>`quota`: The quota limit for this job type. For record deletes and field updates, this represents the number of jobs that can be run for each monthly period. For dataset expirations, this represents the number of jobs that can be concurrently active at any given time.</li></ul> |
 
 {style="table-layout:auto"}
