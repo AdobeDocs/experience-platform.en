@@ -49,6 +49,16 @@ From the widget library, you can browse the selection of standard and custom seg
 
 Adobe provides multiple standard widgets that you can use to visualize different metrics related to your destinations and assess the completeness of the segments available for your data analysis. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [Widget library overview](../customize/widget-library.md).
 
+### Prerequisites {#prerequisites}
+
+Before continuing with the descriptions of standard widgets, please ensure that you are familiar with the definitions of the following key terms used throughout the documentation:
+
+* **Segment:** A segment is **the set of rules** that include attributes and event data which qualify a number of profiles as an audience.
+* **Audience**: An audience is **the set of profiles** that meet the criteria of a segment definition
+* **Mapped / Mapping**: Data mapping is the process of mapping source data fields to related target fields in a destination.
+* **Identity**: An identity is an identifier that uniquely represents an individual customer, such as a cookie ID, device ID, or email ID.
+* **Activate**: Activate is the action taken by a user to map a segment or profiles to a destination such as Oracle Eloqua, Google, or Salesforce Marketing Cloud.
+
 To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
 * [[!UICONTROL Most used destinations]](#most-used-destinations)
@@ -133,6 +143,8 @@ You can view a segment's details by selecting the name of a segment from the lis
 
 ![The Recently activated segments by destination widget.](../images/destinations/recently-activated-segments-by-destination.png)
 
+Please see the prerequisites section for the [definitions of terms used](#prerequisites) in this description.
+
 ### [!UICONTROL Audience size trend] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
@@ -166,6 +178,8 @@ The destination ID dropdown filters your available segments. The filter IDs list
 The identities column counts the number of source IDs within the segment that could map to the ID chosen in the widget ID dropdown. 
 
 ![The Unmapped segments by identity widget.](../images/destinations/unmapped-segments-by-identity.png)
+
+Please see the prerequisites section for the [definitions of terms used](#prerequisites) in this description.
 
 ### [!UICONTROL Mapped segments by identity] {#mapped-segments-by-identity}
 
@@ -253,11 +267,13 @@ The widget provides a two column table to show a list of active destination plat
 
 ### [!UICONTROL Activated audiences across all destinations] {#activated-audiences-across-all-destinations}
 
-The [!UICONTROL Activated audiences across all destinations] widget provides the total number of audiences activated across all destinations in a single metric. This number is accurate to the most recent snapshot. 
+The [!UICONTROL Activated audiences across all destinations] widget provides the total number of audiences activated across all destinations in a single metric. This widget shows the count of audiences and not the count of segments. This number is accurate to the most recent snapshot. 
 
 ![The Activated audiences across all destinations widget.](../images/destinations/activated-audiences-across-all-destinations.png)
 
 Select **[!UICONTROL Audiences]** to navigate to the destinations [!UICONTROL Browse] tab. This page provides a list of all enabled destinations and a variety of relevant metrics. See the documentation for [more information on the [!UICONTROL Browse] tab](../../destinations/ui/destinations-workspace.md#browse).
+
+Please see the prerequisites section for the [definitions of terms used](#prerequisites) in this description.
 
 ### [!UICONTROL Activated audiences] {#activated-audiences}
 
@@ -270,6 +286,8 @@ Select **[!UICONTROL Audiences]** to navigate to the details page of the destina
 ![The destinations dashboard details page with Activation data tab highlighted.](../images/destinations/activation-data-tab.png)
 
 This widget helps you to understand the value of your destinations based on the number of audiences activated at a glance. It also provides easy access to more detailed information for further analysis.
+
+Please see the prerequisites section for the [definitions of terms used](#prerequisites) in this description.
 
 ## Next steps
 
