@@ -143,8 +143,7 @@ User-defined events are helpful for:
 
 | Industry | User-defined events |
 | --- | --- |
-| Retail | In-store transaction <br> Sign up for club card <br>
-Clip mobile coupon. |
+| Retail | In-store transaction<br>Sign up for club card<br>Clip mobile coupon. |
 | Entertainment | Purchase season membership <br> Stream video.|
 | Hospitality | Make restaurant reservation <br> Purchase loyalty points. | 
 | Travel | Add known traveler info Purchase miles. | 
@@ -186,7 +185,7 @@ The following examples demonstrate the use of a simple formula which helps you d
 
 * Examples: 
 
-* You want to predict whether a customer is likely to purchase a watch in the next 30 days for those who have some web activity in the last 60 days. 
+- You want to predict whether a customer is likely to purchase a watch in the next 30 days for those who have some web activity in the last 60 days. 
 
     - Eligibility lookback window = 60 days 
 
