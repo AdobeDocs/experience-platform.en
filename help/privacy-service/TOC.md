@@ -9,6 +9,7 @@ feature: Privacy
 # Adobe Experience Platform Privacy Service {#privacy}
 
 * [Privacy Service overview](./home.md)
+* [Manage permissions for Privacy Service](./permissions.md)
 * [Privacy Service and Experience Cloud applications](./experience-cloud-apps.md)
 * [Identity data for privacy requests](./identity-data.md)
 * [Privacy JS Library overview](./js-library.md)
