@@ -13,8 +13,8 @@ Adobe Experience Platform Query Service allows you to connect with external clie
 ## Expiring credentials {#expiring-credentials}
 
 >[!CONTEXTUALHELP]
->id="platform_queryservice_expiringcredentials"
->title="Client's SSL mode?"
+>id="platform_queryservice_credentials_expiringcredentials"
+>title="Client's SSL mode"
 >abstract="SSL must be enabled in clients connected to Query Service. Ensure the SSL mode is set to 'require'."
 
 You can use expiring credentials to quickly set up a connection to an external client.
