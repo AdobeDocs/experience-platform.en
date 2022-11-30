@@ -7,7 +7,7 @@ exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 
 # Create an HTTP API streaming connection using the [!DNL Flow Service] API
 
-Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+Flow Service is used to collect and centralize customer data from different sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
 This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) to walk you through the steps to create a streaming connection using the [!DNL Flow Service] API.
 
@@ -100,7 +100,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | Property | Description |
 | --- | --- |
-| `name` | The name of your base connection. Ensure that the name of your base connection is descriptive as you can use this to look up information on your base connection. |
+| `name` | The name of your base connection. Ensure that the name is descriptive as you can use this to look up information on your base connection. |
 | `description` | (Optional) A property that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID that corresponds with HTTP API. This ID is `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.  |
 | `auth.params.dataType` | The data type for the streaming connection. Supported values include: `xdm` and `raw`. |
