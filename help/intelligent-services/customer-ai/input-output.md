@@ -30,10 +30,10 @@ Here are example configurations for your first model.  In this model, we will bu
 
 | Step | Define | Example |
 | ---- | ------ | ------- |
-| Set Up | Specify basic information about the model | Name: Give_your_model_a_name <br> Model Type: Conversion 
-| Select Data |Specify datasets used to build the model | Dataset: Select your Adobe Analytics dataset <br> Identity: Ensure the identity column for each dataset is set to be a common identity.
+| Set Up | Specify basic information about the model | Name: Give_your_model_a_name <br> Model Type: Conversion |
+| Select Data |Specify datasets used to build the model | Dataset: Select your Adobe Analytics dataset <br> Identity: Ensure the identity column for each dataset is set to be a common identity.|
 | Define Goal | Define goal, eligible population, custom events, and profile attributes. | Prediction Goal: Select commerce.purchases.value exists <br> Outcome window: 30 days. |
-| Set Options | Setup schedule for model refresh and enable scores for Profile | Schedule: Weekly 
+| Set Options | Setup schedule for model refresh and enable scores for Profile | Schedule: Weekly |
 
 Enable for profile: This must be enabled for model output to be used in segmentation.  
 
@@ -129,17 +129,17 @@ User-defined events are helpful for:
 
 4. Choosing user-defined events to include: 
 
-- The best candidates for user-defined events are user behaviors that may be predictive of the outcome.  
+    - The best candidates for user-defined events are user behaviors that may be predictive of the outcome.  
 
-Some general examples of custom events include: 
+5. Some general examples of custom events include: 
 
-- Register for account 
+    - Register for account 
 
-- Subscribe to newsletter 
+    - Subscribe to newsletter 
 
-- Make a call to customer service 
+    - Make a call to customer service 
 
-5. Industry specific user-defined event examples: 
+6. Industry specific user-defined event examples: 
 
 | Industry | User-defined events |
 | --- | --- |
@@ -150,7 +150,7 @@ Clip mobile coupon. |
 | Travel | Add known traveler info Purchase miles. | 
 | Communications | Upgrade/downgrade/cancel plan. | 
 
-6. Requirements for choosing user-defined events: 
+7. Requirements for choosing user-defined events: 
 
 User-defined events must represent user-initiated actions. For example, "Email Send" is an action initiated by a marketer and not by the user, so it shouldn't be used as a user-defined event.  
 
