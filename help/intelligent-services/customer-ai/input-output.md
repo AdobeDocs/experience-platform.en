@@ -141,13 +141,13 @@ User-defined events are helpful for:
 
 6. Industry specific user-defined event examples: 
 
-| Industry | User-defined events |
-| --- | --- |
-| Retail | In-store transaction<br>Sign up for club card<br>Clip mobile coupon. |
-| Entertainment | Purchase season membership <br> Stream video.|
-| Hospitality | Make restaurant reservation <br> Purchase loyalty points. | 
-| Travel | Add known traveler info Purchase miles. | 
-| Communications | Upgrade/downgrade/cancel plan. | 
+    | Industry | User-defined events |
+    | --- | --- |
+    | Retail | In-store transaction<br>Sign up for club card<br>Clip mobile coupon. |
+    | Entertainment | Purchase season membership <br> Stream video.|
+    | Hospitality | Make restaurant reservation <br> Purchase loyalty points. | 
+    | Travel | Add known traveler info Purchase miles. | 
+    | Communications | Upgrade/downgrade/cancel plan. | 
 
 7. Requirements for choosing user-defined events: 
 
@@ -183,7 +183,7 @@ The following examples demonstrate the use of a simple formula which helps you d
 >
 >30 is the minimum number of days required for eligible population. If this is not provided the default is 120 days. 
 
-* Examples: 
+- Examples: 
 
 - You want to predict whether a customer is likely to purchase a watch in the next 30 days for those who have some web activity in the last 60 days. 
 
