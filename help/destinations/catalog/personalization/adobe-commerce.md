@@ -1,6 +1,7 @@
 ---
 title: (Beta) Adobe Commerce Destination Connector
 description: Learn how Adobe Commerce and Real-Time CDP merchants can personalize the shopping experience by delivering highly relevant site content and promotions, customized to customer segments built and managed within Real-Time CDP.
+exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
 ---
 # (Beta) Adobe Commerce connection {#adobe-commerce}
 
@@ -36,7 +37,7 @@ Beta customers should have access to:
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
 - [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)
-- [Adobe Commerce Cloud version 2.4.3 or higher](https://business.adobe.com/products/magento/magento-commerce.html)
+- [Adobe Commerce Cloud version 2.4.4 or higher](https://business.adobe.com/products/magento/magento-commerce.html)
 
 In Experience Platform, create the following:
 

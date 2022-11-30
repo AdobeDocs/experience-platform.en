@@ -58,7 +58,11 @@ To minimize your development time, it is recommended that you develop your queri
 
 ![The Query Editor input displaying drop down table name suggestions.](../images/ui/query-editor/tables-auto.png)
 
-### Auto-complete UI configurational toggle {#auto-complete}
+### (Limited release) Auto-complete UI configurational toggle {#auto-complete}
+
+>[!IMPORTANT]
+>
+>The auto-complete UI configurational toggle is currently in a limited release and not available to all customers.
 
 The [!DNL Query Editor] automatically suggests potential SQL keywords along with table or column details for the query as you write it. The auto-complete feature is enabled by default and can be disabled or enabled at any point by selecting the [!UICONTROL Syntax auto-complete] toggle to the top right of the Query Editor.
 

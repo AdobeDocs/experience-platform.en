@@ -1,12 +1,21 @@
 ---
 title: Customer-Managed Keys in Adobe Experience Platform
 description: Learn how to set up your own encryption keys for data stored in Adobe Experience Platform.
+exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
 ---
 # Customer-managed keys in Adobe Experience Platform
 
 Data stored on Adobe Experience Platform is encrypted at rest using system-level keys. If you are using an application built on top of Platform, you can opt to use your own encryption keys instead, giving you greater control over your data security.
 
 This document covers the process for enabling the customer-managed keys (CMK) feature in Platform.
+
+## Prerequisites
+
+In order to enable CMK, your [!DNL Azure] Key Vault must be configured with the following settings:
+
+* [Enable purge protection](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+* [Enable soft-delete](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [Configure access using [!DNL Azure] role-based access control](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 
 ## Process summary
 
@@ -18,7 +27,7 @@ CMK is included in the Healthcare Shield and the Privacy and Security Shield off
 
 The process is as follows:
 
-1. [Configure an [!DNL Microsoft Azure] Key Vault](#create-key-vault) based on your organization's policies, then [generate an encryption key](#generate-a-key) that will ultimately be shared with Adobe.
+1. [Configure an [!DNL Azure] Key Vault](#create-key-vault) based on your organization's policies, then [generate an encryption key](#generate-a-key) that will ultimately be shared with Adobe.
 1. Use API calls to [set up the CMK app](#register-app) with your [!DNL Azure] tenant. 
 1. Use API calls to [send your encryption key ID to Adobe](#send-to-adobe) and start the enablement process for the feature.
 1. [Check the status of the configuration](#check-status) to verify whether CMK has been enabled.
@@ -91,11 +100,13 @@ The configured key appears in the list of keys for the vault.
 
 Once you have your key vault configured, the next step is to register for the CMK application that will link to your [!DNL Azure] tenant.
 
->[!NOTE]
->
->Registering the CMK app requires you to make calls to Platform APIs. For details on how to gather the required authentication headers to make these calls, see the [Platform API authentication guide](../../landing/api-authentication.md).
->
->While the authentication guide provides instructions on how to generate your own unique value for the required `x-api-key` request header, all API operations in this guide use the static value `acp_provisioning` instead. You must still provide your own values for `{ACCESS_TOKEN}` and `{ORG_ID}`, however.
+### Getting started
+
+Registering the CMK app requires you to make calls to Platform APIs. For details on how to gather the required authentication headers to make these calls, see the [Platform API authentication guide](../../landing/api-authentication.md).
+
+While the authentication guide provides instructions on how to generate your own unique value for the required `x-api-key` request header, all API operations in this guide use the static value `acp_provisioning` instead. You must still provide your own values for `{ACCESS_TOKEN}` and `{ORG_ID}`, however.
+
+In all API calls shown in this guide, `platform.adobe.io` is used as the root path, which defaults to the VA7 region. If your organization uses a different region, `platform` must be followed by a dash and the region code assigned to your organization: `nld2` for NLD2 or `aus5` for AUS5 (for example: `platform-aus5.adobe.io`). If you do not know your organization's region, please contact your system administrator.
 
 ### Fetch an authentication URL
 
@@ -177,7 +188,7 @@ curl -X POST \
         "imsOrgId": "{ORG_ID}",
         "configData": {
           "providerType": "AZURE_KEYVAULT",
-          "keyVaultIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4"
+          "keyVaultKeyIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4"
         }
       }'
 ```
@@ -187,7 +198,7 @@ curl -X POST \
 | `name` | A name for the configuration. Ensure that you remember this value as it will be required to check the configuration's status at a [later step](#check-status). The value is case-sensitive. |
 | `type` | The configuration type. Must be set to `BYOK_CONFIG`. |
 | `imsOrgId` | Your IMS Organization ID. This must be the same value as provided under the `x-gw-ims-org-id` header. |
-| `configData` | Contains the following details about the configuration:<ul><li>`providerType`: Must be set to `AZURE_KEYVAULT`.</li><li>`keyVaultIdentifier`: The key vault URI that you copied [earlier](#send-to-adobe).</li></ul> |
+| `configData` | Contains the following details about the configuration:<ul><li>`providerType`: Must be set to `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier`: The key vault URI that you copied [earlier](#send-to-adobe).</li></ul> |
 
 **Response**
 

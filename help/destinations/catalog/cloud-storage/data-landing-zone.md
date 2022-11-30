@@ -1,6 +1,7 @@
 ---
 title: Data Landing Zone destination
-description: Learn how to connect to Data Landing Zone to activate segments and export datasets. 
+description: Learn how to connect to Data Landing Zone to activate segments and export datasets.
+exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
 ---
 # (Beta) Data Landing Zone destination
 

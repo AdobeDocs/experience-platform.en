@@ -1,6 +1,7 @@
 ---
 title: (Beta) Azure Data Lake Storage Gen2 connection
 description: Learn how to connect to Azure Data Lake Storage Gen2 to activate segments and export datasets.
+exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
 ---
 # (Beta) [!DNL Azure Data Lake Storage Gen2] connection
 
@@ -41,9 +42,9 @@ To authenticate to the destination, fill in the required fields and select **[!U
 * **[!UICONTROL Tenant]**: The tenant information that contains your application.
 * **[!UICONTROL Service principal ID]**: The application's client ID.
 * **[!UICONTROL Service principal key]**: The application's key.
-* **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64-encoded] string. View an example of a correctly formatted, base64-encoded key in the documentation link below. The middle part is shortened for brevity.
+* **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
-    ![Image showing an example of a correctly formatted and base64-encrypted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+    ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Fill in destination details {#destination-details}
 
