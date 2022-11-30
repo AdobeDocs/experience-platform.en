@@ -8,9 +8,13 @@ description: Learn more about the required events, inputs, and outputs utilized 
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 ---
 
-# Quick start to using Customer AI (Bonnie) 
+# Input and output in Customer AI 
 
-Here are the steps to build propensity models and identify target audiences for personalized marketing: 
+The following document outlines the different required events, inputs, and outputs utilized in Customer AI. 
+
+## Getting started
+
+Here are the steps to build propensity models and identify target audiences for personalized marketing in Customer AI: 
 
 1. Brainstorm use cases – How would propensity models help to identify target audiences for personalized marketing? What are my business goals and corresponding tactics to achieve the goal? Where can propensity modeling fit? 
 
@@ -28,12 +32,7 @@ Here are example configurations for your first model.  In this model, we will bu
 | ---- | ------ | ------- |
 | Set Up | Specify basic information about the model | Name: Give_your_model_a_name <br> Model Type: Conversion 
 | Select Data |Specify datasets used to build the model | Dataset: Select your Adobe Analytics dataset <br> Identity: Ensure the identity column for each dataset is set to be a common identity.
-| Define Goal | Define goal, eligible population, custom events, and profile attributes
-
-Prediction Goal: Select commerce.purchases.value exists 
-
-Outcome window: 30 days 
-
+| Define Goal | Define goal, eligible population, custom events, and profile attributes. | Prediction Goal: Select commerce.purchases.value exists <br> Outcome window: 30 days. |
 | Set Options | Setup schedule for model refresh and enable scores for Profile | Schedule: Weekly 
 
 Enable for profile: This must be enabled for model output to be used in segmentation.  
