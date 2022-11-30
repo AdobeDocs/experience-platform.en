@@ -20,6 +20,29 @@ The [!DNL Query Editor] enables you to write and execute queries without using a
 
 ![A zoomed in view of the [!DNL Query Editor].](../images/ui/overview/query-editor.png)
 
+## Scheduled queries {#scheduled-queries}
+
+Queries that have already been saved as a template can be scheduled to run on a regular cadence. When scheduling a query, you can choose the frequency of runs, the start and end date, the day of the week the scheduled query runs, as well as the dataset to export the query to. Query schedules are set using Query Editor. 
+
+To learn how to schedule a query through the UI, see the [scheduled queries guide](./user-guide.md#scheduled-queries). To learn how to add schedules using the API, please read the [scheduled queries endpoint guide](../api/scheduled-queries.md).
+
+Once a query has been scheduled it appears in the list of scheduled queries on the [!UICONTROL Scheduled Queries] tab. Full details regarding the query, runs, creator, and timings can be found by selecting a scheduled query from the list.
+
+![The Queries workspace with the Scheduled Queries tab highlighted and displaying rows of query schedules.](../images/ui/overview/scheduled-queries.png)
+
+| Column | Description |
+| --- | --- |
+| **[!UICONTROL Name]** | The name field is either the template name or the first few characters of your SQL query. Any query created through the UI with the Query Editor is named at inception. If the query was created through the API then the name of the query is a snippet of the initial SQL used to create the query. |
+| **[!UICONTROL Template]** | The template name of the query. Select a template name to navigate to the Query Editor. The query template is displayed in the Query Editor for convenience. If there is no template name, the row is marked with a hyphen and there is no ability to redirect to the Query Editor to view the query.   |
+| **[!UICONTROL SQL]** | A snippet of the SQL query.  |
+| **[!UICONTROL Run frequency]** |  This is the cadence at which your query is set to run. The available values are `Run once` and `Scheduled`. Queries can be filtered according to their run frequency. |
+| **[!UICONTROL Created by]** | The name of the user who created the query.  |
+| **[!UICONTROL Created]** |  The timestamp when the query was created, in UTC format.  |
+| **[!UICONTROL Last run timestamp]** | The most recent timestamp when the query was run. This column highlights whether a query has been executed according to its current schedule. |
+| **[!UICONTROL Last run status]** | The status of the most recent query execution. The three status values are: `successful` `failed` or `in progress`.|
+
+See the documentation for more information on how to [monitor queries through the Query Service UI](../monitor-queries.md).
+
 ## Templates {#browse}
 
 The **[!UICONTROL Templates]** tab shows queries saved by users in your organization. It is useful to think of these as query projects, as queries saved here may still be under construction. Queries displayed on the **[!UICONTROL Templates]** tab also display as run queries in the **[!UICONTROL Log]** tab if they have been previously executed by [!DNL Query Service].
