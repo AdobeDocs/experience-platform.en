@@ -1,9 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics; 
+keywords: Experience Platform;home;popular topics;
 description: Adobe Experience Platform provides pre-configured templates that you can use to accelerate your data ingestion process. Templates include auto-generated assets such as schemas, datasets, mapping rules, identities, identity namespaces, and dataflows that you can use when bringing in data from a source to Experience Platform.
 title: (Alpha) Create a sources dataflow using templates in the UI
 hide: true
 hidefromtoc: true
+exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 ---
 # (Alpha) Create a sources dataflow using templates in the UI
 

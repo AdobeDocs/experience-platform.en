@@ -2,7 +2,7 @@
 title: (Beta) Export Datasets to Cloud Storage Destinations
 type: Tutorial
 description: Learn how to export datasets from Adobe Experience Platform to your preferred cloud storage location.
-
+exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 ---
 # (Beta) Export datasets to cloud storage destinations
 
@@ -62,6 +62,11 @@ Use the check boxes to the left of the dataset names to select the datasets that
 ![Dataset export workflow showing the Select datasets step where you can select which datasets to export.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
 ## Schedule dataset export {#scheduling}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_datasets_exportoptions"
+>title="File export options for datasets"
+>abstract="Select **Export incremental files** to export only the data which was added to the dataset since the last export. <br> The first incremental file export includes all the data in the dataset, acting as a backfill. Future incremental files include only the data which was added to the dataset since the first export."
 
 In the **[!UICONTROL Scheduling]** step, you can set a start date as well as an export cadence for your dataset exports.
 

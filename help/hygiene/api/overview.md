@@ -39,6 +39,13 @@ A dataset expiration is a time-delayed "delete a dataset" action. By creating a 
 
 ## Consumer deletes
 
+>[!IMPORTANT]
+>
+>Consumer delete requests are only available for organizations that have purchased **Adobe Healthcare Shield**.
+>
+>
+>Consumer deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
+
 The Data Hygiene API allows you delete all records associated with a consumer identity across one or all datasets. All data hygiene tasks that delete consumer identities are repesented by a construct called a work order. See the [work order endpoint guide](./workorder.md) for details on working with consumer deletes in the API.
 
 ## Quota

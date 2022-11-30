@@ -21,6 +21,7 @@ feature: Queries
   - [Attribution analysis](use-cases/attribution-analysis.md)
   - [Bot filtering](use-cases/bot-filtering.md)
   - [Web and mobile analytics insights](use-cases/analytics-insights.md)
+  - [Propensity score](use-cases/propensity-score.md)
 - Query Service API {#api}
   - [Getting started](api/getting-started.md)
   - [Queries](api/queries.md)
@@ -28,6 +29,7 @@ feature: Queries
   - [Scheduled queries](api/scheduled-queries.md)
   - [Runs for scheduled queries](api/runs-scheduled-queries.md)
   - [Query templates](api/query-templates.md)
+  - [Accelerated queries](api/accelerated-queries.md)
   - [Alert subscriptions](api/alert-subscriptions.md)
 - Query Service UI {#ui}
   - [UI overview](ui/overview.md)
