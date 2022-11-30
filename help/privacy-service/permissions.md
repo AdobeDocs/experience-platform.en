@@ -1,6 +1,7 @@
 ---
 title: Manage Permissions for Privacy Service
 description: Learn how to manage user permissions for Adobe Experience Platform Privacy Service using Adobe Admin Console.
+exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 ---
 # Manage permissions for Privacy Service
 
