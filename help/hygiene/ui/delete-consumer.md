@@ -9,10 +9,10 @@ The [[!UICONTROL Data Hygiene] workspace](./overview.md) in the Adobe Experience
 
 >[!IMPORTANT]
 >
->Consumer delete requests are only available for organizations that have purchased **Adobe Healthcare Shield**.
+>Record delete requests are only available for organizations that have purchased **Adobe Healthcare Shield**.
 >
 >
->Consumer deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
+>Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
 
 ## Prerequisites
 
@@ -137,7 +137,7 @@ After the request is submitted, a work order is created and appears on the [!UIC
 
 >[!NOTE]
 >
->Refer to the overview section on [timelines and transparency](../home.md#consumer-delete-transparency) for details on how consumer deletes are processed once they are executed.
+>Refer to the overview section on [timelines and transparency](../home.md#consumer-delete-transparency) for details on how record deletes are processed once they are executed.
 
 ## Next steps
 

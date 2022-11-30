@@ -18,7 +18,7 @@ Platform's data hygiene capabilities allow you to manage your stored consumer da
 
 >[!IMPORTANT]
 >
->Consumer deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead.
+>Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead.
 
 These activities can be performed using the [[!UICONTROL Data Hygiene] UI workspace](#ui) or the [Data Hygiene API](#api). When a data hygiene job executes, the system provides transparency updates at each step of process. See the section on [timelines and transparency](#timelines-and-transparency) for more information on how each job type is represented in the system.
 
@@ -34,7 +34,7 @@ The [!UICONTROL Data Hygiene] UI is built on top of the Data Hygiene API, whose 
 
 ## Timelines and transparency
 
-Consumer delete and dataset expiration requests each have their own processing timelines and provide transparency updates at key points in their respective workflows. Refer to the sections below for details on each job type.
+Record delete and dataset expiration requests each have their own processing timelines and provide transparency updates at key points in their respective workflows. Refer to the sections below for details on each job type.
 
 ### Dataset expirations {#dataset-expiration-transparency}
 
@@ -51,17 +51,17 @@ The following takes place when a [dataset expiration request](./ui/dataset-expir
 
 {style="table-layout:auto"}
 
-### Consumer deletes {#consumer-delete-transparency}
+### Record deletes {#consumer-delete-transparency}
 
 >[!IMPORTANT]
 >
->Consumer deletes are only available for organizations that have purchased Adobe Healthcare Shield.
+>Record deletes are only available for organizations that have purchased Adobe Healthcare Shield.
 
-The following takes place when a [consumer delete request](./ui/delete-consumer.md) is created:
+The following takes place when a [record delete request](./ui/delete-consumer.md) is created:
 
 | Stage | Time after request submission | Description |
 | --- | --- | --- |
-| Request is submitted | 0 hours | A data steward or privacy analyist submits a consumer delete request. The request is visible in the [!UICONTROL Data Hygiene UI] after it has been submitted. |
+| Request is submitted | 0 hours | A data steward or privacy analyist submits a record delete request. The request is visible in the [!UICONTROL Data Hygiene UI] after it has been submitted. |
 | Profile lookups updated | 3 hours | The change in profile counts caused by the deleted identity are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
 | Segments updated | 24 hours | Once profiles are removed, all related [segments](../segmentation/home.md) are updated to reflect their new size. |
 | Journeys and destinations updated | 26 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
