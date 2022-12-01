@@ -79,5 +79,8 @@ When a full graph is updated with a new identity, these two rules work in tandem
 
 In the example below, before the graph on the left can be updated with a new identity, Identity Service must first deletes the existing identity with the oldest timestamp. However, because the oldest identity is a device ID, Identity Service skips that identity until it gets to the namespace with a type that is higher on the deletion priority list, which in this case is `ecid-3`. Once the oldest identity with a higher deletion priority type is removed, the graph then gets updated with a new link, `ecid-51`.
 
+>[!NOTE]
+>
+>In the rare case that there are two identities with the same timestamp and identity type, Identity Service will sort the IDs based on XID and conduct deletion.
 
 ![An example of the oldest identity being deleted to accommodate the latest identity](./images/graph-limits-v3.png)
