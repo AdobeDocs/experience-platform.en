@@ -34,7 +34,7 @@ The extension is installed and you can now employ its various actions in your ta
 
 ## Configure a tag rule {#rule}
 
-[!DNL Meta Pixel] accepts a set of predefined [standard events](https://www.facebook.com/business/help/402791146561655), each with their own contexts and accepted properties. The rule actions provided [!DNL Pixel] extension correlate to these event types, allowing you to easily categorize and configure the event being sent to [!DNL Meta] according to its type.
+[!DNL Meta Pixel] accepts a set of predefined [standard events](https://www.facebook.com/business/help/402791146561655), each with their own contexts and accepted properties. The rule actions provided by the [!DNL Pixel] extension correlate to these event types, allowing you to easily categorize and configure the event being sent to [!DNL Meta] according to its type.
 
 For demonstration purposes, this section shows how to build a rule that sends a page view event to [!DNL Meta].
 
@@ -58,7 +58,7 @@ This guide covered how to send data to [!DNL Meta] using the [!DNL Meta Pixel] t
 
 If you want to test your implementation in development or staging environments while keeping your production [!DNL Meta Pixel] analytics intact, you can use a data element to dynamically choose an appropriate [!DNL Pixel] ID depending on the environment being used.
 
-You can achieve this by using a [!UICONTROL Custom Code] data element (provided by the [[!UICONTROL Core] extension](../core/overview.md)) in combination with the [`turbine` free variable](../../../n-dev/turbine.md). In the data element's JavaScript code, use the `turbine` object to find the current environment stage, then return an appropriate [!DNL Pixel] ID based on the result.
+You can achieve this by using a [!UICONTROL Custom Code] data element (provided by the [[!UICONTROL Core] extension](../core/overview.md)) in combination with the [`turbine` free variable](../../../extension-dev/turbine.md). In the data element's JavaScript code, use the `turbine` object to find the current environment stage, then return an appropriate [!DNL Pixel] ID based on the result.
 
 The following example returns a fake production ID `01234` when used in the production environment, and a different ID `56789` when any other environment is used.
 
