@@ -20,7 +20,7 @@ Once you have selected or created the desired property, select **[!UICONTROL Ex
 
 ![The [!UICONTROL Install] button being selected for the [!UICONTROL Meta Pixel] extension in the Data Collection UI.](../../../images/extensions/client/meta/install.png)
 
-In the configuration view that appears, you must provide the Pixel ID you copied earlier to link the extension to your account. You can paste the ID directly into the input, or you can select an existing data element instead.
+In the configuration view that appears, you must provide the [!DNL Pixel] ID you copied earlier to link the extension to your account. You can paste the ID directly into the input, or you can select an existing data element instead.
 
 >[!TIP]
 >
