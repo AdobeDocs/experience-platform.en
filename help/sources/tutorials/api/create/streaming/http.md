@@ -126,7 +126,7 @@ A successful response returns HTTP status 201 with details of the newly created 
 
 Authenticated connections should be used when you need to differentiate between records coming from trusted and un-trusted sources. Users who want to send information with Personally Identifiable Information (PII) should create an authenticated connection when streaming information to Platform.
 
-To create an authenticated base connection, you must specify your source ID and whether authentication is required when making a POST request to the `/connections` endpoint.
+To create an authenticated base connection, you must include the `authenticationRequired` parameter in your request and specify its value as `true`. During this step, you can also provide a source ID for your authenticated base connection. This parameter is optional and will use the same value as the `name` attribute, if unprovided.
 
 
 **API format**
@@ -160,9 +160,9 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "{SOURCE_ID}",
+             "sourceId": "Authenticated XDM streaming connection",
              "dataType": "xdm",
-             "name": "Sample connection",
+             "name": "Authenticated XDM streaming connection",
              "authenticationRequired": true
          }
      }
@@ -188,9 +188,9 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "Sample connection",
+             "sourceId": "Authenticated raw streaming connection",
              "dataType": "raw",
-             "name": "Sample connection",
+             "name": "Authenticated raw streaming connection",
              "authenticationRequired": true
          }
      }
@@ -201,7 +201,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | Property | Description |
 | -------- | ----------- |
-| `auth.params.sourceId` | The ID of the streaming connection you want to create. |
+| `auth.params.sourceId` | An additional identifier that can be used when creating an authenticated base connection. This parameter is optional and will use the same value as the `name` attribute, if unprovided.|
 | `auth.params.authenticationRequired` | The parameter that specifies that the created streaming connection |
 
 **Response**
