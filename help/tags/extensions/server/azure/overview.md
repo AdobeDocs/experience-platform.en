@@ -29,7 +29,7 @@ Since the extension does not have any configuration properties, it is immediatel
 
 ## Configure an event forwarding rule {#rule}
 
-Start creating a new event forwarding rule and configure its conditions as desired. When selecting the actions for the rule, select **[!UICONTROL Microsoft Azure]** for the extension, then select **[!UICONTROL Send Data to Event Hubs]** for action type.
+Start creating a new event forwarding rule and configure its conditions as desired. When selecting the actions for the rule, select **[!UICONTROL Microsoft Azure]** for the extension, then select **[!UICONTROL Send Data to Event Hubs]** for the action type.
 
 ![The [!UICONTROL Send Data to Event Hubs] action type being selected for a rule in the Data Collection UI.](../../../images/extensions/server/azure/select-action-type.png)
 
