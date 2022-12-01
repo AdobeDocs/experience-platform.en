@@ -54,17 +54,6 @@ Note down the items below before you authenticate to the [!DNL Oracle Eloqua] de
 |---|---|---|---|
 | `EloquaId` | `111111` | Unique identifier of the contact.| Yes |
 
-## Export type and frequency {#export-type-frequency}
-
-Refer to the table below for information about the destination export type and frequency.
-
-| Item | Type | Notes |
----------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*.</li><li> [!DNL Oracle Eloqua] custom contact fields are created using the names of the segments selected during the **[!UICONTROL Destinations]** > **[!UICONTROL Activate Destination]** > **[!UICONTROL Select segments]** step. The segment status from Platform is also updated into [!DNL Oracle Eloqua] against these fields.</li></ul> |
-| Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
-
-{style="table-layout:auto"}
-
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
@@ -135,7 +124,7 @@ When you are finished providing the mappings for your destination connection, se
 To validate that you have correctly set up the destination, follow the steps below:
 
 1. Select **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** and navigate to the list of destinations.
-1. Next, select the destination and switch to the **[!DNL Activation data]** tab, then select a segment name.
+1. Next, select the destination and switch to the **[!UICONTROL Activation data]** tab, then select a segment name.
 ![Platform UI screenshot example showing Destinations Activation Data.](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
 
 1. Monitor the segment summary and ensure that the count of profiles corresponds to the count within the segment.
