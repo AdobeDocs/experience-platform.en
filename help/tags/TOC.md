@@ -203,6 +203,7 @@ solution: Data Collection
       * [Overview](./extensions/server/cloud-connector/overview.md)
     * [!DNL AWS] {#aws}
       * [Overview](./extensions/server/aws/overview.md)
+    * [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)
     * Core {#core}
       * [Overview](./extensions/server/core/overview.md)
     * [Facebook Conversions API](https://exchange.adobe.com/apps/ec/105509)
