@@ -4,8 +4,6 @@ description: The (API) Oracle Eloqua destination allows you to export your accou
 ---
 # [!DNL (API) Oracle Eloqua] connection
 
-## Overview {#overview}
-
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) enables marketers to plan and execute campaigns while delivering a personalized customer experience for their prospects. With integrated lead management and easy campaign creation, it helps marketers engage the right audience at the right time in their buyer's journey and elegantly scales to reach audiences across channels including email, display search, video, and mobile. Sales teams can close more deals at a faster rate, increasing marketing ROI through real-time insight.
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Oracle Eloqua] Update a Contact REST API](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html), which allows you to update identities within a segment into [!DNL Oracle Eloqua].
