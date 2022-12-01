@@ -126,7 +126,7 @@ A successful response returns HTTP status 201 with details of the newly created 
 
 Authenticated connections should be used when you need to differentiate between records coming from trusted and un-trusted sources. Users who want to send information with Personally Identifiable Information (PII) should create an authenticated connection when streaming information to Platform.
 
-To create an authenticated base connection, you must include the `authenticationRequired` parameter in your request and specify its value as `true`. During this step, you can also provide a source ID for your authenticated base connection. This parameter is optional and will use the same value as the `name` attribute, if unprovided.
+To create an authenticated base connection, you must include the `authenticationRequired` parameter in your request and specify its value as `true`. During this step, you can also provide a source ID for your authenticated base connection. This parameter is optional and will use the same value as the `name` attribute, if it is not provided. 
 
 
 **API format**
@@ -201,7 +201,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | Property | Description |
 | -------- | ----------- |
-| `auth.params.sourceId` | An additional identifier that can be used when creating an authenticated base connection. This parameter is optional and will use the same value as the `name` attribute, if unprovided.|
+| `auth.params.sourceId` | An additional identifier that can be used when creating an authenticated base connection. This parameter is optional and will use the same value as the `name` attribute, if it is not provided. |
 | `auth.params.authenticationRequired` | The parameter that specifies that the created streaming connection |
 
 **Response**
