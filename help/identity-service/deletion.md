@@ -1,6 +1,6 @@
 ---
 title: Deletions in Identity Service
-description: This document provides an overview of the various mechanisms available to you to leverage your management of your identity graph data.
+description: This document provides an overview of the various mechanisms that you can use to delete your identity data. from Experience Platform.
 ---
 # Deletions in Identity Service
 
@@ -8,7 +8,7 @@ Adobe Experience Platform Identity Service provides you with a comprehensive vie
 
 Through identity graphs, Identity Service is able to visualize how different identities are linked together to create a comprehensive view of a customer. When two or more identities are received within a row of data, Identity Service stores information on the links established between the two identities.
 
-This document provides an overview of the various mechanisms that you can use, should you need to delete your identity data from Experience Platform.
+This document provides an overview of the various mechanisms that you can use to delete your identity data. from Experience Platform.
 
 ## Getting started
 
@@ -17,26 +17,26 @@ The document below references the following features of Experience Platform:
 * [Identity Service](home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
   * [Identity Graph](./ui/identity-graph-viewer.md): An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels.
 * [Catalog Service](../catalog/home.md): Explore the data lineage, metadata, file descriptions, directories, and datasets within the data lake.
-* [Data Hygiene](../hygiene/home.md): Manage your stored consumer data by scheduling automated dataset expirations or deleting individual consumer data from your records.
-* [Privacy Service](../privacy-service/home.md): Manage customer requests for accessing, opting out of sale, or deleting their personal data across Adobe Experience Cloud applications.
+* [Data hygiene](../hygiene/home.md): Manage your stored consumer data by scheduling automated dataset expirations or or deleting individual records from one dataset or all datasets.
+* [Adobe Experience Platform Privacy Service](../privacy-service/home.md): Manage customer requests for accessing, opting out of sale, or deleting their personal data across Adobe Experience Cloud applications.
 
 ## Single identity deletions
 
-Single identity deletion requests allow you to delete some or all information for an identity value tied to an identity namespace. You can use [Data Hygiene](../hygiene/home.md) for data cleansing, removing anonymous data, or data minimization for the data that you have collected. For use cases such as customer requests for data deletion and compliance to privacy regulations like the GDPR, then you can use mechanisms provided by [Privacy Service](../privacy-service/home.md).
+Single identity deletion requests allow you to delete some or all information for an identity value tied to an identity namespace. You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anonymous data, or data minimization for the data that you have collected. For use cases such as customer requests for data deletion and compliance to privacy regulations like the General Data Protection Regulation (GDPR), then you can use mechanisms provided by [Privacy Service](../privacy-service/home.md).
 
-The following outlines mechanisms you can use for single identity deletion request in Experience Platform.
+The sections below outline the mechanisms you can use for single identity deletion requests in Experience Platform.
 
 ### Single identity deletion in Privacy Service 
 
 Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by privacy regulations such as the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA). With Privacy Service, you can submit job requests using the API or the UI. When Experience Platform receives a delete request from Privacy Service, Platform sends confirmation to Privacy Service that the request has been received and affected data has been marked for deletion. The deletion of the individual identity is based on provided namespace and/or ID value. Furthermore, the deletion takes place for all sandboxes associated with a given organization. For more information, read the guide on [privacy request processing in Identity Service](privacy.md).
 
-### Single identity deletion in the Data Hygiene workspace
+### Single identity deletion in the [!UICONTROL Data Hygiene] workspace
 
-The [Data Hygiene workspace](../hygiene/ui/overview.md) in the Platform UI allows you to delete consumer records that are participating in Identity Service and Real-time Customer Profile. For a comprehensive guide on using the Data Hygiene workspace, see the tutorial on [deleting consumer records](../hygiene/ui/delete-consumer.md).
+The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Platform UI allows you to delete consumer records that are participating in Identity Service and Real-time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/delete-consumer.md).
 
-The table below provides a breakdown of differences between single identity deletion in Privacy Service and Data Hygiene:
+The table below provides a breakdown of differences between single identity deletion in Privacy Service and Data hygiene:
 
-| Single identity deletion | Privacy Service | Data Hygiene |
+| Single identity deletion | Privacy Service | Data hygiene |
 | --- | --- | --- |
 | Accepted use cases | Data privacy requests (GDPR, CCPA) only. | Management of data stored in Experience Platform. |
 | Estimated latency | Days to weeks | Days |
@@ -53,13 +53,13 @@ The following outlines mechanisms you can use to delete datasets in Experience P
 
 You can use the Catalog Service to submit requests for dataset deletion. For more information on how to delete datasets with Catalog Service, read the guide on [deleting objects using the Catalog Service API](../catalog/api/delete-object.md). Alternatively, you can use Platform UI to submit requests for dataset deletion. For more information, read the [datasets user guide](../catalog/datasets/user-guide.md#delete-a-dataset).
 
-### Dataset expirations in Data Hygiene
+### Dataset expirations in Data hygiene
 
-The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Adobe Experience Platform UI allows you to schedule expirations for datasets. When a dataset reaches its expiration date, the data lake, Identity Service, and Real-time Customer Profile begin separate processes to remove the dataset's contents from their respective services. For more information, read the guide on [managing dataset expirations using the Data Hygiene workspace](../hygiene/ui/dataset-expiration.md).
+The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Adobe Experience Platform UI allows you to schedule expirations for datasets. When a dataset reaches its expiration date, the data lake, Identity Service, and Real-time Customer Profile begin separate processes to remove the dataset's contents from their respective services. For more information, read the guide on [managing dataset expirations using the [!UICONTROL Data Hygiene] workspace](../hygiene/ui/dataset-expiration.md).
 
-The table below provides a breakdown of differences between dataset deletion in Catalog Service and Data Hygiene:
+The table below provides a breakdown of differences between dataset deletion in Catalog Service and Data hygiene:
 
-| Dataset deletion | Catalog Service | Data Hygiene |
+| Dataset deletion | Catalog Service | Data hygiene |
 | --- | --- | --- |
 | Accepted use cases |  Delete full datasets and their associated identity information in Platform. | Management of data stored in Experience Platform. | 
 | Estimated latency | Days | Days |
