@@ -149,6 +149,7 @@ solution: Data Collection
     * [Differential Privacy](https://exchange.adobe.com/apps/ec/104535)
     * [Dynamic Media Viewers](https://exchange.adobe.com/apps/ec/103048)
     * [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)
+    * [Facebook Pixel](https://exchange.adobe.com/apps/ec/102804)
     * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)
     * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
     * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
@@ -166,8 +167,6 @@ solution: Data Collection
       * [Overview](./extensions/client/marketo/overview.md)
       * [Release notes](./extensions/client/marketo/release-notes.md)
     * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)
-    * [!DNL Meta Pixel] {#meta}
-      * [Overview](./extensions/client/meta/overview.md)
     * [Monita](https://exchange.adobe.com/apps/ec/106544)
     * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
     * [OneTrust Consent Management for Cookies](https://exchange.adobe.com/apps/ec/100340)
