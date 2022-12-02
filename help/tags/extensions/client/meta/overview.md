@@ -8,6 +8,12 @@ description: Learn about the Meta Pixel tag extension in Adobe Experience Platfo
 
 The [!DNL Meta Pixel] tag extension allows you to leverage [!DNL Pixel] functionalities in your client-side tag libraries. This document covers how to install the extension and use its capabilities in a [rule](../../../ui/managing-resources/rules.md).
 
+<!-- (To include when Conversions API extension doc is published)
+>[!NOTE]
+>
+>If you are trying to send server-side events to [!DNL Meta] rather than from the client side, use the [[!DNL Meta Conversions API] extension](../../server/meta/overview.md) instead.
+-->
+
 ## Prerequisites
 
 In order to use the extension, you must have a valid [!DNL Facebook] account with access to [!DNL Ads Manager]. Specifically, you must [create a new [!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755) and copy its [!DNL Pixel ID] so the extension can be configured to your account. If you already have an existing [!DNL Meta Pixel], you can use its ID instead.
@@ -60,12 +66,12 @@ If you want to test your implementation in development or staging environments w
 
 You can achieve this by using a [!UICONTROL Custom Code] data element (provided by the [[!UICONTROL Core] extension](../core/overview.md)) in combination with the [`turbine` free variable](../../../extension-dev/turbine.md). In the data element's JavaScript code, use the `turbine` object to find the current environment stage, then return an appropriate [!DNL Pixel] ID based on the result.
 
-The following example returns a fake production ID `01234` when used in the production environment, and a different ID `56789` when any other environment is used.
+The following example returns a fake production ID `exampleProductionKey` when used in the production environment, and a different ID `exampleTestKey` when any other environment is used. When implementing this code, replace each value with your actual production and test [!DNL Pixel] IDs.
 
 ```js
 if (turbine.environment.stage === "production") {
-  return '01234';
+  return 'exampleProductionKey';
 } else {
-  return '56789';
+  return 'exampleTestKey';
 }
 ```
