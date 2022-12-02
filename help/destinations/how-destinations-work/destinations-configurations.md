@@ -7,7 +7,7 @@ description: Learn which export settings in destinations are configurable on a d
 
 When thinking about the export behavior to Experience Platform destinations, you need to consider three separate levels on which configurations act.
 
-* On a first level, some of the settings related to profile export behavior and configuration settings are common across all destinations belonging to a destination type. These settings cannot be edited by destination developers or Real-time CDP users.
+* On a first level, some of the settings related to profile export behavior and configuration settings are common across all destinations belonging to a destination type. These settings refer to what triggers a destination export and what is included in an export and cannot be edited by destination developers or Real-time CDP users.
 * On a second level, some settings can be customized on a destination level by the destination developer when authoring destinations using Destination SDK. 
 * On a third level, there are configuration settings that Real-time CDP users can set in the activation workflows.
 
@@ -23,9 +23,9 @@ What is included in the destination exports varies slightly between destination 
 
 ## Customizable export settings by destination developers {#customizable-settings-by-destination-developers}
 
-Destination developers can use [Destination SDK](/help/destinations/destination-sdk/overview.md) to create custom or productized destinations. Destination SDK provides developers with great flexibility to configure destinations based on the downstream capabilities of the API endpoints and file reception systems. Based on the downstream capabilities, destination developers have the following configuration options available when configuring a destination using Destination SDK:
+Destination developers can use [Destination SDK](/help/destinations/destination-sdk/overview.md) to create custom or productized destinations. Destination SDK provides developers with great flexibility to configure destinations based on the downstream capabilities of their API endpoints and file reception systems. Based on the downstream capabilities, destination developers have the following configuration options available when configuring a destination using Destination SDK:
 
-* Determine which attributes and identities can be exported out of Experience Platform to the destination.
+* Determine which attributes and identities can be exported out of Experience Platform to the destination. Determine also which identities are required by their destinations for a successful data export.
 * Set an aggregation policy, which determines how long Experience Platform should wait when aggregating HTTP messages to be sent to API integrations. Destination developers can configure different aggregation types to determine how many profiles should be included in outgoing HTTP messages and how long Experience Platform should wait until dispatching the HTTP message. Find extensive information about the [aggregation policy configuration options](/help/destinations/destination-sdk/destination-configuration.md#aggregation) available to destination developers in the Destination SDK documentation.
 * Determine if HTTP message exports should include profiles that qualify for segments, that are removed from segments, or both.
 * Determine which file name and file formatting configurations should be available to users when exporting files.

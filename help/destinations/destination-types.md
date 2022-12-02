@@ -10,9 +10,11 @@ Read this page to understand the different types and categories of Adobe Experie
 
 ## Destination types {#destination-types}
 
-In Adobe Experience Platform, we distinguish between two destination types - connections and extensions. There are two types of connection destinations, Profile Export destinations and Segment Export destinations.
+In Adobe Experience Platform, we distinguish between different destination types - connections, dataset exports, and extensions. There are several types of connection destinations, allowing you to export data to API-based destinations, .
 
-![Types of destinations](./assets/destination-types/types-of-destinations.png)
+Finally, connections can also be distinguished between public destinations available across all organizations in the destinations catalog, and private destinations which Real-time CDP Ultimate customers can create to satisfy their specific export use cases.
+
+![Types of destinations diagram.](./assets/destination-types/types-of-destinations-no-highlight.png)
 
 ## Connections {#connections}
 
