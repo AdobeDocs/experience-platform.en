@@ -267,7 +267,13 @@ The widget provides a two column table to show a list of active destination plat
 
 ### [!UICONTROL Activated audiences across all destinations] {#activated-audiences-across-all-destinations}
 
-The [!UICONTROL Activated audiences across all destinations] widget provides the total number of audiences activated across all destinations in a single metric. This widget shows the count of audiences and not the count of segments. This number is accurate to the most recent snapshot. 
+The [!UICONTROL Activated audiences across all destinations] widget provides the total number of audiences activated across all destinations in a single metric. 
+
+>[!NOTE]
+>
+>This widget shows the count of audiences and not the count of segments. 
+
+This number is accurate to the most recent snapshot. 
 
 ![The Activated audiences across all destinations widget.](../images/destinations/activated-audiences-across-all-destinations.png)
 
