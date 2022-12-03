@@ -89,6 +89,8 @@ No. Query Service has an autoscaling capability that ensures concurrent queries 
 
 ### Can I use reserved keywords as a column name?
 
+<!-- Is there a web resource that has more info for this question? Do you have a URL that this can link to or is this a typo? 'More details are available here.' - https://jira.corp.adobe.com/browse/PLAT-134776 (Question 2)-->
+
 +++Answer
 There are certain reserved keywords that cannot be used as column name such as, `ORDER`, `GROUP BY`, `WHERE`, `DISTINCT`. If you want to use these keywords, then you must escape these columns.
 +++
@@ -492,6 +494,75 @@ WHERE T2.ID IS NULL
 +++Answer
 No, this is an intentional limitation across Experience Platform that applies to all Adobe services, including Query Service. A name with two underscores is acceptable as a schema and dataset name, but the table name for the dataset can only contain a single underscore. 
 +++
+
+### How many concurrent queries can you run at a time?  
+
++++Answer
+There is no query concurrency limit as batch queries run as back-end jobs. There is, however, a query timeout limit set to 24 hours. 
++++
+
+### Is there an activity dashboard where you can see query activities and status?
+
++++Answer
+There are monitoring and alerting capabilities to check on query activities and statuses. See the [Query Service audit log integration](./data-governance/audit-log-guide.md) and the [query logs](./ui/overview.md#log) documents for more information.
++++
+
+### Is there any way to roll back updates? For example, if there is an error or some calculations need reconfiguring when writing data back to Platform, how should that scenario be handled?
+
++++Answer
+Currently, we do not support rollbacks or updates in that manner. 
++++
+
+### How can you optimize queries in Adobe Experience Platform?
+
++++Answer
+The system does not have indexes as it is not a database but it does have other optimizations in place tied to the data store. The following options are available to tune your queries:
+
+- A time-based filter on timeseries data.
+- Optimized push down for the struct data type.
+- Optimized cost and memory push-down for arrays and map data types.
+- Incremental processing using snapshots.
+- A persisted data format.
++++
+  
+### Can logins be restricted to certain aspects of Query Service or is it an "all or nothing" solution? 
+
++++Answer
+Query Service is an "all or nothing" solution. Partial access cannot be provided.
++++
+
+<!-- please can you elaborate on the answer below -->
+
+### Is there any way of restricting what data Query Service can use, or does it simply access the entire Adobe Experience Platform data lake?
+
++++Answer
+You can restrict querying to datasets with read-only access. 
+Is there any info on how to do this? "See the documentation for more info on…"
++++
+ 
+<!-- I cannot publish this question below in this state. Please can you clarify what the intent of the question is and .  -->
+<!-- 
+Q. What other options are there for locking down what can be done with the full query service?
+
+ ·select only — give dataset read + query manage
+ ·select/insert/create  — give dataset write + query manage
+ ·integration account — above + query integration
+ -->
+
+### What other options are there for restricting the data that Query Service can access?
+
++++Answer
+There are three approaches to restricting access. They are as follows:
+
+- Use SELECT only statements and give datasets read only access. Also, assign the manage query permission.
+- Use SELECT/INSERT/CREATE statements and give datasets write access. Also, assign the query manage permission.
+- Use an integration account with the previous suggestions above and assign the query integration permission.
+
++++
+    
+### Once the data is returned by Query Service, are there any checks that can be run by Platform to ensure that it hasn't returned any protected data?
+
+- Query Service supports attribute-based access control. You can restrict access to data at the column/leaf level and/or the struct level. See the documentation to learn more about attribute-based access control. 
 
 ## Exporting data {#exporting-data}
 
