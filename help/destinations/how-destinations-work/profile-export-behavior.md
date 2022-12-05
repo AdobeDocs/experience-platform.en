@@ -67,7 +67,7 @@ A profile export to the destination can be determined by a profile qualifying fo
 
 From a profile attributes point of view, any changes to the four attributes mapped above will determine a destination export and any of the four mapped attributes present on the profile will be present in the data export.
 
-## Streaming API-based destinations {streaming-api-based-destinations}
+## Streaming API-based destinations {#streaming-api-based-destinations}
 
 The profile export behavior for streaming destinations such as Facebook, Trade Desk, and other API-based integrations is identical to the above.
 
@@ -99,9 +99,9 @@ From a profile attributes point of view, any changes to the four attributes mapp
 
 ## Batch (file-based destinations)
 
-Add information about how data is exported to batch destinations:
+|What determines a destination export | What is included in the destination export |
+|---------|----------|
+|<ul><li>Start time and user action determine a destination export</li><li>Full or incremental - any changes in segment membership of a profile. Changes in attributes</li></ul> | The profiles for which the segment membership has changed, along with the latest information for each XDM attribute selected for export. |
 
-Describe technical workings behind full exports
-Describe technical workings behind incremental exports
-How are these two different? different pipelines? 
+With a streaming segment mapped to a batch destination, there is a higher likelihood that the number of profiles in the exported file is closer to the number of users in the segment.
 

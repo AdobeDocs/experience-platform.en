@@ -1,7 +1,6 @@
 ---
 keywords: streaming; HTTP destination
 title: HTTP API connection
-keywords: streaming;
 description: Use the HTTP API destination in Adobe Experience Platform to send profile data to third-party HTTP endpoint to run your own analytics or perform any other operations you may need on profile data exported out of Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 ---
