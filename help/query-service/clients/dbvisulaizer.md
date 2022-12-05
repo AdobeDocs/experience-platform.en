@@ -40,7 +40,7 @@ The driver properties seen in the table below are recommended to enable the use 
 | ------ | ------ |
 | `PGHOST` | The host name for the [!DNL PostgreSQL] server. This value is your Experience Platform [!UICONTROL Host] credential. |
 | `ssl` | Define the SSL value `1` to enable the use of SSL. |
-| `sslmode` | This controls the use of SSL requirements. You **must** use the value `require` to enable this requirement. |
+| `sslmode` | This controls the level of SSL protection. You are recommended to use the `require` SSL mode when connecting third party clients to Adobe Experience Platform. The `require` mode ensures that encryption is required on all communications and that the network is trusted to connect to the correct server. Server SSL certificate validation is not required. For more information, see the documentation on [SSL options for connecting third-party clients](./ssl-modes.md) to [!DNL Query Service]. |
 | `user` | The username connected to the database is your Organization ID. It is an alphanumeric string ending in `@adobe.org` |
 
 >[!IMPORTANT]
