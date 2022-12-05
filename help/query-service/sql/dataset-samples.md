@@ -1,12 +1,13 @@
 ---
-title: Dataset Samples 
+title: Dataset Samples
 description: Query Service sample datasets enable you to conduct exploratory queries on big data with greatly reduced processing time at the cost of query accuracy. This guide provides information on how to manage your samples for approximate query processing
+exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
 ---
-# (Beta) Dataset samples
+# (Limited release) Dataset samples
 
 >[!IMPORTANT]
 >
->The dataset samples feature is in beta. Its features and documentation are subject to change.
+>The dataset samples feature is currently in a limited release and not available to all customers.
 
 Adobe Experience Platform Query Service provides sample datasets as part of its approximate query processing capabilities. Sample datasets are created with uniform random samples from existing [!DNL Azure Data Lake Storage] (ADLS) datasets using only a percentage of records from the original. This percentage is known as the sampling rate. Adjusting the sampling rate to control the balance of accuracy and processing time allows you to conduct exploratory queries on big data with greatly reduced processing time at the cost of query accuracy.
 
@@ -79,4 +80,4 @@ DROP TABLE SAMPLE x5e5cd8ea0a83c418a8ef0928_uniform_2_0_percent_bnhmc;
 
 >[!NOTE]
 >
->If you have multiple sample datasets derived from an original ADLS dataset, when the original is dropped all associated samples are also deleted.  
+>If you have multiple sample datasets derived from an original ADLS dataset, when the original is dropped all associated samples are also deleted.

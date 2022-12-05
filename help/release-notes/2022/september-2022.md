@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes September 2022
 description: The September 2022 release notes for Adobe Experience Platform.
+exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
 ---
 # Adobe Experience Platform release notes 
 
@@ -56,7 +57,7 @@ For more information on Attribution AI, the [Attribution AI overview](../../inte
 
 ### Customer AI
 
-Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale.
+Customer AI available in Real-Time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale.
 
 | Feature | Description |
 | --- | --- |
@@ -102,6 +103,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 | --- | --- |
 | Left navigation integration in the Platform UI | All capabilities that were previously exclusive to the Data Collection UI (including tags, event forwarding, and datastreams) are now also available through the left navigation in Experience Platform, under the category **[!UICONTROL Data Collection]**. This eliminates the need to switch between UIs when working with data collection capabilities in Platform.|
 | User attribution in tags and event forwarding | When listing available [!UICONTROL Properties] in tags and event forwarding, each listed property now shows when it was last updated, and which user made the update. |
+| [[!DNL Snap Conversions API] extension](https://exchange.adobe.com/apps/ec/108550) for event forwarding | You can now send data to the [!DNL Snapchat Conversions API] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. For more information on how to authenticate and use the API, refer to the [[!DNL Snapchat Marketing API] documentation](https://marketingapi.snapchat.com/docs/conversion.html). |
 |[[!DNL User-Agent Client Hints] in Web SDK](../../edge/fundamentals/user-agent-client-hints.md)|The Web SDK now supports [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Client hints allow website owners to access much of the same information available in the [!DNL User-Agent] string, but in a more privacy-preserving way.|
 |[Web SDK page-by-page migration](../../edge/home.md#migrating-to-web-sdk)| You can now migrate your existing web properties from other Experience Cloud libraries, such as [!DNL at.js], to Web SDK, one page at a time. This enables a phased approach to Web SDK migration, without the need of migrating all your pages at once.|
 
@@ -208,10 +210,12 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 
 | Feature | Description |
 | --- | --- |
-| Alert subscription API | Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries. Alerts can be received by email, within the Platform UI, or both. Currently, query alerts can only be subscribed to using the [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/). See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more. |
+| Alert subscription API | Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries. Alerts can be received by email, within the Platform UI, or both. Currently, query alerts can only be subscribed to using the [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/).  |
 | Dataset samples | Query Service dataset samples enable you to conduct exploratory queries on big data with greatly reduced processing time at the cost of query accuracy. See the [dataset samples guide](../../query-service/sql/dataset-samples.md) to learn more. |
 
 For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../../query-service/home.md).
+
+See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more.
 
 ## Sources {#sources}
 

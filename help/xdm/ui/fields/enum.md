@@ -10,18 +10,22 @@ exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_enum_suggestedvalue"
->title="Enums and suggested values"
->abstract="An **Enum** constrains a string field to only allow data that matches a predefined set of values to be ingested. Each constraint can be assigned a **Display name** that populates attribute dropdowns in the Segmentation UI. **Suggested values** for a field do not restrict ingestion and only determine the display names shown in Segmentation. If you have multiple schemas that share a field belonging to a common class or field group, and you define different enums or suggested values for that field between each schema, those values are merged and appended in the union schema."
+>title="Enums & Suggested Values"
+>abstract="An **Enum** constrains a string field to only allow data that matches a predefined set of values to be ingested. Each enum constraint can be assigned a **Display name** that populates attribute dropdowns in the Segmentation UI. **Suggested values** for a field do not restrict ingestion and only determine the display names shown in Segmentation. If you have multiple schemas that share a field belonging to a common class or field group, and you define different enums or suggested values for that field between each schema, those values are merged and appended in the union schema."
 
 In Experience Data Model (XDM), a string field can be given a predefined set of accepted or suggested values to better control what values are ingested into that field or how it will behave in segmentation.
 
-An **enum** constrains the values that can be ingested for a string field to a predefined set. If you attempt to ingest data to an enum field and the value does not match any of those defined in its configuration, ingestion will be denied.
+**[!UICONTROL Enums]** constrain the values that can be ingested for a string field to a predefined set. If you attempt to ingest data to an enum field and the value does not match any of those defined in its configuration, ingestion will be denied.
 
-In contrast to enums, adding **suggested values** to a string field does not constrain the values that it can ingest. Instead, suggested values affect what predefined values are available in the [Segmentation UI](../../../segmentation/ui/overview.md) when including the string field as an attribute.
+In contrast to enums, the **[!UICONTROL Suggested values]** option allows to to denote a set of recommended values for a string field that do not constrain the values that it can ingest. Instead, suggested values affect what predefined values are available in the [Segmentation UI](../../../segmentation/ui/overview.md) when including the string field as an attribute.
 
 When [defining a new field](./overview.md#define) in the Adobe Experience Platform user interface and setting the type to [!UICONTROL String], you are given the option to define an [enum](#enum) or [suggested values](#suggested-values) for that field.
 
 ![Image showing the Enum & Suggested Values option enabled for a string field in the UI](../../images/ui/fields/enum/enum-options-selected.png)
+
+This document covers how to define enums and suggested values in the [!UICONTROL Schemas] UI workspace. For a quick overview on enums and suggested values, including how to configure them in the UI and their downstream effects, watch the following video:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
 ## Define an enum {#enum}
 

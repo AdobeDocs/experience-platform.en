@@ -1,23 +1,26 @@
 ---
 title: Work order API Endpoint
-description: The /workorder endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for consumer identities.
+description: The /workorder endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for  identities.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 ---
 # Work order endpoint
 
+The `/workorder` endpoint in the Data Hygiene API allows you to programmatically manage record delete requests in Adobe Experience Platform.
+
 >[!IMPORTANT]
 >
->Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Healthcare Shield.
-
-The `/workorder` endpoint in the Data Hygiene API allows you to programmatically manage consumer delete requests in Adobe Experience Platform.
+>Record delete requests are only available for organizations that have purchased **Adobe Healthcare Shield**.
+>
+>
+>Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
 
 ## Getting started
 
 The endpoint used in this guide is part of the Data Hygiene API. Before continuing, please review the [overview](./overview.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-## Create a consumer delete request {#delete-consumers}
+## Create a record delete request {#create}
 
-You can delete one or more consumer identities from a single dataset or all datasets by making a POST request to the `/workorder` endpoint.
+You can delete one or more identities from a single dataset or all datasets by making a POST request to the `/workorder` endpoint.
 
 **API format**
 
@@ -27,7 +30,7 @@ POST /workorder
 
 **Request**
 
-Depending on the value of the `datasetId` provided in the request payload, the API call will delete consumer identities from all datasets or a single dataset that you specify. The following request deletes three consumer identities from a specific dataset.
+Depending on the value of the `datasetId` provided in the request payload, the API call will delete identities from all datasets or a single dataset that you specify. The following request deletes three identities from a specific dataset.
 
 ```shell
 curl -X POST \
@@ -40,7 +43,7 @@ curl -X POST \
   -d '{
         "action": "delete_identity",
         "datasetId": "c48b51623ec641a2949d339bad69cb15",
-        "displayName": "Example Consumer Delete Request",
+        "displayName": "Example Record Delete Request",
         "description": "Cleanup identities required by Jira request 12345.",
         "identities": [
           {
@@ -67,17 +70,17 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `action` | The action to be performed. The value must be set to `delete_identity` for consumer deletes. |
+| `action` | The action to be performed. The value must be set to `delete_identity` for record deletes. |
 | `datasetId` | If you are deleting from a single dataset, this value must be the ID of the dataset in question. If you are deleting from all datasets, set the value to `ALL`.<br><br>If you are specifying a single dataset, the dataset's associated Experience Data Model (XDM) schema must have a primary identity defined. |
-| `displayName` | The display name for the consumer delete request. |
-| `description` | A description for the consumer delete request. |
+| `displayName` | The display name for the record delete request. |
+| `description` | A description for the record delete request. |
 | `identities` | An array containing the identities of at least one user whose information you would like to delete. Each identity is comprised of an [identity namespace](../../identity-service/namespaces.md) and a value:<ul><li>`namespace`: Contains a single string property, `code`, which represents the identity namespace. </li><li>`id`: The identity value.</ul>If `datasetId` specifies a single dataset, each entity under `identities` must use the same identity namespace as the schema's primary identity.<br><br>If `datasetId` is set to `ALL`, the `identities` array is not constrained to any single namespace since each dataset might be different. However, your requests are still constrained the namespaces available to your organization, as reported by [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 {style="table-layout:auto"}
 
 **Response**
 
-A successful response returns the details of the consumer delete.
+A successful response returns the details of the record delete.
 
 ```json
 {
@@ -90,7 +93,7 @@ A successful response returns the details of the consumer delete.
   "status": "received",
   "createdBy": "{USER_ID}",
   "datasetId": "c48b51623ec641a2949d339bad69cb15",
-  "displayName": "Example Consumer Delete Request",
+  "displayName": "Example Record Delete Request",
   "description": "Cleanup identities required by Jira request 12345."
 }
 ```
@@ -100,7 +103,7 @@ A successful response returns the details of the consumer delete.
 | `workorderId` | The ID of the deletion order. This can be used to look up the status of the deletion later. |
 | `orgId` | Your organization ID. |
 | `bundleId` | The ID of the bundle this deletion order is associated with, used for debugging purposes. Multiple deletion orders are bundled together to be processed by downstream services. |
-| `action` | The action being performed by the work order. For consumer deletes, the value is `identity-delete`. |
+| `action` | The action being performed by the work order. For record deletes, the value is `identity-delete`. |
 | `createdAt` | A timestamp of when the deletion order was created. |
 | `updatedAt` | A timestamp of when the deletion order was last updated. |
 | `status` | The current status of the deletion order. |
@@ -109,9 +112,9 @@ A successful response returns the details of the consumer delete.
 
 {style="table-layout:auto"}
 
-## Retrieve the status of a consumer delete (#lookup)
+## Retrieve the status of a record delete (#lookup)
 
-After [creating a consumer delete request](#delete-consumers), you can check on its status using a GET request.
+After [creating a record delete request](#create), you can check on its status using a GET request.
 
 **API format**
 
@@ -121,7 +124,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{WORK_ORDER_ID}` | The `workorderId` of the consumer delete you are looking up. |
+| `{WORK_ORDER_ID}` | The `workorderId` of the record delete you are looking up. |
 
 {style="table-layout:auto"}
 
@@ -151,7 +154,7 @@ A successful response returns the details of the delete operation, including its
   "status": "received",
   "createdBy": "{USER_ID}",
   "datasetId": "c48b51623ec641a2949d339bad69cb15",
-  "displayName": "Example Consumer Delete Request",
+  "displayName": "Example Record Delete Request",
   "description": "Cleanup identities required by Jira request 12345.",
   "productStatusDetails": [
     {
@@ -178,7 +181,7 @@ A successful response returns the details of the delete operation, including its
 | `workorderId` | The ID of the deletion order. This can be used to look up the status of the deletion later. |
 | `orgId` | Your organization ID. |
 | `bundleId` | The ID of the bundle this deletion order is associated with, used for debugging purposes. Multiple deletion orders are bundled together to be processed by downstream services. |
-| `action` | The action being performed by the work order. For consumer deletes, the value is `identity-delete`. |
+| `action` | The action being performed by the work order. For record deletes, the value is `identity-delete`. |
 | `createdAt` | A timestamp of when the deletion order was created. |
 | `updatedAt` | A timestamp of when the deletion order was last updated. |
 | `status` | The current status of the deletion order. |
@@ -186,9 +189,9 @@ A successful response returns the details of the delete operation, including its
 | `datasetId` | The ID of the dataset that is subject to the request. If the request is for all datasets, the value will be set to `ALL`. |
 | `productStatusDetails` | An array that lists the current status of downstream processes related to the request. Each array object contains the following properties:<ul><li>`productName`: The name of the downstream service.</li><li>`productStatus`: The current processing status of the request from the downstream service.</li><li>`createdAt`: A timestamp of when the most recent status was posted by the service.</li></ul> |
 
-## Update a consumer delete request
+## Update a record delete request
 
-You can update the `displayName` and `description` for a consumer delete by making a PUT request.
+You can update the `displayName` and `description` for a record delete by making a PUT request.
 
 **API format**
 
@@ -198,7 +201,7 @@ PUT /workorder{WORK_ORDER_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{WORK_ORDER_ID}` | The `workorderId` of the consumer delete you are looking up. |
+| `{WORK_ORDER_ID}` | The `workorderId` of the record delete you are looking up. |
 
 {style="table-layout:auto"}
 
@@ -219,14 +222,14 @@ curl -X GET \
 
 | Property | Description |
 | --- | --- |
-| `displayName` | An updated display name for the consumer delete request. |
-| `description` | An updated description for the consumer delete request. |
+| `displayName` | An updated display name for the record delete request. |
+| `description` | An updated description for the record delete request. |
 
 {style="table-layout:auto"}
 
 **Response**
 
-A successful response returns the details of the consumer delete.
+A successful response returns the details of the record delete.
 
 ```json
 {
@@ -266,7 +269,7 @@ A successful response returns the details of the consumer delete.
 | `workorderId` | The ID of the deletion order. This can be used to look up the status of the deletion later. |
 | `orgId` | Your organization ID. |
 | `bundleId` | The ID of the bundle this deletion order is associated with, used for debugging purposes. Multiple deletion orders are bundled together to be processed by downstream services. |
-| `action` | The action being performed by the work order. For consumer deletes, the value is `identity-delete`. |
+| `action` | The action being performed by the work order. For record deletes, the value is `identity-delete`. |
 | `createdAt` | A timestamp of when the deletion order was created. |
 | `updatedAt` | A timestamp of when the deletion order was last updated. |
 | `status` | The current status of the deletion order. |

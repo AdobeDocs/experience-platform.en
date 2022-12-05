@@ -32,6 +32,12 @@ You should also have a working understanding of the publishing flow for tags and
 
 ## Create a secret {#create}
 
+>[!CONTEXTUALHELP]
+>id="platform_eventforwarding_secrets_environments"
+>title="Environments for secrets"
+>abstract="In order for a secret to be usable by event forwarding, it must be assigned to an existing environment. If you do not have any environments created for your event forwarding property, you must configure them before continuing."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="Environments overview"
+
 To create a secret, select **[!UICONTROL Event Forwarding]** in the left navigation, then open the event forwarding property you want to add the secret under. Next, select **[!UICONTROL Secrets]** in the left navigation, followed by **[!UICONTROL Create New Secret]**.
 
 ![Create new secret](../../images/ui/event-forwarding/secrets/create-new-secret.png)
@@ -121,6 +127,12 @@ A popover appears informing you that the secret needs to be manually authorized 
 ![Google authorization popover](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
 A dialog appears that allows you to enter the credentials for your Google account. Follow the prompts to grant event forwarding access to your data under the selected scope. Once the authorization process is complete, the secret is created.
+
+>[!IMPORTANT]
+>
+>If your organization has a re-authentication policy set for Google Cloud applications, the created secrets will not be refreshed successfully after the authentication expires (between 1 and 24 hours depending on the policy configuration).
+>
+>To resolve this issue, sign in to the Google Admin console and navigate to the **[!DNL App access control]** page so you can mark the event forwarding app (Adobe Real-Time CDP Event Forwarding) as [!DNL Trusted]. Refer to the Google documentation on [setting session lengths for Google Cloud services](https://support.google.com/a/answer/9368756) for more information.
 
 ## Edit a secret
 

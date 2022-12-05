@@ -13,7 +13,7 @@ For an overview of destinations, as well as a catalog of all available destinati
 
 ## [!UICONTROL Destinations] dashboard data {#destinations-dashboard-data}
 
-The [!UICONTROL Destinations] dashboard displays a snapshot of the destinations that your organization has enabled within Experience Platform. The data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the destinations dashboard is not updating in real-time.
+The Destinations dashboard displays a snapshot of the destinations that your organization has enabled within Experience Platform. The data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the destinations dashboard is not updating in real-time.
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ The date and time of the most recent snapshot is displayed at the top of the [!U
 
 >[!NOTE]
 >
->If your organization is new to Experience Platform and does not yet have active destinations, the [!UICONTROL Destinations] dashboard and [!UICONTROL Overview] tab are not visible. Instead, selecting [!UICONTROL Destinations] from the left navigation displays the [!UICONTROL Catalog] tab. To learn more about the [!UICONTROL Catalog] tab, refer to the [[!UICONTROL Destinations] workspace guide](../../destinations/ui/destinations-workspace.md).
+>If your organization is new to Experience Platform and does not yet have active destinations, the Destinations dashboard and [!UICONTROL Overview] tab are not visible. Instead, selecting [!UICONTROL Destinations] from the left navigation displays the [!UICONTROL Catalog] tab. To learn more about the [!UICONTROL Catalog] tab, refer to the [[!UICONTROL Destinations] workspace guide](../../destinations/ui/destinations-workspace.md).
 
 ![The Platform UI Destinations Overview with the most recent snapshot highlighted.](../images/destinations/snapshot-timestamp.png)
 
@@ -48,6 +48,16 @@ From the widget library, you can browse the selection of standard and custom seg
 ## Standard widgets {#standard-widgets}
 
 Adobe provides multiple standard widgets that you can use to visualize different metrics related to your destinations and assess the completeness of the segments available for your data analysis. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [Widget library overview](../customize/widget-library.md).
+
+### Prerequisites {#prerequisites}
+
+Before continuing with the descriptions of standard widgets, please ensure that you are familiar with the definitions of the following key terms used throughout the documentation:
+
+* **Segment:** A segment is **the set of rules** that include attributes and event data which qualify a number of profiles as an audience.
+* **Audience**: An audience is **the set of profiles** that meet the criteria of a segment definition.
+* **Mapped / Mapping**: Data mapping is the process of mapping source data fields to related target fields in a destination.
+* **Identity**: An identity is an identifier that uniquely represents an individual customer, such as a cookie ID, device ID, or email ID.
+* **Activate**: Activate is the action taken by a user to map a segment or profiles to a destination such as Oracle Eloqua, Google, or Salesforce Marketing Cloud.
 
 To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
@@ -114,7 +124,7 @@ The updated date shown displays the last time the segment was activated to the d
 
 Selecting the name of a segment from the list shown on the widget will take you to the segment details. You can also select **[!UICONTROL View All]** to navigate to the segment browse tab and then select the name of a segment to view its details.
 
-For more information on working with segments in Experience Platform, please begin by reading the [Segmentation Service overview](../../segmentation/home.md).
+For more information on working with segments in Experience Platform, please refer to the [Segmentation Service overview](../../segmentation/home.md).
 
 ![The Overview tab of the Destinations dashboard with the Recently activated segments widget highlighted.](../images/destinations/recently-activated-segments.png)
 
@@ -132,6 +142,8 @@ This widget contains two metrics: the segment name and the date that the segment
 You can view a segment's details by selecting the name of a segment from the list shown.
 
 ![The Recently activated segments by destination widget.](../images/destinations/recently-activated-segments-by-destination.png)
+
+Please see the prerequisites section for the [definitions of terms used](#prerequisites) in this description.
 
 ### [!UICONTROL Audience size trend] {#audience-size-trend}
 
@@ -166,6 +178,8 @@ The destination ID dropdown filters your available segments. The filter IDs list
 The identities column counts the number of source IDs within the segment that could map to the ID chosen in the widget ID dropdown. 
 
 ![The Unmapped segments by identity widget.](../images/destinations/unmapped-segments-by-identity.png)
+
+Please see the prerequisites section for the [definitions of terms used](#prerequisites) in this description.
 
 ### [!UICONTROL Mapped segments by identity] {#mapped-segments-by-identity}
 
@@ -253,11 +267,19 @@ The widget provides a two column table to show a list of active destination plat
 
 ### [!UICONTROL Activated audiences across all destinations] {#activated-audiences-across-all-destinations}
 
-The [!UICONTROL Activated audiences across all destinations] widget provides the total number of audiences activated across all destinations in a single metric. This number is accurate to the most recent snapshot. 
+The [!UICONTROL Activated audiences across all destinations] widget provides the total number of audiences activated across all destinations in a single metric. 
+
+>[!NOTE]
+>
+>This widget shows the count of audiences and not the count of segments. 
+
+This number is accurate to the most recent snapshot. 
 
 ![The Activated audiences across all destinations widget.](../images/destinations/activated-audiences-across-all-destinations.png)
 
-Select **[!UICONTROL Audiences]** to navigate to the destinations [!UICONTROL Browse] tab. This page provides a list of all enabled destinations and a variety of relevant metrics. See the documentation for [more information on the [!UICONTROL Browse] tab](../../destinations/ui/destinations-workspace.md#browse).
+Select **[!UICONTROL Audiences]** to navigate to the destinations [!UICONTROL Browse] tab. This page provides a list of all enabled destinations and a variety of relevant metrics. See the documentation for more information on the [[!UICONTROL Browse] tab](../../destinations/ui/destinations-workspace.md#browse).
+
+Please see the prerequisites section for the [definitions of terms used](#prerequisites) in this description.
 
 ### [!UICONTROL Activated audiences] {#activated-audiences}
 
@@ -270,6 +292,8 @@ Select **[!UICONTROL Audiences]** to navigate to the details page of the destina
 ![The destinations dashboard details page with Activation data tab highlighted.](../images/destinations/activation-data-tab.png)
 
 This widget helps you to understand the value of your destinations based on the number of audiences activated at a glance. It also provides easy access to more detailed information for further analysis.
+
+Please see the prerequisites section for the [definitions of terms used](#prerequisites) in this description.
 
 ## Next steps
 

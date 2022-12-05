@@ -1,7 +1,7 @@
 ---
 audience: user
 user-guide-title: Dataflows Guide
-user-guide-description: Dataflows are a representation of data jobs that move data across Platform.
+user-guide-description: Learn about dataflows and how to configure them across different services.
 feature: Dataflows
 ---
 
