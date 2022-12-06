@@ -206,11 +206,12 @@ solution: Data Collection
     * [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)
     * Core {#core}
       * [Overview](./extensions/server/core/overview.md)
-    * [Facebook Conversions API](https://exchange.adobe.com/apps/ec/105509)
     * Google Ads Enhanced Conversions {#google-ads-enhanced-conversions}
       * [Overview](./extensions/server/google-ads-enhanced-conversions/overview.md)
     * [!DNL Mailchimp] Edge {#mailchimp}
       * [Overview](./extensions/server/mailchimp/overview.md)
+    * [!DNL Meta Conversions API] {#meta}
+      * [Overview](./extensions/server/meta/overview.md)
     * [!UICONTROL Microsoft Azure] {#azure}
       * [Overview](./extensions/server/azure/overview.md)
     * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
