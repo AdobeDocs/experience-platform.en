@@ -4,17 +4,19 @@ description: Learn how to use SQLAlchemy to manage your Platform data using Pyth
 ---
 # Manage Platform data using [!DNL Python] and [!DNL SQLAlchemy] 
 
-Learn how to use SQLAlchemy to provide greater flexibility in the management of your Adobe Experience Platform data. This document provides instructions and examples to connect [!DNL SQLAlchemy] to Query Service and begin using Python to interact with your databases. more accessible for those who are not as familiar with SQL.
+Learn how to use SQLAlchemy for greater flexibility in the management of your Adobe Experience Platform data. For those who are not as familiar with SQL, SQLAlchemy can greatly improve development time when working with relational databases. This document provides instructions and examples to connect [!DNL SQLAlchemy] to Query Service and begin using Python to interact with your databases.
 
 [!DNL SQLAlchemy] is an Object Relational Mapper (ORM) and a [!DNL Python] code library that can transfer data stored in a SQL database into [!DNL Python] objects. You can then perform CRUD operations on data held within the Platform data lake using [!DNL Python] code. This removes the need to manage data using only PSQL.
 
 ## Getting started
 
-To acquire the necessary credentials for connecting [!DNL SQLAlchemy] to Experience Platform, you must have access to the Queries workspace in the Platform UI. Please contact your IMS Organization administrator if you do not currently have access to the Queries workspace. 
+To acquire the necessary credentials for connecting [!DNL SQLAlchemy] to Experience Platform, you must have access to the Queries workspace in the Platform UI. Please contact your organization administrator if you do not currently have access to the Queries workspace. 
 
 ## [!DNL Query Service] credentials
 
 To find your credentials, log in to the Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For complete directions to find your login credentials, please read the [credentials guide](../ui/credentials.md).
+
+![The Credential tab with expiring credentials for Query Service highlighted.](./credentials.md)
 
 Once you have access to your QS credentials open your [!DNL Python] editor of choice.
 
@@ -68,7 +70,7 @@ db_string = "postgresql://{user}:{password}@{host}:{port}/{dbname}".format(
 engine = create_engine(db_string, connect_args={'sslmode':'require'})
 ```
 
-You are now ready to query data held in Platform using [!DNL Python]. The example shown below returns an array of Query Service table names.
+You are now ready to query Platform data using [!DNL Python]. The example shown below returns an array of Query Service table names.
 
 ```python
 from sqlalchemy import inspect
