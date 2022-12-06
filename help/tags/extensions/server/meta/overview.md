@@ -38,8 +38,6 @@ The extension is installed and you can now employ its capabilities in your tag r
 
 ## Configure an event forwarding rule {#rule}
 
-<!-- [!DNL Meta Conversions API] accepts a set of predefined [standard events](https://www.facebook.com/business/help/402791146561655), each with their own contexts and accepted properties. The rule actions provided by the [!DNL Pixel] extension correlate to these event types, allowing you to easily categorize and configure the event being sent to [!DNL Meta] according to its type. -->
-
 Start creating a new event forwarding rule and configure its conditions as desired. When selecting the actions for the rule, select **[!UICONTROL Meta Conversions API]** for the extension, then select **[!UICONTROL Send Conversions API Event]** for the action type.
 
 ![The [!UICONTROL Send Page View] action type being selected for a rule in the Data Collection UI.](../../../images/extensions/server/meta/select-action.png)
