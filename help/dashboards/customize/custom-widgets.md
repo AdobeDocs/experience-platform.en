@@ -30,13 +30,13 @@ Within the widget library, the **[!UICONTROL Custom]** tab enables you to create
 
 Select the **[!UICONTROL Custom]** tab to begin creating custom widgets or to view custom widgets that your organization has already created. 
 
-![](../images/customization/custom-widgets.png)
+![The widget library workspace with the Custom tab highlighted.](../images/customization/custom-widgets.png)
 
 ## Create a custom widget
 
 To create a custom widget, select **[!UICONTROL Create widget]** from the top-right corner of the widget library or, if this is your organization's first custom widget, select **[!UICONTROL Create]** from the center of the widget library. 
 
-![](../images/customization/create-widget.png)
+![The Custom tab of the widget library workspace with Create highlighted.](../images/customization/create-widget.png)
 
 In the **[!UICONTROL Create widget]** dialog, provide a title and description for your new widget and choose the attribute that you want the widget to display. 
 
@@ -50,7 +50,7 @@ To choose an attribute, select the radio button beside the attribute you want to
 >
 >Only one attribute can be selected per widget and only one widget can be created per attribute. If a widget has already been created for an attribute, the attribute appears grayed out.
 
-![](../images/customization/create-widget-dialog.png)
+![The create widget dialog.](../images/customization/create-widget-dialog.png)
 
 ## Select a visualization
 
@@ -74,11 +74,11 @@ Depending on the attribute, the AI recommends different visualization options. T
 
 To save your new widget and return to the [!UICONTROL Custom] tab, select **[!UICONTROL Create]**. 
 
-![](../images/customization/create-widget-select-attribute.png)
+![The create widget dialog with the visualization options and Create highlighted.](../images/customization/create-widget-select-attribute.png)
 
 Your new widget is now available to be added to a dashboard by choosing the widget from the library and selecting **[!UICONTROL Add widget]**.
 
-![](../images/customization/custom-widgets-new.png)
+![The Custom tab of the widget library workspace with the new widget and Add widget highlighted.](../images/customization/custom-widgets-new.png)
 
 ## Hide a custom widget
 
@@ -90,13 +90,13 @@ To view widgets that have been hidden, select **[!UICONTROL Show hidden widgets]
 >
 >Hiding a widget in the library does not remove the widget from the dashboards of individual users. If a widget should no longer be used in your organization, please ensure that you communicate this directly to all Platform users as they will need to remove the widget from their dashboards.
 
-![](../images/customization/hide-widget.png)
+![The Custom tab of the widget library workspace with the widget dropdown menu options and Show hidden widgets highlighted.](../images/customization/hide-widget.png)
 
 ## Edit a custom widget
 
 You can edit custom widgets in the widget library by selecting the ellipses (`...`) on the widget card and then selecting **[!UICONTROL Edit]** from the dropdown menu. 
 
-![](../images/customization/custom-widget-edit.png)
+![The widget dropdown menu options with the ellipses and Edit highlighted.](../images/customization/custom-widget-edit.png)
 
 On the **[!UICONTROL Edit widget]** dialog, you can edit the title and description of the widget, as well as preview and select different visualizations. After your edits have been made, select **[!UICONTROL Save]** to save your changes and return to the custom widgets tab.
 
@@ -104,7 +104,7 @@ On the **[!UICONTROL Edit widget]** dialog, you can edit the title and descripti
 >
 >Editing a widget in the library does not update the widget for individual users. If a widget has been updated, please ensure that you communicate this directly to all Platform users as they will need to remove the outdated widget from their dashboards and then select and add the updated widget from the widget library.
 
-![](../images/customization/edit-widget.png)
+![The Edit widget dialog.](../images/customization/edit-widget.png)
 
 ## Next steps
 

@@ -19,7 +19,7 @@ This document provides a summary of how to download dashboards using the Platfor
 
 To begin downloading a dashboard, navigate to the dashboard that you want to download (for example, the [!UICONTROL Profiles] dashboard) and then select the more options menu (**`...`**) from the top-right corner of the dashboard. Next, select **[!UICONTROL Download]**.
 
-![](images/download/download-button.png)
+![The Experience Platform Profiles dashboard with the ellipsis and Download dropdown highlighted.](images/download/download-button.png)
 
 ## Preview PDF
 
@@ -27,11 +27,11 @@ After selecting **[!UICONTROL Download]**, the default print menu for your brows
 
 The print menu allows you to preview the PDF that will be saved. The PDF is a true representation of the dashboard widgets as they appear in the Platform UI and the size of the PDF is automatically adjusted to display all of the currently visible dashboard widgets on a single page. 
 
-![](images/download/download-chrome-print.png)
+![The Profile overview displayed on a single page format with the Print options panel to the right.](images/download/download-chrome-print.png)
 
 The PDF includes an automatically generated header containing the Experience Platform logo, the name of the dashboard, your name, and the date and time that the dashboard was downloaded. This information is read-only and cannot be edited in the PDF.
 
-![](images/download/download-pdf.png)
+![A close up of the print preview with the automatically generated header highlighted.](images/download/download-pdf.png)
 
 ## Save as PDF
 
@@ -41,7 +41,7 @@ After previewing the PDF, select **Save** to choose the location to which you wa
 >
 >If necessary, you can use the **Destination** dropdown to select **Save as PDF** if that option is not automatically selected for you. 
 
-![](images/download/download-chrome-print-destination.png)
+![The Profile overview displayed on a single page format with the Destination dropdown Save as PDF printing option highlighted.](images/download/download-chrome-print-destination.png)
 
 ## Customize dashboard PDFs
 
@@ -49,11 +49,11 @@ The PDF that is generated matches the dashboard that you can see in the UI and i
 
 For example, you could modify the look of your profiles dashboard to include several full-width widgets stacked above three standard widgets.
 
-![](images/download/download-modify.png)
+![The Profile dashboard demonstrating elongated widget displays.](images/download/download-modify.png)
 
 Selecting to download the updated dashboard results in a new PDF preview that matches the look of the customized profiles dashboard. It also automatically adjusts the size of the PDF to ensure that all of the visible widgets are included in a one-page PDF.
 
-![](images/download/download-chrome-print-modified.png)
+![The Profile overview displayed on a single page format with the Print options panel to the right.](images/download/download-chrome-print-modified.png)
 
 To learn more about customizing dashboards, begin by reading the [dashboard customization overview](customize/overview.md).
 
