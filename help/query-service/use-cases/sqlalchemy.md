@@ -14,9 +14,9 @@ To acquire the necessary credentials for connecting [!DNL SQLAlchemy] to Experie
 
 ## [!DNL Query Service] credentials
 
-To find your credentials, log in to the Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For complete directions to find your login credentials, please read the [credentials guide](../ui/credentials.md).
+To find your credentials, log in to the Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For complete directions on how to find your login credentials, please read the [credentials guide](../ui/credentials.md).
 
-![The Credential tab with expiring credentials for Query Service highlighted.](./credentials.md)
+![The Credential tab with expiring credentials for Query Service highlighted.](../images/use-cases/credentials.png)
 
 Once you have access to your QS credentials open your [!DNL Python] editor of choice.
 
