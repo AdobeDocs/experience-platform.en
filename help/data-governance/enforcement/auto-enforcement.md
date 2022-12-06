@@ -8,6 +8,10 @@ exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 ---
 # Automatic policy enforcement
 
+>[!IMPORTANT]
+>
+>Automated policy enforcement is only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
+
 Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. When activating audience segments to destinations, Adobe Experience Platform automatically enforces usage policies should any violations occur.
 
 ## Prerequisites
@@ -100,10 +104,6 @@ Select **[!UICONTROL List view]** to display the data lineage as a list. To swit
 ![](../images/enforcement/list-view.png)
 
 ### Consent policy evaluation {#consent-policy-evaluation}
-
->[!IMPORTANT]
->
->Consent policies are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
 
 If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies affect the percentage of profiles that are included in the activation.
 
