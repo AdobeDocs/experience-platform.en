@@ -34,7 +34,7 @@ When finished, select **[!UICONTROL Save]**
 
 ![The [!DNL Pixel] ID provided as a data element in the extension configuration view.](../../../images/extensions/server/meta/configure.png)
 
-The extension is installed and you can now employ its various actions in your tag rules.
+The extension is installed and you can now employ its capabilities in your tag rules.
 
 ## Configure an event forwarding rule {#rule}
 
@@ -44,7 +44,7 @@ Start creating a new event forwarding rule and configure its conditions as desir
 
 ![The [!UICONTROL Send Page View] action type being selected for a rule in the Data Collection UI.](../../../images/extensions/server/meta/select-action.png)
 
-Controls appear that allow you to configure the event data that will be sent to [!DNL Meta] via the [!DNL Conversions API]. These options can be entered directly into the provided inputs, or you can select existing data elements to represent the values instead. The config options are divided into four main sections, as outlined below.
+Controls appear that allow you to configure the event data that will be sent to [!DNL Meta] via the [!DNL Conversions API]. These options can be entered directly into the provided inputs, or you can select existing data elements to represent the values instead. The config options are divided into four main sections as outlined below.
 
 | Config section | Description |
 | --- | --- |
