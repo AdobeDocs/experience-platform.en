@@ -14,7 +14,7 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 >* If you are already exporting files to the **[!UICONTROL SFTP]** destination: Please create new dataflows to the new **[!UICONTROL SFTP beta]** destination.
 >* If you have not yet created any dataflows to the **[!UICONTROL SFTP]** destination, please use the new **[!UICONTROL SFTP beta]** card to export files to **[!UICONTROL SFTP]**.
 
-![Image of the two SFTP destination cards in a side-by-side view.](../..//assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
+![Image of the two SFTP destination cards in a side-by-side view.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
 
 Improvements in the new [!DNL SFTP] destination card include:
 
