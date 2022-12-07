@@ -14,7 +14,7 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 >* If you are already exporting files to the **[!UICONTROL SFTP]** destination: Please create new dataflows to the new **[!UICONTROL SFTP beta]** destination.
 >* If you have not yet created any dataflows to the **[!UICONTROL SFTP]** destination, please use the new **[!UICONTROL SFTP beta]** card to export files to **[!UICONTROL SFTP]**.
 
-![Image of the two SFTP destination cards in a side-by-side view.](/help/destinations/assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
+![Image of the two SFTP destination cards in a side-by-side view.](../..//assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
 
 Improvements in the new [!DNL SFTP] destination card include:
 
@@ -97,6 +97,8 @@ After establishing the authentication connection to the SFTP location, provide t
 * **[!UICONTROL Name]**: enter a name that will help you identify this destination in the Experience Platform user interface;
 * **[!UICONTROL Description]**: enter a description for this destination;
 * **[!UICONTROL Folder path]**: enter the path to the folder in your SFTP location where the files will be exported.
+* **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL SFTP beta]** destination. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL SFTP beta]** destination.
 
 ## Activate segments to this destination {#activate}
 
