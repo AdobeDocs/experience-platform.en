@@ -35,7 +35,7 @@ Calculated fields allow for values to be created based on the attributes in the 
 
 To learn more about calculated fields, please read the [calculated fields guide](./functions.md#calculated-fields).
 
-### Escape special characters
+### Escape special characters {#escape-special-characters}
 
 You can escape special characters in a field by using `${...}`. However, JSON files that contain fields with a period (`.`) are not supported by this mechanism. When interacting with hierarchies, if a child attribute has a period (`.`), you must use a backslash (`\`) to escape special characters. For example, `address` is an object that contains the attribute `street.name`, this can then be referred to as `address.street\.name` instead of `address.street.name`.
 
