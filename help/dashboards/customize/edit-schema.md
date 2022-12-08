@@ -30,11 +30,13 @@ Before you can create custom widgets, Real-time Customer Profile attributes must
 >
 >Your organization can select a maximum of 20 attributes. 
 
-If your organization has not selected any Profile attributes, begin by selecting **[!UICONTROL Edit schema]** in the top-right corner of the widget library.
+If your organization has not selected any Profile attributes, begin by selecting **[!UICONTROL Configure]** in the center of the screen.
+
+![The Custom tab of the widget library workspace with Configure highlighted.](../images/customization/configure-schema.png)
 
 When at least one custom attribute has been created, select **[!UICONTROL Edit schema]** to view the selected attributes and add more.
 
-![](../images/customization/edit-schema.png)
+![The Custom tab of the widget library workspace with Edit schema highlighted.](../images/customization/edit-schema.png)
 
 ## Select an attribute
 
@@ -49,7 +51,7 @@ After choosing the attributes that you wish to add, select **[!UICONTROL Save]**
 >[!WARNING]
 >Newly selected attributes become available following the next daily snapshot when the data is refreshed.
 
-![](../images/customization/select-attribute.png)
+![The dialog to select schema attributes with attributes and Save highlighted.](../images/customization/select-attribute.png)
 
 ## Next steps
 

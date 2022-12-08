@@ -91,4 +91,4 @@ Extensions are helpful when event data is used to trigger an action, or to condu
 
 The connections and extensions in the [destinations catalog](https://platform.adobe.com/destination/catalog) are grouped by destination category (**Advertising**, **Cloud storage**, **Survey platforms**, **Email marketing**, etc.), depending on the marketing action that they help you achieve. For more information on each of the categories, as well as the destinations included in each category, see the [Destinations catalog documentation](./catalog/overview.md).
 
-![Destination categories](./assets/destination-types/destination-categories-menu.png)
+![Destination categories highlighted in the catalog page.](./assets/destination-types/destination-categories-menu.png)
