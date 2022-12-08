@@ -43,6 +43,7 @@ feature: Queries
     - [UI overview](ui/overview.md)
     - [Query Editor user guide](ui/user-guide.md)
     - [Query templates](ui/query-templates.md)
+    - [Monitor queries](ui/monitor-queries.md)
     - [Using Query Service credentials](ui/credentials.md)
     - [Generating datasets from query results](ui/create-datasets.md)
 - Query Service API endpoints {#api}
@@ -54,7 +55,6 @@ feature: Queries
     - [Query templates](api/query-templates.md)
     - [Accelerated queries](api/accelerated-queries.md)
     - [Alert subscriptions](api/alert-subscriptions.md)
-- [Monitor queries](monitor-queries.md)
 - Data Governance {#data-governance}
     - [Overview](data-governance/overview.md)
     - [Audit log guide](data-governance/audit-log-guide.md)
@@ -84,3 +84,4 @@ feature: Queries
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
 <!-- - [Overview](data-distiller/overview.md) new stub doc to be created -->
 <!-- - [Accelerated Queries](data-distiller/query-accelerated-store/accelerated-queries.md) new stub doc to be created-->
+<!-- - [Deciles](use-cases/deciles.md) need a stub do to point to data-distiller/derived-attributes/deciles-use-case.md  -->
