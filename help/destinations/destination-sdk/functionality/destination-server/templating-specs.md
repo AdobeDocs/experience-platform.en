@@ -3,7 +3,7 @@ description: Learn how to configure destination server templating specs in Adobe
 title: Templating specs for destinations created with Destination SDK
 ---
 
-# Templating specs
+# Templating specs for destinations created with Destination SDK
 
 The template spec allows you to configure how to format the exported message to your destination.
 

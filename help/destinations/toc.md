@@ -195,15 +195,30 @@ feature: Destinations
       * [Supported transformation functions](./destination-sdk/functionality/supported-functions.md)
       * [Audience metadata management](./destination-sdk/functionality/audience-metadata-management.md)
 
-    * [Getting started](./destination-sdk/getting-started.md)
-    * Destination SDK functionality {#functionality}
+    * [Getting started with Destination SDK](./destination-sdk/getting-started.md)
+    * Destination authoring API reference {#authoring-api}
+        * [Overview]()
+        * Destination server operations {#server-operations}
+            * [Create a destination server configuration](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
+            * [Retrieve a destination server configuration](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)
+            * [Update a destination server configuration](./destination-sdk/authoring-api/destination-server/update-destination-server.md)
+            * [Delete a destination server configuration](./destination-sdk/authoring-api/destination-server/delete-destination-server.md)
+        * Destination configuration operations {#server-operations}
+            * [Create a destination configuration]()
+            * [Retrieve a destination configuration]()
+            * [Update a destination configuration]()
+            * [Delete a destination configuration]() 
+
+
+
+
+
       * Developer tools {#developer-tools}
         * [Create and test a message transformation template](./destination-sdk/create-template.md)
         * [Test your destination configuration](./destination-sdk/test-destination.md)
     * API operations {#api}
       * [Destination SDK (Destination Authoring) API reference](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [Destinations endpoint API operations](./destination-sdk/destination-configuration-api.md)
-      * [Destination server endpoint API operations](./destination-sdk/destination-server-api.md)
       * [Audience metadata endpoint API operations](./destination-sdk/audience-metadata-api.md)
       * [Credentials endpoint API operations](./destination-sdk/credentials-configuration-api.md)
       * [Publish endpoint API operations](./destination-sdk/destination-publish-api.md)

@@ -5,9 +5,14 @@ title: Configuration options in Destination SDK
 
 # Configuration options in Destination SDK
 
-The destinations service in Adobe Experience Platform uses configuration endpoints for several components that build up the destinations functionality. Combined, these components allow Experience Platform to connect to destination platforms, send custom messages, export custom files, and activate profile data across the digital ecosystem.
+The destinations service in Adobe Experience Platform uses configuration endpoints for several components that build up the destinations functionality.
 
-The configurations used in Adobe Experience Platform Destination SDK are:
+Combined, these components allow Experience Platform to connect to destination platforms, send custom messages, export custom files, and activate profile data across the digital ecosystem.
+
+![Diagram showing the Destination SDK components, configuration endpoints, and the operations supported by them.](assets/destination-sdk-components-diagram.png)
+
+
+Adobe Experience Platform Destination SDK consists of the following configurations:
 
 * **Server configuration**: The destination server configuration ties together information about your server specs and the templating used by Adobe to deliver payloads to your destination. For file-based destinations, this configuration also includes the supported file formatting and compression formats for your destination.
     * [Server specs](destination-server/server-specs.md): A configuration template that contains information about the storage location or HTTP endpoint where data is sent to.
@@ -30,7 +35,7 @@ The configurations used in Adobe Experience Platform Destination SDK are:
     * [Historical profile qualifications](destination-configuration/historical-profile-qualifications.md): This section determines if historical profile qualifications should be exported to your destination.
 * **[Audience metadata configuration](audience-metadata-mangement.md)**: This configuration endpoint allows you to configure how audiences/segments are programmatically created, updated, or deleted in your destination. For file-based destinations, it allows you to set up a notification whenever files are successfully delivered to your destination.
 
-![Diagram showing the Destination SDK configuration endpoints and how these are used together.](assets/self-service-configuration.png)
+
 
 ## Related links {#related-links}
 
