@@ -1,9 +1,9 @@
 ---
-title: Monitor Queries
+title: Monitor Scheduled Queries
 description: Learn how to monitor queries through the Query Service UI.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
 ---
-# Monitor queries
+# Monitor scheduled queries
 
 Adobe Experience Platform provides improved visibility for the status of all query jobs through the UI. From [!UICONTROL Scheduled Queries] tab you can now find important information about your query runs that includes the status, schedule details, and error messages/codes should they fail. You can also subscribe to alerts for queries based on their status through the UI for any of these queries through [!UICONTROL Scheduled Queries] tab.
 

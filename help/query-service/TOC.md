@@ -43,7 +43,7 @@ feature: Queries
     - [UI overview](ui/overview.md)
     - [Query Editor user guide](ui/user-guide.md)
     - [Query templates](ui/query-templates.md)
-    - [Monitor queries](ui/monitor-queries.md)
+    - [Monitor scheduled queries](ui/monitor-queries.md)
     - [Credentials guide](ui/credentials.md)
     - [Generate output datasets from query results](ui/create-datasets.md)
 - Query Service API endpoints {#api}
@@ -68,6 +68,7 @@ feature: Queries
     - [Anonymous block](best-practices/anonymous-block.md)
     - [Incremental loading](best-practices/incremental-load.md)
     - [Data deduplication](best-practices/deduplication.md)
+    - [Dataset samples](sql/dataset-samples.md)
 - Sample Queries {#sample-queries}
     - [Sample Experience Event queries](sample-queries/experience-event.md)
     - [Sample Adobe Analytics queries](sample-queries/adobe-analytics.md)
@@ -78,10 +79,11 @@ feature: Queries
     - [Spark SQL functions](sql/spark-sql-functions.md)
     - [Metadata commands](sql/metadata.md)
     - [Prepared statements](sql/prepared-statements.md)
-    - [Dataset samples](sql/dataset-samples.md)
 - [FAQs](troubleshooting-guide.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
 <!-- - [Overview](data-distiller/overview.md) new stub doc to be created -->
 <!-- - [Accelerated Queries](data-distiller/query-accelerated-store/accelerated-queries.md) new stub doc to be created-->
 <!-- - [Deciles](use-cases/deciles.md) need a stub do to point to data-distiller/derived-attributes/deciles-use-case.md  -->
+<!-- - [Query logs](ui/query-logs.md) -->
+<!-- - [Create schedules](ui/create-schedules.md) -->
