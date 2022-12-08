@@ -51,7 +51,7 @@ All event forwarding properties list **[!UICONTROL Edge]** as their platform. Th
 
 ### Extensions {#extensions}
 
-Event forwarding has its own catalog of compatible extensions, such as the [Core](../../extensions/web/core/event-forwarding.md) extension and [Adobe Cloud Connector](../../extensions/web/cloud-connector/overview.md) extension. You can view the available extensions for event forwarding properties in the UI by selecting **[!UICONTROL Extensions]** in the left navigation, followed by **[!UICONTROL Catalog]**.
+Event forwarding has its own catalog of compatible extensions, such as the [Core](../../extensions/server/core/overview.md) extension and [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md) extension. You can view the available extensions for event forwarding properties in the UI by selecting **[!UICONTROL Extensions]** in the left navigation, followed by **[!UICONTROL Catalog]**.
 
 ![Event forwarding extensions in the Data Collection UI](../../images/ui/event-forwarding/overview/extensions.png)
 

@@ -32,8 +32,8 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 | Feature | Description |
 | --- | --- |
 | Sensitive data handling for datastreams | Datastreams now leverage several Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../edge/datastreams/overview.md#sensitive) for more information.  |
-| [!DNL Splunk] extension for event forwarding | You can now send data to [!DNL Splunk] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Splunk] extension overview](../../tags/extensions/web/splunk/overview.md) for more information. |
-| [!DNL Zendesk] extension for event forwarding | You can now send data to [!DNL Zendesk] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Zendesk] extension overview](../../tags/extensions/web/zendesk/overview.md) for more information. |
+| [!DNL Splunk] extension for event forwarding | You can now send data to [!DNL Splunk] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Splunk] extension overview](../../tags/extensions/server/splunk/overview.md) for more information. |
+| [!DNL Zendesk] extension for event forwarding | You can now send data to [!DNL Zendesk] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Zendesk] extension overview](../../tags/extensions/server/zendesk/overview.md) for more information. |
 
 {style="table-layout:auto"}
 
@@ -117,6 +117,5 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Feature | Description |
 | --- | --- | 
 | Beta availability of Adobe Workfront source | Use the [Adobe Workfront source](../../sources/connectors/adobe-applications/workfront.md) to bring your Workfront data to Experience Platform and perform use cases such as combining your work records with third-party data, applying historical and time-series analytics on work records, and querying work data using standard SQL. For more information, read the guide on [creating a Workfront source connection in the UI](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
-| Beta availability of Oracle Service Cloud source | Use the Oracle Service Cloud source to ingest data from your Oracle Service Cloud account to Experience Platform. For more information, read the documentation on the [Oracle Service Cloud source](../../sources/connectors/customer-success/oracle-service-cloud.md). |
 
 To learn more about sources, read the [sources overview](../../sources/home.md).
