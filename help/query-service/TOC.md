@@ -15,6 +15,11 @@ feature: Queries
   - [Prerequisites](get-started/prerequisites.md)
 - Data Distiller {#data-distiller}
   - [Licence usage](data-distiller/licence-usage.md)
+  - Query accelerated store{#data-distiller/query-accelerated-store}
+    - [Reporting insights data model](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
+  - Derived attributes {#data-distiller/derived-attributes}
+    - [Overview](data-distiller/derived-attributes/overview.md)
+    - [Deciles use case](data-distiller/derived-attributes/deciles-use-case.md)
 - Use cases {#use-cases}
   - [Abandoned browse](use-cases/abandoned-browse.md)
   - [Activity Analysis With Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
@@ -55,8 +60,6 @@ feature: Queries
   - [Audit log guide](data-governance/audit-log-guide.md)
   - [Identities in ad hoc schema datasets](data-governance/ad-hoc-schema-identities.md)
   - [Attribute-based access control support for ad hoc schemas](./data-governance/ad-hoc-schema-labels.md)
-- Query accelerated store{#query-accelerated-store}
-  - [Reporting insights data model](query-accelerated-store/reporting-insights-data-model.md)
 - Guidance on feature usage {#best-practices}
   - [General guidance for query execution](best-practices/writing-queries.md)
   - [Guidance for data asset organization](./best-practices/organize-data-assets.md)
@@ -65,9 +68,6 @@ feature: Queries
   - [Anonymous block](best-practices/anonymous-block.md)
   - [Incremental loading](best-practices/incremental-load.md)
   - [Data deduplication](best-practices/deduplication.md)
-- Derived attributes {#derived-attributes}
-  - [Overview](derived-attributes/overview.md)
-  - [Deciles use case](derived-attributes/deciles-use-case.md)
 - Sample Queries {#sample-queries}
   - [Sample Experience Event queries](sample-queries/experience-event.md)
   - [Sample Adobe Analytics queries](sample-queries/adobe-analytics.md)
@@ -82,3 +82,5 @@ feature: Queries
 - [FAQs](troubleshooting-guide.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+<!-- - [Overview](data-distiller/overview.md) new stub doc to be created -->
+<!-- - [Accelerated Queries](data-distiller/query-accelerated-store/accelerated-queries.md) new stub doc to be created-->
