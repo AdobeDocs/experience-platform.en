@@ -28,15 +28,15 @@ Refer to the table below for information about the destination export type and f
 
 In order to connect Platform to [!DNL Google Cloud Storage], you must first enable interoperability for your [!DNL Google Cloud Storage] account. To access the interoperability setting, open [!DNL Google Cloud Platform] and select **[!UICONTROL Settings]** from the **[!UICONTROL Cloud Storage]** option in the navigation panel.
 
-![Google Cloud Platform dashboard with Cloud Storage and Settings highlighted.](/help/sources/images/tutorials/create/google-cloud-storage/nav.png)
+![Google Cloud Platform dashboard with Cloud Storage and Settings highlighted.](../../../sources/images/tutorials/create/google-cloud-storage/nav.png)
 
 The **[!UICONTROL Settings]** page appears. From here, you can see information regarding your [!DNL Google] project ID and details about your [!DNL Google Cloud Storage] account. To access interoperability settings, select **[!UICONTROL Interoperability]** from the top header.
 
-![The Interoperability tab highlighted in the Google Cloud Platform dashboard.](/help/sources/images/tutorials/create/google-cloud-storage/project-access.png)
+![The Interoperability tab highlighted in the Google Cloud Platform dashboard.](../../../sources/images/tutorials/create/google-cloud-storage/project-access.png)
 
 The **[!UICONTROL Interoperability]** page contains information on authentication, access keys, and the default project associated with your service account. To generate a new access key ID and a secret access key for your service account, select **[!UICONTROL Create a Key for a Service Account]**.
 
-![The Create a key for a service account control highlighted in the Google Cloud Platform dashboard.](/help/sources/images/tutorials/create/google-cloud-storage/interoperability.png)
+![The Create a key for a service account control highlighted in the Google Cloud Platform dashboard.](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
 
 You can use your newly generated access key ID and secret access key to connect your [!DNL Google Cloud Storage] account to Platform.
 
@@ -68,6 +68,8 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
 * **[!UICONTROL Bucket name]**: Enter the name of the [!DNL Google Cloud Storage] bucket to be used by this destination.
 * **[!UICONTROL Folder path]**: Enter the path to the destination folder that will host the exported files.
+* **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files.
 
 ### Enable alerts {#enable-alerts}
 
