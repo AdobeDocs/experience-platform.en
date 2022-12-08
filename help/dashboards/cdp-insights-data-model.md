@@ -5,7 +5,7 @@ exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
 ---
 # Real-Time Customer Data Platform Insights Data Model
 
-The Real-Time Customer Data Platform Insights Data Model feature exposes the data models and SQL that powers the insights for various profile, destination, and segmentation widgets. You can customize these SQL query templates to create Real-Time CDP reports for your marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your user-defined dashboards. See the query accelerated store reporting insights documnetation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../query-service/query-accelerated-store/reporting-insights-data-model.md).
+The Real-Time Customer Data Platform Insights Data Model feature exposes the data models and SQL that powers the insights for various profile, destination, and segmentation widgets. You can customize these SQL query templates to create Real-Time CDP reports for your marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your user-defined dashboards. See the query accelerated store reporting insights documnetation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Prerequisites
 
