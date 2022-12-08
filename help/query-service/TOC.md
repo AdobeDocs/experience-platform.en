@@ -44,8 +44,8 @@ feature: Queries
     - [Query Editor user guide](ui/user-guide.md)
     - [Query templates](ui/query-templates.md)
     - [Monitor queries](ui/monitor-queries.md)
-    - [Using Query Service credentials](ui/credentials.md)
-    - [Generating datasets from query results](ui/create-datasets.md)
+    - [Credentials guide](ui/credentials.md)
+    - [Generate output datasets from query results](ui/create-datasets.md)
 - Query Service API endpoints {#api}
     - [Getting started](api/getting-started.md)
     - [Queries](api/queries.md)
