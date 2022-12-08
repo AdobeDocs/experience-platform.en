@@ -11,10 +11,10 @@ feature: Queries
 - [Query Service overview](home.md)
 - [Query Service packaging](packages.md)
 - [Query Service guardrails](guardrails.md)
-- Data Distiller {#data-distiller}
-  - [Licence usage](data-distiller/licence-usage.md)
 - Get started {#get-started}
   - [Prerequisites](get-started/prerequisites.md)
+- Data Distiller {#data-distiller}
+  - [Licence usage](data-distiller/licence-usage.md)
 - Use cases {#use-cases}
   - [Abandoned browse](use-cases/abandoned-browse.md)
   - [Activity Analysis With Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
@@ -22,7 +22,25 @@ feature: Queries
   - [Bot filtering](use-cases/bot-filtering.md)
   - [Web and mobile analytics insights](use-cases/analytics-insights.md)
   - [Propensity score](use-cases/propensity-score.md)
-- Query Service API {#api}
+- Connect clients to Query Service {#clients}
+  - [Client connections overview](clients/overview.md)
+  - [SSL modes](./clients/ssl-modes.md)
+  - [Aqua Data Studio](clients/aqua-data-studio.md)
+  - [DbVisualizer](./clients/dbvisulaizer.md)
+  - [Jupyter Notebook](clients//jupyter-notebook.md)
+  - [Looker](clients/looker.md)
+  - [Postico](clients/postico.md)
+  - [Power BI](clients/power-bi.md)
+  - [PSQL](clients/psql.md)
+  - [RStudio](clients/rstudio.md)
+  - [Tableau](clients/tableau.md)
+- Query Service UI {#ui}
+  - [UI overview](ui/overview.md)
+  - [Query Editor user guide](ui/user-guide.md)
+  - [Query templates](ui/query-templates.md)
+  - [Using Query Service credentials](ui/credentials.md)
+  - [Generating datasets from query results](ui/create-datasets.md)
+- Query Service API endpoints {#api}
   - [Getting started](api/getting-started.md)
   - [Queries](api/queries.md)
   - [Connection parameters](api/connection-parameters.md)
@@ -31,16 +49,15 @@ feature: Queries
   - [Query templates](api/query-templates.md)
   - [Accelerated queries](api/accelerated-queries.md)
   - [Alert subscriptions](api/alert-subscriptions.md)
-- Query Service UI {#ui}
-  - [UI overview](ui/overview.md)
-  - [Query Editor user guide](ui/user-guide.md)
-  - [Query templates](ui/query-templates.md)
-  - [Using Query Service credentials](ui/credentials.md)
-  - [Generating datasets from query results](ui/create-datasets.md)
 - [Monitor queries](monitor-queries.md)
+- Data Governance {#data-governance}
+  - [Overview](data-governance/overview.md)
+  - [Audit log guide](data-governance/audit-log-guide.md)
+  - [Identities in ad hoc schema datasets](data-governance/ad-hoc-schema-identities.md)
+  - [Attribute-based access control support for ad hoc schemas](./data-governance/ad-hoc-schema-labels.md)
 - Query accelerated store{#query-accelerated-store}
   - [Reporting insights data model](query-accelerated-store/reporting-insights-data-model.md)
-- Best practices {#best-practices}
+- Guidance on feature usage {#best-practices}
   - [General guidance for query execution](best-practices/writing-queries.md)
   - [Guidance for data asset organization](./best-practices/organize-data-assets.md)
   - [Working with nested data structures](best-practices/nested-data-structures.md)
@@ -62,23 +79,6 @@ feature: Queries
   - [Metadata commands](sql/metadata.md)
   - [Prepared statements](sql/prepared-statements.md)
   - [Dataset samples](sql/dataset-samples.md)
-- Connect clients to Query Service {#clients}
-  - [Client connections overview](clients/overview.md)
-  - [SSL modes](./clients/ssl-modes.md)
-  - [Aqua Data Studio](clients/aqua-data-studio.md)
-  - [DbVisualizer](./clients/dbvisulaizer.md)
-  - [Jupyter Notebook](clients//jupyter-notebook.md)
-  - [Looker](clients/looker.md)
-  - [Postico](clients/postico.md)
-  - [Power BI](clients/power-bi.md)
-  - [PSQL](clients/psql.md)
-  - [RStudio](clients/rstudio.md)
-  - [Tableau](clients/tableau.md)
-- Data Governance {#data-governance}
-  - [Overview](data-governance/overview.md)
-  - [Audit log guide](data-governance/audit-log-guide.md)
-  - [Identities in ad hoc schema datasets](data-governance/ad-hoc-schema-identities.md)
-  - [Attribute-based access control support for ad hoc schemas](./data-governance/ad-hoc-schema-labels.md)
-- [Troubleshooting guide](troubleshooting-guide.md)
+- [FAQs](troubleshooting-guide.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
