@@ -38,7 +38,7 @@ In order for [!DNL Flow Service] to connect to [!DNL SFTP], you must provide val
 | `password` | The password for your [!DNL SFTP] server. |
 | `privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA. |
 | `passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If the `privateKeyContent` is password protected, this parameter needs to be used with the private key content's passphrase as value. |
-| `maxConcurrentConnections` | This parameter allows you to specify a maximum limit for how many concurrent connections Platform will create when connecting to your SFTP server. You must set this value to be less than the limit set by SFTP. **Note**: When this setting is enabled for an existing SFTP account, it will only affect future dataflows and not existing dataflows. |
+| `maxConcurrentConnections` | This parameter allows you to specify a maximum limit for the number of concurrent connections Platform will create when connecting to your SFTP server. You must set this value to be less than the limit set by SFTP. **Note**: When this setting is enabled for an existing SFTP account, it will only affect future dataflows and not existing dataflows. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL SFTP] is: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
 
 ### Using Platform APIs
@@ -105,7 +105,7 @@ curl -X POST \
 | `auth.params.port` | The port of the SFTP server. This integer value defaults to 22. |
 | `auth.params.username` | The username associated with your SFTP server. |
 | `auth.params.password` | The password associated with your SFTP server. |
-| `auth.params.maxConcurrentConnections` | The maximum concurrent connections to specify when connecting Platform to SFTP. When enabled, this value must be set to at least 1. |
+| `auth.params.maxConcurrentConnections` | The maximum number of concurrent connections specified when connecting Platform to SFTP. When enabled, this value must be set to at least 1. |
 | `connectionSpec.id` | The SFTP server connection specification ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 >[!TAB SSH public key authentication]
@@ -147,7 +147,7 @@ curl -X POST \
 | `auth.params.username` | The username associated with your [!DNL SFTP] server. |
 | `auth.params.privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA.  |
 | `auth.params.passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
-| `auth.params.maxConcurrentConnections` | The maximum concurrent connections to specify when connecting Platform to SFTP. When enabled, this value must be set to at least 1. |
+| `auth.params.maxConcurrentConnections` | The maximum number of concurrent connections specified when connecting Platform to SFTP. When enabled, this value must be set to at least 1. |
 | `connectionSpec.id` | The [!DNL SFTP] server connection specification ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 >[!ENDTABS]
