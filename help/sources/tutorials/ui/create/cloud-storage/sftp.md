@@ -64,11 +64,13 @@ To connect an existing account, select the FTP or SFTP account you want to conne
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name and an optional description for your new [!DNL SFTP] account.
 
+![The new account screen for SFTP](../../../../images/tutorials/create/sftp/new.png)
+
 #### Authenticate using password
 
 [!DNL SFTP] supports different authentication types for access. Under **[!UICONTROL Account authentication]** select **[!UICONTROL Password]** and then provide the host and port values to connect to, alongside your username and password.
 
-![password](../../../../images/tutorials/create/sftp/password.png)
+![The new account screen for the SFTP source using basic authentication](../../../../images/tutorials/create/sftp/password.png)
 
 #### Authenticate using SSH public key
 
@@ -78,7 +80,7 @@ To use SSH public key-based credentials, select **[!UICONTROL SSH public key]** 
 >
 >SFTP supports an RSA or DSA type OpenSSH key. Ensure that your key file content starts with `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` and ends with `"-----END [RSA/DSA] PRIVATE KEY-----"`. If the private key file is a PPK-format file, use the PuTTY tool to convert from PPK to OpenSSH format.
 
-![ssh](../../../../images/tutorials/create/sftp/ssh-public-key.png)
+![The new account screen for the SFTP source using SSH public key.](../../../../images/tutorials/create/sftp/ssh.png)
 
 | Credential | Description |
 | ---------- | ----------- |
