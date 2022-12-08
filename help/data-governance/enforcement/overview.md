@@ -12,7 +12,7 @@ Once [data usage labels](../labels/overview.md) have been applied and [data usag
 
 >[!NOTE]
 >
->This document focuses on the enforcement of data usage policies. For information on access control policies, refer to the guide on [attribute-based access control](../../access-control/abac/overview).
+>This document focuses on the enforcement of data usage policies. For information on access control policies, refer to the guide on [attribute-based access control](../../access-control/abac/overview.md).
 
 There are two methods of policy enforcement on Adobe Experience Platform: automatic enforcement and API-based enforcement.
 

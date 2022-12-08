@@ -149,6 +149,6 @@ A successful response returns the updated set of labels for the dataset.
 
 ## Next steps
 
-By reading this document, you have learned how to manage data usage labels for datasets and fields using the [!DNL Dataset Service] API. You can now define [data usage policies](../policies/overview.md.md) and [access control policies](../../access-control/abac/ui/policies.md) based on the labels you have applied.
+By reading this document, you have learned how to manage data usage labels for datasets and fields using the [!DNL Dataset Service] API. You can now define [data usage policies](../policies/overview.md) and [access control policies](../../access-control/abac/ui/policies.md) based on the labels you have applied.
 
 For more information on managing datasets in [!DNL Experience Platform], see the [datasets overview](../../catalog/datasets/overview.md).
