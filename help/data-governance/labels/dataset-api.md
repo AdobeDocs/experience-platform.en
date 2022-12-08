@@ -149,10 +149,6 @@ A successful response returns the updated set of labels for the dataset.
 
 ## Next steps
 
-By reading this document, you have learned how to manage data usage labels for datasets and fields using the [!DNL Dataset Service] API.
-
-Once you have added data usage labels at the dataset- and field-level, you can begin to ingest data into [!DNL Experience Platform]. To learn more, start by reading the [data ingestion documentation](../../ingestion/home.md).
-
-You can also now define data usage policies based on the labels you have applied. For more information, see the [data usage policies overview](../policies/overview.md).
+By reading this document, you have learned how to manage data usage labels for datasets and fields using the [!DNL Dataset Service] API. You can now define [data usage policies](../policies/overview.md.md) and [access control policies](../../access-control/abac/ui/policies.md) based on the labels you have applied.
 
 For more information on managing datasets in [!DNL Experience Platform], see the [datasets overview](../../catalog/datasets/overview.md).

@@ -1,17 +1,21 @@
 ---
 keywords: Experience Platform;home;popular topics;data governance;data usage policy
 solution: Experience Platform
-title: Create a Data Usage Policy in the API
+title: Create a Data Governance Policy in the API
 topic-legacy: policies
 type: Tutorial
-description: The Policy Service API allows you to create and manage data usage policies to determine what marketing actions can be taken against data that contains certain data usage labels. This document provides a step-by-step tutorial for creating a policy using the Policy Service API.
+description: Learn how to create a data governance policy using the Policy Service API.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
 ---
-# Create a data usage policy in the API
+# Create a data governance policy in the API
 
-The [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) allows you to create and manage data usage policies to determine what marketing actions can be taken against data that contains certain data usage labels.
+The [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) allows you to create and manage data governance policies to determine what marketing actions can be taken against data that contains certain data usage labels.
 
-This document provides a step-by-step tutorial for creating a policy using the [!DNL Policy Service] API. For a more comprehensive guide to the different operations available in the API, see the [Policy Service developer guide](../api/getting-started.md).
+This document provides a step-by-step tutorial for creating a governance policy using the [!DNL Policy Service] API.
+
+>[!NOTE]
+>
+>For steps on how to create an access control policy, see the `/policies` endpoint guide for the [Access Control API](../../access-control/abac/api/policies.md). To learn how to create a consent policy, see the [policies UI guide](./user-guide.md#consent-policy).
 
 ## Getting started
 

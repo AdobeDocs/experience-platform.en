@@ -8,7 +8,7 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 ---
 # Manage data usage labels in the UI
 
-This user guide covers steps for working with data usage labels within the [!DNL Experience Platform] user interface. Before using the guide, please see the [Data Governance overview](../home.md) for a more robust introduction to the Data Governance framework.
+This user guide covers steps for working with data usage labels within the [!DNL Experience Platform] user interface.
 
 ## Manage labels at the dataset level
 
