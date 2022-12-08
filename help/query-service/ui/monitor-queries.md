@@ -92,26 +92,26 @@ This information is provided in a five-column table. Each row denotes a query ex
 
 Details of the query being scheduled can be seen in the [!UICONTROL Properties] panel. This panel includes the initial query ID, client type, template name, query SQL, and cadence of the schedule.
 
-![The schedule details page with the properties panel highlighted.](./images/ui/monitor-queries/properties-panel.png)
+![The schedule details page with the properties panel highlighted.](../images/ui/monitor-queries/properties-panel.png)
 
 ### Run details
 
 Select a query run ID to navigate to the run details page and view query information. 
 
-![The schedule details screen with a run ID highlighted.](./images/ui/monitor-queries/navigate-to-run-details.png)
+![The schedule details screen with a run ID highlighted.](../images/ui/monitor-queries/navigate-to-run-details.png)
 
 This view provides information on individual runs for this scheduled query and a more detailed breakdown of the run status. This page also includes the client information and details of any errors that caused the query to fail. 
 
-![The run details screen with the overview section highlighted.](./images/ui/monitor-queries/query-run-details.png)
+![The run details screen with the overview section highlighted.](../images/ui/monitor-queries/query-run-details.png)
 
 The query status section provides the error code and error message should the query have failed. 
 
-![The run details screen with the errors section highlighted.](./images/ui/monitor-queries/failed-query.png)
+![The run details screen with the errors section highlighted.](../images/ui/monitor-queries/failed-query.png)
 
 You can copy the query SQL to your clipboard from this view. Select the copy icon in the top right of the SQL snippet to copy the query. A popup message confirms that the code has been copied.
 
-![The run details screen with the SQL copy icon highlighted.](./images/ui/monitor-queries/copy-sql.png)
+![The run details screen with the SQL copy icon highlighted.](../images/ui/monitor-queries/copy-sql.png)
 
 Select **[!UICONTROL Query]** to return to the schedule details screen, or **[!UICONTROL Scheduled Queries]** to return to the [!UICONTROL Scheduled Queries] tab.
 
-![The run details screen with Query highlighted.](./images/ui/monitor-queries/return-navigation.png)
+![The run details screen with Query highlighted.](../images/ui/monitor-queries/return-navigation.png)
