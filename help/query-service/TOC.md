@@ -50,7 +50,7 @@ feature: Queries
     - [Getting started](api/getting-started.md)
     - [Queries](api/queries.md)
     - [Connection parameters](api/connection-parameters.md)
-    - [Scheduled queries](api/scheduled-queries.md)
+    - [Schedules](api/scheduled-queries.md)
     - [Runs for scheduled queries](api/runs-scheduled-queries.md)
     - [Query templates](api/query-templates.md)
     - [Accelerated queries](api/accelerated-queries.md)
@@ -60,7 +60,7 @@ feature: Queries
     - [Audit log guide](data-governance/audit-log-guide.md)
     - [Identities in ad hoc schema datasets](data-governance/ad-hoc-schema-identities.md)
     - [Attribute-based access control support for ad hoc schemas](./data-governance/ad-hoc-schema-labels.md)
-- Guidance on feature usage {#best-practices}
+- Feature guidance {#best-practices}
     - [General guidance for query execution](best-practices/writing-queries.md)
     - [Guidance for data asset organization](./best-practices/organize-data-assets.md)
     - [Working with nested data structures](best-practices/nested-data-structures.md)
