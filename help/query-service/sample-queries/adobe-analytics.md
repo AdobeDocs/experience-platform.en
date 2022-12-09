@@ -16,7 +16,7 @@ See the [analytics use case documentation](../use-cases/analytics-insights.md) t
 
 ## Deduplication  
 
-[!DNL Query Service] supports data deduplication. See the [Data deduplication in [!DNL Query Service] documentation](../best-practices/deduplication.md) for information on how to generate new values at the time of querying [!DNL Experience Event] datasets.
+[!DNL Query Service] supports data deduplication. See the [Data deduplication in [!DNL Query Service] documentation](../essential-concepts/deduplication.md) for information on how to generate new values at the time of querying [!DNL Experience Event] datasets.
 
 ## Merchandising variables (product syntax)
 

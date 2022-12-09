@@ -46,7 +46,7 @@ By reading this document you have a better understanding of how to use Query Ser
 
 See the following use cases to learn about other visitor based used cases:
 
-- [Retrieve a list of visitors organized by number of page views.](./organized-visitor-list.md)
+- [Retrieve a list of visitors organized by number of page views.](./visitors-by-number-of-page-views.md)
 - [List a visitor's previous sessions.](./list-visitor-sessions.md)
 <!-- - [View a roll-up report of a visitor.](./roll-up-report-of-a-visitor.md) -->
-- [Create a trended report of events by day.](../trended-report-of-events.md)
+- [Create a trended report of events by day.](./trended-report-of-events.md)

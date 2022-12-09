@@ -105,7 +105,7 @@ The `FLATTEN` setting does not currently flatten the following data structures:
 
 To resolve both Map and Array limitations you need to use the BI tools raw SQL editing like the Advanced Options -> SQL Statement in Power BI.
 
-BI tools such as raw SQL editing are necessary to resolve both map and array limitations. See the guide on how to [use Power BI advanced options to enter a custom SQL query](../clients/power-bi.mdl#import-tables-using-custom-sql) in the SQL statement section.
+BI tools such as raw SQL editing are necessary to resolve both map and array limitations. See the guide on how to [use Power BI advanced options to enter a custom SQL query](../clients/power-bi.md#import-tables-using-custom-sql) in the SQL statement section.
 
 ## Next steps
 
