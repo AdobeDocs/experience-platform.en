@@ -537,7 +537,7 @@ Query Service is an "all or nothing" solution. Partial access cannot be provided
 
 +++Answer
 You can restrict querying to datasets with read-only access. 
-Is there any info on how to do this? "See the documentation for more info on…"
+<!-- Is there any info on how to do this? "See the documentation for more info on…" -->
 +++
  
 <!-- I cannot publish this question below in this state. Please can you clarify what the intent of the question is and .  -->
@@ -563,6 +563,31 @@ There are three approaches to restricting access. They are as follows:
 ### Once the data is returned by Query Service, are there any checks that can be run by Platform to ensure that it hasn't returned any protected data?
 
 - Query Service supports attribute-based access control. You can restrict access to data at the column/leaf level and/or the struct level. See the documentation to learn more about attribute-based access control. 
+
+### Can I specify an SSL mode for the connection to a third-party client? For example, can I use use 'verify-full' with Power BI?
+
++++Answer
+Yes, SSL modes are supported. See the [SSL modes documentation](./clients/ssl-modes.md) for a breakdown of the different SSL modes available and the level of protection they provide.
++++
+
+### Do we use TLS 1.2 for all connections from Power BI clients to query service?
+
++++Answer
+Yes. Data-in-transit is always HTTPS compliant. The currently supported version is TLS1.2.
++++
+
+### Does a connection made on port 80 still use https?
+
++++Answer
+Yes, a connection made on port 80 still uses SSL. You can also use port 5432. 
++++
+
+### Can I control access to specific datasets and columns for a particular connection? How is this configured?
+
++++Answer
+Yes, attribute-based access control is enforced if configured. See the [attribute-based access control overview](../access-control/abac/overview.md) for more information.
++++
+
 
 ## Exporting data {#exporting-data}
 
