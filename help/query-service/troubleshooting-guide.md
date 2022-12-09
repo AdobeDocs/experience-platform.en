@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;troubleshooting guide;faq;troubleshooting;
 solution: Experience Platform
-title: Query Service Troubleshooting Guide
+title: Frequently Asked Questions
 topic-legacy: troubleshooting
 description: This document contains common questions and answers related to Query Service. Topics include, exporting data, third-party tools, and PSQL errors.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
-# [!DNL Query Service] troubleshooting guide
+# Frequently asked questions
 
 This document provides answers to frequently asked questions about Query Service and provides a list of commonly seen error codes when using Query Service. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 

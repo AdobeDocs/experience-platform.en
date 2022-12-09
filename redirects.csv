@@ -1,4 +1,5 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/query/sample-queries/experience-event.html,https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/trended-report-of-events.html
 https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/incremental-load.html,https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/incremental-load.html
 https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/flatten-nested-data.html,https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/flatten-nested-data.html
 https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/deduplication.html,https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/deduplication.html

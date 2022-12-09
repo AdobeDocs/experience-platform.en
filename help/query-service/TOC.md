@@ -84,7 +84,7 @@ feature: Queries
     - [Spark SQL functions](sql/spark-sql-functions.md)
     - [Metadata commands](sql/metadata.md)
     - [Prepared statements](sql/prepared-statements.md)
-- [FAQs](troubleshooting-guide.md)
+- [Frequently asked questions](troubleshooting-guide.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
 <!-- - [Overview](data-distiller/overview.md) new stub doc to be created -->
