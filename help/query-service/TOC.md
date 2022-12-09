@@ -25,8 +25,12 @@ feature: Queries
     - [Activity Analysis With Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
     - [Attribution analysis](use-cases/attribution-analysis.md)
     - [Bot filtering](use-cases/bot-filtering.md)
-    - [Web and mobile analytics insights](use-cases/analytics-insights.md)
+    - [Create a trended report of events](use-cases/trended-report-of-events.md)
+    - [Get a list of visitors organized by page views](use-cases/visitors-by-number-of-page-views.md)
+    - [List the page views of a user](use-cases/list-visitor-sessions.md)
     - [Propensity score](use-cases/propensity-score.md)
+    - [View the rollup report for a visitor](use-cases/roll-up-report-of-a-visitor.md)
+    - [Web and mobile analytics insights](use-cases/analytics-insights.md)
 - Connect clients to Query Service {#clients}
     - [Client connections overview](clients/overview.md)
     - [SSL modes](./clients/ssl-modes.md)
