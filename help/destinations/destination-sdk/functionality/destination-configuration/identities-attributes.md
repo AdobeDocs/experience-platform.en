@@ -16,6 +16,23 @@ Read more about identities in the [Identity Namespace overview](/help/identity-s
 
 ![Render target identities in the UI](assets/target-identities-ui.png) 
 
+```json
+"identityNamespaces":{
+      "external_id":{
+         "acceptsAttributes":true,
+         "acceptsCustomNamespaces":true,
+         "acceptedGlobalNamespaces":{
+            "Email":{
+            }
+         }
+      },
+      "another_id":{
+         "acceptsAttributes":true,
+         "acceptsCustomNamespaces":true
+      }
+   }
+```
+
 |Parameter | Type | Description|
 |---------|----------|------|
 |`acceptsAttributes` | Boolean | Indicates if customers can map standard profile attributes to the identity that you are configuring. |
