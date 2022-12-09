@@ -1,4 +1,10 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/flatten-nested-data.html,https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/flatten-nested-data.html
+https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/incremental-load.html,https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/incremental-load.html
+https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/flatten-nested-data.html,https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/flatten-nested-data.html
+https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/deduplication.html,https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/deduplication.html
+https://experienceleague.adobe.com/docs/experience-platform/query/sql/dataset-samples.html,https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html
+https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/anonymous-block.html,https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/anonymous-block.html
 https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html,https://experienceleague.adobe.com/docs/experience-platform/query/ui/monitor-queries.html
 https://experienceleague.adobe.com/docs/experience-platform/query/derived-attributes/deciles-use-case.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-attributes/deciles-use-case.html
 https://experienceleague.adobe.com/docs/experience-platform/query/derived-attributes/overview.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-attributes/overview.html

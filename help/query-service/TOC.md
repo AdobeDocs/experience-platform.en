@@ -60,15 +60,16 @@ feature: Queries
     - [Audit log guide](data-governance/audit-log-guide.md)
     - [Identities in ad hoc schema datasets](data-governance/ad-hoc-schema-identities.md)
     - [Attribute-based access control support for ad hoc schemas](./data-governance/ad-hoc-schema-labels.md)
-- Feature guidance {#best-practices}
-    - [General guidance for query execution](best-practices/writing-queries.md)
-    - [Guidance for data asset organization](./best-practices/organize-data-assets.md)
-    - [Working with nested data structures](best-practices/nested-data-structures.md)
-    - [Flatten nested data structures](best-practices/flatten-nested-data.md)
-    - [Anonymous block](best-practices/anonymous-block.md)
-    - [Incremental loading](best-practices/incremental-load.md)
-    - [Data deduplication](best-practices/deduplication.md)
-    - [Dataset samples](sql/dataset-samples.md)
+- Best practices {#best-practices}
+    - [Query execution](best-practices/writing-queries.md)
+    - [Data asset organization](./best-practices/organize-data-assets.md)
+- Essential concepts {#essential-concepts}
+    - [Working with nested data structures](essential-concepts/nested-data-structures.md)
+    - [Flatten nested data structures](essential-concepts/flatten-nested-data.md)
+    - [Anonymous block](essential-concepts/anonymous-block.md)
+    - [Incremental loading](essential-concepts/incremental-load.md)
+    - [Data deduplication](essential-concepts/deduplication.md)
+    - [Dataset samples](essential-concepts/dataset-samples.md)
 - Sample Queries {#sample-queries}
     - [Sample Experience Event queries](sample-queries/experience-event.md)
     - [Sample Adobe Analytics queries](sample-queries/adobe-analytics.md)

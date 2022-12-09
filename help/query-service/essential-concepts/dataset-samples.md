@@ -29,7 +29,7 @@ To use the approximate query processing capabilities detailed above, you must se
 >
 >You must enable the session flag each time you log into Platform.
 
-![The Query Editor with the 'SET aqp=true;' command highlighted.](../images/best-practices/set-session-flag.png)
+![The Query Editor with the 'SET aqp=true;' command highlighted.](../images/essential-concepts/set-session-flag.png)
 
 ## Create a uniform random dataset sample {#create-a-sample}
 
