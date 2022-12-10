@@ -55,6 +55,10 @@ In order for a segment to be evaluated using edge segmentation, the query must c
 
 Additionally, the segment **must** be tied to a merge policy that is active on edge. For more information about merge policies, please read the [merge policies guide](../../profile/api/merge-policies.md).
 
+A segment definition will **not** be enabled for edge segmentation in the following scenarios:
+
+- The segment definition includes a combination of a single event and an `inSegment` event.
+
 ## Retrieve all segments enabled for edge segmentation
 
 You can retrieve a list of all segments that are enabled for edge segmentation within your IMS Organization by making a GET request to the `/segment/definitions` endpoint.

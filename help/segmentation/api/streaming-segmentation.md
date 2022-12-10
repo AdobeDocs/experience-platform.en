@@ -81,6 +81,7 @@ A segment definition will **not** be enabled for streaming segmentation in the f
 
 - The segment definition includes Adobe Audience Manager (AAM) segments or traits.
 - The segment definition includes multiple entities (multi-entity queries).
+- The segment definition includes a combination of a single event and an `inSegment` event.
 
 Please note the following guidelines apply when doing streaming segmentation:
 
