@@ -31,7 +31,7 @@ Before continuing, please review the [getting started guide](./getting-started.m
 
 ## Retrieve a destination configuration {#retrieve}
 
-You can retrieve an existing destination configuration by making a `GET` request to the `/authoring/destination` endpoint.
+You can retrieve an [existing](create-destination-configuration.md) destination configuration by making a `GET` request to the `/authoring/destination` endpoint.
 
 **API format**
 

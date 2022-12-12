@@ -169,9 +169,11 @@ feature: Destinations
         * [Medallia connection](./catalog/voice/medallia-connector.md)
         * [Medallia extension](./catalog/voice/medallia.md)
         * [Talk URL Inbox extension](./catalog/voice/talkurl.md)
+
 * Destination SDK {#destination-sdk}
     * [Overview](./destination-sdk/overview.md)
     * [Integration prerequisites](./destination-sdk/integration-prerequisites.md)
+    
     * Functionality {#functionality}
         * [Configuration options](./destination-sdk/configuration-options.md)
         * Destination server components {#destination-server}
@@ -195,9 +197,11 @@ feature: Destinations
       * [Supported transformation functions](./destination-sdk/functionality/supported-functions.md)
       * [Audience metadata management](./destination-sdk/functionality/audience-metadata-management.md)
 
+
+
     * [Getting started with Destination SDK](./destination-sdk/getting-started.md)
     * Destination authoring API reference {#authoring-api}
-        * [Overview]()
+        * [Destination SDK (Destination Authoring) API reference](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
         * Destination server operations {#server-operations}
             * [Create a destination server configuration](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
             * [Retrieve a destination server configuration](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)
@@ -207,33 +211,43 @@ feature: Destinations
             * [Create a destination configuration](./destination-sdk/authoring-api/destination-configuration/create-destination-configuration.md)
             * [Retrieve a destination configuration](./destination-sdk/authoring-api/destination-configuration/retrieve-destination-configuration.md)
             * [Update a destination configuration](./destination-sdk/authoring-api/destination-configuration/retrieve-destination-configuration.md)
-            * [Delete a destination configuration](./destination-sdk/authoring-api/destination-configuration/delete-destination-configuration.md) 
+            * [Delete a destination configuration](./destination-sdk/authoring-api/destination-configuration/delete-destination-configuration.md)
+    
+    * Audience metadata API reference {#audience-template-api}
+        * [Create an audience template](./destination-sdk/metadata-api/create-audience-template.md)
+        * [Retrieve an audience template](./destination-sdk/metadata-api/retrieve-audience-template.md)
+        * [Update an audience template](./destination-sdk/metadata-api/update-audience-template.md)
+        * [Delete an audience template](./destination-sdk/metadata-api/delete-audience-template.md)
 
+    * Credential configuration API reference {#credentials-api}
+        * [Create a credential configuration](./destination-sdk/credentials-api/create-credential-configuration.md)
+        * [Retrieve a credential configuration](./destination-sdk/credentials-api/retrieve-credential-configuration.md)
+        * [Update a credential configuration](./destination-sdk/credentials-api/update-credential-configuration.md)
+        * [Delete a credential configuration](./destination-sdk/credentials-api/delete-credential-configuration.md)
 
-
-
-
-      * Developer tools {#developer-tools}
-        * [Create and test a message transformation template](./destination-sdk/create-template.md)
-        * [Test your destination configuration](./destination-sdk/test-destination.md)
-    * API operations {#api}
-      * [Destination SDK (Destination Authoring) API reference](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
-      * [Destinations endpoint API operations](./destination-sdk/destination-configuration-api.md)
-      * [Audience metadata endpoint API operations](./destination-sdk/audience-metadata-api.md)
-      * [Credentials endpoint API operations](./destination-sdk/credentials-configuration-api.md)
-      * [Publish endpoint API operations](./destination-sdk/destination-publish-api.md)
-      * Developer tools reference {#developer-tools-reference}
-        * Streaming destination testing API {#streaming-destination-testing-api}
+    * Destination testing API reference {#testing-api}
+        * [Create and test a message transformation template](./destination-sdk/testing-api/create-template.md)
+        * [Test your destination configuration](./destination-sdk/testing-api/test-destination.md)
+        * Streaming destination testing API {#streaming-destinations}
             * [Get sample template API operations](./destination-sdk/sample-template-api.md)
             * [Render template API operations](./destination-sdk/render-template-api.md)
             * [Destination testing API operations](./destination-sdk/destination-testing-api.md)
             * [Sample profile generation API operations](./destination-sdk/sample-profile-generation-api.md)
-        * File-based destination testing API {#file-based-destination-testing-api}
+        * File-based destination testing API {#batch-destinations}
             * [File-based destination testing API overview](./destination-sdk/file-based-destination-testing-overview.md) 
             * [Generate sample profiles based on a source schema](./destination-sdk/file-based-sample-profile-generation-api.md)
             * [Test your file-based destination with sample profiles](./destination-sdk/file-based-destination-testing-api.md)
             * [View detailed activation results](./destination-sdk/file-based-destination-results-api.md)
             * [Validate templatized customer fields](./destination-sdk/file-based-render-template-api.md)
+
+
+
+
+
+    * API operations {#api}
+      * [Publish endpoint API operations](./destination-sdk/destination-publish-api.md)
+      * Developer tools reference {#developer-tools-reference}
+        
     * Guides {#guides}
       * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
       * [Use Destination SDK to configure a file-based destination](./destination-sdk/configure-file-based-destination-instructions.md)
