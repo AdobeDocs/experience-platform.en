@@ -11,19 +11,15 @@ hidefromtoc: true
 
 [[!DNL SugarCRM]](https://www.sugarcrm.com/) is a customer relationship management (CRM) system. [!DNL SugarCRM]'s functionality includes sales-force automation, marketing campaigns, customer support, collaboration, Mobile CRM, Social CRM and reporting.
 
-To retrieve relationship data setup within [!DNL SugarCRM], this Adobe Experience Platform [source](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) connector leverages the below [!DNL SugarCRM] APIs :
-   1. [Account API](https://market.apidocs.sugarcrm.com/#b0aeb0cd-80ea-4688-8474-54e4873f32f3) to retrieve your companies, and the 
-   1. [Contact API](https://market.apidocs.sugarcrm.com/#308c5025-9478-4de3-8a41-1fc3cff1d8d1) to retrieve the people. 
-
-After you bring that data to Experience Platform, you can then execute any analytics.
+[!DNL SugarCRM Accounts & Contacts] leverages the [!DNL SugarCRM] [Accounts](https://market.apidocs.sugarcrm.com/#b0aeb0cd-80ea-4688-8474-54e4873f32f3) and [Contacts](https://market.apidocs.sugarcrm.com/#308c5025-9478-4de3-8a41-1fc3cff1d8d1) endpoints to retrieve relationship data from [!DNL SugarCRM]. After you bring the data to Experience Platform, you can then execute any analytics.
 
 [!DNL SugarCRM Accounts & Contacts] uses bearer tokens as an authentication mechanism to communicate with the [!DNL SugarCRM] Account and Contact APIs.
 
 ## Prerequisites
 
 The first step in creating a [!DNL SugarCRM Accounts & Contacts] source connection is to ensure that you have the below :
-1. A [!DNL SugarMarket] *(SugarCRM’s product for Marketing Automation)* account.
-1. Additionally, a unique API username and user account separate from any user account associated with the marketing or sales process; having API Access permissions in order to access the API. The process to obtain / set up the account is documented on the [[!DNL SugarMarket RESTFUL API (sugarcrm.com)]](https://market.apidocs.sugarcrm.com/#intro) page.
+* A [!DNL SugarMarket] *(SugarCRM’s product for Marketing Automation)* account. Reach out to your SugarCRM account manager to obtain the same.
+* A unique API username and account separate from any user account associated with the marketing or sales process. This unique username and account combination must have API access permissions. For more information on the process to set up an account, visit the [[!DNL SugarMarket RESTFUL API (sugarcrm.com)]](https://market.apidocs.sugarcrm.com/#intro) documentation.
 
 ### Gather required credentials
 
@@ -31,13 +27,13 @@ In order to connect [!DNL SugarCRM Accounts & Contacts] to Platform, you must pr
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| *`Host`* | API endpoint. | `developer.salesfusion.com` |
+| *`Host`* | The SugarCRM API endpoint the source connects to. | `developer.salesfusion.com` |
 | *`Username`* | Your SugarCRM developer account username. | `abc.def@example.com@sugarmarketdemo000.com` |
 | *`Password`* | Your SugarCRM developer account password. | `123456789` |
 
 ## Connect [!DNL SugarCRM Accounts & Contacts] to Platform using the [!DNL Flow Service] API
 
-The following tutorial walks you through the steps to create a [!DNL SugarCRM Accounts & Contacts] source connection and create a dataflow to bring [!DNL SugarCRM Accounts & Contacts] data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a [!DNL SugarCRM Accounts & Contacts] source connection and create a dataflow to bring [[!DNL SugarCRM]](https://www.sugarcrm.com/) Accounts or Contacts data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Create a base connection {#base-connection}
 
@@ -125,9 +121,15 @@ When performing GET requests to explore your source's file structure and content
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
 | `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire string in base64. <br> [!DNL SugarCRM Accounts & Contacts] supports multiple APIs. Depending on which object type you are leveraging, pass one of the below : <ul><li>`accounts` : Companies with whom your organization has a relationship.</li><li>`contacts` : Individual people with whom your organization has an established relationship.</li></ul>|
 
-If you need to work with the [!DNL SugarCRM] Contacts API the value for `{SOURCE_PARAMS}` is passed as `{"object_type":"accounts"}`, encoded in base64 it equates to `eyJvYmplY3RfdHlwZSI6ImFjY291bnRzIn0=` as shown below.
+The [!DNL SugarCRM Accounts & Contacts] supports multiple APIs. Depending on which object type you are leveraging the request to be sent is as below:
 
 **Request**
+
+>[!BEGIN TABS]
+
+>[!TAB Accounts]
+
+For [!DNL SugarCRM] Accounts API the value for `{SOURCE_PARAMS}` is passed as `{"object_type":"accounts"}`, encoded in base64 it equates to `eyJvYmplY3RfdHlwZSI6ImFjY291bnRzIn0=` as shown below.
 
 ```shell
 curl -X GET \
@@ -138,9 +140,31 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
+>[!TAB Contacts]
+
+For [!DNL SugarCRM] Contacts API the value for `{SOURCE_PARAMS}` is passed as `{"object_type":"contacts"}`, encoded in base64 it equates to `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=` as shown below.
+
+```shell
+curl -X GET \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/f5421911-6f6c-41c7-aafa-5d9d2ce51535/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+>[!ENDTABS]
+
 **Response**
 
-A successful response returns the structure of the queried file. *Some records have been removed to allow for a better presentation.*
+Similarly depending on which object type you are leveraging the response received is as below:
+*Some records have been truncated to allow for a better presentation.*
+
+>[!BEGIN TABS]
+
+>[!TAB Accounts]
+
+A successful response returns a structure as below. 
 
 ```json
 {
@@ -321,22 +345,10 @@ A successful response returns the structure of the queried file. *Some records h
 }
 ```
 
-If you need to work with the [!DNL SugarCRM] Contacts API the value for `{SOURCE_PARAMS}` is passed as `{"object_type":"contacts"}`, encoded in base64 it equates to `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=` as shown below.
+>[!TAB Contacts]
 
-**Request**
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/f5421911-6f6c-41c7-aafa-5d9d2ce51535/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns the structure of the queried file. *Some records have been removed to allow for a better presentation.*
+A successful response returns a structure as below. 
+*Some records have been truncated to allow for a better presentation.*
 
 ```json
 {
@@ -549,6 +561,8 @@ A successful response returns the structure of the queried file. *Some records h
 }
 ```
 
+>[!ENDTABS]
+
 ### Create a source connection {#source-connection}
 
 You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
@@ -563,7 +577,12 @@ POST /sourceConnections
 
 The following request creates a source connection for [!DNL SugarCRM Accounts & Contacts]:
 
-If you need to work with the [!DNL SugarCRM] Accounts API the `object_type` property value should be `accounts`.
+Depending on which object type you are leveraging, select from the tabs below:
+>[!BEGIN TABS]
+
+>[!TAB Accounts]
+
+For [!DNL SugarCRM] Accounts API the `object_type` property value should be `accounts`.
 
 ```shell
 curl -X POST \
@@ -591,7 +610,9 @@ curl -X POST \
     }'
 ```
 
-If you need to work with the [!DNL SugarCRM] Contacts API the `object_type` property value should be `contacts`.
+>[!TAB Contacts]
+
+For [!DNL SugarCRM] Contacts API the `object_type` property value should be `contacts`.
 
 ```shell
 curl -X POST \
@@ -618,6 +639,8 @@ curl -X POST \
         }
     }'
 ```
+
+>[!ENDTABS]
 
 | Property | Description |
 | --- | --- |

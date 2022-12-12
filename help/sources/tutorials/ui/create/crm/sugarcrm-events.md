@@ -7,23 +7,7 @@ hidefromtoc: true
 ---
 # Create a [!DNL SugarCRM Events] source connection in the UI
 
-This tutorial provides steps for creating a [!DNL SugarCRM Events] source connector using the Platform user interface.
-
-## Overview
-
-[[!DNL SugarCRM]](https://www.sugarcrm.com/) is a customer relationship management (CRM) system. [!DNL SugarCRM]'s functionality includes sales-force automation, marketing campaigns, customer support, collaboration, Mobile CRM, Social CRM and reporting.
-
-To retrieve event data setup within [!DNL SugarCRM], this Adobe Experience Platform [source](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) connector leverages the [!DNL SugarCRM] [Events API](https://market.apidocs.sugarcrm.com/#516ec3b1-8e70-43d4-8bf2-38a2ae74c0a5).
-
-After you bring that data to Experience Platform, you can then execute any analytics.
-
-[!DNL SugarCRM Events] uses bearer tokens as an authentication mechanism to communicate with the [!DNL SugarCRM] Events API.
-
-## Prerequisites
-
-The first step in creating a [!DNL SugarCRM Events] source connection is to ensure that you have the below :
-1. A [!DNL SugarMarket] *(SugarCRM’s product for Marketing Automation)* account.
-1. Additionally, a unique API username and user account separate from any user account associated with the marketing or sales process; having API Access permissions in order to access the API. The process to obtain / set up the account is documented on the [[!DNL SugarMarket RESTFUL API (sugarcrm.com)]](https://market.apidocs.sugarcrm.com/#intro) page.
+This tutorial provides steps for creating a [!DNL SugarCRM Events] source connector using the Adobe Experience Platform user interface.
 
 ### Gather required credentials
 
@@ -31,7 +15,7 @@ In order to connect [!DNL SugarCRM Events] to Platform, you must provide values 
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| *`Host`* | The SugarCRM API host. | `developer.salesfusion.com` |
+| *`Host`* | The SugarCRM API endpoint the source connects to. | `developer.salesfusion.com` |
 | *`Username`* | Your SugarCRM developer account username. | `abc.def@example.com@sugarmarketdemo000.com` |
 | *`Password`* | Your SugarCRM developer account password. | `123456789` |
 
@@ -42,7 +26,8 @@ Create a Platform [schema](/help/xdm/schema/composition.md) required for [!DNL S
 ![Platform UI screenshot showing an example schema for SugarCRM Events](../../../../images/tutorials/create/sugarcrm-events/sugarcrm-schema-events.png?lang=en)
 
 >[!WARNING]
-> When mapping the schema ensure you also map the mandatory event_id and timestamp fields required by Platform.
+>
+>When mapping the schema ensure you also map the mandatory `event_id` and `timestamp` fields required by Platform.
 
 ## Connect your [!DNL SugarCRM Events] account
 
@@ -87,5 +72,6 @@ To validate that you have correctly set up the source and [!DNL SugarCRM Events]
 1. Depending on the object type you are working with you can verify the aggregated data against the counts visible on the [!DNL SugarMarket] Events page below : 
 ![Screenshot from the SugarMarket Accounts page displaying list of accounts](../../../../images/tutorials/create/sugarcrm-events/sugarmarket-events.png?lang=en)
 
->[!NOTE] 
-> The [!DNL SugarMarket] pages do not include the deleted object counts. However, data retrieved through this source will also include the deleted count, these would be marked with a deleted flag.
+>[!NOTE]
+>
+>The [!DNL SugarMarket] pages do not include the deleted object counts. However, data retrieved through this source will also include the deleted count, these would be marked with a deleted flag.
