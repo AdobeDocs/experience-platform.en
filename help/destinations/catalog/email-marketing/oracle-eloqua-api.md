@@ -122,7 +122,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
         "value": "<null>"
     }
 ```
-Attributes specified in the **[!UICONTROL Target field]** should be named exactly as described in table since these attributes will form request body.
+Attributes specified in the **[!UICONTROL Target field]** should be named exactly as described in the attribute mappings table as these attributes will form request body.
 
 Attributes specified in the **[!UICONTROL Source field]** do not follow any such restriction. You can map it based on your need, however if the data format is not correct when pushed to [!DNL Oracle Eloqua] it will result in an error. 
 
