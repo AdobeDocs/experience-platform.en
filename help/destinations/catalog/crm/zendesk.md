@@ -106,7 +106,8 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 >[!IMPORTANT]
 >
 >The mappings listed in the table below are mandatory and required for [!DNL Zendesk] to work.
->You must have a mapping for *Last Name* or *Name* otherwise the [!DNL Zendesk] API does not respond with an error, and attribute value ignored.
+>
+>Additionally you must have a mapping for *Last Name* or *Name* otherwise the [!DNL Zendesk] API does not respond with an error, and any attribute value passed is ignored.
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
