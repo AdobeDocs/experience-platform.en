@@ -109,7 +109,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 >
 >In addition, you must have a mapping for *Last Name* or *Name* otherwise while the [!DNL Zendesk] API does not respond with any error any attribute value passed is ignored.
 
-Attributes specified in the **[!UICONTROL Target field]** should be named exactly as described in the attribute mappings table as these attributes will form request body.
+Attributes specified in the **[!UICONTROL Target field]** should be named exactly as described in the attribute mappings table as these attributes will form the request body.
 
 Attributes specified in the **[!UICONTROL Source field]** do not follow any such restriction. You can map it based on your need, however if the data format is not correct when pushed to [!DNL Zendesk] it will result in an error.
 
