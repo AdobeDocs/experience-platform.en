@@ -101,13 +101,19 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL Zendesk] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Zendesk] destination fields, follow these steps:
+To correctly send your audience data from Adobe Experience Platform to the [!DNL Zendesk] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination.
 
 >[!IMPORTANT]
 >
->The mappings listed in the table below are mandatory and required for [!DNL Zendesk] to work.
+>Both the attribute mappings listed in the table which follows are mandatory and required for [!DNL Zendesk] to work.
 >
->Additionally you must have a mapping for *Last Name* or *Name* otherwise the [!DNL Zendesk] API does not respond with an error, and any attribute value passed is ignored.
+>In addition, you must have a mapping for *Last Name* or *Name* otherwise while the [!DNL Zendesk] API does not respond with any error any attribute value passed is ignored.
+
+Attributes specified in the **[!UICONTROL Target field]** should be named exactly as described in the attribute mappings table as these attributes will form request body.
+
+Attributes specified in the **[!UICONTROL Source field]** do not follow any such restriction. You can map it based on your need, however if the data format is not correct when pushed to [!DNL Zendesk] it will result in an error.
+
+To correctly map your XDM fields to the [!DNL Zendesk] destination fields, follow these steps:
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
