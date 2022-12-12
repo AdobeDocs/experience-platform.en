@@ -203,11 +203,11 @@ feature: Destinations
             * [Retrieve a destination server configuration](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)
             * [Update a destination server configuration](./destination-sdk/authoring-api/destination-server/update-destination-server.md)
             * [Delete a destination server configuration](./destination-sdk/authoring-api/destination-server/delete-destination-server.md)
-        * Destination configuration operations {#server-operations}
-            * [Create a destination configuration]()
-            * [Retrieve a destination configuration]()
-            * [Update a destination configuration]()
-            * [Delete a destination configuration]() 
+        * Destination configuration operations {#destination-operations}
+            * [Create a destination configuration](./destination-sdk/authoring-api/destination-configuration/create-destination-configuration.md)
+            * [Retrieve a destination configuration](./destination-sdk/authoring-api/destination-configuration/retrieve-destination-configuration.md)
+            * [Update a destination configuration](./destination-sdk/authoring-api/destination-configuration/retrieve-destination-configuration.md)
+            * [Delete a destination configuration](./destination-sdk/authoring-api/destination-configuration/delete-destination-configuration.md) 
 
 
 

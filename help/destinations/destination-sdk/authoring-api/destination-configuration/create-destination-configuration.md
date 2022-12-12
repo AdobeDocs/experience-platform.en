@@ -25,7 +25,7 @@ For a detailed description of the capabilities that you can configure through th
 * [Batch configuration](../../functionality/destination-configuration/batch-configuration.md)
 * [Historical profile qualifications](../../functionality/destination-configuration/historical-profile-qualifications.md)
 
-## Getting started with destination API operations {#get-started}
+## Getting started with destination configuration API operations {#get-started}
 
 Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
@@ -63,9 +63,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "authType":"S3"
       }
    ],
-   "customerEncryptionConfigurations":[
-       
-   ],
    "customerDataFields":[
       {
          "name":"bucket",
@@ -102,8 +99,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       },
       {
          "name":"fileType",
-         "title":"File type",
-         "description":"Select the exported file type.",
+         "title":"Select a fileType",
+         "description":"Select fileType",
          "type":"string",
          "isRequired":true,
          "readOnly":false,
@@ -187,13 +184,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`name` | String | Indicates the title of your destination in the Experience Platform catalog. |
 |`description` | String | Provide a description that Adobe will use in the Experience Platform destinations catalog for your destination card. Aim for no more than 4-5 sentences. |
 |`status` | String | Indicates the lifecycle status of the destination card. Accepted values are `TEST`, `PUBLISHED`, and `DELETED`. Use `TEST` when you first configure your destination. |
-|`customerAuthenticationConfigurations.authType` | String | Indicates the configuration used to authenticate Experience Platform customers to your destination server. <br/><br/> Supported values are: <ul><li>`BASIC`</li><li>`BEARER`</li><li>`OAUTH2`</li><li>`S3`</li><li>`AZURE_CONNECTION_STRING`</li><li>`AZURE_SERVICE_PRINCIPAL`</li><li>`SFTP_WITH_SSH_KEY`</li><li>`SFTP_WITH_PASSWORD`</li><li>`GOOGLE_CLOUD_STORAGE`</li></ul> <br/><br/> See [Customer authentication](../../functionality/destination-configuration/customer-authentication.md) for details about these settings.|
+|`customerAuthenticationConfigurations.authType` | String | Indicates the configuration used to authenticate Experience Platform customers to your destination server. See [customer authentication configuration](../../functionality/destination-configuration/customer-authentication.md) for detailed information about the supported authentication types.|
 |`customerDataFields.name` | String | Provide a name for the custom field you are introducing. <br/><br/> See [Customer data fields](../../functionality/destination-configuration/customer-data-fields.md) for detailed information about these settings. |
 |`customerDataFields.type` | String | Indicates what type of custom field you are introducing. Accepted values are `string`, `object`, `integer`. <br/><br/> See [Customer data fields](../../functionality/destination-configuration/customer-data-fields.md) for detailed information about these settings. |
 |`customerDataFields.title` | String | Indicates the name of the field, as it is seen by customers in the Experience Platform user interface. <br/><br/> See [Customer data fields](../../functionality/destination-configuration/customer-data-fields.md) for detailed information about these settings. |
 |`customerDataFields.description` | String | Provide a description for the custom field. See [Customer data fields](../../functionality/destination-configuration/customer-data-fields.md) for detailed information about these settings. |
 |`customerDataFields.isRequired` | Boolean | Indicates if this field is required in the destination setup workflow. <br/><br/> See [Customer data fields](../../functionality/destination-configuration/customer-data-fields.md) for detailed information about these settings.|
 |`customerDataFields.enum` | String | Renders the custom field as a dropdown menu and lists the options available to the user. <br/><br/> See [Customer data fields](../../functionality/destination-configuration/customer-data-fields.md) for detailed information about these settings. |
+|`customerDataFields.default`|String|Defines the default value from an `enum` list.|
 |`customerDataFields.pattern` | String | Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field. <br/><br/> See [Customer data fields](../../functionality/destination-configuration/customer-data-fields.md) for detailed information about these settings.|
 |`uiAttributes.documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) for your destination. Use `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `https://www.adobe.com/go/destinations-moviestar-en`. Note that this link works only after Adobe sets your destination live and the documentation is published. <br/><br/> See [UI attributes](../../functionality/destination-configuration/ui-attributes.md) for detailed information about these settings.|
 |`uiAttributes.category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br/><br/> See [UI attributes](../../functionality/destination-configuration/ui-attributes.md) for detailed information about these settings. |
@@ -226,3 +224,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`aggregation.configurableAggregation.aggregationKey.includeIdentity` | Boolean | See parameter in example configuration [here](./destination-configuration.md#example-configuration). Set this to `true` if you want to group profiles exported to your destination by identity namespace.  |
 |`aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolean | See parameter in example configuration [here](./destination-configuration.md#example-configuration). Use this parameter to specify if you want the exported profiles to be aggregated into groups of a single identity (GAID, IDFA, phone numbers, email, etc.). |
 |`aggregation.configurableAggregation.aggregationKey.groups` | String | See parameter in example configuration [here](./destination-configuration.md#example-configuration). Create lists of identity groups if you want to group profiles exported to your destination by groups of identity namespace. For example, you could combine profiles that contain the IDFA and GAID mobile identifiers into one call to your destination and emails into another by using the configuration in the example. |
+
+## API error handling
+
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+
+## Next steps
+
+After reading this document, you now know how to configure your destination using the `/authoring/destinations` API endpoint. Read [how to use Destination SDK to configure your destination](./configure-destination-instructions.md) to understand where this step fits into the process of configuring your destination.
