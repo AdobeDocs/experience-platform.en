@@ -39,12 +39,14 @@ Note down the items below before you authenticate to the [!DNL Oracle Eloqua] de
 
 >[!NOTE]
 >
->* [!DNL Oracle Eloqua] has a maximum limit of 250 custom contact fields.
->* [!DNL Oracle Eloqua] custom contact fields are created using the names of the segments selected during the **[!UICONTROL Destinations]** > **[!UICONTROL Activate Destination]** > **[!UICONTROL Select segments]** step.
->* If this limit is exceeded, you will encounter an error in Experience Platform. This is because the [!DNL Oracle Eloqua] API fails to validate the request, and responds with a 400: "There was a validation error" error message describing the issue.
->* If you have reached the limit specified above, you need to remove existing mappings from your destination and delete the corresponding custom contact fields in your [!DNL Oracle Eloqua] account before you can export more segments.
+>* [!DNL Oracle Eloqua] custom contact fields are automatically created using the names of the segments selected during the **[!UICONTROL Destinations]** > **[!UICONTROL Activate Destination]** > **[!UICONTROL Select segments]** step.
 
->* Refer to the [Oracle Eloqua Creating Contact Fields](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) page for information about additional limits.
+* [!DNL Oracle Eloqua] has a maximum limit of 250 custom contact fields.
+* Before exporting new segments ensure you are within this limit by logging into your [!DNL Oracle Eloqua] account.
+* If this limit is exceeded, you will encounter an error in Experience Platform. This is because the [!DNL Oracle Eloqua] API fails to validate the request, and responds with a - *400: There was a validation error* - error message describing the issue.
+* If you have reached the limit specified above, you need to remove existing mappings from your destination and delete the corresponding custom contact fields in your [!DNL Oracle Eloqua] account before you can export more segments.
+
+* Refer to the [Oracle Eloqua Creating Contact Fields](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) page for information about additional limits.
 
 ## Supported identities {#supported-identities}
 
@@ -66,12 +68,12 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL
 
 ### Authenticate to destination {#authenticate}
 
-To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
-![Platform UI screenshot showing how to authenticate.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
-
 Fill in the required fields below. Refer to the [Gather [!DNL Oracle Eloqua] credentials](#gather-credentials) section for any guidance.
 * **[!UICONTROL Password]**: The Password of your [!DNL Oracle Eloqua] account.
 * **[!UICONTROL Username]**: The Username of your [!DNL Oracle Eloqua] account.
+
+To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
+![Platform UI screenshot showing how to authenticate.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.
 
@@ -99,7 +101,34 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL Oracle Eloqua] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Oracle Eloqua] destination fields, follow these steps:
+To correctly send your audience data from Adobe Experience Platform to the [!DNL Oracle Eloqua] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. 
+
+>[!IMPORTANT]
+>
+>Both the attribute mappings listed in the table which follows are mandatory.
+
+`EloquaID` is required to update attributes corresponding to the Identity. The `emailAddress` is also necessary as without it the API throws an error as indicated below:
+```
+    {
+        "type": "ObjectValidationError",
+        "container": {
+            "type": "ObjectKey",
+            "objectType": "Contact"
+        },
+        "property": "emailAddress",
+        "requirement": {
+            "type": "EmailAddressRequirement"
+        },
+        "value": "<null>"
+    }
+```
+Attributes specified in the **[!UICONTROL Target field]** should be named exactly as described in table since these attributes will form request body.
+
+Attributes specified in the **[!UICONTROL Source field]** do not follow any such restriction. You can map it based on your need, however if the data format is not correct when pushed to [!DNL Oracle Eloqua] it will result in an error. 
+
+For example, you can map **[!UICONTROL Source field]** identity namespace `contact key`, `ABC ID` etc. to **[!UICONTROL Target field]** : `EloquaID` after ensuring that the ID values conform to the format that is accepted by [!DNL Oracle Eloqua].
+
+To correctly map your XDM fields to the [!DNL Oracle Eloqua] destination fields, follow these steps:
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
@@ -140,7 +169,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
 
-When creating the destination, if you obtain an error message: `400: "There was a validation error"` or `400 BAD_REQUEST"` as the [!DNL Oracle Eloqua] API response.
+When creating the destination, if you obtain an error message: `400: There was a validation error` or `400 BAD_REQUEST` as the [!DNL Oracle Eloqua] API response.
 ![Platform UI screenshot showing error.](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png)
 
 To fix this error, verify that the custom contact field count in [!DNL Oracle Eloqua] is within the 250 custom contact fields limit as outlined in the [guardrails](#guardrails) section.
