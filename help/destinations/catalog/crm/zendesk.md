@@ -69,11 +69,11 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL
 
 ### Authenticate to destination {#authenticate}
 
-To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
-![Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/zendesk/authenticate-destination.png)
-
 Fill in the required fields below. Refer to the [Gather [!DNL Zendesk] credentials](#gather-credentials) section for any guidance.
 * **[!UICONTROL Bearer Token]**: The Access Token you have generated in your [!DNL Zendesk] account.
+
+To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
+![Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/zendesk/authenticate-destination.png)
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.
 
@@ -103,21 +103,22 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 To correctly send your audience data from Adobe Experience Platform to the [!DNL Zendesk] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Zendesk] destination fields, follow these steps:
 
+>[!IMPORTANT]
+>
+>The mappings listed in the table below are mandatory and required for [!DNL Zendesk] to work.
+>You must have a mapping for *Last Name* or *Name* otherwise the [!DNL Zendesk] API does not respond with an error, and attribute value ignored.
+
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
 1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select custom attributes]** category and select an attribute as needed.
     * Repeat these steps to add the following mappings between your XDM profile schema and your [!DNL Zendesk] instance:
         |Source Field|Target Field| Mandatory|
         |---|---|---|
-        |`xdm: person.name.lastName`|`Attribute: last_name`| Yes, Note you can also use `name`. |
+        |`xdm: person.name.lastName`|`Attribute: last_name` <br>or `Attribute: name`| Yes |
         |`IdentityMap: Email`|`Identity: email`| Yes |
 
     * An example using these mappings is shown below:
     ![Platform UI screenshot example with attribute mappings.](../../assets/catalog/crm/zendesk/mappings.png)
-
->[!IMPORTANT]
->
->You must have a mapping for *Last Name* or *Name* otherwise the [!DNL Zendesk] API does not respond with an error, and attribute value ignored.
 
 When you are finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
@@ -141,7 +142,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Monitor the segment summary and ensure that the count of profiles corresponds to the count within the segment.
 ![Platform UI screenshot example showing Segment.](../../assets/catalog/crm/zendesk/segment.png)
 
-1. Log in to the [!DNL Zendesk] website, then navigate to the **[!UICONTROL Contacts]** page to check if the profiles from the segment have been added. This list can be configured to display columns for the additional fields created with the segment Mapping ID and segment statuses.
+1. Log in to the [!DNL Zendesk] website, then navigate to the **[!UICONTROL Contacts]** page to check if the profiles from the segment have been added. This list can be configured to display columns for the additional fields created with the segment **[!UICONTROL Mapping ID]** and segment statuses.
 ![Zendesk UI screenshot showing the Contacts page with the additional fields created with the segment name.](../../assets/catalog/crm/zendesk/contacts.png)
 
 1. You can alternatively drill down into an individual **[!UICONTROL Person]** page and check the **[!UICONTROL Additional fields]** section displaying the segment name and segment statuses.
