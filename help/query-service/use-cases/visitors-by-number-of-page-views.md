@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;experienceevent queries;experienceevent query;Experience Event query;
-title: Retrieve a List of Visitors Organized by the Number Page Views
+title: List Visitors by Their Number of Page Views
 description: Learn how to write queries that use Experience Events to retrieve a list of visitors organized by the number of page views.
 ---
-# Retrieve a list of visitors organized by the number page views
+# List visitors by their number of page views
 
 This document provides an example of the SQL required to retrieve a list of visitors organized by the number of page views. With Adobe Experience Platform Query Service you can write queries that use [!DNL Experience Events] to capture a variety of use cases. Experience Events are represented by the Experience Data Model (XDM) ExperienceEvent class, which captures an immutable and non-aggregated snapshot of the system when a user interacts with a website or service. Experience Events can even be used for time-domain analysis. See the [next steps section](#next-steps) for more use cases that involve [!DNL Experience Events] to generate visitor reports.
 
