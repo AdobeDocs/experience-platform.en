@@ -32,6 +32,8 @@ In the configuration view that appears, you must provide the [!DNL Pixel] ID you
 >
 >Using a data element gives you the option to dynamically change the [!DNL Pixel] ID used depending on other factors such as the build environment. See the appendix section on [using different [!DNL Pixel] IDs for different environments](#id-data-element) for more information.
 
+You can also optionally provide an event ID to associate with the extension. This is used to deduplicate identical events between [!DNL Meta Pixel] and the [!DNL Meta Conversions API]. See the [!DNL Meta] documentation on [handling duplicate [!DNL Pixel] and [!DNL Conversions API] events](https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events/) for details. 
+
 When finished, select **[!UICONTROL Save]**
 
 ![The [!DNL Pixel] ID provided as a data element in the extension configuration view.](../../../images/extensions/client/meta/configure.png)
@@ -54,7 +56,7 @@ Finally, publish a new tag [build](../../../ui/publishing/builds.md) to enable t
 
 ## Confirm that [!DNL Meta] is receiving data
 
-After your updated build has been deployed to your website, you can confirm whether data is being sent as expected by generating some conversion events on your browser and checking if those events appear in [Meta Events Manager](https://www.facebook.com/business/help/898185560232180).
+After your updated build has been deployed to your website, you can confirm whether data is being sent as expected by generating some conversion events on your browser and checking if those events appear in [[!DNL Meta Events Manager]](https://www.facebook.com/business/help/898185560232180).
 
 ## Next steps
 
