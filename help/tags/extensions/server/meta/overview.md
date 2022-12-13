@@ -16,7 +16,7 @@ Using the [!DNL Meta Conversions API] extension, you can leverage the API's capa
 
 ## Prerequisites
 
-In order to use the extension, you must access to event forwarding and have a valid [!DNL Facebook] account with access to [!DNL Ad Manager] and [!DNL Event Manager]. Specifically, you must copy the ID of an existing [[!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755?id=1205376682832142) (or [create a new [!DNL Pixel]](https://www.facebook.com/business/help/952192354843755) instead) so the extension can be configured to your account.
+In order to use the extension, you must access to event forwarding and have a valid [!DNL Meta] account with access to [!DNL Ad Manager] and [!DNL Event Manager]. Specifically, you must copy the ID of an existing [[!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755?id=1205376682832142) (or [create a new [!DNL Pixel]](https://www.facebook.com/business/help/952192354843755) instead) so the extension can be configured to your account.
 
 ## Install the extension
 
@@ -38,7 +38,7 @@ The extension is installed and you can now employ its capabilities in your tag r
 
 ## Configure an event forwarding rule {#rule}
 
-Start creating a new event forwarding rule and configure its conditions as desired. When selecting the actions for the rule, select **[!UICONTROL Meta Conversions API]** for the extension, then select **[!UICONTROL Send Conversions API Event]** for the action type.
+Start creating a new event forwarding rule and configure its conditions as desired. When selecting the actions for the rule, select **[!UICONTROL Meta Conversions API Extension]** for the extension, then select **[!UICONTROL Send Conversions API Event]** for the action type.
 
 ![The [!UICONTROL Send Page View] action type being selected for a rule in the Data Collection UI.](../../../images/extensions/server/meta/select-action.png)
 
