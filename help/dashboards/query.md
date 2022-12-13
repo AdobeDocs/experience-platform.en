@@ -43,7 +43,7 @@ The naming convention of these datasets is **Profile-Snapshot-Export** followed 
 
 To understand the full schema of each profile snapshot export dataset, you can preview and explore the datasets [using the dataset viewer](../catalog/datasets/user-guide.md) in the Experience Platform UI.
 
-![](images/query/profile-attribute.png)
+![A preview of the Profile-Snapshot-Export dataset.](images/query/profile-attribute.png)
 
 #### Mapping profile attribute datasets to merge policy IDs
 
@@ -66,7 +66,7 @@ The naming convention of this dataset is **Segmentdefinition-Snapshot-Export** f
 
 To understand the full schema of each segment definition snapshot export dataset, you can preview and explore the datasets [using the dataset viewer](../catalog/datasets/user-guide.md) in the Experience Platform UI.
 
-![](images/query/segment-metadata.png)
+![A preview of the Segmentdefinition-Snapshot-Export dataset.](images/query/segment-metadata.png)
 
 ### Destination metadata dataset
 
@@ -76,7 +76,7 @@ The naming convention of this dataset is **DIM_Destination**.
 
 To understand the full schema of the DIM destination dataset, you can preview and explore the dataset [using the dataset viewer](../catalog/datasets/user-guide.md) in the Experience Platform UI.
 
-![](images/query/destinations-metadata.png)
+![A preview of the DIM_Destination dataset.](images/query/destinations-metadata.png)
 
 ## (Beta) Customer Data Platform (CDP) insights reports
 
