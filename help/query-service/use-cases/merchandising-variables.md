@@ -1,8 +1,8 @@
 ---
-title: Return Merchandising variables from analytics data
+title: Return and Use Merchandising variables from analytics data
 description: Learn how to provide XDM fields and sample queries to access the merchandising variables in your Analytics datasets.
 ---
-# Return merchandising variables from analytics data
+# Return and use merchandising variables from analytics data
 
 Use Query Service to manage the data ingested from Adobe Analytics into Adobe Experience Platform as datasets. The following sections provide sample queries that you can use to access the merchandising variables in your Analytics datasets. See the documentation for more information on [how to ingest and map Adobe Analytics data](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/mapping/analytics.html) through the Analytics source
 
