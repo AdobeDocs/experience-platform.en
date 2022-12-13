@@ -42,13 +42,21 @@ You can manage data usage labels using [!DNL Experience Platform] APIs or the us
 
 ### Using the UI
 
-The **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI allows you to view and manage core and custom labels for your organization. The **[!DNL Datasets]** workspace allows you to apply labels to datasets and fields. For more information, refer to the [labels user guide](user-guide.md).
+The **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI allows you to view and manage core and custom labels for your organization. You can use the **[!UICONTROL Schemas]** workspace to [apply labels to your Experience Data Model (XDM) schemas](../../xdm/tutorials/labels.md), or you can use the **[!DNL Datasets]** workspace to [apply labels to datasets](./user-guide.md) instead.
+
+>[!NOTE]
+>
+>Applying labels at the dataset level is only supported for data governance use cases. If you are trying to create access policies for the data, you must apply labels to the schema that the dataset is based on. See the overview on [attribute-based access control](../../access-control/abac/overview.md) for more information.
 
 ### Using APIs
 
 The `/labels` endpoint in the [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) allows you to programmatically manage data usage labels, including creating custom labels. Refer to the [labels endpoint guide](../api/labels.md) for more information.
 
 The [Dataset Service API](https://www.adobe.io/experience-platform-apis/references/dataset-service/) is used to manage labels for dataset and fields. See the guide on [managing dataset labels](./dataset-api.md) for more information.
+
+>[!NOTE]
+>
+>Applying labels at the dataset level is only supported for data governance use cases. If you are trying to create access policies for the data, you must [apply labels to the schema](../../xdm/tutorials/labels.md) that the dataset is based on. See the overview on [attribute-based access control](../../access-control/abac/overview.md) for more information.
 
 ## Next steps
 
