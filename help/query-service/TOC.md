@@ -29,6 +29,7 @@ feature: Queries
     - [List the page views of a user](use-cases/list-visitor-sessions.md)
     - [List visitors by their page views](use-cases/visitors-by-number-of-page-views.md)
     - [Propensity score](use-cases/propensity-score.md)
+    - [Return and use merchandising variables from analytics data](use-cases/merchandising-variables.md)
     - [View the rollup report for a visitor](use-cases/roll-up-report-of-a-visitor.md)
     - [Web and mobile analytics insights](use-cases/analytics-insights.md)
 - Connect clients to Query Service {#clients}
