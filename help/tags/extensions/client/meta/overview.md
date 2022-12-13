@@ -71,10 +71,6 @@ You can achieve this by using a [!UICONTROL Custom Code] data element (provided 
 The following example returns a fake production ID `exampleProductionKey` when used in the production environment, and a different ID `exampleTestKey` when any other environment is used. When implementing this code, replace each value with your actual production and test [!DNL Pixel] IDs.
 
 ```js
-if (turbine.environment.stage === "production") {
-  return 'exampleProductionKey';
-} else {
-  return 'exampleTestKey';
-}
+return (turbine.environment.stage === "production" ? 'exampleProductionKey' : 'exampleTestKey');
 ```
  
