@@ -5,6 +5,12 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 ---
 # Release notes for tags and event forwarding
 
+## November 23, 2022
+
+* **[!DNL AWS] extension for event forwarding**: You can now send data to [!DNL Amazon Web Services] ([!DNL AWS]) using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL AWS] extension overview](../../tags/extensions/server/aws/overview.md) for more information.
+* **[!DNL Google Ads Enhanced Conversions] extension for event forwarding**: You can now send conversion data to [!DNL Google Ads] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Google Ads Enhanced Conversions] extension overview](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) for more information.
+* **[!DNL Microsoft Azure] extension for event forwarding**: You can now send data to [!DNL Microsoft Azure] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Microsoft Azure] extension overview](../../tags/extensions/server/azure/overview.md) for more information.
+
 ## October 26, 2022
 
 * **Sensitive data handling for datastreams**: Datastreams now leverage several Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../edge/datastreams/overview.md#sensitive) for more information.
