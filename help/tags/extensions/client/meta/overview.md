@@ -16,7 +16,7 @@ The [!DNL Meta Pixel] tag extension allows you to leverage [!DNL Pixel] functi
 
 ## Prerequisites
 
-In order to use the extension, you must have a valid [!DNL Facebook] account with access to [!DNL Ads Manager]. Specifically, you must [create a new [!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755) and copy its [!DNL Pixel ID] so the extension can be configured to your account. If you already have an existing [!DNL Meta Pixel], you can use its ID instead.
+In order to use the extension, you must have a valid [!DNL Meta] account with access to [!DNL Ads Manager]. Specifically, you must [create a new [!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755) and copy its [!DNL Pixel ID] so the extension can be configured to your account. If you already have an existing [!DNL Meta Pixel], you can use its ID instead.
 
 ## Install the extension
 
