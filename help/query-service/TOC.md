@@ -75,9 +75,6 @@ feature: Queries
     - [Incremental loading](essential-concepts/incremental-load.md)
     - [Data deduplication](essential-concepts/deduplication.md)
     - [Dataset samples](essential-concepts/dataset-samples.md)
-- Sample Queries {#sample-queries}
-    - [Sample Experience Event queries](sample-queries/experience-event.md)
-    - [Sample Adobe Analytics queries](sample-queries/adobe-analytics.md)
 - SQL reference {#sql}
     - [SQL overview](sql/overview.md)
     - [SQL syntax](sql/syntax.md)

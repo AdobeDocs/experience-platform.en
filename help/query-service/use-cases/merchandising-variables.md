@@ -10,14 +10,14 @@ Use Query Service to manage the data ingested from Adobe Analytics into Adobe Ex
 
 Merchandising variables can follow one of two syntaxes:
 
-* **Product Syntax**: Associate the eVar value to a product and involve custom product-level data. 
-* **Conversion Variable Syntax**: Associates the eVar with a product only if a Binding Event occurs. You can select the events that act as Binding Events. 
+* **Product Syntax**: Associates the eVar value to a product. 
+* **Conversion Variable Syntax**: Associates the eVar with a product only if a binding event occurs. You can select the events that act as binding events. 
 
 ## Product syntax {#product-syntax}
 
 In Adobe Analytics, custom product-level data can be collected through specially configured variables called merchandising variables. These are based on either an eVar or custom events. The difference between these variables and their typical use is that they represent a separate value for each product found on the hit rather than only a single value for the hit.
 
-These variables are referred to as product syntax merchandising variables. This allows for collection of information, such as a per product "discount amount" or information about the product's "location on page" in the customer's search results.
+These variables are referred to as product syntax merchandising variables. This allows for the collection of information, such as a per-product "discount amount" or information about the product's "location on page" in the customer's search results.
 
 To learn more about using the product syntax, please read the Adobe Analytics documentation on [implementing eVars using product syntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax).
 
@@ -43,7 +43,7 @@ productListItems[#]._experience.analytics.event1to100.event#.value
 
 ## Product syntax use cases {#product-use-cases}
 
-The following use cases focus on returning a merchandising eVar from the the `productListItems` array using SQL.
+The following use cases focus on returning a merchandising eVar from the `productListItems` array using SQL.
 
 ### Return a merchandising eVar and event 
 
@@ -97,30 +97,32 @@ LIMIT 20
 
 ### Conversion variable syntax {#conversion-variable-syntax}
 
-Another type of merchandising variable that is found in Adobe Analytics is conversion syntax. With product syntax, the value is collected at the same time as the product, but this requires the data to be present on the same page. There are scenarios where the data occurs on a page prior to the conversion or event of interest related to the product. For example, consider the use case for the product-finding method.
+Another type of merchandising variable that is found in Adobe Analytics is conversion variable syntax. Conversion variable syntax is used when the eVar value is not available to be set in the products variable. This scenario typically means that your page has no context of the merchandising channel or finding method. In these cases, you should set the merchandising variable before the user arrives at the product page, and the value persists until the binding event occurs.
 
-1. A user performs and internal search for "winter hat" which sets the Conversion Syntax enabled Merchandising eVar6 to "internal search:winter hat"
+For example, the product-finding scenario below illustrates how the required data can be present on a page before the conversion or event related to the product occurs.
+
+1. A user performs an internal search for "winter hat" which sets the conversion syntax enabled merchandising eVar6 to "internal search:winter hat".
 2. The user clicks on "waffle beanie" and lands on the product detail page.  
   a. Landing here fires off a `Product View` event for the "waffle beanie" for $12.99.  
-  b. Since `Product View` is configured as a binding event, the product "waffle beanie" is now bound to the eVar6 value of "internal search:winter hat". Anytime the "waffle beanie" product is collected it will be associated to "internal search:winter hat" until either (1) the expiration setting is reached or (2) a new eVar6 value is set and the binding event occurs with that product again.
+  b. Since `Product View` is configured as a binding event, the product "waffle beanie" is now bound to the eVar6 value of "internal search:winter hat". Anytime the "waffle beanie" product is collected it is associated with "internal search:winter hat" until either the eVar expiration setting is reached, or, a new eVar6 value is set and the binding event occurs with that product again.
 3. The user adds the product to their cart, firing the `Cart Add` event.
-4. The user performs another internal search for "summer shirt" which sets the Conversion Syntax enabled Merchandising eVar6 to "internal search:summer shirt"
-5. The user click on "sporty t-shirt" and lands on the product detail page.  
+4. The user performs another internal search for "summer shirt" which sets the conversion syntax enabled merchandising eVar6 to "internal search:summer shirt".
+5. The user selects "sporty t-shirt" and lands on the product detail page.  
   a. Landing here fires off a `Product View` event for "sporty t-shirt for $19.99.  
-  b. The `Product View` event is still our binding event so now the product "sporty t-shirt" is now bound to the eVar6 value of "internal search:summer shirt" and the prior product "waffle beanie" is still bound to an eVar6 value of "internal search:waffle beanie".
+  b. As the `Product View` event is the binding event, the product "sporty t-shirt" is now bound to the eVar6 value of "internal search:summer shirt". The prior product "waffle beanie" is still bound to an eVar6 value of "internal search:waffle beanie".
 6. The user adds the product to their cart, firing the `Cart Add` event.
 7. The user checks out with both products.
 
-In reporting, the orders, revenue, product views, and cart adds will be reportable against eVar6 and will align to the activity of the bound product.
+In reporting, the orders, revenue, product views, and cart adds are reportable against eVar6 and align to the activity of the bound product.
 
 | eVar6 (product-finding method) | revenue | orders | product views | cart adds |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
 | internal search:summer shirt | 19.99 | 1 | 1 | 1 |
 | internal search:winter hat | 12.99 | 1 | 1 | 1 |
 
-To learn more about using the conversion syntax, please read the Adobe Analytics documentation on [implementing eVars using conversion syntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
+To learn more about using the conversion variable syntax, please read the Adobe Analytics documentation on [implementing eVars using conversion variable syntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
 
-Here are the XDM fields to produce the conversion syntax in your [!DNL Analytics] dataset:
+Displayed below are the XDM fields to produce the conversion variable syntax in your [!DNL Analytics] dataset:
 
 #### eVars
 
@@ -140,11 +142,11 @@ productListItems[#].sku
 
 ## Conversion variable uses cases {#conversion-variable-use-cases} 
 
-Conversion Variable Syntax is used when the eVar value is not available to set in the products variable. This scenario typically means that your page has no context of the merchandising channel or finding method. In these cases you set the merchandising variable before you arrive at the product page, and the value persists until the binding event occurs.
+The use cases below reflect scenarios that require conversion variable syntax.
 
 ### Bind the value to the specific product and event pair
 
-The query below binds the value to the specific product and event pair. In this example the value is bound to the product view event.
+The query below binds the value to the specific product and event pair. In this example, the value is bound to the product view event.
 
 ```sql
 SELECT
@@ -165,7 +167,7 @@ LIMIT 100
 
 ### Persist the bound value to subsequent occurrences of the respective product
 
-The sample query below persists the bound value to subsequent occurrences of the respective product. The lowest sub-query establishes the values relationship with the product on the declared binding event. The next sub-query performs the attribution of that bound value across subsequent interactions with the respective product. The top level select aggregates the results to produce the reporting.
+The sample query below persists the bound value to subsequent occurrences of the respective product. The lowest sub-query establishes the value's relationship with the product on the declared binding event. The next sub-query performs the attribution of that bound value across subsequent interactions with the respective product. The top-level SELECT aggregates the results to produce the reporting.
 
 ```sql
 SELECT
@@ -211,4 +213,4 @@ LIMIT 100
 
 By reading this document, you should have a better understanding of how to return a merchandising eVar using product syntax and bind a value to a specific product with the conversion variable syntax.
 
-Next, you should read the [Analytics insights for web and mobile interactions documentation](./analytics-insights.md). It provides common use cases and demonstrates how to use Query Service to create actionable insights from from web and mobile Adobe Analytics data.
+if you have not already done so, you should read the [Analytics insights for web and mobile interactions documentation](./analytics-insights.md) next. It provides common use cases and demonstrates how to use Query Service to create actionable insights from web and mobile Adobe Analytics data.
