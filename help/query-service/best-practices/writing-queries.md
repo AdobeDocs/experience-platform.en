@@ -320,4 +320,7 @@ For more samples of queries that can be used within Query Service, please read t
 
 - [Analytics insights](../use-cases/analytics-insights.md)
 - [Activity analysis with Adobe Target](../use-cases/activity-analysis-with-adobe-target.md)
-- [ExperienceEvent sample queries](../sample-queries/experience-event.md).
+- [Create a trended report of events](../use-cases/trended-report-of-events.md)
+- [View a rollup report of a visitor](../use-cases/roll-up-report-of-a-visitor.md)
+- [List the page views of a user](../use-cases/list-visitor-sessions.md)
+- [List visitors by their number of page views](../use-cases/visitors-by-number-of-page-views.md)

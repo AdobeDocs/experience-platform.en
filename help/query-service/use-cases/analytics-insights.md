@@ -5,7 +5,7 @@ exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
 ---
 # Analytics insights for web and mobile interactions
 
-Adobe Experience Platform allows you to ingest data from Adobe Analytics report suites using Experience Data Model (XDM) fields to populate datasets. Query Service can then make use of this analytics data by running SQL queries to generate valuable insights from a users behavior over the digital platforms.
+Adobe Experience Platform allows you to ingest data from Adobe Analytics report suites using Experience Data Model (XDM) fields to populate datasets. This analytics data is modified to conform to the [!DNL XDM ExperienceEvent] class. Query Service can then make use of this data by running SQL queries to generate valuable insights from a users behavior over the digital platforms.
 
 This document provides a variety of sample SQL queries that demonstrate common use cases when creating insights from web and mobile Analytics data.
 

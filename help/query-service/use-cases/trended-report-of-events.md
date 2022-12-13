@@ -79,7 +79,7 @@ The results of this query can be seen below.
 
 By reading this document you have a better understanding of how to use Query Service with [!DNL Experience Events] to effectively track behavioral trends amongst your users. 
 
-See the following use cases to learn about other visitor based used cases:
+To learn about other visitor based use cases that use [!DNL Experience Events], read the following documents:
 
 - [Retrieve a list of visitors organized by number of page views.](./visitors-by-number-of-page-views.md)
 - [List a visitor's previous sessions.](./list-visitor-sessions.md)

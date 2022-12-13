@@ -1,4 +1,5 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/adobe-analytics.html,https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/merchandising-variables.html
 https://experienceleague.adobe.com/docs/experience-platform/query/sample-queries/adobe-analytics.html, https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/merchandising-variables.html
 https://experienceleague.adobe.com/docs/experience-platform/query/sample-queries/experience-event.html,https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/trended-report-of-events.html
 https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/incremental-load.html,https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/incremental-load.html
@@ -383,7 +384,6 @@ https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog
 https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/create-a-recipe.html,https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/create-a-model.html
 https://experienceleague.adobe.com/docs/experience-platform/destinations/api/email-marketing.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/api/connect-activate-batch-destinations.html
 https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/experience-event.html,https://experienceleague.adobe.com/docs/experience-platform/query/sample-queries/experience-event.html
-https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/adobe-analytics.html,https://experienceleague.adobe.com/docs/experience-platform/query/sample-queries/adobe-analytics.html
 https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/adobe-target.html,https://experienceleague.adobe.com/docs/experience-platform/query/sample-queries/adobe-target.html
 https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/api/developer-tools-reference/sample-template-api.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/api/developer-tools-reference/streaming-destination-testing-api/sample-template-api.html
 https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/api/developer-tools-reference/render-template-api.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/api/developer-tools-reference/streaming-destination-testing-api/render-template-api.html
