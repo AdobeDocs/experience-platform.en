@@ -70,6 +70,7 @@ You can optionally constrain what kinds of values can be inputted for the string
       "value2",
       "value3"
   ]
+}
 ```
 
 You can optional customer-facing labels for each value can be provided under a `meta:enum` property, with each label keyed to a corresponding `enum` value.
@@ -89,6 +90,7 @@ You can optional customer-facing labels for each value can be provided under a `
       "value2": "Value 2",
       "value3": "Value 3"
   }
+}
 ```
 
 >[!NOTE]
@@ -113,6 +115,7 @@ You can optionally provide a `default` property to indicate the default `enum` v
       "value3": "Value 3"
   },
   "default": "value1"
+}
 ```
 
 >[!IMPORTANT]
@@ -243,6 +246,7 @@ You can optionally provide a `default` value that the field will use when no exp
   "type": "string",
   "format": "date",
   "examples": ["2004-10-23"]
+}
 ```
 
 ## [!UICONTROL DateTime] {#date-time}
