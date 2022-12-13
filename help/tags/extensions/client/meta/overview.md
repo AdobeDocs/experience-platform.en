@@ -8,11 +8,9 @@ description: Learn about the Meta Pixel tag extension in Adobe Experience Platfo
 
 The [!DNL Meta Pixel] tag extension allows you to leverage [!DNL Pixel] functionalities in your client-side tag libraries. This document covers how to install the extension and use its capabilities in a [rule](../../../ui/managing-resources/rules.md).
 
-<!-- (To include when Conversions API extension doc is published)
 >[!NOTE]
 >
 >If you are trying to send server-side events to [!DNL Meta] rather than from the client side, use the [[!DNL Meta Conversions API] extension](../../server/meta/overview.md) instead.
--->
 
 ## Prerequisites
 
