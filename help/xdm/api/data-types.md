@@ -229,7 +229,7 @@ POST /tenant/datatypes
 
 Unlike field groups, defining a data type does not require `meta:extends` or `meta:intendedToExtend` fields, nor do fields need to be nested to avoid collisions.
 
-When it comes to defining the field structure of data type itself, you can use primitive types (like `string` or `object`) or you can reference other existing data types through `$ref` attributes. See the guide on [defining custom XDM fields in the API](../tutorials/custom-fields-api.md.md) for detailed guidance on the expected format for different XDM field types.
+When it comes to defining the field structure of data type itself, you can use primitive types (like `string` or `object`) or you can reference other existing data types through `$ref` attributes. See the guide on [defining custom XDM fields in the API](../tutorials/custom-fields-api.md) for detailed guidance on the expected format for different XDM field types.
 
 The following request creates a "Property Construction" object data type with sub-properties `yearBuilt`, `propertyType`, and `location`:
 
