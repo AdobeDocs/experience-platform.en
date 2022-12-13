@@ -50,6 +50,7 @@ A query can be evaluated with edge segmentation if it meets any of the criteria 
 A segment definition will **not** be enabled for edge segmentation in the following scenarios:
 
 - The segment definition includes a combination of a single event and an `inSegment` event.
+  - However, if the segment contained in the `inSegment` event is profile only, the segment definition **will** be enabled for edge segmentation.
 
 ## Next steps
 

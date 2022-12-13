@@ -58,6 +58,7 @@ Additionally, the segment **must** be tied to a merge policy that is active on e
 A segment definition will **not** be enabled for edge segmentation in the following scenarios:
 
 - The segment definition includes a combination of a single event and an `inSegment` event.
+  - However, if the segment contained in the `inSegment` event is profile only, the segment definition **will** be enabled for edge segmentation.
 
 ## Retrieve all segments enabled for edge segmentation
 
