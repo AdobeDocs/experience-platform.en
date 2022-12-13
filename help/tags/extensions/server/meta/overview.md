@@ -8,11 +8,9 @@ The [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing
 
 Using the [!DNL Meta Conversions API] extension, you can leverage the API's capabilities in your [event forwarding](../../../ui/event-forwarding/overview.md) rules to send data to [!DNL Meta] from the Adobe Experience Platform Edge Network. This document covers how to install the extension and use its capabilities in an event forwarding [rule](../../../ui/managing-resources/rules.md).
 
-<!-- (To include when Pixel extension doc is published)
 >[!NOTE]
 >
->If you are trying to send events to [!DNL Meta] from the client side rather than from the server side, use the [[!DNL Meta Conversions API] tag extension](../../server/meta/overview.md) instead.
--->
+>If you are trying to send events to [!DNL Meta] from the client side rather than from the server side, use the [[!DNL Meta Pixiel] tag extension](../../client/meta/overview.md) instead.
 
 ## Prerequisites
 
