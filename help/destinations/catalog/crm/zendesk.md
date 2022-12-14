@@ -4,7 +4,7 @@ description: The Zendesk destination allows you to export your account data and 
 ---
 # [!DNL Zendesk] connection
 
-[!DNL Zendesk](https://www.zendesk.com) is a customer service solution and sales tool.
+[[!DNL Zendesk]](https://www.zendesk.com) is a customer service solution and sales tool.
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Zendesk] Contacts API](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/), to create and update identities within a segment as contacts within [!DNL Zendesk].
 
@@ -32,7 +32,7 @@ Note down the items below before you authenticate to the [!DNL Zendesk] destinat
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| `Bearer Token` | The Access Token you have generated in your [!DNL Zendesk] account. <br> Follow the documentation to [generate a [!DNL Zendesk] access token](https://developer.zendesk.com/documentation/sales-crm/first-call/#1-generate-an-access-token) if you do not have one.| `a0b1c2d3e4...v20w21x22y23z` |
+| `Bearer token` | The Access token you have generated in your [!DNL Zendesk] account. <br> Follow the documentation to [generate a [!DNL Zendesk] access token](https://developer.zendesk.com/documentation/sales-crm/first-call/#1-generate-an-access-token) if you do not have one.| `a0b1c2d3e4...v20w21x22y23z` |
 
 ## Guardrails {#guardrails}
 
@@ -103,12 +103,6 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 To correctly send your audience data from Adobe Experience Platform to the [!DNL Zendesk] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination.
 
->[!IMPORTANT]
->
->Both the attribute mappings listed in the table which follows are mandatory and required for [!DNL Zendesk] to work.
->
->In addition, you must have a mapping for *Last Name* or *Name* otherwise while the [!DNL Zendesk] API does not respond with any error any attribute value passed is ignored.
-
 Attributes specified in the **[!UICONTROL Target field]** should be named exactly as described in the attribute mappings table as these attributes will form the request body.
 
 Attributes specified in the **[!UICONTROL Source field]** do not follow any such restriction. You can map it based on your need, however if the data format is not correct when pushed to [!DNL Zendesk] it will result in an error.
@@ -126,6 +120,12 @@ To correctly map your XDM fields to the [!DNL Zendesk] destination fields, follo
 
     * An example using these mappings is shown below:
     ![Platform UI screenshot example with attribute mappings.](../../assets/catalog/crm/zendesk/mappings.png)
+
+        >[!IMPORTANT]
+        >
+        >Both the target field mappings are mandatory and required for [!DNL Zendesk] to work.
+        >
+        >The mapping for *Last Name* or *Name* is required otherwise the [!DNL Zendesk] API does not respond with any error and any attribute value passed is ignored.
 
 When you are finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
