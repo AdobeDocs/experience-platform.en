@@ -16,7 +16,8 @@ feature: Queries
 - Data Distiller {#data-distiller}
     - [Licence usage](data-distiller/licence-usage.md)
     - Query accelerated store {#query-accelerated-store}
-        - [Reporting insights data model](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
+        - [Send accelerated queries](data-distiller/query-accelerated-store/send-accelerated-queries.md)
+        - [Reporting insights data model guide](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
     - Derived attributes {#derived-attributes}
         - [Overview](data-distiller/derived-attributes/overview.md)
         - [Deciles use case](data-distiller/derived-attributes/deciles-use-case.md)
