@@ -89,8 +89,6 @@ No. Query Service has an autoscaling capability that ensures concurrent queries 
 
 ### Can I use reserved keywords as a column name?
 
-<!-- Is there a web resource that has more info for this question? Do you have a URL that this can link to or is this a typo? 'More details are available here.' - https://jira.corp.adobe.com/browse/PLAT-134776 (Question 2)-->
-
 +++Answer
 There are certain reserved keywords that cannot be used as column name such as, `ORDER`, `GROUP BY`, `WHERE`, `DISTINCT`. If you want to use these keywords, then you must escape these columns.
 +++
