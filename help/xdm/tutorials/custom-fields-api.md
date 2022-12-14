@@ -73,7 +73,7 @@ You can optionally constrain what kinds of values can be inputted for the string
 }
 ```
 
-You can optional customer-facing labels for each value can be provided under a `meta:enum` property, with each label keyed to a corresponding `enum` value.
+You can optionally provide customer-facing labels for each value under a `meta:enum` property, with each label keyed to a corresponding value under `enum`.
 
 ```json
 "sampleField": {
