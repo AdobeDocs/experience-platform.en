@@ -531,23 +531,11 @@ The system does not have indexes as it is not a database but it does have other 
 Query Service is an "all or nothing" solution. Partial access cannot be provided.
 +++
 
-<!-- please can you elaborate on the answer below -->
-
-### Is there any way of restricting what data Query Service can use, or does it simply access the entire Adobe Experience Platform data lake?
+### Can I restrict what data Query Service can use, or does it simply access the entire Adobe Experience Platform data lake?
 
 +++Answer
-You can restrict querying to datasets with read-only access. 
-<!-- Is there any info on how to do this? "See the documentation for more info on…" -->
+Yes, you can restrict querying to datasets with read-only access. 
 +++
- 
-<!-- I cannot publish this question below in this state. Please can you clarify what the intent of the question is and .  -->
-<!-- 
-Q. What other options are there for locking down what can be done with the full query service?
-
- ·select only — give dataset read + query manage
- ·select/insert/create  — give dataset write + query manage
- ·integration account — above + query integration
- -->
 
 ### What other options are there for restricting the data that Query Service can access?
 
