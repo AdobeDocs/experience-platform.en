@@ -13,7 +13,7 @@ exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
 This developer guide provides information on how to format your requests to the [[!DNL Access Control API]](https://www.adobe.io/experience-platform-apis/references/access-control/), and covers the following operations:
 
 - [List names of permissions and resource types](./permissions-and-resource-types.md)
-- [View effective policies for the current user](./effective-policies.md)
+- [View effective access policies for the current user](./effective-policies.md)
 
 ## Getting started
 
