@@ -6,9 +6,9 @@ description: The (API) Oracle Eloqua destination allows you to export your accou
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) enables marketers to plan and execute campaigns while delivering a personalized customer experience for their prospects. With integrated lead management and easy campaign creation, it helps marketers engage the right audience at the right time in their buyer's journey and elegantly scales to reach audiences across channels including email, display search, video, and mobile. Sales teams can close more deals at a faster rate, increasing marketing ROI through real-time insight.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Oracle Eloqua] Update a Contact REST API](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html), which allows you to update identities within a segment into [!DNL Oracle Eloqua].
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Update a contact](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) operation from the [!DNL Oracle Eloqua] REST API, which allows you to update identities within a segment into [!DNL Oracle Eloqua].
 
-[!DNL Oracle Eloqua] uses [Basic Authentication](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) to communicate with the [!DNL Oracle Eloqua Update a Contact REST API]. Instructions to authenticate to your [!DNL Oracle Eloqua] instance are further below, in the [Authenticate to destination](#authenticate) section.
+[!DNL Oracle Eloqua] uses [Basic Authentication](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) to communicate with the [!DNL Oracle Eloqua] REST API. Instructions to authenticate to your [!DNL Oracle Eloqua] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
@@ -32,17 +32,17 @@ Note down the items below before you authenticate to the [!DNL Oracle Eloqua] de
 
 | Credential | Description |
 | --- | --- |
-| `Username` | The Username of your [!DNL Oracle Eloqua] account. |
-| `Password` | The Password of your [!DNL Oracle Eloqua] account. |
+| `Username` | The username of your [!DNL Oracle Eloqua] account. |
+| `Password` | The password of your [!DNL Oracle Eloqua] account. |
 
 ## Guardrails {#guardrails}
 
 >[!NOTE]
 >
->* [!DNL Oracle Eloqua] custom contact fields are automatically created using the names of the segments selected during the **[!UICONTROL Destinations]** > **[!UICONTROL Activate Destination]** > **[!UICONTROL Select segments]** step.
+>* [!DNL Oracle Eloqua] custom contact fields are automatically created using the names of the segments selected during the **[!UICONTROL Select segments]** step.
 
 * [!DNL Oracle Eloqua] has a maximum limit of 250 custom contact fields.
-* Before exporting new segments ensure you are within this limit by logging into your [!DNL Oracle Eloqua] account.
+* Before exporting new segments ensure that the number of Platform segments and the number of existing segments within [!DNL Oracle Eloqua] do not exceed this limit.
 * If this limit is exceeded, you will encounter an error in Experience Platform. This is because the [!DNL Oracle Eloqua] API fails to validate the request, and responds with a - *400: There was a validation error* - error message describing the issue.
 * If you have reached the limit specified above, you need to remove existing mappings from your destination and delete the corresponding custom contact fields in your [!DNL Oracle Eloqua] account before you can export more segments.
 
@@ -69,8 +69,8 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL
 ### Authenticate to destination {#authenticate}
 
 Fill in the required fields below. Refer to the [Gather [!DNL Oracle Eloqua] credentials](#gather-credentials) section for any guidance.
-* **[!UICONTROL Password]**: The Password of your [!DNL Oracle Eloqua] account.
-* **[!UICONTROL Username]**: The Username of your [!DNL Oracle Eloqua] account.
+* **[!UICONTROL Password]**: The password of your [!DNL Oracle Eloqua] account.
+* **[!UICONTROL Username]**: The username of your [!DNL Oracle Eloqua] account.
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
 ![Platform UI screenshot showing how to authenticate.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
@@ -102,10 +102,6 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 ### Mapping considerations and example {#mapping-considerations-example}
 
 To correctly send your audience data from Adobe Experience Platform to the [!DNL Oracle Eloqua] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. 
-
->[!IMPORTANT]
->
->Both the attribute mappings listed in the table which follows are mandatory.
 
 `EloquaID` is required to update attributes corresponding to the Identity. The `emailAddress` is also necessary as without it the API throws an error as indicated below:
 ```
@@ -142,11 +138,15 @@ To correctly map your XDM fields to the [!DNL Oracle Eloqua] destination fields,
     * An example using these mappings is shown below:
     ![Platform UI screenshot example with attribute mappings.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
+        >[!IMPORTANT]
+        >
+        >Both the `emailAddress` and `EloquaId` target attribute mappings are mandatory.
+
 When you are finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
 >[!NOTE]
 >
->The destination automatically suffixes a unique identifier to the selected segment names on each execution when sending the contact field information to [!DNL Oracle Eloqua]. This ensures the contact field names corresponding to your segment names do not overlap. Refer to the [Validate data export](#exported-data) section screenshot example of a [!DNL Oracle Eloqua] Contact Details page with custom contact field created using the segment names.
+>The destination automatically suffixes a unique identifier to the selected segment names on each execution when sending the contact field information to [!DNL Oracle Eloqua]. This ensures the contact field names corresponding to your segment names do not overlap. Refer to the [Validate data export](#exported-data) section screenshot example of an [!DNL Oracle Eloqua] Contact Details page with custom contact field created using the segment names.
 
 ## Validate data export {#exported-data}
 
@@ -169,10 +169,8 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
 
-When creating the destination, if you obtain an error message: `400: There was a validation error` or `400 BAD_REQUEST` as the [!DNL Oracle Eloqua] API response.
+When creating the destination, you might receive one of the following error messages: `400: There was a validation error` or `400 BAD_REQUEST`. This happens when you exceed the 250 custom contact fields limit, as described in the [guardrails](#guardrails) section. To fix this error, make sure you are not exceeding the custom contact field limit in [!DNL Oracle Eloqua].
 ![Platform UI screenshot showing error.](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png)
-
-To fix this error, verify that the custom contact field count in [!DNL Oracle Eloqua] is within the 250 custom contact fields limit as outlined in the [guardrails](#guardrails) section.
 
 Refer to the [[!DNL Oracle Eloqua] HTTP status codes](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPStatusCodes.html) and [[!DNL Oracle Eloqua] Validation errors](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPValidationErrors.html) pages for a comprehensive list of status and error codes with explanations.
 
