@@ -19,12 +19,12 @@ The following key concepts are illustrated:
 
 ## Getting started
 
-This guide requires a working understanding of [query execution in Query Service](../../best-practices/writing-queries.md) and the following components of Adobe Experience Platform:
+This guide requires a working understanding of [query execution in Query Service](../best-practices/writing-queries.md) and the following components of Adobe Experience Platform:
 
-* [Real-time Customer Profile overview](../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Basics of schema composition](../../../xdm/schema/composition.md): An introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas.
-* [How to enable a schema for Real-time Customer Profile](../../../profile/tutorials/add-profile-data.md): This tutorial outlines the steps necessary to add data to Real-time Customer Profile.
-* [How to define a custom data type](../../../xdm/api/data-types.md): Data types are used as reference-type fields in classes or schema field groups and allow for the consistent use of a multi-field structure that can be included anywhere in the schema.
+* [Real-time Customer Profile overview](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [Basics of schema composition](../../xdm/schema/composition.md): An introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas.
+* [How to enable a schema for Real-time Customer Profile](../../profile/tutorials/add-profile-data.md): This tutorial outlines the steps necessary to add data to Real-time Customer Profile.
+* [How to define a custom data type](../../xdm/api/data-types.md): Data types are used as reference-type fields in classes or schema field groups and allow for the consistent use of a multi-field structure that can be included anywhere in the schema.
 
 ## Objectives
 
@@ -40,13 +40,13 @@ This guide uses an airline loyalty dataset to demonstrate how to use Query Servi
 
 Using Query Service, you can create a dataset that contains categorical deciles, which can then be segmented to create audiences based on attribute ranking. The concepts displayed in the following examples can be applied to create other decile bucket datasets, as long as a category is defined and a metric is available. 
 
-The example airline loyalty data uses an [XDM ExperienceEvents class](../../../xdm/classes/experienceevent.md). Each event is a record of a business transaction for mileage, either credited or debited, and the membership loyalty status of either "Flyer", "Frequent", "Silver", or "Gold". The primary identity field is `membershipNumber`.
+The example airline loyalty data uses an [XDM ExperienceEvents class](../../xdm/classes/experienceevent.md). Each event is a record of a business transaction for mileage, either credited or debited, and the membership loyalty status of either "Flyer", "Frequent", "Silver", or "Gold". The primary identity field is `membershipNumber`.
 
 ### Sample datasets
 
 The initial airline loyalty dataset for this example is "Airline Loyalty Data", and has the following schema. Note that the primary identity for the schema is `_profilefoundationreportingstg.membershipNumber`.
 
-![A diagram of the Airline Loyalty Data schema.](../../images/derived-attributes/deciles-use-case/airline-loyalty-data.png)
+![A diagram of the Airline Loyalty Data schema.](../images/derived-attributes/deciles-use-case/airline-loyalty-data.png)
 
 **Sample data**
 
@@ -72,27 +72,27 @@ In the airline loyalty data seen above, the `.mileage` value contains the number
 
 Create an "Airline Loyalty Decile Schema" to create a decile dataset using Query Service.
 
-![A diagram of the "Airline Loyalty Decile Schema".](../../images/derived-attributes/deciles-use-case/airline-loyalty-decile-schema.png)
+![A diagram of the "Airline Loyalty Decile Schema".](../images/use-cases/airline-loyalty-decile-schema.png)
 
 ### Enable the schema for Real-time Customer Profile
 
-Data being ingested into Experience Platform for use by Real-time Customer Profile must conform to [an Experience Data Model (XDM) schema that is enabled for Profile](../../../xdm/ui/resources/schemas.md). In order for a schema to be enabled for Profile, it must implement either the XDM Individual Profile or XDM ExperienceEvent class.
+Data being ingested into Experience Platform for use by Real-time Customer Profile must conform to [an Experience Data Model (XDM) schema that is enabled for Profile](../../xdm/ui/resources/schemas.md). In order for a schema to be enabled for Profile, it must implement either the XDM Individual Profile or XDM ExperienceEvent class.
 
-[Enable your schema for use in Real-time Customer Profile using the Schema Registry API](../../../xdm/tutorials/create-schema-api.md) or the [Schema Editor user interface](../../../xdm/tutorials/create-schema-ui.md).  Detailed instructions on how to enable a schema for Profile are available in their respective documentation.
+[Enable your schema for use in Real-time Customer Profile using the Schema Registry API](../../xdm/tutorials/create-schema-api.md) or the [Schema Editor user interface](../../xdm/tutorials/create-schema-ui.md).  Detailed instructions on how to enable a schema for Profile are available in their respective documentation.
 
 Next, create a data type to be reused for all decile-related field groups. The creation of the decile field group is a one-time step per sandbox. It can also be reused for all decile-related schemas.
 
 ### Create an identity namespace and mark it as the primary identifier {#identity-namespace}
 
-Any schema created for use with deciles must have a primary identity assigned. You can [define an identity field in the Adobe Experience Platform Schemas UI](../../../xdm/ui/fields/identity.md#define-an-identity-field), or through the [Schema Registry API](../../../xdm/api/descriptors.md#create).
+Any schema created for use with deciles must have a primary identity assigned. You can [define an identity field in the Adobe Experience Platform Schemas UI](../../xdm/ui/fields/identity.md#define-an-identity-field), or through the [Schema Registry API](../../xdm/api/descriptors.md#create).
 
-Query Service also allows you to set an identity or a primary identity for ad hoc schema dataset fields directly through SQL. See the documentation on [setting a secondary identity and primary identity in ad hoc schema identities](../../data-governance/ad-hoc-schema-identities.md) for more information.
+Query Service also allows you to set an identity or a primary identity for ad hoc schema dataset fields directly through SQL. See the documentation on [setting a secondary identity and primary identity in ad hoc schema identities](../data-governance/ad-hoc-schema-identities.md) for more information.
 
 ### Create a query for calculating deciles over a lookback period {#create-a-query}
 
 The following example demonstrates the SQL query for calculating a decile over a lookback period.
 
-A template can be made either using the Query Editor in the UI, or through the [Query Service API](../../api/query-templates.md#create-a-query-template). 
+A template can be made either using the Query Editor in the UI, or through the [Query Service API](../api/query-templates.md#create-a-query-template). 
 
 ```sql
 CREATE TABLE AS airline_loyality_decile 
@@ -289,8 +289,8 @@ A correlation between the ranking number and the percentile is guaranteed in the
 
 ### Run the query template
 
-Run the query to populate the decile dataset. You can also save the query as a template and schedule it to run at a cadence. When saved as a template, the query can also be updated to use the create and insert pattern that references the `table_exists` command. More information on how to use the `table_exists`command can be found in the [SQL syntax guide](../../sql/syntax.md#table-exists). 
+Run the query to populate the decile dataset. You can also save the query as a template and schedule it to run at a cadence. When saved as a template, the query can also be updated to use the create and insert pattern that references the `table_exists` command. More information on how to use the `table_exists`command can be found in the [SQL syntax guide](../sql/syntax.md#table-exists). 
 
 ## Next steps
 
-The example use case provided above highlights steps to make decile attributes available in Real-time Customer Profile. This allows for Segmentation Service, either via a user interface or RESTful API, to be able to generate audiences based on these decile buckets. See the [Segmentation Service overview](../../../segmentation/home.md) for information on how to create, evaluate, and access segments.
+The example use case provided above highlights steps to make decile attributes available in Real-time Customer Profile. This allows for Segmentation Service, either via a user interface or RESTful API, to be able to generate audiences based on these decile buckets. See the [Segmentation Service overview](../../segmentation/home.md) for information on how to create, evaluate, and access segments.
