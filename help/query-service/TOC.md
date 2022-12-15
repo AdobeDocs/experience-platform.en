@@ -88,7 +88,3 @@ feature: Queries
 - [Frequently asked questions](troubleshooting-guide.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
-<!-- - [Overview](data-distiller/overview.md) new stub doc to be created -->
-<!-- - [Accelerated Queries](data-distiller/query-accelerated-store/accelerated-queries.md) new stub doc to be created-->
-<!-- - [Query logs](ui/query-logs.md) -->
-<!-- - [Create schedules](ui/create-schedules.md) -->
