@@ -46,7 +46,7 @@ The example airline loyalty data uses an [XDM ExperienceEvents class](../../xdm/
 
 The initial airline loyalty dataset for this example is "Airline Loyalty Data", and has the following schema. Note that the primary identity for the schema is `_profilefoundationreportingstg.membershipNumber`.
 
-![A diagram of the Airline Loyalty Data schema.](../images/derived-attributes/deciles-use-case/airline-loyalty-data.png)
+![A diagram of the Airline Loyalty Data schema.](../images/use-cases/airline-loyalty-data.png)
 
 **Sample data**
 
