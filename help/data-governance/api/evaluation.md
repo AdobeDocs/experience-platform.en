@@ -8,7 +8,7 @@ exl-id: f9903939-268b-492c-aca7-63200bfe4179
 ---
 # Policy evaluation endpoints
 
-Once marketing actions have been created and policies have been defined, you can use the [!DNL Policy Service] API to evaluate if any policies are violated by certain actions. The returned constraints take the form of a set of policies that would be violated by attempting the marketing action on the specified data containing data usage labels.
+Once marketing actions have been created and data usage policies have been defined, you can use the [!DNL Policy Service] API to evaluate if any policies are violated by certain actions. The returned constraints take the form of a set of policies that would be violated by attempting the marketing action on the specified data containing data usage labels.
 
 By default, only policies whose status is set to `ENABLED` participate in evaluation. However, you can use the query parameter `?includeDraft=true` to include `DRAFT` policies in evaluation.
 

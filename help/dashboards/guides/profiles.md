@@ -269,6 +269,12 @@ The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustr
 
 ### [!UICONTROL Unsegmented profiles by identity] {#unsegmented-profiles-by-identity}
 
+>![NOTE]
+>
+>The Unsegmented profiles by identity widget has been deprecated as of October 2022 and is no longer available.
+
+<!-- 
+
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
 >title="Unsegmented profiles by identity"
@@ -276,7 +282,7 @@ The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustr
 
 The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
-![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png)
+![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
 
 ### [!UICONTROL Audiences] {#audiences}
 

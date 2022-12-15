@@ -1,12 +1,16 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;ABAC
-title: Attribute-based Access Control Create a Policy
-description: This document provides information on managing policies through the Permissions interface in Adobe Experience Cloud
+title: Manage Access Control Policies
+description: This document provides information on managing access control policies through the Permissions interface in Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
 ---
-# Manage policies
+# Manage access control policies
 
-Policies are statements that bring attributes together to establish permissible and impermissible actions. Policies can either be local or global, and can override other policies.
+Access control policies are statements that bring attributes together to establish permissible and impermissible actions. Access policies can either be local or global, and can override other policies.
+
+>[!IMPORTANT]
+>
+>Access policies are not to be confused with data usage policies, which control how data is used in Adobe Experience Platform instead of which users in your organization have access to it. See the guide on creating [data usage policies](../../../data-governance/policies/create.md) for more information.
 
 ## Create a new policy
 
