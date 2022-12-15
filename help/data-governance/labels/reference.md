@@ -14,9 +14,9 @@ exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 >abstract="There are several categories of data usage labels. Adobe-defined labels include contract labels, identity labels, and sensitive labels. Labels defined by your organization are categorized as custom labels."
 >text="See the data usage labels glossary for more information on these label types."
 
-Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. Adobe Experience Platform Data Governance provides several core data usage labels out-of-the-box that you can use to start categorizing your data.
+Data usage labels allow you to categorize datasets and fields according to [governance policies](../policies/overview.md) and [access control policies](../../access-control/abac/overview.md) that apply to that data. Adobe Experience Platform provides several core data usage labels out-of-the-box that you can use to start categorizing your data.
 
-This document outlines the core data usage labels currently provided by [!DNL Experience Platform]. More information regarding Data Governance can be found in the [Data Governance overview](../home.md).
+This document outlines the core data usage labels currently provided by Experience Platform.
 
 ## Contract labels
 
@@ -129,7 +129,7 @@ Some contracts include explicit prohibitions on data use for data science. Somet
 
 #### C10 {#c10}
 
-Some data usage policies restrict the use of stitched identity data for personalization. The C10 label is automatically applied to segments if their merge policies use the "private graph" option.
+Some data governance policies restrict the use of stitched identity data for personalization. The C10 label is automatically applied to segments if their merge policies use the "private graph" option.
 
 #### C11 {#c11}
 

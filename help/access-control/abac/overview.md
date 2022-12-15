@@ -10,6 +10,10 @@ Attribute-based access control is a capability of Adobe Experience Platform that
 
 This functionality allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments.
 
+>[!IMPORTANT]
+>
+>Attribute-based access control is not to be confused with Experience Platform's data governance capabilities, which allow you to use labels and policies to control how data is used in Platform rather than which users in your organization have access to it. See the [data governance overview](../../data-governance/home.md) for more information.
+
 Through attribute-based access control, administrators of your organization can control users' access to sensitive personal data (SPD), personally identifiable information (PII) and customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
 ## Attribute-based access control terminology
