@@ -20,13 +20,14 @@ feature: Queries
         - [Reporting insights data model guide](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
     - Derived attributes {#derived-attributes}
         - [Overview](data-distiller/derived-attributes/overview.md)
-        - [Deciles use case](data-distiller/derived-attributes/deciles-use-case.md)
+        - [Create decile-based derived attributes](data-distiller/decile-based-derived-attributes.md)
 - Use cases {#use-cases}
     - [Abandoned browse](use-cases/abandoned-browse.md)
     - [Activity Analysis With Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
     - [Attribution analysis](use-cases/attribution-analysis.md)
     - [Bot filtering](use-cases/bot-filtering.md)
     - [Create a trended report of events](use-cases/trended-report-of-events.md)
+    - [Decile-based derived attributes](use-cases/deciles-use-case.md)
     - [List the page views of a user](use-cases/list-visitor-sessions.md)
     - [List visitors by their page views](use-cases/visitors-by-number-of-page-views.md)
     - [Propensity score](use-cases/propensity-score.md)
@@ -88,6 +89,5 @@ feature: Queries
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
 <!-- - [Overview](data-distiller/overview.md) new stub doc to be created -->
 <!-- - [Accelerated Queries](data-distiller/query-accelerated-store/accelerated-queries.md) new stub doc to be created-->
-<!-- - [Deciles](use-cases/deciles.md) need a stub do to point to data-distiller/derived-attributes/deciles-use-case.md  -->
 <!-- - [Query logs](ui/query-logs.md) -->
 <!-- - [Create schedules](ui/create-schedules.md) -->
