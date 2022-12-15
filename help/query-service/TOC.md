@@ -20,7 +20,7 @@ feature: Queries
         - [Reporting insights data model guide](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
     - Derived attributes {#derived-attributes}
         - [Overview](data-distiller/derived-attributes/overview.md)
-        - [Create decile-based derived attributes](data-distiller/decile-based-derived-attributes.md)
+        - [Create decile-based derived attributes](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - Use cases {#use-cases}
     - [Abandoned browse](use-cases/abandoned-browse.md)
     - [Activity Analysis With Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
@@ -50,6 +50,7 @@ feature: Queries
     - [UI overview](ui/overview.md)
     - [Query Editor user guide](ui/user-guide.md)
     - [Query templates](ui/query-templates.md)
+    - [Query schedules](ui/query-schedules.md)
     - [Monitor scheduled queries](ui/monitor-queries.md)
     - [Credentials guide](ui/credentials.md)
     - [Generate output datasets from query results](ui/create-datasets.md)
