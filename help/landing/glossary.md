@@ -100,7 +100,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Console**: In [!DNL Query Service], the console provides information on the status and operation of a query. The console displays the connection status to [!DNL Query Service], query operations being executed, and any error messages that result from those queries.
 
-**Contract ("C") labels**: Contract ("C") data usage labels are used to categorize data that has contractual obligations or is related to a customer's data governance policies.
+**Contract ("C") labels**: Contract ("C") data usage labels are used to categorize data that has contractual obligations or is related to your organization's data governance policies.
 
 **C1 contract label**: A `C1` contract data usage label specifies data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
 
@@ -496,7 +496,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Source connector**: Source connectors (also known as sources) help users easily ingest data from multiple sources, allowing the structuring, labeling and enhancement of data using Experience Platform services. Data can be ingested from a variety of sources such as cloud-based storage, third party software, and CRM systems.
 
-**Streaming connection**: A streaming connection is a unique endpoint provided by Adobe and tied to a customer's IMS Organization to stream data into Experience Platform.
+**Streaming connection**: A streaming connection is a unique endpoint provided by Adobe and tied to your organization to stream data into Experience Platform.
 
 **Standard identity namespace**: Standard identity namespaces are pre-defined identity namespaces provided by Adobe, which represent industry-standard solutions that are commonly employed to identify customers.
 

@@ -8,7 +8,11 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 ---
 # Manage data usage policies in the UI
 
-Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions that you can perform in the **Policies** workspace in the [!DNL Experience Platform] user interface.
+This document covers how to use the **[!UICONTROL Policies]** workspace in the Adobe Experience Platform UI to create and manage data usage policies.
+
+>[!NOTE]
+>
+>For information on how to manage access control policies in the UI, refer to the [attribute-based access control UI guide](../../access-control/abac/ui/policies.md) instead.
 
 >[!IMPORTANT]
 >
@@ -18,7 +22,7 @@ Adobe Experience Platform Data Governance provides a user interface that allows 
 
 This guide requires a working understanding of the following [!DNL Experience Platform] concepts:
 
-* [Data Governance](../home.md)
+* [Data governance](../home.md)
 * [Data usage policies](./overview.md)
 
 ## View existing policies {#view-policies}

@@ -83,7 +83,7 @@ In tag rules, data elements are tokenized with a `%` at the beginning and end of
 
 #### Sequence of rule actions {#action-sequencing}
 
-The [!UICONTROL Actions] section of an event forwarding rule is always executed sequentially. Make sure the order of actions is correct when you save a rule. This execution sequence cannot be executed asynchronously like it can with tags.
+The [!UICONTROL Actions] section of an event forwarding rule is always executed sequentially. For example, if a rule has two actions, the second action will not begin execution until the previous action is complete (and in cases where a response is expected from an endpoint, that endpoint has responded). Make sure the order of actions is correct when you save a rule. This execution sequence cannot be executed asynchronously like it can with tag rules.
 
 ## Secrets {#secrets}
 
