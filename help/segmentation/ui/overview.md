@@ -60,11 +60,11 @@ Select the **[!UICONTROL Browse]** tab to see a list of all the segment definiti
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-This view lists information about the segment definition including the breakdown, churn, profile count, evaluation method, created date, and last modified date.
+This view lists information about the segment definition including the profile count, created date, and last modified date. 
 
-The breakdown shows a bar graph outlining the percentage of profiles that belong to each of the following statuses: [!UICONTROL Realized], [!UICONTROL Existing], and [!UICONTROL Exiting]. Additionally, the breakdown shown on the [!UICONTROL Browse] tab is the most accurate breakdown of the segment status. If this number differs with what is stated on the [!UICONTROL Overview] tab, you should use the numbers on the [!UICONTROL Browse] tab as the correct source of information, since the [!UICONTROL Overview] tab numbers only update once per day.
+You can add additional fields to this display by selecting IMAGE. These additional fields include breakdown, churn, evaluation method, and job ID.
 
-![](../images/ui/overview/segment-browse-breakdown.png)
+If breakdown is selected, the display shows a bar graph outlining the percentage of profiles that belong to each of the following statuses: [!UICONTROL Realized], [!UICONTROL Existing], and [!UICONTROL Exiting]. Additionally, the breakdown shown on the [!UICONTROL Browse] tab is the most accurate breakdown of the segment status. If this number differs with what is stated on the [!UICONTROL Overview] tab, you should use the numbers on the [!UICONTROL Browse] tab as the correct source of information, since the [!UICONTROL Overview] tab numbers only update once per day.
 
 | Status | Description |
 | ------ | ----------- |
