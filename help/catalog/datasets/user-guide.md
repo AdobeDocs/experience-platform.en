@@ -123,7 +123,7 @@ Data usage labels allow you to categorize datasets and fields according to usage
 
 ## Delete a dataset
 
-You can delete a dataset by first accessing its **[!UICONTROL Dataset activity]** screen. Then, slect **[!UICONTROL Delete dataset]** to delete it. 
+You can delete a dataset by first accessing its **[!UICONTROL Dataset activity]** screen. Then, select **[!UICONTROL Delete dataset]** to delete it. 
 
 >[!NOTE]
 >
