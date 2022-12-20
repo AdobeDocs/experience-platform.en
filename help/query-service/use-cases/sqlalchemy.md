@@ -91,13 +91,3 @@ from sqlalchemy import inspect
 insp = inspect(engine)
 print(insp.get_table_names())
 ```
-
-<!-- do we need to include: 
-Now that we have created an engine, you can open a connection to the database to perform CRUD operations using [!DNL Python] instead of SQL. Use the `connect` method on the engine, to open the connection.
-
-```python
-connection = engine.connect()
-```
- -->
-
-
