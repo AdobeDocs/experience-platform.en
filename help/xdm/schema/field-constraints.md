@@ -146,7 +146,7 @@ The sections below describe how each XDM type maps to other common serialization
 >
 >Among the standard XDM types listed in the tables below, the [!UICONTROL Map] type is also included. Maps are used in standard schemas when data is represented as keys that map to certain values, or where keys cannot reasonably be included in a static schema and must be treated as data values.
 >
->Many standard XDM components use map types, and you can also [define custom map fields](../tutorials/custom-fields-api.md#maps) if desired. The map type's inclusion in the tables below is intended to help you determine how to map your existing data to XDM if it is currently stored in any of the formats listed below.
+>Many standard XDM components use map types, and you can also [define custom map fields](../tutorials/custom-fields-api.md#custom-maps) if desired. The map type's inclusion in the tables below is intended to help you determine how to map your existing data to XDM if it is currently stored in any of the formats listed below.
 
 ### Parquet, Spark SQL, and Java {#parquet}
 

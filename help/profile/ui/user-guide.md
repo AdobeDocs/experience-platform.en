@@ -45,7 +45,7 @@ On the right-hand side of the **[!UICONTROL Browse]** tab is the [profile count]
 
 In addition to these metrics, this section provides a last updated date and time, showing when the metrics were last evaluated.
 
-![](../images/user-guide/profiles-browse-metrics.png)
+![](../images/user-guide/browse-metrics.png)
 
 ### Profile count {#profile-count}
 
@@ -69,7 +69,7 @@ Similar to the [profile count](#profile-count) metric, when the ingestion of rec
 
 On the **[!UICONTROL Browse]** tab you can view sample profiles using a merge policy or look up specific profiles using an identity namespace and value.
 
-![](../images/user-guide/browse-by-none-selected.png)
+![](../images/user-guide/none-selected.png)
 
 ### Browse by [!UICONTROL Merge policy]
 
@@ -83,7 +83,7 @@ The **[!UICONTROL Browse]** tab is set to the default merge policy for your orga
 
 To choose a merge policy from the **[!UICONTROL Select merge policy]** dialog, select the radio button beside the policy name and then use **[!UICONTROL Select]** to return to the [!UICONTROL Browse] tab. You can then select **[!UICONTROL View]** to refresh the sample profiles and see a sampling of profiles with the new merge policy applied.
 
-![](../images/user-guide/select-merge-policy-dialog.png)
+![](../images/user-guide/select-merge-policy.png)
 
 The profiles that are shown represent a sample of up to 20 profiles from your organization's profile store, after the selected merge policy has been applied. The sample profiles for the selected merge policy are refreshed when new data is added to your organization's profile store.
 
@@ -98,17 +98,17 @@ To learn more about merge policies and their role within Platform, see the [merg
 
 On the **[!UICONTROL Browse]** tab, you can use an identity namespace in order to look up a specific profile by an identity value. Browsing by an identity requires you to provide a merge policy, an identity namespace, and an identity value.
 
-![](../images/user-guide/browse-by-identity.png)
+![](../images/user-guide/browse-by-merge-policy.png)
 
 If necessary, use the **[!UICONTROL Merge policy]** selector to open the **[!UICONTROL Select merge policy]** dialog and choose the merge policy that you would like to use.
 
-![](../images/user-guide/select-merge-policy-dialog.png)
+![](../images/user-guide/select-merge-policy.png)
 
 Then use the **[!UICONTROL Identity namespace]** selector to open the **[!UICONTROL Select identity namespace]** dialog and choose the namespace by which you would like to search. If your organization has many namespaces, you can use the search bar in the dialog to begin typing the name of a namespace. 
 
 You can select a namespace to view additional details or select the radio button to choose a namespace. You can then use **[!UICONTROL Select]** to continue.
 
-![](../images/user-guide/profiles-select-identity-namespace.png)
+![](../images/user-guide/select-identity-namespace.png)
 
 After selecting an [!UICONTROL Identity namespace] and returning to the [!UICONTROL Browse] tab, you can enter an **[!UICONTROL Identity value]** related to the namespace that you selected. 
 
@@ -116,11 +116,11 @@ After selecting an [!UICONTROL Identity namespace] and returning to the [!UICONT
 >
 >This value is specific to an individual customer profile and must be a valid entry for the namespace provided. For example, selecting the identity namespace "Email" would require an identity value in the form of a valid email address. 
 
-![](../images/user-guide/browse-by-identity-values.png)
+![](../images/user-guide/filter-identity-value.png)
 
 Once a value has been entered, select **[!UICONTROL View]** and a single profile matching the value is returned. Select the **[!UICONTROL Profile ID]** to view the profile details.
 
-![](../images/user-guide/browse-by-identity-profile.png)
+![](../images/user-guide/filtered-identity-value.png)
 
 ## View profile details {#profile-detail}
 
@@ -128,11 +128,9 @@ After selecting a **[!UICONTROL Profile ID]**, the **[!UICONTROL Detail]** tab o
 
 The default fields shown can also be changed at an organizational-level to display preferred Profile attributes. To learn more about customizing these fields, including step-by-step instructions for adding and removing attributes and resizing dashboard panels, please read the [profile detail customization guide](profile-customization.md).
 
-![](../images/user-guide/profiles-profile-detail.png)
+![](../images/user-guide/profile-detail.png)
 
 You can view additional information related to the individual customer profile by selecting another of the available tabs. These tabs include attributes, events, and the segment membership tab that shows the segments for which the profile is currently qualified.
-
-![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ### Attributes tab
 
@@ -140,7 +138,7 @@ The **[!UICONTROL Attributes]** tab provides a list view summarizing all of the 
 
 These attributes can also be viewed as a JSON object by selecting to **[!UICONTROL View JSON]**. This is helpful for any users wishing to better understand how the profile attributes are ingested into Platform.
 
-![](../images/user-guide/profiles-attributes.png)
+![](../images/user-guide/attributes.png)
 
 ### Events tab
 
@@ -148,7 +146,7 @@ The **[!UICONTROL Events]** tab contains data from the 100 most recent Experienc
 
 Events can also be viewed as a JSON object by selecting to **[!UICONTROL View JSON]**. This is helpful for understanding how events are captured in Platform.
 
-![](../images/user-guide/profiles-events.png)
+![](../images/user-guide/events.png)
 
 ### Segment membership tab
 
@@ -156,7 +154,7 @@ The **[!UICONTROL Segment membership]** tab displays a list with the name and de
 
 For more information about segmentation in Experience Platform, please refer to the [Adobes Experience Platform Segmentation Service documentation](../../segmentation/home.md).
 
-![](../images/user-guide/profiles-segment-membership.png)
+![](../images/user-guide/segment-membership.png)
 
 ## Merge policies
 
@@ -164,7 +162,7 @@ From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Merge Pol
 
 For more information on merge policies, see the [merge policies overview](../merge-policies/overview.md).
 
-![](../images/user-guide/profiles-merge-policies.png)
+![](../images/user-guide/merge-policies.png)
 
 ## Union schema {#union-schema}
 
@@ -172,7 +170,7 @@ From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Union Sch
 
 For more information on union schemas, please visit the [union schema UI guide](union-schema.md).
 
-![](../images/user-guide/profiles-union-schema.png)
+![](../images/user-guide/union-schema.png)
 
 ## Next steps
 
