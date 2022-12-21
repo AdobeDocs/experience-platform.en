@@ -5,7 +5,7 @@ description: Learn how to write queries that use Experience Events to retrieve a
 ---
 # List visitors by their number of page views
 
-This document provides an example of the SQL required to retrieve a list of visitors organized by the number of page views. With Adobe Experience Platform Query Service you can write queries that use [!DNL Experience Events] to capture a variety of use cases. Experience Events are represented by the Experience Data Model (XDM) ExperienceEvent class, which captures an immutable and non-aggregated snapshot of the system when a user interacts with a website or service. Experience Events can even be used for time-domain analysis. See the [next steps section](#next-steps) for more use cases that involve [!DNL Experience Events] to generate visitor reports.
+This document provides an example of the SQL required to retrieve a list of visitors organized by the number of page views. With Adobe Experience Platform Query Service, you can write queries that use [!DNL Experience Events] to capture a variety of use cases. Experience Events are represented by the Experience Data Model (XDM) ExperienceEvent class, which captures an immutable and non-aggregated snapshot of the system when a user interacts with a website or service. Experience Events can even be used for time-domain analysis. See the [next steps section](#next-steps) for more use cases that involve [!DNL Experience Events] to generate visitor reports.
 
 More information about XDM and [!DNL Experience Events] can be found in the [[!DNL XDM System] overview](../../xdm/home.md). By combining Query Service with [!DNL Experience Events], you can effectively track behavioral trends amongst your users. The following document provides examples of queries involving [!DNL Experience Events].
 
@@ -43,11 +43,10 @@ The query results are displayed in the table below.
 
 ## Next steps {#next-steps}
 
-By reading this document you have a better understanding of how to use Query Service with [!DNL Experience Events] to list users who have viewed the most pages. 
+By reading this document, you have a better understanding of how to use Query Service with [!DNL Experience Events] to list users who have viewed the most pages. 
 
 See the following use cases to learn about other visitor based used cases:
 
-<!-- - [Retrieve a list of visitors organized by number of page views.](./organized-visitor-list.md) -->
 - [List a visitor's previous sessions.](./list-visitor-sessions.md)
 - [View a roll-up report of a visitor.](./roll-up-report-of-a-visitor.md)
 - [Create a trended report of events by day.](./trended-report-of-events.md)

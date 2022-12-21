@@ -72,7 +72,7 @@ By reading this document, you should now understand how [!DNL Query Service] imp
 
 Other documents that demonstrate the benefits of [!DNL Query Service] to your organization's strategic business insights are the [bot filtering use case](./bot-filtering.md) example. 
 
-Alternatively, these documents that will benefit your understanding of [!DNL Query Service] features: 
+Alternatively, these documents can benefit your understanding of [!DNL Query Service] features: 
 
 * [Guidance for query execution](../best-practices/writing-queries.md)
 * [Guidance for data asset organization](../best-practices/organize-data-assets.md).

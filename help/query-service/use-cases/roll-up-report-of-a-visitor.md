@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;experienceevent queries;experienceevent query;Experience Event query;
-title: View a rollup report for a specific visitor
+title: View a roll-up report for a specific visitor
 description: The following document provides examples of queries involving Experience Events in Adobe Experience Platform Query Service.
 ---
-# View a rollup report for a specific visitor
+# View a roll-up report for a specific visitor
 
-This document provides an SQL example to aggregate data from multiple analytics properties for a specific user and see that data together in one report. With Adobe Experience Platform Query Service you can write queries that use [!DNL Experience Events] to capture a variety of use cases. Experience Events are represented by the Experience Data Model (XDM) ExperienceEvent class, which captures an immutable and non-aggregated snapshot of the system when a user interacts with a website or service. Experience Events can even be used for time-domain analysis. See the [next steps section](#next-steps) for more use cases that involve [!DNL Experience Events] to generate visitor reports.
+This document provides an SQL example to aggregate data from multiple analytics properties for a specific user and see that data together in one report. With Adobe Experience Platform Query Service, you can write queries that use [!DNL Experience Events] to capture a variety of use cases. Experience Events are represented by the Experience Data Model (XDM) ExperienceEvent class, which captures an immutable and non-aggregated snapshot of the system when a user interacts with a website or service. Experience Events can even be used for time-domain analysis. See the [next steps section](#next-steps) for more use cases that involve [!DNL Experience Events] to generate visitor reports.
 
 More information about XDM and [!DNL Experience Events] can be found in the [[!DNL XDM System] overview](../../xdm/home.md). By combining Query Service with [!DNL Experience Events], you can effectively track behavioral trends amongst your users. The following document provides examples of queries involving [!DNL Experience Events].
 
@@ -42,11 +42,10 @@ The query results are displayed in the table below.
 
 ## Next steps {#next-steps}
 
-By reading this document you have a better understanding of how to use Query Service with [!DNL Experience Events] to view an aggregate report of analytics values for a specified user.
+By reading this document, you have a better understanding of how to use Query Service with [!DNL Experience Events] to view an aggregate report of analytics values for a specified user.
 
 See the following use cases to learn about other visitor based used cases:
 
 - [Retrieve a list of visitors organized by number of page views.](./visitors-by-number-of-page-views.md)
 - [List a visitor's previous sessions.](./list-visitor-sessions.md)
-<!-- - [View a roll-up report of a visitor.](./roll-up-report-of-a-visitor.md) -->
 - [Create a trended report of events by day.](./trended-report-of-events.md)

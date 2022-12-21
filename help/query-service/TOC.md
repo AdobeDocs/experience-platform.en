@@ -23,7 +23,7 @@ feature: Queries
         - [Create decile-based derived attributes](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - Use cases {#use-cases}
     - [Abandoned browse](use-cases/abandoned-browse.md)
-    - [Activity Analysis With Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
+    - [Activity analysis with Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
     - [Attribution analysis](use-cases/attribution-analysis.md)
     - [Bot filtering](use-cases/bot-filtering.md)
     - [Create a trended report of events](use-cases/trended-report-of-events.md)
@@ -32,7 +32,7 @@ feature: Queries
     - [List visitors by their page views](use-cases/visitors-by-number-of-page-views.md)
     - [Propensity score](use-cases/propensity-score.md)
     - [Return and use merchandising variables from analytics data](use-cases/merchandising-variables.md)
-    - [View the rollup report for a visitor](use-cases/roll-up-report-of-a-visitor.md)
+    - [View the roll-up report for a visitor](use-cases/roll-up-report-of-a-visitor.md)
     - [Web and mobile analytics insights](use-cases/analytics-insights.md)
 - Connect clients to Query Service {#clients}
     - [Client connections overview](clients/overview.md)

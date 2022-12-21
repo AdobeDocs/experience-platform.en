@@ -5,9 +5,9 @@ description: Learn how to write queries that use Experience Events to create a t
 ---
 # Create a trended report of events
 
-This document provides an example of the SQL required to create a trended report of events by day over a specific date range. With Adobe Experience Platform Query Service you can write queries that use [!DNL Experience Events] to capture a variety of use cases. Experience Events are represented by the Experience Data Model (XDM) ExperienceEvent class, which captures an immutable and non-aggregated snapshot of the system when a user interacts with a website or service. Experience Events can even be used for time-domain analysis. See the [next steps section](#next-steps) for more use cases that involve [!DNL Experience Events] to generate visitor reports.
+This document provides an example of the SQL required to create a trended report of events by day over a specific date range. With Adobe Experience Platform Query Service, you can write queries that use [!DNL Experience Events] to capture a variety of use cases. Experience Events are represented by the Experience Data Model (XDM) ExperienceEvent class, which captures an immutable and non-aggregated snapshot of the system when a user interacts with a website or service. Experience Events can even be used for time-domain analysis. See the [next steps section](#next-steps) for more use cases that involve [!DNL Experience Events] to generate visitor reports.
 
-Reports give you access to your Platform data to benefit your organization's strategic business insights. With these reports you can examine your Platform data in a variety of ways, display key metrics in easy-to-understand formats, and share the resulting insights. 
+Reports give you access to your Platform data to benefit your organization's strategic business insights. With these reports, you can examine your Platform data in a variety of ways, display key metrics in easy-to-understand formats, and share the resulting insights. 
 
 More information about XDM and [!DNL Experience Events] can be found in the [[!DNL XDM System] overview](../../xdm/home.md). By combining Query Service with [!DNL Experience Events], you can effectively track behavioral trends amongst your users. The following document provides examples of queries involving [!DNL Experience Events].
 
@@ -77,7 +77,7 @@ The results of this query can be seen below.
 
 ## Next steps {#next-steps}
 
-By reading this document you have a better understanding of how to use Query Service with [!DNL Experience Events] to effectively track behavioral trends amongst your users. 
+By reading this document, you have a better understanding of how to use Query Service with [!DNL Experience Events] to effectively track behavioral trends amongst your users. 
 
 To learn about other visitor based use cases that use [!DNL Experience Events], read the following documents:
 

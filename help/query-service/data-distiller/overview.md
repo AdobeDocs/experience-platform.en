@@ -25,13 +25,13 @@ See the [Query Service guardrails](../guardrails.md) document regarding default 
 
 ## Static limits
 
-A static limit is the usage limit that relates to the functional boundaries of Adobe Experience Platform Activation. [More information on Adobe Experience Platform Activation](https://helpx.adobe.com/ca/legal/product-descriptions/adobe-experience-platform0.html) can be found in the Adobe help documents. A summary of Data Distiller static limit are listed below, for more complete information please refer to the Query Service guardrail document.  
+A static limit is the usage limit that relates to the functional boundaries of Adobe Experience Platform Activation. [More information on Adobe Experience Platform Activation](https://helpx.adobe.com/ca/legal/product-descriptions/adobe-experience-platform0.html) can be found in the Adobe help documents. A summary of Data Distiller static limits are listed below, for more complete information please refer to the Query Service guardrail document.  
 
 * **Batch Queries**: Scheduled batch queries time out after 24 hours.
 * **Query Service**: You can use Query Service for the following purposes: 
     * To run SQL queries for data analysis and post ingestion data preparation (cleaning, shaping, and manipulation).
     * To run SQL queries to create roll-up metrics to surface directly into a BI tool.
     * To quickly inspect data within Adobe Experience Platform.
-* **Reporting API Call**: To ensure queries run on aggregated data using the reporting API have enough resources to execute efficiently. This includes queries that enhance existing data models such as those provided by Real-Time Customer Data Platform. The reporting API tracks resource utilization by assigning concurrency slots to each query. A maximum of 4 reporting API calls are available concurrently. If you accesses the reporting API through a BI tool and require more concurrency slots, a BI server is required.
+* **Reporting API Call**: To ensure queries run on aggregated data using the reporting API have enough resources to execute efficiently. This includes queries that enhance existing data models such as those provided by Real-Time Customer Data Platform. The reporting API tracks resource utilization by assigning concurrency slots to each query. A maximum of 4 reporting API calls are available concurrently. If you access the reporting API through a BI tool and require more concurrency slots, a BI server is required.
 
 

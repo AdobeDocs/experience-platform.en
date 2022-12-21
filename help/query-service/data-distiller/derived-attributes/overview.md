@@ -44,4 +44,4 @@ You are also able to calculate business metrics as a derived attribute and use t
 
 ## Next steps and use cases
 
-By reading this document you have a better understanding of how Query Service derived attributes facilitate complex use cases for maximizing the utility of your data. Next, you should read the [decile-based derived attribute use case](../../use-cases/deciles-use-case.md) to see how this feature is applied in a real-world scenario.
+By reading this document, you have a better understanding of how Query Service derived attributes facilitate complex use cases for maximizing the utility of your data. Next, you should read the [decile-based derived attribute use case](../../use-cases/deciles-use-case.md) to see how this feature is applied in a real-world scenario.

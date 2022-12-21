@@ -110,7 +110,7 @@ This panel also shows useful metadata such as the last time the query was modifi
 
 ### Scheduled queries {#scheduled-queries}
 
-Queries that have been saved as a template can be scheduled from the Query Editor. This allows you to automate query runs run on a custom cadence. You can schedule queries based on based on frequency, date, and time, and also chose an output dataset for your results if required. Query schedules can also be disabled or deleted through the UI.
+Queries that have been saved as a template can be scheduled from the Query Editor. This allows you to automate query runs run on a custom cadence. You can schedule queries based on frequency, date, and time, and also choose an output dataset for your results if required. Query schedules can also be disabled or deleted through the UI.
 
 Schedules are set from the Query Editor. The following is a list of limitations for scheduled queries when using the Query Editor. They do not apply to the [!DNL Query Service] API:
 

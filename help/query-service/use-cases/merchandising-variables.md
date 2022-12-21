@@ -104,7 +104,7 @@ For example, the product-finding scenario below illustrates how the required dat
 1. A user performs an internal search for "winter hat" which sets the conversion syntax enabled merchandising eVar6 to "internal search:winter hat".
 2. The user clicks on "waffle beanie" and lands on the product detail page.  
   a. Landing here fires off a `Product View` event for the "waffle beanie" for $12.99.  
-  b. Since `Product View` is configured as a binding event, the product "waffle beanie" is now bound to the eVar6 value of "internal search:winter hat". Anytime the "waffle beanie" product is collected it is associated with "internal search:winter hat" until either the eVar expiration setting is reached, or, a new eVar6 value is set and the binding event occurs with that product again.
+  b. Since `Product View` is configured as a binding event, the product "waffle beanie" is now bound to the eVar6 value of "internal search:winter hat". Anytime the "waffle beanie" product is collected, it is associated with "internal search:winter hat". This happens until either the eVar expiration setting is reached, or, a new eVar6 value is set and the binding event occurs with that product again.
 3. The user adds the product to their cart, firing the `Cart Add` event.
 4. The user performs another internal search for "summer shirt" which sets the conversion syntax enabled merchandising eVar6 to "internal search:summer shirt".
 5. The user selects "sporty t-shirt" and lands on the product detail page.  
@@ -213,4 +213,4 @@ LIMIT 100
 
 By reading this document, you should have a better understanding of how to return a merchandising eVar using product syntax and bind a value to a specific product with the conversion variable syntax.
 
-if you have not already done so, you should read the [Analytics insights for web and mobile interactions documentation](./analytics-insights.md) next. It provides common use cases and demonstrates how to use Query Service to create actionable insights from web and mobile Adobe Analytics data.
+If you have not already done so, you should read the [Analytics insights for web and mobile interactions documentation](./analytics-insights.md) next. It provides common use cases and demonstrates how to use Query Service to create actionable insights from web and mobile Adobe Analytics data.

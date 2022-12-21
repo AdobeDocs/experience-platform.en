@@ -1,10 +1,10 @@
 ---
 title: Query Schedules
-description: Learn how to automate scheduled query runs, delete or disable a query schedule, and the available scheduling options through the Adobe Experience Platform UI. 
+description: Learn how to automate scheduled query runs, delete or disable a query schedule, and utilize the available scheduling options through the Adobe Experience Platform UI. 
 ---
 # Query schedules
 
-You can automate query runs by creating query schedules. Scheduled queries run on a custom cadence to manage your data based on frequency, date, and time. You can also chose an output dataset for your results if required. Queries that have been saved as a template can be scheduled from the Query Editor.
+You can automate query runs by creating query schedules. Scheduled queries run on a custom cadence to manage your data based on frequency, date, and time. You can also choose an output dataset for your results if required. Queries that have been saved as a template can be scheduled from the Query Editor.
 
 >[!IMPORTANT]
 >
@@ -38,7 +38,7 @@ You can choose the following options for **[!UICONTROL Frequency]**:
 - **[!UICONTROL Monthly]**: The selected query will run every month at the day, time, and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
 - **[!UICONTROL Yearly]**: The selected query will run every year at the day, month, time, and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
 
-For the dataset, you have the option to use either an existing dataset or create a new dataset.
+For the output dataset, you have the option to use either an existing dataset or create a new dataset.
 
 >[!IMPORTANT]
 >
