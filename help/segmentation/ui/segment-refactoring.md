@@ -14,12 +14,12 @@ Prior to the October 2020 release, all rule-level, group-level, and event-level 
 
 Previously, an individual event could have multiple time constraint rules attached to it. 
 
-![](../images/ui/segment-refactoring/former-time-constraint.png)
+![The former style of time constraints is highlighted.](../images/ui/segment-refactoring/former-time-constraint.png)
 
 As you can see, this segment has two constraints on the rule-level: One for "[!UICONTROL Today]" and the other for "[!UICONTROL Yesterday]".
 
 The previous segment is equivalent to the following segment — both of the event-level time constraints have been connected using an AND operator. The first event-level time constraint references a click event whose name equals "Training" and is happening today, while the second event-level time constraint references a click event whose name equals "Pets" and happened yesterday.
 
-![](../images/ui/segment-refactoring/time-constraint-1.png) ![](../images/ui/segment-refactoring/time-constraint-2.png)
+![The new style of time restraints is highlighted.](../images/ui/segment-refactoring/time-constraint-1.png) ![The new style of time restraints is highlighted.](../images/ui/segment-refactoring/time-constraint-2.png)
 
 This refactoring of time constraints also affects time constraints that are connected using an OR operator.
