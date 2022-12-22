@@ -86,7 +86,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Class**: In Experience Data Model (XDM), a class defines the smallest set of fields used to build a schema and defines the base behavior of the business object that the schema represents.
 
-**Client**: A client is an external tool or application which connects to [!DNL Query Service] via PostgreSQL protocol or HTTP API.
+**Client**: A client is an external tool or application which connects to [!DNL Query Service] via [!DNL PostgreSQL] protocol or HTTP API.
 
 **Collection**: In [!DNL Offer Decisioning], collections are subsets of offers based on pre-defined conditions defined by a marketer, such as category of the offer.
 
@@ -100,7 +100,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Console**: In [!DNL Query Service], the console provides information on the status and operation of a query. The console displays the connection status to [!DNL Query Service], query operations being executed, and any error messages that result from those queries.
 
-**Contract ("C") labels**: Contract ("C") data usage labels are used to categorize data that has contractual obligations or is related to a customer's data governance policies.
+**Contract ("C") labels**: Contract ("C") data usage labels are used to categorize data that has contractual obligations or is related to your organization's data governance policies.
 
 **C1 contract label**: A `C1` contract data usage label specifies data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
 
@@ -112,11 +112,11 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **C5 contract label**: A `C5` contract data usage label specifies that data cannot be used for cross-site targeting of interest-based content or ads. Interest-based targeting, or personalization, occurs if the following three conditions are met: The data collected on-site is used to make inferences about a user's interest; is used in another context such as on another site or app; and is used to select which content or ads are served based on those inferences.
 
-**C6 contract label**: A `C6` contract data usage label specifies that data cannot be used for on-site ad targeting. On-site ad targeting includes the selection and delivery of advertisements on your organization’s websites, or apps or to measure the delivery and effectiveness of such advertisements. This includes using previously collected on-site data about the users’ interest to select ads, process data about what advertisements were shown, when and where they were shown, and whether the users took any action related to the advertisement, such as selecting an ad or making a purchase.
+**C6 contract label**: A `C6` contract data usage label specifies that data cannot be used for on-site ad targeting. On-site ad targeting includes the selection and delivery of advertisements on your organization's websites, or apps or to measure the delivery and effectiveness of such advertisements. This includes using previously collected on-site data about the users' interest to select ads, process data about what advertisements were shown, when and where they were shown, and whether the users took any action related to the advertisement, such as selecting an ad or making a purchase.
 
-**C7 contract label**: A `C7` contract data usage label specifies that data cannot be used for on-site targeting of content. On-site content targeting includes the selection and delivery of content on your organization’s websites, or apps or to measure the delivery and effectiveness of such content. This includes previously collected information about users’ interest to select content, processing data about what content was shown, how often or how long it was shown, when and where it was shown, and whether the uses took any actions related to the content, including for example selecting content.
+**C7 contract label**: A `C7` contract data usage label specifies that data cannot be used for on-site targeting of content. On-site content targeting includes the selection and delivery of content on your organization's websites, or apps or to measure the delivery and effectiveness of such content. This includes previously collected information about users' interest to select content, processing data about what content was shown, how often or how long it was shown, when and where it was shown, and whether the uses took any actions related to the content, including for example selecting content.
 
-**C8 contract label**: A `C8` contract data usage label specifies that data cannot be used for measurement of your organization’s websites or apps. This does not include interest-based targeting, which is the collection of information about your use of this service to subsequently personalize content and/or advertising in other contexts.
+**C8 contract label**: A `C8` contract data usage label specifies that data cannot be used for measurement of your organization's websites or apps. This does not include interest-based targeting, which is the collection of information about your use of this service to subsequently personalize content and/or advertising in other contexts.
 
 **C9 contract label**: A `C9` contract data usage label specifies that data cannot be used in data-science workflows. Some contracts include explicit prohibitions on data used for data science. Sometimes these are phrased in terms that prohibit the use of data for artificial intelligence (AI), machine-learning (ML), or modeling.
 
@@ -292,7 +292,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Input feature**: An input feature is specified in feature mapping and is used by a machine-learning model to make predictions.
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] such as [!DNL Attribution AI] and [!DNL Customer AI] are machine-learning, artificial-intelligence-based models that require Experience Platform (or applications built on top of Platform such as Real-time Customer Data Platform) to run and operate.
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] such as [!DNL Attribution AI] and [!DNL Customer AI] are machine-learning, artificial-intelligence-based models that require Experience Platform (or applications built on top of Platform such as Adobe Real-Time Customer Data Platform) to run and operate.
 
 **Interest-based targeting or personalization**: Interest-based targeting, also known as personalization, occurs if the following three conditions are met: 
 
@@ -408,7 +408,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 ## R
 
-**Real-time Customer Data Platform**: [!DNL Real-time Customer Data Platform] brings together known and unknown customer data to create trusted customer profiles with simplified integration, intelligent segmentation, and real-time activation across the digital customer journey.
+**Real-Time Customer Data Platform**: Adobe Real-Time Customer Data Platform (Real-Time CDP) brings together known and unknown customer data to create trusted customer profiles with simplified integration, intelligent segmentation, and real-time activation across the digital customer journey.
 
 **Real-time Customer Profile**: Real-time Customer Profile (sometimes called Profile) provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. Profile allows you to consolidate your customer data into individual profiles offering actionable, timestamped accounts of every customer interaction.
 
@@ -496,7 +496,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Source connector**: Source connectors (also known as sources) help users easily ingest data from multiple sources, allowing the structuring, labeling and enhancement of data using Experience Platform services. Data can be ingested from a variety of sources such as cloud-based storage, third party software, and CRM systems.
 
-**Streaming connection**: A streaming connection is a unique endpoint provided by Adobe and tied to a customer's IMS Organization to stream data into Experience Platform.
+**Streaming connection**: A streaming connection is a unique endpoint provided by Adobe and tied to your organization to stream data into Experience Platform.
 
 **Standard identity namespace**: Standard identity namespaces are pre-defined identity namespaces provided by Adobe, which represent industry-standard solutions that are commonly employed to identify customers.
 

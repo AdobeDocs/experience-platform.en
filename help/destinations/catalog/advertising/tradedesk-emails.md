@@ -84,7 +84,7 @@ Before you can send, or activate, audience data to a destination, you must set u
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Advertiser ID]**: your [!DNL Trade Desk Advertiser ID], which can either be shared by your [!DNL Trade Desk] Account Manager or be found under [!DNL Advertiser Preferences] in the [!DNL Trade Desk] UI. 
 
-When connecting to the destination, setting a Data Governance policy is completely optional. Please review the Experience Platform [data governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=en) for more details.  
+When connecting to the destination, setting a data governance policy is completely optional. Please review the Experience Platform [data governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=en) for more details.  
 
 ## Activate segments to this destination {#activate}
 

@@ -55,6 +55,11 @@ In order for a segment to be evaluated using edge segmentation, the query must c
 
 Additionally, the segment **must** be tied to a merge policy that is active on edge. For more information about merge policies, please read the [merge policies guide](../../profile/api/merge-policies.md).
 
+A segment definition will **not** be enabled for edge segmentation in the following scenarios:
+
+- The segment definition includes a combination of a single event and an `inSegment` event.
+  - However, if the segment contained in the `inSegment` event is profile only, the segment definition **will** be enabled for edge segmentation.
+
 ## Retrieve all segments enabled for edge segmentation
 
 You can retrieve a list of all segments that are enabled for edge segmentation within your IMS Organization by making a GET request to the `/segment/definitions` endpoint.
@@ -253,3 +258,11 @@ A successful response returns the details of the newly created segment definitio
 Now that you know how to create edge-segmentation-enabled segments, you can use them to enable same-page and next-page personalization use cases. 
 
 To learn how to perform similar actions and work with segments using the Adobe Experience Platform user interface, please visit the [Segment Builder user guide](../ui/segment-builder.md).
+
+## Appendix
+
+The following section lists frequently asked questions regarding edge segmentation:
+
+### How long does it take for a segment to be available on the Edge Network?
+
+It takes up to one hour for a segment to be available on the Edge Network.

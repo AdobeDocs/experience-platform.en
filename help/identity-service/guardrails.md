@@ -25,7 +25,7 @@ The following table outlines static limits applied to identity data.
 
 | Guardrail | Limit | Notes |
 | --- | --- | --- |
-| Number of identities in a graph | 150 | The limit is applied at the sandbox level. The identity graph will not be updated once the limit is reached. |
+| Number of identities in a graph | 150 | The limit is applied at the sandbox level. The identity graph will not be updated once the limit is reached. **Note**: The maximum number of identities in an identity graph **for an individual merged profile** is 50. Merged profiles that are based off identity graphs with more than 50 identities are excluded from Real-time Customer Profile. For more information, read the guide on [guardrails for Profile data](../profile/guardrails.md). |
 | Number of identities in an XDM record | 20 | The minimum number of XDM records required is two. |
 | Number of custom namespaces | None | There are no limits to the number of custom namespaces you can create. |
 | Number of graphs | None | There are no limits to the number of identity graphs you can create. |
@@ -39,6 +39,10 @@ The following table outlines existing rules you must follow to ensure a successf
 | --- | --- | --- |
 | ECID | <ul><li>The identity value of an ECID must be exactly 38 characters.</li><li>The identity value of an ECID must consist of numbers only.</li></ul> | <ul><li>If the identity value of ECID is not exactly 38 characters, then the record is skipped.</li><li>If the identity value of ECID contains non-numerical characters, then the record is skipped.</li></ul> |
 | Non-ECID | The identity value cannot exceed 1024 characters. | If the identity value exceeds 1024 characters, then the record is skipped. |
+
+### Identity namespace ingestion
+
+Starting January 31, 2023, Identity Service will block the ingestion of Adobe Analytics ID (AAID) for new customers. This identity is typically ingested through the [Adobe Analytics source](../sources/connectors/adobe-applications/analytics.md) and the [Adobe Audience Manager source](../sources//connectors/adobe-applications/audience-manager.md) and is redundant because the ECID represents the same web browser. If you would like to change this default configuration, please contact your account manager.
 
 ## Next steps
 

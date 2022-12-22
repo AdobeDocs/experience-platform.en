@@ -51,7 +51,7 @@ All event forwarding properties list **[!UICONTROL Edge]** as their platform. Th
 
 ### Extensions {#extensions}
 
-Event forwarding has its own catalog of compatible extensions, such as the [Core](../../extensions/web/core/event-forwarding.md) extension and [Adobe Cloud Connector](../../extensions/web/cloud-connector/overview.md) extension. You can view the available extensions for event forwarding properties in the UI by selecting **[!UICONTROL Extensions]** in the left navigation, followed by **[!UICONTROL Catalog]**.
+Event forwarding has its own catalog of compatible extensions, such as the [Core](../../extensions/server/core/overview.md) extension and [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md) extension. You can view the available extensions for event forwarding properties in the UI by selecting **[!UICONTROL Extensions]** in the left navigation, followed by **[!UICONTROL Catalog]**.
 
 ![Event forwarding extensions in the Data Collection UI](../../images/ui/event-forwarding/overview/extensions.png)
 
@@ -73,6 +73,8 @@ The **[!UICONTROL Path]** value for the data element must follow the pattern `ar
 
 Creating rules in event forwarding properties works in a similar way to tags, with the key difference being that you cannot select events as rule components. Instead, an event forwarding rule processes all events it receives from the [datastream](../../../edge/datastreams/overview.md) and forwards those events to destinations if certain conditions are satisfied.
 
+In addition, there is a 30-second timeout that applies to a single event as it is processed across all rules (and hence all actions) within an event forwarding property. This means all rules and all actions for a single event must be completed in this time frame.
+
 ![Event forwarding rules in the Data Collection UI](../../images/ui/event-forwarding/overview/rules.png)
 
 #### Data element tokenization {#tokenization}
@@ -83,7 +85,7 @@ In tag rules, data elements are tokenized with a `%` at the beginning and end of
 
 #### Sequence of rule actions {#action-sequencing}
 
-The [!UICONTROL Actions] section of an event forwarding rule is always executed sequentially. Make sure the order of actions is correct when you save a rule. This execution sequence cannot be executed asynchronously like it can with tags.
+The [!UICONTROL Actions] section of an event forwarding rule is always executed sequentially. For example, if a rule has two actions, the second action will not begin execution until the previous action is complete (and in cases where a response is expected from an endpoint, that endpoint has responded). Make sure the order of actions is correct when you save a rule. This execution sequence cannot be executed asynchronously like it can with tag rules.
 
 ## Secrets {#secrets}
 

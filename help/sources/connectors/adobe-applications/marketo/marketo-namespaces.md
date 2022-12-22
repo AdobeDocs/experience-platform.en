@@ -12,7 +12,7 @@ This document provides information on the underlying set up for the namespaces a
 
 >[!IMPORTANT]
 >
->You must have access to [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) in order for B2B schemas to participate in [Real-time Customer Profile](../../../../profile/home.md).
+>You must have access to [Adobe Real-Time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) in order for B2B schemas to participate in [Real-time Customer Profile](../../../../profile/home.md).
 
 ## Set up B2B namespaces and schema auto-generation utility
 
