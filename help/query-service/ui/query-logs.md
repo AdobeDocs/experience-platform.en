@@ -1,6 +1,6 @@
 ---
 title: Query Logs
-description: Query logs are ... They are created every time a query is executed using the Query Editor or the Query Service API. More detailed Query Service logs are stored in the ... section.
+description: Query logs are automatically generated each time a query is executed and are available through the UI to help with troubleshooting. This document outlines how to use and navigate the Query Service Logs section of the UI.
 ---
 # Query logs
 
@@ -44,4 +44,4 @@ By reading this document, you now have a better understanding of how query logs 
 
 See the [UI overview](./overview.md), or the [Query Service API guide](../api/getting-started.md) to learn more about Query Service capabilities.
 
-See the [monitor queries document](../monitor-queries.md) to learn how to Query Service improves the visibility of scheduled query runs.
+See the [monitor queries document](../monitor-queries.md) to learn how Query Service improves the visibility of scheduled query runs.
