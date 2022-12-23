@@ -49,7 +49,7 @@ You can then easily drag and drop [!DNL ExperienceEvents] and "[!UICONTROL Event
 
 By default, only populated schema fields from your data store are shown. This includes "[!UICONTROL Event Types]". If the "[!UICONTROL Event Types]" list is not visible, or you are only able to select "[!UICONTROL Any]" as an "[!UICONTROL Event Type]", select the **gear icon** next to **[!UICONTROL Fields]**, then select **[!UICONTROL Show full XDM schema]** under **[!UICONTROL Available Fields]**. Select the **gear icon** again to return to the **[!UICONTROL Fields]** tab and you should now be able to view multiple "[!UICONTROL Event Types]" and schema fields, regardless of whether they contain data or not.
 
-![Radio buttons that let you choose between only showing fields with data or showing all XDM fields.](../images/ui/segment-builder/show-populated.png)
+![Radio buttons that let you choose between only showing fields with data or showing all XDM fields are highlighted.](../images/ui/segment-builder/show-populated.png)
 
 #### Adobe Analytics report suite datasets
 

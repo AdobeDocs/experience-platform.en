@@ -19,7 +19,7 @@ From the **[!UICONTROL Detail]** tab of the customer profile, you can select **[
 
 After choosing to modify the dashboard, you can reorder the cards by selecting the card title and dragging and dropping the cards into the desired order. You can also resize a card by selecting the angle symbol in the bottom-right corner of the card (`⌟`) and dragging the card to the desired size. In this example, the **[!UICONTROL Basic attributes]** card is being resized. 
 
-![The resize button is highlighted.](../images/profile-customization/resize.png)
+![The resize button is highlighted within the Basic attributes card.](../images/profile-customization/resize.png)
 
 The selected card adjusts to the desired size and surrounding cards are repositioned dynamically. This may cause some cards to be moved to additional rows, requiring you to scroll down in order to see all cards. For example, when the "[!UICONTROL Basic attributes]" card is resized the "[!UICONTROL Linked identities]" card is no longer visible on the top row and now appears on a new second row within the profile (not shown). To return the "[!UICONTROL Linked identities]" card to the top row, you could drag and drop it into the current position of the "[!UICONTROL Channel preferences]" card.
 
@@ -75,7 +75,7 @@ Next, select **[!UICONTROL Add widget]** in the top left corner of the dashboard
 
 Choosing to add a new card opens the **[!UICONTROL Edit widget]** screen where you can provide a title for the new card and choose the attributes that you wish the card to display. To begin adding attributes to the card, select **[!UICONTROL Add attributes]**.
 
-![A blank new widget card is displayed.](../images/profile-customization/edit-widget.png)
+![A blank new widget card is displayed in the Edit widget screen.](../images/profile-customization/edit-widget.png)
 
 When the **[!UICONTROL Select union schema field]** dialog opens, the left side of the dialog shows the full [!UICONTROL XDM Individual Profile] union schema and the **[!UICONTROL Selected Attributes]** section on the right-hand side of the dialog shows the attributes that you select for your card. For more information on adding attributes, see the [section on adding attributes](#add-attributes) that appears earlier in this document.
 
@@ -87,7 +87,7 @@ When you return to the **[!UICONTROL Edit widget]** screen, the list of attribut
 
 In order to save your new card you must first provide a **[!UICONTROL Card title]**, then you will be able to select **[!UICONTROL Save]** and complete the card creation process.
 
-![The new widget is previewed.](../images/profile-customization/new-widget.png)
+![The new widget is previewed within the Edit widget screen.](../images/profile-customization/new-widget.png)
 
 After saving, you are returned to the **[!UICONTROL Detail]** tab where your new card and attributes are visible.
 
@@ -97,7 +97,7 @@ After saving, you are returned to the **[!UICONTROL Detail]** tab where your new
 
 If at any point you decide that you would like to restore default cards that have since been removed, you have the ability to quickly and easily do so. First, select **[!UICONTROL Modify dashboard]**, then select **[!UICONTROL Restore default cards]**. Once the default cards are visible, you can select **[!UICONTROL Save]** to save your changes or select **[!UICONTROL Cancel]** if you do not wish to restore the default cards.
 
-![The Restore default cards button is highlighted.](../images/profile-customization/restore-default.png)
+![The Restore default cards button is highlighted in the Profile dashboard.](../images/profile-customization/restore-default.png)
 
 ## Next steps
 

@@ -77,7 +77,7 @@ Underneath is a line graph that shows the number of new audiences that were upda
 
 Additional information about the last segment evaluation can be found by selecting the information bubble next to **[!UICONTROL Total qualified]**.
 
-![The information bubble has been selected. This displays information about the last segment evaluation time.](../images/ui/streaming-segmentation/info-bubble.png)
+![The information bubble for the Total qualified profiles is been selected. This displays information about the last segment evaluation time.](../images/ui/streaming-segmentation/info-bubble.png)
 
 For more information about segment definitions, please read the previous section on [segment definition details](#segment-details).
 

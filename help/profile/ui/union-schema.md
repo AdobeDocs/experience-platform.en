@@ -38,17 +38,17 @@ To display the union schema for a specific XDM class, select the class from the 
 
 After a class has been selected, the schema that is displayed updates to reflect the union schema for the selected class. For example, you can select **[!UICONTROL XDM Individual Profile]** to view the union schema for that class.
 
-![The union schema's classes are highlighted.](../images/union-schema/class.png)
+![A dropdown containing the union schema's classes are highlighted.](../images/union-schema/class.png)
 
 ## Explore union schemas
 
 You can explore the union schema by scrolling up and down to view the complete schema structure and by selecting a right angle bracket (`>`) to expand nested fields.
 
-![A set of nested fields are expanded.](../images/union-schema/explore.png)
+![A set of nested fields within the union schema is expanded.](../images/union-schema/explore.png)
 
 Select any field to view its details, including display name, data type, description, path, created date, and last modified date. You can also view a list of contributing schemas containing the field you selected.
 
-![A field is highlighted. Details about the highlighted are displayed on the right sidebar.](../images/union-schema/explore-field.png)
+![A union schema field is highlighted. Details about the highlighted field are displayed on the right sidebar.](../images/union-schema/explore-field.png)
 
 Selecting the name of a contributing schema reveals the names of datasets related to that schema which are ingesting data into the selected field. Each dataset name appears as a link. Selecting a dataset name opens the activity tab for that dataset in a new window.
 

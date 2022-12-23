@@ -38,7 +38,7 @@ The first step for using external audiences is creating an identity namespace. I
 
 To create an identity namespace, follow the instructions in the [identity namespace guide](../../identity-service/namespaces.md#manage-namespaces). When creating your identity namespace, add the source details to the identity namespace, and mark its [!UICONTROL Type] as a **[!UICONTROL Non-people identifier]**.
 
-![The Non-person identifier is highlighted.](../images/tutorials/external-audiences/identity-namespace-info.png)
+![The Non-person identifier is highlighted on the Create identity namespace modal.](../images/tutorials/external-audiences/identity-namespace-info.png)
 
 ## Create a schema for the segment metadata
 
@@ -54,11 +54,11 @@ Since you are creating a segment definition, which is a pre-defined class, selec
 
 Now that your schema has been created, you will need to specify which field will contain the segment ID. This field should be marked as the primary identity and assigned to the namespaces you previously created.
 
-![The checkboxes to mark the selected field as the primary identity are highlighted.](../images/tutorials/external-audiences/mark-primary-identifier.png)
+![The checkboxes to mark the selected field as the primary identity are highlighted in the Schema Editor.](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
 After marking the `_id` field as the primary identity, select the title of the schema, followed by the toggle labelled **[!UICONTROL Profile]**. Select **[!UICONTROL Enable]** to enable the schema for [!DNL Real-time Customer Profile].
 
-![The toggle to enable the schema for Profile is highlighted.](../images/tutorials/external-audiences/schema-profile.png)
+![The toggle to enable the schema for Profile is highlighted in the Schema Editor.](../images/tutorials/external-audiences/schema-profile.png)
 
 Now, this schema is enabled for Profile, with the primary identification assigned to the non-person identity namespace you created. As a result, this means that segment metadata imported into Platform using this schema will be ingested into Profile without being merged with other people-related Profile data.
 
@@ -72,7 +72,7 @@ To create a dataset, follow the instructions in the [dataset user guide](../../c
 
 After creating the dataset, continue following the instructions in the [dataset user guide](../../catalog/datasets/user-guide.md#enable-profile) to enable this dataset for Real-time Customer Profile.
 
-![The toggle to enable the schema for Profile is highlighted.](../images/tutorials/external-audiences/dataset-profile.png)
+![The toggle to enable the schema for Profile is highlighted in the Dataset activity page.](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## Set up and import audience data
 
@@ -88,7 +88,7 @@ To create a streaming connection, you can follow the instructions in either the 
 
 Once you have created your streaming connection, you will have access to your unique streaming endpoint which you can send your data to. To learn how to send data to these endpoints, please read the [tutorial on streaming record data](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
-![The streaming endpoint for the streaming connection is highlighted.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+![The streaming endpoint for the streaming connection is highlighted in the source details page.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
 ## Audience metadata structure
 
@@ -145,7 +145,7 @@ A sample of the external audience payload's metadata can be seen below:
 
 Once the imported audiences have been set up, they can be used as part of the segmentation process. To find external audiences, go to the Segment Builder, and select **[!UICONTROL Audiences]** tab in the **[!UICONTROL Fields]** section.
 
-![The location where you can get external audiences for the Segment Builder is highlighted.](../images/tutorials/external-audiences/external-audiences.png)
+![The external audiences selector in the Segment Builder is highlighted.](../images/tutorials/external-audiences/external-audiences.png)
 
 ## Next steps
 
@@ -167,7 +167,7 @@ Now that the schema has been created, you will need to add the segment membershi
 
 Additionally, ensure the schema is marked for **[!UICONTROL Profile]**. In order to do this, you will need to mark a field as the primary identity.
 
-![The toggle to enable the schema for Profile is highlighted.](../images/tutorials/external-audiences/external-segment-profile.png)
+![The toggle to enable the schema for Profile is highlighted in the Schema Editor.](../images/tutorials/external-audiences/external-segment-profile.png)
 
 ### Set up the dataset
 
@@ -179,7 +179,7 @@ To create a dataset, follow the instructions in the [dataset user guide](../../c
 
 After creating the dataset, continue following the instructions in the [dataset user guide](../../catalog/datasets/user-guide.md#enable-profile) to enable this dataset for Real-time Customer Profile.
 
-![The toggle to enable the schema for Profile is highlighted.](../images/tutorials/external-audiences/dataset-profile.png)
+![The toggle to enable the schema for Profile is highlighted in the create datasets workflow.](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## Set up and import external audience membership data
 
@@ -195,7 +195,7 @@ To create a streaming connection, you can follow the instructions in either the 
 
 Once you have created your streaming connection, you will have access to your unique streaming endpoint which you can send your data to. To learn how to send data to these endpoints, please read the [tutorial on streaming record data](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
-![The streaming endpoint for the streaming connection is highlighted.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+![The streaming endpoint for the streaming connection is highlighted in the source details page.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
 ## Segment membership structure
 

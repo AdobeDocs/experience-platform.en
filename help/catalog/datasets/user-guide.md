@@ -46,7 +46,7 @@ Select the name of a dataset to access its **[!UICONTROL Dataset activity]** scr
 
 From the **[!UICONTROL Dataset activity]** screen, select **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data. If the dataset is empty, the preview link will be deactivated and will instead say that the preview is not available.
 
-![Preview dataset is highlighted.](../images/datasets/user-guide/select-preview.png)
+![The Preview dataset button is highlighted.](../images/datasets/user-guide/select-preview.png)
 
 In the preview window, the hierarchical view of the schema for the dataset is shown on the right.
 
@@ -61,7 +61,7 @@ For more robust methods to access your data, [!DNL Experience Platform] provides
 
 To create a new dataset, start by selecting **[!UICONTROL Create dataset]** in the **[!UICONTROL Datasets]** dashboard.
 
-![Create dataset is highlighted.](../images/datasets/user-guide/select-create.png)
+![The Create dataset button is highlighted.](../images/datasets/user-guide/select-create.png)
 
 In the next screen, you are presented with the following two options for creating a new dataset:
 
@@ -72,7 +72,7 @@ In the next screen, you are presented with the following two options for creatin
 
 In the **[!UICONTROL Create dataset]** screen, select **[!UICONTROL Create dataset from schema]** to create a new empty dataset.
 
-![Create dataset from schema is highlighted.](../images/datasets/user-guide/create-dataset-schema.png)
+![The Create dataset from schema button is highlighted.](../images/datasets/user-guide/create-dataset-schema.png)
 
 The **[!UICONTROL Select schema]** step appears. Browse the schema listing and select the schema that the dataset will adhere to before selecting **[!UICONTROL Next]**.
 
@@ -86,7 +86,7 @@ The **[!UICONTROL Configure dataset]** step appears. Provide the dataset with a 
 
 When a dataset is created using a CSV file, an ad hoc schema is created to provide the dataset with a structure that matches the provided CSV file. In the **[!UICONTROL Create dataset]** screen, select **[!UICONTROL Create dataset from CSV file]**.
 
-![Create dataset from CSV file is highlighted.](../images/datasets/user-guide/create-dataset-csv.png)
+![The Create dataset from CSV file button is highlighted.](../images/datasets/user-guide/create-dataset-csv.png)
 
 The **[!UICONTROL Configure]** step appears. Provide the dataset with a name and optional description, then select **[!UICONTROL Next]**.
 
@@ -129,11 +129,11 @@ You can delete a dataset by first accessing its **[!UICONTROL Dataset activity]*
 >
 >Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or [!DNL Offer Decisioning]) cannot be deleted.
 
-![Delete dataset is highlighted within the dataset details page.](../images/datasets/user-guide/delete-dataset.png)
+![The Delete dataset button is highlighted within the dataset details page.](../images/datasets/user-guide/delete-dataset.png)
 
 A confirmation box appears. Select **[!UICONTROL Delete]** to confirm the deletion of the dataset.
 
-![The confirmation modal for deletion is displayed.](../images/datasets/user-guide/confirm-delete.png)
+![The confirmation modal for deletion is displayed, with the Delete button highlighted.](../images/datasets/user-guide/confirm-delete.png)
 
 ## Delete a Profile-enabled dataset
 
@@ -153,7 +153,7 @@ You can select on an individual **[!UICONTROL Batch ID]** to access the **[!UICO
 
 If you wish to delete the batch, you can do so by selecting **[!UICONTROL Delete batch]** found near the top right of the dashboard. Doing so will also remove its records from the dataset the batch was originally ingested to.
 
-![Delete batch is highlighted on the dataset details page.](../images/datasets/user-guide/delete-batch.png)
+![The Delete batch button is highlighted on the dataset details page.](../images/datasets/user-guide/delete-batch.png)
 
 ## Next steps
 

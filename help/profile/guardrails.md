@@ -122,11 +122,11 @@ The [!DNL Profile] store data model consists of two core entity types:
 
   Time-independent attributes, also known as "record data" are modeled using [!DNL XDM Individual Profile], while time-series data, also known as "event data" is modeled using [!DNL XDM ExperienceEvent]. As record and time-series data is ingested in Adobe Experience Platform, it triggers [!DNL Real-time Customer Profile] to begin ingesting data that has been enabled for its use. The more interactions and details that are ingested, the more robust individual profiles become.
 
-  ![An image outlining the differences between record data and time-series data.](images/guardrails/profile-entity.png) 
+  ![An infographic outlining the differences between record data and time-series data.](images/guardrails/profile-entity.png) 
 
 * **Dimension entity:** While the Profile data store maintaining profile data is not a relational store, Profile permits integration with small dimension entities in order to create segments in a simplified and intuitive manner. This integration is known as [multi-entity segmentation](../segmentation/multi-entity-segmentation.md). Your organization may also define XDM classes to describe things other than individuals, such as stores, products, or properties. These non-[!DNL XDM Individual Profile] schemas are known as "dimension entities" and do not contain time-series data. Dimension entities provide lookup data which aids and simplifies multi-entity segment definitions and must be small enough that the segmentation engine can load the entire data set into memory for optimal processing (fast point lookup).
 
-  ![An image that shows that a profile entity is comprised of dimension entities.](images/guardrails/profile-and-dimension-entities.png)
+  ![An infographic that shows that a profile entity is comprised of dimension entities.](images/guardrails/profile-and-dimension-entities.png)
 
 ### Profile fragments
 

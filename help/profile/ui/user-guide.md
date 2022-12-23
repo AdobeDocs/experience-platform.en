@@ -127,7 +127,7 @@ After selecting a **[!UICONTROL Profile ID]**, the **[!UICONTROL Detail]** tab o
 
 The default fields shown can also be changed at an organizational-level to display preferred Profile attributes. To learn more about customizing these fields, including step-by-step instructions for adding and removing attributes and resizing dashboard panels, please read the [profile detail customization guide](profile-customization.md).
 
-![The details tab is highlighted. The profile details are displayed.](../images/user-guide/profile-detail.png)
+![The Details tab is highlighted. The profile details are displayed.](../images/user-guide/profile-detail.png)
 
 You can view additional information related to the individual customer profile by selecting another of the available tabs. These tabs include attributes, events, and the segment membership tab that shows the segments for which the profile is currently qualified.
 
@@ -137,7 +137,7 @@ The **[!UICONTROL Attributes]** tab provides a list view summarizing all of the 
 
 These attributes can also be viewed as a JSON object by selecting to **[!UICONTROL View JSON]**. This is helpful for any users wishing to better understand how the profile attributes are ingested into Platform.
 
-![The attributes tab is highlighted. The profile attributes are displayed.](../images/user-guide/attributes.png)
+![The Attributes tab is highlighted. The profile attributes are displayed.](../images/user-guide/attributes.png)
 
 ### Events tab
 
@@ -145,7 +145,7 @@ The **[!UICONTROL Events]** tab contains data from the 100 most recent Experienc
 
 Events can also be viewed as a JSON object by selecting to **[!UICONTROL View JSON]**. This is helpful for understanding how events are captured in Platform.
 
-![The events tab is highlighted. The profile events are displayed.](../images/user-guide/events.png)
+![The Events tab is highlighted. The profile events are displayed.](../images/user-guide/events.png)
 
 ### Segment membership tab
 
@@ -153,7 +153,7 @@ The **[!UICONTROL Segment membership]** tab displays a list with the name and de
 
 For more information about segmentation in Experience Platform, please refer to the [Adobes Experience Platform Segmentation Service documentation](../../segmentation/home.md).
 
-![The segment membership tab is highlighted. The profile segment membership details are displayed.](../images/user-guide/segment-membership.png)
+![The Segment membership tab is highlighted. The profile segment membership details are displayed.](../images/user-guide/segment-membership.png)
 
 ## Merge policies
 
@@ -161,7 +161,7 @@ From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Merge Pol
 
 For more information on merge policies, see the [merge policies overview](../merge-policies/overview.md).
 
-![The merge policies tab is highlighted. Merge policies belonging to the organization are displayed.](../images/user-guide/merge-policies.png)
+![The Merge Policies tab is highlighted. Merge policies belonging to the organization are displayed.](../images/user-guide/merge-policies.png)
 
 ## Union schema {#union-schema}
 
@@ -169,7 +169,7 @@ From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Union Sch
 
 For more information on union schemas, please visit the [union schema UI guide](union-schema.md).
 
-![The union schema tab is highlighted. Union schemas belonging to the organization are displayed.](../images/user-guide/union-schema.png)
+![The Union Schema tab is highlighted. Union schemas belonging to the organization are displayed.](../images/user-guide/union-schema.png)
 
 ## Next steps
 

@@ -88,7 +88,7 @@ Selecting **[!UICONTROL Create segment]** will take you to the Segment Builder. 
 
 The right sidebar contains information about all the segments within the organization, listing the total number of segments, the last evaluation date, the next evaluation date, as well as a breakdown of the segments by evaluation method.
 
-![The right sidebar is highlighted. Information about the segments in the organization are shown. This includes information such as the total number of segments, the last evaluated time, the next evaluated time, as well as a breakdown of the different segment types.](../images/ui/overview/segment-browse-segment-info.png)
+![The right sidebar on the segment browse page is highlighted. Information about the segments in the organization are shown. This includes information such as the total number of segments, the last evaluated time, the next evaluated time, as well as a breakdown of the different segment types.](../images/ui/overview/segment-browse-segment-info.png)
 
 Selecting the segment definition's row provides a summary of the segment definition, including options to either edit or delete the segment, activate the segment to a destination, the qualified audience for the segment, the total audience size, in addition to the segment's name, description, evaluation method, created date, and last modified date.
 
@@ -158,7 +158,7 @@ More detailed information about each [!DNL Profile] can be seen by selecting the
 
 Selecting **[!UICONTROL Create segment]** in the top-right corner opens the [!DNL Segment Builder] workspace, where you can begin creating a segment definition.
 
-![The Create segment button is highlighted.](../images/ui/overview/segment-browse-create.png)
+![On the Segment browse page, the Create segment button is highlighted.](../images/ui/overview/segment-browse-create.png)
 
 ### [!DNL Segment Builder] workspace 
 
@@ -166,7 +166,7 @@ Selecting **[!UICONTROL Create segment]** in the top-right corner opens the [!DN
 
 For more detailed information about using the [!DNL Segment Builder] workspace, please read the [[!DNL Segment Builder] user guide](./segment-builder.md).
 
-![The segment builder is displayed.](../images/ui/overview/segment-builder.png)
+![The Segment Builder workspace is displayed.](../images/ui/overview/segment-builder.png)
 
 ## Scheduled segmentation {#scheduled-segmentation}
 
@@ -184,7 +184,7 @@ Enabling your segment definitions for scheduled evaluation can be done using the
 
 Schedules can currently only be created using the API. For detailed steps on creating, editing, and working with schedules using the API, please follow the tutorial for evaluating and accessing segment results, specifically the section on [scheduled evaluation using the API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
-![The toggle to Add all segments to a schedule is highlighted.](../images/ui/overview/segment-browse-scheduled.png)
+![The toggle to Add all segments to a schedule is highlighted on the Segments Browse page.](../images/ui/overview/segment-browse-scheduled.png)
 
 ## Audiences {#audiences}
 
