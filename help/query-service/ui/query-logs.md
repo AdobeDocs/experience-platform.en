@@ -12,7 +12,7 @@ The log files are generated automatically by any query event and contain informa
 
 To check the query logs, select [!UICONTROL Queries] to navigate to the Query Service workspace and select [!UICONTROL Log] from the available options
 
-![The Platform UI with Queries and Log highlighted.](../images/ui/query-log/logs.md)
+![The Platform UI with Queries and Log highlighted.](../images/ui/query-log/logs.png)
 
 ## Customize and search {#customize-and-search}
 
@@ -22,17 +22,19 @@ You can also search for logs relating to specific query templates by typing the 
 
 ![The Queries Log workspace with the search bar and manage column table dropdown highlighted.](../images/ui/query-log/customize-logs.png)
 
+A [description for each of the log table columns](./overview.md#log) can be found in the Log section of the Query Service overview. 
+
 ## Discover log data
 
 Each row represents log data for a query run associated with a query template. Select any row from the table to populate the right sidebar with query log data for that run.
 
 ![The Queries Log workspace with a row selected and the query log data in the right sidebar highlighted.](../images/ui/query-log/log-details.png)
 
-In the Query log panel, you can select a new output dataset and see or copy the complete SQL query that was used in the run.
+In the log details panel, you can select a new output dataset and see or copy the complete SQL query that was used in the run.
 
 ![The Queries Log workspace with a row selected and the output dataset and SQL query highlighted.](../images/ui/query-log/edit-query.png)
 
-You can also select a query template name from the [!UICONTROL Name] column to navigate directly to the Query Editor. The query is pre-populated in the editor.
+You can also select a query template name from the [!UICONTROL Name] column to navigate directly to the Query Editor. The query is then pre-populated in the editor.
 
 >[!NOTE]
 >

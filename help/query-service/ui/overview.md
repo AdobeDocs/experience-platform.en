@@ -56,7 +56,7 @@ The **[!UICONTROL Templates]** tab shows queries saved by users in your organiza
 | **[!UICONTROL Modified by]** | The last user who modified the query. Any user in your organization with access to [!DNL Query Service] can modify queries. |
 | **[!UICONTROL Last modified]** | The date and time of the last modification to the query, in the browser's time zone. |
 
-## Log
+## Log {#log}
 
 The **[!UICONTROL Log]** tab provides a list of queries that have previously been executed. By default, the log lists the queries in reverse chronology.
 
