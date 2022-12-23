@@ -10,7 +10,7 @@ The log files are generated automatically by any query event and contain informa
 
 ## Check query logs
 
-To check the query logs, select [!UICONTROL Queries] to navigate to the Query Service workspace and select [!UICONTROL Log] from the available options
+To check the query logs, select [!UICONTROL Queries] to navigate to the Query Service workspace and select [!UICONTROL Log] from the available options.
 
 ![The Platform UI with Queries and Log highlighted.](../images/ui/query-log/logs.png)
 
@@ -26,9 +26,9 @@ A [description for each of the log table columns](./overview.md#log) can be foun
 
 ## Discover log data
 
-Each row represents log data for a query run associated with a query template. Select any row from the table to populate the right sidebar with query log data for that run.
+Each row represents log data for a query run associated with a query template. Select any row from the table to populate the right sidebar with log data for that run.
 
-![The Queries Log workspace with a row selected and the query log data in the right sidebar highlighted.](../images/ui/query-log/log-details.png)
+![The Queries Log workspace with a row selected and the log data in the right sidebar highlighted.](../images/ui/query-log/log-details.png)
 
 In the log details panel, you can select a new output dataset and see or copy the complete SQL query that was used in the run.
 
