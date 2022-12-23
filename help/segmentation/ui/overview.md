@@ -37,7 +37,7 @@ The **[!UICONTROL Segments]** dashboard outlines key metrics related to your org
 
 To learn more, visit the [segment dashboard guide](../../dashboards/guides/segments.md).
 
-![](../../dashboards/images/segments/dashboard-overview.png)
+![The segment dashboard is displayed. It shows various widgets, including the audience size, profiles by identity, identity overlay, and the audience size change trend.](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Browse {#browse}
 
@@ -54,15 +54,15 @@ To learn more, visit the [segment dashboard guide](../../dashboards/guides/segme
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
 >title="Add all segments to schedule"
->abstract="Enable to include all batch evaluation segments in the daily scheduled update at 3:30 PM UTC. Disable to remove all segments from the scheduled update."
+>abstract="Enable to include all batch evaluation segments in the daily scheduled update. Disable to remove all segments from the scheduled update."
 
 Select the **[!UICONTROL Browse]** tab to see a list of all the segment definitions for your organization. 
 
-![](../images/ui/overview/segment-browse-all.png)
+![The segments browse screen is displayed. A list of all the segments belonging to the organization is shown.](../images/ui/overview/segment-browse-all.png)
 
 This view lists information about the segment definition including the profile count, created date, and last modified date. 
 
-You can add additional fields to this display by selecting IMAGE. These additional fields include breakdown, churn, evaluation method, and job ID.
+You can add additional fields to this display by selecting ![the filter attribute icon](../images/ui/overview/filter-attribute.png). These additional fields include breakdown, churn, evaluation method, and job ID.
 
 If breakdown is selected, the display shows a bar graph outlining the percentage of profiles that belong to each of the following statuses: [!UICONTROL Realized], [!UICONTROL Existing], and [!UICONTROL Exiting]. Additionally, the breakdown shown on the [!UICONTROL Browse] tab is the most accurate breakdown of the segment status. If this number differs with what is stated on the [!UICONTROL Overview] tab, you should use the numbers on the [!UICONTROL Browse] tab as the correct source of information, since the [!UICONTROL Overview] tab numbers only update once per day.
 
@@ -76,7 +76,7 @@ The churn represents the percentage of profiles that are changing within a segme
 
 The evaluation method can either be streaming, batch, or edge. Streaming segments are constantly evaluated as data enters the system. Batch segments are evaluated according to a set schedule. Edge segments are evaluated in real-time, which allow for same page and next page personalization use cases.
 
-![](../images/ui/overview/segment-browse-segments.png)
+![The segments within the segment browse page are highlighted.](../images/ui/overview/segment-browse-segments.png)
 
 On the top of the page are options to add all segments to a schedule and to create a new segment. 
 
@@ -84,11 +84,11 @@ Toggling **[!UICONTROL Add all segments to schedule]** will enable scheduled seg
 
 Selecting **[!UICONTROL Create segment]** will take you to the Segment Builder. To learn more about creating segments, please read the section on [creating a segment in the user guide](#create-segment).
 
-![](../images/ui/overview/segment-browse-top.png)
+![The top navigation bar on the segment browse page is highlighted. This bar contains a toggle to add all segments to a schedule and a button to create a segment.](../images/ui/overview/segment-browse-top.png)
 
 The right sidebar contains information about all the segments within the organization, listing the total number of segments, the last evaluation date, the next evaluation date, as well as a breakdown of the segments by evaluation method.
 
-![](../images/ui/overview/segment-browse-segment-info.png)
+![The right sidebar on the segment browse page is highlighted. Information about the segments in the organization are shown. This includes information such as the total number of segments, the last evaluated time, the next evaluated time, as well as a breakdown of the different segment types.](../images/ui/overview/segment-browse-segment-info.png)
 
 Selecting the segment definition's row provides a summary of the segment definition, including options to either edit or delete the segment, activate the segment to a destination, the qualified audience for the segment, the total audience size, in addition to the segment's name, description, evaluation method, created date, and last modified date.
 
@@ -96,7 +96,7 @@ Selecting the segment definition's row provides a summary of the segment definit
 >
 > You will **not** be able to delete a segment that is used in a destination activation.
 
-![](../images/ui/overview/segment-browse-details.png)
+![Details about the selected segment are shown. This includes details about the number of qualified profiles, the percentage breakdown of qualified compared to total profiles, last evaluation date.](../images/ui/overview/segment-browse-details.png)
 
 ## Segment definition details {#segment-details}
 
@@ -104,7 +104,7 @@ To see more details about a specific segment definition, select a segment's name
 
 The segment details page appears. On the top, there is a summary of the segment definition, information about the qualified audience size, as well as destinations the segment is activated for. 
 
-![](../images/ui/overview/segment-details-summary.png)
+![The segment definition details page is displayed. The segment  summary, total audience in segment, and activated destinations cards are highlighted.](../images/ui/overview/segment-details-summary.png)
 
 ### Segment summary {#segment-summary}
 
@@ -112,7 +112,7 @@ The **[!UICONTROL Segment summary]** section provides information such as the ID
 
 Additionally, you are given the option to either activate the segment to a destination or edit the segment. Selecting **[!UICONTROL Activate to destination]** will let you activate the segment to a destination. For more detailed information on activating a segment to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md).
 
-![](../images/ui/overview/segment-details-activate.png)
+![The Activate to destination button is highlighted.](../images/ui/overview/segment-details-activate.png)
 
 Selecting **[!UICONTROL Edit segment]** will bring you to the [!DNL Segment Builder]. For more detailed information about using the [!DNL Segment Builder] workspace, please read the [[!DNL Segment Builder] user guide](./segment-builder.md).
 
@@ -152,13 +152,13 @@ The sample size of the scan depends on the overall number of entities in your pr
 
 More detailed information about each [!DNL Profile] can be seen by selecting the [!DNL Profile] ID. To learn more about a profile's details, please read the [[!DNL Real-time Customer Profile] user guide](../../profile/ui/user-guide.md#profile-detail).
 
-![](../images/ui/overview/segment-details-profiles.png)
+![The sample profiles for the segment definition are highlighted. Sample profile information includes the profile ID, the first name, the last name, and the person's email.](../images/ui/overview/segment-details-profiles.png)
 
 ## Creating a segment {#create-segment}
 
 Selecting **[!UICONTROL Create segment]** in the top-right corner opens the [!DNL Segment Builder] workspace, where you can begin creating a segment definition.
 
-![](../images/ui/overview/segment-browse-create.png)
+![On the Segment browse page, the Create segment button is highlighted.](../images/ui/overview/segment-browse-create.png)
 
 ### [!DNL Segment Builder] workspace 
 
@@ -166,7 +166,7 @@ Selecting **[!UICONTROL Create segment]** in the top-right corner opens the [!DN
 
 For more detailed information about using the [!DNL Segment Builder] workspace, please read the [[!DNL Segment Builder] user guide](./segment-builder.md).
 
-![](../images/ui/overview/segment-builder.png)
+![The Segment Builder workspace is displayed.](../images/ui/overview/segment-builder.png)
 
 ## Scheduled segmentation {#scheduled-segmentation}
 
@@ -184,7 +184,7 @@ Enabling your segment definitions for scheduled evaluation can be done using the
 
 Schedules can currently only be created using the API. For detailed steps on creating, editing, and working with schedules using the API, please follow the tutorial for evaluating and accessing segment results, specifically the section on [scheduled evaluation using the API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
-![](../images/ui/overview/segment-browse-scheduled.png)
+![The toggle to Add all segments to a schedule is highlighted on the Segments Browse page.](../images/ui/overview/segment-browse-scheduled.png)
 
 ## Audiences {#audiences}
 
@@ -284,7 +284,7 @@ More information about edge segmentation can be found in the [edge segmentation 
 
 Once you are done creating your segment, the segment will be analyzed by Adobe Experience Platform Data Governance to ensure there are no policy violations within the segment. See the [Data Governance overview](../../data-governance/home.md) for more information.
 
-![](../images/ui/overview/segment-dule-policy-violations.png)
+![The policy violations for the segment are displayed.](../images/ui/overview/segment-dule-policy-violations.png)
 
 ## Next steps and additional resources {#next-steps}
 
