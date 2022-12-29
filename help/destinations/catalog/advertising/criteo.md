@@ -4,7 +4,7 @@ title: Criteo connection
 description: Criteo powers trusted and impactful advertising to bring richer experiences to every consumer across the open internet. With the world's largest commerce data set and best-in-class AI, Criteo ensures each touchpoint across the shopping journey is personalized to reach customers with the right ad, at the right time.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
 ---
-# (Beta) Criteo connection
+# Criteo Connection
 
 ## Overview {#overview}
 
