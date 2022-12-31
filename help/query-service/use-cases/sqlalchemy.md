@@ -1,6 +1,7 @@
 ---
 title: Manage Platform Data Using Python and SQLAlchemy
 description: Learn how to use SQLAlchemy to manage your Platform data using Python instead of SQL.
+exl-id: 9fba942e-9b3d-4efe-ae94-aed685025dea
 ---
 # Manage Platform data using [!DNL Python] and [!DNL SQLAlchemy] 
 
