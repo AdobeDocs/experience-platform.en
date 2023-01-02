@@ -24,7 +24,13 @@ Marketing actions (also called marketing use cases), in the context of the Data 
 
 ## Policies
 
-Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform]. A policy is defined by the following:
+Data governance policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
+
+>[!NOTE]
+>
+>Data governance policies are not to be confused with access control policies, which determine the specific data attributes that can be accessed by certain Platform users in your organization. See the guide on [attribute-based access control](../../access-control/abac/overview.md) for more information.
+
+A data governance policy is defined by the following:
 
 1. A specific marketing action
 1. The data usage label(s) that action is restricted from being performed against

@@ -1,6 +1,7 @@
 ---
 title: Audit Query API Guide
 description: Audit Query is a RESTful API that allows developers to see who did what actions in Adobe Experience Platform.
+exl-id: 9ed291c6-ff8b-4d9b-9fed-d1e3fa8f92fb
 ---
 # [!DNL Audit Query] API guide
 

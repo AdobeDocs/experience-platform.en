@@ -29,7 +29,15 @@ The **[!UICONTROL Expiring credentials]** section provides the following informa
 - **[!UICONTROL Username]**: The username that you will use to connect to Query Service.
 - **[!UICONTROL Password]**: The password that you will use to connect to Query Service.
 - **[!UICONTROL PSQL command]**: A command that automatically has inserted all the relevant information for you to connect to Query Service using PSQL on the command line.
-- **[!UICONTROL Expires]**: The expiry date for the expiring credentials. The credentials expire 24 hours after they are generated.
+- **[!UICONTROL Expires]**: The expiry date and time for the expiring credentials. The default validity duration of the token is 24 hours but it can be changed in the advanced settings of the Admin Console.
+
+>[!TIP]
+>
+>To change the session life for your expiring credentials connection to Query Service, navigate to the [Admin Console](https://adminconsole.adobe.com/) and select the following on screen options: **Settings** > **Privacy and Security** > **Authentication Settings** > **Advanced settings** > **Max session life**.
+>
+>![The Admin Console settings tab with Privacy and Security, Authentication settings, and Max session life highlighted.](../images/ui/credentials/max-session-life.png)
+>
+>See the Adobe Help documentation for more information on the [Advanced settings](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) offered by Admin console.
 
 ## Non-expiring credentials {#non-expiring-credentials}
 

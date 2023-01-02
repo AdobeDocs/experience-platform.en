@@ -10,7 +10,7 @@ exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
 
 [Google Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en) lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], [!DNL Gmail], and [!DNL YouTube].
 
-![Google Customer Match destination in the Adobe Experience Platform UI](../../assets/catalog/advertising/google-customer-match/catalog.png)
+![Google Customer Match destination in the Adobe Experience Platform UI.](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
 ## Use cases {#use-cases}
 

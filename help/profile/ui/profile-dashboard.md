@@ -13,4 +13,4 @@ For detailed instructions on how to access and interact with the [!UICONTROL Pro
 
 For an overview of all of the dashboard features within the Experience Platform user interface, please begin by reading the [dashboards overview](../../dashboards/home.md).
 
-![](../images/profile-dashboard/dashboard-overview.png)
+![The Profile dashboard is displayed.](../images/profile-dashboard/dashboard-overview.png)

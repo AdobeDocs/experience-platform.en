@@ -29,7 +29,7 @@ To navigate to the Profiles dashboard within the Platform UI, select **[!UICONTR
 >
 >If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the Profiles dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with Real-time Customer Profile.
 
-![](../images/profiles/dashboard-overview.png)
+![The Experience Platform Profiles dashboard with Profiles and Overview highlighted.](../images/profiles/dashboard-overview.png)
 
 ### Modifying the Profiles dashboard
 
@@ -136,7 +136,7 @@ See the [section on merge policies earlier in this document](#merge-policies) to
 >
 >Another common reason is due to the differences between the time when the dashboard snapshot is taken and the time when the sample job is run for the [!UICONTROL Browse] tab. You can see when the [!UICONTROL Profile count] widget was last updated by looking at the timestamp on the widget. To learn more about how the sample job is triggered on the [!UICONTROL Browse] tab, see the [profile count section in the Real-time Customer Profile UI guide](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
-![](../images/profiles/profile-count.png)
+![The Experience Platform Profiles dashboard with the Profile count widget highlighted.](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Profile count trend] {#profile-count-trend}
 
@@ -224,7 +224,7 @@ For more information on profile fragments, refer to the section on [profile frag
 
 To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 
-![](../images/profiles/identity-overlap.png)
+![The Profiles dashboard overview with the Identity overlap widget highlighted.](../images/profiles/identity-overlap.png)
 
 ### [!UICONTROL Single identity profiles] {#single-identity-profiles}
 
@@ -269,6 +269,12 @@ The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustr
 
 ### [!UICONTROL Unsegmented profiles by identity] {#unsegmented-profiles-by-identity}
 
+>![NOTE]
+>
+>The Unsegmented profiles by identity widget has been deprecated as of October 2022 and is no longer available.
+
+<!-- 
+
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
 >title="Unsegmented profiles by identity"
@@ -276,7 +282,7 @@ The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustr
 
 The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
-![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png)
+![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
 
 ### [!UICONTROL Audiences] {#audiences}
 
