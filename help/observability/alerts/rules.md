@@ -67,7 +67,7 @@ The following alert rules are specific to [Segmentation Service](../../segmentat
 | --- | --- | --- |
 | Segment Evaluation Job Info | Segment Job Start | This alert triggers when a segment evaluation job starts processing data. |
 | Segment Evaluation Job Info | Segment Job Success | This alert triggers when a segment evaluation job completes successfully. |
-| Segment Evaluation Job Delays, Failures and Errors | Segment Job Delay | This alert triggers when a segment evaluation jobs takes longer than 150 minutes to complete. |
+| Segment Evaluation Job Delays, Failures and Errors | Segment Job Delay | This alert triggers when a segment evaluation jobs takes longer than 150 minutes to complete. <br> One of the following statuses will appear: <br>- FIRING - The condition for failure or delay has been met (Consider it in a ACTIVE state). <br>- INACTIVE - The condition has not been met or not resolved (Consider it in a RESOLVED state).|
 | Segment Evaluation Job Delays, Failures and Errors | Segment Job Failure | This alert triggers when a segment evaluation job results in an error. |
 | Segment Evaluation Job Delays, Failures and Errors | Segment Definition Disabled | This alert triggers when a segment definition is disabled due to internal error. This automatically triggers a war room for an Adobe engineering team to investigate the issue. This alert is only intended to be informative and does not require any action from you. |
 
