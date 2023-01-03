@@ -22,6 +22,7 @@ feature: Queries
   - [Bot filtering](use-cases/bot-filtering.md)
   - [Web and mobile analytics insights](use-cases/analytics-insights.md)
   - [Propensity score](use-cases/propensity-score.md)
+  - [SQLAlchemy](use-cases/sqlalchemy.md)
 - Query Service API {#api}
   - [Getting started](api/getting-started.md)
   - [Queries](api/queries.md)
