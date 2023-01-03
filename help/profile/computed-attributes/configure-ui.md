@@ -24,7 +24,7 @@ The workflow in this tutorial uses a [!DNL Profile]-enabled schema and follows t
 
 ## View a schema
 
-The steps that follow use the Adobe Experience Platform user interface to locate a schema, add a field group, and define a field. If you prefer to use the [!DNL Schema Registry] API, please refer to the [Schema Registry developer guide](../../xdm/api/getting-started.md) for steps on how to create a field group, add a field group to a schema, and enable a schema for use with [!DNL Real-time Customer Profile].
+The steps that follow use the Adobe Experience Platform user interface to locate a schema, add a field group, and define a field. If you prefer to use the [!DNL Schema Registry] API, please refer to the [Schema Registry developer guide](../../xdm/api/getting-started.md) for steps on how to create a field group, add a field group to a schema, and enable a schema for use with [!DNL Real-Time Customer Profile].
 
 In the user interface, click **[!UICONTROL Schemas]** in the left-rail and use the search bar on the **[!UICONTROL Browse]** tab to quickly find the schema you wish to update.
 

@@ -7,7 +7,7 @@ exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
 
 [!UICONTROL B2B Source] is a standard Experience Data Model (XDM) data type that represents a composite identifier for a B2B entity (such as an [account](../classes/b2b/business-account.md), an [opportunity](../classes/b2b/business-opportunity.md), or a [campaign](../classes/b2b/business-campaign.md)).
 
-When relying solely on string-based identifiers, there can be overlaps between IDs across multiple systems (for example, an opportunity could be given a string ID on one CRM system, but that same ID could refer to a completely different opportunity). This can result in data conflicts when merging data in [Real-time Customer Profile](../../profile/home.md).
+When relying solely on string-based identifiers, there can be overlaps between IDs across multiple systems (for example, an opportunity could be given a string ID on one CRM system, but that same ID could refer to a completely different opportunity). This can result in data conflicts when merging data in [Real-Time Customer Profile](../../profile/home.md).
 
 The [!UICONTROL B2B Source] data type allows you to to use the original string ID of an entity and combine it with source-specific contextual information to ensure that it remains wholly unique in the Platform system regardless of the source it originated from.
 

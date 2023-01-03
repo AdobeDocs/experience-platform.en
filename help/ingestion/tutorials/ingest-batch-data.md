@@ -69,23 +69,23 @@ An empty dataset has now been created and you have been returned to the **[!UICO
 
 On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema, streaming, and source. The Info tab also includes information about when the dataset was created and its last modified date. 
 
-Also in the Info tab is a  **[!UICONTROL Profile]** toggle that is used for enabling your dataset for use with [!DNL Real-time Customer Profile]. Use of this toggle, and [!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
+Also in the Info tab is a  **[!UICONTROL Profile]** toggle that is used for enabling your dataset for use with [!DNL Real-Time Customer Profile]. Use of this toggle, and [!DNL Real-Time Customer Profile], will be explained in more detail in the section that follows.
 
 ![Dataset activity](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## Enable dataset for [!DNL Real-time Customer Profile]
+## Enable dataset for [!DNL Real-Time Customer Profile]
 
 Datasets are used for ingesting data into [!DNL Experience Platform], and that data is ultimately used to identify individuals and stitch together information coming from multiple sources. That stitched together information is called a [!DNL Real-Time Customer Profile]. In order for [!DNL Platform] to know which information should be included in the [!DNL Real-Time Profile], datasets can be marked for inclusion using the **[!UICONTROL Profile]** toggle. 
 
 By default, this toggle is off. If you choose to toggle on [!DNL Profile], all data ingested into the dataset will be used to help identify an individual and stitch together their [!DNL Real-Time Profile].
 
-To learn more about [!DNL Real-time Customer Profile] and working with identities, please review the [Identity Service](../../identity-service/home.md) documentation.
+To learn more about [!DNL Real-Time Customer Profile] and working with identities, please review the [Identity Service](../../identity-service/home.md) documentation.
 
-To enable the dataset for [!DNL Real-time Customer Profile], click the **[!UICONTROL Profile]** toggle in the **[!UICONTROL Info]** tab. 
+To enable the dataset for [!DNL Real-Time Customer Profile], click the **[!UICONTROL Profile]** toggle in the **[!UICONTROL Info]** tab. 
 
 ![Profile toggle](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
-A dialog will appear asking you to confirm that you want to enable the dataset for [!DNL Real-time Customer Profile].
+A dialog will appear asking you to confirm that you want to enable the dataset for [!DNL Real-Time Customer Profile].
 
 ![Enable Profile dialog](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 

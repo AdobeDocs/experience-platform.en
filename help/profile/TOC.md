@@ -1,11 +1,11 @@
 ---
 audience: user
-user-guide-title: Real-time Customer Profile Guide
+user-guide-title: Real-Time Customer Profile Guide
 user-guide-description: Merge customer data to create a unified view of customer interactions across channels.
 feature: Profiles
 ---
 
-# [!DNL Real-time Customer Profile] {#profile}
+# [!DNL Real-Time Customer Profile] {#profile}
 
 * [[!DNL Profile] overview](home.md)
 * [Profile overview (Video)](video/profile-overview.md)
@@ -37,7 +37,7 @@ feature: Profiles
   * [Union schema UI guide](ui/union-schema.md)
   * [Union schema overview (Video)](video/union-schemas-overview.md)
 * Tutorials {#tutorials}
-  * [Add data to Real-time Customer Profile](tutorials/add-profile-data.md)
+  * [Add data to Real-Time Customer Profile](tutorials/add-profile-data.md)
   * [Configure a dataset for Profile](tutorials/dataset-configuration.md)
   * [Generate the dataset overlap report](tutorials/dataset-overlap-report.md)
   * [More tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)

@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Discover Insights with Customer AI
 topic-legacy: Discovering insights
@@ -145,7 +145,7 @@ Selecting the **[!UICONTROL Create Segment]** button in any of the buckets for l
 
 >[!NOTE]
 >
->The **[!UICONTROL Create Segment]** button is only available if Real-time Customer Profile is enabled for the dataset. For more information on how to enable Real-time Customer Profile, visit the [Real-time Customer Profile overview](../../../rtcdp/overview.md).
+>The **[!UICONTROL Create Segment]** button is only available if Real-Time Customer Profile is enabled for the dataset. For more information on how to enable Real-Time Customer Profile, visit the [Real-Time Customer Profile overview](../../../rtcdp/overview.md).
 
 ![Click create segment](../images/insights/influential-factors-create-segment.png)
 

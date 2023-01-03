@@ -8,7 +8,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 ---
 # [!DNL Segmentation Service] overview
 
-Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. 
+Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-Time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. 
 
 This document provides an overview of [!DNL Segmentation Service] and the role it plays in Adobe Experience Platform.
 
@@ -57,7 +57,7 @@ Platform currently supports three methods of evaluating segments: streaming segm
 
 ### Streaming segmentation {#streaming}
 
-Streaming segmentation is an ongoing data selection process that updates your segments in response to user activity. Once a segment has been built and saved, the segment definition is applied against incoming data to [!DNL Real-time Customer Profile]. Segment additions and removals are processed regularly, ensuring your target audience remains relevant. 
+Streaming segmentation is an ongoing data selection process that updates your segments in response to user activity. Once a segment has been built and saved, the segment definition is applied against incoming data to [!DNL Real-Time Customer Profile]. Segment additions and removals are processed regularly, ensuring your target audience remains relevant. 
 
 To learn more about streaming segmentation, please read the [streaming segmentation documentation](./api/streaming-segmentation.md).
 
@@ -154,7 +154,7 @@ By assigning a variable to the purchase state attribute, your dynamic segment si
  
 ## Multi-entity segmentation {#multi-entity}
 
-With the advanced multi-entity segmentation feature, you can extend [!DNL Real-time Customer Profile] data with additional data based on products, stores, or other non-person, also known as "dimension" entities. As a result, [!DNL Segmentation Service] can access additional fields during segment definition as if they were native to the [!DNL Profile] data store. Multi-entity segmentation provides flexibility when identifying audiences based on data relevant to your unique business needs. For more information, including use cases and workflows, refer to the [multi-entity segmentation guide](multi-entity-segmentation.md).
+With the advanced multi-entity segmentation feature, you can extend [!DNL Real-Time Customer Profile] data with additional data based on products, stores, or other non-person, also known as "dimension" entities. As a result, [!DNL Segmentation Service] can access additional fields during segment definition as if they were native to the [!DNL Profile] data store. Multi-entity segmentation provides flexibility when identifying audiences based on data relevant to your unique business needs. For more information, including use cases and workflows, refer to the [multi-entity segmentation guide](multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] data types
 
@@ -162,7 +162,7 @@ With the advanced multi-entity segmentation feature, you can extend [!DNL Real-t
 
 ## Next steps
 
-[!DNL Segmentation Service] provides a consolidated workflow to build segments from [!DNL Real-time Customer Profile] data. In summary:
+[!DNL Segmentation Service] provides a consolidated workflow to build segments from [!DNL Real-Time Customer Profile] data. In summary:
 
 - [!DNL Segmentation] is the process of defining a subset of profiles from your profile store, allowing you to characterize behavior or attributes of a desired marketable group. [!DNL Segmentation Service] makes this process possible.
 - When planning a segment, keep in mind that a segment can be referenced from, and combined with, any other segment.

@@ -90,7 +90,7 @@ Two identies are merged:
 
 Both identies are combined into a single profile in [!DNL Experience Platform]. Luma now has a unified view of this consumer.
 
-Based on the browsing behavior of the anonymous visitor in the Men's section of the site, it might have been assumed that the customer was a male. Now that she’s logged in, Luma recognizes Sarah Rose. Luma uses the power of the [!DNL Real-time Customer Profile] to refine the messaging delivered to her across channels.  
+Based on the browsing behavior of the anonymous visitor in the Men's section of the site, it might have been assumed that the customer was a male. Now that she’s logged in, Luma recognizes Sarah Rose. Luma uses the power of the [!DNL Real-Time Customer Profile] to refine the messaging delivered to her across channels.  
 
 ## Personalizing the user experience
 
@@ -100,7 +100,7 @@ She navigates to the home page to browse some more.
 
 ![image](assets/luma-personal.png)
 
-Sarah receives a personalized home page experience that is dynamically delivered, based on her [!DNL Real-time Customer Profile] in Adobe Experience Platform.  
+Sarah receives a personalized home page experience that is dynamically delivered, based on her [!DNL Real-Time Customer Profile] in Adobe Experience Platform.  
 
 She sees relevant content, thanks to Adobe Sensei-powered personalization in Adobe Target, which takes into account her past purchases and affinity toward running apparel and gear. Luma also tailors the men’s catalog content toward running gear for men based on her most recent browse.
 
@@ -189,11 +189,11 @@ All of the profile information Luma has about Sarah displays. This includes her 
 
 The Real-Time CDP profile reduces the Luma marketing team's workflow from weeks to minutes and unlocks possibilities for personalization based on this 360-degree customer view. The profile merges the behavioral data from when she browsed the site before she signed in, with her existing customer profile, creating a comprehensive view of Sarah. 
 
-The marketing team can use this enhanced, [!DNL Real-time Customer Profile] to better personalize Sarah's experience and increase her brand loyalty with Luma.
+The marketing team can use this enhanced, [!DNL Real-Time Customer Profile] to better personalize Sarah's experience and increase her brand loyalty with Luma.
 
 ## Segments
 
-The powerful Adobe Experience Platform segmentation capabilities enable marketers to combine attributes, events and existing segments, based on data captured in the [!DNL Real-time Customer Profile]. 
+The powerful Adobe Experience Platform segmentation capabilities enable marketers to combine attributes, events and existing segments, based on data captured in the [!DNL Real-Time Customer Profile]. 
 
 <!-- ![image](assets/luma-segments.png) -->
 

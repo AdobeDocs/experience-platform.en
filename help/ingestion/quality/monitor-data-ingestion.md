@@ -27,7 +27,7 @@ This user guide provides steps on how to monitor your data within Adobe Experien
 
 In the [Experience Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** on the left navigation menu, followed by **[!UICONTROL Streaming end-to-end]**.
 
-The **[!UICONTROL Streaming end-to-end]** monitoring page appears. This workspace provides a graph that displays the rate of streamed events being received by [!DNL Platform], a graph that displays the rate of streamed events which were successfully processed by [[!DNL Real-time Customer Profile]](../../profile/home.md), as well as a detailed list of incoming data.
+The **[!UICONTROL Streaming end-to-end]** monitoring page appears. This workspace provides a graph that displays the rate of streamed events being received by [!DNL Platform], a graph that displays the rate of streamed events which were successfully processed by [[!DNL Real-Time Customer Profile]](../../profile/home.md), as well as a detailed list of incoming data.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 

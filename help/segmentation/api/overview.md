@@ -7,7 +7,7 @@ exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
 ---
 # Segmentation Service API guide
 
-[!DNL Adobe Experience Platform Segmentation Service] allows you to build segments and generate audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-time Customer Profile] data.
+[!DNL Adobe Experience Platform Segmentation Service] allows you to build segments and generate audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-Time Customer Profile] data.
 
 The [!DNL Segmentation Service] API provides multiple endpoints that allow you to programmatically manage your segmentation operations in [!DNL Experience Platform]. This overview document provides high-level introductions to each of these endpoints, and links to their associated endpoint guides for details. Before reading the individual endpoint guides, please refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
 
