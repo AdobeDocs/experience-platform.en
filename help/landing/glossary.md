@@ -40,6 +40,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Amazon S3 connector**: The [!DNL Amazon] S3 connector allows customers of Experience Platform to securely connect and access their [!DNL Amazon] S3 data.
 
+**APA**: The [[!DNL Australia Privacy Act (Privacy Act)]](https://www.oaic.gov.au/privacy/the-privacy-act) promotes and protects individuals' privacy and regulates how Australian Government agencies and organization handle personal information. The [!DNL Privacy Act] includes principles that apply to private sector organizations. For example, individuals are afforded the right to understand why the personal information is being collected and how it will be used, the ability to access, erase their data, and correct personal information.
+
 **Append save strategy**: The "append" save strategy is an option used when specifying third-party data to ingest via a connection and appending any new data or rows at the end of the dataset. The previously ingested rows remain untouched and only rows created since the last scheduled run are ingested to Experience Platform. Any rows that were changed in the source system remain unchanged on Experience Platform.
 
 **Array**: Arrays are used for ordered elements with the same data type.
@@ -84,6 +86,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **[!DNL Catalog Service]**: [!DNL Catalog Service] (sometimes called [!DNL Catalog]) is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the data lake as files and directories, [!DNL Catalog] holds the metadata and description of those files and directories for lookup, monitoring, and data-governance purposes.
 
+**CCPA**: The [[!DNL California Consumer Privacy Act (CCPA)]](https://oag.ca.gov/privacy/ccpa) enhances privacy rights and consumer protection for residents of California, United States. The CCPA provides new data privacy rights to California residents, including the right to access and delete their personal data, to know whether their personal data is sold or disclosed (and to whom), and the right to opt out of having their data sold to third parties.
+
 **Class**: In Experience Data Model (XDM), a class defines the smallest set of fields used to build a schema and defines the base behavior of the business object that the schema represents.
 
 **Client**: A client is an external tool or application which connects to [!DNL Query Service] via [!DNL PostgreSQL] protocol or HTTP API.
@@ -101,6 +105,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 **Console**: In [!DNL Query Service], the console provides information on the status and operation of a query. The console displays the connection status to [!DNL Query Service], query operations being executed, and any error messages that result from those queries.
 
 **Contract ("C") labels**: Contract ("C") data usage labels are used to categorize data that has contractual obligations or is related to your organization's data governance policies.
+
+**CPRA**: The [[!DNL California Consumer Privacy Rights Act (CPRA)]](https://cppa.ca.gov/regulations/consumer_privacy_act.html) expands and amends portions of the [!DNL California Consumer Privacy Act (CCPA)]. The [!DNL CPRA] establishes a new baseline for consumer data privacy in California by increasing consumer rights and expanding the type of data covered through a broader definition of sensitive personal information. In addition, the [!DNL CPRA] established the California Privacy Protection Agency, a new agency dedicated to implementing and enforcing data privacy rules.
 
 **C1 contract label**: A `C1` contract data usage label specifies data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
 
@@ -256,6 +262,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 ## H
 
+**HIPAA**: The [[!DNL Health Insurance Portability and Accountability Act (HIPAA)]](https://www.hhs.gov/hipaa/index.html) is a United States federal law created to improve healthcare efficiency, improve health insurance portability, and to protect the privacy of patients and health plan members. Under HIPAA, individuals have the right to access and amend their information and obtain copies of their medical records or health information. Covered entities and business associates of covered entities must follow the HIPAA regulations.
+
 **Host**: In the context of tags, a host specifies the location, domain, and user credentials necessary for the system to deliver a build.
 
 **Hourly**: In the context of scheduled file exports, schedules incremental file exports every 3, 6, 8, or 12 hours.
@@ -310,6 +318,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 ## L
 
+**LGPD**: The [[!DNL Lei Geral de Proteção de Dados (LGPD)]](https://gdpr.eu/gdpr-vs-lgpd/) aims to regulate the treatment of personal data of all individuals or natural persons in Brazil. The LGPD gives Brazil citizens the rights to access and delete their personal data, to know whether their personal data is sold or disclosed (and to whom), and the right to opt out of having their data sold to third parties.
+
 **Library**: In the context of tags, a library is a set of business logic that contains instructions for how the tag library should behave on the client device.
 
 **Lookup entities**: In the context of data modeling, lookup entities represent concepts that can relate to an individual person, but cannot be directly used to identify the individual. Entities that fall under this category should be represented by schemas based on custom Experience Data Model (XDM) classes.
@@ -336,6 +346,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 ## N
 
+**[!DNL New Zealand Privacy Act]**: The [[!DNL New Zealand Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) controls how agencies can collect, use, disclose, store, and give access to the personal information of New Zealand citizens and organizations. In 2020, the latest version of the act introduced significant updates to these privacy laws, including new offenses, increasing fines, mandatory notifications for data breaches, and increasing the powers of the Privacy Commissioner.
+
 **Non-production sandbox**: Non-production sandboxes are sandboxes that are typically used for development experiments, testing, or trials. Unlike production sandboxes, non-production sandboxes can be reset and deleted.
 
 **[!DNL Notebooks]**: [!DNL Notebooks] are authored using [!DNL Jupyter Notebook] and can be run to perform data analysis.
@@ -361,6 +373,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 **Partial ingestion**: Partial ingestion enables ingestion of valid records of batch data within a specified error threshold. Error diagnostics for failed records can be downloaded or accessed in [!UICONTROL Monitoring] or [!UICONTROL Sources] dataflow run overview.
 
 **Parquet files**: A Parquet file is a columnar storage file format with complex nested data structures. Parquet files are required for adding data to populate a schema dataset.
+
+**PDPA**: The [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) was introduced to safeguard Thai data owners from the illegal collection, use, or disclosure of their personal data. Inspired by the European Union's GDPR, the regulation grants Thai citizens the right to request access to, or the deletion of, their stored personal data.
 
 **Personalized offers**: A personalized offer is a customizable marketing message based on eligibility rules and constraints.
 
@@ -523,6 +537,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 **Union schema**: A union schema is a consolidation of schemas that share the same class and have been enabled for [!DNL Real-time Customer Profile]. Multiple union schemas can exist for an organization, but there can only be one union schema per class.
 
 ## V
+
+**VCDPA**: The [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) provides new data privacy rights to Virginia residents ("Consumers") including the right to access, delete, and correct personal data. Consumers also have the right to opt out of the sale of personal data, opt out of profiling based on personal data, and processing of personal advertising purposes.
 
 ## W
 

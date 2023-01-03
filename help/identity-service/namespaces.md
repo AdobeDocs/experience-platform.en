@@ -16,7 +16,7 @@ Working with identity namespaces requires an understanding of the various Adobe 
 
 - [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
 - [[!DNL Identity Service]](./home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
-- [[!DNL Privacy Service]](../privacy-service/home.md): Identity namespaces are used to comply with General Data Protection Regulation (GDPR), where GDPR requests can be made relative to a namespace. 
+- [[!DNL Privacy Service]](../privacy-service/home.md): Identity namespaces are used in compliance requests for legal privacy regulations like the General Data Protection Regulation (GDPR). Each privacy request is made relative to a namespace in order to identify which consumers' data should be affected.
 
 ## Understanding identity namespaces
 
