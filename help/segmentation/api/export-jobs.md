@@ -12,7 +12,7 @@ Export jobs are asynchronous processes that are used to persist audience segment
 
 >[!NOTE]
 >
->This guide covers the use of export jobs in the [!DNL Segmentation API]. For information on how to manage export jobs for [!DNL Real-time Customer Profile] data, see the guide on [export jobs in the Profile API](../../profile/api/export-jobs.md)
+>This guide covers the use of export jobs in the [!DNL Segmentation API]. For information on how to manage export jobs for [!DNL Real-Time Customer Profile] data, see the guide on [export jobs in the Profile API](../../profile/api/export-jobs.md)
 
 ## Getting started
 

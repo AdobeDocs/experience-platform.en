@@ -248,7 +248,7 @@ More information about the different segment definition evaluation methods can b
 
 ## Next steps {#next-steps}
 
-Segment Builder provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-time Customer Profile] data. After reading this guide you should now be able to:
+Segment Builder provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-Time Customer Profile] data. After reading this guide you should now be able to:
 
 - Create segment definitions using a combination of attributes, events, and existing audiences as building blocks.  
 - Use the rule builder canvas and containers to control the order in which segment rules are executed.

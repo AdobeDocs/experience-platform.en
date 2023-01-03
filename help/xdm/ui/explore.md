@@ -23,7 +23,7 @@ On the [!UICONTROL Browse] tab, you can use the filter icon (![Filter Icon Image
 
 For example, to filter the list to only show standard data types provided by Adobe, select **[!UICONTROL Datatype]** and **[!UICONTROL Adobe]** under the **[!UICONTROL Type]** and **[!UICONTROL Owner]** sections, respectively.
 
-The **[!UICONTROL Included in Profile]** toggle allows you to filter results to show only resources that are used in schemas that have been enabled for use in [Real-time Customer Profile](../../profile/home.md).
+The **[!UICONTROL Included in Profile]** toggle allows you to filter results to show only resources that are used in schemas that have been enabled for use in [Real-Time Customer Profile](../../profile/home.md).
 
 ![](../images/ui/explore/filter.png)
 

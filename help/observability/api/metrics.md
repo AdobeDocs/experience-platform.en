@@ -224,9 +224,9 @@ The following table outlines metrics for Adobe Experience Platform [!DNL Identit
 
 {style="table-layout:auto"}
 
-#### [!DNL Real-time Customer Profile] {#profile}
+#### [!DNL Real-Time Customer Profile] {#profile}
 
-The following table outlines metrics for [!DNL Real-time Customer Profile].
+The following table outlines metrics for [!DNL Real-Time Customer Profile].
 
 | Insights metric | Description | ID query parameter |
 | ---- | ---- | ---- |

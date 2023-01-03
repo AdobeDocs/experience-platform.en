@@ -120,7 +120,7 @@ The **[!UICONTROL People]** tab provides a list of individual people associated 
 >
 >The [!UICONTROL People] tab displays a list of up to 25 people associated with the account. For accounts with more than 25 associated people, the system shows a random sampling of 25 records.
 
-In addition to showing you a snapshot of information for the contact, each person listed also includes a **[!UICONTROL Profile ID]**, which is a clickable link that allows you to explore the Real-time Customer Profile for that individual. To learn more about viewing individual customer profiles related to your accounts, please visit the guide for [browsing profiles in Real-Time CDP, B2B Edition](../profile/profile-browse.md).
+In addition to showing you a snapshot of information for the contact, each person listed also includes a **[!UICONTROL Profile ID]**, which is a clickable link that allows you to explore the Real-Time Customer Profile for that individual. To learn more about viewing individual customer profiles related to your accounts, please visit the guide for [browsing profiles in Real-Time CDP, B2B Edition](../profile/profile-browse.md).
 
 ![People tab](images/b2b-account-people.png)
 

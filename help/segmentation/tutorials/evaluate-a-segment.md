@@ -15,8 +15,8 @@ This document provides a tutorial for evaluating segments and accessing segment 
 
 This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. Before beginning this tutorial, please review the documentation for the following services:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Allows you to build audience segments from [!DNL Real-time Customer Profile] data.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Allows you to build audience segments from [!DNL Real-Time Customer Profile] data.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
@@ -80,9 +80,9 @@ On-demand evaluation allows you to create a segment job in order to generate an 
 
 ### Create a segment job
 
-A segment job is an asynchronous process that creates an audience segment on demand. It references a segment definition, as well as any merge policies controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience. A segment job needs to be run every time you want to refresh the audience that currently qualifies for the segment definition.
+A segment job is an asynchronous process that creates an audience segment on demand. It references a segment definition, as well as any merge policies controlling how [!DNL Real-Time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience. A segment job needs to be run every time you want to refresh the audience that currently qualifies for the segment definition.
 
-You can create a new segment job by making a POST request to the `/segment/jobs` endpoint in the [!DNL Real-time Customer Profile] API.
+You can create a new segment job by making a POST request to the `/segment/jobs` endpoint in the [!DNL Real-Time Customer Profile] API.
 
 More detailed information about using this endpoint can be found in the [segment jobs endpoint guide](../api/segment-jobs.md#create)
 
@@ -134,7 +134,7 @@ The following sections outline these options in more detail.
 
 ## Look up a profile 
 
-If you know the specific profile that you would like to access, you can do so using the [!DNL Real-time Customer Profile] API. The complete steps for accessing individual profiles are available in the [Access Real-time Customer Profile data using the Profile API](../../profile/api/entities.md) tutorial.
+If you know the specific profile that you would like to access, you can do so using the [!DNL Real-Time Customer Profile] API. The complete steps for accessing individual profiles are available in the [Access Real-Time Customer Profile data using the Profile API](../../profile/api/entities.md) tutorial.
 
 ## Export a segment {#export}
 
@@ -151,7 +151,7 @@ The following steps are required to export your audience:
 
 When exporting an audience, a target dataset must first be created. It is important that the dataset be configured correctly to ensure the export is successful. 
 
-One of the key considerations is the schema upon which the dataset is based (`schemaRef.id` in the API sample request below). In order to export a segment, the dataset must be based on the [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). A union schema is a system-generated, read-only schema that aggregates the fields of schemas which share the same class, in this case that is the XDM Individual Profile class. For more information on union view schemas, please see the [Real-time Customer Profile section of the Schema Registry developer guide](../../xdm/api/getting-started.md).
+One of the key considerations is the schema upon which the dataset is based (`schemaRef.id` in the API sample request below). In order to export a segment, the dataset must be based on the [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). A union schema is a system-generated, read-only schema that aggregates the fields of schemas which share the same class, in this case that is the XDM Individual Profile class. For more information on union view schemas, please see the [Real-Time Customer Profile section of the Schema Registry developer guide](../../xdm/api/getting-started.md).
 
 There are two ways to create the necessary dataset:
 
@@ -204,7 +204,7 @@ A successful response returns an array containing the read-only, system-generate
 
 ### Generate profiles for audience members {#generate-profiles}
 
-Once you have a union-persisting dataset, you can create an export job to persist the audience members to the dataset by making a POST request to the `/export/jobs` endpoint in the [!DNL Real-time Customer Profile] API and providing the dataset ID and the segment information for the segments that you wish to export.
+Once you have a union-persisting dataset, you can create an export job to persist the audience members to the dataset by making a POST request to the `/export/jobs` endpoint in the [!DNL Real-Time Customer Profile] API and providing the dataset ID and the segment information for the segments that you wish to export.
 
 More detailed information about using this endpoint can be found in the [export jobs endpoint guide](../api/export-jobs.md#create)
 

@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Enforce Data Usage Compliance for an Audience Segment Using APIs
 topic-legacy: tutorial
 type: Tutorial
-description: This tutorial covers the steps for enforcing data usage compliance for Real-time Customer Profile audience segments using APIs.
+description: This tutorial covers the steps for enforcing data usage compliance for Real-Time Customer Profile audience segments using APIs.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
 ---
 # Enforce data usage compliance for an audience segment using APIs
 
-This tutorial covers the steps for enforcing data usage compliance for [!DNL Real-time Customer Profile] audience segments using APIs.
+This tutorial covers the steps for enforcing data usage compliance for [!DNL Real-Time Customer Profile] audience segments using APIs.
 
 ## Getting started
 
 This tutorial requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] is a generic lookup entity store, and is used to manage [!DNL Experience Data Model (XDM)] data within [!DNL Platform]. Profile merges data across various enterprise data assets and provides access to that data in a unified presentation.
-    - [Merge policies](../../profile/api/merge-policies.md): Rules used by [!DNL Real-time Customer Profile] to determine what data can be merged into a unified view under certain conditions. Merge policies can be configured for Data Governance purposes.
-- [[!DNL Segmentation]](../home.md): How [!DNL Real-time Customer Profile] divides a large group of individuals contained in the profile store into smaller groups that share similar traits and will respond similarly to marketing strategies.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] is a generic lookup entity store, and is used to manage [!DNL Experience Data Model (XDM)] data within [!DNL Platform]. Profile merges data across various enterprise data assets and provides access to that data in a unified presentation.
+    - [Merge policies](../../profile/api/merge-policies.md): Rules used by [!DNL Real-Time Customer Profile] to determine what data can be merged into a unified view under certain conditions. Merge policies can be configured for Data Governance purposes.
+- [[!DNL Segmentation]](../home.md): How [!DNL Real-Time Customer Profile] divides a large group of individuals contained in the profile store into smaller groups that share similar traits and will respond similarly to marketing strategies.
 - [Data Governance](../../data-governance/home.md): Data Governance provides the infrastructure for data usage labeling and enforcement, using the following components:
     - [Data usage labels](../../data-governance/labels/user-guide.md): Labels used to describe datasets and fields in terms of the level of sensitivity with which to handle their respective data.
     - [Data usage policies](../../data-governance/policies/overview.md): Configurations indicating which marketing actions are allowed on data categorized by particular data usage labels.
@@ -52,7 +52,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Look up a merge policy for a segment definition {#merge-policy}
 
-This workflow begins by accessing a known audience segment. Segments that are enabled for use in [!DNL Real-time Customer Profile] contain a merge policy ID within their segment definition. This merge policy contains information about which datasets are to be included in the segment, which in turn contain any applicable data usage labels.
+This workflow begins by accessing a known audience segment. Segments that are enabled for use in [!DNL Real-Time Customer Profile] contain a merge policy ID within their segment definition. This merge policy contains information about which datasets are to be included in the segment, which in turn contain any applicable data usage labels.
 
 Using the [!DNL Segmentation] API, you can look up a segment definition by its ID to find its associated merge policy.
 

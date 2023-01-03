@@ -27,7 +27,7 @@ There are two types of default limits within this document:
 
 ## Activation limits {#activation-limits}
 
-The following guardrails provide recommended limits when activating Real-time Customer Profile data to destinations.
+The following guardrails provide recommended limits when activating Real-Time Customer Profile data to destinations.
 
 ### General activation guardrails {#general-activation-guardrails}
 
@@ -115,5 +115,5 @@ View guardrails information for other Experience Platform services:
 
 * Guardrails for [data ingestion](/help/ingestion/guardrails.md)
 * Guardrails for [[!DNL Identity Service] data](/help/identity-service/guardrails.md)
-* Guardrails for [[!DNL Real-time Customer Profile] data](/help/profile/guardrails.md)
+* Guardrails for [[!DNL Real-Time Customer Profile] data](/help/profile/guardrails.md)
 * Guardrails for [[!DNL Query Service] data](/help/query-service/guardrails.md)

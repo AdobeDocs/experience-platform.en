@@ -3,12 +3,12 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Profile System Jobs API Endpoint
 topic-legacy: guide
 type: Documentation
-description: Adobe Experience Platform enables you to delete a dataset or batch from the Profile store in order to remove Real-time Customer Profile data that is no longer needed or was added in error. This requires using the Profile API to create a Profile system job, or delete request.
+description: Adobe Experience Platform enables you to delete a dataset or batch from the Profile store in order to remove Real-Time Customer Profile data that is no longer needed or was added in error. This requires using the Profile API to create a Profile system job, or delete request.
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
 ---
 # Profile system jobs endpoint (Delete requests)
 
-Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into [!DNL Platform] is stored in the [!DNL Data Lake], and if the datasets have been enabled for Profile, that data is stored in the [!DNL Real-time Customer Profile] data store as well. Occasionally it may be necessary to delete a dataset or batch from the Profile store in order to remove data that is no longer needed or was added in error. This requires using the [!DNL Real-time Customer Profile] API to create a [!DNL Profile] system job, or `delete request`, that can also be modified, monitored, or removed if required.
+Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into [!DNL Platform] is stored in the [!DNL Data Lake], and if the datasets have been enabled for Profile, that data is stored in the [!DNL Real-Time Customer Profile] data store as well. Occasionally it may be necessary to delete a dataset or batch from the Profile store in order to remove data that is no longer needed or was added in error. This requires using the [!DNL Real-Time Customer Profile] API to create a [!DNL Profile] system job, or `delete request`, that can also be modified, monitored, or removed if required.
 
 >[!NOTE]
 >
@@ -16,7 +16,7 @@ Adobe Experience Platform enables you to ingest data from multiple sources and b
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The API endpoint used in this guide is part of the [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## View delete requests
 

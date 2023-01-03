@@ -20,7 +20,7 @@ Legal privacy regulations such as the [!DNL General Data Protection Regulation] 
 
 ## Opt-out capabilities
 
-[!DNL Real-Time CDP] allows customers to opt out of having their personal data included in segmentation use cases. Customers' opt-out preferences are captured and stored by [!DNL Real-time Customer Profile], and can be enforced by excluding users who have opted out from a segment using boolean logic ("AND NOT") in the segment predicate.
+[!DNL Real-Time CDP] allows customers to opt out of having their personal data included in segmentation use cases. Customers' opt-out preferences are captured and stored by [!DNL Real-Time Customer Profile], and can be enforced by excluding users who have opted out from a segment using boolean logic ("AND NOT") in the segment predicate.
 
 See the document on [honoring opt-out requests](../../segmentation/consents.md) in the Adobe Experience Platform Segmentation Service documentation for more information.
 

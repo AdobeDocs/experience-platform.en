@@ -77,5 +77,5 @@ You can also check the profile usage your account has available through the [Lic
 | Audience Manager Data | Type | Latency | Notes |
 | --- | --- | --- | --- |
 | Real-time data | Events | <25 minutes | Time from being captured at Audience Manager Edge node to appearing in data lake. |
-| Real-time data | Profile updates | <10 minutes | Time to land in Real-time Customer Profile. |
-| Real-time and onboarded data | Profile updates | 24 to 36 hours | Time from being captured via DCS/PCS Edge data and onboarded data, being processed to a user profile, to then appearing in Real-time Customer Profile. Currently, this data does not land in the data lake directly. Profile toggle can be enabled for Audience Manager Profile datasets to ingest this data directly into Real-time Customer Profile. |
+| Real-time data | Profile updates | <10 minutes | Time to land in Real-Time Customer Profile. |
+| Real-time and onboarded data | Profile updates | 24 to 36 hours | Time from being captured via DCS/PCS Edge data and onboarded data, being processed to a user profile, to then appearing in Real-Time Customer Profile. Currently, this data does not land in the data lake directly. Profile toggle can be enabled for Audience Manager Profile datasets to ingest this data directly into Real-Time Customer Profile. |

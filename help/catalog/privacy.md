@@ -14,7 +14,7 @@ This document covers essential concepts related to processing privacy requests f
 
 >[!NOTE]
 >
->This guide only covers how to make privacy requests for the data lake in Experience Platform. If you also plan to make privacy requests for the Real-time Customer Profile data store, refer to the guide on [privacy request processing for Profile](../profile/privacy.md) in addition to this tutorial.
+>This guide only covers how to make privacy requests for the data lake in Experience Platform. If you also plan to make privacy requests for the Real-Time Customer Profile data store, refer to the guide on [privacy request processing for Profile](../profile/privacy.md) in addition to this tutorial.
 >
 >For steps on how to make privacy requests for other Adobe Experience Cloud applications, refer to the [Privacy Service documentation](../privacy-service/experience-cloud-apps.md).
 
@@ -207,7 +207,7 @@ If you also included `ProfileService` or `identity` in the privacy request, thei
 
 By reading this document, you have been introduced to the important concepts involved with processing privacy requests for the data lake. It is recommended that you continue reading the documentation provided throughout this guide in order to deepen your understanding of how to manage identity data and create privacy jobs.
 
-See the document on [privacy request processing for Real-time Customer Profile](../profile/privacy.md) for steps on processing privacy requests for the [!DNL Profile] store.
+See the document on [privacy request processing for Real-Time Customer Profile](../profile/privacy.md) for steps on processing privacy requests for the [!DNL Profile] store.
 
 ## Appendix
 

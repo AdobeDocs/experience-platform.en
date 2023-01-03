@@ -417,6 +417,6 @@ A successful response returns HTTP status 200 (OK) and the details of the update
 
 By following this tutorial, you have successfully created a data usage policy for a marketing action. You can now continue to the tutorial on [enforcing data usage policies](../enforcement/api-enforcement.md) to learn how to check for policy violations and handle them in your experience application.
 
-For more information on the different available operations in the [!DNL Policy Service] API,  see the [Policy Service developer guide](../api/getting-started.md). For information on how to enforce policies for [!DNL Real-time Customer Profile] data, see the tutorial on [enforcing data usage compliance for audience segments](../../segmentation/tutorials/governance.md).
+For more information on the different available operations in the [!DNL Policy Service] API,  see the [Policy Service developer guide](../api/getting-started.md). For information on how to enforce policies for [!DNL Real-Time Customer Profile] data, see the tutorial on [enforcing data usage compliance for audience segments](../../segmentation/tutorials/governance.md).
 
 To learn how to manage usage policies in the [!DNL Experience Platform] user interface, see the [policy user guide](user-guide.md).

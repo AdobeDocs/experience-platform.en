@@ -56,7 +56,7 @@ Next, create an XDM ExperienceEvent schema for both delivery logs and tracking l
 
 >[!NOTE]
 >
->Your XDM ExperienceEvent schema must be Profile-enabled in order to ingest your Campaign data to [!DNL Real-time Customer Profile].
+>Your XDM ExperienceEvent schema must be Profile-enabled in order to ingest your Campaign data to [!DNL Real-Time Customer Profile].
 
 For detailed instructions on how to create a schema, read the guide on [creating an XDM schema in the UI](../../../xdm/tutorials/create-schema-ui.md).
 

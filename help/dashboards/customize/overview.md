@@ -42,7 +42,7 @@ For complete steps to creating your own widgets, refer to the [custom widgets fo
 
 #### Edit schema {#edit-schema}
 
-In order to create a [custom widget](#custom-widgets) for your dashboards, you must first identify the Real-time Customer Profile attribute upon which the widget will be based.
+In order to create a [custom widget](#custom-widgets) for your dashboards, you must first identify the Real-Time Customer Profile attribute upon which the widget will be based.
 
 For step-by-step instructions for editing your organization's schema in order to create custom dashboard widgets, please visit the guide for [editing your dashboard schema](edit-schema.md).
 

@@ -18,7 +18,7 @@ This user guide requires a working understanding of the following components of 
 *   [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     *   [Basics of schema composition](../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     *   [Schema Editor](../../xdm/tutorials/create-schema-ui.md): Learn how to build your own custom XDM schemas using the [!DNL Schema Editor] within the [!DNL Platform] user interface.
-*   [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+*   [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 *   [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Ensure compliancy with regulations, restrictions, and policies regarding the usage of customer data.
 
 ## View datasets {#view-datasets}
@@ -100,9 +100,9 @@ The **[!UICONTROL Add data]** step appears. Upload the CSV file by either draggi
 
 ![The Add data screen is displayed. The location where you can upload the CSV file for the dataset is highlighted.](../images/datasets/user-guide/add-csv-data.png)
 
-## Enable a dataset for Real-time Customer Profile {#enable-profile}
+## Enable a dataset for Real-Time Customer Profile {#enable-profile}
 
-Every dataset has the ability to enrich customer profiles with its ingested data. To do so, the schema that the dataset adheres to must be compatible for use in [!DNL Real-time Customer Profile]. A compatible schema satisfies the following requirements:
+Every dataset has the ability to enrich customer profiles with its ingested data. To do so, the schema that the dataset adheres to must be compatible for use in [!DNL Real-Time Customer Profile]. A compatible schema satisfies the following requirements:
 
 *   The schema has at least one attribute specified as an identity property.
 *   The schema has an identity property defined as the primary identity.
@@ -139,7 +139,7 @@ A confirmation box appears. Select **[!UICONTROL Delete]** to confirm the deleti
 
 If a dataset is enabled for Profile, deleting that dataset through the UI will delete it from data lake, Identity Service, and the Profile store within Platform.
 
-You can delete a dataset from the [!DNL Profile] store only (leaving the data in the Data Lake) using the Real-time Customer Profile API. For more information, see the [profile system jobs API endpoint guide](../../profile/api/profile-system-jobs.md).
+You can delete a dataset from the [!DNL Profile] store only (leaving the data in the Data Lake) using the Real-Time Customer Profile API. For more information, see the [profile system jobs API endpoint guide](../../profile/api/profile-system-jobs.md).
 
 ## Monitor data ingestion
 
@@ -161,4 +161,4 @@ This user guide provided instructions for performing common actions when working
 
 *   [Create a dataset using APIs](create.md)
 *   [Query dataset data using the Data Access API](../../data-access/home.md)
-*   [Configure a dataset for Real-time Customer Profile and Identity Service using APIs](../../profile/tutorials/dataset-configuration.md)
+*   [Configure a dataset for Real-Time Customer Profile and Identity Service using APIs](../../profile/tutorials/dataset-configuration.md)

@@ -448,9 +448,9 @@ The response shows that both operations were performed successfully. The field g
 }
 ```
 
-## Enable a schema for use in Real-time Customer Profile {#union}
+## Enable a schema for use in Real-Time Customer Profile {#union}
 
-In order for a schema to participate in [Real-time Customer Profile](../../profile/home.md), you must add a `union` tag to the schema's `meta:immutableTags` array. You can accomplish this by making a PATCH request for the schema in question.
+In order for a schema to participate in [Real-Time Customer Profile](../../profile/home.md), you must add a `union` tag to the schema's `meta:immutableTags` array. You can accomplish this by making a PATCH request for the schema in question.
 
 >[!IMPORTANT]
 >

@@ -12,17 +12,17 @@ In the Adobe Experience Platform user interface (UI) you can easily view any uni
 
 ## Getting started
 
-This UI guide requires an understanding of the various [!DNL Experience Platform] services involved with managing Real-time Customer Profile data. Before reading this guide, or working in the UI, please review the documentation for the following services:
+This UI guide requires an understanding of the various [!DNL Experience Platform] services involved with managing Real-Time Customer Profile data. Before reading this guide, or working in the UI, please review the documentation for the following services:
 
-* [[!DNL Real-time Customer Profile]](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-time Customer Profile] by bridging identities from disparate data sources as they are ingested into [!DNL Platform].
+* [[!DNL Real-Time Customer Profile]](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-Time Customer Profile] by bridging identities from disparate data sources as they are ingested into [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 ## Understanding union schemas
 
-Real-time Customer Profile enables you to create robust, centralized profiles containing customer attributes and timestamped events each customer interaction across systems integrated with Adobe Experience Platform. The format and structure of this data is provided by Experience Data Model (XDM) schemas, with each schema being based upon an XDM class and containing fields that are compatible with that class.
+Real-Time Customer Profile enables you to create robust, centralized profiles containing customer attributes and timestamped events each customer interaction across systems integrated with Adobe Experience Platform. The format and structure of this data is provided by Experience Data Model (XDM) schemas, with each schema being based upon an XDM class and containing fields that are compatible with that class.
 
-Schemas can be created for multiple use cases, referencing the same class but containing fields specific to their use. When a schema is enabled for Profile, it becomes part of a union schema. In other words, union schemas are composed of multiple schemas that share the same class and have been enabled for Profile. The union schema enables you to see an amalgamation of all of the fields contained within schemas sharing the same class. Real-time Customer Profile uses the union schema to create a holistic view of each individual customer.
+Schemas can be created for multiple use cases, referencing the same class but containing fields specific to their use. When a schema is enabled for Profile, it becomes part of a union schema. In other words, union schemas are composed of multiple schemas that share the same class and have been enabled for Profile. The union schema enables you to see an amalgamation of all of the fields contained within schemas sharing the same class. Real-Time Customer Profile uses the union schema to create a holistic view of each individual customer.
 
 Working with union schemas requires a deep understanding of XDM schemas. For more information, please begin by reading the [basics of schema composition](../../xdm/schema/composition.md).
 
