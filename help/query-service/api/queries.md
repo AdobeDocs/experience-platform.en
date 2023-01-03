@@ -31,6 +31,7 @@ The following is a list of available query parameters for listing queries. All o
 
 | Parameter | Description |
 | --------- | ----------- |
+| `isPrevLink` | The `isPrevLink` query parameter is used for pagination. Results of the API call are sorted using their `created` timestamp and the `orderby` property. When navigating the pages of results, `isPrevLink` is set to true when paging backwards. It reverses the order of the query. See "next" and "prev" links as examples. |
 | `orderby` | Specifies the field by which to order results. The supported fields are `created` and `updated`. For example, `orderby=created` will sort results by created in ascending order. Adding a `-` before created (`orderby=-created`) will sort items by created in descending order. |
 | `limit` | Specifies the page size limit to control the number of results that are included in a page. (*Default value: 20*) |
 | `start` | Offsets the response list, using zero-based numbering. For example, `start=2` will return a list starting from the third listed query. (*Default value: 0*) |
