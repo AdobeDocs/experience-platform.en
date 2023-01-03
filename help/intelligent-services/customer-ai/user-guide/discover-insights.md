@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
-solution: Experience Platform, Real-Time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Discover Insights with Customer AI
 topic-legacy: Discovering insights

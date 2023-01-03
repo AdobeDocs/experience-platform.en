@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;insights;customer ai;popular topics;customer ai segments
-solution: Experience Platform, Real-Time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Create Customer Segments with Predicted Scores
 topic-legacy: Create a segment
