@@ -16,7 +16,7 @@ Using the developer guide requires a working understanding of the following comp
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     * [Basics of schema composition](../schema/composition.md): Learn about the basic building blocks of XDM schemas.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 XDM uses JSON Schema formatting to describe and validate the structure of ingested customer experience data. It is therefore strongly recommended that you review the [official JSON Schema documentation](https://json-schema.org/) for a better understanding of this underlying technology.
@@ -224,7 +224,7 @@ Currently, Platform only supports a single major version (`1`) for each schema. 
 >The non-destructive requirement for schema evolution is only enforced after the schema has been referenced by a dataset and one of the following cases is true:
 >
 >* Data has been ingested into the dataset.
->* The dataset has been enabled for use in Real-time Customer Profile (even if no data has been ingested).
+>* The dataset has been enabled for use in Real-Time Customer Profile (even if no data has been ingested).
 >
 >If the schema has not been associated with a dataset that meets one of the above criteria, then any change can be made to it. However, in all cases the `version` component still remains at `1`.
 

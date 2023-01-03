@@ -46,7 +46,7 @@ Consider an everyday example of a consumer's relationship with your brand:
 
 ![Identity stitching on Platform](./images/identity-service-stitching.png)
 
-Essentially, [!DNL Identity Service] allows you to piece together a complete picture of your customer, aggregating related data that might otherwise be scattered across disparate systems. The identity relationships that [!DNL Identity Service] defines and maintains are leveraged by Real-time Customer Profile to build a complete a picture of a customer and their interactions with your brand. For more information, see the [Real-time Customer Profile overview](../profile/home.md).
+Essentially, [!DNL Identity Service] allows you to piece together a complete picture of your customer, aggregating related data that might otherwise be scattered across disparate systems. The identity relationships that [!DNL Identity Service] defines and maintains are leveraged by Real-Time Customer Profile to build a complete a picture of a customer and their interactions with your brand. For more information, see the [Real-Time Customer Profile overview](../profile/home.md).
 
 ### Use cases
 
@@ -128,7 +128,7 @@ For example, by labeling phone number fields as identity fields, [!DNL Identity 
 
 ### Configure a dataset for [!DNL Identity Service]
 
-During the streaming ingestion process, [!DNL Identity Service ]automatically extracts identity data from record and time series data. However, before data can be ingested, it must be enabled for [!DNL Identity Service]. See the tutorial on  [configuring a Dataset for Real-time Customer Profile and Identity Service using APIs](../profile/tutorials/dataset-configuration.md) for more information.
+During the streaming ingestion process, [!DNL Identity Service ]automatically extracts identity data from record and time series data. However, before data can be ingested, it must be enabled for [!DNL Identity Service]. See the tutorial on  [configuring a Dataset for Real-Time Customer Profile and Identity Service using APIs](../profile/tutorials/dataset-configuration.md) for more information.
 
 ### Ingest data to [!DNL Identity Service]
 

@@ -21,8 +21,7 @@ In order to export a segment, the dataset must be based on the [!DNL XDM Individ
 
 To view union schemas in the UI, select **[!UICONTROL Profiles]** in the left-navigation, then select **[!UICONTROL Union Schema]** as shown below.
 
-![Union schema tab in Experience Platform UI](../images/tutorials/segment-export-dataset/union.png)
-
+![The union schema tab is highlighted.](../images/tutorials/segment-export-dataset/union.png)
 
 ## Datasets workspace
 
@@ -32,19 +31,19 @@ Select **[!UICONTROL Datasets]** in the left navigation to access the workspace,
 
 >[!NOTE]
 >
->Select the filter icon next to the search bar to use filtering capabilities to view only those datasets enabled for [!DNL Real-time Customer Profile].
+>Select the filter icon next to the search bar to use filtering capabilities to view only those datasets enabled for [!DNL Real-Time Customer Profile].
 
-![View datasets](../images/tutorials/segment-export-dataset/browse.png)
+![The datasets workspace is displayed.](../images/tutorials/segment-export-dataset/browse.png)
 
 ## Create a dataset
 
 To create a dataset, select **[!UICONTROL Create Dataset]**. 
 
-![Select Create dataset](../images/tutorials/segment-export-dataset/create-dataset.png)
+![The Create dataset button is highlighted.](../images/tutorials/segment-export-dataset/create-dataset.png)
 
 On the next screen, select **[!UICONTROL Create Dataset from Schema]**.
 
-![Select data source](../images/tutorials/segment-export-dataset/create-from-schema.png)
+![The Create dataset from schema option is highlighted.](../images/tutorials/segment-export-dataset/create-from-schema.png)
 
 ## Select XDM Individual Profile Union Schema
 
@@ -52,24 +51,25 @@ To select the [!DNL XDM Individual Profile Union Schema] for use in your dataset
 
 >[!NOTE]
 >
->Despite the fact that union schemas participate in Real-time Customer Profile by definition, they are listed as "Not enabled" due to the fact that they are not enabled for Profile in same way as traditional schemas.
+>Despite the fact that union schemas participate in Real-Time Customer Profile by definition, they are listed as "Not enabled" due to the fact that they are not enabled for Profile in same way as traditional schemas.
 
 Select the radio button next to **[!UICONTROL XDM Individual Profile]**, then select **[!UICONTROL Next]**.
 
-![Select schema](../images/tutorials/segment-export-dataset/select-schema.png)
+![The XDM Individual Profile schema is highlighted.](../images/tutorials/segment-export-dataset/select-schema.png)
 
 ## Configure dataset
 
 On the next screen, you must give your dataset a name. You can also add an optional description. 
 
 **Notes on dataset names:**
+
 * Dataset names should be short and descriptive so that the dataset can be easily found in the library later. 
 * Dataset names must be unique, meaning they should also be specific enough that they will not be reused in the future. 
 * It is best practice to provide additional information about the dataset using the description field, as it may help other users differentiate between datasets in the future.
 
 Once the dataset has a name and description, select **[!UICONTROL Finish]**.
 
-![Configure dataset](../images/tutorials/segment-export-dataset/configure-dataset.png)
+![The Configure dataset page is shown. The configuration options are highlighted.](../images/tutorials/segment-export-dataset/configure-dataset.png)
 
 ## Dataset activity
 
@@ -77,7 +77,7 @@ Once the dataset is created, you are brought the activity page for that dataset.
 
 The right rail contains information related to your new dataset such as dataset ID, name, description, schema, and more. Please make note of the **[!UICONTROL Dataset ID]**, as this value is required to complete the audience segment export workflow.
 
-![Dataset activity](../images/tutorials/segment-export-dataset/activity.png)
+![The dataset activity page is shown. The dataset ID is highlighted, as this value needs to be noted for future steps.](../images/tutorials/segment-export-dataset/activity.png)
 
 ## Next steps
 

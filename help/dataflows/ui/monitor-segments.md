@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;monitor segments;monitor dataflows;dataflows;segmentation
-description: Segmentation allows you to create segments and audiences from your Real-time Customer Profile data. This tutorial provides instructions on how you can monitor dataflows during segmentation using the Experience Platform user interface.
+description: Segmentation allows you to create segments and audiences from your Real-Time Customer Profile data. This tutorial provides instructions on how you can monitor dataflows during segmentation using the Experience Platform user interface.
 title: Monitor Dataflows for Segments in the UI
 topic-legacy: overview
 type: Tutorial
@@ -8,7 +8,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 ---
 # Monitor dataflows for segments in the UI
 
-Segmentation Service allows you to create segments and audiences from your Real-time Customer Profile data in Adobe Experience Platform. Platform provides dataflows to transparently track this flow of data from sources to destinations.
+Segmentation Service allows you to create segments and audiences from your Real-Time Customer Profile data in Adobe Experience Platform. Platform provides dataflows to transparently track this flow of data from sources to destinations.
 
 The monitoring dashboard provides you with a visual representation of the data's activity within a segment, including the status of your data's segmentation. This tutorial provides instructions on how you can use the monitoring dashboard to monitor your data's segmentation using the Experience Platform user interface, allowing you to track the status of segment activation, evaluation, and export jobs.
 
@@ -18,7 +18,7 @@ This guide requires a working understanding of the following components of Adobe
 
 - [Dataflows](../home.md): Dataflows are a representation of data jobs that move data across Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
   - [Dataflow runs](../../sources/notifications.md): Dataflow runs are the recurring scheduled jobs based on the frequency configuration of selected dataflows.
-- [Segmentation](../../segmentation/home.md): Segmentation allows you to create segments and audiences from your Real-time Customer Profile data. 
+- [Segmentation](../../segmentation/home.md): Segmentation allows you to create segments and audiences from your Real-Time Customer Profile data. 
   - [Activation jobs](../../destinations/ui/activation-overview.md): An activation job is used to activate your segment to a specified destination.
   - [Evaluation jobs](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): An evaluation job is an asynchronous process that runs creates an audience segment based on the specified segment.
   - [Export jobs](../../segmentation/api/export-jobs.md): An export job is an asynchronous processes that are used to persist audience segment members to datasets.

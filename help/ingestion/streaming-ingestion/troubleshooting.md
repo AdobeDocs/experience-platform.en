@@ -40,9 +40,9 @@ When synchronous validation is not supported for the requested location, a 501 e
 
 [!DNL Experience Platform] supports secured data collection. When authenticated data collection is enabled, clients must send a JSON Web Token (JWT) and their IMS Organization ID as request headers. For more information on how to send authenticated data to [!DNL Platform], please see the guide on [authenticated data collection](../tutorials/create-authenticated-streaming-connection.md).
 
-### What is the latency for streaming data to [!DNL Real-time Customer Profile]?
+### What is the latency for streaming data to [!DNL Real-Time Customer Profile]?
 
-Streamed events are generally reflected in [!DNL Real-time Customer Profile] in under 60 seconds. Actual latencies can vary due to data volume, message size, and bandwidth limitations.
+Streamed events are generally reflected in [!DNL Real-Time Customer Profile] in under 60 seconds. Actual latencies can vary due to data volume, message size, and bandwidth limitations.
 
 ### Can I include multiple messages in the same API request?
 
@@ -88,9 +88,9 @@ The following JSON is an example response object for an API request with two mes
 }
 ```
 
-### Why are my sent messages not being received by [!DNL Real-time Customer Profile]? 
+### Why are my sent messages not being received by [!DNL Real-Time Customer Profile]? 
 
-If [!DNL Real-time Customer Profile] rejects a message, it is most likely due to incorrect identity information. This can be the result of providing an invalid value or namespace for an identity.
+If [!DNL Real-Time Customer Profile] rejects a message, it is most likely due to incorrect identity information. This can be the result of providing an invalid value or namespace for an identity.
 
 There are two types of identity namespaces: default and custom. When using custom namespaces, make sure the namespace has been registered within [!DNL Identity Service]. See the [identity namespace overview](../../identity-service/namespaces.md) for more information on using default and custom namespaces.
 

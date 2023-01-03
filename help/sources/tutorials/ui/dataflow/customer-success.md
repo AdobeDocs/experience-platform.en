@@ -23,7 +23,7 @@ This tutorial requires a working understanding of the following components of Pl
 * [[!DNL Experience Data Model (XDM)] System](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-* [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [[!DNL Data Prep]](../../../../data-prep/home.md): Allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
 ## Add data
@@ -133,9 +133,9 @@ You can delete dataflows that are no longer necessary or were incorrectly create
 
 ## Next steps
 
-By following this tutorial, you have successfully created a dataflow to bring data from your customer success source to Platform. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have successfully created a dataflow to bring data from your customer success source to Platform. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
-* [[!DNL Real-time Customer Profile] overview](../../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] overview](../../../../profile/home.md)
 * [[!DNL Data Science Workspace] overview](../../../../data-science-workspace/home.md)
 
 

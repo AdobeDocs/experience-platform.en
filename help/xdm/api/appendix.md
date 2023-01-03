@@ -126,7 +126,7 @@ The following is a side-by-side comparison showing birthday-related fields (with
 
 Adobe Experience Platform is designed to work with multiple solutions and services, each with their own technical challenges and limitations (for example, how certain technologies handle special characters). In order to overcome these limitations, Compatibility Mode was developed.
 
-Most [!DNL Experience Platform] services including [!DNL Catalog], [!DNL Data Lake], and [!DNL Real-time Customer Profile] use [!DNL Compatibility Mode] in lieu of standard XDM. The [!DNL Schema Registry] API also uses [!DNL Compatibility Mode], and the examples in this document are all shown using [!DNL Compatibility Mode].
+Most [!DNL Experience Platform] services including [!DNL Catalog], [!DNL Data Lake], and [!DNL Real-Time Customer Profile] use [!DNL Compatibility Mode] in lieu of standard XDM. The [!DNL Schema Registry] API also uses [!DNL Compatibility Mode], and the examples in this document are all shown using [!DNL Compatibility Mode].
 
 It is worthwhile to know that a mapping takes place between standard XDM and the way it is operationalized in [!DNL Experience Platform], but it should not affect your use of [!DNL Platform] services.
 

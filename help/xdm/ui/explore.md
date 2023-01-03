@@ -21,7 +21,9 @@ In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. The 
 
 The filter icon (![Filter Icon Image](../images/ui/explore/icon.png)) reveals controls in the left rail to narrow down listed results. The displayed controls differ depending on the type of resource being listed.
 
-When listing schemas in the **[!UICONTROL Browse]** tab, the **[!UICONTROL Included in Profile]** toggle allows you to filter results to only show schemas that have been enabled for use in [Real-time Customer Profile](../../profile/home.md).
+For example, to filter the list to only show standard data types provided by Adobe, select **[!UICONTROL Datatype]** and **[!UICONTROL Adobe]** under the **[!UICONTROL Type]** and **[!UICONTROL Owner]** sections, respectively.
+
+The **[!UICONTROL Included in Profile]** toggle allows you to filter results to show only resources that are used in schemas that have been enabled for use in [Real-Time Customer Profile](../../profile/home.md).
 
 ![](../images/ui/explore/filter.png)
 

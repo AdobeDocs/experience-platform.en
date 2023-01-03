@@ -10,7 +10,7 @@ exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 
 In Experience Data Model (XDM), classes define the behavioral aspects of the data that a schema will contain (record or time-series). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged.
 
-Adobe provides several standard (“core”) XDM classes, including [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent]. In addition to these core classes, you can also create your own custom classes to describe more specific use cases for your organization.
+Adobe provides several standard ("core") XDM classes, including [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent]. In addition to these core classes, you can also create your own custom classes to describe more specific use cases for your organization.
 
 This document provides an overview of how to create, edit, and manage custom classes in the Adobe Experience Platform UI.
 
@@ -44,10 +44,6 @@ You can now start [adding fields to the class](#add-fields), which will be share
 
 ## Edit an existing class {#edit}
 
->[!IMPORTANT]
->
->Custom classes created after April 30 2022 cannot be edited directly, and a fix is currently in development. As a workaround, you can [create a custom field group](./field-groups.md) and reuse it for each schema that uses the custom class that you want to extend. Custom classes created before April 30 2022 are not affected by this limitation.
-
 >[!NOTE]
 >
 >Only custom classes defined by your organization can be fully edited and customized. For core classes defined by Adobe, only the display names for their fields can be edited within the context of individual schemas. See the section on [editing display names for schema fields](./schemas.md#display-names) for details.
@@ -67,10 +63,6 @@ The [!DNL Schema Editor] appears, with the schema's structure shown in the canva
 ![](../../images/ui/resources/classes/edit.png)
 
 ## Add fields to a class {#add-fields}
-
->[!IMPORTANT]
->
->Custom classes created after April 30 2022 cannot be edited directly, and a fix is currently in development. As a workaround, you can [create a custom field group](./field-groups.md) and reuse it for each schema that uses the custom class that you want to extend. Custom classes created before April 30 2022 are not affected by this limitation.
 
 Once you have a schema that employs a custom class open in the [!UICONTROL Schema Editor], you can start adding fields to the class. To add a new field, select the **plus (+)** icon next to the schema's name.
 

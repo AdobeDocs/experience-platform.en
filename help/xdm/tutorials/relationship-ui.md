@@ -26,7 +26,7 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 
 The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
 
-While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. To establish a relationship between two schemas belonging to different classes, a dedicated relationship field must be added to a source schema, which references the identity of a destination schema.
+While schema relationships can be inferred through the use of the union schema and [!DNL Real-Time Customer Profile], this only applies to schemas that share the same class. To establish a relationship between two schemas belonging to different classes, a dedicated relationship field must be added to a source schema, which references the identity of a destination schema.
 
 This document provides a tutorial for defining a relationship between two schemas using the Schema Editor in the [!DNL Experience Platform] user interface. For steps on defining schema relationships using the API, see the tutorial on [defining a relationship using the Schema Registry API](relationship-api.md).
 
@@ -48,7 +48,7 @@ It is expected that you have already created the two schemas that will be define
 
 >[!IMPORTANT]
 >
->In order to establish a relationship, both schemas must have defined primary identities and be enabled for [!DNL Real-time Customer Profile]. See the section on [enabling a schema for use in Profile](./create-schema-ui.md#profile) in the schema creation tutorial if you require guidance on how to configure your schemas accordingly.
+>In order to establish a relationship, both schemas must have defined primary identities and be enabled for [!DNL Real-Time Customer Profile]. See the section on [enabling a schema for use in Profile](./create-schema-ui.md#profile) in the schema creation tutorial if you require guidance on how to configure your schemas accordingly.
 
 Schema relationships are represented by a dedicated field within a **source schema** that refers to another field within a **destination schema**. In the steps that follow, "[!DNL Loyalty Members]" will be the source schema, while "[!DNL Hotels]" will act as the destination schema.
 
@@ -56,7 +56,7 @@ For reference purposes, the following sections describe the structure of each sc
 
 ### [!DNL Loyalty Members] schema
 
-The source schema "[!DNL Loyalty Members]" is based on the [!DNL XDM Individual Profile] class, and is the schema that was constructed in the tutorial for [creating a schema in the UI](create-schema-ui.md). It includes a `loyalty` object under its `_tenantId` namespace, which includes several loyalty-specific fields. One of these fields, `loyaltyId`, serves as the primary identity for the schema under the [!UICONTROL Email] namespace. As seen under **[!UICONTROL Schema Properties]**, this schema has been enabled for use in [!DNL Real-time Customer Profile].
+The source schema "[!DNL Loyalty Members]" is based on the [!DNL XDM Individual Profile] class, and is the schema that was constructed in the tutorial for [creating a schema in the UI](create-schema-ui.md). It includes a `loyalty` object under its `_tenantId` namespace, which includes several loyalty-specific fields. One of these fields, `loyaltyId`, serves as the primary identity for the schema under the [!UICONTROL Email] namespace. As seen under **[!UICONTROL Schema Properties]**, this schema has been enabled for use in [!DNL Real-Time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -74,7 +74,7 @@ In order to participate in a relationship, the destination schema must have a pr
 >
 >To learn how to create custom identity namespaces, refer to the [Identity Service documentation](../../identity-service/namespaces.md#manage-namespaces).
 
-Once the primary identity has been set, the destination schema must then be enabled for [!DNL Real-time Customer Profile].
+Once the primary identity has been set, the destination schema must then be enabled for [!DNL Real-Time Customer Profile].
 
 ![Enable for Profile](../images/tutorials/relationship/hotel-profile.png)
 

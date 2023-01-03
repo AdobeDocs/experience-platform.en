@@ -40,7 +40,7 @@ The auto-generation utility defined the data model structure for the schemas usi
 > 
 >If you are not using the auto-generator utility or should a new relationship need to be created, see the tutorial on [creating relationships between B2B schemas](../xdm/tutorials/relationship-b2b.md).
 
-Real-time Customer Profile merges data from disparate sources to create consolidated profiles of key B2B entities. Since profiles are generated based on a single class, the auto-generation utility sets up relationships between schemas based on common business use cases. As a result, the Bodea team is now ready to ingest data based on their B2B schemas.
+Real-Time Customer Profile merges data from disparate sources to create consolidated profiles of key B2B entities. Since profiles are generated based on a single class, the auto-generation utility sets up relationships between schemas based on common business use cases. As a result, the Bodea team is now ready to ingest data based on their B2B schemas.
 
 >[!NOTE]
 > 
@@ -80,7 +80,7 @@ In this example, the segment finds all the people who work in the sales departme
 > 
 >For instructions on how to create segments to evaluate your data see the [Segment Builder UI guide](../segmentation/ui/segment-builder.md). For more specific B2B segmentation use cases, refer to the [segmentation overview for Real-Time CDP B2B Edition](./segmentation/b2b.md).
 
-The Segment Builder allows you to create a marketable audience from Real-time Customer Profile data and view estimates of your prospective audience based on the combination of attributes, events, and existing audiences you defined.
+The Segment Builder allows you to create a marketable audience from Real-Time Customer Profile data and view estimates of your prospective audience based on the combination of attributes, events, and existing audiences you defined.
 
 ## Activate your evaluated data to a destination
 

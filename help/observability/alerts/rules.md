@@ -46,9 +46,9 @@ The following alert rules are specific to [Identity Service](../../identity-serv
 
 {style="table-layout:auto"}
 
-## Real-time Customer Profile
+## Real-Time Customer Profile
 
-The following alert rules are specific to [Real-time Customer Profile](../../profile/home.md):
+The following alert rules are specific to [Real-Time Customer Profile](../../profile/home.md):
 
 | I/O Event subscription | Alert rule | Description |
 | --- | --- | --- |

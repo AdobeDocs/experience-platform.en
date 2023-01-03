@@ -97,9 +97,9 @@ As part of attribute-based access control, the `view-identity-graph` permission 
 
 For more information on [!DNL Identity Service], refer to the [[!DNL Identity Service] overview](../../identity-service/home.md).
 
-### Real-time Customer Profile
+### Real-Time Customer Profile
 
-Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-Time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 
 As an administrator, you can use attribute-based access control functionalities to:
 

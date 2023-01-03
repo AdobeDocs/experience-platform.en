@@ -16,7 +16,7 @@ As you develop a segment definition, you can use the estimate and preview tools 
 
 >[!NOTE]
 >
->To access similar metrics related to Real-time Customer Profile data, such as the total number of profile fragments and merged profiles within specific namespaces or the Profile data store as a whole, please refer to the [profile preview (preview sample status) endpoint guide](../../profile/api/preview-sample-status.md), part of the Profile API developer guide.
+>To access similar metrics related to Real-Time Customer Profile data, such as the total number of profile fragments and merged profiles within specific namespaces or the Profile data store as a whole, please refer to the [profile preview (preview sample status) endpoint guide](../../profile/api/preview-sample-status.md), part of the Profile API developer guide.
 
 ## Getting started
 
@@ -244,4 +244,4 @@ A successful response returns HTTP status 200 with details of the estimate job.
 
 ## Next steps
 
-After reading this guide you should have a better understanding of how to work with  previews and estimates using the Segmentation API. To learn how to access metrics related to your Real-time Customer Profile data, such as the total number of profile fragments and merged profiles within specific namespaces or the Profile data store as a whole, please visit the [profile preview (`/previewsamplestatus`) endpoint guide](../../profile/api/preview-sample-status.md).
+After reading this guide you should have a better understanding of how to work with  previews and estimates using the Segmentation API. To learn how to access metrics related to your Real-Time Customer Profile data, such as the total number of profile fragments and merged profiles within specific namespaces or the Profile data store as a whole, please visit the [profile preview (`/previewsamplestatus`) endpoint guide](../../profile/api/preview-sample-status.md).

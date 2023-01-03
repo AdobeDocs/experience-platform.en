@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Privacy Request Processing in Real-time Customer Profile
+title: Privacy Request Processing in Real-Time Customer Profile
 type: Documentation
-description: Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by numerous privacy regulations. This document covers essential concepts related to processing privacy requests for Real-time Customer Profile.
+description: Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by numerous privacy regulations. This document covers essential concepts related to processing privacy requests for Real-Time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 ---
-# Privacy request processing in [!DNL Real-time Customer Profile]
+# Privacy request processing in [!DNL Real-Time Customer Profile]
 
 Adobe Experience Platform [!DNL Privacy Service] processes customer requests to access, opt out of sale, or delete their personal data as delineated by privacy regulations such as the General Data Protection Regulation (GDPR) and [!DNL California Consumer Privacy Act] (CCPA).
 
-This document covers essential concepts related to processing privacy requests for [!DNL Real-time Customer Profile] within Adobe Experience Platform.
+This document covers essential concepts related to processing privacy requests for [!DNL Real-Time Customer Profile] within Adobe Experience Platform.
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ It is recommended that you have a working understanding of the following [!DNL E
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Manages customer requests for accessing, opting out of sale, or deleting their personal data across Adobe Experience Cloud applications.
 * [[!DNL Identity Service]](../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
-* [[!DNL Real-time Customer Profile]](home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 ## Understanding identity namespaces {#namespaces}
 
@@ -36,7 +36,7 @@ For more information about identity namespaces in [!DNL Experience Platform], se
 
 ## Submitting requests {#submit}
 
-The sections below outline how to make privacy requests for [!DNL Real-time Customer Profile] using the [!DNL Privacy Service] API or UI. Before reading these sections, it is strongly recommended that you review the [Privacy Service API](../privacy-service/api/getting-started.md) or [Privacy Service UI](../privacy-service/ui/overview.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
+The sections below outline how to make privacy requests for [!DNL Real-Time Customer Profile] using the [!DNL Privacy Service] API or UI. Before reading these sections, it is strongly recommended that you review the [Privacy Service API](../privacy-service/api/getting-started.md) or [Privacy Service UI](../privacy-service/ui/overview.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
 >[!IMPORTANT]
 >
@@ -105,7 +105,7 @@ curl -X POST \
 
 ### Using the UI
 
-When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under **[!UICONTROL Products]** in order to process jobs for data stored in the data lake or [!DNL Real-time Customer Profile], respectively.
+When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under **[!UICONTROL Products]** in order to process jobs for data stored in the data lake or [!DNL Real-Time Customer Profile], respectively.
 
 ![An access job request being created in the UI, with the Profile option selected under Products](./images/privacy/product-value.png)
 

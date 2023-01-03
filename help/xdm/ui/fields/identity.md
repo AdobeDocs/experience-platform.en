@@ -12,11 +12,11 @@ In Experience Data Model (XDM), an identity field represents a field that that c
 
 ## Prerequisites
 
-Identity fields are a crucial component in how customer identity graphs are constructed in Platform, which ultimately affects how Real-time Customer Profile merges disparate data fragments together to gain a complete view of the customer. Before defining identity fields in your schemas, please refer to the following documentation to learn about the key services and concepts related to identity fields:
+Identity fields are a crucial component in how customer identity graphs are constructed in Platform, which ultimately affects how Real-Time Customer Profile merges disparate data fragments together to gain a complete view of the customer. Before defining identity fields in your schemas, please refer to the following documentation to learn about the key services and concepts related to identity fields:
 
 * [Adobe Experience Platform Identity Service](../../../identity-service/home.md): Bridges identities across devices and systems, linking datasets together based on the identity fields defined by the XDM schemas they conform to.
   * [Identity namespaces](../../../identity-service/namespaces.md): Identity namespaces define the different types of identity information that can relate to a single person, and are a required component for each identity field.
-* [Real-time Customer Profile](../../../profile/home.md): Leverages customer identity graphs to provide a unified consumer profile based on aggregated data from multiple sources, updated in near-real-time.
+* [Real-Time Customer Profile](../../../profile/home.md): Leverages customer identity graphs to provide a unified consumer profile based on aggregated data from multiple sources, updated in near-real-time.
 
 ## Define an identity field
 
@@ -28,7 +28,7 @@ Additional controls appear after selecting the checkbox. If you want this field 
 
 >[!NOTE]
 >
->A single schema may have many identity fields defined, but can only have one primary identity. All identity fields (primary or otherwise) contribute to the identity graph for an individual customer, but Real-time Customer Profile uses only the primary identity as the source of truth when merging data fragments together. If you want to enable a schema for use in Profile, the schema must have a primary identity defined.
+>A single schema may have many identity fields defined, but can only have one primary identity. All identity fields (primary or otherwise) contribute to the identity graph for an individual customer, but Real-Time Customer Profile uses only the primary identity as the source of truth when merging data fragments together. If you want to enable a schema for use in Profile, the schema must have a primary identity defined.
 
 Under **[!UICONTROL Identity namespace]**, use the dropdown menu to select the appropriate namespace for the identity field. Standard namespaces provided by Adobe are listed, along with any custom namespaces defined by your organization.
 
@@ -42,7 +42,7 @@ Since all identity fields are required by default, the field is now listed under
 
 ![](../../images/ui/fields/special/identity-applied.png)
 
-If you defined a primary identity for the schema, you can now proceed to [enable the schema for use in Real-time Customer Profile](../resources/schemas.md#profile).
+If you defined a primary identity for the schema, you can now proceed to [enable the schema for use in Real-Time Customer Profile](../resources/schemas.md#profile).
 
 ## Next steps
 

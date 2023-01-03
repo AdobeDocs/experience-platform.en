@@ -40,6 +40,6 @@ This document provided a brief introduction to the different aspects of [!DNL Da
 
 >[!WARNING]
 >
->The term "Unified Profile" thats used in the following video is out-of-date. The terms [!DNL "Profile"] or [!DNL "Real-time Customer Profile"] are the correct terms used in the [!DNL Experience Platform] documentation. Please refer to the documentation for the latest functionality.
+>The term "Unified Profile" thats used in the following video is out-of-date. The terms [!DNL "Profile"] or [!DNL "Real-Time Customer Profile"] are the correct terms used in the [!DNL Experience Platform] documentation. Please refer to the documentation for the latest functionality.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)

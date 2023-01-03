@@ -63,7 +63,7 @@ The following table outlines the accepted values for specifying an Adobe product
 | Adobe Audience Manager | `AudienceManager` |
 | Adobe Campaign | `campaign` |
 | Adobe Experience Platform (Data Lake) | `aepDataLake` |
-| Adobe Experience Platform (Real-time Customer Profile) | `profileService` |
+| Adobe Experience Platform (Real-Time Customer Profile) | `profileService` |
 | Adobe Primetime Authentication | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Customer Attributes (CRS) | `CRS` |

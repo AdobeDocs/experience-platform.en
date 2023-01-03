@@ -5,9 +5,9 @@ exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
 ---
 # Decile-based derived attributes use case
 
-Derived attributes facilitate complicated use cases for analyzing data from the data lake that can be used with other downstream Platform services or published into your Real-time Customer Profile data.
+Derived attributes facilitate complicated use cases for analyzing data from the data lake that can be used with other downstream Platform services or published into your Real-Time Customer Profile data.
 
-This example use case demonstrates how to create decile-based derived attributes for use with your Real-time Customer Profile data. Using an airline loyalty scenario as an example, this guide informs you how to create a dataset that uses categorical deciles to segment and create audiences based on ranked attributes.
+This example use case demonstrates how to create decile-based derived attributes for use with your Real-Time Customer Profile data. Using an airline loyalty scenario as an example, this guide informs you how to create a dataset that uses categorical deciles to segment and create audiences based on ranked attributes.
 
 The following key concepts are illustrated:
 
@@ -21,9 +21,9 @@ The following key concepts are illustrated:
 
 This guide requires a working understanding of [query execution in Query Service](../best-practices/writing-queries.md) and the following components of Adobe Experience Platform:
 
-* [Real-time Customer Profile overview](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [Real-Time Customer Profile overview](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Basics of schema composition](../../xdm/schema/composition.md): An introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas.
-* [How to enable a schema for Real-time Customer Profile](../../profile/tutorials/add-profile-data.md): This tutorial outlines the steps necessary to add data to Real-time Customer Profile.
+* [How to enable a schema for Real-Time Customer Profile](../../profile/tutorials/add-profile-data.md): This tutorial outlines the steps necessary to add data to Real-Time Customer Profile.
 * [How to define a custom data type](../../xdm/api/data-types.md): Data types are used as reference-type fields in classes or schema field groups and allow for the consistent use of a multi-field structure that can be included anywhere in the schema.
 
 ## Objectives
@@ -74,11 +74,11 @@ Create an "Airline Loyalty Decile Schema" to create a decile dataset using Query
 
 ![A diagram of the "Airline Loyalty Decile Schema".](../images/derived-attributes/deciles-use-case/airline-loyalty-decile-schema.png)
 
-### Enable the schema for Real-time Customer Profile
+### Enable the schema for Real-Time Customer Profile
 
-Data being ingested into Experience Platform for use by Real-time Customer Profile must conform to [an Experience Data Model (XDM) schema that is enabled for Profile](../../xdm/ui/resources/schemas.md). In order for a schema to be enabled for Profile, it must implement either the XDM Individual Profile or XDM ExperienceEvent class.
+Data being ingested into Experience Platform for use by Real-Time Customer Profile must conform to [an Experience Data Model (XDM) schema that is enabled for Profile](../../xdm/ui/resources/schemas.md). In order for a schema to be enabled for Profile, it must implement either the XDM Individual Profile or XDM ExperienceEvent class.
 
-[Enable your schema for use in Real-time Customer Profile using the Schema Registry API](../../xdm/tutorials/create-schema-api.md) or the [Schema Editor user interface](../../xdm/tutorials/create-schema-ui.md).  Detailed instructions on how to enable a schema for Profile are available in their respective documentation.
+[Enable your schema for use in Real-Time Customer Profile using the Schema Registry API](../../xdm/tutorials/create-schema-api.md) or the [Schema Editor user interface](../../xdm/tutorials/create-schema-ui.md).  Detailed instructions on how to enable a schema for Profile are available in their respective documentation.
 
 Next, create a data type to be reused for all decile-related field groups. The creation of the decile field group is a one-time step per sandbox. It can also be reused for all decile-related schemas.
 
@@ -293,4 +293,4 @@ Run the query to populate the decile dataset. You can also save the query as a t
 
 ## Next steps
 
-The example use case provided above highlights steps to make decile attributes available in Real-time Customer Profile. This allows for Segmentation Service, either via a user interface or RESTful API, to be able to generate audiences based on these decile buckets. See the [Segmentation Service overview](../../segmentation/home.md) for information on how to create, evaluate, and access segments.
+The example use case provided above highlights steps to make decile attributes available in Real-Time Customer Profile. This allows for Segmentation Service, either via a user interface or RESTful API, to be able to generate audiences based on these decile buckets. See the [Segmentation Service overview](../../segmentation/home.md) for information on how to create, evaluate, and access segments.
