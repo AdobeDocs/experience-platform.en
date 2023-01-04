@@ -155,7 +155,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
         "dbName": "prod:all",
-        "templateID": ""f7cb5155-29da-4b95-8131-8c5deadfbe7f"",
+        "templateID": "f7cb5155-29da-4b95-8131-8c5deadfbe7f",
         "name": "Sample Query",
         "description": "Sample Description"
     }  
@@ -168,9 +168,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 | `name` | The name of your SQL query. |
 | `description` | The description of your SQL query. |
 | `queryParameters` | A key value pairing to replace any parameterized values in the SQL statement. It is only required **if** you are using parameter replacements within the SQL you provide. No value type checking will be done on these key value pairs. |
-| `templateId` | The unique identifier for a pre-existing query. You can provide this instead of an SQL statement."t  |
-| `insertIntoParameters` | If this property is defined, then this query will be converted into an INSERT INTO query. This parameter is **optional**. |
-| `ctasParameters` | If this property is defined, this query will be converted into a CTAS query. This parameter is **optional**. |
+| `templateId` | The unique identifier for a pre-existing query. You can provide this instead of an SQL statement.  |
+| `insertIntoParameters` | (Optional) If this property is defined, then this query will be converted into an INSERT INTO query. |
+| `ctasParameters` | (Optional) If this property is defined, this query will be converted into a CTAS query. |
 
 **Response**
 
