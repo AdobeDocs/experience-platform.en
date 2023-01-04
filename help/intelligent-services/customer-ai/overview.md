@@ -24,7 +24,7 @@ Customer AI is built to:
 - Provide high accuracy customer propensity models for stronger segmentation and targeting.
 - Help with understanding the influential factors and likelihood behind certain customer behaviors.
 - Provide customizable options for your company's unique use cases and data.
-- Enhance Real-time Customer Profile with customer propensity scores such as churn and conversion.
+- Enhance Real-Time Customer Profile with customer propensity scores such as churn and conversion.
 - Enhance customer profiles with influential factors for propensity scores.
 - Create segments of customers based on influential factors and propensity scores.
 

@@ -11,7 +11,7 @@ Access control policies are statements that bring attributes together to establi
 
 >[!IMPORTANT]
 >
->This endpoint is not to be confused with the `/policies` endpoint in the [Data Governance API](../../../data-governance/api/policies.md), which is used to manage data usage policies.
+>This endpoint is not to be confused with the `/policies` endpoint in the [Policy Service API](../../../data-governance/api/policies.md), which is used to manage data usage policies.
 
 ## Getting started
 

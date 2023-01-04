@@ -8,15 +8,15 @@ exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
 ---
 # Multi-entity segmentation overview
 
-Multi-entity segmentation is an advanced feature available as part of Adobe Experience Platform [!DNL Segmentation Service]. This feature enables you to extend [!DNL Real-time Customer Profile] data with additional "non-people" data (also known as "dimension entities") that your organization may define, such as data related to products or stores. Multi-entity segmentation provides flexibility when defining audience segments based on data relevant to your unique business needs and can be performed without having expertise in querying databases. With multi-entity segmentation, you can add key data to your segments without having to make costly changes to data streams or wait for a back-end data merge.
+Multi-entity segmentation is an advanced feature available as part of Adobe Experience Platform [!DNL Segmentation Service]. This feature enables you to extend [!DNL Real-Time Customer Profile] data with additional "non-people" data (also known as "dimension entities") that your organization may define, such as data related to products or stores. Multi-entity segmentation provides flexibility when defining audience segments based on data relevant to your unique business needs and can be performed without having expertise in querying databases. With multi-entity segmentation, you can add key data to your segments without having to make costly changes to data streams or wait for a back-end data merge.
 
 ## Getting started
 
 Multi-entity segmentation requires a working understanding of the various Adobe Experience Platform services involved in segmentation. Before continuing with this guide, please review the following documentation:
 
-* [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified consumer profile in real time, based on aggregated data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Provides a unified consumer profile in real time, based on aggregated data from multiple sources.
   * [Profile guardrails](../profile/guardrails.md): Best practices for creating data models supported by [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Allows you to build segments from [!DNL Real-time Customer Profile] data.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Allows you to build segments from [!DNL Real-Time Customer Profile] data.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../xdm/schema/composition.md#union): Learn best practices for composing schemas to be used in Experience Platform. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../xdm/schema/best-practices.md).
 

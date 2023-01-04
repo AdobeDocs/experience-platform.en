@@ -23,7 +23,7 @@ In order to implement the Web SDK with IAB TCF 2.0, you are required to have a w
 
 To send consent data to Adobe Experience Platform using the SDK, the following is required:
 
-- A dataset whose schema is based on the [!DNL XDM Individual Profile] class and contains TCF 2.0 consent fields, enabled for use in [!DNL Real-time Customer Profile].
+- A dataset whose schema is based on the [!DNL XDM Individual Profile] class and contains TCF 2.0 consent fields, enabled for use in [!DNL Real-Time Customer Profile].
 - A datastream set up with Platform and the Profile-enabled dataset mentioned above.
 
 Please refer to the guide on [TCF 2.0 compliance](../../../landing/governance-privacy-security/consent/iab/overview.md) for instructions on creating the required datasets and datastream.

@@ -13,7 +13,7 @@ With the help of influential factors, Customer AI can tell you what a customer i
 * Providing high accuracy customer propensity models for stronger segmentation and targeting.
 * Understanding the influential factors and likelihood behind certain customer behaviors.
 * Providing customizable options for your company’s unique use cases and data.
-* Enhancing Real-time Customer Profile with customer propensity scores such as churn and conversion.
+* Enhancing Real-Time Customer Profile with customer propensity scores such as churn and conversion.
 * Enhancing customer profiles with influential factors for propensity scores.
 * Creating segments of customers based on influential factors and propensity scores.
 

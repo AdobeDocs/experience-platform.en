@@ -9,7 +9,7 @@ exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
 ---
 # Generate datasets from results in [!DNL Query Service]
 
-[!DNL Query Service] allows you to use queries to generate datasets in the [!DNL Data Lake]. These datasets can then be used as input for more queries or in other services such as [!DNL Data Science Workspace], Real-time Customer Profile, or [!DNL Analysis Workspace].
+[!DNL Query Service] allows you to use queries to generate datasets in the [!DNL Data Lake]. These datasets can then be used as input for more queries or in other services such as [!DNL Data Science Workspace], Real-Time Customer Profile, or [!DNL Analysis Workspace].
 
 ## Generate datasets from the Adobe Experience Platform user interface
 
