@@ -25,7 +25,7 @@ feature: Identities
   - [Shared device detection](ui/shared-device-detection.md)
   - [Define identity fields in the UI](ui/label-identities.md)
 - [ECID overview](ecid.md)
-- [Deletions in Identity Service](deletions.md)
+- [Deletions in Identity Service](deletion.md)
 - [Privacy request processing](privacy.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/identity-service)
