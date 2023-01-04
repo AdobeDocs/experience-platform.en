@@ -1,14 +1,14 @@
 ---
 title: Deletions in Identity Service
-description: This document provides an overview of the various mechanisms that you can use to delete your identity data. from Experience Platform.
+description: This document provides an overview of the various mechanisms that you can use to delete your identity data in Experience Platform, and to provide clarity on how identity graphs may be impacted.
 ---
 # Deletions in Identity Service
 
-Adobe Experience Platform Identity Service provides you with a comprehensive view of your customers and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time. 
+Adobe Experience Platform Identity Service generates identity graphs by deterministically linking identities across devices and systems for an individual person. Identity graph linkages are established when two or more marked identities are received within the same row of data.
 
-Through identity graphs, Identity Service is able to visualize how different identities are linked together to create a comprehensive view of a customer. When two or more identities are received within a row of data, Identity Service stores information on the links established between the two identities.
+Identity graphs are leveraged by Real-Time Customer Profile to create a comprehensive and singular view of your customer attributes and behaviors, enabling you to deliver impactful, personal digital experiences in real-time, to people, and not devices.
 
-This document provides an overview of the various mechanisms that you can use to delete your identity data. from Experience Platform.
+This document provides an overview of the various mechanisms that you can use to delete your identity data in Experience Platform, and to provide clarity on how identity graphs may be impacted.
 
 ## Getting started
 
@@ -16,13 +16,15 @@ The document below references the following features of Experience Platform:
 
 * [Identity Service](home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
   * [Identity Graph](./ui/identity-graph-viewer.md): An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels.
+  * [Identity namespaces](namespaces.md): Identity namespaces are a component of Identity Service that serve as indicators of the context to which an identity relates. For example, they distinguish a value of "name<span>@email.com" as an email address or "443522" as a numeric CRM ID.
 * [Catalog Service](../catalog/home.md): Explore the data lineage, metadata, file descriptions, directories, and datasets within the data lake.
 * [Data hygiene](../hygiene/home.md): Manage your stored consumer data by scheduling automated dataset expirations or or deleting individual records from one dataset or all datasets.
 * [Adobe Experience Platform Privacy Service](../privacy-service/home.md): Manage customer requests for accessing, opting out of sale, or deleting their personal data across Adobe Experience Cloud applications.
+* [Real-Time Customer Profile](../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
 
 ## Single identity deletions
 
-Single identity deletion requests allow you to delete some or all information for an identity value tied to an identity namespace. You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anonymous data, or data minimization for the data that you have collected. For use cases such as customer requests for data deletion and compliance to privacy regulations like the General Data Protection Regulation (GDPR), then you can use mechanisms provided by [Privacy Service](../privacy-service/home.md).
+Single identity deletion requests allow you to delete some or all identity graph linkages tied to a single user identity associated to an identity namespace. You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anonymous data, or data minimization for the data that you have collected. For use cases such as customer requests for data deletion and compliance to privacy regulations like the General Data Protection Regulation (GDPR), then you can use mechanisms provided by [Privacy Service](../privacy-service/home.md).
 
 The sections below outline the mechanisms you can use for single identity deletion requests in Experience Platform.
 
@@ -47,7 +49,7 @@ The table below provides a breakdown of differences between single identity dele
 
 ## Dataset deletion
 
-The following outlines mechanisms you can use to delete datasets in Experience Platform.
+The following sections outline the mechanisms that can be used to delete datasets and associated identity linkages in Experience Platform.
 
 ### Dataset deletion in Catalog Service
 
@@ -70,15 +72,15 @@ The table below provides a breakdown of differences between dataset deletion in 
 
 ## Identity graph changes
 
-All dataset deletion mechanisms involve the deletion of linkages between multiple identities. An identity must have at least one valid link with another identity, and when this does not exist, the identity is removed from the identity graph.
+All identity graph deletions result in the removal of linkages between two or more identities, as specified by the deletion request. For dataset deletion requests, all identity linkages established by the specified dataset are removed and may or may not remove identities from graphs. For single identity deletion requests identity linkages are removed for the specified identity, and consequently the identity value itself is removed from all identity graphs. Identities without a single linkage to another identity are not stored in Identity Service.
 
 Below is an outline of the potential impacts that deletions may have on identity graphs. 
 
 | Identity graph behavior | Description |
 | --- | --- |
-| Partial update | A partial update of a graph happens when at least two identities remain linked within a graph after a a deletion request is successfully processed. After deletion, the remaining identity links may remain connected to each other, or they can be split into two or more separate graphs depending on the identities that were deleted. |
+| Partial update | A partial update of a graph happens when at least two identities remain linked within a graph after a deletion request is successfully processed. After deletion, the remaining identity links may remain connected to each other, or they can be split into two or more separate graphs depending on the identities that were deleted. |
 | Full removal | A graph must have at least two linked identities in order to exist. Therefore, if a deletion request results in the removal of all existing links within a graph, then the graph will be completely removed. |
-| No change | A graph does not get updated if a deletion request does not involve an identity or a dataset. Additionally, a graph does not get updated even if the deletion request does remove a link between a dataset or an identity-dataset combination, given that the link was established by another link that was not deleted. This means that if a link exists in two different datasets, the graph will not be updated because only one of the datasets is removed. |
+| No change | A graph will not be impacted if a particular deletion request contains an identity or dataset that isn't associated with any member of the graph. Additionally, a graph does not get updated even if the deletion request does remove a link between a dataset or an identity-dataset combination, given that the link was established by another link that was not deleted. This means that if a link exists in two different datasets, the graph will not be updated because only one of the datasets is removed. |
 
 {style="table-layout:auto"}
 
