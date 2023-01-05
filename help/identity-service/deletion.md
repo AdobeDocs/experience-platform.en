@@ -34,7 +34,7 @@ Privacy Service processes customer requests to access, opt out of sale, or delet
 
 ### Single identity deletion in the [!UICONTROL Data Hygiene] workspace
 
-The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Platform UI allows you to delete consumer records that are participating in Identity Service and Real-time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
+The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
 
 The table below provides a breakdown of differences between single identity deletion in Privacy Service and Data hygiene:
 
@@ -57,7 +57,7 @@ You can use the Catalog Service to submit requests for dataset deletion. For mor
 
 ### Dataset expirations in Data hygiene
 
-The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Adobe Experience Platform UI allows you to schedule expirations for datasets. When a dataset reaches its expiration date, the data lake, Identity Service, and Real-time Customer Profile begin separate processes to remove the dataset's contents from their respective services. For more information, read the guide on [managing dataset expirations using the [!UICONTROL Data Hygiene] workspace](../hygiene/ui/dataset-expiration.md).
+The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Adobe Experience Platform UI allows you to schedule expirations for datasets. When a dataset reaches its expiration date, the data lake, Identity Service, and Real-Time Customer Profile begin separate processes to remove the dataset's contents from their respective services. For more information, read the guide on [managing dataset expirations using the [!UICONTROL Data Hygiene] workspace](../hygiene/ui/dataset-expiration.md).
 
 The table below provides a breakdown of differences between dataset deletion in Catalog Service and Data hygiene:
 
