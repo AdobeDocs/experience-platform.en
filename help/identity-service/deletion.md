@@ -24,7 +24,7 @@ The document below references the following features of Experience Platform:
 
 ## Single identity deletions
 
-Single identity deletion requests allow you to delete some or all identity graph linkages tied to a single user identity associated to an identity namespace. You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anonymous data, or data minimization for the data that you have collected. For use cases such as customer requests for data deletion and compliance to privacy regulations like the General Data Protection Regulation (GDPR), then you can use mechanisms provided by [Privacy Service](../privacy-service/home.md).
+Single identity deletion requests allow you to delete an identity within a graph, resulting in the removal of links tied to a single user identity associated to an identity namespace. You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anonymous data, or data minimization for the data that you have collected. For use cases such as customer requests for data deletion and compliance to privacy regulations like the General Data Protection Regulation (GDPR), then you can use mechanisms provided by [Privacy Service](../privacy-service/home.md).
 
 The sections below outline the mechanisms you can use for single identity deletion requests in Experience Platform.
 
@@ -42,8 +42,8 @@ The table below provides a breakdown of differences between single identity dele
 | --- | --- | --- |
 | Accepted use cases | Data privacy requests (GDPR, CCPA) only. | Management of data stored in Experience Platform. |
 | Estimated latency | Days to weeks | Days |
-| Services impacted | Identity Service, Real-time Customer Profile, data lake. | Identity Service, Real-time Customer Profile, data lake |
-| Deletion patterns | Delete identity and all linkages completely from Identity Service. |  Delete an identity and all of its corresponding links completely from Identity Service, across all datasets or for a single dataset. | 
+| Services impacted | Single identity deletion in Privacy Service allows you to select whether data will be deleted from Identity Service, Real-Time Customer Profile, or data lake. | Single identity deletion in Data hygiene deletes the selected data across Identity Service, Real-Time Customer Profile, and data lake. |
+| Deletion patterns | Delete an identity from Identity Service. |  Delete an identity and all of its corresponding links completely from Identity Service, across all datasets or for a single dataset. | 
 
 {style="table-layout:auto"}
 
@@ -65,18 +65,18 @@ The table below provides a breakdown of differences between dataset deletion in 
 | --- | --- | --- |
 | Accepted use cases |  Delete full datasets and their associated identity information in Platform. | Management of data stored in Experience Platform. | 
 | Estimated latency | Days | Days |
-| Services impacted | Identity Service, Real-time Customer Profile, data lake. | Identity Service, Real-time Customer Profile, data lake. |
+| Services impacted | Dataset deletion through Catalog Service deletes data from Identity Service, Real-Time Customer Profile, and data lake. | Dataset deletion through Data hygiene deletes data from Identity Service, Real-Time Customer Profile, and data lake. |
 | Deletion pattern | Delete linked identities from Identity Service established by a particular dataset. | Delete linked identities from Identity Service established by a particular dataset, based on expiration schedule. |
 
 {style="table-layout:auto"}
 
-## Identity graph changes
+## Different states of identity graphs after deletion
 
 All identity graph deletions result in the removal of linkages between two or more identities, as specified by the deletion request. For dataset deletion requests, all identity linkages established by the specified dataset are removed and may or may not remove identities from graphs. For single identity deletion requests identity linkages are removed for the specified identity, and consequently the identity value itself is removed from all identity graphs. Identities without a single linkage to another identity are not stored in Identity Service.
 
-Below is an outline of the potential impacts that deletions may have on identity graphs. 
+Below is an outline of the potential impacts that deletions may have on the state of identity graphs. 
 
-| Identity graph behavior | Description |
+| Identity graph state | Description |
 | --- | --- |
 | Partial update | A partial update of a graph happens when at least two identities remain linked within a graph after a deletion request is successfully processed. After deletion, the remaining identity links may remain connected to each other, or they can be split into two or more separate graphs depending on the identities that were deleted. |
 | Full removal | A graph must have at least two linked identities in order to exist. Therefore, if a deletion request results in the removal of all existing links within a graph, then the graph will be completely removed. |
