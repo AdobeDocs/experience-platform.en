@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;DULE;dule
 solution: Experience Platform
 title: Data Governance Overview
-topic-legacy: overview
 description: Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within Experience Platform at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 ---

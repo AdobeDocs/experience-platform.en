@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
 solution: Experience Platform
 title: Policy Enforcement Overview
-topic-legacy: guide
 description: Learn how data usage policies are enforced on Adobe Experience Platform.
 exl-id: d19d8060-85a1-405c-856d-f59041947a33
 ---
