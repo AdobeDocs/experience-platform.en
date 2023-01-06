@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;data usage labels overview
 solution: Experience Platform
 title: Data Usage Labels Overview
-topic-legacy: labels
 description: Learn how data usage labels are used to help enforce data governance compliance in Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 ---
