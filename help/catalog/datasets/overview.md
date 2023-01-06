@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data location;Data Location;Data management;data management;Lineage;lineage;data type;data types;Data types;Data type
 solution: Experience Platform
 title: Datasets Overview
-topic-legacy: datasets
 description: This document provides a high-level overview of datasets in Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 ---

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data
 solution: Experience Platform
 title: List Catalog Objects
-topic-legacy: developer guide
 description: You can retrieve a list of all available objects of a specific type through a single API call, with best practice being to include filters that limit the size of the response.
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
 ---
