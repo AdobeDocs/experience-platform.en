@@ -2,7 +2,6 @@
 keywords: text classification;Text classification
 solution: Experience Platform
 title: Text Classification in the Content and Commerce AI API
-topic-legacy: Developer guide
 description: The text classification service, when given a text fragment, can classify it into one or more labels. The classification can be single-label, multi-label, or hierarchical.
 exl-id: f240519a-0d83-4309-91e4-4e48be7955a1
 ---
@@ -65,7 +64,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `top-N` | The number of results to be returned (cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
 | `custom` | Any custom parameters to be passed. This property requires a valid JSON object to function. | No |
 | `content-id` | The unique ID for the data element thats returned in the response. If this is not passed an auto-generated ID is assigned. | No |
-| `content` | The content used by the text classification service. The content can be raw text (‘inline’ content-type). <br> If the content is a file on S3 ('s3-bucket' content-type), pass the signed url. | Yes |
+| `content` | The content used by the text classification service. The content can be raw text ('inline' content-type). <br> If the content is a file on S3 ('s3-bucket' content-type), pass the signed url. | Yes |
 
 **Response**
 
