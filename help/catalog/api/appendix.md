@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Catalog service;catalog api;appendix
 solution: Experience Platform
 title: Catalog Service API Guide Appendix
-topic-legacy: developer guide
 description: This document contains additional information to help you work with the Catalog API in Adobe Experience Platform.
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
 ---
