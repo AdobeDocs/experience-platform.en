@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data governance;data usage label;policy service;data usage labels user guide
 solution: Experience Platform
 title: Manage Data Usage Labels in the UI
-topic-legacy: labels
 description: This guide covers steps for working with data usage labels within the Adobe Experience Platform user interface.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 ---
