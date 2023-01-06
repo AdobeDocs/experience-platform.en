@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;streaming;streaming ingestion;troubleshooting;streaming ingestion troubleshooting;streaming ingestion faq;faq;
 solution: Experience Platform
 title: Streaming Ingestion Troubleshooting Guide
-topic-legacy: troubleshooting
 description: This document provides answers to frequently asked questions about streaming ingestion on Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
 ---

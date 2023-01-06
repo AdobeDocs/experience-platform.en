@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data ingestion notifications;notifications;subscribe events;data ingestion status events;status events;subscribe;status notifications;
 solution: Experience Platform
 title: Data Ingestion Notifications
-topic-legacy: overview
 description: To assist in monitoring the ingestion process, Adobe Experience Platform makes it possible to subscribe to a set of events that are published by each step of the process, notifying you to the status of the ingested data and any possible failures.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
 ---
