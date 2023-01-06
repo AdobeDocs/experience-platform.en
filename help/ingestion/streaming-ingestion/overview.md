@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data ingestion;ingested data;streaming;overview;streaming ingestion;latency;streaming latency;
 solution: Experience Platform
 title: Streaming Ingestion Overview
-topic-legacy: overview
 description: Streaming ingestion for Adobe Experience Platform provides users a method to send data from client and server-side devices to Experience Platform in real time.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
 ---
