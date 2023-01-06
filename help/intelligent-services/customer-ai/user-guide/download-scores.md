@@ -3,7 +3,6 @@ keywords: Experience Platform;download scores;customer ai;popular topics;Export;
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Download Scores in Customer AI
-topic-legacy: Downloading scores
 description: Customer AI allows you to download scores in the Parquet file format.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
 ---
