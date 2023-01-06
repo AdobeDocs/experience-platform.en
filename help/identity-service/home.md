@@ -2,13 +2,12 @@
 keywords: Experience Platform;home;popular topics;identity;Identity;XDM graphs;identity service;Identity service
 solution: Experience Platform
 title: Identity Service Overview
-topic-legacy: overview
 description: Adobe Experience Platform Identity Service helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 ---
 # [!DNL Identity Service] overview
 
-Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each individual customer to appear to have multiple “identities”.
+Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each individual customer to appear to have multiple "identities".
 
 Adobe Experience Platform Identity Service provides you with a comprehensive view of your customers and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
 
@@ -26,7 +25,7 @@ Before diving into the details of [!DNL Identity Service], here is a brief summa
 | --- | --- |
 | Identity | An identity is data that is unique to an entity, typically an individual person. An identity, such as a log-in ID, ECID, or loyalty ID, is also referred to as a "known identity". |
 | ECID | Experience Cloud ID (ECID) is a shared identity namespace used across Experience Platform and Adobe Experience Cloud applications. ECID provides a foundation for customer identity and is used as the primary ID for devices and as a base node for identity graphs. See the [ECID overview](./ecid.md) for more information. |
-| Identity namespace | An identity namespace serves to distinguish the context or type of an identity. For example, an identity distinguishes “name<span>@email.com” as an email address or “443522” as a numeric CRM ID. Identity namespaces are used to look up individual identities and provide the context for identity values. This allows you to determine that two [!DNL Profile] fragments that contain different primary IDs, but share the same value for the `email` identity namespace, are in fact, the same individual. See the [identity namespace overview](./namespaces.md) for more information. |
+| Identity namespace | An identity namespace serves to distinguish the context or type of an identity. For example, an identity distinguishes "name<span>@email.com" as an email address or "443522" as a numeric CRM ID. Identity namespaces are used to look up individual identities and provide the context for identity values. This allows you to determine that two [!DNL Profile] fragments that contain different primary IDs, but share the same value for the `email` identity namespace, are in fact, the same individual. See the [identity namespace overview](./namespaces.md) for more information. |
 | Identity graph | An identity graph is a map of relationships between different identities, allowing you to visualize and better understand which customer identities are stitched together, and how. See the tutorial on [using the identity graph viewer](./ui/identity-graph-viewer.md) for more information. |
 | Personally Identifiable Information (PII) | PII is information that can directly identify a customer, such as an email address or a phone number. PII values are often used to match. a customer's multiple identities across different systems. |
 | Unknown or anonymous identities | Unknown or anonymous identities are indicators that isolate devices without identifying the actual person using the device. Unknown and anonymous identities include information such as a visitor's IP address and cookie ID. Although unknown and anonymous identities can provide behavioral data, they are limited until a customer supplies their PII. |
@@ -38,11 +37,11 @@ Each day, customers interact with your business and establish a continuously gro
 Consider an everyday example of a consumer's relationship with your brand:
 
 - Mary has an account on your e-commerce site where she has completed a few orders in the past. She typically uses her personal laptop to shop, where she logs in each time. However, during one of her visits she uses her tablet to shop for sandals, but does not place an order and does not log in.
-- At this point, Mary’s activity appears as two separate profiles:
+- At this point, Mary's activity appears as two separate profiles:
   - Her e-commerce login
   - Her tablet device, perhaps identified by device ID
-- Mary later resumes her tablet session and provides her email address while subscribing to your newsletter. Upon doing so, streaming ingestion adds a new identity as record data within her profile. As a result, [!DNL Identity Service] now relates Mary’s tablet device activity with her e-commerce account history.
-- By the next click on her tablet, your targeted content could reflect Mary’s full profile and history, rather than just a tablet used by an unknown shopper.
+- Mary later resumes her tablet session and provides her email address while subscribing to your newsletter. Upon doing so, streaming ingestion adds a new identity as record data within her profile. As a result, [!DNL Identity Service] now relates Mary's tablet device activity with her e-commerce account history.
+- By the next click on her tablet, your targeted content could reflect Mary's full profile and history, rather than just a tablet used by an unknown shopper.
 
 ![Identity stitching on Platform](./images/identity-service-stitching.png)
 
@@ -62,7 +61,7 @@ Examples of [!DNL Identity Service] implementations include:
 >[!CONTEXTUALHELP]
 >id="platform_identity_namespace"
 >title="Identity namespaces"
->abstract="An identity namespace serves to distinguish the context or type of an identity. For example, an identity distinguishes “name<span>@email.com” as an email address or “443522” as a numeric CRM ID."
+>abstract="An identity namespace serves to distinguish the context or type of an identity. For example, an identity distinguishes "name<span>@email.com" as an email address or "443522" as a numeric CRM ID."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
