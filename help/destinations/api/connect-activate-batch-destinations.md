@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Connect to batch destinations and activate data using the Flow Service API
 description: Step-by-step instructions to use the Flow Service API to create a batch cloud storage or email marketing destination in Experience Platform and activate data
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 ---
