@@ -2,7 +2,6 @@
 keywords: Experience Platform;machine learning model;Data Science Workspace;popular topics;create and publish a model
 solution: Experience Platform
 title: Create and Publish a Machine Learning Model
-topic-legacy: tutorial
 type: Tutorial
 description: The following guide describes the steps required to create and publish a machine learning model.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006

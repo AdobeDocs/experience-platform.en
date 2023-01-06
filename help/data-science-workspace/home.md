@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;Data Science Workspace;popular topics;data science workspace;data science
 solution: Experience Platform
 title: Data Science Workspace Overview
-topic-legacy: overview
 description: This guide provides an overview of the key concepts related to Data Science Workspace in Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
 ---
