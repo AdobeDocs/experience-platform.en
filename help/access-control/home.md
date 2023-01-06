@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;adobe admin console
 solution: Experience Platform
-topic-legacy: overview
 title: Access control overview
 description: Access control for Adobe Experience Platform is provided through the Adobe Admin Console. This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
