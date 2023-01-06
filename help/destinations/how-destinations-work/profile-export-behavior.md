@@ -20,14 +20,14 @@ Experience Platform destinations export data to API-based integrations as HTTPS 
 
 The process by which profiles are aggregated into HTTPS messages before being dispatched to destination API endpoints is called *microbatching*. 
 
-Take the [Facebook destination](/help/destinations/catalog/social/facebook.md) as an example - data is sent in an aggregated fashion, where the destinations service takes all the incoming data from the profile service upstream and aggregates it by one of the following, before dispatching it to Facebook: 
+Take the [Facebook destination](/help/destinations/catalog/social/facebook.md) with a *[configurable aggregation](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation)* policy as an example - data is sent in an aggregated fashion, where the destinations service takes all the incoming data from the profile service upstream and aggregates it by one of the following, before dispatching it to Facebook: 
 
 * Number of records (maximum of 10.000) or
 * Time window interval (30 minutes) 
   
-Whichever of the thresholds above is first met triggers an export to Facebook. So, in the Facebook Custom Audiences dashboard, you might see audiences coming in from Experience Platform in 10.000 record increments. You might be seeing 10.000 records every 10-15 minutes because the data gets processed and aggregated faster than the 30 minutes export interval, and gets sent faster, so about every 10-15 minutes until all records have been processed. If there are insufficient records to make up a 10.000 batch, then the current number of records will be sent as is when the time window threshold is met, so you might see smaller batches sent to Facebook as well.
+Whichever of the thresholds above is first met triggers an export to Facebook. So, in the [!DNL Facebook Custom Audiences] dashboard, you might see audiences coming in from Experience Platform in 10.000 record increments. You might be seeing 10.000 records every 10-15 minutes because the data gets processed and aggregated faster than the 30 minutes export interval, and gets sent faster, so about every 10-15 minutes until all records have been processed. If there are insufficient records to make up a 10.000 batch, then the current number of records will be sent as is when the time window threshold is met, so you might see smaller batches sent to Facebook as well.
 
-As another example, consider the [HTTP API destination](/help/destinations/catalog/streaming/http-destination.md), which has a best effort aggregation policy, with `maxUsersPerRequest: 10`. This means that a maximum of ten profiles will be aggregated before an HTTP call is fired to this destination, but Experience Platform tries to dispatch profiles to the destination as soon as the destinations service receives updated re-evaluation information from an upstream service. 
+As another example, consider the [HTTP API destination](/help/destinations/catalog/streaming/http-destination.md), which has a *[best effort aggregation](/help/destinations/destination-sdk/destination-configuration.md#best-effort-aggregation)* policy, with `maxUsersPerRequest: 10`. This means that a maximum of ten profiles will be aggregated before an HTTP call is fired to this destination, but Experience Platform tries to dispatch profiles to the destination as soon as the destinations service receives updated re-evaluation information from an upstream service. 
 
 The aggregation policy is configurable, and destination developers can decide how to configure the aggregation policy to best meet the rate limitations of the API endpoints downstream. Read more about [aggregation policy](/help/destinations/destination-sdk/destination-configuration.md#aggregation) in the Destination SDK documentation. 
 
@@ -109,7 +109,7 @@ From a profile attributes point of view, any changes to the three attributes map
 
 >[!BEGINSHADEBOX]
 
-## Batch (file-based destinations)
+## Batch (file-based) destinations {#file-based-destinations}
 
 When exporting profiles to [file-based destinations](/help/destinations/destination-types.md#file-based) in Experience Platform, there are three types of schedules (listed below) and two file export options (full or incremental files). All these settings are set on a segment level, even when multiple segments are mapped to a single destination dataflow.
 
@@ -156,6 +156,8 @@ The full population of the segment is exported every day.
 |---------|----------|
 |<ul><li>The export schedule set in the UI or API determines and user action (selecting [Export file now](/help/destinations/ui/export-file-now.md) in the UI or using the [ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md)) determine the start of a destination export</li><li>Any changes in segment membership of a profile, whether it qualifies or disqualifies from the segment, qualify a profile to be included in incremental exports.</li></ul> | In full file exports, the entire profile population of a segment, based on the latest segment evaluation, is included with each file export. The latest values for each XDM attribute selected for export are also included as columns in each file. |
 
+{style="table-layout:fixed"}
+
 **Incremental file exports**
 
 In the first file export after setting up the activation workflow, the entire population of the segment is sent. In subsequent exports, only the modified profiles are sent. 
@@ -163,6 +165,8 @@ In the first file export after setting up the activation workflow, the entire po
 |What determines a destination export | What is included in the exported file |
 |---------|----------|
 |<ul><li>The export schedule set in the UI or API determines the start of a destination export</li><li>Any changes in segment membership of a profile, whether it qualifies or disqualifies from the segment, qualify a profile to be included in incremental exports. Changes in attributes or in identity maps for a profile *do not* qualify a profile to be included in incremental exports</li></ul> | The profiles for which the segment membership has changed, along with the latest information for each XDM attribute selected for export. |
+
+{style="table-layout:fixed"}
 
 >[!TIP]
 >
