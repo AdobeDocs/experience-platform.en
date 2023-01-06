@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;data prep;data preparation;preparing data;
 solution: Experience Platform
 title: Data Prep Overview
-topic-legacy: overview
 description: This document introduces Data Prep within Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 ---
