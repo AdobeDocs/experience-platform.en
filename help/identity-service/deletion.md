@@ -43,7 +43,7 @@ The table below provides a breakdown of differences between single identity dele
 | Accepted use cases | Data privacy requests (GDPR, CCPA) only. | Management of data stored in Experience Platform. |
 | Estimated latency | Days to weeks | Days |
 | Services impacted | Single identity deletion in Privacy Service allows you to select whether data will be deleted from Identity Service, Real-Time Customer Profile, or data lake. | Single identity deletion in Data hygiene deletes the selected data across Identity Service, Real-Time Customer Profile, and data lake. |
-| Deletion patterns | Delete an identity from Identity Service. |  Delete an identity and all of its corresponding links completely from Identity Service, across all datasets or for a single dataset. | 
+| Deletion patterns | Delete an identity from Identity Service. | Delete an identity from Identity Service. | 
 
 {style="table-layout:auto"}
 
