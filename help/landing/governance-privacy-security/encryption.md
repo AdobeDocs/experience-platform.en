@@ -1,6 +1,5 @@
 ---
 title: Data Encryption in Adobe Experience Platform
-topic-legacy: data protection
 description: Learn how data is encrypted in transit and at rest in Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
 ---
