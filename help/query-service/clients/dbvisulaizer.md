@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;Db Visualizer;DbVisualizer;db visulaizer;connect to query service;
 solution: Experience Platform
 title: Connect DbVisualizer to Query Service
-topic-legacy: connect
 description: This document walks through the steps for connecting DbVisualizer with Adobe Experience Platform Query Service.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
 ---
