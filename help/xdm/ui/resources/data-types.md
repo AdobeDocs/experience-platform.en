@@ -82,11 +82,11 @@ This demonstrates how flexible data types can be in terms of describing your dat
 
 Once you have finished adding fields to the data type, select **[!UICONTROL Save]** to save your changes and add the data type to the [!DNL Schema Library].
 
-## Add the data type to a class or field group
+## Add the data type to a schema
 
 Once you have created a data type, you can start using it in your schemas. Since XDM schemas are composed of a class and zero or more field groups, fields provided by a data type cannot be added to a schema directly. Instead, they must be included in a class or a field group.
 
-Start by following the steps involved with [adding a field to a class](./classes.md#add-fields) or [adding a field to a field group](./field-groups.md#add-fields). When you choose the **[!UICONTROL Type]** for the new field, select the name of your data type from the dropdown menu.
+Start by following the steps involved with [adding a field to a class](./classes.md#add-fields) or [adding a field to a field group](./field-groups.md#add-fields). Alternatively, you can start [adding a field directly to a schema](./schemas.md#add-individual-fields) and choose the parent class or field group from there. When you choose the **[!UICONTROL Type]** for the new field, select the name of your data type from the dropdown menu.
 
 ## Convert a multi-field object into a data type {#convert}
 
@@ -96,7 +96,7 @@ To convert an object-type field to a data type, select the field in the canvas. 
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-The canvas updates the data type of the field from "[!UICONTROL Object]" to the new data type. The sub-fields also have small lock icons beside them, indicating they are no longer individual fields but rather part of a multi-field data type. This structure can now be reused in other classes and field groups by selecting this data type from the **[!UICONTROL Type]** dropdown when defining a new field.
+The canvas updates the data type of the field from "[!UICONTROL Object]" to the new data type. This structure can now be reused in other classes and field groups by selecting this data type from the **[!UICONTROL Type]** dropdown when defining a new field.
 
 ![](../../images/ui/resources/data-types/converted.png)
 
