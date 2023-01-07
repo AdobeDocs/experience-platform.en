@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA;pdpa;PDPA;pdpa_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_BRA;
 solution: Experience Platform
 title: Privacy Service Overview
-topic-legacy: overview
 description: Privacy Service allows you to facilitate automated compliance with legal privacy regulations in your Experience Cloud data operations.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 ---

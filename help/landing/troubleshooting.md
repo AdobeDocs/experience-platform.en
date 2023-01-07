@@ -4,7 +4,6 @@ solution: Experience Platform
 title: Adobe Experience Platform FAQ and Troubleshooting Guide
 description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 landing-page-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
-topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 ---

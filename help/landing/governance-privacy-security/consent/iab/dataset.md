@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;IAB;IAB 2.0;consent;Consent
 solution: Experience Platform
 title: Create Datasets for Capturing IAB TCF 2.0 Consent Data
-topic-legacy: privacy events
 description: This document provides steps for setting up the two required datasets to collect IAB TCF 2.0 consent data.
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 ---
