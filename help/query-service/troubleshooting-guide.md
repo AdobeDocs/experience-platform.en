@@ -574,6 +574,12 @@ Yes, a connection made on port 80 still uses SSL. You can also use port 5432.
 Yes, attribute-based access control is enforced if configured. See the [attribute-based access control overview](../access-control/abac/overview.md) for more information.
 +++
 
+### Does Query Service support the "INSERT OVERWRITE INTO" command?
+
++++Answer
+No, Query Service does not support the "INSERT OVERWRITE INTO" command.
++++
+
 ## Exporting data {#exporting-data}
 
 This section provides information on exporting data and limits.
