@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Adobe Experience Platform Glossary
-topic-legacy: getting started
 description: A glossary of important terminology in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 ---
