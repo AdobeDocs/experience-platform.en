@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;opt-out;Segmentation;Segmentation service;segmentation service;honor opt-outs;opt-outs;opt out;opt outs;consent;share;collect;
 solution: Experience Platform
 title: Honoring Consent in Segments
-topic-legacy: overview
 description: Learn how to honor customer consent preferences for personal data collection and sharing in segment operations.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 ---

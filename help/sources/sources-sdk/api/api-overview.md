@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 title: Self-Serve Sources (Batch SDK) API Guide
-topic-legacy: overview
 description: This document provides an overview of the process of creating a new source, including steps on how to retrieve, write, and submit a new connection specification using the Flow Service API.
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
 ---
