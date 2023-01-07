@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;monitor profiles;monitor dataflows;dataflows;profile;real time customer profile;
 description: Real-Time Customer Profile lets you see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. This tutorial provides instructions on how you can monitor dataflows with Profiles using the Experience Platform user interface.
 title: Monitor Dataflows for Profiles in the UI
-topic-legacy: overview
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
 ---

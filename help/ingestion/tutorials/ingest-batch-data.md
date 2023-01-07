@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;ingestion;ingest batch data;tutorial;batch ingestion;tutorial;ui guide;
 solution: Experience Platform
 title: Ingest Data Into Experience Platform
-topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform allows you to easily import data as batch files in the form of Parquet files or data that conforms to a known Experience Data Model (XDM) schema.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd

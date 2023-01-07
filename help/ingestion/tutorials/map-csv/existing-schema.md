@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;
 solution: Experience Platform
 title: Map a CSV File to an Existing XDM Schema
-topic-legacy: tutorial
 type: Tutorial
 description: This tutorial covers how to map a CSV file to an existing XDM schema using the Adobe Experience Platform user interface.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c

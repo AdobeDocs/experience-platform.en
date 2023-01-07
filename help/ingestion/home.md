@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data ingestion;data location;Data Location;Data management;data management;Lineage;lineage;batch;Batch;ingested data
 solution: Experience Platform
 title: Data Ingestion Overview
-topic-legacy: overview
 description: This document introduces the three main ways in which data is ingested into Platform, with links to their respective overview documentation for more detailed information.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
 ---
