@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Query service;query service;Looker;looker;connect to query service;
 solution: Experience Platform
 title: Connect Looker to Query Service
-topic-legacy: connect
 description: This document walks through the steps for connecting Looker with Adobe Experience Platform Query Service.
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
 ---

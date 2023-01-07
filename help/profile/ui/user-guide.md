@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile;Union schema;UNION PROFILE;union profile
 title: Real-Time Customer Profile UI Guide
-topic-legacy: guide
 description: Real-Time Customer Profile creates a holistic view of each of your individual customers, combining data from multiple channels including online, offline, CRM, and third-party data. This document serves as a guide for interacting with Real-Time Customer Profile in the Adobe Experience Platform user interface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
 ---
