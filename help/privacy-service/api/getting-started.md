@@ -1,7 +1,6 @@
 ---
 title: Getting Started with the Privacy Service API
 description: Learn how to authenticate to the Privacy Service API and how to interpret example API calls in the documentation.
-topic-legacy: developer guide
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 ---
 # Getting started with the Privacy Service API

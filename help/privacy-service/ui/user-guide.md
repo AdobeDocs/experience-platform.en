@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;export;Export
 solution: Experience Platform
 title: Manage Privacy Jobs in the Privacy Service UI
-topic-legacy: UI guide
 description: Learn how to use the Privacy Service user interface to coordinate and monitor privacy requests across various Experience Cloud applications.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 ---
