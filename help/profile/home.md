@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;XDM graphs
 title: Real-Time Customer Profile Overview
-topic-legacy: guide
 description: Real-Time Customer Profile merges data from various sources and provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 ---

@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 title: Edge Projection API Endpoints
-topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform enables you to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real time, by making the right data readily available and continuously updated as changes happen. This is done through the use of edges, a geographically placed server that stores data and makes it readily accessible to applications.
 exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
