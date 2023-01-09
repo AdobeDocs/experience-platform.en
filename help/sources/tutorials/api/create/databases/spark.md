@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Apache Spark;apache spark;Azure HDInsights
 solution: Experience Platform
 title: Create an Apache Spark on Azure HDInsights Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Apache Spark on Azure HDInsights to Adobe Experience Platform using the Flow Service API.
 exl-id: 1f7ca86e-32f4-45f7-92c2-f87c5c0c4ea4
@@ -35,7 +34,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Spark], you must provide 
 | `host` | The IP address or host name of the [!DNL Spark] server. |
 | `username` | The user name that you use to access [!DNL Spark] Server. |
 | `password` | The password corresponding to the user. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Spark] is: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Spark] is: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
 
 For more information about getting started refer to [this Spark document](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview).
 

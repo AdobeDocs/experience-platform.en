@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;ecommerce;eCommerce
 solution: Experience Platform
 title: Explore an eCommerce Connection Using the Flow Service API
-topic-legacy: overview
 description: This tutorial uses the Flow Service API to explore eCommerce connections.
 exl-id: 832ce399-6c9f-40da-8e7c-5434503c16b6
 ---

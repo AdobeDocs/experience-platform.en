@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Phoenix;phoenix
 solution: Experience Platform
 title: Create a Phoenix Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect a Phoenix database to Adobe Experience Platform using the Flow Service API.
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
@@ -38,7 +37,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Phoenix], you must provid
 | `port` | The TCP port that the [!DNL Phoenix] server uses to listen for client connections. If you connect to [!DNL Azure] HDInsights, specify port as 443. |
 | `httpPath` | The partial URL corresponding to the [!DNL Phoenix] server. Specify /hbasephoenix0 if using [!DNL Azure] HDInsights cluster. |
 | `enableSsl` | A boolean value. Specifies whether the connections to the server are encrypted using SSL. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Phoenix] is: `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Phoenix] is: `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
 
 For more information about getting started refer to [this Phoenix document](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 
