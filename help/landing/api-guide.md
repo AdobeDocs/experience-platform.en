@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Adobe Experience Platform;api guide;platform api guide;introduction to platform;developer guide
 solution: Experience Platform
 title: Getting started with Adobe Experience Platform APIs
-topic-legacy: api guide
 description: Adobe Experience Platform provides API services that are closely linked to one another. This guide contains information on the available services, required headers for CRUD operations, error messages, Postman collections, and sample API calls.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
 ---

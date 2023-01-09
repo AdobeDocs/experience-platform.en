@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
 title: Query Service Overview
-topic-legacy: overview
 description: This document provides an overview of the role of Query Service within Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
 ---

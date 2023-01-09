@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Query service;query service;postico;Postico;connect to query service;
 solution: Experience Platform
 title: Connect Postico to Query Service
-topic-legacy: connect
 description: This document contains the link for installing the backup client Postico for Adobe Experience Platform Query Service.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
 ---

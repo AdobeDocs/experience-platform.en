@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data prep;api guide;sample data;
 solution: Experience Platform
 title: Sample Data API Endpoint
-topic-legacy: sample data
 description: You can use the `/samples` endpoint in the Adobe Experience Platform API to programmatically retrieve, create, update, and validate mapping sample data. 
 ---
 

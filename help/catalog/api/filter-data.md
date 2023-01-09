@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data;date range
 solution: Experience Platform
 title: Filter Catalog Data Using Query Parameters
-topic-legacy: developer guide
 description: The Catalog Service API allows response data to be filtered through the use of request query parameters. Part of best practices for Catalog is to use filters in all API calls, as they reduce the load on the API and help to improve overall performance.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
 ---

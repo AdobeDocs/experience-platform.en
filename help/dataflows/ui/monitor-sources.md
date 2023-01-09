@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataf
 description: This tutorial provides steps to monitor your dataflow, using both aggregated monitoring view and cross-service monitoring.
 solution: Experience Platform
 title: Monitor Dataflows for Sources in the UI
-topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 ---

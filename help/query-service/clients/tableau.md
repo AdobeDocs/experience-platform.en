@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;tableau;Tableau;query service;Query service;connect to query service;
 solution: Experience Platform
 title: Connect Tableau to Query Service
-topic-legacy: connect
 description: This document walks through the steps for connecting Tableau with Adobe Experience Platform Query Service.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
 ---

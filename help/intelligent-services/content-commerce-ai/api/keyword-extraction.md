@@ -2,7 +2,6 @@
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai;keyword extraction;Keyword extraction
 solution: Experience Platform
 title: Keyword Extraction in the Content and Commerce AI API
-topic-legacy: Developer guide
 description: The keyword extraction service, when given a text document, automatically extracts keywords or keyphrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword extraction algorithms are used.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 ---
@@ -117,7 +116,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `top-N` | The number of results to be returned (cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
 | `custom` | Any custom parameters to be passed. This property requires a valid JSON object to function. See the [appendix](#appendix) for more information on the custom parameters. | No |
 | `content-id` | The unique ID for the data element thats returned in the response. If this is not passed, an auto-generated ID is assigned. | No |
-| `content` | The content used by the keyword extraction service. The content can be raw text (‘inline’ content-type). <br> If the content is a file on S3 ('s3-bucket' content-type), pass the signed url. When content is part of request-body, the list of data elements should have only one object. If more than one object is passed, only the first object is processed. | Yes |
+| `content` | The content used by the keyword extraction service. The content can be raw text ('inline' content-type). <br> If the content is a file on S3 ('s3-bucket' content-type), pass the signed url. When content is part of request-body, the list of data elements should have only one object. If more than one object is passed, only the first object is processed. | Yes |
 
 **Response**
 

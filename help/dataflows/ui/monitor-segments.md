@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;monitor segments;monitor dataflows;dataflows;segmentation
 description: Segmentation allows you to create segments and audiences from your Real-Time Customer Profile data. This tutorial provides instructions on how you can monitor dataflows during segmentation using the Experience Platform user interface.
 title: Monitor Dataflows for Segments in the UI
-topic-legacy: overview
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 ---

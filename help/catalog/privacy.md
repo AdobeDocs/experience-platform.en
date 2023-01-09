@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data lake privacy;identity namespaces;privacy;data lake
 solution: Experience Platform
 title: Privacy Request Processing in the Data Lake
-topic-legacy: overview
 description: Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by legal and organizational privacy regulations. This document covers essential concepts related to processing privacy requests for customer data stored in the data lake.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
 ---
