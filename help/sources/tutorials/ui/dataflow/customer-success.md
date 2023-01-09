@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;configure dataflow;customer success connector
 solution: Experience Platform
 title: Create a Dataflow Using a Customer Success Source in the UI
-topic-legacy: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps on how to create a dataflow for a customer success source using Platform UI.
 exl-id: d348a7f8-6302-45f1-9961-bab56ad0407e

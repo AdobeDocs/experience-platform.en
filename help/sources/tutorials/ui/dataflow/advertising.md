@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;configure dataflow;advertising connector
 solution: Experience Platform
 title: Create a Dataflow Using an Advertising Source in the UI
-topic-legacy: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps on how to create a dataflow for an advertising source using Platform UI.
 exl-id: 8dd1d809-e812-4a13-8831-189726b2430e

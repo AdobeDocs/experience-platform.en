@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Oracle DB;oracle db
 solution: Experience Platform
 title: Create an Oracle DB  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create an Oracle DB source connection using the Adobe Experience Platform UI.
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443

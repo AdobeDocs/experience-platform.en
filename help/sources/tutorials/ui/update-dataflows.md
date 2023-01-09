@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;update dataflows;edit schedule
 description: This tutorial covers the steps for updating a dataflow schedule, including its ingestion frequency and interval rate, using the Sources workspace.
 solution: Experience Platform
 title: Update a Source Connection Dataflow in the UI
-topic-legacy: overview
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 ---

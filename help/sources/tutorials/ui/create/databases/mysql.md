@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;mysql;MySQL
 solution: Experience Platform
 title: Create a MySQL  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a MySQL source connection using the Adobe Experience Platform UI.
 exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
