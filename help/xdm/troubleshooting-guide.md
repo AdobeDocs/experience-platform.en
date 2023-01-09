@@ -3,7 +3,6 @@ keywords: Experience Platform;popular topics;XDM;XDM system;XDM individual profi
 solution: Experience Platform
 title: XDM System Troubleshooting Guide
 description: Find answers to frequently asked questions about Experience Data Model (XDM), including steps to resolve common API errors.
-topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 ---
 # XDM System troubleshooting guide

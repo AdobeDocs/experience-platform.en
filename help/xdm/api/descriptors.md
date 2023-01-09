@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Descriptors API Endpoint
 description: The /descriptors endpoint in the Schema Registry API allows you to programmatically manage XDM descriptors within your experience application.
-topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
 ---
 # Descriptors endpoint

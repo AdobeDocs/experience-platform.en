@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Getting Started with the Schema Registry API
 description: This document provides an introduction to the core concepts you need to know before attempting to make calls to the Schema Registry API.
-topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 ---
 # Getting started with the [!DNL Schema Registry] API

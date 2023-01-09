@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Schema Registry API Guide Appendix
 description: This document provides supplemental information related to working with the Schema Registry API.
-topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 ---
 # Schema Registry API guide appendix

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;eCommerce connector;eCommerce
 solution: Experience Platform
 title: Create a Dataflow Using an E-Commerce Source in the UI
-topic-legacy: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps on how to create a dataflow for an e-commerce source using Platform UI.
 exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
