@@ -111,7 +111,7 @@ From a profile attributes point of view, any changes to the three attributes map
 
 ## Batch (file-based) destinations {#file-based-destinations}
 
-When exporting profiles to [file-based destinations](/help/destinations/destination-types.md#file-based) in Experience Platform, there are three types of schedules (listed below) and two file export options (full or incremental files). All these settings are set on a segment level, even when multiple segments are mapped to a single destination dataflow.
+When exporting profiles to [file-based destinations](/help/destinations/destination-types.md#file-based) in Experience Platform, there are three types of schedules (listed below) and two file export options (full or incremental files) that you can use. All these settings are set on a segment level, even when multiple segments are mapped to a single destination dataflow.
 
 * Scheduled exports: Configure a destination, add one or more segments, select if you want to export full or incremental files and select a set time each day or several times per day when files should be exported. For example, a 5 PM export time means that whichever profiles are qualified for the segment will be exported at 5PM. 
 * After segment evaluation: The export is triggered immediately after the daily segment evaluation job runs. This means that the exported profile numbers in the file are as close as possible to the latest evaluated population of the segment.
@@ -119,12 +119,9 @@ When exporting profiles to [file-based destinations](/help/destinations/destinat
 
 In any of the export situations above, the exported files include the profiles that qualified for the export, alongside the columns you selected as XDM attributes for export.
 
-Any changes for segment membership of a profile, attribute or identity updates do not make a profile quality in an export.
-
 >[!TIP]
 >
 >When a streaming segment is mapped to a batch destination, there is a higher likelihood that the number of profiles in the exported file is closer to the number of users in the segment. This is because there is a higher chance that the latest segment evaluation has run closer to the export time.
-
 
 Not all updates on a profile qualify a profile to be included in incremental file exports. For example, if an attribute was added to or removed from a profile, that does not include the profile in the export. Only profiles for which the `segmentMembership` attribute has changed will be included in exported files. In other words, only if the profile becomes part of the segment or is removed from the segment is it included in incremental file exports.
 
@@ -154,17 +151,17 @@ The full population of the segment is exported every day.
 
 |What determines a destination export | What is included in the exported file |
 |---------|----------|
-|<ul><li>The export schedule set in the UI or API determines and user action (selecting [Export file now](/help/destinations/ui/export-file-now.md) in the UI or using the [ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md)) determine the start of a destination export</li><li>Any changes in segment membership of a profile, whether it qualifies or disqualifies from the segment, qualify a profile to be included in incremental exports.</li></ul> | In full file exports, the entire profile population of a segment, based on the latest segment evaluation, is included with each file export. The latest values for each XDM attribute selected for export are also included as columns in each file. |
+|<ul><li>The export schedule set in the UI or API determines and user action (selecting [Export file now](/help/destinations/ui/export-file-now.md) in the UI or using the [ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md)) determine the start of a destination export.</li><li>Any changes in segment membership of a profile, whether it qualifies or disqualifies from the segment, qualify a profile to be included in incremental exports.</li></ul> | In full file exports, the entire profile population of a segment, based on the latest segment evaluation, is included with each file export. The latest values for each XDM attribute selected for export are also included as columns in each file. |
 
 {style="table-layout:fixed"}
 
 **Incremental file exports**
 
-In the first file export after setting up the activation workflow, the entire population of the segment is sent. In subsequent exports, only the modified profiles are sent. 
+In the first file export after setting up the activation workflow, the entire population of the segment is exported. In subsequent exports, only the modified profiles are exported. 
 
 |What determines a destination export | What is included in the exported file |
 |---------|----------|
-|<ul><li>The export schedule set in the UI or API determines the start of a destination export</li><li>Any changes in segment membership of a profile, whether it qualifies or disqualifies from the segment, qualify a profile to be included in incremental exports. Changes in attributes or in identity maps for a profile *do not* qualify a profile to be included in incremental exports</li></ul> | The profiles for which the segment membership has changed, along with the latest information for each XDM attribute selected for export. |
+|<ul><li>The export schedule set in the UI or API determines the start of a destination export.</li><li>Any changes in segment membership of a profile, whether it qualifies or disqualifies from the segment, qualify a profile to be included in incremental exports. Changes in attributes or in identity maps for a profile *do not* qualify a profile to be included in incremental exports.</li></ul> | The profiles for which the segment membership has changed, along with the latest information for each XDM attribute selected for export. |
 
 {style="table-layout:fixed"}
 
