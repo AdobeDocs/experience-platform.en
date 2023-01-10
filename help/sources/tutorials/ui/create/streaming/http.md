@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;streaming connection;create streaming connection;ui guide;tutorial;create a streaming connection;streaming ingestion;ingestion;
 solution: Experience Platform
 title: Create an HTTP API Streaming Connection Using the UI
-topic-legacy: tutorial
 type: Tutorial
 description: This UI guide will help you create a streaming connection using Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6

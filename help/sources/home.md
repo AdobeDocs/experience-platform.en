@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;source connectors;source connector;sources;data sources;data source;data source connection
 solution: Experience Platform
 title: Source Connectors Overview
-topic-legacy: overview
 description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 ---

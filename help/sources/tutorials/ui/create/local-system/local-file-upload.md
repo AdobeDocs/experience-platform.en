@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;local system;file upload;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;
 solution: Experience Platform
 title: Create a Local File Upload Source Connector in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a source connection for your local system to bring local files to Platform
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390

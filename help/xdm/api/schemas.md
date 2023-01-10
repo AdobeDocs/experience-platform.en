@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Schemas API Endpoint
 description: The /schemas endpoint in the Schema Registry API allows you to programmatically manage XDM schemas within your experience application.
-topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 ---
 # Schemas endpoint

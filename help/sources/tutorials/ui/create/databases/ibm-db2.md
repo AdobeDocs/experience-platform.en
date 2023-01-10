@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;DB2;db2;IBM DB2;ibm db2
 solution: Experience Platform
 title: Create an IBM DB2  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create an IBM DB2 source connection using the Adobe Experience Platform UI.
 exl-id: 69c99f94-9cb9-43ff-9315-ce166ab35a60

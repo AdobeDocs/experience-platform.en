@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Apache Hive;Hive;hive;Azure HDInsights;azure hdinsights;
 solution: Experience Platform
 title: Apache Hive on Azure HDInsights Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect Apache Hive on Azure HDInsights to Adobe Experience Platform using APIs or the user interface.
 exl-id: f55f9e9a-779e-426a-bca6-7567ea843698
 ---

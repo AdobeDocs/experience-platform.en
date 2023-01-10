@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;GCS;gcs
 solution: Experience Platform
 title: Create a Google Cloud Storage  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Google Cloud Storage source connection using the Adobe Experience Platform UI.
 exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a

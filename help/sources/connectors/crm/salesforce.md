@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;crm schema;crm;CRM;salesforce;Salesforce
 solution: Experience Platform
 title: Salesforce Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect Salesforce to Adobe Experience Platform using APIs or the user interface.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
 ---

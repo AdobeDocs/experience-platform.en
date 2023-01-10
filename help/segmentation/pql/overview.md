@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;PQL;pql;profile query language
 solution: Experience Platform
 title: Profile Query Language (PQL) Overview
-topic-legacy: developer guide
 description: This guide provides a general overview of PQL, covering formatting guidelines and providing example PQL expressions.
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
 ---

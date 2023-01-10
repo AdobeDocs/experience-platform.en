@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data source connection
 solution: Experience Platform
 title: Ingest Parquet Data from a Third-Party Cloud Storage System Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: This tutorial uses the Flow Service API to walk you through the steps to ingest Apache Parquet data from a third-party cloud storage system.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041

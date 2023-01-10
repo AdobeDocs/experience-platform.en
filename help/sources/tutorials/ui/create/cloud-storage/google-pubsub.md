@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Google PubSub;google pubsub
 solution: Experience Platform
 title: Create a Google PubSub  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Google PubSub source connector using the Platform user interface.
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed

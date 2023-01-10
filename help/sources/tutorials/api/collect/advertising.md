@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;flow service;advertising;google adwords;advertising
 solution: Experience Platform
 title: Create a Dataflow for Advertising Sources Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party advertising application and ingesting it into Platform using source connectors and the Flow Service API.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1

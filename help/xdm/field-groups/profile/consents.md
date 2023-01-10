@@ -1,7 +1,6 @@
 ---
 solution: Experience Platform
 title: Consents and Preferences Schema Field Group
-topic-legacy: overview
 description: This document provides an overview of the Consents and Preferences schema field group.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
 ---

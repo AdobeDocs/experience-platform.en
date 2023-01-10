@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment builder;Segment builder
 solution: Experience Platform
 title: Refactored Segmentation Time Constraints UI Guide
-topic-legacy: ui guide
 description: Segment Builder provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
 ---

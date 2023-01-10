@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;audiences;audience;API;api;
 title: Audiences API Endpoint
-topic-legacy: developer guide
 description: The audiences endpoint in the Adobe Experience Platform Segmentation Service API allows you to programmatically manage audiences for your organization.
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 hide: true

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;comparison functions;comparison;
 solution: Experience Platform
 title: PQL Comparison Functions
-topic-legacy: developer guide
 description: Comparison functions are used to compare between different expressions and values, returning "true" or "false" accordingly.
 exl-id: 15f106c7-b88b-4042-b925-703e2a309573
 ---

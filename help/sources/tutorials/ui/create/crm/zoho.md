@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Zoho CRM;zoho crm;Zoho;zoho
 solution: Experience Platform
 title: Create a Zoho CRM Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Zoho CRM source connection using the Adobe Experience Platform UI.
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e

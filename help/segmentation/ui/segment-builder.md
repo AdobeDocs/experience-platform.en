@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
 solution: Experience Platform
 title: Segment Builder UI Guide
-topic-legacy: ui guide
 description: The Segment Builder in the Adobe Experience Platform UI provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 ---

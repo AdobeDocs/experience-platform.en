@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Collect eCommerce data;eCommerce data
 solution: Experience Platform
 title: Create a Dataflow for E-commerce Sources using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party eCommerce system and ingesting it into Platform using source connectors and APIs.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5

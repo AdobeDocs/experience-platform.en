@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage
 solution: Experience Platform
 title: Google Cloud Storage Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect Google Cloud Storage to Adobe Experience Platform using APIs or the user interface.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
 ---
