@@ -299,7 +299,7 @@ You can request to delete a specified query by making a PATCH request to the `/q
 PATCH /queries/{QUERY_ID}
 ```
 
-| Property | Description |
+| Parameter | Description |
 | -------- | ----------- |
 | `{QUERY_ID}` | The `id` value of the query you want to cancel. |
 
@@ -322,7 +322,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Property | Description |
 | -------- | ----------- |
-| `op` | In order to cancel the query, you must set the op parameter with the value `cancel `. |
+| `op` | The type of operation to perform on the resource. Accepted values are `cancel` and `soft_delete`. To cancel the query, you must set the op parameter with the value `cancel `. Note that the soft-delete operation stops the query from being returned on GET requests but does not delete it from the system. |
 
 **Response**
 
