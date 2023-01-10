@@ -9,7 +9,7 @@ exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
-[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) is a cloud computing platform that offers a wide variety of services such as distributed computing, database storage, content delivery, and customer relationship management (CRM).
+[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) is a cloud computing platform that offers a wide variety of services such as distributed computing, database storage, content delivery, and software-as-a-service (SaaS) integration services for customer relationship management (CRM) and enterprise resource planning (ERP).
 
 The [!DNL AWS] [event forwarding](../../../ui/event-forwarding/overview.md) extension leverages [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) to send events from the Adobe Experience Platform Edge Network to [!DNL AWS] for further processing. This guide covers how to install the extension and employ its capabilities in an event forwarding rule.
 

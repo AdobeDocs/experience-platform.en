@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;troubleshooting guide;faq;troubleshooting;
 solution: Experience Platform
 title: Query Service Troubleshooting Guide
-topic-legacy: troubleshooting
 description: This document contains common questions and answers related to Query Service. Topics include, exporting data, third-party tools, and PSQL errors.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
@@ -34,16 +33,22 @@ No. Turning off the auto-complete feature is not currently supported by the edit
 One potential cause is the auto-complete feature. The feature processes certain metadata commands that can occasionally slow the editor during query editing.
 +++
 
-### Can I use Postman for the Query Service API?
+### Can I use [!DNL Postman] for the Query Service API?
 
 +++Answer
-Yes, you can visualize and interact with all Adobe API services using Postman (a free, third-party application). Watch the [Postman setup guide](https://video.tv.adobe.com/v/28832) for step-by-step instructions on how to set up a project in Adobe Developer Console and acquire all the necessary credentials for use with Postman. See the official documentation for [guidance on starting, running, and sharing Postman collections](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Yes, you can visualize and interact with all Adobe API services using [!DNL Postman] (a free, third-party application). Watch the [[!DNL Postman] setup guide](https://video.tv.adobe.com/v/28832) for step-by-step instructions on how to set up a project in Adobe Developer Console and acquire all the necessary credentials for use with [!DNL Postman]. See the official documentation for [guidance on starting, running, and sharing [!DNL Postman] collections](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Is there a limit to the maximum number of rows returned from a query through the UI?
 
 +++Answer
 Yes, Query Service internally applies a limit of 50,000 rows unless an explicit limit is specified externally. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
++++
+
+### Can I use queries to update rows?
+
++++Answer
+In batch queries, updating a row inside the dataset is not supported.
 +++
 
 ### Is there a data size limit for the resulting output from a query?
@@ -79,6 +84,12 @@ One or more of the following solutions are recommended in case of queries timing
 
 +++Answer
 No. Query Service has an autoscaling capability that ensures concurrent queries do not have any noticeable impact on the performance of the service.
++++
+
+### Can I use reserved keywords as a column name?
+
++++Answer
+There are certain reserved keywords that cannot be used as column name such as, `ORDER`, `GROUP BY`, `WHERE`, `DISTINCT`. If you want to use these keywords, then you must escape these columns.
 +++
 
 ### How do I find a column name from a hierarchical dataset?
@@ -479,6 +490,93 @@ WHERE T2.ID IS NULL
 
 +++Answer
 No, this is an intentional limitation across Experience Platform that applies to all Adobe services, including Query Service. A name with two underscores is acceptable as a schema and dataset name, but the table name for the dataset can only contain a single underscore. 
++++
+
+### How many concurrent queries can you run at a time?  
+
++++Answer
+There is no query concurrency limit as batch queries run as back-end jobs. There is, however, a query timeout limit set to 24 hours. 
++++
+
+### Is there an activity dashboard where you can see query activities and status?
+
++++Answer
+There are monitoring and alerting capabilities to check on query activities and statuses. See the [Query Service audit log integration](./data-governance/audit-log-guide.md) and the [query logs](./ui/overview.md#log) documents for more information.
++++
+
+### Is there any way to roll back updates? For example, if there is an error or some calculations need reconfiguring when writing data back to Platform, how should that scenario be handled?
+
++++Answer
+Currently, we do not support rollbacks or updates in that manner. 
++++
+
+### How can you optimize queries in Adobe Experience Platform?
+
++++Answer
+The system does not have indexes as it is not a database but it does have other optimizations in place tied to the data store. The following options are available to tune your queries:
+
+- A time-based filter on timeseries data.
+- Optimized push down for the struct data type.
+- Optimized cost and memory push-down for arrays and map data types.
+- Incremental processing using snapshots.
+- A persisted data format.
++++
+  
+### Can logins be restricted to certain aspects of Query Service or is it an "all or nothing" solution? 
+
++++Answer
+Query Service is an "all or nothing" solution. Partial access cannot be provided.
++++
+
+### Can I restrict what data Query Service can use, or does it simply access the entire Adobe Experience Platform data lake?
+
++++Answer
+Yes, you can restrict querying to datasets with read-only access. 
++++
+
+### What other options are there for restricting the data that Query Service can access?
+
++++Answer
+There are three approaches to restricting access. They are as follows:
+
+- Use SELECT only statements and give datasets read only access. Also, assign the manage query permission.
+- Use SELECT/INSERT/CREATE statements and give datasets write access. Also, assign the query manage permission.
+- Use an integration account with the previous suggestions above and assign the query integration permission.
+
++++
+    
+### Once the data is returned by Query Service, are there any checks that can be run by Platform to ensure that it hasn't returned any protected data?
+
+- Query Service supports attribute-based access control. You can restrict access to data at the column/leaf level and/or the struct level. See the documentation to learn more about attribute-based access control. 
+
+### Can I specify an SSL mode for the connection to a third-party client? For example, can I use use 'verify-full' with Power BI?
+
++++Answer
+Yes, SSL modes are supported. See the [SSL modes documentation](./clients/ssl-modes.md) for a breakdown of the different SSL modes available and the level of protection they provide.
++++
+
+### Do we use TLS 1.2 for all connections from Power BI clients to query service?
+
++++Answer
+Yes. Data-in-transit is always HTTPS compliant. The currently supported version is TLS1.2.
++++
+
+### Does a connection made on port 80 still use https?
+
++++Answer
+Yes, a connection made on port 80 still uses SSL. You can also use port 5432. 
++++
+
+### Can I control access to specific datasets and columns for a particular connection? How is this configured?
+
++++Answer
+Yes, attribute-based access control is enforced if configured. See the [attribute-based access control overview](../access-control/abac/overview.md) for more information.
++++
+
+### Does Query Service support the "INSERT OVERWRITE INTO" command?
+
++++Answer
+No, Query Service does not support the "INSERT OVERWRITE INTO" command.
 +++
 
 ## Exporting data {#exporting-data}

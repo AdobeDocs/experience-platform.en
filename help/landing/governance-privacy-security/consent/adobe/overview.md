@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Consent Processing in Adobe Experience Platform
-topic-legacy: getting started
 description: Learn how to process customer consent signals in Adobe Experience Platform using the Adobe 2.0 standard.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 ---
@@ -22,10 +21,10 @@ This guide requires a working understanding of the various Experience Platform s
 
 * [Experience Data Model (XDM)](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
 * [Adobe Experience Platform Identity Service](../../../../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
-* [Real-time Customer Profile](../../../../profile/home.md): Uses [!DNL Identity Service] capabilities to create detailed customer profiles from your datasets in real time. Real-time Customer Profile pulls data from the Data Lake and persists customer profiles in its own separate data store.
+* [Real-Time Customer Profile](../../../../profile/home.md): Uses [!DNL Identity Service] capabilities to create detailed customer profiles from your datasets in real time. Real-Time Customer Profile pulls data from the Data Lake and persists customer profiles in its own separate data store.
 * [Adobe Experience Platform Web SDK](../../../../edge/home.md): A client-side JavaScript library that allows you to integrate various Platform services into your customer-facing website.
     * [SDK consent commands](../../../../edge/consent/supporting-consent.md): A use-case overview of the consent-related SDK commands shown in this guide.
-* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md): Allows you to divide Real-time Customer Profile data into groups of individuals that share similar traits and will respond similarly to marketing strategies.
+* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md): Allows you to divide Real-Time Customer Profile data into groups of individuals that share similar traits and will respond similarly to marketing strategies.
 
 ## Consent processing flow summary {#summary}
 

@@ -2,29 +2,28 @@
 keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;data usage labels overview
 solution: Experience Platform
 title: Data Usage Labels Overview
-topic-legacy: labels
-description: Adobe Experience Platform Data Governance enables you to apply data usage labels to datasets and fields, categorizing each according to related data usage policies. This document provides an overview of data usage labels in Experience Platform.
+description: Learn how data usage labels are used to help enforce data governance compliance in Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 ---
 # Data usage labels overview
 
-Adobe Experience Platform Data Governance allows you to apply data usage labels to datasets and fields, categorizing each according to related data usage policies.
+Adobe Experience Platform allows you to apply data usage labels to datasets and fields, categorizing each according to related [data governance policies](../policies/overview.md) and [access control policies](../../access-control/abac/ui/policies.md).
 
-This document provides an overview of data usage labels in [!DNL Experience Platform]. Before reading this guide, please see the [Data Governance overview](../home.md) for a more robust introduction to the Data Governance framework.
+This document provides an overview of data usage labels in [!DNL Experience Platform].
 
 ## Understanding data usage labels
 
-Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available for use in [!DNL Platform].
+Data usage labels allow you to categorize datasets and fields according to governance policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available for use in [!DNL Platform].
 
 Data usage labels that are applied at the dataset level are propagated to all fields within the dataset. Labels can also be applied directly to individual fields (column headers) in a dataset, without propagation.
 
-[!DNL Platform] provides several "core" data usage labels out-of-the-box, which cover a wide variety of common restrictions applicable to data governance. For more information on these labels and the usage policies they represent, see the guide on [core data usage labels](reference.md).
+[!DNL Platform] provides several "core" data usage labels out-of-the-box, which cover a wide variety of common restrictions applicable to data governance. For more information on these labels and the governance policies they represent, see the guide on [core data usage labels](reference.md).
 
 In addition to the labels provided by Adobe, you can also define your own custom labels for your organization. See the section on [managing labels](#manage-labels) for more information.
 
 ## Label inheritance for audience segments
 
-All audience segments created by [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) inherit the usage labels of their corresponding datasets. This allows Experience Platform to provide automatic data usage policy enforcement when activating segments to destinations.
+All audience segments created by [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) inherit the usage labels of their corresponding datasets. This allows Experience Platform to provide automatic policy enforcement when activating segments to destinations.
 
 In addition to inheriting dataset-level labels, segments inherit all field-level labels from their associated datasets by default. Therefore, you can more easily identify which attributes should be excluded from your segments and prevent them from inheriting labels from excluded fields.
 
@@ -42,13 +41,21 @@ You can manage data usage labels using [!DNL Experience Platform] APIs or the us
 
 ### Using the UI
 
-The **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI allows you to view and manage core and custom labels for your organization. The **[!DNL Datasets]** workspace allows you to apply labels to datasets and fields. For more information, refer to the [labels user guide](user-guide.md).
+The **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI allows you to view and manage core and custom labels for your organization. You can use the **[!UICONTROL Schemas]** workspace to [apply labels to your Experience Data Model (XDM) schemas](../../xdm/tutorials/labels.md), or you can use the **[!DNL Datasets]** workspace to [apply labels to datasets](./user-guide.md) instead.
+
+>[!NOTE]
+>
+>Applying labels at the dataset level is only supported for data governance use cases. If you are trying to create access policies for the data, you must apply labels to the schema that the dataset is based on. See the overview on [attribute-based access control](../../access-control/abac/overview.md) for more information.
 
 ### Using APIs
 
 The `/labels` endpoint in the [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) allows you to programmatically manage data usage labels, including creating custom labels. Refer to the [labels endpoint guide](../api/labels.md) for more information.
 
 The [Dataset Service API](https://www.adobe.io/experience-platform-apis/references/dataset-service/) is used to manage labels for dataset and fields. See the guide on [managing dataset labels](./dataset-api.md) for more information.
+
+>[!NOTE]
+>
+>Applying labels at the dataset level is only supported for data governance use cases. If you are trying to create access policies for the data, you must [apply labels to the schema](../../xdm/tutorials/labels.md) that the dataset is based on. See the overview on [attribute-based access control](../../access-control/abac/overview.md) for more information.
 
 ## Next steps
 

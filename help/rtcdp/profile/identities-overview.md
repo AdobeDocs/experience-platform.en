@@ -22,4 +22,4 @@ An identity graph is a map of relationships between different identity namespace
 
 ## Next steps
 
-Identities, and the relationships between them, are defined and maintained by [!DNL Identity Service] and leveraged by [!DNL Real-time Customer Profile] to build a complete picture of each individual customer and their interactions. To learn more, please visit the [Identity Service documentation](../../identity-service/home.md).
+Identities, and the relationships between them, are defined and maintained by [!DNL Identity Service] and leveraged by [!DNL Real-Time Customer Profile] to build a complete picture of each individual customer and their interactions. To learn more, please visit the [Identity Service documentation](../../identity-service/home.md).

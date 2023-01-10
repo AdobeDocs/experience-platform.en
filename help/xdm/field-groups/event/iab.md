@@ -12,7 +12,7 @@ exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
 >
 >This document covers the [!UICONTROL IAB TCF 2.0 Consent] schema field group for the XDM ExperienceEvent class. This field group should only be used if you intend to track consent change events over time.
 >
->Note that consent values recorded in event data are not honored in automatic enforcement workflows. In order for automatic enforcement to take place, consent values must be ingested into the XDM Individual Profile class and enabled for Real-time Customer Profile.
+>Note that consent values recorded in event data are not honored in automatic enforcement workflows. In order for automatic enforcement to take place, consent values must be ingested into the XDM Individual Profile class and enabled for Real-Time Customer Profile.
 >
 >For the field group intended for the XDM Individual Profile class, refer to the following [document](../profile/iab.md) instead.
 
