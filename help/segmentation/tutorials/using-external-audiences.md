@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Importing and using external audiences
 description: Follow this tutorial to learn how to use external audiences with Adobe Experience Platform.
-topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 ---
 # Importing and using external audiences
@@ -14,8 +13,8 @@ Adobe Experience Platform supports the ability to import external audience, whic
 
 This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. Before beginning this tutorial, please review the documentation for the following services:
 
-- [Segmentation Service](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
-- [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [Segmentation Service](../home.md): Allows you to build audience segments from Real-Time Customer Profile data.
+- [Real-Time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
 - [Datasets](../../catalog/datasets/overview.md): The storage and management construct for data persistence in Experience Platform.
 - [Streaming ingestion](../../ingestion/streaming-ingestion/overview.md): How Experience Platform ingests and stores data from client- and server-side devices in real time.
@@ -56,7 +55,7 @@ Now that your schema has been created, you will need to specify which field will
 
 ![The checkboxes to mark the selected field as the primary identity are highlighted in the Schema Editor.](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-After marking the `_id` field as the primary identity, select the title of the schema, followed by the toggle labelled **[!UICONTROL Profile]**. Select **[!UICONTROL Enable]** to enable the schema for [!DNL Real-time Customer Profile].
+After marking the `_id` field as the primary identity, select the title of the schema, followed by the toggle labelled **[!UICONTROL Profile]**. Select **[!UICONTROL Enable]** to enable the schema for [!DNL Real-Time Customer Profile].
 
 ![The toggle to enable the schema for Profile is highlighted in the Schema Editor.](../images/tutorials/external-audiences/schema-profile.png)
 
@@ -70,7 +69,7 @@ To create a dataset, follow the instructions in the [dataset user guide](../../c
 
 ![The schema that you want to base your dataset on is highlighted.](../images/tutorials/external-audiences/select-schema.png)
 
-After creating the dataset, continue following the instructions in the [dataset user guide](../../catalog/datasets/user-guide.md#enable-profile) to enable this dataset for Real-time Customer Profile.
+After creating the dataset, continue following the instructions in the [dataset user guide](../../catalog/datasets/user-guide.md#enable-profile) to enable this dataset for Real-Time Customer Profile.
 
 ![The toggle to enable the schema for Profile is highlighted in the Dataset activity page.](../images/tutorials/external-audiences/dataset-profile.png)
 
@@ -177,7 +176,7 @@ To create a dataset, follow the instructions in the [dataset user guide](../../c
 
 ![The schema that you are using to create the database is highlighted.](../images/tutorials/external-audiences/select-schema.png)
 
-After creating the dataset, continue following the instructions in the [dataset user guide](../../catalog/datasets/user-guide.md#enable-profile) to enable this dataset for Real-time Customer Profile.
+After creating the dataset, continue following the instructions in the [dataset user guide](../../catalog/datasets/user-guide.md#enable-profile) to enable this dataset for Real-Time Customer Profile.
 
 ![The toggle to enable the schema for Profile is highlighted in the create datasets workflow.](../images/tutorials/external-audiences/dataset-profile.png)
 

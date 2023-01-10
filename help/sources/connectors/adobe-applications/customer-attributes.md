@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Customer Attributes connector
 solution: Experience Platform
 title: Customer Attributes Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect Customer Attributes to Adobe Experience Platform using APIs or the user interface
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
 ---

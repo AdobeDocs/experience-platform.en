@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;guardrails;guidelines;limit;entity;primary entity;dimension entity;
-title: Default Guardrails for Real-time Customer Profile Data
+title: Default Guardrails for Real-Time Customer Profile Data
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Adobe Experience Platform uses a highly denormalized hybrid data model that differs from the traditional relational data model. This document provides default use and rate limits to help you model your Profile data for optimal system performance. 
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 ---
-# Default Guardrails for [!DNL Real-time Customer Profile] data
+# Default Guardrails for [!DNL Real-Time Customer Profile] data
 
-Adobe Experience Platform enables you to deliver personalized cross-channel experiences based on behavioral insights and customer attributes in the form of Real-time Customer Profiles. To support this new approach to profiles, Experience Platform uses a highly denormalized hybrid data model that differs from the traditional relational data model.
+Adobe Experience Platform enables you to deliver personalized cross-channel experiences based on behavioral insights and customer attributes in the form of Real-Time Customer Profiles. To support this new approach to profiles, Experience Platform uses a highly denormalized hybrid data model that differs from the traditional relational data model.
 
 This document provides default use and rate limits to help you model your Profile data for optimal system performance. When reviewing the following guardrails, it is assumed that you have modeled the data correctly. If you have questions on how to model your data, please contact your customer service representative.
 
@@ -19,9 +19,9 @@ This document provides default use and rate limits to help you model your Profil
 
 ## Getting started
 
-The following Experience Platform services are involved with modeling Real-time Customer Profile data: 
+The following Experience Platform services are involved with modeling Real-Time Customer Profile data: 
 
-* [[!DNL Real-time Customer Profile]](home.md): Create unified consumer profiles using data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](home.md): Create unified consumer profiles using data from multiple sources.
 * [Identities](../identity-service/home.md): Bridge identities from disparate data sources as they are ingested into Platform.
 * [Schemas](../xdm/home.md): Experience Data Model (XDM) schemas are the standardized framework by which Platform organizes customer experience data.
 * [Segments](../segmentation/home.md): The segmentation engine within Platform is used to create segments from your customer profiles based on customer behaviors and attributes.
@@ -40,7 +40,7 @@ There are two types of default limits within this document:
 
 ## Data model limits
 
-The following guardrails provide recommended limits when modeling Real-time Customer Profile data. To learn more about primary entities and dimension entities, see the section on [entity types](#entity-types) in the Appendix.
+The following guardrails provide recommended limits when modeling Real-Time Customer Profile data. To learn more about primary entities and dimension entities, see the section on [entity types](#entity-types) in the Appendix.
 
 ### Primary entity guardrails
 
@@ -118,9 +118,9 @@ This section provides additional details for the limits in this document.
 
 The [!DNL Profile] store data model consists of two core entity types:
 
-* **Primary entity:** A primary entity, or profile entity, merges data together to form a "single source of truth" for an individual. This unified data is represented using what is known as a "union view". A union view aggregates the fields of all schemas that implement the same class into a single union schema. The union schema for [!DNL Real-time Customer Profile] is a denormalized hybrid data model that acts as a container for all profile attributes and behavioral events. 
+* **Primary entity:** A primary entity, or profile entity, merges data together to form a "single source of truth" for an individual. This unified data is represented using what is known as a "union view". A union view aggregates the fields of all schemas that implement the same class into a single union schema. The union schema for [!DNL Real-Time Customer Profile] is a denormalized hybrid data model that acts as a container for all profile attributes and behavioral events. 
 
-  Time-independent attributes, also known as "record data" are modeled using [!DNL XDM Individual Profile], while time-series data, also known as "event data" is modeled using [!DNL XDM ExperienceEvent]. As record and time-series data is ingested in Adobe Experience Platform, it triggers [!DNL Real-time Customer Profile] to begin ingesting data that has been enabled for its use. The more interactions and details that are ingested, the more robust individual profiles become.
+  Time-independent attributes, also known as "record data" are modeled using [!DNL XDM Individual Profile], while time-series data, also known as "event data" is modeled using [!DNL XDM ExperienceEvent]. As record and time-series data is ingested in Adobe Experience Platform, it triggers [!DNL Real-Time Customer Profile] to begin ingesting data that has been enabled for its use. The more interactions and details that are ingested, the more robust individual profiles become.
 
   ![An infographic outlining the differences between record data and time-series data.](images/guardrails/profile-entity.png) 
 
@@ -130,7 +130,7 @@ The [!DNL Profile] store data model consists of two core entity types:
 
 ### Profile fragments
 
-In this document, there are several guardrails that refer to "profile fragments." In Experience Platform, multiple profile fragments are merged together to form the Real-time Customer Profile. Each fragment represents a unique primary identity and the corresponding record or complete set of event data for that ID within a given dataset. To learn more about profile fragments, refer to the [Profile overview](home.md#profile-fragments-vs-merged-profiles).
+In this document, there are several guardrails that refer to "profile fragments." In Experience Platform, multiple profile fragments are merged together to form the Real-Time Customer Profile. Each fragment represents a unique primary identity and the corresponding record or complete set of event data for that ID within a given dataset. To learn more about profile fragments, refer to the [Profile overview](home.md#profile-fragments-vs-merged-profiles).
 
 ### Merge policies {#merge-policies}
 

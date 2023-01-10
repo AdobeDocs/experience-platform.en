@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;sources;connectors;oracle;oracle eloqua;eloqua
 solution: Experience Platform
 title: Create an Oracle Eloqua source connection using Platform UI
-topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to Oracle Eloqua using Platform UI.
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
 ---

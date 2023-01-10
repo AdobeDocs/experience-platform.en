@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
 solution: Experience Platform
 title: Policy Evaluation API Endpoints
-topic-legacy: developer guide
 description: Once marketing actions have been created and policies have been defined, you can use the Policy Service API to evaluate if any policies are violated by certain actions. The returned constraints take the form of a set of policies that would be violated by attempting the marketing action on the specified data containing data usage labels.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
 ---
@@ -676,6 +675,6 @@ A successful response returns an array of evaluation results; one for each polic
 ]
 ```
 
-## Policy evaluation for [!DNL Real-time Customer Profile]
+## Policy evaluation for [!DNL Real-Time Customer Profile]
 
-The [!DNL Policy Service] API can also be used to check for policy violations involving the use of [!DNL Real-time Customer Profile] segments. See the tutorial on [enforcing data usage compliance for audience segments](../../segmentation/tutorials/governance.md) for more information.
+The [!DNL Policy Service] API can also be used to check for policy violations involving the use of [!DNL Real-Time Customer Profile] segments. See the tutorial on [enforcing data usage compliance for audience segments](../../segmentation/tutorials/governance.md) for more information.

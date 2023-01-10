@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segment Match;segment match
 solution: Experience Platform
 title: Segment Match Overview
-topic-legacy: overview
 description: Segment Match is a segment-sharing service in Adobe Experience Platform that allows for two or more Platform users to exchange segment data in a secure, governed, and privacy-friendly manner.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
 ---
@@ -31,7 +30,7 @@ The first step to getting started with [!DNL Segment Match] is to make sure you'
 
 Identity namespaces are a component of [Adobe Experience Platform Identity Service](../../../identity-service/home.md). Each customer identity contains an associated namespace that indicates the identity's context. For example, a namespace can distinguish a value of "name<span>@email.com" as an email address or "443522" as a numeric CRM ID.
 
-A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments (such as when [!DNL Real-time Customer Profile] merges Profile data), both the identity value and the namespace must match.
+A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments (such as when [!DNL Real-Time Customer Profile] merges Profile data), both the identity value and the namespace must match.
 
 In the context of [!DNL Segment Match], namespaces are used in the overlap process when sharing data.
 
@@ -198,4 +197,4 @@ By reading this document, you have gained an understanding of [!DNL Segment Matc
 
 * [[!DNL Segmentation Service]](../../home.md)
 * [[!DNL Identity Service]](../../../identity-service/home.md)
-* [[!DNL Real-time Customer Profile] overview](../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] overview](../../../profile/home.md)

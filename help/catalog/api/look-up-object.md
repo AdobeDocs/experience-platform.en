@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;catalog;object lookup;api
 solution: Experience Platform
 title: Look Up a Catalog Object
-topic-legacy: developer guide
 description: If you know the unique identifier for a specific Catalog object, you can perform a GET request to view that object's details.
 exl-id: fd6fbe72-0108-4be3-a065-c753e7a19d24
 ---

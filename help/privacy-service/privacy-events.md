@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Subscribe to Privacy Service Events
-topic-legacy: privacy events
 description: Learn how to subscribe to Privacy Service events using a preconfigured webhook.
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
 ---

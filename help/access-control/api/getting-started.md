@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;access control;api;getting started
 solution: Experience Platform
 title: Access Control API Guide
-topic-legacy: developer guide
 description: Access control in Adobe Experience Platform allows you to manage roles and permissions for various Platform capabilities by using the Adobe Admin Console. The following sections provide additional information that developers will need to know in order to successfully make calls to the Schema Registry API.
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
 ---

@@ -11,7 +11,7 @@ Adobe Experience Platform provides important information about your organization
 
 ## Getting started with [!DNL Query Service] 
 
-Adobe Experience Platform [!DNL Query Service] supports marketers in gaining insights from their data by enabling the use of standard SQL to query data in the data lake. [!DNL Query Service] offers a user interface and an API that can be used to join any dataset in the data lake and capture the query results as new datasets for use in reporting, machine learning, or for ingestion into Real-time Customer Profile. 
+Adobe Experience Platform [!DNL Query Service] supports marketers in gaining insights from their data by enabling the use of standard SQL to query data in the data lake. [!DNL Query Service] offers a user interface and an API that can be used to join any dataset in the data lake and capture the query results as new datasets for use in reporting, machine learning, or for ingestion into Real-Time Customer Profile. 
 
 To learn more about [!DNL Query Service] and its role within Experience Platform, please begin by reading the [[!DNL Query Service] overview](../query-service/home.md).
 

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;Segmentation;create a dataset;export audience segment;export segment;
 solution: Experience Platform
 title: Create a Dataset for Exporting an Audience Segment
-topic-legacy: tutorial
 type: Tutorial
 description: This tutorial walks through the steps required to create a dataset that can be used for exporting an audience segment using the Experience Platform UI.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
@@ -31,7 +30,7 @@ Select **[!UICONTROL Datasets]** in the left navigation to access the workspace,
 
 >[!NOTE]
 >
->Select the filter icon next to the search bar to use filtering capabilities to view only those datasets enabled for [!DNL Real-time Customer Profile].
+>Select the filter icon next to the search bar to use filtering capabilities to view only those datasets enabled for [!DNL Real-Time Customer Profile].
 
 ![The datasets workspace is displayed.](../images/tutorials/segment-export-dataset/browse.png)
 
@@ -51,7 +50,7 @@ To select the [!DNL XDM Individual Profile Union Schema] for use in your dataset
 
 >[!NOTE]
 >
->Despite the fact that union schemas participate in Real-time Customer Profile by definition, they are listed as "Not enabled" due to the fact that they are not enabled for Profile in same way as traditional schemas.
+>Despite the fact that union schemas participate in Real-Time Customer Profile by definition, they are listed as "Not enabled" due to the fact that they are not enabled for Profile in same way as traditional schemas.
 
 Select the radio button next to **[!UICONTROL XDM Individual Profile]**, then select **[!UICONTROL Next]**.
 

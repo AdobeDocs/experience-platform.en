@@ -10,7 +10,7 @@ exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 >title="Reference schema"
 >abstract="Select the schema you want to establish a relationship with. Depending on the schema's class, it may also have existing relationships with other entities in the B2B context. See the documentation to learn how B2B schema classes relate to each other."
 
-Adobe Real-Time Customer Data Platform B2B Edition provides several Experience Data Model (XDM) classes that capture fundamental B2B data entities, including [accounts](../classes/b2b/business-account.md), [opportunities](../classes/b2b/business-opportunity.md), [campaigns](../classes/b2b/business-campaign.md), and more. By building schemas based on these classes and enabling them for use in [Real-time Customer Profile](../../profile/home.md), you can merge data from disparate sources into a unified representation called a union schema.
+Adobe Real-Time Customer Data Platform B2B Edition provides several Experience Data Model (XDM) classes that capture fundamental B2B data entities, including [accounts](../classes/b2b/business-account.md), [opportunities](../classes/b2b/business-opportunity.md), [campaigns](../classes/b2b/business-campaign.md), and more. By building schemas based on these classes and enabling them for use in [Real-Time Customer Profile](../../profile/home.md), you can merge data from disparate sources into a unified representation called a union schema.
 
 However, union schemas can only contain fields captured by schemas that share the same class. This is where schema relationships come in. By implementing relationships in your B2B schemas, you can describe how these business entities relate to each other and can include attributes from multiple classes in downstream segmentation use cases.
 
@@ -63,7 +63,7 @@ For reference purposes, the following sections describe the structure of each sc
 
 The source schema "[!DNL Opportunities]" is based on the [!UICONTROL XDM Business Opportunity] class. One of the fields provided by the class, `opportunityKey`, serves as the identifier for the schema. Specifically, the `sourceKey` field under the `opportunityKey` object is set as the schema's primary identity under a custom namespace called [!DNL B2B Opportunity]. 
 
-As seen under **[!UICONTROL Schema Properties]**, this schema has been enabled for use in [!DNL Real-time Customer Profile].
+As seen under **[!UICONTROL Schema Properties]**, this schema has been enabled for use in [!DNL Real-Time Customer Profile].
 
 ![Opportunities Schema](../images/tutorials/relationship-b2b/opportunities.png)
 
@@ -117,4 +117,4 @@ If you view the structure of the destination schema, the relationship marker app
 
 ## Next steps
 
-By following this tutorial, you have successfully created a many-to-one relationship between two schemas using the [!DNL Schema Editor]. Once data has been ingested using datasets based on these schemas and that data has been activated in the Profile data store, you can use attributes from both schemas for multi-class segmentation use cases. See the documentation on Real-Time CDP B2B Edition for more information.
+By following this tutorial, you have successfully created a many-to-one relationship between two schemas using the [!DNL Schema Editor]. Once data has been ingested using datasets based on these schemas and that data has been activated in the Profile data store, you can use attributes from both schemas for [multi-class segmentation use cases](../../rtcdp/segmentation/b2b.md).

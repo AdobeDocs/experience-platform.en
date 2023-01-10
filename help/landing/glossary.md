@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Adobe Experience Platform Glossary
-topic-legacy: getting started
 description: A glossary of important terminology in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 ---
@@ -28,7 +27,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Adobe Experience Platform Query Service**: Enables data analysts to query events and profiles for use in analytics and machine learning. With Query Service, data scientists and analysts can pull all of their datasets stored in Experience Platform (including behavioral data as well as point-of-sale (POS), customer relationship management (CRM), and more) and query those datasets to answer specific questions about the data.
 
-**Adobe Experience Platform Segmentation Service**: Enables building segments and generating audiences from your Real-time Customer Profile data. These audiences can then be exported to their own datasets within the Data Lake.
+**Adobe Experience Platform Segmentation Service**: Enables building segments and generating audiences from your Real-Time Customer Profile data. These audiences can then be exported to their own datasets within the Data Lake.
 
 **Adobe Intelligent Services**: Intelligent Services such as Attribution AI and Customer AI are machine-learning, artificial-intelligence-based models that are purpose-built and require Experience Platform to run and operate.
 
@@ -40,6 +39,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Amazon S3 connector**: The [!DNL Amazon] S3 connector allows customers of Experience Platform to securely connect and access their [!DNL Amazon] S3 data.
 
+**APA**: The [[!DNL Australia Privacy Act (Privacy Act)]](https://www.oaic.gov.au/privacy/the-privacy-act) promotes and protects individuals' privacy and regulates how Australian Government agencies and organization handle personal information. The [!DNL Privacy Act] includes principles that apply to private sector organizations. For example, individuals are afforded the right to understand why the personal information is being collected and how it will be used, the ability to access, erase their data, and correct personal information.
+
 **Append save strategy**: The "append" save strategy is an option used when specifying third-party data to ingest via a connection and appending any new data or rows at the end of the dataset. The previously ingested rows remain untouched and only rows created since the last scheduled run are ingested to Experience Platform. Any rows that were changed in the source system remain unchanged on Experience Platform.
 
 **Array**: Arrays are used for ordered elements with the same data type.
@@ -48,7 +49,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Attributes**: Attributes are specified characteristics that represent a profile.
 
-**Attribute merge**: When defining a merge policy using the Real-time Customer Profile API, the `attributeMerge` object indicates the manner by which the merge policy will prioritize profile attributes in the case of data conflicts. It is equivalent to selecting a [!UICONTROL Merge method] when defining a merge policy in the Platform UI.
+**Attribute merge**: When defining a merge policy using the Real-Time Customer Profile API, the `attributeMerge` object indicates the manner by which the merge policy will prioritize profile attributes in the case of data conflicts. It is equivalent to selecting a [!UICONTROL Merge method] when defining a merge policy in the Platform UI.
 
 **Attribution AI**: [!DNL Attribution AI] is an Intelligent Service powered by Adobe Sensei that delivers algorithmic multi-channel attribution capabilities across the entire customer lifecycle.
 
@@ -84,6 +85,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **[!DNL Catalog Service]**: [!DNL Catalog Service] (sometimes called [!DNL Catalog]) is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the data lake as files and directories, [!DNL Catalog] holds the metadata and description of those files and directories for lookup, monitoring, and data-governance purposes.
 
+**CCPA**: The [[!DNL California Consumer Privacy Act (CCPA)]](https://oag.ca.gov/privacy/ccpa) enhances privacy rights and consumer protection for residents of California, United States. The CCPA provides new data privacy rights to California residents, including the right to access and delete their personal data, to know whether their personal data is sold or disclosed (and to whom), and the right to opt out of having their data sold to third parties.
+
 **Class**: In Experience Data Model (XDM), a class defines the smallest set of fields used to build a schema and defines the base behavior of the business object that the schema represents.
 
 **Client**: A client is an external tool or application which connects to [!DNL Query Service] via [!DNL PostgreSQL] protocol or HTTP API.
@@ -101,6 +104,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 **Console**: In [!DNL Query Service], the console provides information on the status and operation of a query. The console displays the connection status to [!DNL Query Service], query operations being executed, and any error messages that result from those queries.
 
 **Contract ("C") labels**: Contract ("C") data usage labels are used to categorize data that has contractual obligations or is related to your organization's data governance policies.
+
+**CPRA**: The [[!DNL California Consumer Privacy Rights Act (CPRA)]](https://cppa.ca.gov/regulations/consumer_privacy_act.html) expands and amends portions of the [!DNL California Consumer Privacy Act (CCPA)]. The [!DNL CPRA] establishes a new baseline for consumer data privacy in California by increasing consumer rights and expanding the type of data covered through a broader definition of sensitive personal information. In addition, the [!DNL CPRA] established the California Privacy Protection Agency, a new agency dedicated to implementing and enforcing data privacy rules.
 
 **C1 contract label**: A `C1` contract data usage label specifies data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
 
@@ -256,6 +261,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 ## H
 
+**HIPAA**: The [[!DNL Health Insurance Portability and Accountability Act (HIPAA)]](https://www.hhs.gov/hipaa/index.html) is a United States federal law created to improve healthcare efficiency, improve health insurance portability, and to protect the privacy of patients and health plan members. Under HIPAA, individuals have the right to access and amend their information and obtain copies of their medical records or health information. Covered entities and business associates of covered entities must follow the HIPAA regulations.
+
 **Host**: In the context of tags, a host specifies the location, domain, and user credentials necessary for the system to deliver a build.
 
 **Hourly**: In the context of scheduled file exports, schedules incremental file exports every 3, 6, 8, or 12 hours.
@@ -264,7 +271,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Identity**: An identity is an identifier that uniquely represents an individual customer, such as a cookie ID, device ID, or email ID.
 
-**Identity fields**: Identity fields are XDM fields that are used to stitch together information about individual customers coming from multiple data sources. A single primary identity must be defined in order for the schema to be enabled for use in Real-time Customer Profile.
+**Identity fields**: Identity fields are XDM fields that are used to stitch together information about individual customers coming from multiple data sources. A single primary identity must be defined in order for the schema to be enabled for use in Real-Time Customer Profile.
 
 **Identity ("I") labels**: Identity ("I") data usage labels are used to categorize data that can identify or contact a specific person.
 
@@ -272,7 +279,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Identity namespace**: An identity namespace defines the context of an identifier such as an email address or CRM ID.
 
-**Identity Service**: [!DNL Experience Platform Identity Service] enables the creation and management of identity types, allowing you to link of customer identities across devices and channels. The service's ability to link identities together allows Real-time Customer Profile to provide a complete representation of each individual customer.
+**Identity Service**: [!DNL Experience Platform Identity Service] enables the creation and management of identity types, allowing you to link of customer identities across devices and channels. The service's ability to link identities together allows Real-Time Customer Profile to provide a complete representation of each individual customer.
 
 **Identity stitching**: Identity stitching is the process of identifying data fragments and stitching them together to form a complete profile record.
 
@@ -310,6 +317,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 ## L
 
+**LGPD**: The [[!DNL Lei Geral de Proteção de Dados (LGPD)]](https://gdpr.eu/gdpr-vs-lgpd/) aims to regulate the treatment of personal data of all individuals or natural persons in Brazil. The LGPD gives Brazil citizens the rights to access and delete their personal data, to know whether their personal data is sold or disclosed (and to whom), and the right to opt out of having their data sold to third parties.
+
 **Library**: In the context of tags, a library is a set of business logic that contains instructions for how the tag library should behave on the client device.
 
 **Lookup entities**: In the context of data modeling, lookup entities represent concepts that can relate to an individual person, but cannot be directly used to identify the individual. Entities that fall under this category should be represented by schemas based on custom Experience Data Model (XDM) classes.
@@ -326,7 +335,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Marketing action**: In the data governance framework, a marketing action (also known as a marketing use case) is an action that an Experience Platform data consumer takes, for which there is a need to check for violations of data usage policies.
 
-**Merge method**: When defining a merge policy using the Platform UI, the merge method specifies how data fragments should be prioritized when a conflict occurs. When using the Real-time Customer Profile API to define a merge policy, the merge method is determined using the `attributeMerge` object.
+**Merge method**: When defining a merge policy using the Platform UI, the merge method specifies how data fragments should be prioritized when a conflict occurs. When using the Real-Time Customer Profile API to define a merge policy, the merge method is determined using the `attributeMerge` object.
 
 **Merge policy**: Merge policies are rules that Experience Platform uses to determine how customer data fragments from multiple sources will be combined to create an individual profile. When a data conflict occurs, the merge policy determines which data should be prioritized for inclusion in the profile.
 
@@ -335,6 +344,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 **Module**: In the context of tags, a module is a snippet of executable JavaScript provided by an extension, which performs actions in a client environment without needing to create a rule.
 
 ## N
+
+**[!DNL New Zealand Privacy Act]**: The [[!DNL New Zealand Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) controls how agencies can collect, use, disclose, store, and give access to the personal information of New Zealand citizens and organizations. In 2020, the latest version of the act introduced significant updates to these privacy laws, including new offenses, increasing fines, mandatory notifications for data breaches, and increasing the powers of the Privacy Commissioner.
 
 **Non-production sandbox**: Non-production sandboxes are sandboxes that are typically used for development experiments, testing, or trials. Unlike production sandboxes, non-production sandboxes can be reset and deleted.
 
@@ -362,6 +373,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Parquet files**: A Parquet file is a columnar storage file format with complex nested data structures. Parquet files are required for adding data to populate a schema dataset.
 
+**PDPA**: The [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) was introduced to safeguard Thai data owners from the illegal collection, use, or disclosure of their personal data. Inspired by the European Union's GDPR, the regulation grants Thai citizens the right to request access to, or the deletion of, their stored personal data.
+
 **Personalized offers**: A personalized offer is a customizable marketing message based on eligibility rules and constraints.
 
 **Placements**: A placement is the location and or context in which an offer appears for an end-user.
@@ -382,13 +395,13 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Production sandbox**: A production sandbox is a sandbox intended for use in your production environment. Unlike non-production sandboxes, production sandboxes cannot be reset or deleted.
 
-**Profile**: Not to be confused with Real-time Customer Profile as a service, a profile is a complete representation of an individual customer, constructed from merged record and time-series data from multiple sources.
+**Profile**: Not to be confused with Real-Time Customer Profile as a service, a profile is a complete representation of an individual customer, constructed from merged record and time-series data from multiple sources.
 
-**Profile access**: The `/entities` endpoint in the Real-time Customer Profile API allows you to access record data and time-series events in the Profile data store. See also: Profile entities
+**Profile access**: The `/entities` endpoint in the Real-Time Customer Profile API allows you to access record data and time-series events in the Profile data store. See also: Profile entities
 
 **Profile data**: Profile data refers to any data that is located within the Profile data store.
 
-**Profile data store**: The Profile data store (sometimes called the Profile store) is a data storage system separate from the data lake, used by Real-time Customer Profile to create and store profiles. 
+**Profile data store**: The Profile data store (sometimes called the Profile store) is a data storage system separate from the data lake, used by Real-Time Customer Profile to create and store profiles. 
 
 **Profile entities**: Profile entities represent attributes relating to an individual person, typically a customer. Entities that fall under this category should be represented by schemas based on the [!DNL XDM Individual Profile] class. See also: Profile access
 
@@ -410,7 +423,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Real-Time Customer Data Platform**: Adobe Real-Time Customer Data Platform (Real-Time CDP) brings together known and unknown customer data to create trusted customer profiles with simplified integration, intelligent segmentation, and real-time activation across the digital customer journey.
 
-**Real-time Customer Profile**: Real-time Customer Profile (sometimes called Profile) provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. Profile allows you to consolidate your customer data into individual profiles offering actionable, timestamped accounts of every customer interaction.
+**Real-Time Customer Profile**: Real-Time Customer Profile (sometimes called Profile) provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. Profile allows you to consolidate your customer data into individual profiles offering actionable, timestamped accounts of every customer interaction.
 
 **Recipe**: A recipe is Adobe's term for a model specification and is a top-level container representing specific machine-learning processes, AI algorithms, processing logic, and configuration parameters required to build and execute a trained model and hence help solve specific business problems.
 
@@ -502,9 +515,9 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Streaming ingestion**: Streaming ingestion allows you to send data from client- and server-side devices to Experience Platform in real time.
 
-**Streaming segmentation**: Streaming segmentation is an ongoing data selection process that updates segments in response to user activity. Once a segment has been built and saved, the segment definition is applied against incoming data to [!DNL Real-time Customer Profile]. Segment additions and removals are processed regularly, ensuring your target audience remains relevant.
+**Streaming segmentation**: Streaming segmentation is an ongoing data selection process that updates segments in response to user activity. Once a segment has been built and saved, the segment definition is applied against incoming data to [!DNL Real-Time Customer Profile]. Segment additions and removals are processed regularly, ensuring your target audience remains relevant.
 
-**System View**: System View is a visual representation of source datasets that flow through [!DNL Real-time Customer Profile] to destinations. 
+**System View**: System View is a visual representation of source datasets that flow through [!DNL Real-Time Customer Profile] to destinations. 
 
 ## T
 
@@ -520,9 +533,11 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 ## U
 
-**Union schema**: A union schema is a consolidation of schemas that share the same class and have been enabled for [!DNL Real-time Customer Profile]. Multiple union schemas can exist for an organization, but there can only be one union schema per class.
+**Union schema**: A union schema is a consolidation of schemas that share the same class and have been enabled for [!DNL Real-Time Customer Profile]. Multiple union schemas can exist for an organization, but there can only be one union schema per class.
 
 ## V
+
+**VCDPA**: The [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) provides new data privacy rights to Virginia residents ("Consumers") including the right to access, delete, and correct personal data. Consumers also have the right to opt out of the sale of personal data, opt out of profiling based on personal data, and processing of personal advertising purposes.
 
 ## W
 

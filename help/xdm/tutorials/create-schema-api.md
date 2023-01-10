@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
 title: Create a Schema Using the Schema Registry API
-topic-legacy: tutorial
 type: Tutorial
 description: This tutorial uses the Schema Registry API to walk you through the steps to compose a schema using a standard class.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
@@ -19,7 +18,7 @@ This guide requires a working understanding of the following components of Adobe
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     * [Basics of schema composition](../schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Schema Registry] API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
@@ -949,7 +948,7 @@ Performing a GET request to lookup the schema now shows the reference to the dat
 
 ### Define an identity descriptor
 
-Schemas are used for ingesting data into [!DNL Experience Platform]. This data is ultimately used across multiple services to create a single, unified view of an individual. To help with this process, key fields can be marked as "Identity" and, upon data ingestion, the data in those fields is inserted into the "Identity Graph" for that individual. The graph data can then be accessed by [[!DNL Real-time Customer Profile]](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched together view of each individual customer.
+Schemas are used for ingesting data into [!DNL Experience Platform]. This data is ultimately used across multiple services to create a single, unified view of an individual. To help with this process, key fields can be marked as "Identity" and, upon data ingestion, the data in those fields is inserted into the "Identity Graph" for that individual. The graph data can then be accessed by [[!DNL Real-Time Customer Profile]](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched together view of each individual customer.
 
 Fields that are commonly marked as "Identity" include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID, or other unique ID fields. 
 
@@ -1010,9 +1009,9 @@ A successful response returns HTTP Status 201 (Created) with a response body con
 }
 ```
 
-## Enable schema for use in [!DNL Real-time Customer Profile] {#profile}
+## Enable schema for use in [!DNL Real-Time Customer Profile] {#profile}
 
-By adding the "union" tag to the `meta:immutableTags` attribute, you can enable the Loyalty Members schema for use by [!DNL Real-time Customer Profile]. 
+By adding the "union" tag to the `meta:immutableTags` attribute, you can enable the Loyalty Members schema for use by [!DNL Real-Time Customer Profile]. 
 
 For more information on working with union views, see the section on [unions](../api/unions.md) in the [!DNL Schema Registry] developer guide. 
 
