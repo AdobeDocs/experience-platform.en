@@ -124,10 +124,10 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
-        "sql": "SELECT account_balance FROM user_data WHERE $user_id;",
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
         "name": "Sample query template",
         "queryParameters": {
-            $user_id : {USER_ID}
+            user_id : {USER_ID}
             }
     }'
 ```
@@ -144,7 +144,7 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 
 ```json
 {
-    "sql": "SELECT account_balance FROM user_data WHERE $user_id;",
+    "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
     "name": "Sample query template",
     "id": "0094d000-9062-4e6a-8fdb-05606805f08f",
     "updated": "2020-01-09T00:20:09.670Z",
