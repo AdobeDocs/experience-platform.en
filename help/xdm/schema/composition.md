@@ -52,7 +52,7 @@ Both record and time series schemas contain a map of identities (`xdm:identityMa
 
 Schemas are used for ingesting data into [!DNL Experience Platform]. This data can be used across multiple services to create a single, unified view of an individual entity. Therefore, it is important when thinking about schemas to think about customer identities and which fields can be used to identify a subject regardless of where the data may be coming from. 
 
-To help with this process, key fields within your schemas can be marked as identities. Upon data ingestion, the data in those fields is inserted into the "[!UICONTROL Identity Graph]" for that individual. The graph data can then be accessed by [[!DNL Real-time Customer Profile]](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
+To help with this process, key fields within your schemas can be marked as identities. Upon data ingestion, the data in those fields is inserted into the "[!UICONTROL Identity Graph]" for that individual. The graph data can then be accessed by [[!DNL Real-Time Customer Profile]](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
 
 Fields that are commonly marked as "[!UICONTROL Identity]" include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID, or other unique ID fields. You should also consider any unique identifiers specific to your organization, as they may be good "[!UICONTROL Identity]" fields as well.
 
@@ -108,7 +108,7 @@ As the example above shows, each key in the `identityMap` object represents an i
 
 >[!NOTE]
 >
->A boolean value for whether the value is a primary identity (`primary`) can also be provided for each identity value. Primary identities only need to be set for schemas intended to be used in [!DNL Real-time Customer Profile]. See the section on [union schemas](#union) for more information.
+>A boolean value for whether the value is a primary identity (`primary`) can also be provided for each identity value. Primary identities only need to be set for schemas intended to be used in [!DNL Real-Time Customer Profile]. See the section on [union schemas](#union) for more information.
 
 ### Schema evolution principles {#evolution}
 
@@ -118,7 +118,7 @@ Since maintaining backwards compatibility is crucial for schema evolution, [!DNL
 
 >[!NOTE]
 >
->If a schema has not yet been used to ingest data into [!DNL Experience Platform] and hasn't been enabled for use in Real-time Customer Profile, you may introduce a breaking change to that schema. However, once the schema has been used in [!DNL Platform], it must adhere to the additive versioning policy.
+>If a schema has not yet been used to ingest data into [!DNL Experience Platform] and hasn't been enabled for use in Real-Time Customer Profile, you may introduce a breaking change to that schema. However, once the schema has been used in [!DNL Platform], it must adhere to the additive versioning policy.
 
 The following table breaks down which changes are supported when editing schemas, field groups, and data types:
 
@@ -130,7 +130,7 @@ The following table breaks down which changes are supported when editing schemas
 
 ### Required fields
 
-Individual schema fields can be [marked as required](../ui/fields/required.md), which means that any ingested records must contain data in those fields in order to pass validation. For example, setting a schema's primary identity field as required can help ensure that all ingested records will participate in Real-time Customer Profile, while setting a timestamp field as required ensures that all time-series events are chronologically preserved.
+Individual schema fields can be [marked as required](../ui/fields/required.md), which means that any ingested records must contain data in those fields in order to pass validation. For example, setting a schema's primary identity field as required can help ensure that all ingested records will participate in Real-Time Customer Profile, while setting a timestamp field as required ensures that all time-series events are chronologically preserved.
 
 >[!IMPORTANT]
 >
@@ -143,7 +143,7 @@ If a field has been used to ingest data and was not originally set as required, 
 When setting a previously optional field as required, keep the following in mind:
 
 1. If you query historical data and write the results into a new dataset, some rows will fail because they contain null values for the required field.
-1. If the field participates in [Real-time Customer Profile](../../profile/home.md) and you export data before setting it as required, it may be null for some profiles.
+1. If the field participates in [Real-Time Customer Profile](../../profile/home.md) and you export data before setting it as required, it may be null for some profiles.
 1. You can use the Schema Registry API to view a timestamped changelog for all XDM resources in Platform, including new required fields. See the guide on the [audit log endpoint](../api/audit-log.md) for more information.
 
 ### Schemas and data ingestion
@@ -247,7 +247,7 @@ The valid ranges of these scalar types can be further constrained to certain pat
 
 >[!NOTE]
 >
->The "map" field type allows for key-value pair data, including multiple values for a single key. Maps can be found in standard XDM classes and field groups, but you can also define custom maps using the Schema Registry API. See the tutorial on [defining custom fields](../tutorials/custom-fields-api.md#maps) for more information.
+>The "map" field type allows for key-value pair data, including multiple values for a single key. Maps can be found in standard XDM classes and field groups, but you can also define custom maps using the Schema Registry API. See the tutorial on [defining custom fields](../tutorials/custom-fields-api.md#custom-maps) for more information.
 
 ## Composition example
 
@@ -267,9 +267,9 @@ While [!DNL Experience Platform] allows you to compose schemas for particular us
 
 ![](../images/schema-composition/union.png)
 
-By enabling a schema for use with [!DNL Real-time Customer Profile], it will be included in the union for that class type. [!DNL Profile] delivers robust, centralized profiles of customer attributes as well as a timestamped account of every event that customer has had across any system integrated with [!DNL Platform]. [!DNL Profile] uses the union view to represent this data and provide a holistic view of each individual customer.
+By enabling a schema for use with [!DNL Real-Time Customer Profile], it will be included in the union for that class type. [!DNL Profile] delivers robust, centralized profiles of customer attributes as well as a timestamped account of every event that customer has had across any system integrated with [!DNL Platform]. [!DNL Profile] uses the union view to represent this data and provide a holistic view of each individual customer.
 
-For more information on working with [!DNL Profile], see the [Real-time Customer Profile overview](../../profile/home.md).
+For more information on working with [!DNL Profile], see the [Real-Time Customer Profile overview](../../profile/home.md).
 
 ## Mapping datafiles to XDM schemas
 

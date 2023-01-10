@@ -16,7 +16,7 @@ This tutorial requires a working understanding of the following Platform compone
   * [Basics of schema composition](../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [Identity Service](../../identity-service/home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sources](../../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 
 ## Dataflow detail
@@ -73,7 +73,7 @@ The **[!UICONTROL mapping]** interface provides you with a comprehensive tool to
 
 ![map-csv-to-xdm](../images/ui/mapping/map-csv-to-xdm.png)
 
-### Understanding the mapping interface
+### Understanding the mapping interface {#mapping-interface}
 
 The mapping interface includes a dashboard that provides information on the health of your mapping fields within the context of the ingestion workflow. The dashboard displays the following details regarding your mapping fields:
 

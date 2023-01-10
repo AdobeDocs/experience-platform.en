@@ -30,7 +30,17 @@ Once a sandbox is selected, the screen refreshes and updates to the sandbox you 
 
 ![sandbox-switched](../images/ui/sandbox-switched.png)
 
-## Create a new sandbox
+## Create a new sandbox {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxname"
+>title="Sandbox Name"
+>abstract="The sandbox name is the text that is used on the back end to create a unique ID for this sandbox."
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtitle"
+>title="Sandbox Title"
+>abstract="The sandbox title is the display name that will represent the sandbox in menus and dropdowns throughout the Experience Platform UI."
 
 >[!NOTE]
 >

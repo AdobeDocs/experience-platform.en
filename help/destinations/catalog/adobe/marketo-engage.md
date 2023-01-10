@@ -13,7 +13,7 @@ exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 >* If you are already activating data to the **[!UICONTROL Marketo V1]** destination: Please create new dataflows to the **[!UICONTROL Marketo V2]** destination and delete existing dataflows to the **[!UICONTROL Marketo V1]** destination by February 2023. As of that date, the **[!UICONTROL Marketo V1]** destination card will be removed.
 >* If you have not yet created any dataflows to the **[!UICONTROL Marketo V1]** destination, please use the new **[!UICONTROL Marketo V2]** card to connect to and export data to Marketo.
 
-![Image of the two Marketo destination cards in a side-by-side view.](/help/destinations/assets/catalog/adobe/marketo-side-by-side-view.png)
+![Image of the two Marketo destination cards in a side-by-side view.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
 Improvements in the Marketo V2 destination include:
 
@@ -36,7 +36,7 @@ The destination enables marketers to push segments created in Adobe Experience P
 
 |Target Identity|Description|
 |---|---|
-|ECID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: “Adobe Marketing Cloud ID”, “Adobe Experience Cloud ID”, “Adobe Experience Platform ID”. See the following document on [ECID](/help/identity-service/ecid.md) for more information.|
+|ECID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the following document on [ECID](/help/identity-service/ecid.md) for more information.|
 |Email|A namespace that represents an email address. This type of namespace is often associated to a single person and therefore can be used to identify that person across different channels.|
 
 {style="table-layout:auto"}
@@ -67,9 +67,14 @@ For detailed instructions on how to set up the destination and activate segments
 
 The video below also demonstrates the steps to configure a Marketo destination and activate segments.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, please refer to the guide linked above.
+>The video does not entirely reflect current capability. For the most up-to-date information, please refer to the guide linked above. The following parts of the video are outdated:
+> 
+>* The destination card that you should use in the Experience Platform UI is **[!UICONTROL Marketo V2]**.
+>* The video does not show the new **[!UICONTROL Person creation]** selector field in the connect to destination workflow.
+>* The two limitations called out in the video do not apply anymore. You can now map many other profile attribute fields in addition to the segment membership information that was supported at the time the video was recorded. You can also export segment members to Marketo who do not yet exist in your Marketo static lists, and these will be added to the lists.
+>* In the **[!UICONTROL Schedule segment step]** of the activation workflow, in Marketo V1, you needed to manually add a **[!UICONTROL Mapping ID]** to successfully export data to Marketo. This manual step is not required anymore in Marketo V2.
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 

@@ -104,23 +104,23 @@ For more information on Catalog, see the [Catalog Service overview](../catalog/h
 
 Adobe Experience Platform Query Service allows you to use standard SQL to query Experience Platform data to support many different use cases. 
 
-After a schema has been composed and a dataset has been created which references that schema, data is then ingested and stored in the Data Lake. Using Query Service, you can join any datasets in the Data Lake and capture the query results as a new dataset for use in reporting, machine learning, or for ingestion into Real-time Customer Profile. 
+After a schema has been composed and a dataset has been created which references that schema, data is then ingested and stored in the Data Lake. Using Query Service, you can join any datasets in the Data Lake and capture the query results as a new dataset for use in reporting, machine learning, or for ingestion into Real-Time Customer Profile. 
 
 Refer to the [Query Service overview](../query-service/home.md) for more information on the service.
 
-### Real-time Customer Profile
+### Real-Time Customer Profile
 
-Real-time Customer Profile provides a centralized consumer profile for targeted and personalized experience management. Each profile contains data that is aggregated across all systems, as well as actionable timestamped accounts of events involving the individual that have taken place in any of the systems you use with Experience Platform.
+Real-Time Customer Profile provides a centralized consumer profile for targeted and personalized experience management. Each profile contains data that is aggregated across all systems, as well as actionable timestamped accounts of events involving the individual that have taken place in any of the systems you use with Experience Platform.
 
-Real-time Customer Profile consumes schema-formatted data based on the [!UICONTROL XDM Individual Profile] and [!UICONTROL XDM ExperienceEvent] classes, and responds to queries based on that data. Profile does not support the use of schemas based on other classes.
+Real-Time Customer Profile consumes schema-formatted data based on the [!UICONTROL XDM Individual Profile] and [!UICONTROL XDM ExperienceEvent] classes, and responds to queries based on that data. Profile does not support the use of schemas based on other classes.
 
-The system maintains an instance of each customer profile, merging data together to form a "single source of truth" for the individual. This unified data is represented using what is known as a "union schema" (sometimes referred to as a "union view"). A union schema aggregates the fields of all schemas that implement the same class into a single schema.  When composing a schema using the UI or API, you can enable the schema for use with Real-time Customer Profile and tag it for inclusion in the union. The tagged schema will then participate in the schema definition being fed to Profile.
+The system maintains an instance of each customer profile, merging data together to form a "single source of truth" for the individual. This unified data is represented using what is known as a "union schema" (sometimes referred to as a "union view"). A union schema aggregates the fields of all schemas that implement the same class into a single schema.  When composing a schema using the UI or API, you can enable the schema for use with Real-Time Customer Profile and tag it for inclusion in the union. The tagged schema will then participate in the schema definition being fed to Profile.
 
-As [!UICONTROL XDM Individual Profile] and [!UICONTROL XDM ExperienceEvent] data is ingested into the Data Lake, Real-time Customer Profile ingests any data that has been enabled for its use. The more interactions and details that are ingested, the more robust individual profiles become.
+As [!UICONTROL XDM Individual Profile] and [!UICONTROL XDM ExperienceEvent] data is ingested into the Data Lake, Real-Time Customer Profile ingests any data that has been enabled for its use. The more interactions and details that are ingested, the more robust individual profiles become.
 
-[!UICONTROL XDM Individual Profile] data helps inform and empower actions across any channel or Adobe product integration. When paired with a rich history of behavioral and interaction data, this data can be used to power machine learning. The Real-time Customer Profile API can also be used to enrich the functionality of third-party solutions, CRMs, and proprietary solutions.
+[!UICONTROL XDM Individual Profile] data helps inform and empower actions across any channel or Adobe product integration. When paired with a rich history of behavioral and interaction data, this data can be used to power machine learning. The Real-Time Customer Profile API can also be used to enrich the functionality of third-party solutions, CRMs, and proprietary solutions.
 
-See the [Real-time Customer Profile overview](../profile/home.md) for more information.
+See the [Real-Time Customer Profile overview](../profile/home.md) for more information.
 
 ### Data Science Workspace
 

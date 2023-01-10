@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform Overview
 breadcrumb-title: Experience Platform overview
-user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real time.
+user-guide-description: Learn how Experience Platform can deliver personalized experiences to your customers in real time.
 ---
 
 # Adobe Experience Platform overview {#landing}
@@ -34,7 +34,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Language support](documentation/language-support.md)
 * Application services built on Platform {#ecosystem}
   * [Overview](application-services.md)
-  * [Real-time Customer Data Platform (all editions)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
+  * [Adobe Real-Time Customer Data Platform (all editions)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
   * [Application and Intelligent Services (Video)](video/application-intelligent-services.md)
   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
@@ -42,7 +42,6 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Platform integrations with Experience Cloud (Video)](video/experience-cloud-integrations.md)
 * Governance, privacy, and security {#governance-privacy-security}
   * [Overview](./governance-privacy-security/overview.md)
-  * [Privacy Console](./governance-privacy-security/privacy-console.md)
   * Consent management {#consent}
     * Adobe standard {#adobe}
       * [Overview](./governance-privacy-security/consent/adobe/overview.md)
@@ -53,7 +52,13 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
     * [Integrate the Platform Web SDK to process consent and preference data](./governance-privacy-security/consent/sdk.md) 
   * Audit logs {#audit-logs}
     * [Overview](./governance-privacy-security/audit-logs/overview.md)
+    * Audit Query API {#audit-api}
+      * [Overview](./governance-privacy-security/audit-logs/api/overview.md)
+      * [Getting started](./governance-privacy-security/audit-logs/api/getting-started.md)
+      * [Events](./governance-privacy-security/audit-logs/api/events.md)
+      * [Export](./governance-privacy-security/audit-logs/api/export.md)
   * [Data encryption](./governance-privacy-security/encryption.md)
+  * [Customer-managed keys](./governance-privacy-security/customer-managed-keys.md)
 * License usage and guardrails {#license}
   * [Data management license entitlement best practices](./license-usage-and-guardrails/data-management-best-practices.md)    
   * [License usage dashboard](./license-usage-and-guardrails/license-usage-dashboard.md)

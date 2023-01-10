@@ -26,8 +26,8 @@ Edge segmentation is the ability to evaluate segments in Adobe Experience Platfo
 
 This developer guide requires a working understanding of the various [!DNL Adobe Experience Platform] services involved with edge segmentation. Before beginning this tutorial, please review the documentation for the following services:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
-- [[!DNL Segmentation]](../home.md): Provides the ability to create segments and audiences from your [!DNL Real-time Customer Profile] data.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
+- [[!DNL Segmentation]](../home.md): Provides the ability to create segments and audiences from your [!DNL Real-Time Customer Profile] data.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 In order to successfully make calls to any Experience Platform API endpoints, please read the guide on [getting started with Platform APIs](../../landing/api-guide.md) to learn about required headers and how to read sample API calls.
@@ -54,6 +54,11 @@ In order for a segment to be evaluated using edge segmentation, the query must c
 | Query that refers to a map | Any segment definition that refers to a map of properties. | People who have added to their cart based on external segment data. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
 Additionally, the segment **must** be tied to a merge policy that is active on edge. For more information about merge policies, please read the [merge policies guide](../../profile/api/merge-policies.md).
+
+A segment definition will **not** be enabled for edge segmentation in the following scenarios:
+
+- The segment definition includes a combination of a single event and an `inSegment` event.
+  - However, if the segment contained in the `inSegment` event is profile only, the segment definition **will** be enabled for edge segmentation.
 
 ## Retrieve all segments enabled for edge segmentation
 
@@ -253,3 +258,11 @@ A successful response returns the details of the newly created segment definitio
 Now that you know how to create edge-segmentation-enabled segments, you can use them to enable same-page and next-page personalization use cases. 
 
 To learn how to perform similar actions and work with segments using the Adobe Experience Platform user interface, please visit the [Segment Builder user guide](../ui/segment-builder.md).
+
+## Appendix
+
+The following section lists frequently asked questions regarding edge segmentation:
+
+### How long does it take for a segment to be available on the Edge Network?
+
+It takes up to one hour for a segment to be available on the Edge Network.

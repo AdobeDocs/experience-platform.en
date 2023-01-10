@@ -21,7 +21,7 @@ Adobe Experience Platform Data Ingestion represents the multiple methods by whic
 
 |Feature | Description|
 |------- | -----------|
-|Upsert or patch Profile records using Batch ingestion | Real-time Customer Profile now allows updates to profile attributes in individual profile record data via batch ingestion. To learn more, refer to the [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md).|
+|Upsert or patch Profile records using Batch ingestion | Real-Time Customer Profile now allows updates to profile attributes in individual profile record data via batch ingestion. To learn more, refer to the [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md).|
 
 To learn more about ingesting data into Platform, visit the [Data Ingestion documentation](../../ingestion/home.md).
 

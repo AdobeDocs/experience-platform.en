@@ -15,8 +15,8 @@ Using RESTful APIs or the user interface, you can create new merge policies, man
 
 This guide requires a working understanding of several important [!DNL Experience Platform] features. Before following this guide and working with merge policies, please review the documentation for the following services:
 
-* [Real-time Customer Profile](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Enables Real-time Customer Profile by bridging identities from disparate data sources being ingested into [!DNL Platform].
+* [Real-Time Customer Profile](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Enables Real-Time Customer Profile by bridging identities from disparate data sources being ingested into [!DNL Platform].
 * [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 ## Understanding merge policies

@@ -169,7 +169,7 @@ The second approach would be to use event schemas to represent subscriptions. Th
 **Cons**
 
 * Segmentation becomes more complex for the original intended use case (identifying the status of customers' most recent subscriptions). The segment now needs additional logic to flag the last subscription event for a customer in order to check its status.
-* Events have a higher risk of automatically expiring and being purged from the Profile store. See the guide on [Profile TTL](../../profile/apply-ttl.md) for more information.
+* Events have a higher risk of automatically expiring and being purged from the Profile store. See the guide on [Experience Event expirations](../../profile/event-expirations.md) for more information.
 
 ## Create schemas based on your categorized entities
 
@@ -199,7 +199,7 @@ If you are not sure whether a particular field is necessary to include in a sche
 
 ### Identity fields
 
-In Experience Platform, XDM fields marked as identities are used to stitch together information about individual customers coming from multiple data sources. Although a schema can have multiple fields marked as identities, a single primary identity must be defined in order for the schema to be enabled for use in [!DNL Real-time Customer Profile]. See the section on [identity fields](./composition.md#identity) in the basics of schema composition for more detailed information on the use case of these fields.
+In Experience Platform, XDM fields marked as identities are used to stitch together information about individual customers coming from multiple data sources. Although a schema can have multiple fields marked as identities, a single primary identity must be defined in order for the schema to be enabled for use in [!DNL Real-Time Customer Profile]. See the section on [identity fields](./composition.md#identity) in the basics of schema composition for more detailed information on the use case of these fields.
 
 When designing your schemas, any primary keys in your relational database tables will be likely candidates for primary identities. Other examples of applicable identity fields are customer email addresses, phone numbers, account IDs, and [ECID](../../identity-service/ecid.md).
 

@@ -24,8 +24,6 @@ To add a sub-field, select the **plus (+)** icon next to the object field in the
 
 Once you have configured the sub-field and selected **[!UICONTROL Apply]**, you can continue to add fields to the object using the same process. You can also add sub-fields that are objects themselves, allowing you to nest fields as deeply as you like.
 
-![](../../images/ui/fields/special/object-nested.png)
-
 Once you have finished constructing the object, you may find that you want to reuse its structure in different classes and field groups. In this case, you can choose to convert the object to a data type. See the section on [converting objects to data types](../resources/data-types.md#convert) in the data types UI guide for more information.
 
 ## Next steps

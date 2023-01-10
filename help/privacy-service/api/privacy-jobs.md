@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy Jobs API Endpoint
-topic-legacy: developer guide
 description: Learn how to manage privacy jobs for Experience Cloud applications using the Privacy Service API.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 ---
@@ -31,7 +30,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parameter | Description |
 | --- | --- |
-| `{REGULATION}` | The regulation type to query for. Accepted values include: <ul><li>`gdpr` (European Union)</li><li>`ccpa` (California)</li><li>`lgpd_bra` (Brazil)</li><li>`nzpa_nzl` (New Zealand)</li><li>`pdpa_tha` (Thailand)</li></ul> |
+| `{REGULATION}` | The regulation type to query for. Accepted values include: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>See the overview on [supported regulations](../regulations/overview.md) for more information on the privacy regulations that the above values represent. |
 | `{PAGE}` | The page of data to be displayed, using 0-based numbering. The default is `0`. |
 | `{SIZE}` | The number of results to display on each page. The default is `1` and the maximum is `100`. Exceeding the maximum causes the API to return a 400-code error. |
 
@@ -154,8 +153,8 @@ curl -X POST \
 | `expandIDs` | An optional property that, when set to `true`, represents an optimization for processing the IDs in the applications (currently only supported by [!DNL Analytics]). If omitted, this value defaults to `false`. |
 | `priority` | An optional property used by Adobe Analytics that sets the priority for processing requests. Accepted values are `normal` and `low`. If `priority` is omitted, the default behavior is `normal`. |
 | `analyticsDeleteMethod` | An optional property that specifies how Adobe Analytics should handle the personal data. Two possible values are accepted for this attribute: <ul><li>`anonymize`: All data referenced by the given collection of user IDs is made anonymous. If `analyticsDeleteMethod` is omitted, this is the default behavior.</li><li>`purge`: All data is removed completely.</li></ul> |
-| `mergePolicyId` | When making privacy requests for Real-time Customer Profile (`profileService`), you can optionally provide the ID of the specific [merge policy](../../profile/merge-policies/overview.md) that you want to use for ID stitching. By specifying a merge policy, privacy requests can include segment information when returning data on a customer. Only one merge policy can be specified per request. If no merge policy is provided, segmentation information is not included in the response. |
-| `regulation` **(Required)** | The regulation for the privacy job. The following values are accepted: <ul><li>`gdpr` (European Union)</li><li>`ccpa` (California)</li><li>`lgpd_bra` (Brazil)</li><li>`nzpa_nzl` (New Zealand)</li><li>`pdpa_tha` (Thailand)</li></ul> |
+| `mergePolicyId` | When making privacy requests for Real-Time Customer Profile (`profileService`), you can optionally provide the ID of the specific [merge policy](../../profile/merge-policies/overview.md) that you want to use for ID stitching. By specifying a merge policy, privacy requests can include segment information when returning data on a customer. Only one merge policy can be specified per request. If no merge policy is provided, segmentation information is not included in the response. |
+| `regulation` **(Required)** | The regulation for the privacy job. The following values are accepted: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>See the overview on [supported regulations](../regulations/overview.md) for more information on the privacy regulations that the above values represent. |
 
 {style="table-layout:auto"}
 

@@ -6,13 +6,13 @@ exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
 ---
 # Attribute-based access control overview
 
->[!IMPORTANT]
->
->Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
-
 Attribute-based access control is a capability of Adobe Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be metadata added to an object, such as a label added to a schema field or segment. An administrator defines access policies that include attributes to manage user access permissions.
 
 This functionality allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments.
+
+>[!IMPORTANT]
+>
+>Attribute-based access control is not to be confused with Experience Platform's data governance capabilities, which allow you to use labels and policies to control how data is used in Platform rather than which users in your organization have access to it. See the [data governance overview](../../data-governance/home.md) for more information.
 
 Through attribute-based access control, administrators of your organization can control users' access to sensitive personal data (SPD), personally identifiable information (PII) and customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
@@ -54,6 +54,18 @@ The following sections provide information on how attribute-based access control
 
 Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration. Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe Experience Cloud, instead of Product Profiles in the Adobe Admin Console, to manage permissions for users, functionality, labels, and other resources in your organization.
 
+There is limited availability to attribute-based access control for customers who purchase Healthcare and/or Privacy Shields. The features of this functionality include:
+
+* Permissions interface: Provides an interface for you to define user roles, permissions and policies for attribute-based access control.
+
+* Labeling: Add, edit, remove labels to user roles, schema fields, segments, and other supported objects in order to leverage access control policies. 
+
+The administration workflows for all Experience Platform-powered applications from Admin Console to the new Permissions interface are being switched.
+
+>[!IMPORTANT]
+>
+>Your product profiles are automatically migrated to the Permissions interface when your organization is enabled. The product profiles in Admin Console will remain as is for the time being. Please **do not** modify your product profiles after your organization has been enabled.
+
 For more information on access control, see the [access control overview](../home.md).
 
 ### Destinations {#destinations}
@@ -85,9 +97,9 @@ As part of attribute-based access control, the `view-identity-graph` permission 
 
 For more information on [!DNL Identity Service], refer to the [[!DNL Identity Service] overview](../../identity-service/home.md).
 
-### Real-time Customer Profile
+### Real-Time Customer Profile
 
-Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-Time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 
 As an administrator, you can use attribute-based access control functionalities to:
 

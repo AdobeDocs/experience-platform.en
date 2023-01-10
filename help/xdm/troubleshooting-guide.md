@@ -36,7 +36,7 @@ For more information, see the [resource identification](api/getting-started.md#r
 
 ### When does a schema start preventing breaking changes?
 
-Breaking changes can be made to a schema as long as it has never been used in the creation of a dataset or enabled for use in [[!DNL Real-time Customer Profile]](../profile/home.md). Once a schema has been used in dataset creation or enabled for use with [!DNL Real-time Customer Profile], the rules of [Schema Evolution](schema/composition.md#evolution) become strictly enforced by the system.
+Breaking changes can be made to a schema as long as it has never been used in the creation of a dataset or enabled for use in [[!DNL Real-Time Customer Profile]](../profile/home.md). Once a schema has been used in dataset creation or enabled for use with [!DNL Real-Time Customer Profile], the rules of [Schema Evolution](schema/composition.md#evolution) become strictly enforced by the system.
 
 ### What is the maximum size of a long field type?
 
@@ -66,24 +66,24 @@ For more details on managing identities in the UI, see the section on [defining 
 
 ### Does my schema need a primary identity?
 
-Primary identities are optional, since schemas may have either zero or one of them. However, a schema must have a primary identity in order for the schema to be enabled for use in [!DNL Real-time Customer Profile]. See the [identity](./tutorials/create-schema-ui.md#identity-field) section of the Schema Editor tutorial for more information. 
+Primary identities are optional, since schemas may have either zero or one of them. However, a schema must have a primary identity in order for the schema to be enabled for use in [!DNL Real-Time Customer Profile]. See the [identity](./tutorials/create-schema-ui.md#identity-field) section of the Schema Editor tutorial for more information. 
 
-### How do I enable a schema for use in [!DNL Real-time Customer Profile]?
+### How do I enable a schema for use in [!DNL Real-Time Customer Profile]?
 
-Schemas are enabled for use in [[!DNL Real-time Customer Profile]](../profile/home.md) through the addition of a "union" tag within the `meta:immutableTags` attribute of the schema. Enabling a schema for use with [!DNL Profile] can be done using the API or the user interface.
+Schemas are enabled for use in [[!DNL Real-Time Customer Profile]](../profile/home.md) through the addition of a "union" tag within the `meta:immutableTags` attribute of the schema. Enabling a schema for use with [!DNL Profile] can be done using the API or the user interface.
 
 #### Enabling an existing schema for [!DNL Profile] using the API
 
 Make a PATCH request to update the schema and add the `meta:immutableTags` attribute as an array containing the value "union". If the update is successful, the response will show the updated schema which now contains the union tag.
 
-For more information on using the API to enable a schema for use in [!DNL Real-time Customer Profile], see the [unions](./api/unions.md) document of the [!DNL Schema Registry] developer guide. 
+For more information on using the API to enable a schema for use in [!DNL Real-Time Customer Profile], see the [unions](./api/unions.md) document of the [!DNL Schema Registry] developer guide. 
 
 #### Enabling an existing schema for [!DNL Profile] using the UI
 
 In [!DNL Experience Platform], select **[!UICONTROL Schemas]** in the left-navigation, and select the name of the schema you wish to enable from the list of schemas. Then, on the right-hand side of the editor under **[!UICONTROL Schema Properties]**, select **[!UICONTROL Profile]** to toggle it on.
 
 
-For more information, see the section on [use in Real-time Customer Profile](./tutorials/create-schema-ui.md#profile) in the [!UICONTROL Schema Editor] tutorial.
+For more information, see the section on [use in Real-Time Customer Profile](./tutorials/create-schema-ui.md#profile) in the [!UICONTROL Schema Editor] tutorial.
 
 ### Can I edit a union schema directly?
 
@@ -221,9 +221,9 @@ Depending on the endpoint you are using, the `detailed-message` property indicat
 
 For lists of compatible Accept headers for different API requests, please refer to their corresponding sections in the [Schema Registry developer guide](./api/overview.md).
 
-### [!DNL Real-time Customer Profile] errors
+### [!DNL Real-Time Customer Profile] errors
 
-The following error messages are associated with operations involved in enabling schemas for [!DNL Real-time Customer Profile]. See the [unions](./api/unions.md) section in the [!DNL Schema Registry] API guide for more information.
+The following error messages are associated with operations involved in enabling schemas for [!DNL Real-Time Customer Profile]. See the [unions](./api/unions.md) section in the [!DNL Schema Registry] API guide for more information.
 
 #### There must be a reference identity descriptor
 

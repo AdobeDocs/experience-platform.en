@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Adobe Experience Platform;user guide;ui guide;workflows ui guide;workflows;workflows user guide;
 solution: Experience Platform
 title: Workflows UI guide
-topic-legacy: ui guide
 description: Learn how to follow multi-step workflows for performing common operations within the Adobe Experience Platform user interface.
 exl-id: f1a3ea83-09c9-48df-9493-62f03b403a95
 ---
@@ -14,7 +13,7 @@ The **[!UICONTROL Workflows]** section within the Adobe Experience Platform user
 
 ## [!UICONTROL Data ingestion]
 
-The **[!UICONTROL Map CSV to XDM schema]** workflow lets you upload and convert a CSV file to an Experience Data Model (XDM) schema. More information about this workflow can be found in the tutorial on [mapping a CSV file to an XDM schema](../ingestion/tutorials/map-a-csv-file.md).
+The **[!UICONTROL Map CSV to XDM schema]** workflow lets you upload and convert a CSV file to an Experience Data Model (XDM) schema. More information about this workflow can be found in the tutorial on [mapping a CSV file to an XDM schema](../ingestion/tutorials/map-csv/overview.md).
 
 The **[!UICONTROL Create dataset from schema]** workflow lets you create a new dataset from an existing XDM schema. More information about this workflow can be found in the [datasets user guide](../catalog/datasets/user-guide.md#schema).
 

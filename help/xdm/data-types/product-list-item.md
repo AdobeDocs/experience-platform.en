@@ -16,14 +16,18 @@ The values captured in this data type may differ from the product record. For ex
 
 | Property | Data type | Description |
 | --- | --- | --- |
+| `selectedOptions` | Array of objects | Contains custom options chosen for a configurable product. Each list item is an object with the following properties:<ul><li>`attribute`: A name for the configurable attribute.</li><li>`value`: The value of the attribute.</li></ul> |
 | `SKU` | [!UICONTROL String] | Stock keeping unit (SKU), the unique identifier for a product defined by the vendor. |
 | `_id` | [!UICONTROL String] | The line item identifier for this product entry. The product itself is identified through `product`. |
 | `currencyCode` | [!UICONTROL String] | The [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) alphabetic currency code used for pricing the product. |
+| `discountAmount` | [!UICONTROL Double] | If the product is discounted, this represents the difference between the regular price and the special price for the product. |
 | `name` | [!UICONTROL String] | The display name for the product as presented to the user for this product view. |
 | `priceTotal` | [!UICONTROL Double] | The total price for the product line item. |
 | `product` | [!UICONTROL String] (URI) | The URI `$id` of the XDM schema that captures the product itself. |
 | `productAddMethod` | [!UICONTROL String] | The method that was used to add a product item to the list by the visitor. |
+| `productImageUrl` | [!UICONTROL String] | A URL for the main image of the product. |
 | `quantity` | [!UICONTROL Integer] | The number of units the customer has indicated they require of the product. |
+| `unitOfMeasureCode` | [!UICONTROL String] | The standard [unit of measure code](https://ucum.org/ucum) for the product as related to the `quantity` property. |
 
 {style="table-layout:auto"}
 

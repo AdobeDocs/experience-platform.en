@@ -1,7 +1,7 @@
 ---
 audience: user
 user-guide-title: Destinations Guide
-user-guide-description: Activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+user-guide-description: Activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and more.
 description: This document lists the table of contents for Adobe Experience Platform destinations
 feature: Destinations
 ---
@@ -10,6 +10,7 @@ feature: Destinations
 
 * [Destinations overview](./home.md)
 * [Destination types and categories](./destination-types.md)
+* [Destinations (Activation) guardrails](./guardrails.md)
 * API tutorials {#api}
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
     * [Connect to batch cloud storage and email marketing destinations and activate data using the Flow Service API](./api/connect-activate-batch-destinations.md)
@@ -28,12 +29,14 @@ feature: Destinations
         * [Activate audience data to profile request destinations](./ui/activate-profile-request-destinations.md)
         * [Configure personalization destinations for same-page and next-page personalization](./ui/configure-personalization-destinations.md)
         * [(Beta) Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
+        * [(Beta) Export datasets using the Experience Platform UI](./ui/export-datasets.md)
     * [View destination details](./ui/destination-details-page.md)
     * [Update destination accounts](./ui/update-accounts.md)
     * [Delete destination accounts](./ui/delete-destination-account.md)
     * [Edit activation dataflows](./ui/edit-activation.md)
     * [Delete destinations](./ui/delete-destinations.md)
     * [Monitor dataflows](./ui/monitor-dataflows.md)
+    * [(Beta) Configure file formatting options for file-based destinations](./ui/batch-destinations-file-formatting-options.md)
     * [Subscribe to in-context destination alerts](ui/alerts.md)
 * Destinations catalog {#catalog}
     * [Destinations catalog overview](./catalog/overview.md)
@@ -95,11 +98,15 @@ feature: Destinations
         * [Amazon Kinesis connection](./catalog/cloud-storage/amazon-kinesis.md)
         * [Amazon S3 connection](./catalog/cloud-storage/amazon-s3.md)
         * [Azure Blob connection](./catalog/cloud-storage/azure-blob.md)
+        * [(Beta) Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
         * [Azure Event Hubs connection](./catalog/cloud-storage/azure-event-hubs.md)
+        * [(Beta) Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
+        * [(Beta) Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
         * [IP address allowlist for cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
     * Customer Relationship Management (CRM) destinations {#crm}
         * [Salesforce CRM connection](./catalog/crm/salesforce.md)
+        * [Microsoft Dynamics 365 connection](./catalog/crm/microsoft-dynamics-365.md)
         * [Outreach connection](catalog/crm/outreach.md)
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
@@ -125,8 +132,10 @@ feature: Destinations
         * [Airship Attributes connection](./catalog/mobile-engagement/airship-attributes.md)
         * [Airship Tags connection](./catalog/mobile-engagement/airship-tags.md)
         * [Braze connection](./catalog/mobile-engagement/braze.md)
+        * [Line connection](./catalog/mobile-engagement/line.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
+        * [(Beta) Adobe Commerce connection](./catalog/personalization/adobe-commerce.md)
         * [Adobe Target connection](./catalog/personalization/adobe-target-connection.md)
         * [Adobe Target extension](./catalog/personalization/adobe-target.md)
         * [Adobe Target v2 extension](./catalog/personalization/adobe-target-v2.md)

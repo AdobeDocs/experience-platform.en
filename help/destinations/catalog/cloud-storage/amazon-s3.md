@@ -6,9 +6,26 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 ---
 # [!DNL Amazon S3] connection {#s3-connection}
 
+## Destination changelog {#changelog}
+
+>[!IMPORTANT]
+>
+>With the beta release of the export datasets functionality and the improved file export functionality, you may now be seeing two [!DNL Amazon S3] cards in the destinations catalog.
+>* If you are already exporting files to the **[!UICONTROL Amazon S3]** destination, please create new dataflows to the new **[!UICONTROL Amazon S3 beta]** destination.
+>* If you have not yet created any dataflows to the **[!UICONTROL Amazon S3]** destination, please use the new **[!UICONTROL Amazon S3 beta]** card to export files to **[!UICONTROL Amazon S3]**.
+
+![Image of the two Amazon S3 destination cards in a side-by-side view.](../../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+
+Improvements in the new [!DNL Amazon S3] destination card include:
+
+* [Dataset export support](/help/destinations/ui/export-datasets.md).
+* Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+* Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+
 ## Overview {#overview}
 
-Create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export CSV data files from Adobe Experience Platform into your own S3 buckets.
+Create a live outbound connection to your [!DNL Amazon S3] storage to periodically export data files from Adobe Experience Platform into your own S3 buckets.
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -36,15 +53,14 @@ To connect to this destination, follow the steps described in the [destination c
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"
 >title="RSA public key"
->abstract="Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64-encoded] string. View an example of a correctly formatted key in the documentation link below."
+>abstract="Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted key in the documentation link below."
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
 * **[!DNL Amazon S3] access key** and **[!DNL Amazon S3] secret key**: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon S3] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64-encoded] string.
-  * Example: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. See below an example of a correctly formatted PGP key, with the middle part shortened for brevity.
+* **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
-    ![PGP key](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+    ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Fill in destination details {#destination-details}
 
@@ -65,6 +81,9 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Description]**: enter a description of this destination.
 * **[!UICONTROL Bucket name]**: enter the name of the [!DNL Amazon S3] bucket to be used by this destination.
 * **[!UICONTROL Folder path]**: enter the path to the destination folder that will host the exported files.
+* **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL Amazon S3 beta]** destination. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL Amazon S3 beta]** destination.
+
 
 >[!TIP]
 >
@@ -105,6 +124,10 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
 
+## (Beta) Export datasets {#export-datasets}
+
+This destination supports dataset exports. For complete information on how to set up dataset exports, read the [export datasets tutorial](/help/destinations/ui/export-datasets.md).
+
 ## Exported data {#exported-data}
 
-For [!DNL Amazon S3] destinations, [!DNL Platform] creates a `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
+For [!DNL Amazon S3] destinations, [!DNL Platform] creates a data file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.

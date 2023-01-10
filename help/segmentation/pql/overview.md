@@ -8,7 +8,7 @@ exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
 ---
 # [!DNL Profile Query Language] (PQL) overview
 
-[!DNL Profile Query Language] (PQL) is an [!DNL Experience Data Model] (XDM) compliant query language which is designed to support the definition and execution of segmentation queries for [!DNL Real-time Customer Profile] data.
+[!DNL Profile Query Language] (PQL) is an [!DNL Experience Data Model] (XDM) compliant query language which is designed to support the definition and execution of segmentation queries for [!DNL Real-Time Customer Profile] data.
 
 This guide provides a general overview of PQL, covering formatting guidelines and providing example PQL expressions.
 

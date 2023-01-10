@@ -422,7 +422,7 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect Parquet data from your third-party cloud storage system on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect Parquet data from your third-party cloud storage system on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
-- [Real-time Customer Profile overview](../../../profile/home.md)
+- [Real-Time Customer Profile overview](../../../profile/home.md)
 - [Data Science Workspace overview](../../../data-science-workspace/home.md)

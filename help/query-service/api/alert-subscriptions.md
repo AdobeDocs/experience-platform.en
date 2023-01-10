@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;alert;
 title: Alert Subscriptions API Endpoint
 description: This guide provides sample HTTP requests and responses for the various API calls you can make to the alert subscriptions endpoint with the Query Service API.
+exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
 ---
 # Alert Subscriptions API Endpoint
 
@@ -295,7 +296,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **Response**
 
-A successful response returns an HTML status of 200 and all the alerts that are subscribed to. This includes the alert ID, type of alert, subscriber's Adobe registered email IDs, and their preferred notification channel. 
+A successful response returns an HTTP status of 200 and all the alerts that are subscribed to. This includes the alert ID, type of alert, subscriber's Adobe registered email IDs, and their preferred notification channel. 
 
 ```json
 {

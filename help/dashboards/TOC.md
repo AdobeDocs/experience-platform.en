@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform Dashboards Help
 breadcrumb-title: Dashboards Guide
-user-guide-description: Visualize Experience Platform data on customizable dashboards.
+user-guide-description: Learn how to visualize data in Experience Platform through customizable dashboards.
 feature: Dashboards
 ---
 
@@ -29,5 +29,5 @@ feature: Dashboards
 * Application integrations {#integrations}
   * [Power BI](integrations/power-bi.md)
 * [Query dashboard datasets](query.md)
-* [Customer Data Platform (CDP) Insights Data Model](cdp-insights-data-model.md)
+* [Real-Time Customer Data Platform Insights Data Model](cdp-insights-data-model.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

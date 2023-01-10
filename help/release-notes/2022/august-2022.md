@@ -14,7 +14,7 @@ Updates to existing features in Adobe Experience Platform:
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [Real-time Customer Profile](#profile)
+- [Real-Time Customer Profile](#profile)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
@@ -30,27 +30,27 @@ Attribution AI is used to attribute credits to touchpoints leading to conversion
 
 | Feature | Description |
 | ------- | ----------- |
-| Support for Privacy | <ul><li> Attribution AI now supports defining user roles and access policies to manage [permissions](../../../help/access-control/abac/ui/permissions.md) for features and objects within a product application. </li><li>Audit log resources are recorded automatically as the activity occurs.</li><li> Through [attribute-based access control](../../access-control/abac/overview.md), administrators can control access to specific objects and/or capabilities based on certain attributes, which can be metadata added to an object, such as labels.Administrators can also define user roles that have access to only specific fields and data that correspond to those fields.</li><li>Attribution AI leverages Platform datasets. To support consumer rights requests a brand may receive, brands should use Platform Privacy Service to submit consumer requests of access and delete to remove their data across the data lake, Identity Service, and Real-time Customer Profile.  </li><li>All datasets used for input/output of models will follow Platform guidelines. Platform Data Encryption applies for data at-rest and in-transit. See the documentation to learn more about [data encryption](../../../help/landing/governance-privacy-security/encryption.md).</li></ul>|
+| Support for Privacy | <ul><li> Attribution AI now supports defining user roles and access policies to manage [permissions](../../../help/access-control/abac/ui/permissions.md) for features and objects within a product application. </li><li>Audit log resources are recorded automatically as the activity occurs.</li><li> Through [attribute-based access control](../../access-control/abac/overview.md), administrators can control access to specific objects and/or capabilities based on certain attributes, which can be metadata added to an object, such as labels.Administrators can also define user roles that have access to only specific fields and data that correspond to those fields.</li><li>Attribution AI leverages Platform datasets. To support consumer rights requests a brand may receive, brands should use Platform Privacy Service to submit consumer requests of access and delete to remove their data across the data lake, Identity Service, and Real-Time Customer Profile.  </li><li>All datasets used for input/output of models will follow Platform guidelines. Platform Data Encryption applies for data at-rest and in-transit. See the documentation to learn more about [data encryption](../../../help/landing/governance-privacy-security/encryption.md).</li></ul>|
 
 {style="table-layout:auto"}
 
-**Note**: Attribution AI will not be available with existing Healthcare Shield or Privacy Shield customers until further notice.
+**Note**: Attribution AI will not be available with existing Healthcare Shield customers until further notice.
  
 For more information on Attribution AI, please see the [Attribution AI](../../intelligent-services/attribution-ai/overview.md) overview.
 
 ### Customer AI
 
-Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale.
+Customer AI available in Real-Time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale.
 
 **Updated features**
 
 | Feature | Description |
 | ------- | ----------- |
-| Support for Privacy | <ul><li> Customer AI now supports defining user roles and access policies to manage [permissions](../../../help/access-control/abac/ui/permissions.md) for features and objects within a product application. </li><li>Audit log resources are recorded automatically as the activity occurs.</li><li> Through [attribute-based access control](../../access-control/abac/overview.md), administrators can control access to specific objects and/or capabilities based on certain attributes. These attributes can be metadata added to an object, such as labels. Administrators can also define user roles that have access to only specific fields and data that correspond to those fields.</li><li>Customer AI leverages Platform datasets. To support consumer rights requests a brand may receive, brands should use Platform Privacy Service to submit consumer requests of access and delete to remove their data across the data lake, Identity Service, and Real-time Customer Profile. </li><li>All datasets used for input/output of models will follow Platform guidelines. Platform Data Encryption applies for data at-rest and in-transit. See the documentation to learn more about [data encryption](../../../help/landing/governance-privacy-security/encryption.md).</li></ul>|
+| Support for Privacy | <ul><li> Customer AI now supports defining user roles and access policies to manage [permissions](../../../help/access-control/abac/ui/permissions.md) for features and objects within a product application. </li><li>Audit log resources are recorded automatically as the activity occurs.</li><li> Through [attribute-based access control](../../access-control/abac/overview.md), administrators can control access to specific objects and/or capabilities based on certain attributes. These attributes can be metadata added to an object, such as labels. Administrators can also define user roles that have access to only specific fields and data that correspond to those fields.</li><li>Customer AI leverages Platform datasets. To support consumer rights requests a brand may receive, brands should use Platform Privacy Service to submit consumer requests of access and delete to remove their data across the data lake, Identity Service, and Real-Time Customer Profile. </li><li>All datasets used for input/output of models will follow Platform guidelines. Platform Data Encryption applies for data at-rest and in-transit. See the documentation to learn more about [data encryption](../../../help/landing/governance-privacy-security/encryption.md).</li></ul>|
 
 {style="table-layout:auto"}
 
-**Note**: Customer AI will not be available with existing Healthcare Shield or Privacy Shield customers until further notice.
+**Note**: Customer AI will not be available with existing Healthcare Shield customers until further notice.
  
 For more information on Customer AI, please see the [Customer AI](../../intelligent-services/customer-ai/overview.md) overview.
 
@@ -134,9 +134,9 @@ XDM is an open-source specification that provides common structures and definiti
 
 For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
 
-## Real-time Customer Profile {#profile}
+## Real-Time Customer Profile {#profile}
 
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-Time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 
 | Feature | Description |
 | ------- | ----------- |
@@ -145,7 +145,7 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 {style="table-layout:auto"}
 
-To learn more about Real-time Customer Profile, including tutorials and best practices for working with profile data, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
+To learn more about Real-Time Customer Profile, including tutorials and best practices for working with profile data, please begin by reading the [Real-Time Customer Profile overview](../../profile/home.md).
 
 ## Segmentation Service {#segmentation}
 

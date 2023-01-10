@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;mapping fields;mapping functions;
 solution: Experience Platform
 title: Data Prep Mapping Functions
-topic-legacy: overview
 description: This document introduces the mapping functions used with Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 ---
@@ -14,7 +13,11 @@ Data Prep functions can be used to compute and calculate values based on what is
 
 A field name can be any legal identifier - an unlimited-length sequence of Unicode letters and digits, beginning with a letter, the dollar sign (`$`), or the underscore character (`_`). Variable names are also case sensitive.
 
-If a field name does not follow this convention, the field name must be wrapped with `${}`. So, for example, if the field name is "First Name" or "First.Name", then the name must be wrapped like `${First Name}` or `${First.Name}` respectively.
+If a field name does not follow this convention, the field name must be wrapped with `${}`. So, for example, if the field name is "First Name" or "First.Name", then the name must be wrapped like `${First Name}` or `${First\.Name}` respectively.
+
+>[!TIP]
+>
+>When interacting with hierarchies, if a child attribute has a period (`.`), you must use a backslash (`\`) to escape special characters. For more information, read the guide on [escaping special characters](home.md#escape-special-characters).
 
 Additionally, if a field name is **any** of the following reserved keywords, it must be wrapped with `${}`:
 
@@ -228,6 +231,11 @@ For information on the object copy feature, see the section [below](#object-copy
 {style="table-layout:auto"}
 
 ### User agent functions {#user-agent}
+
+Any of the user agent functions contained in the table below can return either of the following values:
+
+* Phone - A mobile device with a small screen (commonly < 7")
+* Mobile - A mobile device that is yet to be identified. This mobile device can be an eReader, a tablet, a phone, a watch, etc.
 
 >[!NOTE]
 >

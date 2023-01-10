@@ -1,41 +1,41 @@
 ---
 keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;explore;class;field group;data type;schema;
 solution: Experience Platform
-title: Explore XDM Resources in the UI
+title: Explore Schema Resources in the UI
 description: Learn how to explore existing schemas, classes, schema field groups, and data types in the Experience Platform user interface.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 ---
-# Explore XDM resources in the UI
+# Explore schema resources in the UI
 
-In Adobe Experience Platform, all Experience Data Model (XDM) resources are stored in the [!DNL Schema Library], including standard resources provided by Adobe and custom resources defined by your organization. In the Experience Platform UI, you can view the structure and fields of any existing schema, class, schema field group, or data type in the [!DNL Schema Library]. This is especially useful when planning and preparing for data ingestion, as the UI provides information on the expected data types and use cases of each field provided by these XDM resources.
+In Adobe Experience Platform, all Experience Data Model (XDM) schema resources are stored in the [!DNL Schema Library], including standard resources provided by Adobe and custom resources defined by your organization. In the Experience Platform UI, you can view the structure and fields of any existing schema, class, field group, or data type in the [!DNL Schema Library]. This is especially useful when planning and preparing for data ingestion, as the UI provides information on the expected data types and use cases of each field provided by these XDM resources.
 
 This tutorial covers the steps for exploring existing schemas, classes, field groups, and data types in the Experience Platform UI.
 
-## Look up an XDM resource {#lookup}
+## Look up a schema resource {#lookup}
 
-In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. The [!UICONTROL Schemas] workspace provides a **[!UICONTROL Browse]** tab to explore all existing XDM resources in your organization, along with additional dedicated tabs for exploring **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, and **[!UICONTROL Data types]** specifically.
+In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. The [!UICONTROL Schemas] workspace provides a **[!UICONTROL Browse]** tab to explore all schemas in your organization, along with additional dedicated tabs for exploring **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, and **[!UICONTROL Data types]** respectively.
 
 ![](../images/ui/explore/tabs.png)
 
-On the [!UICONTROL Browse] tab, you can use the filter icon (![Filter Icon Image](../images/ui/explore/icon.png)) to reveal controls in the left rail to narrow down listed results.
+The filter icon (![Filter Icon Image](../images/ui/explore/icon.png)) reveals controls in the left rail to narrow down listed results. The displayed controls differ depending on the type of resource being listed.
 
 For example, to filter the list to only show standard data types provided by Adobe, select **[!UICONTROL Datatype]** and **[!UICONTROL Adobe]** under the **[!UICONTROL Type]** and **[!UICONTROL Owner]** sections, respectively.
 
-The **[!UICONTROL Included in Profile]** toggle allows you to filter results to show only resources that are used in schemas that have been enabled for use in [Real-time Customer Profile](../../profile/home.md).
+The **[!UICONTROL Included in Profile]** toggle allows you to filter results to show only resources that are used in schemas that have been enabled for use in [Real-Time Customer Profile](../../profile/home.md).
 
 ![](../images/ui/explore/filter.png)
 
-You can also use the search bar to narrow down results further. When you search for a term, the top items represent resources whose names match the search query. Below these items, under **[!UICONTROL Standard Fields]**, any resources containing fields that match the query will be listed. This allows you to search for XDM resources based on the type of data they contain, without having to know the name of the resource beforehand.
+When listing resources on the **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, or **[!UICONTROL Data types]** tabs, you can select **[!UICONTROL Adobe]** to only show standard resources or **[!UICONTROL Customer]** to only show resources created by your organization.
+
+![](../images/ui/explore/filter-data-type.png)
+
+You can also use the search bar to narrow down results further.
 
 ![](../images/ui/explore/search.png)
 
 The resources displayed in search results are ordered first by title matches, then by description matches. In turn, the more word matches in either of these categories, the higher the resource appears in the list.
-
->[!NOTE]
->
->For standard XDM resources, the search feature only returns individual fields that contain an `xdm` namespace. Fields that are under a different namespace (such as your tenant ID) are only returned if they are contained in a custom resource.
 
 When you have found the resource you want to explore, select its name from the list to view its structure in the canvas.
 

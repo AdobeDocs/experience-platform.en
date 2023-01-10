@@ -150,7 +150,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->In the old [`setCookie`](#setCookie) method of setting cookies, the third (optional) argument to this function call was an integer that indicated the cookie's time-to-live (TTL) in days. In this new method, an "attributes" object is accepted as a third argument instead. In order to set a TTL for a cookie using the new method, you must provide an `expires` property in the attributes object and set it to the desired value. This is demonstrated in the example below.
+>In the old [`setCookie`](#setCookie) method of setting cookies, the third (optional) argument to this function call was an integer that indicated the cookie's expiration time in days. In this new method, an "attributes" object is accepted as a third argument instead. In order to set an expiration for a cookie using the new method, you must provide an `expires` property in the attributes object and set it to the desired value. This is demonstrated in the example below.
 
 **Example**
 

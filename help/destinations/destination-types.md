@@ -16,7 +16,7 @@ In Adobe Experience Platform, we distinguish between two destination types - con
 
 ## Connections {#connections}
 
-**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Segment Export]**, and **[!DNL Edge Personalization]** destinations in Adobe Experience Platform capture event data, combine it with other data sources to form the [Real-time Customer Profile](../profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
+**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Segment Export]**, and **[!DNL Edge Personalization]** destinations in Adobe Experience Platform capture event data, combine it with other data sources to form the [Real-Time Customer Profile](../profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
 
 ## Profile export destinations {#profile-export}
 
@@ -29,9 +29,9 @@ Profile export destinations receive raw data, often with email address as the pr
 
 >[!IMPORTANT]
 >
->Enterprise destinations, or streaming profile export destinations, are available to [Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers only.
+>Enterprise destinations, or streaming profile export destinations, are available to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers only.
 
-Use enterprise destination data connectors to deliver Real-time Customer Data Platform profiles in near real-time to internal systems or to other third-party systems for data synchronization, analysis, and further profile enrichment use cases.
+Use enterprise destination data connectors to deliver Adobe Real-Time Customer Data Platform profiles in near real-time to internal systems or to other third-party systems for data synchronization, analysis, and further profile enrichment use cases.
 
 These destinations receive segment and profile data as Experience Platform data streams.
 
@@ -61,6 +61,12 @@ The video below runs you through the particularities of the two types of destina
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
+## (Beta) Dataset export destinations {#dataset-export-destinations}
+
+Some cloud storage destinations in the destinations catalog support dataset exports. Use these destinations to export raw datasets to cloud storage locations. 
+
+Read more about how to [export datasets](/help/destinations/ui/export-datasets.md).
+
 ## Extensions {#extensions}
 
 Platform leverages the power and flexibility of tag management, allowing you to configure tag extensions in the UI. 
@@ -85,4 +91,4 @@ Extensions are helpful when event data is used to trigger an action, or to condu
 
 The connections and extensions in the [destinations catalog](https://platform.adobe.com/destination/catalog) are grouped by destination category (**Advertising**, **Cloud storage**, **Survey platforms**, **Email marketing**, etc.), depending on the marketing action that they help you achieve. For more information on each of the categories, as well as the destinations included in each category, see the [Destinations catalog documentation](./catalog/overview.md).
 
-![Destination categories](./assets/destination-types/destination-categories-menu.png)
+![Destination categories highlighted in the catalog page.](./assets/destination-types/destination-categories-menu.png)

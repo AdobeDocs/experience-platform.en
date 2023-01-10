@@ -2,18 +2,18 @@
 keywords: Experience Platform;home;popular topics;api;attribute-based access control;Attribute-Based Access Control
 solution: Experience Platform
 title: Attribute-based Access Control API Guide
-description: The Attribute-based access control API allows you to programmatically manage roles and policies within Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
+description: The Attribute-based access control API allows you to programmatically manage roles and access policies within Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
 ---
 # Attribute-based access control API guide
 
->[!IMPORTANT]
->
->Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
-
 Attribute-based access control is a capability of Adobe Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be metadata added to an object, such as a label added to a schema field or segment. An administrator defines access policies that include attributes to manage user access permissions.
 
 The attribute-based access control API is used to access roles, products, permission categories, and permission sets within Adobe Experience Platform, providing a user interface and RESTful API from which all available library resources are accessible.
+
+>[!IMPORTANT]
+>
+>Attribute-based access control is not to be confused with Experience Platform's data governance capabilities, which allow you to use labels and policies to control how data is used in Platform rather than which users in your organization have access to it. See the [Policy Service API guide](../../../data-governance/api/overview.md) for steps on how to programmatically leverage these capabilities.
 
 These endpoints are outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
 

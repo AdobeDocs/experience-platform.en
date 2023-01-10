@@ -70,7 +70,7 @@ The [!UICONTROL Review] step appears, allowing you to review your new dataflow b
 
 ## Next steps
 
-Once the connection is created, a target schema and dataset is automatically created to contain the incoming data. When the initial ingestion completes, customer attributes profile data can be used by downstream Platform services such as [!DNL Real-time Customer Profile] and [!DNL Segmentation Service]. See the following documents for more details:
+Once the connection is created, a target schema and dataset is automatically created to contain the incoming data. When the initial ingestion completes, customer attributes profile data can be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Segmentation Service]. See the following documents for more details:
 
-* [[!DNL Real-time Customer Profile] overview](../../../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] overview](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] overview](../../../../../segmentation/home.md)

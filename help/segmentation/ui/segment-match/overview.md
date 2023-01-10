@@ -31,7 +31,7 @@ The first step to getting started with [!DNL Segment Match] is to make sure you'
 
 Identity namespaces are a component of [Adobe Experience Platform Identity Service](../../../identity-service/home.md). Each customer identity contains an associated namespace that indicates the identity's context. For example, a namespace can distinguish a value of "name<span>@email.com" as an email address or "443522" as a numeric CRM ID.
 
-A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments (such as when [!DNL Real-time Customer Profile] merges Profile data), both the identity value and the namespace must match.
+A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments (such as when [!DNL Real-Time Customer Profile] merges Profile data), both the identity value and the namespace must match.
 
 In the context of [!DNL Segment Match], namespaces are used in the overlap process when sharing data.
 
@@ -39,7 +39,7 @@ The list of supported namespaces are as follows:
 
 | Namespace | Description |
 | --------- | ----------- |
-| Emails (SHA256, lowercased) | A namespace for pre-hashed email address. Values provided in this namespace are converted to lowercase before hashing with SHA256. Leading and trailing spaces need to be trimmed before an email address is normalized. This setting cannot be changed retroactively. See the following document on [SHA256 hashing support](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) for more information. |
+| Emails (SHA256, lowercased) | A namespace for pre-hashed email address. Values provided in this namespace are converted to lowercase before hashing with SHA256. Leading and trailing spaces need to be trimmed before an email address is normalized. This setting cannot be changed retroactively. Platform offers two methods of supporting hashing upon data collection, through [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) and through [data prep](../../../data-prep/functions.md#hashing). |
 | Phone (SHA256_E.164)| A namespace that represents raw phone numbers that need to be hashed using both SHA256 and E.164 format. |
 | ECID | A namespace that represents an Experience Cloud ID (ECID) value. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the [ECID overview](../../../identity-service/ecid.md) for more information. |
 | Apple IDFA (ID for Advertisers) | A namespace that represents Apple ID for Advertisers. See the following document on [interest-based ads](https://support.apple.com/en-us/HT202074) for more information. |
@@ -198,4 +198,4 @@ By reading this document, you have gained an understanding of [!DNL Segment Matc
 
 * [[!DNL Segmentation Service]](../../home.md)
 * [[!DNL Identity Service]](../../../identity-service/home.md)
-* [[!DNL Real-time Customer Profile] overview](../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] overview](../../../profile/home.md)

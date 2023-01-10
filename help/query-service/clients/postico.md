@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Query service;query service;postico;Postico;connect to query service;
 solution: Experience Platform
 title: Connect Postico to Query Service
-topic-legacy: connect
 description: This document contains the link for installing the backup client Postico for Adobe Experience Platform Query Service.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
 ---
@@ -18,7 +17,7 @@ This document covers the steps for connecting [!DNL Postico] with Adobe Experien
 
 To connect [!DNL Postico] to Query Service, open [!DNL Postico] and select **[!DNL New Favorite]**.
 
-![](../images/clients/postico/open-postico.png)
+![The [!DNL Postico] UI with New Favorite highlighted.](../images/clients/postico/open-postico.png)
 
 You can now enter values to connect with Adobe Experience Platform. 
 
@@ -26,25 +25,25 @@ For more information on finding your database name, host, port, and login creden
 
 After inserting your credentials, select **[!DNL Connect]** to connect with Query Service.
 
-![](../images/clients/postico/authentication-details.png)
+![The New Favorite dialog with connect highlighted.](../images/clients/postico/authentication-details.png)
 
 After connecting to Platform, you'll be able to see a list of all the relations previously made with Query Service.
 
-![](../images/clients/postico/show-queries.png)
+![A list of connections in the [!DNL Postico] UI.](../images/clients/postico/show-queries.png)
 
 ## Create SQL statements
 
 To create a new SQL query, select and open "SQL Query".
 
-![](../images/clients/postico/create-query.png)
+![The [!DNL Postico] UI with the SQL Query shortcut highlighted.](../images/clients/postico/create-query.png)
 
 A box appears, and from here you can type in the query you want to execute. When finished, select **[!DNL Execute Statement]** to run the query.
 
-![](../images/clients/postico/run-statement.png)
+![The SQL editor with Execute Statement highlighted.](../images/clients/postico/run-statement.png)
 
 A table appears, showing the results of your completed query run.
 
-![](../images/clients/postico/query-results.png)
+![A table of results from the example query.](../images/clients/postico/query-results.png)
 
 ## Next steps
 

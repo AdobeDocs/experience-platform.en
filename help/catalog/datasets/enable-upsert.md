@@ -2,12 +2,12 @@
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable dataset
 title: Enable a Dataset for Profile Updates using APIs
 type: Tutorial
-description: This tutorial shows you how to use Adobe Experience Platform APIs to enable a dataset with "upsert" capabilities in order to make updates to Real-time Customer Profile data.
+description: This tutorial shows you how to use Adobe Experience Platform APIs to enable a dataset with "upsert" capabilities in order to make updates to Real-Time Customer Profile data.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
 ---
 # Enable a dataset for profile updates using APIs
 
-This tutorial covers the process of enabling a dataset with "upsert" capabilities in order to make updates to Real-time Customer Profile data. This includes steps for creating a new dataset and configuring an existing dataset. 
+This tutorial covers the process of enabling a dataset with "upsert" capabilities in order to make updates to Real-Time Customer Profile data. This includes steps for creating a new dataset and configuring an existing dataset. 
 
 >[!NOTE]
 >
@@ -17,8 +17,8 @@ This tutorial covers the process of enabling a dataset with "upsert" capabilitie
 
 This tutorial requires a working understanding of several Adobe Experience Platform services involved in managing Profile-enabled datasets. Before beginning this tutorial, please review the documentation for these related [!DNL Platform] services:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-- [[!DNL Catalog Service]](../../catalog/home.md): A RESTful API that allows you to create datasets and configure them for [!DNL Real-time Customer Profile] and [!DNL Identity Service].
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [[!DNL Catalog Service]](../../catalog/home.md): A RESTful API that allows you to create datasets and configure them for [!DNL Real-Time Customer Profile] and [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 - [Batch ingestion](../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into Experience Platform as batch files.
 
@@ -69,6 +69,8 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
+        "name": "Sample dataset",
+        "description: "A sample dataset with a sample description.",
         "fields": [],
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
@@ -111,7 +113,7 @@ The following steps cover how to configure an existing Profile-enabled dataset f
 
 ### Check if the dataset is enabled for Profile
 
-Using the [!DNL Catalog] API, you can inspect an existing dataset to determine whether it is enabled for use in [!DNL Real-time Customer Profile]. The following call retrieves the details of a dataset by ID.
+Using the [!DNL Catalog] API, you can inspect an existing dataset to determine whether it is enabled for use in [!DNL Real-Time Customer Profile]. The following call retrieves the details of a dataset by ID.
 
 **API format**
 
@@ -174,8 +176,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
         "schemaMetadata": {
             "primaryKey": [],
             "delta": [],
-            "dule": [],
-            "gdpr": []
+            "dule": []
         },
         "schemaRef": {
             "id": "https://ns.adobe.com/xdm/context/experienceevent",
@@ -185,7 +186,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
 }
 ```
 
-Under the `tags` property, you can see that `unifiedProfile` is present with the value `enabled:true`. Therefore, [!DNL Real-time Customer Profile] is enabled for this dataset.
+Under the `tags` property, you can see that `unifiedProfile` is present with the value `enabled:true`. Therefore, [!DNL Real-Time Customer Profile] is enabled for this dataset.
 
 ### Disable the dataset for Profile
 
@@ -243,6 +244,10 @@ A successful PATCH request returns HTTP Status 200 (OK) and an array containing 
 ### Enable the dataset for Profile and upsert {#enable-the-dataset}
 
 An existing dataset can be enabled for Profile and attribute updates using a single PATCH request.
+
+>[!IMPORTANT]
+>
+>When enabling your dataset for Profile, please ensure the schema the dataset is associated with is **also** Profile-enabled. If the schema is not Profile-enabled, the dataset will **not** appear as Profile-enabled within the Platform UI.
 
 **API format**
 

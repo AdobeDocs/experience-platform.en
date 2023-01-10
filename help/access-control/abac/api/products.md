@@ -7,10 +7,6 @@ exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
 ---
 # Products endpoint
 
->[!IMPORTANT]
->
->Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
-
 The `/products` endpoint in the attribute-based access control API allows you to programmatically manage products as well as permission categories and permission sets associated with products in your organization.
 
 ## Getting started
