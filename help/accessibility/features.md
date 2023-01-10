@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;XDM graphs
 title: General Accessibility Features in Platform
-topic-legacy: guide
 type: Documentation
 description: Learn more about the general accessibility features supported by Adobe Experience Platform, including keyboard navigation, color palettes and contrast, and assistive technology support.
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135

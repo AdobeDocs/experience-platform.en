@@ -8,11 +8,11 @@ exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 ---
 # Create and edit classes in the UI
 
-In Experience Data Model (XDM), classes define the behavioral aspects of the data that a schema will contain (record or time-series). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged.
+In Adobe Experience Platform, a schema's class defines the behavioral aspects of the data that the schema will contain (record or time-series). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged.
 
-Adobe provides several standard ("core") XDM classes, including [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent]. In addition to these core classes, you can also create your own custom classes to describe more specific use cases for your organization.
+Adobe provides several standard ("core") Experience Data Model (XDM) classes, including [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent]. In addition to these core classes, you can also create your own custom classes to describe more specific use cases for your organization.
 
-This document provides an overview of how to create, edit, and manage custom classes in the Adobe Experience Platform UI.
+This document provides an overview of how to create, edit, and manage custom classes in the Experience Platform UI.
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**
 
 ![](../../images/ui/resources/classes/browse-classes.png)
 
-A dialog appears that allows you select from a list of available classes. At the top of the dialog, select **[!UICONTROL Create new class]**. You can then give your new class a display name (a short, descriptive, unique, and user-friendly name for the class), a description, and a behavior for the data that the schema will define ("[!UICONTROL Record]" or "[!UICONTROL Time-series]").
+A dialog appears that allows you select from a list of available classes. At the top of the dialog, select **[!UICONTROL Create new class]**. You can then give your new class a display name (a short, descriptive, unique, and user-friendly name for the class), a description, and a behavior for the data that the schema will define (**[!UICONTROL Record]** or **[!UICONTROL Time-series]**).
 
 When finished, select **[!UICONTROL Assign class]**.
 
@@ -72,9 +72,11 @@ Once you have a schema that employs a custom class open in the [!UICONTROL Schem
 >
 >Keep in mind that any fields you add to a class will be used in all schemas that employ that class. You should therefore carefully consider which fields will be useful in all schema use cases. If you are thinking of adding a field that may only see use in some schemas under this class, you may want to consider adding it to those schemas by [creating a field group](./field-groups.md#create) instead.
 
-A **[!UICONTROL New field]** appears in in the canvas, and the right rail updates to show controls to configure the field's properties. See the guide on [defining fields in the UI](../fields/overview.md#define) for specific steps on how to configure and add the field to the class.
+A **[!UICONTROL New field]** appears in in the canvas, and the right rail updates to show controls to configure the field's properties. Under **[!UICONTROL Assign to]**, select **[!UICONTROL Class]**.
 
-Continue to add as many fields as required to the class. When finished, select **[!UICONTROL Save]** to save both the schema and the class.
+![](../../images/ui/resources/classes/assign-to-class.png)
+
+See the guide on [defining fields in the UI](../fields/overview.md#define) for specific steps on how to configure and add the field to the class. Continue to add as many fields as required to the class. When finished, select **[!UICONTROL Save]** to save both the schema and the class.
 
 ![](../../images/ui/resources/classes/save.png)
 

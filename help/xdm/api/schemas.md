@@ -368,7 +368,7 @@ One of the most common PATCH operations involves adding previously defined field
 **API format**
 
 ```http
-PATCH /tenant/schema/{SCHEMA_ID} 
+PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
 | Parameter | Description |
@@ -459,7 +459,7 @@ In order for a schema to participate in [Real-Time Customer Profile](../../profi
 **API format**
 
 ```http
-PATCH /tenant/schema/{SCHEMA_ID} 
+PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
 | Parameter | Description |

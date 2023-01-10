@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data governance;data usage policy user guide
 solution: Experience Platform
 title: Manage Data Usage Policies in the UI
-topic-legacy: policies
 description: Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions that you can perform in the Policies workspace in the Experience Platform user interface.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 ---

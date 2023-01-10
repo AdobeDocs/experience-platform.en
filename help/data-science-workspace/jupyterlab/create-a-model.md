@@ -2,7 +2,6 @@
 keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace;popular topics;create recipe
 solution: Experience Platform
 title: Create a model using JupyterLab Notebooks
-topic-legacy: tutorial
 type: Tutorial
 description: This tutorial walks you through the required steps to create a recipe using the JupyterLab notebooks recipe builder template.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde

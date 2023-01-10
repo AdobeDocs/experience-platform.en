@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data governance;data usage policy
 solution: Experience Platform
 title: Create a Data Governance Policy in the API
-topic-legacy: policies
 type: Tutorial
 description: Learn how to create a data governance policy using the Policy Service API.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4

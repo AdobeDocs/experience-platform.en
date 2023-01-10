@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;enable dataset;Dataset;dataset
 solution: Experience Platform
 title: Datasets UI Guide
-topic-legacy: datasets
 description: Learn how to perform common actions when working with datasets in the Adobe Experience Platform user interface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 ---
@@ -121,7 +120,7 @@ To enable a dataset for Profile, access its **[!UICONTROL Dataset activity]** sc
 
 Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. See the [Data Governance overview](../../data-governance/home.md) to learn more about labels, or refer to the [data usage labels user guide](../../data-governance/labels/overview.md) for instructions on how to apply labels to datasets.
 
-## Delete a dataset
+## Delete a dataset {#delete}
 
 You can delete a dataset by first accessing its **[!UICONTROL Dataset activity]** screen. Then, select **[!UICONTROL Delete dataset]** to delete it. 
 

@@ -3,7 +3,6 @@ keywords: Experience Platform;user guide;customer ai;popular topics;configure in
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Configure a Customer AI Instance
-topic-legacy: Instance creation
 description: AI/ML Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 ---
@@ -264,7 +263,7 @@ The popover provides specific information about the violation. You can resolve t
 
 This functionality allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments.
 
-Through attribute-based access control, administrators of your organization can control users’ access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
+Through attribute-based access control, administrators of your organization can control users' access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
 Due to attribute-based access control, some fields and functionalities would have access restricted and be unavailable for certain Customer AI service instances. Examples include, "Identity", "Score Definition", and "Clone."
 

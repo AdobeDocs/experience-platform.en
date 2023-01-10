@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data prep;api guide;schemas;
 solution: Experience Platform
 title: Schemas API Endpoint
-topic-legacy: schemas
 description: You can use the `/schemas` endpoint in the Adobe Experience Platform API to programmatically retrieve, create, and update schemas for use with Mapper in Platform. 
 ---
 

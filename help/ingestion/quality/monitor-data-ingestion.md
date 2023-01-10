@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows;monitor ingestion;data ingestion;Data ingestion;view records;view batches;
 solution: Experience Platform
 title: Monitoring Data Ingestion
-topic-legacy: overview
 description: This user guide provides a steps on how to monitor your data within Adobe Experience Platform user interface. This guide requires you to have an Adobe ID and access to Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 ---

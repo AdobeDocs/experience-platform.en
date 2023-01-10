@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data access;spark sdk;data access api;spark recipe;read spark;write spark
 solution: Experience Platform
 title: Accessing Data Using Spark in Data Science Workspace
-topic-legacy: tutorial
 type: Tutorial
 description: The following document contains examples on how to access data using Spark for use in Data Science Workspace.
 exl-id: 9bffb52d-1c16-4899-b455-ce570d76d3b4

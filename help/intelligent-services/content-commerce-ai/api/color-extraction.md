@@ -2,7 +2,6 @@
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai;color extraction;Color extraction
 solution: Experience Platform
 title: Color Extraction in the Content and Commerce AI API
-topic-legacy: Developer guide
 description: The color extraction service, when given an image, can compute the histogram of pixel colors and sort them by dominant colors into buckets.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
 ---

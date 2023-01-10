@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy Service and Experience Cloud Applications
-topic-legacy: overview
 description: This document provides a reference for how to configure different Experience Cloud applications for privacy-related operations.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
 ---
@@ -27,7 +26,7 @@ The following is a list of [!DNL Experience Cloud] applications that are integra
 
 | Application | Access/delete | Opt-out of sale | Delete behavior | Documentation and other considerations |
 | --- | :---: | :---: | --- | --- |
-| Adobe Advertising Cloud | ✓ | ✓ | The data subject’s cookie ID or device ID is deleted from the system, along with all cost, click, and revenue data associated with the cookie. | <ul><li>[Access/delete documentation for GDPR](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Access/delete documentation for CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Opt-out-of-sale documentation for CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
+| Adobe Advertising Cloud | ✓ | ✓ | The data subject's cookie ID or device ID is deleted from the system, along with all cost, click, and revenue data associated with the cookie. | <ul><li>[Access/delete documentation for GDPR](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Access/delete documentation for CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Opt-out-of-sale documentation for CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
 | Adobe Analytics | ✓ | ✓ | If `analyticsDeleteMethod` is omitted or set to `anonymize` when making the privacy request, all data referenced by the given collection of user IDs is made anonymous. If `analyticsDeleteMethod` is set to `purge`, all data is removed completely. | <ul><li>[Access/delete documentation](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>[!DNL Analytics] handles opt-out requests by using [privacy reporting variables](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/consent-variables.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ |  All traits and segments associated with the Audience Manager identifier included in the request are deleted. In addition, the respective identifiers for the individual are opted out of further data collection and the respective ID mappings are removed. | <ul><li>[Access/delete documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Opt-out documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | The data subject's stored data is deleted from the system. | <ul><li>[Access/delete documentation](https://docs.campaign.adobe.com/doc/standard/getting_started/en/ACS_GDPR.html)</li><li>[Opt-out documentation](../segmentation/consents.md)</li></ul> |

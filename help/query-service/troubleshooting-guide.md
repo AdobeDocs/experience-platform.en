@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;troubleshooting guide;faq;troubleshooting;
 solution: Experience Platform
 title: Query Service Troubleshooting Guide
-topic-legacy: troubleshooting
 description: This document contains common questions and answers related to Query Service. Topics include, exporting data, third-party tools, and PSQL errors.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
@@ -572,6 +571,12 @@ Yes, a connection made on port 80 still uses SSL. You can also use port 5432.
 
 +++Answer
 Yes, attribute-based access control is enforced if configured. See the [attribute-based access control overview](../access-control/abac/overview.md) for more information.
++++
+
+### Does Query Service support the "INSERT OVERWRITE INTO" command?
+
++++Answer
+No, Query Service does not support the "INSERT OVERWRITE INTO" command.
 +++
 
 ## Exporting data {#exporting-data}

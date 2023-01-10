@@ -24,6 +24,7 @@ You can define network access controls through your network firewall. By specify
 - `20.49.102.16/29`
 - `40.70.148.160/28`
 - `52.167.107.224/28`
+- `52.138.119.167`
 
 ## NLD2: Europe
 
