@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Define Relationship Fields in the UI
 description: Learn how to define a relationship field in the Experience Platform user interface.
-topic-legacy: user guide
 exl-id: 8a6be545-0edb-4b9c-b164-e44a7a5f54f5
 ---
 # Define relationship fields in the UI

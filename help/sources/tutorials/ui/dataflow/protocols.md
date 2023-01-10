@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;protocol connector
 solution: Experience Platform
 title: Create a Dataflow Using a Protocols Source in the UI
-topic-legacy: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps on how to create a dataflow for a protocols source using Platform UI.
 exl-id: 94631a78-14ea-41d7-876c-468634dfc6c1

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;payment connector
 solution: Experience Platform
 title: Create a Dataflow Using a Payments Source in the UI
-topic-legacy: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps on how to create a dataflow for a payments source using Platform UI.
 exl-id: 7355435b-c038-4310-b04a-8ac6b6723b9b

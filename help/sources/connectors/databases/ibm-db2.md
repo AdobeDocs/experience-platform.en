@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;IBM DB2;ibm db2;DB2;db2
 solution: Experience Platform
 title: IBM DB2 Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect IBM DB2 to Adobe Experience Platform using APIs or the user interface.
 exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
 ---

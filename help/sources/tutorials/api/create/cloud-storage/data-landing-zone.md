@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;
 solution: Experience Platform
 title: Connect Data Landing Zone to Adobe Experience Platform using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Data Landing Zone using the Flow Service API.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e

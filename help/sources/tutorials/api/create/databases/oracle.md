@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Oracle;oracle
 solution: Experience Platform
 title: Create an Oracle Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Oracle to Experience Platform using the Flow Service API.
 exl-id: b1cea714-93ff-425f-8e12-6061da97d094
@@ -25,7 +24,7 @@ The following sections provide additional information that you will need to know
 | Credential | Description |
 | ---------- | ----------- |
 | `connectionString` | The connection string used to connect to [!DNL Oracle]. The [!DNL Oracle] connection string pattern is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Oracle] is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Oracle] is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 For more information about getting started refer to this [[!DNL Oracle] document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
 

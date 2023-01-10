@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Salesforce;salesforce
 solution: Experience Platform
 title: Create a Salesforce  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Salesforce source connection using the Adobe Experience Platform UI.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6

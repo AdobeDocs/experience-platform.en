@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;map functions;map;
 solution: Experience Platform
 title: PQL Map Functions
-topic-legacy: developer guide
 description: Profile Query Language (PQL) offers functions to make interaction with maps easier.
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
 ---

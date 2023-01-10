@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Google Big Query;google big query;GBQ;gbq
 solution: Experience Platform
 title: Create a Google Big Query  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Google Big Query source connection using the Adobe Experience Platform UI.
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f

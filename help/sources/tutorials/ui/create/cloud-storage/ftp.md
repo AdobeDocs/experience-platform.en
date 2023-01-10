@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;FTP;ftp
 solution: Experience Platform
 title: Create an FTP  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create an FTP source connection using the Adobe Experience Platform UI.
 exl-id: 8e505ead-4bae-43fe-830b-75620e8fba28

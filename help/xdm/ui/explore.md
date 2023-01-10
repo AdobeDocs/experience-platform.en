@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experienc
 solution: Experience Platform
 title: Explore Schema Resources in the UI
 description: Learn how to explore existing schemas, classes, schema field groups, and data types in the Experience Platform user interface.
-topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 ---

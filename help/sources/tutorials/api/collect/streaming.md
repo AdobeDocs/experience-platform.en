@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;cloud storage data;streaming data;streaming
 solution: Experience Platform
 title: Create a Streaming Dataflow for Raw Data Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving streaming data and bringing them in to Platform using source connectors and APIs.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4

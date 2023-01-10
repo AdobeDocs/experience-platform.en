@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;[!DNL PostgreSQL];[!DNL PostgreSQL];PostgreSQL
 solution: Experience Platform
 title: Create a PostgreSQL  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a PostgreSQL source connection using the Adobe Experience Platform UI.
 exl-id: e556d867-a1eb-4900-b8a9-189666a4f3f1

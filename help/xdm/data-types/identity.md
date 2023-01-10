@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;identity;datatype;data-type;data type;
 solution: Experience Platform
 title: Identity Data Type
-topic-legacy: overview
 description: This document provides an overview of the Identity XDM data type.
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 ---

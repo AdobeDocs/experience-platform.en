@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;salesforce marketing cloud;Salesforce Marketing Clud
 solution: Experience Platform
 title: Create a Salesforce Marketing Cloud Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Salesforce Marketing Cloud source connection using the Adobe Experience Platform UI.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554

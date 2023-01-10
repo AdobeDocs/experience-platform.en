@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;consent and preferences;consent;onetrust;OneTrust
 solution: Experience Platform
 title: Create a Dataflow Using a Consent and Preferences Source in the UI
-topic-legacy: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps on how to create a dataflow for a consent and preferences source using Platform UI.
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
