@@ -289,9 +289,9 @@ A successful response returns HTTP status 200 with detailed information about th
 >
 >You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
 
-### Cancel a query
+### Cancel or soft delete a query
 
-You can request to delete a specified query by making a PATCH request to the `/queries` endpoint and providing the query's `id` value in the request path.
+You can request to cancel or soft-delete a specified query by making a PATCH request to the `/queries` endpoint and providing the query's `id` value in the request path.
 
 **API format**
 
@@ -301,7 +301,7 @@ PATCH /queries/{QUERY_ID}
 
 | Parameter | Description |
 | -------- | ----------- |
-| `{QUERY_ID}` | The `id` value of the query you want to cancel. |
+| `{QUERY_ID}` | The `id` value of the query you want to perform the operation on. |
 
 
 **Request**
