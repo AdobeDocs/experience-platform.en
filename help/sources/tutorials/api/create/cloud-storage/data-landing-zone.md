@@ -74,7 +74,7 @@ To retrieve credentials for a [!DNL Data Landing Zone], make a GET request to th
 **API format**
 
 ```http
-GET /connectors/landingzone/credentials?type=user_drop_zone
+GET /data/foundation/connectors/landingzone/credentials?type=user_drop_zone
 ```
 
 **Request**
@@ -118,7 +118,7 @@ You can update your `SASToken` by making a POST request to the `/credentials` en
 **API format**
 
 ```http
-POST /connectors/landingzone/credentials?type=user_drop_zone&action=refresh
+POST /data/foundation/connectors/landingzone/credentials?type=user_drop_zone&action=refresh
 ```
 
 | Headers | Description |
