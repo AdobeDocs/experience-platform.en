@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Define Object Fields in the UI
 description: Learn how to define an object-type field in the Experience Platform user interface.
-topic-legacy: user guide
 exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
 ---
 # Define object fields in the UI

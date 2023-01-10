@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Define Identity Fields in the UI
 description: Learn how to define an identity field in the Experience Platform user interface.
-topic-legacy: user guide
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 ---
 # Define identity fields in the UI

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
 title: Create a Schema Using the Schema Registry API
-topic-legacy: tutorial
 type: Tutorial
 description: This tutorial uses the Schema Registry API to walk you through the steps to compose a schema using a standard class.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
