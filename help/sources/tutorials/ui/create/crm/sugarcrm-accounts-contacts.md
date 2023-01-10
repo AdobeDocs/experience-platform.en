@@ -1,0 +1,118 @@
+---
+keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
+title: Create a SugarCRM Accounts & Contacts source connection in the UI 
+description: Learn how to create a SugarCRM Accounts & Contacts source connection using the Adobe Experience Platform UI.
+hide: true
+hidefromtoc: true
+---
+# Create a [!DNL SugarCRM Accounts & Contacts] source connection in the UI
+
+This tutorial provides steps for creating a [!DNL SugarCRM Accounts & Contacts] source connector using the Adobe Experience Platform user interface.
+
+### Gather required credentials
+
+In order to connect [!DNL SugarCRM Accounts & Contacts] to Platform, you must provide values for the following connection properties:
+
+| Credential | Description | Example |
+| --- | --- | --- |
+| *`Host`* | The SugarCRM API endpoint the source connects to. | `developer.salesfusion.com` |
+| *`Username`* | Your SugarCRM developer account username. | `abc.def@example.com@sugarmarketdemo000.com` |
+| *`Password`* | Your SugarCRM developer account password. | `123456789` |
+
+### Create Platform Schema
+
+The [!DNL SugarCRM Accounts & Contacts] supports multiple APIs. Depending on which object type you are leveraging create separate platform [schema](/help/xdm/schema/composition.md)'s. To view an example screenshot of a schema for the object type you selected, select from the tabs below:
+>[!BEGIN TABS]
+
+>[!TAB Accounts]
+
+Platform UI screenshot showing an example schema when using the *Account* object type.
+![Platform UI screenshot showing an example schema for Accounts](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png?lang=en)
+
+>[!TAB Contacts]
+
+Platform UI screenshot showing an example schema when using the *Contact* object type.
+![Platform UI screenshot showing an example schema for Contacts](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png?lang=en)
+
+>[!ENDTABS]
+
+## Connect your [!DNL SugarCRM Accounts & Contacts] account
+
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+
+You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+
+Under the *CRM* category, select *[!DNL SugarCRM Accounts & Contacts]*, and then select **[!UICONTROL Add data]**.
+
+![Platform UI screenshot for catalog with SugarCRM Accounts & Contacts card](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png?lang=en)
+
+The **[!UICONTROL Connect SugarCRM Accounts & Contacts account]** page appears. On this page, you can either use new credentials or existing credentials.
+
+### Existing account
+
+To use an existing account, select the [!DNL SugarCRM Accounts & Contacts] account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
+
+![Platform UI screenshot for Connect SugarCRM Accounts & Contacts account with an existing account](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png?lang=en)
+
+### New account
+
+If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and your credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
+
+![Platform UI screenshot for Connect SugarCRM Accounts & Contacts account with a new account](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png?lang=en)
+
+Finally, depending on your dataset you must choose as a mandatory input between the object types below:
+| object_type | Description |
+| --- | --- |
+| `Accounts` | Companies with whom your organization has a relationship. |
+| `Contacts` | Individual people with whom your organization has an established relationship. |
+
+To view an example screenshot for the object type you selected, select from the tabs below:
+>[!BEGIN TABS]
+
+>[!TAB Accounts]
+
+Platform UI screenshot showing configuration when using the *Account* object type.
+![Platform UI screenshot for SugarCRM Accounts & Contacts showing configuration with Account option selected](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png?lang=en)
+
+>[!TAB Contacts]
+
+Platform UI screenshot showing configuration when using the *Contact* object type.
+![Platform UI screenshot for SugarCRM Accounts & Contacts showing configuration with Contacts option selected](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png?lang=en)
+
+>[!ENDTABS]
+
+## Next steps
+
+By following this tutorial, you have established a connection to your [!DNL SugarCRM Accounts & Contacts] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](/help/sources/ui-tutorials/dataflow/crm.md).
+
+## Additional resources
+
+### Guardrails {#guardrails}
+
+The [!DNL SugarCRM] API throttle rates are 90 calls per minute or 2000 calls per day, whichever happens first. However, this restriction has been circumvented by adding a parameter into the connection spec that will delay request time so that the rate limit is never reached.
+
+### Validation {#validation}
+
+To validate that you have correctly set up the source and [!DNL SugarCRM Accounts & Contacts] data is being ingested, follow the steps below:
+
+1. In the Platform UI, select **[!UICONTROL View Dataflows]** besides the [!DNL SugarCRM Accounts & Contacts] card menu on the Catalog page. You can then select **[!UICONTROL Preview dataset]** to verify the data that was ingested.
+
+1. Depending on the object type you are working with you can verify the aggregated data against the counts visible on the [!DNL SugarMarket]. To view an example screenshot for the object type you selected, select from the tabs below:   
+
+   >[!BEGIN TABS]
+
+   >[!TAB Accounts]
+
+   [!DNL SugarMarket] Accounts page. 
+   ![Screenshot from the SugarMarket Accounts page displaying list of accounts](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-accounts.png?lang=en)
+
+   >[!TAB Contacts]
+
+   [!DNL SugarMarket] Contacts page example.
+   ![Screenshot from the SugarMarket Contacts page displaying list of contacts](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-contacts.png?lang=en)
+
+   >[!ENDTABS]
+
+>[!NOTE]
+>
+> The [!DNL SugarMarket] pages do not include the deleted object counts. However, data retrieved through this source will also include the deleted count, these would be marked with a deleted flag.
