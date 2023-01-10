@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;generic REST;generic rest
 solution: Experience Platform
 title: Create a Generic REST API Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Generic REST API to Adobe Experience Platform using the Flow Service API.
 exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
@@ -43,7 +42,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Generic REST API], you mu
 | `expirationDate` | (Optional) A hidden value that defines the expiration date of your access token. |
 | `accessTokenUrl` | (Optional) The URL endpoint used to fetch your access token. |
 | `requestParameterOverride` | (Optional) A property that allows you to specify which credential parameters to override. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Generic REST API] is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Generic REST API] is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
 
 #### Basic authentication
 
@@ -52,7 +51,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Generic REST API], you mu
 | `host` | The host URL of the source that you are making your request to. |
 | `username` | The username that corresponds with your user account. |
 | `password` | The password that corresponds with your user account. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Generic REST API] is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Generic REST API] is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
 
 ## Create a base connection
 

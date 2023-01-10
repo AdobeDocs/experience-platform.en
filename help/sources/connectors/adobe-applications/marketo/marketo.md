@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Marketo Engage;marketo engage;marketo
 solution: Experience Platform
 title: Marketo Engage connector
-topic-legacy: overview
 description: This document provides an overview of the Marketo Engage source connector, including information about its authentication, mapping, and data latency.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
 ---

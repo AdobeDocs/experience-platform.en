@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Microsoft SQL Server;SQL Server;sql server
 solution: Experience Platform
 title: Create a Microsoft SQL Server  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Microsoft SQL Server source connection using the Adobe Experience Platform UI.
 exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9

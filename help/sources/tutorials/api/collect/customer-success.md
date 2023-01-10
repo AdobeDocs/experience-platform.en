@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;collect customer success;customer success
 solution: Experience Platform
 title: Create a Dataflow for Customer Success Sources Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a customer success system and ingesting it into Platform using source connectors and APIs.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5

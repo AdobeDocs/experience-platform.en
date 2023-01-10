@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;salesforce marketing cloud;Salesforce Marketing Cloud
 solution: Experience Platform
 title: Create a Salesforce Marketing Cloud Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Salesforce Marketing Cloud using the Flow Service API.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
@@ -39,7 +38,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Salesforce Marketing Clou
 | `host` | The host server of your application. This is often your subdomain. **Note:** When entering your `host` value, you only need to specify the subdomain and not the entire URL. For example, if your host URL is `https://abcd-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, then you only need to enter `abcd-ab12c3d4e5fg6hijk7lmnop8qrst` as your host value. |
 | `clientId` | The client ID associated with your [!DNL Salesforce Marketing Cloud] application. |
 | `clientSecret` | The client secret associated with your [!DNL Salesforce Marketing Cloud] application. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce Marketing Cloud] is: `ea1c2a08-b722-11eb-8529-0242ac130003`.  |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce Marketing Cloud] is: `ea1c2a08-b722-11eb-8529-0242ac130003`.  |
 
 For more information about getting started, refer to this [[!DNL Salesforce Marketing Cloud] document](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
 

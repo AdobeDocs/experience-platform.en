@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Azure Blob;azure blob;Azure blob connector
 solution: Experience Platform
 title: Create an Azure Blob  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create an Azure Blob source connector using the Platform user interface.
 exl-id: 0e54569b-7305-4065-981e-951623717648

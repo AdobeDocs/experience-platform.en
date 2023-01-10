@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;streaming;cloud storage connector;cloud storage
 solution: Experience Platform
 title: Create a streaming dataflow for a cloud storage source in the UI
-topic-legacy: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your cloud storage base connector.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178

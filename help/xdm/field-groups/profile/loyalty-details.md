@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;loyalty details;Schema design;field group;Field group;
 solution: Experience Platform
 title: Loyalty Details Schema Field Group
-topic-legacy: overview
 description: This document provides an overview of the Loyalty Details schema field group.
 exl-id: 12c9fef5-4f9e-49b5-894f-f4938bb95c23
 ---

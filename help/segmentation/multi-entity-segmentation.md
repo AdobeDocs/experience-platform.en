@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segments;Segments;multi-entity;multi-entity segmentation;multi-entity segments;
 solution: Experience Platform
 title: Multi-entity Segmentation Overview
-topic-legacy: overview
 description: Multi-entity segmentation is the ability to extend Profile data with additional data based on products, stores, or other non-profile classes. Once connected, data from additional classes becomes available as if they were native to the Profile schema.
 exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
 ---

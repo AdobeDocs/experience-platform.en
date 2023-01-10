@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;date and time functions;datetime functions;datetime;date;time;
 solution: Experience Platform
 title: PQL Date and Time Functions
-topic-legacy: developer guide
 description: Date and time functions are used to perform date and time operations on values within Profile Query Language (PQL).
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
 ---
