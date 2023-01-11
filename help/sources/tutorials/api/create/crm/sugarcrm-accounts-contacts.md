@@ -10,8 +10,8 @@ The following tutorial walks you through the steps to create a [!DNL SugarCRM Ac
 
 This guide requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to [!DNL SugarCRM] using the [!DNL Flow Service] API.
 
@@ -47,28 +47,28 @@ The following request creates a base connection for [!DNL SugarCRM Accounts & Co
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "SugarCRM Accounts & Contacts base connection",
-        "description": "Create a live inbound connection to your SugarCRM Accounts & Contacts instance, to ingest both historic and scheduled data into Experience Platform",
-        "connectionSpec": {
-            "id": "59a4b493-a615-40f9-bd38-f823d0909a2b",
-            "version": "1.0"
-        },
-        "auth": {
-            "specName": "OAuth2 Refresh Code",
-            "params": {
-                "host": "developer.salesfusion.com",
-                "username": "{SUGARCRM_DEVELOPER_ACCOUNT_USERNAME}",
-                "password": "{SUGARCRM_DEVELOPER_ACCOUNT_PASSWORD}"
-            }
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "SugarCRM Accounts & Contacts base connection",
+      "description": "Create a live inbound connection to your SugarCRM Accounts & Contacts instance, to ingest both historic and scheduled data into Experience Platform",
+      "connectionSpec": {
+          "id": "59a4b493-a615-40f9-bd38-f823d0909a2b",
+          "version": "1.0"
+      },
+      "auth": {
+          "specName": "OAuth2 Refresh Code",
+          "params": {
+              "host": "developer.salesfusion.com",
+              "username": "{SUGARCRM_DEVELOPER_ACCOUNT_USERNAME}",
+              "password": "{SUGARCRM_DEVELOPER_ACCOUNT_PASSWORD}"
+          }
+      }
+  }'
 ```
 
 | Property | Description |
@@ -77,7 +77,7 @@ curl -X POST \
 | `description` | An optional value that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
-| `auth.params.host` | The SugarCRM API host *developer.salesfusion.com* |
+| `auth.params.host` | The SugarCRM API host: *developer.salesfusion.com* |
 | `auth.params.username` | Your SugarCRM developer account username. |
 | `auth.params.password` | Your SugarCRM developer account password. |
 
@@ -95,7 +95,7 @@ A successful response returns the newly created base connection, including its u
 ### Explore your source {#explore}
 
 Using the base connection ID you generated in the previous step, you can explore files and directories by performing GET requests.
-Use the following calls to find the path of the file you wish to bring into [!DNL Platform]:
+Use the following calls to find the path of the file you wish to bring into Platform:
 
 **API format**
 
@@ -119,42 +119,45 @@ The [!DNL SugarCRM Accounts & Contacts] supports multiple APIs. Depending on whi
 
 **Request**
 
->[!BEGIN TABS]
+>[!BEGINTABS]
 
 >[!TAB Accounts]
 
-For [!DNL SugarCRM] Accounts API the value for `{SOURCE_PARAMS}` is passed as `{"object_type":"accounts"}`, encoded in base64 it equates to `eyJvYmplY3RfdHlwZSI6ImFjY291bnRzIn0=` as shown below.
+For [!DNL SugarCRM] Accounts API the value for `{SOURCE_PARAMS}` is passed as `{"object_type":"accounts"}`. When encoded in base64, it equates to `eyJvYmplY3RfdHlwZSI6ImFjY291bnRzIn0=` as shown below.
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/f5421911-6f6c-41c7-aafa-5d9d2ce51535/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyJvYmplY3RfdHlwZSI6ImFjY291bnRzIn0=' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
+  'https://platform.adobe.io/data/foundation/flowservice/connections/f5421911-6f6c-41c7-aafa-5d9d2ce51535/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyJvYmplY3RfdHlwZSI6ImFjY291bnRzIn0=' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 >[!TAB Contacts]
 
-For [!DNL SugarCRM] Contacts API the value for `{SOURCE_PARAMS}` is passed as `{"object_type":"contacts"}`, encoded in base64 it equates to `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=` as shown below.
+For [!DNL SugarCRM] Contacts API the value for `{SOURCE_PARAMS}` is passed as `{"object_type":"contacts"}`. When encoded in base64 it equates to `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=` as shown below.
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/f5421911-6f6c-41c7-aafa-5d9d2ce51535/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
+  'https://platform.adobe.io/data/foundation/flowservice/connections/f5421911-6f6c-41c7-aafa-5d9d2ce51535/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 >[!ENDTABS]
 
 **Response**
 
-Similarly depending on which object type you are leveraging the response received is as below:
-*Some records have been truncated to allow for a better presentation.*
+Similarly, depending on which object type you are leveraging the response received is as below:
 
->[!BEGIN TABS]
+>[!NOTE]
+>
+>Some records have been truncated to allow for a better presentation.
+
+>[!BEGINTABS]
 
 >[!TAB Accounts]
 
@@ -340,9 +343,6 @@ A successful response returns a structure as below.
 ```
 
 >[!TAB Contacts]
-
-A successful response returns a structure as below. 
-*Some records have been truncated to allow for a better presentation.*
 
 ```json
 {
@@ -572,7 +572,8 @@ POST /sourceConnections
 The following request creates a source connection for [!DNL SugarCRM Accounts & Contacts]:
 
 Depending on which object type you are leveraging, select from the tabs below:
->[!BEGIN TABS]
+
+>[!BEGINTABS]
 
 >[!TAB Accounts]
 
@@ -580,28 +581,28 @@ For [!DNL SugarCRM] Accounts API the `object_type` property value should be `acc
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "SugarCRM Source Connection",
-        "description": "SugarCRM Source Connection",
-        "baseConnectionId": "f5421911-6f6c-41c7-aafa-5d9d2ce51535",
-        "connectionSpec": {
-            "id": "63d2b27b-69a5-45c9-a7fe-78148a25de3c",
-            "version": "1.0"
-        },
-        "data": {
-            "format": "json"
-        },
-        "params": {
-            "object_type": "accounts",
-            "path": "accounts"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "SugarCRM Source Connection",
+      "description": "SugarCRM Source Connection",
+      "baseConnectionId": "f5421911-6f6c-41c7-aafa-5d9d2ce51535",
+      "connectionSpec": {
+          "id": "63d2b27b-69a5-45c9-a7fe-78148a25de3c",
+          "version": "1.0"
+      },
+      "data": {
+          "format": "json"
+      },
+      "params": {
+          "object_type": "accounts",
+          "path": "accounts"
+      }
+  }'
 ```
 
 >[!TAB Contacts]
@@ -610,28 +611,28 @@ For [!DNL SugarCRM] Contacts API the `object_type` property value should be `con
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "SugarCRM Source Connection",
-        "description": "SugarCRM Source Connection",
-        "baseConnectionId": "f5421911-6f6c-41c7-aafa-5d9d2ce51535",
-        "connectionSpec": {
-            "id": "63d2b27b-69a5-45c9-a7fe-78148a25de3c",
-            "version": "1.0"
-        },
-        "data": {
-            "format": "json"
-        },
-        "params": {
-            "object_type": "contacts",
-            "path": "contacts"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "SugarCRM Source Connection",
+      "description": "SugarCRM Source Connection",
+      "baseConnectionId": "f5421911-6f6c-41c7-aafa-5d9d2ce51535",
+      "connectionSpec": {
+          "id": "63d2b27b-69a5-45c9-a7fe-78148a25de3c",
+          "version": "1.0"
+      },
+      "data": {
+          "format": "json"
+      },
+      "params": {
+          "object_type": "contacts",
+          "path": "contacts"
+      }
+  }'
 ```
 
 >[!ENDTABS]
@@ -673,9 +674,9 @@ For detailed steps on how to create a target dataset, see the tutorial on [creat
 
 ### Create a target connection {#target-connection}
 
-A target connection represents the connection to the destination where the ingested data is to be stored. To create a target connection, you must provide the fixed connection specification ID that corresponds to the [!DNL Data Lake]. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+A target connection represents the connection to the destination where the ingested data is to be stored. To create a target connection, you must provide the fixed connection specification ID that corresponds to the data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-You now have the unique identifiers a target schema a target dataset and the connection spec ID to the [!DNL Data Lake]. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to the data lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
 
 **API format**
 
@@ -689,30 +690,30 @@ The following request creates a target connection for [!DNL SugarCRM Accounts & 
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "SugarCRM Target Connection Generic Rest",
-        "description": "SugarCRM Target Connection Generic Rest",
-        "connectionSpec": {
-            "id": "63d2b27b-69a5-45c9-a7fe-78148a25de3c",
-            "version": "1.0"
-        },
-        "data": {
-            "format": "parquet_xdm",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b156e6f818f923e048199173c45e55e20fd2487f5eb03d22",
-                "version": "1.22"
-            }
-        },
-        "params": {
-            "dataSetId": "6365389d1d37d01c077a81da"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "SugarCRM Target Connection Generic Rest",
+      "description": "SugarCRM Target Connection Generic Rest",
+      "connectionSpec": {
+          "id": "63d2b27b-69a5-45c9-a7fe-78148a25de3c",
+          "version": "1.0"
+      },
+      "data": {
+          "format": "parquet_xdm",
+          "schema": {
+              "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b156e6f818f923e048199173c45e55e20fd2487f5eb03d22",
+              "version": "1.22"
+          }
+      },
+      "params": {
+          "dataSetId": "6365389d1d37d01c077a81da"
+      }
+  }'
 ```
 
 | Property | Description |
@@ -748,107 +749,107 @@ POST /conversion/mappingSets
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "outputSchema": {
-            "schemaRef": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b156e6f818f923e048199173c45e55e20fd2487f5eb03d22",
-                "contentType": "application/vnd.adobe.xed-full+json;version=1"
-            }
-        },
-        "mappings": [
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.account",
-            "destination": "_extconndev.account"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.account_id",
-            "destination": "_extconndev.account_id"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.acount_name",
-            "destination": "_extconndev.account_name"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.account_score",
-            "destination": "_extconndev.account_score"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.billing_city",
-            "destination": "_extconndev.billing_city"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.contacts",
-            "destination": "_extconndev.contacts"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.created_by",
-            "destination": "_extconndev.created_by"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.created_by_id",
-            "destination": "_extconndev.created_by_id"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.created_date",
-            "destination": "_extconndev.created_date"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.custom_score_field",
-            "destination": "_extconndev.custom_score_field"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.key_account",
-            "destination": "_extconndev.key_account"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.owner",
-            "destination": "_extconndev.owner"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.owner_id",
-            "destination": "_extconndev.owner_id"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.phone",
-            "destination": "_extconndev.phone_no"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.updated_by",
-            "destination": "_extconndev.updated_by"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.updated_by_id",
-            "destination": "_extconndev.updated_by_id"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.updated_date",
-            "destination": "_extconndev.updated_date"
-        }
-        ]
-    }'
+  'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "outputSchema": {
+          "schemaRef": {
+              "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b156e6f818f923e048199173c45e55e20fd2487f5eb03d22",
+              "contentType": "application/vnd.adobe.xed-full+json;version=1"
+          }
+      },
+      "mappings": [
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.account",
+          "destination": "_extconndev.account"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.account_id",
+          "destination": "_extconndev.account_id"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.acount_name",
+          "destination": "_extconndev.account_name"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.account_score",
+          "destination": "_extconndev.account_score"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.billing_city",
+          "destination": "_extconndev.billing_city"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.contacts",
+          "destination": "_extconndev.contacts"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.created_by",
+          "destination": "_extconndev.created_by"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.created_by_id",
+          "destination": "_extconndev.created_by_id"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.created_date",
+          "destination": "_extconndev.created_date"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.custom_score_field",
+          "destination": "_extconndev.custom_score_field"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.key_account",
+          "destination": "_extconndev.key_account"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.owner",
+          "destination": "_extconndev.owner"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.owner_id",
+          "destination": "_extconndev.owner_id"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.phone",
+          "destination": "_extconndev.phone_no"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.updated_by",
+          "destination": "_extconndev.updated_by"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.updated_by_id",
+          "destination": "_extconndev.updated_by_id"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.updated_date",
+          "destination": "_extconndev.updated_date"
+      }
+      ]
+  }'
 ```
 
 | Property | Description |
@@ -895,39 +896,39 @@ POST /flows
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/flows' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "SugarCRM Connector Description Flow Generic Rest",
-        "description": "SugarCRM Connector Description Flow Generic Rest",
-        "flowSpec": {
-            "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
-            "version": "1.0"
-        },
-        "sourceConnectionIds": [
-            "8f1fc72a-f562-4a1d-8597-85b5ca1b1cd3"
-        ],
-        "targetConnectionIds": [
-            "6b137bf6-d2a0-48c8-914b-d50f4942eb85"
-        ],
-        "transformations": [
-            {
-                "name": "Mapping",
-                "params": {
-                    "mappingId": "059c69f7207b4d7e9b48c47e2fd966a6",
-                    "mappingVersion": "0"
-                }
-            }
-        ],
-        "scheduleParams": {
-            "startTime": "1625040887",
-            "frequency": "hour",
-            "interval": 1
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "SugarCRM Connector Description Flow Generic Rest",
+      "description": "SugarCRM Connector Description Flow Generic Rest",
+      "flowSpec": {
+          "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
+          "version": "1.0"
+      },
+      "sourceConnectionIds": [
+          "8f1fc72a-f562-4a1d-8597-85b5ca1b1cd3"
+      ],
+      "targetConnectionIds": [
+          "6b137bf6-d2a0-48c8-914b-d50f4942eb85"
+      ],
+      "transformations": [
+          {
+              "name": "Mapping",
+              "params": {
+                  "mappingId": "059c69f7207b4d7e9b48c47e2fd966a6",
+                  "mappingVersion": "0"
+              }
+          }
+      ],
+      "scheduleParams": {
+          "startTime": "1625040887",
+          "frequency": "hour",
+          "interval": 1
+      }
+  }'
 ```
 
 | Property | Description |
