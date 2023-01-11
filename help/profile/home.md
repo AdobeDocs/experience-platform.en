@@ -20,7 +20,7 @@ The relationship between Real-Time Customer Profile and other services within Ex
 
 ### Profile entity composition
 
-A Real-Time Customer Profile is composed of a main entity, called the **primary entity**, and various supporting entities. The primary entity is composed of traits, behaviors, and segment memberships of a profile. Other entities allow the segmentation engine to utilize data outside of the primary entity of the profile, and include the following:
+A Real-Time Customer Profile is composed of a main entity, called the **primary entity**, and various supporting entities. In the context of Experience Platform, the primary entity is typically a **profile entity**, which is composed of traits, behaviors, and segment memberships of an individual person. Other entities allow the segmentation engine to utilize data outside of the primary entity of the profile, and include the following:
 
 - **Dimensional entity**: The entity that is used to simplify the data modelling process for information shared across events or profile records. This is also known as the lookup entity or classification entity.
 - **B2B entity**: Entities that describe the profile's relationship with business-to-business accounts and opportunities.
@@ -30,6 +30,11 @@ A Real-Time Customer Profile is composed of a main entity, called the **primary 
 >[!IMPORTANT]
 >
 >Since dimensional and B2B entities only exist outside the primary entity, these are only used for batch segmentation.
+
+Dimensional and B2B entities are linked to the primary entity through **schema relationships**. Refer to the following documentation for more information:
+
+- [Create a one-to-one schema relationship for lookup entities](../xdm/tutorials/relationship-ui.md)
+- [Create a many-to-one schema relationship for B2B entities](../xdm/tutorials/relationship-b2b.md)
 
 ### Profile data store
 
