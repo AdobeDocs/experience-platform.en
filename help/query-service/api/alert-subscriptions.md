@@ -44,7 +44,26 @@ Retrieve a list of all alerts for an organization sandbox by making a GET reques
 
 ```http
 GET /alert-subscriptions
+GET /alert-subscriptions?{QUERY_PARAMETERS}
 ```
+
+`{QUERY_PARAMETERS}`: (Optional) Parameters added to the request path which configure the results returned in the response. Multiple parameters can be included, separated by ampersands (&). The available parameters are listed below.
+
+**Query parameters**
+
+The following is a list of available query parameters for listing queries. All of these parameters are optional. Making a call to this endpoint with no parameters will retrieve all queries available for your organization.
+
+| Parameter | Description |
+| --------- | ----------- |
+| `orderby` | The field that specifies the order of results. The supported fields are `created` and `updated`. Prepend the property name with `+` for ascending and `-` for descending order. The default is `-created`. Note that the plus sign (`+`) has to be escaped with `%2B`. For example `%2Bcreated` is the value for an ascending created order. |
+| `pagesize` | Use this parameter to control the number of records you want to fetch from the API call per page. The default limit is set to the maximum amount of 50 records per page. |
+| `page` | Indicate the page number of the returned results that you want to see the records for. |
+| `property` | Filter the results based on chosen fields. The filters **must** be HTML escaped. Commas are used to combine multiple sets of filters. The folowing properties allow filtering:
+<br><ul><li>id</li>
+<li>assetId</li>
+<li>status</li>
+<li>alertType</li></ul>
+The supported operators are `==` (equal to). For example, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` will return the alert with a matching ID. |
 
 **Request**
 
@@ -278,7 +297,7 @@ GET /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parameters | Description |
 | -------- | ----------- |
-| `ALERT_TYPE` | Each alert can have three different alert types. They are: <ul><li>`start`: Notifies a user when the query execution has begun.</li><li>`success`: Notifies the user when the query completes.</li><li>`failure`: Notifies the user if the query fails.</li></ul> |
+| `ALERT_TYPE` | This property describes the state of query execution that triggers an alert. The response will only include alert subscription information for alerts of this type. Each alert can have three different alert types. They are: <ul><li>`start`: Notifies a user when the query execution has begun.</li><li>`success`: Notifies the user when the query completes.</li><li>`failure`: Notifies the user if the query fails.</li></ul> |
 | `QUERY_ID` | The unique identifier for the query to be updated. |
 | `SCHEDULE_ID` | The unique identifier for the scheduled query to be updated. |
 
@@ -365,6 +384,15 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 | Parameters | Description |
 | -------- | ----------- |
 | `{EMAIL_ID}` | An email address that is registered to an Adobe account, is used to identify the users subscribed to alerts. |
+| `orderby` | The field that specifies the order of results. The supported fields are `created` and `updated`. Prepend the property name with `+` for ascending and `-` for descending order. The default is `-created`. Note that the plus sign (`+`) has to be escaped with `%2B`. For example `%2Bcreated` is the value for an ascending created order. |
+| `pagesize` | Use this parameter to control the number of records you want to fetch from the API call per page. The default limit is set to the maximum amount of 50 records per page. |
+| `page` | Indicate the page number of the returned results that you want to see the records for. |
+| `property` | Filter the results based on chosen fields. The filters **must** be HTML escaped. Commas are used to combine multiple sets of filters. The folowing properties allow filtering:
+<br><ul><li>id</li>
+<li>assetId</li>
+<li>status</li>
+<li>alertType</li></ul>
+The supported operators are `==` (equal to). For example, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` will return the alert with a matching ID. |
 
 **Request**
 
