@@ -126,7 +126,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Response**
 
-A successful response will return JSON objects containing `path` objects detailing where the diagnostics were saved. The response will return the `path` objects in [JSON Lines](https://jsonlines.org/) format.
+A successful response will return JSON objects containing `path` objects detailing where the diagnostics were saved. The response will return the `path` objects in [JSON Lines](https://jsonlines.readthedocs.io/en/latest/) format.
 
 ```json
 {"path": "F1.json"}
