@@ -11,6 +11,6 @@ In Experience Data Model (XDM), a [union schema](../../schema/composition.md#uni
 
 In some cases, you may be ingesting data that is not necessarily part of a profile, but is nonetheless related to the profile. An example of this kind of data would be a "favorite hotel" field for a customer. Since the attributes of a person's favorite hotel are not attributes of the person themselves, a hotel is best represented by a separate schema based on a custom class rather than [!DNL XDM Individual Profile].
 
-Since union schemas are only based on schemas that share the same class, simply enabling the "Hotels" schema for use in Profile will not include its fields union schema for [!DNL XDM Individual Profile]. Instead, you must define a relationship between "Hotels" and another schema belonging to the union. This involves defining a **relationship field** in a source schema that references the primary identity of a destination schema.
+Since union schemas are only based on schemas that share the same class, simply enabling the "Hotels" schema for use in Profile will not include its fields union schema for [!DNL XDM Individual Profile]. Instead, you must define a relationship between "Hotels" and another schema belonging to the union. This involves defining a **relationship field** in a source schema that references the primary identity of a reference schema.
 
 For detailed steps on defining a relationship between two schemas in the Adobe Experience Platform UI, see the [relationship UI tutorial](../../tutorials/relationship-ui.md).
