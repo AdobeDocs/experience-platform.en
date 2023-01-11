@@ -30,7 +30,7 @@ The first step in using APIs to access [!DNL Data Landing Zone] is to make a GET
 **API format**
 
 ```http
-GET /connectors/landingzone?type=user_drop_zone
+GET /data/foundation/connectors/landingzone?type=user_drop_zone
 ```
 
 | Headers | Description |
