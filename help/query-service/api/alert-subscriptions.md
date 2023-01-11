@@ -58,12 +58,7 @@ The following is a list of available query parameters for listing queries. All o
 | `orderby` | The field that specifies the order of results. The supported fields are `created` and `updated`. Prepend the property name with `+` for ascending and `-` for descending order. The default is `-created`. Note that the plus sign (`+`) has to be escaped with `%2B`. For example `%2Bcreated` is the value for an ascending created order. |
 | `pagesize` | Use this parameter to control the number of records you want to fetch from the API call per page. The default limit is set to the maximum amount of 50 records per page. |
 | `page` | Indicate the page number of the returned results that you want to see the records for. |
-| `property` | Filter the results based on chosen fields. The filters **must** be HTML escaped. Commas are used to combine multiple sets of filters. The folowing properties allow filtering:
-<br><ul><li>id</li>
-<li>assetId</li>
-<li>status</li>
-<li>alertType</li></ul>
-The supported operators are `==` (equal to). For example, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` will return the alert with a matching ID. |
+| `property` | Filter the results based on chosen fields. The filters **must** be HTML escaped. Commas are used to combine multiple sets of filters. The folowing properties allow filtering: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> The supported operators are `==` (equal to). For example, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` will return the alert with a matching ID. |
 
 **Request**
 
@@ -387,12 +382,7 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 | `orderby` | The field that specifies the order of results. The supported fields are `created` and `updated`. Prepend the property name with `+` for ascending and `-` for descending order. The default is `-created`. Note that the plus sign (`+`) has to be escaped with `%2B`. For example `%2Bcreated` is the value for an ascending created order. |
 | `pagesize` | Use this parameter to control the number of records you want to fetch from the API call per page. The default limit is set to the maximum amount of 50 records per page. |
 | `page` | Indicate the page number of the returned results that you want to see the records for. |
-| `property` | Filter the results based on chosen fields. The filters **must** be HTML escaped. Commas are used to combine multiple sets of filters. The folowing properties allow filtering:
-<br><ul><li>id</li>
-<li>assetId</li>
-<li>status</li>
-<li>alertType</li></ul>
-The supported operators are `==` (equal to). For example, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` will return the alert with a matching ID. |
+| `property` | Filter the results based on chosen fields. The filters **must** be HTML escaped. Commas are used to combine multiple sets of filters. The following properties allow filtering: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> The supported operators are `==` (equal to). For example, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` will return the alert with a matching ID. |
 
 **Request**
 
