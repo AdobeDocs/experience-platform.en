@@ -4,19 +4,43 @@ description: Learn how to connect SugarCRM to Adobe Experience Platform using AP
 ---
 # (Beta) [!DNL SugarCRM]
 
-[[!DNL SugarCRM]](https://www.sugarcrm.com/) is a customer relationship management (CRM) system. [!DNL SugarCRM]'s functionality includes sales-force automation, marketing campaigns, customer support, collaboration, Mobile CRM, Social CRM and reporting.
+>[!NOTE]
+>
+>The [!DNL SugarCRM] source is in beta. See the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
-[!DNL SugarCRM Accounts & Contacts] leverages the [!DNL SugarCRM] [Accounts](https://market.apidocs.sugarcrm.com/#b0aeb0cd-80ea-4688-8474-54e4873f32f3) and [Contacts](https://market.apidocs.sugarcrm.com/#308c5025-9478-4de3-8a41-1fc3cff1d8d1) endpoints to retrieve relationship data from [!DNL SugarCRM]. After you bring the data to Experience Platform, you can then execute any analytics.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-[!DNL SugarCRM Accounts & Contacts] uses bearer tokens as an authentication mechanism to communicate with the [!DNL SugarCRM] Account and Contact APIs.
+Experience Platform provides support for ingesting data from a third-party CRM application. Support for CRM providers include [!DNL SugarCRM].
+
+[[!DNL SugarCRM]](https://www.sugarcrm.com/) is a customer relationship management (CRM) system. [!DNL SugarCRM]'s functionality includes sales-force automation, marketing campaigns, customer support, collaboration, Mobile CRM, Social CRM and reporting. 
+
+The [!DNL SugarCRM] source allows you to ingest accounts, contacts, and events data from the following API endpoints:
+
+* [Accounts](https://market.apidocs.sugarcrm.com/#b0aeb0cd-80ea-4688-8474-54e4873f32f3)
+* [Contacts](https://market.apidocs.sugarcrm.com/#308c5025-9478-4de3-8a41-1fc3cff1d8d1)
+* [Events](https://market.apidocs.sugarcrm.com/#516ec3b1-8e70-43d4-8bf2-38a2ae74c0a5)
+
+
+[!DNL SugarCRM] uses bearer tokens as an authentication mechanism to communicate with the [!DNL SugarCRM] Account and Contact APIs and the [!DNL SugarCRM] Events API.
 
 ## IP address allow list
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
 
-
 ## Prerequisites
 
-The first step in creating a [!DNL SugarCRM Accounts & Contacts] source connection is to ensure that you have the below :
-* A [!DNL SugarMarket] *(SugarCRM's product for Marketing Automation)* account. Reach out to your SugarCRM account manager to obtain the same.
+The first step in creating a [!DNL SugarCRM] source connection is to ensure that you have the following:
+
+* A [!DNL SugarMarket] *(SugarCRM's product for Marketing Automation)* account. You must contact your [!DNL SugarCRM] account manager to obtain a valid [!DNL SugarMarket] account if you do not already have one. 
+
 * A unique API username and account separate from any user account associated with the marketing or sales process. This unique username and account combination must have API access permissions. For more information on the process to set up an account, visit the [[!DNL SugarMarket RESTFUL API (sugarcrm.com)]](https://market.apidocs.sugarcrm.com/#intro) documentation.
+
+## Connect [!DNL SugarCRM Accounts & Contacts] to Platform
+
+* [Create a source connection to bring [!DNL SugarCRM Accounts & Contacts] data to Platform using APIs](../../tutorials/api/create/crm/sugarcrm-accounts-contacts.md).
+* [Create a source connection to bring [!DNL SugarCRM Accounts & Contacts] data to Platform using the user interface](../../tutorials/ui/create/crm/sugarcrm-accounts-contacts.md).
+
+## Connect [!DNL SugarCRM Events] to Platform
+
+* [Create a source connection to bring [!DNL SugarCRM Events] data to Platform using APIs](../../tutorials/api/create/crm/sugarcrm-events.md).
+* [Create a source connection to bring [!DNL SugarCRM Events] data to Platform using the user interface](../../tutorials/ui/create/crm/sugarcrm-events.md).
