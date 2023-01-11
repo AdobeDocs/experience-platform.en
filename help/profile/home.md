@@ -33,8 +33,8 @@ A Real-Time Customer Profile is composed of a main entity, called the **primary 
 
 Dimensional and B2B entities are linked to the primary entity through **schema relationships**. Refer to the following documentation for more information:
 
-* [Create a one-to-one schema relationship for lookup entities](../xdm/tutorials/relationship-ui.md)
-* [Create a many-to-one schema relationship for B2B entities](../xdm/tutorials/relationship-b2b.md)
+- [Create a one-to-one schema relationship for lookup entities](../xdm/tutorials/relationship-ui.md)
+- [Create a many-to-one schema relationship for B2B entities](../xdm/tutorials/relationship-b2b.md)
 
 ### Profile data store
 
