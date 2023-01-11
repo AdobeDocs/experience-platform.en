@@ -291,7 +291,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ### Cancel or soft delete a query
 
-You can request to cancel or soft-delete a specified query by making a PATCH request to the `/queries` endpoint and providing the query's `id` value in the request path.
+You can request to cancel or soft delete a specified query by making a PATCH request to the `/queries` endpoint and providing the query's `id` value in the request path.
 
 **API format**
 
@@ -322,7 +322,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Property | Description |
 | -------- | ----------- |
-| `op` | The type of operation to perform on the resource. Accepted values are `cancel` and `soft_delete`. To cancel the query, you must set the op parameter with the value `cancel `. Note that the soft-delete operation stops the query from being returned on GET requests but does not delete it from the system. |
+| `op` | The type of operation to perform on the resource. Accepted values are `cancel` and `soft_delete`. To cancel the query, you must set the op parameter with the value `cancel `. Note that the soft delete operation stops the query from being returned on GET requests but does not delete it from the system. |
 
 **Response**
 
