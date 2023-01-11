@@ -720,7 +720,7 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | The name of your target connection. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
 | `description` | An optional value that you can include to provide more information on your target connection. |
-| `connectionSpec.id` | The connection specification ID that corresponds to [!DNL Data Lake]. This fixed ID is: `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
+| `connectionSpec.id` | The connection specification ID that corresponds to data lake. This fixed ID is: `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
 | `data.format` | The format of the [!DNL SugarCRM Accounts & Contacts] data that you want to ingest. |
 | `params.dataSetId` | The target dataset ID retrieved in a previous step. |
 

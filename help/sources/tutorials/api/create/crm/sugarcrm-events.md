@@ -10,8 +10,8 @@ The following tutorial walks you through the steps to create a [!DNL SugarCRM Ev
 
 This guide requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to [!DNL SugarCRM] using the [!DNL Flow Service] API.
 
@@ -47,28 +47,28 @@ The following request creates a base connection for [!DNL SugarCRM Events]:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "SugarCRM Events base connection",
-        "description": "Create a live inbound connection to your SugarCRM Events instance, to ingest both historic and scheduled data into Experience Platform",
-        "connectionSpec": {
-            "id": "59a4b493-a615-40f9-bd38-f823d0909a2b",
-            "version": "1.0"
-        },
-        "auth": {
-            "specName": "OAuth2 Refresh Code",
-            "params": {
-                "host": "developer.salesfusion.com",
-                "username": "{SUGARCRM_DEVELOPER_ACCOUNT_USERNAME}",
-                "password": "{SUGARCRM_DEVELOPER_ACCOUNT_PASSWORD}"
-            }
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "SugarCRM Events base connection",
+      "description": "Create a live inbound connection to your SugarCRM Events instance, to ingest both historic and scheduled data into Experience Platform",
+      "connectionSpec": {
+          "id": "59a4b493-a615-40f9-bd38-f823d0909a2b",
+          "version": "1.0"
+      },
+      "auth": {
+          "specName": "OAuth2 Refresh Code",
+          "params": {
+              "host": "developer.salesfusion.com",
+              "username": "{SUGARCRM_DEVELOPER_ACCOUNT_USERNAME}",
+              "password": "{SUGARCRM_DEVELOPER_ACCOUNT_PASSWORD}"
+          }
+      }
+  }'
 ```
 
 | Property | Description |
@@ -77,7 +77,7 @@ curl -X POST \
 | `description` | An optional value that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
-| `auth.params.host` | The SugarCRM API host *developer.salesfusion.com* |
+| `auth.params.host` | The SugarCRM API host: *developer.salesfusion.com* |
 | `auth.params.username` | Your SugarCRM developer account username. |
 | `auth.params.password` | Your SugarCRM developer account password. |
 
@@ -118,11 +118,11 @@ When performing GET requests to explore your source's file structure and content
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/f5421911-6f6c-41c7-aafa-5d9d2ce51535/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=e30=' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
+  'https://platform.adobe.io/data/foundation/flowservice/connections/f5421911-6f6c-41c7-aafa-5d9d2ce51535/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=e30=' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Response**
@@ -298,26 +298,26 @@ The following request creates a source connection for [!DNL SugarCRM Events]:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "SugarCRM Source Connection",
-        "description": "SugarCRM Source Connection",
-        "baseConnectionId": "f5421911-6f6c-41c7-aafa-5d9d2ce51535",
-        "connectionSpec": {
-            "id": "63d2b27b-69a5-45c9-a7fe-78148a25de3c",
-            "version": "1.0"
-        },
-        "data": {
-            "format": "json"
-        },
-        "params": {
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "SugarCRM Source Connection",
+      "description": "SugarCRM Source Connection",
+      "baseConnectionId": "f5421911-6f6c-41c7-aafa-5d9d2ce51535",
+      "connectionSpec": {
+          "id": "63d2b27b-69a5-45c9-a7fe-78148a25de3c",
+          "version": "1.0"
+      },
+      "data": {
+          "format": "json"
+      },
+      "params": {
+      }
+  }'
 ```
 
 | Property | Description |
@@ -355,9 +355,9 @@ For detailed steps on how to create a target dataset, see the tutorial on [creat
 
 ### Create a target connection {#target-connection}
 
-A target connection represents the connection to the destination where the ingested data is to be stored. To create a target connection, you must provide the fixed connection specification ID that corresponds to the [!DNL Data Lake]. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+A target connection represents the connection to the destination where the ingested data is to be stored. To create a target connection, you must provide the fixed connection specification ID that corresponds to the data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-You now have the unique identifiers a target schema a target dataset and the connection spec ID to the [!DNL Data Lake]. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to the data lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
 
 **API format**
 
@@ -371,37 +371,37 @@ The following request creates a target connection for [!DNL SugarCRM Events]:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "SugarCRM Target Connection Generic Rest",
-        "description": "SugarCRM Target Connection Generic Rest",
-        "connectionSpec": {
-            "id": "63d2b27b-69a5-45c9-a7fe-78148a25de3c",
-            "version": "1.0"
-        },
-        "data": {
-            "format": "parquet_xdm",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b156e6f818f923e048199173c45e55e20fd2487f5eb03d22",
-                "version": "1.22"
-            }
-        },
-        "params": {
-            "dataSetId": "6365389d1d37d01c077a81da"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "SugarCRM Target Connection Generic Rest",
+      "description": "SugarCRM Target Connection Generic Rest",
+      "connectionSpec": {
+          "id": "63d2b27b-69a5-45c9-a7fe-78148a25de3c",
+          "version": "1.0"
+      },
+      "data": {
+          "format": "parquet_xdm",
+          "schema": {
+              "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b156e6f818f923e048199173c45e55e20fd2487f5eb03d22",
+              "version": "1.22"
+          }
+      },
+      "params": {
+          "dataSetId": "6365389d1d37d01c077a81da"
+      }
+  }'
 ```
 
 | Property | Description |
 | -------- | ----------- |
 | `name` | The name of your target connection. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
 | `description` | An optional value that you can include to provide more information on your target connection. |
-| `connectionSpec.id` | The connection specification ID that corresponds to [!DNL Data Lake]. This fixed ID is: `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
+| `connectionSpec.id` | The connection specification ID that corresponds to data lake. This fixed ID is: `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
 | `data.format` | The format of the [!DNL SugarCRM Events] data that you want to ingest. |
 | `params.dataSetId` | The target dataset ID retrieved in a previous step. |
 
@@ -430,97 +430,97 @@ POST /conversion/mappingSets
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "outputSchema": {
-            "schemaRef": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b156e6f818f923e048199173c45e55e20fd2487f5eb03d22",
-                "contentType": "application/vnd.adobe.xed-full+json;version=1"
-            }
-        },
-        "mappings": [
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.created_by",
-            "destination": "_extconndev.created_by"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.created_by_id",
-            "destination": "_extconndev.created_by_id"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.created_date",
-            "destination": "_extconndev.created_date"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.name",
-            "destination": "_extconndev.name_event"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.event_id",
-            "destination": "_extconndev.id_event"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.event_id",
-            "destination": "_id"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.sessions",
-            "destination": "_extconndev.sessions"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.updated_by",
-            "destination": "_extconndev.updated_by"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.updated_by_id",
-            "destination": "_extconndev.updated_by_id"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.updated_date",
-            "destination": "_extconndev.updated_date"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.updated_date",
-            "destination": "timestamp"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.event",
-            "destination": "_extconndev.event"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.description",
-            "destination": "_extconndev.description"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.folder_id",
-            "destination": "_extconndev.folder_id"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.status",
-            "destination": "_extconndev.status"
-        }
-        ]
-    }'
+  'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "outputSchema": {
+          "schemaRef": {
+              "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b156e6f818f923e048199173c45e55e20fd2487f5eb03d22",
+              "contentType": "application/vnd.adobe.xed-full+json;version=1"
+          }
+      },
+      "mappings": [
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.created_by",
+          "destination": "_extconndev.created_by"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.created_by_id",
+          "destination": "_extconndev.created_by_id"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.created_date",
+          "destination": "_extconndev.created_date"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.name",
+          "destination": "_extconndev.name_event"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.event_id",
+          "destination": "_extconndev.id_event"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.event_id",
+          "destination": "_id"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.sessions",
+          "destination": "_extconndev.sessions"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.updated_by",
+          "destination": "_extconndev.updated_by"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.updated_by_id",
+          "destination": "_extconndev.updated_by_id"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.updated_date",
+          "destination": "_extconndev.updated_date"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.updated_date",
+          "destination": "timestamp"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.event",
+          "destination": "_extconndev.event"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.description",
+          "destination": "_extconndev.description"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.folder_id",
+          "destination": "_extconndev.folder_id"
+      },
+      {
+          "sourceType": "ATTRIBUTE",
+          "source": "results.status",
+          "destination": "_extconndev.status"
+      }
+      ]
+  }'
 ```
 
 | Property | Description |
@@ -567,39 +567,39 @@ POST /flows
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/flows' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "SugarCRM Connector Description Flow Generic Rest",
-        "description": "SugarCRM Connector Description Flow Generic Rest",
-        "flowSpec": {
-            "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
-            "version": "1.0"
-        },
-        "sourceConnectionIds": [
-            "8f1fc72a-f562-4a1d-8597-85b5ca1b1cd3"
-        ],
-        "targetConnectionIds": [
-            "6b137bf6-d2a0-48c8-914b-d50f4942eb85"
-        ],
-        "transformations": [
-            {
-                "name": "Mapping",
-                "params": {
-                    "mappingId": "d3845beaceeb49669228973f5f937f89",
-                    "mappingVersion": "0"
-                }
-            }
-        ],
-        "scheduleParams": {
-            "startTime": "1625040887",
-            "frequency": "hour",
-            "interval": 1
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "SugarCRM Connector Description Flow Generic Rest",
+      "description": "SugarCRM Connector Description Flow Generic Rest",
+      "flowSpec": {
+          "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
+          "version": "1.0"
+      },
+      "sourceConnectionIds": [
+          "8f1fc72a-f562-4a1d-8597-85b5ca1b1cd3"
+      ],
+      "targetConnectionIds": [
+          "6b137bf6-d2a0-48c8-914b-d50f4942eb85"
+      ],
+      "transformations": [
+          {
+              "name": "Mapping",
+              "params": {
+                  "mappingId": "d3845beaceeb49669228973f5f937f89",
+                  "mappingVersion": "0"
+              }
+          }
+      ],
+      "scheduleParams": {
+          "startTime": "1625040887",
+          "frequency": "hour",
+          "interval": 1
+      }
+  }'
 ```
 
 | Property | Description |
