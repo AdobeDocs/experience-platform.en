@@ -47,7 +47,9 @@ GET /alert-subscriptions
 GET /alert-subscriptions?{QUERY_PARAMETERS}
 ```
 
-`{QUERY_PARAMETERS}`: (Optional) Parameters added to the request path which configure the results returned in the response. Multiple parameters can be included, separated by ampersands (&). The available parameters are listed below.
+| Property | Description |
+| --------- | ----------- |
+| `{QUERY_PARAMETERS}` | (Optional) Parameters added to the request path which configure the results returned in the response. Multiple parameters can be included, separated by ampersands (&). The available parameters are listed below. |
 
 **Query parameters**
 
