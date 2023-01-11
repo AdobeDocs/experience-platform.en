@@ -1,15 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-solution: Experience Platform
 title: Create a source connection and dataflow for SugarCRM Events using the Flow Service API
-topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to SugarCRM Events using the Flow Service API.
-hide: true
-hidefromtoc: true
 ---
 # Create a source connection and dataflow for [!DNL SugarCRM Events] using the Flow Service API
 
 The following tutorial walks you through the steps to create a [!DNL SugarCRM Events] source connection and create a dataflow to bring [[!DNL SugarCRM]](https://www.sugarcrm.com/) Events data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+## Getting started
+
+This guide requires a working understanding of the following components of Experience Platform:
+
+* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+
+The following sections provide additional information that you will need to know in order to successfully connect to [!DNL SugarCRM] using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 
@@ -17,13 +21,13 @@ In order to connect [!DNL SugarCRM Events] to Platform, you must provide values 
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| *`Host`* | The SugarCRM API endpoint the source connects to. | `developer.salesfusion.com` |
-| *`Username`* | Your SugarCRM developer account username. | `abc.def@example.com@sugarmarketdemo000.com` |
-| *`Password`* | Your SugarCRM developer account password. | `123456789` |
+| `host` | The SugarCRM API endpoint the source connects to. | `developer.salesfusion.com` |
+| `username` | Your SugarCRM developer account username. | `abc.def@example.com@sugarmarketdemo000.com` |
+| `password` | Your SugarCRM developer account password. | `123456789` |
 
 ## Connect [!DNL SugarCRM Events] to Platform using the [!DNL Flow Service] API
 
-The following tutorial walks you through the steps to create a [!DNL SugarCRM Events] source connection and create a dataflow to bring [[!DNL SugarCRM]](https://www.sugarcrm.com/) Events data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following outlines the steps you need to make in order to authenticate your [!DNL SugarCRM] source, create a source connection, and create a dataflow to bring your events data to Experience Platform.
 
 ### Create a base connection {#base-connection}
 
