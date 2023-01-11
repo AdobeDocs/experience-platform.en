@@ -256,9 +256,12 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
-    "sql": "SELECT * FROM accounts LIMIT 20;",
-    "name": "Sample query template"
- }'
+    "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
+    "name": "Sample query template",
+    "queryParameters": {
+            user_id : {USER_ID}
+        }
+    }'
 ```
 
 | Property | Description |
