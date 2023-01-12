@@ -74,7 +74,7 @@ You can make a connection using expiring or non-expiring credentials. To make a 
 |---|---|
 |**[!UICONTROL Name]**| Create a name for your connection. You are recommended to provide a human-friendly name to recognize the connection. |
 |**[!UICONTROL Database Server]**| This is your Experience Platform **[!UICONTROL Host]** credential. |
-|**[!UICONTROL Database Port]**| The port for [!DNL Query Service]. You must use port **80** to connect with [!DNL Query Service].|
+|**[!UICONTROL Database Port]**| The port for [!DNL Query Service]. You must use port **80** or **5432** to connect with [!DNL Query Service].|
 |**[!UICONTROL Database]**| Use your Experience Platform **[!UICONTROL Database]** credential value: `prod:all`.|
 |**[!UICONTROL Database Userid]**| This is your Platform organization Id. Use your Experience Platform **[!UICONTROL Username]** credential value. The ID will be in the format of `ORG_ID@AdobeOrg`.| 
 |**[!UICONTROL Database Password]**| This alphanumeric string is your Experience Platform **[!UICONTROL Password]** credential. If you want to use non-expiring credentials, this value is the concatenated arguments from the `technicalAccountID` and the `credential` downloaded in the configuration JSON file. The password value takes the form: {technicalAccountId}:{credential}. The configuration JSON file for non-expiring credentials is a one-time download during their initialization that Adobe does not keep a copy of. |
