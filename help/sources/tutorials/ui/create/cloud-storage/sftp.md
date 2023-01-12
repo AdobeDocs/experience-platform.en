@@ -38,12 +38,14 @@ In order to connect to [!DNL SFTP], you must provide values for the following co
 | `privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA. |
 | `passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
 | `maxConcurrentConnections` | This parameter allows you to specify a maximum limit for the number of concurrent connections Platform will create when connecting to your SFTP server. You must set this value to be less than the limit set by SFTP. **Note**: When this setting is enabled for an existing SFTP account, it will only affect future dataflows and not existing dataflows. |
+| Container | The name of the container that you want to designate access to. When creating a new account with the [!DNL SFTP] source, you can provide a container name to specify user access to sub folder of your choice. |
+| Folder path | The path to the folder that you want to provide access to. |
 
 Once you have gathered your required credentials, you can follow the steps below to create a new [!DNL SFTP] account to connect to Platform.
 
 ## Connect to your [!DNL SFTP] server
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an inbound account with.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -61,31 +63,31 @@ To connect an existing account, select the FTP or SFTP account you want to conne
 
 ### New account
 
-If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name and an optional description for your new [!DNL SFTP] account.
-
-![The new account screen for SFTP](../../../../images/tutorials/create/sftp/new.png)
-
-#### Authenticate using password
-
-[!DNL SFTP] supports different authentication types for access. Under **[!UICONTROL Account authentication]** select **[!UICONTROL Password]** and then provide the host and port values to connect to, alongside your username and password.
-
-![The new account screen for the SFTP source using basic authentication](../../../../images/tutorials/create/sftp/password.png)
-
-#### Authenticate using SSH public key
-
-To use SSH public key-based credentials, select **[!UICONTROL SSH public key]**  and then provide your host and port values, as well as your private key content and passphrase combination.
-
 >[!IMPORTANT]
 >
 >SFTP supports an RSA or DSA type OpenSSH key. Ensure that your key file content starts with `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` and ends with `"-----END [RSA/DSA] PRIVATE KEY-----"`. If the private key file is a PPK-format file, use the PuTTY tool to convert from PPK to OpenSSH format.
 
+If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name and an optional description for your new [!DNL SFTP] account.
+
+![The new account screen for SFTP](../../../../images/tutorials/create/sftp/new.png)
+
+The [!DNL SFTP] source supports both basic authentication and authentication via SSH public key.
+
+>[!BEGINTABS]
+
+>[!TAB Basic authentication]
+
+To use basic authentication, select **[!UICONTROL Password]** and then provide the host and port values to connect to, alongside your username and password. During this step, you can also designate the container name and path to the sub folder that you want access to. When finished, select **[!UICONTROL Connect to source]**.
+
+![The new account screen for the SFTP source using basic authentication](../../../../images/tutorials/create/sftp/password.png)
+
+>[!TAB SSH public key authentication]
+
+To use SSH public key-based credentials, select **[!UICONTROL SSH public key]**  and then provide your host and port values, as well as your private key content and passphrase combination. During this step, you can also designate the container name and path to the sub folder that you want access to. When finished, select **[!UICONTROL Connect to source]**.
+
 ![The new account screen for the SFTP source using SSH public key.](../../../../images/tutorials/create/sftp/ssh.png)
 
-| Credential | Description |
-| ---------- | ----------- |
-| Private key content | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA. |
-| Passphrase | Specifies the pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as its value. |
-
+>[!ENDTABS]
 
 ## Next steps
 
