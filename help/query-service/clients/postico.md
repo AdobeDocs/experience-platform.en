@@ -15,7 +15,7 @@ This document covers the steps for connecting [!DNL Postico] with Adobe Experien
 > 
 > Additionally, [!DNL Postico] is **only** available on macOS devices.
 
-To connect [!DNL Postico] to Query Service, open [!DNL Postico] and select **[!DNL New Favorite]**. The dialog for connection settings appears. From here, you can enter parameter values to connect with Adobe Experience Platform. Enter the connection settings listed below. Instructions on how to [connect to a PostgreSQL server with Postico]() are also available from the official Postico website.
+To connect [!DNL Postico] to Query Service, open [!DNL Postico] and select **[!DNL New Favorite]**. The dialog for connection settings appears. From here, you can enter parameter values to connect with Adobe Experience Platform. Enter the connection settings listed below. Instructions on how to [connect to a PostgreSQL server with Postico](https://eggerapps.at/postico/docs/v1.5.21/favorite-window.html) are also available from the official Postico website.
 
 | Connection parameter  | Description |
 |---|---|
