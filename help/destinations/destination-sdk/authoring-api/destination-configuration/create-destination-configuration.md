@@ -9,7 +9,7 @@ title: Create a destination configuration
 >
 >**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destinations`
 
-This page exemplifies the API request and payload that you can use to create your own destination configuration, using the `/authoring/destination-servers` API endpoint.
+This page exemplifies the API request and payload that you can use to create your own destination configuration, using the `/authoring/destinations` API endpoint.
 
 For a detailed description of the capabilities that you can configure through this endpoint, read the following articles:
 
