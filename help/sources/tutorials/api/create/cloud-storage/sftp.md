@@ -46,7 +46,7 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-The [!DNL SFTP] source supports both basic authentication and authentication via SSH public key.
+The [!DNL SFTP] source supports both basic authentication and authentication via SSH public key. During this step, you can also designate the path to the sub folder that you want to provide access to.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL SFTP] authentication credentials as part of the request parameters.
 

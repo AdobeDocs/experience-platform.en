@@ -38,11 +38,11 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
+The [!DNL Blob] source supports both connection string and shared access signature (SAS) authentication. A shared access signature (SAS) URI allows for secure delegated authorization to your [!DNL Blob] account. You can use SAS to create authentication credentials with varying degrees of access, as a SAS-based authentication allows you to set permissions, start and expiry dates, as well as provisions to specific resources.
+
+During this step, you can also designate the sub folders that your account will have access to by defining the name of the container and the path to the sub folder.
+
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Blob] authentication credentials as part of the request parameters.
-
-### Create a [!DNL Blob] base connection using connection string-based authentication
-
-To create a [!DNL Blob] base connection using connection string-based authentication, make a POST request to the [!DNL Flow Service] API while providing your [!DNL Blob] `connectionString`.
 
 **API format**
 
@@ -51,6 +51,10 @@ POST /connections
 ```
 
 **Request**
+
+>[!BEGINTABS]
+
+>[!TAB Connection String]
 
 The following request creates a base connection for [!DNL Blob] using connection string-based authentication:
 
@@ -68,7 +72,9 @@ curl -X POST \
       "auth": {
           "specName": "ConnectionString",
           "params": {
-              "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
+              "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}",
+              "container": "acme-blob-container",
+              "folderPath": "/acme/customers/salesData"
           }
       },
       "connectionSpec": {
@@ -83,61 +89,44 @@ curl -X POST \
 |   `auth.params.connectionString` | The connection string required to access data in your Blob storage. The Blob connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 |   `connectionSpec.id` | The Blob storage connection specification ID is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
-**Response**
-
-A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required in the next step to create a source connection.
-
-```json
-{
-    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
-    "etag": "\"1700c57b-0000-0200-0000-5e3b3f440000\""
-}
-```
-
-### Create a [!DNL Blob] base connection using shared access signature URI
-
-A shared access signature (SAS) URI allows for secure delegated authorization to your [!DNL Blob] account. You can use SAS to create authentication credentials with varying degrees of access, as a SAS-based authentication allows you to set permissions, start and expiry dates, as well as provisions to specific resources.
+>[!TAB SAS URI Authentication]
 
 To create a [!DNL Blob] blob connection using shared access signature URI, make a POST request to the [!DNL Flow Service] API while providing values for your [!DNL Blob] `sasUri`.
-
-**API format**
-
-```http
-POST /connections
-```
-
-**Request**
 
 The following request creates a base connection for [!DNL Blob] using shared access signature URI:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Azure Blob source connection using SAS URI",
-        "description": "Azure Blob source connection using SAS URI",
-        "auth": {
-            "specName": "SAS URI Authentication",
-            "params": {
-                "sasUri": "https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>"
-            }
-        },
-        "connectionSpec": {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Azure Blob source connection using SAS URI",
+      "description": "Azure Blob source connection using SAS URI",
+      "auth": {
+          "specName": "SAS URI Authentication",
+          "params": {
+              "sasUri": "https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>",
+              "container": "acme-blob-container",
+              "folderPath": "/acme/customers/salesData"
+          }
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Property | Description |
 | -------- | ----------- |
 |   `auth.params.connectionString` | The SAS URI required to access data in your [!DNL Blob] storage. The [!DNL Blob] SAS URI pattern is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>`. |
 |   `connectionSpec.id` | The [!DNL Blob] storage connection specification ID is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+
+>[!ENDTABS]
 
 **Response**
 
