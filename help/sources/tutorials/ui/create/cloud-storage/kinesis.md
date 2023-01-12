@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
 title: Create an Amazon Kinesis  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create an Amazon Kinesis source connection using the Adobe Experience Platform UI.
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880

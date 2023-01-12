@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segment;Segment;Segments;segments
 solution: Experience Platform
 title: Segmentation Service Overview
-topic-legacy: overview
 description: Learn about Adobe Experience Platform Segmentation Service and the role it plays in the Platform ecosystem.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 ---

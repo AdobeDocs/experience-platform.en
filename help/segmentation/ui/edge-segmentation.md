@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;edge segmentation;Segmentation;Segmentation Service;segmentation service;ui guide;streaming edge;
 solution: Experience Platform
 title: Edge Segmentation UI Guide
-topic-legacy: ui guide
 description: Edge segmentation is the ability to evaluate segments in Platform instantaneously on the edge, enabling same page and next page personalization use cases.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 ---

@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;ip address;ip addresses;ip add
 description: IP addresses must be added to an allow list prior to working with source connectors.
 solution: Experience Platform
 title: IP Address Allow List for Source Connections
-topic-legacy: overview
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 ---
 # IP address allow list

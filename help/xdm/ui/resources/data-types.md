@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;ui;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create;data type;data types;
 solution: Experience Platform
 title: Create and Edit Data Types Using the UI
-topic-legacy: tutorial
 type: Tutorial
 description: Learn how to create and edit data types in the Experience Platform user interface.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b

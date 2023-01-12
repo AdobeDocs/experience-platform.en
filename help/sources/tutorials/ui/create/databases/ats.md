@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Azure Table Storage;azure table storage;ats;ATS
 solution: Experience Platform
 title: Create an Azure Table Storage  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create an Azure Table Storage source connection using the Adobe Experience Platform UI.
 exl-id: 045cb954-e3e1-439d-a3cd-170d688dfbc8

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;OneTrust;onetrust;consent;consent and preferences;compliance
 solution: Experience Platform
 title: (Beta) OneTrust Integration Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect OneTrust Integration to Adobe Experience Platform using APIs or the user interface.
 exl-id: f2229d4d-8aa6-483a-9156-403309f80007
 ---

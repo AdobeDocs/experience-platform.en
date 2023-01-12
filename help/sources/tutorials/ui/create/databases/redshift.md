@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Amazon Redshift;amazon redshift;Redshift;redshift
 solution: Experience Platform
 title: Create an Amazon Redshift  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Amazon Redshift source connection using the Adobe Experience Platform UI.
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b

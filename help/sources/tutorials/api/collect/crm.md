@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;crm;CRM
 solution: Experience Platform
 title: Create a Dataflow for CRM Sources Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party CRM system and bringing them in to Platform using source connectors and APIs.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a

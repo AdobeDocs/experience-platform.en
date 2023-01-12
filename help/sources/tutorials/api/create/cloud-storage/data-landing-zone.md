@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;
 solution: Experience Platform
 title: Connect Data Landing Zone to Adobe Experience Platform using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Data Landing Zone using the Flow Service API.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
@@ -31,7 +30,7 @@ The first step in using APIs to access [!DNL Data Landing Zone] is to make a GET
 **API format**
 
 ```http
-GET /connectors/landingzone?type=user_drop_zone
+GET /data/foundation/connectors/landingzone?type=user_drop_zone
 ```
 
 | Headers | Description |
@@ -75,7 +74,7 @@ To retrieve credentials for a [!DNL Data Landing Zone], make a GET request to th
 **API format**
 
 ```http
-GET /connectors/landingzone/credentials?type=user_drop_zone
+GET /data/foundation/connectors/landingzone/credentials?type=user_drop_zone
 ```
 
 **Request**
@@ -119,7 +118,7 @@ You can update your `SASToken` by making a POST request to the `/credentials` en
 **API format**
 
 ```http
-POST /connectors/landingzone/credentials?type=user_drop_zone&action=refresh
+POST /data/foundation/connectors/landingzone/credentials?type=user_drop_zone&action=refresh
 ```
 
 | Headers | Description |

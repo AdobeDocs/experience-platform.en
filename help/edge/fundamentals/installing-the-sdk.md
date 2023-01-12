@@ -14,7 +14,7 @@ There are three supported ways to use Adobe Experience Platform Web SDK:
 
 ## Option 1: Installing the tag extension
 
-For documentation on the tag extension, see the [launch documentation](../../tags/extensions/client/sdk/overview.md)
+For documentation on the tag extension, see the [Tags documentation](../../tags/extensions/client/sdk/overview.md)
 
 ## Option 2: Installing the prebuilt standalone version
 

@@ -1,7 +1,6 @@
 ---
 solution: Experience Platform
 title: Industry Data Models Overview
-topic-legacy: overview
 description: Learn about the standardized data models for various industry verticals that can be constructed using standard Experience Data Model (XDM) components.
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
 ---

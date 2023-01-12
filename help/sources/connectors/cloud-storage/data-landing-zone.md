@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Data Landing Zone Source
-topic-legacy: overview
 description: Learn how to connect Data Landing Zone to Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
 ---
