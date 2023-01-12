@@ -70,7 +70,7 @@ The main drawback of using `identityMap` is that identities become embedded in t
 
 >[!NOTE]
 >
->A schema that uses `identityMap` can be used as a source schema in a relationship, but cannot be used as a destination schema. This is because all destination schemas must have a visible identity that can be mapped in a reference field within the source schema. Refer to the UI guide on [relationships](../tutorials/relationship-ui.md) for more information on the requirements of source and destination schemas.
+>A schema that uses `identityMap` can be used as a source schema in a relationship, but cannot be used as a reference schema. This is because all reference schemas must have a visible identity that can be mapped in a reference field within the source schema. Refer to the UI guide on [relationships](../tutorials/relationship-ui.md) for more information on the requirements of source and reference schemas.
 
 However, identity maps can be particularly useful if you are bringing in data from sources that store identities together (such as [!DNL Airship] or Adobe Audience Manager), or when there are a variable number of identities for a schema. In addition, identity maps are required if you are using the [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
@@ -81,7 +81,7 @@ An example of a simple identity map would look like the following:
   "email": [
     {
       "id": "jsmith@example.com",
-      "primary": false
+      "primary": true
     }
   ],
   "ECID": [
@@ -94,10 +94,10 @@ An example of a simple identity map would look like the following:
       "primary": false
     }
   ],
-  "loyaltyId": [
+  "CRMID": [
     {
       "id": "2e33192000007456-0365c00000000000",
-      "primary": true
+      "primary": false
     }
   ]
 }
@@ -191,7 +191,7 @@ Field groups define which class(es) they are compatible with based on the behavi
 
 [!DNL Experience Platform] includes many standard Adobe field groups while also allowing vendors to define field groups for their users, and individual users to define field groups for their own specific concepts.
 
-For example, to capture details such as "[!UICONTROL First Name]" and "[!UICONTROL Home Address]" for your "[!UICONTROL Loyalty Members]" schema, you would be able to use standard field groups that define those common concepts. However, concepts that are specific to less-common use cases (such as "[!UICONTROL Loyalty Program Level]") often do not have a pre-defined field group. In this case, you must define your own field group to capture this information.
+For example, to capture details such as "[!UICONTROL First Name]" and "[!UICONTROL Home Address]" for your "[!UICONTROL Loyalty Members]" schema, you would be able to use standard field groups that define those common concepts. However, concepts that are more specific to your organization (such as custom loyalty program details or product attributes) that may not be covered by standard field groups. In this case, you must define your own field group to capture this information.
 
 >[!NOTE]
 >
