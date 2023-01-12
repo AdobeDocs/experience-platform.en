@@ -1,8 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Azure;azure blob;blob;Blob
-solution: Experience Platform
 title: Create an Azure Blob Base Connection Using the Flow Service API
-type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Azure Blob using the Flow Service API.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
 ---
@@ -29,6 +26,8 @@ In order for [!DNL Flow Service] to connect with your [!DNL Blob] storage, you m
 | ---------- | ----------- |
 | `connectionString` | A string that contains the authorization information necessary to authenticate [!DNL Blob] to Experience Platform. The [!DNL Blob] connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. For more information about connection strings, see this [!DNL Blob] document on [configuring connection strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
 | `sasUri` | The shared access signature URI that you can use as an alternative authentication type to connect your [!DNL Blob] account. The [!DNL Blob] SAS URI pattern is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` For more information, see this [!DNL Blob] document on [shared access signature URIs](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication).  |
+| `container` | The name of the container that you want to designate access to. When creating a new account with the [!DNL Blob] source, you can provide a container name to specify user access to sub folder of your choice. |
+| `folderPath` | The path to the folder that you want to provide access to. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Blob] is: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 ### Using Platform APIs
@@ -57,26 +56,26 @@ The following request creates a base connection for [!DNL Blob] using connection
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Azure Blob connection using connectionString",
-        "description": "Azure Blob connection using connectionString",
-        "auth": {
-            "specName": "ConnectionString",
-            "params": {
-                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
-            }
-        },
-        "connectionSpec": {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Azure Blob connection using connectionString",
+      "description": "Azure Blob connection using connectionString",
+      "auth": {
+          "specName": "ConnectionString",
+          "params": {
+              "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
+          }
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Property | Description |

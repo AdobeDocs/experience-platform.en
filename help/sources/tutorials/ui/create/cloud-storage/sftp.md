@@ -1,8 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;SFTP;sftp
-solution: Experience Platform
 title: Create an SFTP  Source Connection in the UI
-type: Tutorial
 description: Learn how to create an SFTP source connection using the Adobe Experience Platform UI.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
 ---
@@ -38,8 +35,7 @@ In order to connect to [!DNL SFTP], you must provide values for the following co
 | `privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA. |
 | `passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
 | `maxConcurrentConnections` | This parameter allows you to specify a maximum limit for the number of concurrent connections Platform will create when connecting to your SFTP server. You must set this value to be less than the limit set by SFTP. **Note**: When this setting is enabled for an existing SFTP account, it will only affect future dataflows and not existing dataflows. |
-| Container | The name of the container that you want to designate access to. When creating a new account with the [!DNL SFTP] source, you can provide a container name to specify user access to sub folder of your choice. |
-| Folder path | The path to the folder that you want to provide access to. |
+| Folder path | The path to the folder that you want to provide access to. [!DNL SFTP] source, you can provide the folder path to specify user access to sub folder of your choice. |
 
 Once you have gathered your required credentials, you can follow the steps below to create a new [!DNL SFTP] account to connect to Platform.
 
@@ -77,13 +73,13 @@ The [!DNL SFTP] source supports both basic authentication and authentication via
 
 >[!TAB Basic authentication]
 
-To use basic authentication, select **[!UICONTROL Password]** and then provide the host and port values to connect to, alongside your username and password. During this step, you can also designate the container name and path to the sub folder that you want access to. When finished, select **[!UICONTROL Connect to source]**.
+To use basic authentication, select **[!UICONTROL Password]** and then provide the host and port values to connect to, alongside your username and password. During this step, you can also designate the path to the sub folder that you want to provide access to. When finished, select **[!UICONTROL Connect to source]**.
 
 ![The new account screen for the SFTP source using basic authentication](../../../../images/tutorials/create/sftp/password.png)
 
 >[!TAB SSH public key authentication]
 
-To use SSH public key-based credentials, select **[!UICONTROL SSH public key]**  and then provide your host and port values, as well as your private key content and passphrase combination. During this step, you can also designate the container name and path to the sub folder that you want access to. When finished, select **[!UICONTROL Connect to source]**.
+To use SSH public key-based credentials, select **[!UICONTROL SSH public key]**  and then provide your host and port values, as well as your private key content and passphrase combination. During this step, you can also designate the path to the sub folder that you want to provide access to. When finished, select **[!UICONTROL Connect to source]**.
 
 ![The new account screen for the SFTP source using SSH public key.](../../../../images/tutorials/create/sftp/ssh.png)
 
