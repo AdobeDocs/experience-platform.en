@@ -13,7 +13,7 @@ You can create static, hardcoded schema fields or you can specify a dynamic sche
 
 ![Screenshot highlighting the target schema fields in the mapping step of the activation workflow.](assets/target-schema-fields.png)
 
-### Static hardcoded schema field configuration
+## Static hardcoded schema field configuration
 
 ```json
 "schemaConfig":{
@@ -43,7 +43,7 @@ You can create static, hardcoded schema fields or you can specify a dynamic sche
 
 {style="table-layout:auto"}
 
-### Dynamic schema configuration in the mapping step {#dynamic-schema-configuration}
+## Dynamic schema configuration in the mapping step {#dynamic-schema-configuration}
 
 Use the parameters in  `dynamicSchemaConfig` to dynamically retrieve your own schema that Platform profile attributes and/or identities can be mapped to.
 
@@ -75,7 +75,7 @@ Use the parameters in  `dynamicSchemaConfig` to dynamically retrieve your own sc
 
 {style="table-layout:auto"}
 
-### Required mappings {#required-mappings}
+## Required mappings {#required-mappings}
 
 Within the schema configuration, you have the option of adding required (or predefined) mappings. These are mappings that users are able to view but not modify when they set up a connection to your destination. For example, you can enforce the email address field to always be sent to the destination in the exported files. See below two examples of a schema configuration with required mappings and what these look like in the mapping step of the [activate data to batch destinations workflow](/help/destinations/ui/activate-batch-profile-destinations.md). 
 
