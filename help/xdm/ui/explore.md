@@ -92,7 +92,7 @@ Identity fields are highlighted in the canvas with a fingerprint icon (![Fingerp
 
 If you are inspecting a schema that contains a relationship field, the field will be listed in the left rail under **[!UICONTROL Relationships]**. Select the relationship field name in the left rail to reveal the field in the canvas, regardless of how deeply it is nested.
 
-Relationship fields are also uniquely highlighted in the canvas, showing the name of the destination schema that the field references. If you select the relationship field's name, you can view the identity namespace of the destination schema's primary identity in the right rail.
+Relationship fields are also uniquely highlighted in the canvas, showing the name of the reference schema that the field links to. If you select the relationship field's name, you can view the identity namespace of the reference schema's primary identity in the right rail.
 
 ![](../images/ui/explore/relationship-field.png)
 
