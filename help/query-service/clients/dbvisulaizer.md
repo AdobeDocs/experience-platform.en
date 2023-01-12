@@ -64,7 +64,7 @@ In the Connection Authentication panel, check both the **[!DNL Require Userid]**
 
 ## Connect to Platform
 
-You can make a connection using expiring or non-expiring credentials. To make a connection, select the **[!DNL Connection]** tab from the [!DNL PostgreSQL] object view tab and enter your Experience Platform credentials for the following settings.
+You can make a connection using expiring or non-expiring credentials. To make a connection, select the **[!DNL Connection]** tab from the [!DNL PostgreSQL] object view tab and enter your Experience Platform credentials for the following settings. Complementary instructions to [set up a manual connection](https://confluence.dbvis.com/display/UG100/Setting+Up+a+Connection+Manually) are available on the official DBVisualizer website. 
 
 >[!NOTE]
 >
