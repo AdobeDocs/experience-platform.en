@@ -173,7 +173,6 @@ feature: Destinations
 * Destination SDK {#destination-sdk}
     * [Overview](./destination-sdk/overview.md)
     * [Integration prerequisites](./destination-sdk/integration-prerequisites.md)
-    
     * Functionality {#functionality}
         * [Configuration options](./destination-sdk/configuration-options.md)
         * Destination server components {#destination-server}
@@ -193,12 +192,9 @@ feature: Destinations
             * [Aggregation policy](./destination-sdk/functionality/destination-configuration/aggregation-policy.md)
             * [Batch configuration](./destination-sdk/functionality/destination-configuration/batch-configuration.md)
             * [Historical profile qualifications](./destination-sdk/functionality/destination-configuration/historical-profile-qualifications.md)
-      * [Rate limiting and retry policy for streaming destinations](./destination-sdk/functionality/rate-limiting-retry-policy.md)
-      * [Supported transformation functions](./destination-sdk/functionality/supported-functions.md)
-      * [Audience metadata management](./destination-sdk/functionality/audience-metadata-management.md)
-
-
-
+        * [Rate limiting and retry policy for streaming destinations](./destination-sdk/functionality/rate-limiting-retry-policy.md)
+        * [Supported transformation functions](./destination-sdk/functionality/supported-functions.md)
+        * [Audience metadata management](./destination-sdk/functionality/audience-metadata-management.md)
     * [Getting started with Destination SDK](./destination-sdk/getting-started.md)
     * Destination authoring API reference {#authoring-api}
         * [Destination SDK (Destination Authoring) API reference](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
@@ -212,19 +208,16 @@ feature: Destinations
             * [Retrieve a destination configuration](./destination-sdk/authoring-api/destination-configuration/retrieve-destination-configuration.md)
             * [Update a destination configuration](./destination-sdk/authoring-api/destination-configuration/retrieve-destination-configuration.md)
             * [Delete a destination configuration](./destination-sdk/authoring-api/destination-configuration/delete-destination-configuration.md)
-    
     * Audience metadata API reference {#audience-template-api}
         * [Create an audience template](./destination-sdk/metadata-api/create-audience-template.md)
         * [Retrieve an audience template](./destination-sdk/metadata-api/retrieve-audience-template.md)
         * [Update an audience template](./destination-sdk/metadata-api/update-audience-template.md)
         * [Delete an audience template](./destination-sdk/metadata-api/delete-audience-template.md)
-
     * Credential configuration API reference {#credentials-api}
         * [Create a credential configuration](./destination-sdk/credentials-api/create-credential-configuration.md)
         * [Retrieve a credential configuration](./destination-sdk/credentials-api/retrieve-credential-configuration.md)
         * [Update a credential configuration](./destination-sdk/credentials-api/update-credential-configuration.md)
         * [Delete a credential configuration](./destination-sdk/credentials-api/delete-credential-configuration.md)
-
     * Destination testing API reference {#testing-api}
         * [Create and test a message transformation template](./destination-sdk/testing-api/create-template.md)
         * [Test your destination configuration](./destination-sdk/testing-api/test-destination.md)
@@ -239,35 +232,26 @@ feature: Destinations
             * [Test your file-based destination with sample profiles](./destination-sdk/file-based-destination-testing-api.md)
             * [View detailed activation results](./destination-sdk/file-based-destination-results-api.md)
             * [Validate templatized customer fields](./destination-sdk/file-based-render-template-api.md)
-
-
-
-
-
-    * API operations {#api}
-      * [Publish endpoint API operations](./destination-sdk/destination-publish-api.md)
-      * Developer tools reference {#developer-tools-reference}
-        
-    * Guides {#guides}
-      * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
-      * [Use Destination SDK to configure a file-based destination](./destination-sdk/configure-file-based-destination-instructions.md)
-      * [Submit for review a destination authored in Destination SDK](./destination-sdk/submit-destination.md)
-      * Configure file-based destinations {#configure-file-based-destinations}
-        * [Configure file formatting options](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)        
-        * [Configure an Amazon S3 destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
-        * [Configure an Amazon S3 destination with custom file name and formatting options](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
-        * [Configure an Azure Blob Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
-        * [Configure an Azure Data Lake Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
-        * [Configure an Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
-        * [Configure an SFTP destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
-    * Reference {#reference}
-
-
+    * Destination publishing API reference {#publishing-api}
+        * [Create a destination publishing request](./destination-sdk/publishing-api/create-publishing-request.md)
+        * [Retrieve a destination publishing request](./destination-sdk/publishing-api/retrieve-publishing-request.md)
     * Document your destination {#document-destination}
-      * [Document your destination in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
-      * [Use the GitHub web interface to create a destination documentation page](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
-      * [Use a text editor in your local environment to create a destination documentation page](./destination-sdk/docs-framework/work-in-local-environment.md)
-      * [Documentation self-service template](./destination-sdk/docs-framework/self-service-template.md)
-      * [Authoring best practices](./destination-sdk/docs-framework/authoring-best-practices.md)
+        * [Document your destination in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
+        * [Use the GitHub web interface to create a destination documentation page](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
+        * [Use a text editor in your local environment to create a destination documentation page](./destination-sdk/docs-framework/work-in-local-environment.md)
+        * [Documentation self-service template](./destination-sdk/docs-framework/self-service-template.md)
+        * [Authoring best practices](./destination-sdk/docs-framework/authoring-best-practices.md)        
+    * Guides {#guides}
+        * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
+        * [Use Destination SDK to configure a file-based destination](./destination-sdk/configure-file-based-destination-instructions.md)
+        * [Submit for review a destination authored in Destination SDK](./destination-sdk/submit-destination.md)
+        * Configure file-based destinations {#configure-file-based-destinations}
+            * [Configure file formatting options](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)        
+            * [Configure an Amazon S3 destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
+            * [Configure an Amazon S3 destination with custom file name and formatting options](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
+            * [Configure an Azure Blob Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+            * [Configure an Azure Data Lake Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+            * [Configure an Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
+            * [Configure an SFTP destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
 * [Frequently asked questions](./destinations-faq.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
