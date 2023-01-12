@@ -11,6 +11,8 @@ This page describes how to use Destination SDK to configure a [!DNL Data Landing
 
 This page shows all the configuration options available for [!DNL Data Landing Zone] destinations. You can edit the configurations shown in the steps below or delete certain parts of the configurations, as needed.
 
+For detailed descriptions of the parameters used below, see [configuration options in Destinations SDK](../../functionality/configuration-options.md).
+
 ## Prerequisites {#prerequisites}
 
 Before advancing to the steps outlined below, please read the [Destination SDK getting started](../../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
@@ -117,12 +119,6 @@ A successful response returns the new destination server configuration, includin
 After creating the destination server and file formatting configuration in the previous step, you can now use the `/destinations` API endpoint to create a destination configuration.
 
 To connect the server configuration in [step 1](#create-server-file-configuration) to this destination configuration, replace the `destinationServerId` value in the API request below with the value obtained when creating your destination server in [step 1](#create-server-file-configuration).
-
-For detailed descriptions of the parameters used below, see the following pages:
-
-* [Authentication configuration](../../authentication-configuration.md#adls)
-* [Batch destination configuration](../../file-based-destination-configuration.md#batch-configuration)
-* [File-based destination configuration API operations](../../destination-configuration-api.md#create-file-based)
 
 **API format**
 
