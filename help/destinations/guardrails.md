@@ -95,7 +95,7 @@ The guardrails below apply to activation through [edge personalization destinati
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
 | Maximum number of [private custom destinations](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5  | Soft| You can create a maximum of 5 private custom streaming or batch destinations using Destination SDK. Reach out to a custom care representative if you need to create more than 5 such destinations. |
-| Profile export policy for Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimum 1.800 and maximum 3.600)</li><li>`maxNumEventsInBatch` (minimum 1.000, maximum 10.000)</li></ul> | Hard| When using the [configurable aggregation](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation) option for your destination, be mindful of the minimum and maximum values that determine how often HTTP messages are sent to your API-based destination and how many profiles the messages should include.|
+| Profile export policy for Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimum 1.800 and maximum 3.600)</li><li>`maxNumEventsInBatch` (minimum 1.000, maximum 10.000)</li></ul> | Hard| When using the [configurable aggregation](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) option for your destination, be mindful of the minimum and maximum values that determine how often HTTP messages are sent to your API-based destination and how many profiles the messages should include.|
 
 {style="table-layout:auto"}
 

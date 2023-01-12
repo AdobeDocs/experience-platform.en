@@ -173,7 +173,7 @@ feature: Destinations
     * [Overview](./destination-sdk/overview.md)
     * [Integration prerequisites](./destination-sdk/integration-prerequisites.md)
     * Functionality {#functionality}
-        * [Configuration options](./destination-sdk/configuration-options.md)
+        * [Configuration options](./destination-sdk/functionality/configuration-options.md)
         * Destination server components {#destination-server}
             * [Server specs](./destination-sdk/functionality/destination-server/server-specs.md)
             * [Templating specs](./destination-sdk/functionality/destination-server/templating-specs.md)
@@ -205,7 +205,7 @@ feature: Destinations
         * Destination configuration operations {#destination-operations}
             * [Create a destination configuration](./destination-sdk/authoring-api/destination-configuration/create-destination-configuration.md)
             * [Retrieve a destination configuration](./destination-sdk/authoring-api/destination-configuration/retrieve-destination-configuration.md)
-            * [Update a destination configuration](./destination-sdk/authoring-api/destination-configuration/retrieve-destination-configuration.md)
+            * [Update a destination configuration](./destination-sdk/authoring-api/destination-configuration/update-destination-configuration.md)
             * [Delete a destination configuration](./destination-sdk/authoring-api/destination-configuration/delete-destination-configuration.md)
     * Audience metadata API reference {#audience-template-api}
         * [Create an audience template](./destination-sdk/metadata-api/create-audience-template.md)
@@ -221,16 +221,16 @@ feature: Destinations
         * [Create and test a message transformation template](./destination-sdk/testing-api/create-template.md)
         * [Test your destination configuration](./destination-sdk/testing-api/test-destination.md)
         * Streaming destination testing API {#streaming-destinations}
-            * [Get sample template API operations](./destination-sdk/sample-template-api.md)
-            * [Render template API operations](./destination-sdk/render-template-api.md)
-            * [Destination testing API operations](./destination-sdk/destination-testing-api.md)
-            * [Sample profile generation API operations](./destination-sdk/sample-profile-generation-api.md)
+            * [Get sample template API operations](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
+            * [Render template API operations](./destination-sdk/testing-api/streaming-destinations/render-template-api.md)
+            * [Destination testing API operations](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
+            * [Sample profile generation API operations](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
         * File-based destination testing API {#batch-destinations}
-            * [File-based destination testing API overview](./destination-sdk/file-based-destination-testing-overview.md) 
-            * [Generate sample profiles based on a source schema](./destination-sdk/file-based-sample-profile-generation-api.md)
-            * [Test your file-based destination with sample profiles](./destination-sdk/file-based-destination-testing-api.md)
-            * [View detailed activation results](./destination-sdk/file-based-destination-results-api.md)
-            * [Validate templatized customer fields](./destination-sdk/file-based-render-template-api.md)
+            * [File-based destination testing API overview](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md) 
+            * [Generate sample profiles based on a source schema](./destination-sdk/testing-api/batch-destinations/file-based-sample-profile-generation-api.md)
+            * [Test your file-based destination with sample profiles](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-api.md)
+            * [View detailed activation results](./destination-sdk/testing-api/batch-destinations/file-based-destination-results-api.md)
+            * [Validate templatized customer fields](./destination-sdk/testing-api/batch-destinations/file-based-render-template-api.md)
     * Destination publishing API reference {#publishing-api}
         * [Create a destination publishing request](./destination-sdk/publishing-api/create-publishing-request.md)
         * [Retrieve a destination publishing request](./destination-sdk/publishing-api/retrieve-publishing-request.md)
@@ -241,9 +241,9 @@ feature: Destinations
         * [Documentation self-service template](./destination-sdk/docs-framework/self-service-template.md)
         * [Authoring best practices](./destination-sdk/docs-framework/authoring-best-practices.md)        
     * Guides {#guides}
-        * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
+        * [Use Destination SDK to configure a streaming destination](./destination-sdk/guides/configure-destination-instructions.md)
         * [Use Destination SDK to configure a file-based destination](./destination-sdk/configure-file-based-destination-instructions.md)
-        * [Submit for review a destination authored in Destination SDK](./destination-sdk/submit-destination.md)
+        * [Submit for review a destination authored in Destination SDK](./destination-sdk/guides/submit-destination.md)
         * Configure file-based destinations {#configure-file-based-destinations}
             * [Configure file formatting options](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)        
             * [Configure an Amazon S3 destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)

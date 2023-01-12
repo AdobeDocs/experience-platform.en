@@ -7,7 +7,7 @@ exl-id: 0ecd3575-dcda-4e5c-af5c-247d4ea13fa1
 
 ## Overview {#overview}
 
-This page describes how to use Destination SDK to configure an Amazon S3 destination with predefined, default [file formatting options](../../server-and-file-configuration.md#file-configuration) and a custom [file name configuration](../../file-based-destination-configuration.md#file-name-configuration).
+This page describes how to use Destination SDK to configure an Amazon S3 destination with predefined, default [file formatting options](../../server-and-file-configuration.md#file-configuration) and a custom [file name configuration](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
 This page shows all the configuration options available for [!DNL Amazon S3] destinations. You can edit the configurations shown in the steps below or delete certain parts of the configurations, as needed.
 
@@ -124,7 +124,7 @@ To connect the server configuration in [step 1](#create-server-file-configuratio
 
 For detailed descriptions of the parameters used below, see the following pages:
 
-* [Authentication configuration](../../authentication-configuration.md#s3)
+* [Authentication configuration](../../functionality/destination-configuration/customer-authentication.md#s3)
 * [Batch destination configuration](../../file-based-destination-configuration.md#batch-configuration)
 * [File-based destination configuration API operations](../../destination-configuration-api.md#create-file-based)
 

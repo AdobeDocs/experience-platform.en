@@ -245,15 +245,15 @@ If you use an audience metadata configuration, you must connect it to the destin
 Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION"` or `"authenticationRule": "PLATFORM_AUTHENTICATION"` in the destination configuration above, you can set up authentication for your destination by using the `/destination` or the `/credentials` endpoint.
 
 * If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration, see the following sections for the authentication types supported by Destination SDK for file-based destinations:
-  
-  * [Amazon S3 authentication](authentication-configuration.md#s3)
-  * [Azure Blob](authentication-configuration.md#blob)
-  * [Azure Data Lake Storage](authentication-configuration.md#adls)
-  * [Google Cloud Storage](authentication-configuration.md#gcs)
-  * [SFTP authentication with SSH key](authentication-configuration.md#sftp-ssh)
-  * [SFTP authentication with password](authentication-configuration.md#sftp-password)
+    
+    * [Amazon S3 authentication](functionality/destination-configuration/customer-authentication.md#s3)
+    * [Azure Blob](functionality/destination-configuration/customer-authentication.md#blob)
+    * [Azure Data Lake Storage](functionality/destination-configuration/customer-authentication.md#adls)
+    * [Google Cloud Storage](functionality/destination-configuration/customer-authentication.md#gcs)
+    * [SFTP authentication with SSH key](functionality/destination-configuration/customer-authentication.md#sftp-ssh)
+    * [SFTP authentication with password](functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, refer to the [Authentication configuration](./authentication-configuration.md#when-to-use).
+* If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, refer to the [credential configuration API documentation](credentials-api/create-credential-configuration.md#when-to-use).
 
 
 <!-- ## Step 5: Test your destination {#test-destination}
