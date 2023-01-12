@@ -4,7 +4,7 @@ description: Learn how to create a SugarCRM Events source connection using the A
 ---
 # Create a [!DNL SugarCRM Events] source connection in the UI
 
-This tutorial provides steps for creating a [!DNL SugarCRM Events] source connector using the Adobe Experience Platform user interface.
+This tutorial provides steps for creating a [!DNL SugarCRM Events] source connection using the Adobe Experience Platform user interface.
 
 ## Getting started
 
