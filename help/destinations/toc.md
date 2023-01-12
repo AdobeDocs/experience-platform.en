@@ -169,7 +169,6 @@ feature: Destinations
         * [Medallia connection](./catalog/voice/medallia-connector.md)
         * [Medallia extension](./catalog/voice/medallia.md)
         * [Talk URL Inbox extension](./catalog/voice/talkurl.md)
-
 * Destination SDK {#destination-sdk}
     * [Overview](./destination-sdk/overview.md)
     * [Integration prerequisites](./destination-sdk/integration-prerequisites.md)
