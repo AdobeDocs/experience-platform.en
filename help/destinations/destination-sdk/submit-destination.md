@@ -218,7 +218,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 For file-based destinations, you must provide additional proof that you have correctly set up your destination. Make sure that you include the items below:
 
-### Testing API response {#testing-api-response}
+### Testing API response {#testing-api-response-file-based}
 
 Include a request and a response sample after using the testing API to [test your file-based destination with sample profiles](/help/destinations/destination-sdk/file-based-destination-testing-api.md).  
 
