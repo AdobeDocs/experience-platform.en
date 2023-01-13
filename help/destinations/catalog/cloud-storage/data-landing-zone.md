@@ -30,8 +30,6 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
-Retrieve the credentials for your [!DNL Data Landing Zone]
-
 ## Prerequisites {#prerequisites}
 
 Note the following prerequisites that must be met before you can use the [!DNL Data Landing Zone] destination.
