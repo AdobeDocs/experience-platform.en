@@ -241,8 +241,6 @@ feature: Destinations
         * [Documentation self-service template](./destination-sdk/docs-framework/self-service-template.md)
         * [Authoring best practices](./destination-sdk/docs-framework/authoring-best-practices.md)        
     * Guides {#guides}
-        * [Use Destination SDK to configure a streaming destination](./destination-sdk/guides/configure-destination-instructions.md)
-        * [Use Destination SDK to configure a file-based destination](./destination-sdk/configure-file-based-destination-instructions.md)
         * [Submit for review a destination authored in Destination SDK](./destination-sdk/guides/submit-destination.md)
         * Configure file-based destinations {#configure-file-based-destinations}
             * [Configure file formatting options](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)        
