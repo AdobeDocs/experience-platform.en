@@ -80,7 +80,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`urlBasedDestination.url.value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to. |
 |`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 |`httpTemplate.requestBody.templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
-|`httpTemplate.requestBody.value` | String | *Required.* This string is the character-escaped version that transforms the data of Platform customers to the format your service expects. <br> <ul><li> For information on how to write the template, read the [Using templating section](./message-format.md#using-templating). </li><li> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, refer to the [Profile Attributes](./message-format.md#attributes) transformation. </li></ul> |
+|`httpTemplate.requestBody.value` | String | *Required.* This string is the character-escaped version that transforms the data of Platform customers to the format your service expects. <br> <ul><li> For information on how to write the template, read the [Using templating section](../../functionality/destination-server/message-format.md#using-templating). </li><li> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, refer to the [Profile Attributes](../../functionality/destination-server/message-format.md#attributes) transformation. </li></ul> |
 |`httpTemplate.contentType` | String | *Required.* The content type that your server accepts. This value is most likely `application/json`. |
 
 {style="table-layout:auto"}
@@ -680,4 +680,4 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ## Next steps {#next-steps}
 
-After reading this document, you now know how to create a destination server using the `/authoring/destination-servers` API endpoint. Read [how to use Destination SDK to configure your destination](./configure-destination-instructions.md) to understand where this step fits into the process of configuring your destination.
+After reading this document, you now know how to create a destination server using the `/authoring/destination-servers` API endpoint. Read [how to use Destination SDK to configure your destination](../../guides/configure-destination-instructions.md) to understand where this step fits into the process of configuring your destination.

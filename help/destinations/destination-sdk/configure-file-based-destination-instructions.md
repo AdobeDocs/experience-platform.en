@@ -7,11 +7,11 @@ exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
 
 ## Overview {#overview}
 
-This page describes how to use the information in [Configuration options in Destinations SDK](./configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [file-based destination](../../destinations/destination-types.md#file-based). The steps are laid out in sequential order below.
+This page describes how to use the information in [Configuration options in Destinations SDK](functionality/configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [file-based destination](../../destinations/destination-types.md#file-based). The steps are laid out in sequential order below.
 
 ## Prerequisites {#prerequisites}
 
-Before advancing to the steps illustrated below, please read the [Destination SDK getting started](./getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
+Before advancing to the steps illustrated below, please read the [Destination SDK getting started](getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
 
 ## Steps to use the configuration options in Destination SDK to set up your destination {#steps}
 
@@ -19,7 +19,7 @@ Before advancing to the steps illustrated below, please read the [Destination SD
 
 ## Step 1: Create a server and file configuration {#create-server-file-configuration}
 
-Start by creating a server and file configuration using the `/destinations-server` endpoint (read [API reference](./destination-server-api.md)).
+Start by creating a server and file configuration using the `/destinations-server` endpoint (read [API reference](authoring-api/destination-server/create-destination-server.md)).
 
 Shown below is an example configuration for an [!DNL Amazon S3] destination. To configure other types of file-based destinations, see their corresponding [server configurations](server-and-file-configuration.md).
 
@@ -236,7 +236,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Step 3: Create audience metadata configuration {#create-audience-metadata-configuration}
 
-For some destinations, Destination SDK requires that you configure an audience metadata configuration to programmatically create, update, or delete audiences in your destination. Refer to [Audience metadata management](./audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
+For some destinations, Destination SDK requires that you configure an audience metadata configuration to programmatically create, update, or delete audiences in your destination. Refer to [Audience metadata management](functionality/audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
 
 If you use an audience metadata configuration, you must connect it to the destination configuration you created in step 2. Add the instance ID of your audience metadata configuration to your destination configuration as `audienceTemplateId`.
 

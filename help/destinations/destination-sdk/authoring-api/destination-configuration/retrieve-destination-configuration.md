@@ -27,7 +27,7 @@ For a detailed description of the capabilities of a destination configuration, r
 
 ## Getting started with destination configuration API operations {#get-started}
 
-Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Retrieve a destination configuration {#retrieve}
 
@@ -195,4 +195,4 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ## Next steps {#next-steps}
 
-After reading this document, you now know how to retrieve details about your destination configuration using the `/authoring/destinations` API endpoint. Read [how to use Destination SDK to configure your destination](./configure-destination-instructions.md) to understand where this step fits into the process of configuring your destination.
+After reading this document, you now know how to retrieve details about your destination configuration using the `/authoring/destinations` API endpoint. Read [how to use Destination SDK to configure your destination](../../guides/configure-destination-instructions.md) to understand where this step fits into the process of configuring your destination.
