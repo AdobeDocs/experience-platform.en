@@ -98,4 +98,4 @@ The details page for a dataset expiration provides information on its basic attr
 This guide covered how to view and manage existing data hygiene work orders in the Platform UI. For information on creating your own work orders, refer to the following documentation:
 
 * [Manage dataset expirations](./dataset-expiration.md)
-* [Manage record deletes](./record-delete.md)
+<!-- * [Manage record deletes](./record-delete.md) -->
