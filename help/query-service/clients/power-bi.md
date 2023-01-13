@@ -33,11 +33,6 @@ To ensure that Npgsql has been properly installed, please restart your computer 
 
 To connect [!DNL Power BI] to Query Service, open [!DNL Power BI] and select **[!DNL Get Data]** in the top menu ribbon. Next, enter "[!DNL PostgreSQL]" in the search bar to narrow the list of data sources. From the results that appear, select **[!DNL PostgreSQL database]**, followed by **[!DNL Connect]**.
 
-<!-- ![The [!DNL Power BI] dashboard Home tab with Get data highlighted.](../images/clients/power-bi/open-power-bi.png) -->
-
-
-<!-- ![The Get data dialog with [!DNL PostgreSQL] database and Connect highlighted.](../images/clients/power-bi/get-data.png) -->
-
 The [!DNL PostgreSQL] database dialog appears, requesting values for your server and database. Additional instructions on how to [connect to a PostgreSQL database from Power Query Desktop](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop) can be found in the official [!DNL PowerBI] documentation.
 
 These required values are taken from your Adobe Experience Platform credentials. To find your credentials, log in to the Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). 
@@ -51,8 +46,6 @@ The **[!DNL Database]** field can be either "all" or a dataset table name. For e
 >[!IMPORTANT]
 >
 >Nested data structures in third-party BI tools can be flattened to improve their usability and reduce the required workload to retrieve, analyze, transform and report data. See the documentation on the[`FLATTEN` feature](../best-practices/flatten-nested-data.md) for instructions on how to activate this setting when connecting to a database.
-
-<!-- ![The [!DNL Power BI] dashboard with the server and database input fields highlighted.](../images/clients/power-bi/postgresql-database-dialog.png) -->
 
 ### Data Connectivity mode {#data-connectivity-mode} 
 
@@ -68,8 +61,6 @@ After confirming your data connectivity mode, a prompt asking for your username,
 
 Fill in these details, then select **[!DNL Connect]** to continue to the next step. 
 
-<!-- ![The database dialog with Username, Password, and application settings dropdown menu highlighted.](../images/clients/power-bi/import-mode.png) -->
-
 ## Import a table {#import}
 
 By selecting the **[!DNL Import]** [!DNL Data Connectivity mode], the full dataset is imported which allows you to use the selected tables and columns within the [!DNL Power BI] desktop application as-is.
@@ -82,23 +73,15 @@ To import a table, enter the server and database details [as described above](#c
 
 [General information on connecting to data in the PowerBi desktop](https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-quickstart-connect-to-data#connect-to-data) app can be found in the official documentation. 
 
-<!-- ![The Navigator dialog with a table and Load highlighted.](../images/clients/power-bi/preview-table.png) -->
-
-<!-- ![The [!DNL Power BI] dashboard with instructions on creating custom visualizations highlighted.](../images/clients/power-bi/import-table.png) -->
-
 ### Import tables using custom SQL
 
 [!DNL Power BI] and other third-party tools like [!DNL Tableau] do not currently allow users to import nested objects, such as XDM objects in Platform. To account for this, [!DNL Power BI] allows you to use custom SQL to access these nested fields and create a flattened view of the data. [!DNL Power BI] then loads this flattened view of the previously nested data as a normal table.
 
 From the [!DNL PostgreSQL database] dialog, select **[!DNL Advanced options]** to enter a custom SQL query in the **[!DNL SQL statement]** section. This custom query should be used to flatten your JSON name-value pairs into a table format. The official documentation also provides information on how to [connect PowerBI using an SQL statement in the advanced options](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-using-advanced-options).
 
-<!-- ![The [!DNL PostgreSQL] database dialog with the data connectivity mode advanced options highlighted. These allow you to create a custom SQL statement.](../images/clients/power-bi/custom-sql-statement.png) -->
-
 After you have entered your customized query, select **[!DNL OK]** to continue with connecting your database. See the [authentication](#authentication) section above for guidance on connecting a database from this part of the workflow.
 
 Once authentication is complete, a preview of the flattened data appears in the [!DNL Power BI] Desktop dashboard as a table. The server and database name are listed at the top of the dialog. Select **[!DNL Load]** to complete the import process.
-
-<!-- ![A visualization of a flattened, imported table in the [!DNL Power BI] dashboard.](../images/clients/power-bi/imported-table-preview.png) -->
 
 The visualizations are now available for editing and exporting from the [!DNL Power BI] Desktop app. 
 
@@ -110,11 +93,7 @@ More information on [the use of [!DNL DirectQuery]](https://learn.microsoft.com/
 
 To use this [!DNL Data Connectivity mode], select the **[!DNL DirectQuery]** toggle then **[!DNL Advanced options]** to enter a custom SQL query in the **[!DNL SQL statement]** section. Ensure that **[!DNL Include relationship columns]** is selected. Once you have completed your query, select **[!DNL OK]** to continue.
 
-<!-- ![The [!DNL PostgreSQL] database dialog with the settings required to use the Data Connectivity mode highlighted.](../images/clients/power-bi/direct-query-mode.png) -->
-
 A preview of your query appears. Select **[!DNL Load]** to see the results of the query.
-
-<!-- ![A preview of the tabularized results from the example query.](../images/clients/power-bi/preview-direct-query.png) -->
 
 ## Next steps
 

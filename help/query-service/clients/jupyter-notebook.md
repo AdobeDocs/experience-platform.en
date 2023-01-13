@@ -26,19 +26,13 @@ The official Jupyter documentation provides instructions to [run the notebook fr
 
 After you have opened a new [!DNL Jupyter Notebook] web application, select the **[!DNL New]** dropdown from the UI, followed by **[!DNL Python 3]** to create a new Notebook. The [!DNL Notebook] editor appears.
 
-<!-- ![The [!DNL Jupiter Notebook] File tab with the [!DNL New] dropdown and [!DNL Python] 3 highlighted.](../images/clients/jupyter-notebook/new-notebook.png) -->
-
 On the first line of the [!DNL Notebook] editor, enter the following value: `pip install psycopg2-binary` and select **[!DNL Run]** from the command bar. A success message appears below the input line. 
 
 >[!IMPORTANT]
 >
 >As part of this process to form a connection, you must select **[!DNL Run]** to execute each line of code.
 
-<!-- ![The [!DNL Notebook] UI with the install libraries command highlighted.](../images/clients/jupyter-notebook/install-library.png) -->
-
 Next, import a [!DNL PostgreSQL] database adapter for [!DNL Python]. Enter the value: `import psycopg2`and select **[!DNL Run]**. There is no success message for this process. If there is no error message, continue to the next step. 
-
-<!-- ![The [!DNL Notebook] UI with the import database driver code highlighted.](../images/clients/jupyter-notebook/import-dbdriver.png) -->
 
 You must now provide your Adobe Experience Platform credentials by entering the value: `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. Your connection credentials can be found in the [!UICONTROL Queries] section, under the [!UICONTROL Credentials] tab of the Platform UI. See the documentation on how to [find your organization credentials](../ui/credentials.md) for detailed instructions.
 
@@ -68,8 +62,6 @@ data = [r for r in cur]
 
 Next, call the parameter (`data` in the example above) to display the query results in an unformatted response.
 
-<!-- ![The [!DNL Notebook] UI with commands to return and display SQL results within the Notebook.](../images/clients/jupyter-notebook/example-query.png) -->
-
 To format the results in a more human-readable way, use the following commands:
 
 - `colnames = [desc[0] for desc in cur.description]`
@@ -80,11 +72,7 @@ To format the results in a more human-readable way, use the following commands:
 
 These commands do not generate a success message. If there is no error message you can then use a function to output the results of your SQL query in a table format.
 
-<!-- ![The commands required to format the SQL results.](../images/clients/jupyter-notebook/format-results-commands.png) -->
-
 Enter and run the `df.head()` function to see the tabularized query results.
-
-<!-- ![Tabularized results of your SQL query within [!DNL Jupyter Notebook].](../images/clients/jupyter-notebook/format-results-output.png) -->
 
 ## Next steps
 
