@@ -11,7 +11,7 @@ This document walks through the steps for connecting [!DNL RStudio] with Adobe E
 
 >[!NOTE]
 >
-> [!DNL RStudio]] has now been rebranded as [!DNL Posit]. [!DNL RStudio] products have been renamed to [!DNL Posit Connect], [!DNL Posit Workbench], [!DNL Posit Package] Manager, [!DNL Posit Cloud], and [!DNL Posit Academy]  
+> [!DNL RStudio] has now been rebranded as [!DNL Posit]. [!DNL RStudio] products have been renamed to [!DNL Posit Connect], [!DNL Posit Workbench], [!DNL Posit Package] Manager, [!DNL Posit Cloud], and [!DNL Posit Academy].  
 >
 > This guide assumes you already have access to [!DNL RStudio] and are familiar with how to use it. More information about [!DNL RStudio] can be found in the [official [!DNL RStudio] documentation](https://rstudio.com/products/rstudio/).
 > 
