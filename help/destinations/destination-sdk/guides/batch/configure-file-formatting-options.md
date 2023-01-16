@@ -18,7 +18,7 @@ Before advancing to the steps outlined below, please read the [Destination SDK g
 Adobe also recommends that you read and familiarize yourself with the following documentation before proceeding:
 
 * Every available file formatting option is documented at length in the [file formatting configuration](../../server-and-file-configuration.md#file-configuration) section.
-* Complete steps to [configure a file-based destination](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md) using Destination SDK.
+* Complete steps to [configure a file-based destination](../configure-file-based-destination-instructions.md) using Destination SDK.
 
 ## Create a server and file configuration {#create-server-file-configuration}
 

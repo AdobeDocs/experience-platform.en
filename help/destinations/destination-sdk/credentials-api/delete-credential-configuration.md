@@ -63,4 +63,4 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ## Next steps {#next-steps}
 
-After reading this document, you now know how to delete a credential configuration using the `/authoring/credentials` API endpoint. Read [how to use Destination SDK to configure your destination](./configure-destination-instructions.md) to understand where this step fits into the process of configuring your destination.
+After reading this document, you now know how to delete a credential configuration using the `/authoring/credentials` API endpoint. Read [how to use Destination SDK to configure your destination](../guides/configure-destination-instructions.md) to understand where this step fits into the process of configuring your destination.

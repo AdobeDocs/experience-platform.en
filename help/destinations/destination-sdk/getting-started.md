@@ -50,7 +50,7 @@ The Adobe Exchange team provides you with your sandbox name, which you are requi
 
 ## Role-based access control (RBAC) {#rbac}
 
-To use the Destination SDK API endpoints described in the [reference documentation](./configuration-options.md), you need the **[!UICONTROL Destination Authoring]** access control permission. Work with the Adobe Exchange team to get this permission assigned to you in [Adobe Admin Console](https://adminconsole.adobe.com/). 
+To use the Destination SDK API endpoints described in the [reference documentation](functionality/configuration-options.md), you need the **[!UICONTROL Destination Authoring]** access control permission. Work with the Adobe Exchange team to get this permission assigned to you in [Adobe Admin Console](https://adminconsole.adobe.com/). 
 
 ![Destination Authoring permission](./assets/destination-authoring-permission.png)
 
@@ -71,8 +71,8 @@ By following the steps in this article, you obtained authentication credentials 
 
 * Read the following configuration guides, depending on your destination type:
 
-  * [Use Destination SDK to configure a streaming destination](./configure-destination-instructions.md)
-  * [Use Destination SDK to configure a file-based destination](./configure-file-based-destination-instructions.md)
+  * [Use Destination SDK to configure a streaming destination](guides/configure-destination-instructions.md)
+  * [Use Destination SDK to configure a file-based destination](guides/configure-file-based-destination-instructions.md)
 
 * For all operations, refer to the [Destination Authoring API documentation](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
 * Use the [Destination Authoring API Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) to configure your destination using the Destination SDK API endpoints. To get started with Postman, see the [steps for importing environments and collections](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) and a [video guide for creating the Postman environment](https://video.tv.adobe.com/v/28832).

@@ -32,7 +32,7 @@ At the end of this step, you should have:
 
 ### What you need to do in Destination SDK {#to-do-in-destination-sdk}
 
-To set up OAuth 2 authentication for your destination in Experience Platform, you must add your OAuth 2 details to the [destination configuration](./destination-configuration.md), under the `customerAuthenticationConfigurations` parameter, by using the `platform.adobe.io/data/core/activation/authoring/destinations` [API endpoint](./destination-configuration-api.md). See the [example configuration](./destination-configuration.md#example-configuration). Specific instructions about which fields you need to add to your configuration template, depending on your OAuth 2 authentication grant type, are further below on this page.
+To set up OAuth 2 authentication for your destination in Experience Platform, you must add your OAuth 2 details to the [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md), under the `customerAuthenticationConfigurations` parameter. See [customer authentication](../../functionality/destination-configuration/customer-authentication.md) for detailed examples. Specific instructions about which fields you need to add to your configuration template, depending on your OAuth 2 authentication grant type, are further below on this page.
 
 ## Supported OAuth 2 grant types {#oauth2-grant-types}
 
@@ -41,7 +41,7 @@ Experience Platform supports the three OAuth 2 grant types in the table below. I
 >[!IMPORTANT]
 >
 >* You provide the input parameters as instructed in the sections below. Adobe-internal systems connect to your platform's authentication system and grab output parameters, which are used to authenticate the user and maintain authentication to your destination.
->* The input parameters highlighted in bold in the table are required parameters in the OAuth 2 authentication flow. The other parameters are optional. There are other custom input parameters that are not shown here, but are described at length in the sections [Customize your OAuth 2 configuration](./oauth2-authentication.md#customize-configuration) and [Access token refresh](./oauth2-authentication.md#access-token-refresh). 
+>* The input parameters highlighted in bold in the table are required parameters in the OAuth 2 authentication flow. The other parameters are optional. There are other custom input parameters that are not shown here, but are described at length in the sections [Customize your OAuth 2 configuration](#customize-configuration) and [Access token refresh](#access-token-refresh). 
 
 |OAuth 2 Grant | Inputs | Outputs |
 |---------|----------|---------|
@@ -475,4 +475,4 @@ Depending on your authentication customization, you might need to access data fi
 
 ## Next steps {#next-steps}
 
-By reading this article, you now have an understanding of the OAuth 2 authentication patterns supported by Adobe Experience Platform and know how to configure your destination with OAuth 2 authentication support. Next, you can set up your OAuth 2-supported destination using Destination SDK. Read [Use Destination SDK to configure your destination](./configure-destination-instructions.md) for next steps.
+By reading this article, you now have an understanding of the OAuth 2 authentication patterns supported by Adobe Experience Platform and know how to configure your destination with OAuth 2 authentication support. Next, you can set up your OAuth 2-supported destination using Destination SDK. Read [Use Destination SDK to configure your destination](../../guides/configure-destination-instructions.md) for next steps.

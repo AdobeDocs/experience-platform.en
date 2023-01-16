@@ -191,5 +191,5 @@ added: <111111><333333>;|removed: <222222>;
 
 You now know which [!DNL Pebble] functions are supported in Destination SDK, as well as how to use them to adjust the format of the exported data to fit your needs. Next, you should review the following pages:
 
-* [Create and test a message transformation template](/help/destinations/destination-sdk/create-template.md)
-* [Render template API operations](./destination-sdk/render-template-api.md)
+* [Create and test a message transformation template](../testing-api/create-template.md)
+* [Render template API operations](../testing-api/streaming-destinations/render-template-api.md)

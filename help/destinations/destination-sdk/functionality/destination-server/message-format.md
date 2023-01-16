@@ -1201,6 +1201,6 @@ The table below provides descriptions for the functions in the examples above.
 
 After reading this document, you now know how data exported out of Experience Platform is transformed. Next, read the following pages to complete your knowledge about creating message transformation templates for your destination:
 
-* [Create and test a message transformation template](/help/destinations/destination-sdk/create-template.md)
-* [Render template API operations](/help/destinations/destination-sdk/render-template-api.md)
-* [Supported transformation functions in Destination SDK](/help/destinations/destination-sdk/supported-functions.md)
+* [Create and test a message transformation template](../../testing-api/create-template.md)
+* [Render template API operations](../../testing-api/streaming-destinations/render-template-api.md)
+* [Supported transformation functions in Destination SDK](../supported-functions.md)

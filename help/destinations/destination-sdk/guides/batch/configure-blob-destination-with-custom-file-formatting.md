@@ -7,7 +7,7 @@ exl-id: effbd218-3a7c-4986-9fba-f5727a21e480
 
 ## Overview {#overview}
 
-This page describes how to use Destination SDK to configure an [!DNL Azure Blob Storage] destination with custom [file formatting options](../../server-and-file-configuration.md#file-configuration) and a custom [file name configuration](../../file-based-destination-configuration.md#file-name-configuration).
+This page describes how to use Destination SDK to configure an [!DNL Azure Blob Storage] destination with custom [file formatting options](configure-file-formatting-options.md) and a custom [file name configuration](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
 This page shows all the configuration options available for Azure Blob Storage destinations. You can edit the configurations shown in the steps below or delete certain parts of the configurations, as needed.
 
@@ -432,7 +432,7 @@ If you want to adjust any of the fields mentioned above, repeat [steps one](#cre
 >
 >This step is not required if you are creating a private destination for your own use, and are not looking to publish it in the destinations catalog for other customers to use.
 
-After configuring your destination, use the [destination publishing API](../../destination-publish-api.md) to submit your configuration to Adobe for review.
+After configuring your destination, use the [destination publishing API](../../publishing-api/create-publishing-request.md) to submit your configuration to Adobe for review.
 
 ## Step 5: (Optional) Document your destination {#document-destination}
 
