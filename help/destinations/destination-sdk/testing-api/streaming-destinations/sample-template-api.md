@@ -9,11 +9,11 @@ exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
 >
 >**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
 
-This page lists and describes all the API operations that you can perform using the `/authoring/testing/template/sample` API endpoint, to generate a [message transformation template](./message-format.md#using-templating) for your destination. For a description of the functionality supported by this endpoint, read [create template](./create-template.md). 
+This page lists and describes all the API operations that you can perform using the `/authoring/testing/template/sample` API endpoint, to generate a [message transformation template](../../functionality/destination-server/message-format.md#using-templating) for your destination. For a description of the functionality supported by this endpoint, read [create template](../create-template.md). 
 
 ## Getting started with sample template API operations {#get-started}
 
-Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Get sample template {#generate-sample-template}
 
@@ -21,10 +21,9 @@ You can get a sample template by making a GET request to the `authoring/testing/
 
 >[!TIP]
 >
->* The destination ID that you should use here is the `instanceId` that corresponds to a destination configuration, created using the `/destinations` endpoint. Refer to the [destination configuration API reference](./destination-configuration-api.md#retrieve-list).
+>* The destination ID that you should use here is the `instanceId` that corresponds to a destination configuration, created using the `/destinations` endpoint. Refer to the [retrieve a destination configuration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) for more details.
 
 **API format**
-
 
 ```http
 GET authoring/testing/template/sample/{DESTINATION_ID}
@@ -54,10 +53,9 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 A successful response returns HTTP status 200 with a sample template that you can edit to match your expected data format.
 
-If the destination ID you provide corresponds to a destination configuration with [best effort aggregation](./destination-configuration.md#best-effort-aggregation) and `maxUsersPerRequest=1` in the aggregation policy, the request returns a sample template similar to this one:
+If the destination ID you provide corresponds to a destination configuration with [best effort aggregation](../../functionality/destination-configuration/aggregation-policy.md) and `maxUsersPerRequest=1` in the aggregation policy, the request returns a sample template similar to this one:
 
 ```python
-
 {#- THIS is an example template for a single profile -#}
 {#- A '-' at the beginning or end of a tag removes all whitespace on that side of the tag. -#}
 {
@@ -86,13 +84,11 @@ If the destination ID you provide corresponds to a destination configuration wit
         ]
     }
 }
-
 ```
 
-If the destination ID you provide corresponds to a destination server template with [configurable aggregation](./destination-configuration.md#configurable-aggregation) or [best effort aggregation](./destination-configuration.md#best-effort-aggregation) with `maxUsersPerRequest` greater than one, the request returns a sample template similar to this one:
+If the destination ID you provide corresponds to a destination server template with [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.mdconfigurable-aggregation) or [best effort aggregation](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) with `maxUsersPerRequest` greater than one, the request returns a sample template similar to this one:
 
 ```python
-
 {#- THIS is an example template for multiple profiles -#}
 {#- A '-' at the beginning or end of a tag removes all whitespace on that side of the tag. -#}
 {
@@ -132,8 +128,8 @@ If the destination ID you provide corresponds to a destination server template w
 
 ## API error handling {#api-error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
 
 ## Next steps {#next-steps}
 
-After reading this document, you now know how to generate a message transformation template using the `/authoring/testing/template/sample` API endpoint. Next, you can use the [Render template API endpoint](./render-template-api.md) to generate exported profiles based on the template and compare them against your destination's expected data format.
+After reading this document, you now know how to generate a message transformation template using the `/authoring/testing/template/sample` API endpoint. Next, you can use the [Render template API endpoint](render-template-api.md) to generate exported profiles based on the template and compare them against your destination's expected data format.

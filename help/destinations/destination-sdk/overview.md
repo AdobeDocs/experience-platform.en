@@ -17,7 +17,7 @@ The Destination SDK documentation provides instructions for you to use the Adobe
 >
 > This functionality to create private custom destinations is available only to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 
-As a Destination SDK partner, you can benefit from adding your productized destination to the [Experience Platform catalog](/help/destinations/catalog/overview.md):
+As a Destination SDK partner, you can benefit from adding your productized destination to the [Experience Platform catalog](../catalog/overview.md):
 
 1. Standardize integration configurations across customers with pre-configured parameters and simplify the setup experience for customers.
 2. Introduce a branded destination card in the Experience Platform destinations catalog for simplified customer setup and awareness.
@@ -42,7 +42,7 @@ Through Destination SDK, you can also set up integrations to periodically export
 * File export in several supported formats (CSV, Parquet, JSON)
 * Configurable file formatting options, which allow you to structure the format of the exported files to meet your downstream requirements.
 
-Read about the technical requirements on the destinations side in the [integration prerequisites](./integration-prerequisites.md) article.
+Read about the technical requirements on the destinations side in the [integration prerequisites](integration-prerequisites.md) article.
 
 ## Get access to Destination SDK {#get-access}
 

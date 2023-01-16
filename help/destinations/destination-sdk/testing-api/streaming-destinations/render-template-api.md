@@ -9,21 +9,21 @@ exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 >
 >**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
-This page lists and describes all the API operations that you can perform using the `/authoring/testing/template/render` API endpoint, to render exported profiles that match your destination's expected format, based on your [message transformation template](./message-format.md#using-templating). For a description of the functionality supported by this endpoint, read [create template](./create-template.md).
+This page lists and describes all the API operations that you can perform using the `/authoring/testing/template/render` API endpoint, to render exported profiles that match your destination's expected format, based on your [message transformation template](../../functionality/destination-server/message-format.md#using-templating). For a description of the functionality supported by this endpoint, read [create template](../create-template.md).
 
 ## Getting started with render template API operations {#get-started}
 
-Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Render exported profiles based on the message transformation template {#render-exported-data}
 
-You can render exported profiles by making a POST request to the `authoring/testing/template/render` endpoint and providing the destination ID of the destination configuration and the template you created using the [sample template API endpoint](./sample-template-api.md). 
+You can render exported profiles by making a POST request to the `authoring/testing/template/render` endpoint and providing the destination ID of the destination configuration and the template you created using the [sample template API endpoint](sample-template-api.md). 
 
 You can start by using a simple template that exports your raw profiles without applying any transformations and then move on to a more complex template, that applies transformations to profiles. The syntax for the simple template is: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >
->* The destination ID that you should use here is the `instanceId` that corresponds to a destination configuration, created using the `/destinations` endpoint. Refer to the [destination configuration API operations](./destination-configuration-api.md#retrieve-list).
+>* The destination ID that you should use here is the `instanceId` that corresponds to a destination configuration, created using the `/destinations` endpoint. Refer to [retrieve a destination configuration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) for more details.
 
 **API format**
 
@@ -36,11 +36,11 @@ POST authoring/testing/template/render
 | -------- | ----------- |
 | `destinationId` | The ID of the destination configuration for which you are rendering exported profiles. |
 | `template` | The character-escaped version of the template based on which you are rendering exported profiles. |
-| `profiles` | *Optional*. You can add profiles to the request body. If you don't add any profiles, Experience Platform will automatically generate and add profiles to the request. <br> If you'd like to add profiles to the body of the call, you can generate some by using the [Sample profile generation API](./sample-profile-generation-api.md). |
+| `profiles` | *Optional*. You can add profiles to the request body. If you don't add any profiles, Experience Platform will automatically generate and add profiles to the request. <br> If you'd like to add profiles to the body of the call, you can generate some by using the [Sample profile generation API](sample-profile-generation-api.md). |
 
 {style="table-layout:auto"}
 
-Note that the response returned by the render template API endpoint differs based on the destination aggregation policy. If your destination has a configurable aggregation policy, the aggregation key which determines how profiles are aggregated is also returned in the response. Read more about [aggregation policies](./destination-configuration.md#aggregation) in the destination configuration document.
+Note that the response returned by the render template API endpoint differs based on the destination aggregation policy. If your destination has a configurable aggregation policy, the aggregation key which determines how profiles are aggregated is also returned in the response. Read about [aggregation policies](../../functionality/destination-configuration/aggregation-policy.md) for more details.
 
 | Response parameter | Description |
 | -------- | ----------- |
@@ -183,7 +183,7 @@ An unsuccessful response returns HTTP status 400 along with descriptions of the 
 **Request**
 
 
-The following request renders multiple exported profiles that match the format expected by your destination. In this example, the destination ID corresponds to a destination configuration with configurable aggregation. Two profiles are included in the body of the request, each with three segment qualifications and five identities. You can generate profiles to send on the call by using the [sample profile generation API](./sample-profile-generation-api.md).
+The following request renders multiple exported profiles that match the format expected by your destination. In this example, the destination ID corresponds to a destination configuration with configurable aggregation. Two profiles are included in the body of the request, each with three segment qualifications and five identities. You can generate profiles to send on the call by using the [sample profile generation API](sample-profile-generation-api.md).
 
 ```shell
 
@@ -1068,8 +1068,8 @@ An unsuccessful response returns HTTP status 400 along with descriptions of the 
 
 ## API error handling {#api-error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
 
 ## Next steps {#next-steps}
 
-After reading this document, you now know how to use the message transformation template to generate exported profiles that match your destination's expected data format. Read [how to use Destination SDK to configure your destination](./configure-destination-instructions.md) to understand where this step fits into the process of configuring your destination.
+After reading this document, you now know how to use the message transformation template to generate exported profiles that match your destination's expected data format. Read [how to use Destination SDK to configure your destination](../../guides/configure-destination-instructions.md) to understand where this step fits into the process of configuring your destination.

@@ -7,7 +7,7 @@ exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
 
 ## Overview {#overview}
 
-This page describes how to use the information in [Configuration options in Destinations SDK](functionality/configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [file-based destination](../../destinations/destination-types.md#file-based). The steps are laid out in sequential order below.
+This page describes how to use the information in [Configuration options in Destinations SDK](functionality/configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [file-based destination](../../destination-types.md#file-based). The steps are laid out in sequential order below.
 
 ## Prerequisites {#prerequisites}
 
@@ -15,13 +15,13 @@ Before advancing to the steps illustrated below, please read the [Destination SD
 
 ## Steps to use the configuration options in Destination SDK to set up your destination {#steps}
 
-![Illustrated steps of using Destination SDK endpoints](./assets/destination-sdk-steps-batch.png)
+![Illustrated steps of using Destination SDK endpoints](assets/destination-sdk-steps-batch.png)
 
 ## Step 1: Create a server and file configuration {#create-server-file-configuration}
 
 Start by creating a server and file configuration using the `/destinations-server` endpoint (read [API reference](authoring-api/destination-server/create-destination-server.md)).
 
-Shown below is an example configuration for an [!DNL Amazon S3] destination. To configure other types of file-based destinations, see their corresponding [server configurations](server-and-file-configuration.md).
+Shown below is an example configuration for an [!DNL Amazon S3] destination. To configure other types of file-based destinations, see their corresponding [server configurations](../functionality/destination-server/server-specs.md).
 
 **API format**
 
@@ -108,7 +108,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Step 2: Create destination configuration {#create-destination-configuration}
 
-Shown below is an example of a destination configuration, created by using the `/destinations` API endpoint. For more information about this configuration, refer to [Destination configuration](./file-based-destination-configuration.md).
+Shown below is an example of a destination configuration, created by using the `/destinations` API endpoint.
 
 To connect the server and file configuration in step 1 to this destination configuration, add the instance ID of the server and template configuration as `destinationServerId` here.
 
@@ -271,7 +271,7 @@ As part of the process to test your destination, you must use the Experience Pla
 >
 >This step is not required if you are creating a private destination for your own use, and are not looking to publish it in the destinations catalog for other customers to use.
 
-After configuring and testing your destination, use the [destination publishing API](./destination-publish-api.md) to submit your configuration to Adobe for review.
+After configuring and testing your destination, use the [destination publishing API](../publishing-api/create-publishing-request.md) to submit your configuration to Adobe for review.
 
 ## Step 6: Document your destination {#document-destination}
 
@@ -279,4 +279,4 @@ After configuring and testing your destination, use the [destination publishing 
 >
 >This step is not required if you are creating a private destination for your own use, and are not looking to publish it in the destinations catalog for other customers to use.
 
-If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md).
+If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](../overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](../../catalog/overview.md).

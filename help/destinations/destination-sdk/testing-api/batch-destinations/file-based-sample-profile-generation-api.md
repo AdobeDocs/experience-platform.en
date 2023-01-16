@@ -13,14 +13,14 @@ Sample profiles can help you understand the JSON structure of a profile. Additio
 
 ## Getting started {#getting-started}
 
-Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Prerequisites {#prerequisites}
 
 Before you can use the `/sample-profiles` endpoint, make sure you meet the following conditions:
 
-* You have an existing file-based destination created through the Destination SDK and you can see it in your [destinations catalog](../ui/destinations-workspace.md).
-* You have created at least one activation flow for your destination in the Experience Platform UI. The `/sample-profiles` endpoint creates the profiles based on the source schema that you defined in your activation flow. See the [activation tutorial](../ui/activate-batch-profile-destinations.md) to learn how to create an activation flow.
+* You have an existing file-based destination created through the Destination SDK and you can see it in your [destinations catalog](../../../ui/destinations-workspace.md).
+* You have created at least one activation flow for your destination in the Experience Platform UI. The `/sample-profiles` endpoint creates the profiles based on the source schema that you defined in your activation flow. See the [activation tutorial](../../../ui/activate-batch-profile-destinations.md) to learn how to create an activation flow.
 * To successfully make the API request, you need the destination instance ID corresponding to the destination instance that you will be testing. Get the destination instance ID that you should use in the API call, from the URL, when browsing a connection with your destination in the Platform UI.
 
    ![UI image showing how to get destination instance ID from the URL.](assets/get-destination-instance-id.png)
@@ -100,10 +100,10 @@ A successful response returns HTTP status 200 with the specified number of sampl
 
 | Property | Description |
 | -------- | ----------- |
-| `segmentMembership` | A map object which describes the individual’s segment memberships. For more information on `segmentMembership`, read [Segment Membership Details](../../xdm/field-groups/profile/segmentation.md). |
+| `segmentMembership` | A map object which describes the individual's segment memberships. For more information on `segmentMembership`, read [Segment Membership Details](../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | A timestamp of the last time this profile qualified for the segment. |
 | `status` | A string field that indicates whether the segment membership has been realized as part of the current request. The following values are accepted: <ul><li>`existing`: The profile was already part of the segment prior to the request, and continues to maintain its membership.</li><li>`realized`: The profile is entering the segment as part of the current request.</li><li>`exited`: The profile is exiting the segment as part of the current request.</li></ul> |
-| `identityMap` | A map-type field that describes the various identity values for an individual, along with their associated namespaces. For more information on `identityMap`, see [basis of schema composition](../../xdm/schema/composition.md#identityMap). |
+| `identityMap` | A map-type field that describes the various identity values for an individual, along with their associated namespaces. For more information on `identityMap`, see [basis of schema composition](../../../../xdm/schema/composition.md#identityMap). |
 
 {style="table-layout:auto"}
 
@@ -113,6 +113,6 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ## Next steps
 
-After reading this document, you now know how to generate sample profiles based on the source schema that you configured in your destination [activation flow](../ui/activate-batch-profile-destinations.md).
+After reading this document, you now know how to generate sample profiles based on the source schema that you configured in your destination [activation flow](../../../ui/activate-batch-profile-destinations.md).
 
 You can now customize these profiles or use them as they are returned by the API, to [test your file-based destination configuration](file-based-destination-testing-api.md).
