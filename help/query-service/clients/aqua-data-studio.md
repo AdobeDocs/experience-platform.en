@@ -39,7 +39,7 @@ To find your credentials, log in to the [!DNL Platform] UI and select **[!UICONT
 
 ### Setting SSL mode
 
-Next, you must set the SSL mode value as `?sslmode=require`. This is done from the [!DNL Driver] tab of the [!DNL Edit Server Properties] dialog. See the official Aqua Data Studio documentation for instructions on how to edit driver properties. Use the search bar to find the `sslmode` property.
+Next, you must set the SSL mode value as `?sslmode=require`. This is done from the [!DNL Driver] tab of the [!DNL Edit Server Properties] dialog. See the official Aqua Data Studio documentation for instructions on how to [edit driver properties](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation13/page/116/PostgreSQL#drivers) and [configure SSL for [!DNL PostgreSQL]](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation20/page/SSL-Configuration/SSL-Configuration). Use the search bar to find the `sslmode` property.
 
 >[!IMPORTANT]
 >
