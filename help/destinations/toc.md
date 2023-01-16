@@ -187,6 +187,7 @@ feature: Destinations
             * [Schema configuration](./destination-sdk/functionality/destination-configuration/schema-configuration.md)
             * [Identities and attributes](./destination-sdk/functionality/destination-configuration/identities-attributes.md)
             * [Destination delivery](./destination-sdk/functionality/destination-configuration/destination-delivery.md)
+            * [Segment mapping configuration](./destination-sdk/functionality/destination-configuration/segment-mapping.md)
             * [Audience metadata configuration](./destination-sdk/functionality/destination-configuration/audience-metadata-configuration.md)
             * [Aggregation policy](./destination-sdk/functionality/destination-configuration/aggregation-policy.md)
             * [Batch configuration](./destination-sdk/functionality/destination-configuration/batch-configuration.md)

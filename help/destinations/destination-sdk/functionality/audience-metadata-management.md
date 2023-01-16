@@ -7,7 +7,7 @@ title: Audience metadata management
 
 Use audience metadata templates to programmatically create, update, or delete audiences in your destination. Adobe provides an extensible audience metadata template, which you can configure based on the specifications of your marketing API. After you define, test, and submit the configuration, it will be used by Adobe to structure the API calls to your destination.
 
-You can configure the functionality described in this document by using the `/authoring/audience-templates` API endpoint. Read [Audience metadata endpoint API operations](./audience-metadata-api.md) for a complete list of operations you can perform on the endpoint.
+You can configure the functionality described in this document by using the `/authoring/audience-templates` API endpoint. Read [create a metadata template](../metadata-api/create-audience-template.md) for a complete list of operations you can perform on the endpoint.
 
 ## When to use the audience metadata management endpoint {#when-to-use}
 
