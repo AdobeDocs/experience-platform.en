@@ -22,7 +22,7 @@ There are a few other fields in the Send Event action type that could also be us
 <!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
 - **Dataset ID:** If you need to send data to a dataset other than the one you specified in your datastream, you can specify that dataset ID here.
 - **Document will unload:** If you would like to make sure that the events reach the server even if the user navigates away from the page, check the **[!UICONTROL Document will unload]** checkbox. This allows events to reach the server but responses are ignored.
-- **Render visual personalization decisions:** If you want to render personalized content on your page, check the **[!UICONTROL Render visual personalization decisions]** checkbox. You can also specify decision scopes if necessary. See the [personalization documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) for more information on rendering personalized content. 
+- **Render visual personalization decisions:** If you want to render personalized content on your page, check the **[!UICONTROL Render visual personalization decisions]** checkbox. You can also specify decision scopes and/or surfaces if necessary. See the [personalization documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) for more information on rendering personalized content. 
 
 ## Set Consent
 
