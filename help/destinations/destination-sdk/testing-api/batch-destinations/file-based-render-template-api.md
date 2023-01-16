@@ -7,13 +7,13 @@ exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
 
 ## Overview {#overview}
 
-The `/authoring/testing/template/render` endpoint helps you visualize how the templatized [customer data fields](file-based-destination-configuration.md#customer-data-fields) defined in your destination configuration would look like.
+The `/authoring/testing/template/render` endpoint helps you visualize how the templatized [customer data fields](../../functionality/destination-configuration/customer-data-fields.md) defined in your destination configuration would look like.
 
 The endpoint generates random values for your customer data fields, and returns them in the response. This helps you validate the semantic structure of customer data fields, such as bucket names or folder paths.
 
 ## Getting started {#getting-started}
 
-Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Prerequisites {#prerequisites}
 
@@ -70,8 +70,8 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 | Parameters | Description |
 | -------- | ----------- |
-| `destinationId` | The ID of the [destination configuration](file-based-destination-configuration.md) that you are testing.| 
-| `templates`| The templatized field names defined in your [destination server configuration](server-and-file-configuration.md).|
+| `destinationId` | The ID of the [destination configuration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) that you are testing.| 
+| `templates`| The templatized field names defined in your [destination server configuration](../../authoring-api/destination-server/create-destination-server.md).|
 
 **Response**
 
@@ -95,4 +95,4 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ## Next steps {#next-steps}
 
-After reading this document, you now know how to validate the customer data field configuration defined in your [destination server](server-and-file-configuration.md).
+After reading this document, you now know how to validate the customer data field configuration defined in your [destination server](../../authoring-api/destination-server/create-destination-server.md).
