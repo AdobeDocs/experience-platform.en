@@ -5,7 +5,7 @@ title: Customer authentication configuration
 
 # Customer authentication configuration
 
-The customer authentication configuration section in the destinations configuration generates the [Configure new destination](./help/destinations/ui/connect-destination.md) page in the Experience Platform user interface, where users connect Experience Platform to the accounts they have with your destination.
+The customer authentication configuration section in the destinations configuration generates the [Configure new destination](../../../ui/connect-destination.md) page in the Experience Platform user interface, where users connect Experience Platform to the accounts they have with your destination.
 
 Depending on which authentication option you indicate in the `authType` field, the Experience Platform page is generated for the users as shown below.
 
@@ -34,7 +34,7 @@ Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 auth
 |Parameter | Type | Description|
 |---------|----------|------|
 |`customerAuthenticationConfigurations` | String | Indicates the configuration used to authenticate Experience Platform customers to your server. See `authType` below for accepted values. |
-|`authType` | String | Accepted values for streaming destinations are:<ul><li>`BEARER`. If your destination supports bearer authentication, set `"authType":"Bearer"` and  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](./destination-configuration.md).</li><li>`OAUTH2`. If your destination supports OAuth 2 authentication, set `"authType":"OAUTH2"` and add the required fields for OAuth 2, as shown in the [Destination SDK OAuth 2 authentication page](./oauth2-authentication.md). Additionally, set `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](./destination-configuration.md).</li>|
+|`authType` | String | Accepted values for streaming destinations are:<ul><li>`BEARER`. If your destination supports bearer authentication, set `"authType":"Bearer"` and  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](destination-delivery.md).</li><li>`OAUTH2`. If your destination supports OAuth 2 authentication, set `"authType":"OAUTH2"` and add the required fields for OAuth 2, as shown in the [Destination SDK OAuth 2 authentication page](oauth2-authentication.md). Additionally, set `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](destination-delivery.md).</li>|
 
 {style="table-layout:auto"}
 

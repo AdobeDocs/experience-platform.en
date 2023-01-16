@@ -23,7 +23,7 @@ As a first step, you must create an app in your system for Adobe Experience Plat
 
 >[!IMPORTANT]
 >
->The step to register a redirect/callback URL for Adobe Experience Platform in your system is required only for the [OAuth 2 with Authorization Code](./oauth2-authentication.md#authorization-code) grant type. For the other two supported grant types (password and client credentials), you can skip this step.
+>The step to register a redirect/callback URL for Adobe Experience Platform in your system is required only for the [OAuth 2 with Authorization Code](oauth2-authentication.md#authorization-code) grant type. For the other two supported grant types (password and client credentials), you can skip this step.
 
 At the end of this step, you should have:
 * A client ID;
@@ -70,10 +70,9 @@ If your destination supports a standard OAuth 2.0 Authorization Code flow (read 
 
 {style="table-layout:auto"}
 
-To set up this authentication method for your destination, add the following lines to your configuration, in the `/destinations` [endpoint](./destination-configuration.md):
+To set up this authentication method for your destination, add the following lines to your configuration, when you [create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md):
 
 ``` json
-
 {
 //...
   "customerAuthenticationConfigurations": [
@@ -121,7 +120,7 @@ Adobe makes use of the standard inputs below to simplify destination configurati
 >
 > You don't need to add any parameters for `username` and `password` in the configuration below. When you add `"grant": "OAUTH2_PASSWORD"` in the destination configuration, the system will request the user to provide a username and password in the Experience Platform UI, when they authenticate to your destination.
 
-To set up this authentication method for your destination, add the following lines to your configuration, in the `/destinations` [endpoint](./destination-configuration.md):
+To set up this authentication method for your destination, add the following lines to your configuration, when you [create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md):
 
 ``` json
 
@@ -153,7 +152,7 @@ To set up this authentication method for your destination, add the following lin
 
 ## OAuth 2 with Client Credentials Grant
 
-You can configure an OAuth 2 Client Credentials (read the [RFC standards specs](https://tools.ietf.org/html/rfc6749#section-4.4)) destination, which supports the standard inputs and outputs listed below. You have the ability to customize the values. See [Customize your OAuth 2 configuration](./oauth2-authentication.md#customize-configuration) for details.
+You can configure an OAuth 2 Client Credentials (read the [RFC standards specs](https://tools.ietf.org/html/rfc6749#section-4.4)) destination, which supports the standard inputs and outputs listed below. You have the ability to customize the values. See [Customize your OAuth 2 configuration](#customize-configuration) for details.
 
 |OAuth 2 Grant | Inputs | Outputs |
 |---------|----------|---------|
@@ -161,7 +160,7 @@ You can configure an OAuth 2 Client Credentials (read the [RFC standards specs](
 
 {style="table-layout:auto"}
 
-To set up this authentication method for your destination, add the following lines to your configuration, in the `/destinations` [endpoint](./destination-configuration.md):
+To set up this authentication method for your destination, add the following lines to your configuration, when you [create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md):
 
 ``` json
 
@@ -258,7 +257,7 @@ In this example, a partner sets up their destination to provide a special refres
 
 ### Example 3: The user inputs client ID and client secret when they configure the destination {#example-3}
 
-In this example, instead of creating a global client ID and client secret as shown in the section [Prerequisites in your system](./oauth2-authentication.md#prerequisites), the customer is required to input client ID, client secret, and account ID (the ID that the customer uses to log into the destination)
+In this example, instead of creating a global client ID and client secret as shown in the section [Prerequisites in your system](#prerequisites), the customer is required to input client ID, client secret, and account ID (the ID that the customer uses to log into the destination)
 
 ```json
 
@@ -444,17 +443,17 @@ You can use the following parameters in `accessTokenRequest` to customize your t
 |`accessTokenRequest.urlBasedDestination.url.templatingStrategy` | String | <ul><li>Use `PEBBLE_V1` if you use templates for the value in `accessTokenRequest.urlBasedDestination.url.value`.</li><li> Use `NONE` if the value in the field `accessTokenRequest.urlBasedDestination.url.value` is a constant. </li></li>  |
 |`accessTokenRequest.urlBasedDestination.url.value` | String | The URL where Experience Platform requests the access token. |
 |`accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | String | <ul><li>Use `PEBBLE_V1` if you use templates for the values in `accessTokenRequest.httpTemplate.requestBody.value`.</li><li> Use `NONE` if the value in the field `accessTokenRequest.httpTemplate.requestBody.value` is a constant. </li></li> |
-|`accessTokenRequest.httpTemplate.requestBody.value` | String | Use templating language to customize fields in the HTTP request to the access token endpoint. For information on how to use templating to customize fields, refer to the [templating conventions](./oauth2-authentication.md#templating-conventions) section. |
+|`accessTokenRequest.httpTemplate.requestBody.value` | String | Use templating language to customize fields in the HTTP request to the access token endpoint. For information on how to use templating to customize fields, refer to the [templating conventions](#templating-conventions) section. |
 |`accessTokenRequest.httpTemplate.httpMethod` | String | Specifies the HTTP method used to call your access token endpoint. In most cases, this value is `POST`. |
 |`accessTokenRequest.httpTemplate.contentType` | String | Specifies the content type of the HTTP call to your access token endpoint. <br> For example: `application/x-www-form-urlencoded` or `application/json`. |
 |`accessTokenRequest.httpTemplate.headers` | String | Specifies if any headers should be added to the HTTP call to your access token endpoint. |
 |`accessTokenRequest.responseFields.templatingStrategy` | String | <ul><li>Use `PEBBLE_V1` if you use templates for the values in `accessTokenRequest.responseFields.value`.</li><li> Use `NONE` if the value in the field `accessTokenRequest.responseFields.value` is a constant. </li></li> |
-|`accessTokenRequest.responseFields.value` | String | Use templating language to access fields in the HTTP response from your access token endpoint. For information on how to use templating to customize fields, refer to the [templating conventions](./oauth2-authentication.md#templating-conventions) section. |
+|`accessTokenRequest.responseFields.value` | String | Use templating language to access fields in the HTTP response from your access token endpoint. For information on how to use templating to customize fields, refer to the [templating conventions](#templating-conventions) section. |
 |`accessTokenRequest.validations.name` | String | Indicates the name you provided for this validation. |
 |`accessTokenRequest.validations.actualValue.templatingStrategy` | String | <ul><li>Use `PEBBLE_V1` if you use templates for the values in `accessTokenRequest.validations.actualValue.value`.</li><li> Use `NONE` if the value in the field `accessTokenRequest.validations.actualValue.value` is a constant. </li></li>  |
-|`accessTokenRequest.validations.actualValue.value` | String | Use templating language to access fields in the HTTP response. For information on how to use templating to customize fields, refer to the [templating conventions](./oauth2-authentication.md#templating-conventions) section. |
+|`accessTokenRequest.validations.actualValue.value` | String | Use templating language to access fields in the HTTP response. For information on how to use templating to customize fields, refer to the [templating conventions](#templating-conventions) section. |
 |`accessTokenRequest.validations.expectedValue.templatingStrategy` | String | <ul><li>Use `PEBBLE_V1` if you use templates for the values in `accessTokenRequest.validations.expectedValue.value`.</li><li> Use `NONE` if the value in the field `accessTokenRequest.validations.expectedValue.value` is a constant. </li></li>  |
-|`accessTokenRequest.validations.expectedValue.value` | String | Use templating language to access fields in the HTTP response. For information on how to use templating to customize fields, refer to the [templating conventions](./oauth2-authentication.md#templating-conventions) section. |
+|`accessTokenRequest.validations.expectedValue.value` | String | Use templating language to access fields in the HTTP response. For information on how to use templating to customize fields, refer to the [templating conventions](#templating-conventions) section. |
 
 {style="table-layout:auto"}
 

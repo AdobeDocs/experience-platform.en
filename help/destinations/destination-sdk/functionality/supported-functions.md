@@ -11,9 +11,9 @@ The Experience Platform [!DNL Pebble] implementation has some changes, compared 
 
 ## Where to use {#where-to-use}
 
-Use the supported functions listed further below on this page when [creating a message transformation template](./create-template.md) for the data exported out of Experience Platform to your destination. 
+Use the supported functions listed further below on this page when [creating a message transformation template](../testing-api/create-template.md) for the data exported out of Experience Platform to your destination. 
 
-The message transformation template is used in the [destination server configuration](./server-and-template-configuration.md) for streaming destinations.
+The message transformation template is used in the [destination server configuration](../functionality/destination-server/templating-specs.md) for streaming destinations.
 
 ## Prerequisites {#prerequisites}
 

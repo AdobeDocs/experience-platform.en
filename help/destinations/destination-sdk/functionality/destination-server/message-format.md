@@ -9,14 +9,14 @@ title: Message format
 
 To understand the message format and profile configuration and transformation process on the Adobe side, please familiarize yourself with the following Experience Platform concepts:
 
-* **Experience Data Model (XDM)**. [XDM overview](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=en) and  [How to create an XDM schema in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en).
-* **Class**. [Create and edit classes in the UI](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en).
-* **IdentityMap**. The identity map represents a map of all end-user identities in Adobe Experience Platform. Refer to `xdm:identityMap` in the [XDM field dictionary](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
-* **SegmentMembership**. The [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) XDM attribute informs which segments a profile is a member of. For the three different values in the `status` field, read the documentation on [Segment Membership Details schema field group](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
+* **Experience Data Model (XDM)**. [XDM overview](../../../../xdm/home.md) and  [How to create an XDM schema in Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
+* **Class**. [Create and edit classes in the UI](../../../../xdm/ui/resources/classes.md).
+* **IdentityMap**. The identity map represents a map of all end-user identities in Adobe Experience Platform. Refer to `xdm:identityMap` in the [XDM field dictionary](../../../../xdm/schema/field-dictionary.md).
+* **SegmentMembership**. The [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM attribute informs which segments a profile is a member of. For the three different values in the `status` field, read the documentation on [Segment Membership Details schema field group](../../../../xdm/field-groups/profile/segmentation.md).
 
 ## Overview {#overview}
 
-Use the content on this page together with the rest of the [configuration options for partner destinations](configuration-options.md). This page addresses the message format and the profile transformation in data exported from Adobe Experience Platform to destinations. The other page addresses specifics about connecting and authenticating to your destination.
+Use the content on this page together with the rest of the [configuration options for partner destinations](../configuration-options.md). This page addresses the message format and the profile transformation in data exported from Adobe Experience Platform to destinations. The other page addresses specifics about connecting and authenticating to your destination.
 
 Adobe Experience Platform exports data to a significant number of destinations, in various data formats. Some examples of destination types are advertising platforms (Google), social networks (Facebook), and cloud storage locations (Amazon S3, Azure Event Hubs).
 
@@ -24,7 +24,7 @@ Experience Platform can adjust the message format of exported profiles to match 
 
 * The source (1) and target (2) XDM schema in Adobe Experience Platform
 * The expected message format on the partner side (3), and 
-* The transformation layer between XDM schema and expected message format, which you can define by creating a [message transformation template](message-format.md#using-templating).
+* The transformation layer between XDM schema and expected message format, which you can define by creating a [message transformation template](#using-templating).
 
 ![Schema to JSON transformation](assets/transformations-3-steps.png)
 
@@ -36,11 +36,11 @@ Users who want to activate data to your destination need to map the fields in th
 
 -->
 
-**Source XDM schema (1)**: This item refers to the schema that customers use in Experience Platform. In Experience Platform, in the [mapping step](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) of the activate destination workflow, customers map fields from their XDM schema to your destination's target schema (2).
+**Source XDM schema (1)**: This item refers to the schema that customers use in Experience Platform. In Experience Platform, in the [mapping step](../../../ui/activate/activate-segment-streaming-destinations.md#mapping) of the activate destination workflow, customers map fields from their XDM schema to your destination's target schema (2).
 
-**Target XDM schema (2)**: Based on the JSON standard schema (3) of your destination's expected format and the attributes that your destination can interpret, you can define profile attributes and identities in your target XDM schema. You can do this in the destinations configuration, in the [schemaConfig](./destination-configuration.md#schema-configuration) and [identityNamespaces](./destination-configuration.md#identities-and-attributes) objects.
+**Target XDM schema (2)**: Based on the JSON standard schema (3) of your destination's expected format and the attributes that your destination can interpret, you can define profile attributes and identities in your target XDM schema. You can do this in the destinations configuration, in the [schemaConfig](../../functionality/destination-configuration/schema-configuration.md) and [identityNamespaces](../../functionality/destination-configuration/identities-attributes.md) objects.
 
-**JSON standard schema of your destination profile attributes (3)**: This example represents a [JSON schema](https://json-schema.org/learn/miscellaneous-examples.html) of all the profile attributes that your platform supports and their types (for example: object, string, array). Example fields that your destination could support could be `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, and so on. You need a [message transformation template](message-format.md#using-templating) to tailor the data exported out of Experience Platform to your expected format.
+**JSON standard schema of your destination profile attributes (3)**: This example represents a [JSON schema](https://json-schema.org/learn/miscellaneous-examples.html) of all the profile attributes that your platform supports and their types (for example: object, string, array). Example fields that your destination could support could be `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, and so on. You need a [message transformation template](#using-templating) to tailor the data exported out of Experience Platform to your expected format.
 
 Based on the schema transformations described above, here is how a profile configuration changes between the source XDM schema and a sample schema on the partner side:
 
@@ -52,7 +52,7 @@ To demonstrate the profile transformation process, the example below uses three 
 
 >[!NOTE]
 >
->The customer maps the attributes from the source XDM schema to the partner XDM schema in the Adobe Experience Platform UI, in the **Mapping** step of the [activate destination workflow](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
+>The customer maps the attributes from the source XDM schema to the partner XDM schema in the Adobe Experience Platform UI, in the **Mapping** step of the [activate destination workflow](../../../ui/activate-segment-streaming-destinations.md#mapping).
 
 Let's say your platform can receive a message format like:
 
@@ -158,9 +158,9 @@ Adobe uses [Pebble templates](https://pebbletemplates.io/), a templating languag
 
 This section provides several examples of how these transformations are made - from the input XDM schema, through the template, and outputting into payload formats accepted by your destination. The examples below are presented by increasing complexity, as follows:
 
-1. Simple transformation examples. Learn how templating works with simple transformations for [Profile attributes](./message-format.md#attributes), [Segment membership](./message-format.md#segment-membership), and [Identity](./message-format.md#identities) fields.
-2. Increased complexity examples of templates that combine the fields above: [Create a template that sends segments and identities](./message-format.md#segments-and-identities) and [Create a template that sends segments, identities, and profile attributes](./message-format.md#segments-identities-attributes).
-3. Templates that include the aggregation key. When you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration, Experience Platform groups the profiles exported to your destination based on criteria such as segment ID, segment status, or identity namespaces.
+1. Simple transformation examples. Learn how templating works with simple transformations for [Profile attributes](#attributes), [Segment membership](#segment-membership), and [Identity](#identities) fields.
+2. Increased complexity examples of templates that combine the fields above: [Create a template that sends segments and identities](./message-format.md#segments-and-identities) and [Create a template that sends segments, identities, and profile attributes](#segments-identities-attributes).
+3. Templates that include the aggregation key. When you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in the destination configuration, Experience Platform groups the profiles exported to your destination based on criteria such as segment ID, segment status, or identity namespaces.
 
 ### Profile Attributes {#attributes}
 
@@ -168,7 +168,7 @@ To transform the profile attributes exported to your destination, see the JSON a
 
 >[!IMPORTANT]
 >
->For a list of all available profile attributes in Adobe Experience Platform, see the [XDM field dictionary](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
+>For a list of all available profile attributes in Adobe Experience Platform, see the [XDM field dictionary](../../../../xdm/schema/field-dictionary.md).
 
 
 **Input**
@@ -205,7 +205,7 @@ Profile 2:
 
 >[!IMPORTANT]
 >
->For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the [template](../../functionality/destination-server/templating-specs.md) in the [destination server configuration](../../authoring-api/destination-server/create-destination-server.md). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -247,8 +247,8 @@ Profile 2:
 
 ### Segment membership {#segment-membership}
 
-The [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) XDM attribute informs which segments a profile is a member of.
-For the three different values in the `status` field, read the documentation on [Segment Membership Details schema field group](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
+The [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM attribute informs which segments a profile is a member of.
+For the three different values in the `status` field, read the documentation on [Segment Membership Details schema field group](../../../../xdm/field-groups/profile/segmentation.md).
 
 **Input**
 
@@ -300,10 +300,10 @@ Profile 2:
 
 **Template**
 
-
 >[!IMPORTANT]
 >
->For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the [template](../../functionality/destination-server/templating-specs.md) in the [destination server configuration](../../authoring-api/destination-server/create-destination-server.md). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+
 
 ```python
 {
@@ -362,7 +362,7 @@ Profile 2:
 
 ### Identities {#identities}
 
-For information about identities in Experience Platform, see the [Identity namespace overview](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en).
+For information about identities in Experience Platform, see the [Identity namespace overview](../../../../identity-service/namespaces.md).
 
 **Input**
 
@@ -404,10 +404,9 @@ Profile 2:
 
 **Template**
 
-
 >[!IMPORTANT]
 >
->For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the [template](../../functionality/destination-server/templating-specs.md) in the [destination server configuration](../../authoring-api/destination-server/create-destination-server.md). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -544,7 +543,7 @@ Profile 2:
 
 >[!IMPORTANT]
 >
->For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the [template](../../functionality/destination-server/templating-specs.md) in the [destination server configuration](../../authoring-api/destination-server/create-destination-server.md). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -727,7 +726,7 @@ Profile 2:
 
 >[!IMPORTANT]
 >
->For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the [template](../../functionality/destination-server/templating-specs.md) in the [destination server configuration](../../authoring-api/destination-server/create-destination-server.md). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -843,13 +842,13 @@ The `json` below represents the data exported out of Adobe Experience Platform.
 
 ### Include aggregation key in your template to access exported profiles grouped by various criteria {#template-aggregation-key}
 
-When you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration, you can group the profiles exported to your destination based on criteria such as segment ID, segment alias, segment membership, or identity namespaces.
+When you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in the destination configuration, you can group the profiles exported to your destination based on criteria such as segment ID, segment alias, segment membership, or identity namespaces.
 
 In the message transformation template, you can access the aggregation keys mentioned above, as shown in the examples in the following sections. Use aggregation keys to structure the HTTP message exported out of Experience Platform to match the format and rate limits expected by your destination.
 
 #### Use segment ID aggregation key in the template {#aggregation-key-segment-id}
 
-If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` to true, the profiles in the HTTP messages exported to your destination are grouped by segment ID. See below how you can access the segment ID in the template.
+If you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) and set `includeSegmentId` to true, the profiles in the HTTP messages exported to your destination are grouped by segment ID. See below how you can access the segment ID in the template.
 
 **Input**
 
@@ -947,7 +946,7 @@ Profile 4:
 
 >[!IMPORTANT]
 >
->For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the [template](../../functionality/destination-server/templating-specs.md) in the [destination server configuration](../../authoring-api/destination-server/create-destination-server.md). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 Notice below how `audienceId` is used in the template to access segment IDs. This example assumes that you use `audienceId` for segment membership in your destination taxonomy. You can use any other field name instead, depending on your own taxonomy.
 
@@ -1001,7 +1000,7 @@ When exported to your destination, the profiles are split into two groups, based
 
 #### Use segment alias aggregation key in the template {#aggregation-key-segment-alias}
 
-If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` to true, you can also access segment alias in the template.
+If you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) and set `includeSegmentId` to true, you can also access segment alias in the template.
 
 Add the line below to the template to access the exported profiles grouped by segment alias.
 
@@ -1011,7 +1010,7 @@ customerList={{input.aggregationKey.segmentAlias}}
 
 #### Use segment status aggregation key in the template {#aggregation-key-segment-status}
 
-If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` and `includeSegmentStatus` to true, you can access the segment status in the template. This way, you can group profiles in the HTTP messages exported to your destination based on whether the profiles should be added or removed from segments.
+If you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) and set `includeSegmentId` and `includeSegmentStatus` to true, you can access the segment status in the template. This way, you can group profiles in the HTTP messages exported to your destination based on whether the profiles should be added or removed from segments.
 
 Possible values are:
 
@@ -1027,7 +1026,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 #### Use identity namespace aggregation key in the template {#aggregation-key-identity}
 
-Below is an example where the [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration is set to aggregate exported profiles by identity namespaces, in the form `"namespaces": ["email", "phone"]` and `"namespaces": ["GAID", "IDFA"]`. Refer to the `groups` parameter in the [destination configuration API reference](./destination-configuration-api.md) for more information about this grouping.
+Below is an example where the [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in the destination configuration is set to aggregate exported profiles by identity namespaces, in the form `"namespaces": ["email", "phone"]` and `"namespaces": ["GAID", "IDFA"]`. Refer to the `groups` parameter in the [create destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md) documentation for more details about grouping.
 
 **Input**
 
@@ -1099,7 +1098,7 @@ Profile 2:
 
 >[!IMPORTANT]
 >
->For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the [template](../../functionality/destination-server/templating-specs.md) in the [destination server configuration](../../authoring-api/destination-server/create-destination-server.md). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 Notice that `input.aggregationKey.identityNamespaces` is used in the template below
 

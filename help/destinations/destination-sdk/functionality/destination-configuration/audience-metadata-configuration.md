@@ -7,7 +7,7 @@ title: Audience metadata configuration
 
 This section of the destination configuration relates to how segment metadata like segment names or IDs should be shared between Experience Platform and your destination.
 
-Through the `audienceTemplateId`, this section also ties together this configuration with the [audience metadata configuration](./audience-metadata-management.md).
+Through the `audienceTemplateId`, this section also ties together this configuration with the [audience metadata configuration](../audience-metadata-management.md).
 
 ```json
    "audienceMetadataConfig":{

@@ -5,7 +5,7 @@ title: Schema configuration
 
 # Schema configuration
 
-Adobe Experience Platform Destination SDK supports partner-defined schemas. A partner-defined schema allows users to map profile attributes and identities to custom schemas defined by destination partners, similar to the [streaming destinations](destination-configuration.md#schema-configuration) workflow.
+Adobe Experience Platform Destination SDK supports partner-defined schemas. A partner-defined schema allows users to map profile attributes and identities to custom schemas defined by destination partners.
 
 Use the parameters in `schemaConfig` to enable the mapping step of the destination activation workflow. By using the parameters described below, you can determine if Experience Platform users can map profile attributes and/or identities to your file-based destination.
 
@@ -122,8 +122,8 @@ Use the parameters described in the table below if you would like to add require
 |Parameter | Type | Description|
 |---------|----------|------|
 |`requiredMappingsOnly`|Boolean|Indicates if users are be able to map other attributes and identities in the activation flow, *apart from* the required mappings that you define.|
-|`requiredMappings.mandatoryRequired`|Boolean| Set to true if this field must be a mandatory attribute which should always be present in file exports to your destination. Read more about [mandatory attributes](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
-|`requiredMappings.primaryKeyRequired`|Boolean| Set to true if this field must be used as a deduplication key in file exports to your destination. Read more about [deduplication keys](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
+|`requiredMappings.mandatoryRequired`|Boolean| Set to true if this field must be a mandatory attribute which should always be present in file exports to your destination. Read more about [mandatory attributes](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes). |
+|`requiredMappings.primaryKeyRequired`|Boolean| Set to true if this field must be used as a deduplication key in file exports to your destination. Read more about [deduplication keys](../../../ui/activate-batch-profile-destinations.md#deduplication-keys). |
 |`requiredMappings.sourceType`|String| Used when you configure a source field as required. Use `"text/x.schema-path"`,  which indicates that the source field is a predefined XDM attribute|
 |`requiredMappings.source`|String|Indicates what the required source field should be.|
 |`requiredMappings.destination`|String|Indicates what the required destination field should be.|

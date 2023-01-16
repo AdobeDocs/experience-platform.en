@@ -34,7 +34,7 @@ Adobe Experience Platform Destination SDK consists of the following configuratio
     * [Aggregation policy](destination-configuration/aggregation-policy.md): This section defines how the exported profiles are combined in the data exports. 
     * [Batch configuration](destination-configuration/batch-configuration.md): This section refers to the file naming and export scheduling settings that will be displayed for your destination in the Adobe Experience Platform user interface. 
     * [Historical profile qualifications](destination-configuration/historical-profile-qualifications.md): This section determines if historical profile qualifications should be exported to your destination.
-* **[Audience metadata configuration](audience-metadata-mangement.md)**: This configuration endpoint allows you to configure how audiences/segments are programmatically created, updated, or deleted in your destination. For file-based destinations, it allows you to set up a notification whenever files are successfully delivered to your destination. You can configure this functionality via the [audience-templates endpoint](../metadata-api/create-audience-template.md).
+* **[Audience metadata configuration](audience-metadata-management.md)**: This configuration endpoint allows you to configure how audiences/segments are programmatically created, updated, or deleted in your destination. For file-based destinations, it allows you to set up a notification whenever files are successfully delivered to your destination. You can configure this functionality via the [audience-templates endpoint](../metadata-api/create-audience-template.md).
 
 ## Next steps {#next-steps}
 

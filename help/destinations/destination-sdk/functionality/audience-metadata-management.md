@@ -17,7 +17,7 @@ Depending on your API configuration, you may or may not need to use the audience
 
 ## Use cases supported by audience metadata management {#use-cases}
 
-With audience metadata support in Destination SDK, when you configure your Experience Platform destination, you can give Platform users one of several options when they map and activate segments to your destination. You can control the options available to the user via the parameters in the segment mapping section of the [destination configuration](./destination-configuration.md#segment-mapping).
+With audience metadata support in Destination SDK, when you configure your Experience Platform destination, you can give Platform users one of several options when they map and activate segments to your destination. You can control the options available to the user via the parameters in the [segment mapping](../functionality/destination-configuration/segment-mapping.md) section of the destination configuration.
 
 ### Use case 1 - You have a 3rd party API and users don't need to input mapping IDs
 
@@ -39,7 +39,7 @@ If your destination system accepts the Experience Platform segment ID, you can c
 
 To support the use cases listed above, Adobe provides you with a generic template that can be customized to adjust to your API specifications.
 
-You can use the generic template to [create a new audience template](./audience-metadata-api.md#create) if your API supports:
+You can use the generic template to [create a new audience template](../metadata-api/create-audience-template.md) if your API supports:
 
 * The HTTP methods: POST, GET, PUT, DELETE, PATCH
 * The authentication types: OAuth 1, OAuth 2 with refresh token, OAuth 2 with bearer token

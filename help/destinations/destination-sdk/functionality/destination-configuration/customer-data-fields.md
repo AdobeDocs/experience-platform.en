@@ -11,8 +11,6 @@ In the example below, `customerDataFields` requires users to enter a name for th
 
 You can access and use the customer inputs from customer data fields in templating. Use the macro `{{customerData.exampleName}}`. For example, if you ask users to input an Amazon S3 bucket field, with the name `bucket`, you can access it in templating by using the macro `{{customerData.bucket}}`.
 
-<!-- View an example of how a customer data field is used in the [destination server configuration](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example). -->
-
 ```json
  "customerDataFields":[
       {
@@ -201,7 +199,7 @@ You can access and use the customer inputs from customer data fields in templati
 
 >[!TIP]
 >
->All the file formatting configurations listed in the example above are described at length in the [file formatting configuration](../destination-server/file-formatting.md) section.
+>All the file formatting configurations listed in the example above are described at length in the [file formatting configuration](../../functionality/destination-server/file-formatting.md) section.
 
 |Parameter | Type | Description|
 |---------|----------|------|

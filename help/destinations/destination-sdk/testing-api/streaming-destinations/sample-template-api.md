@@ -86,7 +86,7 @@ If the destination ID you provide corresponds to a destination configuration wit
 }
 ```
 
-If the destination ID you provide corresponds to a destination server template with [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.mdconfigurable-aggregation) or [best effort aggregation](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) with `maxUsersPerRequest` greater than one, the request returns a sample template similar to this one:
+If the destination ID you provide corresponds to a destination server template with [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) or [best effort aggregation](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) with `maxUsersPerRequest` greater than one, the request returns a sample template similar to this one:
 
 ```python
 {#- THIS is an example template for multiple profiles -#}

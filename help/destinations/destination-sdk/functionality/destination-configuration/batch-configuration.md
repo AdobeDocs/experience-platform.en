@@ -5,7 +5,7 @@ title: Batch configuration
 
 # Batch configuration - file naming and export scheduling {#batch-configuration}
 
-This section refers to the file naming and export scheduling settings that will be displayed for your destination in the Adobe Experience Platform user interface. The values that you set up here are surfaced in the [Schedule segment export](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) step of the file-based destinations activation workflow. 
+This section refers to the file naming and export scheduling settings that will be displayed for your destination in the Adobe Experience Platform user interface. The values that you set up here are surfaced in the [Schedule segment export](../../../ui/activate-batch-profile-destinations.md#scheduling) step of the file-based destinations activation workflow. 
 
 ```json
 "batchConfig":{
@@ -46,9 +46,9 @@ This section refers to the file naming and export scheduling settings that will 
 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`allowMandatoryFieldSelection`|Boolean|Set to `true` to allow customers to specify which profile attributes are mandatory. Default value is `false`. See [Mandatory attributes](../ui/activate-batch-profile-destinations.md#mandatory-attributes) for more information. |
-|`allowDedupeKeyFieldSelection`|Boolean|Set to `true` to allow customers to specify deduplication keys. Default value is `false`.  See [Deduplication keys](../ui/activate-batch-profile-destinations.md#deduplication-keys) for more information. |
-|`defaultExportMode`|Enum|Defines the default file export mode. Supported values:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> Default value is `DAILY_FULL_EXPORT`. See the [batch activation documentation](../ui/activate-batch-profile-destinations.md#scheduling) for details about file exports scheduling. |
+|`allowMandatoryFieldSelection`|Boolean|Set to `true` to allow customers to specify which profile attributes are mandatory. Default value is `false`. See [Mandatory attributes](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes) for more information. |
+|`allowDedupeKeyFieldSelection`|Boolean|Set to `true` to allow customers to specify deduplication keys. Default value is `false`.  See [Deduplication keys](../../../ui/activate-batch-profile-destinations.md#deduplication-keys) for more information. |
+|`defaultExportMode`|Enum|Defines the default file export mode. Supported values:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> Default value is `DAILY_FULL_EXPORT`. See the [batch activation documentation](../../../ui/activate-batch-profile-destinations.md#scheduling) for details about file exports scheduling. |
 |`allowedExportModes`|List|Defines the file export modes available to customers. Supported values:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul>|
 |`allowedScheduleFrequency`|List|Defines the file export frequency available to customers. Supported values:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul>|
 |`defaultFrequency`|Enum|Defines the default file export frequency.Supported values:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> Default value is `DAILY`.|
@@ -61,7 +61,7 @@ This section refers to the file naming and export scheduling settings that will 
 
 ## File name configuration {#file-name-configuration}
 
-Use file name configuration macros to define what the exported file names should include. The macros in the table below describe elements found in the UI in the [file name configuration](../ui/activate-batch-profile-destinations.md#file-names) screen.
+Use file name configuration macros to define what the exported file names should include. The macros in the table below describe elements found in the UI in the [file name configuration](../../../ui/activate-batch-profile-destinations.md#file-names) screen.
 
 
 >[!TIP]
