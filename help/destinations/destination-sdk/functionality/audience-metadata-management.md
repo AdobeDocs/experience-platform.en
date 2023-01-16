@@ -517,7 +517,7 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
 }
 ```
 
-Find descriptions of all parameters in the template in the reference documentation [Audience metadata endpoint API operations](./audience-metadata-api.md).
+Find descriptions of all parameters in the template in the [Create an audience template](../metadata-api/create-audience-template.md) API reference.
 
 ## Macros used in audience metadata templates
 
