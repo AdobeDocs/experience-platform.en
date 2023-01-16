@@ -6,7 +6,7 @@ title: Rate limiting and retry policy for streaming destinations built with Dest
 
 Partner-built destinations can return various errors and have different rate limiting policies. This page explains how Experience Platform handles different types of errors returned by streaming destinations.
 
-When configuring a destination using Destination SDK, you can select between two aggregation types - [best effort aggregation](destination-configuration/aggregation-policy.md#best-effort-aggregation) and [configurable aggregation](destination-configuration/aggregation-policy.md#configurable-aggregation). Depending on the aggregation type that you select, read below how Experience Platform handles errors and rate limitations.
+When configuring a destination using Destination SDK, you can select between two aggregation types - [best effort aggregation](../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) and [configurable aggregation](../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation). Depending on the aggregation type that you select, read below how Experience Platform handles errors and rate limitations.
 
 ## Best effort aggregation {#best-effort-aggregation}
 
@@ -36,5 +36,5 @@ The Experience Platform approach for configurable aggregation is described below
 
 You now know how Experience Platform handles errors and rate limiting from destination platforms, depending on the aggregation policy you selected when you configured your streaming destination. Next, you can review the following documentation:
 
-* [Test your destination configuration](./destination-sdk/test-destination.md)
-* [Submit for review a destination authored in Destination SDK](/help/destinations/destination-sdk/submit-destination.md)
+* [Test your destination configuration](../testing-api/test-destination.md)
+* [Submit for review a destination authored in Destination SDK](../guides/submit-destination.md)

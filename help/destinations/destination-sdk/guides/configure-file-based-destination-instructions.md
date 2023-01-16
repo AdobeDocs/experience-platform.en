@@ -7,11 +7,11 @@ exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
 
 ## Overview {#overview}
 
-This page describes how to use the information in [Configuration options in Destinations SDK](functionality/configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [file-based destination](../../destination-types.md#file-based). The steps are laid out in sequential order below.
+This page describes how to use the information in [Configuration options in Destinations SDK](../functionality/configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [file-based destination](../../destination-types.md#file-based). The steps are laid out in sequential order below.
 
 ## Prerequisites {#prerequisites}
 
-Before advancing to the steps illustrated below, please read the [Destination SDK getting started](getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
+Before advancing to the steps illustrated below, please read the [Destination SDK getting started](../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
 
 ## Steps to use the configuration options in Destination SDK to set up your destination {#steps}
 
@@ -19,7 +19,7 @@ Before advancing to the steps illustrated below, please read the [Destination SD
 
 ## Step 1: Create a server and file configuration {#create-server-file-configuration}
 
-Start by creating a server and file configuration using the `/destinations-server` endpoint (read [API reference](authoring-api/destination-server/create-destination-server.md)).
+Start by [creating a server and file configuration](../authoring-api/destination-server/create-destination-server.md) using the `/destinations-server` endpoint.
 
 Shown below is an example configuration for an [!DNL Amazon S3] destination. To configure other types of file-based destinations, see their corresponding [server configurations](../functionality/destination-server/server-specs.md).
 
@@ -236,7 +236,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Step 3: Create audience metadata configuration {#create-audience-metadata-configuration}
 
-For some destinations, Destination SDK requires that you configure an audience metadata configuration to programmatically create, update, or delete audiences in your destination. Refer to [Audience metadata management](functionality/audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
+For some destinations, Destination SDK requires that you configure an audience metadata configuration to programmatically create, update, or delete audiences in your destination. Refer to [Audience metadata management](../functionality/audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
 
 If you use an audience metadata configuration, you must connect it to the destination configuration you created in step 2. Add the instance ID of your audience metadata configuration to your destination configuration as `audienceTemplateId`.
 
@@ -246,14 +246,14 @@ Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION
 
 * If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration, see the following sections for the authentication types supported by Destination SDK for file-based destinations:
     
-    * [Amazon S3 authentication](functionality/destination-configuration/customer-authentication.md#s3)
-    * [Azure Blob](functionality/destination-configuration/customer-authentication.md#blob)
-    * [Azure Data Lake Storage](functionality/destination-configuration/customer-authentication.md#adls)
-    * [Google Cloud Storage](functionality/destination-configuration/customer-authentication.md#gcs)
-    * [SFTP authentication with SSH key](functionality/destination-configuration/customer-authentication.md#sftp-ssh)
-    * [SFTP authentication with password](functionality/destination-configuration/customer-authentication.md#sftp-password)
+    * [Amazon S3 authentication](../functionality/destination-configuration/customer-authentication.md#s3)
+    * [Azure Blob](../functionality/destination-configuration/customer-authentication.md#blob)
+    * [Azure Data Lake Storage](../functionality/destination-configuration/customer-authentication.md#adls)
+    * [Google Cloud Storage](../functionality/destination-configuration/customer-authentication.md#gcs)
+    * [SFTP authentication with SSH key](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
+    * [SFTP authentication with password](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, refer to the [credential configuration API documentation](credentials-api/create-credential-configuration.md#when-to-use).
+* If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, refer to the [credential configuration API documentation](../credentials-api/create-credential-configuration.md#when-to-use).
 
 
 <!-- ## Step 5: Test your destination {#test-destination}
@@ -279,4 +279,4 @@ After configuring and testing your destination, use the [destination publishing 
 >
 >This step is not required if you are creating a private destination for your own use, and are not looking to publish it in the destinations catalog for other customers to use.
 
-If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](../overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](../../catalog/overview.md).
+If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](../overview.md#productized-custom-integrations), use the [self-service documentation process](../docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](../../catalog/overview.md).

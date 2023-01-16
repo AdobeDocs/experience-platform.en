@@ -7,21 +7,21 @@ exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
 
 ## Overview {#overview}
 
-This page describes how to use the information in [Configuration options in Destinations SDK](./configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [streaming destination](/help/destinations/destination-types.md#streaming-destinations). The steps are laid out in sequential order below.
+This page describes how to use the information in [Configuration options in Destinations SDK](../functionality/configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [streaming destination](../../destination-types.md#streaming-destinations). The steps are laid out in sequential order below.
 
 ## Prerequisites {#prerequisites}
 
-Before advancing to the steps illustrated below, please read the [Destination SDK getting started](./getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
+Before advancing to the steps illustrated below, please read the [Destination SDK getting started](../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
 
 ## Steps to use the configuration options in Destination SDK to set up your destination {#steps}
 
-![Illustrated steps of using Destination SDK endpoints](./assets/destination-sdk-steps.png)
+![Illustrated steps of using Destination SDK endpoints](assets/destination-sdk-steps.png)
 
 ## Step 1: Create a server and template configuration {#create-server-template-configuration}
 
-Start by creating a server and template configuration using the `/destinations-server` endpoint (read [API reference](destination-server-api.md)). For more information about the server and template configuration, refer to [Server and template specs](server-and-template-configuration.md) in the reference section.
+Start by [creating a server and template configuration](../authoring-api/destination-server/create-destination-server.md) using the `/destinations-server` endpoint.
 
-Shown below is an example configuration. Note that the message transformation template in the `requestBody.value` parameter is addressed in step 3, [Create transformation template](./configure-destination-instructions.md#create-transformation-template).
+Shown below is an example configuration. Note that the message transformation template in the `requestBody.value` parameter is addressed in step 3, [Create transformation template](#create-transformation-template).
 
 ```json
 
@@ -50,13 +50,13 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Step 2: Create destination configuration {#create-destination-configuration}
 
-Shown below is an example configuration for a destination template, created by using the `/destinations` API endpoint. For more information about this configuration, refer to [Destination configuration](./destination-configuration.md).
+Shown below is an example configuration for a destination template, created by using the `/destinations` API endpoint. See [create a destination configuration](../authoring-api/destination-configuration/create-destination-configuration.md) for more information.
 
 To connect the server and template configuration in step 1 to this destination configuration, add the instance ID of the server and template configuration as `destinationServerId` here.
 
 >[!IMPORTANT]
 >
->To create a correctly configured destination, you *must* add at least one target identity in `identityNamespaces`, as shown below. If no target identity is configured, users will not be able to proceed past the [Mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the activation workflow.
+>To create a correctly configured destination, you *must* add at least one target identity in `identityNamespaces`, as shown below. If no target identity is configured, users will not be able to proceed past the [Mapping step](../../ui/activate-segment-streaming-destinations.md#mapping) of the activation workflow.
 
 ```json
 
@@ -184,4 +184,4 @@ After configuring and testing your destination, use the [destination publishing 
 >
 >This step is not required if you are creating a private destination for your own use, and are not looking to publish it in the destinations catalog for other customers to use.
 
-If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md).
+If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](../overview.md#productized-custom-integrations), use the [self-service documentation process](../docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](../../catalog/overview.md).

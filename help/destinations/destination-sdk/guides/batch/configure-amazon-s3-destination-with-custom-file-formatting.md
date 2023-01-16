@@ -15,12 +15,12 @@ For detailed descriptions of the parameters used below, see [configuration optio
 
 ## Prerequisites {#prerequisites}
 
-Before advancing to the steps outlined below, please read the [Destination SDK getting started](/help/destinations/destination-sdk/getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
+Before advancing to the steps outlined below, please read the [Destination SDK getting started](../../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
 
 
 ## Step 1: Create a server and file configuration {#create-server-file-configuration}
 
-Start by using the `/destination-server` endpoint to create a server and file configuration. For detailed descriptions of the parameters in the HTTP request, read the [server and file configuration specifications for file-based destinations](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example) and the associated [file formatting configurations](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration).
+Start by using the `/destination-server` endpoint to [create a server and file configuration](../../authoring-api/destination-server/create-destination-server.md).
 
 **API format**
 
@@ -31,7 +31,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Request**
 
 The following request creates a new destination server configuration, configured by the parameters provided in the payload.
-The payload below includes a generic Amazon S3 configuration, with custom [CSV file formatting](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) configuration parameters that users can define in the Experience Platform UI.
+The payload below includes a generic Amazon S3 configuration, with custom [CSV file formatting](../../functionality/destination-server/file-formatting.md) configuration parameters that users can define in the Experience Platform UI.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -410,7 +410,7 @@ Based on the configurations above, the Experience Platform catalog will now disp
 
 ![Screen recording showing the destinations catalog page with a selected destination card.](../../assets/destination-card.gif)
 
-In the images and recordings below, note how the options in the [activation workflow for file-based destinations](/help/destinations/ui/activate-batch-profile-destinations.md) match the options that you selected in the destination configuration.
+In the images and recordings below, note how the options in the [activation workflow for file-based destinations](../../../ui/activate-batch-profile-destinations.md) match the options that you selected in the destination configuration.
 
 When filling in details about the destination, notice how the fields surfaced are the custom data fields that you set up in the configuration.
 
@@ -442,8 +442,8 @@ After configuring your destination, use the [destination publishing API](../../p
 >
 >This step is not required if you are creating a private destination for your own use, and are not looking to publish it in the destinations catalog for other customers to use.
 
-If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](/help/destinations/destination-sdk/overview.md#productized-custom-integrations), use the [self-service documentation process](/help/destinations/destination-sdk/docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md).
+If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](../../overview.md#productized-custom-integrations), use the [self-service documentation process](../../docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](../../../catalog/overview.md).
 
 ## Next steps {#next-steps}
 
-By reading this article, you now know how to author a custom [!DNL Amazon S3] destination by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](/help/destinations/ui/activate-batch-profile-destinations.md) to export data to the destination.
+By reading this article, you now know how to author a custom [!DNL Amazon S3] destination by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](../../../ui/activate-batch-profile-destinations.md) to export data to the destination.

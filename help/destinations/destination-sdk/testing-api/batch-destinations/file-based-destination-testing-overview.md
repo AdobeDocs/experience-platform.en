@@ -37,7 +37,7 @@ See the [dedicated documentation](file-based-destination-testing-api.md) to lear
 
 Use the `/testing/destinationInstance` API endpoint to you view the complete details of your file-based destination testing results.
 
-This API endpoint returns the same result as you would obtain when using the [Flow Service API](../api/update-destination-dataflows.md) to monitor dataflows.
+This API endpoint returns the same result as you would obtain when using the [Flow Service API](../../../api/update-destination-dataflows.md) to monitor dataflows.
 
 See the [dedicated documentation](file-based-destination-results-api.md) to learn how to view detailed activation results.
 

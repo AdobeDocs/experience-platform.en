@@ -17,7 +17,7 @@ exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
 >
 >* Even after your destination is live in the Experience Platform catalog, if you need to make any updates to your configurations, you must submit a new destination publish request for the updates to be reflected in the configurations.
 
-Before your destination can be published to the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md), you must provide Adobe with certain information about the destination and the testing you performed, to ensure that users enjoy the best possible experience when activating data to your platform.
+Before your destination can be published to the [Experience Platform destinations catalog](../../catalog/overview.md), you must provide Adobe with certain information about the destination and the testing you performed, to ensure that users enjoy the best possible experience when activating data to your platform.
 
 This page lists all the information you need to provide when submitting or updating a destination you authored using Adobe Experience Platform Destination SDK. To successfully submit a destination in Adobe Experience Platform, send an email to <aepdestsdk@adobe.com> which includes:
 
@@ -25,8 +25,8 @@ This page lists all the information you need to provide when submitting or updat
 * Test results after using the test destination API endpoint to perform an HTTP call to your destination. Please share with Adobe:
   * An API call made to your destination endpoint.
   * The API response received from your destination endpoint.
-* Proof that you have submitted a destination publishing request for your destination using the [destination publishing API](./destination-publish-api.md).
-* A documentation PR (pull request), following the instructions described in the the [self-service documentation process](./docs-framework/documentation-instructions.md).
+* Proof that you have submitted a destination publishing request for your destination using the [destination publishing API](../publishing-api/create-publishing-request.md).
+* A documentation PR (pull request), following the instructions described in the the [self-service documentation process](../docs-framework/documentation-instructions.md).
 * An image file which will be displayed as a logo for your destination card in the Experience Platform destinations catalog.
 
 You can find detailed information about each item in the sections below:
@@ -35,12 +35,12 @@ You can find detailed information about each item in the sections below:
 
 Provide a description of the use cases that your destination solves for Experience Platform customers. Your descriptions can be similar to use cases from existing partners:
 
-* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX APIs are available for advertisers that want to target a specific audience group keyed off email addresses in Verizon Media (VMG) can quickly create a new segment and push the desired audience group using VMG's near-real-time API.
+* [Pinterest](../../catalog/advertising/pinterest.md): Create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest.
+* [Yahoo Data X](../../catalog/advertising/datax.md#use-cases): DataX APIs are available for advertisers that want to target a specific audience group keyed off email addresses in Verizon Media (VMG) can quickly create a new segment and push the desired audience group using VMG's near-real-time API.
 
 ## Test results after using the test destination API
 
-Provide test results after using the [test destination API](./test-destination.md) endpoint to perform an HTTP call to your destination. This includes:
+Provide test results after using the [test destination API](../testing-api/test-destination.md) endpoint to perform an HTTP call to your destination. This includes:
 
 * The complete API request (headers and body) made to your destination endpoint, using the testing API.
 * The API response received from your destination endpoint.
@@ -214,13 +214,13 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## Proof that you have submitted a destination publishing request
 
-After successfully testing your destination, you must use the [destination publishing API](./destination-publish-api.md) to submit the destination to Adobe for review and publishing.
+After successfully testing your destination, you must use the [destination publishing API](../publishing-api/create-publishing-request.md) to submit the destination to Adobe for review and publishing.
 
-Provide the ID of the publish request for your destination. For information on how to retrieve the publish request ID, read [List destination publish requests](./destination-publish-api.md#retrieve-list).
+Provide the ID of the publish request for your destination. For information on how to retrieve the publish request ID, read [List destination publish requests](../publishing-api/retrieve-publishing-request.md).
 
 ## Destination documentation PR (pull request) for productized integrations
 
-If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination. As part of the submission process, provide the pull request (PR) for your destination documentation.
+If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](../overview.md#productized-custom-integrations), use the [self-service documentation process](../docs-framework/documentation-instructions.md) to create a product documentation page for your destination. As part of the submission process, provide the pull request (PR) for your destination documentation.
 
 ## Logo for your destination {#logo}
 
@@ -232,4 +232,4 @@ The image requirements are:
 
 ## Download sample email
 
-[Download](./assets/sample-email-submit-destination.rtf) a sample email with all the information that you need to provide to Adobe.
+[Download](assets/sample-email-submit-destination.rtf) a sample email with all the information that you need to provide to Adobe.

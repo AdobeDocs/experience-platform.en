@@ -18,7 +18,7 @@ Adobe uses a templating language similar to [Jinja](https://jinja.palletsproject
 
 >[!TIP]
 >
->Adobe offers a [developer tool](./create-template.md) that helps you create and test a message transformation template. 
+>Adobe offers a [developer tool](../../testing-api/create-template.md) that helps you create and test a message transformation template. 
 
 ```json
 

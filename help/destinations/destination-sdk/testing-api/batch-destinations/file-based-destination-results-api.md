@@ -19,7 +19,7 @@ If you want to see more detailed information about your activation flow, you can
 
 ## Getting started {#getting-started}
 
-Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Prerequisites {#prerequisites}
 
@@ -65,7 +65,7 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/testing/de
 
 **Response**
 
-The response contains the complete details of the activation flow. You can obtain the same response by calling the [Flow Service API](../api/update-destination-dataflows.md) to monitor dataflows.
+The response contains the complete details of the activation flow. You can obtain the same response by calling the [Flow Service API](../../../api/update-destination-dataflows.md) to monitor dataflows.
 
 ```json
 {
@@ -207,10 +207,10 @@ The response contains the complete details of the activation flow. You can obtai
 
 ## API error handling {#api-error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
 
 ## Next steps
 
 After reading this document, you now know how to test your file-based destination configuration and see the full details of your activation results.
 
-If you are building a public destination, you can now [submit your destination configuration](../destination-sdk/submit-destination.md) to Adobe for review.
+If you are building a public destination, you can now [submit your destination configuration](../../guides/submit-destination.md) to Adobe for review.

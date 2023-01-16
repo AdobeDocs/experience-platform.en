@@ -15,7 +15,7 @@ title: Retrieve a destination publishing request
 
 This page lists and describes all the API operations that you can perform using the `/authoring/destinations/publish` API endpoint.
 
-After you have configured and tested your destination, you can submit it to Adobe for review and publishing. Read [Submit for review a destination authored in Destination SDK](./submit-destination.md) for all the other steps you must do as part of the destination submission process.
+After you have configured and tested your destination, you can submit it to Adobe for review and publishing. Read [Submit for review a destination authored in Destination SDK](../guides/submit-destination.md) for all the other steps you must do as part of the destination submission process.
 
 Use the publish destinations API endpoint to submit a publishing request when:
 

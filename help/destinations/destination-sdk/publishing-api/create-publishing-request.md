@@ -15,7 +15,7 @@ title: Create a destination publishing request
 
 This page lists and describes all the API operations that you can perform using the `/authoring/destinations/publish` API endpoint.
 
-After you have configured and tested your destination, you can submit it to Adobe for review and publishing. Read [Submit for review a destination authored in Destination SDK](./submit-destination.md) for all the other steps you must do as part of the destination submission process.
+After you have configured and tested your destination, you can submit it to Adobe for review and publishing. Read [Submit for review a destination authored in Destination SDK](../guides/submit-destination.md) for all the other steps you must do as part of the destination submission process.
 
 Use the publish destinations API endpoint to submit a publishing request when:
 
@@ -56,7 +56,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`destinationId` | String | The destination ID of the destination configuration that you are submitting for publishing. Get the destination ID of a destination configuration by using the [destination configuration API reference](./destination-configuration-api.md#retrieve-list).  |
+|`destinationId` | String | The destination ID of the destination configuration that you are submitting for publishing. Get the destination ID of a destination configuration by using the [retrieve a destination configuration](../authoring-api/destination-configuration/retrieve-destination-configuration.md) API call.  |
 |`destinationAccess` | String | Use `ALL` for your destination to appear in the catalog for all Experience Platform customers.  |
 
 {style="table-layout:auto"}

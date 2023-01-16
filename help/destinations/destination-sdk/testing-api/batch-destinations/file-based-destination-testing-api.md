@@ -15,13 +15,13 @@ The auto-generated sample profiles contain generic data. If you want to test you
 
 ## Getting started {#getting-started}
 
-Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Prerequisites {#prerequisites}
 
 Before you can use the `/testing/destinationInstance` endpoint, make sure you meet the following conditions:
 
-* You have an existing file-based destination created through the Destination SDK and you can see it in your [destinations catalog](../ui/destinations-workspace.md).
+* You have an existing file-based destination created through the Destination SDK and you can see it in your [destinations catalog](../../../ui/destinations-workspace.md).
 * You have created at least one activation flow for your destination in the Experience Platform UI.
 * To successfully make the API request, you need the destination instance ID corresponding to the destination instance that you will be testing. Get the destination instance ID that you should use in the API call, from the URL, when browsing a connection with your destination in the Platform UI.
 
@@ -232,7 +232,7 @@ A successful response returns HTTP status 200 along with the response payload.
 
 ## API error handling {#api-error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
 
 ## Next steps
 
@@ -240,4 +240,4 @@ After reading this document, you now know how to test your file-based destinatio
 
 If you have received a valid API response, your destination is working correctly. If you want to see more detailed information about your activation flow, you can use the `results` property from the response to [view detailed activation results](file-based-destination-results-api.md).
 
-If you are building a public destination, you can now [submit your destination configuration](../destination-sdk/submit-destination.md) to Adobe for review.
+If you are building a public destination, you can now [submit your destination configuration](../../guides/submit-destination.md) to Adobe for review.

@@ -19,7 +19,7 @@ Before advancing to the steps outlined below, please read the [Destination SDK g
 
 ## Step 1: Create a server and file configuration {#create-server-file-configuration}
 
-Start by using the `/destination-server` endpoint to create a server and file configuration. For detailed descriptions of the parameters in the HTTP request, read the [server and file configuration specifications for file-based destinations](../../server-and-file-configuration.md#sftp-example) and the associated [file formatting configurations](../../server-and-file-configuration.md#file-configuration).
+Start by using the `/destination-server` endpoint to [create a server and file configuration](../../authoring-api/destination-server/create-destination-server.md).
 
 **API format**
 
@@ -30,7 +30,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Request**
 
 The following request creates a new destination server configuration, configured by the parameters provided in the payload.
-The payload below includes a generic SFTP configuration, with predefined, default [CSV file formatting](../../server-and-file-configuration.md#file-configuration) configuration parameters that users can define in the Experience Platform UI.
+The payload below includes a generic SFTP configuration, with predefined, default [CSV file formatting](../../functionality/destination-server/file-formatting.md) configuration parameters that users can define in the Experience Platform UI.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \

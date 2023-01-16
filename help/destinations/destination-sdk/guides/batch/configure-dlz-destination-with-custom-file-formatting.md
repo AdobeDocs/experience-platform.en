@@ -19,7 +19,7 @@ Before advancing to the steps outlined below, please read the [Destination SDK g
 
 ## Step 1: Create a server and file configuration {#create-server-file-configuration}
 
-Start by using the `/destination-server` endpoint to create a server and file configuration. For detailed descriptions of the parameters in the HTTP request, read the [server and file configuration specifications for file-based destinations](../../server-and-file-configuration.md#adls-example) and the associated [file formatting configurations](../../server-and-file-configuration.md#file-configuration).
+Start by using the `/destination-server` endpoint to [create a server and file configuration](../../authoring-api/destination-server/create-destination-server.md).
 
 **API format**
 
@@ -30,7 +30,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Request**
 
 The following request creates a new destination server configuration, configured by the parameters provided in the payload.
-The payload below includes a generic [!DNL Data Landing Zone] configuration, with custom [CSV file formatting](../../server-and-file-configuration.md#file-configuration) configuration parameters that users can define in the Experience Platform UI.
+The payload below includes a generic [!DNL Data Landing Zone] configuration, with custom [CSV file formatting](../../functionality/destination-server/file-formatting.md) configuration parameters that users can define in the Experience Platform UI.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -412,7 +412,7 @@ Based on the configurations above, the Experience Platform catalog will now disp
 
 ![Screen recording showing the destinations catalog page with a selected destination card.](../../assets/dlz-destination-card.gif)
 
-In the images and recordings below, note how the options in the [activation workflow for file-based destinations](/help/destinations/ui/activate-batch-profile-destinations.md) match the options that you selected in the destination configuration.
+In the images and recordings below, note how the options in the [activation workflow for file-based destinations](../../../ui/activate-batch-profile-destinations.md) match the options that you selected in the destination configuration.
 
 When filling in details about the destination, notice how the fields surfaced are the custom data fields that you set up in the configuration.
 
