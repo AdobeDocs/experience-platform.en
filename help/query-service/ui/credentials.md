@@ -22,11 +22,11 @@ You can use expiring credentials to quickly set up a connection to an external c
 
 The **[!UICONTROL Expiring credentials]** section provides the following information:
 
-- **[!UICONTROL Host]**: The name of the host that you will be connecting to. For connecting to Query Service, this will include the name of the IMS Organization you are currently using.
-- **[!UICONTROL Port]**: The port number of the host that you will be connecting to.
-- **[!UICONTROL Database]**: The name of the database that you will be connecting to.
-- **[!UICONTROL Username]**: The username that you will use to connect to Query Service.
-- **[!UICONTROL Password]**: The password that you will use to connect to Query Service.
+- **[!UICONTROL Host]**: The name of the host to connect your client to. This incorporates the name of your organization as seen in the top ribbon of the display.
+- **[!UICONTROL Port]**: The port number of the host to connect to.
+- **[!UICONTROL Database]**: The name of the database to connect a client to.
+- **[!UICONTROL Username]**: The username used to connect to Query Service.
+- **[!UICONTROL Password]**: The password used to connect to Query Service. Passwords in the UI have been hashed for security. Select the copy icon (![The copy icon.](../images/ui/credentials/copy-icon.png)) to copy your complete un-hashed credentials to the clipboard.
 - **[!UICONTROL PSQL command]**: A command that automatically has inserted all the relevant information for you to connect to Query Service using PSQL on the command line.
 - **[!UICONTROL Expires]**: The expiry date and time for the expiring credentials. The default validity duration of the token is 24 hours but it can be changed in the advanced settings of the Admin Console.
 
