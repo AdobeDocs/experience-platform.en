@@ -9,6 +9,8 @@ The destinations service in Adobe Experience Platform uses configuration endpoin
 
 Combined, these components allow Experience Platform to connect to destination platforms, send custom messages, export custom files, and activate profile data across the digital ecosystem.
 
+The diagram below shows a high-level overview of the components that you can configure through Destination SDK to build your own destination. These components are described further below.
+
 ![Diagram showing the Destination SDK components, configuration endpoints, and the operations supported by them.](assets/destination-sdk-components-diagram.png)
 
 

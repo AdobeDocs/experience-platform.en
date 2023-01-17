@@ -5,7 +5,7 @@ title: Customer data fields
 
 # Customer data fields
 
-Use this section to ask users to fill in custom fields, specific to your destination, when connecting to the destination in the Experience Platform UI.
+Customer data fields define the custom fields that customers need to fill in, specific to your destination, when connecting to the destination in the Experience Platform UI.
 
 In the example below, `customerDataFields` requires users to enter a name for their destination and provide an [!DNL Amazon S3] bucket name and folder path, as well as a compression type, file format, and several other file formatting options.
 

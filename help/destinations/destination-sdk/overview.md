@@ -29,6 +29,8 @@ As an Experience Platform customer, you can also author your own private custom 
 
 ## Supported integration types {#supported-integration-types}
 
+### Real-time integrations {#real-time-integrations}
+
 Through Destination SDK, Adobe Experience Platform supports real-time integrations with destinations that have a REST API endpoint. The real-time integration with Experience Platform supports capabilities like:
 
 * Message transformation and aggregation
@@ -37,7 +39,9 @@ Through Destination SDK, Adobe Experience Platform supports real-time integratio
 * Configurable authentication
 * A suite of testing & validation APIs for you to test and iterate your destination configurations
 
-Through Destination SDK, you can also set up integrations to periodically export files to the storage location of your choice. The real-time integration with Experience Platform supports capabilities like:
+### File-based integrations {#file-based-integrations}
+
+Through Destination SDK, you can also set up integrations to periodically export files to the storage location of your choice. The file-based integration with Experience Platform supports capabilities like:
 
 * File export in several supported formats (CSV, Parquet, JSON)
 * Configurable file formatting options, which allow you to structure the format of the exported files to meet your downstream requirements.

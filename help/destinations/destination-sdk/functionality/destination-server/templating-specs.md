@@ -5,7 +5,7 @@ title: Templating specs for destinations created with Destination SDK
 
 # Templating specs for destinations created with Destination SDK
 
-The template spec allows you to configure how to format the exported message to your destination.
+The template spec is a part of the destination server configuration, which allows you to configure how to format the messages exported to your destination.
 
 Adobe uses a templating language similar to [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) to transform the fields from the XDM schema into a format supported by your destination.
 

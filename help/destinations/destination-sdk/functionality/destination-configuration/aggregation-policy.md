@@ -5,14 +5,16 @@ title: Aggregation policy
 
 # Aggregation policy
 
-This section allows you to set the aggregation policies that Experience Platform should use when exporting data to your destination.
-
-![Aggregation policy in the configuration template](assets/aggregation-configuration.png)
+Aggregation policies are supported by the destination configuration for real-time integrations built with Destination SDK.
 
 An aggregation policy determines how the exported profiles are combined in the data exports. Available options are:
 
-* Best effort aggregation
-* Configurable aggregation (shown in the configuration above)
+* [Best effort aggregation](#best-effort-aggregation)
+* [Configurable aggregation](#configurable-aggregation) (shown in the configuration below)
+
+This section allows you to set the aggregation policies that Experience Platform should use when exporting data to your destination.
+
+![Aggregation policy in the configuration template](assets/aggregation-configuration.png)
 
 Read the section on [using templating](../../functionality/destination-server/message-format.md#using-templating) and the [aggregation key examples](../../functionality/destination-server/message-format.md#template-aggregation-key) to understand how to include the aggregation policy in your message transformation template based on your selected aggregation policy. 
 

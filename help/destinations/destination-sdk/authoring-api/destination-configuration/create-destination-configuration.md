@@ -21,6 +21,7 @@ For a detailed description of the capabilities that you can configure through th
 * [Identities and attributes](../../functionality/destination-configuration/identities-attributes.md)
 * [Destination delivery](../../functionality/destination-configuration/destination-delivery.md)
 * [Audience metadata configuration](../../functionality/destination-configuration/audience-metadata-configuration.md)
+* [Segment mapping](../../functionality/destination-configuration/segment-mapping.md)
 * [Aggregation policy](../../functionality/destination-configuration/aggregation-policy.md)
 * [Batch configuration](../../functionality/destination-configuration/batch-configuration.md)
 * [Historical profile qualifications](../../functionality/destination-configuration/historical-profile-qualifications.md)
@@ -224,6 +225,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`aggregation.configurableAggregation.aggregationKey.includeIdentity` | Boolean | Set this to `true` if you want to group profiles exported to your destination by identity namespace.  |
 |`aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolean | Use this parameter to specify if you want the exported profiles to be aggregated into groups of a single identity (GAID, IDFA, phone numbers, email, etc.). |
 |`aggregation.configurableAggregation.aggregationKey.groups` | String |Create lists of identity groups if you want to group profiles exported to your destination by groups of identity namespace. For example, you could combine profiles that contain the IDFA and GAID mobile identifiers into one call to your destination and emails into another by using the configuration in the example. |
+
+**Response**
+
+A successful response returns HTTP status 200 with details of your newly created destination configuration.
 
 ## API error handling
 

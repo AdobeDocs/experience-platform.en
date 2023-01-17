@@ -20,6 +20,7 @@ For a detailed description of the capabilities that you can delete through this 
 * [Schema configuration](../../functionality/destination-configuration/schema-configuration.md)
 * [Identities and attributes](../../functionality/destination-configuration/identities-attributes.md)
 * [Destination delivery](../../functionality/destination-configuration/destination-delivery.md)
+* [Segment mapping](../../functionality/destination-configuration/segment-mapping.md)
 * [Audience metadata configuration](../../functionality/destination-configuration/audience-metadata-configuration.md)
 * [Aggregation policy](../../functionality/destination-configuration/aggregation-policy.md)
 * [Batch configuration](../../functionality/destination-configuration/batch-configuration.md)

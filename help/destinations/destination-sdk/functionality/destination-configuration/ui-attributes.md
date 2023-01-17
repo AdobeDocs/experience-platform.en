@@ -5,7 +5,7 @@ title: UI attributes
 
 # UI attributes
 
-This section refers to the UI elements that Adobe should use for your destination in the Adobe Experience Platform user interface.
+UI attributes define the visual elements that Adobe should display for your destination card in the Adobe Experience Platform user interface.
 
 ```json
 "uiAttributes":{

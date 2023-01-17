@@ -7,7 +7,7 @@ title: Server specs for destinations created with Destination SDK
 
 When creating a new destination, you can configure the destination server specs via the `/authoring/destination-servers` endpoint.
 
-Destination SDK supports multiple destination server types. When creating a new destination, use one of the server type configurations described below, depending on your integration requirements.
+Destination SDK supports multiple destination server types. When [creating a new destination server](../../authoring-api/destination-server/create-destination-server.md), use one of the server type configurations described below, depending on your integration requirements.
 
 ## URL-based destination server {#url-destination-server}
 
@@ -15,7 +15,7 @@ URL-based destination servers allow you to activate data from Adobe Experience P
 
 This process delivers user data as a series of HTTP messages to your destination platform. The parameters below form the HTTP server specs template.
 
-The sample below shows a correct destination server configuration for a URL-based destination.
+The sample below shows an example of a destination server configuration for a URL-based destination.
 
 ```json
 {
@@ -43,7 +43,7 @@ The sample below shows a correct destination server configuration for a URL-base
 
 File-based destination servers allow you to activate data from Adobe Experience Platform to your destination via file exports.
 
-The sample below shows a correct destination server configuration for an Amazon S3 destination.
+The sample below shows an example of a destination server configuration for an Amazon S3 destination.
 
 ```json
 {
@@ -77,7 +77,7 @@ The sample below shows a correct destination server configuration for an Amazon 
 
 File-based destination servers allow you to activate data from Adobe Experience Platform to your destination via file exports.
 
-The sample below shows a correct destination server configuration for an SFTP destination.
+The sample below shows an example of a destination server configuration for an SFTP destination.
 
 ```json
 {
@@ -115,7 +115,7 @@ The sample below shows a correct destination server configuration for an SFTP de
 
 File-based destination servers allow you to activate data from Adobe Experience Platform to your destination via file exports.
 
-The sample below shows a correct destination server configuration for an [!DNL Azure Data Lake Storage] destination.
+The sample below shows an example of a destination server configuration for an [!DNL Azure Data Lake Storage] destination.
 
 ```json
 {
@@ -143,7 +143,7 @@ The sample below shows a correct destination server configuration for an [!DNL A
 
 File-based destination servers allow you to activate data from Adobe Experience Platform to your destination via file exports.
 
-The sample below shows a correct destination server configuration for an [!DNL Azure Blob Storage] destination.
+The sample below shows an example of a destination server configuration for an [!DNL Azure Blob Storage] destination.
 
 ```json
 {
@@ -177,7 +177,7 @@ The sample below shows a correct destination server configuration for an [!DNL A
 
 File-based destination servers allow you to activate data from Adobe Experience Platform to your destination via file exports.
 
-The sample below shows a correct destination server configuration for a [!DNL Data Landing Zone] ([!DNL DLZ]) destination.
+The sample below shows an example of a destination server configuration for a [!DNL Data Landing Zone] ([!DNL DLZ]) destination.
 
 ```json
 {
@@ -206,7 +206,7 @@ The sample below shows a correct destination server configuration for a [!DNL Da
 
 File-based destination servers allow you to activate data from Adobe Experience Platform to your destination via file exports.
 
-The sample below shows a correct destination server configuration for a [!DNL Google Cloud Storage] destination.
+The sample below shows an example of a destination server configuration for a [!DNL Google Cloud Storage] destination.
 
 ```json
 {

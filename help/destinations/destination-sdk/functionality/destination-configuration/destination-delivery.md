@@ -7,7 +7,7 @@ title: Destination delivery
 
 The destination delivery section indicates where exactly the exported data goes and what authentication rule is used in the location where the data will land. You are required to specify one or more `destinationServerId`s where the data will be delivered and and authentication rule. In most cases, the authentication rule that you should use is `CUSTOMER_AUTHENTICATION`.
 
-The `deliveryMatchers` section is optional and can be used if you are specifying multiple `destinationServerId`s. If that is the case, the `deliveryMatchers` section indicates how the exported data should be split between the various destination servers.
+The `deliveryMatchers` section is optional and can be used if you are specifying multiple `destinationServerId` fields. If that is the case, the `deliveryMatchers` section indicates how the exported data should be split between the various destination servers.
 
 ```json
  "destinationDelivery":[

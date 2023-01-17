@@ -5,7 +5,9 @@ title: Batch configuration
 
 # Batch configuration - file naming and export scheduling {#batch-configuration}
 
-This section refers to the file naming and export scheduling settings that will be displayed for your destination in the Adobe Experience Platform user interface. The values that you set up here are surfaced in the [Schedule segment export](../../../ui/activate-batch-profile-destinations.md#scheduling) step of the file-based destinations activation workflow. 
+Batch configuration refers to the file naming and export scheduling settings that will be displayed for your destination in the Adobe Experience Platform user interface.
+
+The values that you set up here are surfaced in the [Schedule segment export](../../../ui/activate-batch-profile-destinations.md#scheduling) step of the file-based destinations activation workflow. 
 
 ```json
 "batchConfig":{
@@ -63,7 +65,6 @@ This section refers to the file naming and export scheduling settings that will 
 
 Use file name configuration macros to define what the exported file names should include. The macros in the table below describe elements found in the UI in the [file name configuration](../../../ui/activate-batch-profile-destinations.md#file-names) screen.
 
-
 >[!TIP]
 > 
 >As a best practice, you should always include the `SEGMENT_ID` macro in your exported file names. Segment IDs are unique, so including them in the file name is the best way to ensure that file names are unique as well. 
@@ -83,9 +84,9 @@ Use file name configuration macros to define what the exported file names should
 
 {style="table-layout:auto"}
 
-![UI image showing the file name configuration screen with preselected macros](assets/file-name-configuration.png)
+### File name configuration example
 
-The example shown in the image above uses the following file name macro configuration:
+The configuration example below shows the correspondence between the configuration used in the API call and the options shown in the UI.
 
 ```json
 "filenameConfig":{
@@ -101,3 +102,5 @@ The example shown in the image above uses the following file name macro configur
    "defaultFilename": "%DESTINATION%"
 }
 ```
+
+![UI image showing the file name configuration screen with preselected macros](assets/file-name-configuration.png)

@@ -5,7 +5,7 @@ title: File formatting configuration
 
 # File formatting configuration
 
-This article describes the file formatting settings for `CSV` files that you export to file-based destinations built with Destination SDK.
+File formatting settings are part of the destination server configuration for file-based destinations. This article describes the file formatting settings for `CSV` files that you export to file-based destinations built with Destination SDK.
 
 You can modify several properties of the exported files to match the requirements of the file reception system on your side, in order to optimally read and interpret the files received from Experience Platform.
 
