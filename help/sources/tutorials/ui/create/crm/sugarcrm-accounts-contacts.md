@@ -2,7 +2,11 @@
 title: Create a SugarCRM Accounts & Contacts source connection in the UI 
 description: Learn how to create a SugarCRM Accounts & Contacts source connection using the Adobe Experience Platform UI.
 ---
-# Create a [!DNL SugarCRM Accounts & Contacts] source connection in the UI
+# (Beta) Create a [!DNL SugarCRM Accounts & Contacts] source connection in the UI
+
+>[!NOTE]
+>
+>The [!!DNL SugarCRM Accounts & Contacts] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
 This tutorial provides steps for creating a [!DNL SugarCRM Accounts & Contacts] source connection using the Adobe Experience Platform user interface.
 
@@ -51,7 +55,7 @@ In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *CRM* category, select *[!DNL SugarCRM Accounts & Contacts]*, and then select **[!UICONTROL Add data]**.
+Under the *CRM* category, select **[!UICONTROL SugarCRM Accounts & Contacts]**, and then select **[!UICONTROL Add data]**.
 
 ![Platform UI screenshot for catalog with SugarCRM Accounts & Contacts card](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
 
@@ -73,10 +77,10 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 Finally, you must select the object type that you want to ingest to Platform.
 
-| object_type | Description |
+| Object type | Description |
 | --- | --- |
-| `Accounts` | Companies with whom your organization has a relationship. |
-| `Contacts` | Individual people with whom your organization has an established relationship. |
+| `Accounts` | The companies with whom your organization has a relationship with. |
+| `Contacts` | The individual people with whom your organization has an established relationship. |
 
 >[!BEGINTABS]
 
@@ -106,9 +110,9 @@ The [!DNL SugarCRM] API throttle rates are 90 calls per minute or 2000 calls per
 
 To validate that you have correctly set up the source and [!DNL SugarCRM Accounts & Contacts] data is being ingested, follow the steps below:
 
-* In the Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL SugarCRM Events] card menu on the sources catalog. Next, select **[!UICONTROL Preview dataset]** to verify the data that was ingested.
+* In the Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL SugarCRM Accounts & Contacts] card menu on the sources catalog. Next, select **[!UICONTROL Preview dataset]** to verify the data that was ingested.
 
-* Depending on the object type you are working with, you can verify the aggregated data against the counts visible on the [!DNL SugarMarket] Events page below: 
+* Depending on the object type you are working with, you can verify the aggregated data against the counts visible on the [!DNL SugarMarket] Accounts or Contacts pages below: 
 
 >[!BEGINTABS]
 

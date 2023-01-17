@@ -2,7 +2,11 @@
 title: Create a SugarCRM Events source connection in the UI 
 description: Learn how to create a SugarCRM Events source connection using the Adobe Experience Platform UI.
 ---
-# Create a [!DNL SugarCRM Events] source connection in the UI
+# (Beta) Create a [!DNL SugarCRM Events] source connection in the UI
+
+>[!NOTE]
+>
+>The [!!DNL SugarCRM Events] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
 This tutorial provides steps for creating a [!DNL SugarCRM Events] source connection using the Adobe Experience Platform user interface.
 
@@ -43,7 +47,7 @@ In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *CRM* category, select *[!DNL SugarCRM Events]*, and then select **[!UICONTROL Add data]**.
+Under the *CRM* category, select **[!UICONTROL SugarCRM Events]**, and then select **[!UICONTROL Add data]**.
 
 ![Platform UI screenshot for catalog with SugarCRM Events card](../../../../images/tutorials/create/sugarcrm-events/catalog-sugarcrm-events.png)
 

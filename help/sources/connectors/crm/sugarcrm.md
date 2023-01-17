@@ -29,9 +29,9 @@ A list of IP addresses must be added to an allow list prior to working with sour
 
 ## Prerequisites
 
-The first step in creating a [!DNL SugarCRM] source connection is to ensure that you have the following:
+Before you can create a [!DNL SugarCRM] source connection, you must first ensure that you have the following:
 
-* A [!DNL SugarMarket] *(SugarCRM's product for Marketing Automation)* account. You must contact your [!DNL SugarCRM] account manager to obtain a valid [!DNL SugarMarket] account if you do not already have one. 
+* A [!DNL SugarMarket] account. You must contact your [!DNL SugarCRM] account manager to obtain a valid [!DNL SugarMarket] account if you do not already have one. 
 
 * A unique API username and account separate from any user account associated with the marketing or sales process. This unique username and account combination must have API access permissions. For more information on the process to set up an account, visit the [[!DNL SugarMarket RESTFUL API (sugarcrm.com)]](https://market.apidocs.sugarcrm.com/#intro) documentation.
 
@@ -39,8 +39,11 @@ The first step in creating a [!DNL SugarCRM] source connection is to ensure that
 
 * [Create a source connection to bring [!DNL SugarCRM Accounts & Contacts] data to Platform using APIs](../../tutorials/api/create/crm/sugarcrm-accounts-contacts.md).
 * [Create a source connection to bring [!DNL SugarCRM Accounts & Contacts] data to Platform using the user interface](../../tutorials/ui/create/crm/sugarcrm-accounts-contacts.md).
+* [Create a dataflow for a CRM source using the Flow Service API](../../tutorials/api/collect/crm.md)
+
 
 ## Connect [!DNL SugarCRM Events] to Platform
 
 * [Create a source connection to bring [!DNL SugarCRM Events] data to Platform using APIs](../../tutorials/api/create/crm/sugarcrm-events.md).
 * [Create a source connection to bring [!DNL SugarCRM Events] data to Platform using the user interface](../../tutorials/ui/create/crm/sugarcrm-events.md).
+* [Create a dataflow for a CRM source connection in the UI](../../tutorials/ui/dataflow/crm.md)
