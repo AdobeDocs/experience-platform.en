@@ -21,6 +21,8 @@ You can create query templates through two methods, either by making a POST requ
 
 See the documentation for instructions on how to use the Query Editor to [write](./user-guide.md#query-authoring) and [save queries](./user-guide.md#saving-queries). Once you have named and saved your query, it is available to be reused as a query template from the [!UICONTROL Templates] tab.
 
+## Browse query templates {#browse}
+
 From the Queries workspace of the Platform UI, select **[!UICONTROL Templates]** to display the list of available saved queries.
 
 ![The queries workspace with the Templates tab highlighted.](../images/ui/query-templates/query-templates.png)
@@ -28,6 +30,13 @@ From the Queries workspace of the Platform UI, select **[!UICONTROL Templates]**
 To find relevant template information, select any query template from the available list to open the details panel.
 
 ![The details panel in the queries workspace with the query ID highlighted.](../images/ui/query-templates/details-panel.png)
+
+From the details panel you can execute four separate actions:
+
+* Select [!UICONTROl Output dataset] to edit the output dataset for the selected template.
+* Select [!UICONTROl View schedule] to navigate to the [!UICONTROL Schedules] tab. This view contains any schedule information associated with the query.
+* Select [!UICONTROl Delete query] to delete the template.
+* Select the template name to navigate to the Query Editor where the SQL is pre-populated for editing. 
 
 ### Use the Query Service API to create a template
 

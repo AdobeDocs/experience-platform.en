@@ -55,6 +55,8 @@ The **[!UICONTROL Templates]** tab shows queries saved by users in your organiza
 | **[!UICONTROL Modified by]** | The last user who modified the query. Any user in your organization with access to [!DNL Query Service] can modify queries. |
 | **[!UICONTROL Last modified]** | The date and time of the last modification to the query, in the browser's time zone. |
 
+See the [query templates](./query-templates.md) documentation for more information on templates in the Platform UI.
+
 ## Log
 
 The **[!UICONTROL Log]** tab provides a list of queries that have previously been executed. By default, the log lists the queries in reverse chronology.
@@ -63,13 +65,17 @@ The **[!UICONTROL Log]** tab provides a list of queries that have previously bee
 
 | Column | Description |
 | --- | --- |
-| **[!UICONTROL Name]** | The query name, consisting of the first several characters of the SQL query. Selecting the name opens the [!DNL Query Editor], allowing you to edit the query. You can use the search bar to search on the Name of a query. Searches are case sensitive. |
-| **[!UICONTROL Created by]** | The name of the person who created the query. |
-| **[!UICONTROL Client]** | The client used for the query. |
+| **[!UICONTROL Name]** | The query name, consisting of the first several characters of the SQL query. Select the template name to open the [!UICONTROL Query log details] view for that run. You can use the search bar to search on the name of a query. Searches are case sensitive. |
+| **[!UICONTROL Start time]** | The time that the query was executed. |
+| **[!UICONTROL Complete time]** | The time that the query run completed. |
+| **[!UICONTROL Status]** | The current status of the query. |
 | **[!UICONTROL Dataset]** | The input dataset used by the query. Select the dataset to go to the input dataset details screen. |
-|**[!UICONTROL Status]** | The current status of the query. |
-| **[!UICONTROL Last run]** | When the query was run last. You can sort the list in either ascending or descending order by selecting the arrow over this column. |
-| **[!UICONTROL Run time]** | The amount of time it took to run the query. |
+| **[!UICONTROL Client]** | The client used for the query. |
+| **[!UICONTROL Created by]** | The name of the person who created the query. |
+
+>![Note]
+>
+>Select the pencil icon (![A pencil icon.](../images/ui/overview/edit-icon.png)) from any row of the query log to navigate to the [!DNL Query Editor]. The query is pre-populated for convenient editing.
 
 ## Credentials
 
