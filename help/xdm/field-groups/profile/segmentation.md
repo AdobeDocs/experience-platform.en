@@ -75,6 +75,10 @@ The following is an example `segmentMembership` map that the system has populate
 
 {style="table-layout:auto"}
 
+>[!NOTE]
+>
+>Any segment membership that is in the `exited` status for more than 30 days, based on the `lastQualificationTime`, will be subject to deletion.
+
 For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
