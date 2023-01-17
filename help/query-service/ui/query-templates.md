@@ -33,9 +33,9 @@ To find relevant template information, select any query template from the availa
 
 From the details panel you can execute four separate actions:
 
-* Select [!UICONTROL Output dataset] to edit the output dataset for the selected template.
-* Select [!UICONTROL View schedule] to navigate to the [!UICONTROL Schedules] tab. This view contains any schedule information associated with the query.
-* Select [!UICONTROL Delete query] to delete the template.
+* Select **[!UICONTROL Output dataset]** to edit the output dataset for the selected template.
+* Select **[!UICONTROL View schedule]** to navigate to the [!UICONTROL Schedules] tab. This view contains any schedule information associated with the query.
+* Select **[!UICONTROL Delete query]** to delete the template.
 * Select the template name to navigate to the Query Editor where the SQL is pre-populated for editing. 
 
 ### Use the Query Service API to create a template

@@ -23,7 +23,7 @@ The table below describes each available column.
 
 | Column | Description  |
 |---|---|
-| **[!UICONTROL Name]** | The name field is either the template name or the first few characters of your SQL query. Any query created through the UI with the Query Editor is named at inception. If the query was created through the API then the name of the query is a snippet of the initial SQL used to create the query. Select any item from the name column to see a list of all runs associated with the query. For more information see the [query runs schedule details](#query-runs) section. |
+| **[!UICONTROL Name]** | The name field is either the template name or the first few characters of your SQL query. Any query created through the UI with the Query Editor is named at inception. If the query was created through the API then the name of the query is a snippet of the initial SQL used to create the query. Select any item from the [!UICONTROL Name] column to see a list of all runs associated with the query. For more information see the [query runs schedule details](#query-runs) section. |
 | **[!UICONTROL Template]** | The template name of the query. Select a template name to navigate to the Query Editor. The query template is displayed in the Query Editor for convenience. If there is no template name, the row is marked with a hyphen and there is no ability to redirect to the Query Editor to view the query. |
 | **[!UICONTROL SQL]** | A snippet of the SQL query.  |
 | **[!UICONTROL Run frequency]** | This is the cadence at which your query is set to run. The available values are `Run once` and `Scheduled`. Queries can be filtered according to their run frequency. |
@@ -100,7 +100,7 @@ Select a query run ID to navigate to the run details page and view query informa
 
 ## Query run overview {#query-run-overview}
 
-The [!UICONTROL Query run overview] provides information on individual runs for this scheduled query and a more detailed breakdown of the run status. This page also includes the client information and details of any errors that caused the query to fail. 
+The [!UICONTROL Query run overview] provides information on individual runs for this scheduled query and a more detailed breakdown of the run status. This page also includes the client information and details of any errors that may have caused the query to fail. 
 
 ![The run details screen with the overview section highlighted.](./images/monitor-queries/query-run-details.png)
 
