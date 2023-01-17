@@ -81,7 +81,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 *  **Name**: Fill in the preferred name for this destination.
 *  **Description**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
-*  **Datastream ID**: This determines in which Data Collection datastream the segments will be included. The drop-down menu shows only datastreams that have the Target and Adobe Experience Platform services enabled. See [configuring a datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en#aep) for detailed information on how to configure a datastream for Adobe Experience Platform and Adobe Target.
+*  **Datastream ID**: This determines in which Data Collection datastream the segments will be included. The drop-down menu shows only datastreams that have the Target and Adobe Experience Platform services enabled. See [configuring a datastream](../../../edge/datastreams/configure.md#aep) for detailed information on how to configure a datastream for Adobe Experience Platform and Adobe Target.
     * **[!UICONTROL None]**: Select this option if you need to configure Adobe Target personalization but you cannot implement the [Experience Platform Web SDK](../../../edge/home.md). When using this option, segments exported from Experience Platform to Target only support next-session personalization, and edge segmentation is disabled. See the table below for more information.
     
 |No datastream selected|Datastream selected|
