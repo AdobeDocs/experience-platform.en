@@ -21,19 +21,15 @@ To acquire the necessary credentials for connecting [!DNL Aqua Data Studio] to E
 
 ## Register the server {#register-server}
 
-After installing [!DNL Aqua Data Studio], you must first register the server. From the main menu, select **[!DNL Server]**, followed by **[!DNL Register Server]**.
+After installing [!DNL Aqua Data Studio], you must first register the server. See the official Aqua Data Studio documentation for instructions on how to [launch the [!DNL Register Server] dialog](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation18/page/81/Registering-a-Database-Server#launching_the_register_server_dialog) and [register the server](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation18/page/81/Registering-a-Database-Server#steps_to_register_a_server_in_aqua_data_studio).
 
-![The Server dropdown menu with Register Server highlighted.](../images/clients/aqua-data-studio/register-server.png)
-
-The **[!DNL Register Server]** dialog appears. Under the **[!DNL General]** tab, select **[!DNL PostgreSQL]** from the list on the left-hand side. In the dialog that appears, provide the following details for the server settings.
+Once the **[!DNL Register Server]** dialog appears for a PostgresSQL server, provide the following details for the server settings.
 
 - **[!DNL Name]**: The name of your connection. You are recommended to provide a friendly name to recognize the connection.
 - **[!DNL Login Name]**: The login name is your Platform Organization ID. It takes the form of `ORG_ID@AdobeOrg`.
 - **[!DNL Password]**: This is an alphanumeric string found on the [!DNL Query Service] credentials dashboard.
 - **[!DNL Host and Port]**: The host endpoint and its port for [!DNL Query Service]. You must use port 80 to connect with [!DNL Query Service].
 - **[!DNL Database]:** The database that will be used. Use the value for the Platform UI credential `dbname`: `prod:all`.
-
-![The [!DNL Aqua Data Studio] General tab with the required input fields highlighted.](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
 ### [!DNL Query Service] credentials
 
@@ -43,15 +39,13 @@ To find your credentials, log in to the [!DNL Platform] UI and select **[!UICONT
 
 ### Setting SSL mode
 
-Next, select the **[!DNL Driver]** tab. Under **[!DNL Parameters]**, set the value as `?sslmode=require`
+Next, you must set the SSL mode value as `?sslmode=require`. This is done from the [!DNL Driver] tab of the [!DNL Edit Server Properties] dialog. See the official Aqua Data Studio documentation for instructions on how to [edit driver properties](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation13/page/116/PostgreSQL#drivers) and [configure SSL for [!DNL PostgreSQL]](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation20/page/SSL-Configuration/SSL-Configuration). Use the search bar to find the `sslmode` property.
 
 >[!IMPORTANT]
 >
 >See the [[!DNL Query Service] SSL documentation](./ssl-modes.md) to learn about SSL support for third-party connections to Adobe Experience Platform Query Service, and how to connect using `verify-full` SSL mode.
 
-![The [!DNL Aqua Data Studio] Driver tab with the Parameters field highlighted.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
-
-After inputting your connection details, select **[!DNL Test Connection]** to ensure your credentials work properly. If your connection test is successful, select **[!DNL Save]** to register your server. A confirmation dialog appears confirming connection and the connection appears on the dashboard. You can now connect to the server and view its schema objects.
+After inputting your connection details, from the same tab, select **[!DNL Test Connection]** to ensure your credentials work properly. If your connection test is successful, select **[!DNL Save]** to register your server. A confirmation dialog appears confirming the connection and the connection icon appears on the dashboard. You can now connect to the server and view its schema objects.
 
 ## Next steps
 
