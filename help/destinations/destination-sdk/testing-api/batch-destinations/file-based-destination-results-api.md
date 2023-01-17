@@ -15,7 +15,7 @@ If you want to see more detailed information about your activation flow, you can
 
 >[!NOTE]
 >
->This API endpoint returns the same result as you would obtain when using the [Flow Service API](../api/update-destination-dataflows.md) to monitor dataflows.
+>This API endpoint returns the same result as you would obtain when using the [Flow Service API](../../../api/update-destination-dataflows.md) to monitor dataflows.
 
 ## Getting started {#getting-started}
 
