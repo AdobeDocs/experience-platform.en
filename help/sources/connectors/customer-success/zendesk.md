@@ -27,7 +27,7 @@ A list of IP addresses must be added to an allow list prior to working with sour
 
 This section outlines prerequisite steps to complete in order to authenticate your [!DNL Zendesk] account.
 
-* The first step in authenticating your [!DNL Zendesk] account is to ensure that you have [!DNL Zendesk] support account. If you do not have one already see the [[!DNL Zendesk]register page](https://www.zendesk.com/register/) to register and create your Zendesk account.
+* The first step in authenticating your [!DNL Zendesk] account is to ensure that you have [!DNL Zendesk] support account. If you do not have one already see the [[!DNL Zendesk] register page](https://www.zendesk.com/register/) to register and create your Zendesk account.
 * Once you have successfully registered, navigate to the [[!DNL Zendesk] website](https://www.zendesk.com/login/) and provide your **subdomain**. 
 * Next, select **[!DNL Settings]** > **[!DNL Apps and Integrations]** > **[!DNL Zendesk API]**.
 * Finally, retrieve your API token from the **[!DNL API token]** section.

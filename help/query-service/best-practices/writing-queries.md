@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;writing queries;writing query;
 solution: Experience Platform
 title: General Guidance for Query Execution in Query Service
-topic-legacy: queries
 type: Tutorial
 description: This document outlines important details to know when writing queries in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
@@ -42,6 +41,10 @@ Queries submitted through the [!DNL Query Service] API are run non-interactively
 ## Accessing a specific field within an object
 
 To access a field within an object in your query, you can use either dot notation (`.`) or bracket notation (`[]`). The following SQL statement uses dot notation to traverse the `endUserIds` object down to the `mcid` object.
+
+>[!NOTE]
+>
+>The Experience Cloud ID (ECID) is also known as MCID and continues to be used in namespaces.
 
 ```sql
 SELECT endUserIds._experience.mcid
@@ -196,7 +199,7 @@ After connecting to Query Service, you can see all your available tables on Plat
 
 ### Standard table view
 
-The `\d` command shows the standard PostgreSQL view for listing tables. An example of this command's output can be seen below:
+The `\d` command shows the standard [!DNL PostgreSQL] view for listing tables. An example of this command's output can be seen below:
 
 ```sql
              List of relations
@@ -312,4 +315,8 @@ Query Service standardizes persisted data in Adobe Experience Platform using the
 
 By reading this document, you have been introduced to some important considerations when writing queries using [!DNL Query Service]. For more information on how to use the SQL syntax to write your own queries, please read the [SQL syntax documentation](../sql/syntax.md).
 
-For more samples of queries that can be used within Query Service, please read the guides on [Adobe Analytics sample queries](../sample-queries/adobe-analytics.md), [Adobe Target sample queries](../sample-queries/adobe-target.md), or [ExperienceEvent sample queries](../sample-queries/experience-event.md).
+For more samples of queries that can be used within Query Service, please read the following use case documentation:
+
+- [Analytics insights](../use-cases/analytics-insights.md)
+- [Activity analysis with Adobe Target](../use-cases/activity-analysis-with-adobe-target.md)
+- [ExperienceEvent sample queries](../sample-queries/experience-event.md).

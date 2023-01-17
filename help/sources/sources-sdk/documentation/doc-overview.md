@@ -2,17 +2,10 @@
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
 title: Document Your Source
-topic-legacy: overview
 description: The final step before your new source can be made live in Adobe Experience Platform is to document your new source.
-hide: true
-hidefromtoc: true
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
 ---
 # Document your source
-
->[!IMPORTANT]
->
->Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
 
 The final step before your new source can be set live in Adobe Experience Platform is to document your new source.
 
@@ -41,7 +34,7 @@ You can use a pre-filled [documentation template](./template.md) to assist in cr
 
 You can also download the documentation templates below:
 
-* [API documentation template](../assets/template.zip)
+* [API documentation template](../assets/api-template.zip)
 * [UI documentation template](../assets/ui-template.zip)
 
 ## Create your new source page

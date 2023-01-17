@@ -1,13 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: Configure explore specifications for Sources SDK
-topic-legacy: overview
-description: This document provides an overview of the configurations you need to prepare in order to use Sources SDK.
-hide: true
-hidefromtoc: true
+title: Configure explore specifications for Self-Serve Sources (Batch SDK)
+description: This document provides an overview of the configurations you need to prepare in order to use Self-Serve Sources (Batch SDK).
 exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
 ---
-# Configure explore specifications for Sources SDK
+# Configure explore specifications for Self-Serve Sources (Batch SDK)
 
 Explore specifications defines the parameters required for exploring and inspecting objects contained in your source. Explore specifications also defines the response format returned when objects are explored and inspected.
 
@@ -81,4 +78,4 @@ Explore specifications defines the parameters required for exploring and inspect
 
 ## Next steps
 
-With your explore specifications populated, you can proceed to create a complete connection specification using the [!DNL Flow Service] API. See the the [[!DNL Sources SDK] API guide](../api/api-overview.md) for more information.
+With your explore specifications populated, you can proceed to create a complete connection specification using the [!DNL Flow Service] API. See the the [Self-Serve Sources (Batch SDK) API guide](../api/api-overview.md) for more information.

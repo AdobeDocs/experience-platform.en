@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Schema Registry API Guide
 description: The Schema Registry API allows developers to programmatically manage all schemas and related Experience Data Model (XDM) resources within Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
-topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
 ---
 # [!DNL Schema Registry] API guide
@@ -48,15 +47,27 @@ Descriptors are sets of metadata that are assigned to specific fields within a s
 
 ## Unions
 
-While Platform allows you to compose schemas for particular use cases, it also allows you to compose a "union" of schemas belonging to a specific class. A union schema aggregates the fields of all schemas that share the same class into a single representation. By enabling a schema for use with [Real-time Customer Profile](../../profile/home.md), that schema becomes included in the union for its particular class. As such, union schemas cannot be edited directly, and can only be affected by including or excluding schemas for use in Profile.
+While Platform allows you to compose schemas for particular use cases, it also allows you to compose a "union" of schemas belonging to a specific class. A union schema aggregates the fields of all schemas that share the same class into a single representation. By enabling a schema for use with [Real-Time Customer Profile](../../profile/home.md), that schema becomes included in the union for its particular class. As such, union schemas cannot be edited directly, and can only be affected by including or excluding schemas for use in Profile.
 
 To learn how to view unions in the Schema Registry API, see the [unions endpoint guide](./unions.md).
 
-## Export/Import
+## CSV to schema conversion {#csv-to-schema}
+
+You can automatically generate an XDM schema using a CSV file as a template, allowing you to create templates to bulk-import schema fields and cut down on manual API or UI work.
+
+See the [CSV to schema conversion endpoint guide](./export.md) for more information.
+
+## Export {#export}
 
 The Schema Registry API allows you to transfer and share XDM resources between sandboxes and IMS Organizations. For any schema, field group, or data type, you can generate an export payload containing the structure of the resource and any dependent resources. This payload can then be used to import the resource into a destination sandbox and IMS Org.
 
-See the [export/import endpoints guide](./export-import.md) for more information on how to use these endpoints.
+See the [export endpoint guide](./export.md) for more information on how to create an export payload for an existing XDM resource.
+
+## Import
+
+If you use the [export](#export) or [CSV to schema conversion](./import.md) endpoints to create an export payload, you can send that payload to a target organization and sandbox to import the specified resources.
+
+See the [import endpoint guide](./export.md) for more information on how to generate XDM resources from export payloads.
 
 ## Sample data
 

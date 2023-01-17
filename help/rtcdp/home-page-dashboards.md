@@ -1,20 +1,18 @@
 ---
 keywords: metrics overview; rtcdp metrics overview
-title: Real-time Customer Data Platform Home Page and Dashboards
-seo-title: Real-time Customer Data Platform Home Page and Dashboards
+title: Real-Time Customer Data Platform Home Page and Dashboards
 description: Dashboards, Home Page, and First-Time User Experience of Adobe Experience Platform
-seo-description: Dashboards, Home Page, and First-Time User Experience of Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 ---
-# [!DNL Real-time Customer Data Platform] home page and dashboards
+# [!DNL Real-Time Customer Data Platform] home page and dashboards
 
-The Real-time Customer Data Platform (Real-time CDP) home page, which includes a metrics dashboard, appears when you log in to Real-time CDP.
+The Adobe Real-Time Customer Data Platform (Real-Time CDP) home page, which includes a metrics dashboard, appears when you log in to Real-Time CDP.
 
-The home page is only one of the places where metric cards appear. Real-time CDP provides metric cards throughout your experience. These metrics inform you about the data, profile, and segment audiences in the system. 
+The home page is only one of the places where metric cards appear. Real-Time CDP provides metric cards throughout your experience. These metrics inform you about the data, profile, and segment audiences in the system. 
 
 ![image](assets/home.png)
 
-If there is no data in the system when you log in to Real-time CDP, the dashboard on the home page does not appear. In this case, the home page provides learning material for a first time user experience. As data is collected--in other words, as <!--sources-->datasets, profiles, segments, and destinations are created and data flows into the system--the dashboard automatically updates to display information about that data<!-- in metric cards-->. 
+If there is no data in the system when you log in to Real-Time CDP, the dashboard on the home page does not appear. In this case, the home page provides learning material for a first time user experience. As data is collected--in other words, as <!--sources-->datasets, profiles, segments, and destinations are created and data flows into the system--the dashboard automatically updates to display information about that data<!-- in metric cards-->. 
 
 ## Home page dashboard view
 
@@ -33,7 +31,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
     ![image](assets/recent.png)
 
-Additional metrics--for example for profiles and segments--are available in other parts of Real-time Customer Data Platform.
+Additional metrics--for example for profiles and segments--are available in other parts of Real-Time Customer Data Platform.
 
 ### Datasets
 
@@ -43,13 +41,13 @@ For more information about datasets, see the [datasets overview](../catalog/data
 
 ### Profiles
 
-The **[!UICONTROL Profiles]** count shows the total number of people with profiles in the [!DNL Real-time Customer Profile]. It does not include profile fragments. This is your total addressable audience.
+The **[!UICONTROL Profiles]** count shows the total number of people with profiles in the [!DNL Real-Time Customer Profile]. It does not include profile fragments. This is your total addressable audience.
 
 This count uses the default [merge policy](profile/merge-policies.md) as set in the merge policy configuration in Unified Profile. 
 
 The number of profiles is updated once every 24 hours.  
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 ### Segments
 
@@ -73,7 +71,7 @@ There is also a metric card that shows the percentage of successful records. Sel
 
 The number of successful profile records is updated hourly. 
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 ### Total profile records
 
@@ -85,7 +83,7 @@ The **[!UICONTROL Total profile records]** metric card shows the total number of
 
 Select **[!UICONTROL View profiles]** to see more details about the profile records.
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 For more information about viewing a specific profile, see [Profile viewer](profile/profile-viewer.md).
 

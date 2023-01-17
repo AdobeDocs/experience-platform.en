@@ -14,6 +14,12 @@ Voice platforms gather and collate data from various sources including voice mes
 
 Currently, Adobe Experience Platform supports the Voice of the Customer destinations listed below. For information on how to connect to these destinations, see the individual links:
 
+### Connections {#connections}
+
+* [Medallia connection](/help/destinations/catalog/voice/medallia-connector.md)
+
+### Extensions {#extensions}
+
 * [Confirmit Digital Feedback extension](confirmit-digital-feedback.md)
 * [Invoca Tags extension](invoca.md)
 * [Medallia extension](medallia.md)

@@ -1,8 +1,6 @@
 ---
 title: Non-interactive data collection
-description: Learn how the Adobe Experience Platform Edge Network Server API performs non-interactive data collection
-seo-description: Learn how the Adobe Experience Platform Edge Network Server API performs non-interactive data collection
-keywords: data collection;collection;adobe experience platform edge network;api;noninteractive data collection
+description: Learn how the Adobe Experience Platform Edge Network Server API performs non-interactive data collection.
 exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
 ---
 # Non-interactive data collection
@@ -14,17 +12,6 @@ Non-interactive event data collection endpoints are used to send multiple events
 Sending events in batch is recommended when end-user events are queued locally for a short period of time (e.g. when there’s no network connection).
 
 Batch events should not necessarily belong to the same end-user, meaning that events can hold different identities within their `identityMap` object.
-
-
-<!-- However, when an `ECID` identity is sent via a cookie or metadata (in Edge Network accepted format), the Edge Network will read it and associate it with each event in the batch.
-
-Each event should include the corresponding `XDM` content that needs to be collected.
-
->[!NOTE]
->
->[Experience Edge Identity Protocol](visitor-identification.md#experience-edge-identity-protocol) (`ECID` generation) is not applicable for data collection requests, meaning that events sent to this API should already have at least one identity associated to them. For server datastreams (calls to `server.adobedc.net`), the API requires that each event contains an identity **explicitly set as primary**. For device datastreams, the Edge Network will attempt to set the `ECID` as primary, when it is present, and no other primary identity is explicitly set.
-
--->
 
 ## Non-interactive API call example {#example}
 

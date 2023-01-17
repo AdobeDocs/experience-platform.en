@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy Service API Guide Appendix
-topic-legacy: developer guide
 description: This document contains additional information for working with the Privacy Service API.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 ---
@@ -63,11 +62,11 @@ The following table outlines the accepted values for specifying an Adobe product
 | Adobe Audience Manager | `AudienceManager` |
 | Adobe Campaign | `campaign` |
 | Adobe Experience Platform (Data Lake) | `aepDataLake` |
-| Adobe Experience Platform (Real-time Customer Profile) | `profileService` |
+| Adobe Experience Platform (Real-Time Customer Profile) | `profileService` |
 | Adobe Primetime Authentication | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Customer Attributes (CRS) | `CRS` |
-| Identity Service | `Identity` |
+| Identity Service | `identity` |
 | Marketo Engage | `marketo` |
 
 {style="table-layout:auto"}

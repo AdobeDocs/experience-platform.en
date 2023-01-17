@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;XDM graphs
 title: Overview of accessibility features in Experience Platform
-topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform is committed to providing accessible and inclusive features to all individuals.
 exl-id: 54ce6826-09ee-4716-8237-ef904a41986f

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;flow service;update destination dataflows
 solution: Experience Platform
 title: Update destination dataflows using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for updating a destination dataflow. Learn how to enable or disable the dataflow, update its basic information, or add and remove segments and attributes using the Flow Service API.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
@@ -858,8 +857,8 @@ A successful response returns your flow ID and an updated etag. You can verify t
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) and [request header errors](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in the Platform troubleshooting guide.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide for more information on interpreting error responses.
 
-## Next steps
+## Next steps {#next-steps}
 
 By following this tutorial, you have learned how to update various components of a destination dataflow, like adding or removing segments or profile attributes using [!DNL Flow Service] API. For more information on destinations, see the [destinations overview](../home.md).

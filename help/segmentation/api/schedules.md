@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;schedules;schedule;api;API;
 solution: Experience Platform
 title: Schedules API Endpoint
-topic-legacy: developer guide
 description: Schedules are a tool that can be used to automatically run batch segmentation jobs once a day.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
 ---
@@ -16,7 +15,7 @@ The endpoints used in this guide are part of the [!DNL Adobe Experience Platform
 
 ## Retrieve a list of schedules {#retrieve-list}
 
-You can retrieve a list of all schedules for your IMS Organization by making a GET request to the `/config/schedules` endpoint.
+You can retrieve a list of all schedules for your organization by making a GET request to the `/config/schedules` endpoint.
 
 **API format**
 
@@ -35,7 +34,7 @@ GET /config/schedules?limit={LIMIT}
 
 **Request**
 
-The following request will retrieve the last ten schedules posted within your IMS Organization.
+The following request will retrieve the last ten schedules posted within your organization.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \

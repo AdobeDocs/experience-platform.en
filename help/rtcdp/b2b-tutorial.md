@@ -1,13 +1,13 @@
 ---
-keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real time customer data platform;real time cdp;b2b;cdp
+keywords: RTCDP;CDP;B2B Edition;Real-Time Customer Data Platform;real time customer data platform;real time cdp;b2b;cdp
 solution: Experience Platform
-title: Getting Started with Real-time Customer Data Platform B2B Edition
-description: Use this sample scenario as an example when setting up your implementation of Real-time Customer Data Platform B2B Edition.
+title: Getting Started with Real-Time Customer Data Platform B2B Edition
+description: Use this sample scenario as an example when setting up your implementation of Adobe Real-Time Customer Data Platform B2B Edition.
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
 ---
-# Getting started with Real-time Customer Data Platform B2B Edition
+# Getting started with Real-Time Customer Data Platform B2B Edition
 
-This document provides a high-level end-to-end workflow for getting started with Real-time Customer Data Platform (CDP) B2B Edition, using an example use case to illustrate key concepts.
+This document provides a high-level end-to-end workflow for getting started with Real-Time Customer Data Platform (CDP) B2B Edition, using an example use case to illustrate key concepts.
 
 The technology company Bodea wants to combine person and account data from different siloed data sources in order to effectively target customers with an email and a LinkedIn advertisement campaign for its new product. Bodea uses Marketo Engage as its marketing automation platform and needs to segment a B2B-specific audience from multiple CRMs containing customer data.
 
@@ -40,7 +40,7 @@ The auto-generation utility defined the data model structure for the schemas usi
 > 
 >If you are not using the auto-generator utility or should a new relationship need to be created, see the tutorial on [creating relationships between B2B schemas](../xdm/tutorials/relationship-b2b.md).
 
-Real-time Customer Profile merges data from disparate sources to create consolidated profiles of key B2B entities. Since profiles are generated based on a single class, the auto-generation utility sets up relationships between schemas based on common business use cases. As a result, the Bodea team is now ready to ingest data based on their B2B schemas.
+Real-Time Customer Profile merges data from disparate sources to create consolidated profiles of key B2B entities. Since profiles are generated based on a single class, the auto-generation utility sets up relationships between schemas based on common business use cases. As a result, the Bodea team is now ready to ingest data based on their B2B schemas.
 
 >[!NOTE]
 > 
@@ -50,7 +50,7 @@ Real-time Customer Profile merges data from disparate sources to create consolid
 
 ## Ingest your data into Experience Platform
 
-Next, the Bodea marketer uses the [Marketo Engage connector](../sources/connectors/adobe-applications/marketo/marketo.md) to ingest data into Platform for use in downstream services. You can also ingest data by using one of the approved sources for Real-time CDP B2B Edition.
+Next, the Bodea marketer uses the [Marketo Engage connector](../sources/connectors/adobe-applications/marketo/marketo.md) to ingest data into Platform for use in downstream services. You can also ingest data by using one of the approved sources for Real-Time CDP B2B Edition.
 
 >[!NOTE]
 > 
@@ -78,9 +78,9 @@ In this example, the segment finds all the people who work in the sales departme
 
 >[!NOTE]
 > 
->For instructions on how to create segments to evaluate your data see the [Segment Builder UI guide](../segmentation/ui/segment-builder.md). For more specific B2B segmentation use cases, refer to the [segmentation overview for Real-time CDP B2B Edition](./segmentation/b2b.md).
+>For instructions on how to create segments to evaluate your data see the [Segment Builder UI guide](../segmentation/ui/segment-builder.md). For more specific B2B segmentation use cases, refer to the [segmentation overview for Real-Time CDP B2B Edition](./segmentation/b2b.md).
 
-The Segment Builder allows you to create a marketable audience from Real-time Customer Profile data and view estimates of your prospective audience based on the combination of attributes, events, and existing audiences you defined.
+The Segment Builder allows you to create a marketable audience from Real-Time Customer Profile data and view estimates of your prospective audience based on the combination of attributes, events, and existing audiences you defined.
 
 ## Activate your evaluated data to a destination
 
@@ -98,4 +98,4 @@ The Bodea marketer activates the segment to the Marketo destination, which allow
 
 ## Next steps
 
-By following this tutorial, you have successfully leveraged the various Adobe Experience Platform services used by Real-time CDP B2B Edition. As a result, you have learned to ingest, segment, evaluate, and export your B2B data as actionable audiences that can be engaged across different channels.
+By following this tutorial, you have successfully leveraged the various Adobe Experience Platform services used by Real-Time CDP B2B Edition. As a result, you have learned to ingest, segment, evaluate, and export your B2B data as actionable audiences that can be engaged across different channels.

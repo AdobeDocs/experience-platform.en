@@ -5,7 +5,7 @@ exl-id: 911680ae-b761-4945-9ad3-0233eaea89b0
 ---
 # [!UICONTROL Product] class
 
-In Experience Data Model (XDM), the [!UICONTROL Product] class captures the minimum set of properties that define a product.
+In Experience Data Model (XDM), the [!UICONTROL Product] class captures the minimum set of properties that define a retail product.
 
 ![](../images/classes/product.png)
 
@@ -24,7 +24,7 @@ In Experience Data Model (XDM), the [!UICONTROL Product] class captures the mini
 
 ## Compatible field groups {#field-groups}
 
-Adobe provides several standard field groups for use with the [!DNL XDM Individual Profile] class. The following is a list of some commonly used field groups for the class:
+Adobe provides several standard field groups for use with the [!UICONTROL Product] class. The following is a list of some commonly used field groups for the class:
 
 * [[!UICONTROL Product catalog]](../field-groups/product/product-catalog.md)
 * [[!UICONTROL Product category]](../field-groups/product/product-category.md)

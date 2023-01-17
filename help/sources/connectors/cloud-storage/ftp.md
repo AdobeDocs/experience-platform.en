@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;FTP;ftp;
 solution: Experience Platform
 title: FTP Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect an FTP server to Adobe Experience Platform using APIs or the user interface.
 exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
 ---

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;segment;segmentMembership;segment membership;Schema design;map;Map;
 solution: Experience Platform
 title: Segment Membership Details Schema Field Group
-topic-legacy: overview
 description: This document provides an overview of the Segment Membership Details schema field group.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
 ---
@@ -71,7 +70,7 @@ The following is an example `segmentMembership` map that the system has populate
 | `xdm:version` | The version of the segment that this profile qualified for. |
 | `xdm:lastQualificationTime` | A timestamp of the last time this profile qualified for the segment. |
 | `xdm:validUntil` | A timestamp of when the segment membership should no longer be assumed to be valid. |
-| `xdm:status` | Indicates whether the segment membership has been realized as part of the current request. The following values are accepted: <ul><li>`existing`: The profile was already part of the segment prior to the request, and continues to maintain its membership.</li><li>`realized`: The profile is entering the segment as part of the current request.</li><li>`exited`: The profile is exiting the segment as part of the current request.</li></ul> |
+| `xdm:status` | A string field that indicates whether the segment membership has been realized as part of the current request. The following values are accepted: <ul><li>`existing`: The profile was already part of the segment prior to the request, and continues to maintain its membership.</li><li>`realized`: The profile is entering the segment as part of the current request.</li><li>`exited`: The profile is exiting the segment as part of the current request.</li></ul> |
 | `xdm:payload` | Some segment memberships include a payload that describes additional values directly related to the membership. Only one payload of a given type can be provided for each membership. `xdm:payloadType` indicates the type of payload (`boolean`, `number`, `propensity`, or `string`), while its sibling property provides the value for the payload type. |
 
 {style="table-layout:auto"}

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;onetrust;OneTrust
 solution: Experience Platform
 title: (Beta) Create a OneTrust Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a OneTrust source connection using the Adobe Experience Platform UI.
 exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
@@ -31,7 +30,7 @@ In order to connect [!DNL OneTrust Integration] to Platform, you must provide va
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| Host | The environment from which the [!DNL OneTrust Integration] data needs to be pulled from. | `https://uat.onetrust.com/` |
+| Host name | The environment from which the [!DNL OneTrust Integration] data needs to be pulled from. | `https://uat.onetrust.com/` |
 | Authorization Test URL | (Optional) The authorization test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. | |
 | Access Token | The access token that corresponds with your [!DNL OneTrust Integration] account. | `ZGFkZDMyMjFhMmEyNDQ2ZGFhNTdkZjNkZjFmM2IyOWE6QjlUSERVUTNjOFVsRmpEZTJ6Vk9oRnF3Sk8xNlNtcm4=` |
 

@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;query service;Query service;query
 title: Example Use Case for Adobe Experience Platform Query Service
-topic-legacy: tutorial
 description: An end-to-end example to demonstrate the versatility and benefits of Adobe Experience Platform Query Service.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
 ---
@@ -9,7 +8,7 @@ exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
 
 This document and accompanying video presentation provide a high-level end-to-end workflow demonstrating how Adobe Experience Platform [!DNL Query Service] benefits your organization's strategic business insights. Using a browse abandonment use case as an example, this guide illustrates the following key concepts:
 
-* The key importance of data processing to maximizing the potential of Adobe Experience Platform
+* The key importance of data processing to maximize the potential of Adobe Experience Platform.
 * Ways to build the query based on your existing data architecture.
 * Ensure data quality that meets your needs, and methods to mitigate any shortfalls.
 * The process to schedule a query to run at a set frequency for use downstream in segmentation and destinations for personalization.
@@ -70,7 +69,7 @@ Adobe Experience Platform provides a data repository and the necessary tools to 
 
 By reading this document, you should now understand how [!DNL Query Service] impacts not only the quality of your data and ease of segmentation but also its importance within your data architecture for the entire end-to-end workflow. For more applicable SQL examples that use Adobe Analytics with [!DNL Query Service], see the [Adobe Analytics sample queries documentation](../sample-queries/adobe-analytics.md).
 
-Other documents that demonstrate the benefits of [!DNL Query Service] to your organization’s strategic business insights are the [bot filtering use case](./bot-filtering.md) example. 
+Other documents that demonstrate the benefits of [!DNL Query Service] to your organization's strategic business insights are the [bot filtering use case](./bot-filtering.md) example. 
 
 Alternatively, these documents that will benefit your understanding of [!DNL Query Service] features: 
 

@@ -203,7 +203,7 @@ If you are migrating to using FPIDs from a previous implementation, it may be di
 
 To help illustrate this process, consider a scenario that involves a customer who has previously visited your site and what impact an FPID migration would have on how that customer is identified in Adobe solutions. 
 
-![Diagram showing how a customer's ID values are updated between visits after migrating to FPIDs](../images/identity/tracking/visits.png)
+![Diagram showing how a customer's ID values are updated between visits after migrating to FPIDs](../assets/identity/tracking/visits.png)
 
 | Visit | Description |
 | --- | --- |

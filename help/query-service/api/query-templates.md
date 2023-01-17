@@ -2,15 +2,16 @@
 keywords: Experience Platform;home;popular topics;query service;query templates;api guide;templates;Query service;
 solution: Experience Platform
 title: Query Templates API Endpoint
-topic-legacy: query templates
-description: The following documentation walks through the various API calls you can make using query templates for the Query Service API.
+description: This guide details the various query template API calls you can make using the Query Service API.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
 ---
 # Query templates endpoint
 
 ## Sample API calls
 
-Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Each call includes the general API format, a sample request showing required headers, and a sample response.
+The following sections describe the various API calls you can make using the [!DNL Query Service] API. Each call includes the general API format, a sample request showing required headers, and a sample response.
+
+See the [UI query templates documentation](../ui/query-templates.md) for information on creating templates through the Experience Platform UI.
 
 ### Retrieve a list of query templates
 
@@ -122,15 +123,19 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
-        "sql": "SELECT * FROM accounts;",
-        "name": "Sample query template"
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
+        "name": "Sample query template",
+        "queryParameters": {
+            user_id : {USER_ID}
+            }
     }'
 ```
 
 | Property | Description |
 | -------- | ----------- |
-| `sql` | The SQL query you want to create. |
+| `sql` | The SQL query that you want to create. You can either use standard SQL or a parameter replacement. To use a parameter replacement in the SQL you must prepend the parameter key with a `$`. For example, `$key`, and provide the parameters used in the SQL as JSON key value pairs in the `queryParameters` field. The values passed here will be the default parameters used in the template. If you want to override these parameters, you must override them in the POST request. |
 | `name` | The name of the query template. |
+| `queryParameters` | A key value pairing to replace any parameterized values in the SQL statement. It is only required **if** you are using parameter replacements within the SQL you provide. No value type checking will be done on these key value pairs. |
 
 **Response**
 
@@ -138,7 +143,7 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 
 ```json
 {
-    "sql": "SELECT * FROM accounts;",
+    "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
     "name": "Sample query template",
     "id": "0094d000-9062-4e6a-8fdb-05606805f08f",
     "updated": "2020-01-09T00:20:09.670Z",
@@ -251,15 +256,19 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
-    "sql": "SELECT * FROM accounts LIMIT 20;",
-    "name": "Sample query template"
- }'
+    "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
+    "name": "Sample query template",
+    "queryParameters": {
+            user_id : {USER_ID}
+        }
+    }'
 ```
 
 | Property | Description |
 | -------- | ----------- |
-| `sql` | The SQL query you want to update. |
-| `name` | The name of the scheduled query. |
+| `sql` | The SQL query that you want to create. You can either use standard SQL or a parameter replacement. To use a parameter replacement in the SQL you must prepend the parameter key with a `$`. For example, `$key`, and provide the parameters used in the SQL as JSON key value pairs in the `queryParameters` field. The values passed here will be the default parameters used in the template. If you want to override these parameters, you must override them in the POST request. |
+| `name` | The name of the query template. |
+| `queryParameters` | A key value pairing to replace any parameterized values in the SQL statement. It is only required **if** you are using parameter replacements within the SQL you provide. No value type checking will be done on these key value pairs. |
 
 **Response**
 

@@ -1,6 +1,6 @@
 ---
 title: Configuring Secrets in Event Forwarding
-description: Learn how to configure secrets in the Data Collection UI to authenticate to endpoints used in event forwarding properties.
+description: Learn how to configure secrets in the UI to authenticate to endpoints used in event forwarding properties.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 ---
 # Configuring secrets in event forwarding
@@ -13,11 +13,12 @@ There are currently three supported secret types:
 | --- | --- |
 | [!UICONTROL Token] | A single string of characters representing an authentication token value that is known and understood by both systems. |
 | [!UICONTROL HTTP] | Contains two string attributes for a username and password, respectively. |
-| [!UICONTROL OAuth2] | Contains several attributes to support the [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. Currently only the [Client Credentials](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) version of OAuth2 is supported. |
+| [!UICONTROL OAuth 2] | Contains several attributes to support the [client credentials grant type](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) for the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
+| [!UICONTROL Google OAuth 2] | Contains several attributes to support the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec for use in the [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) and [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 
 {style="table-layout:auto"}
 
-This guide provides a high-level overview of how to configure secrets for an event forwarding ([!UICONTROL Edge]) property in the Data Collection UI.
+This guide provides a high-level overview of how to configure secrets for an event forwarding ([!UICONTROL Edge]) property in the Experience Platform UI or Data Collection UI.
 
 >[!NOTE]
 >
@@ -25,13 +26,19 @@ This guide provides a high-level overview of how to configure secrets for an eve
 
 ## Prerequisites
 
-This guide assumes that you are already familiar with how to manage resources for tags and event forwarding in the Data Collection UI, including how to create a data element and an event forwarding rule. See the guide on [managing resources](../managing-resources/overview.md) if you require an introduction.
+This guide assumes that you are already familiar with how to manage resources for tags and event forwarding in the UI, including how to create a data element and an event forwarding rule. See the guide on [managing resources](../managing-resources/overview.md) if you require an introduction.
 
 You should also have a working understanding of the publishing flow for tags and event forwarding, including how to add resources to a library and install a build onto your website for testing. See the [publishing overview](../publishing/overview.md) for more details.
 
 ## Create a secret {#create}
 
-To create a secret, log in to the Data Collection UI and open the event forwarding property you want to add the secret under. Next, select **[!UICONTROL Secrets]** in the left navigation, followed by **[!UICONTROL Create New Secret]**.
+>[!CONTEXTUALHELP]
+>id="platform_eventforwarding_secrets_environments"
+>title="Environments for secrets"
+>abstract="In order for a secret to be usable by event forwarding, it must be assigned to an existing environment. If you do not have any environments created for your event forwarding property, you must configure them before continuing."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="Environments overview"
+
+To create a secret, select **[!UICONTROL Event Forwarding]** in the left navigation, then open the event forwarding property you want to add the secret under. Next, select **[!UICONTROL Secrets]** in the left navigation, followed by **[!UICONTROL Create New Secret]**.
 
 ![Create new secret](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
@@ -59,7 +66,8 @@ From here, the steps to create the secret differ depending on the type of secret
 
 * [[!UICONTROL Token]](#token)
 * [[!UICONTROL HTTP]](#http)
-* [[!UICONTROL OAuth2]](#oauth2)
+* [[!UICONTROL OAuth 2]](#oauth2)
+* [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -77,11 +85,11 @@ To create an HTTP secret, select **[!UICONTROL Simple HTTP]** from the **[!UICON
 
 ![HTTP secret](../../images/ui/event-forwarding/secrets/http-secret.png)
 
-### [!UICONTROL OAuth2] {#oauth2}
+### [!UICONTROL OAuth 2] {#oauth2}
 
-To create an OAuth2 secret, select **[!UICONTROL OAuth2]** from the **[!UICONTROL Type]** dropdown. In the fields that appear below, provide your [[!UICONTROL Client ID] and [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), as well as your [Authorization URL](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) for your OAuth integration. The [!UICONTROL Authorization URL] field in the Data Collection UI is a concatenation between the authorization server host and the token path.
+To create an OAuth 2 secret, select **[!UICONTROL OAuth 2]** from the **[!UICONTROL Type]** dropdown. In the fields that appear below, provide your [[!UICONTROL Client ID] and [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), as well as your [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) for your OAuth integration. The [!UICONTROL Token URL] field in the UI is a concatenation between the authorization server host and the token path.
 
-![OAuth2 secret](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
+![OAuth 2 secret](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
 Under **[!UICONTROL Credential Options]**, you can provide other credential options such as `scope` and `audience` in the form of key-value pairs. To add more key-value pairs, select **[!UICONTROL Add another]**.
 
@@ -101,7 +109,30 @@ For example, if the refresh offset is set to the default value of `14400` (four 
 
 When finished, select **[!UICONTROL Create Secret]** to save the secret.
 
-![Save OAuth2 Offset](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+![Save OAuth 2 Offset](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+
+### [!UICONTROL Google OAuth 2] {#google-oauth2}
+
+To create a Google OAuth 2 secret, select **[!UICONTROL Google OAuth 2]** from the **[!UICONTROL Type]** dropdown. Under **[!UICONTROL Scopes]**, select the Google APIs that you want to use this secret to grant access to. The following products are currently supported:
+
+* [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview)
+* [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)
+
+When finished, select **[!UICONTROL Create Secret]**.
+
+![Google OAuth 2 secret](../../images/ui/event-forwarding/secrets/google-oauth.png)
+
+A popover appears informing you that the secret needs to be manually authorized through Google. Select **[!UICONTROL Create & Authorize]** to continue.
+
+![Google authorization popover](../../images/ui/event-forwarding/secrets/google-authorization.png)
+
+A dialog appears that allows you to enter the credentials for your Google account. Follow the prompts to grant event forwarding access to your data under the selected scope. Once the authorization process is complete, the secret is created.
+
+>[!IMPORTANT]
+>
+>If your organization has a re-authentication policy set for Google Cloud applications, the created secrets will not be refreshed successfully after the authentication expires (between 1 and 24 hours depending on the policy configuration).
+>
+>To resolve this issue, sign in to the Google Admin console and navigate to the **[!DNL App access control]** page so you can mark the event forwarding app (Adobe Real-Time CDP Event Forwarding) as [!DNL Trusted]. Refer to the Google documentation on [setting session lengths for Google Cloud services](https://support.google.com/a/answer/9368756) for more information.
 
 ## Edit a secret
 
@@ -125,7 +156,7 @@ You can retry or refresh a secret exchange from the editing screen. This process
 | --- | --- |
 | [!UICONTROL Token] | Select **[!UICONTROL Exchange Secret]** to retry the secret exchange. This control is only available when there is an environment attached to the secret. |
 | [!UICONTROL HTTP] | If there is no environment attached to the secret, select **[!UICONTROL Exchange Secret]** to exchange the credential to base64. If an environment is attached, select elect **[!UICONTROL Exchange and Deploy Secret]** to exchange to base64 and deploy the secret. |
-| [!UICONTROL OAuth2] | Select **[!UICONTROL Generate Token]** to exchange the credentials and return an access token from the authentication provider. |
+| [!UICONTROL OAuth 2] | Select **[!UICONTROL Generate Token]** to exchange the credentials and return an access token from the authentication provider. |
 
 ## Delete a secret
 
@@ -155,4 +186,4 @@ By assigning multiple secrets to a single data element and including it a rule, 
 
 ## Next steps
 
-This guide covered how to manage secrets in the Data Collection UI. For information on how to interact with secrets using the Reactor API, see the [secrets endpoint guide](../../api/endpoints/secrets.md).
+This guide covered how to manage secrets in the UI. For information on how to interact with secrets using the Reactor API, see the [secrets endpoint guide](../../api/endpoints/secrets.md).

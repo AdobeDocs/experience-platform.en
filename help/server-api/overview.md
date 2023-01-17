@@ -1,5 +1,5 @@
 ---
-title: Edge Network Server API
+title: Edge Network Server API overview
 description: Learn what the Edge Network Server API is and how you can use it.
 seo-description: Learn what the Edge Network Server API is and how you can use it.
 keywords: data collection;collection;Adobe Experience Platform Edge Network;server api;

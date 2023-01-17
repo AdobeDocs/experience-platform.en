@@ -2,16 +2,11 @@
 keywords: Experience Platform;home;popular topics;Azure Azure Data Explorer;Azure Data Explorer;Azure Data Explorer
 solution: Experience Platform
 title: Create an Azure Azure Data Explorer Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Azure Azure Data Explorer to Adobe Experience Platform using the Flow Service API.
 exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30
 ---
 # Create an [!DNL Azure Azure Data Explorer] base connection using the [!DNL Flow Service] API
-
->[!NOTE]
->
->The [!DNL Azure Azure Data Explorer] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
@@ -38,7 +33,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Azure Data Explorer], you
 | `tenant` | The unique tenant ID used to connect to the [!DNL Azure Data Explorer] database. |
 | `servicePrincipalId` | The unique service principal ID used to connect to the [!DNL Azure Data Explorer] database. |
 | `servicePrincipalKey` | The unique service principal key used to connect to the [!DNL Azure Data Explorer] database. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Azure Data Explorer] is `0479cc14-7651-4354-b233-7480606c2ac3`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Azure Data Explorer] is `0479cc14-7651-4354-b233-7480606c2ac3`. |
 
 For more information about getting started refer to this [[!DNL Azure Data Explorer] document](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad).
 

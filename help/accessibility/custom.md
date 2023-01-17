@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;XDM graphs
 title: Custom Accessibility Solutions for Experience Platform
-topic-legacy: guide
 type: Documentation
 description: Learn more about the custom accessibility solutions within the Adobe Experience Platform user interface.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
@@ -90,6 +89,9 @@ All tables within the Experience Platform user interface are keyboard-accessible
 * When a row is selected or in focus, using **Enter** on the row provides details in the right rail.
 * When a row is selected or in focus, use **arrow keys** to move through each item in the row.
 * Use **Enter** to select an item in the row. Users with screen readers are alerted if a new window must open.
+* When you zoom to 200% or more, you can see the **rail inspector** icon as the right rail collapses to provide more viewing space for the table.
+
+![The rail inspector icon in focus when a user zooms to 200%.](images/rail-inspector.png)
 
 ### Browse table keyboard accessibility
 
@@ -123,6 +125,10 @@ When using the Segment Builder UI to create, edit, and interact with segments wi
 * The Segment Builder UI is accessible via keyboard navigation.
 * Screen readers should recognize markup tags for headings and can announce the heading along with its level.
 * Other assistive technologies can change the visual display of a page, using properly coded headings to display an outline or alternate view.
+
+You can now collapse or expand the left and right rails of the segment builder canvas to gain more screen space. This feature is particularly helpful as it offers full function capability at 200% zoom. 
+
+![The segment builder canvas with the left and right rail disclosure widgets highlighted.](images/left-right-rail-expandables.png)
 
 ## Query Service Editor
 

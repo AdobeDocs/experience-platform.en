@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;ADLS-Gen2;adls gen2;ADLS Gen2
 solution: Experience Platform
 title: Azure Data Lake Storage Gen2 Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect Azure Data Lake Storage Gen2 to Adobe Experience Platform using APIs or the user interface.
 exl-id: 424d7278-44d9-4653-82c0-eb21cbb9b623
 ---
@@ -18,7 +17,7 @@ A list of IP addresses must be added to an allow list prior to working with sour
 
 >[!IMPORTANT]
 >
->The [!DNL Azure Data Lake Storage Gen2] source connector currently does not support same-region connectivity to Platform. This means that if your Azure instance is using the same network region as Platform, then a connection to Platform sources cannot be established. Currently, only cross-region connectivity is supported. Please contact your Adobe account manager for more information.
+>The [!DNL Azure Data Lake Storage Gen2] source does not support same-region connectivity to Experience Platform. If your Azure instance is using the same network region as Experience Platform, then a connection to Experience Platform sources cannot be established. Please do not use the Azure East US 2, Azure West Europe, and Azure Australia East regions when setting up your [!DNL Azure Data Lake Storage Gen2] source. Currently, only cross-region connectivity is supported.
 
 ## Naming constraints for files and directories
 

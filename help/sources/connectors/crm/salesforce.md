@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;crm schema;crm;CRM;salesforce;Salesforce
 solution: Experience Platform
 title: Salesforce Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect Salesforce to Adobe Experience Platform using APIs or the user interface.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
 ---
@@ -29,6 +28,7 @@ See the following for detailed information on the field mapping rules between [!
 - [Opportunity contact roles](../adobe-applications/mapping/salesforce.md#opportunity-contact-role)
 - [Campaigns](../adobe-applications/mapping/salesforce.md#campaign)
 - [Campaign members](../adobe-applications/mapping/salesforce.md#campaign-member)
+- [Account contact relation](../adobe-applications/mapping/salesforce.md#account-contact-relation)
 
 ## Set up the [!DNL Salesforce] namespace and schema auto-generation utility
 

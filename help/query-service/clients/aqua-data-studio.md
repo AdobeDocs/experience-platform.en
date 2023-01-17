@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;Aqua Data Studio;Aqua data studio;connect to query service;
 solution: Experience Platform
 title: Connect Aqua Data Studio to Query Service
-topic-legacy: connect
 description: This document walks through the steps for connecting Aqua Data Studio with Adobe Experience Platform Query Service.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
 ---
@@ -34,7 +33,7 @@ The **[!DNL Register Server]** dialog appears. Under the **[!DNL General]** tab,
 - **[!DNL Host and Port]**: The host endpoint and its port for [!DNL Query Service]. You must use port 80 to connect with [!DNL Query Service].
 - **[!DNL Database]:** The database that will be used. Use the value for the Platform UI credential `dbname`: `prod:all`.
 
-![The Aqua Data Studio General tab with the required input fields highlighted.](../images/clients/aqua-data-studio/register-server-general-tab.png)
+![The [!DNL Aqua Data Studio] General tab with the required input fields highlighted.](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
 ### [!DNL Query Service] credentials
 
@@ -50,7 +49,7 @@ Next, select the **[!DNL Driver]** tab. Under **[!DNL Parameters]**, set the val
 >
 >See the [[!DNL Query Service] SSL documentation](./ssl-modes.md) to learn about SSL support for third-party connections to Adobe Experience Platform Query Service, and how to connect using `verify-full` SSL mode.
 
-![The Aqua Data Studio Driver tab with the Parameters field highlighted.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
+![The [!DNL Aqua Data Studio] Driver tab with the Parameters field highlighted.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
 After inputting your connection details, select **[!DNL Test Connection]** to ensure your credentials work properly. If your connection test is successful, select **[!DNL Save]** to register your server. A confirmation dialog appears confirming connection and the connection appears on the dashboard. You can now connect to the server and view its schema objects.
 

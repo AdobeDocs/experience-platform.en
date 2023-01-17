@@ -7,6 +7,10 @@ exl-id: 0564a132-42f4-478c-9197-9b051acf093c
 
 >[!IMPORTANT]
 >
+>You only need to use this API endpoint if you are submitting a productized (public) destination, to be used by other Experience Platform customers. If you are creating a private destination for your own use, you do not need to formally submit the destination using the publishing API.
+
+>[!IMPORTANT]
+>
 >**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destinations/publish` 
 
 This page lists and describes all the API operations that you can perform using the `/authoring/destinations/publish` API endpoint.
@@ -16,8 +20,9 @@ After you have configured and tested your destination, you can submit it to Adob
 Use the publish destinations API endpoint to submit a publishing request when:
 
 * As a Destination SDK partner, you want to make your productized destination available across all Experience Platform organizations for all Experience Platform customers to use;
-* You want to make your custom destination available in your own Experience Platform organization, across all sandboxes.
 * You make *any updates* to your configurations. Configuration updates are reflected in the destination only after you submit a new publishing request, which is approved by the Experience Platform team.
+
+<!-- * You want to make your custom destination available in your own Experience Platform organization, across all sandboxes. -->
 
 ## Getting started with destination publishing API operations {#get-started}
 

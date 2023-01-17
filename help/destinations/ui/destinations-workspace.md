@@ -1,8 +1,7 @@
 ---
 keywords: platform;destinations;destinations workspace;workspace;ui;destinations ui;catalog;destinations catalog;
 title: Destinations workspace
-description: The Destinations workspace consists of four sections, Catalog, Browse, Accounts, and System View. They are described in the sections below.
-seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
+description: The Destinations workspace consists of five sections, Overview, Catalog, Browse, Accounts, and System View. They are described in the sections below.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 ---
 # Destinations workspace {#destinations-workspace}
@@ -11,7 +10,7 @@ In Adobe Experience Platform, select **[!UICONTROL Destinations]** from the left
 
 The [!UICONTROL Destinations] workspace consists of five sections, [!UICONTROL Overview], [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts], and [!UICONTROL System View], described in the sections below.
 
-![Destinations-overview](../assets/ui/workspace/destinations-overview.png)
+![Destinations overview dashboard showing three widgets.](../assets/ui/workspace/destinations-overview.png)
 
 ## [!UICONTROL Overview] {#overview}
 
@@ -21,7 +20,7 @@ The **[!UICONTROL Overview]** tab displays the [!UICONTROL Destinations] dashboa
 >
 >If your organization is new to Experience Platform and does not yet have active destinations, the [!UICONTROL Destinations] dashboard and [!UICONTROL Overview] tab are not visible. Instead, selecting [!UICONTROL Destinations] from the left navigation displays the [[!UICONTROL Catalog] tab](#catalog).
 
-![](../../dashboards/images/destinations/dashboard-overview.png)
+![The Destinations dashboard Overview tab.](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL Catalog] {#catalog}
 
@@ -32,16 +31,18 @@ The [!DNL Platform] user interface provides several search and filter options on
 * Use the search functionality on the page to locate a specific destination.
 * Filter destinations using the [!UICONTROL Categories] control.
 * Toggle between [!UICONTROL All destinations] and [!UICONTROL My destinations]. When you select **[!UICONTROL All destinations]**, all available [!DNL Platform] destinations are displayed. When you select **[!UICONTROL My destinations]**, you can only see the destinations with which you have established a connection.
-* Select to view **[!UICONTROL Connections]** and/or **[!UICONTROL Extensions]**. To understand the difference between the two categories, see [Destination Types and Categories](../destination-types.md).
+* Select to view the **[!UICONTROL Connections]** and/or **[!UICONTROL Extensions]** types. To understand the difference between the two categories, read [Destination Types and Categories](../destination-types.md).
 
-![Catalog](../assets/ui/workspace/catalog.png)
+![Destinations catalog showing a few advertising and cloud storage destinations.](../assets/ui/workspace/catalog.png)
 
-The destination cards contain either a **[!UICONTROL Set up]** or an **[!UICONTROL Activate segments]** control, and a secondary control that brings up more options. These controls are described below:
+The destination cards contain primary and secondary control options. The primary controls include [!UICONTROL Set up], [!UICONTROL Activate], [!UICONTROL Activate segments], or [!UICONTROL Export datasets]. The secondary controls allow for viewing options. These controls are described below:
 
 | Control | Description | 
 |---------|----------|
 |[!UICONTROL Set up] | Allows you to create a connection to the destination.|
-|[!UICONTROL Activate segments] | Once you have established a connection to the destination, you can activate segments.| 
+|[!UICONTROL Activate] | Once you have established a connection to the destination, you can activate segments or export datasets to this destination.|
+|[!UICONTROL Activate segments] | Once you have established a connection to the destination, you can activate segments to this destination.|
+|[!UICONTROL Export datasets] | Once you have established a connection to the destination, you can export datasets to this destination.|    
 |[!UICONTROL View account] | View the accounts you have connected for a destination.|
 |[!UICONTROL View dataflows] | View the data activation flows that exist for a destination.|
 |[!UICONTROL View documentation] | Opens a link to the documentation page for that specific destination, for more information and to help you set it up.|
@@ -62,9 +63,9 @@ The **[!UICONTROL Accounts]** tab shows you details about the connections that y
 
 >[!TIP]
 >
-> * Select the three dots in the [!UICONTROL Platform] column and use the ![Activate segments button](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments]** button to send segments to that destination.
-> * Select the three dots in the [!UICONTROL Platform] column and use the ![Edit details button](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Edit details]** button to [update](update-accounts.md) the details of an existing destination account.
-> * Select the three dots in the [!UICONTROL Platform] column and use the ![Delete button](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]** button to [delete](delete-destination-account.md) an existing destination account.
+> * Select the ellipsis (`...`) in the [!UICONTROL Platform] column and use the ![Activate control](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate segments]**/**[!UICONTROL Export datasets]** control to export segments or datasets to that destination.
+> * Select the ellipsis (`...`) in the [!UICONTROL Platform] column and use the ![Edit details control](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Edit details]** control to [update](update-accounts.md) the details of an existing destination account.
+> * Select the ellipsis (`...`) in the [!UICONTROL Platform] column and use the ![Delete control](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]** control to [delete](delete-destination-account.md) an existing destination account.
 
 ![Accounts tab](../assets/ui/workspace/destination-account-options.png)
 
@@ -84,10 +85,10 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 
 >[!TIP]
 >
-> * Select the three dots in the [!UICONTROL Name] column and use the ![Activate segments button](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments]** button to send segments to that destination.
-> * Select the three dots in the [!UICONTROL Name] column and use the ![Delete button](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]** button to [remove](delete-destinations.md) an existing connection to a destination.
-> * Select the three dots in the [!UICONTROL Name] column and use the ![View in monitoring button](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL View in monitoring]** button to view activation information for this destination in the [monitoring dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
-> * Select the three dots in the [!UICONTROL Name] column and use the ![Subscribe to alerts ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Subscribe to alerts]** button to subscribe to destination dataflow alerts. You can subscribe to alerts to receive messages regarding the status, success, or failure of your flow run. See [Subscribe to in-context destination alerts](alerts.md) for detailed information on destination dataflow alerts..
+> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Activate segments control](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate]** control to export segments or datasets to that destination.
+> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Delete control](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]** control to [remove](delete-destinations.md) an existing connection to a destination.
+> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![View in monitoring control](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL View in monitoring]** control to view activation information for this destination in the [monitoring dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Subscribe to alerts ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Subscribe to alerts]** control to subscribe to destination dataflow alerts. You can subscribe to alerts to receive messages regarding the status, success, or failure of your flow run. See [Subscribe to in-context destination alerts](alerts.md) for detailed information on destination dataflow alerts..
 
 ![Browse Tab](../assets/ui/workspace/browse-tab.png)
 

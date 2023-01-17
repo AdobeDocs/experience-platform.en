@@ -18,7 +18,7 @@ This overview requires a working understanding of the following components of Ad
 
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 * [[!DNL Identity Service]](../identity-service/home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
-* [Real-time Customer Profile](../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
+* [Real-Time Customer Profile](../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
 * [Sources](../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 
 ## Use streaming upserts in [!DNL Data Prep] {#streaming-upserts-in-data-prep}
@@ -244,7 +244,7 @@ The following outlines a list of known limitations to consider when streaming up
 
 * The streaming upserts method should only be used when sending partial row updates to [!DNL Profile Service]. Partial row updates are **not** consumed by data lake.
 * The streaming upserts method does not support updating, replacing, and removing identities. New identities are created if they do not exist. Hence the `identity` operation must always be set to create. If an identity already exists, the operation is a no-op.
-* The streaming upserts method currently only supports primitive single-value attributes (such as integers, dates, timestamps, and strings) and objects. The streaming upserts method does not support replacing, appending, or overwriting array attributes and specific array indices.
+* The streaming upserts method currently does not support [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=en) and [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
 ## Next steps
 

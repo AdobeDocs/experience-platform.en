@@ -4,7 +4,52 @@ description: The latest release notes for the Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 ---
+
 # Release notes
+
+This document covers the release notes for the Adobe Experience Platform Web SDK.
+For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](extension/web-sdk-ext-release-notes.md).
+
+## Version 2.13.1 - October 13, 2022
+
+* Fixed an issue where visitor migration does not work if window.Visitor is defined after configure. This is especially an issue when running with Adobe Tags.
+* Fixed an issue where `device.screenWidth` and `device.screenHeight` were populated as strings in some environments.
+
+## Version 2.13.0 - September 28, 2022
+
+**New features**
+
+* Added support for [Page by Page Full Migration](home.md#migrating-to-web-sdk). The Adobe Target profile will now be preserved as a visitor moves between at.js and Web SDK pages.
+* Added configurable support for [high entropy User-Agent Client Hints](fundamentals/user-agent-client-hints.md#high-entropy).
+* Added support for the new `applyResponse` command. This enables hybrid personalization via the [Edge Network Server API](../server-api/overview.md).
+* QA mode links now work across multiple pages.
+
+**Fixes and improvements**
+
+* Fixed an issue where personalization click tracking metrics were not updated when link tracking was disabled.
+* Updated commands to throw a validation error when unknown options are specified.
+* The `_experience.decisioning.propositionEventType` property is now populated when automatically sending display and interaction personalization events.
+* Added duplicated namespace validation for the `getIdentity` command.
+* Added duplicated decision scope validation for the `sendEvent` command.
+
+## Version 2.12.0 - June 29, 2022
+
+* Change the requests to the Edge Network to use the `cluster` cookie location hint as part of the URL. This ensures that users who change their location (e.g. through a VPN or driving with mobile devices, etc) mid session hit the same edge and have the same personalization profile.
+* Stringify configured functions in the getLibraryInfo command response.
+
+## Version 2.11.0 - June 13, 2022
+
+**New features**
+
+* You can now deliver personalized experiences more accurately, by sharing visitor IDs between mobile apps and mobile web content, and across domains. See the [dedicated documentation](identity/id-sharing.md) to learn more.
+* You can now render or execute an array of propositions from [!DNL Adobe Target] into single-page applications, without incrementing the analytics metrics. This reduces reporting errors and increases analytics accuracy. See the [dedicated documentation](personalization/rendering-personalization-content.md#applypropositions) to learn more.
+* Added additional information to the `getLibraryInfo` command including available commands and the final configuration for the instance.
+
+**Fixes and improvements**
+
+* Updated cookie settings to use `sameSite="none"` and `secure` flag on [!DNL HTTPS] pages.
+* Fixed an issue where personalized content was not applied correctly when using the `eq` pseudo selector.
+* Fixed an issue where `localTimezoneOffset` could fail Experience Platform validation.
 
 ## Version 2.10.1 - May 3, 2022
 

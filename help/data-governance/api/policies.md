@@ -1,14 +1,17 @@
 ---
 keywords: Experience Platform;home;popular topics;Policy enforcement;API-based enforcement;data governance
 solution: Experience Platform
-title: Policies API Endpoint
-topic-legacy: developer guide
-description: Data usage policies are rules your organization adopts that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform. The /policies endpoint is used for all API calls related to viewing, creating, updating, or deleting data usage policies.
+title: Data Governance Policies API Endpoint
+description: Data governance policies are rules your organization adopts that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform. The /policies endpoint is used for all API calls related to viewing, creating, updating, or deleting data governance policies.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
 ---
-# Policies endpoint
+# Data governance policies endpoint
 
-Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform]. The `/policies` endpoint in the [!DNL Policy Service API] allows you to programmatically manage data usage policies for your organization.
+Data governance policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform]. The `/policies` endpoint in the [!DNL Policy Service API] allows you to programmatically manage data governance policies for your organization.
+
+>[!IMPORTANT]
+>
+>Governance policies are not to be confused with access control policies, which determine the specific data attributes that can be accessed by certain Platform users in your organization. Refer to the `/policies` endpoint guide for the [Access Control API](../../access-control/abac/api/policies.md) for details on how to programmatically manage access control policies.
 
 ## Getting started
 
@@ -601,7 +604,7 @@ You can confirm the deletion by attempting to look up (GET) the policy again. Yo
 
 ## Retrieve a list of enabled core policies {#list-enabled-core}
 
-By default, only enabled data usage policies participate in evaluation. You can retrieve a list of core policies that are currently enabled by your organization by making a GET request to the `/enabledCorePolicies` endpoint.
+By default, only enabled data governance policies participate in evaluation. You can retrieve a list of core policies that are currently enabled by your organization by making a GET request to the `/enabledCorePolicies` endpoint.
 
 **API format**
 
@@ -653,7 +656,7 @@ A successful response returns the list of enabled core policies under a `policyI
 
 ## Update the list of enabled core policies {#update-enabled-core}
 
-By default, only enabled data usage policies participate in evaluation. By making a PUT request to the `/enabledCorePolicies` endpoint, you can update the list of enabled core policies for your organization using a single call.
+By default, only enabled data governance policies participate in evaluation. By making a PUT request to the `/enabledCorePolicies` endpoint, you can update the list of enabled core policies for your organization using a single call.
 
 >[!NOTE]
 >

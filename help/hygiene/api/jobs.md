@@ -1,15 +1,19 @@
 ---
-title: Delete Consumer Records using the Data Hygiene API
+title: Delete Records using the Data Hygiene API
 description: Learn how to programmatically correct or delete your customers' stored personal data in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
 ---
-# Delete consumer records using the Data Hygiene API
+# Delete records using the Data Hygiene API
+
+<!-- >[!IMPORTANT]
+>
+>This endpoint represents the beta functionality for record deletes. For the latest functionality, please use the [`/workorder` endpoint](./workorder.md) instead. -->
 
 The Data Hygiene API allows you to programmatically correct or delete your customers' stored personal data in Adobe Experience Platform.
 
-You can access the API through the following root path: `https://platform.adobe.io/data/core/hygiene/`
+You can access the API through the same root path as the [Privacy Service API](../../privacy-service/api/overview.md): `https://platform.adobe.io/data/core/privacy/`
 
 ## Getting started
 
@@ -47,7 +51,7 @@ The request payload is structured similarly to that of a [delete request in the 
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/core/hygiene/jobs \
+  https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \

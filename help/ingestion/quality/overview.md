@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;Supported validation;Validation;supported validation;
 solution: Experience Platform
 title: Data Quality
-topic-legacy: overview
 description: The following document provides a summary of the supported checks and validation behaviors for batch and streaming ingestion in Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
 ---
@@ -50,3 +49,14 @@ The following validations are done for streaming ingestion:
 | Header | Ensures that the header is specified and is valid. |
 
 More information about how [!DNL Platform] monitors and validates data can be found in the [monitoring data flows documentation](./monitor-data-ingestion.md).
+
+## Identity value validation
+
+The following table outlines existing rules you must follow to ensure a successful validation of your identity value.
+
+| Namespace | Validation rule | System behavior when rule is violated |
+| --- | --- | --- |
+| ECID | <ul><li>The identity value of an ECID must be exactly 38 characters.</li><li>The identity value of an ECID must consist of numbers only.</li></ul> | <ul><li>If the identity value of ECID is not exactly 38 characters, then the record is skipped.</li><li>If the identity value of ECID contains non-numerical characters, then the record is skipped.</li></ul> |
+| Non-ECID | The identity value cannot exceed 1024 characters. | If the identity value exceeds 1024 characters, then the record is skipped. |
+
+For more information on [!DNL Identity Service] guardrails, see the [[!DNL Identity Service] guardrails overview](../../identity-service/guardrails.md).

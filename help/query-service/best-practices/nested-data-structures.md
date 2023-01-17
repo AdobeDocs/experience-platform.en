@@ -1,4 +1,5 @@
 ---
+keywords: Experience Platform;query service;Query service;nested data structures;nested data;
 title: Working with nested data structures in Query Service
 description: This document provides a working example for processing and transforming nested data fields using CTAS and INSERT INTO statements.
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
@@ -7,7 +8,7 @@ exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
 
 Adobe Experience Platform Query Service supports the use of nested data fields. The complexity of enterprise data structures can make transforming or processing this data complicated. This document provides examples of how to create, process, or transform datasets with complex data types including nested data structures.
 
-Query Service provides a PostgreSQL interface to run SQL queries on all datasets managed by Experience Platform. Platform supports the use of either primitive or complex data types in table columns such as struct, arrays, maps, and deeply nested struct, arrays, and maps. Datasets can also contain nested structures where the column data type can be as complex as an array of nested structures, or a map of maps wherein the value of a key-value pair can be a structure with multiple levels of nesting. 
+Query Service provides a [!DNL PostgreSQL] interface to run SQL queries on all datasets managed by Experience Platform. Platform supports the use of either primitive or complex data types in table columns such as struct, arrays, maps, and deeply nested struct, arrays, and maps. Datasets can also contain nested structures where the column data type can be as complex as an array of nested structures, or a map of maps wherein the value of a key-value pair can be a structure with multiple levels of nesting. 
 
 ## Getting started
 

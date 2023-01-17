@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;protocol
 solution: Experience Platform
 title: Explore a Protocol System Using the Flow Service API
-topic-legacy: overview
 description: This tutorial uses the Flow Service API to explore protocols applications.
 exl-id: e4b24312-543e-4014-aa53-e8ca9c620950
 ---

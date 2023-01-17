@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 title: Using Computed Attributes in Platform
-topic-legacy: guide
 type: Documentation
 description: Computed attributes are functions to aggregate event-level data into profile levels attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. 
 ---

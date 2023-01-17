@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Governance, Privacy, and Security Overview
-topic-legacy: overview
 description: Adobe Experience Platform provides several services and tools that allow you to confidently control your collected experience data in order to comply with your business practices, legal obligations, and development process.
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 ---
@@ -59,6 +58,10 @@ For information on how process customer consent data in accordance with the IAB 
 ## Security {#security}
 
 The integrity and security of your data is indispensable for your business, and this risk requires industry-leading security capabilities. In order to meet this challenge, Platform provides several tools to help safeguard your data operations.
+
+### Data encryption
+
+All Platform data is encrypted in transit and at rest. See the document on [data encryption in Platform](./encryption.md) for more information.
 
 ### Access control {#access-control}
 

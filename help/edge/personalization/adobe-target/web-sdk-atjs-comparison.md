@@ -457,11 +457,22 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en)
+Learn more about the `applyOffers` command from the [dedicated documentation](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en).
+
 
 ### Using Web SDK
 
-This feature is not currently supported in Web SDK.
+You can apply the Target activities using the `applyPropositions` command.
+
+Example:
+
+```javascript
+alloy("applyPropositions", {
+    propositions: [...]
+});
+```
+
+Learn more about the `applyPropositions` command from the [dedicated documentation](../../personalization/rendering-personalization-content.md#applypropositions).
 
 ## How to track events
 
@@ -1003,8 +1014,8 @@ alloy("sendEvent", {
 adobe.target.getOffer({
    mbox: "target-global-mbox",
    params: {
-     "entity.productName": "T-shirt",
-     "entity.productId": "1234"
+     "entity.name": "T-shirt",
+     "entity.id": "1234"
    },
    success: console.log,
    error: console.error
@@ -1019,8 +1030,8 @@ adobe.target.getOffers({
       execute: {
         pageLoad: {
           parameters: {
-            "entity.productName": "T-shirt",
-            "entity.productId": "1234"
+            "entity.name": "T-shirt",
+            "entity.id": "1234"
           }
         }
     }
@@ -1045,8 +1056,8 @@ alloy("sendEvent", {
   data: {
     __adobe: {
       target: {
-        "entity.productName": "T-shirt",
-        "entity.productId": "1234"
+        "entity.name": "T-shirt",
+        "entity.id": "1234"
       }
     }
   }

@@ -3,9 +3,40 @@ title: Adobe Experience Platform Web SDK Extension Release Notes
 description: Adobe Experience Platform Web SDK Tag Extension
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 ---
+
 # Adobe Experience Platform Web SDK extension release notes
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Version 2.14.1 - October 13, 2022
+
+* Fixed an issue where the Web SDK does not honor the ID from the Experience Cloud ID Service.
+
+Contains version 2.13.1 of the Adobe Experience Platform Web SDK Library.
+
+## Version 2.14.0 - September 28, 2022
+
+* Added new `targetMigrationEnabled` configuration that enables page by page full migration.
+* Added an apply response action to enable hybrid server-client implementations.
+* Added high entropy user-agent client hints context option.
+
+Contains version 2.13.0 of the Adobe Experience Platform Web SDK Library.
+
+## Version 2.13.0 - June 29, 2022
+
+* Fixed the sort order of numerical properties in the XDM Object data element such as eVars.
+
+Contains version 2.12.0 of the Adobe Experience Platform Web SDK Library.
+
+## Version 2.12.0 - June 13, 2022
+
+* Updated the `identityMap` data element to populate the namespace options based on the sandboxes defined by the extension settings.
+* Added **[!UICONTROL Redirect with identity]** action to allow cross-domain identity sharing.
+* Added documentation links to the `sendEvent` action.
+* Upgraded React Spectrum UI library.
+* Multiple user interface enhancements.
+
+Contains version 2.11.0 of the Adobe Experience Platform Web SDK Library.
 
 ## Version 2.11.2 - May 3, 2022
 

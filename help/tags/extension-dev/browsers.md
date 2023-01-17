@@ -14,7 +14,6 @@ The tag runtime in Adobe Experience Platform (delivered to clients' websites) is
 - Chrome (latest)
 - Safari (latest)
 - Firefox (latest)
-- IE (10 and above)
 - Edge (latest)
 - iOS Safari (latest)
 - Android Chrome (latest)

@@ -1,24 +1,50 @@
 ---
 keywords: rtcdp profile;profiles rtcdp;rtcdp identities;rtcdp merge policies;real-time customer profile
 title: Account Profile UI Guide
-description: Through the use of account profiles, Real-time Customer Data Platform B2B Edition enables you to unify account information from multiple sources. This guide provides details for interacting with account profiles in the Adobe Experience Platform user interface.
+description: Through the use of account profiles, Adobe Real-Time Customer Data Platform B2B Edition enables you to unify account information from multiple sources. This guide provides details for interacting with account profiles in the Adobe Experience Platform user interface.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 ---
 # Account profile UI guide
 
 >[!NOTE]
 >
->Account profiles are only available to Real-time Customer Data Platform B2B Edition customers. To learn more about Real-time CDP, including the features and functionality available to each license type, please begin by reading the [Real-time CDP overview](../overview.md).
+>Account profiles are only available to Real-Time Customer Data Platform B2B Edition customers. To learn more about Real-Time CDP, including the features and functionality available to each license type, please begin by reading the [Real-Time CDP overview](../overview.md).
 
-Account profiles enable you to unify account information from multiple sources. This unified view of an account brings together data from across your many marketing channels and the diverse systems that your organization is currently using to store customer account information. This document provides a guide to interacting with account profiles using the Real-time CDP, B2B Edition capabilities available in the Adobe Experience Platform user interface (UI).
+Account profiles enable you to unify account information from multiple sources. This unified view of an account brings together data from across your many marketing channels and the diverse systems that your organization is currently using to store customer account information. This document provides a guide to interacting with account profiles using the Real-Time CDP, B2B Edition capabilities available in the Adobe Experience Platform user interface (UI).
 
 To learn more about how account profiles are created as part of the B2B workflow, please see the [end-to-end tutorial](../b2b-tutorial.md).
+
+## Account profiles overview {#account-profiles-overview}
+
+Select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigation to view the overview of account profiles. Under the [!UICONTROL Overview] tab, the dashboard shows a graphic or chart displaying widgets in a single entry point.
+
+![Overview tab displaying widgets](images/b2b-account-profile-overview.png)
+
+See the documentation on the [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) dashboard to learn more.
+
+## Configure lead to account matching {#configure-lead-to-account-matching}
+
+>[!IMPORTANT]
+>
+> Only B2B AI administrators can enable, disable, and configure the lead to account matching service. Upon disabling the service, matching results will be deleted within 24 hours.
+
+To configure lead to account matching, select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left navigation. On the **[!UICONTROL Overview]** tab, select **[!UICONTROL Settings]** in the top right.
+
+![Select Settings](images/b2b-configuring-accounts-profile.png) 
+
+The **[!UICONTROL Account settings]** dialog opens. From here select the **[!UICONTROL Enable lead-to-account-matching]** toggle to enable the feature. Use the dropdown menu to select **[!UICONTROL Daily]** for the **[!UICONTROL Matching cadence]** setting. Finally, select the relevant **[!UICONTROL Matching criteria]** options followed by **[!UICONTROL Save]** to confirm your settings and return to the **[!UICONTROL Account Profiles]** screen.
+
+>[!NOTE]
+>
+> The Address cannot be used as the only matching criteria. One or more of the other matching criteria must be selected.
+
+![Configure Account settings](images/b2b-configuring-account-settings.png)
+
+To learn more about lead to account matching, please refer to the [Lead to account matching in Real-Time CDP B2B overview](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ## Browse account profiles {#browse-account-profiles}
 
 To browse account profiles, begin by selecting **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigation. 
-
-![Select Profiles in left navigation](images/b2b-account-browse.png)
 
 On the **[!UICONTROL Browse]** tab, you can explore account profiles using an account ID from a connected enterprise source or by entering source details directly.
 
@@ -38,9 +64,9 @@ This opens the **[!UICONTROL Select source]** dialog, where you can select a sou
 
 To learn more about connecting enterprise sources, please refer to the [sources overview](../sources/sources-overview.md).
 
-![Select source workflow](images/b2b-account-select-source.png)
-
 You can choose a source by selecting the radio button next to the connection name, and then use **[!UICONTROL Select]** to return to the [!UICONTROL Browse] tab.
+
+![Select source workflow](images/b2b-account-select-source.png)
 
 With a source selected, you must now enter an **[!UICONTROL Account ID]** related to the source. For example, selecting a Salesforce source would require you to enter an account ID from the Salesforce instance in order to view the account profile tied to that ID.
 
@@ -54,7 +80,7 @@ With a source selected, you must now enter an **[!UICONTROL Account ID]** relate
 
 ### Browse by [!UICONTROL Others] {#browse-by-others}
 
-Real-time CDP, B2B Edition supports the ability to perform a direct lookup by allowing you to enter a **[!UICONTROL Source name]**, **[!UICONTROL Source instance]**, and **[!UICONTROL Account ID]** for an account that you would like to view. By entering the source name and instance directly, you provide the context necessary for Experience Platform to search for, and display, the correct account profile data.
+Real-Time CDP, B2B Edition supports the ability to perform a direct lookup by allowing you to enter a **[!UICONTROL Source name]**, **[!UICONTROL Source instance]**, and **[!UICONTROL Account ID]** for an account that you would like to view. By entering the source name and instance directly, you provide the context necessary for Experience Platform to search for, and display, the correct account profile data.
 
 The ability to perform a direct lookup is useful under circumstances where a source connection directly to the data is not possible. For example, if your organization has data governance policies in place that prevent connecting directly to a CRM, you can export that data into a cloud storage system and then ingest it into Experience Platform. 
 
@@ -88,19 +114,19 @@ In addition to being able to view the data in a list, you can use the search bar
 
 ## People tab {#people-tab}
 
-The **[!UICONTROL People]** tab provides a list of individual people associated with the account. These people may be contacts and leads from different enterprise systems managed by different teams within your organization, but in Real-time CDP, B2B Edition they are presented together as a single list enabling you to see a more holistic view of your account contacts.
+The **[!UICONTROL People]** tab provides a list of individual people associated with the account. These people may be contacts and leads from different enterprise systems managed by different teams within your organization, but in Real-Time CDP, B2B Edition they are presented together as a single list enabling you to see a more holistic view of your account contacts.
 
 >[!NOTE]
 >
 >The [!UICONTROL People] tab displays a list of up to 25 people associated with the account. For accounts with more than 25 associated people, the system shows a random sampling of 25 records.
 
-In addition to showing you a snapshot of information for the contact, each person listed also includes a **[!UICONTROL Profile ID]**, which is a clickable link that allows you to explore the Real-time Customer Profile for that individual. To learn more about viewing individual customer profiles related to your accounts, please visit the guide for [browsing profiles in Real-time CDP, B2B Edition](../profile/profile-browse.md).
+In addition to showing you a snapshot of information for the contact, each person listed also includes a **[!UICONTROL Profile ID]**, which is a clickable link that allows you to explore the Real-Time Customer Profile for that individual. To learn more about viewing individual customer profiles related to your accounts, please visit the guide for [browsing profiles in Real-Time CDP, B2B Edition](../profile/profile-browse.md).
 
 ![People tab](images/b2b-account-people.png)
 
 ## Opportunities tab {#opportunities-tab}
 
-The **[!UICONTROL Opportunities]** tab provides information for open and closed opportunities related to the account. These opportunities may be ingested into Experience Platform from multiple sources, however Real-time CDP, B2B Edition makes it easy for marketers to see all of these opportunities together in one place.
+The **[!UICONTROL Opportunities]** tab provides information for open and closed opportunities related to the account. These opportunities may be ingested into Experience Platform from multiple sources, however Real-Time CDP, B2B Edition makes it easy for marketers to see all of these opportunities together in one place.
 
 >[!NOTE]
 >

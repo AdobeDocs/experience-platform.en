@@ -4,7 +4,6 @@ solution: Experience Platform
 title: Adobe Experience Platform FAQ and Troubleshooting Guide
 description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 landing-page-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
-topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 ---
@@ -103,7 +102,7 @@ All API calls in [!DNL Platform] require specific request headers. To see which 
 
 This error message displays when an `Authorization` header is missing from an API request. Ensure that the Authorization header is included with a valid access token before trying again.
 
-### OAuth token is not valid
+### OAuth token is not valid {#oauth-token-is-not-valid}
 
 ```json
 {
@@ -114,7 +113,7 @@ This error message displays when an `Authorization` header is missing from an AP
 
 This error message displays when the provided access token in the `Authorization` header is not valid. Ensure that the token has been entered correctly, or [generate a new token](https://www.adobe.com/go/platform-api-authentication-en) in the Adobe I/O Console.
 
-### API key is required
+### API key is required {#api-key-is-required}
 
 ```json
 {
@@ -125,7 +124,7 @@ This error message displays when the provided access token in the `Authorization
 
 This error message displays when an API key header (`x-api-key`) is missing from an API request. Ensure that the header is included with a valid API key before trying again.
 
-### API key is invalid
+### API key is invalid {#api-key-is-invalid}
 
 ```json
 {
@@ -136,8 +135,7 @@ This error message displays when an API key header (`x-api-key`) is missing from
 
 This error message displays when the value of the provided API key header (`x-api-key`) is invalid. Ensure that you have entered the key correctly before trying again. If you do not know your API key, you can find it in the [Adobe I/O Console](https://console.adobe.io): in the **Integrations** tab, navigate to the **Overview** section for a specific integration to find the API key under **Client Credentials**.
 
-
-### Missing header
+### Missing header {#missing-header}
 
 ```json
 {
@@ -148,7 +146,7 @@ This error message displays when the value of the provided API key header (`x-ap
 
 This error message displays when an IMS org header (`x-gw-ims-org-id`) is missing from an API request. Ensure that the header is included with the ID of your IMS organization before trying again.
 
-### Profile is not valid
+### Profile is not valid {#profile-is-not-valid}
 
 ```json
 {
@@ -159,7 +157,19 @@ This error message displays when an IMS org header (`x-gw-ims-org-id`) is missin
 
 This error message displays when the user or Adobe I/O integration (identified by the [access token](#how-do-i-get-an-access-token) in the `Authorization` header) is not entitled to make calls to [!DNL Experience Platform] APIs for the IMS Org provided in the `x-gw-ims-org-id` header. Ensure that you have provided the correct ID for your IMS organization in the header before trying again. If you do not know your organization ID, you can find it in the [Adobe I/O Console](https://console.adobe.io): in the **Integrations** tab, navigate to the **Overview** section for a specific integration to find the ID under **Client Credentials**.
 
-### Valid content-type not specified
+### Refresh etag error {#refresh-etag-error}
+
+```json
+{
+"errorMessage":"Supplied version=[\\\\\\\"a200a2a3-0000-0200-0000-123178f90000\\\\\\\"] does not match the current version on entity=[\\\\\\\"a200cdb2-0000-0200-0000-456179940000\\\\\\\"]"
+}
+```
+
+You may receive an etag error if a change was made on any source or destination entity like flow, connection, source connector, or target connection by another API caller. Due to the version mismatch, the change that you are trying to make would not be applied to the latest version of the entity.
+
+To resolve this, you need to fetch the entity again, make sure that your changes are compatible with new version of the entity, then place the new etag in the `If-Match` header, and finally make the API call.
+
+### Valid content-type not specified {#valid-content-type-not-specified}
 
 ```json
 {
@@ -172,7 +182,7 @@ This error message displays when the user or Adobe I/O integration (identified b
 
 This error message displays when a POST, PUT or PATCH request has an invalid or missing `Content-Type` header. Ensure that the header is included in the request and that its value is `application/json`.
 
-### User region is missing
+### User region is missing {#user-region-is-missing}
 
 ```json
 {
@@ -201,5 +211,5 @@ The following is a list of troubleshooting guides and API reference documentatio
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/)||
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] FAQ and troubleshooting guide](../xdm/troubleshooting-guide.md)|
 | [!DNL Flow Service] ([!DNL Sources] and [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/)||
-| [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en)| [[!DNL Profile] troubleshooting guide](../profile/troubleshooting.md) |
+| [!DNL Real-Time Customer Profile] | [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en)| [[!DNL Profile] troubleshooting guide](../profile/troubleshooting.md) |
 | Sandboxes | [Sandbox API](https://www.adobe.io/experience-platform-apis/references/sandbox) | [Sandboxes troubleshooting guide](../sandboxes/troubleshooting-guide.md)|

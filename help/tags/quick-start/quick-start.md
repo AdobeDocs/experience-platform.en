@@ -25,13 +25,13 @@ The basic tags workflow:
 
 Tags are fully integrated with your Adobe ID. User permissions are managed through the Admin Console with other Adobe products and solutions from the [!DNL Creative Cloud], [!DNL Document Cloud], and Experience Cloud.
 
-Tags have a rights-based user management system. This means that individual rights must be granted explicitly. These rights are assigned to groups, then users are added to the appropriate groups in order to gain access. Even if your organization has access to the Data Collection UI, individual users cannot do anything until an Org Administrator explicitly grants them some rights.
+Tags have a rights-based user management system. This means that individual rights must be granted explicitly. These rights are assigned to groups, then users are added to the appropriate groups in order to gain access. Even if your organization has access to Data Collection, individual users cannot do anything until an administrator explicitly grants them some rights.
 
-For detailed instructions on how to create groups and add users for tags, see the [user permissions](../ui/administration/user-permissions.md) document.
+For detailed instructions on how to create groups and add users for tags, see the [data collection permissions guide](../../collection/permissions.md).
 
 ## 2. Log in
 
-After tag rights have been added to your Adobe ID, you need to log in to the Data Collection UI. You can do this by navigating directly to the [Experience Cloud login screen](https://experiencecloud.adobe.com), and selecting the Data Collection UI from the Quick Access tab.
+After tag rights have been added to your Adobe ID, you need to log in to the Experience Platform UI or Data Collection UI. You can do this by navigating directly to the [Experience Cloud login screen](https://experience.adobe.com/), and selecting either **[!UICONTROL Data Collection]** or **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ After tag rights have been added to your Adobe ID, you need to log in to the Dat
 
 ## 3. Create a property 
 
-Once you have logged into the Data Collection UI, the first thing to do is create a property. A property is basically a container that you fill with extensions, rules, data elements, and libraries as you deploy tags to your site. Many people create a property for each website (or group of closely related sites) where they want to deploy the same set of tags.
+Once you have logged into the UI, the first thing to do is create a property. A property is basically a container that you fill with extensions, rules, data elements, and libraries as you deploy tags to your site. Many people create a property for each website (or group of closely related sites) where they want to deploy the same set of tags.
 
 For more about creating properties, see [Create a property](../ui/administration/companies-and-properties.md).
 
@@ -47,7 +47,7 @@ For more about creating properties, see [Create a property](../ui/administration
 
 An extension is an integration built by Adobe or an Adobe partner that adds new and endless options for the tags that you can deploy to your sites. If you think of a tag as an operating system, extensions are the apps that you install to do the specific things you need it to do.
 
-All new properties come with the [Core extension](../extensions/web/core/overview.md) installed. Mobile properties come with additional extensions. The Core extension is built by Adobe to provide a robust default set of data element types for your data layer and event types for your rules. Most actions you will want to perform (get an ECID, send [!DNL Adobe Analytics] beacons, load the [!DNL Target] global mbox, etc) will come from extensions that you install from the catalog.
+All new properties come with the [Core extension](../extensions/client/core/overview.md) installed. Mobile properties come with additional extensions. The Core extension is built by Adobe to provide a robust default set of data element types for your data layer and event types for your rules. Most actions you will want to perform (get an ECID, send [!DNL Adobe Analytics] beacons, load the [!DNL Target] global mbox, etc) will come from extensions that you install from the catalog.
 
 What makes tags in Platform truly unique is that these extensions can be built by anyone. Do you need to drop a Facebook remarketing pixel on your site? Check out the extension that Facebook built. Do you want the same for Twitter or Linked In? Use those extensions. Do you need to run a survey? Look at Question Pro or Foresee. Do you need to manage privacy and consent from your end-users to help out with [!DNL GDPR]? Take a good look at Evidon and Trust Arc. Would you like to see granular insight into the behavior of individual users on your site? Maybe take a look at Clicktale. For more information, For more information, see the section on [adding a new extension](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
@@ -61,7 +61,7 @@ What makes tags in Platform truly unique is that these extensions can be built b
 * Session and local storage
 * Just about everything else
 
-After the data element is defined, you can use the element anywhere throughout the Data Collection UI for any extension. See the documentation on [Data Elements](../ui/managing-resources/data-elements.md) for more detailed information.
+After the data element is defined, you can use the element anywhere throughout the UI for any extension. See the documentation on [Data Elements](../ui/managing-resources/data-elements.md) for more detailed information.
 
 **Rules** are at the logical core of your implementation and control the what, when, where, and how of all the tags on your site. Define an event, set conditions and exceptions, then define the actions and order. Finally, publish your changes to see the results. For more information, see [Rules](../ui/managing-resources/rules.md).
 

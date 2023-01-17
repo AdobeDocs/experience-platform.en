@@ -1,19 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: Submit Your Source (Beta)
-topic-legacy: overview
-description: The following document provides steps on how to test and verify a new source using the Flow Service API and integrate a new source through Sources SDK.
-hide: true
-hidefromtoc: true
+title: Submit Your Source
+description: The following document provides steps on how to test and verify a new source using the Flow Service API and integrate a new source through Self-Serve Sources (Batch SDK).
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
 ---
-# Submit your source (Beta)
+# Submit your source
 
->[!IMPORTANT]
->
->Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
-
-The final step to integrating your new source to Adobe Experience Platform using [!DNL Sources SDK] is to test your source for verification. Once successful, you can then submit your new source by contacting your Adobe representative.
+The final step to integrating your new source to Adobe Experience Platform using Self-Serve Sources (Batch SDK) is to test your source for verification. Once successful, you can then submit your new source by contacting your Adobe representative.
 
 The following document provides steps on how to test and debug your source using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -22,13 +15,13 @@ The following document provides steps on how to test and debug your source using
 * For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
 * For information on how to generate your credentials for Platform APIs, see the tutorial on [authenticating and accessing Experience Platform APIs](../../../landing/api-authentication.md).
 * For information on how to set up [!DNL Postman] for Platform APIs, see the tutorial on [setting up developer console and [!DNL Postman]](../../../landing/postman.md).
-* To help your testing and debugging process, download the [[!DNL Sources SDK] verification collection and environment here](../assets/sdk-verification.zip) and follow the steps outlined below.
+* To help your testing and debugging process, download the [Self-Serve Sources verification collection and environment here](../assets/sdk-verification.zip) and follow the steps outlined below.
 
 ## Test your source
 
-To test your source, you must run the [[!DNL Sources SDK] verification collection and environment](../assets/sdk-verification.zip) on [!DNL Postman] while providing the appropriate environment variables that pertain to your source.
+To test your source, you must run the [Self-Serve Sources verification collection and environment](../assets/sdk-verification.zip) on [!DNL Postman] while providing the appropriate environment variables that pertain to your source.
 
-To start testing, you must first set up the collection and environment on [!DNL Postman]. Next, specify the connection specification ID that you want to test. This ID should be the same ID that you generated using [!DNL Sources SDK].
+To start testing, you must first set up the collection and environment on [!DNL Postman]. Next, specify the connection specification ID that you want to test.
 
 ### Specify `authSpecName`
 

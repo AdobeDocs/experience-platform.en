@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;streaming segmentation;Segmentation;Segmentation Service;segmentation service;ui guide;
 solution: Experience Platform
 title: Streaming Segmentation UI Guide
-topic-legacy: ui guide
 description: Streaming segmentation on Adobe Experience Platform allows you to do segmentation in near real-time while focusing on data richness. With streaming segmentation, segment qualification now happens as data lands into Platform, alleviating the need to schedule and run segmentation jobs. With this capability, most segment rules can now be evaluated as the data is passed into Platform, meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 ---
@@ -16,7 +15,7 @@ Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to d
 
 >[!NOTE]
 >
->Streaming segmentation works on all data that was ingested using a streaming source. Segments ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation.
+>Streaming segmentation works on all data that was ingested using a streaming source. Data ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation.
 >
 >Additionally, segments evaluated with streaming segmentation may drift between ideal and actual membership if the segment is based off of another segment that is evaluated using batch segmentation. For example, if Segment A is based off of Segment B, and Segment B is evaluated using batch segmentation, since Segment B only updates every 24 hours, Segment A will move further away from the actual data until it re-syncs with the Segment B update.
 
@@ -30,19 +29,21 @@ A query will be automatically evaluated with streaming segmentation if it meets 
 
 | Query type | Details | Example |
 | ---------- | ------- | ------- |
-| Single event | Any segment definition that refers to a single incoming event with no time restriction. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
-| Single event within a relative time window | Any segment definition that refers to a single incoming event. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
-| Single event with a time window | Any segment definition that refers to a single incoming event with a time window. | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
+| Single event | Any segment definition that refers to a single incoming event with no time restriction. | ![An example of a single event is shown.](../images/ui/streaming-segmentation/incoming-hit.png) |
+| Single event within a relative time window | Any segment definition that refers to a single incoming event. | ![An example of a single event within a relative time window is shown.](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| Single event with a time window | Any segment definition that refers to a single incoming event with a time window. | ![An example of a single event with a time window is shown.](../images/ui/streaming-segmentation/historic-time-window.png) |
 | Profile only | Any segment definition that refers to only a profile attribute. | |
-| Single event with a profile attribute | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. **Note:** The query is immediately evaluated when the event comes. In the case of a profile event, however, it must wait 24 hours to be incorporated. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
-| Single event with a profile attribute within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| Segment of segments | Any segment definition that contains one or more batch or streaming segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. | ![](../images/ui/streaming-segmentation/two-batches.png) |
-| Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
+| Single event with a profile attribute | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. **Note:** The query is immediately evaluated when the event comes. In the case of a profile event, however, it must wait 24 hours to be incorporated. | ![An example of a single event with a profile attribute is shown.](../images/ui/streaming-segmentation/profile-hit.png) |
+| Single event with a profile attribute within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes. | ![An example of a single event with a profile attribute within a relative time window is shown.](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Segment of segments | Any segment definition that contains one or more batch or streaming segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. | ![An example of a segment of segments is shown.](../images/ui/streaming-segmentation/two-batches.png) |
+| Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![An example of multiple events with a profile attribute is shown.](../images/ui/streaming-segmentation/event-history-success.png) |
 
 A segment definition will **not** be enabled for streaming segmentation in the following scenarios:
 
 - The segment definition includes Adobe Audience Manager (AAM) segments or traits.
 - The segment definition includes multiple entities (multi-entity queries).
+- The segment definition includes a combination of a single event and an `inSegment` event.
+  - However, if the segment contained in the `inSegment` event is profile only, the segment definition **will** be enabled for streaming segmentation.
 
 Please note the following guidelines apply when doing streaming segmentation:
 
@@ -59,11 +60,11 @@ Additionally, segment unqualification, similarly to segment qualification, happe
 
 After creating a streaming-enabled segment, you can view details of that segment. 
 
-![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
+![The segment details page is shown.](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-Specifically, details about the **[!UICONTROL total qualified audience size]** are shown. The **[!UICONTROL Total qualified audience size]** shows the total number of qualified audiences from the last completed segment job run. If a segment job wasn't completed within the last 24 hours, the number of audiences will be taken from an estimate instead.
+Specifically, the **[!UICONTROL Total qualified]** metric is displayed, which shows the total number of qualified audiences, based on batch and streaming evaluations for this segment.
 
-Underneath is a line graph that shows the number of segments that were qualified and disqualified in the last 24 hours. The dropdown can be adjusted to show the last 24 hours, last week, or last 30 days.
+Underneath is a line graph that shows the number of new audiences that were updated in the last 24 hours using the streaming evaluation method. The dropdown can be adjusted to show the last 24 hours, last week, or last 30 days. The **[!UICONTROL New audience updated]** metric is based on the change in audience size during the selected time range, as evaluated by streaming segmentation. This metric does not include the total qualified audience from the daily segment batch evaluation.
 
 >[!NOTE]
 >
@@ -71,11 +72,11 @@ Underneath is a line graph that shows the number of segments that were qualified
 >
 >More information about these statuses can be found in the status table within the [segmentation overview](./overview.md#browse).
 
-![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
+![The Profiles over time card is highlighted, showing a line graph of the profiles over time.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
-Additional information about the last segment evaluation can be found by selecting the information bubble.
+Additional information about the last segment evaluation can be found by selecting the information bubble next to **[!UICONTROL Total qualified]**.
 
-![](../images/ui/streaming-segmentation/info-bubble.png)
+![The information bubble for the Total qualified profiles is been selected. This displays information about the last segment evaluation time.](../images/ui/streaming-segmentation/info-bubble.png)
 
 For more information about segment definitions, please read the previous section on [segment definition details](#segment-details).
 
@@ -95,15 +96,13 @@ For most instances, streaming segmentation unqualification happens in real-time.
 
 ### What data does streaming segmentation work on?
 
-Streaming segmentation works on all data that was ingested using a streaming source. Segments ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation.
+Streaming segmentation works on all data that was ingested using a streaming source. Segments ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation. Events streamed into the system with a timestamp older than 24 hours will be processed in the subsequent batch job.
 
 ### How are segments defined as batch or streaming segmentation?
 
 A segment is defined as either batch or streaming segmentation based on a combination of query type and event history duration. A list of which segments will be evaluated as a streaming segment can be found in the [streaming segmentation query types section](#query-types).
 
-### Can a user define a segment as batch or streaming segmentation?
-
-At this time, the user cannot define whether a segment is evaluated using batch or streaming ingestion, as the system will automatically determine which method the segment will be evaluated with. 
+Please note that if a segment contains **both** an `inSegment` expression and a direct single-event chain, it cannot qualify for streaming segmentation. If you want to have this segment qualify for streaming segmentation, you should make the direct single-event chain its own segment.
 
 ### Why does the number of "total qualified" segments keep increasing while the number under "Last X days" remains at zero within the segment details section?
 
@@ -112,3 +111,7 @@ The number of total qualified segments is drawn from the daily segmentation job,
 The number under the "Last X days" **only** includes audiences that are qualified in streaming segmentation, and **only** increases if you have streamed data into the system and it counts toward that streaming definition. This value is **only** shown for streaming segments. As a result, this value **may** display as 0 for batch segments.
 
 As a result, if you see that the number under "Last X days" is zero, and the line graph is also reporting zero, you have **not** streamed any profiles into the system that would qualify for that segment.
+
+### How long does it take for a segment to be available?
+
+It takes up to one hour for a segment to be available.

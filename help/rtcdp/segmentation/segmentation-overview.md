@@ -1,15 +1,14 @@
 ---
 keywords: segmentation; segmentation rtcdp;real time customer data platform segmentation
-title: Segmentation Service in Real-time Customer Data Platform
-seo-title: Segmentation Service in Real-time Customer Data Platform
-description: Real-time CDP is built on top of Adobe Experience Platform and utilizes many of the Experience Platform services and functionality. Using the Segmentation Service, you can provide tailor-made marketing by dividing your customers into smaller groups with similar traits.
+title: Segmentation Service in Real-Time Customer Data Platform
+description: Adobe Real-Time Customer Dat Platformå is built on top of Adobe Experience Platform and utilizes many of the Experience Platform services and functionality. Using the Segmentation Service, you can provide tailor-made marketing by dividing your customers into smaller groups with similar traits.
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
 ---
-# [!DNL Segmentation Service] in [!DNL Real-time Customer Data Platform]
+# [!DNL Segmentation Service] in [!DNL Real-Time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] (Real-time CDP) allows you to bring data from multiple sources to drive a coordinated and consistent experience for your customers. Delivering relevant personalized marketing campaigns can be achieved using the [!DNL Segmentation Service], part of Adobe Experience Platform.
+[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) allows you to bring data from multiple sources to drive a coordinated and consistent experience for your customers. Delivering relevant personalized marketing campaigns can be achieved using the [!DNL Segmentation Service], part of Adobe Experience Platform.
 
-Real-time CDP is built on top of Adobe Experience Platform and utilizes many of the [!DNL Experience Platform] services and functionality. Using the [!DNL Segmentation Service], you can provide tailor-made marketing by dividing your customers into smaller groups with similar traits.
+Real-Time CDP is built on top of Adobe Experience Platform and utilizes many of the [!DNL Experience Platform] services and functionality. Using the [!DNL Segmentation Service], you can provide tailor-made marketing by dividing your customers into smaller groups with similar traits.
 
 ## Segmentation
 
@@ -21,14 +20,14 @@ Segmentation is the process of defining specific attributes or behaviors shared 
 
 ## Customer AI
 
-Customer AI, included with Real-time Customer Data Platform, provides you with the power to generate customer predictions at the individual level with explanations.
+Customer AI, included with Real-Time Customer Data Platform, provides you with the power to generate customer predictions at the individual level with explanations.
 
 With the help of influential factors, Customer AI can tell you what a customer is likely to do and why. Additionally, you can benefit from Customer AI predictions and insights to personalize customer experiences by serving the most appropriate offers and messaging. Customer AI can assist with:
 
 * Providing high accuracy customer propensity models for stronger segmentation and targeting.
 * Understanding the influential factors and likelihood behind certain customer behaviors.
-* Providing customizable options for your company’s unique use cases and data.
-* Enhancing Real-time Customer Profile with customer propensity scores such as churn and conversion.
+* Providing customizable options for your company's unique use cases and data.
+* Enhancing Real-Time Customer Profile with customer propensity scores such as churn and conversion.
 * Enhancing customer profiles with influential factors for propensity scores.
 * Creating segments of customers based on influential factors and propensity scores.
 
@@ -47,4 +46,4 @@ To learn more about Customer AI, start by visiting the [Customer AI overview](..
 
 ## Next steps
 
-After reading this overview, you should now understand how Real-time CDP utilizes [!DNL Segmentation Service] to enhance customization and personalization of marketing campaigns. For more information about the [!DNL Segmentation Service], please read the [Segmentation documentation](../../segmentation/home.md).
+After reading this overview, you should now understand how Real-Time CDP utilizes [!DNL Segmentation Service] to enhance customization and personalization of marketing campaigns. For more information about the [!DNL Segmentation Service], please read the [Segmentation documentation](../../segmentation/home.md).

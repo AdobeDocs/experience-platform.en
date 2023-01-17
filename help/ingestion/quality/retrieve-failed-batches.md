@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;retrieve failed batches;failed batches;batch ingestion;Batch ingestion;Failed batches;Get failed batches;get failed batches;Download failed batches;download failed batches;
 solution: Experience Platform
 title: Retrieving Failed Batches Using the Data Access API
-topic-legacy: tutorial
 type: Tutorial
 description: This tutorial covers steps for retrieving information about a failed batch using Data Ingestion APIs.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a

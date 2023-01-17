@@ -2,10 +2,7 @@
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
 title: Use the GitHub Web Interface to Create a Sources Documentation Page
-topic-legacy: tutorial
 description: This document provides steps on how to use the GitHub web interface to author documentation and submit a pull request (PR).
-hide: true
-hidefromtoc: true
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
 ---
 # Use the GitHub web interface to create a source documentation page
@@ -30,25 +27,25 @@ Once the fork is complete, select **master** and enter a name for your new branc
 
 ![create-branch](../assets/create-branch.png)
 
-In the GitHub folder structure of your forked repository, navigate to [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) and then select the appropriate category for your source from the list. For example, if you are creating documentation for a new cloud storage source, select **cloud-storage**.
+In the GitHub folder structure of your forked repository, navigate to [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) and then select the appropriate category for your source from the list. For example, if you are creating documentation for a new CRM source, select **crm**.
 
 >[!TIP]
 >
 >If you are creating documentation for the UI, then navigate to [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) and select the appropriate category for your source. To add your images, navigate to [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) then add your screenshots to the `sdk` folder.
 
-![cloud-storage](../assets/cloud-storage.png)
+![crm](../assets/crm.png)
 
-A folder of existing cloud storage sources appears. To add documentation for a new source, select **Add file** and then select **Create new file** from the dropdown menu that appears.
+A folder of existing CRM sources appears. To add documentation for a new source, select **Add file** and then select **Create new file** from the dropdown menu that appears.
 
 ![create-new-file](../assets/create-new-file.png)
 
-Name your source file `YOURSOURCE.md` where YOURSOURCE is the name of your source in Platform. For example, if your company is [!DNL Mailchimp], then your file name should be `mailchimp.md`.
+Name your source file `YOURSOURCE.md` where YOURSOURCE is the name of your source in Platform. For example, if your company is ACME CRM, then your file name should be `acme-crm.md`.
 
 ![git-interface](../assets/git-interface.png)
 
 ## Author the documentation page for your source
 
-To start documenting your new source, paste the content of the [sources documentation template](./template.md) into the GitHub web editor. You can also download the template [here](../assets/template.zip).
+To start documenting your new source, paste the content of the [sources documentation template](./template.md) into the GitHub web editor. You can also download the template [here](../assets/api-template.zip).
 
 With the template copied over to the GitHub web editor interface, follow the instructions outlined on the template and edit the values containing relevant information for your source.
 
