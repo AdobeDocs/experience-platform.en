@@ -40,6 +40,8 @@ You can also select a query template name from the [!UICONTROL Name] column to n
 >
 >If the query was created using the API and no template name was provided during initialization, the first few dozen characters of the SQL query are displayed instead.
 
+![The Query log details view.](../images/ui/query-log/query-log-details.png)
+
 Next to each template name of SQL snippet in each row is the pencil icon (![A pencil icon.](../images/ui/query-log/edit-icon.png)). Select the pencil icon to navigate to the Query Editor. The query is then pre-populated in the editor for editing.
 
 ![The Queries Log workspace with a pencil icon highlighted.](../images/ui/query-log/edit-query.png)
