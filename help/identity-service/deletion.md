@@ -24,7 +24,7 @@ The document below references the following features of Experience Platform:
 
 ## Single identity deletions
 
-Single identity deletion requests allow you to delete an identity within a graph, resulting in the removal of links tied to a single user identity associated to an identity namespace. You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anonymous data, or data minimization for the data that you have collected. For use cases such as customer requests for data deletion and compliance to privacy regulations like the General Data Protection Regulation (GDPR), then you can use mechanisms provided by [Privacy Service](../privacy-service/home.md).
+Single identity deletion requests allow you to delete an identity within a graph, resulting in the removal of links tied to a single user identity associated to an identity namespace. Uou can use mechanisms provided by [Privacy Service](../privacy-service/home.md) for use cases such as customer requests for data deletion and compliance to privacy regulations like the General Data Protection Regulation (GDPR).
 
 The sections below outline the mechanisms you can use for single identity deletion requests in Experience Platform.
 
@@ -32,18 +32,14 @@ The sections below outline the mechanisms you can use for single identity deleti
 
 Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by privacy regulations such as the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA). With Privacy Service, you can submit job requests using the API or the UI. When Experience Platform receives a delete request from Privacy Service, Platform sends confirmation to Privacy Service that the request has been received and affected data has been marked for deletion. The deletion of the individual identity is based on provided namespace and/or ID value. Furthermore, the deletion takes place for all sandboxes associated with a given organization. For more information, read the guide on [privacy request processing in Identity Service](privacy.md).
 
-### Single identity deletion in the [!UICONTROL Data Hygiene] workspace
+The table below provides a breakdown of single identity deletion in Privacy Service :
 
-The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
-
-The table below provides a breakdown of differences between single identity deletion in Privacy Service and Data hygiene:
-
-| Single identity deletion | Privacy Service | Data hygiene |
-| --- | --- | --- |
-| Accepted use cases | Data privacy requests (GDPR, CCPA) only. | Management of data stored in Experience Platform. |
-| Estimated latency | Days to weeks | Days |
-| Services impacted | Single identity deletion in Privacy Service allows you to select whether data will be deleted from Identity Service, Real-Time Customer Profile, or data lake. | Single identity deletion in Data hygiene deletes the selected data across Identity Service, Real-Time Customer Profile, and data lake. |
-| Deletion patterns | Delete an identity from Identity Service. | Delete an identity from Identity Service. | 
+| Single identity deletion | Privacy Service |
+| --- | --- |
+| Accepted use cases | Data privacy requests (GDPR, CCPA) only. |
+| Estimated latency | Days to weeks |
+| Services impacted | Single identity deletion in Privacy Service allows you to select whether data will be deleted from Identity Service, Real-Time Customer Profile, or data lake. |
+| Deletion patterns | Delete an identity from Identity Service. |
 
 {style="table-layout:auto"}
 
@@ -87,3 +83,22 @@ Below is an outline of the potential impacts that deletions may have on the stat
 ## Next steps
 
 This document covered the various mechanisms that you can use to delete identities and datasets on Experience Platform. This document also outlined how identity and dataset deletions can impact identity graphs. For more information on Identity Service, read the [Identity Service overview](home.md).
+
+<!--
+
+You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anonymous data, or data minimization for the data that you have collected.
+
+### Single identity deletion in the [!UICONTROL Data Hygiene] workspace
+
+The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
+
+The table below provides a breakdown of differences between single identity deletion in Privacy Service and Data hygiene:
+
+| Single identity deletion | Privacy Service | Data hygiene |
+| --- | --- | --- |
+| Accepted use cases | Data privacy requests (GDPR, CCPA) only. | Management of data stored in Experience Platform. |
+| Estimated latency | Days to weeks | Days |
+| Services impacted | Single identity deletion in Privacy Service allows you to select whether data will be deleted from Identity Service, Real-Time Customer Profile, or data lake. | Single identity deletion in Data hygiene deletes the selected data across Identity Service, Real-Time Customer Profile, and data lake. |
+| Deletion patterns | Delete an identity from Identity Service. | Delete an identity from Identity Service. |
+
+-->

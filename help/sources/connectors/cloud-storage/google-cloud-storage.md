@@ -19,15 +19,15 @@ A list of IP addresses must be added to an allow list prior to working with sour
 
 In order to connect to Platform, you must first enable interoperability for your [!DNL Google Cloud Storage] account. To access the interoperability setting, open [!DNL Google Cloud Platform] and select **[!UICONTROL Settings]** from the **[!UICONTROL Cloud Storage]** option in the navigation panel.
 
-![](../../images/tutorials/create/google-cloud-storage/nav.png)
+<!-- ![](../../images/tutorials/create/google-cloud-storage/nav.png) -->
 
 The **[!UICONTROL Settings]** page appears. From here, you can see information regarding your [!DNL Google] project ID and details about your [!DNL Google Cloud Storage] account. To access interoperability settings, select **[!UICONTROL Interoperability]** from the top header.
 
-![](../../images/tutorials/create/google-cloud-storage/project-access.png)
+<!-- ![](../../images/tutorials/create/google-cloud-storage/project-access.png) -->
 
 The **[!UICONTROL Interoperability]** page contains information on authentication, access keys, and the default project associated with your service account. To generate a new access key ID and a secret access key for your service account, select **[!UICONTROL Create a Key for a Service Account]**.
 
-![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
+<!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
 You can use your newly generated access key ID and secret access key to connect your [!DNL Google Cloud Storage] account to Platform.
 
