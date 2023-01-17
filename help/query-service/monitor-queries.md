@@ -23,14 +23,14 @@ The table below describes each available column.
 
 | Column | Description  |
 |---|---|
-| Name | The name field is either the template name or the first few characters of your SQL query. Any query created through the UI with the Query Editor is named at inception. If the query was created through the API then the name of the query is a snippet of the initial SQL used to create the query. |
-| Template | The template name of the query. Select a template name to navigate to the Query Editor. The query template is displayed in the Query Editor for convenience. If there is no template name, the row is marked with a hyphen and there is no ability to redirect to the Query Editor to view the query. |
-| SQL | A snippet of the SQL query.  |
-| Run frequency | This is the cadence at which your query is set to run. The available values are `Run once` and `Scheduled`. Queries can be filtered according to their run frequency. |
-| Created by | The name of the user who created the query. |
-| Created | The timestamp when the query was created, in UTC format.  |
-| Last run timestamp | The most recent timestamp when the query was run. This column highlights whether a query has been executed according to its current schedule.  |
-| Last run status | The status of the most recent query execution. The three status values are: `successful` `failed` or `in progress`. |
+| **[!UICONTROL Name]** | The name field is either the template name or the first few characters of your SQL query. Any query created through the UI with the Query Editor is named at inception. If the query was created through the API then the name of the query is a snippet of the initial SQL used to create the query. Select any item from the name column to see a list of all runs associated with the query. For more information see the [query runs schedule details](#query-runs) section. |
+| **[!UICONTROL Template]** | The template name of the query. Select a template name to navigate to the Query Editor. The query template is displayed in the Query Editor for convenience. If there is no template name, the row is marked with a hyphen and there is no ability to redirect to the Query Editor to view the query. |
+| **[!UICONTROL SQL]** | A snippet of the SQL query.  |
+| **[!UICONTROL Run frequency]** | This is the cadence at which your query is set to run. The available values are `Run once` and `Scheduled`. Queries can be filtered according to their run frequency. |
+| **[!UICONTROL Created by]** | The name of the user who created the query. |
+| **[!UICONTROL Created]** | The timestamp when the query was created, in UTC format.  |
+| **[!UICONTROL Last run timestamp]** | The most recent timestamp when the query was run. This column highlights whether a query has been executed according to its current schedule.  |
+| **[!UICONTROL Last run status]** | The status of the most recent query execution. The three status values are: `successful` `failed` or `in progress`. |
 
 >[!TIP]
 >
@@ -54,13 +54,11 @@ Toggle the relevant checkboxes to remove or add a table column. Next, select **[
 
 You can subscribe to alerts from the [!UICONTROL Scheduled Queries] tab. Select the alert notification icon (![An alert icon.](./images/monitor-queries/alerts-icon.png)) next to a query name to open the [!UICONTROL Alerts] dialog. The [!UICONTROL Alerts] dialog subscribes to both UI notifications and email alerts. Alerts are based on the status of the query. There are three options available: `start`, `success`, and `failure`. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe.
 
-<!-- This dialog will be updated before release. THe image below will need to be updated inline with these changes. -->
-
 ![The alert subscriptions dialog.](./images/monitor-queries/alert-subscription-dialog.png)
 
 <!-- Link to alert subscriptions doc when available -->
 
-### Filter queries
+### Filter queries {#filter}
 
 You can filter queries based on run frequency. From the [!UICONTROL Scheduled Queries] tab, select the filter icon (![A filter icon](./images/monitor-queries/filter-icon.png)) to open the filter sidebar. 
 
@@ -76,7 +74,7 @@ Select either the **[!UICONTROL Scheduled]** or **[!UICONTROL Run once]** run fr
 
 Once you have enabled your filter criteria, select **[!UICONTROL Hide Filters]** to close the filter panel.
 
-## Query runs Schedule details
+## Query runs schedule details {#query-runs}
 
 Select a query name to navigate to the schedule details page. This view provides a list of all the runs executed as part of that scheduled query. The information provided includes the start and end time, status, and dataset used. 
 
@@ -86,23 +84,23 @@ This information is provided in a five-column table. Each row denotes a query ex
 
 | Column name  | Description  |
 |---|---|
-| Query run ID  | The query run ID for the daily execution.  |
-| Query run start | The timestamp when the query was executed. This is in UTC format. |
-| Query run complete | The timestamp when the query was completed. This is in UTC format. |
-| Status | The status of the most recent query execution. The three status values are: `successful` `failed` or `in progress`. |
-| Dataset | The dataset involved in the execution. |
+| **[!UICONTROL Query run ID]**  | The query run ID for the daily execution. Select the **[!UICONTROL Query run ID]** to navigate to the [!UICONTROL Query run overview]. |
+| **[!UICONTROL Query run start]** | The timestamp when the query was executed. This is in UTC format. |
+| **[!UICONTROL Query run complete]** | The timestamp when the query was completed. This is in UTC format. |
+| **[!UICONTROL Status]** | The status of the most recent query execution. The three status values are: `successful` `failed` or `in progress`. |
+| **[!UICONTROL Dataset]** | The dataset involved in the execution. |
 
 Details of the query being scheduled can be seen in the [!UICONTROL Properties] panel. This panel includes the initial query ID, client type, template name, query SQL, and cadence of the schedule.
 
 ![The schedule details page with the properties panel highlighted.](./images/monitor-queries/properties-panel.png)
 
-### Run details
-
 Select a query run ID to navigate to the run details page and view query information. 
 
 ![The schedule details screen with a run ID highlighted.](./images/monitor-queries/navigate-to-run-details.png)
 
-This view provides information on individual runs for this scheduled query and a more detailed breakdown of the run status. This page also includes the client information and details of any errors that caused the query to fail. 
+## Query run overview {#query-run-overview}
+
+The [!UICONTROL Query run overview] provides information on individual runs for this scheduled query and a more detailed breakdown of the run status. This page also includes the client information and details of any errors that caused the query to fail. 
 
 ![The run details screen with the overview section highlighted.](./images/monitor-queries/query-run-details.png)
 
@@ -113,6 +111,20 @@ The query status section provides the error code and error message should the qu
 You can copy the query SQL to your clipboard from this view. Select the copy icon in the top right of the SQL snippet to copy the query. A popup message confirms that the code has been copied.
 
 ![The run details screen with the SQL copy icon highlighted.](./images/monitor-queries/copy-sql.png)
+
+### Run details for queries with anonymous block {#anonymous-block-queries}
+
+Queries that use anonymous blocks to comprise their SQL statements are separated into their individual queries. This allows you to inspect the run details for each query block individually. 
+
+Anonymous blocks are denoted through the use of a `$$` prefix before the query. See the [anonymous block document](./best-practices/anonymous-block.md) to find out more about anonymous blocks in query service.
+
+Anonymous block queries have tabs to the left of the run status. Select a tab to display the run details.
+
+![The Query run overview displaying an anonymous block query. The multiple query tabs are highlighted.](./images/monitor-queries/anonymous-block-overview.png)
+
+In the event an anonymous block query fails, you can find the error code for that particular block through this UI.
+
+![The Query run overview displaying an anonymous block query with the error code for a single block highlighted.](./images/monitor-queries/anonymous-block-failed-query.png)
 
 Select **[!UICONTROL Query]** to return to the schedule details screen, or **[!UICONTROL Scheduled Queries]** to return to the [!UICONTROL Scheduled Queries] tab.
 
