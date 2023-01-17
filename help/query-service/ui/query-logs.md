@@ -16,7 +16,7 @@ To check the query logs, select [!UICONTROL Queries] to navigate to the Query Se
 
 ## Customize and search {#customize-and-search}
 
-Query Service logs are presented in a customizable table format. To customize the table columns, select the settings icon (![A settings icon.](../images/ui/query-log/settings-icon.png)) to the right of the screen. A dropdown menu appears where each column can be deselected.
+Query Service logs are presented in a customizable table format. To customize the table columns, select the settings icon (![A settings icon.](../images/ui/query-log/settings-icon.png)) to the right of the screen. A [!UICONTROL Customize Table] dialog appears where each column can be deselected.
 
 You can also search for logs relating to specific query templates by typing the template name into the search field.
 
@@ -32,13 +32,17 @@ Each row represents log data for a query run associated with a query template. S
 
 In the log details panel, you can select a new output dataset and see or copy the complete SQL query that was used in the run.
 
-![The Queries Log workspace with a row selected and the output dataset and SQL query highlighted.](../images/ui/query-log/edit-query.png)
+![The Queries Log workspace with a row selected and the output dataset and SQL query highlighted.](../images/ui/query-log/edit-output-dataset.png)
 
-You can also select a query template name from the [!UICONTROL Name] column to navigate directly to the Query Editor. The query is then pre-populated in the editor.
+You can also select a query template name from the [!UICONTROL Name] column to navigate directly to the [!UICONTROL Query log details] view.
 
 >[!NOTE]
 >
 >If the query was created using the API and no template name was provided during initialization, the first few dozen characters of the SQL query are displayed instead.
+
+Next to each template name of SQL snippet in each row is the pencil icon (![A pencil icon.](../images/ui/query-log/edit-icon.png)). Select the pencil icon to navigate to the Query Editor. The query is then pre-populated in the editor for editing.
+
+![The Queries Log workspace with a pencil icon highlighted.](../images/ui/query-log/edit-query.png)
 
 ## Next steps
 
