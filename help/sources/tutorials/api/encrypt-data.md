@@ -10,15 +10,15 @@ Encrypted data ingestion allows you to ingest encrypted files through cloud stor
 
 Encrypted data ingestion process:
 
-* Create a private/public key pair using Experience Platform APIs. Once created, the private/public key pair will be available for you to download or copy.
+* Create an encryption key pair using Experience Platform APIs. The encryption key pair consists of a public key and a public key ID. Once created, both keys will be available for you to copy or download.
 * You will use the public key ID to encrypt the data file that you want to ingest.
-* The private key will be stored by Experience Platform in a secure key vault.
-* You will then place the encrypted file to your cloud storage account.
-* Once the encrypted file is ready, you will create a dataflow for your corresponding cloud storage source and provide the encryption algorithm and public key ID as parameters during the flow creation step.
-* Experience Platform then retrieves the private key from the secure vault using the provided public key ID.
-* Finally, Experience Platform decrypts the file using the private/public key pair and then ingests it into a dataset.
+* The public key will be stored by Experience Platform in a secure key vault.
+* You will then place the encrypted file to your cloud storage.
+* Once the encrypted file is ready, create a source connection and a dataflow for your cloud storage source. During the flow creation step, you must provide an `encryption` parameter and include your public key ID. 
+* Experience Platform then retrieves the public key from the secure vault using the provided public key ID.
+* Finally, Experience Platform decrypts the file using the encryption key pair and then ingests it into a dataset.
 
-This document provide steps on how to generate a private/public key pair to encrypt your data, and ingest that encrypted data to Experience Platform using cloud storage sources.
+This document provide steps on how to generate a encryption key pair to encrypt your data, and ingest that encrypted data to Experience Platform using cloud storage sources.
 
 ## Getting started
 
@@ -34,7 +34,7 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 ## Create encryption key pair
 
-The first step in ingesting encrypted data to Experience Platform is to create your private/public key pair by making a POST request to the `/encryption/keys` endpoint of the [!DNL Connectors] API.
+The first step in ingesting encrypted data to Experience Platform is to create your encryption key pair by making a POST request to the `/encryption/keys` endpoint of the [!DNL Connectors] API.
 
 **API format**
 
@@ -44,7 +44,7 @@ POST /data/foundation/connectors/encryption/keys
 
 **Request**
 
-The following request generates a private/public key pair using the PGP encryption algorithm.
+The following request generates a encryption key pair using the PGP encryption algorithm.
 
 ```shell
 curl -X POST \
@@ -64,8 +64,8 @@ curl -X POST \
 
 | Parameter | Description |
 | --- | --- |
-| `encryptionAlgorithm` |
-| `params.passPhrase` |
+| `encryptionAlgorithm` | The type of encryption algorithm that you are using. The supported encryption types are `PGP` and `GPG`. |
+| `params.passPhrase` | The passphrase provides an additional layer of protection for your encryption keys. Upon creation, Experience Platform stores the passphrase in a different secure vault from the public key. You must provide a non-empty string as a passphrase. |
 
 **Response**
 
@@ -111,15 +111,15 @@ A successful response returns a list of all encryption key pairs in your organiz
 [
   ​{
     ​"encryptionAlgorithm": "PGP",
-    ​"publicKey": "<BASE64_Encoded_Public_Key>",
-    ​"publicKeyId": "<Public-Key-Id>",
-    ​"expiryTime": "<Expiry-Time>"
+    ​"publicKey": "{PUBLIC_KEY}",
+    ​"publicKeyId": "{PUBLIC_KEY_ID}",
+    ​"expiryTime": "1684843168"
   },
   ​{
     ​"encryptionAlgorithm": "PGP",
-    ​"publicKey": "<BASE64_Encoded_Public_Key>",
-    ​"publicKeyId": "<Public-Key-Id>",
-    ​"expiryTime": "<Expiry-Time>"
+    ​"publicKey": "{PUBLIC_KEY}",
+    ​"publicKeyId": "{PUBLIC_KEY_ID}",
+    ​"expiryTime": "1684843168"
   }​
 ]​
 ```
@@ -136,8 +136,10 @@ First, you must create a base connection to authenticate your source against Pla
 * [Azure Data Lake Storage Gen2](../api/create/cloud-storage/adls-gen2.md)
 * [Azure File Storage](../api/create/cloud-storage/azure-file-storage.md)
 * [Data Landing Zone](../api/create/cloud-storage/data-landing-zone.md)
+* [FTP](../api/create/cloud-storage/ftp.md)
 * [Google Cloud Storage](../api/create/cloud-storage/google.md)
 * [Oracle Object Storage](../api/create/cloud-storage/oracle-object-storage.md)
+* [SFTP](../api/create/cloud-storage/sftp.md)
 
 After creating a base connection, you must then follow the steps outlined in the tutorial for [creating a source connection for a cloud storage source](../api/collect/cloud-storage.md) in order to create a source connection, a target connection, and a mapping.
 
@@ -156,6 +158,8 @@ POST /flows
 ```
 
 **Request**
+
+The following request creates a dataflow to ingest encrypted data for a cloud storage source.
 
 ```shell
 curl -X POST \
@@ -205,8 +209,8 @@ curl -X POST \
 | `sourceConnectionIds` | The source connection ID. This ID represents the transfer of data from source to Platform. |
 | `targetConnectionIds` | The target connection ID. This ID represents where the data lands once it is brought over to Platform. |
 | `transformations.params.mappingId` | The mapping ID.|
-| `transformations.name` |
-| `transformations.params.publicKeyId` |
+| `transformations.name` | When ingesting encrypted files, you must provide `Encryption` as an additional transformations parameter for your dataflow. |
+| `transformations.params.publicKeyId` | The public key ID that you created. This ID is one half of the encryption key pair used to encrypt your cloud storage data. |
 | `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
 | `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
 | `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
