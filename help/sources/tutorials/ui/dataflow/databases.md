@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;database connector
 solution: Experience Platform
 title: Create a Dataflow Using a Database Source in the UI
-topic-legacy: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps on how to create a dataflow for a database source using Platform UI.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3

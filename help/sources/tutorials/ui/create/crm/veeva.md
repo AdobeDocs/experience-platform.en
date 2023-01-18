@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Veeva CRM;veeva
 solution: Experience Platform
 title: Create a Veeva CRM Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Veeva CRM source connection using the Adobe Experience Platform UI.
 exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337

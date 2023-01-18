@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Collect payment data;payment data
 solution: Experience Platform
 title: Create a Dataflow for Payments Sources Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a payments application and ingesting it into Platform using source connectors and APIs.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc

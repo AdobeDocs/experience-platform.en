@@ -1,7 +1,6 @@
 ---
 solution: Experience Platform
 title: Generic Personalization Preference Field Data Type
-topic-legacy: overview
 description: This document provides an overview of the Generic Personalization Preference Field XDM data type.
 exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
 ---

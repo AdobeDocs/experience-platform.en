@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experienc
 solution: Experience Platform
 title: Explore Schema Resources in the UI
 description: Learn how to explore existing schemas, classes, schema field groups, and data types in the Experience Platform user interface.
-topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 ---
@@ -93,7 +92,7 @@ Identity fields are highlighted in the canvas with a fingerprint icon (![Fingerp
 
 If you are inspecting a schema that contains a relationship field, the field will be listed in the left rail under **[!UICONTROL Relationships]**. Select the relationship field name in the left rail to reveal the field in the canvas, regardless of how deeply it is nested.
 
-Relationship fields are also uniquely highlighted in the canvas, showing the name of the destination schema that the field references. If you select the relationship field's name, you can view the identity namespace of the destination schema's primary identity in the right rail.
+Relationship fields are also uniquely highlighted in the canvas, showing the name of the reference schema that the field links to. If you select the relationship field's name, you can view the identity namespace of the reference schema's primary identity in the right rail.
 
 ![](../images/ui/explore/relationship-field.png)
 

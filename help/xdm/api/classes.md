@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Classes API Endpoint
 description: The /classes endpoint in the Schema Registry API allows you to programmatically manage XDM classes within your experience application.
-topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 ---
 # Classes endpoint

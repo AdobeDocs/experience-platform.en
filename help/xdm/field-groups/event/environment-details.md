@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;environment;environment details;
 solution: Experience Platform
 title: Environment Details Schema Field Group
-topic-legacy: overview
 description: This document provides an overview of the ExperienceEvent Environment Details schema field group.
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
 ---

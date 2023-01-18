@@ -3,7 +3,6 @@ keywords: Experience Platform;popular topics;XDM;XDM system;XDM individual profi
 solution: Experience Platform
 title: XDM System Troubleshooting Guide
 description: Find answers to frequently asked questions about Experience Data Model (XDM), including steps to resolve common API errors.
-topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 ---
 # XDM System troubleshooting guide
@@ -261,7 +260,13 @@ This error message displays when you attempt to enable a schema for [!DNL Profil
 }
 ```
 
-In order to enable schemas that contain relationship descriptors for use in [!DNL Profile], the namespace of the source field and the primary namespace of the target field must be the same. This error message displays when you attempt to enable a schema that contains an unmatched namespace for its reference identity descriptor. Ensure that the `xdm:namespace` value of the destination schema's identity field matches that of the `xdm:identityNamespace` property in the source field's reference identity descriptor to resolve this issue.
+>[!NOTE]
+>
+>For this error, the "destination schema" refers to the reference schema in the relationship.
+
+In order to enable schemas that contain relationship descriptors for use in [!DNL Profile], the namespace of the source field and the primary namespace of the reference field must be the same. This error message displays when you attempt to enable a schema that contains an unmatched namespace for its reference identity descriptor.
+
+Ensure that the `xdm:namespace` value of the reference schema's identity field matches that of the `xdm:identityNamespace` property in the source field's reference identity descriptor to resolve this issue.
 
 For a list of standard identity namespace codes, see the section on [standard namespaces](../identity-service/namespaces.md) in the identity namespace overview.
 

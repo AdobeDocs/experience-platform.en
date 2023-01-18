@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;MySQL;mysql
 solution: Experience Platform
 title: Create a [!DNL MySQL] Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to MySQL using the Flow Service API.
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
@@ -29,7 +28,7 @@ In order for [!DNL Flow Service] to connect with your [!DNL MySQL] storage, you 
 | Credential | Description |
 | ---------- | ----------- |
 | `connectionString` | The [!DNL MySQL] connection string associated with your account. The [!DNL MySQL] connection string pattern is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL MySQL] is `26d738e0-8963-47ea-aadf-c60de735468a`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL MySQL] is `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 For more information about obtaining a connection string, refer to this [[!DNL MySQL] document](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
 

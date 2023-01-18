@@ -321,7 +321,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Library**: In the context of tags, a library is a set of business logic that contains instructions for how the tag library should behave on the client device.
 
-**Lookup entities**: In the context of data modeling, lookup entities represent concepts that can relate to an individual person, but cannot be directly used to identify the individual. Entities that fall under this category should be represented by schemas based on custom Experience Data Model (XDM) classes.
+**Lookup entities**: In the context of data modeling, lookup entities represent concepts that can relate to an individual person, but cannot be directly used to identify the individual. Entities that fall under this category should be represented by schemas based on custom Experience Data Model (XDM) classes, and linked to a profile entity through a [schema relationship](../xdm/tutorials/relationship-ui.md).
 
 ## M
 

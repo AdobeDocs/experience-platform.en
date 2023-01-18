@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;GCS;gcs
 solution: Experience Platform
 title: Create a Google Cloud Storage  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Google Cloud Storage source connection using the Adobe Experience Platform UI.
 exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
@@ -26,7 +25,7 @@ If you already have a valid GCS connection, you may skip the remainder of this d
 
 [!DNL Experience Platform] supports the following file formats to be ingested from external storages:
 
-*   Delimiter-separated values (DSV): Support for DSV formatted data files is currently limited to comma-separated values. The value of field headers within DSV formatted files must only consist of alphanumeric characters and underscores. Support for general DSV files will be provided in the future.
+*   Delimiter-separated values (DSV): Any single-character value can be used as a delimiter for DSV-formatted data files.
 *   JavaScript Object Notation (JSON): JSON formatted data files must be XDM compliant.
 *   Apache Parquet: Parquet formatted data files must be XDM compliant.
 

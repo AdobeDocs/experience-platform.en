@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 title: Configure explore specifications for Self-Serve Sources (Batch SDK)
-topic-legacy: overview
 description: This document provides an overview of the configurations you need to prepare in order to use Self-Serve Sources (Batch SDK).
 exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
 ---

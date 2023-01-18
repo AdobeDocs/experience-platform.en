@@ -27,4 +27,4 @@ From here, you can browse existing work orders and configure new data hygiene op
 
 * [Browse existing work orders](./browse.md)
 * [Create a dataset expiration request](./dataset-expiration.md)
-* [Create a record delete request](./record-delete.md)
+<!-- * [Create a record delete request](./record-delete.md) -->

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Marketo source connector;namespaces;schemas;b2b;B2B
 solution: Experience Platform
 title: B2B namespaces and schemas
-topic-legacy: overview
 description: This document provides an overview of custom namespaces required when creating a B2B source connector.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 ---
