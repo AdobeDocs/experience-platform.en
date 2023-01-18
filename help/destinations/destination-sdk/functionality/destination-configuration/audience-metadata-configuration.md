@@ -20,7 +20,7 @@ Through the `audienceTemplateId`, this section also ties together this configura
 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`mapExperiencePlatformSegmentName` | Boolean | Controls whether the segment mapping id in the destination activation workflow is the Experience Platform segment name. |
-|`mapExperiencePlatformSegmentId` | Boolean | Controls whether the segment mapping id in the destination activation workflow is the Experience Platform segment ID. |
-|`mapUserInput` | Boolean | Controls whether the segment mapping id in the destination activation workflow is input by user. |
+|`mapExperiencePlatformSegmentName` | Boolean | Controls whether the segment mapping ID in the destination activation workflow is the Experience Platform segment name. |
+|`mapExperiencePlatformSegmentId` | Boolean | Controls whether the segment mapping ID in the destination activation workflow is the Experience Platform segment ID. |
+|`mapUserInput` | Boolean | Controls whether the segment mapping ID in the destination activation workflow is input by user. |
 |`audienceTemplateId` | Boolean | The `instanceId` of the [audience metadata template](../../functionality/audience-metadata-management.md) used for this destination. To set up an audience metadata template, read the [audience metadata API reference](../../metadata-api/create-audience-template.md).|

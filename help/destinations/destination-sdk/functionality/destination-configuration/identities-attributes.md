@@ -5,7 +5,7 @@ title: Identities and attributes
 
 # Identities and attributes
 
-The parameters in this section determine which identities your destination accepts. This configuration also populates the target identities and attributes in the [mapping step](../../../ui/activate-segment-streaming-destinations.md#mapping) of the Experience Platform user interface, where users map identities and attributes from their XDM schemas to the schema in your destination.
+The parameters in this section determine which identities and/or attributes your destination accepts. This configuration also populates the target identities and attributes in the [mapping step](../../../ui/activate-segment-streaming-destinations.md#mapping) of the Experience Platform user interface, where users map identities and attributes from their XDM schemas to the schema in your destination.
 
 You must indicate which [!DNL Platform] identities customers are able to export to your destination. Some examples are [!DNL Experience Cloud ID], hashed email, device ID ([!DNL IDFA], [!DNL GAID]). These values are [!DNL Platform] identity namespaces that customers can map to identity namespaces from your destination. You can also indicate if customers can map custom namespaces to identities supported by your destination (`acceptsCustomNamespaces: true`) and if customers can map standard XDM attributes to identities supported by your destination (`acceptsAttributes: true`). 
 
