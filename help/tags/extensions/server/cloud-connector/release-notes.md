@@ -14,4 +14,5 @@ v1.0.1
 
 * Fix an issue where a valid JSON pasted in the Body Raw textarea was saved as a string instead of a JSON.
 * Do not allow Body to be set on GET or HEAD requests.
+* Fix a bug where saving a response larger than 5kb would make the rule execution fail.
 
