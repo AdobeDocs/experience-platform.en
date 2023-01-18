@@ -35,7 +35,7 @@ In order to connect to [!DNL SFTP], you must provide values for the following co
 | `privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA. |
 | `passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
 | `maxConcurrentConnections` | This parameter allows you to specify a maximum limit for the number of concurrent connections Platform will create when connecting to your SFTP server. You must set this value to be less than the limit set by SFTP. **Note**: When this setting is enabled for an existing SFTP account, it will only affect future dataflows and not existing dataflows. |
-| Folder path | The path to the folder that you want to provide access to. [!DNL SFTP] source, you can provide the folder path to specify user access to sub folder of your choice. |
+| Folder path | The path to the folder that you want to provide access to. [!DNL SFTP] source, you can provide the folder path to specify user access to the sub folder of your choice. |
 
 Once you have gathered your required credentials, you can follow the steps below to create a new [!DNL SFTP] account to connect to Platform.
 

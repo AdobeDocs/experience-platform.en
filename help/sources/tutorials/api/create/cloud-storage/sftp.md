@@ -104,7 +104,7 @@ curl -X POST \
 | `auth.params.username` | The username associated with your SFTP server. |
 | `auth.params.password` | The password associated with your SFTP server. |
 | `auth.params.maxConcurrentConnections` | The maximum number of concurrent connections specified when connecting Platform to SFTP. When enabled, this value must be set to at least 1. |
-| `auth.params.folderPath` | The path to the folder that you want to designate access to. |
+| `auth.params.folderPath` | The path to the folder that you want to provide access to. |
 | `connectionSpec.id` | The SFTP server connection specification ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 >[!TAB SSH public key authentication]
@@ -147,7 +147,7 @@ curl -X POST \
 | `auth.params.privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA.  |
 | `auth.params.passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
 | `auth.params.maxConcurrentConnections` | The maximum number of concurrent connections specified when connecting Platform to SFTP. When enabled, this value must be set to at least 1. |
-| `auth.params.folderPath` | The path to the folder that you want to designate access to. |
+| `auth.params.folderPath` | The path to the folder that you want to provide access to. |
 | `connectionSpec.id` | The [!DNL SFTP] server connection specification ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 >[!ENDTABS]
