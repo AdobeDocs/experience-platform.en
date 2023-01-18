@@ -6,7 +6,7 @@ description: Learn how to create a SugarCRM Accounts & Contacts source connectio
 
 >[!NOTE]
 >
->The [!!DNL SugarCRM Accounts & Contacts] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL SugarCRM Accounts & Contacts] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
 This tutorial provides steps for creating a [!DNL SugarCRM Accounts & Contacts] source connection using the Adobe Experience Platform user interface.
 
