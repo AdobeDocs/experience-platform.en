@@ -9,7 +9,7 @@ Adobe Experience Platform provides improved visibility for the status of all que
 
 ## [!UICONTROL Scheduled Queries] 
 
-The [!UICONTROL Scheduled Queries] tab provides an overview of the executed and scheduled queries. The workspace contains all your CTAS and ITAS queries that are either scheduled to run or have been executed at least once. Run details can be found for all scheduled queries as well as error codes and messages for failed queries.
+The [!UICONTROL Scheduled Queries] tab provides an overview of all your scheduled CTAS and ITAS queries. Run details can be found for all scheduled queries as well as error codes and messages for any failed queries.
 
 To navigate to the [!UICONTROL Scheduled Queries] tab, select **[!UICONTROL Queries]** from the left navigation bar followed by **[!UICONTROL Scheduled Queries]**
 
@@ -23,14 +23,14 @@ The table below describes each available column.
 
 | Column | Description  |
 |---|---|
-| **[!UICONTROL Name]** | The name field is either the template name or the first few characters of your SQL query. Any query created through the UI with the Query Editor is named at inception. If the query was created through the API then the name of the query is a snippet of the initial SQL used to create the query. Select any item from the [!UICONTROL Name] column to see a list of all runs associated with the query. For more information see the [query runs schedule details](#query-runs) section. |
+| **[!UICONTROL Name]** | The name field is either the template name or the first few characters of your SQL query. Any query created through the UI with the Query Editor is named at inception. If the query was created through the API then its name becomes a snippet of the initial SQL used to create the query. Select any item from the [!UICONTROL Name] column to see a list of all runs associated with the query. For more information see the [query runs schedule details](#query-runs) section. |
 | **[!UICONTROL Template]** | The template name of the query. Select a template name to navigate to the Query Editor. The query template is displayed in the Query Editor for convenience. If there is no template name, the row is marked with a hyphen and there is no ability to redirect to the Query Editor to view the query. |
 | **[!UICONTROL SQL]** | A snippet of the SQL query.  |
 | **[!UICONTROL Run frequency]** | This is the cadence at which your query is set to run. The available values are `Run once` and `Scheduled`. Queries can be filtered according to their run frequency. |
 | **[!UICONTROL Created by]** | The name of the user who created the query. |
 | **[!UICONTROL Created]** | The timestamp when the query was created, in UTC format.  |
 | **[!UICONTROL Last run timestamp]** | The most recent timestamp when the query was run. This column highlights whether a query has been executed according to its current schedule.  |
-| **[!UICONTROL Last run status]** | The status of the most recent query execution. The three status values are: `successful` `failed` or `in progress`. |
+| **[!UICONTROL Last run status]** | The status of the most recent query execution. The status values are: `Success`, `Failed`, `In progress`, and `No runs`. |
 
 >[!TIP]
 >
