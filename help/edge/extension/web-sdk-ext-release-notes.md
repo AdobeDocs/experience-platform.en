@@ -8,6 +8,14 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## Version 2.15.0 - January 23, 2023
+
+* Fixed an issue where users without access to datastreams could not edit the extension configuration.
+* Added support for surfaces in the `sendEvent` action.
+
+Contains version 2.14.0 of Adobe Experience Platform Web SDK.
+
+
 ## Version 2.14.1 - October 13, 2022
 
 * Fixed an issue where the Web SDK does not honor the ID from the Experience Cloud ID Service.
