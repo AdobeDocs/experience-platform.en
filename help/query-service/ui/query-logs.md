@@ -6,7 +6,7 @@ description: Query logs are automatically generated each time a query is execute
 
 Adobe Experience Platform maintains a log of all query events that occur through both the API and the UI. This information is available in the Query Service UI from the [!UICONTROL Logs] tab.  
 
-The log files are generated automatically by any query event and contain information including the SQL used, the status of the query, how long it took, and last run time. You can use query log data as a powerful tool for troubleshooting inefficient or problem queries. More comprehensive log information are kept as part of the audit log feature and can be found in the [audit log documentation](../../landing/governance-privacy-security/audit-logs/overview.md).
+The log files are generated automatically by any query event and contain information including the SQL used, the status of the query, how long it took, and last run time. You can use query log data as a powerful tool for troubleshooting inefficient or problem queries. More comprehensive log information is kept as part of the audit log feature and can be found in the [audit log documentation](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Check query logs
 
@@ -42,7 +42,7 @@ You can also select a query template name from the [!UICONTROL Name] column to n
 
 ![The Query log details view.](../images/ui/query-log/query-log-details.png)
 
-Next to each template name of SQL snippet in each row is the pencil icon (![A pencil icon.](../images/ui/query-log/edit-icon.png)). Select the pencil icon to navigate to the Query Editor. The query is then pre-populated in the editor for editing.
+Next to each row's template name or SQL snippet is a pencil icon (![A pencil icon.](../images/ui/query-log/edit-icon.png)) that you can use to navigate to the Query Editor. The query is then pre-populated in the editor for editing.
 
 ![The Queries Log workspace with a pencil icon highlighted.](../images/ui/query-log/edit-query.png)
 
