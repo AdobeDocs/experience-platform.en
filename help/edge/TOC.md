@@ -55,7 +55,7 @@ feature: Web SDK
   * Offer Decisioning {#offer-decisioning}
     * [Overview](personalization/offer-decisioning/offer-decisioning-overview.md)
   * Adobe Journey Optimizer {#ajo}
-    * [Overview](personalization/ajo/ajo-overview.md)
+    * [Overview](personalization/ajo/overview.md)
 * Consent {#consent}
   * [Supporting consent](consent/supporting-consent.md)
   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
