@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;GCS;gcs
 solution: Experience Platform
 title: Create a Google Cloud Storage  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Google Cloud Storage source connection using the Adobe Experience Platform UI.
 exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
@@ -18,7 +17,7 @@ This tutorial requires a working understanding of the following components of Ad
 *   [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
     *   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-*   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+*   [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 If you already have a valid GCS connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/batch/cloud-storage.md).
 
@@ -26,7 +25,7 @@ If you already have a valid GCS connection, you may skip the remainder of this d
 
 [!DNL Experience Platform] supports the following file formats to be ingested from external storages:
 
-*   Delimiter-separated values (DSV): Support for DSV formatted data files is currently limited to comma-separated values. The value of field headers within DSV formatted files must only consist of alphanumeric characters and underscores. Support for general DSV files will be provided in the future.
+*   Delimiter-separated values (DSV): Any single-character value can be used as a delimiter for DSV-formatted data files.
 *   JavaScript Object Notation (JSON): JSON formatted data files must be XDM compliant.
 *   Apache Parquet: Parquet formatted data files must be XDM compliant.
 

@@ -16,7 +16,7 @@ In Adobe Experience Platform, we distinguish between two destination types - con
 
 ## Connections {#connections}
 
-**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Segment Export]**, and **[!DNL Edge Personalization]** destinations in Adobe Experience Platform capture event data, combine it with other data sources to form the [Real-time Customer Profile](../profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
+**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Segment Export]**, and **[!DNL Edge Personalization]** destinations in Adobe Experience Platform capture event data, combine it with other data sources to form the [Real-Time Customer Profile](../profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
 
 ## Profile export destinations {#profile-export}
 

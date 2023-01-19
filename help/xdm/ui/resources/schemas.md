@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Create and Edit Schemas in the UI
 description: Learn the basics of how to create and edit schemas in the Experience Platform user interface.
-topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 ---
 # Create and edit schemas in the UI
@@ -238,14 +237,14 @@ After applying your changes, the new field appears under your tenant ID namespac
 
 ![Field added to standard object](../../images/ui/resources/schemas/added-to-standard-object.png)
 
-## Enable a schema for Real-time Customer Profile {#profile}
+## Enable a schema for Real-Time Customer Profile {#profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
 >title="Enable a schema for Profile"
->abstract="When a schema is enabled for Profile, any datasets created from this schema participate in Real-time Customer Profile, which merges data from disparate sources to construct a complete view of each customer. Once a schema is used to ingest data into Profile, it cannot be disabled. See the documentation for more information."
+>abstract="When a schema is enabled for Profile, any datasets created from this schema participate in Real-Time Customer Profile, which merges data from disparate sources to construct a complete view of each customer. Once a schema is used to ingest data into Profile, it cannot be disabled. See the documentation for more information."
 
-[Real-time Customer Profile](../../../profile/home.md) merges data from disparate sources to construct a complete view of each individual customer. If you want the data captured by a schema to participate in this process, you must enable the schema for use in [!DNL Profile].
+[Real-Time Customer Profile](../../../profile/home.md) merges data from disparate sources to construct a complete view of each individual customer. If you want the data captured by a schema to participate in this process, you must enable the schema for use in [!DNL Profile].
 
 >[!IMPORTANT]
 >
@@ -263,13 +262,13 @@ The canvas reappears with the [!UICONTROL Profile] toggle enabled.
 
 >[!IMPORTANT]
 >
->Since the schema is not saved yet, this is the point of no return if you change your mind about letting the schema participate in Real-time Customer Profile: once you save an enabled schema, it can no longer be disabled. Select the **[!UICONTROL Profile]** toggle again to disable the schema.
+>Since the schema is not saved yet, this is the point of no return if you change your mind about letting the schema participate in Real-Time Customer Profile: once you save an enabled schema, it can no longer be disabled. Select the **[!UICONTROL Profile]** toggle again to disable the schema.
 
 To finish the process, select **[!UICONTROL Save]** to save the schema.
 
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
-The schema is now enabled for use in Real-time Customer Profile. When Platform ingests data into datasets based on this schema, that data will be incorporated into your amalgamated Profile data.
+The schema is now enabled for use in Real-Time Customer Profile. When Platform ingests data into datasets based on this schema, that data will be incorporated into your amalgamated Profile data.
 
 ## Edit display names for schema fields {#display-names}
 

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;sandbox troubleshooting
 solution: Experience Platform
 title: Sandboxes Troubleshooting Guide
-topic-legacy: troubleshooting guide
 description: This document provides answers to frequently asked questions about sandboxes in Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
 ---

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Policy Service API Guide
-topic-legacy: developer guide
 description: The Policy Service API allows developers to manage data usage labels and policies in Experience Platform. Follow this guide to learn how to perform key operations using the API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 ---

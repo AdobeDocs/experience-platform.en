@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
 title: Profiles Dashboard Guide
-description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's Real-time Customer Profile data.
+description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's Real-Time Customer Profile data.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 ---
 # [!UICONTROL Profiles] dashboard
 
-The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your [!DNL Real-time Customer Profile] data, as captured during a daily snapshot. This guide outlines how to access and work with the Profiles dashboard in the UI and provides information regarding the metrics displayed in the dashboard.  
+The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your [!DNL Real-Time Customer Profile] data, as captured during a daily snapshot. This guide outlines how to access and work with the Profiles dashboard in the UI and provides information regarding the metrics displayed in the dashboard.  
 
-For an overview of all of the Profile features within the Experience Platform user interface, please refer to the [Real-time Customer Profile UI guide](../../profile/ui/user-guide.md).
+For an overview of all of the Profile features within the Experience Platform user interface, please refer to the [Real-Time Customer Profile UI guide](../../profile/ui/user-guide.md).
 
 ## Profile dashboard data
 
@@ -27,7 +27,7 @@ To navigate to the Profiles dashboard within the Platform UI, select **[!UICONTR
 
 >[!NOTE]
 >
->If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the Profiles dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with Real-time Customer Profile.
+>If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the Profiles dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with Real-Time Customer Profile.
 
 ![The Experience Platform Profiles dashboard with Profiles and Overview highlighted.](../images/profiles/dashboard-overview.png)
 
@@ -67,7 +67,7 @@ To learn more about the profile viewing capabilities provided in the Platform UI
 
 ## Merge policies {#merge-policies}
 
-The metrics displayed in the Profiles dashboard is based on merge policies being applied to your Real-time Customer Profile data. When data is brought together from multiple sources to create the customer profile, the data can contain conflicting values. For example, one dataset may list a customer as "single" while another dataset may list the customer as "married". It is the job of the merge policy to determine which data to prioritize and display as part of the profile.
+The metrics displayed in the Profiles dashboard is based on merge policies being applied to your Real-Time Customer Profile data. When data is brought together from multiple sources to create the customer profile, the data can contain conflicting values. For example, one dataset may list a customer as "single" while another dataset may list the customer as "married". It is the job of the merge policy to determine which data to prioritize and display as part of the profile.
 
 For more information on merge policies, including how to create, edit, and declare a default merge policy for your organization, refer to the [merge policies overview](../../profile/merge-policies/overview.md).
 
@@ -134,7 +134,7 @@ See the [section on merge policies earlier in this document](#merge-policies) to
 >
 >The [!UICONTROL Profile count] widget may show a different number than the profile count shown on the [!UICONTROL Browse] tab in the [!UICONTROL Profiles] section of the UI for multiple reasons. The most common reason for this is because the [!UICONTROL Browse] tab references the total number of merged profiles based on your organization's default merge policy, while the [!UICONTROL Profile count] widget references the total number of merged profiles based on the merge policy that you have selected to view in the dashboard. 
 >
->Another common reason is due to the differences between the time when the dashboard snapshot is taken and the time when the sample job is run for the [!UICONTROL Browse] tab. You can see when the [!UICONTROL Profile count] widget was last updated by looking at the timestamp on the widget. To learn more about how the sample job is triggered on the [!UICONTROL Browse] tab, see the [profile count section in the Real-time Customer Profile UI guide](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
+>Another common reason is due to the differences between the time when the dashboard snapshot is taken and the time when the sample job is run for the [!UICONTROL Browse] tab. You can see when the [!UICONTROL Profile count] widget was last updated by looking at the timestamp on the widget. To learn more about how the sample job is triggered on the [!UICONTROL Browse] tab, see the [profile count section in the Real-Time Customer Profile UI guide](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
 ![The Experience Platform Profiles dashboard with the Profile count widget highlighted.](../images/profiles/profile-count.png)
 
@@ -220,7 +220,7 @@ The **[!UICONTROL Identity overlap]** widget uses a Venn diagram, or set diagram
 
 Use the widget dropdown menus to select the identities that you wish to compare. Circles display the relative total count of profiles that contain each identity. The number of profiles containing both identities is represented by the size of the overlap between the circles. If a customer interacts with your brand on more than one channel, multiple identities will be associated with that individual customer, therefore it is likely that your organization will have multiple profiles containing fragments from more than one identity.
 
-For more information on profile fragments, refer to the section on [profile fragments vs merged profiles](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) in the Real-time Customer Profile overview.
+For more information on profile fragments, refer to the section on [profile fragments vs merged profiles](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) in the Real-Time Customer Profile overview.
 
 To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 
@@ -430,4 +430,4 @@ The three levels of completeness are:
 
 ## Next steps
 
-By following this document you should now be able to locate the profiles dashboard and understand the metrics displayed in the available widgets. To learn more about working with [!DNL Profile] data in the Experience Platform UI, please refer to the [Real-time Customer Profile UI guide](../../profile/ui/user-guide.md).
+By following this document you should now be able to locate the profiles dashboard and understand the metrics displayed in the available widgets. To learn more about working with [!DNL Profile] data in the Experience Platform UI, please refer to the [Real-Time Customer Profile UI guide](../../profile/ui/user-guide.md).

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;sql;sql reference;
 solution: Experience Platform
 title: Query Service SQL Reference
-topic-legacy: reference
 description: Adobe Experience Platform Query Service provides the ability to use standard ANSI SQL for SELECT statements and other limited commands.
 exl-id: 81d7d440-c51b-46a8-8690-0c0637826077
 ---

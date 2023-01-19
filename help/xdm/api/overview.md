@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Schema Registry API Guide
 description: The Schema Registry API allows developers to programmatically manage all schemas and related Experience Data Model (XDM) resources within Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
-topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
 ---
 # [!DNL Schema Registry] API guide
@@ -48,7 +47,7 @@ Descriptors are sets of metadata that are assigned to specific fields within a s
 
 ## Unions
 
-While Platform allows you to compose schemas for particular use cases, it also allows you to compose a "union" of schemas belonging to a specific class. A union schema aggregates the fields of all schemas that share the same class into a single representation. By enabling a schema for use with [Real-time Customer Profile](../../profile/home.md), that schema becomes included in the union for its particular class. As such, union schemas cannot be edited directly, and can only be affected by including or excluding schemas for use in Profile.
+While Platform allows you to compose schemas for particular use cases, it also allows you to compose a "union" of schemas belonging to a specific class. A union schema aggregates the fields of all schemas that share the same class into a single representation. By enabling a schema for use with [Real-Time Customer Profile](../../profile/home.md), that schema becomes included in the union for its particular class. As such, union schemas cannot be edited directly, and can only be affected by including or excluding schemas for use in Profile.
 
 To learn how to view unions in the Schema Registry API, see the [unions endpoint guide](./unions.md).
 

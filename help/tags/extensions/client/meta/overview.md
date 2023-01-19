@@ -1,6 +1,7 @@
 ---
 title: Meta Pixel Extension Overview
 description: Learn about the Meta Pixel tag extension in Adobe Experience Platform.
+exl-id: c5127bbc-6fe7-438f-99f1-6efdbe7d092e
 ---
 # [!DNL Meta Pixel] extension overview
 
@@ -8,13 +9,11 @@ description: Learn about the Meta Pixel tag extension in Adobe Experience Platfo
 
 The [!DNL Meta Pixel] tag extension allows you to leverage [!DNL Pixel] functionalities in your client-side tag libraries. This document covers how to install the extension and use its capabilities in a [rule](../../../ui/managing-resources/rules.md).
 
->[!NOTE]
->
->If you are trying to send server-side events to [!DNL Meta] rather than from the client side, use the [[!DNL Meta Conversions API] extension](../../server/meta/overview.md) instead.
-
 ## Prerequisites
 
 In order to use the extension, you must have a valid [!DNL Meta] account with access to [!DNL Ads Manager]. Specifically, you must [create a new [!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755) and copy its [!DNL Pixel ID] so the extension can be configured to your account. If you already have an existing [!DNL Meta Pixel], you can use its ID instead.
+
+It is strongly recommended to use [!DNL Meta Pixel] in combination with the [!DNL Meta Conversions API] to share and send the same events from the client side and server side, respectively, since this may help recover events that were not picked up by [!DNL Meta Pixel]. See the guide on the [[!DNL Meta Conversions API] extension for event forwarding](../../client/meta/overview.md) for steps on how to integrate it in your server-side implementations. Note that your organization must have access to [event forwarding](../../../ui/event-forwarding/overview.md) in order to use the server-side extension.
 
 ## Install the extension
 
@@ -30,7 +29,7 @@ In the configuration view that appears, you must provide the [!DNL Pixel] ID you
 >
 >Using a data element gives you the option to dynamically change the [!DNL Pixel] ID used depending on other factors such as the build environment. See the appendix section on [using different [!DNL Pixel] IDs for different environments](#id-data-element) for more information.
 
-You can also optionally provide an event ID to associate with the extension. This is used to deduplicate identical events between [!DNL Meta Pixel] and the [!DNL Meta Conversions API]. See the [!DNL Meta] documentation on [handling duplicate [!DNL Pixel] and [!DNL Conversions API] events](https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events/) for details. 
+You can also optionally provide an event ID to associate with the extension. This is used to deduplicate identical events between [!DNL Meta Pixel] and the [!DNL Meta Conversions API]. For details, see the section on [event deduplication](../../server/meta/overview.md#event-deduplication) in overview for the [!DNL Conversions API] extension.
 
 When finished, select **[!UICONTROL Save]**
 
@@ -58,7 +57,9 @@ After your updated build has been deployed to your website, you can confirm whet
 
 ## Next steps
 
-This guide covered how to send data to [!DNL Meta] using the [!DNL Meta Pixel] tag extension. For more information on tags in Experience Platform, refer to the [tags overview](../../../home.md).
+This guide covered how to send data to [!DNL Meta] using the [!DNL Meta Pixel] tag extension. If you are planning on also sending server-side events to [!DNL Meta], you can now proceed to install and configure the [[!DNL Conversions API] event forwarding extension](../../server/meta/overview.md).
+
+For more information on tags in Experience Platform, refer to the [tags overview](../../../home.md).
 
 ## Appendix: Use different [!DNL Pixel] IDs for different environments {#id-data-element}
 
@@ -71,4 +72,3 @@ The following example returns a fake production ID `exampleProductionKey` when u
 ```js
 return (turbine.environment.stage === "production" ? 'exampleProductionKey' : 'exampleTestKey');
 ```
- 

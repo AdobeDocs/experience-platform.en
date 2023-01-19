@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;label identities
 solution: Experience Platform
 title: Label a Field as an Identity
-topic-legacy: api guide
 description: Fields that contain personally identifiable information (PII) can be labeled as identity fields. A value provided in an identity field is interpreted as an identity by Identity Service. The namespace of the identity is specified as a part of labeling the field.
 exl-id: f0b3f18b-7302-4a0b-b444-2d4b59787681
 ---

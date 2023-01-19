@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;DB2;db2;IBM DB2;ibm db2
 solution: Experience Platform
 title: Create an IBM DB2  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create an IBM DB2 source connection using the Adobe Experience Platform UI.
 exl-id: 69c99f94-9cb9-43ff-9315-ce166ab35a60
@@ -22,7 +21,7 @@ This tutorial requires a working understanding of the following components of Ad
 *   [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     *   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-*   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+*   [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 If you already have a valid DB2 connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/databases.md).
 

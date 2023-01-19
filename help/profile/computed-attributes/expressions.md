@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 title: Sample PQL Expressions for Computed Attributes
-topic-legacy: guide
 type: Documentation
 description: Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions require the use of valid Profile Query Language (PQL) expressions. This guide outlines some of the most commonly used PQL expressions for computed attributes.
 exl-id: 7c80e2d3-919a-47f9-a59f-833a70f02a8f
@@ -14,7 +13,7 @@ exl-id: 7c80e2d3-919a-47f9-a59f-833a70f02a8f
 
 In Adobe Experience Platform, computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. Each computed attribute is defined with basic information, such as a name and description, the schema class and path to the field in which the value will be held, and an expression, whose computed value is the value that you would like to store in the computed attribute.
 
-The expressions used in computed attributes are created using [!DNL Profile Query Language] (PQL), an Experience Data Model (XDM) compliant query language which is designed to support the definition and execution of queries for Real-time Customer Profile data.
+The expressions used in computed attributes are created using [!DNL Profile Query Language] (PQL), an Experience Data Model (XDM) compliant query language which is designed to support the definition and execution of queries for Real-Time Customer Profile data.
 
 Computed attributes currently support the following functions: sum, count, min, max, and boolean. This guide outlines some of the most commonly used PQL expressions that you can use when defining your own computed attributes for your organization. For more information on PQL and links to additional formatting guidelines and samples of supported queries, please visit the [PQL overview](../../segmentation/pql/overview.md).
 

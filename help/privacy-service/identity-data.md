@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;ECID;ecid
 solution: Experience Platform
 title: Identity Data for Privacy Requests
-topic-legacy: overview
 description: This document provides general guidance on how to configure your data operations and leverage Adobe technologies to effectively retrieve the appropriate identity information for customer privacy requests.
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
 ---

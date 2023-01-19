@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;BigQuery;bigquery;Google BigQuery;google bigquery
 solution: Experience Platform
 title: Google BigQuery Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect Google BigQuery to Adobe Experience Platform using APIs or the user interface.
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
 ---

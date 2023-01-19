@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;sandbox;Sandbox;sandbo
 solution: Experience Platform
 title: Sandbox API Guide Appendix
 description: This document provides supplemental information related to working with the Sandbox API.
-topic-legacy: developer guide
 exl-id: 48ffea01-f1b4-48c6-a6f5-c321074023d3
 ---
 # Sandbox API guide appendix

@@ -30,7 +30,7 @@ The following learning outcomes are covered in the Data Science Workspace course
 - Methods used to train and score a model
 - The role of hyper-parameters in model development
 - How to publish trained models as a service
-- How to use Data Science Workspace to enrich your Real-time Customer Profile data
+- How to use Data Science Workspace to enrich your Real-Time Customer Profile data
 - How to create a streaming segment with your model output
 
 ## Lessons
@@ -55,7 +55,7 @@ The Data Science Workspace course is split into five lessons.
 
 ### Lesson 5
 
-**Consume and deliver Data Science Insights (11 minutes):** Learn how Data Science Workspace model outputs can be used in the Real-time Customer Profile to deliver personalized experiences with Adobe applications and services.
+**Consume and deliver Data Science Insights (11 minutes):** Learn how Data Science Workspace model outputs can be used in the Real-Time Customer Profile to deliver personalized experiences with Adobe applications and services.
 
 ## Next steps
 

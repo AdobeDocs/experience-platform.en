@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;sample queries;sample query;adobe analytics;
 solution: Experience Platform
 title: Sample Queries for Adobe Analytics Data
-topic-legacy: queries
 description: Data from selected Adobe Analytics report suites is transformed into XDM ExperienceEvents and ingested into Adobe Experience Platform as datasets. This document outlines a number of use cases where Query Service makes use of this data and includes sample queries designed to work with your Adobe Analytics datasets.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
 ---

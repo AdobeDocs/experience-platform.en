@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Select a Product Profile to Edit Access Control Permissions
-topic-legacy: user guide
 description: This document covers the necessary steps needed to browse the access control workspace. In order to configure access control for Experience Platform through the Adobe Admin Console, you must be an administrator for an IMS Organization that has a subscription to Experience Platform.
 exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
 ---
