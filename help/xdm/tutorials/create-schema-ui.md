@@ -10,11 +10,13 @@ exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 
 The Adobe Experience Platform user interface allows you to create and manage [!DNL Experience Data Model] (XDM) schemas in an interactive visual canvas called the [!DNL Schema Editor]. This tutorial covers how to create a schema using the [!DNL Schema Editor].
 
+For demonstration purposes, the steps in this tutorial involve creating an example schema that describes members of a customer loyalty program. While you can use these steps to create a different schema for your own purposes, it is recommended that you first follow along with creating the example schema to learn the capabilities of the [!DNL Schema Editor].
+
 >[!NOTE]
 >
->For demonstration purposes, the steps in this tutorial involve creating an example schema that describes members of a customer loyalty program. While you can use these steps to create a different schema for your own purposes, it is recommended that you first follow along with creating the example schema to learn the capabilities of the [!DNL Schema Editor].
-
-If you prefer to compose a schema using the [!DNL Schema Registry] API instead, start by reading the [[!DNL Schema Registry] developer guide](../api/getting-started.md) before attempting the tutorial on [creating a schema using the API](create-schema-api.md).
+>If you are ingesting CSV data into Platform, you can [map that data to an XDM schema created by AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md) (currently in beta) without having to manually create the schema yourself.
+>
+>If you prefer to compose a schema using the [!DNL Schema Registry] API, start by reading the [[!DNL Schema Registry] developer guide](../api/getting-started.md) before attempting the tutorial on [creating a schema using the API](create-schema-api.md).
 
 ## Getting started
 
