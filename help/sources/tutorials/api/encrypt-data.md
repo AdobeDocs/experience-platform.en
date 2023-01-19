@@ -10,13 +10,11 @@ Encrypted data ingestion allows you to ingest encrypted files through cloud stor
 
 Encrypted data ingestion process:
 
-* Create an encryption key pair using Experience Platform APIs. The encryption key pair consists of a public key and a public key ID. Once created, both keys will be available for you to copy or download.
-* You will use the public key ID to encrypt the data file that you want to ingest.
-* The public key will be stored by Experience Platform in a secure key vault.
-* You will then place the encrypted file to your cloud storage.
-* Once the encrypted file is ready, create a source connection and a dataflow for your cloud storage source. During the flow creation step, you must provide an `encryption` parameter and include your public key ID. 
-* Experience Platform then retrieves the public key from the secure vault using the provided public key ID.
-* Finally, Experience Platform decrypts the file using the encryption key pair and then ingests it into a dataset.
+* Create an encryption key pair using Experience Platform APIs. The encryption key pair consists of a Private Key and a Public Key. Once created, you can copy or download the Public Key, alongside its corresponding Public Key ID and Expiry Time. During this process, the Private Key will be stored by Experience Platform in a secure vault.
+* Use the Public Key to encrypt the data file that you want to ingest.
+* Then, place your encrypted file in your cloud storage.
+* Once the encrypted file is ready, create a source connection and a dataflow for your cloud storage source. During the flow creation step, you must provide an `encryption` parameter and include your Public Key ID. 
+* Experience Platform retrieves the Private Key from the secure vault to decrypt the data at the time of ingestion.
 
 This document provide steps on how to generate a encryption key pair to encrypt your data, and ingest that encrypted data to Experience Platform using cloud storage sources.
 
@@ -32,7 +30,7 @@ This tutorial requires you to have a working understanding of the following comp
 
 For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
 
-## Create encryption key pair
+## Create encryption key pair {#create-keys}
 
 The first step in ingesting encrypted data to Experience Platform is to create your encryption key pair by making a POST request to the `/encryption/keys` endpoint of the [!DNL Connectors] API.
 
@@ -65,11 +63,11 @@ curl -X POST \
 | Parameter | Description |
 | --- | --- |
 | `encryptionAlgorithm` | The type of encryption algorithm that you are using. The supported encryption types are `PGP` and `GPG`. |
-| `params.passPhrase` | The passphrase provides an additional layer of protection for your encryption keys. Upon creation, Experience Platform stores the passphrase in a different secure vault from the public key. You must provide a non-empty string as a passphrase. |
+| `params.passPhrase` | The passphrase provides an additional layer of protection for your encryption keys. Upon creation, Experience Platform stores the passphrase in a different secure vault from the Public Key. You must provide a non-empty string as a passphrase. |
 
 **Response**
 
-A successful response returns your public key, public key ID, and the expiry time.
+A successful response returns your Public Key, Public Key ID, and the expiry time of your keys. The expiry time automatically sets to 180 days after the date of key generation. Expiry time is currently not configurable.
 
 ```json
 {
@@ -79,9 +77,9 @@ A successful response returns your public key, public key ID, and the expiry tim
 }
 ```
 
-## Retrieve a list of encryption key pairs
+## Retrieve a list of Public Keys and Public Key IDs
 
-Make a GET request to the `/encryption/keys` endpoint to retrieve a list of encryption key pairs in your organization.
+Make a GET request to the `/encryption/keys` endpoint to retrieve a list of Public Keys and Public Key IDs in your organization.
 
 **API format**
 
@@ -91,7 +89,7 @@ GET /data/foundation/connectors/encryption/keys
 
 **Request**
 
-The following request retrieves a list of encryption key pairs in your organization.
+The following request retrieves a list of Public Keys and Public Key IDs in your organization.
 
 ```shell
 curl -X GET \
@@ -105,7 +103,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns a list of all encryption key pairs in your organization.
+A successful response returns a list of all Public Keys and Public Key IDs in your organization.
 
 ```json
 [
@@ -147,9 +145,9 @@ After creating a base connection, you must then follow the steps outlined in the
 
 >[!NOTE]
 >
->You must have the following, in order to create a dataflow for encrypted data ingestion:<ul><li>Encryption key pair (public key and public key ID)</li><li>Encryption algorithm</li><li>Source connection ID</li><li>Target connection ID</li><li>Mapping ID</li></ul>
+>You must have the following, in order to create a dataflow for encrypted data ingestion:<ul><li>[Public Key ID](#create-keys)</li><li>[Source connection ID](../api/collect/cloud-storage.md#source)</li><li>[Target connection ID](../api/collect/cloud-storage.md#target)</li><li>[Mapping ID](../api/collect/cloud-storage.md#mapping)</li></ul>
 
-To ingest encrypted data to Platform, you must add an `encryption` section to the `transformations` parameter and provide the `publicKeyId` that corresponds with your encryption key pair.
+To ingest encrypted data to Platform, you must add an `encryption` section to the `transformations` parameter and provide the `publicKeyId` that was created in an earlier step.
 
 **API format**
 
@@ -210,7 +208,7 @@ curl -X POST \
 | `targetConnectionIds` | The target connection ID. This ID represents where the data lands once it is brought over to Platform. |
 | `transformations.params.mappingId` | The mapping ID.|
 | `transformations.name` | When ingesting encrypted files, you must provide `Encryption` as an additional transformations parameter for your dataflow. |
-| `transformations.params.publicKeyId` | The public key ID that you created. This ID is one half of the encryption key pair used to encrypt your cloud storage data. |
+| `transformations.params.publicKeyId` | The Public Key ID that you created. This ID is one half of the encryption key pair used to encrypt your cloud storage data. |
 | `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
 | `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
 | `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
