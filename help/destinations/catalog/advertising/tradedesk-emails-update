@@ -9,9 +9,9 @@ exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 >
 >[!DNL The Trade Desk - CRM] destination in Platform is currently in beta. The documentation and functionality are subject to change. 
 >
->With the release of EUID (European Unified ID), you are now seeing two [!DNL The Trade Desk - CRM] destinations in the [destinations catalog](/help/destinations/catalog/overview.md).
->* If you source data in the EU, please use the **[!DNL The Trade Desk - CRM (EU)]** destination. 
->* If you source data in the APAC or NAMER regions, please use the **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destination. 
+>With the release of EUID (European Unified ID), you are now seeing two [!DNL The Trade Desk - CRM] destinations in the Destinations catalog.
+>* if you source data in the EU, please use [!DNL The Trade Desk - CRM (EU)] destination. 
+>* if you source data in the APAC or NAMER regions, please use [!DNL The Trade Desk - CRM (NAMER & APAC)] destination. 
 >
 >Both destinations in Experience Platform are currently in beta. This documentation page was created by the *[!DNL Trade Desk]* team. For any inquiries or update requests, please contact your [!DNL Trade Desk] representative, the documentation and functionality are subject to change. 
 
@@ -19,7 +19,7 @@ exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 
 This document is designed to help you activate profiles to your [!DNL Trade Desk] account for audience targeting and suppression based on CRM data.
 
-[!DNL The Trade Desk(TTD)] does not directly handle the upload file of email addresses at any time nor does [!DNL The Trade Desk] store your raw (unhashed) emails.
+[!DNL The Trade Desk] (TTD) does not directly handle the upload file of email addresses at any time nor does [!DNL The Trade Desk] store your raw (unhashed) emails.
 
 >[!TIP]
 >
@@ -31,7 +31,7 @@ Before you can activate segments to [!DNL The Trade Desk], you must contact your
 
 ## ID Matching Requirements {#id-matching-requirements}
 
-Depending on the type of IDs you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements. Please read the [Identity Namespace overview](/help/identity-service/namespaces.md) for more information.  
+Depending on the type of IDs you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements. Please read the [Identity Namespace overview](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en) for more information.  
 
 ## Supported identities {#supported-identities}
 
@@ -50,7 +50,7 @@ Both plain text and SHA256 hashed email addresses are supported by Adobe Experie
 
 You can hash email addresses before ingesting them into Adobe Experience Platform or use raw email addresses. 
 
-To learn about ingesting email addresses in Experience Platform, read the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md). 
+To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](https://experienceleague.adobe.com/docs/experience-platform/ingestion/batch/overview.html?lang=en). 
 
 If you select to hash the email addresses yourself, make sure to comply with the following requirements: 
 
@@ -67,7 +67,7 @@ Refer to the table below for information about the destination export type and f
 | Item | Type | Notes |
 ---------|----------|---------|
 | Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (email or hashed email) used in the Trade Desk destination. |
-| Export frequency | **[!UICONTROL Daily Batch]** | As a profile is updated in Experience Platform based on segment evaluation, the profile (identities) are updated once a day downstream to the destination platform. Read more about [batch exports](/help/destinations/destination-types.md#file-based).|
+| Export frequency | **[!UICONTROL Daily Batch]** | As a profile is updated in Experience Platform based on segment evaluation, the profile (identities) are updated once a day downstream to the destination platform. Read more about [batch uploads](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=en#file-based).|
 
 {style="table-layout:auto"}
 
@@ -86,27 +86,27 @@ Before you can send, or activate, audience data to a destination, you must set u
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Advertiser ID]**: your [!DNL Trade Desk Advertiser ID], which can either be shared by your [!DNL Trade Desk] Account Manager or be found under [!DNL Advertiser Preferences] in the [!DNL Trade Desk] UI. 
 
-![Platform UI screenshot showing how to fill in destination details.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
+![Platform UI screenshot showing how to fill in destination details] (help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
-When connecting to the destination, setting a data governance policy is completely optional. Please review the Experience Platform [data governance overview](/help/data-governance/policies/overview.md) for more details.  
+When connecting to the destination, setting a data governance policy is completely optional. Please review the Experience Platform [data governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=en) for more details.  
 
 ## Activate segments to this destination {#activate}
 
-Read [activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to a destination. 
+See [activate audience data to batch profile export destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en) for instructions on activating audience segments to a destination. 
 
 In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional. 
 
-![Platform UI screenshot to schedule segment activation.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![Platform UI screenshot to schedule segment activation] (help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE] 
 >
 >All segments activated to [!DNL The Trade Desk] CRM Destination are automatically set to a daily frequency and full file export.
 
-![Platform UI screenshot to schedule segment activation.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![Platform UI screenshot to schedule segment activation] (help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
 In the **[!UICONTROL Mapping]** page, you must select attributes or identity namespaces from the source column and map to the target column.  
 
-![Platform UI screenshot to map segment activation.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![Platform UI screenshot to map segment activation] (help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
 Below is an example of correct identity mapping when activating segments to [!DNL The Trade Desk] CRM destination. 
 
@@ -126,7 +126,7 @@ Selecting target fields:
 
 ## Validate Data Export {#validate}
 
-To validate that data is correctly exported out of Experience Platform and into [!DNL The Trade Desk], please find the segments under the Adobe 1PD data tile within [!DNL The Trade Desk] Data Management Platform (DMP). Here are the steps to finding the corresponding ID within the [!DNL Trade Desk] UI: 
+To validate data is correctly exported out of Experience Platform and into [!DNL The Trade Desk], please find the segments under the Adobe 1PD data tile within [!DNL The Trade Desk] Data Management Platform (DMP). Here are the steps to finding the corresponding ID within the [!DNL Trade Desk] UI: 
 
 1. First, click on the **[!UICONTROL Data]** Tab, and review **[!UICONTROL First-Party]**.
 2. Scroll down the page, under **[!UICONTROL Imported Data]**, you will find the **[!UICONTROL Adobe 1PD Tile]**.
