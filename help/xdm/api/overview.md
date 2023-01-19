@@ -23,7 +23,9 @@ To view all available endpoints and CRUD operations, visit the [Schema Registry 
 
 XDM schemas represent and validate the structure and format of data ingested into Platform. A schema is composed of a class and zero or more schema field groups. You can create, view, edit, and delete schemas using the `/schemas` endpoint. To learn how to use this endpoint, see the [schemas endpoint guide](./schemas.md).
 
-For a step-by-step guide on how to create a complete schema in the Schema Registry API, including creating and adding field groups and data types, see the [API schema creation tutorial](../tutorials/create-schema-api.md).
+For a step-by-step guide on how to manually create a complete schema in the Schema Registry API, including creating and adding field groups and data types, see the [API schema creation tutorial](../tutorials/create-schema-api.md).
+
+If you are ingesting CSV data, see the section on [CSV to schema conversion](#csv-to-schema).
 
 ## Behaviors
 
@@ -56,6 +58,10 @@ To learn how to view unions in the Schema Registry API, see the [unions endpoint
 You can automatically generate an XDM schema using a CSV file as a template, allowing you to create templates to bulk-import schema fields and cut down on manual API or UI work.
 
 See the [CSV to schema conversion endpoint guide](./export.md) for more information.
+
+>[!NOTE]
+>
+>You can also us the UI to [map a CSV to a schema using AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md) (currently in beta).
 
 ## Export {#export}
 
