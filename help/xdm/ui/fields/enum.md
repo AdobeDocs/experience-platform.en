@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Define Enum Fields and Suggested Values in the UI
 description: Learn how to define enums and suggested values for string fields in the Experience Platform user interface.
-topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 ---
 # Define enums and suggested values in the UI {#enums-and-suggested-values}

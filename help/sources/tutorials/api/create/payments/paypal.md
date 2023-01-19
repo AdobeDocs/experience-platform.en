@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;PayPal connector;paypal;Paypal
 solution: Experience Platform
 title: Create a PayPal Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect PayPal to Adobe Experience Platform using the Flow Service API.
 exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
@@ -31,7 +30,7 @@ In order for [!DNL Flow Service] to connect with [!DNL PayPal], you must provide
 | `host` | The URL of the [!DNL PayPal] instance. (default: api.sandbox.paypal.com). |
 | `clientId` | The client ID associated with your [!DNL PayPal] application. |
 | `clientSecret` | The client secret associated with your [!DNL PayPal] application. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL PayPal] is: `221c7626-58f6-4eec-8ee2-042b0226f03b` |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL PayPal] is: `221c7626-58f6-4eec-8ee2-042b0226f03b` |
 
 For more information about getting started refer to [this PayPal document](https://developer.paypal.com/docs/api/overview/#get-credentials).
 

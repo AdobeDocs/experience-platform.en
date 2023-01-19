@@ -25,7 +25,7 @@ See the [guide on adding services to a datastream](../edge/datastreams/overview.
 
 ## Defining decision scopes {#creating-decision-scopes}
 
-The [!DNL Offer Decision Engine] uses Adobe Experience Platform data and [Real-time Customer profiles](../profile/home.md), along with the [!DNL Offer Library], to deliver offers to the right customers and channels at the right time.
+The [!DNL Offer Decision Engine] uses Adobe Experience Platform data and [Real-Time Customer profiles](../profile/home.md), along with the [!DNL Offer Library], to deliver offers to the right customers and channels at the right time.
 
 To learn more about the [!DNL Offer Decisioning Engine], see the dedicated [documentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html).
 

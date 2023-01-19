@@ -2,7 +2,7 @@
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;reporting;dataset overlap report;profile data
 title: Generate the Dataset Overlap Report
 type: Tutorial
-description: This tutorial outlines the steps necessary to generate the dataset overlap report using the Real-time Customer Profile API.
+description: This tutorial outlines the steps necessary to generate the dataset overlap report using the Real-Time Customer Profile API.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
 ---
 # Generate the dataset overlap report
@@ -11,7 +11,7 @@ The dataset overlap report provides visibility into the composition of your orga
 
 In addition to providing insights into your data, this report can help you take actions to optimize your license usage, such as setting a limit to the lifespan of certain data.
 
-This tutorial outlines the steps necessary to generate the dataset overlap report using the [!DNL Real-time Customer Profile] API and interpret the results for your organization.
+This tutorial outlines the steps necessary to generate the dataset overlap report using the [!DNL Real-Time Customer Profile] API and interpret the results for your organization.
 
 ## Getting started
 
@@ -23,7 +23,7 @@ The required headers for all of the API calls in this tutorial are:
 * `x-api-key: {API_KEY}`: The `API Key` is also known as a `Client ID` and is a value that only needs to be generated once.
 * `x-gw-ims-org-id: {ORG_ID}`: The `IMS Org` is also known as an `Organization ID` and only needs to be generated once.
 
-After completing the authentication tutorial and gathering the values for the required headers, you are ready to begin making calls to the Real-time Customer API.
+After completing the authentication tutorial and gathering the values for the required headers, you are ready to begin making calls to the Real-Time Customer API.
 
 ## Generate dataset overlap report using the command line
 
@@ -126,4 +126,4 @@ This report provides the following information:
 
 ## Next steps
 
-After completing this tutorial, you are now able to generate the dataset overlap report using the Real-time Customer Profile API. To learn more about working with Profile data in both the API and the Experience Platform UI, please begin by reading the [Profile overview documentation](../home.md).
+After completing this tutorial, you are now able to generate the dataset overlap report using the Real-Time Customer Profile API. To learn more about working with Profile data in both the API and the Experience Platform UI, please begin by reading the [Profile overview documentation](../home.md).

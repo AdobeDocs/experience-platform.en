@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;scheduled queries;scheduled query;
 solution: Experience Platform
 title: Schedules Endpoint
-topic-legacy: scheduled queries
 description: The following sections walks through the various API calls you can make for scheduled queries with the Query Service API.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
 ---
@@ -306,7 +305,7 @@ The PATCH request supports two different paths: `/state` and `/schedule/schedule
 
 ### Update scheduled query state
 
-You can use `/state` to update the state of the selected scheduled query - ENABLED or DISABLED. To update the state, you will need to set the value as `enable` or `disable`.
+You can update the state of the selected scheduled query by setting the `path` property to `/state` and the `value` property as either `enable` or `disable`.
 
 **API format**
 
@@ -342,6 +341,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Property | Description |
 | -------- | ----------- |
+| `op`  | The operation to be performed on the query schedule. The accepted value is `replace`.  |
 | `path` | The path of the value you want to patch. In this case, since you are updating the scheduled query's state, you need to set the value of `path` to `/state`. |
 | `value` | The updated value of the `/state`. This value can either be set as `enable` or `disable` to enable or disable the scheduled query. |
 
@@ -358,7 +358,7 @@ A successful response returns HTTP status 202 (Accepted) with the following mess
 
 ### Update scheduled query schedule
 
-You can use `/schedule/schedule` to update the cron schedule of the scheduled query. For more information about cron schedules, please read the [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation.
+You can update the cron schedule of the scheduled query by setting the `path` property to `/schedule/schedule` in the request body. For more information about cron schedules, please read the [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation.
 
 **API format**
 
@@ -393,6 +393,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Property | Description |
 | -------- | ----------- |
+| `op`  | The operation to be performed on the query schedule. The accepted value is `replace`.  |
 | `path` | The path of the value you want to patch. In this case, since you are updating the scheduled query's schedule, you need to set the value of `path` to `/schedule/schedule`. |
 | `value` | The updated value of the `/schedule`. This value needs to be in the form of a cron schedule. So, in this example, the scheduled query will run every hour at the 45 minute mark. |
 

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;google;Google
 solution: Experience Platform
 title: Create a Google Cloud Storage Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to a Google Cloud Storage account using the Flow Service API.
 exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18

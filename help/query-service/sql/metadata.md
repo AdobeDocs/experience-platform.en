@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;PSQL;psql;Query service;query service;metadata;commands;metadata commands;
 solution: Experience Platform
 title: Metadata PostgreSQL Commands in Query Service
-topic-legacy: metadata
 description: A list of PostgreSQL commands that are currently supported for querying metadata in Adobe Experience Platform Query Service.
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
 ---

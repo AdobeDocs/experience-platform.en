@@ -3,7 +3,6 @@ keywords: Experience Platform;download scores;customer ai;popular topics;Export;
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Download Scores in Customer AI
-topic-legacy: Downloading scores
 description: Customer AI allows you to download scores in the Parquet file format.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
 ---
@@ -19,7 +18,7 @@ Additionally, in order to access scores for Customer AI, you need to have a serv
 
 Currently, there are two ways to download Customer AI scores:
 
-1. If you want to download the scores at the individual level and/or do not have Real-time Customer Profile enabled, start by navigating to [finding your dataset ID](#dataset-id).
+1. If you want to download the scores at the individual level and/or do not have Real-Time Customer Profile enabled, start by navigating to [finding your dataset ID](#dataset-id).
 2. If you have Profile enabled and want to download segments that you have configured using Customer AI, please navigate to [download a segment configured with Customer AI](#segment).
 
 ## Find your dataset ID {#dataset-id}
@@ -280,7 +279,7 @@ An alternative way to download your score data is by exporting your audience to 
 
 >[!IMPORTANT]
 >
->In order to utilize this method of exporting, Real-time Customer Profile needs to be enabled for the dataset.
+>In order to utilize this method of exporting, Real-Time Customer Profile needs to be enabled for the dataset.
 
 The [export a segment](../../../segmentation/tutorials/evaluate-a-segment.md) section in the segment evaluation guide covers the required steps to export an audience dataset. The guide outlines and provides examples of the following:
 

@@ -6,7 +6,7 @@ exl-id: a744eb24-5ba7-4971-9183-3f891e807863
 ---
 # Edit schema to create custom widgets
 
-In order to create custom widgets for Adobe Experience Platform dashboards, you must first identify the Real-time Customer Profile attributes upon which the widgets will be based.
+In order to create custom widgets for Adobe Experience Platform dashboards, you must first identify the Real-Time Customer Profile attributes upon which the widgets will be based.
 
 This guide provides step-by-step instructions for editing your organization's schema by selecting attributes in order to create custom dashboard widgets.
 
@@ -24,7 +24,7 @@ This guide requires access to the [!UICONTROL Widget library] within Experience 
 
 Within the widget library, the **[!UICONTROL Custom]** tab enables you to create widgets and share them with other users in your organization in order to customize the look of your dashboards. 
 
-Before you can create custom widgets, Real-time Customer Profile attributes must be selected to ensure that the data is included as part of the daily snapshot. 
+Before you can create custom widgets, Real-Time Customer Profile attributes must be selected to ensure that the data is included as part of the daily snapshot. 
 
 >[!IMPORTANT]
 >
@@ -55,4 +55,4 @@ After choosing the attributes that you wish to add, select **[!UICONTROL Save]**
 
 ## Next steps
 
-After reading this guide you are able to navigate to the widget library and select Real-time Customer Profile attributes to configure your schema. With Profile attributes selected, you can begin [creating custom widgets for your dashboards](custom-widgets.md).
+After reading this guide you are able to navigate to the widget library and select Real-Time Customer Profile attributes to configure your schema. With Profile attributes selected, you can begin [creating custom widgets for your dashboards](custom-widgets.md).

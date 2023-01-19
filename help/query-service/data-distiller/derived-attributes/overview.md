@@ -1,13 +1,13 @@
 ---
 title: Derived Attributes
-description: Derived attributes provide a convenient means to generate attributes of your choice that can be refreshed at any regular cadence and optionally published into your Real-time Customer Profile data. This document provides an overview of how to use Query Service to create derived attributes for use with your Profile data.
+description: Derived attributes provide a convenient means to generate attributes of your choice that can be refreshed at any regular cadence and optionally published into your Real-Time Customer Profile data. This document provides an overview of how to use Query Service to create derived attributes for use with your Profile data.
 exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
 ---
 # Derived attributes
 
-The derived attributes feature provides a convenient means to generate attributes of your choice from other information available in the data lake. These attributes can be refreshed at any regular cadence and optionally published into your Real-time Customer Profile data. Derived attributes address the need to build complex attributes such as decile, percentile, and quartile over simpler ones such as max, count, and mean. These attributes can be calculated specifically for an individual user or for a business entity. This enables you to derive attributes that can be directly accredited to an identifier, such as email addresses, device IDs, and phone numbers, and also derive attributes that are indirectly associated with that user or business profile.
+The derived attributes feature provides a convenient means to generate attributes of your choice from other information available in the data lake. These attributes can be refreshed at any regular cadence and optionally published into your Real-Time Customer Profile data. Derived attributes address the need to build complex attributes such as decile, percentile, and quartile over simpler ones such as max, count, and mean. These attributes can be calculated specifically for an individual user or for a business entity. This enables you to derive attributes that can be directly accredited to an identifier, such as email addresses, device IDs, and phone numbers, and also derive attributes that are indirectly associated with that user or business profile.
 
-Derived attributes are needed for a variety of use cases when data is being analyzed on the data lake. This data can then be marked for use in Real-time Customer Profile and used in downstream use cases such as creating highly focussed audiences. Some potential use cases for this feature might include:
+Derived attributes are needed for a variety of use cases when data is being analyzed on the data lake. This data can then be marked for use in Real-Time Customer Profile and used in downstream use cases such as creating highly focussed audiences. Some potential use cases for this feature might include:
 
 * Identifying the lowest 10% of subscribers based on viewership by channel. This would allow marketers to target a particular audience and sell a new subscriber package.
 * Identifying an audience who are in the top 10% of flyers based on their total miles traveled and have "Flyer" status. This audience could be used to selectively target the sale of a new credit card offer.
@@ -28,7 +28,7 @@ Quartiles are used to divide the distribution by four and percentiles by 100.
 
 ## Analytical derived attributes
 
-Query Service provides built-in functions such as sessionization and last touch, amongst others, that you can apply to any time series data to generate business related derivate attributes. You have the option to base these analytical derived attributes on one or more identity and optionally publish the data to Real-time Customer Profile if required.
+Query Service provides built-in functions such as sessionization and last touch, amongst others, that you can apply to any time series data to generate business related derivate attributes. You have the option to base these analytical derived attributes on one or more identity and optionally publish the data to Real-Time Customer Profile if required.
 
 Some potential use cases for this type of derived attribute might include:
 
