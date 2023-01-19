@@ -54,6 +54,8 @@ feature: Web SDK
       * [Server-side logging](personalization/adobe-target/analytics-logging/server-side.md)
   * Offer Decisioning {#offer-decisioning}
     * [Overview](personalization/offer-decisioning/offer-decisioning-overview.md)
+  * Adobe Journey Optimizer {#ajo}
+    * [Overview](personalization/ajo/ajo-overview.md)
 * Consent {#consent}
   * [Supporting consent](consent/supporting-consent.md)
   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
