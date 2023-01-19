@@ -20,7 +20,7 @@ In contrast to enums, the **[!UICONTROL Suggested values]** option allows to to 
 
 When [defining a new field](./overview.md#define) in the Adobe Experience Platform user interface and setting the type to [!UICONTROL String], you are given the option to define an [enum](#enum) or [suggested values](#suggested-values) for that field.
 
-![Image showing the Enum & Suggested Values option enabled for a string field in the UI](../../images/ui/fields/enum/enum-options-selected.png)
+![The Enum & Suggested Values option enabled for a string field in the UI.](../../images/ui/fields/enum/enum-options-selected.png)
 
 This document covers how to define enums and suggested values in the [!UICONTROL Schemas] UI workspace. For a quick overview on enums and suggested values, including how to configure them in the UI and their downstream effects, watch the following video:
 
@@ -30,13 +30,13 @@ This document covers how to define enums and suggested values in the [!UICONTROL
 
 Select **[!UICONTROL Enums and Suggested Values]**, then select **[!UICONTROL Enums]**. Additional controls appear, allowing you to specify the value constraints for the enum. To add a constraint, select **[!UICONTROL Add row]**.
 
-![Image showing the Enums option selected in the UI](../../images/ui/fields/enum/enum-add-row.png)
+![The Enums option selected in the UI.](../../images/ui/fields/enum/enum-add-row.png)
 
 Under the **[!UICONTROL Value]** column, you must provide the exact value you want to constrain the field to. You can optionally provide a human-friendly **[!UICONTROL Display Name]** for the constraint as well, which affects how the value will be represented in segmentation.
 
 Continue to use **[!UICONTROL Add row]** to add the desired constraints and optional labels to the enum, or select the delete icon (![Image of the delete icon](../../images/ui/fields/enum/remove-icon.png)) next to a previously added row to remove it. When finished, select **[!UICONTROL Apply]** to apply the changes to the schema.
 
-![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/enum-confirm.png)
+![The enum values and display names filled out for the string field in the UI.](../../images/ui/fields/enum/enum-confirm.png)
 
 The canvas updates to reflect the changes. When you explore this schema in the future, you can view and edit the constraints for the enum field within the right rail.
 
@@ -44,13 +44,13 @@ The canvas updates to reflect the changes. When you explore this schema in the f
 
 Select **[!UICONTROL Enums and Suggested Values]**, then select **[!UICONTROL Suggested Values]** to make additional controls appear. From here, select **[!UICONTROL Add row]** to start adding suggested values.
 
-![Image showing the Suggested Values option selected in the UI](../../images/ui/fields/enum/suggested-add-row.png)
+![The Suggested Values option selected in the UI.](../../images/ui/fields/enum/suggested-add-row.png)
 
 Under the **[!UICONTROL Display Name]** column, provide a human-friendly name for the value as you want it to appear in the Segmentation UI. To add more suggested values, select **[!UICONTROL Add row]** again and repeat the process as needed. To remove a previously added row, select ![the delete icon](../../images/ui/fields/enum/remove-icon.png) next to the row in question.
 
 When finished, select **[!UICONTROL Apply]** to apply the changes to the schema.
 
-![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/suggested-confirm.png)
+![The enum values and display names filled out for the string field in the UI.](../../images/ui/fields/enum/suggested-confirm.png)
 
 >[!NOTE]
 >
@@ -62,17 +62,17 @@ Some fields from standard XDM components contain their own suggested values, suc
 
 >[!IMPORTANT]
 >
->Disabling standard suggested values is only supported for fields that **only contain suggested values**. If a field is constrained as an enum, standard constraints cannot be disabled.
+>You can only disable suggested values for standard fields that do not have a corresponding enum constraint. In other words, if the **[!UICONTROL Enums]** option is enabled instead of **[!UICONTROL Suggested Values]**, then the field is constrained as an enum and those constraints cannot be disabled.
 >
 >See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields.
 
-To disable standard suggested value, select the toggle next to the value in question. You can disable any combination of suggested values, including all of them.
+To disable a standard suggested value, select the toggle next to the value in question. You can disable any combination of suggested values, including all of them.
 
-![Some of the standard suggested values for the [!UICONTROL Event Type] field disabled in the UI](../../images/ui/fields/enum/suggested-standard.png)
+![Some of the standard suggested values for the [!UICONTROL Event Type] field disabled in the UI.](../../images/ui/fields/enum/suggested-standard.png)
 
 To add new suggested values for a standard field, select **[!UICONTROL Add row]**. To remove a suggested value that was previously added by your organization, select ![the delete icon](../../images/ui/fields/enum/remove-icon.png) next to the row in question.
 
-![Custom suggested values added to a standard string field in the UI](../../images/ui/fields/enum/suggested-standard-add.png)
+![Custom suggested values added to a standard string field in the UI.](../../images/ui/fields/enum/suggested-standard-add.png)
 
 ## Evolution rules for enums and suggested values {#evolution}
 
@@ -116,4 +116,4 @@ Due to current system limitations, there are two cases where an enum is not vali
 
 This guide covered how to define enums and suggested values for string fields in the the UI. For information on how to manage enums and suggested values using the Schema Registry API, refer to the following [tutorial](../../tutorials/suggested-values.md).
 
-To learn how to define other XDM field types in the [!DNL Schema Editor], see the overview on [defining fields in the UI](./overview.md#special).
+To learn how to define other XDM field types in the [!DNL Schema Editor], see the overview on [defining fields in the UI.](./overview.md#special).
