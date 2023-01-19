@@ -17,15 +17,15 @@ This connector helps set up the initial export of profile data and also helps sy
 
 ## Use cases 
 
-To help you better understand how and when you should use the [!DNL  Pega Profile Connector] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Pega Profile Connector] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
 ### Use case 1
 
-A marketer wants to initially set up Pega Customer Decision Hub with profile data loaded from Adobe Experience Platform. This is an initial full load followed by delta loads on a scheduled basis.
+A marketer wants to initially set up [!DNL Pega Customer Decision Hub] with profile data loaded from Adobe Experience Platform. This is an initial full load followed by delta loads on a scheduled basis.
 
 ### Use case 2
 
-A marketer wants up-to-date profile data from Adobe Experience Platform available in Pega Customer Decision Hub that enhances the Pega insights around customer profiles on an ongoing basis.
+A marketer wants up-to-date profile data from Adobe Experience Platform available in [!DNL Pega Customer Decision Hub] that enhances the Pega insights around customer profiles on an ongoing basis.
 
 ## Prerequisites {#prerequisites}
 
@@ -77,17 +77,6 @@ After establishing the authentication connection to [!DNL Amazon S3], provide th
 
 ![Image of the UI screen showing completed fields for the Pega Profile Connector destination details](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png)
 
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_s3_bucket"
->title="Bucket name"
->abstract="Must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1)."
-
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_s3_folderpath"
->title="Folder path"
->abstract="Must contain only characters A-Z, a-z, 0-9 and can include the following special characters: `/!-_.'()"^[]+$%.*"`. To create a folder per segment file, insert the macro `/%SEGMENT_NAME%` or `/%SEGMENT_ID%` or `/%SEGMENT_NAME%/%SEGMENT_ID%` into the text field. Macros can only be inserted at the end of the folder path. View macro examples in the documentation."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="Use macros to create a folder in your storage location"
-
 To configure details for the destination, fill in the required fields and select **[!UICONTROL Next]**. An asterisk next to a field in the UI indicates that the field is required.
 
 * **[!UICONTROL Name]**: enter a name that will help you identify this destination.
@@ -98,7 +87,7 @@ To configure details for the destination, fill in the required fields and select
 
 >[!TIP]
 >
->In the connect destination workflow, you can create a custom folder in your Amazon S3 storage per exported segment file. Read [Use macros to create a folder in your storage location](overview.md#use-macros) for instructions.
+>In the connect destination workflow, you can create a custom folder in your Amazon S3 storage per exported segment file. Read [Use macros to create a folder in your storage location](/help/destinations/catalog/cloud-storage/overview.md#use-macros) for instructions.
 
 ### Enable alerts {#enable-alerts}
 
@@ -118,14 +107,14 @@ See [Activate audience data to batch profile export destinations](../../ui/activ
 
 In the **[!UICONTROL Mapping]** step, you can select which attribute and identity fields to export for your profiles. You can also select to change the headers in the exported file to any friendly name that you wish. For more information, view the [mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in the activate batch destinations UI tutorial.
 
-## Exported data / Validate data export {#exported-data}
+## Validate data export {#exported-data}
 
 For [!DNL Pega Profile Connector] destinations, [!DNL Platform] creates a `.csv` file in Amazon S3 storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
 
-A successful import of profile data from S3 inserts data in the Pega Customer profile datastore. The imported customer profile data can be validated in Pega Customer Profile Designer , as shown in the following figure.
+A successful import of profile data from S3 inserts data in the [!DNL Pega Customer] profile datastore. The imported customer profile data can be validated in [!DNL Pega Customer Profile Designer] , as shown in the following figure.
 ![Image of the UI screen where you can validate Adobe profile data in Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
-In Pega Customer Decision Hub, data administrators can configure data jobs in Customer Profile Designer to import profile data periodically from S3 as shown in the following figure. See the [additional resources](#additional-resources) for more information about how to configure data jobs to import profile data from Amazon S3.
+In [!DNL Pega Customer Decision Hub], data administrators can configure data jobs in [!DNL Customer Profile Designer] to import profile data periodically from S3 as shown in the following figure. See the [additional resources](#additional-resources) for more information about how to configure data jobs to import profile data from [!DNL Amazon S3].
 ![Image of the UI screen to configure data jobs in Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
 
 ## Additional resources {#additional-resources}
