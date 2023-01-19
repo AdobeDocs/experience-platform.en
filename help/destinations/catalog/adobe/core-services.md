@@ -1,56 +1,67 @@
 ---
-title: Experience Cloud Audiences
+title: (Beta) Experience Cloud Audiences
 description: Learn how to share segments from Experience Platform to various Experience Platform solutions
 ---
 
-# YourDestination connection {#your-destination}
+# (Beta) Experience Cloud Audiences connection {#your-destination}
 
-## Overview {#overview}
-
-This destination allows you to share segments from Experience Platform to various Experience Platform solutions, like Audience Manager 
+This destination allows you to share segments from Experience Platform to various Experience Platform solutions, like Audience Manager, Advertising Cloud, Target, or Marketo.
 
 >[!IMPORTANT]
 >
->* This destination replaced the legacy way of sharing segments from Experience Platform to various Experience Cloud solutions. 
+>* This destination replaces the [legacy segment sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam) from Experience Platform to various Experience Cloud solutions. 
 >* This destination is currently in beta. The documentation and functionality are subject to change.
 
-## Use cases {#use-cases}
+## Use cases and benefits {#use-cases}
 
 To help you better understand how and when you should use the Experience Cloud Audiences destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Use case #1 {#use-case-1}
+### Durable IDs or cookie IDs {#use-case-1}
 
 Talk about durable IDs for other destinations and cookie IDs for this one. 
 
-### Use case #2 {#use-case-2}
+### Granular control of segments to share {#use-case-2}
 
-*For social network platforms:*
+With the new self-service integration via the destination card, you can select which segments to export to Audience Manager and beyond. The legacy integration method did not allow for a granular control of which segments should be exported to the solutions.
 
-*An athletic apparel brand wants to reach existing customers through their social media accounts. The apparel brand can ingest email addresses from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to YourDestination, to display ads in their customers' social media feeds.*
+### Enable Data Management Platform use cases {#use-case-2}
+
+In Audience Manager, you can use Experience Platform segments for Data Management Platform use cases, such as:
+
+* Add [third party data](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html?lang=en#third-party-data) to your segments;
+* [Algorithmic modeling](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html?lang=en);
+* Activate your segments to cookie-based destinations that are not yet supported in the Experience Platform destinations catalog.
 
 ## Prerequisites {#prerequisites}
+
+>[!IMPORTANT]
+>
+> * You need an Audience Manager license to enable the Data Management Platform use cases mentioned in the section above.
+> * You *do not need* an Audience Manager license to share Experience Platform segments with Adobe Advertising Cloud, Adobe Target, Marketo, and other Experience Cloud solutions, via the Core Services integration.
 
 You need to be provisioned for and have a fully working instance of Audience Manager, Target, Ad Cloud etc.
 
 ### For customers who were already on the legacy segment sharing solution
 
-You need to create a Jira ticket to deprovision the existing integration. After that, you can start using the destination card
+If you are already sharing segments from Experience Platform to Audience Manager and other Core Services solutions via the [legacy segment sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam), you need to create a Jira ticket to deprovision the existing integration. See a template for a deprovisioning Jira ticket here: AM-xxxxx. What is the turnaround time for the Jira to be resolved?
 
-Add information about the migration
+After the existing legacy integration has been disabled, you can proceed to creating a connection via the self-service destination card. 
 
-* *needing to be added to an allow list*
-* *requirements for email hashing*
-* *any account specifics on your side*
-* *how to obtain an API key to connect to your platform*
-
-*You can link out to your relevant documentation if that would be useful to customers.*
+>[!IMPORTANT]
+>
+>* The segment export from Experience Platform to your other solutions will be stopped in the time between the Jira ticket resolution and the time a new connection is established through the destination card. You can minimize this downtime by creating the connection via the card as soon as the Jira ticket is closed.  
 
 ## Known limitations {#known-limitations}
 
-Currently known limitations: 
+Note the following known limitations in the beta release of the Core Services card:
 
-* no flows monitoring
-* no backfill
+* [Dataflows monitoring](/help/dataflows/ui/monitor-destinations.md) is not supported.
+* Backfills are not supported. The first export to Audience Manager or other Experience Cloud solutions does not include a historical population of the segments. 
+
+### Permissions management in Audience Manager
+
+Segments and traits in Audience Manager are protected by RBAC control. Segments coming through Segue from AEP to AAM is assigned to a specific datasource called "Experience Platform Segments" or something similar.
+Customers can apply Segment RBAC within AAM based on this Datasource. This means AEP permissions will not be carried over in AAM. They have to set new permissions in AAM for these segments
 
 ## Supported identities {#supported-identities}
 
@@ -72,8 +83,6 @@ TBD - are all values supported??
 {style="table-layout:auto"}
 
 ## Export type and frequency {#export-type-frequency}
-
-*In the table, keep only the lines that correspond to your destination. You should have one line for Export type and one line for Export frequency. Delete the values that don't apply to your destination.*
 
 Refer to the table below for information about the destination export type and frequency.
 
@@ -140,52 +149,13 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 ## Exported data / Validate data export {#exported-data}
 
-Check that your segments have successfully made it through to the Experience Cloud solution
+To validate successful data export, you can check that your segments have successfully made it through to your desired Experience Cloud solution.
 
 ### Validate Audience Manager
 
 show screenshot and blurb about how data landed successfullt
 
-*Add a paragraph about how data is exported to your destination. This would help the customer make sure that they have correctly integrated with your destination. For example, you could provide a sample JSON like the one below. Or, you could provide screenshots and information from your destination's interface that show how customers should expect segments to be populating in the destination platform.*
 
-```
-{
-  "person": {
-    "email": "yourstruly@adobe.com"
-  },
-  "segmentMembership": {
-    "ups": {
-      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
-        "lastQualificationTime": "2020-05-25T21:24:39Z",
-        "status": "exited"
-      },
-      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
-        "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
-      }
-    }
-  },
-  "identityMap": {
-    "ecid": [
-      {
-        "id": "14575006536349286404619648085736425115"
-      },
-      {
-        "id": "66478888669296734530114754794777368480"
-      }
-    ],
-    "email_lc_sha256": [
-      {
-        "id": "655332b5fa2aea4498bf7a290cff017cb4"
-      },
-      {
-        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
-      }
-    ]
-  }
-}
-
-```
 
 ## Data usage and governance {#data-usage-governance}
 
