@@ -20,11 +20,11 @@ To help you better understand how and when you should use the Experience Cloud A
 
 Talk about durable IDs for other destinations and cookie IDs for this one. 
 
-### Granular control of segments to share {#use-case-2}
+### Granular control of segments to share {#segments-control}
 
 With the new self-service integration via the destination card, you can select which segments to export to Audience Manager and beyond. The legacy integration method did not allow for a granular control of which segments should be exported to the solutions.
 
-### Enable Data Management Platform use cases {#use-case-2}
+### Enable Data Management Platform use cases {#dmp-use-cases}
 
 In Audience Manager, you can use Experience Platform segments for Data Management Platform use cases, such as:
 
@@ -140,6 +140,7 @@ When you are finished providing details for your destination connection, select 
 Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
 Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
+
 ### Map attributes and identities {#map}
 
 *Add information about supported mappings between source and target fields in the Mapping step of the activation workflow. Your destination might support exporting profile attributes, identity namespaces, or both. Some fields might be mandatory. Target attributes might be predefined or custom. Call out the important caveats and use examples, preferably with screenshots. Two examples of destination pages which you can use as reference are:*
