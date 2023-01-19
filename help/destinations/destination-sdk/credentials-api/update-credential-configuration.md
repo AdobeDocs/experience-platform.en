@@ -45,7 +45,40 @@ PUT /authoring/credentials/{INSTANCE_ID}
 
 **Request**
 
-The following request updates an existing credential configuration, configured by the parameters provided in the payload.
+The following requests update existing credential configurations, defined by the parameters provided in the payload.
+
+Select each tab below to view the corresponding payload.
+
+>[!BEGINTABS]
+
+>[!TAB Basic]
+
+```shell
+curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+    "basicAuthentication":{
+      "url":"string",
+      "username":"string",
+      "password":"string"
+   }
+}
+```
+
+| Parameter | Type | Description |
+| -------- | ----------- | ----------- |
+|`url` | String | URL of authorization provider |
+|`username` | String | Credentials configuration login username |
+|`password` | String | Credentials configuration login password |
+
+{style="table-layout:auto"}
+
+>[!TAB Amazon S3]
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -62,6 +95,94 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
    }
 }
 ```
+
+| Parameter | Type | Description |
+| -------- | ----------- | ----------- |
+|`accessId`|String|Amazon S3 access ID|
+|`secretKey`|String|Amazon S3 secret key|
+
+{style="table-layout:auto"}
+
+>[!TAB SSH]
+
+```shell
+curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+    "sshAuthentication":{
+      "username":"string",
+      "sshKey":"string"
+   }
+}
+```
+
+| Parameter | Type | Description |
+| -------- | ----------- | ----------- |
+|`username` | String | Credentials configuration login username |
+|`sshKey`|String|SSH key for SFTP with SSH authentication|
+
+{style="table-layout:auto"}
+
+
+>[!TAB Azure Data Lake Storage]
+
+```shell
+curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+    "azureAuthentication":{
+      "url":"string",
+      "tenant":"string",
+      "servicePrincipalId":"string",
+      "servicePrincipalKey":"string"
+   }
+}
+```
+
+| Parameter | Type | Description |
+| -------- | ----------- | ----------- |
+|`url` | String | URL of authorization provider |
+|`tenant`|String|Azure Data Lake Storage tenant|
+|`servicePrincipalId`|String|Azure Service Principal ID for Azure Data Lake Storage|
+|`servicePrincipalKey`|String|Azure Service Principal Key for Azure Data Lake Storage|
+
+{style="table-layout:auto"}
+
+
+>[!TAB Azure Blob Storage]
+
+```shell
+curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+    "azureConnectionStringAuthentication":{
+      "connectionString":"string"
+   }
+}
+```
+
+| Parameter | Type | Description |
+| -------- | ----------- | ----------- |
+|`connectionString`|String|Azure Blob Storage connection string|
+
+{style="table-layout:auto"}
+
+>[!ENDTABS]
 
 **Response**
 

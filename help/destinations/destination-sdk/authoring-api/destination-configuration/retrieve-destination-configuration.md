@@ -11,21 +11,6 @@ title: Retrieve a destination configuration
 
 This page exemplifies the API request and payload that you can use to retrieve information about an existing destination configuration, using the `/authoring/destination` API endpoint.
 
-For a detailed description of the capabilities of a destination configuration, read the following articles:
-
-* [Customer authentication configuration](../../functionality/destination-configuration/customer-authentication.md)
-* [OAuth2 authentication](../../functionality/destination-configuration/oauth2-authentication.md)
-* [Customer data fields](../../functionality/destination-configuration/customer-data-fields.md)
-* [UI attributes](../../functionality/destination-configuration/ui-attributes.md)
-* [Schema configuration](../../functionality/destination-configuration/schema-configuration.md)
-* [Identities and attributes](../../functionality/destination-configuration/identities-attributes.md)
-* [Destination delivery](../../functionality/destination-configuration/destination-delivery.md)
-* [Segment mapping](../../functionality/destination-configuration/segment-mapping.md)
-* [Audience metadata configuration](../../functionality/destination-configuration/audience-metadata-configuration.md)
-* [Aggregation policy](../../functionality/destination-configuration/aggregation-policy.md)
-* [Batch configuration](../../functionality/destination-configuration/batch-configuration.md)
-* [Historical profile qualifications](../../functionality/destination-configuration/historical-profile-qualifications.md)
-
 ## Getting started with destination configuration API operations {#get-started}
 
 Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
@@ -70,7 +55,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
-
 ```
 
 | Parameter | Description |

@@ -46,7 +46,6 @@ POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 The following request calls your destination's REST API endpoint. The request is configured by the `{DESTINATION_INSTANCE_ID}` query parameter.
 
 ```shell
-
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
@@ -54,7 +53,6 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
-
 ```
 
 **Response**
