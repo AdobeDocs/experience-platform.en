@@ -1,6 +1,7 @@
 ---
 title: Meta Conversions API Extension Overview
 description: Learn about the Meta Conversions API extension for event forwarding in Adobe Experience Platform.
+exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
 ---
 # [!DNL Meta Conversions API] extension overview
 
@@ -8,13 +9,15 @@ The [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing
 
 Using the [!DNL Meta Conversions API] extension, you can leverage the API's capabilities in your [event forwarding](../../../ui/event-forwarding/overview.md) rules to send data to [!DNL Meta] from the Adobe Experience Platform Edge Network. This document covers how to install the extension and use its capabilities in an event forwarding [rule](../../../ui/managing-resources/rules.md).
 
->[!NOTE]
->
->If you are trying to send events to [!DNL Meta] from the client side rather than from the server side, use the [[!DNL Meta Pixiel] tag extension](../../client/meta/overview.md) instead.
-
 ## Prerequisites
 
-In order to use the extension, you must access to event forwarding and have a valid [!DNL Meta] account with access to [!DNL Ad Manager] and [!DNL Event Manager]. Specifically, you must copy the ID of an existing [[!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755?id=1205376682832142) (or [create a new [!DNL Pixel]](https://www.facebook.com/business/help/952192354843755) instead) so the extension can be configured to your account.
+It is strongly recommended to use [!DNL Meta Pixel] and the [!DNL Conversions API] to share and send the same events from the client side and server side, respectively, since this may help recover events that were not picked up by [!DNL Meta Pixel]. Before installing the [!DNL Conversions API] extension, see the guide on the [[!DNL Meta Pixel] extension](../../client/meta/overview.md) for steps on how to integrate it in your client-side tag implementations.
+
+>[!NOTE]
+>
+>The section on [event deduplication](#deduplication) later in this document covers the steps to ensure the same event is not used twice, as it may be received from both the browser and the server.
+
+In order to use the [!DNL Conversions API] extension, you must have access to event forwarding and have a valid [!DNL Meta] account with access to [!DNL Ad Manager] and [!DNL Event Manager]. Specifically, you must copy the ID of an existing [[!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755?id=1205376682832142) (or [create a new [!DNL Pixel]](https://www.facebook.com/business/help/952192354843755) instead) so the extension can be configured to your account.
 
 ## Install the extension
 
@@ -32,9 +35,15 @@ When finished, select **[!UICONTROL Save]**
 
 ![The [!DNL Pixel] ID provided as a data element in the extension configuration view.](../../../images/extensions/server/meta/configure.png)
 
-The extension is installed and you can now employ its capabilities in your tag rules.
+The extension is installed and you can now employ its capabilities in your event forwarding rules.
 
 ## Configure an event forwarding rule {#rule}
+
+This section covers how to use the [!DNL Conversions API] extension in a generic event forwarding rule. In practice, you should configure several rules in order to send all accepted [standard events](https://developers.facebook.com/docs/meta-pixel/reference) via [!DNL Meta Pixel] and [!DNL Conversions API].
+
+>[!NOTE]
+>
+>Events should be [sent in real time](https://www.facebook.com/business/help/379226453470947?id=818859032317965) or as close to real time as possible for better ad campaign optimization.
 
 Start creating a new event forwarding rule and configure its conditions as desired. When selecting the actions for the rule, select **[!UICONTROL Meta Conversions API Extension]** for the extension, then select **[!UICONTROL Send Conversions API Event]** for the action type.
 
@@ -44,8 +53,8 @@ Controls appear that allow you to configure the event data that will be sent to 
 
 | Config section | Description |
 | --- | --- |
-| [!UICONTROL Server Event Parameters] | General information about the event, including the time it occurred and the source action that triggered it. Refer to the [[!DNL Conversions API] documentation](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event) for more information on these parameters.<br><br>You also have the option to **[!UICONTROL Enable Limited Data Use]** to help comply with customer opt-outs. See the [!DNL Conversions API] documentation on [data processing options](https://developers.facebook.com/docs/marketing-apis/data-processing-options/) for details on this feature. |
-| [!UICONTROL Customer Information Parameters] | User identity data that is used to attribute the event to a customer. Some of these values must be hashed before they can be sent to the API. Refer to the [[!DNL Conversions API] documentation](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters) for more information on these parameters. |
+| [!UICONTROL Server Event Parameters] | General information about the event, including the time it occurred and the source action that triggered it. Refer to the [!DNL Meta] developer documentation for more information on the [standard event parameters](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event) accepted by the [!DNL Conversions API].<br><br>If you are using both [!DNL Meta Pixel] and the [!DNL Conversions API] to send events, make sure to include both an **[!UICONTROL Event Name]** (`event_name`) and **[!UICONTROL Event ID]** (`event_id`) with every event, since these values are used for [event deduplication](#deduplication).<br><br>You also have the option to **[!UICONTROL Enable Limited Data Use]** to help comply with customer opt-outs. See the [!DNL Conversions API] documentation on [data processing options](https://developers.facebook.com/docs/marketing-apis/data-processing-options/) for details on this feature. |
+| [!UICONTROL Customer Information Parameters] | User identity data that is used to attribute the event to a customer. Some of these values must be hashed before they can be sent to the API.<br><br>To ensure a good common API connection and high event match quality (EMQ), it is recommended that you send all [accepted customer information parameters](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters) alongside server events. These parameters should also be [prioritized based on their importance and impact on EMQ](https://www.facebook.com/business/help/765081237991954?id=818859032317965). |
 | [!UICONTROL Custom Data] | Additional data to be used for ads delivery optimization, provided in the form of a JSON object. Refer to the [[!DNL Conversions API] documentation](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data) for more information on the accepted properties for this object.<br><br>If you are sending a purchase event, you must use this section to provide the required attributes `currency` and `value`.  |
 | [!UICONTROL Test Event] | This option is used to verify whether your configuration is causing server events to be received by [!DNL Meta] as expected. To use this feature, select the **[!UICONTROL Send as Test Event]** checkbox, and then provide a test event code of your choice in the input below. Once the event forwarding rule is deployed, if you configured the extension and action correctly you should seeing activities appearing within the **[!DNL Test Events]** view in [!DNL Meta Events Manager]. |
 
@@ -57,6 +66,19 @@ When finished, select **[!UICONTROL Keep Changes]** to add the action to the rul
 
 When you are satisfied with the rule, select **[!UICONTROL Save to Library]**. Finally, publish a new event forwarding [build](../../../ui/publishing/builds.md) to enable the changes made to the library.
 
+## Event deduplication {#deduplication}
+
+As mentioned in the [prerequisites section](#prerequisites), it is recommended that you use both the [!DNL Meta Pixel] tag extension and the [!DNL Conversions API] event forwarding extension to send the same events from the client and server in a redundant setup. This can help recover events that were not picked up by one extension or the other.
+
+If you are sending different event types from the client and server with no overlap between the two, then deduplication is not necessary. However, if any single event is shared by both [!DNL Meta Pixel] and the [!DNL Conversions API], you must ensure that these redundant events are deduplicated so that your reporting is not adversely affected.
+
+When sending shared events, make sure that you are including an event ID and name with every event that you send from both the client and server. When multiple events with the same ID and name are received, [!DNL Meta] automatically employs several strategies to deduplicate them and keep the most relevant data. See the [!DNL Meta] documentation on [deduplication for [!DNL Meta Pixel] and [!DNL Conversions API] events](https://www.facebook.com/business/help/823677331451951?id=1205376682832142) for details on this process.
+
 ## Next steps
 
-This guide covered how to send server-side event data to [!DNL Meta] using the [!DNL Meta Conversions API] extension. For more information on tags and event forwarding, refer to the [tags overview](../../../home.md).
+This guide covered how to send server-side event data to [!DNL Meta] using the [!DNL Meta Conversions API] extension. From here, it is recommended to expand your integration by connecting more [!DNL Pixels] and sharing more events when applicable. Doing either of the following can help further improve your ad performance:
+
+* Connect any other [!DNL Pixels] that are not yet connected to a [!DNL Conversions API] integration.
+* If you are sending certain events exclusively through [!DNL Meta Pixel] on the client side, send these same events to the [!DNL Conversions API] from the server side as well.
+
+See the [!DNL Meta] documentation on [best practices for the [!DNL Conversions API]](https://www.facebook.com/business/help/308855623839366?id=818859032317965) for more guidance on how to effectively implement your integration. For more general information on tags and event forwarding in Adobe Experience Cloud, refer to the [tags overview](../../../home.md).

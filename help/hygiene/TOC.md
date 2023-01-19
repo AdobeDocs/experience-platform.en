@@ -17,5 +17,6 @@ feature: Data Hygiene
 * Data Hygiene API {#api}
   * [Overview](./api/overview.md)
   * [Dataset expirations](./api/dataset-expiration.md)
+  * [Record deletes](./api/jobs.md)
   * [Record deletes](./api/workorder.md)
   * [Quota](./api/quota.md)

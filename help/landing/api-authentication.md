@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Authenticate;access
 solution: Experience Platform
 title: Authenticate and Access Experience Platform APIs
-topic-legacy: tutorial
 type: Tutorial
 description: This document provides a step-by-step tutorial for gaining access to an Adobe Experience Platform developer account in order to make calls to Experience Platform APIs.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42

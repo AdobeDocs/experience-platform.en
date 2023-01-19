@@ -2,7 +2,6 @@
 solution: Experience Platform
 title: Export XDM Schemas in the UI
 description: Learn how to export an existing schema to a different sandbox or IMS Organization in the Adobe Experience Platform user interface.
-topic-legacy: user guide
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 ---

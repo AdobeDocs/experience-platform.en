@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;target mapping;Target mapping
 solution: Experience Platform
 title: Mapping Adobe Target Event Data to XDM
-topic-legacy: overview
 description: Learn how to map Adobe Target event fields to an Experience Data Model (XDM) schema for use in Adobe Experience Platform.
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 ---

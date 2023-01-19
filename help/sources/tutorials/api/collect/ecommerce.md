@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Collect eCommerce data;eCommerce data
 solution: Experience Platform
 title: Create a Dataflow for E-commerce Sources using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party eCommerce system and ingesting it into Platform using source connectors and APIs.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
@@ -641,7 +640,7 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect data e-commerce on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect data e-commerce on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
-*   [Real-time Customer Profile overview](../../../../profile/home.md)
+*   [Real-Time Customer Profile overview](../../../../profile/home.md)
 *   [Data Science Workspace overview](../../../../data-science-workspace/home.md)

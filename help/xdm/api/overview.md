@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Schema Registry API Guide
 description: The Schema Registry API allows developers to programmatically manage all schemas and related Experience Data Model (XDM) resources within Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
-topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
 ---
 # [!DNL Schema Registry] API guide
@@ -24,7 +23,9 @@ To view all available endpoints and CRUD operations, visit the [Schema Registry 
 
 XDM schemas represent and validate the structure and format of data ingested into Platform. A schema is composed of a class and zero or more schema field groups. You can create, view, edit, and delete schemas using the `/schemas` endpoint. To learn how to use this endpoint, see the [schemas endpoint guide](./schemas.md).
 
-For a step-by-step guide on how to create a complete schema in the Schema Registry API, including creating and adding field groups and data types, see the [API schema creation tutorial](../tutorials/create-schema-api.md).
+For a step-by-step guide on how to manually create a complete schema in the Schema Registry API, including creating and adding field groups and data types, see the [API schema creation tutorial](../tutorials/create-schema-api.md).
+
+If you are ingesting CSV data, see the section on [CSV to schema conversion](#csv-to-schema).
 
 ## Behaviors
 
@@ -48,7 +49,7 @@ Descriptors are sets of metadata that are assigned to specific fields within a s
 
 ## Unions
 
-While Platform allows you to compose schemas for particular use cases, it also allows you to compose a "union" of schemas belonging to a specific class. A union schema aggregates the fields of all schemas that share the same class into a single representation. By enabling a schema for use with [Real-time Customer Profile](../../profile/home.md), that schema becomes included in the union for its particular class. As such, union schemas cannot be edited directly, and can only be affected by including or excluding schemas for use in Profile.
+While Platform allows you to compose schemas for particular use cases, it also allows you to compose a "union" of schemas belonging to a specific class. A union schema aggregates the fields of all schemas that share the same class into a single representation. By enabling a schema for use with [Real-Time Customer Profile](../../profile/home.md), that schema becomes included in the union for its particular class. As such, union schemas cannot be edited directly, and can only be affected by including or excluding schemas for use in Profile.
 
 To learn how to view unions in the Schema Registry API, see the [unions endpoint guide](./unions.md).
 
@@ -57,6 +58,10 @@ To learn how to view unions in the Schema Registry API, see the [unions endpoint
 You can automatically generate an XDM schema using a CSV file as a template, allowing you to create templates to bulk-import schema fields and cut down on manual API or UI work.
 
 See the [CSV to schema conversion endpoint guide](./export.md) for more information.
+
+>[!NOTE]
+>
+>You can also us the UI to [map a CSV to a schema using AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md) (currently in beta).
 
 ## Export {#export}
 

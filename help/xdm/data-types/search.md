@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;search;datatype;data-type;data type;
 solution: Experience Platform
 title: Search Data Type
-topic-legacy: overview
 description: This document provides an overview of the Search Experience Data Model (XDM) data type.
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
 ---

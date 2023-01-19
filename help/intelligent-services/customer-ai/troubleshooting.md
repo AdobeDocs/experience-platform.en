@@ -3,7 +3,6 @@ keywords: Experience Platform;getting started;customer ai;popular topics;custome
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Customer AI error troubleshooting
-topic-legacy: Getting started
 description: Find answers to common errors in Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
@@ -20,7 +19,7 @@ In the event that **[!UICONTROL Failed]** or **[!UICONTROL Training issue]** is 
 
 ## Unable to access Customer AI in Chrome incognito
 
-Loading errors in Google Chrome's incognito mode are present because of updates in Google Chrome’s incognito mode security settings. The issue is actively being worked on with Chrome to make experience.adobe.com a trusted domain.
+Loading errors in Google Chrome's incognito mode are present because of updates in Google Chrome's incognito mode security settings. The issue is actively being worked on with Chrome to make experience.adobe.com a trusted domain.
 
 <img src='./images/errors/error.PNG' width=500 /><br />
 

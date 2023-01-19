@@ -57,7 +57,7 @@ See the documentation for more information on [[!DNL Profiles]](../../dashboards
 
 In Platform, data is ingested from many different sources, analyzed within the system, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows.
 
-Dataflows are a representation of jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by Identity Service and Real-time Customer Profile before ultimately being activated to destinations.
+Dataflows are a representation of jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by Identity Service and Real-Time Customer Profile before ultimately being activated to destinations.
 
 **New features**
 

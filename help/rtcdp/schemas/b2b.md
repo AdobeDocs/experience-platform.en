@@ -9,7 +9,7 @@ Adobe Real-Time Customer Data Platform B2B Edition provides several standard [Ex
 
 >[!IMPORTANT]
 >
->You must have access to Real-Time CDP B2B Edition in order for B2B schemas to participate in [Real-time Customer Profile](../../profile/home.md).
+>You must have access to Real-Time CDP B2B Edition in order for B2B schemas to participate in [Real-Time Customer Profile](../../profile/home.md).
 
 The following standard classes are provided in Real-Time CDP B2B Edition:
 

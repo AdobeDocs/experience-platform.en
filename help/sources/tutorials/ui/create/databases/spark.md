@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Azure HDInsights;Apache Spark
 solution: Experience Platform
 title: Create an Apache Spark on Azure HDInsights  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create an Apache Spark on Azure HDInsights source connection using the Adobe Experience Platform UI.
 exl-id: 30d0b740-cec4-486f-9c9b-1579fd04f28b
@@ -22,7 +21,7 @@ This tutorial requires a working understanding of the following components of Ad
 *   [Experience Data Model (XDM) System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
     *   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-*   [Real-time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+*   [Real-Time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 If you already have a valid [!DNL Spark] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/databases.md)
 
