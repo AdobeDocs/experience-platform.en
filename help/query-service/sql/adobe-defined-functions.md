@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;adobe defined functions;sql;
 solution: Experience Platform
 title: Adobe-Defined SQL Functions in Query Service
-topic-legacy: functions
 description: This document provides information for Adobe-defined functions available in Adobe Experience Platform Query Service.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
 ---

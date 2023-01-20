@@ -60,7 +60,7 @@ Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow s
 
 ## Next steps
 
-While an Audience Manager dataflow is active, incoming data is automatically ingested into Real-time Customer Profiles. You can now utilize this incoming data and create audience segments using Platform Segmentation Service. See the following documents for more details:
+While an Audience Manager dataflow is active, incoming data is automatically ingested into Real-Time Customer Profiles. You can now utilize this incoming data and create audience segments using Platform Segmentation Service. See the following documents for more details:
 
-* [Real-time Customer Profile overview](../../../../../profile/home.md)
+* [Real-Time Customer Profile overview](../../../../../profile/home.md)
 * [Segmentation Service overview](../../../../../segmentation/home.md)

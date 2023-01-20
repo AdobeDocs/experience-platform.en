@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;troubleshooting;access control
 solution: Experience Platform
 title: Access Control Troubleshooting Guide
-topic-legacy: troubleshooting guide
 description: This document provides answers to frequently asked questions about access control in Adobe Experience Platform.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
 ---

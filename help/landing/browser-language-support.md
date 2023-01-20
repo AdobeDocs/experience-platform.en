@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
 solution: Experience Platform
 title: Browser and Language Support for the Experience Platform UI
-topic-legacy: getting started
 description: Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
 ---

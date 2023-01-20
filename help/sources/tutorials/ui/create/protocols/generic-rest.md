@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;Generic REST API
 title: Create a Generic REST API  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Generic REST API source connection using the Adobe Experience Platform UI.
 ---

@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Connect to batch destinations and activate data using the Flow Service API
 description: Step-by-step instructions to use the Flow Service API to create a batch cloud storage or email marketing destination in Experience Platform and activate data
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 ---
@@ -30,7 +29,7 @@ If you prefer to use the Platform user interface to connect to a destination and
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
 *   [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-*   [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] allows you to build segments and generate audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-time Customer Profile] data.
+*   [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] allows you to build segments and generate audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-Time Customer Profile] data.
 *   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you need to know in order to activate data to batch destinations in Platform.

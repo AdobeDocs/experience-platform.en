@@ -22,7 +22,7 @@ If the field is a root-level attribute under the tenant ID object, its path imme
 
 If a required field is nested within an object that is not marked as required itself, however, then the nested field does not appear under **[!UICONTROL Required fields]** in the left rail.
 
-In the example below, the `loyaltyId` field is set as required, but its parent object `loyalty` is not. In this case, no validation errors would occur if `loyalty` was excluded when ingesting data, even though the child field `loyaltyId` is marked as required. In other words, while `loyalty` is optional it must contain a `loyaltyId` field in the event that it is included.
+In the example below, the `internalSKU` field is set as required, but its parent object `SKUs` is not. In this case, no validation errors would occur if `SKUs` is excluded when ingesting data, even though the child field `internalSKU` is marked as required. In other words, while `SKUs` is optional it must contain a `internalSKU` field in the event that it is included.
 
 ![Nested required field](../../images/ui/fields/required/nested.png)
 

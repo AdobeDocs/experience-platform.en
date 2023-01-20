@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;event hub;Azure event hub;Event hub
 solution: Experience Platform
 title: Create an Azure Event Hubs Source Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to an Azure Event Hubs account using the Flow Service API.
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
@@ -30,7 +29,7 @@ In order for [!DNL Flow Service] to connect with your [!DNL Event Hubs] account,
 | `sasKeyName` | The name of the authorization rule, which is also known as the SAS key name. |
 | `sasKey` | The primary key of the [!DNL Event Hubs] namespace. The `sasPolicy` that the `sasKey` corresponds to must have `manage` rights configured in order for the [!DNL Event Hubs] list to be populated. |
 | `namespace` | The namespace of the [!DNL Event Hubs] you are accessing. An [!DNL Event Hubs] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The [!DNL Event Hubs] connection specification ID is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The [!DNL Event Hubs] connection specification ID is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 
 For more information about these values, refer to [this Event Hubs document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 

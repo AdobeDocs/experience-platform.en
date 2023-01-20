@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;identity graph viewer;Identity graph viewer;graph viewer;Graph viewer;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
 solution: Experience Platform
 title: Identity Graph Viewer Overview
-topic-legacy: tutorial
 description: An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
 ---

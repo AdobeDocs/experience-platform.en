@@ -2,15 +2,18 @@
 keywords: Experience Platform;home;popular topics;data governance;data usage label;policy service;data usage labels user guide
 solution: Experience Platform
 title: Manage Data Usage Labels in the UI
-topic-legacy: labels
 description: This guide covers steps for working with data usage labels within the Adobe Experience Platform user interface.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 ---
 # Manage data usage labels in the UI
 
-This user guide covers steps for working with data usage labels within the [!DNL Experience Platform] user interface. Before using the guide, please see the [Data Governance overview](../home.md) for a more robust introduction to the Data Governance framework.
+This user guide covers steps for working with data usage labels within the [!DNL Experience Platform] user interface.
 
 ## Manage labels at the dataset level
+
+>[!IMPORTANT]
+>
+>Applying labels at the dataset level is only supported for data governance use cases. If you are trying to create access policies for the data, you must [apply labels to the schema](../../xdm/tutorials/labels.md) that the dataset is based on. See the overview on [attribute-based access control](../../access-control/abac/overview.md) for more information.
 
 In order to manage data usage labels at the dataset level, you must select an existing dataset or create a new one. After logging into Adobe Experience Platform, select **[!UICONTROL Datasets]** on the left-navigation to open the **[!UICONTROL Datasets]** workspace. This page lists all created datasets belonging to your organization, along with useful details related to each dataset. 
 
@@ -69,6 +72,10 @@ The **[!UICONTROL Show Inherited Labels]** toggle is on by default, which allows
 ![Hide inherited labels](../images/labels/inherited-labels.png)
 
 ## Manage labels at the dataset field level
+
+>[!IMPORTANT]
+>
+>Applying labels at the dataset field level is only supported for data governance use cases. If you are trying to create access policies for the data, you must [apply labels to the schema](../../xdm/tutorials/labels.md) that the dataset is based on. See the overview on [attribute-based access control](../../access-control/abac/overview.md) for more information.
 
 Continuing the workflow for [adding and editing data usage labels at the dataset level](#add-labels), you can also manage field-level labels within the **[!UICONTROL Data Governance]** workspace for that dataset. 
 

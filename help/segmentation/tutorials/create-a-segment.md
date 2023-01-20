@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;segment;Segment;create segment;segmentation;create a segment;Segmentation Service;
 solution: Experience Platform
 title: Create a Segment Using the Segmentation Service API
-topic-legacy: tutorial
 type: Tutorial
 description: Follow this tutorial to learn how to develop, test, preview, and save a segment definition using the Adobe Experience Platform Segmentation Service API.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
@@ -17,8 +16,8 @@ For information on how to build segments using the user interface, please see th
 
 This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. Before beginning this tutorial, please review the documentation for the following services:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Allows you to build audience segments from Real-Time Customer Profile data.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
@@ -49,7 +48,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Develop a segment definition
 
-The first step in segmentation is to define a segment, represented in a construct called a segment definition. A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). This object is also called a PQL predicate. PQL predicates define the rules for the segment based on conditions related to any record or time series data you supply to [!DNL Real-time Customer Profile]. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
+The first step in segmentation is to define a segment, represented in a construct called a segment definition. A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). This object is also called a PQL predicate. PQL predicates define the rules for the segment based on conditions related to any record or time series data you supply to [!DNL Real-Time Customer Profile]. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
 
 You can create a new segment definition by making a POST request to the `/segment/definitions` endpoint in the [!DNL Segmentation] API. The following example outlines how to format a definition request, including what information is required in order for a segment to be defined successfully.
 
@@ -57,7 +56,7 @@ For a detailed explanation on how to define a segment, please read the [segment 
 
 ## Estimate and preview an audience {#estimate-and-preview-an-audience}
 
-As you develop your segment definition, you can use the estimate and preview tools within [!DNL Real-time Customer Profile] to view summary-level information to help ensure you are isolating the expected audience. Estimates provide statistical information on a segment definition, such as the projected audience size and confidence interval. Previews provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect.
+As you develop your segment definition, you can use the estimate and preview tools within [!DNL Real-Time Customer Profile] to view summary-level information to help ensure you are isolating the expected audience. Estimates provide statistical information on a segment definition, such as the projected audience size and confidence interval. Previews provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect.
 
 By estimating and previewing your audience, you can test and optimize your PQL predicates until they produce a desireable result, where they can then be used in an updated segment definition.
 

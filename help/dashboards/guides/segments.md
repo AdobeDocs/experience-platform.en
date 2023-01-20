@@ -29,7 +29,7 @@ To navigate to the [!UICONTROL Segments] dashboard within the Platform UI, selec
 >
 >If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the [!UICONTROL Segments] dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with segmentation.
 
-![The Segments dashboard Overview tab.](../images/segments/dashboard-overview.png)
+![The Segments dashboard Overview tab with Segments and Overview highlighted.](../images/segments/dashboard-overview.png)
 
 ### Modify the [!UICONTROL Segments] dashboard {#modify}
 
@@ -93,7 +93,7 @@ To learn more about each of the available standard widgets, select the name of a
 
 The **[!UICONTROL Audience size]** widget displays the total number of merged profiles within the selected segment at the time the snapshot was taken. This number is the result of applying the segment merge policy to your Profile data in order to merge profile fragments together to form a single profile for each individual in the segment. 
 
-For more information on fragments and merged profiles, refer to the [Real-time Customer Profile overview](../../profile/home.md).
+For more information on fragments and merged profiles, refer to the [Real-Time Customer Profile overview](../../profile/home.md).
 
 ![The Segments dashboard overview with the Audience size widget highlighted.](../images/segments/audience-size.png)
 
@@ -198,7 +198,7 @@ The **[!UICONTROL Profiles by identity]** widget displays the breakdown of ident
 
 Select **[!UICONTROL Captions]** to open the automatic captions dialog.
 
-![The Profiles by identity captions dialog.](../images/segments/profiles-by-identity.png)
+![The Segments dashboard overview with the Profiles by identity widget and Captions option highlighted.](../images/segments/profiles-by-identity.png)
 
 A machine learning model automatically generates data insights by analyzing the overall distribution and key dimensions of the data.
 
