@@ -1,8 +1,8 @@
-Attribution AI and Data Governance
+## Attribution AI and Data Governance
 
 Generally speaking, any data governance-related settings in Attribution AI are inherited from Adobe Experience Platform.
 
-Data Governance
+## Data Governance
 
 The integration between Attribution AI and Adobe Experience Platform Data Governance allows for labeling of sensitive Attribution AI data and enforcement of privacy policies.
 
@@ -14,21 +14,18 @@ This integration allows you to manage compliance more easily. Data stewards in y
 
 Learn more
 
-
-
-GDPR
+## GDPR
 
 Attribution AI will not subscribe to the General Data Protection Regulation (GDPR) Central Service directly and will instead inherit all dataset changes made in Experience Platform. We depend on Platform Data Lake to enforce GDPR deletion requests and notify us when they’ve been completed on Pipeline. We listen to Pipeline and synchronize all changes to affected batches in Attribution AI for raw score datasets.
 
-CCPA
+## CCPA
 
 The California Consumer Privacy Act (CCPA) enhances privacy rights and consumer protection for residents of California, United States. This Act became effective on January 1, 2020.
+
 The CCPA provides new data privacy rights to California residents, such as the right to access and delete their personal data, to know whether their personal data is sold or disclosed (and to whom), and to refuse the sale of their personal data.
 In accordance with the CCPA, the Privacy Service supports requests to opt out from the selling of personal data.
 
-
-
-More help on this feature
+## More help on this feature
 
 Getting Started in Attribution AI
 Adobe Experience Platform & Applications
