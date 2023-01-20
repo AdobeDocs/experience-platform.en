@@ -25,8 +25,9 @@ In order to connect [!DNL PubSub] to Platform, you must provide a valid value fo
 
 | Credential | Description |
 | ---------- | ----------- |
-| `projectId` | The project ID required to authenticate [!DNL PubSub]. |
-| `credentials` | The credential or private key ID required to authenticate [!DNL PubSub]. |
+| Project ID | The project ID required to authenticate [!DNL PubSub]. |
+| Credentials | The credential or private key ID required to authenticate [!DNL PubSub]. |
+| Topic ID | The ID for the [!DNL PubSub] resource that represents a feed of messages. |
 
 For more information about these values, see the following [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication) document. If you are using service account-based authentication, see the following [PubSub guide](https://cloud.google.com/docs/authentication/production#create_service_account) for steps on how to generate your credentials.
 
@@ -38,9 +39,9 @@ Once you have gathered your required credentials, you can follow the steps below
 
 ## Connect your [!DNL PubSub] account
 
-In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account..
 
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
+You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
 Under the [!UICONTROL Cloud storage] category, select **[!UICONTROL Google PubSub]**, and then select **[!UICONTROL Add data]**.
 
@@ -56,7 +57,9 @@ To use an existing account, select the [!DNL PubSub] account you want to create 
 
 ### New account
 
-If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and your [!DNL PubSub] authentication credentials on the input form. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
+If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and your [!DNL PubSub] authentication credentials on the input form. During this step, you can define the data that your account will have access to by providing the topic ID. When a topic ID is provided, you will only be able to access subscriptions that are associated with the given topic ID.
+
+When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
 ![new](../../../../images/tutorials/create/google-pubsub/new.png)
 
