@@ -22,8 +22,8 @@ Attribution AI is used to attribute credits to touchpoints leading to conversion
 
 | Feature | Description |
 | ------- | ----------- |
-| HIPAA readiness | Adobe now supports receiving, using, maintaining, or transmitting Protected Health Information in Customer AI and other Experience Platform-based applications for Healthcare Shield customer only. Healthcare Shield is for healthcare customers that are either a Covered Entity or Business Associate in the US only. For more information, read the documentation on [HIPAA and Adobe Products and Services](https://www.adobe.com/trust/compliance/hipaa-ready.html)|
-|Edit Additional Score Dataset Columns | Users can now add or remove additional score data set columns (reporting columns) when they edit existing instances. This extends the flexibility of the attribution scores to provide users insights to additional dimensions after an instance has already been created. See the [Attribution UI guide](../../intelligent-services/attribution-ai/user-guide.md) to learn more.|
+| HIPAA readiness | You can now receive, use, maintain, or transmit Protected Health Information in Customer AI and other Experience Platform-based applications for Healthcare Shield customers only. Healthcare Shield is for healthcare customers that are either a Covered Entity or Business Associate in the US only. For more information, read the documentation on [HIPAA and Adobe Products and Services](https://www.adobe.com/trust/compliance/hipaa-ready.html)|
+|Edit Additional Score Dataset Columns | You can now add or remove additional score dataset columns (reporting columns) when you edit existing instances. This extends the flexibility of the attribution scores to provide you with insights to additional dimensions after an instance has already been created. See the [Attribution UI guide](../../intelligent-services/attribution-ai/user-guide.md) to learn more.|
 
 For more information on [!DNL AI/ML services], please see the [[!DNL AI/ML services] overview](../../intelligent-services/home.md).
 
@@ -35,6 +35,6 @@ Customer AI available in Real-Time Customer Data Platform, is used to generate c
 
 | Feature | Description |
 | ------- | ----------- |
-| HIPAA readiness | Adobe now supports receiving, using, maintaining, or transmitting Protected Health Information in Customer AI and other Experience Platform-based applications for Healthcare Shield customer only. Healthcare Shield is for healthcare customers that are either a Covered Entity or Business Associate in the US only. For more information, read the documentation on [HIPAA and Adobe Products and Services](https://www.adobe.com/trust/compliance/hipaa-ready.html)|
+| HIPAA readiness | You can now receive, use, maintain, or transmit Protected Health Information in Customer AI and other Experience Platform-based applications for Healthcare Shield customers only. Healthcare Shield is for healthcare customers that are either a Covered Entity or Business Associate in the US only. For more information, read the documentation on [HIPAA and Adobe Products and Services](https://www.adobe.com/trust/compliance/hipaa-ready.html)|
 
 For more information on [!DNL AI/ML services], please see the [[!DNL AI/ML services] overview](../../intelligent-services/home.md).
