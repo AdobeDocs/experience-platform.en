@@ -3,9 +3,11 @@ title: (Beta) Experience Cloud Audiences
 description: Learn how to share segments from Experience Platform to various Experience Platform solutions
 ---
 
-# (Beta) Experience Cloud Audiences connection {#your-destination}
+# (Beta) [!UICONTROL Experience Cloud Audiences] connection {#your-destination}
 
-This destination allows you to share segments from Experience Platform to various Experience Platform solutions, like Audience Manager, Advertising Cloud, Target, or Marketo.
+This destination allows you to share segments from Experience Platform to various Experience Platform solutions, like Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target, or Marketo.
+
+![The Experience Cloud Audiences destination, highlighted in the destinations catalog.](/help/destinations/assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png)
 
 >[!IMPORTANT]
 >
@@ -14,15 +16,7 @@ This destination allows you to share segments from Experience Platform to variou
 
 ## Use cases and benefits {#use-cases}
 
-To help you better understand how and when you should use the Experience Cloud Audiences destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
-
-### Durable IDs or cookie IDs {#use-case-1}
-
-Talk about durable IDs for other destinations and cookie IDs for this one. 
-
-### Granular control of segments to share {#segments-control}
-
-With the new self-service integration via the destination card, you can select which segments to export to Audience Manager and beyond. The legacy integration method did not allow for a granular control of which segments should be exported to the solutions.
+To help you better understand how and when you should use the [!UICONTROL Experience Cloud Audiences] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
 ### Enable Data Management Platform use cases {#dmp-use-cases}
 
@@ -31,6 +25,16 @@ In Audience Manager, you can use Experience Platform segments for Data Managemen
 * Add [third party data](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html?lang=en#third-party-data) to your segments;
 * [Algorithmic modeling](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html?lang=en);
 * Activate your segments to cookie-based destinations that are not yet supported in the Experience Platform destinations catalog.
+
+### Granular control of exported segments {#segments-control}
+
+Using the new self-service segment sharing integration via the Experience Cloud Audiences destination, you can select which segments to export to Audience Manager and beyond. The legacy segment sharing integration did not allow for a granular control of which segments should be exported to the solutions.
+
+### Durable IDs or cookie IDs {#use-case-1}
+
+Talk about durable IDs for other destinations and cookie IDs for this one. 
+
+### Share  {#use-case-1}
 
 ## Prerequisites {#prerequisites}
 
@@ -43,7 +47,7 @@ You need to be provisioned for and have a fully working instance of Audience Man
 
 ### For customers who were already on the legacy segment sharing solution
 
-If you are already sharing segments from Experience Platform to Audience Manager and other Core Services solutions via the [legacy segment sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam), you need to create a Jira ticket to deprovision the existing integration. See a template for a deprovisioning Jira ticket here: AM-xxxxx. What is the turnaround time for the Jira to be resolved?
+If you are already sharing segments from Experience Platform to Audience Manager and other Core Services solutions via the [legacy segment sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam), you need to create a Jira ticket to deprovision the existing integration. See a template for a deprovisioning Jira ticket here: AAM-xxxxx. What is the turnaround time for the Jira to be resolved?
 
 After the existing legacy integration has been disabled, you can proceed to creating a connection via the self-service destination card. 
 
@@ -56,11 +60,13 @@ After the existing legacy integration has been disabled, you can proceed to crea
 Note the following known limitations in the beta release of the Core Services card:
 
 * [Dataflows monitoring](/help/dataflows/ui/monitor-destinations.md) is not supported.
+* When connecting to the destination, you can see an option to [enable dataflow alerts](#enable-alerts). Though visible in the UI, the enable alerts option is not supported in the beta release.
 * Backfills are not supported. The first export to Audience Manager or other Experience Cloud solutions does not include a historical population of the segments. 
+* In the beta release, you can create a single destination connection to the Experience Cloud Audiences destination, across all sandboxes belonging to your Experience Platform organization.
 
 ### Permissions management in Audience Manager
 
-Segments and traits in Audience Manager are protected by RBAC control. Segments coming through Segue from AEP to AAM is assigned to a specific datasource called "Experience Platform Segments" or something similar.
+Segments and traits in Audience Manager are protected by RBAC controls. Segments coming through Segue from AEP to AAM is assigned to a specific datasource called "Experience Platform Segments" or something similar.
 Customers can apply Segment RBAC within AAM based on this Datasource. This means AEP permissions will not be carried over in AAM. They have to set new permissions in AAM for these segments
 
 ## Supported identities {#supported-identities}
@@ -101,33 +107,36 @@ Refer to the table below for information about the destination export type and f
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
+>[!IMPORTANT]
+> 
+>In the beta release, you can create a single destination connection to the Experience Cloud Audiences destination, across all sandboxes belonging to your Experience Platform organization.
+
 ### Authenticate to destination {#authenticate}
 
-*Add the fields that customers must fill in when authenticating to your destination. These fields are destination-specific and depend on your configuration in Destination SDK. Your destination's fields may not be the same as the ones listed below. Please also include a screenshot similar to the sample screenshot shown below.*
+To authenticate to the destination, select **[!UICONTROL Set up]** in the destination card view in the catalog and select **[!UICONTROL Connect to destination]**.
 
-To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
-
-![Add a link here to one or more sample screenshots that show users how to authenticate to your destination](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
-
-* **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination.
+![View of the Connect to destination option for the Experience Cloud Audiences destination.](/help/destinations/assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-authenticate-to-destination.png)
 
 ### Fill in destination details {#destination-details}
 
-*Add the fields that customers must fill in when configuring a new destination. These fields are destination-specific and depend on your configuration in Destination SDK. Your destination's fields may not be the same as the ones listed below. Please also include a screenshot similar to the sample screenshot shown below.*
-
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Add a link here to one or more sample screenshots that show users how to fill in details for your destination](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![Configure new destination screen showing the required and optional settings to connect to the Experience Cloud Audiences destination.](/help/destinations/assets/catalog/adobe/experience-cloud-audiences/connect-to-destination.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Account ID]**: Your *YourDestination* account ID.
+
+<!--
+
+Commenting this part out for the duration of the beta program
 
 ### Enable alerts {#enable-alerts}
 
 You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+-->
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
+
 
 ## Activate segments to this destination {#activate}
 
@@ -135,18 +144,7 @@ When you are finished providing details for your destination connection, select 
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-*Delete as appropriate - If you are documenting a new streaming destination, keep the first paragraph below. If you are documenting a new file-based destination, keep the second paragraph.*
-
-Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
-
-Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
-
-### Map attributes and identities {#map}
-
-*Add information about supported mappings between source and target fields in the Mapping step of the activation workflow. Your destination might support exporting profile attributes, identity namespaces, or both. Some fields might be mandatory. Target attributes might be predefined or custom. Call out the important caveats and use examples, preferably with screenshots. Two examples of destination pages which you can use as reference are:*
-
-* *[Pega](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/pega.html?lang=en#mapping-example)*
-* *[Medallia](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/voice/medallia-connector.html?lang=en#map)*
+Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination. Note that no mapping step is required for this destination.
 
 ## Exported data / Validate data export {#exported-data}
 
