@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy Service Troubleshooting Guide
-topic-legacy: troubleshooting
 description: This document provides answers to frequently asked questions about Privacy Service, as well as information on commonly encountered errors in the API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
 ---

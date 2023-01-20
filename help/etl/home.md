@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;ETL;etl;etl integrations;ETL integrations
 solution: Experience Platform
 title: Developing ETL Integrations for Adobe Experience Platform
-topic-legacy: overview
 description: The ETL integration guide outlines general steps for creating high-performance, secure connectors for Experience Platform and ingesting data into Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
 ---

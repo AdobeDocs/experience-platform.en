@@ -12,7 +12,7 @@ This document covers essential concepts related to processing privacy requests f
 
 >[!NOTE]
 >
->This guide only covers how to make privacy requests for the Identity data store in Experience Platform. If you also plan to make privacy requests for the Platform data lake or [!DNL Real-time Customer Profile], refer to the guide on [privacy request processing in the data lake](../catalog/privacy.md) and to the guide on [privacy request processing for Profile](../profile/privacy.md) in addition to this tutorial.
+>This guide only covers how to make privacy requests for the Identity data store in Experience Platform. If you also plan to make privacy requests for the Platform data lake or [!DNL Real-Time Customer Profile], refer to the guide on [privacy request processing in the data lake](../catalog/privacy.md) and to the guide on [privacy request processing for Profile](../profile/privacy.md) in addition to this tutorial.
 >
 >For steps on how to make privacy requests for other Adobe Experience Cloud applications, refer to the [Privacy Service documentation](../privacy-service/experience-cloud-apps.md).
 
@@ -22,7 +22,7 @@ It is recommended that you have a working understanding of the following [!DNL E
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Manages customer requests for accessing, opting out of sale, or deleting their personal data across Adobe Experience Cloud applications.
 * [[!DNL Identity Service]](../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
-* [[!DNL Real-time Customer Profile]](home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 ## Understanding identity namespaces {#namespaces}
 
@@ -100,7 +100,7 @@ When creating job requests in the UI, be sure to select **[!UICONTROL Identity]*
 
 When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The deletion of the individual identity is based on provided namespace and/or ID value. Furthermore, the deletion takes place for all sandboxes associated with a given IMS Organization.
 
-Depending on whether you also included Real-time Customer Profile (`ProfileService`) and the data lake (`aepDataLake`) as products in your privacy request for Identity Service (`identity`), different sets of data related to the identity are removed from the system at potentially different times:
+Depending on whether you also included Real-Time Customer Profile (`ProfileService`) and the data lake (`aepDataLake`) as products in your privacy request for Identity Service (`identity`), different sets of data related to the identity are removed from the system at potentially different times:
 
 | Products included | Effects |
 | --- | --- |

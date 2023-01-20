@@ -60,4 +60,4 @@ Sandboxes are virtual partitions within a single instance of Experience Platform
 
 ## Next steps
 
-By reading this document you should have a better understanding of the different packaging types and query execution capabilities available in Query Service. To learn more about Query Service, such as well-known industry use cases, please read the [use case documentation](./use-cases/abandoned-browse.md). For more general information, visit the [Query Service overview](./home.md).
+By reading this document, you should have a better understanding of the different packaging types and query execution capabilities available in Query Service. To learn more about Query Service, such as well-known industry use cases, please read the [use case documentation](./use-cases/abandoned-browse.md). For more general information, visit the [Query Service overview](./home.md).

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;query;query editor;Query Editor;Query editor;
 solution: Experience Platform
 title: Query Service UI Guide
-topic-legacy: guide
 description: Adobe Experience Platform Query Service provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your IMS Organization.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
 ---
@@ -41,7 +40,7 @@ Once a query has been scheduled it appears in the list of scheduled queries on t
 | **[!UICONTROL Last run timestamp]** | The most recent timestamp when the query was run. This column highlights whether a query has been executed according to its current schedule. |
 | **[!UICONTROL Last run status]** | The status of the most recent query execution. The three status values are: `successful` `failed` or `in progress`.|
 
-See the documentation for more information on how to [monitor queries through the Query Service UI](../monitor-queries.md).
+See the documentation for more information on how to [monitor queries through the Query Service UI](./monitor-queries.md).
 
 ## Templates {#browse}
 

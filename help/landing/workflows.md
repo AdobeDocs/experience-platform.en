@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Adobe Experience Platform;user guide;ui guide;workflows ui guide;workflows;workflows user guide;
 solution: Experience Platform
 title: Workflows UI guide
-topic-legacy: ui guide
 description: Learn how to follow multi-step workflows for performing common operations within the Adobe Experience Platform user interface.
 exl-id: f1a3ea83-09c9-48df-9493-62f03b403a95
 ---

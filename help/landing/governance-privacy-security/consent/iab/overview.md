@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;IAB;IAB 2.0;consent;Consent
 solution: Experience Platform
 title: IAB TCF 2.0 Support in Experience Platform
-topic-legacy: privacy events
 description: Learn how to configure your data operations and schemas to convey customer consent choices when activating segments to destinations in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
 ---
@@ -34,10 +33,10 @@ This guide also requires a working understanding of the following Platform servi
 
 * [Experience Data Model (XDM)](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
 * [Adobe Experience Platform Identity Service](../../../../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
-* [Real-time Customer Profile](../../../../profile/home.md): Leverages [!DNL Identity Service] to create detailed customer profiles from your datasets in real time. [!DNL Real-time Customer Profile] pulls data from the Data Lake and persists customer profiles in its own separate data store.
+* [Real-Time Customer Profile](../../../../profile/home.md): Leverages [!DNL Identity Service] to create detailed customer profiles from your datasets in real time. [!DNL Real-Time Customer Profile] pulls data from the Data Lake and persists customer profiles in its own separate data store.
 * [Adobe Experience Platform Web SDK](../../../../edge/home.md): A client-side JavaScript library that allows you to integrate various Platform services into your customer-facing website.
     * [SDK consent commands](../../../../edge/consent/supporting-consent.md): A use-case overview of the consent-related SDK commands shown in this guide.
-* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md): Allows you to divide [!DNL Real-time Customer Profile] data into groups of individuals that share similar traits and will respond similarly to marketing strategies.
+* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md): Allows you to divide [!DNL Real-Time Customer Profile] data into groups of individuals that share similar traits and will respond similarly to marketing strategies.
 
 In addition to the Platform services listed above, you should also be familiar with [destinations](../../../../data-governance/home.md) and their role in the Platform ecosystem.
 
@@ -62,7 +61,7 @@ Any segments shared with Platform by Adobe Audience Manager (through the [!DNL A
 
 Once TCF consent data has successfully been ingested, the following processes take place in downstream Platform services:
 
-1. [!DNL Real-time Customer Profile] updates the stored consent data for that customer's profile.
+1. [!DNL Real-Time Customer Profile] updates the stored consent data for that customer's profile.
 1. Platform processes customer IDs only if the vendor permission for Platform (565) is provided for every ID in a cluster.
 1. When exporting segments to destinations belonging to members of the TCF 2.0 vendor list, Platform only includes profiles if the vendor permissions for both Platform (565) *and* the individual destination are provided for every ID in a cluster.
 

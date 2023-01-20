@@ -2,7 +2,6 @@
 keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: Product Purchase Prediction Recipe
-topic-legacy: overview
 description: The Product Purchase Prediction recipe enables you to predict the likelihood of a certain type of customer purchase event - a product purchase, for instance.
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
 ---

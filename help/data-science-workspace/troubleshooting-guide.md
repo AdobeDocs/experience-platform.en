@@ -2,7 +2,6 @@
 keywords: Experience Platform;troubleshooting;Data Science Workspace;popular topics
 solution: Experience Platform
 title: Data Science Workspace Troubleshooting Guide
-topic-legacy: Troubleshooting
 description: This document provides answers to frequently asked questions about Adobe Experience Platform Data Science Workspace.
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
 ---
@@ -44,7 +43,7 @@ The **Privacy and security** section appears. Next, click on **Site settings** f
 
 ![chrome advanced](./images/faq/cookies.png)
 
-Lastly, toggle “Block third-party cookies” to "OFF". 
+Lastly, toggle "Block third-party cookies" to "OFF". 
 
 ![chrome advanced](./images/faq/toggle-off.png)
 
@@ -52,7 +51,7 @@ Lastly, toggle “Block third-party cookies” to "OFF".
 >
 >Alternatively, you could disable third-party cookies and add [*.]ds.adobe.net to the allow list.
 
-Navigate to “chrome://flags/” in your address bar. Search for and disable the flag titled *“SameSite by default cookies”* by using the dropdown menu on the right.
+Navigate to "chrome://flags/" in your address bar. Search for and disable the flag titled *"SameSite by default cookies"* by using the dropdown menu on the right.
    
    ![disable samesite flag](./images/faq/samesite-flag.png)
 

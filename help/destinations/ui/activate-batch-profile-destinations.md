@@ -201,7 +201,7 @@ For profile-based destinations, you must select the profile attributes that you 
 
     ![Image highlighting how to select a source field.](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
 
-1. In the **[!UICONTROL Select field]** page, select the XDM attributes that you want to send to the destination, then choose **[!UICONTROL Select]**.
+1. In the **[!UICONTROL Select field]** page, select the XDM attributes or identity namespaces that you want to send to the destination, then choose **[!UICONTROL Select]**.
 
     ![Image showing the various fields available as source fields.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 

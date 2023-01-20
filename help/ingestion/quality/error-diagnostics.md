@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;partial ingestion;Partial ingestion;Retrieve error;retrieve error;Partial batch ingestion;partial batch ingestion;partial;ingestion;Ingestion;error diagnostics;retrieve error diagnostics;get error diagnostics;get error;get errors;retrieve errors;
 solution: Experience Platform
 title: Retrieving Data Ingestion Error Diagnostics
-topic-legacy: overview
 description: This document provides information on monitoring batch ingestion, managing partial batch ingestion errors, as well as a reference for partial batch ingestion types.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
 ---
@@ -127,7 +126,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Response**
 
-A successful response will return JSON objects containing `path` objects detailing where the diagnostics were saved. The response will return the `path` objects in [JSON Lines](https://jsonlines.org/) format.
+A successful response will return JSON objects containing `path` objects detailing where the diagnostics were saved. The response will return the `path` objects in [JSON Lines](https://jsonlines.readthedocs.io/en/latest/) format.
 
 ```json
 {"path": "F1.json"}

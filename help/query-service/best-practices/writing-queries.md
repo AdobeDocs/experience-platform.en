@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;writing queries;writing query;
 solution: Experience Platform
 title: General Guidance for Query Execution in Query Service
-topic-legacy: queries
 type: Tutorial
 description: This document outlines important details to know when writing queries in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
@@ -306,7 +305,7 @@ LIMIT 50;
 
 ## Deduplication
 
-Query Service supports data deduplication, or the removal of duplicate rows from data. For more information on deduplication, please read the [Query Service deduplication guide](./deduplication.md).
+Query Service supports data deduplication, or the removal of duplicate rows from data. For more information on deduplication, please read the [Query Service deduplication guide](../essential-concepts/deduplication.md).
 
 ## Time zone computations in Query Service
 
@@ -320,4 +319,7 @@ For more samples of queries that can be used within Query Service, please read t
 
 - [Analytics insights](../use-cases/analytics-insights.md)
 - [Activity analysis with Adobe Target](../use-cases/activity-analysis-with-adobe-target.md)
-- [ExperienceEvent sample queries](../sample-queries/experience-event.md).
+- [Create a trended report of events](../use-cases/trended-report-of-events.md)
+- [View a roll-up report of a visitor](../use-cases/roll-up-report-of-a-visitor.md)
+- [List the page views of a user](../use-cases/list-visitor-sessions.md)
+- [List visitors by their number of page views](../use-cases/visitors-by-number-of-page-views.md)
