@@ -36,7 +36,7 @@ In the last month, `p2@townsend.com` visited the new product page and the web vi
 
 ## The problem
 
-Line 1 has just released a new software product and would like to up-sell it to Bodea’s existing top-tier customer base. Bodea launches a marketing campaign with that specific target audience in mind.
+Line 1 has just released a new software product and would like to up-sell it to Bodea's existing top-tier customer base. Bodea launches a marketing campaign with that specific target audience in mind.
 
 As the relevant Townsend information is recorded as Account 1 in Marketo 1 and Account 2 in Marketo 2, Bodea's marketing team is unable to efficiently utilize the siloed information.
 
@@ -81,7 +81,7 @@ By using the Marketo Engage and LinkedIn destinations, Bodea has an end-to-end c
 
 ## Next steps
 
-By reading this document you have now been introduced to the types of objectives and problems that can be solved using Real-Time CDP B2B Edition. 
+By reading this document, you have now been introduced to the types of objectives and problems that can be solved using Real-Time CDP B2B Edition. 
 
 The following documentation is recommended to improve your understanding of B2B specific features: 
 
