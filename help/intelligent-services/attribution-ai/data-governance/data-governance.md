@@ -1,3 +1,9 @@
+---
+keywords: insights;attribution ai;attribution ai insights;AAI query service;attribution queries;attribution scores
+feature: Attribution AI data governance
+title: Data governance
+description: Learn how to view and manage audit logs in AAI
+---
 ## Attribution AI and Data Governance
 
 Generally speaking, any data governance-related settings in Attribution AI are inherited from Adobe Experience Platform.
