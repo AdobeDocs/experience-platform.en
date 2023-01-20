@@ -1,9 +1,9 @@
 ---
 title: (Beta) Experience Cloud Audiences
-description: Learn how to share segments from Experience Platform to various Experience Platform solutions
+description: Learn how to share segments from Experience Platform to various Experience Platform solutions.
 ---
 
-# (Beta) [!UICONTROL Experience Cloud Audiences] connection {#your-destination}
+# (Beta) [!UICONTROL Experience Cloud Audiences] connection
 
 This destination allows you to share segments from Experience Platform to various Experience Platform solutions, like Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target, or Marketo.
 
@@ -34,7 +34,15 @@ Using the new self-service segment sharing integration via the Experience Cloud 
 
 Talk about durable IDs for other destinations and cookie IDs for this one. 
 
-### Share  {#use-case-1}
+### Share Experience Platform segments with further Experience Cloud solutions {#share-segments-with-other-solutions}
+
+Apart from sharing segments with Audience Manager, the Experience Platform Audiences destination card enables you to share segments with any other Experience Cloud solution that you are provisioned for, including: 
+
+* Adobe Campaign
+* Adobe Target
+* Advertising Cloud
+* Analytics
+* Marketo
 
 ## Prerequisites {#prerequisites}
 
@@ -42,8 +50,6 @@ Talk about durable IDs for other destinations and cookie IDs for this one.
 >
 > * You need an Audience Manager license to enable the Data Management Platform use cases mentioned in the section above.
 > * You *do not need* an Audience Manager license to share Experience Platform segments with Adobe Advertising Cloud, Adobe Target, Marketo, and other Experience Cloud solutions, via the Core Services integration.
-
-You need to be provisioned for and have a fully working instance of Audience Manager, Target, Ad Cloud etc.
 
 ### For customers who were already on the legacy segment sharing solution
 
@@ -53,7 +59,7 @@ After the existing legacy integration has been disabled, you can proceed to crea
 
 >[!IMPORTANT]
 >
->* The segment export from Experience Platform to your other solutions will be stopped in the time between the Jira ticket resolution and the time a new connection is established through the destination card. You can minimize this downtime by creating the connection via the card as soon as the Jira ticket is closed.  
+>The segment export from Experience Platform to your other solutions will be stopped in the time between the Jira ticket resolution and the time a new connection is established through the destination card. You can minimize this downtime by creating the connection via the card as soon as the Jira ticket is closed.  
 
 ## Known limitations {#known-limitations}
 
@@ -66,8 +72,10 @@ Note the following known limitations in the beta release of the Core Services ca
 
 ### Permissions management in Audience Manager
 
-Segments and traits in Audience Manager are protected by RBAC controls. Segments coming through Segue from AEP to AAM is assigned to a specific datasource called "Experience Platform Segments" or something similar.
-Customers can apply Segment RBAC within AAM based on this Datasource. This means AEP permissions will not be carried over in AAM. They have to set new permissions in AAM for these segments
+Segments and traits in Audience Manager are protected by [Role-Based Access Controls](/https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=en) (RBAC). 
+
+Segments coming through Segue from AEP to AAM is assigned to a specific datasource called "Experience Platform Segments" or something similar.
+Customers can apply Segment RBAC within AAM based on this Datasource. This means that data governance settings from Experience Platform are not carried over in Audience Manager. You must set new access control permissions in Audience Manager for these segments and traits created from Experience Platform segments.
 
 ## Supported identities {#supported-identities}
 
@@ -144,7 +152,7 @@ When you are finished providing details for your destination connection, select 
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination. Note that no mapping step is required for this destination.
+Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination. Note that no [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) is required and no [scheduling step](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) is available for this destination.
 
 ## Exported data / Validate data export {#exported-data}
 
@@ -152,14 +160,10 @@ To validate successful data export, you can check that your segments have succes
 
 ### Validate Audience Manager
 
-show screenshot and blurb about how data landed successfullt
-
-
+Your Experience Platform segments appear in Audience Manager as [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-signals), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-traits), and [segments](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-segments). 
 
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
 
 ## Additional resources {#additional-resources}
-
-Link to legacy segment sharing doc
