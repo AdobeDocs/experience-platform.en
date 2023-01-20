@@ -1,9 +1,9 @@
 ---
-title: Monitor Queries
+title: Monitor Scheduled Queries
 description: Learn how to monitor queries through the Query Service UI.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
 ---
-# Monitor queries
+# Monitor scheduled queries
 
 Adobe Experience Platform provides improved visibility for the status of all query jobs through the UI. From [!UICONTROL Scheduled Queries] tab you can now find important information about your query runs that includes the status, schedule details, and error messages/codes should they fail. You can also subscribe to alerts for queries based on their status through the UI for any of these queries through [!UICONTROL Scheduled Queries] tab.
 
@@ -13,7 +13,7 @@ The [!UICONTROL Scheduled Queries] tab provides an overview of the executed and 
 
 To navigate to the [!UICONTROL Scheduled Queries] tab, select **[!UICONTROL Queries]** from the left navigation bar followed by **[!UICONTROL Scheduled Queries]**
 
-![The Scheduled Queries tab in the Queries workspace.](./images/monitor-queries/scheduled-queries.png)
+![The Scheduled Queries tab in the Queries workspace.](../images/ui/monitor-queries/scheduled-queries.png)
 
 The table below describes each available column.
 
@@ -38,9 +38,9 @@ The table below describes each available column.
 
 ### Customize table settings for scheduled queries 
 
-You can adjust the columns on the [!UICONTROL Scheduled Queries] tab to your needs. Select the settings icon (![A settings icon.](./images/monitor-queries/settings-icon.png)) to open the [!UICONTROL Customize table] settings dialog and edit available columns.
+You can adjust the columns on the [!UICONTROL Scheduled Queries] tab to your needs. Select the settings icon (![A settings icon.](../images/ui/monitor-queries/settings-icon.png)) to open the [!UICONTROL Customize table] settings dialog and edit available columns.
 
-![The Customize table settings icon.](./images/monitor-queries/customze-table-settings-icon.png)
+![The Customize table settings icon.](../images/ui/monitor-queries/customze-table-settings-icon.png)
 
 Toggle the relevant checkboxes to remove or add a table column. Next, select **[!UICONTROL Apply]** to confirm your choices.
 
@@ -48,23 +48,21 @@ Toggle the relevant checkboxes to remove or add a table column. Next, select **[
 >
 >Any query that was created through the UI becomes a named template as part of the creation process. The template name is seen in the template column. If the query was created through the API then the template column is blank. 
 
-![The Customize table settings dialog.](./images/monitor-queries/customize-table-dialog.png)
+![The Customize table settings dialog.](../images/ui/monitor-queries/customize-table-dialog.png)
 
 ### Subscribe to alerts {#alert-subscription}
 
-You can subscribe to alerts from the [!UICONTROL Scheduled Queries] tab. Select the alert notification icon (![An alert icon.](./images/monitor-queries/alerts-icon.png)) next to a query name to open the [!UICONTROL Alerts] dialog. The [!UICONTROL Alerts] dialog subscribes to both UI notifications and email alerts. Alerts are based on the status of the query. There are three options available: `start`, `success`, and `failure`. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe.
+You can subscribe to alerts from the [!UICONTROL Scheduled Queries] tab. Select the alert notification icon (![An alert icon.](../images/ui/monitor-queries/alerts-icon.png)) next to a query name to open the [!UICONTROL Alerts] dialog. The [!UICONTROL Alerts] dialog subscribes to both UI notifications and email alerts. Alerts are based on the status of the query. There are three options available: `start`, `success`, and `failure`. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe.
 
-<!-- This dialog will be updated before release. THe image below will need to be updated inline with these changes. -->
+![The alert subscriptions dialog.](../images/ui/monitor-queries/alert-subscription-dialog.png)
 
-![The alert subscriptions dialog.](./images/monitor-queries/alert-subscription-dialog.png)
-
-<!-- Link to alert subscriptions doc when available -->
+See the [alert subscriptions API documentation](../api/alert-subscriptions.md) for more information.
 
 ### Filter queries
 
-You can filter queries based on run frequency. From the [!UICONTROL Scheduled Queries] tab, select the filter icon (![A filter icon](./images/monitor-queries/filter-icon.png)) to open the filter sidebar. 
+You can filter queries based on run frequency. From the [!UICONTROL Scheduled Queries] tab, select the filter icon (![A filter icon](../images/ui/monitor-queries/filter-icon.png)) to open the filter sidebar. 
 
-![The scheduled queries tab with the filter icon highlighted.](./images/monitor-queries/filter-queries.png)
+![The scheduled queries tab with the filter icon highlighted.](../images/ui/monitor-queries/filter-queries.png)
 
 Select either the **[!UICONTROL Scheduled]** or **[!UICONTROL Run once]** run frequency filter checkboxes to filter the list of queries.
 
@@ -72,7 +70,7 @@ Select either the **[!UICONTROL Scheduled]** or **[!UICONTROL Run once]** run fr
 >
 >Any query that has been executed but not scheduled qualifies as [!UICONTROL Run once].
 
-![The scheduled queries tab with the filter sidebar highlighted.](./images/monitor-queries/filter-sidebar.png)
+![The scheduled queries tab with the filter sidebar highlighted.](../images/ui/monitor-queries/filter-sidebar.png)
 
 Once you have enabled your filter criteria, select **[!UICONTROL Hide Filters]** to close the filter panel.
 
@@ -80,7 +78,7 @@ Once you have enabled your filter criteria, select **[!UICONTROL Hide Filters]**
 
 Select a query name to navigate to the schedule details page. This view provides a list of all the runs executed as part of that scheduled query. The information provided includes the start and end time, status, and dataset used. 
 
-![The schedule details page.](./images/monitor-queries/schedule-details.png) 
+![The schedule details page.](../images/ui/monitor-queries/schedule-details.png) 
 
 This information is provided in a five-column table. Each row denotes a query execution. 
 
@@ -94,26 +92,26 @@ This information is provided in a five-column table. Each row denotes a query ex
 
 Details of the query being scheduled can be seen in the [!UICONTROL Properties] panel. This panel includes the initial query ID, client type, template name, query SQL, and cadence of the schedule.
 
-![The schedule details page with the properties panel highlighted.](./images/monitor-queries/properties-panel.png)
+![The schedule details page with the properties panel highlighted.](../images/ui/monitor-queries/properties-panel.png)
 
 ### Run details
 
 Select a query run ID to navigate to the run details page and view query information. 
 
-![The schedule details screen with a run ID highlighted.](./images/monitor-queries/navigate-to-run-details.png)
+![The schedule details screen with a run ID highlighted.](../images/ui/monitor-queries/navigate-to-run-details.png)
 
 This view provides information on individual runs for this scheduled query and a more detailed breakdown of the run status. This page also includes the client information and details of any errors that caused the query to fail. 
 
-![The run details screen with the overview section highlighted.](./images/monitor-queries/query-run-details.png)
+![The run details screen with the overview section highlighted.](../images/ui/monitor-queries/query-run-details.png)
 
 The query status section provides the error code and error message should the query have failed. 
 
-![The run details screen with the errors section highlighted.](./images/monitor-queries/failed-query.png)
+![The run details screen with the errors section highlighted.](../images/ui/monitor-queries/failed-query.png)
 
 You can copy the query SQL to your clipboard from this view. Select the copy icon in the top right of the SQL snippet to copy the query. A popup message confirms that the code has been copied.
 
-![The run details screen with the SQL copy icon highlighted.](./images/monitor-queries/copy-sql.png)
+![The run details screen with the SQL copy icon highlighted.](../images/ui/monitor-queries/copy-sql.png)
 
 Select **[!UICONTROL Query]** to return to the schedule details screen, or **[!UICONTROL Scheduled Queries]** to return to the [!UICONTROL Scheduled Queries] tab.
 
-![The run details screen with Query highlighted.](./images/monitor-queries/return-navigation.png)
+![The run details screen with Query highlighted.](../images/ui/monitor-queries/return-navigation.png)
