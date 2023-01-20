@@ -23,17 +23,25 @@ You can configure various file formatting options for exported files by using th
 
 ## File formatting configuration {#file-configuration}
 
+To display the file formatting options, start the [connect to destination](/help/destinations/ui/connect-destination.md) workflow and select segments as **File type**. This section describes the file formatting settings available for the exported `CSV` files. 
+
 >[!IMPORTANT]
 >
 >The destination that you are connecting to may not have all these options available. It is up to the destination developer to determine which file formatting options they want to support in their destination. The destination developer can determine which options are available when connecting to the destination. Required options are marked with an asterisk in the Experience Platform UI.
-
-To display the file formatting options, start the [connect to destination](/help/destinations/ui/connect-destination.md) workflow and select segments as **File type**. This section describes the file formatting settings available for the exported `CSV` files. 
+> 
+>The new cloud storage destinations - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - currently only support the six CSV options highlighted below.
 
 ![Image showing some of the available file formatting options.](/help/destinations/assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
-### Delimiter
+### Delimiter {#delimiter}
 
-Sets a separator for each field and value. For example, `,` for comma-separated values or `/t` for tab-separated values. 
+Sets a separator for each field and value. Available options are:
+
+* Colon `(:)`
+* Comma `(,)`
+* Pipe `(|)`
+* Semicolon `(;)`
+* Tab `(\\t)`
 
 ### Quote character 
 
