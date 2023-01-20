@@ -16,6 +16,7 @@ The integration between Customer AI and Adobe Experience Platform Data Governanc
 Data usage labels and policies that were created on datasets consumed by Platform can be surfaced in the Customer AI configuration workflow. These labels stop or warn users who use labeled fields. 
 
 This integration allows you to manage compliance more easily. Data stewards in your organization can set policies to restrict usage. As a result, you can use data more confidently, knowing that it complies with policies defined by data stewards. Read the documentation on [Labels and Policies](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=en) to learn more.
+
 ## GDPR
 
 Attribution AI will not subscribe to the General Data Protection Regulation (GDPR) Central Service directly and will instead inherit all dataset changes made in Experience Platform. We depend on Platform Data Lake to enforce GDPR deletion requests and notify us when they’ve been completed on Pipeline. We listen to Pipeline and synchronize all changes to affected batches in Attribution AI for raw score datasets.
