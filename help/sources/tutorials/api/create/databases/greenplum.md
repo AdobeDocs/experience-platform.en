@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;greenplum;Greenplum
 solution: Experience Platform
 title: Create a GreenPlum Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect GreenPlum to Adobe Experience Platform using the Flow Service API.
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
@@ -25,7 +24,7 @@ The following sections provide additional information that you will need to know
 | Credential | Description |
 | ---------- | ----------- |
 | `connectionString` | The connection string used to connect to your [!DNL GreenPlum] instance. The connection string pattern for [!DNL GreenPlum] is `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL GreenPlum] is `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL GreenPlum] is `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 For more information on acquiring a connection string, refer to [this GreenPlum document](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
 

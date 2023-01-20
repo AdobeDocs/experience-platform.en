@@ -2,11 +2,15 @@
 keywords: Experience Platform;home;popular topics;dule;DULE
 solution: Experience Platform
 title: Data Usage Policies Overview
-topic-legacy: policies
-description: In order for data usage labels to effectively support data compliance, data usage policies must be implemented. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform.
+description: Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 ---
-# Data usage policies overview
+# Data usage policies overview {#policies-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_restrictusage"
+>title="Restrict data usage"
+>abstract="The data usage policy type evaluates specific marketing actions applied to data governance labels in order to restrict data usage for marketing activities."
 
 In order for data usage labels to effectively support data compliance, data usage policies must be implemented. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
@@ -14,6 +18,10 @@ There are two types of policies available:
 
 * **[!UICONTROL Data governance policy]**: Restrict data activation based on the marketing action being performed and the data usage labels carried by the data in question.
 * **[!UICONTROL Consent policy]**: Filter the profiles that can be activated to [destinations](../../destinations/home.md) based on your customers' consent or preferences
+
+>[!NOTE]
+>
+>Data usage policies are not to be confused with [access control policies](../../access-control/abac/end-to-end-guide.md#policy), which determine whether certain Platform users in your organization can access certain data fields, and are configured through the [!UICONTROL Permissions] tab.
 
 This document provides a high-level overview of data usage policies, and provides links to further documentation for working with policies in the UI or API.
 

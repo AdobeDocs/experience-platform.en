@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;enum;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;best practices
 solution: Experience Platform
 title: Best Practices For Data Modeling
-topic-legacy: overview
 description: This document provides an introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas to be used in Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 ---
@@ -45,7 +44,7 @@ Once you have created an ERD to identify the essential entities you would like t
 | Category | Description |
 | --- | --- |
 | Profile entities | Profile entities represent attributes relating to an individual person, typically a customer. Entities that fall under this category should be represented by schemas based on the **[!DNL XDM Individual Profile] class**. |
-| Lookup entities | Lookup entities represent concepts that can relate to an individual person, but cannot be directly used to identify the individual. Entities that fall under this category should be represented by schemas based on **custom classes**. |
+| Lookup entities | Lookup entities represent concepts that can relate to an individual person, but cannot be directly used to identify the individual. Entities that fall under this category should be represented by schemas based on **custom classes**, and are linked to profiles and events through [schema relationships](../tutorials/relationship-ui.md). |
 | Event entities | Event entities represent concepts related to actions a customer can take, system events, or any other concept where you may want to track changes over time. Entities that fall under this category should be represented by schemas based on the **[!DNL XDM ExperienceEvent] class**. |
 
 {style="table-layout:auto"}
@@ -169,7 +168,7 @@ The second approach would be to use event schemas to represent subscriptions. Th
 **Cons**
 
 * Segmentation becomes more complex for the original intended use case (identifying the status of customers' most recent subscriptions). The segment now needs additional logic to flag the last subscription event for a customer in order to check its status.
-* Events have a higher risk of automatically expiring and being purged from the Profile store. See the guide on [Profile TTL](../../profile/apply-ttl.md) for more information.
+* Events have a higher risk of automatically expiring and being purged from the Profile store. See the guide on [Experience Event expirations](../../profile/event-expirations.md) for more information.
 
 ## Create schemas based on your categorized entities
 
@@ -181,7 +180,7 @@ The category that an entity has been sorted under should determine the XDM class
 
 * Profile entities should use the [!DNL XDM Individual Profile] class.
 * Event entities should use the [!DNL XDM ExperienceEvent] class.
-* Lookup entities should use custom XDM classes defined by your organization.
+* Lookup entities should use custom XDM classes defined by your organization. Profile and event entities can then reference these lookup entities through schema relationships.
 
 >[!NOTE]
 >
@@ -199,7 +198,7 @@ If you are not sure whether a particular field is necessary to include in a sche
 
 ### Identity fields
 
-In Experience Platform, XDM fields marked as identities are used to stitch together information about individual customers coming from multiple data sources. Although a schema can have multiple fields marked as identities, a single primary identity must be defined in order for the schema to be enabled for use in [!DNL Real-time Customer Profile]. See the section on [identity fields](./composition.md#identity) in the basics of schema composition for more detailed information on the use case of these fields.
+In Experience Platform, XDM fields marked as identities are used to stitch together information about individual customers coming from multiple data sources. Although a schema can have multiple fields marked as identities, a single primary identity must be defined in order for the schema to be enabled for use in [!DNL Real-Time Customer Profile]. See the section on [identity fields](./composition.md#identity) in the basics of schema composition for more detailed information on the use case of these fields.
 
 When designing your schemas, any primary keys in your relational database tables will be likely candidates for primary identities. Other examples of applicable identity fields are customer email addresses, phone numbers, account IDs, and [ECID](../../identity-service/ecid.md).
 

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Azure;azure blob;blob;Blob
 solution: Experience Platform
 title: Create an Azure Blob Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Azure Blob using the Flow Service API.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04

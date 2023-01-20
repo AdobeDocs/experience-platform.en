@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;couchbase;Couchbase
 solution: Experience Platform
 title: Couchbase Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect Couchbase to Adobe Experience Platform using APIs or the user interface.
 exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
 ---

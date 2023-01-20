@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
 solution: Experience Platform
 title: XDM Individual Profile Class
-topic-legacy: overview
 description: This document provides an overview of the XDM Individual Profile class.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 ---
@@ -47,6 +46,6 @@ Adobe provides several standard field groups for use with the [!DNL XDM Individu
 * [[!UICONTROL XDM Business Person Components]](../field-groups/profile/business-person-components.md)\*
 * [[!UICONTROL XDM Business Person Details]](../field-groups/profile/business-person-details.md)\*
 
-*\*This field group is only available to organizations with access to the B2B edition of Real-time Customer Data Platform.*
+*\*This field group is only available to organizations with access to the B2B edition of Adobe Real-Time Customer Data Platform.*
 
 For a complete list of all compatible field groups for [!DNL XDM Individual Profile], refer to the [XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile).

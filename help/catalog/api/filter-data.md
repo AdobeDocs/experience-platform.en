@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data;date range
 solution: Experience Platform
 title: Filter Catalog Data Using Query Parameters
-topic-legacy: developer guide
 description: The Catalog Service API allows response data to be filtered through the use of request query parameters. Part of best practices for Catalog is to use filters in all API calls, as they reduce the load on the API and help to improve overall performance.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
 ---
@@ -204,7 +203,7 @@ There are a few limitations to consider when using tags:
 * Tag names are unique to your IMS Organization.
 * Adobe processes may leverage tags for certain behaviors. The names of these tags are prefixed with "adobe" as a standard. Therefore, you should avoid this convention when declaring tag names.
 * The following tag names are reserved for use across [!DNL Experience Platform], and therefore cannot be declared as a tag name for your organization:
-  * `unifiedProfile`: This tag name is reserved for datasets to be ingested by [[!DNL Real-time Customer Profile]](../../profile/home.md).
+  * `unifiedProfile`: This tag name is reserved for datasets to be ingested by [[!DNL Real-Time Customer Profile]](../../profile/home.md).
   * `unifiedIdentity`: This tag name is reserved for datasets to be ingested by [[!DNL Identity Service]](../../identity-service/home.md).
 
 Below is an example of a dataset that contains a `tags` property. The tags within that property take the form of key-value pairs, with each tag value appearing as an array containing a single string:

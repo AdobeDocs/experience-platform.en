@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;device;datatype;data-type;data type;
 solution: Experience Platform
 title: Marketing Data Type
-topic-legacy: overview
 description: This document provides an overview of the Marketing XDM data type.
 exl-id: b5ac0127-15fe-42b6-b7fc-2fbcda7e7e27
 ---

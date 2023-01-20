@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
 title: Create a MailChimp Campaigns source connection using Platform UI
-topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to MailChimp Campaigns using Platform UI.
 exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
 ---

@@ -1,6 +1,5 @@
 ---
 title: Data Encryption in Adobe Experience Platform
-topic-legacy: data protection
 description: Learn how data is encrypted in transit and at rest in Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
 ---
@@ -31,7 +30,7 @@ After data has been brought into the system and [encrypted at rest](#at-rest), i
 
 Data that is ingested and used by Platform is stored in the data lake, a highly granular data store containing all data managed by the system, regardless of origin or file format. All data persisted in the data lake is encrypted, stored, and managed in an isolated [[!DNL Microsoft Azure Data Lake] Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) instance that is unique to your organization.
 
-For details on how data at rest is encrypted in Azure Data Lake Storage and Cosmos DB, see the [official Azure documentation](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
+For details on how data at rest is encrypted in Azure Data Lake Storage, see the [official Azure documentation](https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption).
 
 ## Next steps
 

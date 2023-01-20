@@ -18,7 +18,7 @@ This overview requires a working understanding of the following components of Ad
 
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 * [[!DNL Identity Service]](../identity-service/home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
-* [Real-time Customer Profile](../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
+* [Real-Time Customer Profile](../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
 * [Sources](../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 
 ## Use streaming upserts in [!DNL Data Prep] {#streaming-upserts-in-data-prep}

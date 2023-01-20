@@ -1,7 +1,6 @@
 ---
 solution: Experience Platform
 title: Segment Definition Class
-topic-legacy: overview
 description: This document provides an overview of the Segment definition class in Experience Data Model (XDM).
 exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
 ---

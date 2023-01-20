@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes September 2022
 description: The September 2022 release notes for Adobe Experience Platform.
+exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
 ---
 # Adobe Experience Platform release notes 
 
@@ -56,7 +57,7 @@ For more information on Attribution AI, the [Attribution AI overview](../../inte
 
 ### Customer AI
 
-Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale.
+Customer AI available in Real-Time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale.
 
 | Feature | Description |
 | --- | --- |
@@ -203,18 +204,18 @@ To learn more about Identity Service, read the [Identity Service overview](../..
 
 ## Query Service {#query-service}
 
-Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-time Customer Profile.
+Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-Time Customer Profile.
 
 **Updated features**
 
 | Feature | Description |
 | --- | --- |
 | Alert subscription API | Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries. Alerts can be received by email, within the Platform UI, or both. Currently, query alerts can only be subscribed to using the [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/).  |
-| Dataset samples | Query Service dataset samples enable you to conduct exploratory queries on big data with greatly reduced processing time at the cost of query accuracy. See the [dataset samples guide](../../query-service/sql/dataset-samples.md) to learn more. |
+| Dataset samples | Query Service dataset samples enable you to conduct exploratory queries on big data with greatly reduced processing time at the cost of query accuracy. See the [dataset samples guide](../../query-service/essential-concepts/dataset-samples.md) to learn more. |
 
 For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../../query-service/home.md).
 
-<!-- See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more. -->
+See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more.
 
 ## Sources {#sources}
 
@@ -226,7 +227,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | --- | --- |
-| Audience Manager segment population impact on Real-time Customer Profile | The ingestion of sizeable Audience Manager segment populations has a direct impact on your total profile count when you first send an Audience Manager segment to Platform using the Audience Manager source. This means that selecting all segments can potentially lead to a Profile count in excess of your license usage entitlement. For more information, read the [Audience Manager source overview](../../sources/connectors/adobe-applications/audience-manager.md). For information on your license usage, read the documentation on [using the license usage dashboard](../../dashboards/guides/license-usage.md). |
+| Audience Manager segment population impact on Real-Time Customer Profile | The ingestion of sizeable Audience Manager segment populations has a direct impact on your total profile count when you first send an Audience Manager segment to Platform using the Audience Manager source. This means that selecting all segments can potentially lead to a Profile count in excess of your license usage entitlement. For more information, read the [Audience Manager source overview](../../sources/connectors/adobe-applications/audience-manager.md). For information on your license usage, read the documentation on [using the license usage dashboard](../../dashboards/guides/license-usage.md). |
 | Support for Adobe Campaign Managed Cloud Service | Use the Adobe Campaign Managed Cloud Service source to bring your Adobe Campaign v8.4 delivery and tracking logs data to Experience Platform. Read the guide on [creating an Adobe Campaign Managed Cloud Service source connection in the UI](../../sources/tutorials/ui/create/adobe-applications/campaign.md) for more information. | 
 | API support for on-demand ingestion for batch sources | Use on-demand ingestion to create ad hoc flow runs for a given dataflow with the [!DNL Flow Service] API. Flow runs created must be set to one-time ingestion. For more information, read the guide on [creating a flow run for on-demand ingestion using the API](../../sources/tutorials/api/on-demand-ingestion.md) for more information. |
 | API support for retrying failed dataflow runs for batch sources | Use the `re-trigger` operation to retry your failed dataflow through the API. Read the guide on [retrying failed dataflow runs using the API](../../sources/tutorials/api/retry-flows.md) for more information. |

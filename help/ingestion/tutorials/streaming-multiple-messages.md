@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;streaming multiple messages;multiple messages;
 solution: Experience Platform
 title: Send Multiple Messages in a Single HTTP Request
-topic-legacy: tutorial
 type: Tutorial
 description: This document provides a tutorial for sending multiple messages to Adobe Experience Platform within a single HTTP request using streaming ingestion.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f

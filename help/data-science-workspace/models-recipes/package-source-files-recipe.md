@@ -2,7 +2,6 @@
 keywords: Experience Platform;package source files;Data Science Workspace;popular topics;Docker;docker image
 solution: Experience Platform
 title: Package Source Files Into a Recipe
-topic-legacy: tutorial
 type: Tutorial
 description: This tutorial provides instructions on how you can package the provided Retail Sales sample source files into an archive file, which can be used to create a recipe in Adobe Experience Platform Data Science Workspace by following the recipe import workflow either in the UI or using the API.
 exl-id: 199b8127-4f1b-43a4-82e6-58cb70fcdc08

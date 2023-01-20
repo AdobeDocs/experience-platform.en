@@ -9,6 +9,8 @@ user-guide-description: Find monthly release notes for Adobe Experience Platform
 
 * [Current Platform Release Notes](latest/latest.md)
 * 2022 {#2022}
+  * [November 2022](2022/november-2022.md)
+  * [October 2022](2022/october-2022.md)
   * [September 2022](2022/september-2022.md)
   * [August 2022](2022/august-2022.md)
   * [July 2022](2022/july-2022.md)

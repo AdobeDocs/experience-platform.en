@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;generic REST;generic rest
 solution: Experience Platform
 title: Generic REST API Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect Generic REST API to Adobe Experience Platform using APIs or the user interface.
 exl-id: e3449e33-7261-4aa2-bce9-5530eb4fcc68
 ---

@@ -17,6 +17,7 @@ feature: Sources
     - [Adobe Campaign Managed Cloud Services source](connectors/adobe-applications/campaign.md)
     - [Customer attributes source](connectors/adobe-applications/customer-attributes.md)
     - [Data Collection source](connectors/adobe-applications/data-collection.md)
+    - [Workfront source](connectors/adobe-applications/workfront.md)
     - Field mappings {#mapping}
       - [Analytics field mappings](connectors/adobe-applications/mapping/analytics.md)
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)
@@ -55,6 +56,7 @@ feature: Sources
     - [Veeva CRM connector](connectors/crm/veeva.md)
     - [Zoho CRM connector](connectors/crm/zoho.md)
   - Customer success {#customer-success}
+    - [Oracle Service Cloud](connectors/customer-success/oracle-service-cloud.md)
     - [Salesforce Service Cloud connector](connectors/customer-success/salesforce-service-cloud.md)
     - [ServiceNow connector](connectors/customer-success/servicenow.md)
     - [Zendesk connector](connectors/customer-success/zendesk.md)
@@ -86,6 +88,7 @@ feature: Sources
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
     - [Mailchimp connector](connectors/marketing-automation/mailchimp.md)
     - [Oracle Eloqua connector](connectors/marketing-automation/oracle-eloqua.md)
+    - [Oracle Responsys connector](connectors/marketing-automation/oracle-responsys.md)
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
   - Payments {#payments}
     - [PayPal connector](connectors/payments/paypal.md)
@@ -123,6 +126,7 @@ feature: Sources
       - [Veeva CRM](tutorials/api/create/crm/veeva.md)
       - [Zoho CRM](tutorials/api/create/crm/zoho.md)
     - Customer success {#customer-success}
+      - [Oracle Service Cloud](tutorials/api/create/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
@@ -153,6 +157,7 @@ feature: Sources
       - [MailChimp Campaign](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
       - [MailChimp Members](tutorials/api/create/marketing-automation/mailchimp-members.md)
       - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
+      - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
       - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -201,6 +206,7 @@ feature: Sources
       - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
       - [Customer attributes](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
+      - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
     - Advertising {#advertising}
       - [Google Ads](tutorials/ui/create/advertising/ads.md)
     - Analytics {#analytics}
@@ -228,6 +234,7 @@ feature: Sources
       - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
       - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
     - Customer Success {#customer-success}
+      - [Oracle Service Cloud](tutorials/ui/create/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
       - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
@@ -260,6 +267,7 @@ feature: Sources
       - [Mailchimp Campaigns](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
       - [Mailchimp Members](tutorials/ui/create/marketing-automation/mailchimp-members.md)
       - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
+      - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/ui/create/payments/paypal.md)
@@ -281,6 +289,7 @@ feature: Sources
     - [Marketing automation connection dataflow](tutorials/ui/dataflow/marketing-automation.md)
     - [Payment connection dataflow](tutorials/ui/dataflow/payments.md)
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
+  - [Create a sources dataflow using templates in the UI](tutorials/ui/templates.md)
   - [Monitor batch dataflows](tutorials/ui/monitor.md)
   - [Monitor streaming dataflows](tutorials/ui/monitor-streaming.md)
   - [Update accounts](tutorials/ui/update.md)

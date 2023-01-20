@@ -6,6 +6,10 @@ exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
 ---
 # Connect [!DNL Data Landing Zone] to Platform using the UI
 
+>[!IMPORTANT]
+>
+>This page is specific to the [!DNL Data Landing Zone] *source* connector in Experience Platform. For information on connecting to the [!DNL Data Landing Zone] *destination* connector, refer to the [[!DNL Data Landing Zone] destination documentation page](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
+
 [!DNL Data Landing Zone] is a secure, cloud-based file storage facility to bring files into Adobe Experience Platform. Data is automatically deleted from the [!DNL Data Landing Zone] after seven days.
 
 This tutorial provides steps for creating a [!DNL Data Landing Zone] source connection using the Platform user interface.

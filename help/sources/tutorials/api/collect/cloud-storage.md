@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;cloud storage data
 solution: Experience Platform
 title: Create a Dataflow for Cloud Storage Sources Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform using source connectors and APIs.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
@@ -140,6 +139,47 @@ curl -X POST \
       "params": {
           "path": "/acme/summerCampaign/*premium*.csv",
           "type": "folder"
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
+```
+
+### Configure a source connection to ingest data recursively
+
+When creating a source connection, you can use the `recursive` parameter to ingest data from deeply nested folders.
+
+**API format**
+
+```http
+POST /sourceConnections
+```
+
+**Request**
+
+In the example below, the `recursive: true` parameter informs [!DNL Flow Service] to read all subfolders recursively during the ingestion process.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Cloud Storage source connection",
+      "description: "Source connection for a cloud storage source with recursive ingestion",
+      "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
+      "data": {
+          "format": "delimited"
+      },
+      "params": {
+          "path": "/acme/summerCampaign/customers/premium/buyers/recursive",
+          "type": "folder",
+          "recursive": true
       },
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
@@ -634,9 +674,9 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect data from your cloud storage on a scheduled basis. Incoming data can now be used by downstream Platform services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect data from your cloud storage on a scheduled basis. Incoming data can now be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
-- [Real-time Customer Profile overview](../../../../profile/home.md)
+- [Real-Time Customer Profile overview](../../../../profile/home.md)
 - [Data Science Workspace overview](../../../../data-science-workspace/home.md)
 
 ## Appendix {#appendix}

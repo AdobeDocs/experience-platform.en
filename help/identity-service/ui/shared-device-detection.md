@@ -86,7 +86,7 @@ When [!DNL Shared Device Detection] is enabled, [!DNL Profile] defines the prima
 
 An **authenticated experience event** is an action completed by a user while logged-in to a device. For authenticated experience events, the primary identity is the **User Identity Namespace** (Login ID). An **unauthenticated experience event** is an action completed by a user who is not logged-in to a device. For unauthenticated experience events, the primary identity is the **Shared Identity Namespace** (ECID).
 
-For more information, see the  [[!DNL Real-time Customer Profile] overview](../../profile/home.md).
+For more information, see the  [[!DNL Real-Time Customer Profile] overview](../../profile/home.md).
 
 ## Shared Devices UI
 
