@@ -6,7 +6,7 @@ title: Access Control for Customer AI
 description: Access control for CAI is provided through the Adobe Admin Console. This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes
 ---
 
-## Attribute-based access control
+# Attribute-based access control
 
 >[!IMPORTANT]
 >

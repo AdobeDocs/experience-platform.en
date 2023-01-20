@@ -7,9 +7,9 @@ description: Access control for AAI is provided through the Adobe Admin Console.
 
 # Access Control
 
-Access control for Attribution AI is provided through Adobe Experience Platform in the [Adobe Admin Console](). This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes.
+Access control for Attribution AI is provided through Adobe Experience Platform in the [Adobe Admin Console](https://adminconsole.adobe.com/). This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes.
 
-For more information on access control, see the [access control overview]().
+For more information on access control, see the [access control overview](../../access-control/home).
 
 ## Attribute-based access control
 

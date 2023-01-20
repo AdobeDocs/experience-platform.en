@@ -5,7 +5,7 @@ title: Governance policies for Customer AI
 description: Adobe Experience Platform provides several services and tools that allow you to confidently control your collected experience data
 ---
 
-## Governance policies
+# Governance policies
 
 Once you go through the workflow to create an instance and submit the model's configuration, the [policy enforcement](/help/data-governance/enforcement/auto-enforcement.md) checks to see if there are any violations. If a policy violation occurs, a popover appears indicating that one or more policies have been violated. This is to ensure that your data operations and marketing actions within Platform are compliant with data usage policies. 
 
