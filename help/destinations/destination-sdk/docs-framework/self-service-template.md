@@ -12,7 +12,7 @@ exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 >[!IMPORTANT]
 >
 >* Fill in all the sections in this template, in the order in which they are outlined in the template.
->* This template is updated infrequently, based on partner feedback. Before you begin authoring documentation for your destination, make sure that you have downloaded the [latest version of the template](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+>* This template is updated infrequently, based on partner feedback. Before you begin authoring documentation for your destination, make sure that you have downloaded the [latest version of the template](../assets/docs-framework/yourdestination-template.zip).
 
 ## Overview {#overview}
 

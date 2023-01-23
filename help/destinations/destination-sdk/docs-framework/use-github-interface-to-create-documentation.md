@@ -27,13 +27,13 @@ The instructions below show you how to use the GitHub web interface to author do
 
 4. In the GitHub folder structure of the forked repository, navigate to `experience-platform.en/help/destinations/catalog/[...]`, where `[...]` is the desired category for your destination. For example, if you are adding a personalization destination to Experience Platform, select the `personalization` category. Select **Add file > Create new file**.
 
-   ![Add new file](./assets/github-navigate-and-create-file.gif)
+   ![Add new file](../assets/docs-framework/github-navigate-and-create-file.gif)
 
 5. Name your destination `YOURDESTINATION.md`, where YOURDESTINATION is the name of your destination in Adobe Experience Platform. For example, if your company is called Moviestar, you would name your file `moviestar.md`.
 
 ## Author the documentation page for your destination {#author-documentation}
 
-1. You will create the content of your destination page based on the [documentation self-service template](./self-service-template.md). **[Download](assets/yourdestination-template.zip)** the template and unzip it to extract the `.md` file template.
+1. You will create the content of your destination page based on the [documentation self-service template](./self-service-template.md). **[Download](../assets/docs-framework/yourdestination-template.zip)** the template and unzip it to extract the `.md` file template.
 2. Paste and edit the content of the template with relevant information for your destination in an online markdown editor, such as [dillinger.io](https://dillinger.io/). Follow the instructions in the template for details on what you should fill in and which paragraphs can be removed.
 
    >[!TIP]
@@ -56,7 +56,7 @@ The instructions below show you how to use the GitHub web interface to author do
 
 1.  After you saved the file and uploaded your desired images, you can open a pull request (PR) to merge your working branch into the master branch of the Adobe documentation repository. Make sure the branch that you worked on is selected and select **Contribute > Open pull request**.
    
-   ![Create pull request](./assets/ssd-create-pull-request-1.gif)
+   ![Create pull request](../assets/docs-framework/ssd-create-pull-request-1.gif)
 
 1. Make sure that the base and compare branches are correct. Add a note to the PR, describing your update, and select **Create pull request**. This opens a PR to merge the working branch of your fork into the master branch of the Adobe repository.
    
