@@ -17,7 +17,6 @@ For detailed descriptions of the parameters used below, see [configuration optio
 
 Before advancing to the steps outlined below, please read the [Destination SDK getting started](../../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
 
-
 ## Step 1: Create a server and file configuration {#create-server-file-configuration}
 
 Start by using the `/destination-server` endpoint to [create a server and file configuration](../../authoring-api/destination-server/create-destination-server.md).

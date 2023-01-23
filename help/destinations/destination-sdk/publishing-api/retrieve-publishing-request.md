@@ -30,9 +30,13 @@ You can retrieve a list of all destinations submitted for publishing for your IM
 
 **API format**
 
+Use the following API format to retrieve all publishing requests for your IMS Organization.
+
 ```http
 GET /authoring/destinations/publish
 ```
+
+Use the following API format to retrieve a specific publishing request for your IMS Organization, defined by the `{DESTINATION_ID}` parameter.
 
 ```http
 GET /authoring/destinations/publish/{DESTINATION_ID}
@@ -83,36 +87,6 @@ The following response returns HTTP status 200 with a list of destinations submi
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
    "publishDetailsList":[
       {
-         "configId":"123cs780-ce29-434f-921e-4ed6ec2a6c35",
-         "allowedOrgs": [
-            "*"
-         ],    
-         "status":"PUBLISHED",
-         "destinationType": "PUBLIC",
-         "publishedDate":"1630617746"
-      }
-   ]
-}
-```
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`destinationId` | String | The destination ID of the destination configuration that you have submitted for publishing. |
-|`publishDetailsList.configId` | String | The unique ID of the destination publish request for your submitted destination. |
-|`publishDetailsList.allowedOrgs` | String | Returns the Experience Platform organizations for which the destination is available. <br> <ul><li> For `"destinationType": "PUBLIC"`, this parameter returns `"*"`, which means that the destination is available for all Experience Platform organizations.</li><li> For `"destinationType": "DEV"`, this parameter returns the Organization ID of the organization which you used to author and test the destination.</li></ul>|
-|`publishDetailsList.status` | String | The status of your destination publish request. Possible values are `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Destinations with the value `PUBLISHED` are live and can be used by Experience Platform customers.|
-|`publishDetailsList.destinationType` | String | The type of destination. Values can be `DEV` and `PUBLIC`. `DEV` corresponds to the destination in your Experience Platform organization. `PUBLIC` corresponds to the destination that you have submitted for publishing. Think of these two options in Git terms, where the `DEV` version represents your local authoring branch and the `PUBLIC` version represents the remote main branch.|
-|`publishDetailsList.publishedDate` | String | The date when the destination was submitted for publishing, in epoch time.|
-
-{style="table-layout:auto"}
-
-If you passed a DESTINATION_ID in the API call, the response returns HTTP status 200 with detailed information about the specified destination publish request.
-
-```json
-{
-   "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
-   "publishDetailsList":[
-      {
          "configId":"ab41387c0-4772-4709-a3ce-6d5fee654520",
          "allowedOrgs":[
             "716543205DB85F7F0A495E5B@AdobeOrg"
@@ -141,6 +115,38 @@ If you passed a DESTINATION_ID in the API call, the response returns HTTP status
    ]
 }
 ```
+
+If you passed a `DESTINATION_ID` in the API call, the response returns HTTP status 200 with detailed information about the specified destination publish request.
+
+```json
+{
+   "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
+   "publishDetailsList":[
+      {
+         "configId":"123cs780-ce29-434f-921e-4ed6ec2a6c35",
+         "allowedOrgs": [
+            "*"
+         ],    
+         "status":"PUBLISHED",
+         "destinationType": "PUBLIC",
+         "publishedDate":"1630617746"
+      }
+   ]
+}
+```
+
+|Parameter | Type | Description|
+|---------|----------|------|
+|`destinationId` | String | The destination ID of the destination configuration that you have submitted for publishing. |
+|`publishDetailsList.configId` | String | The unique ID of the destination publish request for your submitted destination. |
+|`publishDetailsList.allowedOrgs` | String | Returns the Experience Platform organizations for which the destination is available. <br> <ul><li> For `"destinationType": "PUBLIC"`, this parameter returns `"*"`, which means that the destination is available for all Experience Platform organizations.</li><li> For `"destinationType": "DEV"`, this parameter returns the Organization ID of the organization which you used to author and test the destination.</li></ul>|
+|`publishDetailsList.status` | String | The status of your destination publish request. Possible values are `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Destinations with the value `PUBLISHED` are live and can be used by Experience Platform customers.|
+|`publishDetailsList.destinationType` | String | The type of destination. Values can be `DEV` and `PUBLIC`. `DEV` corresponds to the destination in your Experience Platform organization. `PUBLIC` corresponds to the destination that you have submitted for publishing. Think of these two options in Git terms, where the `DEV` version represents your local authoring branch and the `PUBLIC` version represents the remote main branch.|
+|`publishDetailsList.publishedDate` | String | The date when the destination was submitted for publishing, in epoch time.|
+
+{style="table-layout:auto"}
+
+
 
 ## API error handling
 
