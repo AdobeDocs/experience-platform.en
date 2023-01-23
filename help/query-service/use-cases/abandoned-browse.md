@@ -67,11 +67,11 @@ Adobe Experience Platform provides a data repository and the necessary tools to 
 
 ## Next steps
 
-By reading this document, you should now understand how [!DNL Query Service] impacts not only the quality of your data and ease of segmentation but also its importance within your data architecture for the entire end-to-end workflow. For more applicable SQL examples that use Adobe Analytics with [!DNL Query Service], see the [Adobe Analytics sample queries documentation](../sample-queries/adobe-analytics.md).
+By reading this document, you should now understand how [!DNL Query Service] impacts not only the quality of your data and ease of segmentation but also its importance within your data architecture for the entire end-to-end workflow. For more applicable SQL examples that use Adobe Analytics with [!DNL Query Service], see the [Adobe Analytics merchandising variables use case](./merchandising-variables.md).
 
 Other documents that demonstrate the benefits of [!DNL Query Service] to your organization's strategic business insights are the [bot filtering use case](./bot-filtering.md) example. 
 
-Alternatively, these documents that will benefit your understanding of [!DNL Query Service] features: 
+Alternatively, these documents can benefit your understanding of [!DNL Query Service] features: 
 
 * [Guidance for query execution](../best-practices/writing-queries.md)
 * [Guidance for data asset organization](../best-practices/organize-data-assets.md).
