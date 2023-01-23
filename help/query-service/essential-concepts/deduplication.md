@@ -150,4 +150,4 @@ SELECT SUM(application.launches.value) AS num_launches FROM (
 
 ## Next steps
 
-This document outlined how to perform data deduplication within Query Service, as well as examples of data deduplication. For more best practices when writing queries using Query Service, please read the [writing queries guide](./writing-queries.md).
+This document provided examples of data deduplication and outlined how to perform data deduplication within Query Service. For more best practices when writing queries using Query Service, please read the [writing queries guide](../best-practices/writing-queries.md).
