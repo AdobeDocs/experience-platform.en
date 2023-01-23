@@ -120,17 +120,21 @@ If selecting a value from this list of enums, the value will be outlined with a 
 
 ![A warning that is displayed if you are inserting a value that is not part of the enum list.](../images/ui/segment-builder/enum-warning.png)
 
-If you are creating multiple values, you can add all of them at once by using the bulk upload. Select the ![plus icon]() to show the **[!UICONTROL Add values in bulk]** popover.
+If you are creating multiple values, you can add all of them at once by using the bulk upload. Select the ![plus icon](../images/ui/segment-builder/plus-icon.png) to show the **[!UICONTROL Add values in bulk]** popover.
 
-IMAGE
+![The plus icon is highlighted, showing the button that you can select to access the bulk upload popover.](../images/ui/segment-builder/add-bulk-values.png)
 
-On the **[!UICONTROL Add values in bulk]** popover, you can either upload a CSV or TSV file or manually insert comma separated values. 
+On the **[!UICONTROL Add values in bulk]** popover, you can upload a CSV or TSV file.
 
-IMAGE
+![The Add values in bulk popover is displayed. The dialog you can select to upload a CSV or TSV file is highlighted.](../images/ui/segment-builder/bulk-values-popover.png)
 
-Please note that there is a maximum of 100 values allowed. If you exceed this amount, you will need to remove some values before adding more.
+Alternatively, you can manually add comma separated values.
 
-IMAGE
+![The Add values in bulk popover is displayed. Both the dialog you can use to insert values and the added values are highlighted.](../images/ui/segment-builder/bulk-values-comma-separated.png)
+
+Please note that there is a maximum of 250 values allowed. If you exceed this amount, you will need to remove some values before adding more.
+
+![A warning that shows that you have reached the maximum number of values is displayed.](../images/ui/segment-builder/maximum-values.png)
 
 ### Adding audiences
 
