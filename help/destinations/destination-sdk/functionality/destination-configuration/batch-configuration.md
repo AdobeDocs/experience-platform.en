@@ -103,4 +103,4 @@ The configuration example below shows the correspondence between the configurati
 }
 ```
 
-![UI image showing the file name configuration screen with preselected macros](assets/file-name-configuration.png)
+![UI image showing the file name configuration screen with preselected macros](../../assets/functionality/destination-configuration/file-name-configuration.png)

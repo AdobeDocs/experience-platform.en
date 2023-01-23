@@ -40,7 +40,7 @@ To get the ID of a destination instance, you must first create a connection in t
 >[!TIP]
 >
 >* Get the destination instance ID that you should use here from the URL when browsing a connection with your destination.
->![UI image how to get destination instance ID](assets/get-destination-instance-id.png)
+>![UI image how to get destination instance ID](../../assets/testing-api/get-destination-instance-id.png)
 
 **API format**
 

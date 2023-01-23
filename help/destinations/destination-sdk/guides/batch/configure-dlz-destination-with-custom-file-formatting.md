@@ -410,7 +410,7 @@ A successful response returns the new destination configuration, including the u
 
 Based on the configurations above, the Experience Platform catalog will now display a new private destination card for you to use.
 
-![Screen recording showing the destinations catalog page with a selected destination card.](../../assets/dlz-destination-card.gif)
+![Screen recording showing the destinations catalog page with a selected destination card.](../../assets/guides/batch/dlz-destination-card.gif)
 
 In the images and recordings below, note how the options in the [activation workflow for file-based destinations](../../../ui/activate-batch-profile-destinations.md) match the options that you selected in the destination configuration.
 
@@ -420,13 +420,13 @@ When filling in details about the destination, notice how the fields surfaced ar
 >
 >The order in which you add the custom data fields to the destination configuration is not reflected in the UI. The custom data fields are always displayed in the order displayed in the screen recording below.
 
-![fill in destination details](../../assets/file-configuration-options.gif)
+![fill in destination details](../../assets/guides/batch/file-configuration-options.gif)
 
 When scheduling export intervals, notice how the fields surfaced are the fields you set up in the `batchConfig` configuration.
-![export scheduling options](../../assets/file-export-scheduling.png)
+![export scheduling options](../../assets/guides/batch/file-export-scheduling.png)
 
 When viewing the filename configuration options, notice how the fields surfaced represent the `filenameConfig` options that you set up in the configuration.
-![filename configuration options](../../assets/file-naming-options.gif)
+![filename configuration options](../../assets/guides/batch/file-naming-options.gif)
 
 If you want to adjust any of the fields mentioned above, repeat [steps one](#create-server-file-configuration) and [two](#create-destination-configuration) to modify the configurations according to your needs.
 

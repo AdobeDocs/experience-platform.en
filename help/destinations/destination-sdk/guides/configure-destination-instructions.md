@@ -15,7 +15,7 @@ Before advancing to the steps illustrated below, please read the [Destination SD
 
 ## Steps to use the configuration options in Destination SDK to set up your destination {#steps}
 
-![Illustrated steps of using Destination SDK endpoints](assets/destination-sdk-steps.png)
+![Illustrated steps of using Destination SDK endpoints](../assets/guides/destination-sdk-steps.png)
 
 ## Step 1: Create a server and template configuration {#create-server-template-configuration}
 

@@ -14,7 +14,7 @@ For instance, customers could map a [!DNL Platform] [!DNL IDFA] namespace to an 
 
 Read more about identities in the [Identity Namespace overview](../../../../identity-service/namespaces.md).
 
-![Render target identities in the UI](assets/target-identities-ui.png) 
+![Render target identities in the UI](../../assets/functionality/destination-configuration/target-identities-ui.png) 
 
 ```json
 "identityNamespaces":{

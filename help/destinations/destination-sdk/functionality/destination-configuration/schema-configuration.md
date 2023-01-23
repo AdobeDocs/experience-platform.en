@@ -11,7 +11,7 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 
 You can create static, hardcoded schema fields or you can specify a dynamic schema that Experience Platform should connect to in order to dynamically retrieve and populate fields in the target schema of the mapping workflow. The target schema is shown in the screenshot below.
 
-![Screenshot highlighting the target schema fields in the mapping step of the activation workflow.](assets/target-schema-fields.png)
+![Screenshot highlighting the target schema fields in the mapping step of the activation workflow.](../../assets/functionality/destination-configuration/target-schema-fields.png)
 
 ## Static hardcoded schema field configuration
 
@@ -92,7 +92,7 @@ Within the schema configuration, you have the option of adding required (or pred
 
 ```
 
-![Image of the required mappings in the UI activation flow.](assets/required-mappings-1.png)
+![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 
 ```json
 
@@ -107,7 +107,7 @@ Within the schema configuration, you have the option of adding required (or pred
 
 ```
 
-![Image of the required mappings in the UI activation flow.](assets/required-mappings-2.png)
+![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
 >[!NOTE]
 >

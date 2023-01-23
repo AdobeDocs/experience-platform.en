@@ -13,7 +13,7 @@ To **create and test a message transformation template** between the target sche
 
 Illustrated below is how creating and testing a message transformation template fits into the [destination configuration workflow](../guides/configure-destination-instructions.md) in Destination SDK:
 
-![Graphic of where the create template step fits into the destination configuration workflow](assets/create-template-step.png)
+![Graphic of where the create template step fits into the destination configuration workflow](../assets/testing-api/create-template-step.png)
 
 ## Why you need to create and test a message transformation template {#why-create-message-transformation-template}
 
@@ -152,7 +152,7 @@ If the destination ID you provide corresponds to a destination server template w
 
 Before using the template to render profiles that match your destination's expected format, you must character-escape the template, as shown in the screen recording below. 
 
-![Video that shows how to character-escape a template using an online character escaping tool](assets/escape-characters.gif) 
+![Video that shows how to character-escape a template using an online character escaping tool](../assets/testing-api/escape-characters.gif) 
 
 You can use an online character escaping tool. The demo above uses the [JSON Escape formatter](https://jsonformatter.org/json-escape). 
 

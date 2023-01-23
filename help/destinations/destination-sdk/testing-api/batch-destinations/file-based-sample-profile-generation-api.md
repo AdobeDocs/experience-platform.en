@@ -23,7 +23,7 @@ Before you can use the `/sample-profiles` endpoint, make sure you meet the follo
 * You have created at least one activation flow for your destination in the Experience Platform UI. The `/sample-profiles` endpoint creates the profiles based on the source schema that you defined in your activation flow. See the [activation tutorial](../../../ui/activate-batch-profile-destinations.md) to learn how to create an activation flow.
 * To successfully make the API request, you need the destination instance ID corresponding to the destination instance that you will be testing. Get the destination instance ID that you should use in the API call, from the URL, when browsing a connection with your destination in the Platform UI.
 
-   ![UI image showing how to get destination instance ID from the URL.](assets/get-destination-instance-id.png)
+   ![UI image showing how to get destination instance ID from the URL.](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Generate sample profiles for destination testing {#generate-sample-profiles}
 
@@ -96,7 +96,7 @@ A successful response returns HTTP status 200 with the specified number of sampl
 ]
 ```
 
-![Image showing the mapping from the UI to the fields from the API response.](assets/sample-api-response-mapping.png)
+![Image showing the mapping from the UI to the fields from the API response.](../../assets/testing-api/batch-destinations/sample-api-response-mapping.png)
 
 | Property | Description |
 | -------- | ----------- |

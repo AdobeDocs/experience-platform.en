@@ -11,7 +11,7 @@ Combined, these components allow Experience Platform to connect to destination p
 
 The diagram below shows a high-level overview of the components that you can configure through Destination SDK to build your own destination. These components are described further below.
 
-![Diagram showing the Destination SDK components, configuration endpoints, and the operations supported by them.](assets/destination-sdk-components-diagram.png)
+![Diagram showing the Destination SDK components, configuration endpoints, and the operations supported by them.](../assets/functionality/destination-sdk-components-diagram.png)
 
 
 Adobe Experience Platform Destination SDK consists of the following configurations:

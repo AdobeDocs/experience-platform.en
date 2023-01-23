@@ -29,7 +29,7 @@ Before you can use the `/testing/destinationInstance` endpoint, make sure you me
 * You have created at least one activation flow for your destination in the Experience Platform UI.
 * To successfully make the API request, you need the destination instance ID corresponding to the destination instance that you will be testing. Get the destination instance ID that you should use in the API call, from the URL, when browsing a connection with your destination in the Platform UI.
 
-   ![UI image showing how to get destination instance ID from the URL.](assets/get-destination-instance-id.png)
+   ![UI image showing how to get destination instance ID from the URL.](../../assets/testing-api/get-destination-instance-id.png)
 * You have previously [tested your destination configuration](file-based-destination-testing-api.md), and received a valid API response, which includes a `results` property. You will use this `results` value to further test your destination.
 
 ## View detailed destination testing results {#test-activation-results}

@@ -9,7 +9,7 @@ The template spec is a part of the destination server configuration, which allow
 
 Adobe uses a templating language similar to [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) to transform the fields from the XDM schema into a format supported by your destination.
 
-![Template configuration highlighted](assets/template-configuration.png)
+![Template configuration highlighted](../../assets/functionality/destination-server/template-configuration.png)
 
  For more information about the transformation, visit the links below:
 

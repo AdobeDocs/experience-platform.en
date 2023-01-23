@@ -19,11 +19,11 @@ The instructions below show you how to use the GitHub web interface to author do
 1. In your browser, navigate to `https://github.com/AdobeDocs/experience-platform.en`.
 2. To [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) the repository, click **Fork** as shown below. This creates a copy of the Experience Platform repository in your own GitHub account.
 
-   ![Fork Adobe documentation repository](./assets/ssd-fork-repository.gif)
+   ![Fork Adobe documentation repository](../assets/docs-framework/ssd-fork-repository.gif)
 
 3. In your fork of the repository, create a new branch for your project, as shown below. Use this new branch for your work.
 
-   ![Create new GitHub branch](./assets/new-branch-github.gif)
+   ![Create new GitHub branch](../assets/docs-framework/new-branch-github.gif)
 
 4. In the GitHub folder structure of the forked repository, navigate to `experience-platform.en/help/destinations/catalog/[...]`, where `[...]` is the desired category for your destination. For example, if you are adding a personalization destination to Experience Platform, select the `personalization` category. Select **Add file > Create new file**.
 
@@ -42,11 +42,11 @@ The instructions below show you how to use the GitHub web interface to author do
 3. Copy the content from the markdown editor into your new file in GitHub.
 4. For any screenshots or images that you plan on using, use the GitHub interface to upload the files to `experience-platform.en/help/destinations/assets/catalog/[...]`, where `[...]` is the desired category for your destination. For example, if you are adding a personalization destination to Experience Platform, select the `personalization` category. You need to link to the images from the page you are authoring. See [instructions how to link to images](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en#link-to-images).
 
-   ![Upload image to GitHub](./assets/upload-image.gif)
+   ![Upload image to GitHub](../assets/docs-framework/upload-image.gif)
 
 5.  When you are ready, save the file in your branch.
 
-   ![Confirm file creation](./assets/ssd-confirm-file-creation.png)
+   ![Confirm file creation](../assets/docs-framework/ssd-confirm-file-creation.png)
 
 ## Submit your documentation for review {#submit-review}
 
@@ -64,13 +64,13 @@ The instructions below show you how to use the GitHub web interface to author do
    >
    >Leave the **Allow edits by maintainers** checkbox selected so that the Adobe documentation team can make edits to the PR. 
    
-   ![Create pull request to Adobe documentation repository](./assets/ssd-create-pull-request-2.png)
+   ![Create pull request to Adobe documentation repository](../assets/docs-framework/ssd-create-pull-request-2.png)
 
 1. At this point, a notification appears that prompts you to sign the Adobe Contributor License Agreement (CLA). This is a mandatory step. After you sign the CLA, refresh the PR page and submit the pull request.
 
 1. You can confirm that the pull request has been submitted by inspecting the **Pull requests** tab in `https://github.com/AdobeDocs/experience-platform.en`.
 
-   ![PR successful](./assets/ssd-pr-successful.png)
+   ![PR successful](../assets/docs-framework/ssd-pr-successful.png)
 
 1. Thank you! The Adobe documentation team will reach out in the PR in case any edits are required and to let you know when the documentation will be published.
 

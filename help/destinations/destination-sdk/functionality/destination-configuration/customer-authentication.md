@@ -13,7 +13,7 @@ Depending on which authentication option you indicate in the `authType` field, t
 
 When you configure the bearer authentication type, users are required to input the bearer token that they obtain from your destination.
 
-![UI render with bearer authentication](assets/bearer-authentication-ui.png)
+![UI render with bearer authentication](../../assets/functionality/destination-configuration/bearer-authentication-ui.png)
 
 To set up bearer type authentication for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
@@ -29,7 +29,7 @@ To set up bearer type authentication for your destination, configure the `custom
 
 Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 authentication flow to your destination, as shown in the example below for the Twitter Custom Audiences destination. For detailed information on configuring OAuth 2 authentication to your destination endpoint, read the dedicated [Destination SDK OAuth 2 authentication page](oauth2-authentication.md).
 
-![UI render with OAuth 2 authentication](assets/oauth2-authentication-ui.png)
+![UI render with OAuth 2 authentication](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
 |Parameter | Type | Description|
 |---------|----------|------|
@@ -44,7 +44,7 @@ Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 auth
 
 When you configure the Amazon S3 authentication type, users are required to input the S3 credentials.
 
-![UI render with S3 authentication](assets/s3-authentication-ui.png)
+![UI render with S3 authentication](../../assets/functionality/destination-configuration/s3-authentication-ui.png)
 
 To set up [!DNL Amazon S3] authentication for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
@@ -62,7 +62,7 @@ To set up [!DNL Amazon S3] authentication for your destination, configure the `c
 
 When you configure the Azure Blob authentication type, users are required to input the connection string.
 
-![UI render with Blob authentication](assets/blob-authentication-ui.png)
+![UI render with Blob authentication](../../assets/functionality/destination-configuration/blob-authentication-ui.png)
 
 To set up [!DNL Azure Blob] authentication for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
@@ -80,7 +80,7 @@ To set up [!DNL Azure Blob] authentication for your destination, configure the `
 
 When you configure the [!DNL Azure Data Lake Storage] authentication type, users are required to input the Azure Service Principal credentials and their tenant information.
 
-![UI render with [!DNL Azure Data Lake Storage] authentication](assets/adls-authentication-ui.png)
+![UI render with [!DNL Azure Data Lake Storage] authentication](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
 
 To set up [!DNL Azure Data Lake Storage] (ADLS) authentication for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
@@ -98,7 +98,7 @@ To set up [!DNL Azure Data Lake Storage] (ADLS) authentication for your destinat
 
 When you configure the SFTP with password authentication type, users are required to input the SFTP username and password, as well as the SFTP domain and port (default port is 22).
 
-![UI render with SFTP with password authentication](assets/sftp-password-authentication-ui.png)
+![UI render with SFTP with password authentication](../../assets/functionality/destination-configuration/sftp-password-authentication-ui.png)
 
 To set up SFTP authentication with password for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
@@ -116,7 +116,7 @@ To set up SFTP authentication with password for your destination, configure the 
 
 When you configure the SFTP with SSH key authentication type, users are required to input the SFTP username and SSH key, as well as the SFTP domain and port (default port is 22).
 
-![UI render with SFTP with SSH key authentication](assets/sftp-key-authentication-ui.png)
+![UI render with SFTP with SSH key authentication](../../assets/functionality/destination-configuration/sftp-key-authentication-ui.png)
 
 To set up SFTP authentication with SSH key for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
@@ -134,7 +134,7 @@ To set up SFTP authentication with SSH key for your destination, configure the `
 
 When you configure the [!DNL Google Cloud Storage] authentication type, users are required to input their [!DNL Google Cloud Storage] [!UICONTROL access key ID] and [!UICONTROL secret access key].
 
-![UI render with Google Cloud Storage authentication](assets/google-cloud-storage-ui.png)
+![UI render with Google Cloud Storage authentication](../../assets/functionality/destination-configuration/google-cloud-storage-ui.png)
 
 To set up [!DNL Google Cloud Storage] authentication for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 

@@ -13,7 +13,7 @@ We recommend using these tools to validate your configuration before [submitting
 
 For the best testing results, we recommend using this API based on the flow diagram below.
 
-![Diagram showing the recommended destination testing flow](assets/file-based-testing-flow.png)
+![Diagram showing the recommended destination testing flow](../../assets/testing-api/batch-destinations/file-based-testing-flow.png)
 
 See the sections below for a brief overview of what each endpoint can do.
 

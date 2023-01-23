@@ -7,7 +7,7 @@ title: Segment mapping configuration
 
 This section of the destination configuration relates to how segment metadata like segment names or IDs should be shared between Experience Platform and your destination.
 
-![Segment mapping configuration section](assets/segment-mapping-configuration.png)
+![Segment mapping configuration section](../../assets/functionality/destination-configuration/segment-mapping-configuration.png)
 
 |Parameter|Type|Description|
 |---|---|---|

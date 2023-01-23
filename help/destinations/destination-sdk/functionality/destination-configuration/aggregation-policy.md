@@ -14,7 +14,7 @@ An aggregation policy determines how the exported profiles are combined in the d
 
 This section allows you to set the aggregation policies that Experience Platform should use when exporting data to your destination.
 
-![Aggregation policy in the configuration template](assets/aggregation-configuration.png)
+![Aggregation policy in the configuration template](../../assets/functionality/destination-configuration/aggregation-configuration.png)
 
 Read the section on [using templating](../../functionality/destination-server/message-format.md#using-templating) and the [aggregation key examples](../../functionality/destination-server/message-format.md#template-aggregation-key) to understand how to include the aggregation policy in your message transformation template based on your selected aggregation policy. 
 
