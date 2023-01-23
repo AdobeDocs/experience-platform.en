@@ -72,7 +72,7 @@ Note the following known limitations in the beta release of the Core Services ca
 
 ### Permissions management in Audience Manager
 
-Segments and traits in Audience Manager are protected by [Role-Based Access Controls](/https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=en) (RBAC). 
+Segments and traits in Audience Manager are protected by [Role-Based Access Controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=en) (RBAC). 
 
 Segments coming through Segue from AEP to AAM is assigned to a specific datasource called "Experience Platform Segments" or something similar.
 Customers can apply Segment RBAC within AAM based on this Datasource. This means that data governance settings from Experience Platform are not carried over in Audience Manager. You must set new access control permissions in Audience Manager for these segments and traits created from Experience Platform segments.
