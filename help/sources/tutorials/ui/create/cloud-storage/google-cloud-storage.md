@@ -34,7 +34,7 @@ In order to access your [!DNL Google Cloud Storage] data on Platform, you must p
 | ---------- | ----------- |
 | Access key ID | A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Platform. |
 | Secret access key | A 40-character, base-64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Platform. |
-| Bucket name | The name of your [!DNL Google Cloud Storage] bucket. You must specify a bucket name if you want to provide access to a specific sub folder in your cloud storage. |
+| Bucket name | The name of your [!DNL Google Cloud Storage] bucket. You must specify a bucket name if you want to provide access to a specific subfolder in your cloud storage. |
 | Folder path | The path to the folder that you want to provide access to. |
 
 For more information about these values, see the [Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guide. For steps on how to generate your own access key ID and secret access key, refer to the [[!DNL Google Cloud Storage] overview](../../../../connectors/cloud-storage/google-cloud-storage.md).
@@ -61,7 +61,7 @@ To connect an existing account, select the [!DNL Google Cloud Storage] account y
 
 ### New account
 
-If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your [!DNL Google Cloud Storage] credentials. During this step, you can also designate the sub folders that your account will have access to by defining the name of the path to the sub folder.
+If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your [!DNL Google Cloud Storage] credentials. During this step, you can also designate the subfolders that your account will have access to by defining the name of the path to the subfolder.
 
 When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
