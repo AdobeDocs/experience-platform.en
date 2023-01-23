@@ -29,6 +29,8 @@ In order for [!DNL Flow Service] to connect with your [!DNL Google Cloud Storage
 | ---------- | ----------- |
 | `accessKeyId` | A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Platform. |
 | `secretAccessKey` | A 40-character, base-64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Platform. |
+| `bucketName` | The name of your [!DNL Google Cloud Storage] bucket. You must specify a bucket name if you want to provide access to a specific sub folder in your cloud storage. |
+| `folderPath` | The path to the folder that you want to provide access to. |
 
 For more information about these values, see the [Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guide. For steps on how to generate your own access key ID and secret access key, refer to the [[!DNL Google Cloud Storage] overview](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
@@ -41,6 +43,10 @@ For information on how to successfully make calls to Platform APIs, see the guid
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Google Cloud Storage] authentication credentials as part of the request parameters.
+
+>[!TIP]
+>
+>During this step, you can also designate the sub folders that your account will have access to by defining the bucket name and the path to the subfolder.
 
 **API format**
 
@@ -67,7 +73,9 @@ curl -X POST \
             "specName": "Basic Authentication for google-cloud",
             "params": {
                 "accessKeyId": "accessKeyId",
-                "secretAccessKey": "secretAccessKey"
+                "secretAccessKey": "secretAccessKey",
+                "bucketName": "acme-google-cloud-bucket",
+                "folderPath": "/acme/customers/sales"
             }
         },
         "connectionSpec": {
@@ -81,6 +89,8 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | The access key ID associated with your [!DNL Google Cloud Storage] account. |
 | `auth.params.secretAccessKey` | The secret access key associated with your [!DNL Google Cloud Storage] account. |
+| `auth.params.bucketName` | The name of your [!DNL Google Cloud Storage] bucket. You must specify a bucket name if you want to provide access to a specific subfolder in your cloud storage. |
+| `auth.params.folderPath` | The path to the folder that you want to provide access to. |
 | `connectionSpec.id` | The [!DNL Google Cloud Storage] connection specification ID: `32e8f412-cdf7-464c-9885-78184cb113fd` |
 
 **Response**
