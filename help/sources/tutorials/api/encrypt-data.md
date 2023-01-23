@@ -10,10 +10,10 @@ Adobe Experience Platform allows you to ingest encrypted files through cloud sto
 
 The encrypted data ingestion process is as follows:
 
-1. [Create an encryption key pair using Experience Platform APIs](#create-keys). The encryption key pair consists of a private key and a public key. Once created, you can copy or download the public key, alongside its corresponding public key ID and Expiry Time. During this process, the private key will be stored by Experience Platform in a secure vault. 
+1. [Create an encryption key pair using Experience Platform APIs](#create-encryption-key-pair). The encryption key pair consists of a private key and a public key. Once created, you can copy or download the public key, alongside its corresponding public key ID and Expiry Time. During this process, the private key will be stored by Experience Platform in a secure vault. 
 2. Use the public key to encrypt the data file that you want to ingest.
 3. Place your encrypted file in your cloud storage.
-4. Once the encrypted file is ready, [create a source connection and a dataflow for your cloud storage source](#create-dataflow). During the flow creation step, you must provide an `encryption` parameter and include your public key ID. 
+4. Once the encrypted file is ready, [create a source connection and a dataflow for your cloud storage source](#create-a-dataflow-for-encrypted-data). During the flow creation step, you must provide an `encryption` parameter and include your public key ID. 
 5. Experience Platform retrieves the private key from the secure vault to decrypt the data at the time of ingestion.
 
 This document provides steps on how to generate a encryption key pair to encrypt your data, and ingest that encrypted data to Experience Platform using cloud storage sources.
@@ -30,7 +30,7 @@ This tutorial requires you to have a working understanding of the following comp
 
 For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
 
-## Create encryption key pair {#create-keys}
+## Create encryption key pair {#create-encryption-key-pair}
 
 The first step in ingesting encrypted data to Experience Platform is to create your encryption key pair by making a POST request to the `/encryption/keys` endpoint of the [!DNL Connectors] API.
 
@@ -96,12 +96,12 @@ First, you must create a base connection to authenticate your source against Pla
 
 After creating a base connection, you must then follow the steps outlined in the tutorial for [creating a source connection for a cloud storage source](../api/collect/cloud-storage.md) in order to create a source connection, a target connection, and a mapping.
 
-## Create a dataflow for encrypted data ingestion {#create-dataflow}
+## Create a dataflow for encrypted data {#create-a-dataflow-for-encrypted-data}
 
 >[!NOTE]
 >
 >You must have the following, in order to create a dataflow for encrypted data ingestion:
->* [Public key ID](#create-keys)
+>* [Public key ID](#create-encryption-key-pair)
 >* [Source connection ID](../api/collect/cloud-storage.md#source)
 >* [Target connection ID](../api/collect/cloud-storage.md#target)
 >* [Mapping ID](../api/collect/cloud-storage.md#mapping)
