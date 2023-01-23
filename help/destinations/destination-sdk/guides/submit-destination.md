@@ -220,7 +220,7 @@ For file-based destinations, you must provide additional proof that you have cor
 
 ### Testing API response {#testing-api-response-file-based}
 
-Include a request and a response sample after using the testing API to [test your file-based destination with sample profiles](/help/destinations/destination-sdk/file-based-destination-testing-api.md).  
+Include a request and a response sample after using the testing API to [test your file-based destination with sample profiles](../testing-api/batch-destinations/file-based-destination-testing-api.md).  
 
 ### Attach exported file {#attach-exported-file}
 
