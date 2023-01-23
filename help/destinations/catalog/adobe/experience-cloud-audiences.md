@@ -30,10 +30,6 @@ In Audience Manager, you can use Experience Platform segments for Data Managemen
 
 Using the new self-service segment sharing integration via the Experience Cloud Audiences destination, you can select which segments to export to Audience Manager and beyond. The legacy segment sharing integration did not allow for a granular control of which segments should be exported to the solutions.
 
-### Durable IDs or cookie IDs {#use-case-1}
-
-Talk about durable IDs for other destinations and cookie IDs for this one. 
-
 ### Share Experience Platform segments with further Experience Cloud solutions {#share-segments-with-other-solutions}
 
 Apart from sharing segments with Audience Manager, the Experience Platform Audiences destination card enables you to share segments with any other Experience Cloud solution that you are provisioned for, including: 
@@ -43,6 +39,8 @@ Apart from sharing segments with Audience Manager, the Experience Platform Audie
 * Advertising Cloud
 * Analytics
 * Marketo
+
+Note: briefly talk about when to share segments to these destinations using 
 
 ## Prerequisites {#prerequisites}
 
@@ -61,38 +59,31 @@ After the existing legacy integration has been disabled, you can proceed to crea
 >
 >The segment export from Experience Platform to your other solutions will be stopped in the time between the Jira ticket resolution and the time a new connection is established through the destination card. You can minimize this downtime by creating the connection via the card as soon as the Jira ticket is closed.  
 
-## Known limitations {#known-limitations}
+## Known limitations and callouts {#known-limitations}
 
-Note the following known limitations in the beta release of the Core Services card:
+Note the following known limitations and important callouts in the beta release of the Core Services card:
 
 * [Dataflows monitoring](/help/dataflows/ui/monitor-destinations.md) is not supported.
 * When connecting to the destination, you can see an option to [enable dataflow alerts](#enable-alerts). Though visible in the UI, the enable alerts option is not supported in the beta release.
 * Backfills are not supported. The first export to Audience Manager or other Experience Cloud solutions does not include a historical population of the segments. 
 * In the beta release, you can create a single destination connection to the Experience Cloud Audiences destination, across all sandboxes belonging to your Experience Platform organization.
+* There is a four-hour latency between the time that data is activated in Experience Platform and the time that data is ready to be used in Audience Manager and other Experience Cloud solutions.
 
 ### Permissions management in Audience Manager
 
-Segments and traits in Audience Manager are protected by [Role-Based Access Controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=en) (RBAC). 
+Segments and traits in Audience Manager are subject to [Role-Based Access Controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=en) (RBAC). 
 
-Segments coming through Segue from AEP to AAM is assigned to a specific datasource called "Experience Platform Segments" or something similar.
-Customers can apply Segment RBAC within AAM based on this Datasource. This means that data governance settings from Experience Platform are not carried over in Audience Manager. You must set new access control permissions in Audience Manager for these segments and traits created from Experience Platform segments.
+Segments exported from Experience Platform are assigned to a specific datasource in Audience Manager called **[!UICONTROL Experience Platform Segments]**.
+
+You can apply access controls to the segments belonging to the datasource. This means that data governance settings from Experience Platform are not carried over in Audience Manager. You must set new access control permissions in Audience Manager for these segments and traits created from Experience Platform segments.
 
 ## Supported identities {#supported-identities}
 
-TBD - are all values supported??
-
-*Add information in this section about the identities supported by your destination. We have prefilled the table with some standard values. Delete the values that don't apply to your destination and any values that are not prefilled.*
-
-*YourDestination* supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+The profiles that are exported to the [!UICONTROL Experience Cloud Audiences] destination are mapped to the identity described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
 |ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the following document on [ECID](/help/identity-service/ecid.md) for more information.|
-|phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
-|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
-|extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
 
 {style="table-layout:auto"}
 
@@ -154,16 +145,14 @@ When you are finished providing details for your destination connection, select 
 
 Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination. Note that no [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) is required and no [scheduling step](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) is available for this destination.
 
-## Exported data / Validate data export {#exported-data}
+## Validate data export {#exported-data}
 
 To validate successful data export, you can check that your segments have successfully made it through to your desired Experience Cloud solution.
 
-### Validate Audience Manager
+### Validate data in Audience Manager
 
-Your Experience Platform segments appear in Audience Manager as [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-signals), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-traits), and [segments](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-segments). 
+Your Experience Platform segments appear in Audience Manager as [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-signals), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-traits), and [segments](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-segments). You can verify in Audience Manager if the data has appeared as described in th documentation links above. 
 
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
-
-## Additional resources {#additional-resources}
