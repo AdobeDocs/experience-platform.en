@@ -56,6 +56,6 @@ $$;
 
 ## Next steps
 
-By reading this document, you now have a clear understanding of anonymous blocks and how they are structured. [For more information on query execution](./writing-queries.md), please read the guide on query execution in Query Service.
+By reading this document, you now have a clear understanding of anonymous blocks and how they are structured. [For more information on query execution](../best-practices/writing-queries.md), please read the guide on query execution in Query Service.
 
 You should also read about [how anonymous block is used with the incremental load design pattern](./incremental-load.md) to increase query efficiency.
