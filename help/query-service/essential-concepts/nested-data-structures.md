@@ -146,4 +146,4 @@ Despite the growing complexity of this SQL example, the `collect_list` for activ
 
 ## Next steps
 
-By reading this document, you now understand how to process or transform datasets that use complex data types in Adobe Experience Platform Query Service. Please see the [queries execution guidance](./writing-queries.md) for more information about running SQL queries on datasets within the Data Lake.
+By reading this document, you now understand how to process or transform datasets that use complex data types in Adobe Experience Platform Query Service. Please see the [queries execution guidance](../best-practices/writing-queries.md) for more information about running SQL queries on datasets within the Data Lake.
