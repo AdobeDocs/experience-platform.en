@@ -46,7 +46,7 @@ The example airline loyalty data uses an [XDM ExperienceEvents class](../../xdm/
 
 The initial airline loyalty dataset for this example is "Airline Loyalty Data", and has the following schema. Note that the primary identity for the schema is `_profilefoundationreportingstg.membershipNumber`.
 
-![A diagram of the Airline Loyalty Data schema.](../images/derived-attributes/deciles-use-case/airline-loyalty-data.png)
+![A diagram of the Airline Loyalty Data schema.](../images/use-cases/airline-loyalty-data.png)
 
 **Sample data**
 
@@ -72,7 +72,7 @@ In the airline loyalty data seen above, the `.mileage` value contains the number
 
 Create an "Airline Loyalty Decile Schema" to create a decile dataset using Query Service.
 
-![A diagram of the "Airline Loyalty Decile Schema".](../images/derived-attributes/deciles-use-case/airline-loyalty-decile-schema.png)
+![A diagram of the "Airline Loyalty Decile Schema".](../images/use-cases/airline-loyalty-decile-schema.png)
 
 ### Enable the schema for Real-Time Customer Profile
 
