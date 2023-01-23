@@ -14,7 +14,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-* Added support for AJO surfaces and propositions.
+* Added support for AJO surfaces and propositions (Beta feature.)
 
 **Fixes and improvements**
 
