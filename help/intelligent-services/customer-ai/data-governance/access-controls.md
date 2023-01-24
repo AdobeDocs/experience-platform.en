@@ -34,6 +34,10 @@ After you create an instance with restricted information and proceed to the **[!
 
 ![The Customer AI workspace with the restricted fields of the service instance results highlighted.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
+When using access control, the **View Customer AI** and **Manage Customer AI** privileges grant access to different functionalities of Customer AI. The **Manage Customer AI** permission lets you **create**,**update**, **delete**, **enable**, or **disable** an instance while **View Customer AI** lets you read or view it. The **create**, **update** and **delete** actions are recorded by audit logs.
+
+See the documentation to learn [assigning permissions for access control](../../../help/access-control/home.md) or how to [use audit logs to monitor access and activity](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
+
 ## Next steps
 
 By reading this guide, you have been introduced to the main principles of access control in [!DNL Experience Platform]. You can now continue to the [access control user guide](./ui/overview.md) for detailed steps on how use the [!DNL Admin Console] to create product profiles and assign permissions for [!DNL Platform].
