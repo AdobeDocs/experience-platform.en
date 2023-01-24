@@ -164,4 +164,4 @@ DROP SCHEMA databaseA.schema2;
 
 ## Next steps
 
-By reading this document, you now have a better understanding of the best practices regarding the organization and structure of your data assets for use with Adobe Experience Platform Query Service. It is recommended to continue learning about Query Service best practices by reading about [data deduplication documentation](./deduplication.md).
+By reading this document, you now have a better understanding of the best practices regarding the organization and structure of your data assets for use with Adobe Experience Platform Query Service. It is recommended to continue learning about Query Service best practices by reading about [data deduplication documentation](../essential-concepts/deduplication.md).
