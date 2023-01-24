@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes November 2022
 description: The November 2022 release notes for Adobe Experience Platform.
+exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
 ---
 # Adobe Experience Platform release notes 
 
@@ -20,9 +21,9 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 | Feature | Description |
 | --- | --- |
-| [!DNL AWS] extension for event forwarding | You can now send data to [!DNL Amazon Web Services] ([!DNL AWS]) using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL AWS] extension overview](../../tags/extensions/web/aws/overview.md) for more information. |
-| [!DNL Google Ads Enhanced Conversions] extension for event forwarding | You can now send conversion data to [!DNL Google Ads] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Google Ads Enhanced Conversions] extension overview](../../tags/extensions/web/google-ads-enhanced-conversions/overview.md) for more information. |
-| [!DNL Microsoft Azure] extension for event forwarding | You can now send data to [!DNL Microsoft Azure] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Microsoft Azure] extension overview](../../tags/extensions/web/azure/overview.md) for more information. |
+| [!DNL AWS] extension for event forwarding | You can now send data to [!DNL Amazon Web Services] ([!DNL AWS]) using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL AWS] extension overview](../../tags/extensions/server/aws/overview.md) for more information. |
+| [!DNL Google Ads Enhanced Conversions] extension for event forwarding | You can now send conversion data to [!DNL Google Ads] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Google Ads Enhanced Conversions] extension overview](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) for more information. |
+| [!DNL Microsoft Azure] extension for event forwarding | You can now send data to [!DNL Microsoft Azure] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Microsoft Azure] extension overview](../../tags/extensions/server/azure/overview.md) for more information. |
 
 For more information on Platform's data collection capabilities, see the [data collection overview](../../collection/home.md).
 
@@ -34,7 +35,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 | Feature | Description |
 | --- | --- |
-| Assign fields to custom classes when adding directly to a schema | When [adding an individual field directly to a schema](../../xdm/ui/resources/schemas.md#add-individual-fields), previously you could only assign the field to a field group as its parent resource. Now, in addition to field groups, you can [assign the field to a custom class](../../xdm/ui/resources/schemas.md.md#add-to-class) as its parent resource instead. |
+| Assign fields to custom classes when adding directly to a schema | When [adding an individual field directly to a schema](../../xdm/ui/resources/schemas.md#add-individual-fields), previously you could only assign the field to a field group as its parent resource. Now, in addition to field groups, you can [assign the field to a custom class](../../xdm/ui/resources/schemas.md#add-to-class) as its parent resource instead. |
 
 {style="table-layout:auto"}
 

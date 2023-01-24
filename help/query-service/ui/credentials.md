@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;query;query editor;Query Editor;Query editor;
 solution: Experience Platform
 title: Query Service Credentials Guide
-topic-legacy: guide
 description: Adobe Experience Platform Query Service provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your IMS Organization.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 ---
@@ -10,7 +9,12 @@ exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 
 Adobe Experience Platform Query Service allows you to connect with external clients. You can connect to these external clients by using either expiring credentials or non-expiring credentials.
 
-## Expiring credentials
+## Expiring credentials {#expiring-credentials}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryservice_credentials_expiringcredentials"
+>title="Client's SSL mode"
+>abstract="SSL must be enabled in clients connected to Query Service. Ensure the SSL mode is set to 'require'."
 
 You can use expiring credentials to quickly set up a connection to an external client.
 
@@ -24,7 +28,15 @@ The **[!UICONTROL Expiring credentials]** section provides the following informa
 - **[!UICONTROL Username]**: The username that you will use to connect to Query Service.
 - **[!UICONTROL Password]**: The password that you will use to connect to Query Service.
 - **[!UICONTROL PSQL command]**: A command that automatically has inserted all the relevant information for you to connect to Query Service using PSQL on the command line.
-- **[!UICONTROL Expires]**: The expiry date for the expiring credentials. The credentials expire 24 hours after they are generated.
+- **[!UICONTROL Expires]**: The expiry date and time for the expiring credentials. The default validity duration of the token is 24 hours but it can be changed in the advanced settings of the Admin Console.
+
+>[!TIP]
+>
+>To change the session life for your expiring credentials connection to Query Service, navigate to the [Admin Console](https://adminconsole.adobe.com/) and select the following on screen options: **Settings** > **Privacy and Security** > **Authentication Settings** > **Advanced settings** > **Max session life**.
+>
+>![The Admin Console settings tab with Privacy and Security, Authentication settings, and Max session life highlighted.](../images/ui/credentials/max-session-life.png)
+>
+>See the Adobe Help documentation for more information on the [Advanced settings](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) offered by Admin console.
 
 ## Non-expiring credentials {#non-expiring-credentials}
 
@@ -90,7 +102,7 @@ When editing a non-expiring credential, a modal appears. You can provide the fol
 
 Once you have provided all the required details, select **[!UICONTROL Update account]** to complete the update to your credentials.
 
-## Using credentials to connect to external clients
+## Use credentials to connect to external clients {#use-credential-to-connect}
 
 You can use either the expiring or non-expiring credentials to connect with external clients, such as Aqua Data Studio, Looker, or Power BI. The method of input for these credentials will vary depending on the external client. Refer to the external client's documentation for specific instructions on the use of these credentials.
 

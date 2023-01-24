@@ -2,13 +2,16 @@
 keywords: Experience Platform;home;popular topics;data governance;data usage policy user guide
 solution: Experience Platform
 title: Manage Data Usage Policies in the UI
-topic-legacy: policies
 description: Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions that you can perform in the Policies workspace in the Experience Platform user interface.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 ---
 # Manage data usage policies in the UI
 
-Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions that you can perform in the **Policies** workspace in the [!DNL Experience Platform] user interface.
+This document covers how to use the **[!UICONTROL Policies]** workspace in the Adobe Experience Platform UI to create and manage data usage policies.
+
+>[!NOTE]
+>
+>For information on how to manage access control policies in the UI, refer to the [attribute-based access control UI guide](../../access-control/abac/ui/policies.md) instead.
 
 >[!IMPORTANT]
 >
@@ -18,7 +21,7 @@ Adobe Experience Platform Data Governance provides a user interface that allows 
 
 This guide requires a working understanding of the following [!DNL Experience Platform] concepts:
 
-* [Data Governance](../home.md)
+* [Data governance](../home.md)
 * [Data usage policies](./overview.md)
 
 ## View existing policies {#view-policies}
@@ -77,7 +80,7 @@ The **[!UICONTROL Browse]** tab reappears, which now lists the newly created pol
 
 >[!IMPORTANT]
 >
->Consent policies are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
+>Consent policies are only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
 
 If you chose to create a consent policy, a new screen appears that allows you to configure the new policy.
 

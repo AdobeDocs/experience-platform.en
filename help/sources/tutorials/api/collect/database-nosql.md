@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;database database;third party database
 solution: Experience Platform
 title: Create a Dataflow for Database Sources Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a database and ingesting it into Platform using source connectors and APIs.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
@@ -682,9 +681,9 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect data from a database on a scheduled basis. Incoming data can now be used by downstream Platform services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect data from a database on a scheduled basis. Incoming data can now be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
-* [Real-time Customer Profile overview](../../../../profile/home.md)
+* [Real-Time Customer Profile overview](../../../../profile/home.md)
 * [Data Science Workspace overview](../../../../data-science-workspace/home.md)
 
 ## Appendix

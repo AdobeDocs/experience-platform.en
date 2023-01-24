@@ -41,7 +41,7 @@ For more information about datasets, see the [datasets overview](../catalog/data
 
 ### Profiles
 
-The **[!UICONTROL Profiles]** count shows the total number of people with profiles in the [!DNL Real-time Customer Profile]. It does not include profile fragments. This is your total addressable audience.
+The **[!UICONTROL Profiles]** count shows the total number of people with profiles in the [!DNL Real-Time Customer Profile]. It does not include profile fragments. This is your total addressable audience.
 
 This count uses the default [merge policy](profile/merge-policies.md) as set in the merge policy configuration in Unified Profile. 
 

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;data prep;data preparation;preparing data;
 solution: Experience Platform
 title: Handling data formats with Data Prep
-topic-legacy: overview
 description: This document gives an overview of how different data types are handled in Data Prep.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
 ---

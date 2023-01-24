@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Create and Edit Schema Field groups in the UI
 description: Learn how to create and edit schema field groups in the Experience Platform user interface.
-topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
 ---
 # Create and edit schema field groups in the UI
@@ -28,11 +27,13 @@ Once you have the schema open in the [!DNL Schema Editor], select **[!UICONTROL 
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-A dialog appears, showing a list of existing field groups for your organization. Near the top of the dialog, select **[!UICONTROL Create new field group]**. Here you can provide a **[!UICONTROL Display name]** and **[!UICONTROL Description]** for the field group. When finished, select **[!UICONTROL Add field group]**.
+In the dialog that appears, select **[!UICONTROL Create new field group]**. Here you can provide a **[!UICONTROL Display name]** and **[!UICONTROL Description]** for the field group. When finished, select **[!UICONTROL Add field groups]**.
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
 The [!DNL Schema Editor] reappears, with the new field group listed in the left rail. Since this is a brand new field group, it currently does not provide any fields to the schema, and therefore the canvas remains unchanged. You can now start [adding fields to the field group](#add-fields).
+
+![](../../images/ui/resources/field-groups/field-group-added.png)
 
 ## Edit an existing field group {#edit}
 
@@ -52,7 +53,7 @@ Once you have the schema open in the editor, you can start [adding fields to the
 >
 >This section focuses on adding fields to custom field groups. For information on how to add custom fields to standard field groups, refer to the [schemas UI guide](./schemas.md#custom-fields-for-standard-groups).
 
-To add fields to a custom field group in the [!DNL Schema Editor], start by selecting the field group's name in the left rail, then select the **plus (+)** icon next to the schema's name in the canvas.
+To add fields to a custom field group, start by selecting the **plus (+)** icon next to the schema's name in the canvas.
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
@@ -62,7 +63,11 @@ Under **[!UICONTROL Assign to]**, select the **[!UICONTROL Field Group]** option
 
 ![](../../images/ui/resources/field-groups/select-field-group.png)
 
-Continue to add as many fields as required to the field group. When finished, select **[!UICONTROL Save]** to save both the schema and the field group.
+Under **[!UICONTROL Assign to]**, select the **[!UICONTROL Field Group]** option, then use the dropdown to select the desired field group from the list. You can start typing in the name of the field group to narrow down results.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
+
+Once the field is added to the schema, it is assigned to the selected field group. Continue to add as many fields as required to the field group. When finished, select **[!UICONTROL Save]** to save both the schema and the field group.
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 

@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 title: Merge Policies API Endpoint
-topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create a unified view.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
@@ -18,7 +17,7 @@ To work with merge policies using the UI, please refer to the [merge policies UI
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoint used in this guide is part of the [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Components of merge policies {#components-of-merge-policies}
 
@@ -188,7 +187,7 @@ To learn more about XDM and working with schemas in Experience Platform, begin b
 
 ## Access merge policies {#access-merge-policies}
 
-Using the [!DNL Real-time Customer Profile] API, the `/config/mergePolicies` endpoint allows you perform a lookup request to view a specific merge policy by its ID, or access all of the merge policies in your IMS Organization, filtered by specific criteria. You can also use the `/config/mergePolicies/bulk-get` endpoint to retrieve multiple merge policies by their IDs. Steps for performing each of these calls are outlined in the following sections.
+Using the [!DNL Real-Time Customer Profile] API, the `/config/mergePolicies` endpoint allows you perform a lookup request to view a specific merge policy by its ID, or access all of the merge policies in your IMS Organization, filtered by specific criteria. You can also use the `/config/mergePolicies/bulk-get` endpoint to retrieve multiple merge policies by their IDs. Steps for performing each of these calls are outlined in the following sections.
 
 ### Access a single merge policy by ID
 
@@ -756,6 +755,6 @@ A successful delete request returns HTTP Status 200 (OK) and an empty response b
 
 ## Next steps
 
-Now that you know how to create and configure merge policies for your organization, you can use them to adjust the view of customer profiles within Platform and to create audience segments from your [!DNL Real-time Customer Profile] data. 
+Now that you know how to create and configure merge policies for your organization, you can use them to adjust the view of customer profiles within Platform and to create audience segments from your [!DNL Real-Time Customer Profile] data. 
 
 Please see the [Adobe Experience Platform Segmentation Service documentation](../../segmentation/home.md) to begin defining and working with segments.

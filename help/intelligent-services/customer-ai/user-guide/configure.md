@@ -3,7 +3,6 @@ keywords: Experience Platform;user guide;customer ai;popular topics;configure in
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Configure a Customer AI Instance
-topic-legacy: Instance creation
 description: AI/ML Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 ---
@@ -30,7 +29,7 @@ Service instances can be edited, cloned, and deleted by using the controls on th
 
 - **[!UICONTROL Edit]**: Selecting **[!UICONTROL Edit]** allows you to modify an existing service instance. You can edit the name, description, and scoring frequency of the instance.
 - **[!UICONTROL Clone]**: Selecting **[!UICONTROL Clone]** copies the currently selected service instance setup. You can then modify the workflow to make minor tweaks and rename it as a new instance.
-- **[!UICONTROL Delete]**: You can delete a service instance including any historical runs. The corresponding output dataset will be deleted from Platform. However, scores that were synced to Real-time Customer Profile are not deleted.
+- **[!UICONTROL Delete]**: You can delete a service instance including any historical runs. The corresponding output dataset will be deleted from Platform. However, scores that were synced to Real-Time Customer Profile are not deleted.
 - **[!UICONTROL Data source]**: A link to the dataset used by this instance. If multiple datasets are being used, selecting the hyperlink text opens the dataset preview popover.
 - **[!UICONTROL Last run details]**: This is only displayed when a run fails. Information on why the run failed, such as error codes are displayed here.
 - **[!UICONTROL Score definition]**: A quick overview of the goal you configured for this instance.
@@ -230,7 +229,7 @@ To exclude an event, select **[!UICONTROL Add exclusion]** and define the event.
 
 ### Profile toggle
 
-The Profile toggle allows Customer AI to export the scoring results into Real-time Customer Profile. Disabling this toggle prevents the models scoring results from being added to Profile. Customer AI scoring results are still available with this feature disabled.
+The Profile toggle allows Customer AI to export the scoring results into Real-Time Customer Profile. Disabling this toggle prevents the models scoring results from being added to Profile. Customer AI scoring results are still available with this feature disabled.
 
 When using Customer AI for the first time you can toggle this feature off until you are satisfied with the model output results. This prevents you from uploading multiple scoring datasets to your Customer Profiles while fine tuning your model. Once you have finished calibrating your model, you can clone the model using the [clone option](#set-up-your-instance) from the **Service instances** page. This allows you to create a copy of your model and toggle profile on.
 
@@ -264,7 +263,7 @@ The popover provides specific information about the violation. You can resolve t
 
 This functionality allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments.
 
-Through attribute-based access control, administrators of your organization can control users’ access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
+Through attribute-based access control, administrators of your organization can control users' access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
 Due to attribute-based access control, some fields and functionalities would have access restricted and be unavailable for certain Customer AI service instances. Examples include, "Identity", "Score Definition", and "Clone."
 

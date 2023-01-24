@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;[!DNL Azure Table Storage];[!DNL Azure Table Storage];Azure table storage
 solution: Experience Platform
 title: Create an Azure Table Storage Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Azure Table Storage to Adobe Experience Platform using the Flow Service API.
 exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
@@ -33,7 +32,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Azure Table Storage], you
 | Credential | Description |
 | ---------- | ----------- |
 | `connectionString` | The connection string used to connect to an [!DNL Azure Table Storage] instance. The connection string pattern for [!DNL Azure Table Storage] is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Azure Table Storage] is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Azure Table Storage] is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 For more information about obtaining a connection string, refer to [this [!DNL Azure Table Storage] document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
 

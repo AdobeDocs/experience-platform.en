@@ -11,10 +11,10 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 >[!IMPORTANT]
 >
 >With the beta release of the export datasets functionality and the improved file export functionality, you may now be seeing two [!DNL Amazon S3] cards in the destinations catalog.
->* If you are already exporting files to the **[!UICONTROL Amazon S3]** destination: Please create new dataflows to the new **[!UICONTROL Amazon S3 beta]** destination.
+>* If you are already exporting files to the **[!UICONTROL Amazon S3]** destination, please create new dataflows to the new **[!UICONTROL Amazon S3 beta]** destination.
 >* If you have not yet created any dataflows to the **[!UICONTROL Amazon S3]** destination, please use the new **[!UICONTROL Amazon S3 beta]** card to export files to **[!UICONTROL Amazon S3]**.
 
-![Image of the two Amazon S3 destination cards in a side-by-side view.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+![Image of the two Amazon S3 destination cards in a side-by-side view.](../../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
 Improvements in the new [!DNL Amazon S3] destination card include:
 
@@ -81,6 +81,9 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Description]**: enter a description of this destination.
 * **[!UICONTROL Bucket name]**: enter the name of the [!DNL Amazon S3] bucket to be used by this destination.
 * **[!UICONTROL Folder path]**: enter the path to the destination folder that will host the exported files.
+* **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL Amazon S3 beta]** destination. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL Amazon S3 beta]** destination.
+
 
 >[!TIP]
 >

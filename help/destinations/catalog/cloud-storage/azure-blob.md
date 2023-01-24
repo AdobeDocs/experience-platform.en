@@ -14,7 +14,7 @@ exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
 >* If you are already exporting files to the **[!UICONTROL Azure Blob]** destination: Please create new dataflows to the new **[!UICONTROL Azure Blob beta]** destination.
 >* If you have not yet created any dataflows to the **[!UICONTROL Azure Blob]** destination, please use the new **[!UICONTROL Azure Blob beta]** card to export files to **[!UICONTROL Azure Blob]**.
 
-![Image of the two Azure Blob destination cards in a side-by-side view.](/help/destinations/assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
+![Image of the two Azure Blob destination cards in a side-by-side view.](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
 
 Improvements in the new [!DNL Azure Blob] destination card include:
 
@@ -34,7 +34,7 @@ This tutorial requires a working understanding of the following components of Ad
 * [[!DNL Experience Data Model (XDM)] System](../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-* [[!DNL Real-time Customer Profile]](../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 If you already have a valid [!DNL Blob] destination, you may skip the remainder of this document and proceed to the tutorial on [activating segments to your destination](../../ui/activate-batch-profile-destinations.md).
 
@@ -86,6 +86,8 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Description]**: enter a description of this destination.
 * **[!UICONTROL Folder path]**: enter the path to the destination folder that will host the exported files.
 * **[!UICONTROL Container]**: enter the name of the [!DNL Azure Blob Storage] container to be used by this destination.
+* **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL Azure Blob beta]** destination. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL Azure Blob beta]** destination.
 
 ### Enable alerts {#enable-alerts}
 

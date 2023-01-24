@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;shopify;Shopify;
 solution: Experience Platform
 title: Shopify Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect Shopify to Adobe Experience Platform using APIs or the user interface.
 exl-id: 636b31a7-e5f9-434a-acd1-226096522495
 ---

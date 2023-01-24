@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Apache Hive;Azure HDInsights;azure hdinsights
 solution: Experience Platform
 title: Create an Apache Hive on Azure HDInsights  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create an Apache Hive on Azure HDInsights source connection using the Adobe Experience Platform UI.
 exl-id: 3eb3cb02-9867-451a-b847-ab895310eedf
@@ -22,7 +21,7 @@ This tutorial requires a working understanding of the following components of Ad
 *   [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     *   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-*   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+*   [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 If you already have a valid [!DNL Hive] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/databases.md)
 
