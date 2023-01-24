@@ -20,7 +20,7 @@ This document covers essential concepts related to processing privacy requests f
 
 ## Getting started
 
-It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
+This guide requires a working understanding of the following [!DNL Platform] components:
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Manages customer requests for accessing, opting out of sale, or deleting their personal data across Adobe Experience Cloud applications.
 * [[!DNL Identity Service]](../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
@@ -42,7 +42,7 @@ The sections below outline how to make privacy requests for [!DNL Real-Time Cust
 >
 >Privacy Service is only able to process [!DNL Profile] data using a merge policy that does not perform identity stitching. See the section on [merge policy limitations](#merge-policy-limitations) for more information.
 >
->It is also important to note that the amount of time a privacy request can take to complete cannot be guaranteed. If changes occur in your [!DNL Profile] data while a request is still processing, whether or not those records are processed also cannot be guaranteed.
+>Please note that the amount of time a privacy request can take to complete **cannot** be guaranteed. If changes occur in your [!DNL Profile] data while a request is still processing, whether or not those records are processed also cannot be guaranteed.
 
 ### Using the API
 
@@ -59,6 +59,8 @@ In addition, the `include` array of the request payload must include the product
 >See the section on [profile requests and identity requests](#profile-v-identity) later in this document for more detailed information on the effects of using `ProfileService` and `identity` within the `include` array.
 
 The following request creates a new privacy job for a single customer's data in the [!DNL Profile] store. Two identity values are provided for the customer in the `userIDs` array; one using the standard `Email` identity namespace, and the other using a custom `Customer_ID` namespace. It also includes the product value for [!DNL Profile] (`ProfileService`) in the `include` array:
+
+**Request**
 
 ```shell
 curl -X POST \
@@ -102,6 +104,56 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >Platform processes privacy requests across all [sandboxes](../sandboxes/home.md) belonging to your organization. As a result, any `x-sandbox-name` header included in the request is ignored by the system.
+
+**Response**
+
+The privacy job response is returned in JSON format with information regarding the user IDs requested.
+
+```json
+{
+    "privacyResponse": {
+        "jobId": "7467850f-9698-11ed-8635-355435552164",
+        "response": [
+            {
+                "sandbox": "prod",
+                "mergePolicyId": "none",
+                "result": {
+                    "person": {
+                        "gender": "female"           
+                    },
+                    "personalEmail": {
+                        "address": "ajones@acme.com",
+                    },
+                    "identityMap": {
+                        "crmid": [
+                            {
+                                "id": "5b7db37a-bc7a-46a2-a63e-2cfe7e1cc068"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "sandbox": "prod",
+                "mergePolicyId": "none",
+                "result": {
+                    "person": {
+                        "gender": "male"
+                    },
+                    "id": 12345678,
+                    "identityMap": {
+                        "crmid": [
+                            {
+                                "id": "e9d439f2-f5e4-4790-ad67-b13dbd89d52e"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
+```
 
 ### Using the UI
 
@@ -156,6 +208,6 @@ Privacy Service is only able to process [!DNL Profile] data using a merge policy
 
 ## Next steps
 
-By reading this document, you have been introduced to the important concepts involved with processing privacy requests in [!DNL Experience Platform]. It is recommended that you continue reading the documentation provided throughout this guide in order to deepen your understanding of how to manage identity data and create privacy jobs.
+By reading this document, you have been introduced to the important concepts involved with processing privacy requests in [!DNL Experience Platform]. To deepen your understanding of how to manage identity data and create privacy jobs, please continue reading the documentation provided throughout this guide.
 
 For information on processing privacy requests for [!DNL Platform] resources not used by [!DNL Profile], see the document on [privacy request processing in the data lake](../catalog/privacy.md).
