@@ -14,6 +14,7 @@ feature: Queries
 - Get started {#get-started}
     - [Prerequisites](get-started/prerequisites.md)
 - Data Distiller {#data-distiller}
+    - [Overview](data-distiller/overview.md)
     - [License usage](data-distiller/license-usage.md)
     - Query accelerated store {#query-accelerated-store}
         - [Send accelerated queries](data-distiller/query-accelerated-store/send-accelerated-queries.md)
