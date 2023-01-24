@@ -12,20 +12,20 @@ Updates to existing features in Adobe Experience Platform:
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-AI/ML services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company’s needs using business-level configurations without the need for data science expertise.
+Artificial Intelligence and Machine Learning services empower marketing analysts and practitioners to leverage the power of AI/ML in customer experience use cases. This allows for marketing analysts to set up predictions, without the need for data science expertise, specific to a company’s needs using business-level configurations.
 
 ### Attribution AI
 
-Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
+Attribution AI is used to attribute credits to touchpoints that lead to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
 
 **Updated features**
 
 | Feature | Description |
 | ------- | ----------- |
 | HIPAA readiness | You can now receive, use, maintain, or transmit Protected Health Information in Customer AI and other Experience Platform-based applications for Healthcare Shield customers only. Healthcare Shield is for healthcare customers that are either a Covered Entity or Business Associate in the US only. For more information, read the documentation on [HIPAA and Adobe Products and Services](https://www.adobe.com/trust/compliance/hipaa-ready.html)|
-|Edit Additional Score Dataset Columns | You can now add or remove additional score dataset columns (reporting columns) when you edit existing instances. This extends the flexibility of the attribution scores to provide you with insights to additional dimensions after an instance has already been created. See the [Attribution UI guide](../../intelligent-services/attribution-ai/user-guide.md) to learn more.|
+|Edit additional score dataset columns | You can now add or remove additional score dataset columns (reporting columns) when you edit existing instances. This extends the flexibility of the attribution scores to provide you with insights to additional dimensions after an instance has already been created. See the [Attribution UI guide](../../intelligent-services/attribution-ai/user-guide.md) to learn more.|
 
-For more information on [!DNL AI/ML services], please see the [[!DNL AI/ML services] overview](../../intelligent-services/home.md).
+Please see the [!DNL AI/ML services](../../intelligent-services/home.md) overview for more information.
 
 ### Customer AI
 
@@ -37,4 +37,4 @@ Customer AI available in Real-Time Customer Data Platform, is used to generate c
 | ------- | ----------- |
 | HIPAA readiness | You can now receive, use, maintain, or transmit Protected Health Information in Customer AI and other Experience Platform-based applications for Healthcare Shield customers only. Healthcare Shield is for healthcare customers that are either a Covered Entity or Business Associate in the US only. For more information, read the documentation on [HIPAA and Adobe Products and Services](https://www.adobe.com/trust/compliance/hipaa-ready.html)|
 
-For more information on [!DNL AI/ML services], please see the [[!DNL AI/ML services] overview](../../intelligent-services/home.md).
+Please see the [!DNL AI/ML services](../../intelligent-services/home.md) overview for more information.
