@@ -1,8 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Google PubSub;google pubsub
-solution: Experience Platform
-title: Create a Google PubSub  Source Connection in the UI
-type: Tutorial
+title: Create a Google PubSub Source Connection in the UI
 description: Learn how to create a Google PubSub source connector using the Platform user interface.
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
 ---
@@ -27,7 +24,7 @@ In order to connect [!DNL PubSub] to Platform, you must provide a valid value fo
 | ---------- | ----------- |
 | Project ID | The project ID required to authenticate [!DNL PubSub]. |
 | Credentials | The credential or private key ID required to authenticate [!DNL PubSub]. |
-| Topic ID | The ID for the [!DNL PubSub] resource that represents a feed of messages. |
+| Topic ID | The ID for the [!DNL PubSub] resource that represents a feed of messages. You must specify a topic ID if you want to provide access to a specific stream of data in your [!DNL Google PubSub] source. |
 
 For more information about these values, see the following [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication) document. If you are using service account-based authentication, see the following [PubSub guide](https://cloud.google.com/docs/authentication/production#create_service_account) for steps on how to generate your credentials.
 

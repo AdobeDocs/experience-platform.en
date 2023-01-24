@@ -1,8 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Google PubSub;google pubsub
-solution: Experience Platform
 title: Create a Google PubSub Source Connection Using the Flow Service API
-type: Tutorial
 description: Learn how to connect Adobe Experience Platform to a Google PubSub account using the Flow Service API.
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
 ---
@@ -27,6 +24,7 @@ In order for [!DNL Flow Service] to connect to [!DNL PubSub], you must provide v
 | ---------- | ----------- |
 | `projectId` | The project ID required to authenticate [!DNL PubSub]. |
 | `credentials` | The credential or key required to authenticate [!DNL PubSub]. |
+| `topicId` | The ID for the [!DNL PubSub] resource that represents a feed of messages. You must specify a topic ID if you want to provide access to a specific stream of data in your [!DNL Google PubSub] source. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source target connections. The [!DNL PubSub] connection specification ID is: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 For more information about these values, see this [[!DNL PubSub] authentication](https://cloud.google.com/pubsub/docs/authentication) document. To use service account-based authentication, see this [[!DNL PubSub] guide on creating service accounts](https://cloud.google.com/docs/authentication/production#create_service_account) for steps on how to generate your credentials.
@@ -45,6 +43,10 @@ The first step in creating a source connection is to authenticate your [!DNL Pub
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL PubSub] authentication credentials as part of the request parameters.
 
+>[!TIP]
+>
+>During this step, you can define the data that your account will have access to by providing the topic ID. When a topic ID is provided, you will only be able to access subscriptions that are associated with the given topic ID.
+
 **API format**
 
 ```http
@@ -55,33 +57,35 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Google PubSub connection",
-        "description": "Google PubSub connection",
-        "auth": {
-            "specName": "Google PubSub authentication credentials",
-            "params": {
-                "projectId": "{PROJECT_ID}",
-                "credentials": "{CREDENTIALS}"
-            }
-        },
-        "connectionSpec": {
-            "id": "70116022-a743-464a-bbfe-e226a7f8210c",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Google PubSub connection",
+      "description": "Google PubSub connection",
+      "auth": {
+          "specName": "Google PubSub authentication credentials",
+          "params": {
+              "projectId": "acme-project",
+              "credentials": "{CREDENTIALS}",
+              "topicID": "acmeProjectAPI"
+          }
+      },
+      "connectionSpec": {
+          "id": "70116022-a743-464a-bbfe-e226a7f8210c",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Property | Description |
 | -------- | ----------- |
 | `auth.params.projectId` | The project ID required to authenticate [!DNL PubSub]. |
 | `auth.params.credentials` | The credential or key required to authenticate [!DNL PubSub]. |
+| `auth.params.topicID` | The topic ID of your [!DNL PubSub] source that you want to provide access to. |
 | `connectionSpec.id` | The [!DNL PubSub] connection spec ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 **Response**
