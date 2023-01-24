@@ -1,8 +1,8 @@
 ---
 keywords: insights;customer ai;customer ai insights;CAI query service;customer ai queries;customer ai scores
 feature: Customer AI audit logs
-title: Audit logs Overview
-description: Learn how to view and manage audit logs in CAI
+title: Audit Logs Overview
+description: Learn how to view and manage audit logs in Customer AI
 ---
 # Audit logs
 
@@ -10,7 +10,7 @@ To increase the transparency and visibility of activities performed in the syste
 
 In a basic sense, an audit log tells who performed what action, and when. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type. It tracks the create, update, and delete actions taken by users in Customer AI.
 
-[The audit logs in customer AI are selected](../../customer-ai/images/data-governance/audit-logs-cai.png)
+[The audit logs selected in the Customer AI workspace](../../customer-ai/images/data-governance/audit-logs-cai.png)
 
 ## Access to audit logs
 
