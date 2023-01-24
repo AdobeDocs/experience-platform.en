@@ -79,11 +79,14 @@ You can apply access controls to the segments belonging to the datasource. This 
 
 ## Supported identities {#supported-identities}
 
-The profiles that are exported to the [!UICONTROL Experience Cloud Audiences] destination are mapped to the identity described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+The profiles that are exported to the [!UICONTROL Experience Cloud Audiences] destination are mapped to the identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the following document on [ECID](/help/identity-service/ecid.md) for more information.|
+|ECID|Experience Cloud ID| A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the following document on [ECID](/help/identity-service/ecid.md) for more information.|
+|GAID|Google Advertising ID| Profiles ingested into Experience Platform with a primary identity of Google Advertising ID (GAID) can be exported to this destination.|
+|IDFA|Apple ID for Advertisers| Profiles ingested into Experience Platform with a primary identity of Apple ID for Advertisers (IDFA) can be exported to this destination.|
+|email_lc_sha256| Email addresses hashed with the SHA256 algorithm|Profiles ingested into Experience Platform with a primary identity of hashed email address can be exported to this destination.|
 
 {style="table-layout:auto"}
 
