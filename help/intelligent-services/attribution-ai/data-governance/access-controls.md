@@ -1,8 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;adobe admin console
 solution: Experience Platform
-title: Access control overview
-description: Access control for Attribution AI is provided through the Adobe Admin Console. This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes
+feature: Attribution AI
+title: Access control for Attribution AI
+description: This document provides information on attribute-based access control for Attribution AI.
 ---
 
 # Access Control

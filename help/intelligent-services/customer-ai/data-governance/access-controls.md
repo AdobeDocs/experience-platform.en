@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;user guide;customer ai;popular topics;access controls;create instance;
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform
 feature: Customer AI
 title: Access Control for Customer AI
-description: Access control for Customer AI is provided through the Adobe Admin Console. This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes.
+description: This document provides information on attribute-based access control for Customer AI.
 ---
 
 # Attribute-based access control
