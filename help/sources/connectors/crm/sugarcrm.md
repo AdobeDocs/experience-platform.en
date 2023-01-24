@@ -33,7 +33,7 @@ Before you can create a [!DNL SugarCRM] source connection, you must first ensure
 
 * A [!DNL SugarMarket] account. You must contact your [!DNL SugarCRM] account manager to obtain a valid [!DNL SugarMarket] account if you do not already have one. 
 
-* A unique API username and account separate from any user account associated with the marketing or sales process. This unique username and account combination must have API access permissions. For more information on the process to set up an account, visit the [[!DNL SugarMarket RESTFUL API (sugarcrm.com)]](https://market.apidocs.sugarcrm.com/#intro) documentation.
+* A unique API username and account separate from any user account associated with the marketing or sales process. This unique username and account combination must have API access permissions. For more information on the process to set up an account, visit the [[!DNL SugarMarket RESTFUL API]](https://market.apidocs.sugarcrm.com/#intro) documentation.
 
 ## Connect [!DNL SugarCRM Accounts & Contacts] to Platform
 
