@@ -56,7 +56,11 @@ To add fields to a custom field group in the [!DNL Schema Editor], start by sele
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-A **[!UICONTROL New field]** appears in in the canvas, and the right rail updates to show controls to configure the field's properties. See the guide on [defining fields in the UI](../fields/overview.md#define) for specific steps on how to configure and add the field to the field group.
+An **[!UICONTROL Untitled Field]** placeholder appears in in the canvas, and the right rail updates to show controls to configure the field's properties. See the guide on [defining fields in the UI](../fields/overview.md#define) for specific steps on how to configure different field types.
+
+Under **[!UICONTROL Assign to]**, select the **[!UICONTROL Field Group]** option, then use the dropdown to select the desired field group from the list. You can start typing in the name of the field group to narrow down results.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
 
 Continue to add as many fields as required to the field group. When finished, select **[!UICONTROL Save]** to save both the schema and the field group.
 
