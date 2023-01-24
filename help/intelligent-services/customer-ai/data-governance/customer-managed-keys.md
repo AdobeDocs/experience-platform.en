@@ -2,7 +2,7 @@
 keywords: insights;customer ai;customer ai insights;AAI query service;customer ai queries;customer ai scores; customer managed keys in CAI
 feature: Customer-Managed Keys in Customer AI
 title: Customer Managed Keys
-description: Learn how to set up Customer Managed Keys for Customer AI
+description: Learn how to set up Customer Managed Keys for Customer AI.
 ---
 # Customer Managed Keys
 

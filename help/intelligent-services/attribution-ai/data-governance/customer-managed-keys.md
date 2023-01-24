@@ -2,7 +2,7 @@
 keywords: insights;attribution ai;attribution ai insights;AAI query service;attribution queries;attribution scores; customer managed keys in AAI
 feature: Customer-Managed Keys in Attribution AI
 title: Customer Managed Keys
-description: Learn how to set up Customer Managed Keys for Attribution AI
+description: Learn how to set up Customer Managed Keys for Attribution AI.
 ---
 # Customer Managed Keys
 

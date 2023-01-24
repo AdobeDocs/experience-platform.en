@@ -2,7 +2,7 @@
 keywords: Experience Platform;user guide;customer ai;popular topics;access controls;create instance;
 feature: Customer AI
 title: Governance Policies for Customer AI
-description: Adobe Experience Platform provides several services and tools that allow you to confidently control your collected experience data
+description: Adobe Experience Platform provides several services and tools that allow you to confidently control your collected experience data.
 ---
 
 # Governance policies

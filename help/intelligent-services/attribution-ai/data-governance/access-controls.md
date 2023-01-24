@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;access control;adobe admin console
 solution: Experience Platform
 title: Access control overview
-description: Access control for AAI is provided through the Adobe Admin Console. This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes
+description: Access control for Attribution AI is provided through the Adobe Admin Console. This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes
 ---
 
 # Access Control
@@ -35,7 +35,7 @@ If you select datasets with restricted schemas on the **[!UICONTROL Create insta
 
 When you preview datasets with restricted schema on the **[!UICONTROL Create instance workflow]** page, a warning appears to let you know that [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
 
-![The Attribution AI workspace with the restricted previewed schema fields results highlighted.](./images/user-guide/restricted-dataset-preview.png)
+![The Attribution AI workspace with the results of restricted previewed schema fields highlighted.](./images/user-guide/restricted-dataset-preview.png)
 
 After you create an instance with restricted information and proceed to the **[!UICONTROL Define goal]** step, a warning is displayed at the top: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
 
