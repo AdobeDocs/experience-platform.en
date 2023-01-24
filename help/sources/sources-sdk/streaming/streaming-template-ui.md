@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 title: Documentation Self-Service Template for Streaming SDK UI
 description: Learn how to bring streaming data from a source to Adobe Experience Platform using the UI.
 hide: true
@@ -94,7 +93,7 @@ Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow so
 
 *Workflows for the remaining steps of creating a dataflow are modularized. If there are any specific call-outs you want to make regarding your source, please see the additional resources section below.*
 
-By following this tutorial, you have established a connection to your *YOURSOURCE* account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+By following this tutorial, you hcave established a connection to your *YOURSOURCE* account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
 ## Additional resources
 

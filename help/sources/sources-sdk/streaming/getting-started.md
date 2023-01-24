@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 title: Getting Started with Self-Serve Sources (Streaming SDK)
 description: This document provides an introduction to the prerequisite information you need to know before attempting to create a new source using Self-Serve Sources (Streaming SDK).
 hide: true

@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 title: Documentation Self-Service Template for Streaming SDK API
 description: Learn how to bring streaming data from a source to Adobe Experience Platform using the Flow Service API.
 hide: true
