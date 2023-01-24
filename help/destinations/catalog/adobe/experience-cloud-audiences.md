@@ -40,7 +40,7 @@ Apart from sharing segments with Audience Manager, the Experience Platform Audie
 * Analytics
 * Marketo
 
-Note: briefly talk about when to share segments to these destinations using 
+Note: briefly talk about when to share segments to these destinations using the existing destination cards and when to share using the new Experience Cloud Audiences destination. 
 
 ## Prerequisites {#prerequisites}
 
