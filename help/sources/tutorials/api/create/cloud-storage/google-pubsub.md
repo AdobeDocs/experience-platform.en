@@ -101,7 +101,7 @@ A successful response returns details of the newly created connection, including
 
 ## Create a source connection {#source}
 
-A source connection creates and manages the connection to the external source from where data is ingested. A source connection consists of information like data source, data format, and a source connection ID needed to create a dataflow. A source connection instance is specific to a tenant and IMS Organization.
+A source connection creates and manages the connection to the external source from where data is ingested. A source connection consists of information like data source, data format, and a source connection ID needed to create a dataflow. A source connection instance is specific to a tenant and organization.
 
 To create a source connection, make a POST request to the `/sourceConnections` endpoint of the [!DNL Flow Service] API.
 
@@ -115,29 +115,29 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'content-type: application/json' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -d '{
-        "name": "Google PubSub source connection",
-        "description": "A source connection for Google PubSub",
-        "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
-        "connectionSpec": {
-            "id": "70116022-a743-464a-bbfe-e226a7f8210c",
-            "version": "1.0"
-        },
-        "data": {
-            "format": "json"
-        },
-        "params": {
-            "topicId": "{TOPIC_ID}",
-            "subscriptionId": "{SUBSCRIPTION_ID}",
-            "dataType": "raw"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'content-type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+      "name": "Google PubSub source connection",
+      "description": "A source connection for Google PubSub",
+      "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
+      "connectionSpec": {
+          "id": "70116022-a743-464a-bbfe-e226a7f8210c",
+          "version": "1.0"
+      },
+      "data": {
+          "format": "json"
+      },
+      "params": {
+          "topicId": "acme-project",
+          "subscriptionId": "{SUBSCRIPTION_ID}",
+          "dataType": "raw"
+      }
+  }'
 ```
 
 | Property | Description |
@@ -147,8 +147,8 @@ curl -X POST \
 | `baseConnectionId` | The base connection ID of your [!DNL PubSub] source that was generated in the previous step. |
 | `connectionSpec.id` | The fixed connection specification ID for [!DNL PubSub]. This ID is: `70116022-a743-464a-bbfe-e226a7f8210c` |
 | `data.format` | The format of the [!DNL PubSub] data that you want to ingest. Currently, the only supported data format is `json`. |
-| `params.topicId` | The topic ID defines the specific named resource which messages are sent by publishers |
-| `params.subscriptionId` | The subscription ID defines the specific named resource representing the stream of messages from a single, specific topic, to be delivered to the subscribing application. |
+| `params.topicId` | The name or ID of your [!DNL PubSub] topic. In [!DNL PubSub], a topic is a named resource that represents a feed of messages. |
+| `params.subscriptionId` | The subscription ID that corresponds with a given topic. In [!DNL PubSub], subscriptions allow you to read messages from a topic. One or many subscriptions can be assigned to a single topic. |
 | `params.dataType` | This parameter defines the type of the data that is being ingested. Supported data types include: `raw` and `xdm`. |
 
 **Response**
