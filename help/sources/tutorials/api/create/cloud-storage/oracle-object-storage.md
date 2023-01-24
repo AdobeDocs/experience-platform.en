@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Oracle Object Storage;oracle object storage
 solution: Experience Platform
 title: Create an Oracle Object Storage Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Oracle Object Storage using the Flow Service API.
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
@@ -33,7 +32,7 @@ In order for [!DNL Flow Service] to connect to [!DNL Oracle Object Storage], you
 | `secretKey` | The [!DNL Oracle Object Storage] password required for authentication. |
 | `bucketName` | The allowed bucket name required if the user has restricted access. The bucket name must be between three and 63 characters long, it must begin and end with either a letter or a number, and can only contain lowercase letters, numbers, or hyphens (`-`). The bucket name cannot be formatted like an IP address. |
 | `folderPath` | The allowed folder path required if the user has restricted access. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Oracle Object Storage] is: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Oracle Object Storage] is: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
 
 For more information on how to obtain these values, refer to the [Oracle Object Storage authentication guide](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;boolean functions;boolean;
 solution: Experience Platform
 title: PQL Boolean Functions
-topic-legacy: developer guide
 description: Boolean functions are used to perform boolean logic on different elements in Profile Query Language (PQL).
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
 ---

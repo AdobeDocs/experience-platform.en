@@ -166,6 +166,8 @@ solution: Data Collection
       * [Overview](./extensions/client/marketo/overview.md)
       * [Release notes](./extensions/client/marketo/release-notes.md)
     * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)
+    * [!DNL Meta Pixel] {#meta}
+      * [Overview](./extensions/client/meta/overview.md)
     * [Monita](https://exchange.adobe.com/apps/ec/106544)
     * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
     * [OneTrust Consent Management for Cookies](https://exchange.adobe.com/apps/ec/100340)
@@ -200,14 +202,18 @@ solution: Data Collection
     * [Overview](./extensions/server/overview.md)
     * Adobe Experience Platform Cloud Connector {#cloud-connector}
       * [Overview](./extensions/server/cloud-connector/overview.md)
+      * [Release notes](./extensions/server/cloud-connector/release-notes.md)
     * [!DNL AWS] {#aws}
       * [Overview](./extensions/server/aws/overview.md)
+    * [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)
     * Core {#core}
       * [Overview](./extensions/server/core/overview.md)
     * Google Ads Enhanced Conversions {#google-ads-enhanced-conversions}
       * [Overview](./extensions/server/google-ads-enhanced-conversions/overview.md)
     * [!DNL Mailchimp] Edge {#mailchimp}
       * [Overview](./extensions/server/mailchimp/overview.md)
+    * [!DNL Meta Conversions API] {#meta}
+      * [Overview](./extensions/server/meta/overview.md)
     * [!UICONTROL Microsoft Azure] {#azure}
       * [Overview](./extensions/server/azure/overview.md)
     * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
@@ -291,3 +297,4 @@ solution: Data Collection
   * [2020 release notes](./release-notes/2020.md)
   * [2019 release notes](./release-notes/2019.md)
   * [2018 release notes](./release-notes/2018.md)
+

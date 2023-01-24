@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Define XDM Fields in the UI
 description: Learn how to define XDM fields in the Experience Platform user interface.
-topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
 ---
 # Define XDM fields in the UI

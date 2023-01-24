@@ -18,8 +18,8 @@ To learn more about merge policies and they role they play within Experience Pla
 
 This guide requires a working understanding of several important [!DNL Experience Platform] features. Before following this guide, please review the documentation for the following services:
 
-* [Real-time Customer Profile](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Enables Real-time Customer Profile by bridging identities from disparate data sources being ingested into [!DNL Platform].
+* [Real-Time Customer Profile](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Enables Real-Time Customer Profile by bridging identities from disparate data sources being ingested into [!DNL Platform].
 * [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 ## View merge policies {#view-merge-policies}
@@ -53,7 +53,7 @@ The first step in the workflow allows you to configure your merge policy by prov
   * **[!UICONTROL Private Graph]**: Perform identity stitching based on your private identity graph.
 * **[!UICONTROL Default merge policy]**: A toggle button that allows you to select whether or not this merge policy will be the default for your organization. If the selector is toggled on, a warning appears asking you to confirm that you wish to change your organization's default merge policy. See the [merge policies overview](overview.md) to learn more about default merge policies.
     ![](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Active-On-Edge Merge Policy]**: A toggle button that allows you to select whether or not this merge policy will be active on edge. To ensure all profile consumers are working with the same view on edges, merge policies can be marked as active on edge. In order for a segment to be activated on edge (marked as an edge segment), it must be tied to a merge policy that is marked as active on edge. If a segment is **not** tied to a merge policy that is marked as active on edge, the segment will not be marked as active on edge, and will be marked as a streaming segment. Additionally, each IMS Organization can only have **one** merge policy that is active on edge. 
+* **[!UICONTROL Active-On-Edge Merge Policy]**: A toggle button that allows you to select whether or not this merge policy will be active on edge. To ensure all profile consumers are working with the same view on edges, merge policies can be marked as active on edge. In order for a segment to be activated on edge (marked as an edge segment), it must be tied to a merge policy that is marked as active on edge. If a segment is **not** tied to a merge policy that is marked as active on edge, the segment will not be marked as active on edge, and will be marked as a streaming segment. Additionally, each sandbox in an Organization can only have **one** merge policy that is active on edge. 
 
 Once the required fields have been completed, you can select **[!UICONTROL Next]** to continue with the workflow.
 

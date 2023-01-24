@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;identity namespace;Identity namespace
 solution: Experience Platform
 title: Identity Service Troubleshooting Guide
-topic-legacy: troubleshooting
 description: This document provides answers to frequently asked questions about Adobe Experience Platform Identity Service, as well as a troubleshooting guide for common errors.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
 ---

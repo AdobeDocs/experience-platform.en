@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;record data;stream record data;
 solution: Experience Platform
 title: Stream Record Data Using Streaming Ingestion APIs
-topic-legacy: tutorial
 type: Tutorial
 description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
@@ -18,7 +17,7 @@ This tutorial requires a working knowledge of various Adobe Experience Platform 
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
   - [Schema Registry developer guide](../../xdm/api/getting-started.md): A comprehensive guide that covers each of the available endpoints of the [!DNL Schema Registry] API and how to make calls to them. This includes knowing your `{TENANT_ID}`, which appears in calls throughout this tutorial, as well as knowing how to create schemas, which is used in creating a dataset for ingestion.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
 
 ### Using Platform APIs
 
@@ -68,7 +67,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | The name you want to use for your schema. This name must be unique. |
 | `description` | A meaningful description for the schema you are creating. |
-| `meta:immutableTags` | In this example, the `union` tag is used to persist your data into [[!DNL Real-time Customer Profile]](../../profile/home.md). |
+| `meta:immutableTags` | In this example, the `union` tag is used to persist your data into [[!DNL Real-Time Customer Profile]](../../profile/home.md). |
 
 **Response**
 
@@ -133,7 +132,7 @@ Next, add an [identity descriptor](../../xdm/api/descriptors.md) to the schema c
 
 1. The work email address will become a mandatory field. This means messages sent without this field will fail validation and will not be ingested.
 
-2. [!DNL Real-time Customer Profile] will use the work email address as an identifier to help stitch together more information about that individual.
+2. [!DNL Real-Time Customer Profile] will use the work email address as an identifier to help stitch together more information about that individual.
 
 ### Request
 
@@ -193,7 +192,7 @@ Once you have created your schema, you will need to create a dataset to ingest r
 
 >[!NOTE]
 >
->This dataset will be enabled for **[!DNL Real-time Customer Profile]** and **[!DNL Identity Service]**.
+>This dataset will be enabled for **[!DNL Real-Time Customer Profile]** and **[!DNL Identity Service]**.
 
 **API format**
 

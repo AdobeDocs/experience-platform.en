@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics; File Transfer Protocol; file transfer protocol
 solution: Experience Platform
 title: Create an FTP Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to an FTP (File Transfer Protocol) server using the Flow Service API.
 exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
@@ -35,7 +34,7 @@ In order for [!DNL Flow Service] to connect to [!DNL FTP], you must provide valu
 | `host` | The name or IP address associated with your [!DNL FTP] server. |
 | `username` | The username with access to your [!DNL FTP] server. |
 | `password` | The password for your [!DNL FTP] server. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL FTP] is: `fb2e94c9-c031-467d-8103-6bd6e0a432f2`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL FTP] is: `fb2e94c9-c031-467d-8103-6bd6e0a432f2`. |
 
 ### Using Platform APIs
 

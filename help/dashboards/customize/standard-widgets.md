@@ -32,7 +32,7 @@ The standard widgets for the selected category are displayed. Each widget appear
 >
 >Widgets may only be added to the dashboard that matches the selected category. For example, only widgets from the [!UICONTROL Profiles] category may be added to the [!UICONTROL Profiles] dashboard.
 
-![](../images/customization/standard-widgets.png)
+![The widget library workspace with the Standard tab and available categories highlighted.](../images/customization/standard-widgets.png)
 
 ## Add standard widget to dashboard
 
@@ -44,7 +44,7 @@ To choose a standard widget to add to your dashboard, highlight the widget and s
 
 Select **[!UICONTROL Add widget]** to add the selected widgets to your dashboard.
 
-![](../images/customization/add-widget.png)
+![The widget library workspace with a widget selected and Add widget and Cancel highlighted.](../images/customization/add-widget.png)
 
 ## Next steps
 

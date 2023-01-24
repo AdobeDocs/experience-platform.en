@@ -17,7 +17,7 @@ See the [source connectors overview](../../sources/home.md) for more information
 
 >[!IMPORTANT]
 >
->You must have access to [Real-Time Customer Data Platform B2B Edition](../../rctcdp/../rtcdp/b2b-overview.md) in order for B2B schemas to participate in [Real-time Customer Profile](../proile/../../profile/home.md).
+>You must have access to [Real-Time Customer Data Platform B2B Edition](../../rctcdp/../rtcdp/b2b-overview.md) in order for B2B schemas to participate in [Real-Time Customer Profile](../proile/../../profile/home.md).
 
 The following documents provide more information on using [!DNL Marketo] to bring B2B data to Platform:
 

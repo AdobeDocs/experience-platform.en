@@ -2,11 +2,14 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Data Landing Zone Source
-topic-legacy: overview
 description: Learn how to connect Data Landing Zone to Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
 ---
 # [!DNL Data Landing Zone]
+
+>[!IMPORTANT]
+>
+>This page is specific to the [!DNL Data Landing Zone] *source* connector in Experience Platform. For information on connecting to the [!DNL Data Landing Zone] *destination* connector, refer to the [[!DNL Data Landing Zone] destination documentation page](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
 [!DNL Data Landing Zone] is an [!DNL Azure Blob] storage interface provisioned by Adobe Experience Platform, granting you to access a secure, cloud-based file storage facility to bring files into Platform. You have access to one [!DNL Data Landing Zone] container per sandbox, and the total data volume across all containers is limited to the total data provided with your Platform Products and Services license. All customers of Platform and its application services such as [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], and [!DNL Adobe Real-Time Customer Data Platform] are provisioned with one [!DNL Data Landing Zone] container per sandbox. You can read and write file(s) to your container through [!DNL Azure Storage Explorer] or your command-line interface.
 

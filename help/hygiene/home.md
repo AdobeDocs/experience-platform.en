@@ -11,14 +11,14 @@ exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 
 Adobe Experience Platform provides a robust set of tools to manage large, complicated data operations in order to orchestrate consumer experiences. As data is ingested into the system over time, it becomes increasingly important to manage your data stores so that data is used as expected, is updated when incorrect data needs correcting, and is deleted when organizational policies deem it necessary.
 
-Platform's data hygiene capabilities allow you to manage your stored consumer data through the following:
+<!-- Platform's data hygiene capabilities allow you to manage your stored data through the following:
 
 * Scheduling automated dataset expirations
-* Deleting individual consumer data from your records
+* Deleting individual records from one or all datasets
 
 >[!IMPORTANT]
 >
->Consumer deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead.
+>Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead. -->
 
 These activities can be performed using the [[!UICONTROL Data Hygiene] UI workspace](#ui) or the [Data Hygiene API](#api). When a data hygiene job executes, the system provides transparency updates at each step of process. See the section on [timelines and transparency](#timelines-and-transparency) for more information on how each job type is represented in the system.
 
@@ -34,9 +34,9 @@ The [!UICONTROL Data Hygiene] UI is built on top of the Data Hygiene API, whose 
 
 ## Timelines and transparency
 
-Consumer delete and dataset expiration requests each have their own processing timelines and provide transparency updates at key points in their respective workflows. Refer to the sections below for details on each job type.
+Record delete and dataset expiration requests each have their own processing timelines and provide transparency updates at key points in their respective workflows. 
 
-### Dataset expirations {#dataset-expiration-transparency}
+<!-- ### Dataset expirations {#dataset-expiration-transparency} -->
 
 The following takes place when a [dataset expiration request](./ui/dataset-expiration.md) is created:
 
@@ -51,24 +51,24 @@ The following takes place when a [dataset expiration request](./ui/dataset-expir
 
 {style="table-layout:auto"}
 
-### Consumer deletes {#consumer-delete-transparency}
+<!-- ### Record deletes {#record-delete-transparency}
 
 >[!IMPORTANT]
 >
->Consumer deletes are only available for organizations that have purchased Adobe Healthcare Shield.
+>Record deletes are only available for organizations that have purchased Adobe Healthcare Shield.
 
-The following takes place when a [consumer delete request](./ui/delete-consumer.md) is created:
+The following takes place when a [record delete request](./ui/record-delete.md) is created:
 
 | Stage | Time after request submission | Description |
 | --- | --- | --- |
-| Request is submitted | 0 hours | A data steward or privacy analyist submits a consumer delete request. The request is visible in the [!UICONTROL Data Hygiene UI] after it has been submitted. |
+| Request is submitted | 0 hours | A data steward or privacy analyist submits a record delete request. The request is visible in the [!UICONTROL Data Hygiene UI] after it has been submitted. |
 | Profile lookups updated | 3 hours | The change in profile counts caused by the deleted identity are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
 | Segments updated | 24 hours | Once profiles are removed, all related [segments](../segmentation/home.md) are updated to reflect their new size. |
 | Journeys and destinations updated | 26 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
 | Records soft deleted in data lake | 7 days | The data is soft deleted from the data lake. |
 | Data vacuuming completed | 14 days | The [status of the hygiene job](./ui/browse.md#view-details) updates to indicate that the job has completed, meaning that data vacuuming has been completed on the data lake and the relevant records have been hard deleted. |
 
-{style="table-layout:auto"}
+{style="table-layout:auto"} -->
 
 ## Next steps
 
