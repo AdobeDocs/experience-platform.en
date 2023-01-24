@@ -50,7 +50,7 @@ prod:all?FLATTEN
 
 The example schema used in this guide employs the standard field group [!UICONTROL Commerce Details], which utilizes the `commerce` object structure and the `productListItems` array. See the XDM documentation for [more information on the [!UICONTROL Commerce Details] field group](../../xdm/field-groups/event/commerce-details.md). A representation of the schema structure can be seen in the image below.
 
-![A schema diagram of the Commerce Details field group including the `commerce` and `productListItems` structures.](../images/best-practices/flatten-nested-data/commerce-details.png)
+![A schema diagram of the Commerce Details field group including the `commerce` and `productListItems` structures.](../images/essential-concepts/commerce-details.png)
 
 If your BI tool does not support nested data structures, it can be difficult to reference nested fields should they contain serialized values (such as `commerce` and `productListItems` in the example schema). These values may appear as parts of a single encoded `commerce` string field and are not realistically unusable. 
 
@@ -105,7 +105,7 @@ The `FLATTEN` setting does not currently flatten the following data structures:
 
 To resolve both Map and Array limitations you need to use the BI tools raw SQL editing like the Advanced Options -> SQL Statement in Power BI.
 
-BI tools such as raw SQL editing are necessary to resolve both map and array limitations. See the guide on how to [use Power BI advanced options to enter a custom SQL query](https://experienceleague.adobe.com/docs/experience-platform/query/clients/power-bi.html#import-tables-using-custom-sql) in the SQL statement section.
+BI tools such as raw SQL editing are necessary to resolve both map and array limitations. See the guide on how to [use Power BI advanced options to enter a custom SQL query](../clients/power-bi.md#import-tables-using-custom-sql) in the SQL statement section.
 
 ## Next steps
 
