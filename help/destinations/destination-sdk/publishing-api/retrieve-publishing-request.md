@@ -30,13 +30,13 @@ You can retrieve a list of all destinations submitted for publishing for your IM
 
 **API format**
 
-Use the following API format to retrieve all publishing requests for your IMS Organization.
+Use the following API format to retrieve all publishing requests for your account.
 
 ```http
 GET /authoring/destinations/publish
 ```
 
-Use the following API format to retrieve a specific publishing request for your IMS Organization, defined by the `{DESTINATION_ID}` parameter.
+Use the following API format to retrieve a specific publishing request, defined by the `{DESTINATION_ID}` parameter.
 
 ```http
 GET /authoring/destinations/publish/{DESTINATION_ID}
@@ -62,7 +62,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
->[!TAB Retrieve specific publishing requests]
+>[!TAB Retrieve a specific publishing request]
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish/{DESTINATION_ID} \

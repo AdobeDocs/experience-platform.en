@@ -21,9 +21,13 @@ You can retrieve an [existing](create-destination-configuration.md) destination 
 
 **API format**
 
+Use the following API format to retrieve all destination configurations for your account.
+
 ```http
 GET /authoring/destinations
 ```
+
+Use the following API format to retrieve a specific destination configuration, defined by the `{INSTANCE_ID}` parameter.
 
 ```http
 GET /authoring/destinations/{INSTANCE_ID}
@@ -47,7 +51,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
->[!TAB Retrieve specific destination configurations]
+>[!TAB Retrieve a specific destination configuration]
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \

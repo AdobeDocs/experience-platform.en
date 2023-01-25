@@ -28,9 +28,13 @@ You can retrieve an existing destination server configuration by making a `GET` 
 
 **API format**
 
+Use the following API format to retrieve all destination server configurations for your account.
+
 ```http
 GET /authoring/destination-servers
 ```
+
+Use the following API format to retrieve a specific destination server configuration, defined by the `{INSTANCE_ID}` parameter.
 
 ```http
 GET /authoring/destination-servers/{INSTANCE_ID}
@@ -57,7 +61,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 ```
 
 
->[!TAB Retrieve specific destination server configurations]
+>[!TAB Retrieve a specific destination server configuration]
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \

@@ -23,9 +23,13 @@ You can retrieve an existing audience template by making a `GET` request to the 
 
 **API format**
 
+Use the following API format to retrieve all audience templates for your account.
+
 ```http
 GET /authoring/audience-templates
 ```
+
+Use the following API format to retrieve a specific audience template, defined by the `{INSTANCE_ID}` parameter.
 
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}
@@ -52,7 +56,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 ```
 
 
->[!TAB Retrieve specific audience templates]
+>[!TAB Retrieve a specific audience template]
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates/{INSTANCE_ID} \

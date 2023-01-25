@@ -33,9 +33,13 @@ You can retrieve an [existing](create-credential-configuration.md) credential co
 
 **API format**
 
+Use the following API format to retrieve all credential configurations for your account.
+
 ```http
 GET /authoring/credentials
 ```
+
+Use the following API format to retrieve a specific credential configuration, defined by the `{INSTANCE_ID}` parameter.
 
 ```http
 GET /authoring/credentials/{INSTANCE_ID}
@@ -59,7 +63,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
->[!TAB Retrieve specific credential configurations]
+>[!TAB Retrieve a specific credential configuration]
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
