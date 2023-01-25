@@ -27,7 +27,7 @@ To navigate to the license usage dashboard within the Platform UI, select **[!UI
 >
 >The license usage dashboard is not enabled by default. Users must be granted "View License Usage Dashboard" permission in order to be able to view the dashboard. For steps on granting access permissions for viewing the license usage dashboard, please refer to the [dashboard permissions guide](../permissions.md).
 
-![The Licence usage dashboard Overview tab.](../images/license-usage/dashboard-overview.png)
+![The License usage dashboard Overview tab.](../images/license-usage/dashboard-overview.png)
 
 ### Select a sandbox
 
@@ -35,7 +35,7 @@ To choose a sandbox to view in the dashboard, select either [!UICONTROL Producti
 
 Consumption reporting for sandboxes is cumulative for all sandboxes of the same type. In other words, selecting [!UICONTROL Production] or [!UICONTROL Development] provides consumption reports for all production or development sandboxes, respectively.
 
-![The Licence usage dashboard Overview tab with the sandbox selector highlighted.](../images/license-usage/select-sandbox.png)
+![The License usage dashboard Overview tab with the sandbox selector highlighted.](../images/license-usage/select-sandbox.png)
 
 >[!WARNING]
 >
@@ -49,11 +49,11 @@ Consumption reporting for sandboxes is cumulative for all sandboxes of the same 
 
 After selecting a sandbox, you can use the date range dropdown to select the time period to display in the dashboard. There are multiple options available, including the default value of the last 30 days.
 
-![The Licence usage dashboard Overview tab with the date range dropdown highlighted.](../images/license-usage/select-date-range.png)
+![The License usage dashboard Overview tab with the date range dropdown highlighted.](../images/license-usage/select-date-range.png)
 
 You can also select **[!UICONTROL Custom date]** to choose the time period that is shown.
 
-![The Licence usage dashboard Overview tab with the custom date range options highlighted.](../images/license-usage/select-custom-date.png)
+![The License usage dashboard Overview tab with the custom date range options highlighted.](../images/license-usage/select-custom-date.png)
 
 ## Widgets
 
@@ -61,7 +61,7 @@ The license usage dashboard is composed of widgets, which display read-only metr
 
 Each widget displays a line graphs comparing actual numbers for your organization to the total available with your organization's licensing and provide a percentage of total usage.
 
-![The Licence usage dashboard Overview tab with the line graph of the Sample licence usage metric widget highlighted.](../images/license-usage/widgets.png)
+![The License usage dashboard Overview tab with the line graph of the Sample License usage metric widget highlighted.](../images/license-usage/widgets.png)
 
 ## Available metrics
 
