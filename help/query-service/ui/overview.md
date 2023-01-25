@@ -40,7 +40,7 @@ Once a query has been scheduled it appears in the list of scheduled queries on t
 | **[!UICONTROL Last run timestamp]** | The most recent timestamp when the query was run. This column highlights whether a query has been executed according to its current schedule. |
 | **[!UICONTROL Last run status]** | The status of the most recent query execution. The three status values are: `successful` `failed` or `in progress`.|
 
-See the documentation for more information on how to [monitor queries through the Query Service UI](../monitor-queries.md).
+See the documentation for more information on how to [monitor queries through the Query Service UI](./monitor-queries.md).
 
 ## Templates {#browse}
 
