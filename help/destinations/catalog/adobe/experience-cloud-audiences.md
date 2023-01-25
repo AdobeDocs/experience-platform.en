@@ -5,7 +5,7 @@ description: Learn how to share segments from Experience Platform to various Exp
 
 # (Beta) [!UICONTROL Experience Cloud Audiences] connection
 
-This destination allows you to share segments from Experience Platform to various Experience Platform solutions, like Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target, or Marketo.
+This destination allows you to share segments from Experience Platform to various Experience Cloud solutions, like Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target, or Marketo.
 
 ![The Experience Cloud Audiences destination, highlighted in the destinations catalog.](/help/destinations/assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png)
 
@@ -73,10 +73,10 @@ After the existing legacy integration has been disabled, you can proceed to crea
 Note the following known limitations and important callouts in the beta release of the Experience Cloud Audiences card:
 
 * [Dataflows monitoring](/help/dataflows/ui/monitor-destinations.md) is not supported.
-* When connecting to the destination, you can see an option to [enable dataflow alerts](#enable-alerts). Though visible in the UI, the enable alerts option is not supported in the beta release.
-* Backfills are not supported. The first export to Audience Manager or other Experience Cloud solutions does not include a historical population of the segments. 
-* In the beta release, you can create a single destination connection to the Experience Cloud Audiences destination, across all sandboxes belonging to your Experience Platform organization.
-* There is a four-hour latency between the time that data is activated in Experience Platform and the time that data is ready to be used in Audience Manager and other Experience Cloud solutions.
+* When connecting to the destination, you can see an option to [enable dataflow alerts](#enable-alerts). Though visible in the UI, the **enable alerts option is not supported** in the beta release.
+* **Backfills are not supported**. The first export to Audience Manager or other Experience Cloud solutions does not include a historical population of the segments. 
+* In the beta release, you can create **a single destination connection to the Experience Cloud Audiences destination**, across all sandboxes belonging to your Experience Platform organization.
+* There is a **four-hour latency** between the time that data is activated in Experience Platform and the time that data is ready to be used in Audience Manager and other Experience Cloud solutions.
 
 ### Permissions management in Audience Manager
 
@@ -105,7 +105,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 |---------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the *YourDestination* destination.|
+| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) keyed off the identities listed in the section above.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
