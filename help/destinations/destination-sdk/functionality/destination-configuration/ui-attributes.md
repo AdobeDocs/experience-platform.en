@@ -5,8 +5,9 @@ title: UI attributes
 
 # UI attributes
 
-UI attributes define the visual elements that Adobe should display for your destination card in the Adobe Experience Platform user interface.
+UI attributes define the visual elements that Adobe should display for your destination card in the Adobe Experience Platform user interface, such as the destination platform logo, a link to the documentation page, a destination description and its category and type.
 
+![UI screenshot showing the UI attributes in the Experience Platform interface](../../assets/functionality/destination-configuration/ui-attributes.png)
 
 ## Supported integration types {#supported-integration-types}
 
@@ -18,7 +19,6 @@ Refer to the table below for details on what type of destinations support the fu
 | File-based (batch) integrations | :white_check_mark: |
 
 ## Supported parameters {#supported-parameters}
-
 
 ```json
 "uiAttributes":{
