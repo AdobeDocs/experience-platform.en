@@ -60,13 +60,11 @@ Note: briefly talk about when to share segments to these destinations using the 
 
 If you are already sharing segments from Experience Platform to Audience Manager and other Experience Cloud solutions via the [legacy segment sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam), you must contact either Customer Care or your Customer Success Manager to disable the legacy integration. Customer Care and Customer Support Management teams must file a Jira ticket (see template ticket AAM-52354) to disable the integration. 
 
-<!--What is the turnaround time for the Jira to be resolved?-->
-
-After the existing legacy integration has been disabled, you can proceed to creating a connection via the self-service destination card. 
+The turnaround time to resolve the deprovisioning ticket for beta customers is one business day. After the existing legacy integration has been disabled, you can proceed to [creating a connection](#connect) via the self-service destination card. 
 
 >[!IMPORTANT]
 >
->The segment export from Experience Platform to your other solutions will be stopped in the time between the Jira ticket resolution and the time a new connection is established through the destination card. You can minimize this downtime by creating the connection via the card as soon as the Jira ticket is closed.  
+>The segment export from Experience Platform to your other solutions will be stopped in the time between the Jira ticket resolution and the time a new connection is established through the destination card. You can minimize this downtime by creating the connection via the destination card as soon as the Jira ticket is closed.  
 
 ## Known limitations and callouts {#known-limitations}
 
@@ -77,14 +75,6 @@ Note the following known limitations and important callouts in the beta release 
 * **Backfills are not supported**. The first export to Audience Manager or other Experience Cloud solutions does not include a historical population of the segments. 
 * In the beta release, you can create **a single destination connection to the Experience Cloud Audiences destination**, across all sandboxes belonging to your Experience Platform organization.
 * There is a **four-hour latency** between the time that data is activated in Experience Platform and the time that data is ready to be used in Audience Manager and other Experience Cloud solutions.
-
-### Permissions management in Audience Manager
-
-Segments and traits in Audience Manager are subject to [Role-Based Access Controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=en) (RBAC). 
-
-Segments exported from Experience Platform are assigned to a specific datasource in Audience Manager called **[!UICONTROL Experience Platform Segments]**.
-
-You can apply access controls to the segments belonging to the datasource. This means that data governance settings from Experience Platform are not carried over in Audience Manager. You must set new access control permissions in Audience Manager for these segments and traits created from Experience Platform segments.
 
 ## Supported identities {#supported-identities}
 
@@ -168,3 +158,14 @@ Your Experience Platform segments appear in Audience Manager as [signals](https:
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
+
+Data governance is enforced by both labels and marketing actions.
+DULE labels will transfer to applications but not marketing actions
+
+### Permissions management in Audience Manager
+
+Segments and traits in Audience Manager are subject to [Role-Based Access Controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=en) (RBAC). 
+
+Segments exported from Experience Platform are assigned to a specific datasource in Audience Manager called **[!UICONTROL Experience Platform Segments]**.
+
+You can apply access controls to the segments belonging to the datasource. You must set new access control permissions in Audience Manager for these segments and traits created from Experience Platform segments.
