@@ -125,6 +125,10 @@ The following example shows what the `segmentMembership` attribute looks like fo
 | `lastQualificationTime` | The timestamp when the assertion of segment membership was made and the profile entered or exited the segment. |
 | `status` | The status of segment participation as part of the current request. Must be equal to one of the following known values: <ul><li>`existing`: Entity continues to be in the segment.</li><li>`realized`: Entity is entering the segment.</li><li>`exited`: Entity is exiting the segment.</li></ul> |
 
+>[!NOTE]
+>
+>Any segment membership that is in the `exited` status for more than 30 days, based on the `lastQualificationTime`, will be subject to deletion.
+
 ## Access segment results
 
 The results of a segment job can be accessed in one of two ways: you can access individual profiles or export an entire audience to a dataset.
