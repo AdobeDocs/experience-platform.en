@@ -43,9 +43,11 @@ The first step in creating a source connection is to authenticate your [!DNL Pub
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL PubSub] authentication credentials as part of the request parameters.
 
->[!TIP]
+During this step, you can define the data that your account will have access to by providing the topic ID. When a topic ID is provided, you will only be able to access subscriptions that are associated with the given topic ID.
+
+>[!NOTE]
 >
->During this step, you can define the data that your account will have access to by providing the topic ID. When a topic ID is provided, you will only be able to access subscriptions that are associated with the given topic ID.
+>Root permissions are inherited in all of the topics and subscriptions created inside a [!DNL PubSub] project. If you want to add a principal (role) to have access to a specific topic, then that principal (role) must also be added to the topic's corresponding subscription as well. For more information, read the [[!DNL PubSub] documentation on access control](https://cloud.google.com/pubsub/docs/access-control).
 
 **API format**
 

@@ -56,6 +56,10 @@ To use an existing account, select the [!DNL PubSub] account you want to create 
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and your [!DNL PubSub] authentication credentials on the input form. During this step, you can define the data that your account will have access to by providing the topic ID. When a topic ID is provided, you will only be able to access subscriptions that are associated with the given topic ID.
 
+>[!NOTE]
+>
+>Root permissions are inherited in all of the topics and subscriptions created inside a [!DNL PubSub] project. If you want to add a principal (role) to have access to a specific topic, then that principal (role) must also be added to the topic's corresponding subscription as well. For more information, read the [[!DNL PubSub] documentation on access control](https://cloud.google.com/pubsub/docs/access-control).
+
 When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
 ![new](../../../../images/tutorials/create/google-pubsub/new.png)
