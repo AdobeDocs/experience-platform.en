@@ -28,7 +28,9 @@ In Audience Manager, you can use Experience Platform segments for Data Managemen
 
 ### Granular control of exported segments {#segments-control}
 
-Using the new self-service segment sharing integration via the Experience Cloud Audiences destination, you can select which segments to export to Audience Manager and beyond. The legacy segment sharing integration did not allow for a granular control of which segments should be exported to the solutions.
+Use the new self-service segment sharing integration via the Experience Cloud Audiences destination to select which segments to export to Audience Manager and beyond. This allows you to determine which segments you want to share with other Experience Cloud solutions and which segments you want to keep in Experience Platform exclusively.
+
+The legacy segment sharing integration did not allow for a granular control of which segments should be exported to Audience Manager and beyond.
 
 ### Share Experience Platform segments with further Experience Cloud solutions {#share-segments-with-other-solutions}
 
@@ -40,18 +42,25 @@ Apart from sharing segments with Audience Manager, the Experience Platform Audie
 * Analytics
 * Marketo
 
+<!--
+
 Note: briefly talk about when to share segments to these destinations using the existing destination cards and when to share using the new Experience Cloud Audiences destination. 
+
+-->
 
 ## Prerequisites {#prerequisites}
 
 >[!IMPORTANT]
 >
+> * This destination is available to [Adobe Real-Time Customer Data Platform Prime and Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 > * You need an Audience Manager license to enable the Data Management Platform use cases mentioned in the section above.
-> * You *do not need* an Audience Manager license to share Experience Platform segments with Adobe Advertising Cloud, Adobe Target, Marketo, and other Experience Cloud solutions, via the Core Services integration.
+> * You *do not need* an Audience Manager license to share Experience Platform segments with Adobe Advertising Cloud, Adobe Target, Marketo, and other Experience Cloud solutions, via the Experience Cloud Audiences integration.
 
-### For customers who were already on the legacy segment sharing solution
+### For customers who are using the legacy segment sharing solution
 
-If you are already sharing segments from Experience Platform to Audience Manager and other Core Services solutions via the [legacy segment sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam), you need to create a Jira ticket to deprovision the existing integration. See a template for a deprovisioning Jira ticket here: AAM-xxxxx. What is the turnaround time for the Jira to be resolved?
+If you are already sharing segments from Experience Platform to Audience Manager and other Experience Cloud solutions via the [legacy segment sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam), you must contact either Customer Care or your Customer Success Manager to disable the legacy integration. Customer Care and Customer Support Management teams must file a Jira ticket (see template ticket AAM-52354) to disable the integration. 
+
+<!--What is the turnaround time for the Jira to be resolved?-->
 
 After the existing legacy integration has been disabled, you can proceed to creating a connection via the self-service destination card. 
 
@@ -61,7 +70,7 @@ After the existing legacy integration has been disabled, you can proceed to crea
 
 ## Known limitations and callouts {#known-limitations}
 
-Note the following known limitations and important callouts in the beta release of the Core Services card:
+Note the following known limitations and important callouts in the beta release of the Experience Cloud Audiences card:
 
 * [Dataflows monitoring](/help/dataflows/ui/monitor-destinations.md) is not supported.
 * When connecting to the destination, you can see an option to [enable dataflow alerts](#enable-alerts). Though visible in the UI, the enable alerts option is not supported in the beta release.
@@ -154,7 +163,7 @@ To validate successful data export, you can check that your segments have succes
 
 ### Validate data in Audience Manager
 
-Your Experience Platform segments appear in Audience Manager as [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-signals), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-traits), and [segments](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-segments). You can verify in Audience Manager if the data has appeared as described in th documentation links above. 
+Your Experience Platform segments appear in Audience Manager as [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-signals), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-traits), and [segments](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-segments). You can verify in Audience Manager if the data has appeared as described in the documentation links above. 
 
 ## Data usage and governance {#data-usage-governance}
 
