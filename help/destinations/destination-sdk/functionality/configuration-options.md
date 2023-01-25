@@ -13,7 +13,6 @@ The diagram below shows a high-level overview of the components that you can con
 
 ![Diagram showing the Destination SDK components, configuration endpoints, and the operations supported by them.](../assets/functionality/destination-sdk-components-diagram.png)
 
-
 Adobe Experience Platform Destination SDK consists of the following configurations:
 
 * **Server configuration**: The destination server configuration ties together information about your server specs and the templating used by Adobe to deliver payloads to your destination. For file-based destinations, this configuration also includes the supported file formatting and compression formats for your destination. You can configure the functionalities described below via the [destination-servers endpoint](../authoring-api/destination-server/create-destination-server.md).
