@@ -13,7 +13,7 @@ This document provides an overview of [!DNL Analytics] and describes the use-cas
 
 [!DNL Analytics] is a powerful engine that helps you learn more about your customers, how they interact with your web properties, see where your digital marketing spend is effective, and identify areas of improvement. [!DNL Analytics] handles trillions of web-transactions per year and the [!DNL Analytics] source connector allows you to easily tap into this rich behavioral data and enrich the [!DNL Real-Time Customer Profile] in a matter of minutes.
 
-![](./images/analytics-data-experience-platform.png)
+![A graphic illustrating the journey of data from different Adobe applications, including Adobe Analytics.](./images/analytics-data-experience-platform.png)
 
 At a high level, [!DNL Analytics] collects data from various digital channels and multiple data centers around the world. Once the data is collected, Visitor Identification, Segmentation and Transformation Architecture (VISTA) rules, and processing rules are applied to shape the incoming data. After raw data has gone through this lightweight processing, it is then considered ready for consumption by [!DNL Real-Time Customer Profile]. In a process parallel to the aforementioned, the same processed data is micro-batched and ingested into Platform datasets for consumption by [!DNL Data Science Workspace], [!DNL Query Service], and other data-discovery applications.
 
