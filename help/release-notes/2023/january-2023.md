@@ -8,9 +8,25 @@ description: The January 2023 release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
+- [Assurance](#assurance)
 - [Data collection](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
+- [Real-Time Customer Profile](#profile)
 - [Sources](#sources)
+
+## Assurance {#assurance}
+
+Adobe Assurance lets you inspect, proof, simulate, and validate how you collect data or serve experiences in your mobile app.
+
+**New or updated features** 
+
+| Feature | Description |
+| ------- | ----------- |
+| Validation Editor | New enhancements to the validation editor have been added. These enhancements include validation columns, new code building tools, and improved views. |
+
+{style="table-layout:auto"}
+
+For more information about Assurance, please read the [Assurance documentation](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## Data collection {#data-collection}
 
@@ -66,6 +82,29 @@ XDM is an open-source specification that provides common structures and definiti
 {style="table-layout:auto"}
 
 For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
+
+## Real-Time Customer Profile {#profile}
+
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-Time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Platform-generated segment membership expiration | Any segment membership that is in the `Exited` state for more than 30 days, based on the `lastQualificationTime` field will be subject to deletion. |
+| External audience membership expiration | By default, external audience memberships are retained for 30 days. To retain them for longer, use the `validUntil` field during the ingestion of audience data. |
+
+**Upcoming deprecation** {#deprecation}
+
+In order to remove redundancy in the segment membership lifecycle, the `Existing` status will be deprecated from the [segment membership map](../../xdm/field-groups/profile/segmentation.md) at the end of March 2023. A follow-up announcement will include the exact deprecation date. 
+
+Post deprecation, profiles qualified in a segment will be represented as `Realized` and profiles disqualified will continue to be represented as `Exited`. This will bring parity with file-based destinations with `Active` and `Expired` segment statuses. 
+
+This change could impact you if you're using [enterprise destinations](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API) and have automated downstream processes in place, based on the `Existing` status. Please review your downstream integrations if this is the case for you. If you are interested in identifying newly qualified profiles beyond a certain time, please consider using a combination of the `Realized` status and the `lastQualificationTime` in your segment membership map. For more information, please reach out to your Adobe representative.
+
+{style="table-layout:auto"}
+
+To learn more about Real-Time Customer Profile, including tutorials and best practices for working with profile data, please begin by reading the [Real-Time Customer Profile overview](../../profile/home.md).
 
 ## Sources {#sources}
 
