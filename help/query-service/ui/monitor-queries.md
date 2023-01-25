@@ -116,15 +116,15 @@ You can copy the query SQL to your clipboard from this view. Select the copy ico
 
 Queries that use anonymous blocks to comprise their SQL statements are separated into their individual queries. This allows you to inspect the run details for each query block individually. 
 
-Anonymous blocks are denoted through the use of a `$$` prefix before the query. See the [anonymous block document](./best-practices/anonymous-block.md) to find out more about anonymous blocks in query service.
+Anonymous blocks are denoted through the use of a `$$` prefix before the query. See the [anonymous block document](../essential-concepts/anonymous-block.md) to find out more about anonymous blocks in query service.
 
 Anonymous block queries have tabs to the left of the run status. Select a tab to display the run details.
 
-![The Query run overview displaying an anonymous block query. The multiple query tabs are highlighted.](./images/monitor-queries/anonymous-block-overview.png)
+![The Query run overview displaying an anonymous block query. The multiple query tabs are highlighted.](../images/ui/monitor-queries/anonymous-block-overview.png)
 
 In the event an anonymous block query fails, you can find the error code for that particular block through this UI.
 
-![The Query run overview displaying an anonymous block query with the error code for a single block highlighted.](./images/monitor-queries/anonymous-block-failed-query.png)
+![The Query run overview displaying an anonymous block query with the error code for a single block highlighted.](../images/ui/monitor-queries/anonymous-block-failed-query.png)
 
 Select **[!UICONTROL Query]** to return to the schedule details screen, or **[!UICONTROL Scheduled Queries]** to return to the [!UICONTROL Scheduled Queries] tab.
 
