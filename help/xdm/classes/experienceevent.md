@@ -19,7 +19,7 @@ The [!DNL XDM ExperienceEvent] class itself provides several time-series-related
 | --- | --- |
 | `_id`<br>**(Required)** | A unique string identifier for the event. This field is used to track the uniqueness of an individual event, prevent duplication of data, and look up that event in downstream services. In some cases, `_id` can be a [Universally Unique Identifier (UUID)](https://tools.ietf.org/html/rfc4122) or [Globally Unique Identifier (GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>If you are streaming data from a source connection or ingesting directly from a Parquet file, you should generate this value by concatenating a certain combination of fields that make the event unique, such as a primary ID, timestamp, event type, and so on. The concatenated value must be a `uri-reference` formatted string, meaning any colon characters must be removed. Afterwards, the concatenated value should be hashed using SHA-256 or another algorithm of your choice.<br><br>It is important to distinguish that **this field does not represent an identity related to an individual person**, but rather the record of data itself. Identity data relating to a person should be relegated to [identity fields](../schema/composition.md#identity) provided by compatible field groups instead. |
 | `eventMergeId` | If using the [Adobe Experience Platform Web SDK](../../edge/home.md) to ingest data, this represents the ID of the ingested batch that caused the record to be created. This field is automatically populated by the system upon data ingestion. The use of this field outside of the context of a Web SDK implementation is not supported. |
-| `eventType` | A string that indicates the type or category for the event. This field can be used if you want to distinguish different event types within the same schema and dataset, such as distinguishing a product view event from an add-to-shopping-cart event for a retail company.<br><br>Standard values for this property are provided in the [appendix section](#eventType), including descriptions of their intended use case. This field is an extensible enum, meaning that you can also use your own event type strings to categorize the events you are tracking.<br><br>`eventType` limits you to using only a single event per hit on your application, and therefore you must use calculated fields to let the system know which event is most important. For more information, see the section on [best practices for calculated fields](#calculated). |
+| `eventType` | A string that indicates the type or category for the event. This field can be used if you want to distinguish different event types within the same schema and dataset, such as distinguishing a product view event from an add-to-shopping-cart event for a retail company.<br><br>Standard values for this property are provided in the [appendix section](#eventType), including descriptions of their intended use case. This field is an extensible enum, meaning that you can also use your own event type strings to categorize the events you are tracking. You can also [disable any of the standard suggested values](../ui/fields/enum.md#standard-fields) for this field if they do not suit your use cases.<br><br>`eventType` limits you to using only a single event per hit on your application, and therefore you must use calculated fields to let the system know which event is most important. For more information, see the section on [best practices for calculated fields](#calculated). |
 | `producedBy` | A string value that describes the producer or origin of the event. This field can be used to filter out certain event producers if needed for segmentation purposes.<br><br>Some suggested values for this property are provided in the [appendix section](#producedBy). This field is an extensible enum, meaning that you can also use your own strings to represent different event producers. |
 | `identityMap` | A map field that contains a set of namespaced identities for the individual that the event applies to. This field is automatically updated by the system as identity data is ingested. In order to properly utilize this field for [Real-Time Customer Profile](../../profile/home.md), do not attempt to manually update the field's contents in your data operations.<br /><br />See the section on identity maps in the [basics of schema composition](../schema/composition.md#identityMap) for more information on their use case. |
 | `timestamp`<br>**(Required)** | An ISO 8601 timestamp of when the event occurred, formatted as per [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). This timestamp must occur in the past. See the section below on [timestamps](#timestamps) for best practices on the use of this field. |
@@ -80,9 +80,9 @@ Adobe provides several standard field groups for use with the [!DNL XDM Experien
 
 The following section contains additional information about the [!UICONTROL XDM ExperienceEvent] class.
 
-### Accepted values for `eventType` {#eventType}
+### Suggested values for `eventType` {#eventType}
 
-The following table outlines the accepted values for `eventType`, along with their definitions:
+The following table outlines the standard suggested values for `eventType`, along with their definitions:
 
 | Value | Definition |
 | --- | --- |
@@ -142,7 +142,7 @@ The following table outlines the accepted values for `eventType`, along with the
 
 ### Suggested values for `producedBy` {#producedBy}
 
-The following table outlines some accepted values for `producedBy`:
+The following table outlines the standard suggested values for `producedBy`:
 
 | Value | Definition |
 | --- | --- |
