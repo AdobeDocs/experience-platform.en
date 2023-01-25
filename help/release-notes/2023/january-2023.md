@@ -18,8 +18,8 @@ Updates to existing features in Adobe Experience Platform:
 
 | Destination | Description |
 | ----------- | ----------- |
-| [(Beta) Adobe Experience Cloud Audiences connection](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Use the [!UICONTROL (Beta) Adobe Experience Cloud Audiences] connection to share segments from Experience Platform to various Experience Platform solutions, like Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target, or Marketo.. |
-| [Pega Profile connection](../../destinations/catalog/personalization/pega-profile.md) | Use the [!DNL Pega Profile Connector] in Adobe Experience Platform to create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export profile data to CSV files from Adobe Experience Platform into your own S3 buckets. In [!DNL Pega Customer Decision Hub], you can schedule data jobs to import this profile data from S3 storage to update the [!DNL Pega Customer Decision Hub] profile. |
+| [(Beta) Adobe Experience Cloud Audiences connection](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Use the [!UICONTROL (Beta) Adobe Experience Cloud Audiences] connection to share segments from Experience Platform to various Experience Platform solutions, like Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target, or Marketo. |
+| [Pega Profile connection](../../destinations/catalog/personalization/pega-profile.md) | Use the [!DNL Pega Profile Connector] in Adobe Experience Platform to create a live outbound connection to your [!DNL Amazon] S3 storage to periodically export profile data to CSV files from Adobe Experience Platform into your own S3 buckets. In [!DNL Pega Customer Decision Hub], you can schedule data jobs to import this profile data from S3 storage to update the [!DNL Pega Customer Decision Hub] profile. |
 | [(Beta) The Trade Desk CRM EU connection](../../destinations/catalog/advertising/tradedesk-emails.md) | With the release of EUID (European Unified ID), you are now seeing two [!DNL The Trade Desk - CRM] destinations in the [destinations catalog](/help/destinations/catalog/overview.md). <ul><li> If you source data in the EU, please use the **[!DNL The Trade Desk - CRM (EU)]** destination.</li><li> If you source data in the APAC or NAMER regions, please use the **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destination. </li></ul> |
 
 **New or updated functionality**
@@ -31,9 +31,28 @@ Updates to existing features in Adobe Experience Platform:
 
 **Fixes and enhancements**
 
+<!--
+
 | Fix or enhancement | Description |
 | ----------- | ----------- |
 | UI and API validation for required mappings and duplicate mappings (PLAT-123316) | Validation is now enforced as follows in the UI and API when [mapping fields](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in the activate destinations workflow:<ul><li>**Required mappings**: If the destination has been set up by the destination developer with required mappings (for example, the [Google Ad Manager 360](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#activate) destination), then these required mappings need to be added by the user when activating data to the destination. </li><li>**Duplicate mappings**: expand on allowed and forbidden source-to-target mappings.</li></ul> |
 | Updated profile export behavior to cloud storage destinations (PLAT-123316) | We fixed an issue in the behavior of [mandatory attributes](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) when exporting data files to batch destinations. <br> Previously, every record in the output files was verified to contain both: <ol><li>A non-null value of the `mandatoryField` column and</li><li>also contain a non-null value on at least one of the other non-mandatory fields.</li></ol> The second condition has been removed. As a result, you might be seeing more output rows in your exported data files. |
+
+-->
+
+<table>
+    <tr>
+        <td><b>Fix or enhancement</b></td>
+        <td><b>Description</b></td>
+    </tr>
+    <tr>
+        <td>UI and API validation for required mappings and duplicate mappings (PLAT-123316)</td>
+        <td>Validation is now enforced as follows in the UI and API when <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">mapping fields</a> in the activate destinations workflow:<ul><li><b>Required mappings</b>: If the destination has been set up by the destination developer with required mappings (for example, the <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> destination), then these required mappings need to be added by the user when activating data to the destination. </li><li><b>Duplicate mappings</b>: expand on allowed and forbidden source-to-target mappings.</li></ul></td>
+    </tr>
+    <tr>
+        <td>Updated export behavior to file-based destinations (PLAT-123316)</td>
+        <td>We fixed an issue in the behavior of <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">mandatory attributes</a> when exporting data files to batch destinations. <br> Previously, every record in the output files was verified to contain both: <ol><li>A non-null value of the <code>mandatoryField</code> column and</li><li>A non-null value on at least one of the other non-mandatory fields.</li></ol> The second condition has been removed. As a result, you might be seeing more output rows in your exported data files, as shown in the example below:<br> <b> Sample behavior before January 2023 release </b> <br> Mandatory field: <code>emailAddress</code> <br> <b>Input data to activate</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>Activation output</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> Sample behavior after January 2023 release </b> <br> <b>Activation output</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
+    </tr>
+</table>
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
