@@ -94,6 +94,8 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 | Platform-generated segment membership expiration | Any segment membership that is in the `Exited` state for more than 30 days, based on the `lastQualificationTime` field will be subject to deletion. |
 | External audience membership expiration | By default, external audience memberships are retained for 30 days. To retain them for longer, use the `validUntil` field during the ingestion of audience data. |
 
+{style="table-layout:auto"}
+
 **Upcoming deprecation** {#deprecation}
 
 In order to remove redundancy in the segment membership lifecycle, the `Existing` status will be deprecated from the [segment membership map](../../xdm/field-groups/profile/segmentation.md) at the end of March 2023. A follow-up announcement will include the exact deprecation date. 
@@ -101,8 +103,6 @@ In order to remove redundancy in the segment membership lifecycle, the `Existing
 Post deprecation, profiles qualified in a segment will be represented as `Realized` and profiles disqualified will continue to be represented as `Exited`. This will bring parity with file-based destinations with `Active` and `Expired` segment statuses. 
 
 This change could impact you if you're using [enterprise destinations](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API) and have automated downstream processes in place, based on the `Existing` status. Please review your downstream integrations if this is the case for you. If you are interested in identifying newly qualified profiles beyond a certain time, please consider using a combination of the `Realized` status and the `lastQualificationTime` in your segment membership map. For more information, please reach out to your Adobe representative.
-
-{style="table-layout:auto"}
 
 To learn more about Real-Time Customer Profile, including tutorials and best practices for working with profile data, please begin by reading the [Real-Time Customer Profile overview](../../profile/home.md).
 
