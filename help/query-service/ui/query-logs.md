@@ -52,4 +52,4 @@ By reading this document, you now have a better understanding of how query logs 
 
 See the [UI overview](./overview.md), or the [Query Service API guide](../api/getting-started.md) to learn more about Query Service capabilities.
 
-See the [monitor queries document](../monitor-queries.md) to learn how Query Service improves the visibility of scheduled query runs.
+See the [monitor queries document](./monitor-queries.md) to learn how Query Service improves the visibility of scheduled query runs.
