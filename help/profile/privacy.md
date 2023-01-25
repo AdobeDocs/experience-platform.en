@@ -105,9 +105,9 @@ curl -X POST \
 >
 >Platform processes privacy requests across all [sandboxes](../sandboxes/home.md) belonging to your organization. As a result, any `x-sandbox-name` header included in the request is ignored by the system.
 
-**Response**
+**Product response**
 
-The privacy job response is returned in JSON format with information regarding the user IDs requested.
+For Profile Service, once the privacy job has been completed, a response is returned in JSON format with information regarding the user IDs requested.
 
 ```json
 {
