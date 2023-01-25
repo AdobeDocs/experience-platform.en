@@ -23,7 +23,7 @@ You can configure various file formatting options for exported files by using th
 
 ## File formatting configuration {#file-configuration}
 
-To display the file formatting options, start the [connect to destination](/help/destinations/ui/connect-destination.md) workflow and select segments as **File type**. This section describes the file formatting settings available for the exported `CSV` files. 
+To display the file formatting options, start the [connect to destination](/help/destinations/ui/connect-destination.md) workflow. Select **Data type: Segments** and **File type: CSV** to display the file formatting settings available for the exported `CSV` files. 
 
 >[!IMPORTANT]
 >
