@@ -159,8 +159,8 @@ Your Experience Platform segments appear in Audience Manager as [signals](https:
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
 
-Data governance is enforced by both labels and marketing actions.
-DULE labels will transfer to applications but not marketing actions
+Data governance in Experience Platform is enforced by both [data usage labels](/help/data-governance/labels/reference.md) and marketing actions.
+Data usage labels will transfer to applications but marketing actions will not. This means that once they land in Audience Manager, segments from Experience Platform can be exported to any available destinations. In Audience Manager, you can use [data export controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=en) to block segments from being exported to certain destinations.
 
 ### Permissions management in Audience Manager
 
@@ -168,4 +168,4 @@ Segments and traits in Audience Manager are subject to [Role-Based Access Contro
 
 Segments exported from Experience Platform are assigned to a specific datasource in Audience Manager called **[!UICONTROL Experience Platform Segments]**.
 
-You can apply access controls to the segments belonging to the datasource. You must set new access control permissions in Audience Manager for these segments and traits created from Experience Platform segments.
+To allow only certain users access to the segments, you can apply access controls to the segments belonging to the datasource. You must set new access control permissions in Audience Manager for these segments and traits created from Experience Platform segments.
