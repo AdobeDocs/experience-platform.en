@@ -14,7 +14,8 @@ feature: Queries
 - Get started {#get-started}
     - [Prerequisites](get-started/prerequisites.md)
 - Data Distiller {#data-distiller}
-    - [Licence usage](data-distiller/licence-usage.md)
+    - [Overview](data-distiller/overview.md)
+    - [License usage](data-distiller/license-usage.md)
     - Query accelerated store {#query-accelerated-store}
         - [Send accelerated queries](data-distiller/query-accelerated-store/send-accelerated-queries.md)
         - [Reporting insights data model guide](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
@@ -52,6 +53,7 @@ feature: Queries
     - [Query Editor user guide](ui/user-guide.md)
     - [Query templates](ui/query-templates.md)
     - [Query schedules](ui/query-schedules.md)
+    - [Query logs](ui/query-logs.md)
     - [Monitor scheduled queries](ui/monitor-queries.md)
     - [Credentials guide](ui/credentials.md)
     - [Generate output datasets from query results](ui/create-datasets.md)
