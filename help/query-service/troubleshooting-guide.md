@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;troubleshooting guide;faq;troubleshooting;
 solution: Experience Platform
-title: Query Service Troubleshooting Guide
+title: Frequently Asked Questions
 description: This document contains common questions and answers related to Query Service. Topics include, exporting data, third-party tools, and PSQL errors.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
-# [!DNL Query Service] troubleshooting guide
+# Frequently asked questions
 
 This document provides answers to frequently asked questions about Query Service and provides a list of commonly seen error codes when using Query Service. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
@@ -110,7 +110,7 @@ The following steps describe how to display a tabular view of a dataset through 
 
 ![The XDM schema and tabular view of the flattened data. The column name of a nested dataset is highlighted in the UI.](./images/troubleshooting/column-name.png)
 
-See the documentation for full guidance on [how to work with nested data structures](./best-practices/nested-data-structures.md) using the Query Editor or a third-party client.
+See the documentation for full guidance on [how to work with nested data structures](./essential-concepts/nested-data-structures.md) using the Query Editor or a third-party client.
 +++
 
 ### How do I speed up a query on a dataset that contains arrays?
@@ -150,7 +150,7 @@ A dropdown banner appears containing a [!UICONTROL Help and support] section. Se
 +++Answer
 The anonymous block feature allows you to chain one or more SQL statements that are executed in sequence. They also allow for the option of exception-handling.
 
-See the [anonymous block documentation](./best-practices/anonymous-block.md) for more details.
+See the [anonymous block documentation](./essential-concepts/anonymous-block.md) for more details.
 +++
 
 ### How do I implement custom attribution in Query Service?
@@ -239,7 +239,7 @@ AS SELECT '1' as _id,
 ### How do I quickly process the new data coming into the system every day?
 
 +++Answer
-The [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) clause can be used to incrementally read data on a table based on a snapshot ID. This is ideal for use with the [incremental load](./best-practices/incremental-load.md) design pattern that only processes information in the dataset that has been created or modified since the last load execution. As a result, it increases processing efficiency and can be used with both streaming and batch data processing.
+The [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) clause can be used to incrementally read data on a table based on a snapshot ID. This is ideal for use with the [incremental load](./essential-concepts/incremental-load.md) design pattern that only processes information in the dataset that has been created or modified since the last load execution. As a result, it increases processing efficiency and can be used with both streaming and batch data processing.
 +++
 
 ### Why is there a difference between the numbers shown in Profile UI and the numbers calculated from the profile export dataset? 
