@@ -5,13 +5,24 @@ title: Historical profile qualifications
 
 # Historical profile qualifications
 
-The `backfillHistoricalProfileData` parameter in the destinations configuration determines if historical profile qualifications should be exported to your destination.
+All destinations created through Destination SDK support historical profile qualifications by default. This means that profile qualifications are automatically exported to your destination.
 
-```json
-   "backfillHistoricalProfileData":true
-```
+This behavior is defined by the `"backfillHistoricalProfileData":true` parameter in the destination configuration.
 
-This parameter is currently always enabled and cannot be set to `false`.
+>[!IMPORTANT]
+>
+>Historical profile qualifications are enabled for all destinations created through Destination SDK and the `backfillHistoricalProfileData` parameter is not user configurable.
+
+## Supported integration types {#supported-integration-types}
+
+Refer to the table below for details on what type of destinations support the functionality described in this page.
+
+|Integration type| Supports functionality |
+|---|---|
+| Real-time (streaming) integrations | :white_check_mark:  |
+| File-based (batch) integrations | :white_check_mark: |
+
+
 
 <!-- 
 |Parameter | Type | Description|

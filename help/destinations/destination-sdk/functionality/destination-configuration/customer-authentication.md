@@ -9,6 +9,15 @@ The customer authentication configuration section in the destinations configurat
 
 Depending on which authentication option you indicate in the `authType` field, the Experience Platform page is generated for the users as shown below.
 
+## Supported integration types {#supported-integration-types}
+
+Refer to the table below for details on what type of destinations support the functionality described in this page.
+
+|Integration type| Supports functionality |
+|---|---|
+| Real-time (streaming) integrations | :white_check_mark: |
+| File-based (batch) integrations | :white_check_mark: |
+
 ## Bearer authentication
 
 When you configure the bearer authentication type, users are required to input the bearer token that they obtain from your destination.

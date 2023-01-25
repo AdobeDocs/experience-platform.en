@@ -7,6 +7,17 @@ title: File formatting configuration
 
 File formatting settings are part of the destination server configuration for file-based destinations. This article describes the file formatting settings for `CSV` files that you export to file-based destinations built with Destination SDK.
 
+## Supported integration types {#supported-integration-types}
+
+Refer to the table below for details on what type of destinations support the functionality described in this page.
+
+|Integration type| Supports functionality |
+|---|---|
+| Real-time (streaming) integrations | :x: |
+| File-based (batch) integrations | :white_check_mark: |
+
+## Supported parameters {#supported-parameters}
+
 You can modify several properties of the exported files to match the requirements of the file reception system on your side, in order to optimally read and interpret the files received from Experience Platform.
 
 >[!NOTE]

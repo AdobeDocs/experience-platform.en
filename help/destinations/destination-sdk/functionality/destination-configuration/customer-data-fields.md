@@ -7,6 +7,17 @@ title: Customer data fields
 
 Customer data fields define the custom fields that customers need to fill in, specific to your destination, when connecting to the destination in the Experience Platform UI.
 
+## Supported integration types {#supported-integration-types}
+
+Refer to the table below for details on what type of destinations support the functionality described in this page.
+
+|Integration type| Supports functionality |
+|---|---|
+| Real-time (streaming) integrations | :white_check_mark: |
+| File-based (batch) integrations | :white_check_mark: |
+
+## Supported parameters {#supported-parameters}
+
 In the example below, `customerDataFields` requires users to enter a name for their destination and provide an [!DNL Amazon S3] bucket name and folder path, as well as a compression type, file format, and several other file formatting options.
 
 You can access and use the customer inputs from customer data fields in templating. Use the macro `{{customerData.exampleName}}`. For example, if you ask users to input an Amazon S3 bucket field, with the name `bucket`, you can access it in templating by using the macro `{{customerData.bucket}}`.
@@ -213,3 +224,4 @@ You can access and use the customer inputs from customer data fields in templati
 |`default`|String|Defines the default value from an `enum` list.|
 
 {style="table-layout:auto"}
+

@@ -7,6 +7,16 @@ title: Audience metadata configuration
 
 This section of the destination configuration relates to how segment metadata like segment names or IDs should be shared between Experience Platform and your destination.
 
+## Supported integration types {#supported-integration-types}
+
+Refer to the table below for details on what type of destinations support the functionality described in this page.
+
+|Integration type| Supports functionality |
+|---|---|
+| Real-time (streaming) integrations | :white_check_mark: |
+| File-based (batch) integrations | :white_check_mark: |
+
+
 Through the `audienceTemplateId`, this section also ties together this configuration with the [audience metadata configuration](../audience-metadata-management.md).
 
 ```json

@@ -7,6 +7,17 @@ title: Batch configuration
 
 Batch configuration refers to the file naming and export scheduling settings that will be displayed for your destination in the Adobe Experience Platform user interface.
 
+## Supported integration types {#supported-integration-types}
+
+Refer to the table below for details on what type of destinations support the functionality described in this page.
+
+|Integration type| Supports functionality |
+|---|---|
+| Real-time (streaming) integrations | :x: |
+| File-based (batch) integrations | :white_check_mark: |
+
+## Supported parameters {#supported-parameters}
+
 The values that you set up here are surfaced in the [Schedule segment export](../../../ui/activate-batch-profile-destinations.md#scheduling) step of the file-based destinations activation workflow. 
 
 ```json

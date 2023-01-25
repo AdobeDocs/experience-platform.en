@@ -58,4 +58,11 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ## Next steps {#next-steps}
 
-After reading this document, you now know how to delete a destination server configuration using the `/authoring/destination-servers` API endpoint. Read [how to use Destination SDK to configure your destination](../../guides/configure-destination-instructions.md) to understand where this step fits into the process of configuring your destination.
+After reading this document, you now know how to delete an existing destination server through the Destination SDK `/authoring/destination-servers` API endpoint.
+
+To learn more about what you can do with this endpoint, see the following articles:
+
+* [Create a destination server configuration](create-destination-server.md)
+* [Retrieve a destination server configuration](retrieve-destination-server.md)
+* [Update a destination server configuration](update-destination-server.md)
+

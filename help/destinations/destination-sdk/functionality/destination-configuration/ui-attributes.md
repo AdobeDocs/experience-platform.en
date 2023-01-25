@@ -7,6 +7,19 @@ title: UI attributes
 
 UI attributes define the visual elements that Adobe should display for your destination card in the Adobe Experience Platform user interface.
 
+
+## Supported integration types {#supported-integration-types}
+
+Refer to the table below for details on what type of destinations support the functionality described in this page.
+
+|Integration type| Supports functionality |
+|---|---|
+| Real-time (streaming) integrations | :white_check_mark: |
+| File-based (batch) integrations | :white_check_mark: |
+
+## Supported parameters {#supported-parameters}
+
+
 ```json
 "uiAttributes":{
       "documentationLink":"http://www.adobe.com/go/YOURDESTINATION-en",

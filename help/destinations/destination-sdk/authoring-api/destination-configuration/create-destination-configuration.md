@@ -236,4 +236,15 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ## Next steps
 
-After reading this document, you now know how to configure your destination using the `/authoring/destinations` API endpoint. Read [how to use Destination SDK to configure your destination](../../guides/configure-destination-instructions.md) to understand where this step fits into the process of configuring your destination.
+After reading this document, you now know how to create a new destination configuration through the Destination SDK `/authoring/destinations` API endpoint.
+
+To learn more about what you can do with this endpoint, see the following articles:
+
+* [Retrieve a destination configuration](retrieve-destination-configuration.md)
+* [Update a destination configuration](update-destination-configuration.md)
+* [Delete a destination configuration](delete-destination-configuration.md)
+
+To understand where this endpoint fits into the destination authoring process, see the following articles:
+
+* [Use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration)
+* [Use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)

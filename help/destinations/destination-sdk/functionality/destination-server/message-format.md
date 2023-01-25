@@ -14,6 +14,15 @@ To understand the message format and profile configuration and transformation pr
 * **IdentityMap**. The identity map represents a map of all end-user identities in Adobe Experience Platform. Refer to `xdm:identityMap` in the [XDM field dictionary](../../../../xdm/schema/field-dictionary.md).
 * **SegmentMembership**. The [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM attribute informs which segments a profile is a member of. For the three different values in the `status` field, read the documentation on [Segment Membership Details schema field group](../../../../xdm/field-groups/profile/segmentation.md).
 
+## Supported integration types {#supported-integration-types}
+
+Refer to the table below for details on what type of destinations support the functionality described in this page.
+
+|Integration type| Supports functionality |
+|---|---|
+| Real-time (streaming) integrations | :white_check_mark: |
+| File-based (batch) integrations | :white_check_mark: (only steps 1 and 2 in the diagram further below) |
+
 ## Overview {#overview}
 
 Use the content on this page together with the rest of the [configuration options for partner destinations](../configuration-options.md). This page addresses the message format and the profile transformation in data exported from Adobe Experience Platform to destinations. The other page addresses specifics about connecting and authenticating to your destination.

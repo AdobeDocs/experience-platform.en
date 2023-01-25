@@ -9,6 +9,15 @@ Use Destination SDK to allow Adobe Experience Platform to connect to your destin
 
 This page describes the various OAuth 2 authentication flows supported by Destination SDK, and provides instructions to set up OAuth 2 authentication for your destination.
 
+## Supported integration types {#supported-integration-types}
+
+Refer to the table below for details on what type of destinations support the functionality described in this page.
+
+|Integration type| Supports functionality |
+|---|---|
+| Real-time (streaming) integrations | :white_check_mark: |
+| File-based (batch) integrations | :x: |
+
 ## How to add OAuth 2 authentication details to your destination configuration {#how-to-setup}
 
 ### Prerequisites in your system {#prerequisites}

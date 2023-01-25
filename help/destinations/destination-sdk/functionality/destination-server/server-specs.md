@@ -9,6 +9,15 @@ When creating a new destination, you can configure the destination server specs 
 
 Destination SDK supports multiple destination server types. When [creating a new destination server](../../authoring-api/destination-server/create-destination-server.md), use one of the server type configurations described below, depending on your integration requirements.
 
+## Supported integration types {#supported-integration-types}
+
+Refer to the table below for details on what type of destinations support the functionality described in this page.
+
+|Integration type| Supports functionality |
+|---|---|
+| Real-time (streaming) integrations | :white_check_mark: |
+| File-based (batch) integrations | :white_check_mark: |
+
 ## URL-based destination server {#url-destination-server}
 
 URL-based destination servers allow you to activate data from Adobe Experience Platform to your destination via HTTP exports. The server configuration contains information about the server receiving the messages (the server on your side).
