@@ -28,7 +28,7 @@ GET /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
 
 **Request**
 
-The following request retrieves the `e77fde5a-22a8-11ed-861d-0242ac120002` connection specification.
+The following request retrieves the `e77fde5a-22a8-11ed-861d-0242ac120002` flow specification.
 
 ```shell
 curl -X GET \

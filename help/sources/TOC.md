@@ -320,6 +320,7 @@ feature: Sources
   - Streaming SDK {#streaming-sdk}
     - [Get started with Self-Serve Sources (Streaming SDK)](sources-sdk/streaming/getting-started.md)
     - [Create a connection specification for a streaming source](sources-sdk/streaming/create.md)
+    - [Update a connection specification for a streaming source](sources-sdk/streaming/update-connection-specs.md)
     - [Update the streaming flow specification](sources-sdk/streaming/update-flow-specs.md)
     - [Test and submit your connection specification for verification](sources-sdk/streaming/submit.md)
     - [Document your source (Streaming SDK)](sources-sdk/streaming/document-streaming.md)

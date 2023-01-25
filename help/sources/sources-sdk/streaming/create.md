@@ -60,79 +60,76 @@ Once you have gathered the required artifacts, copy and paste the connection spe
   "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
   "version": "1.0",
   "attributes": {
-        "category": "Streaming",
-        "isSource": true,
-        "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
-        "uiAttributes": {
-          "apiFeatures": {
-            "updateSupported": false
-          }
-        }
-      },
-      "authSpec": [],
-      "name": "generic-streaming",
-      "permissionsInfo": {
-        "view": [
-          {
-            "name": "StreamingSource",
-            "@type": "lowLevel",
-            "permissions": [
-              "read"
-            ]
-          }
-        ],
-        "manage": [
-          {
-            "name": "StreamingSource",
-            "@type": "lowLevel",
-            "permissions": [
-              "write"
-            ]
-          }
+    "category": "Streaming",
+    "isSource": true,
+    "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+    "uiAttributes": {
+      "apiFeatures": {
+        "updateSupported": false
+      }
+    }
+  },
+  "authSpec": [
+
+  ],
+  "permissionsInfo": {
+    "view": [
+      {
+        "name": "StreamingSource",
+        "@type": "lowLevel",
+        "permissions": [
+          "read"
         ]
-      },
-      "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
-      "sourceSpec": {
-        "attributes": {
-          "uiAttributes": {
-            "documentationLink": "http://www.adobe.com/go/understanding-data-streaming-ingestion-en",
-            "isSource": true,
-            "monitoringSupported": false,
-            "category": {
-              "key": "streaming"
-            },
-            "icon": {
-              "key": "Generic-Streaming"
-            },
-            "description": {
-              "text": "Generic Streaming Connector"
-            },
-            "label": {
-              "text": "Generic"
-            },
-            "frequency": {
-              "text": "streaming"
-            }
-          }
-        }
-      },
-      "exploreSpec": {
-        "type": "StreamingConnection"
+      }
+    ],
+    "manage": [
+      {
+        "name": "StreamingSource",
+        "@type": "lowLevel",
+        "permissions": [
+          "write"
+        ]
+      }
+    ]
+  },
+  "sourceSpec": {
+    "attributes": {
+      "uiAttributes": {
+        "documentationLink": "http://www.adobe.com/go/understanding-data-streaming-ingestion-en",
+        "isSource": true,
+        "monitoringSupported": false,
+        "category": {
+          "key": "streaming"
         },
-      "type": "generic-streaming",
-      "version": "1.0"
-    }'
+        "icon": {
+          "key": "Generic-Streaming"
+        },
+        "description": {
+          "text": "Generic Streaming Connector"
+        },
+        "label": {
+          "text": "Generic"
+        },
+        "frequency": {
+          "text": "streaming"
+        }
+      }
+    }
+  },
+  "exploreSpec": {
+    "type": "StreamingConnection"
+  }
+}
 ```
 
 ## Create a connection specification {#create}
 
 Once you have acquired the connection specification template, you can now start authoring a new connection specification by filling in the appropriate values that corresponds to your source. 
 
-A connection specification can be divided into three distinct parts: the authentication specifications, the source specifications, and the explore specifications. 
+A connection specification can be divided into two distinct parts: the source specifications and the explore specifications. 
 
 See the following documents for more information on the sections of a connection specification:
 
-* [Configure your authentication specification](../config/authspec.md)
 * [Configure your source specification](../config/sourcespec.md)
 * [Configure your explore specification](../config/explorespec.md)
 
@@ -157,6 +154,10 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
+      "name": "generic-streaming",
+      "type": "generic-streaming",
+      "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
+      "version": "1.0",
       "attributes": {
           "category": "Streaming",
           "isSource": true,
