@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;alert;
-title: Alert Subscriptions API Endpoint
+title: Alert Subscriptions Endpoint
 description: This guide provides sample HTTP requests and responses for the various API calls you can make to the alert subscriptions endpoint with the Query Service API.
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
 ---
-# Alert Subscriptions API Endpoint
+# Alert Subscriptions endpoint
 
-Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries. Alerts can be received by email, within the Platform UI, or both. The notification content is the same for in-Platform alerts and email alerts. Currently, query alerts can only be subscribed to using the [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/).
+Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries. Alerts can be received by email, within the Platform UI, or both. The notification content is the same for in-Platform alerts and email alerts. Currently, query alerts can only be subscribed to by using the [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/).
 
 >[!IMPORTANT]
 >
