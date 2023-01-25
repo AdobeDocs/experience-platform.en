@@ -14,7 +14,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-* Added support for AJO surfaces and propositions (Beta feature.)
+* (Beta) Added support for AJO surfaces and propositions.
 
 **Fixes and improvements**
 
@@ -22,7 +22,6 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 * Fixed an issue where in some edge cases the "referer" header was not set properly on requests to the Edge Network.
 * Fixed an issue where [user agent client hint](fundamentals/user-agent-client-hints.md) properties could be set to an incorrect type.
 * Fixed an issue where `placeContext.localTime` did not match the schema.
-
 
 ## Version 2.13.1 - October 13, 2022
 
