@@ -1,7 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes
-description: The latest release notes for Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+title: Adobe Experience Platform Release Notes January 2023
+description: The January 2023 release notes for Adobe Experience Platform.
 ---
 # Adobe Experience Platform release notes 
 
