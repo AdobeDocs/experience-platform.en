@@ -251,3 +251,7 @@ A sample of the external audience membership payload can be seen below:
 | `xdmEntity._id` | A suitable ID that is used to uniquely identify the record within the dataset. |
 | `{TENANT_NAME}.identities` | This section is used to connect the custom identities' field group with the users you previously imported. |
 | `segmentMembership.{IDENTITY_NAMESPACE}` | This is the label of the previously created custom identity namespace. So, for example, if you called your identity namespace "externalAudience", you would use that as the key of the array. |
+
+>[!NOTE]
+>
+>By default, external audience memberships are only retained for 30 days. To retain them for longer than 30 days, please use the `validUntil` field while ingesting your audience data. For more information on this field, please read the guide on [Segment Membership Details schema field groups](../../xdm/field-groups/profile/segmentation.md).
