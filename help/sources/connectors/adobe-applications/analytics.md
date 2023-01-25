@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;Analytics Source Connector;analytics;Analytics;AAID;
 title: Adobe Analytics Source Connector for Report-Suite Data
 description: This document provides an overview of Analytics and describes the use-cases for Analytics data.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
@@ -29,6 +28,10 @@ Adhering to XDM standards allows data to be uniformly incorporated, making it ea
 To learn more about XDM, please see the [XDM System overview](../../../xdm/home.md).
 
 ## How are fields mapped from Adobe Analytics to XDM?
+
+>[!IMPORTANT]
+>
+>Data Prep transformations may add latency to the overall dataflow. The additional latency added varies based on the complexity of the transformation logic. 
 
 When a source connection is established for bringing [!DNL Analytics] data into Experience Platform using the Platform user interface, data fields are automatically mapped and ingested into [!DNL Real-Time Customer Profile] within minutes. For instructions on creating a source connection with [!DNL Analytics] using the Platform UI, see the [Analytics source connector tutorial](../../tutorials/ui/create/adobe-applications/analytics.md).
 
@@ -71,10 +74,10 @@ The [!DNL Analytics] source passes these identities to Experience Platform in XD
 * `endUserIDs._experience.mcid.id`
 * `endUserIDs._experience.aacustomid.id`
 
-These fields are not marked as identities. Instead, the same identities are copied into XDM’s `identityMap` as key-value pairs:
+These fields are not marked as identities. Instead, the same identities are copied into XDM's `identityMap` as key-value pairs:
 
-* `{ “key”: “AAID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
-* `{ “key”: “ECID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
-* `{ “key”: “AACUSTOMID”, “value”: [ { “id”: “<identity>”, “primary”: false } ] }`
+* `{ "key": "AAID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
+* `{ "key": "ECID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
+* `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
 
 In the identity map, if ECID is present, it is marked as the primary identity for the event. In this case, AAID may be based on ECID due to the [Identity Service grace period](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Otherwise, AAID is marked as the primary identity for the event. AACUSTOMID is never marked as the Primary ID for the event. However, if AACUSTOMID is present, then AAID is based on AACUSTOMID due to the Experience Cloud order of operations.
