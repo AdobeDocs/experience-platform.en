@@ -8,14 +8,13 @@ description: The January 2023 release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
-  - [Assurance {#assurance}](#assurance-assurance)
-  - [Data collection {#data-collection}](#data-collection-data-collection)
-  - [Destinations {#destinations}](#destinations-destinations)
-  - [Experience Data Model (XDM) {#xdm}](#experience-data-model-xdm-xdm)
-  - [Real-Time Customer Profile {#profile}](#real-time-customer-profile-profile)
-  - [Segmentation Service {#segmentation}](#segmentation-service-segmentation)
-  - [Sources {#sources}](#sources-sources)
+- [Assurance](#assurance)
+- [Data collection](#data-collection)
+- [[!DNL Destinations]](#destinations)
+- [Experience Data Model (XDM)](#xdm)
+- [Real-Time Customer Profile](#profile)
+- [Segmentation Service](#segmentation)
+- [Sources](#sources)
 
 ## Assurance {#assurance}
 
@@ -172,4 +171,3 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | --- | --- |
 | Allow user access to subfolders of cloud storage sources | You can now define access to a specific subfolder of your cloud storage source when creating a new account. Once created, users will only be able to access data from the permitted subfolder. This feature is available to the following cloud storage sources: [Azure Blob Storage](../../sources/connectors/cloud-storage/blob.md), [Google Cloud Storage](../../sources/connectors/cloud-storage/google-cloud-storage.md), [Google PubSub](../../sources/connectors/cloud-storage/google-pubsub.md), and [SFTP](../../sources/connectors/cloud-storage/sftp.md). |
 | Beta availability of [!DNL SugarCRM] | [!DNL SugarCRM] sources are now available in beta. Use the [!DNL SugarCRM Accounts & Contacts] and the [!DNL SugarCRM Events] sources to bring data from your [!DNL SugarCRM] account to Experience Platform. For more information, read the [[!DNL SugarCRM] overview](../../sources/connectors/crm/sugarcrm.md). |
->>>>>>> main
