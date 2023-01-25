@@ -95,7 +95,7 @@ You can optionally provide customer-facing labels for each value under a `meta:e
 
 >[!NOTE]
 >
->The `meta:enum` value does **not** declare an enumeration or drive any data validation on its own. In most cases, strings provided under `meta:enum` are also provided under `enum` to ensure that data is constrained. However, there are some use cases where `meta:enum` is provided without a corresponding `enum` array. See the tutorial on [defining suggested values](../tutorials/suggested-values.md) for more information.
+>The `meta:enum` value does **not** declare an enumeration or drive any data validation on its own. In most cases, strings provided under `meta:enum` are also provided under `enum` to ensure that data is constrained. However, there are some use cases where `meta:enum` is provided without a corresponding `enum` array. See the tutorial on [defining suggested values in the API](../tutorials/suggested-values.md) for more information.
 
 You can optionally provide a `default` property to indicate the default `enum` value that the field will use if no value is provided.
 
