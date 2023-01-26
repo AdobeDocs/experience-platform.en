@@ -53,6 +53,7 @@ feature: Queries
     - [Query Editor user guide](ui/user-guide.md)
     - [Query templates](ui/query-templates.md)
     - [Query schedules](ui/query-schedules.md)
+    - [Query logs](ui/query-logs.md)
     - [Monitor scheduled queries](ui/monitor-queries.md)
     - [Credentials guide](ui/credentials.md)
     - [Generate output datasets from query results](ui/create-datasets.md)
