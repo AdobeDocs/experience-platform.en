@@ -4,6 +4,10 @@ description: Query logs are automatically generated each time a query is execute
 ---
 # Query logs
 
+>[!IMPORTANT]
+>
+>Certain query logs features are currently in a limited release and not available to all customers. Your UI may appear slightly differently without an edit icon. Also, the process of selecting a query name may to navigate to the Query Editor instead of the [!UICONTROL Query log details] view.
+
 Adobe Experience Platform maintains a log of all query events that occur through both the API and the UI. This information is available in the Query Service UI from the [!UICONTROL Logs] tab.  
 
 The log files are generated automatically by any query event and contain information including the SQL used, the status of the query, how long it took, and last run time. You can use query log data as a powerful tool for troubleshooting inefficient or problem queries. More comprehensive log information is kept as part of the audit log feature and can be found in the [audit log documentation](../../landing/governance-privacy-security/audit-logs/overview.md).
@@ -33,6 +37,10 @@ Each row represents log data for a query run associated with a query template. S
 In the log details panel, you can select a new output dataset and see or copy the complete SQL query that was used in the run.
 
 ![The Queries Log workspace with a row selected and the output dataset and SQL query highlighted.](../images/ui/query-log/edit-output-dataset.png)
+
+>[!IMPORTANT]
+>
+>Certain query logs features are currently in a limited release and not available to all customers.
 
 You can also select a query template name from the [!UICONTROL Name] column to navigate directly to the [!UICONTROL Query log details] view.
 

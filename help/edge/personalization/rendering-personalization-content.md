@@ -6,11 +6,11 @@ exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
 ---
 # Render personalized content
 
-Adobe Experience Platform Web SDK supports retrieving personalized content from Adobe personalization solutions, including [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) and [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html).
+Adobe Experience Platform Web SDK supports retrieving personalized content from Adobe personalization solutions, including [Adobe Target](https://business.adobe.com/products/target/adobe-target.html), [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html) and [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html).
 
 Additionally, the Web SDK powers same-page and next-page personalization capabilies through Adobe Experience Platform personalization destinations, such as [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and the [custom personalization connection](../../destinations/catalog/personalization/custom-personalization.md). To learn how to configure Experience Platform for same-page and next-page personalization, see the [dedicated guide](../../destinations/ui/configure-personalization-destinations.md).
 
-Content created within Adobe Target's [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) can be retrieved and rendered automatically by the SDK. Content created within Adobe Target's [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) or Offer Decisioning cannot be rendered automatically by the SDK. Instead, you must request this content using the SDK and then manually render the content yourself.
+Content created within Adobe Target's [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) and Adobe Journey Optimizer's [Web Campaign UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) can be retrieved and rendered automatically by the SDK. Content created within Adobe Target's [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) or Offer Decisioning cannot be rendered automatically by the SDK. Instead, you must request this content using the SDK and then manually render the content yourself.
 
 ## Automatically rendering content
 
@@ -101,7 +101,7 @@ In the example, the `renderDecisions` option was not set to `true` when the `sen
 
 If you would have instead set the `renderDecisions` option to `true` when sending the event, the SDK would have attempted to render any propositions eligible for automatic rendering (as described previously). As a consequence, each of the proposition objects would have its `renderAttempted` property set to `true`. There would be no need to manually render these propositions in this case.
 
-So far, we've only discussed personalization content that is eligible for automatic rendering (that is, any content created in Adobe Target's Visual Experience Composer). To retrieve any personalization content _not_ eligible for automatic rendering, you need to request the content by populating the `decisionScopes` option when sending the event. A scope is a string that identifies a particular proposition you would like to retrieve from the server.
+So far, we've only discussed personalization content that is eligible for automatic rendering (that is, any content created in Adobe Target's Visual Experience Composer or Adobe Journey Optimizer's Web Campaign UI). To retrieve any personalization content _not_ eligible for automatic rendering, you need to request the content by populating the `decisionScopes` option when sending the event. A scope is a string that identifies a particular proposition you would like to retrieve from the server.
 
 Here is an example:
 
@@ -297,7 +297,7 @@ The `applyPropositions` command allows you to render or execute an array of prop
 
 >[!IMPORTANT]
 >
->If propositions for the `__view__` scope were rendered on page load, their `renderAttempted` flag will be set to `true`. The `applyPropositions` command will not re-render the `__view__` scope propositions that have the `renderAttempted: true` flag.
+>If propositions for the `__view__` scope (or a web surface) were rendered on page load, their `renderAttempted` flag will be set to `true`. The `applyPropositions` command will not re-render the `__view__` scope (or web surface) propositions that have the `renderAttempted: true` flag.
 
 ### Use case 1: Re-render single-page application view propositions
 
