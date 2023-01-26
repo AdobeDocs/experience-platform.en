@@ -10,6 +10,13 @@ The destinations catalog provides a list of available destination platforms that
 
 Browse the catalog to determine which destination platforms are best for your advertising and personalization use cases, then set up flows to activate your segments to destinations.
 
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
+
 ## Destination categories
 
 You can activate your data to different destination categories in Adobe Experience Platform. The links below provide more information on each destination category:
