@@ -20,7 +20,7 @@ Note that only a single identity from the [identity namespace](/help/identity-se
 
 ![An identity selected as mandatory attribute and deduplication key.](/help/destinations/assets/how-destinations-work/selected-identity.png)
 
-As a workaround, you can add more identities to the export if these are have been ingested into Experience Platform as attributes. See below an example where the XDM attribute email address was selected for export, in addition to the identity namespace `Phone_E.164`.
+As a workaround, you can add more identities to the export if these have been ingested into Experience Platform as attributes. See below an example where the XDM attribute email address was selected for export, in addition to the identity namespace `Phone_E.164`.
 
 ![Example of email address attribute selected for export.](/help/destinations/assets/how-destinations-work/email-selected.png)
 
@@ -85,7 +85,7 @@ When configuring a datastream as described in the documentation linked above, yo
 
 ## Enterprise destinations {#enterprise-destinations}
 
-[Advanced enterprise destinations](/help/destinations/destination-types.md#streaming-profile-export) ([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], HTTP API) do not require specific IDs in the data export, as these are designed for enterprise integration use cases. However, you can export identities as XDM attributes or from the identity map, if you wish. View an [example of exported data to the HTTP destination](/help/destinations/catalog/streaming/http-destination.md#exported-data), which includes both the `personalEmail.address` XDM attribute, and the identities `ECID` and `email_lc_sha256` (hashed email address) from the identity map.
+[Enterprise destinations](/help/destinations/destination-types.md#streaming-profile-export) ([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], HTTP API) do not require specific IDs in the data export, as these are designed for enterprise integration use cases. However, you can export identities as XDM attributes or from the identity map, if you wish. View an [example of exported data to the HTTP destination](/help/destinations/catalog/streaming/http-destination.md#exported-data), which includes both the `personalEmail.address` XDM attribute, and the identities `ECID` and `email_lc_sha256` (hashed email address) from the identity map.
 
 ## Personalization destinations {#personalization-destinations}
 

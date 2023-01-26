@@ -16,7 +16,7 @@ There are several destination types in Experience Platform, as shown in the diag
 
 Before diving into specific information per destination type, it is important to understand the concepts of microbatching and aggregation policy for *streaming destinations*.
 
-Experience Platform destinations export data to API-based integrations as HTTPS calls. Once the destinations service is notified by other upstream services that profiles have been updated as a result of batch ingestion, batch segmentation, streaming segmentation or identity graph changes, data is exported and sent to streaming destinations.
+Experience Platform destinations export data to API-based integrations as HTTPS calls. Once the destinations service is notified by other upstream services that profiles have been updated as a result of batch ingestion, streaming ingestion, batch segmentation, streaming segmentation or identity graph changes, data is exported and sent to streaming destinations.
 
 The process by which profiles are aggregated into HTTPS messages before being dispatched to destination API endpoints is called *microbatching*. 
 
@@ -41,13 +41,13 @@ The [enterprise destinations](/help/destinations/destination-types.md#streaming-
 
 Experience Platform optimizes the profile export behavior to your enterprise destination, to only export data to your API endpoint when relevant updates to a profile have occurred following segment qualification or other significant events. Profiles are exported to your destination in the following situations:
 
-* The profile update was determined by a change in segment membership for at least one of the segments mapped to the destination. For example, the profile has qualified for one of the segments mapped to the destination or has exited one of the segments mapped to the destination.
+* The profile update was determined by a change in [segment membership](/help/xdm/field-groups/profile/segmentation.md) for at least one of the segments mapped to the destination. For example, the profile has qualified for one of the segments mapped to the destination or has exited one of the segments mapped to the destination.
 * The profile update was determined by a change in the [identity map](/help/xdm/field-groups/profile/identitymap.md). For example, a profile who had already qualified for one of the segments mapped to the destination has been added a new identity in the identity map attribute.
 * The profile update was determined by a change in attributes for at least one of the attributes mapped to the destination. For example, one of the attributes mapped to the destination in the mapping step is added to a profile.
 
 In all the cases described above, only the profiles where relevant updates have occurred are exported to your destination. For example, if a segment mapped to the destination flow has a hundred members, and five new profiles qualify for the segment, the export to your destination is incremental and only includes the five new profiles.
 
-Note that the all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
+Note that all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
 
 ### What determines a data export and what is included in the export
 
@@ -79,13 +79,14 @@ Destination examples: advertising, social, etc.
 
 Experience Platform optimizes the profile export behavior to your streaming destination, to only export data to streaming API-based destinations when relevant updates to a profile have occurred following segment qualification or other significant events. Profiles are exported to your destination in the following situations:
 
-* The profile update was determined by a change in segment membership for at least one of the segments mapped to the destination. For example, the profile has qualified for one of the segments mapped to the destination or has exited one of the segments mapped to the destination.
+* The profile update was determined by a change in [segment membership](/help/xdm/field-groups/profile/segmentation.md) for at least one of the segments mapped to the destination. For example, the profile has qualified for one of the segments mapped to the destination or has exited one of the segments mapped to the destination.
 * The profile update was determined by a change in the [identity map](/help/xdm/field-groups/profile/identitymap.md) for an identity namespace that is marked for export for this destination instance. For example, a profile who had already qualified for one of the segments mapped to the destination has been added a new identity in the identity map attribute.
 * The profile update was determined by a change in attributes for at least one of the attributes mapped to the destination. For example, one of the attributes mapped to the destination in the mapping step is added to a profile.
+* Consent changes for a profile when automated consent enforcement is configured and a profile opts out. Automated consent enforcement will send an audience exited event to the destination so that the profile is not included in any targeting at the destination.
 
 In all the cases described above, only the profiles where relevant updates have occurred are exported to your destination. For example, if a segment mapped to the destination flow has a hundred members, and five new profiles qualify for the segment, the export to your destination is incremental and only includes the five new profiles.
 
-Note that the all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
+Note that all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
 
 ### What determines a data export and what is included in the export
 
@@ -123,6 +124,8 @@ In any of the export situations above, the exported files include the profiles t
 >
 >When a streaming segment is mapped to a batch destination, there is a higher likelihood that the number of profiles in the exported file is closer to the number of users in the segment. This is because there is a higher chance that the latest segment evaluation has run closer to the export time.
 
+### Incremental file exports {#incremental-file-exports}
+
 Not all updates on a profile qualify a profile to be included in incremental file exports. For example, if an attribute was added to or removed from a profile, that does not include the profile in the export. Only profiles for which the `segmentMembership` attribute has changed will be included in exported files. In other words, only if the profile becomes part of the segment or is removed from the segment is it included in incremental file exports.
 
 Similarly, if a new identity (new email address, phone number, ECID, and so on) is added to a profile in the [identity graph](/help/identity-service/ui/identity-graph-viewer.md), that does not represent a reason to include the profile in a new incremental file export. 
@@ -135,7 +138,7 @@ For example, in the export setting illustrated below, where a segment is exporti
 
 ![Export setting with several selected attributes.](/help/destinations/assets/how-destinations-work/export-selection-batch-destination.png)
 
-* A profile is included in an incremental file export when is qualifies or disqualifies for the segment.
+* A profile is included in an incremental file export when it qualifies or disqualifies for the segment.
 * A profile is *not* included in an incremental file export when a new phone number is added to the identity graph.
 * A profile is *not* included in an incremental file export when the value of any of the mapped XDM fields like `xdm: loyalty.points`, `xdm: loyalty.tier`, `xdm: personalEmail.address` is updated on a profile.
 
