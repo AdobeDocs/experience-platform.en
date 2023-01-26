@@ -1,7 +1,7 @@
 ---
 title: (Beta) The Trade Desk - CRM connection
 description: Activate profiles to your Trade Desk account for audience targeting and suppression based on CRM data.
-last-substantial-update: 2023/25/01
+last-substantial-update: 2023-01-25
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 ---
 # (Beta) The [!DNL Trade Desk] - CRM connection

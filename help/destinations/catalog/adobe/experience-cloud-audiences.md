@@ -1,7 +1,7 @@
 ---
 title: (Beta) Experience Cloud Audiences
 description: Learn how to share segments from Experience Platform to various Experience Platform solutions.
-last-substantial-update: 2023/25/01
+last-substantial-update: 2023-01-25
 ---
 
 # (Beta) [!UICONTROL Experience Cloud Audiences] connection

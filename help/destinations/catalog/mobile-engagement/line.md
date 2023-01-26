@@ -2,7 +2,7 @@
 keywords: mobile;mobile engagement destinations;LINE;LINE mobile engagement destination
 title: LINE connection
 description: The LINE destination allows you to add profiles to your Platform segment and deliver personalized experiences to connected users.
-last-substantial-update: 2022/11/08
+last-substantial-update: 2022-11-08
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
 ---
 # [!DNL LINE] connection
