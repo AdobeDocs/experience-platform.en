@@ -365,6 +365,16 @@ EXCEPTION
 END;
 ```
 
+### Auto to JSON {#auto-to-json}
+
+Query Service supports an optional session level setting to return top-level complex fields from interactive SELECT queries as JSON Strings. The `auto_to_json` setting allows for data from complex fields to be returned as JSON then parsed into JSON objects using standard libraries.
+
+SET the feature flag `auto_to_json` to true before executing your SELECT query that contains complex fields. 
+
+```sql
+set auto_to_json=true; 
+``` 
+
 ## Data asset organization
 
 It is important to logically organize your data assets within the Adobe Experience Platform data lake as they grow. Query Service extends SQL constructs that enable you to logically group data assets within a sandbox. This method of organization allows for the sharing of data assets between schemas without the need to move them physically.
