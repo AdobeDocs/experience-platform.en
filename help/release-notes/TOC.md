@@ -7,7 +7,7 @@ user-guide-description: Find monthly release notes for Adobe Experience Platform
 
 # Adobe Experience Platform release notes {#release-notes}
 
-* [Current Platform Release Notes](latest/latest.md)
+* [Current Platform Release Notes](2022/november-2022.md)
 * 2023 {#2023}
   * [January 2023](2023/january-2023.md)
 * 2022 {#2022}
