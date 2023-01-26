@@ -52,10 +52,14 @@ If you are looking to create your first destination with [!DNL Google Ad Manager
 
 ### Allow-listing {#allow-listing}
 
->[!NOTE]
->
->Allow-listing is mandatory before setting up your first [!DNL Google Ad Manager] destination in Platform. Please ensure the allow-listing process described below has been completed by [!DNL Google] before creating a destination.
->The exception to this rule is for [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) customers. If you have already created a connection to this Google destination in Audience Manager, then it is not necessary to go through the allow-listing process again and you can proceed to the next steps.
+Allow-listing is mandatory before setting up your first [!DNL Google Ad Manager] destination in Platform. Make sure to complete the allow-listing process described below, before creating your destination.
+
+The exception to this rule is for existing [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) customers. If you have already created a connection to this Google destination in Audience Manager, then it is not necessary to go through the allow-listing process again and you can proceed to the next steps.
+
+1. Follow the steps described in the [Google Ad Manager documentation](https://support.google.com/admanager/answer/3289669?hl=en) to add Adobe as a linked Data Management Platform (DMP).
+2. In the [!DNL Google Ad Manager] interface, go to **[!UICONTROL Admin]** > **[!UICONTROL Global Settings]** > **[!UICONTROL Network Settings]**, and enable the **[!UICONTROL API Access]** slider.
+
+
 
 Before creating the [!DNL Google Ad Manager] destination in Platform, you must contact [!DNL Google] for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact [!DNL Google] and provide the following information:
 
