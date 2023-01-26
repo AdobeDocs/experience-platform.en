@@ -122,7 +122,7 @@ Queries that use anonymous blocks to comprise their SQL statements are separated
 
 Anonymous blocks are denoted through the use of a `$$` prefix before the query. See the [anonymous block document](../essential-concepts/anonymous-block.md) to find out more about anonymous blocks in query service.
 
-Anonymous block queries have tabs to the left of the run status. Select a tab to display the run details.
+Anonymous block queries have tabs to the left of the run status. Select a tab to display the run details..
 
 ![The Query run overview displaying an anonymous block query. The multiple query tabs are highlighted.](../images/ui/monitor-queries/anonymous-block-overview.png)
 
