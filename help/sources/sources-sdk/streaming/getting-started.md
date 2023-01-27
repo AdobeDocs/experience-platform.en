@@ -15,10 +15,14 @@ The step-by-step process to configure your source in Experience Platform is outl
 * [Create a new connection specification for Streaming SDK](create.md)
 * [Update the streaming flow specification with your new connection specification ID](update-flow-specs.md)
 * [Test and submit your streaming source](submit.md)
-* [Document your streaming source in the API](streaming-template-api.md)
-* [Document your streaming source in the UI](streaming-template-ui.md)
+* [Use the Streaming SDK API documentation template to document your source in the API](streaming-template-api.md)
+* [Use the Streaming SDK UI documentation template to document your source in the UI](streaming-template-ui.md)
 
 ## Prerequisites
+
+>[!IMPORTANT]
+>
+>The source that you are integrating with Experience Platform must be able to support a webhook, to which an endpoint can be subscribed to, to send updates.
 
 To use Self-Serve Sources (Streaming SDK), you must ensure that you have access to a sandbox organization provisioned with Adobe Experience Platform Sources.
 

@@ -17,35 +17,11 @@ The following document provides steps on how to test and debug your source using
 * For information on how to set up [!DNL Postman] for Platform APIs, see the tutorial on [setting up developer console and [!DNL Postman]](../../../landing/postman.md).
 * To help your testing and debugging process, download the [Self-Serve Sources verification collection and environment here](../assets/sdk-verification.zip) and follow the steps outlined below.
 
-## Test your source
+## Test your source using the API
 
-To test your source, you must run the [Self-Serve Sources verification collection and environment](../assets/sdk-verification.zip) on [!DNL Postman] while providing the appropriate environment variables that pertain to your source.
+To test your source using the API, you must run the [Self-Serve Sources verification collection and environment](../assets/sdk-verification.zip) on [!DNL Postman] while providing the appropriate environment variables that pertain to your source.
 
 To start testing, you must first set up the collection and environment on [!DNL Postman]. Next, specify the connection specification ID that you want to test.
-<!-- 
-### Specify `authSpecName`
-
-Once you have entered your connection specification ID, you must then specify the `authSpecName` that you are using for your base connection. Depending on your choice, this could be either `OAuth 2 Refresh Code` or  `Basic Authentication`. Once you specify your `authSpecName`, you must then include its required credentials in your environment. For example, if you specify `authSpecName` as `OAuth 2 Refresh Code`,  then you must provide the required credentials for OAuth 2, which are `host` and `accessToken`.
-
-### Specify `sourceSpec`
-
-With your authentication specification parameters added, you must next add required properties from your source specification. You can find the required properties in `sourceSpec.spec.properties`. In the case of the [!DNL MailChimp Members] example below, the only required property is `listId`, which means `listId` and it's corresponding ID value to your [!DNL Postman] environment.
-
-```json
-"spec": {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "type": "object",
-  "description": "Define user input parameters to fetch resource values.",
-  "properties": {
-    "listId": {
-      "type": "string",
-      "description": "listId for which members need to fetch."
-    }
-  }
-}
-```
-
-Once your authentication and source specification parameters are provided, you can start populating the rest of your environment variables, see the table below for reference: -->
 
 >[!NOTE]
 >
@@ -79,6 +55,9 @@ The [!DNL Runner] interface appears, allowing you to configure the run order of 
 >You can disable **Delete Flow** from the run order checklist if you prefer to use the sources monitoring dashboard in Platform UI. However, once you are finished with testing, you must ensure that your test flows are deleted.
 
 ![run-collection](../assets/run-collection.png)
+
+## Test your source using the UI
+
 
 ## Submit your source
 
