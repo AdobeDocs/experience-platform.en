@@ -1,8 +1,6 @@
 ---
 title: Adobe Experience Platform Release Notes January 2023
 description: The January 2023 release notes for Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 ---
 # Adobe Experience Platform release notes 
 
