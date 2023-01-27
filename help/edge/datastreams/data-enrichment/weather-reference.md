@@ -4,6 +4,7 @@ description: The fields that are available as part of the weather intergration
 ---
 
 # Field Mappings
+
 The fields are broken up into three different groups that align to the field groups. 
 
 * __Current Weather__ - The current weather conditions of the user based on their location. This include current temperature, percipitation, cloud cover, etc
@@ -12,6 +13,7 @@ The fields are broken up into three different groups that align to the field gro
 
 
 ## Current Weather
+
 The current weather conditions for the users location. 
 
 | Field | Description | XDM Path |  
@@ -50,7 +52,8 @@ The current weather conditions for the users location.
 | Wind Speed Kilometers per Hour | The wind is treated as a vector; hence, winds must have direction and magnitude (speed). The wind information reported in the current conditions corresponds to a 10-minute average called the sustained wind speed. Sudden or brief variations in the wind speed are known as “wind gusts” and are reported in a separate data field. Wind directions are always expressed as "from whence the wind blows" meaning that a North wind blows from North to South. If you face North in a North wind the wind is at your face. Face southward and the North wind is at your back. Wind speed in kilometers per hour  | weather.current.windSpeed.kilometersPerHour |
 | Wind Speed Miles per Hour | The wind is treated as a vector; hence, winds must have direction and magnitude (speed). The wind information reported in the current conditions corresponds to a 10-minute average called the sustained wind speed. Sudden or brief variations in the wind speed are known as “wind gusts” and are reported in a separate data field. Wind directions are always expressed as "from whence the wind blows" meaning that a North wind blows from North to South. If you face North in a North wind the wind is at your face. Face southward and the North wind is at your back. Wind speed in miles per hour  | weather.current.windSpeed.milesPerHour |
 
-### Forecasted Weather 
+### Forecasted Weather
+
 The forecasted weather for the user at that point in time. 
 
 | Field | Description | XDM Path |  
