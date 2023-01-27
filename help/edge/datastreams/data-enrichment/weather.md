@@ -16,16 +16,17 @@ Adobe has partnered with the Weather Channel and IBM Company to bring the additi
 
 ## Prerequisites {#prerequisites}
 
-- You must license this data from The Weather Channel. They will then enable it on your account. 
-- Weather data is available only through Datastreams. So you must use the WebSDK, Mobile Edge Extension or the Edge API to leverage this data. Remember the SDKs can often be co-deployed if needed
-- Geo-Location Enabled. The Datastream must have [GeoLocation enabled](../configure.md#advanced-options)
-- Add the [Weather Field group](#experience-platform) to the schema you are using. 
+* You must license this data from The Weather Channel. They will then enable it on your account. 
+* Weather data is available only through Datastreams. So you must use the WebSDK, Mobile Edge Extension or the Edge API to leverage this data. Remember the SDKs can often be co-deployed if needed
+* Geo-Location Enabled. The Datastream must have [GeoLocation enabled](../configure.md#advanced-options)
+* Add the [Weather Field group](#experience-platform) to the schema you are using. 
 
 ## Provisioning
 
 Once you have licensed the data from the Weather Channel. They will enable your account to access the data. Then reach out to Adobe Customer Care to have the data enabled on your datastream. Once enabled on the data stream the data will automatically be appended. You can validate that it is being added by running an edge trace with the debugger or by using Assurance to trace a hit through the edge. 
 
 ### Adobe Experience Platform {#experience-platform}
+
 In Adobe Experience Platform you will need to add the weather field groups to the schema of the event dataset you are using in your datastream. There are three field groups available. 
 
 * Forecasted Weather
@@ -33,6 +34,7 @@ In Adobe Experience Platform you will need to add the weather field groups to th
 * Weather Triggers
 
 ## Access the Weather Data
+
 Once you have everything setup then you can access the weather data in a variety of ways throughout the Adobe applicaitons. 
 
 ### Adobe Analytics
