@@ -26,7 +26,7 @@ You must also have a Power BI account to follow this tutorial. To create an acco
 
 >[!NOTE]
 >
->In order for the Dashboards tab to appear in the left navigation of the Platform UI, and the Dashboard Inventory view to be visible, you must have access to any one of the Profile, Segmentaiton or Destination dashboards as part of your Platform licence. 
+>In order for the Dashboards tab to appear in the left navigation of the Platform UI, and the Dashboard Inventory view to be visible, you must have access to any one of the Profile, Segmentaiton or Destination dashboards as part of your Platform license. 
 
 ## Install the Power BI application integration
 

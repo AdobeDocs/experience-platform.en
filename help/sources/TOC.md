@@ -53,6 +53,7 @@ feature: Sources
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
+    - [SugarCRM connector](connectors/crm/sugarcrm.md)
     - [Veeva CRM connector](connectors/crm/veeva.md)
     - [Zoho CRM connector](connectors/crm/zoho.md)
   - Customer success {#customer-success}
@@ -123,6 +124,8 @@ feature: Sources
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
       - [Salesforce](tutorials/api/create/crm/salesforce.md)
+      - [SugarCRM Accounts & Contacts](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
+      - [SugarCRM Events](tutorials/api/create/crm/sugarcrm-events.md)
       - [Veeva CRM](tutorials/api/create/crm/veeva.md)
       - [Zoho CRM](tutorials/api/create/crm/zoho.md)
     - Customer success {#customer-success}
@@ -197,6 +200,7 @@ feature: Sources
   - [Retry failed dataflow runs](tutorials/api/retry-flows.md)
   - [Delete accounts](tutorials/api/delete.md)
   - [Delete dataflows](tutorials/api/delete-dataflows.md)
+  - [Ingest encrypted data](tutorials/api/encrypt-data.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
     - Adobe applications {#adobe-applications}
@@ -231,6 +235,8 @@ feature: Sources
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
       - [Salesforce](tutorials/ui/create/crm/salesforce.md)
+      - [SugarCRM Accounts & Contacts](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
+      - [SugarCRM Events](tutorials/ui/create/crm/sugarcrm-events.md)
       - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
       - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
     - Customer Success {#customer-success}
