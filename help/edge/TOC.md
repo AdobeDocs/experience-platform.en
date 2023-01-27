@@ -27,6 +27,7 @@ feature: Web SDK
   * [Data Prep for Data Collection](./datastreams/data-prep.md)
   * Data Enrichment {#data-enrichment}
     * [Weather Data by the Weather Channel](./datastreams/data-enrichment/weather.md)
+    * [Weather Data Fields](./datastreams/data-enrichment/weather-reference.md)
 * Identity {#identity}
   * [Overview](identity/overview.md)
   * [First-party device IDs](identity/first-party-device-ids.md)
