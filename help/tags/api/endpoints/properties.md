@@ -550,7 +550,7 @@ The following request updates the `name` and `domains` for an existing property.
 
 ```shell
 curl -X PATCH \
-  https://reactor.adobe.io/properties/HT5d90148e72224224aac9bc0b01498b84 \
+  https://reactor.adobe.io/properties/PR541dbb24bad54dceb04710d7a9e7a740 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \

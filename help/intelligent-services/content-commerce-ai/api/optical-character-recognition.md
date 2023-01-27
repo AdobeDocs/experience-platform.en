@@ -2,7 +2,6 @@
 keywords: OCR;text presence;optical character recognition
 solution: Experience Platform
 title: Text Presence and Optical Character Recognition
-topic-legacy: Developer guide
 description: In the Content and Commerce AI API, the Text Presence / Optical Character Recognition (OCR) service can indicate if text is present in a given image. If text is present, OCR can return the text.
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
 ---
@@ -77,7 +76,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `top-N` | The number of results to be returned (cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
 | `custom` | Any custom parameters to be passed. This property requires a valid JSON object to function. | No |
 | `content-id` | The unique ID for the data element thats returned in the response. If this is not passed, an auto-generated ID is assigned. | No |
-| `content` | The content can be raw image (‘inline’ content-type). <br> If the content is a file on S3 ('s3-bucket' content-type), pass the signed URL. | Yes |
+| `content` | The content can be raw image ('inline' content-type). <br> If the content is a file on S3 ('s3-bucket' content-type), pass the signed URL. | Yes |
 
 **Response**
 

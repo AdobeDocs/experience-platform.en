@@ -7,7 +7,7 @@ exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
 
 [!UICONTROL XDM Business Person Components] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) that captures multiple source records for a person, and other attributes which are required for person segmentation.
 
-When a profile is created for a person through [Real-time Customer Profile](../../../profile/home.md) in the B2B edition of Real-Time CDP, the information used to create that profile may potentially come from many source records. For example, if a person works for two different companies, many CRM systems would create an intentionally duplicate copy of that person so that one copy is linked to Company A, while the other is linked to Company B. When bringing that data into Adobe Experience Platform, this field group is used to merge those different source records into a single representation.
+When a profile is created for a person through [Real-Time Customer Profile](../../../profile/home.md) in the B2B edition of Real-Time CDP, the information used to create that profile may potentially come from many source records. For example, if a person works for two different companies, many CRM systems would create an intentionally duplicate copy of that person so that one copy is linked to Company A, while the other is linked to Company B. When bringing that data into Adobe Experience Platform, this field group is used to merge those different source records into a single representation.
 
 The field group provides a root-level `personComponents` field, which is an array of objects. Each object in the array represents a different source record.
 

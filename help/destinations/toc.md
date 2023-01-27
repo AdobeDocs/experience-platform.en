@@ -42,6 +42,7 @@ feature: Destinations
     * [Destinations catalog overview](./catalog/overview.md)
     * Adobe destinations{#adobe}
         * [Adobe destinations overview](./catalog/adobe/overview.md)
+        * [(Beta) Experience Cloud audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
         * [Marketo Engage connection](./catalog/adobe/marketo-engage.md)
         * [Experience Platform segment sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
     * Advertising destinations{#advertising}
@@ -147,6 +148,7 @@ feature: Destinations
         * [KickFire extension](./catalog/personalization/kickfire.md)
         * [Marketo Web Personalization extension](./catalog/personalization/marketo-web-personalization.md)
         * [Pega Customer Decision Hub connection](./catalog/personalization/pega.md)
+        * [Pega Profile connection](./catalog/personalization/pega-profile.md)
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
         * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)

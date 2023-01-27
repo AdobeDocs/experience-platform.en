@@ -2,7 +2,6 @@
 keywords: Experience Platform;attribution ai;access scores;popular topics;download scores;attribution ai scores;export;Export
 feature: Attribution AI
 title: Download Scores in Attribution AI
-topic-legacy: Downloading scores
 description: This document serves as a guide for downloading scores for Attribution AI.
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
 ---

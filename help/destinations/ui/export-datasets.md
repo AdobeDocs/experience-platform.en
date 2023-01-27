@@ -2,7 +2,7 @@
 title: (Beta) Export Datasets to Cloud Storage Destinations
 type: Tutorial
 description: Learn how to export datasets from Adobe Experience Platform to your preferred cloud storage location.
-
+exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 ---
 # (Beta) Export datasets to cloud storage destinations
 

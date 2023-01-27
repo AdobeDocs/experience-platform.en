@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;Oracle Service Cloud;oracle service cloud
 title: Oracle Service Cloud Source Connector Overview
 description: Learn how to connect Oracle Service Cloud to Adobe Experience Platform using APIs or the user interface.
+exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
 ---
 # (Beta) Oracle Service Cloud source
 

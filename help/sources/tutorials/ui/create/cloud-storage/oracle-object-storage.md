@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Oracle Object Storage;oracle object storage
 solution: Experience Platform
 title: Create an Oracle Object Storage Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create an Oracle Object Storage source connection using the Adobe Experience Platform UI.
 exl-id: 32284163-5dde-4171-8977-f76ceeebcef2

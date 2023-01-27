@@ -256,16 +256,16 @@ Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION
 * If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, refer to the [Authentication configuration](./authentication-configuration.md#when-to-use).
 
 
-<!-- ## Step 5: Test your destination {#test-destination}
+## Step 5: Test your destination {#test-destination}
 
-After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](./create-template.md) to test the integration between Adobe Experience Platform and your destination.
+After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](./file-based-destination-testing-overview.md) to test the integration between Adobe Experience Platform and your destination.
 
 As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create segments in Experience Platform:
 
-* [Create a segment documentation page](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
-* [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) -->
+* [Create a segment documentation page](/help/segmentation/ui/overview.md#create-segment)
+* [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
-## Step 5: Publish your destination {#publish-destination}
+## Step 6: Publish your destination {#publish-destination}
 
 >[!NOTE]
 >
@@ -273,10 +273,18 @@ As part of the process to test your destination, you must use the Experience Pla
 
 After configuring and testing your destination, use the [destination publishing API](./destination-publish-api.md) to submit your configuration to Adobe for review.
 
-## Step 6: Document your destination {#document-destination}
+## Step 7: Document your destination {#document-destination}
 
 >[!NOTE]
 >
 >This step is not required if you are creating a private destination for your own use, and are not looking to publish it in the destinations catalog for other customers to use.
 
 If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md).
+
+## Step 8: Submit destination for Adobe's review {#submit-for-review}
+
+>[!NOTE]
+>
+>This step is not required if you are creating a private destination for your own use, and are not looking to publish it in the destinations catalog for other customers to use.
+
+Finally, before the destination can be published in the Experience Platform catalog and visible to all Experience Platform customers, you need to officially submit the destination for Adobe's review. Find complete information about how to [submit for review a productized destination authored in Destination SDK](/help/destinations/destination-sdk/submit-destination.md).

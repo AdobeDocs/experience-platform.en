@@ -1,6 +1,7 @@
 ---
 title: Accelerated Queries Endpoint
 description: Learn how to access to query accelerated store in a stateless manner to quickly return results based on aggregated data. This document provides a sample HTTP request and response for the Query Service accelerated-queries endpoint.
+exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
 ---
 # Accelerated queries endpoint
 
@@ -10,7 +11,7 @@ Before continuing with this guide, ensure that you have read and understood the 
 
 ## Getting started
 
-The Data Distiller SKU is required to use the query accelerated store. Please see the [packaging](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), and [licensing](../data-distiller/licence-usage.md) documentation that relates to the Data Distiller SKU. If you do not have the Data Distiller SKU please contact your Adobe customer service representative for more information.
+The Data Distiller SKU is required to use the query accelerated store. Please see the [packaging](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), and [licensing](../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. If you do not have the Data Distiller SKU please contact your Adobe customer service representative for more information.
 
 The following sections detail the API calls necessary to access the query accelerated store in a stateless manner through the Query Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
@@ -203,5 +204,4 @@ A successful response returns HTTP status 200 with the ad hoc schema created by 
 | `resultsMeta._adhoc.type`  | The data type of the ad hoc schema. | 
 | `resultsMeta._adhoc.meta:xdmType`  | This is a system-generated value for the XDM field type. For more information on the available types see the documentation on [available XDM types](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). | 
 | `resultsMeta._adhoc.properties`  | These are the column names of the queried dataset. | 
-| `resultsMeta._adhoc.results`  | These are the row names of the queried dataset. They reflect each of the returned columns.  | 
-
+| `resultsMeta._adhoc.results`  | These are the row names of the queried dataset. They reflect each of the returned columns.  |

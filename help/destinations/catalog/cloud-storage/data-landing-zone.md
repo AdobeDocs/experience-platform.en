@@ -1,17 +1,19 @@
 ---
 title: Data Landing Zone destination
-description: Learn how to connect to Data Landing Zone to activate segments and export datasets. 
+description: Learn how to connect to Data Landing Zone to activate segments and export datasets.
+exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
 ---
 # (Beta) Data Landing Zone destination
 
 >[!IMPORTANT]
 >
->This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Data Landing Zone] connection, contact your Adobe representative and provide your [!DNL Organization ID].
+>* This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Data Landing Zone] connection, contact your Adobe representative and provide your [!DNL Organization ID].
+>* This documentation page refers to the [!DNL Data Landing Zone] *destination*. There is also a [!DNL Data Landing Zone] *source* in the sources catalog. For more information, read the [[!DNL Data Landing Zone] source](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentation.
 
 
 ## Overview {#overview}
 
-[!DNL Data Landing Zone] is an [!DNL Azure Blob] storage interface provisioned by Adobe Experience Platform, granting you access to a secure, cloud-based file storage facility to export files out of Platform. You have access to one [!DNL Data Landing Zone] container per sandbox, and the total data volume across all containers is limited to the total data provided with your Platform Products and Services license. All customers of Platform and its application services such as [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], and [!DNL Real-time Customer Data Platform] are provisioned with one [!DNL Data Landing Zone] container per sandbox. You can read and write files to your container through [!DNL Azure Storage Explorer] or your command-line interface.
+[!DNL Data Landing Zone] is an [!DNL Azure Blob] storage interface provisioned by Adobe Experience Platform, granting you access to a secure, cloud-based file storage facility to export files out of Platform. You have access to one [!DNL Data Landing Zone] container per sandbox, and the total data volume across all containers is limited to the total data provided with your Platform Products and Services license. All customers of Platform and its application services such as [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], and [!DNL Real-Time Customer Data Platform] are provisioned with one [!DNL Data Landing Zone] container per sandbox. You can read and write files to your container through [!DNL Azure Storage Explorer] or your command-line interface.
 
 [!DNL Data Landing Zone] supports SAS-based authentication and its data is protected with standard [!DNL Azure Blob] storage security mechanisms at rest and in transit. SAS-based authentication allows you to securely access your [!DNL Data Landing Zone] container through a public internet connection. There are no network changes required for you to access your [!DNL Data Landing Zone] container, which means you do not need to configure any allow lists or cross-region setups for your network. 
 
@@ -28,9 +30,13 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
-## Manage the contents of your [!DNL Data Landing Zone]
+## Prerequisites {#prerequisites}
 
-You can use [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) to manage the contents of your [!DNL Data Landing Zone] container. 
+Note the following prerequisites that must be met before you can use the [!DNL Data Landing Zone] destination.
+
+### Connect your [!DNL Data Landing Zone] container to [!DNL Azure Storage Explorer]
+
+You can use [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) to manage the contents of your [!DNL Data Landing Zone] container. To start using [!DNL Data Landing Zone], you first need to retrieve your credentials, input them in [!DNL Azure Storage Explorer], and connect your [!DNL Data Landing Zone] container to [!DNL Azure Storage Explorer].
 
 In the [!DNL Azure Storage Explorer] UI, select the connection icon in the left navigation bar. The **Select Resource** window appears, providing you with options to connect to. Select **[!DNL Blob container]** to connect to your [!DNL Data Landing Zone] storage.
 
@@ -42,13 +48,54 @@ Next, select **Shared access signature URL (SAS)** as your connection method, an
 
 After selecting your connection method, you must provide a **display name** and the **[!DNL Blob] container SAS URL** that corresponds with your [!DNL Data Landing Zone] container.
 
->[!IMPORTANT]
->
->You must use the Platform APIs to retrieve your Data Landing Zone credentials. For complete information, see [Retrieve Data Landing Zone credentials](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html?lang=en#retrieve-data-landing-zone-credentials). 
->
-> To retrieve the credentials and access the exported files, you must replace the query parameter `type=user_drop_zone` with `type=dlz_destination` in any HTTP calls described in the page above.
+>[!BEGINSHADEBOX]
 
-Provide your [!DNL Data Landing Zone] SAS URL and then select **Next**.
+### Retrieve the credentials for your [!DNL Data Landing Zone]
+
+You must use the Platform APIs to retrieve your [!DNL Data Landing Zone] credentials. The API call to retrieve your credentials is described below. For information about getting the required values for your headers, refer the [Getting started with Adobe Experience Platform APIs](/help/landing/api-guide.md) guide.
+
+**API format**
+
+```http
+GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
+```
+
+**Request**
+
+The following request example retrieves credentials for an existing landing zone.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
+**Response**
+
+The following response returns the credential information for your landing zone, including your current `SASToken` and `SASUri`, as well as the `storageAccountName` that corresponds to your landing zone container.
+
+```json
+{
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2022-09-11&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
+    "storageAccountName": "dlblobstore99hh25i3df123",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2022-09-11&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D"
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `containerName` | The name of your landing zone. |
+| `SASToken` | The shared access signature token for your landing zone. This string contains all of the information necessary to authorize a request. |
+| `SASUri` | The shared access signature URI for your landing zone. This string is a combination of the URI to the landing zone for which you are being authenticated to and its corresponding SAS token, |
+
+>[!ENDSHADEBOX]
+
+Provide your display name (`containerName`) and [!DNL Data Landing Zone] SAS URL, as returned in the API call described above, and then select **Next**.
 
 ![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
@@ -72,7 +119,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authenticate to destination {#authenticate}
 
-Because [!DNL Data Landing Zone] is an Adobe-provisioned storage, you do not need to perform any steps to authenticate to the destination.
+Make sure that you have connected your [!DNL Data Landing Zone] container to [!DNL Azure Storage Explorer] as described in the [prerequisites](#prerequisites) section. Because [!DNL Data Landing Zone] is an Adobe-provisioned storage, you do not need to perform any further steps in the Experience Platform UI to authenticate to the destination.
 
 ### Fill in destination details {#destination-details}
 
@@ -81,6 +128,8 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
 * **[!UICONTROL Folder path]**: Enter the path to the destination folder that will host the exported files.
+* **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files.
 
 ### Enable alerts {#enable-alerts}
 

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Apache Hadoop Distributed File System;Apache hadoop;hdfs;HDFS
 solution: Experience Platform
 title: Create an Apache HDFS Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect an Apache Hadoop Distributed File System to Adobe Experience Platform using the Flow Service API.
 exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
@@ -31,7 +30,7 @@ The following sections provide additional information that you will need to know
 | Credential | Description |
 | ---------- | ----------- |
 | `url` | The URL defines auth params required for connecting to [!DNL HDFS] anonymously. For more information on how to obtain this value, refer to [this [!DNL HDFS] document](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL AdWords] is: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL AdWords] is: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
 ### Using Platform APIs
 

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Adobe Privacy JavaScript Library Overview
-topic-legacy: overview
 description: The Adobe Privacy JavaScript Library allows you to retrieve data subject identities for use in Privacy Service.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
 ---
@@ -42,7 +41,7 @@ To start using the [!DNL Privacy JS Library], you must install it onto your mach
 * Install using npm by running the following command: `npm install @adobe/adobe-privacy`
 * Download from the [Experience Cloud GitHub repository](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
-You can also install the library through a tag extension. See the overview on the [Adobe Privacy tag extension](../tags/extensions/web/privacy/overview.md) for more information.
+You can also install the library through a tag extension. See the overview on the [Adobe Privacy tag extension](../tags/extensions/client/privacy/overview.md) for more information.
 
 ## Instantiate the [!DNL Privacy JS Library]
 

@@ -12,7 +12,7 @@ Using Data Ingestion API endpoints, you can perform basic CRUD operations in ord
 Using the API guides requires a working understanding of multiple Adobe Experience Platform services involved in working with data. Before using the Data Ingestion API, please review the documentation for the following services:
 
 * [Batch ingestion](./overview.md): Allows you to ingest data into Adobe Experience Platform as batch files.
-* [[!DNL Real-time Customer Profile]](../home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](../home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 

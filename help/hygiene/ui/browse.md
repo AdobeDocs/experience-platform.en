@@ -25,7 +25,7 @@ When you first access the **[!UICONTROL Data Hygiene]** workspace in the UI, a l
 
 ![Image showing the [!UICONTROL Data Hygiene] workspace in the Platform UI](../images/ui/browse/work-order-list.png)
 
-The list only shows work orders for one category at a time. Select **[!UICONTROL Consumer]** to view a list of consumer delete tasks, and **[!UICONTROL Dataset]** to view a list of scheduled dataset expirations.
+The list only shows work orders for one category at a time. Select **[!UICONTROL Consumer]** to view a list of record delete tasks, and **[!UICONTROL Dataset]** to view a list of scheduled dataset expirations.
 
 ![Image showing the [!UICONTROL Dataset] tab](../images/ui/browse/dataset-tab.png)
 
@@ -35,9 +35,9 @@ Select the funnel icon (![Image of the funnel icon](../images/ui/browse/funnel-i
 
 Depending on the type of work order you are viewing, different filter options are available.
 
-### Filters for consumer deletes
+### Filters for record deletes
 
-The following filters apply to consumer delete requests:
+The following filters apply to record delete requests:
 
 | Filter | Description |
 | --- | --- |
@@ -68,12 +68,12 @@ The following filters apply to dataset expiration requests:
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Number of identities"
->abstract="The number of identities that were requested to be deleted as part of this work order. The identities included in the count may not necessarily exist in the affected datasets. To learn more, refer to the data hygiene UI guide."
+>abstract="The number of identities whose records were requested to be updated or deleted as part of this work order. The identities included in the count may not necessarily exist in the affected datasets. To learn more, refer to the data hygiene UI guide."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
->title="Consumer delete response"
->abstract="When a consumer delete process receives a response from the system, these messages are displayed under the **[!UICONTROL Result]** section. If a problem occurs while a work order is processing, any relevant error messages will appear in this section to help you troubleshoot the issue. To learn more, see the data hygiene UI guide."
+>title="Record delete response"
+>abstract="When a record delete process receives a response from the system, these messages are displayed under the **[!UICONTROL Result]** section. If a problem occurs while a work order is processing, any relevant error messages will appear in this section to help you troubleshoot the issue. To learn more, see the data hygiene UI guide."
 
 Select the ID of a listed work order to view its details.
 
@@ -81,11 +81,11 @@ Select the ID of a listed work order to view its details.
 
 Depending on the type of work order selected, different information and controls are provided. These are covered in the sections below.
 
-### Consumer delete details {#consumer-delete}
+### Record delete details {#record-delete}
 
-The details of a consumer delete request include its current status and the time elapsed since the request was made. Each request also includes a **[!UICONTROL Status by service]** section which provides individual status details on each downstream service involved in the deletion. On the right rail, you can use controls to update the name and description of the work order.
+The details of a record delete request include its current status and the time elapsed since the request was made. Each request also includes a **[!UICONTROL Status by service]** section which provides individual status details on each downstream service involved in the deletion. On the right rail, you can use controls to update the name and description of the work order.
 
-![Image showing the details page for a consumer delete work order](../images/ui/browse/consumer-delete-details.png)
+![Image showing the details page for a record delete work order](../images/ui/browse/record-delete-details.png)
 
 ### Dataset expiration details {#dataset-expiration}
 
@@ -98,4 +98,4 @@ The details page for a dataset expiration provides information on its basic attr
 This guide covered how to view and manage existing data hygiene work orders in the Platform UI. For information on creating your own work orders, refer to the following documentation:
 
 * [Manage dataset expirations](./dataset-expiration.md)
-* [Manage consumer deletes](./delete-consumer.md)
+<!-- * [Manage record deletes](./record-delete.md) -->

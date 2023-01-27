@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Adobe Experience Platform;api guide;platform api guide;introduction to platform;developer guide
 solution: Experience Platform
 title: Postman in Adobe Experience Platform
-topic-legacy: api guide
 description: This document contains steps outlining how to set up a Postman environment, import Postman collections, and a list of available collections for each Platform service.
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
 ---

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;overview;Overview;regulation;Regulation;regulations;Regulations;privacy;Privacy;
 solution: Experience Platform
 title: Privacy Regulations Terminology
-topic-legacy: troubleshooting
 description: This document provides definitions for key terms related to privacy regulations supported by Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
 ---
@@ -54,7 +53,7 @@ This document provides definitions for key terms related to privacy regulations 
 
 **Enterprise**: Any entity engaged in economic activity, regardless of legal form, including persons, partnerships, associations, etc.
 
-**Explicit consent**: A standard of consent which involves a specific, informed, and unambiguous indication of the data subject’s wishes in oral or written form. Put simply, the data subject must literally and explicitly say "I consent" or "I agree" in order for the consent to be considered explicit. In addition, it must be as easy to withdraw consent as it is to give it.
+**Explicit consent**: A standard of consent which involves a specific, informed, and unambiguous indication of the data subject's wishes in oral or written form. Put simply, the data subject must literally and explicitly say "I consent" or "I agree" in order for the consent to be considered explicit. In addition, it must be as easy to withdraw consent as it is to give it.
 
 ## F
 
