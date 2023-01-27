@@ -1,8 +1,6 @@
 ---
 title: Adobe Experience Platform Release Notes January 2023
 description: The January 2023 release notes for Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 ---
 # Adobe Experience Platform release notes 
 
@@ -61,6 +59,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 | Functionality | Description |
 | ----------- | ----------- |
+| Paid media consent enhancement for integrations with streaming destinations | An enhancement to [consent policy enforcement](/help/data-governance/enforcement/auto-enforcement.md) on [streaming destinations](/help/destinations/destination-types.md#streaming-destinations) for paid media activation use-cases. Profiles that have withdrawn consent from a particular experience are now proactively removed from these destinations. <br> <b>Note</b>: This functionality is available only to customers of **[!UICONTROL Privacy and Security Shield]**, and those of **[!UICONTROL Healthcare Shield]**. |
 | New delimiter options for beta cloud storage destination connectors | Three new delimiter options (Colon `:`, Pipe, Semicolon `;`) are now available for the new beta cloud storage destinations - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> Read about the supported [file formatting options](/help/destinations/ui/batch-destinations-file-formatting-options.md) for file-based destinations. |
 | New optional parameter available in [customer data fields](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) configurations in [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Use this parameter when you need to create a customer data field whose value must be unique across all destination dataflows set up by a user's organization. <br> For example, the **[!UICONTROL Integration alias]** field in the [[!UICONTROL Custom Personalization]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) destination must be unique, meaning that two separate dataflows to this destination cannot have the same value for this field. |
 
