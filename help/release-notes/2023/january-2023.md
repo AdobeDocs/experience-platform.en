@@ -141,8 +141,10 @@ To learn more about Real-Time Customer Profile, including tutorials and best pra
 
 | Feature | Description |
 | ------- | ----------- |
-| Platform-generated segment membership expiration | Any segment membership that is in the `Exited` state for more than 30 days, based on the `lastQualificationTime` field will be subject to deletion. |
+| Bulk value import in Segment Builder | Segment Builder now supports importing multiple values, either by uploading a CSV or TSV file or by manually inserting comma separated values. More information can be found within the [Segment Builder guide](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 | External audience membership expiration | By default, external audience memberships are retained for 30 days. To retain them for longer, use the `validUntil` field during the ingestion of audience data. |
+| Platform-generated segment membership expiration | Any segment membership that is in the `Exited` state for more than 30 days, based on the `lastQualificationTime` field will be subject to deletion. |
+
 
 {style="table-layout:auto"}
 
