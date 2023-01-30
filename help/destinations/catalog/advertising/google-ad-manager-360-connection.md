@@ -48,13 +48,14 @@ Refer to the table below for information about the destination export type and f
 
 ### Allow-listing {#allow-listing}
 
->[!NOTE]
->
->The allow list is mandatory before setting up your first [!DNL Google Ad Manager] destination in Platform. Please ensure the allow list process described below has been completed by [!DNL Google] before creating a destination.
+Allow-listing is mandatory before setting up your first [!DNL Google Ad Manager] destination in Platform. Make sure to complete the allow-listing process described below, before creating your destination.
 
->[!IMPORTANT]
->
->Google has simplified the process to connect external audience management platforms to Google Ad Manager 360. You can now go through the process to link to Google Ad Manager 360 in a self-service manner. Read [Segments from data management platforms](https://support.google.com/admanager/answer/3289669?hl=en) in the Google documentation. You should have the IDs listed below at hand.
+The exception to this rule is for existing [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) customers. If you have already created a connection to this Google destination in Audience Manager, then it is not necessary to go through the allow-listing process again and you can proceed to the next steps.
+
+1. Follow the steps described in the [Google Ad Manager documentation](https://support.google.com/admanager/answer/3289669?hl=en) to add Adobe as a linked Data Management Platform (DMP).
+2. In the [!DNL Google Ad Manager] interface, go to **[!UICONTROL Admin]** > **[!UICONTROL Global Settings]** > **[!UICONTROL Network Settings]**, and enable the **[!UICONTROL API Access]** slider.
+
+While going through the allow-listing process, make sure to have the information below at hand.
 
 * **Account ID**: Adobe's account ID with Google. Account ID: 87933855.
 * **Customer ID**: Adobe's customer account ID with Google. Customer ID: 89690775.
