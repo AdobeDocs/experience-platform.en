@@ -1,8 +1,6 @@
 ---
 title: Adobe Experience Platform Release Notes January 2023
 description: The January 2023 release notes for Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 ---
 # Adobe Experience Platform release notes 
 
@@ -57,10 +55,11 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 | [Pega Profile connection](../../destinations/catalog/personalization/pega-profile.md) | Use the [!DNL Pega Profile Connector] in Adobe Experience Platform to create a live outbound connection to your [!DNL Amazon] S3 storage to periodically export profile data to CSV files from Adobe Experience Platform into your own S3 buckets. In [!DNL Pega Customer Decision Hub], you can schedule data jobs to import this profile data from S3 storage to update the [!DNL Pega Customer Decision Hub] profile. |
 | [(Beta) The Trade Desk CRM EU connection](../../destinations/catalog/advertising/tradedesk-emails.md) | With the release of EUID (European Unified ID), you are now seeing two [!DNL The Trade Desk - CRM] destinations in the [destinations catalog](/help/destinations/catalog/overview.md). <ul><li> If you source data in the EU, please use the **[!DNL The Trade Desk - CRM (EU)]** destination.</li><li> If you source data in the APAC or NAMER regions, please use the **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destination. </li></ul> |
 
-**New or updated functionality**
+**New or updated functionality** {#destinations-new-updated-functionality}
 
 | Functionality | Description |
 | ----------- | ----------- |
+| Paid Media Consent Policy enhancement for integrations with streaming destinations | An enhancement to [consent policy enforcement](/help/data-governance/enforcement/auto-enforcement.md) on [streaming destinations](/help/destinations/destination-types.md#streaming-destinations) for paid media activation use-cases. When profiles are no longer qualified for a consent policy, Experience Platform now proactively communicates their policy exit to streaming destinations. <br> <b>Note</b>: This functionality is available only to customers of **[!UICONTROL Privacy and Security Shield]**, and those of **[!UICONTROL Healthcare Shield]**. |
 | New delimiter options for beta cloud storage destination connectors | Three new delimiter options (Colon `:`, Pipe, Semicolon `;`) are now available for the new beta cloud storage destinations - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> Read about the supported [file formatting options](/help/destinations/ui/batch-destinations-file-formatting-options.md) for file-based destinations. |
 | New optional parameter available in [customer data fields](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) configurations in [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Use this parameter when you need to create a customer data field whose value must be unique across all destination dataflows set up by a user's organization. <br> For example, the **[!UICONTROL Integration alias]** field in the [[!UICONTROL Custom Personalization]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) destination must be unique, meaning that two separate dataflows to this destination cannot have the same value for this field. |
 
