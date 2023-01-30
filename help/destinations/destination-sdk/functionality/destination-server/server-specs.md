@@ -30,6 +30,33 @@ Refer to the table below for details on what type of destinations support the fu
 
 When [creating](../../authoring-api/destination-server/create-destination-server.md) or [updating](../../authoring-api/destination-server/update-destination-server.md) a destination server], use one of the server type configurations described below, depending on your integration requirements, and update their configuration parameters accordingly.
 
+## Defining configuration parameters {#defining-configuration-parameters}
+
+When creating a destination server through Destination SDK, you can define configuration parameter values either by hard-coding them into the configuration, or by using macros to allow users to enter their own configuration details into the Platform UI.
+
+Most destination server parameters have two configurable options, depending on whether you choose to hard-code them or to use macros:
+
+|Parameter | Type | Description|
+|---|---|---|
+|`templatingStrategy`|String|*Required.* Defines whether there is a hard-coded value provided via the `value` field, or a user-provided value in the UI. Supported values: <ul><li>`NONE`: Use this value when you are hard-coding the parameter value via the `value` parameter (see the next row). Example:`"value": "my-storage-bucket"`.</li><li>`PEBBLE_V1`: Use this value when you want your users to provide a parameter value in the UI. Example: `"value": "{{customerData.bucket}}"`. </li></ul> |
+|`value`|String|*Required*. Defines the parameter value. Supported value types: <ul><li>**Hard-coded value**: Use a hard-coded value (such as `"value": "my-storage-bucket"`) when you do not need users to enter a parameter value in the UI. When hard-coding a value, `templatingStrategy` should always be set to `NONE`.</li><li>**Macro-defined value**: Use a macro-defined value (such as `"value": "{{customerData.bucket}}"`) when you want your users to provide a parameter value in the UI. When using macro-defined values, `templatingStrategy` should always be set to `PEBBLE_V1`.</li></ul>|
+
+### Hard-coding parameter values {#hard-coding-values}
+
+When you use hard-coded parameter values in your destination server configuration, the connection between Adobe Experience Platform and your destination platform is handled without any input from the user.
+
+When going through the [destination connection tutorial](../../../ui/connect-destination.md), users will not see an [authentication step](../../../ui/connect-destination.md#authenticate). Instead, the authentication is handled by Platform, as shown in the image below.
+
+![Ui image showing the authentication between Platform and a destination.](../../assets/functionality/destination-server/server-spec-hardcoded.png)
+
+### Using macro-defined parameter values {#using-macros}
+
+When you use macro-defined parameter values in your destination server configuration, users must manually enter the destination connection parameters in the Platform UI.
+
+When going through the [destination connection tutorial](../../../ui/connect-destination.md), users will see an [authentication step](../../../ui/connect-destination.md#authenticate). In this step, they must enter their destination platform connection details.
+
+![Ui image showing the authentication between Platform and an S destination.](../../assets/functionality/destination-server/server-spec-macro.png)
+
 ## URL-based (streaming) destination server {#url-destination-server}
 
 This destination server allows you export data from Adobe Experience Platform to your destination via HTTP exports. The server configuration contains information about the server receiving the messages (the server on your side).
@@ -54,7 +81,7 @@ The sample below shows an example of a destination server configuration for a UR
 |Parameter | Type | Description|
 |---|---|---|
 |`name` | String | *Required.* Represents a friendly name of your server, visible only to Adobe. This name is not visible to partners or customers. Example: `Moviestar destination server`. |
-|`destinationServerType` | String | *Required.* Set this to `URL_BASED` for streaming destinations.|
+|`destinationServerType` | String |*Required.* Set this to `URL_BASED` for streaming destinations.|
 |`templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if you are using a macro instead of a hard-coded value in the `value` field. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` if no macro transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
 |`value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to. |
 
