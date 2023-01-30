@@ -10,11 +10,13 @@ exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 
 The Adobe Experience Platform user interface allows you to create and manage [!DNL Experience Data Model] (XDM) schemas in an interactive visual canvas called the [!DNL Schema Editor]. This tutorial covers how to create a schema using the [!DNL Schema Editor].
 
+For demonstration purposes, the steps in this tutorial involve creating an example schema that describes members of a customer loyalty program. While you can use these steps to create a different schema for your own purposes, it is recommended that you first follow along with creating the example schema to learn the capabilities of the [!DNL Schema Editor].
+
 >[!NOTE]
 >
->For demonstration purposes, the steps in this tutorial involve creating an example schema that describes members of a customer loyalty program. While you can use these steps to create a different schema for your own purposes, it is recommended that you first follow along with creating the example schema to learn the capabilities of the [!DNL Schema Editor].
-
-If you prefer to compose a schema using the [!DNL Schema Registry] API instead, start by reading the [[!DNL Schema Registry] developer guide](../api/getting-started.md) before attempting the tutorial on [creating a schema using the API](create-schema-api.md).
+>If you are ingesting CSV data into Platform, you can [map that data to an XDM schema created by AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md) (currently in beta) without having to manually create the schema yourself.
+>
+>If you prefer to compose a schema using the [!DNL Schema Registry] API, start by reading the [[!DNL Schema Registry] developer guide](../api/getting-started.md) before attempting the tutorial on [creating a schema using the API](create-schema-api.md).
 
 ## Getting started
 
@@ -204,7 +206,7 @@ When defining fields in the [!DNL Schema Editor], there are some additional opti
 | --- | --- |
 | [!UICONTROL Required] | Indicates that the field is required for data ingestion. Any data uploaded to a dataset based on this schema that does not contain this field will fail upon ingestion. |
 | [!UICONTROL Array] | Indicates that the field contains an array of values, each with the data type specified. For example, using this constraint on a field with a data type of "[!UICONTROL String]" specifies that the field will contain an array of strings. |
-| [!UICONTROL Enum & Suggested Values] | An enum indicates that this field must contain one of the values from an enumerated list of possible values. Alternatively, you can also use this option to just provide a list of suggested values for a string field without constraining the field to those values. |
+| [!UICONTROL Enum & Suggested Values] | An enum indicates that this field must contain one of the values from an enumerated list of possible values. Alternatively, you can also use this option to just provide a list of suggested values for a string field without constraining the field to those values. See the guide on [definining enums and suggested values](../ui/fields/enum.md) for more information on how to manage these kinds of fields in the UI. |
 | [!UICONTROL Identity] | Indicates that this field is an identity field. More information regarding identity fields is provided [later in this tutorial](#identity-field). |
 | [!UICONTROL Relationship] | While schema relationships can be inferred through the use of the union schema and [!DNL Real-Time Customer Profile], this only applies to schemas that share the same class. The [!UICONTROL Relationship] constraint indicates that this field references the primary identity of a schema based on a different class, implying a relationship between the two schemas. See the tutorial on [defining a relationship](./relationship-ui.md) for more information. |
 
