@@ -461,7 +461,7 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 ### Consent policy evaluation {#consent-policy-evaluation}
 
-If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**, select **[!UICONTROL View applicable consent policies]** to see how your consent policies affect the percentage of profiles that are included in the activation. Read about [consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) for more information.
+If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**, select **[!UICONTROL View applicable consent policies]** to see which consent policies are applied and how many profiles are included in the activation as a result of them. Read about [consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) for more information.
 
 ### Data usage policy checks {#data-usage-policy-checks}
 
