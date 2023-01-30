@@ -209,11 +209,11 @@ For the most up-to-date list of available standard XDM field groups, refer to th
 
 ### Data type {#data-type}
 
-Data types are used as reference field types in classes or schemas in the same way as basic literal fields. The key difference is that data types can define multiple sub-fields. Similar to a field group, a data type allows for the consistent use of a multi-field structure, but has more flexibility than a field group because a data type can be included anywhere in a schema by adding it as the "data type" of a field.
+Data types are used as reference field types in classes or schemas in the same way as basic literal fields. The key difference is that data types can define multiple sub-fields. They can define multiple sub-fields in the same way as field groups, but the key difference is that data types can be included anywhere in a schema by adding it as the "data type" of a field. While field groups are only compatible with certain classes, data types can be included in any parent class or field group.
 
 [!DNL Experience Platform] provides a number of common data types as part of the [!DNL Schema Registry] to support the use of standard patterns for describing common data structures. This is explained in more detail in the [!DNL Schema Registry] tutorials, where it will become clearer as you walk through the steps to define data types.
 
-The following screenshot demonstrates how data types are represented in the Platform UI. One of the fields provided by the [!UICONTROL Demographic Details] field group uses the "[!UICONTROL Person name]" data type, as indicated by the text following the pipe character (`|`) next to the field's name. This particular data type provides several subfields that relate to the name of an individual person, a construct that can be reused for other fields where a person's name needs to be captured.
+The following screenshot demonstrates how data types are represented in the Platform UI. One of the fields provided by the [!UICONTROL Demographic Details] field group uses the "[!UICONTROL Object]" data type, as indicated by the text following the pipe character (`|`) next to the field's name. This particular data type provides several subfields that relate to the name of an individual person, a construct that can be reused for other fields where a person's name needs to be captured.
 
 ![](../images/schema-composition/data-type.png)
 
