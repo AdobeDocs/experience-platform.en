@@ -31,6 +31,8 @@ The **[!UICONTROL Interoperability]** page contains information on authenticatio
 
 You can use your newly generated access key ID and secret access key to connect your [!DNL Google Cloud Storage] account to Platform.
 
+For more information, please read the guide on [creating and managing service account keys](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) from the [!DNL Google Cloud] documentation.
+
 ## Naming constraints for files and directories
 
 The following is a list of constraints you must account for when naming your cloud storage file or directory.
