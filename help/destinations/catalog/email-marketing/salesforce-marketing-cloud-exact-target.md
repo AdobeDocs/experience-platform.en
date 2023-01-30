@@ -42,17 +42,25 @@ Reach out to your [!DNL Salesforce Account Executive] to subscribe to the [!DNL 
 
 #### Create custom field within [!DNL Salesforce Marketing Cloud] {#prerequisites-custom-field}
 
-You must create a custom attribute of the type `Text Area Long`, which Experience Platform will use to update the segment status within [!DNL Salesforce Marketing Cloud]. In the workflow to activate segments to the destination, in the **[Segment schedule](#schedule-segment-export-example)** step, you will use the custom attribute as **[!UICONTROL Mapping ID]** for each segment you activate.
+When activating segments, Platform uses the value you specify in the **[!UICONTROL Mapping ID]** field for each activated segment, in the **[Segment schedule](#schedule-segment-export-example)** step, to update segment status within [!DNL Salesforce Marketing Cloud]. Refer to the Adobe Experience Platform documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
 
-Refer to the [!DNL Salesforce Marketing Cloud] documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US) if you need additional guidance.
+For each segment to be activated within Platform you will need a custom field of the type `Text` within [!DNL Salesforce Marketing Cloud]. 
 
 >[!IMPORTANT]
 >
-> Ensure you create the custom attribute under the `Email Demographics` attribute-set within your [!DNL Salesforce Marketing Cloud] account.
+>Within [!DNL Salesforce Marketing Cloud] you must create custom fields with **[!UICONTROL FIELD NAME]** that exactly matches the value specified within **[!UICONTROL Mapping ID]** for each activated Platform segment.
 
-Refer to the Adobe Experience Platform documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
+![Salesforce Marketing Cloud UI screenshot showing a custom field.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-field.png)
 
-#### Gather Salesforce credentials {#gather-credentials}
+Refer to the [!DNL Salesforce Marketing Cloud] documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US) if you need additional guidance.
+
+>[!TIP]
+>
+>* Do not include whitespace characters in the field name. Instead, use the underscore `(_)` character as a separator.
+>* To distinguish between custom fields used for Platform segments and other custom fields within [!DNL Salesforce Marketing Cloud] you could include a recognizable prefix or suffix when creating the custom field. For example, instead of `test_segment`, use `DEV_test_segment` or `test_segment_DEV`
+>* If there are other custom fields in [!DNL Salesforce Marketing Cloud], to aid in visual identification name the custom field with the same name as the Platform segment.
+
+#### Gather [!DNL Salesforce Marketing Cloud] credentials {#gather-credentials}
 
 Note down the items below before you authenticate to the [!DNL Salesforce Marketing Cloud] destination.
 
@@ -63,7 +71,7 @@ Note down the items below before you authenticate to the [!DNL Salesforce Market
 
 {style="table-layout:auto"}
 
-## Limits in [!DNL Salesforce Marketing Cloud] {#limits}
+### Guardrails {#guardrails}
 
 * Salesforce imposes certain [rate limits](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rate-limiting.html).
     * Refer to the [!DNL Salesforce Marketing Cloud] [documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rate-limiting-errors.html) to address any probable limits that you might encounter and reduce errors during execution.
@@ -107,12 +115,12 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, search for [!DN
 
 ### Authenticate to destination {#authenticate}
 
-To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
-![Platform UI screenshot showing how to authenticate to Salesforce Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png)
-
+To authenticate to the destination, fill in the required fields below and select **[!UICONTROL Connect to destination]**. Refer to the [Gather [!DNL Salesforce Marketing Cloud] credentials](#gather-credentials) section for any guidance.
 *  **[!UICONTROL Subdomain]**: Your [!DNL Salesforce Marketing Cloud] domain prefix. For example if your domain is *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, you need the highlighted value.
 *  **[!UICONTROL Client ID]**: Your [!DNL Salesforce Marketing Cloud] Client ID.
 *  **[!UICONTROL Client Secret]**: Your [!DNL Salesforce Marketing Cloud] Client Secret.
+
+![Platform UI screenshot showing how to authenticate to Salesforce Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png)
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark, you can then proceed to the next step.
 
@@ -173,17 +181,21 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
     * An example using these mappings is shown below:
     ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
 
+    >[!IMPORTANT]
+    >
+    >Only attributes from the "Email Demographics" attribute-set should be used for the Target fields.
+
 ### Schedule segment export and example {#schedule-segment-export-example}
 
-When performing the [Schedule segment export](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map Platform segments to the [custom attribute](#prerequisites-custom-field) in Salesforce.
+When performing the [Schedule segment export](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map Platform segments to the [custom field](#prerequisites-custom-field) in Salesforce.
 
-To do this, select each segment, then enter the corresponding custom attribute from Salesforce in the **[!UICONTROL Mapping ID]** field.
+To do this, select each segment, then enter name of the custom field from [!DNL Salesforce Marketing Cloud] in the **[!UICONTROL Mapping ID]** field. Repeat this for each activated segment within Platform.
 
 >[!IMPORTANT]
 >
->The value used for the Mapping ID should exactly match the name of the custom attribute created within Salesforce under the "Email Demographics" attribute-set.
+>The value used for the **[!UICONTROL Mapping ID]** should exactly match the name of the custom field created within [!DNL Salesforce Marketing Cloud].
 
-An example is shown below:
+An example indicating the location of the Mapping ID is shown below:
 ![Platform UI screenshot example showing Schedule segment export.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
 
 ## Validate data export {#exported-data}
@@ -216,11 +228,13 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ### Unknown errors encountered while pushing events to Salesforce Marketing Cloud {#unknown-errors}
 
-When checking a dataflow run, you might encounter the following error message: `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
+* When checking a dataflow run, you might encounter the following error message: `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
+    ![Platform UI screenshot showing error.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)
 
-![Platform UI screenshot showing error.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)
+    * To fix this error, verify that the **[!UICONTROL Mapping ID]** that you provided in [!DNL Salesforce Marketing Cloud] for your Platform segment is valid and exists within [!DNL Salesforce Marketing Cloud].
 
-To fix this error, verify that the **[!UICONTROL Mapping ID]** that you provided in [!DNL Salesforce Marketing Cloud] for your Platform segment is valid and exists within [!DNL Salesforce Marketing Cloud].
+* When activating a segment, if you obtain an error message: `The client's IP address is unauthorized for this account. Allowlist the client's IP address...`
+    * To fix this error, contact your [!DNL Salesforce Marketing Cloud] account administrator to add Platform IP's to your [!DNL Salesforce Marketing Cloud] accounts' trusted IP ranges. Refer to the [!DNL Salesforce Marketing Cloud] [IP Addresses for Inclusion on Allowlists in Marketing Cloud](https://help.salesforce.com/s/articleView?id=sf.mc_es_ip_addresses_for_inclusion.htm&type=5) documentation if you need additional guidance.
 
 ## Additional resources {#additional-resources}
 
