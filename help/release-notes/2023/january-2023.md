@@ -146,7 +146,6 @@ To learn more about Real-Time Customer Profile, including tutorials and best pra
 | External audience membership expiration | By default, external audience memberships are retained for 30 days. To retain them for longer, use the `validUntil` field during the ingestion of audience data. |
 | Platform-generated segment membership expiration | Any segment membership that is in the `Exited` state for more than 30 days, based on the `lastQualificationTime` field will be subject to deletion. |
 
-
 {style="table-layout:auto"}
 
 For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
