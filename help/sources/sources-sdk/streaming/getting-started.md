@@ -12,11 +12,24 @@ Self-Serve Sources (Streaming SDK) allows you to integrate your own source to br
 
 The step-by-step process to configure your source in Experience Platform is outlined below:
 
-* [Create a new connection specification for Streaming SDK](create.md)
-* [Update the streaming flow specification with your new connection specification ID](update-flow-specs.md)
-* [Test and submit your streaming source](submit.md)
-* [Use the Streaming SDK API documentation template to document your source in the API](streaming-template-api.md)
-* [Use the Streaming SDK UI documentation template to document your source in the UI](streaming-template-ui.md)
+### Integration
+
+* [Create a new connection specification for Streaming SDK](create.md).
+* [Update the streaming flow specification with your new connection specification ID](update-flow-specs.md).
+* [Test and submit your streaming source](submit.md).
+
+### Documentation
+
+* To start documenting your source, read the [overview on creating documentation for Self-Serve Sources](../documentation/doc-overview.md).
+* Read the guide on [using the GitHub web interface](../documentation/github.md) for steps on how to create documentation using GitHub.
+* Read the guide on [using a text editor](../documentation/text-editor.md) for steps on how to create documentation using your local machine.
+* [Use the Streaming SDK API documentation template to document your source in the API](streaming-template-api.md).
+* [Use the Streaming SDK UI documentation template to document your source in the UI](streaming-template-ui.md).
+
+You can also download the documentation templates below:
+
+* [API documentation template](../assets/streaming/streaming-template-api.zip)
+* [UI documentation template](../assets/streaming/streaming-template-ui.zip)
 
 ## Prerequisites
 
