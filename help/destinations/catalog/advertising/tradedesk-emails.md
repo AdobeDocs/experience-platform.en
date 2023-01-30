@@ -1,27 +1,30 @@
 ---
 title: (Beta) The Trade Desk - CRM connection
 description: Activate profiles to your Trade Desk account for audience targeting and suppression based on CRM data.
+last-substantial-update: 2023-01-25
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 ---
 # (Beta) The [!DNL Trade Desk] - CRM connection
 
 >[!IMPORTANT]
 >
-> [!DNL The Trade Desk - CRM] destination in Platform is currently in beta. The documentation and functionality are subject to change. 
+>[!DNL The Trade Desk - CRM] destination in Platform is currently in beta. The documentation and functionality are subject to change. 
+>
+>With the release of EUID (European Unified ID), you are now seeing two [!DNL The Trade Desk - CRM] destinations in the [destinations catalog](/help/destinations/catalog/overview.md).
+>* If you source data in the EU, please use the **[!DNL The Trade Desk - CRM (EU)]** destination. 
+>* If you source data in the APAC or NAMER regions, please use the **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destination. 
+>
+>Both destinations in Experience Platform are currently in beta. This documentation page was created by the *[!DNL Trade Desk]* team. For any inquiries or update requests, please contact your [!DNL Trade Desk] representative, the documentation and functionality are subject to change. 
 
 ## Overview {#overview}
 
->[!IMPORTANT]
->
-> This documentation page was created by the *[!DNL Trade Desk]* team. For any inquiries or update requests, please contact your [!DNL Trade Desk] representative.
-
 This document is designed to help you activate profiles to your [!DNL Trade Desk] account for audience targeting and suppression based on CRM data.
+
+[!DNL The Trade Desk(TTD)] does not directly handle the upload file of email addresses at any time nor does [!DNL The Trade Desk] store your raw (unhashed) emails.
 
 >[!TIP]
 >
->Use [!DNL The Trade Desk] CRM destination for CRM data mapping, like email or hashed email address. Use the [other Trade Desk destination](/help/destinations/catalog/advertising/tradedesk.md) in the Adobe Experience Platform catalog for cookies and device ID mappings.
-
-[!DNL The Trade Desk] (TTD) does not directly handle the upload file of email addresses at any time nor does [!DNL The Trade Desk] store your raw (unhashed) emails.
+>Use [!DNL The Trade Desk] CRM destinations for CRM data mapping, like email or hashed email address. Use the [other Trade Desk destination](/help/destinations/catalog/advertising/tradedesk.md) in the Adobe Experience Platform catalog for cookies and device ID mappings.
 
 ## Prerequisites {#prerequisites}
 
@@ -29,7 +32,7 @@ Before you can activate segments to [!DNL The Trade Desk], you must contact your
 
 ## ID Matching Requirements {#id-matching-requirements}
 
-Depending on the type of IDs you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements. Please read the [Identity Namespace overview](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en) for more information.  
+Depending on the type of IDs you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements. Please read the [Identity Namespace overview](/help/identity-service/namespaces.md) for more information.  
 
 ## Supported identities {#supported-identities}
 
@@ -39,8 +42,8 @@ Both plain text and SHA256 hashed email addresses are supported by Adobe Experie
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|Email|Email addresses (clear text) |Select the `Email` target identity when your source identity is an Email namespace or attribute.|
-|Email_LC_SHA256|Email addresses need to be hashed using SHA256 and lowercased. Be sure to follow any [email normalization](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) rules required. You won't be able to change this setting later. |Select the `Email_LC_SHA256` target identity when your source identity is an Email_LC_SHA256 namespace or attribute.|
+|Email|Email addresses (clear text) |Input `email` as the target identity when your source identity is an Email namespace or attribute.|
+|Email_LC_SHA256|Email addresses need to be hashed using SHA256 and lowercased. Be sure to follow any [email normalization](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) rules required. You won't be able to change this setting later. |Input `hashed_email` as the target identity when your source identity is an Email_LC_SHA256 namespace or attribute.|
 
 {style="table-layout:auto"}
 
@@ -48,7 +51,7 @@ Both plain text and SHA256 hashed email addresses are supported by Adobe Experie
 
 You can hash email addresses before ingesting them into Adobe Experience Platform or use raw email addresses. 
 
-To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](https://experienceleague.adobe.com/docs/experience-platform/ingestion/batch/overview.html?lang=en). 
+To learn about ingesting email addresses in Experience Platform, read the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md). 
 
 If you select to hash the email addresses yourself, make sure to comply with the following requirements: 
 
@@ -65,7 +68,7 @@ Refer to the table below for information about the destination export type and f
 | Item | Type | Notes |
 ---------|----------|---------|
 | Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (email or hashed email) used in the Trade Desk destination. |
-| Export frequency | **[!UICONTROL Daily Batch]** | As a profile is updated in Experience Platform based on segment evaluation, the profile (identities) are updated once a day downstream to the destination platform. Read more about [batch uploads](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=en#file-based).|
+| Export frequency | **[!UICONTROL Daily Batch]** | As a profile is updated in Experience Platform based on segment evaluation, the profile (identities) are updated once a day downstream to the destination platform. Read more about [batch exports](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
 
@@ -84,19 +87,27 @@ Before you can send, or activate, audience data to a destination, you must set u
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Advertiser ID]**: your [!DNL Trade Desk Advertiser ID], which can either be shared by your [!DNL Trade Desk] Account Manager or be found under [!DNL Advertiser Preferences] in the [!DNL Trade Desk] UI. 
 
-When connecting to the destination, setting a data governance policy is completely optional. Please review the Experience Platform [data governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=en) for more details.  
+![Platform UI screenshot showing how to fill in destination details.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
+
+When connecting to the destination, setting a data governance policy is completely optional. Please review the Experience Platform [data governance overview](/help/data-governance/policies/overview.md) for more details.  
 
 ## Activate segments to this destination {#activate}
 
-See [activate audience data to batch profile export destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en) for instructions on activating audience segments to a destination. 
+Read [activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to a destination. 
 
 In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional. 
+
+![Platform UI screenshot to schedule segment activation.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE] 
 >
 >All segments activated to [!DNL The Trade Desk] CRM Destination are automatically set to a daily frequency and full file export.
 
+![Platform UI screenshot to schedule segment activation.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+
 In the **[!UICONTROL Mapping]** page, you must select attributes or identity namespaces from the source column and map to the target column.  
+
+![Platform UI screenshot to map segment activation.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
 Below is an example of correct identity mapping when activating segments to [!DNL The Trade Desk] CRM destination. 
 
@@ -111,8 +122,8 @@ Selecting source fields:
 
 Selecting target fields:
 
-*  Select the `Email` namespace as target identity when your source namespace or attribute is `Email`. 
-*  Select the `Email_LC_SHA256` namespace as target identity when your source namespace or attribute is `Email_LC_SHA256`.
+*  Input  `email` as target identity when your source namespace or attribute is `Email`. 
+*  Input  `hashed_email` as target identity when your source namespace or attribute is `Email_LC_SHA256`.
 
 ## Validate Data Export {#validate}
 
