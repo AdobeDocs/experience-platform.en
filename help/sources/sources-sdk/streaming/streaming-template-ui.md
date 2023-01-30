@@ -29,6 +29,18 @@ This tutorial provides steps for creating a *YOURSOURCE* source connector using 
 * *any account specifics on your side*
 * *how to obtain the authentication credentials to connect to your platform*
 
+### Gather required credentials
+
+In order to connect *YOURSOURCE* to Platform, you must provide values for the following connection properties:
+
+| Credential | Description | Example |
+| --- | --- | --- |
+| *credential one* | *Please add a brief description to your source's authentication credential here* | *Please add an example of your source's authentication credential here* |
+| *credential two* | *Please add a brief description to your source's authentication credential here* | *Please add an example of your source's authentication credential here* |
+| *credential three* | *Please add a brief description to your source's authentication credential here* | *Please add an example of your source's authentication credential here* |
+
+For more information on these credentials, see the *YOURSOURCE* authentication documentation. *Please add link to your platform's authentication documentation here*.
+
 ## Connect your *YOURSOURCE* account
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
