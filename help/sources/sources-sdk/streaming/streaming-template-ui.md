@@ -51,7 +51,7 @@ Under the **Streaming** category, select *YOURSOURCE*, and then select **[!UICON
 
 >[!TIP]
 >
->The screenshots used below are examples. When creating your documentation, please replace the images with screenshots of your actual source. You can use the same mark up pattern and color, as well as the same file names. Please ensure that your screenshot captures the entire Platform UI screen. For information on how to upload your screenshots, see the guide on [submitting your documentation for review](./github.md).
+>The screenshots used below are examples. When creating your documentation, please replace the images with screenshots of your actual source. You can use the same mark up pattern and color, as well as the same file names. Please ensure that your screenshot captures the entire Platform UI screen. For information on how to upload your screenshots, see the guide on [submitting your documentation for review](../documentation/github.md).
 
 ![The Experience Platform sources catalog](../assets/streaming/catalog.png)
 
