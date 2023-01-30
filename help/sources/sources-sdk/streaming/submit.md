@@ -1,12 +1,12 @@
 ---
-title: Submit Your Source
+title: Test And Submit Your Source
 description: The following document provides steps on how to test and verify a new source using the Flow Service API and integrate a new source through Self-Serve Sources (Streaming SDK).
 hide: true
 hidefromtoc: true
 ---
-# Submit your source
+# Test and Submit your source
 
-The final step to integrating your new source to Adobe Experience Platform using Self-Serve Sources (Streaming SDK) is to test your source for verification. Once you have completed your connection specification and updated the streaming flow specification, you can start testing your source's functionality through either the API or the UI. When successful, you can then submit your new source by contacting your Adobe representative.
+The final steps to integrating your new source to Adobe Experience Platform using Self-Serve Sources (Streaming SDK) are to test and submit your new source. Once you have completed your connection specification and updated the streaming flow specification, you can start testing your source's functionality through either the API or the UI. When successful, you can then submit your new source by contacting your Adobe representative.
 
 The following document provides steps on how to test and debug your source using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -60,13 +60,13 @@ The [!DNL Runner] interface appears, allowing you to configure the run order of 
 
 To test your source in the UI, go to the sources catalog of your organization's sandbox in the Platform UI. From here, you should see your new source appear under the *Streaming* category.
 
-With your new source now available in your sandbox, you must follow the sources workflow to test the functionalities. To begin, select **[!UICONTROL Set up]**. begin.
+With your new source now available in your sandbox, you must follow the sources workflow to test the functionalities. To begin, select **[!UICONTROL Set up]**.
 
-![The sources catalog displaying the new streaming source.](../assets/testing)
+![The sources catalog displaying the new streaming source.](../assets/testing/catalog-test.png)
 
-The [!UICONTROL Add data] step appears. To test that your source can stream data, use the left side of the interface to upload [a sample JSON data]. Once your data is uploaded, the right side of the interface updates into a preview, displaying the file hierarchy of your data. Select **[!UICONTROL Next]** to proceed.
+The [!UICONTROL Add data] step appears. To test that your source can stream data, use the left side of the interface to upload [a sample JSON data](../assets/testing/raw.json.zip). Once your data is uploaded, the right side of the interface updates into a preview of the file hierarchy of your data. Select **[!UICONTROL Next]** to proceed.
 
-![The add data step in the sources workflow where you can upload and preview your data before ingestion.](../assets/testing/)
+![The add data step in the sources workflow where you can upload and preview your data before ingestion.](../assets/testing/add-data-test.png)
 
 The [!UICONTROL Dataflow detail] page allows you to select whether you want to use an existing dataset or a new dataset. During this process, you can also configure your data to be ingested to Profile, and enable settings like [!UICONTROL Error diagnostics] and [!UICONTROL Partial ingestion].
 
@@ -74,7 +74,7 @@ For testing, select **[!UICONTROL New dataset]** and provide an output dataset n
 
 When finished, select **[!UICONTROL Next]**.
 
-![The dataflow detail step in the sources workflow.](../assets/testomg)
+![The dataflow detail step in the sources workflow.](../assets/testing/dataflow-details-test.png)
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
@@ -82,7 +82,7 @@ Platform provides intelligent recommendations for auto-mapped fields based on th
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
-![The mapping step of the sources workflow.](../assets/testing/)
+![The mapping step of the sources workflow.](../assets/testing/mapping-test.png)
 
 The **[!UICONTROL Review]** step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
 
@@ -91,12 +91,12 @@ The **[!UICONTROL Review]** step appears, allowing you to review your new datafl
 
 Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
-![The review step of the sources workflow.](../assets/testing/)
+![The review step of the sources workflow.](../assets/testing/review-test.png)
 
-Once your dataflow is created, you must and retrieve your source's streaming endpoint because this is the endpoint that you will use for your webhook. To retrieve your streaming endpoint. Go to the [!UICONTROL Dataflow activity] page of the dataflow that you just created and copy the endpoint from the bottom of the [!UICONTROL Properties] panel, in the right rail.
+Finally, you must retrieve your dataflow's streaming endpoint. You will be using this endpoint to fetch data for your webhook. To retrieve your streaming endpoint. Go to the [!UICONTROL Dataflow activity] page of the dataflow that you just created and copy the endpoint from the bottom of the [!UICONTROL Properties] panel.
 
-![The streaming endpoint in dataflow activity.](../assets/testing/)
+![The streaming endpoint in dataflow activity.](../assets/testing/endpoint-test.png)
 
 ## Submit your source
 
-Once your source is able to complete the entire workflow you can proceed to contact your Adobe representative and submit your source for integration.
+Once your source is able to complete the entire workflow you can proceed to contact your Adobe representative and submit your source for integration across other Experience Platform organizations.
