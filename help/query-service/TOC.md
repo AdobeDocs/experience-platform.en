@@ -29,6 +29,7 @@ feature: Queries
     - [Bot filtering](use-cases/bot-filtering.md)
     - [Create a trended report of events](use-cases/trended-report-of-events.md)
     - [Decile-based derived attributes](use-cases/deciles-use-case.md)
+    - [Fuzzy search](use-cases/fuzzy-search.md)
     - [List the page views of a user](use-cases/list-visitor-sessions.md)
     - [List visitors by their page views](use-cases/visitors-by-number-of-page-views.md)
     - [Propensity score](use-cases/propensity-score.md)
