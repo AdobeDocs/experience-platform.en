@@ -5,9 +5,29 @@ title: Customer authentication configuration
 
 # Customer authentication configuration
 
-The customer authentication configuration section in the destinations configuration generates the [Configure new destination](../../../ui/connect-destination.md) page in the Experience Platform user interface, where users connect Experience Platform to the accounts they have with your destination.
+Before customers can export data from Platform to your destination, they must create a new connection between Experience Platform and your destination, by following the steps described in the [destination connection](../../../ui/connect-destination.md) tutorial.
 
-Depending on which authentication option you indicate in the `authType` field, the Experience Platform page is generated for the users as shown below.
+To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the following destination configuration overview pages:
+
+* [Use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration)
+* [Use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
+
+When creating a destination through Destination SDK, the `customerAuthenticationConfigurations` section defines what customers see in the [authentication screen](../../../ui/connect-destination.md#authenticate). Depending on the destination authentication type, customers must provide various authentication details, such as:
+
+* For destinations using [bearer authentication](#bearer), users must provide a bearer token.
+* For [Amazon S3](#s3) destinations, users must provide their [!DNL Amazon S3] access key and secret key.
+* For [Azure Blob](#blob) destinations, users must provide their [!DNL Azure Blob] connection string.
+
+You can configure customer authentication details via the `/authoring/destinations` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
+
+* [Create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md)
+* [Update a destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md)
+
+This article describes all the supported customer authentication configurations that you can use for your destination, and shows what customers will see in the Experience Platform UI.
+
+>[!IMPORTANT]
+>
+>The customer authentication configuration does not require you to configure any parameters. You can copy and paste the snippets below in your API calls when [creating](../../authoring-api/destination-configuration/create-destination-configuration.md) or [updating](../../authoring-api/destination-configuration/update-destination-configuration.md) a destination configuration, and your users will see the corresponding authentication screen in the Platform UI.
 
 ## Supported integration types {#supported-integration-types}
 
@@ -18,13 +38,13 @@ Refer to the table below for details on what type of destinations support the fu
 | Real-time (streaming) integrations | :white_check_mark: |
 | File-based (batch) integrations | :white_check_mark: |
 
-## Bearer authentication
+## Bearer authentication {#bearer}
 
 When you configure the bearer authentication type, users are required to input the bearer token that they obtain from your destination.
 
 ![UI render with bearer authentication](../../assets/functionality/destination-configuration/bearer-authentication-ui.png)
 
-To set up bearer type authentication for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
+To set up bearer type authentication for your destination, configure the `customerAuthenticationConfigurations` section via the `/destinations` endpoint as shown below:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -34,7 +54,7 @@ To set up bearer type authentication for your destination, configure the `custom
 ]
 ```
 
-## OAuth 2 authentication
+## OAuth 2 authentication {#oauth2}
 
 Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 authentication flow to your destination, as shown in the example below for the Twitter Custom Audiences destination. For detailed information on configuring OAuth 2 authentication to your destination endpoint, read the dedicated [Destination SDK OAuth 2 authentication page](oauth2-authentication.md).
 
@@ -51,11 +71,11 @@ Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 auth
 
 [!DNL Amazon S3] authentication is supported for file-based destinations in Experience Platform.
 
-When you configure the Amazon S3 authentication type, users are required to input the S3 credentials.
+When you configure the Amazon S3 authentication type, users are required to input their S3 credentials.
 
 ![UI render with S3 authentication](../../assets/functionality/destination-configuration/s3-authentication-ui.png)
 
-To set up [!DNL Amazon S3] authentication for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
+To set up [!DNL Amazon S3] authentication for your destination, configure the `customerAuthenticationConfigurations` section via the `/destinations` endpoint as shown below:
 
 ```json
 "customerAuthenticationConfigurations":[

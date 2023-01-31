@@ -94,6 +94,28 @@ In the example below, a partner creates a [URL-based](#streaming-example) integr
 }
 ```
 
+To give users the option of selecting a value from the Platform UI, the `{{customerData.region}}` parameter must also be defined in the [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md) API call, as shown below:
+
+```json
+
+"customerDataFields":[
+   ...
+   {
+      "name":"region",
+      "title":"Region",
+      "description":"Select an option",
+      "type":"string",
+      "isRequired":true,
+      "readOnly":false,
+      "enum":[
+         "US",
+         "EU"
+      ]
+   },
+   ...
+```
+
+
 As a result, when users go through the [destination connection tutorial](../../../ui/connect-destination.md), they must select a region before they can connect to the destination platform. When they connect to the destination, the templatized field `{{customerData.region}}` is replaced with the value that the user has selected in the UI, as shown in the image below.
 
 ![Ui image showing the destination connection screen with a region selector.](../../assets/functionality/destination-server/server-spec-template-region.png)
