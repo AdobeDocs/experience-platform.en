@@ -42,6 +42,10 @@ Refer to the table below for details on what type of destinations support the fu
 | Real-time (streaming) integrations | :white_check_mark: |
 | File-based (batch) integrations | :white_check_mark: |
 
+## Authentication rule configuration {#authentication-rule}
+
+When using any of the customer authentication configurations described in this page, always configure the `authenticationRule` parameter in [destination delivery](destination-delivery.md) as `"CUSTOMER_AUTHENTICATION"`.
+
 ## Bearer authentication {#bearer}
 
 When you configure the bearer authentication type, users are required to input the bearer token that they obtain from your destination.
@@ -64,10 +68,15 @@ Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 auth
 
 ![UI render with OAuth 2 authentication](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
-|Parameter | Type | Description|
-|---------|----------|------|
-|`customerAuthenticationConfigurations` | String | Indicates the configuration used to authenticate Experience Platform customers to your server. See `authType` below for accepted values. |
-|`authType` | String | Accepted values for streaming destinations are:<ul><li>`BEARER`. If your destination supports bearer authentication, set `"authType":"Bearer"` and  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](destination-delivery.md).</li><li>`OAUTH2`. If your destination supports OAuth 2 authentication, set `"authType":"OAUTH2"` and add the required fields for OAuth 2, as shown in the [Destination SDK OAuth 2 authentication page](oauth2-authentication.md). Additionally, set `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](destination-delivery.md).</li>|
+To set up [!DNL OAuth2] authentication for your destination, configure the `customerAuthenticationConfigurations` section via the `/destinations` endpoint as shown below:
+
+```json
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"OAUTH2"
+   }
+]
+```
 
 {style="table-layout:auto"}
 
