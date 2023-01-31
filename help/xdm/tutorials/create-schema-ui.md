@@ -171,8 +171,10 @@ Select the **plus (+)** icon next to the `loyaltyTier` object to start adding su
 
 Each field requires the following information:
 
-* **[!UICONTROL Field Name]:** The name of the field, written in camel case. Example: loyaltyLevel
-* **[!UICONTROL Display Name]:** The name of the field, written in title case. Example: Loyalty Level
+* **[!UICONTROL Field Name]:** The name of the field, preferably written in camelCase. No space characters are allowed. This is the name used to reference the field in code and in other downstream applications. 
+    * Example: loyaltyLevel
+* **[!UICONTROL Display Name]:** The name of the field, written in title case. This is the name that will be displayed in the canvas when viewing or editing the schema.
+    * Example: Loyalty Level
 * **[!UICONTROL Type]:** The data type of the field. This includes basic scalar types and any data types defined in the [!DNL Schema Registry]. Examples: [!UICONTROL String], [!UICONTROL Integer], [!UICONTROL Boolean], [!UICONTROL Person], [!UICONTROL Address], [!UICONTROL Phone number], etc.
 * **[!UICONTROL Description]:** An optional description of the field should be included with a maximum of 200 characters.
 
