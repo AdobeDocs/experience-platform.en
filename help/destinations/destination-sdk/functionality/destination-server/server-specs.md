@@ -5,14 +5,18 @@ title: Server specs for destinations created with Destination SDK
 
 # Server specs for destinations created with Destination SDK
 
-Destination server specs define the type of destination server your integration will use.
+Destination server specs define the type of destination platform that will receive the data from Adobe Experience Platform, and the communication parameters between Platform and your destination. For instance:
+
+* A [streaming](#streaming-example) destination server spec defines the HTTP server endpoint that will receive the HTTP messages from Platform.
+* An [Amazon S3](#s3-example) destination server spec defines the [!DNL S3] bucket name and path where Platform will export the files.
+* An [SFTP](#sftp-example) destination server spec defines the host name, root directory, communication port, and encryption type of the SFTP server where Platform will export the files.
 
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the following destination configuration overview pages:
 
 * [Use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-server-template-configuratiom)
 * [Use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)
 
-You can configure the destination server specs via the `/authoring/destination-servers` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page. 
+You can configure the destination server specs via the `/authoring/destination-servers` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
 
 * [Create a destination server configuration](../../authoring-api/destination-server/create-destination-server.md)
 * [Update a destination server configuration](../../authoring-api/destination-server/update-destination-server.md)
@@ -28,36 +32,73 @@ Refer to the table below for details on what type of destinations support the fu
 | Real-time (streaming) integrations | :white_check_mark: |
 | File-based (batch) integrations | :white_check_mark: |
 
-When [creating](../../authoring-api/destination-server/create-destination-server.md) or [updating](../../authoring-api/destination-server/update-destination-server.md) a destination server], use one of the server type configurations described below, depending on your integration requirements, and update their configuration parameters accordingly.
+When [creating](../../authoring-api/destination-server/create-destination-server.md) or [updating](../../authoring-api/destination-server/update-destination-server.md) a destination server, use one of the server type configurations described in this page. Depending on your integration requirements, make sure to replace the sample parameter values from these examples with your own.
 
-## Defining configuration parameters {#defining-configuration-parameters}
+## Hard-coded versus templatized fields
 
-When creating a destination server through Destination SDK, you can define configuration parameter values either by hard-coding them into the configuration, or by using macros to allow users to enter their own configuration details into the Platform UI.
+When creating a destination server through Destination SDK, you can define configuration parameter values either by hard-coding them into the configuration, or by using templatized fields. Templatized fields allow you to read user-provided values from the Platform UI.
 
-Most destination server parameters have two configurable options, depending on whether you choose to hard-code them or to use macros:
+Destination server parameters have two configurable fields. These options dictate whether you are using hard-coded or templatized values.
 
 |Parameter | Type | Description|
 |---|---|---|
-|`templatingStrategy`|String|*Required.* Defines whether there is a hard-coded value provided via the `value` field, or a user-provided value in the UI. Supported values: <ul><li>`NONE`: Use this value when you are hard-coding the parameter value via the `value` parameter (see the next row). Example:`"value": "my-storage-bucket"`.</li><li>`PEBBLE_V1`: Use this value when you want your users to provide a parameter value in the UI. Example: `"value": "{{customerData.bucket}}"`. </li></ul> |
-|`value`|String|*Required*. Defines the parameter value. Supported value types: <ul><li>**Hard-coded value**: Use a hard-coded value (such as `"value": "my-storage-bucket"`) when you do not need users to enter a parameter value in the UI. When hard-coding a value, `templatingStrategy` should always be set to `NONE`.</li><li>**Macro-defined value**: Use a macro-defined value (such as `"value": "{{customerData.bucket}}"`) when you want your users to provide a parameter value in the UI. When using macro-defined values, `templatingStrategy` should always be set to `PEBBLE_V1`.</li></ul>|
+|`templatingStrategy`|String|*Required.* Defines whether there is a hard-coded value provided via the `value` field, or a user-configurable value in the UI. Supported values: <ul><li>`NONE`: Use this value when you are hard-coding the parameter value via the `value` parameter (see the next row). Example:`"value": "my-storage-bucket"`.</li><li>`PEBBLE_V1`: Use this value when you want your users to provide a parameter value in the UI. Example: `"value": "{{customerData.bucket}}"`. </li></ul> |
+|`value`|String|*Required*. Defines the parameter value. Supported value types: <ul><li>**Hard-coded value**: Use a hard-coded value (such as `"value": "my-storage-bucket"`) when you do not need users to enter a parameter value in the UI. When hard-coding a value, `templatingStrategy` should always be set to `NONE`.</li><li>**Templatized value**: Use a templatized value (such as `"value": "{{customerData.bucket}}"`) when you want your users to provide a parameter value in the UI. When using templatized values, `templatingStrategy` should always be set to `PEBBLE_V1`.</li></ul>|
 
-### Hard-coding parameter values {#hard-coding-values}
+### When to use hard-coded versus templatized fields
 
-When you use hard-coded parameter values in your destination server configuration, the connection between Adobe Experience Platform and your destination platform is handled without any input from the user.
+Both hard-coded and templatized fields have their own uses in Destination SDK, depending on what type of integration you are creating.
 
-When going through the [destination connection tutorial](../../../ui/connect-destination.md), users will not see an [authentication step](../../../ui/connect-destination.md#authenticate). Instead, the authentication is handled by Platform, as shown in the image below.
+**Connecting to your destination without user input**
 
-![Ui image showing the authentication between Platform and a destination.](../../assets/functionality/destination-server/server-spec-hardcoded.png)
+When users [connect to your destination](../../../ui/connect-destination.md) in the Platform UI, you might want to handle the destination connection process without their input.
 
-### Using macro-defined parameter values {#using-macros}
+To do this, you can hard-code the destination platform connection parameters in the server spec. When you use hard-coded parameter values in your destination server configuration, the connection between Adobe Experience Platform and your destination platform is handled without any input from the user.
 
-When you use macro-defined parameter values in your destination server configuration, users must manually enter the destination connection parameters in the Platform UI.
+In the example below, a partner creates a Data Landing Zone destination server with the `path.value` field being hardcoded.
 
-When going through the [destination connection tutorial](../../../ui/connect-destination.md), users will see an [authentication step](../../../ui/connect-destination.md#authenticate). In this step, they must enter their destination platform connection details.
+```json
+{
+   "name":"Data Landing Zone destination server",
+   "destinationServerType":"FILE_BASED_DLZ",
+   "fileBasedDlzDestination":{
+      "path":{
+         "templatingStrategy":"NONE",
+         "value":"Your/hardcoded/path/here"
+      },
+      "useCase": "Your use case"
+   }
+}
+```
 
-![Ui image showing the authentication between Platform and an S destination.](../../assets/functionality/destination-server/server-spec-macro.png)
+As a result, when users go through the [destination connection tutorial](../../../ui/connect-destination.md), they will not see an [authentication step](../../../ui/connect-destination.md#authenticate). Instead, the authentication is handled by Platform, as shown in the image below.
 
-## URL-based (streaming) destination server {#url-destination-server}
+![Ui image showing the authentication screen between Platform and a DLZ destination.](../../assets/functionality/destination-server/server-spec-hardcoded.png)
+
+**Connecting to your destination with user input**
+
+When the connection between Platform and your destination should be established following a specific user input in the Platform UI, such as selecting an API endpoint or providing a field value, you can use templatized fields in the server spec to read the user input and connect to your destination platform.
+
+In the example below, a partner creates a [URL-based](#streaming-example) integration and the `url.value` field uses the templatized parameter `{{customerData.region}}`.
+
+```json
+{
+   "name":"Templatized API endpoint example",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"https://api.yourcompany.com/data/{{customerData.region}}/items"
+      }
+   }
+}
+```
+
+As a result, when users go through the [destination connection tutorial](../../../ui/connect-destination.md), they must select a region before they can connect to the destination platform. When they connect to the destination, the templatized field `{{customerData.region}}` is replaced with the value that the user has selected in the UI, as shown in the image below.
+
+![Ui image showing the destination connection screen with a region selector.](../../assets/functionality/destination-server/server-spec-template-region.png)
+
+## URL-based (streaming) destination server {#streaming-example}
 
 This destination server allows you export data from Adobe Experience Platform to your destination via HTTP exports. The server configuration contains information about the server receiving the messages (the server on your side).
 
@@ -236,10 +277,6 @@ The sample below shows an example of a destination server configuration for a [!
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.path}}"
       },
-      "container":{
-         "templatingStrategy":"PEBBLE_V1",
-         "value":"{{customerData.container}}"
-      }
       "useCase": "Your use case"
    }
 }
