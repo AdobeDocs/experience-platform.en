@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;user guide;customer ai;popular topics;access controls;create instance;
+keywords: Experience Platform;user guide;customer ai;popular topics;access controls;create model;
 solution: Experience Platform
 feature: Customer AI
 title: Access Control for Customer AI
@@ -18,23 +18,23 @@ This functionality allows you to label Experience Data Model (XDM) schema fields
 
 Through attribute-based access control, administrators of your organization can control users' access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
-Due to attribute-based access control, some fields and functionalities would have access restricted and be unavailable for certain Customer AI service instances. Examples include, "Identity", "Score Definition", and "Clone."
+Due to attribute-based access control, some fields and functionalities would have access restricted and be unavailable for certain Customer AI service models. Examples include, "Identity", "Score Definition", and "Clone."
 
-![The Customer AI workspace with the restricted fields of the service instance results highlighted.](../images/user-guide/unavailable-functionalities.png)
+![The Customer AI workspace with the restricted fields of the service model results highlighted.](../images/user-guide/unavailable-functionalities.png)
 
 At the top of the Customer AI workspace **insights page**, notice that the details in the sidebar, score definition, identity, and profile attributes all show "Access Restricted."
 
 ![The Customer AI workspace with the restricted fields of the schema highlighted.](../images/user-guide/access-restricted.png)
 
-When you preview datasets with restricted schema on the **[!UICONTROL Create instance workflow]** page, a warning appears to let you know that [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
+When you preview datasets with restricted schema on the **[!UICONTROL Create model workflow]** page, a warning appears to let you know that [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
 
 ![The Customer AI workspace with the restricted fields of the preview datasets with restricted schema results highlighted.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
 
-After you create an instance with restricted information and proceed to the **[!UICONTROL Define goal]** step, a warning is displayed at the top: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
+After you create an model with restricted information and proceed to the **[!UICONTROL Define goal]** step, a warning is displayed at the top: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
 
-![The Customer AI workspace with the restricted fields of the service instance results highlighted.](../images/user-guide/information-not-displayed-save-and-exit.png)
+![The Customer AI workspace with the restricted fields of the service model results highlighted.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
-When using access control, the **View Customer AI** and **Manage Customer AI** privileges grant access to different functionalities of Customer AI. The **Manage Customer AI** permission lets you **create**,**update**, **delete**, **enable**, or **disable** an instance while **View Customer AI** lets you read or view it. The **create**, **update** and **delete** actions are recorded by audit logs.
+When using access control, the **View Customer AI** and **Manage Customer AI** privileges grant access to different functionalities of Customer AI. The **Manage Customer AI** permission lets you **create**,**update**, **delete**, **enable**, or **disable** a model while **View Customer AI** lets you read or view it. The **create**, **update** and **delete** actions are recorded by audit logs.
 
 See the documentation to learn [assigning permissions for access control](../../../help/access-control/home.md) or how to [use audit logs to monitor access and activity](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
 
