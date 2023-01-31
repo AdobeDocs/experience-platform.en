@@ -5,12 +5,16 @@ title: Customer authentication configuration
 
 # Customer authentication configuration
 
-Before customers can export data from Platform to your destination, they must create a new connection between Experience Platform and your destination, by following the steps described in the [destination connection](../../../ui/connect-destination.md) tutorial.
+Experience Platform provides great flexibility in the authentication protocols available to partners and customers. You can configure your destination to support any of the industry-standard authentication methods like [!DNL OAuth2], bearer token authentication, password authentication, and many more.
+
+This page explains how to set up your destination using your preferred authentication method. Based on the authentication configuration that you use when you create your destination, customers will see different types of authentication pages when connecting to the destination in the Experience Platform UI.
 
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the following destination configuration overview pages:
 
 * [Use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
+
+Before customers can export data from Platform to your destination, they must create a new connection between Experience Platform and your destination, by following the steps described in the [destination connection](../../../ui/connect-destination.md) tutorial.
 
 When creating a destination through Destination SDK, the `customerAuthenticationConfigurations` section defines what customers see in the [authentication screen](../../../ui/connect-destination.md#authenticate). Depending on the destination authentication type, customers must provide various authentication details, such as:
 
