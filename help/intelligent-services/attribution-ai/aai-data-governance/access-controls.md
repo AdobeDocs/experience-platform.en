@@ -24,23 +24,23 @@ This functionality allows you to label Experience Data Model (XDM) schema fields
 
 Through attribute-based access control, administrators can control users' access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that corresponds to those fields.
 
-Due to attribute-based access control, some fields and functionalities might have access restricted and be unavailable for certain Attribution AI service instances. Examples include, "Identity", "Score Definition", and "Clone."
+Due to attribute-based access control, some fields and functionalities might have access restricted and be unavailable for certain Attribution AI service models. Examples include, "Identity", "Score Definition", and "Clone."
 
 At the top of the Attribution AI workspace **insights page**, the details that show in the sidebar have restricted access.
 
 ![The Attribution AI workspace with the restricted schema fields highlighted.](./images/user-guide/access-restricted.png)
 
-If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
+If you select datasets with restricted schemas on the **[!UICONTROL Create model workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
 
 ![The Attribution AI workspace with the restricted dataset fields highlighted.](./images/user-guide/restricted-info-excluded.png)
 
-When you preview datasets with restricted schema on the **[!UICONTROL Create instance workflow]** page, a warning appears to let you know that [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
+When you preview datasets with restricted schema on the **[!UICONTROL Create model workflow]** page, a warning appears to let you know that [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
 
 ![The Attribution AI workspace with the results of restricted previewed schema fields highlighted.](./images/user-guide/restricted-dataset-preview.png)
 
-After you create an instance with restricted information and proceed to the **[!UICONTROL Define goal]** step, a warning is displayed at the top: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
+After you create a model with restricted information and proceed to the **[!UICONTROL Define goal]** step, a warning is displayed at the top: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
 
-![The Attribution AI workspace with the restricted fields of the instance results highlighted.](./images/user-guide/information-not-displayed-save-and-exit.png)
+![The Attribution AI workspace with the restricted fields of the model results highlighted.](./images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Next steps
 
