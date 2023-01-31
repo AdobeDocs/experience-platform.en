@@ -161,3 +161,13 @@ Below is a complete reference of all available file formatting options in Destin
 |`csvOptions.emptyValue.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets the string representation of an empty value.|`""`|`"emptyValue":""` --> `male,"",John`|`"emptyValue":"empty"` --> `male,empty,John`|
 
 {style="table-layout:auto"}
+
+## Next steps {#next-steps}
+
+After reading this article, you should have a better understanding of how file formatting works in a destination server configuration, and how you can configure it.
+
+To learn more about the other destination server components, see the following articles:
+
+* [Server specs for destinations created with Destination SDK](server-specs.md)
+* [Templating specs](templating-specs.md)
+* [Message format](message-format.md)
