@@ -175,14 +175,20 @@ To set up [!DNL Google Cloud Storage] authentication for your destination, confi
 ]
 ```
 
-<!-- TBD if we keep this
+## Next steps {#next-steps}
 
-## When to use the `/credentials` API endpoint {#when-to-use}
+After reading this article, you should have a better understanding of how you can configure user authentication to your destination platform.
 
->[!IMPORTANT]
->
->In most cases, you *do not* need to use the `/credentials` API endpoint. Instead, you can configure the authentication information for your destination via the `customerAuthenticationConfigurations` parameters of the `/destinations` endpoint.
+To learn more about the other destination components, see the following articles:
 
-The `/credentials` API endpoint is provided to destination developers for the cases when there is a global authentication system between Adobe and your destination and [!DNL Platform] customers do not need to provide any authentication credentials to connect to your destination.
-
-In this case, you must create a credentials object by using the `/credentials` API endpoint. You must also select `PLATFORM_AUTHENTICATION` in the [destination configuration](../../functionality/destination-configuration/destination-delivery.md). Read more on [creating a credential configuration](../../credentials-api/create-credential-configuration.md) for a complete list of operations that you can perform on the `/credentials` endpoint. -->
+* [Customer authentication configuration](customer-authentication.md)
+* [OAuth2 authentication](destination-configuration/oauth2-authentication.md)
+* [Customer data fields](destination-configuration/customer-data-fields.md)
+* [UI attributes](destination-configuration/ui-attributes.md)
+* [Schema configuration](destination-configuration/schema-configuration.md)
+* [Identities and attributes](destination-configuration/identities-attributes.md)
+* [Destination delivery](destination-configuration/destination-delivery.md)
+* [Audience metadata configuration](destination-configuration/audience-metadata-configuration.md)
+* [Aggregation policy](destination-configuration/aggregation-policy.md)
+* [Batch configuration](destination-configuration/batch-configuration.md)
+* [Historical profile qualifications](destination-configuration/historical-profile-qualifications.md)
