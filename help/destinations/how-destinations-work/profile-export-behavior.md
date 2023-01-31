@@ -141,6 +141,7 @@ For example, in the export setting illustrated below, where a segment is exporti
 * A profile is included in an incremental file export when it qualifies or disqualifies for the segment.
 * A profile is *not* included in an incremental file export when a new phone number is added to the identity graph.
 * A profile is *not* included in an incremental file export when the value of any of the mapped XDM fields like `xdm: loyalty.points`, `xdm: loyalty.tier`, `xdm: personalEmail.address` is updated on a profile.
+* Whenever the `segmentMembership.status` XDM field is mapped in the destination activation workflow, profiles exiting the segment are also included in exported incremental files, with an `exited` status.
 
 >[!ENDSHADEBOX]
 
