@@ -1,6 +1,5 @@
 ---
 keywords: insights;attribution ai;attribution ai insights;AAI query service;attribution queries;attribution scores
-feature: Attribution AI audit logs
 title: Audit Logs Overview
 description: Learn how to view and manage audit logs in Attribution AI.
 ---

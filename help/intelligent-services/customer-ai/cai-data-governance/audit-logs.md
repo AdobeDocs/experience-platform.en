@@ -1,7 +1,6 @@
 ---
 keywords: insights;customer ai;customer ai insights;CAI query service;customer ai queries;customer ai scores
-feature: Customer AI audit logs
-title: Audit Logs Overview
+title: Audit Logs Overview in Customer AI
 description: Learn how to view and manage audit logs in Customer AI.
 ---
 # Audit logs
