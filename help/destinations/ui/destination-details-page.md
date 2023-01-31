@@ -77,7 +77,7 @@ The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to
 
 ![Dataflow runs view](../assets/ui/details-page/dataflow-runs.png)
 
-### Dataflow runs duration
+### Dataflow runs duration {#dataflow-runs-duration}
 
 There is a known issue in the displayed duration of dataflow runs. While the **[!UICONTROL Processing duration]** indicated for most dataflow runs is about four hours, as shown in the image below, the actual processing time for any dataflow run is much shorter. Dataflow run windows stay open for longer in the event that Experience Platform needs to retry making calls to the destination.  
 
