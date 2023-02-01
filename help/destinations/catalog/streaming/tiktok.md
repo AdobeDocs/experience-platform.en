@@ -1,9 +1,9 @@
 ---
-title: TikTok // Replace with the name of destination
-description: Use this template to create public documentation for your destination in the Adobe Experience Platform catalog. // Replace with the paragraph in the Overview section
+title: TikTok connection // Replace with the name of destination
+description: Create segments from your customer lists from people who've visited your site or people who have already interacted with your content on TikTok and quickly push the desired segment to TikTok using TikTok's real-time streaming API to use for ad targeting. // Replace with the paragraph in the Overview section
 ---
 
-# TikTok connection {#your-destination}
+# TikTok connection
 
 ## Overview {#overview}
 
@@ -23,7 +23,7 @@ An athletic apparel brand wants to reach existing customers through their social
 
 ## Prerequisites {#prerequisites}
 
-The user would need to authenticate with a TikTok Ads Manager account they want to add an audience to. Details on sharing advertiser accounts can be found [here](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378). Specifically, the user would need the "Audience Management" permission.
+Before you are able to activate data to TikTok, you must authenticate with a TikTok Ads Manager account that you want to add an audience to. Details on sharing advertiser accounts can be found [in the TikTok API documentation](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378). Specifically, you would need the "Audience Management" permission.
 
 ## Supported identities {#supported-identities}
 
@@ -44,7 +44,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the *YourDestination* destination.|
+| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the TikTok destination.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
