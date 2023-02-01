@@ -57,7 +57,7 @@ Allow-listing is mandatory before setting up your first [!DNL Google Ad Manager]
 1. Follow the steps described in the [Google Ad Manager documentation](https://support.google.com/admanager/answer/3289669?hl=en) to add Adobe as a linked Data Management Platform (DMP).
 2. In the [!DNL Google Ad Manager] interface, go to **[!UICONTROL Admin]** > **[!UICONTROL Global Settings]** > **[!UICONTROL Network Settings]**, and enable the **[!UICONTROL API Access]** slider.
 
-While going through the allow-listing process, make sure to have the information below at hand.
+While going through the allow-listing process, write down the following information. You will need these IDs in the [destination connection](#connect) step.
 
 * **Account ID**: Adobe's account ID with Google. Account ID: 87933855.
 * **Customer ID**: Adobe's customer account ID with Google. Customer ID: 89690775.
