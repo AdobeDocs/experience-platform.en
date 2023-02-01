@@ -10,7 +10,7 @@ description: This document provides information on attribute-based access contro
 
 Access control for Attribution AI is provided through Adobe Experience Platform in the [Adobe Admin Console](https://adminconsole.adobe.com/). This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes.
 
-For more information on access control, see the [access control overview](../../access-control/home).
+For more information on access control, see the [access control overview](../../../access-control/home).
 
 ## Attribute-based access control
 
@@ -28,11 +28,11 @@ Due to attribute-based access control, some fields and functionalities might hav
 
 At the top of the Attribution AI workspace **insights page**, the details that show in the sidebar have restricted access.
 
-![The Attribution AI workspace with the restricted schema fields highlighted.](./images/user-guide/access-restricted.png)
+![The Attribution AI workspace with the restricted schema fields highlighted.](../images/user-guide/access-restricted.png)
 
 If you select datasets with restricted schemas on the **[!UICONTROL Create model workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
 
-![The Attribution AI workspace with the restricted dataset fields highlighted.](./images/user-guide/restricted-info-excluded.png)
+![The Attribution AI workspace with the restricted dataset fields highlighted.](../images/user-guide/restricted-info-excluded.png)
 
 When you preview datasets with restricted schema on the **[!UICONTROL Create model workflow]** page, a warning appears to let you know that [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
 
@@ -40,8 +40,8 @@ When you preview datasets with restricted schema on the **[!UICONTROL Create mod
 
 After you create a model with restricted information and proceed to the **[!UICONTROL Define goal]** step, a warning is displayed at the top: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
 
-![The Attribution AI workspace with the restricted fields of the model results highlighted.](./images/user-guide/information-not-displayed-save-and-exit.png)
+![The Attribution AI workspace with the restricted fields of the model results highlighted.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Next steps
 
-By reading this guide, you have been introduced to the main principles of access control in [!DNL Experience Platform]. You can now continue to the [access control user guide](./ui/overview.md) for detailed steps on how use the [!DNL Admin Console] to create product profiles and assign permissions for [!DNL Platform].
+By reading this guide, you have been introduced to the main principles of access control in [!DNL Experience Platform]. You can now continue to the [access control user guide](../overview.md) for detailed steps on how use the [!DNL Admin Console] to create product profiles and assign permissions for [!DNL Platform].

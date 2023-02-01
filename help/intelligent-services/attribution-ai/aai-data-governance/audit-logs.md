@@ -9,7 +9,7 @@ To increase the transparency and visibility of activities performed in the syste
 
 In a basic sense, an audit log tells who performed what action, and when. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type. It tracks the create, update, and delete actions taken by users in Attribution AI.
 
-[The audit logs selected in the Attribution AI workspace](../../../attribution-ai/aai-data-governance/images/data-governance/audit-logs-cai.png)
+<!-- [The audit logs selected in the Attribution AI workspace](../../../attribution-ai/aai-data-governance/images/data-governance/audit-logs-cai.png) -->
 
 ## Access to audit logs
 
