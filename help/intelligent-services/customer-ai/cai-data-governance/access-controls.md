@@ -36,8 +36,8 @@ After you create an model with restricted information and proceed to the **[!UIC
 
 When using access control, the **View Customer AI** and **Manage Customer AI** privileges grant access to different functionalities of Customer AI. The **Manage Customer AI** permission lets you **create**,**update**, **delete**, **enable**, or **disable** a model while **View Customer AI** lets you read or view it. The **create**, **update** and **delete** actions are recorded by audit logs.
 
-See the documentation to learn [assigning permissions for access control](../../../help/access-control/home.md) or how to [use audit logs to monitor access and activity](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
+See the documentation to learn [assigning permissions for access control](../../../access-control/home.md) or how to [use audit logs to monitor access and activity](../../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Next steps
 
-By reading this guide, you have been introduced to the main principles of access control in [!DNL Experience Platform]. You can now continue to the [access control user guide](./ui/overview.md) for detailed steps on how use the [!DNL Admin Console] to create product profiles and assign permissions for [!DNL Platform].
+By reading this guide, you have been introduced to the main principles of access control in [!DNL Experience Platform]. You can now continue to the [access control user guide](../overview.md) for detailed steps on how use the [!DNL Admin Console] to create product profiles and assign permissions for [!DNL Platform].

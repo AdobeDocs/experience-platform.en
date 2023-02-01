@@ -15,4 +15,4 @@ In a basic sense, an audit log tells who performed what action, and when. Each a
 
 When the feature is enabled for your organization, audit logs are automatically collected as activity occurs. You do not need to manually enable log collection.
 
-In order to view and export audit logs, you must have been granted the Audit Logs Access access control permission in Adobe Console. To learn how to manage individual permissions for Customer AI features, please refer to the [access control documentation](../../customer-ai/user-guide/access-controls.md). 
+In order to view and export audit logs, you must have been granted the Audit Logs Access access control permission in Adobe Console. To learn how to manage individual permissions for Customer AI features, please refer to the [access control documentation](../cai-data-governance/access-controls.md). 
