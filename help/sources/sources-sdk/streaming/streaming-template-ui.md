@@ -41,6 +41,10 @@ In order to connect *YOURSOURCE* to Platform, you must provide values for the fo
 
 For more information on these credentials, see the *YOURSOURCE* authentication documentation. *Please add link to your platform's authentication documentation here*.
 
+### Integrate *YOURSOURCE* with your webhook
+
+*Streaming SDK requires your source to be able to support webhooks in order to communicate with Experience Platform. In this section, you must provide the steps that your users will have to follow in order to integrate YOURSOURCE with a webhook.*
+
 ## Connect your *YOURSOURCE* account
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
@@ -100,6 +104,14 @@ The **[!UICONTROL Review]** step appears, allowing you to review your new datafl
 Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
 ![review](../assets/streaming/review.png)
+
+## Get your streaming endpoint URL
+
+With your streaming dataflow created, you can now retrieve your streaming endpoint URL. This endpoint will be used to subscribe to your webhook, allowing your streaming source to communicate with Experience Platform. 
+
+To retrieve your streaming endpoint, go to the [!UICONTROL Dataflow activity] page of the dataflow that you just created and copy the endpoint from the bottom of the [!UICONTROL Properties] panel.
+
+![The streaming endpoint in dataflow activity.](../assets/testing/endpoint-test.png)
 
 ## Next steps
 

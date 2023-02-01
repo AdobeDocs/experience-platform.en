@@ -35,7 +35,7 @@ You can also download the documentation templates below:
 
 >[!IMPORTANT]
 >
->The source that you are integrating with Experience Platform must be able to support a webhook, to which an endpoint can be subscribed to, to send updates.
+>The source that you are integrating with Experience Platform must be able to support a webhook to which an endpoint can be subscribed to, to send updates.
 
 To use Self-Serve Sources (Streaming SDK), you must ensure that you have access to a sandbox organization provisioned with Adobe Experience Platform Sources.
 

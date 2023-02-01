@@ -39,6 +39,10 @@ In order to connect *YOURSOURCE* to Experience Platform, you must provide values
 
 For more information on these credentials, see the *YOURSOURCE* authentication documentation. *Please add link to your platform's authentication documentation here*.
 
+### Integrate *YOURSOURCE* with your webhook
+
+*Streaming SDK requires your source to be able to support webhooks in order to communicate with Experience Platform. In this section, you must provide the steps that your users will have to follow in order to integrate YOURSOURCE with a webhook.*
+
 ## Connect *YOURSOURCE* to Platform using the [!DNL Flow Service] API
 
 The following tutorial walks you through the steps to create a *YOURSOURCE* source connection and create a dataflow to bring *YOURSOURCE* data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
@@ -305,9 +309,6 @@ curl -X POST \
 | `transformations.name` | The name assigned to the transformation. |
 | `transformations.params.mappingId` | The [mapping ID](#mapping) generated in an earlier step. |
 | `transformations.params.mappingVersion` | The corresponding version of the mapping ID. This value defaults to `0`. |
-| `scheduleParams.startTime` | This property contains information on the ingestion scheduling of the dataflow. |
-| `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
-| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
 
 **Response**
 
@@ -317,6 +318,110 @@ A successful response returns the ID (`id`) of the newly created dataflow. You c
 {
      "id": "993f908f-3342-4d9c-9f3c-5aa9a189ca1a",
      "etag": "\"510bb1d4-8453-4034-b991-ab942e11dd8a\""
+}
+```
+
+### Get your streaming endpoint URL
+
+With your dataflow created, you can now retrieve your streaming endpoint URL. You will use this endpoint URL to subscribe your source to a webhook, allowing your source to communicate with Experience Platform.
+
+To retrieve your streaming endpoint URL, make a GET request to the `/flows` endpoint and provide the ID of your dataflow.
+
+**API format**
+
+```http
+GET /flows/{FLOW_ID}
+```
+
+**Request**
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/flows/993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response returns information on your dataflow, including your endpoint URL, marked as `inletUrl`.
+
+```json
+{
+  "items": [
+    {
+      "id": "993f908f-3342-4d9c-9f3c-5aa9a189ca1a",
+      "createdAt": 1669238699119,
+      "updatedAt": 1669238699119,
+      "createdBy": "acme@AdobeID",
+      "updatedBy": "acme@AdobeID",
+      "createdClient": "{CREATED_CLIENT}",
+      "updatedClient": "{UPDATED_CLIENT}",
+      "sandboxId": "{SANDBOX_ID}",
+      "sandboxName": "{SANDBOX_NAME}",
+      "imsOrgId": "{ORG_ID}",
+      "name": "Streaming Dataflow for a Streaming SDK source",
+      "description": "Streaming Dataflow for a Streaming SDK source",
+      "flowSpec": {
+        "id": "e77fde5a-22a8-11ed-861d-0242ac120002",
+        "version": "1.0"
+      },
+      "state": "enabled",
+      "version": "\"a1011225-0000-0200-0000-63c78ae60000\"",
+      "etag": "\"a1011225-0000-0200-0000-63c78ae60000\"",
+      "sourceConnectionIds": [
+        "246d052c-da4a-494a-937f-a0d17b1c6cf5"
+      ],
+      "targetConnectionIds": [
+        "7c96c827-3ffd-460c-a573-e9558f72f263"
+      ],
+      "inheritedAttributes": {
+        "properties": {
+          "isSourceFlow": true
+        },
+        "sourceConnections": [
+          {
+            "id": "246d052c-da4a-494a-937f-a0d17b1c6cf5",
+            "connectionSpec": {
+              "id": "bdb5b792-451b-42de-acf8-15f3195821de",
+              "version": "1.0"
+            }
+          }
+        ],
+        "targetConnections": [
+          {
+            "id": "7c96c827-3ffd-460c-a573-e9558f72f263",
+            "connectionSpec": {
+              "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+              "version": "1.0"
+            }
+          }
+        ]
+      },
+      "options": {
+        "errorDiagnosticsEnabled": true,
+        "inletUrl": "https://dcs-int.adobedc.net/collection/ab65636c31778fb0455c439ffb48a5433a34d443f4c83c4b5beda9c5688797c5"
+      },
+      "transformations": [
+        {
+          "name": "Mapping",
+          "params": {
+            "mappingVersion": 0,
+            "mappingId": "bf5286a9c1ad4266baca76ba3adc9366"
+          }
+        }
+      ],
+      "runs": "/runs?property=flowId==e1514b79-f031-43b4-aab5-381a42f86ad4",
+      "providerRefId": "c9809ab5-71e0-4c7f-887b-61c95e4e20b5",
+      "lastOperation": {
+        "started": 0,
+        "updated": 0,
+        "operation": "enable"
+      }
+    }
+  ]
 }
 ```
 

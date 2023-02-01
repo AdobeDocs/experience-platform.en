@@ -93,7 +93,7 @@ Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow s
 
 ![The review step of the sources workflow.](../assets/testing/review-test.png)
 
-Finally, you must retrieve your dataflow's streaming endpoint. You will be using this endpoint to fetch data for your webhook. To retrieve your streaming endpoint. Go to the [!UICONTROL Dataflow activity] page of the dataflow that you just created and copy the endpoint from the bottom of the [!UICONTROL Properties] panel.
+Finally, you must retrieve your dataflow's streaming endpoint. This endpoint will be used to subscribe to your webhook, allowing your streaming source to communicate with Experience Platform. To retrieve your streaming endpoint, go to the [!UICONTROL Dataflow activity] page of the dataflow that you just created and copy the endpoint from the bottom of the [!UICONTROL Properties] panel.
 
 ![The streaming endpoint in dataflow activity.](../assets/testing/endpoint-test.png)
 
