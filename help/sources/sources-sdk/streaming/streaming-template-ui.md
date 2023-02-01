@@ -68,13 +68,13 @@ The **[!UICONTROL Select data]** step appears, providing an interface for you to
 
 Select **[!UICONTROL Upload files]** to upload a JSON file from your local system. Alternatively, you can drag and drop the JSON file you want to upload into the [!UICONTROL Drag and drop files] panel.
 
-![add-data](../assets/streaming/add-data.png)
+![The add data step of the sources workflow.](../assets/streaming/add-data.png)
 
 Once your file uploads, the preview interface updates to display a preview of the schema you uploaded. The preview interface allows you to inspect the contents and structure of a file. You can also use the [!UICONTROL Search field] utility to access specific items from within your schema.
 
 When finished, select **[!UICONTROL Next]**.
 
-![preview](../assets/streaming/preview.png)
+![The preview step of the sources workflow.](../assets/streaming/preview.png)
 
 ## Dataflow detail
 
@@ -82,7 +82,7 @@ The **Dataflow detail** step appears, providing you with options to use an exist
 
 When finished, select **[!UICONTROL Next]**.
 
-![dataflow-detail](../assets/streaming/dataflow-detail.png)
+![The dataflow-detail step of the sources workflow.](../assets/streaming/dataflow-detail.png)
 
 ## Mapping
 
@@ -92,7 +92,7 @@ Platform provides intelligent recommendations for auto-mapped fields based on th
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
-![mapping](../assets/streaming/mapping.png)
+![The mapping step of the sources workflow.](../assets/streaming/mapping.png)
 
 ## Review
 
@@ -103,7 +103,7 @@ The **[!UICONTROL Review]** step appears, allowing you to review your new datafl
 
 Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
-![review](../assets/streaming/review.png)
+![The review step of the sources workflow.](../assets/streaming/review.png)
 
 ## Get your streaming endpoint URL
 
