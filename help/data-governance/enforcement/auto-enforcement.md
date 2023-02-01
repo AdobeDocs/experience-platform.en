@@ -110,6 +110,8 @@ Select **[!UICONTROL List view]** to display the data lineage as a list. To swit
 
 If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies affect the percentage of profiles that are included in the activation.
 
+#### Paid Media Consent Policy enhancement {#consent-policy-enhancement}
+
 #### Pre-activation evaluation
 
 Once you reach at the **[!UICONTROL Review]** step when [activating a destination](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
