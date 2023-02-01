@@ -192,13 +192,13 @@ After reading this article, you should have a better understanding of how you ca
 
 To learn more about the other destination components, see the following articles:
 
-* [OAuth2 authentication](destination-configuration/oauth2-authentication.md)
-* [Customer data fields](destination-configuration/customer-data-fields.md)
-* [UI attributes](destination-configuration/ui-attributes.md)
-* [Schema configuration](destination-configuration/schema-configuration.md)
-* [Identities and attributes](destination-configuration/identities-attributes.md)
-* [Destination delivery](destination-configuration/destination-delivery.md)
-* [Audience metadata configuration](destination-configuration/audience-metadata-configuration.md)
-* [Aggregation policy](destination-configuration/aggregation-policy.md)
-* [Batch configuration](destination-configuration/batch-configuration.md)
-* [Historical profile qualifications](destination-configuration/historical-profile-qualifications.md)
+* [OAuth2 authentication](oauth2-authentication.md)
+* [Customer data fields](customer-data-fields.md)
+* [UI attributes](ui-attributes.md)
+* [Schema configuration](schema-configuration.md)
+* [Identities and attributes](identities-attributes.md)
+* [Destination delivery](destination-delivery.md)
+* [Audience metadata configuration](audience-metadata-configuration.md)
+* [Aggregation policy](aggregation-policy.md)
+* [Batch configuration](batch-configuration.md)
+* [Historical profile qualifications](historical-profile-qualifications.md)
