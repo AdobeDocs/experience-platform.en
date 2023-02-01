@@ -25,8 +25,8 @@ URL structure: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR a
 For example:
 
 
-* Minified: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js)
-* Un-minified: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js)
+* Minified: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
+* Un-minified: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
 
 
 ### Adding the code {#adding-the-code}
@@ -40,7 +40,7 @@ The prebuilt standalone version requires a "base code" added directly to the pag
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js" async></script>
 ```
 
 The "base code" creates a global function named `alloy`. Use this function to interact with the SDK. If you would like to name the global function something else, change the `alloy` name as follows:
@@ -52,7 +52,7 @@ The "base code" creates a global function named `alloy`. Use this function to in
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["mycustomname"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js" async></script>
 ```
 
 In this example, the global function is renamed `mycustomname`, instead of `alloy`.
@@ -102,7 +102,7 @@ To load the file synchronously instead of asynchronously, remove the `async` att
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js"></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js"></script>
 ```
 
 ## Option 3: Using the NPM package
