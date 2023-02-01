@@ -184,7 +184,8 @@ feature: Schemas
 * Tutorials {#tutorials}
   * [Create a schema in the UI](tutorials/create-schema-ui.md)
   * [Create a schema in the API](tutorials/create-schema-api.md)
-  * [Define custom fields in the API](./tutorials/custom-fields-api.md)
+  * [Add specific fields to a schema (API)](./tutorials/specific-fields-api.md)
+  * [Define custom fields (API)](./tutorials/custom-fields-api.md)
   * [Add suggested values to a field (API)](tutorials/suggested-values.md)
   * [Deprecate an XDM field](tutorials/field-deprecation.md)
   * [Define a schema relationship in the UI](tutorials/relationship-ui.md)

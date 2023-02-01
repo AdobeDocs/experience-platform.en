@@ -112,13 +112,17 @@ You can copy the query SQL to your clipboard from this view. Select the copy ico
 
 ![The run details screen with the SQL copy icon highlighted.](../images/ui/monitor-queries/copy-sql.png)
 
-### Run details for queries with anonymous block {#anonymous-block-queries}
+### (Limited release) Run details for queries with anonymous block {#anonymous-block-queries}
+
+>[!IMPORTANT]
+>
+>The query monitoring feature that displays run details for anonymous block queries, is currently in a limited release and not available to all customers.
 
 Queries that use anonymous blocks to comprise their SQL statements are separated into their individual queries. This allows you to inspect the run details for each query block individually. 
 
 Anonymous blocks are denoted through the use of a `$$` prefix before the query. See the [anonymous block document](../essential-concepts/anonymous-block.md) to find out more about anonymous blocks in query service.
 
-Anonymous block queries have tabs to the left of the run status. Select a tab to display the run details.
+Anonymous block queries have tabs to the left of the run status. Select a tab to display the run details..
 
 ![The Query run overview displaying an anonymous block query. The multiple query tabs are highlighted.](../images/ui/monitor-queries/anonymous-block-overview.png)
 
