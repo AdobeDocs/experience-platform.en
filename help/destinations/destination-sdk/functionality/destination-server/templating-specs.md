@@ -9,6 +9,16 @@ The template spec is a part of the destination server configuration, which allow
 
 In a template spec you can define how to transform profile attribute fields between the XDM schema and the format that your platform supports.
 
+Template specs are part of the destination server configuration for URL-based (streaming) destinations. 
+
+To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the the guide on how to [use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-server-template-configuration).
+
+You can configure the template specs for your destination via the `/authoring/destination-servers` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
+
+* [Create a destination server configuration](../../authoring-api/destination-server/create-destination-server.md)
+* [Update a destination server configuration](../../authoring-api/destination-server/update-destination-server.md)
+
+
 ## Supported integration types {#supported-integration-types}
 
 Refer to the table below for details on what type of destinations support the functionality described in this page.
@@ -18,11 +28,13 @@ Refer to the table below for details on what type of destinations support the fu
 | Real-time (streaming) integrations | :white_check_mark: |
 | File-based (batch) integrations | :x: |
 
+## Configure a template spec {#configure-template-spec}
+
 Adobe uses a templating language similar to [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) to transform the fields from the XDM schema into a format supported by your destination.
 
 ![Template configuration highlighted](../../assets/functionality/destination-server/template-configuration.png)
 
- For more information about the transformation, visit the links below:
+For more information about the transformation, visit the links below:
 
 * [Message format](message-format.md)
 * [Using a templating language for the identity, attributes, and segment membership transformations ](message-format.md#using-templating)

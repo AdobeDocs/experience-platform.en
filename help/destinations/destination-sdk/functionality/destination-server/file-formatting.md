@@ -5,7 +5,24 @@ title: File formatting configuration
 
 # File formatting configuration
 
-File formatting settings are part of the destination server configuration for file-based destinations. This article describes the file formatting settings for `CSV` files that you export to file-based destinations built with Destination SDK.
+Destination SDK supports a flexible set of features which you can configure according to your integration needs. Among these features is the support for [!DNL CSV] file formatting.
+
+When you create file-based destinations through Destination SDK, you can define how the exported CSV files should be formatted. You can customize many formatting options, such as, but not limited to:
+
+* Whether the CSV file should include a header;
+* What character to use for quoting values;
+* What empty values should look like.
+
+File formatting settings are part of the destination server configuration for file-based destinations. 
+
+To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the the guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+
+You can configure the file formatting options via the `/authoring/destination-servers` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
+
+* [Create a destination server configuration](../../authoring-api/destination-server/create-destination-server.md)
+* [Update a destination server configuration](../../authoring-api/destination-server/update-destination-server.md)
+
+This page describes all the supported file formatting settings for exported `CSV` files.
 
 ## Supported integration types {#supported-integration-types}
 

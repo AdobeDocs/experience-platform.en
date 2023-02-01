@@ -5,7 +5,25 @@ title: Batch configuration
 
 # Batch configuration - file naming and export scheduling {#batch-configuration}
 
-Batch configuration refers to the file naming and export scheduling settings that will be displayed for your destination in the Adobe Experience Platform user interface.
+Destination SDK supports a flexible set of features which you can configure according to your integration needs. Among these features is the option to customize the exported file names and to configure the export schedule according to user preference.
+
+When you create file-based destinations through Destination SDK, you can configure default file naming and export schedules, or you can give users the option to configure these settings from the Platform UI. For instance, you can configure behaviors such as:
+
+* Including specific information in the file name, such as segment IDs, destination IDs, or custom information.
+* Allowing users to customize the file naming from the Platform UI.
+* Configure file exports to occur at set time intervals.
+* Define what file naming and export schedule customization options the users can see in the Platform UI.
+
+Batch configuration settings are part of the destination configuration for file-based destinations. 
+
+To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the the guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+
+You can configure the file naming and export schedule settings via the `/authoring/destinations` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
+
+* [Create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md)
+* [Update a destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md)
+
+This article describes all the supported batch configuration options that you can use for your destination, and shows what customers will see in the Platform UI.
 
 ## Supported integration types {#supported-integration-types}
 
@@ -115,3 +133,20 @@ The configuration example below shows the correspondence between the configurati
 ```
 
 ![UI image showing the file name configuration screen with preselected macros](../../assets/functionality/destination-configuration/file-name-configuration.png)
+
+## Next steps {#next-steps}
+
+After reading this article, you should have a better understanding of how you can configure file naming and export schedules for your file-based destinations.
+
+To learn more about the other destination components, see the following articles:
+
+* [Customer authentication configuration](customer-authentication.md)
+* [OAuth2 authentication](destination-configuration/oauth2-authentication.md)
+* [Customer data fields](destination-configuration/customer-data-fields.md)
+* [UI attributes](destination-configuration/ui-attributes.md)
+* [Schema configuration](destination-configuration/schema-configuration.md)
+* [Identities and attributes](destination-configuration/identities-attributes.md)
+* [Destination delivery](destination-configuration/destination-delivery.md)
+* [Audience metadata configuration](destination-configuration/audience-metadata-configuration.md)
+* [Aggregation policy](destination-configuration/aggregation-policy.md)
+* [Historical profile qualifications](destination-configuration/historical-profile-qualifications.md)

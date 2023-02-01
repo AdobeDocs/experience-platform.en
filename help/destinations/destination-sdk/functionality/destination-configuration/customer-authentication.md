@@ -194,7 +194,6 @@ After reading this article, you should have a better understanding of how you ca
 
 To learn more about the other destination components, see the following articles:
 
-* [Customer authentication configuration](customer-authentication.md)
 * [OAuth2 authentication](destination-configuration/oauth2-authentication.md)
 * [Customer data fields](destination-configuration/customer-data-fields.md)
 * [UI attributes](destination-configuration/ui-attributes.md)
