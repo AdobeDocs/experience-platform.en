@@ -78,8 +78,6 @@ To set up [!DNL OAuth2] authentication for your destination, configure the `cust
 ]
 ```
 
-{style="table-layout:auto"}
-
 ## Amazon S3 authentication {#s3}
 
 [!DNL Amazon S3] authentication is supported for file-based destinations in Experience Platform.
