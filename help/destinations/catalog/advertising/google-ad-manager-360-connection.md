@@ -83,7 +83,7 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
 * **[!UICONTROL Folder path]**: Enter the path to the destination folder that will host the exported files.
 * **[!UICONTROL Bucket name]**: Enter the name of the [!DNL Google Cloud Storage] bucket to be used by this destination.
-*  **[!UICONTROL Account ID]**: This is a specific identifier associated with your [!DNL Google Ad Manager] network (not your [!DNL Network code]). You can find this under **[!UICONTROL Admin > Global settings]** in the [!DNL Google Ad Manager] interface.
+*  **[!UICONTROL Account ID]**: Enter your [!DNL Audience Link ID] from your [!DNL Google] account. This is a specific identifier associated with your [!DNL Google Ad Manager] network (not your [!DNL Network code]). You can find this under **[!UICONTROL Admin > Global settings]** in the [!DNL Google Ad Manager] interface.
 *  **[!UICONTROL Account Type]**: Select an option, depending on your [!DNL Google] account:
    * Use `AdX buyer` for [!DNL Google AdX]
    * Use `DFP by Google` for [!DNL DoubleClick] for Publishers
@@ -117,3 +117,10 @@ These mappings are required by [!DNL Google Ad Manager 360] and are automaticall
 ## Exported data {#exported-data}
 
 To verify if data has been exported successfully, check your [!DNL Google Cloud Storage] bucket and make sure the exported files contain the expected profile populations.
+
+## Troubleshooting {#troubleshooting}
+
+In case you encounter any errors while using this destination, have the following IDs at hand when reaching out to your Adobe representative:
+
+* **[!UICONTROL Account ID]**: 87933855. This is Adobe's account ID with Google.
+* **[!UICONTROL Customer ID]**: 89690775. This is Adobe's customer account ID with Google.

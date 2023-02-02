@@ -71,7 +71,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
-*  **[!UICONTROL Account ID]**: This is a specific identifier associated with your [!DNL Google Ad Manager] network (not your [!DNL Network code]). You can find this under **[!UICONTROL Admin > Global settings]** in the [!DNL Google Ad Manager] interface.
+*  **[!UICONTROL Account ID]**: Enter your [!DNL Audience Link ID] from your [!DNL Google] account. This is a specific identifier associated with your [!DNL Google Ad Manager] network (not your [!DNL Network code]). You can find this under **[!UICONTROL Admin > Global settings]** in the [!DNL Google Ad Manager] interface.
 *  **[!UICONTROL Account Type]**: Select an option, depending on your account with Google:
    * Use `DFP by Google` for [!DNL DoubleClick] for Publishers
    * Use `AdX buyer` for [!DNL Google AdX]
@@ -98,3 +98,10 @@ See [Activate audience data to streaming segment export destinations](../../ui/a
 ## Exported data {#exported-data}
 
 To verify if data has been exported successfully to the [!DNL Google Ad Manager] destination, check your [!DNL Google Ad Manager] account. If activation was successful, audiences are populated in your account.
+
+## Troubleshooting {#troubleshooting}
+
+In case you encounter any errors while using this destination, have the following IDs at hand when reaching out to your Adobe representative:
+
+* **[!UICONTROL Account ID]**: 87933855. This is Adobe's account ID with Google.
+* **[!UICONTROL Customer ID]**: 89690775. This is Adobe's customer account ID with Google.
