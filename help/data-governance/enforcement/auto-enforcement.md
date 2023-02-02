@@ -110,7 +110,15 @@ Select **[!UICONTROL List view]** to display the data lineage as a list. To swit
 
 If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies affect the percentage of profiles that are included in the activation.
 
-#### Paid Media Consent Policy enhancement {#consent-policy-enhancement}
+#### Consent policy enhancement for paid media {#consent-policy-enhancement}
+
+To facilitate the privacy-conscious delivery of experiences, an enhancement to consent policy enforcement on streaming destinations for paid media activations has been made. This enhancement is available to customers of Privacy and Security Shield or Healthcare Shield, and proactively removes profiles from downstream applications as consent status changes. This enhancement also ensures that no profiles are targeted inadvertently if destinations use profiles from historic runs.
+
+This enhancement allows for greater trust in your marketing strategy as it removes the need for marketers to manually add consent attributes to their segment expression. It ensures that no profiles are inadvertently targeted for any marketing experiences once consent has been withdrawn or no longer qualified for a consent policy. The marketing consent policies that set rules for how consent or preference data should be managed across various marketing workflows are now automatically enforced in activation workflows in downstream solutions.
+
+>[!NOTE]
+>
+>There are no UI changes as a result of this enhancement.
 
 #### Pre-activation evaluation
 
