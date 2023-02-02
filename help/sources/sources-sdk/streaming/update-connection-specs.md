@@ -181,3 +181,7 @@ A successful call returns the updated connection specification details, includin
   ]
 }
 ```
+
+## Next steps
+
+Once you have completed your updates to your connection specification, you can now proceed to [test and submit your source for integration](./submit.md).
