@@ -234,12 +234,12 @@ To do this, select each segment, then enter name of the custom field from [!DNL 
 For example, if your [!DNL Salesforce] custom field is `crm_2_seg`, specify this value in the **[!UICONTROL Mapping ID]** to populate segment audiences from Experience Platform into this custom field.
 
 An example custom field from [!DNL Salesforce] is shown below:
-![Salesforce UI screenshot showing custom field.](../../assets/catalog/crm/salesforce/salesforce-custom-field.png)
+![[!DNL Salesforce] UI screenshot showing custom field.](../../assets/catalog/crm/salesforce/salesforce-custom-field.png)
 
-An example indicating the location of the Mapping ID is shown below:
+An example indicating the location of the **[!UICONTROL Mapping ID]** is shown below:
 ![Platform UI screenshot example showing Schedule segment export.](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
 
-You will observe the [!DNL Salesforce] **[!UICONTROL FIELD NAME]** exactly matches the value specified within **[!UICONTROL Mapping ID]**.
+As shown the [!DNL Salesforce] **[!UICONTROL FIELD NAME]** exactly matches the value specified within **[!UICONTROL Mapping ID]**.
 
 Repeat this section for each activated Platform segment.
 
