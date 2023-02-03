@@ -159,7 +159,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    ],
    "customerDataFields":[
       {
-         "name":"bucket",
+         "name":"bucketName",
          "title":"Enter the name of your Amazon S3 bucket",
          "description":"Amazon S3 bucket name",
          "type":"string",

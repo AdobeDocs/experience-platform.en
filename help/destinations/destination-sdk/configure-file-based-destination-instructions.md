@@ -133,7 +133,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
     "customerEncryptionConfigurations": [],
     "customerDataFields": [
         {
-            "name": "bucket",
+            "name": "bucketName",
             "title": "Amazon S3 bucket name",
             "description": "Enter the Amazon S3 Bucket name that will host the exported files.",
             "type": "string",

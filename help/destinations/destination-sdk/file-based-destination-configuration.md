@@ -34,7 +34,7 @@ Below is an example of a private custom Amazon S3 destination created through th
    ],
    "customerDataFields":[
       {
-         "name":"bucket",
+         "name":"bucketName",
          "title":"Amazon S3 bucket name",
          "description":"Enter your Amazon S3 bucket name",
          "type":"string",
