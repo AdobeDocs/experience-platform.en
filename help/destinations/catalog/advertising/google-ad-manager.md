@@ -101,7 +101,9 @@ To verify if data has been exported successfully to the [!DNL Google Ad Manager]
 
 ## Troubleshooting {#troubleshooting}
 
-In case you encounter any errors while using this destination, have the following IDs at hand when reaching out to your Adobe representative:
+In case you encounter any errors while using this destination and need to reach out to either Adobe or Google, keep the following IDs at hand.
 
-* **[!UICONTROL Account ID]**: 87933855. This is Adobe's account ID with Google.
-* **[!UICONTROL Customer ID]**: 89690775. This is Adobe's customer account ID with Google.
+These are Adobe's Google Account IDs:
+
+* **[!UICONTROL Account ID]**: 87933855
+* **[!UICONTROL Customer ID]**: 89690775
