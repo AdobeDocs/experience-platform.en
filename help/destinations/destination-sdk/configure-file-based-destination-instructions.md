@@ -34,9 +34,9 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
     "name": "S3 destination",
     "destinationServerType": "FILE_BASED_S3",
     "fileBasedS3Destination": {
-        "bucket": {
+        "bucketName": {
             "templatingStrategy": "PEBBLE_V1",
-            "value": "{{customerData.bucket}}"
+            "value": "{{customerData.bucketName}}"
         },
         "path": {
             "templatingStrategy": "PEBBLE_V1",
