@@ -1,6 +1,7 @@
 ---
 title: Configure a datastream
 description: Connect your client-side Experience Platform SDK integration with Adobe products and third-party destinations.
+exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
 ---
 # Configure a datastream
 

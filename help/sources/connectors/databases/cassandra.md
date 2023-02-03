@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Apache Cassandra;apache cassandra;cassandra;Cassandra
 solution: Experience Platform
 title: Apache Cassandra Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect Apache Cassandra to Adobe Experience Platform using APIs.
 ---
 

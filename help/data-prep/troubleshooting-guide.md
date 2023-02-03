@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;
 title: Data Prep Troubleshooting Guide
-topic-legacy: troubleshooting
 description: This document provides answers to frequently asked questions about Adobe Experience Platform Data Prep.
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
 ---

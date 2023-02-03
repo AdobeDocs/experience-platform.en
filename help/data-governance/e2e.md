@@ -1,8 +1,9 @@
 ---
 title: Data Governance End-to-End Guide
 description: Follow the complete process for enforcing data usage constraints for fields and datasets in Adobe Experience Platform.
+exl-id: f18ae032-027a-4c97-868b-e04753237c81
 ---
-# Data Governance end-to-end guide
+# Data governance end-to-end guide
 
 In order to control which marketing actions can be performed on certain datasets and fields in Adobe Experience Platform, you must set up the following:
 
@@ -10,7 +11,7 @@ In order to control which marketing actions can be performed on certain datasets
 1. [Configure and enable data governance policies](#policy) that determine which kinds of labeled data can be used for certain marketing actions.
 1. [Apply marketing actions to your destinations](#destinations) to indicate which policies apply to data sent to those destinations.
 
-Once you have finished configuring your labels, policies, and marketing actions, you can [test your policy enforcement](#test) to ensure it is working as expected.
+Once you have finished configuring your labels, governance policies, and marketing actions, you can [test your policy enforcement](#test) to ensure it is working as expected.
 
 This guide walks through the full process of configuring and enforcing a data governance policy in the Platform UI. For more detailed information on the features used in this guide, refer to the overview documentation on the following topics:
 
@@ -18,6 +19,10 @@ This guide walks through the full process of configuring and enforcing a data go
 * [Data usage labels](./labels/overview.md)
 * [Data usage policies](./policies/overview.md)
 * [Policy enforcement](./enforcement/overview.md)
+
+>[!NOTE]
+>
+>This guide focuses on how to set up and enforce policies for how data is used or activated in Experience Platform. If you are trying to restrict **access** to the data itself for certain Platform users within your organization, see the end-to-end guide on [attribute-based access control](../access-control/abac/end-to-end-guide.md) instead. Attribute-based access control also uses labels and policies, but for a different use case than data governance.
 
 ## Apply labels {#labels}
 

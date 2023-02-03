@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Schemas UI Overview
 description: This overview covers the major capabilities of the Schemas workspace in Experience Platform.
-topic-legacy: user guide
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
 ---
 # [!UICONTROL Schemas] UI overview

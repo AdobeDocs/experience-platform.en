@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;redshift;Redshift;Amazon Redshift;amazon redshift
 solution: Experience Platform
 title: Create an Amazon Redshift Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Amazon Redshift using the Flow Service API.
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
@@ -32,7 +31,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Amazon Redshift], you mus
 | `username` | The username associated with your [!DNL Amazon Redshift] account. |
 | `password` | The password associated with your [!DNL Amazon Redshift] account. |
 | `database` | The [!DNL Amazon Redshift] database you are accessing. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Amazon Redshift] is `3416976c-a9ca-4bba-901a-1f08f66978ff`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Amazon Redshift] is `3416976c-a9ca-4bba-901a-1f08f66978ff`. |
 
 For more information about getting started, refer to this [[!DNL Amazon Redshift] document](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
 

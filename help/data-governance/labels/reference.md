@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;supported data usage labels;contract labels;identity labels;sensitive labels
 solution: Experience Platform
 title: Data Usage Labels Glossary
-topic-legacy: labels
 description: This document outlines all data usage labels currently supported by Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 ---
@@ -14,9 +13,9 @@ exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 >abstract="There are several categories of data usage labels. Adobe-defined labels include contract labels, identity labels, and sensitive labels. Labels defined by your organization are categorized as custom labels."
 >text="See the data usage labels glossary for more information on these label types."
 
-Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. Adobe Experience Platform Data Governance provides several core data usage labels out-of-the-box that you can use to start categorizing your data.
+Data usage labels allow you to categorize datasets and fields according to [governance policies](../policies/overview.md) and [access control policies](../../access-control/abac/overview.md) that apply to that data. Adobe Experience Platform provides several core data usage labels out-of-the-box that you can use to start categorizing your data.
 
-This document outlines the core data usage labels currently provided by [!DNL Experience Platform]. More information regarding Data Governance can be found in the [Data Governance overview](../home.md).
+This document outlines the core data usage labels currently provided by Experience Platform.
 
 ## Contract labels
 
@@ -24,17 +23,18 @@ Contract "C" labels are used to categorize data that has contractual obligations
 
 | Label | Definition |
 | --- | --- |
-| **C1** | Data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. [More info...](#c1) |
-| **C2** | Data cannot be exported to a third-party. [More info...](#c2) |
-| **C3** | Data cannot be combined or otherwise used with directly identifiable information. [More info...](#c3) |
-| **C4** | Data cannot be used for targeting any ads or content, either on-site or cross-site. [More info...](#c4) |
-| **C5** | Data cannot be used for interest-based, cross-site targeting of content or ads. [More info...](#c5) |
-| **C6** | Data cannot be used for on-site ad targeting. [More info...](#c6) |
-| **C7** | Data cannot be used for on-site targeting of content. [More info...](#c7) |
-| **C8** | Data cannot be used for measurement of your organization's websites or apps. [More info...](#c8) |
-| **C9** | Data cannot be used in Data Science workflows. [More info...](#c9) |
-| **C10** | Data cannot be used for stitched identity activation. [More info...](#c10) |
-| **C11** | Data cannot be shared with Segment Match partners. [More info...](#c11) |
+| [C1](#c1) | Data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. |
+| [C2](#c2) | Data cannot be exported to a third-party. |
+| [C3](#c3) | Data cannot be combined or otherwise used with directly identifiable information. |
+| [C4](#c4) | Data cannot be used for targeting any ads or content, either on-site or cross-site. |
+| [C5](#c5) | Data cannot be used for interest-based, cross-site targeting of content or ads. |
+| [C6](#c6) | Data cannot be used for on-site ad targeting. |
+| [C7](#c7) | Data cannot be used for on-site targeting of content. |
+| [C8](#c8) | Data cannot be used for measurement of your organization's websites or apps. |
+| [C9](#c9) | Data cannot be used in Data Science workflows. |
+| [C10](#c10) | Data cannot be used for stitched identity activation. |
+| [C11](#c11) | Data cannot be shared with Segment Match partners. |
+| [C12](#c12) | Data cannot be exported in any way. |
 
 ## Identity labels
 
@@ -72,7 +72,7 @@ Some data can only be exported from Adobe Experience Cloud in an aggregated form
 
 #### C2 {#c2}
 
-Some data providers have terms in their contracts that prohibit the export of data from where it was originally collected. For example, social network contracts often restrict the transfer of data you receive from them. The C2 label is more restrictive than [C1](#c1), which only requires aggregation and anonymous data. 
+Some data providers have terms in their contracts that prohibit the export of data from where it was originally collected. For example, social network contracts often restrict the transfer of data you receive from them. The C2 label is more restrictive than [C1](#c1), which only requires aggregation and anonymous data, but it is less restrictive than [C12](#c12), which prevents data exports completely regardless of the destination.
 
 #### C3 {#c3}
 
@@ -80,7 +80,7 @@ Some data providers have terms in their contracts that prohibit the combination 
 
 #### C4 {#c4}
 
-C4 is the most restrictive label – it encompasses labels [C5](#c5), [C6](#c6), and [C7](#c7).
+C4 encompasses labels [C5](#c5), [C6](#c6), and [C7](#c7). It is one of the most restrictive labels, second only to [C12](#c12).
 
 #### C5 {#c5}
 
@@ -128,8 +128,12 @@ Some contracts include explicit prohibitions on data use for data science. Somet
 
 #### C10 {#c10}
 
-Some data usage policies restrict the use of stitched identity data for personalization. The C10 label is automatically applied to segments if their merge policies use the "private graph" option.
+Some data governance policies restrict the use of stitched identity data for personalization. The C10 label is automatically applied to segments if their merge policies use the "private graph" option.
 
 #### C11 {#c11}
 
 Adobe Experience Platform Segment Match allows you to match first-party segments with privacy and consent preferences, facilitating enriched profiling and downstream insights. The C11 label denotes data that should not be used in [!DNL Segment Match] processes. After you have determined which datasets and/or fields you want to exclude from Segment Match and added the C11 label accordingly, the label is automatically enforced by the Segment Match workflow.
+
+#### C12 {#c12}
+
+Data with this label cannot be exported from Platform in any way. C12-labeled fields are excluded from CSV downloads, API consumption, and activation workflows.

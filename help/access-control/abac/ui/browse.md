@@ -6,13 +6,13 @@ exl-id: 39634bde-8858-44a6-b39a-776846654fc1
 ---
 # Permissions guide
 
-Permissions is the area of Adobe Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application. 
+[!UICONTROL Permissions] is the area of Adobe Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application. 
 
-With permissions, you can configure:
+With [!UICONTROL Permissions], you can configure:
 
+* [Access policies](./policies.md)
 * [Labels](./labels.md)
 * [Permissions](./permissions.md)
-* [Policies](./permissions.md)
 * [Roles](./roles.md)
 * [Sandboxes](./sandboxes.md)
 * [Users](./users.md)

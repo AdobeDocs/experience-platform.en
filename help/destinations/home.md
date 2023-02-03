@@ -10,6 +10,13 @@ exl-id: afd07ddc-652e-4e22-b298-feba27332462
 
 **[!DNL Destinations]** are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
+
 ## Destinations and sources {#destinations-and-sources}
 
 One of the core functionalities of Platform is ingesting your first-party data and activating it for your business needs. Use [sources](../sources/home.md) to ingest data into Platform and destinations to export data from Platform. 

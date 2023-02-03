@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
 solution: Experience Platform
 title: Adobe Experience Platform Overview
-topic-legacy: getting started
 description: Adobe Experience Platform enables organizations to centralize and standardize customer data before applying data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
 ---
@@ -11,6 +10,15 @@ exl-id: edcce353-338a-440e-99eb-a64e2abca579
 Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. [!DNL Experience Platform] enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
 
 Built on RESTful APIs, [!DNL Experience Platform] exposes the full functionality of the system to developers, supporting the easy integration of enterprise solutions using familiar tools. [!DNL Experience Platform] also supports partners to build and integrate their own products and technologies as needed. This power and flexibility makes [!DNL Experience Platform] unique in the market. It gives partners, customers, and a community of developers a foundation on which to build innovations that drive The Experience Business: exceeding customer expectations by delivering a continually improving, fully-personalized experience drawn from a 360-degree view of the customer and their individual preferences.
+
+<div id="recs-overview-body-wrapper-1">
+    <div id="recs-overview-body-1"></div>
+    <div id="recs-overview-body-2"></div>
+    <div id="recs-overview-body-3"></div>
+</div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 ## [!DNL Experience Platform] documentation
 

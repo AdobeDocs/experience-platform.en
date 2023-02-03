@@ -201,7 +201,7 @@ For profile-based destinations, you must select the profile attributes that you 
 
     ![Image highlighting how to select a source field.](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
 
-1. In the **[!UICONTROL Select field]** page, select the XDM attributes that you want to send to the destination, then choose **[!UICONTROL Select]**.
+1. In the **[!UICONTROL Select field]** page, select the XDM attributes or identity namespaces that you want to send to the destination, then choose **[!UICONTROL Select]**.
 
     ![Image showing the various fields available as source fields.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
@@ -457,19 +457,29 @@ As a temporary workaround if you need to add identity namespaces to your exporte
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
->[!IMPORTANT]
->
->In this step, Adobe Experience Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
+![Selection summary in the review step.](/help/destinations/assets/ui/activate-batch-profile-destinations/review.png)
+
+### Consent policy evaluation {#consent-policy-evaluation}
+
+If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**, select **[!UICONTROL View applicable consent policies]** to see which consent policies are applied and how many profiles are included in the activation as a result of them. Read about [consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) for more information.
+
+### Data usage policy checks {#data-usage-policy-checks}
+
+In the **[!UICONTROL Review]** step, Experience Platform also checks for any data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, read about [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in the data governance documentation section.
  
-![Image showing a data policy violation example.](../assets/common/data-policy-violation.png)
+![data policy violation](../assets/common/data-policy-violation.png)
 
-If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
+### Filter segments {#filter-segments}
 
-![Image showing the review screen of the segment activation workflow.](../assets/ui/activate-batch-profile-destinations/review.png)
+Also in this step you can use the available filters on the page to display only the segments whose schedule or mapping has been updated as part of this workflow. You can also toggle which table columns you want to see. 
+
+![Screen recording showing the available segment filters in the review step.](/help/destinations/assets/ui/activate-batch-profile-destinations/filter-segments-batch-review.gif)
+
+If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
 ## Verify segment activation {#verify}
 
-For email marketing destinations and cloud storage destinations, Adobe Experience Platform creates a `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location according to the schedule you set in the workflow. The default file format is:
+For email marketing destinations and cloud storage destinations, Adobe Experience Platform creates a `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location according to the schedule you set in the workflow. The default file format is shown below, but you can [edit the components of the file name](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 For example, if you selected a daily export frequency, the files you would receive on three consecutive days could look like this:

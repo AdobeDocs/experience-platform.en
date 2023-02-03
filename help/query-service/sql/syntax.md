@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;ctas;CTAS;Create table as select
 solution: Experience Platform
 title: SQL Syntax in Query Service
-topic-legacy: syntax
 description: This document shows SQL syntax supported by Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
 ---

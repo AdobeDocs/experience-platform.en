@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;
 title: (Beta) Create an Adobe Workfront source connection in the UI
 description: This tutorial provides steps to create an Adobe Workfront source connection to bring your Workfront data to Adobe Experience Platform using the user interface.
+exl-id: f82e852a-c9d1-4ecc-bc54-2b39d3b4cc1e
 ---
 # (Beta) Create an Adobe Workfront source connection in the UI
 
@@ -20,7 +21,7 @@ This tutorial provides steps to create an Adobe Workfront source connection to b
 This tutorial requires a working understanding of the following components of Experience Platform:
 
 * [Experience Data Model (XDM) System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-* [Real-time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [Real-Time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Create a Workfront source connection in the UI
