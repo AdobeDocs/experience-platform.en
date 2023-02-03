@@ -35,7 +35,7 @@ Note the following prerequisites in [!DNL Salesforce CRM], in order to export da
 
 #### You need to have a [!DNL Salesforce] account {#prerequisites-account}
 
-Go to the Salesforce [trial](https://www.salesforce.com/in/form/signup/freetrial-sales/) page to register and create a Salesforce account, if you do not have one already.
+Go to the [!DNL Salesforce] [trial](https://www.salesforce.com/in/form/signup/freetrial-sales/) page to register and create a [!DNL Salesforce] account, if you do not have one already.
 
 #### Configure a connected app within [!DNL Salesforce] {#prerequisites-connected-app}
 
@@ -96,13 +96,18 @@ Note down the items below before you authenticate to the [!DNL Salesforce CRM] d
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| Custom Domain | Your [!DNL Salesforce] domain prefix. <br> See the [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) to learn how to obtain this value from the [!DNL Salesforce] interface. | If your [!DNL Salesforce Marketing Cloud] domain is<br> *`d5i000000isb4eak-dev-ed`<br>.my.salesforce.com*,<br> you need to provide <br>`d5i000000isb4eak-dev-ed` <br>as the value.|
-| Client ID | Your Salesforce `Consumer Key`. <br> Refer to the [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) to learn how to obtain this value from the [!DNL Salesforce] interface. | `r23kxxxxxxxx0z05xxxxxx` | 
-| Client ID | Your Salesforce `Consumer Secret`. <br> Refer to the [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) to learn how to obtain this value from the [!DNL Salesforce] interface. | `ipxxxxxxxxxxT4xxxxxxxxxx` | 
+| `Username` | Your [!DNL Salesforce] account username. | |
+| `Password` | Your [!DNL Salesforce] account password. | |
+| `Security Token` | Your [!DNL Salesforce] security token which you will later append to the end of your [!DNL Salesforce] Password to create a concatenated string to be used as the **[!UICONTROL Password]** when [authenticating to the destination](#authenticate).<br> Refer to the [!DNL Salesforce] documentation to [reset your security token](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&type=5) to learn how to regenerate it from the [!DNL Salesforce] interface if you do not have the Security Token. |  |
+| `Custom Domain` | Your [!DNL Salesforce] domain prefix. <br> See the [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) to learn how to obtain this value from the [!DNL Salesforce] interface. | If your [!DNL Salesforce Marketing Cloud] domain is<br> *`d5i000000isb4eak-dev-ed`<br>.my.salesforce.com*,<br> you will need <br>`d5i000000isb4eak-dev-ed` <br>as the value.|
+| `Client ID` | Your Salesforce `Consumer Key`. <br> Refer to the [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) to learn how to obtain this value from the [!DNL Salesforce] interface. | | 
+| `Client Secret` | Your Salesforce `Consumer Secret`. <br> Refer to the [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) to learn how to obtain this value from the [!DNL Salesforce] interface. | | 
 
 ### Guardrails {#guardrails}
 
 [!DNL Salesforce] balances transaction loads by imposing request, rate and timeout limits. Refer to the [API Request Limits and Allocations](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm) for details.
+
+If your [!DNL Salesforce] account administrator has enforced IP restrictions, you will need to add [Experience Platform IP addresses](/help/destinations/catalog/streaming/ip-address-allow-list.md) to your [!DNL Salesforce] accounts' trusted IP ranges. Refer to the [!DNL Salesforce] [Restrict Access to Trusted IP Ranges for a Connected App](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) documentation if you need additional guidance.
 
 >[!IMPORTANT]
 >
@@ -140,10 +145,10 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL
 ### Authenticate to destination {#authenticate}
 
 To authenticate to the destination, fill in the required fields below and select **[!UICONTROL Connect to destination]**. Refer to the [Gather [!DNL Salesforce CRM] credentials](#gather-credentials) section for any guidance.
-| [!DNL Salesforce CRM] destination | [!DNL Salesforce] |
+| Credential | Description |
 | --- | --- |
 | **[!UICONTROL Username]** | Your [!DNL Salesforce] account username. |
-| **[!UICONTROL Password]** | Your [!DNL Salesforce] account password. |
+| **[!UICONTROL Password]** | A concatenated string composed of your <br>[!DNL Salesforce] account password appended with your [!DNL Salesforce] Security Token.<br>The concatenated value takes the form of `{PASSWORD}{TOKEN}`.<br> Note, do not use any braces or spaces.<br>For example if your [!DNL Salesforce] Password is `MyPa$$w0rd123` and [!DNL Salesforce] Security Token is `TOKEN12345....0000`, the concatenated value you will use in the **[!UICONTROL Password]** field is `MyPa$$w0rd123TOKEN12345....0000`. |
 | **[!UICONTROL Custom Domain]** | Your [!DNL Salesforce] domain prefix. <br>For example if your domain is <br>*`d5i000000isb4eak-dev-ed`<br>.my.salesforce.com*, you need to provide <br>`d5i000000isb4eak-dev-ed`<br> as the value. |
 | **[!UICONTROL Client ID]** | Your [!DNL Salesforce] connected app<br> `Consumer Key`. |
 | **[!UICONTROL Client Secret]** | Your [!DNL Salesforce] connected app<br> `Consumer Secret`. |
