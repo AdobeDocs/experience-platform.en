@@ -138,6 +138,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "description": "Enter the Amazon S3 Bucket name that will host the exported files.",
             "type": "string",
             "isRequired": true,
+            "pattern": "(?=^.{3,63}$)(?!^(\\d+\\.)+\\d+$)(^(([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])\\.)*([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])$)",
             "readOnly": false,
             "hidden": false
         },
@@ -147,7 +148,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "description": "Enter Amazon S3 folder path",
             "type": "string",
             "isRequired": true,
-            "pattern": "^[A-Za-z]+$",
+            "pattern": "^[0-9a-zA-Z\\/\\!\\-_\\.\\*\\''\\(\\)]*((\\%SEGMENT_(NAME|ID)\\%)?\\/?)+$",
             "readOnly": false,
             "hidden": false
         },
