@@ -14,9 +14,9 @@ Each destination in the [catalog](/help/destinations/catalog/overview.md) is sli
 
 ## File-based destinations {#file-based}
 
-For [file-based destinations](/help/destinations/destination-types.md#file-based) (for example [!DNL Amazon S3], SFTP, most email marketing destinations such as [!DNL Adobe Campaign], [!DNL Oracle Eloqua], [!DNL Salesforce Marketing Cloud]), the identity setup in most of these destinations is open as long as a deduplication (primary) key is specified.
+For [file-based destinations](/help/destinations/destination-types.md#file-based) (for example [!DNL Amazon S3], SFTP, most email marketing destinations such as [!DNL Adobe Campaign], [!DNL Oracle Eloqua], [!DNL Salesforce Marketing Cloud]), the identity setup in most of these destinations is open, meaning that you are not required to select any identity in the [Select attributes](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) step of the batch activation workflow.
 
-Note that only a single identity from the [identity namespace](/help/identity-service/ui/identity-graph-viewer.md#access-identity-graph-viewer) can be selected in an export. When you select an identity for export, it is automatically selected as a [mandatory attribute](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) and [deduplication key](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
+If you choose to add identities to your file exports, note that only a single identity from the [identity namespace](/help/identity-service/ui/identity-graph-viewer.md#access-identity-graph-viewer) can be selected in an export. When you select an identity for export, it is automatically selected as a [mandatory attribute](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) and [deduplication key](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
 
 ![An identity selected as mandatory attribute and deduplication key.](/help/destinations/assets/how-destinations-work/selected-identity.png)
 
@@ -71,7 +71,7 @@ Note, however, that you have the flexibility to use data from either [private gr
 
 ### Advertising destinations relying on third-party cookie integrations {#third-party-cookie-destinations}
 
-Advertising destinations relying on third party cookies (for example: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) do not require customers to select IDs in the activation workflow. For these destinations, when setting up an activation workflow, Experience Platform automatically looks up the match table constructed by the [[!UICONTROL Experience Cloud ID service]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=en). 
+Advertising destinations relying on third party cookies (for example: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) do not require customers to select IDs in the activation workflow. For these destinations, when setting up an activation workflow, Experience Platform automatically looks up the identity match table constructed by the [[!UICONTROL Experience Cloud ID service]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=en) and exports all identities that are available for a profile and supported by the destination. 
 
 These destinations require an ID sync to happen through either the [!UICONTROL Experience Cloud ID service] or through [!UICONTROL Experience Platform Web SDK]. 
 

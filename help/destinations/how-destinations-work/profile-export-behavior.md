@@ -59,6 +59,10 @@ Regarding the data that is exported for a given profile, it is important to unde
 
 {style="table-layout:fixed"}
 
+>[!IMPORTANT]
+>
+>Enterprise destinations stream backfill data when activating profiles to a destination. This means that the first data export after configuring an activation workflow to a destination will include profiles who qualified for the activated segment prior to the segment being mapped to the destination. 
+
 >[!BEGINSHADEBOX]
 
 For example, consider this dataflow to an HTTP destination where three segments are selected in the dataflow, and four attributes are mapped to the destination.  
