@@ -9,7 +9,7 @@ exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
 
 >[!NOTE]
 >
->There must be a "org admin" role assigned to the user token if one is being utilized for the requested org.
+>If a user token is being passed, then the user of the token must have an "org admin" role for the requested org.
 
 The `/products` endpoint in the attribute-based access control API allows you to programmatically manage products as well as permission categories and permission sets associated with products in your organization.
 

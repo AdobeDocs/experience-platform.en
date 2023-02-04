@@ -9,7 +9,7 @@ exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
 
 >[!NOTE]
 >
->There must be a "org admin" role assigned to the user token if one is being utilized for the requested org.
+>If a user token is being passed, then the user of the token must have an "org admin" role for the requested org.
 
 You can list the names of all permissions and resource types by making a GET request to the `/acl/reference` endpoint. These names can then be used in API calls to [view effective access control policies](./effective-policies.md) for the current user.
 
