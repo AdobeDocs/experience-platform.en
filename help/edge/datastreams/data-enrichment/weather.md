@@ -34,11 +34,13 @@ You can validate that it is being added by running an edge trace with the debugg
 
 ### Schema configuration {#schema-configuration}
 
-You must add the weather field groups to your Experience Platform schema corresponding to the event dataset you are using in your datastream. There are three field groups available:
+You must add the weather field groups to your Experience Platform schema corresponding to the event dataset you are using in your datastream. There are five field groups available:
 
 * [!UICONTROL Forecasted Weather]
 * [!UICONTROL Current Weather]
-* [!UICONTROL Weather Triggers]
+* [!UICONTROL Product Triggers]
+* [!UICONTROL Relative Triggers]
+* [!UICONTROL Severe Weather Triggers]
 
 ## Access the weather data {#access-weather-data}
 
