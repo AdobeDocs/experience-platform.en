@@ -128,8 +128,8 @@ To authenticate to the destination, fill in the required fields below and select
 | [!DNL (API) Salesforce Marketing Cloud] destination | [!DNL Salesforce Marketing Cloud] |
 | --- | --- |
 | **[!UICONTROL Subdomain]** | Your [!DNL Salesforce Marketing Cloud] domain prefix. <br>For example if your domain is <br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br> you need to provide `mcq4jrssqdlyc4lph19nnqgzzs84` as the value. |
-| **[!UICONTROL Client ID]** | Your [!DNL Salesforce Marketing Cloud] <br>`Client ID`. |
-| **[!UICONTROL Client Secret]** | Your [!DNL Salesforce Marketing Cloud]<br> `Client Secret`. |
+| **[!UICONTROL Client ID]** | Your [!DNL Salesforce Marketing Cloud] `Client ID`. |
+| **[!UICONTROL Client Secret]** | Your [!DNL Salesforce Marketing Cloud] `Client Secret`. |
 
 ![Platform UI screenshot showing how to authenticate to Salesforce Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png)
 
