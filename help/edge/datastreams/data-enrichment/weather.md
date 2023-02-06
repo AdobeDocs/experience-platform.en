@@ -1,66 +1,75 @@
 ---
-title: Weather Data by Weather Channel an IBM Company
-description: Use weather to enhance the data you collect through Datastreams.
+title: Use weather data from DNL The Weather Channel
+description: Use weather data from DNL The Weather Channel to enhance the data you collect through datastreams.
 ---
 
-# Weather 
+# Use weather data from [!DNL The Weather Channel]
 
-Adobe has partnered with the Weather Channel and IBM Company to bring the additional context of weather in the United States to the data collected via Datastream. This can be used for Analytics, Targeting and Segment creation. There are 3 types of data that are available from the Weather Channel. 
+Adobe has partnered with [!DNL [The Weather Company]](https://www.ibm.com/weather) to bring the additional context of United States weather to the data collected via datastreams. You can use this data for analytics, targeting and segment creation in Experience Platform.
 
-* __Current Weather__ - The current weather conditions of the user based on their location. This include current temperature, percipitation, cloud cover, etc
-* __Forecasted Weather__ - The forecast includes the 1,2,3,5,7 and 10 day forecast for the users
-* __Triggers__ - These triggers are specific combinations that map to different semantic weather conditions There are three different types of weather triggers. 
-  * __Weather Triggers__ - Semantically meaningful conditions such as cold or rainy. These can differ in their definitions between various climates
-  * __Product Triggers__ - Conditions that would lead to the purchase of different types of products. For example cold weather forecasted could mean weather purchase of coats are more likely. 
-  * __Severe Weather Triggers__ - Severe weather warnings like winter storm warnings or hurricane warnings. 
+There are 3 types of data that are available from [!DNL The Weather Channel]:
+
+* **[!UICONTROL Current Weather]**: The current weather conditions of the user, based on their location. This include current temperature, percipitation, cloud coverage, and more.
+* **[!UICONTROL Forecasted Weather]**: The forecast includes the 1,2,3,5,7 and 10 day forecast for the user location.
+* **[!UICONTROL Triggers]**: Triggers are specific combinations that map to different semantic weather conditions. There are three different types of weather triggers:
+  
+    * **[!UICONTROL Weather Triggers]**: Semantically meaningful conditions, such as cold or rainy weather. These can differ in their definitions between various climates.
+    * **[!UICONTROL Product Triggers]**: Conditions that would lead to the purchase of different types of products. For example: cold weather forecasts could mean that purchases of rain coats are more likely. 
+    * **[!UICONTROL Severe Weather Triggers]**: Severe weather warnings, like winter storm or hurricane warnings. 
 
 ## Prerequisites {#prerequisites}
 
-* You must license this data from The Weather Channel. They will then enable it on your account. 
-* Weather data is available only through Datastreams. So you must use the WebSDK, Mobile Edge Extension or the Edge API to leverage this data. Remember the SDKs can often be co-deployed if needed
-* Geo-Location Enabled. The Datastream must have [GeoLocation enabled](../configure.md#advanced-options)
-* Add the [Weather Field group](#experience-platform) to the schema you are using. 
+Before you use weather data, make sure you meet the following prerequisites:
 
-## Provisioning
+* You must license the weather data that you will use, from [!DNL The Weather Channel]. They will then enable it on your account. 
+* Weather data is available only through datastreams. To use weather data, you must use [!DNL Web SDK], [!DNL Mobile Edge Extension] or the [Server API](../../../server-api/overview.md) to leverage this data.
+* Your datastream must have [[!UICONTROL Geo Location]](../configure.md#advanced-options) enabled.
+* Add the [weather field group](#schema-configuration) to the schema you are using.
 
-Once you have licensed the data from the Weather Channel. They will enable your account to access the data. Then reach out to Adobe Customer Care to have the data enabled on your datastream. Once enabled on the data stream the data will automatically be appended. You can validate that it is being added by running an edge trace with the debugger or by using Assurance to trace a hit through the edge. 
+## Provisioning {#provisioning}
 
-### Adobe Experience Platform {#experience-platform}
+Once you have licensed the data from [!DNL The Weather Channel], they will enable your account to access the data. Next, you must reach out to Adobe Customer Care to have the data enabled on your datastream. Once enabled, the data will automatically be appended.
 
-In Adobe Experience Platform you will need to add the weather field groups to the schema of the event dataset you are using in your datastream. There are three field groups available. 
+You can validate that it is being added by running an edge trace with the debugger or by using Assurance to trace a hit through the [!DNL Edge Network].
 
-* Forecasted Weather
-* Current Weather
-* Weather Triggers
+### Schema configuration {#schema-configuration}
 
-## Access the Weather Data
+You must add the weather field groups to your Experience Platform schema corresponding to the event dataset you are using in your datastream. There are three field groups available:
 
-Once you have everything setup then you can access the weather data in a variety of ways throughout the Adobe applicaitons. 
+* [!UICONTROL Forecasted Weather]
+* [!UICONTROL Current Weather]
+* [!UICONTROL Weather Triggers]
 
-### Adobe Analytics
+## Access the weather data {#access-weather-data}
 
-The weather data is available to map via processing rules along with the rest of your XDM. The available fields to map are available in the [weather reference page](weather-reference.md). As with all XDM the keys are prefixed with `a.x`. For example if I had `weather.current.temperature.farenheit` it would show up in Analytics as `a.x.weather.current.temperature.farenheit`
+Once your data is licensed and available, you can access it in a variety of ways throughout the Adobe services.
+
+### Adobe Analytics {#analytics}
+
+In [!DNL Adobe Analytics], the weather data is available to map via processing rules, along with the rest of your [!DNL XDM] schema.
+
+You can find the list of fields that you can map in the [weather reference](weather-reference.md) page. As with all [!DNL XDM] schemas, the keys are prefixed with `a.x`. For example, a field named `weather.current.temperature.farenheit` would show up in [!DNL Analytics] as `a.x.weather.current.temperature.farenheit`.
 
 ![Processing Rule Interface](../../assets/datastreams/data-enrichment/weather/processing-rules.png)
 
-### Adobe Customer Journey Analytics
+### Adobe Customer Journey Analytics {#cja}
 
-The weather data is available in the dataset that is specified in the datastream. As long as the weather attributes are in the schema [see above](#prerequisites-prerequisites) they will be available to [add to a data view](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=en) in Customer Journey Analytics. 
+In [!DNL Adobe Customer Journey Analytics], the weather data is available in the dataset that is specified in the datastream. As long as the weather attributes are [added to your schema](#prerequisites-prerequisites), they will be available to [add to a data view](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html) in [!DNL Customer Journey Analytics]. 
 
-### Real-Time Customder Data Platform {#real-time-data-platform}
+### Real-Time Customer Data Platform {#rtcdp}
 
-Weather is available in the Real-Time Customer Data Platform (RT-CDP) for use in segments. The weather data is attached to the events so you will that are collected in real-time. 
+Weather data is available in the [Real-Time Customer Data Platform](../../../rtcdp/overview.md), for use in segments. Weather data is attached to events.
 
 ![Segemnt Builder Showing Weather Events](../../assets/datastreams/data-enrichment/weather/schema-builder.png)
 
-Because weather is ephemeral we stronlgy advise you constrain the segment in time as in the example above. Having a cold day in the last day or two is much more impactful than someone having a cold day 6 months ago. 
+Since weather conditions change often, Adobe recommends that you set time constraints on the segments, as shown in the example above. Having a cold day in the last day or two is much more impactful than having a cold day 6 months ago.
 
-See the [weather reference page](weather-reference.md) for the available fields. 
+See the [weather reference](weather-reference.md) for the available fields.
 
-### Adobe Target {#Target}
+### Adobe Target {#target}
 
-With in Adobe Target the weather data can be used to create audiences to help drive personalization in real-time. The data is passed to Target as mBox parameters. It can be access as a custom mBox parameter. 
+In [!DNL Adobe Target], you can use weather data to drive personalization in real-time. Weather data is passed to [!DNL Target] as [!UICONTROL mBox] parameters and you can access it via a custom [!UICONTROL mBox] parameter. 
 
 ![Target Audience Builder](../../assets/datastreams/data-enrichment/weather/target-audience-builder.png)
 
-The parameter is the XDM path to the field you want. See the [weather reference page](weather-reference.md) for the available fields and their paths. 
+The parameter is the [!DNL XDM] path to a specific field. See the [weather reference](weather-reference.md) for the available fields and their corresponding paths.
