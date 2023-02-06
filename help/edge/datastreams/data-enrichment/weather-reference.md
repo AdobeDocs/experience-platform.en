@@ -11,9 +11,9 @@ This page lists all the available fields that you can use to enrich your audienc
 
 The fields are broken up into three different groups that align to the field groups. 
 
-* [**[!UICONTROL Current Weather]**](#current-weather-current-weather): The current weather conditions of the user, based on their location. This include current temperature, percipitation, cloud coverage, and more.
-* [**[!UICONTROL Forecasted Weather]**](#forecasted-weather-forecast): The forecast includes the 1,2,3,5,7 and 10 day forecast for the user location.
-* [**[!UICONTROL Triggers]**](#triggers-triggers): Triggers are specific combinations that map to different semantic weather conditions. There are three different types of weather triggers:
+* [**[!UICONTROL Current Weather]**](#current-weather): The current weather conditions of the user, based on their location. This include current temperature, percipitation, cloud coverage, and more.
+* [**[!UICONTROL Forecasted Weather]**](#forecast): The forecast includes the 1,2,3,5,7 and 10 day forecast for the user location.
+* [**[!UICONTROL Triggers]**](#triggers): Triggers are specific combinations that map to different semantic weather conditions. There are three different types of weather triggers:
 
     * **[!UICONTROL Relative Triggers]**: Semantically meaningful conditions, such as cold or rainy weather. These can differ in their definitions between various climates.
     * **[!UICONTROL Product Triggers]**: Conditions that would lead to the purchase of different types of products. For example: cold weather forecasts could mean that purchases of rain coats are more likely. 
@@ -59,7 +59,7 @@ The current weather conditions of the user, based on their location.
 | [!UICONTROL Wind Speed Kilometers per Hour] | The wind is treated as a vector; hence, winds must have direction and magnitude (speed). The wind information reported in the current conditions corresponds to a 10-minute average called the sustained wind speed. Sudden or brief variations in the wind speed are known as "wind gusts" and are reported in a separate data field. Wind directions are always expressed as "from whence the wind blows" meaning that a North wind blows from North to South. If you face North in a North wind the wind is at your face. Face southward and the North wind is at your back. Wind speed in kilometers per hour  | `weather.current.windSpeed.kilometersPerHour` |
 | [!UICONTROL Wind Speed Miles per Hour] | The wind is treated as a vector; hence, winds must have direction and magnitude (speed). The wind information reported in the current conditions corresponds to a 10-minute average called the sustained wind speed. Sudden or brief variations in the wind speed are known as "wind gusts" and are reported in a separate data field. Wind directions are always expressed as "from whence the wind blows" meaning that a North wind blows from North to South. If you face North in a North wind the wind is at your face. Face southward and the North wind is at your back. Wind speed in miles per hour  | `weather.current.windSpeed.milesPerHour` |
 
-## Forecasted Weather {forecast}
+## Forecasted Weather {#forecast}
 
 The forecasted weather for the user, based on location, at a specific point in time. 
 
@@ -324,7 +324,7 @@ The forecasted weather for the user, based on location, at a specific point in t
 | Day 14 Forecast Wind Speed Kilometers per Hour | Weather forecast for fourteen days. The forecast of the maximum sustained wind speed over the 12 hour forecast period.<br>The wind is treated as a vector; hence, winds must have direction and magnitude (speed). The wind information reported in the forecast corresponds to a 10-minute average called the sustained wind speed. Sudden or brief variations in the wind speed are known as "wind gusts" and are reported in a separate data field. Wind directions are always expressed as "from whence the wind blows" meaning that a North wind blows from North to South. If you face North in a North wind the wind is at your face. Face southward and the North wind is at your back. Wind speed in kilometers per hour  | `weather.forecast.day14Forecast.windSpeed.kilometersPerHour` |
 | Day 14 Forecast Wind Speed Miles per Hour | Weather forecast for fourteen days. The forecast of the maximum sustained wind speed over the 12 hour forecast period.<br>The wind is treated as a vector; hence, winds must have direction and magnitude (speed). The wind information reported in the forecast corresponds to a 10-minute average called the sustained wind speed. Sudden or brief variations in the wind speed are known as "wind gusts" and are reported in a separate data field. Wind directions are always expressed as "from whence the wind blows" meaning that a North wind blows from North to South. If you face North in a North wind the wind is at your face. Face southward and the North wind is at your back. Wind speed in miles per hour  | `weather.forecast.day14Forecast.windSpeed.milesPerHour` |
 
-## Triggers {triggers}
+## Triggers {#triggers}
 
 Semantic weather condition based on various inputs. 
 
