@@ -120,7 +120,7 @@ A profile export to the destination can be determined by a profile qualifying fo
 
 From a profile attributes point of view, any changes to the three attributes mapped above will determine a destination export.
 
->[!BEGINSHADEBOX]
+>[!ENDSHADEBOX]
 
 ## Batch (file-based) destinations {#file-based-destinations}
 
