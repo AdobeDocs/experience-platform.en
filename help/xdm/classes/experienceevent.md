@@ -36,7 +36,7 @@ The root `timestamp` field of an event schema can **only** represent the observa
 
 For example, if a business in the travel and hospitality industry is modeling a flight reservation event, the class-level `timestamp` field represents the time when the reservation event was observed. Other timestamps that are related to the event, such as the start date of the travel reservation, should be captured in separate fields provided by standard or custom field groups.
 
-![](../images/classes/experienceevent/timestamps.png)
+![A sample Experience Event schema with Flight Reservation and Start Date highlighted.](../images/classes/experienceevent/timestamps.png)
 
 By keeping the class-level timestamp separate from other related datetime values in your event schemas, you can implement flexible segmentation use cases while preserving a timestamped account of customer journeys in your experience application.
 
