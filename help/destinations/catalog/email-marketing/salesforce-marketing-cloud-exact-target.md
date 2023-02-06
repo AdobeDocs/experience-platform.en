@@ -59,7 +59,7 @@ A view of the [!DNL Salesforce Marketing Cloud] [!DNL Email Demographics] attrib
 >Within [!DNL Salesforce Marketing Cloud] you must create custom fields with a **[!UICONTROL FIELD NAME]** that exactly matches the value specified within **[!UICONTROL Mapping ID]** for each activated Platform segment. For example the screenshot below shows a custom field named `salesforce_mc_segment_1`. When activating a segment to this destination, add `salesforce_mc_segment_1` as **[!UICONTROL Mapping ID]** to populate segment audiences from Experience Platform into this custom field.
 
 An example of custom field creation in [!DNL Salesforce Marketing Cloud], is shown below:
-![Salesforce Marketing Cloud UI screenshot showing a custom field.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-field.png)
+![Salesforce Marketing Cloud UI screenshot showing a custom field.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
 
 >[!TIP]
 >
