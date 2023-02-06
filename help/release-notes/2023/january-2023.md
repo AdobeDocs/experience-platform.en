@@ -124,7 +124,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 | Feature | Description |
 | --- | --- |
-| Schema tree display name improvements | The display names for schema fields on the schema canvas are more human friendly to read. Previously, field names were displayed in the UI. |
+| Schema tree display name improvements | Previously, field names were displayed in the UI but now, the display names for schema fields on the schema canvas are more human-friendly to read. |
 
 **New XDM components**
 
