@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Policy Service API Guide
-topic-legacy: developer guide
 description: The Policy Service API allows developers to manage data usage labels and policies in Experience Platform. Follow this guide to learn how to perform key operations using the API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 ---
@@ -24,7 +23,13 @@ Marketing actions (also called marketing use cases), in the context of the Data 
 
 ## Policies
 
-Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform]. A policy is defined by the following:
+Data governance policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
+
+>[!NOTE]
+>
+>Data governance policies are not to be confused with access control policies, which determine the specific data attributes that can be accessed by certain Platform users in your organization. See the guide on [attribute-based access control](../../access-control/abac/overview.md) for more information.
+
+A data governance policy is defined by the following:
 
 1. A specific marketing action
 1. The data usage label(s) that action is restricted from being performed against

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;device;tradein;trade-in;trade in;
 solution: Experience Platform
 title: Device Trade-In Details Schema Field Group
-topic-legacy: overview
 description: This document provides an overview of the Device Trade-In Details schema field group.
 exl-id: 744557be-0297-453f-9134-9d0f4ef2df4d
 ---

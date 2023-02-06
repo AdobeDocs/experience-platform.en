@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;servicenow;ServiceNow
 solution: Experience Platform
 title: ServiceNow Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect ServiceNow to Adobe Experience Platform using APIs or the user interface.
 exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
 ---

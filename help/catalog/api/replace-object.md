@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;catalog;api;replace an object
 solution: Experience Platform
 title: Replace a Catalog Object
-topic-legacy: developer guide
 description: You can overwrite the contents of a Catalog object using a PUT request, wherein the entire resource is replaced with the request payload.
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
 ---

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;oracle;eloqua;oracle eloqua
 solution: Experience Platform
 title: Create an Oracle Eloqua Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Oracle Eloqua using the Flow Service API.
 exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
@@ -31,7 +30,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Oracle Eloqua], you must 
 | `endpoint` | The endpoint of your [!DNL Oracle Eloqua]. |
 | `username` | The username of your [!DNL Oracle Eloqua] account. The username must be formatted as `siteName + \\ + username`, where `siteName` is the company name you used to log in to [!DNL Oracle Eloqua] and `username` is your username. For example, your log in username can be: `adobe\\emily`. |
 | `password` | The password corresponding to your [!DNL Oracle Eloqua] username. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The value for the connection specification ID of the [!DNL Oracle Eloqua] source is fixed as: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The value for the connection specification ID of the [!DNL Oracle Eloqua] source is fixed as: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
 
 For more information on authentication credentials for [!DNL Oracle Eloqua], see the [[!DNL Oracle Eloqua] guide on authentication](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
 

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Oracle;oracle
 solution: Experience Platform
 title: Oracle Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect Oracle to Adobe Experience Platform using APIs or the user interface.
 exl-id: be422cf8-fb24-48c7-8369-34f0f2ec95fc
 ---

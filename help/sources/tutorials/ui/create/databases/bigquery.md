@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Google Big Query;google big query;GBQ;gbq
 solution: Experience Platform
 title: Create a Google Big Query  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Google Big Query source connection using the Adobe Experience Platform UI.
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
@@ -18,7 +17,7 @@ This tutorial requires a working understanding of the following components of Ex
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 If you already have a valid [!DNL Google BigQuery] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/databases.md).
 

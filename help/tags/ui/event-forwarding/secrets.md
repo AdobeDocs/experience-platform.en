@@ -32,6 +32,12 @@ You should also have a working understanding of the publishing flow for tags and
 
 ## Create a secret {#create}
 
+>[!CONTEXTUALHELP]
+>id="platform_eventforwarding_secrets_environments"
+>title="Environments for secrets"
+>abstract="In order for a secret to be usable by event forwarding, it must be assigned to an existing environment. If you do not have any environments created for your event forwarding property, you must configure them before continuing."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="Environments overview"
+
 To create a secret, select **[!UICONTROL Event Forwarding]** in the left navigation, then open the event forwarding property you want to add the secret under. Next, select **[!UICONTROL Secrets]** in the left navigation, followed by **[!UICONTROL Create New Secret]**.
 
 ![Create new secret](../../images/ui/event-forwarding/secrets/create-new-secret.png)

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Azure Blob;Amazon S3;blob;Blob;S3;s3
 solution: Experience Platform
 title: Azure Blob and Amazon S3 Source Connectors Overview
-topic-legacy: overview
 description: Learn how to connect Azure Blob and Amazon S3 to Adobe Experience Platform using APIs or the user interface.
 exl-id: 43a60d4d-1947-43c7-9a13-8e4094ca3604
 ---

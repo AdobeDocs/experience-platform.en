@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;Oracle Service Cloud;oracle service cloud
 title: Create an Oracle Service Cloud Source Connection in the UI
 description: Learn how to create an Oracle Service Cloud source connection using the Adobe Experience Platform UI.
+exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
 ---
 # (Beta) Create an Oracle Service Cloud source connection in the UI
 
@@ -18,7 +19,7 @@ This tutorial requires a working understanding of the following components of Ex
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-*   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+*   [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 If you already have a valid Oracle Service Cloud source connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/customer-success.md)
 

@@ -10,6 +10,19 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](extension/web-sdk-ext-release-notes.md).
 
+## Version 2.14.0 - January 25, 2023
+
+**New features**
+
+* (Beta) Added support for AJO surfaces and propositions.
+
+**Fixes and improvements**
+
+* Fixed an issue with Adobe Target VEC custom code actions where the code was injected into an alternate location than with [!DNL at.js].
+* Fixed an issue where in some edge cases the "referer" header was not set properly on requests to the Edge Network.
+* Fixed an issue where [user agent client hint](fundamentals/user-agent-client-hints.md) properties could be set to an incorrect type.
+* Fixed an issue where `placeContext.localTime` did not match the schema.
+
 ## Version 2.13.1 - October 13, 2022
 
 * Fixed an issue where visitor migration does not work if window.Visitor is defined after configure. This is especially an issue when running with Adobe Tags.

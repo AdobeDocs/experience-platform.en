@@ -2,8 +2,8 @@
 title: Hybrid personalization using Web SDK and Edge Network Server API
 description: This article demonstrates how you can use the Web SDK in conjunction with the Server API to deploy hybrid personalization on your web properties.
 keywords: personalization; hybrid; server api; server-side; hybrid implementation;
+exl-id: 506991e8-701c-49b8-9d9d-265415779876
 ---
-
 # Hybrid personalization using Web SDK and Edge Network Server API
 
 ## Overview {#overview}
@@ -275,9 +275,3 @@ function sendDisplayEvent(decision) {
 ## Sample application {#sample-app}
 
 To help you experiment and learn more about this type of personalization, we provide a sample application which you can download and use for testing. You can download the application, along with detailed instructions on how to use it, from this [GitHub repository](https://github.com/adobe/alloy-samples).
-
-
-
-
-
-

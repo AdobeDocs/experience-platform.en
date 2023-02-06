@@ -131,7 +131,7 @@ This page also provides you with an interface to update the metadata description
 
 ## Next steps
 
-By following this tutorial, you have successfully created a dataflow to bring your Campaign v8 delivery logs and tracking logs data to Platform. Incoming data can now be used by downstream Platform services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have successfully created a dataflow to bring your Campaign v8 delivery logs and tracking logs data to Platform. Incoming data can now be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
-* [[!DNL Real-time Customer Profile] overview](../../../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] overview](../../../../../profile/home.md)
 * [[!DNL Data Science Workspace] overview](../../../../../data-science-workspace/home.md)

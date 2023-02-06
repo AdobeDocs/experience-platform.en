@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;Data Science Workspace;popular topics;data science workspace;data science
 solution: Experience Platform
 title: Data Science Workspace Overview
-topic-legacy: overview
 description: This guide provides an overview of the key concepts related to Data Science Workspace in Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
 ---
@@ -63,7 +62,7 @@ With [!DNL Data Science Workspace], your data scientists can streamline the cumb
 
 Data is the cornerstone of AI and machine learning.  
 
-[!DNL Data Science Workspace] is fully integrated with Adobe Experience Platform, including the Data Lake, [!DNL Real-time Customer Profile], and [!DNL Unified Edge]. Explore all your organizational data stored in Adobe Experience Platform at once, along with common big data and deep learning libraries, such as [!DNL Spark] ML and [!DNL TensorFlow]. If you don't find what you need, ingest your own datasets using the XDM standardized schema.  
+[!DNL Data Science Workspace] is fully integrated with Adobe Experience Platform, including the Data Lake, [!DNL Real-Time Customer Profile], and [!DNL Unified Edge]. Explore all your organizational data stored in Adobe Experience Platform at once, along with common big data and deep learning libraries, such as [!DNL Spark] ML and [!DNL TensorFlow]. If you don't find what you need, ingest your own datasets using the XDM standardized schema.  
 
 ### Prebuilt machine learning recipes
 

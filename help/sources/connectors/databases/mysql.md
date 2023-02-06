@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;MySQL;mysql;My sql;My SQL
 solution: Experience Platform
 title: MySQL Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect MySQL to Adobe Experience Platform using APIs or the user interface.
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
 ---

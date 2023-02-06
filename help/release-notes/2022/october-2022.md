@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes October 2022
 description: The October 2022 release notes for Adobe Experience Platform.
+exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
 ---
 # Adobe Experience Platform release notes 
 
@@ -31,8 +32,8 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 | Feature | Description |
 | --- | --- |
 | Sensitive data handling for datastreams | Datastreams now leverage several Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../edge/datastreams/overview.md#sensitive) for more information.  |
-| [!DNL Splunk] extension for event forwarding | You can now send data to [!DNL Splunk] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Splunk] extension overview](../../tags/extensions/web/splunk/overview.md) for more information. |
-| [!DNL Zendesk] extension for event forwarding | You can now send data to [!DNL Zendesk] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Zendesk] extension overview](../../tags/extensions/web/zendesk/overview.md) for more information. |
+| [!DNL Splunk] extension for event forwarding | You can now send data to [!DNL Splunk] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Splunk] extension overview](../../tags/extensions/server/splunk/overview.md) for more information. |
+| [!DNL Zendesk] extension for event forwarding | You can now send data to [!DNL Zendesk] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Zendesk] extension overview](../../tags/extensions/server/zendesk/overview.md) for more information. |
 
 {style="table-layout:auto"}
 
@@ -91,14 +92,14 @@ For more information on XDM in Platform, see the [XDM System overview](../../xdm
 
 ## Query Service {#query-service}
 
-Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-time Customer Profile.
+Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-Time Customer Profile.
 
 **Updated features**
 
 | Feature | Description |
 | --- | --- |
-| Monitor queries through the Platform UI | The Query Service [!UICONTROL Scheduled Queries] tab provides improved visibility for the status of all query jobs through the UI. You can now find important information about the status of your query runs, including error messages and codes should they fail, from [!UICONTROL Scheduled Queries] tab. You can also subscribe to alerts through the UI for any of these queries based on their status. See the [Monitor Queries document](../../query-service/monitor-queries.md) to learn more about this feature. |
-| Query accelerated reporting insights data model | As part of the Data Distiller SKU, the query accelerated store allows you to reduce the time and processing power required to gain critical insights from your data. With the query accelerated store you can build a custom data model and/or extend on existing Adobe Real-Time Customer Data Platform data models to improve your reporting insights and their visualizations. See the [query accelerated store reporting insights document](../../query-service/query-accelerated-store/reporting-insights-data-model.md) to learn more about this feature.  |
+| Monitor queries through the Platform UI | The Query Service [!UICONTROL Scheduled Queries] tab provides improved visibility for the status of all query jobs through the UI. You can now find important information about the status of your query runs, including error messages and codes should they fail, from [!UICONTROL Scheduled Queries] tab. You can also subscribe to alerts through the UI for any of these queries based on their status. See the [Monitor Queries document](../../query-service/ui/monitor-queries.md) to learn more about this feature. |
+| Query accelerated reporting insights data model | As part of the Data Distiller SKU, the query accelerated store allows you to reduce the time and processing power required to gain critical insights from your data. With the query accelerated store you can build a custom data model and/or extend on existing Adobe Real-Time Customer Data Platform data models to improve your reporting insights and their visualizations. See the [query accelerated store reporting insights document](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md) to learn more about this feature.  |
 
 {style="table-layout:auto"}
 
@@ -116,6 +117,5 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Feature | Description |
 | --- | --- | 
 | Beta availability of Adobe Workfront source | Use the [Adobe Workfront source](../../sources/connectors/adobe-applications/workfront.md) to bring your Workfront data to Experience Platform and perform use cases such as combining your work records with third-party data, applying historical and time-series analytics on work records, and querying work data using standard SQL. For more information, read the guide on [creating a Workfront source connection in the UI](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
-| Beta availability of Oracle Service Cloud source | Use the Oracle Service Cloud source to ingest data from your Oracle Service Cloud account to Experience Platform. For more information, read the documentation on the [Oracle Service Cloud source](../../sources/connectors/customer-success/oracle-service-cloud.md). |
 
 To learn more about sources, read the [sources overview](../../sources/home.md).
