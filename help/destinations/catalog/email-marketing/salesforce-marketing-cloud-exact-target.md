@@ -192,14 +192,14 @@ When you have finished providing the mappings for your destination connection, s
 
 When performing the [Schedule segment export](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map Platform segments to the [custom field](#prerequisites-custom-field) in Salesforce.
 
-To do this, select each segment, then enter name of the custom field from [!DNL Salesforce Marketing Cloud] in the **[!UICONTROL Mapping ID]** field. Refer to the [Create custom field within [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field) section for guidance and best practices on creating custom fields in [!DNL Salesforce Marketing Cloud].
+To do this, select each segment, then enter name of the custom field from [!DNL Salesforce Marketing Cloud] in the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** field. Refer to the [Create custom field within [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field) section for guidance and best practices on creating custom fields in [!DNL Salesforce Marketing Cloud].
 
-For example, if your [!DNL Salesforce Marketing Cloud] custom field is `salesforce_mc_segment_1`, specify this value in the **[!UICONTROL Mapping ID]** to populate segment audiences from Experience Platform into this custom field.
+For example, if your [!DNL Salesforce Marketing Cloud] custom field is `salesforce_mc_segment_1`, specify this value in the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** to populate segment audiences from Experience Platform into this custom field.
 
 An example custom field from [!DNL Salesforce Marketing Cloud] is shown below:
 ![Salesforce Marketing Cloud UI screenshot showing a custom field.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
 
-An example indicating the location of the **[!UICONTROL Mapping ID]** is shown below:
+An example indicating the location of the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** is shown below:
 ![Platform UI screenshot example showing Schedule segment export.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
 
 As shown the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** should exactly match the value specified within [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]**.
