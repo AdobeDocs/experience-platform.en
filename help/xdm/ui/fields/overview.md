@@ -38,7 +38,7 @@ Depending on whether you are adding a field directly to a schema or its constitu
 
 ## Define the properties of a field {#define}
 
-After selecting the **plus (+)** icon, a **[!UICONTROL New field]** appears in in the canvas, located within an object that is namespaced to your unique tenant ID (shown as `_tenantId` in the example below). All custom fields that are added to a schema  are automatically placed within this namespace to prevent conflicts with other fields from Adobe-provided classes and field groups.
+After selecting the **plus (+)** icon, an **[!UICONTROL Untitled field]** placeholder appears in in the canvas.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
@@ -46,8 +46,8 @@ In the right rail under **[!UICONTROL Field properties]**, you can configure the
 
 | Field property | Description |
 | --- | --- |
-| [!UICONTROL Field name] | A unique, descriptive name for the field. Note that the field's name cannot be changed once the schema has been saved.<br><br>The name should ideally be written in camelCase. It may contain alphanumeric, dash, or underscore characters, but it **may not** start with an underscore.<ul><li>**Correct**: `fieldName`</li><li>**Acceptable:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorrect**: `_fieldName`</li></ul> |
-| [!UICONTROL Display name] | A human-friendly name for the field. |
+| [!UICONTROL Field name] | A unique, descriptive name for the field. Note that the field's name cannot be changed once the schema has been saved. This value is used to identify and reference the field in code and in other downstream applications<br><br>The name should ideally be written in camelCase. It may contain alphanumeric, dash, or underscore characters, but it **may not** start with an underscore.<ul><li>**Correct**: `fieldName`</li><li>**Acceptable:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorrect**: `_fieldName`</li></ul> |
+| [!UICONTROL Display name] | A display name for the field. This is the name that will be used to represent the field within the Schema Editor canvas. |
 | [!UICONTROL Type] | The type of data the field will contain. From this dropdown menu, you can select one of the [standard scalar types](../../schema/field-constraints.md) supported by XDM, or one of the multi-field [data types](../resources/data-types.md) that have been previously defined in the [!DNL Schema Registry].<br><br>You can also select **[!UICONTROL Advanced type search]** to search and filter existing data types and locate the desired type easier. |
 
 {style="table-layout:auto"}
@@ -64,7 +64,7 @@ Once you have finished configuring the field, select **[!UICONTROL Apply]**.
 
 ![](../../images/ui/fields/overview/field-details.png)
 
-The canvas updates to show the field's name and type, and the right rail now lists the field's path in addition to its other properties.
+The canvas updates to show the newly added field, located within an object that is namespaced to your unique tenant ID (shown as `_tenantId` in the example below). All custom fields that are added to a schema  are automatically placed within this namespace to prevent conflicts with other fields from Adobe-provided classes and field groups. The right rail now lists the field's path in addition to its other properties.
 
 ![](../../images/ui/fields/overview/field-added.png)
 
