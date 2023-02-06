@@ -71,7 +71,7 @@ For each segment to be activated within Platform you will need a custom field of
 >[!IMPORTANT]
 >
 >Do not include whitespace characters in the field name. Instead, use the underscore `(_)` character as a separator.
->Within [!DNL Salesforce] you must create custom fields with a **[!UICONTROL FIELD NAME]** that exactly matches the value specified within **[!UICONTROL Mapping ID]** for each activated Platform segment. For example the screenshot below shows a custom field named `crm_2_seg`. When activating a segment to this destination, add `crm_2_seg` as **[!UICONTROL Mapping ID]** to populate segment audiences from Experience Platform into this custom field.
+>Within [!DNL Salesforce] you must create custom fields with a **[!UICONTROL Field Name]** that exactly matches the value specified within **[!UICONTROL Mapping ID]** for each activated Platform segment. For example the screenshot below shows a custom field named `crm_2_seg`. When activating a segment to this destination, add `crm_2_seg` as **[!UICONTROL Mapping ID]** to populate segment audiences from Experience Platform into this custom field.
 
 An example of custom field creation in [!DNL Salesforce], *Step 1 - Select the data type*, is shown below:
 ![Salesforce UI screenshot showing custom field creation, Step 1 - Select the data type.](../../assets/catalog/crm/salesforce/create-salesforce-custom-field-step-1.png)
@@ -81,7 +81,7 @@ An example of custom field creation in [!DNL Salesforce], *Step 2 - Enter the de
 
 >[!TIP]
 >
->* To distinguish between custom fields used for Platform segments and other custom fields within [!DNL Salesforce Marketing Cloud] you could include a recognizable prefix or suffix when creating the custom field. For example, instead of `test_segment`, use `DEV_test_segment` or `test_segment_DEV`
+>* To distinguish between custom fields used for Platform segments and other custom fields within [!DNL Salesforce] you could include a recognizable prefix or suffix when creating the custom field. For example, instead of `test_segment`, use `DEV_test_segment` or `test_segment_DEV`
 >* If you already have other custom fields created in [!DNL Salesforce], you can use the same name as the Platform segment, to easily identify the segment in [!DNL Salesforce].
 
 >[!NOTE]
@@ -99,7 +99,7 @@ Note down the items below before you authenticate to the [!DNL Salesforce CRM] d
 | `Username` | Your [!DNL Salesforce] account username. | |
 | `Password` | Your [!DNL Salesforce] account password. | |
 | `Security Token` | Your [!DNL Salesforce] security token which you will later append to the end of your [!DNL Salesforce] Password to create a concatenated string to be used as the **[!UICONTROL Password]** when [authenticating to the destination](#authenticate).<br> Refer to the [!DNL Salesforce] documentation to [reset your security token](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&type=5) to learn how to regenerate it from the [!DNL Salesforce] interface if you do not have the Security Token. |  |
-| `Custom Domain` | Your [!DNL Salesforce] domain prefix. <br> See the [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) to learn how to obtain this value from the [!DNL Salesforce] interface. | If your [!DNL Salesforce Marketing Cloud] domain is<br> *`d5i000000isb4eak-dev-ed`<br>.my.salesforce.com*,<br> you will need <br>`d5i000000isb4eak-dev-ed` <br>as the value.|
+| `Custom Domain` | Your [!DNL Salesforce] domain prefix. <br> See the [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) to learn how to obtain this value from the [!DNL Salesforce] interface. | If your [!DNL Salesforce] domain is<br> *`d5i000000isb4eak-dev-ed`<br>.my.salesforce.com*,<br> you will need <br>`d5i000000isb4eak-dev-ed` <br>as the value.|
 | `Client ID` | Your Salesforce `Consumer Key`. <br> Refer to the [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) to learn how to obtain this value from the [!DNL Salesforce] interface. | | 
 | `Client Secret` | Your Salesforce `Consumer Secret`. <br> Refer to the [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) to learn how to obtain this value from the [!DNL Salesforce] interface. | | 
 
@@ -234,17 +234,23 @@ When you have finished providing the mappings for your destination connection, s
 
 When performing the [Schedule segment export](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step you must manually map activated segments within Platform to its corresponding custom field in [!DNL Salesforce].
 
-To do this, select each segment, then enter name of the custom field from [!DNL Salesforce] in the **[!UICONTROL Mapping ID]** field. Refer to the [Create custom fields within [!DNL Salesforce]](#prerequisites-custom-field) section for guidance and best practices on creating custom fields in [!DNL Salesforce].
+To do this, select each segment, then enter name of the custom field from [!DNL Salesforce] in the [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** field. Refer to the [Create custom fields within [!DNL Salesforce]](#prerequisites-custom-field) section for guidance and best practices on creating custom fields in [!DNL Salesforce].
 
-For example, if your [!DNL Salesforce] custom field is `crm_2_seg`, specify this value in the **[!UICONTROL Mapping ID]** to populate segment audiences from Experience Platform into this custom field.
+For example, if your [!DNL Salesforce] custom field is `crm_2_seg`, specify this value in the [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** to populate segment audiences from Experience Platform into this custom field.
 
 An example custom field from [!DNL Salesforce] is shown below:
 ![[!DNL Salesforce] UI screenshot showing custom field.](../../assets/catalog/crm/salesforce/salesforce-custom-field.png)
 
-An example indicating the location of the **[!UICONTROL Mapping ID]** is shown below:
+An example indicating the location of the [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** is shown below:
 ![Platform UI screenshot example showing Schedule segment export.](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
 
-As shown the [!DNL Salesforce] **[!UICONTROL FIELD NAME]** exactly matches the value specified within **[!UICONTROL Mapping ID]**.
+As shown the [!DNL Salesforce] **[!UICONTROL Field Name]** exactly matches the value specified within [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]**.
+
+Depending on your use case all activated segments can be mapped to the same [!DNL Salesforce] custom field or to different **[!UICONTROL Field Name]** in [!DNL Salesforce CRM]. A typical example based on the image shown above could be.
+| [!DNL Salesforce CRM] segment name | [!DNL Salesforce] **[!UICONTROL Field Name]** | [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** | 
+| --- | --- | --- |
+| crm_2_seg | `crm_2_seg` | `crm_2_seg` |
+| crm_1_seg | `crm_1_seg` | `crm_1_seg` |
 
 Repeat this section for each activated Platform segment.
 
