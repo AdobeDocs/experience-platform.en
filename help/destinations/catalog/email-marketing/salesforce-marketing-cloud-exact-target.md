@@ -73,7 +73,7 @@ Note down the items below before you authenticate to the [!DNL (API) Salesforce 
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| Subdomain | See [[!DNL Salesforce Marketing Cloud domain prefix]](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html) to learn how to obtain this value from the [!DNL Salesforce Marketing Cloud] interface. | If your [!DNL Salesforce Marketing Cloud] domain is<br> `mcq4jrssqdlyc4lph19nnqgzzs84`<br>.login.exacttarget.com, you need to provide `mcq4jrssqdlyc4lph19nnqgzzs84`<br> as the value.|
+| Subdomain | See [[!DNL Salesforce Marketing Cloud domain prefix]](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html) to learn how to obtain this value from the [!DNL Salesforce Marketing Cloud] interface. | If your [!DNL Salesforce Marketing Cloud] domain is<br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br>you need to provide `mcq4jrssqdlyc4lph19nnqgzzs84` as the value.|
 | Client ID | See the [!DNL Salesforce Marketing Cloud] [documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) to learn how to obtain this value from the [!DNL Salesforce Marketing Cloud] interface. | r23kxxxxxxxx0z05xxxxxx |
 | Client Secret | See the [!DNL Salesforce Marketing Cloud] [documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) to learn how to obtain this value from the [!DNL Salesforce Marketing Cloud] interface. | ipxxxxxxxxxxT4xxxxxxxxxx |
 
@@ -127,7 +127,7 @@ To authenticate to the destination, fill in the required fields below and select
 
 | [!DNL (API) Salesforce Marketing Cloud] destination | [!DNL Salesforce Marketing Cloud] |
 | --- | --- |
-| **[!UICONTROL Subdomain]** | Your [!DNL Salesforce Marketing Cloud] domain prefix. <br>For example if your domain is *`mcq4jrssqdlyc4lph19nnqgzzs84`<br>.login.exacttarget.com*, you need to provide <br>`mcq4jrssqdlyc4lph19nnqgzzs84`<br> as the value. |
+| **[!UICONTROL Subdomain]** | Your [!DNL Salesforce Marketing Cloud] domain prefix. <br>For example if your domain is <br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br> you need to provide `mcq4jrssqdlyc4lph19nnqgzzs84` as the value. |
 | **[!UICONTROL Client ID]** | Your [!DNL Salesforce Marketing Cloud] <br>`Client ID`. |
 | **[!UICONTROL Client Secret]** | Your [!DNL Salesforce Marketing Cloud]<br> `Client Secret`. |
 
