@@ -120,6 +120,12 @@ For more general information on destinations, refer to the [destinations overvie
 
 XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
 
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Schema tree display name improvements | The display names for schema fields on the schema canvas are more human friendly to read. Previously, field names were displayed in the UI. |
+
 **New XDM components**
 
 | Component type | Name | Description |
