@@ -149,9 +149,9 @@ To authenticate to the destination, fill in the required fields below and select
 | --- | --- |
 | **[!UICONTROL Username]** | Your [!DNL Salesforce] account username. |
 | **[!UICONTROL Password]** | A concatenated string composed of your [!DNL Salesforce] account password appended with your [!DNL Salesforce] Security Token.<br>The concatenated value takes the form of `{PASSWORD}{TOKEN}`.<br> Note, do not use any braces or spaces.<br>For example if your [!DNL Salesforce] Password is `MyPa$$w0rd123` and [!DNL Salesforce] Security Token is `TOKEN12345....0000`, the concatenated value you will use in the **[!UICONTROL Password]** field is `MyPa$$w0rd123TOKEN12345....0000`. |
-| **[!UICONTROL Custom Domain]** | Your [!DNL Salesforce] domain prefix. <br>For example if your domain is <br>*`d5i000000isb4eak-dev-ed`.my.salesforce.com*, you need to provide `d5i000000isb4eak-dev-ed` as the value. |
-| **[!UICONTROL Client ID]** | Your [!DNL Salesforce] connected app<br> `Consumer Key`. |
-| **[!UICONTROL Client Secret]** | Your [!DNL Salesforce] connected app<br> `Consumer Secret`. |
+| **[!UICONTROL Custom Domain]** | Your [!DNL Salesforce] domain prefix. <br>For example if your domain is *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, you need to provide `d5i000000isb4eak-dev-ed` as the value. |
+| **[!UICONTROL Client ID]** | Your [!DNL Salesforce] connected app `Consumer Key`. |
+| **[!UICONTROL Client Secret]** | Your [!DNL Salesforce] connected app `Consumer Secret`. |
 
 ![Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/salesforce/authenticate-destination.png)
 
