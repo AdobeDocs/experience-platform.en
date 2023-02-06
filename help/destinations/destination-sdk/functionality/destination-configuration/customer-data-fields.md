@@ -5,7 +5,26 @@ title: Customer data fields
 
 # Customer data fields
 
-Customer data fields define the custom fields that customers need to fill in, specific to your destination, when connecting to the destination in the Experience Platform UI.
+When connecting to your destination in the Experience Platform UI, you might need your users to provide specific configuration details or select specific options that you make available to them. In Destination SDK, these options are called customer data fields.
+
+To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the following destination configuration overview pages:
+
+* [Use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration)
+* [Use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
+
+When [creating a destination](../../authoring-api/destination-configuration/create-destination-configuration.md) through Destination SDK, the `customerDataFields` section defines the properties of the fields your users will see in the UI, such as, but not limited to:
+
+* Cloud storage bucket names and paths, for file-based destinations.
+* The format accepted by the customer data fields.
+* Available file compression types that users can select from.
+* Lists of available endpoints for URL-based integrations.
+
+You can configure customer data fields via the `/authoring/destinations` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
+
+* [Create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md)
+* [Update a destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md)
+
+This article describes all the supported customer data fields configuration types that you can use for your destination, and shows what customers will see in the Experience Platform UI.
 
 ## Supported integration types {#supported-integration-types}
 

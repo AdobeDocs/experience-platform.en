@@ -16,7 +16,7 @@ To understand where this component fits into an integration created with Destina
 
 Before customers can export data from Platform to your destination, they must create a new connection between Experience Platform and your destination, by following the steps described in the [destination connection](../../../ui/connect-destination.md) tutorial.
 
-When creating a destination through Destination SDK, the `customerAuthenticationConfigurations` section defines what customers see in the [authentication screen](../../../ui/connect-destination.md#authenticate). Depending on the destination authentication type, customers must provide various authentication details, such as:
+When [creating a destination](../../authoring-api/destination-configuration/create-destination-configuration.md) through Destination SDK, the `customerAuthenticationConfigurations` section defines what customers see in the [authentication screen](../../../ui/connect-destination.md#authenticate). Depending on the destination authentication type, customers must provide various authentication details, such as:
 
 * For destinations using [bearer authentication](#bearer), users must provide a bearer token.
 * For [Amazon S3](#s3) destinations, users must provide their [!DNL Amazon S3] access key and secret key.
