@@ -19,7 +19,7 @@ The fields are broken up into three different groups that align to the field gro
     * **[!UICONTROL Product Triggers]**: Conditions that would lead to the purchase of different types of products. For example: cold weather forecasts could mean that purchases of rain coats are more likely. 
     * **[!UICONTROL Severe Weather Triggers]**: Severe weather warnings, like winter storm or hurricane warnings. 
 
-## Current Weather {current-weather}
+## Current Weather {#current-weather}
 
 The current weather conditions of the user, based on their location.
 
