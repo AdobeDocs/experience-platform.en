@@ -179,7 +179,7 @@ To correctly map your XDM fields to the [!DNL (API) Salesforce Marketing Cloud] 
     * Repeat these steps to add the following mappings between your XDM profile schema and [!DNL (API) Salesforce Marketing Cloud]:
         |Source Field|Target Field| Mandatory|
         |---|---|---|
-        |`IdentityMap: contactKey`|`Identity: salesforceContactKey`| ``Mandatory` |        
+        |`IdentityMap: contactKey`|`Identity: salesforceContactKey`| `Mandatory` |        
         |`xdm: person.name.firstName`|`Attribute: Email Demographics.First Name`| - |
         |`xdm: personalEmail.address`|`Attribute: Email Addresses.Email Address`| - |
 
