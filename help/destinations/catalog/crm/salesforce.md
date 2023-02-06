@@ -81,7 +81,7 @@ An example of custom field creation in [!DNL Salesforce], *Step 2 - Enter the de
 
 >[!TIP]
 >
->* To distinguish between custom fields used for Platform segments and other custom fields within [!DNL Salesforce] you could include a recognizable prefix or suffix when creating the custom field. For example, instead of `test_segment`, use `DEV_test_segment` or `test_segment_DEV`
+>* To distinguish between custom fields used for Platform segments and other custom fields within [!DNL Salesforce] you could include a recognizable prefix or suffix when creating the custom field. For example, instead of `test_segment`, use `Adobe_test_segment` or `test_segment_Adobe`
 >* If you already have other custom fields created in [!DNL Salesforce], you can use the same name as the Platform segment, to easily identify the segment in [!DNL Salesforce].
 
 >[!NOTE]
