@@ -34,9 +34,9 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
     "name": "S3 destination",
     "destinationServerType": "FILE_BASED_S3",
     "fileBasedS3Destination": {
-        "bucket": {
+        "bucketName": {
             "templatingStrategy": "PEBBLE_V1",
-            "value": "{{customerData.bucket}}"
+            "value": "{{customerData.bucketName}}"
         },
         "path": {
             "templatingStrategy": "PEBBLE_V1",
@@ -133,11 +133,12 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
     "customerEncryptionConfigurations": [],
     "customerDataFields": [
         {
-            "name": "bucket",
+            "name": "bucketName",
             "title": "Amazon S3 bucket name",
             "description": "Enter the Amazon S3 Bucket name that will host the exported files.",
             "type": "string",
             "isRequired": true,
+            "pattern": "(?=^.{3,63}$)(?!^(\\d+\\.)+\\d+$)(^(([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])\\.)*([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])$)",
             "readOnly": false,
             "hidden": false
         },
@@ -147,7 +148,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "description": "Enter Amazon S3 folder path",
             "type": "string",
             "isRequired": true,
-            "pattern": "^[A-Za-z]+$",
+            "pattern": "^[0-9a-zA-Z\\/\\!\\-_\\.\\*\\''\\(\\)]*((\\%SEGMENT_(NAME|ID)\\%)?\\/?)+$",
             "readOnly": false,
             "hidden": false
         },
