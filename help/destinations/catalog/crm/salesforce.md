@@ -39,7 +39,7 @@ Go to the [!DNL Salesforce] [trial](https://www.salesforce.com/in/form/signup/fr
 
 #### Configure a connected app within [!DNL Salesforce] {#prerequisites-connected-app}
 
-First, you need to configure a [!DNL Salesforce connected app](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&language=en_US&r=https%3A%2F%2Fhelp.salesforce.com%2F&type=5) within your [!DNL Salesforce] account, if you do not have one already. [!DNL Salesforce CRM] will leverage the connected app to connect to [!DNL Salesforce].
+First, you need to configure a [[!DNL Salesforce] connected app](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&language=en_US&r=https%3A%2F%2Fhelp.salesforce.com%2F&type=5) within your [!DNL Salesforce] account, if you do not have one already. [!DNL Salesforce CRM] will leverage the connected app to connect to [!DNL Salesforce].
 
 Next, enable [!DNL OAuth Settings for API Integration] for the [!DNL Salesforce connected app]. Refer to the [[!DNL Salesforce]](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) documentation for guidance.
 
@@ -60,7 +60,7 @@ Finally, ensure that the `password` grant is enabled within your [!DNL Salesforc
 
 >[!IMPORTANT]
 >
->If your [!DNL Salesforce] account administrator has restricted access to trusted IP ranges, you need to contact them to get Platform IP's allowed. Refer to the [!DNL Salesforce] [Restrict Access to Trusted IP Ranges for a Connected App](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) documentation if you need additional guidance.
+>If your [!DNL Salesforce] account administrator has restricted access to trusted IP ranges, you need to contact them to get [Experience Platform IP's](/help/destinations/catalog/streaming/ip-address-allow-list.md) allowlisted. Refer to the [!DNL Salesforce] [Restrict Access to Trusted IP Ranges for a Connected App](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) documentation if you need additional guidance.
 
 #### Create custom fields within [!DNL Salesforce] {#prerequisites-custom-field}
 
@@ -88,7 +88,7 @@ An example of custom field creation in [!DNL Salesforce], *Step 2 - Enter the de
 >
 >* Objects in Salesforce are restricted to 25 External fields, see [Custom Field Attributes](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5).
 >* This restriction implies that you can only have a maximum of 25 Experience Platform segment memberships active at any time. 
->* If you have reached this limit within Salesforce, you must remove the custom attribute from Salesforce that were used to store the segment status against older segments within Experience Platform before a new **[!UICONTROL Mapping ID]** can be used.
+>* If you have reached this limit within Salesforce, you must remove the custom attributes from Salesforce that were used to store the segment status against older segments within Experience Platform before a new **[!UICONTROL Mapping ID]** can be used.
 
 #### Gather [!DNL Salesforce CRM] credentials {#gather-credentials}
 
@@ -188,7 +188,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 
 Attributes specified in the **[!UICONTROL Target field]** should be named exactly as described in the attribute mappings table as these attributes will form the request body.
 
-Attributes specified in the **[!UICONTROL Source field]** do not follow any such restriction. You can map it based on your need, however if the data format is not correct when pushed to [!DNL (API) Salesforce CRM] it will result in an error.
+Attributes specified in the **[!UICONTROL Source field]** do not follow any such restriction. You can map it based on your need, however ensure the format of the input data is valid according to the [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5). If the input data is not valid, the update call to [!DNL Salesforce] will fail and your contacts / leads would not get updated.
 
 To correctly map your XDM fields to the [!DNL (API) Salesforce CRM] destination fields, follow these steps:
 
@@ -232,9 +232,9 @@ When you have finished providing the mappings for your destination connection, s
 
 ### Schedule segment export and example {#schedule-segment-export-example}
 
-When performing the [Schedule segment export](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step you must manually map activated segments within Platform to its corresponding custom field in [!DNL Salesforce].
+When performing the [Schedule segment export](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step you must manually map segments activated from Platform to their corresponding custom field in [!DNL Salesforce].
 
-To do this, select each segment, then enter name of the custom field from [!DNL Salesforce] in the [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** field. Refer to the [Create custom fields within [!DNL Salesforce]](#prerequisites-custom-field) section for guidance and best practices on creating custom fields in [!DNL Salesforce].
+To do this, select each segment, then enter the custom field name from [!DNL Salesforce] in the [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** field. Refer to the [Create custom fields within [!DNL Salesforce]](#prerequisites-custom-field) section for guidance and best practices on creating custom fields in [!DNL Salesforce].
 
 For example, if your [!DNL Salesforce] custom field is `crm_2_seg`, specify this value in the [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** to populate segment audiences from Experience Platform into this custom field.
 
@@ -244,13 +244,13 @@ An example custom field from [!DNL Salesforce] is shown below:
 An example indicating the location of the [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** is shown below:
 ![Platform UI screenshot example showing Schedule segment export.](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
 
-As shown the [!DNL Salesforce] **[!UICONTROL Field Name]** exactly matches the value specified within [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]**.
+As shown above the [!DNL Salesforce] **[!UICONTROL Field Name]** exactly matches the value specified within [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]**.
 
-Depending on your use case all activated segments can be mapped to the same [!DNL Salesforce] custom field or to different **[!UICONTROL Field Name]** in [!DNL Salesforce CRM]. A typical example based on the image shown above could be.
+Depending on your use case, all activated segments can be mapped to the same [!DNL Salesforce] custom field or to different **[!UICONTROL Field Name]** in [!DNL Salesforce CRM]. A typical example based on the image shown above could be.
 | [!DNL Salesforce CRM] segment name | [!DNL Salesforce] **[!UICONTROL Field Name]** | [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** | 
 | --- | --- | --- |
-| crm_2_seg | `crm_2_seg` | `crm_2_seg` |
 | crm_1_seg | `crm_1_seg` | `crm_1_seg` |
+| crm_2_seg | `crm_2_seg` | `crm_2_seg` |
 
 Repeat this section for each activated Platform segment.
 
