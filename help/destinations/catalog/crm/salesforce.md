@@ -64,7 +64,9 @@ Finally, ensure that the `password` grant is enabled within your [!DNL Salesforc
 
 #### Create custom fields within [!DNL Salesforce] {#prerequisites-custom-field}
 
-When activating segments, Platform uses the value you specify in the **[!UICONTROL Mapping ID]** field for each activated segment, in the **[Segment schedule](#schedule-segment-export-example)** step, to update segment status within [!DNL Salesforce]. Refer to the Adobe Experience Platform documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
+When activating segments to the [!DNL Salesforce CRM] destination, you must input a value in the **[!UICONTROL Mapping ID]** field for each activated segment, in the **[Segment schedule](#schedule-segment-export-example)** step.
+
+[!DNL Salesforce CRM] requires this value to correctly read and interpret segments coming in from Experience Platform and to update their segment status within [!DNL Salesforce]. Refer to the Experience Platform documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
 
 For each segment to be activated within Platform you will need a custom field of the type `Text Area (Long)` within [!DNL Salesforce]. You can define the field character length of any size between 256 - 131,072 characters according to your business requirement. See the [!DNL Salesforce] [Custom Field Types](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&type=5) documentation page for additional information on custom field types. Also refer the [!DNL Salesforce] documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US) if you need assistance on field creation.
 
