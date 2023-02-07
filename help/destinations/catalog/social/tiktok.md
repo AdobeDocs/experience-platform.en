@@ -1,13 +1,13 @@
 ---
-title: TikTok connection // Replace with the name of destination
-description: Create segments from your customer lists from people who've visited your site or people who have already interacted with your content on TikTok and quickly push the desired segment to TikTok using TikTok's real-time streaming API to use for ad targeting. // Replace with the paragraph in the Overview section
+title: TikTok connection 
+description: These audiences could be of people who visited your website or interacted with your content. Quickly and securely push the desired segment from Adobe Experience Platform to TikTok using Adobe's real-time integration with TikTok Ads Manager. 
 ---
 
 # TikTok connection
 
 ## Overview {#overview}
 
-Create segments from your customer lists from people who've visited your site or people who have already interacted with your content on TikTok and quickly push the desired segment to TikTok using TikTok's real-time streaming API to use for ad targeting. Go to [TikTok's website](https://ads.tiktok.com/help/article/audiences?lang=en) for more info. 
+These audiences could be of people who visited your website or interacted with your content. Quickly and securely push the desired segment from Adobe Experience Platform to TikTok using Adobe's real-time integration with TikTok Ads Manager. Visit [TikTok's business help center](https://ads.tiktok.com/help/article/audiences?lang=en) for more information. 
 
 >[!IMPORTANT]
 >
@@ -15,15 +15,15 @@ Create segments from your customer lists from people who've visited your site or
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the TikTok destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the TikTok destination, here is a sample use case for Adobe Experience Platform customers. 
 
-### Use case #1 {#use-case-1}
+### Use case {#use-case-1}
 
 An athletic apparel brand wants to reach existing customers through their social media accounts. The apparel brand can ingest email addresses from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to TikTok to display ads in their customers' social media feeds.
 
 ## Prerequisites {#prerequisites}
 
-Before you are able to activate data to TikTok, you must authenticate with a TikTok Ads Manager account that you want to add an audience to. Details on sharing advertiser accounts can be found [in the TikTok API documentation](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378). Specifically, you would need the "Audience Management" permission.
+Before you are able to activate data to TikTok, you must authenticate with a TikTok Ads Manager account that you want to add an audience to. Details on sharing advertiser accounts can be found [in the TikTok API documentation](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378). Specifically, you would need to give Adobe the "Audience Management" permission.
 
 ## Supported identities {#supported-identities}
 
@@ -71,7 +71,9 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL TikTok Ads Manager ID]**: Your TikTok Ads Manager ID.
+*  **[!UICONTROL TikTok Ads Manager ID]**: Your TikTok Ads Manager ID. You can find this in your TikTok Ads manager account. 
+
+![TikTok Ads Manager ID](/help/destinations/assets/catalog/social/tiktok/tiktok-ads-manager-ID.png "Image of the TikTok Ads Manager UI, showing how to get the TikTok Ads Manager ID")
 
 ### Enable alerts {#enable-alerts}
 
@@ -103,7 +105,7 @@ Selecting target fields:
 
 ## Exported data {#exported-data}
 
-To verify if data has been exported successfully to the TikTok destination, check your TikTok Ads Manager account. If activation was successful, the segments will be populated in your account.
+Check your TikTok Ads Manager account (under **Assets > Audiences**) to verify if your Adobe segment was exported successfully. The audience will be populated as an audience type: 'Partner Audience'.
 
 ## Data usage and governance {#data-usage-governance}
 
