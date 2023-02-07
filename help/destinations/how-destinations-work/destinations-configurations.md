@@ -58,4 +58,6 @@ Read more about the different options and steps available in the activation work
 
 After reading this document, you now know which export settings for destinations are common across destination types, which can be configured on an individual destination level by developers, and which settings can be edited by users in the activation workflow. 
 
+Next, you can read more detailed information about the [common export behavior patterns per destination type](/help/destinations/how-destinations-work/profile-export-behavior.md).
+
 For destination developers, you can [get started](/help/destinations/destination-sdk/getting-started.md) with Destination SDK. For users looking to activate data, you can check out all the available destinations in the [catalog](/help/destinations/catalog/overview.md).
