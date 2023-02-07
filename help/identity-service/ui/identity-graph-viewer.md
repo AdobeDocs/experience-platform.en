@@ -29,7 +29,7 @@ Working with the identity graph viewer requires an understanding of the various 
 - **Link (edge):** A link or an edge represents the connection between identities.
 - **Graph (cluster):** A graph or a cluster is a group of identities and links that represent a person.
 
-## Access the identity graph viewer
+## Access the identity graph viewer {#access-identity-graph-viewer}
 
 To use the identity graph viewer in the UI, select **[!UICONTROL Identities]** in the left navigation and then select the **[!UICONTROL Identity graph]** tab. From the **[!UICONTROL Identity Namespace]** screen, click the **[!UICONTROL Select identity namespace]** icon to search for the namespace you intend to use.
 
