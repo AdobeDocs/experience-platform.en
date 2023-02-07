@@ -7,6 +7,10 @@ exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
 ---
 # Effective policies endpoint
 
+>[!NOTE]
+>
+>If a user token is being passed, then the user of the token must have an "org admin" role for the requested org.
+
 To view effective access control policies for the current user, make a POST request to the `/acl/effective-policies` endpoint in the [!DNL Access Control] API. The permissions and resource types you want to retrieve must be provided in the request payload in the form of an array. This is demonstrated in the example API call below.
 
 **API format**
