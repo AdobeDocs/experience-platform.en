@@ -24,7 +24,7 @@ This guide assumes you are familiar with the elements of schema composition in X
 
 It is also strongly recommended that you review the [evolution rules for enums and suggested values](../ui/fields/enum.md#evolution) if you are updating existing fields. If you are managing suggested values for schemas that participate in a union, see the [rules for merging enums and suggested values](../ui/fields/enum.md#merging).
 
-## Composition
+## Composition 
 
 In the API, the constrained values for an **enum** field are represented by an `enum` array, while a `meta:enum` object provides friendly display names for those values:
 
@@ -63,11 +63,11 @@ Alternatively, you can define a string field that does not contain an `enum` arr
 
 Since the string does not have an `enum` array to define constraints, its `meta:enum` property can be extended to include new values.
 
-## Manage suggested values for standard fields
+<!-- ## Manage suggested values for standard fields
 
-For existing standard fields, you can [add suggested values](#add-suggested-standard) or [disable suggested values](#disable-suggested-standard).
+For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
 
-### Add suggested values to a standard field {#add-suggested-standard}
+## Add suggested values to a standard field {#add-suggested-standard}
 
 To extend the `meta:enum` of a standard string field, you can create a [friendly name descriptor](../api/descriptors.md#friendly-name) for the field in question in a particular schema.
 
@@ -144,15 +144,9 @@ After applying the descriptor, the Schema Registry responds with the following w
 >}
 >```
 
-### Disable suggested values for a standard field {#disable-suggested-standard}
+<!-- ### Remove suggested values {#remove-suggested-standard}
 
-If a standard string field has predefined suggested values under `meta:enum`, you can disable any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
-
->[!IMPORTANT]
->
->You can only disable suggested values for standard fields that do not have corresponding enum constraints. In other words, if the field has an `enum` array, then `meta:excludeMetaEnum` will have no effect.
->
->See the section on [evolution rules for enums and suggested values](../ui/fields/enum.md#evolution) for more information on restrictions for editing existing fields.
+If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
 
 **API format**
 
@@ -162,7 +156,7 @@ POST /tenant/descriptors
 
 **Request**
 
-The following request disables the suggested values "[!DNL Web Form Filled Out]" and "[!DNL Media ping]" for `eventType` in a schema based on the [XDM ExperienceEvent class](../classes/experienceevent.md).
+The following request removes the suggested values "[!DNL Web Form Filled Out]" and "[!DNL Media ping]" for `eventType` in a schema based on the [XDM ExperienceEvent class](../classes/experienceevent.md).
 
 ```shell
 curl -X POST \
@@ -210,7 +204,7 @@ A successful response returns HTTP status 201 (Created) and the details of the n
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-```
+``` -->
 
 ## Manage suggested values for a custom field {#suggested-custom}
 
