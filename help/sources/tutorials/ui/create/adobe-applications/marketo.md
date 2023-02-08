@@ -1,12 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;Marketo source connector;Marketo connector;Marketo source;Marketo
-solution: Experience Platform
-title: Create a Marketo Engage source connector in the UI
-type: Tutorial
-description: This tutorial provides steps for creating a Marketo Engage source connector in the UI to bring B2B data into Adobe Experience Platform.
+title: Create a Marketo Engage Source Connection and Dataflow in the UI
+description: This tutorial provides steps for creating a Marketo Engage source connection and dataflow in the UI to bring B2B data into Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
 ---
-# Create a [!DNL Marketo Engage] source connector in the UI
+# Create a [!DNL Marketo Engage] source connection and dataflow in the UI
 
 >[!IMPORTANT]
 >
@@ -42,7 +39,7 @@ Once you have gathered your required credentials, you can follow the steps in th
 
 ## Connect your [!DNL Marketo] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
 
