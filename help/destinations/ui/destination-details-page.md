@@ -79,9 +79,23 @@ The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to
 
 ### Dataflow runs duration {#dataflow-runs-duration}
 
-There is a known issue in the displayed duration of dataflow runs. While the **[!UICONTROL Processing duration]** indicated for most dataflow runs is about four hours, as shown in the image below, the actual processing time for any dataflow run is much shorter. Dataflow run windows stay open for longer in the event that Experience Platform needs to retry making calls to the destination.  
+There is a difference in the displayed duration of dataflow runs between streaming and file-based destinations. 
 
-![Image of the Dataflow runs page with the Processing time column highlighted.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run.png)
+### Streaming destinations {#streaming}
+
+While the **[!UICONTROL Processing duration]** indicated for most streaming dataflow runs is about four hours, as shown in the image below, the actual processing time for any dataflow run is much shorter. Dataflow run windows stay open for longer in the event that Experience Platform needs to retry making calls to the destination.  
+
+![Image of the Dataflow runs page with the Processing time column highlighted for a streaming destination.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
+
+For more information around monitoring dataflows to streaming destinations, read
+
+### File-based destinations {#file-based}
+
+The **[!UICONTROL Processing duration]** indicated for most dataflow runs to file-based destinations is zero minutes. Notice also that the dataflow runs to file-based destinations are broken down per segment.
+
+![Image of the Dataflow runs page with the Processing time column highlighted for a file-based destination.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+
+For more information around monitoring dataflows to file-based destinations, read
 
 ## [!UICONTROL Activation data] {#activation-data}
 
