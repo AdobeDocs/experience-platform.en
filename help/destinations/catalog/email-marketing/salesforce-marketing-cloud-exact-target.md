@@ -40,7 +40,7 @@ Note the following prerequisites in order to export data from Platform to your [
 
 Reach out to your [!DNL Salesforce Account Executive] to subscribe to the [!DNL Salesforce Marketing Cloud Account Engagement] product if you do not have it already.
 
-#### Create attribute within [!DNL Salesforce Marketing Cloud] {#prerequisites-attribute}
+#### Create attributes within [!DNL Salesforce Marketing Cloud] {#prerequisites-attribute}
 
 When activating segments to the [!DNL (API) Salesforce Marketing Cloud] destination, you must input a value in the **[!UICONTROL Mapping ID]** field for each activated segment, in the **[Segment schedule](#schedule-segment-export-example)** step.
 
@@ -56,13 +56,13 @@ An example of the data designer screen in [!DNL Salesforce Marketing Cloud], int
 A view of the [!DNL Salesforce Marketing Cloud] [!DNL Email Demographics] attribute-set is shown below:
 ![Salesforce Marketing Cloud UI email demographics attribute-set.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-email-demograhics-fields.png)
 
-The [!DNL (API) Salesforce Marketing Cloud] destination uses the [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) to dynamically retrieve the attributes and their Attribute-Sets' defined within [!DNL Salesforce Marketing Cloud]. 
+The [!DNL (API) Salesforce Marketing Cloud] destination uses the [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) to dynamically retrieve the attributes and their Attribute-Sets' defined within [!DNL Salesforce Marketing Cloud]. 
 
 These are displayed in the **[!UICONTROL Target field]** selection window when you set up the [mapping](#mapping-considerations-example) in the workflow to [activate segments to the destination](#activate). Note that only mappings for the attributes defined within the [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` attribute-set are supported.
 
 >[!IMPORTANT]
 >
->Within [!DNL Salesforce Marketing Cloud] you must create attributes with a **[!UICONTROL FIELD NAME]** that exactly matches the value specified within **[!UICONTROL Mapping ID]** for each activated Platform segment. For example the screenshot below shows an attribute named `salesforce_mc_segment_1`. When activating a segment to this destination, add `salesforce_mc_segment_1` as **[!UICONTROL Mapping ID]** to populate segment audiences from Experience Platform into this attribute.
+>Within [!DNL Salesforce Marketing Cloud], you must create attributes with a **[!UICONTROL FIELD NAME]** that exactly matches the value specified within **[!UICONTROL Mapping ID]** for each activated Platform segment. For example, the screenshot below shows an attribute named `salesforce_mc_segment_1`. When activating a segment to this destination, add `salesforce_mc_segment_1` as **[!UICONTROL Mapping ID]** to populate segment audiences from Experience Platform into this attribute.
 
 An example of attribute creation in [!DNL Salesforce Marketing Cloud], is shown below:
 ![Salesforce Marketing Cloud UI screenshot showing an attribute.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
@@ -176,7 +176,7 @@ To correctly map your XDM fields to the [!DNL (API) Salesforce Marketing Cloud] 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 ![Platform UI screenshot example for Add new mapping.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
-1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select custom attributes]** category and select an attribute from the `Email Demographics` attributes displayed as needed. [!DNL (API) Salesforce Marketing Cloud] destination uses the [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) to dynamically retrieve the attributes and their Attribute-Sets' defined within [!DNL Salesforce Marketing Cloud]. These are displayed in the **[!UICONTROL Target field]** popup when you setup the [mapping](#mapping-considerations-example) when [activating segments to the destination](#activate). Note, only mappings for the attributes defined within the [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` attribute-set are supported.
+1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select custom attributes]** category and select an attribute from the `Email Demographics` attributes displayed as needed. The [!DNL (API) Salesforce Marketing Cloud] destination uses the [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) to dynamically retrieve the attributes and their attribute sets defined within [!DNL Salesforce Marketing Cloud]. These are displayed in the **[!UICONTROL Target field]** popup when you set up the [mapping](#mapping-considerations-example) in the [activate segments to workflow](#activate). Note, only mappings for the attributes defined within the [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` attribute set are supported.
 
     * Repeat these steps to add the following mappings between your XDM profile schema and [!DNL (API) Salesforce Marketing Cloud]:
         |Source Field|Target Field| Mandatory|
@@ -192,7 +192,7 @@ When you have finished providing the mappings for your destination connection, s
 
 ### Schedule segment export and example {#schedule-segment-export-example}
 
-When performing the [Schedule segment export](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map Platform segments to the [attribute](#prerequisites-attribute) in [!DNL Salesforce Marketing Cloud].
+When performing the [Schedule segment export](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map Platform segments to the [attributes](#prerequisites-attribute) in [!DNL Salesforce Marketing Cloud].
 
 To do this, select each segment, then enter name of the attribute from [!DNL Salesforce Marketing Cloud] in the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** field. Refer to the [Create attribute within [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field) section for guidance and best practices on creating attributes in [!DNL Salesforce Marketing Cloud].
 
