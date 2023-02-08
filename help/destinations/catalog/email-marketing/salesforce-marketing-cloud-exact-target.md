@@ -213,6 +213,7 @@ Depending on your use case all activated segments can be mapped to the same [!DN
 | --- | --- | --- |
 | salesforce mc segment 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
 | salesforce mc Segment 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
+
 ## Validate data export {#exported-data}
 
 To validate that you have correctly set up the destination, follow the steps below:
