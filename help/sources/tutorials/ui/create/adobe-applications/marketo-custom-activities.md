@@ -56,6 +56,26 @@ To add a new field, select the plus sign (`+`) beside the schema name. An entry 
 
 The last step in preparing your schema is to add individual fields inside the object-type field that you created in the previous step.
 
-
-
 ## Create a dataflow 
+
+With your schema setup complete, you can now proceed to create a dataflow for your custom activity data.
+
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+
+You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
+
+Under the [!UICONTROL Adobe applications] category, select **[!UICONTROL Marketo Engage]**. Then, select **[!UICONTROL Add data]** to create a new [!DNL Marketo] dataflow.
+
+![]
+
+### Authentication
+
+### Select data
+
+### Dataflow detail
+
+### Mapping
+
+### Review
+
+
