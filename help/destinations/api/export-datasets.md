@@ -413,7 +413,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ## Create a Target Connection
 
-Next, you need to create a target connection which will store the export parameters for your datasets (for example: location, file format, compression, and others). You can refer to the `targetSpec` properties provided in the of the destination's Connection Spec to understand the supported properties. For example, Amazon S3 targetSpec looks like:
+Next, you need to create a target connection which will store the export parameters for your datasets (for example: location, file format, compression, and others). You can refer to the `targetSpec` properties provided in the destination's connection spec to understand the supported properties. For example, the Amazon S3 `targetSpec` looks like:
 
 ![Diagram showing step 4 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
 
@@ -498,7 +498,7 @@ Next, you need to create a target connection which will store the export paramet
 //...
 ```
 
-Using the above spec, you can construct a Target Connection request for Amazon S3, as shown below.
+Using the above spec, you can construct a target connection request for Amazon S3, as shown below.
 
 **Request** 
 
