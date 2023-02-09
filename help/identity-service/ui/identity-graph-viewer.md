@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics;identity graph viewer;Identity graph viewer;graph viewer;Graph viewer;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
-solution: Experience Platform
-title: Identity Graph Viewer Overview
+title: Identity Graph Viewer
 description: An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
 ---
-# Identity graph viewer overview
+# Identity graph viewer
 
 An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels. All customer identity graphs are collectively managed and updated by Adobe Experience Platform Identity Service in near real-time, in response to customer activity.
 
 The identity graph viewer in the Platform user interface allows you to visualize and better understand what customer identities are stitched together, and in what ways. The viewer allows you to drag and interact with different parts of the graph, allowing you to examine complex identity relationships, debug more efficiently, and benefit from increased transparency with how information is being utilized.
+
+The following document provides steps on how to access and use the identity graph viewer in the Platform UI.
 
 ## Tutorial video
 
@@ -22,6 +22,7 @@ The following video is intended to support your understanding of the identity gr
 Working with the identity graph viewer requires an understanding of the various Adobe Experience Platform services involved. Before beginning to work with the identity graph viewer, please review the documentation for the following services:
 
 - [[!DNL Identity Service]](../home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
+- [Real-Time Customer Profile](../../profile/home.md): Identity graphs are leveraged by Real-Time Customer Profile to create a comprehensive and singular view of your customer attributes and behavior.
 
 ### Terminology
 
@@ -30,6 +31,43 @@ Working with the identity graph viewer requires an understanding of the various 
 - **Graph (cluster):** A graph or a cluster is a group of identities and links that represent a person.
 
 ## Access the identity graph viewer
+
+In the Platform UI, select **[!UICONTROL Identities]** in the left navigation and then select **[!UICONTROL Identity Graph]** from the list of tabs in the header.
+
+![The Identities workspace in the Experience Platform UI, with the Identity Graph tab selected.]()
+
+To view an identity graph, provide an identity namespace and its corresponding value and then select **[!UICONTROL View]**.
+
+>[!TIP]
+>
+>Select the table icon ![table icon](../images/identity-graph-viewer/table-icon.png) to see a panel with a list of all identity namespaces available in your organization. You can use any of the identity namespaces as long as you have a valid identity value connected to them. For more information, read the [identity namespace guide](../namespaces.md).
+
+![An identity namespace and its corresponding value, provided in the Identity Graph lookup screen.]()
+
+## Understanding the identity graph viewer interface
+
+The identity graph viewer interface is made up of several elements that you can use to interact and better understand your identity data.
+
+The identity graph displays all of the identities linked to the identity namespace and value combination that you entered. Each node consists of an identity namespace and its corresponding value. You can select, hold, and drag any node to interact with the graph. Alternatively, you can hover over a node to see information about its corresponding identity value. To hide the graph, select the **[!UICONTROL View graph]** toggle.
+
+>[!IMPORTANT]
+>
+>An identity graph requires a minimum of two linked identities to be generated and a valid identity namespace and value combination. The maximum number of identities that the graph viewer can display is 150. See the [appendix](#appendix) section below for more information.
+
+![The identity graph viewer.]()
+
+The [!UICONTROL Identities] table provides a different view of your identity data, listing out the identity symbol / namespace and the identity value combination in a tabular format. Selecting a node in the graph will update the highlighted line item in the [!UICONTROL Identities] table.
+
+![The Identities table.]
+
+The right-rail displays information on a selected identity, including its last updated timestamp. The right-rail also displays information on the data source that corresponds with the selected identity, including its batch ID, dataset name, dataset ID, and schema name.
+
+| Data source | Description |
+| --- | --- | 
+
+![The right-rail.]
+
+![Timestamp slider.]
 
 To use the identity graph viewer in the UI, select **[!UICONTROL Identities]** in the left navigation and then select the **[!UICONTROL Identity graph]** tab. From the **[!UICONTROL Identity Namespace]** screen, click the **[!UICONTROL Select identity namespace]** icon to search for the namespace you intend to use.
 
@@ -61,9 +99,6 @@ From the preview window, select a fingerprint icon to see the identities represe
 
 The identity graph viewer appears. On the left side of the screen is the identity graph displaying all the identities linked to the namespace you selected and the identity value you entered. Each identity node consists of a namespace and its corresponding ID value. You can select and hold any identity to drag and interact with the graph. Alternatively, you can hover over an identity to see information about its ID value. The graph output is also displayed as a tabled list in the center of the screen.
 
->[!IMPORTANT]
->
->An identity graph requires a minimum of two linked identities to generate, as well as a valid namespace and ID pair. The maximum number of identities that the graph viewer can display is 150. See the [appendix](#appendix) section below for more information.
 
 ![identity-graph](../images/identity-graph-viewer/graph-viewer.png)
 
@@ -123,3 +158,4 @@ By reading this document, you have learned how to explore your customers' identi
 | ---- | ------ |
 | 2021-01 | <ul><li>Added support for streaming ingested data and non-production sandbox.</li><li>Minor bug fixes.</li></ul> |
 | 2021-02 | <ul><li>Identity graph viewer is made accessible through dataset preview.</li><li>Minor bug fixes.</li><li>Identity graph viewer is made Generally Available.</li></ul> |
+| 2023-01 |
