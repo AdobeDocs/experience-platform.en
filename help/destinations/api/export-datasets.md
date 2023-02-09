@@ -165,7 +165,7 @@ Follow the steps below to set up a dataset dataflow to a cloud storage destinati
 
 ## Retrieve a list of datasets {#retrieve-list-of-available-destinations}
 
-![Diagram showing step 1 in the export datasets workflow](../assets/api/batch-destination/step1.pn)
+![Diagram showing step 1 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
 
 To retrieve a list of datasets eligible for activation, start by making an API call to the below endpoint. 
 
@@ -273,7 +273,7 @@ For information about the various response parameters for each returned dataset,
 
 Once you have the list of datasets to activate, you can create a source connection with those dataset IDs.
 
-![Diagram showing step 2 in the export datasets workflow](../assets/api/batch-destination/step1.pn)
+![Diagram showing step 2 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
 
 **Request** 
 
@@ -334,7 +334,7 @@ The dataset IDs of a Source Connection cannot be modified after creation. If you
 
 A base connection securely stores the credentials to your destination. Depending on the destination type, the credentials needed to authenticate against that destination can vary. To find these authentication parameters, first fetch the connection spec as described in the section [Gather connection specs and flow specs](#gather-connection-spec-flow-spec) for your preferred destination and then look at the `authSpec` of the response. For example, below is the `authSpec` for Amazon S3:
 
-![Diagram showing step 3 in the export datasets workflow](../assets/api/batch-destination/step1.pn)
+![Diagram showing step 3 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
 
 Response:
 
@@ -415,7 +415,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Next, you need to create a target connection which will store the export parameters for your datasets (for example: location, file format, compression, and others). You can refer to the `targetSpec` properties provided in the of the destination's Connection Spec to understand the supported properties. For example, Amazon S3 targetSpec looks like:
 
-![Diagram showing step 4 in the export datasets workflow](../assets/api/batch-destination/step1.pn)
+![Diagram showing step 4 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
 
 
 +++Amazon S3 - Target Connection Parameters
@@ -552,7 +552,7 @@ Note the Target Connection ID from the response. This ID will be required in the
 
 The final step in the destination configuration is to set up a dataflow. A dataflow ties together previously created entities and also provides options for configuring the dataset export schedule. To create the dataflow, use the payload below and replace the entity IDs from previous steps.
 
-![Diagram showing step 5 in the export datasets workflow](../assets/api/batch-destination/step1.pn)
+![Diagram showing step 5 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
 
 **Request** 
 
@@ -607,7 +607,7 @@ Note the Dataflow ID from the response. This ID will be required in the next ste
 
 To check the executions of the data flow, use the Dataflow Runs API:
 
-![Diagram showing step 6 in the export datasets workflow](../assets/api/batch-destination/step1.pn)
+![Diagram showing step 6 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
 
 **Request** 
 
