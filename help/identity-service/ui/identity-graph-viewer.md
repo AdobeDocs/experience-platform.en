@@ -34,7 +34,7 @@ Working with the identity graph viewer requires an understanding of the various 
 
 In the Platform UI, select **[!UICONTROL Identities]** in the left navigation and then select **[!UICONTROL Identity Graph]** from the list of tabs in the header.
 
-![The Identities workspace in the Experience Platform UI, with the Identity Graph tab selected.]()
+![The Identities workspace in the Experience Platform UI, with the Identity Graph tab selected.](../images/graph-viewer/identity-graph.png)
 
 To view an identity graph, provide an identity namespace and its corresponding value and then select **[!UICONTROL View]**.
 
@@ -42,46 +42,54 @@ To view an identity graph, provide an identity namespace and its corresponding v
 >
 >Select the table icon ![table icon](../images/identity-graph-viewer/table-icon.png) to see a panel with a list of all identity namespaces available in your organization. You can use any of the identity namespaces as long as you have a valid identity value connected to them. For more information, read the [identity namespace guide](../namespaces.md).
 
-![An identity namespace and its corresponding value, provided in the Identity Graph lookup screen.]()
+![An identity namespace and its corresponding value, provided in the Identity Graph lookup screen.](../images/graph-viewer/namespace-and-value.png)
 
 ## Understanding the identity graph viewer interface
 
 The identity graph viewer interface is made up of several elements that you can use to interact and better understand your identity data.
 
-The identity graph displays all of the identities linked to the identity namespace and value combination that you entered. Each node consists of an identity namespace and its corresponding value. You can select, hold, and drag any node to interact with the graph. Alternatively, you can hover over a node to see information about its corresponding identity value. To hide the graph, select the **[!UICONTROL View graph]** toggle.
+![The identity graph viewer interface.](../images/graph-viewer/identity-graph-viewer-main.png)
+
+The identity graph displays all of the identities linked to the identity namespace and value combination that you entered. Each node consists of an identity namespace and its corresponding value. You can select, hold, and drag any node to interact with the graph. Alternatively, you can hover over a node to see information about its corresponding identity value. To hide or display the graph, select **[!UICONTROL View graph]**.
 
 >[!IMPORTANT]
 >
 >An identity graph requires a minimum of two linked identities to be generated and a valid identity namespace and value combination. The maximum number of identities that the graph viewer can display is 150. See the [appendix](#appendix) section below for more information.
 
-![The identity graph viewer.]()
+![The identity graph viewer with five linked identities.](../images/graph-viewer/graph.png)
 
-The [!UICONTROL Identities] table provides a different view of your identity data, listing out the identity symbol / namespace and the identity value combination in a tabular format. Selecting a node in the graph will update the highlighted line item in the [!UICONTROL Identities] table.
+The [!UICONTROL Identities] table provides a different view of your identity data, listing out the identity namespace and the identity value combination in a tabular format. Selecting a node in the graph will update the highlighted line item in the [!UICONTROL Identities] table. 
 
-![The Identities table.]
+![The Identities table with the list of identities linked within the graph.](../images/graph-viewer/identities-table.png)
 
-The right-rail displays information on a selected identity, including its last updated timestamp. The right-rail also displays information on the data source that corresponds with the selected identity, including its batch ID, dataset name, dataset ID, and schema name.
+Use the dropdown menu to sort through the graph data and highlight information on a specific identity namespace. For example, select **[!UICONTROL Email]** from the menu to view data that pertains only to the email identity namespace.
+
+![The Identities table sorted to only display email data.](../images/graph-viewer/sort-email.png)
+
+The right rail displays information on a selected identity, including its last updated timestamp. The right rail also displays information on the data source that corresponds with the selected identity, including its batch ID, dataset name, dataset ID, and schema name.
+
+The following table provides additional information on the data source properties displayed in the right rail:
 
 | Data source | Description |
 | --- | --- | 
+| Batch ID |
+| Dataset ID |
+| Dataset name |
+| Schema name |
 
-![The right-rail.]
+![The right-rail, which displays identity data, as well as information data source.](../images/graph-viewer/right-rail.png)
 
-![Timestamp slider.]
+Use the slider to filter graph data by the time in which identities were first established. By default, the identity graph viewer displays all identities linked within the graph. Hold and drag the slider to adjust the time to the last timestamp in which a new identity was linked to the graph. In the example below, the graph displays that the most recent identity link (GAID), was established on **[!UICONTROL 08/19/2020, 4:29:29 PM]**.
 
-To use the identity graph viewer in the UI, select **[!UICONTROL Identities]** in the left navigation and then select the **[!UICONTROL Identity graph]** tab. From the **[!UICONTROL Identity Namespace]** screen, click the **[!UICONTROL Select identity namespace]** icon to search for the namespace you intend to use.
+![Timestamp slider.](../images/graph-viewer/slider-one.png)
 
-![namespace-screen](../images/identity-graph-viewer/identity-namespace.png)
+Adjust the slider to see that another identity link (Email) was established on **[!UICONTROL 08/19/2020, 4:25:30 PM]**.
 
-The **[!UICONTROL Select identity namespace]** panel appears. This screen contains a list of namespaces available to your organization, including information about a namespace's **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, **[!UICONTROL Owner]**, **[!UICONTROL Last updated]** date, and **[!UICONTROL Description]**. You can use any of the namespaces provided as long as you have a valid identity value connected to them.
+![Timestamp slider two.](../images/graph-viewer/slider-two.png)
 
-Select the namespace you intend to use and click **[!UICONTROL Select]** to proceed.
+You can also adjust the slider to see the earliest iteration of the graph. In the example below, the identity graph viewer displays that the graph was first created on **[!UICONTROL 08/19/2020, 4:11:49 PM]**, with its first links being ECID, Email, and Phone.
 
-![select-identity-namespace](../images/identity-graph-viewer/select-identity-namespace.png)
-
-Once you have selected a namespace, enter its corresponding value for a particular customer in the **[!UICONTROL Identity value]** text box and select **[!UICONTROL View]**.
-
-![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
+![Timestamp slider three.](../images/graph-viewer/slider-three.png)
 
 ### Access the identity graph viewer from datasets
 
