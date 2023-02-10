@@ -81,9 +81,9 @@ From a profile attributes point of view, any changes to the four attributes mapp
 
 ## Streaming API-based destinations {#streaming-api-based-destinations}
 
-The profile export behavior for streaming destinations such as Facebook, Trade Desk, and other API-based integrations is identical to the above.
+The profile export behavior for streaming destinations such as Facebook, Trade Desk, and other API-based integrations is very similar to the behavior described above for enterprise destinations.
 
-Destination examples: advertising, social, etc.
+Examples of streaming destinations are the destinations belonging to the [social and advertising categories](/help/destinations/destination-types.md#categories) in the catalog.
 
 Experience Platform optimizes the profile export behavior to your streaming destination, to only export data to streaming API-based destinations when relevant updates to a profile have occurred following segment qualification or other significant events. Profiles are exported to your destination in the following situations:
 

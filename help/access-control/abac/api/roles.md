@@ -7,6 +7,10 @@ exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
 ---
 # Roles endpoint
 
+>[!NOTE]
+>
+>If a user token is being passed, then the user of the token must have an "org admin" role for the requested org.
+
 Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. In a role-based access control environment, user access provisioning is group through common responsibilities and needs. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need. 
 
 The `/roles` endpoint in the attribute-based access control API allows you to  programmatically manage roles in your organization.
