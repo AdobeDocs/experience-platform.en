@@ -73,7 +73,7 @@ Before starting the workflow to export a dataset, identify the connection spec a
 
 INSERT TABLE HERE
 
-You need these IDs to construct various Flow Service entities. You also need to refer to parts of the Connection Spec itself to set up certain entities so you can fetch the Connection Spec from Flow Service APIs. See below examples of fetching connection specs for all the destinations in the table:
+You need these IDs to construct various Flow Service entities. You also need to refer to parts of the Connection Spec itself to set up certain entities so you can retrieve the Connection Spec from Flow Service APIs. See below examples of retrieving connection specs for all the destinations in the table:
 
 >[!BEGINTABS]
 
@@ -81,7 +81,7 @@ You need these IDs to construct various Flow Service entities. You also need to 
 
 **Request** 
 
-+++Fetch Connection Spec for Amazon S3
++++Retrieve Connection Spec for Amazon S3
 
 ```shell
 curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -113,7 +113,7 @@ curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/f
 
 >[!TAB Azure Blob Storage]
 
-+++Fetch Connection Spec for Azure Blob Storage
++++Retrieve Connection Spec for Azure Blob Storage
 
 **Request** 
 
@@ -149,7 +149,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Request** 
 
-+++Fetch Connection Spec for Azure Data Lake Gen 2(ADLS Gen2)
++++Retrieve Connection Spec for Azure Data Lake Gen 2(ADLS Gen2)
 
 ```shell
 curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
@@ -183,7 +183,7 @@ curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/f
 
 **Request** 
 
-+++Fetch Connection Spec for Data Landing Zone(DLZ)
++++Retrieve Connection Spec for Data Landing Zone(DLZ)
 
 ```shell
 curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
@@ -217,7 +217,7 @@ curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/f
 
 **Request** 
 
-++Fetch Connection Spec for Google Cloud Storage
++++Retrieve Connection Spec for Google Cloud Storage
 
 ```shell
 curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \
@@ -251,7 +251,7 @@ curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/f
 
 **Request** 
 
-++Fetch Connection Spec for SFTP
++++Retrieve Connection Spec for SFTP
 
 ```shell
 curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/36965a81-b1c6-401b-99f8-22508f1e6a26' \
@@ -291,12 +291,14 @@ Follow the steps below to set up a dataset dataflow to a cloud storage destinati
 
 To retrieve a list of datasets eligible for activation, start by making an API call to the below endpoint. 
 
+>[!BEGINSHADEBOX]
+
 **Request** 
 
 +++Retrieve eligible datasets - Request
 
 ```shell
-curl curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/23598e46-f560-407b-88d5-ea6207e49db0/configs?outputType=activationDatasets&outputField=datasets&start=0&limit=20&properties=name,state' \
+curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/23598e46-f560-407b-88d5-ea6207e49db0/configs?outputType=activationDatasets&outputField=datasets&start=0&limit=20&properties=name,state' \
 --header 'accept: application/json' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-api-key: {API_KEY}' \
@@ -304,13 +306,11 @@ curl curl --location --request GET 'https://platform.adobe.io/data/foundation/fl
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
+Note that to retrieve eligible datasets, the connection spec ID used in the request URL must be the data lake source connection spec ID, `23598e46-f560-407b-88d5-ea6207e49db0`, and the two query parameters `outputField=datasets` and `outputType=activationDatasets` must be specified. All other query parameters are the standard ones supported by the Catalog Datasets API. 
+
 +++
 
-Note that to retrieve eligible datasets, the connection spec ID used in the request URL must be the data lake source connection spec ID,  `23598e46-f560-407b-88d5-ea6207e49db0` and the two query parameters `outputField=datasets` and `outputType=activationDatasets` must be specified. All other query parameters are the standard ones supported by the Catalog Datasets API. 
-
 **Response**
-
-A successful response contains a list of datasets eligible for activation. These datasets can be used when constructing the source connection in the next step.
 
 +++Retrieve datasets - Response
 
@@ -389,6 +389,10 @@ A successful response contains a list of datasets eligible for activation. These
 
 +++
 
+>[!ENDSHADEBOX]
+
+A successful response contains a list of datasets eligible for activation. These datasets can be used when constructing the source connection in the next step.
+
 For information about the various response parameters for each returned dataset, refer to the Datasets API documentation.
 
 ## Create a Source Connection {#create-source-connection}
@@ -396,6 +400,8 @@ For information about the various response parameters for each returned dataset,
 ![Diagram showing step 2 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
 
 Once you have the list of datasets to activate, you can create a source connection using those dataset IDs.
+
+>[!BEGINSHADEBOX]
 
 **Request** 
 
@@ -444,6 +450,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
+>[!ENDSHADEBOX]
+
 A successful response returns the ID (`id`) of the newly created source connection and an `etag`. Note down both values as you will need them later when creating the dataflow. 
 
 Please also remember that:
@@ -456,13 +464,11 @@ The dataset IDs of a source connection cannot be modified after creation. If you
 
 ![Diagram showing step 3 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
 
-A base connection securely stores the credentials to your destination. Depending on the destination type, the credentials needed to authenticate against that destination can vary. To find these authentication parameters, first fetch the connection spec for your desired destination as described in the section [Gather connection specs and flow specs](#gather-connection-spec-flow-spec) and then look at the `authSpec` of the response. For example, below is the `authSpec` for Amazon S3:
+A base connection securely stores the credentials to your destination. Depending on the destination type, the credentials needed to authenticate against that destination can vary. To find these authentication parameters, first fetch the connection spec for your desired destination as described in the section [Gather connection specs and flow specs](#gather-connection-spec-flow-spec) and then look at the `authSpec` of the response. Reference the tabs below for the `authSpec` values of all supported destinations.
 
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
-
-**Response**
 
 +++Amazon S3 - Connection spec showing auth spec
 
@@ -519,7 +525,7 @@ A base connection securely stores the credentials to your destination. Depending
             "name": "Azure Blob Storage",
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
-            "authSpec": [
+            "authSpec": [ // describes the authentication parameters
                 {
                     "name": "ConnectionString",
                     "type": "ConnectionString",
@@ -558,7 +564,7 @@ A base connection securely stores the credentials to your destination. Depending
             "name": "Azure Data Lake Gen2",
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
-            "authSpec": [
+            "authSpec": [ // describes the authentication parameters
                 {
                     "name": "Azure Service Principal Auth",
                     "type": "AzureServicePrincipal",
@@ -634,7 +640,7 @@ A base connection securely stores the credentials to your destination. Depending
             "name": "Google Cloud Storage",
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
-            "authSpec": [
+            "authSpec": [ // describes the authentication parameters
                 {
                     "name": "Google Cloud Storage authentication credentials",
                     "type": "GoogleCloudStorageAuth",
@@ -681,7 +687,7 @@ A base connection securely stores the credentials to your destination. Depending
             "name": "SFTP",
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
-            "authSpec": [
+            "authSpec": [ // describes the authentication parameters
                 {
                     "name": "SFTP with Password",
                     "type": "SFTP",
@@ -753,7 +759,6 @@ A base connection securely stores the credentials to your destination. Depending
 
 +++
 
-
 >[!ENDTABS]
 
 Using the properties specified in the authentication spec (i.e. `authSpec` from the response) you can create a base connection with the required credentials, specific to each destination type, as shown in the example below:
@@ -784,7 +789,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     }
   },
   "connectionSpec": {
-    "id": "4fce964d-3f37-408f-9778-e597338a21ee", // amazon s3 connection spec
+    "id": "4fce964d-3f37-408f-9778-e597338a21ee", // Amazon S3 connection spec
     "version": "1.0"
   }
 }'
@@ -806,8 +811,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
 }
 ```
-
-Note the Connection ID from the response. This ID will be required in the next step when creating the target connection. 
 
 +++
 
@@ -856,8 +859,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
 }
 ```
-
-Note the Connection ID from the response. This ID will be required in the next step when creating the target connection. 
 
 +++
 
@@ -910,8 +911,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }
 ```
 
-Note the Connection ID from the response. This ID will be required in the next step when creating the target connection. 
-
 +++
 
 >[!TAB Data Landing Zone(DLZ)]
@@ -956,8 +955,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
 }
 ```
-
-Note the Connection ID from the response. This ID will be required in the next step when creating the target connection. 
 
 +++
 
@@ -1007,8 +1004,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
 }
 ```
-
-Note the Connection ID from the response. This ID will be required in the next step when creating the target connection. 
 
 +++
 
@@ -1093,20 +1088,24 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }
 ```
 
-Note the Connection ID from the response. This ID will be required in the next step when creating the target connection. 
-
 +++
+
+Note the Connection ID from the response. This ID will be required in the next step when creating the target connection. 
 
 >[!ENDTABS]
 
 
-## Create a Target Connection
+## Create a Target Connection {#create-target-connection}
 
 ![Diagram showing step 4 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
 
-Next, you need to create a target connection which will store the export parameters for your datasets (for example: location, file format, compression, and others). You can refer to the `targetSpec` properties provided in the destination's connection spec to understand the supported properties. For example, the Amazon S3 `targetSpec` looks like:
+Next, you need to create a target connection which stores the export parameters for your datasets. Export parameters include location, file format, compression, and other details. Refer to the `targetSpec` properties provided in the destination's connection spec to understand the supported properties for each destination type. Reference the tabs below for the `targetSpec` properties of all supported destinations.
 
-+++Amazon S3 - Target Connection Parameters
+>[!BEGINTABS]
+
+>[!TAB Amazon S3]
+
++++Amazon S3 - Connection spec showing Target Connection Parameters
 
 ```json
 {
@@ -1186,7 +1185,352 @@ Next, you need to create a target connection which will store the export paramet
 //...
 ```
 
-Using the above spec, you can construct a target connection request for Amazon S3, as shown below.
++++
+
+>[!TAB Azure Blob Storage]
+
++++Azure Blob Storage - Connection spec showing Target Connection Parameters
+
+```json
+{
+    "items": [
+        {
+            "id": "6d6b59bf-fb58-4107-9064-4d246c0e5bb2",
+            "name": "Azure Blob Storage",
+            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+            "version": "1.0",
+            "authSpec": [...],
+            "encryptionSpecs": [...],
+            "targetSpec": { // describes the target connection parameters
+                "name": "User based target",
+                "type": "UserNamespace",
+                "spec": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "object",
+                    "properties": {
+                        "path": {
+                            "title": "Folder path",
+                            "description": "Output path (relative) indicating where to upload the data",
+                            "type": "string",
+                            "pattern": "^[0-9a-zA-Z\/\\!\\-_\\.\\*\\'\\(\\)]+$"
+                        },
+                        "container": {
+                            "title": "Container",
+                            "description": "Container within the storage where to upload the data",
+                            "type": "string",
+                            "pattern": "^[a-z0-9](?!.*--)[a-z0-9-]{1,61}[a-z0-9]$"
+                        },
+                        "fileType": {...}, // not applicable to dataset destinations
+                        "datasetFileType": {
+                            "conditional": {
+                                "field": "flowSpec.attributes._workflow",
+                                "operator": "CONTAINS",
+                                "value": "DATASETS"
+                            },
+                            "title": "File Type",
+                            "description": "Select file format",
+                            "type": "string",
+                            "enum": [
+                                "JSON",
+                                "PARQUET"
+                            ]
+                        },
+                        "csvOptions": {...}, // not applicable to dataset destinations
+                        "compression": {
+                            "title": "Compression format",
+                            "description": "Select the desired file compression format.",
+                            "type": "string",
+                            "enum": [
+                                "NONE",
+                                "GZIP"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "container",
+                        "path",
+                        "datasetFileType",
+                        "compression",
+                        "fileType"
+                    ]
+                }
+//...
+```
+
++++
+
+
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
+
++++Azure Data Lake Gen 2(ADLS Gen2) - Connection spec showing Target Connection Parameters
+
+```json
+{
+    "items": [
+        {
+            "id": "be2c3209-53bc-47e7-ab25-145db8b873e1",
+            "name": "Azure Data Lake Gen2",
+            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+            "version": "1.0",
+            "authSpec": [...],
+            "encryptionSpecs": [...],
+            "targetSpec": { // describes the target connection parameters
+                "name": "User based target",
+                "type": "UserNamespace",
+                "spec": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "object",
+                    "properties": {
+                        "path": {
+                            "title": "Folder path",
+                            "description": "Enter the path to your Azure Data Lake Storage folder",
+                            "type": "string"
+                        },
+                        "fileType": {...}, // not applicable to dataset destinations
+                        "datasetFileType": {
+                            "conditional": {
+                                "field": "flowSpec.attributes._workflow",
+                                "operator": "CONTAINS",
+                                "value": "DATASETS"
+                            },
+                            "title": "File Type",
+                            "description": "Select file format",
+                            "type": "string",
+                            "enum": [
+                                "JSON",
+                                "PARQUET"
+                            ]
+                        },
+                        "csvOptions":{...}, // not applicable to dataset destinations
+                        "compression": {
+                            "title": "Compression format",
+                            "description": "Select the desired file compression format.",
+                            "type": "string",
+                            "enum": [
+                                "NONE",
+                                "GZIP"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "path",
+                        "datasetFileType",
+                        "compression",
+                        "fileType"
+                    ]
+                }
+//...
+```
+
++++
+
+>[!TAB Data Landing Zone(DLZ)]
+
++++Data Landing Zone(DLZ) - Connection spec showing Target Connection Parameters
+
+```json
+"items": [
+    {
+        "id": "10440537-2a7b-4583-ac39-ed38d4b848e8",
+        "name": "Data Landing Zone",
+        "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+        "version": "1.0",
+        "authSpec": [],
+        "encryptionSpecs": [],
+        "targetSpec": { // describes the target connection parameters
+            "name": "User based target",
+            "type": "UserNamespace",
+            "spec": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "title": "Folder path",
+                        "description": "Enter the path to your Azure Data Lake Storage folder",
+                        "type": "string"
+                    },
+                    "fileType": {...}, // not applicable to dataset destinations
+                    "datasetFileType": {
+                        "conditional": {
+                            "field": "flowSpec.attributes._workflow",
+                            "operator": "CONTAINS",
+                            "value": "DATASETS"
+                        },
+                        "title": "File Type",
+                        "description": "Select file format",
+                        "type": "string",
+                        "enum": [
+                            "JSON",
+                            "PARQUET"
+                        ]
+                    },
+                    "csvOptions": {...}, // not applicable to dataset destinations
+                    "compression": {
+                        "title": "Compression format",
+                        "description": "Select the desired file compression format.",
+                        "type": "string",
+                        "enum": [
+                            "NONE",
+                            "GZIP"
+                        ]
+                    }
+                },
+                "required": [
+                    "path",
+                    "datasetFileType",
+                    "compression",
+                    "fileType"
+                ]
+            }
+//...
+```
+
++++
+
+>[!TAB Google Cloud Storage]
+
++++Google Cloud Storage - Connection spec showing Target Connection Parameters
+
+```json
+{
+    "items": [
+        {
+            "id": "c5d93acb-ea8b-4b14-8f53-02138444ae99",
+            "name": "Google Cloud Storage",
+            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+            "version": "1.0",
+            "authSpec": [...],
+            "encryptionSpecs": [...],
+            "targetSpec": { // describes the target connection parameters
+                "name": "User based target",
+                "type": "UserNamespace",
+                "spec": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "object",
+                    "properties": {
+                        "bucketName": {
+                            "title": "Bucket name",
+                            "description": "Bucket name",
+                            "type": "string",
+                            "pattern": "(?!^goog.*$)(?!^.*g(o|0)(o|0)gle.*$)(((?=^.{3,63}$)(^([a-z0-9]|[a-z0-9][a-z0-9\\-_]*)[a-z0-9]$))|((?=^.{3,222}$)(?!^(\\d+\\.)+\\d+$)(^(([a-z0-9]{1,63}|[a-z0-9][a-z0-9\\-_]{1,61}[a-z0-9])\\.)*([a-z0-9]{1,63}|[a-z0-9][a-z0-9\\-_]{1,61}[a-z0-9])$)))"
+                        },
+                        "path": {
+                            "title": "Folder path",
+                            "description": "Output path for copying files",
+                            "type": "string",
+                            "pattern": "^[0-9a-zA-Z\/\\!\\-_\\.\\*\\''\\(\\)]*((\\%SEGMENT_(NAME|ID)\\%)?\/?)+$"
+                        },
+                        "fileType": {...}, // not applicable to dataset destinations
+                        "datasetFileType": {
+                            "conditional": {
+                                "field": "flowSpec.attributes._workflow",
+                                "operator": "CONTAINS",
+                                "value": "DATASETS"
+                            },
+                            "title": "File Type",
+                            "description": "Select file format",
+                            "type": "string",
+                            "enum": [
+                                "JSON",
+                                "PARQUET"
+                            ]
+                        },
+                        "csvOptions": {...}, // not applicable to dataset destinations
+                        "compression": {
+                            "title": "Compression format",
+                            "description": "Select the desired file compression format.",
+                            "type": "string",
+                            "enum": [
+                                "NONE",
+                                "GZIP"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "bucketName",
+                        "path",
+                        "datasetFileType",
+                        "compression",
+                        "fileType"
+                    ]
+                }
+//...
+```
+
++++
+
+>[!TAB SFTP]
+
++++SFTP - Connection spec showing Target Connection Parameters
+
+```json
+{
+    "items": [
+        {
+            "id": "36965a81-b1c6-401b-99f8-22508f1e6a26",
+            "name": "SFTP",
+            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+            "version": "1.0",
+            "authSpec": [...],
+            "encryptionSpecs": [...],
+            "targetSpec": { // describes the target connection parameters
+                "name": "User based target",
+                "type": "UserNamespace",
+                "spec": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "object",
+                    "properties": {
+                        "remotePath": {
+                            "title": "Folder path",
+                            "description": "Enter your folder path",
+                            "type": "string"
+                        },
+                        "fileType": {...}, // not applicable to dataset destinations
+                        "datasetFileType": {
+                            "conditional": {
+                                "field": "flowSpec.attributes._workflow",
+                                "operator": "CONTAINS",
+                                "value": "DATASETS"
+                            },
+                            "title": "File Type",
+                            "description": "Select file format",
+                            "type": "string",
+                            "enum": [
+                                "JSON",
+                                "PARQUET"
+                            ]
+                        },
+                        "csvOptions": {...}, // not applicable to dataset destinations
+                        "compression": {
+                            "title": "Compression format",
+                            "description": "Select the desired file compression format.",
+                            "type": "string",
+                            "enum": [
+                                "GZIP",
+                                "NONE"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "remotePath",
+                        "datasetFileType",
+                        "compression",
+                        "fileType"
+                    ]
+                },
+//...
+```
+
++++
+
+>[!ENDTABS]
+
+
+By using the above spec, you can construct a target connection request specific to your desired cloud storage destination, as shown in the tabs below.
+
+>[!BEGINTABS]
+
+>[!TAB Amazon S3]
 
 **Request** 
 
@@ -1217,9 +1561,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-+++
+>[!TIP]
+>
+>For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) section of the Amazon S3 destination documentation page.
+>For other supported values of `datasetFileType`, see the API reference documentation.
 
-For other supported values of `datasetFileType`, see the API reference documentation.
++++
 
 **Response**
 
@@ -1234,19 +1581,272 @@ For other supported values of `datasetFileType`, see the API reference documenta
 
 +++
 
+>[!TAB Azure Blob Storage]
+
+**Request** 
+
++++Azure Blob Storage - Target Connection Request
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'accept: application/json' \
+--header 'x-api-key: acp_xql_gateway' \
+--header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
+--header 'x-sandbox-name: sand-1' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <TOKEN>' \
+--data-raw '{
+    "name": "Azure Blob Storage Beta Target Connection",
+    "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
+    "params": {
+        "mode": "Server-to-server",
+        "container": "your-container-name",
+        "path": "folder/subfolder",
+        "compression": "NONE",
+        "datasetFileType": "JSON"
+    },
+    "connectionSpec": {
+        "id": "6d6b59bf-fb58-4107-9064-4d246c0e5bb2", // Azure Blob Storage connection spec id
+        "version": "1.0"
+    }
+}'
+```
+>[!TIP]
+>
+>For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) section of the Azure Blob Storage destination documentation page.
+>For other supported values of `datasetFileType`, see the API reference documentation.
+
++++
+
+**Response**
+
++++Target Connection - Response
+
+```json
+{
+    "id": "12401496-2573-4ca7-8137-fef1aeb9dd4c",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
++++
+
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
+
+**Request** 
+
++++Azure Blob Storage - Target Connection Request
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'accept: application/json' \
+--header 'x-api-key: acp_xql_gateway' \
+--header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
+--header 'x-sandbox-name: sand-1' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <TOKEN>' \
+--data-raw '{
+    "name": "Azure Data Lake Gen 2(ADLS Gen2) Target Connection",
+    "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
+    "params": {
+        "mode": "Server-to-server",
+        "path": "folder/subfolder",
+        "compression": "NONE",
+        "datasetFileType": "JSON"
+    },
+    "connectionSpec": {
+        "id": "be2c3209-53bc-47e7-ab25-145db8b873e1", // Azure Data Lake Gen 2(ADLS Gen2) connection spec id
+        "version": "1.0"
+    }
+}'
+```
+>[!TIP]
+>
+>For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) section of the Azure Data Lake Gen 2(ADLS Gen2) destination documentation page.
+>For other supported values of `datasetFileType`, see the API reference documentation.
+
++++
+
+**Response**
+
++++Target Connection - Response
+
+```json
+{
+    "id": "12401496-2573-4ca7-8137-fef1aeb9dd4c",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
++++
+
+>[!TAB Data Landing Zone(DLZ)]
+
+**Request** 
+
++++Data Landing Zone - Target Connection Request
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'accept: application/json' \
+--header 'x-api-key: acp_xql_gateway' \
+--header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
+--header 'x-sandbox-name: sand-1' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <TOKEN>' \
+--data-raw '{
+    "name": "Data Landing Zone Target Connection",
+    "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
+    "params": {
+        "mode": "Server-to-server",
+        "path": "folder/subfolder",
+        "compression": "NONE",
+        "datasetFileType": "JSON"
+    },
+    "connectionSpec": {
+        "id": "10440537-2a7b-4583-ac39-ed38d4b848e8", // Data Landing Zone connection spec id
+        "version": "1.0"
+    }
+}'
+```
+>[!TIP]
+>
+>For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) section of the Data Landing Zone destination documentation page.
+>For other supported values of `datasetFileType`, see the API reference documentation.
+
++++
+
+**Response**
+
++++Target Connection - Response
+
+```json
+{
+    "id": "12401496-2573-4ca7-8137-fef1aeb9dd4c",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
++++
+
+>[!TAB Google Cloud Storage]
+
+**Request** 
+
++++Google Cloud Storage - Target Connection Request
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'accept: application/json' \
+--header 'x-api-key: acp_xql_gateway' \
+--header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
+--header 'x-sandbox-name: sand-1' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <TOKEN>' \
+--data-raw '{
+    "name": "Google Cloud Storage Target Connection",
+    "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
+    "params": {
+        "mode": "Server-to-server",
+        "bucketName": "your-bucket-name",
+        "path": "folder/subfolder",
+        "compression": "NONE",
+        "datasetFileType": "JSON"
+    },
+    "connectionSpec": {
+        "id": "c5d93acb-ea8b-4b14-8f53-02138444ae99", // Google Cloud Storage connection spec id
+        "version": "1.0"
+    }
+}'
+```
+>[!TIP]
+>
+>For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) section of the Google Cloud Storage destination documentation page.
+>For other supported values of `datasetFileType`, see the API reference documentation.
+
++++
+
+**Response**
+
++++Target Connection - Response
+
+```json
+{
+    "id": "12401496-2573-4ca7-8137-fef1aeb9dd4c",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
++++
+
+>[!TAB SFTP]
+
+**Request** 
+
++++SFTP - Target Connection Request
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'accept: application/json' \
+--header 'x-api-key: acp_xql_gateway' \
+--header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
+--header 'x-sandbox-name: sand-1' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <TOKEN>' \
+--data-raw '{
+    "name": "SFTP Target Connection",
+    "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
+    "params": {
+        "mode": "Server-to-server",
+        "remotePath": "folder/subfolder",
+        "compression": "NONE",
+        "datasetFileType": "JSON"
+    },
+    "connectionSpec": {
+        "id": "36965a81-b1c6-401b-99f8-22508f1e6a26", // SFTP connection spec id
+        "version": "1.0"
+    }
+}'
+```
+>[!TIP]
+>
+>For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) section of the SFTP destination documentation page.
+>For other supported values of `datasetFileType`, see the API reference documentation.
+
++++
+
+**Response**
+
++++Target Connection - Response
+
+```json
+{
+    "id": "12401496-2573-4ca7-8137-fef1aeb9dd4c",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
++++
+
+>[!ENDTABS]
+
 Note the Target Connection ID from the response. This ID will be required in the next step when creating the dataflow to export datasets. 
 
 ## Create a dataflow {#create-dataflow}
 
 ![Diagram showing step 5 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
 
-The final step in the destination configuration is to set up a dataflow. A dataflow ties together previously created entities and also provides options for configuring the dataset export schedule. To create the dataflow, use the payload below and replace the entity IDs from previous steps.
+The final step in the destination configuration is to set up a dataflow. A dataflow ties together previously created entities and also provides options for configuring the dataset export schedule. To create the dataflow, use the payloads below, depending on your desired cloud storage destination, and replace the entity IDs from previous steps.
+
+>[!BEGINTABS]
+
+>[!TAB Amazon S3]
 
 **Request** 
 
-+++Create Dataset Dataflow - Request
++++Create Dataset Dataflow to Amazon S3 destination - Request
 
-```json
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
 --header 'accept: application/json' \
 --header 'x-api-key: acp_xql_gateway' \
@@ -1255,8 +1855,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <TOKEN>' \
 --data-raw '{
-    "name": "Activate datasets to a batch destination",
-    "description": "This operation creates a dataflow to activate datasets to a batch destination (e.g. Amazon S3)",
+    "name": "Activate datasets to an Amazon S3 cloud storage destination",
+    "description": "This operation creates a dataflow to export datasets to an Amazon S3 cloud storage destination",
     "flowSpec": {
         "id": "269ba276-16fc-47db-92b0-c1049a3c131f", // Amazon S3 flow spec ID
         "version": "1.0"
@@ -1276,6 +1876,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
++++
+
 **Response**
 
 +++Create dataflow - Response
@@ -1289,13 +1891,272 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-Note the Dataflow ID from the response. This ID will be required in the next step when retrieving the dataflow runs.
+>[!TAB Azure Blob Storage]
 
-## Get the dataflow runs
+**Request** 
+
++++Create Dataset Dataflow to Azure Blob Storage destination - Request
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
+--header 'accept: application/json' \
+--header 'x-api-key: acp_xql_gateway' \
+--header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
+--header 'x-sandbox-name: sand-1' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <TOKEN>' \
+--data-raw '{
+    "name": "Activate datasets to an Azure Blob Storage cloud storage destination",
+    "description": "This operation creates a dataflow to export datasets to an Azure Blob Storage cloud storage destination",
+    "flowSpec": {
+        "id": "95bd8965-fc8a-4119-b9c3-944c2c2df6d2", // Azure Blob Storage flow spec ID
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "<FROM_STEP_CREATE_SOURCE_CONNECTION>"
+    ],
+    "targetConnectionIds": [
+        "<FROM_STEP_CREATE_TARGET_CONNECTION>"
+    ],
+    "transformations": [],
+    "scheduleParams": { // specify the scheduling info
+        "interval": 3, // also supports 6, 9, 12, 24 hour increments
+        "timeUnit": "hour",
+        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+    }
+}'
+```
+
++++
+
+**Response**
+
++++Create dataflow - Response
+
+```json
+{
+    "id": "eb54b3b3-3949-4f12-89c8-64eafaba858f",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
++++
+
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
+
+**Request** 
+
++++Create Dataset Dataflow to Azure Data Lake Gen 2(ADLS Gen2) destination - Request
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
+--header 'accept: application/json' \
+--header 'x-api-key: acp_xql_gateway' \
+--header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
+--header 'x-sandbox-name: sand-1' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <TOKEN>' \
+--data-raw '{
+    "name": "Activate datasets to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
+    "description": "This operation creates a dataflow to export datasets to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
+    "flowSpec": {
+        "id": "17be2013-2549-41ce-96e7-a70363bec293", // Azure Data Lake Gen 2(ADLS Gen2) flow spec ID
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "<FROM_STEP_CREATE_SOURCE_CONNECTION>"
+    ],
+    "targetConnectionIds": [
+        "<FROM_STEP_CREATE_TARGET_CONNECTION>"
+    ],
+    "transformations": [],
+    "scheduleParams": { // specify the scheduling info
+        "interval": 3, // also supports 6, 9, 12, 24 hour increments
+        "timeUnit": "hour",
+        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+    }
+}'
+```
+
++++
+
+**Response**
+
++++Create dataflow - Response
+
+```json
+{
+    "id": "eb54b3b3-3949-4f12-89c8-64eafaba858f",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
++++
+
+>[!TAB Data Landing Zone(DLZ)]
+
+**Request** 
+
++++Create Dataset Dataflow to Data Landing Zone destination - Request
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
+--header 'accept: application/json' \
+--header 'x-api-key: acp_xql_gateway' \
+--header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
+--header 'x-sandbox-name: sand-1' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <TOKEN>' \
+--data-raw '{
+    "name": "Activate datasets to a Data Landing Zone cloud storage destination",
+    "description": "This operation creates a dataflow to export datasets to a Data Landing Zone cloud storage destination",
+    "flowSpec": {
+        "id": "cd2fc47e-e838-4f38-a581-8fff2f99b63a", // Data Landing Zone flow spec ID
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "<FROM_STEP_CREATE_SOURCE_CONNECTION>"
+    ],
+    "targetConnectionIds": [
+        "<FROM_STEP_CREATE_TARGET_CONNECTION>"
+    ],
+    "transformations": [],
+    "scheduleParams": { // specify the scheduling info
+        "interval": 3, // also supports 6, 9, 12, 24 hour increments
+        "timeUnit": "hour",
+        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+    }
+}'
+```
+
++++
+
+**Response**
+
++++Create dataflow - Response
+
+```json
+{
+    "id": "eb54b3b3-3949-4f12-89c8-64eafaba858f",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
++++
+
+>[!TAB Google Cloud Storage]
+
+**Request** 
+
++++Create Dataset Dataflow to Google Cloud Storage destination - Request
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
+--header 'accept: application/json' \
+--header 'x-api-key: acp_xql_gateway' \
+--header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
+--header 'x-sandbox-name: sand-1' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <TOKEN>' \
+--data-raw '{
+    "name": "Activate datasets to a Google Cloud Storage cloud storage destination",
+    "description": "This operation creates a dataflow to export datasets to a Google Cloud Storage destination",
+    "flowSpec": {
+        "id": "585c15c4-6cbf-4126-8f87-e26bff78b657", // Google Cloud Storage flow spec ID
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "<FROM_STEP_CREATE_SOURCE_CONNECTION>"
+    ],
+    "targetConnectionIds": [
+        "<FROM_STEP_CREATE_TARGET_CONNECTION>"
+    ],
+    "transformations": [],
+    "scheduleParams": { // specify the scheduling info
+        "interval": 3, // also supports 6, 9, 12, 24 hour increments
+        "timeUnit": "hour",
+        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+    }
+}'
+```
+
++++
+
+**Response**
+
++++Create dataflow - Response
+
+```json
+{
+    "id": "eb54b3b3-3949-4f12-89c8-64eafaba858f",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
++++
+
+>[!TAB SFTP]
+
+***Request** 
+
++++Create Dataset Dataflow to SFTP destination - Request
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
+--header 'accept: application/json' \
+--header 'x-api-key: acp_xql_gateway' \
+--header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
+--header 'x-sandbox-name: sand-1' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <TOKEN>' \
+--data-raw '{
+    "name": "Activate datasets to an SFTP cloud storage destination",
+    "description": "This operation creates a dataflow to export datasets to an SFTP cloud storage destination",
+    "flowSpec": {
+        "id": "354d6aad-4754-46e4-a576-1b384561c440", // SFTP flow spec ID
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "<FROM_STEP_CREATE_SOURCE_CONNECTION>"
+    ],
+    "targetConnectionIds": [
+        "<FROM_STEP_CREATE_TARGET_CONNECTION>"
+    ],
+    "transformations": [],
+    "scheduleParams": { // specify the scheduling info
+        "interval": 3, // also supports 6, 9, 12, 24 hour increments
+        "timeUnit": "hour",
+        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+    }
+}'
+```
+
++++
+
+**Response**
+
++++Create dataflow - Response
+
+```json
+{
+    "id": "eb54b3b3-3949-4f12-89c8-64eafaba858f",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
++++
+
+>[!ENDTABS]
+
+Note the Dataflow ID from the response. This ID will be required in the next step when retrieving the dataflow runs to validate the successful dateset exports.
+
+## Get the dataflow runs {#get-dataflow-runs}
 
 ![Diagram showing step 6 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
 
-To check the executions of the data flow, use the Dataflow Runs API:
+To check the executions of a dataflow, use the Dataflow Runs API:
+
+>[!BEGINSHADEBOX]
 
 **Request** 
 
@@ -1310,6 +2171,8 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 --header 'Authorization: Bearer <TOKEN>' \
 --data-raw ''
 ```
+
++++
 
 **Response**
 
@@ -1359,7 +2222,9 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
-For [information about the various parameters returned by the Dataflow runs API](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns), refer the API reference documentation. 
+>[!ENDSHADEBOX]
+
+You can find [information about the various parameters returned by the Dataflow runs API](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) in the API reference documentation. 
 
 ## API error handling {#api-error-handling}
 
