@@ -69,7 +69,7 @@ For descriptions of the terms that you will be encountering in this API tutorial
 
 ### Gather connection specs and flow specs for your desired destination {#gather-connection-spec-flow-spec}
 
-Before starting the workflow to export a dataset, identify the connection spec and flow spec IDs of the destination to which you are intending to export datasets to. Use below table for reference.
+Before starting the workflow to export a dataset, identify the connection spec and flow spec IDs of the destination to which you are intending to export datasets to. Use the table below for reference.
 
 INSERT TABLE HERE
 
@@ -113,9 +113,9 @@ curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/f
 
 >[!TAB Azure Blob Storage]
 
-+++Retrieve Connection Spec for Azure Blob Storage
-
 **Request** 
+
++++Retrieve Connection Spec for Azure Blob Storage
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
@@ -287,7 +287,7 @@ Follow the steps below to set up a dataset dataflow to a cloud storage destinati
 
 ## Retrieve a list of datasets {#retrieve-list-of-available-destinations}
 
-![Diagram showing step 1 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
+![Diagram showing step 1 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-retrieve-datasets.png)
 
 To retrieve a list of datasets eligible for activation, start by making an API call to the below endpoint. 
 
@@ -397,7 +397,7 @@ For information about the various response parameters for each returned dataset,
 
 ## Create a Source Connection {#create-source-connection}
 
-![Diagram showing step 2 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
+![Diagram showing step 2 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png)
 
 Once you have the list of datasets to activate, you can create a source connection using those dataset IDs.
 
@@ -464,7 +464,7 @@ The dataset IDs of a source connection cannot be modified after creation. If you
 
 ![Diagram showing step 3 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
 
-A base connection securely stores the credentials to your destination. Depending on the destination type, the credentials needed to authenticate against that destination can vary. To find these authentication parameters, first fetch the connection spec for your desired destination as described in the section [Gather connection specs and flow specs](#gather-connection-spec-flow-spec) and then look at the `authSpec` of the response. Reference the tabs below for the `authSpec` values of all supported destinations.
+A base connection securely stores the credentials to your destination. Depending on the destination type, the credentials needed to authenticate against that destination can vary. To find these authentication parameters, first retrieve the connection spec for your desired destination as described in the section [Gather connection specs and flow specs](#gather-connection-spec-flow-spec) and then look at the `authSpec` of the response. Reference the tabs below for the `authSpec` properties of all supported destinations.
 
 >[!BEGINTABS]
 
