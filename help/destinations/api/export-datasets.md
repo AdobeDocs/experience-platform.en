@@ -1611,6 +1611,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     }
 }'
 ```
+
 >[!TIP]
 >
 >For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) section of the Azure Blob Storage destination documentation page.
@@ -1660,6 +1661,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     }
 }'
 ```
+
 >[!TIP]
 >
 >For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) section of the Azure Data Lake Gen 2(ADLS Gen2) destination documentation page.
@@ -1709,6 +1711,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     }
 }'
 ```
+
 >[!TIP]
 >
 >For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) section of the Data Landing Zone destination documentation page.
@@ -1759,6 +1762,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     }
 }'
 ```
+
 >[!TIP]
 >
 >For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) section of the Google Cloud Storage destination documentation page.
@@ -1808,6 +1812,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     }
 }'
 ```
+
 >[!TIP]
 >
 >For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) section of the SFTP destination documentation page.
