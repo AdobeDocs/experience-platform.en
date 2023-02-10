@@ -18,9 +18,9 @@ This article explains the workflow required to use the Flow Service API to expor
 >
 >You can also use the Experience Platform user interface to export datasets. Read the [export datasets UI tutorial](/help/destinations/ui/export-datasets.md) for more information.
 
-![Overview - the steps to create a destination and export datasets](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
-
 ## Getting started {#get-started}
+
+![Overview - the steps to create a destination and export datasets](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
@@ -67,9 +67,9 @@ You can find accompanying reference documentation for all the API operations in 
 
 For descriptions of the terms that you will be encountering in this API tutorial, read the [glossary section](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) of the API reference documentation.
 
-### Gather connection specs and flow specs for your preferred destination {#gather-connection-spec-flow-spec}
+### Gather connection specs and flow specs for your desired destination {#gather-connection-spec-flow-spec}
 
-Before starting the workflow to export a dataset, identify the Connection and Flow Spec IDs of the destination to which you are intending to export datasets to. Use below table for reference.
+Before starting the workflow to export a dataset, identify the connection spec and flow spec IDs of the destination to which you are intending to export datasets to. Use below table for reference.
 
 INSERT TABLE HERE
 
@@ -115,6 +115,8 @@ curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/f
 
 +++Fetch Connection Spec for Azure Blob Storage
 
+**Request** 
+
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
 --header 'accept: application/json' \
@@ -128,7 +130,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-+++Amazon S3 - Connection Spec
++++Azure Blob Storage - Connection Spec
 
 ```json
 {
@@ -145,23 +147,143 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
-This content appears in the Windows tab.
+**Request** 
+
++++Fetch Connection Spec for Azure Data Lake Gen 2(ADLS Gen2)
+
+```shell
+curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
+--header 'accept: application/json' \
+--header 'x-api-key: acp_xql_gateway' \
+--header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
+--header 'x-sandbox-name: sand-1' \
+--header 'Authorization: Bearer <TOKEN>'
+```
+
++++
+
+**Response**
+
++++Azure Data Lake Gen 2(ADLS Gen2) - Connection Spec
+
+```json
+{
+    "items": [
+        {
+            "id": "be2c3209-53bc-47e7-ab25-145db8b873e1",
+            "name": "Azure Data Lake Gen2",
+            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+            "version": "1.0",
+//...
+```
+
++++
 
 >[!TAB Data Landing Zone(DLZ)]
 
-This content appears in the MacOS tab.
+**Request** 
+
++++Fetch Connection Spec for Data Landing Zone(DLZ)
+
+```shell
+curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
+--header 'accept: application/json' \
+--header 'x-api-key: acp_xql_gateway' \
+--header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
+--header 'x-sandbox-name: sand-1' \
+--header 'Authorization: Bearer <TOKEN>'
+```
+
++++
+
+**Response**
+
++++Data Landing Zone(DLZ) - Connection Spec
+
+```json
+{
+    "items": [
+        {
+            "id": "10440537-2a7b-4583-ac39-ed38d4b848e8",
+            "name": "Data Landing Zone",
+            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+            "version": "1.0",
+//...
+```
+
++++
 
 >[!TAB Google Cloud Storage]
 
-This content appears in the Linux tab.
+**Request** 
+
+++Fetch Connection Spec for Google Cloud Storage
+
+```shell
+curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \
+--header 'accept: application/json' \
+--header 'x-api-key: acp_xql_gateway' \
+--header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
+--header 'x-sandbox-name: sand-1' \
+--header 'Authorization: Bearer <TOKEN>'
+```
+
++++
+
+**Response**
+
++++Google Cloud Storage - Connection Spec
+
+```json
+{
+    "items": [
+        {
+            "id": "c5d93acb-ea8b-4b14-8f53-02138444ae99",
+            "name": "Google Cloud Storage",
+            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+            "version": "1.0",
+//...
+```
+
++++
 
 >[!TAB SFTP]
 
-This content appears in the Linux tab.
+**Request** 
+
+++Fetch Connection Spec for SFTP
+
+```shell
+curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/36965a81-b1c6-401b-99f8-22508f1e6a26' \
+--header 'accept: application/json' \
+--header 'x-api-key: acp_xql_gateway' \
+--header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
+--header 'x-sandbox-name: sand-1' \
+--header 'Authorization: Bearer <TOKEN>'
+```
+
++++
+
+**Response**
+
++++SFTP - Connection Spec
+
+```json
+{
+    "items": [
+        {
+            "id": "36965a81-b1c6-401b-99f8-22508f1e6a26",
+            "name": "SFTP",
+            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+            "version": "1.0",
+//...
+```
+
++++
 
 >[!ENDTABS]
 
-Follow the steps below to set up a dataset dataflow to a cloud storage destination. The examples below show how to configure an Amazon S3 destination but the process is similar for the other destinations in the table above. Be sure to use the correct connection spec and flow spec for the destination you are configuring.
+Follow the steps below to set up a dataset dataflow to a cloud storage destination. For some steps, the request and responses differ between the various cloud storage destinations. In those cases, use the tabs on the page to retrieve the requests and responses specific to the destination that you want to connect and export datasets to. Be sure to use the correct connection spec and flow spec for the destination you are configuring.
 
 ## Retrieve a list of datasets {#retrieve-list-of-available-destinations}
 
@@ -171,7 +293,7 @@ To retrieve a list of datasets eligible for activation, start by making an API c
 
 **Request** 
 
-+++Retrieve eligible datasets - request
++++Retrieve eligible datasets - Request
 
 ```shell
 curl curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/23598e46-f560-407b-88d5-ea6207e49db0/configs?outputType=activationDatasets&outputField=datasets&start=0&limit=20&properties=name,state' \
@@ -184,13 +306,13 @@ curl curl --location --request GET 'https://platform.adobe.io/data/foundation/fl
 
 +++
 
-Note that to retrieve eligible datasets, the connection spec ID used in the request URL should be the data lake source connection spec ID,  `23598e46-f560-407b-88d5-ea6207e49db0` and the two query parameters `outputField=datasets` and `outputType=activationDatasets` must be specified. All other query parameters are the standard ones supported by the Catalog Datasets API. 
+Note that to retrieve eligible datasets, the connection spec ID used in the request URL must be the data lake source connection spec ID,  `23598e46-f560-407b-88d5-ea6207e49db0` and the two query parameters `outputField=datasets` and `outputType=activationDatasets` must be specified. All other query parameters are the standard ones supported by the Catalog Datasets API. 
 
 **Response**
 
 A successful response contains a list of datasets eligible for activation. These datasets can be used when constructing the source connection in the next step.
 
-+++Retrieve datasets - response
++++Retrieve datasets - Response
 
 ```json
 {
@@ -269,11 +391,11 @@ A successful response contains a list of datasets eligible for activation. These
 
 For information about the various response parameters for each returned dataset, refer to the Datasets API documentation.
 
-## Create a Source Connection
-
-Once you have the list of datasets to activate, you can create a source connection with those dataset IDs.
+## Create a Source Connection {#create-source-connection}
 
 ![Diagram showing step 2 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
+
+Once you have the list of datasets to activate, you can create a source connection using those dataset IDs.
 
 **Request** 
 
@@ -326,19 +448,23 @@ A successful response returns the ID (`id`) of the newly created source connecti
 
 Please also remember that:
 
-The Source Connection created in this step needs to be linked to a dataflow for its datasets to be activated to a destination. See the Create a Dataflow section for information on how to link a Source Connection to a dataflow.
+The source connection created in this step needs to be linked to a dataflow for its datasets to be activated to a destination. See the [create a dataflow](#create-dataflow) section for information on how to link a source connection to a dataflow.
 
-The dataset IDs of a Source Connection cannot be modified after creation. If you need to add or remove datasets from a Source Connection, you must create a new source connection and link the new Source Connection's Id to the dataflow). 
+The dataset IDs of a source connection cannot be modified after creation. If you need to add or remove datasets from a source connection, you must create a new source connection and link the ID of the new source connection to the dataflow). 
 
-## Create a (Target) Base Connection
-
-A base connection securely stores the credentials to your destination. Depending on the destination type, the credentials needed to authenticate against that destination can vary. To find these authentication parameters, first fetch the connection spec as described in the section [Gather connection specs and flow specs](#gather-connection-spec-flow-spec) for your preferred destination and then look at the `authSpec` of the response. For example, below is the `authSpec` for Amazon S3:
+## Create a (Target) Base Connection {#create-base-connection}
 
 ![Diagram showing step 3 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
 
-Response:
+A base connection securely stores the credentials to your destination. Depending on the destination type, the credentials needed to authenticate against that destination can vary. To find these authentication parameters, first fetch the connection spec for your desired destination as described in the section [Gather connection specs and flow specs](#gather-connection-spec-flow-spec) and then look at the `authSpec` of the response. For example, below is the `authSpec` for Amazon S3:
 
-+++Amazon S3 - Connection Spec
+>[!BEGINTABS]
+
+>[!TAB Amazon S3]
+
+**Response**
+
++++Amazon S3 - Connection spec showing auth spec
 
 ```json
 {
@@ -379,7 +505,262 @@ Response:
 //...
 ```
 
-Using the properties specified in the authentication spec (i.e. `authSpec` from the response) you can create a base connection with the credentials:
++++
+
+>[!TAB Azure Blob Storage]
+
++++Azure Blob Storage - Connection spec showing auth spec
+
+```json
+{
+    "items": [
+        {
+            "id": "6d6b59bf-fb58-4107-9064-4d246c0e5bb2",
+            "name": "Azure Blob Storage",
+            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+            "version": "1.0",
+            "authSpec": [
+                {
+                    "name": "ConnectionString",
+                    "type": "ConnectionString",
+                    "spec": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "description": "Connection String for Azure Blob based destinations",
+                        "type": "object",
+                        "properties": {
+                            "connectionString": {
+                                "description": "connection string for login",
+                                "type": "string",
+                                "format": "password"
+                            }
+                        },
+                        "required": [
+                            "connectionString"
+                        ]
+                    }
+                }
+            ],
+//...
+```
+
++++
+
+
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
+
++++Azure Data Lake Gen 2(ADLS Gen2) - Connection spec showing auth spec
+
+```json
+{
+    "items": [
+        {
+            "id": "be2c3209-53bc-47e7-ab25-145db8b873e1",
+            "name": "Azure Data Lake Gen2",
+            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+            "version": "1.0",
+            "authSpec": [
+                {
+                    "name": "Azure Service Principal Auth",
+                    "type": "AzureServicePrincipal",
+                    "spec": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "description": "defines auth params required for connecting to adlsgen2 using service principal",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "description": "Endpoint for Azure Data Lake Storage Gen2.",
+                                "type": "string"
+                            },
+                            "servicePrincipalId": {
+                                "description": "Service Principal Id to connect to ADLSGen2.",
+                                "type": "string"
+                            },
+                            "servicePrincipalKey": {
+                                "description": "Service Principal Key to connect to ADLSGen2.",
+                                "type": "string",
+                                "format": "password"
+                            },
+                            "tenant": {
+                                "description": "Tenant information(domain name or tenant ID).",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "servicePrincipalKey",
+                            "url",
+                            "tenant",
+                            "servicePrincipalId"
+                        ]
+                    }
+                }
+            ],
+//...
+```
+
++++
+
+
+>[!TAB Data Landing Zone(DLZ)]
+
++++Data Landing Zone(DLZ) - Connection spec showing auth spec
+
+>[!NOTE]
+>
+>The Data Landing Zone destination does not require an auth spec.
+
+```json
+{
+    "items": [
+        {
+            "id": "10440537-2a7b-4583-ac39-ed38d4b848e8",
+            "name": "Data Landing Zone",
+            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+            "version": "1.0",
+            "authSpec": [],
+//...
+```
+
++++
+
+>[!TAB Google Cloud Storage]
+
++++Google Cloud Storage - Connection spec showing auth spec
+
+```json
+{
+    "items": [
+        {
+            "id": "c5d93acb-ea8b-4b14-8f53-02138444ae99",
+            "name": "Google Cloud Storage",
+            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+            "version": "1.0",
+            "authSpec": [
+                {
+                    "name": "Google Cloud Storage authentication credentials",
+                    "type": "GoogleCloudStorageAuth",
+                    "spec": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "description": "defines auth params required for connecting to google cloud storage connector.",
+                        "type": "object",
+                        "properties": {
+                            "accessKeyId": {
+                                "description": "Access Key Id for the user account",
+                                "type": "string"
+                            },
+                            "secretAccessKey": {
+                                "description": "Secret Access Key for the user account",
+                                "type": "string",
+                                "format": "password"
+                            }
+                        },
+                        "required": [
+                            "accessKeyId",
+                            "secretAccessKey"
+                        ]
+                    }
+                }
+            ],
+//...
+```
+
++++
+
+>[!TAB SFTP]
+
++++SFTP - Connection spec showing auth spec
+
+>[!NOTE]
+>
+>The SFTP destination contains two separate items in the auth spec, as it supports both password and SSH key authentication.
+
+```json
+{
+    "items": [
+        {
+            "id": "36965a81-b1c6-401b-99f8-22508f1e6a26",
+            "name": "SFTP",
+            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+            "version": "1.0",
+            "authSpec": [
+                {
+                    "name": "SFTP with Password",
+                    "type": "SFTP",
+                    "spec": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "description": "defines auth params required for connecting to sftp locations with a password",
+                        "type": "object",
+                        "properties": {
+                            "domain": {
+                                "description": "Domain of server",
+                                "type": "string"
+                            },
+                            "username": {
+                                "description": "Username",
+                                "type": "string"
+                            },
+                            "password": {
+                                "description": "Password",
+                                "type": "string",
+                                "format": "password"
+                            }
+                        },
+                        "required": [
+                            "password",
+                            "domain",
+                            "username"
+                        ]
+                    }
+                },
+                {
+                    "name": "SFTP with SSH Key",
+                    "type": "SFTP",
+                    "spec": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "description": "defines auth params required for connecting to sftp locations using SSH Key",
+                        "type": "object",
+                        "properties": {
+                            "domain": {
+                                "description": "Domain of server",
+                                "type": "string"
+                            },
+                            "username": {
+                                "description": "Username",
+                                "type": "string"
+                            },
+                            "sshKey": {
+                                "description": "Base64 string of the private SSH key",
+                                "type": "string",
+                                "format": "password",
+                                "contentEncoding": "base64",
+                                "uiAttributes": {
+                                    "tooltip": {
+                                        "id": "platform_destinations_connect_sftp_ssh",
+                                        "fallbackUrl": "http://www.adobe.com/go/destinations-sftp-connection-parameters-en "
+                                    }
+                                }
+                            }
+                        },
+                        "required": [
+                            "sshKey",
+                            "domain",
+                            "username"
+                        ]
+                    }
+                }
+            ],
+//...
+```
+
++++
+
+
+>[!ENDTABS]
+
+Using the properties specified in the authentication spec (i.e. `authSpec` from the response) you can create a base connection with the required credentials, specific to each destination type, as shown in the example below:
+
+>[!BEGINTABS]
+
+>[!TAB Amazon S3]
 
 **Request** 
 
@@ -409,14 +790,321 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
+>[!TIP]
+>
+>For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) section of the Amazon S3 destination documentation page.
+
 +++
+
+**Response**
+
++++Amazon S3 Base Connection Response
+
+```json
+{
+    "id": "12401496-2573-4ca7-8137-fef1aeb9dd4c",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
+Note the Connection ID from the response. This ID will be required in the next step when creating the target connection. 
+
++++
+
+>[!TAB Azure Blob Storage]
+
+**Request** 
+
++++Azure Blob Storage - Base Connection Request
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'accept: application/json' \
+--header 'Authorization: Bearer <TOKEN>' \
+--header 'x-api-key: <API-KEY>' \
+--header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
+--header 'x-sandbox-name: <SANDBOX-NAME>' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "name": "Azure Blob Storage Base Connection",
+  "auth": {
+    "specName": "ConnectionString",
+    "params": {
+      "connectionString": "<Add Azure Blob connection string>"
+    }
+  },
+  "connectionSpec": {
+    "id": "6d6b59bf-fb58-4107-9064-4d246c0e5bb2", // Azure Blob Storage connection spec
+    "version": "1.0"
+  }
+}'
+```
+
+>[!TIP]
+>
+>For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) section of the Azure Blob Storage destination documentation page.
+
++++
+
+**Response**
+
++++Azure Blob Storage - Base Connection Response
+
+```json
+{
+    "id": "12401496-2573-4ca7-8137-fef1aeb9dd4c",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
+Note the Connection ID from the response. This ID will be required in the next step when creating the target connection. 
+
++++
+
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
+
+**Request** 
+
++++Azure Data Lake Gen 2(ADLS Gen2) - Base Connection Request
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'accept: application/json' \
+--header 'Authorization: Bearer <TOKEN>' \
+--header 'x-api-key: <API-KEY>' \
+--header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
+--header 'x-sandbox-name: <SANDBOX-NAME>' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "name": "Azure Data Lake Gen 2(ADLS Gen2) Base Connection",
+  "auth": {
+    "specName": "Azure Service Principal Auth",
+    "params": {
+      "servicePrincipalKey": "<Add servicePrincipalKey>",
+      "url": "<Add url>",
+      "tenant": "<Add tenant",
+      "servicePrincipalId": "<Add servicePrincipalId>"
+    }
+  },
+  "connectionSpec": {
+    "id": "be2c3209-53bc-47e7-ab25-145db8b873e1", // Azure Data Lake Gen 2(ADLS Gen2) connection spec
+    "version": "1.0"
+  }
+}'
+```
+
+>[!TIP]
+>
+>For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) section of the Azure Data Lake Gen 2(ADLS Gen2) destination documentation page.
+
++++
+
+**Response**
+
++++Azure Data Lake Gen 2(ADLS Gen2) Base Connection Response
+
+```json
+{
+    "id": "12401496-2573-4ca7-8137-fef1aeb9dd4c",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
+Note the Connection ID from the response. This ID will be required in the next step when creating the target connection. 
+
++++
+
+>[!TAB Data Landing Zone(DLZ)]
+
+**Request** 
+
++++Data Landing Zone(DLZ) - Base Connection Request
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'accept: application/json' \
+--header 'Authorization: Bearer <TOKEN>' \
+--header 'x-api-key: <API-KEY>' \
+--header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
+--header 'x-sandbox-name: <SANDBOX-NAME>' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "name": "Data Landing Zone(DLZ) Base Connection",
+  "auth": {
+    }
+  },
+  "connectionSpec": {
+    "id": "10440537-2a7b-4583-ac39-ed38d4b848e8", // Data Landing Zone(DLZ) connection spec
+    "version": "1.0"
+  }
+}'
+```
+
+>[!TIP]
+>
+>No authentication credentials are required for the Data Landing Zone destination. For more information, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) section of the Data Landing Zone destination documentation page.
+
++++
+
+**Response**
+
++++Data Landing Zone Base Connection Response
+
+```json
+{
+    "id": "12401496-2573-4ca7-8137-fef1aeb9dd4c",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
+Note the Connection ID from the response. This ID will be required in the next step when creating the target connection. 
+
++++
+
+>[!TAB Google Cloud Storage]
+
+**Request** 
+
++++Google Cloud Storage - Base Connection Request
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'accept: application/json' \
+--header 'Authorization: Bearer <TOKEN>' \
+--header 'x-api-key: <API-KEY>' \
+--header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
+--header 'x-sandbox-name: <SANDBOX-NAME>' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "name": "Google Cloud Storage Base Connection",
+  "auth": {
+    "specName": "Google Cloud Storage authentication credentials",
+    "params": {
+      "accessKeyId": "<Add accessKeyId>",
+      "secretAccessKey": "<Add secret Access Key>"
+    }
+  },
+  "connectionSpec": {
+    "id": "c5d93acb-ea8b-4b14-8f53-02138444ae99", // Google Cloud Storage connection spec
+    "version": "1.0"
+  }
+}'
+```
+
+>[!TIP]
+>
+>For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) section of the Google Cloud Storage destination documentation page.
+
++++
+
+**Response**
+
++++Google Cloud Storage Base Connection Response
+
+```json
+{
+    "id": "12401496-2573-4ca7-8137-fef1aeb9dd4c",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
+Note the Connection ID from the response. This ID will be required in the next step when creating the target connection. 
+
++++
+
+>[!TAB SFTP]
+
+**Request** 
+
++++SFTP with password - Base Connection Request
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'accept: application/json' \
+--header 'Authorization: Bearer <TOKEN>' \
+--header 'x-api-key: <API-KEY>' \
+--header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
+--header 'x-sandbox-name: <SANDBOX-NAME>' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "name": "SFTP with password Base Connection",
+  "auth": {
+    "specName": "SFTP with Password",
+    "params": {
+      "domain": "<Add domain>",
+      "username": "<Add username>",
+      "password": "<Add password>"
+    }
+  },
+  "connectionSpec": {
+    "id": "36965a81-b1c6-401b-99f8-22508f1e6a26", // SFTP connection spec
+    "version": "1.0"
+  }
+}'
+```
+
+>[!TIP]
+>
+>For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) section of the SFTP destination documentation page.
+
++++
+
++++SFTP with SSH key - Base Connection Request
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'accept: application/json' \
+--header 'Authorization: Bearer <TOKEN>' \
+--header 'x-api-key: <API-KEY>' \
+--header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
+--header 'x-sandbox-name: <SANDBOX-NAME>' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "name": "SFTP with SSH key Base Connection",
+  "auth": {
+    "specName": "SFTP with SSH Key",
+    "params": {
+      "domain": "<Add domain>",
+      "username": "<Add username>",
+      "sshKey": "<Add SSH key>"
+    }
+  },
+  "connectionSpec": {
+    "id": "36965a81-b1c6-401b-99f8-22508f1e6a26", // SFTP connection spec
+    "version": "1.0"
+  }
+}'
+```
+
+>[!TIP]
+>
+>For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) section of the SFTP destination documentation page.
+
++++
+
+**Response**
+
++++SFTP Base Connection Response
+
+```json
+{
+    "id": "12401496-2573-4ca7-8137-fef1aeb9dd4c",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
+Note the Connection ID from the response. This ID will be required in the next step when creating the target connection. 
+
++++
+
+>[!ENDTABS]
+
 
 ## Create a Target Connection
 
-Next, you need to create a target connection which will store the export parameters for your datasets (for example: location, file format, compression, and others). You can refer to the `targetSpec` properties provided in the destination's connection spec to understand the supported properties. For example, the Amazon S3 `targetSpec` looks like:
-
 ![Diagram showing step 4 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
 
+Next, you need to create a target connection which will store the export parameters for your datasets (for example: location, file format, compression, and others). You can refer to the `targetSpec` properties provided in the destination's connection spec to understand the supported properties. For example, the Amazon S3 `targetSpec` looks like:
 
 +++Amazon S3 - Target Connection Parameters
 
@@ -531,7 +1219,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-For other datasetFileTypes, see the API reference documentation.
+For other supported values of `datasetFileType`, see the API reference documentation.
 
 **Response**
 
@@ -548,11 +1236,11 @@ For other datasetFileTypes, see the API reference documentation.
 
 Note the Target Connection ID from the response. This ID will be required in the next step when creating the dataflow to export datasets. 
 
-## Create a Dataflow
-
-The final step in the destination configuration is to set up a dataflow. A dataflow ties together previously created entities and also provides options for configuring the dataset export schedule. To create the dataflow, use the payload below and replace the entity IDs from previous steps.
+## Create a dataflow {#create-dataflow}
 
 ![Diagram showing step 5 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
+
+The final step in the destination configuration is to set up a dataflow. A dataflow ties together previously created entities and also provides options for configuring the dataset export schedule. To create the dataflow, use the payload below and replace the entity IDs from previous steps.
 
 **Request** 
 
@@ -605,9 +1293,9 @@ Note the Dataflow ID from the response. This ID will be required in the next ste
 
 ## Get the dataflow runs
 
-To check the executions of the data flow, use the Dataflow Runs API:
-
 ![Diagram showing step 6 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
+
+To check the executions of the data flow, use the Dataflow Runs API:
 
 **Request** 
 
