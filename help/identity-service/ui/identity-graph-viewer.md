@@ -26,8 +26,8 @@ Working with the identity graph viewer requires an understanding of the various 
 
 ### Terminology
 
-- **Identity (node):** An identity or a node is data unique to an entity, typically a person. An identity is comprised of a namespace and identity value.
-- **Link (edge):** A link or an edge represents the connection between identities.
+- **Identity (node):** An identity or a node is data unique to an entity, typically a person. An identity is comprised of an identity namespace and an identity value. For example, a fully qualified identity could consist an identity namespace for **Email**, combined with an identity value of **robin<span>@email.com**.
+- **Link (edge):** A link or an edge represents the connection between identities. Identity links include properties such as first established and last updated timestamps. The first established timestamp defines the date and time in which a new identity is linked to an existing identity. The last updated timestamp defines the date and time in which an existing identity link was last updated.
 - **Graph (cluster):** A graph or a cluster is a group of identities and links that represent a person.
 
 ## Access the identity graph viewer
@@ -57,6 +57,10 @@ The identity graph displays all of the identities linked to the identity namespa
 >An identity graph requires a minimum of two linked identities to be generated and a valid identity namespace and value combination. The maximum number of identities that the graph viewer can display is 150. See the [appendix](#appendix) section below for more information.
 
 ![The identity graph viewer with five linked identities.](../images/graph-viewer/graph.png)
+
+Select a link within the graph to see the dataset and batch ID that contribute to that link. Selecting a link also updates the right rail to provide more information on data source details, as well as properties like first established and last updated timestamps.
+
+![The identity link between the email and GAID nodes selected.](../images/graph-viewer/identity-link.png)
 
 The [!UICONTROL Identities] table provides a different view of your identity data, listing out the identity namespace and the identity value combination in a tabular format. Selecting a node in the graph will update the highlighted line item in the [!UICONTROL Identities] table. 
 
