@@ -166,7 +166,7 @@ SELECT statement 1
 SELECT statement 2
 ```
 
-### CREATE TABLE AS SELECT
+### CREATE TABLE AS SELECT {create-table-as-select}
 
 The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query:
 
@@ -178,7 +178,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 | ----- | ----- |
 | `schema` | The title of XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by the CTAS query. |
 | `rowvalidation` | (Optional) Specifies if the user wants row level validation of every new batches ingested for the newly created dataset. The default value is `true`. |
-| `label` | When you create a dataset with a CTAS query, use this label with the value of `profile` to label your dataset as enabled for profile. This means that your dataset automatically gets marked for profile as it gets created. |
+| `label` | When you create a dataset with a CTAS query, use this label with the value of `profile` to label your dataset as enabled for profile. This means that your dataset automatically gets marked for profile as it gets created. See the derived attribute extension document for more information on the use of `label`. |
 | `select_query` | A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries). |
 
 **Example**

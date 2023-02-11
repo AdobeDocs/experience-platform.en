@@ -22,6 +22,7 @@ feature: Queries
     - Derived attributes {#derived-attributes}
         - [Overview](data-distiller/derived-attributes/overview.md)
         - [Create decile-based derived attributes](data-distiller/derived-attributes/decile-based-derived-attributes.md)
+        - [Implementation plan](data-distiller/derived-attributes/implementation-plan.md)
 - Use cases {#use-cases}
     - [Abandoned browse](use-cases/abandoned-browse.md)
     - [Activity analysis with Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
