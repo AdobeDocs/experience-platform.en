@@ -166,7 +166,7 @@ SELECT statement 1
 SELECT statement 2
 ```
 
-### CREATE TABLE AS SELECT {create-table-as-select}
+### CREATE TABLE AS SELECT {#create-table-as-select}
 
 The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query:
 
