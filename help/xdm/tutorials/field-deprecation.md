@@ -1,9 +1,9 @@
 ---
-title: Deprecate an XDM Field
+title: Deprecate an XDM Field in the API
 description: Learn how to deprecate Experience Data Model (XDM) fields in the Schema Registry API.
 exl-id: e49517c4-608d-4e05-8466-75724ca984a8
 ---
-# Deprecate an XDM field
+# Deprecate an XDM field in the API
 
 In Experience Data Model (XDM), you can deprecate a field within a schema or custom resource by using the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Deprecating a field causes it to be hidden from downstream UIs such as the [!UICONTROL Profiles] workspace and Customer Journey Analytics, but it is otherwise a non-breaking change and does not negatively affect existing data flows.
 
