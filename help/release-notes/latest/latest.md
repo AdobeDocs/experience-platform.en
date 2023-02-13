@@ -124,7 +124,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 | Feature | Description |
 | --- | --- |
-| Disable suggested values for string fields | You can now [disable individual suggested values for string fields](../../xdm/ui/fields/enum.md) in the [!UICONTROL Schemas] workspace, including those from standard components. This feature is only available for fields with suggested values and is not supported for enum constraints. |
+| Schema tree display name improvements | Previously, field names were displayed in the UI but now, the display names for schema fields on the schema canvas are more human-friendly to read. |
 
 **New XDM components**
 
