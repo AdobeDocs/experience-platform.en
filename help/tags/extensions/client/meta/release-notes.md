@@ -12,11 +12,11 @@ description: The latest release notes for the Meta Pixel extension in Adobe Expe
 
 v1.3.1
 
-* Fix a JSON schema error that was blocking content type field to be saved correctly.
+* Fix a JSON schema error that was blocking the content type field from being saved correctly.
 
 ## February 10, 2023
 
 v1.3.0
 
 * Add actions for all the standard events listed here: [https://developers.facebook.com/docs/meta-pixel/reference#standard-events](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
-* Move the event id out from the extension configuration view. Add event id fields to all the actions.
+* Move the event ID out of the extension configuration view and add event ID fields to all of the actions.
