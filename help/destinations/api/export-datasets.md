@@ -470,7 +470,7 @@ The dataset IDs of a source connection cannot be modified after creation. If you
 
 ## Create a (Target) Base Connection {#create-base-connection}
 
-![Diagram showing step 3 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
+![Diagram showing step 3 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
 A base connection securely stores the credentials to your destination. Depending on the destination type, the credentials needed to authenticate against that destination can vary. To find these authentication parameters, first retrieve the connection spec for your desired destination as described in the section [Gather connection specs and flow specs](#gather-connection-spec-flow-spec) and then look at the `authSpec` of the response. Reference the tabs below for the `authSpec` properties of all supported destinations.
 
@@ -1105,7 +1105,7 @@ Note the Connection ID from the response. This ID will be required in the next s
 
 ## Create a Target Connection {#create-target-connection}
 
-![Diagram showing step 4 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
+![Diagram showing step 4 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
 Next, you need to create a target connection which stores the export parameters for your datasets. Export parameters include location, file format, compression, and other details. Refer to the `targetSpec` properties provided in the destination's connection spec to understand the supported properties for each destination type. Reference the tabs below for the `targetSpec` properties of all supported destinations.
 
@@ -1849,7 +1849,7 @@ Note the Target Connection ID from the response. This ID will be required in the
 
 ## Create a dataflow {#create-dataflow}
 
-![Diagram showing step 5 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
+![Diagram showing step 5 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
 The final step in the destination configuration is to set up a dataflow. A dataflow ties together previously created entities and also provides options for configuring the dataset export schedule. To create the dataflow, use the payloads below, depending on your desired cloud storage destination, and replace the entity IDs from previous steps.
 
@@ -2167,7 +2167,7 @@ Note the Dataflow ID from the response. This ID will be required in the next ste
 
 ## Get the dataflow runs {#get-dataflow-runs}
 
-![Diagram showing step 6 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
+![Diagram showing step 6 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
 To check the executions of a dataflow, use the Dataflow Runs API:
 
