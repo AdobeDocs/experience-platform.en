@@ -20,7 +20,7 @@ This article explains the workflow required to use the Flow Service API to expor
 
 ## Getting started {#get-started}
 
-![Overview - the steps to create a destination and export datasets](../assets/api/export-datasets/export-datasets-api-workflow-overview.png)
+![Overview - the steps to create a destination and export datasets](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
@@ -71,9 +71,17 @@ For descriptions of the terms that you will be encountering in this API tutorial
 
 Before starting the workflow to export a dataset, identify the connection spec and flow spec IDs of the destination to which you are intending to export datasets to. Use the table below for reference.
 
-INSERT TABLE HERE
 
-You need these IDs to construct various Flow Service entities. You also need to refer to parts of the Connection Spec itself to set up certain entities so you can retrieve the Connection Spec from Flow Service APIs. See below examples of retrieving connection specs for all the destinations in the table:
+|Destination | Connection spec | Flow spec|
+---------|----------|---------|
+| Amazon S3 | `4fce964d-3f37-408f-9778-e597338a21ee` | `269ba276-16fc-47db-92b0-c1049a3c131f` |
+| Azure Blob Storage | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `95bd8965-fc8a-4119-b9c3-944c2c2df6d2` |
+| Azure Data Lake Gen 2(ADLS Gen2) | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
+| Data Landing Zone(DLZ) | `10440537-2a7b-4583-ac39-ed38d4b848e8` | `cd2fc47e-e838-4f38-a581-8fff2f99b63a` |
+| Google Cloud Storage | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
+| SFTP | `36965a81-b1c6-401b-99f8-22508f1e6a26` | `354d6aad-4754-46e4-a576-1b384561c440` |
+
+You need these IDs to construct various Flow Service entities. You also need to refer to parts of the Connection Spec itself to set up certain entities so you can retrieve the Connection Spec from Flow Service APIs. See the examples below of retrieving connection specs for all the destinations in the table:
 
 >[!BEGINTABS]
 
@@ -86,9 +94,9 @@ You need these IDs to construct various Flow Service entities. You also need to 
 ```shell
 curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer <TOKEN>'
 ```
 
@@ -120,9 +128,9 @@ curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/f
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer <TOKEN>'
 ```
 
@@ -154,9 +162,9 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 ```shell
 curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer <TOKEN>'
 ```
 
@@ -188,9 +196,9 @@ curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/f
 ```shell
 curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer <TOKEN>'
 ```
 
@@ -222,9 +230,9 @@ curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/f
 ```shell
 curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer <TOKEN>'
 ```
 
@@ -256,9 +264,9 @@ curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/f
 ```shell
 curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/36965a81-b1c6-401b-99f8-22508f1e6a26' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer <TOKEN>'
 ```
 
@@ -410,8 +418,8 @@ Once you have the list of datasets to activate, you can create a source connecti
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: prod' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <TOKEN>' \
@@ -771,6 +779,10 @@ Using the properties specified in the authentication spec (i.e. `authSpec` from 
 
 +++Amazon S3 - Base Connection Request
 
+>[!TIP]
+>
+>For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) section of the Amazon S3 destination documentation page.
+
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
@@ -795,10 +807,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
->[!TIP]
->
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) section of the Amazon S3 destination documentation page.
-
 +++
 
 **Response**
@@ -819,6 +827,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 **Request** 
 
 +++Azure Blob Storage - Base Connection Request
+
+>[!TIP]
+>
+>For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) section of the Azure Blob Storage destination documentation page.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -843,10 +855,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
->[!TIP]
->
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) section of the Azure Blob Storage destination documentation page.
-
 +++
 
 **Response**
@@ -867,6 +875,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 **Request** 
 
 +++Azure Data Lake Gen 2(ADLS Gen2) - Base Connection Request
+
+>[!TIP]
+>
+>For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) section of the Azure Data Lake Gen 2(ADLS Gen2) destination documentation page.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -894,10 +906,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
->[!TIP]
->
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) section of the Azure Data Lake Gen 2(ADLS Gen2) destination documentation page.
-
 +++
 
 **Response**
@@ -919,6 +927,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++Data Landing Zone(DLZ) - Base Connection Request
 
+>[!TIP]
+>
+>No authentication credentials are required for the Data Landing Zone destination. For more information, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) section of the Data Landing Zone destination documentation page.
+
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
@@ -938,10 +950,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
-
->[!TIP]
->
->No authentication credentials are required for the Data Landing Zone destination. For more information, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) section of the Data Landing Zone destination documentation page.
 
 +++
 
@@ -963,6 +971,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 **Request** 
 
 +++Google Cloud Storage - Base Connection Request
+
+>[!TIP]
+>
+>For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) section of the Google Cloud Storage destination documentation page.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -988,10 +1000,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
->[!TIP]
->
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) section of the Google Cloud Storage destination documentation page.
-
 +++
 
 **Response**
@@ -1012,6 +1020,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 **Request** 
 
 +++SFTP with password - Base Connection Request
+
+>[!TIP]
+>
+>For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) section of the SFTP destination documentation page.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1038,13 +1050,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
->[!TIP]
->
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) section of the SFTP destination documentation page.
-
 +++
 
 +++SFTP with SSH key - Base Connection Request
+
+>[!TIP]
+>
+>For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) section of the SFTP destination documentation page.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1070,10 +1082,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
-
->[!TIP]
->
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) section of the SFTP destination documentation page.
 
 +++
 
@@ -1536,12 +1544,17 @@ By using the above spec, you can construct a target connection request specific 
 
 +++Amazon S3 - Target Connection Request
 
+>[!TIP]
+>
+>For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) section of the Amazon S3 destination documentation page.
+>For other supported values of `datasetFileType`, see the API reference documentation.
+
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <TOKEN>' \
 --data-raw '{
@@ -1560,11 +1573,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     }
 }'
 ```
-
->[!TIP]
->
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) section of the Amazon S3 destination documentation page.
->For other supported values of `datasetFileType`, see the API reference documentation.
 
 +++
 
@@ -1587,12 +1595,18 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++Azure Blob Storage - Target Connection Request
 
+>[!TIP]
+>
+>For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) section of the Azure Blob Storage destination documentation page.
+>For other supported values of `datasetFileType`, see the API reference documentation.
+
+
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <TOKEN>' \
 --data-raw '{
@@ -1611,11 +1625,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     }
 }'
 ```
-
->[!TIP]
->
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) section of the Azure Blob Storage destination documentation page.
->For other supported values of `datasetFileType`, see the API reference documentation.
 
 +++
 
@@ -1638,12 +1647,17 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++Azure Blob Storage - Target Connection Request
 
+>[!TIP]
+>
+>For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) section of the Azure Data Lake Gen 2(ADLS Gen2) destination documentation page.
+>For other supported values of `datasetFileType`, see the API reference documentation.
+
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <TOKEN>' \
 --data-raw '{
@@ -1661,11 +1675,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     }
 }'
 ```
-
->[!TIP]
->
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) section of the Azure Data Lake Gen 2(ADLS Gen2) destination documentation page.
->For other supported values of `datasetFileType`, see the API reference documentation.
 
 +++
 
@@ -1688,12 +1697,17 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++Data Landing Zone - Target Connection Request
 
+>[!TIP]
+>
+>For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) section of the Data Landing Zone destination documentation page.
+>For other supported values of `datasetFileType`, see the API reference documentation.
+
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <TOKEN>' \
 --data-raw '{
@@ -1711,11 +1725,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     }
 }'
 ```
-
->[!TIP]
->
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) section of the Data Landing Zone destination documentation page.
->For other supported values of `datasetFileType`, see the API reference documentation.
 
 +++
 
@@ -1738,12 +1747,18 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++Google Cloud Storage - Target Connection Request
 
+>[!TIP]
+>
+>For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) section of the Google Cloud Storage destination documentation page.
+>For other supported values of `datasetFileType`, see the API reference documentation.
+
+
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <TOKEN>' \
 --data-raw '{
@@ -1762,11 +1777,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     }
 }'
 ```
-
->[!TIP]
->
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) section of the Google Cloud Storage destination documentation page.
->For other supported values of `datasetFileType`, see the API reference documentation.
 
 +++
 
@@ -1789,12 +1799,17 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++SFTP - Target Connection Request
 
+>[!TIP]
+>
+>For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) section of the SFTP destination documentation page.
+>For other supported values of `datasetFileType`, see the API reference documentation.
+
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <TOKEN>' \
 --data-raw '{
@@ -1812,11 +1827,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     }
 }'
 ```
-
->[!TIP]
->
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) section of the SFTP destination documentation page.
->For other supported values of `datasetFileType`, see the API reference documentation.
 
 +++
 
@@ -1854,9 +1864,9 @@ The final step in the destination configuration is to set up a dataflow. A dataf
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <TOKEN>' \
 --data-raw '{
@@ -1905,9 +1915,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <TOKEN>' \
 --data-raw '{
@@ -1956,9 +1966,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <TOKEN>' \
 --data-raw '{
@@ -2007,9 +2017,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <TOKEN>' \
 --data-raw '{
@@ -2058,9 +2068,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <TOKEN>' \
 --data-raw '{
@@ -2109,9 +2119,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <TOKEN>' \
 --data-raw '{
@@ -2170,9 +2180,9 @@ To check the executions of a dataflow, use the Dataflow Runs API:
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
 --header 'accept: application/json' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: sand-1' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer <TOKEN>' \
 --data-raw ''
 ```
@@ -2229,7 +2239,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-You can find [information about the various parameters returned by the Dataflow runs API](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) in the API reference documentation. 
+You can find information about the [various parameters returned by the Dataflow runs API](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) in the API reference documentation. 
 
 ## API error handling {#api-error-handling}
 
