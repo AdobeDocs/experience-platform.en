@@ -54,4 +54,7 @@ Read more about identities in the [Identity Namespace overview](../../../../iden
 {style="table-layout:auto"}
 
 
+## How to configure destinations to hash identities and attribs on export
+
+
 

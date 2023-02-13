@@ -24,7 +24,7 @@ You can configure customer data fields via the `/authoring/destinations` endpoin
 * [Create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Update a destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-This article describes all the supported customer data fields configuration tyßpes that you can use for your destination, and shows what customers will see in the Experience Platform UI.
+This article describes all the supported customer data fields configuration types that you can use for your destination, and shows what customers will see in the Experience Platform UI.
 
 ## Supported integration types {#supported-integration-types}
 
@@ -39,16 +39,20 @@ Refer to the table below for details on what type of destinations support the fu
 
 When creating your own customer data fields, you can use the parameters described in the table below to configure their behavior.
 
-|Parameter | Type | Description|
-|---------|----------|------|
-|`name` | String | Provide a name for the custom field you are introducing. This name is not visible in the Platform UI.|
-|`title` | String | Indicates the name of the field, as it is seen by customers in the Platform UI. |
-|`description` | String | Provide a description for the custom field. This description is not visible in the Platform UI. |
-|`type` | String | Indicates type of the custom field you are introducing. Accepted values: <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
-|`isRequired` | Boolean | Indicates whether users are required to provide a value for this field in the destination configuration workflow. |
-|`pattern` | String | Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field.|
-|`enum` | String | Renders the custom field as a dropdown menu and lists the options available to the user.|
-|`default`|String|Defines the default value from an `enum` list.|
+|Parameter | Type |Required|Description|
+|---------|----------|------|---|
+|`name` | String | | Provide a name for the custom field you are introducing. This name is not visible in the Platform UI.|
+|`title` | String | |Indicates the name of the field, as it is seen by customers in the Platform UI. |
+|`description` | String | |Provide a description for the custom field. This description is not visible in the Platform UI. |
+|`type` | String | |Indicates type of the custom field you are introducing. Accepted values: <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
+|`isRequired` | Boolean | |Indicates whether users are required to provide a value for this field in the destination configuration workflow. |
+|`pattern` | String || Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field.|
+|`enum` | String || Renders the custom field as a dropdown menu and lists the options available to the user.|
+|`default`|String||Defines the default value from an `enum` list.|
+|`hidden`||||
+|`unique`||||
+|`readOnly`||||
+
 
 {style="table-layout:auto"}
 
@@ -94,31 +98,11 @@ The resulting UI experience is shown in the image below.
 
 ![Ui image showing the destination connection screen with a region selector.](../../assets/functionality/destination-server/server-spec-template-region.png)
 
-
->[!TIP]
->
->All the file formatting configurations listed in the example above are described at length in the [file formatting configuration](../../functionality/destination-server/file-formatting.md) section.
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`name` | String | Provide a name for the custom field you are introducing. |
-|`title` | String | Indicates the name of the field, as it is seen by customers in the Experience Platform user interface. |
-|`description` | String | Provide a description for the custom field. |
-|`type` | String | Indicates what type of custom field you are introducing. Accepted values are `string`, `object`, `integer`. |
-|`isRequired` | Boolean | Indicates if this field is required in the destination setup workflow. |
-|`pattern` | String | Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field.|
-|`enum` | String | Renders the custom field as a dropdown menu and lists the options available to the user.|
-|`default`|String|Defines the default value from an `enum` list.|
-
-{style="table-layout:auto"}
-
 ## Order customer data fields {#ordering}
 
 The order in which you add the customer data fields in the destination configuration is reflected in the Platform UI.
 
 For example, the configuration below is reflected accordingly in the UI, with the options showing up in the order **[!UICONTROL Name]**, **[!UICONTROL Description]**, **[!UICONTROL Bucket name]**, **[!UICONTROL Folder path]**, **[!UICONTROL File Type]**, **[!UICONTROL Compression format]**.
-
-
 
 ```json
 "customerDataFields":[
@@ -245,6 +229,7 @@ For situations where you want to allow users to select between several options, 
 To do this, use the `namedEnum` object as shown below and configure a `default` value for the options that the user can select.
 
 ```json {line-numbers="true" start-number="100" highlight="114-124"}
+[...]
 "customerDataFields":[
 [...]
 {
@@ -450,6 +435,18 @@ In a wider context, you can see the `conditional` field being used in the destin
 Below, you can see the resulting UI screen, based on the configuration above. When the user selects the file type CSV, additional file formatting options referring to the CSV file type are displayed in the UI.
 
 ![Screen recording showing the conditional file formatting option for CSV files.](../../assets/functionality/destination-configuration/customer-data-fields-conditional.gif)
+
+## Create hidden or unique customer data fields
+
+* Bo/Cosmin ionita - hidden
+* unique 
+
+unique: Use this parameter when you need to create a customer data field whose value must be unique across all destination dataflows set up by a user's organization.
+For example, the Integration alias field in the Custom Personalization destination must be unique, meaning that two separate dataflows to this destination cannot have the same value for this field.
+
+
+
+## How to access customer data fields from templates
 
 
 
