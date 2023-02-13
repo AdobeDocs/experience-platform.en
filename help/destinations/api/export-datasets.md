@@ -61,7 +61,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ### API reference documentation {#api-reference-documentation}
 
-You can find accompanying reference documentation for all the API operations in this tutorial. Refer to the [Flow Service - Destinations API documentation on Adobe I/O](https://developer.adobe.com/experience-platform-apis/references/destinations/). We recommend that you use this tutorial and the API reference documentation in parallel.
+You can find accompanying reference documentation for all the API operations in this tutorial. Refer to the [Flow Service - Destinations API documentation on the Adobe Developer website](https://developer.adobe.com/experience-platform-apis/references/destinations/). We recommend that you use this tutorial and the API reference documentation in parallel.
 
 ### Glossary {#glossary}
 
@@ -81,6 +81,8 @@ Before starting the workflow to export a dataset, identify the connection spec a
 | Google Cloud Storage | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
 | SFTP | `36965a81-b1c6-401b-99f8-22508f1e6a26` | `354d6aad-4754-46e4-a576-1b384561c440` |
 
+{style="table-layout:auto"}
+
 You need these IDs to construct various Flow Service entities. You also need to refer to parts of the Connection Spec itself to set up certain entities so you can retrieve the Connection Spec from Flow Service APIs. See the examples below of retrieving connection specs for all the destinations in the table:
 
 >[!BEGINTABS]
@@ -92,12 +94,12 @@ You need these IDs to construct various Flow Service entities. You also need to 
 +++Retrieve Connection Spec for Amazon S3
 
 ```shell
-curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
+curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
---header 'Authorization: Bearer <TOKEN>'
+--header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
 +++
@@ -131,7 +133,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
---header 'Authorization: Bearer <TOKEN>'
+--header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
 +++
@@ -160,12 +162,12 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 +++Retrieve Connection Spec for Azure Data Lake Gen 2(ADLS Gen2)
 
 ```shell
-curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
+curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
---header 'Authorization: Bearer <TOKEN>'
+--header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
 +++
@@ -194,12 +196,12 @@ curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/f
 +++Retrieve Connection Spec for Data Landing Zone(DLZ)
 
 ```shell
-curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
+curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
---header 'Authorization: Bearer <TOKEN>'
+--header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
 +++
@@ -228,12 +230,12 @@ curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/f
 +++Retrieve Connection Spec for Google Cloud Storage
 
 ```shell
-curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \
+curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
---header 'Authorization: Bearer <TOKEN>'
+--header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
 +++
@@ -262,12 +264,12 @@ curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/f
 +++Retrieve Connection Spec for SFTP
 
 ```shell
-curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/36965a81-b1c6-401b-99f8-22508f1e6a26' \
+curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/36965a81-b1c6-401b-99f8-22508f1e6a26' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
---header 'Authorization: Bearer <TOKEN>'
+--header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
 +++
@@ -291,7 +293,7 @@ curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/f
 
 >[!ENDTABS]
 
-Follow the steps below to set up a dataset dataflow to a cloud storage destination. For some steps, the request and responses differ between the various cloud storage destinations. In those cases, use the tabs on the page to retrieve the requests and responses specific to the destination that you want to connect and export datasets to. Be sure to use the correct connection spec and flow spec for the destination you are configuring.
+Follow the steps below to set up a dataset dataflow to a cloud storage destination. For some steps, the requests and responses differ between the various cloud storage destinations. In those cases, use the tabs on the page to retrieve the requests and responses specific to the destination that you want to connect and export datasets to. Be sure to use the correct connection spec and flow spec for the destination you are configuring.
 
 ## Retrieve a list of datasets {#retrieve-list-of-available-destinations}
 
@@ -314,7 +316,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
-Note that to retrieve eligible datasets, the connection spec ID used in the request URL must be the data lake source connection spec ID, `23598e46-f560-407b-88d5-ea6207e49db0`, and the two query parameters `outputField=datasets` and `outputType=activationDatasets` must be specified. All other query parameters are the standard ones supported by the Catalog Datasets API. 
+Note that to retrieve eligible datasets, the connection spec ID used in the request URL must be the data lake source connection spec ID, `23598e46-f560-407b-88d5-ea6207e49db0`, and the two query parameters `outputField=datasets` and `outputType=activationDatasets` must be specified. All other query parameters are the standard ones supported by the [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/). 
 
 +++
 
@@ -407,7 +409,7 @@ For information about the various response parameters for each returned dataset,
 
 ![Diagram showing step 2 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png)
 
-Once you have the list of datasets to activate, you can create a source connection using those dataset IDs.
+After retrieving the list of datasets that you want to export, you can create a source connection using those dataset IDs.
 
 >[!BEGINSHADEBOX]
 
@@ -420,9 +422,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
---header 'x-sandbox-name: prod' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
   "name": "Connecting to Data Lake",
   "description": "Data Lake source connection to export datasets",
@@ -470,7 +472,7 @@ The dataset IDs of a source connection cannot be modified after creation. If you
 
 ## Create a (Target) Base Connection {#create-base-connection}
 
-![Diagram showing step 3 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
+![Diagram showing step 3 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
 
 A base connection securely stores the credentials to your destination. Depending on the destination type, the credentials needed to authenticate against that destination can vary. To find these authentication parameters, first retrieve the connection spec for your desired destination as described in the section [Gather connection specs and flow specs](#gather-connection-spec-flow-spec) and then look at the `authSpec` of the response. Reference the tabs below for the `authSpec` properties of all supported destinations.
 
@@ -769,7 +771,7 @@ A base connection securely stores the credentials to your destination. Depending
 
 >[!ENDTABS]
 
-Using the properties specified in the authentication spec (i.e. `authSpec` from the response) you can create a base connection with the required credentials, specific to each destination type, as shown in the example below:
+Using the properties specified in the authentication spec (i.e. `authSpec` from the response) you can create a base connection with the required credentials, specific to each destination type, as shown in the examples below:
 
 >[!BEGINTABS]
 
@@ -786,7 +788,7 @@ Using the properties specified in the authentication spec (i.e. `authSpec` from 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: <API-KEY>' \
 --header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
@@ -835,7 +837,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: <API-KEY>' \
 --header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
@@ -883,7 +885,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: <API-KEY>' \
 --header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
@@ -934,7 +936,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: <API-KEY>' \
 --header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
@@ -979,7 +981,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: <API-KEY>' \
 --header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
@@ -1028,7 +1030,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: <API-KEY>' \
 --header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
@@ -1061,7 +1063,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: <API-KEY>' \
 --header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
@@ -1098,14 +1100,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-Note the Connection ID from the response. This ID will be required in the next step when creating the target connection. 
-
 >[!ENDTABS]
 
+Note the Connection ID from the response. This ID will be required in the next step when creating the target connection. 
 
 ## Create a Target Connection {#create-target-connection}
 
-![Diagram showing step 4 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
+![Diagram showing step 4 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
 Next, you need to create a target connection which stores the export parameters for your datasets. Export parameters include location, file format, compression, and other details. Refer to the `targetSpec` properties provided in the destination's connection spec to understand the supported properties for each destination type. Reference the tabs below for the `targetSpec` properties of all supported destinations.
 
@@ -1556,7 +1557,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
     "name": "Amazon S3 Beta Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
@@ -1608,7 +1609,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
     "name": "Azure Blob Storage Beta Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
@@ -1659,7 +1660,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
     "name": "Azure Data Lake Gen 2(ADLS Gen2) Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
@@ -1709,7 +1710,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
     "name": "Data Landing Zone Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
@@ -1760,7 +1761,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
     "name": "Google Cloud Storage Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
@@ -1811,7 +1812,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
     "name": "SFTP Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
@@ -1849,7 +1850,7 @@ Note the Target Connection ID from the response. This ID will be required in the
 
 ## Create a dataflow {#create-dataflow}
 
-![Diagram showing step 5 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
+![Diagram showing step 5 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-set-up-dataflow.png)
 
 The final step in the destination configuration is to set up a dataflow. A dataflow ties together previously created entities and also provides options for configuring the dataset export schedule. To create the dataflow, use the payloads below, depending on your desired cloud storage destination, and replace the entity IDs from previous steps.
 
@@ -1868,7 +1869,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
     "name": "Activate datasets to an Amazon S3 cloud storage destination",
     "description": "This operation creates a dataflow to export datasets to an Amazon S3 cloud storage destination",
@@ -1919,7 +1920,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
     "name": "Activate datasets to an Azure Blob Storage cloud storage destination",
     "description": "This operation creates a dataflow to export datasets to an Azure Blob Storage cloud storage destination",
@@ -1970,7 +1971,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
     "name": "Activate datasets to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
     "description": "This operation creates a dataflow to export datasets to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
@@ -2021,7 +2022,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
     "name": "Activate datasets to a Data Landing Zone cloud storage destination",
     "description": "This operation creates a dataflow to export datasets to a Data Landing Zone cloud storage destination",
@@ -2072,7 +2073,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
     "name": "Activate datasets to a Google Cloud Storage cloud storage destination",
     "description": "This operation creates a dataflow to export datasets to a Google Cloud Storage destination",
@@ -2123,7 +2124,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
     "name": "Activate datasets to an SFTP cloud storage destination",
     "description": "This operation creates a dataflow to export datasets to an SFTP cloud storage destination",
@@ -2167,7 +2168,7 @@ Note the Dataflow ID from the response. This ID will be required in the next ste
 
 ## Get the dataflow runs {#get-dataflow-runs}
 
-![Diagram showing step 6 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
+![Diagram showing step 6 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-validate-dataflow.png)
 
 To check the executions of a dataflow, use the Dataflow Runs API:
 
@@ -2183,7 +2184,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
---header 'Authorization: Bearer <TOKEN>' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw ''
 ```
 
