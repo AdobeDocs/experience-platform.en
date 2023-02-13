@@ -23,7 +23,7 @@ An athletic apparel brand wants to reach existing customers through their social
 
 ## Prerequisites {#prerequisites}
 
-Before you are able to activate data to TikTok, you must authenticate with a TikTok Ads Manager account that you want to add an audience to. Details on sharing advertiser accounts can be found [in the TikTok API documentation](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378). Specifically, you would need to give Adobe the "Audience Management" permission.
+Before sending data to your TikTok Ads Manager account, you will need to give Adobe Experience Platform permission to access your Ad Account for 'Audience Management'. This permission can be provided by entering your advertiser ID in Adobe and following redirect to grant the permission. More instructions can be found on the [TikTok API documentation](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378).
 
 ## Supported identities {#supported-identities}
 
