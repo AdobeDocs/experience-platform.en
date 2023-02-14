@@ -95,21 +95,8 @@ You can also adjust the slider to see the earliest iteration of the graph. In th
 
 ![Timestamp slider three.](../images/graph-viewer/slider-three.png)
 
-### Access the identity graph viewer from datasets
 
-You can also access the identity graph viewer using the datasets interface. From the datasets [!UICONTROL Browse] page, select a dataset you want to interact with, and then select **[!UICONTROL Preview dataset]**
-
-![preview-dataset](../images/identity-graph-viewer/preview-dataset.png)
-
-From the preview window, select a fingerprint icon to see the identities represented through the identity graph viewer.
-
->[!TIP]
->
->The fingerprint icon only appears if the dataset has two or more identities.
-
-![fingerprint](../images/identity-graph-viewer/fingerprint.png)
-
-The identity graph viewer appears. On the left side of the screen is the identity graph displaying all the identities linked to the namespace you selected and the identity value you entered. Each identity node consists of a namespace and its corresponding ID value. You can select and hold any identity to drag and interact with the graph. Alternatively, you can hover over an identity to see information about its ID value. The graph output is also displayed as a tabled list in the center of the screen.
+<!-- The identity graph viewer appears. On the left side of the screen is the identity graph displaying all the identities linked to the namespace you selected and the identity value you entered. Each identity node consists of a namespace and its corresponding ID value. You can select and hold any identity to drag and interact with the graph. Alternatively, you can hover over an identity to see information about its ID value. The graph output is also displayed as a tabled list in the center of the screen.
 
 
 ![identity-graph](../images/identity-graph-viewer/graph-viewer.png)
@@ -144,7 +131,7 @@ Alternatively, you can select one batch to see all the links that this batch con
 
 Identity graphs with larger clusters of identities are also accessible through the identity graph viewer.
 
-![large-cluster](../images/identity-graph-viewer/large-cluster.png)
+![large-cluster](../images/identity-graph-viewer/large-cluster.png) -->
 
 ## Appendix
 
@@ -159,6 +146,20 @@ Errors may happen when accessing the identity graph viewer. The following is a l
 - The identity graph viewer cannot exceed the maximum of 150 identities.
 
 ![error-screen](../images/identity-graph-viewer/error-screen.png)
+
+### Access the identity graph viewer from datasets
+
+You can also access the identity graph viewer using the datasets interface. From the datasets [!UICONTROL Browse] page, select a dataset you want to interact with, and then select **[!UICONTROL Preview dataset]**
+
+![preview-dataset](../images/identity-graph-viewer/preview-dataset.png)
+
+From the preview window, select a fingerprint icon to see the identities represented through the identity graph viewer.
+
+>[!TIP]
+>
+>The fingerprint icon only appears if the dataset has two or more identities.
+
+![fingerprint](../images/identity-graph-viewer/fingerprint.png)
 
 ## Next steps
 
