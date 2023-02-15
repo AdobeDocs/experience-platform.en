@@ -429,14 +429,6 @@ In this step, you must select the profile attributes that you want to add to the
 
 1. To add more fields for exporting, repeat the steps above.
 
-### Use the last qualification time XDM attribute {##last-qualification-time}
-
-For customers using the sex new cloud storage beta connectors, you can use the `segmentMembership.ups.seg_id.lastQualificationTime` XDM attribute to understand when a profile qualified for a segment. This can help you with certain measurement or analytics use cases as well as give you a better idea of when to activate certain audiences. 
-
-Note that you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.ups.seg_id.lastQualificationTime` to your file exports. Instead, you need to manually paste the value `segmentMembership.ups.seg_id.lastQualificationTime` into the schema field, as shown below.
-
-ADD screen recording here
-
 ### Known limitations {#known-limitations}
 
 The new **[!UICONTROL Mapping]** page has the following known limitations:
