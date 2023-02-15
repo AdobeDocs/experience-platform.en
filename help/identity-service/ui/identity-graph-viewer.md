@@ -27,7 +27,7 @@ Working with the identity graph viewer requires an understanding of the various 
 ### Terminology
 
 - **Identity (node):** An identity or a node is data unique to an entity, typically a person. An identity is comprised of an identity namespace and an identity value. For example, a fully qualified identity could consist of an identity namespace for **Email**, combined with an identity value of **robin<span>@email.com**.
-- **Link (edge):** A link or an edge represents the connection between identities. Identity links include properties such as first established and last updated timestamps. The first established timestamp defines the date and time in which a new identity is linked to an existing identity. The last updated timestamp defines the date and time at which an existing identity link was last updated.
+- **Link (edge):** A link or an edge represents the connection between identities. Identity links include properties such as first established and last updated timestamps. The first established timestamp defines the date and time at which a new identity is linked to an existing identity. The last updated timestamp defines the date and time at which an existing identity link was last updated.
 - **Graph (cluster):** A graph or a cluster is a group of identities and links that represent a person.
 
 ## Access the identity graph viewer {#access-identity-graph-viewer}
@@ -83,7 +83,7 @@ The following table provides additional information on the data source propertie
 
 ![The right-rail, which displays identity data, as well as information data source.](../images/graph-viewer/right-rail.png)
 
-You can also use the *[!UICONTROL Data source]* to see a list of data sources that contribute to your identities Select [!UICONTROL Data source] for a tabular view of your datasets and batch IDs.
+You can also use the *[!UICONTROL Data source]* to see a list of data sources that contribute to your identities. Select [!UICONTROL Data source] for a tabular view of your datasets and batch IDs.
 
 ![The data source tab selected.](../images/graph-viewer/data-source-table.png)
 
