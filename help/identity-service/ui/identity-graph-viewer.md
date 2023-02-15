@@ -87,7 +87,7 @@ You can also use the *[!UICONTROL Data source]* to see a list of data sources th
 
 ![The data source tab selected.](../images/graph-viewer/data-source-table.png)
 
-Use the slider to filter graph data by the time at which identities were first established. By default, the identity graph viewer displays all identities linked within the graph. Hold and drag the slider to adjust the time to the last timestamp in which a new identity was linked to the graph. In the example below, the graph displays that the most recent identity link (GAID) was established on **[!UICONTROL 08/19/2020, 4:29:29 PM]**.
+Use the slider to filter graph data by the time at which identities were first established. By default, the identity graph viewer displays all identities linked within the graph. Hold and drag the slider to adjust the time to the last timestamp at which a new identity was linked to the graph. In the example below, the graph displays that the most recent identity link (GAID) was established on **[!UICONTROL 08/19/2020, 4:29:29 PM]**.
 
 ![The graph viewer timestamp slider selected.](../images/graph-viewer/slider-one.png)
 
