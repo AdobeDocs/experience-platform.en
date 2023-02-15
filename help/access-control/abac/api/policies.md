@@ -7,6 +7,10 @@ exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
 ---
 # Access control policies endpoint
 
+>[!NOTE]
+>
+>If a user token is being passed, then the user of the token must have an "org admin" role for the requested org.
+
 Access control policies are statements that bring attributes together to establish permissible and impermissible actions. These policies can either be local or global, and can override other policies. The `/policies` endpoint in the attribute-based access control API allows you to programmatically manage policies, including information on the rules that govern them as well as their respective subject conditions.
 
 >[!IMPORTANT]

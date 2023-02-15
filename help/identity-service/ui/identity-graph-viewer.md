@@ -30,7 +30,7 @@ Working with the identity graph viewer requires an understanding of the various 
 - **Link (edge):** A link or an edge represents the connection between identities. Identity links include properties such as first established and last updated timestamps. The first established timestamp defines the date and time in which a new identity is linked to an existing identity. The last updated timestamp defines the date and time in which an existing identity link was last updated.
 - **Graph (cluster):** A graph or a cluster is a group of identities and links that represent a person.
 
-## Access the identity graph viewer
+## Access the identity graph viewer {#access-identity-graph-viewer}
 
 In the Platform UI, select **[!UICONTROL Identities]** in the left navigation and then select **[!UICONTROL Identity Graph]** from the list of tabs in the header.
 
