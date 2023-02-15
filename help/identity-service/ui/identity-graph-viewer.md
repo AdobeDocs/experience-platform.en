@@ -137,4 +137,4 @@ By reading this document, you have learned how to explore your customers' identi
 | ---- | ------ |
 | 2021-01 | <ul><li>Added support for streaming ingested data and non-production sandbox.</li><li>Minor bug fixes.</li></ul> |
 | 2021-02 | <ul><li>Identity graph viewer is made accessible through dataset preview.</li><li>Minor bug fixes.</li><li>Identity graph viewer is made Generally Available.</li></ul> |
-| 2023-01 | <ul><li>UI updates.</li></ul>
+| 2023-01 | <ul><li>UI updates.</li></ul> |
