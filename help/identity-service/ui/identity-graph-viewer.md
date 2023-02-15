@@ -76,12 +76,16 @@ The following table provides additional information on the data source propertie
 
 | Data source | Description |
 | --- | --- | 
-| Batch ID |
-| Dataset ID |
-| Dataset name |
-| Schema name |
+| Batch ID | The auto-generated identifier that corresponds with your batch data. | 
+| Dataset ID | The auto-generated identifier that corresponds with your dataset. |
+| Dataset name | The name of the dataset that contains your batch data. |
+| Schema name | The name of the schema. The schema provides a set of rules that represent and validate the structure and format of data. |
 
 ![The right-rail, which displays identity data, as well as information data source.](../images/graph-viewer/right-rail.png)
+
+You can also view the list of data sources contributing to your identities using the *[!UICONTROL Data source]*. Select [!UICONTROL Data source] for a tabular view of your datasets and batch IDs.
+
+![The data source tab selected.]
 
 Use the slider to filter graph data by the time in which identities were first established. By default, the identity graph viewer displays all identities linked within the graph. Hold and drag the slider to adjust the time to the last timestamp in which a new identity was linked to the graph. In the example below, the graph displays that the most recent identity link (GAID), was established on **[!UICONTROL 08/19/2020, 4:29:29 PM]**.
 
@@ -95,44 +99,6 @@ You can also adjust the slider to see the earliest iteration of the graph. In th
 
 ![Timestamp slider three.](../images/graph-viewer/slider-three.png)
 
-
-<!-- The identity graph viewer appears. On the left side of the screen is the identity graph displaying all the identities linked to the namespace you selected and the identity value you entered. Each identity node consists of a namespace and its corresponding ID value. You can select and hold any identity to drag and interact with the graph. Alternatively, you can hover over an identity to see information about its ID value. The graph output is also displayed as a tabled list in the center of the screen.
-
-
-![identity-graph](../images/identity-graph-viewer/graph-viewer.png)
-
-Select an identity to update the highlighted row on the **[!UICONTROL Identities]** table and to update the information provided on the right rail, which includes an identity's **[!UICONTROL Value]**, **[!UICONTROL Batch ID]**, and its **[!UICONTROL Last updated]** date.
-
-![select-identity](../images/identity-graph-viewer/select-identity.png)
-
-You can filter through a graph and isolate a specific namespace using the sort option on top of the **[!UICONTROL Identities]** table. From the dropdown menu, select the namespace you want to highlight.
-
-![filter-by-namespace](../images/identity-graph-viewer/filter-namespace.png)
-
-The graph viewer returns, highlighting the namespace you selected. The filter option also updates the **[!UICONTROL Identities]** table to return information only for the namespace you selected.
-
-![filtered](../images/identity-graph-viewer/filtered.png)
-
-The top right of the graph viewer box contains options for magnification. Select the **(+)** icon to zoom into the graph or the **(-)** icon to zoom out.
-
-![zoom](../images/identity-graph-viewer/zoom.png)
-
-You can view more information on batches by selecting the **[!UICONTROL Data source]** from the header. The **[!UICONTROL Data source]** table displays a list of **[!UICONTROL Batch IDs]** associated with graph, as well as its **[!UICONTROL Linked IDs]**, source schema, and date of ingestion.
-
-![data-source](../images/identity-graph-viewer/data-source-table.png)
-
-You can select any of the links within an identity graph to see all the source batches that contributed to the link.
-
-![select-links](../images/identity-graph-viewer/select-edge.png)
-
-Alternatively, you can select one batch to see all the links that this batch contributed to.
-
-![select-links](../images/identity-graph-viewer/select-batch.png)
-
-Identity graphs with larger clusters of identities are also accessible through the identity graph viewer.
-
-![large-cluster](../images/identity-graph-viewer/large-cluster.png) -->
-
 ## Appendix
 
 The following section provides additional information for working with the identity graph viewer.
@@ -145,7 +111,7 @@ Errors may happen when accessing the identity graph viewer. The following is a l
 - The identity graph viewer requires a minimum of two linked identities to generate. It is possible that there is only one identity value and no linked identities, and in this case, the value would only exist in [!DNL Profile] viewer.
 - The identity graph viewer cannot exceed the maximum of 150 identities.
 
-![error-screen](../images/identity-graph-viewer/error-screen.png)
+![error-screen](../images/graph-viewer/error-screen.png)
 
 ### Access the identity graph viewer from datasets
 
@@ -171,4 +137,4 @@ By reading this document, you have learned how to explore your customers' identi
 | ---- | ------ |
 | 2021-01 | <ul><li>Added support for streaming ingested data and non-production sandbox.</li><li>Minor bug fixes.</li></ul> |
 | 2021-02 | <ul><li>Identity graph viewer is made accessible through dataset preview.</li><li>Minor bug fixes.</li><li>Identity graph viewer is made Generally Available.</li></ul> |
-| 2023-01 |
+| 2023-01 | <ul><li>UI updates.</li></ul>
