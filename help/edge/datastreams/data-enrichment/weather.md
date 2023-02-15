@@ -75,3 +75,7 @@ In [!DNL Adobe Target], you can use weather data to drive personalization in rea
 ![Target Audience Builder](../../assets/datastreams/data-enrichment/weather/target-audience-builder.png)
 
 The parameter is the [!DNL XDM] path to a specific field. See the [weather reference](weather-reference.md) for the available fields and their corresponding paths.
+
+## Next steps {#next-steps}
+
+After reading this document, you now have a better understanding of how you can use weather data across various Adobe solutions. To learn more about the weather data field mapping, see the [field mapping reference](weather-reference.md).
