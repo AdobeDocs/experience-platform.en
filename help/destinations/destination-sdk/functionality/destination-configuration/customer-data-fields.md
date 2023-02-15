@@ -49,9 +49,9 @@ When creating your own customer data fields, you can use the parameters describe
 |`pattern` | String || Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field.|
 |`enum` | String || Renders the custom field as a dropdown menu and lists the options available to the user.|
 |`default`|String||Defines the default value from an `enum` list.|
-|`hidden`||||
-|`unique`||||
-|`readOnly`||||
+|`hidden`|Boolean||Indicates whether the customer data field is shown in the UI or not.|
+|`unique`|Boolean||Use this parameter when you need to create a customer data field whose value must be unique across all destination dataflows set up by a user's organization. For example, the **[!UICONTROL Integration alias]** field in the [Custom Personalization](../../../catalog/personalization/custom-personalization.md) destination must be unique, meaning that two separate dataflows to this destination cannot have the same value for this field.|
+|`readOnly`|Boolean||Indicates whether the customer can change the value of the field or not.|
 
 
 {style="table-layout:auto"}
@@ -441,12 +441,13 @@ Below, you can see the resulting UI screen, based on the configuration above. Wh
 * Bo/Cosmin ionita - hidden
 * unique 
 
-unique: Use this parameter when you need to create a customer data field whose value must be unique across all destination dataflows set up by a user's organization.
-For example, the Integration alias field in the Custom Personalization destination must be unique, meaning that two separate dataflows to this destination cannot have the same value for this field.
 
 
 
-## How to access customer data fields from templates
+
+## How to access templatized customer data fields
+
+
 
 
 
