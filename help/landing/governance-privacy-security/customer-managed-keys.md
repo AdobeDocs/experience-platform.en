@@ -7,6 +7,10 @@ exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
 
 Data stored on Adobe Experience Platform is encrypted at rest using system-level keys. If you are using an application built on top of Platform, you can opt to use your own encryption keys instead, giving you greater control over your data security.
 
+>[!NOTE]
+>
+>Data in Adobe Experience Platform data lake and Profile Store (CosmosDB) are encrypted using CMK.
+
 This document covers the process for enabling the customer-managed keys (CMK) feature in Platform.
 
 ## Prerequisites
