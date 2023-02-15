@@ -301,7 +301,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
     {
         "op":"add",
         "path":"/schedule",
-        "value":"0 0 2 * *"
+        "value":"0 0 2 * * ?"
     }
 ]'
 ```
