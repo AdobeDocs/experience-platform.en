@@ -6,7 +6,7 @@ hidefromtoc: y
 hide: y
 
 ---
-# Use the last qualification time XDM attribute in the new beta cloud storage destinations {##last-qualification-time}
+# Use the last qualification time XDM attribute in the new beta cloud storage destinations {#last-qualification-time}
 
 >[!IMPORTANT]
 > 
