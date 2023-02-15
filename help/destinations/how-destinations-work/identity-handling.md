@@ -101,3 +101,5 @@ When configuring a datastream as described in the documentation linked above, yo
 After reading this document, you now know how to find out which identities are supported or required for individual destinations. You now also know how identity selection works for each destination type. 
 
 Next, you can read about which [export settings](/help/destinations/how-destinations-work/destinations-configurations.md) for destinations are common across destination types, which can be configured on an individual destination level by developers, and which settings can be edited by users in the activation workflow.
+
+You can also check out all the available destinations in the [catalog](/help/destinations/catalog/overview.md).
