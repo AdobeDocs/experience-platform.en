@@ -26,8 +26,8 @@ Working with the identity graph viewer requires an understanding of the various 
 
 ### Terminology
 
-- **Identity (node):** An identity or a node is data unique to an entity, typically a person. An identity is comprised of an identity namespace and an identity value. For example, a fully qualified identity could consist an identity namespace for **Email**, combined with an identity value of **robin<span>@email.com**.
-- **Link (edge):** A link or an edge represents the connection between identities. Identity links include properties such as first established and last updated timestamps. The first established timestamp defines the date and time in which a new identity is linked to an existing identity. The last updated timestamp defines the date and time in which an existing identity link was last updated.
+- **Identity (node):** An identity or a node is data unique to an entity, typically a person. An identity is comprised of an identity namespace and an identity value. For example, a fully qualified identity could consist of an identity namespace for **Email**, combined with an identity value of **robin<span>@email.com**.
+- **Link (edge):** A link or an edge represents the connection between identities. Identity links include properties such as first established and last updated timestamps. The first established timestamp defines the date and time in which a new identity is linked to an existing identity. The last updated timestamp defines the date and time at which an existing identity link was last updated.
 - **Graph (cluster):** A graph or a cluster is a group of identities and links that represent a person.
 
 ## Access the identity graph viewer {#access-identity-graph-viewer}
@@ -46,11 +46,11 @@ To view an identity graph, provide an identity namespace and its corresponding v
 
 ## Understanding the identity graph viewer interface
 
-The identity graph viewer interface is made up of several elements that you can use to interact and better understand your identity data.
+The identity graph viewer interface is made up of several elements that you can use to interact with and better understand your identity data.
 
 ![The identity graph viewer interface.](../images/graph-viewer/identity-graph-viewer-main.png)
 
-The identity graph displays all of the identities linked to the identity namespace and value combination that you entered. Each node consists of an identity namespace and its corresponding value. You can select, hold, and drag any node to interact with the graph. Alternatively, you can hover over a node to see information about its corresponding identity value. To hide or display the graph, select **[!UICONTROL View graph]**.
+The identity graph displays all of the identities linked to the identity namespace and value combination that you entered. Each node consists of an identity namespace and its corresponding value. You can select, hold, and drag any node to interact with the graph. Alternatively, you can hover over a node to see information about its corresponding identity value. Select **[!UICONTROL View graph]** to hide or display the graph.
 
 >[!IMPORTANT]
 >
@@ -66,7 +66,7 @@ The [!UICONTROL Identities] table provides a different view of your identity dat
 
 ![The Identities table with the list of identities linked within the graph.](../images/graph-viewer/identities-table.png)
 
-Use the dropdown menu to sort through the graph data and highlight information on a specific identity namespace. For example, select **[!UICONTROL Email]** from the menu to view data that pertains only to the email identity namespace.
+Use the dropdown menu to sort through the graph data and highlight information on a specific identity namespace. For example, select **[!UICONTROL Email]** from the menu to view data specific to the email identity namespace.
 
 ![The Identities table sorted to only display email data.](../images/graph-viewer/sort-email.png)
 
@@ -83,11 +83,11 @@ The following table provides additional information on the data source propertie
 
 ![The right-rail, which displays identity data, as well as information data source.](../images/graph-viewer/right-rail.png)
 
-You can also view the list of data sources contributing to your identities using the *[!UICONTROL Data source]*. Select [!UICONTROL Data source] for a tabular view of your datasets and batch IDs.
+You can also use the *[!UICONTROL Data source]* to see a list of data sources that contribute to your identities Select [!UICONTROL Data source] for a tabular view of your datasets and batch IDs.
 
 ![The data source tab selected.](../images/graph-viewer/data-source-table.png)
 
-Use the slider to filter graph data by the time in which identities were first established. By default, the identity graph viewer displays all identities linked within the graph. Hold and drag the slider to adjust the time to the last timestamp in which a new identity was linked to the graph. In the example below, the graph displays that the most recent identity link (GAID), was established on **[!UICONTROL 08/19/2020, 4:29:29 PM]**.
+Use the slider to filter graph data by the time at which identities were first established. By default, the identity graph viewer displays all identities linked within the graph. Hold and drag the slider to adjust the time to the last timestamp in which a new identity was linked to the graph. In the example below, the graph displays that the most recent identity link (GAID) was established on **[!UICONTROL 08/19/2020, 4:29:29 PM]**.
 
 ![The graph viewer timestamp slider selected.](../images/graph-viewer/slider-one.png)
 
