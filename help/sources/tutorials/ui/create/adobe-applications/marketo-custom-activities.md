@@ -44,7 +44,7 @@ In the *[!UICONTROL Schemas]* dashboard of the Experience Platform UI, select **
 >
 >Use the search bar to expedite your navigation through the list of schemas.
 
-![The B2B Activity schema selected from the list of schemas in Experience Platform UI.](../../../../images/tutorials/create/marketo-custom-activities/b2b-activity.png)
+![The schemas workspace in the Experience Platform UI with the B2B Activity schema selected.](../../../../images/tutorials/create/marketo-custom-activities/b2b-activity.png)
 
 ### Create a new field group for custom activity
 
@@ -52,15 +52,15 @@ Next, add a new field group to the [!DNL B2B Activity] schema. This field group 
 
 To add a new field group, select **[!UICONTROL + Add]** beside the *[!UICONTROL Field groups]* panel under *[!UICONTROL Composition]*.
 
-![](../../../../images/tutorials/create/marketo-custom-activities/add-new-field-group.png)
+![The schema structure.](../../../../images/tutorials/create/marketo-custom-activities/add-new-field-group.png)
 
 The *[!UICONTROL Add field groups]* window appears. Select **[!UICONTROL Create new field group]** and then provide the same display name for the custom activity that you retrieved in an earlier step and provide an optional description for your new field group. When finished, select **[!UICONTROL Add field groups]**.
 
-![](../../../../images/tutorials/create/marketo-custom-activities/create-new-field-group.png)
+![The window for labeling and creating a new field group.](../../../../images/tutorials/create/marketo-custom-activities/create-new-field-group.png)
 
 Once created, your new field group for custom activity appears in the [!UICONTROL Field groups] catalog.
 
-![](../../../../images/tutorials/create/marketo-custom-activities/new-field-group-created.png)
+![The schema structure with a new field group added under the field group panel.](../../../../images/tutorials/create/marketo-custom-activities/new-field-group-created.png)
 
 ### Add a new field to your schema structure
 
@@ -68,17 +68,17 @@ Next, add a new field to your schema. This new field must be set to `type: objec
 
 To add a new field, select the plus sign (`+`) beside the schema name. An entry for *[!UICONTROL Untitled Field | Type]* appears. Next, configure properties of your field using the *[!UICONTROL Field properties]* panel. Set the field name to be your custom activity's API name and set the display name to be your custom activity's display name. Then, set the type as `object` and assign the field group to the custom activity field group that you created in the previous step. When finished, select **[!UICONTROL Apply]**.
 
-![](../../../../images/tutorials/create/marketo-custom-activities/add-new-object.png)
+![The schema structure with the plus (`+`) sign selected so that a new field can be added.](../../../../images/tutorials/create/marketo-custom-activities/add-new-object.png)
 
 The new field appears in your schema.
 
-![](../../../../images/tutorials/create/marketo-custom-activities/new-object-field-added.png)
+![A new field added to the schema.](../../../../images/tutorials/create/marketo-custom-activities/new-object-field-added.png)
 
 ### Add sub-fields to the object field {#add-sub-fields-to-the-object-field}
 
 The last step in preparing your schema is to add individual fields inside the field that you created in the previous step.
 
-![](../../../../images/tutorials/create/marketo-custom-activities/add-sub-fields.png)
+![A group of sub-fields added to a field within the schema.](../../../../images/tutorials/create/marketo-custom-activities/add-sub-fields.png)
 
 ## Create a dataflow 
 
@@ -90,19 +90,19 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Under the [!UICONTROL Adobe applications] category, select **[!UICONTROL Marketo Engage]**. Then, select **[!UICONTROL Add data]** to create a new [!DNL Marketo] dataflow.
 
-![](../../../../images/tutorials/create/marketo/catalog.png)
+![The sources catalog on Experience Platform UI with the Marketo Engage source selected.](../../../../images/tutorials/create/marketo/catalog.png)
 
 ### Select data
 
 Select **[!UICONTROL Activities]** from the list of [!DNL Marketo] datasets and then select **[!UICONTROL Next]**.
 
-![](../../../../images/tutorials/create/marketo-custom-activities/select-data.png)
+![The select data step in the sources workflow with the activities dataset selected.](../../../../images/tutorials/create/marketo-custom-activities/select-data.png)
 
 ### Dataflow detail
 
 Next, [provide information for your dataflow](./marketo.md#provide-dataflow-details), including names and descriptions for your dataset and dataflow, the schema that you will be using, and configurations for [!DNL Profile] ingestion, error diagnostics, and partial ingestion.
 
-![](../../../../images/tutorials/create/marketo-custom-activities/dataflow-detail.png)
+![The dataflow detail step.](../../../../images/tutorials/create/marketo-custom-activities/dataflow-detail.png)
 
 ### Mapping
 
@@ -110,7 +110,7 @@ Mappings for standard activity fields are auto-populated, but custom activity fi
 
 To start mapping your custom activity fields, select **[!UICONTROL New field type]** and then select **[!UICONTROL Add new field]**.
 
-![](../../../../images/tutorials/create/marketo-custom-activities/add-new-mapping-field.png)
+![The mapping step with the dropdown menu to add a new field.](../../../../images/tutorials/create/marketo-custom-activities/add-new-mapping-field.png)
 
 Navigate through the source data structure and find the custom activity field that you want to ingest. When finished, select **[!UICONTROL Select]**.
 
@@ -118,16 +118,27 @@ Navigate through the source data structure and find the custom activity field th
 >
 >To avoid confusion and handle duplicate field names, custom activity fields are prefixed with the API name.
 
-![](../../../../images/tutorials/create/marketo-custom-activities/select-new-mapping-field.png)
+![The source data structure.](../../../../images/tutorials/create/marketo-custom-activities/select-new-mapping-field.png)
 
-To add a target field, select the schema icon ![schema icon]() and then select the [fields that you created in an earlier step](#add-sub-fields-to-the-object-field).
+To add a target field, select the schema icon ![schema icon](../../../../images/tutorials/create/marketo-custom-activities/schema-icon.png) and then select the the custom activity fields from the target schema.
 
-![](../../../../images/tutorials/create/marketo-custom-activities/add-target-mapping-field.png)
+![The target schema structure.](../../../../images/tutorials/create/marketo-custom-activities/add-target-mapping-field.png)
 
 Repeat the steps to add the rest of your custom activity mapping fields. When finished, select **[!UICONTROL Next]**.
 
-![](../../../../images/tutorials/create/marketo-custom-activities/all-mappings.png)
+![All of the mappings for source and target data.](../../../../images/tutorials/create/marketo-custom-activities/all-mappings.png)
 
 ### Review
 
-![](../../../../images/tutorials/create/marketo-custom-activities/review.png)
+The *[!UICONTROL Review]* step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
+
+* **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source entity, and the amount of columns within that source entity.
+* **[!UICONTROL Assign dataset & map fields]**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
+
+Once you have reviewed your dataflow, select **[!UICONTROL Save & ingest]** and allow some time for the dataflow to be created.
+
+![The final review step that summarizes information on the connection, dataset, and mapping fields.](../../../../images/tutorials/create/marketo-custom-activities/review.png)
+
+## Next steps
+
+By following this tutorial, you have set up a Platform schema for [!DNL Marketo] custom activity data and created a dataflow to bring that data to Platform. For general information on the [!DNL Marketo] source, read the [[!DNL Marketo] source overview](../../../../connectors/adobe-applications/marketo/marketo.md).
