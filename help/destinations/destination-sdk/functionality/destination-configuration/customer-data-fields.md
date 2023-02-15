@@ -53,7 +53,6 @@ When creating your own customer data fields, you can use the parameters describe
 |`unique`|Boolean||Use this parameter when you need to create a customer data field whose value must be unique across all destination dataflows set up by a user's organization. For example, the **[!UICONTROL Integration alias]** field in the [Custom Personalization](../../../catalog/personalization/custom-personalization.md) destination must be unique, meaning that two separate dataflows to this destination cannot have the same value for this field.|
 |`readOnly`|Boolean||Indicates whether the customer can change the value of the field or not.|
 
-
 {style="table-layout:auto"}
 
 In the example below, the `customerDataFields` section defines three fields that users must input in the Platform UI when connecting to the destination:
