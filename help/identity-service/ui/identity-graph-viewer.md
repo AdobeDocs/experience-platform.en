@@ -85,19 +85,19 @@ The following table provides additional information on the data source propertie
 
 You can also view the list of data sources contributing to your identities using the *[!UICONTROL Data source]*. Select [!UICONTROL Data source] for a tabular view of your datasets and batch IDs.
 
-![The data source tab selected.]
+![The data source tab selected.](../images/graph-viewer/data-source-table.png)
 
 Use the slider to filter graph data by the time in which identities were first established. By default, the identity graph viewer displays all identities linked within the graph. Hold and drag the slider to adjust the time to the last timestamp in which a new identity was linked to the graph. In the example below, the graph displays that the most recent identity link (GAID), was established on **[!UICONTROL 08/19/2020, 4:29:29 PM]**.
 
-![Timestamp slider.](../images/graph-viewer/slider-one.png)
+![The graph viewer timestamp slider selected.](../images/graph-viewer/slider-one.png)
 
 Adjust the slider to see that another identity link (Email) was established on **[!UICONTROL 08/19/2020, 4:25:30 PM]**.
 
-![Timestamp slider two.](../images/graph-viewer/slider-two.png)
+![The graph viewer timestamp slider adjusted to the last established new link.](../images/graph-viewer/slider-two.png)
 
 You can also adjust the slider to see the earliest iteration of the graph. In the example below, the identity graph viewer displays that the graph was first created on **[!UICONTROL 08/19/2020, 4:11:49 PM]**, with its first links being ECID, Email, and Phone.
 
-![Timestamp slider three.](../images/graph-viewer/slider-three.png)
+![The graph viewer timestamp slider adjusted to the first established new link.](../images/graph-viewer/slider-three.png)
 
 ## Appendix
 
