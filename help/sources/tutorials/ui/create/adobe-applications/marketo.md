@@ -95,6 +95,8 @@ To ingest into a new dataset, select **[!UICONTROL New dataset]** and then provi
 
 ![new-dataset](../../../../images/tutorials/create/marketo/new-dataset.png)
 
+>[!ENDTABS]
+
 ### Enable [!DNL Profile] and error diagnostics
 
 Next, select the **[!UICONTROL Profile dataset]** toggle to enable your dataset for [!DNL Profile]. This allows you to create a holistic view of an entity's attributes and behaviors. Data from all [!DNL Profile]-enabled datasets will be included in [!DNL Profile] and changes are applied when you save your dataflow.
