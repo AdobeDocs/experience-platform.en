@@ -4,25 +4,26 @@ description: Learn how to deprecate Experience Data Model (XDM) fields using the
 ---
 # Deprecate an XDM field in the UI
 
-Once data is ingested into your schema, you can no longer remove fields from the schema without making breaking changes. Experience Data Model (XDM) offers you the flexibility to manage your data model as your business needs change by deprecating schema fields. Field deprecation removes fields from the UI view and also hides them from downstream UIs. Downstream UIs such as Segmentation and Profiles dashboards, and other solutions such as Customer Journey Analytics and Adobe Journey Optimizer, no longer display deprecated fields as part of their workflow. Although, they all retain the option to show deprecated fields. 
+Experience Data Model (XDM) offers you the flexibility to manage your data model as your business needs change by deprecating schema fields. Unwanted fields can be deprecated to remove them from the UI view and also hide them from downstream UIs. Conveniently, you can also show deprecated fields using a toggle in the Schema Editor, and even undeprecate them should you need.  
+
+Once deprecated, downstream UIs such as Segmentation dashboards, Customer Journey Analytics, and Adobe Journey Optimizer, no longer display deprecated fields as part of their workflow. Although, they all retain the option to show deprecated fields if needed. 
 
 As deprecated fields are hidden from the UI by default, this streamlines your schema in the Schema Editor and prevents unwanted fields from being added to downstream dependencies such as the segment builder, journey designer, and so on. Field deprecation is also backward compatible. Other systems that use deprecated fields such as segments and queries will continue to evaluate them as intended. If a deprecated field is used in an existing segment it is treated normally, meaning that the field shows up as expected in the segment builder canvas or is evaluated based on any data available in the deprecated fields. This is a non-breaking change that does not negatively affect any existing data flows.
 
-You can deprecate a field within a schema or custom resource by using the [Schema Editor](./create-schema-ui.md) or the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). This document covers how to deprecate fields for different XDM resources using the Schema Editor in the Experience Platform user interface. For steps on deprecating an XDM field using the API, see the tutorial on [deprecating an XDM field using the Schema Registry API](./field-deprecation-api.md).
+Before data is ingested into a schema, you can remove unnecessary field groups. See the documentation on [how to remove a field group from a schemas](../ui/resources/schemas.md#remove-fields) for more information. Once data has been ingested into your schema, you can no longer remove fields from the schema without making breaking changes. In this case, you can deprecate an unwanted field within a schema or custom resource by using the [Schema Editor](./create-schema-ui.md) or the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). 
 
-## Deprecate a custom field {#custom}
+This document covers how to deprecate fields for different XDM resources using the Schema Editor in the Experience Platform user interface. For steps on deprecating an XDM field using the API, see the tutorial on [deprecating an XDM field using the Schema Registry API](./field-deprecation-api.md).
 
-To deprecate a field in a custom class, field group, or data type,...
+## Deprecate a field {#deprecate}
 
-{directions here}
+To deprecate a custom field, navigate to the Schema Editor for the schema you want to edit. Select the field from the Structure section of the canvas in the UI followed by [!UICONTROL Deprecate] from the [!UICONTROL Field Properties]. A dialog appears to confirm your choices and notify you that the field will be hidden from downstream UIs. Select [!UICONTROL Confirm] to complete the action. 
 
-## Deprecate a standard field in a schema {#standard}
+![The Schema editor with a field selected and Deprecate highlighted.]()
+ 
 
-<!-- Not sure if this is true:
+## Show deprecated fields {#show-deprecated}
 
-Fields from standard classes, field groups, and data types cannot be deprecated directly. Instead, you can deprecate their use in the individual schemas that employ these standard resources by using a descriptor. 
-
--->
+To view previously deprecated fields, navigate to the relevant schema in the Schema Editor. In the [!UICONTROL Composition] section of the canvas, 
 
 ### Create a field deprecation descriptor {#create-descriptor}
 
