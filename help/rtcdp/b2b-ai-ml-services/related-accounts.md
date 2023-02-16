@@ -26,6 +26,16 @@ With related accounts, [!DNL Real-Time CDP B2B] now shows you a list of accounts
 
 Use this feature to view related account profiles for an account profile in the Experience Platform UI and then include the related accounts in your segment definitions to broaden your reach or apply wider criteria in your segments.
 
+## Enable the related accounts service {#enable}
+
+By default the B2B Related Accounts service is disabled. To enable the service, select the **[!UICONTROL Profiles]** in the sidebar and select **[!UICONTROL Settings]**.
+
+![Experience Platform UI highlighting profiles and settings.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+
+Select the toggle beside [!UICONTROL Enable related accounts] to enable the service, and then select **[!UICONTROL Save]**.
+
+![Account settings screen highlighting the toggle and save.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
+
 ## How it works {#how-it-works}
 
 Daily-run machine learning jobs use a hierarchical algorithm to cluster similar account profiles into groups based on three factors:
