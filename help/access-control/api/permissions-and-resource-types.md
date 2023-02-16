@@ -7,6 +7,10 @@ exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
 ---
 # Reference endpoint
 
+>[!NOTE]
+>
+>If a user token is being passed, then the user of the token must have an "org admin" role for the requested org.
+
 You can list the names of all permissions and resource types by making a GET request to the `/acl/reference` endpoint. These names can then be used in API calls to [view effective access control policies](./effective-policies.md) for the current user.
 
 A permission is a policy that is managed through the Adobe Admin Console, and maps to zero or more resource-type policies. A resource type is a policy that enables read, write, and/or delete capabilities for a specific type of [!DNL Platform] resource (such as datasets or schemas).
