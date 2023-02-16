@@ -7,7 +7,7 @@ exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
 
 >[!IMPORTANT]
 >
->Before creating a [!DNL Marketo Engage] source connection and a dataflow, you must first ensure that you have [mapped your Adobe IMS Organization ID](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. Furthermore, you must also ensure that you have completed [auto-populating your [!DNL Marketo] B2B namespaces and schemas](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) prior to creating a source connection and a dataflow.
+>Before creating a [!DNL Marketo Engage] source connection and a dataflow, you must first ensure that you have [mapped your Adobe Organization ID](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. Furthermore, you must also ensure that you have completed [auto-populating your [!DNL Marketo] B2B namespaces and schemas](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) prior to creating a source connection and a dataflow.
 
 This tutorial provides steps for creating a [!DNL Marketo Engage] (hereinafter referred to as "[!DNL Marketo]") source connector in the UI to bring B2B data into Adobe Experience Platform.
 
@@ -81,13 +81,15 @@ The [!UICONTROL Dataflow detail] page allows you to select whether you want to u
 
 ![dataflow-details](../../../../images/tutorials/create/marketo/dataflow-details.png)
 
-### Use an existing dataset
+>[!BEGINTABS]
+
+>[!TAB Use an existing dataset]
 
 To ingest data into an existing dataset, select **[!UICONTROL Existing dataset]**. You can either retrieve an existing dataset using the [!UICONTROL Advanced search] option or by scrolling through the list of existing datasets in the dropdown menu. Once you have selected a dataset, provide a name and a description for your dataflow.
 
 ![existing-dataset](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
-### Use a new dataset
+>[!TAB Use a new dataset]
 
 To ingest into a new dataset, select **[!UICONTROL New dataset]** and then provide an output dataset name and an optional description. Next, select a schema to map to using the [!UICONTROL Advanced search] option or by scrolling through the list of existing schemas in the dropdown menu. Once you have selected a schema, provide a name and a description for your dataflow.
 
@@ -101,7 +103,7 @@ Next, select the **[!UICONTROL Profile dataset]** toggle to enable your dataset 
 
 >[!IMPORTANT]
 >
->The [!DNL Marketo] connector uses batch ingestion to ingest all historical records and uses streaming ingestion for real-time updates. This allows the connector to continue streaming while ingesting any erroneous records. Enable the **[!UICONTROL Partial ingestion]** toggle and then set the [!UICONTROL Error threshold %] to maximum to prevent the dataflow from failing.
+>The [!DNL Marketo] source uses batch ingestion to ingest all historical records and uses streaming ingestion for real-time updates. This allows the source to continue streaming while ingesting any erroneous records. Enable the **[!UICONTROL Partial ingestion]** toggle and then set the [!UICONTROL Error threshold %] to maximum to prevent the dataflow from failing.
 
 ![profile-and-errors](../../../../images/tutorials/create/marketo/profile-and-errors.png)
 
@@ -112,6 +114,14 @@ You can enable alerts to receive notifications on the status of your dataflow. S
 When you are finished providing details to your dataflow, select **[!UICONTROL Next]**.
 
 ![alerts](../../../../images/tutorials/create/marketo/alerts.png)
+
+### Skip unclaimed accounts when ingesting companies data
+
+When creating a dataflow to ingest data from the companies dataset, you can configure [!UICONTROL Exclude unclaimed accounts] to either exclude or include unclaimed accounts from ingestion.
+
+Within [!DNL Marketo], unclaimed accounts are phantom account records that contain no context or data. For new datafalows, the toggle to exclude unclaimed accounts is enabled by default. For existing dataflows, you can enable or disable the feature, with changes applying to newly ingested data and not existing data.
+
+![unclaimed accounts](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
 
 ## Map your [!DNL Marketo] dataset source fields to target XDM fields
 
