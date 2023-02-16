@@ -7,7 +7,6 @@ title: UI attributes
 
 UI attributes define the visual elements that Adobe should display for your destination card in the Adobe Experience Platform user interface, such as the destination platform logo, a link to the documentation page, a destination description and its category and type.
 
-
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the following destination configuration overview pages:
 
 * [Use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration)
@@ -20,7 +19,6 @@ When [creating a destination](../../authoring-api/destination-configuration/crea
 * The category under which your destination will be visible in the Platform UI.
 * The data export frequency for your destination.
 * The destination connection type, such as Amazon S3, Azure Blob, etc.
-
 
 You can configure UI attributes via the `/authoring/destinations` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
 

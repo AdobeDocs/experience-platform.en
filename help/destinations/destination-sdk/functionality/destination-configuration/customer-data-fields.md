@@ -39,7 +39,7 @@ Refer to the table below for details on what type of destinations support the fu
 
 When creating your own customer data fields, you can use the parameters described in the table below to configure their behavior.
 
-|Parameter | Type |Required|Description|
+|Parameter | Type | Required/Optional |Description|
 |---------|----------|------|---|
 |`name` | String | | Provide a name for the custom field you are introducing. This name is not visible in the Platform UI.|
 |`title` | String | |Indicates the name of the field, as it is seen by customers in the Platform UI. |

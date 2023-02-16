@@ -46,6 +46,24 @@ Refer to the table below for details on what type of destinations support the fu
 
 When using any of the customer authentication configurations described in this page, always configure the `authenticationRule` parameter in [destination delivery](destination-delivery.md) as `"CUSTOMER_AUTHENTICATION"`.
 
+## Basic authentication {#basic}
+
+Basic authenticationm is supported for URL-based integrations in Experience Platform.
+
+When you configure the basic authentication type, users are required to input a username and password to connect to your destination.
+
+![UI render with basic authentication](../../assets/functionality/destination-configuration/basic-authentication-ui.png)
+
+To set up basic authentication for your destination, configure the `customerAuthenticationConfigurations` section via the `/destinations` endpoint as shown below:
+
+```json
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"BASIC"
+   }
+]
+```
+
 ## Bearer authentication {#bearer}
 
 When you configure the bearer authentication type, users are required to input the bearer token that they obtain from your destination.
