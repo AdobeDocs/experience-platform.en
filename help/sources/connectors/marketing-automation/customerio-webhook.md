@@ -51,5 +51,3 @@ The documentation below provides information on how to create a [!DNL Customer.i
 
 - [Create a source connection to bring [!DNL Customer.io] data to Platform using the user interface](../../tutorials/ui/create/streaming/customerio-webhook.md)
 
-Once you have completed the mandatory set up you can proceed to configure your webhook to post events into Platform.
-
