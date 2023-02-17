@@ -367,7 +367,7 @@ END;
 
 ### Auto to JSON {#auto-to-json}
 
-Query Service supports an optional session-level setting to return top-level complex fields from interactive SELECT queries as JSON Strings. The `auto_to_json` setting allows for data from complex fields to be returned as JSON then parsed into JSON objects using standard libraries.
+Query Service supports an optional session-level setting to return top-level complex fields from interactive SELECT queries as JSON strings. The `auto_to_json` setting allows for data from complex fields to be returned as JSON then parsed into JSON objects using standard libraries.
 
 SET the feature flag `auto_to_json` to true before executing your SELECT query that contains complex fields. 
 
