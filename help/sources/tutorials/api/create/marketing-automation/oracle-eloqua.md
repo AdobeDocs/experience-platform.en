@@ -1,8 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;oracle;eloqua;oracle eloqua
-solution: Experience Platform
 title: Create an Oracle Eloqua Base Connection Using the Flow Service API
-type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Oracle Eloqua using the Flow Service API.
 exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
 ---

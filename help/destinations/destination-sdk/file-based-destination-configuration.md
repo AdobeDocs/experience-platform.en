@@ -34,11 +34,12 @@ Below is an example of a private custom Amazon S3 destination created through th
    ],
    "customerDataFields":[
       {
-         "name":"bucket",
+         "name":"bucketName",
          "title":"Amazon S3 bucket name",
          "description":"Enter your Amazon S3 bucket name",
          "type":"string",
          "isRequired":true,
+         "pattern": "(?=^.{3,63}$)(?!^(\\d+\\.)+\\d+$)(^(([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])\\.)*([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])$)",
          "readOnly":false,
          "hidden":false
       },
@@ -48,7 +49,7 @@ Below is an example of a private custom Amazon S3 destination created through th
          "description":"Enter your S3 bucket path",
          "type":"string",
          "isRequired":true,
-         "pattern":"^[A-Za-z]+$",
+         "pattern": "^[0-9a-zA-Z\\/\\!\\-_\\.\\*\\''\\(\\)]*((\\%SEGMENT_(NAME|ID)\\%)?\\/?)+$",
          "readOnly":false,
          "hidden":false
       },
