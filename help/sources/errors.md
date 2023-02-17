@@ -47,4 +47,15 @@ This document provides a catalog of error messages, descriptions, and suggested 
 | `1427-400` | Invalid request | The user token is unauthorized to create or update flow runs. Please ensure that the user token is authorized and try again. |
 | `1428-400` | Invalid request | *The predecessor flow run was not find with ID {id}.* |
 | `1429-400` | Invalid request | *The predecessor flow was not found with ID {id}.* |
-|
+| `1430-400` | Invalid request | *The flow with ID {id} was not found. Please ensure that the flow with ID {id} exists and try again. |
+| `1431-400` | Invalid request | 
+| `1432-400` | Invalid request | *The sort order specified in the request is invalid. You must prepend a plus sign (`+`) for ascending order and a minus sign (`-`) for descending order in the field name.* |
+| `1433-400` | Invalid request | *An incorrect field {FIELD} was passed in orderBy. Supported field examples include: [+name, -name, name].* |
+| `1434-400` | Invalid request | Unsupported operation {OPERATION} received. Please use one of the supported operation types and try again. |
+| `1435-400` | Invalid request | Unsupported sub action {SUB_ACTION} received. Please use one of the supported sub action types and try again. |
+| `1436-400` | Invalid request | Unsupported sub operation {SUB_OPERATION} received for operation {OPERATION}. |
+| `1437-400` | Invalid request | Unsupported status value {VALUE} received. Please update the status value and try again. |
+| `1438-400` | Invalid request | Unsupported aggregate operation {OPERATION} received. |
+| `1439-400` | Resource not found | The requested {TYPE} resource {id} is not found. Verify the resource ID before trying again. |
+| `1440-400` | Invalid request | *Operator {OPERATOR} not implemented. Please add an operator and try again.* |
+| `1441-400` | Invalid request | *Aggregate function {FUNCTION} not implemented. Please add an aggregate function and try again. |
