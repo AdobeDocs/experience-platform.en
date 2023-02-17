@@ -177,7 +177,7 @@ In the first file export after setting up the activation workflow, the entire po
 
 |What determines a destination export | What is included in the exported file |
 |---------|----------|
-|<ul><li>The export schedule set in the UI or API determines the start of a destination export.</li><li>Any changes in segment membership of a profile, whether it qualifies or disqualifies from the segment, qualify a profile to be included in incremental exports. Changes in attributes or in identity maps for a profile *do not* qualify a profile to be included in incremental exports.</li></ul> | The profiles for which the segment membership has changed, along with the latest information for each XDM attribute selected for export. |
+|<ul><li>The export schedule set in the UI or API determines the start of a destination export.</li><li>Any changes in segment membership of a profile, whether it qualifies or disqualifies from the segment, qualify a profile to be included in incremental exports. Changes in attributes or in identity maps for a profile *do not* qualify a profile to be included in incremental exports.</li></ul> | <p>The profiles for which the segment membership has changed, along with the latest information for each XDM attribute selected for export.</p><p>Profiles with the exited status are included in destination exports, if the `segmentMembership.status` XDM field is selected in the mapping step.</p>  |
 
 {style="table-layout:fixed"}
 
