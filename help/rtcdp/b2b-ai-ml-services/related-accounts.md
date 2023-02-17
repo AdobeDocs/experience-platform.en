@@ -28,7 +28,7 @@ Use this feature to view related account profiles for an account profile in the 
 
 ## Enable the related accounts service {#enable}
 
-By default, the B2B Related Accounts service is disabled. To enable the service, select **[!UICONTROL Profiles]** in the sidebar followed by **[!UICONTROL Settings]**.
+To enable the service, select **[!UICONTROL Profiles]** in the sidebar followed by **[!UICONTROL Settings]**.
 
 ![Experience Platform UI highlighting profiles and settings.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
 
