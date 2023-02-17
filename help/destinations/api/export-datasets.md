@@ -462,7 +462,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDSHADEBOX]
 
-A successful response returns the ID (`id`) of the newly created source connection and an `etag`. Note down both values as you will need them later when creating the dataflow. 
+A successful response returns the ID (`id`) of the newly created source connection and an `etag`. Note down the source connection ID as you will need it later when creating the dataflow. 
 
 Please also remember that:
 
@@ -897,7 +897,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "servicePrincipalKey": "<Add servicePrincipalKey>",
       "url": "<Add url>",
-      "tenant": "<Add tenant",
+      "tenant": "<Add tenant>",
       "servicePrincipalId": "<Add servicePrincipalId>"
     }
   },
@@ -944,12 +944,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --data-raw '{
   "name": "Data Landing Zone(DLZ) Base Connection",
   "auth": {
+    "name": "Data Landing Zone(DLZ) Base Connection",
+    "description": "Data Landing Zone(DLZ) Base Connection",
+    "connectionSpec": {
+        "id": "10440537-2a7b-4583-ac39-ed38d4b848e8",
+        "version": "1.0"
     }
-  },
-  "connectionSpec": {
-    "id": "10440537-2a7b-4583-ac39-ed38d4b848e8", // Data Landing Zone(DLZ) connection spec
-    "version": "1.0"
-  }
 }'
 ```
 
@@ -1885,9 +1885,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. Use "interval": 1 when you select "timeUnit": "day"
+        "startTime": 1675901210 // UNIX timestamp start time (in seconds)
     }
 }'
 ```
@@ -2113,7 +2113,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB SFTP]
 
-***Request** 
+**Request** 
 
 +++Create Dataset Dataflow to SFTP destination - Request
 
@@ -2185,7 +2185,6 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---data-raw ''
 ```
 
 +++
