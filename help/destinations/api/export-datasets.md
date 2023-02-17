@@ -482,7 +482,7 @@ A base connection securely stores the credentials to your destination. Depending
 
 +++Amazon S3 - Connection spec showing auth spec
 
-```json
+```json {line-numbers="true" start-line="1" highlight="8"}
 {
     "items": [
         {
@@ -1116,7 +1116,9 @@ Next, you need to create a target connection which stores the export parameters 
 
 +++Amazon S3 - Connection spec showing Target Connection Parameters
 
-```json
+Note the highlighted lines in the request example. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```json {line-numbers="true" start-line="1" highlight="10,41,56"}
 {
     "items": [
         {
