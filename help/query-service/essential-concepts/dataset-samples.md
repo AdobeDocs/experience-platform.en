@@ -17,9 +17,9 @@ To help you manage your samples for approximate query processing, Query Service 
 - [Delete a sample.](#delete-a-sample)
 - Delete associated samples when the original ADLS table is dropped.
 
-## Getting started
+## Getting started {#get-started}
 
-To use the approximate query processing capabilities detailed above, you must set the session flag to `true`. From the command line of either the Query Editor or your PSQL client enter the `SET aqp=true;` command.
+To use the approximate query processing capabilities detailed in this document, you must set the session flag to `true`. From the command line of either the Query Editor or your PSQL client enter the `SET aqp=true;` command.
 
 >[!NOTE]
 >
@@ -29,7 +29,7 @@ To use the approximate query processing capabilities detailed above, you must se
 
 ## Create a uniform random dataset sample {#create-a-sample}
 
-Use the `ANALYZE TABLE` command with a dataset name to create a uniform random sample from that dataset. 
+Use the `ANALYZE TABLE <table_name> TABLESAMPLE SAMPLERATE x` command with a dataset name to create a uniform random sample from that dataset. 
 
 The sample rate is the percentage of records taken from the original dataset. You can control the sample rate by using the `TABLESAMPLE SAMPLERATE` keywords. In this example, the value of 5.0 equates to a 50% sample rate. A value of 2.5 would equate to 25% and so on.
 
@@ -39,6 +39,18 @@ The sample rate is the percentage of records taken from the original dataset. Yo
 
 ```sql
 ANALYZE TABLE example_dataset_name TABLESAMPLE SAMPLERATE 5.0;
+```
+
+## Optionally specify a filter criteria {#optional-filter-criteria}
+
+Uniform random samples support an additional optional construct within the command to specify the filter criteria. This allows you to create a sample based on the filtered subset of the analyzed table. 
+
+When creating a sample, the optional filter is applied first, then the sample is created from teh filtered view of the dataset. a dataset sample with an applied filter follows the following query format:
+
+```sql
+ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition>) SAMPLERATE X.Y;
+ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> AND/OR <filter_condition_2>) SAMPLERATE X.Y;
+ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> AND (<filter_condition_2> OR <filter_condition_3>)) SAMPLERATE X.Y;
 ```
 
 ## View the list of samples {#view-list-of-samples}
