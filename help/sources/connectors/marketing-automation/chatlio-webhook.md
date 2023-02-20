@@ -12,9 +12,9 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 Experience Platform provides support for ingesting data from Streaming applications. Support for streaming providers include [!DNL Chatlio].
 
-[[!DNL Chatlio]](https://chatlio.com/) is a live chat app that is fully integrated with Slack and facilitates multiple support agents to help an individual site visitor simultaneously. Using the [!DNL Zapier App](https://chatlio.com/docs/zapier/) you can connect [!DNL Chatlio] to over 2000 different apps and services
+[[!DNL Chatlio]](https://chatlio.com/) is a live chat app that is fully integrated with Slack and facilitates multiple support agents to help an individual site visitor simultaneously. Using the [!DNL Zapier App](https://chatlio.com/docs/zapier/) you can connect [!DNL Chatlio] to over 2000 different apps and services.
 
-The [!DNL Chatlio] source allows you to ingest supported Webhook Event Schemas and their associated event data from [!DNL Chatlio.com] using the [[!DNL Chatlio] Reporting Webhooks](https://chatlio.com/docs/webhooks/).
+The [!DNL Chatlio] source allows you to ingest supported Webhook Event Schemas and their associated event data from [!DNL Chatlio.com] using the [[!DNL Chatlio] Webhooks](https://chatlio.com/docs/webhooks/).
 
 The supported webhooks are:
 * Exporting chat transcripts
