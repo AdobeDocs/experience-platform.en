@@ -4,6 +4,8 @@ description: Learn how to create a decile bucket of your profiles and enable the
 ---
 # Derived attributes implementation plan
 
+<!-- Perhaps: uninterupted / seamless /coherent Derived Attributes SQL workflow -->
+
 Use a single SQL statement to complete all the required steps to generate a profile and upsert-enabled dataset, created with decile-based derived attributes for use with Real-Time Customer Profile. This provides an efficient, alternative method to create derived attributes such as deciles, quartiles, and rankings for your Real-Time Customer Profile business use cases.
 
 This documents explains how you can avoid the many steps typically taken to create derived attributes from your data and enable enable that data for Profile. Previously, this process would have had to have been completed through various API calls or Platform UI interactions.
