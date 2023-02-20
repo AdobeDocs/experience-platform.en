@@ -31,11 +31,11 @@ A validated [!DNL Chatlio] account. If you do not have one already see the [[!DN
 
 After sign up, follow the [!DNL Chatlio] [setup](https://chatlio.com/docs/setup/) documentation to complete setup.
 
-Later, after you set up the [!DNL Chatlio] source, you will set up a Reporting Webhook to inform Platform about [!DNL Chatlio] events as explained in the [Get your streaming endpoint URL](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#set-up-webhook) and the [Next Steps](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#next-steps) sections. Webhooks can notify you immediately when customer attributes change or when people open your messages, and send this information to your [!DNL Chatlio] source.
+Later, after you set up the [!DNL Chatlio] source, you will set up a Webhook to inform Platform about [!DNL Chatlio] events as explained in the [Get your streaming endpoint URL](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#set-up-webhook) and the [Next Steps](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#next-steps) sections. Webhooks can notify you immediately when customer attributes change or when people open your messages, and send this information to your [!DNL Chatlio] source.
 
 ## Connecting [!DNL Chatlio] to Platform {#connect-to-platform}
 
-You can use the [!DNL HTTP API] source connector to stream your data to Platform. The [!DNL HTTP API] source is supported by [!DNL Data Prep] functions, allowing you to map any non XDM-compliant data to an XDM-compliant dataset.
+You can use the [!DNL HTTP API] source connector to stream your data to Platform. The [!DNL Chatlio] source is supported by [!DNL Data Prep] functions, allowing you to map any non XDM-compliant data to an XDM-compliant dataset.
 
 The documentation below provides information on how to create a [!DNL Chatlio] streaming connector to connect with [!DNL Platform] using APIs or the user interface:
 
