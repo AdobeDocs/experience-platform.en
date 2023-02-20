@@ -45,7 +45,7 @@ Before creating a [!DNL Customer.io] source connection, you will require a sourc
 
 Before creating a [!DNL Customer.io] source connection, you must also ensure that you first create a Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
-![Platform UI screenshot showing an example schema for Customer.io](../../../../images/tutorials/create/customerio-webhook/schema.png)
+![Platform UI screenshot showing an example schema for Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
 
 ### Integrate [!DNL Customer.io] with your webhook
 
@@ -57,7 +57,7 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Under the *Marketing automation* category, select **[!UICONTROL Customer.io]**, and then select **[!UICONTROL Add data]**.
 
-![Platform UI screenshot for catalog with Customer.io card](../../../../images/tutorials/create/customerio-webhook/catalog.png)
+![Platform UI screenshot for catalog with Customer.io card](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
 ## Select data
 
@@ -68,13 +68,13 @@ The **[!UICONTROL Select data]** step appears, providing an interface for you to
 
 Select **[!UICONTROL Upload files]** to upload a JSON file from your local system. Alternatively, you can drag and drop the JSON file you want to upload into the [!UICONTROL Drag and drop files] panel.
 
-![The add data step of the sources workflow.](../../../../images/tutorials/create/customerio-webhook//add-data.png)
+![The add data step of the sources workflow.](../../../../images/tutorials/create/marketing-automation/customerio-webhook//add-data.png)
 
 Once your file uploads, the preview interface updates to display a preview of the schema you uploaded. The preview interface allows you to inspect the contents and structure of a file. You can also use the [!UICONTROL Search field] utility to access specific items from within your schema.
 
 When finished, select **[!UICONTROL Next]**.
 
-![The preview step of the sources workflow.](../../../../images/tutorials/create/customerio-webhook//preview.png)
+![The preview step of the sources workflow.](../../../../images/tutorials/create/marketing-automation/customerio-webhook//preview.png)
 
 ## Dataflow detail
 
@@ -82,7 +82,7 @@ The **Dataflow detail** step appears, providing you with options to use an exist
 
 When finished, select **[!UICONTROL Next]**.
 
-![The dataflow-detail step of the sources workflow.](../../../../images/tutorials/create/customerio-webhook//dataflow-detail.png)
+![The dataflow-detail step of the sources workflow.](../../../../images/tutorials/create/marketing-automation/customerio-webhook//dataflow-detail.png)
 
 ## Mapping
 
@@ -108,7 +108,7 @@ All the mappings listed below are mandatory and should be setup before proceedin
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
-![The mapping step of the sources workflow.](../../../../images/tutorials/create/customerio-webhook/mapping.png)
+![The mapping step of the sources workflow.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/mapping.png)
 
 ## Review
 
@@ -119,7 +119,7 @@ The **[!UICONTROL Review]** step appears, allowing you to review your new datafl
 
 Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
-![The review step of the sources workflow.](../../../../images/tutorials/create/customerio-webhook/review.png)
+![The review step of the sources workflow.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/review.png)
 
 ## Get your streaming endpoint URL
 
@@ -133,7 +133,7 @@ Note down the values of the fields below:
 
 To retrieve your **[!UICONTROL Dataflow ID]** and **[!UICONTROL Streaming endpoint]**, go to the [!UICONTROL Dataflow activity] page of the dataflow that you just created and copy the details from the bottom of the [!UICONTROL Properties] panel.
 
-![The streaming endpoint in dataflow activity.](../../../../images/tutorials/create/customerio-webhook/endpoint-test.png)
+![The streaming endpoint in dataflow activity.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/endpoint-test.png)
 
 Construct a URL using these values following the pattern below:
 ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```
@@ -147,7 +147,7 @@ By following this tutorial you have successfully [configured a dataflow to bring
 Next, login to your account on [[!DNL Customer.io]](https://customer.io/) and create a reporting webhook by following this [tutorial](https://customer.io/docs/webhooks/#setup).
 
 Use the URL that was constructed in the [!UICONTROL WEBHOOK ENDPOINT] field.
-![[DNL Customer.io] UI screenshot showing the webhook endpoint field](../../../../images/tutorials/create/customerio-webhook/webhook.png)
+![[DNL Customer.io] UI screenshot showing the webhook endpoint field](../../../../images/tutorials/create/marketing-automation/customerio-webhook/webhook.png)
 
 Refer to the [!DNL Customer.io] [events](https://customer.io/docs/webhooks/#events) documentation section to understand in detail on the various events that can be selected, each events' message will be ingested into Platform when any [!DNL Customer.io] action event trigger criteria are satisfied.
 
@@ -164,7 +164,7 @@ Refer to the [DNL Customer.io] [Timeouts and failures](https://customer.io/docs/
 To validate that you have correctly set up the source and [!DNL Customer.io] messages are being ingested, follow the steps below:
 
 * You can check the [!DNL Customer.io] **[!UICONTROL Activity Logs]** page to identify the events being captured by [!DNL Customer.io].
-![Customer.io UI screenshot showing activity logs](../../../../images/tutorials/create/customerio-webhook/activity-logs.png)
+![Customer.io UI screenshot showing activity logs](../../../../images/tutorials/create/marketing-automation/customerio-webhook/activity-logs.png)
 
 * In the Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL Customer.io] card menu on the sources catalog. Next, select **[!UICONTROL Preview dataset]** to verify the data that was ingested for the events that you have selected within [!DNL Customer.io].
-![Platform UI screenshot showing ingested events](../../../../images/tutorials/create/customerio-webhook/platform-dataset.png)
+![Platform UI screenshot showing ingested events](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png)
