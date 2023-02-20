@@ -89,7 +89,7 @@ The mappings listed below are mandatory and should be setup before proceeding to
 
 | Target Field | Description |
 | --- | --- |
-| `UUID` |  Chatlio identifier fpr the event. |
+| `UUID` | [!DNL Chatlio] identifier for the event. |
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
