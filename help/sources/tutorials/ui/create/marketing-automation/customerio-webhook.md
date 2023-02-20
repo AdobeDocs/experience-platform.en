@@ -146,7 +146,7 @@ By following this tutorial you have successfully [configured a dataflow to bring
 
 Next, login to your account on [[!DNL Customer.io]](https://customer.io/) and create a reporting webhook by following this [tutorial](https://customer.io/docs/webhooks/#setup).
 
-Use the URL that was constructed in the [!UICONTROL WEBHOOK ENDPOINT] field.
+Use the [URL](#get-streaming-endpoint-url) that was constructed in the [!UICONTROL WEBHOOK ENDPOINT] field.
 ![[DNL Customer.io] UI screenshot showing the webhook endpoint field](../../../../images/tutorials/create/marketing-automation/customerio-webhook/webhook.png)
 
 Refer to the [!DNL Customer.io] [events](https://customer.io/docs/webhooks/#events) documentation section to understand in detail on the various events that can be selected, each events' message will be ingested into Platform when any [!DNL Customer.io] action event trigger criteria are satisfied.
