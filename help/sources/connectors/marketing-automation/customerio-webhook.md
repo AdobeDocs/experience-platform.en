@@ -39,7 +39,7 @@ Later, after you set up the [!DNL Customer.io] source, you will set up a Reporti
 
 ## Connecting [!DNL Customer.io] to Platform {#connect-to-platform}
 
-You can use the [!DNL HTTP API] source connector to stream your data to Platform. The [!DNL HTTP API] source is supported by [!DNL Data Prep] functions, allowing you to map any non XDM-compliant data to an XDM-compliant dataset.
+You can use the [!DNL HTTP API] source connector to stream your data to Platform. The [!DNL Customer.io] source is supported by [!DNL Data Prep] functions, allowing you to map any non XDM-compliant data to an XDM-compliant dataset.
 
 The documentation below provides information on how to create a [!DNL Customer.io] streaming connector to connect with [!DNL Platform] using APIs or the user interface:
 
