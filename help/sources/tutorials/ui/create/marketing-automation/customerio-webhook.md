@@ -121,7 +121,7 @@ Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow so
 
 ![The review step of the sources workflow.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/review.png)
 
-## Get your streaming endpoint URL
+## Get your streaming endpoint URL {#get-streaming-endpoint-url}
 
 With your streaming dataflow created, you can now retrieve your streaming endpoint URL. This endpoint will be used to subscribe to your webhook, allowing your streaming source to communicate with Experience Platform. 
 
@@ -140,7 +140,7 @@ Construct a URL using these values following the pattern below:
 
 Example of a constructed webhook URL: ``https://dcs.adobedc.net/collection/febc116d22ba0ea2868e9c93b199375302afb8a589617700991bb8f3f0341ad7?x-adobe-flow-id=439b3fc4-3042-4a3a-b5e0-a494898d3fb0``
 
-## Next steps
+## Next steps {#next-steps}
 
 By following this tutorial you have successfully [configured a dataflow to bring data into Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 

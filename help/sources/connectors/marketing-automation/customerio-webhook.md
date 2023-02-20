@@ -35,7 +35,7 @@ A validated [!DNL Customer.io] account. If you do not have one already see the [
 
 Once you have successfully registered, you will also need to have your account validated. Follow the steps documented on the [[!DNL Customer.io] Account verification](https://customer.io/docs/account-verification/) page to complete the process.
 
-Later, after you set up the [!DNL Customer.io] source, you will set up a Reporting Webhook to inform Platform about [!DNL Customer.io] events as explained in the [Setup a webhook](#set-up-webhook) section. Webhooks can notify you immediately when customer attributes change or when people open your messages and send this information to your [!DNL Customer.io] source.
+Later, after you set up the [!DNL Customer.io] source, you will set up a Reporting Webhook to inform Platform about [!DNL Customer.io] events as explained in the [Get your streaming endpoint URL](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook) and the [Next Steps](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#next-steps) sections. Webhooks can notify you immediately when customer attributes change or when people open your messages, and send this information to your [!DNL Customer.io] source.
 
 ## Connecting [!DNL Customer.io] to Platform {#connect-to-platform}
 
