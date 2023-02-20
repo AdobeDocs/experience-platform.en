@@ -27,7 +27,7 @@ The supported Webhook Event Schemas are:
 
 Refer to the [[!DNL Customer.io] Reporting Webhook events](https://customer.io/docs/webhooks/#events) page for a list of  events that are available via webhook.
 
-## Prerequisites {#prrequisites}
+## Prerequisites {#prerequisites}
 
 Before you can create a [!DNL Customer.io] source connection, you must first ensure that you have the following:
 
