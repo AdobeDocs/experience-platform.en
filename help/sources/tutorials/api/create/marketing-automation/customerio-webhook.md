@@ -345,7 +345,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns information on your dataflow, including your endpoint URL, marked as `inletUrl`. Refer to the [Setup Webhook](../../../ui/create/marketing-automation/customerio-webhook.md#set-up-dnl-customerio-webhook-set-up-webhook) page to obtain the required value.
+A successful response returns information on your dataflow, including your endpoint URL, marked as `inletUrl`. Refer to the [Setup Webhook](../../../ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint-url) page to obtain the required value.
 
 ```json
 {
