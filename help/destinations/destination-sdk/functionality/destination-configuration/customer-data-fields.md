@@ -41,51 +41,43 @@ When creating your own customer data fields, you can use the parameters describe
 
 |Parameter | Type | Required/Optional |Description|
 |---------|----------|------|---|
-|`name` | String | | Provide a name for the custom field you are introducing. This name is not visible in the Platform UI.|
-|`title` | String | |Indicates the name of the field, as it is seen by customers in the Platform UI. |
-|`description` | String | |Provide a description for the custom field. This description is not visible in the Platform UI. |
-|`type` | String | |Indicates type of the custom field you are introducing. Accepted values: <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
-|`isRequired` | Boolean | |Indicates whether users are required to provide a value for this field in the destination configuration workflow. |
-|`pattern` | String || Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field.|
-|`enum` | String || Renders the custom field as a dropdown menu and lists the options available to the user.|
-|`default`|String||Defines the default value from an `enum` list.|
-|`hidden`|Boolean||Indicates whether the customer data field is shown in the UI or not.|
-|`unique`|Boolean||Use this parameter when you need to create a customer data field whose value must be unique across all destination dataflows set up by a user's organization. For example, the **[!UICONTROL Integration alias]** field in the [Custom Personalization](../../../catalog/personalization/custom-personalization.md) destination must be unique, meaning that two separate dataflows to this destination cannot have the same value for this field.|
-|`readOnly`|Boolean||Indicates whether the customer can change the value of the field or not.|
+|`name` | String | Required| Provide a name for the custom field you are introducing. This name is not visible in the Platform UI, unless the `title` field is empty or missing.|
+|`type` | String | Required |Indicates the type of the custom field you are introducing. Accepted values: <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
+|`title` | String | Optional |Indicates the name of the field, as it is seen by customers in the Platform UI. If this field is empty or missing, the UI inherits the field name from the `name` value. |
+|`description` | String | Optional | Provide a description for the custom field. This description is not visible in the Platform UI. |
+|`isRequired` | Boolean | Optional |Indicates whether users are required to provide a value for this field in the destination configuration workflow. |
+|`pattern` | String |Optional| Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field.|
+|`enum` | String |Optional| Renders the custom field as a dropdown menu and lists the options available to the user.|
+|`default`|String|Optional|Defines the default value from an `enum` list.|
+|`hidden`|Boolean|Optional|Indicates whether the customer data field is shown in the UI or not.|
+|`unique`|Boolean|Optional|Use this parameter when you need to create a customer data field whose value must be unique across all destination dataflows set up by a user's organization. For example, the **[!UICONTROL Integration alias]** field in the [Custom Personalization](../../../catalog/personalization/custom-personalization.md) destination must be unique, meaning that two separate dataflows to this destination cannot have the same value for this field.|
+|`readOnly`|Boolean|Optional|Indicates whether the customer can change the value of the field or not.|
 
 {style="table-layout:auto"}
 
-In the example below, the `customerDataFields` section defines three fields that users must input in the Platform UI when connecting to the destination:
+In the example below, the `customerDataFields` section defines two fields that users must input in the Platform UI when connecting to the destination:
 
-* `name`: An intuitive name for their destination connection.
-* `description`: An intuitive description for their destination connection.
-* `region`: The regional endpoint of the API they will connect to. The `enum` section creates a drop-down menu with the values defined within available for the users to select.
+* `Account ID`: A user account ID for your destination platform.
+* `Endpoint region`: The regional endpoint of the API they will connect to. The `enum` section creates a drop-down menu with the values defined within available for the users to select.
 
 ```json
 "customerDataFields":[
    {
-      "name":"name",
-      "title":"Name",
-      "description":"Enter a name for your destination connection.",
+      "name":"accountID",
+      "title":"User account ID",
+      "description":"User account ID for the destination platform.",
       "type":"string",
       "isRequired":true
    },
    {
-      "name":"description",
-      "title":"Description",
-      "description":"Enter a description for your destination connection.",
-      "type":"string",
-      "isRequired":false
-   },
-   {
       "name":"region",
-      "title":"Region",
-      "description":"Select the region of the API endpoint that you want to use.",
+      "title":"API endpoint region",
+      "description":"The API endpoint region that the user should connect to.",
       "type":"string",
       "isRequired":true,
       "enum":[
-         "US",
          "EU"
+         "US",
       ],
       "readOnly":false,
       "hidden":false
@@ -95,7 +87,15 @@ In the example below, the `customerDataFields` section defines three fields that
 
 The resulting UI experience is shown in the image below.
 
-![Ui image showing the destination connection screen with a region selector.](../../assets/functionality/destination-server/server-spec-template-region.png)
+![Ui image showing an example of customer data fields.](../../assets/functionality/destination-configuration/customer-data-fields-example.png)
+
+## Destination connection names and descriptions {#names-description}
+
+When creating a new destination, Destination SDK automatically adds **[!UICONTROL Name]** and **[!UICONTROL Description]** fields to the destination connection screen in the Platform UI. As you can see in the example above, the **[!UICONTROL Name]** and **[!UICONTROL Description]** fields are rendered in the UI without being included in the customer data fields configuration.
+
+>[!IMPORTANT]
+>
+>If you add **[!UICONTROL Name]** and **[!UICONTROL Description]** fields in the customer data fields configuration, users will see them duplicated in the UI.
 
 ## Order customer data fields {#ordering}
 
@@ -105,24 +105,6 @@ For example, the configuration below is reflected accordingly in the UI, with th
 
 ```json
 "customerDataFields":[
- {
-   "name":"name",
-   "title":"Name",
-   "description":"Destination name",
-   "type":"string",
-   "isRequired":true,
-   "readOnly":false,
-   "hidden":false
-},
-{
-   "name":"description",
-   "title":"Description",
-   "description":"Destination description",
-   "type":"string",
-   "isRequired":false,
-   "readOnly":false,
-   "hidden":false
-},
 {
    "name":"bucketName",
    "title":"Bucket name",
@@ -435,17 +417,59 @@ Below, you can see the resulting UI screen, based on the configuration above. Wh
 
 ![Screen recording showing the conditional file formatting option for CSV files.](../../assets/functionality/destination-configuration/customer-data-fields-conditional.gif)
 
-## Create hidden or unique customer data fields
+## Accessing templatized customer data fields {#accessing-templatized-fields}
 
-* Bo/Cosmin ionita - hidden
-* unique 
+When your destination requires user input to be configured correctly, you must provide a selection of customer data fields to your users, which they can fill in through the Platform UI. Then, you must configure your destination server to correctly read the user input from the customer data fields. This is done through templatized fields.
 
+Templatized fields use the format `{{customerData.fieldName}}`, where `fieldName` is the name of the customer data field that you are reading information from. All templatized customer data fields are preceded by `customerData.` and enclosed within double braces `{{ }}`.
 
+For example, let's consider the following Amazon S3 destination configuration:
 
+```json
+"customerDataFields":[
+   {
+      "name":"bucketName",
+      "title":"Enter the name of your Amazon S3 bucket",
+      "description":"Amazon S3 bucket name",
+      "type":"string",
+      "isRequired":true,
+      "pattern":"(?=^.{3,63}$)(?!^(\\d+\\.)+\\d+$)(^(([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])\\.)*([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])$)",
+      "readOnly":false,
+      "hidden":false
+   },
+   {
+      "name":"path",
+      "title":"Enter the path to your S3 bucket folder",
+      "description":"Enter the path to your S3 bucket folder",
+      "type":"string",
+      "isRequired":true,
+      "pattern":"^[0-9a-zA-Z\\/\\!\\-_\\.\\*\\''\\(\\)]*((\\%SEGMENT_(NAME|ID)\\%)?\\/?)+$",
+      "readOnly":false,
+      "hidden":false
+   }
+]
+```
 
-## How to access templatized customer data fields
+This configuration prompts your users to enter their [!DNL Amazon S3] bucket name and folder path into their respective customer data fields.
 
+For Experience Platform to correctly connect to [!DNL Amazon S3], your destination server must be configured to read the values from these two customer data fields, as shown below:
 
+```json
+ "fileBasedS3Destination":{
+      "bucketName":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.bucketName}}"
+      },
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      }
+   }
+```
+
+The templatized values `{{customerData.bucketName}}` and {{customerData.path}} read the user-provided values so that Experience Platform can successfully connect to the destination platform.
+
+For more information about how to configure your destination server to read templatized fields, see the documentation on [hard-coded versus templatized fields](../destination-server/server-specs.md#templatized-fields).
 
 ## Next steps {#next-steps}
 

@@ -34,7 +34,7 @@ Refer to the table below for details on what type of destinations support the fu
 
 When [creating](../../authoring-api/destination-server/create-destination-server.md) or [updating](../../authoring-api/destination-server/update-destination-server.md) a destination server, use one of the server type configurations described in this page. Depending on your integration requirements, make sure to replace the sample parameter values from these examples with your own.
 
-## Hard-coded versus templatized fields
+## Hard-coded versus templatized fields {#templatized-fields}
 
 When creating a destination server through Destination SDK, you can define configuration parameter values either by hard-coding them into the configuration, or by using templatized fields. Templatized fields allow you to read user-provided values from the Platform UI.
 
@@ -94,12 +94,10 @@ In the example below, a partner creates a [URL-based](#streaming-example) integr
 }
 ```
 
-To give users the option of selecting a value from the Platform UI, the `{{customerData.region}}` parameter must also be defined in the [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md) API call, as shown below:
+To give users the option of selecting a value from the Platform UI, the `region` parameter must also be defined in the [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md) API call, as shown below:
 
 ```json
-
 "customerDataFields":[
-   ...
    {
       "name":"region",
       "title":"Region",
@@ -111,10 +109,8 @@ To give users the option of selecting a value from the Platform UI, the `{{custo
          "US",
          "EU"
       ]
-   },
-   ...
+   }
 ```
-
 
 As a result, when users go through the [destination connection tutorial](../../../ui/connect-destination.md), they must select a region before they can connect to the destination platform. When they connect to the destination, the templatized field `{{customerData.region}}` is replaced with the value that the user has selected in the UI, as shown in the image below.
 
