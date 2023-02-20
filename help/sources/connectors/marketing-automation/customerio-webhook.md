@@ -45,9 +45,9 @@ The documentation below provides information on how to create a [!DNL Customer.i
 
 ### Connect [!DNL Customer.io] to Platform using APIs {#connect-to-platform-using-api}
 
-- [Create a source connection to bring [!DNL Customer.io] data to Platform using APIs.](../../tutorials/api/create/streaming/customerio-webhook.md)
+- [Create a source connection to bring [!DNL Customer.io] data to Platform using APIs.](../../tutorials/api/create/marketing-automation/customerio-webhook.md)
 
 ### Connect [!DNL Customer.io] to Platform using the UI {#connect-to-platform-using-ui}
 
-- [Create a source connection to bring [!DNL Customer.io] data to Platform using the user interface](../../tutorials/ui/create/streaming/customerio-webhook.md)
+- [Create a source connection to bring [!DNL Customer.io] data to Platform using the user interface](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)
 
