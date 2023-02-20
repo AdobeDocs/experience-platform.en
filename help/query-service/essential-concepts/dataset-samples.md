@@ -12,10 +12,11 @@ As many users do not need an exact answer for an aggregate operation over a data
 To help you manage your samples for approximate query processing, Query Service supports the following operations for dataset samples:
 
 - [Create a uniform random dataset sample.](#create-a-sample)
+- [Optionally specify a filter criteria](##optional-filter-criteria)
 - [View the list of samples for an ADLS table.](#view-list-of-samples)
 - [Query the sample datasets directly.](#query-sample-datasets)
 - [Delete a sample.](#delete-a-sample)
-- Delete associated samples when the original ADLS table is dropped.
+- Delete associated samples when the original ADLS table is dropped. 
 
 ## Getting started {#get-started}
 
@@ -43,15 +44,25 @@ ANALYZE TABLE example_dataset_name TABLESAMPLE SAMPLERATE 5.0;
 
 ## Optionally specify a filter criteria {#optional-filter-criteria}
 
-Uniform random samples support an additional optional construct within the command to specify the filter criteria. This allows you to create a sample based on the filtered subset of the analyzed table. 
+You can opt to specify a filter criteria for your uniform random samples. This allows you to create a sample based on the filtered subset of the analyzed table.
 
-When creating a sample, the optional filter is applied first, then the sample is created from teh filtered view of the dataset. a dataset sample with an applied filter follows the following query format:
+When creating a sample, the optional filter is applied first, then the sample is created from the filtered view of the dataset. A dataset sample with an applied filter follows the following query format:
 
 ```sql
 ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition>) SAMPLERATE X.Y;
 ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> AND/OR <filter_condition_2>) SAMPLERATE X.Y;
 ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> AND (<filter_condition_2> OR <filter_condition_3>)) SAMPLERATE X.Y;
 ```
+
+Practical examples of this type of filtered sample dataset are as follows:
+
+```sql
+Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9')) SAMPLERATE 10;
+Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND product.name = "product1") SAMPLERATE 10;
+Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
+```
+
+In the examples provided, the table name is `large_table`, the filter condition on the original table is `month(to_timestamp(timestamp)) in ('8', '9')`, and the sampling rate is (X% of the filtered data), in this case, `10`.
 
 ## View the list of samples {#view-list-of-samples}
 
