@@ -30,10 +30,10 @@ Here are example configurations for your first model.  In this model, we will bu
 
 | Step | Define | Example |
 | ---- | ------ | ------- |
-| Set Up | Specify basic information about the model | Name: Give_your_model_a_name <br> Model Type: Conversion |
-| Select Data |Specify datasets used to build the model | Dataset: Select your Adobe Analytics dataset <br> Identity: Ensure the identity column for each dataset is set to be a common identity.|
-| Define Goal | Define goal, eligible population, custom events, and profile attributes. | Prediction Goal: Select commerce.purchases.value exists <br> Outcome window: 30 days. |
-| Set Options | Setup schedule for model refresh and enable scores for Profile | Schedule: Weekly |
+| Set Up | Specify basic information about the model | **Name**: Give_your_model_a_name <br> Model Type: Conversion |
+| Select Data |Specify datasets used to build the model | **Dataset**: Select your Adobe Analytics dataset <br> Identity: Ensure the identity column for each dataset is set to be a common identity.|
+| Define Goal | Define goal, eligible population, custom events, and profile attributes. | **Prediction Goal**: Select commerce.purchases.value exists <br> Outcome window: 30 days. |
+| Set Options | Setup schedule for model refresh and enable scores for Profile | **Schedule**: Weekly |
 
 Enable for profile: This must be enabled for model output to be used in segmentation.  
 
@@ -41,7 +41,7 @@ Enable for profile: This must be enabled for model output to be used in segmenta
 
 The following sections outline the different required events, inputs, and outputs utilized in Customer AI. 
 
-Customer AI works by analyzing one of the following datasets to predict churn or conversion propensity scores:
+Customer AI works by analyzing the following datasets to predict churn or conversion propensity scores:
 
 - Adobe Analytics data using the [Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
 - Adobe Audience Manager data using the [Audience Manager source connector](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -71,11 +71,11 @@ For input datasets, like Adobe Analytics and Adobe Audience Manager, the respect
 
 For more information on mapping Adobe Analytics data or Audience Manager data, visit the Analytics field mappings or Audience Manager field mappings guide. 
 
-You can use Experience Event (EE) or Consumer Experience Event (CEE) XDM schemas for input datasets that are not populated via one of the above connectors. Additional XDM field groups can be added during the schema creation process. The field groups can be provided by Adobe like the standard field groups or a user-defined field group, which matches the data representation in the Platform. 
+You can use Experience Event (EE) or Consumer Experience Event (CEE) XDM schemas for input datasets that are not populated via one of the above connectors. Additional XDM field groups can be added during the schema creation process. The field groups can be provided by Adobe like the standard field groups or a custom field group, which matches the data representation in the Platform. 
 
 >[!IMPORTANT]
 >
->You must ensure that data is being populated into these input datasets. If no events from standard field groups are found in the input datasets, you must add user-defined events during the configuration workflow. Please see details about user-defined events.  
+>You must ensure that data is being populated into these input datasets. If no events from standard field groups are found in the input datasets, you must add custom events during the configuration workflow. Please see details about custom events.  
 
 ### Standard field groups used by Customer AI {#standard-events}
 
@@ -111,15 +111,15 @@ To view a field group in the Platform UI, select the **[!UICONTROL Schemas]** ta
 
 Additionally, Customer AI can use subscription data to build better churn models. Subscription data is needed for each profile using the [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) data type format. Most of the fields are optional, however, for an optimal churn model it is highly recommended that you provide data for as many fields as possible such as, `startDate`, `endDate`, and any other relevant details. Please reach out to your account team for additional support on this feature.  
 
-### Adding user-defined events and profile attributes
+### Adding custom events and profile attributes
 
-If you have information you wish to include in addition to the default [standard event fields](#standard-events) used by Customer AI, you can use the [user-defined event configuration](./user-guide/configure.md#custom-events) to augment the data used by the model.  
+If you have information you wish to include in addition to the default [standard event fields](#standard-events) used by Customer AI, you can use the [custom event configuration](./user-guide/configure.md#custom-events) to augment the data used by the model.  
 
-#### When to use user-defined events
+#### When to use custom events
 
-User-defined events are necessary when: The datasets chosen in the dataset selection step contain *none* of the default event fields used by Customer AI. As mentioned in the Data Requirements section, Customer AI needs information about at least one user behavior event other than the outcome.  
+Custom events are necessary when: The datasets chosen in the dataset selection step contain *none* of the default event fields used by Customer AI. As mentioned in the Data Requirements section, Customer AI needs information about at least one user behavior event other than the outcome.  
 
-User-defined events are helpful for: 
+Custom events are helpful for: 
 
 1. Incorporating domain knowledge or prior expertise into the model through the addition of data 
 
@@ -127,9 +127,9 @@ User-defined events are helpful for:
 
 3. Gaining additional insights and interpretations
 
-4. Choosing user-defined events to include: 
+4. Choosing custom events to include: 
 
-    - The best candidates for user-defined events are user behaviors that may be predictive of the outcome.  
+    - The best candidates for custom events are user behaviors that may be predictive of the outcome.  
 
 5. Some general examples of custom events include: 
 
@@ -139,9 +139,9 @@ User-defined events are helpful for:
 
     - Make a call to customer service 
 
-6. Industry specific user-defined event examples: 
+6. Industry specific custom event examples: 
 
-    | Industry | User-defined events |
+    | Industry | Custom events |
     | --- | --- |
     | Retail | In-store transaction<br>Sign up for club card<br>Clip mobile coupon. |
     | Entertainment | Purchase season membership <br> Stream video.|
@@ -149,9 +149,9 @@ User-defined events are helpful for:
     | Travel | Add known traveler info Purchase miles. | 
     | Communications | Upgrade/downgrade/cancel plan. | 
 
-7. Requirements for choosing user-defined events: 
+7. Requirements for choosing custom events: 
 
-User-defined events must represent user-initiated actions. For example, "Email Send" is an action initiated by a marketer and not by the user, so it shouldn't be used as a user-defined event.  
+Custom events must represent user-initiated actions. For example, "Email Send" is an action initiated by a marketer and not by the user, so it shouldn't be used as a custom event.  
 
 ### Historical data
 
@@ -181,7 +181,7 @@ The following examples demonstrate the use of a simple formula which helps you d
 
 >[!NOTE] 
 >
->30 is the minimum number of days required for eligible population. If this is not provided the default is 120 days. 
+>30 is the minimum number of days required for eligible population. If this is not provided the default is 45 days. 
 
 - Examples: 
 
@@ -211,7 +211,7 @@ The following examples demonstrate the use of a simple formula which helps you d
 
     - Data required = 30 days + 7 days = 37 days 
 
-Apart from the minimum data required, Customer AI also works best with recent data. In this use case, Customer AI is doing a prediction for the future based on a user’s recent behavioral data. In other words, more recent data is likely to yield a more accurate prediction. 
+Apart from the minimum data required, Customer AI also works best with recent data. In this use case, Customer AI is making a prediction for the future based on a user’s recent behavioral data. In other words, more recent data is likely to yield a more accurate prediction. 
 
 ### Customer AI output data 
 
@@ -231,20 +231,6 @@ The table below describes the various attributes found in the output of Customer
 | Propensity type | The selected propensity type. |
 | Score date | The date on which scoring occurred. |
 | Influential factors | Predicted reasons on why a profile is likely to convert or churn. Factors are comprised of the following attributes:<ul><li>Code: The profile or behavioral attribute which positively influences a profile's predicted score. </li><li>Value: The value of the profile or behavioral attribute.</li><li>Importance: Indicates the weight of the profile or behavioral attribute has on the predicted score (low, medium, high)</li></ul> |
-
-### Governance, privacy, and security for Customer AI 
-
-Customer AI supports defining user roles and access policies to manage permissions for features and objects within a product application. Learn more about access controls here.  
-
-Audit log resources are recorded automatically as the activity occurs (e.g. create, update, and delete) 
-
-All datasets we use for input/output of models will follow Adobe Experience Platform guidelines. Platform Data Encryption applies for data at-rest and in-transit. See the documentation to learn more about data encryption. 
-
-Customer AI leverages Platform datasets. To support consumer rights requests a brand may receive, brands should use Platform Privacy Service to submit consumer requests of access and delete to remove their data across the data lake, Identity Service, and Real-time Customer Profile. 
-
-Customer AI uses only updated data for further training and scoring. Likewise, when you request to delete data, Customer AI refrains from using the deleted data. 
-
-Policy enforcement checks are used when users submit to create an instance through the configuration workflow. This checks to see whether there are any policy violations of data usage and displays the details in a popover. This ensures that data operations and marketing actions are compliant with the data usage policies configured on the Platform. Please see the UI guide for examples.  
 
 ## Next steps {#next-steps}
 
