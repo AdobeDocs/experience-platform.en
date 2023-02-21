@@ -87,11 +87,15 @@ Users can see the icon on your destination card, as shown in the image below.
 
 Users can see the destination connection type in the [Browse](../../../ui/destinations-workspace.md#browse) tab of the destinations workspace.
 
-![UI image showing the connection type location.](../../assets/functionality/destination-configuration/ui-attributes-connection.png)
+![UI image showing the connection type location in the UI.](../../assets/functionality/destination-configuration/ui-attributes-connection.png)
 
 ### `frequency` {#frequency}
 
 `frequency` is a string parameter that refers to the type of data export supported by your destination. Set to `Streaming` for API-based integrations, or `Batch` when you export files to your destinations.
+
+Users can see the frequency type in the **[!UICONTROL Dataflow runs]** page of each destination connection.
+
+![UI image showing the frequency type location in the UI.](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
 
 ## Next steps {#next-steps}
 
