@@ -28,7 +28,7 @@ After completing the steps mentioned above, you are ready to populate the datase
 >
 >The SQL query provided below assumes the use of a pre-existing namespace.
 
-Use a CTAS query to create a dataset, assign datatypes, set a primary identity, create a decile schema, and mark it as profile-enabled. With this example SQL statement below, you can perform all the steps required to use decile based attributes with Real-Time Customer Data Profile (Real-Time CDP). Your SQL query will follow the format shown in the example below:
+Use a CTAS query to create a dataset, assign datatypes, set a primary identity, create a decile schema, and mark it as profile-enabled. With this example SQL statement below, you can perform all the steps required to use decile-based attributes with Real-Time Customer Data Profile (Real-Time CDP). Your SQL query will follow the format shown in the example below:
 
 ```sql
 CREATE TABLE your_table_name [IF NOT EXISTS]  (fieldname <data_type> primary identity namespace <namespace>, [filed_name2 >data_type>]) [ WITH(LABEL='PROFILE') ];
