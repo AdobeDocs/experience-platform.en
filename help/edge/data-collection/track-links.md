@@ -84,3 +84,33 @@ alloy("configure", {
 });
 ```
 
+Starting with Web SDK version x the data collected with automatic link tracking can be inspected, augmented or filtered by providing a new [onBeforeLinkClickSend callback function](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend).
+This callback function is executed only for the automatic link click events.
+
+```javascript
+alloy("configure", {
+  onBeforeLinkClickSend: function(options) {
+    if (options.xdm.web.webInteraction.type === "download") {
+      options.xdm.web.webInteraction.name = undefined;
+    }
+  }
+});
+```
+When filtering the link tracking events using the `onBeforeLinkClickSend` we recommend explicitly return false for the link clicks that shouldn't be tracked.
+```mermaid
+sequenceDiagram
+  participant User
+  participant Browser
+  participant DataCollector
+  participant onBeforeLinkClickSend
+  participant onBeforeEventSend
+  participant EDGE
+  
+  User->>Browser: Link Click
+  Browser->>DataCollector: Creates a synthetic event
+  DataCollector->>onBeforeLinkClickSend: Filters or augments the link click event
+  DataCollector->>onBeforeEventSend: Augments the event
+  DataCollector->>EDGE: Triggers the interact call with resulting event details
+```
+
+

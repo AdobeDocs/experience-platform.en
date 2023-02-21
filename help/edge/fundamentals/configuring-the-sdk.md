@@ -123,7 +123,7 @@ Indicates whether data associated with link clicks are automatically collected. 
 
 Configure a callback that is called for every event just before it is sent. An object with the field `xdm` is sent in to the callback. To change what is sent, modify the `xdm` object. Inside the callback, the `xdm` object already has the data passed in the event command, and the automatically collected information. For more information on the timing of this callback and an example, see [Modifying Events Globally](tracking-events.md#modifying-events-globally).
 
-### `onBeforeLinkClickSend`
+### `onBeforeLinkClickSend` {#onBeforeLinkClickSend}
 
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |
