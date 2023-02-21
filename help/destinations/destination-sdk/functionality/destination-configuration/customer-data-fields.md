@@ -89,7 +89,7 @@ The resulting UI experience is shown in the image below.
 
 ![Ui image showing an example of customer data fields.](../../assets/functionality/destination-configuration/customer-data-fields-example.png)
 
-## Destination names and descriptions {#names-description}
+## Destination connection names and descriptions {#names-description}
 
 When creating a new destination, Destination SDK automatically adds **[!UICONTROL Name]** and **[!UICONTROL Description]** fields to the destination connection screen in the Platform UI. As you can see in the example above, the **[!UICONTROL Name]** and **[!UICONTROL Description]** fields are rendered in the UI without being included in the customer data fields configuration.
 

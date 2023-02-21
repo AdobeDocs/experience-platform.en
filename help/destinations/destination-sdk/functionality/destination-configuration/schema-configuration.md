@@ -85,7 +85,6 @@ You can create static, hardcoded schema fields or you can specify a dynamic sche
 ```
 
 
-
 ## Dynamic schema configuration in the mapping step {#dynamic-schema-configuration}
 
 Use the parameters in  `dynamicSchemaConfig` to dynamically retrieve your own schema that Platform profile attributes and/or identities can be mapped to.
