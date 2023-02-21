@@ -5,7 +5,7 @@ title: Identities and attributes
 
 # Identities and attributes
 
-When users export data to a destination that you built through Destination SDK, they can choose to export [!DNL XDM] [identities]((../../../../identity-service/namespaces.md)) or attributes.
+When users export data to a destination that you built through Destination SDK, they can choose to export [!DNL XDM] [identities](../../../../identity-service/namespaces.md) or attributes.
 
 
 

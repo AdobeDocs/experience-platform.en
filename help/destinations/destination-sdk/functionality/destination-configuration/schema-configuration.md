@@ -115,7 +115,6 @@ Use the parameters in  `dynamicSchemaConfig` to dynamically retrieve your own sc
 | `value` |String|The name of the schema to be displayed in the Experience Platform user interface, in the mapping step.|
 | `responseFormat` |String|Always set to `SCHEMA` when defining a custom schema.|
 
-
 {style="table-layout:auto"}
 
 ## Required mappings {#required-mappings}
