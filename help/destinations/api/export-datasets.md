@@ -4,7 +4,7 @@ title: Export datasets by using the Flow Service API
 description: Learn how to use the Flow Service API to export datasets to select destinations.
 type: Tutorial
 ---
-# Export datasets by using the Flow Service API
+# Export datasets by using the [!DNL Flow Service API]
 
 >[!IMPORTANT]
 >
@@ -12,7 +12,7 @@ type: Tutorial
 >* This beta functionality supports the export of first generation data, as defined in the Real-Time Customer Data Platform [product description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 >* This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Please contact your Adobe representative for more information. 
 
-This article explains the workflow required to use the Flow Service API to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage].
+This article explains the workflow required to use the [!DNL Flow Service API] to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage].
 
 >[!TIP]
 >
@@ -61,7 +61,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ### API reference documentation {#api-reference-documentation}
 
-You can find accompanying reference documentation for all the API operations in this tutorial. Refer to the [Flow Service - Destinations API documentation on the Adobe Developer website](https://developer.adobe.com/experience-platform-apis/references/destinations/). We recommend that you use this tutorial and the API reference documentation in parallel.
+You can find accompanying reference documentation for all the API operations in this tutorial. Refer to the [[!DNL Flow Service] - Destinations API documentation on the Adobe Developer website](https://developer.adobe.com/experience-platform-apis/references/destinations/). We recommend that you use this tutorial and the API reference documentation in parallel.
 
 ### Glossary {#glossary}
 
@@ -74,24 +74,24 @@ Before starting the workflow to export a dataset, identify the connection spec a
 
 |Destination | Connection spec | Flow spec|
 ---------|----------|---------|
-| Amazon S3 | `4fce964d-3f37-408f-9778-e597338a21ee` | `269ba276-16fc-47db-92b0-c1049a3c131f` |
-| Azure Blob Storage | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `95bd8965-fc8a-4119-b9c3-944c2c2df6d2` |
-| Azure Data Lake Gen 2(ADLS Gen2) | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
-| Data Landing Zone(DLZ) | `10440537-2a7b-4583-ac39-ed38d4b848e8` | `cd2fc47e-e838-4f38-a581-8fff2f99b63a` |
-| Google Cloud Storage | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
+| [!DNL Amazon S3] | `4fce964d-3f37-408f-9778-e597338a21ee` | `269ba276-16fc-47db-92b0-c1049a3c131f` |
+| [!DNL Azure Blob Storage] | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `95bd8965-fc8a-4119-b9c3-944c2c2df6d2` |
+| [!DNL Azure Data Lake Gen 2(ADLS Gen2)] | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
+| [!DNL Data Landing Zone(DLZ)] | `10440537-2a7b-4583-ac39-ed38d4b848e8` | `cd2fc47e-e838-4f38-a581-8fff2f99b63a` |
+| [!DNL Google Cloud Storage] | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
 | SFTP | `36965a81-b1c6-401b-99f8-22508f1e6a26` | `354d6aad-4754-46e4-a576-1b384561c440` |
 
 {style="table-layout:auto"}
 
-You need these IDs to construct various Flow Service entities. You also need to refer to parts of the Connection Spec itself to set up certain entities so you can retrieve the Connection Spec from Flow Service APIs. See the examples below of retrieving connection specs for all the destinations in the table:
+You need these IDs to construct various [!DNL Flow Service] entities. You also need to refer to parts of the [!DNL Connection Spec] itself to set up certain entities so you can retrieve the [!DNL Connection Spec] from [!DNL Flow Service APIs]. See the examples below of retrieving connection specs for all the destinations in the table:
 
 >[!BEGINTABS]
 
->[!TAB Amazon S3]
+>[!TAB [!DNL Amazon S3]]
 
 **Request** 
 
-+++Retrieve Connection Spec for Amazon S3
++++Retrieve [!DNL Connection Spec] for [!DNL Amazon S3]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -106,7 +106,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-+++Amazon S3 - Connection Spec
++++[!DNL Amazon S3] - Connection Spec
 
 ```json
 {
@@ -121,11 +121,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Azure Blob Storage]
+>[!TAB [!DNL Azure Blob Storage]]
 
 **Request** 
 
-+++Retrieve Connection Spec for Azure Blob Storage
++++Retrieve [!DNL Connection Spec] for [!DNL Azure Blob Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
@@ -140,7 +140,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-+++Azure Blob Storage - Connection Spec
++++[!DNL Azure Blob Storage] - [!DNL Connection Spec]
 
 ```json
 {
@@ -155,11 +155,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
+>[!TAB [!DNL Azure Data Lake Gen 2(ADLS Gen2)]]
 
 **Request** 
 
-+++Retrieve Connection Spec for Azure Data Lake Gen 2(ADLS Gen2)
++++Retrieve [!DNL Connection Spec] for [!DNL Azure Data Lake Gen 2(ADLS Gen2])
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
@@ -174,7 +174,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-+++Azure Data Lake Gen 2(ADLS Gen2) - Connection Spec
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection Spec]
 
 ```json
 {
@@ -189,11 +189,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Data Landing Zone(DLZ)]
+>[!TAB [!DNL Data Landing Zone(DLZ)]]
 
 **Request** 
 
-+++Retrieve Connection Spec for Data Landing Zone(DLZ)
++++Retrieve [!DNL Connection Spec] for [!DNL Data Landing Zone(DLZ)]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
@@ -208,7 +208,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-+++Data Landing Zone(DLZ) - Connection Spec
++++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection Spec]
 
 ```json
 {
@@ -223,11 +223,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Google Cloud Storage]
+>[!TAB [!DNL Google Cloud Storage]]
 
 **Request** 
 
-+++Retrieve Connection Spec for Google Cloud Storage
++++Retrieve [!DNL Connection Spec] for [!DNL Google Cloud Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \
@@ -242,7 +242,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-+++Google Cloud Storage - Connection Spec
++++[!DNL Google Cloud Storage] - [!DNL Connection Spec]
 
 ```json
 {
@@ -261,7 +261,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Request** 
 
-+++Retrieve Connection Spec for SFTP
++++Retrieve [!DNL Connection Spec] for SFTP
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/36965a81-b1c6-401b-99f8-22508f1e6a26' \
@@ -276,7 +276,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-+++SFTP - Connection Spec
++++SFTP - [!DNL Connection Spec]
 
 ```json
 {
