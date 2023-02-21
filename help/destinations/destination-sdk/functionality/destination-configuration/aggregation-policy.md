@@ -5,6 +5,9 @@ title: Aggregation policy
 
 # Aggregation policy
 
+
+
+
 Aggregation policies are supported by the destination configuration for real-time integrations built with Destination SDK.
 
 

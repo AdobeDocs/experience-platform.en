@@ -5,6 +5,12 @@ title: Identities and attributes
 
 # Identities and attributes
 
+When users export data to a destination that you built through Destination SDK, they can choose to export [!DNL XDM] [identities]((../../../../identity-service/namespaces.md)) or attributes.
+
+
+
+
+
 The parameters in this section determine which identities and/or attributes your destination accepts. This configuration also populates the target identities and attributes in the [mapping step](../../../ui/activate-segment-streaming-destinations.md#mapping) of the Experience Platform user interface, where users map identities and attributes from their XDM schemas to the schema in your destination.
 
 ## Supported integration types {#supported-integration-types}
@@ -14,7 +20,7 @@ Refer to the table below for details on what type of destinations support the fu
 |Integration type| Supports functionality |
 |---|---|
 | Real-time (streaming) integrations | :white_check_mark: |
-| File-based (batch) integrations | :x: |
+| File-based (batch) integrations | :white_check_mark: |
 
 ## Supported parameters {#supported-parameters}
 

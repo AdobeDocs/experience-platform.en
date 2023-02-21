@@ -190,7 +190,7 @@ feature: Destinations
             * [OAuth2 authentication](./destination-sdk/functionality/destination-configuration/oauth2-authentication.md)
             * [Customer data fields](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
             * [UI attributes](./destination-sdk/functionality/destination-configuration/ui-attributes.md)
-            * [Schema configuration](./destination-sdk/functionality/destination-configuration/schema-configuration.md)
+            * [Partner schema configuration](./destination-sdk/functionality/destination-configuration/schema-configuration.md)
             * [Identities and attributes](./destination-sdk/functionality/destination-configuration/identities-attributes.md)
             * [Destination delivery](./destination-sdk/functionality/destination-configuration/destination-delivery.md)
             * [Segment mapping configuration](./destination-sdk/functionality/destination-configuration/segment-mapping.md)
