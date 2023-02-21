@@ -32,36 +32,44 @@ The following request checks if text is present based on the input image provide
 >`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. Contact the Content and Commerce AI beta team to receive your `analyzer_id` for this service.
 
 ```SHELL
-curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
-  -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "Content-Type: multipart/form-data" \
-  -H "cache-control: no-cache,no-cache" \
-  -H "x-api-key: {API_KEY}" \
-  -F file=@TestImage.jpg \
-  -F 'contentAnalyzerRequests={
-    "enable_diagnostics":"true",
-    "requests":[{
-    "analyzer_id": "Feature:image-text-extractor-ocr:Service-b0675160421e404ca3c7ca60f46a5b29",
-    "parameters": {
-      "application-id": "1234",
-      "content-type": "inline",
-      "encoding": "jpeg",
-      "threshold": "0",
-      "top-N": "0",
-      "custom": {},
-      "data": [{
-        "content-id": "0987",
-        "content": "inline-image",
-        "content-type": "inline",
-        "encoding": "jpeg",
-        "threshold": "0",
-        "top-N": "0",
-        "historic-metadata": [],
-        "custom": {}
-        }]
+curl -w'\n' -i -X POST https://sensei-va6.adobe.io/services/v2/predict \
+-H 'Prefer: respond-async, wait=120' \
+-H 'x-api-key: AdobeSenseiPredictServiceProdKey' \
+-H 'content-type: multipart/form-data' \
+-H "authorization: Bearer $PRODTOKEN" \
+-F file=@ocr_293.png \
+-F 'contentAnalyzerRequests={
+  "sensei:name": "Feature:cintel-object-detection:Service-b9ace8b348b6433e9e7d82371aa16690",
+  "sensei:invocation_mode": "asynchronous",
+  "sensei:invocation_batch": false,
+  "sensei:engines": [
+    {
+      "sensei:execution_info": {
+        "sensei:engine": "Feature:cintel-object-detection:Service-b9ace8b348b6433e9e7d82371aa16690"
+      },
+      "sensei:inputs": {
+        "documents": [
+        {
+          "sensei:multipart_field_name": "file",
+          "dc:format": "image/jpg"
+        }
+        ]
+      },
+      "sensei:params": {
+        "correct_with_dictionary": true,
+        "min_probability": 0.2,
+        "min_relevance": 0.01,
+        "filter_with_dictionary": true
+      },
+      "sensei:outputs":{
+        "result" : {
+          "sensei:multipart_field_name" : "result",
+          "dc:format": "application/json"
+        }
       }
-    }]
-  }'
+    }
+  ]
+}'
 ```
 
 | Property | Description | Mandatory |

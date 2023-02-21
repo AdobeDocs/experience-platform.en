@@ -74,33 +74,44 @@ See the table below the example payload for more information on the input parame
 >`Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
 
 ```SHELL
-curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
-  -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "Content-Type: multipart/form-data" \
-  -H "cache-control: no-cache,no-cache" \
-  -H "x-api-key: {API_KEY}" \
-  -F file="{
-    \"application-id\": \"1234\", 
-    \"language\": \"en\", 
-    \"content-type\": \"inline\", 
-    \"encoding\": \"utf-8\",
-    \"threshold\": 0.01,
-    \"top-N\": 10,
-    \"custom\": {
-        \"min-n\": 2,
-        \"entity-types\": [\"PERSON\"]
+curl -w'\n' -i -X POST https://sensei-stage-ue1.adobe.io/sensei-core/v2/predict \
+-H 'Prefer: respond-async, wait=59' \
+-H "x-api-key: $API_KEY" \
+-H "content-type: multipart/form-data" \
+-H "authorization: Bearer $API_TOKEN" \
+-F 'contentAnalyzerRequests={
+  "sensei:name": "test",
+  "sensei:invocation_mode": "synchronous",
+  "sensei:invocation_batch": false,
+  "sensei:engines": [
+    {
+      "sensei:execution_info": {
+        "sensei:engine": "Feature:cintel-ner:Service-1e9081c865214d1e8bace51dd918b5c0"
       },
-    \"data\": [{
-      \"content-id\": \"abc123\", 
-      \"content\": \"But an influential faction on the ATP player council, which is chaired by Novak Djokovic, staged a rebellion against Kermodes regime in the spring, and he will leave the post on Dec 31\"
-      }]
-    }" \
-  -F 'contentAnalyzerRequests={
-    "enable_diagnostics":"true",
-    "requests":[{
-         "analyzer_id": "Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709",
-         "parameters": {}
-    }]
+      "sensei:inputs": {
+        "documents": [
+          {
+            "repo:path": "https://nikotatmg.s3.us-east-2.amazonaws.com/simple-text.pdf",
+            "sensei:repoType": "HTTP",
+            "dc:format": "application/pdf"
+          }
+        ]
+      },
+      "sensei:params": {
+        "application-id": "1234",
+        "min_key_phrase_length": 1,
+        "max_key_phrase_length": 3,
+        "top_n": 10,
+        "last_semantic_unit_type": "concept"
+      },
+      "sensei:outputs":{
+        "result" : {
+          "sensei:multipart_field_name" : "result",
+          "dc:format": "application/json"
+        }
+      }
+    }
+  ]
 }'
 ```
 

@@ -21,8 +21,8 @@ Content is an essential component of these experiences. To better answer marketi
 
 | Content Type | Features | Overview of functionality |
 | --- | --- | --- |
-| Text | - Keyword & Entity extraction <br>- Custom classifiers | - Automatically extract keywords and tags from enterprise documents and webpages using an out-of-the-box AI service. <br> - Automatically label an enterprise's documents or webpages per a corporate taxonomy using a service built on custom AI models. | 
-Images | - Visual recommendations <br> - Color extraction | - Deliver visually similar product recommendations to consumers, powered by an AI model developed on intuitive product features (design, color, shape). <br> - Accurately extract dominant colors (labels and hex values) and their weightage from a product image. |
+| Text | - Keyword & Entity extraction <br> | - Automatically extract keywords and tags from enterprise documents and webpages using an out-of-the-box AI service. <br> | 
+Images | - Color extraction <br> - Optical Character Recognition (OCR)|  - Accurately extract dominant colors (labels and hex values) and their weightage from a product image. <br> - Extract any text present from a product image.  |
 
 ## Understanding Content and Commerce AI 
 

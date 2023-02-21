@@ -43,38 +43,40 @@ The following request extracts colors from a image based on the input parameters
 >`Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
 
 ```SHELL
-curl -i -X POST https://sensei.adobe.io/services/v1/predict \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: multipart/form-data' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'cache-control: no-cache,no-cache' \
-  -F file=@test_image.jpg \
-  -F 'contentAnalyzerRequests={
-   "enable_diagnostics":"true",
-   "requests":[
-     {
-         "analyzer_id": "Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7",
-         "parameters": {
-          "application-id": "1234", 
-          "content-type": "inline", 
-          "encoding": "jpeg", 
-          "threshold": "0", 
-          "top-N": "0", 
-          "custom": {}, 
-          "data": [{
-            "content-id": "0987", 
-            "content": "inline-image", 
-            "content-type": "inline", 
-            "encoding": "jpeg", 
-            "threshold": "0", 
-            "top-N": "0", 
-            "historic-metadata": [], 
-            "custom": {"exclude_mask": 1}
-            }]
-          }
+curl -X POST https://sensei-stage-va6.adobe.io/sensei-core/v2/predict \
+-H 'Prefer: respond-async, wait=59' \
+-H "x-api-key: $API_KEY" \
+-H 'content-type: multipart/form-data' \
+-H "authorization: Bearer $STAGE_TOKEN" \
+-F 'contentAnalyzerRequests={
+  "sensei:name": "Feature:cintel-image-classifier:Service-60887e328ded447d86e01122a4f19c58",
+  "sensei:invocation_mode": "synchronous",
+  "sensei:invocation_batch": false,
+  "sensei:engines": [
+    {
+      "sensei:execution_info": {
+        "sensei:engine": "Feature:cintel-image-classifier:Service-60887e328ded447d86e01122a4f19c58"
+      },
+      "sensei:inputs": {
+        "documents": [{
+            "sensei:multipart_field_name": "infile_1",
+            "dc:format": "image/jpg"
+          }]
+      },
+      "sensei:params": {
+        "application-id": "1234",
+        "enable_mask": 0
+      },
+      "sensei:outputs":{
+        "result" : {
+          "sensei:multipart_field_name" : "result",
+          "dc:format": "application/json"
+        }
       }
-    ]
-}'
+    }
+  ]
+}' \
+-F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
 
 | Property | Description | Mandatory |
