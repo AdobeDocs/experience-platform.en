@@ -33,11 +33,11 @@ If you are configuring this datastream for use in Experience Platform and are us
 
 Select **[!UICONTROL Advanced Options]** to reveal additional controls to configure the datastream.
 
-![Advanced configuration options](../assets/datastreams/configure/advanced-options.png)
+![Advanced configuration options](../assets/datastreams/configure/advanced-options.png) {#advanced-options}
 
 | Setting | Description |
 | --- | --- |
-| [!UICONTROL Geo Location] | Determines whether GPS lookups occur based on the user's IP address. The default setting **[!UICONTROL None]** disables any GPS lookups, while the **[!UICONTROL City]** setting provides GPS coordinates to two decimal places.|
+| [!UICONTROL Geo Location] | Determines whether Geo lookups occur based on the user's IP address. The default setting **[!UICONTROL None]** disables any Geo lookups, while the **[!UICONTROL City]** setting provides GPS coordinates to two decimal places.|
 | [!UICONTROL First Party ID Cookie] | When enabled, this setting tells the Edge Network to refer to a specified cookie when looking up a [first-party device ID](../identity/first-party-device-ids.md), rather than looking up this value in the Identity Map.<br><br>When enabling this setting, you must provide the name of the cookie where the ID is expected to be stored.|
 | [!UICONTROL Third Party ID Sync] | ID syncs can be grouped into containers to allow different ID syncs to be run at different times. When enabled, this setting lets you specify which container of ID syncs is run for this datastream.|
 | [!UICONTROL Access Type] | Defines the authentication type that the Edge Network accepts for the datastream. <ul><li>**[!UICONTROL Mixed Authentication]**: When this option is selected, the Edge Network accepts both authenticated and unauthenticated requests. Select this option when you plan to use the Web SDK or [Mobile SDK](https://aep-sdks.gitbook.io/docs/), along with the [Server API](../../server-api/overview.md). </li><li>**[!UICONTROL Authenticated Only]**: When this option is selected, the Edge Network only accepts authenticated requests. Select this option when you plan to use only the Server API and want to prevent any unauthenticated requests from being processed by the Edge Network.</li></ul>|
