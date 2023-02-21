@@ -123,6 +123,24 @@ Indicates whether data associated with link clicks are automatically collected. 
 
 Configure a callback that is called for every event just before it is sent. An object with the field `xdm` is sent in to the callback. To change what is sent, modify the `xdm` object. Inside the callback, the `xdm` object already has the data passed in the event command, and the automatically collected information. For more information on the timing of this callback and an example, see [Modifying Events Globally](tracking-events.md#modifying-events-globally).
 
+### `onBeforeLinkClickSend`
+
+| **Type** | **Required** | **Default Value** |
+| -------- | ------------ | ----------------- |
+| Function | No           | () => undefined   |
+
+{style="table-layout:auto"}
+
+Configure a callback that is called for every link click tracking event just before it is sent. An object with the field `xdm`, `clickedElement` and `data` are sent in to the callback.
+When filtering the link tracking by using the DOM elements structure `clickElement` can be used. `clickedElement` is the DOM element node that was clicked and has encapsulated the parents nodes tree.
+To change what is sent, modify the `xdm` and/or `data` object. Inside the callback, the `xdm` object already has the data passed in the event command, and the automatically collected information.
+
+* If the callback throws an exception, processing for the event discontinues and the event is not sent.
+
+* If the callback returns the boolean value of `false`, event processing discontinues, without an error, and the event is not sent. This mechanism allows for certain events to be filtered out by examining the event data and returning `false` if the event should not be sent.
+
+* Any return value other than the boolean `false` will allow the event to process and send after the callback.
+
 ## Privacy options
 
 ### `defaultConsent` {#default-consent}
