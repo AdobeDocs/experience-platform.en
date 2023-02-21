@@ -4,39 +4,39 @@ description: Learn how to create a decile bucket of your profiles and enable the
 ---
 # Derived attributes implementation plan
 
-<!-- Perhaps: uninterupted / seamless /coherent Derived Attributes SQL workflow -->
+<!-- Perhaps: uninterupted / seamless /coherent Derived Attributes SQL workflow / Seamless SQL flow for derived attributes -->
 
-Use a single SQL statement to complete all the required steps to generate a profile and upsert-enabled dataset, created with decile-based derived attributes for use with Real-Time Customer Profile. This provides an efficient, alternative method to create derived attributes such as deciles, quartiles, and rankings for your Real-Time Customer Profile business use cases.
+Use a single SQL statement to generate a profile and upsert-enabled dataset created with decile-based derived attributes for use with Real-Time Customer Profile. This provides an efficient alternative method to create derived attributes such as deciles, quartiles, and rankings for your Real-Time Customer Profile business use cases.
 
-This documents explains how you can avoid the many steps typically taken to create derived attributes from your data and enable enable that data for Profile. Previously, this process would have had to have been completed through various API calls or Platform UI interactions.
+This document explains how you can avoid the many steps typically taken to create derived attributes from your data and enable that data for Profile. Previously, this process would have to be completed through various API calls or Platform UI interactions.
 
 Typically the process requires that you:
 
-* Create a namespace, although an existing namespaces can be used.
+* Create a namespace, although an existing namespace can be used.
 * Create the datatype to store the derived attribute.
-* Create a field group with that data type to store the derived attribute information.
+* Create a field group with that datatype to store the derived attribute information.
 * Assign the primary identity using that namespace.
 * Create the decile schema using the field group and datatype mentioned above.
 * Create an empty dataset using your new schema.
 * Mark the dataset as profile-enabled.
 
-After completing the steps mentioned above, you are ready to populate the dataset and create segments to produce insights from your data. Query Service allows you to perform all of those actions through a single query and make alterations to your datasets adn filed groups simply through SQL.
+After completing the steps mentioned above, you are ready to populate the dataset and create segments to produce insights from your data. Query Service allows you to perform all of those actions with a single query and make changes to your datasets and field groups with SQL.
 
-## Create a table, datatype, fieldgroup, primary identity, decile schema, and enable it for profile with SQL {#all-with-sql}
+## Create a table, datatype, field group, primary identity, decile schema, and enable it for profile with SQL {#all-with-sql}
 
 >[!NOTE]
 >
 >The SQL query provided below assumes the use of a pre-existing namespace.
 
-Use a CTAS query to create a dataset, assign datatypes, set a primary identity, create a decile schema, and mark it as profile-enabled. With this example SQL statement below, you can perform all the steps required to use decile based attributes with Real-Time Customer Data Profile. Your SQL query will follow the format shown in the example below:
+Use a CTAS query to create a dataset, assign datatypes, set a primary identity, create a decile schema, and mark it as profile-enabled. With this example SQL statement below, you can perform all the steps required to use decile based attributes with Real-Time Customer Data Profile (Real-Time CDP). Your SQL query will follow the format shown in the example below:
 
 ```sql
 CREATE TABLE your_table_name [IF NOT EXISTS]  (fieldname <data_type> primary identity namespace <namespace>, [filed_name2 >data_type>]) [ WITH(LABEL='PROFILE') ];
 ```
 
-Profiles can also be enabled for profile through the Platform UI. For more information on marking a dataset as enabled for profile, see the [enable a dataset for Real-Time Customer Profile documentation](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/user-guide.html#enable-profile).
+Datasets can also be enabled for profile through the Platform UI. For more information on marking a dataset as enabled for profile, see the [enable a dataset for Real-Time Customer Profile documentation](../../../catalog/datasets/user-guide.md#enable-profile).
 
-The example SQL query below, demonstrates how you can leverage Query Service capabilities to perform a variety of tasks in a few lines of SQL. 
+The example SQL query below demonstrates how you can leverage Query Service capabilities to perform a variety of tasks in a few lines of SQL. 
 
 ```sql
 CREATE TABLE decile_table (id text PRIMARY KEY NAMESPACE 'IDFA', 
@@ -66,7 +66,7 @@ Through the use of `label='PROFILE'`, Query Service enables you to do the follow
 
 ## Constructs to help with managing derived attributes through SQL
 
-The features described below are of great benefit when managing derived attributes through SQL
+The features described below are of great benefit when managing derived attributes through SQL.
 
 ### Change existing datasets to be enabled for profile {#enable-existing-dataset-for-profile}
 
@@ -96,7 +96,7 @@ ALTER TABLE test1_dataset ADD CONSTRAINT PRIMARY KEY(id2) NAMESPACE 'IDFA';
 
 ### Disable a dataset for profile {#disable-dataset-for-profile}
 
-If you want to disable your table for profile uses, you must use the DROP command. An example SQL statement that USES `DROP` is seen below
+If you want to disable your table for profile uses, you must use the DROP command. An example SQL statement that USES `DROP` is seen below.
 
 ```sql
 ALTER TABLE table_name DROP LABEL 'PROFILE';
@@ -108,11 +108,11 @@ A practical example might appear similar to the one seen below.
 ALTER TABLE decile_table DROP label 'PROFILE';
 ```
 
-This SQL statement provides an efficient alternative method to using an API call. See the documentation on how to [disable a dataset for profile using the datasets API](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/enable-upsert.html#disable-the-dataset-for-profile) for more information. 
+This SQL statement provides an efficient alternative method to using an API call. For more information, see the documentation on how to [disable a dataset for use with Real-Time CDP using the datasets API](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile). 
 
 ### Allow update and insert functionality for your dataset {#enable-upsert-functionality-for-dataset}
 
-The UPSERT command allows you to insert a new record or update existing data into a table. Specifically, it allows you to update an existing row if a specified value already exists in a table, or insert a new row if the specified value doesn't already exist.
+The UPSERT command allows you to insert a new record or update existing data in a table. Specifically, it allows you to update an existing row if a specified value already exists in a table, or insert a new row if the specified value doesn't already exist.
 
 An example statement that uses the correct format is seen below.
 
@@ -126,7 +126,7 @@ A practical example might appear similar to the one seen below.
 ALTER TABLE table_with_a_decile ADD label 'UPSERT';
 ```
 
-This SQL statement provides an efficient alternative method to using an API call. See the documentation on how to [enable a dataset for profile and UPSERT using the datasets API](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/enable-upsert.html?lang=en#enable-the-dataset) for more information.
+This SQL statement provides an efficient alternative method to using an API call. For more information, see the documentation on how to [enable a dataset for use with Real-Time CDP and UPSERT using the datasets API](../../../catalog/datasets/enable-upsert.md#enable-the-dataset).
 
 ### Disable update and insert functionality for your dataset {#disable-upsert-functionality-for-dataset}
 
@@ -159,57 +159,57 @@ An example of this command's output can be seen below:
 (3 rows)
 ```
 
-### Create a filed group with SQL
+### Create a field group with SQL
 
-Filed groups can now be created through the use of SQL. This provides an alternative to using the Schema Editor within the Platform UI or making an API call to the schema registry. 
+Field groups can now be created through the use of SQL. This provides an alternative to using the Schema Editor within the Platform UI or making an API call to the schema registry. 
 
-An example statement to create a fieldgroup can be seen below.
+An example statement to create a field group can be seen below.
 
 ```sql
-CREATE FIELDGROUP <fieldgroup_name> [IF NOT EXISTS]  (fieldname <data_type> primary identity namespace <namespace>, [filed_name2 >data_type>]) [ WITH(LABEL='PROFILE') ];
+CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> primary identity namespace <namespace>, [field_name_2 >data_type>]) [ WITH(LABEL='PROFILE') ];
 ```
 
 >[!IMPORTANT]
 >
->Fieldgroup creation through SQL will fail if the `label` flag is not supplied in the statement or if the fieldgroup already exists. 
->Ensure that the query includes an `IF NOT EXISTS` clause to avoid the query failing because the fieldgroup already exists.
+>Field group creation through SQL will fail if the `label` flag is not supplied in the statement or if the field group already exists. 
+>Ensure that the query includes an `IF NOT EXISTS` clause to avoid the query failing because the field group already exists.
 
 A real-world example might appear similar to the one seen below.
 
 ```sql
-CREATE FIELDGROUP fieldgroup_for_decile (decile<sup>1</sup>Month map<text, integer>, decile3Month map<text, integer>, decile6Month map<text, integer>, decile9Month map<text, integer>, decile12Month map<text, integer>, decilelietime map<text, integer>) WITH (LABEL-'PROFILE');
+CREATE FIELDGROUP field_group_for_decile (decile<sup>1</sup>Month map<text, integer>, decile3Month map<text, integer>, decile6Month map<text, integer>, decile9Month map<text, integer>, decile12Month map<text, integer>, decilelietime map<text, integer>) WITH (LABEL-'PROFILE');
 ```
 
-Successful execution of this statement returns the created fieldgroup ID. For example `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
+Successful execution of this statement returns the created field group ID. For example `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
 
-See the documentation on how to [create a new field group in the Schema Editor](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/field-groups.html?lang=en#create) or using the [schema registry API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/field-groups.html?lang=en#create) for more information on alternative methods.
+See the documentation on how to [create a new field group in the Schema Editor](../../../xdm/ui/resources/field-groups.md#create) or using the [schema registry API](../../../xdm/api/field-groups.md#create) for more information on alternative methods.
 
-### Drop a fieldgroup
+### Drop a field group
 
 It may occasionally be necessary to remove a field group from the Schema Registry. This is done by executing the `DROP FIELDGROUP` command with the field group ID.
 
 ```sql
-DROP FIELDGROUP your_fieldgroup_id;
+DROP FIELDGROUP your_field_group_id;
 ```
 
 A practical example might appear similar to the one seen below.
 
 ```sql
-DROP FIELDGROUP fieldgroup_for_decile;
+DROP FIELDGROUP field_group_for_decile;
 ```
 
 >[!IMPORTANT]
 >
->Deleting a fieldgroup through SQL will fail if the fieldgroup does not exist. Ensure that the statement includes an `IF EXISTS` clause to avoid the query failing.
+>Deleting a field group through SQL will fail if the field group does not exist. Ensure that the statement includes an `IF EXISTS` clause to avoid the query failing.
 
-### Show all the fieldgroup names and IDs for your tables
+### Show all the field group names and IDs for your tables
 
-The `SHOW FILEDGROUPS` command returns a table that contains the name filedgroup ID and owner of the tables.
+The `SHOW FIELDGROUPS` command returns a table that contains the name, fieldgroupId, and owner of the tables.
 
 An example of this command's output can be seen below:
 
 ```sql
-       name                      |        filedgroupId                             |     owner      |
+       name                      |        fieldgroupId                             |     owner      |
 ---------------------------------+-------------------------------------------------+-----------------
  AEP Mobile Lifecycle Details    | _experience.aep-mobile-lifecycle-details        | Luma midValues |
  AEP Web SDK ExperienceEvent     | _experience.aep-web-sdk-experienceevent         | Luma midValues |
@@ -220,4 +220,4 @@ An example of this command's output can be seen below:
 
 ## Next steps
 
-After reading this document you have a better understanding of how to use SQL to create a profile and upsert-enabled dataset based on derived attributes. You are now ready to use this dataset with batch ingestion workflows to make updates to your profile data. To learn more about ingesting data into Adobe Experience Platform, please begin by reading the [data ingestion overview](https://experienceleague.adobe.com/docs/experience-platform/ingestion/home.html).
+After reading this document, you have a better understanding of how to use SQL to create a profile and upsert-enabled dataset based on derived attributes. You are now ready to use this dataset with batch ingestion workflows to make updates to your profile data. To learn more about ingesting data into Adobe Experience Platform, please begin by reading the [data ingestion overview](../../../ingestion/home.md).
