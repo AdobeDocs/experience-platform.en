@@ -4,7 +4,7 @@ description: Learn how to deprecate Experience Data Model (XDM) fields using the
 ---
 # Deprecate an XDM field in the UI
 
-Experience Data Model (XDM) offers you the flexibility to manage your data model as your business needs change by deprecating schema fields even after data has been ingested. Unwanted fields can be deprecated to remove them from the UI view and also hide them from downstream UIs. Conveniently, a toggle in the Schema Editor allows you to display deprecated fields and, if necessary, you can also undeprecate them.
+Experience Data Model (XDM) offers you the flexibility to manage your data model as your business needs change by deprecating schema fields after data has been ingested. Unwanted fields can be deprecated to remove them from the UI view and also hide them from downstream UIs. Conveniently, a checkbox in the Schema Editor allows you to display deprecated fields and, if necessary, you can also undeprecate them.
 
 As deprecated fields are hidden from the UI by default, this streamlines your schema in the Schema Editor and prevents unwanted fields from being added to downstream dependencies such as the segment builder, journey designer, and so on. Field deprecation is also backward compatible. Other systems that use deprecated fields, such as segments and queries will continue to evaluate them as intended. If a deprecated field is used in an existing segment it is treated normally, meaning that the field shows up as expected in the segment builder canvas or is evaluated based on any data available in the deprecated fields. This is a non-breaking change that does not negatively affect any existing data flows.
 
