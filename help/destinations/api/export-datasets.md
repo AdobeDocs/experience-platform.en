@@ -417,7 +417,9 @@ After retrieving the list of datasets that you want to export, you can create a 
 
 +++Create Source Connection - Request
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="12,16"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
@@ -482,6 +484,8 @@ A base connection securely stores the credentials to your destination. Depending
 
 +++Amazon S3 - Connection spec showing auth spec
 
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
     "items": [
@@ -527,7 +531,9 @@ A base connection securely stores the credentials to your destination. Depending
 
 +++Azure Blob Storage - Connection spec showing auth spec
 
-```json
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```json {line-numbers="true" start-line="1" highlight="8"}
 {
     "items": [
         {
@@ -566,7 +572,9 @@ A base connection securely stores the credentials to your destination. Depending
 
 +++Azure Data Lake Gen 2(ADLS Gen2) - Connection spec showing auth spec
 
-```json
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```json {line-numbers="true" start-line="1" highlight="8"}
 {
     "items": [
         {
@@ -642,7 +650,9 @@ A base connection securely stores the credentials to your destination. Depending
 
 +++Google Cloud Storage - Connection spec showing auth spec
 
-```json
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```json {line-numbers="true" start-line="1" highlight="8"}
 {
     "items": [
         {
@@ -689,7 +699,9 @@ A base connection securely stores the credentials to your destination. Depending
 >
 >The SFTP destination contains two separate items in the auth spec, as it supports both password and SSH key authentication.
 
-```json
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```json {line-numbers="true" start-line="1" highlight="8"}
 {
     "items": [
         {
@@ -785,7 +797,9 @@ Using the properties specified in the authentication spec (i.e. `authSpec` from 
 >
 >For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) section of the Amazon S3 destination documentation page.
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -834,7 +848,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >
 >For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) section of the Azure Blob Storage destination documentation page.
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="16"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -882,7 +898,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >
 >For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) section of the Azure Data Lake Gen 2(ADLS Gen2) destination documentation page.
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="20"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -978,7 +996,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >
 >For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) section of the Google Cloud Storage destination documentation page.
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -1027,7 +1047,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >
 >For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) section of the SFTP destination documentation page.
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -1060,7 +1082,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >
 >For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) section of the SFTP destination documentation page.
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -1116,7 +1140,7 @@ Next, you need to create a target connection which stores the export parameters 
 
 +++Amazon S3 - Connection spec showing Target Connection Parameters
 
-Note the highlighted lines in the request example. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+Note the highlighted lines with inline comments in the request example. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
 ```json {line-numbers="true" start-line="1" highlight="10,41,56"}
 {
@@ -1864,7 +1888,9 @@ The final step in the destination configuration is to set up a dataflow. A dataf
 
 +++Create Dataset Dataflow to Amazon S3 destination - Request
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
@@ -1915,7 +1941,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++Create Dataset Dataflow to Azure Blob Storage destination - Request
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
@@ -1966,7 +1994,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++Create Dataset Dataflow to Azure Data Lake Gen 2(ADLS Gen2) destination - Request
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
@@ -2017,7 +2047,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++Create Dataset Dataflow to Data Landing Zone destination - Request
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
@@ -2068,7 +2100,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++Create Dataset Dataflow to Google Cloud Storage destination - Request
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
@@ -2119,7 +2153,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++Create Dataset Dataflow to SFTP destination - Request
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
