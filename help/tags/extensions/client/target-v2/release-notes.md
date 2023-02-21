@@ -11,7 +11,7 @@ exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
 
 ## v0.19.2 (February 14, 2023)
 
-- Bug fix: allow timeout to be set to a data element
+- Fixed an issue with allowing timeout to be set to a data element.
 
 ## v0.19.0 (September 19, 2022)
 
