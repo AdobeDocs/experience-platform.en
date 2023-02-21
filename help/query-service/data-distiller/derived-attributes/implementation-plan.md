@@ -22,7 +22,7 @@ Typically the process requires that you:
 
 After completing the steps mentioned above, you are ready to populate the dataset and create segments to produce insights from your data. Query Service allows you to perform all of those actions with a single query and make changes to your datasets and field groups with SQL.
 
-## Create a table, datatype, field group, primary identity, decile schema, and enable it for profile with SQL {#all-with-sql}
+## Create a table, datatype, field group, primary identity, and decile schema, and enable it for profile with SQL {#all-with-sql}
 
 >[!NOTE]
 >
