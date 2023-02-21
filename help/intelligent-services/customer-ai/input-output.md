@@ -20,9 +20,9 @@ Here are the steps to build propensity models and identify target audiences for 
 
 2. Prioritize use cases – Which are the highest priorities for the business?  
 
-3. Build models in Customer AI – Watch this quick tutorial and refer to our UI guide for a step-by-step process to build a model. 
+3. Build models in Customer AI – Watch this [quick tutorial]() and refer to our [UI guide](../customer-ai/user-guide/configure.md) for a step-by-step process to build a model. 
 
-4. Build segments using model results.
+4. [Build segments](../customer-ai/user-guide/create-segment.md) using model results.
 
 5. Send personalized messaging to these segments, monitor, and iterate.
 
@@ -30,12 +30,10 @@ Here are example configurations for your first model.  In this model, we will bu
 
 | Step | Define | Example |
 | ---- | ------ | ------- |
-| Set Up | Specify basic information about the model | **Name**: Give_your_model_a_name <br> Model Type: Conversion |
-| Select Data |Specify datasets used to build the model | **Dataset**: Select your Adobe Analytics dataset <br> Identity: Ensure the identity column for each dataset is set to be a common identity.|
-| Define Goal | Define goal, eligible population, custom events, and profile attributes. | **Prediction Goal**: Select commerce.purchases.value exists <br> Outcome window: 30 days. |
-| Set Options | Setup schedule for model refresh and enable scores for Profile | **Schedule**: Weekly |
-
-Enable for profile: This must be enabled for model output to be used in segmentation.  
+| Set Up | Specify basic information about the model | **Name**: Give_your_model_a_name <br> **Model Type**: Conversion |
+| Select Data |Specify datasets used to build the model | **Dataset**: Select your Adobe Analytics dataset <br> **Identity**: Ensure the identity column for each dataset is set to be a common identity.|
+| Define Goal | Define goal, eligible population, custom events, and profile attributes. | **Prediction Goal**: Select commerce.purchases.value exists <br> **Outcome window**: 30 days. |
+| Set Options | Setup schedule for model refresh and enable scores for Profile | **Schedule**: Weekly <br> **Enable for profile**: This must be enabled for model output to be used in segmentation.  |
 
 ## Data overview
 
@@ -69,7 +67,7 @@ The following table outlines some common terminology used in this document:
 
 For input datasets, like Adobe Analytics and Adobe Audience Manager, the respective source connectors directly map the events in these standard field groups (Commerce, Web, Application, and Search) by default during the connection process. The table below shows the event fields in the default standard field groups for Customer AI.  
 
-For more information on mapping Adobe Analytics data or Audience Manager data, visit the Analytics field mappings or Audience Manager field mappings guide. 
+For more information on mapping Adobe Analytics data or Audience Manager data, visit the Analytics field mappings or Audience Manager [field mappings guide](../../sources/connectors/adobe-applications/mapping/audience-manager.md)
 
 You can use Experience Event (EE) or Consumer Experience Event (CEE) XDM schemas for input datasets that are not populated via one of the above connectors. Additional XDM field groups can be added during the schema creation process. The field groups can be provided by Adobe like the standard field groups or a custom field group, which matches the data representation in the Platform. 
 
@@ -85,7 +83,7 @@ Experience Events are used for determining various customer behaviors. Depending
 >
 >If you are using Adobe Analytics or Adobe Audience Manager data, the schema is created automatically with the required standard events that are needed to capture your data. If you are creating your own custom EE schema to capture data, you need to consider what field groups are needed to capture your data. 
 
-Customer AI uses the events in these four standard field groups by default: Commerce, Web, Application, and Search. It is not necessary to have data for each event in the standard field groups listed below but certain events are required for certain scenarios. If you have any events in the standard field groups available, it is recommended that you include it in your schema. For example, if you wanted to create a Customer AI application for predicting purchase events, it would be useful to have data from the Commerce and Web page details field groups. 
+Customer AI uses the events in these four standard field groups by default: Commerce, Web, Application, and Search. It is not necessary to have data for each event in the standard field groups listed below but certain events are required for certain scenarios. If you have any events in the standard field groups available, it is recommended that you include it in your schema. For example, if you wanted to create a Customer AI model for predicting purchase events, it would be useful to have data from the Commerce and Web page details field groups. 
 
 To view a field group in the Platform UI, select the **[!UICONTROL Schemas]** tab on the left-rail followed by selecting the **[!UICONTROL Field groups]** tab.
 
@@ -173,7 +171,7 @@ The following examples demonstrate the use of a simple formula which helps you d
 
     - Otherwise, the data requirement = 30 days + outcome window 
 
-    - If there is more than one condition for defining the eligible population, the eligibility lookback window is the longest one 
+** If there is more than one condition for defining the eligible population, the eligibility lookback window is the longest one 
 
 - Version 2: 
 
