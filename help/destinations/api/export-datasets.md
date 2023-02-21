@@ -1226,7 +1226,9 @@ Note the highlighted lines with inline comments in the request example. Remove t
 
 +++Azure Blob Storage - Connection spec showing Target Connection Parameters
 
-```json
+Note the highlighted lines with inline comments in the request example. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```json {line-numbers="true" start-line="1" highlight="10,29,44"}
 {
     "items": [
         {
@@ -1299,7 +1301,9 @@ Note the highlighted lines with inline comments in the request example. Remove t
 
 +++Azure Data Lake Gen 2(ADLS Gen2) - Connection spec showing Target Connection Parameters
 
-```json
+Note the highlighted lines with inline comments in the request example. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
     "items": [
         {
@@ -1363,7 +1367,9 @@ Note the highlighted lines with inline comments in the request example. Remove t
 
 +++Data Landing Zone(DLZ) - Connection spec showing Target Connection Parameters
 
-```json
+Note the highlighted lines with inline comments in the request example. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```json {line-numbers="true" start-line="1" highlight="9,21,36"}
 "items": [
     {
         "id": "10440537-2a7b-4583-ac39-ed38d4b848e8",
@@ -1426,7 +1432,9 @@ Note the highlighted lines with inline comments in the request example. Remove t
 
 +++Google Cloud Storage - Connection spec showing Target Connection Parameters
 
-```json
+Note the highlighted lines with inline comments in the request example. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```json {line-numbers="true" start-line="1" highlight="10,29,44"}
 {
     "items": [
         {
@@ -1498,7 +1506,9 @@ Note the highlighted lines with inline comments in the request example. Remove t
 
 +++SFTP - Connection spec showing Target Connection Parameters
 
-```json
+Note the highlighted lines with inline comments in the request example. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
     "items": [
         {
@@ -1576,7 +1586,9 @@ By using the above spec, you can construct a target connection request specific 
 >For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) section of the Amazon S3 destination documentation page.
 >For other supported values of `datasetFileType`, see the API reference documentation.
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
@@ -1628,7 +1640,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >For other supported values of `datasetFileType`, see the API reference documentation.
 
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
@@ -1679,7 +1693,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) section of the Azure Data Lake Gen 2(ADLS Gen2) destination documentation page.
 >For other supported values of `datasetFileType`, see the API reference documentation.
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
@@ -1729,7 +1745,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) section of the Data Landing Zone destination documentation page.
 >For other supported values of `datasetFileType`, see the API reference documentation.
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
@@ -1780,7 +1798,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >For other supported values of `datasetFileType`, see the API reference documentation.
 
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
@@ -1831,7 +1851,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) section of the SFTP destination documentation page.
 >For other supported values of `datasetFileType`, see the API reference documentation.
 
-```shell
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
@@ -2215,6 +2237,8 @@ To check the executions of a dataflow, use the Dataflow Runs API:
 **Request** 
 
 +++Get Dataflow Runs - Request
+
+In the request to retrieve dataflow runs, add as query parameter the dataflow ID that you obtained in the previous step, when creating the dataflow.
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
