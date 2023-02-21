@@ -87,7 +87,7 @@ You need these IDs to construct various [!DNL Flow Service] entities. You also n
 
 >[!BEGINTABS]
 
->[!TAB [!DNL Amazon S3]]
+>[!TAB Amazon S3]
 
 **Request** 
 
@@ -121,7 +121,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB [!DNL Azure Blob Storage]]
+>[!TAB Azure Blob Storage]
 
 **Request** 
 
@@ -155,7 +155,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB [!DNL Azure Data Lake Gen 2(ADLS Gen2)]]
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 **Request** 
 
@@ -189,7 +189,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB [!DNL Data Landing Zone(DLZ)]]
+>[!TAB Data Landing Zone(DLZ)]
 
 **Request** 
 
@@ -223,7 +223,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB [!DNL Google Cloud Storage]]
+>[!TAB Google Cloud Storage]
 
 **Request** 
 
