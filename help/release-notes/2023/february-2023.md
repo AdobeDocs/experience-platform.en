@@ -23,7 +23,6 @@ XDM is an open-source specification that provides common structures and definiti
 | --- | --- |
 | Field deprecation through the UI | You can now deprecate fields from your schemas after data has been ingested. XDM field deprecation allows you to remove fields from UI view while retaining them for use. You can reveal deprecated fields again if needed, and any segments, queries or downstream solutions that reference the fields will run as usual. |
 
-​
 {style="table-layout:auto"}
 ​
 For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).
@@ -43,7 +42,6 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 | Toggle auto-complete feature  | Eliminate certain metadata commands and improve processing times by toggling the Query Editor auto-complete feature. This feature automatically suggests potential SQL keywords and table details for the query as you write it. |
 | Dataset samples | Specify a sampling rate in your query and use dataset samples to create a uniform random sample, or create conditional samples based on specific criteria. |
 
-​
 {style="table-layout:auto"}
 ​
 For more information on Query Services, refer to the [Query Service overview](../../query-service/home.md).
