@@ -87,6 +87,8 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Feature | Description |
 | --- | --- |
 | Designate subscription-level access with [!DNL Google PubSub] | You can now define access to a specific topic subscription when using the [!DNL Google PubSub] source by providing the subscription ID when authenticating. For more information, read the [!DNL Google PubSub] authentication tutorial [using the Flow Service API](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) or [Platform UI](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
+| Ingest custom activity data from [!DNL Marketo] | You can now bring custom activity data from your [!DNL Marketo] instance to Experience Platform. To ingest custom activity data, you must set up custom activities field groups in the B2B Activities schema and create a dataflow using the activities dataset. Once the dataflow is complete, the ingested dataset will contain both standard and custom activities from your [!DNL Marketo] instance. You can then use [Query Service](../../query-service/home.md) to access your custom activity records on Platform. For more information, read the guide on [creating a dataflow for custom activity data](../../sources/tutorials/ui/create/adobe-applications/marketo.md)
+| Exclude unclaimed accounts from [!DNL Marketo] | You can now configure whether you want to exclude or include unclaimed accounts from [!DNL Marketo] when creating a dataflow for companies data. For more information, read the guide on [creating a source connection and dataflow for [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
 
 {style="table-layout:auto"}
 
