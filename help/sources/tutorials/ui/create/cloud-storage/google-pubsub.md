@@ -25,6 +25,7 @@ In order to connect [!DNL PubSub] to Platform, you must provide a valid value fo
 | Project ID | The project ID required to authenticate [!DNL PubSub]. |
 | Credentials | The credential or private key ID required to authenticate [!DNL PubSub]. |
 | Topic ID | The ID for the [!DNL PubSub] resource that represents a feed of messages. You must specify a topic ID if you want to provide access to a specific stream of data in your [!DNL Google PubSub] source. |
+| Subscription ID | The ID of your [!DNL PubSub] subscription. In [!DNL PubSub], subscriptions allow you to receive messages, by subscribing to the topic in which messages have been published to. |
 
 For more information about these values, see the following [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication) document. If you are using service account-based authentication, see the following [PubSub guide](https://cloud.google.com/docs/authentication/production#create_service_account) for steps on how to generate your credentials.
 
@@ -42,7 +43,7 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Under the [!UICONTROL Cloud storage] category, select **[!UICONTROL Google PubSub]**, and then select **[!UICONTROL Add data]**.
 
-![catalog](../../../../images/tutorials/create/google-pubsub/catalog.png)
+![The sources catalog on Experience Platform UI.](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
 The **[!UICONTROL Connect to Google PubSub]** page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -50,7 +51,7 @@ The **[!UICONTROL Connect to Google PubSub]** page appears. On this page, you ca
 
 To use an existing account, select the [!DNL PubSub] account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
 
-![existing](../../../../images/tutorials/create/google-pubsub/existing.png)
+![The existing account selection in the sources workflow.](../../../../images/tutorials/create/google-pubsub/existing.png)
 
 ### New account
 
@@ -62,7 +63,7 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![new](../../../../images/tutorials/create/google-pubsub/new.png)
+![The new account interface in the sources workflow.](../../../../images/tutorials/create/google-pubsub/new.png)
 
 ## Next steps
 
