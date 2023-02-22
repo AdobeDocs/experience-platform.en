@@ -1,68 +1,70 @@
 ---
-title: Derived Attributes Implementation Plan
-description: Learn how to create a decile bucket of your profiles and enable them for use with Real-Time Customer Profile only with the use of SQL.
+title: Seamless SQL Flow for Derived Attributes
+description: Query Service SQL has been extended to provide seamless support for derived attributes. Learn how to use ths SQL extension to create a derived attribute that is enabled for profile, and how to use the attribute for Real-Time Customer Profile and Segmentation Service.
 ---
-# Derived attributes implementation plan
+# Seamless SQL flow for derived attributes
 
-<!-- Perhaps: uninterupted / seamless /coherent Derived Attributes SQL workflow / Seamless SQL flow for derived attributes -->
+Query Service SQL has been extended to provide seamless support for derived attributes. This provides an efficient alternative method to create derived attributes for your Real-Time Customer Profile business use cases.
 
-Use a single SQL statement to generate a profile and upsert-enabled dataset created with decile-based derived attributes for use with Real-Time Customer Profile. This provides an efficient alternative method to create derived attributes such as deciles, quartiles, and rankings for your Real-Time Customer Profile business use cases.
+This document outlines various convenient SQL extensions that generate a derived attribute for use with Real-Time Customer Profile. The workflow simplifies the process that you would otherwise have to complete through various API calls or Platform UI interactions.
 
-This document explains how you can avoid the many steps typically taken to create derived attributes from your data and enable that data for Profile. Previously, this process would have to be completed through various API calls or Platform UI interactions.
+Typically, generating and publishing an attribute for Real-Time Customer Profile would involve the following steps:
 
-Typically the process requires that you:
-
-* Create a namespace, although an existing namespace can be used.
-* Create the datatype to store the derived attribute.
+* Create an identity namespace, if one does not already exist.
+* Create the datatype to store the derived attribute, if necessary.
 * Create a field group with that datatype to store the derived attribute information.
-* Assign the primary identity using that namespace.
-* Create the decile schema using the field group and datatype mentioned above.
-* Create an empty dataset using your new schema.
-* Mark the dataset as profile-enabled.
+* Create or assign a primary identity column with the namespace created earlier.
+* Create a schema using the field group and datatype created earlier.
+* Create a new dataset using your schema and enable it for profile, if needed.
+* Optionally mark a dataset as profile-enabled.
 
-After completing the steps mentioned above, you are ready to populate the dataset and create segments to produce insights from your data. Query Service allows you to perform all of those actions with a single query and make changes to your datasets and field groups with SQL.
+After completing the steps mentioned above, you are ready to populate the dataset. If you enabled the dataset for profile, you can also create segments that refer to the new attribute and begin producing insights.
 
-## Create a table, datatype, field group, primary identity, and decile schema, and enable it for profile with SQL {#all-with-sql}
+Query Service allows you to perform all of the actions listed above using SQL queries. This includes making changes to your datasets and field groups if needed.
+
+## Create a table with an option to enable it for profile {#enable-dataset-for-profile}
 
 >[!NOTE]
 >
 >The SQL query provided below assumes the use of a pre-existing namespace.
 
-Use a CTAS query to create a dataset, assign datatypes, set a primary identity, create a decile schema, and mark it as profile-enabled. With this example SQL statement below, you can perform all the steps required to use decile-based attributes with Real-Time Customer Data Profile (Real-Time CDP). Your SQL query will follow the format shown in the example below:
+Use a Create Table as Select (CTAS) query to create a dataset, assign datatypes, set a primary identity, create a schema, and mark it as profile-enabled. The example SQL statement below, creates attributes and make it available for Real-Time Customer Data Profile (Real-Time CDP). Your SQL query will follow the format shown in the example below:
 
 ```sql
-CREATE TABLE your_table_name [IF NOT EXISTS]  (fieldname <data_type> primary identity namespace <namespace>, [filed_name2 >data_type>]) [ WITH(LABEL='PROFILE') ];
+CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
 ```
 
-Datasets can also be enabled for profile through the Platform UI. For more information on marking a dataset as enabled for profile, see the [enable a dataset for Real-Time Customer Profile documentation](../../../catalog/datasets/user-guide.md#enable-profile).
+Alternatively , datasets can also be enabled for profile through the Platform UI. For more information on marking a dataset as enabled for profile, see the [enable a dataset for Real-Time Customer Profile documentation](../../../catalog/datasets/user-guide.md#enable-profile).
 
-The example SQL query below demonstrates how you can leverage Query Service capabilities to perform a variety of tasks in a few lines of SQL. 
+In the example query below, the `decile_table` dataset is created with `id` as the primary identity column and has the namespace `IDFA`. It also has a field named `decile1Month` of the map data type. The table created (`decile_table`) is enabled for profile.
 
 ```sql
 CREATE TABLE decile_table (id text PRIMARY KEY NAMESPACE 'IDFA', 
-            decile1Month map<text, integer>, 
-            decile3Month map<text, integer>,
+            decile1Month map<text, integer>) WITH (label='PROFILE');
+```
+
+<!--        decile3Month map<text, integer>,
             decile6Month map<text, integer>,
             decile9month map<text, integer>,
             decile12month map<text, integer>,
-            decilelifetime map<text, integer>) WITH (label='PROFILE');
-```
+            decilelifetime map<text, integer> -->
 
-On successful execution of the query, the dataset ID is returned to the console.
+On successful execution of the query, the dataset ID is returned to the console, as seen in the example below. 
 
 ```console
 Created Table DataSet Id
 >
-637db88999ba291b62bfa79f
+637fd84969ba291e62dba79f
 (1 row)
 ```
 
-Through the use of `label='PROFILE'`, Query Service enables you to do the following steps without any effort on your part.
+Use `label='PROFILE'` on a `CREATE TABLE` command to create a profile enabled dataset. The `upsert` capability is turned on by default. The `upsert` capability can be overwritten using the `ALTER` command, as demonstrated in the example below.
 
->[!NOTE]
->
->When the profile-enabled dataset is created using Query Service, the `isUpsert` flag is turned **on** by default. This can be overridden using the command `ALTER TABLE <tablename> DROP label Upsert`
->Please see the documentation for more information on the use of the [ALTER TABLE](../../sql/syntax.md#alter-table) command and [label as part of a CTAS query](../../sql/syntax.md#create-table-as-select).
+```sql
+ALTER TABLE <your_table_name> DROP label upsert;
+```
+
+See the SQl syntax documentation for more information on the use of the [ALTER TABLE](../../sql/syntax.md#alter-table) command and [label as part of a CTAS query](../../sql/syntax.md#create-table-as-select).
 
 ## Constructs to help with managing derived attributes through SQL
 
@@ -80,19 +82,21 @@ ALTER TABLE your_decile_table ADD label 'PROFILE';
 >
 >On successful execution of the `ALTER TABLE` command, the console returns `ALTER SUCCESS`.
 
-### Add a primary key to an existing dataset {#add-primary-key}
+### Add a primary identity to an existing dataset {#add-primary-identity}
 
-This command requires there to be a primary key set on the dataset, otherwise, it results in an error. To set a primary identity using SQL, use the query format displayed below.
+Mark an existing column in a dataset as primary identity set, otherwise, it results in an error. To set a primary identity using SQL, use the query format displayed below.
 
 ```sql
-ALTER TABLE your_table_name ADD CONSTRAINT <col1> primary identity NAMESPACE <namespace>
+ALTER TABLE <your_table_name> ADD CONSTRAINT primary identity NAMESPACE
 ```
 
-A practical example might appear similar to the one seen below.
+For example:
 
 ```sql
 ALTER TABLE test1_dataset ADD CONSTRAINT PRIMARY KEY(id2) NAMESPACE 'IDFA';
 ```
+
+In the example provided, `id2` is an existing column in `test1_dataset`.
 
 ### Disable a dataset for profile {#disable-dataset-for-profile}
 
@@ -102,7 +106,7 @@ If you want to disable your table for profile uses, you must use the DROP comman
 ALTER TABLE table_name DROP LABEL 'PROFILE';
 ```
 
-A practical example might appear similar to the one seen below.
+For example:
 
 ```sql
 ALTER TABLE decile_table DROP label 'PROFILE';
@@ -120,7 +124,7 @@ An example statement that uses the correct format is seen below.
 ALTER TABLE table_name ADD LABEL 'UPSERT';
 ```
 
-A practical example might appear similar to the one seen below.
+For example:
 
 ```sql
 ALTER TABLE table_with_a_decile ADD label 'UPSERT';
@@ -138,7 +142,7 @@ An example statement that uses the correct format is seen below.
 ALTER TABLE table_name DROP LABEL 'UPSERT';
 ```
 
-A practical example might appear similar to the one seen below.
+For example:
 
 ```sql
 ALTER TABLE table_with_a_decile DROP label 'UPSERT';
@@ -146,7 +150,7 @@ ALTER TABLE table_with_a_decile DROP label 'UPSERT';
 
 ### Show additional table information associated with each table {#show-labels-for-tables}
 
-The `SHOW TABLES` command now displays an extra `labels` column to provide information on any labels associated with tables.
+Additional metadata is kept for profile enabled datasets. Use the `SHOW TABLES` command to display an extra `labels` column that provides information on any labels associated with tables.
 
 An example of this command's output can be seen below:
 
@@ -158,6 +162,8 @@ An example of this command's output can be seen below:
  table_with_a_decile | 5c86b896b3c162151785b43c | Luma midValues |             | 'UPSERT', 'PROFILE'
 (3 rows)
 ```
+
+You can see from the example that `table_with_a_decile` has been enabled for profile and applied with labels such as ['UPSERT'](#enable-upsert-functionality-for-dataset), ['PROFILE'](#enable-existing-dataset-for-profile) as described earlier.
 
 ### Create a field group with SQL
 
@@ -177,7 +183,7 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 A real-world example might appear similar to the one seen below.
 
 ```sql
-CREATE FIELDGROUP field_group_for_decile (decile<sup>1</sup>Month map<text, integer>, decile3Month map<text, integer>, decile6Month map<text, integer>, decile9Month map<text, integer>, decile12Month map<text, integer>, decilelietime map<text, integer>) WITH (LABEL-'PROFILE');
+CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, decile3Month map<text, integer>, decile6Month map<text, integer>, decile9Month map<text, integer>, decile12Month map<text, integer>, decilelietime map<text, integer>) WITH (LABEL-'PROFILE');
 ```
 
 Successful execution of this statement returns the created field group ID. For example `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
@@ -189,13 +195,13 @@ See the documentation on how to [create a new field group in the Schema Editor](
 It may occasionally be necessary to remove a field group from the Schema Registry. This is done by executing the `DROP FIELDGROUP` command with the field group ID.
 
 ```sql
-DROP FIELDGROUP your_field_group_id;
+DROP FIELDGROUP [IF EXISTS] <your_field_group_id>;
 ```
 
-A practical example might appear similar to the one seen below.
+For example:
 
 ```sql
-DROP FIELDGROUP field_group_for_decile;
+DROP FIELDGROUP field_group_for_test123;
 ```
 
 >[!IMPORTANT]
