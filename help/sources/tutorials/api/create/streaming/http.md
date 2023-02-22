@@ -202,7 +202,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | Property | Description |
 | -------- | ----------- |
 | `auth.params.sourceId` | An additional identifier that can be used when creating an authenticated base connection. This parameter is optional and will use the same value as the `name` attribute, if it is not provided. |
-| `auth.params.authenticationRequired` | The parameter that specifies that the created streaming connection |
+| `auth.params.authenticationRequired` | This parameter specifies whether the streaming connection requires authentication or not. If `authenticationRequired` is set to `true` then authentication must be provided for the streaming connection. If `authenticationRequired` is set to `false` then authentication is not required. |
 
 **Response**
 
