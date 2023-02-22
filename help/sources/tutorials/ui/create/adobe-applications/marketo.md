@@ -121,7 +121,7 @@ When you are finished providing details to your dataflow, select **[!UICONTROL N
 
 When creating a dataflow to ingest data from the companies dataset, you can configure [!UICONTROL Exclude unclaimed accounts] to either exclude or include unclaimed accounts from ingestion.
 
-Within [!DNL Marketo], unclaimed accounts are phantom account records that contain no context or data. For new datafalows, the toggle to exclude unclaimed accounts is enabled by default. For existing dataflows, you can enable or disable the feature, with changes applying to newly ingested data and not existing data.
+Within [!DNL Marketo], unclaimed accounts are phantom account records that contain no context or data. For new dataflows, the toggle to exclude unclaimed accounts is enabled by default. For existing dataflows, you can enable or disable the feature, with changes applying to newly ingested data and not existing data.
 
 ![unclaimed accounts](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
 
