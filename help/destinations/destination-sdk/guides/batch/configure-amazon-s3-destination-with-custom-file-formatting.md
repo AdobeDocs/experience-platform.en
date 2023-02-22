@@ -41,9 +41,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "name":"Amazon S3 destination server with custom file formatting options",
    "destinationServerType":"FILE_BASED_S3",
    "fileBasedS3Destination":{
-      "bucket":{
+      "bucketName":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"{{customerData.bucket}}"
+         "value":"{{customerData.bucketName}}"
       },
       "path":{
          "templatingStrategy":"PEBBLE_V1",
@@ -158,11 +158,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    ],
    "customerDataFields":[
       {
-         "name":"bucket",
+         "name":"bucketName",
          "title":"Enter the name of your Amazon S3 bucket",
          "description":"Amazon S3 bucket name",
          "type":"string",
          "isRequired":true,
+         "pattern": "(?=^.{3,63}$)(?!^(\\d+\\.)+\\d+$)(^(([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])\\.)*([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])$)",
          "readOnly":false,
          "hidden":false
       },
@@ -172,7 +173,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "description":"Enter the path to your S3 bucket folder",
          "type":"string",
          "isRequired":true,
-         "pattern":"^[A-Za-z]+$",
+         "pattern": "^[0-9a-zA-Z\\/\\!\\-_\\.\\*\\''\\(\\)]*((\\%SEGMENT_(NAME|ID)\\%)?\\/?)+$",
          "readOnly":false,
          "hidden":false
       },
