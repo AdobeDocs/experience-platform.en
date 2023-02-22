@@ -134,7 +134,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`description` | String | Provide a description that Adobe will use in the Experience Platform destinations catalog for your destination card. Aim for no more than 4-5 sentences. |
 |`status` | String | Indicates the lifecycle status of the destination card. Accepted values are `TEST`, `PUBLISHED`, and `DELETED`. Use `TEST` when you first configure your destination. |
 |`customerAuthenticationConfigurations` | String | Indicates the configuration used to authenticate Experience Platform customers to your server. See `authType` below for accepted values. |
-|`customerAuthenticationConfigurations.authType` | String | Supported values for streaming destinations are: <ul><li>`OAUTH2`</li><li>`BEARER`</li></ul> Supported values for file-based destinations are: <ul><li>`S3`</li><li>`AZURE_CONNECTION_STRING`</li><li>`AZURE_SERVICE_PRINCIPAL`</li><li>`SFTP_WITH_SSH_KEY`</li><li>`SFTP_WITH_PASSWORD`</li></ul>|
+|`customerAuthenticationConfigurations.authType` | String | Supported values for streaming destinations are: <ul><li>`BASIC`</li><li>`BEARER`</li><li>`OAUTH2`</li></ul> Supported values for file-based destinations are: <ul><li>`S3`</li><li>`AZURE_CONNECTION_STRING`</li><li>`AZURE_SERVICE_PRINCIPAL`</li><li>`SFTP_WITH_SSH_KEY`</li><li>`SFTP_WITH_PASSWORD`</li></ul>|
 |`customerDataFields.name` | String | Provide a name for the custom field you are introducing. |
 |`customerDataFields.type` | String | Indicates what type of custom field you are introducing. Accepted values are `string`, `object`, `integer` |
 |`customerDataFields.title` | String | Indicates the name of the field, as it is seen by customers in the Experience Platform user interface |
