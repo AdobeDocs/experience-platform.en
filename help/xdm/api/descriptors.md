@@ -411,7 +411,7 @@ Reference identity descriptors provide a reference context to the primary identi
 
 #### Deprecated field descriptor
 
-You can [deprecate a field within a custom XDM resource](../tutorials/field-deprecation.md#custom) by adding a `meta:status` attribute set to `deprecated` to the field in question. If you want to deprecate fields provided by standard XDM resources in your schemas, however, you can assign a deprecated field descriptor to the schema in question to achieve the same effect. Using the [correct `Accept` header](../tutorials/field-deprecation.md#verify-deprecation), you can then view which standard fields are deprecated for a schema when looking it up in the API.
+You can [deprecate a field within a custom XDM resource](../tutorials/field-deprecation-api.md#custom) by adding a `meta:status` attribute set to `deprecated` to the field in question. If you want to deprecate fields provided by standard XDM resources in your schemas, however, you can assign a deprecated field descriptor to the schema in question to achieve the same effect. Using the [correct `Accept` header](../tutorials/field-deprecation-api.md#verify-deprecation), you can then view which standard fields are deprecated for a schema when looking it up in the API.
 
 ```json
 {
