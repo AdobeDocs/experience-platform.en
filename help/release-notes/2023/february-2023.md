@@ -8,10 +8,31 @@ description: The February 2023 release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
+- [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Related accounts in Real-Time CDP B2B Edition](#related-accounts)
 - [Sources](#sources)
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated features** {#destinations-new-updated-features}
+
+| Feature | Description |
+| ----------- | ----------- |
+| [Consent Policy enhancement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) for integrations with [file-based (batch) destinations](/help/destinations/destination-types.md#file-based) | <p> When profiles are no longer qualified for a consent policy, Experience Platform now proactively communicates their policy exit to file-based destinations. This follows the [release in February 2023](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) of the same functionality for streaming destinations. </p> <p> <b>Note</b>: This functionality is available only to customers of **[!UICONTROL Privacy and Security Shield]**, and those of **[!UICONTROL Healthcare Shield]**. </p> |
+
+{style="table-layout:auto"}
+
+**New or updated documentation** {#destinations-new-updated-documentation}
+
+| Documentation | Description |
+| ----------- | ----------- |
+| How destinations work documentation| <p>We published three new explainer articles about how destinations work, based on common questions from users:</p> <p><ul><li>[Configurable and common export settings in destinations](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[Profile export behavior for different destination types](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[Identity handling in the destinations activation workflow](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
