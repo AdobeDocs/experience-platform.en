@@ -67,6 +67,7 @@ PUT -X GET \
         "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
         "sourceSpec": {
           "attributes": {
+            "authRequired": false,
             "uiAttributes": {
               "documentationLink": "http://www.adobe.com/go/understanding-data-streaming-ingestion-en",
               "isSource": true,
@@ -122,6 +123,7 @@ A successful call returns the updated connection specification details, includin
       "type": "generic-streaming",
       "sourceSpec": {
         "attributes": {
+          "authRequired": false,
           "uiAttributes": {
             "documentationLink": "http://www.adobe.com/go/understanding-data-streaming-ingestion-en",
             "isSource": true,
