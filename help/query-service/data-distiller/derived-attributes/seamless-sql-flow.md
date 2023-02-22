@@ -1,6 +1,6 @@
 ---
 title: Seamless SQL Flow for Derived Attributes
-description: Query Service SQL has been extended to provide seamless support for derived attributes. Learn how to use ths SQL extension to create a derived attribute that is enabled for profile, and how to use the attribute for Real-Time Customer Profile and Segmentation Service.
+description: Query Service SQL has been extended to provide seamless support for derived attributes. Learn how to use this SQL extension to create a derived attribute that is enabled for profile, and how to use the attribute for Real-Time Customer Profile and Segmentation Service.
 ---
 # Seamless SQL flow for derived attributes
 
@@ -28,13 +28,13 @@ Query Service allows you to perform all of the actions listed above using SQL qu
 >
 >The SQL query provided below assumes the use of a pre-existing namespace.
 
-Use a Create Table as Select (CTAS) query to create a dataset, assign datatypes, set a primary identity, create a schema, and mark it as profile-enabled. The example SQL statement below, creates attributes and make it available for Real-Time Customer Data Profile (Real-Time CDP). Your SQL query will follow the format shown in the example below:
+Use a Create Table as Select (CTAS) query to create a dataset, assign datatypes, set a primary identity, create a schema, and mark it as profile-enabled. The example SQL statement below creates attributes and makes it available for Real-Time Customer Data Profile (Real-Time CDP). Your SQL query will follow the format shown in the example below:
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
 ```
 
-Alternatively , datasets can also be enabled for profile through the Platform UI. For more information on marking a dataset as enabled for profile, see the [enable a dataset for Real-Time Customer Profile documentation](../../../catalog/datasets/user-guide.md#enable-profile).
+Alternatively, datasets can also be enabled for profile through the Platform UI. For more information on marking a dataset as enabled for profile, see the [enable a dataset for Real-Time Customer Profile documentation](../../../catalog/datasets/user-guide.md#enable-profile).
 
 In the example query below, the `decile_table` dataset is created with `id` as the primary identity column and has the namespace `IDFA`. It also has a field named `decile1Month` of the map data type. The table created (`decile_table`) is enabled for profile.
 
@@ -58,7 +58,7 @@ Created Table DataSet Id
 (1 row)
 ```
 
-Use `label='PROFILE'` on a `CREATE TABLE` command to create a profile enabled dataset. The `upsert` capability is turned on by default. The `upsert` capability can be overwritten using the `ALTER` command, as demonstrated in the example below.
+Use `label='PROFILE'` on a `CREATE TABLE` command to create a profile-enabled dataset. The `upsert` capability is turned on by default. The `upsert` capability can be overwritten using the `ALTER` command, as demonstrated in the example below.
 
 ```sql
 ALTER TABLE <your_table_name> DROP label upsert;
@@ -84,7 +84,7 @@ ALTER TABLE your_decile_table ADD label 'PROFILE';
 
 ### Add a primary identity to an existing dataset {#add-primary-identity}
 
-Mark an existing column in a dataset as primary identity set, otherwise, it results in an error. To set a primary identity using SQL, use the query format displayed below.
+Mark an existing column in a dataset as a primary identity set, otherwise, it results in an error. To set a primary identity using SQL, use the query format displayed below.
 
 ```sql
 ALTER TABLE <your_table_name> ADD CONSTRAINT primary identity NAMESPACE
@@ -150,7 +150,7 @@ ALTER TABLE table_with_a_decile DROP label 'UPSERT';
 
 ### Show additional table information associated with each table {#show-labels-for-tables}
 
-Additional metadata is kept for profile enabled datasets. Use the `SHOW TABLES` command to display an extra `labels` column that provides information on any labels associated with tables.
+Additional metadata is kept for profile-enabled datasets. Use the `SHOW TABLES` command to display an extra `labels` column that provides information on any labels associated with tables.
 
 An example of this command's output can be seen below:
 
