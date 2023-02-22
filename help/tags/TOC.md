@@ -159,7 +159,7 @@ solution: Data Collection
     * [Google Global Site Tag (gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
     * [InMoment](https://exchange.adobe.com/apps/ec/100847)
     * [JSON Helper](https://exchange.adobe.com/apps/ec/106449)
-    * [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/sdi-toolkit)dobe.com/apps/ec/101523)
+    * [JW Player Analytics](https://exchange.adobe.com/apps/ec/101523)
     * [KickFire](https://exchange.adobe.com/apps/ec/101621)
     * [Mapping Table](https://exchange.adobe.com/apps/ec/103136)
     * [!DNL Marketo Munchkin] {#marketo}
@@ -202,6 +202,7 @@ solution: Data Collection
     * [Overview](./extensions/server/overview.md)
     * Adobe Experience Platform Cloud Connector {#cloud-connector}
       * [Overview](./extensions/server/cloud-connector/overview.md)
+      * [Release notes](./extensions/server/cloud-connector/release-notes.md)
     * [!DNL AWS] {#aws}
       * [Overview](./extensions/server/aws/overview.md)
     * [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)

@@ -53,6 +53,7 @@ feature: Sources
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
+    - [SugarCRM connector](connectors/crm/sugarcrm.md)
     - [Veeva CRM connector](connectors/crm/veeva.md)
     - [Zoho CRM connector](connectors/crm/zoho.md)
   - Customer success {#customer-success}
@@ -123,6 +124,8 @@ feature: Sources
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
       - [Salesforce](tutorials/api/create/crm/salesforce.md)
+      - [SugarCRM Accounts & Contacts](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
+      - [SugarCRM Events](tutorials/api/create/crm/sugarcrm-events.md)
       - [Veeva CRM](tutorials/api/create/crm/veeva.md)
       - [Zoho CRM](tutorials/api/create/crm/zoho.md)
     - Customer success {#customer-success}
@@ -197,6 +200,7 @@ feature: Sources
   - [Retry failed dataflow runs](tutorials/api/retry-flows.md)
   - [Delete accounts](tutorials/api/delete.md)
   - [Delete dataflows](tutorials/api/delete-dataflows.md)
+  - [Ingest encrypted data](tutorials/api/encrypt-data.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
     - Adobe applications {#adobe-applications}
@@ -231,6 +235,8 @@ feature: Sources
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
       - [Salesforce](tutorials/ui/create/crm/salesforce.md)
+      - [SugarCRM Accounts & Contacts](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
+      - [SugarCRM Events](tutorials/ui/create/crm/sugarcrm-events.md)
       - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
       - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
     - Customer Success {#customer-success}
@@ -317,6 +323,15 @@ feature: Sources
     - [Use a text editor in your local environment to create a sources documentation page](sources-sdk/documentation/text-editor.md)
     - [Documentation self-service API template](sources-sdk/documentation/template.md)
     - [Documentation self-service UI template](sources-sdk/documentation/ui-template.md)
+  - Streaming SDK {#streaming-sdk}
+    - [Get started with Self-Serve Sources (Streaming SDK)](sources-sdk/streaming/getting-started.md)
+    - [Create a connection specification for a streaming source](sources-sdk/streaming/create.md)
+    - [Update a connection specification for a streaming source](sources-sdk/streaming/update-connection-specs.md)
+    - [Update the streaming flow specification](sources-sdk/streaming/update-flow-specs.md)
+    - [Test and submit your connection specification for verification](sources-sdk/streaming/submit.md)
+    - [Document your source (Streaming SDK)](sources-sdk/streaming/document-streaming.md)
+    - [Documentation self-service API streaming template](sources-sdk/streaming/streaming-template-api.md)
+    - [Documentation self-service UI streaming template](sources-sdk/streaming/streaming-template-ui.md)
 - [Flow run notifications](notifications.md)
 - [IP address allow list](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)
