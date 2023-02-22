@@ -47,15 +47,15 @@ The following request generates a encryption key pair using the PGP encryption a
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/connectors/encryption/keys' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
       "encryptionAlgorithm": "PGP",
       "params": {
-          "passPhrase": "{PASSPHRASE}"
+          "passPhrase": "{{PASSPHRASE}}"
       }
   }'
 ```
@@ -121,9 +121,9 @@ The following request creates a dataflow to ingest encrypted data for a cloud st
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "ACME Customer Data",
