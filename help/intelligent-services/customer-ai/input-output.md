@@ -20,7 +20,7 @@ Here are the steps to build propensity models and identify target audiences for 
 
 2. Prioritize use cases – Which are the highest priorities for the business?  
 
-3. Build models in Customer AI – Watch this [quick tutorial]() and refer to our [UI guide](../customer-ai/user-guide/configure.md) for a step-by-step process to build a model. 
+3. Build models in Customer AI – Watch this [quick tutorial](../../intelligent-services/customer-ai/user-guide/configure.md) and refer to our [UI guide](../customer-ai/user-guide/configure.md) for a step-by-step process to build a model. 
 
 4. [Build segments](../customer-ai/user-guide/create-segment.md) using model results.
 
