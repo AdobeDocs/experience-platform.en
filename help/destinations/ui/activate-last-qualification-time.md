@@ -20,7 +20,7 @@ To use the last qualification time (`lastQualificationTime`) XDM attribute, you 
 
 ## How to use the last qualification time XDM attribute {#how-to-use}
 
-If you are using one of the six new cloud storage beta connectors, you can use the last qualification time XDM attribute in the [mapping step](//help/destinations/ui/activate-batch-profile-destinations.md#mapping) of the activation workflow to create a column in the exported file with the latest timestamp of when a profile qualified for a segment. This can help you with certain measurement or analytics use cases as well as give you a better idea of when to activate certain audiences. 
+If you are using one of the six new cloud storage beta connectors, you can use the last qualification time XDM attribute in the [mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) of the activation workflow to create a column in the exported file with the latest timestamp of when a profile qualified for a segment. This can help you with certain measurement or analytics use cases as well as give you a better idea of when to activate certain audiences. 
 
 Note that to add `lastQualificationTime` to your file exports, you currently need to manually insert the value `xdm: segmentMembership.ups.seg_id.lastQualificationTime` into the source field, as shown below. You can also edit the target field to `lastQualificationTime` or any other value that you would like to name this column. Note that since this is a beta functionality, the syntax of the `xdm: segmentMembership.ups.seg_id.lastQualificationTime` value may change in the future.
 
