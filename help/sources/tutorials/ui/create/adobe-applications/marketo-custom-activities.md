@@ -139,6 +139,10 @@ Once you have reviewed your dataflow, select **[!UICONTROL Save & ingest]** and 
 
 ![The final review step that summarizes information on the connection, dataset, and mapping fields.](../../../../images/tutorials/create/marketo-custom-activities/review.png)
 
+>[!NOTE]
+>
+>Once ingestion is completed, the dataset ingested will contain all activities, including both standard and custom activities from your [!DNL Marketo] instance. To select your custom activity records on Platform, you must use [Query Service](../../../../../query-service/home.md) and provide the suitable predicates.
+
 ## Next steps
 
 By following this tutorial, you have set up a Platform schema for [!DNL Marketo] custom activity data and created a dataflow to bring that data to Platform. For general information on the [!DNL Marketo] source, read the [[!DNL Marketo] source overview](../../../../connectors/adobe-applications/marketo/marketo.md).
