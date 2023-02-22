@@ -40,20 +40,20 @@ When creating your own schema configuration, you can use the parameters describe
 |Parameter | Type | Required/Optional |Description|
 |---------|----------|------|---|
 |`profileFields` | Array | | When you add predefined profile fields, users have the option to map Platform attributes to predefined attributes in your destination platform. |
-|`identityRequired` | Boolean | | Use `true` if users should be able to map identity namespaces from Experience Platform to your schema. |
+|`useCustomerSchemaForAttributeMapping`|Boolean|||
 |`profileRequired` | Boolean | | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination platform. |
 |`segmentRequired` | Boolean | | This parameter should always be set to `true`. |
-|`useCustomerSchemaForAttributeMapping`|Boolean|||
+|`identityRequired` | Boolean | | Use `true` if users should be able to map identity namespaces from Experience Platform to your schema. |
 |`destinationServerId` | String | Required if using dynamic partner schemas. | The `instanceId` of the [destination server configuration](../../authoring-api/destination-server/create-destination-server.md) that you created for your dynamic partner schema. This destination server includes the HTTP endpoint which Experience Platform will call to retrieve the dynamic schema used to populate target fields. |
 |`authenticationRule` | String | |Indicates how [!DNL Platform] customers connect to your destination. Accepted values are `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` if Platform customers log into your system via any of the following methods: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Use `PLATFORM_AUTHENTICATION` if there is a global authentication system between Adobe and your destination and the [!DNL Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must [create a credentials object](../../credentials-api/create-credential-configuration.md) using the Credentials API. </li><li>Use `NONE` if no authentication is required to send data to your destination platform. </li></ul> |
-|`value`| String | | The name of the schema to be displayed in the Experience Platform user interface, in the mapping step. |
-|`responseFormat`|String| |Always set to `SCHEMA` when defining a custom schema.|
-| `requiredMappingsOnly` |Boolean|| Indicates if users can map other attributes and identities in the activation flow, *apart from* the required mappings that you define. |
-| `mandatoryRequired`|Boolean| |Set to `true` if this field must be a mandatory attribute which should always be present in file exports to your destination. Read more about [mandatory attributes](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes). |
+| `value` | String | | The name of the schema to be displayed in the Experience Platform user interface, in the mapping step. |
+| `responseFormat` | String| |Always set to `SCHEMA` when defining a custom schema.|
+| `requiredMappingsOnly` | Boolean|| Indicates if users can map other attributes and identities in the activation flow, *apart from* the required mappings that you define. |
+| `mandatoryRequired` | Boolean| |Set to `true` if this field must be a mandatory attribute which should always be present in file exports to your destination. Read more about [mandatory attributes](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes). |
 | `requiredMappings.primaryKeyRequired` |Boolean| |Set to true if this field must be used as a deduplication key in file exports to your destination. Read more about [deduplication keys](../../../ui/activate-batch-profile-destinations.md#deduplication-keys). |
-| `sourceType` | String| | Used when you configure a source field as required mapping. Set this value to `"text/x.schema-path"`, which indicates that the source field is a predefined XDM attribute.|
-| `source` | String | | Indicates what the required source field should be. For example: `"source":"personalEmail.address"`. |
-| `destination` | String |  | Indicates what the required destination field should be. For example: `"destination":"emailAddress"`.|
+| `requiredMappings.sourceType` | String| | Used when you configure a source field as required mapping. Set this value to `"text/x.schema-path"`, which indicates that the source field is a predefined XDM attribute.|
+| `requiredMappings.source` | String | | Indicates what the required source field should be. For example: `"source":"personalEmail.address"`. |
+| `requiredMappings.destination` | String |  | Indicates what the required destination field should be. For example: `"destination":"emailAddress"`.|
 
 
 
@@ -83,7 +83,6 @@ You can create static, hardcoded schema fields or you can specify a dynamic sche
       "identityRequired":true
 }
 ```
-
 
 ## Dynamic schema configuration in the mapping step {#dynamic-schema-configuration}
 
@@ -119,33 +118,9 @@ Use the parameters in  `dynamicSchemaConfig` to dynamically retrieve your own sc
 
 ## Required mappings {#required-mappings}
 
-Within the schema configuration, you have the option of adding required (or predefined) mappings. These are mappings that users are able to view but not modify when they set up a connection to your destination. For example, you can enforce the email address field to always be sent to the destination in the exported files. See below two examples of a schema configuration with required mappings and what these look like in the mapping step of the [activate data to batch destinations workflow](../../../ui/activate-batch-profile-destinations.md). 
+Within the schema configuration, you have the option of adding required (or predefined) mappings. These are mappings that users are able to view in the Platform UI, but they cannot modify them when setting up a connection to your destination.
 
-```json
-    "requiredMappingsOnly": true, // when this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
-    "requiredMappings": [
-      {
-        "destination": "identityMap.ExamplePartner_ID", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
-        "mandatoryRequired": true,
-        "primaryKeyRequired": true
-      }
-    ] 
-```
-
-![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-1.png)
-
-```json
-    "requiredMappingsOnly": true, // when this is set to true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
-    "requiredMappings": [
-      {
-        "sourceType": "text/x.schema-path",
-        "source": "personalEmail.address",
-        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
-      }
-    ] 
-```
-
-![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-2.png)
+For example, you can enforce the email address field to always be sent to the destination in the exported files.
 
 >[!NOTE]
 >
@@ -155,15 +130,68 @@ Within the schema configuration, you have the option of adding required (or pred
 >
 > Configuring a required source field only is currently *not* supported.
 
-Use the parameters described in the table below if you would like to add required mappings in the activation workflow for your destination.
+See below two examples of a schema configuration with required mappings and what these look like in the mapping step of the [activate data to batch destinations workflow](../../../ui/activate-batch-profile-destinations.md). 
 
-|Parameter | Type | Description|
-|---------|----------|------|
-|`requiredMappingsOnly`|Boolean|Indicates if users are be able to map other attributes and identities in the activation flow, *apart from* the required mappings that you define.|
-|`requiredMappings.mandatoryRequired`|Boolean| Set to true if this field must be a mandatory attribute which should always be present in file exports to your destination. Read more about [mandatory attributes](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes). |
-|`requiredMappings.primaryKeyRequired`|Boolean| Set to true if this field must be used as a deduplication key in file exports to your destination. Read more about [deduplication keys](../../../ui/activate-batch-profile-destinations.md#deduplication-keys). |
-|`requiredMappings.sourceType`|String| Used when you configure a source field as required. Use `"text/x.schema-path"`,  which indicates that the source field is a predefined XDM attribute|
-|`requiredMappings.source`|String|Indicates what the required source field should be.|
-|`requiredMappings.destination`|String|Indicates what the required destination field should be.|
+### Required source and destination mappings {#required-source-destination}
 
-{style="table-layout:auto"}
+The example below shows both required source and destination mappings. When both source and destination fields are specified as required mappings, users cannot select or edit any of the two fields, and can only view the predefined selection.
+
+```json
+"schemaConfig": {
+    "requiredMappingsOnly": true, // when this is set to true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappings": [
+      {
+        "sourceType": "text/x.schema-path",
+        "source": "personalEmail.address",
+        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
+      }
+    ] 
+}
+```
+
+As a result, both the **[!UICONTROL Source field]** and **[!UICONTROL Target field]** sections in the Platform UI are greyed out.
+
+![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-2.png)
+
+### Required destination mapping {#required-destination}
+
+The example below shows a required destination mapping. If only the destination field is specified as required, users can select what source field to map to it.
+
+```json
+"schemaConfig": {
+    "requiredMappingsOnly": true, // when this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappings": [
+      {
+        "destination": "identityMap.ExamplePartner_ID", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
+        "mandatoryRequired": true,
+        "primaryKeyRequired": true
+      }
+    ] 
+}
+```
+
+As a result, the **[!UICONTROL Target field]** section in the Platform UI is greyed out, while the **[!UICONTROL Source field]** section is active and users can interact with it.
+
+![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-1.png)
+
+
+
+
+
+
+## Next steps {#next-steps}
+
+After reading this article, you should have a better understanding of how you can the schema that your users can map data to.
+
+To learn more about the other destination components, see the following articles:
+
+* [Customer authentication](customer-authentication.md)
+* [OAuth2 authentication](oauth2-authentication.md)
+* [UI attributes](ui-attributes.md)
+* [Customer data fields](customer-data-fields.md)
+* [Identities and attributes](identities-attributes.md)
+* [Destination delivery](destination-delivery.md)
+* [Audience metadata configuration](audience-metadata-configuration.md)
+* [Aggregation policy](aggregation-policy.md)
+* [Batch configuration](batch-configuration.md)
+* [Historical profile qualifications](historical-profile-qualifications.md)
