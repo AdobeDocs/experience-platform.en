@@ -71,8 +71,8 @@ A successful response returns your public key, public key ID, and the expiry tim
 
 ```json
 {
-    ​"publicKey": "{{PUBLIC_KEY}}",
-    ​"publicKeyId": "{{PUBLIC_KEY_ID}}",
+    ​"publicKey": "{PUBLIC_KEY}",
+    ​"publicKeyId": "{PUBLIC_KEY_ID}",
     ​"expiryTime": "1684843168"
 }
 ```
@@ -133,7 +133,7 @@ curl -X POST \
           "version": "1.0"
       },
       "sourceConnectionIds": [
-          "26b53912-1005-49vf0-b539-12100559f0e2"
+          "26b53912-1005-49f0-b539-12100559f0e2"
       ],
       "targetConnectionIds": [
         "f7eb08fa-5f04-4e45-ab08-fa5f046e45ee"
