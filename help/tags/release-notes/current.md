@@ -5,7 +5,7 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 ---
 # Release notes for tags and event forwarding
 
-## January 25, 2022
+## January 25, 2023
 
 * **New home screen**: The home page for Data Collection UI has been updated to include helpful onboarding information and links to streamline productivity. This includes:
     1. Documentation and recommended workflows to get started

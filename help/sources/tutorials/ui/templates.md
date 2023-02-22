@@ -1,16 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;
 description: Adobe Experience Platform provides pre-configured templates that you can use to accelerate your data ingestion process. Templates include auto-generated assets such as schemas, datasets, mapping rules, identities, identity namespaces, and dataflows that you can use when bringing in data from a source to Experience Platform.
-title: (Alpha) Create a sources dataflow using templates in the UI
+title: (Beta) Create a sources dataflow using templates in the UI
+badge1: "Beta"
 hide: true
 hidefromtoc: true
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 ---
-# (Alpha) Create a sources dataflow using templates in the UI
+# (Beta) Create a sources dataflow using templates in the UI
 
 >[!IMPORTANT]
 >
->Templates are in Alpha and is currently only supported by the [[!DNL Marketo Engage] source](../../connectors/adobe-applications/marketo/marketo.md). The documentation and functionalities are subject to change.
+>Templates are in beta and are supported by the following sources:
+>
+>* [[!DNL Marketo Engage]](../../connectors/adobe-applications/marketo/marketo.md)
+>* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
+>* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
+>
+>The documentation and functionalities are subject to change.
 
 Adobe Experience Platform provides pre-configured templates that you can use to accelerate your data ingestion process. Templates include auto-generated assets such as schemas, datasets, identities, mapping rules, identity namespaces, and dataflows that you can use when bringing in data from a source to Experience Platform.
 
@@ -20,7 +26,7 @@ With templates, you can:
 * Minimize errors that can occur during the manual data ingestion process.
 * Update auto-generated assets at any point to suit your use cases.
 
-The following tutorial provides steps on how to use templates in the Platform UI using the [[!DNL Marketo Engage] source](../../connectors/adobe-applications/marketo/marketo.md).
+The following tutorial provides steps on how to use templates in the Platform UI.
 
 ## Getting Started
 
@@ -38,11 +44,11 @@ This tutorial requires a working understanding of the following components of Ex
 >abstract="Select the appropriate business type for your use case. Your access may vary depending on your Real-Time Customer Data Platform subscription account."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html" text="Real-Time CDP overview"
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that can be used to create an account.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace and see a catalog of sources available in Experience Platform.
 
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
+Use the *[!UICONTROL Categories]* menu to filter sources by category. Alternatively, enter a source name in the search bar to find a specific source from the catalog.
 
-Under the [!UICONTROL Adobe applications] category, select **[!UICONTROL Marketo Engage]** and then select **[!UICONTROL Add data]**.
+Go to the [!UICONTROL Adobe applications] category to see the [!DNL Marketo Engage] source card and then, select [!UICONTROL Add data] to begin.
 
 ![A catalog of the sources workspace with the Marketo Engage source highlighted.](../../images/tutorials/templates/catalog.png)
 
@@ -59,21 +65,25 @@ To use auto-generated assets, select **[!UICONTROL Browse templates]** and then 
 
 The authentication step appears, prompting you to either create a new account or use an existing account.
 
-#### Existing account
+>[!BEGINTABS]
+
+>[!TAB Use an existing account]
 
 To use an existing account, select [!UICONTROL Existing account] and then select the account that you want to use from the list that appears.
 
 ![The selection page for an existing account with a list of existing accounts you can access.](../../images/tutorials/templates/existing-account.png)
 
-#### New account
+>[!TAB Create a new account]
 
 To create a new account, select **[!UICONTROL New account]**, and then provide your source connection details and account authentication credentials. When finished, select **[!UICONTROL Connect to source]** and allow some time for the new connection to establish.
 
 ![The authentication page for a new account with source connection details and account authentication credentials.](../../images/tutorials/templates/new-account.png)
 
+>[!ENDTABS]
+
 ### Select templates
 
-Once you have authenticated and selected your account, a list of templates appears. Select the preview icon beside a template name to preview sample data from the template.
+Depending on the business type that you selected, a list of templates appears. Select the preview icon ![preview icon](../../images/tutorials/templates/preview-icon.png) beside a template name to preview sample data from the template.
 
 ![A list of templates with the preview icon highlighted.](../../images/tutorials/templates/templates.png)
 
@@ -90,6 +100,22 @@ If you select one or partial items from the list of available templates, all B2B
 >Templates that have already been used will be disabled from selection.
 
 ![The list of templates with the Opportunity Contact Role template selected.](../../images/tutorials/templates/select-template.png)
+
+### Set a schedule
+
+The [!DNL Microsoft Dynamics] and the [!DNL Salesforce] sources both support scheduling dataflows. 
+
+Use the scheduling interface to configure an ingestion schedule for your dataflows. Set your ingestion frequency to **Once** to create a one-time ingestion. 
+
+![The scheduling interface for Dynamics and Salesforce templates.](../../images/tutorials/templates/schedule.png)
+
+Alternatively, you can set your ingestion frequency to **Minute**, **Hour**, **Day**, or **Week**. If schedule your dataflow for multiple ingestions, then you must set an interval to establish a time frame between every ingestion. For example, an ingestion frequency set to **Hour** and an interval set to **15** means that your dataflow is scheduled to ingest data every **15 hours**.
+
+During this step, you can also enable **backfill** and define a column for the incremental ingestion of data. Backfill is used to ingest historical data, while the column you define for incremental ingestion allows new data to be differentiated from existing data.
+
+Once you have completed configuring your ingestion schedule, select **[!UICONTROL Finish]**.
+
+![The scheduling interface for Dynamics and Salesforce templates with backfill enabled.](../../images/tutorials/templates/backfill.png)
  
 ### Review assets {#review-assets}
 
