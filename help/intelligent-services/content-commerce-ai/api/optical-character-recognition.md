@@ -138,7 +138,7 @@ A successful response returns the text that was detected in the `feature_value` 
     {
       "status": 200,
       "analyzer_id": "Feature:image-text-extractor-ocr:Service-b0675160421e404ca3c7ca60f46a5b29",
-      "content_id": "TestImage.jpg",
+      "content_id": "ocr_293.png",
       "result": {
         "response_type": "feature",
         "response": [
@@ -150,7 +150,7 @@ A successful response returns the text that was detected in the `feature_value` 
               },
               {
                 "feature_value": "0.977",
-                "feature_name": "CHEF"
+                "feature_name": "OCR"
               },
               {
                 "feature_value": "success",
