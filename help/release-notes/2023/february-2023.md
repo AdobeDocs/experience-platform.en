@@ -42,13 +42,31 @@ XDM is an open-source specification that provides common structures and definiti
 ​
 | Feature | Description |
 | --- | --- |
-| Field deprecation through the UI | You can now deprecate fields from your schemas after data has been ingested. XDM field deprecation allows you to remove fields from UI view while retaining them for use. You can reveal deprecated fields again if needed, and any segments, queries or downstream solutions that reference the fields will run as usual. |
+| Field deprecation through the UI | You can now [deprecate fields from your schemas after data has been ingested](../../xdm/tutorials/field-deprecation-ui.md). XDM field deprecation allows you to remove fields from UI view while retaining them for use. You can reveal deprecated fields again if needed, and any segments, queries or downstream solutions that reference the fields will run as usual. |
 
 {style="table-layout:auto"}
-​
-For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).
-​
-<!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
+
+**New XDM components**
+
+| Component type | Name | Description |
+| --- | --- | --- |
+| Class | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1669/files) | The XDM Individual Prospect Profile class brings in partner provided IDs. |
+
+{style="table-layout:auto"}
+
+**Updated XDM components**
+
+| Component type | Name | Description |
+| --- | --- | --- |
+| Field group | [[!UICONTROL Frequency Capping Constraints]](https://github.com/adobe/xdm/pull/1641/files) | The [!UICONTROL Frequency Capping Constraints] field group has been updated to support repeat and custom events. |
+| Data type | [[!UICONTROL Web referrer]](https://github.com/adobe/xdm/pull/1666/files) | Web referrer properties have been updated to include `xdm:linkName` and `xdm:linkRegion`. Respectively, these are the name and region of the HTML element that was selected on the previous page. |
+| Field Group | [[!UICONTROL Adobe CJM ExperienceEvent - Message interaction details](https://github.com/adobe/xdm/pull/1665/files) | The Tracker URL filed group was added to the [!UICONTROL Adobe CJM ExperienceEvent]. This tracker provides the URL selected by the user.  |
+| Field Group | [[!UICONTROL Adobe CJM ExperienceEvent - Message interaction detail](https://github.com/adobe/xdm/pull/1668/files) | Removed the empty `meta:enum` property from the URL Tracking Type field. |
+| Data type  | [[!UICONTROL Media information]](https://github.com/adobe/xdm/pull/1667/files) | The regex pattern from the `videoSegment` property in Media information datatype was removed. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).​
 
 ## Query Service {#query-service}
 
