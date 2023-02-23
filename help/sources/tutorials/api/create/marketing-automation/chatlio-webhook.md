@@ -10,7 +10,7 @@ description: Learn how to connect Adobe Experience Platform to Chatlio using the
 
 The following tutorial walks you through the steps to create a [!DNL Chatlio] source connection and create a dataflow to bring [[!DNL Chatlio]](https://chatlio.com/) event data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Getting started
+## Getting started {#getting-started}
 
 This guide requires a working understanding of the following components of Experience Platform:
 
@@ -19,7 +19,7 @@ This guide requires a working understanding of the following components of Exper
 
 The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Chatlio] using the [!DNL Flow Service] API.
 
-## Connect [!DNL Chatlio] to Platform using the [!DNL Flow Service] API
+## Connect [!DNL Chatlio] to Platform using the [!DNL Flow Service] API {#connect-platform-to-flow-api}
 
 The following outlines the steps you need to make in order to authenticate your [!DNL Chatlio] source, create a source connection, and create a dataflow to bring your events data to Experience Platform.
 
@@ -63,7 +63,6 @@ curl -X POST \
 | --- | --- |
 | `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
 | `description` | An optional value that you can include to provide more information on your source connection. |
-| `baseConnectionId` | The base connection ID of [!DNL Chatlio]. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
 | `data.format` | The format of the [!DNL Chatlio] data that you want to ingest. Currently, the only supported data format is `json`. |
 
@@ -255,8 +254,6 @@ The last step towards bringing data from [!DNL Chatlio] to Platform is to create
 
 A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
 
-To schedule an ingestion, you must first set the start time value to epoch time in seconds. Then, you must set the frequency value to one of the five options: `once`, `minute`, `hour`, `day`, or `week`. The interval value designates the period between two consecutive ingestions however, creating a one-time ingestion does not require an interval to be set. For all other frequencies, the interval value must be set to equal or greater than `15`.
-
 **API format**
 
 ```http
@@ -320,7 +317,7 @@ A successful response returns the ID (`id`) of the newly created dataflow. You c
     "etag": "\"9b01c840-0000-0200-0000-63f3163e0000\""
 }
 ```
-### Get your streaming endpoint URL
+### Get your streaming endpoint URL {#get-streaming-endpoint}
 
 With your dataflow created, you can now retrieve your streaming endpoint URL. You will use this endpoint URL to subscribe your source to a webhook, allowing your source to communicate with Experience Platform.
 
@@ -423,26 +420,26 @@ A successful response returns information on your dataflow, including your endpo
 }
 ```
 
-## Appendix 
+## Appendix {#appendix}
 
 The following section provides information on the steps you can to monitor, update, and delete your dataflow.
 
-### Monitor your dataflow
+### Monitor your dataflow {#monitor-dataflow}
 
 Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For complete API examples, read the guide on [monitoring your sources dataflows using the API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
 
-### Update your dataflow
+### Update your dataflow {#update-dataflow}
 
 Update the details of your dataflow, such as its name and description, as well as its run schedule and associated mapping sets by making a PATCH request to the `/flows` endpoint of [!DNL Flow Service] API, while providing the ID of your dataflow. When making a PATCH request, you must provide your dataflow's unique `etag` in the `If-Match` header. For complete API examples, read the guide on [updating sources dataflows using the API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
-### Update your account
+### Update your account {#update-account}
 
 Update the name, description, and credentials of your source account by performing a PATCH request to the [!DNL Flow Service] API while providing your base connection ID as a query parameter. When making a PATCH request, you must provide your source account's unique `etag` in the `If-Match` header. For complete API examples, read the guide on [updating your source account using the API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
-### Delete your dataflow
+### Delete your dataflow {#delete-dataflow}
 
 Delete your dataflow by performing a DELETE request to the [!DNL Flow Service] API while providing the ID of the dataflow you want to delete as part of the query parameter. For complete API examples, read the guide on [deleting your dataflows using the API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
 
-### Delete your account
+### Delete your account {#delete-account}
 
 Delete your account by performing a DELETE request to the [!DNL Flow Service] API while providing the base connection ID of the account you want to delete. For complete API examples, read the guide on [deleting your source account using the API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
