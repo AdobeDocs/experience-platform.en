@@ -10,7 +10,7 @@ type: Tutorial
 >
 >* The functionality to export datasets is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
 >* This beta functionality supports the export of first generation data, as defined in the Real-Time Customer Data Platform [product description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
->* This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Please contact your Adobe representative for more information. 
+>* This functionality is available to customers who have purchased the Real-Time CDP Prime or Ultimate package. Please contact your Adobe representative for more information. 
 
 This article explains the workflow required to use the [!DNL Flow Service API] to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage].
 
@@ -91,7 +91,7 @@ You need these IDs to construct various [!DNL Flow Service] entities. You also n
 
 **Request** 
 
-+++Retrieve [!DNL Connection Spec] for [!DNL Amazon S3]
++++Retrieve [!DNL connection spec] for [!DNL Amazon S3]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -106,7 +106,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-+++[!DNL Amazon S3] - Connection Spec
++++[!DNL Amazon S3] - Connection spec
 
 ```json
 {
@@ -125,7 +125,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Request** 
 
-+++Retrieve [!DNL Connection Spec] for [!DNL Azure Blob Storage]
++++Retrieve [!DNL connection spec] for [!DNL Azure Blob Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
@@ -140,7 +140,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-+++[!DNL Azure Blob Storage] - [!DNL Connection Spec]
++++[!DNL Azure Blob Storage] - [!DNL Connection spec]
 
 ```json
 {
@@ -159,7 +159,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Request** 
 
-+++Retrieve [!DNL Connection Spec] for [!DNL Azure Data Lake Gen 2(ADLS Gen2])
++++Retrieve [!DNL connection spec] for [!DNL Azure Data Lake Gen 2(ADLS Gen2])
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
@@ -174,7 +174,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection Spec]
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec]
 
 ```json
 {
@@ -193,7 +193,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Request** 
 
-+++Retrieve [!DNL Connection Spec] for [!DNL Data Landing Zone(DLZ)]
++++Retrieve [!DNL connection spec] for [!DNL Data Landing Zone(DLZ)]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
@@ -208,7 +208,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-+++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection Spec]
++++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec]
 
 ```json
 {
@@ -227,7 +227,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Request** 
 
-+++Retrieve [!DNL Connection Spec] for [!DNL Google Cloud Storage]
++++Retrieve [!DNL connection spec] for [!DNL Google Cloud Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \
@@ -242,7 +242,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-+++[!DNL Google Cloud Storage] - [!DNL Connection Spec]
++++[!DNL Google Cloud Storage] - [!DNL Connection spec]
 
 ```json
 {
@@ -261,7 +261,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Request** 
 
-+++Retrieve [!DNL Connection Spec] for SFTP
++++Retrieve [!DNL connection spec] for SFTP
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/36965a81-b1c6-401b-99f8-22508f1e6a26' \
@@ -276,7 +276,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-+++SFTP - [!DNL Connection Spec]
++++SFTP - [!DNL Connection spec]
 
 ```json
 {
@@ -293,9 +293,9 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDTABS]
 
-Follow the steps below to set up a dataset dataflow to a cloud storage destination. For some steps, the requests and responses differ between the various cloud storage destinations. In those cases, use the tabs on the page to retrieve the requests and responses specific to the destination that you want to connect and export datasets to. Be sure to use the correct [!DNL connection spe]c and [!DNL flow spec] for the destination you are configuring.
+Follow the steps below to set up a dataset dataflow to a cloud storage destination. For some steps, the requests and responses differ between the various cloud storage destinations. In those cases, use the tabs on the page to retrieve the requests and responses specific to the destination that you want to connect and export datasets to. Be sure to use the correct [!DNL connection spec] and [!DNL flow spec] for the destination you are configuring.
 
-## Retrieve a list of datasets {#retrieve-list-of-available-destinations}
+## Retrieve a list of datasets {#retrieve-list-of-available-datasets}
 
 ![Diagram showing step 1 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-retrieve-datasets.png)
 
@@ -403,9 +403,9 @@ Note that to retrieve eligible datasets, the [!DNL connection spec] ID used in t
 
 A successful response contains a list of datasets eligible for activation. These datasets can be used when constructing the source connection in the next step.
 
-For information about the various response parameters for each returned dataset, refer to the Datasets API documentation.
+For information about the various response parameters for each returned dataset, refer to the [Datasets API developer documentation](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
 
-## Create a Source Connection {#create-source-connection}
+## Create a source connection {#create-source-connection}
 
 ![Diagram showing step 2 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png)
 
@@ -415,7 +415,7 @@ After retrieving the list of datasets that you want to export, you can create a 
 
 **Request** 
 
-+++Create Source Connection - Request
++++Create source connection - Request
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -451,7 +451,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Response**
 
-+++Create Source Connection - Response
++++Create source connection - Response
 
 ```json
 {
@@ -468,23 +468,22 @@ A successful response returns the ID (`id`) of the newly created source connecti
 
 Please also remember that:
 
-The source connection created in this step needs to be linked to a dataflow for its datasets to be activated to a destination. See the [create a dataflow](#create-dataflow) section for information on how to link a source connection to a dataflow.
+* The source connection created in this step needs to be linked to a dataflow for its datasets to be activated to a destination. See the [create a dataflow](#create-dataflow) section for information on how to link a source connection to a dataflow.
+* The dataset IDs of a source connection cannot be modified after creation. If you need to add or remove datasets from a source connection, you must create a new source connection and link the ID of the new source connection to the dataflow. 
 
-The dataset IDs of a source connection cannot be modified after creation. If you need to add or remove datasets from a source connection, you must create a new source connection and link the ID of the new source connection to the dataflow). 
-
-## Create a (Target) Base Connection {#create-base-connection}
+## Create a (target) base connection {#create-base-connection}
 
 ![Diagram showing step 3 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
 
-A base connection securely stores the credentials to your destination. Depending on the destination type, the credentials needed to authenticate against that destination can vary. To find these authentication parameters, first retrieve the connection spec for your desired destination as described in the section [Gather connection specs and flow specs](#gather-connection-spec-flow-spec) and then look at the `authSpec` of the response. Reference the tabs below for the `authSpec` properties of all supported destinations.
+A base connection securely stores the credentials to your destination. Depending on the destination type, the credentials needed to authenticate against that destination can vary. To find these authentication parameters, first retrieve the [!DNL connection spec] for your desired destination as described in the section [Gather connection specs and flow specs](#gather-connection-spec-flow-spec) and then look at the `authSpec` of the response. Reference the tabs below for the `authSpec` properties of all supported destinations.
 
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
 
-+++[!DNL Amazon S3] - Connection spec showing auth spec
++++[!DNL Amazon S3] - [!DNL Connection spec] showing [!DNL auth spec]
 
-Note the highlighted line with inline comments in the connection spec example below, which provide additional information about where to find the authentication parameters in the connection spec.
+Note the highlighted line with inline comments in the [!DNL connection spec] example below, which provide additional information about where to find the authentication parameters in the [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -529,9 +528,9 @@ Note the highlighted line with inline comments in the connection spec example be
 
 >[!TAB Azure Blob Storage]
 
-+++[!DNL Azure Blob Storage] - Connection spec showing auth spec
++++[!DNL Azure Blob Storage] - [!DNL Connection spec] showing [!DNL auth spec]
 
-Note the highlighted line with inline comments in the connection spec example below, which provide additional information about where to find the authentication parameters in the connection spec.
+Note the highlighted line with inline comments in the [!DNL connection spec] example below, which provide additional information about where to find the authentication parameters in the [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -570,9 +569,9 @@ Note the highlighted line with inline comments in the connection spec example be
 
 >[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Connection spec showing auth spec
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] showing [!DNL auth spec]
 
-Note the highlighted line with inline comments in the connection spec example below, which provide additional information about where to find the authentication parameters in the connection spec.
+Note the highlighted line with inline comments in the [!DNL connection spec] example below, which provide additional information about where to find the authentication parameters in the [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -626,11 +625,11 @@ Note the highlighted line with inline comments in the connection spec example be
 
 >[!TAB Data Landing Zone(DLZ)]
 
-+++[!DNL Data Landing Zone(DLZ)] - Connection spec showing auth spec
++++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] showing [!DNL auth spec]
 
 >[!NOTE]
 >
->The Data Landing Zone destination does not require an auth spec.
+>The Data Landing Zone destination does not require an [!DNL auth spec].
 
 ```json
 {
@@ -648,9 +647,9 @@ Note the highlighted line with inline comments in the connection spec example be
 
 >[!TAB Google Cloud Storage]
 
-+++[!DNL Google Cloud Storage] - Connection spec showing auth spec
++++[!DNL Google Cloud Storage] - [!DNL Connection spec] showing [!DNL auth spec]
 
-Note the highlighted line with inline comments in the connection spec example below, which provide additional information about where to find the authentication parameters in the connection spec.
+Note the highlighted line with inline comments in the [!DNL connection spec] example below, which provide additional information about where to find the authentication parameters in the [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -693,13 +692,13 @@ Note the highlighted line with inline comments in the connection spec example be
 
 >[!TAB SFTP]
 
-+++SFTP - Connection spec showing auth spec
++++SFTP - [!DNL Connection spec] showing [!DNL auth spec]
 
 >[!NOTE]
 >
->The SFTP destination contains two separate items in the auth spec, as it supports both password and SSH key authentication.
+>The SFTP destination contains two separate items in the [!DNL auth spec], as it supports both password and SSH key authentication.
 
-Note the highlighted line with inline comments in the connection spec example below, which provide additional information about where to find the authentication parameters in the connection spec. 
+Note the highlighted line with inline comments in the [!DNL connection spec] example below, which provide additional information about where to find the authentication parameters in the [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -791,7 +790,7 @@ Using the properties specified in the authentication spec (i.e. `authSpec` from 
 
 **Request** 
 
-+++[!DNL Amazon S3] - Base Connection Request
++++[!DNL Amazon S3] - Base connection request
 
 >[!TIP]
 >
@@ -827,7 +826,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Response**
 
-+++[!DNL Amazon S3] Base Connection Response
++++[!DNL Amazon S3] Base connection response
 
 ```json
 {
@@ -842,7 +841,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Request** 
 
-+++[!DNL Azure Blob Storage] - Base Connection Request
++++[!DNL Azure Blob Storage] - Base connection request
 
 >[!TIP]
 >
@@ -877,7 +876,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Response**
 
-+++[!DNL Azure Blob Storage] - Base Connection Response
++++[!DNL Azure Blob Storage] - Base connection response
 
 ```json
 {
@@ -892,7 +891,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Request** 
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Base Connection Request
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Base connection request
 
 >[!TIP]
 >
@@ -930,7 +929,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Response**
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] Base Connection Response
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Base connection response
 
 ```json
 {
@@ -945,7 +944,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Request** 
 
-+++[!DNL Data Landing Zone(DLZ)] - Base Connection Request
++++[!DNL Data Landing Zone(DLZ)] - Base connection request
 
 >[!TIP]
 >
@@ -975,7 +974,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Response**
 
-+++[!DNL Data Landing Zone] Base Connection Response
++++[!DNL Data Landing Zone] - Base connection response
 
 ```json
 {
@@ -990,7 +989,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Request** 
 
-+++[!DNL Google Cloud Storage] - Base Connection Request
++++[!DNL Google Cloud Storage] - Base connection request
 
 >[!TIP]
 >
@@ -1026,7 +1025,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Response**
 
-+++[!DNL Google Cloud Storage] Base Connection Response
++++[!DNL Google Cloud Storage] - Base connection response
 
 ```json
 {
@@ -1041,7 +1040,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Request** 
 
-+++SFTP with password - Base Connection Request
++++SFTP with password - Base connection request
 
 >[!TIP]
 >
@@ -1076,7 +1075,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++SFTP with SSH key - Base Connection Request
++++SFTP with SSH key - Base connection request
 
 >[!TIP]
 >
@@ -1113,7 +1112,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Response**
 
-+++SFTP Base Connection Response
++++SFTP - Base connection response
 
 ```json
 {
@@ -1126,9 +1125,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-Note the Connection ID from the response. This ID will be required in the next step when creating the target connection. 
+Note the connection ID from the response. This ID will be required in the next step when creating the target connection. 
 
-## Create a Target Connection {#create-target-connection}
+## Create a target connection {#create-target-connection}
 
 ![Diagram showing step 4 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
@@ -1138,9 +1137,9 @@ Next, you need to create a target connection which stores the export parameters 
 
 >[!TAB Amazon S3]
 
-+++[!DNL Amazon S3] - Connection spec showing Target Connection Parameters
++++[!DNL Amazon S3] - [!DNL Connection spec] showing target connection parameters
 
-Note the highlighted lines with inline comments in the connection spec example below, which provide additional information about where to find the target spec parameters in the connection spec. You can see also in the example below which target parameters are *not* applicable to dataset export destinations.
+Note the highlighted lines with inline comments in the [!DNL connection spec] example below, which provide additional information about where to find the [!DNL target spec] parameters in the connection spec. You can see also in the example below which target parameters are *not* applicable to dataset export destinations.
 
 ```json {line-numbers="true" start-line="1" highlight="10,41,56"}
 {
@@ -1224,9 +1223,9 @@ Note the highlighted lines with inline comments in the connection spec example b
 
 >[!TAB Azure Blob Storage]
 
-+++[!DNL Azure Blob Storage] - Connection spec showing Target Connection Parameters
++++[!DNL Azure Blob Storage] - [!DNL Connection spec] showing target connection parameters
 
-Note the highlighted lines with inline comments in the connection spec example below, which provide additional information about where to find the target spec parameters in the connection spec. You can see also in the example below which target parameters are *not* applicable to dataset export destinations.
+Note the highlighted lines with inline comments in the [!DNL connection spec] example below, which provide additional information about where to find the [!DNL target spec] parameters in the connection spec. You can see also in the example below which target parameters are *not* applicable to dataset export destinations.
 
 ```json {line-numbers="true" start-line="1" highlight="10,29,44"}
 {
@@ -1299,9 +1298,9 @@ Note the highlighted lines with inline comments in the connection spec example b
 
 >[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Connection spec showing Target Connection Parameters
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] showing target connection parameters
 
-Note the highlighted lines with inline comments in the connection spec example below, which provide additional information about where to find the target spec parameters in the connection spec. You can see also in the example below which target parameters are *not* applicable to dataset export destinations.
+Note the highlighted lines with inline comments in the [!DNL connection spec] example below, which provide additional information about where to find the [!DNL target spec] parameters in the connection spec. You can see also in the example below which target parameters are *not* applicable to dataset export destinations.
 
 ```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
@@ -1365,9 +1364,9 @@ Note the highlighted lines with inline comments in the connection spec example b
 
 >[!TAB Data Landing Zone(DLZ)]
 
-+++[!DNL Data Landing Zone(DLZ)] - Connection spec showing Target Connection Parameters
++++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] showing target connection parameters
 
-Note the highlighted lines with inline comments in the connection spec example below, which provide additional information about where to find the target spec parameters in the connection spec. You can see also in the example below which target parameters are *not* applicable to dataset export destinations.
+Note the highlighted lines with inline comments in the [!DNL connection spec] example below, which provide additional information about where to find the [!DNL target spec] parameters in the connection spec. You can see also in the example below which target parameters are *not* applicable to dataset export destinations.
 
 ```json {line-numbers="true" start-line="1" highlight="9,21,36"}
 "items": [
@@ -1430,9 +1429,9 @@ Note the highlighted lines with inline comments in the connection spec example b
 
 >[!TAB Google Cloud Storage]
 
-+++[!DNL Google Cloud Storage] - Connection spec showing Target Connection Parameters
++++[!DNL Google Cloud Storage] - [!DNL Connection spec] showing target connection parameters
 
-Note the highlighted lines with inline comments in the connection spec example below, which provide additional information about where to find the target spec parameters in the connection spec. You can see also in the example below which target parameters are *not* applicable to dataset export destinations.
+Note the highlighted lines with inline comments in the [!DNL connection spec] example below, which provide additional information about where to find the [!DNL target spec] parameters in the connection spec. You can see also in the example below which target parameters are *not* applicable to dataset export destinations.
 
 ```json {line-numbers="true" start-line="1" highlight="10,29,44"}
 {
@@ -1504,9 +1503,9 @@ Note the highlighted lines with inline comments in the connection spec example b
 
 >[!TAB SFTP]
 
-+++SFTP - Connection spec showing Target Connection Parameters
++++SFTP - [!DNL Connection spec] showing target connection parameters
 
-Note the highlighted lines with inline comments in the connection spec example below, which provide additional information about where to find the target spec parameters in the connection spec. You can see also in the example below which target parameters are *not* applicable to dataset export destinations.
+Note the highlighted lines with inline comments in the [!DNL connection spec] example below, which provide additional information about where to find the [!DNL target spec] parameters in the connection spec. You can see also in the example below which target parameters are *not* applicable to dataset export destinations.
 
 ```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
@@ -1579,11 +1578,11 @@ By using the above spec, you can construct a target connection request specific 
 
 **Request** 
 
-+++[!DNL Amazon S3]- Target Connection Request
++++[!DNL Amazon S3] - Target connection request
 
 >[!TIP]
 >
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) section of the Amazon S3 destination documentation page.
+>For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) section of the [!DNL Amazon S3] destination documentation page.
 >For other supported values of `datasetFileType`, see the API reference documentation.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
@@ -1617,7 +1616,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Response**
 
-+++Target Connection - Response
++++Target connection - Response
 
 ```json
 {
@@ -1632,11 +1631,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Request** 
 
-+++[!DNL Azure Blob Storage] - Target Connection Request
++++[!DNL Azure Blob Storage] - Target connection request
 
 >[!TIP]
 >
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) section of the Azure Blob Storage destination documentation page.
+>For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) section of the [!DNL Azure Blob Storage] destination documentation page.
 >For other supported values of `datasetFileType`, see the API reference documentation.
 
 
@@ -1671,7 +1670,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Response**
 
-+++Target Connection - Response
++++Target connection - Response
 
 ```json
 {
@@ -1686,7 +1685,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Request** 
 
-+++[!DNL Azure Blob Storage] - Target Connection Request
++++[!DNL Azure Blob Storage] - Target connection request
 
 >[!TIP]
 >
@@ -1723,7 +1722,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Response**
 
-+++Target Connection - Response
++++Target connection - Response
 
 ```json
 {
@@ -1738,7 +1737,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Request** 
 
-+++[!DNL Data Landing Zone] - Target Connection Request
++++[!DNL Data Landing Zone] - Target connection request
 
 >[!TIP]
 >
@@ -1775,7 +1774,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Response**
 
-+++Target Connection - Response
++++Target connection - Response
 
 ```json
 {
@@ -1790,7 +1789,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Request** 
 
-+++[!DNL Google Cloud Storage] - Target Connection Request
++++[!DNL Google Cloud Storage] - Target connection request
 
 >[!TIP]
 >
@@ -1829,7 +1828,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Response**
 
-+++Target Connection - Response
++++Target connection - Response
 
 ```json
 {
@@ -1844,7 +1843,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Request** 
 
-+++SFTP - Target Connection Request
++++SFTP - Target connection request
 
 >[!TIP]
 >
@@ -1908,7 +1907,7 @@ The final step in the destination configuration is to set up a dataflow. A dataf
 
 **Request** 
 
-+++Create Dataset Dataflow to [!DNL Amazon S3] destination - Request
++++Create dataset dataflow to [!DNL Amazon S3] destination - Request
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -1961,7 +1960,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Request** 
 
-+++Create Dataset Dataflow to [!DNL Azure Blob Storage] destination - Request
++++Create dataset dataflow to [!DNL Azure Blob Storage] destination - Request
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -2014,7 +2013,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Request** 
 
-+++Create Dataset Dataflow to [!DNL Azure Data Lake Gen 2(ADLS Gen2)] destination - Request
++++Create dataset dataflow to [!DNL Azure Data Lake Gen 2(ADLS Gen2)] destination - Request
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -2067,7 +2066,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Request** 
 
-+++Create Dataset Dataflow to [!DNL Data Landing Zone] destination - Request
++++Create dataset dataflow to [!DNL Data Landing Zone] destination - Request
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -2120,7 +2119,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Request** 
 
-+++Create Dataset Dataflow to [!DNL Google Cloud Storage] destination - Request
++++Create dataset dataflow to [!DNL Google Cloud Storage] destination - Request
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -2173,7 +2172,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Request** 
 
-+++Create Dataset Dataflow to SFTP destination - Request
++++Create dataset dataflow to SFTP destination - Request
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -2236,7 +2235,7 @@ To check the executions of a dataflow, use the Dataflow Runs API:
 
 **Request** 
 
-+++Get Dataflow Runs - Request
++++Get dataflow runs - Request
 
 In the request to retrieve dataflow runs, add as query parameter the dataflow ID that you obtained in the previous step, when creating the dataflow.
 
@@ -2253,7 +2252,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-+++Get Dataflow Runs - Response
++++Get dataflow runs - Response
 
 ```json
 {
