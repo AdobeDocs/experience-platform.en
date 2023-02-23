@@ -69,9 +69,8 @@ Once you have gathered the required artifacts, copy and paste the connection spe
       }
     }
   },
-  "authSpec": [
-
-  ],
+  "authSpec": [],
+  "name": "generic-streaming",
   "permissionsInfo": {
     "view": [
       {
@@ -92,8 +91,10 @@ Once you have gathered the required artifacts, copy and paste the connection spe
       }
     ]
   },
+  "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
   "sourceSpec": {
     "attributes": {
+      "authRequired": false,
       "uiAttributes": {
         "documentationLink": "http://www.adobe.com/go/understanding-data-streaming-ingestion-en",
         "isSource": true,
@@ -102,16 +103,16 @@ Once you have gathered the required artifacts, copy and paste the connection spe
           "key": "streaming"
         },
         "icon": {
-          "key": "Generic-Streaming"
+          "key": "generic"
         },
         "description": {
-          "text": "Generic Streaming Connector"
+          "text": "Generic Streaming For Authentication Testing 2"
         },
         "label": {
-          "text": "Generic"
+          "text": "Generic Streaming For Authentication Testing 2"
         },
         "frequency": {
-          "text": "streaming"
+          "text": "Generic Streaming"
         }
       }
     }
@@ -247,6 +248,7 @@ A successful response returns the newly created connection specification, includ
       "type": "generic-streaming",
       "sourceSpec": {
         "attributes": {
+          "authRequired": false,
           "uiAttributes": {
             "documentationLink": "http://www.adobe.com/go/understanding-data-streaming-ingestion-en",
             "isSource": true,
