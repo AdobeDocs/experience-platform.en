@@ -7,7 +7,7 @@ description: This Adobe Experience Platform event forwarding extension sends Ado
 
 [[!DNL Twitter]](https://www.twitter.com) is an online social media and social networking service, on which users post and interact with 280-character-long messages known as tweets. Users can interact with Twitter using a browser, mobile frontend software, or programmatically through its [APIs](https://developer.twitter.com/en/docs/twitter-api)
 
-The [!DNL Twitter Web Conversions]] API [event forwarding](../../../ui/event-forwarding/overview.md) extension allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL Twitter]. This document covers the use cases of the extension, how to install it, and how to integrate its capabilities in your event forwarding [rules](../../../ui/managing-resources/rules.md).
+The [!DNL Twitter Web Conversions] API [event forwarding](../../../ui/event-forwarding/overview.md) extension allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL Twitter]. This document covers the use cases of the extension, how to install it, and how to integrate its capabilities in your event forwarding [rules](../../../ui/managing-resources/rules.md).
 
 [!DNL Twitter] requires [OAuth 1.0](https://developer.twitter.com/en/docs/authentication/oauth-1-0a) for authentication with the [!DNL Twitter] [!DNL Web Conversions] API.
 
@@ -44,15 +44,15 @@ If the [!DNL Twitter] extension is not yet installed, Create an event forwarding
 Navigate to [!UICONTROL Extensions] > [!UICONTROL Catalog], search for Twitter, then select [!UICONTROL Install] on the [!DNL Twitter] Extension. Platform UI screenshot example for installing the [!DNL Twitter] extension.
 
 Configure the [!DNL Twitter] extension
-[!IMPORTANT]
-
-Depending on your implementation needs, you may need to create a schema, data elements, and a dataset before configuring the extension. Please review all the configuration steps before starting in order to determine which entities you need to set up for your use case.
+>[!IMPORTANT]
+>
+>Depending on your implementation needs, you may need to create a schema, data elements, and a dataset before configuring the extension. Please review all the configuration steps before starting in order to determine which entities you need to set up for your use case.
 
 Navigate to [!UICONTROL Extensions] > [!UICONTROL Installed] tab, search for Twitter, and then select [!UICONTROL Configure] on the [!DNL Twitter] Extension. Platform UI screenshot example for configuring the [!DNL Twitter] extension.
 
 Next, input the [!UICONTROL Consumer Key], [!UICONTROL Consumer Secret], [!UICONTROL Token Secret], [!UICONTROL Access Token] and [!UICONTROL Pixel Id] values with the details gathered in the configuration details section, Finally select [!UICONTROL Save]. Platform UI screenshot example for the [!DNL Twitter] extension input.
 
-## Configure an event forwarding rule {config-rule}
+## Configure an event forwarding rule {#config-rule}
 
 Create a new event forwarding Rule. Platform UI screenshot example to add an event forwarding rule.
 
@@ -74,7 +74,7 @@ If the event collection and [!DNL Experience Platform] integration were successf
 
 This guide covered how to send conversion events to [!DNL Twitter] using event forwarding. For more information on these underlying technologies, refer to the official documentation:
 
-* [!DNL Twitter APIs](https://developer.twitter.com/en/docs/twitter-api) 
-* [!DNL Twitter Web conversion API](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions)
-* [!DNL Twitter User Access Token](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) 
+* [[!DNL Twitter APIs]](https://developer.twitter.com/en/docs/twitter-api) 
+* [[!DNL Twitter Web conversion API]](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions)
+* [[!DNL Twitter User Access Token]](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) 
 * [Pixel ID and conversion tracking](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html)
