@@ -118,12 +118,12 @@ curl -w'\n' -i -X POST https://sensei-stage-ue1.adobe.io/sensei-core/v2/predict 
 | Property | Description | Mandatory |
 | --- | --- | --- |
 | `application-id` | The ID of the created application. | Yes |
-| `top_n` | An array that contains a JSON object with each object in the array representing a document. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. Any of the remaining properties outlined below in this table can be overridden from within `data`. | Yes |
-| `language` | Language of input text. The default value is `en`. | No |
-| `content-type` | Used to indicate whether the input is part of the request body or a signed url for an S3 bucket. The default for this property is `inline`. | Yes |
-| `encoding` | The encoding format of input text. This can be `utf-8` or `utf-16`. The default for this property is `utf-8`. | No |
-| `threshold` | The threshold of score (0 to 1) above which the results need to be returned. Use the value `0` to return all results. The default for this property is `0`. | No |
-| `top-N` | The number of results to be returned (cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
+| `top_n` | The number of results to be returned (cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | Yes |
+| `min_relevance` | Language of input text. The default value is `en`. | No |
+| `min_key_phrase_length` | Used to indicate whether the input is part of the request body or a signed url for an S3 bucket. The default for this property is `inline`. | Yes |
+| `max_key_phrase_length` | The encoding format of input text. This can be `utf-8` or `utf-16`. The default for this property is `utf-8`. | No |
+| `last_semantic_unit_type` | The threshold of score (0 to 1) above which the results need to be returned. Use the value `0` to return all results. The default for this property is `0`. | No |
+| `entity_types` | The number of results to be returned (cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
 | `custom` | Any custom parameters to be passed. This property requires a valid JSON object to function. See the [appendix](#appendix) for more information on the custom parameters. | No |
 | `content-id` | The unique ID for the data element thats returned in the response. If this is not passed, an auto-generated ID is assigned. | No |
 | `content` | The content used by the keyword extraction service. The content can be raw text ('inline' content-type). <br> If the content is a file on S3 ('s3-bucket' content-type), pass the signed url. When content is part of request-body, the list of data elements should have only one object. If more than one object is passed, only the first object is processed. | Yes |
