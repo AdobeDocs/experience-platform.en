@@ -145,7 +145,7 @@ With your webhook URL created, you can now set up your reporting webhook using t
 
 In the [!DNL Customer.io] user interface, input your [webhook URL](#get-streaming-endpoint-url) in the [!DNL WEBHOOK ENDPOINT] field.
 
-![[DNL Customer.io] UI screenshot showing the webhook endpoint field](../../../../images/tutorials/create/marketing-automation/customerio-webhook/webhook.png)
+![The Customer.io user interface showing the webhook endpoint field](../../../../images/tutorials/create/marketing-automation/customerio-webhook/webhook.png)
 
 >[!TIP]
 >
@@ -157,11 +157,11 @@ By following this tutorial you have successfully configured a streaming dataflow
 
 ## Additional resources {#additional-resources}
 
-The sections below provide additional resources that you can refer to when using the [DNL Customer.io] source.
+The sections below provide additional resources that you can refer to when using the [!DNL Customer.io] source.
 
 ### Guardrails {#guardrails}
 
-For information on guardrails, please refer to the [[DNL Customer.io] timeouts and failures page](https://customer.io/docs/webhooks/#timeouts-and-failures).
+For information on guardrails, please refer to the [[!DNL Customer.io] timeouts and failures page](https://customer.io/docs/webhooks/#timeouts-and-failures).
 
 ### Validation {#validation}
 
