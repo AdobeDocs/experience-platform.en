@@ -31,6 +31,8 @@ The following request checks if text is present based on the input image provide
 >
 >`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. Contact the Content and Commerce AI beta team to receive your `analyzer_id` for this service.
 
+Execution with inline image:
+
 ```SHELL
 curl -w'\n' -i -X POST https://sensei-va6.adobe.io/services/v2/predict \
 -H 'Prefer: respond-async, wait=120' \
@@ -72,19 +74,57 @@ curl -w'\n' -i -X POST https://sensei-va6.adobe.io/services/v2/predict \
 }'
 ```
 
+Execution with URL:
+
+```SHELL
+curl -w'\n' -i -X POST https://sensei-va6.adobe.io/services/v2/predict \
+-H 'Prefer: respond-async, wait=120' \
+-H 'content-type: multipart/form-data' \
+-H "authorization: Bearer $PRODTOKEN" \
+-H 'x-api-key: AdobeSenseiPredictServiceProdKey' \
+-F 'contentAnalyzerRequests={
+  "sensei:name": "Feature:cintel-object-detection:Service-b9ace8b348b6433e9e7d82371aa16690",
+  "sensei:invocation_mode": "asynchronous",
+  "sensei:invocation_batch": false,
+  "sensei:engines": [
+    {
+      "sensei:execution_info": {
+        "sensei:engine": "Feature:cintel-object-detection:Service-b9ace8b348b6433e9e7d82371aa16690"
+      },
+      "sensei:inputs": {
+        "documents": [
+        {
+          "repo:path": "https://research.adobe.com/wp-content/uploads/2019/10/Interns_Gabby_Luis_byClaire.jpg",
+          "sensei:repoType": "HTTP",
+          "dc:format": "image/jpg"
+        }
+        ]
+      },
+      "sensei:params": {
+        "correct_with_dictionary": true
+      },
+      "sensei:outputs":{
+        "result" : {
+          "sensei:multipart_field_name" : "result",
+          "dc:format": "application/json"
+        }
+      }
+    }
+  ]
+}'
+```
+
 | Property | Description | Mandatory |
 | --- | --- | --- |
-| `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the [!DNL Sensei Content Frameworks] are used. For custom services, please contact the Content and Commerce AI team to set up a custom ID. | Yes |
-| `application-id` | The ID of the application created. | Yes |
-| `data` | An array that contains a JSON object with each object in the array representing one image passed. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. Any of the remaining properties outlined below in this table can be overridden from within `data`. | Yes |
-| `language` | Language of input text. The default value is `en`. | No |
-| `content-type` | Used to indicate whether the input is part of the request body or a signed url for an S3 bucket. The default for this property is `inline`. | No |
-| `encoding` | The file format of the input image. Currently only JPEG and PNG images can be processed. The default for this property is `jpeg`. | No |
-| `threshold` | The threshold of score (0 to 1) above which the results need to be returned. Use the value `0` to return all results. The default for this property is `0`. | No |
-| `top-N` | The number of results to be returned (cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
-| `custom` | Any custom parameters to be passed. This property requires a valid JSON object to function. | No |
-| `content-id` | The unique ID for the data element thats returned in the response. If this is not passed, an auto-generated ID is assigned. | No |
-| `content` | The content can be raw image ('inline' content-type). <br> If the content is a file on S3 ('s3-bucket' content-type), pass the signed URL. | Yes |
+| `documents` | List of json elements with each item in the list representing one image Any parameters passed as part of this list, overrides the global parameter specified outside the list, for the corresponding list element. | Yes |
+| `sensei:multipart_field_name` | field_name to read input file path from. | Yes |
+| `repo:path` | presigned url to image asset. | Yes |
+| `sensei:repoType` | “HTTP” (for presigned-url). | No |
+| `dc:format` | Encoding format of input image.Only image formats like jpeg, jpg, png and tiff are allowed for image encoding. The dc:format is matched against allowed formats. | No |
+| `correct_with_dictionary` | Whether to correct the words with an English dictionary? If this is not turned on, you could potentially have non-English words recognized. Default is True: turned on.) Note that when the dictionary is turned on, it is not necessary that you always get an English word. We try to correct it, but if it is not possible within a certain edit distance, we return the original word. | No |
+| `filter_with_dictionary` | Whether to filter the words to contain only the words from the English dictionary? If this is turned on, the returned words will always belong to the large English word list comprising 470k words. | No |
+| `min_probability` | What is the minimum probability for the recognized words? Only the words that are extracted from the image have a greater probability than min_probability are returned by the service. The default value is set at 0.2. | No |
+| `min_relevance` | What is the minimum relevance for the recognized words? Only the words that are extracted from the image have greater relevance than min_relevance are returned by the service. The default value is set at 0.01. The relevance is computed as the fraction of the area of the extracted text’s bounding box in comparison to the full image. 0.01 would translate to a text occupying at least 1% of the image. | No |
 
 **Response**
 

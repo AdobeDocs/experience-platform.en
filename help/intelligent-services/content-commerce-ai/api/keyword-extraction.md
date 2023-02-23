@@ -91,7 +91,7 @@ curl -w'\n' -i -X POST https://sensei-stage-ue1.adobe.io/sensei-core/v2/predict 
       "sensei:inputs": {
         "documents": [
           {
-            "repo:path": "https://nikotatmg.s3.us-east-2.amazonaws.com/simple-text.pdf",
+            "repo:path": "https://ccaiblobstorage.blob.core.windows.net/sample-text/simple-text.pdf?sp=r&st=2023-02-22T22:26:24Z&se=2024-02-23T06:26:24Z&spr=https&sv=2021-06-08&sr=b&sig=Glsr4qIUVphVcOONviBNwz96N5M%2FEZZL0AM2Ig2xc30%3D",
             "sensei:repoType": "HTTP",
             "dc:format": "application/pdf"
           }
@@ -117,9 +117,8 @@ curl -w'\n' -i -X POST https://sensei-stage-ue1.adobe.io/sensei-core/v2/predict 
 
 | Property | Description | Mandatory |
 | --- | --- | --- |
-| `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the [!DNL Sensei Content Frameworks] are used. For custom services, please contact the Content and Commerce AI team to set up a custom ID. | Yes |
 | `application-id` | The ID of the created application. | Yes |
-| `data` | An array that contains a JSON object with each object in the array representing a document. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. Any of the remaining properties outlined below in this table can be overridden from within `data`. | Yes |
+| `top_n` | An array that contains a JSON object with each object in the array representing a document. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. Any of the remaining properties outlined below in this table can be overridden from within `data`. | Yes |
 | `language` | Language of input text. The default value is `en`. | No |
 | `content-type` | Used to indicate whether the input is part of the request body or a signed url for an S3 bucket. The default for this property is `inline`. | Yes |
 | `encoding` | The encoding format of input text. This can be `utf-8` or `utf-16`. The default for this property is `utf-8`. | No |
