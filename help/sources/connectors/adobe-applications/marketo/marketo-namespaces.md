@@ -1,11 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Marketo source connector;namespaces;schemas;b2b;B2B
-solution: Experience Platform
 title: B2B namespaces and schemas
 description: This document provides an overview of custom namespaces required when creating a B2B source connector.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 ---
 # B2B namespaces and schemas
+
+>[!NOTE]
+>
+>You can use templates in the Adobe Experience Platform UI to expedite your asset creation for B2B and B2C data. For more information, read the guide on [using templates in Platform UI](../../../tutorials/ui/templates.md).
 
 This document provides information on the underlying set up for the namespaces and schemas to be used with B2B sources. This document also provides details around setting up your Postman automation utility required for generating B2B namespaces and schemas.
 
