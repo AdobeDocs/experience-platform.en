@@ -1,22 +1,14 @@
 # User Access
 
-<InlineAlert variant="info" slots="text"/>
+>[!WARNING]
+>
+> As we make the transition from beta (Project Griffon) to being generally available (as Assurance) to all Adobe Experience Cloud customers - access to Project Griffon / Assurance is changing! Access to Assurance will be managed through the [Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html)
 
-## Project Griffon will be Assurance!
+## Set ap access
 
-We're pleased to announce that Project Griffon will be generally available to all Adobe Experience Cloud customers as Assurance. To learn more about this transition see [here](./index.md).
-
-<InlineAlert variant="warning" slots="header, text"/>
-
-User Access Is Changing
-
-As we make the transition from beta (Project Griffon) to being generally available (as Assurance) to all Adobe Experience Cloud customers - access to Project Griffon / Assurance is changing! Access to Assurance will be managed through the [Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html)
-
-## Set Up Access
-
-<InlineAlert variant="info" slots="text"/>
-
-Your company's Adobe Experience Cloud administrator will be able to help and perform the following changes.
+>[!NOTE]
+>
+>Your company's Adobe Experience Cloud administrator will be able to help and perform the following changes.
 
 To receive or to maintain uninterrupted access to Project Griffon / Assurance, ensure that the following steps are completed in Admin Console:
 
