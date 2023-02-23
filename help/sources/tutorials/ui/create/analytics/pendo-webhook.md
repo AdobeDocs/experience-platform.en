@@ -19,7 +19,11 @@ This tutorial requires a working understanding of the following components of Ex
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-## Prerequisites - Sample JSON to define source schema for [!DNL Pendo] {#prerequisites-json-schema}
+## Prerequisites {#prerequisites}
+
+The following section provides information on prerequisites to complete before you can create a [!DNL Pendo] source connection.
+
+### Sample JSON to define the source schema for [!DNL Pendo] {#prerequisites-json-schema}
 
 Before creating a [!DNL Pendo] source connection, you will require a source schema to be provided. You can use the below JSON.
 
@@ -37,27 +41,25 @@ Before creating a [!DNL Pendo] source connection, you will require a source sche
 }
 ```
 
-Refer to the https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks
+For more information refer to the [[!DNL Pendo] guide on webhooks](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks).
 
-### Create a Platform schema for [!DNL Pendo]
+### Create a Platform schema for [!DNL Pendo] {#create-platform-schema}
 
-Before creating a [!DNL Pendo] source connection, you must also ensure that you first create a Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
+You must also ensure that you first create a Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
 ![Platform UI screenshot showing an example schema for Pendo](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
 
-### Integrate [!DNL Pendo] with your webhook
-
-## Connect your [!DNL Pendo] account
+## Connect your [!DNL Pendo] account {#connect-account}
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *Marketing automation* category, select **[!UICONTROL Pendo]**, and then select **[!UICONTROL Add data]**.
+Under the *Analytics* category, select **[!UICONTROL Pendo]**, and then select **[!UICONTROL Add data]**.
 
 ![Platform UI screenshot for catalog with Pendo card](../../../../images/tutorials/create/analytics-pendo-webhook/catalog.png)
 
-## Select data
+## Select data {#select-data}
 
 The **[!UICONTROL Select data]** step appears, providing an interface for you to select the data that you bring to Platform.
 
@@ -74,7 +76,7 @@ When finished, select **[!UICONTROL Next]**.
 
 ![The preview step of the sources workflow.](../../../../images/tutorials/create/analytics-pendo-webhook/preview.png)
 
-## Dataflow detail
+## Dataflow detail {#dataflow-detail}
 
 The **Dataflow detail** step appears, providing you with options to use an existing dataset or establish a new dataset for your dataflow, as well as an opportunity to provide a name and description for your dataflow. During this step, you can also configure settings for Profile ingestion, error diagnostics, partial ingestion, and alerts.
 
@@ -92,13 +94,13 @@ The mappings listed below are mandatory and should be setup before proceeding to
 
 | Target Field | Description |
 | --- | --- |
-| `uniqueId` | [!DNL Pendo] identifier for the event. |
+| `uniqueId` | The [!DNL Pendo] identifier for the event. |
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
 ![The mapping step of the sources workflow.](../../../../images/tutorials/create/analytics-pendo-webhook/mapping.png)
 
-## Review
+## Review {#review}
 
 The **[!UICONTROL Review]** step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
 
@@ -113,9 +115,8 @@ Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow so
 
 With your streaming dataflow created, you can now retrieve your streaming endpoint URL. This endpoint will be used to subscribe to your webhook, allowing your streaming source to communicate with Experience Platform. 
 
-Next, you will require to construct a URL using the API details generated within Platform which will be used to configure the webhook on [!DNL Pendo].
+In order to construct the URL used to configure the webhook on [!DNL Pendo] you must retrieve the following:
 
-Note down the values of the fields below: 
 * **[!UICONTROL Dataflow ID]**
 * **[!UICONTROL Streaming endpoint]**
 
@@ -123,23 +124,22 @@ To retrieve your **[!UICONTROL Dataflow ID]** and **[!UICONTROL Streaming endpoi
 
 ![The streaming endpoint in dataflow activity.](../../../../images/tutorials/create/analytics-pendo-webhook/endpoint-test.png)
 
-Construct a URL using these values following the pattern below:
-```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```
+Once you have retrieved your streaming endpoint and dataflow ID, build a URL based on the following pattern: ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```. For example, a constructed webhook URL may look like: ```https://dcs.adobedc.net/collection/0c61859cc71939a0caf01123f91b2fc52589018800ad46b6c76c2dff3595ee95```
 
-Example of a constructed webhook URL: ```https://dcs.adobedc.net/collection/0c61859cc71939a0caf01123f91b2fc52589018800ad46b6c76c2dff3595ee95```
-
-## Next steps {#next-steps}
-
-By following this tutorial you have successfully [configured a dataflow to bring data into Platform](https:/experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+## Set up Webhook in [!DNL Pendo] {#set-up-webhook}
 
 Next, login to your account on [[!DNL Pendo]](https:/pendo.io/) and create a webhook by following the [[!DNL Pendo] create a webhook](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4) tutorial. You need to create a URL Webhook.
 
 Navigate to the **[!UICONTROL Settings]** > **[!UICONTROL Integrations]** > **[!UICONTROL Webhook]** page and use the [URL](#get-streaming-endpoint-url) that was constructed, in the **[!UICONTROL URL]** field.
 ![[DNL Pendo] UI screenshot showing the webhook endpoint field](../../../../images/tutorials/create/analytics-pendo-webhook/webhook.png)
 
-Refer to the [!DNL Pendo] [documentation](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4) to select individual event categories to choose which event categories you want to send into Platform.
+You can select individual event categories to choose which event categories to send to Platform, refer to the [[!DNL Pendo] documentation](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4) for guidance.
 
-## Additional resources
+## Next steps {#next-steps}
+
+By following this tutorial you have successfully [configured a dataflow to bring data into Platform](https:/experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/analytics.html).
+
+## Additional resources {#additional-resources}
 
 The sections below provide additional resources that you can refer to when using the [DNL Pendo] source.
 
@@ -160,6 +160,4 @@ To validate that you have correctly set up the source and [!DNL Pendo] messages 
 
     * To fix this error, verify that the *uniqueID* mapping has been set up. Refer to the [Mapping](#mapping) section for guidance.
 
-### Documentation
-
-* [[!DNL Pendo] Help Center](https://www.pendo.io/help-center/)
+For more information visit the [[!DNL Pendo] Help Center](https://www.pendo.io/help-center/).
