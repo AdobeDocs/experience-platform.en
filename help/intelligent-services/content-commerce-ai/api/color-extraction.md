@@ -81,17 +81,12 @@ curl -X POST https://sensei-stage-va6.adobe.io/sensei-core/v2/predict \
 
 | Property | Description | Mandatory |
 | --- | --- | --- |
-| `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the [!DNL Sensei Content Frameworks] are used. For custom services, please contact the Content and Commerce AI team to set up a custom ID. | Yes |
 | `application-id` | The ID of your created application. | Yes |
-| `data` | An array that contains JSON objects. Each object in the array represents an image. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. Any of the remaining properties outlined below in this table can be overridden from within `data`.  | Yes |
-| `content-id` | The unique ID for the data element that is returned in the response. If this is not passed, an auto-generated ID is assigned. | No |
-| `content` | The content to be analyzed by the color extraction service. In the event that the image is part of the request body, use `-F file=@<filename>` in the curl command to pass the image, leaving this parameter as an empty string. <br> If the image is a file on S3, pass the signed url. When content is part of the request body, the list of data elements should have only one object. If more than one object is passed, only the first object is processed. | Yes |
-| `content-type` | Used to indicate whether the input is part of the request body or a signed url for an S3 bucket. The default for this property is `inline`. | No |
-| `encoding` | The file format of the input image. Currently only JPEG and PNG images can be processed. The default for this property is `jpeg`. | No |
-| `threshold` | The threshold of score (0 to 1) above which the results need to be returned. Use the value `0` to return all results. The default for this property is `0`. | No |
-| `top-N` | The number of results to be returned (cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
-| `custom` | Any custom parameters to be passed. | No |
-| `historic-metadata` | An array that can be passed metadata. | No |
+| `documents` | A list of json elements with each item in the list representing one document. | Yes |
+| `top_n` | The number of results to be returned (cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
+| `min_coverage` | Threshold of coverage above which the results need to be returned. Exclude parameter to return all results. | No |
+| `resize_image` | Whether to resize the input image or not. By default the images are resized to 320*320 pixels before color extraction is performed. For debugging purposes we can allow the code to run on full-image as well, by setting this to False. | No |
+| `enable_mask` | Enables/Disables color extraction within mask. | No |
 
 **Response**
 
@@ -101,7 +96,7 @@ A successful response returns the details of the extracted colors. Each color is
 - The percentage this color appears in relation to the image
 - The RGB value of the color
 
-In the first example object below, the `feature_value` of `White,0.59,251,251,243` means the color found is white, white is found in 59% of the image, and has an RGB value of 251,251,243.
+In the first example object below, the `feature_value` of `Mud_Green,0.069,102,72,95` means the color found is mud green, mud green is found in 6.9% of the image, and has an RGB value of 102,72,95.
 
 ```json
 {
@@ -109,38 +104,82 @@ In the first example object below, the `feature_value` of `White,0.59,251,251,24
   "content_id": "test_image.jpg",
   "cas_responses": [
     {
-      "status": 200,
-      "analyzer_id": "Feature:image-color-histogram:Service-e952f4acd7c2425199b476a2eb459635",
-      "content_id": "test_image.jpg",
-      "result": {
-        "response_type": "feature",
-        "response": [
-          {
-            "feature_value": [
-              {
-                "feature_name": "color_name_and_rgb",
-                "feature_value": "White,0.59,251,251,243"
-              },
-              {
-                "feature_value": "Orange,0.30,248,169,48",
-                "feature_name": "color_name_and_rgb"
-              },
-              {
-                "feature_name": "color_name_and_rgb",
-                "feature_value": "Mustard,0.08,251,199,77"
-              },
-              {
-                "feature_name": "color_name_and_rgb",
-                "feature_value": "Gold,0.02,250,191,55"
-              }
-            ],
-            "feature_name": "color"
-          }
-        ]
-      }
+{
+  "statuses": [
+    {
+      "sensei:engine": "Feature:cintel-image-classifier:Service-60887e328ded447d86e01122a4f19c58",
+      "invocations": [
+        {
+          "sensei:outputs": {
+            "result": {
+              "sensei:multipart_field_name": "result",
+              "dc:format": "application/json"
+            }
+          },
+          "message": null,
+          "status": "200"
+        }
+      ]
     }
   ],
-  "error": []
+  "request_id": "hsxycVq5Q9KbZ7MWrt6NXcSNWbonSLf3"
+}
+
+[
+  {
+    "request_element_id": "0",
+    "colors": {
+      "Mud_Green": {
+        "coverage": 0.0694,
+        "rgb": {
+          "red": 102,
+          "blue": 72,
+          "green": 95
+        }
+      },
+      "Dark_Brown": {
+        "coverage": 0.1226,
+        "rgb": {
+          "red": 113,
+          "blue": 77,
+          "green": 84
+        }
+      },
+      "Pink": {
+        "coverage": 0.0731,
+        "rgb": {
+          "red": 234,
+          "blue": 201,
+          "green": 209
+        }
+      },
+      "Dark_Gray": {
+        "coverage": 0.1533,
+        "rgb": {
+          "red": 63,
+          "blue": 58,
+          "green": 59
+        }
+      },
+      "Olive": {
+        "coverage": 0.492,
+        "rgb": {
+          "red": 177,
+          "blue": 126,
+          "green": 170
+        }
+      },
+      "Brown": {
+        "coverage": 0.0896,
+        "rgb": {
+          "red": 141,
+          "blue": 85,
+          "green": 105
+        }
+      }
+    }
+  }
+]
 }
 ```
 
