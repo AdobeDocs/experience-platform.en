@@ -15,7 +15,7 @@ The Text Presence / Optical Character Recognition (OCR) service, when given an i
 
 The following image was used in the example request shown in this document:
 
-![test image](../images/shef.jpeg)
+![test image](../images/ocr_293.png)
 
 **API format**
 
@@ -72,7 +72,56 @@ curl -w'\n' -i -X POST https://sensei-va6.adobe.io/services/v2/predict \
     }
   ]
 }'
+
 ```
+**Response**
+
+A successful response returns the text that was detected in the `feature_value` array. The text is read and returned top down from left to right. This means that if "I love Adobe" was detected, your payload returns "I", "love", and "Adobe" in separate objects. In the object you are given a `feature_name` that contains the word and a `feature_value` that contains a confidence metric for that text.
+
+```json
+{
+  "contentAnalyzerResponse": {
+    "statuses": [
+      {
+        "sensei:engine": "Feature:cintel-object-detection:Service-b9ace8b348b6433e9e7d82371aa16690",
+        "invocations": [
+          {
+            "sensei:outputs": {
+              "result": {
+                "sensei:multipart_field_name": "result",
+                "dc:format": "application/json"
+              }
+            },
+            "message": null,
+            "status": "200"
+          }
+        ]
+      }
+    ],
+    "request_id": "dttklFR7DPtMtEmjlRSx5BYP5WGg3tTx"
+  },
+  "result": [
+    {
+      "is_text_present": 1,
+      "tags": [
+        {
+          "text": "yosemite",
+          "relevance": 0.05604639115920341
+        }
+      ],
+      "request_element_id": 0
+    }
+  ]
+}
+
+```
+**Request**
+
+The following request checks if text is present based on the input image provided in the payload. See the table below the example payload for more information on the input parameters shown.
+
+>[!CAUTION]
+>
+>`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. Contact the Content and Commerce AI beta team to receive your `analyzer_id` for this service.
 
 Execution with URL:
 
@@ -114,6 +163,39 @@ curl -w'\n' -i -X POST https://sensei-va6.adobe.io/services/v2/predict \
 }'
 ```
 
+```json
+{
+  "contentAnalyzerResponse": {
+    "statuses": [
+      {
+        "sensei:engine": "Feature:cintel-object-detection:Service-b9ace8b348b6433e9e7d82371aa16690",
+        "invocations": [
+          {
+            "sensei:outputs": {
+              "result": {
+                "sensei:multipart_field_name": "result",
+                "dc:format": "application/json"
+              }
+            },
+            "message": null,
+            "status": "200"
+          }
+        ]
+      }
+    ],
+    "request_id": "ZbdhcK0JqS4Wg1wGdlEHGR3JOm530YNn"
+  },
+  "result": [
+    {
+      "is_text_present": 0,
+      "tags": [],
+      "request_element_id": 0
+    }
+  ]
+}
+
+```
+
 | Property | Description | Mandatory |
 | --- | --- | --- |
 | `documents` | List of json elements with each item in the list representing one image Any parameters passed as part of this list, overrides the global parameter specified outside the list, for the corresponding list element. | Yes |
@@ -125,44 +207,3 @@ curl -w'\n' -i -X POST https://sensei-va6.adobe.io/services/v2/predict \
 | `filter_with_dictionary` | Whether to filter the words to contain only the words from the English dictionary? If this is turned on, the returned words will always belong to the large English word list comprising 470k words. | No |
 | `min_probability` | What is the minimum probability for the recognized words? Only the words that are extracted from the image have a greater probability than min_probability are returned by the service. The default value is set at 0.2. | No |
 | `min_relevance` | What is the minimum relevance for the recognized words? Only the words that are extracted from the image have greater relevance than min_relevance are returned by the service. The default value is set at 0.01. The relevance is computed as the fraction of the area of the extracted text’s bounding box in comparison to the full image. 0.01 would translate to a text occupying at least 1% of the image. | No |
-
-**Response**
-
-A successful response returns the text that was detected in the `feature_value` array. The text is read and returned top down from left to right. This means that if "I love Adobe" was detected, your payload returns "I", "love", and "Adobe" in separate objects. In the object you are given a `feature_name` that contains the word and a `feature_value` that contains a confidence metric for that text.
-
-```json
-{
-  "status": 200,
-  "content_id": "TestImage.jpg",
-  "cas_responses": [
-    {
-      "status": 200,
-      "analyzer_id": "Feature:image-text-extractor-ocr:Service-b0675160421e404ca3c7ca60f46a5b29",
-      "content_id": "ocr_293.png",
-      "result": {
-        "response_type": "feature",
-        "response": [
-          {
-            "feature_value": [
-              {
-                "feature_value": "yes",
-                "feature_name": "has_text"
-              },
-              {
-                "feature_value": "0.977",
-                "feature_name": "OCR"
-              },
-              {
-                "feature_value": "success",
-                "feature_name": "text_processing_status"
-              }
-            ],
-            "feature_name": "ocr"
-          }
-        ]
-      }
-    }
-  ],
-  "error": []
-}
-```
