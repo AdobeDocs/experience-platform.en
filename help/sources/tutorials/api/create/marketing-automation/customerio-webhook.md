@@ -1,14 +1,15 @@
 ---
 title: Create a source connection and dataflow for Customer.io using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Customer.io using the Flow Service API.
+badge: "Beta"
 ---
-# (Beta) Create a source connection and dataflow for [!DNL Customer.io] using the Flow Service API
+# Create a source connection and dataflow for [!DNL Customer.io] using the Flow Service API
 
 >[!NOTE]
 >
 >The [!DNL Customer.io] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
-The following tutorial walks you through the steps to create a [!DNL Customer.io] source connection and create a dataflow to bring [[!DNL Customer.io]](https://customer.io/) event data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a [!DNL Customer.io] source connection and dataflow to bring [[!DNL Customer.io]](https://customer.io/) event data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started {#getting-started}
 
@@ -17,15 +18,13 @@ This guide requires a working understanding of the following components of Exper
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Customer.io] using the [!DNL Flow Service] API.
-
 ## Connect [!DNL Customer.io] to Platform using the [!DNL Flow Service] API {#connect-platform-to-flow-api}
 
-The following outlines the steps you need to make in order to authenticate your [!DNL Customer.io] source, create a source connection, and create a dataflow to bring your events data to Experience Platform.
+The following outlines the steps you need to make in order to create a source connection and a dataflow to bring your [!DNL Customer.io] events data to Experience Platform.
 
 ### Create a source connection {#source-connection}
 
-You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
+Create a source connection by making a POST request to the [!DNL Flow Service] API, while providing the connection spec ID of your source, details like name and description, and the format of your data.
 
 **API format**
 
@@ -317,6 +316,7 @@ A successful response returns the ID (`id`) of the newly created dataflow. You c
     "etag": "\"4c012103-0000-0200-0000-63ef57db0000\""
 }
 ```
+
 ### Get your streaming endpoint URL {#get-streaming-endpoint-url}
 
 With your dataflow created, you can now retrieve your streaming endpoint URL. You will use this endpoint URL to subscribe your source to a webhook, allowing your source to communicate with Experience Platform.

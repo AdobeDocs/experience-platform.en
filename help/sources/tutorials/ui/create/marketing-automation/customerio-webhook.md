@@ -1,14 +1,15 @@
 ---
-title: Create a Customer.io source connection in the UI 
+title: Create a Customer.io Source Connection and Dataflow in the UI 
 description: Learn how to create a Customer.io source connection using the Adobe Experience Platform UI.
+badge: "Beta"
 ---
-# (Beta) Create a [!DNL Customer.io] source connection in the UI
+# Create a [!DNL Customer.io] source connection and dataflow in the UI
 
 >[!NOTE]
 >
->The [!DNL Customer.io] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Customer.io] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
-This tutorial provides steps for creating a [!DNL Customer.io] source connection using the Adobe Experience Platform user interface.
+This tutorial provides steps for creating a [!DNL Customer.io] source connection and dataflow using the Adobe Experience Platform user interface.
 
 ## Getting started {#getting-started}
 
@@ -53,11 +54,11 @@ You must also ensure that you create a Platform schema to use for your source. S
 
 ## Connect your [!DNL Customer.io] account {#connect-account}
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace and see a catalog of sources available in Experience Platform.
 
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+Use the *[!UICONTROL Categories]* menu to filter sources by category. Alternatively, enter a source name in the search bar to find a specific source from the catalog.
 
-Under the *Marketing automation* category, select **[!UICONTROL Customer.io]**, and then select **[!UICONTROL Add data]**.
+Go to the [!UICONTROL Marketing automation] category to see the [!DNL Customer.io] source card. To begin, select [!UICONTROL Add data].
 
 ![Platform UI screenshot for catalog with Customer.io card](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
@@ -90,23 +91,23 @@ When finished, select **[!UICONTROL Next]**.
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
-Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
 All the mappings listed below are mandatory and should be setup before proceeding to the [!UICONTROL Review] stage.
 
 | Target Field | Description |
 | --- | --- |
-| `object_type` | The Object Type, refer to the [!DNL Customer.io] [events](https://customer.io/docs/webhooks/#events) documentation for the supported types. |
-| `id` | The Object's Identifier. |
-| `email` | The Email address associated with the object. |
-| `event_id` | The Unique identifier of the event. |
+| `object_type` | The object type, refer to the [!DNL Customer.io] [events](https://customer.io/docs/webhooks/#events) documentation for the supported types. |
+| `id` | The object's identifier. |
+| `email` | The email address associated with the object. |
+| `event_id` | The unique identifier of the event. |
 | `cio_id` | The [!DNL Customer.io] identifier for the event.|
-| `metric` | The Event Type, refer to the [!DNL Customer.io] [events](https://customer.io/docs/webhooks/#events) documentation for the supported types. |
-| `timestamp` | The Timestamp when the event occurred. |
+| `metric` | The event type. For more information, refer to the [!DNL Customer.io] [events](https://customer.io/docs/webhooks/#events) documentation for supported types. |
+| `timestamp` | The timestamp when the event occurred. |
 
 >[!IMPORTANT]
 >
-> Do not map `cio_id` when executing [!DNL Customer.io] webhook in the `test mode` as there will be no associated field sent from [!DNL Customer.io].
+>Do not map `cio_id` when executing [!DNL Customer.io] webhook in the `test mode` as there will be no associated fields sent from [!DNL Customer.io].
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
@@ -119,7 +120,7 @@ The **[!UICONTROL Review]** step appears, allowing you to review your new datafl
 * **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
 * **[!UICONTROL Assign dataset & map fields]**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
 
-Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
+Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
 ![The review step of the sources workflow.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/review.png)
 
@@ -138,18 +139,21 @@ To retrieve your **[!UICONTROL Dataflow ID]** and **[!UICONTROL Streaming endpoi
 
 Once you have retrieved your streaming endpoint and dataflow ID, build a URL based on the following pattern: ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```. For example, a constructed webhook URL may look like: ``https://dcs.adobedc.net/collection/febc116d22ba0ea2868e9c93b199375302afb8a589617700991bb8f3f0341ad7?x-adobe-flow-id=439b3fc4-3042-4a3a-b5e0-a494898d3fb0``
 
-## Set up Reporting Webhook in [!DNL Customer.io] {#set-up-webhook}
+## Set up reporting webhook in [!DNL Customer.io] {#set-up-webhook}
 
-Login to your account on [[!DNL Customer.io]](https://customer.io/) and create a reporting webhook by following this [tutorial](https://customer.io/docs/webhooks/#setup).
+With your webhook URL created, you can now set up your reporting webhook using the [!DNL Customer.io] user interface. For steps on setting up reporting webhooks, please read the [[!DNL Customer.io] guide](https://customer.io/docs/webhooks/#setup) on setting up webhooks.
 
-Use the [URL](#get-streaming-endpoint-url) that was constructed in the [!DNL WEBHOOK ENDPOINT] field.
+In the [!DNL Customer.io] user interface, input your [webhook URL](#get-streaming-endpoint-url) in the [!DNL WEBHOOK ENDPOINT] field.
+
 ![[DNL Customer.io] UI screenshot showing the webhook endpoint field](../../../../images/tutorials/create/marketing-automation/customerio-webhook/webhook.png)
 
-Refer to the [!DNL Customer.io] [events](https://customer.io/docs/webhooks/#events) documentation section to understand in detail on the various events that can be selected, each events' message will be ingested into Platform when any [!DNL Customer.io] action event trigger criteria are satisfied.
+>[!TIP]
+>
+>You can subscribe to a variety of different events for your reporting webhook. Each events' message will be ingested to Platform when a [!DNL Customer.io] action event trigger criteria is met. For more information on the different events, please refer to the the [[!DNL Customer.io] events documentation](https://customer.io/docs/webhooks/#events).
 
 ## Next steps {#next-steps}
 
-By following this tutorial you have successfully [configured a dataflow to bring data into Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/marketing-automation.html).
+By following this tutorial you have successfully configured a streaming dataflow to bring your [!DNL Customer.io] data to Experience Platform. To monitor the data that is being ingested, refer to the guide on [monitoring streaming dataflows using Platform UI](../../monitor-streaming.md).
 
 ## Additional resources {#additional-resources}
 
@@ -157,14 +161,16 @@ The sections below provide additional resources that you can refer to when using
 
 ### Guardrails {#guardrails}
 
-For information on guardrails, please refer to the [[DNL Customer.io] Timeouts and failures page](https://customer.io/docs/webhooks/#timeouts-and-failures).
+For information on guardrails, please refer to the [[DNL Customer.io] timeouts and failures page](https://customer.io/docs/webhooks/#timeouts-and-failures).
 
 ### Validation {#validation}
 
 To validate that you have correctly set up the source and [!DNL Customer.io] messages are being ingested, follow the steps below:
 
 * You can check the [!DNL Customer.io] **[!UICONTROL Activity Logs]** page to identify the events being captured by [!DNL Customer.io].
+
 ![Customer.io UI screenshot showing activity logs](../../../../images/tutorials/create/marketing-automation/customerio-webhook/activity-logs.png)
 
 * In the Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL Customer.io] card menu on the sources catalog. Next, select **[!UICONTROL Preview dataset]** to verify the data that was ingested for the events that you have selected within [!DNL Customer.io].
+
 ![Platform UI screenshot showing ingested events](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png)
