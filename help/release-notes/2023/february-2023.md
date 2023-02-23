@@ -39,15 +39,15 @@ For more general information on destinations, refer to the [destinations overvie
 XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
 
 **Updated features**
-​
+
 | Feature | Description |
 | --- | --- |
 | Field deprecation through the UI | You can now deprecate fields from your schemas after data has been ingested. XDM field deprecation allows you to remove fields from UI view while retaining them for use. You can reveal deprecated fields again if needed, and any segments, queries or downstream solutions that reference the fields will run as usual. |
 
 {style="table-layout:auto"}
-​
+
 For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).
-​
+
 <!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
 
 ## Query Service {#query-service}
@@ -55,7 +55,7 @@ For more information on XDM in Platform, read the [XDM System overview](../../xd
 Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from data lake and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-Time Customer Profile.
 
 **Updated features**
-​
+
 | Feature | Description |
 | --- | --- |
 | Enable datasets for profile with SQL | Use LABELs in CTAS queries to make a dataset 'profile enabled', or use ALTER to update existing datasets to be enabled for profile. |
@@ -64,9 +64,9 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 | Dataset samples | Specify a sampling rate in your query and use dataset samples to create a uniform random sample, or create conditional samples based on specific criteria. |
 
 {style="table-layout:auto"}
-​
+
 For more information on Query Services, refer to the [Query Service overview](../../query-service/home.md).
-​
+
 <!-- Links for QS feature docs after release day: -->
 <!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
 <!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
