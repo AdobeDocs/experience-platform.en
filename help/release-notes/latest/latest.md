@@ -50,7 +50,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 | Component type | Name | Description |
 | --- | --- | --- |
-| Class | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1669/files) | The XDM Individual Prospect Profile class brings in partner provided IDs. |
+| Class | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1669/files) | The XDM Individual Prospect Profile class brings in partner-provided IDs. |
 
 {style="table-layout:auto"}
 
@@ -58,11 +58,11 @@ XDM is an open-source specification that provides common structures and definiti
 
 | Component type | Name | Description |
 | --- | --- | --- |
-| Field group | [[!UICONTROL Frequency Capping Constraints]](https://github.com/adobe/xdm/pull/1641/files) | The [!UICONTROL Frequency Capping Constraints] field group has been updated to support repeat and custom events. |
-| Data type | [[!UICONTROL Web referrer]](https://github.com/adobe/xdm/pull/1666/files) | Web referrer properties have been updated to include `xdm:linkName` and `xdm:linkRegion`. Respectively, these are the name and region of the HTML element that was selected on the previous page. |
-| Field Group | [[!UICONTROL Adobe CJM ExperienceEvent - Message interaction details](https://github.com/adobe/xdm/pull/1665/files) | The Tracker URL filed group was added to the [!UICONTROL Adobe CJM ExperienceEvent]. This tracker provides the URL selected by the user.  |
-| Field Group | [[!UICONTROL Adobe CJM ExperienceEvent - Message interaction detail](https://github.com/adobe/xdm/pull/1668/files) | Removed the empty `meta:enum` property from the URL Tracking Type field. |
-| Data type  | [[!UICONTROL Media information]](https://github.com/adobe/xdm/pull/1667/files) | The regex pattern from the `videoSegment` property in Media information datatype was removed. |
+| Field group | [!UICONTROL Frequency Capping Constraints] | The [!UICONTROL Frequency Capping Constraints] field group has been [updated to support repeat and custom events](https://github.com/adobe/xdm/pull/1641/files). |
+| Data type | [!UICONTROL Web referrer] | Web referrer properties have been [updated to include `xdm:linkName` and `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files). Respectively, these are the name and region of the HTML element that was selected on the previous page. |
+| Field Group | [!UICONTROL Adobe CJM ExperienceEvent - Message interaction details] | [The [!UICONTROL Tracker URL] field was added](https://github.com/adobe/xdm/pull/1665/files) to the [!UICONTROL Adobe CJM ExperienceEvent]. This tracker provides the URL selected by the user. |
+| Field Group | [!UICONTROL Adobe CJM ExperienceEvent - Message interaction detail] | [The empty `meta:enum` property was removed](https://github.com/adobe/xdm/pull/1668/files) from the URL [!UICONTROL Tracking Type] field. |
+| Data type  | [!UICONTROL Media information] | [The regex pattern from the `videoSegment` property in [!UICONTROL Media information] datatype was removed](https://github.com/adobe/xdm/pull/1667/files). |
 
 {style="table-layout:auto"}
 
