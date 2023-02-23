@@ -276,12 +276,12 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | Property | Description | Mandatory |
 | --- | --- | --- |
 | `application-id` | The ID of the created application. | Yes |
-| `top_n` | The number of results to be returned (cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | Yes |
-| `min_relevance` | Language of input text. The default value is `en`. | No |
-| `min_key_phrase_length` | Used to indicate whether the input is part of the request body or a signed url for an S3 bucket. The default for this property is `inline`. | Yes |
-| `max_key_phrase_length` | The encoding format of input text. This can be `utf-8` or `utf-16`. The default for this property is `utf-8`. | No |
-| `last_semantic_unit_type` | The threshold of score (0 to 1) above which the results need to be returned. Use the value `0` to return all results. The default for this property is `0`. | No |
-| `entity_types` | The number of results to be returned (cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
+| `top_n` | Number of results to be returned. 0, to return all results. When used in conjunction with threshold, the number of results returned will be lesser of either limits. | Yes |
+| `min_relevance` | Threshold of score below which the results need to be returned. Exclude parameter to return all results. | No |
+| `min_key_phrase_length` | Minimum number of words required in the key phrases. | Yes |
+| `max_key_phrase_length` | Maximum number of words required in the key phrases. | No |
+| `last_semantic_unit_type` | Return only semantic units upto the given level in the hierarchical response. `key_phrase` returns only key phrases, `linked_entity` returns only key phrases and their corresponding linked entities, and `concept` returns key phrases, linked entities and concepts. | No |
+| `entity_types` |Types of entities to be returned as key phrases. | No |
 
 **Response**
 
