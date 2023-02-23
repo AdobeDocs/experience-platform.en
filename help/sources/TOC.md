@@ -86,6 +86,7 @@ feature: Sources
   - Local system {#local-system}
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Marketing automation {#marketing-automation}
+    - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
     - [Mailchimp connector](connectors/marketing-automation/mailchimp.md)
     - [Oracle Eloqua connector](connectors/marketing-automation/oracle-eloqua.md)
@@ -156,6 +157,7 @@ feature: Sources
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
     - Marketing automation {#marketing-automation}
+      - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
       - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
       - [MailChimp Campaign](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
       - [MailChimp Members](tutorials/api/create/marketing-automation/mailchimp-members.md)
@@ -270,6 +272,7 @@ feature: Sources
     - Local system {#local-system}
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Marketing automation {#marketing-automation}
+      -[Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
       - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
       - [Mailchimp Campaigns](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
       - [Mailchimp Members](tutorials/ui/create/marketing-automation/mailchimp-members.md)
