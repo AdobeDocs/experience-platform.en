@@ -112,11 +112,7 @@ You can copy the query SQL to your clipboard from this view. Select the copy ico
 
 ![The run details screen with the SQL copy icon highlighted.](../images/ui/monitor-queries/copy-sql.png)
 
-### (Limited release) Run details for queries with anonymous block {#anonymous-block-queries}
-
->[!IMPORTANT]
->
->The query monitoring feature that displays run details for anonymous block queries, is currently in a limited release and not available to all customers.
+### Run details for queries with anonymous block {#anonymous-block-queries}
 
 Queries that use anonymous blocks to comprise their SQL statements are separated into their individual queries. This allows you to inspect the run details for each query block individually. 
 

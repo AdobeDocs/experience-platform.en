@@ -33,6 +33,7 @@ feature: Sources
     - [Google Ads connector](connectors/advertising/ads.md)
   - Analytics {#analytics}
     - [Mixpanel connector](connectors/analytics/mixpanel.md)
+    - [Pendo](connectors/analytics/pendo-webhook.md)
   - Cloud storage {#cloud-storage}
     - [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
     - [Amazon S3 connector](connectors/cloud-storage/s3.md)
@@ -86,6 +87,8 @@ feature: Sources
   - Local system {#local-system}
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Marketing automation {#marketing-automation}
+    - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
+    - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
     - [Mailchimp connector](connectors/marketing-automation/mailchimp.md)
     - [Oracle Eloqua connector](connectors/marketing-automation/oracle-eloqua.md)
@@ -105,6 +108,7 @@ feature: Sources
       - [Google Ads](tutorials/api/create/advertising/ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
+      - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
       - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -156,6 +160,8 @@ feature: Sources
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
     - Marketing automation {#marketing-automation}
+      - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
+      - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
       - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
       - [MailChimp Campaign](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
       - [MailChimp Members](tutorials/api/create/marketing-automation/mailchimp-members.md)
@@ -210,11 +216,13 @@ feature: Sources
       - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
       - [Customer attributes](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
+      - [Marketo Custom Activities](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
       - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
     - Advertising {#advertising}
       - [Google Ads](tutorials/ui/create/advertising/ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
+      - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
       - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
@@ -269,6 +277,8 @@ feature: Sources
     - Local system {#local-system}
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Marketing automation {#marketing-automation}
+      - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
+      - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
       - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
       - [Mailchimp Campaigns](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
       - [Mailchimp Members](tutorials/ui/create/marketing-automation/mailchimp-members.md)
