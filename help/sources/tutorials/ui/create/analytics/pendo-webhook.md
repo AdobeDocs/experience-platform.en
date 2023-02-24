@@ -3,7 +3,7 @@ title: Create a Pendo Source Connection in the UI
 description: Learn how to create a Pendo source connection using the Adobe Experience Platform UI.
 badge: "Beta"
 ---
-# Create a [!DNL Pendo] source connection in the UI
+# Create a [!DNL Pendo] source connection dataflow and in the UI
 
 >[!NOTE]
 >
