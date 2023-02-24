@@ -132,6 +132,7 @@ Experience Platform provides support for ingesting data from your local system. 
 
 Experience Platform provides support for ingesting data from a third-party marketing automation system. See the following related documents for more information on specific source connectors:
 
+- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md)
 - [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md)
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
