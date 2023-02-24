@@ -48,6 +48,7 @@ Experience Platform provides support for ingesting data from a third-party adver
 Experience Platform provides support for ingesting data from a third-party analytics platform. See the following related documents for more information:
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
+- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md)
 
 ### Cloud Storage {#cloud-storage}
 
