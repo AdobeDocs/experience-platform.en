@@ -56,7 +56,7 @@ In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to 
 
 Use the *[!UICONTROL Categories]* menu to filter sources by category. Alternatively, enter a source name in the search bar to find a specific source from the catalog.
 
-Go to the [!UICONTROL Analytics] category to see the [!DNL Pendo source card. To begin, select **[!UICONTROL Add data]**.
+Go to the [!UICONTROL Analytics] category to see the [!DNL Pendo] source card. To begin, select **[!UICONTROL Add data]**.
 
 ![The Platform UI source catalog with the Pendo card.](../../../../images/tutorials/create/analytics-pendo-webhook/catalog.png)
 
