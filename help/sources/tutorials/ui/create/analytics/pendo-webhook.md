@@ -129,7 +129,7 @@ Once you have retrieved your streaming endpoint and dataflow ID, build a URL bas
 
 ## Set up Webhook in [!DNL Pendo] {#set-up-webhook}
 
-Next, login to your account on [[!DNL Pendo]](https:/pendo.io/) and create a webhook. For steps on how to create a webhook using the [!DNL Pendo] user interface, please refer to the [[!DNL Pendo] guide on creating webhook](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4). 
+Next, login to your account on [[!DNL Pendo]](https://pendo.io/) and create a webhook. For steps on how to create a webhook using the [!DNL Pendo] user interface, please refer to the [[!DNL Pendo] guide on creating webhook](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4). 
 
 Once your webhook is created, navigate to the settings page of your [!DNL Pendo] webhook and input your webhook URL in the [!DNL URL] field.
 
@@ -141,7 +141,7 @@ Once your webhook is created, navigate to the settings page of your [!DNL Pendo]
 
 ## Next steps {#next-steps}
 
-By following this tutorial you have successfully [configured a dataflow to bring data into Platform](https:/experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/analytics.html).
+By following this tutorial you have successfully configured a streaming dataflow to bring your [!DNL Pendo] data to Experience Platform. To monitor the data that is being ingested, refer to the guide on [monitoring streaming dataflows using Platform UI](../../monitor-streaming.md).
 
 ## Additional resources {#additional-resources}
 
