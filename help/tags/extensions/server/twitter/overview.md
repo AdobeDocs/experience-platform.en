@@ -23,9 +23,13 @@ For more information on use cases specific to [!DNL Twitter], refer to the [[!DN
 
 ## [!DNL Twitter] prerequisites and guardrails {#prerequisites}
 
-The Twitter event forwarding extension requires a [!DNL Twitter] account. If you don't have one, you can create one by following the sign-up steps here.
+You must to have a valid [!DNL Twitter] account in order to use this extension. Go to the [[!DNL Twitter] registration page](https://help.twitter.com/en/using-twitter/create-twitter-account) to register and create an account if you do not have one already.
 
-You will also need a [!DNL Twitter] developer account. If you haven't signed up as a developer, you can do so by following the tutorial here.
+You must set up your account as a [!DNL Twitter] developer account. To find out how to sign up as a developer, refer to the [[!DNL Twitter] developer account](https://developer.twitter.com/en/support/twitter-api/developer-account).
+
+### API guardrails {#guardrails}
+
+The [!DNL Twitter] Web Conversions API has a rate limit of 60,000 requests per 15 minute interval where each request allows 500 events.
 
 ### Gather required configuration details {#configuration-details}
 
