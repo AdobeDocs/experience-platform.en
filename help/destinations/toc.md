@@ -22,7 +22,7 @@ feature: Destinations
     * [Update destination dataflows](./api/update-destination-dataflows.md)
     * [Delete destination accounts](./api/delete-destination-account.md)
     * [Delete destination dataflows](./api/delete-destination-dataflow.md)
-    * [Export datasets](/help/destinations/api/export-datasets.md)
+    * [(Beta) Export datasets](/help/destinations/api/export-datasets.md)
 * UI guides {#ui}
     * [Destinations workspace](./ui/destinations-workspace.md)
     * [Create a new destination connection](./ui/connect-destination.md)
