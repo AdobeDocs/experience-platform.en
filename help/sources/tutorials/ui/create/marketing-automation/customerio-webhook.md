@@ -58,13 +58,13 @@ In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to 
 
 Use the *[!UICONTROL Categories]* menu to filter sources by category. Alternatively, enter a source name in the search bar to find a specific source from the catalog.
 
-Go to the [!UICONTROL Marketing automation] category to see the [!DNL Customer.io] source card. To begin, select [!UICONTROL Add data].
+Go to the [!UICONTROL Marketing automation] category to see the [!DNL Customer.io] source card. To begin, select **[!UICONTROL Add data]**.
 
 ![Platform UI screenshot for catalog with Customer.io card](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
 ## Select data {#select-data}
 
-The **[!UICONTROL Select data]** step appears, providing an interface for you to select the data that you bring to Platform.
+The **[!UICONTROL Select data]** step appears, providing an interface for you to select the data that you want to bring to Platform.
 
 * The left part of the interface is a browser that allows you to view the available data streams within your account;
 * The right part of the interface lets you preview up to 100 rows of data from a JSON file.
