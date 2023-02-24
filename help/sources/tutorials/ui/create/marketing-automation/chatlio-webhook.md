@@ -1,9 +1,9 @@
 ---
-title: Create a Chatlio source connection in the UI 
+title: Create a Chatlio Source Connection in the UI 
 description: Learn how to create a Chatlio source connection using the Adobe Experience Platform UI.
 badge: "Beta"
 ---
-# (Beta) Create a [!DNL Chatlio] source connection in the UI
+# Create a [!DNL Chatlio] source connection in the UI
 
 >[!NOTE]
 >
@@ -26,7 +26,7 @@ The following section provides information on prerequisites to complete before y
 
 ### Sample JSON to define the source schema for [!DNL Chatlio] {#prerequisites-json-schema}
 
-Before creating a [!DNL Chatlio] source connection, you will require a source schema to be provided. You can use the below JSON.
+Before creating a [!DNL Chatlio] source connection, you will require a source schema to be provided. You can use the JSON below.
 
 ```
 {
@@ -43,23 +43,23 @@ Before creating a [!DNL Chatlio] source connection, you will require a source sc
 
 ### Create a Platform schema for [!DNL Chatlio] {#create-platform-schema}
 
-You must also ensure that you create a Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
+You must also ensure that you create a Platform schema to use for your source. Read the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
-![Platform UI screenshot showing an example schema for Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
+![The Platform UI showing an example schema for Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
 
 ## Connect your [!DNL Chatlio] account {#connect-account}
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace and see a catalog of sources available in Experience Platform.
 
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+Use the *[!UICONTROL Categories]* menu to filter sources by category. Alternatively, enter a source name in the search bar to find a specific source from the catalog.
 
-Under the *Marketing automation* category, select **[!UICONTROL Chatlio]**, and then select **[!UICONTROL Add data]**.
+Go to the [!UICONTROL Marketing automation] category to see the [!DNL Chatlio] source card. To begin, select **[!UICONTROL Add data]**.
 
-![Platform UI screenshot for catalog with Chatlio card](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/catalog.png)
+![The Platform UI catalog with Chatlio card](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/catalog.png)
 
 ## Select data {#select-data}
 
-The **[!UICONTROL Select data]** step appears, providing an interface for you to select the data that you bring to Platform.
+The **[!UICONTROL Select data]** step appears, providing an interface for you to select the data that you want to bring to Platform.
 
 * The left part of the interface is a browser that allows you to view the available data streams within your account;
 * The right part of the interface lets you preview up to 100 rows of data from a JSON file.
@@ -124,38 +124,42 @@ To retrieve your **[!UICONTROL Dataflow ID]** and **[!UICONTROL Streaming endpoi
 
 Once you have retrieved your streaming endpoint and dataflow ID, build a URL based on the following pattern: ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```. For example, a constructed webhook URL may look like: ``https://dcs.adobedc.net/collection/d56b47ee3985104beaf724efcd78a3e1a863d720471a482bebac0acc1ab95983``
 
-## Set up Webhook in [!DNL Chatlio] {#set-up-webhook}
+## Set up webhook in [!DNL Chatlio] {#set-up-webhook}
 
-Login to your account on [[!DNL Chatlio]](https:/chatlio.com/) and create a widget by following the [[!DNL Chatlio] Setup and Installation](https://chatlio.com/docs/setup/).
+With your webhook URL created, you can now set up your webhook using the [!DNL Chatlio] user interface. 
 
-After a widget is created, navigate to its settings page to add the Platform webhook endpoint url's.
+Login to your [[!DNL Chatlio] account](https:/chatlio.com/) and follow the [[!DNL Chatlio] guide on setup and installation](https://chatlio.com/docs/setup/) to create a widget.
 
-![Webhook settings](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/widget-settings.png)
+Once a widget is crated, navigate to the widget's settings page to add your webhook URL to that widget.
 
-Navigate to the [!DNL Behavior] page and use the [URL](#get-streaming-endpoint-url) that was constructed, in the [!DNL Webhook when a new conversation starts] field and other webhook fields where you want events.
-![[DNL Chatlio] UI screenshot showing the webhook endpoint field](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/webhook.png)
+![The webhook settings page on Chatlio.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/widget-settings.png)
 
-Refer to the [[!DNL Chatlio] webhooks](https://chatlio.com/docs/webhooks/) documentation section to understand the various webhooks, each events' message will be ingested into Platform from [!DNL Chatlio].
+Next, select the **[!DNL Behavior]** tab and add your webhook URL to the *[!DNL Webhook when a new conversation starts]* field and any other webhook events fields that you want to subscribe to.
+
+![The Chatlio UI showing the webhook endpoint field.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/webhook.png)
+
+>[!TIP]
+>
+>You can subscribe to a variety of different events for your [!DNL Chatlio] webhook. For more information on the different events, please refer to the the [[!DNL Chatlio] events documentation](https://chatlio.com/docs/webhooks/).
 
 ## Next steps {#next-steps}
 
-By following this tutorial you have successfully [configured a dataflow to bring data into Platform](https:/experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/marketing-automation.html).
+By following this tutorial you have successfully configured a streaming dataflow to bring your [!DNL Chatlio] data to Experience Platform. To monitor the data that is being ingested, refer to the guide on [monitoring streaming dataflows using Platform UI](../../monitor-streaming.md).
 
 ## Additional resources {#additional-resources}
 
-The sections below provide additional resources that you can refer to when using the [DNL Chatlio] source.
+The sections below provide additional resources that you can refer to when using the [!DNL Chatlio] source.
 
 ### Validation {#validation}
 
 To validate that you have correctly set up the source and [!DNL Chatlio] messages are being ingested, follow the steps below:
 
 * You can check the [!DNL Chatlio] **[!UICONTROL Reports]** > **[!UICONTROL Chat History]** page to identify the events being captured by [!DNL Chatlio].
+
 ![Chatlio UI screenshot showing chat history](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/chatlio-chat-history.png)
 
 * In the Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL Chatlio] card menu on the sources catalog. Next, select **[!UICONTROL Preview dataset]** to verify the data that was ingested for the webhooks that you have configured within [!DNL Chatlio].
+
 ![Platform UI screenshot showing ingested events](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png)
 
-### Documentation
-
-* [[!DNL Chatlio] Documentation](https://chatlio.com/docs/)
-* [[!DNL Chatlio] FAQ's](https://chatlio.com/pricing/#FAQ)
+For additional information on [!DNL Chatlio], visit the [[!DNL Chatlio] documentation](https://chatlio.com/docs/) and [FAQ](https://chatlio.com/pricing/#FAQ).
