@@ -45,18 +45,33 @@ In order to connect the Experience Platform to [!DNL Twitter], the following inp
 
 ## Install and configure the [!DNL Twitter] extension {#install}
 
-If the [!DNL Twitter] extension is not yet installed, Create an event forwarding property or choose an existing property to edit instead.
+To install the extension, [create an event forwarding property](../../../ui/event-forwarding/overview.md#properties) or choose an existing property to edit instead.
 
-Navigate to [!UICONTROL Extensions] > [!UICONTROL Catalog], search for Twitter, then select [!UICONTROL Install] on the [!DNL Twitter] Extension. Platform UI screenshot example for installing the [!DNL Twitter] extension.
+Select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL Catalog]** tab, select **[!UICONTROL Install]** on the card for the [!DNL Twitter] extension.
 
-Configure the [!DNL Twitter] extension
+![Installing the [!DNL Twitter] extension.](../../../images/extensions/server/twitter/install-extension.png)
+
+### Configure the [!DNL Twitter] extension
+
 >[!IMPORTANT]
 >
 >Depending on your implementation needs, you may need to create a schema, data elements, and a dataset before configuring the extension. Please review all the configuration steps before starting in order to determine which entities you need to set up for your use case.
 
-Navigate to [!UICONTROL Extensions] > [!UICONTROL Installed] tab, search for Twitter, and then select [!UICONTROL Configure] on the [!DNL Twitter] Extension. Platform UI screenshot example for configuring the [!DNL Twitter] extension.
+Select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL Installed]** tab, select **[!UICONTROL Configure]** on the card for the [!DNL Twitter] extension.
 
-Next, input the [!UICONTROL Consumer Key], [!UICONTROL Consumer Secret], [!UICONTROL Token Secret], [!UICONTROL Access Token] and [!UICONTROL Pixel Id] values with the details gathered in the configuration details section, Finally select [!UICONTROL Save]. Platform UI screenshot example for the [!DNL Twitter] extension input.
+![Configuring the [!DNL Twitter] extension.](../../../images/extensions/server/twitter/configure-extension.png)
+
+On the next screen, input the following [configuration values](#configuration-details) that you previously gathered from [!DNL Twitter]:
+
+* **[!UICONTROL Consumer Key]**
+* **[!UICONTROL Consumer Secret]**
+* **[!UICONTROL Token Secret]**
+* **[!UICONTROL Access Token]**
+* **[!UICONTROL Pixel Id]**
+
+Select **[!UICONTROL Save]** when finished.
+
+![The [!DNL Twitter] extension input.](../../../images/extensions/server/twitter/extension-input.png)
 
 ## Configure an event forwarding rule {#config-rule}
 
