@@ -33,12 +33,15 @@ The [!DNL Twitter] Web Conversions API has a rate limit of 60,000 requests per 1
 
 ### Gather required configuration details {#configuration-details}
 
-Credential    Description
-Consumer Key ​    The API Key for your app to access the [!DNL Twitter] API. Refer to the [!DNL Twitter] documentation for how to obtain one.
-Consumer Secret    The API Secret for your app to access the [!DNL Twitter] API. Refer to the [!DNL Twitter] documentation for how to obtain one.
-Token Secret    The non-expiring token secret of your app which is used for authenticating to the [!DNL Twitter] API via OAuth. Refer to the [!DNL Twitter] documentation for how to obtain one.
-Access Token    The non-expiring access token of your app which is used for authenticating to the [!DNL Twitter] API via OAuth. Refer to the [!DNL Twitter] documentation for how to obtain one.
-Pixel Id    The [!DNL Twitter Pixel], which is a website tag that is implemented on your website to track site actions or conversions. Refer to the [!DNL Twitter] documentation to obtain one.
+In order to connect the Experience Platform to [!DNL Twitter], the following inputs are required:
+
+| Credential | Description |
+| --- | --- |
+| Consumer Key |​ The API Key for your app to access the [!DNL Twitter] API. Refer to the [!DNL Twitter] documentation on [api keys and secrets](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) for guidance. |
+| Consumer Secret | The API Secret for your app to access the [!DNL Twitter] API. Refer to the [!DNL Twitter] documentation on [api keys and secrets](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) for guidance. |
+| Token Secret | The non-expiring token secret of your app which is used for authenticating to the [!DNL Twitter] API via OAuth. Refer to the [!DNL Twitter] documentation on [obtaining use access tokens](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) for guidance. |
+| Access Token | The non-expiring access token of your app which is used for authenticating to the [!DNL Twitter] API via OAuth. Refer to the [!DNL Twitter] documentation on [obtaining use access tokens](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) for guidance. |
+| Pixel Id | The [!DNL Twitter Pixel], which is a website tag that is implemented on your website to track site actions or conversions. Refer to the [!DNL Twitter] documentation on [conversion tracking for websites](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) for guidance. |
 
 ## Install and configure the [!DNL Twitter] extension {#install}
 
