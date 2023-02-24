@@ -105,7 +105,7 @@ The **[!UICONTROL Review]** step appears, allowing you to review your new datafl
 * **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
 * **[!UICONTROL Assign dataset & map fields]**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
 
-Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
+Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
 ![The review step of the sources workflow.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/review.png)
 
