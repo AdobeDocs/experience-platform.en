@@ -172,6 +172,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
             "format": "pql/text",
             "value": "workAddress.country = \"US\""
         },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": true
+            },
+            "continuous": {
+                "enabled": false
+            },
+            "synchronous": {
+                "enabled": false
+            }
+        },
         "schema": {
             "name": "_xdm.context.profile"
         },
@@ -183,6 +194,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | Property | Description |
 | -------- | ----------- |
 | `name` | **Required.** A unique name by which to refer to the segment. |
+| `description` | A description of the segment definition you are creating. |
+| `evaluationInfo` | The type of segment you are creating. If you want to create a batch segment, set `evaluationInfo.batch.enabled` to be true. If you want to create a streaming segment, set `evaluationInfo.continuous.enabled` to be true. If you want to create an edge segment, set `evaluationInfo.synchronous.enabled` to be true. If left empty, the segment will be created as a **batch** segment. |
 | `schema` | **Required.** The schema associated with the entities in the segment. Consists of either an `id` or `name` field. |
 | `expression` | **Required.** An entity that contains fields information about the segment definition. |
 | `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |
@@ -245,7 +258,7 @@ A successful response returns HTTP status 200 with details of your newly created
 | Property | Description |
 | -------- | ----------- |
 | `id` | A system-generated ID of your newly created segment definition. |
-| `evaluationInfo` | A system-generated object that tells what type of evaluation the segment definition will undergo. It can be batch, continuous (also known as streaming), or synchronous segmentation. |
+| `evaluationInfo` | An object that tells what type of evaluation the segment definition will undergo. It can be batch, streaming (also known as continuous), or edge (also known as synchronous) segmentation. |
 
 ## Retrieve a specific segment definition {#get}
 
@@ -327,7 +340,7 @@ A successful response returns HTTP status 200 with detailed information about th
 | `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
 | `description` | A human readable description of the definition. |
-| `evaluationInfo` | A system-generated object that tells what type of evaluation, batch, continuous (also known as streaming), or synchronous, the segment definition will undergo. |
+| `evaluationInfo` | An object that tells what type of evaluation, batch, streaming (also known as continuous), or edge (also known as synchronous), the segment definition will undergo. |
 
 ## Bulk retrieve segment definitions {#bulk-get}
 
@@ -460,7 +473,7 @@ A successful response returns HTTP status 207 with the requested segment definit
 | `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
 | `description` | A human readable description of the definition. |
-| `evaluationInfo` | A system-generated object that tells what type of evaluation, batch, continuous (also known as streaming), or synchronous, the segment definition will undergo. |
+| `evaluationInfo` | An object that tells what type of evaluation, batch, streaming (also known as continuous), or edge (also known as synchronous), the segment definition will undergo. |
 
 ## Delete a specific segment definition {#delete}
 
