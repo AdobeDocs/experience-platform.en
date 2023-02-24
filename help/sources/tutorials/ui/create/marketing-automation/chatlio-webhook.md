@@ -1,12 +1,13 @@
 ---
 title: Create a Chatlio source connection in the UI 
 description: Learn how to create a Chatlio source connection using the Adobe Experience Platform UI.
+badge: "Beta"
 ---
 # (Beta) Create a [!DNL Chatlio] source connection in the UI
 
 >[!NOTE]
 >
->The [!DNL Chatlio] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Chatlio] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
 This tutorial provides steps for creating a [!DNL Chatlio] source connection using the Adobe Experience Platform user interface.
 
