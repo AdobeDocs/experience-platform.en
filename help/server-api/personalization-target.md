@@ -23,15 +23,6 @@ When configuring your datastream, you can (optionally) provide values for [!DNL 
 
 ![UI image showing the datastream service configuration screen, with Adobe Target selected](assets/target-datastream.png)
 
-You can choose between the following [!DNL Analytics Logging] options:
-
-* **[!DNL Server Side]**: This is the default option for [[!DNL A4T]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html). When this option is selected, each time personalization content is returned by Target, the relevant [!DNL A4T] data is automatically sent to Analytics, based on the response from the Target personalization engine. 
-* **[!DNL Client Side]**: When this option is selected, each time personalization content is returned by Target, the relevant [!DNL A4T] data is returned to the calling application. If your intention is to record this data in Analytics, you need to ensure it is reported on a subsequent call to [!DNL Analytics].
-
-    >[!IMPORTANT]
-    >
-    >In addition to selecting **[!UICONTROL Client Side]** in the Target Configuration, you must also disable Analytics, for the Edge Network to return the [!DNL A4T] information back to the response.
-
 
 ## Custom parameters {#custom-parameters}
 
