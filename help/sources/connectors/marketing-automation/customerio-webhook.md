@@ -15,9 +15,9 @@ Experience Platform provides support for ingesting data from streaming applicati
 
 [[!DNL Customer.io]](https://customer.io/) is an automated messaging platform for marketers who want more control and flexibility to craft and send data-driven emails, push notifications, in-app messages, and SMS.
 
-The [!DNL Customer.io] source allows you to ingest supported Webhook Event Schemas and their associated event data from [!DNL Customer.io] using the [[!DNL Customer.io] Reporting Webhooks](https://customer.io/docs/api/webhooks/).
+The [!DNL Customer.io] source allows you to ingest supported webhook event schemas and their associated event data from [!DNL Customer.io] using the [[!DNL Customer.io] Reporting Webhooks](https://customer.io/docs/api/webhooks/).
 
-The supported Webhook Event Schemas are:
+The supported webhook event schemas are:
 
 * Customer Events
 * Email Events
