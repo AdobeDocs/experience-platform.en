@@ -15,9 +15,10 @@ Experience Platform provides support for ingesting data from third-party analyti
 
 [[!DNL Pendo]](https://pendo.io/) is a product-analytics app built to help software companies develop products that resonate with customers. The app allows software makers to embed their products with a wide range of tools that can lead both to a better product experience for users and new insights for the product team.
 
-The [!DNL Pendo] source allows you to ingest supported Webhook Event Schemas and their associated event data from [!DNL Pendo.io] using the [[!DNL Pendo] Webhooks](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks). The [!DNL Pendo] source connector works with [!DNL Pendo] URL webhooks. 
+The [!DNL Pendo] source allows you to ingest supported webhook event schemas and their associated event data from [!DNL Pendo.io] using the [[!DNL Pendo] Webhooks](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks). The [!DNL Pendo] source works with [!DNL Pendo] URL webhooks. 
 
 The supported webhooks are:
+
 * [Guide](https://support.pendo.io/hc/en-us/articles/8146679315867-Creating-a-Guide) Displayed
 * [Poll](https://support.pendo.io/hc/en-us/articles/360031867152-Polls-Classic-) Displayed / Submitted
 * [Net Promoter Score](https://support.pendo.io/hc/en-us/articles/360033527151-Set-up-an-NPS-Survey) Displayed / Submitted
@@ -30,11 +31,9 @@ A [!DNL Pendo] account. If you do not have one already see the [[!DNL Pendo] reg
 
 ### Set up [!DNL Pendo] Webhook {#set-up-webhook}
 
-Once you have successfully created your dataflow, you must set up a Webhook to inform Platform about [!DNL Pendo] events. [!DNL Pendo] Webhooks can push out real-time notifications to other services when certain events happen, and send this information to your [!DNL Pendo] source. For more information, read the tutorials on [getting your streaming endpoint URL](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) and [setting up a [!DNL Pendo] Webhook](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook).
+Once you have successfully created your dataflow, you must set up a webhook to inform Platform about [!DNL Pendo] events. [!DNL Pendo] Webhooks can push out real-time notifications to other services when certain events happen, and send this information to your [!DNL Pendo] source. For more information, read the tutorials on [getting your streaming endpoint URL](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) and [setting up a [!DNL Pendo] Webhook](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook).
 
 ## Connecting [!DNL Pendo] to Platform {#connect-to-platform}
-
-You can use the [!DNL Pendo] source connector to stream your data to Platform. The [!DNL Pendo] source is supported by [!DNL Data Prep] functions, allowing you to map any non XDM-compliant data to an XDM-compliant dataset.
 
 The documentation below provides information on how to create a [!DNL Pendo] streaming connector to connect with [!DNL Platform] using APIs or the user interface:
 
