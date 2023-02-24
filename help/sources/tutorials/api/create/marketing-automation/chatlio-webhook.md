@@ -7,7 +7,7 @@ badge: "Beta"
 
 >[!NOTE]
 >
->The [!DNL Chatlio] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Chatlio] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
 The following tutorial walks you through the steps to create a source connection and dataflow to bring [[!DNL Chatlio]](https://chatlio.com/) event data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

@@ -7,7 +7,7 @@ badge: "Beta"
 
 >[!NOTE]
 >
->The [!DNL Chatlio] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Chatlio] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
 This tutorial provides steps for creating a [!DNL Chatlio] source connection using the Adobe Experience Platform user interface.
 
