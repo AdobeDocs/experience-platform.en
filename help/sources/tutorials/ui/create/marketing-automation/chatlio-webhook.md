@@ -86,7 +86,7 @@ When finished, select **[!UICONTROL Next]**.
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
-Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](https:/experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
 The mappings listed below are mandatory and should be setup before proceeding to the [!UICONTROL Review] stage.
 
@@ -128,7 +128,7 @@ Once you have retrieved your streaming endpoint and dataflow ID, build a URL bas
 
 With your webhook URL created, you can now set up your webhook using the [!DNL Chatlio] user interface. 
 
-Login to your [[!DNL Chatlio] account](https:/chatlio.com/) and follow the [[!DNL Chatlio] guide on setup and installation](https://chatlio.com/docs/setup/) to create a widget.
+Login to your [[!DNL Chatlio]](https://chatlio.com/) account and follow [the guide on setup and installation](https://chatlio.com/docs/setup/) to create a widget.
 
 Once a widget is crated, navigate to the widget's settings page to add your webhook URL to that widget.
 
