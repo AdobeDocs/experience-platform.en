@@ -15,10 +15,9 @@ The [!DNL Twitter Web Conversions] API [event forwarding](../../../ui/event-forw
 
 This extension should be used if you want to use data from the Edge Network in [!DNL Twitter] to take advantage of its customer analytics and targeting capabilities.
 
+For example, consider a marketing team in an organization. The team captures user interaction event data from their website as event data from their website and loads it into [!DNL Twitter] using this event forwarding extension.
 
-Use case    Description
-Targeted Advertisement Campaigns    Marketing teams can use the [!DNL Twitter] event forwarding extension by capturing user interaction event data from their website and forward relevant events to Twitter. Marketing and analytics teams can then perform additional analysis and target these users to run targeted advertisement campaigns
-
+The marketing and analytics teams can then leverage [!DNL Twitter's] capabilities to perform additional analysis and target these users to run targeted advertisement campaigns.
 
 For more information on use cases specific to [!DNL Twitter], refer to the [[!DNL Twitter] use cases](https://www.braze.com/customers) documentation.
 
