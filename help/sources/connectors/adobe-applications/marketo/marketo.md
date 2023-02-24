@@ -71,8 +71,9 @@ The following table outlines the expected latency for bringing [!DNL Marketo] da
 
 The following documentation provides further information on creating a [!DNL Marketo] source connection:
 
-* For information on how to connect your [!DNL Marketo] data to Platform, see the tutorial on [creating a Marketo source connector in the UI](../../../tutorials/ui/create/adobe-applications/marketo.md).
-* For information on the underlying setup for the B2B namespaces and schemas used with [!DNL Marketo], see the documentation for [B2B namespaces and schemas](./marketo-namespaces.md).
-* For information on finding your [!DNL Marketo] munchkin ID and generating your credentials, see the [[!DNL Marketo] authentication guide](./marketo-auth.md).
-* For information on the specific mapping rules that apply to [!DNL Marketo] datasets, see the documentation on [[!DNL Marketo] field mappings](../mapping/marketo.md).
-* For general information on [!DNL Real-Time Customer Data Platform B2B Edition] and its features, see the documentation on [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
+* For information on how to connect your [!DNL Marketo] data to Platform, read the tutorial on [creating a [!DNL Marketo] source connection in the UI](../../../tutorials/ui/create/adobe-applications/marketo.md).
+  * For information on how to set up your schemas and ingest custom activity data, read the tutorial on [creating a source connection and dataflow for [!DNL Marketo] custom activity data](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
+* For information on the underlying setup for the B2B namespaces and schemas used with [!DNL Marketo], read the documentation for [B2B namespaces and schemas](./marketo-namespaces.md).
+* For information on finding your [!DNL Marketo] munchkin ID and generating your credentials, read the [[!DNL Marketo] authentication guide](./marketo-auth.md).
+* For information on the specific mapping rules that apply to [!DNL Marketo] datasets, read the documentation on [[!DNL Marketo] field mappings](../mapping/marketo.md).
+* For general information on [!DNL Real-Time Customer Data Platform B2B Edition] and its features, read the documentation on [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
