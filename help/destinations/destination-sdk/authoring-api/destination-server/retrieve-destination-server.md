@@ -40,17 +40,17 @@ Use the following API format to retrieve a specific destination server configura
 GET /authoring/destination-servers/{INSTANCE_ID}
 ```
 
-**Request**
-
 The following two requests retrieve all destination server configurations for your IMS Organization, or a specific destination server configuration, depending on whether you pass the `INSTANCE_ID` parameter in the request.
 
-Select each tab below to view the corresponding payload.
+Select each tab below to view the corresponding payload and their responses.
 
 >[!BEGINTABS]
 
 >[!TAB Retrieve all destination server configurations]
 
 The following request will retrieve the list of destination server configurations that you have access to, based on [!DNL IMS Org ID] and sandbox configuration.
+
+**Request**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -60,28 +60,9 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++**Response**
 
->[!TAB Retrieve a specific destination server configuration]
-
-```shell
-curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-| Parameter | Description |
-| -------- | ----------- |
-| `{INSTANCE_ID}` | The ID of the destination server configuration you want to retrieve. |
-
->[!ENDTABS]
-
-**Response**
-
-A successful response returns HTTP status 200 with a list of destination server configurations that you have access to, based on the [!DNL IMS Org ID] and sandbox name that you used. One `instanceId` corresponds to one destination server.
-
-If you passed the `{INSTANCE_ID}` parameter in the API call, the response only includes the destination server configuration corresponding to that `{INSTANCE_ID}`.
+A successful response returns HTTP status 200 with a list of destination server configurations that you have access to, based on the [!DNL IMS Org ID] and sandbox name that you used. One `instanceId` corresponds to one destination server. The sample response below includes two destination server configurations.
 
 ```json
 {
@@ -155,6 +136,74 @@ If you passed the `{INSTANCE_ID}` parameter in the API call, the response only i
    ]
 }
 ```
+
++++
+
+>[!TAB Retrieve a specific destination server configuration]
+
+The following request will retrieve a specific destination server configurations defined by the `{INSTANCE_ID}` parameter.
+
+**Request**
+
+```shell
+curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+| Parameter | Description |
+| -------- | ----------- |
+| `{INSTANCE_ID}` | The ID of the destination server configuration you want to retrieve. |
+
++++**Response**
+
+A successful response returns HTTP status 200 with the configuration of the destination server corresponding to the `{INSTANCE_ID}` you provided.
+
+```json
+{
+   "items":[
+      {
+         "instanceId":"2307ec2b-4798-45a4-9239-5d0a2fb0ed67",
+         "createdDate":"2020-11-17T06:49:24.331012Z",
+         "lastModifiedDate":"2020-11-17T06:49:24.331012Z",
+         "name":"Moviestar Destination Server",
+         "destinationServerType":"URL_BASED",
+         "urlBasedDestination":{
+            "url":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"https://go.{% if destination.config.domain == \"US\" %}moviestar.com{% else %}moviestar.eu{% endif%}/api/named_users/tags"
+            }
+         },
+         "httpTemplate":{
+            "requestBody":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{ \"audience\": { \"named_user_id\": [ {% for named_user in input.profile.identityMap.named_user_id %} \"{{ named_user.id }}\"{% if not loop.last %},{% endif %} {% endfor %} ] }, {% if addedSegments(input.profile.segmentMembership.ups) is not empty %} \"add\": { \"adobe-segments\": [ {% for added_segment in addedSegments(input.profile.segmentMembership.ups) %} \"{{ destination.segmentNames[added_segment.key] }}\"{% if not loop.last %},{% endif %} {% endfor %} ] } {% endif %} {% if addedSegments(input.profile.segmentMembership.ups) is not empty and removedSegments(input.profile.segmentMembership.ups) is not empty %} , {% endif %} {% if removedSegments(input.profile.segmentMembership.ups) is not empty %} \"remove\": { \"adobe-segments\": [ {% for removed_segment in removedSegments(input.profile.segmentMembership.ups) %} \"{{ destination.segmentNames[removed_segment.key] }}\"{% if not loop.last %},{% endif %} {% endfor %} ] } {% endif %} }"
+            },
+            "httpMethod":"POST",
+            "contentType":"application/json",
+            "headers":[
+               {
+                  "header":"Accept",
+                  "value":{
+                     "templatingStrategy":"NONE",
+                     "value":"application/vnd.moviestar+json; version=3;"
+                  }
+               }
+            ]
+         },
+         "qos":{
+            "name":"freeform"
+         }
+      }
+   ]
+}
+```
+
++++
+
+>[!ENDTABS]
 
 ## API error handling {#error-handling}
 

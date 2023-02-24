@@ -33,7 +33,7 @@ Use the following API format to retrieve a specific destination configuration, d
 GET /authoring/destinations/{INSTANCE_ID}
 ```
 
-**Request**
+
 
 The following two requests retrieve all destination configurations for your IMS Organization, or a specific destination configuration, depending on whether you pass the `INSTANCE_ID` parameter in the request.
 
@@ -43,6 +43,8 @@ Select each tab below to view the corresponding payload.
 
 >[!TAB Retrieve all destination configurations]
 
+**Request**
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -51,7 +53,12 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
+**Request**
+
+
 >[!TAB Retrieve a specific destination configuration]
+
+**Request**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
