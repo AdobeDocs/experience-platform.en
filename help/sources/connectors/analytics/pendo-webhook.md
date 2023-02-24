@@ -1,18 +1,19 @@
 ---
 title: Pendo Source Overview
-description: Learn how to connect Pendo to Adobe Experience Platform using APIs or the user interface by leveraging webhooks 
+description: Learn how to connect Pendo to Adobe Experience Platform using APIs or the user interface by leveraging webhooks
+badge: "Beta"
 ---
-# (Beta) [!DNL Pendo]
+# [!DNL Pendo]
 
 >[!NOTE]
 >
->The [!DNL Pendo] source is in beta. See the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Pendo] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from third-party analytics application. Support for analytics providers include [!DNL Pendo].
 
-[[!DNL Pendo]](https://pendo.io/) is a product-analytics app built to help software companies develop products that resonate with customers. The app allows software makers to embed with their products a wide range of tools that can lead both to a better product experience for users and new insights for the product team.
+[[!DNL Pendo]](https://pendo.io/) is a product-analytics app built to help software companies develop products that resonate with customers. The app allows software makers to embed their products with a wide range of tools that can lead both to a better product experience for users and new insights for the product team.
 
 The [!DNL Pendo] source allows you to ingest supported Webhook Event Schemas and their associated event data from [!DNL Pendo.io] using the [[!DNL Pendo] Webhooks](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks). The [!DNL Pendo] source connector works with [!DNL Pendo] URL webhooks. 
 
@@ -39,9 +40,9 @@ The documentation below provides information on how to create a [!DNL Pendo] str
 
 ### Connect [!DNL Pendo] to Platform using APIs {#connect-to-platform-using-api}
 
-- [Create a source connection to bring [!DNL Pendo] data to Platform using APIs.](../../tutorials/api/create/analytics/pendo-webhook.md)
+* [Create a source connection to bring [!DNL Pendo] data to Platform using APIs.](../../tutorials/api/create/analytics/pendo-webhook.md)
 
 ### Connect [!DNL Pendo] to Platform using the UI {#connect-to-platform-using-ui}
 
-- [Create a source connection to bring [!DNL Pendo] data to Platform using the user interface](../../tutorials/ui/create/analytics/pendo-webhook.md)
+* [Create a source connection to bring [!DNL Pendo] data to Platform using the user interface](../../tutorials/ui/create/analytics/pendo-webhook.md)
 
