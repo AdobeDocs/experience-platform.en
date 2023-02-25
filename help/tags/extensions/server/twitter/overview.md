@@ -75,15 +75,31 @@ Select **[!UICONTROL Save]** when finished.
 
 ## Configure an event forwarding rule {#config-rule}
 
-Create a new event forwarding Rule. Platform UI screenshot example to add an event forwarding rule.
+Once all your data elements are set up, you can start creating event forwarding rules that determine when and how your events will be sent to [!DNL Twitter].
 
-Next, define the [!UICONTROL Action Configuration], select the [!UICONTROL Action Type] as [!UICONTROL conversion event] to send Adobe Experience Edge Network events to [!DNL Twitter]. After selection, additional controls appear to further configure the Event. Platform UI screenshot example to add an event forwarding rule action configuration.
+Start creating a new [rule](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=en) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Twitter]**. Next, set the **[!UI Control Action Type]** to **[!UICONTROL conversion Event]** to send Adobe Experience Edge Network events to [!DNL Twitter].
 
-The next step is to map the [!DNL Twitter] event properties to data elements that you have previously created. Refer to the [!DNL Twitter] Web Conversions API for more details. Navigate to the [!UICONTROL Main fields] tab below: | Field name | Description | Example | | --- | --- | --- | | [!UICONTROL Event Id] | The base-36 ID of a specific event. It should match with a pre-configured event contained within your [!DNL Twitter] Ad account. This is called ID in the corresponding event in Events Manager. | o87ne or tw-o8z6j-o87ne (tw-pixel_id-event-id) | | [!UICONTROL Email] | Email is used as the identifier to match the conversion event. | | | [!UICONTROL Phone No] | Phone No is optional, it is also used as the identifier to match the conversion event. The phone number must be in E164 format [+][country code][area code][local phone number] before hashing. It's required if no other identifier is added. | +911234567875 |
+![The [!DNL Twitter] creating a conversion event rule.](../../../images/extensions/server/twitter/rule.png)
 
-Within [!UICONTROL Action Configuration] you can send [!UICONTROL Custom Data]. Platform UI screenshot example to send custom data with action configuration.
+After selection, additional controls appear to further configure the Event. Platform UI screenshot example to add an event forwarding rule action configuration. You need to map the [!DNL Twitter] event properties to the data elements that you previously created. For more information refer to the [[!DNL Twitter Web Conversions API]](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
 
-Finally, within [!UICONTROL Action Configuration] you can also send [!UICONTROL Content Data]. Platform UI screenshot example to send content data with action configuration.
+The **[!UICONTROL Main fields]** tab contains the following fields: 
+
+| Field name | Description | Example | 
+| --- | --- | --- | 
+| [!UICONTROL Event Id] | The base-36 ID of a specific event. This Id should match with a pre-configured event contained within your [!DNL Twitter] Ad account. This is known as ID in the corresponding event in Events Manager. | o87ne or tw-o8z6j-o87ne (tw-pixel_id-event-id) | | 
+[!UICONTROL Email] | Email is used as the identifier to match the conversion event. | eventforwarding@example.com| 
+| [!UICONTROL Phone No] | Phone No is optional, and is also used as the identifier to match the conversion event. The phone number must be in E164 format [+][country code][area code][local phone number] before hashing. A phone no is required if no other identifier is added. | +911234567875 |
+
+![The [!DNL Twitter] main fields configuration.](../../../images/extensions/server/twitter/action-configuration-main-fields.png)
+
+The [!UICONTROL Action Configuration] tab allows you to specify and send [!UICONTROL Custom Data]. 
+
+![The [!DNL Twitter] custom data configuration.](../../../images/extensions/server/twitter/action-configuration-custom-data.png)
+
+The [!UICONTROL Action Configuration] tab allows to send [!UICONTROL Content Data]. 
+
+![The [!DNL Twitter] content data configuration.](../../../images/extensions/server/twitter/action-configuration-content-data.png)
 
 ### Validate data within [!DNL Twitter]
 
