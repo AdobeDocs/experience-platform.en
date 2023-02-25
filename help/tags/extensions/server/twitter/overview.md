@@ -77,7 +77,7 @@ When finished, select **[!UICONTROL Save]**.
 
 Once all your data elements are set up, you can start creating event forwarding rules that determine when and how your events will be sent to [!DNL Twitter].
 
-Start creating a new [rule](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=en) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Twitter]**. To send Adobe Experience Edge Network events to [!DNL Twitter], set the **[!UI Control Action Type]** to **[!UICONTROL conversion event].** 
+Create a new [rule](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=en) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Twitter]**. To send Adobe Experience Edge Network events to [!DNL Twitter], set the **[!UI Control Action Type]** to **[!UICONTROL conversion event].** 
 
 ![The [!DNL Twitter] creating a conversion event rule.](../../../images/extensions/server/twitter/rule.png)
 
