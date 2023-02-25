@@ -1,7 +1,7 @@
 ---
 keywords: event forwarding extension;twitter;twitter event forwarding extension
 title: Twitter event forwarding extension
-description: This Adobe Experience Platform event forwarding extension sends Adobe Experience Edge Network events to Twitter.
+description: This Adobe Experience Platform event forwarding extension allows you to ingest events into Twitter for your business requirements.
 ---
 # [!DNL Twitter] event forwarding extension
 
