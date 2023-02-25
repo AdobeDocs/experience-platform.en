@@ -103,9 +103,11 @@ The [!UICONTROL Action Configuration] tab allows to send [!UICONTROL Content Dat
 
 ### Validate data within [!DNL Twitter]
 
-After creating and executing the event forwarding rule, validate whether the event sent to the [!DNL Twitter] API is displayed as expected in the [!DNL Twitter] UI.
+Once the event forwarding rule has been created and executed, validate whether the event that was sent to the [!DNL Twitter] API is displayed as expected in the [!DNL Twitter] UI.
 
 If the event collection and [!DNL Experience Platform] integration were successful, you will see events within the [!DNL Twitter] [!UICONTROL Events manager] as below: [!DNL Twitter] Event manager screenshot example.
+
+![The [!DNL Twitter] event manager](../../../images/extensions/server/twitter/twitter-event-manager.png)
 
 ## Next steps
 
