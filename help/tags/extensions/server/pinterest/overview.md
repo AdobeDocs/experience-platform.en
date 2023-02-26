@@ -34,7 +34,7 @@ In order to connect the Experience Platform to [!DNL Pinterest], the following i
 | Credential | Description | Example |
 | --- | --- | --- |
 | Ads Account Id | Your [!DNL Pinterest] Ads Account Id. Refer to the [[!DNL Pinterest] documentation](https://developers.pinterest.com/docs/conversions/conversion-management/#Finding%20your%20%2Cad_account_id) for guidance. | 123456789012 |
-| Bearer Token | Your [!DNL Pinterest] Bearer Token. Refer to the [[!DNL Pinterest] Conversions API](https://developers.pinterest.com/docs/conversions/conversion-management/#Authenticating%20for%20the%20send%20conversion%20events%20endpoint) document for guidance. <br> [!Note] <br> > <br> You will only be required to do this once as this token does not expire. | {YOUR_PINTEREST_BEARER_TOKEN} |
+| Bearer Token | Your [!DNL Pinterest] Bearer Token. Refer to the [[!DNL Pinterest] Conversions API](https://developers.pinterest.com/docs/conversions/conversion-management/#Authenticating%20for%20the%20send%20conversion%20events%20endpoint) document for guidance. <br> **You will only be required to do this once as this token does not expire.** | {YOUR_PINTEREST_BEARER_TOKEN} |
 
 ## Install and configure the [!DNL Pinterest] extension {#install}
 
