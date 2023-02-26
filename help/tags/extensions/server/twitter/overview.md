@@ -19,7 +19,7 @@ For example, consider a marketing team in an organization. The team captures use
 
 The marketing and analytics teams can then leverage [!DNL Twitter's] capabilities to perform additional analysis and target these users for targeted advertisement campaigns.
 
-For more information on use cases specific to [!DNL Twitter], refer to the [[!DNL Twitter] use cases](https://www.braze.com/customers) documentation.
+For more information on use cases specific to [!DNL Twitter], refer to the [[!DNL Twitter] use cases](https://developer.twitter.com/en/use-cases/build-for-businesses) documentation.
 
 ## [!DNL Twitter] prerequisites and guardrails {#prerequisites}
 
@@ -49,7 +49,7 @@ To install the extension, [create an event forwarding property](../../../ui/even
 
 In the left navigation, select **[!UICONTROL Extensions]**. Select **[!UICONTROL Install]** on the card for the [!DNL Twitter] extension in the **[!UICONTROL Catalog]** tab. 
 
-![Installing the [!DNL Twitter] extension.](../../../images/extensions/server/twitter/install-extension.png)
+![Installing the [!DNL Twitter] extension.](../../../images/extensions/server/twitter/install.png)
 
 ### Configure the [!DNL Twitter] extension
 
@@ -59,7 +59,7 @@ In the left navigation, select **[!UICONTROL Extensions]**. Select **[!UICONTROL
 
 In the left navigation, select **[!UICONTROL Extensions]**. Select **[!UICONTROL Configure]** on the card for the [!DNL Twitter] extension in the [!UICONTROL Installed]** tab.
 
-![Configuring the [!DNL Twitter] extension.](../../../images/extensions/server/twitter/configure-extension.png)
+![Configuring the [!DNL Twitter] extension.](../../../images/extensions/server/twitter/configure.png)
 
 On the next screen, input the following [configuration values](#configuration-details) that you previously gathered from [!DNL Twitter]:
 
@@ -71,7 +71,7 @@ On the next screen, input the following [configuration values](#configuration-de
 
 When finished, select **[!UICONTROL Save]**.
 
-![The [!DNL Twitter] extension input.](../../../images/extensions/server/twitter/extension-input.png)
+![The [!DNL Twitter] extension input.](../../../images/extensions/server/twitter/input.png)
 
 ## Configure an event forwarding rule {#config-rule}
 
@@ -93,15 +93,15 @@ The **[!UICONTROL Main fields]** tab contains the following fields:
 
 ![The [!DNL Twitter] main fields configuration.](../../../images/extensions/server/twitter/action-configuration-main-fields.png)
 
-The [!UICONTROL Action Configuration] tab allows you to specify and send [!UICONTROL Custom Data]. 
+The [!UICONTROL Custom Data] tab allows you to specify and send custom data to [!UICONTROL Twitter].
 
 ![The [!DNL Twitter] custom data configuration.](../../../images/extensions/server/twitter/action-configuration-custom-data.png)
 
-The [!UICONTROL Action Configuration] tab allows you to send [!UICONTROL Content Data]. 
+The [!UICONTROL Content Data] tab allows you to specify and send content data to [!UICONTROL Twitter].
 
-![The [!DNL Twitter] content data configuration.](../../../images/extensions/server/twitter/action-configuration-content-data.png)
+![The [!DNL Twitter] content data configuration.](../../../images/extensions/server/twitter/action-configuration-contents-data.png)
 
-### Validate data within [!DNL Twitter]
+## Validate data within [!DNL Twitter]
 
 Once the event forwarding rule has been created and executed, validate whether the event that was sent to the [!DNL Twitter] API is displayed as expected in the [!DNL Twitter] UI.
 
