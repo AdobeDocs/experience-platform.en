@@ -11,7 +11,7 @@ Updates to existing features in Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
-- [Related accounts in Real-Time CDP B2B Edition](#related-accounts)
+- [Real-Time Customer Data Platform B2B Edition](#b2b)
 - [Sources](#sources)
 
 ## [!DNL Destinations] {#destinations}
@@ -42,13 +42,31 @@ XDM is an open-source specification that provides common structures and definiti
 
 | Feature | Description |
 | --- | --- |
-| Field deprecation through the UI | You can now deprecate fields from your schemas after data has been ingested. XDM field deprecation allows you to remove fields from UI view while retaining them for use. You can reveal deprecated fields again if needed, and any segments, queries or downstream solutions that reference the fields will run as usual. |
+| Field deprecation through the UI | You can now [deprecate fields from your schemas after data has been ingested](../../xdm/tutorials/field-deprecation-ui.md). XDM field deprecation allows you to remove fields from UI view while retaining them for use. You can reveal deprecated fields again if needed, and any segments, queries or downstream solutions that reference the fields will run as usual. |
 
 {style="table-layout:auto"}
 
-For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).
+**New XDM components**
 
-<!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
+| Component type | Name | Description |
+| --- | --- | --- |
+| Class | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1669/files) | The XDM Individual Prospect Profile class brings in partner-provided IDs. |
+
+{style="table-layout:auto"}
+
+**Updated XDM components**
+
+| Component type | Name | Description |
+| --- | --- | --- |
+| Field group | [!UICONTROL Frequency Capping Constraints] | The [!UICONTROL Frequency Capping Constraints] field group has been [updated to support repeat and custom events](https://github.com/adobe/xdm/pull/1641/files). |
+| Data type | [!UICONTROL Web referrer] | Web referrer properties have been [updated to include `xdm:linkName` and `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files). Respectively, these are the name and region of the HTML element that was selected on the previous page. |
+| Field Group | [!UICONTROL Adobe CJM ExperienceEvent - Message interaction details] | [The [!UICONTROL Tracker URL] field was added](https://github.com/adobe/xdm/pull/1665/files) to the [!UICONTROL Adobe CJM ExperienceEvent]. This tracker provides the URL selected by the user. |
+| Field Group | [!UICONTROL Adobe CJM ExperienceEvent - Message interaction detail] | [The empty `meta:enum` property was removed](https://github.com/adobe/xdm/pull/1668/files) from the URL [!UICONTROL Tracking Type] field. |
+| Data type  | [!UICONTROL Media information] | [The regex pattern from the `videoSegment` property in [!UICONTROL Media information] datatype was removed](https://github.com/adobe/xdm/pull/1667/files). |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).​
 
 ## Query Service {#query-service}
 
@@ -73,13 +91,9 @@ For more information on Query Services, refer to the [Query Service overview](..
 <!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
 <!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
 
-## Related accounts in Real-Time CDP B2B Edition {#related-accounts}
+## Real-Time Customer Data Platform B2B Edition {#b2b}
 
->[!NOTE]
->
->The Related accounts feature is available for customers of the Real-Time CDP B2B Edition only.
-
-Related accounts, [!DNL Real-Time CDP B2B] allows you to view a list of accounts that are similar to the account you are browsing. You can include the related accounts in your segment definitions to broaden your reach or apply wider criteria in your segments.
+Built on Real-Time Customer Data Platform (Real-Time CDP), Real-Time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
 
 **Updated features**
 
@@ -88,12 +102,6 @@ Related accounts, [!DNL Real-Time CDP B2B] allows you to view a list of accounts
 | Enable related accounts service| The new toggle function allows you to enable the related accounts service on your account. For more information, read the guide on [enabling the related accounts service](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
 
 {style="table-layout:auto"}
-
-Read more about related accounts features in the following documentation pages:
-
-- [Related accounts in Real-Time CDP B2B Edition overview](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
-- [Related accounts tab in the Account profile UI guide](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [How to use related accounts in segment definitions](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 To learn more about Real-Time CDP B2B Edition, read the [Real-Time CDP B2B Edition overview](../../rtcdp/overview.md).
 
