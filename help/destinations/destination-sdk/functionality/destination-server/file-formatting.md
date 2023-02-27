@@ -30,8 +30,8 @@ Refer to the table below for details on what type of destinations support the fu
 
 |Integration type| Supports functionality |
 |---|---|
-| Real-time (streaming) integrations | :x: |
-| File-based (batch) integrations | :white_check_mark: |
+| Real-time (streaming) integrations | No |
+| File-based (batch) integrations | Yes |
 
 ## Supported parameters {#supported-parameters}
 

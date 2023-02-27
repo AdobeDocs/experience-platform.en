@@ -29,8 +29,8 @@ Refer to the table below for details on what type of destinations support the fu
 
 |Integration type| Supports functionality |
 |---|---|
-| Real-time (streaming) integrations | :white_check_mark: |
-| File-based (batch) integrations | :white_check_mark: |
+| Real-time (streaming) integrations | Yes |
+| File-based (batch) integrations | Yes |
 
 When [creating](../../authoring-api/destination-server/create-destination-server.md) or [updating](../../authoring-api/destination-server/update-destination-server.md) a destination server, use one of the server type configurations described in this page. Depending on your integration requirements, make sure to replace the sample parameter values from these examples with your own.
 

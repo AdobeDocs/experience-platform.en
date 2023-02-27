@@ -32,8 +32,8 @@ Refer to the table below for details on what type of destinations support the fu
 
 |Integration type| Supports functionality |
 |---|---|
-| Real-time (streaming) integrations | :white_check_mark: |
-| File-based (batch) integrations | :white_check_mark: |
+| Real-time (streaming) integrations | Yes |
+| File-based (batch) integrations | Yes |
 
 ## Supported parameters {#supported-parameters}
 
@@ -206,7 +206,7 @@ For situations where you want to allow users to select between several options, 
 
 To do this, use the `namedEnum` object as shown below and configure a `default` value for the options that the user can select.
 
-```json {line-numbers="true" highlight="14-24"}
+```json {line-numbers="true" highlight="15-24"}
 "customerDataFields":[
    {
       "name":"csvOptions",

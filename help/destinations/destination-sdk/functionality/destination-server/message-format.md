@@ -20,8 +20,8 @@ Refer to the table below for details on what type of destinations support the fu
 
 |Integration type| Supports functionality |
 |---|---|
-| Real-time (streaming) integrations | :white_check_mark: |
-| File-based (batch) integrations | :white_check_mark: (only steps 1 and 2 in the diagram further below) |
+| Real-time (streaming) integrations | Yes |
+| File-based (batch) integrations | Yes (only steps 1 and 2 in the diagram further below) |
 
 ## Overview {#overview}
 
