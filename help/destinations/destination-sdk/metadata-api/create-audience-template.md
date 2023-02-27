@@ -27,7 +27,7 @@ You can create a new audience template by making a `POST` request to the `/autho
 POST /authoring/audience-templates
 ```
 
-**Request**
++++Request
 
 The following request creates a new audience template, configured by the parameters provided in the payload. The payload below includes all parameters accepted by the `/authoring/audience-templates` endpoint. Note that you do not have to add all parameters on the call and that the template is customizable, according to your API requirements.
 
@@ -194,9 +194,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 {style="table-layout:auto"}
 
-**Response**
++++
+
++++Response
 
 A successful response returns HTTP status 200 with details of your newly created audience template.
+
++++
 
 ## API error handling
 

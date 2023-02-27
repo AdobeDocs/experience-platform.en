@@ -40,11 +40,11 @@ You can create a new destination configuration by making a POST request to the `
 POST /authoring/destinations
 ```
 
-**Request**
-
 The following request creates a new [!DNL Amazon S3] destination configuration, configured by the parameters provided in the payload. The payload below includes all parameters for file-based destinations accepted by the `/authoring/destinations` endpoint.
 
 Note that you do not have to add all parameters to your API call, and that the payload is customizable, according to your API requirements.
+
++++Request
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -226,9 +226,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolean | Use this parameter to specify if you want the exported profiles to be aggregated into groups of a single identity (GAID, IDFA, phone numbers, email, etc.). |
 |`aggregation.configurableAggregation.aggregationKey.groups` | String |Create lists of identity groups if you want to group profiles exported to your destination by groups of identity namespace. For example, you could combine profiles that contain the IDFA and GAID mobile identifiers into one call to your destination and emails into another by using the configuration in the example. |
 
-**Response**
++++
+
++++Response
 
 A successful response returns HTTP status 200 with details of your newly created destination configuration.
+
++++
 
 ## API error handling
 

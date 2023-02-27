@@ -50,7 +50,7 @@ Select each tab below to view the corresponding payload and their responses.
 
 The following request will retrieve the list of destination server configurations that you have access to, based on [!DNL IMS Org ID] and sandbox configuration.
 
-**Request**
++++Request
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -60,7 +60,9 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-+++**Response**
++++
+
++++Response
 
 A successful response returns HTTP status 200 with a list of destination server configurations that you have access to, based on the [!DNL IMS Org ID] and sandbox name that you used. One `instanceId` corresponds to one destination server. The sample response below includes two destination server configurations.
 
@@ -143,7 +145,7 @@ A successful response returns HTTP status 200 with a list of destination server 
 
 The following request will retrieve a specific destination server configurations defined by the `{INSTANCE_ID}` parameter.
 
-**Request**
++++Request
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
@@ -157,7 +159,9 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | -------- | ----------- |
 | `{INSTANCE_ID}` | The ID of the destination server configuration you want to retrieve. |
 
-+++**Response**
++++
+
++++Response
 
 A successful response returns HTTP status 200 with the configuration of the destination server corresponding to the `{INSTANCE_ID}` you provided.
 

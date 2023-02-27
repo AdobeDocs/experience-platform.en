@@ -35,8 +35,6 @@ Use the following API format to retrieve a specific audience template, defined b
 GET /authoring/audience-templates/{INSTANCE_ID}
 ```
 
-**Request**
-
 The following two requests retrieve all audience templates for your IMS Organization, or a specific audience template, depending on whether you pass the `INSTANCE_ID` parameter in the request.
 
 Select each tab below to view the corresponding payload.
@@ -47,6 +45,8 @@ Select each tab below to view the corresponding payload.
 
 The following request will retrieve the list of audience templates that you have access to, based on [!DNL IMS Org ID] and sandbox configuration.
 
++++Request
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -55,28 +55,11 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
 
->[!TAB Retrieve a specific audience template]
++++Response
 
-```shell
-curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates/{INSTANCE_ID} \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-| Parameter | Description |
-| -------- | ----------- |
-| `{INSTANCE_ID}` | The ID of the audience template you want to retrieve. |
-
->[!ENDTABS]
-
-**Response**
-
-A successful response returns HTTP status 200 with a list of audiecne templates that you have access to, based on the [!DNL IMS Org ID] and sandbox name that you used. One `instanceId` corresponds to one audience template.
-
-If you passed the `{INSTANCE_ID}` parameter in the API call, the response only includes the audience template corresponding to that `{INSTANCE_ID}`.
+A successful response returns HTTP status 200 with a list of audience templates that you have access to, based on the [!DNL IMS Org ID] and sandbox name that you used. One `instanceId` corresponds to one audience template.
 
 ```json
 
@@ -185,6 +168,144 @@ If you passed the `{INSTANCE_ID}` parameter in the API call, the response only i
    }
 }
 ```
+
++++
+
+>[!TAB Retrieve a specific audience template]
+
+The following request will retrieve the list of audience templates that you have access to, based on [!DNL IMS Org ID] and sandbox configuration.
+
++++Request
+
+```shell
+curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates/{INSTANCE_ID} \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+| Parameter | Description |
+| -------- | ----------- |
+| `{INSTANCE_ID}` | The ID of the audience template you want to retrieve. |
+
++++
+
++++Response
+
+A successful response returns HTTP status 200 with the details of the audience template corresponding to the `{INSTANCE_ID}` provided on the call.
+
+```json
+
+{
+   "instanceId":"34ab9cc2-2536-44a5-9dc5-b2fea60b3bd6",
+   "createdDate":"2021-07-26T19:30:52.012490Z",
+   "lastModifiedDate":"2021-07-27T21:25:42.763478Z",
+   "metadataTemplate":{
+      "create":{
+         "url":"https://api.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
+         "httpMethod":"POST",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{oauth2ServiceAccessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "requestBody":{
+            "json":{
+               "segments":[
+                  {
+                     "name":"{{segment.name}}",
+                     "description":"{{segment.description}}",
+                     "source_type":"FIRST_PARTY",
+                     "ad_account_id":"{{customerData.accountId}}",
+                     "retention_in_days":180
+                  }
+               ]
+            }
+         },
+         "responseFields":[
+            {
+               "value":"{{body.segments[0].segment.id}}",
+               "name":"externalAudienceId"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{root}}",
+               "name":"message"
+            }
+         ]
+      },
+      "update":{
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
+         "httpMethod":"PUT",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{oauth2ServiceAccessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "requestBody":{
+            "json":{
+               "segments":[
+                  {
+                     "id":"{{segment.alias}}",
+                     "name":"{{segment.name}}",
+                     "description":"{{segment.description}}"
+                  }
+               ]
+            }
+         },
+         "responseFields":[
+            {
+               "value":"{{body.segments[0].segment.id}}",
+               "name":"externalAudienceId"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{root}}",
+               "name":"message"
+            }
+         ]
+      },
+      "delete":{
+         "url":"https://adsapi.moviestar.com/v1/segments/{{segment.alias}}",
+         "httpMethod":"DELETE",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{oauth2ServiceAccessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{root}}",
+               "name":"message"
+            }
+         ]
+      },
+      "name":"Moviestar destination audience template - Example 1"
+   }
+}
+```
+
++++
+
+>[!ENDTABS]
 
 ## API error handling {#error-handling}
 

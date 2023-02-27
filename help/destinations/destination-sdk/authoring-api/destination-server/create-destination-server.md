@@ -33,17 +33,17 @@ You can create a new destination server configuration by making a `POST` request
 POST /authoring/destination-servers
 ```
 
-**Request**
-
 The following requests create new destination server configurations, configured by the parameters provided in the payload.
 
 The sample payloads below include all parameters supported by each destination server type. You do not need to include all the parameters in your request. The payload is customizable based on your needs.
 
-Select each tab below to view the corresponding payload.
+Select each tab below to view the corresponding API requests.
 
 >[!BEGINTABS]
 
 >[!TAB URL-based destination server]
+
++++Request
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -86,7 +86,17 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 {style="table-layout:auto"}
 
++++
+
++++Response
+
+A successful response returns HTTP status 200 with details of your newly created destination server configuration.
+
++++
+
 >[!TAB Amazon S3 destination server]
+
++++Request
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -184,8 +194,17 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 {style="table-layout:auto"}
 
++++
+
++++Response
+
+A successful response returns HTTP status 200 with details of your newly created destination server configuration.
+
++++
 
 >[!TAB SFTP destination server]
+
++++Request
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -283,8 +302,17 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 {style="table-layout:auto"}
 
++++
+
++++Response
+
+A successful response returns HTTP status 200 with details of your newly created destination server configuration.
+
++++
 
 >[!TAB Azure Data Lake Storage destination server]
+
++++ Request
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -376,8 +404,17 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 {style="table-layout:auto"}
 
++++
+
++++Response
+
+A successful response returns HTTP status 200 with details of your newly created destination server configuration.
+
++++
 
 >[!TAB Azure Blob Storage destination server]
+
++++Request
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -475,8 +512,17 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 {style="table-layout:auto"}
 
++++
+
++++Response
+
+A successful response returns HTTP status 200 with details of your newly created destination server configuration.
+
++++
 
 >[!TAB Data Landing Zone (DLZ) destination server]
+
++++Request
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -569,8 +615,17 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 {style="table-layout:auto"}
 
++++
+
++++Response
+
+A successful response returns HTTP status 200 with details of your newly created destination server configuration.
+
++++
 
 >[!TAB Google Cloud Storage destination server]
+
++++Request
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -668,12 +723,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 {style="table-layout:auto"}
 
->[!ENDTABS]
++++
 
-**Response**
++++Response
 
 A successful response returns HTTP status 200 with details of your newly created destination server configuration.
 
++++
+
+>[!ENDTABS]
 
 ## API error handling {#error-handling}
 

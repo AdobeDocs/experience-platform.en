@@ -165,39 +165,36 @@ You can group several customer data fields within one section. When setting up t
 
 To do this, use `"type": "object"` to create the group, and collect the desired customer data fields within a `properties` object, as shown in the image below, where the grouping **[!UICONTROL CSV Options]** is highlighted. 
 
-```json {line-numbers="true" start-number="100" highlight="106-128"}
+```json {line-numbers="true" highlight="6-28"}
 "customerDataFields":[
-[...]
-{
-   "name":"csvOptions",
-   "title":"CSV Options",
-   "description":"Select your CSV options",
-   "type":"object",
-   "properties":[
-      {
-         "name":"delimiter",
-         "title":"Delimiter",
-         "description":"Select your Delimiter",
-         "type":"string",
-         "isRequired":false,
-         "default":",",
-         "namedEnum":[
-            {
-               "name":"Comma (,)",
-               "value":","
-            },
-            {
-               "name":"Tab (\\t)",
-               "value":"\t"
-            }
-         ],
-         "readOnly":false,
-         "hidden":false
-      },
-      [...]
-   ]
-}
-[...]
+   {
+      "name":"csvOptions",
+      "title":"CSV Options",
+      "description":"Select your CSV options",
+      "type":"object",
+      "properties":[
+         {
+            "name":"delimiter",
+            "title":"Delimiter",
+            "description":"Select your Delimiter",
+            "type":"string",
+            "isRequired":false,
+            "default":",",
+            "namedEnum":[
+               {
+                  "name":"Comma (,)",
+                  "value":","
+               },
+               {
+                  "name":"Tab (\\t)",
+                  "value":"\t"
+               }
+            ],
+            "readOnly":false,
+            "hidden":false
+         }
+      ]
+   }
 ]
 ```
 
@@ -209,40 +206,36 @@ For situations where you want to allow users to select between several options, 
 
 To do this, use the `namedEnum` object as shown below and configure a `default` value for the options that the user can select.
 
-```json {line-numbers="true" start-number="100" highlight="114-124"}
-[...]
+```json {line-numbers="true" highlight="14-24"}
 "customerDataFields":[
-[...]
-{
-   "name":"csvOptions",
-   "title":"CSV Options",
-   "description":"Select your CSV options",
-   "type":"object",
-   "properties":[
-      {
-         "name":"delimiter",
-         "title":"Delimiter",
-         "description":"Select your Delimiter",
-         "type":"string",
-         "isRequired":false,
-         "default":",",
-         "namedEnum":[
-            {
-               "name":"Comma (,)",
-               "value":","
-            },
-            {
-               "name":"Tab (\\t)",
-               "value":"\t"
-            }
-         ],
-         "readOnly":false,
-         "hidden":false
-      },
-      [...]
-   ]
-}
-[...]
+   {
+      "name":"csvOptions",
+      "title":"CSV Options",
+      "description":"Select your CSV options",
+      "type":"object",
+      "properties":[
+         {
+            "name":"delimiter",
+            "title":"Delimiter",
+            "description":"Select your Delimiter",
+            "type":"string",
+            "isRequired":false,
+            "default":",",
+            "namedEnum":[
+               {
+                  "name":"Comma (,)",
+                  "value":","
+               },
+               {
+                  "name":"Tab (\\t)",
+                  "value":"\t"
+               }
+            ],
+            "readOnly":false,
+            "hidden":false
+         }
+      ]
+   }
 ]
 ```
 
@@ -268,148 +261,146 @@ To set a field as conditional, use the `conditional` parameter as shown below:
 
 In a wider context, you can see the `conditional` field being used in the destination configuration below, alongside the `fileType` string and the `csvOptions` object in which it is defined.
 
-```json {line-numbers="true" start-number="100" highlight="103-115, 121-125"}
+```json {line-numbers="true" highlight="3-15, 21-25"}
 "customerDataFields":[
-[...]
-{
-   "name":"fileType",
-   "title":"File Type",
-   "description":"Select your file type",
-   "type":"string",
-   "isRequired":true,
-   "enum":[
-      "PARQUET",
-      "CSV",
-      "JSON"
-   ],
-   "readOnly":false,
-   "hidden":false
-},
-{
-   "name":"csvOptions",
-   "title":"CSV Options",
-   "description":"Select your CSV options",
-   "type":"object",
-   "conditional":{
-      "field":"fileType",
-      "operator":"EQUALS",
-      "value":"CSV"
+   {
+      "name":"fileType",
+      "title":"File Type",
+      "description":"Select your file type",
+      "type":"string",
+      "isRequired":true,
+      "enum":[
+         "PARQUET",
+         "CSV",
+         "JSON"
+      ],
+      "readOnly":false,
+      "hidden":false
    },
-   "properties":[
-      {
-         "name":"delimiter",
-         "title":"Delimiter",
-         "description":"Select your Delimiter",
-         "type":"string",
-         "isRequired":false,
-         "default":",",
-         "namedEnum":[
-            {
-               "name":"Comma (,)",
-               "value":","
-            },
-            {
-               "name":"Tab (\\t)",
-               "value":"\t"
-            }
-         ],
-         "readOnly":false,
-         "hidden":false
+   {
+      "name":"csvOptions",
+      "title":"CSV Options",
+      "description":"Select your CSV options",
+      "type":"object",
+      "conditional":{
+         "field":"fileType",
+         "operator":"EQUALS",
+         "value":"CSV"
       },
-      {
-         "name":"quote",
-         "title":"Quote Character",
-         "description":"Select your Quote character",
-         "type":"string",
-         "isRequired":false,
-         "default":"",
-         "namedEnum":[
-            {
-               "name":"Double Quotes (\")",
-               "value":"\""
-            },
-            {
-               "name":"Null Character (\u0000)",
-               "value":"\u0000"
-            }
-         ],
-         "readOnly":false,
-         "hidden":false
-      },
-      {
-         "name":"escape",
-         "title":"Escape Character",
-         "description":"Select your Escape character",
-         "type":"string",
-         "isRequired":false,
-         "default":"\\",
-         "namedEnum":[
-            {
-               "name":"Back Slash (\\)",
-               "value":"\\"
-            },
-            {
-               "name":"Single Quote (')",
-               "value":"'"
-            }
-         ],
-         "readOnly":false,
-         "hidden":false
-      },
-      {
-         "name":"emptyValue",
-         "title":"Empty Value",
-         "description":"Select the output value of blank fields",
-         "type":"string",
-         "isRequired":false,
-         "default":"",
-         "namedEnum":[
-            {
-               "name":"Empty String",
-               "value":""
-            },
-            {
-               "name":"\"\"",
-               "value":"\"\""
-            },
-            {
-               "name":"null",
-               "value":"null"
-            }
-         ],
-         "readOnly":false,
-         "hidden":false
-      },
-      {
-         "name":"nullValue",
-         "title":"Null Value",
-         "description":"Select the output value of 'null' fields",
-         "type":"string",
-         "isRequired":false,
-         "default":"null",
-         "namedEnum":[
-            {
-               "name":"Empty String",
-               "value":""
-            },
-            {
-               "name":"\"\"",
-               "value":"\"\""
-            },
-            {
-               "name":"null",
-               "value":"null"
-            }
-         ],
-         "readOnly":false,
-         "hidden":false
-      }
-   ],
-   "isRequired":false,
-   "readOnly":false,
-   "hidden":false
-}
-[...]
+      "properties":[
+         {
+            "name":"delimiter",
+            "title":"Delimiter",
+            "description":"Select your Delimiter",
+            "type":"string",
+            "isRequired":false,
+            "default":",",
+            "namedEnum":[
+               {
+                  "name":"Comma (,)",
+                  "value":","
+               },
+               {
+                  "name":"Tab (\\t)",
+                  "value":"\t"
+               }
+            ],
+            "readOnly":false,
+            "hidden":false
+         },
+         {
+            "name":"quote",
+            "title":"Quote Character",
+            "description":"Select your Quote character",
+            "type":"string",
+            "isRequired":false,
+            "default":"",
+            "namedEnum":[
+               {
+                  "name":"Double Quotes (\")",
+                  "value":"\""
+               },
+               {
+                  "name":"Null Character (\u0000)",
+                  "value":"\u0000"
+               }
+            ],
+            "readOnly":false,
+            "hidden":false
+         },
+         {
+            "name":"escape",
+            "title":"Escape Character",
+            "description":"Select your Escape character",
+            "type":"string",
+            "isRequired":false,
+            "default":"\\",
+            "namedEnum":[
+               {
+                  "name":"Back Slash (\\)",
+                  "value":"\\"
+               },
+               {
+                  "name":"Single Quote (')",
+                  "value":"'"
+               }
+            ],
+            "readOnly":false,
+            "hidden":false
+         },
+         {
+            "name":"emptyValue",
+            "title":"Empty Value",
+            "description":"Select the output value of blank fields",
+            "type":"string",
+            "isRequired":false,
+            "default":"",
+            "namedEnum":[
+               {
+                  "name":"Empty String",
+                  "value":""
+               },
+               {
+                  "name":"\"\"",
+                  "value":"\"\""
+               },
+               {
+                  "name":"null",
+                  "value":"null"
+               }
+            ],
+            "readOnly":false,
+            "hidden":false
+         },
+         {
+            "name":"nullValue",
+            "title":"Null Value",
+            "description":"Select the output value of 'null' fields",
+            "type":"string",
+            "isRequired":false,
+            "default":"null",
+            "namedEnum":[
+               {
+                  "name":"Empty String",
+                  "value":""
+               },
+               {
+                  "name":"\"\"",
+                  "value":"\"\""
+               },
+               {
+                  "name":"null",
+                  "value":"null"
+               }
+            ],
+            "readOnly":false,
+            "hidden":false
+         }
+      ],
+      "isRequired":false,
+      "readOnly":false,
+      "hidden":false
+   }
 ]
 ```
 
@@ -419,7 +410,7 @@ Below, you can see the resulting UI screen, based on the configuration above. Wh
 
 ## Accessing templatized customer data fields {#accessing-templatized-fields}
 
-When your destination requires user input to be configured correctly, you must provide a selection of customer data fields to your users, which they can fill in through the Platform UI. Then, you must configure your destination server to correctly read the user input from the customer data fields. This is done through templatized fields.
+When your destination requires user input, you must provide a selection of customer data fields to your users, which they can fill in through the Platform UI. Then, you must configure your destination server to correctly read the user input from the customer data fields. This is done through templatized fields.
 
 Templatized fields use the format `{{customerData.fieldName}}`, where `fieldName` is the name of the customer data field that you are reading information from. All templatized customer data fields are preceded by `customerData.` and enclosed within double braces `{{ }}`.
 
@@ -467,7 +458,7 @@ For Experience Platform to correctly connect to [!DNL Amazon S3], your destinati
    }
 ```
 
-The templatized values `{{customerData.bucketName}}` and {{customerData.path}} read the user-provided values so that Experience Platform can successfully connect to the destination platform.
+The templatized values `{{customerData.bucketName}}` and `{{customerData.path}}` read the user-provided values so that Experience Platform can successfully connect to the destination platform.
 
 For more information about how to configure your destination server to read templatized fields, see the documentation on [hard-coded versus templatized fields](../destination-server/server-specs.md#templatized-fields).
 

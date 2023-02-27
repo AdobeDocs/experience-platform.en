@@ -38,8 +38,6 @@ PUT /authoring/destination-servers/{INSTANCE_ID}
 | -------- | ----------- |
 | `{INSTANCE_ID}` | The ID of the destination server configuration that you want to update. To obtain an existing destination server configuration and its corresponding `{INSTANCE_ID}`, see [Retrieve a destination server configuration](retrieve-destination-server.md).|
 
-**Request**
-
 The following requests update an existing destination server configuration, configured by the parameters provided in the payload.
 
 Select each tab below to view the corresponding payload.
@@ -47,6 +45,8 @@ Select each tab below to view the corresponding payload.
 >[!BEGINTABS]
 
 >[!TAB URL-based destination server]
+
++++Request
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers\{INSTANCE_ID} \
@@ -89,7 +89,17 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 {style="table-layout:auto"}
 
++++
+
++++Response
+
+A successful response returns HTTP status 200 with the details of your updated destination server configuration.
+
++++
+
 >[!TAB Amazon S3 destination server]
+
++++Request
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers\{INSTANCE_ID} \
@@ -187,8 +197,17 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 {style="table-layout:auto"}
 
++++
+
++++Response
+
+A successful response returns HTTP status 200 with the details of your updated destination server configuration.
+
++++
 
 >[!TAB SFTP destination server]
+
++++Request
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
@@ -286,8 +305,17 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 {style="table-layout:auto"}
 
++++
+
++++Response
+
+A successful response returns HTTP status 200 with the details of your updated destination server configuration.
+
++++
 
 >[!TAB Azure Data Lake Storage destination server]
+
++++Request
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
@@ -379,8 +407,17 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 {style="table-layout:auto"}
 
++++
+
++++Response
+
+A successful response returns HTTP status 200 with the details of your updated destination server configuration.
+
++++
 
 >[!TAB Azure Blob Storage destination server]
+
++++Request
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_D} \
@@ -478,8 +515,17 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 {style="table-layout:auto"}
 
++++
+
++++Response
+
+A successful response returns HTTP status 200 with the details of your updated destination server configuration.
+
++++
 
 >[!TAB Data Landing Zone (DLZ) destination server]
+
++++Request
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
@@ -572,8 +618,17 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 {style="table-layout:auto"}
 
++++
+
++++Response
+
+A successful response returns HTTP status 200 with the details of your updated destination server configuration.
+
++++
 
 >[!TAB Google Cloud Storage destination server]
+
++++Request
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
@@ -671,11 +726,15 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 {style="table-layout:auto"}
 
->[!ENDTABS]
++++
 
-**Response**
++++Response
 
 A successful response returns HTTP status 200 with the details of your updated destination server configuration.
+
++++
+
+>[!ENDTABS]
 
 ## API error handling {#error-handling}
 

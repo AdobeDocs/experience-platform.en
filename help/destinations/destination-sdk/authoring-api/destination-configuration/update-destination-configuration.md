@@ -46,7 +46,7 @@ PUT /authoring/destinations/{INSTANCE_ID}
 | -------- | ----------- |
 | `{INSTANCE_ID}` | The ID of the destination configuration that you want to update. To obtain an existing destination configuration and its corresponding `{INSTANCE_ID}`, see [Retrieve a destination configuration](retrieve-destination-configuration.md).|
 
-**Request**
++++Request
 
 The following request updates the destination we created in [this example](create-destination-configuration.md) with different `filenameConfig` options.
 
@@ -184,9 +184,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-**Response**
++++
+
++++Response
 
 A successful response returns HTTP status 200 with the details of your updated destination configuration.
+
++++
 
 ## API error handling {#error-handling}
 

@@ -5,12 +5,7 @@ title: Aggregation policy
 
 # Aggregation policy
 
-
-
-
 Aggregation policies are supported by the destination configuration for real-time integrations built with Destination SDK.
-
-
 
 An aggregation policy determines how the exported profiles are combined in the data exports. Available options are:
 

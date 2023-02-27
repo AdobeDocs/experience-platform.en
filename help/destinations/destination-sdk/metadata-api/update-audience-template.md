@@ -33,9 +33,9 @@ PUT /authoring/audience-templates/{INSTANCE_ID}
 | -------- | ----------- |
 | `{INSTANCE_ID}` | The ID of the audience template that you want to update. To obtain an existing audience template and its corresponding `{INSTANCE_ID}`, see [Retrieve a audience template](retrieve-audience-template.md).|
 
-**Request**
-
 The following request updates an existing audience metadata template, configured by the parameters provided in the payload.
+
++++Request
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-templates/{INSTANCE_ID} \
@@ -133,9 +133,13 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 }'
 ```
 
-**Response**
++++
+
++++Response
 
 A successful response returns HTTP status 200 with details of your updated audience template.
+
++++
 
 ## API error handling
 
