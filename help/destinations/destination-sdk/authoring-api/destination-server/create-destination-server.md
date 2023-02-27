@@ -41,7 +41,7 @@ Select each tab below to view the corresponding API requests.
 
 >[!BEGINTABS]
 
->[!TAB URL-based destination server]
+>[!TAB URL-based]
 
 +++Request
 
@@ -94,7 +94,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 +++
 
->[!TAB Amazon S3 destination server]
+>[!TAB Amazon S3]
 
 +++Request
 
@@ -202,7 +202,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 +++
 
->[!TAB SFTP destination server]
+>[!TAB SFTP]
 
 +++Request
 
@@ -310,7 +310,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 +++
 
->[!TAB Azure Data Lake Storage destination server]
+>[!TAB Azure Data Lake Storage]
 
 +++ Request
 
@@ -412,7 +412,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 +++
 
->[!TAB Azure Blob Storage destination server]
+>[!TAB Azure Blob Storage]
 
 +++Request
 
@@ -520,7 +520,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 +++
 
->[!TAB Data Landing Zone (DLZ) destination server]
+>[!TAB Data Landing Zone (DLZ)]
 
 +++Request
 
@@ -623,7 +623,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 +++
 
->[!TAB Google Cloud Storage destination server]
+>[!TAB Google Cloud Storage]
 
 +++Request
 
