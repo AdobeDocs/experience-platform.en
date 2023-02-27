@@ -74,7 +74,7 @@ See the table below the example payload for more information on the input parame
 >`Feature:cintel-ner:Service-1e9081c865214d1e8bace51dd918b5c0`
 
 ```SHELL
-curl -w'\n' -i -X POST https://sensei-stage-ue1.adobe.io/sensei-core/v2/predict \
+curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -H 'Prefer: respond-async, wait=59' \
 -H "x-api-key: $API_KEY" \
 -H "content-type: multipart/form-data" \

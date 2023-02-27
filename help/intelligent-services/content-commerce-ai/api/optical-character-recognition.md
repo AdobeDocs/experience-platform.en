@@ -27,10 +27,6 @@ POST /services/v1/predict
 
 The following request checks if text is present based on the input image provided in the payload. See the table below the example payload for more information on the input parameters shown.
 
->[!CAUTION]
->
->`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. Contact the Content and Commerce AI beta team to receive your `analyzer_id` for this service.
-
 Execution with inline image:
 
 ```SHELL
@@ -77,7 +73,13 @@ curl -w'\n' -i -X POST https://sensei-va6.adobe.io/services/v2/predict \
 
 **Response**
 
-A successful response returns the text that was detected in the `feature_value` array. The text is read and returned top down from left to right. This means that if "I love Adobe" was detected, your payload returns "I", "love", and "Adobe" in separate objects. In the object you are given a `feature_name` that contains the word and a `feature_value` that contains a confidence metric for that text.
+A successful response returns the text that was detected in the `tags` list for each image that was passed in the request. If there is no text in a certain image, `is_text_present` is 0 and `tags` is an empty list.
+
+[result0, result1, ...]: list of responses for each input document. Each result is a dict with keys:
+
+1. request_element_id: corresponding index to the input file for this response, 0 for the first image in the request’s documents list, 1 for the next one and so on.
+2. tags: list of dictionaries, each dictionary has two keys : text which is a recognized word from the image and relevance which is computed as the fraction of the area of the extracted text’s bounding box in comparison to the full image. 0.01 would translate to a text occupying at least 1% of the image.
+3.  is_text_present: 0 or 1 depending on if text is present in the image. If 0, tags is an empty list.
 
 ```json
 {
