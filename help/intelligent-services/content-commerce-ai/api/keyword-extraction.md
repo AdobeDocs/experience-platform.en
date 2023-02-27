@@ -101,7 +101,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
         "application-id": "1234",
         "min_key_phrase_length": 1,
         "max_key_phrase_length": 3,
-        "top_n": 10,
+        "top_n": 5,
         "last_semantic_unit_type": "concept"
       },
       "sensei:outputs":{
