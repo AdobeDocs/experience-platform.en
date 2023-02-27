@@ -2,51 +2,50 @@
 keywords: Experience Platform;user guide;attribution ai;popular topics;region
 feature: Attribution AI
 title: Attribution AI UI Guide
-topic-legacy: User guide 
 description: This document serves as a guide for interacting with Attribution AI in the Intelligent Services user interface.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
 ---
 # Attribution AI UI guide
 
-Attribution AI, as part of Intelligent Services is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers’ journeys.
+Attribution AI, as part of Intelligent Services is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers' journeys.
 
 This document serves as a guide for interacting with Attribution AI in the Intelligent Services user interface.
 
-## Create an instance
+## Create a model
 
 In the [!DNL Adobe Experience Platform] UI, select **[!UICONTROL Services]** in the left navigation. The **[!UICONTROL Services]** browser appears and displays available Adobe intelligent services. In the container for Attribution AI, select **[!UICONTROL Open]**.
 
-![Accessing your instance](./images/user-guide/open_Attribution_ai.png)
+![Accessing your model](./images/user-guide/open_Attribution_ai.png)
 
-The Attribution AI service page appears. This page lists service instances of Attribution AI and displays information about them, including the name of the instance, conversion events, how often the instance is run, and the status of the last update.
+The Attribution AI service page appears. This page lists service models of Attribution AI and displays information about them, including the name of the model, conversion events, how often the model is run, and the status of the last update.
 
-You can find the **[!UICONTROL Total conversion events scored]** metric located in the bottom-right side of the **[!UICONTROL Create instance]** container. This metric tracks the total number of conversion events scored by Attribution AI for the current calendar year including all sandbox environments and any deleted service instances.
+You can find the **[!UICONTROL Total conversion events scored]** metric located in the bottom-right side of the **[!UICONTROL Create model]** container. This metric tracks the total number of conversion events scored by Attribution AI for the current calendar year including all sandbox environments and any deleted service models.
 
 ![total conversions](./images/user-guide/total_conversions.png)
 
-Service instances can be edited, cloned, and deleted by using the controls on the right-hand side of the UI. To display these controls, select an instance from your existing **[!UICONTROL Service instances]**. The controls contain the following information:
+Service models can be edited, cloned, and deleted by using the controls on the right-hand side of the UI. To display these controls, select an model from your existing **[!UICONTROL Service models]**. The controls contain the following information:
 
-- **[!UICONTROL Edit]**: Selecting **[!UICONTROL Edit]** allows you to modify an existing service instance. You can edit the name, description, status, and scoring frequency of the instance.
-- **[!UICONTROL Clone]**: Selecting **[!UICONTROL Clone]** copies the selected service instance. You can then modify the workflow to make minor tweaks and rename it as a new instance.
-- **[!UICONTROL Delete]**: You can delete a service instance including any historical runs. The corresponding output dataset will be deleted from Platform. However, scores that were synced to Real-time Customer Profile are not deleted.
+- **[!UICONTROL Edit]**: Selecting **[!UICONTROL Edit]** allows you to modify an existing service model. You can edit the name, description, status, scoring frequency of the model, and additional score dataset columns.
+- **[!UICONTROL Clone]**: Selecting **[!UICONTROL Clone]** copies the selected service model. You can then modify the workflow to make minor tweaks and rename it as a new model.
+- **[!UICONTROL Delete]**: You can delete a service model including any historical runs. The corresponding output dataset will be deleted from Platform. However, scores that were synced to Real-Time Customer Profile are not deleted.
 - **[!UICONTROL Data source]**: A link to the dataset being used. If more than one dataset is being used by Attribution AI, "Multiple" followed by the number of datasets is displayed. Upon selecting the hyperlink, the datasets preview popover is shown.
 - **[!UICONTROL Last run details]**: This is only displayed when a run fails. Information on why the run failed such as error codes are displayed here.
 
 ![Side pane](./images/user-guide/multiple-datasets-pane.png)
 
-- **[!UICONTROL Conversion events]**: A quick overview of the conversion events configured for this instance.
+- **[!UICONTROL Conversion events]**: A quick overview of the conversion events configured for this model.
 - **[!UICONTROL Lookback window]**: The time frame you defined indicating how many days prior to the conversion event touchpoints are included.
-- **[!UICONTROL Touchpoints]**: A list of all the touchpoints you defined while creating this instance.
+- **[!UICONTROL Touchpoints]**: A list of all the touchpoints you defined while creating this model.
 
 ![](./images/user-guide/side_panel_2.png)
 
-Select **[!UICONTROL Create instance]** to begin.
+Select **[!UICONTROL Create model]** to begin.
 
-![Create instance](./images/user-guide/landing_page.png)
+![Create model](./images/user-guide/landing_page.png)
 
-Next, the set up page for Attribution AI appears where you can provide a name and optional description for your service instance.
+Next, the set up page for Attribution AI appears where you can provide a name and optional description for your service model.
 
-![naming an instance](./images/user-guide/naming_instance.png)
+![naming a model](./images/user-guide/naming_instance.png)
 
 ## Select data {#select-data}
 
@@ -222,7 +221,7 @@ To change the time of day you want scoring to occur, select the clock icon. In t
 
 ### Additional score dataset columns (optional)
 
-By default, a score dataset is created for each service instance in a standard schema. You can choose to add additional columns based on your Conversion Event and Touchpoint configurations to the scoring dataset output. Start by selecting columns from your input dataset, you can then drag and drop them to change the order by holding down the left mouse button over the hamburger icon.
+By default, a score dataset is created for each service model in a standard schema. You can choose to add additional columns based on your Conversion Event and Touchpoint configurations to the scoring dataset output. Start by selecting columns from your input dataset, you can then drag and drop them to change the order by holding down the left mouse button over the hamburger icon.
 
 ![score dataset column addition](./images/user-guide/Add-score-dataset.png)
 
@@ -259,44 +258,6 @@ To ensure that you get the most accurate model possible, it is important to trai
 Once you have selected your training window, select **[!UICONTROL Finish]** in the top-right corner. Allow some time for the data to process. Once complete, a popover dialog appears confirming that the instance setup is complete. Select **[!UICONTROL Ok]** to be redirected to the **[!UICONTROL Service instances]** page where you can see your service instance.
 
 ![setup complete](./images/user-guide/instance_setup_complete.png)
-
-## Governance policies
-
-Once you go through the workflow to create an instance and submit the model's configuration, the [policy enforcement](/help/data-governance/enforcement/auto-enforcement.md) checks to see if there are any violations. If a policy violation occurs, a popover appears indicating that one or more policies have been violated. This is to ensure that your data operations and marketing actions within Platform are compliant with data usage policies. 
-
-![popover showing policy violation](./images/user-guide/policy-violation-popover-aai.png)
-
-The popover provides specific information about the violation. You can resolve these violations through policy settings and other measures that aren't directly related to the configuration workflow. For example, you could change the labels so that certain fields are allowed to be used for data science purposes. Alternatively, you could also modify the model configuration itself so that it doesn't use anything with a label on it. See the documentation to learn more about how to set up [policies](/help/data-governance/policies/overview.md).
-
-## Attribute-based access control
-
->[!IMPORTANT]
->
->Attribute-based access control is currently available in a limited release only.
-
-[Attribute-based access control](../../../help/access-control/abac/overview.md) is a capability of Adobe Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be metadata added to an object, such as a label added to a schema field or segment. An administrator defines access policies that include attributes to manage user access permissions.
-
-This functionality allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments.
-
-Through attribute-based access control, administrators can control users’ access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that corresponds to those fields.
-
-Due to attribute-based access control, some fields and functionalities might have access restricted and be unavailable for certain Attribution AI service instances. Examples include, "Identity", "Score Definition", and "Clone."
-
-At the top of the Attribution AI workspace **insights page**, the details that show in the sidebar have restricted access.
-
-![The Attribution AI workspace with the restricted schema fields highlighted.](./images/user-guide/access-restricted.png)
-
-If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
-
-![The Attribution AI workspace with the restricted dataset fields highlighted.](./images/user-guide/restricted-info-excluded.png)
-
-When you preview datasets with restricted schema on the **[!UICONTROL Create instance workflow]** page, a warning appears to let you know that [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
-
-![The Attribution AI workspace with the restricted previewed schema fields results highlighted.](./images/user-guide/restricted-dataset-preview.png)
-
-After you create an instance with restricted information and proceed to the **[!UICONTROL Define goal]** step, a warning is displayed at the top: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
-
-![The Attribution AI workspace with the restricted fields of the instance results highlighted.](./images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Next steps
 

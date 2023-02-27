@@ -8,9 +8,9 @@ exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
 
 ## Overview {#overview}
 
-[Google Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en) lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], [!DNL Gmail], and [!DNL YouTube].
+[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], [!DNL Gmail], and [!DNL YouTube].
 
-![Google Customer Match destination in the Adobe Experience Platform UI](../../assets/catalog/advertising/google-customer-match/catalog.png)
+![Google Customer Match destination in the Adobe Experience Platform UI.](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
 ## Use cases {#use-cases}
 
@@ -63,7 +63,7 @@ Next, make sure your [!DNL Google] account is configured for a [!DNL Standard] o
 
 ### Allow list {#allowlist}
 
-Before creating the [!DNL Google Customer Match] destination in Experience Platform, make sure your [!DNL Google Ads] account complies with the [Google Customer Match policy](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
+Before creating the [!DNL Google Customer Match] destination in Experience Platform, make sure your [!DNL Google Ads] account complies with the [[!DNL Google Customer Match] policy](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
 Customers with compliant accounts are automatically allow listed by Google.
 
@@ -90,10 +90,10 @@ You can hash email addresses before ingesting them into Adobe Experience Platfor
 
 For more information about Google's hashing requirements and other restrictions on activation, see the following sections in Google's documentation:
 
-* [[!DNL Customer Match] with email address, address, or user ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)
-* [[!DNL Customer Match] considerations](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_considerations)
-* [Customer Match with phone number](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_phone_number)
-* [Customer Match with mobile device IDs](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_mobile_device_ids)
+* [[!DNL Customer Match] with email address, address, or user ID](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_email_address_address_or_user_id)
+* [[!DNL Customer Match] considerations](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_considerations)
+* [[!DNL Customer Match] with phone number](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_phone_number)
+* [[!DNL Customer Match] with mobile device IDs](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
 
 
 To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](../../../ingestion/batch-ingestion/overview.md) and the [streaming ingestion overview](../../../ingestion/streaming-ingestion/overview.md).
@@ -202,5 +202,5 @@ This error occurs when customer accounts do not comply with the [prerequisites](
 
 ## Additional resources {#additional-resources}
 
-* [Integrate Google Customer Match - Video tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
+* [Integrate [!DNL Google Customer Match] - Video tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
 

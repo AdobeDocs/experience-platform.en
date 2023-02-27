@@ -11,6 +11,10 @@ feature: Destinations
 * [Destinations overview](./home.md)
 * [Destination types and categories](./destination-types.md)
 * [Destinations (Activation) guardrails](./guardrails.md)
+* How destinations work {#how-destinations-work}
+  * [Configurable and common export settings in destinations](./how-destinations-work/destinations-configurations.md)
+  * [Profile export behavior for different destination types](./how-destinations-work/profile-export-behavior.md)
+  * [Identity handling in the destinations activation workflow](./how-destinations-work/identity-handling.md)
 * API tutorials {#api}
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
     * [Connect to batch cloud storage and email marketing destinations and activate data using the Flow Service API](./api/connect-activate-batch-destinations.md)
@@ -18,6 +22,7 @@ feature: Destinations
     * [Update destination dataflows](./api/update-destination-dataflows.md)
     * [Delete destination accounts](./api/delete-destination-account.md)
     * [Delete destination dataflows](./api/delete-destination-dataflow.md)
+    * [(Beta) Export datasets](/help/destinations/api/export-datasets.md)
 * UI guides {#ui}
     * [Destinations workspace](./ui/destinations-workspace.md)
     * [Create a new destination connection](./ui/connect-destination.md)
@@ -30,6 +35,7 @@ feature: Destinations
         * [Configure personalization destinations for same-page and next-page personalization](./ui/configure-personalization-destinations.md)
         * [(Beta) Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
         * [(Beta) Export datasets using the Experience Platform UI](./ui/export-datasets.md)
+        * [(Beta) Use the last qualification time XDM attribute in the new beta cloud storage destinations](./ui/activate-last-qualification-time.md)
     * [View destination details](./ui/destination-details-page.md)
     * [Update destination accounts](./ui/update-accounts.md)
     * [Delete destination accounts](./ui/delete-destination-account.md)
@@ -42,6 +48,7 @@ feature: Destinations
     * [Destinations catalog overview](./catalog/overview.md)
     * Adobe destinations{#adobe}
         * [Adobe destinations overview](./catalog/adobe/overview.md)
+        * [(Beta) Experience Cloud audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
         * [Marketo Engage connection](./catalog/adobe/marketo-engage.md)
         * [Experience Platform segment sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
     * Advertising destinations{#advertising}
@@ -147,6 +154,7 @@ feature: Destinations
         * [KickFire extension](./catalog/personalization/kickfire.md)
         * [Marketo Web Personalization extension](./catalog/personalization/marketo-web-personalization.md)
         * [Pega Customer Decision Hub connection](./catalog/personalization/pega.md)
+        * [Pega Profile connection](./catalog/personalization/pega-profile.md)
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
         * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)

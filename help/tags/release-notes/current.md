@@ -5,6 +5,21 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 ---
 # Release notes for tags and event forwarding
 
+## January 25, 2023
+
+* **New home screen**: The home page for Data Collection UI has been updated to include helpful onboarding information and links to streamline productivity. This includes:
+    1. Documentation and recommended workflows to get started
+    1. Recent properties, rules, and data elements
+    1. Popular extensions
+    1. New extension updates with a quick install feature
+* **Send data to [!DNL Google Ads] using event forwarding**: You can now use the [[!DNL Google Ads Enhanced Conversions] API extension](../extensions/server/google-ads-enhanced-conversions/overview.md) for event forwarding, combined with [Google Oauth 2 secrets](../ui/event-forwarding/secrets.md#google-oauth2), to securely send server-side data to [!DNL Google Ads] in real time.
+
+## November 23, 2022
+
+* **[!DNL AWS] extension for event forwarding**: You can now send data to [!DNL Amazon Web Services] ([!DNL AWS]) using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL AWS] extension overview](../../tags/extensions/server/aws/overview.md) for more information.
+* **[!DNL Google Ads Enhanced Conversions] extension for event forwarding**: You can now send conversion data to [!DNL Google Ads] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Google Ads Enhanced Conversions] extension overview](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) for more information.
+* **[!DNL Microsoft Azure] extension for event forwarding**: You can now send data to [!DNL Microsoft Azure] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Microsoft Azure] extension overview](../../tags/extensions/server/azure/overview.md) for more information.
+
 ## October 26, 2022
 
 * **Sensitive data handling for datastreams**: Datastreams now leverage several Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../edge/datastreams/overview.md#sensitive) for more information.

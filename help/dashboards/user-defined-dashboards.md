@@ -112,8 +112,12 @@ Widgets can be re-arranged and resized while in this workspace. Select **[!UICON
 
 To ensure that each query for an Adobe Real-Time Customer Data Platform insights dashboard has enough resources to execute efficiently, the API tracks resource usage by assigning concurrency slots to each query. The system can process up to four concurrent queries, and therefore four concurrent query slots are available at any given time. Queries are put into a queue based on concurrency slots, then wait in the queue until enough concurrency slots are available.
 
-## Next steps
+## Next steps and additional resources
 
-By reading this document you have a better understanding of how to create a custom dashboard and how to create, edit, and update custom widgets for that dashboard.
+By reading this document, you have a better understanding of how to create a custom dashboard and how to create, edit, and update custom widgets for that dashboard.
 
 To discover the available pre-configured metrics and visualizations for the [profiles](./guides/profiles.md#standard-widgets), [segments](./guides/segments.md#standard-widgets), and [destinations](./guides/destinations.md#standard-widgets) dashboards, see the list of standard widgets in their respective documentation.
+
+To reinforce your understanding of user-defined dashboards in Experience Platform, watch the following video:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataf
 description: Destinations allow you to activate your data from Adobe Experience Platform to countless external partners. This tutorial provides instructions on how you can monitor dataflows for your destinations using the Experience Platform user interface.
 solution: Experience Platform
 title: Monitor dataflows for Destinations in the UI
-topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 ---
@@ -44,7 +43,7 @@ See the following table for more information on statuses:
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="Dataflow run details"
->abstract="The destination dataflow run details contain information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities. To learn more, please review the metric definitions guide."
+>abstract="The destination dataflow run details contain information on the segment's activation status and metrics taken from Real-Time Customer Profile to generate unique identities. To learn more, please review the metric definitions guide."
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
@@ -107,7 +106,7 @@ The details page also displays a list of identities that failed and identities t
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Dataflow run details"
->abstract="The destination dataflow run details contain information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities. To learn more, please review the metric definitions guide."
+>abstract="The destination dataflow run details contain information on the segment's activation status and metrics taken from Real-Time Customer Profile to generate unique identities. To learn more, please review the metric definitions guide."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="Dataflow runs for streaming destinations"
 
 >[!CONTEXTUALHELP]
@@ -165,12 +164,12 @@ The details page also displays a list of identities that failed and identities t
 >[!NOTE]
 >
 >- Destinations monitoring functionality is currently supported for all destinations in Experience Platform *except* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
->- For the [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), and [HTTP API](/help/destinations/catalog/streaming/http-destination.md) destinations, identities excluded are currently not displayed.
+>- For the [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), and [HTTP API](/help/destinations/catalog/streaming/http-destination.md) destinations, identities excluded, failed, and activated are currently not displayed.
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="Activation"
->abstract="The destination activation view contains information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities."
+>abstract="The destination activation view contains information on the segment's activation status and metrics taken from Real-Time Customer Profile to generate unique identities."
 
 To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Destinations]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the destination run jobs.
 

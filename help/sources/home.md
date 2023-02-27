@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;source connectors;source connector;sources;data sources;data source;data source connection
 solution: Experience Platform
 title: Source Connectors Overview
-topic-legacy: overview
 description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 ---
@@ -34,6 +33,7 @@ Experience Platform allows data to be ingested from other Adobe applications, in
   - [Create a Customer Attributes source connection in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] source overview](connectors/adobe-applications/marketo/marketo.md)
   - [Create a [!DNL Marketo Engage] source connection in the UI](./tutorials/ui/create/adobe-applications/marketo.md)
+  - [Create a [!DNL Marketo Engage] source connection and dataflow for custom activity data](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
 - [Adobe Workfront source overview](connectors/adobe-applications/workfront.md)
   - [Create a Workfront source connection in the UI](./tutorials/ui/create/adobe-applications/workfront.md)
 
@@ -48,6 +48,7 @@ Experience Platform provides support for ingesting data from a third-party adver
 Experience Platform provides support for ingesting data from a third-party analytics platform. See the following related documents for more information:
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
+- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md)
 
 ### Cloud Storage {#cloud-storage}
 
@@ -79,6 +80,7 @@ CRM systems provide data that can help build customer relationships, which in tu
 
 - [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce]](connectors/crm/salesforce.md)
+- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md)
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 - [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
@@ -131,6 +133,8 @@ Experience Platform provides support for ingesting data from your local system. 
 
 Experience Platform provides support for ingesting data from a third-party marketing automation system. See the following related documents for more information on specific source connectors:
 
+- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md)
+- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md)
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md)

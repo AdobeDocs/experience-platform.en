@@ -18,7 +18,7 @@ New features in Adobe Experience Platform:
 Updates to existing features:
 * [[!DNL Data Science Workspace]](#dsw)
 * [[!DNL Experience Data Model (XDM) System]](#xdm)
-* [[!DNL Real-time Customer Profile]](#profile) 
+* [[!DNL Real-Time Customer Profile]](#profile) 
 * [[!DNL Segmentation Service]](#segmentation)
 
 ## [!DNL Real-Time Customer Data Platform] {#rtcdp}
@@ -98,7 +98,7 @@ For more information about sources, see [Sources overview](../../sources/home.md
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] enables data scientists to seamlessly generate insights from data and content across Adobe applications and third-party systems by building and operationalizing Machine Learning Models. [!DNL Data Science Workspace] is tightly integrated with [!DNL Platform] and powers the end-to-end data science lifecycle, including exploration and preparation of XDM data, followed by the development and operationalization of Models to automatically enrich [!DNL Real-time Customer Profile] with Machine Learning Insights.
+Adobe Experience Platform [!DNL Data Science Workspace] enables data scientists to seamlessly generate insights from data and content across Adobe applications and third-party systems by building and operationalizing Machine Learning Models. [!DNL Data Science Workspace] is tightly integrated with [!DNL Platform] and powers the end-to-end data science lifecycle, including exploration and preparation of XDM data, followed by the development and operationalization of Models to automatically enrich [!DNL Real-Time Customer Profile] with Machine Learning Insights.
 
 **New features**
 
@@ -122,7 +122,7 @@ XDM is a publicly documented specification designed to improve the power of digi
 | Notification schema | New schema that represents notification data sent during the data ingestion process. |
 | Adobe AdCloud DSP schemas | Five new schemas have been added to represent Adobe Advertising Cloud demand-side platform (DSP) metadata: Placement, Campaign, Package, Advertiser, Account.|
 | ExperienceEvent Implementation Details schema field groups | New ExperienceEvent field groups that adds a standard field to store information about the software used to collect the event. |
-| [!DNL Profile Privacy] field groups | New profile field groups that adds fields to accept general out-out and sales/sharing opt-out signals for [!DNL Real-time Customer Profile]. |
+| [!DNL Profile Privacy] field groups | New profile field groups that adds fields to accept general out-out and sales/sharing opt-out signals for [!DNL Real-Time Customer Profile]. |
 | Format constraints for `xdm:alternateDisplayInfo` | The "Title" and "Description" fields for `xdm:alternateDisplayInfo` must both be strings to pass validation. |
 | Name change: XDM [!DNL Individual Profile]  | The "title" of the "XDM [!DNL Profile]" class has been updated to "XDM [!DNL Individual Profile]". The formal `$id` of the class has not changed. |
 
@@ -132,9 +132,9 @@ XDM is a publicly documented specification designed to improve the power of digi
 
 To learn more about working with XDM using the [!DNL Schema Registry] API and [!DNL Schema Editor] user interface, please read the [XDM System documentation](../../xdm/home.md).
 
-## [!DNL Real-time Customer Profile] {#profile}
+## [!DNL Real-Time Customer Profile] {#profile}
 
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With [!DNL Real-Time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 
 | Feature    | Description  |
 | -----------| ---------- |
@@ -152,11 +152,11 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 * None.
 
-For more information on [!DNL Real-time Customer Profile], including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-time Customer Profile Overview](../../profile/home.md).
+For more information on [!DNL Real-Time Customer Profile], including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-Time Customer Profile Overview](../../profile/home.md).
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
+Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-Time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
 
 [!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
 

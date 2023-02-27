@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Descriptors API Endpoint
 description: The /descriptors endpoint in the Schema Registry API allows you to programmatically manage XDM descriptors within your experience application.
-topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
 ---
 # Descriptors endpoint
@@ -380,15 +379,15 @@ Relationship descriptors describe a relationship between two different schemas, 
 | `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
 | `xdm:sourceVersion` | The major version of the source schema. |
 | `xdm:sourceProperty` | Path to the field in the source schema where the relationship is being defined. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address"). |
-| `xdm:destinationSchema` | The `$id` URI of the destination schema this descriptor is defining a relationship with. |
-| `xdm:destinationVersion` | The major version of the destination schema. |
-| `xdm:destinationProperty` | Optional path to a target field within the destination schema. If this property is omitted, the target field is inferred by any fields that contain a matching reference identity descriptor (see below). |
+| `xdm:destinationSchema` | The `$id` URI of the reference schema this descriptor is defining a relationship with. |
+| `xdm:destinationVersion` | The major version of the reference schema. |
+| `xdm:destinationProperty` | Optional path to a target field within the reference schema. If this property is omitted, the target field is inferred by any fields that contain a matching reference identity descriptor (see below). |
 
 {style="table-layout:auto"}
 
 #### Reference identity descriptor
 
-Reference identity descriptors provide a reference context to the primary identity of a schema field, allowing it to be referenced by fields in other schemas. The destination schema must already have a primary identity field defined before it can be referred to by other schemas through this descriptor.
+Reference identity descriptors provide a reference context to the primary identity of a schema field, allowing it to be referenced by fields in other schemas. The reference schema must already have a primary identity field defined before it can be referred to by other schemas through this descriptor.
 
 ```json
 {
@@ -405,14 +404,14 @@ Reference identity descriptors provide a reference context to the primary identi
 | `@type` | The type of descriptor being defined. For a reference identity descriptor, this value must be set to `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
 | `xdm:sourceVersion` | The major version of the source schema. |
-| `xdm:sourceProperty` | Path to the field in the source schema that will be used to refer to the destination schema. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
+| `xdm:sourceProperty` | Path to the field in the source schema that will be used to refer to the reference schema. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
 | `xdm:identityNamespace` | The identity namespace code for the source property. |
 
 {style="table-layout:auto"}
 
 #### Deprecated field descriptor
 
-You can [deprecate a field within a custom XDM resource](../tutorials/field-deprecation.md#custom) by adding a `meta:status` attribute set to `deprecated` to the field in question. If you want to deprecate fields provided by standard XDM resources in your schemas, however, you can assign a deprecated field descriptor to the schema in question to achieve the same effect. Using the [correct `Accept` header](../tutorials/field-deprecation.md#verify-deprecation), you can then view which standard fields are deprecated for a schema when looking it up in the API.
+You can [deprecate a field within a custom XDM resource](../tutorials/field-deprecation-api.md#custom) by adding a `meta:status` attribute set to `deprecated` to the field in question. If you want to deprecate fields provided by standard XDM resources in your schemas, however, you can assign a deprecated field descriptor to the schema in question to achieve the same effect. Using the [correct `Accept` header](../tutorials/field-deprecation-api.md#verify-deprecation), you can then view which standard fields are deprecated for a schema when looking it up in the API.
 
 ```json
 {

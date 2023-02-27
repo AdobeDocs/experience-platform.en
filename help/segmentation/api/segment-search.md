@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment;search;segment search;
 title: Segment Search API Endpoint
-topic-legacy: guide
 description: In the Adobe Experience Platform Segmentation Service API, Segment Search is used to search fields contained across various data sources and return them in near real-time. This guide provides information to help you better understand Segment Search and includes sample API calls for performing basic actions using the API.
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
 ---

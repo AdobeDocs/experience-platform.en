@@ -2,7 +2,6 @@
 keywords: Experience Platform;luma web data;Data Science Workspace;popular topics;recipes;demo data;demo web data;luma data
 solution: Experience Platform
 title: Create the Luma web schemas and datasets
-topic-legacy: tutorial
 type: Tutorial
 description: This tutorial provides you with the prerequisites and assets required for the Luma demo propensity model.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7

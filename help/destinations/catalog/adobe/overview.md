@@ -18,7 +18,10 @@ To understand the difference between connections and extensions, see [Connection
 
 ### Connections
 
+* [Adobe Advertising Cloud DSP connection](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
 * [Adobe Campaign connection](../email-marketing/adobe-campaign.md)
+* [Adobe Target connection](/help/destinations/catalog/personalization/adobe-target-connection.md)
+* [(Beta) Experience Cloud audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Marketo Engage connection](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ### Extensions

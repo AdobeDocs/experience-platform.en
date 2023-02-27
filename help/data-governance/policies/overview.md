@@ -2,8 +2,7 @@
 keywords: Experience Platform;home;popular topics;dule;DULE
 solution: Experience Platform
 title: Data Usage Policies Overview
-topic-legacy: policies
-description: In order for data usage labels to effectively support data compliance, data usage policies must be implemented. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform.
+description: Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 ---
 # Data usage policies overview {#policies-overview}

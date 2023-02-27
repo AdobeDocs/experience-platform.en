@@ -2,7 +2,6 @@
 keywords: Experience Platform;schedule a model;Data Science Workspace;popular topics;schedule scoring;schedule training
 solution: Experience Platform
 title: Schedule a Model in the Data Science Workspace UI
-topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace allows you to set up scheduled scoring and training runs on a machine learning service. Automating the training and scoring process can help maintain and improve a Service's efficiency through time by keeping up with patterns within your data.
 exl-id: 51f6f328-7c63-4de1-9184-2ba526bb82e2

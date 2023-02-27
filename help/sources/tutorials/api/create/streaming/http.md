@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;streaming connection;create streaming connection;api guide;tutorial;create a streaming connection;streaming ingestion;ingestion;
-title: Create an HTTP API Streaming Connection Using the API
-description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
+title: Create an HTTP API Streaming Connection Using The Flow Service API
+description: This tutorial provides steps on how to create a streaming connection using the HTTP API source for both raw and XDM data using the Flow Service API
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 ---
 
@@ -16,7 +16,7 @@ This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/experience
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
 
 Additionally, creating a streaming connection requires you to have a target XDM schema and a dataset. To learn how to create these, please read the tutorial on [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md) or the tutorial on [streaming time-series data](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
@@ -126,7 +126,7 @@ A successful response returns HTTP status 201 with details of the newly created 
 
 Authenticated connections should be used when you need to differentiate between records coming from trusted and un-trusted sources. Users who want to send information with Personally Identifiable Information (PII) should create an authenticated connection when streaming information to Platform.
 
-To create an authenticated base connection, you must specify your source ID and whether authentication is required when making a POST request to the `/connections` endpoint.
+To create an authenticated base connection, you must include the `authenticationRequired` parameter in your request and specify its value as `true`. During this step, you can also provide a source ID for your authenticated base connection. This parameter is optional and will use the same value as the `name` attribute, if it is not provided. 
 
 
 **API format**
@@ -160,9 +160,9 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "{SOURCE_ID}",
+             "sourceId": "Authenticated XDM streaming connection",
              "dataType": "xdm",
-             "name": "Sample connection",
+             "name": "Authenticated XDM streaming connection",
              "authenticationRequired": true
          }
      }
@@ -188,9 +188,9 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "Sample connection",
+             "sourceId": "Authenticated raw streaming connection",
              "dataType": "raw",
-             "name": "Sample connection",
+             "name": "Authenticated raw streaming connection",
              "authenticationRequired": true
          }
      }
@@ -201,8 +201,8 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | Property | Description |
 | -------- | ----------- |
-| `auth.params.sourceId` | The ID of the streaming connection you want to create. |
-| `auth.params.authenticationRequired` | The parameter that specifies that the created streaming connection |
+| `auth.params.sourceId` | An additional identifier that can be used when creating an authenticated base connection. This parameter is optional and will use the same value as the `name` attribute, if it is not provided. |
+| `auth.params.authenticationRequired` | This parameter specifies whether the streaming connection requires authentication or not. If `authenticationRequired` is set to `true` then authentication must be provided for the streaming connection. If `authenticationRequired` is set to `false` then authentication is not required. |
 
 **Response**
 
@@ -253,10 +253,10 @@ A successful response returns HTTP status 200 with detailed information about th
       "createdBy": "acme@AdobeID",
       "updatedBy": "acme@AdobeID",
       "createdClient": "{CREATED_CLIENT}",
-      "updatedClient": "{UPDATEDD_CLIENT}",
+      "updatedClient": "{UPDATED_CLIENT}",
       "sandboxId": "{SANDBOX_ID}",
       "sandboxName": "{SANDBOX_NAME}",
-      "imsOrgId": "{ORG_ID}}",
+      "imsOrgId": "{ORG_ID}",
       "name": "ACME Streaming Connection XDM Data",
       "description": "ACME streaming connection for customer data",
       "connectionSpec": {

@@ -34,5 +34,5 @@ The following table outlines guardrails to consider when using the [streaming in
 
 See the following documentation for more information on data and processing guardrails in Experience Platform:
 
-* [Guardrails for Real-time Customer Profile data](../profile/guardrails.md)
+* [Guardrails for Real-Time Customer Profile data](../profile/guardrails.md)
 * [Guardrails for Identity Service data](../identity-service/guardrails.md)

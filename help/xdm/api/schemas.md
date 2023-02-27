@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Schemas API Endpoint
 description: The /schemas endpoint in the Schema Registry API allows you to programmatically manage XDM schemas within your experience application.
-topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 ---
 # Schemas endpoint
@@ -368,7 +367,7 @@ One of the most common PATCH operations involves adding previously defined field
 **API format**
 
 ```http
-PATCH /tenant/schema/{SCHEMA_ID} 
+PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
 | Parameter | Description |
@@ -448,9 +447,9 @@ The response shows that both operations were performed successfully. The field g
 }
 ```
 
-## Enable a schema for use in Real-time Customer Profile {#union}
+## Enable a schema for use in Real-Time Customer Profile {#union}
 
-In order for a schema to participate in [Real-time Customer Profile](../../profile/home.md), you must add a `union` tag to the schema's `meta:immutableTags` array. You can accomplish this by making a PATCH request for the schema in question.
+In order for a schema to participate in [Real-Time Customer Profile](../../profile/home.md), you must add a `union` tag to the schema's `meta:immutableTags` array. You can accomplish this by making a PATCH request for the schema in question.
 
 >[!IMPORTANT]
 >
@@ -459,7 +458,7 @@ In order for a schema to participate in [Real-time Customer Profile](../../profi
 **API format**
 
 ```http
-PATCH /tenant/schema/{SCHEMA_ID} 
+PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
 | Parameter | Description |

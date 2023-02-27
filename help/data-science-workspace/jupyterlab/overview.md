@@ -2,7 +2,6 @@
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;jupyterlab
 solution: Experience Platform
 title: JupyterLab UI Overview
-topic-legacy: Overview
 description: JupyterLab is a web-based user interface for Project Jupyter and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter Notebooks, code, and data. This document provides an overview of JupyterLab and its features as well as instructions to perform common actions.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
 ---

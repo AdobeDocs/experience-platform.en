@@ -4,7 +4,6 @@ solution: Experience Platform
 title: Adobe Experience Platform FAQ and Troubleshooting Guide
 description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 landing-page-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
-topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 ---
@@ -212,5 +211,5 @@ The following is a list of troubleshooting guides and API reference documentatio
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/)||
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] FAQ and troubleshooting guide](../xdm/troubleshooting-guide.md)|
 | [!DNL Flow Service] ([!DNL Sources] and [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/)||
-| [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en)| [[!DNL Profile] troubleshooting guide](../profile/troubleshooting.md) |
+| [!DNL Real-Time Customer Profile] | [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en)| [[!DNL Profile] troubleshooting guide](../profile/troubleshooting.md) |
 | Sandboxes | [Sandbox API](https://www.adobe.io/experience-platform-apis/references/sandbox) | [Sandboxes troubleshooting guide](../sandboxes/troubleshooting-guide.md)|

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Vertica;vertica
 solution: Experience Platform
 title: Create an HP Vertica Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect HP Vertica to Adobe Experience Platform using the Flow Service API.
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
@@ -33,7 +32,7 @@ In order for [!DNL Flow Service] to connect with [!DNL HP Vertica], you must pro
 | Credential | Description |
 | ---------- | ----------- |
 | `connectionString` | The connection string used to connect to your [!DNL HP Vertica] instance. The connection string pattern for [!DNL HP Vertica] is `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL HP Vertica] is: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL HP Vertica] is: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
 
 For more information on acquiring a connection string, refer to [this HP Vertica document](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
 

@@ -10,6 +10,13 @@ exl-id: afd07ddc-652e-4e22-b298-feba27332462
 
 **[!DNL Destinations]** are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
+
 ## Destinations and sources {#destinations-and-sources}
 
 One of the core functionalities of Platform is ingesting your first-party data and activating it for your business needs. Use [sources](../sources/home.md) to ingest data into Platform and destinations to export data from Platform. 
@@ -22,7 +29,7 @@ One of the core functionalities of Platform is ingesting your first-party data a
 
 ## Controls {#controls}
 
-The controls in the [Destinations workspace](./ui/destinations-workspace.md) allow you to:
+The controls in the [destinations workspace](./ui/destinations-workspace.md) allow you to:
 
 * Browse the catalog of destination platforms where you can activate your data;
 * Create, edit, activate, and disable data flows to the destinations in the catalog;
@@ -32,7 +39,7 @@ The controls in the [Destinations workspace](./ui/destinations-workspace.md) all
 
 ## Destination types and categories {#types-and-categories}
 
-For detailed information, see the [destination types and categories overview](./destination-types.md).
+With Experience Platform, you can activate data to various types of destinations, to satisfy your activation use cases. Destinations range from API-based integrations, to integrations with file reception systems, profile lookup destinations, and more. For detailed information about all available destinations, see the [destination types and categories overview](./destination-types.md).
 
 ## Destinations and access controls {#access-controls}
 
@@ -56,6 +63,12 @@ Attribute-based access control in Adobe Experience Platform allows administrator
 With attribute-based access control, you can apply mapping configurations to fields that you have permissions to. Furthermore, you cannot export data to a destination if you do not have access to all fields in the dataset.
 
 For more information on how destinations work with attribute-based access controls, read the [attribute-based access control overview](../access-control/abac/overview.md#destinations).
+
+## Destinations monitoring {#destinations-monitoring}
+
+After establishing a connection to a destination and completing the activation workflow, you can monitor the data exports to your reception system. Read the [guide on monitoring dataflows to destinations in the UI](/help/dataflows/ui/monitor-destinations.md) for more information.
+
+You can also validate if data is coming through successfully to your destination. Most destination documentation pages in the catalog have a *Validate data export section*, which indicates how you can check in the destination platform that data is being successfully brought in from Experience Platform.
 
 ## Data Governance restrictions on activating data to destinations {#data-governance}
 

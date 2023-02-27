@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;sources;connectors;oracle;oracle eloqua;eloqua
-solution: Experience Platform
 title: Create an Oracle Eloqua source connection using Platform UI
-topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to Oracle Eloqua using Platform UI.
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
 ---
 # Create an [!DNL Oracle Eloqua] source connection using Platform UI
 
-This tutorial provides steps for creating an [!DNL Oracle Eloqua] source connector using the Adobe Experience Platform user interface.
+This tutorial provides steps for creating an [!DNL Oracle Eloqua] source connection using the Adobe Experience Platform user interface.
 
 ## Getting started
 
@@ -25,8 +22,8 @@ In order to connect [!DNL Oracle Eloqua] to Platform, you must provide values fo
 
 | Credential | Description |
 | --- | --- |
-| Endpoint | The endpoint of your [!DNL Oracle Eloqua]. |
-| Username | The username of your [!DNL Oracle Eloqua] account. The username must be formatted as `siteName + \\ + username`, where `siteName` is the company name you used to log in to [!DNL Oracle Eloqua] and `username` is your username. For example, your log in username can be: `adobe\\emily`. |
+| Endpoint | The endpoint of your [!DNL Oracle Eloqua] server. [!DNL Oracle Eloqua] supports multiple data centers. To find your endpoint, login to the [[!DNL Oracle Eloqua] interface](https://login.eloqua.com) with your credentials and then copy the base URL portion from the redirect URL. The format for your URL pattern is `xxx.xx.eloqua.com` and should be entered without `http` or `https`. |
+| Username | The username of your [!DNL Oracle Eloqua] server. The username must be formatted as `siteName + \\ + username`, where `siteName` is the company name you used to log in to [!DNL Oracle Eloqua] and `username` is your username. For example, your log in username can be: `Eloqua\Andy`. **Note**: You must use a single backslash (`\`)when using the UI because Experience Platform UI automatically adds an additional backslash (`\`) when entering a username. |
 | Password | The password corresponding to your [!DNL Oracle Eloqua] username. |
 
 For more information on authentication credentials for [!DNL Oracle Eloqua], see the [[!DNL Oracle Eloqua] guide on authentication](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
