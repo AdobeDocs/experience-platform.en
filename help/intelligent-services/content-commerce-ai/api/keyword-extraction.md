@@ -71,7 +71,7 @@ See the table below the example payload for more information on the input parame
 >[!CAUTION]
 >
 >`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. For keyword extraction service, the `analyzer_id` ID is:
->`Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
+>`Feature:cintel-ner:Service-1e9081c865214d1e8bace51dd918b5c0`
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei-stage-ue1.adobe.io/sensei-core/v2/predict \
