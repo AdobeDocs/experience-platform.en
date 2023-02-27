@@ -1,39 +1,19 @@
 ---
-title: (Beta) Adobe Commerce Destination Connector
+title: Adobe Commerce Destination Connector
 description: Learn how Adobe Commerce and Real-Time CDP merchants can personalize the shopping experience by delivering highly relevant site content and promotions, customized to customer segments built and managed within Real-Time CDP.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
 ---
-# (Beta) Adobe Commerce connection {#adobe-commerce}
+# Adobe Commerce Connection {#adobe-commerce}
 
 ## Overview {#overview}
 
->[!IMPORTANT]
-> 
->The **[!UICONTROL Adobe Commerce]** connector is in beta and only available to a select number of customers.
-
 The [!DNL Adobe Commerce] destination connector lets you select one or more Real-Time CDP segments to activate to your [!DNL Adobe Commerce] account to deliver a dynamic personalized experience for your shoppers. Within [!DNL Adobe Commerce], you can then select those Real-Time CDP segments to personalize unique offers in the cart such as 'buy 2 get 1 free,'. You also can display hero banners and modify product pricing through promotional offers, all customized to Adobe Real-Time CDP segments.
-
-<!--## Use cases {#use-cases}
-
-To help you better understand how and when you should use the *YourDestination* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
-
-### Use case #1 {#use-case-1}
-
-*For mobile messaging platforms:*
-
-*A home rental and sales platform wants to push mobile notifications to customers' Android and iOS devices to let them know that there are 100 updated listings in the area where they previously searched for a rental.*
-
-### Use case #2 {#use-case-2}
-
-*For social network platforms:*
-
-*An athletic apparel brand wants to reach existing customers through their social media accounts. The apparel brand can ingest email addresses from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to YourDestination, to display ads in their customers' social media feeds.*-->
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the destinations catalog for select beta customers who have purchased Real-Time CDP Prime or Ultimate and Adobe Commerce.
+This extension is available in the destinations catalog for customers who have purchased Real-Time CDP Prime or Ultimate and Adobe Commerce.
 
-Beta customers should have access to:
+Customers should have access to:
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
 - [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)
@@ -85,7 +65,8 @@ Read [Activate profiles and segments to profile request destinations](../../ui/a
 
 ## Next steps in [!DNL Adobe Commerce]
 
-Now that you have configured the [!DNL Commerce] destination within Experience Platform, you need to configure the [!DNL Commerce Admin] to import the Real-Time CDP segments you created. See the [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html) to learn more.
+Now that you have configured the [!DNL Commerce] destination within Experience Platform, you need to configure the [!DNL Commerce Admin] to import the Real-Time CDP segments you created. See the [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/realtime-cdp-audiences.html) to learn more.
+
 
 ## Validate audience activation in Commerce {#exported-data}
 
