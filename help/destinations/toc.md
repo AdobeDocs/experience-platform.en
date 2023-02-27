@@ -180,6 +180,7 @@ feature: Destinations
 * Destination SDK {#destination-sdk}
     * [Overview](./destination-sdk/overview.md)
     * [Integration prerequisites](./destination-sdk/integration-prerequisites.md)
+    * [Getting started with Destination SDK](./destination-sdk/getting-started.md)
     * Functionality {#functionality}
         * [Configuration options](./destination-sdk/functionality/configuration-options.md)
         * Destination server components {#destination-server}
@@ -203,7 +204,18 @@ feature: Destinations
         * [Rate limiting and retry policy for streaming destinations](./destination-sdk/functionality/rate-limiting-retry-policy.md)
         * [Supported transformation functions](./destination-sdk/functionality/supported-functions.md)
         * [Audience metadata management](./destination-sdk/functionality/audience-metadata-management.md)
-    * [Getting started with Destination SDK](./destination-sdk/getting-started.md)
+    * Guides {#guides}
+        * [Use Destination SDK to configure a streaming destination](./destination-sdk/guides/configure-destination-instructions.md)
+        * [Use Destination SDK to configure a file-based destination](./destination-sdk/guides/configure-file-based-destination-instructions.md)
+        * [Submit for review a destination authored in Destination SDK](./destination-sdk/guides/submit-destination.md)
+        * Configure file-based destinations {#configure-file-based-destinations}
+            * [Configure file formatting options](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)        
+            * [Configure an Amazon S3 destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
+            * [Configure an Amazon S3 destination with custom file name and formatting options](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
+            * [Configure an Azure Blob Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+            * [Configure an Azure Data Lake Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+            * [Configure an Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
+            * [Configure an SFTP destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
     * Destination authoring API reference {#authoring-api}
         * [Destination SDK (Destination Authoring) API reference](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
         * Destination server operations {#server-operations}
@@ -248,18 +260,6 @@ feature: Destinations
         * [Use the GitHub web interface to create a destination documentation page](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
         * [Use a text editor in your local environment to create a destination documentation page](./destination-sdk/docs-framework/work-in-local-environment.md)
         * [Documentation self-service template](./destination-sdk/docs-framework/self-service-template.md)
-        * [Authoring best practices](./destination-sdk/docs-framework/authoring-best-practices.md)        
-    * Guides {#guides}
-        * [Use Destination SDK to configure a streaming destination](./destination-sdk/guides/configure-destination-instructions.md)
-        * [Use Destination SDK to configure a file-based destination](./destination-sdk/guides/configure-file-based-destination-instructions.md)
-        * [Submit for review a destination authored in Destination SDK](./destination-sdk/guides/submit-destination.md)
-        * Configure file-based destinations {#configure-file-based-destinations}
-            * [Configure file formatting options](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)        
-            * [Configure an Amazon S3 destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
-            * [Configure an Amazon S3 destination with custom file name and formatting options](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
-            * [Configure an Azure Blob Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
-            * [Configure an Azure Data Lake Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
-            * [Configure an Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
-            * [Configure an SFTP destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+        * [Authoring best practices](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Frequently asked questions](./destinations-faq.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
