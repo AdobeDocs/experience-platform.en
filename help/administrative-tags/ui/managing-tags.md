@@ -1,7 +1,9 @@
 ---
 keywords: Experience Platform;managing tags;tags;
-title: Managing Unified Tags
-description: This document provides information on managing unified tags in Adobe Experience Cloud
+title: Managing Administrative Tags
+description: This document provides information on managing administrative tags in Adobe Experience Cloud
+hide: true
+hidefromtoc: true
 ---
 # Managing Tags guide
 
