@@ -258,7 +258,7 @@ A successful response returns HTTP status 200 with details of your newly created
 | Property | Description |
 | -------- | ----------- |
 | `id` | A system-generated ID of your newly created segment definition. |
-| `evaluationInfo` | An object that tells what type of evaluation the segment definition will undergo. It can be batch, streaming (also known as continuous), or edge (also known as synchronous) segmentation. |
+| `evaluationInfo` | An object that indicates what type of evaluation the segment definition will undergo. It can be batch, streaming (also known as continuous), or edge (also known as synchronous) segmentation. |
 
 ## Retrieve a specific segment definition {#get}
 
@@ -340,7 +340,7 @@ A successful response returns HTTP status 200 with detailed information about th
 | `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
 | `description` | A human readable description of the definition. |
-| `evaluationInfo` | An object that tells what type of evaluation, batch, streaming (also known as continuous), or edge (also known as synchronous), the segment definition will undergo. |
+| `evaluationInfo` | An object that indicates what type of evaluation, batch, streaming (also known as continuous), or edge (also known as synchronous), the segment definition will undergo. |
 
 ## Bulk retrieve segment definitions {#bulk-get}
 
@@ -473,7 +473,7 @@ A successful response returns HTTP status 207 with the requested segment definit
 | `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
 | `description` | A human readable description of the definition. |
-| `evaluationInfo` | An object that tells what type of evaluation, batch, streaming (also known as continuous), or edge (also known as synchronous), the segment definition will undergo. |
+| `evaluationInfo` | An object that indicates what type of evaluation, batch, streaming (also known as continuous), or edge (also known as synchronous), the segment definition will undergo. |
 
 ## Delete a specific segment definition {#delete}
 
