@@ -39,7 +39,7 @@ For more general information on destinations, refer to the [destinations overvie
 XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
 
 **Updated features**
-​
+
 | Feature | Description |
 | --- | --- |
 | Field deprecation through the UI | You can now [deprecate fields from your schemas after data has been ingested](../../xdm/tutorials/field-deprecation-ui.md). XDM field deprecation allows you to remove fields from UI view while retaining them for use. You can reveal deprecated fields again if needed, and any segments, queries or downstream solutions that reference the fields will run as usual. |
@@ -73,23 +73,17 @@ For more information on XDM in Platform, read the [XDM System overview](../../xd
 Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from data lake and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-Time Customer Profile.
 
 **Updated features**
-​
+
 | Feature | Description |
 | --- | --- |
-| Enable datasets for profile with SQL | Use LABELs in CTAS queries to make a dataset 'profile enabled', or use ALTER to update existing datasets to be enabled for profile. |
-| Monitor scheduled queries | Use the Scheduled Queries tab to find important information about your query runs and subscribe to alerts. Monitor queries for schedule details, status, and error messages/codes should they fail.  |
-| Toggle auto-complete feature  | Eliminate certain metadata commands and improve processing times by toggling the Query Editor auto-complete feature. This feature automatically suggests potential SQL keywords and table details for the query as you write it. |
-| Dataset samples | Specify a sampling rate in your query and use dataset samples to create a uniform random sample, or create conditional samples based on specific criteria. |
+| Enable datasets for profile with SQL | [Use LABELs in CTAS queries to make a dataset 'profile enabled'](../../query-service/sql/syntax.md#create-table-as-select), or use ALTER to update existing datasets to be enabled for profile. You can use this extended SQL construct to provide seamless support for derived attributes for your Real-Time Customer Profile business use cases. See the [Seamless SQL flow for derived attributes document](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md) for more details. |
+| Monitor scheduled queries | Use the [Scheduled Queries tab](../../query-service/ui/monitor-queries.md) to find important information about your query runs and subscribe to alerts. Monitor queries for schedule details, status, and error messages/codes should they fail.  |
+| Toggle auto-complete feature  | Eliminate certain metadata commands and improve processing times by [toggling the Query Editor auto-complete feature](../../query-service/ui/user-guide.md#auto-complete). This feature automatically suggests potential SQL keywords and table details for the query as you write it. |
+| Dataset samples | Specify a sampling rate in your query and [use dataset samples to create a uniform random sample](../../query-service/essential-concepts/dataset-samples.md), or create conditional samples based on specific criteria. |
 
 {style="table-layout:auto"}
-​
+
 For more information on Query Services, refer to the [Query Service overview](../../query-service/home.md).
-​
-<!-- Links for QS feature docs after release day: -->
-<!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
-<!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
-<!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
-<!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
 
 ## Real-Time Customer Data Platform B2B Edition {#b2b}
 
