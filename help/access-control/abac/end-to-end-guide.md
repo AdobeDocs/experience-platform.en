@@ -38,7 +38,7 @@ You will:
 
 * [Label the roles for your users](#label-roles): Use the example of a healthcare provider (ACME Business Group) whose marketing group works with external agencies.
 * [Label your resources (schema fields and segments)](#label-resources): Assign the **[!UICONTROL PHI/ Regulated Health Data]** label to schema resources and segments.
-* [Create the policy that will link them together](#policy): Create a policy to link the labels on your resources to the labels in your role, denying access to schema fields and segments. This will grant access to the schema field and segment in all sandboxes for users who have matching labels.
+* * [Activate the policy that will link them together: ](#policy): Enable the default policy to prevent access to schema fields and segments by connecting the labels on your resources to the labels in your role. Users with matching labels will then be given access to the schema field and segment across all sandboxes.
 
 ## Permissions
 
@@ -146,7 +146,27 @@ The **[!UICONTROL Edit labels]** dialog appears, allowing you to choose the labe
 
 Repeat the above steps with **[!UICONTROL Insulin <50]**.
 
-## Create an access control policy {#policy}
+## Activate the access control policy {#policy}
+
+The default access control policy will leverage labels to define which user roles have access to specific Platform resources. In this example, access to schema fields and segments will be denied in all sandboxes for users who aren't in a role that has the corresponding labels in the schema field.
+
+To activate the access control policy, select [!UICONTROL Permissions] from the left navigation and then select **[!UICONTORL Policies]**. 
+
+![List of policies displayed](../images/abac-end-to-end-user-guide/abac-policies-page.png)
+
+Next, select the ellipsis (`...`) next to the policies name, and a dropdown displays controls to edit, activate, delete, or duplicate the role. Select **[!UICONTROL Activate]** from the dropdown.
+
+![Dropdown to activate policy](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
+
+The activate policy dialog appears which prompts you to confirm activation. Select **[!UICONTROL Confirm]**.
+
+![Activate policy dialog](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
+
+Confirmation of policy activation is received and you are returned to the [!UICONTROL Policies] page.
+
+![Activate policy confirmation](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
+
+<!-- ## Create an access control policy {#policy}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
@@ -221,7 +241,7 @@ Select **[!UICONTROL The following being false]** and then select **[!UICONTROL 
 
 Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears which prompts you to confirm activation. Select **[!UICONTROL Confirm]** and then select **[!UICONTROL Close]**.
 
-![Image showing the Policy being activated ](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png)
+![Image showing the Policy being activated ](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png) -->
 
 ## Next steps
 
