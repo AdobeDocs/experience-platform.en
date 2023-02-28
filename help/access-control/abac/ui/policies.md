@@ -12,7 +12,7 @@ Access control policies are statements that bring attributes together to establi
 >
 >Access policies are not to be confused with data usage policies, which control how data is used in Adobe Experience Platform instead of which users in your organization have access to it. See the guide on creating [data usage policies](../../../data-governance/policies/create.md) for more information.
 
-## Create a new policy
+<!-- ## Create a new policy
 
 To create a new policy, select the **[!UICONTROL Policies]** tab in the sidebar and select **[!UICONTROL Create Policy]**.
 
@@ -108,19 +108,19 @@ The **[!UICONTROL Delete user policy]** dialog appears, prompting you to confirm
 
 You are returned to the **[!UICONTROL policies]** tab and a confirmation of deletion pop over appears.
 
-![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png)
+![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png) -->
 
 ## Activate a policy
 
-To activate an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to delete.
+To activate an existing policy, select the policy from the **[!UICONTROL Policies]** tab. 
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
 Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, activate, delete, or duplicate the role. Select activate from the dropdown.
 
-![flac-policy-activate](../../images/flac-ui/flac-policy-delete.png)
+![flac-policy-activate](../../images/flac-ui/flac-policy-activate.png)
 
-The **[!UICONTROL Activate user policy]** dialog appears, prompting you to confirm the activation. 
+The **[!UICONTROL Activate policy]** dialog appears, prompting you to confirm the activation. 
 
 ![flac-policy-activate-confirm](../../images/flac-ui/flac-policy-activate-confirm.png)
 
@@ -130,4 +130,4 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of acti
 
 ## Next steps
 
-With a new policy created, you can proceed to the next step to [manage permissions for a role](permissions.md).
+With a policy activated, you can proceed to the next step to [manage permissions for a role](permissions.md).
