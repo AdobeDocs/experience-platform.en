@@ -8,6 +8,6 @@ user-guide-description: Use unified tags to manage metadata taxonomies. Learn ho
 # Unified tags {#unified-tags}
 
 * [Unified tags overview](overview.md)
-* Access control UI {#ui}
+* Unified Tags UI {#ui}
   * [Managing tags](ui/managing-tags.md)
   * [Tags categories](ui/tags-categories.md)
