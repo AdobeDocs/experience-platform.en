@@ -150,7 +150,7 @@ Repeat the above steps with **[!UICONTROL Insulin <50]**.
 
 The default access control policy will leverage labels to define which user roles have access to specific Platform resources. In this example, access to schema fields and segments will be denied in all sandboxes for users who aren't in a role that has the corresponding labels in the schema field.
 
-To activate the access control policy, select [!UICONTROL Permissions] from the left navigation and then select **[!UICONTORL Policies]**. 
+To activate the access control policy, select [!UICONTROL Permissions] from the left navigation and then select **[!UICONTROL Policies]**. 
 
 ![List of policies displayed](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
