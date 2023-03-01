@@ -8,12 +8,31 @@ description: The February 2023 release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
+- [Data collection](#data-collection)
 - [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Related accounts in Real-Time CDP B2B Edition](#related-accounts)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
+
+## Data collection {#data-collection}
+
+Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+### Assurance {#assurance}
+
+Adobe Assurance lets you inspect, proof, simulate, and validate how you collect data or serve experiences in your mobile app.
+
+**New or updated features** 
+
+| Feature | Description |
+| ------- | ----------- |
+| Public APIs | The Adobe Assurance APIs are now available. The Assurance APIs are a collection of APIs that empower users to test and debug their own web and mobile apps, when outfitted with the Adobe Assurance extension with Mobile SDK. To learn more about the Assurance APIs, please read the [Assurance API overview](https://developer.adobe.com/adobe-assurance-public-apis/). |
+
+{style="table-layout:auto"}
+
+For more information about Assurance, please read the [Assurance documentation](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## [!DNL Destinations] {#destinations}
 
@@ -40,47 +59,56 @@ For more general information on destinations, refer to the [destinations overvie
 XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
 
 **Updated features**
-​
+
 | Feature | Description |
 | --- | --- |
-| Field deprecation through the UI | You can now deprecate fields from your schemas after data has been ingested. XDM field deprecation allows you to remove fields from UI view while retaining them for use. You can reveal deprecated fields again if needed, and any segments, queries or downstream solutions that reference the fields will run as usual. |
+| Field deprecation through the UI | You can now [deprecate fields from your schemas after data has been ingested](../../xdm/tutorials/field-deprecation-ui.md). XDM field deprecation allows you to remove fields from UI view while retaining them for use. You can reveal deprecated fields again if needed, and any segments, queries or downstream solutions that reference the fields will run as usual. |
 
 {style="table-layout:auto"}
-​
-For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).
-​
-<!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
+
+**New XDM components**
+
+| Component type | Name | Description |
+| --- | --- | --- |
+| Class | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1669/files) | The XDM Individual Prospect Profile class brings in partner-provided IDs. |
+
+{style="table-layout:auto"}
+
+**Updated XDM components**
+
+| Component type | Name | Description |
+| --- | --- | --- |
+| Field group | [!UICONTROL Frequency Capping Constraints] | The [!UICONTROL Frequency Capping Constraints] field group has been [updated to support repeat and custom events](https://github.com/adobe/xdm/pull/1641/files). |
+| Data type | [!UICONTROL Web referrer] | Web referrer properties have been [updated to include `xdm:linkName` and `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files). Respectively, these are the name and region of the HTML element that was selected on the previous page. |
+| Field Group | [!UICONTROL Adobe CJM ExperienceEvent - Message interaction details] | [The [!UICONTROL Tracker URL] field was added](https://github.com/adobe/xdm/pull/1665/files) to the [!UICONTROL Adobe CJM ExperienceEvent]. This tracker provides the URL selected by the user. |
+| Field Group | [!UICONTROL Adobe CJM ExperienceEvent - Message interaction detail] | [The empty `meta:enum` property was removed](https://github.com/adobe/xdm/pull/1668/files) from the URL [!UICONTROL Tracking Type] field. |
+| Data type  | [!UICONTROL Media information] | [The regex pattern from the `videoSegment` property in [!UICONTROL Media information] datatype was removed](https://github.com/adobe/xdm/pull/1667/files). |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).​
 
 ## Query Service {#query-service}
 
 Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from data lake and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-Time Customer Profile.
 
 **Updated features**
-​
+
 | Feature | Description |
 | --- | --- |
-| Enable datasets for profile with SQL | Use LABELs in CTAS queries to make a dataset 'profile enabled', or use ALTER to update existing datasets to be enabled for profile. |
-| Monitor scheduled queries | Use the Scheduled Queries tab to find important information about your query runs and subscribe to alerts. Monitor queries for schedule details, status, and error messages/codes should they fail.  |
-| Toggle auto-complete feature  | Eliminate certain metadata commands and improve processing times by toggling the Query Editor auto-complete feature. This feature automatically suggests potential SQL keywords and table details for the query as you write it. |
-| Dataset samples | Specify a sampling rate in your query and use dataset samples to create a uniform random sample, or create conditional samples based on specific criteria. |
+| Enable datasets for profile with SQL | [Use LABELs in CTAS queries to make a dataset 'profile enabled'](../../query-service/sql/syntax.md#create-table-as-select), or use ALTER to update existing datasets to be enabled for profile. You can use this extended SQL construct to provide seamless support for derived attributes for your Real-Time Customer Profile business use cases. See the [Seamless SQL flow for derived attributes document](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md) for more details. |
+| Monitor scheduled queries | Use the [Scheduled Queries tab](../../query-service/ui/monitor-queries.md) to find important information about your query runs and subscribe to alerts. Monitor queries for schedule details, status, and error messages/codes should they fail.  |
+| Toggle auto-complete feature  | Eliminate certain metadata commands and improve processing times by [toggling the Query Editor auto-complete feature](../../query-service/ui/user-guide.md#auto-complete). This feature automatically suggests potential SQL keywords and table details for the query as you write it. |
+| Dataset samples | Specify a sampling rate in your query and [use dataset samples to create a uniform random sample](../../query-service/essential-concepts/dataset-samples.md), or create conditional samples based on specific criteria. |
 
 {style="table-layout:auto"}
-​
+
 For more information on Query Services, refer to the [Query Service overview](../../query-service/home.md).
-​
-<!-- Links for QS feature docs after release day: -->
-<!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
-<!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
-<!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
-<!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
 
-## Related accounts in Real-Time CDP B2B Edition {#related-accounts}
 
->[!NOTE]
->
->The Related accounts feature is available for customers of the Real-Time CDP B2B Edition only.
+## Real-Time Customer Data Platform B2B Edition {#b2b}
 
-Related accounts, [!DNL Real-Time CDP B2B] allows you to view a list of accounts that are similar to the account you are browsing. You can include the related accounts in your segment definitions to broaden your reach or apply wider criteria in your segments.
+Built on Real-Time Customer Data Platform (Real-Time CDP), Real-Time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
 
 **Updated features**
 
@@ -89,12 +117,6 @@ Related accounts, [!DNL Real-Time CDP B2B] allows you to view a list of accounts
 | Enable related accounts service| The new toggle function allows you to enable the related accounts service on your account. For more information, read the guide on [enabling the related accounts service](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
 
 {style="table-layout:auto"}
-
-Read more about related accounts features in the following documentation pages:
-
-- [Related accounts in Real-Time CDP B2B Edition overview](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
-- [Related accounts tab in the Account profile UI guide](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [How to use related accounts in segment definitions](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 To learn more about Real-Time CDP B2B Edition, read the [Real-Time CDP B2B Edition overview](../../rtcdp/overview.md).
 
