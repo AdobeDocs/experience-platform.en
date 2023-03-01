@@ -16,6 +16,7 @@ feature: Destinations
   * [Profile export behavior for different destination types](./how-destinations-work/profile-export-behavior.md)
   * [Identity handling in the destinations activation workflow](./how-destinations-work/identity-handling.md)
 * API tutorials {#api}
+    * [API migration guide for cloud storage destinations](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md) 
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
     * [Connect to batch cloud storage and email marketing destinations and activate data using the Flow Service API](./api/connect-activate-batch-destinations.md)
     * [(Beta) Activate audience segments to batch destinations via the ad-hoc activation API](./api/ad-hoc-activation-api.md)
