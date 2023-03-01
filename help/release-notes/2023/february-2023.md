@@ -27,7 +27,7 @@ Adobe Assurance lets you inspect, proof, simulate, and validate how you collect 
 
 | Feature | Description |
 | ------- | ----------- |
-| Public APIs | The Adobe Assurance APIs are now available. The Assurance APIs are a collection of APIs that empower users to test and debug their own web and mobile apps, when outfitted with the Adobe Assurance extension with Mobile SDK. To learn more about the Assurance APIs, please read the [Assurance extension overview](). |
+| Public APIs | The Adobe Assurance APIs are now available. The Assurance APIs are a collection of APIs that empower users to test and debug their own web and mobile apps, when outfitted with the Adobe Assurance extension with Mobile SDK. To learn more about the Assurance APIs, please read the [Assurance API overview](https://developer.adobe.com/adobe-assurance-public-apis/). |
 
 {style="table-layout:auto"}
 
