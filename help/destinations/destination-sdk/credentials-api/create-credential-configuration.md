@@ -47,6 +47,10 @@ Select each tab below to view the corresponding payload.
 
 >[!TAB Basic]
 
+**Create a basic authentication configuration**
+
++++**Request**
+
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -72,7 +76,19 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 {style="table-layout:auto"}
 
->[!TAB Amazon S3]
++++
+
++++**Response**
+
+A successful response returns HTTP status 200 with details of your newly created credentials configuration.
+
++++
+
+>[!TAB [!DNL Amazon S3]]
+
+**Create an [!DNL Amazon S3] credential configuration**
+
++++**Request**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -92,12 +108,24 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 | Parameter | Type | Description |
 | -------- | ----------- | ----------- |
-|`accessId`|String|Amazon S3 access ID|
-|`secretKey`|String|Amazon S3 secret key|
+|`accessId`|String|[!DNL Amazon S3] access ID|
+|`secretKey`|String|[!DNL Amazon S3] secret key|
 
 {style="table-layout:auto"}
 
++++
+
++++**Response**
+
+A successful response returns HTTP status 200 with details of your newly created credentials configuration.
+
++++
+
 >[!TAB SSH]
+
+**Create an SSH credential configuration**
+
++++**Request**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -122,8 +150,19 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 {style="table-layout:auto"}
 
++++
 
->[!TAB Azure Data Lake Storage]
++++**Response**
+
+A successful response returns HTTP status 200 with details of your newly created credentials configuration.
+
++++
+
+>[!TAB [!DNL Azure Data Lake Storage]]
+
+**Create an [!DNL Azure Data Lake Storage] credential configuration**
+
++++**Request**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -152,8 +191,19 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 {style="table-layout:auto"}
 
++++
 
->[!TAB Azure Blob Storage]
++++**Response**
+
+A successful response returns HTTP status 200 with details of your newly created credentials configuration.
+
++++
+
+>[!TAB [!DNL Azure Blob Storage]]
+
+**Create an [!DNL Azure Blob Storage] credential configuration**
+
++++**Request**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -172,15 +222,19 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 | Parameter | Type | Description |
 | -------- | ----------- | ----------- |
-|`connectionString`|String|Azure Blob Storage connection string|
+|`connectionString`|String|[!DNL Azure Blob Storage] connection string|
 
 {style="table-layout:auto"}
 
->[!ENDTABS]
++++
 
-**Response**
++++**Response**
 
 A successful response returns HTTP status 200 with details of your newly created credentials configuration.
+
++++
+
+>[!ENDTABS]
 
 ## API error handling {#error-handling}
 
