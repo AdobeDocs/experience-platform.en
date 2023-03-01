@@ -43,8 +43,6 @@ PUT /authoring/credentials/{INSTANCE_ID}
 | -------- | ----------- |
 | `{INSTANCE_ID}` | The ID of the credential configuration that you want to update. To obtain an existing credential configuration and its corresponding `{INSTANCE_ID}`, see [Retrieve a credential configuration](retrieve-credential-configuration.md).|
 
-**Request**
-
 The following requests update existing credential configurations, defined by the parameters provided in the payload.
 
 Select each tab below to view the corresponding payload.
@@ -52,6 +50,10 @@ Select each tab below to view the corresponding payload.
 >[!BEGINTABS]
 
 >[!TAB Basic]
+
+**Update a basic credential configuration**
+
++++**Request**
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -78,7 +80,19 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 {style="table-layout:auto"}
 
++++
+
++++**Response**
+
+A successful response returns HTTP status 200 with the details of your updated credential configuration.
+
++++
+
 >[!TAB Amazon S3]
+
+**Update an [!DNL Amazon S3] credential configuration**
+
++++**Request**
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -98,12 +112,24 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 | Parameter | Type | Description |
 | -------- | ----------- | ----------- |
-|`accessId`|String|Amazon S3 access ID|
-|`secretKey`|String|Amazon S3 secret key|
+|`accessId`|String|[!DNL Amazon S3] access ID|
+|`secretKey`|String|[!DNL Amazon S3] secret key|
 
 {style="table-layout:auto"}
 
++++
+
++++**Response**
+
+A successful response returns HTTP status 200 with the details of your updated credential configuration.
+
++++
+
 >[!TAB SSH]
+
+**Update an [!DNL SSH] credential configuration**
+
++++**Request**
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -124,12 +150,23 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 | Parameter | Type | Description |
 | -------- | ----------- | ----------- |
 |`username` | String | Credentials configuration login username |
-|`sshKey`|String|SSH key for SFTP with SSH authentication|
+|`sshKey`|String|[!DNL SSH] key for [!DNL SFTP] with [!DNL SSH] authentication|
 
 {style="table-layout:auto"}
 
++++
+
++++**Response**
+
+A successful response returns HTTP status 200 with the details of your updated credential configuration.
+
++++
 
 >[!TAB Azure Data Lake Storage]
+
+**Update an [!DNL Azure Data Lake Storage] credential configuration**
+
++++**Request**
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -153,13 +190,24 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 | -------- | ----------- | ----------- |
 |`url` | String | URL of authorization provider |
 |`tenant`|String|Azure Data Lake Storage tenant|
-|`servicePrincipalId`|String|Azure Service Principal ID for Azure Data Lake Storage|
-|`servicePrincipalKey`|String|Azure Service Principal Key for Azure Data Lake Storage|
+|`servicePrincipalId`|String|[!DNL Azure Service Principal] ID for [!DNL Azure Data Lake Storage]|
+|`servicePrincipalKey`|String|[!DNL Azure Service Principal Key] for [!DNL Azure Data Lake Storage]|
 
 {style="table-layout:auto"}
 
++++
+
++++**Response**
+
+A successful response returns HTTP status 200 with the details of your updated credential configuration.
+
++++
 
 >[!TAB Azure Blob Storage]
+
+**Update an [!DNL Azure Blob] credential configuration**
+
++++**Request**
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -178,15 +226,19 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 | Parameter | Type | Description |
 | -------- | ----------- | ----------- |
-|`connectionString`|String|Azure Blob Storage connection string|
+|`connectionString`|String|[!DNL Azure Blob Storage] connection string|
 
 {style="table-layout:auto"}
 
->[!ENDTABS]
++++
 
-**Response**
++++**Response**
 
 A successful response returns HTTP status 200 with the details of your updated credential configuration.
+
++++
+
+>[!ENDTABS]
 
 ## API error handling {#error-handling}
 

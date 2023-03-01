@@ -37,8 +37,6 @@ You can create a new credentials configuration by making a `POST` request to the
 POST /authoring/credentials
 ```
 
-**Request**
-
 The following requests create new credential configurations, defined by the parameters provided in the payload.
 
 Select each tab below to view the corresponding payload.
@@ -47,7 +45,7 @@ Select each tab below to view the corresponding payload.
 
 >[!TAB Basic]
 
-**Create a basic authentication configuration**
+**Create a basic credential configuration**
 
 +++**Request**
 
