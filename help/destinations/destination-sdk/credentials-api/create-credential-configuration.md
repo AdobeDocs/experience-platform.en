@@ -84,7 +84,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 +++
 
->[!TAB [!DNL Amazon S3]]
+>[!TAB Amazon S3]
 
 **Create an [!DNL Amazon S3] credential configuration**
 
@@ -158,7 +158,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 +++
 
->[!TAB [!DNL Azure Data Lake Storage]]
+>[!TAB Azure Data Lake Storage]
 
 **Create an [!DNL Azure Data Lake Storage] credential configuration**
 
@@ -199,7 +199,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 +++
 
->[!TAB [!DNL Azure Blob Storage]]
+>[!TAB Azure Blob Storage]
 
 **Create an [!DNL Azure Blob Storage] credential configuration**
 

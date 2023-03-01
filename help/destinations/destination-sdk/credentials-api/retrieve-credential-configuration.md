@@ -45,8 +45,6 @@ Use the following API format to retrieve a specific credential configuration, de
 GET /authoring/credentials/{INSTANCE_ID}
 ```
 
-**Request**
-
 The following two requests retrieve all credentials configurations for your IMS Organization, or a specific credential configuration, depending on whether you pass the `INSTANCE_ID` parameter in the request.
 
 Select each tab below to view the corresponding payload.
@@ -54,6 +52,8 @@ Select each tab below to view the corresponding payload.
 >[!BEGINTABS]
 
 >[!TAB Retrieve all credential configurations]
+
++++**Request**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -63,7 +63,44 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
++++
+
++++**Response**
+
+A successful response returns HTTP status 200 with a list of credential configurations that you have access to, based on the [!DNL IMS Org ID] and sandbox name that you used. One `instanceId` corresponds to one credential configuration.
+
+```json
+{
+   "instanceId":"n55affa0-3747-4030-895d-1d1236bb3680",
+   "createdDate":"2021-06-07T06:41:48.641943Z",
+   "lastModifiedDate":"2021-06-07T06:41:48.641943Z",
+   "type":"s3Authentication",
+   "name":"yourdestination",
+   "s3Authentication":{
+      "accessId":"string",
+      "secretKey":"string"
+   }
+},
+{
+   "instanceId":"a25bffa0-3127-4030-895d-1d1236bb3680",
+   "createdDate":"2022-06-07T06:41:48.641943Z",
+   "lastModifiedDate":"2022-08-07T06:41:48.641943Z",
+   "type":"basic",
+   "name":"yourdestination",
+   "s3Authentication":{
+      "url":"string",
+      "username":"string",
+      "password":"string"
+   }
+}
+
+```
+
++++
+
 >[!TAB Retrieve a specific credential configuration]
+
++++**Request**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -77,14 +114,11 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 | -------- | ----------- |
 | `{INSTANCE_ID}` | The ID of the credential configuration you want to retrieve. |
 
->[!ENDTABS]
++++
 
-**Response**
++++**Response**
 
-A successful response returns HTTP status 200 with a list of credential configurations that you have access to, based on the [!DNL IMS Org ID] and sandbox name that you used. One `instanceId` corresponds to one credential configuration.
-
-If you passed the `{INSTANCE_ID}` parameter in the API call, the response only includes the credential configuration corresponding to that `{INSTANCE_ID}`.
-
+A successful response returns HTTP status 200 with the details of the credential configuration corresponding to the `instanceId` provided on the request.
 
 ```json
 {
@@ -98,8 +132,11 @@ If you passed the `{INSTANCE_ID}` parameter in the API call, the response only i
       "secretKey":"string"
    }
 }
-
 ```
+
++++
+
+>[!ENDTABS]
 
 ## API error handling {#error-handling}
 
