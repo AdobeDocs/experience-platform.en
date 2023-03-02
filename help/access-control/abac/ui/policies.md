@@ -6,7 +6,7 @@ exl-id: 66820711-2db0-4621-908d-01187771de14
 ---
 # Manage access control policies
 
-Access control policies are statements that bring attributes together to establish permissible and impermissible actions. Access policies can either be local or global, and can override other policies.
+Access control policies are statements that bring attributes together to establish permissible and impermissible actions. Access policies can either be local or global, and can override other policies. Adobe provides a default policy that can be activated immediately or whenever your organization is ready to start controlling access to specific objects based on labels. The default policy leverages labels applied to resources to deny access unless users are in a role with a matching label. 
 
 >[!IMPORTANT]
 >
@@ -114,19 +114,20 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 To activate an existing policy, select the policy from the **[!UICONTROL Policies]** tab. 
 
-![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
+![flac-policy-select](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
 Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, activate, delete, or duplicate the role. Select activate from the dropdown.
 
-![flac-policy-activate](../../images/flac-ui/flac-policy-activate.png)
+![flac-policy-activate](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
 The **[!UICONTROL Activate policy]** dialog appears, prompting you to confirm the activation. 
 
-![flac-policy-activate-confirm](../../images/flac-ui/flac-policy-activate-confirm.png)
+![flac-policy-activate-confirm](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
+
 
 You are returned to the **[!UICONTROL policies]** tab and a confirmation of activation pop over appears. The policy status shows as active.
 
-![flac-policy-activated](../../images/flac-ui/flac-policy-activated.png)
+![flac-policy-activated](../../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
 ## Next steps
 
