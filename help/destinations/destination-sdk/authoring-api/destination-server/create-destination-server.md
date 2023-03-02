@@ -43,6 +43,8 @@ Select each tab below to view the corresponding API requests.
 
 >[!TAB URL-based]
 
+**Create a URL-based destination server**
+
 +++Request
 
 ```shell
