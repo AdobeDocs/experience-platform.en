@@ -79,7 +79,7 @@ Finally, you must provide as a mandatory input the field values below:
 | Field | Description |
 | --- | --- |
 | **[!UICONTROL ad_account_id]** | Your [!DNL Pinterest Ads] ad_account_id. You can refer to the [Find IDs in Ads Manager](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) page for guidance on how to get the value. |
-| **[!UICONTROL object_type]** | Select one of **Campaigns**, **Ad Groups** or **Ads** depending on which of the [!DNL Pinterest] Anbalytics APIs you want to obtain information from. |
+| **[!UICONTROL object_type]** | Select one of **Campaigns**, **Ad Groups** or **Ads** depending on which of the [!DNL Pinterest] Analytics APIs you want to obtain information from. |
 | **[!UICONTROL object_ids]** | The selected object's IDs. Navigate to the [!DNL Pinterest] page for **Pinterest Business Hub** > **Ad Account Summary** > **Campaigns** / **Ad Groups** / **Ads** and copy the required ID's mentioned just below each of their names. |
 
 >[!NOTE]
