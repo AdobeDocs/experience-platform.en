@@ -90,11 +90,11 @@ The documentation below provides information on how to connect [!DNL Pinterest A
 
 ### Connect [!DNL Pinterest Ads] to Platform using APIs {#connect-to-platform-using-api}
 
-* [Create a Pinterest base connection using the Flow Service API](../../tutorials/api/create/advertising/ads.md)
+* [Create a Pinterest base connection using the Flow Service API](../../tutorials/api/create/advertising/pinterest-ads.md)
 * [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 * [Create a dataflow for an advertising source using Flow Service API](../../tutorials/api/collect/advertising.md)
 
 ### Connect [!DNL Pinterest Ads] to Platform using the UI {#connect-to-platform-using-ui}
 
-* [Create a Pinterest source connection in the UI](../../tutorials/ui/create/advertising/ads.md)
+* [Create a Pinterest source connection in the UI](../../tutorials/ui/create/advertising/pinterest-ads.md)
 * [Create a dataflow for an advertising source connection in the UI](../../tutorials/ui/dataflow/advertising.md)
