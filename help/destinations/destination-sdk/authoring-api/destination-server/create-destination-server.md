@@ -98,6 +98,8 @@ A successful response returns HTTP status 200 with details of your newly created
 
 >[!TAB Amazon S3]
 
+**Create an Amazon S3 destination server**
+
 +++Request
 
 ```shell
@@ -205,6 +207,8 @@ A successful response returns HTTP status 200 with details of your newly created
 +++
 
 >[!TAB SFTP]
+
+**Create an [!DNL SFTP] destination server**
 
 +++Request
 
@@ -314,7 +318,9 @@ A successful response returns HTTP status 200 with details of your newly created
 
 >[!TAB Azure Data Lake Storage]
 
-+++ Request
+**Create an [!DNL Azure Data Lake Storage] destination server**
+
++++Request
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -415,6 +421,8 @@ A successful response returns HTTP status 200 with details of your newly created
 +++
 
 >[!TAB Azure Blob Storage]
+
+**Create an [!DNL Azure Blob Storage] destination server**
 
 +++Request
 
@@ -524,6 +532,8 @@ A successful response returns HTTP status 200 with details of your newly created
 
 >[!TAB Data Landing Zone (DLZ)]
 
+**Create a [!DNL Data Landing Zone (DLZ)] destination server**
+
 +++Request
 
 ```shell
@@ -626,6 +636,8 @@ A successful response returns HTTP status 200 with details of your newly created
 +++
 
 >[!TAB Google Cloud Storage]
+
+**Create a [!DNL Google Cloud Storage] destination server**
 
 +++Request
 
