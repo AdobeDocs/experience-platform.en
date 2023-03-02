@@ -22,9 +22,9 @@ You may change SDK log levels using the [`setLogLevel`](../mobile-core/api-refer
     * [Defining a Custom URL Scheme for Your App](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app)
     * [Supporting Universal Links in Your App](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/supporting_universal_links_in_your_app)
 
->[!NOTE]
->
->For Android, the `startSession` API does not need to be explicitly called. For iOS, use the API as described in [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md#implement-aep-assurance-session-start-apis-ios-only).
+<InlineAlert variant="info" slots="text"/>
+
+For Android, the `startSession` API does not need to be explicitly called. For iOS, use the API as described in [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md#implement-aep-assurance-session-start-apis-ios-only).
 
 ### Authentication overlay appears, but app fails to connect
 

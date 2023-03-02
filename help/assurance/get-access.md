@@ -1,14 +1,16 @@
-# User Access
+# User access
 
->[!WARNING]
->
-> As we make the transition from beta (Project Griffon) to being generally available (as Assurance) to all Adobe Experience Cloud customers - access to Project Griffon / Assurance is changing! Access to Assurance will be managed through the [Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html)
+<InlineAlert variant="warning" slots="header, text"/>
 
-## Set ap access
+User access is changing
 
->[!NOTE]
->
->Your company's Adobe Experience Cloud administrator will be able to help and perform the following changes.
+As we transition from beta (Project Griffon) to being generally available (as Assurance) to all Adobe Experience Cloud customers - access to Project Griffon / Assurance is changing! Access to Assurance will be managed through the [Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html)
+
+## Access setup
+
+<InlineAlert variant="info" slots="text"/>
+
+Your company's Adobe Experience Cloud administrator will be able to help and perform the following changes.
 
 To receive or to maintain uninterrupted access to Project Griffon / Assurance, ensure that the following steps are completed in Admin Console:
 
@@ -29,7 +31,6 @@ Provide a name and **save** - The Adobe Experience Platform product profile you 
    1. Assign users to the Adobe Experience Platform product profile
    2. Select the "Products" tab, click "Assign Users" on the Adobe Experience Platform.
    3. Add one or more users to the product profile and save.
- 
+
 ![Assigning users to product profile](./images/get-access/assign-users.png)
 ![Adding users to product profile](./images/get-access/add-users.png)
-
