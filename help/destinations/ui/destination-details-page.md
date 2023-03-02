@@ -83,19 +83,19 @@ There is a difference in the displayed duration of dataflow runs between streami
 
 ### Streaming destinations {#streaming}
 
-While the **[!UICONTROL Processing duration]** indicated for most streaming dataflow runs is about four hours, as shown in the image below, the actual processing time for any dataflow run is much shorter. Dataflow run windows stay open for longer in the event that Experience Platform needs to retry making calls to the destination.  
+While the **[!UICONTROL Processing duration]** indicated for most streaming dataflow runs is about four hours, as shown in the image below, the actual processing time for any dataflow run is much shorter. Dataflow run windows stay open for longer in the event that Experience Platform needs to retry making calls to the destination and also ensure to ensure it does not miss out on any late arriving data for same time window.  
 
 ![Image of the Dataflow runs page with the Processing time column highlighted for a streaming destination.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
 
-For more information around monitoring dataflows to streaming destinations, read
+For more information, read about [dataflow runs to streaming destinations](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) in the monitoring documentation.
 
 ### File-based destinations {#file-based}
 
-The **[!UICONTROL Processing duration]** indicated for most dataflow runs to file-based destinations is zero minutes. Notice also that the dataflow runs to file-based destinations are broken down per segment.
+For dataflow runs to file-based destinations, the **[!UICONTROL Processing duration]** depends on the size of the data being exported and the system load. Notice also that the dataflow runs to file-based destinations are broken down per segment.
 
 ![Image of the Dataflow runs page with the Processing time column highlighted for a file-based destination.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
-For more information around monitoring dataflows to file-based destinations, read
+For more information, read about [dataflow runs to batch (file-based) destinations](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) in the monitoring documentation.
 
 ## [!UICONTROL Activation data] {#activation-data}
 
