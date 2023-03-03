@@ -15,6 +15,16 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 >title="Top Users"
 >abstract="This widget shows the users that have executed the most actions in Experience Platform within the selected timeframe. To see the full list of recorded actions in Platform, select **Audits** in the left navigation."
 
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_audits_description"
+>title="Description"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_audits_instructions"
+>title="Instructions"
+>abstract=""
+
 In order to increase the transparency and visibility of activities performed in the system, Adobe Experience Platform allows you to audit user activity for various services and capabilities in the form of "audit logs". These logs form an audit trail that can help with troubleshooting issues on Platform, and help your business effectively comply with corporate data stewardship policies and regulatory requirements.
 
 In a basic sense, an audit log tells **who** performed **what** action, and **when**. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type.
