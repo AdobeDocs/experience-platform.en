@@ -330,11 +330,11 @@ The table below outlines a list of reserved characters and their corresponding e
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| [ | %5B |
+| &#91; | %5B |
 | &#124; | %5C |
-| ] | %5D |
+| &#93; | %5D |
 | ^ | %5E |
-| ` | %60 |
+| &#96; | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}
