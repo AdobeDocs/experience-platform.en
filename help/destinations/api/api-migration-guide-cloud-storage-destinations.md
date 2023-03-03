@@ -31,7 +31,7 @@ While these destinations were offered initially as a beta, Adobe is now moving a
 
 ## Who this page applies to {#who-this-applies-to}
 
-If you were already using the Flow Service API to export profiles to the Amazon S3, Azure Blob, or SFTP cloud storage destinations, then this API migration guide applies to you. 
+If you were already using the Flow Service API to export profiles to the Amazon S3, Azure Blob, or SFTP cloud storage destinations, and you had set up these workflows via the Flow Service API, then this API migration guide applies to you. 
 
 ## Relevant documentation links 
 
