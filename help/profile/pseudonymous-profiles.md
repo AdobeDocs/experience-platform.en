@@ -12,7 +12,7 @@ In Adobe Experience Platform, a profile is considered for Pseudonymous data expi
 - The stitched profile's ID(s) match what the customer has specified as a pseudonymous or unknown identity type. 
   - For example, if the profile's ID is `ECID`, `GAID`, or `AAID`. The stitched profile has no IDs from any other identity type. In this example, a stitched profile does **not** have either an email or CRM identity. 
 - No activity has taken place in the last 30(?) days. Activity is defined either by any Experience Events being ingested or customer-initiated updates to the profile attributes. 
-  - For example, a new page view event or age attribute update is considered as activity. However, a non-user-initiated segment membership update is **not** considered as an activity. Currently, to compute data expiration, the tracking at a profile level is based on the time of ingestion.
+  - For example, a new page view event or age attribute update is considered as an activity. However, a non-user-initiated segment membership update is **not** considered as an activity. Currently, to compute data expiration, the tracking at a profile level is based on the time of ingestion.
 
 ## Frequently asked questions {#faq}
 
@@ -25,7 +25,7 @@ The following section lists frequently asked questions regarding Pseudonymous pr
 - If you have excessive profile counts in your datasets and have confirmed that this excessive profile count is because of anonymous cookie-based identity type.
   - To determine this, you should use the identity type overlap report. More information about this report can be found LINK
 
-### What are some caveats you should be aware of being using Pseudonymous profiles data expiration?
+### What are some caveats you should be aware of before using Pseudonymous profiles data expiration?
 
 - Pseudonymous profile data expiration will run on the **production** sandbox.
 - Once you have activated this feature, the deletion of profiles is **permanent**. There is **no** way to roll back or restore the deleted profiles.
@@ -57,7 +57,7 @@ Pseudonymous Profile data expiration removes **both** event and profile records.
 
 ### How can Pseudonymous Profile data expiry be used in conjunction with Experience Event data expiry?
 
-Pseudonymous Profile data expiry and Experience Event data expiry are synergetic, working well with each other.
+Pseudonymous Profile data expiry and Experience Event data expiry can be used to complement each other.
 
 You should **always** set up Experience Event data expiry in your datasets, based on your needs of retaining data about your known customers. Once Experience Event data expiry is set up, you can use Pseudonymous Profile data expiry to automatically remove Pseudonymous Profiles. Typically, the data expiry period for Pseudonymous Profiles is less than the data expiry period for Experience Events.
 
