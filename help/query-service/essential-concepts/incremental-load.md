@@ -61,25 +61,25 @@ The steps below demonstrate how to create and incrementally load data using snap
    ```SQL
    $$ BEGIN
        SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
-                              (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
-                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
-                                 ON a.process_timestamp=b.process_timestamp;
-      SET @to_snapshot_id = SELECT snapshot_id FROM (SELECT history_meta('DIM_TABLE_ABC')) WHERE  is_current = true;
-      SET @last_updated_timestamp= SELECT CURRENT_TIMESTAMP;
-      CREATE TABLE DIM_TABLE_ABC_Incremental AS
-      SELECT  *  FROM DIM_TABLE_ABC SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id ;
+                               (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
+                                   WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
+                                   ON a.process_timestamp=b.process_timestamp;
+       SET @to_snapshot_id = SELECT snapshot_id FROM (SELECT history_meta('DIM_TABLE_ABC')) WHERE  is_current = true;
+       SET @last_updated_timestamp= SELECT CURRENT_TIMESTAMP;
+       CREATE TABLE DIM_TABLE_ABC_Incremental AS
+        SELECT  *  FROM DIM_TABLE_ABC SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id ;
  
    INSERT INTO
       checkpoint_log
       SELECT
-         'DIM_TABLE_ABC' process_name,
-         'SUCCESSFUL' process_status,
+          'DIM_TABLE_ABC' process_name,
+          'SUCCESSFUL' process_status,
          cast( @to_snapshot_id AS string) last_snapshot_id,
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
  
    EXCEPTION
-      WHEN OTHER THEN
-      SELECT 'ERROR';
+     WHEN OTHER THEN
+       SELECT 'ERROR';
    END 
    $$;
    ```
@@ -92,26 +92,26 @@ The steps below demonstrate how to create and incrementally load data using snap
 
    ```SQL
    $$ BEGIN
-      SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a join
-                              (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
-                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
-                                 ON a.process_timestamp=b.process_timestamp;
-      SET @to_snapshot_id = SELECT snapshot_id FROM (SELECT history_meta('DIM_TABLE_ABC')) WHERE  is_current = true;
-      SET @last_updated_timestamp= SELECT CURRENT_TIMESTAMP;
-      INSERT INTO DIM_TABLE_ABC_Incremental
-      SELECT  *  FROM DIM_TABLE_ABC SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id WHERE NOT EXISTS (SELECT _id FROM DIM_TABLE_ABC_Incremental a WHERE _id=a._id);
+       SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a join
+                               (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
+                                   WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
+                                   ON a.process_timestamp=b.process_timestamp;
+       SET @to_snapshot_id = SELECT snapshot_id FROM (SELECT history_meta('DIM_TABLE_ABC')) WHERE  is_current = true;
+       SET @last_updated_timestamp= SELECT CURRENT_TIMESTAMP;
+       INSERT INTO DIM_TABLE_ABC_Incremental
+       SELECT  *  FROM DIM_TABLE_ABC SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id WHERE NOT EXISTS (SELECT _id FROM DIM_TABLE_ABC_Incremental a WHERE _id=a._id);
  
    INSERT INTO
       checkpoint_log
       SELECT
-         'DIM_TABLE_ABC' process_name,
-         'SUCCESSFUL' process_status,
+          'DIM_TABLE_ABC' process_name,
+          'SUCCESSFUL' process_status,
          cast( @to_snapshot_id AS string) last_snapshot_id,
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
  
    EXCEPTION
-   WHEN OTHER THEN
-      SELECT 'ERROR';
+     WHEN OTHER THEN
+       SELECT 'ERROR';
    END
    $$;
    ```
