@@ -139,6 +139,10 @@ Once you have reviewed your dataflow, select **[!UICONTROL Save & ingest]** and 
 
 ![The final review step that summarizes information on the connection, dataset, and mapping fields.](../../../../images/tutorials/create/marketo-custom-activities/review.png)
 
+### Add custom activities to an existing activities dataflow
+
+To add custom activity data to an existing dataflow, modify the mappings of an existing activities dataflow with the custom activity data that you want to ingest. This allows you to ingest custom activity into the same existing activities dataset. For more information on how to update the mappings of an existing dataflow, read the guide on [updating dataflows in the UI](../../update-dataflows.md).
+
 ### Use [!DNL Query Service] to filter activities for custom activities
 
 Once your dataflow is complete, you can use [Query Service](../../../../../query-service/home.md) to filter activities for your custom activity data. 
