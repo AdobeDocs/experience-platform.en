@@ -29,8 +29,8 @@ user-guide-description: Use intelligent AI services to generate scores, discover
   - [Overview](content-commerce-ai/overview.md)
   - [Getting started](content-commerce-ai/getting-started.md)
   - Content and Commerce AI API{#api}
-    - [Color extraction](content-commerce-ai/api/color-extraction.md)
-    - [Keyword extraction](content-commerce-ai/api/keyword-extraction.md)
+    - [Color tagging](content-commerce-ai/api/color-tagging.md)
+    - [Keyword tagging](content-commerce-ai/api/keyword-tagging.md)
     <!-- - [Text classification](content-commerce-ai/api/text-classification.md) -->
     <!-- - [Visual similarity](content-commerce-ai/api/visual-similarity.md) -->
     - [Text presence and optical character recognition](content-commerce-ai/api/optical-character-recognition.md)
