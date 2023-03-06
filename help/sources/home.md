@@ -181,7 +181,7 @@ Attribute-based access control in Adobe Experience Platform allows administrator
 
 With attribute-based access control, you can apply mapping configurations to fields that you have permissions to. Furthermore, you cannot ingest data to a dataset if you do not have access to all fields in the dataset.
 
-#### Support for attribute-based access control in sources [!Badge New feature]
+#### Support for attribute-based access control in sources [!BADGE New feature]
 
 >[!TIP]
 >
