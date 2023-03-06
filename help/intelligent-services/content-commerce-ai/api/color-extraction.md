@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai;color extraction;Color extraction
+keywords: Experience Platform;getting started;content ai;commerce ai;content tagging;color extraction;Color extraction
 solution: Experience Platform
-title: Color Extraction in the Content and Commerce AI API
+title: Color Extraction in the Content Tagging API
 description: The color extraction service, when given an image, can compute the histogram of pixel colors and sort them by dominant colors into buckets.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
 ---
@@ -9,7 +9,7 @@ exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
 
 >[!NOTE]
 >
->[!DNL Content and Commerce AI] is in beta. The documentation is subject to change.
+>[!DNL Content Tagging] is in beta. The documentation is subject to change.
 
 The color extraction service, when given an image, can compute a histogram of pixel colors and sort them by dominant colors into buckets. The colors in the image pixels are bucketed into 40 predominant colors which are representative of the color spectrum. A histogram of color values is then computed among those 40 colors. The service has two variants:
 
@@ -28,7 +28,7 @@ The following image was used in the example shown in this document:
 **API format**
 
 ```http
-POST /services/v1/predict
+POST /services/v2/predict
 ```
 
 **Request**

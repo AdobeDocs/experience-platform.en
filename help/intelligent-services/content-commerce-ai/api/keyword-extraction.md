@@ -18,7 +18,6 @@ The named entities recognized by [!DNL Content and Commerce AI] are listed in th
 | Entity name | Description |
 | --- | --- |
 | PERSON | People, including fictional. |
-| NORP | Nationalities or religious or political groups. |
 | GPE | Countries, cities, and states. |
 | LOC | Non-GPE locations, mountain ranges, bodies of water. |
 | FAC | Buildings, airports, highways, bridges, etc. |
@@ -29,21 +28,15 @@ The named entities recognized by [!DNL Content and Commerce AI] are listed in th
 | LAW | Named documents made into laws. |
 | LANGUAGE | Any named language. |
 
->[!NOTE]
->
->If you plan on processing PDFs, skip to the instructions for [PDF keyword extraction](#pdf-extraction) within this document. Also, support for additional file types such as docx, ppt, amd xml are set to be released at a later date.
-
 **API format**
 
 ```http
-POST /services/v1/predict
+POST /services/v2/predict
 ```
 
 **Request**
 
 The following request extracts keywords from a document based on the input parameters provided in the payload.
-
-Simplified JSON of the input file:
 
 ```json
 {

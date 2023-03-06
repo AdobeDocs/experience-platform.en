@@ -2,14 +2,14 @@
 keywords: OCR;text presence;optical character recognition
 solution: Experience Platform
 title: Text Presence and Optical Character Recognition
-description: In the Content and Commerce AI API, the Text Presence / Optical Character Recognition (OCR) service can indicate if text is present in a given image. If text is present, OCR can return the text.
+description: In the Content Tagging API, the Text Presence / Optical Character Recognition (OCR) service can indicate if text is present in a given image. If text is present, OCR can return the text.
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
 ---
 # Text Presence and Optical Character Recognition
 
 >[!NOTE]
 >
->Content and Commerce AI is in beta. The documentation is subject to change.
+>Content Tagging is in beta. The documentation is subject to change.
 
 The Text Presence / Optical Character Recognition (OCR) service, when given an image, can indicate if text is present in the image. If text is present, OCR can return the text.
 
@@ -20,7 +20,7 @@ The following image was used in the example request shown in this document:
 **API format**
 
 ```http
-POST /services/v1/predict
+POST /services/v2/predict
 ```
 
 **Request**
@@ -30,9 +30,9 @@ The following request checks if text is present based on the input image provide
 Execution with inline image:
 
 ```SHELL
-curl -w'\n' -i -X POST https://sensei-va6.adobe.io/services/v2/predict \
+curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -H 'Prefer: respond-async, wait=120' \
--H 'x-api-key: AdobeSenseiPredictServiceProdKey' \
+-H 'x-api-key: $API_KEY' \
 -H 'content-type: multipart/form-data' \
 -H "authorization: Bearer $PRODTOKEN" \
 -F file=@ocr_293.png \
@@ -125,16 +125,16 @@ The following request checks if text is present based on the input image provide
 
 >[!CAUTION]
 >
->`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. Contact the Content and Commerce AI beta team to receive your `analyzer_id` for this service.
+>`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. Contact the Content Tagging beta team to receive your `analyzer_id` for this service.
 
 Execution with URL:
 
 ```SHELL
-curl -w'\n' -i -X POST https://sensei-va6.adobe.io/services/v2/predict \
+curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -H 'Prefer: respond-async, wait=120' \
 -H 'content-type: multipart/form-data' \
 -H "authorization: Bearer $PRODTOKEN" \
--H 'x-api-key: AdobeSenseiPredictServiceProdKey' \
+-H 'x-api-key: $API_KEY' \
 -F 'contentAnalyzerRequests={
   "sensei:name": "Feature:cintel-object-detection:Service-b9ace8b348b6433e9e7d82371aa16690",
   "sensei:invocation_mode": "asynchronous",
