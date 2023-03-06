@@ -7,10 +7,6 @@ exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
 ---
 # Content and Commerce AI overview
 
->[!NOTE]
->
->Content and Commerce AI is in beta. The documentation is subject to change.
-
 Content and Commerce AI is a set of AI services that allow you to extract intelligent features from your content, organize and streamline content flow, and deliver more impactful, personalized experiences to your customers.
 
 All brands strive to deliver a perfect customer experience. You're constantly trying to find better answers all aspects of your customer touchpoints.
@@ -21,16 +17,16 @@ Content is an essential component of these experiences. To better answer marketi
 
 | Content Type | Features | Overview of functionality |
 | --- | --- | --- |
-| Text | - Keyword & Entity extraction <br> | - Automatically extract keywords and tags from enterprise documents and webpages using an out-of-the-box AI service. <br> | 
-Images | - Color extraction <br> - Optical Character Recognition (OCR)|  - Accurately extract dominant colors (labels and hex values) and their weightage from a product image. <br> - Extract any text present from a product image.  |
+| Text | - Keyword tagging <br> | - Automatically extract keywords and tags from enterprise documents and webpages using an out-of-the-box AI service. <br> | 
+Images | - Color tagging <br> - Optical Character Recognition (OCR)|  - Accurately extract dominant colors (labels and hex values) and their weightage from a product image. <br> - Accurately extract any text present from a product image.  |
 
 ## Understanding Content and Commerce AI 
 
 The overall vision of Content and Commerce AI is broken down into three steps to realize optimal customer engagement and maximize customer-driven KPIs. 
 
->[!NOTE]
+<!-- >[!NOTE]
 >
->For Beta, Content and Commerce AI is focusing on testing the foundation step in the journey (step 1). Steps 2 and 3 are expected to be documented in a subsequent release and are not expanded upon in the current documentation.
+>For Beta, Content and Commerce AI is focusing on testing the foundation step in the journey (step 1). Steps 2 and 3 are expected to be documented in a subsequent release and are not expanded upon in the current documentation. -->
 
 **Step 1: Understanding the content**
 - Extract intelligent features and metadata.

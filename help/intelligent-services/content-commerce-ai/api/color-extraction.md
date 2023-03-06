@@ -7,10 +7,6 @@ exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
 ---
 # Color extraction
 
->[!NOTE]
->
->[!DNL Content Tagging] is in beta. The documentation is subject to change.
-
 The color extraction service, when given an image, can compute a histogram of pixel colors and sort them by dominant colors into buckets. The colors in the image pixels are bucketed into 40 predominant colors which are representative of the color spectrum. A histogram of color values is then computed among those 40 colors. The service has two variants:
 
 **Color extraction (full image)**

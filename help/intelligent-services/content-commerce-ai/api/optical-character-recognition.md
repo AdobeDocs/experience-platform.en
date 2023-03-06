@@ -7,10 +7,6 @@ exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
 ---
 # Text Presence and Optical Character Recognition
 
->[!NOTE]
->
->Content Tagging is in beta. The documentation is subject to change.
-
 The Text Presence / Optical Character Recognition (OCR) service, when given an image, can indicate if text is present in the image. If text is present, OCR can return the text.
 
 The following image was used in the example request shown in this document:
@@ -123,9 +119,9 @@ A successful response returns the text that was detected in the `tags` list for 
 
 The following request checks if text is present based on the input image provided in the payload. See the table below the example payload for more information on the input parameters shown.
 
->[!CAUTION]
+<!-- >[!CAUTION]
 >
->`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. Contact the Content Tagging beta team to receive your `analyzer_id` for this service.
+>`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. Contact the Content Tagging beta team to receive your `analyzer_id` for this service. -->
 
 Execution with URL:
 
