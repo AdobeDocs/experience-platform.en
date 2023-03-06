@@ -15,7 +15,7 @@ exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
 
 However, when you get to the **Add API** step, the API is located under Experience Cloud instead of Adobe Experience Platform, as shown in the following screenshot: 
 
-![adding Content and Commerce AI](./images/add-api.png)
+![adding Content and Commerce AI](./images/add-api-updated.png)
 
  Completing the authentication tutorial provides the values for each of the required headers in all the Adobe I/O API calls, as shown below:
 
@@ -27,7 +27,7 @@ However, when you get to the **Add API** step, the API is located under Experien
 
 Once you have set up your project and API within Adobe Developer Console, you have the option to download an environment file for Postman. Under **[!UICONTROL APIs]** the left rail of your project, select **[!UICONTROL Content and Commerce AI]**. A new tab opens, containing a card labeled "[!DNL Try it out]". Select **Download for Postman** to download a JSON file used to configure your postman environment. 
 
-![download for postman](./images/add-to-postman.png)
+![download for postman](./images/add-to-postman-updated.png)
 
 Once you have downloaded the file, open Postman and select the **gear icon** in the top right to open up the **manage environments** dialog. 
 

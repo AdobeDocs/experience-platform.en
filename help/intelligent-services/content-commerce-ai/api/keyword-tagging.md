@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;getting started;content ai;commerce ai;content tagging ai;keyword extraction;Keyword extraction
+keywords: Experience Platform;getting started;content ai;commerce ai;content tagging ai;keyword tagging;Keyword tagging
 solution: Experience Platform
-title: Keyword Extraction in the Content Tagging AI API
-description: The keyword extraction service, when given a text document, automatically extracts keywords or keyphrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword extraction algorithms are used.
+title: Keyword Tagging in the Content Tagging AI API
+description: The keyword tagging service, when given a text document, automatically extracts keywords or keyphrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword tagging algorithms are used.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 ---
-# Keyword extraction
+# Keyword tagging
 
-The keyword extraction service, when given a text document, automatically extracts keywords or keyphrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword extraction algorithms are used.
+The keyword tagging service, when given a text document, automatically extracts keywords or keyphrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword tagging algorithms are used.
 
 The named entities recognized by [!DNL Content Tagging AI] are listed in the following table:
 
@@ -34,33 +34,7 @@ POST /services/v2/predict
 
 The following request extracts keywords from a document based on the input parameters provided in the payload.
 
-```json
-{
-  "application-id": "1234",
-  "language": "en",
-  "content-type": "inline",
-  "encoding": "utf-8",
-  "threshold": 0.01,
-  "top-N": 10,
-  "custom": {
-    "min-n": 2,
-    "entity-types": ["PERSON"]
-  },
-  "data": [
-    {
-      "content-id": "abc123",
-      "content": "But an influential faction on the ATP player council, which is chaired by Novak Djokovic, staged a rebellion against Kermodes regime in the spring, and he will leave the post on Dec 31"
-    }
-  ]
-}
-```
-
 See the table below the example payload for more information on the input parameters shown.
-
->[!CAUTION]
->
->`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. For keyword extraction service, the `analyzer_id` ID is:
->`Feature:cintel-ner:Service-1e9081c865214d1e8bace51dd918b5c0`
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \

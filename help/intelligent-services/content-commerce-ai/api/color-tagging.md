@@ -5,15 +5,15 @@ title: Color Extraction in the Content Tagging API
 description: The color extraction service, when given an image, can compute the histogram of pixel colors and sort them by dominant colors into buckets.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
 ---
-# Color extraction
+# Color tagging
 
-The color extraction service, when given an image, can compute a histogram of pixel colors and sort them by dominant colors into buckets. The colors in the image pixels are bucketed into 40 predominant colors which are representative of the color spectrum. A histogram of color values is then computed among those 40 colors. The service has two variants:
+The color tagging service, when given an image, can compute a histogram of pixel colors and sort them by dominant colors into buckets. The colors in the image pixels are bucketed into 40 predominant colors which are representative of the color spectrum. A histogram of color values is then computed among those 40 colors. The service has two variants:
 
-**Color extraction (full image)**
+**Color tagging (full image)**
 
 This method extracts a color histogram across the entire image.
 
-**Color extraction (with mask)**
+**Color tagging (with mask)**
 
 This method uses a deep-learning-based foreground extractor to identify objects in the foreground. The model is trained on a catalog of e-commerce images. Once the foreground object is extracted, a histogram is computed over the dominant colors as previously described.
 
@@ -29,14 +29,9 @@ POST /services/v2/predict
 
 **Request**
 
-The following example request uses the full-image method for color extraction.
+The following example request uses the full-image method for color tagging.
 
 The following request extracts colors from a image based on the input parameters provided in the payload. See the table below the example payload for more information on the input parameters shown.
-
->[!CAUTION]
->
->`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. For color extraction service, the `analyzer_id` ID is:
->`Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
 
 ```SHELL
 curl -X POST https://sensei-stage-va6.adobe.io/sensei-core/v2/predict \
@@ -81,8 +76,8 @@ curl -X POST https://sensei-stage-va6.adobe.io/sensei-core/v2/predict \
 | `documents` | A list of json elements with each item in the list representing one document. | Yes |
 | `top_n` | The number of results to be returned (cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
 | `min_coverage` | Threshold of coverage above which the results need to be returned. Exclude parameter to return all results. | No |
-| `resize_image` | Whether to resize the input image or not. By default the images are resized to 320*320 pixels before color extraction is performed. For debugging purposes we can allow the code to run on full-image as well, by setting this to False. | No |
-| `enable_mask` | Enables/Disables color extraction within mask. | No |
+| `resize_image` | Whether to resize the input image or not. By default the images are resized to 320*320 pixels before color tagging is performed. For debugging purposes we can allow the code to run on full-image as well, by setting this to False. | No |
+| `enable_mask` | Enables/Disables color tagging within mask. | No |
 
 **Response**
 
