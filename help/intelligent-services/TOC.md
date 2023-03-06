@@ -32,8 +32,6 @@ user-guide-description: Use intelligent AI services to generate scores, discover
     - [Color tagging](content-commerce-ai/api/color-tagging.md)
     - [Keyword tagging](content-commerce-ai/api/keyword-tagging.md)
     - [Text presence and optical character recognition](content-commerce-ai/api/optical-character-recognition.md)
-        <!-- - [Text classification](content-commerce-ai/api/text-classification.md) -->
-        <!-- - [Visual similarity](content-commerce-ai/api/visual-similarity.md) -->
 - Customer AI {#customer-ai}
   - [Overview](customer-ai/overview.md)
   - [Getting started with Customer AI](customer-ai/getting-started.md)
