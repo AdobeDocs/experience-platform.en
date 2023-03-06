@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai;keyword extraction;Keyword extraction
+keywords: Experience Platform;getting started;content ai;commerce ai;content tagging ai;keyword extraction;Keyword extraction
 solution: Experience Platform
-title: Keyword Extraction in the Content and Commerce AI API
+title: Keyword Extraction in the Content Tagging AI API
 description: The keyword extraction service, when given a text document, automatically extracts keywords or keyphrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword extraction algorithms are used.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 ---
@@ -9,11 +9,11 @@ exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 
 >[!NOTE]
 >
->[!DNL Content and Commerce AI] is in beta. The documentation is subject to change.
+>[!DNL Content Tagging AI] is in beta. The documentation is subject to change.
 
 The keyword extraction service, when given a text document, automatically extracts keywords or keyphrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword extraction algorithms are used.
 
-The named entities recognized by [!DNL Content and Commerce AI] are listed in the following table:
+The named entities recognized by [!DNL Content Tagging AI] are listed in the following table:
 
 | Entity name | Description |
 | --- | --- |
