@@ -167,7 +167,7 @@ The full active population of the segment is exported every day.
 
 |What determines a destination export | What is included in the exported file |
 |---------|----------|
-|<ul><li>The export schedule set in the UI or API and user action (selecting [Export file now](/help/destinations/ui/export-file-now.md) in the UI or using the [ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md)) determine the start of a destination export.</li><li>Any changes in segment membership of a profile, whether it qualifies or disqualifies from the segment, qualify a profile to be included in incremental exports.</li></ul> | In full file exports, the entire active profile population of a segment, based on the latest segment evaluation, is included with each file export. The latest values for each XDM attribute selected for export are also included as columns in each file. Note that profiles in exited status are not included in the file export. |
+|<ul><li>The export schedule set in the UI or API and user action (selecting [Export file now](/help/destinations/ui/export-file-now.md) in the UI or using the [ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md)) determine the start of a destination export.</li></ul> | In full file exports, the entire active profile population of a segment, based on the latest segment evaluation, is included with each file export. The latest values for each XDM attribute selected for export are also included as columns in each file. Note that profiles in exited status are not included in the file export. |
 
 {style="table-layout:fixed"}
 
