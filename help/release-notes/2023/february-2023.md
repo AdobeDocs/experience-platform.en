@@ -8,11 +8,30 @@ description: The February 2023 release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
+- [Data collection](#data-collection)
 - [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Real-Time Customer Data Platform B2B Edition](#b2b)
 - [Sources](#sources)
+
+## Data collection {#data-collection}
+
+Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+### Assurance {#assurance}
+
+Adobe Assurance lets you inspect, proof, simulate, and validate how you collect data or serve experiences in your mobile app.
+
+**New or updated features** 
+
+| Feature | Description |
+| ------- | ----------- |
+| Public APIs | The Adobe Assurance APIs are now available. The Assurance APIs are a collection of APIs that empower users to test and debug their own web and mobile apps, when outfitted with the Adobe Assurance extension with Mobile SDK. To learn more about the Assurance APIs, please read the [Assurance API overview](https://developer.adobe.com/adobe-assurance-public-apis/). |
+
+{style="table-layout:auto"}
+
+For more information about Assurance, please read the [Assurance documentation](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## [!DNL Destinations] {#destinations}
 
