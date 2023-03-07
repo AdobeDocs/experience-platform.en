@@ -13,7 +13,7 @@ In Adobe Experience Platform, a profile is considered for Pseudonymous data expi
 
 - The stitched profile's identity types match what the customer has specified as a pseudonymous or unknown identity type. 
   - For example, if the profile's identity type is `ECID`, `GAID`, or `AAID`. The stitched profile has no IDs from any other identity type. In this example, a stitched profile does **not** have either an email or CRM identity. 
-- No activity has taken place in the last 30(?) days. Activity is defined either by any Experience Events being ingested or customer-initiated updates to the profile attributes. 
+- No activity has taken place in the user-defined amount of time (which, by default, is 30 days). Activity is defined either by any Experience Events being ingested or customer-initiated updates to the profile attributes. 
   - For example, a new page view event or age attribute update is considered as an activity. However, a non-user-initiated segment membership update is **not** considered as an activity. Currently, to compute data expiration, the tracking at a profile level is based on the time of ingestion.
 
 ## Access {#access}
