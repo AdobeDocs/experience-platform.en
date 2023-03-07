@@ -21,7 +21,7 @@ In Adobe Experience Platform, a profile is considered for Pseudonymous data expi
 Pseudonymous Profile data expiration cannot be configured through the Platform UI or APIs. Instead, you must contact support in order to enable this feature. When contacting support, please include the following information: 
 
 - The identity types to be considered for Pseudonymous profile deletes. 
-  - For example: ECID only, AAID only, or a combination of ECID and AAID 
+  - For example: `ECID` only, `AAID` only, or a combination of `ECID` and `AAID`.
 - The amount of time to wait before deleting a pseudonymous profile. The default recommendation for customers is 30 days. However, this value may differ based on your use case.
 - The current profile count compared to the license profile count.
 
