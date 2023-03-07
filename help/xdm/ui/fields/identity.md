@@ -19,6 +19,11 @@ Identity fields are a crucial component in how customer identity graphs are cons
 
 ## Define an identity field
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_identityField_primaryIdentityRestriction"
+>title="Restrictions to primary identities"
+>abstract="You already have a primary identity set as this schema is being used for a connection. You do not need to set a primary identity. Read the guide on defining identity fields in the UI for more information."
+
 When [defining a new field](./overview.md#define) in the UI, you can set it as an identity field by selecting the **[!UICONTROL Identity]** checkbox in the right rail. 
 
 ![](../../images/ui/fields/special/identity.png)

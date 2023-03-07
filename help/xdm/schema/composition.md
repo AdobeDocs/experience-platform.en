@@ -185,6 +185,11 @@ For the most up-to-date list of available standard XDM classes, refer to the [of
 >title="Field group"
 >abstract="Field groups are reusable components that allow you to extend schemas with additional attributes. Most field groups are only compatible with certain classes. You can use standard field groups defined by Adobe or you can manually define your own custom field groups. See the documentation to learn more about how field groups are involved in schema composition."
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup_deletionRestriction"
+>title="Fieldgroup deletion restriction"
+>abstract="This field group is required by the service connector you are using. For this reason, you cannot delete it from your schema."
+
 A field group is a reusable component that defines one or more fields that implement certain functions such as personal details, hotel preferences, or address. Field groups are intended to be included as part of a schema that implements a compatible class. 
 
 Field groups define which class(es) they are compatible with based on the behavior of the data they represent (record or time series). This means that not all field groups are available for use with all classes.
