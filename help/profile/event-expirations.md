@@ -20,7 +20,7 @@ Experience Event expirations cannot be configured through the Platform UI or API
 After Experience Event expirations have been enabled on a Profile-enabled dataset, Platform automatically applies the expiration values for each captured event in a two-step process:
 
 1. All new data that is ingested into the dataset has the expiration value applied at ingestion time based on the event timestamp.
-1. All existing data in the dataset has the expiration value retroactively applied as a one-time backfill system job. Once the expiration value has been placed on the dataset, events that are older than the expiration value will be immediately dropped as soon as the system job runs. All other events will be dropped off as soon as they reach their expiration values from the event timestamp.
+1. All existing data in the dataset has the expiration value retroactively applied as a one-time backfill system job. Once the expiration value has been placed on the dataset, events that are older than the expiration value will be immediately dropped as soon as the system job runs. All other events will be dropped off as soon as they reach their expiration values from the event timestamp. When all Experience Events have been removed, if the profile no longer has any profile attributes, the profile will no longer exist.
 
 >[!WARNING]
 >
