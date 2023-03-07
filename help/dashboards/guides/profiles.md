@@ -111,7 +111,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Single identity profiles]](#single-identity-profiles)
 * [[!UICONTROL Single identity profiles by identity]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Unsegmented profiles]](#unsegmented-profiles)
-* [[!UICONTROL Unsegmented profiles trend]](#unsegmented-profiles-trend)
+* [[!UICONTROL Unsegmented profiles change trend]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL Unsegmented profiles by identity]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL Audiences]](#audiences)
 * [[!UICONTROL Audiences mapped to destination status]](#audiences-mapped-to-destination-status)
@@ -256,20 +256,20 @@ The [!UICONTROL Unsegmented Profiles] widget provides the total number of all pr
 
 ![The Unsegmented Profiles widget.](../images/profiles/unsegmented-profiles.png)
 
-### [!UICONTROL Unsegmented profiles trend] {#unsegmented-profiles-trend}
+### [!UICONTROL Unsegmented profiles change trend] {#unsegmented-profiles-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Unsegmented profiles trend"
 >abstract="This widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, 90 days, and 12 month periods."
 
-The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected on the y-axis and time on the x-axis.
+The [!UICONTROL Unsegmented profiles change trend] widget uses a line graph to illustrate the number of profiles added since the last daily snapshot that are not attached to any segment. The change-trend of profiles not attached to any segment can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected on the y-axis and time on the x-axis.
 
-![The Unsegmented Profiles Trend widget.](../images/profiles/unsegmented-profiles-trend.png)
+![The Unsegmented profiles change trend widget.](../images/profiles/unsegmented-profiles-change-trend.png)
 
 ### [!UICONTROL Unsegmented profiles by identity] {#unsegmented-profiles-by-identity}
 
->![NOTE]
+>[!NOTE]
 >
 >The Unsegmented profiles by identity widget has been deprecated as of October 2022 and is no longer available.
 
