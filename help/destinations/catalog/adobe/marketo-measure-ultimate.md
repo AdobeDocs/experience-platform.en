@@ -4,11 +4,11 @@
 
 Marketo Measure (formerly Bizible) gives marketers insight into which marketing efforts are the most effective in driving revenue and maximizing return on investment for their company. Marketo Measure is a marketing attribution solution that automatically tracks and reports on channel performance, providing visibility into which channels are driving the most customer engagement and allowing you to optimize your marketing spend accordingly.
 
-The destination enables the B2B data flows from Adobe Experience Platform to Marketo Measure. The card is only available to Marketo Measure Ultimate customers. 
+The destination enables the business-to-business (B2B) data flows from Adobe Experience Platform to Marketo Measure. The card is only available to Marketo Measure Ultimate customers. 
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Marketo Measure destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the Marketo Measure destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination. This integration:
 
 * Satisfies the complex data and performance reporting requirements of large enterprises.
 * Enables B2B attribution reporting with multiple CRM and marketing automation systems. 
@@ -16,9 +16,11 @@ To help you better understand how and when you should use the Marketo Measure de
 
 ## Prerequisites {#prerequisites}
 
-* AEP Sandbox Mapping should be completed in the Marketo Measure Settings page by the Admin. Without the Sandbox Mapping, the destination save will fail. 
-* Only datasets of B2B XDM classes can be exported. You can't bring in multiple datasets of the same B2B XDM class for a given data source. 
-* Each dataset can only be included in one data flow. 
+Note the following prerequisites for the Marketo Measure destination:
+
+* Experience Platform Sandbox Mapping should be completed in the Marketo Measure settings page by the Admin. Without the Sandbox Mapping, you cannot complete the workflow to connect to the destination save and activate data. 
+* Only datasets of B2B XDM classes can be exported (see, for example, the XDM Business Account and XDM Business Opportunity classes). You can't bring in multiple datasets of the same B2B XDM class for a given data source. 
+* Each dataset can only be included in one dataflow to the Marketo Measure destination. 
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -26,8 +28,8 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Dataset export]** | You are exporting raw datasets, which are not grouped or structured by audience interests or qualifications.|
-| Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms every two hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
+| Export type | **[!UICONTROL Dataset export]** | You are exporting raw datasets, which are not grouped or structured by audience interests or qualifications. Read more about [dataset exports](/help/destinations/destination-types.md#dataset-export-destinations).|
+| Export frequency | **[!UICONTROL Batch]** | This batch destination exports files to the Marketo Measure platform every two hours. Read more about [scheduling dataset exports](help/destinations/ui/export-datasets.md#scheduling).|
 
 {style="table-layout:auto"}
 
@@ -37,7 +39,7 @@ Refer to the table below for information about the destination export type and f
 > 
 >To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the section below.
 
 ### Fill in destination details {#destination-details}
 
@@ -47,7 +49,6 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Account ID]**: Your *YourDestination* account ID.
 
 ### Enable alerts {#enable-alerts}
 
@@ -59,7 +60,7 @@ When you are finished providing details for your destination connection, select 
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Read [(Beta) Export datasets](/help/destinations/ui/export-datasets.md) for extensive instructions on exporting datasets to this destination.
 
