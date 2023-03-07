@@ -1,3 +1,8 @@
+---
+title: Marketo Measure Ultimate destination
+description: Learn how to connect and activate data to the Marketo Measure Ultimate destination.
+---
+
 # Marketo Measure Ultimate Destination {#mmu-destination}
 
 ## Overview {#overview}
