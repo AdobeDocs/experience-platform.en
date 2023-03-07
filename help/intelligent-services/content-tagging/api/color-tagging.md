@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;getting started;content ai;commerce ai;content tagging;color extraction;Color extraction
+keywords: Experience Platform;getting started;content ai;commerce ai;content tagging;color tagging;color extraction;
 solution: Experience Platform
-title: Color Extraction in the Content Tagging API
-description: The color extraction service, when given an image, can compute the histogram of pixel colors and sort them by dominant colors into buckets.
+title: Color tagging in the Content Tagging API
+description: The color tagging service, when given an image, can compute the histogram of pixel colors and sort them by dominant colors into buckets.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
 ---
 # Color tagging
@@ -34,11 +34,11 @@ The following example request uses the full-image method for color tagging.
 The following request extracts colors from a image based on the input parameters provided in the payload. See the table below the example payload for more information on the input parameters shown.
 
 ```SHELL
-curl -X POST https://sensei-stage-va6.adobe.io/sensei-core/v2/predict \
+curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -H 'Prefer: respond-async, wait=59' \
 -H "x-api-key: $API_KEY" \
--H 'content-type: multipart/form-data' \
--H "authorization: Bearer $STAGE_TOKEN" \
+-H "content-type: multipart/form-data" \
+-H "authorization: Bearer $API_TOKEN" \
 -F 'contentAnalyzerRequests={
   "sensei:name": "Feature:cintel-image-classifier:Service-60887e328ded447d86e01122a4f19c58",
   "sensei:invocation_mode": "synchronous",
@@ -78,6 +78,13 @@ curl -X POST https://sensei-stage-va6.adobe.io/sensei-core/v2/predict \
 | `min_coverage` | Threshold of coverage above which the results need to be returned. Exclude parameter to return all results. | No |
 | `resize_image` | Whether to resize the input image or not. By default the images are resized to 320*320 pixels before color tagging is performed. For debugging purposes we can allow the code to run on full-image as well, by setting this to False. | No |
 | `enable_mask` | Enables/Disables color tagging within mask. | No |
+
+| Name | Data Type | Required | Default | Values | Description
+| --- | --- | --- | --- | --- | --- |
+| `repo:path` | string | - | - | - | Presigned url of the document for which key phrases are to be extracted. |
+| `sensei:repoType` | string | - | - | HTTPS | Type of repo where the image is being stored at. |
+| `sensei:multipart_field_name` | string | - | - | - | Use this when passing image file as a multipart argument instead of using presigned urls. |
+| `dc:format` | string | Yes | - | “image/jpg”, “image/jpeg”, “image/png”, “image/tiff” | Image encoding, checked against allowed input encoding types before being processed. |
 
 **Response**
 
@@ -173,8 +180,3 @@ In the first example object below, the `feature_value` of `Mud_Green,0.069,102,7
 ]
 }
 ```
-
-| Property | Description |
-| --- | --- |
-| `content_id` | The name of the image that was uploaded in your POST request. |
-| `feature_value` | An array whose objects contain keys with the same property name. These keys contain a string that represents the color name, a percentage this color appears in relation to the image sent in the `content_id`, and the RGB value of the color. |

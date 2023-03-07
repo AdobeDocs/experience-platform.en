@@ -36,6 +36,8 @@ The following request extracts keywords from a document based on the input param
 
 See the table below the example payload for more information on the input parameters shown.
 
+This [sample pdf](../pdf%20files/simple-text.pdf) file was used in the example shown in this document.
+
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -H 'Prefer: respond-async, wait=59' \
@@ -54,8 +56,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
       "sensei:inputs": {
         "documents": [
           {
-            "repo:path": "https://ccaiblobstorage.blob.core.windows.net/sample-text/simple-text.pdf?sp=r&st=2023-02-22T22:26:24Z&se=2024-02-23T06:26:24Z&spr=https&sv=2021-06-08&sr=b&sig=Glsr4qIUVphVcOONviBNwz96N5M%2FEZZL0AM2Ig2xc30%3D",
-            "sensei:repoType": "HTTP",
+            "sensei:multipart_field_name": "infile_1",
             "dc:format": "application/pdf"
           }
         ]
@@ -75,7 +76,8 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
       }
     }
   ]
-}'
+}' \
+-F 'infile_1=@simple-text.pdf'
 ```
 
 | Property | Description | Mandatory |
@@ -87,6 +89,13 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `max_key_phrase_length` | TMaximum number of words required in the key phrases. | No |
 | `last_semantic_unit_type` | Return only semantic units upto the given level in the hierarchical response. “key_phrase” returns only key phrases, “linked_entity” returns only key phrases and their corresponding linked entities, and “concept” returns key phrases, linked entities and concepts. | No |
 | `entity_types` | Types of entities to be returned as key phrases.| No |
+
+| Name | Data Type | Required | Default | Values | Description
+| --- | --- | --- | --- | --- | --- |
+| `repo:path` | string | - | - | - | Presigned url of the document for which key phrases are to be extracted. |
+| `sensei:repoType` | string | - | - | HTTPS | Type of repo where the document is being stored at. |
+| `sensei:multipart_field_name` | string | - | - | - | Use this when passing the document as a multipart argument instead of using presigned urls. |
+| `dc:format` | string | Yes | - | "text/plain",<br>"application/pdf",<br>"text/pdf",<br>"text/html",<br>"text/rtf",<br>"application/rtf",<br>"application/msword",<br>"application/vnd.openxmlformats-officedocument.wordprocessingml.document",<br>"application/mspowerpoint",<br>"application/vnd.ms-powerpoint",<br>"application/vnd.openxmlformats-officedocument.presentationml.presentation" | Document encoding, checked against allowed input encoding types before being processed.|
 
 **Response**
 

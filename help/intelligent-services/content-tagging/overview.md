@@ -1,28 +1,28 @@
 ---
 keywords: Experience Cloud;getting started;content and commerce ai;popular topics;Intelligent Services;ccai
 solution: Experience Platform
-title: Content and Commerce AI Overview
+title: Content Tagging Overview
 description: Content and Commerce AI is a set of AI services that allows you to extract intelligent features from your content, organize, streamline content flow, and deliver more impactful, personalized experiences to your customers.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
 ---
-# Content and Commerce AI overview
+# Content Tagging overview
 
-Content and Commerce AI is a set of AI services that allow you to extract intelligent features from your content, organize and streamline content flow, and deliver more impactful, personalized experiences to your customers.
+Content Tagging is a set of AI services that allow you to extract intelligent features from your content, organize and streamline content flow, and deliver more impactful, personalized experiences to your customers.
 
 All brands strive to deliver a perfect customer experience. You're constantly trying to find better answers all aspects of your customer touchpoints.
 
-Content is an essential component of these experiences. To better answer marketing questions, you must understand content and your customers' interactions with it. With Content and Commerce AI, you can learn what features of the content you provide resonates with your customers. Using these insights allows you to personalize experiences and boost KPIs.
+Content is an essential component of these experiences. To better answer marketing questions, you must understand content and your customers' interactions with it. With Content Tagging, you can learn what features of the content you provide resonates with your customers. Using these insights allows you to personalize experiences and boost KPIs.
 
-## Content and Commerce AI service functionalities
+## Content Tagging service functionalities
 
 | Content Type | Features | Overview of functionality |
 | --- | --- | --- |
 | Text | - Keyword tagging <br> | - Automatically extract keywords and tags from enterprise documents and webpages using an out-of-the-box AI service. <br> | 
 Images | - Color tagging <br> - Optical Character Recognition (OCR)|  - Accurately extract dominant colors (labels and hex values) and their weightage from a product image. <br> - Accurately extract any text present from a product image.  |
 
-## Understanding Content and Commerce AI 
+## Understanding Content Tagging 
 
-The overall vision of Content and Commerce AI is broken down into three steps to realize optimal customer engagement and maximize customer-driven KPIs. 
+The overall vision of Content Tagging is broken down into three steps to realize optimal customer engagement and maximize customer-driven KPIs. 
 
 <!-- >[!NOTE]
 >

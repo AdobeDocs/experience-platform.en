@@ -1,21 +1,17 @@
 ---
-keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
+keywords: Experience Platform;getting started;content ai;commerce ai;content tagging
 solution: Experience Platform
-title: Getting Started with Content and Commerce AI
-description: Content and Commerce AI utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the authentication tutorial.
+title: Getting Started with Content tagging
+description: Content tagging utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the authentication tutorial.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
 ---
-# Getting started with Content and Commerce AI
+# Getting started with Content tagging
 
->[!NOTE]
->
->Content and Commerce AI is in beta. The documentation is subject to change.
-
-[!DNL Content and Commerce AI] utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en).
+[!DNL Content tagging] utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en).
 
 However, when you get to the **Add API** step, the API is located under Experience Cloud instead of Adobe Experience Platform, as shown in the following screenshot: 
 
-![adding Content and Commerce AI](./images/add-api-updated.png)
+![adding Content tagging](./images/add-api-updated.png)
 
  Completing the authentication tutorial provides the values for each of the required headers in all the Adobe I/O API calls, as shown below:
 
@@ -25,7 +21,7 @@ However, when you get to the **Add API** step, the API is located under Experien
 
 ## Create a Postman environment (optional)
 
-Once you have set up your project and API within Adobe Developer Console, you have the option to download an environment file for Postman. Under **[!UICONTROL APIs]** the left rail of your project, select **[!UICONTROL Content and Commerce AI]**. A new tab opens, containing a card labeled "[!DNL Try it out]". Select **Download for Postman** to download a JSON file used to configure your postman environment. 
+Once you have set up your project and API within Adobe Developer Console, you have the option to download an environment file for Postman. Under **[!UICONTROL APIs]** the left rail of your project, select **[!UICONTROL Content tagging]**. A new tab opens, containing a card labeled "[!DNL Try it out]". Select **Download for Postman** to download a JSON file used to configure your postman environment. 
 
 ![download for postman](./images/add-to-postman-updated.png)
 
@@ -63,8 +59,8 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ## Next steps {#next-steps}
 
-Once you have all your credentials, you are ready to set up a custom worker for [!DNL Content and Commerce AI]. The following documents assist with understanding the Extensibility Framework and environment setup.
+Once you have all your credentials, you are ready to set up a custom worker for [!DNL Content tagging]. The following documents assist with understanding the Extensibility Framework and environment setup.
 
 To learn more about the Extensibility Framework, start by reading the [introduction to extensibility](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) document. This document outlines the prerequisites and provisioning requirements.
 
-To learn more about setting up an environment for [!DNL Content and Commerce AI], start by reading the guide for [setting up a developer environment](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html). This document provides setup instructions that allow you to develop for the Asset Compute Service.
+To learn more about setting up an environment for [!DNL Content tagging], start by reading the guide for [setting up a developer environment](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html). This document provides setup instructions that allow you to develop for the Asset Compute Service.

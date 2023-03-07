@@ -9,9 +9,9 @@ exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
 
 The Text Presence / Optical Character Recognition (OCR) service, when given an image, can indicate if text is present in the image. If text is present, OCR can return the text.
 
-The following image was used in the example request shown in this document:
+This following image was used in the example request shown in this document:
 
-![test image](../images/ocr_293.png)
+![Sample Image](../images/sample_image.png)
 
 **API format**
 
@@ -27,11 +27,11 @@ Execution with inline image:
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
--H 'Prefer: respond-async, wait=120' \
--H 'x-api-key: $API_KEY' \
--H 'content-type: multipart/form-data' \
--H "authorization: Bearer $PRODTOKEN" \
--F file=@ocr_293.png \
+-H 'Prefer: respond-async, wait=59' \
+-H "x-api-key: $API_KEY" \
+-H "content-type: multipart/form-data" \
+-H "authorization: Bearer $API_TOKEN" \
+-F file=@sample_image.png \
 -F 'contentAnalyzerRequests={
   "sensei:name": "Feature:cintel-object-detection:Service-b9ace8b348b6433e9e7d82371aa16690",
   "sensei:invocation_mode": "asynchronous",
@@ -123,10 +123,10 @@ Execution with URL:
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
--H 'Prefer: respond-async, wait=120' \
--H 'content-type: multipart/form-data' \
--H "authorization: Bearer $PRODTOKEN" \
--H 'x-api-key: $API_KEY' \
+-H 'Prefer: respond-async, wait=59' \
+-H "x-api-key: $API_KEY" \
+-H "content-type: multipart/form-data" \
+-H "authorization: Bearer $API_TOKEN" \
 -F 'contentAnalyzerRequests={
   "sensei:name": "Feature:cintel-object-detection:Service-b9ace8b348b6433e9e7d82371aa16690",
   "sensei:invocation_mode": "asynchronous",
@@ -139,7 +139,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
       "sensei:inputs": {
         "documents": [
         {
-          "repo:path": "https://research.adobe.com/wp-content/uploads/2019/10/Interns_Gabby_Luis_byClaire.jpg",
+          "repo:path": <IMG_URL_PATH>,
           "sensei:repoType": "HTTP",
           "dc:format": "image/jpg"
         }
@@ -203,3 +203,10 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `filter_with_dictionary` | Whether to filter the words to contain only the words from the English dictionary? If this is turned on, the returned words will always belong to the large English word list comprising 470k words. | No |
 | `min_probability` | What is the minimum probability for the recognized words? Only the words that are extracted from the image have a greater probability than min_probability are returned by the service. The default value is set at 0.2. | No |
 | `min_relevance` | What is the minimum relevance for the recognized words? Only the words that are extracted from the image have greater relevance than min_relevance are returned by the service. The default value is set at 0.01. The relevance is computed as the fraction of the area of the extracted text’s bounding box in comparison to the full image. 0.01 would translate to a text occupying at least 1% of the image. | No |
+
+| Name | Data Type | Required | Default | Values | Description
+| --- | --- | --- | --- | --- | --- |
+| `repo:path` | string | - | - | - | Presigned url of the image for which text needs to be extracted. |
+| `sensei:repoType` | string | - | - | HTTPS | Type of repo where the image is being stored at. |
+| `sensei:multipart_field_name` | string | - | - | - | Use this when passing the image as a multipart argument instead of using presigned urls. |
+| `dc:format` | string | Yes | - | “image/jpg”, <br>“image/jpeg”, <br>“image/png”, <br>“image/tiff” | Image encoding, checked against allowed input encoding types before being processed.|
