@@ -139,28 +139,28 @@ Once you have reviewed your dataflow, select **[!UICONTROL Save & ingest]** and 
 
 ![The final review step that summarizes information on the connection, dataset, and mapping fields.](../../../../images/tutorials/create/marketo-custom-activities/review.png)
 
-### Add custom activities to an existing activities dataflow
+### Add custom activities to an existing activities dataflow {#add-to-existing-dataflows}
 
 To add custom activity data to an existing dataflow, modify the mappings of an existing activities dataflow with the custom activity data that you want to ingest. This allows you to ingest custom activity into the same existing activities dataset. For more information on how to update the mappings of an existing dataflow, read the guide on [updating dataflows in the UI](../../update-dataflows.md).
 
-### Use [!DNL Query Service] to filter activities for custom activities
+### Use [!DNL Query Service] to filter activities for custom activities {#query-service-filter}
 
 Once your dataflow is complete, you can use [Query Service](../../../../../query-service/home.md) to filter activities for your custom activity data. 
 
 When custom activities are ingested into Platform, the API name of the custom activity automatically becomes its `eventType`. Use `eventType={API_NAME}` to filter for custom activity data.
 
 ```sql
-select * from with_custom_activities_ds_today where eventType='aepCustomActivityDemo1' 
+SELECT * FROM with_custom_activities_ds_today WHERE eventType='aepCustomActivityDemo1' 
 ```
 
 Use the `IN` clause to filter multiple custom activities:
 
 ```sql
-select * from $datasetName where eventType='{API_NAME}'
-select * from $datasetName where eventType in ('aepCustomActivityDemo1', 'aepCustomActivityDemo2')
+SELECT * FROM $datasetName WHERE eventType='{API_NAME}'
+SELECT * FROM $datasetName WHERE eventType IN ('aepCustomActivityDemo1', 'aepCustomActivityDemo2')
 ```
 
-View the image below for an example of a query that filters for custom activity data, using the query editor in Platform UI.
+The image below shows an example SQL statement in the [Query Editor](../../../../../query-service/ui/user-guide.md) that filters for custom activity data.
 
 ![Platform UI displaying a query example for custom activities.](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
 
