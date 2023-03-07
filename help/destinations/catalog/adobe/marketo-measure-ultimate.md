@@ -4,7 +4,7 @@
 
 Marketo Measure (formerly Bizible) gives marketers insight into which marketing efforts are the most effective in driving revenue and maximizing return on investment for their company. Marketo Measure is a marketing attribution solution that automatically tracks and reports on channel performance, providing visibility into which channels are driving the most customer engagement and allowing you to optimize your marketing spend accordingly.
 
-The destination enables the B2B data flows from Adobe Experience Platform to Marketo Measure.
+The destination enables the B2B data flows from Adobe Experience Platform to Marketo Measure. The card is only available to Marketo Measure Ultimate customers. 
 
 ## Use cases {#use-cases}
 
@@ -16,8 +16,9 @@ To help you better understand how and when you should use the Marketo Measure de
 
 ## Prerequisites {#prerequisites}
 
-* AEP Sandbox Mapping should be completed in the Marketo Measure Settings page. Without the Sandbox Mapping, the destination save will fail. 
-* Only datasets of B2B XDM classes can be exported. For a given data source, only one dataset for each B2B XDM class is allowed. Each dataset can only be included in one data flow. 
+* AEP Sandbox Mapping should be completed in the Marketo Measure Settings page by the Admin. Without the Sandbox Mapping, the destination save will fail. 
+* Only datasets of B2B XDM classes can be exported. You can't bring in multiple datasets of the same B2B XDM class for a given data source. 
+* Each dataset can only be included in one data flow. 
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -39,8 +40,6 @@ Refer to the table below for information about the destination export type and f
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
 ### Fill in destination details {#destination-details}
-
-*Add the fields that customers must fill in when configuring a new destination. These fields are destination-specific and depend on your configuration in Destination SDK. Your destination's fields may not be the same as the ones listed below. Please also include a screenshot similar to the sample screenshot shown below.*
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
@@ -66,7 +65,7 @@ Read [(Beta) Export datasets](/help/destinations/ui/export-datasets.md) for exte
 
 ## Exported data / Validate data export {#exported-data}
 
-To validate a successful dataset export, you can check that your dataset has successfully made it through to your [Snowflake datawarehouse](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=en). 
+To validate a successful dataset export, you can check that your dataset has successfully made it through to your [Snowflake data warehouse](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=en). 
 
 ## Data usage and governance {#data-usage-governance}
 
@@ -74,4 +73,3 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-*You can provide further links to your product documentation or any other resources that you consider important for the customer to be successful.*
