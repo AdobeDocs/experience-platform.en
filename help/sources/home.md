@@ -189,6 +189,7 @@ With attribute-based access control, you can apply mapping configurations to fie
 
 - Apply labels to schema fields to define access to specific schema fields in your organization. Once access to specific schema fields are established, users will only be able to create mappings for the fields that they have access to.
 - Users without the appropriate roles will not be able to create or update dataflows with mappings that involve inaccessible schema fields. Furthermore, unauthorized users cannot update, delete, enable, or disable existing dataflows with inaccessible schema fields.
+- Additionally, a dataflow must have the exact same schema ID and version in its mapping, target dataset, and target connection.
 
 For more information on attribute-based access control, read the [attribute-based access control overview](../access-control/abac/overview.md).
 
