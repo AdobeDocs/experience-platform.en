@@ -1,12 +1,10 @@
-# Adobe Analytics with Adobe Experience Platform Assurance
+# Adobe Analytics view in Assurance
 
-## Overview
-
-The Assurance integration with Adobe Analytics provides a richer view of SDK events to users debugging and validating their Adobe Analytics implementation. The view now shows lifecycle and action/state events sent to Adobe Analytics from the [Adobe Experience Platform SDK](../../adobe-analytics/index.md). The view also features "response" detail that provides information on how the events were processed after the application of each respective report suite's processing rules.
+The Adobe Experience Platform Assurance integration with Adobe Analytics provides a richer view of SDK events to users debugging and validating their Adobe Analytics implementation. The view now shows lifecycle and action/state events sent to Adobe Analytics from the [Adobe Experience Platform SDK](../../adobe-analytics/index.md). The view also features "response" detail that provides information on how the events were processed after the application of each respective report suite's processing rules.
 
 ![](./images/adobe-analytics/overview.png)
 
-### Post-processed status
+## Post-processed status
 
 After the SDK makes a network request with Adobe Analytics, the status will tell you if Assurance was able to retrieve the post-processing information for the Adobe Analytics request.
 
@@ -23,7 +21,7 @@ Please note that in order to retrieve post-processing information, the logged-in
 | `No Debug Flag` | The current Adobe Analytics or Assurance SDK version might not support the Analytics Debugging feature. For more information, please read the [Troubleshooting guide](../troubleshooting.md). |
 | `Expired` | The `AnalyticsTrack` or `LifecycleStart` event is older than 24 hours. |
 
-### Event details view
+## Event details view
 
 For an Analytics track event, the detailed view contains the following valuable parts:
 
@@ -31,14 +29,11 @@ For an Analytics track event, the detailed view contains the following valuable 
 * OOTB meta and context data from the request, such as report suite ID, SDK extension versions, OOTB context data, and so on.
 * Post-processed information on the Analytics event that contains the mapping of revars, evars, props, and so on.
 
-## Using Assurance for Adobe Analytics
+## Use Assurance with Adobe Analytics
 
 To get started, complete the following steps:
 
-1. Ensure that you implemented the latest versions of the [Assurance](../set-up.md) and [Adobe Analytics](../../adobe-analytics/index.md) extensions.
-2. Go to the [Assurance UI](https://experience.adobe.com/assurance).
-3. Connect your app to an Assurance session. For more information, see [Connect your device](../index.md#connecting-to-a-session).
-4. To view your events, select the **Adobe Analytics** view.
+1. [Set up Assurance](../set-up.md).
+2. To view your events, select the **Adobe Analytics** view.
 
 ![](./images/adobe-analytics/using-assurance.png)
-

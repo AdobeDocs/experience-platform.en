@@ -1,5 +1,7 @@
 # On-device views
 
+blurb (this can be added to another doc tbh?)
+
 ## Connected
 
 (indicated by red Adobe "A")

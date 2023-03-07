@@ -1,20 +1,17 @@
-# Validation Editor
+# Validation Editor view
 
-## Overview
+The Validation Editor lets you quickly and easily manage JavaScript functions to validate events in an Adobe Experience Platform Assurance session. Each function receives the events in an Assurance session. You can write functions to validate your client configuration, event conditions, tests and use cases.
 
-You may use the Validation Editor feature to quickly and easily manage JavaScript functions to validate events in an Adobe Experience Platform Assurance session. Each function receives the events in an Assurance session. You can write functions to validate your client configuration, event conditions, tests and use cases.
-
-## Getting Started
+## Get started with the Validation Editor
 
 To use this view, complete the following steps:
 
-1. [Set up Adobe Experience Platform Assurance](../set-up-project-griffon.md)
-2. [Create](../index.md#creating-sessions) and [connect](../index.md#connecting-to-a-session) to a Assurance session
-3. In the **Home** view, select **Validation Editor**
+1. [Set up Assurance](../set-up.md).
+2. In the **Home** view, select **Validation Editor**.
 
 ![Validation-Editor-Screen-Shot](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
 
-## Writing a Validation Function
+## Write a validation function
 
 This feature allows you to create, edit, or delete validation functions for your Adobe Experience Platform Assurance sessions.
 
@@ -24,7 +21,7 @@ This feature allows you to create, edit, or delete validation functions for your
 
 Once the function tests are complete, select **Publish** to save your validation.
 
-### Event Definition
+### Event definition
 
 | Key | Type | Description |
 | :--- | :--- | :--- |
@@ -33,31 +30,32 @@ Once the function tests are complete, select **Publish** to save your validation
 | `eventNumber` | Number | Used to order when the event was sent. This key is useful when events have the same timestamp. |
 | `vendor` | String | Vendor identification string in the reverse domain name format (for example, com.adobe.assurance). |
 | `type` | String | Used to denote the type of event. |
-| `payload` | Object | Defines the data for the event and contains unique and common properties. Some common properties include `ACPExtensionEventSource and ACPExtensionEventType`. |
+| `payload` | Object | Defines the data for the event and contains unique and common properties. Some common properties include `ACPExtensionEventSource` and `ACPExtensionEventType`. |
 | `annotations` | Array | An array of annotation objects. |
 
-### Annotation Definition
+### Annotation definition
 
 | Key | Type | Description |
 | :--- | :--- | :--- |
 | `uuid` | String | Universally unique identifier for the annotation. |
-| `type` | String | Used to denote the type of annotation and is usually the name of the plugin \(for example, analytics\). |
+| `type` | String | Used to denote the type of annotation and is usually the name of the plugin (for example, analytics). |
 | `payload` | Object | Defines the data that should supplement the event. For Adobe Analytics, this is where the post-processed hit data is contained. |
 
-### Returning Validation Results
+### Validation results
 
 The validation function is expected to return an object that contains the following:
 
 | Key | Type | Description |
-| :--- | :--- | :--- | 
-| `message` | String | The validation message to display. |
+| :--- | :--- | :--- |
+| `message` | String | The validation message to display in the summary results. |
 | `events` | Array | An array of event uuids to be reported as matched or not matched. |
-| `links` | Array | An array of ValidationResultLink objects `{( type: 'doc'\|'product', url: String )}` to reference documentation and other resources |
+| `links` | Array | An array of `ValidationResultLink` objects to reference documentation and other resources `{( type: 'doc'|'product', url: String )}`  |
 | `result` | String | This is the validation result and is expected to be one of the enumerated strings: "matched", "not matched", "unknown" |
 
-## Viewing Results
+## View the validation results
 
 The results of the function are displayed in the results section below the code editor. If the validation result is `unknown` or `not matched` and the `events` array has one or more `uuids`, the events will be highlighted in the timeline with the following colors:
+
 * Green - matched
 * Orange - unknown
 * Red - not matched

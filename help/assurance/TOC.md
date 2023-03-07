@@ -12,6 +12,7 @@ feature: Assurance
 - [Get access](./get-access.md)
 - [Set up](./set-up.md)
 - Tutorials {#tutorials}
+  - [Event transactions](./tutorials/event-transactions.md)
   - [Adobe Analytics](./tutorials/adobe-analytics.md)
   - [Adobe Analytics Streaming Media](./tutorials/adobe-analytics-streaming-media.md)
   - [In-app Messaging](./tutorials/in-app-messaging.md)

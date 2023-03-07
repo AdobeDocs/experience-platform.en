@@ -2,43 +2,43 @@
 
 Adobe Experience Platform Assurance is a product from [Adobe Experience Cloud](https://www.adobe.com/experience-cloud.html) to help you inspect, proof, simulate, and validate how you collect data or serve experiences in your mobile app.
 
-<InlineAlert variant="success" slots="header, text"/>
+>[!IMPORTANT]
+>
+> Project Griffon is now known as **Assurance**!
+>
+> Project Griffon is now generally available to **all** Adobe Experience Cloud customers as Assurance. To learn more about this transition, please read the [user access](./get-access.md) guide.
 
-Assurance Public APIs are available!
-
-[The Assurance APIs](https://developer.adobe.com/adobe-assurance-public-apis/) are a collection of APIs that empower users to test and debug their web and mobile apps, when outfitted with the Adobe Assurance Mobile SDK.
-
-<InlineAlert variant="success" slots="header, text"/>
-
-Project Griffon is now Assurance
-
-We're pleased to announce that Project Griffon is now generally available to all Adobe Experience Cloud customers as Assurance. To learn more about this transition, please read the [user access](./get-access.md) guide.
+>[!INFO]
+>
+>Assurance Public APIs are available!
+>
+>[The Assurance APIs](https://developer.adobe.com/adobe-assurance-public-apis/) are a collection of APIs that empower users to test and debug their web and mobile apps, when outfitted with the Adobe Assurance Mobile SDK.
 
 ## General Availability
 
-Starting October 15th, 2022 - Project Griffon will be generally available to all Adobe Experience Cloud customers as Assurance.
+Starting on October 15th, 2022, Assurance is generally available to all Adobe Experience Cloud.
 
 ### What's changing?
 
-On October 15th - access to Assurance / Project Griffon will be managed through Admin Console. Follow [this link](./get-access.md) to ensure continued, uninterrupted access.
+On October 15th - access to Assurance will be managed through Admin Console. Follow [this link](./get-access.md) to ensure continued, uninterrupted access.
 
-No other changes or disruption are expected to existing Assurance / Project Griffon integrations, sessions, and events. Assurance may be continued to be accessed via [https://griffon.adobe.com](https://griffon.adobe.com) **or** you may use (and bookmark) [https://experience.adobe.com/assurance](https://experience.adobe.com/assurance).
+No other changes or disruption are expected to existing Assurance integrations, sessions, and events. Assurance may be continued to be accessed via [https://griffon.adobe.com](https://griffon.adobe.com) **or** you may use (and bookmark) [https://experience.adobe.com/assurance](https://experience.adobe.com/assurance).
 
 ## What can Assurance do for you?
 
-### Quick Setup
+### Quick setup
 
 Get started in a hurry with few lines of code. For mobile apps, Assurance works with the Adobe Experience Platform Mobile SDK to help you inspect, simulate, and validate app events, location signals, configuration parameters, SDK logs, device information, and more.
 
-### No-hassle Connection
+### No-hassle connection
 
-With Assurance, we've made connecting your app with our service simple and reliable. We've saved you the hassle of using network proxies, [MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)), and other network gymnastics - connecting your app to Assurance is made as easy as scanning a QR code or tapping a button.
+With Assurance, connecting your app with Platform is simple and reliable. You don't need to use network proxies, [MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)), and other network gymnastics - connecting your app to Assurance is as easy as scanning a QR code or tapping a button.
 
 ![](./images/index/no-hassle-connection.png)
 
 ### Real-time inspection, simulation, and validation
 
-After connecting, you can inspect live-streamed app events and activity and filter and search to eliminate noise. Events contain details about validating, debugging, and troubleshooting your mobile app implementation. Assurance also lets you screenshot, simulate location signals, and more in real-time.
+After connecting to Assurance, you can inspect live-streamed app events and activity and filter and search to eliminate noise. Events contain details about validating, debugging, and troubleshooting your mobile app implementation. Assurance also lets you screenshot, simulate location signals, and more in real-time.
 
 ![](./images/index/real-time-insepction.png)
 
@@ -70,9 +70,9 @@ The Location Services view is an on-device view that shows the user location ent
 
 Assurance has the following security measures in place:
 
-* AEP Assurance and Assurance web UI have a secure, PIN-based handshake for a connection. The user has to explicitly create a handshake, which prevents "accidental" Assurance connections to be created by an end-user.
+* Both Assurance and the Assurance Web UI have a secure, PIN-based handshake for a connection. The user has to explicitly create a handshake, which prevents "accidental" Assurance connections to be created by an end-user.
 * Only connections between AEP Assurance and the Assurance web UI belonging to the same Adobe Experience Cloud Organization ID are supported.
-* Adobe Experience Platform Mobile SDKs events are transported over HTTPs.
+* Adobe Experience Platform Mobile SDKs events are transported over HTTPS.
 * Assurance and Adobe Experience Platform Mobile SDKs use TLS 1.2
 * Assurance sessions are deleted after 30 days.
 * Assurance session data is encrypted at rest, following storage best practices.
