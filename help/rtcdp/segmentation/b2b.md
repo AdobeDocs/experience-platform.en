@@ -78,13 +78,13 @@ Find all the people who are a "Decision Maker" of any opportunity where the acco
 
 ### Example 5: Find B2B profiles for opportunities by department name and opportunity amount {#find-department-opportunity-amount}
 
-Find all the people who work in a Human Resources (HR) department and are related to any account that has at least one open opportunity worth the given amount ($1 million) or more. This segment requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Account] class, and [!UICONTROL XDM Business Opportunity] class.
+Find all the people who work in a Human Resources (HR) department and have any account that has at least one open opportunity worth the given amount ($1 million) or more. This segment requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Account] class, and [!UICONTROL XDM Business Opportunity] class.
 
 ![UI displaying example 5 settings](../assets/segmentation/example-5.png)
 
 ### Example 6: Find B2B profiles by job title and annual account revenue {#find-by-job-title-and-revenue}
 
-Find all the people whose job title is Vice President and are related to any account with annual revenue of the given amount ($100 million) or more, and have visited the pricing page at least 3 times in the last month. This segment requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Account] class, and [!UICONTROL XDM ExperienceEvent] class.
+Find all the people whose job title is Vice President and have any account with annual revenue of the given amount ($100 million) or more, and have visited the pricing page at least 3 times in the last month. This segment requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Account] class, and [!UICONTROL XDM ExperienceEvent] class.
 
 ![UI displaying example 6 settings](../assets/segmentation/example-6.png)
 
@@ -98,13 +98,37 @@ Find all the people who are a "Decision Maker" of any closed-lost opportunity, a
 
 Find all the people who work in a Human Resources (HR) department and are related to any account *or any one of the account's related accounts* that has at least one open opportunity worth the given amount ($1 million) or more. This segment requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Account] class, and [!UICONTROL XDM Business Opportunity] class.
 
-![UI displaying segmentation for related accounts](../assets/segmentation/segmentation-related-accounts.png)
+![UI displaying segmentation for related accounts](../assets/segmentation/example-8.png)
 
 ### Example 9: Use lead scores and/or account scores to qualify profile {#account-scoring}
 
 Find all profiles with the lead score over 80. 
 
-![UI displaying segmentation for predictive lead and account scoring](../assets/segmentation/segmentation-predictive-lead-and-account-scoring.png)
+![UI displaying segmentation for predictive lead and account scoring](../assets/segmentation/example-9.png)
+
+### Example 10: Find B2B profiles associated with accounts whose parent org have revenue over a certain dollar amount {#find-parent-org-amount}
+
+Find all people that are associated with accounts whose Parent Org has a revenue of more than the given amount ($100,000,000).
+
+![UI displaying segmentation parent org](../assets/segmentation/example-10.png)
+
+### Example 11: Find B2B profiles by job title and account name with and active relationship {#find-by-job-title-and-account-name}
+
+Find all the people who are a "Manager" on the account "Acme", where the account relationship is "Active". 
+
+![UI displaying segmentation parent org](../assets/segmentation/example-11.png)
+
+### Example 12: Find B2B profiles targeted for campaigns where the actualCost exceeds the BudgetedCost {#find-actualcost-exceed-budgetcost}
+
+Find all the people who are targeted for campaigns where the actualCost exceeded the BudgetedCost.
+
+![UI displaying segmentation parent org](../assets/segmentation/example-12.png)
+
+### Example 13: Find B2B profiles belonging to a Marketo Static list and isDeleted=false {#find-parent-org-amount}
+
+Find all the people belonging to the Marketo Static list "Anniversary users" where isDeleted=false.
+
+![UI displaying segmentation parent org](../assets/segmentation/example-13.png)
 
 ## Next steps {#next-steps}
 
