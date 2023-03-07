@@ -21,7 +21,8 @@ Before your destination can be published to the [Experience Platform destination
 
 This page lists all the information you need to provide when submitting or updating a destination you authored using Adobe Experience Platform Destination SDK. To successfully submit a destination in Adobe Experience Platform, send an email to <aepdestsdk@adobe.com> which includes:
 
-* A description of the use cases that your destination solves. This is not required if you are updating an existing destination configuration.
+* A description of the use cases that your destination solves. This is only required if you are submitting a new destination configuration.
+* A description of the reason for your destination submission. This is only required if you are updating an existing destination configuration.
 * Test results after using the test destination API endpoint to perform an HTTP call to your destination. Please share with Adobe an API call made to your destination endpoint and the API response received from your destination endpoint.
 * Additional requirements for file-based destinations:
   * Share a request and a response sample after using the testing API to [test your file-based destination with sample profiles](/help/destinations/destination-sdk/file-based-destination-testing-api.md). 
@@ -39,6 +40,14 @@ Provide a description of the use cases that your destination solves for Experien
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest.
 * [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX APIs are available for advertisers that want to target a specific audience group keyed off email addresses in Verizon Media (VMG) can quickly create a new segment and push the desired audience group using VMG's near-real-time API.
+
+## Reason for update {#reason-for-update}
+
+>[!NOTE]
+>
+>This section is only required when you update an existing configuration.
+
+Provide a brief description of the issue that your submission solves for the existing destination. For example, your submission might update the name, description, and logo of your destination as you move from beta to general availability. Or, your submission might fix a bug discovered in your destination configuration. 
 
 ## Test results after using the test destination API {#testing-api-response}
 
