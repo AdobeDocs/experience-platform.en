@@ -108,19 +108,19 @@ Find all profiles with the lead score over 80.
 
 ### Example 10: Find B2B profiles associated with accounts whose parent org have revenue over a certain dollar amount {#find-parent-org-amount}
 
-Find all people that are associated with accounts whose Parent Org has a revenue of more than the given amount ($100,000,000).
+Find all people that are associated with accounts whose Parent Org has a revenue more than the given amount ($100,000,000).
 
 ![UI displaying segmentation parent org](../assets/segmentation/example-10.png)
 
-### Example 11: Find B2B profiles by job title and account name with and active relationship {#find-by-job-title-and-account-name}
+### Example 11: Find B2B profiles by job title and account name with an active relationship {#find-by-job-title-and-account-name}
 
 Find all the people who are a "Manager" on the account "Acme", where the account relationship is "Active". 
 
 ![UI displaying segmentation parent org](../assets/segmentation/example-11.png)
 
-### Example 12: Find B2B profiles targeted for campaigns where the actualCost exceeds the BudgetedCost {#find-actualcost-exceed-budgetcost}
+### Example 12: Find B2B profiles targeted for campaigns where the actualCost exceeds the budgetedCost {#find-actualcost-exceed-budgetcost}
 
-Find all the people who are targeted for campaigns where the actualCost exceeded the BudgetedCost.
+Find all the people who are targeted for campaigns where the actualCost exceeded the budgetedCost.
 
 ![UI displaying segmentation parent org](../assets/segmentation/example-12.png)
 
