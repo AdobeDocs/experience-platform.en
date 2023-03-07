@@ -47,34 +47,44 @@ This section includes the relevant API tutorial and reference documentation for 
 
 ### Summary of backwards-incompatible changes
 
-With the migration to the new destinations, all your dataflows will now get new target connections and target base connections. The profile mapping step also changes.
+With the migration to the new destinations, all your dataflows will now be assigned new target connections and target base connections. The profile mapping step also changes. Backwards-incompatible changes are summarized in the sections below for each destination.
 
 ![Migration guide overview image](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
 
-### Backwards-incompatible changes to Amazon S3 destination
+### Backwards-incompatible changes to the Amazon S3 destination
 
 The breaking changes for the API users are an updated connection spec and flow spec as below:
 
 |Amazon S3 | Legacy | New |
 |---------|----------|---------|
-| Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 1a0514a6-33d4-4c7f-aff8-594799c47549 |
+| Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 269ba276-16fc-47db-92b0-c1049a3c131f |
 | Connection spec | 4890fc95-5a1f-4983-94bb-e060c08e3f81 | 4fce964d-3f37-408f-9778-e597338a21ee |
 
 ### Backwards-incompatible changes to Azure Blob destination
 
-The breaking changes for the API users are: 
+The breaking changes for the API users are an updated connection spec and flow spec as below:
 
-Updated connection spec and flow spec
+|Azure Blob | Legacy | New |
+|---------|----------|---------|
+| Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
+| Connection spec | e258278b-a4cf-43ac-b158-4fa0ca0d948b | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
 
 ### Backwards-incompatible changes to SFTP destination
 
-The breaking changes for the API users are: 
+The breaking changes for the API users are an updated connection spec and flow spec as below:
 
-Updated connection spec and flow spec
+|SFTP | Legacy | New |
+|---------|----------|---------|
+| Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 354d6aad-4754-46e4-a576-1b384561c440 |
+| Connection spec | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
 
 ### Backwards-incompatible changes common to Amazon S3, Azure Blob, and SFTP destinations
 
-Briefly describe updates to profile mapping step and link to relevant section from API guide
+The profile selector step in all three destinations is replaced by a mapping step which allows you to rename the columns in your exported files. See the side-by-side image below with the old attribute selector step on the left and the new mapping step in the right.
+
+![Migration guide overview image](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
+
+
 
 ## Migration steps
 
@@ -82,8 +92,8 @@ TODO: Briefly list out migration steps (if documenting these publicly is desired
 
 ## Action items
 
-Update your scripts. Your Adobe account team will reach out with further information about when your dataflows will be migrated. 
+Prepare to update your scripts. Your Adobe account team will reach out with further information about when your dataflows will be migrated. 
 
 ## Next steps {#next-steps}
 
-By reading this page, you now know which documentation pages to reference as you set up API-based workflows to export files out of Experience Platform to your preferred cloud storage destinations. TODO: Add links for next steps
+By reading this page, you now know which documentation pages to reference as you set up API-based workflows to export files out of Experience Platform to your preferred cloud storage destinations. Next, you can view the API tutorial to export data to cloud storage destinations.
