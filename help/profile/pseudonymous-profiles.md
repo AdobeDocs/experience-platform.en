@@ -3,16 +3,27 @@ keywords: Experience Platform;home;popular topics;dataset;Dataset;time to live;t
 solution: Experience Platform
 title: Pseudonymous Profile data expiration
 description: This document provides general guidance on configuring expiration times for Pseudonymous Profiles within an Adobe Experience Platform sandbox.
+hide: true
+hidefromtoc: true
 ---
 
 # Pseudonymous profiles data expiration [!BADGE Limited release]
 
 In Adobe Experience Platform, a profile is considered for Pseudonymous data expiration if it meets the following conditions: 
 
-- The stitched profile's ID(s) match what the customer has specified as a pseudonymous or unknown identity type. 
-  - For example, if the profile's ID is `ECID`, `GAID`, or `AAID`. The stitched profile has no IDs from any other identity type. In this example, a stitched profile does **not** have either an email or CRM identity. 
+- The stitched profile's identity types match what the customer has specified as a pseudonymous or unknown identity type. 
+  - For example, if the profile's identity type is `ECID`, `GAID`, or `AAID`. The stitched profile has no IDs from any other identity type. In this example, a stitched profile does **not** have either an email or CRM identity. 
 - No activity has taken place in the last 30(?) days. Activity is defined either by any Experience Events being ingested or customer-initiated updates to the profile attributes. 
   - For example, a new page view event or age attribute update is considered as an activity. However, a non-user-initiated segment membership update is **not** considered as an activity. Currently, to compute data expiration, the tracking at a profile level is based on the time of ingestion.
+
+## Access {#access}
+
+Pseudonymous Profile data expiration cannot be configured through the Platform UI or APIs. Instead, you must contact support in order to enable this feature. When contacting support, please include the following information: 
+
+- The identity types to be considered for Pseudonymous profile deletes. 
+  - For example: ECID only, AAID only, or a combination of ECID and AAID 
+- The amount of time to wait before deleting a pseudonymous profile. The default recommendation for customers is 30 days. However, this value may differ based on your use case.
+- The current profile count compared to the license profile count.
 
 ## Frequently asked questions {#faq}
 
@@ -62,24 +73,3 @@ Pseudonymous Profile data expiry and Experience Event data expiry can be used to
 You should **always** set up Experience Event data expiry in your datasets, based on your needs of retaining data about your known customers. Once Experience Event data expiry is set up, you can use Pseudonymous Profile data expiry to automatically remove Pseudonymous Profiles. Typically, the data expiry period for Pseudonymous Profiles is less than the data expiry period for Experience Events.
 
 For a typical use case, you can set your Experience Event data expiry based on the values of your known user data and you can set your Pseudonymous Profile data expiry to a much shorter duration to limit the impact of Pseudonymous profiles on your Platform license compliance.
-
-## Beta access {#beta-access}
-
-To get into the Pseudonymous Profile data expiry beta, please contact Shyam Sunder. When contacting him, please include the following information: 
-
-- The identity types to be considered for Pseudonymous profile deletes. 
-  - For example: ECID only, AAID only, or a combination of ECID and AAID 
-- The amount of time to wait before deleting a pseudonymous profile. The default recommendation for customers is 30 days. However, this value may differ based on your use case.
-- The current profile count compared to the license profile count.
-
-### How will beta access be handled?
-
-After all the beta requests have been sent, customer prioritization will be based on the complexity of the data expiration cleanup. Complexity is based on the volume of pseudonymous profiles and the number of considered identity types.
-
-After determining the customer's complexity, a simulation that shows how the data expiry will affect the profile count will be run. Once it's been run, the customer can validate if this profile count drop is expected.
-
-A maximum of 25 customers will be accepted for this beta.
-
-### When will Pseudonymous Profile data expiry GA?
-
-This feature is expected to GA by the end of H1 2023.
