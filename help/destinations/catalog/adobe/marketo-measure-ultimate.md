@@ -1,6 +1,7 @@
 ---
 title: Marketo Measure Ultimate destination
 description: Learn how to connect and activate data to the Marketo Measure Ultimate destination.
+last-substantial-update: 2023-03-07
 ---
 
 # Marketo Measure Ultimate Destination {#mmu-destination}
@@ -34,7 +35,7 @@ Refer to the table below for information about the destination export type and f
 | Item | Type | Notes |
 ---------|----------|---------|
 | Export type | **[!UICONTROL Dataset export]** | You are exporting raw datasets, which are not grouped or structured by audience interests or qualifications. Read more about [dataset exports](/help/destinations/destination-types.md#dataset-export-destinations).|
-| Export frequency | **[!UICONTROL Batch]** | This batch destination exports files to the Marketo Measure platform every two hours. Read more about [scheduling dataset exports](help/destinations/ui/export-datasets.md#scheduling).|
+| Export frequency | **[!UICONTROL Batch]** | This batch destination exports files to the Marketo Measure platform every two hours. Read more about [scheduling dataset exports](/help/destinations/ui/export-datasets.md#scheduling).|
 
 {style="table-layout:auto"}
 
