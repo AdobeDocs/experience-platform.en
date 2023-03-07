@@ -35,7 +35,7 @@ Once you have downloaded the file, open Postman and select the **gear icon** in 
 
 Next, select **Import** from within the **Manage environments** dialog.
 
-![import](./images/import.png)
+![import](./images/import-updated.png)
 
 You are redirected and asked to select an environment file from your computer. Select the JSON file you downloaded earlier, then select **Open** to load the environment.
 
@@ -45,15 +45,15 @@ You are redirected and asked to select an environment file from your computer. S
 
 You are redirected back to the *Manage environments* tab with a new environment name populated. Select the environment name to view and edit the variables available in Postman. You still need to manually populate the `JWT_TOKEN` and `ACCESS_TOKEN`. These values should have been obtained while completing the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en).
 
-![](./images/re-direct.png)
+![](./images/re-direct-updated.png)
 
 Once complete, your variables should look something like the screenshot below. Select **Update** to finish setting up your environment.
 
-![](./images/final-environment.png)
+![](./images/final-environment-updated.png)
 
 You can now select your environment from the dropdown menu in the top-right corner and auto-populate any values saved. Simply re-edit the values at any time to update all of your API calls.
 
-![example](./images/select-environment.png)
+![example](./images/select-environment-updated.png)
 
 For more information on working with Adobe I/O APIs using Postman, see the Medium post on [using Postman for JWT authentication on Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
 
