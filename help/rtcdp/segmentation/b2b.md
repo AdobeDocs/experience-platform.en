@@ -124,7 +124,7 @@ Find all the people who are targeted for campaigns where the actualCost exceeded
 
 ![UI displaying segmentation parent org](../assets/segmentation/example-12.png)
 
-### Example 13: Find B2B profiles belonging to a Marketo Static list and isDeleted=false {#find-parent-org-amount}
+### Example 13: Find B2B profiles belonging to a Marketo Static list and isDeleted=false {#find-marketo-static-list}
 
 Find all the people belonging to the Marketo Static list "Anniversary users" where isDeleted=false.
 
