@@ -72,7 +72,12 @@ The following standard namespaces are provided for use by all organizations with
 | TNTID | A namespace that represents Adobe Target. See the following document on [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) fore more information. |
 | Windows AID | A namespace that represents a Windows Advertising ID. See the following document on [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) for more information. |
 
-### View identity namespaces
+### View identity namespaces {#view-identity-namespaces}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_view_integration_identites"
+>title="View integration identities"
+>abstract="Integration identities are namespaces that are used to connect with other systems and are not used in identity resolution or to stitch identities. <br> These identities are hidden by default. Use the toggle to view integration namespaces"
 
 To view identity namespaces in the UI, select **[!UICONTROL Identities]** in the left navigation and then select **[!UICONTROL Browse]**.
 
