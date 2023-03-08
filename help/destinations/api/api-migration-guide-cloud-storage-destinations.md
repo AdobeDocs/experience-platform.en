@@ -16,24 +16,31 @@ Starting November 2022, you can use the new file export capabilities to access e
 * Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
-This functionality is supported by the six beta cloud storage cards listed below: 
+This functionality is supported by the beta cloud storage cards listed below: 
 
 * [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
 * [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) 
 * [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
+
+<!--
+
+Commenting out the three net new cloud storage destinations
+
 * [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
 * [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
 
+-->
+
 ![Image of the two Amazon S3 destination cards in a side-by-side view.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
-While these destinations were offered initially as a beta, Adobe is now moving all Real-Time CDP customers to the new cloud storage destinations. For customers who were already using Amazon S3, Azure Blob, or SFTP, this means that existing dataflows will be migrated to the new cards. Read on for more information about the specific changes as part of the migration.
+While these destinations with enhanced functionality were offered initially as a beta, Adobe is now moving all Real-Time CDP customers to the new cloud storage destinations. For customers who were already using Amazon S3, Azure Blob, or SFTP, this means that existing dataflows will be migrated to the new cards. Read on for more information about the specific changes as part of the migration.
 
 ## Who this page applies to {#who-this-applies-to}
 
-If you are already using the Flow Service API to export profiles to the Amazon S3, Azure Blob, or SFTP cloud storage destinations then this API migration guide applies to you. 
+If you are already using the Flow Service API to export profiles to the Amazon S3, Azure Blob, or SFTP cloud storage destinations, then this API migration guide applies to you. 
 
-If you have scripts running in your Amazon S3, Azure Blob, or SFTP cloud storage locations on top of the exported files from Experience Platform, be aware that some parameters are changing with regards to the connection and flow specs or the new cards, as well as with regard to the mapping step.
+If you have scripts running in your Amazon S3, Azure Blob, or SFTP cloud storage locations on top of the exported files from Experience Platform, be aware that some parameters are changing with regards to the connection and flow specs of the new cards, as well as with regard to the mapping step.
 
 For example, if you were using a script to filter destination dataflows to the Amazon S3 destination, based on the connection spec of the Amazon S3 destination, be aware that the connection spec will change so you will need to update your filters. 
 
@@ -45,7 +52,7 @@ This section includes the relevant API tutorial and reference documentation for 
 * [New API tutorial to export data to cloud storage destinations](https://experienceleague-review.corp.adobe.com/docs/experience-platform/destinations/api/activate-data-file-based-destinations.html)
 * [Destinations API reference documentation](https://developer.adobe.com/experience-platform-apis/references/destinations/) 
 
-### Summary of backwards-incompatible changes
+## Summary of backwards-incompatible changes
 
 With the migration to the new destinations, all your dataflows will now be assigned new target connections and target base connections. The profile mapping step also changes. Backwards-incompatible changes are summarized in the sections below for each destination.
 
@@ -59,6 +66,76 @@ The breaking changes for the API users are an updated connection spec and flow s
 |---------|----------|---------|
 | Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 269ba276-16fc-47db-92b0-c1049a3c131f |
 | Connection spec | 4890fc95-5a1f-4983-94bb-e060c08e3f81 | 4fce964d-3f37-408f-9778-e597338a21ee |
+
+View the complete legacy and new connection and flow specs for [!DNL Amazon S3] in the tabs below
+
+>[!BEGINTABS]
+
+>[!TAB Legacy connection and flow specs]
+
+**Request** 
+
++++View legacy [!DNL connection spec] for [!DNL Amazon S3]
+
+```json
+curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
+--header 'accept: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
++++
+
++++View legacy [!DNL flow spec] for [!DNL Amazon S3]
+
+```json
+{
+    "items": [
+        {
+            "id": "4fce964d-3f37-408f-9778-e597338a21ee",
+            "name": "Amazon S3",
+            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+            "version": "1.0",
+//...
+```
+
++++
+
+>[!TAB New connection and flow specs]
+
+**Request** 
+
++++View new [!DNL connection spec] for [!DNL Amazon S3]
+
+```json
+curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
+--header 'accept: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
++++
+
++++View new [!DNL flow spec] for [!DNL Amazon S3]
+
+```json
+{
+    "items": [
+        {
+            "id": "4fce964d-3f37-408f-9778-e597338a21ee",
+            "name": "Amazon S3",
+            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+            "version": "1.0",
+//...
+```
+
++++
+
+>[!ENDTABS]
 
 ### Backwards-incompatible changes to Azure Blob destination
 
@@ -78,12 +155,166 @@ The breaking changes for the API users are an updated connection spec and flow s
 | Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 354d6aad-4754-46e4-a576-1b384561c440 |
 | Connection spec | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
 
+Note that when you create a .... connection, the port parameter is not required anymore and the host param 
+The port param and host param 
+
 ### Backwards-incompatible changes common to Amazon S3, Azure Blob, and SFTP destinations
 
 The profile selector step in all three destinations is replaced by a mapping step which allows you to rename the columns in your exported files. See the side-by-side image below with the old attribute selector step on the left and the new mapping step in the right.
 
 ![Migration guide overview image](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 
+Transformation parameters old and new examples. Notice how the `profileSelectors` object in the legacy examples is replaced by the new `profileMapping` object. 
+
+Find complete information about setting up the `profileMapping` object in the API tutorial to export data to cloud storage destinations. (ADD LINK)
+
+>[!BEGINTABS]
+
+>[!TAB Old transformation parameters]
+
++++View an example of old transformation parameters
+
+```json
+
+{
+  "profileSelectors": {
+    "selectors": [
+      {
+        "type": "JSON_PATH",
+        "value": {
+          "path": "CORE",
+          "operator": "EXISTS",
+          "mapping": {
+            "sourceType": "text/x.schema-path",
+            "source": "CORE",
+            "destination": "CORE",
+            "identity": false,
+            "primaryIdentity": false,
+            "functionVersion": 0,
+            "sourceAttribute": "CORE",
+            "destinationXdmPath": "CORE"
+          },
+          "identity": {
+            "namespace": "CORE"
+          }
+        }
+      },
+      ...
+      {
+        "type": "JSON_PATH",
+        "value": {
+          "path": "segmentMembership.status",
+          "operator": "EXISTS",
+          "mapping": {
+            "sourceType": "text/x.schema-path",
+            "source": "segmentMembership.status",
+            "destination": "segmentMembership.status",
+            "identity": false,
+            "primaryIdentity": false,
+            "functionVersion": 0,
+            "sourceAttribute": "segmentMembership.status",
+            "destinationXdmPath": "segmentMembership.status"
+          }
+        }
+      }
+    ],
+    "mandatoryFields": [
+      "CORE",
+      "person.name.lastName",
+      "personalEmail.address"
+    ],
+    "primaryFields": [
+      {
+        "identityNamespace": "CORE",
+        "fieldType": "IDENTITY"
+      }
+    ]
+  },
+  "segmentSelectors": {
+    "selectors": [
+      {
+        "type": "PLATFORM_SEGMENT",
+        "value": {
+          "id": "d74c68c9-a1f9-44bc-9685-95f0f5ece705",
+          "name": "0414 BugBasheditrename",
+          "description": "",
+          "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+          "exportMode": "DAILY_FULL_EXPORT",
+          "schedule": {
+            "frequency": "DAILY",
+            "triggerType": "SCHEDULED",
+            "startDate": "2022-06-02",
+            "endDate": "2022-06-30",
+            "startTime": "19:00"
+          },
+          "createTime": "1654195179",
+          "updateTime": "1669962057"
+        }
+      },
+      ...
+    ]
+  }
+}
+
+```
+
++++
+
++++View an example of transformation parameters after the migration
+
+```json
+
+{
+  "mandatoryFields": [
+    "CORE",
+    "person.name.lastName",
+    "personalEmail.address"
+  ],
+  "primaryFields": [
+    {
+      "identityNamespace": "CORE",
+      "fieldType": "IDENTITY"
+    }
+  ],
+  "segmentSelectors": {
+    "selectors": [
+      {
+        "type": "PLATFORM_SEGMENT",
+        "value": {
+          "id": "d74c68c9-a1f9-44bc-9685-95f0f5ece705",
+          "name": "0414 BugBasheditrename",
+          "description": "",
+          "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+          "exportMode": "DAILY_FULL_EXPORT",
+          "schedule": {
+            "frequency": "DAILY",
+            "triggerType": "SCHEDULED",
+            "startDate": "2022-06-02",
+            "endDate": "2022-06-30",
+            "startTime": "19:00"
+          },
+          "createTime": "1654195179",
+          "updateTime": "1669962057"
+        }
+      },
+      ...
+    ]
+  },
+  "identityMapping": {
+    "mappings": []
+  },
+  "profileMapping": {
+    "mappingId": "40dfd952fe09498ba65145c7a5de3e07",
+    "mappingVersion": 0
+  },
+  "attributeMapping": {}
+}
+
+```
+
++++
+
+>[!ENDTABS]
 
 
 ## Migration steps
@@ -93,6 +324,8 @@ TODO: Briefly list out migration steps (if documenting these publicly is desired
 ## Action items
 
 Prepare to update your scripts. Your Adobe account team will reach out with further information about when your dataflows will be migrated. 
+
+Add best practices and tips about optimizing your script to look for a flag so that you don't miss any data. 
 
 ## Next steps {#next-steps}
 
