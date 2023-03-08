@@ -36,7 +36,7 @@ The following request extracts keywords from a document based on the input param
 
 See the table below the example payload for more information on the input parameters shown.
 
-This [sample pdf](../pdf%20files/simple-text.pdf) file was used in the example shown in this document.
+This [sample pdf](../pdf-files/simple-text.pdf) file was used in the example shown in this document.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
