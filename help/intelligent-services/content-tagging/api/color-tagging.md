@@ -79,8 +79,8 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `resize_image` | Whether to resize the input image or not. By default the images are resized to 320*320 pixels before color tagging is performed. For debugging purposes we can allow the code to run on full-image as well, by setting this to False. | No |
 | `enable_mask` | Enables/Disables color tagging within mask. | No |
 
-| Name | Data Type | Required | Default | Values | Description
-| --- | --- | --- | --- | --- | --- |
+| Name | Data Type | Required | Default | Values | Description |
+| -----| --------- | -------- | ------- | ------ | ----------- |
 | `repo:path` | string | - | - | - | Presigned url of the document for which key phrases are to be extracted. |
 | `sensei:repoType` | string | - | - | HTTPS | Type of repo where the image is being stored at. |
 | `sensei:multipart_field_name` | string | - | - | - | Use this when passing image file as a multipart argument instead of using presigned urls. |

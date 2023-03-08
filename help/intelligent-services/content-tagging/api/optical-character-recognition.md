@@ -204,8 +204,8 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `min_probability` | What is the minimum probability for the recognized words? Only the words that are extracted from the image have a greater probability than min_probability are returned by the service. The default value is set at 0.2. | No |
 | `min_relevance` | What is the minimum relevance for the recognized words? Only the words that are extracted from the image have greater relevance than min_relevance are returned by the service. The default value is set at 0.01. The relevance is computed as the fraction of the area of the extracted text’s bounding box in comparison to the full image. 0.01 would translate to a text occupying at least 1% of the image. | No |
 
-| Name | Data Type | Required | Default | Values | Description
-| --- | --- | --- | --- | --- | --- |
+| Name | Data Type | Required | Default | Values | Description |
+| -----| --------- | -------- | ------- | ------ | ----------- |
 | `repo:path` | string | - | - | - | Presigned url of the image for which text needs to be extracted. |
 | `sensei:repoType` | string | - | - | HTTPS | Type of repo where the image is being stored at. |
 | `sensei:multipart_field_name` | string | - | - | - | Use this when passing the image as a multipart argument instead of using presigned urls. |

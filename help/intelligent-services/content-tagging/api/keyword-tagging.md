@@ -90,8 +90,8 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `last_semantic_unit_type` | Return only semantic units upto the given level in the hierarchical response. “key_phrase” returns only key phrases, “linked_entity” returns only key phrases and their corresponding linked entities, and “concept” returns key phrases, linked entities and concepts. | No |
 | `entity_types` | Types of entities to be returned as key phrases.| No |
 
-| Name | Data Type | Required | Default | Values | Description
-| --- | --- | --- | --- | --- | --- |
+| Name | Data Type | Required | Default | Values | Description |
+| -----| --------- | -------- | ------- | ------ | ----------- |
 | `repo:path` | string | - | - | - | Presigned url of the document for which key phrases are to be extracted. |
 | `sensei:repoType` | string | - | - | HTTPS | Type of repo where the document is being stored at. |
 | `sensei:multipart_field_name` | string | - | - | - | Use this when passing the document as a multipart argument instead of using presigned urls. |
