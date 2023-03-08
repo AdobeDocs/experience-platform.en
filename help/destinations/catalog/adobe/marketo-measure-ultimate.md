@@ -78,6 +78,4 @@ To validate a successful dataset export, you can check that your dataset has suc
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
 
-<!--## Additional resources {#additional-resources}-->
-
 
