@@ -40,10 +40,10 @@ When creating your own schema configuration, you can use the parameters describe
 |Parameter | Type | Required/Optional |Description|
 |---------|----------|------|---|
 |`profileFields` | Array | | When you add predefined profile fields, users have the option to map Platform attributes to predefined attributes in your destination platform. |
-|`useCustomerSchemaForAttributeMapping`|Boolean|||
+|`useCustomerSchemaForAttributeMapping`|Boolean|Optional. Default value is false. |true: only use the source column. False: map source-target. If true, profileFields is not applicable.|
 |`profileRequired` | Boolean | | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination platform. |
 |`segmentRequired` | Boolean | | This parameter should always be set to `true`. |
-|`identityRequired` | Boolean | | Use `true` if users should be able to map identity namespaces from Experience Platform to your schema. |
+|`identityRequired` | Boolean | Required.  | Use `true` if users should be able to map identity namespaces from Experience Platform to your schema. |
 |`destinationServerId` | String | Required if using dynamic partner schemas. | The `instanceId` of the [destination server configuration](../../authoring-api/destination-server/create-destination-server.md) that you created for your dynamic partner schema. This destination server includes the HTTP endpoint which Experience Platform will call to retrieve the dynamic schema used to populate target fields. |
 |`authenticationRule` | String | |Indicates how [!DNL Platform] customers connect to your destination. Accepted values are `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` if Platform customers log into your system via any of the following methods: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Use `PLATFORM_AUTHENTICATION` if there is a global authentication system between Adobe and your destination and the [!DNL Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must [create a credentials object](../../credentials-api/create-credential-configuration.md) using the Credentials API. </li><li>Use `NONE` if no authentication is required to send data to your destination platform. </li></ul> |
 | `value` | String | | The name of the schema to be displayed in the Experience Platform user interface, in the mapping step. |
@@ -84,7 +84,7 @@ You can create static, hardcoded schema fields or you can specify a dynamic sche
 }
 ```
 
-## Dynamic schema configuration in the mapping step {#dynamic-schema-configuration}
+## Dynamic schema configuration {#dynamic-schema-configuration}
 
 Use the parameters in  `dynamicSchemaConfig` to dynamically retrieve your own schema that Platform profile attributes and/or identities can be mapped to.
 
@@ -169,6 +169,14 @@ The example below shows a required destination mapping. If only the destination 
     ] 
 }
 ```
+
+
+"text/x.schema-path" : 
+"text/x.aep-xl"
+"text/plain". Only supported source is metadata.segment.alias.
+
+
+
 
 As a result, the **[!UICONTROL Target field]** section in the Platform UI is greyed out, while the **[!UICONTROL Source field]** section is active and users can interact with it.
 

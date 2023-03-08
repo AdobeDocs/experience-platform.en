@@ -3,7 +3,7 @@ description: Learn how to configure the segment mapping settings for destination
 title: Segment mapping configuration
 ---
 
-# Segment mapping configuration
+# Audience metadata configuration
 
 <!-- section was renamed to audienceMetadataConfig, per Rafaat -->
 
