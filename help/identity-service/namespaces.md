@@ -75,9 +75,9 @@ The following standard namespaces are provided for use by all organizations with
 ### View identity namespaces {#view-identity-namespaces}
 
 >[!CONTEXTUALHELP]
->id="platform_identity_view_integration_identites"
+>id="platform_identity_view_integration_identities"
 >title="View integration identities"
->abstract="Integration identities are namespaces that are used to connect with other systems and are not used in identity resolution or to stitch identities. <br> These identities are hidden by default. Use the toggle to view integration namespaces"
+>abstract="Integration identities are namespaces that are used to connect with other systems and are not used in identity resolution or to stitch identities. <br> These identities are hidden by default. Use the toggle to view integration namespaces."
 
 To view identity namespaces in the UI, select **[!UICONTROL Identities]** in the left navigation and then select **[!UICONTROL Browse]**.
 
