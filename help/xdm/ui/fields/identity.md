@@ -22,7 +22,7 @@ Identity fields are a crucial component in how customer identity graphs are cons
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identityField_primaryIdentityRestriction"
 >title="Restrictions to primary identity"
->abstract="This schema employs a field group intended for use in a specific source connection. As this field group is included, the schema's identityMap field is automatically set as the primary identity as required by the connection." 
+>abstract="This schema uses a field group intended for use in a specific source connection. The connection requires identityMap to be used as primary identity and has set it automatically." 
 
 When [defining a new field](./overview.md#define) in the UI, you can set it as an identity field by selecting the **[!UICONTROL Identity]** checkbox in the right rail. 
 
