@@ -1,4 +1,4 @@
-# Event Transactions view in Assurance
+# Event Transactions view
 
 The Event Transactions view in Adobe Experience Platform Assurance allows you to validate and debug your Edge Network client implementation, and see the upstream validation results in near real time.
 
@@ -55,7 +55,6 @@ You can check the currently used datastream identifier by selecting the info too
 
 ![Show the datastream ID](./images/event-transactions/show-datastream-id.png)
 
-<InlineAlert variant="info" slots="text"/>
-
-When multiple clients connect to the same Assurance session and different datastream IDs are used, you will see all of them displayed here.
-However, this doesn't mean that your current implementation is using multiple datastreams. Only the current datastream ID set in the tag (mobile property) used by the app is used for processing new events from that client. When testing more complicated use-cases with different configuration settings and multiple clients connected, it may be helpful to use separate Assurance sessions to simplify the validation process.
+>[!INFO]
+>
+>When multiple clients connect to the same Assurance session and different datastream IDs are used, you will see all of them displayed here. However, this doesn't mean that your current implementation is using multiple datastreams. Only the current datastream ID set in the tag (mobile property) used by the app is used for processing new events from that client. When testing more complicated use-cases with different configuration settings and multiple clients connected, it may be helpful to use separate Assurance sessions to simplify the validation process.

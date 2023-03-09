@@ -22,9 +22,9 @@ You may change SDK log levels using the [`setLogLevel`](../mobile-core/api-refer
     * [Defining a Custom URL Scheme for Your App](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app)
     * [Supporting Universal Links in Your App](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/supporting_universal_links_in_your_app)
 
-<InlineAlert variant="info" slots="text"/>
-
-For Android, the `startSession` API does not need to be explicitly called. For iOS, use the API as described in [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md#implement-aep-assurance-session-start-apis-ios-only).
+>[!INFO]
+>
+>For Android, the `startSession` API does not need to be explicitly called. For iOS, use the API as described in [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md#implement-aep-assurance-session-start-apis-ios-only).
 
 ### Authentication overlay appears, but app fails to connect
 
@@ -48,10 +48,10 @@ Please upgrade the Adobe Analytics and Assurance SDK extensions to the latest ve
 
 | AEP Assurance Version | Mobile Core Version | Install Instruction |
 | --------------------- | ------------------- | ------------------- |
-| react-native-aepassurance v2.x.x | [react-native-acpcore](https://www.npmjs.com/package/@adobe/react-native-acpcore) | npm install @adobe/react-native-aepassurance@^2.0.0 <br/>npm install @adobe/react-native-acpcore |
-| react-native-aepassurance v3.x.x | [react-native-aepcore](https://www.npmjs.com/package/@adobe/react-native-aepcore) | npm install @adobe/react-native-aepassurance@^3.0.0 <br/>npm install @adobe/react-native-aepcore |
+| react-native-aepassurance v2.x.x | [react-native-acpcore](https://www.npmjs.com/package/@adobe/react-native-acpcore) | `npm install @adobe/react-native-aepassurance@^2.0.0` <br/>`npm install @adobe/react-native-acpcore` |
+| react-native-aepassurance v3.x.x | [react-native-aepcore](https://www.npmjs.com/package/@adobe/react-native-aepcore) | `npm install @adobe/react-native-aepassurance@^3.0.0` <br/>`npm install @adobe/react-native-aepcore` |
 
-If you are using `react-native-acpcore` with AEPAssurance, the React Native application can fail to build with one of the following error messages:
+If you are using `react-native-acpcore` with Assurance, the React Native application can fail to build with one of the following error messages:
 
 ```
 RCTAEPAssurance:  Fatal error: Module 'AEPAssurance' not found
@@ -67,7 +67,7 @@ AppDelegate: AEPAssurance.h file not found
 
 If that occurs, please downgrade your `react-native-aepassurance` using the following npm command:
 
-```
+```shell
 npm install @adobe/react-native-aepassurance@^2.0.0
 ```
 

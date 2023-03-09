@@ -10,9 +10,13 @@ With the integration between Streaming Media Analytics and Adobe Experience Plat
 
 Once data is processed in Analytics, post-processed status and data, such as media time spent and total pause duration, are also available in the event detail view.
 
+## Getting started
+
+Before continuing, please ensure you have 
+
 ## Use Assurance with Adobe Analytics for Streaming Media
 
-After you have connected and [set up](../set-up.md) your app for Adobe Analytics, you are ready to configure it for Streaming Media Analytics. At the bottom of the left panel, click **Configure** to add the Media Analytics Events view and **Save** it.
+After you have connected and set up your app for Adobe Analytics, you are ready to configure it for Streaming Media Analytics. At the bottom of the left panel, select **Configure** to add the Media Analytics Events view and **Save** it.
 
 ![Configure](./images/adobe-analytics-streaming-media/configure.png)
 
@@ -28,9 +32,9 @@ For a more succinct view of API calls, you may also hide the playhead update eve
 
 ![Hide Playhead](./images/adobe-analytics-streaming-media/hide-playhead.png)
 
-<InlineAlert variant="info" slots="text"/>
-
-Viewing post-processed media analytics data requires the use of SDK versions: Android Media 2.1.2 and iOS AEPMedia 3.0.1 (or above)
+>[!INFO]
+>
+>Viewing post-processed media analytics data requires the use of SDK versions: Android Media 2.1.2 and iOS AEPMedia 3.0.1 (or above)
 
 To view post-processed data, find the session start event and validate in the status column that the session was completed. If completed, click on the event to view a media session summary in the event detail view. For further details, scroll down to find the post-processed details.
 

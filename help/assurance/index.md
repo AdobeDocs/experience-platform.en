@@ -20,7 +20,7 @@ Starting on October 15th, 2022, Assurance is generally available to all Adobe Ex
 
 ### What's changing?
 
-On October 15th - access to Assurance will be managed through Admin Console. Follow [this link](./get-access.md) to ensure continued, uninterrupted access.
+On October 15th - access to Assurance will be managed through Admin Console. Please read the [getting access guide](./get-access.md) to ensure you continue to have uninterrupted access.
 
 No other changes or disruption are expected to existing Assurance integrations, sessions, and events. Assurance may be continued to be accessed via [https://griffon.adobe.com](https://griffon.adobe.com) **or** you may use (and bookmark) [https://experience.adobe.com/assurance](https://experience.adobe.com/assurance).
 
@@ -66,20 +66,19 @@ The Adobe Analytics &gt; Media Analytics Events view shows events for your audio
 
 The Location Services view is an on-device view that shows the user location entry and exit events for easy validation. This handy view provides a convenient interface to view location specific data points for inspection on the client for in-context debugging.
 
-## Is Assurance Secure?
+## Is Assurance secure?
 
 Assurance has the following security measures in place:
 
 * Both Assurance and the Assurance Web UI have a secure, PIN-based handshake for a connection. The user has to explicitly create a handshake, which prevents "accidental" Assurance connections to be created by an end-user.
-* Only connections between AEP Assurance and the Assurance web UI belonging to the same Adobe Experience Cloud Organization ID are supported.
+* Only connections between Assurance and the Assurance web UI belonging to the same Adobe Experience Cloud Organization ID are supported.
 * Adobe Experience Platform Mobile SDKs events are transported over HTTPS.
 * Assurance and Adobe Experience Platform Mobile SDKs use TLS 1.2
 * Assurance sessions are deleted after 30 days.
 * Assurance session data is encrypted at rest, following storage best practices.
 
-## Getting Started
+## Getting started
 
-To get started with Assurance, see the following:
+To set up Assurance, you'll need to first install the Assurance extension in your application. To learn how to do this, please read the tutorial on [implementing the Assurance extension](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
 
-* [Set up Assurance](./set-up.md)
-* [Using Assurance](./tutorials/index.md)
+After adding Assurance to your app, you can create an Assurance session that can be connected to your device. To learn how to use Assurance, please read the [guide on using Assurance](./tutorials/index.md).

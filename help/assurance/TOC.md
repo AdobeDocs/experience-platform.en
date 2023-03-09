@@ -9,16 +9,18 @@ feature: Assurance
 # Adobe Experience Platform Assurance {#assurance}
 
 - [Assurance overview](./home.md)
-- [Get access](./get-access.md)
-- [Set up](./set-up.md)
-- Tutorials {#tutorials}
+- [User access](./user-access.md)
+- Views {#view}
   - [Event transactions](./tutorials/event-transactions.md)
-  - [Adobe Analytics](./tutorials/adobe-analytics.md)
-  - [Adobe Analytics Streaming Media](./tutorials/adobe-analytics-streaming-media.md)
   - [In-app Messaging](./tutorials/in-app-messaging.md)
   - [On Device Views](./tutorials/on-device-views.md)
-  - [Places Service](./tutorials/on-device-views.md)
+  - [Places Service](./tutorials/places-service.md)
   - [Push Debug View](./tutorials/push-debug-view.md)
   - [Validation Summary](./tutorials/validation-summary.md)
   - [Versions](./tutorials/versions.md)
+- Tutorials {#tutorials}
+  - [Implement Assurance](./tutorials/implement-assurance.md)
+  - [Use Assurance](./tutorials/using-assurance.md)
+  - [Adobe Analytics](./tutorials/adobe-analytics.md)
+  - [Adobe Analytics Streaming Media](./tutorials/adobe-analytics-streaming-media.md)
 - [Troubleshooting](./troubleshooting.md)
