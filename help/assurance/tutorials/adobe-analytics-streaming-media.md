@@ -12,7 +12,12 @@ Once data is processed in Analytics, post-processed status and data, such as med
 
 ## Getting started
 
-Before continuing, please ensure you have 
+Before continuing, please ensure you have the following services:
+
+- The [Adobe Experience Platform Data Collection UI](https://experience.adobe.com/#/data-collection/)
+- [Adobe Experience Platform Assurance](https://experience.adobe.com/assurance)
+
+To learn how to install Assurance in your application, please read the [implementing Assurance guide](./implement-assurance.md).
 
 ## Use Assurance with Adobe Analytics for Streaming Media
 

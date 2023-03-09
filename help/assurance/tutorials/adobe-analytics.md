@@ -4,6 +4,15 @@ The Adobe Experience Platform Assurance integration with Adobe Analytics provide
 
 ![](./images/adobe-analytics/overview.png)
 
+## Getting started
+
+Before continuing, please ensure you have the following services:
+
+- The [Adobe Experience Platform Data Collection UI](https://experience.adobe.com/#/data-collection/)
+- [Adobe Experience Platform Assurance](https://experience.adobe.com/assurance)
+
+To learn how to install Assurance in your application, please read the [implementing Assurance guide](./implement-assurance.md).
+
 ## Post-processed status
 
 After the SDK makes a network request with Adobe Analytics, the status will tell you if Assurance was able to retrieve the post-processing information for the Adobe Analytics request.

@@ -47,4 +47,4 @@ IMAGE
 
 ## Next steps
 
-Now that you've installed the Assurance extension in your mobile property, you can start using Assurance within your applications. To learn how to add the Assurance extension to your application, please read the [Adobe Experience Platform Assurance extension overview](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
+Now that you've installed the Assurance extension in your mobile property, you can start using Assurance within your applications. To learn how to add the Assurance extension to your application, please read the [Adobe Experience Platform Assurance extension overview](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app). To learn how to use Assurance, please read the [using Assurance guide](./using-assurance.md).
