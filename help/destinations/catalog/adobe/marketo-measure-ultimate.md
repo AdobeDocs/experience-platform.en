@@ -54,21 +54,23 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 
+![The Connect to destination workflow for the Marketo Measure destination.](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
+
 ### Enable alerts {#enable-alerts}
 
 You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Export datasets to this destination {#export-datasets}
 
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [(Beta) Export datasets](/help/destinations/ui/export-datasets.md) for extensive instructions on exporting datasets to this destination.
+Read the [(Beta) Export datasets](/help/destinations/ui/export-datasets.md) tutorial for extensive instructions on exporting datasets to this destination.
 
-## Exported data / Validate data export {#exported-data}
+## Validate data export {#exported-data}
 
 To validate a successful dataset export, you can check that your dataset has successfully made it through to your [Snowflake data warehouse](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=en). 
 
@@ -76,5 +78,4 @@ To validate a successful dataset export, you can check that your dataset has suc
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
 
-## Additional resources {#additional-resources}
 
