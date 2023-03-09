@@ -7,15 +7,15 @@ exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 ---
 # Keyword tagging
 
-The keyword tagging service, when given a text document, automatically extracts keywords or keyphrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword tagging algorithms are used.
+When given a text document, the keyword tagging service automatically extracts keywords or key phrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword tagging algorithms are used.
 
-The named entities recognized by [!DNL Content Tagging AI] are listed in the following table:
+The following table lists the named entities that [!DNL Content Tagging AI] has identified:
 
 | Entity name | Description |
 | --- | --- |
-| PERSON | People, including fictional. |
+| PERSON | People, including fictional ones. |
 | GPE | Countries, cities, and states. |
-| LOC | Non-GPE locations, mountain ranges, bodies of water. |
+| LOC | Non-GPE locations, mountain ranges, and bodies of water. |
 | FAC | Buildings, airports, highways, bridges, etc. |
 | ORG | Companies, agencies, institutions, etc. |
 | PRODUCT | Objects, vehicles, foods, etc. (Not services.) |
@@ -83,19 +83,19 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | Property | Description | Mandatory |
 | --- | --- | --- |
 | `application-id` | The ID of the created application. | Yes |
-| `top_n` | Number of results to be returned. 0, to return all results. When used in conjunction with threshold, the number of results returned will be lesser of either limits. | No |
-| `min_relevance` | Threshold of score below which the results need to be returned. Exclude parameter to return all results. | No |
+| `top_n` | Number of results to be returned. 0, to return all results. When used in conjunction with threshold, the number of results returned will be less than either limit. | No |
+| `min_relevance` | Score threshold below which results must be returned. Exclude the parameter to return all results. | No |
 | `min_key_phrase_length` | Minimum number of words required in the key phrases. | No |
-| `max_key_phrase_length` | TMaximum number of words required in the key phrases. | No |
-| `last_semantic_unit_type` | Return only semantic units upto the given level in the hierarchical response. “key_phrase” returns only key phrases, “linked_entity” returns only key phrases and their corresponding linked entities, and “concept” returns key phrases, linked entities and concepts. | No |
+| `max_key_phrase_length` | Maximum number of words required in the key phrases. | No |
+| `last_semantic_unit_type` | Return only semantic units up to the given level in the hierarchical response. “key_phrase” returns only key phrases, “linked_entity” returns only key phrases and their corresponding linked entities, and “concept” returns key phrases, linked entities and concepts. | No |
 | `entity_types` | Types of entities to be returned as key phrases.| No |
 
 | Name | Data Type | Required | Default | Values | Description |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | Presigned url of the document for which key phrases are to be extracted. |
-| `sensei:repoType` | string | - | - | HTTPS | Type of repo where the document is being stored at. |
+| `repo:path` | string | - | - | - | Presigned url of the document from which key phrases are to be extracted. |
+| `sensei:repoType` | string | - | - | HTTPS | Type of repo where the document is being stored. |
 | `sensei:multipart_field_name` | string | - | - | - | Use this when passing the document as a multipart argument instead of using presigned urls. |
-| `dc:format` | string | Yes | - | "text/plain",<br>"application/pdf",<br>"text/pdf",<br>"text/html",<br>"text/rtf",<br>"application/rtf",<br>"application/msword",<br>"application/vnd.openxmlformats-officedocument.wordprocessingml.document",<br>"application/mspowerpoint",<br>"application/vnd.ms-powerpoint",<br>"application/vnd.openxmlformats-officedocument.presentationml.presentation" | Document encoding, checked against allowed input encoding types before being processed.|
+| `dc:format` | string | Yes | - | "text/plain",<br>"application/pdf",<br>"text/pdf",<br>"text/html",<br>"text/rtf",<br>"application/rtf",<br>"application/msword",<br>"application/vnd.openxmlformats-officedocument.wordprocessingml.document",<br>"application/mspowerpoint",<br>"application/vnd.ms-powerpoint",<br>"application/vnd.openxmlformats-officedocument.presentationml.presentation" | Document encoding is checked against allowed input encoding types before being processed.|
 
 **Response**
 

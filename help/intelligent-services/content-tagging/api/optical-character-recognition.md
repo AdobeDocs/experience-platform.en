@@ -2,14 +2,14 @@
 keywords: OCR;text presence;optical character recognition
 solution: Experience Platform
 title: Text Presence and Optical Character Recognition
-description: In the Content Tagging API, the Text Presence / Optical Character Recognition (OCR) service can indicate if text is present in a given image. If text is present, OCR can return the text.
+description: In the Content Tagging API, the Text Presence/Optical Character Recognition (OCR) service can indicate if text is present in a given image. If text is present, OCR can return the text.
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
 ---
 # Text Presence and Optical Character Recognition
 
-The Text Presence / Optical Character Recognition (OCR) service, when given an image, can indicate if text is present in the image. If text is present, OCR can return the text.
+The Text Presence/Optical Character Recognition (OCR) service, when given an image, can indicate if text is present in the image. If text is present, OCR can return the text.
 
-This following image was used in the example request shown in this document:
+The following image was used in the example request shown in this document:
 
 ![Sample Image](../images/sample_image.png)
 
@@ -73,7 +73,7 @@ A successful response returns the text that was detected in the `tags` list for 
 
 [result0, result1, ...]: list of responses for each input document. Each result is a dict with keys:
 
-1. request_element_id: corresponding index to the input file for this response, 0 for the first image in the request’s documents list, 1 for the next one and so on.
+1. request_element_id: corresponding index to the input file for this response, 0 for the first image in the request’s documents list, 1 for the next one, and so on.
 2. tags: list of dictionaries, each dictionary has two keys : text, which is a recognized word from the image, and relevance, which is computed as the fraction of the area of the extracted text’s bounding box in comparison to the full image. 0.01 would translate to a text occupying at least 1% of the image.
 3.  is_text_present: 0 or 1 depending on if text is present in the image. If tags is 0, the list is empty.
 

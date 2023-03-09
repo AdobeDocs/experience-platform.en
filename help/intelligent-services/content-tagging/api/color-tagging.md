@@ -31,7 +31,7 @@ POST /services/v2/predict
 
 The following example request uses the full-image method for color tagging.
 
-The following request extracts colors from a image based on the input parameters provided in the payload. See the table below the example payload for more information on the input parameters shown.
+The following request extracts colors from an image based on the input parameters provided in the payload. See the table below the example payload for more information on the input parameters shown.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -73,18 +73,18 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | Property | Description | Mandatory |
 | --- | --- | --- |
 | `application-id` | The ID of your created application. | Yes |
-| `documents` | A list of json elements with each item in the list representing one document. | Yes |
-| `top_n` | The number of results to be returned (cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
-| `min_coverage` | Threshold of coverage above which the results need to be returned. Exclude parameter to return all results. | No |
-| `resize_image` | Whether to resize the input image or not. By default the images are resized to 320*320 pixels before color tagging is performed. For debugging purposes we can allow the code to run on full-image as well, by setting this to False. | No |
+| `documents` | A list of JSON elements with each item in the list representing one document. | Yes |
+| `top_n` | The number of results to be returned (this cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
+| `min_coverage` | Threshold of coverage above which the results need to be returned. Exclude the parameter to return all results. | No |
+| `resize_image` | Indicates whether the input image is to be resized. By default the images are resized to 320*320 pixels before color tagging is performed. For debugging purposes we can allow the code to run on full-image as well, by setting this to False. | No |
 | `enable_mask` | Enables/Disables color tagging within mask. | No |
 
 | Name | Data Type | Required | Default | Values | Description |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | Presigned url of the document for which key phrases are to be extracted. |
-| `sensei:repoType` | string | - | - | HTTPS | Type of repo where the image is being stored at. |
-| `sensei:multipart_field_name` | string | - | - | - | Use this when passing image file as a multipart argument instead of using presigned urls. |
-| `dc:format` | string | Yes | - | “image/jpg”, “image/jpeg”, “image/png”, “image/tiff” | Image encoding, checked against allowed input encoding types before being processed. |
+| `repo:path` | string | - | - | - | Presigned url of the document from which key phrases are to be extracted. |
+| `sensei:repoType` | string | - | - | HTTPS | Type of repo where the image is being stored. |
+| `sensei:multipart_field_name` | string | - | - | - | Use this when passing an image file as a multipart argument instead of using presigned urls. |
+| `dc:format` | string | Yes | - | “image/jpg”, <br> “image/jpeg”, <br>“image/png”, <br>“image/tiff” | Image encoding is checked against allowed input encoding types before being processed. |
 
 **Response**
 
