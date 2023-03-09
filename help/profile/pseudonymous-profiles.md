@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;dataset;Dataset;time to live;ttl;time-to-live;pseudonymous;pseudonymous profiles;
+keywords: Experience Platform;home;popular topics;dataset;Dataset;time to live;ttl;time-to-live;pseudonymous;pseudonymous profiles;data expiry;expiry;
 solution: Experience Platform
 title: Pseudonymous Profile data expiration
-description: This document provides general guidance on configuring expiration times for Pseudonymous Profiles within an Adobe Experience Platform sandbox.
+description: This document provides general guidance on configuring data expiration for Pseudonymous Profiles within Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 ---
