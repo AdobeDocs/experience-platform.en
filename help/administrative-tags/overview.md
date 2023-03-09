@@ -2,8 +2,6 @@
 keywords: Experience Platform;home;popular topics;administrative tags;tags;
 title: Administrative Tags Overview
 description: This document provides information on administrative tags in Adobe Experience Platform
-hide: true
-hidefromtoc: true
 ---
 # Tags overview
 
