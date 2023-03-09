@@ -11,7 +11,7 @@ Content Tagging is a set of AI services that allow you to extract intelligent fe
 
 All brands strive to deliver a perfect customer experience. You're constantly trying to find better answers all aspects of your customer touchpoints.
 
-Content is an essential component of these experiences. To better answer marketing questions, you must understand content and your customers' interactions with it. With Content Tagging, you can learn what features of the content you provide resonates with your customers. Using these insights allows you to personalize experiences and boost KPIs.
+Content is an essential component of these experiences. To better answer marketing questions, you must understand content and your customers' interactions with it. With Content Tagging, you can learn which features of the content you provide resonate with your customers. Using these insights allows you to personalize experiences and boost KPIs.
 
 ## Content Tagging service functionalities
 
@@ -23,10 +23,6 @@ Images | - Color tagging <br> - Optical Character Recognition (OCR)|  - Accurate
 ## Understanding Content Tagging 
 
 The overall vision of Content Tagging is broken down into three steps to realize optimal customer engagement and maximize customer-driven KPIs. 
-
-<!-- >[!NOTE]
->
->For Beta, Content and Commerce AI is focusing on testing the foundation step in the journey (step 1). Steps 2 and 3 are expected to be documented in a subsequent release and are not expanded upon in the current documentation. -->
 
 **Step 1: Understanding the content**
 - Extract intelligent features and metadata.

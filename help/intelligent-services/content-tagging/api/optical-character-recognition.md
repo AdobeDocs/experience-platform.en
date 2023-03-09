@@ -74,8 +74,8 @@ A successful response returns the text that was detected in the `tags` list for 
 [result0, result1, ...]: list of responses for each input document. Each result is a dict with keys:
 
 1. request_element_id: corresponding index to the input file for this response, 0 for the first image in the request’s documents list, 1 for the next one and so on.
-2. tags: list of dictionaries, each dictionary has two keys : text which is a recognized word from the image and relevance which is computed as the fraction of the area of the extracted text’s bounding box in comparison to the full image. 0.01 would translate to a text occupying at least 1% of the image.
-3.  is_text_present: 0 or 1 depending on if text is present in the image. If 0, tags is an empty list.
+2. tags: list of dictionaries, each dictionary has two keys : text, which is a recognized word from the image, and relevance, which is computed as the fraction of the area of the extracted text’s bounding box in comparison to the full image. 0.01 would translate to a text occupying at least 1% of the image.
+3.  is_text_present: 0 or 1 depending on if text is present in the image. If tags is 0, the list is empty.
 
 ```json
 {
@@ -194,19 +194,19 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 | Property | Description | Mandatory |
 | --- | --- | --- |
-| `documents` | List of json elements with each item in the list representing one image Any parameters passed as part of this list, overrides the global parameter specified outside the list, for the corresponding list element. | Yes |
-| `sensei:multipart_field_name` | field_name to read input file path from. | Yes |
-| `repo:path` | presigned url to image asset. | Yes |
+| `documents` | List of JSON elements with each item in the list representing one image. Any parameters passed as part of this list, override the global parameter specified outside the list, for the corresponding list element. | Yes |
+| `sensei:multipart_field_name` | field_name to read the input file path from. | Yes |
+| `repo:path` | Presigned url to image asset. | Yes |
 | `sensei:repoType` | “HTTP” (for presigned-url). | No |
-| `dc:format` | Encoding format of input image.Only image formats like jpeg, jpg, png and tiff are allowed for image encoding. The dc:format is matched against allowed formats. | No |
+| `dc:format` | Encoded format of input image. Only image formats like jpeg, jpg, png and tiff are allowed for image encoding. The dc:format is matched against allowed formats. | No |
 | `correct_with_dictionary` | Whether to correct the words with an English dictionary? If this is not turned on, you could potentially have non-English words recognized. Default is True: turned on.) Note that when the dictionary is turned on, it is not necessary that you always get an English word. We try to correct it, but if it is not possible within a certain edit distance, we return the original word. | No |
-| `filter_with_dictionary` | Whether to filter the words to contain only the words from the English dictionary? If this is turned on, the returned words will always belong to the large English word list comprising 470k words. | No |
-| `min_probability` | What is the minimum probability for the recognized words? Only the words that are extracted from the image have a greater probability than min_probability are returned by the service. The default value is set at 0.2. | No |
-| `min_relevance` | What is the minimum relevance for the recognized words? Only the words that are extracted from the image have greater relevance than min_relevance are returned by the service. The default value is set at 0.01. The relevance is computed as the fraction of the area of the extracted text’s bounding box in comparison to the full image. 0.01 would translate to a text occupying at least 1% of the image. | No |
+| `filter_with_dictionary` | Whether to filter the words to contain only the words from the English dictionary? If this is turned on, the returned words will always belong to the large English , which comprises 470k words. | No |
+| `min_probability` | What is the minimum probability for the recognized words? Only the words that are extracted from the image and have a greater probability than min_probability are returned by the service. The default value is set at 0.2. | No |
+| `min_relevance` | What is the minimum relevance for the recognized words? Only the words that are extracted from the image and have greater relevance than min_relevance are returned by the service. The default value is set at 0.01. The relevance is computed as the fraction of the area of the extracted text’s bounding box in comparison to the full image. 0.01 would translate to a text occupying at least 1% of the image. | No |
 
 | Name | Data Type | Required | Default | Values | Description |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | Presigned url of the image for which text needs to be extracted. |
-| `sensei:repoType` | string | - | - | HTTPS | Type of repo where the image is being stored at. |
+| `repo:path` | string | - | - | - | Presigned url of the image from which text needs to be extracted. |
+| `sensei:repoType` | string | - | - | HTTPS | Type of repo where the image is being stored. |
 | `sensei:multipart_field_name` | string | - | - | - | Use this when passing the image as a multipart argument instead of using presigned urls. |
-| `dc:format` | string | Yes | - | “image/jpg”, <br>“image/jpeg”, <br>“image/png”, <br>“image/tiff” | Image encoding, checked against allowed input encoding types before being processed.|
+| `dc:format` | string | Yes | - | “image/jpg”, <br>“image/jpeg”, <br>“image/png”, <br>“image/tiff” | Image encoding is checked against allowed input encoding types before being processed.|
