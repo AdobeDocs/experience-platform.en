@@ -9,6 +9,26 @@ exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
+## March 9, 2023
+
+v3.4.1
+
+* Adds new web native delegate events:
+  * Keydown
+  * KeyUp
+* Adds the ability to test against many values ("Add Another" options) against the following delegates:
+  * Events
+    * Change
+  * Conditions
+    * Cookie
+    * Landing Page
+    * Query String Parameter
+    * Traffic Source
+    * Variable
+* Changes the events/EntersViewport delegate to use IntersectionObserver instead of manual detection of elements entering the viewport.
+* Removes code that was migrating DTM cookies to LocalStorage.
+* Logs a warning to the console when LocalStorage & SessionStorage APIs are unavailable.
+
 ## January 4, 2022
 
 v3.3.0
