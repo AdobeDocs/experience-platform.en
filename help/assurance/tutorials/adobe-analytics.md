@@ -34,15 +34,6 @@ Please note that in order to retrieve post-processing information, the logged-in
 
 For an Analytics track event, the detailed view contains the following valuable parts:
 
-* An originating SDK Analytics request event.
-* OOTB meta and context data from the request, such as report suite ID, SDK extension versions, OOTB context data, and so on.
-* Post-processed information on the Analytics event that contains the mapping of revars, evars, props, and so on.
-
-## Use Assurance with Adobe Analytics
-
-To get started, complete the following steps:
-
-1. [Set up Assurance](../set-up.md).
-2. To view your events, select the **Adobe Analytics** view.
-
-![](./images/adobe-analytics/using-assurance.png)
+- An originating SDK Analytics request event.
+- OOTB meta and context data from the request, such as report suite ID, SDK extension versions, OOTB context data, and so on.
+- Post-processed information on the Analytics event that contains the mapping of revars, evars, props, and so on.

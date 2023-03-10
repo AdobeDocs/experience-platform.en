@@ -2,11 +2,11 @@
 
 With the integration between Streaming Media Analytics and Adobe Experience Platform Assurance, you can now validate the Media Analytics implementation in your mobile app. Media Analytics views display what is tracked in the media session, such as:
 
-* Session start event that contains all content core, standard metadata, and custom metadata properties, as well as session end and session complete events.
-* Ad Break Start and Ad Start events with all ad properties attached, as well as Skip and Complete events for both.
-* Chapter Start with all properties attached, as well as Chapter Skip and Chapter Complete events.
-* All playback change events (play, pause, buffer, errors, bitrate change).
-* All player state change tracking events (start, end).
+- Session start event that contains all content core, standard metadata, and custom metadata properties, as well as session end and session complete events.
+- Ad Break Start and Ad Start events with all ad properties attached, as well as Skip and Complete events for both.
+- Chapter Start with all properties attached, as well as Chapter Skip and Chapter Complete events.
+- All playback change events (play, pause, buffer, errors, bitrate change).
+- All player state change tracking events (start, end).
 
 Once data is processed in Analytics, post-processed status and data, such as media time spent and total pause duration, are also available in the event detail view.
 
