@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;unified tags;tags;
-title: (Beta) Unified Tags Overview
+title: Unified Tags Overview (beta)
 description: This document provides information on unified tags in Adobe Experience Platform
 ---
-# (Beta) Unified tags overview
+# Unified tags overview (beta)
 
 >[!IMPORTANT]
 >
