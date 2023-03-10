@@ -30,4 +30,4 @@ If you'd like to release your extension with private availability using the API 
 
 Once you have completed the private release, you can ask Adobe to release it publicly.  This will make your extension available in the public catalog. Any data collection user can install your extension to any property.
 
-Please complete the [public release request form](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest) to begin the release process.
+Please complete the [public release request form](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest) to begin the release process.
