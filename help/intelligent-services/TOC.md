@@ -25,13 +25,13 @@ user-guide-description: Use intelligent AI services to generate scores, discover
     - [Governance policies](attribution-ai/aai-data-governance/governance-policies.md)
   - [Analyze scores using Query Service](attribution-ai/aai-query-service.md)
   - [Error troubleshooting](attribution-ai/troubleshooting.md)
-- Content Tagging {#content-tagging}
-  - [Overview](content-tagging/overview.md)
-  - [Getting started](content-tagging/getting-started.md)
+- Content Tagging {#content-commerce-ai}
+  - [Overview](content-commerce-ai/overview.md)
+  - [Getting started](content-commerce-ai/getting-started.md)
   - Content Tagging API{#api}
-    - [Color tagging](content-tagging/api/color-tagging.md)
-    - [Keyword tagging](content-tagging/api/keyword-tagging.md)
-    - [Text presence and optical character recognition](content-tagging/api/optical-character-recognition.md)
+    - [Color tagging](content-commerce-ai/api/color-tagging.md)
+    - [Keyword tagging](content-commerce-ai/api/keyword-tagging.md)
+    - [Text presence and optical character recognition](content-commerce-ai/api/optical-character-recognition.md)
 - Customer AI {#customer-ai}
   - [Overview](customer-ai/overview.md)
   - [Getting started with Customer AI](customer-ai/getting-started.md)
