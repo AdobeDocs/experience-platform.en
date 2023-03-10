@@ -2,8 +2,6 @@
 keywords: Experience Platform;managing tags;tags;
 title: Managing Administrative Tags
 description: This document provides information on managing administrative tags in Adobe Experience Cloud
-hide: true
-hidefromtoc: true
 ---
 # Managing Tags guide
 
