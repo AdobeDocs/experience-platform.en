@@ -13,7 +13,7 @@ type: Tutorial
 Starting November 2022, you can use the new file export capabilities to access enhanced customization functionality when exporting files out of Experience Platform: 
 
 * Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
-* Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* Ability to set custom file headers in your exported files via the [new mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 This functionality is supported by the beta cloud storage cards listed below: 
@@ -48,7 +48,7 @@ For example, if you were using a script to filter destination dataflows to the A
 
 This section includes the relevant API tutorial and reference documentation for the enhanced functionality to export data to cloud storage destinations.
 
-* [Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore)
+* [Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore) -> will likely remove this link
 * [New API tutorial to export data to cloud storage destinations](https://experienceleague-review.corp.adobe.com/docs/experience-platform/destinations/api/activate-data-file-based-destinations.html)
 * [Destinations API reference documentation](https://developer.adobe.com/experience-platform-apis/references/destinations/) 
 
@@ -67,70 +67,163 @@ The breaking changes for the API users are an updated connection spec and flow s
 | Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 269ba276-16fc-47db-92b0-c1049a3c131f |
 | Connection spec | 4890fc95-5a1f-4983-94bb-e060c08e3f81 | 4fce964d-3f37-408f-9778-e597338a21ee |
 
-View the complete legacy and new connection and flow specs for [!DNL Amazon S3] in the tabs below
+View the complete legacy and new target base connection and target connection examples for [!DNL Amazon S3] in the tabs below.
 
 >[!BEGINTABS]
 
->[!TAB Legacy connection and flow specs]
+>[!TAB Legacy target base and target connection connection]
 
 **Request** 
 
-+++View legacy [!DNL connection spec] for [!DNL Amazon S3]
-
-```json
-curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
---header 'accept: application/json' \
---header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {ORG_ID}' \
---header 'x-sandbox-name: {SANDBOX_NAME}' \
---header 'Authorization: Bearer {ACCESS_TOKEN}'
-```
-
-+++
-
-+++View legacy [!DNL flow spec] for [!DNL Amazon S3]
++++View legacy [!DNL target base connection] for [!DNL Amazon S3]
 
 ```json
 {
-    "items": [
-        {
-            "id": "4fce964d-3f37-408f-9778-e597338a21ee",
-            "name": "Amazon S3",
-            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
-            "version": "1.0",
-//...
+  ...
+  "name": "amazon-s3",
+  "connectionSpec": {
+    "id": "4890fc95-5a1f-4983-94bb-e060c08e3f81",
+    "version": "1.0"
+  },
+  "state": "enabled",
+  "auth": {
+    "specName": "Access Key",
+    "params": {
+      "authorizedDate": "2022-10-26",
+      "s3SecretKey": "https://keyvaultf88d7j9x2n2i.vault.azure.net/secrets/2c25aeb4-23cc-4742-b911-207066527195",
+      "s3AccessKey": "AKIAJIEYNMBTSMOQAR5Q"
+    }
+  },
+  "encryption": {
+    "specName": "File Encryption",
+    "params": {
+      "encryptionAlgo": "PGP/GPG",
+      "publicKey": <publicKey>
+    }
+  },
+  "version": "\"640418e2-0000-0200-0000-6359b9ef0000\"",
+  "etag": "\"640418e2-0000-0200-0000-6359b9ef0000\""
+}
 ```
 
 +++
 
->[!TAB New connection and flow specs]
-
-**Request** 
-
-+++View new [!DNL connection spec] for [!DNL Amazon S3]
-
-```json
-curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
---header 'accept: application/json' \
---header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {ORG_ID}' \
---header 'x-sandbox-name: {SANDBOX_NAME}' \
---header 'Authorization: Bearer {ACCESS_TOKEN}'
-```
-
-+++
-
-+++View new [!DNL flow spec] for [!DNL Amazon S3]
++++View legacy [!DNL target connection] for [!DNL Amazon S3]
 
 ```json
 {
-    "items": [
-        {
-            "id": "4fce964d-3f37-408f-9778-e597338a21ee",
-            "name": "Amazon S3",
-            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
-            "version": "1.0",
-//...
+  ...
+  "name": "test 121",
+  "baseConnectionId": "ee86d122-10d3-434b-81c7-7252e4d747a7",
+  "state": "enabled",
+  "data": {
+    "format": "CSV",
+    "schema": null,
+    "properties": null
+  },
+  "connectionSpec": {
+    "id": "4890fc95-5a1f-4983-94bb-e060c08e3f81",
+    "version": "1.0"
+  },
+  "params": {
+    "mode": "S3",
+    "path": "bol",
+    "bucketName": "test-bugathon-rtcdp"
+  },
+  "version": "\"1609cd86-0000-0200-0000-63892cbb0000\"",
+  "etag": "\"1609cd86-0000-0200-0000-63892cbb0000\"",
+  "inheritedAttributes": {
+    "baseConnection": {
+      "id": "ee86d122-10d3-434b-81c7-7252e4d747a7",
+      "connectionSpec": {
+        "id": "4890fc95-5a1f-4983-94bb-e060c08e3f81",
+        "version": "1.0"
+      }
+    }
+  }
+}
+```
+
++++
+
+>[!TAB New target base connection and target connection connection]
+
++++View new [!DNL target base connection] for [!DNL Amazon S3]
+
+```json
+{
+  ...
+  "name": "Amazon S3",
+  "connectionSpec": {
+    "id": "4fce964d-3f37-408f-9778-e597338a21ee",
+    "version": "1.0"
+  },
+  "state": "enabled",
+  "auth": {
+    "specName": "Access Key",
+    "params": {
+      "s3AccessKey": "AKIAJIEYNMBTSMOQAR5Q",
+      "s3SecretKey": "https://keyvaultf88d7j9x2n2i.vault.azure.net/secrets/2c25aeb4-23cc-4742-b911-207066527195",
+      "authorizedDate": "2022-10-26"
+    }
+  },
+  "encryption": {
+    "specName": "File Encryption",
+    "params": {
+      "encryptionAlgo": "PGP/GPG",
+      "publicKey": <publicKey>
+    }
+  },
+  "version": "\"3708da21-0000-0200-0000-638940b10000\"",
+  "etag": "\"3708da21-0000-0200-0000-638940b10000\""
+}
+```
+
++++
+
++++View new [!DNL target connection] for [!DNL Amazon S3]
+
+```json
+{
+  ...
+  "name": "test 121",
+  "baseConnectionId": "d114c86f-fd47-4bb6-846c-cb1d15a00fe9",
+  "state": "enabled",
+  "data": {
+    "format": "CSV",
+    "schema": null,
+    "properties": null
+  },
+  "connectionSpec": {
+    "id": "4fce964d-3f37-408f-9778-e597338a21ee",
+    "version": "1.0"
+  },
+  "params": {
+    "csvOptions": {
+      "nullValue": "null",
+      "emptyValue": "",
+      "escape": "\\",
+      "quote": "",
+      "delimiter": ","
+    },
+    "compression": "NONE",
+    "fileType": "CSV",
+    "mode": "Server-to-server",
+    "path": "bol",
+    "bucketName": "test-bugathon-rtcdp"
+  },
+  "version": "\"1b0985c6-0000-0200-0000-638940b10000\"",
+  "etag": "\"1b0985c6-0000-0200-0000-638940b10000\"",
+  "inheritedAttributes": {
+    "baseConnection": {
+      "id": "d114c86f-fd47-4bb6-846c-cb1d15a00fe9",
+      "connectionSpec": {
+        "id": "4fce964d-3f37-408f-9778-e597338a21ee",
+        "version": "1.0"
+      }
+    }
+  }
+}
 ```
 
 +++
@@ -154,6 +247,12 @@ The breaking changes for the API users are an updated connection spec and flow s
 |---------|----------|---------|
 | Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 354d6aad-4754-46e4-a576-1b384561c440 |
 | Connection spec | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
+
+Additionally, the required parameters for SFTP 
+
+Previously, the target base connection for SFTP destinations required a `host` parameter. This has now been renamed to `domain`.
+
+For the authentication with SSH key option, the authentication parameters in the target base connection required a `port` option. This is not required anymore 
 
 Note that when you create a .... connection, the port parameter is not required anymore and the host param 
 The port param and host param 
@@ -260,6 +359,8 @@ Find complete information about setting up the `profileMapping` object in the AP
 
 +++
 
+>[!TAB New transformation parameters]
+
 +++View an example of transformation parameters after the migration
 
 ```json
@@ -323,7 +424,7 @@ TODO: Briefly list out migration steps (if documenting these publicly is desired
 
 ## Action items
 
-Prepare to update your scripts. Your Adobe account team will reach out with further information about when your dataflows will be migrated. 
+Prepare to update your scripts and automated API calls. Your Adobe account team will reach out with further information about when your dataflows will be migrated. 
 
 Add best practices and tips about optimizing your script to look for a flag so that you don't miss any data. 
 
