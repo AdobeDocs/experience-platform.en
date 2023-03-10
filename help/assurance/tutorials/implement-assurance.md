@@ -17,33 +17,29 @@ In order to install and implement the Assurance extension, you will need access 
 
 In the Data Collection UI, select **[!UICONTROL Tags]**. A list of mobile and web properties appears, with information about the properties that belong to your organization. Select **[!UICONTROL New property]** to create a new property.
 
-IMAGE
+![The New property button is highlighted, showing what you select to create a new property](./images/implement-assurance/create-new-property.png)
 
-The **[!UICONTROL Create Properties]** page appears. Enter the name for your new property and select **[!UICONTROL Mobile]** as your platform. After inserting your details, select **[!UICONTROL Save]** to create the mobile property.
+The **[!UICONTROL Create Property]** page appears. Enter the name for your new property and select **[!UICONTROL Mobile]** as your platform. After inserting your details, select **[!UICONTROL Save]** to create the mobile property.
 
 >[!NOTE]
 >
 >The mobile property's **[!UICONTROL Privacy]** setting does **not** affect Assurance's data collection.
 
-IMAGE
-
-The mobile property has now been successfully created.
-
-IMAGE
+![The Create Property page is displayed. You can insert information about your mobile property here.](./images/implement-assurance/create-property.png)
 
 ## Install the Assurance extension
 
 Select the mobile property that you want to install the Assurance extension in. 
 
-IMAGE
+![The Tag Properties page is displayed, with the selected mobile property highlighted.](./images/implement-assurance/select-mobile-property.png)
 
-The **[!UICONTROL Tag properties]** page appears. Select **[!UICONTROL Extensions]** to bring up a list of the extensions that are currently associated with your mobile property.
+The **mobile property details** page appears. Select **[!UICONTROL Extensions]** to bring up a list of the extensions that are currently associated with your mobile property.
 
-IMAGE
+![The mobile property details page is displayed. Information about recent activities is displayed. The extensions tab is highlighted.](./images/implement-assurance/tag-properties.png)
 
 Select **[!UICONTROL Catalog]** to see a list of extensions that you can add to the mobile property. Using the filter, locate the **[!UICONTROL AEP Assurance]** extension, and select **[!UICONTROL Install]**.
 
-IMAGE
+![The extensions catalog is displayed. The Assurance extension is filtered for and displayed, with the install button highlighted.](./images/implement-assurance/assurance-extension.png)
 
 ## Next steps
 
