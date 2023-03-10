@@ -11,9 +11,9 @@ The [!DNL Adobe Commerce] destination connector lets you select one or more Real
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the destinations catalog for customers who have purchased Real-Time CDP Prime or Ultimate and Adobe Commerce.
+This connector is available in the destinations catalog for customers who have purchased Real-Time CDP Prime or Ultimate and Adobe Commerce.
 
-Customers should have access to:
+To use this destination connection, make sure that you have access to:
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
 - [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)
