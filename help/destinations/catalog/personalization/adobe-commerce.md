@@ -65,7 +65,7 @@ Read [Activate profiles and segments to profile request destinations](../../ui/a
 
 ## Next steps in [!DNL Adobe Commerce]
 
-Now that you have configured the [!DNL Commerce] destination within Experience Platform, you need to configure the [!DNL Commerce Admin] to import the Real-Time CDP audiences you created. See the [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) to learn more.
+Now that you have configured the [!DNL Commerce] destination within Experience Platform, you need to install the [!DNL Audience Activation] extension in [!DNL Commerce] and configure the [!DNL Commerce Admin] to import the Real-Time CDP audiences you created. See the [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) to learn more.
 
 ## Validate audience activation in Commerce {#exported-data}
 
