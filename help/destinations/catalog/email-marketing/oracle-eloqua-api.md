@@ -104,20 +104,22 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 To correctly send your audience data from Adobe Experience Platform to the [!DNL Oracle Eloqua] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. 
 
 `EloquaID` is required to update attributes corresponding to the Identity. The `emailAddress` is also necessary as without it the API throws an error as indicated below:
+
+```json
+{
+   "type":"ObjectValidationError",
+   "container":{
+      "type":"ObjectKey",
+      "objectType":"Contact"
+   },
+   "property":"emailAddress",
+   "requirement":{
+      "type":"EmailAddressRequirement"
+   },
+   "value":"<null>"
+}
 ```
-    {
-        "type": "ObjectValidationError",
-        "container": {
-            "type": "ObjectKey",
-            "objectType": "Contact"
-        },
-        "property": "emailAddress",
-        "requirement": {
-            "type": "EmailAddressRequirement"
-        },
-        "value": "<null>"
-    }
-```
+
 Attributes specified in the **[!UICONTROL Target field]** should be named exactly as described in the attribute mappings table as these attributes will form request body.
 
 Attributes specified in the **[!UICONTROL Source field]** do not follow any such restriction. You can map it based on your need, however if the data format is not correct when pushed to [!DNL Oracle Eloqua] it will result in an error. 
