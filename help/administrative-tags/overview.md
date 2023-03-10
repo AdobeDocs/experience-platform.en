@@ -1,9 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;administrative tags;tags;
-title: Administrative Tags Overview
-description: This document provides information on administrative tags in Adobe Experience Platform
+keywords: Experience Platform;home;popular topics;unified tags;tags;
+title: (Beta) Unified Tags Overview
+description: This document provides information on unified tags in Adobe Experience Platform
 ---
-# Tags overview
+# (Beta) Unified tags overview
+
+>[!IMPORTANT]
+>
+>Unified tags are in beta. If you would like to leave feedback, please do so by selecting the button at the top of the Tags admin page.
 
 Tags are a capability of Adobe Experience Platform that enables administrators to manage metadata taxonomies in order to classify business objects for easier discovery and categorization. Tags are metadata that can be thought of as keywords that can be attached to a segment, dataset, journey, or other objects to enable searches to find that object and related objects. Tags are classified into two types: categorized and uncategorized.
 
