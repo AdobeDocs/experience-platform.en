@@ -22,7 +22,7 @@ Pseudonymous Profile data expiration cannot be configured through the Platform U
 
 - The identity types to be considered for Pseudonymous profile deletes. 
   - For example: `ECID` only, `AAID` only, or a combination of `ECID` and `AAID`.
-- The amount of time to wait before deleting a pseudonymous profile. The default recommendation for customers is 30 days. However, this value may differ based on your use case.
+- The amount of time to wait before deleting a pseudonymous profile. The default recommendation for customers is 14 days. However, this value may differ based on your use case.
 - The current profile count compared to the license profile count.
 
 ## Frequently asked questions {#faq}
@@ -31,10 +31,10 @@ The following section lists frequently asked questions regarding Pseudonymous pr
 
 ### What users should be using Pseudonymous profiles data expiration?
 
-- If you are using a connector that directly sends data from their source to Platform.
+- If you are using a streaming source that directly sends data to Platform.
 - If you have a website that serves unauthenticated customers en masse.
 - If you have excessive profile counts in your datasets and have confirmed that this excessive profile count is because of anonymous cookie-based identity type.
-  - To determine this, you should use the identity type overlap report. More information about this report can be found LINK
+  - To determine this, you should use the identity type overlap report. More information about this report can be found in the [identity overlap report section](./api/preview-sample-status.md#identity-overlap-report) of the preview sample status API guide.
 
 ### What are some caveats you should be aware of before using Pseudonymous profiles data expiration?
 
