@@ -5,7 +5,7 @@ title: Manage Data Usage Labels in the UI
 description: This guide covers steps for working with data usage labels within the Adobe Experience Platform user interface.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 ---
-# Manage data usage labels in the UI
+# Manage data usage labels in the UI {#user-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"

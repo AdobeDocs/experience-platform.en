@@ -5,7 +5,7 @@ title: Data Usage Labels Overview
 description: Learn how data usage labels are used to help enforce data governance compliance in Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 ---
-# Data usage labels overview
+# Data usage labels overview {#overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_description"

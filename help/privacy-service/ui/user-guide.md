@@ -5,7 +5,7 @@ title: Manage Privacy Jobs in the Privacy Service UI
 description: Learn how to use the Privacy Service user interface to coordinate and monitor privacy requests across various Experience Cloud applications.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 ---
-# Manage privacy jobs in the Privacy Service UI
+# Manage privacy jobs in the Privacy Service UI {#user-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_description"
@@ -92,7 +92,7 @@ If a solution has provided any additional data, it is viewable in this dialog. Y
 
 To download the complete job data as a CSV file, select **[!UICONTROL Export to CSV]** at the top-right of the dialog.
 
-## Create a new privacy job request
+## Create a new privacy job request {#create-a-new-privacy-job-request}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_instructions"
