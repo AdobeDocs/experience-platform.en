@@ -86,6 +86,7 @@ Note down the items below before you authenticate to the [!DNL Salesforce Pardot
 | `Pardot Business Unit Id` | To find the Account Engagement Business Unit ID, use Setup in [!DNL Salesforce]. From Setup, enter *Business Unit Setup* in the Quick Find box. Your Account Engagement Business Unit ID begins with `0Uv` and is 18 characters long. If you can’t access the Business Unit Setup information, ask your [!DNL Salesforce] Administrator to provide you with the `Account Engagement Business Unit ID`. If you require any additional guidance refer to the [[!DNL Salesforce] Authentication](https://developer.salesforce.com/docs/marketing/pardot/guide/authentication) guideline page. |
 | `Client ID` | The `Consumer Key` for your [[!DNL Salesforce] connected app](#prerequisites-connected-app). <br> Refer to the [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) to learn how to obtain this value from the [!DNL Salesforce] interface. |
 | `Client Secret` | The `Consumer Secret` for your [[!DNL Salesforce] connected app](#prerequisites-connected-app). <br> Refer to the [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) to learn how to obtain this value from the [!DNL Salesforce] interface. |
+
 {style="table-layout:auto"}
 
 ### Guardrails {#guardrails}
@@ -108,7 +109,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Dataset export]** | You are exporting raw datasets, which are not grouped or structured by audience interests or qualifications.|
+| Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
 
@@ -158,7 +159,7 @@ When you are finished providing details for your destination connection, select 
 >
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [(Beta) Export datasets](/help/destinations/ui/export-datasets.md) for extensive instructions on exporting datasets to this destination.
+Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
@@ -179,8 +180,6 @@ To correctly map your XDM fields to the [!DNL Salesforce Pardot] destination fie
     ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/email-marketing/salesforce-pardot/mappings.png)
 
 When you have finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
-
-### Review {#review}
 
 ## Validate data export {#exported-data}
 
