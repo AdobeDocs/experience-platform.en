@@ -5,6 +5,11 @@ exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 ---
 # Manage dataset expirations
 
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_scheduleDatasetExpiration_description"
+>title="Description"
+>abstract=""
+
 >[!IMPORTANT]
 >
 >Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
@@ -17,7 +22,12 @@ The [[!UICONTROL Data Hygiene] workspace](./overview.md) in the Adobe Experience
 
 This document covers how to schedule and manage dataset expirations in the Platform UI.
 
-## Schedule a dataset expiration
+## Schedule a dataset expiration {#schedule-dataset-expiration}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
+>title="Instructions"
+>abstract=""
 
 To create a new request, select **[!UICONTROL Create request]** from the main page in the workspace.
 

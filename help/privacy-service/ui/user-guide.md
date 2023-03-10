@@ -7,6 +7,11 @@ exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 ---
 # Manage privacy jobs in the Privacy Service UI
 
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_requests_description"
+>title="Description"
+>abstract=""
+
 This document provides steps for creating and managing privacy requests using the [!DNL Privacy Service] user interface.
 
 ## Browse the [!DNL Privacy Service] UI dashboard
@@ -88,6 +93,11 @@ If a solution has provided any additional data, it is viewable in this dialog. Y
 To download the complete job data as a CSV file, select **[!UICONTROL Export to CSV]** at the top-right of the dialog.
 
 ## Create a new privacy job request
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_requests_instructions"
+>title="Instructions"
+>abstract=""
 
 >[!NOTE]
 >

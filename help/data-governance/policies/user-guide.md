@@ -7,6 +7,11 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 ---
 # Manage data usage policies in the UI
 
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsagePolicies_description"
+>title="Description"
+>abstract=""
+
 This document covers how to use the **[!UICONTROL Policies]** workspace in the Adobe Experience Platform UI to create and manage data usage policies.
 
 >[!NOTE]
@@ -77,6 +82,11 @@ The **[!UICONTROL Browse]** tab reappears, which now lists the newly created pol
 ![](../images/policies/created-policy.png)
 
 ### Create a consent policy {#consent-policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsagePolicies_instructions"
+>title="Instructions"
+>abstract=""
 
 >[!IMPORTANT]
 >

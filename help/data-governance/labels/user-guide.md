@@ -7,6 +7,11 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 ---
 # Manage data usage labels in the UI
 
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataGovernance_description"
+>title="Description"
+>abstract=""
+
 This user guide covers steps for working with data usage labels within the [!DNL Experience Platform] user interface.
 
 ## Manage labels at the dataset level
@@ -71,7 +76,12 @@ The **[!UICONTROL Show Inherited Labels]** toggle is on by default, which allows
 
 ![Hide inherited labels](../images/labels/inherited-labels.png)
 
-## Manage labels at the dataset field level
+## Manage labels at the dataset field level {#manage-labels-at-dataset-field-level}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataGovernance_instructions"
+>title="Instructions"
+>abstract=""
 
 >[!IMPORTANT]
 >
