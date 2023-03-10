@@ -7,7 +7,7 @@ exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
 
 ## Overview {#overview}
 
-The [!DNL Adobe Commerce] destination connector lets you select one or more Real-Time CDP audiences to activate to your [!DNL Adobe Commerce] account to deliver a dynamic personalized experience for your shoppers. Within [!DNL Adobe Commerce], you can then select those Real-Time CDP audiences to personalize unique offers in the cart such as 'buy 2 get 1 free,'. You also can display hero banners and modify product pricing through promotional offers, all customized to Adobe Real-Time CDP audiences.
+The [!DNL Adobe Commerce] destination connector lets you select one or more Real-Time CDP audiences to activate to your [!DNL Adobe Commerce] account to deliver a dynamic personalized experience for your shoppers. Within [!DNL Adobe Commerce], you can then select those Real-Time CDP audiences to personalize unique offers in the cart such as 'buy 2 get 1 free,'. You can also display hero banners and modify product pricing through promotional offers, all customized to Adobe Real-Time CDP audiences.
 
 ## Prerequisites {#prerequisites}
 
@@ -16,13 +16,13 @@ This connector is available in the destinations catalog for customers who have p
 To use this destination connection, make sure that you have access to:
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)
+- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). With access to the developer console, you can view service account and credential information that is needed to [complete the configuration](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) of the extension in Adobe Commerce. 
 - [Adobe Commerce Cloud version 2.4.4 or higher](https://business.adobe.com/products/magento/magento-commerce.html)
 
 In Experience Platform, create the following:
 
 - [Schema](../../../xdm/schema/composition.md). The schema you create represents the data you plan to ingest from Adobe Commerce. [Learn more](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/update-xdm.html) about how to create a schema that contains Commerce-specific field groups.
-- [Dataset](../../../catalog/datasets/user-guide.md#create). A dataset is a storage and management construct for a collection of data. You need to create this dataset from the schema you created above.
+- [Dataset](../../../catalog/datasets/user-guide.md#create). A dataset is a storage and management construct for a collection of data. You create this dataset from the schema that you created above.
 - [Datastream](../../../edge/datastreams/overview.md#create). ID that allows data to flow from Adobe Experience Platform to other Adobe DX products. This ID must be associated to a specific website within your specific Adobe Commerce instance. When you create this datastream, specify the XDM schema you created above.
 
 After you complete the prerequisites, connect to the [!DNL Commerce] destination.
@@ -47,7 +47,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 -  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 -  **[!UICONTROL Description]**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
 -  **[!UICONTROL Integration alias]**: This value is sent to the Experience Platform Web SDK as a JSON object name. 
--  **[!UICONTROL Datastream ID]**: This determines in which Data Collection datastream the audiences will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../edge/datastreams/overview.md) for more details.
+-  **[!UICONTROL Datastream ID]**: This determines which Data Collection datastream contains the audiences that are included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../edge/datastreams/overview.md) for more details.
 
 ### Enable alerts {#enable-alerts}
 
