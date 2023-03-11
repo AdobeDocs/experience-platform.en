@@ -1,3 +1,8 @@
+---
+title: Adobe Experience Platform Assurance troubleshooting guide
+description: This document outlines solutions to common issues when using Adobe Experience Platform Assurance.
+---
+
 # Troubleshoot Adobe Experience Platform Assurance
 
 If you are having trouble getting Assurance to work, please see suggestions under the following issue topics to resolve commonly encountered issues.

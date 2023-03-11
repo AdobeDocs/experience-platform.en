@@ -1,6 +1,9 @@
-# On-device views
+---
+title: On-device Views
+description: This guide shows what the different views look like on a device using Adobe Experience Platform Assurance.
+---
 
-blurb (this can be added to another doc tbh?)
+# On-device views
 
 ## Connected
 

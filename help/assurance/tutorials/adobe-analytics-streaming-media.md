@@ -1,6 +1,11 @@
+---
+title: Adobe Analytics for Streaming Media View in Assurance
+description: This guide explains how to use Adobe Analytics for Streaming Media with Adobe Experience Platform Assurance.
+---
+
 # Adobe Analytics for Streaming Media view in Assurance
 
-With the integration between Streaming Media Analytics and Adobe Experience Platform Assurance, you can now validate the Media Analytics implementation in your mobile app. Media Analytics views display what is tracked in the media session, such as:
+With the integration between Adobe Analytics for Streaming Media and Adobe Experience Platform Assurance, you can now validate the Media Analytics implementation in your mobile app. Media Analytics views display what is tracked in the media session, such as:
 
 - Session start event that contains all content core, standard metadata, and custom metadata properties, as well as session end and session complete events.
 - Ad Break Start and Ad Start events with all ad properties attached, as well as Skip and Complete events for both.

@@ -1,3 +1,9 @@
+---
+title: Adobe Experience Platform Assurance user access
+description: This guide explains how to keep user access to Adobe Experience Platform Assurance by managing it through the Admin Console.
+---
+
+
 # User access
 
 >[!WARNING]

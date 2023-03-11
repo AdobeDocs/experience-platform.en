@@ -1,4 +1,9 @@
-# Implementing Adobe Experience Platform Assurance extension
+---
+title: Implementing Adobe Experience Platform Assurance extension
+description: This guide explains how to implement and install the Adobe Experience Platform Assurance extension.
+---
+
+# Implementing the Adobe Experience Platform Assurance extension
 
 This tutorial explains how to install and implement the Platform Assurance extension in the Mobile SDK. For instructions on adding the Assurance extension to your application, please read the [Adobe Experience Platform Assurance extension overview](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
 

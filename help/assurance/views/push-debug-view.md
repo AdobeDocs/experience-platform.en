@@ -1,3 +1,8 @@
+---
+title: Push Debug View
+description: This guide details information about the Push Debug view in Adobe Experience Platform Assurance.
+---
+
 # Push Debug view
 
 The Push Debug View inside Adobe Experience Platform Assurance provides the ability to validate the Push setup for your app and send a test message to your device.

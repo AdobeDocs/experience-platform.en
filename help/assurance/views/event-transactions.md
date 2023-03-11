@@ -1,3 +1,8 @@
+---
+title: Event Transactions View
+description: This guide details information about the Event Transactions view in Adobe Experience Platform Assurance.
+---
+
 # Event Transactions view
 
 The Event Transactions view in Adobe Experience Platform Assurance allows you to validate and debug your Edge Network client implementation, and see the upstream validation results in near real time.
@@ -6,7 +11,7 @@ The Event Transactions view in Adobe Experience Platform Assurance allows you to
 
 To get started, complete the following steps:
 
-1. [Set up Assurance](../set-up.md).
+1. [Set up Assurance](../tutorials/implement-assurance.md).
 2. Ensure that you have implemented the latest versions of the Assurance and Edge Network extensions in your app.
 3. To view your events, from the left side menu select **Event Transactions** under the **Adobe Experience Platform Edge** section.
   If you do not see this option, select **Configure** in the bottom left of the window, add the **Event Transactions** view, and select **Save**.

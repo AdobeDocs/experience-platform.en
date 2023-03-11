@@ -6,7 +6,7 @@ The Extensions Version view allows you to quickly order and view which Adobe Exp
 
 To use this view, complete the following steps:
 
-1. [Set up Assurance](../set-up.md).
+1. [Set up Assurance](../tutorials/implement-assurance.md).
 2. In the **Home** view, select **Extension Versions**
 
 ![Extension Versions](./images/versions/versions-extension.png)

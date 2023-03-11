@@ -1,3 +1,8 @@
+---
+title: Using Adobe Experience Platform Assurance
+description: This guide explains how to use Adobe Experience Platform Assurance once it has been installed and implemented.
+---
+
 # Using Adobe Experience Platform Assurance
 
 This tutorial explains how to use Adobe Experience Platform Assurance. For instructions on how to install and implement the Adobe Experience Platform Assurance extension, please read the tutorial on [implementing the Assurance extension](./implement-assurance.md).

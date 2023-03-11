@@ -12,12 +12,12 @@ feature: Assurance
 - [User access](./user-access.md)
 - Views {#view}
   - [Event transactions](./views/event-transactions.md)
+  - [Extension Versions](./views/extension-versions.md)
   - [In-app Messaging](./views/in-app-messaging.md)
   - [On Device Views](./views/on-device-views.md)
   - [Places Service](./views/places-service.md)
   - [Push Debug View](./views/push-debug-view.md)
   - [Validation Summary](./views/validation-summary.md)
-  - [Versions](./views/versions.md)
 - Tutorials {#tutorials}
   - [Implement Assurance](./tutorials/implement-assurance.md)
   - [Use Assurance](./tutorials/using-assurance.md)
