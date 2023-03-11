@@ -1,3 +1,8 @@
+---
+title: Extensions Versions View
+description: This guide details information about the Extensions Versions view in Adobe Experience Platform Assurance.
+---
+
 # Extension Versions view
 
 The Extensions Version view allows you to quickly order and view which Adobe Experience Platform mobile extensions you have installed and if they are up to date in a client connected to an Assurance session.
