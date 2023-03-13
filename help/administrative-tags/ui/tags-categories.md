@@ -1,9 +1,7 @@
 ---
 keywords: Experience Platform;tags categories;tags;
 title: Tags Categories
-description: This document provides information on managing administrative tags categories in Adobe Experience Cloud
-hide: true
-hidefromtoc: true
+description: This document provides information on managing unified tags categories in Adobe Experience Cloud
 ---
 # Tag categories guide
 
