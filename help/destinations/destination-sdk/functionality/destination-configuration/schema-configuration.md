@@ -5,17 +5,6 @@ title: Partner schema configuration
 
 # Partner schema configuration
 
-A schema can contain
- attributes
- namespaces
- both
-
-
-
-
-
-
-
 Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. When data is ingested into Platform, it is structured according to an XDM schema. For more information on the schema composition model, including design principles and best practices, see the [basics of schema composition](../../../../xdm/schema/composition.md).
 
 When building a destination with Destination SDK, you can define your own partner schema to be used by your destination platform. This gives users the ability to map identity namespaces or profile attributes from Platform to specific fields that your destination platform recognizes, all within the Platform UI.
@@ -44,9 +33,9 @@ Refer to the table below for details on what type of destinations support the fu
 | Real-time (streaming) integrations | Yes |
 | File-based (batch) integrations | Yes |
 
-## Supported parameters {#supported-parameters}
+## Supported parameters for schema configuration {#supported-parameters}
 
-When creating your own schema configuration, you can use the parameters described in the table below to define how users can map data to your schema.
+When creating your schema configuration, you can use the parameters described in the table below to define how users can map data to your schema.
 
 |Parameter | Type | Required/Optional |Description|
 |---------|----------|------|---|
@@ -58,21 +47,55 @@ When creating your own schema configuration, you can use the parameters describe
 |`destinationServerId` | String | Required if using dynamic partner schemas. | The `instanceId` of the [destination server configuration](../../authoring-api/destination-server/create-destination-server.md) that you created for your dynamic partner schema. This destination server includes the HTTP endpoint which Experience Platform will call to retrieve the dynamic schema used to populate target fields. |
 |`authenticationRule` | String | |Indicates how [!DNL Platform] customers connect to your destination. Accepted values are `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` if Platform customers log into your system via any of the following methods: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Use `PLATFORM_AUTHENTICATION` if there is a global authentication system between Adobe and your destination and the [!DNL Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must [create a credentials object](../../credentials-api/create-credential-configuration.md) using the Credentials API. </li><li>Use `NONE` if no authentication is required to send data to your destination platform. </li></ul> |
 | `value` | String | | The name of the schema to be displayed in the Experience Platform user interface, in the mapping step. |
-| `responseFormat` | String| |Always set to `SCHEMA` when defining a custom schema.|
+| `responseFormat` | String| | Always set to `SCHEMA` when defining a custom schema. |
 | `requiredMappingsOnly` | Boolean|| Indicates if users can map other attributes and identities in the activation flow, *apart from* the required mappings that you define. |
-| `mandatoryRequired` | Boolean| |Set to `true` if this field must be a mandatory attribute which should always be present in file exports to your destination. Read more about [mandatory attributes](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes). |
-| `requiredMappings.primaryKeyRequired` |Boolean| |Set to true if this field must be used as a deduplication key in file exports to your destination. Read more about [deduplication keys](../../../ui/activate-batch-profile-destinations.md#deduplication-keys). |
+| `mandatoryRequired` | Boolean| | Set to `true` if this field must be a mandatory attribute which should always be present in file exports to your destination. Read more about [mandatory attributes](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes). |
+| `requiredMappings.primaryKeyRequired` |Boolean| | Set to true if this field must be used as a deduplication key in file exports to your destination. Read more about [deduplication keys](../../../ui/activate-batch-profile-destinations.md#deduplication-keys). |
 | `requiredMappings.sourceType` | String | | Used when you configure a source field as required mapping. Set this value to `"text/x.schema-path"`, which indicates that the source field is a predefined XDM attribute.|
 | `requiredMappings.source` | String | | Indicates what the required source field should be. For example: `"source":"personalEmail.address"`. |
 | `requiredMappings.destination` | String |  | Indicates what the required destination field should be. For example: `"destination":"emailAddress"`. |
 
 
 
-Use the parameters in `schemaConfig` to enable the mapping step of the destination activation workflow. By using the parameters described below, you can determine if Experience Platform users can map profile attributes and/or identities to your file-based destination.
+Use the parameters in `schemaConfig` to enable the mapping step of the destination activation workflow. By using the parameters described above, you can determine if Experience Platform users can map profile attributes and/or identities to your destination.
 
 You can create static, hardcoded schema fields or you can specify a dynamic schema that Experience Platform should connect to in order to dynamically retrieve and populate fields in the target schema of the mapping workflow. The target schema is shown in the screenshot below.
 
 ![Screenshot highlighting the target schema fields in the mapping step of the activation workflow.](../../assets/functionality/destination-configuration/target-schema-fields.png)
+
+
+## Supported parameters for identity configuration {#supported-parameters}
+
+When creating your schema configuration, you can use the parameters described in the table below to define how users can map identities to your schema.
+
+If you do not need users to map identities to your destination, you can exclude the `identityNamespaces` section from your destination configuration. 
+
+
+```json
+"identityNamespaces":{
+      "external_id":{
+         "acceptsAttributes":true,
+         "acceptsCustomNamespaces":true,
+         "acceptedGlobalNamespaces":{
+            "Email":{
+            }
+         }
+      },
+      "another_id":{
+         "acceptsAttributes":true,
+         "acceptsCustomNamespaces":true
+      }
+   }
+```
+
+|Parameter | Type | Description|
+|---------|----------|------|
+|`acceptsAttributes` | Boolean | Indicates if users can map standard profile attributes to the identity that you are configuring. |
+|`acceptsCustomNamespaces` | Boolean | Indicates if users can map custom Platform identities to the identity that you are configuring. |
+|`acceptedGlobalNamespaces` | - | Indicates which [standard identity types](../../../../identity-service/namespaces.md#standard) (for example, IDFA) users can map to the identity that you are configuring. <br> When you use `acceptedGlobalNamespaces`, you can use `"requiredTransformation":"sha256(lower($))"` to lowercase and hash email addresses or phone numbers before sending them to your destination. |
+|`transformation` | String | *Not shown in example configuration*. Used, for example, when the [!DNL Platform] customer has plain email addresses as an attribute and your platform only accepts hashed emails. In this object, you can define the transformation that needs to be applied (for example, transform the email to lowercase, then hash it).|
+
+{style="table-layout:auto"}
 
 ## Create a static schema with profile attributes {#attributes-schema}
 
@@ -169,7 +192,6 @@ After selecting the attributes, they can see them in the target field column.
          "acceptsCustomNamespaces":true,
          "acceptedGlobalNamespaces":{
             "Email":{
-               
             }
          }
       },
@@ -181,8 +203,15 @@ After selecting the attributes, they can see them in the target field column.
 }
 ```
 
+The resulting UI experience is shown in the images below.
+
+When users select the target mapping, they can map Platform data to both profile attributes defined in the `profileFields` array, and the identities defined in the `identityNamespaces` section: `external_id` and `another_id`.
+
+![UI image showing the target mapping screen.](../../assets/functionality/destination-configuration/static-schema-attributes-identities.png)
 
 ## Create a dynamic schema {#dynamic-schema-configuration}
+
+Destination SDK supports the creation of dynamic partner schemas. As opposed to a static schema, a dynamic schema does not include 
 
 Use the parameters in  `dynamicSchemaConfig` to dynamically retrieve your own schema that Platform profile attributes and/or identities can be mapped to.
 
@@ -191,7 +220,7 @@ Use the parameters in  `dynamicSchemaConfig` to dynamically retrieve your own sc
    "dynamicSchemaConfig":{
       "dynamicEnum": {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
-         "destinationServerId":"2aa8a809-c4ae-4f66-bb02-12df2e0a2279",
+         "destinationServerId":"DYNAMIC_SCHEMA_SERVER_ID",
          "value": "Schema Name",
          "responseFormat": "SCHEMA"
       }
@@ -209,7 +238,7 @@ Use the parameters in  `dynamicSchemaConfig` to dynamically retrieve your own sc
 | `identityRequired` | Boolean | Use `true` if users should be able to map identity namespaces from Experience Platform to your desired schema. |
 | `destinationServerId` | String | The `instanceId` of the [destination server configuration](../../authoring-api/destination-server/create-destination-server.md) that you created for your dynamic schema. This destination server includes the HTTP endpoint which Experience Platform will call to retrieve the dynamic schema used to populate target fields. |
 | `authenticationRule` | String | Indicates how [!DNL Platform] customers connect to your destination. Accepted values are `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` if Platform customers log into your system via any of the following methods: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Use `PLATFORM_AUTHENTICATION` if there is a global authentication system between Adobe and your destination and the [!DNL Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must [create a credentials object](../../credentials-api/create-credential-configuration.md) using the Credentials API. </li><li>Use `NONE` if no authentication is required to send data to your destination platform. </li></ul> |
-| `value` |String|The name of the dynamic schema, as defined in the dynamic schema server.|
+| `value` |String|The name of the dynamic schema, as defined in the dynamic schema server configuration.|
 | `responseFormat` | String | Always set to `SCHEMA` when defining a dynamic schema.|
 
 {style="table-layout:auto"}
