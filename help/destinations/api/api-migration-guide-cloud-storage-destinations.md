@@ -432,7 +432,7 @@ View the complete legacy and new target base connection and target connection ex
 
 +++View legacy [!DNL target base connection] for SFTP - password authentication
 
-```json
+```json {line-numbers="true" start-line="1" highlight="15"}
 {
   ...
   "name": "sftp",
@@ -466,7 +466,7 @@ View the complete legacy and new target base connection and target connection ex
 
 +++View legacy [!DNL target base connection] for SFTP - SSH key authentication
 
-```json
+```json {line-numbers="true" start-line="1" highlight="15"}
 {
   ...
   "name": "sftp",
@@ -575,7 +575,7 @@ View the complete legacy and new target base connection and target connection ex
 
 +++View new [!DNL target base connection] for SFTP - SSH key authentication
 
-```json
+```json {line-numbers="true" start-line="1" highlight="12"}
 {
   ...
   "name": "SFTP",
