@@ -10,6 +10,8 @@ type: Tutorial
 >
 >* The functionality described on this page is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Please contact your Adobe representative for more information. 
 
+## Migration context {#migration-context}
+
 Starting November 2022, you can use the new file export capabilities to access enhanced customization functionality when exporting files out of Experience Platform: 
 
 * Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
@@ -38,23 +40,29 @@ While these destinations with enhanced functionality were offered initially as a
 
 ## Who this page applies to {#who-this-applies-to}
 
-If you are already using the Flow Service API to export profiles to the Amazon S3, Azure Blob, or SFTP cloud storage destinations, then this API migration guide applies to you. 
+If you are already using the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) to export profiles to the Amazon S3, Azure Blob, or SFTP cloud storage destinations, then this API migration guide applies to you. 
 
 If you have scripts running in your Amazon S3, Azure Blob, or SFTP cloud storage locations on top of the exported files from Experience Platform, be aware that some parameters are changing with regards to the connection and flow specs of the new cards, as well as with regard to the mapping step.
 
 For example, if you were using a script to filter destination dataflows to the Amazon S3 destination, based on the connection spec of the Amazon S3 destination, be aware that the connection spec will change so you will need to update your filters. 
 
-## Relevant documentation links 
+## Relevant documentation links {#relevant-documentation-links}
 
 This section includes the relevant API tutorial and reference documentation for the enhanced functionality to export data to cloud storage destinations.
 
-* [Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore) -> will likely remove this link
-* [New API tutorial to export data to cloud storage destinations](https://experienceleague-review.corp.adobe.com/docs/experience-platform/destinations/api/activate-data-file-based-destinations.html)
+<!--
+
+TBD if we keep this link but will likely remove it
+
+[Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore)
+
+--> 
+* [API tutorial to export data to cloud storage destinations](https://experienceleague-review.corp.adobe.com/docs/experience-platform/destinations/api/activate-data-file-based-destinations.html)
 * [Destinations API reference documentation](https://developer.adobe.com/experience-platform-apis/references/destinations/) 
 
 ## Summary of backwards-incompatible changes
 
-With the migration to the new destinations, all your dataflows will now be assigned new target connections and target base connections. The profile mapping step also changes. Backwards-incompatible changes are summarized in the sections below for each destination.
+With the migration to the new destinations, all your existing dataflows to Amazon S3, Azure Bloc, and SFTP destinations will now be assigned new target connections and target base connections. The profile mapping step also changes. Backwards-incompatible changes are summarized in the sections below for each destination. View also the [destinations glossary](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) for more information on the terms in the diagram below.
 
 ![Migration guide overview image](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
 
@@ -67,13 +75,13 @@ The breaking changes for the API users are an updated connection spec and flow s
 | Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 269ba276-16fc-47db-92b0-c1049a3c131f |
 | Connection spec | 4890fc95-5a1f-4983-94bb-e060c08e3f81 | 4fce964d-3f37-408f-9778-e597338a21ee |
 
-View the complete legacy and new target base connection and target connection examples for [!DNL Amazon S3] in the tabs below.
+View the complete legacy and new target base connection and target connection examples for [!DNL Amazon S3] in the tabs below. The parameters required to create target base connections for Amazon S3 destinations do not change. 
+
+Similarly, there are no backwards-incompatible changes in the parameters required to create target connections.
 
 >[!BEGINTABS]
 
 >[!TAB Legacy target base and target connection connection]
-
-**Request** 
 
 +++View legacy [!DNL target base connection] for [!DNL Amazon S3]
 
@@ -90,8 +98,8 @@ View the complete legacy and new target base connection and target connection ex
     "specName": "Access Key",
     "params": {
       "authorizedDate": "2022-10-26",
-      "s3SecretKey": "https://keyvaultf88d7j9x2n2i.vault.azure.net/secrets/2c25aeb4-23cc-4742-b911-207066527195",
-      "s3AccessKey": "AKIAJIEYNMBTSMOQAR5Q"
+      "s3SecretKey": "<your-secret-key>",
+      "s3AccessKey": "<your-access-key>"
     }
   },
   "encryption": {
@@ -162,8 +170,8 @@ View the complete legacy and new target base connection and target connection ex
   "auth": {
     "specName": "Access Key",
     "params": {
-      "s3AccessKey": "AKIAJIEYNMBTSMOQAR5Q",
-      "s3SecretKey": "https://keyvaultf88d7j9x2n2i.vault.azure.net/secrets/2c25aeb4-23cc-4742-b911-207066527195",
+      "s3SecretKey": "<your-secret-key>",
+      "s3AccessKey": "<your-access-key>",
       "authorizedDate": "2022-10-26"
     }
   },
@@ -238,6 +246,169 @@ The breaking changes for the API users are an updated connection spec and flow s
 |---------|----------|---------|
 | Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
 | Connection spec | e258278b-a4cf-43ac-b158-4fa0ca0d948b | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
+
+View the complete legacy and new target base connection and target connection examples for [!DNL Azure Blob] in the tabs below. The parameters required to create target base connections for Azure Blob destinations do not change. 
+
+Similarly, there are no backwards-incompatible changes in the parameters required to create target connections.
+
+>[!BEGINTABS]
+
+>[!TAB Legacy target base and target connection connection]
+
++++View legacy [!DNL target base connection] for [!DNL Azure Blob]
+
+```json
+{
+  ...
+  "name": "azure-blob",
+  "connectionSpec": {
+    "id": "e258278b-a4cf-43ac-b158-4fa0ca0d948b",
+    "version": "1.0"
+  },
+  "state": "enabled",
+  "auth": {
+    "specName": "ConnectionString",
+    "params": {
+      "authorizedDate": "2022-06-02",
+      "connectionString": "<your-connection-string>"
+    }
+  },
+  "encryption": {
+    "specName": "File Encryption",
+    "params": {
+      "encryptionAlgo": "PGP/GPG",
+      "publicKey": <publicKey>
+    }
+  }, 
+  "version": "\"d000d23c-0000-0200-0000-6299051c0000\"",
+  "etag": "\"d000d23c-0000-0200-0000-6299051c0000\""
+}
+```
+
++++
+
++++View legacy [!DNL target connection] for [!DNL Azure Blob]
+
+```json
+{
+  ...
+  "name": "v1",
+  "description": "v2",
+  "baseConnectionId": "d10fcecf-9963-4062-820c-0f878be98805",
+  "state": "enabled",
+  "data": {
+    "format": "CSV",
+    "schema": null,
+    "properties": null
+  },
+  "connectionSpec": {
+    "id": "e258278b-a4cf-43ac-b158-4fa0ca0d948b",
+    "version": "1.0"
+  },
+  "params": {
+    "mode": "AZURE_BLOB",
+    "container": "usdasda",
+    "path": "v3"
+  },
+  "version": "\"cb0468ba-0000-0200-0000-631ab0790000\"",
+  "etag": "\"cb0468ba-0000-0200-0000-631ab0790000\"",
+  "inheritedAttributes": {
+    "baseConnection": {
+      "id": "d10fcecf-9963-4062-820c-0f878be98805",
+      "connectionSpec": {
+        "id": "e258278b-a4cf-43ac-b158-4fa0ca0d948b",
+        "version": "1.0"
+      }
+    }
+  }
+}
+```
+
++++
+
+>[!TAB New target base connection and target connection connection]
+
++++View new [!DNL target base connection] for [!DNL Azure Blob]
+
+```json
+{
+  ...
+  "name": "Azure Blob Storage",
+  "connectionSpec": {
+    "id": "6d6b59bf-fb58-4107-9064-4d246c0e5bb2",
+    "version": "1.0"
+  },
+  "state": "enabled",
+  "auth": {
+    "specName": "ConnectionString",
+    "params": {
+      "connectionString": "<your-connection-string>",
+      "authorizedDate": "2022-06-02"
+    }
+  },
+  "encryption": {
+    "specName": "File Encryption",
+    "params": {
+      "encryptionAlgo": "PGP/GPG",
+      "publicKey": <publicKey>
+    }
+  },
+  "version": "\"4008a892-0000-0200-0000-6389890d0000\"",
+  "etag": "\"4008a892-0000-0200-0000-6389890d0000\""
+}
+```
+
++++
+
++++View new [!DNL target connection] for [!DNL Azure Blob]
+
+```json
+{
+  ...
+  "name": "v1",
+  "description": "v2",
+  "baseConnectionId": "1329d183-a3ee-4454-ab3f-e2388082bf29",
+  "state": "enabled",
+  "data": {
+    "format": "CSV",
+    "schema": null,
+    "properties": null
+  },
+  "connectionSpec": {
+    "id": "6d6b59bf-fb58-4107-9064-4d246c0e5bb2",
+    "version": "1.0"
+  },
+  "params": {
+    "csvOptions": {
+      "nullValue": "null",
+      "emptyValue": "",
+      "escape": "\\",
+      "quote": "",
+      "delimiter": ","
+    },
+    "compression": "NONE",
+    "fileType": "CSV",
+    "mode": "Server-to-server",
+    "container": "usdasda",
+    "path": "v3"
+  },
+  "version": "\"5509fe3f-0000-0200-0000-638a28880000\"",
+  "etag": "\"5509fe3f-0000-0200-0000-638a28880000\"",
+  "inheritedAttributes": {
+    "baseConnection": {
+      "id": "1329d183-a3ee-4454-ab3f-e2388082bf29",
+      "connectionSpec": {
+        "id": "6d6b59bf-fb58-4107-9064-4d246c0e5bb2",
+        "version": "1.0"
+      }
+    }
+  }
+}
+```
+
++++
+
+>[!ENDTABS]
 
 ### Backwards-incompatible changes to SFTP destination
 
