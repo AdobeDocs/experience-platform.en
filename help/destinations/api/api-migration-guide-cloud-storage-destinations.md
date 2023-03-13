@@ -68,7 +68,7 @@ With the migration to the new destinations, all your existing dataflows to Amazo
 
 ### Backwards-incompatible changes to the Amazon S3 destination
 
-The breaking changes for the API users are an updated connection spec and flow spec as below:
+The backwards-incompatible changes for the API users are an updated connection spec and flow spec as below:
 
 |Amazon S3 | Legacy | New |
 |---------|----------|---------|
@@ -135,7 +135,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
   },
   "params": {
     "mode": "S3",
-    "path": "bol",
+    "path": "testpath",
     "bucketName": "test-bugathon-rtcdp"
   },
   "version": "\"1609cd86-0000-0200-0000-63892cbb0000\"",
@@ -217,7 +217,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
     "compression": "NONE",
     "fileType": "CSV",
     "mode": "Server-to-server",
-    "path": "bol",
+    "path": "testpath",
     "bucketName": "test-bugathon-rtcdp"
   },
   "version": "\"1b0985c6-0000-0200-0000-638940b10000\"",
@@ -240,7 +240,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 ### Backwards-incompatible changes to Azure Blob destination
 
-The breaking changes for the API users are an updated connection spec and flow spec as below:
+The backwards-incompatible changes for the API users are an updated connection spec and flow spec as below:
 
 |Azure Blob | Legacy | New |
 |---------|----------|---------|
@@ -412,21 +412,249 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 ### Backwards-incompatible changes to SFTP destination
 
-The breaking changes for the API users are an updated connection spec and flow spec as below:
+The backwards-incompatible changes for the API users are an updated connection spec and flow spec as below:
 
 |SFTP | Legacy | New |
 |---------|----------|---------|
 | Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 354d6aad-4754-46e4-a576-1b384561c440 |
 | Connection spec | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
 
-Additionally, the required parameters for SFTP 
+In addition to the updated flow and connection spec above, there are changes to the parameters required when creating SFTP target base connections.
 
-Previously, the target base connection for SFTP destinations required a `host` parameter. This has now been renamed to `domain`.
+* Previously, the target base connection for SFTP destinations required a `host` parameter. This has now been renamed to `domain`.
+* For the authentication with SSH key option, the authentication parameters in the target base connection required a `port` option. This parameter is now deprecated and not required anymore. 
 
-For the authentication with SSH key option, the authentication parameters in the target base connection required a `port` option. This is not required anymore 
+View the complete legacy and new target base connection and target connection examples for SFTP in the tabs below. The parameters required to create target connections for SFTP destinations do not change. 
 
-Note that when you create a .... connection, the port parameter is not required anymore and the host param 
-The port param and host param 
+>[!BEGINTABS]
+
+>[!TAB Legacy target base and target connection connection]
+
++++View legacy [!DNL target base connection] for SFTP - password authentication
+
+```json
+{
+  ...
+  "name": "sftp",
+  "connectionSpec": {
+    "id": "64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0",
+    "version": "1.0"
+  },
+  "state": "enabled",
+  "auth": {
+    "specName": "Basic Authentication for sftp",
+    "params": {
+      "authorizedDate": "2022-06-02",
+      "password": "<your-password>",
+      "userName": "DPID12345",
+      "host": "ftp-out.demdex.com"
+    }
+  },
+  "encryption": {
+    "specName": "File Encryption",
+    "params": {
+      "encryptionAlgo": "PGP/GPG",
+      "publicKey": <publicKey>
+    }
+  },
+  "version": "\"d000013c-0000-0200-0000-629903bd0000\"",
+  "etag": "\"d000013c-0000-0200-0000-629903bd0000\""
+}
+```
+
++++
+
++++View legacy [!DNL target base connection] for SFTP - SSH key authentication
+
+```json
+{
+  ...
+  "name": "sftp",
+  "connectionSpec": {
+    "id": "64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0",
+    "version": "1.0"
+  },
+  "state": "enabled",
+  "auth": {
+    "specName": "Basic Authentication for sftp",
+    "params": {
+      "authorizedDate": "2022-06-02",
+      "sshKey": "<your-ssh-key>",
+      "userName": "DPID12345",
+      "port": 22
+      "domain": "ftp-out.demdex.com"
+    }
+  },
+  "encryption": {
+    "specName": "File Encryption",
+    "params": {
+      "encryptionAlgo": "PGP/GPG",
+      "publicKey": <publicKey>
+    }
+  },
+  "version": "\"d000013c-0000-0200-0000-629903bd0000\"",
+  "etag": "\"d000013c-0000-0200-0000-629903bd0000\""
+}
+```
+
++++
+
++++View legacy [!DNL target connection] for SFTP
+
+```json
+{
+  ...
+  "name": "test sftp 6/2",
+  "description": "",
+  "baseConnectionId": "e6f3a300-0bf7-4755-b7f8-308dc2a99133",
+  "state": "enabled",
+  "data": {
+    "format": "CSV",
+    "schema": null,
+    "properties": null
+  },
+  "connectionSpec": {
+    "id": "64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0",
+    "version": "1.0"
+  },
+  "params": {
+    "mode": "FTP",
+    "remotePath": "test"
+  },
+  "version": "\"8503ab91-0000-0200-0000-629903ce0000\"",
+  "etag": "\"8503ab91-0000-0200-0000-629903ce0000\"",
+  "inheritedAttributes": {
+    "baseConnection": {
+      "id": "e6f3a300-0bf7-4755-b7f8-308dc2a99133",
+      "connectionSpec": {
+        "id": "64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0",
+        "version": "1.0"
+      }
+    }
+  }
+}
+```
+
++++
+
+>[!TAB New target base connection and target connection connection]
+
++++View new [!DNL target base connection] for SFTP - password authentication
+
+```json
+{
+  ...
+  "name": "SFTP",
+  "connectionSpec": {
+    "id": "36965a81-b1c6-401b-99f8-22508f1e6a26",
+    "version": "1.0"
+  },
+  "state": "enabled",
+  "auth": {
+    "specName": "SFTP with Password",
+    "params": {
+      "domain": "ftp-out.demdex.com",
+      "username": "DPID12345",
+      "password": "<your-password>",
+      "authorizedDate": "2022-06-02"
+    }
+  },
+  "encryption": {
+    "specName": "File Encryption",
+    "params": {
+      "encryptionAlgo": "PGP/GPG",
+      "publicKey": <publicKey>
+    }
+  },
+  "version": "\"420826cc-0000-0200-0000-638999a60000\"",
+  "etag": "\"420826cc-0000-0200-0000-638999a60000\""
+}
+```
+
++++
+
++++View new [!DNL target base connection] for SFTP - SSH key authentication
+
+```json
+{
+  ...
+  "name": "SFTP",
+  "connectionSpec": {
+    "id": "36965a81-b1c6-401b-99f8-22508f1e6a26",
+    "version": "1.0"
+  },
+  "state": "enabled",
+  "auth": {
+    "specName": "SFTP with Password",
+    "params": {
+      "domain": "ftp-out.demdex.com",
+      "username": "DPID12345",
+      "sshKey": "<your-ssh-key>",
+      "authorizedDate": "2022-06-02"
+    }
+  },
+  "encryption": {
+    "specName": "File Encryption",
+    "params": {
+      "encryptionAlgo": "PGP/GPG",
+      "publicKey": <publicKey>
+    }
+  },
+  "version": "\"420826cc-0000-0200-0000-638999a60000\"",
+  "etag": "\"420826cc-0000-0200-0000-638999a60000\""
+}
+```
+
++++
+
++++View new [!DNL target connection] for SFTP
+
+```json
+{
+  ...
+  "name": "test sftp 6/2",
+  "description": "",
+  "baseConnectionId": "af63fbe1-45ff-4722-a9de-fbbe789dc7b0",
+  "state": "enabled",
+  "data": {
+    "format": "CSV",
+    "schema": null,
+    "properties": null
+  },
+  "connectionSpec": {
+    "id": "36965a81-b1c6-401b-99f8-22508f1e6a26",
+    "version": "1.0"
+  },
+  "params": {
+    "csvOptions": {
+      "nullValue": "null",
+      "emptyValue": "",
+      "escape": "\\",
+      "quote": "",
+      "delimiter": ","
+    },
+    "compression": "NONE",
+    "fileType": "CSV",
+    "mode": "FTP",
+    "remotePath": "test"
+  },
+  "version": "\"5509b5cf-0000-0200-0000-638a2ab60000\"",
+  "etag": "\"5509b5cf-0000-0200-0000-638a2ab60000\"",
+  "inheritedAttributes": {
+    "baseConnection": {
+      "id": "af63fbe1-45ff-4722-a9de-fbbe789dc7b0",
+      "connectionSpec": {
+        "id": "36965a81-b1c6-401b-99f8-22508f1e6a26",
+        "version": "1.0"
+      }
+    }
+  }
+}
+```
+
++++
+
+>[!ENDTABS]
 
 ### Backwards-incompatible changes common to Amazon S3, Azure Blob, and SFTP destinations
 
@@ -588,17 +816,16 @@ Find complete information about setting up the `profileMapping` object in the AP
 
 >[!ENDTABS]
 
-
 ## Migration steps
 
-TODO: Briefly list out migration steps (if documenting these publicly is desired) 
+TODO: Briefly list out migration steps including timelines (if documenting these publicly is desired) 
 
 ## Action items
 
-Prepare to update your scripts and automated API calls. Your Adobe account team will reach out with further information about when your dataflows will be migrated. 
+In preparation for the migration of the Amazon S3, Azure Blob, and SFTP cloud storage destinations to the new cards, please prepare to update your scripts and automated API calls. Your Adobe account team will reach out with further information about when your dataflows will be migrated. 
 
-Add best practices and tips about optimizing your script to look for a flag so that you don't miss any data. 
+@bol and @hossain - as per our sync last week, should be add best practices and tips about optimizing your script to look for a flag so that you don't miss any data?
 
 ## Next steps {#next-steps}
 
-By reading this page, you now know which documentation pages to reference as you set up API-based workflows to export files out of Experience Platform to your preferred cloud storage destinations. Next, you can view the API tutorial to export data to cloud storage destinations.
+By reading this page, you now know if you need to take any action in preparation for the migration of the cloud storage destinations. You also know which documentation pages to reference as you set up API-based workflows to export files out of Experience Platform to your preferred cloud storage destinations. Next, you can view the API tutorial to export data to cloud storage destinations.
