@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
+keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output; data requirements
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Data requirements in Customer AI
@@ -24,15 +24,15 @@ Here are the steps to build propensity models and identify target audiences for 
 
 4. [Build segments](../customer-ai/user-guide/create-segment.md) using model results.
 
-5. Send personalized messaging to these segments, monitor, and iterate.
+5. Make targeted business moves/actions to these segments, monitor, and iterate.
 
 Here are example configurations for your first model.  In this model, we will build a Customer AI model to predict who is likely to convert for a retail business in the next 30 days. The input dataset is an Adobe Analytics dataset.
 
 | Step | Define | Example |
 | ---- | ------ | ------- |
-| Set Up | Specify basic information about the model | **Name**: Give_your_model_a_name <br> **Model Type**: Conversion |
-| Select Data |Specify datasets used to build the model | **Dataset**: Select your Adobe Analytics dataset <br> **Identity**: Ensure the identity column for each dataset is set to be a common identity.|
-| Define Goal | Define goal, eligible population, custom events, and profile attributes. | **Prediction Goal**: Select commerce.purchases.value exists <br> **Outcome window**: 30 days. |
+| Set Up | Specify basic information about the model | **Name**: pencil purchase propensity model <br> **Model Type**: Conversion |
+| Select Data |Specify datasets used to build the model | **Dataset**: Adobe Analytics dataset <br> **Identity**: Ensure the identity column for each dataset is set to be a common identity.|
+| Define Goal | Define goal, eligible population, custom events, and profile attributes. | **Prediction Goal**: Select commerce.purchases.value equals to pencil <br> **Outcome window**: 30 days. |
 | Set Options | Setup schedule for model refresh and enable scores for Profile | **Schedule**: Weekly <br> **Enable for profile**: This must be enabled for model output to be used in segmentation.  |
 
 ## Data overview
@@ -115,41 +115,41 @@ If you have information you wish to include in addition to the default [standard
 
 #### When to use custom events
 
-Custom events are necessary when: The datasets chosen in the dataset selection step contain *none* of the default event fields used by Customer AI. As mentioned in the Data Requirements section, Customer AI needs information about at least one user behavior event other than the outcome.  
+Custom events are necessary when: The datasets chosen in the dataset selection step contain *none* of the default event fields used by Customer AI. Customer AI needs information about at least one user behavior event other than the outcome.
 
 Custom events are helpful for: 
 
-1. Incorporating domain knowledge or prior expertise into the model through the addition of data 
+1. Incorporating domain knowledge or prior expertise into the model.
 
-2. Potentially improving the predictive model quality 
+2. Improving the predictive model quality.
 
-3. Gaining additional insights and interpretations
+3. Gaining additional insights and interpretations.
 
-4. Choosing custom events to include: 
+Choosing custom events to include: 
 
-    - The best candidates for custom events are user behaviors that may be predictive of the outcome.  
+- The best candidates for custom events are data that contain domain knowledge that may be predictive of the outcome.
 
-5. Some general examples of custom events include: 
+Some general examples of custom events include: 
 
-    - Register for account 
+- Register for account 
 
-    - Subscribe to newsletter 
+- Subscribe to newsletter 
 
-    - Make a call to customer service 
+- Make a call to customer service 
 
-6. Industry specific custom event examples: 
+Industry specific custom event examples: 
 
-    | Industry | Custom events |
-    | --- | --- |
-    | Retail | In-store transaction<br>Sign up for club card<br>Clip mobile coupon. |
-    | Entertainment | Purchase season membership <br> Stream video.|
-    | Hospitality | Make restaurant reservation <br> Purchase loyalty points. | 
-    | Travel | Add known traveler info Purchase miles. | 
-    | Communications | Upgrade/downgrade/cancel plan. | 
+| Industry | Custom events |
+| --- | --- |
+| Retail | In-store transaction<br>Sign up for club card<br>Clip mobile coupon. |
+| Entertainment | Purchase season membership <br> Stream video.|
+| Hospitality | Make restaurant reservation <br> Purchase loyalty points. | 
+| Travel | Add known traveler info Purchase miles. | 
+| Communications | Upgrade/downgrade/cancel plan. | 
 
-7. Requirements for choosing custom events: 
+Requirements for choosing custom events: 
 
-Custom events must represent user-initiated actions. For example, "Email Send" is an action initiated by a marketer and not by the user, so it shouldn't be used as a custom event.  
+- Custom events must represent user-initiated actions. For example, "Email Send" is an action initiated by a marketer and not by the user, so it shouldn't be used as a custom event.  
 
 ### Historical data
 
@@ -161,27 +161,21 @@ The following examples demonstrate the use of a simple formula which helps you d
 
 **Formula**: 
 
-- Version 1: 
+* To decide the minimum length of data required: 
 
-    -  To decide the minimum length of data required: 
+1. The minimum data required to create features is 30 days. Compare the eligibility lookback window with 30 days: 
 
-    - The minimum data required to create features is 30 days. Compare the eligibility lookback window* with 30 days: 
+    * If the eligibility lookback window is greater than 30 days, the data requirement = eligibility lookback window + outcome window. 
 
-    - If the eligibility lookback window is greater than 30 days, the data requirement = eligibility lookback window + outcome window 
+    * Otherwise, the data requirement = 30 days + outcome window. 
 
-    - Otherwise, the data requirement = 30 days + outcome window 
-
-** If there is more than one condition for defining the eligible population, the eligibility lookback window is the longest one 
-
-- Version 2: 
-
-    - Minimum length of data required = Max (Any date length used for the definition of eligible population, 30 days) + outcome window 
+** If there is more than one condition for defining the eligible population, the eligibility lookback window is the longest one. 
 
 >[!NOTE] 
 >
 >30 is the minimum number of days required for eligible population. If this is not provided the default is 45 days. 
 
-- Examples: 
+Examples: 
 
 - You want to predict whether a customer is likely to purchase a watch in the next 30 days for those who have some web activity in the last 60 days. 
 
@@ -191,7 +185,7 @@ The following examples demonstrate the use of a simple formula which helps you d
 
     - Data required = 60 days + 30 days = 90 days 
 
-- You want to predict whether the user is likely to purchase a watch in the next 7 days without providing an explicit eligible population. In this case, the eligible population defaults to “those who have had activity in the last 45 days” and the outcome window is 7 days.  
+- You want to predict whether the user is likely to purchase a watch in the next 7 days **without** providing an explicit eligible population. In this case, the eligible population defaults to “those who have had activity in the last 45 days” and the outcome window is 7 days.  
 
     - Eligibility lookback window = 45 days 
 
