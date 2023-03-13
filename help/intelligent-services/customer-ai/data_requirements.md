@@ -46,7 +46,7 @@ Customer AI works by analyzing the following datasets to predict churn or conver
 - Experience Event (EE) dataset
 - Consumer Experience Event (CEE) dataset
 
-You can add multiple datasets from different sources if each of the datasets share the same identity type (namespace) such as an ECID. For more information on adding multiple datasets, visit the Customer AI user guide. 
+You can add multiple datasets from different sources if each of the datasets share the same identity type (namespace) such as an ECID. For more information on adding multiple datasets, visit the [Customer AI user guide](../customer-ai/user-guide/configure.md). 
 
 >[!IMPORTANT]
 >
@@ -67,7 +67,7 @@ The following table outlines some common terminology used in this document:
 
 For input datasets, like Adobe Analytics and Adobe Audience Manager, the respective source connectors directly map the events in these standard field groups (Commerce, Web, Application, and Search) by default during the connection process. The table below shows the event fields in the default standard field groups for Customer AI.  
 
-For more information on mapping Adobe Analytics data or Audience Manager data, visit the Analytics field mappings or Audience Manager [field mappings guide](../../sources/connectors/adobe-applications/mapping/audience-manager.md)
+For more information on mapping Adobe Analytics data or Audience Manager data, visit the Analytics field mappings or Audience Manager [field mappings guide](../../sources/connectors/adobe-applications/mapping/audience-manager.md).
 
 You can use Experience Event (EE) or Consumer Experience Event (CEE) XDM schemas for input datasets that are not populated via one of the above connectors. Additional XDM field groups can be added during the schema creation process. The field groups can be provided by Adobe like the standard field groups or a custom field group, which matches the data representation in the Platform. 
 
@@ -161,13 +161,13 @@ The following examples demonstrate the use of a simple formula which helps you d
 
 **Formula**: 
 
-* To decide the minimum length of data required: 
+To decide the minimum length of data required: 
 
 1. The minimum data required to create features is 30 days. Compare the eligibility lookback window with 30 days: 
 
-    * If the eligibility lookback window is greater than 30 days, the data requirement = eligibility lookback window + outcome window. 
+    - If the eligibility lookback window is greater than 30 days, the data requirement = eligibility lookback window + outcome window. 
 
-    * Otherwise, the data requirement = 30 days + outcome window. 
+    - Otherwise, the data requirement = 30 days + outcome window. 
 
 ** If there is more than one condition for defining the eligible population, the eligibility lookback window is the longest one. 
 
@@ -175,7 +175,7 @@ The following examples demonstrate the use of a simple formula which helps you d
 >
 >30 is the minimum number of days required for eligible population. If this is not provided the default is 45 days. 
 
-Examples: 
+Examples:
 
 - You want to predict whether a customer is likely to purchase a watch in the next 30 days for those who have some web activity in the last 60 days. 
 
