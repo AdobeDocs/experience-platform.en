@@ -50,10 +50,6 @@ The widget composer workspace appears. Next, select **[!UICONTROL Select data]**
 
 The [!UICONTROL Select data] dialog appears. Select a data model from the left column to display a preview list of all available tables. 
 
->[!NOTE]
->
->User-defined dashboards currently only supports the profile data model. More options will be supported.
-
 ![The Select data dialog.](./images/user-defined-dashboards/select-data-dialog.png)
 
 The preview list provides details about the tables contained in the data model. The table below provides descriptions of the column fields and their potential values.
@@ -82,7 +78,7 @@ The data model and currently selected table are displayed at the top of the left
 >
 >You can change the chosen data model by selecting the pencil icon (![Pencil icon.](./images/user-defined-dashboards/edit-icon.png)) in the left rail.
 
-Select the add icon (./images/user-defined-dashboards/add-icon.png) next to an attribute name to add an attribute to either the X or the Y axis.
+Select the add icon ([An add icon.](./images/user-defined-dashboards/add-icon.png)) next to an attribute name to add an attribute to either the X or the Y axis.
 
 ![The widget composer with the add icon dropdown highlighted to add attributes a widget axis.](./images/user-defined-dashboards/attributes-dropdown.png)
 
