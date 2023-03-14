@@ -81,7 +81,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 >[!BEGINTABS]
 
->[!TAB Legacy target base and target connection connection]
+>[!TAB Legacy target base connection and target connection]
 
 +++View legacy [!DNL target base connection] for [!DNL Amazon S3]
 
@@ -154,7 +154,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 +++
 
->[!TAB New target base connection and target connection connection]
+>[!TAB New target base connection and target connection]
 
 +++View new [!DNL target base connection] for [!DNL Amazon S3]
 
@@ -253,7 +253,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 >[!BEGINTABS]
 
->[!TAB Legacy target base and target connection connection]
+>[!TAB Legacy target base connection and target connection]
 
 +++View legacy [!DNL target base connection] for [!DNL Azure Blob]
 
@@ -326,7 +326,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 +++
 
->[!TAB New target base connection and target connection connection]
+>[!TAB New target base connection and target connection]
 
 +++View new [!DNL target base connection] for [!DNL Azure Blob]
 
@@ -428,7 +428,7 @@ View the complete legacy and new target base connection and target connection ex
 
 >[!BEGINTABS]
 
->[!TAB Legacy target base and target connection connection]
+>[!TAB Legacy target base connection and target connection]
 
 +++View legacy [!DNL target base connection] for SFTP - password authentication
 
@@ -537,7 +537,7 @@ View the complete legacy and new target base connection and target connection ex
 
 +++
 
->[!TAB New target base connection and target connection connection]
+>[!TAB New target base connection and target connection]
 
 +++View new [!DNL target base connection] for SFTP - password authentication
 
