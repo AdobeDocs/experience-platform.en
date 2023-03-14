@@ -73,3 +73,7 @@ Next, in the [!UICONTROL General] section of your profile preferences menu, sele
 The self-identification survey appears, allowing you to reconfigure your responses and update your profile.
 
 ![The Platform UI profile preferences page displaying the self-identification survey to allow a user to update their personal profile.](./images/survey/new-survey.png)
+
+## Next steps
+
+By reading this document, you have now submitted and updated information regarding your job functions and objectives in order to receive more relevant product guidelines when using Platform UI. For more information on Platform UI, read the [Experience Platform overview](home.md).
