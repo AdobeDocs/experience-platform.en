@@ -18,9 +18,9 @@ feature: Assurance
   - [Places Service](./views/places-service.md)
   - [Push Debug View](./views/push-debug-view.md)
   - [Validation Summary](./views/validation-summary.md)
+  - [Adobe Analytics](./views/adobe-analytics.md)
+  - [Adobe Analytics Streaming Media](./views/adobe-analytics-streaming-media.md)
 - Tutorials {#tutorials}
   - [Implement Assurance](./tutorials/implement-assurance.md)
   - [Use Assurance](./tutorials/using-assurance.md)
-  - [Adobe Analytics](./tutorials/adobe-analytics.md)
-  - [Adobe Analytics Streaming Media](./tutorials/adobe-analytics-streaming-media.md)
 - [Troubleshooting](./troubleshooting.md)
