@@ -9,10 +9,7 @@ The Validation Editor lets you quickly and easily manage JavaScript functions to
 
 ## Get started with the Validation Editor
 
-To use this view, complete the following steps:
-
-1. [Set up Assurance](../tutorials/implement-assurance.md).
-2. In the **Home** view, select **Validation Editor**.
+After [setting up Assurance](../tutorials/implement-assurance.md), on the **[!UICONTROL Home]** view, select **[!UICONTROL Validation Editor]**.
 
 ![Validation-Editor-Screen-Shot](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
 
@@ -20,11 +17,11 @@ To use this view, complete the following steps:
 
 This feature allows you to create, edit, or delete validation functions for your Adobe Experience Platform Assurance sessions.
 
-1. Select **Create a New Validation**.
+1. Select **[!UICONTROL Create a New Validation]**.
 2. Enter a **name** to identify the validation, then provide a **category** and a **description**.
 3. Edit the code in the editor to validate the events for your Assurance session.
 
-Once the function tests are complete, select **Publish** to save your validation.
+Once the function tests are complete, select **[!UICONTROL Publish]** to save your validation.
 
 ### Event definition
 

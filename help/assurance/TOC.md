@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform Assurance
 breadcrumb-title: Assurance Guide
-user-guide-description: Build segments and generate audiences from your Real-Time Customer Profile data.
+user-guide-description: Adobe Experience Platform Assurance lets you inspect, proof, simulate, and validate how you collect data or serve experiences within your mobile applications.
 feature: Assurance
 ---
 

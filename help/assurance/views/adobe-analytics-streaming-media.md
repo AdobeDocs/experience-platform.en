@@ -26,19 +26,19 @@ To learn how to install Assurance in your application, please read the [implemen
 
 ## Use Assurance with Adobe Analytics for Streaming Media
 
-After you have connected and set up your app for Adobe Analytics, you are ready to configure it for Streaming Media Analytics. At the bottom of the left panel, select **Configure** to add the Media Analytics Events view and **Save** it.
+After you have connected and set up your app for Adobe Analytics, you are ready to configure it for Streaming Media Analytics. At the bottom of the left panel, select **[!UICONTROL Configure]** to add the Media Analytics Events view and **Save** it.
 
 ![Configure](./images/adobe-analytics-streaming-media/configure.png)
 
-Once added, select the **Adobe Analytics &gt; Media Analytics Events** view to validate your session tracking.
+Once added, select the **!UICONTROL Media Analytics Events]** view in the **[!UICONTROL Adobe Analytics]** section to validate your session tracking.
 
 ![Select](./images/adobe-analytics-streaming-media/select.png)
 
-In the Media Analytics Events view, you may search and filter by Session ID (VSID) to view a specific media session. To view additional event details, select a specific event.
+In the **[!UICONTROL Media Analytics Events]** view, you may search and filter by Session ID (VSID) to view a specific media session. To view additional event details, select a specific event.
 
 ![Media Events](./images/adobe-analytics-streaming-media/media-events.png)
 
-For a more succinct view of API calls, you may also hide the playhead update events by selecting the **Hide Playhead Update events** filter.
+For a more succinct view of API calls, you may also hide the playhead update events by selecting the **[!UICONTROL Hide Playhead Update events]** filter.
 
 ![Hide Playhead](./images/adobe-analytics-streaming-media/hide-playhead.png)
 

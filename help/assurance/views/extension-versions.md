@@ -9,10 +9,7 @@ The Extensions Version view allows you to quickly order and view which Adobe Exp
 
 ## Get started with Extension Versions views
 
-To use this view, complete the following steps:
-
-1. [Set up Assurance](../tutorials/implement-assurance.md).
-2. In the **Home** view, select **Extension Versions**
+After [setting up Assurance](../tutorials/implement-assurance.md), in the **Home** view, select **[!UICONTROL Extension Versions]**
 
 ![Extension Versions](./images/versions/versions-extension.png)
 
@@ -24,6 +21,6 @@ Inside this view, a table displays both the latest version of each Mobile SDK, a
 
 ## Export versions
 
-On the top right of the view, you can select **Export Versions** which gives you a JSON payload with all the extensions information, as well as the platform used by the client. You may choose to export this data to a JSON file, or copy it to your clipboard.
+On the top right of the view, you can select **[!UICONTROL Export Versions]** which gives you a JSON payload with all the extensions information, as well as the platform used by the client. You may choose to export this data to a JSON file, or copy it to your clipboard.
 
 ![Extension Versions Export](./images/versions/versions-extension-export.png)

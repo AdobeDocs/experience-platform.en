@@ -9,7 +9,7 @@ The In-App Messaging view inside Adobe Experience Platform Assurance provides th
 
 ## Messages on Device
 
-At the top of the "Messages on Device" tab is a "Message" dropdown. This will include all the messages that have been received in the Assurance session. If a message is not in this list, it means the app never recieved it.
+At the top of the **[!UICONTROL Messages on Device]** tab is a **[!UICONTROL Message]** dropdown. This will include all the messages that have been received in the Assurance session. If a message is not in this list, it means the app never received it.
 
 ![Message](./images/in-app-messaging/message.png)
 
@@ -17,27 +17,27 @@ Selecting a message will show a lot of information about that message as describ
 
 ### Message Preview
 
-In the right panel is a "Message Preview" pane, which shows a preview of the message. Clicking the "Simulate on Device" button will send that message to any devices that are currently connected to the session.
+In the right panel is a **[!UICONTROL Message Preview]** pane, which shows a preview of the message. Selecting **[!UICONTROL Simulate on Device]** will send that message to any devices that are currently connected to the session.
 
 ![Preview](./images/in-app-messaging/preview.png)
 
 ### Message Behavior
 
-Below the "Message Preview" pane is the "Message Behavior" tab. This has all the details around how the message is displayed. This information includes positioning information, animations, swipe gestures, and appearance settings.
+Below the **[!UICONTROL Message Preview]** pane is the **[!UICONTROL Message Behavior]** tab. This has all the details around how the message is displayed. This information includes positioning information, animations, swipe gestures, and appearance settings.
 
 ![Behavior](./images/in-app-messaging/gestures.png)
 
 ### Info Tab
 
-In the left section, there are four tabs that show details about the message. The "Info" tab shows information loaded from Adobe Journey Optimizer (AJO) about the message campaign.
+In the left section, there are four tabs that show details about the message. The **[!UICONTROL Info]** tab shows information loaded from Adobe Journey Optimizer (AJO) about the message campaign.
 
-There is also a "View campaign" button that opens the message in AJO for inspection or editing.
+You can also select **[!UICONTROL View campaign]** to open the message in AJO for inspection or editing.
 
 ![Info](./images/in-app-messaging/info.png)
 
 ### Rules Tab
 
-The "Rules" tab shows what needs to happen for this message to be displayed. This gives insight into exactly what will trigger a message to be displayed. Looking at this example:
+The **[!UICONTROL Rules]** tab shows what needs to happen for this message to be displayed. This gives insight into exactly what will trigger a message to be displayed. Looking at this example:
 
 ![Rules](./images/in-app-messaging/rules.png)
 
@@ -53,21 +53,21 @@ If all three conditions match the current event, the message will be displayed.
 
 ### Analyze Tab
 
-The "Analyze" tab provides additional insights into the rules. Here, we filter every event in the session based on how close our message rule matches the event.
+The **[!UICONTROL Analyze]** tab provides additional insights into the rules. Here, we filter every event in the session based on how close our message rule matches the event.
 
 ![Analyze](./images/in-app-messaging/analyze.png)
 
-In the example in the "Rules Tab" section, there are 3 conditions in the rule. This tab shows what percentage of the rule each event matches. The majority of events match at 33% (one of three conditions) and the rest match at 100%.
+In the example in the **[!UICONTROL Rules Tab]** section, there are three conditions in the rule. This tab shows what percentage of the rule each event matches. The majority of events match at 33% (one of three conditions) and the rest match at 100%.
 
 As a result, you can find events that are close to matching but not fully matching the rule.
 
 ![Threshold](./images/in-app-messaging/threshold.png)
 
-The "Match Threshold" slider lets you filter which events should be displayed. For example, this could be set to 50% - 90% to get a list of events that match exact two of the three conditions.
+The **[!UICONTROL Match Threshold]** slider lets you filter which events should be displayed. For example, this could be set to 50% - 90% to get a list of events that match exact two of the three conditions.
 
 ### Interactions Tab
 
-The "Interactions" tab shows a list of interaction events that were sent to the Edge for tracking purposes.
+The **[!UICONTROL Interactions]** tab shows a list of interaction events that were sent to the Edge for tracking purposes.
 
 ![Interactions](./images/in-app-messaging/interactions.png)
 
@@ -83,7 +83,7 @@ The validation column shows if the interaction event was properly recieved and p
 
 ## Validation
 
-The "Validation" tab runs validations against your current session, checking to see if the app has been configured for In-App Messaging correctly:
+The **[!UICONTROL Validation]** tab runs validations against your current session, checking to see if the app has been configured for In-App Messaging correctly:
 
 ![Validation](./images/in-app-messaging/validation.png)
 
@@ -93,7 +93,7 @@ If any errors were found, details on how to fix those errors will be provided.
 
 ![Validation](./images/in-app-messaging/event-list.png)
 
-The "Event List" tab provides a quick look at all the events in the Assurance session that are related to In-App Messaging. Some of the events you may see here are:
+The **[!UICONTROL Event List]** tab provides a quick look at all the events in the Assurance session that are related to In-App Messaging. Some of the events you may see here are:
 
 * Requests and responses to retrieve messages
 * Display message events
