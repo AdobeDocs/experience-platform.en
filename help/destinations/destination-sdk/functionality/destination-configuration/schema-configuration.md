@@ -228,7 +228,7 @@ To learn more about the other destination components, see the following articles
 * [OAuth2 authentication](oauth2-authentication.md)
 * [UI attributes](ui-attributes.md)
 * [Customer data fields](customer-data-fields.md)
-* [Identities and attributes](identities-attributes.md)
+* [Identity types](identity-types.md)
 * [Destination delivery](destination-delivery.md)
 * [Audience metadata configuration](audience-metadata-configuration.md)
 * [Aggregation policy](aggregation-policy.md)

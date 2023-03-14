@@ -18,7 +18,7 @@ For a detailed description of the capabilities that you can configure through th
 * [Customer data fields](../../functionality/destination-configuration/customer-data-fields.md)
 * [UI attributes](../../functionality/destination-configuration/ui-attributes.md)
 * [Schema configuration](../../functionality/destination-configuration/schema-configuration.md)
-* [Identities and attributes](../../functionality/destination-configuration/identities-attributes.md)
+* [Identity types](../../functionality/destination-configuration/identity-types.md)
 * [Destination delivery](../../functionality/destination-configuration/destination-delivery.md)
 * [Audience metadata configuration](../../functionality/destination-configuration/audience-metadata-configuration.md)
 * [Segment mapping](../../functionality/destination-configuration/segment-mapping.md)
