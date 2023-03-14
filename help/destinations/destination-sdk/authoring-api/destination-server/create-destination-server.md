@@ -745,7 +745,6 @@ A successful response returns HTTP status 200 with details of your newly created
 
 +++
 
-
 >[!TAB Dynamic schema server]
 
 **Create a dynamic schema server**
@@ -762,12 +761,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
  -d '
 {
    "name":"Dynamic Schema Server",
-   "description":"This is a dynamic schema server used to retrieve a partner schema from the partner API.",
    "destinationServerType":"URL_BASED",
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://webhook.site/934b8e8b-c272-4bd3-b755-d1f50c6903ce?customerID={{customerData.customerID}}"
+         "value":"https://YOUR_API_ENDPOINT/"
       }
    },
    "httpTemplate":{
@@ -783,15 +781,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }
 ```
 
-|Parameter|Type|Description|
-|---|---|---|
-|`name`|String|The name of your dynamic schema server.|
-|`destinationServerType`|String|Set this value according to your destination platform. For [!DNL Google Cloud Storage] destinations, set this to `FILE_BASED_GOOGLE_CLOUD`.|
-|`fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy`|String| *Required.*  Use `PEBBLE_V1`.|
-|`fileBasedGoogleCloudStorageDestination.bucket.value`|String|The name of the [!DNL Google Cloud Storage] bucket to be used by this destination.|
-|`fileBasedGoogleCloudStorageDestination.path.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
-|`fileBasedGoogleCloudStorageDestination.path.value`|String|The path to the destination folder that will host the exported files.|
-|`fileConfigurations`|N/A|See [file formatting configuration](../../functionality/destination-server/file-formatting.md) for detailed information on how to configure these settings.|
+| Parameter | Type | Description |
+| -------- | ----------- | ----------- |
+|`name` | String | *Required.* Represents a friendly name of your dynamic schema server, visible only to Adobe. |
+|`destinationServerType` | String | *Required.* Set to `URL_BASED` for dynamic schema servers. |
+|`urlBasedDestination.url.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>  |
+|`urlBasedDestination.url.value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to. |
+|`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+|`responseFields.templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
+|`responseFields.value` | String | *Required.* This string is the character-escaped transformation template that transforms the response received from the partner API into the partner schema that will be displayed in the Platform UI. <br> <ul><li> For information on how to write the template, read the [Using templating section](../../functionality/destination-server/message-format.md#using-templating). </li><li> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, refer to the [Profile Attributes](../../functionality/destination-server/message-format.md#attributes) transformation. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -802,6 +800,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 A successful response returns HTTP status 200 with details of your newly created destination server configuration.
 
 +++
+
 >[!ENDTABS]
 
 ## API error handling {#error-handling}
