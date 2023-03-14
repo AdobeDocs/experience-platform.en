@@ -160,7 +160,7 @@ If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication typ
 ><p>Or even use paragraph tags.This is line one.</p><p>And more paragraph tags, for line two.</p>
 ><p>All the paragraph tags. For line three.</p>
 >Finally a test to include links with markdown [https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html](absolute link) and HTML <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html">link text</a> syntax.
->>Really finally, a test to include links with markdown [../overview.md](relative links) and HTML <a href="../overview.md">relative link text</a> syntax.
+>>Really finally, a test to include links with markdown [../overview.md](relative links) and HTML <a href="../overview.md">relative link text</a> syntax."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
