@@ -17,7 +17,7 @@ This document provides general guidance on mapping your marketing events data fr
 
 For example, if you are using Customer AI to predict the propensity to buy a product, the model for Customer AI needs both examples of successful purchase paths and examples of unsuccessful paths. This is because during model training, Customer AI looks to understand what events and journeys lead to a purchase. This also includes the actions taken by customers who did not purchase, such as an individual who stopped their journey at adding an item to the cart. These customers may exhibit similar behaviors however, Customer AI can provide insights and drilldown the major differences and factors that lead to a higher propensity score. Similarly, Attribution AI requires both types of events and journeys in order to display metrics such as touchpoint effectiveness, top conversion paths, and breakdowns by touchpoint position.
 
-For more examples and information on historical data requirements, visit the [Customer AI](./customer-ai/data-requirements.md#data-requirements) or [Attribution AI](./attribution-ai/data-requirements.md#data-requirements) historical data requirements section in the input / output documentation.
+For more examples and information on historical data requirements, visit the [Customer AI](./customer-ai/data-requirements.md#data-requirements) or [Attribution AI](./attribution-ai/input-output.md#data-requirements) historical data requirements section in the input / output documentation.
 
 ### Guidelines for stitching data
 
