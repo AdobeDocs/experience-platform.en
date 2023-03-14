@@ -1,6 +1,7 @@
 ---
 title: (API) Oracle Eloqua connection
 description: The (API) Oracle Eloqua destination allows you to export your account data and activate it within Oracle Eloqua for your business needs.
+last-substantial-update: 2023-03-14
 ---
 # [!DNL (API) Oracle Eloqua] connection
 
