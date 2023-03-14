@@ -33,7 +33,7 @@ The preparation process varies depending on whether your data is stored in Adobe
 
 If your data is stored outside of Experience Platform, you need to map your data to the required and relevant fields in a [Consumer ExperienceEvent schema](#cee-schema). This schema can be augmented with custom field groups to better capture your customer data. Once mapped, you can create a dataset using your Consumer ExperienceEvent schema and [ingest your data to Platform](../ingestion/home.md). The CEE dataset can then be selected when configuring an [!DNL Intelligent Service].
 
-Depending on the [!DNL Intelligent Service] you wish to use, different fields may be required. Note that it is a best practice to add data to a field if you have the data available. To learn more about the required fields, visit the [Attribution AI](./attribution-ai/data-requirements.md) or [Customer AI](./customer-ai/data-requirements.md) input / output guide.
+Depending on the [!DNL Intelligent Service] you wish to use, different fields may be required. Note that it is a best practice to add data to a field if you have the data available. To learn more about the required fields, visit the [Attribution AI](./attribution-ai/input-output.md) or [Customer AI](./customer-ai/data-requirements.md) data requirements guide.
 
 ### Adobe Analytics data preparation {#analytics-data}
 
@@ -59,7 +59,7 @@ GROUP BY channel.typeAtSource
 
 >[!IMPORTANT]
 >
->The Adobe Analytics connector takes up to four weeks to backfill data. If you recently set up a connection you should verify that the dataset has the minimum length of data required for Customer or Attribution AI. Please review the historical data sections in [Customer AI](./customer-ai/data-requirements.md#data-requirements) or [Attribution AI](./attribution-ai/indata-requirements.md#data-requirements), and verify you have enough data for your prediction goal.
+>The Adobe Analytics connector takes up to four weeks to backfill data. If you recently set up a connection you should verify that the dataset has the minimum length of data required for Customer or Attribution AI. Please review the historical data sections in [Customer AI](./customer-ai/data-requirements.md#data-requirements) or [Attribution AI](./attribution-ai/input-output.md#data-requirements), and verify you have enough data for your prediction goal.
 
 ### Adobe Audience Manager data preparation (Customer AI only) {#AAM-data}
 
