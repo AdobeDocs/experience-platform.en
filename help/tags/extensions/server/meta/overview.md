@@ -85,7 +85,7 @@ The quick start feature helps you get set up with ease and efficiency with the M
 
 This feature automatically installs and configures both the Meta Conversions API and the Meta Pixel extensions on a newly auto-generated tags and event forwarding property with the necessary rules and data elements. Additionally, it also auto installs and configures the Experience Platform Web SDK and Datastream. Lastly, the quick start feature auto-publishes the library to the designated URL in a development environment, which enables client side data collection and server side event forwarding in real-time via Event Forwarding and Experience Edge.
 
-### Install quick start feature
+### Install quick start feature {#quick-start}
 
 >[!NOTE]
 >
