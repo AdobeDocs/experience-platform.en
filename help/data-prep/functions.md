@@ -98,6 +98,8 @@ The following tables list all supported mapping functions, including sample expr
 | get_url_port | Returns the port of the given URL. If the input is invalid, it returns null. | <ul><li>URL: **Required** The URL from which the port needs to be extracted.</li></ul> | get_url_port(URL) | get_url_port​("sftp://example.com//home/​joe/employee.csv") | 22 |
 | get_url_path | Returns the path of the given URL. By default, the full path is returned. | <ul><li>URL: **Required** The URL from which the path needs to be extracted.</li><li>FULL_PATH: *Optional* A boolean value that determines if the full path is returned. If set to false, only the end of the path is returned.</li></ul> | get_url_path​(URL, FULL_PATH) | get_url_path​("sftp://example.com//​home/joe/employee.csv") | "//home/joe/​employee.csv" |
 | get_url_query_str | Returns the query string of a given URL as a map of query string name and query string value. | <ul><li>URL: **Required** The URL that you are trying to get the query string from.</li><li>ANCHOR: **Required** Determines what will be done with the anchor in the query string. Can be one of three values: "retain", "remove", or "append".<br><br>If the value is "retain", the anchor will be attached to the returned value.<br>If the value is "remove", the anchor will be removed from the returned value.<br>If the value is "append", the anchor will be returned as a separate value.</li></ul> | get_url_query_str​(URL, ANCHOR) | get_url_query_str​("foo://example.com:8042​/over/there?name=​ferret#nose", "retain")<br>get_url_query_str​("foo://example.com:8042​/over/there?name=​ferret#nose", "remove")<br>get_url_query_str​("foo://example.com​:8042/over/there​?name=ferret#nose", "append") | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_encoded | This function takes a URL as input and replaces or encodes the special characters with ASCII characters. For more information on special characters, please read the [list of special characters](#special-characters) in the appendix of this document. | <ul><li>URL: **Required** The input URL with special characters that you want to replace or encode with ASCII characters.</li></ul> | get_url_encoded(URL) | get_url_encoded("https</span>://example.com/partneralliance_asia-pacific_2022") | https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022 |
+| get_url_decoded | This function takes a URL as input and decodes the ASCII characters into special characters.  For more information on special characters, please read the [list of special characters](#special-characters) in the appendix of this document. | <ul><li>URL: **Required** The input URL with ASCII characters that you want to decode into special characters.</li></ul> | get_url_decoded(URL) | get_url_decoded("https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022") | https</span>://example.com/partneralliance_asia-pacific_2022 |
 
 {style="table-layout:auto"}
 
@@ -296,3 +298,43 @@ To ensure that the automatic mapping works, the following prerequisites must be 
 * New attributes should have matching names in the source schema and the XDM schema.
 
 If any of the prerequisites are not met, then you must manually map the source schema to the XDM schema using data prep.
+
+## Appendix
+
+The following provides additional information on using Data Prep mapping functions
+
+### Special characters {#special-characters}
+
+The table below outlines a list of reserved characters and their corresponding encoded characters.
+
+| Reserved character | Encoded character |
+| --- | --- |
+| space | %20 |
+| ! | %21 |
+| " | %22 |
+| # | %23 |
+| $ | %24 |
+| % | %25 |
+| & | %26 |
+| ' | %27 |
+| ( | %28 |
+| ) | %29 |
+| * | %2A |
+| + | %2B |
+| , | %2C |
+| / | %2F |
+| : | %3A |
+| ; | %3B |
+| < | %3C |
+| = | %3D |
+| > | %3E |
+| ? | %3F |
+| @ | %40 |
+| &#91; | %5B |
+| &#124; | %5C |
+| &#93; | %5D |
+| ^ | %5E |
+| &#96; | %60 |
+| ~ | %7E |
+
+{style="table-layout:auto"}
