@@ -10,11 +10,15 @@ Adobe Experience Platform allows you to ingest encrypted files through cloud sto
 
 The encrypted data ingestion process is as follows:
 
-1. [Create an encryption key pair using Experience Platform APIs](#create-encryption-key-pair). The encryption key pair consists of a private key and a public key. Once created, you can copy or download the public key, alongside its corresponding public key ID and Expiry Time. During this process, the private key will be stored by Experience Platform in a secure vault. 
+1. [Create an encryption key pair using Experience Platform APIs](#create-encryption-key-pair). The encryption key pair consists of a private key and a public key. Once created, you can copy or download the public key, alongside its corresponding public key ID and Expiry Time. During this process, the private key will be stored by Experience Platform in a secure vault. **NOTE:** The public key in the response is Base64-encoded and must be decrypted prior to using.
 2. Use the public key to encrypt the data file that you want to ingest.
 3. Place your encrypted file in your cloud storage.
 4. Once the encrypted file is ready, [create a source connection and a dataflow for your cloud storage source](#create-a-dataflow-for-encrypted-data). During the flow creation step, you must provide an `encryption` parameter and include your public key ID. 
 5. Experience Platform retrieves the private key from the secure vault to decrypt the data at the time of ingestion.
+
+>[!IMPORTANT]
+>
+>The maximum size of a single encrypted file is 100MB. For example, you can ingested 2GB worth of data in a single dataflow run, however, any individual file in that data cannot exceed 100MB.
 
 This document provides steps on how to generate a encryption key pair to encrypt your data, and ingest that encrypted data to Experience Platform using cloud storage sources.
 
@@ -47,15 +51,15 @@ The following request generates a encryption key pair using the PGP encryption a
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/connectors/encryption/keys' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
       "encryptionAlgorithm": "PGP",
       "params": {
-          "passPhrase": "{PASSPHRASE}"
+          "passPhrase": "{{PASSPHRASE}}"
       }
   }'
 ```
@@ -67,7 +71,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns your public key, public key ID, and the expiry time of your keys. The expiry time automatically sets to 180 days after the date of key generation. Expiry time is currently not configurable.
+A successful response returns your Base64-encoded public key, public key ID, and the expiry time of your keys. The expiry time automatically sets to 180 days after the date of key generation. Expiry time is currently not configurable.
 
 ```json
 {
@@ -121,43 +125,43 @@ The following request creates a dataflow to ingest encrypted data for a cloud st
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "ACME Customer Data",
-      "description: "ACME encrypted data ingestion",
-      "flowSpec": {
-          "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
-          "version": "1.0"
-      },
-      "sourceConnectionIds": [
-          "26b53912-1005-49f0-b539-12100559f0e2"
-      ],
-      "targetConnectionIds": [
-        "f7eb08fa-5f04-4e45-ab08-fa5f046e45ee"
-      ],
-      "transformations": [
-          {
-              "name": "Mapping",
-              "params": {
-                  "mappingId": "bf5286a9c1ad4266baca76ba3adc9366",
-                  "mappingVersion": 0
-              }
-          },
-          {
-              "name": "Encryption",
-              "params": {
-                  "publicKeyId": 512e686e-543e-4354-bcba-e1403ddcc532
-          }
-  }
-      ],
-      "scheduleParams": {
-          "startTime": "1597784298",
-          "frequency": "once"
-      }
-  }'
+    "name": "ACME Customer Data",
+    "description": "ACME Customer Data (Encrypted)",
+    "flowSpec": {
+        "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "655f7c1b-1977-49b3-a429-51379ecf0e15"
+    ],
+    "targetConnectionIds": [
+        "de688225-d619-481c-ae3b-40c250fd7c79"
+    ],
+    "transformations": [
+        {
+            "name": "Mapping",
+            "params": {
+                "mappingId": "6b6e24213dbe4f57bd8207d21034ff03",
+                "mappingVersion":"0"
+            }
+        },
+        {
+            "name": "Encryption",
+            "params": {
+                "publicKeyId":"311ef6f8-9bcd-48cf-a9e9-d12c45fb7a17"
+            }
+        }
+    ],
+    "scheduleParams": {
+        "startTime": "1675793392",
+        "frequency": "once"
+    }
+}'
 ```
 
 | Property | Description |
