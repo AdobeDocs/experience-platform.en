@@ -17,7 +17,6 @@ For a detailed description of the capabilities that you can configure through th
 * [Templating specs for destinations created with Destination SDK](../../../destination-sdk/functionality/destination-server/templating-specs.md)
 * [Message format](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [File formatting configuration](../../../destination-sdk/functionality/destination-server/file-formatting.md)
-* [Create destination server for a dynamic schema configuration]
 
 ## Getting started with destination server API operations {#get-started}
 
