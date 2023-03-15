@@ -30,7 +30,7 @@ After you have connected and set up your app for Adobe Analytics, you are ready 
 
 ![Configure](./images/adobe-analytics-streaming-media/configure.png)
 
-Once added, select the **!UICONTROL Media Analytics Events]** view in the **[!UICONTROL Adobe Analytics]** section to validate your session tracking.
+Once added, select the **[!UICONTROL Media Analytics Events]** view in the **[!UICONTROL Adobe Analytics]** section to validate your session tracking.
 
 ![Select](./images/adobe-analytics-streaming-media/select.png)
 
