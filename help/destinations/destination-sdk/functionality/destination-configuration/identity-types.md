@@ -1,17 +1,37 @@
 ---
-description: Learn how to configure the identities and attributes settings for destinations built with Destination SDK.
-title: Identities and attributes
+description: Learn how to configure the supported target identities for destinations built with Destination SDK.
+title: Identity mapping configuration
 ---
 
-# Identities
+# Identity mapping configuration
 
-When users export data to a destination that you built through Destination SDK, they can choose to export [!DNL XDM] [identities](../../../../identity-service/namespaces.md) or attributes.
+Experience Platform uses identity namespaces to describe the type of specific identities. For example, an identity namespace called `Email` identifies a value like name@email.com as an email address.
+
+When creating a destination through Destination SDK, in addition to [configuring a partner schema](schema-configuration.md) that users can map profile attributes and identities to, you can also define identity namespaces supported by your destination platform. When you do this, users have the added choice of selecting target identities, in addition to target profile attributes.
+
+To learn more about identity namespaces in Experience Platform, see the [identity namespaces documentation](../../../../identity-service/namespaces.md).
 
 
 
 
 
-The parameters in this section determine which identities and/or attributes your destination accepts. This configuration also populates the target identities and attributes in the [mapping step](../../../ui/activate-segment-streaming-destinations.md#mapping) of the Experience Platform user interface, where users map identities and attributes from their XDM schemas to the schema in your destination.
+
+
+When configuring identity namespaces for your destination, you can fine tune the target identity mapping supported by your destination, such as:
+
+* Allowing users to map XDM attributes to identity namespaces.
+* Allowing users to map [standard identity namespaces](../../../../identity-service/namespaces.md#standard) to your own identity namespaces.
+* Allowing users to map [custom identity namespaces](../../../../identity-service/namespaces.md#manage-namespaces) to your own identity namespaces.
+
+
+To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the the guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+
+You can configure your supported identity namespaces via the `/authoring/destinations` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
+
+* [Create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md)
+* [Update a destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md)
+
+This article describes all the supported identity namespaces configuration options that you can use for your destination, and shows what customers will see in the Platform UI.
 
 ## Supported integration types {#supported-integration-types}
 
