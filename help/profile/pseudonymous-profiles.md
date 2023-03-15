@@ -11,8 +11,8 @@ hidefromtoc: true
 
 In Adobe Experience Platform, a profile is considered for Pseudonymous data expiration if it meets the following conditions: 
 
-- The stitched profile's identity types match what the customer has specified as a pseudonymous or unknown identity type. 
-  - For example, if the profile's identity type is `ECID`, `GAID`, or `AAID`. The stitched profile has no IDs from any other identity type. In this example, a stitched profile does **not** have either an email or CRM identity. 
+- The stitched profile's identity namespaces match what the customer has specified as a pseudonymous or unknown identity namespace. 
+  - For example, if the profile's identity namespace is `ECID`, `GAID`, or `AAID`. The stitched profile has no IDs from any other identity namespace. In this example, a stitched profile does **not** have either an email or CRM identity. 
 - No activity has taken place in a user-defined amount of time. Activity is defined either by any Experience Events being ingested or customer-initiated updates to the profile attributes. 
   - For example, a new page view event or age attribute update is considered as an activity. However, a non-user-initiated segment membership update is **not** considered as an activity. Currently, to compute data expiration, the tracking at a profile level is based on the time of ingestion.
 
@@ -20,7 +20,7 @@ In Adobe Experience Platform, a profile is considered for Pseudonymous data expi
 
 Pseudonymous Profile data expiration cannot be configured through the Platform UI or APIs. Instead, you must contact support in order to enable this feature. When contacting support, please include the following information: 
 
-- The identity types to be considered for Pseudonymous profile deletes. 
+- The identity namespaces to be considered for Pseudonymous profile deletes. 
   - For example: `ECID` only, `AAID` only, or a combination of `ECID` and `AAID`.
 - The amount of time to wait before deleting a pseudonymous profile. The default recommendation for customers is 14 days. However, this value may differ based on your use case.
 - The current profile count compared to the license profile count.
@@ -31,10 +31,10 @@ The following section lists frequently asked questions regarding Pseudonymous pr
 
 ### What users should be using Pseudonymous profiles data expiration?
 
-- If you are using a streaming source that directly sends data to Platform.
+- If you are using Web SDK to directly send data to Platform.
 - If you have a website that serves unauthenticated customers en masse.
-- If you have excessive profile counts in your datasets and have confirmed that this excessive profile count is because of anonymous cookie-based identity type.
-  - To determine this, you should use the identity type overlap report. More information about this report can be found in the [identity overlap report section](./api/preview-sample-status.md#identity-overlap-report) of the preview sample status API guide.
+- If you have excessive profile counts in your datasets and have confirmed that this excessive profile count is because of anonymous cookie-based identity namespace.
+  - To determine this, you should use the identity namespace overlap report. More information about this report can be found in the [identity overlap report section](./api/preview-sample-status.md#identity-overlap-report) of the preview sample status API guide.
 
 ### What are some caveats you should be aware of before using Pseudonymous profiles data expiration?
 
@@ -56,9 +56,9 @@ Pseudonymous Profile data expiration works on a **sandbox** level. As a result, 
 
 #### Identity types
 
-Experience Event data expiration removes events **only** based on the event record's timestamp. The identity types included are **ignored** for expiration purposes.
+Experience Event data expiration removes events **only** based on the event record's timestamp. The identity namespaces included are **ignored** for expiration purposes.
 
-Pseudonymous Profile data expiration **only** considers profiles that have identity graphs which contain identity types that were selected by the customer, such as `ECID`, `AAID`, or other types of cookies. If the profile contains **any** additional identity type that was **not** in the customer's selected list, the profile will **not** be deleted.
+Pseudonymous Profile data expiration **only** considers profiles that have identity graphs which contain identity namespaces that were selected by the customer, such as `ECID`, `AAID`, or other types of cookies. If the profile contains **any** additional identity namespace that was **not** in the customer's selected list, the profile will **not** be deleted.
 
 #### Removed items
 
