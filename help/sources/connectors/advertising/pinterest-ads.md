@@ -70,7 +70,7 @@ Accordingly, when configuring the scheduling step of the sources workflow you sh
 | `Day` | 1 |
 | `Hour` | 24 |
 
-For example, in Platform, in the scheduling step of the sources workflow, if today is March, 15 2023 and frequency is chosen as above the [!DNL Pinterest] API would only retrieve data until December, 15 2023.
+For example, in Platform, in the scheduling step of the sources workflow, if today is March, 15 2023 and frequency is chosen as above the [!DNL Pinterest] API would only retrieve data until December, 15 2022.
 
 ### [!DNL Pinterest] time range {#pinterest-time-range}
 
