@@ -93,6 +93,8 @@ To create a static schema with profile attributes, define the target attributes 
 |`segmentRequired` | Boolean | Required | This parameter is required by Destination SDK and should always be set to `true`. |
 |`identityRequired` | Boolean | Required | Set to `true` if users should be able to map [identity types](identity-types.md) from Experience Platform to the attributes you defined in the `profileFields` array . |
 
+{style="table-layout:auto"}
+
 The resulting UI experience is shown in the images below.
 
 When users select the target mapping, they can see the fields defined in the `profileFields` array.
@@ -184,6 +186,8 @@ The example below shows both required source and destination mappings. When both
 |`requiredMappings.source`| String | Required| Indicates the value of the source field. Supported value types: <ul><li>XDM profile attributes. Example: `personalEmail.address`. When your source attribute is an XDM profile attribute, set the `sourceType` parameter to `text/x.schema-path`.</li><li>Regular expressions. Example: `iif(segmentMembership.ups.aep_seg_id.status==\"exited\", \"1\", \"0\")`. When your source attribute is a regular expression, set the `sourceType` parameter to `text/x.aep-xl`.</li><li>Macro templates. Example:`metadata.segment.alias`. When your source attribute is a macro template, set the `sourceType` parameter to `text/plain`. Currently, the only supported macro template is `metadata.segment.alias`.</li></ul>|
 |`requiredMappings.destination`| String | Required | Indicates the value of the target field. When both source and destination fields are specified as required mappings, users cannot select or edit any of the two fields and can only view the selection.|
 
+{style="table-layout:auto"}
+
 As a result, both the **[!UICONTROL Source field]** and **[!UICONTROL Target field]** sections in the Platform UI are greyed out.
 
 ![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-2.png)
@@ -211,6 +215,8 @@ The example below shows a required destination mapping. If only the destination 
 |`requiredMappings.destination`| String | Required | Indicates the value of the target field. When only the destination field is specified, users can select a source field to map to the destination.|
 |`mandatoryRequired`| Boolean | Optional | Indicates whether the mapping should be marked as a [mandatory attribute](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes). |
 |`primaryKeyRequired`| Boolean | Optional | Indicates whether the mapping should be marked as a [deduplication key](../../../ui/activate-batch-profile-destinations.md#deduplication-keys).|
+
+{style="table-layout:auto"}
 
 As a result, the **[!UICONTROL Target field]** section in the Platform UI is greyed out, while the **[!UICONTROL Source field]** section is active and users can interact with it. The **[!UICONTROL Mandatory key]** and **[!UICONTROL Deduplication key]** options are active, and users cannot change them.
 
