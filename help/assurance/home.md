@@ -11,7 +11,7 @@ Adobe Experience Platform Assurance is a product from [Adobe Experience Cloud](h
 >
 > Project Griffon is now known as **Assurance**!
 >
-> Project Griffon is now generally available to **all** Adobe Experience Cloud customers as Assurance. To learn more about this transition, please read the [user access](./user-access.md) guide.
+> Project Griffon is now generally available to **all** Adobe Experience Cloud customers as Assurance. To learn more about this transition, please read the [user access guide](./user-access.md).
 
 >[!INFO]
 >

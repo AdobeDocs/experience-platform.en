@@ -22,4 +22,3 @@ description: This guide shows what the different views look like on a device usi
 ## Disconnected
 
 ![](./images/on-device-views/disconnected.png)
-
