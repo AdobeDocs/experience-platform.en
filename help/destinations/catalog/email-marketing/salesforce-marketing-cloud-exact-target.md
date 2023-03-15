@@ -38,7 +38,9 @@ Note the following prerequisites in order to export data from Platform to your [
 
 #### You need to have a [!DNL Salesforce Marketing Cloud] account {#prerequisites-account}
 
-Reach out to your [!DNL Salesforce Account Executive] to subscribe to the [!DNL Salesforce Marketing Cloud Account Engagement] product if you do not have it already.
+A [!DNL Salesforce Marketing Cloud] account with a subscription to the [Marketing Cloud Account Engagement](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) product is mandatory to proceed.
+
+Reach out to [[!DNL Salesforce] Support](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) if you do not have a [!DNL Salesforce Marketing Cloud] account or your account is missing the [!DNL Marketing Cloud Account Engagement] product subscription.
 
 #### Create attributes within [!DNL Salesforce Marketing Cloud] {#prerequisites-attribute}
 
