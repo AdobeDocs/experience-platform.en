@@ -74,7 +74,7 @@ If you are sending different event types from the client and server with no over
 
 When sending shared events, make sure that you are including an event ID and name with every event that you send from both the client and server. When multiple events with the same ID and name are received, [!DNL Meta] automatically employs several strategies to deduplicate them and keep the most relevant data. See the [!DNL Meta] documentation on [deduplication for [!DNL Meta Pixel] and [!DNL Conversions API] events](https://www.facebook.com/business/help/823677331451951?id=1205376682832142) for details on this process.
 
-## Quick start workflow: Meta Conversions API Extension
+## Quick start workflow: Meta Conversions API Extension (Beta) {#quick-start}
 
 >[!IMPORTANT]
 >
@@ -85,7 +85,7 @@ The quick start feature helps you get set up with ease and efficiency with the M
 
 This feature automatically installs and configures both the Meta Conversions API and the Meta Pixel extensions on a newly auto-generated tags and event forwarding property with the necessary rules and data elements. Additionally, it also auto installs and configures the Experience Platform Web SDK and Datastream. Lastly, the quick start feature auto-publishes the library to the designated URL in a development environment, which enables client side data collection and server side event forwarding in real-time via Event Forwarding and Experience Edge.
 
-### Install quick start feature {#quick-start}
+### Install quick start feature 
 
 >[!NOTE]
 >
