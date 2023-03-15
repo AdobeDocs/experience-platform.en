@@ -86,4 +86,4 @@ Assurance has the following security measures in place:
 
 To set up Assurance, you'll need to first install the Assurance extension in your application. To learn how to do this, please read the tutorial on [implementing the Assurance extension](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
 
-After adding Assurance to your app, you can create an Assurance session that can be connected to your device. To learn how to use Assurance, please read the [guide on using Assurance](./tutorials/index.md).
+After adding Assurance to your app, you can create an Assurance session that can be connected to your device. To learn how to use Assurance, please read the [guide on using Assurance](./tutorials/using-assurance.md).

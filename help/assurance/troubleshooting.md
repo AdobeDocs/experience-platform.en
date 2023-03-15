@@ -7,9 +7,9 @@ description: This document outlines solutions to common issues when using Adobe 
 
 If you are having trouble getting Assurance to work, please see suggestions under the following issue topics to resolve commonly encountered issues.
 
-To enable smoother implementation and to discover any potential issues, ensure you have SDK logging turned on per [Enable Debug Logging](../getting-started/enable-debug-logging.md) in the Getting Started section.
+To enable smoother implementation and to discover any potential issues, ensure you have SDK logging turned on per [Enable Debug Logging](https://developer.adobe.com/client-sdks/documentation/getting-started/enable-debug-logging/) in the Getting Started section.
 
-You may change SDK log levels using the [`setLogLevel`](../mobile-core/api-reference.md#logging) API.
+You may change SDK log levels using the [`setLogLevel`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#setloglevel) API.
 
 ## On-device, app issues
 
@@ -29,13 +29,13 @@ You may change SDK log levels using the [`setLogLevel`](../mobile-core/api-refer
 
 >[!INFO]
 >
->For Android, the `startSession` API does not need to be explicitly called. For iOS, use the API as described in [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md#implement-aep-assurance-session-start-apis-ios-only).
+>For Android, the `startSession` API does not need to be explicitly called. For iOS, use the API as described in [Adobe Experience Platform Assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#register-aepassurance-with-mobile-core).
 
 ### Authentication overlay appears, but app fails to connect
 
 * Ensure internet connectivity of the device through the device web browser.
-* If the app has never successfully connected to the Assurance service, ensure it is set up for Assurance correctly. See instructions on installing the [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md#install-the-assurance-extension-in-the-data-collection-ui) SDK library.
-* Verify the session matches the link and is input correctly for the expected session. See [Log message "OrgID information is not available"](../platform-assurance-sdk/common-issues.md#orgid-information-is-not-available) (this is uncommon and relevant only if you have access to more than one ORG instance).
+* If the app has never successfully connected to the Assurance service, ensure it is set up for Assurance correctly. See instructions on installing the [Adobe Experience Platform Assurance](./tutorials/implement-assurance.md) SDK library.
+* Verify the session matches the link and is input correctly for the expected session. See [Log message "OrgID information is not available"](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/common-issues/#orgid-information-is-not-available) (this is uncommon and relevant only if you have access to more than one ORG instance).
 
 ### Adobe Analytics Debugging
 

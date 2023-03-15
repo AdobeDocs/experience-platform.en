@@ -22,7 +22,7 @@ Before continuing, please ensure you have the following services:
 - The [Adobe Experience Platform Data Collection UI](https://experience.adobe.com/#/data-collection/)
 - [Adobe Experience Platform Assurance](https://experience.adobe.com/assurance)
 
-To learn how to install Assurance in your application, please read the [implementing Assurance guide](./implement-assurance.md).
+To learn how to install Assurance in your application, please read the [implementing Assurance guide](../tutorials/implement-assurance.md).
 
 ## Use Assurance with Adobe Analytics for Streaming Media
 

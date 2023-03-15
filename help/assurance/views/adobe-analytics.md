@@ -5,7 +5,7 @@ description: This guide explains how to use Adobe Analytics with Adobe Experienc
 
 # Adobe Analytics view in Assurance
 
-The Adobe Experience Platform Assurance integration with Adobe Analytics provides a richer view of SDK events to users debugging and validating their Adobe Analytics implementation. The view now shows lifecycle and action/state events sent to Adobe Analytics from the [Adobe Experience Platform SDK](../../adobe-analytics/index.md). The view also features "response" detail that provides information on how the events were processed after the application of each respective report suite's processing rules.
+The Adobe Experience Platform Assurance integration with Adobe Analytics provides a richer view of SDK events to users debugging and validating their Adobe Analytics implementation. The view now shows lifecycle and action/state events sent to Adobe Analytics from the [Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/adobe-analytics/). The view also features "response" detail that provides information on how the events were processed after the application of each respective report suite's processing rules.
 
 ![](./images/adobe-analytics/overview.png)
 
@@ -16,7 +16,7 @@ Before continuing, please ensure you have the following services:
 - The [Adobe Experience Platform Data Collection UI](https://experience.adobe.com/#/data-collection/)
 - [Adobe Experience Platform Assurance](https://experience.adobe.com/assurance)
 
-To learn how to install Assurance in your application, please read the [implementing Assurance guide](./implement-assurance.md).
+To learn how to install Assurance in your application, please read the [implementing Assurance guide](../tutorials/implement-assurance.md).
 
 ## Post-processed status
 
