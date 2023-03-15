@@ -152,7 +152,7 @@ If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication typ
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Include Segment Timestamps"
->abstract="Toggle if you want the data export to include the UNIX timestamp when the segments were created and updated, as well as the UNIX timestamp when the segments were mapped to the destination for activation. View the documentation for a data export example with this option selected.<p>content from first bullet</p><p>content from second bullet</p><ul><li>List item one.</li><li>List item two.</li></ul> - More lines of text. - Still more lines of text. Formatting test to see if we can: <br>Use HTML formatting</p><p>Or even use paragraph tags.This is line one.</p><p>And more paragraph tags, for line two.</p><p>All the paragraph tags. For line three.</p>Finally a test to include links with markdown [https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html](absolute link) and HTML <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html">link text</a> syntax.Really finally, a test to include links with markdown [../overview.md](relative links) and HTML <a href="../overview.md">relative link text</a> syntax."
+>abstract="Toggle if you want the data export to include the UNIX timestamp when the segments were created and updated, as well as the UNIX timestamp when the segments were mapped to the destination for activation. View the documentation for a data export example with this option selected."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
