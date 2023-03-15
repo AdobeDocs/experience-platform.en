@@ -2,8 +2,10 @@
 title: Create a source connection and dataflow for Pinterest Ads using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Pinterest Ads using the Flow Service API.
 badge: "Beta"
+hide: true
+hidefromtoc: true
 ---
-# (Beta) Create a source connection and dataflow for [!DNL Pinterest Ads] using the [!DNL Flow Service] API
+# Create a source connection and dataflow for [!DNL Pinterest Ads] using the [!DNL Flow Service] API
 
 >[!NOTE]
 >
@@ -24,8 +26,8 @@ The following sections provide additional information that you will need to know
 
 In order to connect [!DNL Pinterest Ads] to Experience Platform, you must provide values for the following connection properties:
 
-* The [!DNL Pinterest] `Access Token`.
-* The [!DNL Pinterest] `Ad Account ID`.
+* The [!DNL Pinterest] `accessToken`.
+* The [!DNL Pinterest] `Ad account ID`.
 * One of [!DNL Pinterest] `Campaign`, `Ad Group` or `Ad` ID's as required.
 
 For more information on each of these, see their individual sections within the [!DNL Pinterest] [prerequisites](../../../../connectors/advertising/pinterest-ads.md#prerequisites) overview documentation.
@@ -457,8 +459,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "{YOURSOURCE} Source Connection",
-        "description": "{YOURSOURCE} Source Connection",
+        "name": "Pinterest Ads Source Connection",
+        "description": "Pinterest Ads Source Connection",
         "baseConnectionId": "70383d02-2777-4be7-a309-9dd6eea1b46d",
         "connectionSpec": {
             "id": "6360f136-5980-4111-8bdf-15d29eab3b5a",
@@ -482,7 +484,7 @@ curl -X POST \
 | `baseConnectionId` | The base connection ID of [!DNL Pinterest Ads]. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
 | `data.format` | The format of the [!DNL Pinterest Ads] data that you want to ingest. Currently, the only supported data format is `json`. |
-| `params.ad_account_id` | The [!DNL Pinterest] `Ad Account ID`. |
+| `params.ad_account_id` | The [!DNL Pinterest] `Ad account ID`. |
 | `params.object_type` | As the [!DNL Pinterest] Campaign Analytics API endpoint is required, the value would be `campaigns`. |
 | `params.object_ids` | The comma separated list of [!DNL Pinterest] Campaign IDs. |
 
@@ -497,8 +499,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "{YOURSOURCE} Source Connection",
-        "description": "{YOURSOURCE} Source Connection",
+        "name": "Pinterest Ads Source Connection",
+        "description": "Pinterest Ads Source Connection",
         "baseConnectionId": "70383d02-2777-4be7-a309-9dd6eea1b46d",
         "connectionSpec": {
             "id": "6360f136-5980-4111-8bdf-15d29eab3b5a",
@@ -522,7 +524,7 @@ curl -X POST \
 | `baseConnectionId` | The base connection ID of [!DNL Pinterest Ads]. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
 | `data.format` | The format of the [!DNL Pinterest Ads] data that you want to ingest. Currently, the only supported data format is `json`. |
-| `params.ad_account_id` | The [!DNL Pinterest] `Ad Account ID`. |
+| `params.ad_account_id` | The [!DNL Pinterest] `Ad account ID`. |
 | `params.object_type` | As the [!DNL Pinterest] Ad Groups Analytics API endpoint is required, the value would be `ad_groups`. |
 | `params.object_ids` | The comma separated list of [!DNL Pinterest] Ad Groups IDs. |
 
@@ -537,8 +539,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "{YOURSOURCE} Source Connection",
-        "description": "{YOURSOURCE} Source Connection",
+        "name": "Pinterest Ads Source Connection",
+        "description": "Pinterest Ads Source Connection",
         "baseConnectionId": "70383d02-2777-4be7-a309-9dd6eea1b46d",
         "connectionSpec": {
             "id": "6360f136-5980-4111-8bdf-15d29eab3b5a",
@@ -562,7 +564,7 @@ curl -X POST \
 | `baseConnectionId` | The base connection ID of [!DNL Pinterest Ads]. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
 | `data.format` | The format of the [!DNL Pinterest Ads] data that you want to ingest. Currently, the only supported data format is `json`. |
-| `params.ad_account_id` | The [!DNL Pinterest] `Ad Account ID`. |
+| `params.ad_account_id` | The [!DNL Pinterest] `Ad account ID`. |
 | `params.object_type` | As the [!DNL Pinterest] Ad Analytics API endpoint is required, the value would be `ads`. |
 | `params.object_ids` | The comma separated list of [!DNL Pinterest] Ad IDs. |
 
