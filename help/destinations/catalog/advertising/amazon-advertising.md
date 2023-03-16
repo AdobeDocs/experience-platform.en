@@ -63,7 +63,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 Note: once selecting this Amazon Ads Advertiser Id, you will need to create a new destination to change this. If you re-authenticate the OAuth credentials and select a new Advertiser Id, your changes will not apply.
 
-![alt text](assets/amazon_ads_image_1.png)
+![Screenshot showing how to configure a new destination](../../assets/catalog/advertising/amazon_ads_image_1.png)
 ### Enable alerts
 
 You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, read the guide on [subscribing to destinations alerts using the UI](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/alerts.html?lang=en).
@@ -81,7 +81,7 @@ Read [Activate profiles and segments to streaming segment export destinations](h
 
 The Amazon Advertising connection supports hashed email address and hashed phone numbers for identity matching purposes.  The screenshot below provides an example matching that is compatible with the Amazon Ads connection:
 
-![alt text](assets/amazon_ads_image_2.png)
+![Screenshot showing mapping of attributes and identities](../../assets/catalog/advertising/amazon_ads_image_2.png)
 
 When mapping email, select the Lower case, SHA256 source field. (Email_LC_SHA256)  
 When mapping phone, select the SHA256 source field (Phone_SHA256)
@@ -96,7 +96,7 @@ Once  your audience has been uploaded, you may validate your audience has been c
 
 Navigate to your Advertiser ID → Audiences → Advertiser Audiences. If your audience was created successfully and meets the minimum number of audience members, you will see a Status of `Active`.  Additional details about your audience size and reach can be found in the Forecasted Reach panel on the right side of the DSP user interface. 
 
-![alt text](assets/amazon_ads_image_3.png)
+![alt text](../../assets/catalog/advertising/amazon_ads_image_3.png)
 
 
 ## Data usage and governance
