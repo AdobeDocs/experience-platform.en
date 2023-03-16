@@ -13,6 +13,11 @@ Adobe Experience Platform [!DNL Privacy Service] was developed in response to a 
 
 [!DNL Privacy Service] provides a RESTful API and user interface to help you manage customer data requests. With [!DNL Privacy Service], you can submit requests to access and delete personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
 
+>[!IMPORTANT]
+>
+>Privacy Service is only meant for data subject requests. Any other usage of privacy service for data cleanup or maintenance is not supported or allowed. Adobe has a legal obligation to fulfill them in a timely manner. As such, load-testing is not permitted against Privacy Service as it is a production only environment and creates an unnecessary backlog of valid privacy requests.
+>A hard daily upload limit is now in place to help prevent abuse of the service. Users found to abuse the system will have their access to the service disabled. A subsequent meeting will then be held with them to address their actions and discuss the acceptable use for Privacy Service.
+
 ## Getting started with [!DNL Privacy Service] {#getting-started}
 
 In order to make use of [!DNL Privacy Service], several key decisions need to be made in terms of your organization's privacy requirements, the kinds of identity data you collect from your customers, and the best way to interface your CRM system with the service.
