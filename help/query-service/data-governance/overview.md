@@ -86,6 +86,14 @@ Query Service provides the ability to use standard ANSI SQL for [`CREATE VIEW`](
 
 The `CREATE VIEW` keyword defines a view of a query but the view is not physically materialized. Instead, the query is run every time the view is referenced in a query. When a user creates a view from a dataset, the role- and attribute-based access control rules for the parent dataset are **not** hierarchically applied. As a result, you must explicitly set permissions on each of the columns when a view is created.
 
+#### Create field-based access restrictions on accelerated datasets
+
+You can use Query Service CTAS queries to create accelerated datasets and structure these datasets based on existing XDM schemas or adhoc schemas. Administrators can then [add/edit data usage labels for the schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/labels.html#edit-the-labels-for-the-schema-or-field) or [adhoc schemas](https://experienceleague.adobe.com/docs/experience-platform/query/data-governance/ad-hoc-schema-labels.html?lang=en#edit-governance-labels). The [!UICONTROL Labels] workspace in the [!UICONTROL Schemas] UI allows you to apply, create and edit labels to schema. 
+
+Data usage labels can also be [applied or edited directly onto the dataset](https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html#add-labels) through the Datasets UI, or created from the Access Control [!UICONTROL Labels] workspace. See the guide on how to [Create a new label](https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/labels.html?lang=en) for more information.
+
+Access can then be granted or restricted based on the permissions assigned to a role and the labels attached to the fields. User access to individual columns is controlled by the relevant data usage labels and the permission sets applied to the roles assigned to users.
+
 ### Connectivity {#connectivity}
 
 Query Service is accessible through the Platform UI or by forming a connection with external compatible clients. Access to all available fronts is controlled by a set of credentials.
@@ -188,7 +196,7 @@ See the Privacy Service documentation for more information on [identity data for
 
 Query Service features for data governance simplify and streamline the process of data categorization and adherence to data usage regulations. Once the data has been identified, Query Service enables you to allocate the primary identity on all output datasets. You **must** add identities into the dataset to facilitate data privacy requests and work towards data compliance. 
 
-Schema data fields can be set as an identity field through the Platform UI and Query Service also allows you to [mark the primary identities by using the SQL command ‘ALTER TABLE’](../sql/syntax.md#alter-table). Setting an identity using the `ALTER TABLE` command is especially useful when datasets are created using SQL rather than directly from a schema through the Platform UI. See the documentation for instructions on how to [define identity fields in the UI](../../xdm/ui/fields/identity.md) when using standard schemas.
+Schema data fields can be set as an identity field through the Platform UI and Query Service also allows you to [mark the primary identities by using the SQL command 'ALTER TABLE'](../sql/syntax.md#alter-table). Setting an identity using the `ALTER TABLE` command is especially useful when datasets are created using SQL rather than directly from a schema through the Platform UI. See the documentation for instructions on how to [define identity fields in the UI](../../xdm/ui/fields/identity.md) when using standard schemas.
  
 <!-- COMMENTING OUT DATA HYGEINE SECTION TEMPORARILY UNTIL IT IS GA. currently it is in Beta only.
 
