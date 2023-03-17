@@ -88,11 +88,13 @@ The `CREATE VIEW` keyword defines a view of a query but the view is not physical
 
 #### Create field-based access restrictions on accelerated datasets {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-You can use Query Service CTAS queries to create accelerated datasets and structure these datasets based on existing XDM schemas or adhoc schemas. Administrators can then [add/edit data usage labels for the schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/labels.html#edit-the-labels-for-the-schema-or-field) or [adhoc schemas](https://experienceleague.adobe.com/docs/experience-platform/query/data-governance/ad-hoc-schema-labels.html?lang=en#edit-governance-labels). The [!UICONTROL Labels] workspace in the [!UICONTROL Schemas] UI allows you to apply, create and edit labels to schema. 
+With the attribute-based access control capability you can define organizational or data usage scopes on fact & dimension datasets in the [accelerated store](../-distiller/query-accelerated-store/send-accelerated-queries.md). This allows administrators to manage access to specific segments and better manage the access given to users or groups of users.
+
+To create field-based access restrictions on accelerated datasets, you can use Query Service CTAS queries to create accelerated datasets and structure these datasets based on existing XDM schemas or adhoc schemas. Administrators can then [add/edit data usage labels for the schema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) or [adhoc schema](./ad-hoc-schema-labels.md#edit-governance-labels). You can apply, create, and edit labels to your schemas from the [!UICONTROL Labels] workspace in the [!UICONTROL Schemas] UI. 
 
 Data usage labels can also be [applied or edited directly onto the dataset](https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html#add-labels) through the Datasets UI, or created from the Access Control [!UICONTROL Labels] workspace. See the guide on how to [Create a new label](https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/labels.html?lang=en) for more information.
 
-Access can then be granted or restricted based on the permissions assigned to a role and the labels attached to the fields. User access to individual columns is controlled by the relevant data usage labels and the permission sets applied to the roles assigned to users.
+User access to individual columns can then be controlled by the attached data usage labels and the permission sets applied to the roles that are assigned to users.
 
 ### Connectivity {#connectivity}
 
