@@ -88,7 +88,7 @@ The `CREATE VIEW` keyword defines a view of a query but the view is not physical
 
 #### Create field-based access restrictions on accelerated datasets {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-With the attribute-based access control capability you can define organizational or data usage scopes on fact & dimension datasets in the [accelerated store](../-distiller/query-accelerated-store/send-accelerated-queries.md). This allows administrators to manage access to specific segments and better manage the access given to users or groups of users.
+With the [attribute-based access control capability](../../access-control/abac/overview.md) you can define organizational or data usage scopes on fact & dimension datasets in the [accelerated store](../-distiller/query-accelerated-store/send-accelerated-queries.md). This allows administrators to manage access to specific segments and better manage the access given to users or groups of users.
 
 To create field-based access restrictions on accelerated datasets, you can use Query Service CTAS queries to create accelerated datasets and structure these datasets based on existing XDM schemas or adhoc schemas. Administrators can then [add/edit data usage labels for the schema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) or [adhoc schema](./ad-hoc-schema-labels.md#edit-governance-labels). You can apply, create, and edit labels to your schemas from the [!UICONTROL Labels] workspace in the [!UICONTROL Schemas] UI. 
 
