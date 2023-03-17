@@ -49,7 +49,6 @@ When defining the target identities that your destination supports, you can use 
 |`transformation` | String | Optional | Displays the [[!UICONTROL Apply transformation]](../../../ui/activate/activate-segment-streaming-destinations.md#apply-transformation) check box in the Platform UI. Use this option to give users the ability to hash source attributes on export. To enable this option, set the value to `sha256(lower($))`. |
 |`requiredTransformation` | String | Optional | When customers select this source identity namespace, the [[!UICONTROL Apply transformation]](../../../ui/activate/activate-segment-streaming-destinations.md#apply-transformation) check box is automatically applied to the mapping, and customers cannot disable it. To enable this option, set the value to `sha256(lower($))`.|
 
-
 {style="table-layout:auto"}
 
 
@@ -70,7 +69,6 @@ When defining the target identities that your destination supports, you can use 
    }
 ```
 
-
 You must indicate which [!DNL Platform] identities customers are able to export to your destination. Some examples are [!DNL Experience Cloud ID], hashed email, device ID ([!DNL IDFA], [!DNL GAID]). These values are [!DNL Platform] identity namespaces that customers can map to identity namespaces from your destination.
 
 Identity namespaces do not require a 1-to-1 correspondence between [!DNL Platform] and your destination.
@@ -78,13 +76,48 @@ For instance, customers could map a [!DNL Platform] [!DNL IDFA] namespace to an 
 
 Read more about identities in the [identity namespace overview](../../../../identity-service/namespaces.md).
 
-![Render target identities in the UI](../../assets/functionality/destination-configuration/target-identities-ui.png) 
+## Mapping considerations
+
+Customers can map identity namespaces either to the identity namespaces that you define in the `identityNamespaces` section, or to attributes that you define in the [schema configuration](schema-configuration.md).
+
+If customers select a source identity namespace and do not select a target mapping, Platform automatically maps the source field to an equivalent attribute, as shown below.
 
 
 
 
 
-## How to configure destinations to hash identities and attribs on export
+## Configure your destination with optional source field hashing
 
+Experience Platform customers can choose to ingest data into Platform in hashed format or in plain text. If your destination platform accepts both hashed and unhashed data, you can give customers the option to choose whether Platform should hash the source field values when they get exported to your destination.
+
+The configuration below
+
+```json
+"identityNamespaces":{
+      "Customer_contact":{
+         "acceptsAttributes":true,
+         "acceptsCustomNamespaces":true,
+         "transformation": "sha256(lower($))",
+         "acceptedGlobalNamespaces":{
+            "Email":{
+            },
+            "Phone":{
+            }
+         }
+      }
+   }
+```
+
+
+
+Destination SDK supports source field hashing in the mapping step. 
+
+
+Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
+
+When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have Adobe Experience Platform automatically hash the source attributes on activation.
+
+
+## Configure your destination with mandatory source field hashing
 
 
