@@ -5,7 +5,7 @@ badge: "Beta"
 ---
 # Use the self-identification survey to build your Experience Cloud personal profile
 
-The self-identification survey is a short questionnaire presented in the Adobe Experience Platform UI home page. Use the survey to provide information on your job functions and general objectives. This information is then used to better align in-product guides with your objectives. 
+The self-identification survey is a short questionnaire presented in the Adobe Experience Platform UI home page. Use the survey to provide information on your job functions and general objectives. This information is then used to better align in-product guides and eventually deliver content that is more relevant to your objectives.
 
 This document provides information on how you can use the self-identification survey in Platform UI to receive relevant content based on your goals and tasks. This document also provides information on how to reconfigure your personal profile attributes using the UI.
 
@@ -18,6 +18,15 @@ The self-identification survey prompt appears in the bottom right of the Platfor
 To begin the survey, select **[!UICONTROL Start]**.
 
 ![The Platform UI home page with the toast message prompting you to start the self-identification survey.](./images/survey/survey-prompt.png)
+
+### Selection mapping
+
+| Role function | Objectives |
+| --- | --- |
+| Administration | <ul><li>Create and manage users</li><li>Assign roles and permissions</li><li>Manage license usage and sandboxes</li></ul>|
+| Engineering | <ul><li>Data ingestion</li><li>Model data structures</li><li>Query, filter, and distill data</li></ul> |
+| Privacy & Governance | <ul><li>Configure consent and data policies</li><li>Privacy and data governance</li></ul> |
+| Marketing | <ul><li>Develop marketing strategies</li><li>Segment audiences</li><li>Set up and analyze dashboards</li><li>Activate destinations</li></ul> |
 
 For the first survey question, select the function that best describes your work. 
 
@@ -76,4 +85,4 @@ The self-identification survey appears, allowing you to reconfigure your respons
 
 ## Next steps
 
-By reading this document, you have now submitted and updated information regarding your job functions and objectives in order to receive more relevant product guidelines when using Platform UI. For more information on Platform UI, read the [Experience Platform overview](home.md).
+By reading this document, you have now submitted and updated information regarding your job functions and objectives in order to receive more relevant content when using Platform UI. For more information on Platform UI, read the [Experience Platform overview](home.md).
