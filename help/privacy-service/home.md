@@ -7,6 +7,11 @@ exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 ---
 # [!DNL Privacy Service] overview
 
+>[!IMPORTANT]
+>
+>Permissions for Adobe Experience Platform Privacy Service have been improved to increase their level of granularity. These changes enable organization admins to grant more users access with the desired role and permission level. Technical account users must update their Privacy Service permissions as this impending update constitutes a breaking change for them. The enforcement of this permissions change will take place on **March 28, 2023**.
+>Technical accounts are available to enterprise customers and created through the Adobe Developers Console. The adobe ID of a technical account holder ends in `@techacct.adobe.com`. If you are unsure whether you are a technical account holder, please contact your organization administrator.
+
 In order to deliver better customer experiences, you need to collect and store your customers' personal data. When using this data, it is important to understand and respect your customers' privacy. New legal and organizational regulations are giving users the right to access or delete their personal data from your data stores upon request.
 
 Adobe Experience Platform [!DNL Privacy Service] was developed in response to a fundamental shift in how businesses are required to manage the personal data of their customers. The central purpose of [!DNL Privacy Service] is to automate compliance with data privacy regulations which, when violated, can result in major fines and disrupt data operations for your business.
