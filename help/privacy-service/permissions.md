@@ -9,7 +9,7 @@ exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 >
 >Permissions for Adobe Experience Platform Privacy Service have been improved to increase their level of granularity. These changes enable organization admins to grant more users access with the desired role and permission level. Technical account users must update their Privacy Service permissions as this impending update constitutes a breaking change for them. The enforcement of this permissions change will take place on **March 28, 2023**.
 >
->Technical accounts are available to enterprise customers and created through the Adobe Developers Console. The adobe ID of a technical account holder ends in `@techacct.adobe.com`. If you are unsure whether you are a technical account holder, please contact your organization administrator.
+>Technical accounts are available to enterprise customers and created through the Adobe Developers Console. The Adobe ID of a technical account holder ends in `@techacct.adobe.com`. If you are unsure whether you are a technical account holder, please contact your organization administrator.
 
 Access to [Adobe Experience Platform Privacy Service](./home.md) is controlled through granular role-based permissions in Adobe Admin Console. By creating product profiles that assign permissions to groups of users, you can determine who has access to which features in the Privacy Service [UI](./ui/overview.md) and [API](./api/overview.md).
 
