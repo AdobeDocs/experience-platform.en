@@ -40,9 +40,6 @@ user-guide-description: Learn how Experience Platform can deliver personalized e
   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
   * [Platform integrations with Experience Cloud (Video)](video/experience-cloud-integrations.md)
-* Marketer playground playbooks
-  * Playbooks overview
-    * Catalog
 * Governance, privacy, and security {#governance-privacy-security}
   * [Overview](./governance-privacy-security/overview.md)
   * Consent management {#consent}
