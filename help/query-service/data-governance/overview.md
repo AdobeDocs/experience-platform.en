@@ -86,7 +86,7 @@ Query Service provides the ability to use standard ANSI SQL for [`CREATE VIEW`](
 
 The `CREATE VIEW` keyword defines a view of a query but the view is not physically materialized. Instead, the query is run every time the view is referenced in a query. When a user creates a view from a dataset, the role- and attribute-based access control rules for the parent dataset are **not** hierarchically applied. As a result, you must explicitly set permissions on each of the columns when a view is created.
 
-#### Create field-based access restrictions on accelerated datasets
+#### Create field-based access restrictions on accelerated datasets {#create-field-based-access-restrictions-on-accelerated-datasets}
 
 You can use Query Service CTAS queries to create accelerated datasets and structure these datasets based on existing XDM schemas or adhoc schemas. Administrators can then [add/edit data usage labels for the schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/labels.html#edit-the-labels-for-the-schema-or-field) or [adhoc schemas](https://experienceleague.adobe.com/docs/experience-platform/query/data-governance/ad-hoc-schema-labels.html?lang=en#edit-governance-labels). The [!UICONTROL Labels] workspace in the [!UICONTROL Schemas] UI allows you to apply, create and edit labels to schema. 
 
