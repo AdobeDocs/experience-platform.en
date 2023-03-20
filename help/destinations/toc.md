@@ -197,7 +197,7 @@ feature: Destinations
             * [Customer data fields](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
             * [UI attributes](./destination-sdk/functionality/destination-configuration/ui-attributes.md)
             * [Partner schema configuration](./destination-sdk/functionality/destination-configuration/schema-configuration.md)
-            * [Identity types](./destination-sdk/functionality/destination-configuration/identity-types.md)
+            * [Identity mapping configuration](./destination-sdk/functionality/destination-configuration/identity-mapping-configuration.md)
             * [Destination delivery](./destination-sdk/functionality/destination-configuration/destination-delivery.md)
             * [Segment mapping configuration](./destination-sdk/functionality/destination-configuration/segment-mapping.md)
             * [Audience metadata configuration](./destination-sdk/functionality/destination-configuration/audience-metadata-configuration.md)
