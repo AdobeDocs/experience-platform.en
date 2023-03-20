@@ -45,7 +45,7 @@ This guide requires a working understanding of the following components of Adobe
 *   [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] allows you to build segments and generate audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-Time Customer Profile] data.
 *   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you need to know in order to activate data to batch destinations in Platform.
+The following sections provide additional information that you need to know in order to activate data to file-based destinations in Platform.
 
 ### Required permissions {#permissions}
 
@@ -100,7 +100,7 @@ Before starting the workflow to export profiles, identify the connection spec an
 
 {style="table-layout:auto"}
 
-You need these IDs to construct various Flow Service entities. You also need to refer to parts of the Connection Spec itself to set up certain entities so you can retrieve the Connection Spec from Flow Service APIs. See the examples below of retrieving connection specs for all the destinations in the table:
+You need these IDs to construct various the flow service entities in the next steps of this tutorial. You also need to refer to parts of the connection spec itself to set up certain entities so you can retrieve the Connection Spec from Flow Service APIs. See the examples below of retrieving connection specs for all the destinations in the table:
 
 >[!BEGINTABS]
 
@@ -310,13 +310,13 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDTABS]
 
-Follow the steps below to set up a segment export dataflow to a cloud storage destination. For some steps, the requests and responses differ between the various cloud storage destinations. In those cases, use the tabs on the page to retrieve the requests and responses specific to the destination that you want to connect and export segments to. Be sure to use the correct connection spec and flow spec for the destination you are configuring.
+Follow the steps below to set up a segment export dataflow to a cloud storage destination. For some steps, the requests and responses differ between the various cloud storage destinations. In those cases, use the tabs on the page to retrieve the requests and responses specific to the destination that you want to connect and export segments to. Be sure to use the correct `connection spec` and `flow spec` for the destination you are configuring.
 
 ## Create a Source Connection {#create-source-connection}
 
 ![Placeholder overview diagram](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
-After deciding which destination you are exporting segments to, you need to create a source connection. The source connection represents the connection to the internal [Experience Platform Profile Store](/help/profile/home.md#profile-data-store). 
+After deciding which destination you are exporting segments to, you need to create a source connection. The [source connection](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) represents the connection to the internal [Experience Platform Profile Store](/help/profile/home.md#profile-data-store). 
 
 >[!BEGINSHADEBOX]
 
@@ -324,7 +324,7 @@ After deciding which destination you are exporting segments to, you need to crea
 
 +++Create source connection - Request
 
-Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments when copy-pasting the request into your terminal of choice. 
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
@@ -369,11 +369,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 A successful response returns the ID (`id`) of the newly created source connection and an `etag`. Note down the source connection ID as you will need it later when creating the dataflow. 
 
-## Create a (target) base connection {#create-base-connection}
+## Create a base connection {#create-base-connection}
 
 ![Placeholder overview diagram](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
-A base connection securely stores the credentials to your destination. Depending on the destination type, the credentials needed to authenticate against that destination can vary. To find these authentication parameters, first retrieve the [!DNL connection spec] for your desired destination as described in the section [Select destination where to export segments](#select-destination) and then look at the `authSpec` of the response. Reference the tabs below for the `authSpec` properties of all supported destinations.
+A [base connection](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) securely stores the credentials to your destination. Depending on the destination type, the credentials needed to authenticate against that destination can vary. To find these authentication parameters, first retrieve the `connection spec` for your desired destination as described in the section [Select destination where to export segments](#select-destination) and then look at the `authSpec` of the response. Reference the tabs below for the `authSpec` properties of all supported destinations.
 
 >[!BEGINTABS]
 
@@ -747,7 +747,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
-```shell {line-numbers="true" start-line="1" highlight="16"}
+```shell {line-numbers="true" start-line="1" highlight="17"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -857,14 +857,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "name": "Data Landing Zone(DLZ) Base Connection",
-  "auth": {
-    "name": "Data Landing Zone(DLZ) Base Connection",
-    "description": "Data Landing Zone(DLZ) Base Connection",
-    "connectionSpec": {
-        "id": "10440537-2a7b-4583-ac39-ed38d4b848e8",
-        "version": "1.0"
-    }
+  "name": "Data Landing Zone(DLZ) Base Connection"
 }'
 ```
 
@@ -1025,13 +1018,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Note the connection ID from the response. This ID will be required in the next step when creating the target connection. 
 
-## Create a Target Connection {#create-target-connection}
+## Create a target connection {#create-target-connection}
 
 ![Placeholder overview diagram](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
-Next, you need to create a target connection which stores the export parameters for the exported segments. Export parameters include export location, file format, compression, and other details. For example, for CSV files, you can select several export options. Get extensive information about all supported CSV export options in the [file formatting configurations page](/help/destinations/ui/batch-destinations-file-formatting-options.md). 
+Next, you need to create a target connection. [Target connections](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) store the export parameters for the exported segments. Export parameters include export location, file format, compression, and other details. For example, for CSV files, you can select several export options. Get extensive information about all supported CSV export options in the [file formatting configurations page](/help/destinations/ui/batch-destinations-file-formatting-options.md). 
 
-Refer to the `targetSpec` properties provided in the destination's connection spec to understand the supported properties for each destination type. Reference the tabs below for the `targetSpec` properties of all supported destinations.
+Refer to the `targetSpec` properties provided in the destination's `connection spec` to understand the supported properties for each destination type. Reference the tabs below for the `targetSpec` properties of all supported destinations.
 
 >[!BEGINTABS]
 
@@ -1041,7 +1034,7 @@ Refer to the `targetSpec` properties provided in the destination's connection sp
 
 Note the highlighted lines with inline comments in the [!DNL connection spec] example below, which provide additional information about where to find the [!DNL target spec] parameters in the connection spec. You can see also in the example below which target parameters are *not* applicable to segment export destinations.
 
-```json
+```json {line-numbers="true" start-line="1" highlight="10,56"}
 {
     "items": [
         {
@@ -1252,7 +1245,7 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
 
 Note the highlighted lines with inline comments in the [!DNL connection spec] example below, which provide additional information about where to find the [!DNL target spec] parameters in the connection spec. You can see also in the example below which target parameters are *not* applicable to segment export destinations.
 
-```json {line-numbers="true" start-line="1" highlight="10,29,44"}
+```json {line-numbers="true" start-line="1" highlight="10,44"}
 {
     "items": [
         {
@@ -1643,7 +1636,7 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
 
 Note the highlighted lines with inline comments in the [!DNL connection spec] example below, which provide additional information about where to find the [!DNL target spec] parameters in the connection spec. You can see also in the example below which target parameters are *not* applicable to segment export destinations.
 
-```json {line-numbers="true" start-line="1" highlight="9,21,36"}
+```json {line-numbers="true" start-line="1" highlight="9,36"}
 "items": [
     {
         "id": "10440537-2a7b-4583-ac39-ed38d4b848e8",
@@ -1833,7 +1826,7 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
 
 Note the highlighted lines with inline comments in the [!DNL connection spec] example below, which provide additional information about where to find the [!DNL target spec] parameters in the connection spec. You can see also in the example below which target parameters are *not* applicable to segment export destinations.
 
-```json {line-numbers="true" start-line="1" highlight="10,29,44"}
+```json {line-numbers="true" start-line="1" highlight="10,44"}
 {
     "items": [
         {
@@ -2032,7 +2025,7 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
 
 Note the highlighted lines with inline comments in the [!DNL connection spec] example below, which provide additional information about where to find the [!DNL target spec] parameters in the connection spec. You can see also in the example below which target parameters are *not* applicable to segment export destinations.
 
-```json {line-numbers="true" start-line="1" highlight="10,22,37"}
+```json {line-numbers="true" start-line="1" highlight="10,37"}
 {
     "items": [
         {
@@ -2774,13 +2767,18 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-Note the target connection ID from the response. This ID will be required in the next step when creating the dataflow to export segments. 
+Note the `target connection ID` from the response. This ID will be required in the next step when creating the dataflow to export segments. 
 
 ### Add encryption to exported files
 
-Optionally, you can add encryption to your exported files. To do this, you need to add items from the `encryptionSpecs`. See:
+Optionally, you can add encryption to your exported files. To do this, you need to add items from the `encryptionSpecs`. See the request example below with the mandatory parameters highlighted:
 
-```json
+
+>[!BEGINSHADEBOX]
+
++++ View encryption specs for cloud storage destinations
+
+```json {line-numbers="true" start-line="1" highlight="26-27"}
 
            "encryptionSpecs": [
                 {
@@ -2816,11 +2814,74 @@ Optionally, you can add encryption to your exported files. To do this, you need 
 
 ```
 
++++ 
+
+**Request** 
+
++++Add encryption to target connection - Request
+
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments when copy-pasting the request into your terminal of choice. 
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'accept: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--data-raw '{
+   "name":"SFTP Target Connection",
+   "baseConnectionId":"<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
+   "params":{
+      "mode":"Server-to-server",
+      "bucketName":"your-bucket-name",
+      "path":"folder/subfolder",
+      "compression":"GZIP",
+      "fileType":"CSV",
+      "csvOptions":{
+         "nullValue":"null",
+         "emptyValue":"",
+         "escape":"\\",
+         "quote":"",
+         "delimiter":","
+      },
+      "encryptionSpecs":{
+         "encryptionAlgo":"PGPGPG",
+         "publicKey":"<Add public key>"
+      },      
+   },
+   "connectionSpec":{
+      "id":<Add connection spec of desired destination>,
+      "version":"1.0"
+   }
+}'
+```
+
++++
+
+**Response**
+
++++Add encryption to target connection - Response
+
+```json
+{
+    "id": "900df191-b983-45cd-90d5-4c7a0326d650",
+    "etag": "\"0500ebe1-0000-0200-0000-63e28d060000\""
+}
+```
+
++++
+
+>[!ENDSHADEBOX]
+
+A successful response returns the ID (`id`) of the newly created source connection and an `etag`. Note down the source connection ID as you will need it later when creating the dataflow. 
+
 ## Create a dataflow {#create-dataflow}
 
 ![Placeholder overview diagram](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
-The next step in the destination configuration is to create a dataflow. A dataflow ties together previously created entities and also provides options for configuring the segment export schedule. To create the dataflow, use the payloads below, depending on your desired cloud storage destination, and replace the entity IDs from previous steps. Note that in this step, you are not adding any information related to attribute, identity mapping, or export schedule to the dataflow. That will follow in the next two steps.
+The next step in the destination configuration is to create a dataflow. A [dataflow](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) ties together previously created entities and also provides options for configuring the segment export schedule. To create the dataflow, use the payloads below, depending on your desired cloud storage destination, and replace the flow entity IDs from previous steps. Note that in this step, you are not adding any information related to attribute or identity mapping to the dataflow. That will follow in the next step.
 
 >[!BEGINTABS]
 
@@ -3148,7 +3209,7 @@ Note the Dataflow ID from the response. This ID will be required in later steps.
 
 ### Add segments to the export
 
-In this step, you can also select which segments you want to export to the destination. For extensive information about this step, view the [API reference documentation](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById)
+In this step, you can also select which segments you want to export to the destination. For extensive information about this step and the request format to add a segment to the dataflow, view the examples in the [Update a destination dataflow](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) section of the API reference documentation.
 
 
 ## Set up attribute and identity mapping {#attribute-and-identity-mapping}
@@ -3159,7 +3220,7 @@ After creating your dataflow, you need to set up mapping for the attributes and 
 
 1. Create an input schema
 2. Create an output schema
-3. Set up a mapping to connect the created schemas
+3. Set up a mapping set to connect the created schemas
 
 For example, to obtain the following mapping shown in the UI, you would need to go through the three steps listed above and detailed in the next headings. 
 
@@ -3181,7 +3242,7 @@ View below examples of requests and responses to retrieve attributes and identit
 
 ```shell
 
-curl --location --request GET 'https://platform-stage.adobe.io/data/core/ups/config/entityTypes/_xdm.context.profile?property=fullSchema==true&property=includeRelationshipDescriptors==true' \ 
+curl --location --request GET 'https://platform.adobe.io/data/core/ups/config/entityTypes/_xdm.context.profile?property=fullSchema==true&property=includeRelationshipDescriptors==true' \ 
 --header 'x-gw-ims-org-id: IMS ORG ID' \ 
 --header 'x-api-key: API_KEY' \
 --header 'x-sandbox-name: SANDBOX_NAME' \ 
@@ -3218,11 +3279,12 @@ The response below has been shortened for brevity.
 
 ```shell
 
-curl --location --request GET 'https://platform-stage-va7.adobe.io/data/core/idnamespace/identities' \ 
+curl --location --request GET 'https://platform-va7.adobe.io/data/core/idnamespace/identities' \ 
 --header 'x-gw-ims-org-id: IMS ORG ID' \ 
 --header 'x-api-key: API_KEY' \ 
 --header 'x-sandbox-name: SANDBOX_NAME' \ 
---header 'x-sandbox-id: SANDBOX_ID' \ --header 'Authorization: Bearer TOKEN_HERE' \
+--header 'x-sandbox-id: SANDBOX_ID' \ 
+--header 'Authorization: Bearer TOKEN_HERE' \
 
 ```
 
@@ -3230,9 +3292,9 @@ curl --location --request GET 'https://platform-stage-va7.adobe.io/data/core/idn
 
 **Response**
 
-The response returns the identities that you can use when creating the input schema. Note that this response returns both [standard](/help/identity-service/namespaces.md#standard) and [custom](/help/identity-service/namespaces.md#manage-namespaces) identity namespaces that you set up in Experience Platform. 
-
 +++ View available identities to use in the input schema
+
+The response returns the identities that you can use when creating the input schema. Note that this response returns both [standard](/help/identity-service/namespaces.md#standard) and [custom](/help/identity-service/namespaces.md#manage-namespaces) identity namespaces that you set up in Experience Platform. 
 
 ```json
 
@@ -3438,7 +3500,7 @@ Next, you need to copy the response from above and use it to create your input s
 
 ```shell
 
-curl --location --request POST 'https://platform-stage.adobe.io/data/foundation/conversion/schemas/' \ 
+curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/schemas/' \ 
 --header 'x-gw-ims-org-id: IMS ORG ID' \ 
 --header 'x-api-key: API_KEY' \ 
 --header 'x-sandbox-name: SANDBOX_NAME' \ 
@@ -3447,7 +3509,7 @@ curl --location --request POST 'https://platform-stage.adobe.io/data/foundation/
 --header 'Content-Type: application/json' \ 
 --data-raw '{
     "name":"Sample Schema for Flow Mapping",
-    "jsonSchema":{...insert response from union schema request here}
+    "jsonSchema":{...insert response from union schema response here}
     '
 
 ```
@@ -3476,9 +3538,9 @@ curl --location --request POST 'https://platform-stage.adobe.io/data/foundation/
 
 +++
 
-The ID in the response represents the unique identifier of the input schema that you have created. Copy the ID from the response as you will reuse this in a later step.
-
 >[!ENDSHADEBOX]
+
+The ID in the response represents the unique identifier of the input schema that you have created. Copy the ID from the response as you will reuse this in a later step.
 
 ### Create an output schema
 
@@ -3488,9 +3550,9 @@ Next, you must set up the output schema for your export. First, you need to find
 
 +++Request to get partner schema for the output schema
 
-```json
+```shell
 
-curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
+curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
 --header 'x-gw-ims-org-id: IMS_ORG_ID' \
 --header 'x-api-key: API_KEY' \
 --header 'x-sandbox-name: SANDBOX_NAME' \
@@ -3500,13 +3562,15 @@ curl --location --request GET 'https://platform-stage.adobe.io/data/foundation/f
 
 ```
 
++++
+
 **Response with an example schema**
 
 Inspect the response you obtain when preforming the call above. You need to drill down into the response to find the object `connectionSpec.targetSpec.attributes.partnerSchema.jsonSchema`
 
-+++
++++ Response to get partner schema for the output schema
 
-```
+```json
 
 {
    "title":"defaultschema",
@@ -3802,7 +3866,7 @@ Next, you need to create an output schema. Copy the JSON response you got above 
 
 ```shell
 
-curl --location --request POST 'https://platform-stage.adobe.io/data/foundation/conversion/schemas' \
+curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/schemas' \
 --header 'x-api-key: acp_xql_gateway' \
 --header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
 --header 'x-sandbox-name: fasterincremental' \
@@ -4141,9 +4205,11 @@ Create the mapping set by using the input schema ID, the output schema ID, and t
 
 **Request**
 
++++ Create mapping set - Request
+
 ```shell
 
-curl --location --request POST 'https://platform-stage.adobe.io/data/foundation/conversion/mappingSets' \
+curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
 --header 'x-api-key: acp_xql_gateway' \
 --header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
 --header 'x-sandbox-name: fasterincremental' \
@@ -4173,9 +4239,11 @@ curl --location --request POST 'https://platform-stage.adobe.io/data/foundation/
 
 ```
 
++++
+
 **Response**
 
-+++
++++ Create mapping set - Response
 
 ```json
 
@@ -4184,8 +4252,8 @@ curl --location --request POST 'https://platform-stage.adobe.io/data/foundation/
     "version": 0,
     "createdDate": 1678999005197,
     "modifiedDate": 1678999005197,
-    "createdBy": "AepActivationService@AdobeID",
-    "modifiedBy": "AepActivationService@AdobeID"
+    "createdBy": "example@AdobeID",
+    "modifiedBy": "example@AdobeID"
 }
 
 ```
@@ -4204,17 +4272,17 @@ See [retrieve a destination dataflow's details](https://developer.adobe.com/expe
 
 >[!ENDSHADEBOX]
 
-Finally, you need to PATCH the dataflow with the mapping step that you just created
+Finally, you need to PATCH the dataflow with the mapping set information that you just created.
 
 >[!BEGINSHADEBOX]
 
 **Request**
 
-+++
++++ Update dataflow with mapping set information - Request
 
 ```shell
 
-curl --location --request PATCH 'https://platform-stage.adobe.io/data/foundation/flowservice/flows/df8245a8-dd8f-42da-a04a-2d3a92654d9e' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/df8245a8-dd8f-42da-a04a-2d3a92654d9e' \
 --header 'x-gw-ims-org-id: IMS ORG ID' \
 --header 'x-api-key: API_KEY' \
 --header 'x-sandbox-name: SANDBOX_NAME' \
@@ -4238,9 +4306,9 @@ curl --location --request PATCH 'https://platform-stage.adobe.io/data/foundation
 
 **Response**
 
-The response from the Flow Service API returns the ID of the updated dataflow.
++++ Update dataflow with mapping set information - Response
 
-+++
+The response from the Flow Service API returns the ID of the updated dataflow.
 
 ```json
 
@@ -4259,7 +4327,7 @@ The response from the Flow Service API returns the ID of the updated dataflow.
 
 ![Placeholder overview diagram](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
-To make any updates to your dataflow, use the PUT/PATCH operation. Need to determine which one. For example, you can update your dataflows to select fields as mandatory keys or deduplication keys. 
+To make any updates to your dataflow, use the `PATCH` operation.For example, you can update your dataflows to select fields as mandatory keys or deduplication keys. 
 
 ### Add a mandatory key
 
@@ -4272,7 +4340,7 @@ To add a [mandatory key](/help/destinations/ui/activate-batch-profile-destinatio
 +++Add an identity as mandatory field - Request
 
 ```shell
-curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
@@ -4295,7 +4363,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 +++Add an XDM attribute as mandatory field - Request
 
 ```shell
-curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
@@ -4341,7 +4409,7 @@ To add a [deduplication key](/help/destinations/ui/activate-batch-profile-destin
 +++Add an identity as deduplication key - Request
 
 ```shell
-curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
@@ -4367,7 +4435,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 +++Add an XDM attribute as deduplication key - Request
 
 ```shell
-curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \

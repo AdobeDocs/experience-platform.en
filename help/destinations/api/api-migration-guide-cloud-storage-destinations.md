@@ -62,28 +62,28 @@ TBD if we keep this link but will likely remove it
 
 ## Summary of backwards-incompatible changes
 
-With the migration to the new destinations, all your existing dataflows to Amazon S3, Azure Bloc, and SFTP destinations will now be assigned new target connections and target base connections. The profile mapping step also changes. Backwards-incompatible changes are summarized in the sections below for each destination. View also the [destinations glossary](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) for more information on the terms in the diagram below.
+With the migration to the new destinations, all your existing dataflows to Amazon S3, Azure Bloc, and SFTP destinations will now be assigned new target connections and base connections. The profile mapping step also changes. Backwards-incompatible changes are summarized in the sections below for each destination. View also the [destinations glossary](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) for more information on the terms in the diagram below.
 
 ![Migration guide overview image](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
 
 ### Backwards-incompatible changes to the Amazon S3 destination
 
-The backwards-incompatible changes for the API users are an updated connection spec and flow spec as below:
+The backwards-incompatible changes for the API users are an updated `connection spec` and `flow spec` as shown in the table below:
 
 |Amazon S3 | Legacy | New |
 |---------|----------|---------|
 | Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 269ba276-16fc-47db-92b0-c1049a3c131f |
 | Connection spec | 4890fc95-5a1f-4983-94bb-e060c08e3f81 | 4fce964d-3f37-408f-9778-e597338a21ee |
 
-View the complete legacy and new target base connection and target connection examples for [!DNL Amazon S3] in the tabs below. The parameters required to create target base connections for Amazon S3 destinations do not change. 
+View the complete legacy and new base connection and target connection examples for [!DNL Amazon S3] in the tabs below. The parameters required to create base connections for Amazon S3 destinations do not change. 
 
 Similarly, there are no backwards-incompatible changes in the parameters required to create target connections.
 
 >[!BEGINTABS]
 
->[!TAB Legacy target base connection and target connection]
+>[!TAB Legacy base connection and target connection]
 
-+++View legacy [!DNL target base connection] for [!DNL Amazon S3]
++++View legacy [!DNL base connection] for [!DNL Amazon S3]
 
 ```json
 {
@@ -106,7 +106,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
     "specName": "File Encryption",
     "params": {
       "encryptionAlgo": "PGP/GPG",
-      "publicKey": <publicKey>
+      "publicKey": "<publicKey>"
     }
   },
   "version": "\"640418e2-0000-0200-0000-6359b9ef0000\"",
@@ -136,7 +136,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
   "params": {
     "mode": "S3",
     "path": "testpath",
-    "bucketName": "test-bugathon-rtcdp"
+    "bucketName": "test"
   },
   "version": "\"1609cd86-0000-0200-0000-63892cbb0000\"",
   "etag": "\"1609cd86-0000-0200-0000-63892cbb0000\"",
@@ -154,9 +154,9 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 +++
 
->[!TAB New target base connection and target connection]
+>[!TAB New base connection and target connection]
 
-+++View new [!DNL target base connection] for [!DNL Amazon S3]
++++View new [!DNL base connection] for [!DNL Amazon S3]
 
 ```json
 {
@@ -179,7 +179,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
     "specName": "File Encryption",
     "params": {
       "encryptionAlgo": "PGP/GPG",
-      "publicKey": <publicKey>
+      "publicKey": "<publicKey>"
     }
   },
   "version": "\"3708da21-0000-0200-0000-638940b10000\"",
@@ -218,7 +218,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
     "fileType": "CSV",
     "mode": "Server-to-server",
     "path": "testpath",
-    "bucketName": "test-bugathon-rtcdp"
+    "bucketName": "test"
   },
   "version": "\"1b0985c6-0000-0200-0000-638940b10000\"",
   "etag": "\"1b0985c6-0000-0200-0000-638940b10000\"",
@@ -240,22 +240,22 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 ### Backwards-incompatible changes to Azure Blob destination
 
-The backwards-incompatible changes for the API users are an updated connection spec and flow spec as below:
+The backwards-incompatible changes for the API users are an updated `connection spec` and `flow spec` as shown in the table below:
 
 |Azure Blob | Legacy | New |
 |---------|----------|---------|
 | Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
 | Connection spec | e258278b-a4cf-43ac-b158-4fa0ca0d948b | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
 
-View the complete legacy and new target base connection and target connection examples for [!DNL Azure Blob] in the tabs below. The parameters required to create target base connections for Azure Blob destinations do not change. 
+View the complete legacy and new base connection and target connection examples for [!DNL Azure Blob] in the tabs below. The parameters required to create base connections for Azure Blob destinations do not change. 
 
 Similarly, there are no backwards-incompatible changes in the parameters required to create target connections.
 
 >[!BEGINTABS]
 
->[!TAB Legacy target base connection and target connection]
+>[!TAB Legacy base connection and target connection]
 
-+++View legacy [!DNL target base connection] for [!DNL Azure Blob]
++++View legacy [!DNL base connection] for [!DNL Azure Blob]
 
 ```json
 {
@@ -326,9 +326,9 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 +++
 
->[!TAB New target base connection and target connection]
+>[!TAB New base connection and target connection]
 
-+++View new [!DNL target base connection] for [!DNL Azure Blob]
++++View new [!DNL base connection] for [!DNL Azure Blob]
 
 ```json
 {
@@ -412,25 +412,25 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 ### Backwards-incompatible changes to SFTP destination
 
-The backwards-incompatible changes for the API users are an updated connection spec and flow spec as below:
+The backwards-incompatible changes for the API users are an updated `connection spec` and `flow spec` as shown in the table below:
 
 |SFTP | Legacy | New |
 |---------|----------|---------|
 | Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 354d6aad-4754-46e4-a576-1b384561c440 |
 | Connection spec | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
 
-In addition to the updated flow and connection spec above, there are changes to the parameters required when creating SFTP target base connections.
+In addition to the updated flow and connection spec above, there are changes to the parameters required when creating SFTP base connections.
 
-* Previously, the target base connection for SFTP destinations required a `host` parameter. This has now been renamed to `domain`.
-* For the authentication with SSH key option, the authentication parameters in the target base connection required a `port` option. This parameter is now deprecated and not required anymore. 
+* Previously, the base connection for SFTP destinations required a `host` parameter. This parameter has now been renamed to `domain`.
+* For the authentication with SSH key option, the authentication parameters in the base connection required a `port` option. This parameter is now deprecated and not required anymore. 
 
-View the complete legacy and new target base connection and target connection examples for SFTP in the tabs below. The parameters required to create target connections for SFTP destinations do not change. 
+View the complete legacy and new base connection and target connection examples for SFTP in the tabs below, with the lines that change highlighted. The parameters required to create target connections for SFTP destinations do not change. 
 
 >[!BEGINTABS]
 
->[!TAB Legacy target base connection and target connection]
+>[!TAB Legacy base connection and target connection]
 
-+++View legacy [!DNL target base connection] for SFTP - password authentication
++++View legacy [!DNL base connection] for SFTP - password authentication
 
 ```json {line-numbers="true" start-line="1" highlight="15"}
 {
@@ -454,7 +454,7 @@ View the complete legacy and new target base connection and target connection ex
     "specName": "File Encryption",
     "params": {
       "encryptionAlgo": "PGP/GPG",
-      "publicKey": <publicKey>
+      "publicKey": "<publicKey>"
     }
   },
   "version": "\"d000013c-0000-0200-0000-629903bd0000\"",
@@ -464,7 +464,7 @@ View the complete legacy and new target base connection and target connection ex
 
 +++
 
-+++View legacy [!DNL target base connection] for SFTP - SSH key authentication
++++View legacy [!DNL base connection] for SFTP - SSH key authentication
 
 ```json {line-numbers="true" start-line="1" highlight="15"}
 {
@@ -537,9 +537,9 @@ View the complete legacy and new target base connection and target connection ex
 
 +++
 
->[!TAB New target base connection and target connection]
+>[!TAB New base connection and target connection]
 
-+++View new [!DNL target base connection] for SFTP - password authentication
++++View new [!DNL base connection] for SFTP - password authentication
 
 ```json
 {
@@ -573,7 +573,7 @@ View the complete legacy and new target base connection and target connection ex
 
 +++
 
-+++View new [!DNL target base connection] for SFTP - SSH key authentication
++++View new [!DNL base connection] for SFTP - SSH key authentication
 
 ```json {line-numbers="true" start-line="1" highlight="12"}
 {
@@ -658,13 +658,13 @@ View the complete legacy and new target base connection and target connection ex
 
 ### Backwards-incompatible changes common to Amazon S3, Azure Blob, and SFTP destinations
 
-The profile selector step in all three destinations is replaced by a mapping step which allows you to rename the columns in your exported files. See the side-by-side image below with the old attribute selector step on the left and the new mapping step in the right.
+The profile selector step in all three destinations is replaced by a mapping step which allows you to rename the column headers in your exported files, if desired. See the side-by-side image below with the old attribute selector step on the left and the new mapping step on the right.
 
 ![Migration guide overview image](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 
-Transformation parameters old and new examples. Notice how the `profileSelectors` object in the legacy examples is replaced by the new `profileMapping` object. 
+Notice how the `profileSelectors` object in the legacy examples is replaced by the new `profileMapping` object. 
 
-Find complete information about setting up the `profileMapping` object in the API tutorial to export data to cloud storage destinations. (ADD LINK)
+Find complete information about setting up the `profileMapping` object in the [API tutorial to export data to cloud storage destinations](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
 
 >[!BEGINTABS]
 
@@ -761,6 +761,8 @@ Find complete information about setting up the `profileMapping` object in the AP
 >[!TAB New transformation parameters]
 
 +++View an example of transformation parameters after the migration
+
+Notice in the configuration example below how `profileSelectors` fields have been replaced by a `profileMapping` object.
 
 ```json
 
