@@ -57,7 +57,7 @@ TBD if we keep this link but will likely remove it
 [Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore)
 
 --> 
-* [API tutorial to export data to cloud storage destinations](https://experienceleague-review.corp.adobe.com/docs/experience-platform/destinations/api/activate-data-file-based-destinations.html)
+* [API tutorial to export segments to cloud storage destinations](/help/destinations/api/activate-segments-file-based-destinations.md)
 * [Destinations API reference documentation](https://developer.adobe.com/experience-platform-apis/references/destinations/) 
 
 ## Summary of backwards-incompatible changes
