@@ -177,3 +177,7 @@ By following this tutorial, you have successfully created a dataflow to bring in
 
 * [[!DNL Real-Time Customer Profile] overview](/help/profile/home.md)
 * [[!DNL Data Science Workspace] overview](/help/data-science-workspace/home.md)
+
+## Appendix {#appendix}
+
+The following sections provide additional guidelines that you may follow when using the [!DNL Marketo] source.
