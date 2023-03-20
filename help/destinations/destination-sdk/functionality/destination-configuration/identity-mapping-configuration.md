@@ -86,7 +86,7 @@ If customers select a source identity namespace and do not select a target mappi
 
 
 
-## Configure your destination with optional source field hashing
+## Configure optional source field hashing
 
 Experience Platform customers can choose to ingest data into Platform in hashed format or in plain text. If your destination platform accepts both hashed and unhashed data, you can give customers the option to choose whether Platform should hash the source field values when they get exported to your destination.
 
@@ -118,6 +118,22 @@ Check this option when using unhashed source fields, to have Adobe Experience Pl
 When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have Adobe Experience Platform automatically hash the source attributes on activation.
 
 
-## Configure your destination with mandatory source field hashing
+## Configure mandatory source field hashing
 
+
+```json
+"identityNamespaces":{
+      "Customer_contact":{
+         "acceptsAttributes":true,
+         "acceptsCustomNamespaces":true,
+         "transformation": "sha256(lower($))",
+         "acceptedGlobalNamespaces":{
+            "Email":{
+            },
+            "Phone":{
+            }
+         }
+      }
+   }
+```
 
