@@ -28,6 +28,7 @@ alloy("sendEvent", {
   }
 });
 ```
+Starting version x, Web SDK captures the `region` of the clicked HTML element. This enables the [Activity Map](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html) reporting features in Adobe Analytics.
 
 The link type can be one of three values: 
 
