@@ -97,31 +97,3 @@ alloy("configure", {
 });
 ```
 When filtering the link tracking events using the `onBeforeLinkClickSend` we recommend explicitly to return false for the link clicks that shouldn't be tracked, anything else will make Web SDK send the data to the Edge.
-
-### Manually disable Activity Map context data
-Starting with Web SDK version x, the automatic link tracking will be capturing the link region. In Analytics reports, the link region will turn on the Activity Map feature. In case you have Activity Map enabled for the reporting suit assigned to your datastream, but you want to stop sending Activity Map context data into it, you should remove the `web.webInteraction.region`.
-
-```javascript
-alloy("configure", {
-  onBeforeLinkClickSend: function(options) {
-    options.xdm.web.webInteraction.region = undefined;
-  }
-});
-```
-
-### Manually attach the Activity Map context data to the next page view event to replicate the AppMeasurements approach
-
-To send Activity Map context data with a page-view event, we recommend attaching the link name, and region to the event that represents the page-view event.
-
-```javascript
-if(!xdm.web.webReferrer.URL) {
-  xdm.web.webReferrer.URL = activityMap.page;
-}
-xdm.web.webReferrer.linkRegion = activityMap.region;
-xdm.web.webReferrer.linkName = activityMap.name;
-```
-[Here](https://github.com/adobe/alloy-samples/tree/main/activity-map-aep-sample) is a sample on how to filter link click tracking, cache the link details and send them with the next page-view event.
-
->[!NOTE]
->
-> When caching the link details and sending with next page-view event, make sure that the link click interaction is canceled at `onBeforeEventSend` callback level. Sending the link click interaction details once in the `web.webInteraction` and with next page-view in `web.webReferrer` can affect metrics like bounce rate.
