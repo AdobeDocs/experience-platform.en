@@ -24,7 +24,7 @@ An athletic apparel brand wants to reach existing customers through their social
 
 ## Prerequisites {#prerequisites}
 
-Before sending data to your TikTok Ads Manager account, you will need to give Adobe Experience Platform permission to access your Ad Account for 'Audience Management'. This permission can be provided by entering your advertiser ID in Adobe and following redirect to grant the permission. More instructions can be found on the [TikTok API documentation](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378).
+Before sending data to your [!DNL TikTok Ads Manager] account, you will need to give Adobe Experience Platform permission to access your Ad Account for `Audience Management`. This permission can be provided by entering your advertiser ID in Experience Platform and following the redirect to grant the permission. You can find more instructions can be found in the [TikTok API documentation](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378).
 
 ## Supported identities {#supported-identities}
 
@@ -60,7 +60,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authenticate to destination {#authenticate}
 
-To authenticate to the destination, you will be redirected to login to your TikTok Ads Manager account and authorize Adobe to manage audiences on your behalf. 
+To authenticate to the destination, you will be redirected to login to your [!DNL TikTok Ads Manager] account and authorize Adobe to manage audiences on your behalf. 
 
 ![TikTok permission selection](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "Image of TikTok UI for selecting permissions")
 
@@ -72,7 +72,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL TikTok Ads Manager ID]**: Your TikTok Ads Manager ID. You can find this in your TikTok Ads manager account. 
+*  **[!UICONTROL TikTok Ads Manager ID]**: Your [!DNL TikTok Ads Manager ID]. You can find this in your [!DNL TikTok Ads manager] account. 
 
 ![TikTok Ads Manager ID](/help/destinations/assets/catalog/social/tiktok/tiktok-ads-manager-ID.png "Image of the TikTok Ads Manager UI, showing how to get the TikTok Ads Manager ID")
 
@@ -96,7 +96,7 @@ Below is an example of correct identity mapping when exporting segments to TikTo
 
 Selecting source fields:
 
-* Select an identifier (For example: Email_LC_SHA256) as source identity that uniquely identifies a profile in Adobe Experience Platform and TikTok Ads Manager.
+* Select an identifier (For example:` Email_LC_SHA256`) as source identity that uniquely identifies a profile in Adobe Experience Platform and [!DNL TikTok Ads Manager].
 
 Selecting target fields:
 
@@ -106,7 +106,7 @@ Selecting target fields:
 
 ## Exported data {#exported-data}
 
-Check your TikTok Ads Manager account (under **Assets > Audiences**) to verify if your Adobe segment was exported successfully. The audience will be populated as an audience type: 'Partner Audience'.
+Check your [!DNL TikTok Ads Manager] account (under **Assets > Audiences**) to verify if your Experience Platform segment was exported successfully. The audience will be populated as an audience type: `Partner Audience`.
 
 ## Data usage and governance {#data-usage-governance}
 
