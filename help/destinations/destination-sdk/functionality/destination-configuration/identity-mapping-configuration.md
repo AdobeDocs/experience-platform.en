@@ -46,8 +46,8 @@ When defining the target identities that your destination supports, you can use 
 |`acceptsAttributes` | Boolean | Optional | Indicates if customers can map standard profile attributes to the identity that you are configuring. |
 |`acceptsCustomNamespaces` | Boolean | Optional | Indicates if customers can map custom identity namespaces to the identity namespace that you are configuring. |
 |`acceptedGlobalNamespaces` | - | Optional | Indicates which [standard identity namespaces](../../../../identity-service/namespaces.md#standard) (for example, [!UICONTROL IDFA]) customers can map to the identity that you are configuring. |
-|`transformation` | String | Optional | Displays the [[!UICONTROL Apply transformation]](../../../ui/activate/activate-segment-streaming-destinations.md#apply-transformation) check box in the Platform UI. Use this option to give users the ability to hash source attributes on export. To enable this option, set the value to `sha256(lower($))`. |
-|`requiredTransformation` | String | Optional | When customers select this source identity namespace, the [[!UICONTROL Apply transformation]](../../../ui/activate/activate-segment-streaming-destinations.md#apply-transformation) check box is automatically applied to the mapping, and customers cannot disable it. To enable this option, set the value to `sha256(lower($))`.|
+|`transformation` | String | Optional | Displays the [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) check box in the Platform UI. Use this option to give users the ability to hash source attributes on export. To enable this option, set the value to `sha256(lower($))`. |
+|`requiredTransformation` | String | Optional | When customers select this source identity namespace, the [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) check box is automatically applied to the mapping, and customers cannot disable it. To enable this option, set the value to `sha256(lower($))`.|
 
 {style="table-layout:auto"}
 
