@@ -24,26 +24,28 @@ Experience Platform automatically creates several artifacts that you can use to 
 
 See detailed information about the created artifacts below: 
 
-### Journeys
+### Journeys {#journeys}
 
 >[!CONTEXTUALHELP]
 >id="platform_marketerPlayground_playbooks_reEngageShoppers_journeys"
 >title="Created journeys"
 >abstract="Experience Platform has created for you these specific journeys with this specific configuration. We have done this because text text text."
 
-### Schemas
+### Schemas {#schemas}
 
 >[!CONTEXTUALHELP]
 >id="platform_marketerPlayground_playbooks_reEngageShoppers_schemas"
 >title="Created schemas"
 >abstract="Experience Platform has created for you these specific schemas with this specific configuration. We have done this because text text text."
 
-### Messages
+### Messages {#messages}
 
 >[!CONTEXTUALHELP]
 >id="platform_marketerPlayground_playbooks_reEngageShoppers_messages"
 >title="Created messages"
 >abstract="Experience Platform has created for you these specific messages with this specific configuration. We have done this because text text text."
+
+
 
 ## Test playbook / what's next
 

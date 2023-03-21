@@ -24,21 +24,25 @@ Experience Platform automatically creates several artifacts that you can use to 
 
 See detailed information about the created artifacts below: 
 
-### Schemas
+### Schemas {#schemas}
 
 >[!CONTEXTUALHELP]
 >id="platform_marketerPlayground_playbooks_highValueCustomerActivation_schemas"
 >title="Created schemas"
 >abstract="Experience Platform has created for you these specific schemas with this specific configuration. We have done this because text text text."
 
-### Segments
+Experience Platform creates two schemas for you to use as part of this project. 
+
+![Schemas for this playbook](/help/marketer-playground/assets/playbooks/catalog/high-value-customer-activation/generated-schemas.png)
+
+### Segments {#segments}
 
 >[!CONTEXTUALHELP]
 >id="platform_marketerPlayground_playbooks_highValueCustomerActivation_segments"
 >title="Created segments"
 >abstract="Experience Platform has created for you these specific schemas with this specific configuration. We have done this because text text text."
 
-### Destinations
+### Destinations {#destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_marketerPlayground_playbooks_highValueCustomerActivation_destinations"
