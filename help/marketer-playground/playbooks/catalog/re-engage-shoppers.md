@@ -12,7 +12,9 @@ description: Learn when and how to use the Re-engage shoppers playbook
 
 With this playbook, you can intelligently and responsibly re-engage customers who have abandoned a conversion before completing it. Act with intelligence and empathy to create experiences, not reminders.
 
-When you are ready to proceed, select **Create new project with this playbook**. Link to UI guide for generic information about creating new project with playbooks.
+## Start a new project using the playbook
+
+When you are ready to proceed, select **Create new project with this playbook**. The [UI guide](/help/marketer-playground/playbooks/ui-guide.md) contains all the information you need about how to create a new project using the playbooks.
 
 ## Created artifacts
 

@@ -10,8 +10,8 @@ feature: Playbooks
 
 * Playbooks {#playbooks}
   * Catalog {#catalog}
-    * [High value customer activation](high-value-customer-activation.md)
-    * [Re-engage shoppers](reengage-shoppers.md)
+    * [High value customer activation](/help/marketer-playground/playbooks/catalog/high-value-customer-activation.md)
+    * [Re-engage shoppers](/help/marketer-playground/playbooks/catalog/re-engage-shoppers.md)
   * [Overview](/help/marketer-playground/playbooks/overview.md)
   * [UI guide](/help/marketer-playground/playbooks/ui-guide.md)
   * [Troubleshooting](/help/marketer-playground/playbooks/troubleshooting.md)
