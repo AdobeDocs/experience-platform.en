@@ -122,6 +122,9 @@ To add new events, select **[!UICONTROL Edit Rule]**  on the [!UICONTROL Next St
 
 ### Update or enhance the implementation
 
+The following video provides an introduction to the quick start feature.
+
+>[!VIDEO](https://publish.tv.adobe.com/bucket/1/category/5138/video/3416939/)
 
 ## Next steps
 
