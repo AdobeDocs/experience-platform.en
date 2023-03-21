@@ -10,5 +10,5 @@ See the [Accelerated Queries endpoint](../../api/accelerated-queries.md) documen
 
 With the query accelerated store you can build a custom data model and/or extend an existing Adobe Real-Time Customer Data Platform data model. To engage with or embed your reporting insights into a reporting/visualization framework, see the [query accelerated store reporting insights guide](./reporting-insights-data-model.md). You can also read the Real-Time Customer Data Platform Insights Data Model documentation to learn how to [customize your SQL query templates to create Real-Time CDP reports for your marketing and key performance indicator (KPI) use cases](../../../dashboards/cdp-insights-data-model.md).
 
-You can use the [attribute-based access control capability](../../../access-control/abac/overview.md) to control the level of restriction on datasets in the accelerated store. See the [data governance in Query Service](../../-governance/overview.md#create-field-based-access-restrictions-on-accelerated-datasets)
+You can use the [attribute-based access control capability](../../../access-control/abac/overview.md) to control the level of restriction on datasets in the accelerated store. See the [data governance in Query Service](../../data-governance/overview.md#create-field-based-access-restrictions-on-accelerated-datasets)
 document for more information.
