@@ -10,7 +10,7 @@ Compared to [!DNL Salesforce Marketing Cloud Engagement] which is more oriented 
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Salesforce Account Engagement API > Prospect Upsert by Email]](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#prospect-upsert-by-email) endpoint, to add / update your leads after activating them within a new [!DNL Marketing Cloud Account Engagement] segment.
 
-[!DNL Marketing Cloud Account Engagement] uses OAuth 2 with Client Credentials as the authentication mechanism to communicate with the [!DNL Account Engagement] API. Instructions to authenticate to your [!DNL Marketing Cloud Account Engagement] instance are further below, in the [Authenticate to destination](#authenticate) section.
+[!DNL Marketing Cloud Account Engagement] uses [OAuth 2 with Authorization Code](/help/destinations/destination-sdk/functionality/authentication/oauth2-authentication.md#authorization-code) to communicate with the [!DNL Account Engagement] API. Instructions to authenticate to your [!DNL Marketing Cloud Account Engagement] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
@@ -36,40 +36,11 @@ Note the following prerequisites in order to export data from Platform to your [
 
 A [!DNL Marketing Cloud Account Engagement] account with a subscription to the [Marketing Cloud Account Engagement](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) product is mandatory to proceed.
 
->[!IMPORTANT]
->
->Your account should also have the [Account Engagement Administrator role](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&type=5) and the [!DNL Salesforce] admin must give permissions to the [!DNL Account Engagement admin] user that allow access to [!DNL Account Engagement Lightning App].
+Your [!DNL Salesforce] account should have the [!DNL Salesforce] `Account Engagement Administrator role`. This is required to [create custom prospect fields](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&type=5).
+
+Finally, your account should also be able to access the [!DNL Account Engagement Lightning App](https://help.salesforce.com/s/articleView?id=sf.pardot_lightning_enable.htm&type=5).
 
 Reach out to [[!DNL Salesforce] Support](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) or your [!DNL Salesforce] account administrator if you do not have an account, or the account is missing the [!DNL Marketing Cloud Account Engagement] subscription or the [!DNL Account Engagement Administrator role].
-
-#### Configure a connected app within [!DNL Salesforce] {#prerequisites-connected-app}
-
-To connect Experience Platform to [!DNL Salesforce], you need to [create and configure a connected app](https://help.salesforce.com/s/articleView?id=sf.pardot_sf_connector_setup_v2_parent.htm&type=5) within [!DNL Salesforce]. Once you have created and configured the app, consider checking off against the steps mentioned below.
-
-First, you need to configure a [[!DNL Salesforce] connected app](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&language=en_US&r=https%3A%2F%2Fhelp.salesforce.com%2F&type=5) within your [!DNL Salesforce] account, if you do not have one already. [!DNL Marketing Cloud Account Engagement] will leverage the connected app to connect to [!DNL Salesforce].
-
-Next, follow the [[!DNL Configure the Connected App for the OAuth 2.0 Client Credentials Flow]](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) documentation so that the access token communication between [!DNL Marketing Cloud Account Engagement] destination and [!DNL Salesforce] can be setup.
-
-Now, follow the [!DNL Configure the Connector User](https://help.salesforce.com/s/articleView?id=sf.pardot_sf_connector_setup_connector_user_parent.htm&type=5) tutorial and its subsections to [!DNL Assign the Connector User Permission Set](https://help.salesforce.com/s/articleView?id=sf.pardot_sf_connector_setup_prepare_connector_user.htm&language=en_US&type=5) and the [!DNL Assign Object Permissions to the Connector User](https://help.salesforce.com/s/articleView?id=sf.pardot_sf_connector_setup_add_connector_permissions.htm&language=en_US&type=5) to ensure your user account has the correct permissions.
-
-Also, ensure that the [scopes](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) mentioned below are selected for the [!DNL Salesforce connected app].
-
-* ``chatter_api``
-* ``lightning``
-* ``visualforce``
-* ``content``
-* ``openid``
-* ``full``
-* ``api``
-* ``web``
-* ``refresh_token``
-* ``offline_access``
-
-Finally, ensure that the `password` grant is enabled within your [!DNL Salesforce] account. Refer to the [!DNL Salesforce] [OAuth 2.0 Username-Password Flow for Special Scenarios](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_username_password_flow.htm&type=5) documentation if you need guidance.
-
->[!IMPORTANT]
->
->If your [!DNL Salesforce] account administrator has restricted access to trusted IP ranges, you need to contact them to get [Experience Platform IP's](/help/destinations/catalog/streaming/ip-address-allow-list.md) allowlisted. Refer to the [!DNL Salesforce] [Restrict Access to Trusted IP Ranges for a Connected App](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) documentation if you need additional guidance.
 
 #### Gather [!DNL Marketing Cloud Account Engagement] credentials {#gather-credentials}
 
@@ -87,7 +58,9 @@ Note down the items below before you authenticate to the [!DNL Marketing Cloud A
 
 * Refer to the [!DNL Marketing Cloud Account Engagement] [rate limits](https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html#rate-limits) which details the limits imposed by your plan and would also apply to the Experience Platform executions.
 
-* Your [!DNL Marketing Cloud Account Engagement] account and [!DNL Salesforce] connected app should be setup with any permissions mentioned in [You need to have a [!DNL Marketing Cloud Account Engagement] account](#prerequisites-account) and [Configure a connected app within [!DNL Salesforce]](#prerequisites-connected-app) sections.
+>[!IMPORTANT]
+>
+>If your [!DNL Salesforce] account administrator has restricted access to trusted IP ranges, you need to contact them to get [Experience Platform IP's](/help/destinations/catalog/streaming/ip-address-allow-list.md) allowlisted. Refer to the [!DNL Salesforce] [Restrict Access to Trusted IP Ranges for a Connected App](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) documentation if you need additional guidance.
 
 ## Supported identities {#supported-identities}
 
