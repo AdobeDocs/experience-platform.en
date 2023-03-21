@@ -149,7 +149,7 @@ POST /flows/{FLOW_ID}/action?op=publish
 
 | Parameter | Description |
 | --- | --- |
-| `op` | An action operation that updates the state of the queried dataflow. To publish a draft dataflow, set `op` to `publish`.
+| `op` | An action operation that updates the state of the queried dataflow. To publish a draft dataflow, set `op` to `publish`. |
 
 **Request**
 
