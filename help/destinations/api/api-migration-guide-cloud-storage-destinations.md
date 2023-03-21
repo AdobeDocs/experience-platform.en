@@ -818,15 +818,15 @@ Notice in the configuration example below how `profileSelectors` fields have bee
 
 >[!ENDTABS]
 
-## Migration steps
+## Migration timelines
 
-TODO: Briefly list out migration steps including timelines (if documenting these publicly is desired) 
+You will receive emails from Adobe as the migration date approaches. In preparation, read the section below to get ready for the migration. 
 
 ## Action items
 
 In preparation for the migration of the Amazon S3, Azure Blob, and SFTP cloud storage destinations to the new cards, please prepare to update your scripts and automated API calls. Your Adobe account team will reach out with further information about when your dataflows will be migrated. 
 
-@bol and @hossain - as per our sync last week, should be add best practices and tips about optimizing your script to look for a flag so that you don't miss any data?
+The `targetConnectionSpecId` can be used as a flag to determine if the dataflow has been migrated to the new destination card. For example, you could update your scripts with an `if` condition to look at the legacy and updated target connection specs in `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` and determine if your dataflow has been migrated. You can see the legacy and new connection spec IDs in the specific sections on this page for each destination. 
 
 ## Next steps {#next-steps}
 

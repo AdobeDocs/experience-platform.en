@@ -1,10 +1,10 @@
 ---
 solution: Experience Platform
-title: Activate data to file-based destinations by using the Flow Service API
-description: Learn how to use the Flow Service API to export files with profiles to cloud storage and email marketing destinations.
+title: Activate segments to file-based destinations by using the Flow Service API
+description: Learn how to use the Flow Service API to export files with qualified profiles to cloud storage destinations.
 type: Tutorial
 ---
-# Activate data to file-based destinations by using the Flow Service API
+# Activate segments to file-based destinations by using the Flow Service API
 
 >[!IMPORTANT]
 >
@@ -339,13 +339,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
    "connectionSpec":{
       "id":"8a9c3494-9708-43d7-ae3f-cda01e5030e1", // this connection spec ID is always the same for Source Connections
       "version":"1.0"
-   },
-   "data":{
-      "format":"CSV",
-      "schema":null
-   },
-   "params":{
-      
    }
 }'
 ```
@@ -1015,6 +1008,105 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 +++
 
 >[!ENDTABS]
+
+### Add encryption to exported files
+
+Optionally, you can add encryption to your exported files. To do this, you need to add items from the `encryptionSpecs`. See the request example below with the mandatory parameters highlighted:
+
+
+>[!BEGINSHADEBOX]
+
++++ View encryption specs for cloud storage destinations
+
+```json {line-numbers="true" start-line="1" highlight="26-27"}
+
+           "encryptionSpecs": [
+                {
+                    "name": "File PGP/GPG Encryption",
+                    "type": "FileAsymmetric",
+                    "spec": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "description": "Defines parameters required for capturing user's inputs for encryption",
+                        "type": "object",
+                        "properties": {
+                            "publicKey": {
+                                "description": "Base64 encoded RSA public key",
+                                "type": "string",
+                                "contentEncoding": "base64"
+                            },
+                            "encryptionAlgo": {
+                                "description": "Algorithm for encryption.",
+                                "type": "string",
+                                "default": "PGPGPG",
+                                "enum": [
+                                    "PGPGPG",
+                                    "NONE"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "encryptionAlgo",
+                            "publicKey"
+                        ]
+                    }
+                }
+            ]
+
+```
+
++++ 
+
+**Request** 
+
++++Add encryption to base connection - Request
+
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="19"}
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'accept: application/json' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: <API-KEY>' \
+--header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
+--header 'x-sandbox-name: <SANDBOX-NAME>' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "name": "SFTP with SSH key Base Connection",
+  "auth": {
+    "specName": "SFTP with SSH Key",
+    "params": {
+      "domain": "<Add domain>",
+      "username": "<Add username>",
+      "sshKey": "<Add SSH key>"
+      "encryptionSpecs":{
+         "encryptionAlgo":"PGPGPG",
+         "publicKey":"<Add public key>"
+      }            
+    }
+  },
+  "connectionSpec": {
+    "id": "36965a81-b1c6-401b-99f8-22508f1e6a26", // SFTP connection spec
+    "version": "1.0"
+  }
+}'
+```
+
++++
+
+**Response**
+
++++Add encryption to base connection - Response
+
+```json
+{
+    "id": "900df191-b983-45cd-90d5-4c7a0326d650",
+    "etag": "\"0500ebe1-0000-0200-0000-63e28d060000\""
+}
+```
+
++++
+
+>[!ENDSHADEBOX]
 
 Note the connection ID from the response. This ID will be required in the next step when creating the target connection. 
 
@@ -2238,7 +2330,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
     "name": "Amazon S3 Beta Target Connection",
-    "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
+    "baseConnectionId": "<FROM_STEP_CREATE_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
         "bucketName": "your-bucket-name",
@@ -2271,7 +2363,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
    "name":"Amazon S3 Beta Target Connection",
-   "baseConnectionId":"<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
+   "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
       "bucketName":"your-bucket-name",
@@ -2330,7 +2422,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
     "name": "Azure Blob Storage Beta Target Connection",
-    "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
+    "baseConnectionId": "<FROM_STEP_CREATE_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
         "container": "your-container-name",
@@ -2363,7 +2455,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
    "name":"Azure Blob Storage Beta Target Connection",
-   "baseConnectionId":"<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
+   "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
       "bucketName":"your-bucket-name",
@@ -2422,7 +2514,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
     "name": "Azure Data Lake Gen 2(ADLS Gen2) Target Connection",
-    "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
+    "baseConnectionId": "<FROM_STEP_CREATE_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
         "path": "folder/subfolder",
@@ -2454,7 +2546,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
    "name":"Azure Data Lake Gen 2(ADLS Gen2)",
-   "baseConnectionId":"<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
+   "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
       "bucketName":"your-bucket-name",
@@ -2513,7 +2605,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
     "name": "Data Landing Zone Target Connection",
-    "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
+    "baseConnectionId": "<FROM_STEP_CREATE_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
         "path": "folder/subfolder",
@@ -2545,7 +2637,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
    "name":"Data Landing Zone Beta Target Connection",
-   "baseConnectionId":"<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
+   "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
       "bucketName":"your-bucket-name",
@@ -2604,7 +2696,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
     "name": "Google Cloud Storage Target Connection",
-    "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
+    "baseConnectionId": "<FROM_STEP_CREATE_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
         "bucketName": "your-bucket-name",
@@ -2637,7 +2729,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
    "name":"Google Cloud Storage Beta Target Connection",
-   "baseConnectionId":"<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
+   "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
       "bucketName":"your-bucket-name",
@@ -2696,7 +2788,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
     "name": "SFTP Target Connection",
-    "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
+    "baseConnectionId": "<FROM_STEP_CREATE_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
         "remotePath": "folder/subfolder",
@@ -2728,7 +2820,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
    "name":"SFTP Target Connection",
-   "baseConnectionId":"<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
+   "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
       "bucketName":"your-bucket-name",
@@ -2769,112 +2861,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Note the `target connection ID` from the response. This ID will be required in the next step when creating the dataflow to export segments. 
 
-### Add encryption to exported files
-
-Optionally, you can add encryption to your exported files. To do this, you need to add items from the `encryptionSpecs`. See the request example below with the mandatory parameters highlighted:
-
-
->[!BEGINSHADEBOX]
-
-+++ View encryption specs for cloud storage destinations
-
-```json {line-numbers="true" start-line="1" highlight="26-27"}
-
-           "encryptionSpecs": [
-                {
-                    "name": "File PGP/GPG Encryption",
-                    "type": "FileAsymmetric",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "description": "Defines parameters required for capturing user's inputs for encryption",
-                        "type": "object",
-                        "properties": {
-                            "publicKey": {
-                                "description": "Base64 encoded RSA public key",
-                                "type": "string",
-                                "contentEncoding": "base64"
-                            },
-                            "encryptionAlgo": {
-                                "description": "Algorithm for encryption.",
-                                "type": "string",
-                                "default": "PGPGPG",
-                                "enum": [
-                                    "PGPGPG",
-                                    "NONE"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "encryptionAlgo",
-                            "publicKey"
-                        ]
-                    }
-                }
-            ]
-
-```
-
-+++ 
-
-**Request** 
-
-+++Add encryption to target connection - Request
-
-Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments when copy-pasting the request into your terminal of choice. 
-
-```shell
-curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
---header 'accept: application/json' \
---header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {ORG_ID}' \
---header 'x-sandbox-name: {SANDBOX_NAME}' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer {ACCESS_TOKEN}' \
---data-raw '{
-   "name":"SFTP Target Connection",
-   "baseConnectionId":"<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
-   "params":{
-      "mode":"Server-to-server",
-      "bucketName":"your-bucket-name",
-      "path":"folder/subfolder",
-      "compression":"GZIP",
-      "fileType":"CSV",
-      "csvOptions":{
-         "nullValue":"null",
-         "emptyValue":"",
-         "escape":"\\",
-         "quote":"",
-         "delimiter":","
-      },
-      "encryptionSpecs":{
-         "encryptionAlgo":"PGPGPG",
-         "publicKey":"<Add public key>"
-      },      
-   },
-   "connectionSpec":{
-      "id":<Add connection spec of desired destination>,
-      "version":"1.0"
-   }
-}'
-```
-
-+++
-
-**Response**
-
-+++Add encryption to target connection - Response
-
-```json
-{
-    "id": "900df191-b983-45cd-90d5-4c7a0326d650",
-    "etag": "\"0500ebe1-0000-0200-0000-63e28d060000\""
-}
-```
-
-+++
-
->[!ENDSHADEBOX]
-
 A successful response returns the ID (`id`) of the newly created source connection and an `etag`. Note down the source connection ID as you will need it later when creating the dataflow. 
 
 ## Create a dataflow {#create-dataflow}
@@ -2914,12 +2900,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "targetConnectionIds": [
         "<FROM_STEP_CREATE_TARGET_CONNECTION>"
     ],
-    "transformations": [],
-    "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12 hour increments
-        "timeUnit": "hour", // also supports "day" for daily increments. Use "interval": 1 when you select "timeUnit": "day"
-        "startTime": 1675901210 // UNIX timestamp start time (in seconds)
-    }
+    "transformations": []
 }'
 ```
 
@@ -2967,12 +2948,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "targetConnectionIds": [
         "<FROM_STEP_CREATE_TARGET_CONNECTION>"
     ],
-    "transformations": [],
-    "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
-    }
+    "transformations": []
 }'
 ```
 
@@ -3020,12 +2996,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "targetConnectionIds": [
         "<FROM_STEP_CREATE_TARGET_CONNECTION>"
     ],
-    "transformations": [],
-    "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
-    }
+    "transformations": []
 }'
 ```
 
@@ -3073,12 +3044,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "targetConnectionIds": [
         "<FROM_STEP_CREATE_TARGET_CONNECTION>"
     ],
-    "transformations": [],
-    "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
-    }
+    "transformations": []
 }'
 ```
 
@@ -3126,12 +3092,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "targetConnectionIds": [
         "<FROM_STEP_CREATE_TARGET_CONNECTION>"
     ],
-    "transformations": [],
-    "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
-    }
+    "transformations": []
 }'
 ```
 
@@ -3179,12 +3140,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "targetConnectionIds": [
         "<FROM_STEP_CREATE_TARGET_CONNECTION>"
     ],
-    "transformations": [],
-    "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
-    }
+    "transformations": []
 }'
 ```
 
@@ -3261,6 +3217,144 @@ The response below has been shortened for brevity.
 
 ```json
 
+       "person": {
+            "title": "Person",
+            "description": "An individual actor, contact, or owner.",
+            "meta:referencedFrom": [
+                "https://ns.adobe.com/xdm/context/person"
+            ],
+            "type": "object",
+            "meta:xdmType": "object",
+            "properties": {
+                "birthDate": {
+                    "meta:xdmType": "date",
+                    "type": "string",
+                    "format": "date",
+                    "title": "Birth date(YYYY-MM-DD)",
+                    "description": "The full date a person was born."
+                },
+                "birthDayAndMonth": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "title": "Birth date (MM-DD)",
+                    "description": "The day and month a person was born, in the format MM-DD. This field should be used when the day and month of a person's birth is known, but not the year."
+                },
+                "birthYear": {
+                    "meta:xdmType": "short",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 32767,
+                    "title": "Birth year",
+                    "description": "The year a person was born including the century, for example, 1983.  This field should be used when only the person's age is known, not the full birth date."
+                },
+                "gender": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "title": "Gender",
+                    "description": "Gender identity of the person.\n",
+                    "enum": [
+                        "male",
+                        "female",
+                        "not_specified",
+                        "non_specific"
+                    ],
+                    "meta:enum": {
+                        "male": "Male",
+                        "female": "Female",
+                        "not_specified": "Not Specified",
+                        "non_specific": "Non-specific"
+                    },
+                    "default": "not_specified"
+                },
+                "maritalStatus": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "title": "Marital Status",
+                    "description": "Describes a person's relationship with a significant other.",
+                    "enum": [
+                        "married",
+                        "single",
+                        "divorced",
+                        "widowed",
+                        "not_specified"
+                    ],
+                    "meta:enum": {
+                        "divorced": "Divorced",
+                        "not_specified": "Not Specified",
+                        "married": "Married",
+                        "single": "Single",
+                        "widowed": "Widowed"
+                    },
+                    "default": "not_specified"
+                },
+                "name": {
+                    "title": "Full name",
+                    "description": "The person's full name.",
+                    "meta:referencedFrom": [
+                        "https://ns.adobe.com/xdm/context/person-name"
+                    ],
+                    "type": "object",
+                    "meta:xdmType": "object",
+                    "properties": {
+                        "courtesyTitle": {
+                            "type": "string",
+                            "meta:xdmType": "string",
+                            "title": "Courtesy title",
+                            "description": "Normally an abbreviation of a persons title, honorific, or salutation. The `courtesyTitle` is used in front of full or last name in opening texts. For example, Mr. Miss. or Dr."
+                        },
+                        "firstName": {
+                            "type": "string",
+                            "meta:xdmType": "string",
+                            "title": "First name",
+                            "description": "The first segment of the name in the writing order most commonly accepted in the language of the name. In many cultures this is the preferred personal or given name. The `firstName` and `lastName` properties have been introduced to maintain compatibility with existing systems that model names in a simplified, non-semantic, and non-internationalizable way. Using `xdm:fullName` is always preferable."
+                        },
+                        "fullName": {
+                            "type": "string",
+                            "meta:xdmType": "string",
+                            "title": "Full name",
+                            "description": "The full name of the person, in writing order most commonly accepted in the language of the name."
+                        },
+                        "lastName": {
+                            "type": "string",
+                            "meta:xdmType": "string",
+                            "title": "Last name",
+                            "description": "The last segment of the name in the writing order most commonly accepted in the language of the name. In many cultures this is the inherited family name, surname, patronymic, or matronymic name. The `firstName` and `lastName` properties have been introduced to maintain compatibility with existing systems that model names in a simplified, non-semantic, and non-internationalizable way. Using `xdm:fullName` is always preferable."
+                        },
+                        "middleName": {
+                            "type": "string",
+                            "meta:xdmType": "string",
+                            "title": "Middle name",
+                            "description": "Middle, alternative, or additional names supplied between the first name and last name."
+                        },
+                        "suffix": {
+                            "type": "string",
+                            "meta:xdmType": "string",
+                            "title": "Suffix",
+                            "description": "A group of letters provided after a person's name to provide additional information. The `suffix` is used at the end of someones name. For example Jr., Sr., M.D., PhD, I, II, III, etc."
+                        }
+                    }
+                },
+                "nationality": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "title": "Nationality",
+                    "description": "The legal relationship between a person and their state represented using the ISO 3166-1 Alpha-2 code."
+                },
+                "taxId": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "title": "Tax ID",
+                    "description": "The Tax / Fiscal ID of the person, e.g. the TIN in the US or the CIF/NIF in Spain.",
+                    "meta:status": "deprecated"
+                },
+                "type": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "title": "Type",
+                    "description": "The type of individual in different business contexts like B2C."
+                }
+            }
+        }
 
 
 ```
@@ -3279,7 +3373,7 @@ The response below has been shortened for brevity.
 
 ```shell
 
-curl --location --request GET 'https://platform-va7.adobe.io/data/core/idnamespace/identities' \ 
+curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/identities' \ 
 --header 'x-gw-ims-org-id: IMS ORG ID' \ 
 --header 'x-api-key: API_KEY' \ 
 --header 'x-sandbox-name: SANDBOX_NAME' \ 
@@ -3566,7 +3660,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response with an example schema**
 
-Inspect the response you obtain when preforming the call above. You need to drill down into the response to find the object `connectionSpec.targetSpec.attributes.partnerSchema.jsonSchema`
+Inspect the response you obtain when performing the call above. You need to drill down into the response to find the object `connectionSpec.targetSpec.attributes.partnerSchema.jsonSchema`
 
 +++ Response to get partner schema for the output schema
 
@@ -4199,13 +4293,17 @@ The ID in the response represents the unique identifier of the input schema that
 
 ### Create mapping sets
 
-Create the mapping set by using the input schema ID, the output schema ID, and the desired field mappings.
+Next, use the [data prep API](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet) to create the mapping set by using the input schema ID, the output schema ID, and the desired field mappings.
 
 >[!BEGINSHADEBOX]
 
 **Request**
 
 +++ Create mapping set - Request
+
+>[!IMPORTANT]
+>
+>In the mappings object shown below, the `destination` parameter does not accept dots `.`. For example you would need to use personalEmail_address or segmentMembership_status as in the configuration example.
 
 ```shell
 
@@ -4232,7 +4330,17 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
             "destination": "Email",
             "source": "identityMap.Email",
             "sourceType": "ATTRIBUTE"
-        }
+        },
+        {
+            "destination": "personalEmail_address",
+            "source": "personalEmail.address",
+            "sourceType": "ATTRIBUTE"
+        },        
+        {
+            "destination": "segmentMembership_status",
+            "source": "segmentMembership.ups.seg_id.status",
+            "sourceType": "ATTRIBUTE"
+        }        
     ],
     "xdmVersion": "1.0"
 }'
