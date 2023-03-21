@@ -95,9 +95,13 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, search for [!DN
 
 ### Authenticate to destination {#authenticate}
 
-To authenticate to the destination, select **[!UICONTROL Connect to destination]**. You will be navigated to the [!DNL Salesforce] login page. Enter your [!DNL Marketing Cloud Account Engagement] account credentials and select [!DNL Log In]. 
+To authenticate to the destination, select **[!UICONTROL Connect to destination]**. You will be navigated to the [!DNL Salesforce] login page. Enter your [!DNL Marketing Cloud Account Engagement] account credentials and select [!DNL Log In].
 
 ![Platform UI screenshot showing how to authenticate to Marketing Cloud Account Engagement.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/authenticate-destination.png)
+
+Next, Select [!UICONTROL Allow] in the subsequent window to give permissions to the **Adobe Experience Platform** app to access your [!DNL Salesforce Marketing Cloud Account Engagement] account. *You will need to do this only once*. Note, the domain redirect shown in the window begins with an *adobe* or *infosys* prefix, both are valid. 
+
+![Salesforce App screenshot confirmation popup to give permissions to the Experience Platform app access to Marketing Cloud Account Engagement.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/allow-app.png)
 
 If the details provided are valid, the UI displays a message: *You successfully connected to Salesforce Marketing Cloud Account Engagement account* message and a **[!UICONTROL Connected]** status with a green check mark, you can then proceed to the next step.
 
