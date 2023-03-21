@@ -85,7 +85,7 @@ To create a static schema with profile attributes, define the target attributes 
 }
 ```
 
-|Parameter | Type | Required/Optional |Description|
+|Parameter | Type | Required/Optional | Description |
 |---------|----------|------|---|
 |`profileFields` | Array | Optional | Defines the array of target attributes accepted by your destination platform to which customers can map their profile attributes. When using a `profileFields` array, you can omit the `useCustomerSchemaForAttributeMapping` parameter entirely. |
 |`useCustomerSchemaForAttributeMapping`| Boolean | Optional | Enables or disables the mapping of attributes from the customer schema to the attributes that you define in the `profileFields` array. <ul><li>If set to `true`, users only see the source column in the mapping field. `profileFields` are not applicable in this case.</li><li>If set to `false`, users can map source attributes from their schema to the attributes you defined in the `profileFields` array.</li></ul> The default value is `false`.|

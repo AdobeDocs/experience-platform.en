@@ -1,9 +1,9 @@
 ---
 description: Learn how to configure the supported target identities for destinations built with Destination SDK.
-title: Identity mapping configuration
+title: Identity namespace configuration
 ---
 
-# Identity mapping configuration
+# Identity namespace configuration
 
 Experience Platform uses identity namespaces to describe the type of specific identities. For example, an identity namespace called `Email` identifies a value like name@email.com as an email address.
 
