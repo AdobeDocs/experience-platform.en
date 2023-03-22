@@ -33,7 +33,7 @@ A specific example is your logo file: Add an `"iconPath": "example.svg",` line t
 
 In order to use the API or command-line tools, you need a technical account with Adobe I/O. You must create the technical account in the I/O console and then use the Uploader tool to upload the extension package.
 
-For information on creating a technical account for use with tags in Adobe Experience Platform, please refer to the [Access Tokens](https://developer.adobelaunch.com/api/guides/access_tokens/) guide.
+For information on creating a technical account for use with tags in Adobe Experience Platform, please refer to the [Reactor API Getting Started](../../api/getting-started.md) guide.
 
 >[!IMPORTANT]
 >
