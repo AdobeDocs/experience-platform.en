@@ -152,7 +152,17 @@ If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication typ
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Include Segment Timestamps"
->abstract="Toggle if you want the data export to include the UNIX timestamp when the segments were created and updated, as well as the UNIX timestamp when the segments were mapped to the destination for activation. View the documentation for a data export example with this option selected."
+>abstract="Toggle if you want the data export to include the UNIX timestamp when the segments were created and updated, as well as the UNIX timestamp when the segments were mapped to the destination for activation. View the documentation for a data export example with this option selected.
+><h1>Monitor user activities in Platform</h2>
+><h2>Description</h2>
+><p>You can monitor user activity for various Platform services and capabilities in the form of audit logs. These logs form an audit trail that records **who** performed **what** action and **when**. Audit logs can help with troubleshooting issues on Platform and help your business effectively comply with corporate data stewardship policies and regulatory requirements.</p>
+>[!VIDEO](https://video.tv.adobe.com/v/29795?quality=12&learn=on)
+><h2>Instructions</h2>
+><ul><li>Select Audits in the left navigation. The Audits workspace shows a list of recorded logs, by default sorted from most recent to least recent.</li>&nbsp;&nbsp;&nbsp;<li> NOTE: Audit logs are retained for 365 days after which they will be deleted from the system. Therefore, you can only go back for a maximum period of 365 days. If you need to look back on data older than 365 days, you should export logs at a regular cadence to meet your internal policy requirements. </li>
+><li>Select an event from the list to view its details in the right rail. </li>
+><li>Select the funnel Icon to display a List of filter controls to help narrow the results. Only the last 1000 records are displayed, regardless of the filters selected. </li>
+><li>To export the current list of audit logs, select **Download log**.</li>
+><li>For more help with this feature, see the <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html">audit logs overview</a> on Experience League.</li></ul>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
