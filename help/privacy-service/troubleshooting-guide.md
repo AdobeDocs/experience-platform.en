@@ -59,7 +59,9 @@ For more information on providing user identity information, see the guide on [i
 
 ## Can I use [!DNL Privacy Service] to clean up data that was accidentally sent to [!DNL Platform]?
 
-Adobe does not support using [!DNL Privacy Service] for clearing out data that was accidentally submitted to a product. [!DNL Privacy Service] is designed to assist you in meeting your obligations for data subject (or consumer) access or delete requests. These requests are time-sensitive and are completed related to applicable privacy law. Submission of requests which are not data-subject/consumer access or delete requests impacts all [!DNL Privacy Service] customers and the ability for [!DNL Privacy Service] to support the appropriate legal timelines.
+Adobe does not support using [!DNL Privacy Service] for clearing out data that was accidentally submitted to a product. [!DNL Privacy Service] is designed to assist you in meeting your obligations for data subject (or consumer) access or delete requests. Any other usage of Privacy Service for data cleanup or maintenance is not supported or allowed. 
+
+Privacy requests are time-sensitive and are completed related to applicable privacy law. the submission of requests which are not data-subject/consumer access or delete requests impacts all [!DNL Privacy Service] customers and the ability for [!DNL Privacy Service] to support the appropriate legal timelines. A hard daily upload limit is now in place to help prevent abuse of the service.
 
 Please contact your account manager (CDM) to coordinate and provide a level of effort to remove any PII or data issues.
 
