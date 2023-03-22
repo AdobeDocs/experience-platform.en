@@ -24,7 +24,7 @@ This tutorial requires a working understanding of the following components of [!
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** in the left navigation. On the **[!UICONTROL Catalog]** view, navigate to the **[!UICONTROL Local system]** category. Under **[!UICONTROL Local file upload]**, select **[!UICONTROL Add data]**.
 
-![The [!UICONTROL Sources] catalog in the Platform UI, with [!UICONTROL Add data] under [!UICONTROL Local file upload] being selected](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
+![The [!UICONTROL Sources] catalog in the Platform UI, with [!UICONTROL Add data] under [!UICONTROL Local file upload] being selected.](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
 
 The **[!UICONTROL Map CSV XDM schema]** workflow appears, starting on the **[!UICONTROL Dataflow detail]** step.
 
@@ -48,13 +48,13 @@ You can optionally configure the following additional features for the dataflow 
 
 When you are finished configuring the dataflow, select **[!UICONTROL Next]**.
 
-![The [!UICONTROL Dataflow detail] section is completed](../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)
+![The [!UICONTROL Dataflow detail] section is completed.](../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)
 
 ## Select data
 
 On the **[!UICONTROL Select data]** step, use the left column to upload your CSV file. You can select **[!UICONTROL Choose files]** to open a file explorer dialog to select the file from, or you can drag and drop the file onto the column directly.
 
-![The [!UICONTROL Choose files] button and drag-and-drop area highlighted within the [!UICONTROL Select data] step](../../images/tutorials/map-csv-recommendations/upload-files.png)
+![The [!UICONTROL Choose files] button and drag-and-drop area highlighted within the [!UICONTROL Select data] step.](../../images/tutorials/map-csv-recommendations/upload-files.png)
 
 After uploading the file, a sample data section appears that shows the first ten rows of the received data so you can verify it has uploaded correctly. Select **[!UICONTROL Next]** to continue.
 
@@ -64,11 +64,11 @@ After uploading the file, a sample data section appears that shows the first ten
 
 The ML models are run to generate a new schema based on your dataflow configuration and your uploaded CSV file. When the process is complete, the [!UICONTROL Mapping] step populates to show the mappings for each individual field alongside fully navigable view of the generated schema structure.
 
-![The [!UICONTROL Mapping] step in the UI, showing all CSV fields mapped and the resulting schema structure](../../images/tutorials/map-csv-recommendations/schema-generated.png)
+![The [!UICONTROL Mapping] step in the UI, showing all CSV fields mapped and the resulting schema structure.](../../images/tutorials/map-csv-recommendations/schema-generated.png)
 
 From here, you can optionally [edit the field mappings](#edit-mappings) or [alter the field groups they are associated with](#edit-schema) according to your needs. When satisfied, select **[!UICONTROL Finish]** to complete the mapping and initiate the dataflow you configured earlier. The CSV data is ingested into the system and populates a dataset based on the generated schema structure, ready to be consumed by downstream Platform services.
 
-![The [!UICONTROL Finish] button being selected, completing the CSV mapping process](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
+![The [!UICONTROL Finish] button being selected, completing the CSV mapping process.](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
 
 ### Edit field mappings {#edit-mappings}
 
@@ -78,11 +78,11 @@ Use the field mapping preview to edit existing mappings or remove them entirely.
 
 The CSV fields are automatically mapped to existing XDM field groups using ML models. If you want to change the field group for any particular CSV field, select **[!UICONTROL Edit]** next to the schema tree.
 
-![The [!UICONTROL Edit] button being selected next to the schema tree](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
+![The [!UICONTROL Edit] button being selected next to the schema tree.](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
 A dialog appears, allowing you to edit the display name, data type, and field group for any field in the mapping. Select the edit icon (![Edit icon](../../images/tutorials/map-csv-recommendations/edit-icon.png)) next to a source field to edit its details in the right column before selecting **[!UICONTROL Apply]**.
 
-![The recommended field group for a source field being changed](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
+![The recommended field group for a source field being changed.](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
 
 When you are finished adjusting the schema recommendations for your source fields, select **[!UICONTROL Save]** to apply the changes.
 
