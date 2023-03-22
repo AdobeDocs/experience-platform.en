@@ -101,3 +101,8 @@ alloy("configure", {
 ```
 
 When filtering the link tracking events using the `onBeforeLinkClickSend` command, Adobe recommends returning `false` for the link clicks that should not be tracked. Any other response will make Web SDK send the data to the Edge Network.
+
+
+>[!NOTE]
+>
+>** When both the `onBeforeEventSend` and `onBeforeLinkClickSend` are set, the Web SDK runs the `onBeforeLinkClickSend` to filter and augment the link click interaction event, and then it runs the `onBeforeEventSend`.
