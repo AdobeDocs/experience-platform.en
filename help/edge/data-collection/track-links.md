@@ -105,4 +105,4 @@ When filtering the link tracking events using the `onBeforeLinkClickSend` comman
 
 >[!NOTE]
 >
->** When both the `onBeforeEventSend` and `onBeforeLinkClickSend` are set, the Web SDK runs the `onBeforeLinkClickSend` to filter and augment the link click interaction event, and then it runs the `onBeforeEventSend`.
+>** When both the `onBeforeEventSend` and `onBeforeLinkClickSend` callback functions are set, the Web SDK runs the `onBeforeLinkClickSend` callback function to filter and augment the link click interaction event, followed by the `onBeforeEventSend` callback function.
