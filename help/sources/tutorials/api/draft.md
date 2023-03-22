@@ -1,14 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;flow service;
-title: 
-description: This tutorial covers steps on how to set your dataflows in a draft state using the Flow Service API
+title: Draft Dataflows Using The Flow Service API
+description: Learn how to set your dataflows in a draft state using the Flow Service API.
 badge: label="New Feature" type="Positive"
 ---
 # Draft dataflows using the Flow Service API
 
-Save your dataflows as drafts when using the Flow Service API by supplying the `mode=draft` query parameter during the flow creation call. Drafts can be updated later with new information and then published once they are ready.
-
-This tutorial covers steps on how to set your dataflows in a draft state using the Flow Service API.
+Save your dataflows as drafts when using the Flow Service API by supplying the `mode=draft` query parameter during the flow creation call. Drafts can be updated later with new information and then published once they are ready. This tutorial covers the steps to set your dataflows in a draft state using the Flow Service API.
 
 ## Getting started
 
@@ -17,7 +15,9 @@ This tutorial requires you to have a working understanding of the following comp
 * [Sources](../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
 * [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-This tutorial also requires you to have already generated the assets needed in order to create a dataflow. This includes the following:
+### Prerequisites
+
+This tutorial requires you to have already generated the assets needed in order to create a dataflow. This includes the following:
 
 * An authenticated base connection
 * A source connection 
@@ -34,7 +34,7 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 ## Set a dataflow to draft state
 
-The following outlines the steps on how to set a dataflow as a draft, update the dataflow, publish the dataflow, and eventually delete the dataflow.
+The following sections outline the process to set a dataflow as a draft, update the dataflow, publish the dataflow, and eventually delete the dataflow.
 
 ### Draft a dataflow
 
@@ -48,7 +48,7 @@ POST /flows?mode=draft
 
 | Parameter | Description |
 | --- | --- |
-| `mode` | A user-supplied query parameter that updates the state of the dataflow. To set a dataflow as a draft, set `mode` to `draft`. |
+| `mode` | A user-supplied query parameter that decides the state of the dataflow. To set a dataflow as a draft, set `mode` to `draft`. |
 
 **Request**
 
@@ -128,7 +128,7 @@ curl -X PATCH \
 
 **Response**
 
-A successful response returns your flow ID and etag. To verify the change, you can make a GET request to the `/flows` endpoint while providing your flow ID.
+A successful response returns your flow ID and `etag`. To verify the change, you can make a GET request to the `/flows` endpoint while providing your flow ID.
 
 ```json
 {
@@ -166,7 +166,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns the ID and corresponding etag of your dataflow.
+A successful response returns the ID and corresponding `etag` of your dataflow.
 
 ```json
 {
@@ -177,6 +177,4 @@ A successful response returns the ID and corresponding etag of your dataflow.
 
 ### Delete a dataflow
 
-To delete your dataflow, make a DELETE request to the `/flows` endpoint while providing the ID of the dataflow that you want to delete.
-
-For detailed steps on how to delete a dataflow using the Flow Service API, read the guide on [deleting a dataflow in the API](./delete-dataflows.md).
+To delete your dataflow, make a DELETE request to the `/flows` endpoint while providing the ID of the dataflow that you want to delete. For detailed steps on how to delete a dataflow using the Flow Service API, read the guide on [deleting a dataflow in the API](./delete-dataflows.md).
