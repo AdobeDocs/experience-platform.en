@@ -36,7 +36,7 @@ See detailed information about the created artifacts below:
 >[!CONTEXTUALHELP]
 >id="platform_marketerPlayground_playbooks_reEngageShoppers_schemas"
 >title="Created schemas"
->abstract="Experience Platform has created for you these specific schemas with this specific configuration. We have done this because text text text."
+>abstract="We have generated two schemas which are specific to your use case. <br> <b>Customer digital transactions</b> includes XDM fields relevant to online purchases. <br> <b>Customer offline transactions</b> includes XDM fields relevant to offline purchases. <br> Select the schemas to inspect all the XDM fields per schema."
 
 ### Messages {#messages}
 
