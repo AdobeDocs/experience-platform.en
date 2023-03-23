@@ -1,14 +1,14 @@
 ---
-title: Flow Service Error Messages For Sources
-description: This document provides a catalog of error messages, descriptions, and suggested resolutions regarding Flow Service for Sources.
+title: Flow Service Error Messages
+description: Learn about the error messages that you may encounter when using Flow Service for sources.
 hide: true
 hidefromtoc: true
 ---
-# Flow Service error messages for sources
+# Flow Service error messages
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Platform. The service provides a user interface and RESTful API that lets you set-up source connections to various data providers with ease. These source connections enable you to authenticate your third-party systems, set times for ingestion runs, and manage data ingestion throughput.
 
-This document provides a catalog of error messages, descriptions, and suggested resolutions regarding Flow Service for sources.
+This document provides a catalog of error messages, descriptions, and suggested resolutions regarding Flow Service.
 
 ## Internal validation errors in Flow Service
 
