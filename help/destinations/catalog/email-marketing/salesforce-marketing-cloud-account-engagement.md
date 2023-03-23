@@ -8,7 +8,7 @@ description: The Salesforce Marketing Cloud Account Engagement (formerly known a
 
 Compared to [!DNL Salesforce Marketing Cloud Engagement] which is more oriented towards **B2C** marketing, [!DNL Marketing Cloud Account Engagement] is ideal for **B2B** use cases involving multiple departments and decision makers which require longer sales and decision cycles. In addition, you also maintain closer proximity and integration with your CRM to make appropriate sales and marketing decisions. *Note, Experience Platform also has connections for [!DNL Salesforce Marketing Cloud Engagement], you can check them on the [[!DNL Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) and [[!DNL (API) Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) pages.*
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Salesforce Account Engagement API > Prospect Upsert by Email]](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#prospect-upsert-by-email) endpoint, to add / update your leads after activating them within a new [!DNL Marketing Cloud Account Engagement] segment.
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Salesforce Account Engagement API > Prospect Upsert by Email]](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#prospect-upsert-by-email) endpoint, to add or update your leads after activating them within a new [!DNL Marketing Cloud Account Engagement] segment.
 
 [!DNL Marketing Cloud Account Engagement] uses [OAuth 2 with Authorization Code](/help/destinations/destination-sdk/functionality/authentication/oauth2-authentication.md#authorization-code) to communicate with the [!DNL Account Engagement] API. Instructions to authenticate to your [!DNL Marketing Cloud Account Engagement] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
@@ -18,7 +18,7 @@ To help you better understand how and when you should use the [!DNL Marketing Cl
 
 ### Send emails to contacts for marketing campaigns {#use-case-send-emails}
 
-The marketing department of an online platform wants to broadcast an email based marketing campaign to a curated audience of B2B leads. The platform's marketing team can add new leads / update existing lead information through Adobe Experience Platform, build segments from their own offline data, and send these segments to [!DNL Marketing Cloud Account Engagement], which can then be used to send the marketing campaign email.
+The marketing department of an online platform wants to broadcast an email based marketing campaign to a curated audience of B2B leads. The platform's marketing team can add new leads or update existing lead information through Adobe Experience Platform, build segments from their own offline data, and send these segments to [!DNL Marketing Cloud Account Engagement], which can then be used to send the marketing campaign email.
 
 ## Prerequisites {#prerequisites}
 
@@ -38,7 +38,7 @@ A [!DNL Marketing Cloud Account Engagement] account with a subscription to the [
 
 Your [!DNL Salesforce] account should have the [!DNL Salesforce] `Account Engagement Administrator role`. This is required to [create custom prospect fields](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&type=5).
 
-Finally, your account should also be able to access the [!DNL Account Engagement Lightning App](https://help.salesforce.com/s/articleView?id=sf.pardot_lightning_enable.htm&type=5).
+Finally, your account should also be able to access the [[!DNL Account Engagement Lightning App]](https://help.salesforce.com/s/articleView?id=sf.pardot_lightning_enable.htm&type=5).
 
 Reach out to [[!DNL Salesforce] Support](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) or your [!DNL Salesforce] account administrator if you do not have an account, or the account is missing the [!DNL Marketing Cloud Account Engagement] subscription or the [!DNL Account Engagement Administrator role].
 
@@ -56,7 +56,7 @@ Note down the items below before you authenticate to the [!DNL Marketing Cloud A
 
 ### Guardrails {#guardrails}
 
-* Refer to the [!DNL Marketing Cloud Account Engagement] [rate limits](https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html#rate-limits) which details the limits imposed by your plan and would also apply to the Experience Platform executions.
+Refer to the [!DNL Marketing Cloud Account Engagement] [rate limits](https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html#rate-limits) which details the limits imposed by your plan and would also apply to the Experience Platform executions.
 
 >[!IMPORTANT]
 >
@@ -99,7 +99,7 @@ To authenticate to the destination, select **[!UICONTROL Connect to destination]
 
 ![Platform UI screenshot showing how to authenticate to Marketing Cloud Account Engagement.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/authenticate-destination.png)
 
-Next, Select [!UICONTROL Allow] in the subsequent window to give permissions to the **Adobe Experience Platform** app to access your [!DNL Salesforce Marketing Cloud Account Engagement] account. *You will need to do this only once*. Note, the domain redirect shown in the window begins with an *adobe* or *infosys* prefix, both are valid. 
+Next, Select [!UICONTROL Allow] in the subsequent window to give permissions to the **Adobe Experience Platform** app to access your [!DNL Salesforce Marketing Cloud Account Engagement] account. *You will need to do this only once*.
 
 ![Salesforce App screenshot confirmation popup to give permissions to the Experience Platform app access to Marketing Cloud Account Engagement.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/allow-app.png)
 
@@ -141,7 +141,7 @@ To correctly map your XDM fields to the [!DNL Marketing Cloud Account Engagement
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
-1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select custom attributes]** category and specify from the list of [!DNL Prospect API fields](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#fields) from the available schema.
+1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select custom attributes]** category and specify from the list of [[!DNL Prospect API fields]](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#fields) from the available schema.
 
     * Repeat these steps to add any mappings between your XDM profile schema and [!DNL Marketing Cloud Account Engagement]:
         | Source Field | Target Field | Mandatory |
