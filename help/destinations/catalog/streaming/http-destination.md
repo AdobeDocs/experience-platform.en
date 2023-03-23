@@ -156,7 +156,6 @@ If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication typ
 >**Monitor user activities in Platform**
 ><h2>Description</h2>
 ><p>You can monitor user activity for various Platform services and capabilities in the form of audit logs. These logs form an audit trail that records <b>who</b> performed <b>what</b> action and <b>when</b>. Audit logs can help with troubleshooting issues on Platform and help your business effectively comply with corporate data stewardship policies and regulatory requirements.</p>
-><video src="https://video.tv.adobe.com/v/29795?quality=12&learn=on" controls>Query service Overview video</video>
 ><h2>Instructions</h2>
 ><ul><li>Select <b>Audits</b> in the left navigation. The Audits workspace shows a list of recorded logs, by default sorted from most recent to least recent.</li>&nbsp;&nbsp;&nbsp;<li> NOTE: Audit logs are retained for 365 days after which they will be deleted from the system. Therefore, you can only go back for a maximum period of 365 days. If you need to look back on data older than 365 days, you should export logs at a regular cadence to meet your internal policy requirements. </li>
 ><li>Select an event from the list to view its details in the right rail. </li>
