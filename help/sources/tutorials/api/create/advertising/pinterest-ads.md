@@ -9,9 +9,9 @@ hidefromtoc: true
 
 >[!NOTE]
 >
->The [!DNL Pinterest Ads] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Pinterest Ads] source is in beta. Read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
-The following tutorial walks you through the steps to create a [!DNL Pinterest Ads] source connection and create a dataflow to bring [[!DNL Pinterest Ads]](https://ads.pinterest.com/) data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a [!DNL Pinterest Ads] source connection and dataflow to bring [[!DNL Pinterest Ads]](https://ads.pinterest.com/) data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started {#getting-started}
 
@@ -22,19 +22,19 @@ This guide requires a working understanding of the following components of Exper
 
 The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Pinterest Ads] using the [!DNL Flow Service] API.
 
-## Prerequisites {#prerequisites}
+### Prerequisites {#prerequisites}
 
 In order to connect [!DNL Pinterest Ads] to Experience Platform, you must provide values for the following connection properties:
 
 * The [!DNL Pinterest] `accessToken`.
-* The [!DNL Pinterest] `Ad account ID`.
+* The [!DNL Pinterest] `adAccountId`.
 * One of [!DNL Pinterest] `Campaign`, `Ad Group` or `Ad` ID's as required.
 
-For more information on each of these, see their individual sections within the [!DNL Pinterest] [prerequisites](../../../../connectors/advertising/pinterest-ads.md#prerequisites) overview documentation.
+For more information on these connection properties, read the [[!DNL Pinterest Ads] overview](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
 
 ## Connect [!DNL Pinterest Ads] to Platform using the [!DNL Flow Service] API {#connect-platform-to-flow-api}
 
-The following tutorial walks you through the steps to create a [!DNL Pinterest Ads] source connection and create a dataflow to bring [!DNL Pinterest Ads] data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following outlines the steps to take in order to connect [!DNL Pinterest Ads] to Experience Platform. 
 
 ### Create a base connection {#base-connection}
 
@@ -54,25 +54,25 @@ The following request creates a base connection for [!DNL Pinterest Ads]:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Pinterest Ads",
-        "description": "Create a live inbound connection to your Pinterest Ads instance, to ingest both historic and scheduled data into Experience Platform",
-        "connectionSpec": {
-            "id": "f82aae23-91e7-4884-b25f-2d2159d841fd",
-            "version": "1.0"
-        },
-        "auth": {
-            "specName": "OAuth2 Refresh Code",
-            "params": {  
-                "accessToken": "{PINTEREST_ACCESS_TOKEN}"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Pinterest Ads",
+      "description": "Create a live inbound connection to your Pinterest Ads instance, to ingest both historic and scheduled data into Experience Platform",
+      "connectionSpec": {
+          "id": "f82aae23-91e7-4884-b25f-2d2159d841fd",
+          "version": "1.0"
+      },
+      "auth": {
+          "specName": "OAuth2 Refresh Code",
+          "params": {  
+              "accessToken": "{PINTEREST_ACCESS_TOKEN}"
+      }
+  }'
 ```
 
 | Property | Description |
@@ -97,7 +97,7 @@ A successful response returns the newly created base connection, including its u
 ### Explore your source {#explore}
 
 Using the base connection ID you generated in the previous step, you can explore files and directories by performing GET requests.
-Use the following calls to find the path of the file you wish to bring into [!DNL Platform]:
+Use the following calls to find the path of the file you wish to bring into Platform:
 
 **API format**
 
@@ -125,7 +125,7 @@ When performing GET requests to explore your source's file structure and content
 
 >[!TAB Campaigns]
 
-For [!DNL Pinterest Ads], when leveraging the Campaign Analytics API the value for `{SOURCE_PARAMS}` is passed as `{"ad_account_id":"123456789000","object_ids":"000123456789","object_type":"campaigns"}`. When encoded in base64, it equates to `YHsiYWRfYWNjb3VudF9pZCI6IjEyMzQ1Njc4OTAwMCIsIm9iamVjdF9pZHMiOiIwMDAxMjM0NTY3ODkiLCJvYmplY3RfdHlwZSI6ImNhbXBhaWducyJ9` as shown below.
+For [!DNL Pinterest Ads], when leveraging the Campaign Analytics API, the value for `{SOURCE_PARAMS}` is passed as `{"ad_account_id":"123456789000","object_ids":"000123456789","object_type":"campaigns"}`. When encoded in base64, it equates to `YHsiYWRfYWNjb3VudF9pZCI6IjEyMzQ1Njc4OTAwMCIsIm9iamVjdF9pZHMiOiIwMDAxMjM0NTY3ODkiLCJvYmplY3RfdHlwZSI6ImNhbXBhaWducyJ9` as shown below.
 
 ```shell
 curl -X GET \
@@ -138,7 +138,7 @@ curl -X GET \
 
 >[!TAB Ad Groups]
 
-For [!DNL Pinterest Ads], when leveraging the Ad Groups Analytics API the value for `{SOURCE_PARAMS}` is passed as `{"ad_account_id":"123456789000","object_ids":"000123456789,100123456789","object_type":"ad_groups"}`. When encoded in base64 it equates to `eyJhZF9hY2NvdW50X2lkIjoiMTIzNDU2Nzg5MDAwIiwib2JqZWN0X2lkcyI6IjAwMDEyMzQ1Njc4OSwxMDAxMjM0NTY3ODkiLCJvYmplY3RfdHlwZSI6ImFkX2dyb3VwcyJ9` as shown below.
+For [!DNL Pinterest Ads], when leveraging the Ad Groups Analytics API, the value for `{SOURCE_PARAMS}` is passed as `{"ad_account_id":"123456789000","object_ids":"000123456789,100123456789","object_type":"ad_groups"}`. When encoded in base64 it equates to `eyJhZF9hY2NvdW50X2lkIjoiMTIzNDU2Nzg5MDAwIiwib2JqZWN0X2lkcyI6IjAwMDEyMzQ1Njc4OSwxMDAxMjM0NTY3ODkiLCJvYmplY3RfdHlwZSI6ImFkX2dyb3VwcyJ9` as shown below.
 
 ```shell
 curl -X GET \
@@ -151,7 +151,7 @@ curl -X GET \
 
 >[!TAB Ads]
 
-For [!DNL Pinterest Ads], when leveraging the Ads Analytics API the value for `{SOURCE_PARAMS}` is passed as `{"ad_account_id":"123456789000","object_ids":"687247811001,687247811002,687247815005,687247834765","object_type":"ads"}`. When encoded in base64 it equates to `eyJhZF9hY2NvdW50X2lkIjoiMTIzNDU2Nzg5MDAwIiwib2JqZWN0X2lkcyI6IjY4NzI0NzgxMTAwMSw2ODcyNDc4MTEwMDIsNjg3MjQ3ODE1MDA1LDY4NzI0NzgzNDc2NSIsIm9iamVjdF90eXBlIjoiYWRzIn0=` as shown below.
+For [!DNL Pinterest Ads], when leveraging the Ads Analytics API, the value for `{SOURCE_PARAMS}` is passed as `{"ad_account_id":"123456789000","object_ids":"687247811001,687247811002,687247815005,687247834765","object_type":"ads"}`. When encoded in base64 it equates to `eyJhZF9hY2NvdW50X2lkIjoiMTIzNDU2Nzg5MDAwIiwib2JqZWN0X2lkcyI6IjY4NzI0NzgxMTAwMSw2ODcyNDc4MTEwMDIsNjg3MjQ3ODE1MDA1LDY4NzI0NzgzNDc2NSIsIm9iamVjdF90eXBlIjoiYWRzIn0=` as shown below.
 
 ```shell
 curl -X GET \
@@ -166,8 +166,6 @@ curl -X GET \
 
 **Response**
 
-Similarly, depending on which object type you are leveraging the response received is as below:
-
 >[!NOTE]
 >
 >Some records have been truncated to allow for a better presentation.
@@ -176,7 +174,7 @@ Similarly, depending on which object type you are leveraging the response receiv
 
 >[!TAB Campaigns]
 
-A successful response returns a structure as below. 
+A successful response returns the data structure of the corresponding [!DNL Pinterest Ads] API that you called. 
 
 ```json
 {
@@ -434,7 +432,7 @@ A successful response returns a structure as below.
 
 ### Create a source connection {#source-connection}
 
-You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
+You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a base connection ID, a path to the source data file, and a connection spec ID.
 
 **API format**
 
@@ -597,9 +595,9 @@ For detailed steps on how to create a target dataset, see the tutorial on [creat
 
 ### Create a target connection {#target-connection}
 
-A target connection represents the connection to the destination where the ingested data is to be stored. To create a target connection, you must provide the fixed connection specification ID that corresponds to the [!DNL Data Lake]. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+A target connection represents the connection to the destination where the ingested data is to be stored. To create a target connection, you must provide the fixed connection specification ID that corresponds to the data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-You now have the unique identifiers a target schema a target dataset and the connection spec ID to the [!DNL Data Lake]. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to the data lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
 
 **API format**
 
