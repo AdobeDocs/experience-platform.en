@@ -620,8 +620,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "{YOURSOURCE} Target Connection",
-        "description": "{YOURSOURCE} Target Connection",
+        "name": "Pinterest Ads Target Connection",
+        "description": "Pinterest Ads Target Connection",
         "connectionSpec": {
             "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
@@ -800,8 +800,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "{YOURSOURCE} dataflow",
-        "description": "{YOURSOURCE} dataflow",
+        "name": "Pinterest Ads dataflow",
+        "description": "Pinterest Ads dataflow",
         "flowSpec": {
             "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
             "version": "1.0"
