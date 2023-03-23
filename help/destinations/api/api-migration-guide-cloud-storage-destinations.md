@@ -1,14 +1,14 @@
 ---
 solution: Experience Platform
 title: API migration guide for cloud storage destinations
-description: Learn what changes in the workflow to activate cloud storage destinations as part of the migration to the new cloud storage destination cards with additional functionality.
+description: Learn about the changes in the workflow to activate cloud storage destinations as part of the migration to the new cloud storage destination cards with additional functionality.
 type: Tutorial
 ---
 # API migration guide for cloud storage destinations
 
 >[!IMPORTANT]
 >
->* The functionality described on this page is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Please contact your Adobe representative for more information. 
+>* The functionality described on this page is available to customers who have purchased the Real-Time CDP Prime and Ultimate packages. Please contact your Adobe representative for more information. 
 
 ## Migration context {#migration-context}
 
@@ -16,7 +16,7 @@ Starting November 2022, you can use the new file export capabilities to access e
 
 * Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 * Ability to set custom file headers in your exported files via the [new mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
-* [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+* Ability to [customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 This functionality is supported by the beta cloud storage cards listed below: 
 
@@ -34,17 +34,19 @@ Commenting out the three net new cloud storage destinations
 
 -->
 
+Note that currently in the Experience Platform UI, you can see two side-by-side destination cards of the three destinations. Shown below are the [!DNL Amazon S3] legacy and new destinations. In all cases, the cards marked with **Beta** are the new destination cards.
+
 ![Image of the two Amazon S3 destination cards in a side-by-side view.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
-While these destinations with enhanced functionality were offered initially as a beta, Adobe is now moving all Real-Time CDP customers to the new cloud storage destinations. For customers who were already using Amazon S3, Azure Blob, or SFTP, this means that existing dataflows will be migrated to the new cards. Read on for more information about the specific changes as part of the migration.
+While these destinations with enhanced functionality were offered initially as a beta, Adobe is now moving all Real-Time CDP customers to the new cloud storage destinations. For customers who were already using [!DNL Amazon S3], [!DNL Azure Blob], or SFTP, this means that existing dataflows will be migrated to the new cards. Read on for more information about the specific changes as part of the migration.
 
 ## Who this page applies to {#who-this-applies-to}
 
 If you are already using the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) to export profiles to the Amazon S3, Azure Blob, or SFTP cloud storage destinations, then this API migration guide applies to you. 
 
-If you have scripts running in your Amazon S3, Azure Blob, or SFTP cloud storage locations on top of the exported files from Experience Platform, be aware that some parameters are changing with regards to the connection and flow specs of the new cards, as well as with regard to the mapping step.
+If you have scripts running in your [!DNL Amazon S3], [!DNL Azure Blob], or SFTP cloud storage locations on top of the exported files from Experience Platform, be aware that some parameters are changing with regards to the connection and flow specs of the new cards, as well as with regard to the mapping step.
 
-For example, if you were using a script to filter destination dataflows to the Amazon S3 destination, based on the connection spec of the Amazon S3 destination, be aware that the connection spec will change so you will need to update your filters. 
+For example, if you were using a script to filter destination dataflows to the [!DNL Amazon S3] destination, based on the connection spec of the [!DNL Amazon S3] destination, be aware that the connection spec will change so you will need to update your filters. 
 
 ## Relevant documentation links {#relevant-documentation-links}
 
@@ -60,22 +62,22 @@ TBD if we keep this link but will likely remove it
 * [API tutorial to export segments to cloud storage destinations](/help/destinations/api/activate-segments-file-based-destinations.md)
 * [Destinations API reference documentation](https://developer.adobe.com/experience-platform-apis/references/destinations/) 
 
-## Summary of backwards-incompatible changes
+## Summary of backwards-incompatible changes {#summary-backwards-incompatible-changes}
 
-With the migration to the new destinations, all your existing dataflows to Amazon S3, Azure Bloc, and SFTP destinations will now be assigned new target connections and base connections. The profile mapping step also changes. Backwards-incompatible changes are summarized in the sections below for each destination. View also the [destinations glossary](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) for more information on the terms in the diagram below.
+With the migration to the new destinations, all your existing dataflows to [!DNL Amazon S3], [!DNL Azure Blob], and SFTP destinations will now be assigned new target connections and base connections. The profile mapping step also changes. Backwards-incompatible changes are summarized in the sections below for each destination. View also the [destinations glossary](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) for more information on the terms in the diagram below.
 
 ![Migration guide overview image](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
 
-### Backwards-incompatible changes to the Amazon S3 destination
+### Backwards-incompatible changes to the [!DNL Amazon S3] destination {#changes-amazon-s3-destination}
 
 The backwards-incompatible changes for the API users are an updated `connection spec` and `flow spec` as shown in the table below:
 
-|Amazon S3 | Legacy | New |
+|[!DNL Amazon S3] | Legacy | New |
 |---------|----------|---------|
 | Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 269ba276-16fc-47db-92b0-c1049a3c131f |
 | Connection spec | 4890fc95-5a1f-4983-94bb-e060c08e3f81 | 4fce964d-3f37-408f-9778-e597338a21ee |
 
-View the complete legacy and new base connection and target connection examples for [!DNL Amazon S3] in the tabs below. The parameters required to create base connections for Amazon S3 destinations do not change. 
+View the complete legacy and new base connection and target connection examples for [!DNL Amazon S3] in the tabs below. The parameters required to create base connections for [!DNL Amazon S3] destinations do not change. 
 
 Similarly, there are no backwards-incompatible changes in the parameters required to create target connections.
 
@@ -238,11 +240,11 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 >[!ENDTABS]
 
-### Backwards-incompatible changes to Azure Blob destination
+### Backwards-incompatible changes to [!DNL Azure Blob] destination {#changes-azure-blob-destination}
 
 The backwards-incompatible changes for the API users are an updated `connection spec` and `flow spec` as shown in the table below:
 
-|Azure Blob | Legacy | New |
+|[!DNL Azure Blob] | Legacy | New |
 |---------|----------|---------|
 | Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
 | Connection spec | e258278b-a4cf-43ac-b158-4fa0ca0d948b | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
@@ -350,7 +352,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
     "specName": "File Encryption",
     "params": {
       "encryptionAlgo": "PGP/GPG",
-      "publicKey": <publicKey>
+      "publicKey": "<publicKey>"
     }
   },
   "version": "\"4008a892-0000-0200-0000-6389890d0000\"",
@@ -410,7 +412,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 >[!ENDTABS]
 
-### Backwards-incompatible changes to SFTP destination
+### Backwards-incompatible changes to SFTP destination {#changes-sftp-destination}
 
 The backwards-incompatible changes for the API users are an updated `connection spec` and `flow spec` as shown in the table below:
 
@@ -464,7 +466,7 @@ View the complete legacy and new base connection and target connection examples 
 
 +++
 
-+++View legacy [!DNL base connection] for SFTP - SSH key authentication
++++View legacy [!DNL base connection] for [!DNL SFTP - SSH key] authentication
 
 ```json {line-numbers="true" start-line="1" highlight="15"}
 {
@@ -489,7 +491,7 @@ View the complete legacy and new base connection and target connection examples 
     "specName": "File Encryption",
     "params": {
       "encryptionAlgo": "PGP/GPG",
-      "publicKey": <publicKey>
+      "publicKey": "<publicKey>"
     }
   },
   "version": "\"d000013c-0000-0200-0000-629903bd0000\"",
@@ -539,7 +541,7 @@ View the complete legacy and new base connection and target connection examples 
 
 >[!TAB New base connection and target connection]
 
-+++View new [!DNL base connection] for SFTP - password authentication
++++View new [!DNL base connection] for [!DNL SFTP - password authentication]
 
 ```json
 {
@@ -563,7 +565,7 @@ View the complete legacy and new base connection and target connection examples 
     "specName": "File Encryption",
     "params": {
       "encryptionAlgo": "PGP/GPG",
-      "publicKey": <publicKey>
+      "publicKey": "<publicKey>"
     }
   },
   "version": "\"420826cc-0000-0200-0000-638999a60000\"",
@@ -573,7 +575,7 @@ View the complete legacy and new base connection and target connection examples 
 
 +++
 
-+++View new [!DNL base connection] for SFTP - SSH key authentication
++++View new [!DNL base connection] for [!DNL SFTP - SSH key] authentication
 
 ```json {line-numbers="true" start-line="1" highlight="12"}
 {
@@ -597,7 +599,7 @@ View the complete legacy and new base connection and target connection examples 
     "specName": "File Encryption",
     "params": {
       "encryptionAlgo": "PGP/GPG",
-      "publicKey": <publicKey>
+      "publicKey": "<publicKey>"
     }
   },
   "version": "\"420826cc-0000-0200-0000-638999a60000\"",
@@ -656,7 +658,7 @@ View the complete legacy and new base connection and target connection examples 
 
 >[!ENDTABS]
 
-### Backwards-incompatible changes common to Amazon S3, Azure Blob, and SFTP destinations
+### Backwards-incompatible changes common to [!DNL Amazon S3], [!DNL Azure Blob], and SFTP destinations {#changes-all-destinations}
 
 The profile selector step in all three destinations is replaced by a mapping step which allows you to rename the column headers in your exported files, if desired. See the side-by-side image below with the old attribute selector step on the left and the new mapping step on the right.
 
@@ -818,11 +820,11 @@ Notice in the configuration example below how `profileSelectors` fields have bee
 
 >[!ENDTABS]
 
-## Migration timelines
+## Migration timeline {#migration-timeline}
 
 You will receive emails from Adobe as the migration date approaches. In preparation, read the section below to get ready for the migration. 
 
-## Action items
+## Action items {#action-items}
 
 In preparation for the migration of the Amazon S3, Azure Blob, and SFTP cloud storage destinations to the new cards, please prepare to update your scripts and automated API calls. Your Adobe account team will reach out with further information about when your dataflows will be migrated. 
 
