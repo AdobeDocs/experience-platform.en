@@ -91,12 +91,12 @@ Before starting the workflow to export profiles, identify the connection spec an
 
 |Destination | Connection spec | Flow spec|
 ---------|----------|---------|
-| Amazon S3 | `4fce964d-3f37-408f-9778-e597338a21ee` | `269ba276-16fc-47db-92b0-c1049a3c131f` |
-| Azure Blob Storage | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `95bd8965-fc8a-4119-b9c3-944c2c2df6d2` |
+| Amazon S3 | `4fce964d-3f37-408f-9778-e597338a21ee` | `1a0514a6-33d4-4c7f-aff8-594799c47549` |
+| Azure Blob Storage | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
 | Azure Data Lake Gen 2(ADLS Gen2) | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
 | Data Landing Zone(DLZ) | `10440537-2a7b-4583-ac39-ed38d4b848e8` | `cd2fc47e-e838-4f38-a581-8fff2f99b63a` |
 | Google Cloud Storage | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
-| SFTP | `36965a81-b1c6-401b-99f8-22508f1e6a26` | `354d6aad-4754-46e4-a576-1b384561c440` |
+| SFTP | `36965a81-b1c6-401b-99f8-22508f1e6a26` | `fd36aaa4-bf2b-43fb-9387-43785eeeb799` |
 
 {style="table-layout:auto"}
 
@@ -693,9 +693,9 @@ Note the highlighted lines with inline comments in the request example, which pr
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-api-key: <API-KEY>' \
---header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
---header 'x-sandbox-name: <SANDBOX-NAME>' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "name": "Amazon S3 Base Connection",
@@ -744,9 +744,9 @@ Note the highlighted lines with inline comments in the request example, which pr
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-api-key: <API-KEY>' \
---header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
---header 'x-sandbox-name: <SANDBOX-NAME>' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "name": "Azure Blob Storage Base Connection",
@@ -794,9 +794,9 @@ Note the highlighted lines with inline comments in the request example, which pr
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-api-key: <API-KEY>' \
---header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
---header 'x-sandbox-name: <SANDBOX-NAME>' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "name": "Azure Data Lake Gen 2(ADLS Gen2) Base Connection",
@@ -845,9 +845,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-api-key: <API-KEY>' \
---header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
---header 'x-sandbox-name: <SANDBOX-NAME>' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "name": "Data Landing Zone(DLZ) Base Connection"
@@ -885,9 +885,9 @@ Note the highlighted lines with inline comments in the request example, which pr
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-api-key: <API-KEY>' \
---header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
---header 'x-sandbox-name: <SANDBOX-NAME>' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "name": "Google Cloud Storage Base Connection",
@@ -936,9 +936,9 @@ Note the highlighted lines with inline comments in the request example, which pr
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-api-key: <API-KEY>' \
---header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
---header 'x-sandbox-name: <SANDBOX-NAME>' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "name": "SFTP with password Base Connection",
@@ -971,9 +971,9 @@ Note the highlighted lines with inline comments in the request example, which pr
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-api-key: <API-KEY>' \
---header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
---header 'x-sandbox-name: <SANDBOX-NAME>' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "name": "SFTP with SSH key Base Connection",
@@ -1066,9 +1066,9 @@ Note the highlighted lines with inline comments in the request example, which pr
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'accept: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-api-key: <API-KEY>' \
---header 'x-gw-ims-org-id: <IMS-ORG-ID>' \
---header 'x-sandbox-name: <SANDBOX-NAME>' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "name": "SFTP with SSH key Base Connection",
@@ -2861,7 +2861,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Note the `target connection ID` from the response. This ID will be required in the next step when creating the dataflow to export segments. 
 
-A successful response returns the ID (`id`) of the newly created source connection and an `etag`. Note down the source connection ID as you will need it later when creating the dataflow. 
+A successful response returns the ID (`id`) of the newly target source connection and an `etag`. Note down the target connection ID as you will need it later when creating the dataflow. 
 
 ## Create a dataflow {#create-dataflow}
 
@@ -2891,7 +2891,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "name": "Activate segments to an Amazon S3 cloud storage destination",
     "description": "This operation creates a dataflow to export segments to an Amazon S3 cloud storage destination",
     "flowSpec": {
-        "id": "269ba276-16fc-47db-92b0-c1049a3c131f", // Amazon S3 flow spec ID
+        "id": "1a0514a6-33d4-4c7f-aff8-594799c47549", // Amazon S3 flow spec ID
         "version": "1.0"
     },
     "sourceConnectionIds": [
@@ -2939,7 +2939,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "name": "Activate segments to an Azure Blob Storage cloud storage destination",
     "description": "This operation creates a dataflow to export segments to an Azure Blob Storage cloud storage destination",
     "flowSpec": {
-        "id": "95bd8965-fc8a-4119-b9c3-944c2c2df6d2", // Azure Blob Storage flow spec ID
+        "id": "752d422f-b16f-4f0d-b1c6-26e448e3b388", // Azure Blob Storage flow spec ID
         "version": "1.0"
     },
     "sourceConnectionIds": [
@@ -3131,7 +3131,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "name": "Activate segments to an SFTP cloud storage destination",
     "description": "This operation creates a dataflow to export segments to an SFTP cloud storage destination",
     "flowSpec": {
-        "id": "354d6aad-4754-46e4-a576-1b384561c440", // SFTP flow spec ID
+        "id": "fd36aaa4-bf2b-43fb-9387-43785eeeb799", // SFTP flow spec ID
         "version": "1.0"
     },
     "sourceConnectionIds": [
@@ -3199,11 +3199,11 @@ View below examples of requests and responses to retrieve attributes and identit
 ```shell
 
 curl --location --request GET 'https://platform.adobe.io/data/core/ups/config/entityTypes/_xdm.context.profile?property=fullSchema==true&property=includeRelationshipDescriptors==true' \ 
---header 'x-gw-ims-org-id: IMS ORG ID' \ 
---header 'x-api-key: API_KEY' \
---header 'x-sandbox-name: SANDBOX_NAME' \ 
+--header 'x-gw-ims-org-id: {ORG_ID}' \ 
+--header 'x-api-key: {API_KEY}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \ 
 --header 'x-sandbox-id: SANDBOX_ID' \ 
---header 'Authorization: Bearer TOKEN_HERE' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 
 ```
 
@@ -3374,11 +3374,11 @@ The response below has been shortened for brevity.
 ```shell
 
 curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/identities' \ 
---header 'x-gw-ims-org-id: IMS ORG ID' \ 
---header 'x-api-key: API_KEY' \ 
---header 'x-sandbox-name: SANDBOX_NAME' \ 
+--header 'x-gw-ims-org-id: {ORG_ID}' \ 
+--header 'x-api-key: {API_KEY}' \ 
+--header 'x-sandbox-name: {SANDBOX_NAME}' \ 
 --header 'x-sandbox-id: SANDBOX_ID' \ 
---header 'Authorization: Bearer TOKEN_HERE' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 
 ```
 
@@ -3595,11 +3595,11 @@ Next, you need to copy the response from above and use it to create your input s
 ```shell
 
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/schemas/' \ 
---header 'x-gw-ims-org-id: IMS ORG ID' \ 
---header 'x-api-key: API_KEY' \ 
---header 'x-sandbox-name: SANDBOX_NAME' \ 
+--header 'x-gw-ims-org-id: {ORG_ID}' \ 
+--header 'x-api-key: {API_KEY}' \ 
+--header 'x-sandbox-name: {SANDBOX_NAME}' \ 
 --header 'x-sandbox-id: SANDBOX_ID' \ 
---header 'Authorization: Bearer TOKEN_HERE' \ 
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \ 
 --header 'Content-Type: application/json' \ 
 --data-raw '{
     "name":"Sample Schema for Flow Mapping",
@@ -3644,15 +3644,16 @@ Next, you must set up the output schema for your export. First, you need to find
 
 +++Request to get partner schema for the output schema
 
+Note that the example below uses the `connection spec ID` for Amazon S3. Please replace this value with the connection spec ID specific to your destination.
+
 ```shell
 
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
---header 'x-gw-ims-org-id: IMS_ORG_ID' \
---header 'x-api-key: API_KEY' \
---header 'x-sandbox-name: SANDBOX_NAME' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'x-sandbox-id: SANDBOX_ID' \
---header 'Authorization: Bearer TOKEN_HERE' \
---data-raw ''
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 
 ```
 
@@ -3660,7 +3661,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response with an example schema**
 
-Inspect the response you obtain when performing the call above. You need to drill down into the response to find the object `connectionSpec.targetSpec.attributes.partnerSchema.jsonSchema`
+Inspect the response you obtain when performing the call above. You need to drill down into the response to find the object `targetSpec.attributes.partnerSchema.jsonSchema`
 
 +++ Response to get partner schema for the output schema
 
@@ -3961,9 +3962,9 @@ Next, you need to create an output schema. Copy the JSON response you got above 
 ```shell
 
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/schemas' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: fasterincremental' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -4303,14 +4304,14 @@ Next, use the [data prep API](https://developer.adobe.com/experience-platform-ap
 
 >[!IMPORTANT]
 >
->In the mappings object shown below, the `destination` parameter does not accept dots `.`. For example you would need to use personalEmail_address or segmentMembership_status as in the configuration example.
+>In the mappings object shown below, the `destination` parameter does not accept dots `"."`. For example you would need to use personalEmail_address or segmentMembership_status as in the configuration example.
 
 ```shell
 
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
---header 'x-api-key: acp_xql_gateway' \
---header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
---header 'x-sandbox-name: fasterincremental' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -4391,11 +4392,11 @@ Finally, you need to PATCH the dataflow with the mapping set information that yo
 ```shell
 
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/df8245a8-dd8f-42da-a04a-2d3a92654d9e' \
---header 'x-gw-ims-org-id: IMS ORG ID' \
---header 'x-api-key: API_KEY' \
---header 'x-sandbox-name: SANDBOX_NAME' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'x-sandbox-id: SANDBOX_ID' \
---header 'Authorization: Bearer TOKEN_HERE' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'If-Match: ETAG_HERE' \
 --data-raw '[
    {

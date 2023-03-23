@@ -60,7 +60,7 @@ TBD if we keep this link but will likely remove it
 
 --> 
 * [API tutorial to export segments to cloud storage destinations](/help/destinations/api/activate-segments-file-based-destinations.md)
-* [Destinations API reference documentation](https://developer.adobe.com/experience-platform-apis/references/destinations/) 
+* [Destinations Flow Service API reference documentation](https://developer.adobe.com/experience-platform-apis/references/destinations/) 
 
 ## Summary of backwards-incompatible changes {#summary-backwards-incompatible-changes}
 
@@ -74,7 +74,7 @@ The backwards-incompatible changes for the API users are an updated `connection 
 
 |[!DNL Amazon S3] | Legacy | New |
 |---------|----------|---------|
-| Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 269ba276-16fc-47db-92b0-c1049a3c131f |
+| Flow spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 269ba276-16fc-47db-92b0-c1049a3c131f |
 | Connection spec | 4890fc95-5a1f-4983-94bb-e060c08e3f81 | 4fce964d-3f37-408f-9778-e597338a21ee |
 
 View the complete legacy and new base connection and target connection examples for [!DNL Amazon S3] in the tabs below. The parameters required to create base connections for [!DNL Amazon S3] destinations do not change. 
@@ -246,7 +246,7 @@ The backwards-incompatible changes for the API users are an updated `connection 
 
 |[!DNL Azure Blob] | Legacy | New |
 |---------|----------|---------|
-| Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
+| Flow spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
 | Connection spec | e258278b-a4cf-43ac-b158-4fa0ca0d948b | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
 
 View the complete legacy and new base connection and target connection examples for [!DNL Azure Blob] in the tabs below. The parameters required to create base connections for Azure Blob destinations do not change. 
@@ -418,7 +418,7 @@ The backwards-incompatible changes for the API users are an updated `connection 
 
 |SFTP | Legacy | New |
 |---------|----------|---------|
-| Flow Spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 354d6aad-4754-46e4-a576-1b384561c440 |
+| Flow spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 354d6aad-4754-46e4-a576-1b384561c440 |
 | Connection spec | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
 
 In addition to the updated flow and connection spec above, there are changes to the parameters required when creating SFTP base connections.
@@ -832,4 +832,4 @@ The `targetConnectionSpecId` can be used as a flag to determine if the dataflow 
 
 ## Next steps {#next-steps}
 
-By reading this page, you now know if you need to take any action in preparation for the migration of the cloud storage destinations. You also know which documentation pages to reference as you set up API-based workflows to export files out of Experience Platform to your preferred cloud storage destinations. Next, you can view the API tutorial to export data to cloud storage destinations.
+By reading this page, you now know if you need to take any action in preparation for the migration of the cloud storage destinations. You also know which documentation pages to reference as you set up API-based workflows to export files out of Experience Platform to your preferred cloud storage destinations. Next, you can view the API tutorial to [export data to cloud storage destinations](/help/destinations/api/activate-segments-file-based-destinations.md).
