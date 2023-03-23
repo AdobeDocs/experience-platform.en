@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;getting started;content ai;commerce ai;content tagging;color tagging;color extraction;
+keywords: Experience Platform;getting started;content;content tagging;color tagging;color extraction;
 solution: Experience Platform
-title: Color tagging in the Content Tagging API
-description: The color tagging service, when given an image, can compute the histogram of pixel colors and sort them by dominant colors into buckets.
+title: Color Tagging in the Content Tagging API
+description: The Color Tagging service, when given an image, can compute the histogram of pixel colors and sort them by dominant colors into buckets.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
 ---
 # Color tagging

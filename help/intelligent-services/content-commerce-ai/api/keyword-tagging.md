@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;getting started;content ai;commerce ai;content tagging ai;keyword tagging;Keyword tagging
+keywords: Experience Platform;getting started;content;content tagging ai;keyword tagging;Keyword tagging
 solution: Experience Platform
 title: Keyword Tagging in the Content Tagging API
-description: The keyword tagging service, when given a text document, automatically extracts keywords or keyphrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword tagging algorithms are used.
+description: The Keyword Tagging service, when given a text document, automatically extracts keywords or keyphrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword tagging algorithms are used.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 ---
 # Keyword tagging
