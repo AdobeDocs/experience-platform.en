@@ -20,9 +20,7 @@ The Amazon Ads integration with Adobe Experience Platform provides turn-key inte
 
 To help you better understand how and when you should use the *Amazon Ads* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Use case #1 {#use-case-1}
-
-Activation and Targeting Use-cases:
+### Activation and targeting {#activation-and-targeting}
 
 This integration with Amazon DSP allows Amazon Ads advertisers to pass advertiser CDP segments from Adobe Experience Platform to Amazon’s DSP to create advertiser audiences for advertising targeting. Audiences may be selected within the Amazon DSP for positive targeting, as well as negative targeting (suppression). Additionally, using signals generated through Amazon Marketing Cloud, advertisers can optimize their advertiser audiences which will synchronize audience changes with Amazon DSP.
 
@@ -66,9 +64,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-To connect to the Amazon Ads destination, you will first click to establish a connection via OAuth2. After clicking *Connect to destination*, you will be taken to the Amazon Ads connection interface where you will first select the advertiser accounts you wish to connect to.  Upon connection, you will be redirected back to Adobe Experience Platform with a new connection, provided with the ID of the Advertiser Account you selected. Select the appropriate Advertiser Account on the destination configuration screen to proceed.
-
-
+You will be taken to the Amazon Ads connection interface where you will first select the advertiser accounts you wish to connect to.  Upon connection, you will be redirected back to Adobe Experience Platform with a new connection, provided with the ID of the Advertiser Account you selected. Select the appropriate Advertiser Account on the destination configuration screen to proceed.
 
 * **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination.
 
@@ -76,13 +72,11 @@ To connect to the Amazon Ads destination, you will first click to establish a co
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-
-
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Amazon Ads Advertiser Id]**: Select the ID for the target Amazon Ads account used for the destination.
+*  **[!UICONTROL Amazon Ads Advertiser ID]**: Select the ID for the target Amazon Ads account used for the destination.
 
-Note: once selecting this Amazon Ads Advertiser Id, you will need to create a new destination to change this. If you re-authenticate the OAuth credentials and select a new Advertiser Id, your changes will not apply.
+Note: once selecting this Amazon Ads Advertiser ID, you will need to create a new destination to change this. If you re-authenticate the OAuth credentials and select a new Advertiser Id, your changes will not apply.
 
 ![Configure new destination](../../assets/catalog/advertising/amazon_ads_image_1.png)
 
@@ -106,15 +100,15 @@ The Amazon Ads connection supports hashed email address and hashed phone numbers
 
 ![Adobe to Amazon Ads mapping](../../assets/catalog/advertising/amazon_ads_image_2.png)
 
-* When mapping email, select the Lower case, SHA256 source field (Email_LC_SHA256)
-* When mapping phone, select the SHA256 source field (Phone_SHA256)
-* You may also select fields containing email address or phone numbers to map to the corresponding target field in the Amazon Ads connection; in this case, you must select `Apply Transformation`
+* To map hashed email addresses, select the `Email_LC_SHA256` identity namespace as a source field.
+* To map hashed phone numbers, select the `Phone_SHA256` identity namespace as a source field.
+* To map unhashed email addresses or phone numbers, select the corresponding identity namespaces as source fields, and check the `Apply Transformation` option to have Platform hash the identities on activation.
 
 It is strongly recommended that you map as many fields as you have available. If only one source attribute is available, you may map a single field.  The Amazon Ads destination will utilize all mapped fields for mapping purposes, yielding higher match rates if more fields are provided. For more information about the accepted identifiers, visit the [Amazon Ads hashed audience help page](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
 
 ## Exported data / Validate data export {#exported-data}
 
-Once  your audience has been uploaded, you may validate your audience has been created and uploaded correctly using the following steps:
+Once your audience has been uploaded, you may validate your audience has been created and uploaded correctly using the following steps:
 
 **For Amazon DSP:**
 
