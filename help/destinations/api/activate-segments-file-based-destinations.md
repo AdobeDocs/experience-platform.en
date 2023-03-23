@@ -14,6 +14,7 @@ Use the enhanced file export capabilities (currently in beta) to access enhanced
 
 * Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 * Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* Ability to select the [file type](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) of the exported file.
 * [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 This functionality is supported by the six new beta cloud storage cards listed below: 
@@ -37,7 +38,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ## Getting started {#get-started}
 
-![Placeholder overview diagram](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
+![Steps to activate segments highilighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
@@ -85,7 +86,7 @@ For descriptions of the terms that you will be encountering in this API tutorial
 
 ## Select destination where to export segments {#select-destination}
 
-![Placeholder overview diagram](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
+![Steps to activate segments highilighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step1.png)
 
 Before starting the workflow to export profiles, identify the connection spec and flow spec IDs of the destination to which you are intending to export segments to. Use the table below for reference.
 
@@ -314,7 +315,7 @@ Follow the steps below to set up a segment export dataflow to a cloud storage de
 
 ## Create a Source Connection {#create-source-connection}
 
-![Placeholder overview diagram](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
+![Steps to activate segments highilighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step2.png)
 
 After deciding which destination you are exporting segments to, you need to create a source connection. The [source connection](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) represents the connection to the internal [Experience Platform Profile Store](/help/profile/home.md#profile-data-store). 
 
@@ -364,7 +365,7 @@ A successful response returns the ID (`id`) of the newly created source connecti
 
 ## Create a base connection {#create-base-connection}
 
-![Placeholder overview diagram](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
+![Steps to activate segments highilighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step3.png)
 
 A [base connection](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) securely stores the credentials to your destination. Depending on the destination type, the credentials needed to authenticate against that destination can vary. To find these authentication parameters, first retrieve the `connection spec` for your desired destination as described in the section [Select destination where to export segments](#select-destination) and then look at the `authSpec` of the response. Reference the tabs below for the `authSpec` properties of all supported destinations.
 
@@ -1078,12 +1079,15 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "domain": "<Add domain>",
       "username": "<Add username>",
       "sshKey": "<Add SSH key>"
-      "encryptionSpecs":{
+      }
+    },
+  "encryptionSpecs":{
+     "specName": "Encryption spec",
+     "params": {
          "encryptionAlgo":"PGPGPG",
          "publicKey":"<Add public key>"
       }            
-    }
-  },
+    },
   "connectionSpec": {
     "id": "36965a81-b1c6-401b-99f8-22508f1e6a26", // SFTP connection spec
     "version": "1.0"
@@ -1112,7 +1116,7 @@ Note the connection ID from the response. This ID will be required in the next s
 
 ## Create a target connection {#create-target-connection}
 
-![Placeholder overview diagram](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
+![Steps to activate segments highilighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step4.png)
 
 Next, you need to create a target connection. [Target connections](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) store the export parameters for the exported segments. Export parameters include export location, file format, compression, and other details. For example, for CSV files, you can select several export options. Get extensive information about all supported CSV export options in the [file formatting configurations page](/help/destinations/ui/batch-destinations-file-formatting-options.md). 
 
@@ -2865,7 +2869,7 @@ A successful response returns the ID (`id`) of the newly target source connectio
 
 ## Create a dataflow {#create-dataflow}
 
-![Placeholder overview diagram](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
+![Steps to activate segments highilighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step5.png)
 
 The next step in the destination configuration is to create a dataflow. A [dataflow](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) ties together previously created entities and also provides options for configuring the segment export schedule. To create the dataflow, use the payloads below, depending on your desired cloud storage destination, and replace the flow entity IDs from previous steps. Note that in this step, you are not adding any information related to attribute or identity mapping to the dataflow. That will follow in the next step.
 
@@ -2948,7 +2952,19 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "targetConnectionIds": [
         "<FROM_STEP_CREATE_TARGET_CONNECTION>"
     ],
-    "transformations": []
+    "transformations": [
+        {
+        "name": "GeneralTransform",
+        "params": {
+            "mandatoryFields": [],
+            "primaryFields": [],
+            "profileMapping": {},
+            "segmentSelectors": {
+            "selectors": []
+            }
+        }
+        }
+    ]
 }'
 ```
 
@@ -3170,7 +3186,7 @@ In this step, you can also select which segments you want to export to the desti
 
 ## Set up attribute and identity mapping {#attribute-and-identity-mapping}
 
-![Placeholder overview diagram](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
+![Steps to activate segments highilighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step6.png)
 
 After creating your dataflow, you need to set up mapping for the attributes and identities that you would like to export. This consists of three steps, listed below: 
 
@@ -4434,11 +4450,11 @@ The response from the Flow Service API returns the ID of the updated dataflow.
 
 ## Make other dataflow updates {#other-dataflow-updates}
 
-![Placeholder overview diagram](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
+![Steps to activate segments highilighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
 To make any updates to your dataflow, use the `PATCH` operation.For example, you can update your dataflows to select fields as mandatory keys or deduplication keys. 
 
-### Add a mandatory key
+### Add a mandatory key {#add-mandatory-key}
 
 To add a [mandatory key](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes), see the request and response examples below
 
@@ -4507,7 +4523,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!ENDSHADEBOX]
 
-### Add a deduplication key
+### Add a deduplication key {#add-deduplication-key}
 
 To add a [deduplication key](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys), see the request and response examples below
 
@@ -4584,7 +4600,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## Validate dataflow (Get the dataflow runs) {#get-dataflow-runs}
 
-![Placeholder overview diagram](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
+![Steps to activate segments highilighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step8.png)
 
 To check the executions of a dataflow, use the Dataflow Runs API:
 

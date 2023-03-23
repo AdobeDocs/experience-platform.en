@@ -16,6 +16,7 @@ Starting November 2022, you can use the new file export capabilities to access e
 
 * Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 * Ability to set custom file headers in your exported files via the [new mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* Ability to select the [file type](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) of the exported file.
 * Ability to [customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 This functionality is supported by the beta cloud storage cards listed below: 
@@ -172,9 +173,9 @@ Similarly, there are no backwards-incompatible changes in the parameters require
   "auth": {
     "specName": "Access Key",
     "params": {
+      "authorizedDate": "2022-10-26",
       "s3SecretKey": "<your-secret-key>",
-      "s3AccessKey": "<your-access-key>",
-      "authorizedDate": "2022-10-26"
+      "s3AccessKey": "<your-access-key>"
     }
   },
   "encryption": {
@@ -279,7 +280,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
     "specName": "File Encryption",
     "params": {
       "encryptionAlgo": "PGP/GPG",
-      "publicKey": <publicKey>
+      "publicKey": "<publicKey>"
     }
   }, 
   "version": "\"d000d23c-0000-0200-0000-6299051c0000\"",
@@ -344,8 +345,8 @@ Similarly, there are no backwards-incompatible changes in the parameters require
   "auth": {
     "specName": "ConnectionString",
     "params": {
-      "connectionString": "<your-connection-string>",
-      "authorizedDate": "2022-06-02"
+      "authorizedDate": "2022-06-02",      
+      "connectionString": "<your-connection-string>"
     }
   },
   "encryption": {
@@ -555,10 +556,10 @@ View the complete legacy and new base connection and target connection examples 
   "auth": {
     "specName": "SFTP with Password",
     "params": {
+      "authorizedDate": "2022-06-02",
       "domain": "ftp-out.demdex.com",
       "username": "DPID12345",
-      "password": "<your-password>",
-      "authorizedDate": "2022-06-02"
+      "password": "<your-password>"
     }
   },
   "encryption": {
@@ -587,12 +588,12 @@ View the complete legacy and new base connection and target connection examples 
   },
   "state": "enabled",
   "auth": {
-    "specName": "SFTP with Password",
+    "specName": "Basic Authentication for sftp",
     "params": {
+      "authorizedDate": "2022-06-02",
       "domain": "ftp-out.demdex.com",
       "username": "DPID12345",
       "sshKey": "<your-ssh-key>",
-      "authorizedDate": "2022-06-02"
     }
   },
   "encryption": {
@@ -677,6 +678,30 @@ Find complete information about setting up the `profileMapping` object in the [A
 ```json
 
 {
+  "segmentSelectors": {
+    "selectors": [
+      {
+        "type": "PLATFORM_SEGMENT",
+        "value": {
+          "id": "d74c68c9-a1f9-44bc-9685-95f0f5ece705",
+          "name": "0414 BugBasheditrename",
+          "description": "",
+          "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+          "exportMode": "DAILY_FULL_EXPORT",
+          "schedule": {
+            "frequency": "DAILY",
+            "triggerType": "SCHEDULED",
+            "startDate": "2022-06-02",
+            "endDate": "2022-06-30",
+            "startTime": "19:00"
+          },
+          "createTime": "1654195179",
+          "updateTime": "1669962057"
+        }
+      },
+      ...
+    ]
+  },  
   "profileSelectors": {
     "selectors": [
       {
@@ -729,30 +754,6 @@ Find complete information about setting up the `profileMapping` object in the [A
         "fieldType": "IDENTITY"
       }
     ]
-  },
-  "segmentSelectors": {
-    "selectors": [
-      {
-        "type": "PLATFORM_SEGMENT",
-        "value": {
-          "id": "d74c68c9-a1f9-44bc-9685-95f0f5ece705",
-          "name": "0414 BugBasheditrename",
-          "description": "",
-          "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
-          "exportMode": "DAILY_FULL_EXPORT",
-          "schedule": {
-            "frequency": "DAILY",
-            "triggerType": "SCHEDULED",
-            "startDate": "2022-06-02",
-            "endDate": "2022-06-30",
-            "startTime": "19:00"
-          },
-          "createTime": "1654195179",
-          "updateTime": "1669962057"
-        }
-      },
-      ...
-    ]
   }
 }
 
@@ -769,17 +770,6 @@ Notice in the configuration example below how `profileSelectors` fields have bee
 ```json
 
 {
-  "mandatoryFields": [
-    "CORE",
-    "person.name.lastName",
-    "personalEmail.address"
-  ],
-  "primaryFields": [
-    {
-      "identityNamespace": "CORE",
-      "fieldType": "IDENTITY"
-    }
-  ],
   "segmentSelectors": {
     "selectors": [
       {
@@ -803,7 +793,18 @@ Notice in the configuration example below how `profileSelectors` fields have bee
       },
       ...
     ]
-  },
+  },  
+  "mandatoryFields": [
+    "CORE",
+    "person.name.lastName",
+    "personalEmail.address"
+  ],
+  "primaryFields": [
+    {
+      "identityNamespace": "CORE",
+      "fieldType": "IDENTITY"
+    }
+  ],
   "identityMapping": {
     "mappings": []
   },
@@ -822,13 +823,23 @@ Notice in the configuration example below how `profileSelectors` fields have bee
 
 ## Migration timeline {#migration-timeline}
 
+The migration of legacy dataflows to the new destination cards for [!DNL Amazon S3], [!DNL Azure Blob], and SFTP destinations will occur on **June 30th, 2023**.
+
 You will receive emails from Adobe as the migration date approaches. In preparation, read the section below to get ready for the migration. 
 
 ## Action items {#action-items}
 
-In preparation for the migration of the Amazon S3, Azure Blob, and SFTP cloud storage destinations to the new cards, please prepare to update your scripts and automated API calls. Your Adobe account team will reach out with further information about when your dataflows will be migrated. 
+In preparation for the migration of the [!DNL Amazon S3], [!DNL Azure Blob], and SFTP cloud storage destinations to the new cards, please prepare to update your scripts and automated API calls as suggested below. 
 
-The `targetConnectionSpecId` can be used as a flag to determine if the dataflow has been migrated to the new destination card. For example, you could update your scripts with an `if` condition to look at the legacy and updated target connection specs in `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` and determine if your dataflow has been migrated. You can see the legacy and new connection spec IDs in the specific sections on this page for each destination. 
+1. Update any scripts or automated API calls for any existing [!DNL Amazon S3], [!DNL Azure Blob], or SFTP cloud storage destinations by June 30, 2023.
+2. Reach out to your Adobe account representative when your scripts have been updated before June 30th.
+3. The `targetConnectionSpecId` can be used as a flag to determine if the dataflow has been migrated to the new destination card. For example, you could update your scripts with an `if` condition to look at the legacy and updated target connection specs in `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` and determine if your dataflow has been migrated. You can see the legacy and new connection spec IDs in the specific sections on this page for each destination.
+4. Your Adobe account team will reach out with further information about when your dataflows will be migrated.
+5. After June 30th, all dataflows will be migrated. Failure to update scripts or API calls may result in interruption with ongoing flows?
+
+## Other migration considerations {#other-considerations}
+
+Note that there is no impact on your existing schedule for exports during or after the migration.
 
 ## Next steps {#next-steps}
 
