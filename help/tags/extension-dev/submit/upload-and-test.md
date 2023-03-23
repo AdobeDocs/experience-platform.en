@@ -106,7 +106,7 @@ To add your extension, select the **Catalog** tab.
 
 The catalog displays card icons for each available extension. If your extension is not displayed in the catalog, ensure that you have completed the steps above in the Adobe Administration Console Set Up and Creating Your Extension Package sections. Your extension package may also appear as Pending if Platform has not completed the initial processing.
 
-If you have followed the the previous steps and still do not see a Pending or Failed extension package in the catalog, you should check the status of your extension package directly using the API. For information on how to make the appropriate API call, read [Fetch an ExtensionPackage](../../api/endpoints/extension-packages.md#lookup) in the API documentation.
+If you have followed the previous steps and still do not see a Pending or Failed extension package in the catalog, you should check the status of your extension package directly using the API. For information on how to make the appropriate API call, read [Fetch an ExtensionPackage](../../api/endpoints/extension-packages.md#lookup) in the API documentation.
 
 After your extension package has finished processing, select **Install** at the bottom of the card.
 
