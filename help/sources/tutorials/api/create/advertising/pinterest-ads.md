@@ -28,7 +28,7 @@ In order to connect [!DNL Pinterest Ads] to Experience Platform, you must provid
 
 * The [!DNL Pinterest] `accessToken`.
 * The [!DNL Pinterest] `adAccountId`.
-* One of [!DNL Pinterest] `Campaign`, `Ad Group` or `Ad` ID's as required.
+* One of [!DNL Pinterest] `campaign`, `adGroup` or `ad` ID's as required.
 
 For more information on these connection properties, read the [[!DNL Pinterest Ads] overview](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
 

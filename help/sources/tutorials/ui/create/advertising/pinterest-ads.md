@@ -10,7 +10,7 @@ hidefromtoc: true
 
 >[!NOTE]
 >
->The [!DNL Pinterest Ads] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Pinterest Ads] source is in beta. Read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
 This tutorial provides steps for creating a [!DNL Pinterest Ads] source connector using the Platform user interface.
 
@@ -27,15 +27,15 @@ This tutorial requires a working understanding of the following components of Ex
 
 In order to connect [!DNL Pinterest Ads] to Experience Platform, you must provide values for the following connection properties:
 
-* The [!DNL Pinterest] `access token`.
-* The [!DNL Pinterest] `Ad account ID`.
-* One of [!DNL Pinterest] `Campaign`, `Ad Group` or `Ad` ID's as required.
+* The [!DNL Pinterest] acces token.
+* The [!DNL Pinterest] ad account ID.
+* One of [!DNL Pinterest] campaign, ad group or ad ID's as required.
 
-For more information on each of these, see their individual sections in the [prerequisites](../../../../connectors/advertising/pinterest-ads.md#prerequisites) section of the [!DNL Pinterest Ads] source overview documentation.
+For more information on these connection properties, read the [[!DNL Pinterest Ads] overview](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
 
 ### Create Platform Schema {#create-platform-schema}
 
-Create a Platform [schema](/help/xdm/schema/composition.md) required for Linked In Ads.
+You must also ensure that you first create a Platform schema to use for your [!DNL Pinterst Ads] source. Reaed the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
 ![Platform UI screenshot showing an example Schema](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png?lang=en)
 
@@ -43,11 +43,11 @@ For a list of the fields supported by the [!DNL Pinterest] Campaign, Ad Group an
 
 ## Connect your [!DNL Pinterest Ads] account {#connect-account}
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *Advertising* category, select *[!DNL Pinterest Ads]*, and then select **[!UICONTROL Add data]**.
+Under the *Advertising* category, select **[!UICONTROL Pinterest Ads]**, and then select **[!UICONTROL Add data]**.
 
 ![Platform UI screenshot for catalog with Pinterest Ads card](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png?lang=en)
 
@@ -61,7 +61,7 @@ To use an existing account, select the [!DNL Pinterest Ads] account you want to 
 
 ### New account {#new-account}
 
-If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and your credentials. Refer to the [prerequisites](#prerequisites) section for the values needed. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
+If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and your credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
 ![Platform UI screenshot for Connect Pinterest Ads account with a new account](../../../../images/tutorials/create/advertising/pinterest-ads/new.png?lang=en)
 
@@ -73,22 +73,17 @@ If the details provided are valid, the UI displays a **[!UICONTROL Connected]** 
 
 The **[!UICONTROL Select data]** step appears, providing an interface for you to input the information that would be passed to the APIs to bring the data you want to Platform.
 
-Finally, you must provide as a mandatory input the field values below:
-
 | Field | Description |
 | --- | --- |
-| **[!UICONTROL ad_account_id]** | Your [!DNL Pinterest Ads] Ad account ID. Refer to the [[!DNL Pinterest] guide on finding IDs in Ads Manager](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) if you need any guidance. |
-| **[!UICONTROL object_type]** | Select one of **Campaigns**, **Ad Groups** or **Ads** depending on which of the [!DNL Pinterest] Analytics APIs you want to obtain information from. |
-| **[!UICONTROL object_ids]** | The selected object's IDs. Navigate to the [!DNL Pinterest] page for **Pinterest Business Hub** > **Ad Account Summary** > **Campaigns** / **Ad Groups** / **Ads** and copy the required ID's mentioned just below each of their names. |
+| [!UICONTROL ad_account_id] | Your [!DNL Pinterest Ads] Ad account ID. Refer to the [[!DNL Pinterest] guide on finding IDs in Ads Manager](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) if you need any guidance. |
+| [!UICONTROL object_type] | Select one of **Campaigns**, **Ad Groups** or **Ads** depending on which of the [!DNL Pinterest] Analytics APIs you want to obtain information from. |
+| [!UICONTROL object_ids] | The selected object's IDs. Navigate to the [!DNL Pinterest] page for **Pinterest Business Hub** > **Ad Account Summary** > **Campaigns** / **Ad Groups** / **Ads** and copy the required ID's mentioned just below each of their names. |
 
->[!NOTE]
+>[!TIP]
 >
-> Multiple **[!UICONTROL object_ids]** can be provided by passing comma separated values.
-> A maximum of 100 IDs can be passed at a time.
-> If incorrect values are passed platform will show an error prompt with the message below :
-> `The request could not be processed. Error from flow provider: Unknown error while processing request.` 
+>You can provide multiple `object_ids` by passing comma-separated values.The maximum number of IDs that you can pass in a single request is 100. If incorrect values are passed, Platform displays the following message: `The request could not be processed. Error from flow provider: Unknown error while processing request.` 
 
-After providing the values, select the **[!UICONTROL Select]**. If the values provided are valid, the right part of the interface, preview data, will get populated.
+After providing the values, select **[!UICONTROL Select]**. If the values provided are valid, the right part of the interface, preview data, will get populated.
 
 ![The select data step of the sources workflow.](../../../../images/tutorials/create/advertising/pinterest-ads/select-data.png?lang=en)
 
@@ -132,7 +127,10 @@ Or if you selected [!DNL Pinterest] Ads, then the below page :
 ![Pinterest Ads page.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ads.png?lang=en)
 
 ### [!DNL Pinterest] Fields {#pinterest-fields}
+
 The fields supported by the [!DNL Pinterest] Campaign, Ad Group and Ad APIs are below:
+
++++ View payload
 
 ```json
 {
@@ -954,3 +952,5 @@ The fields supported by the [!DNL Pinterest] Campaign, Ad Group and Ad APIs are 
   ]
 }
 ```
+
++++
