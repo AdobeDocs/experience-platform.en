@@ -23,7 +23,6 @@ Pseudonymous Profile data expiration cannot be configured through the Platform U
 - The identity namespaces to be considered for Pseudonymous profile deletes. 
   - For example: `ECID` only, `AAID` only, or a combination of `ECID` and `AAID`.
 - The amount of time to wait before deleting a pseudonymous profile. The default recommendation for customers is 14 days. However, this value may differ based on your use case.
-- The current profile count compared to the license profile count.
 
 ## Frequently asked questions {#faq}
 
