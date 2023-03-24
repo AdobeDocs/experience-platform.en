@@ -34,7 +34,7 @@ This document provides a catalog of error messages, descriptions, and suggested 
 | --- | --- | --- |
 | `1100-400` | Bad Request | The request could not be processed. {detailedMessage} |
 | `1101-500` | Internal Error | An internal error has occurred. Please try again and contact customer support if the problem persists. |
-| `1102-404` | Resource not found The requested resource is not found. {detailedMessage} |
+| `1102-404` | Resource not found | The requested resource is not found. {detailedMessage} |
 | `1103-503` | Service Unavailable | The service is temporarily unavailable. Please try again and contact customer support if the problem persists. |
 | `1104-504` | Gateway Timeout | A gateway timeout has occurred. Please try again and contact customer support if the problem persists.
 | `1105-401` | Unauthorized | The user is unauthorized. {detailedMessage} |
@@ -88,8 +88,8 @@ This document provides a catalog of error messages, descriptions, and suggested 
 | `1329-400` | Bad Request | The param: {param} cannot be null or empty in the provided request. Please provide valid {param} and try again. |
 | `1330-400` | Bad Request | No columns were found for table {tableName}. Please provide a valid table name and try again. |
 | `1331-400` | Bad Request | Column Delimiter cannot be more than one character in SourceConnection: {sourceConnection}. Please provide valid column delimiter and try again. |
-| `1332-400` | Bad Request The source connection request with the connectionSpecId: {connectionSpecId} cannot have a baseConnectionId. Please remove the baseConnectionId and try again. |
-| `1333-400` | Bad Request The flowRunAction={flowRunAction} is not supported for source with spec id={specId}. Please provide valid flow run action and try again. |
+| `1332-400` | Bad Request | The source connection request with the connectionSpecId: {connectionSpecId} cannot have a baseConnectionId. Please remove the baseConnectionId and try again. |
+| `1333-400` | Bad Reques | The flowRunAction={flowRunAction} is not supported for source with spec id={specId}. Please provide valid flow run action and try again. |
 | `1334-400` | Bad Request | The query param : {param} cannot be empty. Please provide valid {param} and try again. |
 | `1335-400` | Bad Request | An error occurred while serializing the filter params for explore. Please check your filter param request and try again. |
 | `1336-400` | Bad Request | Explore connection is not supported for connection spec ID: {connectionSpecId}. Please provide supported connection spec id and try again. |
