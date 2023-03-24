@@ -34,11 +34,11 @@ For the first survey question, select the function that best describes your work
 
 The available options are: 
 
-* [!UICONTROL Administration]
-* [!UICONTROL Engineering]
-* [!UICONTROL Privacy & Governance]
-* [!UICONTROL Marketing]
-* [!UICONTROL Other]
+* Administration
+* Engineering
+* Privacy & Governance
+* Marketing
+* Other
 
 >[!NOTE]
 >
@@ -52,18 +52,18 @@ Next, select the specific objective(s) that best applies to your work.
 
 The list of available objectives include:
 
-* [!UICONTROL Create and manage users]
-* [!UICONTROL Assign roles, permissions, and product profiles]
-* [!UICONTROL Manage license usage, sandboxes, and alerts]
-* [!UICONTROL Configure the system for data ingestion]
-* [!UICONTROL Model my organization's data structure]
-* [!UICONTROL Query, filter, and optimize data to generate insights]
-* [!UICONTROL Configure consent and data policies]
-* [!UICONTROL Data governance and privacy compliance]
-* [!UICONTROL Develop marketing strategies]
-* [!UICONTROL Create, manage, and segment audiences]
-* [!UICONTROL Set up dashboards to analyze business impact]
-* [!UICONTROL Activate data to destinations for downstream targeting]
+* Create and manage users
+* Assign roles, permissions, and product profiles
+* Manage license usage, sandboxes, and alerts
+* Configure the system for data ingestion
+* Model my organization's data structure
+* Query, filter, and optimize data to generate insights
+* Configure consent and data policies
+* Data governance and privacy compliance
+* Develop marketing strategies
+* Create, manage, and segment audiences
+* Set up dashboards to analyze business impact
+* Activate data to destinations for downstream targeting
 
 When finished, select **[!UICONTROL Submit]**.
 
