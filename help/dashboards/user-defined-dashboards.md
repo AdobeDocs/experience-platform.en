@@ -19,7 +19,11 @@ To create a custom dashboard, first, navigate to the dashboard inventory. Select
 
 ![The dashboard inventory with Dashboards in the left navigation and "Create dashboard" highlighted.](./images/user-defined-dashboards/create-dashboard.png)
 
-Before adding a custom dashboard, the dashboards inventory is empty and displays a "No dashboards found." message. Once created, all of your user-defined dashboards are listed in the dashboard inventory.
+Before adding a custom dashboard, the dashboards inventory is empty and displays a "No dashboards found." message. Once created, all of your user-defined dashboards are listed in the dashboard inventory. 
+
+>[!NOTE]
+>
+>To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png))
 
 The [!UICONTROL Create dashboard] dialog appears. Enter a human-friendly, descriptive name for the collection of widgets you intend to create, and select **[!UICONTROL Save]**.
 
@@ -54,7 +58,7 @@ The [!UICONTROL Select data model] dialog appears. Select a data model from the 
 
 >[!TIP]
 >
->Select the information icon ([An information icon.](./images/user-defined-dashboards/info-icon.png)) to see the full data model name if it is too long to display in the data rail.
+>Select the information icon (![An information icon.](./images/user-defined-dashboards/info-icon.png)) to see the full data model name if it is too long to display in the data rail.
 
 ![The Select data dialog.](./images/user-defined-dashboards/select-data-model-dialog.png)
 
