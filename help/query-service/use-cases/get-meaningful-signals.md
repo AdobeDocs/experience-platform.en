@@ -6,19 +6,22 @@ description: This guide provides an end-to-end demonstration on how to use Data 
 
 Use your Real-Time Customer Data Platform to track customer lifetime value (CLV) and visualize that metric with user-defined dashboards. Through the use of Data Distiller and user-defined dashboards, you can measure how valuable a customer is to your company across the entirity of your relationship. Knowing the CLV can help you develop your businesses strategies to acquire new customers while retaining the existing ones and maintaining profit margins.
 
-This end-to-end use case demonstrates how data signals can be captured and modified to calculate the customer lifetime value derived attribute. These derived attributes can then be applied to your Real-Time CDP profile data and are available for use with user-defined dashboards to build a dashboard for insight analysis. Through Data Distiller you can extend the Real-Time CDP insights data model and use the CLV derived attribute and dashboard insights to build a new segment and activate it to a desired destination.
+The following infographic depicts the cycle of data collection, manipulation, analysis, and actuation that generates high performance data to improve your marketing campaigns.
 
-This guide is designed to help you to better understand your customer experience by measuring data signals across key touchpoints that drive CLV and implement a similar use case in your environment. 
+![The round trip infographic of data from observation to analysis to action.](../images/use-cases/infographic-use-case-cycle.png)
+
+This end-to-end use case demonstrates how data signals can be captured and modified to calculate the customer lifetime value derived attribute. These derived attributes can then be applied to your Real-Time CDP profile data and are available for use with user-defined dashboards to build a dashboard for insight analysis. Through Data Distiller you can extend the Real-Time CDP insights data model and use the CLV derived attribute and dashboard insights to build a new segment and activate it to a desired destination. These segments can then be used to create high performance audiences to power your next marketing campaign.
+
+This guide is designed to help you to better understand your customer experience by measuring data signals across key touchpoints that drive CLV and implement a similar use case in your environment. The entire process is summarized in the image below.
+
+![An infographic of the broad steps required to utilize customer lifetime value.](../images/use-cases/implementation-steps.png)
 
 ## Getting started
 
 This guide requires that you have a working understanding of the following components of Adobe Experience Platform:
 
-* 
-* 
-* How to [create and activate segments in Adobe Experience Platform](../../segmentation/ui/segment-builder.md). There is also a [segment builder video tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) available for more information. 
-* How to [build a user-defined dashboard](../../dashboards/user-defined-dashboards.md)
-
+* [Query Service](../home.md): Provides a user interface and a RESTful API where you can use SQL queries to analyze and enrich your data. 
+* [Segmentation Service](../../segmentation/home.md): Allows you to build segments and generate audiences from your Real-Time Customer Profile data.
 
 ## Prerequisites
 
@@ -45,18 +48,44 @@ Next, you must build a custom data model or extend an existing Adobe Real-Time C
 * Extend your data model with the Real-Time CDP insights data model.
 * Create dimension tables to extend your reporting insights model.
 * Query your extended accelerated store reporting insights data model
-* Visualize your data with user-defined dashboards
+<!-- * Visualize your data with user-defined dashboards -->
 
-More information oin extending RTCDP data models can be found 
+Please see the Real-Time Customer Data Platform Insights Data Model documentation to learn how to [customize your SQL query templates to create Real-Time CDP reports for your marketing and key performance indicator (KPI) use cases](../../dashboards/cdp-insights-data-model.md).
 
 ## Build a dashboard to capture insights
 
+Now that you have created your custom data model, you are ready to visualize your data with custom queries and user-defined dashboards. See the user-defined dashboards overview for full guidance on how to [build a custom dashboard](../../dashboards/user-defined-dashboards.md). The UI guide includes details on:
 
+* How to create a widget.
+* How to use the widget composer.
+
+Possible examples of custom CLV widgets can be seen below.
+
+![A collection of four customized widgets.](../images/use-cases/example-widgets.png)
+
+A variety of visualization options are provided for your custom analysis. The following example uses decile buckets.
+
+![The Email opened by campaign buckets widget.](../images/use-cases/email-opened-by-campaign-buckets.png)
+
+<!-- what custom queries are necessary to visualize CLV ? -->
 
 ## Create and activate segments to build high performance audiences
 
-The next step is to build segments and generate audiences from your Real-Time Customer Profile data. 
+The next step is to build segments and generate audiences from your Real-Time Customer Profile data. See the Segment Builder UI guide to learn how to [create and activate segments in Adobe Experience Platform](../../segmentation/ui/segment-builder.md). The guide provides sections on how to:
 
+* Create segment definitions using a combination of attributes, events, and existing audiences as building blocks.
+* Use the rule builder canvas and containers to control the order in which segment rules are executed.
+* View estimates of your prospective audience, allowing you to adjust your segment definitions as required.
+* Enable all segment definitions for scheduled segmentation.
+* Enable specified segment definitions for streaming segmentation.
+
+Alternatively, there is also a [segment builder video tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) available for more information.
+
+## Activate your segment for an email campaign
+
+Once you have built your segment, you are ready to activate it to a destination. For the purpose of this use case you are recommended to use Adobe Campaign. Information on [connecting to Adobe Campaign](../../destinations/catalog/email-marketing/adobe-campaign.md) can be found in the destinations catalog documentation.
+
+<!-- I do not have enough information to finish off this use case -->
 
 <!-- "Data signals are actions taken by consumers while online that offer clues about intent that can be acted upon. This includes anything from visiting a website to filling out a change of address or clicking an ad."  -->
 
