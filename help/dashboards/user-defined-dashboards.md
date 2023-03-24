@@ -86,7 +86,7 @@ The data model and currently selected table are displayed at the top of the left
 
 #### Add and filter attributes {#add-and-filter-attributes}
 
-Select the add icon ([An add icon.](./images/user-defined-dashboards/add-icon.png)) next to an attribute name to add an attribute to your widget. The dropdown menu that appears allows you to add an attribute as either the X axis, the Y axis, a color, or a filter for your widget. 
+Select the add icon (![An add icon.](./images/user-defined-dashboards/add-icon.png)) next to an attribute name to add an attribute to your widget. The dropdown menu that appears allows you to add an attribute as either the X axis, the Y axis, a color, or a filter for your widget. The [!UICONTROL Color] attribute allows you to differentiate the results of the X and Y axis marks based on colour. It does this by splitting the results into different colours based on their composition of a third attribute. 
 
 >[!TIP]
 >
@@ -94,7 +94,7 @@ Select the add icon ([An add icon.](./images/user-defined-dashboards/add-icon.pn
 
 ![The widget composer with the add icon dropdown highlighted to add attributes a widget axis.](./images/user-defined-dashboards/attributes-dropdown.png)
 
-The [!UICONTROL Color] attribute allows you to differentiate the visualizatiuon marks based on colour for a third attribute. The available options include of the bars, points, ticks, lines, or area. 
+To change the type of graph or chart of your widget, select the [!UICONTROL Marks] dropdown and choose from the available options. The options include bars, points, ticks, lines, or area. Once selected, a preview visualization of your widget's current settings is generated.
 
 ![The marks dropdown for widget attributes.](./images/user-defined-dashboards/marks-dropdown.png)
 
@@ -102,35 +102,23 @@ By adding an attribute as a filter, you can select which values to include or ex
 
 ![The filter dialog to filter values form your widget.](./images/user-defined-dashboards/filter-dialog.png)
 
-After adding your attributes, select the type of graph or chart from the [!UICONTROL Marks] dropdown to generate a preview visualization of your widget's current settings.
-
-![The widget composer with the Marks dropdown and widget title text field highlighted.](./images/user-defined-dashboards/marks-dropdown-widget-title.png)
-
 ### Widget properties
 
 Select the properties icon (![The properties icon.](./images/user-defined-dashboards/properties-icon.png)) in the right rail to open the properties panel. In the [!UICONTROL Properties] panel, enter a name for the widget in the [!UICONTROL Widget title] text field. 
 
 ![The properties panel with the properties icon and the Widget title field highlighted.](./images/user-defined-dashboards/properties-panel.png)
 
-From the widget properties panel you can edit several aspect of your widget. You have complete control to edit the location of the widget legend. To move the legend, select the [!UICONTROL Legend placement] dropdown and your desired location from the list of available options. You can also rename the label associated with the legend, and the X or Y axis by entering a new name into the [!UICONTROL Legend title] text field, or [!UICONTROL Axis label] text field respectively. 
+From the widget properties panel you can edit several aspect of your widget. You have complete control to edit the location of the widget legend. To move the legend, select the [!UICONTROL Legend placement] dropdown and choose your desired location from the list of available options. You can also rename the label associated with the legend, and the X or Y axis by entering a new name into the [!UICONTROL Legend title] text field, or [!UICONTROL Axis label] text field respectively. 
 
 #### Save your widget {#save-widget}
 
-When you are satisfied with your widget select **[!UICONTROL Save]**. A tick icon underneath the widget name indicates that the widget has been saved. 
-
->[!NOTE]
->
->Saving in the widget composer saves the widget locally to your dashboard. If you exit the dashboard editor without saving the dashboard, the widget will not be saved to the dashboard.
+Saving in the widget composer saves the widget locally to your dashboard. If you wish to save your work and resume at a later time, select **[!UICONTROL Save]**. A tick icon underneath the widget name indicates that the widget has been saved. Alternatively, when you are satisfied with your widget, select **[!UICONTROL Save and close]** to make the widget available to all other users with access to your dashboard. Select **[!UICONTROL Cancel]** to abandon your work and return to your custom dashboard.
 
 ![New widget save confirmation.](./images/user-defined-dashboards/save-confirmation.png)
 
-Select **[!UICONTROL Cancel]** to return to your custom dashboard.
-
-![The widget composer with an example widget created.](./images/user-defined-dashboards/composed-widget.png)
-
 >[!TIP]
 >
->Select the setting icon next to the dashboard name to see details about its creation. You can change the name of your dashboard in the dialog that appears.
+>Select the properties icon (![The properties icon.](./images/user-defined-dashboards/properties-icon.png)) next to the dashboard name to see details about its creation. You can change the name of your dashboard in the dialog that appears.
 
 Widgets can be re-arranged and resized while in this workspace. Select **[!UICONTROL Save]** to preserve your dashboard name and configured layout.
 
