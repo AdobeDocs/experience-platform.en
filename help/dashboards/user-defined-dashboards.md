@@ -13,7 +13,7 @@ Adobe Experience Platform Dashboards helps you to expedite insights and customiz
 
 To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
 
-## Create custom dashboards
+## Create a custom dashboard
 
 To create a custom dashboard, first, navigate to the dashboard inventory. Select **[!UICONTROL Dashboards]** from the left navigation of the Platform UI followed by **[!UICONTROL Create dashboard]**.
 
@@ -80,7 +80,7 @@ Select a table from the list available in the left rail to provide data for your
 
 The widget composer is now populated with data from your chosen table.
 
-The data model and currently selected table are displayed at the top of the left rail, and the attributes available to create your widget are listed in the attributes column. You can use the search bar to look for attributes instead of scrolling the list, or change the chosen data model by selecting the pencil icon (![Pencil icon.](./images/user-defined-dashboards/edit-icon.png)) in the left rail.
+The data model and currently selected table are displayed at the top of the left rail, and the attributes available to create your widget are listed in the [!UICONTROL Attributes] column. You can use the search bar to look for attributes instead of scrolling the list, or change the chosen data model by selecting the pencil icon (![Pencil icon.](./images/user-defined-dashboards/edit-icon.png)) in the left rail.
 
 ![A widget populated with data within the widget composer.](./images/user-defined-dashboards/populated-widget-composer.png)
 
