@@ -74,7 +74,7 @@ Select **[!UICONTROL Next]** to confirm your choice of data model. The next view
 
 The [!UICONTROL Preview] panel contains tabs for [!UICONTROL Sample records] and [!UICONTROL Attributes]. The [!UICONTROL Sample records] tab provides a subset of the records from the selected table in a tabulated view. The [!UICONTROL Attributes] tab provides the attribute name, data type, and source table for every attribute associated with the selected table. 
 
-Select a table from the list available in the left rail to provide data for your widget and select **[!UICONTROL Select]** to return to the widget composer.
+Select a table from the list available in the left rail to provide data for your widget, and select **[!UICONTROL Select]** to return to the widget composer.
 
 ![The select data dialog with select highlighted.](./images/user-defined-dashboards/select-a-table.png)
 
@@ -92,15 +92,15 @@ Select the add icon (![An add icon.](./images/user-defined-dashboards/add-icon.p
 >
 >If you want to flip the arrangement of X and Y axis, select the up and down arrow icon (![The up and down arrow icon.](./images/user-defined-dashboards/switch-axis-icon.png)) to switch their arrangement.
 
-![The widget composer with the add icon dropdown highlighted to add attributes a widget axis.](./images/user-defined-dashboards/attributes-dropdown.png)
+![The widget composer with the add-icon dropdown highlighted.](./images/user-defined-dashboards/attributes-dropdown.png)
 
 To change the type of graph or chart of your widget, select the [!UICONTROL Marks] dropdown and choose from the available options. The options include bars, points, ticks, lines, or area. Once selected, a preview visualization of your widget's current settings is generated.
 
-![The marks dropdown for widget attributes.](./images/user-defined-dashboards/marks-dropdown.png)
+![The widget composer with the Marks dropdown highlighted.](./images/user-defined-dashboards/marks-dropdown.png)
 
 By adding an attribute as a filter, you can select which values to include or exclude from the widget. After adding a filter from the attributes list, the [!UICONTROL Filter] dialog appears where you can select or deselect values using their checkbox.
 
-![The filter dialog to filter values form your widget.](./images/user-defined-dashboards/filter-dialog.png)
+![The filter dialog to filter values from your widget.](./images/user-defined-dashboards/filter-dialog.png)
 
 ### Widget properties
 
@@ -108,7 +108,7 @@ Select the properties icon (![The properties icon.](./images/user-defined-dashbo
 
 ![The properties panel with the properties icon and the Widget title field highlighted.](./images/user-defined-dashboards/properties-panel.png)
 
-From the widget properties panel you can edit several aspect of your widget. You have complete control to edit the location of the widget legend. To move the legend, select the [!UICONTROL Legend placement] dropdown and choose your desired location from the list of available options. You can also rename the label associated with the legend, and the X or Y axis by entering a new name into the [!UICONTROL Legend title] text field, or [!UICONTROL Axis label] text field respectively. 
+From the widget properties panel, you can edit several aspects of your widget. You have complete control to edit the location of the widget legend. To move the legend, select the [!UICONTROL Legend placement] dropdown and choose your desired location from the list of available options. You can also rename the label associated with the legend, and the X or Y axis by entering a new name into the [!UICONTROL Legend title] text field, or [!UICONTROL Axis label] text field respectively. 
 
 #### Save your widget {#save-widget}
 
