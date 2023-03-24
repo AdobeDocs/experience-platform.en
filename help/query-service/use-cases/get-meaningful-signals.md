@@ -4,13 +4,13 @@ description: This guide provides an end-to-end demonstration on how to use Data 
 ---
 # Get meaningful signals faster
 
-Use your Real-Time Customer Data Platform to track customer lifetime value (CLV) and visualize that metric with user-defined dashboards. Through the use of Data Distiller and user-defined dashboards, you can measure how valuable a customer is to your company across the entirity of your relationship. Knowing the CLV can help you develop your businesses strategies to acquire new customers while retaining the existing ones and maintaining profit margins.
+Use your Real-Time Customer Data Platform to track customer lifetime value (CLV) and visualize that metric with user-defined dashboards. Through the use of Data Distiller and user-defined dashboards, you can measure how valuable a customer is to your company across the entirety of your relationship. Knowing the CLV can help you develop your businesses strategies to acquire new customers while retaining the existing ones and maintaining profit margins.
 
 The following infographic depicts the cycle of data collection, manipulation, analysis, and actuation that generates high performance data to improve your marketing campaigns.
 
 ![The round trip infographic of data from observation to analysis to action.](../images/use-cases/infographic-use-case-cycle.png)
 
-This end-to-end use case demonstrates how data signals can be captured and modified to calculate the customer lifetime value derived attribute. These derived attributes can then be applied to your Real-Time CDP profile data and are available for use with user-defined dashboards to build a dashboard for insight analysis. Through Data Distiller you can extend the Real-Time CDP insights data model and use the CLV derived attribute and dashboard insights to build a new segment and activate it to a desired destination. These segments can then be used to create high performance audiences to power your next marketing campaign.
+This end-to-end use case demonstrates how data signals can be captured and modified to calculate the customer lifetime value derived attribute. These derived attributes can then be applied to your Real-Time CDP profile data and are available for use with user-defined dashboards to build a dashboard for insight analysis. Through Data Distiller, you can extend the Real-Time CDP insights data model and use the CLV derived attribute and dashboard insights to build a new segment and activate it to a desired destination. These segments can then be used to create high performance audiences to power your next marketing campaign.
 
 This guide is designed to help you to better understand your customer experience by measuring data signals across key touchpoints that drive CLV and implement a similar use case in your environment. The entire process is summarized in the image below.
 
@@ -25,7 +25,7 @@ This guide requires that you have a working understanding of the following compo
 
 ## Prerequisites
 
-This guide requires you to have the [Data Distiller](../data-distiller/overview.md) SKU as part of your package offering. If you are unsure whether ou have this, please speak to your Adobe service representative.
+This guide requires you to have the [Data Distiller](../data-distiller/overview.md) SKU as part of your package offering. If you are unsure whether you have this, please speak to your Adobe service representative.
 
 ## Create a derived attribute
 
@@ -83,7 +83,7 @@ Alternatively, there is also a [segment builder video tutorial](https://experien
 
 ## Activate your segment for an email campaign
 
-Once you have built your segment, you are ready to activate it to a destination. For the purpose of this use case you are recommended to use Adobe Campaign. Information on [connecting to Adobe Campaign](../../destinations/catalog/email-marketing/adobe-campaign.md) can be found in the destinations catalog documentation.
+Once you have built your segment, you are ready to activate it to a destination. For the purpose of this use case, you are recommended to use Adobe Campaign. Information on [connecting to Adobe Campaign](../../destinations/catalog/email-marketing/adobe-campaign.md) can be found in the destinations catalog documentation.
 
 <!-- I do not have enough information to finish off this use case -->
 
