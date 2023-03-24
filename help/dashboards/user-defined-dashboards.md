@@ -48,9 +48,15 @@ The widget composer workspace appears. Next, select **[!UICONTROL Select data]**
 
 ![The widget composer workspace.](./images/user-defined-dashboards/widget-composer.png)
 
-The [!UICONTROL Select data] dialog appears. Select a data model from the left column to display a preview list of all available tables. 
+#### Select data model {#select-data-model}
 
-![The Select data dialog.](./images/user-defined-dashboards/select-data-dialog.png)
+The [!UICONTROL Select data model] dialog appears. Select a data model from the left column to display a preview list of all available tables. The pre-configured data model for Real-Time Customer Data Platform is named [!UICONTROL CDPInsights].
+
+>[!TIP]
+>
+>Select the information icon ([An information icon.](./images/user-defined-dashboards/info-icon.png)) to see the full data model name if it is too long to display in the data rail.
+
+![The Select data dialog.](./images/user-defined-dashboards/select-data-model-dialog.png)
 
 The preview list provides details about the tables contained in the data model. The table below provides descriptions of the column fields and their potential values.
 
@@ -58,9 +64,13 @@ The preview list provides details about the tables contained in the data model. 
 |---|---|
 |[!UICONTROL Title] | The name of the table.|
 |[!UICONTROL Table type] | The type of table. Potential types include: `fact`, `dimension`, and `none`. |
+|[!UICONTROL Records] | The number of records associated with the chosen table.|
 |[!UICONTROL Lookups] | The number of tables joined to the chosen table.|
+|[!UICONTROL Attributes] | The number of attributes for the chosen table.|
 
 Select **[!UICONTROL Next]** to confirm your choice of data model. The next view displays a list of the available tables in the left rail. Select a table to see a comprehensive breakdown of the data contained in your selected table.
+
+### Populate widget {#populate-widget}
 
 The [!UICONTROL Preview] panel contains tabs for [!UICONTROL Sample records] and [!UICONTROL Attributes]. The [!UICONTROL Sample records] tab provides a subset of the records from the selected table in a tabulated view. The [!UICONTROL Attributes] tab provides the attribute name, data type, and source table for every attribute associated with the selected table. 
 
@@ -70,21 +80,41 @@ Select a table from the list available in the left rail to provide data for your
 
 The widget composer is now populated with data from your chosen table.
 
-The data model and currently selected table are displayed at the top of the left rail, and the attributes available to create your widget are listed in the attributes column.
+The data model and currently selected table are displayed at the top of the left rail, and the attributes available to create your widget are listed in the attributes column. You can use the search bar to look for attributes instead of scrolling the list, or change the chosen data model by selecting the pencil icon (![Pencil icon.](./images/user-defined-dashboards/edit-icon.png)) in the left rail.
 
 ![A widget populated with data within the widget composer.](./images/user-defined-dashboards/populated-widget-composer.png)
 
+#### Add and filter attributes {#add-and-filter-attributes}
+
+Select the add icon ([An add icon.](./images/user-defined-dashboards/add-icon.png)) next to an attribute name to add an attribute to your widget. The dropdown menu that appears allows you to add an attribute as either the X axis, the Y axis, a color, or a filter for your widget. 
+
 >[!TIP]
 >
->You can change the chosen data model by selecting the pencil icon (![Pencil icon.](./images/user-defined-dashboards/edit-icon.png)) in the left rail.
-
-Select the add icon ([An add icon.](./images/user-defined-dashboards/add-icon.png)) next to an attribute name to add an attribute to either the X or the Y axis.
+>If you want to flip the arrangement of X and Y axis, select the up and down arrow icon (![The up and down arrow icon.](./images/user-defined-dashboards/switch-axis-icon.png)) to switch their arrangement.
 
 ![The widget composer with the add icon dropdown highlighted to add attributes a widget axis.](./images/user-defined-dashboards/attributes-dropdown.png)
 
-Next, select the type of graph or chart from the [!UICONTROL Marks] dropdown to generate a preview visualization of your widget's current settings. In the [!UICONTROL Properties] rail on the right side of the screen, enter a name for the widget in the [!UICONTROL Widget title] text field. 
+The [!UICONTROL Color] attribute allows you to differentiate the visualizatiuon marks based on colour for a third attribute. The available options include of the bars, points, ticks, lines, or area. 
+
+![The marks dropdown for widget attributes.](./images/user-defined-dashboards/marks-dropdown.png)
+
+By adding an attribute as a filter, you can select which values to include or exclude from the widget. After adding a filter from the attributes list, the [!UICONTROL Filter] dialog appears where you can select or deselect values using their checkbox.
+
+![The filter dialog to filter values form your widget.](./images/user-defined-dashboards/filter-dialog.png)
+
+After adding your attributes, select the type of graph or chart from the [!UICONTROL Marks] dropdown to generate a preview visualization of your widget's current settings.
 
 ![The widget composer with the Marks dropdown and widget title text field highlighted.](./images/user-defined-dashboards/marks-dropdown-widget-title.png)
+
+### Widget properties
+
+Select the properties icon (![The properties icon.](./images/user-defined-dashboards/properties-icon.png)) in the right rail to open the properties panel. In the [!UICONTROL Properties] panel, enter a name for the widget in the [!UICONTROL Widget title] text field. 
+
+![The properties panel with the properties icon and the Widget title field highlighted.](./images/user-defined-dashboards/properties-panel.png)
+
+From the widget properties panel you can edit several aspect of your widget. You have complete control to edit the location of the widget legend. To move the legend, select the [!UICONTROL Legend placement] dropdown and your desired location from the list of available options. You can also rename the label associated with the legend, and the X or Y axis by entering a new name into the [!UICONTROL Legend title] text field, or [!UICONTROL Axis label] text field respectively. 
+
+#### Save your widget {#save-widget}
 
 When you are satisfied with your widget select **[!UICONTROL Save]**. A tick icon underneath the widget name indicates that the widget has been saved. 
 
