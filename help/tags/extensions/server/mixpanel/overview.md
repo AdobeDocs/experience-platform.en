@@ -12,6 +12,7 @@ description: This Adobe Experience Platform event forwarding extension sends Ado
 >[!NOTE]
 >
 >Refer to the [!DNL Mixpanel] documentation on [identity management](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management) to understand how [!DNL Mixpanel] merges events to create identity clusters. It is also recommended that you review the document on [distinct IDs](https://help.mixpanel.com/hc/en-us/articles/115004509426-Distinct-ID-Creation-JavaScript-iOS-Android-) to understand how they are used to identify users in event data.
+
 The [!DNL Mixpanel Track Events] API extension allows you to leverage both [event forwarding](../../../ui/event-forwarding/overview.md) and [tags](../../../home.md) to capture event information in the Adobe Experience Platform Edge Network and send it to [!DNL Mixpanel] using the [[!DNL Track Events] API](https://developer.mixpanel.com/reference/track-event). This document covers the use cases of the extension, how to install it, and how to integrate its capabilities into your event forwarding [rules](../../../ui/managing-resources/rules.md).
 
 ## Use cases
@@ -36,6 +37,7 @@ Ensure that the [[!DNL Identity Merge]](https://help.mixpanel.com/hc/en-us/artic
 
 <!-- (If these don't apply, do we need to include here at all?)
 ### API guardrails {#guardrails}
+
 Refer to the [[!DNL Mixpanel] documentation](https://developer.mixpanel.com/reference/import-events#rate-limits) for limits and response codes. As [!DNL Mixpanel] only sends live events these limits should not apply.
 -->
 
@@ -81,6 +83,7 @@ The **[!UICONTROL Cookie Name]** value must match the [!DNL Mixpanel] cookie nam
 >[!IMPORTANT]
 >
 >The name of the above data element (`distinctId` in this example) should match the name used for the same field in your schema. This also applies to the event forwarding data element you will be creating later.
+
 For the second data element, set the type to **[!UICONTROL XDM Object]** (from the [Adobe Experience Platform Web SDK extension](../../client/sdk/overview.md)) and map it to the schema created earlier. As you map the data, ensure that the value of the `distinct_id` data element (which contains the [!DNL Mixpanel] `distinct_id` value from the cookie) is referenced as a value within one of your schema fields.
 
 ![XDM object data element binding the distinct_id from the cookie to the schema in Tag properties.](../../../images/extensions/server/mixpanel/xdm-data-element.png)
@@ -88,6 +91,7 @@ For the second data element, set the type to **[!UICONTROL XDM Object]** (from t
 >[!NOTE]
 >
 >If your website is not running the [!DNL Mixpanel] SDK, an Adobe Experience Cloud ID (ECID) will be used as the fallback `distinct_id` value to be passed with the event sent to [!DNL Mixpanel].
+
 Depending on your scenario, you may need to create another data element that can be used to map to the event name in the schema. This can be done using the **[!UICONTROL DOM Attribute]** type provided by the [!UICONTROL Core] extension.
 
 ![Data element eventnamesignin in Tag properties.](../../../images/extensions/server/mixpanel/eventname-signin-data-element.png)
@@ -153,6 +157,7 @@ The recommended data element mappings are outlined below.
 >All of the data elements listed below should use the **[!UICONTROL Path]** type so they can map to specific fields in your schema as outlined in the **Schema path** column.
 >
 >For the schema paths, you must replace the `{TENANT_ID}` placeholder with your unique [tenant ID](../../../../xdm/api/getting-started.md#know-your-tenant_id), which acts as a namespace for custom fields defined by your organization.
+
 | [!DNL Mixpanel] key | Schema path | Description | Mandatory |
 | --- | --- | --- | --- |
 | [!DNL Mixpanel Distinct ID] | `arc.event.xdm._{TENANT_ID}.distinct_id` | `distinct_id` identifies the user who performed the event. `distinct_id` must be specified on every event, as it is crucial for [!DNL Mixpanel] to perform behavioral analysis correctly and efficiently, including unique users, funnels, retention, cohorts, and more. | Yes |
@@ -180,6 +185,7 @@ In [!DNL Mixpanel], an identity cluster contains a collection of `distinct_id` v
 >Refer to the [!DNL Mixpanel] document on [identity management](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management#user-identification) for more details on these methods.
 >
 >Confirm that you have enabled the [[!DNL Mixpanel] identity merge feature](#prerequisites-mixpanel) to ensure that identity clusters are resolved appropriately.
+
 Accordingly, the [!DNL Mixpanel] event forwarding extension supports the following action types for your rule configurations:
 
 * **[!UICONTROL Track Event]**
@@ -189,6 +195,7 @@ Accordingly, the [!DNL Mixpanel] event forwarding extension supports the followi
 >[!IMPORTANT]
 >
 >For each rule, regardless of the identity cluster resolution method used, one of the actions must use the **[!UICONTROL Track Event]** type. Without this action type, the rule will not send Adobe Experience Edge Network events to [!DNL Mixpanel].
+
 ### Create an event tracking rule
 
 Start creating a new rule in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Mixpanel]**. Next, set the action type to **[!UICONTROL Track Event]** to send Adobe Experience Edge Network events to [!DNL Mixpanel].
@@ -204,6 +211,7 @@ Start creating a new rule in your event forwarding property. Under **[!UICONTROL
 >[!NOTE]
 >
 >For more information on the standard fields for a [!DNL Mixpanel] event, refer to the [official documentation](https://developer.mixpanel.com/reference/import-events#event).
+
 ![Add an event forwarding rule action configuration.](../../../images/extensions/server/mixpanel/track-event-action.png)
 
 Once the [!UICONTROL Track Event] action is added to the rule, you can configure the rule's conditions so it only fires for certain events, or you can leave the conditions section empty to make the rule fire for all events.
