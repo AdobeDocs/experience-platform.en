@@ -7,7 +7,7 @@ exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
 ---
 # Data ingestion notifications
 
-The process of ingesting data into Adobe Experience Platform is comprised of multiple steps. Once you identify data files that need to be ingested into [!DNL Platform], the ingestion process begins and each step occurs consecutively until the data is either successfully ingested or fails. The ingestion process can be initiated using the [Adobe Experience Platform Data Ingestion API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) or using the [!DNL Experience Platform] user interface.
+The process of ingesting data into Adobe Experience Platform is comprised of multiple steps. Once you identify data files that need to be ingested into [!DNL Platform], the ingestion process begins and each step occurs consecutively until the data is either successfully ingested or fails. The ingestion process can be initiated using the [Adobe Experience Platform Batch Ingestion API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) or using the [!DNL Experience Platform] user interface.
 
 Data loaded into [!DNL Platform] must go through multiple steps in order to reach its destination, the [!DNL Data Lake] or the [!DNL Real-Time Customer Profile] data store. Each step involves processing the data, validating the data, and then storing the data before passing it on to the next step. Depending on the amount of data being ingested, this can become a time consuming process and there is always a chance of the process failing due to validation, semantics, or processing errors. In the event of a failure, the data issues need to fixed and then the entire ingestion process must be restarted using the corrected data files. 
 
