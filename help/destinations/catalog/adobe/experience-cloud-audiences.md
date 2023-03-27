@@ -54,8 +54,8 @@ Note: briefly talk about when to share segments to these destinations using the 
 >[!IMPORTANT]
 >
 > * This destination is available to [Adobe Real-Time Customer Data Platform Prime and Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
-> * You need an Audience Manager license to enable the Data Management Platform use cases mentioned in the section above.
-> * You *do not need* an Audience Manager license to share Experience Platform segments with Adobe Advertising Cloud, Adobe Target, Marketo, and other Experience Cloud solutions, via the Experience Cloud Audiences integration.
+> * You need an Audience Manager license to enable the [Data Management Platform use cases](#dmp-use-cases) mentioned further above.
+> * You *do not need* an Audience Manager license to share Experience Platform segments with Adobe Advertising Cloud, Adobe Target, Marketo, and other Experience Cloud solutions, mentioned in the [section above](#share-segments-with-other-solutions).
 
 ### For customers who are using the legacy segment sharing solution
 

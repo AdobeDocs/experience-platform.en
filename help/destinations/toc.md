@@ -165,6 +165,7 @@ feature: Destinations
         * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)
         * [Facebook connection](./catalog/social/facebook.md)
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
+        * [TikTok connection](./catalog/social/tiktok.md)
         * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
     * Streaming destinations {#streaming}
         * [HTTP API connection](./catalog/streaming/http-destination.md)
