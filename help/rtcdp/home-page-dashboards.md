@@ -6,27 +6,42 @@ exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 ---
 # [!DNL Real-Time Customer Data Platform] home page and dashboards
 
-The Adobe Real-Time Customer Data Platform (Real-Time CDP) home page, which includes a metrics dashboard, appears when you log in to Real-Time CDP.
+The Adobe Real-Time Customer Data Platform (Real-Time CDP) home page is the first page that appears after logging in to Real-Time CDP.
 
-The home page is only one of the places where metric cards appear. Real-Time CDP provides metric cards throughout your experience. These metrics inform you about the data, profile, and segment audiences in the system. 
+The Real-Time CDP home page includes a getting started panel that allows you to quickly access several different features and a metrics section that display up-to-date information on data within your organization.
 
-![image](assets/home.png)
+This document provides an overview of the Real-Time CDP home page and metrics dashboard.
+
+![image](assets/platform-home/home.png)
+
+## Getting started widget
+
+The [!UICONTROL Getting started with Real-Time Customer Profile] widget is divided into four sections: 
+
+* **Ingest data into Platform**: This widget directs you to the sources catalog. Use the sources catalog to select a source and ingest your data to Experience Platform. For more information, read the [sources overview](../sources/home.md)
+* **Model data structures**: This widget directs you to the schemas dashboard. Use the schemas dashboard to create building blocks and describe the structure of your data. For more information, read the [schemas overview](../xdm/home.md).
+* **Segment audiences**: This widget directs you to the [!DNL Segment Builder] in the UI. Use the [!DNL Segment Builder] to interact with Profile data elements and define rules for your segments. For more information, read the [Segmentation Service overview](../segmentation/home.md).
+* **Send data to destinations**: This widget directs you to the destinations catalog. Use the destinations catalog to select a destination that you can then connect and send segments to. For more information, read the [destinations overview](../destinations/home.md)
+
+![The Platform UI home page displaying the getting started widget](assets/platform-home/getting-started-widget.png)
 
 If there is no data in the system when you log in to Real-Time CDP, the dashboard on the home page does not appear. In this case, the home page provides learning material for a first time user experience. As data is collected--in other words, as <!--sources-->datasets, profiles, segments, and destinations are created and data flows into the system--the dashboard automatically updates to display information about that data<!-- in metric cards-->. 
 
-## Home page dashboard view
+## Metrics dashboard
 
 <!--The dashboard shows information in several areas. Each category of information displays for the time range shown beneath the data.-->
 
-The dashboard is divided into<!-- two areas.-->:
+The dashboard is divided into two sections:
 
-* **The leaderboard** is across the top of the dashboard. The leaderboard shows the number of datasets, profiles, segments, and destinations in the system. 
+* **The leaderboard** shows the current total number of schemas, datasets, profiles, and segments in your organization as well as their most recent updated date.
 
-    ![image](assets/leaderboard.png)
+
+    ![image](assets/platform-home/leaderboard.png)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
+
 * **Recent items** lists the five most recent datasets, sources, segments, and destinations added to the system.
 
     ![image](assets/recent.png)
