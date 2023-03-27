@@ -21,7 +21,7 @@ For a detailed description of the capabilities that you can configure through th
 * [Identity mapping configuration](../../functionality/destination-configuration/identity-mapping-configuration.md)
 * [Destination delivery](../../functionality/destination-configuration/destination-delivery.md)
 * [Audience metadata configuration](../../functionality/destination-configuration/audience-metadata-configuration.md)
-* [Segment mapping](../../functionality/destination-configuration/segment-mapping.md)
+* [Audience metadata configuration](../../functionality/destination-configuration/audience-metadata-configuration.md)
 * [Aggregation policy](../../functionality/destination-configuration/aggregation-policy.md)
 * [Batch configuration](../../functionality/destination-configuration/batch-configuration.md)
 * [Historical profile qualifications](../../functionality/destination-configuration/historical-profile-qualifications.md)
@@ -213,18 +213,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`schemaConfig.profileRequired` | Boolean | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination's side, as shown in the example configuration above.|
 |`schemaConfig.segmentRequired` | Boolean | Always use `segmentRequired:true`. |
 |`schemaConfig.identityRequired` | Boolean | Use `true` if you users should be able to map identity namespaces from Experience Platform to your desired schema. |
-|`aggregation.aggregationType` | - | Select either `BEST_EFFORT` or `CONFIGURABLE_AGGREGATION`. The example configuration above includes `BEST_EFFORT` aggregation. For an example of `CONFIGURABLE_AGGREGATION`, refer to the example configuration in the [aggregation policy](../../functionality/destination-configuration/aggregation-policy.md) document. The parameters relevant to configurable aggregation are documented below in this table. |
-|`aggregation.bestEffortAggregation.maxUsersPerRequest` | Integer | Experience Platform can aggregate multiple exported profiles in a single HTTP call. Specify the maximum number of profiles that your endpoint should receive in a single HTTP call. Note that this is a best effort aggregation. For example, if you specify the value 100, Platform might send any number of profiles smaller than 100 on a call. <br> If your server does not accept multiple users per request, set this value to 1. |
-|`aggregation.bestEffortAggregation.splitUserById` | Boolean | Use this flag if the call to the destination should be split by identity. Set this flag to `true` if your server only accepts one identity per call, for a given namespace. |
-|`aggregation.configurableAggregation.splitUserById` | Boolean | See parameter in example configuration [here](../../functionality/destination-configuration/aggregation-policy.md). Use this flag if the call to the destination should be split by identity. Set this flag to `true` if your server only accepts one identity per call, for a given namespace. |
-|`aggregation.configurableAggregation.maxBatchAgeInSecs` | Integer | <ul><li>*Minimum value: 1800*</li><li>*Maximum value: 3600*</li><li>See parameter in example configuration [here](../../functionality/destination-configuration/aggregation-policy.md). Configure a value between the minimum and maximum accepted values. Together with `maxNumEventsInBatch`, this parameter determines how long Experience Platform should wait until sending an API call to your endpoint. <br> For example, if you use the maximum value for both parameters, Experience Platform will wait either 3600 seconds OR until there are 10 thousand qualified profiles before making the API call, whichever happens first. </li></ul>|
-|`aggregation.configurableAggregation.maxNumEventsInBatch` | Integer | <ul><li>*Minimum value: 1000*</li><li>*Maximum value: 10000*</li><li> Configure a value between the minimum and maximum accepted values. For a description of this parameter, see `maxBatchAgeInSecs` just above.</li></ul>  |
-|`aggregation.configurableAggregation.aggregationKey` | Boolean | Allows you to aggregate the exported profiles mapped to the destination based on the parameters below: <br> <ul><li>segment ID</li><li> segment status </li><li> identity namespace </li></ul> |
-|`aggregation.configurableAggregation.aggregationKey.includeSegmentId` | Boolean | Set this to `true` if you want to group profiles exported to your destination by segment ID. |
-|`aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | Boolean | You must set both `includeSegmentId:true` and `includeSegmentStatus:true` if you want to group profiles exported to your destination by segment ID AND segment status.  |
-|`aggregation.configurableAggregation.aggregationKey.includeIdentity` | Boolean | Set this to `true` if you want to group profiles exported to your destination by identity namespace.  |
-|`aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolean | Use this parameter to specify if you want the exported profiles to be aggregated into groups of a single identity (GAID, IDFA, phone numbers, email, etc.). |
-|`aggregation.configurableAggregation.aggregationKey.groups` | String |Create lists of identity groups if you want to group profiles exported to your destination by groups of identity namespace. For example, you could combine profiles that contain the IDFA and GAID mobile identifiers into one call to your destination and emails into another by using the configuration in the example. |
 
 +++
 

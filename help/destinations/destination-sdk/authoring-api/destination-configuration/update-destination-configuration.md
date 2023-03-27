@@ -20,7 +20,7 @@ For a detailed description of the capabilities of a destination configuration, r
 * [Schema configuration](../../functionality/destination-configuration/schema-configuration.md)
 * [Identity mapping configuration](../../functionality/destination-configuration/identity-mapping-configuration.md)
 * [Destination delivery](../../functionality/destination-configuration/destination-delivery.md)
-* [Segment mapping](../../functionality/destination-configuration/segment-mapping.md)
+* [Audience metadata configuration](../../functionality/destination-configuration/audience-metadata-configuration.md)
 * [Audience metadata configuration](../../functionality/destination-configuration/audience-metadata-configuration.md)
 * [Aggregation policy](../../functionality/destination-configuration/aggregation-policy.md)
 * [Batch configuration](../../functionality/destination-configuration/batch-configuration.md)

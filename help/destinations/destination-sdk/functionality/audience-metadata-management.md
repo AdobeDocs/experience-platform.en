@@ -17,7 +17,7 @@ Depending on your API configuration, you may or may not need to use the audience
 
 ## Use cases supported by audience metadata management {#use-cases}
 
-With audience metadata support in Destination SDK, when you configure your Experience Platform destination, you can give Platform users one of several options when they map and activate segments to your destination. You can control the options available to the user via the parameters in the [segment mapping](../functionality/destination-configuration/segment-mapping.md) section of the destination configuration.
+With audience metadata support in Destination SDK, when you configure your Experience Platform destination, you can give Platform users one of several options when they map and activate segments to your destination. You can control the options available to the user via the parameters in the [Audience metadata configuration](../functionality/destination-configuration/audience-metadata-configuration.md) section of the destination configuration.
 
 ### Use case 1 - You have a 3rd party API and users don't need to input mapping IDs
 
