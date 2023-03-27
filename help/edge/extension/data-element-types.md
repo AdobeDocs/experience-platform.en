@@ -32,14 +32,28 @@ Read more about [Adobe Experience Platform Identity Service](https://experiencel
 
 ![](./assets/identity-map-data-element.png)
 
-## XDM Object {#xdm-object}
+## XDM object {#xdm-object}
 
-Use XDM format to send any data to the Adobe Experience Platform Web SDK. Formatting your data is easier with the XDM object data element. When you first open this data element, select the correct Adobe Experience Platform sandbox and schema. After you have selected your schema, you see the structure of your schema, which you can easily fill out.
+Formatting your data to XDM is easier with the XDM object data element. When you first open this data element, select the correct Adobe Experience Platform sandbox and schema. After you have selected your schema, you see the structure of your schema, which you can easily fill out.
 
 ![](./assets/XDM-object.png)
 
-Notice that when you open certain fields of your schema, such as `web.webPageDetails.URL`, some items are automatically collected. Even though several items are automatically collected, you can overwrite any, if needed. All the values can be filled in manually or using other data elements. 
+Notice that when you open certain fields of your schema, such as `web.webPageDetails.URL`, some items are automatically collected. Even though several items are automatically collected, you can overwrite any, if needed. All the values can be filled in manually or using other data elements.
 
 >[!NOTE]
 >
 >Only fill in the pieces of information you are interested in collecting. Anything that is not filled in is omitted when the data is sent to the solutions.
+
+## Variable (beta) {#variable}
+
+>[!NOTE]
+>
+>This data element is a beta feature while the development team gathers feedback. Future versions may contain breaking changes.
+
+While the XDM object data element is created when it is referenced, such as inside a send event command, the variable data element can be updated via update variable actions. Both data elements are designed to create XDM objects. To use the data element, select the correct Adobe Experience Platform sandbox and schema. Once you've created this data element you can use [update variable actions](./action-types.md#update-variable) to modify the data element. If no modifications are done, the data element will resolve to undefined.
+
+See the page on [Rule stacking](rule-stacking.md) to learn more about how to use this data element to build up XDM objects.
+
+## What's next
+
+Learn about specific use cases such as [accessing the ECID.](data-element-types.md)
