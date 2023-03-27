@@ -12,7 +12,7 @@ type: Tutorial
 
 ## Migration context {#migration-context}
 
-Starting November 2022, you can use the new file export capabilities to access enhanced customization functionality when exporting files out of Experience Platform: 
+Starting [October 2022](/help/release-notes/2022/october-2022.md#new-or-updated-destinations), you can use the new file export capabilities to access enhanced customization functionality when exporting files out of Experience Platform: 
 
 * Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 * Ability to set custom file headers in your exported files via the [new mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
@@ -39,7 +39,7 @@ Note that currently in the Experience Platform UI, you can see two side-by-side 
 
 ![Image of the two Amazon S3 destination cards in a side-by-side view.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
-While these destinations with enhanced functionality were offered initially as a beta, Adobe is now moving all Real-Time CDP customers to the new cloud storage destinations. For customers who were already using [!DNL Amazon S3], [!DNL Azure Blob], or SFTP, this means that existing dataflows will be migrated to the new cards. Read on for more information about the specific changes as part of the migration.
+While these destinations with enhanced functionality were offered initially as a beta, *Adobe is now moving all Real-Time CDP customers to the new cloud storage destinations*. For customers who were already using [!DNL Amazon S3], [!DNL Azure Blob], or SFTP, this means that existing dataflows will be migrated to the new cards. Read on for more information about the specific changes as part of the migration.
 
 ## Who this page applies to {#who-this-applies-to}
 
@@ -678,29 +678,7 @@ Find complete information about setting up the `profileMapping` object in the [A
 ```json
 
 {
-  "segmentSelectors": {
-    "selectors": [
-      {
-        "type": "PLATFORM_SEGMENT",
-        "value": {
-          "id": "d74c68c9-a1f9-44bc-9685-95f0f5ece705",
-          "name": "0414 BugBasheditrename",
-          "description": "",
-          "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
-          "exportMode": "DAILY_FULL_EXPORT",
-          "schedule": {
-            "frequency": "DAILY",
-            "triggerType": "SCHEDULED",
-            "startDate": "2022-06-02",
-            "endDate": "2022-06-30",
-            "startTime": "19:00"
-          },
-          "createTime": "1654195179",
-          "updateTime": "1669962057"
-        }
-      },
-      ...
-    ]
+  "segmentSelectors": { // shortened for brevity since nothing changes in the segment selectors
   },  
   "profileSelectors": {
     "selectors": [
@@ -770,34 +748,12 @@ Notice in the configuration example below how `profileSelectors` fields have bee
 ```json
 
 {
-  "segmentSelectors": {
-    "selectors": [
-      {
-        "type": "PLATFORM_SEGMENT",
-        "value": {
-          "id": "d74c68c9-a1f9-44bc-9685-95f0f5ece705",
-          "name": "0414 BugBasheditrename",
-          "description": "",
-          "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
-          "exportMode": "DAILY_FULL_EXPORT",
-          "schedule": {
-            "frequency": "DAILY",
-            "triggerType": "SCHEDULED",
-            "startDate": "2022-06-02",
-            "endDate": "2022-06-30",
-            "startTime": "19:00"
-          },
-          "createTime": "1654195179",
-          "updateTime": "1669962057"
-        }
-      },
-      ...
-    ]
+  "segmentSelectors": { // shortened for brevity since nothing changes in the segment selectors
   },  
   "mandatoryFields": [
     "CORE",
-    "person.name.lastName",
-    "personalEmail.address"
+    "person_name_lastName",
+    "personalEmail_address"
   ],
   "primaryFields": [
     {
@@ -821,21 +777,21 @@ Notice in the configuration example below how `profileSelectors` fields have bee
 
 >[!ENDTABS]
 
-## Migration timeline {#migration-timeline}
+## Migration timeline and action items {#timeline-and-action-items}
 
-The migration of legacy dataflows to the new destination cards for [!DNL Amazon S3], [!DNL Azure Blob], and SFTP destinations will occur on **June 30th, 2023**.
+The migration of legacy dataflows to the new destination cards for [!DNL Amazon S3], [!DNL Azure Blob], and SFTP destinations will occur as soon as your organization is ready to migrate and no later than **June 30th, 2023**.
 
-You will receive emails from Adobe as the migration date approaches. In preparation, read the section below to get ready for the migration. 
+You will receive reminder emails from Adobe as the migration date approaches. In preparation, read the Action items section below to get ready for the migration. 
 
 ## Action items {#action-items}
 
 In preparation for the migration of the [!DNL Amazon S3], [!DNL Azure Blob], and SFTP cloud storage destinations to the new cards, please prepare to update your scripts and automated API calls as suggested below. 
 
-1. Update any scripts or automated API calls for any existing [!DNL Amazon S3], [!DNL Azure Blob], or SFTP cloud storage destinations by June 30, 2023.
+1. Update any scripts or automated API calls for any existing [!DNL Amazon S3], [!DNL Azure Blob], or SFTP cloud storage destinations by June 30, 2023. Any automated API calls or scripts which leverage the legacy connection specs or flow specs need to be updated to the new connection specs or flow specs.
 2. Reach out to your Adobe account representative when your scripts have been updated before June 30th.
-3. The `targetConnectionSpecId` can be used as a flag to determine if the dataflow has been migrated to the new destination card. For example, you could update your scripts with an `if` condition to look at the legacy and updated target connection specs in `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` and determine if your dataflow has been migrated. You can see the legacy and new connection spec IDs in the specific sections on this page for each destination.
+3. For example, the `targetConnectionSpecId` can be used as a flag to determine if the dataflow has been migrated to the new destination card. You could update your scripts with an `if` condition to look at the legacy and updated target connection specs in `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` and determine if your dataflow has been migrated. You can see the legacy and new connection spec IDs in the specific sections on this page for each destination.
 4. Your Adobe account team will reach out with further information about when your dataflows will be migrated.
-5. After June 30th, all dataflows will be migrated. Failure to update scripts or API calls may result in interruption with ongoing flows?
+5. After June 30th, all dataflows will be migrated. All your exiting dataflows will now have new flow entities (connection specs, flow specs, base connections, and target connections). Any scripts or API calls on your side that use the legacy flow entities will stop working.
 
 ## Other migration considerations {#other-considerations}
 

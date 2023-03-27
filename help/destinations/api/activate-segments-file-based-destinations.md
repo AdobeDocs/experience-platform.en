@@ -3218,7 +3218,6 @@ curl --location --request GET 'https://platform.adobe.io/data/core/ups/config/en
 --header 'x-gw-ims-org-id: {ORG_ID}' \ 
 --header 'x-api-key: {API_KEY}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \ 
---header 'x-sandbox-id: SANDBOX_ID' \ 
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 
 ```
@@ -3393,7 +3392,6 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 --header 'x-gw-ims-org-id: {ORG_ID}' \ 
 --header 'x-api-key: {API_KEY}' \ 
 --header 'x-sandbox-name: {SANDBOX_NAME}' \ 
---header 'x-sandbox-id: SANDBOX_ID' \ 
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 
 ```
@@ -3614,7 +3612,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 --header 'x-gw-ims-org-id: {ORG_ID}' \ 
 --header 'x-api-key: {API_KEY}' \ 
 --header 'x-sandbox-name: {SANDBOX_NAME}' \ 
---header 'x-sandbox-id: SANDBOX_ID' \ 
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \ 
 --header 'Content-Type: application/json' \ 
 --data-raw '{
@@ -3668,7 +3665,6 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
---header 'x-sandbox-id: SANDBOX_ID' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 
 ```
@@ -4411,7 +4407,6 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
---header 'x-sandbox-id: SANDBOX_ID' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'If-Match: ETAG_HERE' \
 --data-raw '[
