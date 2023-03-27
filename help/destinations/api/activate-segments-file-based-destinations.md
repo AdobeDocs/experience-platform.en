@@ -4316,9 +4316,11 @@ Next, use the [data prep API](https://developer.adobe.com/experience-platform-ap
 
 >[!IMPORTANT]
 >
->In the mappings object shown below, the `destination` parameter does not accept dots `"."`. For example you would need to use personalEmail_address or segmentMembership_status as in the configuration example.
+>* In the mappings object shown below, the `destination` parameter does not accept dots `"."`. For example you would need to use personalEmail_address or segmentMembership_status as highlighted in the configuration example.
+>* There is one particular case when the source attribute is an identity attribute and contains a dot. In this case, the attribute needs to be escaped with `//`, as highlighted below.
+>* Note also that even though the example configuration below includes `Email` and `Phone_E.164`, you are only able to export one identity attribute per dataflow.
 
-```shell
+```shell{line-numbers="true" start-line="1" highlight="16-38"}
 
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
 --header 'x-api-key: {API_KEY}' \
@@ -4342,6 +4344,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
         {
             "destination": "Email",
             "source": "identityMap.Email",
+            "sourceType": "ATTRIBUTE"
+        },
+        {
+            "destination": "Phone_E_164",
+            "source": "identityMap.Phone_E//.164",
             "sourceType": "ATTRIBUTE"
         },
         {

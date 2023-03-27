@@ -71,7 +71,7 @@ With the migration to the new destinations, all your existing dataflows to [!DNL
 
 ### Backwards-incompatible changes to the [!DNL Amazon S3] destination {#changes-amazon-s3-destination}
 
-The backwards-incompatible changes for the API users are an updated `connection spec` and `flow spec` as shown in the table below:
+The backwards-incompatible changes for the API users are an updated `connection spec ID` and `flow spec ID` as shown in the table below:
 
 |[!DNL Amazon S3] | Legacy | New |
 |---------|----------|---------|
@@ -88,7 +88,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 +++View legacy [!DNL base connection] for [!DNL Amazon S3]
 
-```json
+```json {line-numbers="true" start-line="1" highlight="5"}
 {
   ...
   "name": "amazon-s3",
@@ -121,7 +121,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 +++View legacy [!DNL target connection] for [!DNL Amazon S3]
 
-```json
+```json {line-numbers="true" start-line="1" highlight="12"}
 {
   ...
   "name": "test 121",
@@ -161,7 +161,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 +++View new [!DNL base connection] for [!DNL Amazon S3]
 
-```json
+```json {line-numbers="true" start-line="1" highlight="5"}
 {
   ...
   "name": "Amazon S3",
@@ -194,7 +194,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 +++View new [!DNL target connection] for [!DNL Amazon S3]
 
-```json
+```json {line-numbers="true" start-line="1" highlight="12, 16-27"}
 {
   ...
   "name": "test 121",
@@ -243,7 +243,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 ### Backwards-incompatible changes to [!DNL Azure Blob] destination {#changes-azure-blob-destination}
 
-The backwards-incompatible changes for the API users are an updated `connection spec` and `flow spec` as shown in the table below:
+The backwards-incompatible changes for the API users are an updated `connection spec ID` and `flow spec ID` as shown in the table below:
 
 |[!DNL Azure Blob] | Legacy | New |
 |---------|----------|---------|
@@ -260,7 +260,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 +++View legacy [!DNL base connection] for [!DNL Azure Blob]
 
-```json
+```json {line-numbers="true" start-line="1" highlight="5"}
 {
   ...
   "name": "azure-blob",
@@ -292,7 +292,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 +++View legacy [!DNL target connection] for [!DNL Azure Blob]
 
-```json
+```json {line-numbers="true" start-line="1" highlight="13"}
 {
   ...
   "name": "v1",
@@ -333,7 +333,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 +++View new [!DNL base connection] for [!DNL Azure Blob]
 
-```json
+```json {line-numbers="true" start-line="1" highlight="5"}
 {
   ...
   "name": "Azure Blob Storage",
@@ -365,7 +365,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 +++View new [!DNL target connection] for [!DNL Azure Blob]
 
-```json
+```json {line-numbers="true" start-line="1" highlight="13, 17-25"}
 {
   ...
   "name": "v1",
@@ -415,7 +415,7 @@ Similarly, there are no backwards-incompatible changes in the parameters require
 
 ### Backwards-incompatible changes to SFTP destination {#changes-sftp-destination}
 
-The backwards-incompatible changes for the API users are an updated `connection spec` and `flow spec` as shown in the table below:
+The backwards-incompatible changes for the API users are an updated `connection spec ID` and `flow spec ID` as shown in the table below:
 
 |SFTP | Legacy | New |
 |---------|----------|---------|
@@ -435,7 +435,7 @@ View the complete legacy and new base connection and target connection examples 
 
 +++View legacy [!DNL base connection] for SFTP - password authentication
 
-```json {line-numbers="true" start-line="1" highlight="15"}
+```json {line-numbers="true" start-line="1" highlight="5,15"}
 {
   ...
   "name": "sftp",
@@ -469,7 +469,7 @@ View the complete legacy and new base connection and target connection examples 
 
 +++View legacy [!DNL base connection] for [!DNL SFTP - SSH key] authentication
 
-```json {line-numbers="true" start-line="1" highlight="15"}
+```json {line-numbers="true" start-line="1" highlight="5,15"}
 {
   ...
   "name": "sftp",
@@ -504,7 +504,7 @@ View the complete legacy and new base connection and target connection examples 
 
 +++View legacy [!DNL target connection] for SFTP
 
-```json
+```json {line-numbers="true" start-line="1" highlight="13"}
 {
   ...
   "name": "test sftp 6/2",
@@ -544,7 +544,7 @@ View the complete legacy and new base connection and target connection examples 
 
 +++View new [!DNL base connection] for [!DNL SFTP - password authentication]
 
-```json
+```json {line-numbers="true" start-line="1" highlight="5"}
 {
   ...
   "name": "SFTP",
@@ -578,7 +578,7 @@ View the complete legacy and new base connection and target connection examples 
 
 +++View new [!DNL base connection] for [!DNL SFTP - SSH key] authentication
 
-```json {line-numbers="true" start-line="1" highlight="12"}
+```json {line-numbers="true" start-line="1" highlight="5,12"}
 {
   ...
   "name": "SFTP",
@@ -612,7 +612,7 @@ View the complete legacy and new base connection and target connection examples 
 
 +++View new [!DNL target connection] for SFTP
 
-```json
+```json {line-numbers="true" start-line="1" highlight="13, 17-25"}
 {
   ...
   "name": "test sftp 6/2",
@@ -675,7 +675,7 @@ Find complete information about setting up the `profileMapping` object in the [A
 
 +++View an example of old transformation parameters
 
-```json
+```json{line-numbers="true" start-line="1" highlight="4-40, 45-53"}
 
 {
   "segmentSelectors": { // shortened for brevity since nothing changes in the segment selectors
@@ -745,7 +745,7 @@ Find complete information about setting up the `profileMapping` object in the [A
 
 Notice in the configuration example below how `profileSelectors` fields have been replaced by a `profileMapping` object.
 
-```json
+```json {line-numbers="true" start-line="1" highlight="4-12, 18-20"}
 
 {
   "segmentSelectors": { // shortened for brevity since nothing changes in the segment selectors
@@ -783,7 +783,7 @@ The migration of legacy dataflows to the new destination cards for [!DNL Amazon 
 
 You will receive reminder emails from Adobe as the migration date approaches. In preparation, read the Action items section below to get ready for the migration. 
 
-## Action items {#action-items}
+### Action items {#action-items}
 
 In preparation for the migration of the [!DNL Amazon S3], [!DNL Azure Blob], and SFTP cloud storage destinations to the new cards, please prepare to update your scripts and automated API calls as suggested below. 
 
