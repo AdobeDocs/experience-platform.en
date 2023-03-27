@@ -100,6 +100,7 @@ For the second data element, set the type to **[!UICONTROL XDM Object]** (from t
 >[!NOTE]
 >
 >If your website is not running the [!DNL Braze] SDK, an Adobe Experience Cloud ID (ECID) will be used as the fallback `deviceId` value to be passed with the event sent to [!DNL Braze].
+
 Depending on your scenario, you may need to create another data element that can be used to map to the event name in the schema. This can be done using the **[!UICONTROL Constant]** type provided by the [!UICONTROL Core] extension.
 
 ![Data element eventNameForRegistration in Tag properties.](../../../images/extensions/server/braze/constant-registration.png)
@@ -213,6 +214,7 @@ As a result, the [!DNL Braze] extension enables you to add the following action 
 >[!IMPORTANT]
 >
 >You must have at least one rule with an action type of **[!UICONTROL Braze Event]**. Without this rule, the Edge Network will not send events to [!DNL Braze].
+
 ### Create a [!DNL Track Event] rule {#tracking-rule}
 
 Start creating a new rule in your event forwarding property. Under **[!UICONTROL Conditions]**, add a **[!UICONTROL Value Comparison]** condition type (provided by the [!UICONTROL Core] extension) to check that `EventName` is not `Purchase`. This will ensure the events are sent with the correct object payload to the [!DNL Braze] API.
@@ -228,6 +230,7 @@ From here, under **[!UICONTROL Main Fields]**, you must map the **[!UICONTROL Ev
 >[!NOTE]
 >
 >The **[!UICONTROL Braze Event]** action requires only an **[!UICONTROL Event Type]** (`name`) to be specified, but you should be including as much information as possible in the remaining fields (including the different tabs for event fields, profile fields, and additional fields). For details on the [!DNL Braze] event object, refer to the [official documentation](https://www.braze.com/docs/api/objects_filters/event_object/).
+
 Once the [!UICONTROL Braze Event] action is added to the rule, you can also include a **[!UICONTROL Braze Purchase]** action if the event you are tracking happens to be a purchase event. An example configuration for the purchase action is shown below:
 
 ![Add a Braze Purchase action type event forwarding rule action configuration.](../../../images/extensions/server/braze/braze-purchase-event-action.png)
@@ -235,6 +238,7 @@ Once the [!UICONTROL Braze Event] action is added to the rule, you can also incl
 >[!NOTE]
 >
 >For details on the [!DNL Braze] purchase object, refer to the [official documentation](https://www.braze.com/docs/api/objects_filters/purchase_object/).
+
 The [!DNL Track Event] rule is complete and should look similar to the image below. Select **[!UICONTROL Save]** to add the rule to the library.
 
 ![Add an event forwarding rule.](../../../images/extensions/server/braze/track-rule-complete.png)
