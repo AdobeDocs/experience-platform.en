@@ -47,13 +47,11 @@ Note down the items below before you authenticate to the [!DNL Mailchimp Tags] d
 
 {style="table-layout:auto"}
 
-#### Identify [!DNL Mailchimp] domain {#identify-domain}
+#### Identify [!DNL Mailchimp] data center {#identify-data-center}
 
 Next you need to identify your Mailchimp domain, to do this log in to your [!DNL Mailchimp] account and check the URL in your browser.
 You’ll notice a value similar to *`us19`.admin.mailchimp.com*, the `us19` prefix is the value you will require.
-<!--
-If required, refer to the [Mailchimp documentation](https://mailchimp.com/developer/marketing/guides/quick-start/#make-your-first-api-call).
--->
+If you require guidance, refer to the [Mailchimp documentation](https://mailchimp.com/developer/marketing/guides/quick-start/#make-your-first-api-call).
 
 ### Guardrails {#guardrails}
 
@@ -112,7 +110,7 @@ To configure details for the destination, fill in the required and optional fiel
 | --- | --- |
 | **[!UICONTROL Name]** | A name by which you will recognize this destination in the future. |
 | **[!UICONTROL Description]** | A description that will help you identify this destination in the future. |
-| **[!UICONTROL Data Center]** | Your [!DNL Mailchimp] account `Data Center`. Refer to the [Identify [!DNL Mailchimp] domain](#identify-domain) section for any guidance.|
+| **[!UICONTROL Data Center]** | Your [!DNL Mailchimp] account `Data Center`. Refer to the [Identify [!DNL Mailchimp] data center](#identify-data-center) section for any guidance. |
 | **[!UICONTROL Audience List ID]** | After you provide the value of your `Data Center` entries in this select dropdown are automatically populated with the audience names from your account. You need to select the audience of interest to which you will add or update the contact details from selected Platform segments. |
 
 {style="table-layout:auto"}
