@@ -33,7 +33,7 @@ In this action, you are also provided with an optional field to include an Ident
 
 If you would like to reset your event merge ID on your page, you can do so with this action. To reset your ID, select the Merge ID you want to reset and fire the action as needed.
 
-## Update variable (beta)
+## Update variable (beta) {#update-variable}
 
 >[!NOTE]
 >
