@@ -81,7 +81,7 @@ The **[!UICONTROL Select data]** step appears, providing an interface for you to
 
 >[!TIP]
 >
->You can provide multiple `object_ids` by passing comma-separated values.The maximum number of IDs that you can pass in a single request is 100. If incorrect values are passed, Platform displays the following message: `The request could not be processed. Error from flow provider: Unknown error while processing request.` 
+>You can provide multiple `object_ids` by passing comma-separated values. The maximum number of IDs that you can pass in a single request is 100. If incorrect values are passed, Platform displays the following message: `The request could not be processed. Error from flow provider: Unknown error while processing request.` 
 
 After providing the values, select **[!UICONTROL Select]**. If the values provided are valid, the right part of the interface, preview data, will get populated.
 
@@ -97,14 +97,14 @@ The sections below provide additional resources that you can refer to when using
 
 ## Scheduling {#scheduling}
 
-The **[!UICONTROL Scheduling]** step appears, allowing you to specify the schedule for execution of the dataflow.
-
-As explained in the [guardrails](../../../../connectors/advertising/pinterest-ads.md#guardrails) section of the [!DNL Pinterest Ads] source overview documentation, select one of the below to ensure that daily data will be retrieved.
+When scheduling your [!DNL Pinterest Ads] dataflow for ingestion, you must select one of the following frequency and interval configurations:
 
 | Frequency | Interval |
 | --- | --- |
 | `Day` | 1 |
 | `Hour` | 24 |
+
+For more information on scheduling your [!DNL Pinterest Ads] dataflow, read the [guardrails section of the [!DNL Pinterest Ads] overview](../../../../connectors/advertising/pinterest-ads.md#guardrails).
 
 Once your have provided the values for your schedule, select **[!UICONTROL Next]**.
 
@@ -114,17 +114,28 @@ Once your have provided the values for your schedule, select **[!UICONTROL Next]
 
 To validate that you have correctly set up the source and [!DNL Pinterest Ads] data is being ingested, follow the steps below:
 
-In the Platform UI, select View Dataflows besides the [!DNL Pinterest Ads] card menu on the Catalog page. You can then select [!UIControl Preview dataset] to verify the data that was ingested.
+In the Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL Pinterest Ads] card menu on the catalog page. You can then select [!UICONTROL Preview dataset] to verify the data that was ingested.
+
 ![Platform UI screenshot for Pinterest Ads Preview Dataset.](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png?lang=en)
 
-You can verify the data against the counts visible on the [!DNL Pinterest] Campaigns page below :
-![Pinterest Campaigns page.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-campaigns.png?lang=en)
+You can verify the data against the counts visible on the [!DNL Pinterest] UI
 
-Or if you had selected [!DNL Pinterest] Ad groups, then the below page :
+>[!BEGINTABS]
+
+>[!TAB Campaigns]
+
+![Pinterest Campaigns page.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-campaigns.png)
+
+>[!TAB Ad groups]
+
 ![Pinterest Ad groups page.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ad-groups.png?lang=en)
 
-Or if you selected [!DNL Pinterest] Ads, then the below page :
+>[!TAB Ads]
+
 ![Pinterest Ads page.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ads.png?lang=en)
+
+>[!ENDTABS]
+
 
 ### [!DNL Pinterest] Fields {#pinterest-fields}
 

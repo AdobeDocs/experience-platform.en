@@ -64,8 +64,8 @@ The following sections provides information on data guardrails for [!DNL Pintere
 
 The [!DNL Pinterest] API supports both a `start_date` and an `end_date` parameter to retrieve analytics data between a given date range.
 
-* The `start_date` cannot be more than 90 days back from the current date.
-* The `end_date` cannot be more than 90 days past the `start_date`.
+* The `start_date` cannot be more than 90 days before the current date.
+* The `end_date` cannot be more than 90 days after the `start_date`.
 
 When scheduling your dataflow, you must configure one of the follow frequency and interval settings:
 
@@ -74,11 +74,11 @@ When scheduling your dataflow, you must configure one of the follow frequency an
 | `Day` | 1 |
 | `Hour` | 24 |
 
-For example, in Platform, in the scheduling step of the sources workflow, if today is March, 15 2023 and frequency is chosen as above the [!DNL Pinterest] API would only retrieve data until December, 15 2022.
+For example, if ingestion is set on March 15, 2023 with a frequency and interval setting configured to `Day=1` or `Hour=24`, then the [!DNL Pinterest] API would only retrieve data from as far back as December 15, 2022 because computation is backdated for 90 days.
 
 ### [!DNL Pinterest] time range {#pinterest-time-range}
 
-The [!DNL Pinterest] API supports different time granularities for how data can be retrieved:
+The [!DNL Pinterest] API supports different kinds of time granularity for how data can be retrieved:
 
 | Time granularity | Description |
 | --- | --- |
@@ -87,8 +87,8 @@ The [!DNL Pinterest] API supports different time granularities for how data can 
 | **HOUR** | The data metrics are broken down on an hourly basis. |
 | **WEEKLY** | The data metrics are broken down on a weekly basis. |
 | **MONTHLY** | The data metrics are broken down on a monthly basis. |
- 
-Based on this [!DNL Pinterest], the granularity for [!DNL Pinterest Ads] source is internally configured as **DAY**, this means the data retrieved will be aggregated on a daily basis. For example, using impressions recorded as a metric, because the granularity is configured as a day, you could get `xx` impressions on `day 1`, `yy` impressions on `day 2` and similar.
+
+For Platform, the [!DNL Pinterest Ads] source is internally configured to `Day`, which means data will be aggregated on a daily basis. For example, using `impressions recorded` as a metric, since the granularity is configured as a `DAY`, you would get `xx` impressions on `day 1`, `yy` impressions on `day 2` and so on.
 
 >[!IMPORTANT]
 >
