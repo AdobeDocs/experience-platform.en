@@ -126,10 +126,6 @@ Select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL 
 
 ![Installing the [!DNL Mixpanel] extension.](../../../images/extensions/server/mixpanel/install-extension.png)
 
-On the next screen, under **[!UICONTROL Token]**, select the secret-type data element [that you created earlier](#create-a-secret) which contains your [!DNL Mixpanel] project token. Select **[!UICONTROL Save]** to complete the configuration.
-
-![The [!DNL Mixpanel] extension input.](../../../images/extensions/server/mixpanel/configure-extension.png)
-
 ## Set up event forwarding data elements
 
 After installing and configuring the extension, the next step is to create event forwarding data elements that will capture the necessary data constructs that will be sent to [!DNL Mixpanel].
@@ -200,13 +196,14 @@ Accordingly, the [!DNL Mixpanel] event forwarding extension supports the followi
 
 Start creating a new rule in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Mixpanel]**. Next, set the action type to **[!UICONTROL Track Event]** to send Adobe Experience Edge Network events to [!DNL Mixpanel].
 
-| Tab | Input | Description |
-| --- | --- | --- |
-| [!UICONTROL Main Fields] | [!UICONTROL Event Type] | The event name. |
-| [!UICONTROL Main Fields] | [!UICONTROL Mixpanel Distinct ID] | This field should be mapped to the `distinctId` data element you created earlier. |
-| [!UICONTROL Main Fields] | [!UICONTROL Data] | A JSON object containing the standard `properties` for the event. |
-| [!UICONTROL Additional Fields] | [!UICONTROL Body Format] | If you are including additional fields, select from providing raw JSON or using a simplified set of key-value inputs. |
-| [!UICONTROL Additional Fields] | [!UICONTROL Body] | Provide the keys and values of the additional fields you are including in the event. |
+| Input | Description |
+| --- | --- |
+| [!UICONTROL Project Token] | This field should be mapped to the project token associated with your [!DNL Mixpanel] account. |
+| [!UICONTROL Event Type] | The event name. |
+| [!UICONTROL Event Time] | The event time. |
+| [!UICONTROL Mixpanel Distinct ID] | This field should be mapped to the `distinctId` data element you created earlier. |
+| [!UICONTROL Insert ID] | This field should be mapped to the `insertId` data element. |
+| [!UICONTROL Event Properties] | Select from providing raw JSON or using a simplified set of key-value inputs. |
 
 >[!NOTE]
 >
@@ -222,48 +219,21 @@ Once the [!UICONTROL Track Event] action is added to the rule, you can configure
 
 ### Create an identity tracking rule
 
-If you are not using the [!DNL Mixpanel SDK], the next step is to create another rule that uses both the **[!UICONTROL Mixpanel Alias]** and **[!UICONTROL Mixpanel Identify]** action types. This rule ensures that whenever a user identification event occurs on the website (such as a login, sign-up, registration, and so on), the appropriate events and `distinct_id` values are sent to [!DNL Mixpanel].
+If you are not using the [!DNL Mixpanel SDK], the next step is to create another rule. This rule ensures that whenever a user identification event occurs on the website (such as a login, sign-up, registration, and so on), the appropriate events and `distinct_id` values are sent to [!DNL Mixpanel].
 
 Start the process of creating a new rule. For the [!UICONTROL Conditions] section, add a condition that checks whether the event is a user identification event. In the example below, the condition uses a [!UICONTROL Value Comparison] (from the [!UICONTROL Core] extension) to check whether the incoming event has an event name equal to `signin`, indicating a user sign-in event.
 
 ![Showcase the Action Configuration for [!DNL Mixpanel] action types Alias and Identify.](../../../images/extensions/server/mixpanel/ef-rule-condition.png)
 
-Once you've added the appropriate conditions to the rule, you must add the following actions:
+Once you've added the appropriate conditions to the rule, you must create an [!UICONTROL Send Event] to send Adobe Experience Edge Network events to [!DNL Mixpanel]. 
 
-* **[!UICONTROL Mixpanel Alias]** 
-* **[!UICONTROL Mixpanel Identify]** 
-
-#### [!UICONTROL Mixpanel Alias]
-
-To configure the **[!UICONTROL Mixpanel Alias]** action, include the following values:
-
-| Input | Description |
-| --- | --- |
-| [!UICONTROL Known User ID] | A known identifier for the user that triggered the event. This will act as the alias for the corresponding `distinct_id`. |
-| [!UICONTROL Mixpanel Distinct ID] | The `distinct_id` to be merged with the alias. |
-
-![Showcase the Action Configuration for the Action type [!DNL Mixpanel] Alias.](../../../images/extensions/server/mixpanel/alias-action-config.png)
-
->[!NOTE]
->
->For more information on aliases in [!DNL Mixpanel], refer to the [official documentation](https://developer.mixpanel.com/reference/identity-create-alias).
-
-#### [!UICONTROL Mixpanel Identify]
-
-To configure the **[!UICONTROL Mixpanel Identify]** action, include the following values:
-
-| Input | Description |
-| --- | --- |
-| [!UICONTROL Known User ID] | A known identifier for the user that triggered the event. |
-| [!UICONTROL Mixpanel Distinct ID] | The `distinct_id` to be merged with the alias. |
-
-![Showcase the Action Configuration for the Action type [!DNL Mixpanel] Identify.](../../../images/extensions/server/mixpanel/identify-action-config.png)
+![Add an event forwarding rule action configuration.](../../../images/extensions/server/mixpanel/track-event-action.png)
 
 >[!NOTE]
 >
 >For more information on identities in [!DNL Mixpanel], refer to the [official documentation](https://developer.mixpanel.com/reference/create-identity).
 
-Once both actions are added to the rule, select **[!UICONTROL Save]** to add the rule to your event forwarding library. From here, you can [create a new build and activate your changes](../../../ui/publishing/overview.md).
+Once the action has been added to the rule, select **[!UICONTROL Save]** to add the rule to your event forwarding library. From here, you can [create a new build and activate your changes](../../../ui/publishing/overview.md).
 
 ![Add an event forwarding rule for [!DNL Mixpanel] action types Alias and Identify.](../../../images/extensions/server/mixpanel/ef-rule-complete.png)
 
@@ -271,7 +241,7 @@ Once both actions are added to the rule, select **[!UICONTROL Save]** to add the
 
 If your implementation is successful and events are collected, you will see events within the [[!DNL Mixpanel] console](https://help.mixpanel.com/hc/en-us/articles/4402837164948).
 
-Check if [!DNL Mixpanel] has merged the post login events populated with email values and the events created when using **[!UICONTROL Mixpanel Alias]** and **[!UICONTROL Mixpanel Identify]**. If implemented correctly, [!DNL Mixpanel] will associate them with a single [user profile](https://help.mixpanel.com/hc/en-us/articles/115004501966).
+Check if [!DNL Mixpanel] has merged the post login events populated with email values and the events created when using **[!UICONTROL Send Event]**. If implemented correctly, [!DNL Mixpanel] will associate them with a single [user profile](https://help.mixpanel.com/hc/en-us/articles/115004501966).
 
 ## Next steps
 
