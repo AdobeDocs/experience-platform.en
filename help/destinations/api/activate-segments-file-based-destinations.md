@@ -3653,6 +3653,8 @@ The ID in the response represents the unique identifier of the input schema that
 
 Next, you must set up the output schema for your export. First, you need to find and inspect your existing partner schema.  
 
+>[!BEGINSHADEBOX]
+
 **Request**
 
 +++Request to get partner schema for the output schema
@@ -3969,7 +3971,7 @@ Next, you need to create an output schema. Copy the JSON response you got above 
 
 **Request**
 
-+++ Create an output schema - Request
++++Create an output schema - Request
 
 ```shell
 
@@ -3991,7 +3993,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **Response**
 
-+++ Create output schema - Response
++++Create output schema - Response
 
 ```json
 
@@ -4304,7 +4306,7 @@ The ID in the response represents the unique identifier of the input schema that
 
 >[!ENDSHADEBOX]
 
-### Create mapping sets
+### Create mapping set {#create-mapping-set}
 
 Next, use the [data prep API](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet) to create the mapping set by using the input schema ID, the output schema ID, and the desired field mappings.
 
@@ -4312,7 +4314,7 @@ Next, use the [data prep API](https://developer.adobe.com/experience-platform-ap
 
 **Request**
 
-+++ Create mapping set - Request
++++Create mapping set - Request
 
 >[!IMPORTANT]
 >
@@ -4320,7 +4322,7 @@ Next, use the [data prep API](https://developer.adobe.com/experience-platform-ap
 >* There is one particular case when the source attribute is an identity attribute and contains a dot. In this case, the attribute needs to be escaped with `//`, as highlighted below.
 >* Note also that even though the example configuration below includes `Email` and `Phone_E.164`, you are only able to export one identity attribute per dataflow.
 
-```shell{line-numbers="true" start-line="1" highlight="16-38"}
+```shell {line-numbers="true" start-line="1" highlight="16-38"}
 
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
 --header 'x-api-key: {API_KEY}' \
