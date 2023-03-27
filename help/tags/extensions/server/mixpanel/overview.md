@@ -219,6 +219,7 @@ Once the [!UICONTROL Track Event] action is added to the rule, you can configure
 >[!IMPORTANT]
 >
 >If your website is using the [!DNL Mixpanel] SDK, you can continue to the next step of [validating your data within [!DNL Mixpanel]](#validate). If you are not using the [!DNL Mixpanel] SDK, you must [create a separate identity tracking rule](#create-an-identity-tracking-rule) to ensure that appropriate events and `distinct_id` values are sent to [!DNL Mixpanel] when a user identification event occurs.
+
 ### Create an identity tracking rule
 
 If you are not using the [!DNL Mixpanel SDK], the next step is to create another rule that uses both the **[!UICONTROL Mixpanel Alias]** and **[!UICONTROL Mixpanel Identify]** action types. This rule ensures that whenever a user identification event occurs on the website (such as a login, sign-up, registration, and so on), the appropriate events and `distinct_id` values are sent to [!DNL Mixpanel].
@@ -261,6 +262,7 @@ To configure the **[!UICONTROL Mixpanel Identify]** action, include the followin
 >[!NOTE]
 >
 >For more information on identities in [!DNL Mixpanel], refer to the [official documentation](https://developer.mixpanel.com/reference/create-identity).
+
 Once both actions are added to the rule, select **[!UICONTROL Save]** to add the rule to your event forwarding library. From here, you can [create a new build and activate your changes](../../../ui/publishing/overview.md).
 
 ![Add an event forwarding rule for [!DNL Mixpanel] action types Alias and Identify.](../../../images/extensions/server/mixpanel/ef-rule-complete.png)
