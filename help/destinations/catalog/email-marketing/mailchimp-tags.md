@@ -161,6 +161,10 @@ To validate that you have correctly set up the destination, follow the steps bel
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [Data Governance overview](/help/data-governance/home.md).
 
+## Errors and troubleshooting {#errors-and-troubleshooting}
+
+Refer to the [[!DNL Mailchimp] Errors](https://mailchimp.com/developer/marketing/docs/errors/) page for a comprehensive list of status and error codes with explanations.
+
 ## Additional resources {#additional-resources}
 
 Additional useful information from the [!DNL Mailchimp] documentation is below:
