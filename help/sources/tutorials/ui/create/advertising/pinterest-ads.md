@@ -12,13 +12,13 @@ hidefromtoc: true
 >
 >The [!DNL Pinterest Ads] source is in beta. Read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
-This tutorial provides steps for creating a [!DNL Pinterest Ads] source connector using the Platform user interface.
+This tutorial provides steps for creating a [!DNL Pinterest Ads] source connector using the Adobe Experience Platform user interface.
 
 ## Getting started {#getting-started}
 
 This tutorial requires a working understanding of the following components of Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which Experience Platforrm organizes customer experience data.
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
@@ -27,19 +27,19 @@ This tutorial requires a working understanding of the following components of Ex
 
 In order to connect [!DNL Pinterest Ads] to Experience Platform, you must provide values for the following connection properties:
 
-* The [!DNL Pinterest] acces token.
+* The [!DNL Pinterest] access token.
 * The [!DNL Pinterest] ad account ID.
 * One of [!DNL Pinterest] campaign, ad group or ad ID's as required.
 
 For more information on these connection properties, read the [[!DNL Pinterest Ads] overview](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
 
-### Create Platform Schema {#create-platform-schema}
+### Create a Platform schema {#create-platform-schema}
 
-You must also ensure that you first create a Platform schema to use for your [!DNL Pinterst Ads] source. Reaed the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
+You must also ensure that you first create a Platform schema to use for your [!DNL Pinterst Ads] source. Read the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
-![Platform UI screenshot showing an example Schema](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png?lang=en)
+![An example Platform schema for Pinterest Ads](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
 
-For a list of the fields supported by the [!DNL Pinterest] Campaign, Ad Group and Ad APIs, refer to [[!DNL Pinterest] fields](#pinterest-fields) section.
+For a list of the fields supported by the [!DNL Pinterest] campaign, ad group and ad APIs, refer to [[!DNL Pinterest] fields](#pinterest-fields) section.
 
 ## Connect your [!DNL Pinterest Ads] account {#connect-account}
 
@@ -49,7 +49,7 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Under the *Advertising* category, select **[!UICONTROL Pinterest Ads]**, and then select **[!UICONTROL Add data]**.
 
-![Platform UI screenshot for catalog with Pinterest Ads card](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png?lang=en)
+![The sources catalog on Experience Platform.](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png)
 
 The **[!UICONTROL Connect Pinterest Ads account]** page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -57,17 +57,15 @@ The **[!UICONTROL Connect Pinterest Ads account]** page appears. On this page, y
 
 To use an existing account, select the [!DNL Pinterest Ads] account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
 
-![Platform UI screenshot for Connect Pinterest Ads account with an existing account](../../../../images/tutorials/create/advertising/pinterest-ads/existing.png?lang=en)
+![The existing account step of the sources workflow.](../../../../images/tutorials/create/advertising/pinterest-ads/existing.png)
 
 ### New account {#new-account}
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and your credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![Platform UI screenshot for Connect Pinterest Ads account with a new account](../../../../images/tutorials/create/advertising/pinterest-ads/new.png?lang=en)
+![The new account step of the sources workflow.](../../../../images/tutorials/create/advertising/pinterest-ads/new.png)
 
-If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark, you can then proceed to the next step.
 
-![Platform UI screenshot for Connect Pinterest Ads account with connected status](../../../../images/tutorials/create/advertising/pinterest-ads/connected.png?lang=en)
 
 ## Select data {#select-data}
 
@@ -75,8 +73,8 @@ The **[!UICONTROL Select data]** step appears, providing an interface for you to
 
 | Field | Description |
 | --- | --- |
-| [!UICONTROL ad_account_id] | Your [!DNL Pinterest Ads] Ad account ID. Refer to the [[!DNL Pinterest] guide on finding IDs in Ads Manager](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) if you need any guidance. |
-| [!UICONTROL object_type] | Select one of **Campaigns**, **Ad Groups** or **Ads** depending on which of the [!DNL Pinterest] Analytics APIs you want to obtain information from. |
+| [!UICONTROL ad_account_id] | Your [!DNL Pinterest Ads] ad account ID. Refer to the [[!DNL Pinterest] guide on finding IDs in Ads Manager](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) if you need any guidance. |
+| [!UICONTROL object_type] | Select one of **campaigns**, **ad groups** or **ads** depending on which of the [!DNL Pinterest] Analytics APIs you want to obtain information from. |
 | [!UICONTROL object_ids] | The selected object's IDs. Navigate to the [!DNL Pinterest] page for **Pinterest Business Hub** > **Ad Account Summary** > **Campaigns** / **Ad Groups** / **Ads** and copy the required ID's mentioned just below each of their names. |
 
 >[!TIP]
@@ -85,11 +83,11 @@ The **[!UICONTROL Select data]** step appears, providing an interface for you to
 
 After providing the values, select **[!UICONTROL Select]**. If the values provided are valid, the right part of the interface, preview data, will get populated.
 
-![The select data step of the sources workflow.](../../../../images/tutorials/create/advertising/pinterest-ads/select-data.png?lang=en)
+![The select data step of the sources workflow.](../../../../images/tutorials/create/advertising/pinterest-ads/select-data.png)
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have established a connection to your [!DNL Pinterest Ads] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](/help/sources/ui-tutorials/dataflow/advertising.md).
+By following this tutorial, you have established a connection to your [!DNL Pinterest Ads] account. You can now continue on to the next tutorial and [configure a dataflow to bring advertising data into Platform](../../dataflow/advertising.md).
 
 ## Additional resources {#additional-resources}
 
@@ -116,7 +114,7 @@ To validate that you have correctly set up the source and [!DNL Pinterest Ads] d
 
 In the Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL Pinterest Ads] card menu on the catalog page. You can then select [!UICONTROL Preview dataset] to verify the data that was ingested.
 
-![Platform UI screenshot for Pinterest Ads Preview Dataset.](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png?lang=en)
+![Platform UI screenshot for Pinterest Ads Preview Dataset.](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
 
 You can verify the data against the counts visible on the [!DNL Pinterest] UI
 
@@ -128,18 +126,18 @@ You can verify the data against the counts visible on the [!DNL Pinterest] UI
 
 >[!TAB Ad groups]
 
-![Pinterest Ad groups page.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ad-groups.png?lang=en)
+![Pinterest Ad groups page.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ad-groups.png)
 
 >[!TAB Ads]
 
-![Pinterest Ads page.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ads.png?lang=en)
+![Pinterest Ads page.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ads.png)
 
 >[!ENDTABS]
 
 
 ### [!DNL Pinterest] Fields {#pinterest-fields}
 
-The fields supported by the [!DNL Pinterest] Campaign, Ad Group and Ad APIs are below:
+The fields supported by the [!DNL Pinterest] campaign, ad group and ad APIs are below:
 
 +++ View payload
 

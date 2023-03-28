@@ -6,13 +6,13 @@ badge: "Beta"
 hide: true
 hidefromtoc: true
 ---
-# [!DNL Pinterest Ads] source
+# [!DNL Pinterest Ads]
 
 >[!NOTE]
 >
 >The [!DNL Pinterest Ads] source is in beta. Read the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from a third-party advertising system. Support for advertising providers include [!DNL Pinterest Ads].
 
@@ -32,7 +32,7 @@ Use the [!DNL Pinterest Ads] source to bring your data from [!DNL Pinterest] to 
 
 ## Prerequisites {#prerequisites}
 
-The first step in creating a [!DNL Pinterest Ads] source connection is to ensure that you have a Pinterest developer account. If you do not have one already, visit the [Signup](https://www.pinterest.com/business/create/?next=https://developers.pinterest.com/account-setup/) page to register and create your account.
+The first step in creating a [!DNL Pinterest Ads] source connection is to ensure that you have a Pinterest developer account. If you do not have one already, visit the [sign up](https://www.pinterest.com/business/create/?next=https://developers.pinterest.com/account-setup/) page to register and create your account.
 
 ### Setup [!DNL Pinterest] app and generate access token {#create-app-and-generate-token}
 
