@@ -16,6 +16,19 @@ This article explains the workflow required to export [datasets](/help/catalog/d
 
 You can also use the Experience Platform APIs to export datasets. Read the [export datasets API tutorial](/help/destinations/api/export-datasets.md) for more information.  
 
+## Supported destinations {#supported-destinations}
+
+Currently, you can export datasets to the cloud storage destinations highlighted in the screenshot and listed below. 
+
+![Destinations which support dataset exports](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+
+* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) 
+* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
+
 ## When to activate segments or export datasets {#when-to-activate-segments-or-activate-datasets}
 
 Some file-based destinations in the Experience Platform catalog support both segment activation and dataset export. 
