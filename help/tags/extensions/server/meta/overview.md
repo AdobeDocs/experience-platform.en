@@ -132,7 +132,7 @@ To add new events, select **[!UICONTROL Edit Your Tags Web Property]**.
 
 Select the rule that corresponds to the meta event that you would like to edit. For example, **MetaConversion_AddToCart**.
 
->[NOTE]
+>[!NOTE]
 >
 >If there is no event, this rule will not run. This is true for all rules, with the **MetaConversion_PageView** rule being the exception.
 
