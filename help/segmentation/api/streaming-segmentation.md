@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;streaming segmentation;Streaming segmentation;Continuous evaluation;
 solution: Experience Platform
 title: Evaluate Events in Near Real-Time with Streaming Segmentation 
-topic-legacy: developer guide
 description: This document contains examples on how to use streaming segmentation with the Adobe Experience Platform Segmentation Service API.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 ---
@@ -26,8 +25,8 @@ Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to d
 
 This developer guide requires a working understanding of the various [!DNL Adobe Experience Platform] services involved with streaming segmentation. Before beginning this tutorial, please review the documentation for the following services:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified consumer profile in real time, based on aggregated data from multiple sources.
-- [[!DNL Segmentation]](../home.md): Provides the ability to create segments and audiences from your [!DNL Real-time Customer Profile] data.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified consumer profile in real time, based on aggregated data from multiple sources.
+- [[!DNL Segmentation]](../home.md): Provides the ability to create segments and audiences from your [!DNL Real-Time Customer Profile] data.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
@@ -81,6 +80,8 @@ A segment definition will **not** be enabled for streaming segmentation in the f
 
 - The segment definition includes Adobe Audience Manager (AAM) segments or traits.
 - The segment definition includes multiple entities (multi-entity queries).
+- The segment definition includes a combination of a single event and an `inSegment` event.
+  - However, if the segment contained in the `inSegment` event is profile only, the segment definition **will** be enabled for streaming segmentation.
 
 Please note the following guidelines apply when doing streaming segmentation:
 
@@ -237,6 +238,17 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
+    },
+    "evaluationInfo": {
+        "batch": {
+            "enabled": false
+        },
+        "continuous": {
+            "enabled": true
+        },
+        "synchronous": {
+            "enabled": false
+        }
     }
 }'
 ```
@@ -424,6 +436,8 @@ Streaming segmentation works on all data that was ingested using a streaming sou
 
 A segment is defined as either batch or streaming segmentation based on a combination of query type and event history duration. A list of which segments will be evaluated as a streaming segment can be found in the [streaming segmentation query types section](#query-types).
 
+Please note that if a segment contains **both** an `inSegment` expression and a direct single-event chain, it cannot qualify for streaming segmentation. If you want to have this segment qualify for streaming segmentation, you should make the direct single-event chain its own segment.
+
 ### Why does the number of "total qualified" segments keep increasing while the number under "Last X days" remains at zero within the segment details section?
 
 The number of total qualified segments is drawn from the daily segmentation job, which includes audiences that qualify for both batch and streaming segments. This value is shown for both batch and streaming segments.
@@ -431,3 +445,7 @@ The number of total qualified segments is drawn from the daily segmentation job,
 The number under the "Last X days" **only** includes audiences that are qualified in streaming segmentation, and **only** increases if you have streamed data into the system and it counts toward that streaming definition. This value is **only** shown for streaming segments. As a result, this value **may** display as 0 for batch segments.
 
 As a result, if you see that the number under "Last X days" is zero, and the line graph is also reporting zero, you have **not** streamed any profiles into the system that would qualify for that segment.
+
+### How long does it take for a segment to be available?
+
+It takes up to one hour for a segment to be available.

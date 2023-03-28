@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;partial ingestion;Partial ingestion;Retrieve error;retrieve error;Partial batch ingestion;partial batch ingestion;partial;ingestion;Ingestion;
 solution: Experience Platform
 title: Partial Batch Ingestion Overview
-topic-legacy: overview
 description: This document provides a tutorial for managing partial batch ingestion.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
 ---
@@ -104,7 +103,7 @@ Now, you can upload data using the **Add data** button, and it will be ingested 
 
 ### Use the "[!UICONTROL Map CSV to XDM schema]" flow {#map-flow}
 
-To use the "[!UICONTROL Map CSV to XDM schema]" flow, follow the listed steps in the [Map a CSV file tutorial](../tutorials/map-a-csv-file.md). Once you reach the **[!UICONTROL Add data]** step, take note of the **[!UICONTROL Partial ingestion]** and **[!UICONTROL Error diagnostics]** fields.
+To use the "[!UICONTROL Map CSV to XDM schema]" flow, follow the listed steps in the [Map a CSV file tutorial](../tutorials/map-csv/overview.md). Once you reach the **[!UICONTROL Add data]** step, take note of the **[!UICONTROL Partial ingestion]** and **[!UICONTROL Error diagnostics]** fields.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 

@@ -2,7 +2,6 @@
 keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;Sensei Machine Learning API
 solution: Experience Platform
 title: Train and Evaluate a Model using the Sensei Machine Learning API
-topic-legacy: tutorial
 type: Tutorial
 description: This tutorial will show you how to create, train, and evaluate a Model using Sensei Machine Learning API calls.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e

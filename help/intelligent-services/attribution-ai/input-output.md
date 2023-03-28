@@ -2,7 +2,6 @@
 keywords: Experience Platform;getting started;Attribution ai;popular topics;Attribution ai input;Attribution ai output;
 feature: Attribution AI
 title: Input and Output in Attribution AI
-topic-legacy: Input and Output data for Attribution AI
 description: The following document outlines the different input and outputs utilized in Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 ---
@@ -130,7 +129,7 @@ The following table outlines the schema fields in the raw scores example output:
 | commerce_order_purchaseCity (String) | True | Additional Score dataset Column. <br> **Example:** city: San Jose |
 | customerProfile (Object) | False | Identity details of the user used to build the model. |
 | identity (Object) | False | Contains the details of the user used to build the model such as `id` and `namespace`. |
-| id (String) | True | Identity ID of the user such as cookie ID or AAID or MCID etc. <br> **Example:** 17348762725408656344688320891369597404 |
+| id (String) | True | Identity ID of the user such as cookie ID, Adobe Analytics ID (AAID), or Experience Cloud ID (ECID, also known as MCID or as visitor ID) etc. <br> **Example:** 17348762725408656344688320891369597404 |
 | namespace (String) | True | Identity namespace used to build the paths and thereby the model. <br> **Example:** aaid |
 | touchpointsDetail (Object Array) | True | The list of touchpoint details leading to the conversion ordered by | touchpoint occurrence or timestamp. |
 | touchpointName (String) | True | Name of the touchpoint that was configured during setup. <br> **Example:** PAID_SEARCH_CLICK |
@@ -230,7 +229,7 @@ The table below maps the aggregated scores to the raw scores. If you wish to dow
 >[!IMPORTANT]
 >
 > - Attribution AI uses only updated data for further training and scoring. Likewise, when you request to delete data, Customer AI refrains from using the deleted data.
-> - Attribution AI leverages Platform datasets. To support consumer rights requests a brand may receive, brands should use Platform Privacy Service to submit consumer requests of access and delete to remove their data across the data lake, Identity Service, and Real-time Customer Profile. 
+> - Attribution AI leverages Platform datasets. To support consumer rights requests a brand may receive, brands should use Platform Privacy Service to submit consumer requests of access and delete to remove their data across the data lake, Identity Service, and Real-Time Customer Profile. 
 > - All datasets we use for input/output of models will follow Platform guidelines. Platform Data Encryption applies for data at-rest and in-transit. See the documentation to learn more about [data encryption](../../../help/landing/governance-privacy-security/encryption.md)
 
 ## Next steps {#next-steps}

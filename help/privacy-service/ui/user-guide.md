@@ -2,13 +2,23 @@
 keywords: Experience Platform;home;popular topics;export;Export
 solution: Experience Platform
 title: Manage Privacy Jobs in the Privacy Service UI
-topic-legacy: UI guide
 description: Learn how to use the Privacy Service user interface to coordinate and monitor privacy requests across various Experience Cloud applications.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 ---
-# Manage privacy jobs in the Privacy Service UI
+# Manage privacy jobs in the Privacy Service UI {#user-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_requests_description"
+>title="Description"
+>abstract=""
 
 This document provides steps for creating and managing privacy requests using the [!DNL Privacy Service] user interface.
+
+>[!IMPORTANT]
+>
+>Privacy Service is only meant for data subject and consumer rights requests. Any other usage of Privacy Service for data cleanup or maintenance is not supported or allowed. Adobe has a legal obligation to fulfill them in a timely manner. As such, load-testing on Privacy Service is not allowed as it is a production only environment and creates an unnecessary backlog of valid privacy requests.
+>
+>A hard daily upload limit is now in place to help prevent abuse of the service. Users found to abuse the system will have their access to the service disabled. A subsequent meeting will then be held with them to address their actions and discuss the acceptable use for Privacy Service.
 
 ## Browse the [!DNL Privacy Service] UI dashboard
 
@@ -18,13 +28,25 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 
 ### Regulation Type
 
-[!DNL Privacy Service] supports job requests for several privacy regulations: 
+[!DNL Privacy Service] supports job requests for several privacy regulations. The following table lists the supported regulations and their corresponding label as represented in the UI: 
 
-* The [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
-* The European Union's [!DNL General Data Protection Regulation] ([!UICONTROL GDPR])
-* Thailand's [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
-* Brazil's [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
-* The New Zealand [!DNL Privacy Act] ([!UICONTROL NZPA_NZL])
+| UI label | Regulation |
+| --- | --- |
+| [!UICONTROL CCPA] | The [!DNL California Consumer Privacy Act] |
+| [!UICONTROL GDPR] | The European Union's [!DNL General Data Protection Regulation] |
+| [!UICONTROL PDPA_THA] | Thailand's [!DNL Personal Data Protection Act] |
+| [!UICONTROL LGPD_BRA] | Brazil's [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL NZPA_NZL] | The New Zealand [!DNL Privacy Act] |
+| [!UICONTROL VCDPA_USA] | The [!DNL Virginia Consumer Data Protection Act] |
+| [!UICONTROL CPRA_USA] | The [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL APA_AUS] | The [!DNL Australia Privacy Act (Privacy Act)] |
+| [!UICONTROL HIPAA_AUS] | The [!DNL Health Insurance Portability and Accountability Act] |
+
+{style="table-layout:auto"}
+
+>[!NOTE]
+>
+>See the overview on [supported privacy regulations](../regulations/overview.md) for more information on the legal context of each regulation.
 
 Jobs for each regulation type are tracked separately. To switch between regulation types, select the **[!UICONTROL Regulation Type]** dropdown menu and select the desired regulation from the list.
 
@@ -76,7 +98,12 @@ If a solution has provided any additional data, it is viewable in this dialog. Y
 
 To download the complete job data as a CSV file, select **[!UICONTROL Export to CSV]** at the top-right of the dialog.
 
-## Create a new privacy job request
+## Create a new privacy job request {#create-a-new-privacy-job-request}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_requests_instructions"
+>title="Instructions"
+>abstract=""
 
 >[!NOTE]
 >

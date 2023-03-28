@@ -9,7 +9,7 @@ In data collection tags, [rules](./rules.md) control the behavior of the resourc
 
 >[!NOTE]
 >
->This document covers how to manage rule components in the Reactor API. For details on how to interact with rules and rule components in the Data Collection UI, please refer to the [UI guide](../../ui/managing-resources/rules.md).
+>This document covers how to manage rule components in the Reactor API. For details on how to interact with rules and rule components in the UI, please refer to the [UI guide](../../ui/managing-resources/rules.md).
 
 Rule components have three basic types:
 
@@ -299,22 +299,22 @@ You can create a new rule component by making a POST request.
 **API format**
 
 ```http
-POST /rules/{RULE_ID}/rule_components
+POST /properties/{PROPERTY_ID}/rule_components
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `RULE_ID` | The `id` of the rule that you are defining a rule component for. |
+| `PROPERTY_ID` | The `id` of the property that you are defining the rule component under. |
 
 {style="table-layout:auto"}
 
 **Request**
 
-The following request creates a new rule component for the specified rule. The call also associates the rule component with an existing extension through the `relationships` property. See the guide on [relationships](../guides/relationships.md) for more information.
+The following request creates a new rule component. In the payload, the `relationships` property associates the component with specific rule(s) and an existing extension. See the guide on [relationships](../guides/relationships.md) for more information.
 
 ```shell
 curl -X POST \
-  https://reactor.adobe.io/rules/RLf7b4f416b2e04ae1ba857ae681fee5bc/rule_components \
+  https://reactor.adobe.io/properties/PR97596432a82549ceb8e2a5d9df05c0e1/rule_components \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -360,7 +360,7 @@ curl -X POST \
 | `attributes.rule_order` | An integer indicating the priority for the associated rule to fire. |
 | `attributes.settings` | A settings JSON object represented as a string.  |
 | `attributes.timeout` | An integer indicating the timeout of the action that is executed in sequence. |
-| `relationships` | An object that establishes the necessary relationships for the rule component. Two relationships must be established: <ol><li>`extension`: The extension that defines this rule component. This must be the same extension whose extension package is indicated by the `delegate_descriptor_id`.</li><li>`rules`: The rule that this component is being defined under. Must be the same rule ID that is supplied in the request path.</li></ol>For more general information on relationships, refer to the [relationships guide](../guides/relationships.md). |
+| `relationships` | An object that establishes the necessary relationships for the rule component. Two relationships must be established: <ol><li>`extension`: The extension that defines this rule component. This must be the same extension whose extension package is indicated by the `delegate_descriptor_id`.</li><li>`rules`: The rule that this component is being defined under.</li></ol>For more general information on relationships, refer to the [relationships guide](../guides/relationships.md). |
 | `type` |  The type of resource being created. For this endpoint, the value must be `rule_components`. |
 
 {style="table-layout:auto"}

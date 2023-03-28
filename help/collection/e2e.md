@@ -12,6 +12,8 @@ This guide provides a high-level tutorial of how to send an event through the Ed
 >[!NOTE]
 >
 >You can also opt to install and configure the SDK manually if you don't want to use tags, but the surrounding steps must still be completed as outlined below.
+>
+>All steps involving the Data Collection UI can also be performed in the Experience Platform UI.
 
 ## Prerequisites
 
@@ -51,7 +53,7 @@ The first step in setting up your data collection operations is to create an XDM
 >
 >XDM schemas are very customizable. Rather than being overly prescriptive, the steps outlined below focus specifically on the schema requirements for the Web SDK. Outside of these parameters, you are free to define the remaining structure your data however you wish.
 
-In the Data Collection UI, select **[!UICONTROL Schemas]** in the left navigation. From here, you can see a list of previously created schemas belonging to your organization. To continue, select **[!UICONTROL Create schema]**, then select **[!UICONTROL XDM ExperienceEvent]** from the dropdown menu.
+In the UI, select **[!UICONTROL Schemas]** in the left navigation. From here, you can see a list of previously created schemas belonging to your organization. To continue, select **[!UICONTROL Create schema]**, then select **[!UICONTROL XDM ExperienceEvent]** from the dropdown menu.
 
 ![Schemas workspace](./images/e2e/schemas.png)
 
@@ -91,7 +93,7 @@ A datastream is a configuration that tells the Edge Network where you want your 
 >
 >If you want to use [event forwarding](../tags/ui/event-forwarding/overview.md) (assuming your organization is licensed for the functionality), you must enable it for a datastream in the same way that you enable Adobe products. Details on this process are covered in a [later section](#event-forwarding).
 
-In the Data Collection UI, select **[!UICONTROL Datastreams]**. From here, you can select an existing datastream from the list to edit, or you can create a new configuration by selecting **[!UICONTROL New Datastream]**.
+Select **[!UICONTROL Datastreams]** in the left navigation. From here, you can select an existing datastream from the list to edit, or you can create a new configuration by selecting **[!UICONTROL New Datastream]**.
 
 ![Datastreams](./images/e2e/datastreams.png)
 
@@ -204,7 +206,7 @@ The event configuration page appears. To configure an event, you must first sele
 
 >[!NOTE]
 >
->For more information on the different event types provided by Adobe web extensions, including how to configure them, see the [Adobe extensions reference](../tags/extensions/web/overview.md) in the tags documentation.
+>For more information on the different event types provided by Adobe web extensions, including how to configure them, see the [Adobe extensions reference](../tags/extensions/client/overview.md) in the tags documentation.
 
 The form submit event allows you to use a [CSS selector](https://www.w3schools.com/css/css_selectors.asp) to reference a specific element for the rule to fire on. In the example below, the ID `add-to-cart-form` is used so that this rule only fires for the "Add to Cart" form. Select **[!UICONTROL Keep Changes]** to add the event to the rule.
 

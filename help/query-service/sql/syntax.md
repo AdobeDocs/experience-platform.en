@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;ctas;CTAS;Create table as select
 solution: Experience Platform
 title: SQL Syntax in Query Service
-topic-legacy: syntax
 description: This document shows SQL syntax supported by Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
 ---
@@ -167,18 +166,19 @@ SELECT statement 1
 SELECT statement 2
 ```
 
-### CREATE TABLE AS SELECT
+### CREATE TABLE AS SELECT {#create-table-as-select}
 
 The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query:
 
 ```sql
-CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
+CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE') ] AS (select_query)
 ```
 
 | Parameters | Description |
 | ----- | ----- |
 | `schema` | The title of XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by the CTAS query. |
 | `rowvalidation` | (Optional) Specifies if the user wants row level validation of every new batches ingested for the newly created dataset. The default value is `true`. |
+| `label` | When you create a dataset with a CTAS query, use this label with the value of `profile` to label your dataset as enabled for profile. This means that your dataset automatically gets marked for profile as it gets created. See the derived attribute extension document for more information on the use of `label`. |
 | `select_query` | A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries). |
 
 **Example**
@@ -186,7 +186,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 ```sql
 CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 
-CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
+CREATE TABLE Chairs WITH (schema='target schema title', label='PROFILE') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 
 CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 ```
@@ -336,10 +336,10 @@ An anonymous block consists of two sections: executable and exception-handling s
 The following example shows how to create a block with one or more statements to be executed together:
 
 ```sql
-BEGIN
+$$BEGIN
   statementList
 [EXCEPTION exceptionHandler]
-END
+$$END
 
 exceptionHandler:
       WHEN OTHER
@@ -352,7 +352,7 @@ statementList:
 Below is an example using anonymous block.
 
 ```sql
-BEGIN
+$$BEGIN
    SET @v_snapshot_from = select parent_id  from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
    SET @v_snapshot_to = select snapshot_id from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
    SET @v_log_id = select now();
@@ -363,8 +363,87 @@ EXCEPTION
   WHEN OTHER THEN
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
-END;
+$$END;
 ```
+
+### Auto to JSON {#auto-to-json}
+
+Query Service supports an optional session-level setting to return top-level complex fields from interactive SELECT queries as JSON strings. The `auto_to_json` setting allows for data from complex fields to be returned as JSON then parsed into JSON objects using standard libraries.
+
+SET the feature flag `auto_to_json` to true before executing your SELECT query that contains complex fields. 
+
+```sql
+set auto_to_json=true; 
+``` 
+
+#### Before setting the `auto_to_json` flag
+
+The following table provides an example query result before the `auto_to_json` setting is applied. The same SELECT query (as seen below) that targets a table with complex fields was used in both scenarios.
+
+```sql
+SELECT * FROM TABLE_WITH_COMPLEX_FIELDS LIMIT 2;
+```
+
+The results are as follows:
+
+```console
+                _id                |                                _experience                                 | application  |                   commerce                   | dataSource |                               device                               |                       endUserIDs                       |                                                                                                environment                                                                                                |                     identityMap                     |                              placeContext                               |   receivedTimestamp   |       timestamp       | userActivityRegion |                                         web                                          | _adcstageforpqs
+-----------------------------------+----------------------------------------------------------------------------+--------------+----------------------------------------------+------------+--------------------------------------------------------------------+--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------------------------------------------------------------------------+-----------------------+-----------------------+--------------------+--------------------------------------------------------------------------------------+-----------------
+ 31892EE15DE00000-401D52664FF48A52 | ("("("(1,1)","(1,1)")","(-209479095,4085488201,-2105158467,2189808829)")") | (background) | (NULL,"(USD,NULL)",NULL,NULL,NULL,NULL,NULL) | (475341)   | (32,768,1024,205202,https://ns.adobe.com/xdm/external/deviceatlas) | ("("(31892EE080007B35-E6CE00000000000,"(AAID)",t)")")  | ("(en-US,f,f,t,1.6,"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7",490,1125)",xo.net,64.3.235.13)     | [AAID -> "{(31892EE080007B35-E6CE00000000000,t)}"]  | ("("(34.01,-84.0)",lawrenceville,US,524,30043,ga)",600)                 | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | (UT1)              | ("(f,Search Results,"(1.0)")","(http://www.google.com/search?ie=UTF-8&q=,internal)") |
+ 31892EE15DE00000-401B92664FF48AE8 | ("("("(1,1)","(1,1)")","(-209479095,4085488201,-2105158467,2189808829)")") | (background) | (NULL,"(USD,NULL)",NULL,NULL,NULL,NULL,NULL) | (475341)   | (32,768,1024,205202,https://ns.adobe.com/xdm/external/deviceatlas) | ("("(31892EE100007BF3-215FE00000000001,"(AAID)",t)")") | ("(en-US,f,f,t,1.5,"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7",768,556)",ntt.net,219.165.108.145) | [AAID -> "{(31892EE100007BF3-215FE00000000001,t)}"] | ("("(34.989999999999995,138.42)",shizuoka,JP,392005,420-0812,22)",-240) | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | (UT1)              | ("(f,Home - JJEsquire,"(1.0)")","(NULL,typed_bookmarked)")                           |
+(2 rows)  
+```
+
+#### After setting the `auto_to_json` flag
+
+The following table demonstrates the difference in results that the `auto_to_json` setting has on the resulting dataset. The same SELECT query was used in both scenarios.
+
+```console
+                _id                |   receivedTimestamp   |       timestamp       |                                                                                                                   _experience                                                                                                                   |           application            |             commerce             |    dataSource    |                                                                  device                                                                   |                                                   endUserIDs                                                   |                                                                                                                                                                                           environment                                                                                                                                                                                            |                             identityMap                              |                                                                                            placeContext                                                                                            |      userActivityRegion      |                                                                                     web                                                                                      | _adcstageforpqs
+-----------------------------------+-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------------------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------
+ 31892EE15DE00000-401D52664FF48A52 | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | {"analytics":{"customDimensions":{"eVars":{"eVar1":"1","eVar2":"1"},"props":{"prop1":"1","prop2":"1"}},"environment":{"browserID":-209479095,"browserIDStr":"4085488201","operatingSystemID":-2105158467,"operatingSystemIDStr":"2189808829"}}} | {"userPerspective":"background"} | {"order":{"currencyCode":"USD"}} | {"_id":"475341"} | {"colorDepth":32,"screenHeight":768,"screenWidth":1024,"typeID":"205202","typeIDService":"https://ns.adobe.com/xdm/external/deviceatlas"} | {"_experience":{"aaid":{"id":"31892EE080007B35-E6CE00000000000","namespace":{"code":"AAID"},"primary":true}}}  | {"browserDetails":{"acceptLanguage":"en-US","cookiesEnabled":false,"javaEnabled":false,"javaScriptEnabled":true,"javaScriptVersion":"1.6","userAgent":"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7","viewportHeight":490,"viewportWidth":1125},"domain":"xo.net","ipV4":"64.3.235.13"}     | {"AAID":[{"id":"31892EE080007B35-E6CE00000000000","primary":true}]}  | {"geo":{"_schema":{"latitude":34.01,"longitude":-84.0},"city":"lawrenceville","countryCode":"US","dmaID":524,"postalCode":"30043","stateProvince":"ga"},"localTimezoneOffset":600}                 | {"dataCenterLocation":"UT1"} | {"webPageDetails":{"isHomePage":false,"name":"Search Results","pageViews":{"value":1.0}},"webReferrer":{"URL":"http://www.google.com/search?ie=UTF-8&q=","type":"internal"}} |
+ 31892EE15DE00000-401B92664FF48AE8 | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | {"analytics":{"customDimensions":{"eVars":{"eVar1":"1","eVar2":"1"},"props":{"prop1":"1","prop2":"1"}},"environment":{"browserID":-209479095,"browserIDStr":"4085488201","operatingSystemID":-2105158467,"operatingSystemIDStr":"2189808829"}}} | {"userPerspective":"background"} | {"order":{"currencyCode":"USD"}} | {"_id":"475341"} | {"colorDepth":32,"screenHeight":768,"screenWidth":1024,"typeID":"205202","typeIDService":"https://ns.adobe.com/xdm/external/deviceatlas"} | {"_experience":{"aaid":{"id":"31892EE100007BF3-215FE00000000001","namespace":{"code":"AAID"},"primary":true}}} | {"browserDetails":{"acceptLanguage":"en-US","cookiesEnabled":false,"javaEnabled":false,"javaScriptEnabled":true,"javaScriptVersion":"1.5","userAgent":"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7","viewportHeight":768,"viewportWidth":556},"domain":"ntt.net","ipV4":"219.165.108.145"} | {"AAID":[{"id":"31892EE100007BF3-215FE00000000001","primary":true}]} | {"geo":{"_schema":{"latitude":34.989999999999995,"longitude":138.42},"city":"shizuoka","countryCode":"JP","dmaID":392005,"postalCode":"420-0812","stateProvince":"22"},"localTimezoneOffset":-240} | {"dataCenterLocation":"UT1"} | {"webPageDetails":{"isHomePage":false,"name":"Home - JJEsquire","pageViews":{"value":1.0}},"webReferrer":{"type":"typed_bookmarked"}}                                        |
+(2 rows)
+```
+
+### Resolve fallback snapshot on failure {#resolve-fallback-snapshot-on-failure}
+
+The `resolve_fallback_snapshot_on_failure` option is used to resolve the issue of an expired snapshot ID. Snapshot metadata expires after two days and an expired snapshot can invalidate the logic of a script. This can be a problem when using anonymous blocks.
+
+Set the `resolve_fallback_snapshot_on_failure` option to true to override a snapshot with a previous snapshot ID.
+
+```sql
+SET resolve_fallback_snapshot_on_failure=true;
+```
+
+The following line of code overrides the `@from_snapshot_id` with the earliest available `snapshot_id` from metadata.
+
+```sql
+$$ BEGIN
+    SET resolve_fallback_snapshot_on_failure=true;
+    SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
+                            (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
+                                WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
+                                on a.process_timestamp=b.process_timestamp;
+    SET @to_snapshot_id = SELECT snapshot_id FROM (SELECT history_meta('DIM_TABLE_ABC')) WHERE  is_current = true;
+    SET @last_updated_timestamp= SELECT CURRENT_TIMESTAMP;
+    INSERT INTO DIM_TABLE_ABC_Incremental
+     SELECT  *  FROM DIM_TABLE_ABC SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id WHERE NOT EXISTS (SELECT _id FROM DIM_TABLE_ABC_Incremental a WHERE _id=a._id);
+
+Insert Into
+   checkpoint_log
+   SELECT
+       'DIM_TABLE_ABC' process_name,
+       'SUCCESSFUL' process_status,
+      cast( @to_snapshot_id AS string) last_snapshot_id,
+      cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
+EXCEPTION
+  WHEN OTHER THEN
+    SELECT 'ERROR';
+END
+$$;
+```
+
 
 ## Data asset organization
 
@@ -421,7 +500,7 @@ The `inline` function separates the elements of an array of structs and generate
 
 The `inline` function **cannot** be placed in a select list where there are other generator functions.
 
-By default, the columns produced are named “col1”, “col2”, and so on. If the expression is `NULL` then no rows are produced.
+By default, the columns produced are named "col1", "col2", and so on. If the expression is `NULL` then no rows are produced.
 
 >[!TIP]
 >
@@ -442,7 +521,7 @@ The example returns the following:
 
 This second example further demonstrates the concept and application of the `inline` function. The data model for the example is illustrated in the image below.
 
-![A schema diagram for the productListItems](../images/sql/productListItems.png)
+![A schema diagram for productListItems.](../images/sql/productListItems.png)
 
 **Example**
 
@@ -478,9 +557,33 @@ SET property_key = property_value
 
 To return the value for any setting, use `SET [property key]` without a `property_value`.
 
-## PostgreSQL commands
+## [!DNL PostgreSQL] commands
 
-The sub-sections below cover the PostgreSQL commands supported by Query Service.
+The sub-sections below cover the [!DNL PostgreSQL] commands supported by Query Service.
+
+### ANALYZE TABLE
+
+The `ANALYZE TABLE` command computes statistics for a table on the accelerated store. The statistics are calculated on executed CTAS or ITAS queries for a given table on accelerated store.
+
+**Example**
+
+```sql
+ANALYZE TABLE <original_table_name>
+```
+
+The following is a list of statistical calculations that are available after using the `ANALYZE TABLE` command:-
+
+| Calculated values | Description |
+|---|---|
+| `field`  | The name of the column in a table.  |
+| `data-type` | The acceptable type of data for each column. |
+| `count` | The number of rows that contain a non-null value for this field. |
+| `distinct-count` | The number of unique or distinct values for this field. |
+| `missing` | The number of rows that have a null value for this field. |
+| `max` | The maximum value from the analyzed table.  |
+| `min` | The minimum value from the analyzed table. |
+| `mean` | The average value of the analyzed table.  |
+| `stdev` | The standard deviation of the analyzed table. |
 
 ### BEGIN
 
@@ -547,25 +650,23 @@ EXECUTE name [ ( parameter ) ]
 The `EXPLAIN` command displays the execution plan for the supplied statement. The execution plan shows how the tables referenced by the statement will be scanned.  If multiple tables are referenced, it will show what join algorithms are used to bring together the required rows from each input table.
 
 ```sql
-EXPLAIN option statement
+EXPLAIN statement
 ```
 
-Where `option` can be one of:
+Use the `FORMAT` keyword with the `EXPLAIN` command to define the format of the response.
 
 ```sql
-ANALYZE
-FORMAT { TEXT | JSON }
+EXPLAIN FORMAT { TEXT | JSON } statement
 ```
 
 | Parameters | Description|
 | ------ | ------ |
-| `ANALYZE` | If the `option` contains `ANALYZE`, the run times and other statistics are shown. |
-| `FORMAT` | If the `option` contains `FORMAT`, it specifies the output format, which can be `TEXT` or `JSON`. Non-text output contains the same information as the text output format, but is easier for programs to parse. This parameter defaults to `TEXT`. |
+| `FORMAT` | Use the `FORMAT` command to specify the output format. The available options are `TEXT` or `JSON`. Non-text output contains the same information as the text output format, but is easier for programs to parse. This parameter defaults to `TEXT`. |
 | `statement` | Any `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, or `CREATE MATERIALIZED VIEW AS` statement, whose execution plan you want to see. |
 
 >[!IMPORTANT]
 >
->Keep in mind that the statement is actually executed when the `ANALYZE` option is used. Although `EXPLAIN` discards any output that a `SELECT` returns, other side effects of the statement happen as usual. 
+>Any output that a `SELECT` statement might return is discarded when run with the `EXPLAIN` keyword. Other side effects of the statement happen as usual.
 
 **Example**
 
@@ -579,7 +680,7 @@ EXPLAIN SELECT * FROM foo;
 
                        QUERY PLAN
 ---------------------------------------------------------
- Seq Scan on foo  (cost=0.00..155.00 rows=10000 width=4)
+ Seq Scan on foo (dataSetId = "6307eb92f90c501e072f8457", dataSetName = "foo") [0,1000000242,6973776840203d3d,6e616c58206c6153,6c6c6f430a3d4d20,74696d674c746365]
 (1 row)
 ```
 
@@ -649,7 +750,7 @@ More information about the standard SELECT query parameters can be found in the 
 | Parameters | Description|
 | ------ | ------ |
 | `TEMPORARY` or `TEMP` | An optional parameter. If specified, the table that is created will be a temporary table. |
-| `UNLOGGED` | An optional parameter. If specified, the table that is created as will be an unlogged table. More information about unlogged tables can be found in the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `UNLOGGED` | An optional parameter. If specified, the table that is created as will be an unlogged table. More information about unlogged tables can be found in the [[!DNL PostgreSQL] documentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | The name of the table to be created. |
 
 **Example**

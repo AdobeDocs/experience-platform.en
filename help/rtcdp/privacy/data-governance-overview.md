@@ -4,13 +4,13 @@ title: Data Governance overview
 description: Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
 ---
-# Data Governance in Real-time CDP
+# Data Governance in Real-Time CDP
 
-[!DNL Real-time Customer Data Platform] (Real-time CDP) brings data from multiple enterprise systems together, allowing marketers to better identify, understand, and engage their customers. This data may be subject to usage restrictions defined by your organization or by legal regulations. Therefore, it is important to ensure that Real-time CDP is compliant with usage policies when handling your data.
+[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) brings data from multiple enterprise systems together, allowing marketers to better identify, understand, and engage their customers. This data may be subject to usage restrictions defined by your organization or by legal regulations. Therefore, it is important to ensure that Real-Time CDP is compliant with usage policies when handling your data.
 
-Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within Real-time CDP, allowing you to define usage policies, categorize your data based on those policies, and check for policy violations when performing certain marketing actions.
+Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within Real-Time CDP, allowing you to define usage policies, categorize your data based on those policies, and check for policy violations when performing certain marketing actions.
 
-Real-time CDP is built on top of Adobe Experience Platform, and therefore the majority of Data Governance capabilities are covered in the [!DNL Experience Platform] documentation. This document is intended to complement the [Data Governance overview](../../data-governance/home.md) for [!DNL Experience Platform], and outlines the Governance features that are available in Real-time CDP. The following topics are covered:
+Real-Time CDP is built on top of Adobe Experience Platform, and therefore the majority of Data Governance capabilities are covered in the [!DNL Experience Platform] documentation. This document is intended to complement the [Data Governance overview](../../data-governance/home.md) for [!DNL Experience Platform], and outlines the Governance features that are available in Real-Time CDP. The following topics are covered:
 
 * [Apply usage labels to your data](#labels)
 * [Manage data usage policies](#policies)
@@ -36,20 +36,20 @@ Marketing actions can only be selected when setting up a destination for the fir
 
 ## Manage data usage policies {#policies}
 
-In order for data usage labels to effectively support data compliance, data usage policies must be defined and enabled. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Real-time CDP. See the "Data usage policies" section in the [!DNL Experience Platform] [Data Governance overview](../../data-governance/home.md) for more information.
+In order for data usage labels to effectively support data compliance, data usage policies must be defined and enabled. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Real-Time CDP. See the "Data usage policies" section in the [!DNL Experience Platform] [Data Governance overview](../../data-governance/home.md) for more information.
 
 Adobe Experience Platform provides several core policies for common customer experience use cases. These policies can be viewed in the UI by navigating to the **[!UICONTROL Policies]** workspace and selecting the **[!UICONTROL Browse]** tab. See the [policies user guide](../../data-governance/policies/user-guide.md) in the [!DNL Experience Platform] documentation for more detailed steps on working with policies in the UI, including how to make your own custom policies.
 
 ## Enforce data usage compliance {#enforce}
 
-Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. When activating audience segments to destinations in Real-time CDP, Data Governance automatically enforces usage policies should any violations occur.
+Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. When activating audience segments to destinations in Real-Time CDP, Data Governance automatically enforces usage policies should any violations occur.
 
 See the document on [automatic policy enforcement](../../data-governance/enforcement/auto-enforcement.md) for more information.
 
 ## Next steps
 
-Now that you have been introduced to the key Data Governance features on Real-time CDP and how [!DNL Experience Platform] enables them, please continue to the [documentation for Data Governance on Adobe Experience Platform](../../data-governance/home.md). The documentation provides overviews of essential Data Governance concepts, as well as step-by-step workflows for managing data usage labels and policies.
+Now that you have been introduced to the key Data Governance features on Real-Time CDP and how [!DNL Experience Platform] enables them, please continue to the [documentation for Data Governance on Adobe Experience Platform](../../data-governance/home.md). The documentation provides overviews of essential Data Governance concepts, as well as step-by-step workflows for managing data usage labels and policies.
 
-The following video provides an overview of Data Governance in Real-time CDP, including the use of marketing use-cases on destinations and example workflows for different scenarios:
+The following video provides an overview of Data Governance in Real-Time CDP, including the use of marketing use-cases on destinations and example workflows for different scenarios:
 
 >[!VIDEO](https://video.tv.adobe.com/v/33631?quality=12&learn=on)

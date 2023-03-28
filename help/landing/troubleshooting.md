@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform FAQ and Troubleshooting Guide
 description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 landing-page-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
-topic-legacy: getting started
+short-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 ---
@@ -203,7 +203,8 @@ The following is a list of troubleshooting guides and API reference documentatio
 | Service | API Reference | Troubleshooting |
 | --- | --- | --- |
 | Access control | [Access control API](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Access control troubleshooting guide](../access-control/troubleshooting-guide.md)|
-| Adobe Experience Platform Data Ingestion | [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) | [Batch ingestion troubleshooting guide](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[Streaming ingestion troubleshooting guide](../ingestion/streaming-ingestion/troubleshooting.md)|
+| Adobe Experience Platform Data Ingestion | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [Batch ingestion troubleshooting guide](../ingestion/batch-ingestion/troubleshooting.md)|
+| Adobe Experience Platform Data Ingestion | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) | [Streaming ingestion troubleshooting guide](../ingestion/streaming-ingestion/troubleshooting.md)|
 | Adobe Experience Platform Data Science Workspace | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] troubleshooting guide](../data-science-workspace/troubleshooting-guide.md) |
 | Adobe Experience Platform Data Governance | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/)||
 | Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] troubleshooting guide](../identity-service/troubleshooting-guide.md)|
@@ -212,5 +213,5 @@ The following is a list of troubleshooting guides and API reference documentatio
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/)||
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] FAQ and troubleshooting guide](../xdm/troubleshooting-guide.md)|
 | [!DNL Flow Service] ([!DNL Sources] and [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/)||
-| [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en)| [[!DNL Profile] troubleshooting guide](../profile/troubleshooting.md) |
+| [!DNL Real-Time Customer Profile] | [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en)| [[!DNL Profile] troubleshooting guide](../profile/troubleshooting.md) |
 | Sandboxes | [Sandbox API](https://www.adobe.io/experience-platform-apis/references/sandbox) | [Sandboxes troubleshooting guide](../sandboxes/troubleshooting-guide.md)|

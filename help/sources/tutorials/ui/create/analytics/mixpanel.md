@@ -19,7 +19,7 @@ This tutorial requires a working understanding of the following components of Ex
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 ### Gather required credentials
 
@@ -27,7 +27,6 @@ In order to connect [!DNL Mixpanel] to Platform, you must provide values for the
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| Host | The [!DNL Mixpanel] raw data export API endpoint. See the [!DNL Raw Data Export API] section in the [Mixpanel API reference documentation](https://developer.mixpanel.com/reference/overview) for more information. | `https://data.mixpanel.com` |
 | Username | The service account username that corresponds with your [!DNL Mixpanel] account. See the [[!DNL Mixpanel] service accounts documentation](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) for more information. | `Test8.6d4ee7.mp-service-account` |
 | Password | The service account password that corresponds with your [!DNL Mixpanel] account. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
 | Project ID | Your [!DNL Mixpanel] project ID. This ID is required to create a source connection. See the [[!DNL Mixpanel] project settings documentation](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) and the [[!DNL Mixpanel] guide on creating and managing projects](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) for more information. | `2384945` |

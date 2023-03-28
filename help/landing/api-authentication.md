@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Authenticate;access
 solution: Experience Platform
 title: Authenticate and Access Experience Platform APIs
-topic-legacy: tutorial
 type: Tutorial
 description: This document provides a step-by-step tutorial for gaining access to an Adobe Experience Platform developer account in order to make calls to Experience Platform APIs.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
@@ -59,7 +58,7 @@ After you have been given developer and user access to Platform through [!DNL Ad
 
 ### Add Experience Platform to a project
 
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in the Adobe Developer Console documentation.
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) in the Adobe Developer Console documentation.
 
 Once you have created a new project, select **[!UICONTROL Add API]** on the **[!UICONTROL Project Overview]** screen.
 

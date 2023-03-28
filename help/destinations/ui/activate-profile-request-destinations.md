@@ -59,9 +59,23 @@ Adding attributes is optional and you can still proceed to the next step and ena
 
 ![Image showing the mapping step with an attribute selected](../assets/ui/activate-profile-request-destinations/mapping-step.png)
 
-To add attributes, select the **[!UICONTROL Add new field]** control and search or navigate to your desired XDM attribute field, as shown below.
+### Select source attributes {#select-source-attributes}
 
-![Screen recording showing how to select an XDM attribute in the mapping step](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+To add source attributes, select the **[!UICONTROL Add new field]** control on the **[!UICONTROL Source field]** column and search or navigate to your desired XDM attribute field, as shown below.
+
+![Screen recording showing how to select a target attribute in the mapping step](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+
+### Select target attributes {#select-target-attributes}
+
+>[!NOTE]
+>
+>Some destinations require you to only select source attributes, while others require both source and target attributes.
+>
+>Currently, the [Adobe Target V2](../catalog/personalization/adobe-target-connection.md) destination requires only source attributes, while [Custom Personalization with Attributes](../catalog/personalization/custom-personalization.md) requires both source and target attributes.
+
+To add target attributes, select the **[!UICONTROL Add new field]** control on the **[!UICONTROL Target field]** column and type in the custom attribute name that you want to map the source attribute to.
+
+![Screen recording showing how to select an XDM attribute in the mapping step](../assets/ui/activate-profile-request-destinations/mapping-step-select-target-attribute.gif)
 
 ## Schedule segment export {#scheduling}
 
@@ -83,15 +97,25 @@ Select **[!UICONTROL Next]** to go to the [!UICONTROL Review] page.
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
->[!IMPORTANT]
->
->In this step, Adobe Experience Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
+![Selection summary in the review step.](../assets/ui/activate-profile-request-destinations/review.png)
+
+### Consent policy evaluation {#consent-policy-evaluation}
+
+If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**, select **[!UICONTROL View applicable consent policies]** to see which consent policies are applied and how many profiles are included in the activation as a result of them. Read about [consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) for more information.
+
+### Data usage policy checks {#data-usage-policy-checks}
+
+In the **[!UICONTROL Review]** step, Experience Platform also checks for any data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, read about [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in the data governance documentation section.
  
 ![data policy violation](../assets/common/data-policy-violation.png)
 
-If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
+### Filter segments {#filter-segments}
 
-![Review](../assets/ui/activate-profile-request-destinations/review.png)
+Also in this step you can use the available filters on the page to display only the segments whose schedule or mapping has been updated as part of this workflow. You can also toggle which table columns you want to see. 
+
+![Screen recording showing the available segment filters in the review step.](/help/destinations/assets/ui/activate-profile-request-destinations/filter-segments-review-step.gif)
+
+If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
 <!--
 

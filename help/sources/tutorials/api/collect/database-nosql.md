@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;database database;third party database
 solution: Experience Platform
 title: Create a Dataflow for Database Sources Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a database and ingesting it into Platform using source connectors and APIs.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
@@ -307,6 +306,7 @@ A successful response returns the details of the dataflow specification responsi
   "version": "1.0",
   "attributes": {
     "isSourceFlow": true,
+    "flacValidationSupported": true,
     "frequency": "batch",
     "notification": {
       "category": "sources",
@@ -350,7 +350,8 @@ A successful response returns the details of the dataflow specification responsi
     "ba5126ec-c9ac-11eb-b8bc-0242ac130003",
     "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
     "929e4450-0237-4ed2-9404-b7e1e0a00309",
-    "2acf109f-9b66-4d5e-bc18-ebb2adcff8d5"
+    "2acf109f-9b66-4d5e-bc18-ebb2adcff8d5",
+    "2fa8af9c-2d1a-43ea-a253-f00a00c74412"
   ],
   "targetConnectionSpecIds": [
     "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
@@ -536,17 +537,21 @@ A successful response returns the details of the dataflow specification responsi
         "type": "object",
         "description": "defines various params required for creating flow run.",
         "properties": {
+          "startTime": {
+            "type": "integer",
+            "description": "An integer that defines the start time of the run. The value is represented in Unix epoch time."
+          },
           "windowStartTime": {
             "type": "integer",
-            "description": "The start time for the dataflow in epoch time."
+            "description": "An integer that defines the start time of the window against which data is to be pulled. The value is represented in Unix epoch time."
           },
           "windowEndTime": {
             "type": "integer",
-            "description": "The end time for the dataflow in epoch time."
+            "description": "An integer that defines the end time of the window against which data is to be pulled. The value is represented in Unix epoch time."
           },
           "deltaColumn": {
             "type": "object",
-            "description": "The designated column used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column.",
+            "description": "The delta column is required to partition the data and separate newly ingested data from historic data.",
             "properties": {
               "name": {
                 "type": "string"
@@ -564,6 +569,7 @@ A successful response returns the details of the dataflow specification responsi
           }
         },
         "required": [
+          "startTime",
           "windowStartTime",
           "windowEndTime",
           "deltaColumn"
@@ -572,6 +578,8 @@ A successful response returns the details of the dataflow specification responsi
     }
 }
 ```
+
++++
 
 ## Create a dataflow
 
@@ -673,9 +681,9 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect data from a database on a scheduled basis. Incoming data can now be used by downstream Platform services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect data from a database on a scheduled basis. Incoming data can now be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
-* [Real-time Customer Profile overview](../../../../profile/home.md)
+* [Real-Time Customer Profile overview](../../../../profile/home.md)
 * [Data Science Workspace overview](../../../../data-science-workspace/home.md)
 
 ## Appendix

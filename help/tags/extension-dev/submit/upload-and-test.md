@@ -9,7 +9,7 @@ exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
-To test tag extensions in Adobe Experience Platform, use the tags API and/or command-line tools to upload your extension packages. Next, use the Data Collection UI to install your extension package to a property and exercise its capabilities inside a tag library and build.
+To test tag extensions in Adobe Experience Platform, use the tags API and/or command-line tools to upload your extension packages. Next, use the Platform UI or Data Collection UI to install your extension package to a property and exercise its capabilities inside a tag library and build.
 
 This document covers how to implement end-to-end testing for your extension. 
 
@@ -33,7 +33,7 @@ A specific example is your logo file: Add an `"iconPath": "example.svg",` line t
 
 In order to use the API or command-line tools, you need a technical account with Adobe I/O. You must create the technical account in the I/O console and then use the Uploader tool to upload the extension package.
 
-For information on creating a technical account for use with tags in Adobe Experience Platform, please refer to the [Access Tokens](https://developer.adobelaunch.com/api/guides/access_tokens/) guide.
+For information on creating a technical account for use with tags in Adobe Experience Platform, please refer to the [Reactor API Getting Started](../../api/getting-started.md) guide.
 
 >[!IMPORTANT]
 >
@@ -68,7 +68,7 @@ Your extension package will then be uploaded and the uploader will give you the 
 
 >[!NOTE]
 >
->When uploading or patching, extension packages are placed into a pending state while the system asynchronously extracts the package and deploys. While this process is taking place, you can poll the `extension_package` ID for its status using the API and within the Data Collection UI. You will see an extension card in the catalog marked as Pending.
+>When uploading or patching, extension packages are placed into a pending state while the system asynchronously extracts the package and deploys. While this process is taking place, you can poll the `extension_package` ID for its status using the API and within the UI. You will see an extension card in the catalog marked as Pending.
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ Your extension package will then be uploaded and the uploader will give you the 
 
 ## Create a development property {#property}
 
-After you sign into the Data Collection UI, the Properties screen is displayed. A property is a container for the tags that you want to deploy and it can be used on one or many sites.
+After you sign into the UI and select **[!UICONTROL Tags]** in the left navigation, the [!UICONTROL Properties] screen is displayed. A property is a container for the tags that you want to deploy and it can be used on one or many sites.
 
 ![](../images/getting-started/properties-screen.png)
 
@@ -106,7 +106,7 @@ To add your extension, select the **Catalog** tab.
 
 The catalog displays card icons for each available extension. If your extension is not displayed in the catalog, ensure that you have completed the steps above in the Adobe Administration Console Set Up and Creating Your Extension Package sections. Your extension package may also appear as Pending if Platform has not completed the initial processing.
 
-If you have followed the the previous steps and still do not see a Pending or Failed extension package in the catalog, you should check the status of your extension package directly using the API. For information on how to make the appropriate API call, read [Fetch an ExtensionPackage](https://developer.adobelaunch.com/api/reference/1.0/extension_packages/fetch/) in the API documentation.
+If you have followed the previous steps and still do not see a Pending or Failed extension package in the catalog, you should check the status of your extension package directly using the API. For information on how to make the appropriate API call, read [Fetch an ExtensionPackage](../../api/endpoints/extension-packages.md#lookup) in the API documentation.
 
 After your extension package has finished processing, select **Install** at the bottom of the card.
 
@@ -136,7 +136,7 @@ Extensions can define data element types if needed for your extension to operate
 
 When a user selects your extension from the **Extension** dropdown, the **Data Element Type** dropdown is populated with any data element types supplied by your extension. The user can then map each data element to its source value. Data elements can then be used when building rules in the Data Element Change Event or Custom Code Event to trigger a rule to execute. A data element can also be used in the Data Element Condition or other Conditions, Exceptions, or Actions in a rule.
 
-Once the data element is created (the mapping is set up), users can reference the source data simply by referencing the data element. If the source of the value ever changes (site re-designs, etc.) users only need to update the mapping once in the Data Collection UI and all the data elements will automatically receive the new source value.
+Once the data element is created (the mapping is set up), users can reference the source data simply by referencing the data element. If the source of the value ever changes (site re-designs, etc.) users only need to update the mapping once in the UI and all the data elements will automatically receive the new source value.
 
 ### Rules
 
@@ -220,6 +220,6 @@ When you discover changes that need to be made to your extension package, the it
    >
    >Arguments can be passed on the command line to save time by avoiding the repeated entering of credentials. For more information on this, read the [reactor-uploader documentation](https://www.npmjs.com/package/@adobe/reactor-uploader). 
 1. The installation step can be skipped when updating an existing package.
-1. Modify resources - if the configuration for any of your extension components has been changed, you will need to update those resources in the Data Collection UI.
+1. Modify resources - if the configuration for any of your extension components has been changed, you will need to update those resources in the UI.
 1. Add your latest changes to your Library and build again.
 1. Complete another round of tests.

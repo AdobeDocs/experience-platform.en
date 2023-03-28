@@ -23,8 +23,12 @@ This example uses [!DNL Jupyter Notebook] as a development environment. Although
 
 The two attributes used to extract data for bot detection are:
 
-* Marketing Cloud ID (MCID): This provides a universal, persistent ID that identifies your visitors across all Adobe solutions.
+* Experience Cloud Visitor ID (ECID, also known as MCID): This provides a universal, persistent ID that identifies your visitors across all Adobe solutions.
 * Timestamp: This provides the time and date in UTC format when an activity occurred on the website.  
+
+>[!NOTE]
+>
+>The use of `mcid` is still found in namespace references to the Experience Cloud Visitor ID as seen in the example below.
 
 The following SQL statement provides an initial example to identify bot activity. The statement assumes that if a visitor performs 50 clicks within one minute, then the user is a bot.
 
@@ -39,7 +43,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
                                            HAVING Count(*) > 50);  
 ```
 
-The expression filters the MCIDs of all visitors that meet the threshold but does not address spikes in traffic from other intervals. 
+The expression filters the ECIDs (`mcid`) of all visitors that meet the threshold but does not address spikes in traffic from other intervals. 
 
 ## Improve bot detection with machine learning
 
@@ -47,7 +51,7 @@ The initial SQL statement can be refined to become a feature extraction query fo
 
 The example statement is expanded from one minute with up to 60 clicks, to include five minute and 30 minutes periods with click counts of 300, and 1800 respectively.
 
-The example statement collects the maximum number of clicks for each MCID over the various durations. The initial statement has been expanded to include one minute (60 seconds), 5 minutes (300 seconds), and one hour (i.e. 1800 seconds) periods.
+The example statement collects the maximum number of clicks for each ECID (`mcid`) over the various durations. The initial statement has been expanded to include one minute (60 seconds), 5 minutes (300 seconds), and one hour (i.e. 1800 seconds) periods.
 
 ```sql
 SELECT table_count_1_min.mcid AS id, 
@@ -159,6 +163,6 @@ The example model determined with a high degree of accuracy that any visitors wi
 
 ## Next steps
 
-By reading this document you have a better understanding of how to use [!DNL Query Service] and machine learning to determine and filter bot activity. 
+By reading this document, you have a better understanding of how to use [!DNL Query Service] and machine learning to determine and filter bot activity. 
 
-Other documents that demonstrate the benefits of [!DNL Query Service] to your organization’s strategic business insights are the [abandoned browse use case](./abandoned-browse.md) example.
+Other documents that demonstrate the benefits of [!DNL Query Service] to your organization's strategic business insights are the [abandoned browse use case](./abandoned-browse.md) example.

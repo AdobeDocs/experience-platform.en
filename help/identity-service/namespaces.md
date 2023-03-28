@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces;namespaces;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
 solution: Experience Platform
 title: Identity Namespace Overview
-topic-legacy: overview
 description: Identity namespaces are a component of Identity Service that serve as indicators of the context to which an identity relates. For example, they distinguish a value of "name@email.com" as an email address or "443522" as a numeric CRM ID.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 ---
@@ -14,13 +13,13 @@ Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that
 
 Working with identity namespaces requires an understanding of the various Adobe Experience Platform services involved. Before beginning to work with namespaces, please review the documentation for the following services:
 
-- [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
+- [[!DNL Real-Time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
 - [[!DNL Identity Service]](./home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
-- [[!DNL Privacy Service]](../privacy-service/home.md): Identity namespaces are used to comply with General Data Protection Regulation (GDPR), where GDPR requests can be made relative to a namespace. 
+- [[!DNL Privacy Service]](../privacy-service/home.md): Identity namespaces are used in compliance requests for legal privacy regulations like the General Data Protection Regulation (GDPR). Each privacy request is made relative to a namespace in order to identify which consumers' data should be affected.
 
 ## Understanding identity namespaces
 
-A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments, as when [!DNL Real-time Customer Profile] merges profile data, both the identity value and the namespace must match.
+A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments, as when [!DNL Real-Time Customer Profile] merges profile data, both the identity value and the namespace must match.
 
 For example, two profile fragments may contain different primary IDs but they share the same value for the "Email" namespace, therefore [!DNL Platform] is able to see that these fragments are actually the same individual and and brings the data together in the identity graph for the individual.
 
@@ -73,7 +72,12 @@ The following standard namespaces are provided for use by all organizations with
 | TNTID | A namespace that represents Adobe Target. See the following document on [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) fore more information. |
 | Windows AID | A namespace that represents a Windows Advertising ID. See the following document on [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) for more information. |
 
-### View identity namespaces
+### View identity namespaces {#view-identity-namespaces}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_view_integration_identities"
+>title="View integration identities"
+>abstract="Integration identities are namespaces that are used to connect with other systems and are not used in identity resolution or to stitch identities. <br> These identities are hidden by default. Use the toggle to view integration namespaces."
 
 To view identity namespaces in the UI, select **[!UICONTROL Identities]** in the left navigation and then select **[!UICONTROL Browse]**.
 

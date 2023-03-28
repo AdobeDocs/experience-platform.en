@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
 title: Profiles Dashboard Guide
-description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's Real-time Customer Profile data.
+description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's Real-Time Customer Profile data.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 ---
 # [!UICONTROL Profiles] dashboard
 
-The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your [!DNL Real-time Customer Profile] data, as captured during a daily snapshot. This guide outlines how to access and work with the [!UICONTROL Profiles] dashboard in the UI and provides information regarding the metrics displayed in the dashboard.  
+The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your [!DNL Real-Time Customer Profile] data, as captured during a daily snapshot. This guide outlines how to access and work with the Profiles dashboard in the UI and provides information regarding the metrics displayed in the dashboard.  
 
-For an overview of all of the Profile features within the Experience Platform user interface, please visit the [Real-time Customer Profile UI guide](../../profile/ui/user-guide.md).
+For an overview of all of the Profile features within the Experience Platform user interface, please refer to the [Real-Time Customer Profile UI guide](../../profile/ui/user-guide.md).
 
 ## Profile dashboard data
 
-The [!UICONTROL Profiles] dashboard displays a snapshot of the attribute (record) data that your organization has within the Profile Store in Experience Platform. The snapshot does not include any event (time series) data. 
+The Profiles dashboard displays a snapshot of the attribute (record) data that your organization has within the Profile Store in Experience Platform. The snapshot does not include any event (time series) data. 
 
 The attribute data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the Profile dashboard is not updating in real-time.
 
@@ -21,23 +21,31 @@ The attribute data in the snapshot shows the data exactly as it appears at the s
 >
 >Any changes or updates made to the data since the snapshot was taken will not be reflected in the dashboard until the next snapshot is taken.
 
-## Exploring the [!UICONTROL Profiles] dashboard
+## Exploring the Profiles dashboard
 
-To navigate to the [!UICONTROL Profiles] dashboard within the Platform UI, select **[!UICONTROL Profiles]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
+To navigate to the Profiles dashboard within the Platform UI, select **[!UICONTROL Profiles]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
 
 >[!NOTE]
 >
->If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the [!UICONTROL Profiles] dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with Real-time Customer Profile.
+>If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the Profiles dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with Real-Time Customer Profile.
 
-![](../images/profiles/dashboard-overview.png)
+![The Experience Platform Profiles dashboard with Profiles and Overview highlighted.](../images/profiles/dashboard-overview.png)
 
-### Modifying the [!UICONTROL Profiles] dashboard
+### Modifying the Profiles dashboard
 
-You can modify the appearance of the [!UICONTROL Profiles] dashboard by selecting **[!UICONTROL Modify dashboard]**. This enables you to move, add, and remove widgets from the dashboard as well as to access the **[!UICONTROL Widget library]** to explore available widgets and create custom widgets for your organization. 
+You can modify the appearance of the Profiles dashboard by selecting **[!UICONTROL Modify dashboard]**. This enables you to move, add, and remove widgets from the dashboard, as well as to access the **[!UICONTROL Widget library]** to explore available widgets, and create custom widgets for your organization. 
 
 Please refer to the [modifying dashboards](../customize/modify.md) and [Widget library overview](../customize/widget-library.md) documentation to learn more.
 
-## (Beta) Profile efficacy insights {#profile-efficacy-insights}
+### Add widgets {#add-widget}
+
+Select **[!UICONTROL Add widget]** to navigate to the widget library and see a list of the available widgets to add to your dashboard.
+
+![The Profiles dashboard overview with add widget highlighted.](../images/profiles/profiles-overview-add-widget.png)
+
+From the widget library you can browse the selection of standard and custom segment widgets.For information on how to add widgets, please see the widget library documentation on how to [add a widget](../customize/widget-library.md#add-widgets).
+
+<!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
 >[!IMPORTANT]
 >
@@ -49,27 +57,27 @@ The [!UICONTROL Efficacy] tab provides metrics on the quality and completeness o
 
 See the [profile efficacy widgets section](#profile-efficacy-widgets) for more information on the widgets currently available.
 
-The layout of this dashboard is also customizable by selecting [**[!UICONTROL Modify dashboard]**](../customize/modify.md) from the [!UICONTROL Overview] tab.
+The layout of this dashboard is also customizable by selecting [**[!UICONTROL Modify dashboard]**](../customize/modify.md) from the [!UICONTROL Overview] tab. -->
 
 ## Browse profiles {#browse-profiles}
 
 The [!UICONTROL Browse] tab allows you to search and view the read-only profiles ingested into your organization. From here you can see important information belonging to the profile regarding their preferences, past events, interactions, and segments 
 
-To learn more about the profile viewing capabilities provided in the Platform UI please see the documentation on [browsing profiles in Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+To learn more about the profile viewing capabilities provided in the Platform UI please see the documentation on [browsing profiles in Adobe Real-Time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
 ## Merge policies {#merge-policies}
 
-The metrics displayed in the [!UICONTROL Profiles] dashboard is based on merge policies being applied to your Real-time Customer Profile data. When data is brought together from multiple sources to create the customer profile, the data can contain conflicting values. For example, one dataset may list a customer as "single" while another dataset may list the customer as "married". It is the job of the merge policy to determine which data to prioritize and display as part of the profile.
+The metrics displayed in the Profiles dashboard is based on merge policies being applied to your Real-Time Customer Profile data. When data is brought together from multiple sources to create the customer profile, the data can contain conflicting values. For example, one dataset may list a customer as "single" while another dataset may list the customer as "married". It is the job of the merge policy to determine which data to prioritize and display as part of the profile.
 
-For more information on merge policies, including how to create, edit, and declare a default merge policy for your organization, please begin by reading the [merge policies overview](../../profile/merge-policies/overview.md).
+For more information on merge policies, including how to create, edit, and declare a default merge policy for your organization, refer to the [merge policies overview](../../profile/merge-policies/overview.md).
 
 The dashboard will automatically select a merge policy to use. The applied merge policy can be changed using the dropdown menu next to the merge policy name.
 
 >[!NOTE]
 >
->The dropdown menu shows only merge policies related to the XDM Individual Profile Class. However, if your organization has created multiple merge policies, it may mean that you will need to scroll in order to view the complete list of available merge policies.
+>The dropdown menu shows only merge policies that use the `_xdm.context.profile` schema. However, if your organization has created multiple merge policies, it may mean that you need to scroll in order to view the complete list of available merge policies.
 
-![](../images/profiles/select-merge-policy.png)
+![The Profiles overview tab with the merge policy dropdown highlighted.](../images/profiles/select-merge-policy.png)
 
 ## Union schemas
 
@@ -103,12 +111,13 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Single identity profiles]](#single-identity-profiles)
 * [[!UICONTROL Single identity profiles by identity]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Unsegmented profiles]](#unsegmented-profiles)
-* [[!UICONTROL Unsegmented profiles trend]](#unsegmented-profiles-trend)
+* [[!UICONTROL Unsegmented profiles change trend]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL Unsegmented profiles by identity]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL Audiences]](#audiences)
 * [[!UICONTROL Audiences mapped to destination status]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Audiences size]](#audiences-size)
 * [[!UICONTROL Audience overlap by merge policy]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL Audience overlap report]](#audience-overlap-report)
 
 ### [!UICONTROL Profile count] {#profile-count}
 
@@ -125,9 +134,9 @@ See the [section on merge policies earlier in this document](#merge-policies) to
 >
 >The [!UICONTROL Profile count] widget may show a different number than the profile count shown on the [!UICONTROL Browse] tab in the [!UICONTROL Profiles] section of the UI for multiple reasons. The most common reason for this is because the [!UICONTROL Browse] tab references the total number of merged profiles based on your organization's default merge policy, while the [!UICONTROL Profile count] widget references the total number of merged profiles based on the merge policy that you have selected to view in the dashboard. 
 >
->Another common reason is due to the differences between the time when the dashboard snapshot is taken and the time when the sample job is run for the [!UICONTROL Browse] tab. You can see when the [!UICONTROL Profile count] widget was last updated by looking at the timestamp on the widget, and to learn more about how the sample job is triggered on the [!UICONTROL Browse] tab, see the [profile count section in the Real-time Customer Profile UI guide](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
+>Another common reason is due to the differences between the time when the dashboard snapshot is taken and the time when the sample job is run for the [!UICONTROL Browse] tab. You can see when the [!UICONTROL Profile count] widget was last updated by looking at the timestamp on the widget. To learn more about how the sample job is triggered on the [!UICONTROL Browse] tab, see the [profile count section in the Real-Time Customer Profile UI guide](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
-![](../images/profiles/profile-count.png)
+![The Experience Platform Profiles dashboard with the Profile count widget highlighted.](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Profile count trend] {#profile-count-trend}
 
@@ -165,9 +174,9 @@ The **[!UICONTROL Profiles count change trend]** widget displays a 'captions' bu
 
 ![The Profile overview tab displaying the Profiles count change trend widget with the captions button highlighted.](../images/profiles/profiles-count-change-trend-captions.png)
 
-A machine learning model automatically generates captions for describing the key trends and important events by analyzing the chart and the data.
+A machine learning model automatically generates captions for describing the key trends and important events by analyzing the chart and the data. Annotations are added to the chart based on the captions. Select a caption to focus on its corresponding annotation.
 
-![The automatic captions dialog for the Profiles count change trend widget.](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+![The automatic captions dialog for the Profiles count change trend widget.](../images/profiles/profiles-added-trends-automatic-captions-dialog-with-annotation.png)
 
 ### [!UICONTROL Profiles count change trend by identity] {#profiles-count-change-trend-by-identity}
 
@@ -211,11 +220,11 @@ The **[!UICONTROL Identity overlap]** widget uses a Venn diagram, or set diagram
 
 Use the widget dropdown menus to select the identities that you wish to compare. Circles display the relative total count of profiles that contain each identity. The number of profiles containing both identities is represented by the size of the overlap between the circles. If a customer interacts with your brand on more than one channel, multiple identities will be associated with that individual customer, therefore it is likely that your organization will have multiple profiles containing fragments from more than one identity.
 
-For more information on profile fragments, begin by reading the section on [profile fragments vs merged profiles](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) in the Real-time Customer Profile overview.
+For more information on profile fragments, refer to the section on [profile fragments vs merged profiles](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) in the Real-Time Customer Profile overview.
 
 To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 
-![](../images/profiles/identity-overlap.png)
+![The Profiles dashboard overview with the Identity overlap widget highlighted.](../images/profiles/identity-overlap.png)
 
 ### [!UICONTROL Single identity profiles] {#single-identity-profiles}
 
@@ -247,18 +256,24 @@ The [!UICONTROL Unsegmented Profiles] widget provides the total number of all pr
 
 ![The Unsegmented Profiles widget.](../images/profiles/unsegmented-profiles.png)
 
-### [!UICONTROL Unsegmented profiles trend] {#unsegmented-profiles-trend}
+### [!UICONTROL Unsegmented profiles change trend] {#unsegmented-profiles-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Unsegmented profiles trend"
 >abstract="This widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, 90 days, and 12 month periods."
 
-The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected on the y-axis and time on the x-axis.
+The [!UICONTROL Unsegmented profiles change trend] widget uses a line graph to illustrate the number of profiles added since the last daily snapshot that are not attached to any segment. The change-trend of profiles not attached to any segment can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected on the y-axis and time on the x-axis.
 
-![The Unsegmented Profiles Trend widget.](../images/profiles/unsegmented-profiles-trend.png)
+![The Unsegmented profiles change trend widget.](../images/profiles/unsegmented-profiles-change-trend.png)
 
 ### [!UICONTROL Unsegmented profiles by identity] {#unsegmented-profiles-by-identity}
+
+>[!NOTE]
+>
+>The Unsegmented profiles by identity widget has been deprecated as of October 2022 and is no longer available.
+
+<!-- 
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
@@ -267,7 +282,7 @@ The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustr
 
 The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
-![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png)
+![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
 
 ### [!UICONTROL Audiences] {#audiences}
 
@@ -288,12 +303,33 @@ The visualization allows you to monitor the overall health of audiences within A
 
 <!-- ![The Audiences change trend widget.]() -->
 
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+### [!UICONTROL Audience overlap report] {#audience-overlap-report}
 
-<!-- View an ordered list of audiences by highest or lowest overlap percentages by selected merge policy. -->
-<!-- ![The Audiences overlap report widget.]() -->
-<!-- https://jira.corp.adobe.com/browse/PLAT-126851 -->
+This widget tabularizes the audience overlap data from all available segments filtered by merge policy. A list of five audiences ranked from highest to lowest overlap percentages is provided for the merge policy chosen from the dropdown menu at the top of the screen. The two analyzed segments are listed in the [!UICONTROL SEGMENT A NAME] and [!UICONTROL SEGMENT B NAME] columns. The percentage overlap is provided in the third column accurate to twelve decimal places.
+
+The audience overlap report helps you to build new, high-performance segments. Observing high percentage overlaps enables you to suppress audiences and prevent sending the same audience to different destinations. They also help you identify hidden insights that might help with better segmentation. Low percentage overlap helps to locate unique profiles to pursue.
+
+Select **[!UICONTROL View more]** to open a full-screen dialog that contains more audience overlap data.
+
+![The Audience overlap report widget with View more highlighted .](../images/profiles/profiles-audience-overlap-report.png)
+
+The [!UICONTROL Audience overlap report] dialog appears. This dialog can contain up to 50 rows of audience overlap analyses broken down into six columns. Select the settings icon (![The settings icon.](../images/profiles/settings-icon.png)) to remove or add columns from the table.
+
+![The Audience overlap report dialog.](../images/profiles/profiles-audience-overlap-report-dialog.png)
+
+>[!NOTE]
+>
+>Select the **[!UICONTROL Overlapping]** column header to change the ranking of results between highest to lowest or lowest to highest.
+
+To download the entire report in PDF format, select the options menu (**`...`**) followed by **[!UICONTROL Download]**.
+
+![The Audience overlap report dialog with the ellipses and Download option highlighted.](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
+
+Select a row from the report to open a Venn diagram of the overlap analysis. Hover over a section of the Venn diagram to see the profile count in a dialog.
+
+![The Audience overlap report dialog with a Venn diagram and a row highlighted.](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
+
+Select **[!UICONTROL Close]** to return to the [!UICONTROL Profiles] dashboard.
 
 ### [!UICONTROL Audiences mapped to destination status] {#audiences-mapped-to-destination-status}
 
@@ -324,7 +360,7 @@ As the widget displays the visual crossover of segment definitions, you can opti
 ![The Platform UI Profiles dashboard with the merge policy dropdown and the widget segment dropdowns highlighted.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
-## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
+<!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
 
 >[!IMPORTANT]
 >
@@ -390,8 +426,8 @@ The three levels of completeness are:
 * Medium completeness: Profiles have less than 70% and more than 30% of attributes filled. 
 * Low completeness: Profiles have less than 30% of attributes filled.
 
-![The profiles completeness trend widget](../images/profiles/profiles-completeness-trend.png)
+![The profiles completeness trend widget](../images/profiles/profiles-completeness-trend.png) -->
 
 ## Next steps
 
-By following this document you should now be able to locate the Profiles dashboard and understand the metrics displayed in the available widgets. To learn more about working with [!DNL Profile] data in the Experience Platform UI, please refer to the [Real-time Customer Profile UI guide](../../profile/ui/user-guide.md).
+By following this document you should now be able to locate the profiles dashboard and understand the metrics displayed in the available widgets. To learn more about working with [!DNL Profile] data in the Experience Platform UI, please refer to the [Real-Time Customer Profile UI guide](../../profile/ui/user-guide.md).

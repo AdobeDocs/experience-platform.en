@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
 title: Create a dataflow for Mailchimp Members using the Flow Service API
-topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to MailChimp Members using the Flow Service API.
 exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
 ---
@@ -24,7 +23,7 @@ A base connection retains information between your source and Platform, includin
 
 ### Create a [!DNL Mailchimp] base connection using basic authentication
 
-To create a [!DNL Mailchimp] base connection using basic authentication, make a POST request to the `/connections` endpoint of [!DNL Flow Service] API while providing credentials for your `host`, `authorizationTestUrl`, `username`, and `password`.
+To create a [!DNL Mailchimp] base connection using basic authentication, make a POST request to the `/connections` endpoint of [!DNL Flow Service] API while providing credentials for your `authorizationTestUrl`, `username`, and `password`.
 
 **API format**
 
@@ -54,7 +53,6 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "host": "{HOST}",
               "authorizationTestUrl": "https://login.mailchimp.com/oauth2/metadata",
               "username": "{USERNAME}",
               "password": "{PASSWORD}"
@@ -69,7 +67,6 @@ curl -X POST \
 | `description` | (Optional) A property that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to connect your source to Platform. |
-| `auth.params.host` | The root URL used to connect to [!DNL Mailchimp] API. The format for the root URL is `https://{DC}.api.mailchimp.com`, where `{DC}` represents the data center that corresponds to your account.|
 | `auth.params.authorizationTestUrl` | (Optional) The authorization test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
 | `auth.params.username` | The username that corresponds with your [!DNL Mailchimp] account. This is required for basic authentication. |
 | `auth.params.password` | The password that corresponds with your [!DNL Mailchimp] account. This is required for basic authentication. |
@@ -87,7 +84,7 @@ A successful response returns the newly created base connection, including its u
 
 ### Create a [!DNL Mailchimp] base connection using OAuth 2 refresh code
 
-To create a [!DNL Mailchimp] base connection using OAuth 2 refresh code, make a POST request to the `/connections` endpoint while providing credentials for your `host`, `authorizationTestUrl`, and `accessToken`.
+To create a [!DNL Mailchimp] base connection using OAuth 2 refresh code, make a POST request to the `/connections` endpoint while providing credentials for your `authorizationTestUrl`, and `accessToken`.
 
 **API format**
 
@@ -117,7 +114,6 @@ curl -X POST \
       "auth": {
           "specName": "oAuth2RefreshCode",
           "params": {
-              "host": "{HOST}",
               "authorizationTestUrl": "https://login.mailchimp.com/oauth2/metadata",
               "accessToken": "{ACCESS_TOKEN}"
           }
@@ -131,7 +127,6 @@ curl -X POST \
 | `description` | (Optional) A property that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after registering your source using the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
-| `auth.params.host` | The root URL used to connect to [!DNL Mailchimp] API. The format for the root URL is `https://{DC}.api.mailchimp.com`, where `{DC}` represents the data center that corresponds to your account.|
 | `auth.params.authorizationTestUrl` | (Optional) The authorization test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
 | `auth.params.accessToken` | The corresponding access token used to authenticate your source. This is required for OAuth-based authentication. |
 
@@ -617,311 +612,26 @@ A successful response returns the ID (`id`) of the newly created dataflow. You c
 }
 ```
 
-## Monitor your dataflow
+## Appendix 
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors.
+The following section provides information on the steps you can to monitor, update, and delete your dataflow.
 
-**API format**
+### Monitor your dataflow
 
-```http
-GET /runs?property=flowId=={FLOW_ID}
-```
+Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For complete API examples, read the guide on [monitoring your sources dataflows using the API](../../monitor.md).
 
-**Request**
+### Update your dataflow
 
-The following request retrieves the specifications for an existing dataflow.
+Update the details of your dataflow, such as its name and description, as well as its run schedule and associated mapping sets by making a PATCH request to the `/flows` endpoint of [!DNL Flow Service] API, while providing the ID of your dataflow. When making a PATCH request, you must provide your dataflow's unique `etag` in the `If-Match` header. For complete API examples, read the guide on [updating sources dataflows using the API](../../update-dataflows.md).
 
-```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
+### Update your account
 
-**Response**
+Update the name, description, and credentials of your source account by performing a PATCH request to the [!DNL Flow Service] API while providing your base connection ID as a query parameter. When making a PATCH request, you must provide your source account's unique `etag` in the `If-Match` header. For complete API examples, read the guide on [updating your source account using the API](../../update.md).
 
-A successful response returns details regarding your flow run, including information about its creation date, source and target connections, as well as the flow run's unique identifier (`id`).
+### Delete your dataflow
 
-```json
-{
-    "items": [
-        {
-            "id": "209812ad-7bef-430c-b5b2-a648aae72094",
-            "createdAt": 1633044829955,
-            "updatedAt": 1633044838006,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT}",
-            "sandboxId": "{SANDBOX_ID}",
-            "sandboxName": "{SANDBOX_NAME}",
-            "imsOrgId": "{ORG_ID}",
-            "name": "MailChimp Members dataflow",
-            "description": "MailChimp Members dataflow",
-            "flowSpec": {
-                "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
-                "version": "1.0"
-            },
-            "state": "enabled",
-            "version": "\"2e01f11d-0000-0200-0000-615649660000\"",
-            "etag": "\"2e01f11d-0000-0200-0000-615649660000\"",
-            "sourceConnectionIds": [
-                "e70d2773-711f-43ee-b956-9a1a5da03dd8"
-            ],
-            "targetConnectionIds": [
-                "43e141f6-6385-4d80-a4e4-c0fb59abbd43"
-            ],
-            "inheritedAttributes": {
-                "sourceConnections": [
-                    {
-                        "id": "e70d2773-711f-43ee-b956-9a1a5da03dd8",
-                        "connectionSpec": {
-                            "id": "2e8580db-6489-4726-96de-e33f5f60295f",
-                            "version": "1.0"
-                        },
-                        "baseConnection": {
-                            "id": "05c595e5-edc3-45c8-90bb-fcf556b57c4b",
-                            "connectionSpec": {
-                                "id": "2e8580db-6489-4726-96de-e33f5f60295f",
-                                "version": "1.0"
-                            }
-                        }
-                    }
-                ],
-                "targetConnections": [
-                    {
-                        "id": "43e141f6-6385-4d80-a4e4-c0fb59abbd43",
-                        "connectionSpec": {
-                            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
-                            "version": "1.0"
-                        }
-                    }
-                ]
-            },
-            "scheduleParams": {
-                "startTime": "1633044818",
-                "frequency": "minute",
-                "interval": 15
-            },
-            "transformations": [
-                {
-                    "name": "Mapping",
-                    "params": {
-                        "mappingId": "5a365b23962d4653b9d9be25832ee5b4",
-                        "mappingVersion": 0
-                    }
-                }
-            ],
-            "runs": "/flows/209812ad-7bef-430c-b5b2-a648aae72094/runs",
-            "lastOperation": {
-                "started": 1633044829988,
-                "updated": 0,
-                "operation": "create"
-            }
-        }
-    ]
-}
-```
+Delete your dataflow by performing a DELETE request to the [!DNL Flow Service] API while providing the ID of the dataflow you want to delete as part of the query parameter. For complete API examples, read the guide on [deleting your dataflows using the API](../../delete-dataflows.md).
 
-| Property | Description |
-| -------- | ----------- |
-| `items` | Contains a single payload of metadata associated with your specific flow run. |
-| `id` | Displays the ID corresponding with your dataflow. |
-| `state` | Displays the current state of your dataflow. |
-| `inheritedAttributes` | Contains the attributes that define your flow, such as IDs for its corresponding base, source, and target connection. |
-| `scheduleParams` | Contains information on the ingestion schedule of your dataflow, such as its start time (in epoch time), frequency, and interval. |
-| `transformations` | Contains information on the transformation properties applied to your dataflow. |
-| `runs` | Displays your flow's corresponding run ID. You can use this ID to monitor specific flow runs. |
+### Delete your account
 
-## Update your dataflow
-
-To update your dataflow's run schedule, name, and description, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the new schedule you want to use.
-
->[!IMPORTANT]
->
->The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the connection you want to update.
-
-**API format**
-
-```http
-PATCH /flows/{FLOW_ID}
-```
-
-**Request**
-
-The following request updates your flow run schedule, as well as your dataflow's name and description.
-
-```shell
-curl -X PATCH \
-  'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-  -H 'If-Match: "2e01f11d-0000-0200-0000-615649660000"' \
-  -d '[
-          {
-              "op": "replace",
-              "path": "/scheduleParams/frequency",
-              "value": "day"
-          },
-          {
-              "op": "replace",
-              "path": "/name",
-              "value": "MailChimp Members Dataflow 2.0"
-          },
-          {
-              "op": "replace",
-              "path": "/description",
-              "value": "MailChimp Members Dataflow Updated"
-          }
-      ]'
-```
-
-| Parameter | Description |
-| --------- | ----------- |
-| `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. |
-| `path` | The path of the parameter to be updated. |
-| `value` | The new value you want to update your parameter with. |
-
-**Response**
-
-A successful response returns your flow ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your flow ID.
-
-```json
-{
-    "id": "209812ad-7bef-430c-b5b2-a648aae72094",
-    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
-}
-```
-
-## Delete your dataflow
-
-With an existing flow ID, you can delete a dataflow by performing a DELETE request to the [!DNL Flow Service] API.
-
-**API format**
-
-```http
-DELETE /flows/{FLOW_ID}
-```
-
-| Parameter | Description |
-| --------- | ----------- |
-| `{FLOW_ID}` | The unique `id` value for the dataflow you want to delete. |
-
-**Request**
-
-```shell
-curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns HTTP status 204 (No Content) and a blank body. You can confirm the deletion by attempting a lookup (GET) request to the dataflow. The API will return an HTTP 404 (Not Found) error, indicating that the dataflow has been deleted.
-
-## Update your connection
-
-To update your connection's name, description, and credentials, perform a PATCH request to the [!DNL Flow Service] API while providing your base connection ID, version, and the new information you want to use.
-
->[!IMPORTANT]
->
->The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the connection you want to update.
-
-**API format**
-
-```http
-PATCH /connections/{BASE_CONNECTION_ID}
-```
-
-| Parameter | Description |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | The unique `id` value for the connection you want to update. |
-
-**Request**
-
-The following request provides a new name and description, as well as a new set of credentials, to update your connection with.
-
-```shell
-curl -X PATCH \
-  'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-  -H 'If-Match: 4000cff7-0000-0200-0000-6154bad60000' \
-  -d '[
-      {
-          "op": "replace",
-          "path": "/auth/params",
-          "value": {
-              "username": "mailchimp-member-activity-user",
-              "password": "{NEW_PASSWORD}"
-          }
-      },
-      {
-          "op": "replace",
-          "path": "/name",
-          "value": "MailChimp Members Connection 2.0"
-      },
-      {
-          "op": "add",
-          "path": "/description",
-          "value": "Updated MailChimp Members Connection"
-      }
-  ]'
-```
-
-| Parameter | Description |
-| --------- | ----------- |
-| `op` | The operation call used to define the action needed to update the connection. Operations include: `add`, `replace`, and `remove`. |
-| `path` | The path of the parameter to be updated. |
-| `value` | The new value you want to update your parameter with. |
-
-**Response**
-
-A successful response returns your base connection ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your connection ID.
-
-```json
-{
-    "id": "4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa",
-    "etag": "\"3600e378-0000-0200-0000-5f40212f0000\""
-}
-```
-
-## Delete your connection
-
-Once you have an existing base connection ID, perform a DELETE request to the [!DNL Flow Service] API.
-
-**API format**
-
-```http
-DELETE /connections/{CONNECTION_ID}
-```
-
-| Parameter | Description |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | The unique `id` value for the base connection you want to delete. |
-
-**Request**
-
-```shell
-curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns HTTP status 204 (No Content) and a blank body.
-
-You can confirm the deletion by attempting a lookup (GET) request to the connection.
+Delete your account by performing a DELETE request to the [!DNL Flow Service] API while providing the base connection ID of the account you want to delete. For complete API examples, read the guide on [deleting your source account using the API](../../delete.md).

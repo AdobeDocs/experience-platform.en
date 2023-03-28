@@ -11,7 +11,7 @@ exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
 
 An extension package represents an [extension](./extensions.md) as authored by an extension developer. An extension package defines additional capabilities that can be made available to tag users. Most commonly these capabilities come in the form of [rule components](./rule-components.md) (events, conditions, and actions) and [data elements](./data-elements.md), but can also include main modules and shared modules.
 
-Extension packages are displayed in the extension catalog within the Data Collection UI for users to install. Adding an extension package to a property is accomplished by creating an extension with a link to the extension package.
+Extension packages are displayed in the extension catalog within the Data Collection UI and Adobe Experience Platform UI for users to install. Adding an extension package to a property is accomplished by creating an extension with a link to the extension package.
 
 An extension package belongs to the [company](./companies.md) of the developer who created it.
 
@@ -938,7 +938,7 @@ A successful response return the details of the updated extension package.
 
 Once you have completed testing your extension package you can release it privately. This makes it available to any property within your company.
 
-After you have released privately, you can begin the public release process by filling out the [public release request form](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U).
+After you have released privately, you can begin the public release process by filling out the [public release request form](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest).
 
 **API format**
 

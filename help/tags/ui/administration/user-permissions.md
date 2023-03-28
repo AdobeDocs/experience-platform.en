@@ -36,7 +36,7 @@ By default, product profiles grant access to all properties that exist within yo
 
 ### Property rights {#property-rights}
 
-Any property that you create in the Data Collection UI becomes available in Admin Console, allowing you to group the property with specific property rights in the same product profile.
+Any tag property that you create in the UI becomes available in Admin Console, allowing you to group the property with specific property rights in the same product profile.
 
 For example, if a given product profile does not have access to Property A1, users who belong to that profile cannot see or modify any settings within Property A1.
 
@@ -46,7 +46,7 @@ The following table outlines the available property rights and the functionaliti
 
 | Property right | Description |
 | --- | --- |
-| **Develop** | This allows you to perform the following actions:<ul><li>Create rules and data elements</li><li>Create libraries and build them in existing development environments</li><li>Submit a library for approval</li></ul>Most day-to-day tasks in the Data Collection UI require this right. |
+| **Develop** | This allows you to perform the following actions:<ul><li>Create rules and data elements</li><li>Create libraries and build them in existing development environments</li><li>Submit a library for approval</li></ul>Most day-to-day tasks in the UI require this right. |
 | **Approve** | This allows you to take a submitted library and build to the staging environment. You can also approve a library for publishing once testing has been completed. |
 | **Publish** | This allows you to publish approved libraries to the production environment. |
 | **Manage Extensions** | This allows you to perform the following actions: <ul><li>Install new extensions to a property</li><li>Modify the configuration for an already installed extension</li><li>Delete an extension</li></ul>See the extensions overview documentation for [more information on extensions](../managing-resources/extensions/overview.md). This role typically belongs to IT or Marketing, depending on your organization. |
@@ -62,7 +62,7 @@ Company rights apply to permissions that span multiple properties.  These are ou
 | --- | --- |
 | **Manage Properties** | This allows you to perform the following actions:<ul><li>Create new properties</li><li>Modify metadata and settings at the property level</li><li>Delete properties</li></ul>Administrators usually perform this role. See the [properties documentation](companies-and-properties.md) for more information. |
 | **Develop Extensions** | Grants the ability to create and modify extension packages that are owned by the company, including private releases and requests for public release. |
-| **Manage App Configurations** | This is only available to if you have a licence for Adobe Journey Optimizer or another solution that grants access to mobile in-app and push messaging.  This allows you to manage the apps that Experience Cloud knows about along with the necessary push credentials needed to communicate with the Firebase Cloud Messaging service and the Apple Push Notification Service. |
+| **Manage App Configurations** | This is only available to if you have a license for Adobe Journey Optimizer or another solution that grants access to mobile in-app and push messaging.  This allows you to manage the apps that Experience Cloud knows about along with the necessary push credentials needed to communicate with the Firebase Cloud Messaging service and the Apple Push Notification Service. |
 
 {style="table-layout:auto"}
 

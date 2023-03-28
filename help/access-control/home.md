@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;adobe admin console
 solution: Experience Platform
-topic-legacy: overview
 title: Access control overview
 description: Access control for Adobe Experience Platform is provided through the Adobe Admin Console. This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
@@ -74,6 +73,12 @@ The following table outlines the available permissions for [!DNL Experience Plat
 
 | Category | Permission | Description |
 | --- | --- | --- |
+| [!DNL Alerts] | [!UICONTROL View Alerts History] | Read-only access for alerts history. |
+| [!DNL Alerts] | [!UICONTROL Resolve Alerts] | Access to read, edit, and delete alerts. |
+| [!DNL Alerts] | [!UICONTROL View Alerts] | Read-only access for alerts. |
+| [!DNL Alerts] | [!UICONTROL Manage Alerts] | Access to read, create, edit, and delete alerts history. |
+| [!DNL Data Hygiene] | [!UICONTROL View Data Hygiene] | Read-only access for data hygiene.|
+| [!DNL Data Hygiene] | [!UICONTROL Manage Data Hygiene] | Access to read, create, edit, and delete data hygiene. |
 | [!DNL Data Modeling] | [!UICONTROL Manage Schemas] | Access to read, create, edit, and delete schemas and related resources. |
 | [!DNL Data Modeling] | [!UICONTROL View Schemas] | Read-only access to schemas and related resources. |
 | [!DNL Data Modeling] | [!UICONTROL Manage Relationships] | Access to read, create, edit, and delete schema relationships. |
@@ -89,15 +94,16 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Profile Management] | [!UICONTROL View Merge Policies] | Read-only access to available merge policies. |
 | [!DNL Profile Management] | [!UICONTROL Export Audience for Segment] | Ability to export an evaluated audience segment to a dataset. |
 | [!DNL Profile Management] | [!UICONTROL Evaluate a Segment to an Audience] | Ability to generate profiles for an audience by evaluating a segment definition.. |
-| [!DNL Identities] | [!UICONTROL Manage Identity Namespaces] | Access to read, create, edit, and delete identity namespaces. |
-| [!DNL Identities] | [!UICONTROL View Identity Namespaces] | Read-only access for identity namespaces. |
-| [!DNL Identities] | [!UICONTROL View Identity Graph] | Read-only access for identity graphs. |
+| [!DNL Identity Management] | [!UICONTROL Manage Identity Namespaces] | Access to read, create, edit, and delete identity namespaces. |
+| [!DNL Identity Management] | [!UICONTROL View Identity Namespaces] | Read-only access for identity namespaces. |
+| [!DNL Identity Management] | [!UICONTROL View Identity Graph] | Read-only access for identity graphs. |
 | [!DNL Sandbox Administration] | [!UICONTROL Manage Sandboxes] | Access to read, create, edit, and delete sandboxes. |
 | [!DNL Sandbox Administration] | [!UICONTROL View Sandboxes] | Read-only access for sandboxes belonging to your organization. |
 | [!DNL Sandbox Administration] | [!UICONTROL Reset a Sandbox] | Ability to reset a sandbox. |
 | [!DNL Destinations] | [!UICONTROL Manage Destinations] | Access to read, create, edit, and disable destinations. |
 | [!DNL Destinations] | [!UICONTROL View Destinations] | Read-only access to available destinations in the **[!UICONTROL Catalog]** tab and authenticated destinations in the **[!UICONTROL Browse]** tab. |
-| [!DNL Destinations] | [!UICONTROL Activate Destinations] | Ability to activate data to active destinations that have been created. This permission requires either “View Destinations” or “Manage [!UICONTROL Destinations”] to be granted to the user who will activate destinations. |
+| [!DNL Destinations] | [!UICONTROL Activate Destinations] | Ability to activate data to active destinations that have been created. This permission requires either [!UICONTROL View Destinations] or [!UICONTROL Manage Destinations] to be granted to the user who will activate destinations. |
+| [!DNL Destinations] | [!UICONTROL Manage and Activate Dataset Destinations] | Ability to read, create, edit, and disable dataset export flows. Ability to also activate data to active datasets that have been created. |
 | [!DNL Destinations] | [!UICONTROL Destination Authoring] | Ability to author destinations using [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Access to read, create, edit, and disable sources. |
 | [!DNL Data Ingestion] | [!UICONTROL View Sources] | Read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab. |

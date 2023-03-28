@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;ABAC
-title: Attribute-based Access Control Create a Policy
-description: This document provides information on managing policies through the Permissions interface in Adobe Experience Cloud
+title: Manage Access Control Policies
+description: This document provides information on managing access control policies through the Permissions interface in Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
 ---
-# Manage policies
+# Manage access control policies
+
+Access control policies are statements that bring attributes together to establish permissible and impermissible actions. Access policies can either be local or global, and can override other policies. Adobe provides a default policy that can be activated immediately or whenever your organization is ready to start controlling access to specific objects based on labels. The default policy leverages labels applied to resources to deny access unless users are in a role with a matching label. 
 
 >[!IMPORTANT]
 >
->Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
+>Access policies are not to be confused with data usage policies, which control how data is used in Adobe Experience Platform instead of which users in your organization have access to it. See the guide on creating [data usage policies](../../../data-governance/policies/create.md) for more information.
 
-Policies are statements that bring attributes together to establish permissible and impermissible actions. Policies can either be local or global, and can override other policies.
-
-## Create a new policy
+<!-- ## Create a new policy
 
 To create a new policy, select the **[!UICONTROL Policies]** tab in the sidebar and select **[!UICONTROL Create Policy]**.
 
@@ -42,7 +42,7 @@ Next, using the dropdown select the **Matches**.
 
 ![flac-policy-matches-dropdown](../../images/flac-ui/flac-policy-matches-dropdown.png)
 
-Next, using the dropdown, select the **User**.
+Next, using the dropdown, select the type of label (**[!UICONTROL Core label]** or **[!UICONTROL Custom label]**) to match the label assigned to the User in roles.
 
 ![flac-policy-user-dropdown](../../images/flac-ui/flac-policy-user-dropdown.png)
 
@@ -108,26 +108,27 @@ The **[!UICONTROL Delete user policy]** dialog appears, prompting you to confirm
 
 You are returned to the **[!UICONTROL policies]** tab and a confirmation of deletion pop over appears.
 
-![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png)
+![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png) -->
 
 ## Activate a policy
 
-To activate an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to delete.
+To activate an existing policy, select the policy from the **[!UICONTROL Policies]** tab. 
 
-![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
+![flac-policy-select](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
 Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, activate, delete, or duplicate the role. Select activate from the dropdown.
 
-![flac-policy-activate](../../images/flac-ui/flac-policy-delete.png)
+![flac-policy-activate](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-The **[!UICONTROL Activate user policy]** dialog appears, prompting you to confirm the activation. 
+The **[!UICONTROL Activate policy]** dialog appears, prompting you to confirm the activation. 
 
-![flac-policy-activate-confirm](../../images/flac-ui/flac-policy-activate-confirm.png)
+![flac-policy-activate-confirm](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
+
 
 You are returned to the **[!UICONTROL policies]** tab and a confirmation of activation pop over appears. The policy status shows as active.
 
-![flac-policy-activated](../../images/flac-ui/flac-policy-activated.png)
+![flac-policy-activated](../../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
 ## Next steps
 
-With a new policy created, you can proceed to the next step to [manage permissions for a role](permissions.md).
+With a policy activated, you can proceed to the next step to [manage permissions for a role](permissions.md).

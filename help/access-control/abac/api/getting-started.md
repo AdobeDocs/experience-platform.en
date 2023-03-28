@@ -1,16 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;Attribute-Based Access Control;attribute-based access control
-title: Getting Started with the Attribute-Based Access Control
-description: The Attribute-Based Access Control allows you to programmatically manage roles and policies within Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
+title: Getting Started with the Attribute-Based Access Control API
+description: The Attribute-Based Access Control API allows you to programmatically manage roles and access policies within Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
 ---
-# Getting started with the attribute-based access control
+# Getting started with the attribute-based access control API
 
->[!IMPORTANT]
->
->Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
-
-This developer guide provides steps to help you use the attribute-based access control to manage roles, products, permission categories, and permission sets in Adobe Experience Platform, and includes sample API calls for performing various operations.
+This developer guide provides steps to help you use the attribute-based access control API to manage roles, products, permission categories, and permission sets in Adobe Experience Platform, and includes sample API calls for performing various operations.
 
 ## Reading sample API calls
 

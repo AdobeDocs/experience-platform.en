@@ -45,7 +45,7 @@ In the example provided, if a data element exists with a matching name, the data
 
 >[!NOTE]
 >
->You can use percent (`%`) syntax to reference variables for many form fields in the Data Collection UI, reducing the need to call `_satellite.getVar()`. For example, using `%product%` will access the value of the product data element or custom variable.
+>You can use percent (`%`) syntax to reference variables for many form fields in your tag implementation, reducing the need to call `_satellite.getVar()`. For example, using `%product%` will access the value of the product data element or custom variable.
 
 When an event triggers a rule, you can pass the rule's corresponding `event` object into `_satellite.getVar()` like so:
 
@@ -150,7 +150,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->In the old [`setCookie`](#setCookie) method of setting cookies, the third (optional) argument to this function call was an integer that indicated the cookie's time-to-live (TTL) in days. In this new method, an "attributes" object is accepted as a third argument instead. In order to set a TTL for a cookie using the new method, you must provide an `expires` property in the attributes object and set it to the desired value. This is demonstrated in the example below.
+>In the old [`setCookie`](#setCookie) method of setting cookies, the third (optional) argument to this function call was an integer that indicated the cookie's expiration time in days. In this new method, an "attributes" object is accepted as a third argument instead. In order to set an expiration for a cookie using the new method, you must provide an `expires` property in the attributes object and set it to the desired value. This is demonstrated in the example below.
 
 **Example**
 

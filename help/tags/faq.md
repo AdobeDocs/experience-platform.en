@@ -39,6 +39,8 @@ Tags have opened its virtually self-service portal, which extension developers c
 
 We have many customers who also choose to build their own private extensions for use only within their own companies using the same extension development methods.
 
+To develop an extension, check out the [Extension Development Overview](./extension-dev/overview.md) page.
+
 ## Do tags meet my company's security standards?
 
 Tags are SOC-2 and Gramm-Leach-Bliley Act ready. Tags also offer the capability of being self-hosted. JavaScript libraries and mobile configurations can be served from your own servers or the CDN of your choice. For I.T. and security teams, this gives you the ability to run automated testing, to check the files into your own version control system, and to fully comply with any internal production migration processes, security-related or otherwise.
@@ -65,22 +67,7 @@ Tags are designed to deliver and run marketing and advertising technologies on y
 
 ## Which browsers do tags support?
 
-Browser support for tags:
-
-- [!DNL Chrome] (latest)
-- [!DNL Safari] (latest)
-- [!DNL Firefox] (latest)
-- [!DNL Microsoft Edge] (latest)
-- [!DNL Internet Explorer] (10 and above)
-- [!DNL iOS Safari] (latest)
-- [!DNL Android Chrome] (latest)
-
-Browser support for the tags application interface:
-
-- [!DNL Chrome] (latest)
-- [!DNL Safari] (latest)
-- [!DNL Firefox] (latest)
-- [!DNL Microsoft Edge] (latest)
+See the supported browsers [here](./extension-dev/browsers.md).
 
 Most Adobe clients leverage more modern web platform features in current browsers to create better user experiences, including single-page applications and interactive Ajax-heavy websites and pages. As most clients move to more modern approaches with their sites, they demand a solution like tags that enables those approaches.
 
@@ -90,14 +77,14 @@ Yes! Tags now support mobile properties and configuration for the new Adobe Expe
 
 ## Why is the UI saying there was an error loading my account?
 
-If you receive a message saying that there was an error loading your account, it means that your account does not belong to any product profiles for tags. See the guide on [managing permissions](../collection/permissions.md) to learn how to configure a product profile in Adobe Admin Console to grant access to the Data Collection UI.
+If you receive a message saying that there was an error loading your account, it means that your account does not belong to any product profiles for tags. See the guide on [managing permissions](../collection/permissions.md) to learn how to configure a product profile in Adobe Admin Console to grant access to Data Collection features in the UI.
 
 ## Why can't I add any properties in the UI?
 
-If you cannot create any new properties when logged in to the Data Collection UI, it means that your account does not belong to a product profile that has the Manage Properties right.
+If you cannot create any new properties when logged in to the UI, it means that your account does not belong to a product profile that has the Manage Properties right.
 
 See the guide on [managing permissions](../collection/permissions.md) to learn how to configure a product profile in Adobe Admin Console to grant the Manage Properties right. For more information on the different rights for tags, see the overview on [user permissions for tags](./ui/administration/user-permissions.md).
 
 ## What if I have other questions?
 
-If you have other questions, you can ask on the [Adobe Experience Platform Data Collection community page](https://adobe.com/go/launchme) on Experience League, or join the [official Slack group for tag developers](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
+If you have other questions, you can ask on the [Adobe Experience Platform Data Collection community page](https://adobe.com/go/launchme) on Experience League, or join the [community Slack workspace](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) for developers & technical implementation topics.

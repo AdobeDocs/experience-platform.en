@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Salesforce Service Cloud;salesforce service cloud
 solution: Experience Platform
 title: Create a Salesforce Service Cloud Source Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Salesforce Service Cloud using the Flow Service API.
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
@@ -31,7 +30,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Salesforce Service Cloud]
 | `username` | The username for your [!DNL Salesforce Service Cloud] user account. |
 | `password` | The password for your [!DNL Salesforce Service Cloud] account. |
 | `securityToken` | The security token for your [!DNL Salesforce Service Cloud] account. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce Service Cloud] is: `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce Service Cloud] is: `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
 
 For more information about getting started refer to [this Salesforce Service Cloud document](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
 

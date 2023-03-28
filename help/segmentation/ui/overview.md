@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;realized;existing;exiting;
 solution: Experience Platform
 title: Segmentation Service UI Guide
-topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service provides a user interface for creating and managing segment definitions.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 ---
@@ -15,13 +14,13 @@ exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 Working with segment definitions requires an understanding of the various [!DNL Experience Platform] services involved with segmentation. Before reading this user guide, please review the documentation for the following services:
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] allows you to divide data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into smaller groups.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Enables the creation of customer profiles by bridging identities from disparate data sources being ingested into [!DNL Platform].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
 
 It is also important to know two key terms that are used through this document and understand the difference between them:
 - **Segment definition**: The rule set used to describe key characteristics or behaviors of a target audience.
-- **Audience**: The resulting set of profiles that meet the criteria of a segment definition.
+- **Audience**: The resulting set of profiles that meet the criteria of a segment definition. This can either be created through Adobe Experience Platform (Platform-generated audience) or from an external source (externally generated audience).
 
 ## Overview
 
@@ -37,7 +36,7 @@ The **[!UICONTROL Segments]** dashboard outlines key metrics related to your org
 
 To learn more, visit the [segment dashboard guide](../../dashboards/guides/segments.md).
 
-![](../../dashboards/images/segments/dashboard-overview.png)
+![The segment dashboard is displayed. It shows various widgets, including the audience size, profiles by identity, identity overlay, and the audience size change trend.](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Browse {#browse}
 
@@ -51,15 +50,20 @@ To learn more, visit the [segment dashboard guide](../../dashboards/guides/segme
 >title="Evaluation method"
 >abstract="Evaluation methods for segments include batch, streaming, and edge."
 
-Select the **[!UICONTROL Browse]** tab to see a list of all the segment definitions for your IMS Organization. 
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_addallsegmentstoschedule"
+>title="Add all segments to schedule"
+>abstract="Enable to include all batch evaluation segments in the daily scheduled update. Disable to remove all segments from the scheduled update."
 
-![](../images/ui/overview/segment-browse-all.png)
+Select the **[!UICONTROL Browse]** tab to see a list of all the segment definitions for your organization. 
 
-This view lists information about the segment definition including the breakdown, churn, profile count, evaluation method, created date, and last modified date.
+![The segments browse screen is displayed. A list of all the segments belonging to the organization is shown.](../images/ui/overview/segment-browse-all.png)
 
-The breakdown shows a bar graph outlining the percentage of profiles that belong to each of the following statuses: [!UICONTROL Realized], [!UICONTROL Existing], and [!UICONTROL Exiting]. Additionally, the breakdown shown on the [!UICONTROL Browse] tab is the most accurate breakdown of the segment status. If this number differs with what is stated on the [!UICONTROL Overview] tab, you should use the numbers on the [!UICONTROL Browse] tab as the correct source of information, since the [!UICONTROL Overview] tab numbers only update once per day.
+This view lists information about the segment definition including the profile count, created date, and last modified date. 
 
-![](../images/ui/overview/segment-browse-breakdown.png)
+You can add additional fields to this display by selecting ![the filter attribute icon](../images/ui/overview/filter-attribute.png). These additional fields include breakdown, churn, evaluation method, and job ID.
+
+If breakdown is selected, the display shows a bar graph outlining the percentage of profiles that belong to each of the following statuses: [!UICONTROL Realized], [!UICONTROL Existing], and [!UICONTROL Exiting]. Additionally, the breakdown shown on the [!UICONTROL Browse] tab is the most accurate breakdown of the segment status. If this number differs with what is stated on the [!UICONTROL Overview] tab, you should use the numbers on the [!UICONTROL Browse] tab as the correct source of information, since the [!UICONTROL Overview] tab numbers only update once per day.
 
 | Status | Description |
 | ------ | ----------- |
@@ -71,7 +75,7 @@ The churn represents the percentage of profiles that are changing within a segme
 
 The evaluation method can either be streaming, batch, or edge. Streaming segments are constantly evaluated as data enters the system. Batch segments are evaluated according to a set schedule. Edge segments are evaluated in real-time, which allow for same page and next page personalization use cases.
 
-![](../images/ui/overview/segment-browse-segments.png)
+![The segments within the segment browse page are highlighted.](../images/ui/overview/segment-browse-segments.png)
 
 On the top of the page are options to add all segments to a schedule and to create a new segment. 
 
@@ -79,11 +83,11 @@ Toggling **[!UICONTROL Add all segments to schedule]** will enable scheduled seg
 
 Selecting **[!UICONTROL Create segment]** will take you to the Segment Builder. To learn more about creating segments, please read the section on [creating a segment in the user guide](#create-segment).
 
-![](../images/ui/overview/segment-browse-top.png)
+![The top navigation bar on the segment browse page is highlighted. This bar contains a toggle to add all segments to a schedule and a button to create a segment.](../images/ui/overview/segment-browse-top.png)
 
-The right sidebar contains information about all the segments within the IMS organization, listing the total number of segments, the last evaluation date, the next evaluation date, as well as a breakdown of the segments by evaluation method.
+The right sidebar contains information about all the segments within the organization, listing the total number of segments, the last evaluation date, the next evaluation date, as well as a breakdown of the segments by evaluation method.
 
-![](../images/ui/overview/segment-browse-segment-info.png)
+![The right sidebar on the segment browse page is highlighted. Information about the segments in the organization are shown. This includes information such as the total number of segments, the last evaluated time, the next evaluated time, as well as a breakdown of the different segment types.](../images/ui/overview/segment-browse-segment-info.png)
 
 Selecting the segment definition's row provides a summary of the segment definition, including options to either edit or delete the segment, activate the segment to a destination, the qualified audience for the segment, the total audience size, in addition to the segment's name, description, evaluation method, created date, and last modified date.
 
@@ -91,7 +95,7 @@ Selecting the segment definition's row provides a summary of the segment definit
 >
 > You will **not** be able to delete a segment that is used in a destination activation.
 
-![](../images/ui/overview/segment-browse-details.png)
+![Details about the selected segment are shown. This includes details about the number of qualified profiles, the percentage breakdown of qualified compared to total profiles, last evaluation date.](../images/ui/overview/segment-browse-details.png)
 
 ## Segment definition details {#segment-details}
 
@@ -99,15 +103,15 @@ To see more details about a specific segment definition, select a segment's name
 
 The segment details page appears. On the top, there is a summary of the segment definition, information about the qualified audience size, as well as destinations the segment is activated for. 
 
-![](../images/ui/overview/segment-details-summary.png)
+![The segment definition details page is displayed. The segment  summary, total audience in segment, and activated destinations cards are highlighted.](../images/ui/overview/segment-details-summary.png)
 
-### Segment summary
+### Segment summary {#segment-summary}
 
 The **[!UICONTROL Segment summary]** section provides information such as the ID, name, description, and details of the attributes. 
 
 Additionally, you are given the option to either activate the segment to a destination or edit the segment. Selecting **[!UICONTROL Activate to destination]** will let you activate the segment to a destination. For more detailed information on activating a segment to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md).
 
-![](../images/ui/overview/segment-details-activate.png)
+![The Activate to destination button is highlighted.](../images/ui/overview/segment-details-activate.png)
 
 Selecting **[!UICONTROL Edit segment]** will bring you to the [!DNL Segment Builder]. For more detailed information about using the [!DNL Segment Builder] workspace, please read the [[!DNL Segment Builder] user guide](./segment-builder.md).
 
@@ -125,7 +129,7 @@ The **[!UICONTROL Activated destinations]** section shows the destinations that 
 
 >[!NOTE]
 >
-> Destinations are a feature available with [!DNL Real-time Customer Data Platform], and allow you to export data to external platforms. For more information on destinations, please read the [destinations overview](../../destinations/home.md). To learn how to activate a segment to a destination, see [activation overview](../../destinations/ui/activation-overview.md).
+> Destinations are a feature available with [!DNL Adobe Real-Time Customer Data Platform], and allow you to export data to external platforms. For more information on destinations, please read the [destinations overview](../../destinations/home.md). To learn how to activate a segment to a destination, see [activation overview](../../destinations/ui/activation-overview.md).
 
 ### Profile samples
 
@@ -145,15 +149,15 @@ The sample size of the scan depends on the overall number of entities in your pr
 | 1 to 20 million | 1 million |
 | Over 20 million | 5% of total |
 
-More detailed information about each [!DNL Profile] can be seen by selecting the [!DNL Profile] ID. To learn more about a profile's details, please read the [[!DNL Real-time Customer Profile] user guide](../../profile/ui/user-guide.md#profile-detail).
+More detailed information about each [!DNL Profile] can be seen by selecting the [!DNL Profile] ID. To learn more about a profile's details, please read the [[!DNL Real-Time Customer Profile] user guide](../../profile/ui/user-guide.md#profile-detail).
 
-![](../images/ui/overview/segment-details-profiles.png)
+![The sample profiles for the segment definition are highlighted. Sample profile information includes the profile ID, the first name, the last name, and the person's email.](../images/ui/overview/segment-details-profiles.png)
 
 ## Creating a segment {#create-segment}
 
 Selecting **[!UICONTROL Create segment]** in the top-right corner opens the [!DNL Segment Builder] workspace, where you can begin creating a segment definition.
 
-![](../images/ui/overview/segment-browse-create.png)
+![On the Segment browse page, the Create segment button is highlighted.](../images/ui/overview/segment-browse-create.png)
 
 ### [!DNL Segment Builder] workspace 
 
@@ -161,11 +165,11 @@ Selecting **[!UICONTROL Create segment]** in the top-right corner opens the [!DN
 
 For more detailed information about using the [!DNL Segment Builder] workspace, please read the [[!DNL Segment Builder] user guide](./segment-builder.md).
 
-![](../images/ui/overview/segment-builder.png)
+![The Segment Builder workspace is displayed.](../images/ui/overview/segment-builder.png)
 
 ## Scheduled segmentation {#scheduled-segmentation}
 
-Once segment definitions have been created, you can then evaluate them through on-demand or scheduled (continuous) evaluation. Evaluation means moving [!DNL Real-time Customer Profile] data through segment definitions in order to produce corresponding audiences. Once created, the audiences are saved and stored so that they can be exported using [!DNL Experience Platform] APIs. 
+Once segment definitions have been created, you can then evaluate them through on-demand or scheduled (continuous) evaluation. Evaluation means moving [!DNL Real-Time Customer Profile] data through segment definitions in order to produce corresponding audiences. Once created, the audiences are saved and stored so that they can be exported using [!DNL Experience Platform] APIs. 
 
 On-demand evaluation involves using the API to perform evaluation and build audiences as needed, whereas scheduled evaluation (also known as 'scheduled segmentation') allows you to create a recurring schedule to evaluate segment definitions at a specific time (at a maximum, once daily).
 
@@ -179,7 +183,81 @@ Enabling your segment definitions for scheduled evaluation can be done using the
 
 Schedules can currently only be created using the API. For detailed steps on creating, editing, and working with schedules using the API, please follow the tutorial for evaluating and accessing segment results, specifically the section on [scheduled evaluation using the API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
-![](../images/ui/overview/segment-browse-scheduled.png)
+![The toggle to Add all segments to a schedule is highlighted on the Segments Browse page.](../images/ui/overview/segment-browse-scheduled.png)
+
+## Audiences {#audiences}
+
+>[!IMPORTANT]
+>
+>The audiences functionality is currently in limited beta and is not available to all users. The documentation and the functionality are subject to change.
+
+Select the **[!UICONTROL Audiences]** tab to see a list of all the audiences for your organization.
+
+![A list of audiences for your organization.](../images/ui/overview/list-audiences.png)
+
+By default, this view lists information about the audiences including the name, profile count, origin, created date, and last modified date.
+
+You can select the ![Customize table](../images/ui/overview/customize-table.png) icon to change which fields are displayed.
+
+![The customize table button is highlighted. Selecting this button allows you to customize the fields that are displayed on the Audiences browse page.](../images/ui/overview/select-customize-table.png)
+
+A popover appears, listing all the fields that can be displayed within the table.
+
+![The attributes that can be displayed for the browse Audiences section.](../images/ui/overview/customize-table-attributes.png)
+
+| Field | Description |
+| ----- | ----------- | 
+| [!UICONTROL Name] | The name of the audience. |
+| [!UICONTROL Profile count] | The total number of profiles that qualify for the audience. |
+| [!UICONTROL Origin] | The origin of the audience. If this audience was Platform-generated, it will have an origin of Segmentation Service. |
+| [!UICONTROL Lifecycle status] | The status of the audience. Possible values for this field include `Draft`, `Published`, and `Archived`.  |
+| [!UICONTROL Update frequency] | A value that states how often the audience's data is updated. Possible values for this field include `On Demand`, `Scheduled`, and `Continuous`. |
+| [!UICONTROL Last updated by] | The name of the person who last updated the audience. |
+| [!UICONTROL Created] | The time and date the audience was created. | 
+| [!UICONTROL Last updated] | The time and date the audience was last created. |
+| [!UICONTROL Access labels] | The access labels for the audience. Access labels allow you to categorize datasets and fields according to usage policies that apply to that data. These labels can be applied at any time, providing flexibility in how you choose to govern data. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
+
+You can select **[!UICONTROL Create Audience]** to create an audience. 
+
+![The create audience button is highlighted, showing you where to select to create an audience.](../images/ui/overview/create-audience.png)
+
+A popover appears, letting you choose between composing an audience or building rules.
+
+![A popover that displays the two types of audiences you can create.](../images/ui/overview/create-audience-type.png)
+
+Selecting **[!UICONTROL Compose Audiences]** takes you to the Audience Builder. To learn more about creating audiences, please read the [Audience Builder guide](./audience-builder.md).
+
+Selecting **[!UICONTROL Build Rule]** takes you to the Segment Builder. To learn more about creating segments, please read the [Segment Builder guide](./segment-builder.md)
+
+## Audience details {#audience-details}
+
+To see more details about a specific audience, select an audience's name within the [!UICONTROL Audiences] tab.
+
+The audience details page appears. This page differs in details depending on whether the audience was generated with Adobe Experience Platform or from an external source such as Audience Orchestration.
+
+### Platform-generated audience
+
+For more information on Platform-generated audiences, please read the [segment summary section](#segment-summary). 
+
+### Externally generated audience
+
+On the top of the audience details page, there is a summary of the audience and details about the dataset the audience is saved in.
+
+![The provided details for an externally generated audience.](../images/ui/overview/externally-generated-audience.png)
+
+The **[!UICONTROL Audience summary]** section provides information such as the ID, name, description, and details of the attributes.
+
+The **[!UICONTROL Dataset details]** section provides information such as the name, description, table name, source, and schema. You can select **[!UICONTROL View dataset]** to see more information about the dataset.
+
+| Field | Description |
+| ----- | ----------- |
+| [!UICONTROL Name] | The name of the dataset. |
+| [!UICONTROL Description] | The description of the dataset. |
+| [!UICONTROL Table name] | The table name of the dataset. |
+| [!UICONTROL Source] | The source of the dataset. For externally generated audiences, this value will be **Schema**. |
+| [!UICONTROL Schema] | The type of XDM schema that the dataset corresponds to. |
+
+To learn more about datasets, please read the [dataset overview](../../catalog/datasets/overview.md).
 
 ## Streaming segmentation {#streaming-segmentation}
 
@@ -205,10 +283,10 @@ More information about edge segmentation can be found in the [edge segmentation 
 
 Once you are done creating your segment, the segment will be analyzed by Adobe Experience Platform Data Governance to ensure there are no policy violations within the segment. See the [Data Governance overview](../../data-governance/home.md) for more information.
 
-![](../images/ui/overview/segment-dule-policy-violations.png)
+![The policy violations for the segment are displayed.](../images/ui/overview/segment-dule-policy-violations.png)
 
 ## Next steps and additional resources {#next-steps}
 
-The [!DNL Segmentation Service] UI provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-time Customer Profile] data.
+The [!DNL Segmentation Service] UI provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-Time Customer Profile] data.
   
 To learn more about [!DNL Segmentation Service], please continue reading the documentation. To learn how to use the [!DNL Segmentation Service] API, please read the [[!DNL Segmentation Service] developer guide](../api/overview.md).

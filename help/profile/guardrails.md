@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;guardrails;guidelines;limit;entity;primary entity;dimension entity;
-title: Default Guardrails for Real-time Customer Profile Data
+title: Default Guardrails for Real-Time Customer Profile Data
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Adobe Experience Platform uses a highly denormalized hybrid data model that differs from the traditional relational data model. This document provides default use and rate limits to help you model your Profile data for optimal system performance. 
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 ---
-# Default Guardrails for [!DNL Real-time Customer Profile] data
+# Default Guardrails for [!DNL Real-Time Customer Profile] data
 
-Adobe Experience Platform enables you to deliver personalized cross-channel experiences based on behavioral insights and customer attributes in the form of Real-time Customer Profiles. To support this new approach to profiles, Experience Platform uses a highly denormalized hybrid data model that differs from the traditional relational data model.
+Adobe Experience Platform enables you to deliver personalized cross-channel experiences based on behavioral insights and customer attributes in the form of Real-Time Customer Profiles. To support this new approach to profiles, Experience Platform uses a highly denormalized hybrid data model that differs from the traditional relational data model.
 
 This document provides default use and rate limits to help you model your Profile data for optimal system performance. When reviewing the following guardrails, it is assumed that you have modeled the data correctly. If you have questions on how to model your data, please contact your customer service representative.
 
@@ -19,9 +19,9 @@ This document provides default use and rate limits to help you model your Profil
 
 ## Getting started
 
-The following Experience Platform services are involved with modeling Real-time Customer Profile data: 
+The following Experience Platform services are involved with modeling Real-Time Customer Profile data: 
 
-* [[!DNL Real-time Customer Profile]](home.md): Create unified consumer profiles using data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](home.md): Create unified consumer profiles using data from multiple sources.
 * [Identities](../identity-service/home.md): Bridge identities from disparate data sources as they are ingested into Platform.
 * [Schemas](../xdm/home.md): Experience Data Model (XDM) schemas are the standardized framework by which Platform organizes customer experience data.
 * [Segments](../segmentation/home.md): The segmentation engine within Platform is used to create segments from your customer profiles based on customer behaviors and attributes.
@@ -40,7 +40,7 @@ There are two types of default limits within this document:
 
 ## Data model limits
 
-The following guardrails provide recommended limits when modeling Real-time Customer Profile data. To learn more about primary entities and dimension entities, see the section on [entity types](#entity-types) in the Appendix.
+The following guardrails provide recommended limits when modeling Real-Time Customer Profile data. To learn more about primary entities and dimension entities, see the section on [entity types](#entity-types) in the Appendix.
 
 ### Primary entity guardrails
 
@@ -84,6 +84,7 @@ The following guardrails refer to data size and provide recommended limits for d
 | Maximum profile fragment size | 50MB | Hard | **The maximum size of a single profile fragment is 50MB.** Segmentation, exports, and lookups may fail for any [profile fragment](#profile-fragments) that is larger than 50MB.|
 | Maximum profile storage size | 50MB | Soft | **The maximum size of a stored profile is 50MB.** Adding new [profile fragments](#profile-fragments) into a profile that is larger than 50MB will affect system performance. For example, a profile could contain a single fragment that is 50MB or it could contain multiple fragments across multiple datasets with a combined total size of 50MB. Attempting to store a profile with a single fragment larger than 50MB, or multiple fragments that total more than 50MB in combined size, will affect system performance.|
 | Number of Profile or ExperienceEvent batches ingested per day | 90 | Soft | **The maximum number of Profile or ExperienceEvent batches ingested per day is 90.** This means that the combined total of Profile and ExperienceEvent batches ingested each day cannot exceed 90. Ingesting additional batches will affect system performance.|
+| Number of ExperienceEvents per profile record | 5000 | Soft | **The maximum number of ExperienceEvents per profile record is 5000.** Profiles with more than 5000 ExperienceEvents will **not** be considered for segmentation. | 
 
 {style="table-layout:auto"}
 
@@ -104,6 +105,7 @@ The guardrails outlined in this section refer to the number and nature of segmen
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
 | Segments per sandbox | 4000 | Soft | An organization can have more than 4000 segments in total, as long as there are less than 4000 segments in each individual sandbox. Attempting to create additional segments may affect system performance.|
+| Edge segments per sandbox | 150 | Soft | An organization can have more than 150 edge segments in total, as long as there are less than 150 edge segments in each individual sandbox. Attempting to create additional edge segments may affect system performance. | 
 | Streaming segments per sandbox | 500 | Soft | An organization can have more than 500 streaming segments in total, as long as there are less than 500 streaming segments in each individual sandbox. Attempting to create additional streaming segments may affect system performance.|
 | Batch segments per sandbox | 4000 | Soft | An organization can have more than 4000 batch segments in total, as long as there are less than 4000 batch segments in each individual sandbox. Attempting to create additional batch segments may affect system performance.|
 
@@ -115,28 +117,34 @@ This section provides additional details for the limits in this document.
 
 ### Entity types
 
-The [!DNL Profile] store data model consists of two core entity types:
+The [!DNL Profile] store data model consists of two core entity types: [primary entities](#primary-entity) and [dimension entities](#dimension-entity).
 
-* **Primary entity:** A primary entity, or profile entity, merges data together to form a "single source of truth" for an individual. This unified data is represented using what is known as a "union view". A union view aggregates the fields of all schemas that implement the same class into a single union schema. The union schema for [!DNL Real-time Customer Profile] is a denormalized hybrid data model that acts as a container for all profile attributes and behavioral events. 
+#### Primary entity
 
-  Time-independent attributes, also known as "record data" are modeled using [!DNL XDM Individual Profile], while time-series data, also known as "event data" is modeled using [!DNL XDM ExperienceEvent]. As record and time-series data is ingested in Adobe Experience Platform, it triggers [!DNL Real-time Customer Profile] to begin ingesting data that has been enabled for its use. The more interactions and details that are ingested, the more robust individual profiles become.
+A primary entity, or profile entity, merges data together to form a "single source of truth" for an individual. This unified data is represented using what is known as a "union view". A union view aggregates the fields of all schemas that implement the same class into a single union schema. The union schema for [!DNL Real-Time Customer Profile] is a denormalized hybrid data model that acts as a container for all profile attributes and behavioral events. 
 
-  ![](images/guardrails/profile-entity.png) 
+Time-independent attributes, also known as "record data" are modeled using [!DNL XDM Individual Profile], while time-series data, also known as "event data" is modeled using [!DNL XDM ExperienceEvent]. As record and time-series data is ingested in Adobe Experience Platform, it triggers [!DNL Real-Time Customer Profile] to begin ingesting data that has been enabled for its use. The more interactions and details that are ingested, the more robust individual profiles become.
 
-* **Dimension entity:** While the Profile data store maintaining profile data is not a relational store, Profile permits integration with small dimension entities in order to create segments in a simplified and intuitive manner. This integration is known as [multi-entity segmentation](../segmentation/multi-entity-segmentation.md). Your organization may also define XDM classes to describe things other than individuals, such as stores, products, or properties. These non-[!DNL XDM Individual Profile] schemas are known as "dimension entities" and do not contain time-series data. Dimension entities provide lookup data which aids and simplifies multi-entity segment definitions and must be small enough that the segmentation engine can load the entire data set into memory for optimal processing (fast point lookup).
+![An infographic outlining the differences between record data and time-series data.](images/guardrails/profile-entity.png) 
 
-  ![](images/guardrails/profile-and-dimension-entities.png)
+#### Dimension entity
+
+While the Profile data store maintaining profile data is not a relational store, Profile permits integration with small dimension entities in order to create segments in a simplified and intuitive manner. This integration is known as [multi-entity segmentation](../segmentation/multi-entity-segmentation.md).
+
+Your organization may also define XDM classes to describe things other than individuals, such as stores, products, or properties. These non-[!DNL XDM Individual Profile] schemas are called "dimension entities" (also known as "lookup entities") and do not contain time-series data. Schemas that represent dimension entities are linked to profile entities through the use of [schema relationships](../xdm/tutorials/relationship-ui.md).
+
+Dimension entities provide lookup data which aids and simplifies multi-entity segment definitions and must be small enough that the segmentation engine can load the entire data set into memory for optimal processing (fast point lookup).
+
+![An infographic that shows that a profile entity is comprised of dimension entities.](images/guardrails/profile-and-dimension-entities.png)
 
 ### Profile fragments
 
-In this document, there are several guardrails that refer to "profile fragments." In Experience Platform, multiple profile fragments are merged together to form the Real-time Customer Profile. Each fragment represents a unique primary identity and the corresponding record or event data for that ID within a given dataset. To learn more about profile fragments, refer to the [Profile overview](home.md#profile-fragments-vs-merged-profiles).
+In this document, there are several guardrails that refer to "profile fragments." In Experience Platform, multiple profile fragments are merged together to form the Real-Time Customer Profile. Each fragment represents a unique primary identity and the corresponding record or complete set of event data for that ID within a given dataset. To learn more about profile fragments, refer to the [Profile overview](home.md#profile-fragments-vs-merged-profiles).
 
 ### Merge policies {#merge-policies}
 
-When bringing data together from multiple sources, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. When the data from multiple sources conflicts the merge policy determines which information to include in the profile for the individual. To learn more about merge policies, begin by reading the [merge policies overview](merge-policies/overview.md).
+When bringing data together from multiple sources, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. When the data from multiple sources conflicts the merge policy determines which information to include in the profile for the individual. A maximum of five (5) merge policies is allowed per organization. To learn more about merge policies, please read the [merge policies overview](merge-policies/overview.md).
 
 ### Adobe Analytics report suite datasets in Platform {#aa-datasets}
 
-A maximum of one (1) Adobe Analytics report suite dataset should be enabled for Profile. This is a soft limit, meaning that you are able to enable more than one Analytics dataset for Profile, but it is not recommended as it may have unintended consequences for your data. This is due to the differences between Experience Data Model (XDM) schemas, which provide the semantic structure for data in Experience Platform and allow for consistency in data interpretation, and the customizable nature of eVars and conversion variables in Adobe Analytics. 
-
-For example, in Adobe Analytics a single organization may have multiple report suites. If report suite A designates eVar 4 as "internal search term" and report suite B designates eVar 4 as "referring domain", these values will both be ingested into the same field in Profile, causing confusion and degrading data quality.
+Multiple report suites can be enabled for Profile as long as all data conflicts are resolved. You can use the Data Prep functionality to resolve data conflicts across eVars, Lists, and Props. To learn more about how to use the Data Prep functionality, please read the [Adobe Analytics connector UI guide](../sources/tutorials/ui/create/adobe-applications/analytics.md). 

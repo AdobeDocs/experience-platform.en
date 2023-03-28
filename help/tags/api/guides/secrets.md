@@ -13,7 +13,7 @@ There are currently three supported secret types denoted in the `type_of` attrib
 | --- | --- |
 | `token` | A single string of characters representing an authentication token value that is known and understood by both systems. |
 | `simple-http` | Contains two string attributes for a username and password, respectively. |
-| `oauth2` | Contains several attributes to support the [OAuth](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. Event forwarding asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
+| `oauth2-client_credentials` | Contains several attributes to support the [OAuth](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. Event forwarding asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 
 {style="table-layout:auto"}
 
@@ -21,9 +21,14 @@ This guide provides a high-level overview of how to configure secrets for use in
 
 ## Credentials
 
-Each secret contains a `credentials` attribute that holds its respective credential values. Each type of secret has different required attributes, as shown in the sections below.
+Each secret contains a `credentials` attribute that holds its respective credential values. When [creating a secret in the API](../endpoints/secrets.md#create), each type of secret has different required attributes as shown in the sections below:
 
-### `token`
+* [`token`](#token)
+* [`simple-http`](#simple-http)
+* [`oauth2-client_credentials`](#oauth2-client_credentials)
+* [`oauth2-google`](#oauth2-google)
+
+### `token` {#token}
 
 Secrets with a `type_of` value of `token` only require a single attribute under `credentials`:
 
@@ -35,7 +40,7 @@ Secrets with a `type_of` value of `token` only require a single attribute under 
 
 The token is stored as a static value, and therefore the secret's `expires_at` and `refresh_at` properties are set to `null` when the secret is created.
 
-### `simple-http`
+### `simple-http` {#simple-http}
 
 Secrets with a `type_of` value of `simple-http` require the following attributes under `credentials`:
 
@@ -48,23 +53,19 @@ Secrets with a `type_of` value of `simple-http` require the following attributes
 
 When the secret is created, the two attributes are exchanged with a BASE64 encoding of `username:password`. After the exchange, the secret's `expires_at` and `refresh_at` properties are set to `null`.
 
-### `oauth2`
+### `oauth2-client_credentials` {#oauth2-client_credentials}
 
->[!NOTE]
->
->Currently, only the [Client Credentials grant type](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) is supported for OAuth secrets.
-
-Secrets with a `type_of` value of `oauth2` require the following attributes under `credentials`:
+Secrets with a `type_of` value of `oauth2-client_credentials` require the following attributes under `credentials`:
 
 | Credential attribute | Data type | Description |
 | --- | --- | --- |
 | `client_id` | String | The client ID for the OAuth integration. |
 | `client_secret` | String | The client secret for the OAuth integration. This value is not included in the API response. |
-| `authorization_url` | String | The authorization URL for the OAuth integration. |
+| `token_url` | String | The authorization URL for the OAuth integration. |
 | `refresh_offset` | Integer | *(Optional)* The value, in seconds, to offset the refresh operation by. If this attribute is omitted when creating the secret, the value is set to `14400` (four hours) by default. |
 | `options` | Object | *(Optional)* Specifies additional options for the OAuth integration:<ul><li>`scope`: A string that represents the [OAuth 2.0 scope](https://oauth.net/2/scope/) for the credentials.</li><li>`audience`: A string that represents an [Auth0 access token](https://auth0.com/docs/protocols/protocol-oauth2).</li></ul> |
 
-When an `oauth2` secret is created or updated, the `client_id` and `client_secret` (and possibly `options`) are exchanged in a POST request to the `authorization_url`, according to the Client Credentials flow of the OAuth protocol.
+When an `oauth2-client_credentials` secret is created or updated, the `client_id` and `client_secret` (and possibly `options`) are exchanged in a POST request to the `token_url`, according to the Client Credentials flow of the OAuth protocol.
 
 >[!NOTE]
 >
@@ -84,13 +85,29 @@ If the exchange is successful, the secret's status attribute is set to `succeede
 
 If the exchange fails for any reason, the `status_details` attribute in the `meta` object updates with relevant information.
 
-### Refreshing an `oauth2` secret
+#### Refreshing an `oauth2-client_credentials` secret
 
-If an `oauth2` secret has been assigned to an environment and its status is `succeeded` (the credentials were exchanged successfully), a new exchange is performed automatically on `refresh_at`.
+If an `oauth2-client_credentials` secret has been assigned to an environment and its status is `succeeded` (the credentials were exchanged successfully), a new exchange is performed automatically on `refresh_at`.
 
 If the exchange is successful, the `refresh_status` attribute in the `meta` object is set to `succeeded` while `expires_at`, `refresh_at`, and `activated_at` are updated accordingly.
 
 If the exchange fails, the operation is attempted three more times with the last attempt no more than two hours before the access token expires. If all attempts fail, the `refresh_status_details` attribute from the `meta` object updates with relevant details.
+
+### `oauth2-google` {#oauth2-google}
+
+Secrets with a `type_of` value of `oauth2-google` requires the following attribute under `credentials`:
+
+| Credential attribute | Data type | Description |
+| --- | --- | --- |
+| `scopes` | Array | Lists the Google product scopes for authentication. The following scopes are supported:<ul><li>[Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
+
+After creating the `oauth2-google` secret, the response includes a `meta.authorization_url` property. You must copy and paste this URL into a browser to complete the Google authentication flow.
+
+#### Reauthorize an `oauth2-google` secret
+
+The authorization URL for an `oauth2-google` secret expires one hour after the secret is created (as indicated by `meta.authorization_url_expires_at`). After this time, the secret must be reauthorized in order to renew the authentication process.
+
+Refer to the [secrets endpoint guide](../endpoints/secrets.md#reauthorize) for details on how reauthorize an `oauth2-google` secret by making a PATCH request to the Reactor API.
 
 ## Environment relationship
 
@@ -102,13 +119,13 @@ A secret can only be associated with one environment. Once the relationship betw
 >
 >The only exception to this rule is if the environment in question is deleted. In this case, the relationship is cleared and the secret can be assigned to a different environment.  
 
-After a secret's credentials have been successfully exchanged, for a secret to be associated with an environment, the exchange artifact (the token string for `token`, the Base64 encoded string for `simple-http`, or the access token for `oauth2`) is securely saved on the environment.
+After a secret's credentials have been successfully exchanged, for a secret to be associated with an environment, the exchange artifact (the token string for `token`, the Base64 encoded string for `simple-http`, or the access token for `oauth2-client_credentials`) is securely saved on the environment.
 
 After the exchange artifact is successfully saved on the environment, the secret's `activated_at` attribute is set to the current UTC time, and can now be referenced using a data element. See the [next section](#referencing-secrets) for more information on referencing secrets.
 
 ## Referencing secrets {#referencing-secrets}
 
-In order to reference a secret, you must create a data element of type "[!UICONTROL Secret]" (provided by the [[!UICONTROL Core] extension](../../extensions/web/core/overview.md)) on an event forwarding property. When configuring this data element, you are prompted to indicate which secret to use for each environment. You can then create rules that reference a secret data element, such as within the header for an HTTP call.
+In order to reference a secret, you must create a data element of type "[!UICONTROL Secret]" (provided by the [[!UICONTROL Core] extension](../../extensions/client/core/overview.md)) on an event forwarding property. When configuring this data element, you are prompted to indicate which secret to use for each environment. You can then create rules that reference a secret data element, such as within the header for an HTTP call.
 
 ![Secret data element](../../images/api/guides/secrets/data-element.png)
 

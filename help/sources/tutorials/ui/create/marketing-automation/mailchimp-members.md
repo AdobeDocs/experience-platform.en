@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
 title: Create a MailChimp Members source connection using Platform UI
-topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to MailChimp Members using Platform UI.
 exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
 ---
@@ -27,7 +26,7 @@ The [!DNL Mailchimp Members] source supports both OAuth 2 Refresh Code and basic
 
 | Credentials | Description |
 | --- | --- |
-| Host | The root URL used to connect to MailChimp API. The format for the root URL is `https://{DC}.api.mailchimp.com`, where `{DC}` represents the data center that corresponds to your account. |
+| Domain | The root URL used to connect to MailChimp API. The format for the root URL is `https://{DC}.api.mailchimp.com`, where `{DC}` represents the data center that corresponds to your account. |
 | Authorization test URL | The authorization test URL is used to validate credentials when connecting [!DNL Mailchimp] to Platform. If this is not provided, credentials are automatically checked during the source connection creation step instead. |
 | Access Token | The corresponding access token used to authenticate your source. This is required for OAuth-based authentication. |
 
@@ -37,7 +36,7 @@ For more information on using OAuth 2 to authenticate your [!DNL Mailchimp] acco
 
 | Credentials | Description |
 | --- | --- |
-| Host | The root URL used to connect to MailChimp API. The format for the root URL is `https://{DC}.api.mailchimp.com`, where `{DC}` represents the data center that corresponds to your account. |
+| Domain | The root URL used to connect to MailChimp API. The format for the root URL is `https://{DC}.api.mailchimp.com`, where `{DC}` represents the data center that corresponds to your account. |
 | Username | The username that corresponds with your MailChimp account. This is required for basic authentication. |
 | Password | The password that corresponds with your MailChimp account. This is required for basic authentication. |
 
@@ -68,13 +67,13 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 #### Authenticate using OAuth 2
 
-To use OAuth 2, select [!UICONTROL OAuth 2 Refresh Code], provide values for your host, authorization test URL, and access token and then select **[!UICONTROL Connect to source]**. Allow for a few moments for your credentials to validate, and then select **[!UICONTROL Next]** to proceed.
+To use OAuth 2, select [!UICONTROL OAuth 2 Refresh Code], provide values for your domain, authorization test URL, and access token and then select **[!UICONTROL Connect to source]**. Allow for a few moments for your credentials to validate, and then select **[!UICONTROL Next]** to proceed.
 
 ![oauth](../../../../images/tutorials/create/mailchimp-members/oauth.png)
 
 #### Authenticate using basic authentication
 
-To use basic authentication, select [!UICONTROL Basic authentication], provide values for your host, username, and password, and then select **[!UICONTROL Connect to source]**. Allow for a few moments for your credentials to validate, and then select **[!UICONTROL Next]** to proceed.
+To use basic authentication, select [!UICONTROL Basic authentication], provide values for your domain, username, and password, and then select **[!UICONTROL Connect to source]**. Allow for a few moments for your credentials to validate, and then select **[!UICONTROL Next]** to proceed.
 
 ![basic](../../../../images/tutorials/create/mailchimp-members/basic.png)
 

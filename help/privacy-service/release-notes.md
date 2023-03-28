@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy Service Release Notes
-topic-legacy: release notes
 description: The latest release notes for Adobe Experience Platform Privacy Service.
 exl-id: 66ee38f1-f0d5-44ff-823d-d1b8a9765c6d
 ---
@@ -56,7 +55,7 @@ This document contains information about new features for Adobe Experience Platf
 | Feature | Description |
 | --- | --- |
 | Request Metrics Dashboard | The new metrics dashboard in the [!DNL Privacy Service] UI provides visibility into submitted, errored, and completed GDPR requests.  |
-| Request Builder | To service organizations with both technical and non-technical users submitting GDPR requests, a “Create Request” functionality has been added to the UI. The JSON file submission capability is still available in the [!DNL Privacy Service] UI for those organizations who prefer to continue using it. |
+| Request Builder | To service organizations with both technical and non-technical users submitting GDPR requests, a "Create Request" functionality has been added to the UI. The JSON file submission capability is still available in the [!DNL Privacy Service] UI for those organizations who prefer to continue using it. |
 | GDPR Job Event Notifications | Event notifications about GDPR job statuses are a critical element to many workflows. While notifications were previously served using individual email notices, GDPR event notifications are messages that leverage Adobe I/O events, which are sent to a configured webhook facilitating job request automation. [!DNL Privacy Service] UI users can subscribe to Adobe I/O GDPR events to receive updates when a product or the GDPR job has been completed. |
 
 ## April 18, 2019

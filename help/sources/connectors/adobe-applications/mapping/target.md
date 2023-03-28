@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;target mapping;Target mapping
 solution: Experience Platform
 title: Mapping Adobe Target Event Data to XDM
-topic-legacy: overview
 description: Learn how to map Adobe Target event fields to an Experience Data Model (XDM) schema for use in Adobe Experience Platform.
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 ---
@@ -27,7 +26,7 @@ The following table outlines the fields of an Experience Event schema (*XDM Expe
 | **`channel`** | `context.channel` | Only works with view delivery. Options are "web" and "mobile", with "web" being the default. |
 | **`endUserIds`** |
 | `endUserIds.experience.tntId` | `tntId/mboxPC` |
-| `endUserIds.experience.mcId` | `marketingCloudVisitorId` |
+| `endUserIds.experience.mcId` | `marketingCloudVisitorId` | The Experience Cloud ID (ECID) is also known as MCID and continues to be used in namespaces. |
 | **`environment`** |
 | `environment.browserDetails.userAgent` | `mboxRequest.userAgent` |
 | `environment.browserDetails.viewPortHeight` | `mboxRequest.browserHeight` |

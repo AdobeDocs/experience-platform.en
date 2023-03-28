@@ -7,7 +7,7 @@ exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
 
 >[!NOTE]
 >
->This data type is only available for organizations that have access to the B2B edition of Real-time Customer Data Platform.
+>This data type is only available for organizations that have access to the B2B edition of Adobe Real-Time Customer Data Platform.
 
 [!UICONTROL External Source System Audit Attributes] is a standard Experience Data Model (XDM) data type that captures audit details about an external source system.
 

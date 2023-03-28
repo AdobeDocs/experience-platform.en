@@ -6,6 +6,10 @@ exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 ---
 # Subscribe to alerts for sources dataflows in the UI
 
+>[!NOTE]
+>
+>Alerts are not supported in non-production sandboxes. In order to subscribe to alerts, you must ensure that you are using a production sandbox.
+
 Adobe Experience Platform allows you to subscribe to event-based alerts regarding Adobe Experience Platform activities. Alerts reduce or eliminate the need to poll the [[!DNL Observability Insights] API](../../../observability/api/overview.md) in order to check if a job has completed, if a certain milestone within a workflow has been reached, or if any errors have occurred.
 
 You can subscribe to alerts when creating a dataflow to receive alert messages regarding the status, success, or failure of your flow run.
@@ -43,7 +47,7 @@ The available alerts for sources dataflows are:
 | Sources Dataflow Run Start | This alert sends you a message when your source dataflow has started. |
 | Sources Dataflow Run Success | This alert sends you a message when data from your source is successfully ingested to Platform. |
 | Sources Dataflow Run Failure | This alert sends you a message if an error occurs in your dataflow. |
-| Sources Dataflow Lack of Ingestion | This alert sends you a message if ingestion is delayed by more than seven hours and no data gets ingested to Platform. |
+| ~~Sources Dataflow Lack of Ingestion~~ | ~~This alert sends you a message if ingestion is delayed by more than seven hours and no data gets ingested to Platform.~~ <br>**Note:** You will no longer receive alerts as this alert has been deprecated.|
 
 Select the alerts you would like to subscribe to and then select **[!UICONTROL Next]** to review and finish your dataflow.
 

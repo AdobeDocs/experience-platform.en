@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;query service;Query service;query
 title: Example Use Case for Adobe Experience Platform Query Service
-topic-legacy: tutorial
 description: An end-to-end example to demonstrate the versatility and benefits of Adobe Experience Platform Query Service.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
 ---
@@ -68,11 +67,11 @@ Adobe Experience Platform provides a data repository and the necessary tools to 
 
 ## Next steps
 
-By reading this document, you should now understand how [!DNL Query Service] impacts not only the quality of your data and ease of segmentation but also its importance within your data architecture for the entire end-to-end workflow. For more applicable SQL examples that use Adobe Analytics with [!DNL Query Service], see the [Adobe Analytics sample queries documentation](../sample-queries/adobe-analytics.md).
+By reading this document, you should now understand how [!DNL Query Service] impacts not only the quality of your data and ease of segmentation but also its importance within your data architecture for the entire end-to-end workflow. For more applicable SQL examples that use Adobe Analytics with [!DNL Query Service], see the [Adobe Analytics merchandising variables use case](./merchandising-variables.md).
 
-Other documents that demonstrate the benefits of [!DNL Query Service] to your organization’s strategic business insights are the [bot filtering use case](./bot-filtering.md) example. 
+Other documents that demonstrate the benefits of [!DNL Query Service] to your organization's strategic business insights are the [bot filtering use case](./bot-filtering.md) example. 
 
-Alternatively, these documents that will benefit your understanding of [!DNL Query Service] features: 
+Alternatively, these documents can benefit your understanding of [!DNL Query Service] features: 
 
 * [Guidance for query execution](../best-practices/writing-queries.md)
 * [Guidance for data asset organization](../best-practices/organize-data-assets.md).

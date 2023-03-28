@@ -21,8 +21,15 @@ The following alert rules are specific to [Data Ingestion](../../ingestion/home.
 | Source Flow Run Info | Sources Flow Run Success | This alert triggers when data is successfully ingested from a source connection. |
 | Source Flow Run Delays, Failures and Errors | Sources Flow Run Failure | This alert triggers when an error occurs while ingesting data from a source connection. |
 | Source Flow Run Delays, Failures and Errors | Ingestion Delay | This alert triggers when a batch ingestion flow run takes longer than 150 minutes to process. |
-| Source Flow Run Delays, Failures and Errors | Lack of Ingestion | This alert sends you a message if ingestion is delayed by more than seven hours and no data gets ingested to Platform. |
 | Source Flow Run Delays, Failures and Errors | Ingestion Failure | This alert triggers when the ratio of failed records to all records exceed a threshold of 0.5%. |
+
+{style="table-layout:auto"}
+
+If you have previously subscribed to the following alert type, you will no longer receive alerts as this alert has been deprecated:
+
+| I/O Event subscription | Alert rule | Description |
+| --- | --- | --- |
+| Source Flow Run Delays, Failures and Errors | Lack of Ingestion | This alert sends you a message if ingestion is delayed by more than seven hours and no data gets ingested to Platform. |
 
 {style="table-layout:auto"}
 
@@ -39,9 +46,9 @@ The following alert rules are specific to [Identity Service](../../identity-serv
 
 {style="table-layout:auto"}
 
-## Real-time Customer Profile
+## Real-Time Customer Profile
 
-The following alert rules are specific to [Real-time Customer Profile](../../profile/home.md):
+The following alert rules are specific to [Real-Time Customer Profile](../../profile/home.md):
 
 | I/O Event subscription | Alert rule | Description |
 | --- | --- | --- |
@@ -60,7 +67,7 @@ The following alert rules are specific to [Segmentation Service](../../segmentat
 | --- | --- | --- |
 | Segment Evaluation Job Info | Segment Job Start | This alert triggers when a segment evaluation job starts processing data. |
 | Segment Evaluation Job Info | Segment Job Success | This alert triggers when a segment evaluation job completes successfully. |
-| Segment Evaluation Job Delays, Failures and Errors | Segment Job Delay | This alert triggers when a segment evaluation jobs takes longer than 150 minutes to complete. |
+| Segment Evaluation Job Delays, Failures and Errors | Segment Job Delay | This alert triggers when a segment evaluation jobs takes longer than 150 minutes to complete. <br> One of the following statuses will appear: <br>- FIRING - The condition for failure or delay has been met (Consider it in an ACTIVE state). <br>- INACTIVE - The condition has not been met or not resolved (Consider it in a RESOLVED state).|
 | Segment Evaluation Job Delays, Failures and Errors | Segment Job Failure | This alert triggers when a segment evaluation job results in an error. |
 | Segment Evaluation Job Delays, Failures and Errors | Segment Definition Disabled | This alert triggers when a segment definition is disabled due to internal error. This automatically triggers a war room for an Adobe engineering team to investigate the issue. This alert is only intended to be informative and does not require any action from you. |
 
@@ -79,6 +86,16 @@ The following alert rules are specific to [destinations](../../destinations/home
 | Destination Flow Run Delays, Failures and Errors | Skippage rate exceeds threshold | This alert triggers when the ratio of skipped IDs to total IDs exceeds a threshold. |
 
 {style="table-layout:auto"}
+
+## Query Service
+
+The following alert rules are specific to [Query Service](../../query-service/home.md):
+
+| I/O Event subscription | Alert rule | Description |
+| --- | --- | --- |
+| Query Service scheduled query info | Query Service scheduled query start | This alert triggers when a scheduled query starts running. |
+| Query Service scheduled query info | Query Service scheduled query success | This alert triggers when a scheduled query job completes successfully. |
+| Query Service scheduled query delays, failures and errors | query service scheduled query failure | This alert triggers when a scheduled query job fails. |
 
 <!-- (Definitions to be added once available)
 | Segment Job Delay | This alert triggers when a segment job takes longer than 150 minutes to complete. | N/A | 30 seconds | 3 hours |

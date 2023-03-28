@@ -1,15 +1,11 @@
 ---
 description: Learn how to use Destination SDK to configure an Amazon S3 destination with predefined file formatting options and custom file name configuration.
-title: (Beta) Configure an Amazon S3 destination with predefined file formatting options and custom file name configuration.
+title: Configure an Amazon S3 destination with predefined file formatting options and custom file name configuration.
 exl-id: 0ecd3575-dcda-4e5c-af5c-247d4ea13fa1
 ---
-# (Beta) Configure an [!DNL Amazon S3] destination with predefined file formatting options and custom file name configuration
+# Configure an [!DNL Amazon S3] destination with predefined file formatting options and custom file name configuration
 
 ## Overview {#overview}
-
->[!IMPORTANT]
->
->The functionality to configure file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 This page describes how to use Destination SDK to configure an Amazon S3 destination with predefined, default [file formatting options](../../server-and-file-configuration.md#file-configuration) and a custom [file name configuration](../../file-based-destination-configuration.md#file-name-configuration).
 
@@ -46,9 +42,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
     "name": "Amazon S3 destination server with predefined default CSV options",
     "destinationServerType": "FILE_BASED_S3",
     "fileBasedS3Destination": {
-        "bucket": {
+        "bucketName": {
             "templatingStrategy": "PEBBLE_V1",
-            "value": "{{customerData.bucket}}"
+            "value": "{{customerData.bucketName}}"
         },
         "path": {
             "templatingStrategy": "PEBBLE_V1",
@@ -163,11 +159,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    ],
    "customerDataFields":[
       {
-         "name":"bucket",
+         "name":"bucketName",
          "title":"Enter the name of your Amazon S3 bucket",
          "description":"Amazon S3 bucket name",
          "type":"string",
          "isRequired":true,
+         "pattern": "(?=^.{3,63}$)(?!^(\\d+\\.)+\\d+$)(^(([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])\\.)*([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])$)",
          "readOnly":false,
          "hidden":false
       },
@@ -177,7 +174,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "description":"Enter the path to your S3 bucket folder",
          "type":"string",
          "isRequired":true,
-         "pattern":"^[A-Za-z]+$",
+         "pattern": "^[0-9a-zA-Z\\/\\!\\-_\\.\\*\\''\\(\\)]*((\\%SEGMENT_(NAME|ID)\\%)?\\/?)+$",
          "readOnly":false,
          "hidden":false
       },

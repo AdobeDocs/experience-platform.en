@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;identity namespace;Identity namespace
 solution: Experience Platform
 title: Identity Service Troubleshooting Guide
-topic-legacy: troubleshooting
 description: This document provides answers to frequently asked questions about Adobe Experience Platform Identity Service, as well as a troubleshooting guide for common errors.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
 ---
@@ -277,7 +276,7 @@ This error displays when an unexpected exception occurs in the execution of a [!
 
 [!DNL Identity Service] ingests identity data from record and time series data that is uploaded to [!DNL Platform] using Batch Ingestion. As batch ingestion is an asynchronous process, you must view the details for a batch to view errors. Errors will accumulate as the batch progresses until the batch is complete.
 
-The following is a list of error messages related to [!DNL Identity Service] you may encounter when using the [Data Ingestion API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
+The following is a list of error messages related to [!DNL Identity Service] you may encounter when using the [Batch Ingestion API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
 
 ### Unknown XDM schema
 

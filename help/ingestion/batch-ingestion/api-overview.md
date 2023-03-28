@@ -7,13 +7,13 @@ exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 ---
 # Batch ingestion developer guide
 
-This document provides a comprehensive guide to using [batch ingestion API endpoints](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) in Adobe Experience Platform. For an overview of batch ingestion APIs, including prerequisites and best practices, please begin by reading the [batch ingestion API overview](overview.md).
+This document provides a comprehensive guide to using [batch ingestion API endpoints](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) in Adobe Experience Platform. For an overview of batch ingestion APIs, including prerequisites and best practices, please begin by reading the [batch ingestion API overview](overview.md).
 
 The appendix to this document provides information for [formatting data to be used for ingestion](#data-transformation-for-batch-ingestion), including sample CSV and JSON data files.
 
 ## Getting started
 
-The API endpoints used in this guide is part of the [Data Ingestion API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Data ingestion provides a RESTful API through which you can perform basic CRUD operations against the supported object types.
+The API endpoints used in this guide is part of the [Batch Ingestion API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Batch ingestion is provided through a RESTful API where you can perform basic CRUD operations against the supported object types.
 
 Before continuing, please review the [batch ingestion API overview](overview.md) and the [getting started guide](getting-started.md). 
 
@@ -103,7 +103,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
+| `{FILE_NAME}` | The name of the file you want to upload. Ensure that you use a unique file name so that it does not clash with another file for the batch of files being submitted. |
 
 **Request**
 
@@ -123,7 +123,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `acme/customers/campaigns/summer.json`. |
 
 **Response**
 
@@ -238,7 +238,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
+| `{FILE_NAME}` | The name of the file you want to upload. Ensure that you use a unique file name so that it does not clash with another file for the batch of files being submitted. |
 
 **Request**
 
@@ -258,7 +258,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `Users/sample-user/Downloads/sample.json`.|
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `acme/customers/campaigns/summer.parquet`.|
 
 **Response**
 
@@ -411,7 +411,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
+| `{FILE_NAME}` | The name of the file you want to upload. Ensure that you use a unique file name so that it does not clash with another file for the batch of files being submitted. |
 
 **Request**
 
@@ -433,7 +433,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Parameter | Description |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | In integers, the beginning and the end of the requested range. |
-| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `acme/customers/campaigns/summer.json`. |
 
 
 **Response**
@@ -629,7 +629,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
+| `{FILE_NAME}` | The name of the file you want to upload. Ensure that you use a unique file name so that it does not clash with another file for the batch of files being submitted. |
 
 **Request**
 
@@ -649,7 +649,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `Users/sample-user/Downloads/sample.json`.|
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `acme/customers/campaigns/summer.csv`.|
 
 
 **Response**
@@ -851,7 +851,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
+| `{FILE_NAME}` | The name of the file you want to upload. Ensure that you use a unique file name so that it does not clash with another file for the batch of files being submitted. |
 
 **Request**
 
@@ -871,7 +871,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `acme/customers/campaigns/summer.json`. |
 
 **Response**
 

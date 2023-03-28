@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;enduserids;end-user;end user;ids;
 solution: Experience Platform
 title: End User ID Details Schema Field Group
-topic-legacy: overview
 description: This document provides an overview of the End User ID Details schema field group.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
 ---
@@ -24,7 +23,7 @@ exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
 | `acid` | [Identity](../../data-types/identity.md) | End user IDs for Adobe Campaign. |
 | `adcloud` | [Identity](../../data-types/identity.md) | End user IDs for Adobe Advertising Cloud. |
 | `emailid` | [Identity](../../data-types/identity.md) | Email address IDs. |
-| `mcid` | [Identity](../../data-types/identity.md) | Adobe Marketing Cloud ID. |
+| `mcid` | [Identity](../../data-types/identity.md) | Adobe Marketing Cloud ID (MCID). The MCID is now known as the Experience Cloud ID (ECID). |
 | `phonenumberid` | [Identity](../../data-types/identity.md) | Phone number IDs. |
 | `tntid` | [Identity](../../data-types/identity.md) | End user IDs for Adobe Target. |
 

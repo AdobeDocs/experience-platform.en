@@ -16,6 +16,8 @@ Note the following details that are specific to [!DNL Google Ad Manager] destina
 
 * Activated audiences are created programmatically in the [!DNL Google] platform.
 * [!DNL Platform] does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
+* After mapping a segment to a [!DNL Google Ad Manager] destination, the segment name appears immediately in the [!DNL Google Ad Manager] user interface.
+* Segment population needs 24-48 hours to appear in [!DNL Google Ad Manager]. Additionally, segments must have an audience size of at least 50 profiles in order to be displayed in [!DNL Google Ad Manager]. Segments with audience sizes smaller than 50 profiles will not be populated in [!DNL Google Ad Manager].
 
 ## Supported Identities {#supported-identities}
 
@@ -50,18 +52,10 @@ If you are looking to create your first destination with [!DNL Google Ad Manager
 
 ### Allow-listing {#allow-listing}
 
->[!NOTE]
->
->Allow-listing is mandatory before setting up your first [!DNL Google Ad Manager] destination in Platform. Please ensure the allow-listing process described below has been completed by [!DNL Google] before creating a destination.
->The exception to this rule is for [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) customers. If you have already created a connection to this Google destination in Audience Manager, then it is not necessary to go through the allow-listing process again and you can proceed to the next steps.
+Allow-listing is mandatory before setting up your first [!DNL Google Ad Manager] destination in Platform. Make sure to complete the allow-listing process described below, before creating your destination.
 
-Before creating the [!DNL Google Ad Manager] destination in Platform, you must contact [!DNL Google] for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact [!DNL Google] and provide the following information:
-
-* **Account ID**: Adobe’s account ID with Google. Account ID: 87933855.
-* **Customer ID**: Adobe’s customer account ID with Google. Customer ID: 89690775.
-* **Network code**: This is your [!DNL Google Ad Manager] network identifier, found under **[!UICONTROL Admin > Global settings]** in the Google interface, as well as in the URL.
-* **Audience Link ID**: This is a specific identifier associated with your [!DNL Google Ad Manager] network (not your [!DNL Network code]), also found under **[!UICONTROL Admin > Global settings]** in the Google interface.
-* Your account type. DFP by Google or AdX buyer.
+1. Follow the steps described in the [Google Ad Manager documentation](https://support.google.com/admanager/answer/3289669?hl=en) to add Adobe as a linked Data Management Platform (DMP).
+2. In the [!DNL Google Ad Manager] interface, go to **[!UICONTROL Admin]** > **[!UICONTROL Global Settings]** > **[!UICONTROL Network Settings]**, and enable the **[!UICONTROL API Access]** slider.
 
 ## Connect to the destination {#connect}
 
@@ -77,10 +71,11 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
+*  **[!UICONTROL Account ID]**: Enter your [!DNL Audience Link ID] from your [!DNL Google] account. This is a specific identifier associated with your [!DNL Google Ad Manager] network (not your [!DNL Network code]). You can find this under **[!UICONTROL Admin > Global settings]** in the [!DNL Google Ad Manager] interface.
 *  **[!UICONTROL Account Type]**: Select an option, depending on your account with Google:
    * Use `DFP by Google` for [!DNL DoubleClick] for Publishers
    * Use `AdX buyer` for [!DNL Google AdX]
-*  **[!UICONTROL Account ID]**: Fill in your Audience Link ID with [!DNL Google].
+
 
 >[!NOTE]
 >
@@ -103,3 +98,12 @@ See [Activate audience data to streaming segment export destinations](../../ui/a
 ## Exported data {#exported-data}
 
 To verify if data has been exported successfully to the [!DNL Google Ad Manager] destination, check your [!DNL Google Ad Manager] account. If activation was successful, audiences are populated in your account.
+
+## Troubleshooting {#troubleshooting}
+
+In case you encounter any errors while using this destination and need to reach out to either Adobe or Google, keep the following IDs at hand.
+
+These are Adobe's Google Account IDs:
+
+* **[!UICONTROL Account ID]**: 87933855
+* **[!UICONTROL Customer ID]**: 89690775

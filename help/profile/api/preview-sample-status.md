@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
 title: Preview Sample Status (Profile Preview) API Endpoint
-description: Using the preview sample status endpoint, part of the Real-time Customer Profile API, you can preview the latest successful sample of your Profile data, list profile distribution by dataset and by identity, and generate reports showing dataset overlap, identity overlap, and unknown profiles.
+description: The preview sample status endpoint of the Real-Time Customer Profile API allows you to preview the latest successful sample of your Profile data, list profile distribution by dataset and by identity, and generate reports showing dataset overlap, identity overlap, and unstitched profiles.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
 ---
 # Preview sample status endpoint (Profile preview)
 
-Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build a robust, unified profile for each of your individual customers. As data is ingested into Platform, a sample job is run to update the profile count and other Real-time Customer Profile data-related metrics. 
+Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build a robust, unified profile for each of your individual customers. As data is ingested into Platform, a sample job is run to update the profile count and other Real-Time Customer Profile data-related metrics. 
 
-The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate multiple reports in order to gain visibility into the composition of your organization's Profile Store. This guide walks through the steps required to view these metrics using the `/previewsamplestatus` API endpoint.
+The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-Time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate multiple reports in order to gain visibility into the composition of your organization's Profile Store. This guide walks through the steps required to view these metrics using the `/previewsamplestatus` API endpoint.
 
 >[!NOTE]
 >
@@ -16,7 +16,7 @@ The results of this sample job can be viewed using the `/previewsamplestatus` en
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoint used in this guide is part of the [[!DNL Real-Time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Profile fragments vs merged profiles
 
@@ -26,11 +26,11 @@ Each individual customer profile is composed of multiple profile fragments that 
 
 When profile fragments are ingested into Platform, they are merged together (based on a merge policy) in order to create a single profile for that customer. Therefore, the total number of profile fragments is likely to always be higher than the total number of merged profiles, as each profile is composed of multiple fragments.
 
-To learn more about profiles and their role within Experience Platform, please begin by reading the [Real-time Customer Profile overview](../home.md).
+To learn more about profiles and their role within Experience Platform, please begin by reading the [Real-Time Customer Profile overview](../home.md).
 
 ## How the sample job is triggered
 
-As data enabled for Real-time Customer Profile is ingested into [!DNL Platform], it is stored within the Profile data store. When the ingestion of records into the Profile Store increases or decreases the total profile count by more than 5%, a sampling job is triggered to update the count. The way in which the sample is triggered depends on the type of ingestion being used:
+As data enabled for Real-Time Customer Profile is ingested into [!DNL Platform], it is stored within the Profile data store. When the ingestion of records into the Profile Store increases or decreases the total profile count by more than 5%, a sampling job is triggered to update the count. The way in which the sample is triggered depends on the type of ingestion being used:
 
 * For **streaming data workflows**, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a sample job is automatically triggered to update the count. 
 * For **batch ingestion**, within 15 minutes of successfully ingesting a batch into the Profile Store, if the 5% increase or decrease threshold is met, a job is run to update the count. Using the Profile API you can preview the latest successful sample job, as well as list profile distribution by dataset and by identity namespace.
@@ -297,7 +297,7 @@ The response includes a `data` array, with individual objects containing the det
 
 ## Generate the dataset overlap report
 
-The dataset overlap report provides visibility into the composition of your organization's Profile Store by exposing the datasets that contribute most to your addressable audience (merged profiles). In addition to providing insights into your data, this report can help you take actions to optimize license usage, such as setting a TTL for certain datasets.
+The dataset overlap report provides visibility into the composition of your organization's Profile Store by exposing the datasets that contribute most to your addressable audience (merged profiles). In addition to providing insights into your data, this report can help you take actions to optimize license usage, such as setting expirations for certain datasets.
 
 You can generate the dataset overlap report by performing a GET request to the `/previewsamplestatus/report/dataset/overlap` endpoint.
 
@@ -363,7 +363,7 @@ This report provides the following information:
 * There are 107 profiles that are comprised only of data from dataset `5eeda0032af7bb19162172a7`.
 * There is a total of 454,642 profiles in the organization.
 
-## Generate the identity namespace overlap report
+## Generate the identity namespace overlap report {#identity-overlap-report}
 
 The identity namespace overlap report provides visibility into the composition of your organization's Profile Store by exposing the identity namespaces that contribute most to your addressable audience (merged profiles). This includes both the standard identity namespaces provided by Adobe, as well as the custom identity namespaces defined by your organization.
 
@@ -459,25 +459,25 @@ This report provides the following information:
 * There are 24 profiles that are composed of `AAID` and `ECID` identity namespaces.
 * There are 6,565 profiles that include only an `ECID` identity.
 
-## Generate the unknown profiles report
+## Generate the unstitched profiles report
 
-You can gain further visibility into the composition of your organization's Profile Store through the unknown profiles report. An "unknown profile" refers to any profile that is both unstitched and inactive for a given time period. An "unstitched" profile is a profile that contains only one profile fragment, while an "inactive" profile is any profile that has not added new events for the specified time period. The unknown profiles report provides a breakdown of profiles for a period of 7, 30, 60, 90, and 120 days.
+You can gain further visibility into the composition of your organization's Profile Store through the unstitched profiles report. An "unstitched" profile is a profile that contains only one profile fragment. An "unknown" profile is a profile that is associated with pseudonymous identity namespaces such as `ECID` and `AAID`. Unknown profiles are inactive, which means they have not added new events for the specified time period. The unstitched profiles report provides a breakdown of profiles for a period of 7, 30, 60, 90, and 120 days.
 
-You can generate the unknown profiles report by performing a GET request to the `/previewsamplestatus/report/unknownProfiles` endpoint.
+You can generate the unstitched profiles report by performing a GET request to the `/previewsamplestatus/report/unstitchedProfiles` endpoint.
 
 **API format**
 
 ```http
-GET /previewsamplestatus/report/unknownProfiles
+GET /previewsamplestatus/report/unstitchedProfiles
 ```
 
 **Request**
 
-The following request returns the unknown profiles report.
+The following request returns the unstitched profiles report.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unknownProfiles \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unstitchedProfiles \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -485,18 +485,18 @@ curl -X GET \
 
 **Response**
 
-A successful request returns HTTP Status 200 (OK) and the unknown profiles report. 
+A successful request returns HTTP Status 200 (OK) and the unstitched profiles report. 
 
 >[!NOTE]
 >
->For the purposes of this guide, the report has been truncated to include only `"120days"` and "`7days`" time periods. The full unknown profiles report provides a breakdown of profiles for a period of 7, 30, 60, 90, and 120 days.
+>For the purposes of this guide, the report has been truncated to include only `"120days"` and "`7days`" time periods. The full unstitched profiles report provides a breakdown of profiles for a period of 7, 30, 60, 90, and 120 days.
 
 ```json
 {
   "data": {
       "totalNumberOfProfiles": 63606,
       "totalNumberOfEvents": 130977,
-      "unknownProfiles": {
+      "unstitchedProfiles": {
           "120days": {
               "countOfProfiles": 1644,
               "eventsAssociated": 26824,
@@ -541,16 +541,16 @@ A successful request returns HTTP Status 200 (OK) and the unknown profiles repor
 
 |Property|Description|
 |---|---|
-|`data`|The `data` object contains the information returned for the unknown profiles report.|
-|`totalNumberOfProfiles`|The total count of unique profiles in the Profile Store. This is equivalent to the addressable audience count. It includes both known and unknown profiles.|
+|`data`|The `data` object contains the information returned for the unstitched profiles report.|
+|`totalNumberOfProfiles`|The total count of unique profiles in the Profile Store. This is equivalent to the addressable audience count. It includes both known and unstitched profiles.|
 |`totalNumberOfEvents`|The total number of ExperienceEvents in the Profile Store.|
-|`unknownProfiles`|An object containing a breakdown of unknown profiles (unstitched and inactive) by time period. The unknown profiles report provides a breakdown of profiles for 7, 30, 60, 90, and 120 day time periods.|
-|`countOfProfiles`|The count of unknown profiles for the time period or the count of unknown profiles for the namespace. |
+|`unstitchedProfiles`|An object containing a breakdown of unstitched profiles by time period. The unstitched profiles report provides a breakdown of profiles for 7, 30, 60, 90, and 120 day time periods.|
+|`countOfProfiles`|The count of unstitched profiles for the time period or the count of unstitched profiles for the namespace. |
 |`eventsAssociated`|The number of ExperienceEvents for the time range or the number of events for the namespace.|
-|`nsDistribution`|An object containing individual identity namespaces with the distribution of unknown profiles and events for each namespace. Note: Adding together the total `countOfProfiles` for each identity namespace in the `nsDistribution` object equals the `countOfProfiles` for the time period. The same is true for `eventsAssociated` per namespace and the total `eventsAssociated` per time period.|
+|`nsDistribution`|An object containing individual identity namespaces with the distribution of unstitched profiles and events for each namespace. Note: Adding together the total `countOfProfiles` for each identity namespace in the `nsDistribution` object equals the `countOfProfiles` for the time period. The same is true for `eventsAssociated` per namespace and the total `eventsAssociated` per time period.|
 |`reportTimestamp`|The timestamp of the report.|
 
-### Interpreting the unknown profiles report
+### Interpreting the unstitched profiles report
 
 The results of the report can provide insight into how many unstitched and inactive profiles your organization has within its Profile Store.
 
@@ -580,9 +580,9 @@ Consider the following excerpt from the `data` object:
 This report provides the following information:
 
 * There are 1,782 profiles that contain only one profile fragment and have no new events for the past seven days.
-* There are 29,151 ExperienceEvents associated with the 1,782 unknown profiles.
-* There are 1,734 unknown profiles containing a single profile fragment from the identity namespace of ECID.
-* There are 28,591 events associated with the 1,734 unknown profiles that contain a single profile fragment from the identity namespace of ECID.
+* There are 29,151 ExperienceEvents associated with the 1,782 unstitched profiles.
+* There are 1,734 unstitched profiles containing a single profile fragment from the identity namespace of ECID.
+* There are 28,591 events associated with the 1,734 unstitched profiles that contain a single profile fragment from the identity namespace of ECID.
 
 ## Next steps
 

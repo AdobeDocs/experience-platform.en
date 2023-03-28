@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 title: Configure authentication specifications for Self-Serve Sources (Batch SDK)
-topic-legacy: overview
 description: This document provides an overview of the configurations you need to prepare in order to use Self-Serve Sources (Batch SDK).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 ---
@@ -99,7 +98,6 @@ An OAuth 2 refresh code allows for secure access to an application by generating
       }
     },
     "required": [
-      "host",
       "accessToken"
     ]
   }
@@ -131,7 +129,7 @@ An OAuth 2 refresh code allows for secure access to an application by generating
 
 ### Basic authentication
 
-Basic authentication is an authentication type that allows you to access your application by using a combination of your application's host URL, your account username, and your account password.
+Basic authentication is an authentication type that allows you to access your application by using a combination of your account username and your account password.
 
 ```json
 {
@@ -142,10 +140,6 @@ Basic authentication is an authentication type that allows you to access your ap
     "type": "object",
     "description": "defines auth params required for connecting to rest service.",
     "properties": {
-      "host": {
-        "type": "string",
-        "description": "Enter resource url host path"
-      },
       "username": {
         "description": "Username to connect rest endpoint.",
         "type": "string"
@@ -157,7 +151,6 @@ Basic authentication is an authentication type that allows you to access your ap
       }
     },
     "required": [
-      "host",
       "username",
       "password"
     ]
@@ -174,10 +167,9 @@ Basic authentication is an authentication type that allows you to access your ap
 | `authSpec.spec.type` | Defines the data type of the schema. | `object` |
 | `authSpec.spec.description` | Displays further information specific to your authentication type. |
 | `authSpec.spec.properties` | Contains information on the credentials used for the authentication. |
-| `authSpec.spec.properties.host` | The host URL of your application. |
 | `authSpec.spec.properties.username` | The account username associated with your application. |
 | `authSpec.spec.properties.password` | The account password associated with your application. |
-| `authSpec.spec.required` | Specifies the fields required as mandatory values to be inputted in Platform. | `host` |
+| `authSpec.spec.required` | Specifies the fields required as mandatory values to be inputted in Platform. | `username` |
 
 {style="table-layout:auto"}
 
@@ -195,10 +187,6 @@ The following is an example of a completed authentication specification using a 
         "type": "object",
         "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path"
-          },
           "authorizationTestUrl": {
             "description": "Authorization test url to validate accessToken.",
             "type": "string"
@@ -210,7 +198,6 @@ The following is an example of a completed authentication specification using a 
           }
         },
         "required": [
-          "host",
           "accessToken"
         ]
       }
@@ -223,10 +210,6 @@ The following is an example of a completed authentication specification using a 
         "type": "object",
         "description": "defines auth params required for connecting to rest service.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path."
-          },
           "username": {
             "description": "Username to connect mailChimp endpoint.",
             "type": "string"
@@ -238,7 +221,6 @@ The following is an example of a completed authentication specification using a 
           }
         },
         "required": [
-          "host",
           "username",
           "password"
         ]

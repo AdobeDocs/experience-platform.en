@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 title: Configure source specifications for Self-Serve Sources (Batch SDK)
-topic-legacy: overview
 description: This document provides an overview of the configurations you need to prepare in order to use Self-Serve Sources (Batch SDK).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
 ---
@@ -42,7 +41,8 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
           "properties": {
             "host": {
               "type": "string",
-              "description": "Enter resource url host path."
+              "description": "Enter resource url host path.",
+              "example": "https://{domain}.api.mailchimp.com"
             },
             "path": {
               "type": "string",
@@ -63,6 +63,7 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
             }
           },
           "required": [
+            "host",
             "path",
             "method"
           ]
@@ -330,6 +331,7 @@ The following is a completed source specification using [!DNL MailChimp Members]
         }
       },
       "urlParams": {
+        "host": "https://{domain}.api.mailchimp.com",
         "path": "/3.0/lists/${listId}/members",
         "method": "GET"
       },
