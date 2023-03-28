@@ -49,6 +49,8 @@ The example configuration below shows a best effort aggregation configuration. F
 |`bestEffortAggregation.maxUsersPerRequest` | Integer | Experience Platform can aggregate multiple exported profiles in a single HTTP call. <br><br>This value indicates the maximum number of profiles that your endpoint should receive in a single HTTP call. Note that this is a best effort aggregation. For example, if you specify the value 100, Platform might send any number of profiles smaller than 100 on a call. <br><br> If your server does not accept multiple users per request, set this value to `1`.|
 |`bestEffortAggregation.splitUserById` | Boolean | Use this flag if the call to the destination should be split by identity. Set this flag to `true` if your server only accepts one identity per call, for a given identity namespace. |
 
+{style="table-layout:auto"}
+
 >[!TIP]
 >
 >Use best effort aggregation if your API endpoint accepts fewer than 100 profiles per API call.
@@ -102,6 +104,7 @@ The example configuration below shows a configurable aggregation configuration. 
 |`configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolean | Set this paramter to `true` if you want the exported profiles to be aggregated into groups based on a single identity (GAID, IDFA, phone numbers, email, etc.). |
 |`configurableAggregation.aggregationKey.groups` | Array | Create lists of identity groups if you want to group profiles exported to your destination by groups of identity namespaces. For example, you could combine profiles that contain the IDFA and GAID mobile identifiers into one call to your destination and emails into another by using the configuration shown in the example above. |
 
+{style="table-layout:auto"}
 
 ## Next steps {#next-steps}
 

@@ -49,6 +49,8 @@ When creating your audience metadata configuration, you can use the parameters d
 |`mapUserInput` | Boolean | Enables or disables user input for the [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) value in the destination activation workflow. If set to `true`, `audienceTemplateId` cannot be present. |
 |`audienceTemplateId` | Boolean | The `instanceId` of the [audience metadata template](../../metadata-api/create-audience-template.md) used for your destination. |
 
+{style="table-layout:auto"}
+
 ## Next steps {#next-steps}
 
 After reading this article, you should have a better understanding of how you can configure audience metadata for your destination.
