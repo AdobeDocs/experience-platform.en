@@ -12,6 +12,8 @@ Amazon Ads offers a range of options to help you achieve your advertising goals 
 
 The Amazon Ads integration with Adobe Experience Platform provides turn-key integration to Amazon Ads products, including the Amazon DSP (ADSP). Using the Amazon Ads destination in Adobe Experience Platform, users are able to define advertiser audiences for targeting and activation on the Amazon DSP.  
 
+This connection supports Audience creation in the following Amazon Marketplaces: `US`, `CA`, `MX`, `BR`.
+
 >[!IMPORTANT]
 >
 >This documentation page was created by the *Amazon Ads* team. For any inquiries or update requests, please contact them directly at *`amc-support@amazon.com`.*
