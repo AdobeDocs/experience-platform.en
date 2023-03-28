@@ -20,7 +20,7 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 | Feature | Description |
 | --- | --- |
-| New functions for encoding and decoding URL strings | <ul><li>The `get_url_encoded` function takes a URL as input and replaces or encodes special characters with ASCII characters.</li><li>The `get_url_decoded` function takes a URL as input and decodes ASCII characters into special characters.</li></ul> For more information, read the [Data Prep functions guide](../../data-prep/functions.md). For a comprehensive list of reserved characters and their corresponding encoded characters, read the guide on [special characters](../../data-prep/functions.md#special-characters).
+| New functions for encoding and decoding URL strings | <ul><li>The `get_url_encoded` function takes a URL as input and replaces or encodes special characters with ASCII characters.</li><li>The `get_url_decoded` function takes a URL as input and decodes ASCII characters into special characters.</li></ul> For more information, read the [Data Prep functions guide](../../data-prep/functions.md). For a comprehensive list of reserved characters and their corresponding encoded characters, read the guide on [special characters](../../data-prep/functions.md#special-characters).|
 
 For more information on Data Prep, please read the [Data Prep overview](../../data-prep/home.md).
 
