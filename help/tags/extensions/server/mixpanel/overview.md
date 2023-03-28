@@ -128,7 +128,7 @@ Select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL 
 
 ## Set up event forwarding data elements
 
-After installing and configuring the extension, the next step is to create event forwarding data elements that will capture the necessary data constructs that will be sent to [!DNL Mixpanel].
+After installing the extension, the next step is to create event forwarding data elements that will capture the necessary data constructs that will be sent to [!DNL Mixpanel].
 
 ### Create a `distinctId` data element
 
@@ -182,11 +182,7 @@ In [!DNL Mixpanel], an identity cluster contains a collection of `distinct_id` v
 >
 >Confirm that you have enabled the [[!DNL Mixpanel] identity merge feature](#prerequisites-mixpanel) to ensure that identity clusters are resolved appropriately.
 
-Accordingly, the [!DNL Mixpanel] event forwarding extension supports the following action types for your rule configurations:
-
-* **[!UICONTROL Track Event]**
-* **[!UICONTROL Mixpanel Alias]**
-* **[!UICONTROL Mixpanel Identify]**
+Accordingly, the [!DNL Mixpanel] event forwarding extension supports the **[!UICONTROL Track Event]** action type for your rule configuration.
 
 >[!IMPORTANT]
 >
