@@ -17,7 +17,12 @@ Identity fields are a crucial component in how customer identity graphs are cons
   * [Identity namespaces](../../../identity-service/namespaces.md): Identity namespaces define the different types of identity information that can relate to a single person, and are a required component for each identity field.
 * [Real-Time Customer Profile](../../../profile/home.md): Leverages customer identity graphs to provide a unified consumer profile based on aggregated data from multiple sources, updated in near-real-time.
 
-## Define an identity field
+## Define an identity field {#define-a-identity-field}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_identityField_primaryIdentityRestriction"
+>title="Restrictions to primary identity"
+>abstract="This schema uses a field group intended for use in a specific source connection. The connection requires identityMap to be used as primary identity and has set it automatically." 
 
 When [defining a new field](./overview.md#define) in the UI, you can set it as an identity field by selecting the **[!UICONTROL Identity]** checkbox in the right rail. 
 

@@ -40,5 +40,6 @@ feature: Data Ingestion
   - [Data ingestion notifications](quality/subscribe-events.md)
 - [Guardrails for data ingestion](guardrails.md)
 - [Source connectors](source-connectors.md)
-- [API reference](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
+- [Batch Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [Streaming Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

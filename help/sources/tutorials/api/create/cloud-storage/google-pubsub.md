@@ -25,6 +25,7 @@ In order for [!DNL Flow Service] to connect to [!DNL PubSub], you must provide v
 | `projectId` | The project ID required to authenticate [!DNL PubSub]. |
 | `credentials` | The credential or key required to authenticate [!DNL PubSub]. |
 | `topicId` | The ID for the [!DNL PubSub] resource that represents a feed of messages. You must specify a topic ID if you want to provide access to a specific stream of data in your [!DNL Google PubSub] source. |
+| `subscriptionId` | The ID of your [!DNL PubSub] subscription. In [!DNL PubSub], subscriptions allow you to receive messages, by subscribing to the topic in which messages have been published to. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source target connections. The [!DNL PubSub] connection specification ID is: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 For more information about these values, see this [[!DNL PubSub] authentication](https://cloud.google.com/pubsub/docs/authentication) document. To use service account-based authentication, see this [[!DNL PubSub] guide on creating service accounts](https://cloud.google.com/docs/authentication/production#create_service_account) for steps on how to generate your credentials.
@@ -73,7 +74,8 @@ curl -X POST \
           "params": {
               "projectId": "acme-project",
               "credentials": "{CREDENTIALS}",
-              "topicID": "acmeProjectAPI"
+              "topicId": "acmeProjectAPI",
+              "subscriptionId": "acme-project-api-new"
           }
       },
       "connectionSpec": {
@@ -87,7 +89,8 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.projectId` | The project ID required to authenticate [!DNL PubSub]. |
 | `auth.params.credentials` | The credential or key required to authenticate [!DNL PubSub]. |
-| `auth.params.topicID` | The topic ID of your [!DNL PubSub] source that you want to provide access to. |
+| `auth.params.topicId` | The topic ID of your [!DNL PubSub] source that you want to provide access to. |
+| `auth.params.subscriptionId` | The ID of the subscription against your [!DNL PubSub] topic. |
 | `connectionSpec.id` | The [!DNL PubSub] connection spec ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 **Response**

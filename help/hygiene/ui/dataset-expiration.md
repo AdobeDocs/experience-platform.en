@@ -3,11 +3,16 @@ title: Manage Dataset Expirations
 description: Learn how to schedule a dataset expiration in the Adobe Experience Platform UI.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 ---
-# Manage dataset expirations
+# Manage dataset expirations {#dataset-expiration}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_scheduleDatasetExpiration_description"
+>title="Description"
+>abstract=""
 
 >[!IMPORTANT]
 >
->Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**. These capabilities are due for general release in the near future. For more information on their upcoming availability, please speak to your Adobe service representative. You can, however, immediately [delete datasets through the [!UICONTROL Datasets] UI](../../catalog/datasets/user-guide.md#delete).
 
 The [[!UICONTROL Data Hygiene] workspace](./overview.md) in the Adobe Experience Platform UI allows you to schedule expirations for datasets. When a dataset reaches its expiration date, the data lake, Identity Service, and Real-Time Customer Profile begin separate processes to remove the dataset's contents from their respective services. Once the data is deleted from all three services, the expiration is marked as complete.
 
@@ -17,7 +22,12 @@ The [[!UICONTROL Data Hygiene] workspace](./overview.md) in the Adobe Experience
 
 This document covers how to schedule and manage dataset expirations in the Platform UI.
 
-## Schedule a dataset expiration
+## Schedule a dataset expiration {#schedule-dataset-expiration}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
+>title="Instructions"
+>abstract=""
 
 To create a new request, select **[!UICONTROL Create request]** from the main page in the workspace.
 
