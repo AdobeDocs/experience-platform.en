@@ -25,11 +25,9 @@ The [!UICONTROL Getting started with Real-Time Customer Profile] widget is divid
 
 ![The Platform UI home page displaying the getting started widget](assets/platform-home/getting-started-widget.png)
 
-If there is no data in the system when you log in to Real-Time CDP, the dashboard on the home page does not appear. In this case, the home page provides learning material for a first time user experience. As data is collected--in other words, as <!--sources-->datasets, profiles, segments, and destinations are created and data flows into the system--the dashboard automatically updates to display information about that data<!-- in metric cards-->. 
-
 ## Metrics dashboard
 
-The dashboard is divided into two sections:
+The metrics dashboard displays up-to-date information on your Experience Platform data. The dashboard is divided into two sections:
 
 ### The leaderboard
 
