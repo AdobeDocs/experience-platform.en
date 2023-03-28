@@ -12,7 +12,8 @@ The ETL integration guide outlines general steps for creating high-performance, 
 
 - [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
-- [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
+- [[!DNL Batch Ingestion]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [[!DNL Streaming Ingestion]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
 - [Authentication and Authorization for Experience Platform APIs](https://www.adobe.com/go/platform-api-authentication-en)
 - [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
@@ -484,7 +485,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 }
 ```
 
-Data will be written to [!DNL Experience Platform] using [Data Ingestion API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).  Writing of data is an asynchronous process. When data is written to Adobe Experience Platform, a batch is created and marked as a success only after data is fully written.
+Data will be written to [!DNL Experience Platform] using the [Batch Ingestion API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).  Writing of data is an asynchronous process. When data is written to Adobe Experience Platform, a batch is created and marked as a success only after data is fully written.
 
 Data in [!DNL Experience Platform] should be written in the form of Parquet files.
 
@@ -573,7 +574,7 @@ Validation can be performed for logical XDM types, using attributes such as `min
 
 ### Create a batch
 
-Once the data is processed, the ETL tool will write the data back to [!DNL Experience Platform] using the [Batch Ingestion API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Before data can be added to a dataset, it must be linked to a batch which will later be uploaded into a specific dataset.
+Once the data is processed, the ETL tool will write the data back to [!DNL Experience Platform] using the [Batch Ingestion API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Before data can be added to a dataset, it must be linked to a batch which will later be uploaded into a specific dataset.
 
 **Request**
 
