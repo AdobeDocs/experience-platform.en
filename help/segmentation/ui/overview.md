@@ -68,7 +68,6 @@ If breakdown is selected, the display shows a bar graph outlining the percentage
 | Status | Description |
 | ------ | ----------- |
 | Realized | A new profile within the segment. |
-| Existing | An existing profile which has remained within the segment. |
 | Exiting | An existing profile which is leaving the segment. |
 
 The churn represents the percentage of profiles that are changing within a segment definition compared to the last time the segment job ran, while the profile count represents the total number of profiles that qualify for the segment.

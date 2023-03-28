@@ -103,7 +103,7 @@ The following example shows what the `segmentMembership` attribute looks like fo
     "UPS": {
       "04a81716-43d6-4e7a-a49c-f1d8b3129ba9": {
         "timestamp": "2018-04-26T15:52:25+00:00",
-        "status": "existing"
+        "status": "realized"
       },
       "53cba6b2-a23b-454a-8069-fc41308f1c0f": {
         "lastQualificationTime": "2018-04-26T15:52:25+00:00",
@@ -123,7 +123,7 @@ The following example shows what the `segmentMembership` attribute looks like fo
 | Property | Description |
 | -------- | ----------- |
 | `lastQualificationTime` | The timestamp when the assertion of segment membership was made and the profile entered or exited the segment. |
-| `status` | The status of segment participation as part of the current request. Must be equal to one of the following known values: <ul><li>`existing`: Entity continues to be in the segment.</li><li>`realized`: Entity is entering the segment.</li><li>`exited`: Entity is exiting the segment.</li></ul> |
+| `status` | The status of segment participation as part of the current request. Must be equal to one of the following known values: <ul><li>`realized`: Entity is entering the segment.</li><li>`exited`: Entity is exiting the segment.</li></ul> |
 
 >[!NOTE]
 >
