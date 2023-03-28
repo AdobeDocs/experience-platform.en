@@ -16,11 +16,11 @@ The following document outlines the different required events, inputs, and outpu
 
 Here are the steps to build propensity models and identify target audiences for personalized marketing in Customer AI: 
 
-1. Brainstorm use cases – How would propensity models help to identify target audiences for personalized marketing? What are my business goals and corresponding tactics to achieve the goal? Where can propensity modeling fit? 
+1. Brainstorm use cases: How would propensity models help to identify target audiences for personalized marketing? What are my business goals and corresponding tactics to achieve the goal? Where can propensity modeling fit? 
 
-2. Prioritize use cases – Which are the highest priorities for the business?  
+2. Prioritize use cases: Which are the highest priorities for the business?  
 
-3. Build models in Customer AI – Watch this [quick tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intelligent-services/configure-customer-ai.html) and refer to our [UI guide](../customer-ai/user-guide/configure.md) for a step-by-step process to build a model. 
+3. Build models in Customer AI: Watch this [quick tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intelligent-services/configure-customer-ai.html) and refer to our [UI guide](../customer-ai/user-guide/configure.md) for a step-by-step process to build a model. 
 
 4. [Build segments](../customer-ai/user-guide/create-segment.md) using model results.
 
@@ -163,7 +163,7 @@ The following examples demonstrate the use of a simple formula which helps you d
 
 To decide the minimum length of data required: 
 
-1. The minimum data required to create features is 30 days. Compare the eligibility lookback window with 30 days: 
+- The minimum data required to create features is 30 days. Compare the eligibility lookback window with 30 days: 
 
     - If the eligibility lookback window is greater than 30 days, the data requirement = eligibility lookback window + outcome window. 
 
