@@ -177,11 +177,21 @@ The following table outlines how the UI behaves based on different combinations 
 
 For more information about the available permissions granted through Adobe Permissions, read the [access control overview](../access-control/home.md).
 
-### Attribute-based access control for sources
+### Attribute-based access control
 
 Attribute-based access control in Adobe Experience Platform allows administrators to control access to specific objects and/or capabilities based on attributes. 
 
 With attribute-based access control, you can apply mapping configurations to fields that you have permissions to. Furthermore, you cannot ingest data to a dataset if you do not have access to all fields in the dataset.
+
+#### Support for attribute-based access control in sources [!BADGE New feature]
+
+>[!TIP]
+>
+>Attribute-based access control works as follows: **roles** are created to categorize the types of users that interact with your Platform instance. **Labels** are applied to **roles** to designate the access of that given role. **Labels** are also applied to resources like schema fields and segments. In order for a user to have access to certain schema fields and segments, they must be added to *a role with the same label that is assigned to the queried resource*. For more information, read the [attribute-based access control end-to-end guide](../access-control/abac/end-to-end-guide.md).
+
+- Apply labels to schema fields to define access to specific schema fields in your organization. Once access to specific schema fields are established, users will only be able to create mappings for the fields that they have access to.
+- Users without the appropriate roles will not be able to create or update dataflows with mappings that involve inaccessible schema fields. Furthermore, unauthorized users cannot update, delete, enable, or disable existing dataflows with inaccessible schema fields.
+- Additionally, a dataflow must have the exact same schema ID and version in its mapping, target dataset, and target connection.
 
 For more information on attribute-based access control, read the [attribute-based access control overview](../access-control/abac/overview.md).
 
