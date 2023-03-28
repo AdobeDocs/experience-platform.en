@@ -91,7 +91,7 @@ To create a static schema with profile attributes, define the target attributes 
 |`useCustomerSchemaForAttributeMapping`| Boolean | Optional | Enables or disables the mapping of attributes from the customer schema to the attributes that you define in the `profileFields` array. <ul><li>If set to `true`, users only see the source column in the mapping field. `profileFields` are not applicable in this case.</li><li>If set to `false`, users can map source attributes from their schema to the attributes you defined in the `profileFields` array.</li></ul> The default value is `false`.|
 |`profileRequired` | Boolean | Optional | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination platform. |
 |`segmentRequired` | Boolean | Required | This parameter is required by Destination SDK and should always be set to `true`. |
-|`identityRequired` | Boolean | Required | Set to `true` if users should be able to map [identity types](identity-mapping-configuration.md) from Experience Platform to the attributes you defined in the `profileFields` array . |
+|`identityRequired` | Boolean | Required | Set to `true` if users should be able to map [identity types](identity-namespace-configuration.md) from Experience Platform to the attributes you defined in the `profileFields` array . |
 
 {style="table-layout:auto"}
 
@@ -139,7 +139,7 @@ In a dynamic schema configuration, the `profileFields` array is replaced by the 
 | `dynamicEnum.responseFormat` | String | Required | Always set to `SCHEMA` when defining a dynamic schema.|
 |`profileRequired` | Boolean | Optional | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination platform. |
 |`segmentRequired` | Boolean | Required | This parameter is required by Destination SDK and should always be set to `true`. |
-|`identityRequired` | Boolean | Required | Set to `true` if users should be able to map [identity types](identity-mapping-configuration.md) from Experience Platform to the attributes you defined in the `profileFields` array . |
+|`identityRequired` | Boolean | Required | Set to `true` if users should be able to map [identity types](identity-namespace-configuration.md) from Experience Platform to the attributes you defined in the `profileFields` array . |
 
 {style="table-layout:auto"}
 
@@ -234,7 +234,7 @@ To learn more about the other destination components, see the following articles
 * [OAuth2 authentication](oauth2-authentication.md)
 * [UI attributes](ui-attributes.md)
 * [Customer data fields](customer-data-fields.md)
-* [Identity mapping configuration](identity-mapping-configuration.md)
+* [Identity namespace configuration](identity-namespace-configuration.md)
 * [Destination delivery](destination-delivery.md)
 * [Audience metadata configuration](audience-metadata-configuration.md)
 * [Aggregation policy](aggregation-policy.md)

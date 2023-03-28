@@ -107,7 +107,7 @@ To learn more about the other destination components, see the following articles
 * [OAuth2 authentication](oauth2-authentication.md)
 * [Customer data fields](customer-data-fields.md)
 * [Schema configuration](schema-configuration.md)
-* [Identity mapping configuration](identity-mapping-configuration.md)
+* [Identity namespace configuration](identity-namespace-configuration.md)
 * [Destination delivery](destination-delivery.md)
 * [Audience metadata configuration](audience-metadata-configuration.md)
 * [Aggregation policy](aggregation-policy.md)
