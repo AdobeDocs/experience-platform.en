@@ -40,9 +40,7 @@ The leaderboard shows the current total number of schemas, datasets, profiles, a
 * **Total schemas**: The **Total Schemas** counter displays the number of schemas in the system. This counter is updated when a schema is created. For more information, read the [schemas overview](../xdm/home.md).
 * **Total datasets**: The **Total Datasets** counter shows the number of datasets in the system and the amount of data in [!DNL Platform]. This counter is updated when a dataset is created. For more information about datasets, read the [datasets overview](../catalog/datasets/overview.md).
 * **Total profiles**: The **Profiles** count shows the total number of people with profiles in the [!DNL Real-Time Customer Profile]. It does not include profile fragments. This is your total addressable audience. This count uses the default [merge policy](profile/merge-policies.md) as set in the merge policy configuration in Unified Profile. The number of profiles is updated once every 24 hours. For more information about profiles, read the [Real-Time Customer Profile overview](../profile/home.md).
-* **Total segments**: **Segments** shows the total number of segments created for the organization. This number is updated when new segments are created.
-
-For more information about segments, see [Segmentation Service overview](segmentation/segmentation-overview.md).
+* **Total segments**: **Segments** shows the total number of segments created for the organization. This number is updated when new segments are created. For more information about segments, read the [Segmentation Service overview](../segmentation/home.md).
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
@@ -54,13 +52,22 @@ Recent items lists the five most recent datasets, sources, segments, and destina
 
 ![The recent items section in the Platform UI home page.](assets/platform-home/recent-items.png)
 
-* **Recent datasets**: The **[!UICONTROL Recent datasets]** card shows the five most recent datasets created within the organization. This list is updated when a new dataset is created. Select a dataset to view the details for that item, or **[!UICONTROL View all]** to see the list of datasets. From there, you can select a specific source for details. For more information about datasets, see the [datasets overview](../catalog/datasets/overview.md).
-* **Recent sources**: The **[!UICONTROL Recent sources]** metric card shows the five most recent sources created within the organization. This list is updated when a new source is created. Select a source to view the details for that item, or **[!UICONTROL View all]** to see the list of sources. From there, you can select a specific source for details. For more information about sources, see [Sources overview](sources/sources-overview.md).
-* **Recent segments**: The **[!UICONTROL Recent segments]** metric card shows the five most recent segments created within the organization. This list is updated when a new segment is created. Select a segment to view the details for that item, or **[!UICONTROL View all]** to see information about more segments. For more information about segments, see [Segmentation Service overview](segmentation/segmentation-overview.md).
-* **Recent destinations**: The **[!UICONTROL Recent destinations]** metric card shows the five most recent destinations created within the organization. This list is updated when a new destination is created. Select a destination to view the details for that item, or **[!UICONTROL View all]** to see information about more destinations. For more information about destinations, see [Destinations overview](destinations/overview.md).
+* **Recent datasets**: The **[!UICONTROL Recent datasets]** card shows the five most recent datasets created within the organization. This list is updated when a new dataset is created. Select a dataset to view the details for that item or select **[!UICONTROL View all]** for a list of datasets. From there, you can select a specific source for details. For more information about datasets, see the [datasets overview](../catalog/datasets/overview.md).
+* **Recent sources**: The **[!UICONTROL Recent sources]** metric card shows the five most recent sources created within the organization. This list is updated when a new source is created. Select a source to view the details for that item, or select **[!UICONTROL View all]** for a list of sources. From there, you can select a specific source for details. For more information about sources, see [Sources overview](../sources/home.md).
+* **Recent segments**: The **[!UICONTROL Recent segments]** metric card shows the five most recent segments created within the organization. This list is updated when a new segment is created. Select a segment to view the details for that item or select **[!UICONTROL View all]** for a list of segments. For more information about segments, see [Segmentation Service overview](../segmentation/home.md).
+* **Recent destinations**: The **[!UICONTROL Recent destinations]** metric card shows the five most recent destinations created within the organization. This list is updated when a new destination is created. Select a destination to view the details for that item or select **[!UICONTROL View all]** for a list of destinations. For more information, read the [destinations overview](../destinations/home.md).
 
 ## Resources
 
+Finally, the resources widget provides you with additional documentation resources that you can refer to. These include:
+
+* [Understanding schemas](../xdm/schema/composition.md)
+* [Connecting sources](../sources/home.md)
+* [How to populate your Real-Time Customer Profile](../profile/home.md)
+* [Connecting destinations](../destinations/home.md)
+* [Manage access](../access-control/abac/overview.md)
+
+![The resources section in the Platform UI home page.](assets/platform-home/resources.png)
 
 <!-- ### Successful profile records
 
