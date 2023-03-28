@@ -31,7 +31,7 @@ For more information on Data Prep, please read the [Data Prep overview](../../da
 **New or updated features**
 
 | Feature | Description |
-| ------- | ----------- |
+| --- | --- |
 | Profile metrics | To give you a more accurate representation of profile metrics, membership breakdown and churn metrics are being combined and are now calculated over a 24-hour period. More information available in the [Segmentation UI guide](../../segmentation/ui/overview.md) |
 
 {style="table-layout:auto"}
