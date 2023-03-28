@@ -12,7 +12,7 @@ description: This Adobe Experience Platform event forwarding extension sends Ado
 * Target specific users for marketing and promotional campaigns to increase the number of repeat customers.
 * Study user behavior and patterns to target specific audiences with customized messages, which could help increase revenue.
 
-The [!DNL Braze Track Events API] [event forwarding](../../../ui/event-forwarding/overview.md) extension [event forwarding](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=en) allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL Braze] in the form of server-side events using the [[!DNL Braze User Identify]](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify) and [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) APIs.
+The [!DNL Braze Track Events API] [event forwarding](../../../ui/event-forwarding/overview.md) extension allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL Braze] in the form of server-side events using the [[!DNL Braze User Identify]](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify) and [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) APIs.
 
 This document covers the use cases of the extension, how to install it in your event forwarding libraries, and how to employ its capabilities in an event forwarding [rule](../../../ui/managing-resources/rules.md).
 
@@ -136,7 +136,7 @@ Select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL 
 
 On the next screen, input the following [configuration values](#configuration-details) that you previously gathered from [!DNL Braze]:
 
-* **[!UICONTROL Braze Instance]**: You can enter the value of your [!DNL Braze] instance as plain text in the provided input.
+* **[!UICONTROL Braze Rest Endpoint URL]**: You can enter the value of your [!DNL Braze] rest endpoint URL as plain text in the provided input.
 * **[!UICONTROL API Key]**: Select the [secret data element](#create-a-secret) that you created earlier, which contains your [!DNL Braze] API key.
 
 Select **[!UICONTROL Save]** when finished.
@@ -208,7 +208,6 @@ Since the [!DNL Braze User Track] API supports custom events and purchases as tw
 As a result, the [!DNL Braze] extension enables you to add the following action types to your rules:
 
 * **[!UICONTROL Braze Event]**
-* **[!UICONTROL Braze Alias Event]**
 * **[!UICONTROL Braze Purchase Event]**
 
 >[!IMPORTANT]
@@ -223,13 +222,13 @@ Start creating a new rule in your event forwarding property. Under **[!UICONTROL
 
 Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Braze]**. Next, set the action type to **[!UICONTROL Braze Event]** to send Adobe Experience Edge Network events to [!DNL Braze].
 
-From here, under **[!UICONTROL Main Fields]**, you must map the **[!UICONTROL Event Type]** field to the incoming event name property, as well as a known [!UICONTROL User Identifier] (if one exists) and your [!UICONTROL Braze Device ID] data element.
+From here, you must map the **[!UICONTROL Event Name]** field to the incoming event name property, as well as the **[!UICONTROL Event Time]**. Other optional fields include [!UICONTROL External User ID], [!UICONTROL Braze User ID], [!UICONTROL Alias Label], [!UICONTROL Alias Name], and [!UICONTROL App Identifier].
 
 ![Add an event forwarding rule action configuration.](../../../images/extensions/server/braze/braze-event-action.png)
 
 >[!NOTE]
 >
->The **[!UICONTROL Braze Event]** action requires only an **[!UICONTROL Event Type]** (`name`) to be specified, but you should be including as much information as possible in the remaining fields (including the different tabs for event fields, profile fields, and additional fields). For details on the [!DNL Braze] event object, refer to the [official documentation](https://www.braze.com/docs/api/objects_filters/event_object/).
+>The **[!UICONTROL Braze Event]** action requires only an **[!UICONTROL Event Name]** and **[!UICONTROL Event Time]** to be specified, but you should be including as much information as possible in the remaining fields. For details on the [!DNL Braze] event object, refer to the [official documentation](https://www.braze.com/docs/api/objects_filters/event_object/).
 
 Once the [!UICONTROL Braze Event] action is added to the rule, you can also include a **[!UICONTROL Braze Purchase]** action if the event you are tracking happens to be a purchase event. An example configuration for the purchase action is shown below:
 
