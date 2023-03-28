@@ -98,29 +98,61 @@ To install the feature, Select **[!UICONTROL Get Started]** for **[!DNL Send Con
 
 ![Data collection home page showing conversions data to meta](../../../images/extensions/server/meta/conversion-data-to-meta.png)
 
-In the **[!UICONTROL Initial Setup]** dialog enter your **[!UICONTROL Meta Pixel ID]**, **[!UICONTROL Meta Access Token]**, and **[!UICONTROL Data Layer Path]**, then select **[!UICONTROL Create]**.
+Enter your **[!UICONTROL Domain]**, then select **[!UICONTROL Next]**.
+
+![Welcome screen requesting domain name](../../../images/extensions/server/meta/welcome.png)
+
+In the **[!UICONTROL Initial Setup]** dialog enter your **[!UICONTROL Meta Pixel ID]**, **[!UICONTROL Meta Conversion API Access Token]**, and **[!UICONTROL Data Layer Path]**, then select **[!UICONTROL Next]**.
 
 ![Initial setup dialog](../../../images/extensions/server/meta/initial-setup.png)
 
-From the **[!UICONTROL Add Code on Your Site]** dialog copy the code provided using the copy ![Copy](../../../images/extensions/server/meta/copy-icon.png) function and paste this into the `<head>` of your source website. Once implemented, select **[!UICONTROL Validate]**
+Allow a few minutes for the initial setup process to complete, then select **[!UICONTROL Next]**.
+
+![Initial setup complete confirmation screen](../../../images/extensions/server/meta/setup-complete.png)
+
+From the **[!UICONTROL Add Code on Your Site]** dialog copy the code provided using the copy ![Copy](../../../images/extensions/server/meta/copy-icon.png) function and paste this into the `<head>` of your source website. Once implemented, select **[!UICONTROL Start Validation]**
 
 ![Add code on your site dialog](../../../images/extensions/server/meta/add-code-on-your-site.png)
 
-The **[!UICONTROL Test Results]** dialog displays the Meta extension implementation results. Select **[!UICONTROL Next]**
+The [!UICONTROL Validation Results] dialog displays the Meta extension implementation results. Select **[!UICONTROL Next]**
 
 ![Test results dialog displaying implementation results](../../../images/extensions/server/meta/test-results.png)
 
-The **[!UICONTROL Next Steps]** dialog display confirms completion of setup. From here you have the option to optimize your implementation by adding new events. If you do not want to add additional events, select **[!UICONTROL Close]**.
+The **[!UICONTROL Next Steps]** screen display confirms completion of setup. From here you have the option to optimize your implementation by adding new events, which are shown in the next section.
+
+If you do not want to add additional events, select **[!UICONTROL Close]**.
 
 ![Next steps dialog](../../../images/extensions/server/meta/next-steps.png)
 
 #### Adding Additional Events
 
-To add new events, select **[!UICONTROL Edit Rule]**  on the [!UICONTROL Next Step] dialog.
+To add new events, select **[!UICONTROL Edit Your Tags Web Property]**.
 
-![Next steps dialog, highlighting edit rule](../../../images/extensions/server/meta/edit-rule.png)
+![Next steps dialog showing edit your tags web property](../../../images/extensions/server/meta/edit-your-tags-web-property.png)
 
-### Update or enhance the implementation
+Select the rule that corresponds to the meta event that you would like to edit. For example, **MetaConversion_AddToCart**.
+
+>[NOTE]
+>
+>If there is no event, this rule will not run. This is true for all rules, with the **MetaConversion_PageView** rule being the exception.
+
+To add an event select **[!UICONTROL Add]** under the [!UICONTROL Events] heading.
+
+![Tag properties page showing no events](../../../images/extensions/server/meta/edit-rule.png)
+
+Select the [!UICONTROL Event Type]. In this example, we have selected the [!UICONTROL Click] event and configured it to trigger when the **.add-to-cart-button** is selected. Select **[!UICONTROL Keep Changes]**.
+
+![Event configuration screen showing click event](../../../images/extensions/server/meta/event-configuration.png)
+
+The new event has been saved. Select **[!UICONTROL Select a working library]** and select the library that you would like to build to.
+
+![Select a working library drop down](../../../images/extensions/server/meta/working-library.png)
+
+Next select the dropdown beside **[!UICONTROL Save to Library]** and select **[!UICONTROL Save to Library and Build]**. This will publish the change in the library.
+
+![Select save to library and build](../../../images/extensions/server/meta/save-and-build.png)
+
+Repeat these steps for any other meta conversion event you would like to configure.
 
 The following video provides an introduction to the quick start feature.
 
