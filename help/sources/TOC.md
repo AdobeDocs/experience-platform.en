@@ -207,6 +207,7 @@ feature: Sources
   - [Delete accounts](tutorials/api/delete.md)
   - [Delete dataflows](tutorials/api/delete-dataflows.md)
   - [Ingest encrypted data](tutorials/api/encrypt-data.md)
+  - [Save a dataflow as a draft](tutorials/api/draft.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
     - Adobe applications {#adobe-applications}
