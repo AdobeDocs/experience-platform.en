@@ -1,68 +1,17 @@
 ---
 title: Adobe Experience Platform Release Notes
-description: The January 2023 release notes for Adobe Experience Platform.
+description: The March 2023 release notes for Adobe Experience Platform.
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: January 25, 2023**
+**Release date: March 29, 2023**
 
 Updates to existing features in Adobe Experience Platform:
 
-- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
-- [Assurance](#assurance)
 - [Data collection](#data-collection)
-- [[!DNL Destinations]](#destinations)
-- [Experience Data Model (XDM)](#xdm)
-- [Real-Time Customer Profile](#profile)
+- [Data Prep](#data-prep)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
-
-## Artificial Intelligence/Machine Learning Services {#ai-ml}
- 
-Artificial Intelligence and Machine Learning services empower marketing analysts and practitioners to leverage the power of AI/ML in customer experience use cases. This allows for marketing analysts to set up predictions, without the need for data science expertise, specific to a company's needs using business-level configurations.
- 
-### Attribution AI
- 
-Attribution AI is used to attribute credits to touchpoints that lead to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
- 
-**Updated features**
- 
-| Feature | Description |
-| ------- | ----------- |
-| HIPAA readiness | Healthcare Shield customers can now receive, use, maintain, or transmit protected health information in Attribution AI and certain other Experience Platform-based applications. Healthcare Shield is for healthcare customers that are either a covered entity or business associate under HIPAA. For more information, read the documentation on [HIPAA and Adobe Products and Services](https://www.adobe.com/trust/compliance/hipaa-ready.html)|
-|Edit additional score dataset columns | You can now add or remove additional score dataset columns (reporting columns) when you edit existing models. This extends the flexibility of the attribution scores to provide you with insights to additional dimensions after a model has already been created. See the [Attribution UI guide](../../intelligent-services/attribution-ai/user-guide.md) to learn more.|
-
-{style="table-layout:auto"}
- 
-Please see the [AI/ML services](../../intelligent-services/attribution-ai/overview.md) overview for more information.
-
-### Customer AI
- 
-Customer AI for Real-Time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale. This is accomplished without having to transform the business needs to a machine learning problem, pick an algorithm, train, or deploy.
- 
-**Updated features**
- 
-| Feature | Description |
-| ------- | ----------- |
-| HIPAA readiness | Healthcare Shield customers can now receive, use, maintain, or transmit protected health information in Customer AI for Real-Time Customer Data Platform and certain other Experience Platform-based applications. Healthcare Shield is for healthcare customers that are either a covered entity or business associate under HIPAA. For more information, see the documentation on [HIPAA and Adobe Products and Services](https://www.adobe.com/trust/compliance/hipaa-ready.html)|
-
-{style="table-layout:auto"}
- 
-Please see the [AI/ML services](../../intelligent-services/customer-ai/overview.md) overview for more information.
-
-## Assurance {#assurance}
-
-Adobe Assurance lets you inspect, proof, simulate, and validate how you collect data or serve experiences in your mobile app.
-
-**New or updated features** 
-
-| Feature | Description |
-| ------- | ----------- |
-| Validation Editor | New enhancements to the validation editor have been added. These enhancements include validation columns, new code building tools, and improved views. |
-
-{style="table-layout:auto"}
-
-For more information about Assurance, please read the [Assurance documentation](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## Data collection {#data-collection}
 
@@ -72,105 +21,23 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 | Feature | Description |
 | --- | --- |
-| New home screen | The home page for Data Collection UI has been updated to include helpful onboarding information and links to streamline productivity. This includes:<ol><li>Documentation and recommended workflows to get started</li><li>Recent properties, rules, and data elements</li><li>Popular extensions</li><li>New extension updates with a quick install feature</li></ol> |
-| Send data to [!DNL Google Ads] using event forwarding | You can now use the [[!DNL Google Ads Enhanced Conversions] API extension](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) for event forwarding, combined with [Google Oauth 2 secrets](../../tags/ui/event-forwarding/secrets.md#google-oauth2), to securely send server-side data to [!DNL Google Ads] in real time. |
+| New quick start workflow for Meta Conversions API (Beta) | Access new quick start workflows under "Getting Started" from the Data Collection home screen! The [quick start workflow for Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start) enables customers to rapidly collect and forward event data, server-side to Meta for ad conversions in just a few simple steps. |
+| [!DNL Braze] event forwarding extension | The [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) event forwarding extension allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL Braze] in the form of server-side events using the [!DNL Braze] User Track APIs. |
+| [!DNL Mixpanel] event forwarding extension | The [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) extension allows customers to leverage event forwarding to capture event information in the Adobe Experience Platform Edge Network and send it to Mixpanel using the Track Events API. |
 
 {style="table-layout:auto"}
 
-## Destinations (updated February 2nd) {#destinations}
+## Data Prep {#data-prep}
 
-[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
-**New destinations**
-
-| Destination | Description |
-| ----------- | ----------- |
-| [(Beta) Adobe Experience Cloud Audiences connection](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Use the [!UICONTROL (Beta) Adobe Experience Cloud Audiences] connection to share segments from Experience Platform to various Experience Platform solutions, like Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target, or Marketo. |
-| [Pega Profile connection](../../destinations/catalog/personalization/pega-profile.md) | Use the [!DNL Pega Profile Connector] in Adobe Experience Platform to create a live outbound connection to your [!DNL Amazon] S3 storage to periodically export profile data to CSV files from Adobe Experience Platform into your own S3 buckets. In [!DNL Pega Customer Decision Hub], you can schedule data jobs to import this profile data from S3 storage to update the [!DNL Pega Customer Decision Hub] profile. |
-| [(Beta) The Trade Desk CRM EU connection](../../destinations/catalog/advertising/tradedesk-emails.md) | With the release of EUID (European Unified ID), you are now seeing two [!DNL The Trade Desk - CRM] destinations in the [destinations catalog](/help/destinations/catalog/overview.md). <ul><li> If you source data in the EU, please use the **[!DNL The Trade Desk - CRM (EU)]** destination.</li><li> If you source data in the APAC or NAMER regions, please use the **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destination. </li></ul> |
-
-**New or updated functionality** {#destinations-new-updated-functionality}
-
-| Functionality | Description |
-| ----------- | ----------- |
-| Paid Media Consent Policy enhancement for integrations with streaming destinations | An [enhancement to consent policy enforcement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) on [streaming destinations](/help/destinations/destination-types.md#streaming-destinations) for paid media activation use-cases. When profiles are no longer qualified for a consent policy, Experience Platform now proactively communicates their policy exit to streaming destinations. <br> <b>Note</b>: This functionality is available only to customers of **[!UICONTROL Privacy and Security Shield]**, and those of **[!UICONTROL Healthcare Shield]**. |
-| New delimiter options for beta cloud storage destination connectors | Three new delimiter options (Colon `:`, Pipe, Semicolon `;`) are now available for the new beta cloud storage destinations - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> Read about the supported [file formatting options](/help/destinations/ui/batch-destinations-file-formatting-options.md) for file-based destinations. |
-| New optional parameter available in [customer data fields](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) configurations in [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Use this parameter when you need to create a customer data field whose value must be unique across all destination dataflows set up by a user's organization. <br> For example, the **[!UICONTROL Integration alias]** field in the [[!UICONTROL Custom Personalization]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) destination must be unique, meaning that two separate dataflows to this destination cannot have the same value for this field. |
-
-**Fixes and enhancements** {#destinations-fixes-and-enhancements}
-
-<table>
-    <tr>
-        <td><b>Fix or enhancement</b></td>
-        <td><b>Description</b></td>
-    </tr>
-    <tr>
-        <td>Updated export behavior to file-based destinations (PLAT-123316)</td>
-        <td>We fixed an issue in the behavior of <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">mandatory attributes</a> when exporting data files to batch destinations. <br> Previously, every record in the output files was verified to contain both: <ol><li>A non-null value of the <code>mandatoryField</code> column and</li><li>A non-null value on at least one of the other non-mandatory fields.</li></ol> The second condition has been removed. As a result, you might be seeing more output rows in your exported data files, as shown in the example below:<br> <b> Sample behavior before January 2023 release </b> <br> Mandatory field: <code>emailAddress</code> <br> <b>Input data to activate</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>Activation output</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> Sample behavior after January 2023 release </b> <br> <b>Activation output</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
-    </tr>
-    <tr>
-        <td>UI and API validation for required mappings and duplicate mappings (PLAT-123316)</td>
-        <td>Validation is now enforced as follows in the UI and API when <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">mapping fields</a> in the activate destinations workflow:<ul><li><b>Required mappings</b>: If the destination has been set up by the destination developer with required mappings (for example, the <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> destination), then these required mappings need to be added by the user when activating data to the destination. </li><li><b>Duplicate mappings</b>: In the mapping step of the activation workflow, you can add duplicate values in the source fields, but not in the target fields. See the table below for an example of allowed and forbidden mapping combinations. <br><table><thead><tr><th>Allowed/forbidden</th><th>Source field</th><th>Target field</th></tr></thead><tbody><tr><td>Allowed</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>email   alias2</li></ul></td></tr><tr><td>Forbidden</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
-    </tr>    
-</table>
-
-For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
-
-## Experience Data Model (XDM) {#xdm}
-
-XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
-
-**New or updated features**
+**Updated features**
 
 | Feature | Description |
 | --- | --- |
-| Schema tree display name improvements | Previously, field names were displayed in the UI but now, the display names for schema fields on the schema canvas are more human-friendly to read. |
+| New functions for encoding and decoding URL strings | <ul><li>The `get_url_encoded` function takes a URL as input and replaces or encodes special characters with ASCII characters.</li><li>The `get_url_decoded` function takes a URL as input and decodes ASCII characters into special characters.</li></ul> For more information, read the [Data Prep functions guide](../../data-prep/functions.md). For a comprehensive list of reserved characters and their corresponding encoded characters, read the guide on [special characters](../../data-prep/functions.md#special-characters).|
 
-**New XDM components**
-
-| Component type | Name | Description |
-| --- | --- | --- |
-| Class | [[!UICONTROL Conversion]](https://github.com/adobe/xdm/blob/master/components/classes/conversion.schema.json) | A class for tracking conversion data like currency conversions. |
-| Field group | [[!UICONTROL Currency Conversion Rate Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/conversion/currency-conversion-details.schema.json) | A field group for the [!UICONTROL Conversion] class, capturing additional details related to currency conversion. |
-| Field group | [[!UICONTROL Consent policies evaluation results map with metadata]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.jsonn) | Captures details for the evaluation result of multiple consent policies, including metadata information about consent policy entrances and exists. |
-
-**Updated XDM components**
-
-| Component type | Name | Description |
-| --- | --- | --- |
-| Data type | [[!UICONTROL Advertising details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | The `ID` field has been renamed to `name`, and the previous `name` field is now `friendlyName`. |
-| Data type | [[!UICONTROL Decision Proposition Details]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-detail.schema.json) | Added a `selectionStrategy` field which captures the details of a selection strategy. |
-| Field group | [[!UICONTROL Experience Event - Proposition Interactions]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/experienceevent-proposition-interaction.schema.json) | The field group is now compatible with the [!UICONTROL Journey Step Event] class. |
-| Data type | [[!UICONTROL Error details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | The `ID` field has been renamed to `name`. |
-| Data type | [[!UICONTROL Media information]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Reverted a change in pattern to the video segment property. |
-| Data type | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Removed the `droppedFrameCount` field. |
-| Data type | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Renamed the `isAuthorized` field to `authorized`, and updated its `type` to a string when it was previously a Boolean. |
-| Data type | [[!UICONTROL Shipping]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Added several new fields: `shipDate`, `trackingNumber`, and `trackingURL`. |
-| Field group | [[!UICONTROL AJO Entity Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-mixins.schema.json) | Added several new fields: `journeyNodeID`, `journeyNodeName`, and `journeyModeType`. |
-| Field group | [[!UICONTROL Consumer Experience Event]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/experienceevent-consumer.schema.json) | The field group is now also compatible with the [!UICONTROL Summary Metrics] class. |
-| Field group | [[!UICONTROL Product Triggers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/product-triggers.schema.json) | The `productTriggers` field is now nested under a `weather` object. |
-| Field group | [[!UICONTROL Relative Triggers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/relative-triggers.schema.json) | The `relativeTriggers` field is now nested under a `weather` object. |
-| Field group | [[!UICONTROL Severe Triggers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | The `severeTriggers` field is now nested under a `weather` object. |
-| Field group | [[!UICONTROL Weather Triggers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | The `weatherTriggers` field is now nested under a `weather` object. |
-| Field group | [[!UICONTROL XDM Related Business Accounts]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account/related-accounts.schema.json) | The field group is now stable. |
-
-{style="table-layout:auto"}
-
-For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
-
-## Real-Time Customer Profile {#profile}
-
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-Time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
-
-**Upcoming deprecation** {#deprecation}
-
-In order to remove redundancy in the segment membership lifecycle, the `Existing` status will be deprecated from the [segment membership map](../../xdm/field-groups/profile/segmentation.md) at the end of March 2023. A follow-up announcement will include the exact deprecation date. 
-
-Post deprecation, profiles qualified in a segment will be represented as `Realized` and profiles disqualified will continue to be represented as `Exited`. This will bring parity with file-based destinations with `Active` and `Expired` segment statuses. 
-
-This change could impact you if you're using [enterprise destinations](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API) and have automated downstream processes in place, based on the `Existing` status. Please review your downstream integrations if this is the case for you. If you are interested in identifying newly qualified profiles beyond a certain time, please consider using a combination of the `Realized` status and the `lastQualificationTime` in your segment membership map. For more information, please reach out to your Adobe representative.
-
-To learn more about Real-Time Customer Profile, including tutorials and best practices for working with profile data, please begin by reading the [Real-Time Customer Profile overview](../../profile/home.md).
+For more information on Data Prep, please read the [Data Prep overview](../../data-prep/home.md).
 
 ## Segmentation Service {#segmentation}
 
@@ -179,10 +46,8 @@ To learn more about Real-Time Customer Profile, including tutorials and best pra
 **New or updated features**
 
 | Feature | Description |
-| ------- | ----------- |
-| Bulk value import in Segment Builder | Segment Builder now supports importing multiple values, either by uploading a CSV or TSV file or by manually inserting comma separated values. More information can be found within the [Segment Builder guide](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
-| External audience membership expiration | By default, external audience memberships are retained for 30 days. To retain them for longer, use the `validUntil` field during the ingestion of audience data. |
-| Platform-generated segment membership expiration | Any segment membership that is in the `Exited` state for more than 30 days, based on the `lastQualificationTime` field will be subject to deletion. |
+| --- | --- |
+| Profile metrics | To give you a more accurate representation of profile metrics, membership breakdown and churn metrics are being combined and are now calculated over a 24-hour period. More information available in the [Segmentation UI guide](../../segmentation/ui/overview.md) |
 
 {style="table-layout:auto"}
 
@@ -194,7 +59,15 @@ Adobe Experience Platform can ingest data from external sources and allows you t
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
+**Updated features**
+
 | Feature | Description |
 | --- | --- |
-| Allow user access to subfolders of cloud storage sources | You can now define access to a specific subfolder of your cloud storage source when creating a new account. Once created, users will only be able to access data from the permitted subfolder. This feature is available to the following cloud storage sources: [Azure Blob Storage](../../sources/connectors/cloud-storage/blob.md), [Google Cloud Storage](../../sources/connectors/cloud-storage/google-cloud-storage.md), [Google PubSub](../../sources/connectors/cloud-storage/google-pubsub.md), and [SFTP](../../sources/connectors/cloud-storage/sftp.md). |
-| Beta availability of [!DNL SugarCRM] | [!DNL SugarCRM] sources are now available in beta. Use the [!DNL SugarCRM Accounts & Contacts] and the [!DNL SugarCRM Events] sources to bring data from your [!DNL SugarCRM] account to Experience Platform. For more information, read the [[!DNL SugarCRM] overview](../../sources/connectors/crm/sugarcrm.md). |
+| Beta availability of [!DNL Chatlio] | The [!DNL Chatlio] source is now available in beta. Use the [!DNL Chatlio] source to stream your [!DNL Chatlio] events data to Experience Platform. For more information, read the [[!DNL Chatlio] overview](../../sources/connectors/marketing-automation/chatlio-webhook.md). | 
+| Beta availability of [!DNL Customer.io] | The [!DNL Customer.io] source is now available in beta. Use the [!DNL Customer.io] source to stream your customer events data to Experience Platform. For more information, read the [[!DNL Customer.io] overview](../../sources/connectors/marketing-automation/customerio-webhook.md). |
+| Beta availability of [!DNL Pendo] | The [!DNL Pendo] source is now available in beta. Use the [!DNL Pendo] source to stream your product analytics data to Experience Platform. For more information, read the [[!DNL Pendo] overview](../../sources/connectors/analytics/pendo-webhook.md). |
+| Support for draft dataflows | You can now use the Flow Service API to set your dataflows to a draft state. Drafted dataflows can later be updated and published with new information. For more information, read the guide on [setting your sources dataflows as drafts](../../sources/tutorials/api/draft.md). |
+
+{style="table-layout:auto"}
+
+To learn more about sources, read the [sources overview](../../sources/home.md).

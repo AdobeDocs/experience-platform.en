@@ -25,14 +25,12 @@ user-guide-description: Use intelligent AI services to generate scores, discover
     - [Governance policies](attribution-ai/aai-data-governance/governance-policies.md)
   - [Analyze scores using Query Service](attribution-ai/aai-query-service.md)
   - [Error troubleshooting](attribution-ai/troubleshooting.md)
-- Content and Commerce AI (beta) {#content-commerce-ai}
+- Content Tagging {#content-commerce-ai}
   - [Overview](content-commerce-ai/overview.md)
   - [Getting started](content-commerce-ai/getting-started.md)
-  - Content and Commerce AI API{#api}
-    - [Color extraction](content-commerce-ai/api/color-extraction.md)
-    - [Keyword extraction](content-commerce-ai/api/keyword-extraction.md)
-    - [Text classification](content-commerce-ai/api/text-classification.md)
-    - [Visual similarity](content-commerce-ai/api/visual-similarity.md)
+  - Content Tagging API{#api}
+    - [Color tagging](content-commerce-ai/api/color-tagging.md)
+    - [Keyword tagging](content-commerce-ai/api/keyword-tagging.md)
     - [Text presence and optical character recognition](content-commerce-ai/api/optical-character-recognition.md)
 - Customer AI {#customer-ai}
   - [Overview](customer-ai/overview.md)

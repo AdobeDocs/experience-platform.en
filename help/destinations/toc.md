@@ -16,12 +16,15 @@ feature: Destinations
   * [Profile export behavior for different destination types](./how-destinations-work/profile-export-behavior.md)
   * [Identity handling in the destinations activation workflow](./how-destinations-work/identity-handling.md)
 * API tutorials {#api}
+    * [API migration guide for cloud storage destinations](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md) 
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
     * [Connect to batch cloud storage and email marketing destinations and activate data using the Flow Service API](./api/connect-activate-batch-destinations.md)
     * [(Beta) Activate audience segments to batch destinations via the ad-hoc activation API](./api/ad-hoc-activation-api.md)
     * [Update destination dataflows](./api/update-destination-dataflows.md)
     * [Delete destination accounts](./api/delete-destination-account.md)
     * [Delete destination dataflows](./api/delete-destination-dataflow.md)
+    * [(Beta) Activate data to file-based destinations by using the Flow Service API](/help/destinations/api/activate-segments-file-based-destinations.md)
+    * [(Beta) Export datasets](/help/destinations/api/export-datasets.md)
 * UI guides {#ui}
     * [Destinations workspace](./ui/destinations-workspace.md)
     * [Create a new destination connection](./ui/connect-destination.md)
@@ -34,6 +37,7 @@ feature: Destinations
         * [Configure personalization destinations for same-page and next-page personalization](./ui/configure-personalization-destinations.md)
         * [(Beta) Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
         * [(Beta) Export datasets using the Experience Platform UI](./ui/export-datasets.md)
+        * [(Beta) Use the last qualification time XDM attribute in the new beta cloud storage destinations](./ui/activate-last-qualification-time.md)
     * [View destination details](./ui/destination-details-page.md)
     * [Update destination accounts](./ui/update-accounts.md)
     * [Delete destination accounts](./ui/delete-destination-account.md)
@@ -48,6 +52,7 @@ feature: Destinations
         * [Adobe destinations overview](./catalog/adobe/overview.md)
         * [(Beta) Experience Cloud audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
         * [Marketo Engage connection](./catalog/adobe/marketo-engage.md)
+        * [Marketo Measure Ultimate connection](./catalog/adobe/marketo-measure-ultimate.md)
         * [Experience Platform segment sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
     * Advertising destinations{#advertising}
         * [Advertising destinations overview](./catalog/advertising/overview.md)
@@ -113,6 +118,7 @@ feature: Destinations
         * [Salesforce CRM connection](./catalog/crm/salesforce.md)
         * [Microsoft Dynamics 365 connection](./catalog/crm/microsoft-dynamics-365.md)
         * [Outreach connection](catalog/crm/outreach.md)
+        * [Zendesk connection](catalog/crm/zendesk.md)
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
@@ -125,7 +131,8 @@ feature: Destinations
         * [Email marketing destinations overview](./catalog/email-marketing/overview.md)
         * [Adobe Campaign connection](./catalog/email-marketing/adobe-campaign.md)
         * [Adobe Campaign Managed Cloud Services connection](./catalog/email-marketing/adobe-campaign-managed-services.md)
-        * [Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua.md)
+        * [(API) Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua-api.md)
+        * [(Files) Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua.md)
         * [Oracle Responsys connection](./catalog/email-marketing/oracle-responsys.md)
         * [(API) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
         * [(Files) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud.md)
@@ -140,7 +147,7 @@ feature: Destinations
         * [Line connection](./catalog/mobile-engagement/line.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
-        * [(Beta) Adobe Commerce connection](./catalog/personalization/adobe-commerce.md)
+        * [Adobe Commerce connection](./catalog/personalization/adobe-commerce.md)
         * [Adobe Target connection](./catalog/personalization/adobe-target-connection.md)
         * [Adobe Target extension](./catalog/personalization/adobe-target.md)
         * [Adobe Target v2 extension](./catalog/personalization/adobe-target-v2.md)
@@ -158,6 +165,7 @@ feature: Destinations
         * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)
         * [Facebook connection](./catalog/social/facebook.md)
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
+        * [TikTok connection](./catalog/social/tiktok.md)
         * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
     * Streaming destinations {#streaming}
         * [HTTP API connection](./catalog/streaming/http-destination.md)

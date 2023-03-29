@@ -238,6 +238,17 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
+    },
+    "evaluationInfo": {
+        "batch": {
+            "enabled": false
+        },
+        "continuous": {
+            "enabled": true
+        },
+        "synchronous": {
+            "enabled": false
+        }
     }
 }'
 ```
