@@ -26,9 +26,7 @@ Adobe Experience Platform provides multiple dashboards through which you can vie
 
 | Feature | Description |
 | --- | --- |
-|User-defined dashboards| You can now **sample attribute values** before adding an attribute to a widget in the user-defined dashboards widget composer. A few sample values from that attribute column are available for individual attributes when creating a widget.<br>
-You can now **swap the X and Y axis** on your widget with the swap axis button. This saves time and provides a more ergonomic experience when adding attributes to your widgets. This saves need to find both attributes again from the attributes panel.<br> 
-You can now **change the location and title of the legend** within your widgets. After a legend is present on a widget, you can relocate that legend anywhere around the chart and also re-name the legend title, as you can with axis labels and the widget title.|
+|User-defined dashboards| You can now **sample attribute values** before adding an attribute to a widget in the user-defined dashboards widget composer. A few sample values from that attribute column are available for individual attributes when creating a widget.<br>You can now **swap the X and Y axis** on your widget with the swap axis button. This saves time and provides a more ergonomic experience when adding attributes to your widgets. This saves need to find both attributes again from the attributes panel.<br> You can now **change the location and title of the legend** within your widgets. After a legend is present on a widget, you can relocate that legend anywhere around the chart and also re-name the legend title, as you can with axis labels and the widget title.|
 
 {style="table-layout:auto"}
 
