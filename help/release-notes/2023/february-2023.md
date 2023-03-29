@@ -12,7 +12,6 @@ Updates to existing features in Adobe Experience Platform:
 - [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Related accounts in Real-Time CDP B2B Edition](#related-accounts)
-- [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
 ## [!DNL Destinations] {#destinations}
@@ -97,20 +96,6 @@ Read more about related accounts features in the following documentation pages:
 - [How to use related accounts in segment definitions](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 To learn more about Real-Time CDP B2B Edition, read the [Real-Time CDP B2B Edition overview](../../rtcdp/overview.md).
-
-## Segmentation Service {#segmentation}
-
-[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
-
-**New or updated features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Profile metrics | To give you a more accurate representation of profile metrics, membership breakdown and churn metrics are being combined and are now calculated over a 24-hour period. More information available in the [Segmentation UI guide](../../segmentation/ui/overview.md) |
-
-{style="table-layout:auto"}
-
-For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
 
 ## Sources {#sources}
 
