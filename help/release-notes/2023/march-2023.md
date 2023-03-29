@@ -8,9 +8,24 @@ description: The March 2023 release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
+- [Data collection](#data-collection)
 - [Data Prep](#data-prep)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
+
+## Data collection {#data-collection}
+
+Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| New quick start workflow for Meta Conversions API (Beta) | Access new quick start workflows under "Getting Started" from the Data Collection home screen! The [quick start workflow for Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start) enables customers to rapidly collect and forward event data, server-side to Meta for ad conversions in just a few simple steps. |
+| [!DNL Braze] event forwarding extension | The [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) event forwarding extension allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL Braze] in the form of server-side events using the [!DNL Braze] User Track APIs. |
+| [!DNL Mixpanel] event forwarding extension | The [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) extension allows customers to leverage event forwarding to capture event information in the Adobe Experience Platform Edge Network and send it to Mixpanel using the Track Events API. |
+
+{style="table-layout:auto"}
 
 ## Data Prep {#data-prep}
 
