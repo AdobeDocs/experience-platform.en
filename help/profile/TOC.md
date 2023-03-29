@@ -12,6 +12,7 @@ feature: Profiles
 * [[!DNL Profile] and Segmentation guardrails](guardrails.md)
 * [[!DNL Profile] dashboard](ui/profile-dashboard.md)
 * [Experience Event expirations](event-expirations.md)
+* [Pseudonymous Profile expirations](pseudonymous-profiles.md)
 * [!DNL Profile] API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)

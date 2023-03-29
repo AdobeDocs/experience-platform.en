@@ -469,6 +469,8 @@ POST /flows
 
 >[!TAB Without transformations]
 
+The following request creates a streaming dataflow for HTTP API without data transformations.
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -494,6 +496,10 @@ curl -X POST \
 ```
 
 >[!TAB With transformations]
+
+The following requests creates a streaming dataflow for HTTP API with mapping transformations applied to your data.
+
+When creating a dataflow with transformations, the `name` parameter cannot be changed. This value must always be set to `Mapping`.
 
 ```shell
 curl -X POST \

@@ -6,6 +6,10 @@ exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 ---
 # Subscribe to alerts for sources dataflows in the UI
 
+>[!NOTE]
+>
+>Alerts are not supported in non-production sandboxes. In order to subscribe to alerts, you must ensure that you are using a production sandbox.
+
 Adobe Experience Platform allows you to subscribe to event-based alerts regarding Adobe Experience Platform activities. Alerts reduce or eliminate the need to poll the [[!DNL Observability Insights] API](../../../observability/api/overview.md) in order to check if a job has completed, if a certain milestone within a workflow has been reached, or if any errors have occurred.
 
 You can subscribe to alerts when creating a dataflow to receive alert messages regarding the status, success, or failure of your flow run.

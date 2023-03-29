@@ -13,6 +13,12 @@ exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
 
 - Fixed an issue with allowing timeout to be set to a data element.
 
+## v0.19.1 (February 3, 2023)
+
+- Updated to support `at.js` v2.10.1
+- Client custom Mbox parameters now correctly support dot notation
+- Delivery calls no longer made in VEC
+
 ## v0.19.0 (September 19, 2022)
 
 - Updated to support `at.js` v2.10.0
