@@ -45,6 +45,8 @@ Destination server parameters have two configurable fields. These options dictat
 |`templatingStrategy`|String|*Required.* Defines whether there is a hard-coded value provided via the `value` field, or a user-configurable value in the UI. Supported values: <ul><li>`NONE`: Use this value when you are hard-coding the parameter value via the `value` parameter (see the next row). Example:`"value": "my-storage-bucket"`.</li><li>`PEBBLE_V1`: Use this value when you want your users to provide a parameter value in the UI. Example: `"value": "{{customerData.bucket}}"`. </li></ul> |
 |`value`|String|*Required*. Defines the parameter value. Supported value types: <ul><li>**Hard-coded value**: Use a hard-coded value (such as `"value": "my-storage-bucket"`) when you do not need users to enter a parameter value in the UI. When hard-coding a value, `templatingStrategy` should always be set to `NONE`.</li><li>**Templatized value**: Use a templatized value (such as `"value": "{{customerData.bucket}}"`) when you want your users to provide a parameter value in the UI. When using templatized values, `templatingStrategy` should always be set to `PEBBLE_V1`.</li></ul>|
 
+{style="table-layout:auto"}
+
 ### When to use hard-coded versus templatized fields
 
 Both hard-coded and templatized fields have their own uses in Destination SDK, depending on what type of integration you are creating.
