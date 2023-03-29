@@ -21,6 +21,7 @@ To understand the difference between connections and extensions, see [Connection
 ### Connections
 
 * [Adobe Advertising Cloud connection](adobe-advertising-cloud-connection.md)
+* [(Beta) Amazon Ads connection](amazon-ads.md)
 * [(Beta) Criteo connection](criteo.md)
 * [Google Display & Video 360 connection](google-dv360.md)
 * [Google Ads connection](google-ads-destination.md)
