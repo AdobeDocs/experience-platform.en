@@ -203,7 +203,9 @@ solution: Data Collection
     * Adobe Experience Platform Cloud Connector {#cloud-connector}
       * [Overview](./extensions/server/cloud-connector/overview.md)
       * [Release notes](./extensions/server/cloud-connector/release-notes.md)
-    * [!DNL AWS] {#aws}
+    * [!DNL AWS] {#braze}
+      * [Overview](./extensions/server/braze/overview.md)
+    * [!DNL Braze] {#aws}
       * [Overview](./extensions/server/aws/overview.md)
     * [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)
     * Core {#core}
