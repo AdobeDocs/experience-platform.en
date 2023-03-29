@@ -5,6 +5,10 @@ badge: "Beta"
 ---
 # Use the self-identification survey to build your Experience Cloud personal profile
 
+>[!NOTE]
+>
+>The self-identification survey is in beta. Its features and documentation are subject to change.
+
 The self-identification survey is a short questionnaire presented in the Adobe Experience Platform UI home page. Use the survey to provide information on your job functions and general objectives. This information is then used to better align in-product guides and eventually deliver content that is more relevant to your objectives.
 
 This document provides information on how you can use the self-identification survey in Platform UI to receive relevant content based on your goals and tasks. This document also provides information on how to reconfigure your personal profile attributes using the UI.
@@ -73,7 +77,16 @@ With your self-identification survey completed, select **[!UICONTROL Done]**.
 
 ![The final, confirmation step of the self-identification survey.](./images/survey/survey-complete.png)
 
-Update your job functions and objects using the Experience Cloud preferences menu. To access the preferences menu, select your profile icon on the top navigation and then select **[!UICONTROL Preferences]**
+>[!NOTE]
+>
+>A recommendation step appears if you select the engineering and marketing job functions, as well as their corresponding objects. The following table outlines how the recommendations map against functions and objectives.
+
+| Job functions | Objectives | Recommendation |
+| --- | --- | --- |
+| Engineering | <ul><li>Data ingestion</li><li>Model data structures</li><li>Query, filter, and distill data</li></ul> | <ul><li>**[!UICONTROL "Take me to Sources"]**</li><li>**[!UICONTROL "Take me to schemas"]**</li><li>**[!UICONTROL "Take me to Queries]**</li></ul> |
+| Marketing | <ul><li>Segment audiences</li><li>Set up and analyze dashboards</li><li>Activate destinations</li></ul> | <ul><li>**[!UICONTROL "Take me to Segments"]**</li><li>**[!UICONTROL "Take me to Dashboards"]**</li><li>**[!UICONTROL "Take me to Destinations"]**</li></ul> |
+
+Update your job functions and objects using the Experience Cloud preferences menu. To access the preferences menu, select your profile icon on the top navigation and then select **[!UICONTROL Preferences]**.
 
 ![The Platform UI home page with the profile icon and the preferences buttons selected.](./images/survey/preferences.png)
 
