@@ -363,7 +363,7 @@ This report provides the following information:
 * There are 107 profiles that are comprised only of data from dataset `5eeda0032af7bb19162172a7`.
 * There is a total of 454,642 profiles in the organization.
 
-## Generate the identity namespace overlap report
+## Generate the identity namespace overlap report {#identity-overlap-report}
 
 The identity namespace overlap report provides visibility into the composition of your organization's Profile Store by exposing the identity namespaces that contribute most to your addressable audience (merged profiles). This includes both the standard identity namespaces provided by Adobe, as well as the custom identity namespaces defined by your organization.
 
