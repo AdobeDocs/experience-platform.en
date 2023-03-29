@@ -15,17 +15,6 @@ This document provides information on how you can use the self-identification su
 
 To learn more about Adobe Experience Platform, please read the [Experience Platform overview](home.md).
 
-## Selection mapping
-
-The self-identification survey presents a list of job functions and their corresponding objectives for you to choose from. The table below outlines how these job functions and objectives are mapped:
-
-| Job function | Objectives |
-| --- | --- |
-| Administration | <ul><li>Create and manage users</li><li>Assign roles and permissions</li><li>Manage license usage and sandboxes</li></ul>|
-| Engineering | <ul><li>Data ingestion</li><li>Model data structures</li><li>Query, filter, and distill data</li></ul> |
-| Privacy & Governance | <ul><li>Configure consent and data policies</li><li>Privacy and data governance</li></ul> |
-| Marketing | <ul><li>Develop marketing strategies</li><li>Segment audiences</li><li>Set up and analyze dashboards</li><li>Activate destinations</li></ul> |
-
 ## Self-identification survey in the Platform UI
 
 The self-identification survey prompt appears in the bottom right of the Platform UI home page upon signing in.
@@ -35,6 +24,14 @@ To begin the survey, select **[!UICONTROL Start]**.
 ![The Platform UI home page with the toast message prompting you to start the self-identification survey.](./images/survey/survey-prompt.png)
 
 For the first survey question, select the function that best describes your work. 
+
+The available options are:
+
+* Administration
+* Engineering
+* Privacy & Governance
+* Marketing
+* Other
 
 >[!NOTE]
 >
