@@ -27,7 +27,7 @@ v3.4.1
     * Variable
 * Changes the events/EntersViewport delegate to use the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) instead of manual detection of elements entering the viewport.
 * Removes code that was migrating DTM cookies to LocalStorage.
-* Logs a warning to the console when LocalStorage & SessionStorage APIs are unavailable.
+* Logs a warning to the console when the LocalStorage and SessionStorage APIs are unavailable.
 
 ## January 4, 2022
 
