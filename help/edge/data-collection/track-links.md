@@ -29,7 +29,7 @@ alloy("sendEvent", {
 });
 ```
 
-Starting with version x, Web SDK captures the `region` of the clicked HTML element. This enables the [Activity Map](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html) reporting features in Adobe Analytics.
+Starting with version 2.15.0, Web SDK captures the `region` of the clicked HTML element. This enables the [Activity Map](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html) reporting features in Adobe Analytics.
 
 The link type can be one of three values: 
 
@@ -86,7 +86,7 @@ alloy("configure", {
 });
 ```
 
-Starting with Web SDK version x, the data collected with automatic link tracking can be inspected, augmented or filtered by providing an [onBeforeLinkClickSend callback function](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend).
+Starting with Web SDK version 2.15.0, the data collected with automatic link tracking can be inspected, augmented or filtered by providing an [onBeforeLinkClickSend callback function](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend).
 
 This callback function is executed only when an automatic link click event occurs.
 
