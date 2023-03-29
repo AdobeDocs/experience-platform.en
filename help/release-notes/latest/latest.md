@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform Release Notes
-description: The February 2023 release notes for Adobe Experience Platform.
+description: The March 2023 release notes for Adobe Experience Platform.
 ---
 # Adobe Experience Platform release notes 
 
