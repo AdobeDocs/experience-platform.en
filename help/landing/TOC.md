@@ -23,6 +23,7 @@ user-guide-description: Learn how Experience Platform can deliver personalized e
   * [Platform UI tour (Video)](video/platform-ui.md)
   * [Workflows UI guide](workflows.md)
   * [Browser and language support](browser-language-support.md)
+  * [Self-identification Survey](self-identification.md)
 * Experience Platform APIs {#platform-apis}
   * [Getting started with Platform APIs](api-guide.md)
   * [Authenticate and access Platform APIs](api-authentication.md)
