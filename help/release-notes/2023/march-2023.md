@@ -4,6 +4,10 @@ description: The March 2023 release notes for Adobe Experience Platform.
 ---
 # Adobe Experience Platform release notes 
 
+>[!IMPORTANT]
+>
+>During [insert period of time], the `Existing` status will be deprecated from the segment membership map. After this change, profiles qualified in a segment will be represented as `Realized` and profiles disqualified will continue to be represented as `Exited`. This will bring parity with file-based destinations with `Active` and `Expired` segment statuses. For more details on this change, please read the [Segmentation Service section](#profile).
+
 **Release date: March 29, 2023**
 
 Updates to existing features in Adobe Experience Platform:
@@ -47,8 +51,9 @@ For more information on Data Prep, please read the [Data Prep overview](../../da
 **New or updated features**
 
 | Feature | Description |
-| --- | --- |
+| ------- | ----------- |
 | Profile metrics | To give you a more accurate representation of profile metrics, membership breakdown and churn metrics are being combined and are now calculated over a 24-hour period. More information is available in the [Segmentation UI guide](../../segmentation/ui/overview.md#browse) |
+| Segment membership map | As a follow up to the previous announcement in February, during [insert period of time], the `Existing` status will be deprecated from the segment membership map. After this change, profiles qualified in a segment will be represented as `Realized` and profiles disqualified will continue to be represented as `Exited`. This change could impact you if, you're using [enterprise destinations](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API), and might have automated downstream processes in place based on the `Existing` status. Please review your downstream integrations if this is the case for you. If you are interested in identifying newly qualified profiles beyond a certain time, please consider using a combination of the `Realized` status and the `lastQualificationTime` in your segment membership map. For more information, please reach out to your Adobe representative. |
 
 {style="table-layout:auto"}
 
