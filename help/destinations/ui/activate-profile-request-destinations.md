@@ -16,7 +16,7 @@ exl-id: cd7132eb-4047-4faa-a224-47366846cb56
 
 ## Overview {#overview}
 
-This article explains the workflow required to activate audience data in Adobe Experience Platform profile request destinations. When used together with [edge segmentation](../../segmentation/ui/edge-segmentation.md), these destinations enable same-page and next-page personalization use cases on your web properties. Read more about [enabling same-page and next-page personalization use cases](/help/destinations/ui/configure-personalization-destinations.md). 
+This article explains the workflow required to activate audience data in Adobe Experience Platform profile request destinations. When used together with [edge segmentation](../../segmentation/ui/edge-segmentation.md), these destinations enable same-page and next-page personalization use cases on your web and mobile properties. Read more about [enabling same-page and next-page personalization use cases](/help/destinations/ui/configure-personalization-destinations.md). 
 
 Examples of profile request destinations are the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and the [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) connections. 
 
