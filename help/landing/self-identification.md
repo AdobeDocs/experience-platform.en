@@ -1,17 +1,17 @@
 ---
-title: Use the Self-Identification Survey To Build Your Experience Cloud Personal Profile
-description: This document provides information on how you can use the self-identification survey on the Adobe Experience Platform UI to receive relevant content based on your job functions and related objectives.
+title: Use the Self-Identification Survey To Build Your Experience Platform Personal Profile
+description: Learn how to use the the self-identification survey UI to receive relevant content based on your job functions and related objectives.
 badge: "Beta"
 ---
-# Use the self-identification survey to build your Experience Cloud personal profile
+# Use the self-identification survey to build your Experience Platform personal profile
 
 >[!NOTE]
 >
 >The self-identification survey is in beta. Its features and documentation are subject to change.
 
-The self-identification survey is a short questionnaire presented in the Adobe Experience Platform UI home page. Use the survey to provide information on your job functions and general objectives. This information is then used to better align in-product guides and eventually deliver content that is more relevant to your objectives.
+The self-identification survey is a short questionnaire presented in the Adobe Experience Platform UI home page. You can fill out the survey to provide information on your job functions and general objectives. This information is then used to better align in-product guides and eventually deliver content that is more relevant to your objectives.
 
-This document provides information on how you can use the self-identification survey in Platform UI to receive relevant content based on your goals and tasks. This document also provides information on how to reconfigure your personal profile attributes using the UI.
+This document provides information on how you can use the self-identification survey in the Platform UI to receive relevant content based on your goals and tasks, as well as how to reconfigure your personal profile attributes using the UI.
 
 To learn more about Adobe Experience Platform, please read the [Experience Platform overview](home.md).
 
@@ -35,14 +35,6 @@ To begin the survey, select **[!UICONTROL Start]**.
 ![The Platform UI home page with the toast message prompting you to start the self-identification survey.](./images/survey/survey-prompt.png)
 
 For the first survey question, select the function that best describes your work. 
-
-The available options are: 
-
-* Administration
-* Engineering
-* Privacy & Governance
-* Marketing
-* Other
 
 >[!NOTE]
 >
@@ -79,12 +71,9 @@ With your self-identification survey completed, select **[!UICONTROL Done]**.
 
 >[!NOTE]
 >
->A recommendation step appears if you select the engineering and marketing job functions, as well as their corresponding objects. The following table outlines how the recommendations map against functions and objectives.
+>Objectives & recommendations (if present) will change based on the select job functions.
 
-| Job functions | Objectives | Recommendation |
-| --- | --- | --- |
-| Engineering | <ul><li>Data ingestion</li><li>Model data structures</li><li>Query, filter, and distill data</li></ul> | <ul><li>**[!UICONTROL "Take me to Sources"]**</li><li>**[!UICONTROL "Take me to schemas"]**</li><li>**[!UICONTROL "Take me to Queries]**</li></ul> |
-| Marketing | <ul><li>Segment audiences</li><li>Set up and analyze dashboards</li><li>Activate destinations</li></ul> | <ul><li>**[!UICONTROL "Take me to Segments"]**</li><li>**[!UICONTROL "Take me to Dashboards"]**</li><li>**[!UICONTROL "Take me to Destinations"]**</li></ul> |
+## Update your survey responses
 
 Update your job functions and objects using the Experience Cloud preferences menu. To access the preferences menu, select your profile icon on the top navigation and then select **[!UICONTROL Preferences]**.
 
@@ -100,4 +89,4 @@ The self-identification survey appears, allowing you to reconfigure your respons
 
 ## Next steps
 
-By reading this document, you have now submitted and updated information regarding your job functions and objectives in order to receive more relevant content when using Platform UI. For more information on Platform UI, read the [Experience Platform overview](home.md).
+By reading this document, you have now submitted and updated information regarding your job functions and objectives in order to receive more relevant content when using the Platform UI. For more information on Platform UI, read the [Experience Platform overview](home.md).
