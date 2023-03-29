@@ -10,6 +10,7 @@ Updates to existing features in Adobe Experience Platform:
 
 - [Data collection](#data-collection)
 - [Data Prep](#data-prep)
+- [Destinations](#destinations)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
@@ -39,6 +40,41 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 For more information on Data Prep, please read the [Data Prep overview](../../data-prep/home.md).
 
+## Destinations {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New destinations** {#new-destinations}
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Adobe Commerce] connection GA](../../destinations/catalog/personalization/adobe-commerce.md) | The [!DNL Adobe Commerce] destination connector (now generally available) lets you select one or more Real-Time CDP audiences to activate to your [!DNL Adobe Commerce] account to deliver a dynamic personalized experience for your shoppers. |
+| [[!DNL Snap Inc] connection GA](../../destinations/catalog/advertising/snap-inc.md) | The [!DNL Snap Inc] destination connector (now generally available) allows marketers to import user segments created in Experience Platform into [!DNL Snapchat Ads] and use them to target their ads. |
+| [(API) Oracle Eloqua connection](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | Use the API-based connection to [!DNL Oracle Eloqua] to plan and execute campaigns while delivering a personalized customer experience for their prospects in [!DNL Oracle Eloqua]. |
+| [(Beta) [!DNL Amazon Ads] connection](../../destinations/catalog/advertising/amazon-ads.md) | The [!DNL Amazon Ads] integration with Adobe Experience Platform provides turn-key integration to [!DNL Amazon Ads] products, including the [!DNL Amazon DSP (ADSP)]. Using the [!DNL Amazon Ads] destination in Adobe Experience Platform, users are able to define advertiser audiences for targeting and activation on the [!DNL Amazon DSP]. |
+| [[!DNL Marketo Measure Ultimate] connection](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (formerly Bizible) gives marketers insight into which marketing efforts are the most effective in driving revenue and maximizing return on investment for their company. The destination enables the business-to-business (B2B) data flows from Adobe Experience Platform to [!DNL Marketo Measure]. The card is only available to [!DNL Marketo Measure Ultimate] customers. |
+| [TikTok connection](../../destinations/catalog/social/tiktok.md) | Build custom audiences on TikTok with your data for targeting with your ad campaigns. |
+| [Zendesk connection](../../destinations/catalog/crm/zendesk.md) | Use this destination to create and update identities within a segment as contacts within [!DNL Zendesk]. |
+
+{style="table-layout:auto"}
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Functionality | Description |
+| ----------- | ----------- |
+| New access control permission for destinations: [[!DNL Activate Segments without Mapping]](../../access-control/home.md#permissions) | The new permission gives users the ability to activate segments to existing destinations, without displaying the [mapping step](../../destinations/ui/activate-batch-profile-destinations.md#mapping). Users can add and remove segments in activation workflows, but cannot add or remove mapped attributes or identities. |
+
+{style="table-layout:auto"}
+
+**Fixes and enhancements** {#destinations-fixes-and-enhancements}
+
+We are releasing a bug fix for PGP/GPG encryption in file-based destinations for Real-time CDP. With this change, existing file-based destinations currently using encryption will generate a filename with a different extension than before. 
+
+- Current extension when using encryption: `filename.csv`
+- Future extension when using encryption: `filename.csv.gpg`
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
 ## Segmentation Service {#segmentation}
 
 [!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
@@ -47,7 +83,7 @@ For more information on Data Prep, please read the [Data Prep overview](../../da
 
 | Feature | Description |
 | --- | --- |
-| Profile metrics | To give you a more accurate representation of profile metrics, membership breakdown and churn metrics are being combined and are now calculated over a 24-hour period. More information available in the [Segmentation UI guide](../../segmentation/ui/overview.md) |
+| Profile metrics | To give you a more accurate representation of profile metrics, membership breakdown and churn metrics are being combined and are now calculated over a 24-hour period. More information is available in the [Segmentation UI guide](../../segmentation/ui/overview.md#browse) |
 
 {style="table-layout:auto"}
 
