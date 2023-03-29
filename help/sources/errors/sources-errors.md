@@ -24,7 +24,7 @@ This document provides a catalog of error messages, descriptions, and suggested 
 | `1009-403` | IMS org id is missing or empty | The organization ID request header is either missing or empty. Please update the header value and try again. |
 | `1010-500` | Invalid detailed-message | The parameter in the detailed-message has not been properly provided. Please check the parameter in the detailed-message and try again. |
 | `1011-503` | Service Unavailable | The service is temporarily unavailable. Please try again and contact customer support if the problem persists. |
-| `1012-504` | Gateway Timeout | A gateway timeout has occurred. Please try again and contact customer support if the problem persists.
+| `1012-504` | Gateway Timeout | A gateway timeout has occurred. Please try again and contact customer support if the problem persists. |
 | `1013-412` | Precondition Failed | The condition defined by the If-Unmodified-Since or If-None-Match headers is not fulfilled. Please check and try again. |
 | `1014-400` | Bad Request Illegal Argument| The request could not be processed. {detailedMessage} |
 
@@ -36,7 +36,7 @@ This document provides a catalog of error messages, descriptions, and suggested 
 | `1101-500` | Internal Error | An internal error has occurred. Please try again and contact customer support if the problem persists. |
 | `1102-404` | Resource not found | The requested resource is not found. {detailedMessage} |
 | `1103-503` | Service Unavailable | The service is temporarily unavailable. Please try again and contact customer support if the problem persists. |
-| `1104-504` | Gateway Timeout | A gateway timeout has occurred. Please try again and contact customer support if the problem persists.
+| `1104-504` | Gateway Timeout | A gateway timeout has occurred. Please try again and contact customer support if the problem persists. |
 | `1105-401` | Unauthorized | The user is unauthorized. {detailedMessage} |
 | `1106-403` | Forbidden | The requested operation is forbidden. {detailedMessage} |
 | `1107-412` | Precondition Failed | The condition defined by the If-Unmodified-Since or If-None-Match headers is not fulfilled. {detailedMessage} |
@@ -45,8 +45,8 @@ This document provides a catalog of error messages, descriptions, and suggested 
 
 | Error code | Title | Detailed message |
 | --- | --- | --- |
-| `1200-500` | Internal Error | An internal error has occurred. Please try again and contact customer support if the problem persists.
-| `1201-400` | Bad Request | The flowId cannot be null or empty. Please provide a valid flowId in request and try again.
+| `1200-500` | Internal Error | An internal error has occurred. Please try again and contact customer support if the problem persists. |
+| `1201-400` | Bad Request | The flowId cannot be null or empty. Please provide a valid flowId in request and try again. |
 | `1202-400` | Bad Request | The publicKeyId is missing in the flow's transformations={transformations}. Please provide publicKeyId in the request and try again. |
 | `1203-400` | Bad Request | The encryption key does not exist against the keyID={keyID} in the flow's transformations={transformations}. Please check your provided keyID and try again. |
 | `1204-400` | Bad Request | The provided encryption algorithm is invalid. Please provide a valid encryption algorithm and try again. |
@@ -72,7 +72,7 @@ This document provides a catalog of error messages, descriptions, and suggested 
 | `1313-400` | Bad Request | The path attribute {attribute} does not exist. Please make sure the attribute exists and try again. |
 | `1314-400` | Bad Request | A complex path has been provided but is not allowed. Please make sure complex path is not provided and try again. |
 | `1315-400` | Bad Request | The provided path {path} should point to an array of records. Please make sure the provided path points to the array of records and try again. |
-| `1316-400` | Bad Request | The provided pagination params should not be empty. Please provide valid pagination params and try again.
+| `1316-400` | Bad Request | The provided pagination params should not be empty. Please provide valid pagination params and try again. |
 | `1317-400` | Bad Request | The provided schedule params are empty but should not be empty. Please provide valid schedule params and try again. |
 | `1318-400` | Bad Request | {combinedMessage}. Please check the provided request and try again. |
 | `1319-400` | Bad Request | The {param} should be part of parent collection. Please provide {param} in parent collection and try again. |
@@ -168,7 +168,7 @@ This document provides a catalog of error messages, descriptions, and suggested 
 | --- | --- | --- |
 | `1600-400` | Bad Request | The request could not be processed. {detailedMessage} |
 | `1601-500` | Internal Error | An internal error has occurred. Please try again and contact customer support if the problem persists. |
-| `1602-404` | Resource not found | The requested resource is not found. {detailedMessage}
+| `1602-404` | Resource not found | The requested resource is not found. {detailedMessage} |
 | `1603-503` | Service Unavailable | The service is temporarily unavailable. Please try again. Contact customer support if the problem persists. |
 | `1604-504` | Gateway Timeout | A gateway timeout has occurred. Please try again. Contact customer support if the problem persists. |
 | `1605-401` | Unauthorized | The user is unauthorized. {detailedMessage} |
