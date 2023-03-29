@@ -13,7 +13,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Getting started {#intro}
   * Real-Time CDP {#rtcdp-intro}
     * [Get started with Real-Time CDP](get-started.md)
-    * [Real-Time CDP home page](home-page-dashboards.md)
+    * [Home page](home-page-dashboards.md)
   * Real-Time CDP B2B Edition {#rtcdpb2b-intro}
     * [Example use case](./b2b-use-case.md)
     * [End-to-end tutorial](./b2b-tutorial.md)
