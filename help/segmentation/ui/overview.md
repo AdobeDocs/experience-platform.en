@@ -61,16 +61,14 @@ Select the **[!UICONTROL Browse]** tab to see a list of all the segment definiti
 
 This view lists information about the segment definition including the profile count, created date, and last modified date. 
 
-You can add additional fields to this display by selecting ![the filter attribute icon](../images/ui/overview/filter-attribute.png). These additional fields include breakdown, churn, evaluation method, and job ID.
+You can add additional fields to this display by selecting ![the filter attribute icon](../images/ui/overview/filter-attribute.png). These additional fields include breakdown, evaluation method, and job ID.
 
-If breakdown is selected, the display shows a bar graph outlining the percentage of profiles that belong to each of the following statuses: [!UICONTROL Realized], [!UICONTROL Existing], and [!UICONTROL Exiting]. Additionally, the breakdown shown on the [!UICONTROL Browse] tab is the most accurate breakdown of the segment status. If this number differs with what is stated on the [!UICONTROL Overview] tab, you should use the numbers on the [!UICONTROL Browse] tab as the correct source of information, since the [!UICONTROL Overview] tab numbers only update once per day.
+If breakdown is selected, the display shows a bar graph outlining the percentage of profiles that belong to each of the following calculated profile statuses: [!UICONTROL Realized], [!UICONTROL Existing], and [!UICONTROL Exiting]. Additionally, the breakdown shown on the [!UICONTROL Browse] tab is the most accurate breakdown of the segment status. If this number differs with what is stated on the [!UICONTROL Overview] tab, you should use the numbers on the [!UICONTROL Browse] tab as the correct source of information, since the [!UICONTROL Overview] tab numbers only update once per day.
 
 | Status | Description |
 | ------ | ----------- |
-| Realized | A new profile within the segment. |
-| Exiting | An existing profile which is leaving the segment. |
-
-The churn represents the percentage of profiles that are changing within a segment definition compared to the last time the segment job ran, while the profile count represents the total number of profiles that qualify for the segment.
+| Realized | The count of profiles that qualify for the segment in the last 24 hours. So, the number of profiles that qualify for the segment since the last time the batch segment job ran. |
+| Exiting | The count of profiles that exited the segment in the last 24 hours. So, the number of profiles that no longer qualify for the segment since the last time the batch segment job ran. |
 
 The evaluation method can either be streaming, batch, or edge. Streaming segments are constantly evaluated as data enters the system. Batch segments are evaluated according to a set schedule. Edge segments are evaluated in real-time, which allow for same page and next page personalization use cases.
 
