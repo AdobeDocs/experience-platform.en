@@ -71,7 +71,7 @@ With your self-identification survey completed, select **[!UICONTROL Done]**.
 
 >[!NOTE]
 >
->Objectives & recommendations (if present) will change based on the select job functions.
+>Objectives and recommendations (if present) will change based on the select job functions.
 
 ## Update your survey responses
 
