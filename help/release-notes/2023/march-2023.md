@@ -36,6 +36,7 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 | Feature | Description |
 | --- | --- |
+| General Availability of filtering for Adobe Analytics data | You can now use Data Prep functionalities to apply rules and conditions to filter your Analytics data before ingesting them into Real-Time Customer Profile. For more information, read the guide on [filtering Analytics data for Profile ingestion](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-profile). |
 | New functions for encoding and decoding URL strings | <ul><li>The `get_url_encoded` function takes a URL as input and replaces or encodes special characters with ASCII characters.</li><li>The `get_url_decoded` function takes a URL as input and decodes ASCII characters into special characters.</li></ul> For more information, read the [Data Prep functions guide](../../data-prep/functions.md). For a comprehensive list of reserved characters and their corresponding encoded characters, read the guide on [special characters](../../data-prep/functions.md#special-characters).|
 
 For more information on Data Prep, please read the [Data Prep overview](../../data-prep/home.md).
