@@ -18,8 +18,8 @@ This example uses [!DNL Python] and the [!DNL Jupyter Notebook] development envi
 
 Before you begin, you must import the necessary libraries. [!DNL FuzzyWuzzy] is an open-sourced [!DNL Python] library built on top of the [!DNL difflib] library and used to match strings. It uses [!DNL Levenshtein Distance] to calculate the differences between sequences and patterns. [!DNL FuzzyWuzzy] has the following requirements:
 
-- Python 2.4 (or higher)
-- Python-Levenshtein
+- [!DNL Python] 2.4 (or higher)
+- [!DNL Python-Levenshtein]
 
 From the command line, use the following command to install [!DNL FuzzyWuzzy]:
 
@@ -27,7 +27,7 @@ From the command line, use the following command to install [!DNL FuzzyWuzzy]:
 pip install fuzzywuzzy
 ```
 
-Or use the following command to install Python-Levenshtein as well:
+Or use the following command to install [!DNL Python-Levenshtein] as well:
 
 ```console
 pip install fuzzywuzzy[speedup]
@@ -37,7 +37,7 @@ More technical information on [!DNL Fuzzywuzzy] can be found in their [official 
 
 ### Connect to Query Service
 
-You must connect your machine learning model to Query Service by providing your connection credentials. Both expiring and non-expiring credentials can be provided. Please see the [credentials guide](../ui/credentials.md) for more information on how to acquire the necessary credentials. If you are using Jupyter Notebook, please see the full guide on [how to connect to Query Service](../clients/jupyter-notebook.md).
+You must connect your machine learning model to Query Service by providing your connection credentials. Both expiring and non-expiring credentials can be provided. Please see the [credentials guide](../ui/credentials.md) for more information on how to acquire the necessary credentials. If you are using [!DNL Jupyter Notebook], please see the full guide on [how to connect to Query Service](../clients/jupyter-notebook.md).
 
 Also, be sure to import the [!DNL numpy] package into your [!DNL Python] environment to enable linear algebra.
 
@@ -45,7 +45,7 @@ Also, be sure to import the [!DNL numpy] package into your [!DNL Python] environ
 import numpy as np
 ```
 
-The commands below are necessary to connect to Query Service from Jupyter Notebook:
+The commands below are necessary to connect to Query Service from [!DNL Jupyter Notebook]:
 
 ```python
 import psycopg2
@@ -60,7 +60,7 @@ password=<YOUR_QUERY_SERVICE_PASSWORD>
 cur = conn.cursor()
 ```
 
-Your Jupyter Notebook instance is now connected to Query Service. If the connection is successful, no message will display. If the connection failed, an error will display. 
+Your [!DNL Jupyter Notebook] instance is now connected to Query Service. If the connection is successful, no message will display. If the connection failed, an error will display. 
 
 ### Draw data from the Expedio dataset {#expedio-dataset}
 
