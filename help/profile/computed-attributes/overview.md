@@ -4,6 +4,8 @@ title: Introduction to Computed Attributes
 type: Documentation
 description: Computed attributes are functions to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
+hide: true
+hidefromtoc: true
 ---
 # (Alpha) Computed attributes overview
 
