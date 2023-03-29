@@ -98,7 +98,7 @@ cur.execute('''SELECT * FROM acme;
 ''')    
 acme = np.array([r[0] for r in cur])
 
-acme[:10] # first 10 examples of the column
+acme[:10]
 ```
 
 Select **Output** to se the returned array.
@@ -117,5 +117,246 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 +++
 
 ### Create fuzzy scoring function
+
+Next, you must import `fuzz` from the FuzzyWuzzy library and execute a partial ratio comparison of the strings. The partial ratio function allows you to perform substring matching. This takes the shortest string and matches it with all substrings that are of the same length. The function returns a percentage similarity ratio of up to 100%. For example, the partial ratio function would compare the following strings 'Deluxe Room, 1 King Bed', 'Deluxe King Room' and return a similarity score of 69%. 
+
+In the hotel room search use case, this is done using the following commands:
+
+```python
+from fuzzywuzzy import fuzz
+def compute_match_score(x,y):
+    return fuzz.partial_ratio(x,y)
+```
+
+Next, import `cdist` from the [!DNL SciPy] library to compute the distance between each pair in the two collections of inputs. This computes the scores among all pairs of hotel names between Expedio and Acme.
+
+```python
+from scipy.spatial.distance import cdist
+pairwise_distance =  cdist(expedia.reshape((-1,1)),booking_com.reshape((-1,1)),compute_match_score)
+```
+
+### Create mappings between the two columns using the fuzzy join score
+
+Now that the columns have been scored based on distance, you can index the pairs and retain only matches that scored higher than a certain percentage. This example only retains pairs that matched with a score of 70% or higher. 
+
+```python
+matched_pairs = []
+for i,c1 in enumerate(expedio):
+    idx = np.where(pairwise_distance[i,:] > 70)[0]
+    for j in idx:
+        matched_pairs.append((expedio[i].replace("'","''"),booking_com[j].replace("'","''")))
+```
+
+The results can be displayed with the following command. For brevity, the results are limited to ten rows.
+
+```python
+matched_pairs[:10]
+```
+
+Select **Output** to see the results.
+
++++Output
+
+```console
+
+[('Deluxe Room, 1 King Bed', 'Deluxe Room - One King Bed'),
+ ('Standard Room, Lagoon View', 'Standard Room With Ocean View'),
+ ('Standard Room, Lagoon View', 'Standard Room Dolphin Lagoon View'),
+ ('Deluxe Room, 2 Queen Beds', 'Deluxe Room - Two Queen Beds'),
+ ('Deluxe Room, 2 Queen Beds', 'Deluxe Room - One King Bed'),
+ ('Deluxe Room, 1 King Bed', 'Deluxe Room - One King Bed'),
+ ('Deluxe Room, 1 King Bed', 'Deluxe Room - One King Bed'),
+ ('Premier Room, 1 King Bed', 'Royal Club Premier Room - One King Bed'),
+ ('Deluxe Room, Corner', 'Deluxe Room (Non Refundable)'),
+ ('Deluxe Suite', 'Corner Deluxe Studio')]
+```
+
++++
+
+The results are then matched using SQL with the following command:
+
+<!-- Q) Why and is this accurate? -->
+
+```python
+matching_sql = ' OR '.join(["(e.Expedio = '{}' AND b.acme = '{}')".format(c1,c2) for c1,c2 in matched_pairs])
+```
+
+## Apply the mappings to do fuzzy join in Query Service {#mappings-for-query-service}
+
+Next, the high scoring matching pairs are joined using SQL to create a new dataset. 
+
+```python
+:
+cur.execute('''
+SELECT *  FROM expedio e
+CROSS JOIN acme b
+WHERE 
+{}
+'''.format(matching_sql)) 
+[r for r in cur]
+```
+
+Select **Output** to see the results of this join.
+
++++Output
+
+```console
+[('Deluxe Room, 1 King Bed', 'Deluxe Room - One King Bed'),
+ ('Standard Room, Lagoon View', 'Standard Room With Ocean View'),
+ ('Standard Room, Lagoon View', 'Standard Room Dolphin Lagoon View'),
+ ('Deluxe Room, 2 Queen Beds', 'Deluxe Room - Two Queen Beds'),
+ ('Deluxe Room, 2 Queen Beds', 'Deluxe Room - One King Bed'),
+ ('Deluxe Room, 1 King Bed', 'Deluxe Room - One King Bed'),
+ ('Deluxe Room, 1 King Bed', 'Deluxe Room - One King Bed'),
+ ('Premier Room, 1 King Bed', 'Royal Club Premier Room - One King Bed'),
+ ('Deluxe Room, Corner', 'Deluxe Room (Non Refundable)'),
+ ('Deluxe Suite', 'Corner Deluxe Studio'),
+ ('Deluxe Suite', 'Deluxe Suite'),
+ ('Deluxe Room, 1 King Bed', 'Deluxe Room - One King Bed'),
+ ('Club Room, 2 Queen Beds', 'Deluxe Room - Two Queen Beds'),
+ ('Business Double Room, 2 Double Beds', 'Double Room with Two Double Beds'),
+ ('Business Double Room, 2 Double Beds', 'Double Room with Two Double Beds'),
+ ('Business Double Room, 2 Double Beds', 'Double Room with Two Double Beds'),
+ ('Business Double Room, 2 Double Beds', 'Business King Room'),
+ ('Business Double Room, 2 Double Beds', 'Double Room with Two Double Beds'),
+ ('Business Double Room, 2 Double Beds',
+  'Business Double Room With Two Double Beds'),
+ ('Business Double Room, 2 Double Beds', 'Deluxe Double Room'),
+ ('Traditional Double Room, 2 Double Beds',
+  'Double Room with Two Double Beds'),
+ ('Traditional Double Room, 2 Double Beds',
+  'Double Room with Two Double Beds'),
+ ('Traditional Double Room, 2 Double Beds',
+  'Double Room with Two Double Beds'),
+ ('Traditional Double Room, 2 Double Beds',
+  'Double Room with Two Double Beds'),
+ ('Deluxe Suite, 1 Bedroom', 'Deluxe Suite'),
+ ('City Room, City View', 'Room With City View'),
+ ('City Room, City View', 'Queen Room With City View'),
+ ('City Room, City View', 'Club Level King Or Queen Room with City View'),
+ ('Club Room, Premium 2 Queen Beds', 'Club Premium Two Queen'),
+ ('Club Room, Premium 2 Queen Beds', 'Premium Two Queen'),
+ ('Deluxe Room, Lake View', 'Deluxe King Or Queen Room with Lake View'),
+ ('King Room, Suite, 1 King Bed with Sofa bed', 'King Room'),
+ ('King Room, Suite, 1 King Bed with Sofa bed', 'King Room'),
+ ('King Room, Suite, 1 King Bed with Sofa bed', 'King Room'),
+ ('Deluxe Suite, 1 King Bed, Non Smoking, Kitchen', 'Deluxe Suite'),
+ ('Junior Suite, 1 King Bed, Accessible (Roll-in Shower)', 'Junior Suite'),
+ ('Regency Club, Mountain View', 'Regency Club Ocean View'),
+ ('Regency Club, Mountain View', 'Regency Club Mountain View'),
+ ('Club Room, 2 Queen Beds', 'Deluxe Room - Two Queen Beds'),
+ ('Room, 2 Queen Beds, City View',
+  'Queen Room With Two Queen Beds and City View'),
+ ('Deluxe Room', 'Queen Room'),
+ ('Deluxe Room', 'Deluxe Room (Non Refundable)'),
+ ('Deluxe Room', 'Deluxe Room - Two Queen Beds'),
+ ('Deluxe Room', 'Deluxe Room - One King Bed'),
+ ('Room, Partial Ocean View', 'Room With Ocean View'),
+ ('Room, Partial Ocean View', 'Partial Ocean View With Two Double Beds'),
+ ('Room, Partial Ocean View', 'Kona Tower Partial Ocean View'),
+ ('Room, Partial Ocean View', 'Partical Ocean View Room'),
+ ('Room, Partial Ocean View', 'Waikiki Tower Partial Ocean View'),
+ ('Premium Room, 1 King Bed', 'Royal Club Premier Room - One King Bed'),
+ ('Grand Corner King Room, 1 King Bed', 'Grand Corner King Room'),
+ ('Room, 1 King Bed', 'Deluxe Room - One King Bed'),
+ ('Room, 1 King Bed', 'Ocean View Room With King Bed'),
+ ('Room, 1 King Bed', 'Royal Club Premier Room - One King Bed'),
+ ('Deluxe Room, 1 King Bed, Non Smoking', 'Deluxe Room - One King Bed'),
+ ('Room, 2 Double Beds, Accessible, Partial Ocean View',
+  'Accessible Partial Ocean View With Two Double Beds'),
+ ('Room, 2 Double Beds, Accessible, Partial Ocean View',
+  'Partical Ocean View Room'),
+ ('Room, Ocean View ', 'Room With Ocean View'),
+ ('Room, Ocean View ', 'King Or Two Queen Room With Ocean View'),
+ ('Room, Ocean View ', 'Standard Room With Ocean View'),
+ ('Signature Suite, 1 Bedroom', 'Signature King'),
+ ('Room, 2 Queen Beds (Waikiki View)',
+  'Queen Room With Two Queen Beds and Waikiki View'),
+ ('Deluxe Room', 'Queen Room'),
+ ('Deluxe Room', 'Deluxe Room (Non Refundable)'),
+ ('Deluxe Room', 'Deluxe Room - Two Queen Beds'),
+ ('Deluxe Room', 'Deluxe Room - One King Bed'),
+ ('Standard Room, Oceanfront', 'Standard Room With Ocean View'),
+ ('Standard Room, Oceanfront', 'Standard Room With Ocean Front View'),
+ ('Standard Room, Mountain View (City View - Kona Tower) - No Resort Fee',
+  'Standard Room With Mountain View'),
+ ('Standard Room, Mountain View (City View - Kona Tower) - No Resort Fee',
+  'Standard Room With Ocean View'),
+ ('High-Floor Premium Room, 1 King Bed', 'High-Floor Premium King Room'),
+ ('Club Room, 1 King Bed', 'Deluxe Room - One King Bed'),
+ ('Junior Suite, 1 King Bed with Sofa Bed', 'Junior Suite'),
+ ('Junior Suite, 1 King Bed with Sofa Bed', 'Deluxe King Suite With Sofa Bed'),
+ ('Deluxe Room, City View', 'Queen Room With City View'),
+ ('Deluxe Room, City View', 'Club Level King Or Queen Room with City View'),
+ ('Room, 1 King Bed', 'Deluxe Room - One King Bed'),
+ ('Room, 1 King Bed', 'Ocean View Room With King Bed'),
+ ('Room, 1 King Bed', 'Royal Club Premier Room - One King Bed'),
+ ('Room, 2 Double Beds, Partial Ocean View', 'Kona Tower Partial Ocean View'),
+ ('Room, 2 Double Beds, Partial Ocean View', 'Partical Ocean View Room'),
+ ('Room, 1 Queen Bed, City View',
+  'Queen Room With Two Queen Beds and City View'),
+ ('Room, Ocean View', 'Room With Ocean View'),
+ ('Room, Ocean View', 'King Or Two Queen Room With Ocean View'),
+ ('Room, Ocean View', 'Standard Room With Ocean View'),
+ ('Standard Room, Partial Ocean View (Kona Tower) - No Resort Fee',
+  'Partical Ocean View Room'),
+ ('Standard Room, Partial Ocean View (Kona Tower) - No Resort Fee',
+  'Standard Room With Ocean View'),
+ ('Standard Room, Partial Ocean View (Kona Tower) - No Resort Fee',
+  'Standard Room With Ocean Front View'),
+ ('Standard Room, Ocean View (Waikiki Tower) - No Resort Fee',
+  'Standard Room With Ocean View'),
+ ('Standard Room, Partial Ocean View (Waikiki Tower) - No Resort Fee',
+  'Standard Room With Ocean View'),
+ ('Standard Room, Partial Ocean View (Waikiki Tower) - No Resort Fee',
+  'Standard Room With Ocean Front View'),
+ ('Regency Club, Ocean View',
+  'Accessible Club Ocean View Suite With One King Bed'),
+ ('Regency Club, Ocean View', 'Regency Club Ocean View'),
+ ('Regency Club, Ocean View', 'Regency Club Mountain View'),
+ ('Standard Room, Mountain View (Scenic)', 'Standard Room With Mountain View'),
+ ('Standard Room, Mountain View (Scenic)', 'Standard Room With Ocean View'),
+ ('Room, 1 Queen Bed', 'Deluxe Room - Two Queen Beds'),
+ ('Double Room', 'Luxury Double Room'),
+ ('Double Room', 'Double Room with Two Double Beds'),
+ ('Double Room', 'Queen Room'),
+ ('Double Room', 'Double Room with Two Double Beds'),
+ ('Double Room', 'Double Room with Two Double Beds'),
+ ('Double Room', 'Double Room with Two Double Beds'),
+ ('Double Room', 'Business Double Room With Two Double Beds'),
+ ('Double Room', 'Deluxe Double Room'),
+ ('Club Room, 1 King Bed', 'Deluxe Room - One King Bed'),
+ ('Premier Twin Room', 'High-Floor Premium King Room'),
+ ('Premier Twin Room', 'Premier King Room'),
+ ('Premier Twin Room', 'Premier Queen Room With Two Queen Beds'),
+ ('Premier Twin Room', 'Premium King Room With Free Wi-Fi'),
+ ('Premium Room, 1 Queen Bed', 'Premium Two Queen'),
+ ('Premium Room, 2 Queen Beds', 'Premium Two Queen'),
+ ('Deluxe Room, 1 Queen Bed (High Floor)', 'Deluxe Room - Two Queen Beds'),
+ ('Room, 2 Queen Beds, Garden View',
+  'Queen Room With Two Queen Beds and Garden View'),
+ ('Signature Room, 2 Queen Beds', 'Deluxe Room - Two Queen Beds'),
+ ('Signature Room, 2 Queen Beds', 'Signature Two Queen'),
+ ('Standard Room, Ocean View', 'Room With Ocean View'),
+ ('Standard Room, Ocean View', 'Standard Room With Ocean View'),
+ ('Standard Room, Ocean View', 'Standard Room With Ocean Front View')]
+```
+
++++
+
+### Save fuzzy search results to Platform
+
+Finally, the results of the fuzzy search can be saved as a dataset for use in Adobe Experience Platform using SQL.
+
+```python
+cur.execute(''' 
+Create table expedia_booking_com_join
+AS
+(SELECT *  FROM expedia e
+CROSS JOIN booking_com b
+WHERE 
+{})
+'''.format(matching_sql))
+```
 
 
