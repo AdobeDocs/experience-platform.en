@@ -2,9 +2,14 @@
 keywords: metrics overview; rtcdp metrics overview
 title: Real-Time Customer Data Platform Home Page and Dashboards
 description: Dashboards, Home Page, and First-Time User Experience of Adobe Experience Platform
+badge: "Beta"
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 ---
 # [!DNL Real-Time Customer Data Platform] home page
+
+>[!NOTE]
+>
+>The [!DNL Real-Time Customer Data Platform] home page is in beta. Its features and documentation are subject to change.
 
 The Adobe Real-Time Customer Data Platform (Real-Time CDP) home page is the first page that appears after logging in to Real-Time CDP.
 
