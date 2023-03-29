@@ -8,6 +8,20 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## Version 2.16.0 - March 29, 2023
+
+**New features**
+
+* (Beta) Added **[!UICONTROL Update variable]** action and **[!UICONTROL Variable data]** element.
+
+**Fixes and improvements**
+
+* Fixed an issue causing clicking on elements within an anchor tag to not work when the **[!UICONTROL Redirect with identity]** action was used.
+* Fixed an issue where XDM object data elements did not work when there was only one schema present.
+* Added configuration for [`onBeforeLinkClickSend`](fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) callback function.
+* Included Web SDK library version 2.15.0.
+
+
 ## Version 2.15.1 - January 26, 2023
 
 * Fixed an issue where users without access to datastreams could not edit the extension configuration.
