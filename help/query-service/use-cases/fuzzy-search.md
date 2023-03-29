@@ -6,7 +6,7 @@ description: Learn how to perform a search on your Platform data that combines r
 
 Use a 'fuzzy' search on your Platform data to return the most likely, approximate matches without the need to search for strings with identical characters. This allows for much a more flexible search of your data and makes your data more accessible by saving time and effort.
 
-Instead of trying to re-format the search strings in order to match them, the fuzzy search analyses the ratio of similarity between two sequences and returns the similarity percentage. [!DNL FuzzyWuzzy] is reccomended for this process as its functions are more suited to help match strings in more complex situations compared to [!DNL regex] or [!DNL difflib].
+Instead of trying to re-format the search strings in order to match them, the fuzzy search analyses the ratio of similarity between two sequences and returns the similarity percentage. [!DNL FuzzyWuzzy] is recommended for this process as its functions are more suited to help match strings in more complex situations compared to [!DNL regex] or [!DNL difflib].
 
 The use case provided in this document uses a hotel room search across two different company datasets as an example. The document demonstrates how to match strings by their degree of similarity. In this case, comparing the features of a room across the resources of two disparate datasets.
 
@@ -37,7 +37,7 @@ More technical information on [!DNL Fuzzywuzzy] can be found in their [official 
 
 ### Connect to Query Service
 
-You must connect your machine learning model to query service by providing you connection credentials. Both expiring and non expiring credentials can be provided. Please see the [credentials guide](../ui/credentials.md) for more information on how to acquire the necessary credentials. If you are using Jupyter Notebook, please see the full guide on [how to connect to Query Service](../clients/jupyter-notebook.md).
+You must connect your machine learning model to Query Service by providing your connection credentials. Both expiring and non-expiring credentials can be provided. Please see the [credentials guide](../ui/credentials.md) for more information on how to acquire the necessary credentials. If you are using Jupyter Notebook, please see the full guide on [how to connect to Query Service](../clients/jupyter-notebook.md).
 
 Also, be sure to import the [!DNL numpy] package into your [!DNL Python] environment to enable linear algebra.
 
@@ -60,7 +60,7 @@ password=<YOUR_QUERY_SERVICE_PASSWORD>
 cur = conn.cursor()
 ```
 
-Your Jupyter Notebook instance is now connected to Query Service. If the connection is successful, no message will display. If the connection failed, and error will display. 
+Your Jupyter Notebook instance is now connected to Query Service. If the connection is successful, no message will display. If the connection failed, an error will display. 
 
 ### Draw data from the Expedio dataset {#expedio-dataset}
 
@@ -74,7 +74,7 @@ expedio = np.array([r[0] for r in cur])
 expedio[:10]
 ```
 
-Select **Output** to se the returned array.
+Select **Output** to display the returned array.
 
 +++Output
 
@@ -101,7 +101,7 @@ acme = np.array([r[0] for r in cur])
 acme[:10]
 ```
 
-Select **Output** to se the returned array.
+Select **Output** to display the returned array.
 
 +++Output
 
@@ -116,9 +116,9 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### Create fuzzy scoring function
+### Create a fuzzy scoring function {#fuzzy-scoring}
 
-Next, you must import `fuzz` from the FuzzyWuzzy library and execute a partial ratio comparison of the strings. The partial ratio function allows you to perform substring matching. This takes the shortest string and matches it with all substrings that are of the same length. The function returns a percentage similarity ratio of up to 100%. For example, the partial ratio function would compare the following strings 'Deluxe Room, 1 King Bed', 'Deluxe King Room' and return a similarity score of 69%. 
+Next, you must import `fuzz` from the FuzzyWuzzy library and execute a partial ratio comparison of the strings. The partial ratio function allows you to perform substring matching. This takes the shortest string and matches it with all substrings that are of the same length. The function returns a percentage similarity ratio of up to 100%. For example, the partial ratio function would compare the following strings 'Deluxe Room', '1 King Bed', and 'Deluxe King Room' and return a similarity score of 69%. 
 
 In the hotel room search use case, this is done using the following commands:
 
@@ -183,7 +183,7 @@ matching_sql = ' OR '.join(["(e.Expedio = '{}' AND b.acme = '{}')".format(c1,c2)
 
 ## Apply the mappings to do fuzzy join in Query Service {#mappings-for-query-service}
 
-Next, the high scoring matching pairs are joined using SQL to create a new dataset. 
+Next, the high-scoring matching pairs are joined using SQL to create a new dataset. 
 
 ```python
 :
