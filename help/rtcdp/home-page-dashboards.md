@@ -19,7 +19,7 @@ This document provides an overview of the Real-Time CDP home page and metrics da
 The [!UICONTROL Getting started with Real-Time Customer Profile] widget is divided into four sections: 
 
 * **Ingest data into Platform**: This widget directs you to the sources catalog. Use the sources catalog to select a source and ingest your data to Experience Platform. For more information, read the [sources overview](../sources/home.md)
-* **Model data structures**: This widget directs you to the schemas dashboard. Use the schemas dashboard to browse for existing scheams or create building blocks and describe the structure of your data. For more information, read the [schemas overview](../xdm/home.md).
+* **Model data structures**: This widget directs you to the schemas overview. Use the schemas overview to browse for existing schemas or create building blocks and describe the structure of your data. For more information, read the [schemas overview](../xdm/home.md).
 * **Segment audiences**: This widget directs you to the [!DNL Segment Builder] in the UI. Use the [!DNL Segment Builder] to interact with Profile data elements and define rules for your segments. For more information, read the [Segmentation Service overview](../segmentation/home.md).
 * **Send data to destinations**: This widget directs you to the destinations catalog. Use the destinations catalog to select a destination that you can then connect and send segments to. For more information, read the [destinations overview](../destinations/home.md)
 
