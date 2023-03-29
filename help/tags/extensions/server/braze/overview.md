@@ -132,7 +132,7 @@ To install the extension, [create an event forwarding property](../../../ui/even
 
 Select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL Catalog]** tab, select **[!UICONTROL Install]** on the card for the [!DNL Braze] extension.
 
-![Installing the [!DNL Braze] extension.](../../../images/extensions/server/braze/install-extension.png)
+![Install the [!DNL Braze] extension.](../../../images/extensions/server/braze/install-extension.png)
 
 On the next screen, input the following [configuration values](#configuration-details) that you previously gathered from [!DNL Braze]:
 
