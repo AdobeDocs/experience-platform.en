@@ -4,22 +4,22 @@ title: Real-Time Customer Data Platform Home Page and Dashboards
 description: Dashboards, Home Page, and First-Time User Experience of Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 ---
-# [!DNL Real-Time Customer Data Platform] home page and dashboards
+# [!DNL Real-Time Customer Data Platform] home page
 
 The Adobe Real-Time Customer Data Platform (Real-Time CDP) home page is the first page that appears after logging in to Real-Time CDP.
 
-The Real-Time CDP home page includes a getting started panel that allows you to quickly access several different features and a metrics section that display up-to-date information on data within your organization.
+The Real-Time CDP home page includes a getting started widget that allows you to quickly access several different features and a metrics section that display up-to-date information on data within your organization.
 
 This document provides an overview of the Real-Time CDP home page and metrics dashboard.
 
-![image](assets/platform-home/home.png)
+![The Platform UI home page.](assets/platform-home/home.png)
 
 ## Getting started widget
 
 The [!UICONTROL Getting started with Real-Time Customer Profile] widget is divided into four sections: 
 
 * **Ingest data into Platform**: This widget directs you to the sources catalog. Use the sources catalog to select a source and ingest your data to Experience Platform. For more information, read the [sources overview](../sources/home.md)
-* **Model data structures**: This widget directs you to the schemas dashboard. Use the schemas dashboard to create building blocks and describe the structure of your data. For more information, read the [schemas overview](../xdm/home.md).
+* **Model data structures**: This widget directs you to the schemas dashboard. Use the schemas dashboard to browse for existing scheams or create building blocks and describe the structure of your data. For more information, read the [schemas overview](../xdm/home.md).
 * **Segment audiences**: This widget directs you to the [!DNL Segment Builder] in the UI. Use the [!DNL Segment Builder] to interact with Profile data elements and define rules for your segments. For more information, read the [Segmentation Service overview](../segmentation/home.md).
 * **Send data to destinations**: This widget directs you to the destinations catalog. Use the destinations catalog to select a destination that you can then connect and send segments to. For more information, read the [destinations overview](../destinations/home.md)
 
@@ -46,7 +46,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 ### Recent items
 
-Recent items lists the five most recent datasets, sources, segments, and destinations added to the system.
+Recent items lists the most recent changes in your organization. In the example below, the most recent changes pertain to datasets, sources, segments, and destinations.
 
 ![The recent items section in the Platform UI home page.](assets/platform-home/recent-items.png)
 
@@ -59,13 +59,13 @@ Recent items lists the five most recent datasets, sources, segments, and destina
 
 Finally, the resources widget provides you with additional documentation resources that you can refer to. These include:
 
+![The resources section in the Platform UI home page.](assets/platform-home/resources.png)
+
 * [Understanding schemas](../xdm/schema/composition.md)
 * [Connecting sources](../sources/home.md)
 * [How to populate your Real-Time Customer Profile](../profile/home.md)
 * [Connecting destinations](../destinations/home.md)
 * [Manage access](../access-control/abac/overview.md)
-
-![The resources section in the Platform UI home page.](assets/platform-home/resources.png)
 
 <!-- ### Successful profile records
 
