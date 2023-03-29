@@ -8,11 +8,31 @@ description: The March 2023 release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
+- [Dashboards](#dashboards)
 - [Data collection](#data-collection)
 - [Data Prep](#data-prep)
 - [Destinations](#destinations)
+- [Experience Data Model](#xdm)
+- [Query Service](#query-service)
+- [Real-Time Customer Data Platform B2B Edition](#b2b)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
+
+## Dashboards {#dashboards}
+
+Adobe Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots. 
+
+**New or updated features** {#dashboards-new-updated-features}
+
+| Feature | Description |
+| --- | --- |
+|User-defined dashboards| You can now **sample attribute values** before adding an attribute to a widget in the user-defined dashboards widget composer. A few sample values from that attribute column are available for individual attributes when creating a widget.<br>
+You can now **swap the X and Y axis** on your widget with the swap axis button. This saves time and provides a more ergonomic experience when adding attributes to your widgets. This saves need to find both attributes again from the attributes panel.<br> 
+You can now **change the location and title of the legend** within your widgets. After a legend is present on a widget, you can relocate that legend anywhere around the chart and also re-name the legend title, as you can with axis labels and the widget title.|
+
+{style="table-layout:auto"}
+
+For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
 
 ## Data collection {#data-collection}
 
@@ -74,6 +94,48 @@ We are releasing a bug fix for PGP/GPG encryption in file-based destinations for
 - Future extension when using encryption: `filename.csv.gpg`
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| CSV to schema recommendation | You can now upload your local files to create machine learning generated schemas that eliminate the need to manually create a schema. From the [!UICONTROL Sources] workspace, upload a sample CSV file, and Adobe machine learning algorithms will suggest a schema for you based on the target fields. See the [documentation](../../ingestion/tutorials/map-csv/recommendations.md) for more information." |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).
+
+## Query Service {#query-service}
+
+Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from data lake and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-Time Customer Profile.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| Attribute based access control on the accelerated store | Use Attribute-based Access Control with Data Distiller to define access control on all datasets on the accelerated store. This controls access to the custom data models created by users and stored on an accelerated store to power custom dashboards. |
+
+{style="table-layout:auto"}
+
+For more information on Query Services, refer to the [Query Service overview](../../query-service/home.md).
+
+## Real-Time Customer Data Platform B2B Edition {#b2b}
+
+Built on Real-Time Customer Data Platform (Real-Time CDP), Real-Time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| Bugfix | To provide a more accurate representation of profiles in your system, the system no longer includes internal profiles in the total profile count or the addressable audience metric for the Real-Time Customer Data Platform B2B Edition. Starting today, you may see a one-time drop in the total profile count/addressable audience metric. None of your data has been erased, this is simply a change to the count. Please contact your Adobe executive with any concerns you may have|
+
+{style="table-layout:auto"}
+
+To learn more about Real-Time CDP B2B Edition, read the [Real-Time CDP B2B Edition overview](../../rtcdp/overview.md).
 
 ## Segmentation Service {#segmentation}
 
