@@ -105,12 +105,6 @@ Depending on your scenario, you may need to create another data element that can
 
 ![Data element eventNameForRegistration in Tag properties.](../../../images/extensions/server/braze/constant-registration.png)
 
-<!-- (Not quite sure what this means...)
->[!WARNING]
->
->The Tag property data element `deviceId`, for example, and the event forwarding data element name should match the same name as that used in your schema.
--->
-
 ### Add rules within tag properties
 
 
