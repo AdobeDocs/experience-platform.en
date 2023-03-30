@@ -8,7 +8,7 @@ description: The Mailchimp Tags destination allows you to export your account da
 
 [!DNL Mailchimp Tags] uses [audiences](https://mailchimp.com/help/getting-started-audience/) and [tags](https://mailchimp.com/help/getting-started-tags/) to manage your contact information. Tags are labels using which you can organize your contacts and label them for your internal categorization within [!DNL Mailchimp].
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Mailchimp Batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) endpoint. You can add contacts or update tags of existing [!DNL Mailchimp] contacts within an existing [!DNL Mailchimp] audience after activating them within a new segment. [!DNL Mailchimp Tags] uses the selected segment names from Platform as the tag names within [!DNL Mailchimp].
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) endpoint. You can **add new contacts** or **update tags of existing [!DNL Mailchimp] contacts** within an existing [!DNL Mailchimp] audience after activating them within a new segment. [!DNL Mailchimp Tags] uses the selected segment names from Platform as the tag names within [!DNL Mailchimp].
 
 [!DNL Mailchimp Tags] uses [OAuth 2 with Authorization Code](/help/destinations/destination-sdk/functionality/authentication/oauth2-authentication.md#authorization-code) to communicate with the [!DNL Account Engagement] API. Instructions to authenticate to your [!DNL Mailchimp Tags] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
@@ -18,7 +18,7 @@ To help you better understand how and when you should use the [!DNL Mailchimp Ta
 
 ### Send emails to contacts for marketing campaigns {#use-case-send-emails}
 
-The sales department of an organization wants to broadcast an email based marketing campaign to a curated list of contacts. The organizations marketing team can add new contacts or update tags of existing [!DNL Mailchimp] contacts, within an existing [!DNL Mailchimp] audience through Experience Platform, build segments from their own offline data, and send these segments to [!DNL Mailchimp Tags]. This audience can then be used to send the marketing campaign email.
+The sales department of an organization wants to broadcast an email based marketing campaign to a curated list of contacts. The lists of contact are received in batches from different offline sources and therefore need to be tracked. The team identifies an existing [!DNL Mailchimp] audience and starts building the Experience Platform segment's into which the contacts from each list are added. After sending these segments to [!DNL Mailchimp Tags] if any contacts do not exist in the selected [!DNL Mailchimp] audience they get added with an associated tag having the segment name the contact belongs to. If any contacts already exist in the [!DNL Mailchimp] audience a new tag with the name of the segment is added. As the labels are visible in [!DNL Mailchimp] the offline sources are easily identifiable. After the data is sent over to [!DNL Mailchimp] they send the marketing campaign email to the audience.
 
 ## Prerequisites {#prerequisites}
 
@@ -28,7 +28,7 @@ Refer to the sections below for any prerequisites that you need to set up in Exp
 
 Before activating data to the [!DNL Mailchimp Tags] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
-### Prerequisites in [!DNL Mailchimp Tags] {#prerequisites-destination}
+### Prerequisites for the [!DNL Mailchimp Tags] destination {#prerequisites-destination}
 
 Note the following prerequisites in order to export data from Platform to your [!DNL Mailchimp Tags] account:
 
@@ -49,13 +49,13 @@ Note down the items below before you authenticate to the [!DNL Mailchimp Tags] d
 
 #### Identify [!DNL Mailchimp] data center {#identify-data-center}
 
-Next you need to identify your Mailchimp domain, to do this log in to your [!DNL Mailchimp] account and check the URL in your browser.
-You’ll notice a value similar to *`us19`.admin.mailchimp.com*, the `us19` prefix is the value you will require.
+Next you need to identify your Mailchimp domain. To do this, log in to your [!DNL Mailchimp] account and check the URL in your browser.
+You’ll notice a value similar to *`us19`.admin.mailchimp.com*, Write down the prefix (`us19` in this example). You will need this prefix when connecting to the destination. 
 If you require guidance, refer to the [Mailchimp documentation](https://mailchimp.com/developer/marketing/guides/quick-start/#make-your-first-api-call).
 
 ### Guardrails {#guardrails}
 
-Refer to the [!DNL Mailchimp] [rate limits](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) which details the limits imposed by the [!DNL Mailchimp] API.
+Refer to the [!DNL Mailchimp] [rate limits](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) for detailed information about the limits imposed by the [!DNL Mailchimp] API.
 
 ## Supported identities {#supported-identities}
 
@@ -63,7 +63,7 @@ Refer to the [!DNL Mailchimp] [rate limits](https://mailchimp.com/developer/mark
 
 | Target Identity | Description | Considerations |
 |---|---|---|
-| Email | Contact Email Address | Mandatory |
+| Email | Contact email Address | Mandatory |
 
 {style="table-layout:auto"}
 
@@ -90,15 +90,19 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, search for [!DN
 
 ### Authenticate to destination {#authenticate}
 
-To authenticate to the destination, select **[!UICONTROL Connect to destination]**. You will be navigated to the [!DNL Mailchimp Log in and authorize] page. Enter your [!DNL Mailchimp] account credentials and select [!DNL Log In].
+To authenticate to the destination, select **[!UICONTROL Connect to destination]**. You will be redirected to the [!DNL Mailchimp] authorization page.
 
 ![Platform UI screenshot showing how to authenticate to Mailchimp.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
+
+Enter your [!DNL Mailchimp] account credentials and select [!DNL Log In].
+
+![Platform UI screenshot showing the Mailchimp authorization page.](../../assets/catalog/email-marketing/mailchimp-tags/mailchimp-authorization.png)
 
 Next, Select [!UICONTROL Allow] in the subsequent window to give permissions to the **Adobe Experience Platform** app to access your [!DNL Mailchimp] account. *You will need to do this only once*.
 
 ![Mailchimp App screenshot confirmation popup to give permissions to the Experience Platform app access to Mailchimp.](../../assets/catalog/email-marketing/mailchimp-tags/allow-app.png)
 
-If the details provided are valid, the UI displays a message: *You successfully connected to Mailchimp Tags account* message and a **[!UICONTROL Connected]** status with a green check mark, you can then proceed to the next step.
+If the details provided are valid, the Platform UI displays the following message along with a **[!UICONTROL Connected]** status with a green check mark: *[!DNL You successfully connected to Mailchimp Tags account]*. You can then proceed to the next step.
 
 ### Fill in destination details {#destination-details}
 
@@ -111,7 +115,7 @@ To configure details for the destination, fill in the required and optional fiel
 | **[!UICONTROL Name]** | A name by which you will recognize this destination in the future. |
 | **[!UICONTROL Description]** | A description that will help you identify this destination in the future. |
 | **[!UICONTROL Data Center]** | Your [!DNL Mailchimp] account `Data Center`. Refer to the [Identify [!DNL Mailchimp] data center](#identify-data-center) section for any guidance. |
-| **[!UICONTROL Audience List ID]** | After you provide the value of your `Data Center` entries in this select dropdown are automatically populated with the audience names from your account. You need to select the audience of interest to which you will add or update the contact details from selected Platform segments. |
+| **[!UICONTROL Audience List ID]** | After you enter your **[!UICONTROL Data Center]** prefix, this dropdown is automatically populated with the audience names from your account. Select the audience that you want to update with data from Platform. |
 
 {style="table-layout:auto"}
 
@@ -136,15 +140,21 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 To correctly map your XDM fields to the [!DNL Mailchimp Tags] destination fields, follow the steps below:
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
-1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** and select `Email`.
-1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select `Email`.
+1. In the **[!UICONTROL Select source field]** window, choose **[!UICONTROL Select identity namespace]** and select the `Email` identity namespace.
+
+    ![Platform UI screenshot with Source field as Email from the identity namespace.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
+
+1. In the **[!UICONTROL Select target field]** window, choose **[!UICONTROL Select identity namespace]** and select the `Email` identity namespace.
+
+    ![Platform UI screenshot with Target field as Email from the identity namespace.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
+
     The mappings between your XDM profile schema and [!DNL Mailchimp Tags] will be as below:
     | Source Field | Target Field | Mandatory |
     | --- | --- | --- |
     |`IdentityMap: Email`|`Identity: email`| Yes |
 
-    An example with the above mappings is shown below:
-    ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
+    An example with the completed mappings is shown below:
+    ![Platform UI screenshot example showing field mappings.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
 
 When you have finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
@@ -152,7 +162,7 @@ When you have finished providing the mappings for your destination connection, s
 
 To validate that you have correctly set up the destination, follow the steps below:
 
-1. Log in to the [[!DNL Mailchimp]](https://login.mailchimp.com/) website. Then navigate to the **[!DNL Audience]** > **[!DNL All Contacts]** page and check if the contacts from the segment have been added and contacts within the segment have been updated with the segment name.
+1. Log in to your [[!DNL Mailchimp]](https://login.mailchimp.com/) account. Then navigate to the **[!DNL Audience]** > **[!DNL All Contacts]** page and check if the contacts from the segment have been added and contacts within the segment have been updated with the segment name.
 ![Mailchimp UI screenshot showing the Audience page.](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png)
 
 ## Data usage and governance {#data-usage-governance}
@@ -161,7 +171,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
 
-Refer to the [[!DNL Mailchimp] Errors](https://mailchimp.com/developer/marketing/docs/errors/) page for a comprehensive list of status and error codes with explanations.
+Refer to the [[!DNL Mailchimp] errors page](https://mailchimp.com/developer/marketing/docs/errors/) for a comprehensive list of status and error codes with explanations.
 
 ## Additional resources {#additional-resources}
 
