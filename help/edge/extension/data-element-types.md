@@ -3,18 +3,18 @@ title: Data Element Types in the Adobe Experience Platform Web SDK Extension
 description: Learn about the different data element types provided by the Adobe Experience Platform Web SDK tag extension.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
 ---
+
 # Data element types
 
 After you set your [action types](action-types.md) in the [Adobe Experience Platform Web SDK tag extension](web-sdk-extension-configuration.md), configure your data element types.
 
 This page describes the available data element types.
 
-
-## Event Merge ID
+## Event merge ID {#event-merge-id}
 
 This data element provides an event merge ID when used. No configuration is needed for this data element. The data element that is provided stays the same until the visitor leaves the page or until the "Reset Event Merge ID" action type is used.
 
-## Identity Map
+## Identity Map {#identity-map}
 
 An identity map allows you to establish identities for the visitor of your web page. An identity map consists of namespaces, like _phone_ or _email_, with each namespace containing one or more identifiers. For example, if the individual on your website has provided two phone numbers, your phone namespace should contain two identifiers.
 
@@ -44,16 +44,16 @@ Notice that when you open certain fields of your schema, such as `web.webPageDet
 >
 >Only fill in the pieces of information you are interested in collecting. Anything that is not filled in is omitted when the data is sent to the solutions.
 
-## Variable (beta) {#variable}
+## (Beta) Variable {#variable}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->This data element is a beta feature while the development team gathers feedback. Future versions may contain breaking changes.
+>This is currently a beta functionality and is subject to change. Future versions may contain breaking changes.
 
-While the XDM object data element is created when it is referenced, such as inside a send event command, the variable data element can be updated via update variable actions. Both data elements are designed to create XDM objects. To use the data element, select the correct Adobe Experience Platform sandbox and schema. Once you've created this data element you can use [update variable actions](./action-types.md#update-variable) to modify the data element. If no modifications are done, the data element will resolve to undefined.
+While the XDM object data element is created when it is referenced, such as inside a send event command, the variable data element can be updated via [update variable](action-types.md#update-variable) actions. Both data elements are designed to create XDM objects. To use the data element, select the correct Adobe Experience Platform sandbox and schema. Once you've created this data element you can use [update variable actions](./action-types.md#update-variable) to modify the data element. If no modifications are done, the data element will resolve to undefined.
 
 See the page on [Rule stacking](./rule-stacking.md) to learn more about how to use this data element to build up XDM objects.
 
-## What's next
+## Next steps {#next-steps}
 
 Learn about specific use cases such as [accessing the ECID.](data-element-types.md)
