@@ -132,7 +132,7 @@ Next, import `cdist` from the [!DNL SciPy] library to compute the distance betwe
 
 ```python
 from scipy.spatial.distance import cdist
-pairwise_distance =  cdist(luma.reshape((-1,1)),booking_com.reshape((-1,1)),compute_match_score)
+pairwise_distance =  cdist(luma.reshape((-1,1)),acme.reshape((-1,1)),compute_match_score)
 ```
 
 ### Create mappings between the two columns using the fuzzy join score
@@ -144,7 +144,7 @@ matched_pairs = []
 for i,c1 in enumerate(luma):
     idx = np.where(pairwise_distance[i,:] > 70)[0]
     for j in idx:
-        matched_pairs.append((luma[i].replace("'","''"),booking_com[j].replace("'","''")))
+        matched_pairs.append((luma[i].replace("'","''"),acme[j].replace("'","''")))
 ```
 
 The results can be displayed with the following command. For brevity, the results are limited to ten rows.
@@ -350,10 +350,10 @@ Finally, the results of the fuzzy match can be saved as a dataset for use in Ado
 
 ```python
 cur.execute(''' 
-Create table luma_booking_com_join
+Create table luma_acme_join
 AS
 (SELECT *  FROM luma e
-CROSS JOIN booking_com b
+CROSS JOIN acme b
 WHERE 
 {})
 '''.format(matching_sql))
