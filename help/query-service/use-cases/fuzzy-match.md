@@ -1,14 +1,14 @@
 ---
-title: Fuzzy Search in Query Service
-description: Learn how to perform a search on your Platform data that combines results from multiple datasets by approximately matching a string of your choice.
+title: Fuzzy Match in Query Service
+description: Learn how to perform a match on your Platform data that combines results from multiple datasets by approximately matching a string of your choice.
 ---
-# Fuzzy search
+# Fuzzy match
 
-Use a 'fuzzy' search on your Platform data to return the most likely, approximate matches without the need to search for strings with identical characters. This allows for much a more flexible search of your data and makes your data more accessible by saving time and effort.
+Use a 'fuzzy' match on your Platform data to return the most likely, approximate matches without the need to search for strings with identical characters. This allows for much a more flexible search of your data and makes your data more accessible by saving time and effort.
 
-Instead of trying to re-format the search strings in order to match them, the fuzzy search analyses the ratio of similarity between two sequences and returns the similarity percentage. [!DNL FuzzyWuzzy] is recommended for this process as its functions are more suited to help match strings in more complex situations compared to [!DNL regex] or [!DNL difflib].
+Instead of trying to re-format the search strings in order to match them, the fuzzy match analyses the ratio of similarity between two sequences and returns the percentage of similarity. [!DNL FuzzyWuzzy] is recommended for this process as its functions are more suited to help match strings in more complex situations compared to [!DNL regex] or [!DNL difflib].
 
-The use case provided in this document uses a hotel room search across two different company datasets as an example. The document demonstrates how to match strings by their degree of similarity. In this case, comparing the features of a room across the resources of two disparate datasets.
+The example provided in this use case focusses on matching similar attributes from a hotel room search across two different travel agency datasets. The document demonstrates how to match strings by their degree of similarity from large separate data sources. In this example, fuzzy match compares the search results for the features of a room from the Luma and Acme travel agencies.
 
 ## Getting started {#getting-started}
 
@@ -62,16 +62,16 @@ cur = conn.cursor()
 
 Your [!DNL Jupyter Notebook] instance is now connected to Query Service. If the connection is successful, no message will display. If the connection failed, an error will display. 
 
-### Draw data from the Expedio dataset {#expedio-dataset}
+### Draw data from the Luma dataset {#luma-dataset}
 
 Data for analysis is drawn from the first dataset with the following commands. For brevity, the examples have been limited to the first 10 results of the column.
 
 ```python
-cur.execute('''SELECT * FROM expedio;
+cur.execute('''SELECT * FROM luma;
 ''')    
-expedio = np.array([r[0] for r in cur])
+luma = np.array([r[0] for r in cur])
 
-expedio[:10]
+luma[:10]
 ```
 
 Select **Output** to display the returned array.
@@ -120,7 +120,7 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 Next, you must import `fuzz` from the FuzzyWuzzy library and execute a partial ratio comparison of the strings. The partial ratio function allows you to perform substring matching. This takes the shortest string and matches it with all substrings that are of the same length. The function returns a percentage similarity ratio of up to 100%. For example, the partial ratio function would compare the following strings 'Deluxe Room', '1 King Bed', and 'Deluxe King Room' and return a similarity score of 69%. 
 
-In the hotel room search use case, this is done using the following commands:
+In the hotel room match use case, this is done using the following commands:
 
 ```python
 from fuzzywuzzy import fuzz
@@ -128,11 +128,11 @@ def compute_match_score(x,y):
     return fuzz.partial_ratio(x,y)
 ```
 
-Next, import `cdist` from the [!DNL SciPy] library to compute the distance between each pair in the two collections of inputs. This computes the scores among all pairs of hotel names between Expedio and Acme.
+Next, import `cdist` from the [!DNL SciPy] library to compute the distance between each pair in the two collections of inputs. This computes the scores among all pairs of hotel rooms provided by each of the travel agencies.
 
 ```python
 from scipy.spatial.distance import cdist
-pairwise_distance =  cdist(expedia.reshape((-1,1)),booking_com.reshape((-1,1)),compute_match_score)
+pairwise_distance =  cdist(luma.reshape((-1,1)),booking_com.reshape((-1,1)),compute_match_score)
 ```
 
 ### Create mappings between the two columns using the fuzzy join score
@@ -141,10 +141,10 @@ Now that the columns have been scored based on distance, you can index the pairs
 
 ```python
 matched_pairs = []
-for i,c1 in enumerate(expedio):
+for i,c1 in enumerate(luma):
     idx = np.where(pairwise_distance[i,:] > 70)[0]
     for j in idx:
-        matched_pairs.append((expedio[i].replace("'","''"),booking_com[j].replace("'","''")))
+        matched_pairs.append((luma[i].replace("'","''"),booking_com[j].replace("'","''")))
 ```
 
 The results can be displayed with the following command. For brevity, the results are limited to ten rows.
@@ -178,7 +178,7 @@ The results are then matched using SQL with the following command:
 <!-- Q) Why and is this accurate? -->
 
 ```python
-matching_sql = ' OR '.join(["(e.Expedio = '{}' AND b.acme = '{}')".format(c1,c2) for c1,c2 in matched_pairs])
+matching_sql = ' OR '.join(["(e.luma = '{}' AND b.acme = '{}')".format(c1,c2) for c1,c2 in matched_pairs])
 ```
 
 ## Apply the mappings to do fuzzy join in Query Service {#mappings-for-query-service}
@@ -188,7 +188,7 @@ Next, the high-scoring matching pairs are joined using SQL to create a new datas
 ```python
 :
 cur.execute('''
-SELECT *  FROM expedio e
+SELECT *  FROM luma e
 CROSS JOIN acme b
 WHERE 
 {}
@@ -344,15 +344,15 @@ Select **Output** to see the results of this join.
 
 +++
 
-### Save fuzzy search results to Platform
+### Save fuzzy match results to Platform {#save-to-platform}
 
-Finally, the results of the fuzzy search can be saved as a dataset for use in Adobe Experience Platform using SQL.
+Finally, the results of the fuzzy match can be saved as a dataset for use in Adobe Experience Platform using SQL.
 
 ```python
 cur.execute(''' 
-Create table expedia_booking_com_join
+Create table luma_booking_com_join
 AS
-(SELECT *  FROM expedia e
+(SELECT *  FROM luma e
 CROSS JOIN booking_com b
 WHERE 
 {})
