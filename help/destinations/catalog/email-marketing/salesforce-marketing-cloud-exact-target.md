@@ -258,3 +258,16 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 * [!DNL Salesforce Marketing Cloud] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html)
 * [!DNL Salesforce Marketing Cloud] [documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) explaining how contacts are updated with the specified information in the specified attribute groups.
+
+## Changelog
+
+| Release Date | Connector Version | Description |
+| --- | --- | --- |
+| Feb 21, 2023 | 1.0 | **Changed** <ul><li>Documentation: Reference link to [!DNL Salesforce Marketing Cloud Account Engagement] as a mandatory subscription</li></ul> |
+| Feb 17, 2023 | 1.0 | **Changed** <ul><li>Connector: Added the *Expires In* header to the authentication payload as it is supported by [!DNL Salesforce Marketing Cloud].</li> <li>Connector: Updated Pebble template to include a hard-coded *Email Demographics* mapping at the end of the body, `PLATIR-27068`</li></ul> **Fixed** <ul><li>Connector: Corrected domain name regex.</li></ul> |
+| Feb 08, 2023 | 1.0 | **Changed** <ul><li>Documentation: Back-link reference anchor to gather credentials, `PLATIR-25925`</li> <li>Documentation: Corrected Markdown formatting used in the custom domain explanation</li></ul> **Fixed** <ul><li>Connector: Removed extraneous comma from pebble template</li></ul> |
+| Jan 30, 2023 | 1.0 | **Changed** <ul><li>Documentation: Additional guidance on the mapping field value to be specified during the Scheduling step of the workflow</li> <li>Documentation: Data type and screenshots, `PLATIR-25602`</li></ul> |
+| Oct 11, 2022 | 1.0 | **Added** <ul><li>Go-Live</li></ul> |
+| Sep 22, 2022 | 1.0 | **Added** <ul><li>Public Beta</li></ul> |
+
+<!--| - | 1.0 | Added <ul><li>Documentation : Mandatory roles guidance with screenshots, `PLATIR-26299`</li></ul> Fixed <ul><li>Documentation : Reference link to [!DNL Salesforce Marketing Cloud Engagement] as a mandatory subscription instead of [!DNL Salesforce Marketing Cloud Account Engagement]</li></ul> |-->
