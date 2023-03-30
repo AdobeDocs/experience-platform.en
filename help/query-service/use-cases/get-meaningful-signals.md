@@ -16,7 +16,7 @@ This guide is designed to help you to better understand your customer experience
 
 ![An infographic of the broad steps required to utilize customer lifetime value.](../images/use-cases/implementation-steps.png)
 
-## Getting started
+## Getting started {#getting-started}
 
 This guide requires that you have a working understanding of the following components of Adobe Experience Platform:
 
@@ -27,7 +27,7 @@ This guide requires that you have a working understanding of the following compo
 
 This guide requires you to have the [Data Distiller](../data-distiller/overview.md) SKU as part of your package offering. If you are unsure whether you have this, please speak to your Adobe service representative.
 
-## Create a derived attribute
+## Create a derived attribute {#create-derived-attribute}
 
 The first step in establishing your CLV is to create a derived attribute from the data signals captured from user actions. This particular use case is captured in a separate document about an airline loyalty scheme. See the guide to learn how to [use Query Service to create decile-based derived attributes for use with your profile data.](help/query-service/use-cases/deciles-use-case.md.md). Full examples and explanations are provided in the document that explain the following steps:
 
@@ -38,7 +38,7 @@ The first step in establishing your CLV is to create a derived attribute from th
 * Create an identity namespace and mark it as the primary identifier.
 * Create a query to calculate deciles over a lookback period.
 
-## Extend the insights data model
+## Extend the insights data model and schedule updates {#extend-data-model-and-set-refresh-schedule}
 
 Next, you must build a custom data model or extend an existing Adobe Real-Time CDP data model to engage with  your CLV reporting insights. See the documentation to learn how to [build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../data-distiller/query-accelerated-store/reporting-insights-data-model.md#build-a-reporting-insights-data-model). The tutorial covers the following steps:
 
@@ -52,24 +52,20 @@ Next, you must build a custom data model or extend an existing Adobe Real-Time C
 
 Please see the Real-Time Customer Data Platform Insights Data Model documentation to learn how to [customize your SQL query templates to create Real-Time CDP reports for your marketing and key performance indicator (KPI) use cases](../../dashboards/cdp-insights-data-model.md).
 
-## Build a dashboard to capture insights
+Make sure to set a schedule to refresh your custom data model on a regular cadence. This ensures that the data comes back in as part of your ingestion pipeline as needed, and populates your user-defined dashboards. See the [schedule queries guide](https://experienceleague.adobe.com/docs/experience-platform/query/ui/query-schedules.html#create-schedule) to learn how to set up your schedule.
+
+## Build a dashboard to capture insights {#build-a-custom-dashboard}
 
 Now that you have created your custom data model, you are ready to visualize your data with custom queries and user-defined dashboards. See the user-defined dashboards overview for full guidance on how to [build a custom dashboard](../../dashboards/user-defined-dashboards.md). The UI guide includes details on:
 
 * How to create a widget.
 * How to use the widget composer.
 
-Possible examples of custom CLV widgets can be seen below.
+Possible examples of custom CLV widgets that use uses decile buckets can be seen below.
 
-![A collection of four customized widgets.](../images/use-cases/example-widgets.png)
+![A collection of custom decile-based CLTV widgets.](../images/use-cases/deciles-user-defined-dashboard.png)
 
-A variety of visualization options are provided for your custom analysis. The following example uses decile buckets.
-
-![The Email opened by campaign buckets widget.](../images/use-cases/email-opened-by-campaign-buckets.png)
-
-<!-- what custom queries are necessary to visualize CLV ? -->
-
-## Create and activate segments to build high performance audiences
+## Create and activate segments to build high performance audiences {#create-and-activate-segments}
 
 The next step is to build segments and generate audiences from your Real-Time Customer Profile data. See the Segment Builder UI guide to learn how to [create and activate segments in Adobe Experience Platform](../../segmentation/ui/segment-builder.md). The guide provides sections on how to:
 
@@ -81,11 +77,25 @@ The next step is to build segments and generate audiences from your Real-Time Cu
 
 Alternatively, there is also a [segment builder video tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) available for more information.
 
-## Activate your segment for an email campaign
+## Activate your segment for an email campaign {#activate-segment-for-campaign}
 
 Once you have built your segment, you are ready to activate it to a destination. For the purpose of this use case, you are recommended to use Adobe Campaign. Information on [connecting to Adobe Campaign](../../destinations/catalog/email-marketing/adobe-campaign.md) can be found in the destinations catalog documentation.
 
-<!-- I do not have enough information to finish off this use case -->
+## See the returned analysis data form your campaign {#post-campaign-data-analysis} 
+
+The data from sources can now be incrementally processed as part of a scheduled refresh to your data model in the accelerated data store. Any response events from customers can be ingested into Adobe Experience Platform as they happen or in batches. Your data model could be refreshed once, or multiple times a day depending on your settings or source connectors. See the [batch ingestion API overview](https://experienceleague.adobe.com/docs/experience-platform/ingestion/batch/overview.html) or the [streaming ingestion overview](https://experienceleague.adobe.com/docs/experience-platform/ingestion/streaming/overview.html) for more information. 
+
+Once your data model is updated, your custom dashboard widgets provide meaningful signals that allow you to to measure and visualize customer lifetime value.
+
+![A custom widget to show the number of emails opened according to their segment and email campaign.](../images/use-cases/post-activation-and-email-response-kpis.png)
+
+These insights can inturn help you develop your businesses strategies for subsequent campaigns.
+
+![A collection of four customized widgets that detail the results of the email campaign.](../images/use-cases/example-widgets.png)
+
+A variety of visualization options are provided for your custom analysis. 
+
+![The Email opened by campaign buckets widget.](../images/use-cases/email-opened-by-campaign-buckets.png)
 
 <!-- "Data signals are actions taken by consumers while online that offer clues about intent that can be acted upon. This includes anything from visiting a website to filling out a change of address or clicking an ad."  -->
 
