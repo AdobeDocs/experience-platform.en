@@ -1,15 +1,9 @@
 ---
 title: Computed Attributes overview
-type: Documentation
 description: Computed attributes are functions to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
-exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
 badge: "Beta"
 ---
 # Computed attributes overview
-
->[!IMPORTANT]
->
->Computed attribute functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
 
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
 
