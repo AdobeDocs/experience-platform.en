@@ -346,6 +346,9 @@ feature: Sources
     - [Document your source (Streaming SDK)](sources-sdk/streaming/document-streaming.md)
     - [Documentation self-service API streaming template](sources-sdk/streaming/streaming-template-api.md)
     - [Documentation self-service UI streaming template](sources-sdk/streaming/streaming-template-ui.md)
+- Error messages {#errors}
+  - [Error messages in sources](./errors/sources-errors.md)
+  - [Error messages in Flow Service](./errors/flow-service-errors.md)
 - [Flow run notifications](notifications.md)
 - [IP address allow list](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)
