@@ -4,6 +4,8 @@ title: Sample PQL Expressions for Computed Attributes
 type: Documentation
 description: Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions require the use of valid Profile Query Language (PQL) expressions. This guide outlines some of the most commonly used PQL expressions for computed attributes.
 exl-id: 7c80e2d3-919a-47f9-a59f-833a70f02a8f
+hide: true
+hidefromtoc: true
 ---
 # (Alpha) Sample PQL expressions for computed attributes
 
