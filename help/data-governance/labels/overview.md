@@ -44,8 +44,8 @@ For a reference on how specific Data Export Controls map to data usage labels in
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"
->title=""
->abstract="<h2>Instructions</h2><ul><li>Label XDM Fields and Segments to classify the fields and or segments that you want to restrict access to.</li><li>Label Roles, adding labels to a role enables you to define the labels members of this role should have restrictions on.</li><li>Create policies, a policy creates a relationship between the labels on labeled objects such as XDM fields and Segments and the labels on roles. If the labels match, then either a permit or a restrict access can be defined.</li></ul>"
+>title="Instructions"
+>abstract="<ul><li>Label XDM Fields and Segments to classify the fields and or segments that you want to restrict access to.</li><li>Label Roles, adding labels to a role enables you to define the labels members of this role should have restrictions on.</li><li>Create policies, a policy creates a relationship between the labels on labeled objects such as XDM fields and Segments and the labels on roles. If the labels match, then either a permit or a restrict access can be defined.</li></ul>"
 
 You can manage data usage labels using [!DNL Experience Platform] APIs or the user interface. Refer to the subsections below for details on each.
 
