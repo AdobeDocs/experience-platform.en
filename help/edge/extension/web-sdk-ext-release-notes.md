@@ -12,14 +12,14 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 **New features**
 
-* (Beta) Added **[!UICONTROL Update variable]** action and **[!UICONTROL Variable data]** element.
+* (Beta) Added **[!UICONTROL Update variable]** action and **[!UICONTROL Variable]** data element.
+* Added configuration for [`onBeforeLinkClickSend`](fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) callback function.
 
 **Fixes and improvements**
 
 * Fixed an issue causing clicking on elements within an anchor tag to not work when the **[!UICONTROL Redirect with identity]** action was used.
 * Fixed an issue where XDM object data elements did not work when there was only one schema present.
-* Added configuration for [`onBeforeLinkClickSend`](fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) callback function.
-* Included Web SDK library version 2.15.0.
+* Contains version 2.15.0 of Adobe Experience Platform Web SDK.
 
 
 ## Version 2.15.1 - January 26, 2023
