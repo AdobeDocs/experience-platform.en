@@ -1,16 +1,9 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 title: Computed Attributes API Endpoint
-type: Documentation
 description: In Adobe Experience Platform, computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. This guide shows how to create, view, update, and delete computed attributes using the Real-Time Customer Profile API.
-exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
 badge: "Beta"
 ---
 # Computed attributes API endpoint
-
->[!IMPORTANT]
->
->The computed attribute functionality outlined in this document is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
 
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. This guide includes sample API calls for performing basic CRUD operations using the `/computedAttributes` endpoint. 
 
@@ -22,63 +15,48 @@ The API endpoint used in this guide is part of the [Real-Time Customer Profile A
 
 Before continuing, please review the [Profile API getting started guide](../api/getting-started.md) for links to recommended documentation, a guide to reading the sample API calls that appear in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-## Configure a computed attribute field
+## Create a computed attribute {#create}
 
-In order to create a computed attribute, you first need to identify the field in a schema that will hold the computed attribute value. 
-
-Please refer to the documentation on [configuring a computed attribute](configure-api.md) for a complete end-to-end guide to creating a computed attribute field in a schema.
-
->[!WARNING]
->
->In order to proceed with the API guide you must have a computed attribute field configured.
-
-## Create a computed attribute {#create-a-computed-attribute}
-
-With your computed attribute field defined in your Profile enabled schema, you can now configure a computed attribute. If you have not done this already, please follow the workflow outlined in the [configuring a computed attribute](configure-api.md) documentation.
-
-To create a computed attribute, begin by making a POST request to the `/config/computedAttributes` endpoint with a request body containing the details of the computed attribute that you wish to create.
+To create a computed attribute, begin by making a POST request to the `/ca/attributes` endpoint with a request body containing the details of the computed attribute that you wish to create.
 
 **API format**
 
 ```http
-POST /config/computedAttributes
+POST /ca/attributes
 ```
 
 **Request**
 
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/config/computedAttributes \
+curl -X POST https://platform.adobe.io/data/core/ca/attributes \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}'\
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "name": "birthdayCurrentMonth",
-        "path": "_{TENANT_ID}",
-        "description": "Computed attribute to capture if the customer birthday is in the current month.",
+        "name": "sampleAttribute",
+        "description": "A sample computed attribute that checks if all the purchases made by a user in the last seven days is greater than $10.",
+        "displayName": "Sample Attribute",
         "expression": {
             "type": "PQL", 
             "format": "pql/text", 
-            "value": "person.birthDate.getMonth() = currentMonth()"
+            "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0) and (timestamp occurs <= 7 days before now)].sum(commerce.order.priceTotal)"
         },
-        "schema": 
-          {
-            "name":"_xdm.context.profile"
-          }
+        "duration": {
+            "count": 4,
+            "unit": "DAYS"
+        }
           
       }'
 ```
 
-|Property|Description|
-|---|---|
-|`name`|The name of the computed attribute field, as a string.|
-|`path`|The path to the field containing the computed attribute. This path is found within the `properties` attribute of the schema and should NOT include the field name in the path. When writing the path, omit the multiple levels of `properties` attributes.|
-|`{TENANT_ID}`|If you are unfamiliar with your tenant ID, please refer to the steps for finding your tenant ID in the [Schema Registry developer guide](../../xdm/api/getting-started.md#know-your-tenant_id).|
-|`description`|A description of the computed attribute. This is especially useful once multiple computed attributes have been defined as it will help others within your IMS Organization to determine the correct computed attribute to use.|
+| Property | Description |
+| -------- | ----------- |
+|`name`| The name of the computed attribute field, as a string.|
+|`description` | A description of the computed attribute. This is especially useful once multiple computed attributes have been defined as it will help others within your organization to determine the correct computed attribute to use. |
+| `displayName` | The display name for the computed attribute. This is the name that will be displayed when listing your computed attributes within the Adobe Experience Platform UI. |
 |`expression.value`|A valid [!DNL Profile Query Language] (PQL) expression. Computed attributes currently support the following functions: sum, count, min, max, and boolean. For a list of sample expressions, refer to the [sample PQL expressions](expressions.md) documentation.|
-|`schema.name`|The class upon which the schema containing the computed attribute field is based. Example: `_xdm.context.experienceevent` for a schema based on the XDM ExperienceEvent class.|
 
 **Response**
 
