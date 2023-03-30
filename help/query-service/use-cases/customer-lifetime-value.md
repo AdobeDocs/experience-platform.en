@@ -29,7 +29,7 @@ This guide requires you to have the [Data Distiller](../data-distiller/overview.
 
 ## Create a derived attribute {#create-derived-attribute}
 
-The first step in establishing your CLV is to create a derived attribute from the data signals captured from user actions. This particular use case is captured in a separate document about an airline loyalty scheme. See the guide to learn how to [use Query Service to create decile-based derived attributes for use with your profile data](help/query-service/use-cases/deciles-use-case.md.md). Full examples and explanations are provided in the document that explain the following steps:
+The first step in establishing your CLV is to create a derived attribute from the data signals captured from user actions. This particular use case is captured in a separate document about an airline loyalty scheme. See the guide to learn how to [use Query Service to create decile-based derived attributes for use with your profile data](help/query-service/use-cases/deciles-use-case.md). Full examples and explanations are provided in the document that explain the following steps:
 
 * Create a schema to allow for decile bucketing.
 * Use Query Service to create deciles.
