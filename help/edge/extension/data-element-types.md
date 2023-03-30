@@ -50,9 +50,11 @@ Notice that when you open certain fields of your schema, such as `web.webPageDet
 >
 >This data element is a beta feature while the development team gathers feedback. Future versions may contain breaking changes.
 
-While the XDM object data element is created when it is referenced, such as inside a send event command, the variable data element can be updated via update variable actions. Both data elements are designed to create XDM objects. To use the data element, select the correct Adobe Experience Platform sandbox and schema. Once you've created this data element you can use [update variable actions](./action-types.md#update-variable) to modify the data element. If no modifications are done, the data element will resolve to undefined.
+Another way to create XDM objects is using the Variable data element. While the XDM object data element is created when it is referenced, such as inside a send event command, the variable data element can be updated via update variable actions. To use the data element, select the correct Adobe Experience Platform sandbox and schema.
 
-See the page on [Rule stacking](./rule-stacking.md) to learn more about how to use this data element to build up XDM objects.
+![](./assets/Variable.png)
+
+Once you've created this data element you can use [update variable actions](./action-types.md#update-variable) to modify the data element. Then within send event actions use use the variable data element for the XDM option.
 
 ## What's next
 

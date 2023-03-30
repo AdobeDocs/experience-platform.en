@@ -24,7 +24,3 @@ To access the ECID within tags, Adobe recommends the following:
 1. Save the rule.
 
 You should then be able to access the ECID in subsequent rules using `%ECID%` or `_satellite.getVar("ECID")` like you would any other data element.
-
-## What's next
-
-Learn about [rule stacking](rule-stacking.md) with variable data elements and update variable actions.
