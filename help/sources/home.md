@@ -134,12 +134,12 @@ Experience Platform provides support for ingesting data from your local system. 
 Experience Platform provides support for ingesting data from a third-party marketing automation system. See the following related documents for more information on specific source connectors:
 
 - [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md)
+- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md)
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 <!-- 
-- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md)
 - [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
 -->
 
@@ -183,7 +183,7 @@ Attribute-based access control in Adobe Experience Platform allows administrator
 
 With attribute-based access control, you can apply mapping configurations to fields that you have permissions to. Furthermore, you cannot ingest data to a dataset if you do not have access to all fields in the dataset.
 
-#### Support for attribute-based access control in sources [!BADGE New feature]
+#### Support for attribute-based access control in sources
 
 >[!TIP]
 >
