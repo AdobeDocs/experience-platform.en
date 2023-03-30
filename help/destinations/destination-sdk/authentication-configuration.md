@@ -12,6 +12,7 @@ The authentication configuration that you select determines how Experience Platf
 Adobe Experience Platform Destination SDK supports several authentication types:
 
 * [Bearer authentication](#bearer)
+* [Basic authentication](#basic)
 * [[!DNL Amazon S3] authentication](#s3)
 * [[!DNL Azure Blob] Storage](#blob)
 * [[!DNL Azure Data Lake Storage]](#adls)
@@ -28,6 +29,22 @@ Refer to the following sections for authentication configuration details for eac
 
 * [Authentication configurations for streaming destinations](destination-configuration.md#customer-authentication-configurations)
 * [Authentication configurations for file-based destinations](file-based-destination-configuration.md#customer-authentication-configurations)
+
+## Basic authentication {#basic}
+
+Basic authentication is supported for streaming destinations in Experience Platform.
+
+When you configure the basic authentication type, users are required to input a username and password to connect to your destination.
+
+To set up basic authentication for your destination, configure the `customerAuthenticationConfigurations` section via the `/destinations` endpoint as shown below:
+
+```json
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"BASIC"
+   }
+]
+```
 
 ## Bearer authentication {#bearer}
 

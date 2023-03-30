@@ -8,6 +8,7 @@ description: The January 2023 release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [Assurance](#assurance)
 - [Data collection](#data-collection)
 - [[!DNL Destinations]](#destinations)
@@ -15,6 +16,39 @@ Updates to existing features in Adobe Experience Platform:
 - [Real-Time Customer Profile](#profile)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
+
+## Artificial Intelligence/Machine Learning Services {#ai-ml}
+ 
+Artificial Intelligence and Machine Learning services empower marketing analysts and practitioners to leverage the power of AI/ML in customer experience use cases. This allows for marketing analysts to set up predictions, without the need for data science expertise, specific to a company's needs using business-level configurations.
+ 
+### Attribution AI
+ 
+Attribution AI is used to attribute credits to touchpoints that lead to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
+ 
+**Updated features**
+ 
+| Feature | Description |
+| ------- | ----------- |
+| HIPAA readiness | Healthcare Shield customers can now receive, use, maintain, or transmit protected health information in Attribution AI and certain other Experience Platform-based applications. Healthcare Shield is for healthcare customers that are either a covered entity or business associate under HIPAA. For more information, read the documentation on [HIPAA and Adobe Products and Services](https://www.adobe.com/trust/compliance/hipaa-ready.html)|
+|Edit additional score dataset columns | You can now add or remove additional score dataset columns (reporting columns) when you edit existing models. This extends the flexibility of the attribution scores to provide you with insights to additional dimensions after a model has already been created. See the [Attribution UI guide](../../intelligent-services/attribution-ai/user-guide.md) to learn more.|
+
+{style="table-layout:auto"}
+ 
+Please see the [AI/ML services](../../intelligent-services/attribution-ai/overview.md) overview for more information.
+
+### Customer AI
+ 
+Customer AI for Real-Time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale. This is accomplished without having to transform the business needs to a machine learning problem, pick an algorithm, train, or deploy.
+ 
+**Updated features**
+ 
+| Feature | Description |
+| ------- | ----------- |
+| HIPAA readiness | Healthcare Shield customers can now receive, use, maintain, or transmit protected health information in Customer AI for Real-Time Customer Data Platform and certain other Experience Platform-based applications. Healthcare Shield is for healthcare customers that are either a covered entity or business associate under HIPAA. For more information, see the documentation on [HIPAA and Adobe Products and Services](https://www.adobe.com/trust/compliance/hipaa-ready.html)|
+
+{style="table-layout:auto"}
+ 
+Please see the [AI/ML services](../../intelligent-services/customer-ai/overview.md) overview for more information.
 
 ## Assurance {#assurance}
 
@@ -43,7 +77,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 {style="table-layout:auto"}
 
-## Destinations {#destinations}
+## Destinations (updated February 2nd) {#destinations}
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
@@ -59,7 +93,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 | Functionality | Description |
 | ----------- | ----------- |
-| Paid Media Consent Policy enhancement for integrations with streaming destinations | An enhancement to [consent policy enforcement](/help/data-governance/enforcement/auto-enforcement.md) on [streaming destinations](/help/destinations/destination-types.md#streaming-destinations) for paid media activation use-cases. When profiles are no longer qualified for a consent policy, Experience Platform now proactively communicates their policy exit to streaming destinations. <br> <b>Note</b>: This functionality is available only to customers of **[!UICONTROL Privacy and Security Shield]**, and those of **[!UICONTROL Healthcare Shield]**. |
+| Paid Media Consent Policy enhancement for integrations with streaming destinations | An [enhancement to consent policy enforcement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) on [streaming destinations](/help/destinations/destination-types.md#streaming-destinations) for paid media activation use-cases. When profiles are no longer qualified for a consent policy, Experience Platform now proactively communicates their policy exit to streaming destinations. <br> <b>Note</b>: This functionality is available only to customers of **[!UICONTROL Privacy and Security Shield]**, and those of **[!UICONTROL Healthcare Shield]**. |
 | New delimiter options for beta cloud storage destination connectors | Three new delimiter options (Colon `:`, Pipe, Semicolon `;`) are now available for the new beta cloud storage destinations - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> Read about the supported [file formatting options](/help/destinations/ui/batch-destinations-file-formatting-options.md) for file-based destinations. |
 | New optional parameter available in [customer data fields](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) configurations in [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Use this parameter when you need to create a customer data field whose value must be unique across all destination dataflows set up by a user's organization. <br> For example, the **[!UICONTROL Integration alias]** field in the [[!UICONTROL Custom Personalization]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) destination must be unique, meaning that two separate dataflows to this destination cannot have the same value for this field. |
 
@@ -74,6 +108,10 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
         <td>Updated export behavior to file-based destinations (PLAT-123316)</td>
         <td>We fixed an issue in the behavior of <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">mandatory attributes</a> when exporting data files to batch destinations. <br> Previously, every record in the output files was verified to contain both: <ol><li>A non-null value of the <code>mandatoryField</code> column and</li><li>A non-null value on at least one of the other non-mandatory fields.</li></ol> The second condition has been removed. As a result, you might be seeing more output rows in your exported data files, as shown in the example below:<br> <b> Sample behavior before January 2023 release </b> <br> Mandatory field: <code>emailAddress</code> <br> <b>Input data to activate</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>Activation output</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> Sample behavior after January 2023 release </b> <br> <b>Activation output</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
     </tr>
+    <tr>
+        <td>UI and API validation for required mappings and duplicate mappings (PLAT-123316)</td>
+        <td>Validation is now enforced as follows in the UI and API when <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">mapping fields</a> in the activate destinations workflow:<ul><li><b>Required mappings</b>: If the destination has been set up by the destination developer with required mappings (for example, the <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> destination), then these required mappings need to be added by the user when activating data to the destination. </li><li><b>Duplicate mappings</b>: In the mapping step of the activation workflow, you can add duplicate values in the source fields, but not in the target fields. See the table below for an example of allowed and forbidden mapping combinations. <br><table><thead><tr><th>Allowed/forbidden</th><th>Source field</th><th>Target field</th></tr></thead><tbody><tr><td>Allowed</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>email   alias2</li></ul></td></tr><tr><td>Forbidden</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+    </tr>    
 </table>
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
@@ -86,7 +124,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 | Feature | Description |
 | --- | --- |
-| Disable suggested values for string fields | You can now [disable individual suggested values for string fields](../../xdm/ui/fields/enum.md) in the [!UICONTROL Schemas] workspace, including those from standard components. This feature is only available for fields with suggested values and is not supported for enum constraints. |
+| Schema tree display name improvements | Previously, field names were displayed in the UI but now, the display names for schema fields on the schema canvas are more human-friendly to read. |
 
 **New XDM components**
 

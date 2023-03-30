@@ -110,6 +110,16 @@ Select **[!UICONTROL List view]** to display the data lineage as a list. To swit
 
 If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies affect the percentage of profiles that are included in the activation.
 
+#### Consent policy enhancement for paid media {#consent-policy-enhancement}
+
+An enhancement to consent policy enforcement on [batch](../../destinations/destination-types.md#file-based) and [streaming](../../destinations/destination-types.md#streaming-destinations) destinations including paid media activations has been made. This enhancement is available to customers of Privacy and Security Shield or Healthcare Shield, and proactively removes profiles from batch and streaming destinations as consent status changes. It also ensures that consent changes are propagated immediately so that the right audience is always targeted.
+
+These improvements allow for greater trust in your marketing strategy as it removes the need for marketers to manually add consent attributes to their segment expression. This ensures that no profiles are inadvertently targeted for any marketing experiences once consent has been withdrawn or no longer qualified for a consent policy. The marketing consent policies that set rules for how consent or preference data should be managed across various marketing workflows are now automatically enforced in activation workflows in downstream solutions.
+
+>[!NOTE]
+>
+>There are no UI changes as a result of this enhancement.
+
 #### Pre-activation evaluation
 
 Once you reach at the **[!UICONTROL Review]** step when [activating a destination](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.

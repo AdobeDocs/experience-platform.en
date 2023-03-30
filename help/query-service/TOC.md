@@ -21,6 +21,7 @@ feature: Queries
         - [Reporting insights data model guide](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
     - Derived attributes {#derived-attributes}
         - [Overview](data-distiller/derived-attributes/overview.md)
+        - [Seamless SQL flow](data-distiller/derived-attributes/seamless-sql-flow.md)
         - [Create decile-based derived attributes](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - Use cases {#use-cases}
     - [Abandoned browse](use-cases/abandoned-browse.md)

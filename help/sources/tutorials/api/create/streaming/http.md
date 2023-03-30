@@ -202,7 +202,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | Property | Description |
 | -------- | ----------- |
 | `auth.params.sourceId` | An additional identifier that can be used when creating an authenticated base connection. This parameter is optional and will use the same value as the `name` attribute, if it is not provided. |
-| `auth.params.authenticationRequired` | The parameter that specifies that the created streaming connection |
+| `auth.params.authenticationRequired` | This parameter specifies whether the streaming connection requires authentication or not. If `authenticationRequired` is set to `true` then authentication must be provided for the streaming connection. If `authenticationRequired` is set to `false` then authentication is not required. |
 
 **Response**
 
@@ -469,6 +469,8 @@ POST /flows
 
 >[!TAB Without transformations]
 
+The following request creates a streaming dataflow for HTTP API without data transformations.
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -494,6 +496,10 @@ curl -X POST \
 ```
 
 >[!TAB With transformations]
+
+The following requests creates a streaming dataflow for HTTP API with mapping transformations applied to your data.
+
+When creating a dataflow with transformations, the `name` parameter cannot be changed. This value must always be set to `Mapping`.
 
 ```shell
 curl -X POST \

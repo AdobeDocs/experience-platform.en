@@ -41,7 +41,7 @@ Sets a separator for each field and value. Available options are:
 * Comma `(,)`
 * Pipe `(|)`
 * Semicolon `(;)`
-* Tab `(\\t)`
+* Tab `(\t)`
 
 ### Quote character 
 

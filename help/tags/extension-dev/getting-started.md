@@ -54,3 +54,7 @@ For example, this can return if the user’s browser is Chrome, if they're using
 >* Subsequent runs of the scaffolding tool will skip over the initial configuration.
 >* More than one of each event, condition, action, may be added.
 >* Only one configuration view may exist.
+ 
+## Next Steps
+
+* Follow the [Submission Process Overview](./submit/overview.md) and prepare to [validate](./submit/upload-and-test.md#validate) and [upload](./submit/upload-and-test.md#integration) your extension for testing within the Tag ecosystem.
