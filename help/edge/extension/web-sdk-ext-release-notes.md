@@ -13,7 +13,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 **New features**
 
 * (Beta) Added **[!UICONTROL Update variable]** action and **[!UICONTROL Variable]** data element.
-* Added configuration for [`onBeforeLinkClickSend`](fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) callback function.
+* Added configuration for [`onBeforeLinkClickSend`](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) callback function.
 
 **Fixes and improvements**
 
