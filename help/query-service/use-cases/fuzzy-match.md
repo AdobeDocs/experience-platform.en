@@ -2,19 +2,19 @@
 title: Fuzzy Match in Query Service
 description: Learn how to perform a match on your Platform data that combines results from multiple datasets by approximately matching a string of your choice.
 ---
-# Fuzzy match
+# Fuzzy match in Query Service
 
-Use a 'fuzzy' match on your Platform data to return the most likely, approximate matches without the need to search for strings with identical characters. This allows for much a more flexible search of your data and makes your data more accessible by saving time and effort.
+Use a 'fuzzy' match on your Adobe Experience Platform data to return the most likely, approximate matches without the need to search for strings with identical characters. This allows for much a more flexible search of your data and makes your data more accessible by saving time and effort.
 
-Instead of trying to re-format the search strings in order to match them, the fuzzy match analyses the ratio of similarity between two sequences and returns the percentage of similarity. [!DNL FuzzyWuzzy] is recommended for this process as its functions are more suited to help match strings in more complex situations compared to [!DNL regex] or [!DNL difflib].
+Instead of trying to re-format the search strings in order to match them, the fuzzy match analyzes the ratio of similarity between two sequences and returns the percentage of similarity. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) is recommended for this process as its functions are more suited to help match strings in more complex situations compared to [!DNL regex] or [!DNL difflib].
 
-The example provided in this use case focusses on matching similar attributes from a hotel room search across two different travel agency datasets. The document demonstrates how to match strings by their degree of similarity from large separate data sources. In this example, fuzzy match compares the search results for the features of a room from the Luma and Acme travel agencies.
+The example provided in this use case focuses on matching similar attributes from a hotel room search across two different travel agency datasets. The document demonstrates how to match strings by their degree of similarity from large separate data sources. In this example, fuzzy match compares the search results for the features of a room from the Luma and Acme travel agencies.
 
 ## Getting started {#getting-started}
 
 As part of this process requires you to train a machine learning model, this document assumes a working knowledge of one or more machine learning environments.
 
-This example uses [!DNL Python] and the [!DNL Jupyter Notebook] development environment. Although there are many options available, [!DNL Jupyter Notebook] is recommended because it is an open-source web application that has low computational requirements. It can be [downloaded from the official Jupyter site](https://jupyter.org/). 
+This example uses [!DNL Python] and the [!DNL Jupyter Notebook] development environment. Although there are many options available, [!DNL Jupyter Notebook] is recommended because it is an open-source web application that has low computational requirements. It can be downloaded from [the official Jupyter site](https://jupyter.org/). 
 
 Before you begin, you must import the necessary libraries. [!DNL FuzzyWuzzy] is an open-sourced [!DNL Python] library built on top of the [!DNL difflib] library and used to match strings. It uses [!DNL Levenshtein Distance] to calculate the differences between sequences and patterns. [!DNL FuzzyWuzzy] has the following requirements:
 
@@ -37,7 +37,7 @@ More technical information on [!DNL Fuzzywuzzy] can be found in their [official 
 
 ### Connect to Query Service
 
-You must connect your machine learning model to Query Service by providing your connection credentials. Both expiring and non-expiring credentials can be provided. Please see the [credentials guide](../ui/credentials.md) for more information on how to acquire the necessary credentials. If you are using [!DNL Jupyter Notebook], please see the full guide on [how to connect to Query Service](../clients/jupyter-notebook.md).
+You must connect your machine learning model to Query Service by providing your connection credentials. Both expiring and non-expiring credentials can be provided. Please see the [credentials guide](../ui/credentials.md) for more information on how to acquire the necessary credentials. If you are using [!DNL Jupyter Notebook], please read the full guide on [how to connect to Query Service](../clients/jupyter-notebook.md).
 
 Also, be sure to import the [!DNL numpy] package into your [!DNL Python] environment to enable linear algebra.
 
