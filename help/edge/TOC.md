@@ -71,7 +71,6 @@ feature: Web SDK
   * [Action types](extension/action-types.md)
   * [Data element types](extension/data-element-types.md)
   * [Accessing the ECID](extension/accessing-the-ecid.md)
-  * [Rule stacking](extension/rule-stacking.md)
   * [Web SDK extension release notes](extension/web-sdk-ext-release-notes.md)
 * [Release notes](release-notes.md)
 * [Frequently Asked Questions](web-sdk-faq.md)

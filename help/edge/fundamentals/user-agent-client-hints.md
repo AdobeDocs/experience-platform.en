@@ -1,6 +1,6 @@
 ---
 title: User-Agent Client Hints
-description: Learn how User-Agent Client Hints work in Web SDK
+description: Learn how User-Agent Client Hints work in Web SDK. Client hints allow website owners to access much of the same information available in the User-Agent string, but in a more privacy-preserving way.
 keywords: user-agent;client hints; string; user-agent string; low entropy; high entropy
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
 ---
