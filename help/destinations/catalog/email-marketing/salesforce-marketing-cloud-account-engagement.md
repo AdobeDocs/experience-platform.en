@@ -4,11 +4,11 @@ description: The Salesforce Marketing Cloud Account Engagement (formerly known a
 ---
 # [!DNL Salesforce Marketing Cloud Account Engagement] connection
 
-[[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/overview/) *(formerly known as [!DNL Pardot])* allows you to capture and track leads by building templates, drag-and-drop builders; its powerful visual editor allows you to easily create custom landing pages, forms, and offers that attract potential leads for your sales teams. When someone engages with your forms, the lead is auto captured, and you get notified. Leads are also automatically scored and graded, so that those most likely to convert can be prioritized. Your forms can also trigger changes in lead scores upon conversion. [!DNL Marketing Cloud Account Engagement] enables you to design lead tracks for all stages of the pipeline for targeted market segments and customer groups through email drip campaigns, lead management with nurturing and scoring and campaign segmentation.
+[[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) *(formerly known as [!DNL Pardot])* allows you to capture, track, score and grade leads. You can also design lead tracks for all stages of the pipeline for targeted market segments and customer groups through email drip campaigns and lead management with nurturing, scoring and campaign segmentation.
 
 Compared to [!DNL Salesforce Marketing Cloud Engagement] which is more oriented towards **B2C** marketing, [!DNL Marketing Cloud Account Engagement] is ideal for **B2B** use cases involving multiple departments and decision makers which require longer sales and decision cycles. In addition, you also maintain closer proximity and integration with your CRM to make appropriate sales and marketing decisions. *Note, Experience Platform also has connections for [!DNL Salesforce Marketing Cloud Engagement], you can check them on the [[!DNL Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) and [[!DNL (API) Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) pages.*
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Salesforce Account Engagement API > Prospect Upsert by Email]](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#prospect-upsert-by-email) endpoint, to add or update your leads after activating them within a new [!DNL Marketing Cloud Account Engagement] segment.
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Salesforce Account Engagement API > Prospect Upsert by Email]](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#prospect-upsert-by-email) endpoint, to **add or update your leads** after activating them within a new [!DNL Marketing Cloud Account Engagement] segment.
 
 [!DNL Marketing Cloud Account Engagement] uses [OAuth 2 with Authorization Code](/help/destinations/destination-sdk/functionality/authentication/oauth2-authentication.md#authorization-code) to communicate with the [!DNL Account Engagement] API. Instructions to authenticate to your [!DNL Marketing Cloud Account Engagement] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
@@ -18,7 +18,7 @@ To help you better understand how and when you should use the [!DNL Marketing Cl
 
 ### Send emails to contacts for marketing campaigns {#use-case-send-emails}
 
-The marketing department of an online platform wants to broadcast an email based marketing campaign to a curated audience of B2B leads. The platform's marketing team can add new leads or update existing lead information through Adobe Experience Platform, build segments from their own offline data, and send these segments to [!DNL Marketing Cloud Account Engagement], which can then be used to send the marketing campaign email.
+The marketing department of an online platform wants to broadcast an email-based marketing campaign to a curated audience of B2B leads. The platform's marketing team can add new leads or update existing lead information through Adobe Experience Platform, build segments from their own offline data, and send these segments to [!DNL Marketing Cloud Account Engagement], which can then be used to send the marketing campaign email.
 
 ## Prerequisites {#prerequisites}
 
@@ -174,4 +174,4 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-* [!DNL Marketing Cloud Account Engagement] [API](https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html)
+* [!DNL Marketing Cloud Account Engagement] [API documentation](https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html).
