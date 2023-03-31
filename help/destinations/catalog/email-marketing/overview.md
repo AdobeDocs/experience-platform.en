@@ -63,9 +63,9 @@ In the Schema field selector, choose which other fields you want to export to th
 
 Some email marketing destinations in the catalog export profiles in a streaming manner, through an API integration with the destination. 
 
-Other destinations export files to a cloud storage location and you need to then import data from the cloud storage location into your email marketing destination. 
+Other destinations export files to a cloud storage location. After the export completes, you need to import data from the cloud storage location into your email marketing destination. 
 
-You can find instructions on how to activate segments to each email marketing destination by following the links in the [supported email marketing destinations](#supported-destinations) section.
+Follow the links in the [supported email marketing destinations](#supported-destinations) section to learn how to activate segments to each email marketing destination.
 
 ## Additional resources {#additional-resources}
 
