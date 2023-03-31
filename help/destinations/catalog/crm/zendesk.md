@@ -7,7 +7,7 @@ last-substantial-update: 2023-03-14
 
 [[!DNL Zendesk]](https://www.zendesk.com) is a customer service solution and sales tool.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Zendesk] Contacts API](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/), to create and update identities within a segment as contacts within [!DNL Zendesk].
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Zendesk] Contacts API](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/), to **create and update identities** within a segment as contacts within [!DNL Zendesk].
 
 [!DNL Zendesk] uses bearer tokens as an authentication mechanism to communicate with the [!DNL Zendesk] Contacts API. Instructions to authenticate to your [!DNL Zendesk] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
@@ -112,21 +112,23 @@ To correctly map your XDM fields to the [!DNL Zendesk] destination fields, follo
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
-1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select custom attributes]** category and select an attribute as needed.
+1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select attributes]** category and select from the displayed schema matching a desired attribute name from the list of [[!DNL Zendesk] Contacts API fields](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/).
+
     * Repeat these steps to add the following mappings between your XDM profile schema and your [!DNL Zendesk] instance:
         |Source Field|Target Field| Mandatory|
         |---|---|---|
-        |`xdm: person.name.lastName`|`Attribute: last_name` <br>or `Attribute: name`| Yes |
+        |`xdm: person.name.lastName`|`xdm: last_name` <br>or `xdm: name`| Yes |
         |`IdentityMap: Email`|`Identity: email`| Yes |
+        |`xdm: person.name.firstName`|`xdm: first_name`| |
 
     * An example using these mappings is shown below:
     ![Platform UI screenshot example with attribute mappings.](../../assets/catalog/crm/zendesk/mappings.png)
 
-        >[!IMPORTANT]
-        >
-        >Both the target field mappings are mandatory and required for [!DNL Zendesk] to work.
-        >
-        >The mapping for *Last Name* or *Name* is required otherwise the [!DNL Zendesk] API does not respond with any error and any attribute value passed is ignored.
+>[!IMPORTANT]
+>
+>Both the target field mappings are mandatory and required for [!DNL Zendesk] to work.
+>
+>The mapping for `Last Name` or `Name` is required otherwise the [!DNL Zendesk] API does not respond with any error and any attribute value passed is ignored.
 
 When you are finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
