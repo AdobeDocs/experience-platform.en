@@ -13,7 +13,7 @@ This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) 
 
 ## Use cases {#use-cases}
 
-As a marketer, you can deliver personalized experiences to your users, based on attributes from their Adobe Experience Platform profiles. You can build segments from your offline data and send these segments to [!DNL Oracle Eloqua], to display in the users' feeds as soon as segments and profiles are updated in Adobe Experience Platform.
+The marketing department of an online platform wants to broadcast an email based marketing campaign to a curated audience of leads. The platform's marketing team can update existing lead information through Adobe Experience Platform, build segments from their own offline data, and send these segments to [!DNL Oracle Eloqua], which can then be used to send the marketing campaign email.
 
 ## Prerequisites {#prerequisites}
 
