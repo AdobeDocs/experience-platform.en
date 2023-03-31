@@ -106,6 +106,27 @@ XDM is an open-source specification that provides common structures and definiti
 
 {style="table-layout:auto"}
 
+**New XDM components**
+
+| Component type | Name | Description |
+| --- | --- | --- |
+| Class | [[!UICONTROL Media Session Server Timeout]](https://github.com/adobe/xdm/pull/1676/files) | Indicates the amount of time, in seconds, that passed between the user's last known interaction and the moment the session was closed. |
+
+{style="table-layout:auto"}
+
+**Updated XDM components**
+
+| Component type | Name | Description |
+| --- | --- | --- |
+| Data type | [!UICONTROL Session details information] | Added the `pev3` string field that [indicates the type of the media stream used for reporting](https://github.com/adobe/xdm/pull/1676/files). Also added the `pccr` property indicates whether a redirect occurred. |
+| Data type | [!UICONTROL Requisition List] | Provides the [requisition list properties](https://github.com/adobe/xdm/pull/1675/files). They include name, ID and description.  |
+| Data type  | [!UICONTROL Commerce] | The [Commerce data type was updated](https://github.com/adobe/xdm/pull/1675/files) to include `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals`, and `requisitionList`. |
+|   | [!UICONTROL ] |   |
+|   | [!UICONTROL ] |   |
+
+
+{style="table-layout:auto"}
+
 For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).
 
 ## Query Service {#query-service}
