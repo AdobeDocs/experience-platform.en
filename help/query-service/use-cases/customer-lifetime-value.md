@@ -29,7 +29,7 @@ This guide requires you to have the [Data Distiller](../data-distiller/overview.
 
 ## Create a derived attribute {#create-derived-attribute}
 
-The first step in establishing your CLV is to create a derived attribute from the data signals captured from user actions. This particular use case is captured in a separate document about an airline loyalty scheme. See the guide to learn how to [use Query Service to create decile-based derived attributes for use with your profile data](help/query-service/use-cases/deciles-use-case.md). Full examples and explanations are provided in the document that explain the following steps:
+The first step in establishing your CLV is to create a derived attribute from the data signals captured from user actions. This particular use case is captured in a separate document about an airline loyalty scheme. See the guide to learn how to [use Query Service to create decile-based derived attributes for use with your profile data](./deciles-use-case.md). Full examples and explanations are provided in the document that explain the following steps:
 
 * Create a schema to allow for decile bucketing.
 * Use Query Service to create deciles.
@@ -78,7 +78,9 @@ Alternatively, there is also a [segment builder video tutorial](https://experien
 
 ## Activate your segment for an email campaign {#activate-segment-for-campaign}
 
-Once you have built your segment, you are ready to activate it to a destination. For the purpose of this use case, you are recommended to use Adobe Campaign. Information on [connecting to Adobe Campaign](../../destinations/catalog/email-marketing/adobe-campaign.md) can be found in the destinations catalog documentation.
+Once you have built your segment, you are ready to activate it to a destination. Platform supports a variety of Email Service Providers (ESPs) that enable you to manage your email marketing activities, such as sending promotional email campaigns. 
+
+Check the [email marketing destinations overview](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/overview.html?lang=en#connect-destination) for a list of the supported destinations that you want to export data to (for example the [Oracle Eloqua](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/oracle-eloqua-api.html?lang=en) page).
 
 ## See the returned analysis data from your campaign {#post-campaign-data-analysis} 
 
