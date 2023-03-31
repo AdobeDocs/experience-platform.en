@@ -47,15 +47,26 @@ Note down the items below before you authenticate to the [!DNL Oracle Eloqua] de
 * If this limit is exceeded, you will encounter an error in Experience Platform. This is because the [!DNL Oracle Eloqua] API fails to validate the request, and responds with a - *400: There was a validation error* - error message describing the issue.
 * If you have reached the limit specified above, you need to remove existing mappings from your destination and delete the corresponding custom contact fields in your [!DNL Oracle Eloqua] account before you can export more segments.
 
-* Refer to the [Oracle Eloqua Creating Contact Fields](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) page for information about additional limits.
+* Refer to the [[!DNL Oracle Eloqua] Creating Contact Fields](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) page for information about additional limits.
 
 ## Supported identities {#supported-identities}
 
 [!DNL Oracle Eloqua] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
-|Target Identity|Example|Description|Mandatory|
-|---|---|---|---|
-| `EloquaId` | `111111` | Unique identifier of the contact.| Yes |
+| Target Identity | Description | Mandatory |
+|---|---|---|
+| `EloquaId` | Unique identifier of the contact.| Yes |
+
+## Export type and frequency {#export-type-frequency}
+
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> For each selected segment in Platform, the corresponding [!DNL Oracle Eloqua] segment status gets updated with its segment status from Platform.</li></ul> |
+| Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
+
+{style="table-layout:auto"}
 
 ## Connect to the destination {#connect}
 
