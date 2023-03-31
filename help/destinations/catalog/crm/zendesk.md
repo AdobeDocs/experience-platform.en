@@ -13,7 +13,7 @@ This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) 
 
 ## Use cases {#use-cases}
 
-As a marketer, you can deliver personalized experiences to your users, based on attributes from their Adobe Experience Platform profiles. You can build segments from your offline data and send these segments to [!DNL Zendesk], to display in the users' feeds as soon as segments and profiles are updated in Adobe Experience Platform.
+The customer service department of a multichannel B2C platform wants to ensure a seamless personalized experience for its customers. The department can build segments from their own offline data to create new user profiles or update existing profile information from different interactions (for example purchases, returns etc.) and send these segments from Adobe Experience Platform to [!DNL Zendesk]. Having the updated information in [!DNL Zendesk] ensures the customer service agent has the recent information of the customer immediately available, enabling quicker responses and resolution.
 
 ## Prerequisites {#prerequisites}
 
