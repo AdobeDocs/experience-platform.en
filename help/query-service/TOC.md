@@ -29,6 +29,7 @@ feature: Queries
     - [Attribution analysis](use-cases/attribution-analysis.md)
     - [Bot filtering](use-cases/bot-filtering.md)
     - [Create a trended report of events](use-cases/trended-report-of-events.md)
+    - [Customer lifetime value](use-cases/customer-lifetime-value.md)
     - [Decile-based derived attributes](use-cases/deciles-use-case.md)
     - [Fuzzy match](use-cases/fuzzy-match.md)
     - [List the page views of a user](use-cases/list-visitor-sessions.md)
