@@ -53,4 +53,4 @@ There are some differences between the editor in the update variable action vers
 
 ## Next steps {#next-steps}
 
-After reading this article you should have a better understanding of how to configure your actions. Next, read about how to [configure your data element types](data-element-types.md).
+After reading this article, you should have a better understanding of how to configure your actions. Next, read about how to [configure your data element types](data-element-types.md).
