@@ -7,7 +7,7 @@ last-substantial-update: 2023-03-14
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) enables marketers to plan and execute campaigns while delivering a personalized customer experience for their prospects. With integrated lead management and easy campaign creation, it helps marketers engage the right audience at the right time in their buyer's journey and elegantly scales to reach audiences across channels including email, display search, video, and mobile. Sales teams can close more deals at a faster rate, increasing marketing ROI through real-time insight.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Update a contact](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) operation from the [!DNL Oracle Eloqua] REST API, which allows you to update identities within a segment into [!DNL Oracle Eloqua].
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Update a contact](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) operation from the [!DNL Oracle Eloqua] REST API, which allows you to **update identities** within a segment into [!DNL Oracle Eloqua].
 
 [!DNL Oracle Eloqua] uses [Basic Authentication](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) to communicate with the [!DNL Oracle Eloqua] REST API. Instructions to authenticate to your [!DNL Oracle Eloqua] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
@@ -113,48 +113,51 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL Oracle Eloqua] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. 
+To correctly send your audience data from Adobe Experience Platform to the [!DNL Oracle Eloqua] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination.
 
-`EloquaID` is required to update attributes corresponding to the Identity. The `emailAddress` is also necessary as without it the API throws an error as indicated below:
-
-```json
-{
-   "type":"ObjectValidationError",
-   "container":{
-      "type":"ObjectKey",
-      "objectType":"Contact"
-   },
-   "property":"emailAddress",
-   "requirement":{
-      "type":"EmailAddressRequirement"
-   },
-   "value":"<null>"
-}
-```
-
-Attributes specified in the **[!UICONTROL Target field]** should be named exactly as described in the attribute mappings table as these attributes will form request body.
-
-Attributes specified in the **[!UICONTROL Source field]** do not follow any such restriction. You can map it based on your need, however if the data format is not correct when pushed to [!DNL Oracle Eloqua] it will result in an error. 
-
-For example, you can map **[!UICONTROL Source field]** identity namespace `contact key`, `ABC ID` etc. to **[!UICONTROL Target field]** : `EloquaID` after ensuring that the ID values conform to the format that is accepted by [!DNL Oracle Eloqua].
-
-To correctly map your XDM fields to the [!DNL Oracle Eloqua] destination fields, follow these steps:
+To map your XDM fields to the [!DNL Oracle Eloqua] destination fields, follow these steps:
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
-1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select custom attributes]** category and select an attribute as needed.
-    * Repeat these steps to add the following mappings between your XDM profile schema and your [!DNL Oracle Eloqua] instance:
-        |Source Field|Target Field| Mandatory|
+1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select custom attributes]** category and from the list of [[!DNL update a contact API endpoint fields]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) pick the desired attribute name and type in the **[!UICONTROL Attribute name]** field.
+    * Repeat these steps to add both the required and any desired attribute mappings between your XDM profile schema and [!DNL Oracle Eloqua]:
+        | Source Field | Target Field | Mandatory |
         |---|---|---|
-        |`xdm: personalEmail.address`|`Attribute: emailAddress`| Yes |
         |`IdentityMap: Eid`|`Identity: EloquaId`| Yes |
+        |`xdm: personalEmail.address`|`Attribute: emailAddress`| Yes |
+        |`xdm: personName.firstName`|`Attribute: firstName`| |
+        |`xdm: personName.lastName`|`Attribute: lastName`| |
+        |`xdm: workAddress.street1`|`Attribute: address1`| |
+        |`xdm: workAddress.street2`|`Attribute: address2`| |
+        |`xdm: workAddress.street3`|`Attribute: address3`| |
+        |`xdm: workAddress.postalCode`|`Attribute: postalCode`| |
+        |`xdm: workAddress.country`|`Attribute: country`| |
+        |`xdm: workAddress.city`|`Attribute: city`| |
 
-    * An example using these mappings is shown below:
+    * An example with the above mappings is shown below:
     ![Platform UI screenshot example with attribute mappings.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
-        >[!IMPORTANT]
-        >
-        >Both the `emailAddress` and `EloquaId` target attribute mappings are mandatory.
+>[!IMPORTANT]
+>
+>* Attributes specified in the **[!UICONTROL Target field]** should be named exactly as specified in the [[!DNL update a contact API endpoint fields]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) as these attributes will form request body.
+>* Attributes specified in the **[!UICONTROL Source field]** do not follow any such restriction. You can map it based on your need, however if the data format is not correct when pushed to [!DNL Oracle Eloqua] it will result in an error. For example, you can map the **[!UICONTROL Source field]** identity namespace `contact key`, `ABC ID` etc. to **[!UICONTROL Target field]** : `EloquaId` after ensuring that the ID values match the format that is accepted by [!DNL Oracle Eloqua].
+>* The `EloquaID` mapping is mandatory to update attributes corresponding to the Identity. 
+>* The `emailAddress` mapping is also required as without it the API throws an error as shown below:
+>
+>```json
+>{
+>   "type":"ObjectValidationError",
+>   "container":{
+>      "type":"ObjectKey",
+>      "objectType":"Contact"
+>   },
+>   "property":"emailAddress",
+>   "requirement":{
+>      "type":"EmailAddressRequirement"
+>   },
+>   "value":"<null>"
+>}
+>```
 
 When you are finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
