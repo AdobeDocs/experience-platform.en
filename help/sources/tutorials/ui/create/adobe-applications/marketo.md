@@ -177,3 +177,24 @@ By following this tutorial, you have successfully created a dataflow to bring in
 
 * [[!DNL Real-Time Customer Profile] overview](/help/profile/home.md)
 * [[!DNL Data Science Workspace] overview](/help/data-science-workspace/home.md)
+
+## Appendix {#appendix}
+
+The following sections provide additional guidelines that you may follow when using the [!DNL Marketo] source.
+
+### Error messages in the UI {#error-messages}
+
+The following error messages are displayed in the UI when Platform detects issues with your setup:
+
+#### [!DNL Munchkin ID] is not mapped to the appropriate organization
+
+Authentication will be denied if your [!DNL Munchkin ID] is not mapped to the Platform organization that you are using. Configure the mapping between your [!DNL Munchkin ID] and your organization using the [[!DNL Marketo] interface](https://app-sjint.marketo.com/#MM0A1).
+
+![An error message displaying that the Marketo instance is not correctly mapped to the Adobe organization.](../../../../images/tutorials/create/marketo/munchkin-not-mapped.png)
+
+#### Primary identity is missing
+
+A dataflow will fail to save and ingest if a primary identity is missing. Ensure that [a primary identity exists within your XDM schema](../../../../../xdm/tutorials/create-schema-ui.md), before attempting to configure a dataflow.
+
+![An error message displaying that the primary identity is missing from the XDM schema.](../../../../images/tutorials/create/marketo/no-primary-identity.png)
+
