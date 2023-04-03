@@ -31,7 +31,7 @@ The following table outlines the available permissions for Privacy Service with 
 
 >[!NOTE]
 >
->All Privacy Service and [!UICONTROL Opt Out of Sale] permissions are distinct and separate from one another with no functional overlap. This is possible as the Privacy Service API is considered idempotent. Clients can make that same call to any Privacy Service endpoint repeatedly and produce the same result.
+>All Privacy Service and [!UICONTROL Opt Out of Sale] permissions are distinct and separate from one another with no functional overlap. This is possible as the Privacy Service API is considered idempotent.
 
 | Category | Permission | Description |
 | --- | --- | --- |
