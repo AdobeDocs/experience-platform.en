@@ -29,6 +29,10 @@ This guide assumes you are familiar with basic Admin Console concepts like produ
 
 The following table outlines the available permissions for Privacy Service with descriptions of the specific capabilities that they grant access to:
 
+>[!NOTE]
+>
+>All Privacy Service and [!UICONTROL Opt Out of Sale] permissions are distinct and separate from one another with no functional overlap. This is possible as the Privacy Service API is considered idempotent. Clients can make that same call to any Privacy Service endpoint repeatedly and produce the same result.
+
 | Category | Permission | Description |
 | --- | --- | --- |
 | [!UICONTROL Privacy Service Permissions] | [!UICONTROL Privacy Read Permission] | Determines whether the user can view existing access and delete requests, along with their details. |
