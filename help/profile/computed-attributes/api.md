@@ -67,142 +67,38 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 
 **Response**
 
-A successfully created computed attribute returns HTTP Status 200 (OK) and a response body containing the details of the newly created computed attribute. These details include a unique, read-only, system-generated `id` that can be used for referencing the computed attribute during other API operations.
+A successful response returns HTTP Status 200 (OK) with information about your newly created computed attribute.
 
 ```json
 {
-    "id": "2afcf410-450e-4a39-984d-2de99ab58877",
+    "id": "955fd500-fd4a-42fb-8518-d5f75287479a",
+    "type": "ComputedAttribute",
+    "name": "testdemso1s1",
+    "displayName": "Sample Display Name",
+    "description": "Sample Description",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
+        "sandboxId": "02dd69f0-da73-11e9-9ea1-af59ce7c24e8",
         "sandboxName": "prod",
         "type": "production",
-        "default": true
+        "isDefault": true
     },
-    "name": "birthdayCurrentMonth",
-    "path": "_{TENANT_ID}",
+    "path": "{TENANT_ID}",
     "positionPath": [
-        "_{TENANT_ID}"
+        "{TENANT_ID}"
     ],
-    "description": "Computed attribute to capture if the customer birthday is in the current month.",
+    "keepCurrent": false,
     "expression": {
         "type": "PQL",
         "format": "pql/text",
-        "value": "person.birthDate.getMonth() = currentMonth()"
+        "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0) and (timestamp occurs <= 7 days before now)].sum(commerce.order.priceTotal)"
     },
-    "schema": {
-        "name": "_xdm.context.profile"
+    "mergeFunction": {
+        "value": "SUM"
     },
-    "returnSchema": {
-        "meta:xdmType": "string"
-    },
-    "definedOn": [
-        {
-            "meta:resourceType": "unions",
-            "meta:containerId": "tenant",
-            "$ref": "https://ns.adobe.com/xdm/context/profile__union"
-        }
-    ],
-    "encodedDefinedOn":"?\b?VR)JMS?R?())(????+?KL?OJ?K???H??O??+I?(?/(?O??I??/????S?8{?E:",
-    "dependencies": [],
-    "dependents": [],
-    "active": true,
-    "type": "ComputedAttribute",
-    "createEpoch": 1572555223,
-    "updateEpoch": 1572555225
-}
-```
-
-|Property|Description|
-|---|---|
-|`id`|A unique, read-only, system-generated ID that can be used for referencing the computed attribute during other API operations.|
-|`imsOrgId`| The IMS Organization related to the computed attribute, should match the value sent in the request.|
-|`sandbox`|The sandbox object contains details of the sandbox within which the computed attribute was configured. This information is drawn from the sandbox header sent in the request. For more information, please see the [sandboxes overview](../../sandboxes/home.md).|
-|`positionPath`|An array containing the deconstructed `path` to the field that was sent in the request.|
-|`returnSchema.meta:xdmType`|The type of the field where the computed attribute will be stored.|
-|`definedOn`|An array showing the union schemas upon which the computed attribute has been defined. Contains one object per union schema, meaning there may be multiple objects within the array if the computed attribute has been added to multiple schemas based on different classes.|
-|`active`|A boolean value displaying whether or not the computed attribute is currently active. By default the value is `true`.|
-|`type`|The type of resource created, in this case "ComputedAttribute" is the default value.|
-|`createEpoch` and `updateEpoch`|The time at which the computed attribute was created and last updated, respectively.|
-
-## Create a computed attribute that references existing computed attributes
-
-It is also possible to create a computed attribute that references existing computed attributes. To do so, begin by making a POST request to the `/config/computedAttributes` endpoint. The request body will contain references to the computed attributes in the `expression.value` field as shown in the example that follows. 
-
-**API format**
-
-```http
-POST /config/computedAttributes
-```
-
-**Request**
-
-In this example, two computed attributes have already been created and will be used to define a third. The existing computed attributes are:
-
-* **`totalSpend`:** Captures the total dollar amount that a customer has spent.
-* **`countPurchases`:** Counts the number of purchases that a customer has made.
-
-The request below references the two existing computed attributes, using valid PQL to divide in order to calculate the new `averageSpend` computed attribute.
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/config/computedAttributes \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}'\
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
-        "name": "averageSpend",
-        "path": "_{TENANT_ID}.purchaseSummary",
-        "description": "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
-        "expression": {
-            "type": "PQL", 
-            "format": "pql/text", 
-            "value": "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
-        },
-        "schema": 
-          {
-            "name":"_xdm.context.profile"
-          }
-          
-      }'
-```
-
-|Property|Description|
-|---|---|
-|`name`|The name of the computed attribute field, as a string.|
-|`path`|The path to the field containing the computed attribute. This path is found within the `properties` attribute of the schema and should NOT include the field name in the path. When writing the path, omit the multiple levels of `properties` attributes.|
-|`{TENANT_ID}`|If you are unfamiliar with your tenant ID, please refer to the steps for finding your tenant ID in the [Schema Registry developer guide](../../xdm/api/getting-started.md#know-your-tenant_id).|
-|`description`|A description of the computed attribute. This is especially useful once multiple computed attributes have been defined as it will help others within your IMS Organization to determine the correct computed attribute to use.|
-|`expression.value`|A valid PQL expression. Computed attributes currently support the following functions: sum, count, min, max, and boolean. For a list of sample expressions, refer to the [sample PQL expressions](expressions.md) documentation.<br/><br/>In this example, the expression references two existing computed attributes. The attributes are referenced using the `path` and the `name` of the computed attribute as they appear in the schema in which the computed attributes were defined. For example, the `path` of the first referenced computed attribute is `_{TENANT_ID}.purchaseSummary` and the `name` is `totalSpend`.|
-|`schema.name`|The class upon which the schema containing the computed attribute field is based. Example: `_xdm.context.experienceevent` for a schema based on the XDM ExperienceEvent class.|
-
-**Response**
-
-A successfully created computed attribute returns HTTP Status 200 (OK) and a response body containing the details of the newly created computed attribute. These details include a unique, read-only, system-generated `id` that can be used for referencing the computed attribute during other API operations.
-
-```json
-{
-    "id": "2afcf410-450e-4a39-984d-2de99ab58877",
-    "imsOrgId": "{ORG_ID}",
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "averageSpend",
-    "path": "_{TENANT_ID}.purchaseSummary",
-    "positionPath": [
-        "_{TENANT_ID}",
-        "purchaseSummary"
-    ],
-    "description": "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
-    "expression": {
-            "type": "PQL", 
-            "format": "pql/text", 
-            "value":  "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
+    "status": {
+        "type": "DRAFT",
+        "job": "NOT_STARTED"
     },
     "schema": {
         "name": "_xdm.context.profile"
@@ -212,46 +108,36 @@ A successfully created computed attribute returns HTTP Status 200 (OK) and a res
     },
     "definedOn": [
         {
-          "meta:resourceType": "unions",
-          "meta:containerId": "tenant",
-          "$ref": "https://ns.adobe.com/xdm/context/profile__union"
+            "meta:resourceType": "unions",
+            "meta:containerId": "tenant",
+            "$ref": "https://ns.adobe.com/xdm/context/profile__union"
         }
     ],
-    "encodedDefinedOn":"\bVR)JMSR())(+KLOJKկHO+I(/(OI/S8{E:",
-    "dependencies": [
-        "c08a92f3-2418-4a3d-89d0-96f15fda3e5d",
-        "4ed9e3aa-57ae-4705-9e8a-7fba9a6a7010"
-    ],
-    "dependents": [],
-    "active": true,
-    "evaluationInfo": {
-        "batch": {
-          "enabled": false
-        },
-        "continuous": {
-          "enabled": true
-        },
-        "synchronous": {
-          "enabled": false
-        }
-      },
-    "type": "ComputedAttribute",
-    "createEpoch": 1613696592,
-    "updateEpoch": 1613696593
+    "createEpoch": 1680070188696,
+    "updateEpoch": 1680070188696,
+    "createdBy": "{USER_ID}"
 }
 ```
 
-|Property|Description|
-|---|---|
-|`id`|A unique, read-only, system-generated ID that can be used for referencing the computed attribute during other API operations.|
-|`imsOrgId`| The IMS Organization related to the computed attribute, should match the value sent in the request.|
-|`sandbox`|The sandbox object contains details of the sandbox within which the computed attribute was configured. This information is drawn from the sandbox header sent in the request. For more information, please see the [sandboxes overview](../../sandboxes/home.md).|
-|`positionPath`|An array containing the deconstructed `path` to the field that was sent in the request.|
-|`returnSchema.meta:xdmType`|The type of the field where the computed attribute will be stored.|
-|`definedOn`|An array showing the union schemas upon which the computed attribute has been defined. Contains one object per union schema, meaning there may be multiple objects within the array if the computed attribute has been added to multiple schemas based on different classes.|
-|`active`|A boolean value displaying whether or not the computed attribute is currently active. By default the value is `true`.|
-|`type`|The type of resource created, in this case "ComputedAttribute" is the default value.|
-|`createEpoch` and `updateEpoch`|The time at which the computed attribute was created and last updated, respectively.|
+| Property | Description |
+| -------- | ----------- |
+| `id` | A unique, read-only, system-generated ID that can be used for referencing the computed attribute during other API operations. |
+| `type` | A string that shows that the returned object is a computed attribute. |
+| `imsOrgId` | The ID of the organization the computed attribute belongs to. |
+| `sandbox` | The sandbox object contains details of the sandbox within which the computed attribute was configured. This information is drawn from the sandbox header sent in the request. For more information, please see the [sandboxes overview](../../sandboxes/home.md). |
+| `path` | The `path` to the computed attribute. |
+| `positionPath` | An array containing the deconstructed `path` to the computed attribute. |
+| `expression` | An object that contains the computed attribute's expression. |
+| `mergeFunction` | An object that contains the merge function for the computed attribute. This value is based off of the corresponding aggregation parameter within the computed attribute's expression. |
+| `status` | An object that contains the status of the computed attribute. |
+| `status.type` | The name of the computed attribute's status. This can either be `PUBLISHED` or `DRAFT`. |
+| `status.job` | ??? |
+| `schema` | An object that contains information about the schema where the expression is evaluated in. Currently, only `_xdm.context.profile` is supported. |
+| `returnSchema` | An object that contains the return type supported by the PQL expression. |
+| `definedOn` | An array showing the union schemas upon which the computed attribute has been defined. Contains one object per union schema, meaning there may be multiple objects within the array if the computed attribute has been added to multiple schemas based on different classes. |
+| `createEpoch` | The time at which the computed attribute was created, in seconds. |
+| `updateEpoch`| The time at which the computed attribute was last updated, in seconds. |
+| `createdBy` | The ID of the user who created the computed attribute. |
 
 ## Access computed attributes
 
