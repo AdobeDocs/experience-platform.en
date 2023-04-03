@@ -25,14 +25,6 @@ This connection is built using [LiveRamp's SFTP](https://docs.liveramp.com/conne
 
 Before you can send data from Experience Platform to [!DNL LiveRamp SFTP], you need your [!DNL LiveRamp] credentials. Please reach out to your [!DNL LiveRamp] representative to obtain your credentials, if you don't already have them.
 
-## Considerations {#considerations}
-
-This destination connection is currently in alpha stage and its functionality is subject to change. When configuring and using this destination, keep in mind the following considerations:
-
-* [Incremental file exports](../../ui/activate-batch-profile-destinations.md#export-incremental-files) are not currently supported.
-* 
-
-
 ## Supported identities {#supported-identities}
 
 *Add information in this section about the identities supported by your destination. We have prefilled the table with some standard values. Delete the values that don't apply to your destination and any values that are not prefilled.*
