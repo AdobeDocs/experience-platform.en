@@ -31,6 +31,7 @@ feature: Sources
       - [B2B namespaces and schemas](connectors/adobe-applications/marketo/marketo-namespaces.md)
   - Advertising {#advertising}
     - [Google Ads connector](connectors/advertising/ads.md)
+    - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
   - Analytics {#analytics}
     - [Mixpanel connector](connectors/analytics/mixpanel.md)
     - [Pendo](connectors/analytics/pendo-webhook.md)
@@ -106,6 +107,7 @@ feature: Sources
   - Create a base connection {#create}
     - Advertising {#advertising}
       - [Google Ads](tutorials/api/create/advertising/ads.md)
+      - [Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
       - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
@@ -207,6 +209,7 @@ feature: Sources
   - [Delete accounts](tutorials/api/delete.md)
   - [Delete dataflows](tutorials/api/delete-dataflows.md)
   - [Ingest encrypted data](tutorials/api/encrypt-data.md)
+  - [Save a dataflow as a draft](tutorials/api/draft.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
     - Adobe applications {#adobe-applications}
@@ -220,6 +223,7 @@ feature: Sources
       - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
     - Advertising {#advertising}
       - [Google Ads](tutorials/ui/create/advertising/ads.md)
+      - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
@@ -342,6 +346,9 @@ feature: Sources
     - [Document your source (Streaming SDK)](sources-sdk/streaming/document-streaming.md)
     - [Documentation self-service API streaming template](sources-sdk/streaming/streaming-template-api.md)
     - [Documentation self-service UI streaming template](sources-sdk/streaming/streaming-template-ui.md)
+- Error messages {#errors}
+  - [Error messages in sources](./errors/sources-errors.md)
+  - [Error messages in Flow Service](./errors/flow-service-errors.md)
 - [Flow run notifications](notifications.md)
 - [IP address allow list](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)
