@@ -42,6 +42,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 | --- | --- |
 | New quick start workflow for Meta Conversions API (Beta) | Access new quick start workflows under "Getting Started" from the Data Collection home screen! The [quick start workflow for Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start) enables customers to rapidly collect and forward event data, server-side to Meta for ad conversions in just a few simple steps. |
 | [!DNL Braze] event forwarding extension | The [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) event forwarding extension allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL Braze] in the form of server-side events using the [!DNL Braze] User Track APIs. |
+| [!DNL Epsilon] event forwarding extension | The [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) extension allows you to leverage event forwarding to capture event information in the Adobe Experience Platform Edge Network and send it to [!DNL Epsilon] using the [!DNL Epsilon] Event API. |
 | [!DNL Mixpanel] event forwarding extension | The [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) extension allows customers to leverage event forwarding to capture event information in the Adobe Experience Platform Edge Network and send it to Mixpanel using the Track Events API. |
 
 {style="table-layout:auto"}
@@ -103,6 +104,38 @@ XDM is an open-source specification that provides common structures and definiti
 | Feature | Description |
 | --- | --- |
 | CSV to schema recommendation | You can now upload your local files to create machine learning generated schemas that eliminate the need to manually create a schema. From the [!UICONTROL Sources] workspace, upload a sample CSV file, and Adobe machine learning algorithms will suggest a schema for you based on the target fields. See the [documentation](../../ingestion/tutorials/map-csv/recommendations.md) for more information." |
+
+{style="table-layout:auto"}
+
+**New XDM components**
+
+| Component type | Name | Description |
+| --- | --- | --- |
+| Class | [[!UICONTROL Offer Item]](https://github.com/adobe/xdm/pull/1678/files)  | Class which represents an Offer. |
+| Class |  [[!UICONTROL Decision Item]](https://github.com/adobe/xdm/pull/1678/files) | An item which can be subjected to decisioning. The output of a decisioning process is one or more decision items. |
+| Class | [[!UICONTROL Media Session Server Timeout]](https://github.com/adobe/xdm/pull/1676/files) | This indicates the amount of time, in seconds, that passed between the user's last known interaction and the moment the session was closed. |
+| Field Group  | [[!UICONTROL XDM Profile Computed Attributes]](https://github.com/adobe/xdm/pull/1686/files) | This adds computed attributes from internal Adobe services to incoming customer data. This should not be used by customers to ingest data.  |
+| Data Type | [[!UICONTROL Refund Item]](https://github.com/adobe/xdm/pull/1685/files) | Indicates whether a refund is associated with an order and defines the type of refund, the amount, and the associated currency. |
+| Data Type | [[!UICONTROL Category data]](https://github.com/adobe/xdm/pull/1677/files) | This new datatype represents the category of a product. |
+| Schema | [[!UICONTROL Adobe Target Classification Fields]](https://github.com/adobe/xdm/pull/1682/files) | A new XDM schema was created for Target Classification datasets. It contains a set of meta-data fields that classify Target activities and experiences.|
+
+{style="table-layout:auto"}
+
+**Updated XDM components**
+
+| Component type | Name | Description |
+| --- | --- | --- |
+|Field Group  | [[!UICONTROL Content Component Details]](https://github.com/adobe/xdm/pull/1674/files)  | `uri-reference` was removed from [!UICONTROL Content Component Details] |
+| Field Group | [[!UICONTROL AJO Entity tags]](https://github.com/adobe/xdm/pull/1672/files)  | Added AJO Entity tags to [!UICONTROL AJO Entity Fields], that correspond to a Journey or Campaign  |
+| Field Group | (Multiple) | Added several fields for [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/pull/1671/files) |
+| Field Group | (Multiple) | [Added several XDM event types for [!UICONTROL Media Reporting]](https://github.com/adobe/xdm/pull/1670/files). |
+| Field group  | [!UICONTROL Workfront Change Event] | The `Full Record` and `Accessor Employee Ids` field groups were added.  |
+| Data Type | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/pull/1685/files) | The [!UICONTROL Refund Amount] was added to indicate the amount refunded for the item, if any.  |
+| Data Type | [[!UICONTROL Order ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Refunds List] was added to list of the refunds for this order. |
+| Data Type | [[!UICONTROL Product List Item ]](https://github.com/adobe/xdm/pull/1677/files) | Product categories was added to list of the category data of this product. |
+| Data type | [!UICONTROL Session details information] | Added the `pev3` string field that [indicates the type of the media stream used for reporting](https://github.com/adobe/xdm/pull/1676/files). Also added the `pccr` property indicates whether a redirect occurred. |
+| Data type | [!UICONTROL Requisition List] | Provides the [requisition list properties](https://github.com/adobe/xdm/pull/1675/files). They include name, ID and description.  |
+| Data type  | [!UICONTROL Commerce] | The [Commerce data type was updated](https://github.com/adobe/xdm/pull/1675/files) to include `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals`, and `requisitionList`. |
 
 {style="table-layout:auto"}
 
