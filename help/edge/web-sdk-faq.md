@@ -95,7 +95,7 @@ Adobe Experience Platform Web SDK has been developed for the following people:
 
 ## How do I get access to start using Adobe Experience Platform Web SDK?
 
-The Web SDK is currently available to the general public and can be used to send data to Adobe Experience Cloud products. The ability to send data to third-party solutions is coming in the near future. The SDK is free, is hosted by Adobe for free, and can be downloaded so you can host it on your own servers, if desired, for free. Platform Web SDK requires access to Datastream configurations and the Adobe Experience Platform XDM schema builder, in order for Adobe's servers to properly handle inbound data coming from the SDK. If you would like to get access, contact your Adobe account team to start the request process.
+The Web SDK is currently available to the general public and can be used to send data to Adobe Experience Cloud products. The ability to send data to third-party solutions is coming in the near future. There is no charge for the SDK, and it is hosted by Adobe for free. If required, you can download it and host it on your own servers at no cost. Platform Web SDK requires access to Datastream configurations and the Adobe Experience Platform XDM schema builder, in order for Adobe's servers to properly handle inbound data coming from the SDK. If you would like to get access, contact your Adobe account team to start the request process.
 
 ## What use cases are currently supported by the Web SDK?
 
