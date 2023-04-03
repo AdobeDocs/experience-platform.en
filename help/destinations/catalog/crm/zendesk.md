@@ -126,9 +126,7 @@ To correctly map your XDM fields to the [!DNL Zendesk] destination fields, follo
 
 >[!IMPORTANT]
 >
->Both the target field mappings are mandatory and required for [!DNL Zendesk] to work.
->
->The mapping for `Last Name` or `Name` is required otherwise the [!DNL Zendesk] API does not respond with any error and any attribute value passed is ignored.
+>The target mapping for Identity: `email` and one of either target mappings for `Last Name` or `Name` are mandatory. If you miss mapping `Last Name` or `Name` the [!DNL Zendesk] API does not respond with any error and any attribute value passed is ignored.
 
 When you are finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
