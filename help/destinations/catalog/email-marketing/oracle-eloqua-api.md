@@ -119,7 +119,7 @@ To map your XDM fields to the [!DNL Oracle Eloqua] destination fields, follow th
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
-1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select custom attributes]** category and from the list of [[!DNL update a contact API endpoint fields]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) pick the desired attribute name and type in the **[!UICONTROL Attribute name]** field.
+1. In the **[!UICONTROL Select target field]** window, choose **[!UICONTROL Select identity namespace]** and select an identity, or choose **[!UICONTROL Select custom attributes]** category and type in the desired attribute name in the **[!UICONTROL Attribute name]** field. The attribute name that you provide should match an existing contact attribute in [!DNL Oracle Eloqua]. See [[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) for the exact attribute names that you can use in [!DNL Oracle Eloqua].
     * Repeat these steps to add both the required and any desired attribute mappings between your XDM profile schema and [!DNL Oracle Eloqua]:
         | Source Field | Target Field | Mandatory |
         |---|---|---|
