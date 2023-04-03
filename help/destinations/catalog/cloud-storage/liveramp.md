@@ -103,7 +103,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Sample screenshot showing how to fill in details for your destination](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![Platform UI screenshot showing how to fill in details for your destination](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -168,9 +168,35 @@ Once you've added all your desired mappings, select **[!UICONTROL Next]** and fi
 
 ## Exported data / Validate data export {#exported-data}
 
-Your data is exported to the LiveRamp SFTP storage location that you configured, as a single CSV file containing all your selected segments.
+Your data is exported to the [!DNL LiveRamp SFTP] storage location that you configured, as CSV files.
 
-Segments are displayed as CSV columns.
+When exporting files to the [!DNL LiveRamp SFTP] destination, Platform generates one CSV file for each [merge policy ID](../../../profile/merge-policies/overview.md).
+
+For example, let's consider the following segments:
+
+* Segment A (Merge policy 1)
+* Segment B (Merge policy 2)
+* Segment C (Merge policy 1)
+* Segment D (Merge policy 1)
+
+Platform will export two CSV files to [!DNL LiveRamp SFTP]:
+
+* One CSV file containing segments A, C, and D;
+* One CSV file containing segment B.
+
+Exported CSV files contain the selected attributes and the corresponding segment status, on separate columns, with the segment ID as a column header. If a profile does not qualify for a segment, the null value is used as a status.
+
+For instance, an exported CSV file with one `email` attribute and 3 segments could look like this:
+
+```csv
+email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
+abc117@testemailabc.com,active,,
+abc111@testemailabc.com,,,active
+abc102@testemailabc.com,,,active
+abc116@testemailabc.com,active,,
+abc107@testemailabc.com,active,active,active
+abc101@testemailabc.com,active,active,
+```
 
 >[!NOTE]
 >
