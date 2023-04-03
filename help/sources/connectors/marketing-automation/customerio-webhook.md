@@ -1,8 +1,6 @@
 ---
 title: Customer.io Source Overview
 description: Learn how to connect Customer.io to Adobe Experience Platform using APIs or the user interface by leveraging webhooks
-hide: true
-hidefromtoc: true
 badge: "Beta"
 ---
 # [!DNL Customer.io]
