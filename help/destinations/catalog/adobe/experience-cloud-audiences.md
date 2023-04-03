@@ -59,7 +59,7 @@ Note: briefly talk about when to share segments to these destinations using the 
 
 ### For customers who are using the legacy segment sharing solution
 
-If you are already sharing segments from Experience Platform to Audience Manager and other Experience Cloud solutions via the [legacy segment sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam), you must contact either Customer Care or your Customer Success Manager to disable the legacy integration. Customer Care and Customer Support Management teams must file a Jira ticket (see template ticket AAM-52354) to disable the integration. 
+If you are already sharing segments from Experience Platform to Audience Manager and other Experience Cloud solutions via the [legacy segment sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam), you must contact either Customer Care or your Adobe account team to disable the legacy integration. Customer Care and Customer Support Management teams must file a Jira ticket (see template ticket AAM-52354) to disable the integration. 
 
 The turnaround time to resolve the deprovisioning ticket for beta customers is six business days or less. After the existing legacy integration has been disabled, you can proceed to [creating a connection](#connect) via the self-service destination card. 
 

@@ -50,7 +50,7 @@ You must provide a consent configuration and set its default value to either `op
 
 The opt-in and opt-out consent check determines whether you can operate with the consent to share user data by default. If the consent configuration default is set to `opt-out`, then user data can be shared, unless a user explicitly opts out. If the default is set to `opt-in`, then user data cannot be shared, unless a user explicitly opts in.
 
-The default consent configuration for [!DNL Segment Match] is set to `opt-out`. To enforce an opt-in model for your data, please send an email request to your Adobe Account Manager.
+The default consent configuration for [!DNL Segment Match] is set to `opt-out`. To enforce an opt-in model for your data, please send an email request to your Adobe account team.
 
 For more information on the `share` attribute used to set data-sharing consent value, see the the following documentation on [privacy and consents field group](../../../xdm/field-groups/profile/consents.md). For information on the specific field group used to capture consumer consent for collection and use of data related to privacy, personalization and marketing preferences, see the following [Consent for Privacy, Personalization and Marketing Preferences GitHub example](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 

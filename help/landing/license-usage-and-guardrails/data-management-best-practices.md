@@ -150,7 +150,7 @@ The following table outlines the list of currently available features at your di
 | Feature | Description |
 | --- | --- |
 | [Enable/Disable Datasets for Profile](../../catalog/datasets/user-guide.md) | Enable or disable dataset ingestion into Profile Service |
-| [Experience Event expirations](../../profile/event-expirations.md) | Apply an expiration time for all events ingested into a Profile-enabled dataset. Please contact your Adobe Support Representative to enable this feature. |
+| [Experience Event expirations](../../profile/event-expirations.md) | Apply an expiration time for all events ingested into a Profile-enabled dataset. Please contact your Adobe account team to enable this feature. |
 | [Adobe Analytics Data Prep filters](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Apply [!DNL Kafka] filters to exclude unnecessary data from ingestion |
 | [Adobe Audience Manager source connector filters](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Apply Audience Manager source connection filters to exclude unnecessary data from ingestion |
 | [Alloy SDK data filters](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Apply Alloy filters to exclude unnecessary data from ingestion |
