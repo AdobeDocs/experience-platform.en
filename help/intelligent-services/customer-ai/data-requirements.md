@@ -226,4 +226,4 @@ The table below describes the various attributes found in the output of Customer
 
 ## Next steps {#next-steps}
 
-Once you have prepared your data and have all your credentials and schemas in place, start by following the [Configure a Customer AI Instance](./user-guide/configure.md) guide. This guide walks you through creating an instance for Customer AI.
+Once you have prepared your data and have ensured that all your credentials and schemas are in place, refer to the [Configure a Customer AI Instance](./user-guide/configure.md) guide, which walks you through a step-by-step tutorial to create a Customer AI instance.
