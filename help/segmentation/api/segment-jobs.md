@@ -267,7 +267,7 @@ If you have more than 1500 segments being run in your segment job, the `children
 | `metrics.profileSegmentationTime` | An object that contains information on the times the segmentation evaluation started and ended, as well as the total time taken. | 
 | `metrics.segmentProfileCounter` | The number of profiles qualified on a per segment basis. | 
 | `metrics.segmentedProfileByNamespaceCounter` | The number of profiles qualified for each identity namespace on a per segment basis. |
-| `metrics.segmentProfileByStatusCounter` | The count of profiles for each statuses. The following three statuses are supported: <ul><li>"realized" - The number of new profiles that entered into the segment.</li><li>"exited" - The number of profile segments that no longer exist in the segment.</li></ul>|
+| `metrics.segmentProfileByStatusCounter` | The count of profiles for each statuses. The following three statuses are supported: <ul><li>"realized" - The number of profiles that qualify for the segment.</li><li>"exited" - The number of profile segments that no longer exist in the segment.</li></ul>|
 | `metrics.totalProfilesByMergePolicy` | The total number of merged profiles on a per merge policy basis. | 
 
 ## Create a new segment job {#create}

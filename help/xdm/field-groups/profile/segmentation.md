@@ -70,7 +70,7 @@ The following is an example `segmentMembership` map that the system has populate
 | `xdm:version` | The version of the segment that this profile qualified for. |
 | `xdm:lastQualificationTime` | A timestamp of the last time this profile qualified for the segment. |
 | `xdm:validUntil` | A timestamp of when the segment membership should no longer be assumed to be valid. For external audiences, if this field is not set, the segment membership will only be retained for 30 days from the `lastQualificationTime`. |
-| `xdm:status` | A string field that indicates whether the segment membership has been realized as part of the current request. The following values are accepted: <ul><li>`realized`: The profile is entering the segment as part of the current request.</li><li>`exited`: The profile is exiting the segment as part of the current request.</li></ul> |
+| `xdm:status` | A string field that indicates whether the segment membership has been realized as part of the current request. The following values are accepted: <ul><li>`realized`: The profile qualifies for the segment.</li><li>`exited`: The profile is exiting the segment as part of the current request.</li></ul> |
 | `xdm:payload` | Some segment memberships include a payload that describes additional values directly related to the membership. Only one payload of a given type can be provided for each membership. `xdm:payloadType` indicates the type of payload (`boolean`, `number`, `propensity`, or `string`), while its sibling property provides the value for the payload type. |
 
 {style="table-layout:auto"}

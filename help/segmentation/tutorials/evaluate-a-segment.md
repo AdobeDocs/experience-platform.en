@@ -123,7 +123,7 @@ The following example shows what the `segmentMembership` attribute looks like fo
 | Property | Description |
 | -------- | ----------- |
 | `lastQualificationTime` | The timestamp when the assertion of segment membership was made and the profile entered or exited the segment. |
-| `status` | The status of segment participation as part of the current request. Must be equal to one of the following known values: <ul><li>`realized`: Entity is entering the segment.</li><li>`exited`: Entity is exiting the segment.</li></ul> |
+| `status` | The status of segment participation as part of the current request. Must be equal to one of the following known values: <ul><li>`realized`: Entity qualifies for the segment.</li><li>`exited`: Entity is exiting the segment.</li></ul> |
 
 >[!NOTE]
 >
