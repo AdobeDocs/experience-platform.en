@@ -12,11 +12,11 @@ exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 
 The following document outlines the different required events, inputs, and outputs utilized in Customer AI. 
 
-## Getting started
+## Getting started {#getting-started}
 
 Here are the steps to build propensity models and identify target audiences for personalized marketing in Customer AI: 
 
-1. Brainstorm use cases: How would propensity models help to identify target audiences for personalized marketing? What are my business goals and corresponding tactics to achieve the goal? Where can propensity modeling fit? 
+1. Outline use cases: How would propensity models help to identify target audiences for personalized marketing? What are my business goals and corresponding tactics to achieve the goal? Where can propensity modeling fit in this process? 
 
 2. Prioritize use cases: Which are the highest priorities for the business?  
 
@@ -30,21 +30,21 @@ Here are example configurations for your first model.  The example model, built 
 
 | Step | Definition | Example |
 | ---- | ------ | ------- |
-| Set Up | Specify basic information about the model | **Name**: pencil purchase propensity model <br> **Model Type**: Conversion |
+| Set Up | Specify basic information about the model. | **Name**: Pencil purchase propensity model <br> **Model Type**: Conversion |
 | Select Data | Specify the datasets used to build the model. | **Dataset**: Adobe Analytics dataset <br> **Identity**: Ensure the identity column for each dataset is set to be a common identity.|
 | Define Goal | Define the goal, eligible population, custom events, and profile attributes. | **Prediction Goal**: Select `commerce.purchases.value` equals to pencil <br> **Outcome window**: 30 days. |
 | Set Options | Set up the schedule for model refresh and enable scores for Profile | **Schedule**: Weekly <br> **Enable for profile**: This must be enabled for the model output to be used in segmentation.  |
 
-## Data overview
+## Data overview {#data-overview}
 
 The following sections outline the different required events, inputs, and outputs utilized in Customer AI. 
 
-Customer AI works by analyzing the following datasets to predict churn or conversion propensity scores:
+Customer AI works by analyzing the following datasets to predict churn (when a customer is likely to stop using the product) or conversion (when a customer is likely to make a purchase) propensity scores:
 
 - Adobe Analytics data using the [Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
 - Adobe Audience Manager data using the [Audience Manager source connector](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Experience Event (EE) dataset](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
-- Consumer Experience Event (CEE) dataset
+- [Experience Event dataset](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
+- [Consumer Experience Event dataset](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
 
 You can add multiple datasets from different sources if each of the datasets share the same identity type (namespace) such as an ECID. For more information on adding multiple datasets, visit the [Customer AI user guide](../customer-ai/user-guide/configure.md). 
 
@@ -56,20 +56,20 @@ The following table outlines some common terminology used in this document:
 
 | Term | Definition |
 | --- | --- |
-| [Experience Data Model (XDM)](../../xdm/home.md) | XDM is the foundational framework that allows Adobe Experience Cloud, powered by Adobe Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Platform services. |
+| [Experience Data Model (XDM)](../../xdm/home.md) | XDM is the foundational framework that allows Adobe Experience Cloud, powered by Adobe Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. Platform uses XDM System to organize data in a certain way that makes it easier to use for Platform services. |
 | [XDM Schema](../../xdm/schema/composition.md) | Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data. Before data can be ingested into Platform, a schema must be composed to describe the data’s structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base XDM class and zero or more schema field groups. |
-| [XDM class](../../xdm/schema/field-constraints.md) | All XDM schemas describe data that can be categorized as record or time series. The data behavior of a schema is defined by the schema’s class, which is assigned to a schema when it is first created. XDM classes describe the smallest number of properties a schema must contain in order to represent a particular data behavior. |
+| [XDM class](../../xdm/schema/field-constraints.md) | All XDM schemas describe data that can be categorized as `Experience Event`. The data behavior of a schema is defined by the schema’s class, which is assigned to a schema when it is first created. XDM classes describe the smallest number of properties a schema must contain in order to represent a particular data behavior. |
 | [Field groups](../../xdm/schema/composition.md) | A component that defines one or more fields in a schema. Field groups enforce how their fields appear in the schema’s hierarchy, and therefore exhibit the same structure in every schema that they are included in. Field groups are only compatible with specific classes, as identified by their `meta:intendedToExtend` attribute. |
 | [Data type](../../xdm/schema/composition.md) | A component that can also provide one or more fields for a schema. However, unlike field groups, data types are not constrained to a particular class. This makes data types a more flexible option to describe common data structures that are reusable across multiple schemas with potentially different classes. The data types outlined in this document are supported by both the CEE and Adobe Analytics schemas. |
 | [Real-time Customer Profile](../../profile/home.md) | Real-time Customer Profile provides a centralized consumer profile for targeted and personalized experience management. Each profile contains data that is aggregated across all systems, as well as actionable timestamped accounts of events involving the individual that have taken place in any of the systems you use with Experience Platform. |
 
-## Customer AI input data
+## Customer AI input data {#customer-ai-input-data}
 
 For input datasets, like Adobe Analytics and Adobe Audience Manager, the respective source connectors directly map the events in these standard field groups (Commerce, Web, Application, and Search) by default during the connection process. The table below shows the event fields in the default standard field groups for Customer AI.  
 
 For more information on mapping Adobe Analytics data or Audience Manager data, visit the Analytics field mappings or Audience Manager [field mappings guide](../../sources/connectors/adobe-applications/mapping/audience-manager.md).
 
-You can use Experience Event (EE) or Consumer Experience Event (CEE) XDM schemas for input datasets that are not populated via one of the above connectors. Additional XDM field groups can be added during the schema creation process. The field groups can be provided by Adobe like the standard field groups or a custom field group, which matches the data representation in the Platform. 
+You can use Experience Event or Consumer Experience Event XDM schemas for input datasets that are not populated via one of the above connectors. Additional XDM field groups can be added during the schema creation process. The field groups can be provided by Adobe like the standard field groups or a custom field group, which matches the data representation in the Platform. 
 
 >[!IMPORTANT]
 >
@@ -89,27 +89,27 @@ To view a field group in the Platform UI, select the **[!UICONTROL Schemas]** ta
 
 | Field group | Event type | XDM field path |
 | --- | --- | --- |
-| [!UICONTROL Commerce Details] | order | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
-|  | productListViews | <li> commerce.productListViews.value </li> <li> productListItems.SKU </li>  |
-|  | checkouts | <li> commerce.checkouts.value </li> <li> productListItems.SKU </li> |
-|  | purchases | <li> commerce.purchases.value </li> <li> productListItems.SKU </li> |
-|  | productListRemovals | <li> commerce.productListRemovals.value </li> <li> productListItems.SKU </li> |
-|  | productListOpens | <li> commerce.productListOpens.value </li> <li> productListItems.SKU </li> |
-|  | productViews | <li> commerce.productViews.value </li> <li> productListItems.SKU </li> |
-| [!UICONTROL Web Details] | webVisit | web.webPageDetails.name |
-|  | webInteraction | web.webInteraction.linkClicks.value |
-| [!UICONTROL Application Details] | applicationCloses | <li> application.applicationCloses.value </li> <li> application.name </li> |
-|  | applicationCrashes | <li> application.crashes.value </li> <li> application.name </li> |
-|  | applicationFeatureUsages | <li> application.featureUsages.value </li> <li> application.name </li> |
-|  | applicationFirstLaunches | <li> application.firstLaunches.value </li> <li> application.name </li> |
-|  | applicationInstalls | <li> application.installs.value </li> <li> application.name </li> |
-|  | applicationLaunches | <li> application.launches.value </li> <li> application.name </li> |
-|  | applicationUpgrades | <li> application.upgrades.value </li> <li> application.name </li> |
-| [!UICONTROL Search Details] | search | search.keywords |
+| [!UICONTROL Commerce Details] | order | <li> `commerce.order.purchaseID` </li> <li> `productListItems.SKU` </li> |
+|  | productListViews | <li> `commerce.productListViews.value` </li> <li> `productListItems.SKU` </li>  |
+|  | checkouts | <li> `commerce.checkouts.value` </li> <li> `productListItems.SKU` </li> |
+|  | purchases | <li> `commerce.purchases.value` </li> <li> `productListItems.SKU` </li> |
+|  | productListRemovals | <li> `commerce.productListRemovals.value` </li> <li> `productListItems.SKU` </li> |
+|  | productListOpens | <li> `commerce.productListOpens.value` </li> <li> `productListItems.SKU` </li> |
+|  | productViews | <li> `commerce.productViews.value` </li> <li> `productListItems.SKU` </li> |
+| [!UICONTROL Web Details] | webVisit | `web.webPageDetails.name` |
+|  | webInteraction | `web.webInteraction.linkClicks.value` |
+| [!UICONTROL Application Details] | applicationCloses | <li> `application.applicationCloses.value` </li> <li> `application.name` </li> |
+|  | applicationCrashes | <li> `application.crashes.value` </li> <li> `application.name` </li> |
+|  | applicationFeatureUsages | <li> `application.featureUsages.value` </li> <li> `application.name` </li> |
+|  | applicationFirstLaunches | <li> `application.firstLaunches.value` </li> <li> `application.name` </li> |
+|  | applicationInstalls | <li> application.installs.value </li> <li> `application.name` </li> |
+|  | applicationLaunches | <li> application.launches.value </li> <li> `application.name` </li> |
+|  | applicationUpgrades | <li> application.upgrades.value </li> <li> `application.name` </li> |
+| [!UICONTROL Search Details] | search | `search.keywords` |
 
 Additionally, Customer AI can use subscription data to build better churn models. Subscription data is needed for each profile using the [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) data type format. Most of the fields are optional, however, for an optimal churn model it is highly recommended that you provide data for as many fields as possible such as, `startDate`, `endDate`, and any other relevant details. Please reach out to your account team for additional support on this feature.  
 
-### Adding custom events and profile attributes
+### Adding custom events and profile attributes {#add-custom-events}
 
 If you have information you wish to include in addition to the default [standard event fields](#standard-events) used by Customer AI, you can use the [custom event configuration](./user-guide/configure.md#custom-events) to augment the data used by the model.  
 
@@ -199,7 +199,7 @@ To decide the minimum required duration of data existing within the system:
 
 Although Customer AI requires a minimum period of time for the data to exist within the system, it also works best with recent data. By using more recent behavioral data, Customer AI is likely to yield a more accurate prediction of a user's future behavior.
 
-## Customer AI output data
+## Customer AI output data {#customer-ai-output-data}
 
 Customer AI generates several attributes for individual profiles that are deemed eligible. There are two ways to consume the score (output) based on what you have provisioned. If you have a Real-time Customer Profile-enabled dataset, you can consume insights from Real-time Customer Profile in the [Segment Builder](../../segmentation/ui/segment-builder.md). If you don't have a Profile-enabled dataset, you can [download the Customer AI output](./user-guide/download-scores.md) dataset available on the data lake.
 
