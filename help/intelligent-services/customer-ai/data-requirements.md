@@ -2,7 +2,7 @@
 keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output; data requirements
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
-title: Data requirements in Customer AI
+title: Data Requirements in Customer AI
 topic-legacy: Getting started
 description: Learn more about the required events, inputs, and outputs utilized by Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
@@ -24,16 +24,16 @@ Here are the steps to build propensity models and identify target audiences for 
 
 4. [Build segments](../customer-ai/user-guide/create-segment.md) using model results.
 
-5. Make targeted business moves/actions to these segments, monitor, and iterate.
+5. Take targeted business actions based on these segments. Monitor the results and iterate over the actions to improve.
 
-Here are example configurations for your first model.  In this model, we will build a Customer AI model to predict who is likely to convert for a retail business in the next 30 days. The input dataset is an Adobe Analytics dataset.
+Here are example configurations for your first model.  The example model, built in this document, uses a Customer AI model to predict who is likely to convert for a retail business in the next 30 days. The input dataset is an Adobe Analytics dataset.
 
-| Step | Define | Example |
+| Step | Definition | Example |
 | ---- | ------ | ------- |
 | Set Up | Specify basic information about the model | **Name**: pencil purchase propensity model <br> **Model Type**: Conversion |
-| Select Data |Specify datasets used to build the model | **Dataset**: Adobe Analytics dataset <br> **Identity**: Ensure the identity column for each dataset is set to be a common identity.|
-| Define Goal | Define goal, eligible population, custom events, and profile attributes. | **Prediction Goal**: Select commerce.purchases.value equals to pencil <br> **Outcome window**: 30 days. |
-| Set Options | Setup schedule for model refresh and enable scores for Profile | **Schedule**: Weekly <br> **Enable for profile**: This must be enabled for model output to be used in segmentation.  |
+| Select Data | Specify the datasets used to build the model. | **Dataset**: Adobe Analytics dataset <br> **Identity**: Ensure the identity column for each dataset is set to be a common identity.|
+| Define Goal | Define the goal, eligible population, custom events, and profile attributes. | **Prediction Goal**: Select `commerce.purchases.value` equals to pencil <br> **Outcome window**: 30 days. |
+| Set Options | Set up the schedule for model refresh and enable scores for Profile | **Schedule**: Weekly <br> **Enable for profile**: This must be enabled for the model output to be used in segmentation.  |
 
 ## Data overview
 
@@ -43,7 +43,7 @@ Customer AI works by analyzing the following datasets to predict churn or conver
 
 - Adobe Analytics data using the [Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
 - Adobe Audience Manager data using the [Audience Manager source connector](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
-- Experience Event (EE) dataset
+- [Experience Event (EE) dataset](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
 - Consumer Experience Event (CEE) dataset
 
 You can add multiple datasets from different sources if each of the datasets share the same identity type (namespace) such as an ECID. For more information on adding multiple datasets, visit the [Customer AI user guide](../customer-ai/user-guide/configure.md). 
@@ -59,7 +59,7 @@ The following table outlines some common terminology used in this document:
 | [Experience Data Model (XDM)](../../xdm/home.md) | XDM is the foundational framework that allows Adobe Experience Cloud, powered by Adobe Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Platform services. |
 | [XDM Schema](../../xdm/schema/composition.md) | Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data. Before data can be ingested into Platform, a schema must be composed to describe the data’s structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base XDM class and zero or more schema field groups. |
 | [XDM class](../../xdm/schema/field-constraints.md) | All XDM schemas describe data that can be categorized as record or time series. The data behavior of a schema is defined by the schema’s class, which is assigned to a schema when it is first created. XDM classes describe the smallest number of properties a schema must contain in order to represent a particular data behavior. |
-| [Field groups](../../xdm/schema/composition.md) | A component that define one or more fields in a schema. Field groups enforce how their fields appear in the schema’s hierarchy, and therefore exhibit the same structure in every schema that they are included in. Field groups are only compatible with specific classes, as identified by their `meta:intendedToExtend` attribute. |
+| [Field groups](../../xdm/schema/composition.md) | A component that defines one or more fields in a schema. Field groups enforce how their fields appear in the schema’s hierarchy, and therefore exhibit the same structure in every schema that they are included in. Field groups are only compatible with specific classes, as identified by their `meta:intendedToExtend` attribute. |
 | [Data type](../../xdm/schema/composition.md) | A component that can also provide one or more fields for a schema. However, unlike field groups, data types are not constrained to a particular class. This makes data types a more flexible option to describe common data structures that are reusable across multiple schemas with potentially different classes. The data types outlined in this document are supported by both the CEE and Adobe Analytics schemas. |
 | [Real-time Customer Profile](../../profile/home.md) | Real-time Customer Profile provides a centralized consumer profile for targeted and personalized experience management. Each profile contains data that is aggregated across all systems, as well as actionable timestamped accounts of events involving the individual that have taken place in any of the systems you use with Experience Platform. |
 
@@ -83,7 +83,7 @@ Experience Events are used for determining various customer behaviors. Depending
 >
 >If you are using Adobe Analytics or Adobe Audience Manager data, the schema is created automatically with the required standard events that are needed to capture your data. If you are creating your own custom EE schema to capture data, you need to consider what field groups are needed to capture your data. 
 
-Customer AI uses the events in these four standard field groups by default: Commerce, Web, Application, and Search. It is not necessary to have data for each event in the standard field groups listed below but certain events are required for certain scenarios. If you have any events in the standard field groups available, it is recommended that you include it in your schema. For example, if you wanted to create a Customer AI model for predicting purchase events, it would be useful to have data from the Commerce and Web page details field groups. 
+Customer AI uses the events in these four standard field groups by default: Commerce, Web, Application, and Search. It is not necessary to have data for each event in the standard field groups listed below but certain events are required for certain scenarios. If you have any events in the standard field groups available, it is recommended that you include it in your schema. For example, if you wanted to create a Customer AI model for predicting purchase events, it is useful to have data from the Commerce and Web page details field groups. 
 
 To view a field group in the Platform UI, select the **[!UICONTROL Schemas]** tab on the left-rail followed by selecting the **[!UICONTROL Field groups]** tab.
 
@@ -115,21 +115,17 @@ If you have information you wish to include in addition to the default [standard
 
 #### When to use custom events
 
-Custom events are necessary when: The datasets chosen in the dataset selection step contain *none* of the default event fields used by Customer AI. Customer AI needs information about at least one user behavior event other than the outcome.
+Custom events are necessary when the datasets chosen in the dataset selection step contain *none* of the default event fields used by Customer AI. Customer AI needs information about at least one user behavior event other than the outcome.
 
 Custom events are helpful for: 
 
-1. Incorporating domain knowledge or prior expertise into the model.
+- Incorporating domain knowledge or prior expertise into the model.
 
-2. Improving the predictive model quality.
+- Improving the predictive model quality.
 
-3. Gaining additional insights and interpretations.
+- Gaining additional insights and interpretations.
 
-Choosing custom events to include: 
-
-- The best candidates for custom events are data that contain domain knowledge that may be predictive of the outcome.
-
-Some general examples of custom events include: 
+The best candidates for custom events are data that contain domain knowledge that may be predictive of the outcome. Some general examples of custom events include: 
 
 - Register for account 
 
@@ -137,7 +133,7 @@ Some general examples of custom events include:
 
 - Make a call to customer service 
 
-Industry specific custom event examples: 
+The following are a selection of industry-specific custom event examples: 
 
 | Industry | Custom events |
 | --- | --- |
@@ -147,21 +143,19 @@ Industry specific custom event examples:
 | Travel | Add known traveler info Purchase miles. | 
 | Communications | Upgrade/downgrade/cancel plan. | 
 
-Requirements for choosing custom events: 
-
-- Custom events must represent user-initiated actions. For example, "Email Send" is an action initiated by a marketer and not by the user, so it shouldn't be used as a custom event.  
+Custom events must represent user-initiated actions in order to be selected. For example, "Email Send" is an action initiated by a marketer and not by the user, so it shouldn't be used as a custom event.  
 
 ### Historical data
 
-Customer AI requires historical data for model training.  The length of data (in terms of time-span) required is based on two key elements: outcome window and eligible population. 
+Customer AI requires historical data for model training. The required duration for data to exist within the system is determined by two key elements: the outcome window and eligible population. 
 
 By default, Customer AI looks for a user to have had activity in the last 45 days if no eligible population definition is provided during the application configuration. Additionally, Customer AI requires a minimum of 500 qualifying and 500 non-qualifying events (1000 total) from historical data based on a predicted goal definition. 
 
-The following examples demonstrate the use of a simple formula which helps you determine the minimum amount of data required. If you have more data than the minimum requirement, your model is likely to provide more accurate results. If you have less than the minimum amount required, the model will fail as there is not enough data for model training. 
+The following examples demonstrate the use of a simple formula which helps you determine the minimum amount of data required. If you have more data than the minimum requirement, your model is likely to provide more accurate results. If you have less than the minimum amount required, the model will fail, as there is not enough data for model training. 
 
 **Formula**: 
 
-To decide the minimum length of data required: 
+To decide the minimum required duration of data existing within the system: 
 
 - The minimum data required to create features is 30 days. Compare the eligibility lookback window with 30 days: 
 
@@ -175,7 +169,7 @@ To decide the minimum length of data required:
 >
 >30 is the minimum number of days required for eligible population. If this is not provided the default is 45 days. 
 
-Examples:
+**Examples**:
 
 - You want to predict whether a customer is likely to purchase a watch in the next 30 days for those who have some web activity in the last 60 days. 
 
@@ -203,27 +197,27 @@ Examples:
 
     - Data required = 30 days + 7 days = 37 days 
 
-Apart from the minimum data required, Customer AI also works best with recent data. In this use case, Customer AI is making a prediction for the future based on a user’s recent behavioral data. In other words, more recent data is likely to yield a more accurate prediction. 
+Although Customer AI requires a minimum period of time for the data to exist within the system, it also works best with recent data. By using more recent behavioral data, Customer AI is likely to yield a more accurate prediction of a user's future behavior.
 
 ## Customer AI output data
 
 Customer AI generates several attributes for individual profiles that are deemed eligible. There are two ways to consume the score (output) based on what you have provisioned. If you have a Real-time Customer Profile-enabled dataset, you can consume insights from Real-time Customer Profile in the [Segment Builder](../../segmentation/ui/segment-builder.md). If you don't have a Profile-enabled dataset, you can [download the Customer AI output](./user-guide/download-scores.md) dataset available on the data lake.
 
-You can find the output dataset under **Datasets** in Platform. All Customer AI output datasets start with the name **Customer AI Scores - Name_of_app**. Similarly, all Customer AI output schemas start with the name **Customer AI Schema - Name_of_app**.
+You can find the output dataset in the Platform **Datasets** workspace. All Customer AI output datasets start with the name **Customer AI Scores - NAME_OF_APP**. Similarly, all Customer AI output schemas start with the name **Customer AI Schema - Name_of_app**.
 
-![cai-schema-name-of-app](./images/user-guide/cai-schema-name-of-app.png) 
+![Name of the output datasets in Customer AI](./images/user-guide/cai-schema-name-of-app.png) 
 
 The table below describes the various attributes found in the output of Customer AI: 
 
 | Attribute | Description |
 | ----- | ----------- |
 | Score | The relative likelihood for a customer to achieve the predicted goal within the defined time frame. This value is not to be treated as a probability percentage but rather the likelihood of an individual compared to the overall population. This score ranges from 0 to 100. |
-| Probability | This attribute is the true probability of a profile for achieving the predicted goal within the defined time frame. When comparing outputs across different goals, it is recommended that you consider probability over percentile or score. Probability should always be used when determining the average probability across the eligible population, as the probability tends to be on the lower side for events that do not occur frequently. Values for probability range between 0 and 1. |
-| Percentile | This value provides information regarding the performance of a profile relative to other similarly scored profiles. For example, a profile with a percentile rank of 99 for churn indicates that it is at a higher risk of churning compared to 99% of all other profiles that were scored. Percentiles range from 1 to 100. |
+| Probability | This attribute is the true probability of a profile for achieving the predicted goal within the defined time frame. When comparing outputs across different goals, you are recommended to consider probability over percentile or score. Probability should always be used when determining the average probability across the eligible population, as the probability tends to be on the lower side for events that do not occur frequently. Values for the probability range between 0 and 1. |
+| Percentile | This value provides information regarding the performance of a profile relative to other similarly scored profiles. For example, a profile with a percentile rank of 99 for churn indicates that it is at a higher risk of churning compared to 99% of all other profiles that were scored. The percentiles range from 1 to 100. |
 | Propensity type | The selected propensity type. |
 | Score date | The date on which scoring occurred. |
-| Influential factors | Predicted reasons on why a profile is likely to convert or churn. Factors are comprised of the following attributes:<ul><li>Code: The profile or behavioral attribute which positively influences a profile's predicted score. </li><li>Value: The value of the profile or behavioral attribute.</li><li>Importance: Indicates the weight of the profile or behavioral attribute has on the predicted score (low, medium, high)</li></ul> |
+| Influential factors | These are predicted reasons as to why a profile is likely to convert or churn. These factors are comprised of the following attributes:<ul><li>Code: The profile or behavioral attribute which positively influences a profile's predicted score. </li><li>Value: The value of the profile or behavioral attribute.</li><li>Importance: Indicates the weight of the profile or behavioral attribute has on the predicted score (low, medium, high)</li></ul> |
 
 ## Next steps {#next-steps}
 
-Once you have prepared your data and have ensured that all your credentials and schemas are in place, refer to the [Configure a Customer AI Instance](./user-guide/configure.md) guide, which walks you through a step-by-step tutorial to create a Customer AI instance.
+Once you prepare your data and ensure that all your credentials and schemas are in place, refer to the [Configure a Customer AI Instance](./user-guide/configure.md) guide, which walks you through a step-by-step tutorial to create a Customer AI instance.
