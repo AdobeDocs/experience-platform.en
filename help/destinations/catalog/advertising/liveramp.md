@@ -29,7 +29,7 @@ Before you can send data from Experience Platform to [!DNL LiveRamp SFTP], you n
 
 *Add information in this section about the identities supported by your destination. We have prefilled the table with some standard values. Delete the values that don't apply to your destination and any values that are not prefilled.*
 
-*YourDestination* supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL LiveRamp SFTP] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
@@ -123,13 +123,13 @@ In the [!UICONTROL Scheduling] step, create an export schedule for each segment,
 * **[!UICONTROL Frequency]**: [!UICONTROL Daily]
 * Set the export time to **[!UICONTROL After segment evaluation]**. Scheduled segment exports and [on-demand file exports](../../ui/export-file-now.md) are currently not supported.
 
-![Platform UI screenshot showing the segment scheduling step.](../../assets/catalog/cloud-storage/liveramp/liveramp-segment-scheduling.png)
+![Platform UI screenshot showing the segment scheduling step.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
 
 The exported file name is currently not user-configurable. All files exported to the [!DNL LiveRamp SFTP] destination are automatically named based on the following template:
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-![Platform UI screenshot showing the exported file name template.](../../assets/catalog/cloud-storage/liveramp/liveramp-file-name.png)
+![Platform UI screenshot showing the exported file name template.](../../assets/catalog/advertising/liveramp/liveramp-file-name.png)
 
 An exported file for an organization named [!DNL Luma], could look similar to this: `Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv`
 
@@ -142,19 +142,19 @@ You can change the CSV column headers in the exported file to any friendly name 
 
 1. In the [!UICONTROL Mapping] step, select [!UICONTROL Add new mapping]. You will see a new mapping row on the screen.
 
-    ![Experience Platform UI screeshot showing the Mapping screen.](../../assets/catalog/cloud-storage/liveramp/liveramp-add-new-mapping.png)
+    ![Experience Platform UI screeshot showing the Mapping screen.](../../assets/catalog/advertising/liveramp/liveramp-add-new-mapping.png)
 
 2. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute that you want to map, or choose the **[!UICONTROL Select identity namespace]** category and select an identity to map to your destination.
     
-    ![Experience Platform UI screeshot showing the source Mapping screen.](../../assets/catalog/cloud-storage/liveramp/liveramp-source-mapping.png)
+    ![Experience Platform UI screeshot showing the source Mapping screen.](../../assets/catalog/advertising/liveramp/liveramp-source-mapping.png)
 
 3. In the **[!UICONTROL Select target field]** window, enter the attribute name that you want to map the selected source field to. The attribute name defined here will reflect in the exported CSV file as a column header.
 
-    ![Experience Platform UI screeshot showing the target Mapping screen.](../../assets/catalog/cloud-storage/liveramp/liveramp-target-mapping.png)
+    ![Experience Platform UI screeshot showing the target Mapping screen.](../../assets/catalog/advertising/liveramp/liveramp-target-mapping.png)
     
     You can also input the attribute name by typing it directly into the **[!UICONTROL Target field]**.
     
-    ![Experience Platform UI screeshot showing the target Mapping screen.](../../assets/catalog/cloud-storage/liveramp/liveramp-target-field.png)
+    ![Experience Platform UI screeshot showing the target Mapping screen.](../../assets/catalog/advertising/liveramp/liveramp-target-field.png)
 
 Once you've added all your desired mappings, select **[!UICONTROL Next]** and finish the activation workflow.
 
@@ -194,7 +194,7 @@ abc101@testemailabc.com,active,active,
 >
 >The **[!UICONTROL Identities activated]** and **[!UICONTROL Profiles received]** metrics are displayed as a destination-level metric, not as a segment-level metric.
 
-![Experience Platform UI screeshot showing the identities activated metric.](../../assets/catalog/cloud-storage/liveramp/liveramp-identities-activated.png)
+![Experience Platform UI screeshot showing the identities activated metric.](../../assets/catalog/advertising/liveramp/liveramp-identities-activated.png)
 
 ## Data usage and governance {#data-usage-governance}
 
