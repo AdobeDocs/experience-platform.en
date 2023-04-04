@@ -61,7 +61,7 @@ Depending on whether you are part of the beta for consent policies, one of the f
 >
 >Consent policies are currently only available for organizations that have purchased Adobe Healthcare Shield or Adobe Privacy & Security Shield.
 
-Governance and consent policies can be used together to create robust rules for rules for governing audiences mapped to a destination. Consent policies are inclusive in nature, meaning they dictate which profiles can be included in each marketing experience. Conversely, governance policies exclude certain data that have defined or custom labels, from being used in this activation.
+Governance and consent policies can be used together to create robust rules for governing audiences mapped to a destination. Consent policies are inclusive in nature, meaning they dictate which profiles can be included in each marketing experience. Conversely, governance policies exclude certain data that have defined or custom labels, from being used in this activation.
 
 By using this behavior you can set up a combination of governance and consent rules that include the correct profiles but exclude any data that goes against your organizational rules. An example scenario would be, where you want to exclude sensitive data from being included but are still able to target consensual users for marketing via social media. 
 
