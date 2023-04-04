@@ -8,7 +8,11 @@ Data Distiller is a package offering that includes a subset of the functionaliti
 
 ## License usage {#license-usage}
 
-The  [Data Distiller license usage dashboard](./license-usage.md) is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours. See the [Data Distiller license usage document](./license-usage.md) to view important information about your organization's Query Service license usage.
+<!-- Commented out references to licence usage dashboard. It is temporarily hidden:
+The [Data Distiller license usage dashboard](./license-usage.md) is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours. See the [Data Distiller license usage document](./license-usage.md) to view important information about your organization's Query Service license usage. 
+-->
+
+The Data Distiller license usage dashboard is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours.
 
 <!-- Update these descriptions post 23.3 release
 ## Scoping parameters {#scoping-parameters}
