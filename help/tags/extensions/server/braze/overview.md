@@ -38,7 +38,7 @@ The extension uses two of [!DNL Braze]'s APIs and their limits are outlined belo
 | [!DNL User Track]    | 50,000 requests per minute. <br>Refer to the [[!DNL User Track] API documentation](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#rate-limit) for details.       |
 | [!DNL User Identify] | 20,000 requests per minute. <br>Refer to the [[!DNL User Identify] API documentation](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify#rate-limit) for details. |
 
-> [!NOTE]
+>[!NOTE]
 >
 > Refer to the guide on [[!DNL Braze] API limits](https://www.braze.com/docs/api/api_limits/) for further details on the limits they impose.
 
@@ -76,34 +76,6 @@ Select **[!UICONTROL Save]** when finished.
 
 ![The [!DNL Braze] extension configuration page.](../../../images/extensions/server/braze/configure-extension.png)
 
-#### Custom events
-
-| [!DNL Braze] key       | Schema path                                  | Description                                                                                                                                                 | Mandatory |
-| ---------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| [!DNL Braze] Device ID | `arc.event.xdm._extconndev.brazeDeviceId`    | `deviceId` identifies the user who performed the event. `deviceId` must be specified on every event, as it is crucial for [!DNL Braze] to perform analysis. | Yes       |
-| Event Type             | `arc.event.xdm._extconndev.event_Type`       | The name of the event.                                                                                                                                      | Yes       |
-| User Identifier        | `arc.event.xdm._extconndev.userId`           | The user's email or login ID, if available.                                                                                                                 |           |
-| App ID                 | `arc.event.xdm._extconndev.appId`            | A string indicating where the event was triggered.                                                                                                          |           |
-| Event Fields           | `arc.event.xdm._extconndev.event_Properties` | A JSON object representing all the attributes about the event.                                                                                              |           |
-
-{style="table-layout:auto"}
-
-#### Purchases
-
-| [!DNL Braze] key       | Schema path                                  | Description                                                                                                                                                                                                                                            | Mandatory |
-| ---------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
-| [!DNL Braze] Device ID | `arc.event.xdm._extconndev.brazeDeviceId`    | `deviceId` identifies the user who performed the event. `deviceId` must be specified on every event, as it is crucial for [!DNL Braze] to perform analysis.                                                                                            | Yes       |
-| Event Type             | `arc.event.xdm._extconndev.event_Type`       | The name of the event.                                                                                                                                                                                                                                 | Yes       |
-| User Identifier        | `arc.event.xdm._extconndev.userId`           | The user's email or login ID, if available.                                                                                                                                                                                                            |           |
-| App ID                 | `arc.event.xdm._extconndev.appId`            | A string indicating where the event was triggered.                                                                                                                                                                                                     |           |
-| Product ID             | `arc.event.xdm._extconndev.product_Id`       | An identifier for the purchase, such as UPC, ISBN, product category, or product name.                                                                                                                                                                  | Yes       |
-| Currency               | `arc.event.xdm._extconndev.currency`         | The currency used for the purchase, in [ISO 4217 code format](https://www.iso.org/iso-4217-currency-codes.html).                                                                                                                                       | Yes       |
-| Price                  | `arc.event.xdm._extconndev.price`            | The value of the purchase in numerals.                                                                                                                                                                                                                 | Yes       |
-| Quantity               | `arc.event.xdm._extconndev.quantity`         | The quantity of product purchased.                                                                                                                                                                                                                     | Yes       |
-| Additional Fields      | `arc.event.xdm._extconndev.event_Properties` | A JSON object representing additional attributes about the event. Refer to the [[!DNL Braze] documentation](https://www.braze.com/docs/user_guide/onboarding_with_braze/data_points/#billable-data-points) for details of what data points are billed. |           |
-
-{style="table-layout:auto"}
-
 ## Create a [!DNL Send Event] rule {#tracking-rule}
 
 After installing the extension, create a new event forwarding [rule](../../../ui/managing-resources/rules.md) and configure its conditions as desired. When configuring the actions for the rule, select the **[!UICONTROL Braze]** extension, then select **[!UICONTROL Send Event]** for the action type.
@@ -120,7 +92,7 @@ After installing the extension, create a new event forwarding [rule](../../../ui
 
 {style="table-layout:auto"}
 
-> [!NOTE]
+>[!NOTE]
 >
 > For tying the event to an user you need to fill in either the [!UICONTROL External User ID] field, or the [!UICONTROL Braze User Identifier] field or the [!UICONTROL User Alias] section.
 
@@ -135,7 +107,7 @@ After installing the extension, create a new event forwarding [rule](../../../ui
 
 {style="table-layout:auto"}
 
-> [!NOTE]
+>[!NOTE]
 >
 > The **[!UICONTROL Braze Send Event]** action requires only an **[!UICONTROL Event Name]** and **[!UICONTROL Event Time]** to be specified, but you should be including as much information as possible in the custom properties field. For details on the [!DNL Braze] event object, refer to the [official documentation](https://www.braze.com/docs/api/objects_filters/event_object/).
 
@@ -157,6 +129,7 @@ User attributes can be a JSON object containing any fields that will create or u
 | [!UICONTROL Time Zone] | Time zone name from [IANA Time Zone Database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (e.g., ’America/New_York’ or ’Eastern Time (US & Canada)’). |
 | [!UICONTROL Facebook] | Hash containing any of id (string), likes (array of strings), num_friends (integer). |
 | [!UICONTROL Twitter] | Hash containing any of id (integer), screen_name (string, Twitter handle), followers_count (integer), friends_count (integer), statuses_count(integer). |
+
 {style="table-layout:auto"}
 
 ## Create a [!DNL Send Purchase Event] rule {#purchase-rule}
@@ -175,7 +148,7 @@ After installing the extension, create a new event forwarding [rule](../../../ui
 
 {style="table-layout:auto"}
 
-> [!NOTE]
+>[!NOTE]
 >
 > For tying the event to an user you need to fill in either the [!UICONTROL External User ID] field, or the [!UICONTROL Braze User Identifier] field or the [!UICONTROL User Alias] section.
 
@@ -193,7 +166,7 @@ After installing the extension, create a new event forwarding [rule](../../../ui
 
 {style="table-layout:auto"}
 
-> [!NOTE]
+>[!NOTE]
 >
 > The **[!UICONTROL Braze Send Event]** action requires only an **[!UICONTROL Event Name]** and **[!UICONTROL Event Time]** to be specified, but you should be including as much information as possible in the custom properties field. For details on the [!DNL Braze] event object, refer to the [official documentation](https://www.braze.com/docs/api/objects_filters/event_object/).
 
@@ -215,9 +188,8 @@ User attributes can be a JSON object containing any fields that will create or u
 | [!UICONTROL Time Zone] | Time zone name from [IANA Time Zone Database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (e.g., ’America/New_York’ or ’Eastern Time (US & Canada)’). |
 | [!UICONTROL Facebook] | Hash containing any of id (string), likes (array of strings), num_friends (integer). |
 | [!UICONTROL Twitter] | Hash containing any of id (integer), screen_name (string, Twitter handle), followers_count (integer), friends_count (integer), statuses_count(integer). |
+
 {style="table-layout:auto"}
-
-
 
 ## Validate data within [!DNL Braze] {#validate}
 
