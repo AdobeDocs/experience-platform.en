@@ -2,7 +2,7 @@
 keywords: email;Email;e-mail;email destinations
 title: Email marketing destinations overview
 type: Tutorial
-description: Email Service Providers (ESPs) allow you to manage your email marketing activities, such as for sending promotional email campaigns.
+description: Email Service Providers (ESPs) allow you to manage your email marketing activities, such as for sending promotional email campaigns. Learn which ESPs are supported as Experience Platform destinations.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
 ---
 # Email marketing destinations overview {#email-marketing-destinations}
@@ -11,16 +11,17 @@ exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
 
 Email Service Providers (ESPs) enable you to manage your email marketing activities, such as sending promotional email campaigns. Adobe Experience Platform integrates with ESPs by allowing you to activate segments to email marketing destinations.
 
-Platform exports your segments as `.csv` files and delivers them to your preferred location. Schedule your data import in your email marketing platform from the storage location enabled in [!DNL Platform]. The process to import data varies for each partner. Read the individual destinations articles for more information.
-
 ## Supported email marketing destinations {#supported-destinations}
 
 Adobe Experience Platform supports the following email marketing destinations:
 
 * [Adobe Campaign](adobe-campaign.md)
-* [Oracle Eloqua](oracle-eloqua.md)
+* [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
+* [(API) Oracle Eloqua](oracle-eloqua-api.md)
+* [(API) Salesforce Marketing Cloud](salesforce-marketing-cloud-exact-target.md)  
+* [(Files) Oracle Eloqua](oracle-eloqua.md)
+* [(Files) Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
 * [Oracle Responsys](oracle-responsys.md)
-* [Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
 * [SendGrid](sendgrid.md)
 
 ## Connect to a new email marketing destination {#connect-destination}
@@ -39,7 +40,9 @@ Adobe recommends that you select a unique identifier from your [union schema](..
 | Phone | `mobilePhone.number` |
 | Loyalty program ID | `Customer-defined XDM field` |
 
-### Other destination attributes
+{style="table-layout:auto"}
+
+### Other destination attributes {#other-destination-attributes}
 
 In the Schema field selector, choose which other fields you want to export to the email destination. Some recommended options are:
 
@@ -54,20 +57,17 @@ In the Schema field selector, choose which other fields you want to export to th
 | Birthday | `person.birthDayAndMonth`|
 | Segment membership | `segmentMembership.status`|
 
-## Import data from your storage location into the destination {#import-data-into-destination}
-
-Read the individual email marketing destination articles to learn how to import data from your storage location into destinations: 
-
-* [Adobe Campaign](adobe-campaign.md)
-* [Oracle Eloqua](oracle-eloqua.md)
-* [Oracle Responsys](oracle-responsys.md)
-* [Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
+{style="table-layout:auto"}
 
 ## Activate segments to email marketing destinations {#activate}
 
-For instructions on how to activate segments to email marketing destinations, refer to [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md).
+Some email marketing destinations in the catalog export profiles in a streaming manner, through an API integration with the destination. 
 
-## Additional resources
+Other destinations export files to a cloud storage location. After the export completes, you need to import data from the cloud storage location into your email marketing destination. 
+
+Follow the links in the [supported email marketing destinations](#supported-destinations) section to learn how to activate segments to each email marketing destination.
+
+## Additional resources {#additional-resources}
 
 * [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md)
 * [Create email marketing destinations and activate data using the Flow Service API](../../api/connect-activate-batch-destinations.md)
