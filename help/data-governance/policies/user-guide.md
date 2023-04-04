@@ -45,12 +45,6 @@ Select a listed policy to view its description and type. If a custom policy is s
 
 ## Create a custom policy {#create-policy}
 
-<!-- 
-Governance and consent policies can be used together to create robust rules for rules for governing audiences mapped to a destination. Consent policies are inclusive in nature, meaning they dictate which profiles can be included in each marketing experience. On the other hand, Governance policies exclude certain data with defined or custom labels from being used in this activation.
-
-This behavior can be leveraged to set up a combination of governance and consent rules that include the right profiles and exclude any data that goes against organizational rules. As an example, let's consider a scenario wherein we would like to exclude "sensitive" data from being included while marketing to consented users via social media. 
--->
-
 To create a new custom data usage policy, select **[!UICONTROL Create policy]** in the top-right corner of the **[!UICONTROL Browse]** tab in the **[!UICONTROL Policies]** workspace.
 
 ![](../images/policies/create-policy-button.png)
@@ -60,6 +54,22 @@ Depending on whether you are part of the beta for consent policies, one of the f
 * If you are not part of the beta, you are immediately brought to the workflow for [creating a data governance policy](#create-governance-policy).
 * If you are part of the beta, a dialog provides an extra option to [create a consent policy](#consent-policy).
   ![](../images/policies/choose-policy-type.png)
+
+### Use data governance and consent policies together {#combine-policies}
+
+>[!NOTE]
+>
+>Consent policies are currently only available for organizations that have purchased Adobe Healthcare Shield or Adobe Privacy & Security Shield.
+
+Governance and consent policies can be used together to create robust rules for rules for governing audiences mapped to a destination. Consent policies are inclusive in nature, meaning they dictate which profiles can be included in each marketing experience. Conversely, governance policies exclude certain data that have defined or custom labels, from being used in this activation.
+
+By using this behavior you can set up a combination of governance and consent rules that include the correct profiles but exclude any data that goes against your organizational rules. An example scenario would be, where you want to exclude sensitive data from being included but are still able to target consensual users for marketing via social media. 
+
+1. The **data is ingested**. A dataset of profiles is ingested that has certain fields marked with a "sensitive" data label. These profiles also have consent information provided for different marketing channels, including social media.
+
+1. The **policies are created**. Your governance policy excludes sensitive data from the audience mapped to a destination. Your consent policy then includes only those profiles that have consented to receiving marketing via social media.
+
+1. **Policy Enforcement** occurs. Profiles that have consented to receiving social media marketing communication are ACTIVATED. Whereas, segments that use sensitive data are BLOCKED.
 
 ### Create a data governance policy {#create-governance-policy}
 
