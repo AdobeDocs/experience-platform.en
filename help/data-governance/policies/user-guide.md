@@ -45,6 +45,12 @@ Select a listed policy to view its description and type. If a custom policy is s
 
 ## Create a custom policy {#create-policy}
 
+<!-- 
+Governance and consent policies can be used together to create robust rules for rules for governing audiences mapped to a destination. Consent policies are inclusive in nature, meaning they dictate which profiles can be included in each marketing experience. On the other hand, Governance policies exclude certain data with defined or custom labels from being used in this activation.
+
+This behavior can be leveraged to set up a combination of governance and consent rules that include the right profiles and exclude any data that goes against organizational rules. As an example, let's consider a scenario wherein we would like to exclude "sensitive" data from being included while marketing to consented users via social media. 
+-->
+
 To create a new custom data usage policy, select **[!UICONTROL Create policy]** in the top-right corner of the **[!UICONTROL Browse]** tab in the **[!UICONTROL Policies]** workspace.
 
 ![](../images/policies/create-policy-button.png)
