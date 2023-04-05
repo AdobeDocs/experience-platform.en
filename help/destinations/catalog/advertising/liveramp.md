@@ -5,7 +5,7 @@ hidefromtoc: yes
 hide: yes
 ---
 
-# (Alpha) [!DNL LiveRamp SFTP] connection {#liveramp-destination}
+# (Alpha) [!DNL LiveRamp - SFTP] connection {#liveramp-destination}
 
 The LiveRamp connection helps you onboard audiences from Adobe Real-Time Customer Data Platform to [!DNL LiveRamp Connect].
 
@@ -27,24 +27,11 @@ Before you can send data from Experience Platform to [!DNL LiveRamp SFTP], you n
 
 ## Supported identities {#supported-identities}
 
-*Add information in this section about the identities supported by your destination. We have prefilled the table with some standard values. Delete the values that don't apply to your destination and any values that are not prefilled.*
+[!DNL LiveRamp SFTP] supports the activation of identities described in the official [LiveRamp documentation](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers).
 
-[!DNL LiveRamp SFTP] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
-
-|Target Identity|Description|Considerations|
-|---|---|---|
-|GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". Read the following document on [ECID](/help/identity-service/ecid.md) for more information.|
-|phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
-|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
-|extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
-
-{style="table-layout:auto"}
+During the [mapping step](#map), you define the target mappings as custom attributes.
 
 ## Export type and frequency {#export-type-frequency}
-
-*In the table, keep only the lines that correspond to your destination. You should have one line for Export type and one line for Export frequency. Delete the values that don't apply to your destination.*
 
 Refer to the table below for information about the destination export type and frequency.
 
@@ -67,39 +54,38 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-**Basic authentication** {#basic-authentication}
+**SFTP authentication with password** {#sftp-password}
 
-![Sample screenshot showing how to authenticate to the destination](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![Sample screenshot showing how to authenticate to the destination using SFTP with password](../../assets/catalog/advertising/liveramp/liveramp-sftp-password.png)
 
-* **[!UICONTROL Host]**: The address of the [!DNL LiveRamp SFTP] storage location. For the [!DNL LiveRamp SFTP] destination, use `files.liveramp.com`.
 * **[!UICONTROL Username]**: The username for your [!DNL LiveRamp SFTP] storage location.
 * **[!UICONTROL Password]**: The password for your [!DNL LiveRamp SFTP] storage location.
-* **[!UICONTROL Encryption key]** (Optional): Your RSA-formatted public encryption key.
+* **[!UICONTROL Domain]**: The address of the [!DNL LiveRamp SFTP] storage location. Use `files.liveramp.com`.
+* **[!UICONTROL Port]**: The port of the [!DNL LiveRamp SFTP] storage server.
 
-    * See the [!DNL LiveRamp] [encryption documentation](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) to obtain [!DNL LiveRamp]'s public encryption key.
-    * If you provide an encryption key, you must also specify the **[!UICONTROL Subkey ID]**.
+**SFTP with SSH key authentication** {#sftp-ssh}
 
-* **[!UICONTROL Subkey ID]**: The subkey used for encryption, based on the [!DNL LiveRamp] public encryption key. See the [!DNL LiveRamp] [encryption documentation](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) to learn how to obtain [!DNL LiveRamp]'s the subkey ID.
+![Sample screenshot showing how to authenticate to the destination using SSH key](../../assets/catalog/advertising/liveramp/liveramp-sftp-ssh.png)
 
-**SFTP with SSH key authentication** {#sftp-ssh-authentication}
-
-* **[!UICONTROL Domain]**: The domain or IP address of the [!DNL LiveRamp SFTP] storage location. For the [!DNL LiveRamp SFTP] destination, use `files.liveramp.com`.
-* **[!UICONTROL Port]**: The port used by your SFTP storage location.
 * **[!UICONTROL Username]**: The username for your [!DNL LiveRamp SFTP] storage location.
 * **[!UICONTROL SSH Key]**: The private [!DNL SSH] key used to log in to your [!DNL LiveRamp SFTP] storage location. The private key must be formatted as a [!DNL Base64]-encoded string and must not be password protected.
 
-  * To connect your [!DNL SSH] key to the [!DNL LiveRamp SFTP] server, you must submit a ticket through [!DNL LiveRamp]'s technical support portal, and provide your public key. See more information inte [LiveRamp documentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
+    * To connect your [!DNL SSH] key to the [!DNL LiveRamp SFTP] server, you must submit a ticket through [!DNL LiveRamp]'s technical support portal, and provide your public key. See more information in the [LiveRamp documentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
 
+* **[!UICONTROL Domain]**: The address of the [!DNL LiveRamp SFTP] storage location. Use `files.liveramp.com`.
+* **[!UICONTROL Port]**: The port of the [!DNL LiveRamp SFTP] storage server.
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Platform UI screenshot showing how to fill in details for your destination](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![Platform UI screenshot showing how to fill in details for your destination](../../assets/catalog/advertising/liveramp/liveramp-connection-details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Account ID]**: Your *YourDestination* account ID.
+*  **[!UICONTROL Folder path]**: The path to the destination folder that will host the exported files.
+*  **[!UICONTROL Compression format]**: Select the compression type that Experience Platform should use for the exported files. Available options are **[!UICONTROL GZIP]** or **[!UICONTROL None]**.
+*  **[!UICONTROL (Optional) Encryption subkey ID]**: The subkey used for encryption, based on the [!DNL LiveRamp] public encryption key. See the [!DNL LiveRamp] [encryption documentation](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) to learn how to obtain the subkey ID.
 
 ### Enable alerts {#enable-alerts}
 
@@ -137,8 +123,11 @@ An exported file for an organization named [!DNL Luma], could look similar to th
 
 In the **[!UICONTROL Mapping]** step, you can select which attributes and identities you want to export for your profiles.
 
-You can change the CSV column headers in the exported file to any friendly name that you want.
+>[!IMPORTANT]
+>
+>This destination supports the activation of one source identity namespace per activation flow. If you need to export multiple identity namespaces, like `Email` and `Phone`, you must [create a separate activation flow](../../ui/activate-batch-profile-destinations.md) for each identity.
 
+You can change the CSV column headers in the exported file to any friendly name that you want.
 
 1. In the [!UICONTROL Mapping] step, select [!UICONTROL Add new mapping]. You will see a new mapping row on the screen.
 
