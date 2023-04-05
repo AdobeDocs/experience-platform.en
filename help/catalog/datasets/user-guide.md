@@ -28,6 +28,12 @@ This user guide requires a working understanding of the following components of 
 >abstract="Negative numbers in ingested records means that a user has deleted certain batches in a selected time range."
 >text="Learn more in documentation"
 
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_daysRemaining"
+>title="Dataset expiration"
+>abstract="This column indicates the number of days that the target dataset has left before it automatically expires."
+>text="See the documentation to learn how to update expiration dates."
+
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and status of the most recent ingestion run.
 
 ![An image that highlights the Datasets item within the left navigation bar.](../images/datasets/user-guide/browse-datasets.png)
