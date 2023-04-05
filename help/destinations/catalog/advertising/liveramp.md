@@ -132,7 +132,7 @@ In the **[!UICONTROL Mapping]** step, you can select which attributes and identi
 
 You can change the CSV column headers in the exported file to any friendly name that you want.
 
-1. In the [!UICONTROL Mapping] step, select [!UICONTROL Add new mapping]. You will see a new mapping row on the screen.
+1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 
     ![Experience Platform UI screeshot showing the Mapping screen.](../../assets/catalog/advertising/liveramp/liveramp-add-new-mapping.png)
 
