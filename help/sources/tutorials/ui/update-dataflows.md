@@ -19,6 +19,11 @@ This tutorial requires a working understanding of the following components of Ad
 
 ## Update dataflows
 
+>[!CONTEXTUALHELP]
+>id="platform_sources_dataflows_daysRemaining"
+>title="Dataset expiration"
+>abstract="This column indicates the number of days that the target dataset has left before it automatically expires.<br>To prevent a dataflow from failing, ensure that a target dataset is set to expire on the correct date. See the documentation to learn how to update expiration dates."
+
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. Select **[!UICONTROL Dataflows]** from the top header to view a list of existing dataflows.
 
 ![catalog](../../images/tutorials/update-dataflows/catalog.png)
