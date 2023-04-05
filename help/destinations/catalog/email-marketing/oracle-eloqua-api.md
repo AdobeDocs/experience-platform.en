@@ -119,7 +119,7 @@ To map your XDM fields to the [!DNL Oracle Eloqua] destination fields, follow th
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
-1. In the **[!UICONTROL Select target field]** window, choose **[!UICONTROL Select identity namespace]** and select an identity, or choose **[!UICONTROL Select custom attributes]** category and type in the desired attribute name in the **[!UICONTROL Attribute name]** field. The attribute name that you provide should match an existing contact attribute in [!DNL Oracle Eloqua]. See [[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) for the exact attribute names that you can use in [!DNL Oracle Eloqua].
+1. In the **[!UICONTROL Select target field]** window, choose **[!UICONTROL Select identity namespace]** and select an identity, or choose **[!UICONTROL Select custom attributes]** and type in the desired attribute name in the **[!UICONTROL Attribute name]** field. The attribute name that you provide should match an existing contact attribute in [!DNL Oracle Eloqua]. See [[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) for the exact attribute names that you can use in [!DNL Oracle Eloqua].
     * Repeat these steps to add both the required and any desired attribute mappings between your XDM profile schema and [!DNL Oracle Eloqua]:
         | Source Field | Target Field | Mandatory |
         |---|---|---|
@@ -139,10 +139,10 @@ To map your XDM fields to the [!DNL Oracle Eloqua] destination fields, follow th
 
 >[!IMPORTANT]
 >
->* Attributes specified in the **[!UICONTROL Target field]** should be named exactly as specified in the [[!DNL update a contact API endpoint fields]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) as these attributes will form request body.
+>* Attributes specified in the **[!UICONTROL Target field]** should be named exactly as specified in the [[!DNL Create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) as these attributes will form request body.
 >* Attributes specified in the **[!UICONTROL Source field]** do not follow any such restriction. You can map it based on your need, however if the data format is not correct when pushed to [!DNL Oracle Eloqua] it will result in an error. For example, you can map the **[!UICONTROL Source field]** identity namespace `contact key`, `ABC ID` etc. to **[!UICONTROL Target field]** : `EloquaId` after ensuring that the ID values match the format that is accepted by [!DNL Oracle Eloqua].
->* The `EloquaID` mapping is mandatory to update attributes corresponding to the Identity. 
->* The `emailAddress` mapping is also required as without it the API throws an error as shown below:
+>* The `EloquaID` mapping is mandatory to update attributes corresponding to the identity.
+>* The `emailAddress` mapping is required. Without it, the API throws an error as shown below:
 >
 >```json
 >{
