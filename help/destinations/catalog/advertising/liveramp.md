@@ -60,8 +60,9 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 * **[!UICONTROL Username]**: The username for your [!DNL LiveRamp SFTP] storage location.
 * **[!UICONTROL Password]**: The password for your [!DNL LiveRamp SFTP] storage location.
-* **[!UICONTROL Domain]**: The address of the [!DNL LiveRamp SFTP] storage location. Use `files.liveramp.com`.
-* **[!UICONTROL Port]**: The port of the [!DNL LiveRamp SFTP] storage server.
+* **[!UICONTROL PGP/GPG encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
+
+    ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 **SFTP with SSH key authentication** {#sftp-ssh}
 
@@ -72,8 +73,10 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
     * To connect your [!DNL SSH] key to the [!DNL LiveRamp SFTP] server, you must submit a ticket through [!DNL LiveRamp]'s technical support portal, and provide your public key. See more information in the [LiveRamp documentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
 
-* **[!UICONTROL Domain]**: The address of the [!DNL LiveRamp SFTP] storage location. Use `files.liveramp.com`.
-* **[!UICONTROL Port]**: The port of the [!DNL LiveRamp SFTP] storage server.
+* **[!UICONTROL PGP/GPG encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
+
+    ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/advertising/liveramp/pgp-key.png)
+
 
 ### Fill in destination details {#destination-details}
 
