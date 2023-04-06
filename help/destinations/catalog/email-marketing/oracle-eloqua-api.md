@@ -3,6 +3,7 @@ title: (API) Oracle Eloqua connection
 description: The (API) Oracle Eloqua destination allows you to export your account data and activate it within Oracle Eloqua for your business needs.
 last-substantial-update: 2023-03-14
 ---
+
 # [!DNL (API) Oracle Eloqua] connection
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) enables marketers to plan and execute campaigns while delivering a personalized customer experience for their prospects. With integrated lead management and easy campaign creation, it helps marketers engage the right audience at the right time in their buyer's journey and elegantly scales to reach audiences across channels including email, display search, video, and mobile. Sales teams can close more deals at a faster rate, increasing marketing ROI through real-time insight.
@@ -193,6 +194,7 @@ Refer to the [[!DNL Oracle Eloqua] HTTP status codes](https://docs.oracle.com/en
 
 ## Additional resources {#additional-resources}
 
-Additional useful information from the [!DNL Oracle ELoqua] documentation is below:
+Additional useful information from the [!DNL Oracle Eloqua] documentation is below:
+
 * [Oracle Eloqua Marketing Automation](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [REST API for Oracle Eloqua Marketing Cloud Service](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
