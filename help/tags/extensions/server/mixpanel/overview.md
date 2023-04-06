@@ -35,12 +35,12 @@ Ensure that the [[!DNL Identity Merge]](https://help.mixpanel.com/hc/en-us/artic
 
 ### Understanding identity clusters in [!DNL Mixpanel]
 
-In [!DNL Mixpanel], an identity cluster contains a collection of `distinct_id` values that connect to an individual user. [!DNL Mixpanel] handles the clustering of identities for each user, resolving a single canonical `distinct_id` from each cluster to be used in reporting. You can also include your own identifier (called a local `distinct_id`) for anonymous events that occur before a user identification event.
+In [!DNL Mixpanel], an identity cluster contains a collection of `distinct_id` values that connect to an individual user. [!DNL Mixpanel] handles the cluster of identities for each user, resolving a single canonical `distinct_id` from each cluster to be used in reporting. You can also include your own identifier (called a local `distinct_id`) for anonymous events that occur before a user identification event.
 
 [!DNL Mixpanel] resolves identity clusters through two methods:
 
-* **Identify** : [!DNL Mixpanel] connects your chosen identifier to an anonymous `distinct_id`. If the [!DNL Mixpanel] SDK is configured on your website, Platform will use the `distinct_id` assigned to the currently signed-in user.
-* **Alias**: [!DNL Mixpanel] merges two non-anonymous `distinct_id`s together if other merge criteria are passed.
+* **Identify** : [!DNL Mixpanel] connects your chosen identifier to an anonymous `distinct_id`. If your website has the [!DNL Mixpanel] SDK enabled, Platform will use the `distinct_id` assigned to the user who is currently logged in.
+* **Alias**: [!DNL Mixpanel] combines two non-anonymous distinct ids together if additional merge criteria are met.
 
 >[!NOTE]
 >
