@@ -15,14 +15,53 @@ The API endpoint used in this guide is part of the [Real-Time Customer Profile A
 
 Before continuing, please review the [Profile API getting started guide](../api/getting-started.md) for links to recommended documentation, a guide to reading the sample API calls that appear in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
+## Retrieve a list of computed attributes {#list}
+
+You can retrieve a list of all the computed attributes for your organization by making a GET request to the `/ca/attributes` endpoint. 
+
+**API format**
+
+The `/attributes` endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help reduce expensive overhead when listing resources. If you make a call to this endpoint with no parameters, all computed attributes available for your organization will be retrieved. Multiple parameters can be included, separated by ampersands (`&`). 
+
+```http
+GET /ca
+GET /ca?{QUERY_PARAMETERS}
+```
+
+The following query parameters can be used when retrieving a list of computed attributes:
+
+| Query parameter | Description | Example |
+| --------------- | ----------- | ------- |
+| `limit` | A parameter that specifies the maximum number of items returned as part of the response. The minimum value of this parameter is 1 and the maximum value is 40. If this parameter is not included, by default, 20 items will be returned. | `limit=20` |
+| `offset` | A parameter that specifies the number of items to skip before returning the items. | `offset=5` |
+| `sortBy` | A parameter that specifies the order in which the returned items are sorted. Available options include `name`, `status`, `updateEpoch`, and `createEpoch`. You can also choose whether to sort in ascending order or descending order by not including or including a `-` in front of the sort option. By default, the items will be sorted by `updateEpoch` in descending order. | `sortBy=name` |
+| `status` | A parameter that lets you filter by the status of the computed attribute. Available options include `enabled`, `enabling`, `failed`, `success`, `running`, `disabled`, and `disabling`. This option is case insensitive. | `status=enabled` | 
+| `state` | A parameter that lets you filter by the state of the computed attribute. Available options include `published` or `draft`. This option is case insensitive. | `state=published` |
+
+**Request**
+
+The following request retrieves the last three computed attributes that were updated in your organization.
+
+```shell
+curl -X GET https://platform.adobe.io/data/core/ca/attributes?limit=3 \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response returns HTTP status 200 with a list of 
+
 ## Create a computed attribute {#create}
 
-To create a computed attribute, begin by making a POST request to the `/ca/attributes` endpoint with a request body containing the details of the computed attribute that you wish to create.
+To create a computed attribute, begin by making a POST request to the `/attributes` endpoint with a request body containing the details of the computed attribute that you wish to create.
 
 **API format**
 
 ```http
-POST /ca/attributes
+POST /attributes
 ```
 
 **Request**
