@@ -113,7 +113,7 @@ After installing the extension, create a new event forwarding [rule](../../../ui
 
 **[!UICONTROL User Attributes]**
 
-User attributes can be a JSON object containing any fields that will create or update an attribute of that name with the given value on the specified user profile. The following properties are supported:
+User attributes can be a JSON object containing fields that will create or update an attribute with the supplied name and value on the specified user profile. The following properties are supported:
 
 | User Attribute | Description |
 | --- | --- |
@@ -150,7 +150,7 @@ After installing the extension, create a new event forwarding [rule](../../../ui
 
 >[!NOTE]
 >
-> For tying the event to an user you need to fill in either the [!UICONTROL External User ID] field, or the [!UICONTROL Braze User Identifier] field or the [!UICONTROL User Alias] section.
+> To link the event to a user, you must complete either the [!UICONTROL External User ID] field, the [!UICONTROL Braze User Identifier] field, or the [!UICONTROL User Alias] section.
 
 **[!UICONTROL Purchase Data]**
 
@@ -168,11 +168,11 @@ After installing the extension, create a new event forwarding [rule](../../../ui
 
 >[!NOTE]
 >
-> The **[!UICONTROL Braze Send Event]** action requires only an **[!UICONTROL Event Name]** and **[!UICONTROL Event Time]** to be specified, but you should be including as much information as possible in the custom properties field. For details on the [!DNL Braze] event object, refer to the [official documentation](https://www.braze.com/docs/api/objects_filters/event_object/).
+> The **[!UICONTROL Braze Send Event]** action requires only an **[!UICONTROL Event Name]** and **[!UICONTROL Event Time]** to be specified, but you should include as much information as possible in the custom properties field. For details on the [!DNL Braze] event object, refer to the [official documentation](https://www.braze.com/docs/api/objects_filters/event_object/).
 
 **[!UICONTROL User Attributes]**
 
-User attributes can be a JSON object containing any fields that will create or update an attribute of that name with the given value on the specified user profile. The following properties are supported:
+User attributes can be a JSON object containing fields that will create or update an attribute with the supplied name and value on the specified user profile. The following properties are supported:
 
 | User Attribute | Description |
 | --- | --- |
