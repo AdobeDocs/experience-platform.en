@@ -40,7 +40,7 @@ In [!DNL Mixpanel], an identity cluster contains a collection of `distinct_id` v
 [!DNL Mixpanel] resolves identity clusters through two methods:
 
 * **Identify** : [!DNL Mixpanel] connects your chosen identifier to an anonymous `distinct_id`. If your website has the [!DNL Mixpanel] SDK enabled, Platform will use the `distinct_id` assigned to the user who is currently logged in.
-* **Alias**: [!DNL Mixpanel] combines two non-anonymous distinct ids together if additional merge criteria are met.
+* **Alias**: [!DNL Mixpanel] combines two non-anonymous `distinct id`s together if additional merge criteria are met.
 
 >[!NOTE]
 >
