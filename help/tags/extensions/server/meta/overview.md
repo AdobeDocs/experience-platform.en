@@ -87,7 +87,7 @@ This feature automatically installs and configures both the Meta Conversions API
 
 The following video provides an introduction to the quick start feature.
 
->[!VIDEO](https://publish.tv.adobe.com/bucket/1/category/5138/video/3416939/)
+>[!VIDEO](https://video.tv.adobe.com/v/3416939?quality=12&learn=on)
 
 ### Install quick start feature 
 

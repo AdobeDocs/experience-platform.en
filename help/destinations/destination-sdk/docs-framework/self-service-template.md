@@ -156,7 +156,7 @@ Read [(Beta) Export datasets](/help/destinations/ui/export-datasets.md) for exte
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
         "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },
