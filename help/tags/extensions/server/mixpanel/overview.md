@@ -54,7 +54,7 @@ In order to connect Experience Platform to [!DNL Mixpanel] you must have the fol
 
 | Key Type | Description | Example |
 | --- | --- | --- |
-| Project Token | The project token associated with your [!DNL Mixpanel] account. Refer to the [!DNL Mixpanel] documentation on [finding your project token](https://help.mixpanel.com/hc/en-us/articles/115004502806-Find-Project-Token-) for guidance. | `25470xxxxxxxxxxxxxxxxxxx1289`|
+| Project Token | The project token associated with your [!DNL Mixpanel] account. Refer to the [!DNL Mixpanel] documentation on [finding your project token](https://help.mixpanel.com/hc/en-us/articles/115004502806-Find-Project-Token-) for guidance. | `25470xxxxxxxxxxxxxxxxxxx1289` |
 
 ## Install and configure the [!DNL Mixpanel] extension {#install}
 
@@ -64,18 +64,18 @@ Select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL 
 
 ![Installing the [!DNL Mixpanel] extension.](../../../images/extensions/server/mixpanel/install-extension.png)
 
-### Create an event tracking rule
+## Create a [!DNL Send Event] rule
 
 Start creating a new rule in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Mixpanel]**. Next, set the action type to **[!UICONTROL Track Event]** to send Adobe Experience Edge Network events to [!DNL Mixpanel].
 
-| Input | Description |
-| --- | --- |
-| [!UICONTROL Project Token] | This field should be mapped to the project token associated with your [!DNL Mixpanel] account. |
-| [!UICONTROL Event Type] | The event name. |
-| [!UICONTROL Event Time] | The event time. |
-| [!UICONTROL Mixpanel Distinct ID] | This field should be mapped to the `distinctId` data element you created earlier. |
-| [!UICONTROL Insert ID] | This field should be mapped to the `insertId` data element. |
-| [!UICONTROL Event Properties] | Select from providing raw JSON or using a simplified set of key-value inputs. |
+| Input | Description | Required |
+| --- | --- | --- |
+| [!UICONTROL Project Token] | This field should be mapped to the project token associated with your [!DNL Mixpanel] account. | Yes |
+| [!UICONTROL Event Type] | The event name. | Yes |
+| [!UICONTROL Event Time] | The event time. | |
+| [!UICONTROL Mixpanel Distinct ID] | The unique identifier of the user who performed the event. | |
+| [!UICONTROL Insert ID] | A unique identifier for the event, used for deduplication. | |
+| [!UICONTROL Event Properties] | A JSON object containing custom properties of the event. Select from providing raw JSON or using a simplified set of key-value inputs. | |
 
 >[!NOTE]
 >
