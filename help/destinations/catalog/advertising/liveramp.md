@@ -1,13 +1,13 @@
 ---
 title: (Alpha) [!DNL LiveRamp SFTP] connection 
-description: The LiveRamp connector helps you onboard audiences from Adobe Real-Time Customer Data Platform to LiveRamp Connect.
+description: Learn how to use the LiveRamp connector to onboard audiences from Adobe Real-Time Customer Data Platform to LiveRamp Connect.
 hidefromtoc: yes
 hide: yes
 ---
 
 # (Alpha) [!DNL LiveRamp - SFTP] connection {#liveramp-destination}
 
-The LiveRamp connection helps you onboard audiences from Adobe Real-Time Customer Data Platform to [!DNL LiveRamp Connect].
+Use the LiveRamp connection to onboard audiences from Adobe Real-Time Customer Data Platform to [!DNL LiveRamp Connect].
 
 >[!IMPORTANT]
 >
@@ -21,15 +21,15 @@ As a marketer, I want to send audiences from Adobe Experience Platform to onboar
 
 ## Prerequisites {#prerequisites}
 
-This connection is built using [LiveRamp's SFTP](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).
+The [!DNL LiveRamp - SFTP] connection exports files using [LiveRamp's SFTP](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html) storage.
 
 Before you can send data from Experience Platform to [!DNL LiveRamp SFTP], you need your [!DNL LiveRamp] credentials. Please reach out to your [!DNL LiveRamp] representative to obtain your credentials, if you don't already have them.
 
 ## Supported identities {#supported-identities}
 
-[!DNL LiveRamp SFTP] supports the activation of identities described in the official [LiveRamp documentation](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers).
+LiveRamp SFTP supports the activation of identities such as PII-based identifiers, known identifiers, and custom IDs, described in the official [LiveRamp documentation](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers).
 
-During the [mapping step](#map), you define the target mappings as custom attributes.
+In the [mapping step](#map) of the activation workflow, you must define the target mappings as custom attributes.
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -38,7 +38,7 @@ Refer to the table below for information about the destination export type and f
 | Item | Type | Notes |
 ---------|----------|---------|
 | Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the [!DNL LiveRamp SFTP] destination.|
-| Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
+| Export frequency | **[!UICONTROL Daily Batch]** | As a profile is updated in Experience Platform based on segment evaluation, the profile (identities) are updated once a day downstream to the destination platform. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
 
@@ -60,7 +60,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 * **[!UICONTROL Username]**: The username for your [!DNL LiveRamp SFTP] storage location.
 * **[!UICONTROL Password]**: The password for your [!DNL LiveRamp SFTP] storage location.
-* **[!UICONTROL PGP/GPG encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
+* **[!UICONTROL PGP/GPG encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below. If you provide an encryption key, you must also provide an **[!UICONTROL Encryption subkey ID]** in the [destination details](#destination-details) section.
 
     ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
@@ -73,12 +73,17 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
     * To connect your [!DNL SSH] key to the [!DNL LiveRamp SFTP] server, you must submit a ticket through [!DNL LiveRamp]'s technical support portal, and provide your public key. See more information in the [LiveRamp documentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
 
-* **[!UICONTROL PGP/GPG encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
+* **[!UICONTROL PGP/GPG encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. If you provide an encryption key, you must also provide an **[!UICONTROL Encryption subkey ID]** in the [destination details](#destination-details) section. View an example of a correctly formatted encryption key in the image below.
 
     ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
-
 ### Fill in destination details {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_subkey"
+>title="Encryption subkey ID"
+>abstract="The subkey ID used for encryption, based on the [!DNL LiveRamp] public encryption key. This field is required if you provided an encryption key in the authentication step.
+>additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="Learn how to obtain the subkey ID."
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
@@ -88,7 +93,7 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Folder path]**: The path to the destination folder that will host the exported files.
 *  **[!UICONTROL Compression format]**: Select the compression type that Experience Platform should use for the exported files. Available options are **[!UICONTROL GZIP]** or **[!UICONTROL None]**.
-*  **[!UICONTROL (Optional) Encryption subkey ID]**: The subkey used for encryption, based on the [!DNL LiveRamp] public encryption key. See the [!DNL LiveRamp] [encryption documentation](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) to learn how to obtain the subkey ID.
+*  **[!UICONTROL Encryption subkey ID]**: The subkey used for encryption, based on the [!DNL LiveRamp] public encryption key. This field is required if you provided an encryption key in the [authentication](#authenticate) step. See the [!DNL LiveRamp] [encryption documentation](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) to learn how to obtain the subkey ID.
 
 ### Enable alerts {#enable-alerts}
 
@@ -106,11 +111,16 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 ### Scheduling {#scheduling}
 
-In the [!UICONTROL Scheduling] step, create an export schedule for each segment, with the following settings:
+In the [!UICONTROL Scheduling] step, create an export schedule for each segment, with the settings shown below.
+
+>[!IMPORTANT]
+>
+>All segments activated to this destination must be configured with the exact same schedule, as shown below.
 
 * **[!UICONTROL File export options]**: [!UICONTROL Export full files]. [Incremental file exports](../../ui/activate-batch-profile-destinations.md#export-incremental-files) are currently not supported.
 * **[!UICONTROL Frequency]**: [!UICONTROL Daily]
 * Set the export time to **[!UICONTROL After segment evaluation]**. Scheduled segment exports and [on-demand file exports](../../ui/export-file-now.md) are currently not supported.
+* **[!UICONTROL Date]**: Select the export start and end times as you wish.
 
 ![Platform UI screenshot showing the segment scheduling step.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
 
@@ -120,7 +130,11 @@ The exported file name is currently not user-configurable. All files exported to
 
 ![Platform UI screenshot showing the exported file name template.](../../assets/catalog/advertising/liveramp/liveramp-file-name.png)
 
-An exported file for an organization named [!DNL Luma], could look similar to this: `Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv`
+For example, the name of an exported file for an organization named [!DNL Luma] could look similar to this:
+
+```json
+Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
+```
 
 ### Map attributes and identities {#map}
 
@@ -130,7 +144,7 @@ In the **[!UICONTROL Mapping]** step, you can select which attributes and identi
 >
 >This destination supports the activation of one source identity namespace per activation flow. If you need to export multiple identity namespaces, like `Email` and `Phone`, you must [create a separate activation flow](../../ui/activate-batch-profile-destinations.md) for each identity.
 
-You can change the CSV column headers in the exported file to any friendly name that you want.
+In the **[!UICONTROL Mapping]** step, the **[!UICONTROL Target field]** mapping defines the name of the column header in the exported CSV file. You can change the CSV column headers in the exported file to any friendly name that you want, by providing a custom name for the **[!UICONTROL Target field]**.
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 
@@ -168,7 +182,9 @@ Platform will export two CSV files to [!DNL LiveRamp SFTP]:
 * One CSV file containing segments A, C, and D;
 * One CSV file containing segment B.
 
-Exported CSV files contain the selected attributes and the corresponding segment status, on separate columns, with the segment ID as a column header. If a profile does not qualify for a segment, the null value is used as a status.
+Exported CSV files contain profiles with the selected attributes and the corresponding segment status, on separate columns, with the attribute name and segment IDs as a column headers.
+
+The exported files contain only the profiles that qualify for at least one segment. Profiles which do not qualify for any of the mapped segments are excluded from the exported files.
 
 For instance, an exported CSV file with one `email` attribute and 3 segments could look like this:
 
