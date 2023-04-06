@@ -194,7 +194,7 @@ Refer to the [[!DNL Oracle Eloqua] HTTP status codes](https://docs.oracle.com/en
 
 ## Additional resources {#additional-resources}
 
-Additional useful information from the [!DNL Oracle Eloqua] documentation is below:
+For additional details, see the [!DNL Oracle Eloqua] documentation:
 
 * [Oracle Eloqua Marketing Automation](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [REST API for Oracle Eloqua Marketing Cloud Service](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
