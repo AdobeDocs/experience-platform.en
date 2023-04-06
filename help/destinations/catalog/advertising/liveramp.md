@@ -198,11 +198,13 @@ abc107@testemailabc.com,active,active,active
 abc101@testemailabc.com,active,active,
 ```
 
->[!NOTE]
->
->The **[!UICONTROL Identities activated]** and **[!UICONTROL Profiles received]** metrics are displayed as a destination-level metric, not as a segment-level metric.
+Since Platform generates one CSV file for each [merge policy ID](../../../profile/merge-policies/overview.md), it also generates a separate dataflow run for each merge policy ID.
 
-![Experience Platform UI screeshot showing the identities activated metric.](../../assets/catalog/advertising/liveramp/liveramp-identities-activated.png)
+This means that the **[!UICONTROL Identities activated]** and **[!UICONTROL Profiles received]** metrics in the [dataflow runs](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) page are aggregated for each group of segments that use the same merge policy, instead of being displayed for each segment.
+
+As a consequence of dataflow runs being generated for a group of segments that use the same merge policy, the segment names are not displayed in the [monitoring dashboard](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
+
+![Experience Platform UI screeshot showing the identities activated metric.](../../assets/catalog/advertising/liveramp/liveramp-metrics.png)
 
 ## Data usage and governance {#data-usage-governance}
 
