@@ -33,9 +33,9 @@ You must have a [!DNL Braze] account in order to use its technologies. If you do
 
 The extension uses two of [!DNL Braze]'s APIs and their limits are outlined below:
 
-| API                  | Rate Limits                                                                                                                                                                          |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [!DNL User Track]    | 50,000 requests per minute. <br>Refer to the [[!DNL User Track] API documentation](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#rate-limit) for details.       |
+| API  | Rate Limits |
+| --- | --- |
+| [!DNL User Track] | 50,000 requests per minute. <br>Refer to the [[!DNL User Track] API documentation](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#rate-limit) for details.       |
 | [!DNL User Identify] | 20,000 requests per minute. <br>Refer to the [[!DNL User Identify] API documentation](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify#rate-limit) for details. |
 
 >[!NOTE]
@@ -50,10 +50,10 @@ Sending additional custom attributes to [!DNL Braze] may increase your [!DNL Bra
 
 In order to connect the Edge Network to [!DNL Braze], the following inputs are required:
 
-| Key Type              | Description                                                                                                                                                                                                         | Example                         |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| Key Type | Description | Example |
+| --- | --- | --- |
 | [!DNL Braze] Instance | The REST endpoint associated with the [!DNL Braze] account. Refer to the [!DNL Braze] documentation on [instances](https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances) for guidance. | `https://rest.iad-03.braze.com` |
-| API Key               | The [!DNL Braze] API Key associated with the [!DNL Braze] account. <br/>Refer to the [!DNL Braze] documentation on the [REST API key](https://www.braze.com/docs/api/basics/#rest-api-key) for guidance.            | `YOUR-BRAZE-REST-API-KEY`       |
+| API Key | The [!DNL Braze] API Key associated with the [!DNL Braze] account. <br/>Refer to the [!DNL Braze] documentation on the [REST API key](https://www.braze.com/docs/api/basics/#rest-api-key) for guidance. | `YOUR-BRAZE-REST-API-KEY`       |
 
 ### Create a secret
 
