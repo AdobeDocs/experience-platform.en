@@ -11,7 +11,7 @@ Compared to [!DNL Salesforce Marketing Cloud Engagement] which is more oriented 
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Salesforce Account Engagement API > Prospect Upsert by Email]](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#prospect-upsert-by-email) endpoint, to **add or update your leads** after activating them within a new [!DNL Marketing Cloud Account Engagement] segment.
 
-[!DNL Marketing Cloud Account Engagement] uses [OAuth 2 with Authorization Code](/help/destinations/destination-sdk/functionality/authentication/oauth2-authentication.md#authorization-code) to communicate with the [!DNL Account Engagement] API. Instructions to authenticate to your [!DNL Marketing Cloud Account Engagement] instance are further below, in the [Authenticate to destination](#authenticate) section.
+[!DNL Marketing Cloud Account Engagement] uses the OAuth 2 with Authorization Code protocol to authenticate to the [!DNL Account Engagement] API. Instructions to authenticate to your [!DNL Marketing Cloud Account Engagement] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
