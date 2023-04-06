@@ -35,6 +35,11 @@ To display the file formatting options, start the [connect to destination](/help
 
 ### Delimiter {#delimiter}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_delimiter"
+>title="Delimiter"
+>abstract="Use this control to set a separator for each field and value. View the documentation for examples for each selection."
+
 Sets a separator for each field and value. Available options are:
 
 * Colon `(:)`
@@ -43,27 +48,56 @@ Sets a separator for each field and value. Available options are:
 * Semicolon `(;)`
 * Tab `(\t)`
 
-### Quote character 
+### Quote character {#quote-character} 
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_quoteCharacter"
+>title="Quote character"
+>abstract="Sets a single character used for escaping quoted values where the separator can be part of the value. View the documentation for examples for each selection."
 
 Sets a single character used for escaping quoted values where the separator can be part of the value.
 
-### Escape character
+### Escape character {#escape-character}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_escapeCharacter"
+>title="Escape character"
+>abstract="Sets a single character used for escaping quotes inside an already quoted value. View the documentation for examples for each selection."
 
 Sets a single character used for escaping quotes inside an already quoted value.
 
-### Empty value output
+### Empty value output {#empty-value-output}
 
-Sets the string representation of an empty value.
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_emptyValueOutput"
+>title="Empty value output"
+>abstract="Sets the string representation of an empty value. View the documentation for examples for each selection."
 
-### Null value output
+Use this control to set the string representation of an empty value.
 
-Sets the string representation of a null value within the exported files. 
+### Null value output {#null-value-output}
 
-Example output with **[!UICONTROL null]** selected: `male,NULL,TestLastName`
-Example output with **""** selected: `male,"",TestLastName`
-Example output with **[!UICONTROL Empty string]** selected: `male,,TestLastName`
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_nullValueOutput"
+>title="Null value output"
+>abstract="Use this control to set the string representation of a null value within the exported files. View the documentation for examples for each selection."
 
-### Compression format
+Use this control to set the string representation of a null value within the exported files. This option determines how null values get exported in your CSV files.
+
+#### Examples
+
+View the examples below of the content from exported CSV files with each of the selections in the UI.
+
+* Example output with **[!UICONTROL null]** selected: `male,NULL,TestLastName`
+* Example output with **""** selected: `male,"",TestLastName`
+* Example output with **[!UICONTROL Empty string]** selected: `male,,TestLastName`
+
+### Compression format {#compression-format}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_compressionFormat"
+>title="Compression format"
+>abstract="Sets which compression codec to use when saving data to file. Supported options are GZIP and NONE. View the documentation for examples for each selection."
 
 Sets which compression codec to use when saving data to file. Supported options are GZIP and NONE.
 
