@@ -259,15 +259,67 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 * [!DNL Salesforce Marketing Cloud] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html)
 * [!DNL Salesforce Marketing Cloud] [documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) explaining how contacts are updated with the specified information in the specified attribute groups.
 
++++
+
 ## Changelog
 
-| Release Date | Connector Version | Description |
-| --- | --- | --- |
-| Feb 21, 2023 | 1.0 | **Changed** <ul><li>Documentation: Reference link to [!DNL Salesforce Marketing Cloud Account Engagement] as a mandatory subscription</li></ul> |
-| Feb 17, 2023 | 1.0 | **Changed** <ul><li>Connector: Added the *Expires In* header to the authentication payload as it is supported by [!DNL Salesforce Marketing Cloud].</li> <li>Connector: Updated Pebble template to include a hard-coded *Email Demographics* mapping at the end of the body, `PLATIR-27068`</li></ul> **Fixed** <ul><li>Connector: Corrected domain name regex.</li></ul> |
-| Feb 08, 2023 | 1.0 | **Changed** <ul><li>Documentation: Back-link reference anchor to gather credentials, `PLATIR-25925`</li> <li>Documentation: Corrected Markdown formatting used in the custom domain explanation</li></ul> **Fixed** <ul><li>Connector: Removed extraneous comma from pebble template</li></ul> |
-| Jan 30, 2023 | 1.0 | **Changed** <ul><li>Documentation: Additional guidance on the mapping field value to be specified during the Scheduling step of the workflow</li> <li>Documentation: Data type and screenshots, `PLATIR-25602`</li></ul> |
-| Oct 11, 2022 | 1.0 | **Added** <ul><li>Go-Live</li></ul> |
-| Sep 22, 2022 | 1.0 | **Added** <ul><li>Public Beta</li></ul> |
+This section captures the functionality and significant documentation updates made to this destination connector.
 
-<!--| - | 1.0 | Added <ul><li>Documentation : Mandatory roles guidance with screenshots, `PLATIR-26299`</li></ul> Fixed <ul><li>Documentation : Reference link to [!DNL Salesforce Marketing Cloud Engagement] as a mandatory subscription instead of [!DNL Salesforce Marketing Cloud Account Engagement]</li></ul> |-->
+<!--
+### XXX XX, 2023
+
+*Documentation update:*
+
+<ul>
+    <li>PLATIR-26299 - We added details on the mandatory roles that are required in your account for the destination to work.</li><li> We also corrected the mandatory subscription instead of [!DNL Salesforce Marketing Cloud Account Engagement] the subscription should be [!DNL Salesforce Marketing Cloud Engagement].</li>
+</ul>
+-->
+
+### Feb 21, 2023
+
+*Documentation update:*
+
+<ul>
+    <li>We added a reference link to call out that [!DNL Salesforce Marketing Cloud Account Engagement] is a mandatory subscription to use this destination.</li>
+</ul>
+
+### Feb 17, 2023
+
+*Connector update:* 
+
+<ul>
+    <li>The domain name regular expression validation was improved.</li>
+    <li>PLATIR-27068 - We addressed an issue when no attributes are selected from the Email Demographics segment, other segment related attributes were not being updated in [!DNL Salesforce].</li>
+</ul>
+
+### Feb 08, 2023
+
+*Connector update:* 
+
+<ul>
+    <li>We fixed an issue where an extraneous comma was being included in the request body being sent to [!DNL Salesforce] API.</li>
+</ul>
+
+*Documentation update:*
+
+<ul>
+    <li>PLATIR-25925 - We added a back-link reference anchor to gather credentials within the [mapping](#mapping-considerations-example) section.</li>
+    <li>We also corrected markdown formatting used in the custom domain explanation.</li>
+</ul>
+
+### Jan 30, 2023
+
+*Documentation update:*
+
+<ul>
+    <li>PLATIR-25602 - We updated the [[Prerequisites in [!DNL Salesforce]](#prerequisites-destination) section to call out that attributes need to be created on the [!DNL Salesforce] side. This section now includes detailed instructions on how to do that and best practices around naming the attributes in [!DNL Salesforce].</li>
+    <li>We added clear instructions on how to use the Mapping ID for each activated segment in the [segment scheduling](#schedule-segment-export-example) step.</li>
+</ul>
+
+### Oct 11, 2022
+
+<ul>
+    <li>Initial destination release and documentation publish.</li>
+</ul>
+
++++
