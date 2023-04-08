@@ -259,8 +259,6 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 * [!DNL Salesforce Marketing Cloud] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html)
 * [!DNL Salesforce Marketing Cloud] [documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) explaining how contacts are updated with the specified information in the specified attribute groups.
 
-+++
-
 ## Changelog
 
 This section captures the functionality and significant documentation updates made to this destination connector.
@@ -268,55 +266,70 @@ This section captures the functionality and significant documentation updates ma
 <!--
 ### XXX XX, 2023
 
-*Documentation update:*
++++Documentation update:
 
 <ul>
     <li>PLATIR-26299 - We added details on the mandatory roles that are required in your account for the destination to work.</li><li> We also corrected the mandatory subscription instead of [!DNL Salesforce Marketing Cloud Account Engagement] the subscription should be [!DNL Salesforce Marketing Cloud Engagement].</li>
 </ul>
+
++++
+
 -->
 
 ### Feb 21, 2023
 
-*Documentation update:*
++++Documentation update:
 
 <ul>
     <li>We added a reference link to call out that [!DNL Salesforce Marketing Cloud Account Engagement] is a mandatory subscription to use this destination.</li>
 </ul>
 
++++
+
 ### Feb 17, 2023
 
-*Connector update:* 
++++Connector update:
 
 <ul>
     <li>The domain name regular expression validation was improved.</li>
     <li>PLATIR-27068 - We addressed an issue when no attributes are selected from the Email Demographics segment, other segment related attributes were not being updated in [!DNL Salesforce].</li>
 </ul>
 
++++
+
 ### Feb 08, 2023
 
-*Connector update:* 
++++Connector update:
 
 <ul>
     <li>We fixed an issue where an extraneous comma was being included in the request body being sent to [!DNL Salesforce] API.</li>
 </ul>
 
-*Documentation update:*
++++
+
++++Documentation update:
 
 <ul>
     <li>PLATIR-25925 - We added a back-link reference anchor to gather credentials within the [mapping](#mapping-considerations-example) section.</li>
     <li>We also corrected markdown formatting used in the custom domain explanation.</li>
 </ul>
 
++++
+
 ### Jan 30, 2023
 
-*Documentation update:*
++++Documentation update:
 
 <ul>
     <li>PLATIR-25602 - We updated the [[Prerequisites in [!DNL Salesforce]](#prerequisites-destination) section to call out that attributes need to be created on the [!DNL Salesforce] side. This section now includes detailed instructions on how to do that and best practices around naming the attributes in [!DNL Salesforce].</li>
     <li>We added clear instructions on how to use the Mapping ID for each activated segment in the [segment scheduling](#schedule-segment-export-example) step.</li>
 </ul>
 
++++
+
 ### Oct 11, 2022
+
++++Initial release
 
 <ul>
     <li>Initial destination release and documentation publish.</li>
