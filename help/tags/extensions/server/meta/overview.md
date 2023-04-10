@@ -158,7 +158,7 @@ Next select the dropdown beside **[!UICONTROL Save to Library]** and select **[!
 
 Repeat these steps for any other meta conversion event you would like to configure.
 
-#### Data Layer Configuration
+#### Data Layer Configuration {#configuration}
 
 >[!IMPORTANT]
 >
