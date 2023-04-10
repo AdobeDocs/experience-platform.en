@@ -9,7 +9,7 @@ description: The Mailchimp Interest Group destination allows you to export your 
 [!DNL Mailchimp Interest Group] uses [audiences](https://mailchimp.com/help/getting-started-audience/) and [groups](https://mailchimp.com/help/getting-started-with-groups/). Groups can be used to help organize your contacts within [!DNL Mailchimp] based on their interests and preferences and then broadcast group specific campaign emails.
 
 <!--
-Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Group] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
+Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Group] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-interest-group.md) page.*
 -->
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) endpoint. You can **add new contacts** or **update the information of existing [!DNL Mailchimp] contacts**, then **add or remove them from their desired groups** within an existing [!DNL Mailchimp] audience after activating them within a new segment. [!DNL Mailchimp Interest Groups] uses the selected segment names from Platform as the tag names within [!DNL Mailchimp].
@@ -96,15 +96,15 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, search for [!DN
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**. You will be redirected to the [!DNL Mailchimp] authorization page.
 
-![Platform UI screenshot showing how to authenticate to Mailchimp.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
+![Platform UI screenshot showing how to authenticate to Mailchimp.](../../assets/catalog/email-marketing/mailchimp-interest-group/authenticate-destination.png)
 
 Enter your [!DNL Mailchimp] account credentials and select [!DNL Log In].
 
-![Platform UI screenshot showing the Mailchimp authorization page.](../../assets/catalog/email-marketing/mailchimp-tags/mailchimp-authorization.png)
+![Platform UI screenshot showing the Mailchimp authorization page.](../../assets/catalog/email-marketing/mailchimp-interest-group/mailchimp-authorization.png)
 
 Next, Select [!UICONTROL Allow] in the subsequent window to give permissions to the **Adobe Experience Platform** app to access your [!DNL Mailchimp] account. *You will need to do this only once*.
 
-![Mailchimp App screenshot confirmation popup to give permissions to the Experience Platform app access to Mailchimp.](../../assets/catalog/email-marketing/mailchimp-tags/allow-app.png)
+![Mailchimp App screenshot confirmation popup to give permissions to the Experience Platform app access to Mailchimp.](../../assets/catalog/email-marketing/mailchimp-interest-group/allow-app.png)
 
 If the details provided are valid, the Platform UI displays the following message along with a **[!UICONTROL Connected]** status with a green check mark: *[!DNL You successfully connected to Mailchimp Interest Group account]*. You can then proceed to the next step.
 
@@ -112,7 +112,7 @@ If the details provided are valid, the Platform UI displays the following messag
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)
+![Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/mailchimp-interest-group/destination-details.png)
 
 | Field | Description |
 | --- | --- |
@@ -165,7 +165,7 @@ To correctly map your XDM fields to the [!DNL Mailchimp TaInterest Group] destin
     > `ADDRESS` is a special target field known as merge field within your [!DNL Mailchimp] audience. It is a JSON object with the required keys `addr1`, `city`, `state`, and `zip`, and the optional keys `addr2` and `country`. Values for these fields must be strings. Refer to the [[!DNL Mailchimp] documentation](https://mailchimp.com/developer/marketing/docs/merge-fields/) for more details.
 
     An example with the completed mappings is shown below:
-    ![Platform UI screenshot example showing field mappings.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
+    ![Platform UI screenshot example showing field mappings.](../../assets/catalog/email-marketing/mailchimp-interest-group/mappings.png)
 
 When you have finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
@@ -175,13 +175,13 @@ To validate that you have correctly set up the destination, follow the steps bel
 
 * Log in to your [[!DNL Mailchimp]](https://login.mailchimp.com/) account. Then navigate to the **[!DNL Audience]** page. Next expand the **[!DNL Manage Contacts]** menu and select **[!DNL Groups]**.
 
-![Mailchimp UI screenshot showing the Audience group page.](../../assets/catalog/email-marketing/mailchimp-tags/audience-groups.png)
+![Mailchimp UI screenshot showing the Audience group page.](../../assets/catalog/email-marketing/mailchimp-interest-group/audience-groups.png)
 
 * Select the Group and check if the selected segments are created as categories sharing the segment name from Platform followed by an auto generated suffix. 
 * Contacts whose emails did not exist in the group will be added to the newly created category.
 * For contacts that already exist within the group the attribute field data will be updated. The contact is also added to the newly created category.
 
-![Mailchimp UI screenshot showing the Audience group categories.](../../assets/catalog/email-marketing/mailchimp-tags/audience-groups-category.png)
+![Mailchimp UI screenshot showing the Audience group categories.](../../assets/catalog/email-marketing/mailchimp-interest-group/audience-groups-category.png)
 
 ## Data usage and governance {#data-usage-governance}
 
