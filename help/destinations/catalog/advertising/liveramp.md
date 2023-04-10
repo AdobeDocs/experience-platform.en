@@ -184,7 +184,7 @@ Platform will export two CSV files to [!DNL LiveRamp SFTP]:
 
 Exported CSV files contain profiles with the selected attributes and the corresponding segment status, on separate columns, with the attribute name and segment IDs as a column headers.
 
-The segments included in the exported files can match one the following qualification statuses:
+The profiles included in the exported files can match one the following segment qualification statuses:
 
 * `Active`: The profile is currently qualified for the segment.
 * `Expired`: The profile is no longer qualified for the segment, but has qualified in the past.
