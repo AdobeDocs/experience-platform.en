@@ -112,12 +112,11 @@ To correctly map your XDM fields to the [!DNL Zendesk] destination fields, follo
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
-1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select attributes]** category and select from the displayed schema matching a desired attribute name from the list of [[!DNL Zendesk] Contacts API fields](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/).
-
+1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** category and select a target identity, or choose the **[!UICONTROL Select attributes]** category and select one of the supported schema attributes.
     * Repeat these steps to add the following mappings between your XDM profile schema and your [!DNL Zendesk] instance:
         |Source Field|Target Field| Mandatory|
         |---|---|---|
-        |`xdm: person.name.lastName`|`xdm: last_name` <br>or `xdm: name`| Yes |
+        |`xdm: person.name.lastName`|`xdm: last_name`| Yes |
         |`IdentityMap: Email`|`Identity: email`| Yes |
         |`xdm: person.name.firstName`|`xdm: first_name`| |
 
@@ -126,7 +125,7 @@ To correctly map your XDM fields to the [!DNL Zendesk] destination fields, follo
 
 >[!IMPORTANT]
 >
->The target mapping for Identity: `email` and one of either target mappings for `Last Name` or `Name` are mandatory. If you miss mapping `Last Name` or `Name` the [!DNL Zendesk] API does not respond with any error and any attribute value passed is ignored.
+>The Identity: `email` is mandatory to update a contact and if you miss mapping `Last Name` the [!DNL Zendesk] API does not respond with any error and any attribute value passed to be updated is ignored.
 
 When you are finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
