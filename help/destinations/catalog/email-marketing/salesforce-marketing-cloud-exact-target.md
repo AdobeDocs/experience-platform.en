@@ -14,7 +14,7 @@ exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
 >
 >Note the difference between this connection and the other [[!DNL Salesforce Marketing Cloud] connection](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) that exists within the Email marketing catalog section. The other Salesforce Marketing Cloud connection allows you to export files to a specified storage location, whereas this is an API-based streaming connection.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [!DNL Salesforce Marketing Cloud] [update contacts](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API, which allows you to add contacts / update contact data for your business needs after activating them within a new [!DNL Salesforce Marketing Cloud] segment.
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [!DNL Salesforce Marketing Cloud] [update contacts](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API, which allows you to **add contacts and update contact data** for your business needs after activating them within a new [!DNL Salesforce Marketing Cloud] segment.
 
 [!DNL Salesforce Marketing Cloud] uses OAuth 2 with Client Credentials as the authentication mechanism to communicate with the [!DNL Salesforce Marketing Cloud] API. Instructions to authenticate to your [!DNL Salesforce Marketing Cloud] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
@@ -259,8 +259,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 * [!DNL Salesforce Marketing Cloud] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html)
 * [!DNL Salesforce Marketing Cloud] [documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) explaining how contacts are updated with the specified information in the specified attribute groups.
 
-
-### Changelog
+### Changelog {#changelog}
 
 This section captures the functionality and significant documentation updates made to this destination connector.
 
@@ -274,9 +273,5 @@ This section captures the functionality and significant documentation updates ma
 |October 2022|Initial release|Initial destination release and documentation publish.|
 
 {style="table-layout:auto"}
-
-<!--
-|April 2023|Documentation update|We corrected the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section and changed the reference link calling out that instead of [!DNL Salesforce Marketing Cloud Account Engagement] the mandatory subscription should instead be [!DNL Salesforce Marketing Cloud Engagement] to use this destination. We also added details on the [!DNL Salesforce] roles that are required in your account for the destination to work.|
--->
 
 +++
