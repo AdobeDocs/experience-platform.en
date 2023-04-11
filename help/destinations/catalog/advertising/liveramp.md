@@ -11,7 +11,8 @@ Use the LiveRamp connection to onboard audiences from Adobe Real-Time Customer D
 
 >[!IMPORTANT]
 >
->This destination connection is currently in alpha stage and only available to a limited selection of customers. The functionality and documentation are subject to change.
+><p>This destination connection is currently in alpha stage and only available to a limited selection of customers. The functionality and documentation are subject to change.</p>
+><p>The final version of this destination connection may require customer migration.</p>
 
 ## Use cases {#use-cases}
 
@@ -210,6 +211,10 @@ This means that the **[!UICONTROL Identities activated]** and **[!UICONTROL Prof
 As a consequence of dataflow runs being generated for a group of segments that use the same merge policy, the segment names are not displayed in the [monitoring dashboard](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 
 ![Experience Platform UI screeshot showing the identities activated metric.](../../assets/catalog/advertising/liveramp/liveramp-metrics.png)
+
+## Upload exported data to LiveRamp {#upload-to-liveramp}
+
+After your data was successfully exported to the [!DNL LiveRamp - SFTP] storage, you must upload the data to the [!DNL LiveRamp] platform. See the documentation on [getting your data into LiveRamp](https://docs.liveramp.com/connect/en/getting-your-data-into-liveramp.html) for more instructions.
 
 ## Data usage and governance {#data-usage-governance}
 
