@@ -13,7 +13,7 @@ description: This Adobe Experience Platform event forwarding extension sends Ado
 - Target specific users for marketing and promotional campaigns to increase the number of repeat customers.
 - Study user behavior and patterns to target specific audiences with customized messages, which could help increase revenue.
 
-The [!DNL Braze Track Events API] [event forwarding](../../../ui/event-forwarding/overview.md) extension allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL Braze] in the form of server-side events using the [[!DNL Braze User Identify]](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify) and [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) APIs.
+The [!DNL Braze Track Events API] [event forwarding](../../../ui/event-forwarding/overview.md) extension allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL Braze] in the form of server-side events using the [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API.
 
 This document covers the use cases of the extension, how to install it in your event forwarding libraries, and how to employ its capabilities in an event forwarding [rule](../../../ui/managing-resources/rules.md).
 
