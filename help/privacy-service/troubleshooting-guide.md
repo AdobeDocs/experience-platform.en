@@ -63,7 +63,7 @@ Adobe does not support using [!DNL Privacy Service] for clearing out data that w
 
 Privacy requests are time-sensitive and are completed related to applicable privacy law. the submission of requests which are not data-subject/consumer access or delete requests impacts all [!DNL Privacy Service] customers and the ability for [!DNL Privacy Service] to support the appropriate legal timelines. A hard daily upload limit is now in place to help prevent abuse of the service.
 
-Please contact your account manager (CDM) to coordinate and provide a level of effort to remove any PII or data issues.
+Please contact your Adobe account team to coordinate and provide a level of effort to remove any PII or data issues.
 
 ## How do I get information about the status of my privacy request or job?
 
