@@ -34,8 +34,11 @@ Note down the items below before you authenticate to the [!DNL Oracle Eloqua] de
 
 | Credential | Description |
 | --- | --- |
+| `Company Name` | The company name associated with your [!DNL Oracle Eloqua] account. <br>You will later use the `Company Name` and [!DNL Oracle Eloqua] `Username` as a concatenated string to be used as the **[!UICONTROL Username]** when [authenticating to the destination](#authenticate). |
 | `Username` | The username of your [!DNL Oracle Eloqua] account. |
 | `Password` | The password of your [!DNL Oracle Eloqua] account. |
+
+Refer to the [Signing in to [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/SigningInToEloqua.htm#Signing) for guidance.
 
 ## Guardrails {#guardrails}
 
@@ -83,7 +86,7 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL
 
 Fill in the required fields below. Refer to the [Gather [!DNL Oracle Eloqua] credentials](#gather-credentials) section for any guidance.
 * **[!UICONTROL Password]**: The password of your [!DNL Oracle Eloqua] account.
-* **[!UICONTROL Username]**: The username of your [!DNL Oracle Eloqua] account.
+* **[!UICONTROL Username]**: A concatenated string composed of your [!DNL Oracle Eloqua] Company Name and the [!DNL Oracle Eloqua] Username.<br>The concatenated value takes the form of `{COMPANY_NAME}\{PASSWORD}`.<br> Note, do not use any braces or spaces and preserve the `\`. <br>For example if your [!DNL Oracle Eloqua] Company Name is `MyCompany` and [!DNL Oracle Eloqua] Username is `Username`, the concatenated value you will use in the **[!UICONTROL Username]** field is `MyCompany\Username`.
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
 ![Platform UI screenshot showing how to authenticate.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
