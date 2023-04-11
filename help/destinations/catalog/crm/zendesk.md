@@ -113,7 +113,7 @@ To correctly map your XDM fields to the [!DNL Zendesk] destination fields, follo
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
 1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** category and select a target identity, or choose the **[!UICONTROL Select attributes]** category and select one of the supported schema attributes.
-    * Repeat these steps to add the following mappings between your XDM profile schema and your [!DNL Zendesk] instance:
+    * Repeat these steps to add the following mandatory mappings, you can also add any other attributes you want to update between your XDM profile schema and your [!DNL Zendesk] instance:
         |Source Field|Target Field| Mandatory|
         |---|---|---|
         |`xdm: person.name.lastName`|`xdm: last_name`| Yes |
@@ -125,7 +125,7 @@ To correctly map your XDM fields to the [!DNL Zendesk] destination fields, follo
 
 >[!IMPORTANT]
 >
->The Identity: `email` is mandatory to update a contact and if you miss mapping `Last Name` the [!DNL Zendesk] API does not respond with any error and any attribute value passed to be updated is ignored.
+>The `Attribute: last_name` and `Identity: email` target mappings are mandatory for this destination. If these mappings are missing, any other mappings are ignored and not sent to [!DNL Zendesk].
 
 When you are finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
