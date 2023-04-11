@@ -40,7 +40,7 @@ To display the file formatting options, start the [connect to destination](/help
 >title="Delimiter"
 >abstract="Use this control to set a separator for each field and value. View the documentation for examples for each selection."
 
-Sets a separator for each field and value. Available options are:
+Use this control to set a separator for each field and value. Available options are:
 
 * Colon `(:)`
 * Comma `(,)`
@@ -97,7 +97,11 @@ View the examples below of the content from exported CSV files with each of the 
 >title="Empty value output"
 >abstract="Sets the string representation of an empty value. View the documentation for examples for each selection."
 
-Use this control to set the string representation of an empty value.
+Use this control to set the string representation of an empty value. This option determines how null values are represented in your exported CSV files.
+
+>[!TIP]
+>
+>The difference between the empty value output and the null value output in the section below is that ........
 
 ### Null value output {#null-value-output}
 
