@@ -258,3 +258,25 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 * [!DNL Salesforce Marketing Cloud] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html)
 * [!DNL Salesforce Marketing Cloud] [documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) explaining how contacts are updated with the specified information in the specified attribute groups.
+
+
+### Changelog
+
+This section captures the functionality and significant documentation updates made to this destination connector.
+
++++ View changelog
+
+|Release month|Update type|Description|
+|---|---|---|
+|February 2023|Documentation update|We updated the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section to include a reference link calling out that [!DNL Salesforce Marketing Cloud Account Engagement] is a mandatory subscription to use this destination.|
+|February 2023|Functionality update|We fixed an issue where an incorrect configuration in the destination was causing a malformed JSON to be sent to Salesforce. This resulted in some users seeing high numbers of identities failed on activation. (PLATIR-26299)|
+|January 2023|Documentation update| <ul><li>We updated the [[Prerequisites in [!DNL Salesforce]](#prerequisites-destination) section to call out that attributes need to be created on the [!DNL Salesforce] side. This section now includes detailed instructions on how to do that and best practices around naming the attributes in [!DNL Salesforce]. (PLATIR-25602)</li><li>We added clear instructions on how to use the Mapping ID for each activated segment in the [segment scheduling](#schedule-segment-export-example) step. (PLATIR-25602)</li></ul> |
+|October 2022|Initial release|Initial destination release and documentation publish.|
+
+{style="table-layout:auto"}
+
+<!--
+|April 2023|Documentation update|We corrected the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section and changed the reference link calling out that instead of [!DNL Salesforce Marketing Cloud Account Engagement] the mandatory subscription should instead be [!DNL Salesforce Marketing Cloud Engagement] to use this destination. We also added details on the [!DNL Salesforce] roles that are required in your account for the destination to work.|
+-->
+
++++
