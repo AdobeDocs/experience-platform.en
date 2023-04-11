@@ -3,7 +3,7 @@ description: Learn how to configure the file export settings for destinations bu
 title: Batch configuration
 ---
 
-# Batch configuration - file naming and export scheduling {#batch-configuration}
+# Batch configuration {#batch-configuration}
 
 Destination SDK supports a flexible set of features which you can configure according to your integration needs. Among these features is the option to customize the exported file names and to configure the export schedule according to user preference.
 
