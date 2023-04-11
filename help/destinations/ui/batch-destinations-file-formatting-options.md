@@ -48,6 +48,16 @@ Sets a separator for each field and value. Available options are:
 * Semicolon `(;)`
 * Tab `(\t)`
 
+#### Examples
+
+View the examples below of the content from exported CSV files with each of the selections in the UI.
+
+* Example output with **[!UICONTROL Colon `(:)`]** selected: `male:John:Doe`
+* Example output with **[!UICONTROL Comma `(,)`]** selected: `male,John,Doe`
+* Example output with **[!UICONTROL Pipe `(|)`]** selected: `male|John|Doe`
+* Example output with **[!UICONTROL Semicolon `(;)`]** selected: `male;John;Doe`
+* Example output with **[!UICONTROL Tab `(\t)`]** selected: `male \t John \t Doe`
+
 ### Quote character {#quote-character} 
 
 >[!CONTEXTUALHELP]
@@ -55,7 +65,11 @@ Sets a separator for each field and value. Available options are:
 >title="Quote character"
 >abstract="Sets a single character used for escaping quoted values where the separator can be part of the value. View the documentation for examples for each selection."
 
-Sets a single character used for escaping quoted values where the separator can be part of the value.
+Use this option to set a single character used for escaping quoted values where the separator can be part of the value.
+
+#### Examples
+
+View the examples below of the content from exported CSV files with each of the selections in the UI.
 
 ### Escape character {#escape-character}
 
@@ -64,7 +78,17 @@ Sets a single character used for escaping quoted values where the separator can 
 >title="Escape character"
 >abstract="Sets a single character used for escaping quotes inside an already quoted value. View the documentation for examples for each selection."
 
-Sets a single character used for escaping quotes inside an already quoted value.
+Use this option to set a single character for escaping quotes inside an already quoted value. Available options are:
+
+* Back slash `(\)`
+* Single quote `(')`
+
+#### Examples
+
+View the examples below of the content from exported CSV files with each of the selections in the UI.
+
+* Example output with **[!UICONTROL Back slash `(\)`]** selected: `insert example`
+* Example output with **[!UICONTROL Single quote `(')`]** selected: `insert example`
 
 ### Empty value output {#empty-value-output}
 
@@ -82,7 +106,7 @@ Use this control to set the string representation of an empty value.
 >title="Null value output"
 >abstract="Use this control to set the string representation of a null value within the exported files. View the documentation for examples for each selection."
 
-Use this control to set the string representation of a null value within the exported files. This option determines how null values get exported in your CSV files.
+Use this control to set the string representation of a null value within the exported files. This option determines how null values are represented in your exported CSV files.
 
 #### Examples
 
