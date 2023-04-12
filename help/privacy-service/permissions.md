@@ -95,9 +95,19 @@ For more information on managing users for a product profile, see the [Admin Con
 
 To migrate legacy API credentials to the product profile, select **[!UICONTROL API Credentials]**, followed by **[!UICONTROL Add API Credentials]**.
 
-![[!UICONTROL Add API Credentials] being selected in Admin Console, under the [!UICONTROL API Credentials] tab for a product profile](./images/permissions/api-credentials.png)
+* The first step would be to go into the admin console, create a new product profile for privacy service, give it the permission set you want for your technical account.
+* And then save that product profile.
+* Then navigate over to the developer console, log into that product or that project
+* And after logging into that project or logging into the console and selecting that project, go to your privacy Service API integration and edit the product profile associated with that project and that will then show you the new product profile you just created in the admin console and you can then update that and it should be fine.
 
-Choose the desired Developer Console projects from the list, then select **[!UICONTROL Save]** to add them to the product profile. All API calls that use the credentials from these projects will inherit the granular permissions granted by the product profile.
+![Step 1 - create profile 1]()
+
+![Step 1 - create profile 2]()
+![Step 2 - Login to Dev Console project]()
+![Step 3 - Edit product Profile]()
+![Step 4 - Select Profile for Tech Account]()
+![Step 5 - Confirm creds in Admin Console 1]()
+![Step 5 - Confirm creds in Admin Console 2]()
 
 ## Next steps
 
