@@ -3,8 +3,8 @@ keywords: event forwarding extension;braze;braze event forwarding extension
 title: Braze Event Forwarding Extension
 description: This Adobe Experience Platform event forwarding extension sends Adobe Experience Edge Network events to Braze.
 last-substantial-update: 2023-03-29
+exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
 ---
-
 # [!DNL Braze Track Events API] event forwarding extension
 
 [[!DNL Braze]](https://www.braze.com) is a customer engagement platform that powers customer-centric interactions between consumers and brands in real time. Using [!DNL Braze], you can do the following:
