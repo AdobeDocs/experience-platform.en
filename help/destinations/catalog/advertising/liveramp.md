@@ -217,7 +217,7 @@ As a consequence of dataflow runs being generated for a group of segments that u
 
 After your data was successfully exported to the [!DNL LiveRamp - SFTP] storage, you must upload the data to the [!DNL LiveRamp] platform.
 
-See the **Next Steps** section in the [getting your data into LiveRamp](https://docs.liveramp.com/connect/en/getting-your-data-into-liveramp.html) documentation for more instructions.
+For more information on how to upload your files from the [!DNL LiveRamp - SFTP] storage to a [!DNL LiveRamp] audience, see the following documentation: [Considerations When Uploading the First File to an Audience](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#considerations-when-uploading-the-first-file-to-an-audience).
 
 ## Data usage and governance {#data-usage-governance}
 
