@@ -1,9 +1,9 @@
 ---
-title: TikTok connection 
-description: Build custom audiences on TikTok with your data for targeting with your ad campaigns. These audiences could be of people who visited your website or interacted with your content. Quickly and securely push the desired segment from Adobe Experience Platform to TikTok using Adobe's real-time integration with TikTok Ads Manager. 
+title: TikTok connection
+description: Build custom audiences on TikTok with your data for targeting with your ad campaigns. These audiences could be of people who visited your website or interacted with your content. Quickly and securely push the desired segment from Adobe Experience Platform to TikTok using Adobe's real-time integration with TikTok Ads Manager.
 last-substantial-update: 2023-03-20
+exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
 ---
-
 # TikTok connection
 
 ## Overview {#overview}
