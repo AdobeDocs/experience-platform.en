@@ -28,7 +28,7 @@ This guide requires a working understanding of the following components of Adobe
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="Segments"
->abstract="The segments view contains information on all your IMS Organization's segments, with further information about their activation and evaluation jobs."
+>abstract="The segments view contains information on all your organization's segments, with further information about their activation and evaluation jobs."
 
 To access the **[!UICONTROL Segments]** dashboard, select **[!UICONTROL Monitoring]** in the left navigation. Once on the **[!UICONTROL Monitoring]** page, select the **[!UICONTROL Segments]** card. 
 

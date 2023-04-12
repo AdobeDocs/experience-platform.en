@@ -122,7 +122,7 @@ A successful response returns HTTP status 201 with details of your newly created
 
 | Property | Description |
 | -------- | ----------- |
-| `{TENANT_ID}` | This ID is used to ensure that resources you create are namespaced properly and contained within your IMS Organization. For more information about the Tenant ID, please read the [schema registry guide](../../xdm/api/getting-started.md#know-your-tenant-id). |
+| `{TENANT_ID}` | This ID is used to ensure that resources you create are namespaced properly and contained within your organization. For more information about the Tenant ID, please read the [schema registry guide](../../xdm/api/getting-started.md#know-your-tenant-id). |
 
 Please take note of the `$id` as well as the `version` attributes, as both of these will be used when creating your dataset.
 

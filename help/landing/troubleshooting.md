@@ -28,7 +28,7 @@ For more information on formating API requests, please visit the Platform API ge
 
 ## What is my IMS organization? {#what-is-my-ims-organization}
 
-An IMS organization is an an Adobe representation of a customer. Any licensed Adobe solutions are integrated with this customer organization. When an IMS organization is entitled to [!DNL Experience Platform], it can assign access to developers. The IMS Org ID (`x-gw-ims-org-id`) represents the organization that an API call should be executed for, and is therefore required as a header in all API requests. This ID can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in the **Integrations** tab, navigate to the **Overview** section for any particular integration to find the ID under **Client Credentials**. For a step-by-step walkthrough of how to authenticate into [!DNL Platform], see the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en).
+An IMS organization is an an Adobe representation of a customer. Any licensed Adobe solutions are integrated with this customer organization. When an IMS organization is entitled to [!DNL Experience Platform], it can assign access to developers. The organization ID (`x-gw-ims-org-id`) represents the organization that an API call should be executed for, and is therefore required as a header in all API requests. This ID can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in the **Integrations** tab, navigate to the **Overview** section for any particular integration to find the ID under **Client Credentials**. For a step-by-step walkthrough of how to authenticate into [!DNL Platform], see the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## Where can I find my API key? {#where-can-i-find-my-api-key}
 
@@ -156,7 +156,7 @@ This error message displays when an IMS org header (`x-gw-ims-org-id`) is missin
 }
 ```
 
-This error message displays when the user or Adobe I/O integration (identified by the [access token](#how-do-i-get-an-access-token) in the `Authorization` header) is not entitled to make calls to [!DNL Experience Platform] APIs for the IMS Org provided in the `x-gw-ims-org-id` header. Ensure that you have provided the correct ID for your IMS organization in the header before trying again. If you do not know your organization ID, you can find it in the [Adobe I/O Console](https://console.adobe.io): in the **Integrations** tab, navigate to the **Overview** section for a specific integration to find the ID under **Client Credentials**.
+This error message displays when the user or Adobe I/O integration (identified by the [access token](#how-do-i-get-an-access-token) in the `Authorization` header) is not entitled to make calls to [!DNL Experience Platform] APIs for the organization provided in the `x-gw-ims-org-id` header. Ensure that you have provided the correct ID for your IMS organization in the header before trying again. If you do not know your organization ID, you can find it in the [Adobe I/O Console](https://console.adobe.io): in the **Integrations** tab, navigate to the **Overview** section for a specific integration to find the ID under **Client Credentials**.
 
 ### Refresh etag error {#refresh-etag-error}
 
@@ -193,7 +193,7 @@ This error message displays when a POST, PUT or PATCH request has an invalid or 
 ```
 
 This error message displays in either of the two cases below:
-- When an incorrect or malformed IMS Org header (`x-gw-ims-org-id`) is passed in an API request. Ensure that the correct ID of your IMS Organization is included before trying again.
+- When an incorrect or malformed organization ID header (`x-gw-ims-org-id`) is passed in an API request. Ensure that the correct ID of your organization is included before trying again.
 - When your account (as represented by the provided authentication credentials) is not associated with a product profile for Experience Platform. Follow the steps on [generating access credentials](./api-authentication.md#authentication-for-each-session) in the Platform API authentication tutorial to add Platform to your account and update your authentication credentials accordingly.
 
 ## Service troubleshooting directory {#service-troubleshooting-directory}
