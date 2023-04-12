@@ -39,7 +39,7 @@ Refer to the table below for information about the destination export type and f
 | Item | Type | Notes |
 ---------|----------|---------|
 | Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the [!DNL LiveRamp SFTP] destination.|
-| Export frequency | **[!UICONTROL Daily Batch]** | As a profile is updated in Experience Platform based on segment evaluation, the profile (identities) are updated once a day downstream to the destination platform. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
+| Export frequency | **[!UICONTROL Daily batch]** | As profiles are updated in Experience Platform based on segment evaluation, the profiles (identities) are updated once a day downstream to the destination platform. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
 
@@ -118,9 +118,9 @@ In the [!UICONTROL Scheduling] step, create an export schedule for each segment,
 >
 >All segments activated to this destination must be configured with the exact same schedule, as shown below.
 
-* **[!UICONTROL File export options]**: [!UICONTROL Export full files]. [Incremental file exports](../../ui/activate-batch-profile-destinations.md#export-incremental-files) are currently not supported.
+* **[!UICONTROL File export options]**: [!UICONTROL Export full files]. [Incremental file exports](../../ui/activate-batch-profile-destinations.md#export-incremental-files) are currently not supported for the [!DNL LiveRamp] destination.
 * **[!UICONTROL Frequency]**: [!UICONTROL Daily]
-* Set the export time to **[!UICONTROL After segment evaluation]**. Scheduled segment exports and [on-demand file exports](../../ui/export-file-now.md) are currently not supported.
+* Set the export time to **[!UICONTROL After segment evaluation]**. Scheduled segment exports and [on-demand file exports](../../ui/export-file-now.md) are currently not supported for the [!DNL LiveRamp] destination.
 * **[!UICONTROL Date]**: Select the export start and end times as you wish.
 
 ![Platform UI screenshot showing the segment scheduling step.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
