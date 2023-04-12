@@ -42,7 +42,7 @@ The dashboard itself contains metrics for both segments and segment jobs. By def
 >
 >Currently, only segments that are activated to [batch (file-based) destinations](../../destinations/destination-types.md#file-based) are supported for the monitoring segments dashboard.
 
-![The segments dashboard. Information about the different segments in your IMS organization and sandbox are displayed.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
+![The segments dashboard. Information about the different segments in your organization and sandbox are displayed.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
 
 The following metrics are available for this dashboard view:
 
@@ -103,7 +103,7 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Dataflow run start]** | The date and time that the activation job started. |
 | **[!UICONTROL Dataflow run end]** | The date and time that the activation job ended. |
 | **[!UICONTROL Dataflow run ID]** | The ID of the current activation job. |
-| **[!UICONTROL IMS org ID]** | The ID of the IMS organization that the activation job belongs to. |
+| **[!UICONTROL IMS org ID]** | The ID of the organization that the activation job belongs to. |
 | **[!UICONTROL Destination name]** | The name of the destination that the data is being activated to. |
 
 Underneath the metrics, a toggle to select between the dataflow run errors and the segments is displayed.
@@ -145,7 +145,7 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Job type]** | The type of segment job. In this case, it will always be a segment evaluation job. |
 | **[!UICONTROL Evaluation type]** | The type of evaluation that is being done. This can be either be **[!UICONTROL Batch]** or **[!UICONTROL Streaming]**. |
 | **[!UICONTROL Job ID]** | The ID of the evaluation job. |
-| **[!UICONTROL IMS org ID]** | The ID of the IMS organization the evaluation job belongs to. |
+| **[!UICONTROL IMS org ID]** | The ID of the organization the evaluation job belongs to. |
 | **[!UICONTROL Segment name]** | The name of the segment that is being evaluated. |
 | **[!UICONTROL Segment ID]** | The ID of the segment that is being evaluated. |
 

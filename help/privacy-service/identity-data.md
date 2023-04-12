@@ -15,7 +15,7 @@ This document provides general guidance on how to configure your data operations
 
 When a customer can interact with your brand through several different channels, it can be challenging to reconcile the disparate identifiers that are recorded from those many interactions. This in turn can make it difficult to determine which data belongs to a particular person in your [!DNL Experience Cloud] applications.
 
-For example, when handling customer data requests in [!DNL Privacy Service], an identity may represent a cookie value set under an Adobe-controlled domain, a cookie value under a third-party domain and shared with Adobe, or a custom identifier that you explicitly define within your IMS Organization.
+For example, when handling customer data requests in [!DNL Privacy Service], an identity may represent a cookie value set under an Adobe-controlled domain, a cookie value under a third-party domain and shared with Adobe, or a custom identifier that you explicitly define within your organization.
 
 It is therefore required that each identity sent to [!DNL Privacy Service] is accompanied with a namespace that provides context by relating the identity value to its system of origin. A namespace can represent a generic concept such as an email address ("Email") or associate the identity with a specific application, such as an Adobe Advertising Cloud ID ("AdCloud") or Adobe Target ID ("TNTID").
 

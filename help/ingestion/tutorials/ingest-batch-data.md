@@ -18,7 +18,7 @@ If you would prefer to ingest data using Data Ingestion APIs please begin by rea
 
 ## Datasets workspace
 
-The Datasets workspace within [!DNL Experience Platform] allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones. 
+The Datasets workspace within [!DNL Experience Platform] allows you to view and manage all of the datasets that your organization has made, as well as create new ones. 
 
 View the Datasets workspace by clicking **[!UICONTROL Datasets]** in the left-hand navigation. The Datasets workspace contains a list of datasets, including columns showing name, created (date and time), source, schema, and last batch status, as well as the date and time the dataset was last updated. 
 
