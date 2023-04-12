@@ -202,6 +202,7 @@ feature: Destinations
             * [UI attributes](./destination-sdk/functionality/destination-configuration/ui-attributes.md)
             * [Partner schema configuration](./destination-sdk/functionality/destination-configuration/schema-configuration.md)
             * [Identity namespace configuration](./destination-sdk/functionality/destination-configuration/identity-namespace-configuration.md)
+            * [Supported mapping configurations](./destination-sdk/functionality/destination-configuration/supported-mapping-configurations.md)
             * [Destination delivery](./destination-sdk/functionality/destination-configuration/destination-delivery.md)
             * [Audience metadata configuration](./destination-sdk/functionality/destination-configuration/audience-metadata-configuration.md)
             * [Aggregation policy](./destination-sdk/functionality/destination-configuration/aggregation-policy.md)

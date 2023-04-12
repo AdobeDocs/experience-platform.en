@@ -137,3 +137,22 @@ When selecting an identity namespace as a source field, the target field is auto
 The resulting UI experience is shown in the image below.
 
 ![Platform UI screenshot showing identity mapping to identity for file-based destinations.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
+
+
+## Next steps {#next-steps}
+
+After reading this article, you should have a better understanding of what mappings are supported by destinations built with Destination SDK.
+
+To learn more about the other destination components, see the following articles:
+
+* [Customer authentication](customer-authentication.md)
+* [OAuth2 authentication](oauth2-authentication.md)
+* [Customer data fields](customer-data-fields.md)
+* [UI attributes](ui-attributes.md)
+* [Schema configuration](schema-configuration.md)
+* [Identity namespace configuration](identity-namespace-configuration.md)
+* [Destination delivery](destination-delivery.md)
+* [Audience metadata configuration](audience-metadata-configuration.md)
+* [Aggregation policy](aggregation-policy.md)
+* [Batch configuration](batch-configuration.md)
+* [Historical profile qualifications](historical-profile-qualifications.md)

@@ -118,6 +118,7 @@ To learn more about the other destination components, see the following articles
 * [UI attributes](ui-attributes.md)
 * [Schema configuration](schema-configuration.md)
 * [Identity namespace configuration](identity-namespace-configuration.md)
+* [Supported mapping configurations](supported-mapping-configurations.md)
 * [Destination delivery](destination-delivery.md)
 * [Audience metadata configuration](audience-metadata-configuration.md)
 * [Batch configuration](batch-configuration.md)

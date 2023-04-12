@@ -5,7 +5,7 @@ title: Destination delivery
 
 # Destination delivery
 
-The destination delivery section indicates where exactly the exported data goes and what authentication rule is used in the location where the data will land.
+The destination delivery section indicates where the exported data goes and what authentication rule is used in the location where the data will land.
 
 When configuring a destination, you must specify an authentication rule and one or more `destinationServerId`parameters, corresponding to the destination servers that define where the data will be delivered to. In most cases, the authentication rule that you should use is `CUSTOMER_AUTHENTICATION`. 
 

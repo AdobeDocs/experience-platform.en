@@ -5,7 +5,7 @@ title: Identity namespace configuration
 
 # Identity namespace configuration
 
-Experience Platform uses identity namespaces to describe the type of specific identities. For example, an identity namespace called `Email` identifies a value like name@email.com as an email address.
+Experience Platform uses identity namespaces to describe the type of specific identities. For example, an identity namespace called `Email` identifies a value like `name@email.com` as an email address.
 
 When creating a destination through Destination SDK, in addition to [configuring a partner schema](schema-configuration.md) that users can map profile attributes and identities to, you can also define identity namespaces supported by your destination platform.
 
@@ -80,17 +80,13 @@ Read more about identities in the [identity namespace overview](../../../../iden
 
 Customers can map identity namespaces either to the identity namespaces that you define in the `identityNamespaces` section, or to attributes that you define in the [schema configuration](schema-configuration.md).
 
-If customers select a source identity namespace and do not select a target mapping, Platform automatically maps the source field to an equivalent attribute, as shown below.
-
-
-
-
+If customers select a source identity namespace and do not select a target mapping, Platform automatically maps the source field to an equivalent attribute.
 
 ## Configure optional source field hashing
 
 Experience Platform customers can choose to ingest data into Platform in hashed format or in plain text. If your destination platform accepts both hashed and unhashed data, you can give customers the option to choose whether Platform should hash the source field values when they get exported to your destination.
 
-The configuration below
+The configuration below enables the optional [Apply transformation](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) option in the Platform UI, in the Mapping step.
 
 ```json
 "identityNamespaces":{
@@ -107,19 +103,15 @@ The configuration below
       }
    }
 ```
-
-
-
-Destination SDK supports source field hashing in the mapping step. 
 
 
 Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
 
 When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have Adobe Experience Platform automatically hash the source attributes on activation.
 
+`## Configure mandatory source field hashing
 
-## Configure mandatory source field hashing
-
+If your destination only accepts hashed data, you can configure your mappings to be automatically hashed by Platform. The configuration below automatically checks the **Apply transformation** option when the `Email` and `Phone` identities are mapped.
 
 ```json
 "identityNamespaces":{
@@ -129,11 +121,31 @@ When you are mapping unhashed source attributes to target attributes that the de
          "transformation": "sha256(lower($))",
          "acceptedGlobalNamespaces":{
             "Email":{
+               "requiredTransformation": "sha256(lower($))"
             },
             "Phone":{
+               "requiredTransformation": "sha256(lower($))"
             }
          }
       }
    }
 ```
 
+## Next steps {#next-steps}
+
+After reading this article, you should have a better understanding of how to configure your identity namespaces for destinations built with Destination SDK.
+
+To learn more about the other destination components, see the following articles:
+
+* [Customer authentication](customer-authentication.md)
+* [OAuth2 authentication](oauth2-authentication.md)
+* [Customer data fields](customer-data-fields.md)â
+* [UI attributes](ui-attributes.md)
+* [Schema configuration](schema-configuration.md)
+* [Identity namespace configuration](identity-namespace-configuration.md)
+* [Supported mapping configurations](supported-mapping-configurations.md)
+* [Destination delivery](destination-delivery.md)
+* [Audience metadata configuration](audience-metadata-configuration.md)
+* [Aggregation policy](aggregation-policy.md)
+* [Batch configuration](batch-configuration.md)
+* [Historical profile qualifications](historical-profile-qualifications.md)
