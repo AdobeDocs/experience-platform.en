@@ -327,78 +327,319 @@ A successful response returns information on your dataflow, including your endpo
 
 ```json
 {
-  "items": [
-    {
-      "id": "993f908f-3342-4d9c-9f3c-5aa9a189ca1a",
-      "createdAt": 1669238699119,
-      "updatedAt": 1669238699119,
-      "createdBy": "acme@AdobeID",
-      "updatedBy": "acme@AdobeID",
-      "createdClient": "{CREATED_CLIENT}",
-      "updatedClient": "{UPDATED_CLIENT}",
-      "sandboxId": "{SANDBOX_ID}",
-      "sandboxName": "{SANDBOX_NAME}",
-      "imsOrgId": "{ORG_ID}",
-      "name": "Streaming Dataflow for a Streaming SDK source",
-      "description": "Streaming Dataflow for a Streaming SDK source",
-      "flowSpec": {
-        "id": "e77fde5a-22a8-11ed-861d-0242ac120002",
-        "version": "1.0"
+   "header":{
+      "xactionId":"1658464615769:0062:161",
+      "source":{
+         "name":"shopify"
       },
-      "state": "enabled",
-      "version": "\"a1011225-0000-0200-0000-63c78ae60000\"",
-      "etag": "\"a1011225-0000-0200-0000-63c78ae60000\"",
-      "sourceConnectionIds": [
-        "246d052c-da4a-494a-937f-a0d17b1c6cf5"
-      ],
-      "targetConnectionIds": [
-        "7c96c827-3ffd-460c-a573-e9558f72f263"
-      ],
-      "inheritedAttributes": {
-        "properties": {
-          "isSourceFlow": true
-        },
-        "sourceConnections": [
-          {
-            "id": "246d052c-da4a-494a-937f-a0d17b1c6cf5",
-            "connectionSpec": {
-              "id": "bdb5b792-451b-42de-acf8-15f3195821de",
-              "version": "1.0"
-            }
-          }
-        ],
-        "targetConnections": [
-          {
-            "id": "7c96c827-3ffd-460c-a573-e9558f72f263",
-            "connectionSpec": {
-              "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
-              "version": "1.0"
-            }
-          }
-        ]
+      "sandboxId":"d537df80-c5d7-11e9-aafb-87c71c35cac8",
+      "sandboxName":"prod",
+      "originalTimestamp":1658464615770,
+      "msgId":"1658464615769:0062:161",
+      "msgVersion":"1.0",
+      "traceContext":{
+         "traceId":"ff3e7544618471eee6b934a4c5929d4e",
+         "spanId":"74a759c5cc5f5a06",
+         "isSampled":1.0
       },
-      "options": {
-        "errorDiagnosticsEnabled": true,
-        "inletUrl": "https://dcs-int.adobedc.net/collection/ab65636c31778fb0455c439ffb48a5433a34d443f4c83c4b5beda9c5688797c5"
-      },
-      "transformations": [
-        {
-          "name": "Mapping",
-          "params": {
-            "mappingVersion": 0,
-            "mappingId": "bf5286a9c1ad4266baca76ba3adc9366"
-          }
-        }
-      ],
-      "runs": "/runs?property=flowId==e1514b79-f031-43b4-aab5-381a42f86ad4",
-      "providerRefId": "c9809ab5-71e0-4c7f-887b-61c95e4e20b5",
-      "lastOperation": {
-        "started": 0,
-        "updated": 0,
-        "operation": "enable"
+      "_dcsMeta":{
+         "inletId":"9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+         "authenticatedRequest":false,
+         "debug":true
       }
-    }
-  ]
+   },
+   "body":{
+      "id":4135234371722,
+      "admin_graphql_api_id":"gid://shopify/Order/4135234371722",
+      "app_id":1354745,
+      "browser_ip":null,
+      "buyer_accepts_marketing":false,
+      "cancel_reason":null,
+      "cancelled_at":null,
+      "cart_token":null,
+      "checkout_id":21706716217482,
+      "checkout_token":"b143503216124d50141fe0832fa3f4b0",
+      "client_details":{
+         "accept_language":null,
+         "browser_height":null,
+         "browser_ip":null,
+         "browser_width":null,
+         "session_hash":null,
+         "user_agent":null
+      },
+      "closed_at":null,
+      "confirmed":true,
+      "contact_email":null,
+      "created_at":"2022-07-22T00:36:48-04:00",
+      "currency":"INR",
+      "current_subtotal_price":"40000.00",
+      "current_subtotal_price_set":{
+         "shop_money":{
+            "amount":"40000.00",
+            "currency_code":"INR"
+         },
+         "presentment_money":{
+            "amount":"40000.00",
+            "currency_code":"INR"
+         }
+      },
+      "current_total_discounts":"0.00",
+      "current_total_discounts_set":{
+         "shop_money":{
+            "amount":"0.00",
+            "currency_code":"INR"
+         },
+         "presentment_money":{
+            "amount":"0.00",
+            "currency_code":"INR"
+         }
+      },
+      "current_total_duties_set":null,
+      "current_total_price":"47200.00",
+      "current_total_price_set":{
+         "shop_money":{
+            "amount":"47200.00",
+            "currency_code":"INR"
+         },
+         "presentment_money":{
+            "amount":"47200.00",
+            "currency_code":"INR"
+         }
+      },
+      "current_total_tax":"7200.00",
+      "current_total_tax_set":{
+         "shop_money":{
+            "amount":"7200.00",
+            "currency_code":"INR"
+         },
+         "presentment_money":{
+            "amount":"7200.00",
+            "currency_code":"INR"
+         }
+      },
+      "customer_locale":null,
+      "device_id":null,
+      "discount_codes":[
+          
+      ],
+      "email":"",
+      "estimated_taxes":false,
+      "financial_status":"paid",
+      "fulfillment_status":null,
+      "gateway":"manual",
+      "landing_site":null,
+      "landing_site_ref":null,
+      "location_id":39129743498,
+      "name":"#1005",
+      "note":null,
+      "note_attributes":[
+          
+      ],
+      "number":5,
+      "order_number":1005,
+      "order_status_url":"https://connnectors-test.myshopify.com/31913214090/orders/ffd48198c78ef460177e44e22b19e6ab/authenticate?key=79a40d7da4b23d6a0beb2ba774f6ac83",
+      "original_total_duties_set":null,
+      "payment_gateway_names":[
+         "manual"
+      ],
+      "phone":null,
+      "presentment_currency":"INR",
+      "processed_at":"2022-07-22T00:36:48-04:00",
+      "processing_method":"manual",
+      "reference":null,
+      "referring_site":null,
+      "source_identifier":null,
+      "source_name":"shopify_draft_order",
+      "source_url":null,
+      "subtotal_price":"40000.00",
+      "subtotal_price_set":{
+         "shop_money":{
+            "amount":"40000.00",
+            "currency_code":"INR"
+         },
+         "presentment_money":{
+            "amount":"40000.00",
+            "currency_code":"INR"
+         }
+      },
+      "tags":"",
+      "tax_lines":[
+         {
+            "price":"7200.00",
+            "rate":0.18,
+            "title":"IGST",
+            "price_set":{
+               "shop_money":{
+                  "amount":"7200.00",
+                  "currency_code":"INR"
+               },
+               "presentment_money":{
+                  "amount":"7200.00",
+                  "currency_code":"INR"
+               }
+            },
+            "channel_liable":false
+         }
+      ],
+      "taxes_included":false,
+      "test":false,
+      "token":"ffd48198c78ef460177e44e22b19e6ab",
+      "total_discounts":"0.00",
+      "total_discounts_set":{
+         "shop_money":{
+            "amount":"0.00",
+            "currency_code":"INR"
+         },
+         "presentment_money":{
+            "amount":"0.00",
+            "currency_code":"INR"
+         }
+      },
+      "total_line_items_price":"40000.00",
+      "total_line_items_price_set":{
+         "shop_money":{
+            "amount":"40000.00",
+            "currency_code":"INR"
+         },
+         "presentment_money":{
+            "amount":"40000.00",
+            "currency_code":"INR"
+         }
+      },
+      "total_outstanding":"0.00",
+      "total_price":"47200.00",
+      "total_price_set":{
+         "shop_money":{
+            "amount":"47200.00",
+            "currency_code":"INR"
+         },
+         "presentment_money":{
+            "amount":"47200.00",
+            "currency_code":"INR"
+         }
+      },
+      "total_price_usd":"589.95",
+      "total_shipping_price_set":{
+         "shop_money":{
+            "amount":"0.00",
+            "currency_code":"INR"
+         },
+         "presentment_money":{
+            "amount":"0.00",
+            "currency_code":"INR"
+         }
+      },
+      "total_tax":"7200.00",
+      "total_tax_set":{
+         "shop_money":{
+            "amount":"7200.00",
+            "currency_code":"INR"
+         },
+         "presentment_money":{
+            "amount":"7200.00",
+            "currency_code":"INR"
+         }
+      },
+      "total_tip_received":"0.00",
+      "total_weight":800,
+      "updated_at":"2022-07-22T00:36:49-04:00",
+      "user_id":44968935562,
+      "discount_applications":[
+          
+      ],
+      "fulfillments":[
+          
+      ],
+      "line_items":[
+         {
+            "id":10630730743946,
+            "admin_graphql_api_id":"gid://shopify/LineItem/10630730743946",
+            "fulfillable_quantity":1,
+            "fulfillment_service":"manual",
+            "fulfillment_status":null,
+            "gift_card":false,
+            "grams":800,
+            "name":"Mobile Phones",
+            "origin_location":{
+               "id":3141069111434,
+               "country_code":"IN",
+               "province_code":"UP",
+               "name":"Noida",
+               "address1":"Noida",
+               "address2":"",
+               "city":"Noida",
+               "zip":"201301"
+            },
+            "price":"40000.00",
+            "price_set":{
+               "shop_money":{
+                  "amount":"40000.00",
+                  "currency_code":"INR"
+               },
+               "presentment_money":{
+                  "amount":"40000.00",
+                  "currency_code":"INR"
+               }
+            },
+            "product_exists":true,
+            "product_id":4525859963018,
+            "properties":[
+                
+            ],
+            "quantity":1,
+            "requires_shipping":true,
+            "sku":"",
+            "taxable":true,
+            "title":"Mobile Phones",
+            "total_discount":"0.00",
+            "total_discount_set":{
+               "shop_money":{
+                  "amount":"0.00",
+                  "currency_code":"INR"
+               },
+               "presentment_money":{
+                  "amount":"0.00",
+                  "currency_code":"INR"
+               }
+            },
+            "variant_id":32045196640394,
+            "variant_inventory_management":"shopify",
+            "variant_title":"",
+            "vendor":"Connnectors Test",
+            "tax_lines":[
+               {
+                  "channel_liable":false,
+                  "price":"7200.00",
+                  "price_set":{
+                     "shop_money":{
+                        "amount":"7200.00",
+                        "currency_code":"INR"
+                     },
+                     "presentment_money":{
+                        "amount":"7200.00",
+                        "currency_code":"INR"
+                     }
+                  },
+                  "rate":0.18,
+                  "title":"IGST"
+               }
+            ],
+            "duties":[
+                
+            ],
+            "discount_allocations":[
+                
+            ]
+         }
+      ],
+      "payment_terms":null,
+      "refunds":[
+          
+      ],
+      "shipping_lines":[
+          
+      ]
+   }
 }
 ```
 

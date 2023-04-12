@@ -16,9 +16,7 @@ Adobe Experience Platform provides support for ingesting data from Streaming app
 
 The following section outlines prerequisite steps to complete before using the [!DNL Shopify] Streaming source.
 
->[!IMPORTANT]
->
->You must have a valid [!DNL Shopify] partner account in order to connect to [!DNL Shopify] APIs. If you do not already have a partner account, please register using the [[!DNL Shopify] partners dashboard](https://www.shopify.com/partners).
+You must have a valid [!DNL Shopify] partner account in order to connect to [!DNL Shopify] APIs. If you do not already have a partner account, please register using the [[!DNL Shopify] partners dashboard](https://www.shopify.com/partners).
 
 ### Create your application
 
@@ -27,6 +25,12 @@ With a valid [!DNL Shopify] partner account, you can now proceed and create your
 Once your app is created, retrieve your **client ID** and **client secret** from the **client credentials** tab of the [!DNL Shopify] partners dashboard. The client ID and client secret will be used in the next steps to retrieve your authorization code and access token.
 
 ### Retrieve your authorization code
+
+Next, retrieve your authorization code by entering your domain's `myshopify.com` URL into your browser, with query strings that define your API key, scopes, and the redirect URI.
+
+The format for this URL is as follows:
+
+**API format**
 
 ```http
 https://{SHOP}.myshopify.com/admin/oauth/authorize?client_id={API_KEY}&scope={SCOPES}&redirect_uri={REDIRECT_URI}
@@ -38,6 +42,20 @@ https://{SHOP}.myshopify.com/admin/oauth/authorize?client_id={API_KEY}&scope={SC
 | `api_key` | Your [!DNL Shopify] client ID. You can retrieve your client ID from the **client credentials** tab of the [!DNL Shopify] partners dashboard. |
 | `scopes` | The type of access that you want to define. For example, you can set scopes as `scope=write_orders,read_customers` to allow permissions to modify orders and read customers. |
 | `redirect_uri` | The URL for the script that will generate the access token. |
+
+**Request**
+
+```http
+https://connnectors-test.myshopify.com/admin/oauth/authorize?client_id=l6fiviermmzpram5i1spfub99shms3j9&scope=write_orders,read_customers&redirect_uri=https://acme.com
+```
+
+**Response**
+
+A successful response returns your redirect URL, including the authorization code required to generate your access token.
+
+```http
+https://www.acme.com/?code=k6j2palgrbljja228ou8c20fmn7w41gz&hmac=68c9163f772eecbc8848c90f695bca0460899c125af897a6d2b0ebbd59d3a43b&shop=connnectors-test.myshopify.com&state=123456×tamp=1658305460
+```
 
 ### Retrieve your access token
 
@@ -52,13 +70,15 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Cookie: _master_udr=xxx; request_method=POST'
   -d '{
-    "client_id" : "d8c0ba01315ba74355cd0bf48756cd75",
-    "client_secret" : "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",
-    "code": "c23f191059ea085699a9828435aab261"
+    "client_id": "l6fiviermmzpram5i1spfub99shms3j9",
+    "client_secret": "dajn3caxz9s7ti624ncyv_m4f60jnwi3ii3y3k",
+    "code": "k6j2palgrbljja228ou8c20fmn7w41gz"
 }'
 ```
 
 **Response**
+
+A successful response returns your access token and permission scopes.
 
 ```json
 {
@@ -79,12 +99,19 @@ curl -X POST \
   -H 'X-Shopify-Access-Token: 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' \
   -H 'Content-Type: application/json' \; request_method=POST' \
   -d '{
-    "webhook":
-    {
-      "address":"https://dcs-int.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227","topic":"orders/create","format":"json"
-      }
+  "webhook": {
+    "address": "https://dcs-int.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "topic": "orders/create",
+    "format": "json"
+  }
 }'
 ```
+
+| Parameter | Description |
+| --- | --- | 
+| `webhook.address` |
+| `webhook.topic` |
+| `webhook.format` |
 
 **Response**
 
