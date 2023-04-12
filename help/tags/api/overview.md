@@ -13,7 +13,7 @@ To view all available endpoints and CRUD operations, visit the [Reactor API refe
 
 ## Companies
 
-A company represents the organization of a tags user, typically a business. These companies match 1:1 with IMS Organization IDs. API users will only have visibility into the companies to which they have access.
+A company represents the organization of a tags user, typically a business. These companies match 1:1 with organization IDs. API users will only have visibility into the companies to which they have access.
 
 See the [companies endpoint guide](./endpoints/companies.md) to learn how to view available companies in the API.
 

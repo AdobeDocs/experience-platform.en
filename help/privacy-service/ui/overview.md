@@ -22,7 +22,7 @@ The Privacy Service UI [!DNL Privacy Service] allows you to coordinate privacy a
 
 >[!IMPORTANT]
 >
->You must have an Adobe ID in order to authenticate to the [!DNL Privacy Service] UI. In addition, you must have System Administrator privileges within your IMS Organization.
+>You must have an Adobe ID in order to authenticate to the [!DNL Privacy Service] UI. In addition, you must have System Administrator privileges within your organization.
 
 To access the UI, log in to [Adobe Experience Cloud](https://experience.adobe.com/) and select **[!UICONTROL Privacy UI]** under the quick access menu.
 

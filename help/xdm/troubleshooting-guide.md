@@ -170,7 +170,7 @@ This error message displays when you attempt to create a resource with a title t
 
 This error message displays when you attempt to create a resource with improperly namespaced fields, or add improperly namespaced fields to an existing resource.
 
-Resources that are defined by your IMS organization must namespace their fields under your tenant ID in order to avoid conflicts with other industry and vendor resources. When building a schema using standard field groups, any custom fields that you add within the structure of those field groups must also be namespaced under your tenant ID.
+Resources that are defined by your organization must namespace their fields under your tenant ID in order to avoid conflicts with other industry and vendor resources. When building a schema using standard field groups, any custom fields that you add within the structure of those field groups must also be namespaced under your tenant ID.
 
 >[!NOTE]
 >
