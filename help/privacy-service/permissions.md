@@ -7,7 +7,7 @@ exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 
 >[!IMPORTANT]
 >
->Permissions for Adobe Experience Platform Privacy Service have been improved to increase their level of granularity. These changes enable organization admins to grant more users access with the desired role and permission level. Technical account users must update their Privacy Service permissions as this impending update constitutes a breaking change for them. The enforcement of this permissions change will take place on **March 28, 2023**.
+>Permissions for Adobe Experience Platform Privacy Service have been improved to increase their level of granularity. These changes enable organization admins to grant more users access with the desired role and permission level. Technical account users must update their Privacy Service permissions as this impending update constitutes a breaking change for them. The enforcement of this permissions change will take place on **April 13th, 2023**.
 >
 >Technical accounts are available to enterprise customers and created through the Adobe Developers Console. The Adobe ID of a technical account holder ends in `@techacct.adobe.com`. If you are unsure whether you are a technical account holder, please contact your organization administrator.
 
@@ -99,8 +99,7 @@ Previously, technical accounts did not require a product profile for integration
 
 ### Duane's steps:
 
-* The first step is to navigate to the [Adobe Admin Console](https://adminconsole.adobe.com/), create a new product profile for Privacy Service, and give it the permission set you want for your technical account.
-Select **Products** from the navigation bar, followed by **[!UICONTROL Experience Cloud]** and **[!UICONTROL Adobe Experience Platform Privacy Service]** in the left side sidebar. The [!UICONTROL Product Profiles] tab appears. Select **New Profile** to create a new product profile for Privacy Service. 
+* The first step in assigning a permission set for your technical account, is to navigate to the [Adobe Admin Console](https://adminconsole.adobe.com/) and create a new product profile for Privacy Service. From the Admin Console UI, select **Products** from the navigation bar, followed by **[!UICONTROL Experience Cloud]** and **[!UICONTROL Adobe Experience Platform Privacy Service]** in the left side sidebar. The [!UICONTROL Product Profiles] tab appears. Select **New Profile** to create a new product profile for Privacy Service. 
 
 ![Step 1 - create profile 1]()
 
@@ -116,7 +115,7 @@ The [!UICONTROL Create a new product profile] dialog appears. Full instructions 
 
 ![Step 2 - Login to Dev Console project]()
 
-The Privacy Service API integration dashbaord appears. From this dashboard you can edit the product profile associated with that project. Select **[!UICONTROL Edit product profiles]** to begin the process. The [!UICONTROL Configure API] dialog appears.
+The Privacy Service API integration dashboard appears. From this dashboard you can edit the product profile associated with that project. Select **[!UICONTROL Edit product profiles]** to begin the process. The [!UICONTROL Configure API] dialog appears.
 
 ![Step 3 - Edit product Profile]()
 
@@ -128,19 +127,12 @@ The [!UICONTROL Configure API] dialog shows the available product profiles that 
 
 ![Step 4 - Select Profile for Tech Account]()
 
-To confirm that your settings have been applied to the account. Return to the [Admin Console](https://adminconsole.adobe.com/)
-
-<!-- and you can then update that and it should be fine. -->
-
-<!-- * And after logging into that project or logging into the console and selecting that project, go to your Privacy Service API integration and edit the product profile associated with that project and that will then show you the new product profile you just created in the admin console and you can then update that and it should be fine. -->
-
-
-
-![Step 1 - create profile 2]()
-
-
+To confirm that your settings have been applied to the account. Return to the [Admin Console](https://adminconsole.adobe.com/) and navigate to your newly created product profile. Select the **[!UICONTROL API Credentials] tab to see a list of associated projects. The project used in Developer Console where you assigned the product profile to the technical account is displayed in the list of credentials. The name of each API credential is composed of the project name with a randomly generated number suffixed to the end. Select a credential to open the details panel.   
 
 ![Step 5 - Confirm creds in Admin Console 1]()
+
+The details panel contains information on the API credential including the associated technical ID, the API key, created and last modified date, as well as associated Adobe Products.
+
 ![Step 5 - Confirm creds in Admin Console 2]()
 
 ## Next steps
