@@ -201,3 +201,19 @@ For additional details, see the [!DNL Oracle Eloqua] documentation:
 
 * [Oracle Eloqua Marketing Automation](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [REST API for Oracle Eloqua Marketing Cloud Service](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
+
+
+### Changelog
+
+This section captures the functionality and significant documentation updates made to this destination connector.
+
++++ View changelog
+
+|Release month|Update type|Description|
+|---|---|---|
+|April 2023|Documentation update| <ul><li>We updated the [use-cases](#use-cases) section and reinstated the missing [Export type and frequency](#export-type-frequency) section, additionally the [Mapping considerations and example](#mapping-considerations-example) section was elaborated to include examples of non-mandatory attribute mappings. We also provided guidance on the supported attribute names from the [[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) API.</li><li>We included the missing guidance on how to construct the concatenated string *(composed of your [!DNL Oracle Eloqua] Company Name and the [!DNL Oracle Eloqua] Username)* to be provided against the **[!UICONTROL Username]** field in the [Connect to the destination](#connect) section. (PLATIR-28343)</li></ul> |
+|March 2023|Initial release|Initial destination release and documentation publish.|
+
+{style="table-layout:auto"}
+
++++
