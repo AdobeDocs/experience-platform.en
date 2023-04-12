@@ -93,19 +93,53 @@ For more information on managing users for a product profile, see the [Admin Con
 >
 >This section only applies to existing API credentials that were created before Privacy Service permissions were integrated into Adobe Admin Console. For new credentials, product profiles (and their permissions) are assigned through [Adobe Developer Console projects](https://developer.adobe.com/developer-console/docs/guides/projects/) instead.<br><br>See the section on [assigning product profiles to a project](./api/getting-started.md#product-profiles) in the Privacy Service API getting started guide for more information.
 
-To migrate legacy API credentials to the product profile, select **[!UICONTROL API Credentials]**, followed by **[!UICONTROL Add API Credentials]**.
+<!-- (permission group = product profile) -->
 
-* The first step would be to go into the admin console, create a new product profile for privacy service, give it the permission set you want for your technical account.
-* And then save that product profile.
-* Then navigate over to the developer console, log into that product or that project
-* And after logging into that project or logging into the console and selecting that project, go to your privacy Service API integration and edit the product profile associated with that project and that will then show you the new product profile you just created in the admin console and you can then update that and it should be fine.
+Previously, technical accounts did not require a product profile for integration and permissions. However, due to recent improvements in Privacy Service permissions, it is now necessary to migrate legacy API credentials to the product profile. This allows for granular permissions to be granted to technical account holders. Follow the steps provided below to update technical account permissions for Privacy Service. 
+
+### Duane's steps:
+
+* The first step is to navigate to the [Adobe Admin Console](https://adminconsole.adobe.com/), create a new product profile for Privacy Service, and give it the permission set you want for your technical account.
+Select **Products** from the navigation bar, followed by **[!UICONTROL Experience Cloud]** and **[!UICONTROL Adobe Experience Platform Privacy Service]** in the left side sidebar. The [!UICONTROL Product Profiles] tab appears. Select **New Profile** to create a new product profile for Privacy Service. 
 
 ![Step 1 - create profile 1]()
 
-![Step 1 - create profile 2]()
+The [!UICONTROL Create a new product profile] dialog appears. Full instructions on how to create a product profile can be found in the [create profile guide](../access-control/ui/create-profile.md)
+
+* After you have saved your new product profile, navigate over to the [Adobe Developer Console](https://developer.adobe.com/console/home), log into that product or that project. Select **[!UICONTROL Projects]** from the top navigation, followed by the card for your project.
+
+>[!NOTE]
+>
+>You may have to clear your cache and/or wait some time for the new project to appear in your list of Developer Console projects.
+
+* After you have logged into your project, select the **[!UICONTROL Privacy Service API]** integration from the left side bar. 
+
 ![Step 2 - Login to Dev Console project]()
+
+The Privacy Service API integration dashbaord appears. From this dashboard you can edit the product profile associated with that project. Select **[!UICONTROL Edit product profiles]** to begin the process. The [!UICONTROL Configure API] dialog appears.
+
 ![Step 3 - Edit product Profile]()
+
+The [!UICONTROL Configure API] dialog shows the available product profiles that currently exist in the service. They correlate to the product profiles created in the admin console. Select the checkbox for the new product profile you recently created in the admin console from the list of available product profiles. This automatically associates this tech account with the permissions in the selected product profile. Select **[!UICONTROL Save configured API]** to confirm your settings.
+
+>[!NOTE]
+>
+>If a technical account is already associated with a product profile, one of the check boxes from the list of available product profiles will already be selected. 
+
 ![Step 4 - Select Profile for Tech Account]()
+
+To confirm that your settings have been applied to the account. Return to the [Admin Console](https://adminconsole.adobe.com/)
+
+<!-- and you can then update that and it should be fine. -->
+
+<!-- * And after logging into that project or logging into the console and selecting that project, go to your Privacy Service API integration and edit the product profile associated with that project and that will then show you the new product profile you just created in the admin console and you can then update that and it should be fine. -->
+
+
+
+![Step 1 - create profile 2]()
+
+
+
 ![Step 5 - Confirm creds in Admin Console 1]()
 ![Step 5 - Confirm creds in Admin Console 2]()
 
