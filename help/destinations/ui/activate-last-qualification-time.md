@@ -1,10 +1,9 @@
 ---
-
 title: Use the last qualification time XDM attribute in the new beta cloud storage destinations
 description: Learn how to use the last qualification time XDM attribute in the new beta cloud storage destinations
 hidefromtoc: y
 hide: y
-
+exl-id: d077ea10-5ff2-4acc-8ee6-78ea6cd752d1
 ---
 # Use the last qualification time XDM attribute in the new beta cloud storage destinations {#last-qualification-time}
 

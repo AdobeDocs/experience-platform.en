@@ -1,6 +1,7 @@
 ---
 title: Fuzzy Match in Query Service
 description: Learn how to perform a match on your Platform data that combines results from multiple datasets by approximately matching a string of your choice.
+exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
 ---
 # Fuzzy match in Query Service
 
@@ -358,5 +359,3 @@ WHERE
 {})
 '''.format(matching_sql))
 ```
-
-
