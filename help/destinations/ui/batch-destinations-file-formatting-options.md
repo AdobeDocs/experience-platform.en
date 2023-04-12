@@ -40,7 +40,7 @@ To display the file formatting options, start the [connect to destination](/help
 >title="Delimiter"
 >abstract="Use this control to set a separator for each field and value. View the documentation for examples for each selection."
 
-Use this control to set a separator for each field and value. Available options are:
+Use this control to set a separator for each field and value in the exported CSV files. Available options are:
 
 * Colon `(:)`
 * Comma `(,)`
@@ -50,7 +50,7 @@ Use this control to set a separator for each field and value. Available options 
 
 #### Examples
 
-View the examples below of the content from exported CSV files with each of the selections in the UI.
+View the examples below of the content in the exported CSV files with each of the selections in the UI.
 
 * Example output with **[!UICONTROL Colon `(:)`]** selected: `male:John:Doe`
 * Example output with **[!UICONTROL Comma `(,)`]** selected: `male,John,Doe`
@@ -65,7 +65,10 @@ View the examples below of the content from exported CSV files with each of the 
 >title="Quote character"
 >abstract="Sets a single character used for escaping quoted values where the separator can be part of the value. View the documentation for examples for each selection."
 
-Use this option to set a single character used for escaping quoted values where the separator can be part of the value.
+Use this option to set a single character used for escaping quoted values where the separator can be part of the value. Available options are:
+
+* Null Character (\0000)
+* Double Quotes (")
 
 #### Examples
 
@@ -97,7 +100,19 @@ View the examples below of the content from exported CSV files with each of the 
 >title="Empty value output"
 >abstract="Sets the string representation of an empty value. View the documentation for examples for each selection."
 
-Use this control to set the string representation of an empty value. This option determines how null values are represented in your exported CSV files.
+Use this control to set the string representation of an empty value. This option determines how empty values are represented in your exported CSV files. Available options are:
+
+* **[!UICONTROL null]**
+* **""**
+* **[!UICONTROL Empty string]** 
+
+#### Examples
+
+View the examples below of the content from exported CSV files with each of the selections in the UI.
+
+* Example output with **[!UICONTROL null]** selected: `male,NULL,TestLastName`. In this case, the CSV file transforms the empty string into a null value.
+* Example output with **""** selected: `male,"",TestLastName`. In this case, the CSV file adds double quotes around an empty string.
+* Example output with **[!UICONTROL Empty string]** selected: `male,,TestLastName`. In this case, the CSV file maintains the empty value and exports it as it is.
 
 >[!TIP]
 >
@@ -110,15 +125,19 @@ Use this control to set the string representation of an empty value. This option
 >title="Null value output"
 >abstract="Use this control to set the string representation of a null value within the exported files. View the documentation for examples for each selection."
 
-Use this control to set the string representation of a null value within the exported files. This option determines how null values are represented in your exported CSV files.
+Use this control to set the string representation of a null value within the exported files. This option determines how null values are represented in your exported CSV files. Available options are:
+
+* **[!UICONTROL null]**
+* **""**
+* **[!UICONTROL Empty string]**
 
 #### Examples
 
 View the examples below of the content from exported CSV files with each of the selections in the UI.
 
-* Example output with **[!UICONTROL null]** selected: `male,NULL,TestLastName`
-* Example output with **""** selected: `male,"",TestLastName`
-* Example output with **[!UICONTROL Empty string]** selected: `male,,TestLastName`
+* Example output with **[!UICONTROL null]** selected: `male,NULL,TestLastName`. In this case, the CSV file contains the null value.
+* Example output with **""** selected: `male,"",TestLastName`. In this case, the CSV file replaces the null value with double quotes around an empty string.
+* Example output with **[!UICONTROL Empty string]** selected: `male,,TestLastName`. In this case, the CSV file replaces the null value with an empty string.
 
 ### Compression format {#compression-format}
 
@@ -127,7 +146,7 @@ View the examples below of the content from exported CSV files with each of the 
 >title="Compression format"
 >abstract="Sets which compression codec to use when saving data to file. Supported options are GZIP and NONE. View the documentation for examples for each selection."
 
-Sets which compression codec to use when saving data to file. Supported options are GZIP and NONE.
+Sets which compression codec to use when saving data to file. Supported options are GZIP and NONE. This option determines whether you will be exporting compressed files or not.
 
 ### Encoding
 
