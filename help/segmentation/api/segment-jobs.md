@@ -124,7 +124,6 @@ If you have less than 1500 segments being run in your segment job, a full list o
                 "segmentedProfileByStatusCounter":{
                     "94509dba-7387-452f-addc-5d8d979f6ae8":{
                         "exited":144646,
-                        "existing":10,
                         "realized":2056
                     }
                 },
@@ -220,7 +219,6 @@ If you have more than 1500 segments being run in your segment job, the `children
                 "segmentedProfileByStatusCounter":{
                     "94509dba-7387-452f-addc-5d8d979f6ae8":{
                         "exited":144646,
-                        "existing":10,
                         "realized":2056
                     }
                 },
@@ -269,7 +267,7 @@ If you have more than 1500 segments being run in your segment job, the `children
 | `metrics.profileSegmentationTime` | An object that contains information on the times the segmentation evaluation started and ended, as well as the total time taken. | 
 | `metrics.segmentProfileCounter` | The number of profiles qualified on a per segment basis. | 
 | `metrics.segmentedProfileByNamespaceCounter` | The number of profiles qualified for each identity namespace on a per segment basis. |
-| `metrics.segmentProfileByStatusCounter` | The count of profiles for each statuses. The following three statuses are supported: <ul><li>"realized" - The number of new profiles that entered into the segment.</li><li>"existing" - The number of profiles that continue to exist in the segment.</li><li>"exited" - The number of profile segments that no longer exist in the segment.</li></ul>|
+| `metrics.segmentProfileByStatusCounter` | The count of profiles for each statuses. The following three statuses are supported: <ul><li>"realized" - The number of profiles that qualify for the segment.</li><li>"exited" - The number of profile segments that no longer exist in the segment.</li></ul>|
 | `metrics.totalProfilesByMergePolicy` | The total number of merged profiles on a per merge policy basis. | 
 
 ## Create a new segment job {#create}
@@ -367,7 +365,6 @@ A successful response returns HTTP status 200 with information about your newly 
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },
@@ -488,7 +485,6 @@ A successful response returns HTTP status 200 with details of your newly created
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },
@@ -668,7 +664,6 @@ If you have more than 1500 segments being run in your segment job, the `children
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },

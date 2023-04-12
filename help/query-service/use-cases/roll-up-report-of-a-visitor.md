@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;experienceevent queries;experienceevent query;Experience Event query;
 title: View a roll-up report for a specific visitor
 description: The following document provides examples of queries involving Experience Events in Adobe Experience Platform Query Service.
+exl-id: 1348503f-65c1-41f9-b111-1284a49449a1
 ---
 # View a roll-up report for a specific visitor
 

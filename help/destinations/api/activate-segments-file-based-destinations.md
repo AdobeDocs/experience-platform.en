@@ -3,6 +3,7 @@ solution: Experience Platform
 title: Activate segments to file-based destinations by using the Flow Service API
 description: Learn how to use the Flow Service API to export files with qualified profiles to cloud storage destinations.
 type: Tutorial
+exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
 ---
 # Activate segments to file-based destinations by using the Flow Service API
 
@@ -3761,7 +3762,6 @@ Inspect the response you obtain when performing the call above. You need to dril
                "properties":{
                   "status":{
                      "enum":[
-                        "existing",
                         "realized",
                         "exited"
                      ],
@@ -3770,7 +3770,6 @@ Inspect the response you obtain when performing the call above. You need to dril
                      "default":"realized",
                      "meta:enum":{
                         "exited":"Entity is exiting the segment.",
-                        "existing":"Entity continues to be in the segment.",
                         "realized":"Entity is entering the segment."
                      },
                      "description":"Is the segment participation realized as part of the current request.",
@@ -4081,11 +4080,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                 "meta:xdmType": "string",
                                 "meta:enum": {
                                     "exited": "Entity is exiting the segment.",
-                                    "realized": "Entity is entering the segment.",
-                                    "existing": "Entity continues to be in the segment."
+                                    "realized": "Entity is entering the segment."
                                 },
                                 "enum": [
-                                    "existing",
                                     "realized",
                                     "exited"
                                 ],

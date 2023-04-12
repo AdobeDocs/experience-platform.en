@@ -1,6 +1,7 @@
 ---
 title: Track Data Signals to Generate Your Customer Lifetime Value
 description: This guide provides an end-to-end demonstration on how to use Data Distiller and user-defined dashboards with Real-Time Customer Data Platform to measure and visualize customer lifetime value.
+exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
 ---
 # Track data signals to generate your customer lifetime value
 

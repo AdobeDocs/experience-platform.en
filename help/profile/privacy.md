@@ -181,10 +181,6 @@ To ensure that your privacy requests process all relevant customer attributes, y
 
 When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed once the privacy job has completed.
 
->[!IMPORTANT]
->
->Privacy deletion requests are not instantaneous and can vary depending on the services involved and other impacting factors such as geographical location. The timeframe for the completion of privacy jobs can rage from 15 to 45 days but is not guaranteed.
-
 Depending on whether you also included Identity Service (`identity`) and the data lake (`aepDataLake`) as products in your privacy request for Profile (`ProfileService`), different sets of data related to the profile are removed from the system at potentially different times:
 
 | Products included | Effects |
