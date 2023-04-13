@@ -67,8 +67,8 @@ View the examples below of the content in the exported CSV files with each of th
 
 Use this option to set a single character used for escaping quoted values where the separator can be part of the value. Available options are:
 
-* Null Character (\0000)
-* Double Quotes (")
+* **[!UICONTROL Null Character (\0000)]**
+* **[!UICONTROL Double Quotes (")]**
 
 #### Examples
 
@@ -81,7 +81,7 @@ View the examples below of the content from exported CSV files with each of the 
 >title="Escape character"
 >abstract="Sets a single character used for escaping quotes inside an already quoted value. View the documentation for examples for each selection."
 
-Use this option to set a single character for escaping quotes inside an already quoted value. Available options are:
+Use this option to set a single character for escaping quotes inside an already quoted value. You might have a string enveloped in double quotes where part of the string is already enveloped in double quotes. This option determines which character to replace the inner double quotes with. Available options are:
 
 * Back slash `(\)`
 * Single quote `(')`
@@ -90,15 +90,15 @@ Use this option to set a single character for escaping quotes inside an already 
 
 View the examples below of the content from exported CSV files with each of the selections in the UI.
 
-* Example output with **[!UICONTROL Back slash `(\)`]** selected: `insert example`
-* Example output with **[!UICONTROL Single quote `(')`]** selected: `insert example`
+* Example output with **[!UICONTROL Back slash `(\)`]** selected: `"Test,\"John\",LastName"`
+* Example output with **[!UICONTROL Single quote `(')`]** selected: `"Test,'"John'",LastName"`
 
 ### Empty value output {#empty-value-output}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_emptyValueOutput"
 >title="Empty value output"
->abstract="Sets the string representation of an empty value. View the documentation for examples for each selection."
+>abstract="Use this option to set how empty values should be represented in the exported CSV files. View the documentation for examples for each selection."
 
 Use this control to set the string representation of an empty value. This option determines how empty values are represented in your exported CSV files. Available options are:
 
@@ -110,13 +110,13 @@ Use this control to set the string representation of an empty value. This option
 
 View the examples below of the content from exported CSV files with each of the selections in the UI.
 
-* Example output with **[!UICONTROL null]** selected: `male,NULL,TestLastName`. In this case, the CSV file transforms the empty string into a null value.
-* Example output with **""** selected: `male,"",TestLastName`. In this case, the CSV file adds double quotes around an empty string.
-* Example output with **[!UICONTROL Empty string]** selected: `male,,TestLastName`. In this case, the CSV file maintains the empty value and exports it as it is.
+* Example output with **[!UICONTROL null]** selected: `male,NULL,TestLastName`. In this case, Experience Platform transforms the empty string into a null value.
+* Example output with **""** selected: `male,"",TestLastName`. In this case, Experience Platform adds double quotes around an empty string.
+* Example output with **[!UICONTROL Empty string]** selected: `male,,TestLastName`. In this case, the Experience Platform maintains the empty value and exports it as it is (without double quotes).
 
 >[!TIP]
 >
->The difference between the empty value output and the null value output in the section below is that ........
+>The difference between the empty value output and the null value output in the section below is that an empty value has an actual value which is empty. The NULL value does not have any value at all. Think of the empty value as an empty glass on the table and the null value as not having the glass at all on the table.
 
 ### Null value output {#null-value-output}
 
@@ -136,8 +136,8 @@ Use this control to set the string representation of a null value within the exp
 View the examples below of the content from exported CSV files with each of the selections in the UI.
 
 * Example output with **[!UICONTROL null]** selected: `male,NULL,TestLastName`. In this case, the CSV file contains the null value.
-* Example output with **""** selected: `male,"",TestLastName`. In this case, the CSV file replaces the null value with double quotes around an empty string.
-* Example output with **[!UICONTROL Empty string]** selected: `male,,TestLastName`. In this case, the CSV file replaces the null value with an empty string.
+* Example output with **""** selected: `male,"",TestLastName`. In this case, the Experience Platform replaces the null value with double quotes around an empty string.
+* Example output with **[!UICONTROL Empty string]** selected: `male,,TestLastName`. In this case, the Experience Platform replaces the null value with an empty string (without double quotes).
 
 ### Compression format {#compression-format}
 
