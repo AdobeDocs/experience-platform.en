@@ -87,7 +87,7 @@ curl -X POST \
 |Property|Description|
 |---|---|
 |`schemaRef.id`|The ID of the [!DNL Profile]-enabled schema upon which the dataset will be based.|
-|`{TENANT_ID}`|The namespace within the [!DNL Schema Registry] which contains resources belonging to your IMS Organization. See the [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) section of the [!DNL Schema Registry] developer guide for more information.|
+|`{TENANT_ID}`|The namespace within the [!DNL Schema Registry] which contains resources belonging to your organization. See the [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) section of the [!DNL Schema Registry] developer guide for more information.|
 
 **Response**
 
@@ -214,6 +214,7 @@ curl -X PATCH \
 The request body includes a `path` to two types of tags, `unifiedProfile` and `unifiedIdentity`. The `value` of each are arrays containing the string `enabled:true`.
 
 **Response**
+
 A successful PATCH request returns HTTP Status 200 (OK) and an array containing the ID of the updated dataset. This ID should match the one sent in the PATCH request. The `unifiedProfile` and `unifiedIdentity` tags have now been added and the dataset is enabled for use by Profile and Identity services.
 
 ```json

@@ -1,8 +1,8 @@
 ---
 title: Event Transactions View
 description: This guide details information about the Event Transactions view in Adobe Experience Platform Assurance.
+exl-id: ad97f2c1-5bbc-49e2-8378-edcb8af149a3
 ---
-
 # Event Transactions view
 
 The Event Transactions view in Adobe Experience Platform Assurance allows you to validate and debug your Edge Network client implementation, and see the upstream validation results in near real time.
