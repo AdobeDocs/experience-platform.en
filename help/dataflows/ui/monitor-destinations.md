@@ -281,7 +281,7 @@ To see more details about a specific dataflow run, select the filter ![filter](.
 The dataflow run details page, in addition to the details shown on the dataflow runs list, displays more specific information about the dataflow:
 
 - **[!UICONTROL Dataflow run ID]**: The ID of the dataflow.
-- **[!UICONTROL IMS org ID]**: The IMS organization the dataflow belongs to.
+- **[!UICONTROL IMS org ID]**: The organization the dataflow belongs to.
 - **[!UICONTROL Last updated]**: The time the dataflow run was last updated.
 
 The details page also has a toggle to switch between dataflow run errors and segments. This option is only available for dataflow runs in batch destinations.
