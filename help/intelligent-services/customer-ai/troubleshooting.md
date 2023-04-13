@@ -42,7 +42,7 @@ If you receive the error "[!UICONTROL Model Quality is poor. We recommend creati
 Start by checking the accuracy of your data. It is important that your data contains the necessary fields needed for your predictive outcome.
 
 - Check whether your dataset has the latest dates. Customer AI always assumes that the data is up-to-date when the model is triggered.
-- Check for missing data within your defined prediction and eligibility window. Your data needs to be complete with no gaps. Also make sure your dataset meets the [Customer AI historical data requirements](./input-output.md#data-requirements).
+- Check for missing data within your defined prediction and eligibility window. Your data needs to be complete with no gaps. Also make sure your dataset meets the [Customer AI historical data requirements](./data-requirements.md#data-requirements).
 - Check for missing data in commerce, application, web, and search, within your schema field properties.
 
 If your data does not seem to be the problem, try changing the eligibility population condition to restrict the model to certain profiles (for example, `_experience.analytics.customDimensions.eVars.eVar142` exists in last 56 Days). This restricts the population and size of the data used in the training window.
