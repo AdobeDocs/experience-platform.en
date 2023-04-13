@@ -142,3 +142,6 @@ The following is a list of known limitations that you may encounter when using w
 
 * It's not guaranteed that you can order different topics for the same resource. For example, it's possible that a `products/update` webhook gets delivered before a `products/create` webhook.
 * 
+
+
+The webhooks API provides "at least once" delivery of webhook events. This means that an endpoint might receive the same webhook event more than once. You can detect duplicate webhook events by comparing the X-Shopify-Webhook-Id header to previous events.
