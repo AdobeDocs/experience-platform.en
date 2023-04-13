@@ -1,6 +1,7 @@
 ---
 title: Query Schedules
-description: Learn how to automate scheduled query runs, delete or disable a query schedule, and utilize the available scheduling options through the Adobe Experience Platform UI. 
+description: Learn how to automate scheduled query runs, delete or disable a query schedule, and utilize the available scheduling options through the Adobe Experience Platform UI.
+exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
 ---
 # Query schedules
 
@@ -61,5 +62,3 @@ Select a schedule from the rows of available schedules. You can use the toggle t
 Select **[!UICONTROL Delete a schedule]** to delete the disabled schedule.
 
 ![The schedules workspace with Disable schedule and Delete schedule highlighted.](../images/ui/query-schedules/delete-schedule.png)
-
-

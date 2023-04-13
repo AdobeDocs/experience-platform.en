@@ -179,7 +179,7 @@ A successful response returns HTTP status 200 with the specified number of sampl
 | -------- | ----------- |
 | `segmentMembership` | A map object which describes the individual’s segment memberships. For more information on `segmentMembership`, read [Segment Membership Details](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | A timestamp of the last time this profile qualified for the segment. |
-| `xdm:status` | A string field that indicates whether the segment membership has been realized as part of the current request. The following values are accepted: <ul><li>`existing`: The profile was already part of the segment prior to the request, and continues to maintain its membership.</li><li>`realized`: The profile is entering the segment as part of the current request.</li><li>`exited`: The profile is exiting the segment as part of the current request.</li></ul> |
+| `xdm:status` | A string field that indicates whether the segment membership has been realized as part of the current request. The following values are accepted: <ul><li>`realized`: The profile is part of the segment.</li><li>`exited`: The profile is exiting the segment as part of the current request.</li></ul> |
 | `identityMap` | A map-type field that describes the various identity values for an individual, along with their associated namespaces. For more information on `identityMap`, read [Basis of schema composition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
 
 {style="table-layout:auto"}
@@ -238,7 +238,7 @@ A successful response returns HTTP status 200 with the specified number of sampl
             "ups": {
                 "segmentid1": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609326Z",
-                    "status": "existing"
+                    "status": "realized"
                 },
                 "segmentid3": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609328Z",
@@ -283,7 +283,7 @@ A successful response returns HTTP status 200 with the specified number of sampl
             "ups": {
                 "segmentid1": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609626Z",
-                    "status": "existing"
+                    "status": "realized"
                 },
                 "segmentid3": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609627Z",
@@ -328,7 +328,7 @@ A successful response returns HTTP status 200 with the specified number of sampl
             "ups": {
                 "segmentid1": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609823Z",
-                    "status": "existing"
+                    "status": "realized"
                 },
                 "segmentid3": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609824Z",

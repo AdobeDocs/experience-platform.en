@@ -97,7 +97,7 @@ A successful response returns details of the newly created base connection, incl
 
 ## Create a source connection {#source}
 
-A source connection creates and manages the connection to the external source from where data is ingested. A source connection consists of information like data source, data format, and the source connection ID needed to create a dataflow. A source connection instance is specific to a tenant and IMS Organization.
+A source connection creates and manages the connection to the external source from where data is ingested. A source connection consists of information like data source, data format, and the source connection ID needed to create a dataflow. A source connection instance is specific to a tenant and organization.
 
 To create a source connection, make a POST request to the `/sourceConnections` endpoint of the [!DNL Flow Service] API.
 

@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes March 2023
 description: The March 2023 release notes for Adobe Experience Platform.
+exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
 ---
 # Adobe Experience Platform release notes 
 
@@ -177,7 +178,7 @@ To learn more about Real-Time CDP B2B Edition, read the [Real-Time CDP B2B Editi
 **New or updated features**
 
 | Feature | Description |
-| --- | --- |
+| ------- | ----------- |
 | Profile metrics | To give you a more accurate representation of profile metrics, membership breakdown and churn metrics are being combined and are now calculated over a 24-hour period. More information is available in the [Segmentation UI guide](../../segmentation/ui/overview.md#browse) |
 
 {style="table-layout:auto"}

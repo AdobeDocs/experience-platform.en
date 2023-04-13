@@ -1,8 +1,8 @@
 ---
 title: Validation Editor View
 description: This guide details information about the Validation Editor view in Adobe Experience Platform Assurance.
+exl-id: 09be531c-8dc3-48b8-814f-b7a06adf1da3
 ---
-
 # Validation Editor view
 
 The Validation Editor lets you quickly and easily manage JavaScript functions to validate events in an Adobe Experience Platform Assurance session. Each function receives the events in an Assurance session. You can write functions to validate your client configuration, event conditions, tests and use cases.

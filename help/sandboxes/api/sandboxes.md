@@ -15,7 +15,7 @@ The API endpoint used in this guide is part of the [[!DNL Sandbox] API](https://
 
 ## Retrieve a list of sandboxes {#list}
 
-You can list all sandboxes belonging to your IMS Organization (active or otherwise), by making a GET request to the `/sandboxes` endpoint.
+You can list all sandboxes belonging to your organization (active or otherwise), by making a GET request to the `/sandboxes` endpoint.
 
 **API format**
 
