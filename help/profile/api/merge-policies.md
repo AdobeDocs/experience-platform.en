@@ -21,7 +21,7 @@ The API endpoint used in this guide is part of the [[!DNL Real-Time Customer Pro
 
 ## Components of merge policies {#components-of-merge-policies}
 
-Merge policies are private to your IMS Organization, allowing you to create different policies to merge schemas in the specific ways that you need. Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] provides organizations with a default merge policy, or you can create a merge policy for a specific Experience Data Model (XDM) schema class and mark it as the default for your organization. 
+Merge policies are private to your organization, allowing you to create different policies to merge schemas in the specific ways that you need. Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] provides organizations with a default merge policy, or you can create a merge policy for a specific Experience Data Model (XDM) schema class and mark it as the default for your organization. 
 
 While each organization can potentially have multiple merge policies per schema class, each class can have only one default merge policy. Any merge policy set as default will be used in cases where the name of the schema class is provided and a merge policy is required but not provided. 
 
@@ -31,7 +31,7 @@ While each organization can potentially have multiple merge policies per schema 
 
 To ensure all profile consumers are working with the same view on edges, merge policies can be marked as active on edge. In order for a segment to be activated on edge (marked as an edge segment), it must be tied to a merge policy that is marked as active on edge. If a segment is **not** tied to a merge policy that is marked as active on edge, the segment will not be marked as active on edge, and will be marked as a streaming segment.
 
-Additionally, each IMS Organization can only have **one** merge policy that is active on edge. If a merge policy is active on edge, it can be used for other systems on edge, such as Edge Profile, Edge Segmentation, and Destinations on Edge. 
+Additionally, each organization can only have **one** merge policy that is active on edge. If a merge policy is active on edge, it can be used for other systems on edge, such as Edge Profile, Edge Segmentation, and Destinations on Edge. 
 
 ### Complete merge policy object
 
@@ -187,7 +187,7 @@ To learn more about XDM and working with schemas in Experience Platform, begin b
 
 ## Access merge policies {#access-merge-policies}
 
-Using the [!DNL Real-Time Customer Profile] API, the `/config/mergePolicies` endpoint allows you perform a lookup request to view a specific merge policy by its ID, or access all of the merge policies in your IMS Organization, filtered by specific criteria. You can also use the `/config/mergePolicies/bulk-get` endpoint to retrieve multiple merge policies by their IDs. Steps for performing each of these calls are outlined in the following sections.
+Using the [!DNL Real-Time Customer Profile] API, the `/config/mergePolicies` endpoint allows you perform a lookup request to view a specific merge policy by its ID, or access all of the merge policies in your organization, filtered by specific criteria. You can also use the `/config/mergePolicies/bulk-get` endpoint to retrieve multiple merge policies by their IDs. Steps for performing each of these calls are outlined in the following sections.
 
 ### Access a single merge policy by ID
 
@@ -341,7 +341,7 @@ See the [components of merge policies](#components-of-merge-policies) section at
 
 ### List multiple merge policies by criteria
 
-You can list multiple merge policies within your IMS Organization by issuing a GET request to the `/config/mergePolicies` endpoint and using optional query parameters to filter, order, and paginate the response. Multiple parameters can be included, separated by ampersands (&). Making a call to this endpoint with no parameters will retrieve all merge policies available for your organization.
+You can list multiple merge policies within your organization by issuing a GET request to the `/config/mergePolicies` endpoint and using optional query parameters to filter, order, and paginate the response. Multiple parameters can be included, separated by ampersands (&). Making a call to this endpoint with no parameters will retrieve all merge policies available for your organization.
 
 **API format**
 

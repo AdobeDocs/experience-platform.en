@@ -13,7 +13,7 @@ This developer guide provides steps to help you use the Sandbox API to manage sa
 
 ## Prerequisites
 
-In order to manage sandboxes for your IMS Organization, you must have Sandbox Administration permissions. Users without access permissions can only use the [available sandboxes endpoint](./available.md) to list active sandboxes for the current user. See the [access control overview](../../access-control/home.md) for more information on how to assign sandbox permissions for Experience Platform.
+In order to manage sandboxes for your organization, you must have Sandbox Administration permissions. Users without access permissions can only use the [available sandboxes endpoint](./available.md) to list active sandboxes for the current user. See the [access control overview](../../access-control/home.md) for more information on how to assign sandbox permissions for Experience Platform.
 
 ### Reading sample API calls
 

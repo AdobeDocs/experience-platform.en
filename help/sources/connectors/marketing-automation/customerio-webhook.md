@@ -1,8 +1,9 @@
 ---
 title: Customer.io Source Overview
 description: Learn how to connect Customer.io to Adobe Experience Platform using APIs or the user interface by leveraging webhooks
-badge: "Beta"
+badge: Beta
 last-substantial-update: 2023-03-29
+exl-id: 0f4ee106-c22b-465c-9c5e-83709e8424f5
 ---
 # [!DNL Customer.io]
 
@@ -52,4 +53,3 @@ The documentation below provides information on how to create a [!DNL Customer.i
 ### Connect [!DNL Customer.io] to Platform using the UI {#connect-to-platform-using-ui}
 
 * [Create a source connection and dataflow to bring [!DNL Customer.io] data to Platform using the user interface](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)
-

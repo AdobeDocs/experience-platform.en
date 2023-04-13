@@ -14,22 +14,22 @@ This document outlines best practices to follow and tools you can use to better 
 
 ## Understanding Adobe Experience Platform data storage
 
-Experience Platform is primarily composed of two data repositories: the [!DNL Data Lake] and the Profile Store.
+Experience Platform is primarily composed of two data repositories: the [!DNL data lake] and the Profile store.
 
-The **[!DNL Data Lake]** primarily serves the following purposes:
+The **[!DNL data lake]** primarily serves the following purposes:
 
 * Acts as the staging area for onboarding data into Experience Platform;
 * Acts as the long-term data storage for all Experience Platform data;
 * Enables use cases such as data analytics and data science.
 
-The **Profile Store** is where customer profiles are created and primarily serves the following purposes:
+The **Profile store** is where customer profiles are created and primarily serves the following purposes:
 
 * Acts as a data storage for profiles that are used to support real-time experiences;
 * Enables use cases such as segmentation, activation, and personalization.
 
 >[!NOTE]
 >
->Your access to the [!DNL Data Lake] can depend on the product SKU that you purchased. For more information on product SKUs, please speak with your Adobe representative.
+>Your access to the [!DNL data lake] can depend on the product SKU that you purchased. For more information on product SKUs, please speak with your Adobe representative.
 
 ## License usage {#license-usage}
 
@@ -41,8 +41,8 @@ When you license Experience Platform, you are provided with license usage entitl
 
 The [!DNL Profile Richness] metric varies depending on the licensing that you purchased. There are two calculations for [!DNL Profile Richness] available:
 
-* The sum of all production data stored within Adobe Real-Time Customer Data Platform (i.e., Profile Service and Identity Service) at any point in time, divided by the [!DNL Addressable Audience];
-* The sum of all data stored within Platform (including, but not limited to the [!DNL Data Lake], Profile Service, and Identity Service) at any point in time and any data that you stream through (instead of storing within) Platform in the past 12 months, divided by the [!DNL Addressable Audience].
+* The sum of all production data stored within Adobe Real-Time Customer Data Platform (i.e., Real-Time Customer Profile and Identity Service) at any point in time, divided by the [!DNL Addressable Audience];
+* The sum of all data stored within Platform (including, but not limited to the [!DNL data lake], Real-Time Customer Profile, and Identity Service) at any point in time and any data that you stream through (instead of storing within) Platform in the past 12 months, divided by the [!DNL Addressable Audience].
 
 The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased.
 
@@ -74,11 +74,11 @@ There are two central scenarios to consider when ensuring that your data usage r
 
 ### What data to bring into Platform?
 
-Data can be ingested into one or multiple systems in Platform, namely the [!DNL Data Lake] and/or the Profile Store. This means that different data can exist in both systems for a variety of different use cases. For example, you may want to hold historical data in the [!DNL Data Lake], but not in the Profile Store. You can select which data to send to the Profile Store by enabling a dataset for Profile ingestion.
+Data can be ingested into one or multiple systems in Platform, namely the [!DNL data lake] and/or the Profile store. This means that different data can exist in both systems for a variety of different use cases. For example, you may want to hold historical data in the [!DNL data lake], but not in the Profile store. You can select which data to send to the Profile store by enabling a dataset for Profile ingestion.
 
 >[!NOTE]
 >
->Your access to the [!DNL Data Lake] can depend on the product SKU that you purchased. For more information on product SKUs, please speak with your Adobe representative.
+>Your access to the [!DNL data lake] can depend on the product SKU that you purchased. For more information on product SKUs, please speak with your Adobe representative.
 
 ### What data to keep?
 
@@ -87,7 +87,7 @@ You can apply both data ingestion filters and expiration rules to remove data th
 There are a number of tools that you can leverage to stay within your license usage entitlements:
 
 * [Ingestion filters](#ingestion-filters)
-* [Profile Store](#profile-service)
+* [Profile store](#profile-service)
 
 ### Ingestion filters {#ingestion-filters}
 
@@ -95,19 +95,19 @@ Ingestion filters allow you to bring in only the data that is needed for your us
 
 | Ingestion filter | Description |
 | --- | --- |
-| Adobe Audience Manager source filtering | When you create an Adobe Audience Manager source connection, you can pick and choose which segments and traits to bring into the [!DNL Data Lake] and Profile Service, rather than ingesting the Audience Manager data in its entirety. See the guide on [creating an Audience Manager source connection](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) for more information. |
-| Adobe Analytics Data Prep | You can use [!DNL Data Prep] functionalities when creating an Analytics source connection to filter out data that is not required for your use cases. Through [!DNL Data Prep], you can define which attributes/columns need to be published to Profile. You can also provide conditional statements to inform Platform whether data is expected to be published to Profile, or just to the [!DNL Data Lake]. See the guide on [creating an Analytics source connection](../../sources/tutorials/ui/create/adobe-applications/analytics.md) for more information. |
-| Support for enable/disable datasets for Profile | To ingest data into the Profile Service, you must enable a dataset for use in the Profile Store. Doing so, adds to your [!DNL Addressable Audience] and [!DNL Profile Richness] entitlements. Once a dataset is no longer required for customer profile use cases, you can disable that dataset's integration to Profile to ensure that your data remains license compliant. See the guide on [enabling and disabling datasets for Profile](../../catalog/datasets/enable-for-profile.md) for more information. |
+| Adobe Audience Manager source filtering | When you create an Adobe Audience Manager source connection, you can pick and choose which segments and traits to bring into the [!DNL data lake] and Real-Time Customer Profile, rather than ingesting the Audience Manager data in its entirety. See the guide on [creating an Audience Manager source connection](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) for more information. |
+| Adobe Analytics Data Prep | You can use [!DNL Data Prep] functionalities when creating an Analytics source connection to filter out data that is not required for your use cases. Through [!DNL Data Prep], you can define which attributes/columns need to be published to Profile. You can also provide conditional statements to inform Platform whether data is expected to be published to Profile, or just to the [!DNL data lake]. See the guide on [creating an Analytics source connection](../../sources/tutorials/ui/create/adobe-applications/analytics.md) for more information. |
+| Support for enable/disable datasets for Profile | To ingest data into the Real-Time Customer Profile, you must enable a dataset for use in the Profile store. Doing so, adds to your [!DNL Addressable Audience] and [!DNL Profile Richness] entitlements. Once a dataset is no longer required for customer profile use cases, you can disable that dataset's integration to Profile to ensure that your data remains license compliant. See the guide on [enabling and disabling datasets for Profile](../../catalog/datasets/enable-for-profile.md) for more information. |
 | Web SDK and Mobile SDK data exclusion | There are two types of data collected by Web and Mobile SDK: data that is collected automatically and data that is explicitly collected by your developer. To better manage license compliance, you can disable automatic data collection in the configuration of the SDK through the context setting. Custom data can also be removed or not set by your developer. See the guide on [configuring SDK fundamentals](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) for more information. |
 | Server-side forwarding data exclusion | If you are sending data to Platform using server-side forwarding, you can exclude what data is sent by either removing the mapping in a rule action to exclude it across all events, or by adding conditions to the rule so that data only fires for certain events. See the documentation on [events and conditions](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) for more information. |
 
 {style="table-layout:auto"}
 
-### Profile Store {#profile-service}
+### Profile store {#profile-service}
 
-The Profile Store is composed of the following components:
+The Profile store is composed of the following components:
 
-| Profile Store component | Description |
+| Profile store component | Description |
 | --- | --- |
 | Profile fragments | Each customer profile is composed of multiple **profile fragments** that have been merged to form a single view of that customer. For example, if a customer interacts with your brand across several channels, your organization will have multiple **profile fragments** related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are stitched together using the identity graph to create a single profile for that customer. **Profile fragments** consist of an identity namespace as the identifier, with associated record data and/or time-series data. |
 | Record data (Attributes) | A profile is a representation of a subject, an organization or an individual, composed of many **Attributes** (also known as **record data**). For example, the profile of a product may include a SKU and description, whereas the profile of a person contains information like first name, last name, and email address. **Record data** is usually low/moderate in volume, but valuable for long periods of time. |
@@ -118,9 +118,9 @@ The Profile Store is composed of the following components:
 
 
 
-#### Profile Store Composition Reports
+#### Profile store Composition Reports
 
-There are a number of reports available to help you understand the composition of the Profile Store. These reports help you make informed decisions about how and where to set your Experience Event expirations to better optimize your license usage:
+There are a number of reports available to help you understand the composition of the Profile store. These reports help you make informed decisions about how and where to set your Experience Event expirations to better optimize your license usage:
 
 * **Dataset Overlap Report API**: Exposes the datasets that contribute the most to your Addressable Audience. You can use this report to identify which [!DNL ExperienceEvent] datasets to set an expiration for. See the tutorial on [generating the dataset overlap report](../../profile/tutorials/dataset-overlap-report.md) for more information.
 * **Identity Overlap Report API**: Exposes the identity namespaces that contribute the most to your Addressable Audience. See the tutorial on [generating the identity overlap report](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) for more information.
@@ -139,7 +139,7 @@ The following is a list of some recommended best practices that you can follow t
 * Configure [ingestion filters](#ingestion-filters) by identifying the events required for your segmentation and personalization use cases. This allows you to send only important events required for your use cases.
 * Ensure that you have only [enabled datasets for profile](#ingestion-filters) that are required for your segmentation and personalization use cases. 
 * Configure an [Experience Event expiration](#event-expirations) for high-frequency data like web data.
-* Periodically check the [Profile Composition Reports](#profile-store-composition-reports) to understand your Profile Store composition. This allows you to understand the data sources contributing most to your license usage consumption.
+* Periodically check the [Profile Composition Reports](#profile-store-composition-reports) to understand your Profile store composition. This allows you to understand the data sources contributing most to your license usage consumption.
 
 ## Feature summary and availability {#feature-summary}
 
@@ -149,8 +149,8 @@ The following table outlines the list of currently available features at your di
 
 | Feature | Description |
 | --- | --- |
-| [Enable/Disable Datasets for Profile](../../catalog/datasets/user-guide.md) | Enable or disable dataset ingestion into Profile Service |
-| [Experience Event expirations](../../profile/event-expirations.md) | Apply an expiration time for all events ingested into a Profile-enabled dataset. Please contact your Adobe Support Representative to enable this feature. |
+| [Enable/Disable Datasets for Profile](../../catalog/datasets/user-guide.md) | Enable or disable dataset ingestion into Real-Time Customer Profile. |
+| [Experience Event expirations](../../profile/event-expirations.md) | Apply an expiration time for all events ingested into a Profile-enabled dataset. Please contact your Adobe account team or Customer Care to enable this feature. |
 | [Adobe Analytics Data Prep filters](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Apply [!DNL Kafka] filters to exclude unnecessary data from ingestion |
 | [Adobe Audience Manager source connector filters](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Apply Audience Manager source connection filters to exclude unnecessary data from ingestion |
 | [Alloy SDK data filters](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Apply Alloy filters to exclude unnecessary data from ingestion |

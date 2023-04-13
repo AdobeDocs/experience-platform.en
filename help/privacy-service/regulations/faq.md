@@ -74,7 +74,11 @@ Many privacy regulations stipulate that if a data subject is below a certain age
 
 Assuming that the business has collected personal information and that it can authenticate or verify the identity of a particular consumer, privacy regulations allow a specific time window for a consumer request to be fulfilled. The following table breaks down the applicable time windows for each regulation, with notes on some exceptions:
 
-| Regulation | Compliance window | Notes |
+>[!NOTE]
+>
+>The timeframe to respond in 'days' are reflective of each regulatory law's mandated timelines to complete a consumers request.
+
+| Regulation | Timeframe to respond | Notes |
 | --- | --- | --- |
 | CCPA (California) | 45 days | |
 | GDPR (European Union) | 30 days | If the request is complex, or numerous requests have been made by the same data subject, then the request can be extended to 60 days. |

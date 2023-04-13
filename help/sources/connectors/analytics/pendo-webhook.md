@@ -1,8 +1,9 @@
 ---
 title: Pendo Source Overview
 description: Learn how to connect Pendo to Adobe Experience Platform using APIs or the user interface by leveraging webhooks
-badge: "Beta"
+badge: Beta
 last-substantial-update: 2023-03-29
+exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
 ---
 # [!DNL Pendo]
 
@@ -45,4 +46,3 @@ The documentation below provides information on how to create a [!DNL Pendo] str
 ### Connect [!DNL Pendo] to Platform using the UI {#connect-to-platform-using-ui}
 
 * [Create a source connection to bring [!DNL Pendo] data to Platform using the user interface](../../tutorials/ui/create/analytics/pendo-webhook.md)
-

@@ -3,6 +3,7 @@ title: Getting Started with Self-Serve Sources (Streaming SDK)
 description: This document provides an introduction to the prerequisite information you need to know before attempting to create a new source using Self-Serve Sources (Streaming SDK).
 hide: true
 hidefromtoc: true
+exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
 ---
 # Getting Started with Self-Serve Sources (Streaming SDK)
 

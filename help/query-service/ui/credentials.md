@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;query;query editor;Query Editor;Query editor;
 solution: Experience Platform
 title: Query Service Credentials Guide
-description: Adobe Experience Platform Query Service provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your IMS Organization.
+description: Adobe Experience Platform Query Service provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your organization.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 ---
 # Credentials guide

@@ -20,4 +20,4 @@ While Adobe is migrating the Data Lake from Gen1 to Gen 2, users will be able to
 
 ## Communication to Platform users
 
-Adobe will be contacting System Administrators to discuss the impact of the migration in detail and to confirm the migration dates and times for specific IMS Organizations.
+Adobe will be contacting System Administrators to discuss the impact of the migration in detail and to confirm the migration dates and times for specific organizations.
