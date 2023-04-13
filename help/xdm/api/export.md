@@ -45,7 +45,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns an array of objects, which represent the target XDM resource and all of its dependent resources. In this example, the first object in the array is a tenant-created `Property` data type that the `Restaurant` field group employs, while the second object is the `Restaurant` field group itself. This payload can then be used to [import the resource](#import) into a different sandbox or IMS Organization.
+A successful response returns an array of objects, which represent the target XDM resource and all of its dependent resources. In this example, the first object in the array is a tenant-created `Property` data type that the `Restaurant` field group employs, while the second object is the `Restaurant` field group itself. This payload can then be used to [import the resource](#import) into a different sandbox or organization.
 
 Note that all instances of the resource's tenant ID are replaced with `<XDM_TENANTID_PLACEHOLDER>`. This allows the Schema Registry to automatically apply the correct tenant ID to the resources depending on where they are sent in the subsequent import call.
 

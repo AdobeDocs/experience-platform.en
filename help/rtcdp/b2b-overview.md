@@ -51,7 +51,7 @@ When implemented correctly, the system tracks people using unique primary identi
 
 ## B2B sources
 
-Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. The [!DNL Marketo] source allows you to stream B2B data into Platform and keep this data up to date using Platform-connected applications. It supports any number of instances of [!DNL Marketo] (which is beneficial to large companies with multiple instances) and pulls into a single IMS Organization where the data is merged.
+Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. The [!DNL Marketo] source allows you to stream B2B data into Platform and keep this data up to date using Platform-connected applications. It supports any number of instances of [!DNL Marketo] (which is beneficial to large companies with multiple instances) and pulls into a single organization where the data is merged.
 
 >[!NOTE]
 >
@@ -69,7 +69,7 @@ For companies with more than one CRM, Real-Time CDP B2B Edition provides the opt
 
 ## Next steps
 
-Now that you better understand the benefits for marketers offered by Real-Time CDP B2B Edition, and differences between it and Real-Time CDP, you can learn about how to apply these features to your own IMS Organization.
+Now that you better understand the benefits for marketers offered by Real-Time CDP B2B Edition, and differences between it and Real-Time CDP, you can learn about how to apply these features to your own organization.
 
 To understand how Real-Time CDP B2B Edition can benefit your business-to-business service model, see the following documentation to help you get started:
 

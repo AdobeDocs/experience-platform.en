@@ -1,7 +1,8 @@
 ---
 title: Create a source connection and dataflow for Customer.io using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Customer.io using the Flow Service API.
-badge: "Beta"
+badge: Beta
+exl-id: 1c84d818-428f-4097-9f6f-ef0cf1a04785
 ---
 # Create a source connection and dataflow for [!DNL Customer.io] using the Flow Service API
 

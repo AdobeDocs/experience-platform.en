@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;flow service;
 title: Draft Dataflows Using The Flow Service API
 description: Learn how to set your dataflows in a draft state using the Flow Service API.
 badge: label="New Feature" type="Positive"
+exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
 ---
 # Draft dataflows using the Flow Service API
 

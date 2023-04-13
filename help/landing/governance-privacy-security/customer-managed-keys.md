@@ -201,7 +201,7 @@ curl -X POST \
 | --- | --- |
 | `name` | A name for the configuration. Ensure that you remember this value as it will be required to check the configuration's status at a [later step](#check-status). The value is case-sensitive. |
 | `type` | The configuration type. Must be set to `BYOK_CONFIG`. |
-| `imsOrgId` | Your IMS Organization ID. This must be the same value as provided under the `x-gw-ims-org-id` header. |
+| `imsOrgId` | Your organization ID. This must be the same value as provided under the `x-gw-ims-org-id` header. |
 | `configData` | Contains the following details about the configuration:<ul><li>`providerType`: Must be set to `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier`: The key vault URI that you copied [earlier](#send-to-adobe).</li></ul> |
 
 **Response**
