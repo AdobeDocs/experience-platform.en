@@ -21,7 +21,7 @@ You can configure various file formatting options for exported files by using th
 * To configure file formatting options for exported files by using the Experience Platform Flow Service API, read [Flow Service API - Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/).
 -->
 
-## File formatting configuration {#file-configuration}
+## File formatting configuration for CSV files {#file-configuration}
 
 To display the file formatting options, start the [connect to destination](/help/destinations/ui/connect-destination.md) workflow. Select **Data type: Segments** and **File type: CSV** to display the file formatting settings available for the exported `CSV` files. 
 
@@ -63,16 +63,19 @@ View the examples below of the content in the exported CSV files with each of th
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_quoteCharacter"
 >title="Quote character"
->abstract="Sets a single character used for escaping quoted values where the separator can be part of the value. View the documentation for examples for each selection."
+>abstract="Use this option if you want to remove double quotes from exported strings. View the documentation for examples for each selection."
 
-Use this option to set a single character used for escaping quoted values where the separator can be part of the value. Available options are:
+Use this option if you want to remove double quotes from exported strings. Available options are:
 
-* **[!UICONTROL Null Character (\0000)]**
-* **[!UICONTROL Double Quotes (")]**
+* **[!UICONTROL Null Character (\0000)]**. Use this option to remove double quotes from exported CSV files.
+* **[!UICONTROL Double Quotes (")]**. Use this option to keep double quoes in your exported CSV files.
 
 #### Examples
 
 View the examples below of the content from exported CSV files with each of the selections in the UI.
+
+* Example output with **[!UICONTROL Null Character (\0000)]** selected: `Test,John,LastName`
+* Example output with **[!UICONTROL Double Quotes (")]** selected: `"Test","John","LastName"`
 
 ### Escape character {#escape-character}
 
@@ -81,7 +84,7 @@ View the examples below of the content from exported CSV files with each of the 
 >title="Escape character"
 >abstract="Sets a single character used for escaping quotes inside an already quoted value. View the documentation for examples for each selection."
 
-Use this option to set a single character for escaping quotes inside an already quoted value. You might have a string enveloped in double quotes where part of the string is already enveloped in double quotes. This option determines which character to replace the inner double quotes with. Available options are:
+Use this option to set a single character for escaping quotes inside an already quoted value. For example, this option is useful when you have a string enclosed in double quotes where part of the string is already enclosed in double quotes. This option determines which character to replace the inner double quotes with. Available options are:
 
 * Back slash `(\)`
 * Single quote `(')`
@@ -135,9 +138,9 @@ Use this control to set the string representation of a null value within the exp
 
 View the examples below of the content from exported CSV files with each of the selections in the UI.
 
-* Example output with **[!UICONTROL null]** selected: `male,NULL,TestLastName`. In this case, the CSV file contains the null value.
-* Example output with **""** selected: `male,"",TestLastName`. In this case, the Experience Platform replaces the null value with double quotes around an empty string.
-* Example output with **[!UICONTROL Empty string]** selected: `male,,TestLastName`. In this case, the Experience Platform replaces the null value with an empty string (without double quotes).
+* Example output with **[!UICONTROL null]** selected: `male,NULL,TestLastName`. In this case, no transformation occurs and the CSV file contains the null value.
+* Example output with **""** selected: `male,"",TestLastName`. In this case, Experience Platform replaces the null value with double quotes around an empty string.
+* Example output with **[!UICONTROL Empty string]** selected: `male,,TestLastName`. In this case, Experience Platform replaces the null value with an empty string (without double quotes).
 
 ### Compression format {#compression-format}
 
