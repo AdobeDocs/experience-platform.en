@@ -3,6 +3,7 @@ solution: Experience Platform
 title: Activate segments to file-based destinations by using the Flow Service API
 description: Learn how to use the Flow Service API to export files with qualified profiles to cloud storage destinations.
 type: Tutorial
+exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
 ---
 # Activate segments to file-based destinations by using the Flow Service API
 

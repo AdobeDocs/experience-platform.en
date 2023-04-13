@@ -200,7 +200,7 @@ Some Catalog objects support the use of a `tags` attribute. Tags can attach info
 There are a few limitations to consider when using tags:
 
 * The only Catalog objects that currently support tags are datasets, batches, and connections.
-* Tag names are unique to your IMS Organization.
+* Tag names are unique to your organization.
 * Adobe processes may leverage tags for certain behaviors. The names of these tags are prefixed with "adobe" as a standard. Therefore, you should avoid this convention when declaring tag names.
 * The following tag names are reserved for use across [!DNL Experience Platform], and therefore cannot be declared as a tag name for your organization:
   * `unifiedProfile`: This tag name is reserved for datasets to be ingested by [[!DNL Real-Time Customer Profile]](../../profile/home.md).

@@ -51,7 +51,7 @@ GET /marketingActions/custom
 
 **Request**
 
-The following request uses the `marketingActions/custom` endpoint, which fetches a list of all marketing actions defined by your IMS Organization.
+The following request uses the `marketingActions/custom` endpoint, which fetches a list of all marketing actions defined by your organization.
 
 ```shell
 curl -X GET \

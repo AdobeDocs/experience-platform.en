@@ -2,8 +2,8 @@
 title: Amazon Ads
 description: Amazon Ads offers a range of options to help you achieve your advertising goals to registered sellers, vendors, book vendors, Kindle Direct Publishing (KDP) authors, app developers, and/or agencies. The Amazon Ads integration with Adobe Experience Platform provides turn-key integration to Amazon Ads products, including the Amazon DSP (ADSP). Using the Amazon Ads destination in Adobe Experience Platform, users are able to define advertiser audiences for targeting and activation on the Amazon DSP.
 last-substantial-update: 2023-03-29
+exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
 ---
-
 # (Beta) Amazon Ads connection {#amazon-ads}
 
 ## Overview {#overview}

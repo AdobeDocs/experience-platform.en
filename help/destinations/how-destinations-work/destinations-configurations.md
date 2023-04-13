@@ -1,8 +1,8 @@
 ---
 title: Configurable and common export settings in destinations
 description: Learn which export settings in destinations are configurable on a destination level and which are fixed and cannot be edited.
+exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
 ---
-
 # Configurable and common export settings in destinations
 
 When thinking about the export behavior to Experience Platform destinations, you need to consider three separate levels on which configurations act.

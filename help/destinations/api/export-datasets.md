@@ -3,6 +3,7 @@ solution: Experience Platform
 title: (Beta) Export datasets by using the Flow Service API
 description: Learn how to use the Flow Service API to export datasets to select destinations.
 type: Tutorial
+exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 ---
 # (Beta) Export datasets by using the [!DNL Flow Service API]
 
