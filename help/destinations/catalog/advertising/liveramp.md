@@ -1,10 +1,10 @@
 ---
-title: (Alpha) [!DNL LiveRamp SFTP] connection 
+title: (Alpha) [!DNL LiveRamp SFTP] connection
 description: Learn how to use the LiveRamp connector to onboard audiences from Adobe Real-Time Customer Data Platform to LiveRamp Connect.
 hidefromtoc: yes
 hide: yes
+exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
 ---
-
 # (Alpha) [!DNL LiveRamp - SFTP] connection {#liveramp-destination}
 
 Use the LiveRamp connection to onboard audiences from Adobe Real-Time Customer Data Platform to [!DNL LiveRamp Connect].
@@ -84,7 +84,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 >id="platform_destinations_liveramp_subkey"
 >title="Encryption subkey ID"
 >abstract="The subkey ID used for encryption, based on the LiveRamp public encryption key. This field is required if you provided an encryption key in the authentication step."
->additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="Learn how to obtain the subkey ID."
+>additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="Learn how to obtain the subkey ID"
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 

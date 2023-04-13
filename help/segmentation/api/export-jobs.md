@@ -19,7 +19,7 @@ The endpoints used in this guide are part of the [!DNL Adobe Experience Platform
 
 ## Retrieve a list of export jobs {#retrieve-list}
 
-You can retrieve a list of all export jobs for your IMS Organization by making a GET request to the `/export/jobs` endpoint.
+You can retrieve a list of all export jobs for your organization by making a GET request to the `/export/jobs` endpoint.
 
 **API format**
 
@@ -40,7 +40,7 @@ GET /export/jobs?status={STATUS}
 
 **Request**
 
-The following request will retrieve the last two export jobs within your IMS Organization.
+The following request will retrieve the last two export jobs within your organization.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
