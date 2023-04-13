@@ -4,17 +4,17 @@ title: Shopify Streaming Source
 description: Learn how to create a source connection and dataflow to ingest streaming data from your Shopify instance to Adobe Experience Platform
 badge: "Beta"
 ---
-# [!DNL Shopify] Streaming
+# [!DNL Shopify Streaming]
 
 >[!NOTE]
 >
->The [!DNL Shopify] Streaming source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Shopify Streaming] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
 Adobe Experience Platform provides support for ingesting data from Streaming applications. Support for streaming providers include [!DNL Shopify].
 
-## Prerequisites 
+## Prerequisites {#prerequisites}
 
-The following section outlines prerequisite steps to complete before using the [!DNL Shopify] Streaming source.
+The following section outlines prerequisite steps to complete before using the [!DNL Shopify Streaming] source.
 
 You must have a valid [!DNL Shopify] partner account in order to connect to [!DNL Shopify] APIs. If you do not already have a partner account, please register using the [[!DNL Shopify] partners dashboard](https://www.shopify.com/partners).
 
@@ -95,13 +95,13 @@ A successful response returns your access token and permission scopes.
 }
 ```
 
-## Create a webhook for streaming [!DNL Shopify] data
+## Create a webhook for streaming [!DNL Shopify] data {#webhook}
 
 Webhooks allow applications to stay synchronized with your [!DNL Shopify] data or perform an action after a particular event occurs in a shop. For streaming [!DNL Shopify] data to Experience Platform, webhooks can be used to define the http endpoint and the topics for subscription.
 
 **Request**
 
-The following request creates a webhook for your [!DNL Shopify] streaming data.
+The following request creates a webhook for your [!DNL Shopify Streaming] data.
 
 ```shell
 curl -X POST \
@@ -146,8 +146,15 @@ A successful response returns information on your webhook, including its corresp
 
 ### Limitations {#limitations}
 
-The following is a list of known limitations that you may encounter when using webhooks with the [!DNL Shopify] streaming source.
+The following is a list of known limitations that you may encounter when using webhooks with the [!DNL Shopify Streaming] source.
 
 * It's not guaranteed that you can arrange the order of delivery of different topics for the same resource. For example, it's possible that a `products/update` webhook gets delivered before a `products/create` webhook.
 * You can set your webhook to deliver webhook events to an endpoint at least once. This means that an endpoint may receive the same event more than once. You can scan for duplicate webhook events by comparing the `X-Shopify-Webhook-Id` header to previous events.
 * [!DNL Shopify] treats HTTP 2xx status responses as successful notifications. Any other status code responses are deemed as failures. [!DNL Shopify] provides a retry mechanism for failed webhook notifications. If there is **no response after waiting for five seconds**, [!DNL Shopify] retries the connection **19 times** over the course of the next **48 hours**. If there are still no responses by the end of the retry period, then [!DNL Shopify] deletes the webhook. 
+
+## Next steps
+
+The following tutorials provides steps on how to connect your [!DNL Shopify Streaming] source to Experience Platform using the API and the UI:
+
+* [Create a Shopify Streaming source connection and dataflow using the Flow Service API](../../tutorials/api/create/ecommerce/shopify-streaming.md)
+* [Create a Shopify Streaming source connection and dataflow in the UI](../../tutorials/ui/create/ecommerce/shopify-streaming.md)
