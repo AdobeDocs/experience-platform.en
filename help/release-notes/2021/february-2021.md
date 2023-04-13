@@ -108,7 +108,7 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 | Feature | Description |
 | ------- | ----------- |
-| Computed Attributes (Alpha)| ***Note: This functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.*** <br/><br/>Computed attributes are functions used to aggregate event-level data into profile-level attributes. You can then use the aggregates in segmentation, activation and personalization. Some examples of these functions include count, sum, average, min, max, true/false. Computed attributes are currently available via API only. For more information, see the [computed attributes overview](../../profile/computed-attributes/overview.md).|
+| Computed Attributes (Alpha)| ***Note: This functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.*** <br/><br/>Computed attributes are functions used to aggregate event-level data into profile-level attributes. You can then use the aggregates in segmentation, activation and personalization. Some examples of these functions include count, sum, average, min, max, true/false. Computed attributes are currently available via API only. |
 
 For more information on Real-Time Customer Profile, including tutorials and best practices for working with [!DNL Profile] data, please begin by reading the [Real-Time Customer Profile overview](../../profile/home.md).
 
