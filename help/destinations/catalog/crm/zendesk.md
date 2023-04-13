@@ -173,7 +173,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
-|April 2023|Documentation update| <ul><li>We updated the [use-cases](#use-cases) section. The mandatory mappings mentioned in the [Mapping considerations and example](#mapping-considerations-example) section was updated, In the initial release along-with `Email` there used to be a choice where you could provide either the `Last Name` or `Name` for the mandatory mappings, this has been made invalid and `Email` and `Last Name` are now mandatory. We also elaborated this section to include an example of a non-mandatory attribute mapping.</li></ul> |
+|April 2023|Documentation update| <ul><li>We updated the [use-cases](#use-cases) section with a clearer example of when customers would benefit from using this destination.</li> <li>We updated the [mapping](#mapping-considerations-example) section to reflect the correct required mappings. The `Attribute: last_name` and `Identity: email` target mappings are mandatory for this destination. If these mappings are missing, any other mappings are ignored and not sent to [!DNL Zendesk].</li> <li>We updated the [mapping](#mapping-considerations-example) section with clear examples of both mandatory and optional mappings.</li></ul> |
 |March 2023|Initial release|Initial destination release and documentation publish.|
 
 {style="table-layout:auto"}
