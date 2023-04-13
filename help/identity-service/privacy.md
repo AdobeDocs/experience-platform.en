@@ -98,7 +98,7 @@ When creating job requests in the UI, be sure to select **[!UICONTROL Identity]*
 
 ## Delete request processing
 
-When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The deletion of the individual identity is based on provided namespace and/or ID value. Furthermore, the deletion takes place for all sandboxes associated with a given IMS Organization.
+When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The deletion of the individual identity is based on provided namespace and/or ID value. Furthermore, the deletion takes place for all sandboxes associated with a given organization.
 
 Depending on whether you also included Real-Time Customer Profile (`ProfileService`) and the data lake (`aepDataLake`) as products in your privacy request for Identity Service (`identity`), different sets of data related to the identity are removed from the system at potentially different times:
 

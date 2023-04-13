@@ -1,8 +1,8 @@
 ---
 title: Weather data field mappings
 description: Reference page for the available weather data fields that are available as part of the integration with The Weather Channel.
+exl-id: bc0f158b-f9d0-424a-aa21-953e8380473f
 ---
-
 # Weather data field mappings
 
 Adobe has partnered with [!DNL [The Weather Company]](https://www.ibm.com/weather) to bring the additional context of United States weather to the data collected via datastreams. You can use this data for analytics, targeting and segment creation in Experience Platform.

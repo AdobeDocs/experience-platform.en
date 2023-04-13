@@ -2,8 +2,9 @@
 keywords: event forwarding extension;braze;braze event forwarding extension
 title: Braze Event Forwarding Extension
 description: This Adobe Experience Platform event forwarding extension sends Adobe Experience Edge Network events to Braze.
+last-substantial-update: 2023-03-29
+exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
 ---
-
 # [!DNL Braze Track Events API] event forwarding extension
 
 [[!DNL Braze]](https://www.braze.com) is a customer engagement platform that powers customer-centric interactions between consumers and brands in real time. Using [!DNL Braze], you can do the following:
@@ -126,7 +127,7 @@ User attributes can be a JSON object containing fields that will create or updat
 | [!UICONTROL Country] | Country as a string in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. |
 | [!UICONTROL Language] | Language as a string in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format. |
 | [!UICONTROL Date of Birth] | String in format "YYYY-MM-DD" (e.g., 1980-12-21). |
-| [!UICONTROL Time Zone] | Time zone name from [IANA Time Zone Database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (e.g., ’America/New_York’ or ’Eastern Time (US & Canada)’). |
+| [!UICONTROL Time Zone] | Time zone name from [IANA Time Zone Database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (e.g., 'America/New_York' or 'Eastern Time (US & Canada)'). |
 | [!UICONTROL Facebook] | Hash containing any of id (string), likes (array of strings), num_friends (integer). |
 | [!UICONTROL Twitter] | Hash containing any of id (integer), screen_name (string, Twitter handle), followers_count (integer), friends_count (integer), statuses_count(integer). |
 
@@ -185,7 +186,7 @@ User attributes can be a JSON object containing fields that will create or updat
 | [!UICONTROL Country] | Country as a string in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. |
 | [!UICONTROL Language] | Language as a string in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format. |
 | [!UICONTROL Date of Birth] | String in format "YYYY-MM-DD" (e.g., 1980-12-21). |
-| [!UICONTROL Time Zone] | Time zone name from [IANA Time Zone Database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (e.g., ’America/New_York’ or ’Eastern Time (US & Canada)’). |
+| [!UICONTROL Time Zone] | Time zone name from [IANA Time Zone Database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (e.g., 'America/New_York' or 'Eastern Time (US & Canada)'). |
 | [!UICONTROL Facebook] | Hash containing any of id (string), likes (array of strings), num_friends (integer). |
 | [!UICONTROL Twitter] | Hash containing any of id (integer), screen_name (string, Twitter handle), followers_count (integer), friends_count (integer), statuses_count(integer). |
 

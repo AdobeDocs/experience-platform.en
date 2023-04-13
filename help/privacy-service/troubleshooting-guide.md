@@ -101,7 +101,7 @@ The following table outlines some common errors in [!DNL Privacy Service], with 
 | Invalid Namespace | A provided identity namespace for a user ID was invalid. See the section on [standard identity namespaces](./api/appendix.md#standard-namespaces) in the [!DNL Privacy Service] API guide appendix for a list of accepted namespaces. If you are using a custom namespace, ensure you are setting the ID's `type` property to "custom". |
 | Partially Completed | The job completed successfully, but some data was not applicable for the given request and was skipped. |
 | The data is not in the required format. | One or more of the data values for the specified application was incorrectly formatted. Check the job details for more info. |
-| The IMS Org has not been provisioned. | This message occurs when your IMS Org has not been provisioned for [!DNL Privacy Service]. Contact your administrator for more information. |
+| The IMS Org has not been provisioned. | This message occurs when your organization has not been provisioned for [!DNL Privacy Service]. Contact your administrator for more information. |
 | Access and permissions are required. | Access and permissions are required in order to use [!DNL Privacy Service]. Contact your administrator to gain access. |
 | There was a problem uploading and archiving the access data. | When this error occurs, re-upload the access data and try again. |
 | The workload was exceeded for the current document rate limit. | When this error occurs, reduce the submission rate and try again. |

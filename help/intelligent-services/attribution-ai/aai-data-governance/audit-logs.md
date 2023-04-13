@@ -2,6 +2,7 @@
 keywords: insights;attribution ai;attribution ai insights;AAI query service;attribution queries;attribution scores
 title: Audit Logs in Attribution AI Overview
 description: Learn how to view and manage audit logs in Attribution AI.
+exl-id: 83c55dbc-f03d-4bda-ae07-68b7914483c8
 ---
 # Audit logs
 
@@ -16,4 +17,3 @@ In a basic sense, an audit log tells who performed what action, and when. Each a
 When the feature is enabled for your organization, audit logs are automatically collected as activity occurs. You do not need to manually enable log collection.
 
 In order to view and export audit logs, you must have been granted the Audit Logs Access access control permission in Adobe Console. To learn how to manage individual permissions for Attribution AI features, please refer to the [access control documentation](../aai-data-governance/access-controls.md).
-

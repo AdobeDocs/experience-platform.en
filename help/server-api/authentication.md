@@ -26,7 +26,7 @@ API calls coming from a private server on `server.adobedc.net` should always be 
 
 Before you can make calls to the [!DNL Server API], make sure you meet the following prerequisites:
 
-* You have an IMS Organization account with access to Adobe Experience Platform.
+* You have an organization account with access to Adobe Experience Platform.
 * Your Experience Platform account has the `developer` and `user` roles enabled for the Adobe Experience Platform API product profile. Contact your [Admin Console](../access-control/home.md) administrator to enable these roles for your account.
 * You have an Adobe ID. If you do not have an Adobe ID, go to the [Adobe Developer Console](https://developer.adobe.com/console) and create a new account.
 

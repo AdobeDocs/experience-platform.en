@@ -49,7 +49,7 @@ If you have not yet completed the [create a segment using the Segmentation API](
 
 ## Scheduled evaluation {#scheduled-evaluation}
 
-Through scheduled evaluation, your IMS Org can create a recurring schedule to automatically run export jobs.
+Through scheduled evaluation, your organization can create a recurring schedule to automatically run export jobs.
 
 >[!NOTE]
 >

@@ -3,6 +3,7 @@ solution: Experience Platform
 title: API migration guide for cloud storage destinations
 description: Learn about the changes in the workflow to activate cloud storage destinations as part of the migration to the new cloud storage destination cards with additional functionality.
 type: Tutorial
+exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
 ---
 # API migration guide for cloud storage destinations
 

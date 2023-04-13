@@ -1,8 +1,8 @@
 ---
 title: Adobe Experience Platform Assurance Overview
 description: Adobe Experience Platform Assurance lets you inspect, proof, simulate, and validate how you collect data or serve experiences within your mobile applications.
+exl-id: e887f5f6-3db0-4521-be2d-20ef3d08e7d0
 ---
-
 # Adobe Experience Platform Assurance
 
 Adobe Experience Platform Assurance is a product from [Adobe Experience Cloud](https://www.adobe.com/experience-cloud.html) to help you inspect, proof, simulate, and validate how you collect data or serve experiences in your mobile app.

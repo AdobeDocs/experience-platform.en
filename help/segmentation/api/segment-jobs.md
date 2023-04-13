@@ -50,7 +50,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Response**
 
-A successful response returns HTTP status 200 with a list of segment jobs for the specified IMS organization as JSON. However, the response will differ, depending on the number of segments within the segment job.
+A successful response returns HTTP status 200 with a list of segment jobs for the specified organization as JSON. However, the response will differ, depending on the number of segments within the segment job.
 
 **Less than or equal to 1500 segments in your segment job**
 

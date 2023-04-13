@@ -2,6 +2,8 @@
 keywords: event forwarding extension;mixpanel;mixpanel event forwarding extension
 title: Mixpanel Track Events API Event Forwarding Extension
 description: This Adobe Experience Platform event forwarding extension sends Adobe Experience Edge Network events to Mixpanel.
+last-substantial-update: 2023-03-29
+exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
 ---
 # [!DNL Mixpanel Track Events] API event forwarding extension
 

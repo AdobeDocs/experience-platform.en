@@ -4,6 +4,7 @@ solution: Experience Platform
 feature: Customer AI
 title: Data Governance in Customer AI
 description: Adobe Experience Platform provides several services and tools that allow you to confidently control your collected experience data in order to comply with your business practices, legal obligations, and development process.
+exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
 ---
 # Customer AI and Data Governance
 
