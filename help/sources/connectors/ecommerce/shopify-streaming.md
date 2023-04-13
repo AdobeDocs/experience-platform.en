@@ -59,9 +59,17 @@ https://www.acme.com/?code=k6j2palgrbljja228ou8c20fmn7w41gz&hmac=68c9163f772eecb
 
 ### Retrieve your access token
 
-Now that you have your client ID, client secret, and authorization code, you can retrieve your access token.
+Now that you have your client ID, client secret, and authorization code, you can now retrieve your access token. To retrieve your access token, make a POST request to your domain's `myshopify.com` URL while appending this URL with [!DNL Shopify's] API endpoint: `/admin/oauth/access_token`. 
+
+**API format**
+
+```https
+POST /{SHOP}.myshopify.com/admin/oauth/access_token
+```
 
 **Request**
+
+The following request generates an access token for your [!DNL Shopify] instance.
 
 ```shell
 curl -X POST \
@@ -138,10 +146,8 @@ A successful response returns information on your webhook, including its corresp
 
 ### Limitations {#limitations}
 
-The following is a list of known limitations that you may encounter when using webhooks with the [!DNL Shopify] source.
+The following is a list of known limitations that you may encounter when using webhooks with the [!DNL Shopify] streaming source.
 
-* It's not guaranteed that you can order different topics for the same resource. For example, it's possible that a `products/update` webhook gets delivered before a `products/create` webhook.
-* 
-
-
-The webhooks API provides "at least once" delivery of webhook events. This means that an endpoint might receive the same webhook event more than once. You can detect duplicate webhook events by comparing the X-Shopify-Webhook-Id header to previous events.
+* It's not guaranteed that you can arrange the order of delivery of different topics for the same resource. For example, it's possible that a `products/update` webhook gets delivered before a `products/create` webhook.
+* You can set your webhook to deliver webhook events to an endpoint at least once. This means that an endpoint may receive the same event more than once. You can scan for duplicate webhook events by comparing the `X-Shopify-Webhook-Id` header to previous events.
+* [!DNL Shopify] treats HTTP 2xx status responses as successful notifications. Any other status code responses are deemed as failures. [!DNL Shopify] provides a retry mechanism for failed webhook notifications. If there is **no response after waiting for five seconds**, [!DNL Shopify] retries the connection **19 times** over the course of the next **48 hours**. If there are still no responses by the end of the retry period, then [!DNL Shopify] deletes the webhook. 
