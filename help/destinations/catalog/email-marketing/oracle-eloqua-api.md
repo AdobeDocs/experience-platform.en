@@ -2,8 +2,8 @@
 title: (API) Oracle Eloqua connection
 description: The (API) Oracle Eloqua destination allows you to export your account data and activate it within Oracle Eloqua for your business needs.
 last-substantial-update: 2023-03-14
-exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
 ---
+
 # [!DNL (API) Oracle Eloqua] connection
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) enables marketers to plan and execute campaigns while delivering a personalized customer experience for their prospects. With integrated lead management and easy campaign creation, it helps marketers engage the right audience at the right time in their buyer's journey and elegantly scales to reach audiences across channels including email, display search, video, and mobile. Sales teams can close more deals at a faster rate, increasing marketing ROI through real-time insight.
@@ -202,6 +202,7 @@ For additional details, see the [!DNL Oracle Eloqua] documentation:
 * [Oracle Eloqua Marketing Automation](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [REST API for Oracle Eloqua Marketing Cloud Service](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
 
+
 ### Changelog
 
 This section captures the functionality and significant documentation updates made to this destination connector.
@@ -210,7 +211,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
-|April 2023|Documentation update| <ul><li>We updated the [use-cases](#use-cases) section with a clearer example of when customers would benefit from using this destination.</li> <li>We updated the [mapping](#mapping-considerations-example) section to reflect the correct required mappings. The `Attribute: last_name` and `Identity: email` target mappings are mandatory for this destination. If these mappings are missing, any other mappings are ignored and not sent to [!DNL Zendesk].</li> <li>We updated the [mapping](#mapping-considerations-example) section with clear examples of both mandatory and optional mappings.</li> <li>We updated the [Connect to the destination](#connect) section with an example on how to construct the concatenated value for the **[!UICONTROL Username]** field using the [!DNL Oracle Eloqua] Company Name and the [!DNL Oracle Eloqua] Username. (PLATIR-28343)</li></ul> |
+|April 2023|Documentation update| <ul><li>We updated the [use-cases](#use-cases) section with a clearer example of when customers would benefit from using this destination.</li> <li>We updated the [mapping](#mapping-considerations-example) section with clear examples of both mandatory and optional mappings.</li> <li>We updated the [Connect to the destination](#connect) section with an example on how to construct the concatenated value for the **[!UICONTROL Username]** field using the [!DNL Oracle Eloqua] Company Name and the [!DNL Oracle Eloqua] Username. (PLATIR-28343)</li></ul> |
 |March 2023|Initial release|Initial destination release and documentation publish.|
 
 {style="table-layout:auto"}
