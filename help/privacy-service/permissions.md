@@ -129,13 +129,13 @@ The [!UICONTROL Configure API] dialog shows the available product profiles that 
 
 #### Confirm your settings have been applied {#confirm-applied-settings}
 
-To confirm that your settings have been applied to the account. Return to the [Admin Console](https://adminconsole.adobe.com/) and navigate to your newly created product profile. Select the **[!UICONTROL API Credentials]** tab to see a list of associated projects. The project used in Developer Console where you assigned the product profile to the technical account is displayed in the list of credentials. The name of each API credential is composed of the project name with a randomly generated number suffixed to the end. Select a credential to open the details panel.   
+To confirm that your settings have been applied to the account. Return to the [Admin Console](https://adminconsole.adobe.com/) and navigate to your newly created product profile. Select the **[!UICONTROL API Credentials]** tab to see a list of associated projects. The project used in Developer Console where you assigned the product profile to the technical account is displayed in the list of credentials. The name of each API credential is composed of the project name with a randomly generated number suffixed to the end. Select a credential to open the [!UICONTROL Details] panel.   
 
 ![A product profile in the Admin Console with the API credentials tab and a row of project credentials highlighted.](./images/permissions/confirm-credentials-in-admin-console.png)
 
 The [!UICONTROL Details] panel contains information on the API credential including the associated technical ID, the API key, created and last modified date, as well as associated Adobe Products.
 
-![The highlighted details panel of an API credential within Admin Console.](./images/permissions/admin-console-details-panel.png)
+![The highlighted Details panel of an API credential within Admin Console.](./images/permissions/admin-console-details-panel.png)
 
 ## Next steps
 
