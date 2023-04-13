@@ -87,11 +87,13 @@ A successful response returns your access token and permission scopes.
 }
 ```
 
-### Create a webhook for streaming [!DNL Shopify] data
+## Create a webhook for streaming [!DNL Shopify] data
 
 Webhooks allow applications to stay synchronized with your [!DNL Shopify] data or perform an action after a particular event occurs in a shop. For streaming [!DNL Shopify] data to Experience Platform, webhooks can be used to define the http endpoint and the topics for subscription.
 
 **Request**
+
+The following request creates a webhook for your [!DNL Shopify] streaming data.
 
 ```shell
 curl -X POST \
@@ -100,7 +102,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \; request_method=POST' \
   -d '{
   "webhook": {
-    "address": "https://dcs-int.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "address": "https://dcs.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
     "topic": "orders/create",
     "format": "json"
   }
@@ -109,17 +111,19 @@ curl -X POST \
 
 | Parameter | Description |
 | --- | --- | 
-| `webhook.address` |
-| `webhook.topic` |
-| `webhook.format` |
+| `webhook.address` | The http endpoint where streaming messages are sent. |
+| `webhook.topic` | The topic of your webhook subscription. For more information, read the [[!DNL Shopify] webhook event topics guide](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
+| `webhook.format` | The format of your data. |
 
 **Response**
+
+A successful response returns information on your webhook, including its corresponding `id`, address, and other metadata information.
 
 ```json
 {
   "webhook": {
     "id": 1091138715786,
-    "address": "https://dcs-int.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "address": "https://dcs.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
     "topic": "orders/create",
     "created_at": "2022-07-20T07:15:23-04:00",
     "updated_at": "2022-07-20T07:15:23-04:00",
@@ -131,3 +135,10 @@ curl -X POST \
   }
 }
 ```
+
+### Limitations {#limitations}
+
+The following is a list of known limitations that you may encounter when using webhooks with the [!DNL Shopify] source.
+
+* It's not guaranteed that you can order different topics for the same resource. For example, it's possible that a `products/update` webhook gets delivered before a `products/create` webhook.
+* 
