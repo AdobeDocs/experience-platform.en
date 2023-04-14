@@ -8,7 +8,7 @@ exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
 
 ## Overview {#overview}
 
-[[!DNL (API) Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/overview/) (formerly known as [!DNL ExactTarget]) is a digital marketing suite that allows you to build and customize journeys for visitors and customers to personalize their experience.
+[[!DNL (API) Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/engagement/) (formerly known as [!DNL ExactTarget]) is a digital marketing suite that allows you to build and customize journeys for visitors and customers to personalize their experience.
 
 >[!IMPORTANT]
 >
@@ -38,7 +38,7 @@ Note the following prerequisites in order to export data from Platform to your [
 
 #### You need to have a [!DNL Salesforce Marketing Cloud] account {#prerequisites-account}
 
-A [!DNL Salesforce Marketing Cloud] account with a subscription to the [Marketing Cloud Account Engagement](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) product is mandatory to proceed.
+A [!DNL Salesforce Marketing Cloud] account with a subscription to the [[!DNL Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/engagement/) product is mandatory to proceed.
 
 Reach out to [[!DNL Salesforce] Support](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) if you do not have a [!DNL Salesforce Marketing Cloud] account or your account is missing the [!DNL Marketing Cloud Account Engagement] product subscription.
 
@@ -267,6 +267,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
+|April 2023|Documentation update|We made a correction in the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section to update a reference link calling out that [!DNL Salesforce Marketing Cloud Engagement] is a mandatory subscription to use this destination.|
 |February 2023|Documentation update|We updated the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section to include a reference link calling out that [!DNL Salesforce Marketing Cloud Account Engagement] is a mandatory subscription to use this destination.|
 |February 2023|Functionality update|We fixed an issue where an incorrect configuration in the destination was causing a malformed JSON to be sent to Salesforce. This resulted in some users seeing high numbers of identities failed on activation. (PLATIR-26299)|
 |January 2023|Documentation update| <ul><li>We updated the [Prerequisites in [!DNL Salesforce]](#prerequisites-destination) section to call out that attributes need to be created on the [!DNL Salesforce] side. This section now includes detailed instructions on how to do that and best practices around naming the attributes in [!DNL Salesforce]. (PLATIR-25602)</li><li>We added clear instructions on how to use the Mapping ID for each activated segment in the [segment scheduling](#schedule-segment-export-example) step. (PLATIR-25602)</li></ul> |
