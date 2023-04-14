@@ -1,6 +1,7 @@
 ---
 title: Profile export behavior
 description: Learn how profile export behavior varies between the different integration patters supported in Experience Platform destinations.
+exl-id: 2be62843-0644-41fa-a860-ccd65472562e
 ---
 # Profile export behavior for different destination types
 

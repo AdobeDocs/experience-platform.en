@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;experienceevent queries;experienceevent query;Experience Event query;
 title: List Visitors by Their Number of Page Views
 description: Learn how to write queries that use Experience Events to retrieve a list of visitors organized by the number of page views.
+exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
 ---
 # List visitors by their number of page views
 

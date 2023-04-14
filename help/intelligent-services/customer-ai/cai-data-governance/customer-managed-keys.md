@@ -2,6 +2,7 @@
 keywords: insights;customer ai;customer ai insights;AAI query service;customer ai queries;customer ai scores; customer managed keys in CAI
 title: Customer Managed Keys in Customer AI.
 description: Learn how to set up Customer Managed Keys for Customer AI.
+exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
 ---
 # Customer Managed Keys
 

@@ -2,9 +2,10 @@
 keywords: Experience Platform;home;popular topics;Pinterest Ads;
 title: Pinterest Ads Source Overview
 description: Learn how to connect Pinterest Ads to Adobe Experience Platform using APIs or the user interface.
-badge: "Beta"
+badge: Beta
 hide: true
 hidefromtoc: true
+exl-id: 8edbcb26-0a18-47f1-8012-ca209d99d7a6
 ---
 # [!DNL Pinterest Ads]
 

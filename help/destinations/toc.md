@@ -75,6 +75,7 @@ feature: Destinations
         * [Google Display & Video 360 connection](./catalog/advertising/google-dv360.md)
         * [Google gtag extension](./catalog/advertising/gtag-advertising.md)
         * [LinkedIn Insight Tag extension](./catalog/advertising/linkedin.md)
+        * [(Alpha) LiveRamp - SFTP connection](./catalog/advertising/liveramp.md)
         * [Microsoft Bing connection](./catalog/advertising/bing.md)
         * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest-extension.md)
         * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)

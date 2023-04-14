@@ -13,7 +13,7 @@ Now that you understand what headers to use, you are ready to begin making calls
 
 ### Retrieve a list of scheduled queries
 
-You can retrieve a list of all scheduled queries for your IMS Organization by making a GET request to the `/schedules` endpoint. 
+You can retrieve a list of all scheduled queries for your organization by making a GET request to the `/schedules` endpoint. 
 
 **API format**
 
@@ -39,7 +39,7 @@ The following is a list of available query parameters for listing scheduled quer
 
 **Request**
 
-The following request retrieves the latest scheduled query created for your IMS organization.
+The following request retrieves the latest scheduled query created for your organization.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
@@ -51,7 +51,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **Response**
 
-A successful response returns HTTP status 200 with a list of scheduled queries for the specified IMS Organization. The following response returns the latest scheduled query created for your IMS organization.
+A successful response returns HTTP status 200 with a list of scheduled queries for the specified organization. The following response returns the latest scheduled query created for your organization.
 
 ```json
 {

@@ -84,13 +84,13 @@ One of the key features of [!DNL Real-Time Customer Profile] is the ability to u
 
 To learn more about union schemas, including how to access union schemas in the UI, visit the [union schema UI guide](ui/union-schema.md).
 
-### (Alpha) Computed attributes
+<!-- ### (Alpha) Computed attributes
 
 >[!IMPORTANT]
 >
 >Computed attribute functionality is in alpha. The documentation and functionality are subject to change.
 
-Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md).
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
 ## Profiles and segments
 

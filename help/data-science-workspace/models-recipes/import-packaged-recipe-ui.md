@@ -106,7 +106,7 @@ Below is a sample configuration file showing default training and scoring behavi
 | `ACP_DSW_INPUT_FEATURES` | String | List of comma separated input schema attributes. |
 | `ACP_DSW_TARGET_FEATURES` | String | List of comma separated output schema attributes. |
 | `ACP_DSW_FEATURE_UPDATE_SUPPORT` | Boolean | Determines whether input and output features are modifiable |
-| `tenantId` | String | This ID ensures resources you create are namespaced properly and contained within your IMS Organization. [Follow the steps here](../../xdm/api/getting-started.md#know-your-tenant_id) to find your tenant ID. |
+| `tenantId` | String | This ID ensures resources you create are namespaced properly and contained within your organization. [Follow the steps here](../../xdm/api/getting-started.md#know-your-tenant_id) to find your tenant ID. |
 | `ACP_DSW_TRAINING_XDM_SCHEMA` | String | The input schema used for training a Model. Leave this empty when importing in UI, replace with training SchemaID when importing using API. |
 | `evaluation.labelColumn` | String | Column label for evaluation visualizations. |
 | `evaluation.metrics` | String | Comma separated list of evaluation metrics to be used for evaluating a Model. |
