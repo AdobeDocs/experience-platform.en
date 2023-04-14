@@ -83,11 +83,9 @@ With your streaming dataflow created, you can now retrieve your streaming endpoi
 
 To retrieve your streaming endpoint, go to the [!UICONTROL Dataflow activity] page of the dataflow that you just created and copy the endpoint from the bottom of the [!UICONTROL Properties] panel.
 
-![The streaming endpoint in dataflow activity.](../assets/testing/endpoint-test.png)
+![The streaming endpoint in dataflow activity.](../../../../images/tutorials/create/shopify-streaming/endpoint.png)
 
 ## Next steps
 
-*Workflows for the remaining steps of creating a dataflow are modularized. If there are any specific call-outs you want to make regarding your source, please see the additional resources section below.*
-
-By following this tutorial, you hcave established a connection to your *YOURSOURCE* account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+By following this tutorial, you have established a source connection and dataflow to your [!DNL Shopify Streaming] account. For instructions on how to connect your [!DNL Shopify Streaming] account using the API, please read the tutorial on [creating a source connection and dataflow to stream [!DNL Shopify] data using the Flow Service API](../../../api/create/ecommerce/shopify-streaming.md).
 
