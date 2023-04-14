@@ -118,7 +118,7 @@ Queries that use anonymous blocks to comprise their SQL statements are separated
 
 >[!NOTE]
 >
->The run details of an anonymous block that uses the DROP command will **not** be reported as a separate subquery. Separate run details are available for CTAS queries, ITAS queries, and COPY statements used as anonymous block subqueries. The DROP command is currently not supported.  
+>The run details of an anonymous block that uses the DROP command will **not** be reported as a separate subquery. Separate run details are available for CTAS queries, ITAS queries, and COPY statements used as anonymous block subqueries. Run details for the DROP command are currently not supported.  
 
 Anonymous blocks are denoted through the use of a `$$` prefix before the query. See the [anonymous block document](../essential-concepts/anonymous-block.md) to find out more about anonymous blocks in query service.
 
