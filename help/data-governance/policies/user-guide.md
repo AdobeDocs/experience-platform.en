@@ -63,7 +63,7 @@ Depending on whether you are part of the beta for consent policies, one of the f
 
 Governance and consent policies can be used together to create robust rules for governing audiences mapped to a destination. Consent policies are inclusive in nature, meaning they dictate which profiles can be included in each marketing experience. Conversely, governance policies exclude certain data that have defined or custom labels, from being used in this activation.
 
-By using this behavior you can set up a combination of governance and consent rules that include the correct profiles but exclude any data that goes against your organizational rules. An example scenario would be, where you want to exclude sensitive data from being included but are still able to target consensual users for marketing via social media. 
+By using this behavior you can set up a combination of governance and consent rules that include the correct profiles but exclude any data that goes against your organizational rules. An example scenario would be, where you want to exclude sensitive data from being included but are still able to target consented users for marketing via social media. 
 
 1. The **data is ingested**. A dataset of profiles is ingested that has certain fields marked with a "sensitive" data label. These profiles also have consent information provided for different marketing channels, including social media.
 
