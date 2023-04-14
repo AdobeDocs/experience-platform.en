@@ -1,7 +1,7 @@
 ---
 title: Salesforce Marketing Cloud Account Engagement
 description: Learn how to use the Salesforce Marketing Cloud Account Engagement (formerly known as Pardot) destination to export your account data and activate it within Salesforce Marketing Cloud Account Engagement for your business needs.
-last-substantial-update: 2023-04-06
+last-substantial-update: 2023-04-14
 ---
 # [!DNL Salesforce Marketing Cloud Account Engagement] connection
 
