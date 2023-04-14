@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;shopify;Shopify;streaming
 title: Create A Shopify Streaming Connection And Dataflow In The UI
-description:
+description: Learn how to create a Shopify Streaming source connection and dataflow using the Platform user interface
 badge: "Beta"
 ---
-# Create a source connection and dataflow to stream *YOURSOURCE* data using the UI
+# Create a source connection and dataflow for [!DNL Shopify Streaming] data using the UI
 
-This tutorial provides steps for creating a [!DNL Shopify] streaming source connection and dataflow using the Platform user interface.
+This tutorial provides steps for creating a [!DNL Shopify Streaming] source connection and dataflow using the Platform user interface.
 
 ## Getting started {#getting-started}
 
@@ -17,17 +17,17 @@ This tutorial requires a working understanding of the following components of Ex
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-## Connect your *YOURSOURCE* account
+>[!IMPORTANT]
+>
+>This tutorial requires you to have completed prerequisite setup for your [!DNL Shopify Streaming] account. For steps on setting up your account, read the [[!DNL Shopify Streaming] overview](../../../../connectors/ecommerce/shopify-streaming.md).
+
+## Connect your [!DNL Shopify Streaming] account
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the **Streaming** category, select *YOURSOURCE*, and then select **[!UICONTROL Add data]**.
-
->[!TIP]
->
->The screenshots used below are examples. When creating your documentation, please replace the images with screenshots of your actual source. You can use the same mark up pattern and color, as well as the same file names. Please ensure that your screenshot captures the entire Platform UI screen. For information on how to upload your screenshots, see the guide on [submitting your documentation for review](../documentation/github.md).
+Under the **eCommerce** category, select [!DNL Shopify Streaming], and then select **[!UICONTROL Add data]**.
 
 ![The Experience Platform sources catalog](../assets/streaming/catalog.png)
 
@@ -91,6 +91,3 @@ To retrieve your streaming endpoint, go to the [!UICONTROL Dataflow activity] pa
 
 By following this tutorial, you hcave established a connection to your *YOURSOURCE* account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
-## Additional resources
-
-*This is an optional section where you can provide further links to your product documentation or any other steps, screenshots, nuances you consider important for the customer to be successful. You can use this section to add information on or tips on the entire workflow of your source, especially if there are particular "gotchas" that an end-user might encounter.*
