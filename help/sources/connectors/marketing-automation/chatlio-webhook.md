@@ -1,7 +1,9 @@
 ---
 title: Chatlio Source Overview
-description: Learn how to connect Chatlio to Adobe Experience Platform using APIs or the user interface by leveraging webhooks 
-badge: "Beta"
+description: Learn how to connect Chatlio to Adobe Experience Platform using APIs or the user interface by leveraging webhooks
+badge: Beta
+last-substantial-update: 2023-03-29
+exl-id: 4a71d1dc-e0eb-443e-a956-8caa0e82fa18
 ---
 # [!DNL Chatlio]
 
@@ -49,4 +51,3 @@ The documentation below provides information on how to create a [!DNL Chatlio] s
 ### Connect [!DNL Chatlio] to Platform using the UI {#connect-to-platform-using-ui}
 
 * [Create a source connection to bring [!DNL Chatlio] data to Platform using the user interface](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md)
-

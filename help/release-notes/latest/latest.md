@@ -1,12 +1,9 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The March 2023 release notes for Adobe Experience Platform.
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
-
->[!IMPORTANT]
->
->Starting April 5th, 2023, the `Existing` status will be deprecated from the segment membership map in order to remove redundancy in the segment membership lifecycle. After this change, profiles qualified in a segment will be represented as `Realized` and profiles disqualified will continue to be represented as `Exited`. For more details on this change, please read the [Segmentation Service section](#segmentation).
 
 **Release date: March 29, 2023**
 
@@ -183,7 +180,6 @@ To learn more about Real-Time CDP B2B Edition, read the [Real-Time CDP B2B Editi
 | Feature | Description |
 | ------- | ----------- |
 | Profile metrics | To give you a more accurate representation of profile metrics, membership breakdown and churn metrics are being combined and are now calculated over a 24-hour period. More information is available in the [Segmentation UI guide](../../segmentation/ui/overview.md#browse) |
-| Segment membership map | As a follow up to the previous announcement in February, on April 5th, 2023, the `Existing` status will be deprecated from the segment membership map in order to remove redundancy in the segment membership lifecycle. After this change, profiles qualified in a segment will be represented as `Realized` and profiles disqualified will continue to be represented as `Exited`.<br/><br/> This change could impact you if, you're using [enterprise destinations](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API), and might have automated downstream processes in place based on the `Existing` status. Please review your downstream integrations if this is the case for you. If you are interested in identifying newly qualified profiles beyond a certain time, please consider using a combination of the `Realized` status and the `lastQualificationTime` in your segment membership map. For more information, please reach out to your Adobe representative. |
 
 {style="table-layout:auto"}
 

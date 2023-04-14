@@ -1,6 +1,7 @@
 ---
 title: Identity handling in the destinations activation workflow
 description: Learn how identity export is handled in the activation workflow, depending on destination type
+exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
 ---
 # Identity handling in the destinations activation workflow
 

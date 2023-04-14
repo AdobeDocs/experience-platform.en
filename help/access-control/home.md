@@ -49,7 +49,7 @@ In the [!DNL Admin Console], permissions are assigned to users through the use o
 
 ## Sandboxes and permissions
 
-Non-Production sandboxes are a form of data virtualization that allow you to isolate data from other sandboxes and are typically used for development experiments, testing, or trials. A product profile's permissions give the profile's users access to [!DNL Platform] features within the sandbox environments to which they've been granted access to. A default Experience Platform license grants you five sandboxes (one production and four non-production). You can add packs of ten non-production sandboxes up to a maximum of 75 sandboxes in total. Please contact your IMS Org Administrator or your Adobe sales representative for more details.
+Non-Production sandboxes are a form of data virtualization that allow you to isolate data from other sandboxes and are typically used for development experiments, testing, or trials. A product profile's permissions give the profile's users access to [!DNL Platform] features within the sandbox environments to which they've been granted access to. A default Experience Platform license grants you five sandboxes (one production and four non-production). You can add packs of ten non-production sandboxes up to a maximum of 75 sandboxes in total. Please contact your organization's administrator or your Adobe sales representative for more details.
 
 For more information about sandboxes in [!DNL Experience Platform], please refer to the [sandboxes overview](../sandboxes/home.md).
 
@@ -108,7 +108,7 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Destinations] | [!UICONTROL Destination Authoring] | Ability to author destinations using [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Access to read, create, edit, and disable sources. |
 | [!DNL Data Ingestion] | [!UICONTROL View Sources] | Read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab. |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Access to create, accept, and decline partner handshakes to connect two IMS Organizations and enable [!DNL Segment Match] flows. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Access to create, accept, and decline partner handshakes to connect two organizations and enable [!DNL Segment Match] flows. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Access to read, create, edit, and publish [!DNL Segment Match] feeds with active partners. |
 | [!DNL Data Science Workspace] | [!UICONTROL Manage Data Science Workspace] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. |
 | Data Governance | [!UICONTROL Apply Data Usage Labels] | Access to read, create, and delete usage labels. |

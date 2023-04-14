@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;unified tags;tags;
 title: Unified Tags Overview (beta)
 description: This document provides information on unified tags in Adobe Experience Platform
+exl-id: a19e37c3-697a-4000-9cb8-d67478b47dc6
 ---
 # Unified tags overview (beta)
 

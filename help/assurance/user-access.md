@@ -1,8 +1,8 @@
 ---
 title: Adobe Experience Platform Assurance user access
 description: This guide explains how to keep user access to Adobe Experience Platform Assurance by managing it through the Admin Console.
+exl-id: b26ff857-5486-4391-b5a0-1e5cb05a1f11
 ---
-
 # User access
 
 >[!WARNING]

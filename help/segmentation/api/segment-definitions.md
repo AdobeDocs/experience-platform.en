@@ -17,7 +17,7 @@ The endpoints used in this guide are part of the [!DNL Adobe Experience Platform
 
 ## Retrieve a list of segment definitions {#list}
 
-You can retrieve a list of all segment definitions for your IMS Organization by making a GET request to the `/segment/definitions` endpoint.
+You can retrieve a list of all segment definitions for your organization by making a GET request to the `/segment/definitions` endpoint.
 
 **API format**
 
@@ -40,7 +40,7 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 
 **Request**
 
-The following request will retrieve the last two segment definitions posted within your IMS Organization.
+The following request will retrieve the last two segment definitions posted within your organization.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 \
@@ -52,7 +52,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 **Response**
 
-A successful response returns HTTP status 200 with a list of segment definitions for the specified IMS organization as JSON.
+A successful response returns HTTP status 200 with a list of segment definitions for the specified organization as JSON.
 
 ```json
 {
@@ -203,11 +203,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
 | `description` | A human-readable description of the definition. |
 
->[!NOTE]
+<!-- >[!NOTE]
 >
 >A segment definition expression may also reference a computed attribute. To learn more, please refer to the [computed attribute API endpoint guide](../../profile/computed-attributes/ca-api.md)
 >
->Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change.
+>Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change. -->
 
 **Response**
 

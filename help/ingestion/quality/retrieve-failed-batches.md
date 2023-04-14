@@ -188,9 +188,9 @@ This section contains information about other ingestion error types that can occ
 
 Like the timestamp error in the previous example flow, these errors are due to incorrectly formatted XDM. These error messages will vary, depending on the nature of the problem. As a result, no specific error example can be shown.
 
-### Missing or invalid IMS Org ID
+### Missing or invalid organization ID
 
-This error is shown if the IMS Org ID is either missing from the payload is invalid.
+This error is shown if the organization ID is either missing from the payload is invalid.
 
 ```json
 {
