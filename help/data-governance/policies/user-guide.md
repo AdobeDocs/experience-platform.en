@@ -63,13 +63,9 @@ Depending on whether you are part of the beta for consent policies, one of the f
 
 Governance and consent policies can be used together to create robust rules for governing audiences mapped to a destination. Consent policies are inclusive in nature, meaning they dictate which profiles can be included in each marketing experience. Conversely, governance policies exclude certain data that have defined or custom labels, from being used in this activation.
 
-By using this behavior you can set up a combination of governance and consent rules that include the correct profiles but exclude any data that goes against your organizational rules. An example scenario would be, where you want to exclude sensitive data from being included but are still able to target consented users for marketing via social media. 
+By using this behavior, you can set up a combination of configured policies and consent rules that include the correct profiles, but prevents you from including data that goes against your set organizational rules. An example scenario would be, where you want to exclude sensitive data from being included but are still able to target consented users for marketing via social media. 
 
-1. The **data is ingested**. A dataset of profiles is ingested that has certain fields marked with a "sensitive" data label. These profiles also have consent information provided for different marketing channels, including social media.
-
-1. The **policies are created**. Your governance policy excludes sensitive data from the audience mapped to a destination. Your consent policy then includes only those profiles that have consented to receiving marketing via social media.
-
-1. **Policy Enforcement** occurs. Profiles that have consented to receiving social media marketing communication are ACTIVATED. Whereas, segments that use sensitive data are BLOCKED.
+![An infographic outlining the steps to use governance and consent policies together to create robust rules for governing audiences.](../images/policies/governance-and-consent-policies-infographic.png)
 
 ### Create a data governance policy {#create-governance-policy}
 
