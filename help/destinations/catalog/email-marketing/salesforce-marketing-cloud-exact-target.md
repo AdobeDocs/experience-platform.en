@@ -75,6 +75,21 @@ An example of attribute creation in [!DNL Salesforce Marketing Cloud], is shown 
 >* To distinguish between attributes used for Platform segments and other attributes within [!DNL Salesforce Marketing Cloud], you could include a recognizable prefix or suffix for the attributes used for Adobe segments. For example, instead of `test_segment`, use `Adobe_test_segment` or `test_segment_Adobe`.
 >* If you already have other attributes created in [!DNL Salesforce Marketing Cloud], you can use the same name as the Platform segment, to easily identify the segment in [!DNL Salesforce Marketing Cloud].
 
+#### Assign user roles and permissions within [!DNL Salesforce Marketing Cloud] {#prerequisites-roles-permissions}
+
+As [!DNL Salesforce Marketing Cloud] supports custom roles depending on your use-case your user should be assigned the relevant roles to update your attributes within your [!DNL Salesforce Marketing Cloud] attribute-sets. An example of roles assigned to an user is shown below:
+![Salesforce Marketing Cloud UI for a selected user which shows their assigned roles.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-edit-roles.png)
+
+Depending on which roles your [!DNL Salesforce Marketing Cloud] user has been assigned you would also need to assign permissions to the [!DNL Salesforce Marketing Cloud] attribute-sets which contain the fields you are looking to update. 
+
+As this destination requires access to the `[!DNL Email Demographics system attribute-set]` you need to allow `Email` as shown below:
+![Salesforce Marketing Cloud UI showing email attribute-set with allowed permissions.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
+
+To restrict the level of access you can also override individual accesses by using granular privileges.
+![Salesforce Marketing Cloud UI showing the email attribute-set with granular permissions.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
+
+Refer to the [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&id=sf.mc_overview_marketing_cloud_roles.htm&type=5) and [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&id=sf.mc_overview_roles.htm&type=5) pages for detailed guidance.
+
 #### Gather [!DNL Salesforce Marketing Cloud] credentials {#gather-credentials}
 
 Note down the items below before you authenticate to the [!DNL (API) Salesforce Marketing Cloud] destination.
@@ -267,7 +282,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
-|April 2023|Documentation update|We made a correction in the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section to update a reference link calling out that [!DNL Salesforce Marketing Cloud Engagement] is a mandatory subscription to use this destination.|
+|April 2023|Documentation update|<ul><li>We corrected a reference link in the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section to call out that [!DNL Salesforce Marketing Cloud Engagement] is a mandatory subscription to use this destination.</li> <li>We added a section under [prerequisites](#prerequisites) for [roles and permissions](#prerequisites-roles-permissions) to be assigned to the [!DNL Salesforce] user for this destination to work. (PLATIR-26299)</li></ul>|
 |February 2023|Documentation update|We updated the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section to include a reference link calling out that [!DNL Salesforce Marketing Cloud Account Engagement] is a mandatory subscription to use this destination.|
 |February 2023|Functionality update|We fixed an issue where an incorrect configuration in the destination was causing a malformed JSON to be sent to Salesforce. This resulted in some users seeing high numbers of identities failed on activation. (PLATIR-26299)|
 |January 2023|Documentation update| <ul><li>We updated the [Prerequisites in [!DNL Salesforce]](#prerequisites-destination) section to call out that attributes need to be created on the [!DNL Salesforce] side. This section now includes detailed instructions on how to do that and best practices around naming the attributes in [!DNL Salesforce]. (PLATIR-25602)</li><li>We added clear instructions on how to use the Mapping ID for each activated segment in the [segment scheduling](#schedule-segment-export-example) step. (PLATIR-25602)</li></ul> |
