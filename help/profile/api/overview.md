@@ -14,11 +14,11 @@ To view all available endpoints and CRUD operations, visit the [Real-Time Custom
 
 For a guide to working with [!DNL Real-Time Customer Profile] data in the [!DNL Experience Platform] UI, please refer to the [Profile user guide](../ui/user-guide.md).
 
-<!-- ## (Alpha) Computed attributes {#computed-attributes}
+## (Beta) Computed attributes {#computed-attributes}
 
 >[!IMPORTANT]
 >
->Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change.
+>Computed attribute functionality is in beta and is not available to all users. Documentation and functionality are subject to change.
 
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
 

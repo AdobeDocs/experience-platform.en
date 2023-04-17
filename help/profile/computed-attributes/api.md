@@ -40,8 +40,7 @@ The following query parameters can be used when retrieving a list of computed at
 | `limit` | A parameter that specifies the maximum number of items returned as part of the response. The minimum value of this parameter is 1 and the maximum value is 40. If this parameter is not included, by default, 20 items will be returned. | `limit=20` |
 | `offset` | A parameter that specifies the number of items to skip before returning the items. | `offset=5` |
 | `sortBy` | A parameter that specifies the order in which the returned items are sorted. Available options include `name`, `status`, `updateEpoch`, and `createEpoch`. You can also choose whether to sort in ascending order or descending order by not including or including a `-` in front of the sort option. By default, the items will be sorted by `updateEpoch` in descending order. | `sortBy=name` |
-| `status` | A parameter that lets you filter by the status of the computed attribute. Available options include `enabled`, `enabling`, `failed`, `success`, `running`, `disabled`, and `disabling`. This option is case insensitive. | `status=enabled` | 
-| `state` | A parameter that lets you filter by the state of the computed attribute. Available options include `published` or `draft`. This option is case insensitive. | `state=published` |
+| `status` | A parameter that lets you filter by the status of the computed attribute. Available options include `draft`, `new`, `processing`, `processed`, `failed`, `disabled`. This option is case insensitive. | `status=draft` | 
 
 **Request**
 
@@ -212,7 +211,7 @@ A successful response returns HTTP status 200 with a list of the last 3 updated 
 | Property | Description |
 | -------- | ----------- |
 | `_links` | An object that contains the pagination information required to access the last page of results, the next page of results, the previous page of results, or the current page of results. |
-| `computedAttributes` | An array that contains the computed attributes based on your query parameters. |
+| `computedAttributes` | An array that contains the computed attributes based on your query parameters. More information about the computed attributes array can be found in the [retrieve a specific computed attribute section](#get). |
 | `_page` | An object that contains metadata about the returned results. This includes information about the current offset, the count of computed attributes returned, the total count of computed attributes, as well as the limit of computed attributes returned. |
 
 ## Create a computed attribute {#create}
@@ -236,8 +235,8 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "testing",
-        "description": "Sample Description",
         "displayName": "Sample Display Name",
+        "description": "Sample Description",
         "expression": {
             "type": "PQL", 
             "format": "pql/text", 
@@ -260,7 +259,7 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 | `expression.type` | The type of the expression. Currently, only PQL is supported. |
 | `expression.format` | The format of the expression. Currently, only `pql/text` is supported. |
 | `expression.value` | The value of the expression. |
-| `duration` | An object that represents the lookback period for the computed attribute. |
+| `duration` | An object that represents the lookback period for the computed attribute. The lookback period represents how far back can be looked back to compute the computed attribute. |
 | `duration.count` | A number that represents the duration for the lookback period. The possible values depend on the value of the `duration.unit` field. <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
 | `duration.unit` | A string that represents the unit of time that will be used for the lookback period. Possible values include: `HOURS`, `DAYS`, `WEEKS`, and `MONTHS`. |
 | `status` | The status of the computed attribute. Possible values include `DRAFT`, `NEW`, and `PUBLISHED`. |
@@ -296,10 +295,7 @@ A successful response returns HTTP status 200 with information about your newly 
     "mergeFunction": {
         "value": "SUM"
     },
-    "status": {
-        "type": "DRAFT",
-        "job": "NOT_STARTED"
-    },
+    "status": "DRAFT",
     "schema": {
         "name": "_xdm.context.profile"
     },
@@ -322,9 +318,7 @@ A successful response returns HTTP status 200 with information about your newly 
 | Property | Description |
 | -------- | ----------- |
 | `id` | The system-generated ID of your newly created computed attribute. |
-| `status` | An object that contains the status of the computed attribute. |
-| `status.type` | The name of the computed attribute's status. This can either be `PUBLISHED` or `DRAFT`. |
-| `status.job` | ??? |
+| `status` | The computed attribute's status. This can either be `DRAFT` or `NEW`. |
 | `createEpoch` | The time at which the computed attribute was created, in seconds. |
 | `updateEpoch`| The time at which the computed attribute was last updated, in seconds. |
 | `createdBy` | The ID of the user who created the computed attribute. |
@@ -380,10 +374,7 @@ A successful response returns HTTP status 200 with detailed information about th
     "mergeFunction": {
         "value": "SUM"
     },
-    "status": {
-        "type": "DRAFT",
-        "job": "NOT_STARTED"
-    },
+    "status": "DRAFT",
     "schema": {
         "name": "_xdm.context.profile"
     },
@@ -413,7 +404,7 @@ A successful response returns HTTP status 200 with detailed information about th
 | `positionPath` | An array containing the deconstructed `path` to the computed attribute. |
 | `expression` | An object that contains the computed attribute's expression. |
 | `mergeFunction` | An object that contains the merge function for the computed attribute. This value is based off of the corresponding aggregation parameter within the computed attribute's expression. |
-| `status` | The computed attribute's status. This can be one of the following values:  |
+| `status` | The computed attribute's status. This can be one of the following values: `DRAFT`, `NEW`, `PROCESSING`, `PROCESSED`, `FAILED`, `DISABLED`, or `DELETED`. |
 | `schema` | An object that contains information about the schema where the expression is evaluated in. Currently, only `_xdm.context.profile` is supported. |
 | `returnSchema` | An object that contains the return type supported by the PQL expression. |
 | `definedOn` | An array showing the union schemas upon which the computed attribute has been defined. Contains one object per union schema, meaning there may be multiple objects within the array if the computed attribute has been added to multiple schemas based on different classes. |
@@ -451,15 +442,58 @@ curl -X DELETE https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4
 
 **Response**
 
-A successful response returns HTTP status 202 with (fill in blank).
+A successful response returns HTTP status 202 with details of the deleted computed attribute.
 
 ```json
-
+{
+    "id": "03ae581b-5f7b-48da-a9eb-4ef0daf4bc3c",
+    "type": "ComputedAttribute",
+    "name": "testdemopd2",
+    "displayName": "testdemopd2",
+    "description": "testdemopd2",
+    "imsOrgId": "{ORG_ID}",
+    "sandbox": {
+        "sandboxId": "02dd69f0-da73-11e9-9ea1-af59ce7c24e8",
+        "sandboxName": "prod",
+        "type": "production",
+        "isDefault": true
+    },
+    "path": "{TENANT_ID}",
+    "positionPath": [
+        "{TENANT_ID}"
+    ],
+    "keepCurrent": false,
+    "expression": {
+        "type": "PQL",
+        "format": "pql/text",
+        "value": "xEvent[(commerce.shipping.shipDate occurs <= 1 days before now) and (timestamp occurs <= 1 days before now)].min(commerce.shipping.shipDate)"
+    },
+    "mergeFunction": {
+        "value": "MIN"
+    },
+    "status": "DRAFT",
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "returnSchema": {
+        "meta:xdmType": "string"
+    },
+    "definedOn": [
+        {
+            "meta:resourceType": "unions",
+            "meta:containerId": "tenant",
+            "$ref": "https://ns.adobe.com/xdm/context/profile__union"
+        }
+    ],
+    "createEpoch": 1681365690928,
+    "updateEpoch": 1681365690928,
+    "createdBy": "{USER_ID}"
+}
 ```
 
 ## Update a specific computed attribute
 
-You can update a specific computed attribute by making a PUT request to the `/attributes` endpoint and providing the ID of the computed attribute you wish to update in the request path.
+You can update a specific computed attribute by making a PATCH request to the `/attributes` endpoint and providing the ID of the computed attribute you wish to update in the request path.
 
 >[!IMPORTANT]
 >
@@ -472,7 +506,7 @@ You can update a specific computed attribute by making a PUT request to the `/at
 **API format**
 
 ```http
-PUT /attributes/{ATTRIBUTE_ID}
+PATCH /attributes/{ATTRIBUTE_ID}
 ```
 
 | Parameter | Description |
@@ -484,7 +518,7 @@ PUT /attributes/{ATTRIBUTE_ID}
 The following request will update the status of the computed attribute from `DRAFT` to `NEW`.
 
 ```shell
-curl -X PUT https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b17-bbe6-2dbc08c1a631 \
+curl -X PATCH https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b17-bbe6-2dbc08c1a631 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -492,19 +526,12 @@ curl -X PUT https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b17
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
  {
-    "name": "testing",
-    "displayName": "Sample Display Name",
     "description": "Sample Description",
     "expression": {
         "type": "PQL",
         "format": "pql/text",
         "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0) and (timestamp occurs <= 7 days before now)].sum(commerce.order.priceTotal)"
     },
-     
-   "duration": {
-      "count": 4,
-      "unit": "DAYS"
-   },
     "status": "NEW"
  }'
 ```
