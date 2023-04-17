@@ -4,6 +4,7 @@ description: The Adobe Experience Platform UI provides a dashboard through which
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
 hide: true
 hidefromtoc: true
+recommendations: noCatalog, display
 ---
 # (Alpha) Monitor batch query license usage {#monitor-license-usage}
 

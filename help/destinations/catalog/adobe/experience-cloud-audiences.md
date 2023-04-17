@@ -2,8 +2,8 @@
 title: (Beta) Experience Cloud Audiences
 description: Learn how to share segments from Experience Platform to various Experience Platform solutions.
 last-substantial-update: 2023-01-25
+exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
 ---
-
 # (Beta) [!UICONTROL Experience Cloud Audiences] connection
 
 This destination allows you to share segments from Experience Platform to various Experience Cloud solutions, like Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target, or Marketo.

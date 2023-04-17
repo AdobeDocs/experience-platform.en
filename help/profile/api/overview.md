@@ -14,7 +14,7 @@ To view all available endpoints and CRUD operations, visit the [Real-Time Custom
 
 For a guide to working with [!DNL Real-Time Customer Profile] data in the [!DNL Experience Platform] UI, please refer to the [Profile user guide](../ui/user-guide.md).
 
-## (Alpha) Computed attributes {#computed-attributes}
+<!-- ## (Alpha) Computed attributes {#computed-attributes}
 
 >[!IMPORTANT]
 >

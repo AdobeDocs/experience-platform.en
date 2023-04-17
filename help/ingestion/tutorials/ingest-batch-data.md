@@ -12,13 +12,13 @@ Adobe Experience Platform allows you to easily import data into [!DNL Platform] 
 
 ## Getting started
 
-In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding. 
+In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an organization in [!DNL Experience Platform], please speak to your system administrator before proceeding. 
 
 If you would prefer to ingest data using Data Ingestion APIs please begin by reading the [Batch Ingestion developer guide](../batch-ingestion/api-overview.md).
 
 ## Datasets workspace
 
-The Datasets workspace within [!DNL Experience Platform] allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones. 
+The Datasets workspace within [!DNL Experience Platform] allows you to view and manage all of the datasets that your organization has made, as well as create new ones. 
 
 View the Datasets workspace by clicking **[!UICONTROL Datasets]** in the left-hand navigation. The Datasets workspace contains a list of datasets, including columns showing name, created (date and time), source, schema, and last batch status, as well as the date and time the dataset was last updated. 
 

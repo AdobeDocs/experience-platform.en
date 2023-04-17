@@ -3,6 +3,7 @@ title: Encrypted Data Ingestion
 description: Adobe Experience Platform allows you to ingest encrypted files through cloud storage batch sources.
 hide: true
 hidefromtoc: true
+exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
 ---
 # Encrypted data ingestion
 

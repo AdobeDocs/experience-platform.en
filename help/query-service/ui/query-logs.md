@@ -1,6 +1,7 @@
 ---
 title: Query Logs
 description: Query logs are automatically generated each time a query is executed and are available through the UI to help with troubleshooting. This document outlines how to use and navigate the Query Service Logs section of the UI.
+exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
 ---
 # Query logs
 

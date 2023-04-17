@@ -4,8 +4,8 @@ solution: Experience Platform
 feature: Customer AI
 title: Access Control for Customer AI
 description: This document provides information on attribute-based access control for Customer AI.
+exl-id: 02e3b6a4-304a-4ac4-b07c-010531101feb
 ---
-
 # Attribute-based access control
 
 >[!IMPORTANT]
