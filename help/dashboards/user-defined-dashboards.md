@@ -108,7 +108,7 @@ By adding an attribute as a filter, you can select which values to include or ex
 
 #### Filter out historical data
 
-Add the `date_key` attribute as a filter and select [!UICONTROl Recent date] to filter out historical data from your widget's data insights. This ensures that the data used to derive insights is taken from the most recent system snapshot.
+Add the `date_key` attribute as a filter and select **[!UICONTROL Recent date]** to filter out historical data from your widget's data insights. This ensures that the data used to derive insights is taken from the most recent system snapshot.
 
 ### Widget properties
 
@@ -148,7 +148,7 @@ Next, select the ellipses in the top right of the widget that you wish to duplic
 
 ![A widget in a uer-defined dashboard with the ellipses and Duplicate widget highlighted.]()
 
-A duplicate widget appear in your user-defined dashboard. Select the ellipses of your new widget followed by **[!UICONTROl Edit]**, to customize your new widget.
+A duplicate widget appear in your user-defined dashboard. Select the ellipses of your new widget followed by **[!UICONTROL Edit]**, to customize your new widget.
 
 ## Next steps and additional resources
 
