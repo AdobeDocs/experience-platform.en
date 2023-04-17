@@ -20,11 +20,11 @@ Select the **[!UICONTROL Roles]** tab to view the roles the user is assigned to.
 
 ![flac-users-roles](../../images/flac-ui/flac-users-roles.png)
 
-## Developer and API workflow
+## ## Developer and API access control with Experience Platform permissions
 
 >[!NOTE]
 >
->Only system administrators will have the ability to view and manage API credentials in Permissions.
+>Only system administrators have the ability to view and manage API credentials in Permissions.
 
 The transition to Adobe Experience Platform permissions has additional steps that need to be completed for the developer API workflow that previously relied on product profiles. See the guide on [API authentication](../../../landing/api-authentication.md) for more information.
 
