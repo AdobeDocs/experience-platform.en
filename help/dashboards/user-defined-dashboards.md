@@ -106,6 +106,10 @@ By adding an attribute as a filter, you can select which values to include or ex
 
 ![The filter dialog to filter values from your widget.](./images/user-defined-dashboards/filter-dialog.png)
 
+#### Filter out historical data
+
+Add the `date_key` attribute as a filter and select [!UICONTROl Recent date] to filter out historical data from your widget's data insights. This ensures that the data used to derive insights is taken from the most recent system snapshot.
+
 ### Widget properties
 
 Select the properties icon (![The properties icon.](./images/user-defined-dashboards/properties-icon.png)) in the right rail to open the properties panel. In the [!UICONTROL Properties] panel, enter a name for the widget in the [!UICONTROL Widget title] text field. 
@@ -129,6 +133,22 @@ Widgets can be re-arranged and resized while in this workspace. Select **[!UICON
 ![The user-defined dashboard with a custom widget and the save button highlighted.](./images/user-defined-dashboards/user-defined-dashboard.png)
 
 To ensure that each query for an Adobe Real-Time Customer Data Platform insights dashboard has enough resources to execute efficiently, the API tracks resource usage by assigning concurrency slots to each query. The system can process up to four concurrent queries, and therefore four concurrent query slots are available at any given time. Queries are put into a queue based on concurrency slots, then wait in the queue until enough concurrency slots are available.
+
+### Duplicate a widget
+
+Once you have created a widget, you can now duplicate the entire widget and customize its attributes to create a unique widget without having to start from scratch. To duplicate a widget, first, navigate to the dashboard inventory.
+
+![The Platform UI with dashboards and a custom dashboard name highlighted.](.png)
+
+Then select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png)).
+
+![The dashboard inventory with the pencil icon highlighted.](.png)
+
+Next, select the ellipses in the top right of the widget that you wish to duplicate followed by **[!UICONTROL Duplicate widget]** from the list of available options.
+
+![A widget in a uer-defined dashboard with the ellipses and Duplicate widget highlighted.]()
+
+A duplicate widget appear in your user-defined dashboard. Select the ellipses of your new widget followed by **[!UICONTROl Edit]**, to customize your new widget.
 
 ## Next steps and additional resources
 
