@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The March 2023 release notes for Adobe Experience Platform.
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
 
@@ -41,6 +42,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 | Feature | Description |
 | --- | --- |
 | New quick start workflow for Meta Conversions API (Beta) | Access new quick start workflows under "Getting Started" from the Data Collection home screen! The [quick start workflow for Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start) enables customers to rapidly collect and forward event data, server-side to Meta for ad conversions in just a few simple steps. |
+| New quick start workflow for Mobile SDK (Beta) | Access new quick start workflows under "Getting Started" from the Data Collection home screen! The [quick start workflow for Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) enables you to rapidly implement the Mobile SDK and validate basic mobile events in just a few simple steps. |
 | [!DNL Braze] event forwarding extension | The [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) event forwarding extension allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL Braze] in the form of server-side events using the [!DNL Braze] User Track APIs. |
 | [!DNL Epsilon] event forwarding extension | The [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) extension allows you to leverage event forwarding to capture event information in the Adobe Experience Platform Edge Network and send it to [!DNL Epsilon] using the [!DNL Epsilon] Event API. |
 | [!DNL Mixpanel] event forwarding extension | The [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) extension allows customers to leverage event forwarding to capture event information in the Adobe Experience Platform Edge Network and send it to Mixpanel using the Track Events API. |
@@ -176,7 +178,7 @@ To learn more about Real-Time CDP B2B Edition, read the [Real-Time CDP B2B Editi
 **New or updated features**
 
 | Feature | Description |
-| --- | --- |
+| ------- | ----------- |
 | Profile metrics | To give you a more accurate representation of profile metrics, membership breakdown and churn metrics are being combined and are now calculated over a 24-hour period. More information is available in the [Segmentation UI guide](../../segmentation/ui/overview.md#browse) |
 
 {style="table-layout:auto"}

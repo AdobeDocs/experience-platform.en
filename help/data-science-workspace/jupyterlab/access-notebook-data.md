@@ -513,7 +513,7 @@ df1.show(10)
 | df1 | A variable that represents the Pandas dataframe used to read and write data. |
 | user-token | Your user token that is automatically fetched using `clientContext.getUserToken()`.  |
 | service-token | Your service token that is automatically fetched using `clientContext.getServiceToken()`. |
-| ims-org | Your IMS Org ID that is automatically fetched using `clientContext.getOrgId()`. |
+| ims-org | Your organization ID that is automatically fetched using `clientContext.getOrgId()`. |
 | api-key | Your API key that is automatically fetched using `clientContext.getApiKey()`. |
 
 >[!TIP]
@@ -565,7 +565,7 @@ df1.write.format("com.adobe.platform.query")
 | df1 | A variable that represents the Pandas dataframe used to read and write data. |
 | user-token | Your user token that is automatically fetched using `clientContext.getUserToken()`.  |
 | service-token | Your service token that is automatically fetched using `clientContext.getServiceToken()`. |
-| ims-org | Your IMS Org ID that is automatically fetched using `clientContext.getOrgId()`. |
+| ims-org | Your organization ID that is automatically fetched using `clientContext.getOrgId()`. |
 | api-key | Your API key that is automatically fetched using `clientContext.getApiKey()`. |
 
 >[!TIP]

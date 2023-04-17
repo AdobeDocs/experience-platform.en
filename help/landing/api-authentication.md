@@ -25,7 +25,7 @@ This tutorial covers how to gather the required credentials to authenticate Plat
 
 In order to successfully make calls to Experience Platform APIs, you must have the following:
 
-* An IMS Organization with access to Adobe Experience Platform.
+* An organization with access to Adobe Experience Platform.
 * An Admin Console administrator that is able to add you as a developer and a user for a product profile.
 
 You must also have an Adobe ID to complete this tutorial. If you do not have an Adobe ID, you can create one using the following steps:
@@ -48,7 +48,7 @@ Once you are assigned as a developer, you can start creating integrations in [Ad
 
 Your [!DNL Admin Console] administrator must also add you as a user to the same product profile. See the guide on [managing user groups in [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) for more information.
 
-## Generate an API key, IMS Org ID, and client secret {#api-ims-secret}
+## Generate an API key, organization ID, and client secret {#api-ims-secret}
 
 >[!NOTE]
 >
