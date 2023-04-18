@@ -21,23 +21,21 @@ exl-id: cd7132eb-4047-4faa-a224-47366846cb56
 > 
 > Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Adobe Experience Platform uses [edge segmentation](../../segmentation/ui/edge-segmentation.md) to enable customers to create and target audience segments at high scale, in real time.
+Adobe Experience Platform uses [edge segmentation](../../segmentation/ui/edge-segmentation.md) to enable customers to create and target audience segments at high scale, in real time. This capability helps you configure same-page and next-page personalization use cases.
 
-This capability helps you configure same-page and next-page personalization use cases.
+Examples of edge destinations are the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and the [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) connections.
 
-This article explains the workflow required to activate audience data in Adobe Experience Platform profile request destinations. When used together with [edge segmentation](../../segmentation/ui/edge-segmentation.md), these destinations enable same-page and next-page personalization use cases on your web and mobile properties. 
+This article explains the workflow required to activate audience data in Adobe Experience Platform edge destinations. When used together with [edge segmentation](../../segmentation/ui/edge-segmentation.md), these destinations enable same-page and next-page personalization use cases on your web and mobile properties. 
 
-Additionally, watch the video below for an overview of the end-to-end configuration process.
-
->[!VIDEO](https://video.tv.adobe.com/v/340091/)
+Watch the video below for an overview of the end-to-end configuration process.
 
 >[!NOTE]
 >
 >The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, refer to the configuration steps described in the sections below.
 
-Examples of edge destinations are the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and the [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) connections. 
+>[!VIDEO](https://video.tv.adobe.com/v/340091/)
 
-## Prerequisites {#prerequisites}
+ ## Prerequisites {#prerequisites}
 
 ### Configure a datastream in the Data Collection UI {#configure-datastream}
 
