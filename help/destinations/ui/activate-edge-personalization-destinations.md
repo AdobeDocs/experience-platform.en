@@ -81,11 +81,11 @@ Follow the [segment builder](../../segmentation/ui/segment-builder.md) guide to 
 
 1. Select **[!UICONTROL Activate segments]** on the card corresponding to the personalization destination where you want to activate your segments, as shown in the image below.
 
-    ![Activate buttons](../assets/ui/activate-profile-request-destinations/activate-segments-button.png)
+    ![Activate buttons](../assets/ui/activate-edge-personalization-destinations/activate-segments-button.png)
 
 1. Select the destination connection that you want to use to activate your segments, then select **[!UICONTROL Next]**.
 
-    ![Select destination](../assets/ui/activate-profile-request-destinations/select-destination.png)
+    ![Select destination](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
 1. Move to the next section to [select your segments](#select-segments).
 
@@ -93,7 +93,7 @@ Follow the [segment builder](../../segmentation/ui/segment-builder.md) guide to 
 
 Use the check boxes to the left of the segment names to select the segments that you want to activate to the destination, then select **[!UICONTROL Next]**.
 
-![Select segments](../assets/ui/activate-profile-request-destinations/select-segments.png)
+![Select segments](../assets/ui/activate-edge-personalization-destinations/select-segments.png)
 
 ## Map attributes {#map-attributes}
 
@@ -101,13 +101,13 @@ Select the attributes based on which you want to enable personalization use case
 
 Adding attributes is optional and you can still proceed to the next step and enable same-page and next-page personalization without selecting attributes. If you do not add any attributes in this step, personalization will still occur based on the segment membership and identity map qualifications for profiles.
 
-![Image showing the mapping step with an attribute selected](../assets/ui/activate-profile-request-destinations/mapping-step.png)
+![Image showing the mapping step with an attribute selected](../assets/ui/activate-edge-personalization-destinations/mapping-step.png)
 
 ### Select source attributes {#select-source-attributes}
 
 To add source attributes, select the **[!UICONTROL Add new field]** control on the **[!UICONTROL Source field]** column and search or navigate to your desired XDM attribute field, as shown below.
 
-![Screen recording showing how to select a target attribute in the mapping step](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+![Screen recording showing how to select a target attribute in the mapping step](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
 ### Select target attributes {#select-target-attributes}
 
@@ -119,21 +119,21 @@ To add source attributes, select the **[!UICONTROL Add new field]** control on t
 
 To add target attributes, select the **[!UICONTROL Add new field]** control on the **[!UICONTROL Target field]** column and type in the custom attribute name that you want to map the source attribute to.
 
-![Screen recording showing how to select an XDM attribute in the mapping step](../assets/ui/activate-profile-request-destinations/mapping-step-select-target-attribute.gif)
+![Screen recording showing how to select an XDM attribute in the mapping step](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
 ## Schedule segment export {#scheduling}
 
 By default, the [!UICONTROL Segment schedule] page shows only the newly selected segments that you chose in the current activation flow.
 
-![New segments](../assets/ui/activate-profile-request-destinations/new-segments.png)
+![New segments](../assets/ui/activate-edge-personalization-destinations/new-segments.png)
 
 To see all the segments being activated to your destination, use the filtering option and disable the **[!UICONTROL Show new segments only]** filter.
 
-![All segments](../assets/ui/activate-profile-request-destinations/all-segments.png)
+![All segments](../assets/ui/activate-edge-personalization-destinations/all-segments.png)
 
 On the **[!UICONTROL Segment schedule]** page, select each segment, then use the **[!UICONTROL Start date]** and **[!UICONTROL End date]** selectors to configure the time interval for sending data to your destination.
 
-![Segment schedule](../assets/ui/activate-profile-request-destinations/segment-schedule.png)
+![Segment schedule](../assets/ui/activate-edge-personalization-destinations/segment-schedule.png)
 
 Select **[!UICONTROL Next]** to go to the [!UICONTROL Review] page.
 
@@ -141,7 +141,7 @@ Select **[!UICONTROL Next]** to go to the [!UICONTROL Review] page.
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
-![Selection summary in the review step.](../assets/ui/activate-profile-request-destinations/review.png)
+![Selection summary in the review step.](../assets/ui/activate-edge-personalization-destinations/review.png)
 
 ### Consent policy evaluation {#consent-policy-evaluation}
 
@@ -157,7 +157,7 @@ In the **[!UICONTROL Review]** step, Experience Platform also checks for any dat
 
 Also in this step you can use the available filters on the page to display only the segments whose schedule or mapping has been updated as part of this workflow. You can also toggle which table columns you want to see. 
 
-![Screen recording showing the available segment filters in the review step.](/help/destinations/assets/ui/activate-profile-request-destinations/filter-segments-review-step.gif)
+![Screen recording showing the available segment filters in the review step.](/help/destinations/assets/ui/activate-edge-personalization-destinations/filter-segments-review-step.gif)
 
 If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
