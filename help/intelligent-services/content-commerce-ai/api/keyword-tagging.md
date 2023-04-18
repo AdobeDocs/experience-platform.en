@@ -79,6 +79,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 }' \
 -F 'infile_1=@simple-text.pdf'
 ```
+
 **Input parameters**
 
 | Property | Description | Mandatory |

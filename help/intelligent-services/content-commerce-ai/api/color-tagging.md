@@ -368,11 +368,11 @@ On top of the colors from the 'overall' image we can also see colors from the 'f
 
 | Name | Data Type | Required | Default | Values | Description |
 | --- | --- | --- | --- | --- | --- |
-| `documents` | array<Document-Object> | Yes | - | See below | List of json elements with each item in the list representing one document. |
+| `documents` | array (Document-Object) | Yes | - | See below | List of json elements with each item in the list representing one document. |
 | `top_n` | number | No | 0 | Non-negative integer | Number of results to be returned. 0, to return all results. When used in conjunction with threshold, the number of results returned will be lesser of either limits. |
-| `min_coverage` | number	| No | 0.05 | Real number | Threshold of coverage above which the results need to be returned. Exclude parameter to return all results. |
-| `resize_image` | number	| No | True | True/False | Whether to resize the input image or not. By default the images are resized to 320*320 pixels before color extraction is performed. For debugging purposes we can allow the code to run on full-image as well, by setting this to False. |
-| `enable_mask` | number | No | False | True/False | 	Enables/Disables color extraction |
+| `min_coverage` | number | No | 0.05 | Real number | Threshold of coverage above which the results need to be returned. Exclude parameter to return all results. |
+| `resize_image` | number | No | True | True/False | Whether to resize the input image or not. By default the images are resized to 320*320 pixels before color extraction is performed. For debugging purposes we can allow the code to run on full-image as well, by setting this to False. |
+| `enable_mask` | number | No | False | True/False | Enables/Disables color extraction |
 | `retrieve_tone` | number | No | False| True/False | Enables/Disables tone extraction |
 
 **Document object**
