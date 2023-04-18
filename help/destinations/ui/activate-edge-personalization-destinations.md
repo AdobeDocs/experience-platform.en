@@ -1,11 +1,18 @@
 ---
-keywords: activate profile request destinations;activate data;profile request destinations
-title: Activate audience data to profile request destinations
+keywords: activate edge personalization destinations;activate data;profile request destinations
+title: Activate audience data to edge personalization destinations
 type: Tutorial
-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
+description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to edge personalization destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
 ---
-# Activate audience data to profile request destinations
+
+# Activate audience data to edge personalization destinations
+
+## Overview {#overview}
+
+>[!NOTE]
+>
+>When [configuring the Adobe Target connection](../catalog/personalization/adobe-target-connection.md) without using a datastream ID, the use cases described in this article are not supported.
 
 >[!IMPORTANT]
 > 
@@ -14,19 +21,59 @@ exl-id: cd7132eb-4047-4faa-a224-47366846cb56
 > 
 > Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-## Overview {#overview}
+Adobe Experience Platform uses [edge segmentation](../../segmentation/ui/edge-segmentation.md) to enable customers to create and target audience segments at high scale, in real time.
 
-This article explains the workflow required to activate audience data in Adobe Experience Platform profile request destinations. When used together with [edge segmentation](../../segmentation/ui/edge-segmentation.md), these destinations enable same-page and next-page personalization use cases on your web and mobile properties. Read more about [enabling same-page and next-page personalization use cases](/help/destinations/ui/configure-personalization-destinations.md). 
+This capability helps you configure same-page and next-page personalization use cases.
 
-Examples of profile request destinations are the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and the [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) connections. 
+This article explains the workflow required to activate audience data in Adobe Experience Platform profile request destinations. When used together with [edge segmentation](../../segmentation/ui/edge-segmentation.md), these destinations enable same-page and next-page personalization use cases on your web and mobile properties. 
+
+Additionally, watch the video below for an overview of the end-to-end configuration process.
+
+>[!VIDEO](https://video.tv.adobe.com/v/340091/)
+
+>[!NOTE]
+>
+>The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, refer to the configuration steps described in the sections below.
+
+Examples of edge destinations are the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and the [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) connections. 
 
 ## Prerequisites {#prerequisites}
 
-To activate data to destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported personalization destinations, and configure the destination that you want to use.
+### Configure a datastream in the Data Collection UI {#configure-datastream}
 
-### Segment merge policy {#merge-policy}
+The first step in setting up your personalization destination is to configure a datastream for the Experience Platform Web SDK. This is done in the Data Collection UI. 
 
-Currently, profile request destinations only support the activation of segments that use the [Active-on-Edge Merge Policy](../../segmentation/ui/segment-builder.md#merge-policies) set as default.
+When configuring the datastream, under **[!UICONTROL Adobe Experience Platform]** make sure that both **[!UICONTROL Edge Segmentation]** and **[!UICONTROL Personalization Destinations]** are selected.
+
+![Datastream configuration](../assets/ui/configure-personalization-destinations/datastream-config.png)
+
+For more details on how to set up a datastream, follow the instructions described in the [Platform Web SDK documentation](../../edge/datastreams/overview.md).
+
+### Create a destination connection {#connect-destination}
+
+After you have configured your datastream, you can start configuring your personalization destination.
+
+Follow the [destination connection creation tutorial](../ui/connect-destination.md) for detailed instructions on how to create a new destination connection.
+
+Depending on the destination you are configuring, refer to the following articles for destination-specific prerequisites and related information:
+
+* [Adobe Target connection](../catalog/personalization/adobe-target-connection.md)
+* [Custom personalization connection](../catalog/personalization/custom-personalization.md)
+
+### Create an [!DNL Active-On-Edge] merge policy {#create-merge-policy}
+
+After you have created your destination connection, you must create an [!DNL Active-On-Edge] merge policy.
+
+Currently, edge destinations only support the activation of segments that use the [Active-on-Edge Merge Policy](../../segmentation/ui/segment-builder.md#merge-policies) set as default.
+
+Follow the instructions on [creating a merge policy](../../profile/merge-policies/ui-guide.md#create-a-merge-policy), and make sure to enable the **[!UICONTROL Active-On-Edge Merge Policy]** toggle.
+
+### Create a new segment in Platform {#create-segment}
+
+After you have created the [!DNL Active-On-Edge] merge policy, you must create a new segment in Platform.
+
+Follow the [segment builder](../../segmentation/ui/segment-builder.md) guide to create your new segment, and make sure to [assign it](../../segmentation/ui/segment-builder.md#merge-policies) the [!DNL Active-On-Edge] merge policy that you created in step 3.
+
 
 ## Select your destination {#select-destination}
 
@@ -50,11 +97,7 @@ Use the check boxes to the left of the segment names to select the segments that
 
 ![Select segments](../assets/ui/activate-profile-request-destinations/select-segments.png)
 
-## (Beta) Map attributes {#map-attributes}
-
->[!IMPORTANT]
->
->The mapping step, which enables attribute-based personalization for [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) and [generic personalization destinations](/help/destinations/catalog/personalization/custom-personalization.md), is currently in beta and your organization may not have access to it yet. This documentation is subject to change.
+## Map attributes {#map-attributes}
 
 Select the attributes based on which you want to enable personalization use cases for your users. This means that if the value of an attribute changes or if an attribute is added to a profile, that profile will become a member of the segment and will be activated to the personalization destination.
 
