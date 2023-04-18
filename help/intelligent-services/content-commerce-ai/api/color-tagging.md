@@ -47,13 +47,13 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -H "content-type: multipart/form-data" \
 -H "authorization: Bearer $API_TOKEN" \
 -F 'contentAnalyzerRequests={
-  "sensei:name": "Feature:cintel-image-classifier:Service-60887e328ded447d86e01122a4f19c58",
+  "sensei:name": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72",
   "sensei:invocation_mode": "synchronous",
   "sensei:invocation_batch": false,
   "sensei:engines": [
     {
       "sensei:execution_info": {
-        "sensei:engine": "Feature:cintel-image-classifier:Service-60887e328ded447d86e01122a4f19c58"
+        "sensei:engine": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72"
       },
       "sensei:inputs": {
         "documents": [{
@@ -62,8 +62,8 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
           }]
       },
       "sensei:params": {
-        "application-id": "1234",
-        "enable_mask": 0
+        "top_n": 5,
+        "min_coverage": 0.005      
       },
       "sensei:outputs":{
         "result" : {
@@ -85,14 +85,9 @@ A successful response returns the details of the extracted colors. Each color is
 - The percentage this color appears in relation to the image
 - The RGB value of the color
 
-`"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}`means the color found is white, which is found in 57.26%% of the image, and has an average RGB value of 254, 254, 243.
+`"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}`means the color found is white, which is found in 58.34% of the image, and has an average RGB value of 254, 254, 243.
 
 ```json
-{
-  "status": 200,
-  "content_id": "test_image.jpg",
-  "cas_responses": [
-    {
 {
     "statuses": [{
         "sensei:engine": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72",
@@ -151,12 +146,11 @@ A successful response returns the details of the extracted colors. Each color is
                     "red": 253,
                     "green": 236,
                     "blue": 174
+                }
+            }
         }
-      }
     }
-  }
-]
-}
+}]
 ```
 
 Notice that the result here has color extracted on the "overall" image region.
@@ -207,14 +201,6 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 >Note: Additionally we have also set the `retrieve_tone` parameter to `true` as well in the above request. This would enable us to retrieve a tone distribution histogram over warm, neutral and cool tones in the overall, foreground and background regions of the image.
 
 **Response - masked image variant**
-
-A successful response returns the details of the extracted colors. Each color is represented by a `feature_value` key, which contains the following information:
-
-- A color name
-- The percentage this color appears in relation to the image
-- The RGB value of the color
-
-`"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}`means the color found is white, which is found in 58.34% of the image, and has an average RGB value of 254, 254, 243.
 
 ```json
 {
