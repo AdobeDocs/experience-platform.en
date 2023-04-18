@@ -204,7 +204,7 @@ Before creating integrations on Adobe Developer Console, your account must have 
 
 Go to [[!DNL Admin Console]](https://adminconsole.adobe.com/) and sign in with your Adobe ID.
 
-Select **[!UICONTROL Products]**, then select Adobe Experience Platform from the [!UICONTROL Products] list.
+Select **[!UICONTROL Products]**, then select **[!UICONTROL Adobe Experience Platform]** from the list of products.
 
 ![Products list on Admin Console](././images/api-authentication/products.png)
 
@@ -214,13 +214,13 @@ From the **[!UICONTROL Product Profiles]** tab select **[!UICONTROL AEP-Default-
 
 Select the **[!UICONTROL Developers]** tab, then select **[!UICONTROL Add Developer]**.
 
-![Add developer from the Developers tab](././images/api-authentication/add-developer.png)
+![Add developer from the Developers tab](././images/api-authentication/add-developer1.png)
 
 Enter the developer's **[!UICONTROL Email or username]**. A valid [!UICONTROL Email or username] will display developer details. Select **[!UICONTROL Save]**.
 
 ![Add developer using their email or username](././images/api-authentication/add-developer-email.png)
 
-The developer has been successfully added and appear under the [!UICONTROL Developers] tab.
+The developer has been successfully added and appears on the [!UICONTROL Developers] tab.
 
 ![Developers listed on the Developers tab](././images/api-authentication/developer-added.png)
 
@@ -228,7 +228,7 @@ The developer has been successfully added and appear under the [!UICONTROL Devel
 
 A developer can add and configure an API within a project in the Adobe Developer Console.
 
-In your project select **[UICONTROL Add API]**.
+Select your project, then select **[UICONTROL Add API]**.
 
 ![Add API to a project](././images/api-authentication/add-api-project.png)
 
@@ -237,7 +237,6 @@ In the **[!UICONTROL Add an API]** dialog box select **[!UICONTROL Adobe Experie
 ![Add an API in Experience Platform](././images/api-authentication/add-api-platform.png)
 
 In the **[!UICONTROL Configure API]** screen, select **[!UICONTROL AEP-Default-All-Users]**.
-
 
 ### Assign API to a role
 
@@ -253,7 +252,7 @@ Select the API you would like to add to the role then select **[!Save].
 
 You are returned to the [!UICONTROL API credentials] tab, where the newly added API is listed.
 
-![API credentials tab with newly added API](././images/api-authentication/api-credentials-with-added-API.png)
+![API credentials tab with newly added API](././images/api-authentication/api-credentials-with-added-api.png)
 
 ## Next steps
 
