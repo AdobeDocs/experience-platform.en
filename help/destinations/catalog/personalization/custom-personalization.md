@@ -16,12 +16,9 @@ The **[!UICONTROL Custom Personalization With Attributes]** connector is current
 >
 >Profile attributes may contain sensitive data. To protect this data, the **[!UICONTROL Custom Personalization With Attributes]** destination requires you to use the [Edge Network Server API](/help/server-api/overview.md) for data collection. Furthermore, all the Server API calls must be made in an [authenticated context](../../../server-api/authentication.md).
 >
->If you are already using Web SDK or Mobile SDK for your integration, you can retrieve attributes via the Server API in two ways:
+><br>If you are already using Web SDK or Mobile SDK for your integration, you can retrieve attributes via the Server API by adding a server-side integration.
 >
-> * Add a server-side integration which retrieves attributes via the Server API.
-> * Update your client-side configuration with a custom Javascript code to retrieve attributes via the Server API.
->
-> If you do not follow the requirements above, personalization will be based on segment membership only, identical to the experience offered by the **[!UICONTROL Custom Personalization]** connector.
+><br>If you do not follow the requirements above, personalization will be based on segment membership only, identical to the experience offered by the **[!UICONTROL Custom Personalization]** connector.
 
 ![Image of the two Custom personalization destination cards in a side-by-side view.](../../assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
 
