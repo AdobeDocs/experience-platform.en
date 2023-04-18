@@ -35,7 +35,7 @@ This integration is powered by the [Adobe Experience Platform Web SDK](../../../
 
 >[!IMPORTANT]
 >
->Before creating a custom personalization connection, read the guide on how to [configure personalization destinations for same-page and next-page personalization](../../ui/activate-edge-personalization-destinations). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components.
+>Before creating a custom personalization connection, read the guide on how to [configure personalization destinations for same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components.
 
 ## Export type and frequency {#export-type-frequency}
 
