@@ -4,6 +4,7 @@ title: Custom personalization connection
 description: This destination provides external personalization, content management systems, ad servers, and other applications that are running on your site a way to retrieve segment information from Adobe Experience Platform. This destination provides real-time personalization based on user profile segment membership.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 ---
+
 # Custom personalization connection {#custom-personalization-connection} 
 
 ## Destination changelog {#changelog}
