@@ -155,9 +155,9 @@ In the **[!UICONTROL Review]** step, Experience Platform also checks for any dat
 
 ### Filter segments {#filter-segments}
 
-Also in this step you can use the available filters on the page to display only the segments whose schedule or mapping has been updated as part of this workflow. You can also toggle which table columns you want to see. 
+In this step you can use the available filters on the page to display only the segments whose schedule or mapping has been updated as part of this workflow. You can also toggle which table columns you want to see. 
 
-![Screen recording showing the available segment filters in the review step.](/help/destinations/assets/ui/activate-edge-personalization-destinations/filter-segments-review-step.gif)
+![Screen recording showing the available segment filters in the review step.](../assets/ui/activate-edge-personalization-destinations/filter-segments-review-step.gif)
 
 If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
