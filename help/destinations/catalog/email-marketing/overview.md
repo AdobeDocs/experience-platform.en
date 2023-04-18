@@ -18,9 +18,10 @@ Adobe Experience Platform supports the following email marketing destinations:
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
 * [(API) Oracle Eloqua](oracle-eloqua-api.md)
-* [(API) Salesforce Marketing Cloud](salesforce-marketing-cloud-exact-target.md)  
+* [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)  
 * [(Files) Oracle Eloqua](oracle-eloqua.md)
-* [(Files) Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
+* [(Files) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud.md)
+* [[!DNL Salesforce Marketing Cloud Account Engagement]](salesforce-marketing-cloud-account-engagement.md)
 * [Oracle Responsys](oracle-responsys.md)
 * [SendGrid](sendgrid.md)
 
