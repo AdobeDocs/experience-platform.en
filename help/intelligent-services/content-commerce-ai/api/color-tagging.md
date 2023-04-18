@@ -15,7 +15,14 @@ This method extracts a color histogram across the entire image.
 
 **Color tagging (with mask)**
 
-This method uses a deep-learning-based foreground extractor to identify objects in the foreground. The model is trained on a catalog of e-commerce images. Once the foreground object is extracted, a histogram is computed over the dominant colors as previously described.
+This method uses a deep-learning-based foreground extractor to identify objects in the foreground. Once the foreground objects are extracted, a histogram is computed over the dominant colors as previously described for both, the foreground and background regions, along with the entire image.
+
+**Tone Extraction**
+
+On top of the above variants, one can configure the service to retrieve a histogram of tones over the -
+
+- Overall image (when using full image variant)
+- Overall image and foreground and background regions (when using the variant with masking).
 
 The following image was used in the example shown in this document:
 
@@ -27,7 +34,7 @@ The following image was used in the example shown in this document:
 POST /services/v2/predict
 ```
 
-**Request**
+**Request - Full Image Variant**
 
 The following example request uses the full-image method for color tagging.
 
@@ -70,6 +77,8 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
 
+>Note: Additionally, we also set the `retrieve_tone` parameter to `true` in the above request. This enables us to retrieve a tone distribution histogram over warm, neutral and cool tones in the overall, foreground and background regions of the image.
+
 | Property | Description | Mandatory |
 | --- | --- | --- |
 | `application-id` | The ID of your created application. | Yes |
@@ -86,7 +95,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `sensei:multipart_field_name` | string | - | - | - | Use this when passing an image file as a multipart argument instead of using presigned urls. |
 | `dc:format` | string | Yes | - | “image/jpg”, <br> “image/jpeg”, <br>“image/png”, <br>“image/tiff” | Image encoding is checked against allowed input encoding types before being processed. |
 
-**Response**
+**Response - Full Image Variant**
 
 A successful response returns the details of the extracted colors. Each color is represented by a `feature_value` key, which contains the following information:
 
