@@ -203,11 +203,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
 | `description` | A human-readable description of the definition. |
 
->[!NOTE]
+<!-- >[!NOTE]
 >
 >A segment definition expression may also reference a computed attribute. To learn more, please refer to the [computed attribute API endpoint guide](../../profile/computed-attributes/ca-api.md)
 >
->Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change.
+>Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change. -->
 
 **Response**
 
