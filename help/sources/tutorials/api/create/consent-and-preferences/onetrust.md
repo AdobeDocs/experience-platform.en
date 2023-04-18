@@ -1,15 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;OneTrust
 solution: Experience Platform
-title: (Beta) Create a dataflow for a OneTrust Integration source using the Flow Service API
+title: Create a dataflow for a OneTrust Integration source using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to OneTrust Integration using the Flow Service API.
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
 ---
-# (Beta) Create a dataflow for a [!DNL OneTrust Integration] source using the [!DNL Flow Service] API
-
->[!NOTE]
->
->The [!DNL OneTrust Integration] source is in beta. Its features and documentation are subject to change. For information on using beta-labelled sources, see the [sources overview](../../../../home.md#terms-and-conditions).
+# Create a dataflow for a [!DNL OneTrust Integration] source using the [!DNL Flow Service] API
 
 The following tutorial walks you through the steps to create a source connection and a dataflow to bring both historic and scheduled consent data from [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

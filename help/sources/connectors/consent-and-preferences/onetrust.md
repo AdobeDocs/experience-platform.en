@@ -1,15 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;OneTrust;onetrust;consent;consent and preferences;compliance
 solution: Experience Platform
-title: (Beta) OneTrust Integration Source Connector Overview
+title: OneTrust Integration Source Connector Overview
 description: Learn how to connect OneTrust Integration to Adobe Experience Platform using APIs or the user interface.
 exl-id: f2229d4d-8aa6-483a-9156-403309f80007
 ---
-# (Beta) [!DNL OneTrust Integration] source
-
->[!NOTE]
->
->The [!DNL OneTrust Integration] source is in beta. Its features and documentation are subject to change. For information on using beta-labelled sources, see the [sources overview](../../home.md#terms-and-conditions).
+# [!DNL OneTrust Integration] source
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
