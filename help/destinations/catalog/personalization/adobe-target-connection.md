@@ -31,7 +31,7 @@ Configuring the Adobe Target connection without using a datastream ID does not r
 
 >[!IMPORTANT]
 >
->Before creating an [!DNL Adobe Target] connection, read the guide on how to [configure personalization destinations for same-page and next-page personalization](../../ui/configure-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components. Same-page and next-page personalization requires you to use a datastream ID when configuring the Adobe Target connection.
+>Before creating an [!DNL Adobe Target] connection, read the guide on how to [configure personalization destinations for same-page and next-page personalization](../../ui/activate-edge-personalization-destinations). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components. Same-page and next-page personalization requires you to use a datastream ID when configuring the Adobe Target connection.
 
 ### Prerequisites in Adobe Target {#prerequisites-in-adobe-target}
 
@@ -86,7 +86,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
     
 |No datastream selected|Datastream selected|
 |---|---|
-|<ul><li>[Edge segmentation](../../../segmentation/ui/edge-segmentation.md) is not supported.</li><li>[Same-page and next-page personalization](../../ui/configure-personalization-destinations.md) are not supported.</li><li>You can share segments to the Adobe Target connection only for the *default production sandbox*.</li><li>To configure next-session personalization without using a datastream ID, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul>|<ul><li>Edge segmentation works as expected.</li><li>[Same-page and next-page personalization](../../ui/configure-personalization-destinations.md) are supported.</li><li>Segment sharing is supported for other sandboxes.</li></ul>|
+|<ul><li>[Edge segmentation](../../../segmentation/ui/edge-segmentation.md) is not supported.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations) are not supported.</li><li>You can share segments to the Adobe Target connection only for the *default production sandbox*.</li><li>To configure next-session personalization without using a datastream ID, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul>|<ul><li>Edge segmentation works as expected.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations) are supported.</li><li>Segment sharing is supported for other sandboxes.</li></ul>|
 
 ### Enable alerts {#enable-alerts}
 
