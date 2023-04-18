@@ -8,6 +8,10 @@ exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
 ---
 # Create a [!DNL OneTrust Integration] source connection in the UI
 
+>[!NOTE]
+>
+>The [!DNL OneTrust Integration] source only supports ingestion of consent and preferences data and not cookies.
+
 This tutorial provides steps for creating a [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) source connection to ingest both historic and scheduled consent data into Adobe Experience Platform using the Platform user interface.
 
 ## Prerequisites

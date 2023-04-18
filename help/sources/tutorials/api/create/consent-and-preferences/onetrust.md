@@ -7,6 +7,10 @@ exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
 ---
 # Create a dataflow for a [!DNL OneTrust Integration] source using the [!DNL Flow Service] API
 
+>[!NOTE]
+>
+>The [!DNL OneTrust Integration] source only supports ingestion of consent and preferences data and not cookies.
+
 The following tutorial walks you through the steps to create a source connection and a dataflow to bring both historic and scheduled consent data from [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prerequisites

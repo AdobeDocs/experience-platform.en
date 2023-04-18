@@ -7,6 +7,10 @@ exl-id: f2229d4d-8aa6-483a-9156-403309f80007
 ---
 # [!DNL OneTrust Integration] source
 
+>[!NOTE]
+>
+>The [!DNL OneTrust Integration] source only supports ingestion of consent and preferences data and not cookies.
+
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from a third-party consent and preferences management platform. Support for consent and preferences providers include [!DNL OneTrust Integration].
