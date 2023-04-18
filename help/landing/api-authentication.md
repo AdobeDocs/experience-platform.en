@@ -228,7 +228,7 @@ The developer has been successfully added and appears on the [!UICONTROL Develop
 
 A developer can add and configure an API within a project in the Adobe Developer Console.
 
-Select your project, then select **[UICONTROL Add API]**.
+Select your project, then select **[!UICONTROL Add API]**.
 
 ![Add API to a project](././images/api-authentication/add-api-project.png)
 
@@ -248,7 +248,7 @@ Select the role you want to add the API to and select the **[!UICONTROL API cred
 
 Select the API you would like to add to the role then select **[!Save].
 
-![Select the API from the list](././images/api-authentication/select-api.png)
+![List of API available for selection](././images/api-authentication/select-api.png)
 
 You are returned to the [!UICONTROL API credentials] tab, where the newly added API is listed.
 
