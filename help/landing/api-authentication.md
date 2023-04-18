@@ -246,7 +246,7 @@ Select the role you want to add the API to and select the **[!UICONTROL API cred
 
 ![API credentials tab in selected role](././images/api-authentication/api-credentials.png)
 
-Select the API you would like to add to the role then select **[!Save].
+Select the API you would like to add to the role then select **[!UICONTROL Save]**.
 
 ![List of API available for selection](././images/api-authentication/select-api.png)
 
