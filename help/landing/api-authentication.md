@@ -208,7 +208,7 @@ Select **[!UICONTROL Products]**, then select **[!UICONTROL Adobe Experience Pla
 
 ![Products list on Admin Console](././images/api-authentication/products.png)
 
-From the **[!UICONTROL Product Profiles]** tab select **[!UICONTROL AEP-Default-All-Users]**. Alternatively, use the search bar to search for the product profile by entering the name.
+From the **[!UICONTROL Product Profiles]** tab, select **[!UICONTROL AEP-Default-All-Users]**. Alternatively, use the search bar to search for the product profile by entering the name.
 
 ![Search for the product profile](././images/api-authentication/select-product-profile.png)
 
@@ -216,7 +216,7 @@ Select the **[!UICONTROL Developers]** tab, then select **[!UICONTROL Add Develo
 
 ![Add developer from the Developers tab](././images/api-authentication/add-developer1.png)
 
-Enter the developer's **[!UICONTROL Email or username]**. A valid [!UICONTROL Email or username] will display developer details. Select **[!UICONTROL Save]**.
+Enter the developer's **[!UICONTROL Email or username]**. A valid [!UICONTROL Email or username] will display the developer details. Select **[!UICONTROL Save]**.
 
 ![Add developer using their email or username](././images/api-authentication/add-developer-email.png)
 
@@ -224,7 +224,7 @@ The developer has been successfully added and appears on the [!UICONTROL Develop
 
 ![Developers listed on the Developers tab](././images/api-authentication/developer-added.png)
 
-### Setup an API
+### Set up an API
 
 A developer can add and configure an API within a project in the Adobe Developer Console.
 
@@ -232,7 +232,7 @@ Select your project, then select **[!UICONTROL Add API]**.
 
 ![Add API to a project](././images/api-authentication/add-api-project.png)
 
-In the **[!UICONTROL Add an API]** dialog box select **[!UICONTROL Adobe Experience Platform]**, then select **[!UICONTROL Experience Platform API].
+In the **[!UICONTROL Add an API]** dialog box select **[!UICONTROL Adobe Experience Platform]**, then select **[!UICONTROL Experience Platform API]**.
 
 ![Add an API in Experience Platform](././images/api-authentication/add-api-platform.png)
 
@@ -240,9 +240,9 @@ In the **[!UICONTROL Configure API]** screen, select **[!UICONTROL AEP-Default-A
 
 ### Assign API to a role
 
-A system admin can assign API's to roles in the [!UICONTROL Permissions] UI. 
+A system admin can assign APIs to roles in the Experience Platform UI.
 
-Select the role you want to add the API to and select the **[!UICONTROL API credentials]** tab, then select **[!UICONTROL Add API credentials]**.
+Select **[!UICONTROL Permissions]** and the role you want to add the API to. Select the **[!UICONTROL API credentials]** tab, then select **[!UICONTROL Add API credentials]**.
 
 ![API credentials tab in selected role](././images/api-authentication/api-credentials.png)
 

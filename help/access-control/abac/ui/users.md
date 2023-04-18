@@ -20,7 +20,7 @@ Select the **[!UICONTROL Roles]** tab to view the roles the user is assigned to.
 
 ![flac-users-roles](../../images/flac-ui/flac-users-roles.png)
 
-## ## Developer and API access control with Experience Platform permissions
+## Developer and API access control with Experience Platform permissions
 
 >[!NOTE]
 >
