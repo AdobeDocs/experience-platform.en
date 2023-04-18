@@ -138,8 +138,8 @@ A toggle switch allows you to select whether the data element should return valu
 
 The data element can therefore return:
 
-* Empty field: data layer computed state.
-* Field with key (such as page.previous_url in the example above): value of the key in the event object or computed state.
+- Empty field: data layer computed state.
+- Field with key (such as page.previous_url in the example above): value of the key in the event object or computed state.
 
 ## Additional Information
 
