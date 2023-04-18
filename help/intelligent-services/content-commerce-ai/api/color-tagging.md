@@ -17,7 +17,7 @@ This method extracts a color histogram across the entire image.
 
 This method uses a deep-learning-based foreground extractor to identify objects in the foreground. Once the foreground objects are extracted, a histogram is computed over the dominant colors as previously described for both, the foreground and background regions, along with the entire image.
 
-**Tone Extraction**
+**Tone extraction**
 
 On top of the above variants, one can configure the service to retrieve a histogram of tones over the -
 
@@ -34,7 +34,7 @@ The following image was used in the example shown in this document:
 POST /services/v2/predict
 ```
 
-**Request - Full Image Variant**
+**Request - full image variant**
 
 The following example request uses the full-image method for color tagging.
 
@@ -77,25 +77,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
 
->Note: Additionally, we also set the `retrieve_tone` parameter to `true` in the above request. This enables us to retrieve a tone distribution histogram over warm, neutral and cool tones in the overall, foreground and background regions of the image.
-
-| Property | Description | Mandatory |
-| --- | --- | --- |
-| `application-id` | The ID of your created application. | Yes |
-| `documents` | A list of JSON elements with each item in the list representing one document. | Yes |
-| `top_n` | The number of results to be returned (this cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
-| `min_coverage` | Threshold of coverage above which the results need to be returned. Exclude the parameter to return all results. | No |
-| `resize_image` | Indicates whether the input image is to be resized. By default the images are resized to 320*320 pixels before color tagging is performed. For debugging purposes we can allow the code to run on full-image as well, by setting this to False. | No |
-| `enable_mask` | Enables/Disables color tagging within mask. | No |
-
-| Name | Data Type | Required | Default | Values | Description |
-| -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | Presigned url of the document from which key phrases are to be extracted. |
-| `sensei:repoType` | string | - | - | HTTPS | Type of repo where the image is being stored. |
-| `sensei:multipart_field_name` | string | - | - | - | Use this when passing an image file as a multipart argument instead of using presigned urls. |
-| `dc:format` | string | Yes | - | “image/jpg”, <br> “image/jpeg”, <br>“image/png”, <br>“image/tiff” | Image encoding is checked against allowed input encoding types before being processed. |
-
-**Response - Full Image Variant**
+**Response - full image variant**
 
 A successful response returns the details of the extracted colors. Each color is represented by a `feature_value` key, which contains the following information:
 
@@ -103,7 +85,7 @@ A successful response returns the details of the extracted colors. Each color is
 - The percentage this color appears in relation to the image
 - The RGB value of the color
 
-In the first example object below, the `feature_value` of `Mud_Green,0.069,102,72,95` means the color found is mud green, mud green is found in 6.9% of the image, and has an RGB value of 102,72,95.
+`"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}`means the color found is white, which is found in 57.26%% of the image, and has an average RGB value of 254, 254, 243.
 
 ```json
 {
@@ -112,76 +94,63 @@ In the first example object below, the `feature_value` of `Mud_Green,0.069,102,7
   "cas_responses": [
     {
 {
-  "statuses": [
-    {
-      "sensei:engine": "Feature:cintel-image-classifier:Service-60887e328ded447d86e01122a4f19c58",
-      "invocations": [
-        {
-          "sensei:outputs": {
-            "result": {
-              "sensei:multipart_field_name": "result",
-              "dc:format": "application/json"
-            }
-          },
-          "message": null,
-          "status": "200"
-        }
-      ]
-    }
-  ],
-  "request_id": "hsxycVq5Q9KbZ7MWrt6NXcSNWbonSLf3"
-}
-
-[
-  {
-    "request_element_id": "0",
-    "colors": {
-      "Mud_Green": {
-        "coverage": 0.0694,
-        "rgb": {
-          "red": 102,
-          "blue": 72,
-          "green": 95
-        }
-      },
-      "Dark_Brown": {
-        "coverage": 0.1226,
-        "rgb": {
-          "red": 113,
-          "blue": 77,
-          "green": 84
-        }
-      },
-      "Pink": {
-        "coverage": 0.0731,
-        "rgb": {
-          "red": 234,
-          "blue": 201,
-          "green": 209
-        }
-      },
-      "Dark_Gray": {
-        "coverage": 0.1533,
-        "rgb": {
-          "red": 63,
-          "blue": 58,
-          "green": 59
-        }
-      },
-      "Olive": {
-        "coverage": 0.492,
-        "rgb": {
-          "red": 177,
-          "blue": 126,
-          "green": 170
-        }
-      },
-      "Brown": {
-        "coverage": 0.0896,
-        "rgb": {
-          "red": 141,
-          "blue": 85,
-          "green": 105
+    "statuses": [{
+        "sensei:engine": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72",
+        "invocations": [{
+            "sensei:outputs": {
+                "result": {
+                    "sensei:multipart_field_name": "result",
+                    "dc:format": "application/json"
+                }
+            },
+            "message": null,
+            "status": "200"
+        }]
+    }],
+    "request_id": "bfpzaJxKDxtgxpjUj5QDrN1jasjUw2RM"
+}  
+ 
+[{
+    "overall": {
+        "colors": {
+            "White": {
+                "coverage": 0.5834,
+                "rgb": {
+                    "red": 254,
+                    "green": 254,
+                    "blue": 243
+                }
+            },
+            "Orange": {
+                "coverage": 0.254,
+                "rgb": {
+                    "red": 249,
+                    "green": 165,
+                    "blue": 45
+                }
+            },
+            "Gold": {
+                "coverage": 0.0817,
+                "rgb": {
+                    "red": 253,
+                    "green": 188,
+                    "blue": 58
+                }
+            },
+            "Mustard": {
+                "coverage": 0.0727,
+                "rgb": {
+                    "red": 253,
+                    "green": 207,
+                    "blue": 84
+                }
+            },
+            "Cream": {
+                "coverage": 0.0082,
+                "rgb": {
+                    "red": 253,
+                    "green": 236,
+                    "blue": 174
         }
       }
     }
@@ -189,3 +158,228 @@ In the first example object below, the `feature_value` of `Mud_Green,0.069,102,7
 ]
 }
 ```
+
+Notice that the result here has color extracted on the "overall" image region.
+
+**Request - masked image variant**
+
+The following example request uses the masking method for color tagging. We enable this by setting the `enable_mask` parameter to `true` in the request.
+
+```SHELL
+curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
+-H 'Prefer: respond-async, wait=59' \
+-H "x-api-key: $API_KEY" \
+-H "content-type: multipart/form-data" \
+-H "authorization: Bearer $API_TOKEN" \
+-F 'contentAnalyzerRequests={
+  "sensei:name": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72",
+  "sensei:invocation_mode": "synchronous",
+  "sensei:invocation_batch": false,
+  "sensei:engines": [
+    {
+      "sensei:execution_info": {
+        "sensei:engine": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72"
+      },
+      "sensei:inputs": {
+        "documents": [{
+            "sensei:multipart_field_name": "infile_1",
+            "dc:format": "image/jpg"
+          }]
+      },
+      "sensei:params": {
+        "top_n": 5,
+        "min_coverage": 0.005,
+        "enable_mask": true,
+        "retrieve_tone": true     
+      },
+      "sensei:outputs":{
+        "result" : {
+          "sensei:multipart_field_name" : "result",
+          "dc:format": "application/json"
+        }
+      }
+    }
+  ]
+}' \
+-F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
+```
+
+>Note: Additionally we have also set the `retrieve_tone` parameter to `true` as well in the above request. This would enable us to retrieve a tone distribution histogram over warm, neutral and cool tones in the overall, foreground and background regions of the image.
+
+**Response - masked image variant**
+
+A successful response returns the details of the extracted colors. Each color is represented by a `feature_value` key, which contains the following information:
+
+- A color name
+- The percentage this color appears in relation to the image
+- The RGB value of the color
+
+`"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}`means the color found is white, which is found in 58.34% of the image, and has an average RGB value of 254, 254, 243.
+
+```json
+{
+    "statuses": [{
+        "sensei:engine": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72",
+        "invocations": [{
+            "sensei:outputs": {
+                "result": {
+                    "sensei:multipart_field_name": "result",
+                    "dc:format": "application/json"
+                }
+            },
+            "message": null,
+            "status": "200"
+        }]
+    }],
+    "request_id": "gpeCyJsrJvOWd94WwZOyPBPrKi2BQyla"
+}  
+ 
+ 
+[{
+    "overall": {
+        "colors": {
+            "White": {
+                "coverage": 0.5834,
+                "rgb": {
+                    "red": 254,
+                    "green": 254,
+                    "blue": 243
+                }
+            },
+            "Orange": {
+                "coverage": 0.254,
+                "rgb": {
+                    "red": 249,
+                    "green": 165,
+                    "blue": 45
+                }
+            },
+            "Gold": {
+                "coverage": 0.0817,
+                "rgb": {
+                    "red": 253,
+                    "green": 188,
+                    "blue": 58
+                }
+            },
+            "Mustard": {
+                "coverage": 0.0727,
+                "rgb": {
+                    "red": 253,
+                    "green": 207,
+                    "blue": 84
+                }
+            },
+            "Cream": {
+                "coverage": 0.0082,
+                "rgb": {
+                    "red": 253,
+                    "green": 236,
+                    "blue": 174
+                }
+            }
+        },
+        "tones": {
+            "warm": 0.4084,
+            "neutral": 0.5916,
+            "cool": 0
+        }
+    },
+    "foreground": {
+        "colors": {
+            "Orange": {
+                "coverage": 0.6022,
+                "rgb": {
+                    "red": 249,
+                    "green": 165,
+                    "blue": 45
+                }
+            },
+            "Gold": {
+                "coverage": 0.1935,
+                "rgb": {
+                    "red": 253,
+                    "green": 188,
+                    "blue": 58
+                }
+            },
+            "Mustard": {
+                "coverage": 0.1722,
+                "rgb": {
+                    "red": 253,
+                    "green": 207,
+                    "blue": 84
+                }
+            },
+            "Cream": {
+                "coverage": 0.0173,
+                "rgb": {
+                    "red": 253,
+                    "green": 235,
+                    "blue": 170
+                }
+            },
+            "Yellow": {
+                "coverage": 0.0148,
+                "rgb": {
+                    "red": 254,
+                    "green": 229,
+                    "blue": 117
+                }
+            }
+        },
+        "tones": {
+            "warm": 0.9827,
+            "neutral": 0.0173,
+            "cool": 0
+        }
+    },
+    "background": {
+        "colors": {
+            "White": {
+                "coverage": 0.9923,
+                "rgb": {
+                    "red": 254,
+                    "green": 254,
+                    "blue": 243
+                }
+            },
+            "Dark_Brown": {
+                "coverage": 0.0077,
+                "rgb": {
+                    "red": 83,
+                    "green": 68,
+                    "blue": 57
+                }
+            }
+        },
+        "tones": {
+            "warm": 0,
+            "neutral": 1.0,
+            "cool": 0
+        }
+    }
+}]
+```
+
+On top of the colors from the 'overall' image we can also see colors from the 'foreground' and 'background' regions now. Additionally, since we enable tone retrieval too, for each of the above regions we can now retrieve a "tones" histogram as well. 
+
+**Input parameters**
+
+| Name | Data Type | Required | Default | Values | Description |
+| --- | --- | --- | --- | --- | --- |
+| `documents` | array<Document-Object> | Yes | - | See below | List of json elements with each item in the list representing one document. |
+| `top_n` | number | No | 0 | Non-negative integer | Number of results to be returned. 0, to return all results. When used in conjunction with threshold, the number of results returned will be lesser of either limits. |
+| `min_coverage` | number	| No | 0.05 | Real number | Threshold of coverage above which the results need to be returned. Exclude parameter to return all results. |
+| `resize_image` | number	| No | True | True/False | Whether to resize the input image or not. By default the images are resized to 320*320 pixels before color extraction is performed. For debugging purposes we can allow the code to run on full-image as well, by setting this to False. |
+| `enable_mask` | number | No | False | True/False | 	Enables/Disables color extraction |
+| `retrieve_tone` | number | No | False| True/False | Enables/Disables tone extraction |
+
+**Document object**
+
+| Name | Data Type | Required | Default | Values | Description |
+| -----| --------- | -------- | ------- | ------ | ----------- |
+| `repo:path` | string | - | - | - | Presigned url of the document from which key phrases are to be extracted. |
+| `sensei:repoType` | string | - | - | HTTPS | Type of repo where the document is being stored. |
+| `sensei:multipart_field_name` | string | - | - | - | Use this when passing the document as a multipart argument instead of using presigned urls. |
+| `dc:format` | string | Yes | - | "text/plain",<br>"application/pdf",<br>"text/pdf",<br>"text/html",<br>"text/rtf",<br>"application/rtf",<br>"application/msword",<br>"application/vnd.openxmlformats-officedocument.wordprocessingml.document",<br>"application/mspowerpoint",<br>"application/vnd.ms-powerpoint",<br>"application/vnd.openxmlformats-officedocument.presentationml.presentation" | Document encoding is checked against allowed input encoding types before being processed.|
