@@ -43,7 +43,7 @@ The first step in setting up your personalization destination is to configure a 
 
 When configuring the datastream, under **[!UICONTROL Adobe Experience Platform]** make sure that both **[!UICONTROL Edge Segmentation]** and **[!UICONTROL Personalization Destinations]** are selected.
 
-![Datastream configuration](../assets/ui/configure-personalization-destinations/datastream-config.png)
+![Datastream configuration](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
 For more details on how to set up a datastream, follow the instructions described in the [Platform Web SDK documentation](../../edge/datastreams/overview.md).
 
