@@ -1,5 +1,5 @@
 ---
-description: This page exemplifies the API call used to submit a destination publishing request through Adobe Experience Platform Destination SDK. 
+description: Learn how to format an API call to submit a destination publishing request through Adobe Experience Platform Destination SDK.
 title: Create a destination publishing request
 ---
 
