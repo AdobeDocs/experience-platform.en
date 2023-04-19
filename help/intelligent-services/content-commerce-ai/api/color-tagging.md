@@ -363,7 +363,7 @@ In addition to the colors from the overall image, you can also see colors from t
 
 | Name | Data Type | Required | Default | Values | Description |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | Presigned URL of the document from which key phrases are to be extracted. |
-| `sensei:repoType` | string | - | - | HTTPS | Type of repo where the document is being stored. |
-| `sensei:multipart_field_name` | string | - | - | - | Use this when passing the document as a multipart argument instead of using presigned URLs. |
-| `dc:format` | string | Yes | - | "text/plain",<br>"application/pdf",<br>"text/pdf",<br>"text/html",<br>"text/rtf",<br>"application/rtf",<br>"application/msword",<br>"application/vnd.openxmlformats-officedocument.wordprocessingml.document",<br>"application/mspowerpoint",<br>"application/vnd.ms-powerpoint",<br>"application/vnd.openxmlformats-officedocument.presentationml.presentation" | Document encoding is checked against allowed input encoding types before being processed.|
+| `repo:path` | string | - | - | - | Presigned URL of the document. |
+| `sensei:repoType` | string | - | - | HTTPS | Type of repo where the image is being stored. |
+| `sensei:multipart_field_name` | string | - | - | - | Use this when passing the image file as a multipart argument instead of using presigned URLs. |
+| `dc:format` | string | Yes | - | "image/jpg",<br>"image/jpeg",<br>"image/png",<br>"image/tiff"| Image encoding is checked against allowed input encoding types before being processed.|
