@@ -35,7 +35,7 @@ user-guide-description: Use intelligent AI services to generate scores, discover
 - Customer AI {#customer-ai}
   - [Overview](customer-ai/overview.md)
   - [Getting started with Customer AI](customer-ai/getting-started.md)
-  - [Input and output](customer-ai/input-output.md)
+  - [Data requirements](customer-ai/data-requirements.md)
   - UI guides{#user-guide}
     - [Configure an instance](customer-ai/user-guide/configure.md)
     - [Discover insights](customer-ai/user-guide/discover-insights.md)

@@ -9,7 +9,7 @@ exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 
 When given a text document, the keyword tagging service automatically extracts keywords or key phrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword tagging algorithms are used.
 
-The following table lists the named entities that [!DNL Content Tagging] has identified:
+The following table lists the named entities that [!DNL Content Tagging] can identify:
 
 | Entity name | Description |
 | --- | --- |
@@ -80,15 +80,18 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@simple-text.pdf'
 ```
 
+**Input parameters**
+
 | Property | Description | Mandatory |
 | --- | --- | --- |
-| `application-id` | The ID of the created application. | Yes |
 | `top_n` | Number of results to be returned. 0, to return all results. When used in conjunction with threshold, the number of results returned will be less than either limit. | No |
 | `min_relevance` | Score threshold below which results must be returned. Exclude the parameter to return all results. | No |
 | `min_key_phrase_length` | Minimum number of words required in the key phrases. | No |
 | `max_key_phrase_length` | Maximum number of words required in the key phrases. | No |
 | `last_semantic_unit_type` | Return only semantic units up to the given level in the hierarchical response. “key_phrase” returns only key phrases, “linked_entity” returns only key phrases and their corresponding linked entities, and “concept” returns key phrases, linked entities and concepts. | No |
 | `entity_types` | Types of entities to be returned as key phrases.| No |
+
+**Document object**
 
 | Name | Data Type | Required | Default | Values | Description |
 | -----| --------- | -------- | ------- | ------ | ----------- |

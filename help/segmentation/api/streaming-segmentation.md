@@ -96,7 +96,7 @@ Additionally, segment unqualification, similarly to segment qualification, happe
 
 ## Retrieve all segments enabled for streaming segmentation
 
-You can retrieve a list of all your segments that are enabled for streaming segmentation within your IMS Organization by making a GET request to the `/segment/definitions` endpoint.
+You can retrieve a list of all your segments that are enabled for streaming segmentation within your organization by making a GET request to the `/segment/definitions` endpoint.
 
 **API format**
 
@@ -120,7 +120,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns an array of segments in your IMS Organization that are enabled for streaming segmentation.
+A successful response returns an array of segments in your organization that are enabled for streaming segmentation.
 
 ```json
 {
@@ -301,7 +301,7 @@ A successful response returns the details of the newly created streaming-enabled
 
 ## Enable scheduled evaluation {#enable-scheduled-segmentation}
 
-Once streaming evaluation has been enabled, a baseline must be created (after which the segment will always be up-to-date). Scheduled evaluation (also known as scheduled segmentation) must first be enabled in order for the system to automatically perform baselining. With scheduled segmentation, your IMS Org can adhere to a recurring schedule to automatically run export jobs to evaluate segments.
+Once streaming evaluation has been enabled, a baseline must be created (after which the segment will always be up-to-date). Scheduled evaluation (also known as scheduled segmentation) must first be enabled in order for the system to automatically perform baselining. With scheduled segmentation, your organization can adhere to a recurring schedule to automatically run export jobs to evaluate segments.
 
 >[!NOTE]
 >
@@ -347,7 +347,7 @@ curl -X POST \
 | `properties` | **(Required)** An object containing additional properties related to the schedule. |
 | `properties.segments` | **(Required when `type` equals `batch_segmentation`)** Using `["*"]` ensures all segments are included. |
 | `schedule` | **(Required)** A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. The example shown (`0 0 1 * * ?`) means the job is triggered every day at 1:00:00 UTC. For more information, please review the appendix on the [cron expression format](./schedules.md#appendix) within the documentation on schedules within segmentation. |
-| `state` | *(Optional)* String containing the schedule state. Available values: `active` and `inactive`. Default value is `inactive`. An IMS Organization can only create one schedule. Steps for updating the schedule are available later in this tutorial. |
+| `state` | *(Optional)* String containing the schedule state. Available values: `active` and `inactive`. Default value is `inactive`. An organization can only create one schedule. Steps for updating the schedule are available later in this tutorial. |
 
 **Response**
 

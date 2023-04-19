@@ -545,7 +545,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{TENANT_ID}` | This ID is used to ensure that resources you create are namespaced properly and contained within your IMS Organization. | 
+| `{TENANT_ID}` | This ID is used to ensure that resources you create are namespaced properly and contained within your organization. | 
 | `{SCHEMA_ID}` | The ID of the schema you've created. |
 
 ### Create batch
