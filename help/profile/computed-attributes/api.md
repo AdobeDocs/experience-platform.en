@@ -88,9 +88,10 @@ A successful response returns HTTP status 200 with a list of the last 3 updated 
                 "type": "production",
                 "default": true
             },
-            "path": "{TENANT_ID}}",
+            "path": "{TENANT_ID}/ComputedAttributes",
             "positionPath": [
-                "{TENANT_ID}"
+                "{TENANT_ID}",
+                "ComputedAttributes"
             ],
             "expression": {
                 "type": "PQL",
@@ -129,9 +130,10 @@ A successful response returns HTTP status 200 with a list of the last 3 updated 
                 "type": "production",
                 "default": true
             },
-            "path": "{TENANT_ID}",
+            "path": "{TENANT_ID}/ComputedAttributes",
             "positionPath": [
-                "{TENANT_ID}"
+                "{TENANT_ID}",
+                "ComputedAttributes"
             ],
             "expression": {
                 "type": "PQL",
@@ -170,9 +172,10 @@ A successful response returns HTTP status 200 with a list of the last 3 updated 
                 "type": "production",
                 "default": true
             },
-            "path": "{TENANT_ID}",
+            "path": "{TENANT_ID}/ComputedAttributes",
             "positionPath": [
-                "{TENANT_ID}"
+                "{TENANT_ID}",
+                "ComputedAttributes"
             ],
             "expression": {
                 "type": "PQL",
@@ -252,7 +255,7 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 
 | Property | Description |
 | -------- | ----------- |
-| `name` | The name of the computed attribute field, as a string. |
+| `name` | The name of the computed attribute field, as a string. The name of the computed attribute can only be comprised of alphabetical characters without any spaces or underscores.  |
 | `description` | A description of the computed attribute. This is especially useful once multiple computed attributes have been defined as it will help others within your organization to determine the correct computed attribute to use. |
 | `displayName` | The display name for the computed attribute. This is the name that will be displayed when listing your computed attributes within the Adobe Experience Platform UI. |
 | `expression` | An object that represents the query expression of the computed attribute you are trying to create. |
@@ -282,9 +285,10 @@ A successful response returns HTTP status 200 with information about your newly 
         "type": "production",
         "isDefault": true
     },
-    "path": "{TENANT_ID}",
+    "path": "{TENANT_ID}/ComputedAttributes",
     "positionPath": [
-        "{TENANT_ID}"
+        "{TENANT_ID}",
+        "ComputedAttributes"
     ],
     "keepCurrent": false,
     "expression": {
@@ -361,9 +365,10 @@ A successful response returns HTTP status 200 with detailed information about th
         "type": "production",
         "isDefault": true
     },
-    "path": "{TENANT_ID}",
+    "path": "{TENANT_ID}/ComputedAttributes",
     "positionPath": [
-        "{TENANT_ID}}"
+        "{TENANT_ID}",
+        "ComputedAttributes"
     ],
     "keepCurrent": false,
     "expression": {
@@ -458,9 +463,10 @@ A successful response returns HTTP status 202 with details of the deleted comput
         "type": "production",
         "isDefault": true
     },
-    "path": "{TENANT_ID}",
+    "path": "{TENANT_ID}/ComputedAttributes",
     "positionPath": [
-        "{TENANT_ID}"
+        "{TENANT_ID}",
+        "ComputedAttributes"
     ],
     "keepCurrent": false,
     "expression": {
@@ -554,9 +560,10 @@ A successful response returns HTTP status 200 with information about your newly 
         "type": "production",
         "isDefault": true
     },
-    "path": "{TENANT_ID}",
+    "path": "{TENANT_ID}/ComputedAttributes",
     "positionPath": [
-        "{TENANT_ID}"
+        "{TENANT_ID}",
+        "ComputedAttributes"
     ],
     "keepCurrent": false,
     "expression": {
