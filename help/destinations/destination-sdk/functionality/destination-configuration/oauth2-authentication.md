@@ -5,13 +5,13 @@ exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
 ---
 # OAuth 2 authentication 
 
-Use Destination SDK to allow Adobe Experience Platform to connect to your destination by using the [OAuth 2 authentication framework](https://tools.ietf.org/html/rfc6749).
+Destination SDK supports several authentication methods to your destination. Among these is the option to authenticate to your destination by using the [OAuth 2 authentication framework](https://tools.ietf.org/html/rfc6749).
 
 This page describes the various OAuth 2 authentication flows supported by Destination SDK, and provides instructions to set up OAuth 2 authentication for your destination.
 
 ## Supported integration types {#supported-integration-types}
 
-Refer to the table below for details on what type of destinations support the functionality described in this page.
+Refer to the table below for details on which types of integrations support the functionality described on this page.
 
 |Integration type| Supports functionality |
 |---|---|

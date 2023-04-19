@@ -5,10 +5,6 @@ title: Retrieve a destination configuration
 
 # Retrieve a destination configuration
 
->[!IMPORTANT]
->
->**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destinations`
-
 This page exemplifies the API request and payload that you can use to retrieve information about an existing destination configuration, using the `/authoring/destination` API endpoint.
 
 ## Getting started with destination configuration API operations {#get-started}
@@ -18,6 +14,11 @@ Before continuing, please review the [getting started guide](../../getting-start
 ## Retrieve a destination configuration {#retrieve}
 
 You can retrieve an [existing](create-destination-configuration.md) destination configuration by making a `GET` request to the `/authoring/destination` endpoint.
+
+>[!TIP]
+>
+>**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destinations`
+
 
 **API format**
 

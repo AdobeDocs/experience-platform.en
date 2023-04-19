@@ -5,10 +5,6 @@ title: Retrieve a destination server configuration
 
 # Retrieve a destination server configuration
 
->[!IMPORTANT]
->
->**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
-
 This page exemplifies the API request and payload that you can use to retrieve information about an existing destination server configuration using the `/authoring/destination-servers` API endpoint.
 
 For a detailed description of the capabilities used by destination servers, read the following articles:
@@ -25,6 +21,10 @@ Before continuing, please review the [getting started guide](../../getting-start
 ## Retrieve a destination server configuration {#retrieve}
 
 You can retrieve an existing destination server configuration by making a `GET` request to the `/authoring/destination-servers` endpoint.
+
+>[!TIP]
+>
+>**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
 **API format**
 

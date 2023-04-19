@@ -5,10 +5,6 @@ title: Delete a destination server configuration
 
 # Delete a destination server configuration
 
->[!IMPORTANT]
->
->**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
-
 This page exemplifies the API request and payload that you can use to delete an existing destination server configuration, using the `/authoring/destination-servers` API endpoint.
 
 For a detailed description of the capabilities that you can delete through this endpoint, read the following articles:
@@ -25,6 +21,10 @@ Before continuing, please review the [getting started guide](../../getting-start
 ## Delete a destination server configuration {#delete}
 
 You can delete an [existing](create-destination-server.md) destination server configuration by making a `DELETE` request to the `/authoring/destination-servers` endpoint with the `{INSTANCE_ID}`of the destination server configuration that you want to delete.
+
+>[!TIP]
+>
+>**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
 To obtain an existing destination server configuration and its corresponding `{INSTANCE_ID}`, see the article about [retrieving a destination server configuration](retrieve-destination-server.md).
 

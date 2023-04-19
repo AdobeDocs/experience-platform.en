@@ -1,5 +1,5 @@
 ---
-description: Learn how to configure the UI attributes for destinations built with Destination SDK.
+description: Learn how to configure the UI attributes, such as the documentation link, the destination card category, and the destination connection type and frequency, for destinations built with Destination SDK.
 title: UI attributes
 ---
 
@@ -31,7 +31,7 @@ This article describes all the supported UI attributes that you can use for your
 
 ## Supported integration types {#supported-integration-types}
 
-Refer to the table below for details on what type of destinations support the functionality described in this page.
+Refer to the table below for details on which types of integrations support the functionality described on this page.
 
 |Integration type| Supports functionality |
 |---|---|
@@ -52,14 +52,13 @@ Refer to the table below for details on what type of destinations support the fu
 
 ### `documentationLink` {#documentation-link}
 
-`documentationLink` is a string parameter that refers to the documentation page in the [Destinations Catalog](../../../catalog/overview.md) for your destination.
+`documentationLink` is a string parameter that refers to the documentation page in the [Destinations Catalog](../../../catalog/overview.md) for your destination. Every productized destination in Adobe Experience Platform must have a corresponding documentation page. [Learn how to create a destination documentation page](../../docs-framework/documentation-instructions.md) for your destination. Note that this is not required for private/custom destinations.
 
 Use the following format: `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `http://www.adobe.com/go/destinations-moviestar-en`.
 
-Users can see and click the documentation link in the UI, by selecting your destination card, then selecting **[!UICONTROL More actions]**, and then **[!UICONTROL View documentation]**, as shown in the image below.
+Users can see and visit your documentation link from the destinations catalog page in the UI. They need to browse to your destination card, then select **[!UICONTROL More actions]**, and then **[!UICONTROL View documentation]**, as shown in the image below.
 
 ![UI image showing the documentation link location.](../../assets/functionality/destination-configuration/ui-attributes-doc-link.png)
-
 
 >[!NOTE]
 >

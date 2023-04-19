@@ -25,7 +25,7 @@ Shown below is an example configuration for an [!DNL Amazon S3] destination. To 
 
 **API format**
 
-```http
+```shell
 POST platform.adobe.io/data/core/activation/authoring/destination-servers
 ```
 

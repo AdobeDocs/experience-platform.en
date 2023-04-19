@@ -46,7 +46,7 @@ Through Destination SDK, you can also set up integrations to periodically export
 * File export in several supported formats (CSV, Parquet, JSON)
 * Configurable file formatting options, which allow you to structure the format of the exported files to meet your downstream requirements.
 
-Read about the technical requirements on the destinations side in the [integration prerequisites](integration-prerequisites.md) article.
+Read about the technical requirements on the destinations side in the [integration prerequisites](integration-prerequisites.md) article and read about all supported configurations in the [configuration options](functionality/configuration-options.md) article
 
 ## Get access to Destination SDK {#get-access}
 
@@ -64,7 +64,7 @@ Destination SDK access varies based on your status as a partner or Experience Pl
 
 The process to configure your destination in Experience Platform is outlined below:
 
-1. If you are an ISV or SI, see the getting access information in the section above. [Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) customers can skip this step.
+1. If you are an ISV or SI, see the getting access information in the section above. [Real-Time CDP Ultimate package](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers can skip this step.
 2. [Request to provision an Experience Platform sandbox](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) and enable the destination authoring permission.
 3. Build your integration. Follow the instructions in the product documentation to configure [streaming destinations](guides/configure-destination-instructions.md) or [file-based destinations](guides/configure-file-based-destination-instructions.md).
 4. Test your integration. Follow the instructions in the product documentation to test [streaming destinations](testing-api/test-destination.md) or [file-based destinations](testing-api/batch-destinations/file-based-destination-testing-overview.md).

@@ -16,7 +16,7 @@ To understand the message format and profile configuration and transformation pr
 
 ## Supported integration types {#supported-integration-types}
 
-Refer to the table below for details on what type of destinations support the functionality described in this page.
+Refer to the table below for details on which types of integrations support the functionality described on this page.
 
 |Integration type| Supports functionality |
 |---|---|
@@ -25,7 +25,7 @@ Refer to the table below for details on what type of destinations support the fu
 
 ## Overview {#overview}
 
-Use the content on this page together with the rest of the [configuration options for partner destinations](../configuration-options.md). This page addresses the message format and the profile transformation in data exported from Adobe Experience Platform to destinations. The other page addresses specifics about connecting and authenticating to your destination.
+This page addresses the message format and the profile transformation in data exported from Adobe Experience Platform to destinations.
 
 Adobe Experience Platform exports data to a significant number of destinations, in various data formats. Some examples of destination types are advertising platforms (Google), social networks (Facebook), and cloud storage locations (Amazon S3, Azure Event Hubs).
 

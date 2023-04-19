@@ -5,9 +5,7 @@ title: Create a destination server configuration
 
 # Create a destination server configuration
 
->[!IMPORTANT]
->
->**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
+Creating a destination server is the first step in creating your own destination with Destination SDK. The destination server includes configuration options for the [server](../../functionality/destination-server/server-specs.md) and [templating](../../functionality/destination-server/templating-specs.md) specs, the [message format](../../destination-sdk/functionality/destination-server/message-format.md), and the [file formatting](../../functionality/destination-server/file-formatting.md) options (for file-based destinations).
 
 This page exemplifies the API request and payload that you can use to create your own destination server using the `/authoring/destination-servers` API endpoint.
 
@@ -26,13 +24,17 @@ Before continuing, please review the [getting started guide](../../getting-start
 
 You can create a new destination server configuration by making a `POST` request to the `/authoring/destination-servers` endpoint.
 
+>[!TIP]
+>
+>**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
+
 **API format**
 
 ```http
 POST /authoring/destination-servers
 ```
 
-The following requests create new destination server configurations, configured by the parameters provided in the payload.
+Depending on the destination type that you create, you need to configure a slightly different type of destination server. See in the tabs below examples of destination servers for every destination type supported in Destination SDK.
 
 The sample payloads below include all parameters supported by each destination server type. You do not need to include all the parameters in your request. The payload is customizable based on your needs.
 
@@ -40,9 +42,11 @@ Select each tab below to view the corresponding API requests.
 
 >[!BEGINTABS]
 
->[!TAB URL-based]
+>[!TAB Real-time (streaming)]
 
-**Create a URL-based destination server**
+**Create a real-time (streaming) destination server**
+
+You need to create a real-time (streaming) destination server similar to the one shown below when you configure a real-time (streaming) API-based integration.
 
 +++Request
 
@@ -77,8 +81,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | Parameter | Type | Description |
 | -------- | ----------- | ----------- |
 |`name` | String | *Required.* Represents a friendly name of your server, visible only to Adobe. This name is not visible to partners or customers. Example `Moviestar destination server`.  |
-|`destinationServerType` | String | *Required.* Set to `URL_BASED` for URL-based destinations. |
-|`urlBasedDestination.url.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>  |
+|`destinationServerType` | String | *Required.* Set to `URL_BASED` for real-time (streaming) destinations. |
+|`urlBasedDestination.url.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like `https://api.moviestar.com/data/{{customerData.region}}/items`, where the `region` part can differ between customers. In this case you also need to configure `region` as a [customer data field](../../functionality/destination-configuration/customer-data-fields.md) in the [destination configuration](../destination-configuration/create-destination-configuration.md. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>  |
 |`urlBasedDestination.url.value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to. |
 |`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 |`httpTemplate.requestBody.templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
@@ -98,6 +102,8 @@ A successful response returns HTTP status 200 with details of your newly created
 >[!TAB Amazon S3]
 
 **Create an Amazon S3 destination server**
+
+You need to create an [!DNL Amazon S3] destination server similar to the one shown below when you configure a file-based [!DNL Amazon S3] destination.
 
 +++Request
 
@@ -209,6 +215,8 @@ A successful response returns HTTP status 200 with details of your newly created
 
 **Create an [!DNL SFTP] destination server**
 
+You need to create an [!DNL SFTP] destination server similar to the one shown below when you configure a file-based [!DNL SFTP] destination.
+
 +++Request
 
 ```shell
@@ -319,6 +327,8 @@ A successful response returns HTTP status 200 with details of your newly created
 
 **Create an [!DNL Azure Data Lake Storage] destination server**
 
+You need to create an [!DNL Azure Data Lake Storage] destination server similar to the one shown below when you configure a file-based [!DNL Azure Data Lake Storage] destination.
+
 +++Request
 
 ```shell
@@ -422,6 +432,8 @@ A successful response returns HTTP status 200 with details of your newly created
 >[!TAB Azure Blob Storage]
 
 **Create an [!DNL Azure Blob Storage] destination server**
+
+You need to create an [!DNL Azure Blob Storage] destination server similar to the one shown below when you configure a file-based [!DNL Azure Blob Storage] destination.
 
 +++Request
 
@@ -533,6 +545,8 @@ A successful response returns HTTP status 200 with details of your newly created
 
 **Create a [!DNL Data Landing Zone (DLZ)] destination server**
 
+You need to create a [!DNL Data Landing Zone (DLZ)] destination server similar to the one shown below when you configure a file-based [!DNL Data Landing Zone (DLZ)] destination.
+
 +++Request
 
 ```shell
@@ -637,6 +651,8 @@ A successful response returns HTTP status 200 with details of your newly created
 >[!TAB Google Cloud Storage]
 
 **Create a [!DNL Google Cloud Storage] destination server**
+
+You need to create a [!DNL Google Cloud Storage] destination server similar to the one shown below when you configure a file-based [!DNL Google Cloud Storage] destination.
 
 +++Request
 
@@ -748,6 +764,8 @@ A successful response returns HTTP status 200 with details of your newly created
 
 **Create a dynamic schema server**
 
+You need to create a dynamic schema server similar to the one shown below when you configure a destination that retrieves its profile schema from your own API endpoint.
+
 +++Request
 
 ```shell
@@ -785,8 +803,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`name` | String | *Required.* Represents a friendly name of your dynamic schema server, visible only to Adobe. |
 |`destinationServerType` | String | *Required.* Set to `URL_BASED` for dynamic schema servers. |
 |`urlBasedDestination.url.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>  |
-|`urlBasedDestination.url.value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to. |
-|`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+|`urlBasedDestination.url.value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to and retrieve the schema fields to populate as target fields in the mapping step of the activation workflow. |
+|`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. For dynamic schema servers, use `GET`. |
 |`responseFields.templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
 |`responseFields.value` | String | *Required.* This string is the character-escaped transformation template that transforms the response received from the partner API into the partner schema that will be displayed in the Platform UI. <br> <ul><li> For information on how to write the template, read the [Using templating section](../../functionality/destination-server/message-format.md#using-templating). </li><li> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, refer to the [Profile Attributes](../../functionality/destination-server/message-format.md#attributes) transformation. </li></ul> |
 

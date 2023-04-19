@@ -17,7 +17,7 @@ When building your destination, configure your schema and identity namespaces ac
 
 ## Supported mappings for streaming destinations {#streaming-mappings}
 
-Streaming (or URL-based) destinations built with Destination SDK support the mapping configurations described in the table below.
+Real-time (streaming) destinations built with Destination SDK support the mapping configurations described in the table below.
 
 | Source field | Target field |
 | --- | --- |
@@ -92,10 +92,8 @@ The configuration example below allows customers to use all the mappings from th
       "acceptsCustomNamespaces":true,
       "acceptedGlobalNamespaces":{
          "Email":{
-            
          },
          "Phone":{
-            
          }
       }
    }

@@ -5,11 +5,11 @@ title: Update a destination server configuration
 
 # Update a destination server configuration
 
->[!IMPORTANT]
->
->**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
-
 This page exemplifies the API request and payload that you can use to update an existing destination server configuration, using the `/authoring/destination-servers` API endpoint.
+
+>[!TIP]
+>
+>Any update operation on productized/public destinations is visible only after you use the [publishing API](../../publishing-api/create-publishing-request.md) and submit the update for Adobe review.
 
 For a detailed description of the capabilities that you can configure through this endpoint, read the following articles:
 
@@ -25,6 +25,10 @@ Before continuing, please review the [getting started guide](../../getting-start
 ## Update a destination server configuration {#update}
 
 You can update an [existing](create-destination-server.md) destination server configuration by making a `PUT` request to the `/authoring/destination-servers` endpoint with the updated payload.
+
+>[!TIP]
+>
+>**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
 To obtain an existing destination server configuration and its corresponding `{INSTANCE_ID}`, see the article about [retrieving a destination server configuration](retrieve-destination-server.md).
 
@@ -44,7 +48,7 @@ Select each tab below to view the corresponding payload.
 
 >[!BEGINTABS]
 
->[!TAB URL-based]
+>[!TAB Real-time (streaming)]
 
 +++Request
 
@@ -79,7 +83,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | Parameter | Type | Description |
 | -------- | ----------- | ----------- |
 |`name` | String | *Required.* Represents a friendly name of your server, visible only to Adobe. This name is not visible to partners or customers. Example `Moviestar destination server`.  |
-|`destinationServerType` | String | *Required.* Set to `URL_BASED` for URL-based destinations. |
+|`destinationServerType` | String | *Required.* Set to `URL_BASED` for real-time (streaming) destinations. |
 |`urlBasedDestination.url.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>  |
 |`urlBasedDestination.url.value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to. |
 |`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `PUT`, `DELETE`, `PATCH`. |

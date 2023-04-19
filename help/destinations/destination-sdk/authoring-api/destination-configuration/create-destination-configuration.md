@@ -1,13 +1,9 @@
 ---
-description: This page exemplifies the API call used to create a destination configuration through Adobe Experience Platform Destination SDK. 
+description: Learn how to structure an API call to create a destination configuration through Adobe Experience Platform Destination SDK.
 title: Create a destination configuration
 ---
 
 # Create a destination configuration
-
->[!IMPORTANT]
->
->**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destinations`
 
 This page exemplifies the API request and payload that you can use to create your own destination configuration, using the `/authoring/destinations` API endpoint.
 
@@ -33,6 +29,10 @@ Before continuing, please review the [getting started guide](../../getting-start
 ## Create a destination configuration {#create}
 
 You can create a new destination configuration by making a POST request to the `/authoring/destinations` endpoint.
+
+>[!TIP]
+>
+>**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destinations`
 
 **API format**
 
@@ -204,15 +204,17 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Indicates which [standard identity namespaces](/help/identity-service/namespaces.md#standard) (for example, IDFA) customers can map to the identity that you are configuring. <br> When you use `acceptedGlobalNamespaces`, you can use `"requiredTransformation":"sha256(lower($))"` to lowercase and hash email addresses or phone numbers. |
 |`destinationDelivery.authenticationRule` | String | Indicates how [!DNL Platform] customers connect to your destination. Accepted values are `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` if Platform customers log into your system via a username and password, a bearer token, or another method of authentication. For example, you would select this option if you also selected `authType: OAUTH2` or `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> Use `PLATFORM_AUTHENTICATION` if there is a global authentication system between Adobe and your destination and the [!DNL Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must create a credentials object using the [credentials API](../../credentials-api/create-credential-configuration.md) configuration. </li><li>Use `NONE` if no authentication is required to send data to your destination platform. </li></ul> |
 |`destinationDelivery.destinationServerId` | String | The `instanceId` of the [destination server template](../destination-server/create-destination-server.md) used for this destination. |
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
-|`segmentMappingConfig.mapUserInput` | Boolean | Controls whether the segment mapping id in the destination activation workflow is input by user. |
-|`segmentMappingConfig.mapExperiencePlatformSegmentId` | Boolean | Controls whether the segment mapping id in the destination activation workflow is the Experience Platform segment ID. |
-|`segmentMappingConfig.mapExperiencePlatformSegmentName` | Boolean | Controls whether the segment mapping id in the destination activation workflow is the Experience Platform segment name. |
+|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. Always set this to `true`. |
+|`segmentMappingConfig.mapUserInput` | Boolean | Controls whether the segment mapping ID in the destination activation workflow is input by user. |
+|`segmentMappingConfig.mapExperiencePlatformSegmentId` | Boolean | Controls whether the segment mapping ID in the destination activation workflow is the Experience Platform segment ID. |
+|`segmentMappingConfig.mapExperiencePlatformSegmentName` | Boolean | Controls whether the segment mapping ID in the destination activation workflow is the Experience Platform segment name. |
 |`segmentMappingConfig.audienceTemplateId` | Boolean | The `instanceId` of the [audience metadata template](../../metadata-api/create-audience-template.md) used for this destination. |
 |`schemaConfig.profileFields` | Array | When you add predefined `profileFields` as shown in the configuration above, users will have the option of mapping Experience Platform attributes to the predefined attributes on your destination's side. |
 |`schemaConfig.profileRequired` | Boolean | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination's side, as shown in the example configuration above.|
 |`schemaConfig.segmentRequired` | Boolean | Always use `segmentRequired:true`. |
 |`schemaConfig.identityRequired` | Boolean | Use `true` if you users should be able to map identity namespaces from Experience Platform to your desired schema. |
+
+{style="table-layout:auto"}
 
 +++
 

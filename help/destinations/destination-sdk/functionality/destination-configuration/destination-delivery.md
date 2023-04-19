@@ -1,5 +1,5 @@
 ---
-description: Learn how to configure the destination delivery settings for destinations built with Destination SDK.
+description: Learn how to configure the destination delivery settings for destinations built with Destination SDK, to indicate where the exported data goes and what authentication rule is used in the location where the data will land.
 title: Destination delivery
 ---
 
@@ -7,7 +7,7 @@ title: Destination delivery
 
 The destination delivery section indicates where the exported data goes and what authentication rule is used in the location where the data will land.
 
-When configuring a destination, you must specify an authentication rule and one or more `destinationServerId`parameters, corresponding to the destination servers that define where the data will be delivered to. In most cases, the authentication rule that you should use is `CUSTOMER_AUTHENTICATION`. 
+When configuring a destination, you must specify an authentication rule and one or more `destinationServerId` parameters, corresponding to the destination servers that define where the data will be delivered to. In most cases, the authentication rule that you should use is `CUSTOMER_AUTHENTICATION`. 
 
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the following destination configuration overview pages:
 
@@ -23,7 +23,7 @@ This article describes all the supported destination delivery options that you c
 
 ## Supported integration types {#supported-integration-types}
 
-Refer to the table below for details on what type of destinations support the functionality described in this page.
+Refer to the table below for details on which types of integrations support the functionality described on this page.
 
 |Integration type| Supports functionality |
 |---|---|

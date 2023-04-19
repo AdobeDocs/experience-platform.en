@@ -1,5 +1,5 @@
 ---
-description: Learn how to configure the customer authentication configuration for destinations built with Destination SDK.
+description: Learn how to set up an authentication mechanism for your destination and get insight into what users will be seeing in the UI depending on the authentication method you select.
 title: Customer authentication configuration
 ---
 
@@ -18,7 +18,9 @@ Before customers can export data from Platform to your destination, they must cr
 
 When [creating a destination](../../authoring-api/destination-configuration/create-destination-configuration.md) through Destination SDK, the `customerAuthenticationConfigurations` section defines what customers see in the [authentication screen](../../../ui/connect-destination.md#authenticate). Depending on the destination authentication type, customers must provide various authentication details, such as:
 
+* For destinations using [basic authentication](#basic), users must provide a username and password directly in the Experience Platform UI authentication page.
 * For destinations using [bearer authentication](#bearer), users must provide a bearer token.
+* For destinations using [OAuth2 authentication](#oauth2), users are redirected to your destination's login page where they can log in with their credentials.
 * For [Amazon S3](#s3) destinations, users must provide their [!DNL Amazon S3] access key and secret key.
 * For [Azure Blob](#blob) destinations, users must provide their [!DNL Azure Blob] connection string.
 
@@ -27,7 +29,7 @@ You can configure customer authentication details via the `/authoring/destinatio
 * [Create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Update a destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-This article describes all the supported customer authentication configurations that you can use for your destination, and shows what customers will see in the Experience Platform UI.
+This article describes all the supported customer authentication configurations that you can use for your destination, and shows what customers will see in the Experience Platform UI based on the authentication method that you set up for your destination.
 
 >[!IMPORTANT]
 >
@@ -35,7 +37,7 @@ This article describes all the supported customer authentication configurations 
 
 ## Supported integration types {#supported-integration-types}
 
-Refer to the table below for details on what type of destinations support the functionality described in this page.
+Refer to the table below for details on which types of integrations support the functionality described on this page.
 
 |Integration type| Supports functionality |
 |---|---|
@@ -46,9 +48,26 @@ Refer to the table below for details on what type of destinations support the fu
 
 When using any of the customer authentication configurations described in this page, always configure the `authenticationRule` parameter in [destination delivery](destination-delivery.md) as `"CUSTOMER_AUTHENTICATION"`.
 
+```json {line-numbers="true" highlight="11"}
+ "destinationDelivery":[
+      {
+         "deliveryMatchers":[
+            {
+               "type":"SOURCE",
+               "value":[
+                  "batch"
+               ]
+            }
+         ],
+         "authenticationRule":"CUSTOMER_AUTHENTICATION",
+         "destinationServerId":"{{destinationServerId}}"
+      }
+   ]
+```
+
 ## Basic authentication {#basic}
 
-Basic authentication is supported for URL-based integrations in Experience Platform.
+Basic authentication is supported for real-time (streaming) integrations in Experience Platform.
 
 When you configure the basic authentication type, users are required to input a username and password to connect to your destination.
 

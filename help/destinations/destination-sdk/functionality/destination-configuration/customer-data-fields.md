@@ -1,9 +1,9 @@
 ---
-description: Learn how to configure the customer data fields for destinations built with Destination SDK.
+description: Learn how to create input fields in the Experience Platform UI that allow your users to specify various information relevant to how to connect and export data to your destination.
 title: Customer data fields
 ---
 
-# Customer data fields
+# Configure user input through customer data fields
 
 When connecting to your destination in the Experience Platform UI, you might need your users to provide specific configuration details or select specific options that you make available to them. In Destination SDK, these options are called customer data fields.
 
@@ -12,12 +12,14 @@ To understand where this component fits into an integration created with Destina
 * [Use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-When [creating a destination](../../authoring-api/destination-configuration/create-destination-configuration.md) through Destination SDK, the `customerDataFields` section defines the properties of the fields your users will see in the UI, such as, but not limited to:
+## Use cases for customer data fields {#use-cases}
+
+Use customer data fields for a variety of use cases where you need users to input data into the Experience Platform UI. For example, use customer data fields when users need to provide:
 
 * Cloud storage bucket names and paths, for file-based destinations.
 * The format accepted by the customer data fields.
 * Available file compression types that users can select from.
-* Lists of available endpoints for URL-based integrations.
+* Lists of available endpoints for real-time (streaming) integrations.
 
 You can configure customer data fields via the `/authoring/destinations` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
 
@@ -28,7 +30,7 @@ This article describes all the supported customer data fields configuration type
 
 ## Supported integration types {#supported-integration-types}
 
-Refer to the table below for details on what type of destinations support the functionality described in this page.
+Refer to the table below for details on which types of integrations support the functionality described on this page.
 
 |Integration type| Supports functionality |
 |---|---|
@@ -464,7 +466,7 @@ For more information about how to configure your destination server to read temp
 
 ## Next steps {#next-steps}
 
-After reading this article, you should have a better understanding of how you can configure, order, and group customer data fields in the Platform UI.
+After reading this article, you should have a better understanding of how you can allow your users to input information in the Experience Platform UI through customer data fields. You now also know how to select the right customer data field for your use case, and configure, order, and group customer data fields in the Platform UI.
 
 To learn more about the other destination components, see the following articles:
 

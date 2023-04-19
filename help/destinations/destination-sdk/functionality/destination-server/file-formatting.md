@@ -1,5 +1,5 @@
 ---
-description: Learn how to configure file formatting options for  file-based destinations built with Adobe Experience Platform Destination SDK, via the `/destination-servers` endpoint.
+description: Learn how to configure file formatting options for file-based destinations built with Adobe Experience Platform Destination SDK, via the `/destination-servers` endpoint.
 title: File formatting configuration
 ---
 
@@ -12,6 +12,9 @@ When you create file-based destinations through Destination SDK, you can define 
 * Whether the CSV file should include a header;
 * What character to use for quoting values;
 * What empty values should look like.
+
+Depending on your destination configuration, users will see certain options in the UI when connecting to a file-based destination. You can see what these options look like in the [file formatting options for file-based destinations](../../../ui/batch-destinations-file-formatting-options.md) documentation.
+
 
 File formatting settings are part of the destination server configuration for file-based destinations. 
 
@@ -26,7 +29,7 @@ This page describes all the supported file formatting settings for exported `CSV
 
 ## Supported integration types {#supported-integration-types}
 
-Refer to the table below for details on what type of destinations support the functionality described in this page.
+Refer to the table below for details on which types of integrations support the functionality described on this page.
 
 |Integration type| Supports functionality |
 |---|---|
@@ -41,7 +44,8 @@ You can modify several properties of the exported files to match the requirement
 >
 >CSV options are only supported when exporting CSV files. The `fileConfigurations` section is not mandatory when setting up a new destination server. If you don't pass any values in the API call for the CSV options, the default ones from the [reference table further below](#file-formatting-reference-and-example) will be used.
 
-## File configurations with CSV options and `templatingStrategy` set to `NONE` {#file-configuration-templating-none}
+
+## CSV options where users cannot select configuration options {#file-configuration-templating-none}
 
 In the configuration example below, all the CSV options are predefined. The export settings defined in each of the `csvOptions` parameters are final and users cannot modify them.
 
@@ -109,9 +113,9 @@ In the configuration example below, all the CSV options are predefined. The expo
     }
 ```
 
-## File configurations with CSV options and `templatingStrategy` set to `PEBBLE_V1` {#file-configuration-templating-pebble}
+## CSV options where users can select configuration options {#file-configuration-templating-pebble}
 
-In the configuration example below, none of the CSV options are predefined. The `value` in each of the `csvOptions` parameters is configured in a corresponding customer data field through the `/destinations` endpoint (for example `customerData.quote` for the `quote` file formatting option) and users can use the Experience Platform UI to select between the various options you configure in the corresponding customer data field.
+In the configuration example below, none of the CSV options are predefined. The `value` in each of the `csvOptions` parameters is configured in a corresponding customer data field through the `/destinations` endpoint (for example `customerData.quote` for the `quote` file formatting option) and users can use the Experience Platform UI to select between the various options you configure in the corresponding customer data field. You can see what these options look like in the [file formatting options for file-based destinations](../../../ui/batch-destinations-file-formatting-options.md) documentation.
 
 ```json
 {

@@ -5,7 +5,7 @@ title: Batch configuration
 
 # Batch configuration {#batch-configuration}
 
-Destination SDK supports a flexible set of features which you can configure according to your integration needs. Among these features is the option to customize the exported file names and to configure the export schedule according to user preference.
+Use the batch configuration options in Destination SDK to allow users to customize the exported file names and to configure the export schedule according to their preference.
 
 When you create file-based destinations through Destination SDK, you can configure default file naming and export schedules, or you can give users the option to configure these settings from the Platform UI. For instance, you can configure behaviors such as:
 
@@ -27,7 +27,7 @@ This article describes all the supported batch configuration options that you ca
 
 ## Supported integration types {#supported-integration-types}
 
-Refer to the table below for details on what type of destinations support the functionality described in this page.
+Refer to the table below for details on which types of integrations support the functionality described on this page.
 
 |Integration type| Supports functionality |
 |---|---|

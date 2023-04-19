@@ -7,7 +7,7 @@ title: Server specs for destinations created with Destination SDK
 
 Destination server specs define the type of destination platform that will receive the data from Adobe Experience Platform, and the communication parameters between Platform and your destination. For instance:
 
-* A [streaming](#streaming-example) destination server spec defines the HTTP server endpoint that will receive the HTTP messages from Platform.
+* A [streaming](#streaming-example) destination server spec defines the HTTP server endpoint that will receive the HTTP messages from Platform. To learn to configure how the HTTP calls to the endpoint are formatted, read the [templating specs](templating-specs.md) page.
 * An [Amazon S3](#s3-example) destination server spec defines the [!DNL S3] bucket name and path where Platform will export the files.
 * An [SFTP](#sftp-example) destination server spec defines the host name, root directory, communication port, and encryption type of the SFTP server where Platform will export the files.
 
@@ -25,7 +25,7 @@ This page shows all the destination server types supported by Destination SDK, w
 
 ## Supported integration types {#supported-integration-types}
 
-Refer to the table below for details on what type of destinations support the functionality described in this page.
+Refer to the table below for details on which types of integrations support the functionality described on this page.
 
 |Integration type| Supports functionality |
 |---|---|
@@ -81,7 +81,7 @@ As a result, when users go through the [destination connection tutorial](../../.
 
 When the connection between Platform and your destination should be established following a specific user input in the Platform UI, such as selecting an API endpoint or providing a field value, you can use templatized fields in the server spec to read the user input and connect to your destination platform.
 
-In the example below, a partner creates a [URL-based](#streaming-example) integration and the `url.value` field uses the templatized parameter `{{customerData.region}}`.
+In the example below, a partner creates a [real-time (streaming)](#streaming-example) integration and the `url.value` field uses the templatized parameter `{{customerData.region}}` to personalize part of the API endpoint based on user input.
 
 ```json
 {
@@ -96,7 +96,7 @@ In the example below, a partner creates a [URL-based](#streaming-example) integr
 }
 ```
 
-To give users the option of selecting a value from the Platform UI, the `region` parameter must also be defined in the [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md) API call, as shown below:
+To give users the option of selecting a value from the Platform UI, the `region` parameter must also be defined in the [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md) as a customer data field, as shown below:
 
 ```json
 "customerDataFields":[
@@ -118,13 +118,13 @@ As a result, when users go through the [destination connection tutorial](../../.
 
 ![Ui image showing the destination connection screen with a region selector.](../../assets/functionality/destination-server/server-spec-template-region.png)
 
-## URL-based (streaming) destination server {#streaming-example}
+## Real-time (streaming) destination server {#streaming-example}
 
-This destination server allows you export data from Adobe Experience Platform to your destination via HTTP exports. The server configuration contains information about the server receiving the messages (the server on your side).
+This destination server type allows you export data from Adobe Experience Platform to your destination via HTTP requests. The server configuration contains information about the server receiving the messages (the server on your side).
 
 This process delivers user data as a series of HTTP messages to your destination platform. The parameters below form the HTTP server specs template.
 
-The sample below shows an example of a destination server configuration for a URL-based destination.
+The sample below shows an example of a destination server configuration for a real-time (streaming) destination.
 
 ```json
 {

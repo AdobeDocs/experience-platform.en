@@ -1,15 +1,15 @@
 ---
-description: Learn how to configure destination server templating specs in Adobe Experience Platform Destination SDK via the `/authoring/destination-servers` endpoint.
+description: Learn how to format the HTTP requests sent to your endpoint. Use the /authoring/destination-servers endpoint to configure destination server templating specs in Adobe Experience Platform Destination SDK.
 title: Templating specs for destinations created with Destination SDK
 ---
 
 # Template specs for destinations created with Destination SDK
 
-The template spec is a part of the destination server configuration, which allows you to configure how to format the messages exported to your destination.
+Use the template spec part of the destination server configuration to configure how to format the HTTP requests sent to your destination.
 
 In a template spec you can define how to transform profile attribute fields between the XDM schema and the format that your platform supports.
 
-Template specs are part of the destination server configuration for URL-based (streaming) destinations. 
+Template specs are part of the destination server configuration for real-time (streaming) destinations. 
 
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the the guide on how to [use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-server-template-configuration).
 
@@ -21,7 +21,7 @@ You can configure the template specs for your destination via the `/authoring/de
 
 ## Supported integration types {#supported-integration-types}
 
-Refer to the table below for details on what type of destinations support the functionality described in this page.
+Refer to the table below for details on which types of integrations support the functionality described on this page.
 
 |Integration type| Supports functionality |
 |---|---|
@@ -42,6 +42,8 @@ For more information about the transformation, visit the links below:
 >[!TIP]
 >
 >Adobe offers a [developer tool](../../testing-api/create-template.md) that helps you create and test a message transformation template. 
+
+See below an example of an HTTP request template, together with descriptions of each individual parameter.
 
 ```json
 

@@ -13,7 +13,7 @@ To use Destination SDK, make sure that you meet the technical and partnership pr
    * Segment membership information;
    * Profile identity information;
    * (Optional) Additional attributes for profile enrichment.
-2. Your REST API endpoint supports API token bearer authentication or the OAuth 2.0 authentication protocol.
+2. Your REST API endpoint supports basic, bearer token authentication, or the OAuth 2.0 authentication protocol.
 3. (Optional) You have a segment create/update/delete API or API endpoint for programmatic metadata management.
 
 ## Technical prerequisites for batch destinations {#batch-prerequisites}

@@ -62,7 +62,7 @@ For more information, read the following Experience Platform Access Control docu
 
 ## Additional considerations {#additional-considerations}
 
-* Any changes that you make to destination configurations, whether you create or edit a destination configuration, need to be reviewed and approved by Adobe. Your changes are reflected in your destinations only after the review is done.
+* For productized/public destinations, any changes that you make to destination configurations, whether you create or edit a destination configuration, need to be reviewed and approved by Adobe. Your changes are reflected in your destinations only after the review is done. This does not apply to private destinations which are only available to you.
 * Only the users that belong to the same organization and have access to the sandbox can edit the destination configuration.
 
 ## Next steps {#next-steps}

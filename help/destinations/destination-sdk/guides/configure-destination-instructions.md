@@ -11,7 +11,7 @@ This page describes how to use the information in [Configuration options in Dest
 
 ## Prerequisites {#prerequisites}
 
-Before advancing to the steps illustrated below, please read the [Destination SDK getting started](../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
+Before advancing to the steps illustrated below, please read the [Destination SDK getting started](../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs. This assumes that you have completed the partnership and permission prerequisites and are ready to start developing your destination.
 
 ## Steps to use the configuration options in Destination SDK to set up your destination {#steps}
 
@@ -23,10 +23,11 @@ Start by [creating a server and template configuration](../authoring-api/destina
 
 Shown below is an example configuration. Note that the message transformation template in the `requestBody.value` parameter is addressed in step 3, [Create transformation template](#create-transformation-template).
 
-```json
-
+```shell
 POST platform.adobe.io/data/core/activation/authoring/destination-servers
+```
 
+```json {line-numbers="true" highlight="14"}
 {
    "name":"Moviestar destination server",
    "destinationServerType":"URL_BASED",
@@ -58,10 +59,11 @@ To connect the server and template configuration in step 1 to this destination c
 >
 >To create a correctly configured destination, you *must* add at least one target identity in `identityNamespaces`, as shown below. If no target identity is configured, users will not be able to proceed past the [Mapping step](../../ui/activate-segment-streaming-destinations.md#mapping) of the activation workflow.
 
-```json
-
+```shell
 POST platform.adobe.io/data/core/activation/authoring/destinations
- 
+```
+
+```json {line-numbers="true" highlight="74"} 
 {
    "name":"Moviestar",
    "description":"Moviestar is a fictional destination, used for this example.",
@@ -158,8 +160,9 @@ If you use an audience metadata configuration, you must connect it to the destin
 
 Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION"` or `"authenticationRule": "PLATFORM_AUTHENTICATION"` in the destination configuration above, you can set up authentication for your destination by using the `/destination` or the `/credentials` endpoint.
 
-* **Most common case**: If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration and your destination supports the OAuth 2 authentication method, read [OAuth 2 authentication](../functionality/destination-configuration/oauth2-authentication.md).
-* If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, you must create a [credentials configuration](../credentials-api/create-credential-configuration.md).
+If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration and your destination supports the OAuth 2 authentication method, read [OAuth 2 authentication](../functionality/destination-configuration/oauth2-authentication.md).
+
+If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, you must create a [credentials configuration](../credentials-api/create-credential-configuration.md).
 
 ## Step 6: Test your destination {#test-destination}
 

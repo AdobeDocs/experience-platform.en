@@ -5,11 +5,11 @@ title: Update a destination configuration
 
 # Update a destination configuration
 
->[!IMPORTANT]
->
->**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destinations`
-
 This page exemplifies the API request and payload that you can use to update an existing destination configuration, using the `/authoring/destinations` API endpoint.
+
+>[!TIP]
+>
+>Any update operation on productized/public destinations is visible only after you use the [publishing API](../../publishing-api/create-publishing-request.md) and submit the update for Adobe review.
 
 For a detailed description of the capabilities of a destination configuration, read the following articles:
 
@@ -34,6 +34,10 @@ Before continuing, please review the [getting started guide](../../getting-start
 
 You can update an [existing](create-destination-configuration.md) destination configuration by making a `PUT` request to the `/authoring/destinations` endpoint with the updated payload.
 
+>[!TIP]
+>
+>API endpoint: `platform.adobe.io/data/core/activation/authoring/destinations`
+
 To obtain an existing destination configuration and its corresponding `{INSTANCE_ID}`, see the article about [retrieving a destination configuration](retrieve-destination-configuration.md).
 
 **API format**
@@ -48,9 +52,9 @@ PUT /authoring/destinations/{INSTANCE_ID}
 
 +++Request
 
-The following request updates the destination we created in [this example](create-destination-configuration.md) with different `filenameConfig` options.
+The following request updates the destination we created in [this example](create-destination-configuration.md#create) with different `filenameConfig` options.
 
-```shell
+```shell {line-numbers="true" highlight="115-128"}
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \

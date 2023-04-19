@@ -12,7 +12,7 @@ When building a destination with Destination SDK, you can define your own partne
 When configuring the partner schema for your destination, you can fine tune the field mapping supported by your destination platform, such as:
 
 * Allow users to map a `phoneNumber` XDM attribute to a `phone` attribute supported by your destination platform.
-* Create dynamic partner schemas that your users can choose from when mapping their Platform data.
+* Create dynamic partner schemas that Experience Platform can dynamically call to retrieve a list of all supported attributes within your destination.
 * Define mandatory field mappings that your destination platform requires.
 
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the the guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
@@ -26,7 +26,7 @@ This article describes all the supported schema configuration options that you c
 
 ## Supported integration types {#supported-integration-types}
 
-Refer to the table below for details on what type of destinations support the functionality described in this page.
+Refer to the table below for details on which types of integrations support the functionality described on this page.
 
 |Integration type| Supports functionality |
 |---|---|

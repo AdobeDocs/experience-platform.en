@@ -30,7 +30,7 @@ This article describes all the supported identity namespaces configuration optio
 
 ## Supported integration types {#supported-integration-types}
 
-Refer to the table below for details on what type of destinations support the functionality described in this page.
+Refer to the table below for details on which types of integrations support the functionality described on this page.
 
 |Integration type| Supports functionality |
 |---|---|
@@ -46,7 +46,7 @@ When defining the target identities that your destination supports, you can use 
 |`acceptsAttributes` | Boolean | Optional | Indicates if customers can map standard profile attributes to the identity that you are configuring. |
 |`acceptsCustomNamespaces` | Boolean | Optional | Indicates if customers can map custom identity namespaces to the identity namespace that you are configuring. |
 |`acceptedGlobalNamespaces` | - | Optional | Indicates which [standard identity namespaces](../../../../identity-service/namespaces.md#standard) (for example, [!UICONTROL IDFA]) customers can map to the identity that you are configuring. |
-|`transformation` | String | Optional | Displays the [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) check box in the Platform UI. Use this option to give users the ability to hash source attributes on export. To enable this option, set the value to `sha256(lower($))`. |
+|`transformation` | String | Optional | Displays the [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) check box in the Platform UI, when the source field is either an XDM attribute or a custom identity namespace. Use this option to give users the ability to hash source attributes on export. To enable this option, set the value to `sha256(lower($))`. |
 |`requiredTransformation` | String | Optional | When customers select this source identity namespace, the [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) check box is automatically applied to the mapping, and customers cannot disable it. To enable this option, set the value to `sha256(lower($))`.|
 
 {style="table-layout:auto"}
@@ -78,9 +78,7 @@ Read more about identities in the [identity namespace overview](../../../../iden
 
 ## Mapping considerations
 
-Customers can map identity namespaces either to the identity namespaces that you define in the `identityNamespaces` section, or to attributes that you define in the [schema configuration](schema-configuration.md).
-
-If customers select a source identity namespace and do not select a target mapping, Platform automatically maps the source field to an equivalent attribute.
+If customers select a source identity namespace and do not select a target mapping, Platform automatically populated the target mapping with an attribute with the same name.
 
 ## Configure optional source field hashing
 
@@ -88,7 +86,7 @@ Experience Platform customers can choose to ingest data into Platform in hashed 
 
 The configuration below enables the optional [Apply transformation](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) option in the Platform UI, in the Mapping step.
 
-```json
+```json {line-numbers="true" highlight="5"}
 "identityNamespaces":{
       "Customer_contact":{
          "acceptsAttributes":true,
@@ -104,16 +102,15 @@ The configuration below enables the optional [Apply transformation](../../../ui/
    }
 ```
 
-
 Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
 
 When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have Adobe Experience Platform automatically hash the source attributes on activation.
 
 ## Configure mandatory source field hashing
 
-If your destination only accepts hashed data, you can configure your mappings to be automatically hashed by Platform. The configuration below automatically checks the **Apply transformation** option when the `Email` and `Phone` identities are mapped.
+If your destination only accepts hashed data, you can configure the exported attributes to be automatically hashed by Platform. The configuration below automatically checks the **Apply transformation** option when the `Email` and `Phone` identities are mapped.
 
-```json
+```json {line-numbers="true" highlight="8,11"}
 "identityNamespaces":{
       "Customer_contact":{
          "acceptsAttributes":true,
@@ -139,7 +136,7 @@ To learn more about the other destination components, see the following articles
 
 * [Customer authentication](customer-authentication.md)
 * [OAuth2 authentication](oauth2-authentication.md)
-* [Customer data fields](customer-data-fields.md)â
+* [Customer data fields](customer-data-fields.md)
 * [UI attributes](ui-attributes.md)
 * [Schema configuration](schema-configuration.md)
 * [Identity namespace configuration](identity-namespace-configuration.md)

@@ -1,11 +1,15 @@
 ---
-description: Learn how to configure the aggregation policy settings for destinations built with Destination SDK.
+description: Learn how to set up an aggregation policy to determine how HTTP requests to your destination should be grouped and batched.
 title: Aggregation policy
 ---
 
 # Aggregation policy
 
-When building a URL-based destination with Destination SDK, you can configure how the exported profiles should be combined in the resulting exports. This behavior is determined by the aggregation policy settings.
+To ensure maximum efficiency when exporting data to your API endpoint, you can use various settings to aggregate exported profiles into larger or smaller batches, group them by identity, and other use cases. This also allows you to tailor data exports to any downstream limitations on your API endpoint (rate limiting, number of identities per API call, etc.).
+
+Use configurable aggregation to dive deep into the settings provided by Destination SDK or use best effort aggregation to tell Destination SDK to batch the API calls as best as it can.
+
+When building a real-time (streaming) destination with Destination SDK, you can configure how the exported profiles should be combined in the resulting exports. This behavior is determined by the aggregation policy settings.
 
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the the guide on how to [use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
@@ -20,7 +24,7 @@ After reading through this document, refer to the documentation on [using templa
 
 ## Supported integration types {#supported-integration-types}
 
-Refer to the table below for details on what type of destinations support the functionality described in this page.
+Refer to the table below for details on which types of integrations support the functionality described on this page.
 
 |Integration type| Supports functionality |
 |---|---|
