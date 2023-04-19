@@ -56,4 +56,4 @@ POST 'https://edge.adobedc.net/ee/{LOCATION_HINT}/v2/interact?dataStreamId={Data
 
 To ensure the location hint returned by the Edge Network persists for the duration of the session, you can store the location hint value in a cookie, along with the cookie lifetime, which is contained in the `ttlSeconds` field (typically 1800 seconds).
 
-As with most cookies, you should extend the lifetime of this cookie each time there is a response from the Edge Network. To ensure maximum compatibility with the Web SDK, use the cookie name `kndctr_{IMSORG}_AdobeOrg_cluster`. IMS Org IDs typically end with `@AdobeOrg`. The `@` value must be converted to an underscore to ensure the cookie is in the correct format.
+As with most cookies, you should extend the lifetime of this cookie each time there is a response from the Edge Network. To ensure maximum compatibility with the Web SDK, use the cookie name `kndctr_{IMSORG}_AdobeOrg_cluster`. Organization IDs typically end with `@AdobeOrg`. The `@` value must be converted to an underscore to ensure the cookie is in the correct format.

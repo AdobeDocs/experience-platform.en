@@ -1,8 +1,8 @@
 ---
 title: In-App Messaging View
 description: This guide details information about the In-App Messaging view in Adobe Experience Platform Assurance.
+exl-id: 6131289a-aebb-4b3a-9045-4b2cf23415f8
 ---
-
 # In-App Messaging view in Assurance
 
 The In-App Messaging view inside Adobe Experience Platform Assurance provides the ability to validate your app, monitor in-app messages that are delivered to your device, and simulate messages to your device.

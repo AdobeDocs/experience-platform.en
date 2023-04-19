@@ -1,6 +1,7 @@
 ---
 title: Send Accelerated Queries
 description: An introduction to the accelerated queries API.
+exl-id: c6cd1182-d3a9-457f-81d5-18027e47c3f9
 ---
 # Send accelerated queries
 

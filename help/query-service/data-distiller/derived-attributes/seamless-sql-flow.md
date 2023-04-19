@@ -1,6 +1,7 @@
 ---
 title: Seamless SQL Flow for Derived Attributes
 description: Query Service SQL has been extended to provide seamless support for derived attributes. Learn how to use this SQL extension to create a derived attribute that is enabled for profile, and how to use the attribute for Real-Time Customer Profile and Segmentation Service.
+exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
 ---
 # Seamless SQL flow for derived attributes
 

@@ -23,13 +23,13 @@ The metrics dashboard provides cards that give you information about datasets, p
 
 ![](images/user-guide/homepage-dashboard.png)
 
-The **[!UICONTROL Datasets]** section shows the number of datasets within your IMS Organization. This number is updated when a new dataset is created. More information about datasets can be found in the [datasets overview](../catalog/datasets/overview.md).
+The **[!UICONTROL Datasets]** section shows the number of datasets within your organization. This number is updated when a new dataset is created. More information about datasets can be found in the [datasets overview](../catalog/datasets/overview.md).
 
-The **[!UICONTROL Profiles]** section shows the total number of people with profiles within your IMS Organization, excluding profile fragments. This total number of people represents the total addressable audience, and is updated once every 24 hours. More information about profiles can be found in the [Real-Time Customer Profile overview](../profile/home.md).
+The **[!UICONTROL Profiles]** section shows the total number of people with profiles within your organization, excluding profile fragments. This total number of people represents the total addressable audience, and is updated once every 24 hours. More information about profiles can be found in the [Real-Time Customer Profile overview](../profile/home.md).
 
-The **[!UICONTROL Segments]** section shows the total number of segments created within your IMS Organization. This number is updated when a new segment is created. More information about segments can be found in the [Segmentation Service overview](../segmentation/home.md).
+The **[!UICONTROL Segments]** section shows the total number of segments created within your organization. This number is updated when a new segment is created. More information about segments can be found in the [Segmentation Service overview](../segmentation/home.md).
 
-The **[!UICONTROL Destinations]** section shows the total number of destinations created for the IMS Organization. This number is updated when a new destination is created. More information about destinations can be found in the [destinations overview](../destinations/home.md).
+The **[!UICONTROL Destinations]** section shows the total number of destinations created for the organization. This number is updated when a new destination is created. More information about destinations can be found in the [destinations overview](../destinations/home.md).
 
 ### Recent data
 
@@ -37,13 +37,13 @@ The recent data dashboard provides information about recently created datasets, 
 
 ![](images/user-guide/homepage-recent.png)
 
-The **[!UICONTROL Recent datasets]** section lists the five most recently created datasets within your IMS Organization. This list is updated every time a new dataset is created. You can select a dataset from the list to view more information about the specified dataset or select **[!UICONTROL View all]** to see a list of all created datasets. More information about datasets can be found in the [datasets overview](../catalog/datasets/overview.md).
+The **[!UICONTROL Recent datasets]** section lists the five most recently created datasets within your organization. This list is updated every time a new dataset is created. You can select a dataset from the list to view more information about the specified dataset or select **[!UICONTROL View all]** to see a list of all created datasets. More information about datasets can be found in the [datasets overview](../catalog/datasets/overview.md).
 
-The **[!UICONTROL Recent sources]** section lists the five most recently created source connectors within your IMS Organization. This list is updated every time a new source connector is created. You can select a source connection from the list to view more information about the specified connector or select **[!UICONTROL View all]** to see a list of all created source connections. More information about sources can be found in the [sources overview](../sources/home.md).
+The **[!UICONTROL Recent sources]** section lists the five most recently created source connectors within your organization. This list is updated every time a new source connector is created. You can select a source connection from the list to view more information about the specified connector or select **[!UICONTROL View all]** to see a list of all created source connections. More information about sources can be found in the [sources overview](../sources/home.md).
 
-The **[!UICONTROL Recent segments]** section lists the five most recently created segment definitions within your IMS Organization. This list is updated every time a new segment definition is created. You can select a segment definition from the list to view more information about the specified segment definition or select **[!UICONTROL View all]** to see a list of all created segment definitions. More information about segments can be found in the [Segmentation Service overview](../segmentation/home.md).
+The **[!UICONTROL Recent segments]** section lists the five most recently created segment definitions within your organization. This list is updated every time a new segment definition is created. You can select a segment definition from the list to view more information about the specified segment definition or select **[!UICONTROL View all]** to see a list of all created segment definitions. More information about segments can be found in the [Segmentation Service overview](../segmentation/home.md).
 
-The **[!UICONTROL Recent destinations]** section lists the five most recently created destinations within your IMS Organization. This list is updated every time a new destination is created. You can select a destination from the list to view more information about the specified destination or select **[!UICONTROL View all]** to see a list of all created destinations. More information about destinations can be found in the [destinations overview](../destinations/home.md).
+The **[!UICONTROL Recent destinations]** section lists the five most recently created destinations within your organization. This list is updated every time a new destination is created. You can select a destination from the list to view more information about the specified destination or select **[!UICONTROL View all]** to see a list of all created destinations. More information about destinations can be found in the [destinations overview](../destinations/home.md).
 
 ### Recommended learning
 
@@ -53,23 +53,23 @@ The **[!UICONTROL Recommended learning]** section provides links to useful docum
 
 ## Top navigation bar
 
-The top navigation bar in the Platform UI displays the IMS Organization you are currently signed into, and provides several important controls.
+The top navigation bar in the Platform UI displays the organization you are currently signed into, and provides several important controls.
 
 On the left side of the navigation bar is the Adobe Experience Platform logo. Selecting this logo at any time brings you back to the Platform UI home screen.
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
-### IMS Organization switcher
+### Organization switcher
 
-The first item on the right side of the top navigation bar is the **IMS Organization switcher**. 
+The first item on the right side of the top navigation bar is the **Organization switcher**. 
 
 ![](./images/user-guide/homepage-ims-org-switcher.png)
 
-Selecting the switcher opens a dropdown menu of IMS Organizations you have access to, if any are available. To switch to another IMS Organization, select a listed option.
+Selecting the switcher opens a dropdown menu of organizations you have access to, if any are available. To switch to another organization, select a listed option.
 
 ### Switch applications
 
-The next item on the right side of the top navigation is the **application switcher**, represented by the ![application switcher](./images/user-guide/app-switcher-icon.png) icon. When you select this icon, you can switch between Adobe applications that your IMS Org has access to, such as Experience Platform, Analytics, Assets, and others.
+The next item on the right side of the top navigation is the **application switcher**, represented by the ![application switcher](./images/user-guide/app-switcher-icon.png) icon. When you select this icon, you can switch between Adobe applications that your organization has access to, such as Experience Platform, Analytics, Assets, and others.
 
 ### Help
 

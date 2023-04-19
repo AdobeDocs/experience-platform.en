@@ -1,9 +1,10 @@
 ---
 title: Create a source connection and dataflow for Pinterest Ads using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Pinterest Ads using the Flow Service API.
-badge: "Beta"
+badge: Beta
 hide: true
 hidefromtoc: true
+exl-id: 293a3ec9-38ea-4b71-a923-1f4e28a41236
 ---
 # Create a source connection and dataflow for [!DNL Pinterest Ads] using the [!DNL Flow Service] API
 

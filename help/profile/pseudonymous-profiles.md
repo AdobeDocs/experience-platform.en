@@ -5,8 +5,8 @@ title: Pseudonymous Profile data expiration
 description: This document provides general guidance on configuring data expiration for Pseudonymous Profiles within Adobe Experience Platform.
 hide: true
 hidefromtoc: true
+exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 ---
-
 # Pseudonymous profiles data expiration [!BADGE Limited release]
 
 In Adobe Experience Platform, a profile is considered for Pseudonymous data expiration if it meets the following conditions: 

@@ -1,6 +1,7 @@
 ---
 title: Create a source connection and dataflow for SugarCRM Events using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to SugarCRM Events using the Flow Service API.
+exl-id: 12d08010-569c-4111-ba95-697c6ce6f637
 ---
 # (Beta) Create a source connection and dataflow for [!DNL SugarCRM Events] using the Flow Service API
 
