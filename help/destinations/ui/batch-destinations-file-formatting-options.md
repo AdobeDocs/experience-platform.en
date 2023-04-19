@@ -68,7 +68,7 @@ View the examples below of the content in the exported CSV files with each of th
 Use this option if you want to remove double quotes from exported strings. Available options are:
 
 * **[!UICONTROL Null Character (\0000)]**. Use this option to remove double quotes from exported CSV files.
-* **[!UICONTROL Double Quotes (")]**. Use this option to keep double quoes in your exported CSV files.
+* **[!UICONTROL Double Quotes (")]**. Use this option to keep double quotes in your exported CSV files.
 
 #### Examples
 
@@ -147,9 +147,9 @@ View the examples below of the content from exported CSV files with each of the 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_compressionFormat"
 >title="Compression format"
->abstract="Sets which compression codec to use when saving data to file. Supported options are GZIP and NONE. View the documentation for examples for each selection."
+>abstract="Sets which compression type to use when saving data to file. Supported options are GZIP and NONE. View the documentation for examples for each selection."
 
-Sets which compression codec to use when saving data to file. Supported options are GZIP and NONE. This option determines whether you will be exporting compressed files or not.
+Sets which compression type to use when saving data to file. Supported options are GZIP and NONE. This option determines whether you will be exporting compressed files or not.
 
 ### Encoding
 
