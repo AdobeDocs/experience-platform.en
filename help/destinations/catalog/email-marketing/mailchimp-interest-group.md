@@ -9,7 +9,7 @@ description: The Mailchimp Interest Group destination allows you to export your 
 [!DNL Mailchimp Interest Group] uses [audiences](https://mailchimp.com/help/getting-started-audience/) and [groups](https://mailchimp.com/help/getting-started-with-groups/). Groups can be used to help organize your contacts within [!DNL Mailchimp] based on their interests and preferences and then broadcast group specific campaign emails.
 
 <!--
-Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Group] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-interest-group.md) page.*
+Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Group] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
 -->
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) endpoint. You can **add new contacts** or **update the information of existing [!DNL Mailchimp] contacts**, then **add or remove them from their desired groups** within an existing [!DNL Mailchimp] audience after activating them within a new segment. [!DNL Mailchimp Interest Groups] uses the selected segment names from Platform as the tag names within [!DNL Mailchimp].
@@ -59,7 +59,9 @@ If you require guidance, refer to the [Mailchimp documentation](https://mailchim
 
 ### Guardrails {#guardrails}
 
-Refer to the [!DNL Mailchimp] [rate limits](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) for detailed information about the limits imposed by the [!DNL Mailchimp] API.
+Each of your [!DNL Mailchimp] audiences can contain up to 60 group names in a single group or across several groups within the same audience. Refer to [!DNL Mailchimp] [groups](https://mailchimp.com/help/getting-started-with-groups/) for any clarifications required. When you reach this limit you will get a `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` message as an error response from the [!DNL Mailchimp] API.
+
+Additionally refer to the [!DNL Mailchimp] [rate limits](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) for detailed information about the limits imposed by the [!DNL Mailchimp] API.
 
 ## Supported identities {#supported-identities}
 
@@ -77,7 +79,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> For each selected segment in Platform, the corresponding [!DNL Mailchimp  Interest Group] segment status gets updated with its segment status from Platform.</li></ul>|
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> For each selected segment in Platform, the corresponding [!DNL Mailchimp Interest Group] segment status gets updated with its segment status from Platform.</li></ul>|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
@@ -146,23 +148,30 @@ To correctly map your XDM fields to the [!DNL Mailchimp TaInterest Group] destin
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
-1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select attributes]** category and select from the list of attributes populated from the [!DNL Mailchimp] API.
+1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select attributes]** category and select from the list of attributes populated from the [!DNL Mailchimp] API. *Note any custom attributes that have been added to the selected [!DNL Mailchimp] Audience will also be available.*
 
-    The mappings between your XDM profile schema and [!DNL Mailchimp Interest Group] will be as below:
-    | Source Field | Target Field | Mandatory |
+    The default mappings available between your XDM profile schema and [!DNL Mailchimp Interest Group] will be as below:
+    | Source Field | Target Field | Notes |
     | --- | --- | --- |
-    |`IdentityMap: Email`|`Identity: email`| Yes |
+    |`IdentityMap: Email`|`Identity: email`| Mandatory: Yes |
     |`xdm: person.name.firstName`|`Attribute: FNAME`| |
     |`xdm: person.name.lastName`|`Attribute: LNAME`| |
-    |`xdm: workAddress.street1`|`Attribute: ADDRESS`| |
-    |`xdm: workAddress.city`|`Attribute: ADDRESS`| |
-    |`xdm: workAddress.state`|`Attribute: ADDRESS`| |
-    |`xdm: workAddress.postalCode`|`Attribute: ADDRESS`| |
-    |`xdm: workAddress.country`|`Attribute: ADDRESS`| |
+    |`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
 
-    >[!NOTE]
-    >
-    > `ADDRESS` is a special target field known as merge field within your [!DNL Mailchimp] audience. It is a JSON object with the required keys `addr1`, `city`, `state`, and `zip`, and the optional keys `addr2` and `country`. Values for these fields must be strings. Refer to the [[!DNL Mailchimp] documentation](https://mailchimp.com/developer/marketing/docs/merge-fields/) for more details.
+    Additionally, `ADDRESS` is a special target field known as a `merge field` within your [!DNL Mailchimp] audience. The [[!DNL Mailchimp] documentation](https://mailchimp.com/developer/marketing/docs/merge-fields/) defines the required keys as `addr1`, `city`, `state`, and `zip`, and the optional keys `addr2` and `country`. The values for these fields must be strings. If any of the `ADDRESS` field mappings are present the destination passes the `ADDRESS` object to the [!DNL Mailchimp] API for update. Any `ADDRESS` fields that are not mapped has its value default to `NULL` except for country which defaults to `US`. 
+    
+    The mappings available for the `ADDRESS` field are as below:
+
+    | Source Field | Target Field |
+    | --- | --- |
+    | `xdm: workAddress.street1` | `Attribute: ADDRESS.addr1` |
+    | `xdm: workAddress.street2` | `Attribute: ADDRESS.addr2` |
+    | `xdm: workAddress.city` | `Attribute: ADDRESS.city` |
+    | `xdm: workAddress.state` | `Attribute: ADDRESS.state` |
+    | `xdm: workAddress.postalCode` | `Attribute: ADDRESS.zip` |
+    | `xdm: workAddress.country` | `Attribute: ADDRESS.country` |
+
+    For example, you want to update the value for `country` with the contact's existing address field `addr1`, `city`, `state`, and `zip` values as `132, My Street, Kingston`, `New York`, `New York` and `12401`. To update the `country` you need to pass the existing values with changes *(if any)* and the new value for country. So the values in your dataset should be `132, My Street, Kingston`, `New York`, `New York`, `12401` and `US`. To reiterate if you only pass `country` and do not provide values for `addr1`, `city`, `state`, and `zip` they will be overwritten by `NULL`.
 
     An example with the completed mappings is shown below:
     ![Platform UI screenshot example showing field mappings.](../../assets/catalog/email-marketing/mailchimp-interest-group/mappings.png)
@@ -188,6 +197,8 @@ To validate that you have correctly set up the destination, follow the steps bel
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [Data Governance overview](/help/data-governance/home.md).
 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
+
+When creating the destination, you might receive the following error messages: `Cannot have more than 60 interests per list (Across all categories)` or `400 BAD_REQUEST`. This happens when you exceed the 60 group names in a single group or across several groups within the same audience limit, as described in the [guardrails](#guardrails) section. To fix this error, make sure you are not exceeding the group name limit in [!DNL Mailchimp].
 
 Refer to the [[!DNL Mailchimp] errors page](https://mailchimp.com/developer/marketing/docs/errors/) for a comprehensive list of status and error codes with explanations.
 
