@@ -67,6 +67,11 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Connection parameters {#parameters}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_gam_appendSegmentID"
+>title="Append segment ID to segment name"
+>abstract="Select this option to have the segment name in Google include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`"
+
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
@@ -75,7 +80,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 *  **[!UICONTROL Account Type]**: Select an option, depending on your account with Google:
    * Use `DFP by Google` for [!DNL DoubleClick] for Publishers
    * Use `AdX buyer` for [!DNL Google AdX]
-
+*  **[!UICONTROL Append segment ID to segment name]**: Select this option to have the segment name in Google include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`
 
 >[!NOTE]
 >
