@@ -15,14 +15,14 @@ This method extracts a color histogram across the entire image.
 
 **Color tagging (with mask)**
 
-This method uses a deep-learning-based foreground extractor to identify objects in the foreground. Once the foreground objects are extracted, a histogram is computed over the dominant colors as previously described for both, the foreground and background regions, along with the entire image.
+This method uses a deep-learning based foreground extractor to identify objects in the foreground. Once the foreground objects are extracted, a histogram is computed over the dominant colors for both, the foreground and background regions, along with the entire image.
 
 **Tone extraction**
 
-On top of the above variants, one can configure the service to retrieve a histogram of tones over the -
+In addition to the variants mentioned above, one can configure the service to retrieve a histogram of tones for:
 
-- Overall image (when using full image variant)
-- Overall image and foreground and background regions (when using the variant with masking).
+- The overall image (when using full image variant)
+- The overall image, and foreground and background regions (when using the variant with masking)
 
 The following image was used in the example shown in this document:
 
@@ -36,9 +36,7 @@ POST /services/v2/predict
 
 **Request - full image variant**
 
-The following example request uses the full-image method for color tagging.
-
-The following request extracts colors from an image based on the input parameters provided in the payload. See the table below the example payload for more information on the input parameters shown.
+The following example request uses the full-image method for color tagging and extracts colors from an image based on the input parameters provided in the payload. See the table below the example payload for more information on the input parameters shown.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -198,7 +196,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
 
->Note: Additionally we have also set the `retrieve_tone` parameter to `true` as well in the above request. This would enable us to retrieve a tone distribution histogram over warm, neutral and cool tones in the overall, foreground and background regions of the image.
+>Note: Additionally we also set the `retrieve_tone` parameter to `true` in the above request. This enables us to retrieve a tone distribution histogram over warm, neutral and cool tones in the overall, foreground and background regions of the image.
 
 **Response - masked image variant**
 
@@ -348,7 +346,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 }]
 ```
 
-On top of the colors from the 'overall' image we can also see colors from the 'foreground' and 'background' regions now. Additionally, since we enable tone retrieval too, for each of the above regions we can now retrieve a "tones" histogram as well. 
+In addition to the colors from the overall image, you can also see colors from the foreground and background regions now. Since we enable tone retrieval for each of the above regions, we can also retrieve a tones histogram.
 
 **Input parameters**
 
