@@ -196,7 +196,9 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
 
->[!Note]: Additionally, the `retrieve_tone` parameter is also set to `true` in the above request. This enables us to retrieve a tone distribution histogram over warm, neutral, and cool tones in the overall, foreground and background regions of the image.
+>[!NOTE] 
+>
+>Additionally, the `retrieve_tone` parameter is also set to `true` in the above request. This enables us to retrieve a tone distribution histogram over warm, neutral, and cool tones in the overall, foreground and background regions of the image.
 
 **Response - masked image variant**
 
