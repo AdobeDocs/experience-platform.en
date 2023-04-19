@@ -5,7 +5,7 @@ title: Create a destination server configuration
 
 # Create a destination server configuration
 
-Creating a destination server is the first step in creating your own destination with Destination SDK. The destination server includes configuration options for the [server](../../functionality/destination-server/server-specs.md) and [templating](../../functionality/destination-server/templating-specs.md) specs, the [message format](../../destination-sdk/functionality/destination-server/message-format.md), and the [file formatting](../../functionality/destination-server/file-formatting.md) options (for file-based destinations).
+Creating a destination server is the first step in creating your own destination with Destination SDK. The destination server includes configuration options for the [server](../../functionality/destination-server/server-specs.md) and [templating](../../functionality/destination-server/templating-specs.md) specs, the [message format](../../functionality/destination-server/message-format.md), and the [file formatting](../../functionality/destination-server/file-formatting.md) options (for file-based destinations).
 
 This page exemplifies the API request and payload that you can use to create your own destination server using the `/authoring/destination-servers` API endpoint.
 
