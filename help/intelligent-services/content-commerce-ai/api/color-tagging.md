@@ -15,11 +15,11 @@ This method extracts a color histogram across the entire image.
 
 **Color tagging (with mask)**
 
-This method uses a deep-learning based foreground extractor to identify objects in the foreground. Once the foreground objects are extracted, a histogram is computed over the dominant colors for both, the foreground and background regions, along with the entire image.
+This method uses a deep-learning based foreground extractor to identify objects in the foreground. Once the foreground objects are extracted, a histogram is computed over the dominant colors for both the foreground and background regions, along with the entire image.
 
 **Tone extraction**
 
-In addition to the variants mentioned above, one can configure the service to retrieve a histogram of tones for:
+In addition to the variants mentioned above, you can configure the service to retrieve a histogram of tones for:
 
 - The overall image (when using full image variant)
 - The overall image, and foreground and background regions (when using the variant with masking)
@@ -155,7 +155,7 @@ Notice that the result here has color extracted on the "overall" image region.
 
 **Request - masked image variant**
 
-The following example request uses the masking method for color tagging. We enable this by setting the `enable_mask` parameter to `true` in the request.
+The following example request uses the masking method for color tagging. This is enabled by setting the `enable_mask` parameter to `true` in the request.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -196,7 +196,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
 
->Note: Additionally we also set the `retrieve_tone` parameter to `true` in the above request. This enables us to retrieve a tone distribution histogram over warm, neutral and cool tones in the overall, foreground and background regions of the image.
+>[!Note]: Additionally, the `retrieve_tone` parameter is also set to `true` in the above request. This enables us to retrieve a tone distribution histogram over warm, neutral, and cool tones in the overall, foreground and background regions of the image.
 
 **Response - masked image variant**
 
@@ -346,16 +346,16 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 }]
 ```
 
-In addition to the colors from the overall image, you can also see colors from the foreground and background regions now. Since we enable tone retrieval for each of the above regions, we can also retrieve a tones histogram.
+In addition to the colors from the overall image, you can also see colors from the foreground and background regions now. Since tone retrieval is enabled for each of the above regions, you can also retrieve a tone's histogram.
 
 **Input parameters**
 
 | Name | Data Type | Required | Default | Values | Description |
 | --- | --- | --- | --- | --- | --- |
-| `documents` | array (Document-Object) | Yes | - | See below | List of json elements with each item in the list representing one document. |
+| `documents` | array (Document-Object) | Yes | - | See below | List of JSON elements with each item in the list representing one document. |
 | `top_n` | number | No | 0 | Non-negative integer | Number of results to be returned. 0, to return all results. When used in conjunction with threshold, the number of results returned will be lesser of either limits. |
 | `min_coverage` | number | No | 0.05 | Real number | Threshold of coverage above which the results need to be returned. Exclude parameter to return all results. |
-| `resize_image` | number | No | True | True/False | Whether to resize the input image or not. By default the images are resized to 320*320 pixels before color extraction is performed. For debugging purposes we can allow the code to run on full-image as well, by setting this to False. |
+| `resize_image` | number | No | True | True/False | Whether to resize the input image or not. By default, the images are resized to 320*320 pixels before color extraction is performed. For debugging purposes we can allow the code to run on full-image as well, by setting this to `False`. |
 | `enable_mask` | number | No | False | True/False | Enables/Disables color extraction |
 | `retrieve_tone` | number | No | False| True/False | Enables/Disables tone extraction |
 
@@ -363,7 +363,7 @@ In addition to the colors from the overall image, you can also see colors from t
 
 | Name | Data Type | Required | Default | Values | Description |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | Presigned url of the document from which key phrases are to be extracted. |
+| `repo:path` | string | - | - | - | Presigned URL of the document from which key phrases are to be extracted. |
 | `sensei:repoType` | string | - | - | HTTPS | Type of repo where the document is being stored. |
-| `sensei:multipart_field_name` | string | - | - | - | Use this when passing the document as a multipart argument instead of using presigned urls. |
+| `sensei:multipart_field_name` | string | - | - | - | Use this when passing the document as a multipart argument instead of using presigned URLs. |
 | `dc:format` | string | Yes | - | "text/plain",<br>"application/pdf",<br>"text/pdf",<br>"text/html",<br>"text/rtf",<br>"application/rtf",<br>"application/msword",<br>"application/vnd.openxmlformats-officedocument.wordprocessingml.document",<br>"application/mspowerpoint",<br>"application/vnd.ms-powerpoint",<br>"application/vnd.openxmlformats-officedocument.presentationml.presentation" | Document encoding is checked against allowed input encoding types before being processed.|
