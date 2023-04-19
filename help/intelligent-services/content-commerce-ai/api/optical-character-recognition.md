@@ -105,7 +105,7 @@ A successful response returns the text that was detected in the `tags` list for 
       "tags": [
         {
           "text": "yosemite",
-          "relevance": 0.05604639115920341
+          "relevance": 0.06
         }
       ],
       "request_element_id": 0
