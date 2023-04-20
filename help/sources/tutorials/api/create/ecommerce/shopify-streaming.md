@@ -2,6 +2,8 @@
 title: Create A Streaming Source Connection and Dataflow For Shopify Data Using The Flow Service API
 description: Learn how to create a streaming source connection and dataflow for Shopify data using the Flow Service API.
 badge: "Beta"
+hidefromtoc: y
+hide: y
 ---
 # Create a streaming source connection and dataflow for [!DNL Shopify] data using the Flow Service API
 

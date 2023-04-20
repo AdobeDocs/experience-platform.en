@@ -129,7 +129,6 @@ Experience Platform provides support for ingesting data from a third-party datab
 Experience Platform provides support for ingesting data from a third-party eCommerce system. See the following related documents for more information on specific source connectors:
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
-- [[!DNL Shopify Streaming]](connectors/ecommerce/shopify-streaming.md)
 
 ### Local system {#local-system}
 
