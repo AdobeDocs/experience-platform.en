@@ -255,7 +255,7 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 
 | Property | Description |
 | -------- | ----------- |
-| `name` | The name of the computed attribute field, as a string. The name of the computed attribute can only be comprised of alphabetical characters without any spaces or underscores.  |
+| `name` | The name of the computed attribute field, as a string. The name of the computed attribute can only be comprised of alphanumeric characters without any spaces or underscores.  |
 | `description` | A description of the computed attribute. This is especially useful once multiple computed attributes have been defined as it will help others within your organization to determine the correct computed attribute to use. |
 | `displayName` | The display name for the computed attribute. This is the name that will be displayed when listing your computed attributes within the Adobe Experience Platform UI. |
 | `expression` | An object that represents the query expression of the computed attribute you are trying to create. |
@@ -265,7 +265,7 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 | `duration` | An object that represents the lookback period for the computed attribute. The lookback period represents how far back can be looked back to compute the computed attribute. |
 | `duration.count` | A number that represents the duration for the lookback period. The possible values depend on the value of the `duration.unit` field. <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
 | `duration.unit` | A string that represents the unit of time that will be used for the lookback period. Possible values include: `HOURS`, `DAYS`, `WEEKS`, and `MONTHS`. |
-| `status` | The status of the computed attribute. Possible values include `DRAFT`, `NEW`, and `PUBLISHED`. |
+| `status` | The status of the computed attribute. Possible values include `DRAFT` and `NEW`. |
 
 **Response**
 
