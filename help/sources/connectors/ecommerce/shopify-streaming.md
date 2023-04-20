@@ -91,7 +91,7 @@ A successful response returns your access token and permission scopes.
 
 ```json
 {
-  "access_token": "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",
+  "access_token": "shpca_wjhifwfc91psjtldysxd6rqli371tx54",
   "scope": "write_orders,read_customers"
 }
 ```
