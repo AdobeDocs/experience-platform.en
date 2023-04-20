@@ -5,12 +5,7 @@ description: Learn how to override datastream configurations using the Web SDK.
 
 # Configuration overrides
 
-Configuration overrides allow you to override certain datastream configurations and pass them to the [!DNL Edge Network]. These overrides allow you to modify the following configurations:
 
-* Event datasets
-* Target property tokens
-* Audience Manager ID sync containers
-* Analytics report suites
 
 ## Supported commands {#supported-commands}
 
@@ -26,10 +21,7 @@ Configuration overrides are supported by the following Web SDK commands:
 
 The `edgeConfigOverrides` command creates datastream overrides that are passed on to the [!DNL Edge Network] on the next command, or, in the case of `configure`, for every request.
 
-
->[!BEGINTABS]
-
->[!TAB Configuration overrides on commands]
+### Sending configuration overrides via the `sendEvent` command {#send-event}
 
 The example below shows what a configuration override could look like on a `sendEvent` command.
 
@@ -62,7 +54,7 @@ alloy("sendEvent", {
 });
 ```
 
->[!TAB Configuration overrides on the configure command]
+### Sending configuration overrides via the `configure` command {#send-configure}
 
 The example below shows what a configuration override could look like on a `configure` command.
 
@@ -100,8 +92,6 @@ alloy("configure", {
   onBeforeEventSend: function() { /* … */ });
 };
 ```
-
->[!ENDTABS]
 
 The examples above generate an [!DNL Edge Network] payload that looks like this:
 

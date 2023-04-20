@@ -3,6 +3,7 @@ title: Configure a datastream
 description: Connect your client-side Experience Platform SDK integration with Adobe products and third-party destinations.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
 ---
+
 # Configure a datastream
 
 This document covers the steps for configuring a [datastream](./overview.md) in the UI. 
@@ -41,7 +42,7 @@ Select **[!UICONTROL Advanced Options]** to reveal additional controls to config
 | [!UICONTROL First Party ID Cookie] | When enabled, this setting tells the Edge Network to refer to a specified cookie when looking up a [first-party device ID](../identity/first-party-device-ids.md), rather than looking up this value in the Identity Map.<br><br>When enabling this setting, you must provide the name of the cookie where the ID is expected to be stored.|
 | [!UICONTROL Third Party ID Sync] | ID syncs can be grouped into containers to allow different ID syncs to be run at different times. When enabled, this setting lets you specify which container of ID syncs is run for this datastream.|
 | [!UICONTROL Third Party ID Sync Container ID] | The ID of the container to be used for third party ID sync.|
-| [!UICONTROL Container ID Overrides] | In this section you can define additional third party ID sync container ID which you can use to override the default one. |
+| [!UICONTROL Container ID Overrides] | In this section you can define additional third party ID sync container IDs which you can use to override the default one. |
 | [!UICONTROL Access Type] | Defines the authentication type that the Edge Network accepts for the datastream. <ul><li>**[!UICONTROL Mixed Authentication]**: When this option is selected, the Edge Network accepts both authenticated and unauthenticated requests. Select this option when you plan to use the Web SDK or [Mobile SDK](https://aep-sdks.gitbook.io/docs/), along with the [Server API](../../server-api/overview.md). </li><li>**[!UICONTROL Authenticated Only]**: When this option is selected, the Edge Network only accepts authenticated requests. Select this option when you plan to use only the Server API and want to prevent any unauthenticated requests from being processed by the Edge Network.</li></ul>|
 
 From here, if you are configuring your datastream for Experience Platform, follow the tutorial on [Data Prep for Data Collection](./data-prep.md) to map your data to a Platform event schema before returning to this guide. Otherwise, select **[!UICONTROL Save]** and continue to the next section.
