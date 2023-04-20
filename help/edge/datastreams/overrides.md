@@ -86,11 +86,11 @@ The `edgeConfigOverrides` command creates datastream overrides that are passed o
 
 When a configuration override is sent with the `configure` command, it is included on the following supported commands.
 
-* [sendEvent](tracking-events.md)
+* [sendEvent](../fundamentals/tracking-events.md)
 * [setConsent](../consent/iab-tcf/overview.md)
 * [getIdentity](../identity/overview.md)
 * [appendIdentityToUrl](../identity/id-sharing.md#cross-domain-sharing)
-* [configure](configuring-the-sdk.md)
+* [configure](../fundamentals/configuring-the-sdk.md)
 
 Options specified globally can be overridden by the configuration option on individual commands.
 
