@@ -116,7 +116,7 @@ Alternatively, you can create a custom period to filter your data by. Select **[
 
 >[!NOTE]
 >
->If the `date_key` attribute has already been added as a filter, select the ellipsis followed by **[!UICONTROL Edit]** from the dropdown options. 
+>If the `date_key` attribute has already been added as a filter, select the ellipsis followed by **[!UICONTROL Edit]** from the dropdown options to change the filter period. 
 
 ![The [!UICONTROL Filter: date_key] dialog with individual day checkboxes both checked and unchecked.](./images/user-defined-dashboards/select-dates.png)
 
