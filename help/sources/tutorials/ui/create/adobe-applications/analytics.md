@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;Analytics source connector;Analytics connector;Analytics source;analytics;filtering;filtering for profile;real-time customer profile;filter;filter profile data;row-level filtering;column-level filtering
 title: Create an Adobe Analytics Source Connection in the UI
 description: Learn how to create an Adobe Analytics source connection in the UI to bring consumer data into Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
