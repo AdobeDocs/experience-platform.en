@@ -144,7 +144,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"SFTP destination with predefined CSV formatting options",
    "description":"SFTP destination with predefined CSV formatting options",
-   "releaseNotes":"",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {

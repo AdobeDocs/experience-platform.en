@@ -143,7 +143,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"Amazon S3 destination with predefined CSV formatting options",
    "description":"Amazon S3 destination with predefined CSV formatting options",
-   "releaseNotes":"Amazon S3 destination with predefined CSV formatting options",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {

@@ -123,7 +123,6 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
-    "releaseNotes": "Test",
     "status": "Test",
     "customerAuthenticationConfigurations": [
         {

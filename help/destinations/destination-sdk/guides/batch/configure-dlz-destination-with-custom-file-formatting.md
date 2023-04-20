@@ -139,7 +139,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"DLZ Destination",
    "description":"SSD DLZ Destination",
-   "releaseNotes":"Test release notes for DLZ Destination",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
        

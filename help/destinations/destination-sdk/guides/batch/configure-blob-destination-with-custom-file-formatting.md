@@ -43,7 +43,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"Azure Blob server with custom file formatting options and custom file name configuration",
    "description":"Azure Blob server with custom file formatting options and custom file name configuration",
-   "releaseNotes":"Azure Blob server with custom file formatting options and custom file name configuration",
    "destinationServerType":"FILE_BASED_AZURE_BLOB",
    "fileBasedAzureBlobDestination":{
       "path":{
@@ -144,7 +143,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
  -d ' {
    "name":"Azure Blob Storage destination with custom file formatting options and custom file name configuration",
    "description":"Azure Blob Storage destination with custom file formatting options and custom file name configuration",
-   "releaseNotes":"Azure Blob Storage destination with custom file formatting options and custom file name configuration",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {

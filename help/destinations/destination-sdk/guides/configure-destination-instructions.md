@@ -57,7 +57,7 @@ To connect the server and template configuration in step 1 to this destination c
 
 >[!IMPORTANT]
 >
->To create a correctly configured destination, you *must* add at least one target identity in `identityNamespaces`, as shown below. If no target identity is configured, users will not be able to proceed past the [Mapping step](../../ui/activate-segment-streaming-destinations.md#mapping) of the activation workflow.
+>To create a correctly configured real-time (streaming) destination, you *must* add at least one target identity in `identityNamespaces`, as shown below. If no target identity is configured, users will not be able to proceed past the [Mapping step](../../ui/activate-segment-streaming-destinations.md#mapping) of the activation workflow.
 
 ```shell
 POST platform.adobe.io/data/core/activation/authoring/destinations

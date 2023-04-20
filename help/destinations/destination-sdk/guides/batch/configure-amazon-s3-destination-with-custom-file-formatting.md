@@ -142,7 +142,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"Amazon S3 destination with custom file formatting options and custom file name configuration",
    "description":"Amazon S3 destination with custom file formatting options and custom file name configuration",
-   "releaseNotes":"Amazon S3 destination with custom file formatting options and custom file name configuration",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {

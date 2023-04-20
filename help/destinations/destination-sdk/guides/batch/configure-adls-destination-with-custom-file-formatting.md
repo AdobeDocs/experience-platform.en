@@ -43,7 +43,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"Azure Data Lake Storage server with custom file formatting options",
    "description":"Azure Data Lake Storage server with custom file formatting options",
-   "releaseNotes":"Azure Data Lake Storage server with custom file formatting options",
    "destinationServerType":"FILE_BASED_ADLS_GEN2",
    "fileBasedAdlsGen2Destination":{
       "path":{
@@ -141,7 +140,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"Azure Data Lake Storage destination with custom file formatting options and custom file name configuration",
    "description":"Azure Data Lake Storage destination with custom file formatting options and custom file name configuration",
-   "releaseNotes":"Azure Data Lake Storage destination with custom file formatting options and custom file name configuration",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {
