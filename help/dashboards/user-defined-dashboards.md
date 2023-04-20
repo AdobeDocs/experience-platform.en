@@ -108,15 +108,15 @@ By adding an attribute as a filter, you can select which values to include or ex
 
 #### Filter out historical data {#filter-historical-data}
 
-To filter out historical data from your widget's data insights, add the `date_key` attribute as a filter and select **[!UICONTROL Recent date]** followed by **[!UICONTROL Apply]**. This ensures that the data used to derive insights is taken from the most recent system snapshot.
+To filter out historical data from your widget's data insights, add the `date_key` attribute as a filter and select **[!UICONTROL Recent date]** followed by **[!UICONTROL Apply]**. This filter ensures that the data used to derive insights is taken from the most recent system snapshot.
 
 ![The [!UICONTROL Filter: date_key] dialog with [!UICONTROL Recent date] and [!UICONTROL Apply] highlighted.](./images/user-defined-dashboards/recent-date.png)
 
-Alternatively, you can create a custom period over which to filter your data. Select **[!UICONTROL Select dates]** to extend the dialog with a list of available dates. Use the **[!UICONTROL Select all]** checkbox to enable or disable all available options, or select the checkbox for each day individually. Finally select **[!UICONTROL Apply]** to confirm your choices.
+Alternatively, you can create a custom period to filter your data by. Select **[!UICONTROL Select dates]** to extend the dialog with a list of available dates. Use the **[!UICONTROL Select all]** checkbox to enable or disable all available options, or select the checkbox for each day individually. Finally, select **[!UICONTROL Apply]** to confirm your choices.
 
 >[!NOTE]
 >
->If the `date_key` attribute is already added as a filter, select the ellipsis followed by **[!UICONTROL Edit]** from the dropdown options. 
+>If the `date_key` attribute has already been added as a filter, select the ellipsis followed by **[!UICONTROL Edit]** from the dropdown options. 
 
 ![The [!UICONTROL Filter: date_key] dialog with individual day checkboxes both checked and unchecked.](./images/user-defined-dashboards/select-dates.png)
 
@@ -146,19 +146,19 @@ To ensure that each query for an Adobe Real-Time Customer Data Platform insights
 
 ### Duplicate a widget
 
-Once you have created a widget, you can now duplicate the entire widget and customize its attributes to create a unique widget without having to start from scratch. To duplicate a widget, first, navigate to the dashboard inventory. Then select the dashboard name from the inventory list. Your custom dashboard appears.
+Once you have created a widget, you can duplicate the entire widget and customize its attributes to create a unique widget without having to start from scratch. To duplicate a widget, first, navigate to the dashboard inventory. Then select the dashboard name from the inventory list. Your custom dashboard appears.
 
 ![The Platform UI with dashboards and a custom dashboard name highlighted.](./images/user-defined-dashboards/dashbaord-inventory.png)
 
-Select the pencil icon  (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png)) from the top right of your custiom dahboard to enter the editing mode..
+Select the pencil icon  (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png)) from the top right of your custiom dahboard to enter the editing mode.
 
 ![A custom dashboard with the pencil icon highlighted.](./images/user-defined-dashboards/edit-mode.png)
 
-Next, select the ellipses in the top right of the widget that you wish to duplicate followed by **[!UICONTROL Duplicate widget]** from the list of available options.
+Next, select the ellipses in the top right of the widget that you wish to copy, followed by **[!UICONTROL Duplicate widget]** from the list of available options.
 
 ![A widget in a user-defined dashboard with the ellipses and Duplicate widget highlighted.](./images/user-defined-dashboards/duplicate.png)
 
-A duplicate widget appear in your user-defined dashboard. Select the ellipses of your new widget followed by **[!UICONTROL Edit]**, to customize your new widget.
+A duplicate widget appear in your user-defined dashboard. Select the ellipses of your new widget, followed by **[!UICONTROL Edit]**, to customize your new widget.
 
 ## Next steps and additional resources
 
