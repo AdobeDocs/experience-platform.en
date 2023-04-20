@@ -76,7 +76,7 @@ You should now have the ID sync container overrides configured. Now you can [sen
 
 ## Send the overrides to the Edge Network via the Web SDK {#send-overrides}
 
-After [configuring the datastream overrides]({#configure-overrides) in the Data Collection UI, you can now send the overrides to the Edge Network, via the Web SDK.
+After [configuring the datastream overrides](#configure-overrides) in the Data Collection UI, you can now send the overrides to the Edge Network, via the Web SDK.
 
 Sending the overrides to the Edge Network via the Web SDK is the second and final step of activating datastream configuration overrides.
 
