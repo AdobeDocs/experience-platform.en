@@ -174,7 +174,7 @@ A successful response returns a dataset populated with Profile data as specified
 
 ## List all export jobs
 
-You can return a list of all export jobs for a particular IMS Organization by performing a GET request to the `export/jobs` endpoint. The request also supports the query parameters `limit` and `offset`, as shown below.
+You can return a list of all export jobs for a particular organization by performing a GET request to the `export/jobs` endpoint. The request also supports the query parameters `limit` and `offset`, as shown below.
 
 **API format**
 
@@ -203,7 +203,7 @@ curl -X GET \
 
 **Response**
 
-The response includes a `records` object containing the export jobs created by your IMS Organization.
+The response includes a `records` object containing the export jobs created by your organization.
 
 ```json
 {

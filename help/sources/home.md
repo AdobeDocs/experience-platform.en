@@ -13,6 +13,13 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 With Experience Platform, you can centralize data you collect from disparate sources and use the insights gained from it to do more.
 
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
+
 ## Types of sources
 
 Sources in Experience Platform are grouped into the following categories:
