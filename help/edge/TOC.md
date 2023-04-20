@@ -21,10 +21,10 @@ feature: Web SDK
   * [Configure a CSP](fundamentals/configuring-a-csp.md)
   * [Interact with multiple properties](fundamentals/interacting-with-multiple-properties.md)
   * [User-Agent Client Hints](fundamentals/user-agent-client-hints.md)
-  * [Configuration overrides](fundamentals/configuration-overrides.md)
 * Datastreams {#datastreams}
   * [Overview](./datastreams/overview.md)
   * [Configure a datastream](./datastreams/configure.md)
+  * [Configure datastream overrides](./datastreams/configuration-overrides.md)
   * [Data Prep for Data Collection](./datastreams/data-prep.md)
   * Data Enrichment {#data-enrichment}
     * [Weather Data by The Weather Channel](./datastreams/data-enrichment/weather.md)
