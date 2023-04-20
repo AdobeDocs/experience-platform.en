@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;shopify;streaming
 title: Shopify Streaming Source
 description: Learn how to create a source connection and dataflow to ingest streaming data from your Shopify instance to Adobe Experience Platform
 badge: "Beta"
@@ -10,13 +9,13 @@ badge: "Beta"
 >
 >The [!DNL Shopify Streaming] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
-Adobe Experience Platform provides support for ingesting data from Streaming applications. Support for streaming providers include [!DNL Shopify].
+Adobe Experience Platform provides support for ingesting data from streaming applications. Support for streaming providers include [!DNL Shopify].
 
 ## Prerequisites {#prerequisites}
 
 The following section outlines prerequisite steps to complete before using the [!DNL Shopify Streaming] source.
 
-You must have a valid [!DNL Shopify] partner account in order to connect to [!DNL Shopify] APIs. If you do not already have a partner account, please register using the [[!DNL Shopify] partners dashboard](https://www.shopify.com/partners).
+You must have a valid [!DNL Shopify] partner account in order to connect to the [!DNL Shopify] APIs. If you do not already have a partner account, please register using the [[!DNL Shopify] partners dashboard](https://www.shopify.com/partners).
 
 ### Create your application
 
@@ -26,7 +25,7 @@ Once your app is created, retrieve your **client ID** and **client secret** from
 
 ### Retrieve your authorization code
 
-Next, retrieve your authorization code by entering your domain's `myshopify.com` URL into your browser, with query strings that define your API key, scopes, and the redirect URI.
+Next, retrieve your authorization code by entering your domain's `myshopify.com` URL into your browser, along with query strings that define your API key, scopes, and the redirect URI.
 
 The format for this URL is as follows:
 
@@ -40,7 +39,7 @@ https://{SHOP}.myshopify.com/admin/oauth/authorize?client_id={API_KEY}&scope={SC
 | --- | --- |
 | `shop` | Your subdomain `myshopify.com` URL. |
 | `api_key` | Your [!DNL Shopify] client ID. You can retrieve your client ID from the **client credentials** tab of the [!DNL Shopify] partners dashboard. |
-| `scopes` | The type of access that you want to define. For example, you can set scopes as `scope=write_orders,read_customers` to allow permissions to modify orders and read customers. |
+| `scopes` | The type of access you want to define. For example, you can set scopes as `scope=write_orders,read_customers` to allow permissions to modify orders and read customers. |
 | `redirect_uri` | The URL for the script that will generate the access token. |
 
 **Request**
@@ -59,7 +58,7 @@ https://www.acme.com/?code=k6j2palgrbljja228ou8c20fmn7w41gz&hmac=68c9163f772eecb
 
 ### Retrieve your access token
 
-Now that you have your client ID, client secret, and authorization code, you can now retrieve your access token. To retrieve your access token, make a POST request to your domain's `myshopify.com` URL while appending this URL with [!DNL Shopify's] API endpoint: `/admin/oauth/access_token`. 
+Now that you have your client ID, client secret, and authorization code, you can retrieve your access token. To retrieve your access token, make a POST request to your domain's `myshopify.com` URL while appending this URL with [!DNL Shopify's] API endpoint: `/admin/oauth/access_token`. 
 
 **API format**
 
@@ -154,7 +153,7 @@ The following is a list of known limitations that you may encounter when using w
 
 ## Next steps
 
-The following tutorials provides steps on how to connect your [!DNL Shopify Streaming] source to Experience Platform using the API and the UI:
+The following tutorials provide steps on how to connect your [!DNL Shopify Streaming] source to Experience Platform using the API and the UI:
 
 * [Create a Shopify Streaming source connection and dataflow using the Flow Service API](../../tutorials/api/create/ecommerce/shopify-streaming.md)
 * [Create a Shopify Streaming source connection and dataflow in the UI](../../tutorials/ui/create/ecommerce/shopify-streaming.md)

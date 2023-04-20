@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;shopify;Shopify;streaming
 title: Create A Shopify Streaming Connection And Dataflow In The UI
 description: Learn how to create a Shopify Streaming source connection and dataflow using the Platform user interface
 badge: "Beta"
@@ -19,7 +18,7 @@ This tutorial requires a working understanding of the following components of Ex
 
 >[!IMPORTANT]
 >
->This tutorial requires you to have completed prerequisite setup for your [!DNL Shopify Streaming] account. For steps on setting up your account, read the [[!DNL Shopify Streaming] overview](../../../../connectors/ecommerce/shopify-streaming.md).
+>This tutorial requires you to have completed the prerequisite setup for your [!DNL Shopify Streaming] account. For steps on setting up your account, read the [[!DNL Shopify Streaming] overview](../../../../connectors/ecommerce/shopify-streaming.md).
 
 ## Connect your [!DNL Shopify Streaming] account
 
@@ -60,7 +59,7 @@ When finished, select **[!UICONTROL Next]**.
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
-Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you select. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
@@ -70,10 +69,10 @@ Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
 The **[!UICONTROL Review]** step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
 
-* **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
+* **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source file, and the number of columns within that source file.
 * **[!UICONTROL Assign dataset & map fields]**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
 
-Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
+Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
 ![The review step of the sources workflow.](../../../../images/tutorials/create/shopify-streaming/review.png)
 

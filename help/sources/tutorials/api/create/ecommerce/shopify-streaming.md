@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming;shopify
 title: Create A Streaming Source Connection and Dataflow For Shopify Data Using The Flow Service API
 description:
 badge: "Beta"
@@ -17,7 +16,7 @@ The following tutorial provides steps on how to create a streaming source connec
 This guide requires a working understanding of the following components of Experience Platform:
 
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Using Platform APIs
 
@@ -65,7 +64,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
+| `name` | The name of your source connection. Ensure that the name of your source connection is descriptive, as you can use this to look up information on your source connection. |
 | `description` | An optional value that you can include to provide more information on your source connection. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
 | `data.format` | The format of the [!DNL Shopify] data that you want to ingest. Currently, the only supported data format is `json`. |
@@ -99,7 +98,7 @@ For detailed steps on how to create a target dataset, see the tutorial on [creat
 
 A target connection represents the connection to the destination where the ingested data is to be stored. To create a target connection, you must provide the fixed connection specification ID that corresponds to the data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-You now have the unique identifiers a target schema a target dataset and the connection spec ID to the data lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
+You now have the unique identifiers, a target schema, a target dataset, and the connection spec ID to the data lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
 
 **API format**
 
@@ -143,9 +142,9 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `name` | The name of your target connection. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
+| `name` | The name of your target connection. Ensure that the name of your target connection is descriptive, as you can use this to look up information on your target connection. |
 | `description` | An optional value that you can include to provide more information on your target connection. |
-| `connectionSpec.id` | The connection specification ID that corresponds to data lake. This fixed ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | The connection specification ID that corresponds to the data lake. This fixed ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 | `data.format` | The format of the [!DNL Shopify] data that you want to bring to Platform. |
 | `params.dataSetId` | The target dataset ID retrieved in a previous step. |
 
@@ -276,7 +275,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `name` | The name of your dataflow. Ensure that the name of your dataflow is descriptive as you can use this to look up information on your dataflow. |
+| `name` | The name of your dataflow. Ensure that the name of your dataflow is descriptive, as you can use this to look up information on your dataflow. |
 | `description` | An optional value that you can include to provide more information on your dataflow. |
 | `flowSpec.id` | The flow specification ID required to create a dataflow. This fixed ID is: `e77fde5a-22a8-11ed-861d-0242ac120002`. |
 | `flowSpec.version` | The corresponding version of the flow specification ID. This value defaults to `1.0`. |
@@ -645,7 +644,7 @@ A successful response returns information on your dataflow, including your endpo
 
 ## Appendix 
 
-The following section provides information on the steps you can to monitor, update, and delete your dataflow.
+The following section provides information on the steps you can take to monitor, update, and delete your dataflow.
 
 ### Monitor your dataflow
 
@@ -653,7 +652,7 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 ### Update your dataflow
 
-Update the details of your dataflow, such as its name and description, as well as its run schedule and associated mapping sets by making a PATCH request to the `/flows` endpoint of [!DNL Flow Service] API, while providing the ID of your dataflow. When making a PATCH request, you must provide your dataflow's unique `etag` in the `If-Match` header. For complete API examples, read the guide on [updating sources dataflows using the API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+Update the details of your dataflow, such as its name and description, as well as its run schedule and associated mapping sets, by making a PATCH request to the `/flows` endpoint of the [!DNL Flow Service] API, while providing the ID of your dataflow. When making a PATCH request, you must provide your dataflow's unique `etag` in the `If-Match` header. For complete API examples, read the guide on [updating sources dataflows using the API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### Update your account
 
