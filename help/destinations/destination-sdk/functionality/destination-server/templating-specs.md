@@ -63,7 +63,7 @@ See below an example of an HTTP request template, together with descriptions of 
 |---|---|---|
 |`httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Supported methods: `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 |`templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
-|`value` | String | *Required.* This string is the character-escaped version that transforms Platform customer data into the format expected by your destination. <br> For information on how to write the template, read the section on [using templating](message-format.md#using-templating). <br> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). <br> For an example of a simple transformation, refer to the [profile attributes](message-format.md#attributes) transformation. |
+|`value` | String | *Required.* This string is the character-escaped version of the template that formats the HTTP requests sent by Platform into the format expected by your destination. <br> For information on how to write the template, read the section on [using templating](message-format.md#using-templating). <br> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). <br> For an example of a simple transformation, refer to the [profile attributes](message-format.md#attributes) transformation. |
 |`contentType` | String | *Required.* The content type that your server accepts. This value is most likely `application/json`. |
 
 {style="table-layout:auto"}

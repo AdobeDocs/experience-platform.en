@@ -9,7 +9,7 @@ title: Create an audience template
 >
 >**API endpoint**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-This page exemplifies the API request and payload that you can use to create an audience template, using the `/authoring/audience-templates` API endpoint.
+For some destinations created using Destination SDK, you need to create an audience metadata configuration to programmatically create, update, or delete segment metadata in the destination. This page shows you how to use the `/authoring/audience-templates` API endpoint to create the configuration.
 
 For a detailed description of the capabilities that you can configure through this endpoint, see [audience metadata management](../functionality/audience-metadata-management.md).
 
