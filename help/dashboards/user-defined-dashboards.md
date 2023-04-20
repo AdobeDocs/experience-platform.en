@@ -106,9 +106,19 @@ By adding an attribute as a filter, you can select which values to include or ex
 
 ![The filter dialog to filter values from your widget.](./images/user-defined-dashboards/filter-dialog.png)
 
-#### Filter out historical data
+#### Filter out historical data {#filter-historical-data}
 
-Add the `date_key` attribute as a filter and select **[!UICONTROL Recent date]** to filter out historical data from your widget's data insights. This ensures that the data used to derive insights is taken from the most recent system snapshot.
+To filter out historical data from your widget's data insights, add the `date_key` attribute as a filter and select **[!UICONTROL Recent date]** followed by **[!UICONTROL Apply]**. This ensures that the data used to derive insights is taken from the most recent system snapshot.
+
+![The [!UICONTROL Filter: date_key] dialog with [!UICONTROL Recent date] and [!UICONTROL Apply] highlighted.](./images/user-defined-dashboards/recent-date.png)
+
+Alternatively, you can create a custom period over which to filter your data. Select **[!UICONTROL Select dates]** to extend the dialog with a list of available dates. Use the **[!UICONTROL Select all]** checkbox to enable or disable all available options, or select the checkbox for each day individually. Finally select **[!UICONTROL Apply]** to confirm your choices.
+
+>[!NOTE]
+>
+>If the `date_key` attribute is already added as a filter, select the ellipsis followed by **[!UICONTROL Edit]** from the dropdown options. 
+
+![The [!UICONTROL Filter: date_key] dialog with individual day checkboxes both checked and unchecked.](./images/user-defined-dashboards/select-dates.png)
 
 ### Widget properties
 
@@ -136,17 +146,17 @@ To ensure that each query for an Adobe Real-Time Customer Data Platform insights
 
 ### Duplicate a widget
 
-Once you have created a widget, you can now duplicate the entire widget and customize its attributes to create a unique widget without having to start from scratch. To duplicate a widget, first, navigate to the dashboard inventory.
+Once you have created a widget, you can now duplicate the entire widget and customize its attributes to create a unique widget without having to start from scratch. To duplicate a widget, first, navigate to the dashboard inventory. Then select the dashboard name from the inventory list. Your custom dashboard appears.
 
-![The Platform UI with dashboards and a custom dashboard name highlighted.](.png)
+![The Platform UI with dashboards and a custom dashboard name highlighted.](./images/user-defined-dashboards/dashbaord-inventory.png)
 
-Then select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png)).
+Select the pencil icon  (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png)) from the top right of your custiom dahboard to enter the editing mode..
 
-![The dashboard inventory with the pencil icon highlighted.](.png)
+![A custom dashboard with the pencil icon highlighted.](./images/user-defined-dashboards/edit-mode.png)
 
 Next, select the ellipses in the top right of the widget that you wish to duplicate followed by **[!UICONTROL Duplicate widget]** from the list of available options.
 
-![A widget in a uer-defined dashboard with the ellipses and Duplicate widget highlighted.]()
+![A widget in a user-defined dashboard with the ellipses and Duplicate widget highlighted.](./images/user-defined-dashboards/duplicate.png)
 
 A duplicate widget appear in your user-defined dashboard. Select the ellipses of your new widget followed by **[!UICONTROL Edit]**, to customize your new widget.
 
