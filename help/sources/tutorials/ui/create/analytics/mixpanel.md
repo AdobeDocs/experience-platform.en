@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: (Beta )Create a Mixpanel Source Connection in the UI
+title: (Beta) Create a Mixpanel Source Connection in the UI
 description: Learn how to create a Mixpanel source connection using the Adobe Experience Platform UI.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 ---

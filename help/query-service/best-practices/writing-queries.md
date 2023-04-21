@@ -318,7 +318,6 @@ By reading this document, you have been introduced to some important considerati
 For more samples of queries that can be used within Query Service, please read the following use case documentation:
 
 - [Analytics insights](../use-cases/analytics-insights.md)
-- [Activity analysis with Adobe Target](../use-cases/activity-analysis-with-adobe-target.md)
 - [Create a trended report of events](../use-cases/trended-report-of-events.md)
 - [View a roll-up report of a visitor](../use-cases/roll-up-report-of-a-visitor.md)
 - [List the page views of a user](../use-cases/list-visitor-sessions.md)
