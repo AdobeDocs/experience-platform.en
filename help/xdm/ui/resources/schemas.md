@@ -276,6 +276,8 @@ The schema is now enabled for use in Real-Time Customer Profile. When Platform i
 
 ## Edit display names for schema fields {#display-names}
 
+<!-- add section  -->
+
 Once you have assigned a class and added field groups to a schema, you can edit the display names of any of the schema's fields, regardless of whether those fields have been provided by standard or custom XDM resources.
 
 >[!NOTE]
