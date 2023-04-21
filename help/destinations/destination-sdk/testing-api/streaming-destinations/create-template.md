@@ -3,17 +3,18 @@ description: As part of Destination SDK, Adobe provides developer tools to assis
 title: Create and test a message transformation template
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
 ---
+
 # Create and test a message transformation template {#create-template}
 
 ## Overview {#overview}
 
-As part of Destination SDK, Adobe provides developer tools to assist you in configuring and testing your destination. This page describes how to create and test a message transformation template. For information on how to test your destination, read [Test your destination configuration](test-destination.md).
+As part of Destination SDK, Adobe provides developer tools to assist you in configuring and testing your destination. This page describes how to create and test a message transformation template. For information on how to test your destination, read [Test your destination configuration](streaming-destination-testing-overview.md).
 
 To **create and test a message transformation template** between the target schema in Adobe Experience Platform and the message format supported by your destination, use the *Template authoring tool* described further below.  Read more about the data transformation between source and target schema in the [message format document](../functionality/destination-server/message-format.md#using-templating).
 
 Illustrated below is how creating and testing a message transformation template fits into the [destination configuration workflow](../guides/configure-destination-instructions.md) in Destination SDK:
 
-![Graphic of where the create template step fits into the destination configuration workflow](../assets/testing-api/create-template-step.png)
+![Graphic of where the create template step fits into the destination configuration workflow](../../assets/testing-api/create-template-step.png)
 
 ## Why you need to create and test a message transformation template {#why-create-message-transformation-template}
 
@@ -44,13 +45,13 @@ Before you are ready to create the template, make sure you complete the steps be
 
 The process to get and test the template is iterative. Repeat the steps below until the exported profiles match your destination's expected data format.
 
-1. First, [get a sample template](../testing-api/create-template.md#sample-template-api).
+1. First, [get a sample template](../testing-api/streaming-destinations/create-template.md#sample-template-api).
 2. Use the sample template as a starting point to create a draft of your own.
-3. Call the [render template API endpoint](../testing-api/create-template.md#render-template-api) with your own template. Adobe generates sample profiles based on your schema and returns the result or any encountered errors.
+3. Call the [render template API endpoint](../testing-api/streaming-destinations/create-template.md#render-template-api) with your own template. Adobe generates sample profiles based on your schema and returns the result or any encountered errors.
 4. Compare the exported data against the data format expected by your destination. If needed, edit the template.
 5. Repeat this process until the exported profiles match your destination's expected data format.
 
-## Get a sample template using the Sample template API {#sample-template-api}
+## Get a sample template using the sample template API {#sample-template-api}
 
 >[!NOTE]
 >
@@ -158,7 +159,7 @@ You can use an online character escaping tool. The demo above uses the [JSON Esc
 
 ## Render template API {#render-template-api}
 
-After creating a message transformation template using the [sample template API](../testing-api/create-template.md#sample-template-api), you can [render the template](../testing-api/streaming-destinations/render-template-api.md) to generate exported data based on it. This allows you to verify if the profiles that Adobe Experience Platform would export to your destination match your destination's expected format.
+After creating a message transformation template using the [sample template API](../testing-api/streaming-destinations/create-template.md#sample-template-api), you can [render the template](../testing-api/streaming-destinations/render-template-api.md) to generate exported data based on it. This allows you to verify if the profiles that Adobe Experience Platform would export to your destination match your destination's expected format.
 
 Refer to the API reference for examples of calls that you can make:
 

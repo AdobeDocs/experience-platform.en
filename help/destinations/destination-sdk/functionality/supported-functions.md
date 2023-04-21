@@ -11,7 +11,7 @@ The Experience Platform [!DNL Pebble] implementation has some changes, compared 
 
 ## Where to use {#where-to-use}
 
-Use the supported functions listed further below on this page when [creating a message transformation template](../testing-api/create-template.md) for the data exported out of Experience Platform to your destination. 
+Use the supported functions listed further below on this page when [creating a message transformation template](../testing-api/streaming-destinations/create-template.md) for the data exported out of Experience Platform to your destination. 
 
 The message transformation template is used in the [destination server configuration](../functionality/destination-server/templating-specs.md) for streaming destinations.
 
@@ -191,5 +191,5 @@ added: <111111><333333>;|removed: <222222>;
 
 You now know which [!DNL Pebble] functions are supported in Destination SDK, as well as how to use them to adjust the format of the exported data to fit your needs. Next, you should review the following pages:
 
-* [Create and test a message transformation template](../testing-api/create-template.md)
+* [Create and test a message transformation template](../testing-api/streaming-destinations/create-template.md)
 * [Render template API operations](../testing-api/streaming-destinations/render-template-api.md)

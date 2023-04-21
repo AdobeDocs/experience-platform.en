@@ -3,6 +3,7 @@ description: This page explains how to use the /authoring/testing/template/rende
 title: Validate templatized customer fields
 exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
 ---
+
 # Validate templatized customer fields
 
 ## Overview {#overview}

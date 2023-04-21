@@ -36,5 +36,5 @@ The Experience Platform approach for configurable aggregation is described below
 
 You now know how Experience Platform handles errors and rate limiting from destination platforms, depending on the aggregation policy you selected when you configured your streaming destination. Next, you can review the following documentation:
 
-* [Test your destination configuration](../testing-api/test-destination.md)
+* [Test your destination configuration](../testing-api/streaming-destination-testing-overview.md)
 * [Submit for review a destination authored in Destination SDK](../guides/submit-destination.md)

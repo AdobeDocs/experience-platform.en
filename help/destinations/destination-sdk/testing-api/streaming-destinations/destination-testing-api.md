@@ -1,15 +1,16 @@
 ---
 description: This page lists and describes all the API operations that you can perform using the `/authoring/testing/destinationInstance/` API endpoint, to test if your destination is configured correctly and to verify the integrity of data flows to your configured destination.
-title: Destination testing API operations
+title: Test your streaming destination with sample profiles
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
 ---
-# Destination testing API operations {#template-api-operations}
+
+# Test your streaming destination with sample profiles {#template-api-operations}
 
 >[!IMPORTANT]
 >
 >**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
 
-This page lists and describes all the API operations that you can perform using the `/authoring/testing/destinationInstance/` API endpoint, to test if your destination is configured correctly and to verify the integrity of data flows to your configured destination. For a description of the functionality supported by this endpoint, read [Test your destination configuration](../test-destination.md).
+This page lists and describes all the API operations that you can perform using the `/authoring/testing/destinationInstance/` API endpoint, to test if your destination is configured correctly and to verify the integrity of data flows to your configured destination. For a description of the functionality supported by this endpoint, read [Test your destination configuration](../streaming-destinations/streaming-destination-testing-overview.md).
 
 You make requests to the testing endpoint with or without adding profiles to the call. If you don't send any profiles on the request, Adobe will generate those internally for you and add them to the request.
 

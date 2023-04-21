@@ -7,13 +7,13 @@ exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
 
 ## Overview {#overview}
 
-As part of Destination SDK, Adobe provides developer tools to assist you in configuring and testing your destination. This page describes how to test your destination configuration. For information on how to create a message transformation template, read [Create and test a message transformation template](../testing-api/create-template.md).
+As part of Destination SDK, Adobe provides developer tools to assist you in configuring and testing your destination. This page describes how to test your destination configuration. For information on how to create a message transformation template, read [Create and test a message transformation template](../testing-api/streaming-destinations/create-template.md).
 
 To **test if your destination is configured correctly and to verify the integrity of data flows to your configured destination**, use the *Destination testing tool*. With this tool, you can test your destination configuration by sending messages to your REST API endpoint.
 
 Illustrated below is how testing your destination fits into the [destination configuration workflow](../guides/configure-destination-instructions.md) in Destination SDK:
 
-![Graphic of where the destination testing step fits into the destination configuration workflow](../assets/testing-api/test-destination-step.png)
+![Graphic of where the destination testing step fits into the destination configuration workflow](../../assets/testing-api/test-destination-step.png)
 
 ## Destination testing tool - Purpose and prerequisites {#destination-testing-tool}
 

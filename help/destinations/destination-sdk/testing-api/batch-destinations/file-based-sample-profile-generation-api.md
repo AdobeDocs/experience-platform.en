@@ -3,6 +3,7 @@ description: This page explains how to use the /sample-profiles API endpoint fro
 title: Generate sample profiles based on a source schema
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
 ---
+
 # Generate sample profiles based on a source schema
 
 ## Overview {#overview}

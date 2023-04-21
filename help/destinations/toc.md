@@ -248,13 +248,14 @@ feature: Destinations
         * [Update a credential configuration](./destination-sdk/credentials-api/update-credential-configuration.md)
         * [Delete a credential configuration](./destination-sdk/credentials-api/delete-credential-configuration.md)
     * Destination testing API reference {#testing-api}
-        * [Create and test a message transformation template](./destination-sdk/testing-api/create-template.md)
+        * [Create and test a message transformation template](./destination-sdk/testing-api/streaming-destinations/create-template.md)
         * [Test your destination configuration](./destination-sdk/testing-api/test-destination.md)
         * Streaming destination testing API {#streaming-destinations}
-            * [Get sample template API operations](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
-            * [Render template API operations](./destination-sdk/testing-api/streaming-destinations/render-template-api.md)
-            * [Destination testing API operations](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
-            * [Sample profile generation API operations](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
+            * [Streaming destination testing API overview](./destination-sdk/testing-api/streaming-destinations/cre/file-based-destination-testing-overview.md)
+            * [Generate sample profiles based on a source schema](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
+            * [Generate a sample message transformation template ](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
+            * [Validate exported profile structure](./destination-sdk/testing-api/streaming-destinations/render-template-api.md)
+            * [Test your streaming destination with sample profiles](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
         * File-based destination testing API {#batch-destinations}
             * [File-based destination testing API overview](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md) 
             * [Generate sample profiles based on a source schema](./destination-sdk/testing-api/batch-destinations/file-based-sample-profile-generation-api.md)

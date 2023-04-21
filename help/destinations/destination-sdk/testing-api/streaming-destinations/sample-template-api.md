@@ -1,9 +1,10 @@
 ---
 description: This page lists and describes all the API operations that you can perform using the `/authoring/testing/template/sample` API endpoint, to get a test message transformation template for your destination.
-title: Get sample template API operations
+title: Generate a sample message transformation template
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
 ---
-# Get sample template API operations {#get=sample-template-api-operations}
+
+# Generate a sample message transformation template {#get-sample-template-api-operations}
 
 >[!IMPORTANT]
 >

@@ -51,7 +51,7 @@ Provide a brief description of the issue that your submission solves for the exi
 
 ## Test results after using the test destination API {#testing-api-response}
 
-Provide test results after using the [test destination API](../testing-api/test-destination.md) endpoint to perform an HTTP call to your destination. This includes:
+Provide test results after using the [test destination API](../testing-api/streaming-destination-testing-overview.md) endpoint to perform an HTTP call to your destination. This includes:
 
 * The complete API request (headers and body) made to your destination endpoint, using the testing API.
 * The API response received from your destination endpoint.

@@ -1,8 +1,9 @@
 ---
-description: The file-based destination testing API is a collection of endpoints that you can use to validate the configuration of your file-based destinations built through the Destination SDK.
+description: Learn how to use the file-based destination testing API to validate the configuration of your file-based destinations built through the Destination SDK.
 title: File-based destination testing API
 exl-id: 2733fd00-af08-4763-a30e-a53ee56c0a19
 ---
+
 # File-based destination testing API
 
 ## Overview {#overview}

@@ -41,7 +41,7 @@ For more information about the transformation, visit the links below:
 
 >[!TIP]
 >
->Adobe offers a [developer tool](../../testing-api/create-template.md) that helps you create and test a message transformation template. 
+>Adobe offers a [developer tool](../../testing-api/streaming-destinations/create-template.md) that helps you create and test a message transformation template. 
 
 See below an example of an HTTP request template, together with descriptions of each individual parameter.
 
