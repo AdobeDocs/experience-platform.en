@@ -8,13 +8,15 @@ exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
 
 ## Overview {#overview}
 
-[[!DNL (API) Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/overview/) (formerly known as [!DNL ExactTarget]) is a digital marketing suite that allows you to build and customize journeys for visitors and customers to personalize their experience.
+[[!DNL (API) Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/engagement/) (formerly known as [!DNL ExactTarget]) is a digital marketing suite that allows you to build and customize journeys for visitors and customers to personalize their experience.
 
 >[!IMPORTANT]
 >
 >Note the difference between this connection and the other [[!DNL Salesforce Marketing Cloud] connection](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) that exists within the Email marketing catalog section. The other Salesforce Marketing Cloud connection allows you to export files to a specified storage location, whereas this is an API-based streaming connection.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [!DNL Salesforce Marketing Cloud] [update contacts](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API, which allows you to add contacts / update contact data for your business needs after activating them within a new [!DNL Salesforce Marketing Cloud] segment.
+Compared to [!DNL Salesforce Marketing Cloud Account Engagement] which is more oriented towards **B2B** marketing, the [!DNL (API) Salesforce Marketing Cloud] destination is ideal for **B2C** use cases with shorter transactional decision-making cycles. You can consolidate larger datasets representing your target audience’s behavior to adjust and improve marketing campaigns by prioritizing and segmenting contacts, especially from datasets outside [!DNL Salesforce]. *Note, Experience Platform also has a connection for the [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md).*
+
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [!DNL Salesforce Marketing Cloud] [update contacts](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API, which allows you to **add contacts and update contact data** for your business needs after activating them within a new [!DNL Salesforce Marketing Cloud] segment.
 
 [!DNL Salesforce Marketing Cloud] uses OAuth 2 with Client Credentials as the authentication mechanism to communicate with the [!DNL Salesforce Marketing Cloud] API. Instructions to authenticate to your [!DNL Salesforce Marketing Cloud] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
@@ -38,9 +40,9 @@ Note the following prerequisites in order to export data from Platform to your [
 
 #### You need to have a [!DNL Salesforce Marketing Cloud] account {#prerequisites-account}
 
-A [!DNL Salesforce Marketing Cloud] account with a subscription to the [Marketing Cloud Account Engagement](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) product is mandatory to proceed.
+A [!DNL Salesforce Marketing Cloud] account with a subscription to the [[!DNL Marketing Cloud Engagement]](https://www.salesforce.com/products/marketing-cloud/engagement/) product is mandatory to proceed.
 
-Reach out to [[!DNL Salesforce] Support](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) if you do not have a [!DNL Salesforce Marketing Cloud] account or your account is missing the [!DNL Marketing Cloud Account Engagement] product subscription.
+Reach out to [[!DNL Salesforce] Support](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) if you do not have a [!DNL Salesforce Marketing Cloud] account or your account is missing the [!DNL Marketing Cloud Engagement] product subscription.
 
 #### Create attributes within [!DNL Salesforce Marketing Cloud] {#prerequisites-attribute}
 
@@ -74,6 +76,21 @@ An example of attribute creation in [!DNL Salesforce Marketing Cloud], is shown 
 >* When creating the attribute, do not include whitespace characters in the field name. Instead, use the underscore `(_)` character as a separator.
 >* To distinguish between attributes used for Platform segments and other attributes within [!DNL Salesforce Marketing Cloud], you could include a recognizable prefix or suffix for the attributes used for Adobe segments. For example, instead of `test_segment`, use `Adobe_test_segment` or `test_segment_Adobe`.
 >* If you already have other attributes created in [!DNL Salesforce Marketing Cloud], you can use the same name as the Platform segment, to easily identify the segment in [!DNL Salesforce Marketing Cloud].
+
+#### Assign user roles and permissions within [!DNL Salesforce Marketing Cloud] {#prerequisites-roles-permissions}
+
+As [!DNL Salesforce Marketing Cloud] supports custom roles depending on your use-case, your user should be assigned the relevant roles to update your attributes within your [!DNL Salesforce Marketing Cloud] attribute-sets. An example of roles assigned to a user is shown below:
+![Salesforce Marketing Cloud UI for a selected user which shows their assigned roles.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-edit-roles.png)
+
+Depending on which roles your [!DNL Salesforce Marketing Cloud] user has been assigned, you would also need to assign permissions to the [!DNL Salesforce Marketing Cloud] attribute-sets which contain the fields you are looking to update. 
+
+As this destination requires access to the `[!DNL Email Demographics system attribute-set]`, you need to allow `Email` as shown below:
+![Salesforce Marketing Cloud UI showing email attribute-set with allowed permissions.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
+
+To restrict the level of access, you can also override individual accesses by using granular privileges.
+![Salesforce Marketing Cloud UI showing the email attribute-set with granular permissions.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
+
+Refer to the [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&id=sf.mc_overview_marketing_cloud_roles.htm&type=5) and [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&id=sf.mc_overview_roles.htm&type=5) pages for detailed guidance.
 
 #### Gather [!DNL Salesforce Marketing Cloud] credentials {#gather-credentials}
 
@@ -258,3 +275,21 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 * [!DNL Salesforce Marketing Cloud] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html)
 * [!DNL Salesforce Marketing Cloud] [documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) explaining how contacts are updated with the specified information in the specified attribute groups.
+
+### Changelog {#changelog}
+
+This section captures the functionality and significant documentation updates made to this destination connector.
+
++++ View changelog
+
+|Release month|Update type|Description|
+|---|---|---|
+|April 2023|Documentation update|<ul><li>We corrected a statement and reference link in the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section to call out that [!DNL Salesforce Marketing Cloud Engagement] is a mandatory subscription to use this destination. The section previously called out erroneously that users need a subscription to the Marketing Cloud **Account** Engagement to proceed.</li> <li>We added a section under [prerequisites](#prerequisites) for [roles and permissions](#prerequisites-roles-permissions) to be assigned to the [!DNL Salesforce] user for this destination to work. (PLATIR-26299)</li></ul>|
+|February 2023|Documentation update|We updated the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section to include a reference link calling out that [!DNL Salesforce Marketing Cloud Engagement] is a mandatory subscription to use this destination.|
+|February 2023|Functionality update|We fixed an issue where an incorrect configuration in the destination was causing a malformed JSON to be sent to Salesforce. This resulted in some users seeing high numbers of identities failed on activation. (PLATIR-26299)|
+|January 2023|Documentation update| <ul><li>We updated the [Prerequisites in [!DNL Salesforce]](#prerequisites-destination) section to call out that attributes need to be created on the [!DNL Salesforce] side. This section now includes detailed instructions on how to do that and best practices around naming the attributes in [!DNL Salesforce]. (PLATIR-25602)</li><li>We added clear instructions on how to use the Mapping ID for each activated segment in the [segment scheduling](#schedule-segment-export-example) step. (PLATIR-25602)</li></ul> |
+|October 2022|Initial release|Initial destination release and documentation publish.|
+
+{style="table-layout:auto"}
+
++++

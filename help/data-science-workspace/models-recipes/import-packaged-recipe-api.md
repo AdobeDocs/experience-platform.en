@@ -32,7 +32,7 @@ This tutorial requires a packaged Recipe file in the form of a Docker URL. Follo
 This tutorial requires you to have completed the [Authentication to Adobe Experience Platform tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to [!DNL Platform] APIs. Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 -   `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.
--   `{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.
+-   `{ORG_ID}`: Your organization credentials found in your unique Adobe Experience Platform integration.
 -   `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.
 
 ## Create an Engine

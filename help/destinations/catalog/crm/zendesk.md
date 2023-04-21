@@ -2,6 +2,7 @@
 title: Zendesk connection
 description: The Zendesk destination allows you to export your account data and activate it within Zendesk for your business needs.
 last-substantial-update: 2023-03-14
+exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
 ---
 # [!DNL Zendesk] connection
 

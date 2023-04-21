@@ -17,4 +17,4 @@ In order for a user to access tag features, an administrator must add their acco
 
 ## Confirm provisioning
 
-After your company is provisioned with access to tags and your users are set up as described above, you should be able to access the Data Collection UI and Experience Platform UI from the [Adobe Experience Cloud dashboard](https://experience.adobe.com/). If you still cannot access either UI after completing the above steps, please contact your Adobe support representatives.
+After your company is provisioned with access to tags and your users are set up as described above, you should be able to access the Data Collection UI and Experience Platform UI from the [Adobe Experience Cloud dashboard](https://experience.adobe.com/). If you still cannot access either UI after completing the above steps, please contact your Adobe account team or Customer Care.

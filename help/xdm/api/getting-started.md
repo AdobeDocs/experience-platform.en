@@ -48,7 +48,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Know your TENANT_ID {#know-your-tenant_id}
 
-Throughout the API guides you will see references to a `TENANT_ID`. This ID is used to ensure that resources you create are namespaced properly and contained within your IMS Organization. If you do not know your ID, you can access it by performing the following GET request:
+Throughout the API guides you will see references to a `TENANT_ID`. This ID is used to ensure that resources you create are namespaced properly and contained within your organization. If you do not know your ID, you can access it by performing the following GET request:
 
 **API format**
 
@@ -162,7 +162,7 @@ GET /global/classes
 
 ### Tenant container
 
-Not to be confused with your unique `TENANT_ID`, the `tenant` container holds all classes, field groups, data types, schemas, and descriptors defined by an IMS Organization. These are unique to each organization, meaning they are not visible or manageable by other IMS Orgs. You may perform all CRUD operations (GET, POST, PUT, PATCH, DELETE) against resources that you create in the `tenant` container.
+Not to be confused with your unique `TENANT_ID`, the `tenant` container holds all classes, field groups, data types, schemas, and descriptors defined by an organization. These are unique to each organization, meaning they are not visible or manageable by other organizations. You may perform all CRUD operations (GET, POST, PUT, PATCH, DELETE) against resources that you create in the `tenant` container.
 
 An example of a call that uses the `tenant` container would look like the following:
 
