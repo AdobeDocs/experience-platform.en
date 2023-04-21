@@ -68,6 +68,10 @@ Once you've created the datastream, go to **[!UICONTROL Advanced Options]** and 
 
 Then, use the **[!UICONTROL Container ID Overrides]** section to add the container IDs that you want to override the default setting, as shown in the image below.
 
+>[!IMPORTANT]
+>
+>Container IDs must be numeric values, like `1234567`, and not strings, such as `"1234567"`. If you send a string value through the Web SDK as a container ID override, you will receive an error.
+
 ![Datastreams UI screenshot showing the datastream settings, with the third party ID sync container overrides highlighted.](../assets/datastreams/overrides/override-container.png)
 
 After you've added the desired overrides, save your datastream settings.
@@ -122,7 +126,7 @@ alloy("sendEvent", {
         ]
     },
     com_adobe_identity: {
-      idSyncContainerId: "Override_Container_ID_1"
+      idSyncContainerId: "1234567"
     },
     com_adobe_target: {
       propertyToken: "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
@@ -162,7 +166,7 @@ alloy("configure", {
       ]
     },
     "com_adobe_identity": {
-      "idSyncContainerId": "Override_Container_ID_1"
+      "idSyncContainerId": "1234567"
     },
     "com_adobe_target": {
       "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
@@ -198,7 +202,7 @@ The examples above generate an [!DNL Edge Network] payload that looks like this:
         ]
       },
       "com_adobe_identity": {
-        "idSyncContainerId": "Override_Container_ID_1"
+        "idSyncContainerId": "1234567"
       },
       "com_adobe_target": {
         "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
