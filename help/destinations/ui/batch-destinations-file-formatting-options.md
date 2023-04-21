@@ -113,8 +113,8 @@ Use this control to set the string representation of an empty value. This option
 
 View the examples below of the content from exported CSV files with each of the selections in the UI.
 
-* Example output with **[!UICONTROL null]** selected: `male,NULL,TestLastName`. In this case, Experience Platform transforms the empty string into a null value.
-* Example output with **""** selected: `male,"",TestLastName`. In this case, Experience Platform adds double quotes around an empty string.
+* Example output with **[!UICONTROL null]** selected: `male,NULL,TestLastName`. In this case, Experience Platform transforms the empty value into a null value.
+* Example output with **""** selected: `male,"",TestLastName`. In this case, Experience Platform transforms the empty value into a pair of double quotes.
 * Example output with **[!UICONTROL Empty string]** selected: `male,,TestLastName`. In this case, the Experience Platform maintains the empty value and exports it as it is (without double quotes).
 
 >[!TIP]
