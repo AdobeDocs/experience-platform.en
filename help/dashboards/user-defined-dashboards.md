@@ -146,19 +146,19 @@ To ensure that each query for an Adobe Real-Time Customer Data Platform insights
 
 ### Duplicate a widget
 
-Once you have created a widget, you can duplicate the entire widget and customize its attributes to create a unique widget without having to start from scratch. To duplicate a widget, first, navigate to the dashboard inventory. Then select the dashboard name from the inventory list. Your custom dashboard appears.
+Once you have created a widget, you can duplicate the entire widget and customize its attributes to create a unique widget without having to start from scratch. To duplicate a widget, first, navigate to the dashboard inventory. Then select the dashboard name from the inventory list. Your customized dashboard appears.
 
 ![The Platform UI with dashboards and a custom dashboard name highlighted.](./images/user-defined-dashboards/dashbaord-inventory.png)
 
-Select the pencil icon  (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png)) from the top right of your custiom dahboard to enter the editing mode.
+Select the pencil icon  (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png)) from the top right of your custom dashboard to enter the editing mode.
 
 ![A custom dashboard with the pencil icon highlighted.](./images/user-defined-dashboards/edit-mode.png)
 
-Next, select the ellipses in the top right of the widget that you wish to copy, followed by **[!UICONTROL Duplicate widget]** from the list of available options.
+Next, select the ellipses in the top right of the widget that you wish to copy, followed by **[!UICONTROL Duplicate]** from the list of available options.
 
 ![A widget in a user-defined dashboard with the ellipses and Duplicate widget highlighted.](./images/user-defined-dashboards/duplicate.png)
 
-A duplicate widget appear in your user-defined dashboard. Select the ellipses of your new widget, followed by **[!UICONTROL Edit]**, to customize your new widget.
+A duplicate widget appears in your user-defined dashboard. Select the ellipses of your new widget, followed by **[!UICONTROL Edit]**, to customize your new widget.
 
 ## Next steps and additional resources
 
