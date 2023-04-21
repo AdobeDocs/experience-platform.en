@@ -1,4 +1,5 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/activity-analysis-with-adobe-target.html,https://experienceleague.adobe.com/docs/experience-platform/query/home.html
 https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/license-usage.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/query/data-governance.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-governance/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html,https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation-api.html
@@ -56,7 +57,7 @@ https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/ttl.html,
 https://experienceleague.adobe.com/docs/experience-platform/tags/admin/manage-permissions.html,https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html
 https://experienceleague.adobe.com/docs/experience-platform/query/derived-attributes.html,https://experienceleague.adobe.com/docs/experience-platform/query/derived-attributes/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/rtcdp-connections/(*),https://experienceleague.adobe.com/docs/experience-platform/collection/
-https://experienceleague.adobe.com/docs/experience-platform/query/sample-queries/adobe-target.html, https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/activity-analysis-with-adobe-target.html
+https://experienceleague.adobe.com/docs/experience-platform/query/sample-queries/adobe-target.html,https://experienceleague.adobe.com/docs/experience-platform/query/home.html
 https://experienceleague.adobe.com/docs/experience-platform/catalog/data-protection.html,https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/encryption.html
 https://experienceleague.adobe.com/docs/experience-platform/privacy/data-hygiene-api.html,https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/query/get-started/use-case.html,https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/abandoned-cart.html
