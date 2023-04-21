@@ -3,13 +3,15 @@ keywords: Experience Platform;home;popular topics;dataset;Dataset;time to live;t
 solution: Experience Platform
 title: Pseudonymous Profile data expiration
 description: This document provides general guidance on configuring data expiration for Pseudonymous Profiles within Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 ---
-# Pseudonymous profiles data expiration [!BADGE Limited release]
+# Pseudonymous profiles data expiration
 
-In Adobe Experience Platform, a profile is considered for Pseudonymous data expiration if it meets the following conditions: 
+In Adobe Experience Platform, you can configure expiration times for Pseudonymous profiles, allowing you to automatically remove data from the Profile Store that is no longer valid or useful for your use cases.
+
+## Pseudonymous profile {#pseudonymous-profile}
+
+A profile is considered for Pseudonymous data expiration if it meets the following conditions: 
 
 - The stitched profile's identity namespaces match what the customer has specified as a pseudonymous or unknown identity namespace. 
   - For example, if the profile's identity namespace is `ECID`, `GAID`, or `AAID`. The stitched profile has no IDs from any other identity namespace. In this example, a stitched profile does **not** have either an email or CRM identity. 
@@ -43,27 +45,27 @@ The following section lists frequently asked questions regarding Pseudonymous pr
 - **All** profiles that are defined as Pseudonymous profiles will be affected by the Pseudonymous profile data expiration. It does **not** matter if the profile is Experience Event only or if it only contains profile attributes.
 - This cleanup will **only** occur in Profile. Identity Service may continue to show the deleted identities within the graph after the cleanup in cases where the profile has two or more associated pseudonymous identities (such as `AAID` and `ECID`). This discrepancy will be addressed in the near future.
 
-### How does Pseudonymous Profile data expiry differ from the existing Experience Event data expiry?
+### How does Pseudonymous Profile data expiry differ from  Experience Event data expiry?
 
 Pseudonymous Profile data expiry and Experience Event data expiry are complementary features.
 
 #### Granularity
 
-Experience Event data expiration works on a **dataset** level. As a result, each dataset can have a different data expiry setting.
-
 Pseudonymous Profile data expiration works on a **sandbox** level. As a result, the data expiration will affect all profiles in the sandbox.
+
+Experience Event data expiration works on a **dataset** level. As a result, each dataset can have a different data expiry setting.
 
 #### Identity types
 
-Experience Event data expiration removes events **only** based on the event record's timestamp. The identity namespaces included are **ignored** for expiration purposes.
-
 Pseudonymous Profile data expiration **only** considers profiles that have identity graphs which contain identity namespaces that were selected by the customer, such as `ECID`, `AAID`, or other types of cookies. If the profile contains **any** additional identity namespace that was **not** in the customer's selected list, the profile will **not** be deleted.
+
+Experience Event data expiration removes events **only** based on the event record's timestamp. The identity namespaces included are **ignored** for expiration purposes.
 
 #### Removed items
 
-Experience Event data expiration **only** removes events and does **not** remove profile class data. The profile class data is only removed when all the data is removed across **all** datasets and there are **no** profile class records remaining for the profile.
-
 Pseudonymous Profile data expiration removes **both** event and profile records. As a result, the profile class data will also be removed.
+
+Experience Event data expiration **only** removes events and does **not** remove profile class data. The profile class data is only removed when all the data is removed across **all** datasets and there are **no** profile class records remaining for the profile.
 
 ### How can Pseudonymous Profile data expiry be used in conjunction with Experience Event data expiry?
 
