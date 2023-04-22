@@ -21,15 +21,13 @@ While the Platform UI allows you export XDM resources, you must use the Schema R
 
 ## Generate an export payload {#generate-export-payload}
 
-<!-- Beleow needs updated for the copy JSON button work -->
-
-In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. Within the [!UICONTROL Schemas] workspace, locate the schema that you want to export and open it in the [!DNL Schema Editor].
+In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. Within the [!UICONTROL Schemas] workspace, select the row for the schema that you want to export to open the schema details in the right sidebar.
 
 >[!TIP]
 >
 >See the guide on [exploring XDM resources](./explore.md) for details on how to find the XDM resource you are looking for.
 
-Once you have the schema open, select the **[!UICONTROL Copy JSON]** icon (![Copy Icon](../images/ui/export/icon.png)) in the top-right of the canvas.
+Next, select the **[!UICONTROL Copy JSON]** icon (![Copy Icon](../images/ui/export/icon.png)) from the available options.
 
 ![](../images/ui/export/copy-json.png)
 
