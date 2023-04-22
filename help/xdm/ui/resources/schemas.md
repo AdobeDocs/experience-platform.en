@@ -51,6 +51,18 @@ To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then sel
 
 Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add field groups](#add-field-groups) to the schema (or [add individual fields](#add-individual-fields) from those groups), [edit field display names](#display-names), or [edit existing custom field groups](./field-groups.md#edit) if the schema employs any.
 
+## Display name toggle {#display-name-toggle}
+
+For your convenience, the Schema Editor provides a toggle to change between the original field names and the more human-readable display names. This flexibility allows for the improved field discoverability and editing of your schemas. The toggle is found at the top right of the Schema Editor view.
+
+>[!NOTE]
+>
+>The change from field names to display names is purely cosmetic and does not change any downstream resources. 
+
+![The Schema Editor with [UICONTROL Show display names for fields] highlighted.](../../images/ui/resources/schemas/display-name-toggle.png)
+
+The display names for standard field groups are system generated but can be customized, as described in the [display names](#display-names) section. Display names are reflected across multiple UI views including views for mapping and dataset previews. The default setting is off and shows field names by their original values.
+
 ## Add field groups to a schema {#add-field-groups}
 
 >[!NOTE]
@@ -59,7 +71,7 @@ Once you select a schema, the [!DNL Schema Editor] appears with the schema's str
 
 Once you have opened a schema within the [!DNL Schema Editor], you can add fields to the schema through the use of field groups. To start, select **[!UICONTROL Add]** next to **[!UICONTROL Field groups]** in the left rail.
 
-![](../../images/ui/resources/schemas/add-field-group-button.png)
+![The Schema Editor with the [!UICONTROL Add] from the Field groups section highlighted.](../../images/ui/resources/schemas/add-field-group-button.png)
 
 A dialog appears, showing a list of field groups that you can select for the schema. Since field groups are only compatible with one class, only those field groups that are associated with the schema's selected class will be listed. By default, listed field groups are sorted based on their usage popularity within your organization.
 
@@ -275,8 +287,6 @@ To finish the process, select **[!UICONTROL Save]** to save the schema.
 The schema is now enabled for use in Real-Time Customer Profile. When Platform ingests data into datasets based on this schema, that data will be incorporated into your amalgamated Profile data.
 
 ## Edit display names for schema fields {#display-names}
-
-<!-- add section  -->
 
 Once you have assigned a class and added field groups to a schema, you can edit the display names of any of the schema's fields, regardless of whether those fields have been provided by standard or custom XDM resources.
 
