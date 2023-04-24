@@ -71,7 +71,7 @@ The display names for standard field groups are system generated but can be cust
 
 Once you have opened a schema within the [!DNL Schema Editor], you can add fields to the schema through the use of field groups. To start, select **[!UICONTROL Add]** next to **[!UICONTROL Field groups]** in the left rail.
 
-![The Schema Editor with the [!UICONTROL Add] from the Field groups section highlighted.](../../images/ui/resources/schemas/add-field-group-button.png)
+![The Schema Editor with the [!UICONTROL Add] from the [!UICONTROL Field groups] section highlighted.](../../images/ui/resources/schemas/add-field-group-button.png)
 
 A dialog appears, showing a list of field groups that you can select for the schema. Since field groups are only compatible with one class, only those field groups that are associated with the schema's selected class will be listed. By default, listed field groups are sorted based on their usage popularity within your organization.
 
