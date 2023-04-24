@@ -11,7 +11,10 @@ exl-id: 021171ab-0490-4b27-b350-c37d2a569245
 
 >[!IMPORTANT]
 >
->The [Adobe Target documentation](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/aep-implementation/aep-web-sdk.html?lang=en) includes topics containing information specific to the Platform Web SDK as it relates to Target features and functionality. 
+>Learn how to migrate your Target implementation to Platform Web SDK with the [Migrate Target from at.js 2.x to Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html) tutorial.
+>
+>Learn how to implement Target for the first time with the [Implement Adobe Experience Cloud with Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) tutorial. For information specific to Target, see the tutorial section titled [Set up Target with Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
+
 
 The following features have been tested and are currently supported in [!DNL Target]:
 
@@ -165,9 +168,9 @@ The [!DNL Platform Web SDK] lets you update the profile to the [!DNL Target] pro
 
 To update a [!DNL Target] profile, ensure that the profile data is passed with the following:
 
-* Under `“data {“`
-* Under `“__adobe.target”`
-* Prefix `“profile.”` e.g. as below
+* Under `"data {"`
+* Under `"__adobe.target"`
+* Prefix `"profile."` e.g. as below
 
 |Key|Type|Description|
 | --- | --- | --- |
