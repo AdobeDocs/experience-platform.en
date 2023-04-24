@@ -29,7 +29,7 @@ In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. With
 
 Next, select the **[!UICONTROL Copy JSON]** icon (![Copy Icon](../images/ui/export/icon.png)) from the available options.
 
-![](../images/ui/export/copy-json.png)
+![The Schemas workspace with a schema row and [!UICONTROL Copy to JSON] highlighted.](../images/ui/export/copy-json.png)
 
 This copies a JSON payload to your clipboard, generated based on the schema structure. For the "[!DNL Loyalty Members]" schema shown above, the following JSON is generated:
 
