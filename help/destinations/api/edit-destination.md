@@ -87,7 +87,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the current details of your dataflow including its version, unique identifier (`id`), and other relevant information.
+A successful response returns the current details of your dataflow including its version, unique identifier (`id`), and other relevant information. Relevant for this tutorial are the target connection and base connection IDs highlighted in the response below. 
 
 ADD LINE NUMBERING TO HIGHLIGHT target connection and base connection
 
@@ -159,190 +159,7 @@ ADD LINE NUMBERING TO HIGHLIGHT target connection and base connection
             ]
          },
          "transformations":[
-            {
-               "name":"GeneralTransform",
-               "params":{
-                  "profileSelectors":{
-                     "selectors":[
-                        {
-                           "type":"JSON_PATH",
-                           "value":{
-                              "path":"Email",
-                              "operator":"EXISTS",
-                              "identity":{
-                                 "namespace":"Email"
-                              },
-                              "mapping":{
-                                 "sourceType":"text/x.schema-path",
-                                 "source":"Email",
-                                 "destination":"Email",
-                                 "identity":false,
-                                 "primaryIdentity":false,
-                                 "functionVersion":0,
-                                 "copyModeMapping":false,
-                                 "sourceAttribute":"Email",
-                                 "destinationXdmPath":"Email"
-                              }
-                           }
-                        },
-                        {
-                           "type":"JSON_PATH",
-                           "value":{
-                              "path":"person.name.firstName",
-                              "operator":"EXISTS",
-                              "mapping":{
-                                 "sourceType":"text/x.schema-path",
-                                 "source":"person.name.firstName",
-                                 "destination":"person.name.firstName",
-                                 "identity":false,
-                                 "primaryIdentity":false,
-                                 "functionVersion":0,
-                                 "copyModeMapping":false,
-                                 "sourceAttribute":"person.name.firstName",
-                                 "destinationXdmPath":"person.name.firstName"
-                              }
-                           }
-                        },
-                        {
-                           "type":"JSON_PATH",
-                           "value":{
-                              "path":"person.name.lastName",
-                              "operator":"EXISTS",
-                              "mapping":{
-                                 "sourceType":"text/x.schema-path",
-                                 "source":"person.name.lastName",
-                                 "destination":"person.name.lastName",
-                                 "identity":false,
-                                 "primaryIdentity":false,
-                                 "functionVersion":0,
-                                 "copyModeMapping":false,
-                                 "sourceAttribute":"person.name.lastName",
-                                 "destinationXdmPath":"person.name.lastName"
-                              }
-                           }
-                        },
-                        {
-                           "type":"JSON_PATH",
-                           "value":{
-                              "path":"personalEmail.address",
-                              "operator":"EXISTS",
-                              "mapping":{
-                                 "sourceType":"text/x.schema-path",
-                                 "source":"personalEmail.address",
-                                 "destination":"personalEmail.address",
-                                 "identity":false,
-                                 "primaryIdentity":false,
-                                 "functionVersion":0,
-                                 "copyModeMapping":false,
-                                 "sourceAttribute":"personalEmail.address",
-                                 "destinationXdmPath":"personalEmail.address"
-                              }
-                           }
-                        },
-                        {
-                           "type":"JSON_PATH",
-                           "value":{
-                              "path":"segmentMembership.status",
-                              "operator":"EXISTS",
-                              "mapping":{
-                                 "sourceType":"text/x.schema-path",
-                                 "source":"segmentMembership.status",
-                                 "destination":"segmentMembership.status",
-                                 "identity":false,
-                                 "primaryIdentity":false,
-                                 "functionVersion":0,
-                                 "copyModeMapping":false,
-                                 "sourceAttribute":"segmentMembership.status",
-                                 "destinationXdmPath":"segmentMembership.status"
-                              }
-                           }
-                        }
-                     ],
-                     "mandatoryFields":[
-                        "Email",
-                        "person.name.firstName",
-                        "person.name.lastName"
-                     ],
-                     "primaryFields":[
-                        {
-                           "identityNamespace":"Email",
-                           "fieldType":"IDENTITY"
-                        }
-                     ]
-                  },
-                  "segmentSelectors":{
-                     "selectors":[
-                        {
-                           "type":"PLATFORM_SEGMENT",
-                           "value":{
-                              "id":"9f7d37fd-7039-4454-94ef-2b0cd6c3206a",
-                              "name":"Interested in Mountain Biking",
-                              "filenameTemplate":"%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
-                              "exportMode":"DAILY_FULL_EXPORT",
-                              "schedule":{
-                                 "frequency":"ONCE",
-                                 "startDate":"2021-12-25",
-                                 "startTime":"20:00"
-                              },
-                              "createTime":"1640289901",
-                              "updateTime":"1640289901"
-                           }
-                        },
-                        {
-                           "type":"PLATFORM_SEGMENT",
-                           "value":{
-                              "id":"f52a3785-2e7c-40a7-8137-9be99af7794e",
-                              "name":"Birth year 1970",
-                              "filenameTemplate":"%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
-                              "exportMode":"DAILY_FULL_EXPORT",
-                              "schedule":{
-                                 "frequency":"DAILY",
-                                 "startDate":"2021-12-23",
-                                 "endDate":"2021-12-31",
-                                 "startTime":"20:00"
-                              },
-                              "createTime":"1640289901",
-                              "updateTime":"1640289901"
-                           }
-                        },
-                        {
-                           "type":"PLATFORM_SEGMENT",
-                           "value":{
-                              "id":"6caa79b9-39e0-4c37-892b-5061cdca2377",
-                              "name":"Account Leads",
-                              "filenameTemplate":"%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
-                              "exportMode":"FIRST_FULL_THEN_INCREMENTAL",
-                              "schedule":{
-                                 "frequency":"DAILY",
-                                 "startDate":"2021-12-23",
-                                 "endDate":"2021-12-31",
-                                 "startTime":"20:00"
-                              },
-                              "createTime":"1640289901",
-                              "updateTime":"1640289901"
-                           }
-                        },
-                        {
-                           "type":"PLATFORM_SEGMENT",
-                           "value":{
-                              "id":"4c41c318-9e8c-4a4f-b880-877cdd629fc7",
-                              "name":"Batch export for autumn campaign",
-                              "filenameTemplate":"%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
-                              "exportMode":"FIRST_FULL_THEN_INCREMENTAL",
-                              "schedule":{
-                                 "frequency":"EVERY_6_HOURS",
-                                 "startDate":"2022-01-05",
-                                 "endDate":"2022-12-30",
-                                 "startTime":"20:00"
-                              },
-                              "createTime":"1640289901",
-                              "updateTime":"1640289901"
-                           }
-                        }
-                     ]
-                  }
-               }
-            }
+            "shortened for brevity"
          ]
       }
    ]
@@ -363,6 +180,75 @@ To update components of a target connection, perform a PATCH request to the `/ta
 ```http
 PATCH /flows/{FLOW_ID}
 ```
+
+See below examples of updating various components of destinations.
+
+Add example for streaming destinations
+
+e.g. GAM 360
+
+**Request**
+
+The following request updates your dataflow's name and description.
+
+```shell
+curl -X PATCH \
+    'https://platform.adobe.io/data/foundation/flowservice/targetConnections/b2cb1407-3114-441c-87ea-2c1a3c84d0b0' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
+    -d '[
+  {
+    "op": "replace",
+    "path": "/params",
+    "value": {
+      "bucketName": "newBucketName",
+      "path": "updatedPath"
+    }
+  }
+]'
+```
+
+| Property | Description |
+| --------- | ----------- |
+| `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. |
+| `path` | Defines the part of the flow that is to be updated. |
+| `value` | The new value you want to update your parameter with. |
+
+**Response**
+
+A successful response returns your flow ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your flow ID.
+
+```json
+{
+    "id": "b2cb1407-3114-441c-87ea-2c1a3c84d0b0",
+    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
+}
+```
+
+## Edit base connection components (authentication parameters and other components) {#update-dataflow}
+
+The components of a base connection differ by destination. For example, for Amazon S3 destinations, you can update the secret key and ,.,.,. of your Amazon S3 location. 
+
+To update components of a base connection, perform a PATCH request to the `/targetConnection` endpoint while providing your target connection ID, version, and the new values you want to use.
+
+>[!IMPORTANT]
+>
+>The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the target connection you want to update. The etag value updates with every successful update of a dataflow.
+
+**API format**
+
+```http
+PATCH /flows/{FLOW_ID}
+```
+
+See below examples of updating various components of destinations.
+
+Add example for streaming destinations
+
+e.g. GAM 360
 
 **Request**
 
