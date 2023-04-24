@@ -9,9 +9,11 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 
 ## Destination changelog {#changelog}
 
-With the beta release of the enhanced **[!UICONTROL Custom personalization]** destination connector, you might be seeing two **[!UICONTROL Custom personalization]** cards in the destinations catalog.
+|Release month|Update type|Description|
+|---|---|---|
+|April 2023|Functionality and documentation update| As of April 2023, the **[!UICONTROL Custom personalization]** connection supports [attribute-based personalization](../../ui/activate-edge-personalization-destinations.md#map-attributes) and is generally available to all customers.|
 
-The **[!UICONTROL Custom Personalization With Attributes]** connector is currently in beta and only available to a select number of customers. In addition to the functionality provided by the **[!UICONTROL Custom Personalization]**, the **[!UICONTROL Custom Personalization With Attributes]** connector adds an optional [mapping step](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) to the activation workflow, which allows you to map profile attributes to your custom personalization destination, enabling attribute-based same-page and next-page personalization.
+{style="table-layout:auto"}
 
 >[!IMPORTANT]
 >

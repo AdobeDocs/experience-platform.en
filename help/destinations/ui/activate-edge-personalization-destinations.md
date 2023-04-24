@@ -1,8 +1,8 @@
 ---
-keywords: activate edge personalization destinations;activate data;profile request destinations
 title: Activate audience data to edge personalization destinations
+description: Learn how to activate audience data from Adobe Experience Platform to edge personalization destinations for same-page and next-page personalization use-cases.
 type: Tutorial
-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to edge personalization destinations.
+
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
 ---
 
@@ -10,7 +10,7 @@ exl-id: cd7132eb-4047-4faa-a224-47366846cb56
 
 ## Overview {#overview}
 
-Adobe Experience Platform uses [edge segmentation](../../segmentation/ui/edge-segmentation.md) to enable customers to create and target audience segments at high scale, in real time. This capability helps you configure same-page and next-page personalization use cases.
+Adobe Experience Platform uses [edge segmentation](../../segmentation/ui/edge-segmentation.md) together with edge destinations to enable customers to create and target audience segments at high scale, in real time. This capability helps you configure same-page and next-page personalization use cases.
 
 Examples of edge destinations are the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and the [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) connections.
 
@@ -45,22 +45,11 @@ When configuring the datastream, under **[!UICONTROL Adobe Experience Platform]*
 
 ![Datastream configuration](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-For more details on how to set up a datastream, follow the instructions described in the [Platform Web SDK documentation](../../edge/datastreams/overview.md).
-
-### Create a destination connection {#connect-destination}
-
-After you have configured your datastream, you can start configuring your personalization destination.
-
-Follow the [destination connection creation tutorial](../ui/connect-destination.md) for detailed instructions on how to create a new destination connection.
-
-Depending on the destination you are configuring, refer to the following articles for destination-specific prerequisites and related information:
-
-* [Adobe Target connection](../catalog/personalization/adobe-target-connection.md)
-* [Custom personalization connection](../catalog/personalization/custom-personalization.md)
+For more details on how to set up a datastream, follow the instructions described in the [Platform Web SDK documentation](../../edge/datastreams/configure.md#aep).
 
 ### Create an [!DNL Active-On-Edge] merge policy {#create-merge-policy}
 
-After you have created your destination connection, you must create an [!DNL Active-On-Edge] merge policy.
+After you have created your destination connection, you must create an [!DNL Active-On-Edge] merge policy. The [!DNL Active-On-Edge] merge policy ensures that segments are constantly evaluated [on the edge](../../segmentation/ui/edge-segmentation.md) and are available for real-time and next-page personalization use case.
 
 Currently, edge destinations only support the activation of segments that use the [Active-on-Edge Merge Policy](../../segmentation/ui/segment-builder.md#merge-policies) set as default.
 
@@ -72,8 +61,20 @@ After you have created the [!DNL Active-On-Edge] merge policy, you must create a
 
 Follow the [segment builder](../../segmentation/ui/segment-builder.md) guide to create your new segment, and make sure to [assign it](../../segmentation/ui/segment-builder.md#merge-policies) the [!DNL Active-On-Edge] merge policy that you created in step 3.
 
+### Create a destination connection {#connect-destination}
+
+After you have configured your datastream, you can start configuring your personalization destination.
+
+Follow the [destination connection creation tutorial](../ui/connect-destination.md) for detailed instructions on how to create a new destination connection.
+
+Depending on the destination you are configuring, refer to the following articles for destination-specific prerequisites and related information:
+
+* [Adobe Target connection](../catalog/personalization/adobe-target-connection.md#parameters)
+* [Custom personalization connection](../catalog/personalization/custom-personalization.md##parameters)
 
 ## Select your destination {#select-destination}
+
+After you completed the prerequisites, you can now select the edge personalization destination to use for same-page and next-page personalization.
 
 1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
     

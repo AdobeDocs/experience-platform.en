@@ -8,12 +8,11 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 
 ## Destination changelog {#changelog}
 
->[!IMPORTANT]
->
->With the beta release of the enhanced Adobe Target V2 destination connector, you might be seeing two Adobe Target cards in the destinations catalog.
->The Adobe Target V2 destination connector is currently in beta and only available to a select number of customers. In addition to the functionality provided by the Adobe V1 card, the Target V2 connector adds a [mapping step](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) to the activation workflow, which allows you to map profile attributes to Adobe Target, enabling attribute-based same-page and next-page personalization.
+|Release month|Update type|Description|
+|---|---|---|
+|April 2023|Functionality and documentation update| As of April 2023, the **[!UICONTROL Adobe Target]** connection supports [attribute-based personalization](../../ui/activate-edge-personalization-destinations.md#map-attributes) and is generally available to all customers.|
 
-![Image of the two Adobe Target destination cards in a side-by-side view.](/help/destinations/assets/catalog/personalization/adobe-target-connection/adobe-target-side-by-side-view.png)
+{style="table-layout:auto"}
 
 ## Overview {#overview}
 
