@@ -53,7 +53,7 @@ Once you select a schema, the [!DNL Schema Editor] appears with the schema's str
 
 ## Display name toggle {#display-name-toggle}
 
-For your convenience, the Schema Editor provides a toggle to change between the original field names and the more human-readable display names. This flexibility allows for the improved field discoverability and editing of your schemas. The toggle is found at the top right of the Schema Editor view.
+For your convenience, the Schema Editor provides a toggle to change between the original field names and the more human-readable display names. This flexibility allows for improved field discoverability and editing of your schemas. The toggle is found at the top right of the Schema Editor view.
 
 >[!NOTE]
 >
@@ -61,7 +61,7 @@ For your convenience, the Schema Editor provides a toggle to change between the 
 
 ![The Schema Editor with [!UICONTROL Show display names for fields] highlighted.](../../images/ui/resources/schemas/display-name-toggle.png)
 
-The display names for standard field groups are system generated but can be customized, as described in the [display names](#display-names) section. Display names are reflected across multiple UI views including views for mapping and dataset previews. The default setting is off and shows field names by their original values.
+The display names for standard field groups are system generated but can be customized, as described in the [display names](#display-names) section. Display names are reflected across multiple UI views, including mapping and dataset previews. The default setting is off, and shows field names by their original values.
 
 ## Add field groups to a schema {#add-field-groups}
 

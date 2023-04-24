@@ -21,7 +21,7 @@ While the Platform UI allows you export XDM resources, you must use the Schema R
 
 ## Generate an export payload {#generate-export-payload}
 
-In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. Within the [!UICONTROL Schemas] workspace, select the row for the schema that you want to export to open the schema details in the right sidebar.
+In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. Within the [!UICONTROL Schemas] workspace, select the row for the schema you want to export to display schema details in the right sidebar.
 
 >[!TIP]
 >
