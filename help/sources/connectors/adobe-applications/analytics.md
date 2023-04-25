@@ -48,7 +48,7 @@ The expected latency for Analytics Data on Platform is outlined in the table bel
 | New data to Data Lake | < 90 minutes |
 | Backfill of less than 10 billion events | < 4 weeks |
 
-Analytics backfills default to 13 months. The limit of 10 billion events mentioned in the table above is strictly with respect to expected latency. 
+The Analytics backfill for production sandboxes defaults to 13 months. For Analytics data in non-production sandboxes, backfill is set to three months. The limit of 10 billion events mentioned in the table above is strictly with respect to expected latency. 
 
 When you create an Analytics source dataflow in a production sandbox, two dataflows are created:
 
