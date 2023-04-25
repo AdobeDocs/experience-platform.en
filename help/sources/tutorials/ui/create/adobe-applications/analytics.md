@@ -26,6 +26,13 @@ It is important to understand the following key terms used throughout this docum
 
 ## Create a source connection with Adobe Analytics
 
+>[!NOTE]
+>
+>When you create an Analytics source dataflow in a production sandbox, two dataflows are created:
+>
+>* A dataflow that does a 13-month backfill of historical report suite data into data lake. This dataflow ends when the backfill is complete.
+>* A dataflow flow which sends live data to data lake and to [!DNL Real-Time Customer Profile]. This dataflow runs continuously.
+
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. You can also use the search bar to narrow down the displayed sources.
