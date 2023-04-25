@@ -14,7 +14,7 @@ Compared to [!DNL Mailchimp Tags] which you would use for internal classificatio
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) endpoint. You can **add new contacts** or **update the information of existing [!DNL Mailchimp] contacts**, then **add or remove them from their desired groups** within an existing [!DNL Mailchimp] audience after activating them within a new segment. [!DNL Mailchimp Interest Groups] uses the selected segment names from Platform as the tag names within [!DNL Mailchimp].
 
-[!DNL Mailchimp Interest Group] uses OAuth 2 with Authorization Code to communicate with the [!DNL Account Engagement] API. Instructions to authenticate to your [!DNL Mailchimp Interest Categories] instance are further below, in the [Authenticate to destination](#authenticate) section.
+[!DNL Mailchimp Interest Group] uses OAuth 2 with Authorization Code to communicate with the [!DNL Mailchimp] API. Instructions to authenticate to your [!DNL Mailchimp Interest Categories] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
