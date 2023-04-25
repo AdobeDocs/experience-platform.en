@@ -1,6 +1,6 @@
 ---
 title: Configure a datastream
-description: Connect your client-side Experience Platform SDK integration with Adobe products and third-party destinations.
+description: Learn how to connect your client-side Web SDK integration with other Adobe products and third-party destinations.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
 ---
 # Configure a datastream
@@ -13,7 +13,7 @@ You can create and manage datastreams in the Data Collection UI or Experience Pl
 
 ![Datastreams tab in the Data Collection UI](../assets/datastreams/configure/datastreams-tab.png)
 
-The [!UICONTROL Datastreams] tab displays a list of existing datastreams, including their friendly name, ID, and last modified date. Select the name of a datastream to [view its details and configure services](#view-details).
+The **[!UICONTROL Datastreams]** tab displays a list of existing datastreams, including their friendly name, ID, and last modified date. Select the name of a datastream to [view its details and configure services](#view-details).
 
 Select the "more" icon (**...**) for a particular datastream to reveal more options. Select **[!UICONTROL Edit]** to update the [basic configuration](#configure) for the datastream, or select **[!UICONTROL Delete]** to remove the datastream.
 
