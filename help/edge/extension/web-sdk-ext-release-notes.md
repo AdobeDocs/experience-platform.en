@@ -13,6 +13,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 **New features**
 
 * Added support for client-side configuration overrides.
+* Add deprecation notice to sendEvent datasetId option.
 
 **Fixes and improvements**
 
