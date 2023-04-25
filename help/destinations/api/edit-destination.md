@@ -1,17 +1,16 @@
 ---
 solution: Experience Platform
-title: Edit destination using the Flow Service API
+title: Edit destination connections using the Flow Service API
 type: Tutorial
-description: Learn how to how to edit various components of a destination using the Flow Service API.
-exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
+description: Learn how to how to edit various components of a destination connection using the Flow Service API.
 ---
-# Edit destination using the Flow Service API
+# Edit destination connections using the Flow Service API
 
-This tutorial covers the steps for editing a destination. Learn how to update authentication credentials, export location, and more using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). For information on editing destination dataflows using the Experience Platform UI, read [Edit activation flows](/help/destinations/ui/edit-activation.md).
+This tutorial covers the steps for editing various components of a destination connection. Learn how to update authentication credentials, export location, and more by using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
-> The edit operations described on this page are currently only supported through the Flow Service API.
+> The edit operations described in this tutorial are currently only supported through the Flow Service API.
 
 ## Getting started {#get-started}
 
@@ -54,13 +53,15 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ## Look up dataflow details {#look-up-dataflow-details}
 
-The first step in editing your destination is to retrieve dataflow details using your flow ID. You can view the current details of an existing dataflow by making a GET request to the `/flows` endpoint.
+The first step in editing your destination connection is to retrieve dataflow details using your flow ID. You can view the current details of an existing dataflow by making a GET request to the `/flows` endpoint.
 
 >[!TIP]
 >
->You can use the Experience Platform UI to get the desired dataflow ID to a destination. Go to Destinations > Browse, select the desired destination dataflow and find the destination ID in the right rail.
+>You can use the Experience Platform UI to get the desired dataflow ID of a destination. Go to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, select the desired destination dataflow and find the destination ID in the right rail. The destination ID is the value that you will use as flow ID in the next step.
 >
 > ![Get destination ID using the Experience Platform UI](/help/destinations/assets/api/edit-destination/get-destination-id.png)
+
+>[!BEGINSHADEBOX]
 
 **API format**
 
@@ -87,11 +88,9 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the current details of your dataflow including its version, unique identifier (`id`), and other relevant information. Relevant for this tutorial are the target connection and base connection IDs highlighted in the response below. 
+A successful response returns the current details of your dataflow including its version, unique identifier (`id`), and other relevant information. Most relevant for this tutorial are the target connection and base connection IDs highlighted in the response below. You will use these IDs in the next sections to update various components of the destination connection.
 
-ADD LINE NUMBERING TO HIGHLIGHT target connection and base connection
-
-```json
+```json {line-numbers="true" start-line="1" highlight="27,38"}
 {
    "items":[
       {
@@ -165,31 +164,40 @@ ADD LINE NUMBERING TO HIGHLIGHT target connection and base connection
    ]
 ```
 
-## Edit target connection components (storage location and other components) {#update-dataflow}
+>[!ENDSHADEBOX]
 
-The components of a target connection differ by destination. For example, for Amazon S3 destinations, you can update the bucket and path where files are exported. 
+## Edit target connection components (storage location and other components) {#patch-target-connection}
 
-To update components of a target connection, perform a PATCH request to the `/targetConnection` endpoint while providing your target connection ID, version, and the new values you want to use.
+The components of a target connection differ by destination. For example, for Amazon S3 destinations, you can update the bucket and path where files are exported. For Pinterest destinations, you can update your Pinterest Advertiser ID and for Google Customer Match you can update your Pinterest Account ID.
+
+To update components of a target connection, perform a PATCH request to the `/targetConnections` endpoint while providing your target connection ID, version, and the new values you want to use. Remember, you got your target connection ID in the previous step, when you inspected an existing dataflow to your desired destination.
 
 >[!IMPORTANT]
 >
 >The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the target connection you want to update. The etag value updates with every successful update of a dataflow.
 
+Below are a few examples of updating parameters in the target connection spec for different types of destinations. But the general rule to update parameters for any destination is as follows: 
+
+Get the dataflow ID of the connection > obtain the target connection ID > PATCH the target connection with updated values for the desired parameters.
+
+>[!BEGINSHADEBOX]
+
 **API format**
 
 ```http
-PATCH /flows/{FLOW_ID}
+PATCH /targetConnections/{TARGET_CONNECTION_ID}
 ```
 
-See below examples of updating various components of destinations.
+>[!ENDSHADEBOX]
 
-Add example for streaming destinations
 
-e.g. GAM 360
+>[!BEGINTABS]
+
+>[!TAB Amazon S3]
 
 **Request**
 
-The following request updates your dataflow's name and description.
+The following request updates the `bucketName` and `path` parameters of an [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destination connection.
 
 ```shell
 curl -X PATCH \
@@ -219,7 +227,7 @@ curl -X PATCH \
 
 **Response**
 
-A successful response returns your flow ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your flow ID.
+A successful response returns your target connection ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your target connection ID.
 
 ```json
 {
@@ -228,31 +236,53 @@ A successful response returns your flow ID and an updated etag. You can verify t
 }
 ```
 
-## Edit base connection components (authentication parameters and other components) {#update-dataflow}
-
-The components of a base connection differ by destination. For example, for Amazon S3 destinations, you can update the secret key and ,.,.,. of your Amazon S3 location. 
-
-To update components of a base connection, perform a PATCH request to the `/targetConnection` endpoint while providing your target connection ID, version, and the new values you want to use.
-
->[!IMPORTANT]
->
->The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the target connection you want to update. The etag value updates with every successful update of a dataflow.
-
-**API format**
-
-```http
-PATCH /flows/{FLOW_ID}
-```
-
-See below examples of updating various components of destinations.
-
-Add example for streaming destinations
-
-e.g. GAM 360
+>[!TAB Google Ad Manager 360]
 
 **Request**
 
-The following request updates your dataflow's name and description.
+The following request updates the parameters of a [Google Ad Manager 360 destination](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) connection to add the new append segment ID to segment name field.
+
+```shell
+curl -X PATCH \
+    'https://platform.adobe.io/data/foundation/flowservice/targetConnections/b2cb1407-3114-441c-87ea-2c1a3c84d0b0' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
+    -d '[
+  {
+    "op": "add",
+    "path": "/params",
+    "value": {
+      "appendSegmentId": true
+    }
+  }
+]'
+```
+
+| Property | Description |
+| --------- | ----------- |
+| `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. |
+| `path` | Defines the part of the flow that is to be updated. |
+| `value` | The new value you want to update your parameter with. |
+
+**Response**
+
+A successful response returns your target connection ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your target connection ID.
+
+```json
+{
+    "id": "b2cb1407-3114-441c-87ea-2c1a3c84d0b0",
+    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
+}
+```
+
+>[!TAB Pinterest]
+
+**Request**
+
+The following request updates the `advertiserId` parameter of a [Pinterest destination connection](/help/destinations/catalog/advertising/pinterest.md#parameters).
 
 ```shell
 curl -X PATCH \
@@ -267,8 +297,7 @@ curl -X PATCH \
     "op": "replace",
     "path": "/params",
     "value": {
-      "bucketName": "newBucketName",
-      "path": "updatedPath"
+      "advertiser_id": "1234567890"
     }
   }
 ]'
@@ -282,7 +311,7 @@ curl -X PATCH \
 
 **Response**
 
-A successful response returns your flow ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your flow ID.
+A successful response returns your target connection ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your target connection ID.
 
 ```json
 {
@@ -291,466 +320,118 @@ A successful response returns your flow ID and an updated etag. You can verify t
 }
 ```
 
-## Enable or disable dataflow {#enable-disable-dataflow}
+>[!ENDTABS]
 
-When enabled, a dataflow exports profiles to the destination. Dataflows are enabled by default, but can be disabled to pause the profile exports.
+## Edit base connection components (authentication parameters and other components) {#patch-base-connection}
 
-You can enable or disable an existing destination dataflow by making a POST request to the [!DNL Flow Service] API and providing state that you want to update the flow to.
+The components of a base connection differ by destination. For example, for Amazon S3 destinations, you can update the access key and secret key to your Amazon S3 location. 
 
-**API format**
+To update components of a base connection, perform a PATCH request to the `/connections` endpoint while providing your base connection ID, version, and the new values you want to use.
 
-```http
-POST /flows/{FLOW_ID}/action?op=enable or disable
-```
+Remember, you got your base connection ID in a previous step, when you inspected an existing dataflow to your desired destination.
 
-**Request**
+>[!IMPORTANT]
+>
+>The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the target connection you want to update. The etag value updates with every successful update of a dataflow.
 
-The following request updates your dataflow's state to enabled.
+Below are a few examples of updating parameters in the base connection spec for different types of destinations. But the general rule to update parameters for any destination is as follows: 
 
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc/action?op=enable' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-The following request updates your dataflow's state to disabled.
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc/action?op=disable' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns your flow ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your flow ID.
-
-```json
-{
-    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
-    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
-}
-```
-
-## Add a segment to a dataflow {#add-segment}
-
-To add a segment to the destination dataflow, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the segment you want to add. 
+Get the dataflow ID of the connection > obtain the base connection ID > PATCH the base connection with updated values for the desired parameters.
 
 **API format**
 
 ```http
-PATCH /flows/{FLOW_ID}
+PATCH /connections/{BASE_CONNECTION_ID}
 ```
+
+>[!BEGINTABS]
+
+>[!TAB Amazon S3]
 
 **Request**
 
-The following request adds a new segment to an existing destination dataflow.
+The following request updates the `accessId` and `secretKey` parameters of an [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destination connection.
 
 ```shell
 curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
+    'https://platform.adobe.io/data/foundation/flowservice/targetConnections/b2cb1407-3114-441c-87ea-2c1a3c84d0b0' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
-   {
-      "op":"add",
-      "path":"/transformations/0/params/segmentSelectors/selectors/-",
-      "value":{
-         "type":"PLATFORM_SEGMENT",
-         "value":{
-            "id":"2d79d0d8-724f-49fc-a09d-d1dec338c93c",
-            "name":"Winter 2021/2022 campaign",
-            "filenameTemplate":"%DESTINATION_NAME%_%SEGMENT_ID%_%SEGMENT_NAME%_%DATETIME(YYYYMMdd_HHmmss)%_custom-text",
-            "exportMode":"DAILY_FULL_EXPORT",
-            "schedule":{
-               "startDate":"2022-01-05",
-               "frequency":"DAILY",
-               "triggerType": "AFTER_SEGMENT_EVAL",
-               "endDate":"2022-03-10"
-            }
-         }
-      }
-   }
+  {
+    "op": "add",
+    "path": "/auth/params",
+    "value": {
+      "accessId": "exampleAccessId",
+      "secretKey": "exampleSecretKey"
+    }
+  }
 ]'
 ```
 
 | Property | Description |
 | --------- | ----------- |
-| `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. To add a segment to a dataflow, use the `add` operation. |
-| `path` | Defines the part of the flow that is to be updated. When adding a segment to a dataflow, use the path specified in the example. |
+| `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. |
+| `path` | Defines the part of the flow that is to be updated. |
 | `value` | The new value you want to update your parameter with. |
-| `id` | Specify the ID of the segment you are adding to the destination dataflow.  |
-| `name` | **(Optional)**. Specify the name of the segment you are adding to the destination dataflow. Note that this field is not mandatory and you can successfully add a segment to the destination dataflow without providing its name. |
-| `filenameTemplate` | For *batch destinations* only. This field is required only when adding a segment to a dataflow in batch file export destinations like Amazon S3, SFTP, or Azure Blob. <br> This field determines the file name format of the files that are exported to your destination. <br> The following options are available: <br> <ul><li>`%DESTINATION_NAME%`: Mandatory. The exported files contain the destination name.</li><li>`%SEGMENT_ID%`: Mandatory. The exported files contain the ID of the exported segment.</li><li>`%SEGMENT_NAME%`: **(Optional)**. The exported files contain the name of the exported segment.</li><li>`DATETIME(YYYYMMdd_HHmmss)` or `%TIMESTAMP%`: **(Optional)**. Select one of these two options for your files to include the time when they are generated by Experience Platform.</li><li>`custom-text`: **(Optional)**. Replace this placeholder with any custom text that you would like to append at the end of your file names.</li></ul> <br> For more information about configuring file names, refer to the [configure file names](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) section in the batch destinations activation tutorial.  |
-| `exportMode` | For *batch destinations* only. This field is required only when adding a segment to a dataflow in batch file export destinations like Amazon S3, SFTP, or Azure Blob. <br> Mandatory. Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, refer to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. |
-| `startDate` | Select the date when the segment should start exporting profiles to your destination. |
-| `frequency` | For *batch destinations* only. This field is required only when adding a segment to a dataflow in batch file export destinations like Amazon S3, SFTP, or Azure Blob. <br> Mandatory. <br> <ul><li>For the `"DAILY_FULL_EXPORT"` export mode, you can select `ONCE` or `DAILY`.</li><li>For the `"FIRST_FULL_THEN_INCREMENTAL"` export mode, you can select `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul>   |
-| `triggerType` | For *batch destinations* only. This field is required only when selecting the `"DAILY_FULL_EXPORT"` mode in the `frequency` selector. <br> Mandatory. <br> <ul><li>Select `"AFTER_SEGMENT_EVAL"` to have the activation job run immediately after the daily Platform batch segmentation job completes. This ensures that when the activation job runs, the most up-to-date profiles are exported to your destination.</li><li>Select `"SCHEDULED"` to have the activation job run at a fixed time. This ensures that Experience Platform profile data is exported at the same time each day, but the profiles you export may not be the most up-to-date, depending on whether the batch segmentation job has completed before the activation job starts. When selecting this option, you must also add a `startTime` to indicate at which time in UTC the daily exports should occur.</li></ul> |
-| `endDate` | For *batch destinations* only. This field is required only when adding a segment to a dataflow in batch file export destinations like Amazon S3, SFTP, or Azure Blob. <br> Not applicable when selecting `"exportMode":"DAILY_FULL_EXPORT"` and `"frequency":"ONCE"`. <br> Sets the date when segment members stop being exported to the destination. |
-| `startTime` | For *batch destinations* only. This field is required only when adding a segment to a dataflow in batch file export destinations like Amazon S3, SFTP, or Azure Blob. <br> Mandatory. Select the time when files containing members of the segment should be generated and exported to your destination. |
 
 **Response**
 
-A successful response returns your flow ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your flow ID.
+A successful response returns your base connection ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your base connection ID.
 
 ```json
 {
-    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
+    "id": "b2cb1407-3114-441c-87ea-2c1a3c84d0b0",
     "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
 }
 ```
 
-## Remove a segment from a dataflow {#remove-segment}
-
-To remove a segment from an existing destination dataflow, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the index selector of the segment you want to remove. Indexing starts at `0`. For example, the sample request further below removes the first and second segments from the dataflow.
-
-**API format**
-
-```http
-PATCH /flows/{FLOW_ID}
-```
+>[!TAB Azure Blob]
 
 **Request**
 
-The following request removes two segments from an existing destination dataflow.
+The following request updates the parameters of an [Azure Blob destination](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) connection to update the connection string required to connect to an Azure Blob instance.
 
 ```shell
 curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
+    'https://platform.adobe.io/data/foundation/flowservice/targetConnections/b2cb1407-3114-441c-87ea-2c1a3c84d0b0' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
-{
-   "op":"remove",
-   "path":"transformations/0/params/segmentSelectors/selectors/0/",
-   "value":{
-      "type":"PLATFORM_SEGMENT",
-      "value":{
-      }
-   }
-},
-{
-   "op":"remove",
-   "path":"transformations/0/params/segmentSelectors/selectors/1/",
-   "value":{
-      "type":"PLATFORM_SEGMENT",
-      "value":{
-      }
-   }
-}
+  {
+    "op": "add",
+    "path": "/auth/params",
+    "value": {
+      "connectionString": "updatedString"
+    }
+  }
 ]'
 ```
 
 | Property | Description |
 | --------- | ----------- |
-| `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. To remove a segment from a dataflow, use the `remove` operation. |
-| `path` | Specifies which existing segment should be removed from the destination dataflow, based on the index of the segment selector. To retrieve the order of segments in a dataflow, perform a GET call to the `/flows` endpoint and inspect the `transformations.segmentSelectors` property. To delete the first segment in the dataflow, use `"path":"transformations/0/params/segmentSelectors/selectors/0/"`.|
-
+| `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. |
+| `path` | Defines the part of the flow that is to be updated. |
+| `value` | The new value you want to update your parameter with. |
 
 **Response**
 
-A successful response returns your flow ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your flow ID.
+A successful response returns your base connection ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your base connection ID.
 
 ```json
 {
-    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
+    "id": "b2cb1407-3114-441c-87ea-2c1a3c84d0b0",
     "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
 }
 ```
 
-## Update components of a segment in a dataflow {#update-segment}
-
-You can update components of a segment in an existing destination dataflow. For example, you can change the export frequency or you can edit the file name template. To do this, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the index selector of the segment you want to update. Indexing starts at `0`. For example, the request below updates the ninth segment in a dataflow.
-
-**API format**
-
-```http
-PATCH /flows/{FLOW_ID}
-```
-
-**Request**
-
-When updating a segment in an existing destination dataflow, you should first perform a GET operation to retrieve the details of the segment you want to update. Then, provide all the segment information in the payload, not just the fields that you want to update. In the example below, custom text is added at the end of the file name template and the export schedule frequency is updated from 6 hours to 12 hours.
-
-```shell
-curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
-    -d '[
-   {
-      "op":"replace",
-      "path":"/transformations/0/params/segmentSelectors/selectors/8",
-      "value":{
-         "type":"PLATFORM_SEGMENT",
-         "value":{
-            "id":"4c41c318-9e8c-4a4f-b880-877cdd629fc7",
-            "name":"Batch export for autumn campaign",
-            "filenameTemplate":"%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%_custom-text",
-            "exportMode":"FIRST_FULL_THEN_INCREMENTAL",
-            "schedule":{
-               "frequency":"EVERY_12_HOURS",
-               "startDate":"2022-01-05",
-               "endDate":"2022-01-30",
-               "startTime":"20:00"
-            },
-            "createTime":"1640289901",
-            "updateTime":"1640289901"
-         }
-      }
-   }
-]'
-```
-
-For descriptions of the properties in the payload, refer to the section [Add a segment to a dataflow](#add-segment).
-
-
-**Response**
-
-A successful response returns your flow ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your flow ID.
-
-```json
-{
-    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
-    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
-}
-```
-
-See the examples below for more examples of segment components that you can update in a dataflow.
-
-## Update the export mode of a segment from scheduled to after segment evaluation {#update-export-mode}
-
-+++ Click to see an example where a segment export is updated from being activated every day at a specified time to being activated every day after the Platform batch segmentation job completes.
-
-The segment is exported every day at 16:00 UTC.
-
-```json
-
-{
-  "type": "PLATFORM_SEGMENT",
-  "value": {
-    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
-    "name": "12JAN22-AEP-NA-NTC-90D-MW",
-    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
-    "exportMode": "DAILY_FULL_EXPORT"
-    "schedule": {
-      "frequency": "DAILY",
-      "triggerType": "SCHEDULED",
-      "startDate": "2022-01-13",
-      "endDate": "2023-01-13",
-      "startTime":"16:00"
-    },
-    "createTime": "1642041770",
-    "updateTime": "1642615573"
-  }
-}
-
-```
-
-The segment is exported every day after the daily batch segmentation job completes.
-
-```json
-
-{
-  "type": "PLATFORM_SEGMENT",
-  "value": {
-    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
-    "name": "12JAN22-AEP-NA-NTC-90D-MW",
-    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
-    "exportMode": "DAILY_FULL_EXPORT"
-    "schedule": {
-      "frequency": "DAILY",
-      "triggerType": "AFTER_SEGMENT_EVAL",
-      "startDate": "2022-01-13",
-      "endDate": "2023-01-13"
-    },
-    "createTime": "1642041770",
-    "updateTime": "1642615573"
-  }
-}
-
-```
-
-+++
-
-## Update the file name template to include additional fields in the file name {#update-filename-template}
-
-+++ Click to see an example where the file name template is updated to include additional fields in the file name
-
-The exported files contain the destination name and Experience Platform segment ID
-
-```json
-
-{
-  "type": "PLATFORM_SEGMENT",
-  "value": {
-    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
-    "name": "12JAN22-AEP-NA-NTC-90D-MW",
-    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%",
-    "exportMode": "DAILY_FULL_EXPORT"
-    "schedule": {
-      "frequency": "DAILY",
-      "triggerType": "SCHEDULED",
-      "startDate": "2022-01-13",
-      "endDate": "2023-01-13",
-      "startTime":"16:00"
-    },
-    "createTime": "1642041770",
-    "updateTime": "1642615573"
-  }
-}
-
-```
-
-The exported files contain the destination name, Experience Platform segment ID, the date and time when the file was generated by Experience Platform, and custom text appended at the end of the files.
-
-
-```json
-
-{
-  "type": "PLATFORM_SEGMENT",
-  "value": {
-    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
-    "name": "12JAN22-AEP-NA-NTC-90D-MW",
-    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%_%this is custom text%",
-    "exportMode": "DAILY_FULL_EXPORT"
-    "schedule": {
-      "frequency": "DAILY",
-      "triggerType": "SCHEDULED",
-      "startDate": "2022-01-13",
-      "endDate": "2023-01-13",
-      "startTime":"16:00"
-    },
-    "createTime": "1642041770",
-    "updateTime": "1642615573"
-  }
-}
-
-```
-
-+++
-
-## Add a profile attribute to a dataflow {#add-profile-attribute}
-
-To add a profile attribute to the destination dataflow, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the profile attribute you want to add.
-
-**API format**
-
-```http
-PATCH /flows/{FLOW_ID}
-```
-
-**Request**
-
-The following request adds a new profile attribute to an existing destination dataflow.
-
-```shell
-curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
-    -d '[
-    {
-    "op":"add",
-    "path":"/transformations/0/params/profileSelectors/selectors/-",
-    "value":{
-        "type":"JSON_PATH",
-        "value":{
-            "path":"mobilePhone.status"
-        }
-    }
-    }
-]'
-```
-
-| Property | Description |
-| --------- | ----------- |
-| `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. To add a profile attribute to a dataflow, use the `add` operation. |
-| `path` | Defines the part of the flow that is to be updated. When adding a profile attribute to a dataflow, use the path specified in the example. |
-| `value.path` | The value of the profile attribute that you are adding to the dataflow. |
-
-**Response**
-
-A successful response returns your flow ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your flow ID.
-
-```json
-{
-    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
-    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
-}
-```
-
-## Remove a profile attribute from a dataflow {#remove-profile-attribute}
-
-To remove a profile attribute from an existing destination dataflow, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the index selector of the profile attribute you want to remove. Indexing starts at `0`. For example, the sample request further below removes the fifth profile attribute from the dataflow.
-
-
-**API format**
-
-```http
-PATCH /flows/{FLOW_ID}
-```
-
-**Request**
-
-The following request removes a profile attribute from an existing destination dataflow.
-
-```shell
-curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
-    -d '[
-    {
-    "op":"remove",
-    "path":"/transformations/0/params/profileSelectors/selectors/4",
-    "value":{
-        "type":"JSON_PATH",
-        "value":{
-            "path":"mobilePhone.status"
-        }
-    }
-    }
-]'
-```
-
-| Property | Description |
-| --------- | ----------- |
-| `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. To remove a segment from a dataflow, use the `remove` operation. |
-| `path` | Specifies which existing profile attribute should be removed from the destination dataflow, based on the index of the segment selector. To retrieve the order of profile attributes in a dataflow, perform a GET call to the `/flows` endpoint and inspect the `transformations.profileSelectors` property. To delete the first segment in the dataflow, use `"path":"transformations/0/params/segmentSelectors/selectors/0/"`.|
-
-
-**Response**
-
-A successful response returns your flow ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your flow ID.
-
-```json
-{
-    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
-    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
-}
-```
+>[!ENDTABS]
 
 ## API error handling {#api-error-handling}
 
@@ -758,4 +439,4 @@ The API endpoints in this tutorial follow the general Experience Platform API er
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have learned how to update various components of a destination dataflow, like adding or removing segments or profile attributes using [!DNL Flow Service] API. For more information on destinations, see the [destinations overview](../home.md).
+By following this tutorial, you have learned how to update various components of a destination connection using the [!DNL Flow Service] API. For more information on destinations, see the [destinations overview](../home.md).
