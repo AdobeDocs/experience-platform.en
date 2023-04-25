@@ -69,7 +69,7 @@ A successful response returns HTTP status 201 with details of your destination p
 
 ## List destination publish requests {#retrieve-list}
 
-You can retrieve a list of all destinations submitted for publishing for your IMS Organization by making a GET request to the `/authoring/destinations/publish` endpoint.
+You can retrieve a list of all destinations submitted for publishing for your organization by making a GET request to the `/authoring/destinations/publish` endpoint.
 
 **API format**
 
@@ -79,7 +79,7 @@ GET /authoring/destinations/publish
 
 **Request**
 
-The following request retrieves the list of destinations submitted for publishing that you have access to, based on IMS Organization and sandbox configuration.
+The following request retrieves the list of destinations submitted for publishing that you have access to, based on organization and sandbox configuration.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -91,7 +91,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Response**
 
-The following response returns HTTP status 200 with a list of destinations submitted for publishing that you have access to, based on the IMS Organization ID and sandbox name that you used. One `configId` corresponds to the publish request for one destination.
+The following response returns HTTP status 200 with a list of destinations submitted for publishing that you have access to, based on the organization ID and sandbox name that you used. One `configId` corresponds to the publish request for one destination.
 
 ```json
 {

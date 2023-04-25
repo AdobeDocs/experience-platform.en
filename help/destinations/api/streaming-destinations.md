@@ -572,7 +572,7 @@ The returned response should include in the `transformations` parameter the segm
       },
       "7841ba61-23c1-4bb3-a495-00d695fe1e93": {
         "lastQualificationTime": "2020-03-04T23:37:33Z",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },

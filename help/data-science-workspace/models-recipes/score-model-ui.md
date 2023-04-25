@@ -14,7 +14,7 @@ This tutorial demonstrates the steps required to score a Model in the [!DNL Data
 
 ## Getting started
 
-In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 
 This tutorial requires a trained Model. If you do not have a trained Model, follow the [train and evaluate a Model in the UI](./train-evaluate-model-ui.md) tutorial before continuing.
 
