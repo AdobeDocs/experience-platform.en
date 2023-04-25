@@ -1,8 +1,8 @@
 ---
 title: Places View
 description: This guide details information about the Places view in Adobe Experience Platform Assurance.
+exl-id: 23086aae-8894-4350-aa02-7e2faabe000d
 ---
-
 # Places Service view in Assurance
 
 The **[!UICONTROL Places]** view allow you to inspect location entry and exit events on the Adobe Experience Platform Assurance web UI and provides an innovative on-device view. Depending on your business workflows, these handy views provide a convenient interface to display location-specific data points for inspection on the web/client for in-context debugging.

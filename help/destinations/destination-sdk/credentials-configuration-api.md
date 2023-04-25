@@ -134,7 +134,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 ## List credentials configurations {#retrieve-list}
 
-You can retrieve a list of all credentials configurations for your IMS Organization by making a GET request to the `/authoring/credentials` endpoint.
+You can retrieve a list of all credentials configurations for your organization by making a GET request to the `/authoring/credentials` endpoint.
 
 **API format**
 
@@ -145,7 +145,7 @@ GET /authoring/credentials
 
 **Request**
 
-The following request will retrieve the list of credentials configurations that you have access to, based on IMS Organization and sandbox configuration.
+The following request will retrieve the list of credentials configurations that you have access to, based on organization and sandbox configuration.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -157,7 +157,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **Response**
 
-The following response returns HTTP status 200 with a list of credentials configurations that you have access to, based on the IMS Organization ID and sandbox name that you used. One `instanceId` corresponds to the template for one credentials configuration. The response is truncated for brevity.
+The following response returns HTTP status 200 with a list of credentials configurations that you have access to, based on the organization ID and sandbox name that you used. One `instanceId` corresponds to the template for one credentials configuration. The response is truncated for brevity.
 
 ```json
 

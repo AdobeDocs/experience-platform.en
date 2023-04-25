@@ -248,7 +248,7 @@ A successful response returns HTTP status 200 with a list of audiences, with met
                         "crmid": 11400769
                     },
                     "totalProfilesByStatus": {
-                        "existing": 11400769
+                        "realized": 11400769
                     }
                 },
                 "createEpoch": 1653583927,

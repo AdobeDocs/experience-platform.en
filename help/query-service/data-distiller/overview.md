@@ -1,6 +1,7 @@
 ---
 title: Data Distiller Overview
 description: A summary of Data Distiller usage limits for Query Service data in relation to your licensing entitlement.
+exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
 ---
 # Data Distiller overview
 
@@ -43,4 +44,3 @@ A static limit is the usage limit that relates to the functional boundaries of A
     * To generate meaningful insights from your data.
 * **Reporting API Call**: To ensure queries run on aggregated data using the reporting API have enough resources to execute efficiently. This includes queries that enhance existing data models such as those provided by Real-Time Customer Data Platform. The reporting API tracks resource utilization by assigning concurrency slots to each query. A maximum of four reporting API calls are available concurrently. If you access the reporting API through a BI tool and require more concurrency slots, a BI server is required.
 -->
-

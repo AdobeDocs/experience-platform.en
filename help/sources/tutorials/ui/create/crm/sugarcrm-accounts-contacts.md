@@ -1,6 +1,7 @@
 ---
-title: Create a SugarCRM Accounts & Contacts source connection in the UI 
+title: Create a SugarCRM Accounts & Contacts source connection in the UI
 description: Learn how to create a SugarCRM Accounts & Contacts source connection using the Adobe Experience Platform UI.
+exl-id: 45840d7e-4c19-4720-8629-be446347862d
 ---
 # (Beta) Create a [!DNL SugarCRM Accounts & Contacts] source connection in the UI
 

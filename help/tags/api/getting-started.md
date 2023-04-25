@@ -25,7 +25,7 @@ Using Adobe Developer Console, you must generate the following three access cred
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-Your IMS Organization's ID (`{ORG_ID}`) and API key (`{API_KEY}`) can be reused in future API calls after they have been initially generated. However, your access token (`{ACCESS_TOKEN}`) is temporary and must be regenerated every 24 hours.
+Your organization's ID (`{ORG_ID}`) and API key (`{API_KEY}`) can be reused in future API calls after they have been initially generated. However, your access token (`{ACCESS_TOKEN}`) is temporary and must be regenerated every 24 hours.
 
 The steps for generating these values are covered in detail below.
 

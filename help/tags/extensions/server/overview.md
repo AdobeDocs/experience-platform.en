@@ -9,6 +9,13 @@ exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
+
 The following is a list of documentation for sever-side event forwarding extensions. For a list of available client-side extensions, see the [tag extensions reference](../client/overview.md) instead.
 
 >[!NOTE]
