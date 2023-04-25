@@ -1,48 +1,48 @@
 ---
-title: Mailchimp Interest Group
-description: The Mailchimp Interest Group destination allows you to export your account data and activate it within Mailchimp groups to manage contact subscription groups based on their interests and preferences.
+title: Mailchimp Interest Categories
+description: The Mailchimp Interest Categories destination allows you to export your account data and activate it within Mailchimp to manage contact subscription groups based on their interests and preferences.
 ---
-# [!DNL Mailchimp Interest Group] connection
+# [!DNL Mailchimp Interest Categories] connection
 
 [[!DNL Mailchimp]](https://mailchimp.com) *(also known as [!DNL Intuit Mailchimp])* is a popular marketing automation platform and email marketing service used by businesses to manage and talk to contacts *(clients, customers, or other interested parties)* using mailing lists and email marketing campaigns.
 
-[!DNL Mailchimp Interest Group] uses [audiences](https://mailchimp.com/help/getting-started-audience/) and [groups](https://mailchimp.com/help/getting-started-with-groups/). Groups can be used to help organize your contacts within [!DNL Mailchimp] based on their interests and preferences and then broadcast group specific campaign emails.
+[!DNL Mailchimp Interest Categories] uses [audiences](https://mailchimp.com/help/getting-started-audience/) and [groups](https://mailchimp.com/help/getting-started-with-groups/). Groups can be used to help organize your contacts within [!DNL Mailchimp] based on their interests and preferences and then broadcast group specific campaign emails.
 
 <!--
-Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Group] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
+Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Categories] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
 -->
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) endpoint. You can **add new contacts** or **update the information of existing [!DNL Mailchimp] contacts**, then **add or remove them from their desired groups** within an existing [!DNL Mailchimp] audience after activating them within a new segment. [!DNL Mailchimp Interest Groups] uses the selected segment names from Platform as the tag names within [!DNL Mailchimp].
 
-[!DNL Mailchimp Interest Group] uses OAuth 2 with Authorization Code to communicate with the [!DNL Account Engagement] API. Instructions to authenticate to your [!DNL Mailchimp Interest Group] instance are further below, in the [Authenticate to destination](#authenticate) section.
+[!DNL Mailchimp Interest Group] uses OAuth 2 with Authorization Code to communicate with the [!DNL Account Engagement] API. Instructions to authenticate to your [!DNL Mailchimp Interest Categories] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL Mailchimp Interest Groups] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Mailchimp Interest Categories] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
 
 ### Send emails to contacts for marketing campaigns {#use-case-send-emails}
 
-The sales department of a sporting good website wants to broadcast an email based marketing campaign to a list of contacts who have self identified themselves as being interested in soccer. The lists of contacts are segregated as batches in the data export received from the development team of the website and therefore need to be tracked. The team identifies an existing [!DNL Mailchimp] audience and starts building the Experience Platform segment's into which the contacts from each list are added. After sending these segments to [!DNL Mailchimp Interest Groups] if any contacts do not exist in the selected [!DNL Mailchimp] audience they get added to a group having the segment name the contact belongs to. If any contacts already exist in the [!DNL Mailchimp] audience or group then their information is updated. Once the data is sent over to [!DNL Mailchimp Interest Group] the Sales team can select and send the marketing campaign email to the soccer interest group within the [!DNL Mailchimp] audience.
+The sales department of a sporting goods website wants to broadcast an email based marketing campaign to a list of contacts who have self identified themselves as being interested in soccer. The lists of contacts are segregated as batches in the data export received from the development team of the website and therefore need to be tracked. The team identifies an existing [!DNL Mailchimp] audience and starts building the Experience Platform segment's into which the contacts from each list are added. After sending these segments to [!DNL Mailchimp Interest Categories] if any contacts do not exist in the selected [!DNL Mailchimp] audience they get added to a group having the segment name the contact belongs to. If any contacts already exist in the [!DNL Mailchimp] audience or group then their information is updated. Once the data is sent over to [!DNL Mailchimp Interest Categories] the Sales team can select and send the marketing campaign email to the soccer interest group within the [!DNL Mailchimp] audience.
 
 ## Prerequisites {#prerequisites}
 
-Refer to the sections below for any prerequisites that you need to set up in Experience Platform and [!DNL Mailchimp] and for information that you need to gather before working with the [!DNL Mailchimp Interest Group] destination.
+Refer to the sections below for any prerequisites that you need to set up in Experience Platform and [!DNL Mailchimp] and for information that you need to gather before working with the [!DNL Mailchimp Interest Categories] destination.
 
 ### Prerequisites in Experience Platform {#prerequisites-in-experience-platform}
 
-Before activating data to the [!DNL Mailchimp Interest Group] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
+Before activating data to the [!DNL Mailchimp Interest Categories] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
-### Prerequisites for the [!DNL Mailchimp Interest Group] destination {#prerequisites-destination}
+### Prerequisites for the [!DNL Mailchimp Interest Categories] destination {#prerequisites-destination}
 
-Note the following prerequisites in order to export data from Platform to your [!DNL Mailchimp Interest Group] account:
+Note the following prerequisites in order to export data from Platform to your [!DNL Mailchimp] account:
 
 #### You need to have a [!DNL Mailchimp] account {#prerequisites-account}
 
-Before you can create a [!DNL Mailchimp Interest Group] destination, you must first ensure that you have a [!DNL Mailchimp] account. If you do not have one already visit the [[!DNL Mailchimp] signup page](https://login.mailchimp.com/signup/) to register and create your account.
+Before you can create a [!DNL Mailchimp Interest Categories] destination, you must first ensure that you have a [!DNL Mailchimp] account. If you do not have one already visit the [[!DNL Mailchimp] signup page](https://login.mailchimp.com/signup/) to register and create your account.
 
 #### Gather [!DNL Mailchimp] credentials {#gather-credentials}
 
-Note down the items below before you authenticate to the [!DNL Mailchimp Interest Group] destination.
+Note down the items below before you authenticate to the [!DNL Mailchimp Interest Categories] destination.
 
 | Credential | Description |
 | --- | --- |
@@ -79,7 +79,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> For each selected segment in Platform, the corresponding [!DNL Mailchimp Interest Group] segment status gets updated with its segment status from Platform.</li></ul>|
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> For each selected segment in Platform, the corresponding [!DNL Mailchimp Interest Categories] segment status gets updated with its segment status from Platform.</li></ul>|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
@@ -92,29 +92,29 @@ Refer to the table below for information about the destination export type and f
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
-Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, search for [!DNL Mailchimp Interest Group]. Alternatively you can locate it under the **[!UICONTROL Email marketing]** category.
+Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, search for [!DNL Mailchimp Interest Categories]. Alternatively you can locate it under the **[!UICONTROL Email marketing]** category.
 
 ### Authenticate to destination {#authenticate}
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**. You will be redirected to the [!DNL Mailchimp] authorization page.
 
-![Platform UI screenshot showing how to authenticate to Mailchimp.](../../assets/catalog/email-marketing/mailchimp-interest-group/authenticate-destination.png)
+![Platform UI screenshot showing how to authenticate to Mailchimp.](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png)
 
 Enter your [!DNL Mailchimp] account credentials and select [!DNL Log In].
 
-![Platform UI screenshot showing the Mailchimp authorization page.](../../assets/catalog/email-marketing/mailchimp-interest-group/mailchimp-authorization.png)
+![Platform UI screenshot showing the Mailchimp authorization page.](../../assets/catalog/email-marketing/mailchimp-interest-categories/mailchimp-authorization.png)
 
 Next, Select [!UICONTROL Allow] in the subsequent window to give permissions to the **Adobe Experience Platform** app to access your [!DNL Mailchimp] account. *You will need to do this only once*.
 
-![Mailchimp App screenshot confirmation popup to give permissions to the Experience Platform app access to Mailchimp.](../../assets/catalog/email-marketing/mailchimp-interest-group/allow-app.png)
+![Mailchimp App screenshot confirmation popup to give permissions to the Experience Platform app access to Mailchimp.](../../assets/catalog/email-marketing/mailchimp-interest-categories/allow-app.png)
 
-If the details provided are valid, the Platform UI displays the following message along with a **[!UICONTROL Connected]** status with a green check mark: *[!DNL You successfully connected to Mailchimp Interest Group account]*. You can then proceed to the next step.
+If the details provided are valid, the Platform UI displays the following message along with a **[!UICONTROL Connected]** status with a green check mark: *[!DNL You successfully connected to Mailchimp Interest Categories account]*. You can then proceed to the next step.
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/mailchimp-interest-group/destination-details.png)
+![Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/mailchimp-interest-categories/destination-details.png)
 
 | Field | Description |
 | --- | --- |
@@ -142,15 +142,15 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL Mailchimp Interest Group] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination.
+To correctly send your audience data from Adobe Experience Platform to the [!DNL Mailchimp Interest Categories] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination.
 
-To correctly map your XDM fields to the [!DNL Mailchimp TaInterest Group] destination fields, follow the steps below:
+To correctly map your XDM fields to the [!DNL Mailchimp Interest Categories] destination fields, follow the steps below:
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
 1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select attributes]** category and select from the list of attributes populated from the [!DNL Mailchimp] API. *Note any custom attributes that have been added to the selected [!DNL Mailchimp] Audience will also be available.*
 
-    The default mappings available between your XDM profile schema and [!DNL Mailchimp Interest Group] will be as below:
+    The default mappings available between your XDM profile schema and [!DNL Mailchimp Interest Categories] will be as below:
     | Source Field | Target Field | Notes |
     | --- | --- | --- |
     |`IdentityMap: Email`|`Identity: email`| Mandatory: Yes |
@@ -174,7 +174,7 @@ To correctly map your XDM fields to the [!DNL Mailchimp TaInterest Group] destin
     For example, you want to update the value for `country` with the contact's existing address field `addr1`, `city`, `state`, and `zip` values as `132, My Street, Kingston`, `New York`, `New York` and `12401`. To update the `country` you need to pass the existing values with changes *(if any)* and the new value for country. So the values in your dataset should be `132, My Street, Kingston`, `New York`, `New York`, `12401` and `US`. To reiterate if you only pass `country` and do not provide values for `addr1`, `city`, `state`, and `zip` they will be overwritten by `NULL`.
 
     An example with the completed mappings is shown below:
-    ![Platform UI screenshot example showing field mappings.](../../assets/catalog/email-marketing/mailchimp-interest-group/mappings.png)
+    ![Platform UI screenshot example showing field mappings.](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
 
 When you have finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
@@ -184,13 +184,13 @@ To validate that you have correctly set up the destination, follow the steps bel
 
 * Log in to your [[!DNL Mailchimp]](https://login.mailchimp.com/) account. Then navigate to the **[!DNL Audience]** page. Next expand the **[!DNL Manage Contacts]** menu and select **[!DNL Groups]**.
 
-![Mailchimp UI screenshot showing the Audience group page.](../../assets/catalog/email-marketing/mailchimp-interest-group/audience-groups.png)
+![Mailchimp UI screenshot showing the Audience group page.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
 * Select the Group and check if the selected segments are created as categories sharing the segment name from Platform followed by an auto generated suffix. 
 * Contacts whose emails did not exist in the group will be added to the newly created category.
 * For contacts that already exist within the group the attribute field data will be updated. The contact is also added to the newly created category.
 
-![Mailchimp UI screenshot showing the Audience group categories.](../../assets/catalog/email-marketing/mailchimp-interest-group/audience-groups-category.png)
+![Mailchimp UI screenshot showing the Audience group categories.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups-category.png)
 
 ## Data usage and governance {#data-usage-governance}
 
