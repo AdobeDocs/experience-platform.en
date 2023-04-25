@@ -2,7 +2,6 @@
 title: Activate audience data to edge personalization destinations
 description: Learn how to activate audience data from Adobe Experience Platform to edge personalization destinations for same-page and next-page personalization use-cases.
 type: Tutorial
-
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
 ---
 
@@ -34,6 +33,28 @@ Watch the video below for an overview of the end-to-end configuration process.
 >The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, refer to the configuration steps described in the sections below.
 
 >[!VIDEO](https://video.tv.adobe.com/v/340091/)
+
+## Use cases {#use-cases}
+
+Edge personalization destinations enable you to use Adobe personalization solution, such as Adobe Target, or your own personalization partner platforms (for example, [!DNL Optimizely], [!DNL Pega]), as well as proprietary systems (for example, in-house CMS) to power a deeper customer personalization experience. All this while also leveraging Experience Platform Edge Network data collection & segmentation capabilities.
+
+The use cases described below include both site personalization and targeted on-site advertising.
+
+To enable these use cases, customers need a quick, streamlined way of retrieving segment information from Experience Platform and sending this information to their designated systems that they configured as custom personalization connections in the Experience Platform UI.
+
+### Same-page personalization {#same-page}
+
+A user visits a page of your website. The customer can use the current page visit information (for example, referring URL, browser language, embedded product info) to select the next action / decision (for example, personalization), using the [Custom personalization](../catalog/personalization/custom-personalization.md) connection for non-Adobe platforms (for example, [!DNL Pega], [!DNL Optimizely], etc.).
+
+### Next-page personalization {#next-page}
+
+A user visits Page A on your website. Based on this interaction, the user has qualified for a set of segments. The user then clicks on a link that takes them from Page A to Page B. The segments that the user had qualified for during the previous interaction on Page A, together with the profile updates determined by the current website visit, will be used to power the next action / decision (for example, which advertising banner to display to the visitor, or, in case of A/B testing, which version of the page to display).
+
+### Next-session personalization {#next-session}
+
+A user visits several pages on your website. Based on these interactions, the user has qualified for a set of segments. The user then terminates the current browsing session.
+
+The following day, the user returns to the same customer website. The segments they had qualified for during the previous interaction with all the visited website pages, together with the profile updates determined by the current website visit, will be used to select the next action / decision (for example, which advertising banner to display to the visitor, or, in case of A/B testing, which version of the page to display).
 
 ## Prerequisites {#prerequisites}
 
