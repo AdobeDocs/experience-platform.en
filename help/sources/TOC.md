@@ -84,7 +84,8 @@ feature: Sources
     - [Snowflake connector](connectors/databases/snowflake.md)
     - [Teradata Vantage connector](connectors/databases/teradata-vantage.md)
   - eCommerce {#ecommerce}
-    - [Shopify connector](connectors/ecommerce/shopify.md)
+    - [Shopify](connectors/ecommerce/shopify.md)
+    - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
   - Local system {#local-system}
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Marketing automation {#marketing-automation}
@@ -161,6 +162,7 @@ feature: Sources
       - [SQL Server](tutorials/api/create/databases/sql-server.md)
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
+      - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
     - Marketing automation {#marketing-automation}
       - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
       - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -278,6 +280,7 @@ feature: Sources
       - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
+      - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
     - Local system {#local-system}
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Marketing automation {#marketing-automation}
