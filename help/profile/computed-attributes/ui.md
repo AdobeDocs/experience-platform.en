@@ -13,4 +13,52 @@ This document provides a guide on how to create, update, and delete computed att
 This UI guide requires an understanding of the various [!DNL Experience Platform] services involved with managing [!DNL Real-Time Customer Profiles]. Before reading this guide, or working in the UI, please review the documentation for the following services:
 
 - [[!DNL Real-Time Customer Profile] overview](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [Adobe Experience Platform Identity Service](../../identity-service/home.md): Enables Real-Time Customer Profile by bridging identities from disparate data sources being ingested into [!DNL Platform].
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+
+## View computed attributes {#view}
+
+In the Experience Platform UI, select **[!UICONTROL Profiles]** in the left navigation, followed by **[!UICONTROL Computed attributes]** to see a list of the computed attributes available for your organization. This includes information about the computed attribute's name, description, last evaluation date, and last evaluation status.
+
+IMAGE
+
+To select which fields are visible, you can select ![the configure columns icon]() to add or remove which fields you want to be displayed.
+
+IMAGE
+
+| Field | Description |
+| ----- | ----------- |
+| Name | The name of the computed attribute. |
+| Description | The description for the computed attribute. |
+| Evaluation method | ??? |
+| Last evaluated | The date and time the computed attribute was last evaluated. |
+| Last evaluation status | The ??? |
+| Lifecycle status | The ??? | 
+
+Additionally, you can select a computed attribute to see more detailed information about it. For more information on the computed attributes details page, please read the [view a computed attribute's details section](#view-details).
+
+## Create a computed attribute {#create}
+
+To create a new computed attribute, select **[!UICONTROL Create computed attribute]** to enter the new computed attribute workflow.
+
+IMAGE
+
+The **[!UICONTROL Create computed attribute]** page appears. On this page, you can add the details for the computed attribute you want to create.
+
+IMAGE (highlight the details)
+
+After adding the computed attribute details, you can start creating your computed attribute. To create a computed attribute, first select the attribute from the **[!UICONTROL Events]** section.
+
+IMAGE (highlight)
+
+After selecting the attribute to use in the computed attribute definition, you can choose what this value will be compared to.
+
+IMAGE
+
+Now, you can apply a function to the field from the conditional output.
+
+IMAGE
+
+With these steps completed, you can now either choose to save this computed attribute as a draft or to immediately publish it.
+
+IMAGE
