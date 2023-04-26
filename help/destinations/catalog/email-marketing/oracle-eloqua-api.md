@@ -102,6 +102,12 @@ If the details provided are valid, the UI displays a **[!UICONTROL Connected]** 
 
 ### Fill in destination details {#destination-details}
 
+[!CONTEXTUALHELP]
+id="platform_destinations_apioracleeloqua_pod"
+title="Pod"
+abstract="To find your pod number, log into Oracle Eloqua. Note the URL in your browser after you have logged in successfully. "
+additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge base - find out your Pod number"
+
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 ![Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
 
