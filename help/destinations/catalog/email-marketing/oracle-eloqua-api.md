@@ -29,6 +29,8 @@ Refer to the Experience Platform documentation for [Segment Membership Details s
 
 In order to export data from Platform to your [!DNL Oracle Eloqua] account you need to have an [!DNL Oracle Eloqua] account.
 
+Additionally, you need, at a minimum, the "Advanced Users - Marketing permissions" for your [!DNL Oracle Eloqua] instance. Refer to the "Security Groups" section on the [Secured user access](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm) page for guidance. The access is required by the destination to programmatically [determine your base URL](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html) when invoking the [!DNL Oracle Eloqua] API.
+
 #### Gather [!DNL Oracle Eloqua] credentials {#gather-credentials}
 
 Note down the items below before you authenticate to the [!DNL Oracle Eloqua] destination:
