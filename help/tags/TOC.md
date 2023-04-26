@@ -76,6 +76,7 @@ solution: Data Collection
       * [Overview](./extensions/client/product-string/overview.md)
       * [Release notes](./extensions/client/product-string/release-notes.md)    
     * [Adobe Analytics Product String Builder](https://exchange.adobe.com/apps/ec/101461)
+    * [Adobe Analytics via Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
     * Adobe Audience Manager {#audience-manager}
       * [Overview](./extensions/client/audience-manager/overview.md)
     * Adobe Client Data Layer {#client-data-layer}
