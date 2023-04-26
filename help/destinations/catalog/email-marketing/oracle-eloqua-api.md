@@ -38,6 +38,7 @@ Note down the items below before you authenticate to the [!DNL Oracle Eloqua] de
 | `Company Name` | The company name associated with your [!DNL Oracle Eloqua] account. <br>You will later use the `Company Name` and [!DNL Oracle Eloqua] `Username` as a concatenated string to be used as the **[!UICONTROL Username]** when [authenticating to the destination](#authenticate). |
 | `Username` | The username of your [!DNL Oracle Eloqua] account. |
 | `Password` | The password of your [!DNL Oracle Eloqua] account. |
+| `Pod` | [!DNL Oracle Eloqua] supports multiple data centers, each with a unique domain name. [!DNL Oracle Eloqua] refers to these as "pods", there are currently seven in total - p01, p02, p03, p04, p06, p07, and p08. To obtain which POD you are on, login to [!DNL Oracle Eloqua] and note the URL in your browser after you have logged in successfully. For example, if your browser URL is `secure.p01.eloqua.com` your `pod` is `p01`. Refer to the [determining your POD](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua) page for additional guidance.|
 
 Refer to the [Signing in to [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/SigningInToEloqua.htm#Signing) for guidance.
 
@@ -106,6 +107,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+* **[!UICONTROL Pod]**: To obtain which `pod` you are on, login to [!DNL Oracle Eloqua] and note the URL in your browser after you have logged in successfully. For example, if your browser URL is `secure.p01.eloqua.com` the `pod` value you need to select is `p01`. Refer to the [Gather [!DNL Oracle Eloqua] credentials](#gather-credentials) section for additional guidance.
 
 ### Enable alerts {#enable-alerts}
 
