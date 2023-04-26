@@ -8,7 +8,13 @@ exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
 
 >[!IMPORTANT]
 >
->Support for filtering row-level data for a source is currently only available for the [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md) and [[!DNL Snowflake]](../../connectors/databases/snowflake.md) sources.
+>Support for filtering row-level data is currently only available to the following sources:
+>
+>* [Google BigQuery](../../connectors/databases/bigquery.md)
+>* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
+>* [Salesforce](../../connectors/crm/salesforce.md)
+>* [Salesforce Marketing Cloud](../../connectors/marketing-automation/salesforce-marketing-cloud.md)
+>* [Snowflake](../../connectors/databases/snowflake.md)
 
 This tutorial provides steps on how to filter row-level data for a source using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
