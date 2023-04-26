@@ -12,12 +12,12 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 **New features**
 
-* Added support for client-side configuration overrides.
-* Add deprecation notice to sendEvent datasetId option.
+* Added support for datastream configuration overrides.
+* Add deprecation notice to the `datasetId` option on the `sendEvent` command.
 
 **Fixes and improvements**
 
-* Fixed an issue in Safari where scrolling would close the datastream picker.
+* Fixed an issue where scrolling in Safari would close the datastream selector.
 
 ## Version 2.16.1 - April 14, 2023
 

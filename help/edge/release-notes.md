@@ -12,7 +12,9 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 ## Version 2.16.0 - April 25, 2023
 
-* Added support for client-side configuration overrides.
+**New features**
+
+* Added support for datastream configuration overrides.
 
 ## Version 2.15.0 - March 30, 2023
 
