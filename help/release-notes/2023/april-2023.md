@@ -8,8 +8,25 @@ description: The April 2023 release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
+- [Dashboards](#dashboards)
 - [Data Prep](#data-prep)
+- [Experience Data Model](#xdm)
+- [Real-Time Customer Profile](#profile)
 - [Sources](#sources)
+
+## Dashboards {#dashboards}
+
+Adobe Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots. 
+
+**New or updated features** {#dashboards-new-updated-features}
+
+| Feature | Description |
+| --- | --- |
+|User-defined dashboards| You can now **filter historical data** from your widget insights, and use either recent data or a custom analysis period.<br>You can also now **duplicate your existing widgets**. By customizing a duplicate and editing their attributes, you can avoid restarting from the beginning when creating a new, unique widget. |
+
+{style="table-layout:auto"}
+
+For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
 
 ## Data Prep {#data-prep}
 
@@ -25,6 +42,30 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 {style="table-layout:auto"}
 
 For more information on Data Prep, please read the [Data Prep overview](../../data-prep/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| Display names toggle | The Schema Editor now provides a toggle to change between the original field names and the more human-readable display names. This flexibility allows for improved field discoverability and editing of your schemas. The display names for standard field groups are system generated but can also be customized through the UI if required. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).
+
+## Real-Time Customer Profile {#profile}
+
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-Time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+
+**Updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Pseudonymous profile data expiry | Pseudonymous profile data expiry is now generally available! This release will continuously remove stale pseudonymous profiles from your Experience Platform instance once enabled. To learn more about this feature and Pseudonymous Profiles, please read the [Pseudonymous Profile data expiration guide](../../profile/pseudonymous-profiles.md). |
 
 ## Sources {#sources}
 
