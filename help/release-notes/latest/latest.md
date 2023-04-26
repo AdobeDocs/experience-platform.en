@@ -11,6 +11,8 @@ Updates to existing features in Adobe Experience Platform:
 
 - [Dashboards](#dashboards)
 - [Data Prep](#data-prep)
+- [Data Collection](#data-collection)
+- [Destinations](#destinations)
 - [Experience Data Model](#xdm)
 - [Real-Time Customer Profile](#profile)
 - [Sources](#sources)
@@ -43,6 +45,59 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 {style="table-layout:auto"}
 
 For more information on Data Prep, please read the [Data Prep overview](../../data-prep/home.md).
+
+## Data Collection {#data-collection}
+
+Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| IP address obfuscation for datastreams | You can now define partial or full datastream-level IP obfuscation options in the [datastream configuration UI](../../edge/datastreams/configure.md). <br><br>The datastream-level IP obfuscation setting takes precedence over any IP obfuscation configured in Adobe Target and Audience Manager. <br><br>Data sent to Adobe Analytics is not impacted by the datastream-level [!UICONTROL IP Obfuscation] setting. Adobe Analytics currently receives unobfuscated IP addresses. For Analytics to receive obfuscated IP addresses, you must configure IP obfuscation separately, in Adobe Analytics. This behavior will be updated in future releases.<br><br> For more details about IP obfuscation and instructions on how to configure it, see the [datastream configuration documentation](../../edge/datastreams/configure.md#advanced-options). |
+| Datastream configuration overrides | You can now define additional configuration options for datastreams, which you can use to override specific settings, such as event datasets, Target property tokens, ID sync containers, and Analytics report suites. <br><br>Overriding datastream configurations is a two step process. First, you must define your datastream configuration overrides in the datastreams UI. Then, you must send the overrides to the Edge Network via a Web SDK command. |
+
+{style="table-layout:auto"}
+
+## Destinations {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New destinations** {#new-destinations}
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Salesforce Marketing Cloud Account Engagement] connection](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) | Use the Salesforce Marketing Cloud Account Engagement (formerly known as Pardot) destination to capture, track, score and grade leads. Use this destination for B2B use cases involving multiple departments and decision makers which require longer sales and decision cycles. |
+
+{style="table-layout:auto"}
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Functionality | Description |
+| ----------- | ----------- |
+| Dataflow monitoring for [!DNL Custom Personalization] and [!DNL Adobe Commerce] destinations | <p> You can now see activation metrics for the [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Custom Personalization](../../destinations/catalog/personalization/custom-personalization.md) and the [Custom Personalization With Attributes](../../destinations/catalog/personalization/custom-personalization.md) connections. </p> <p>![Adobe Commerce image](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce metrics"){width="100" zoomable="yes"}</p>  See [Monitor dataflows in the Destinations workspace](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) for more details. |
+
+{style="table-layout:auto"}
+
+<!--
+
+| New **[!UICONTROL Append segment ID to segment name]** field for the [!DNL Google Ad Manager] and [!DNL Google Ad Manager 360] destinations | You can now have the segment name in [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) and [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`. |
+| Scheduled audience backfills | <p>For the [!DNL Google Display & Video 360] destination, the activation of audience backfills to the destination is scheduled to occur 24-48 hours after a segment is first mapped to a destination connection. This update is in response to Google's policy to wait 24 hours until ingesting data and will improve match rates between Real-time CDP and [!DNL Google Display & Video 360].</p> <p>Note that this is a backend configuration applicable to this destination only and that is unrelated to any customer-configurable scheduling options in the UI.</p> |
+
+-->
+
+
+**Fixes and enhancements** {#destinations-fixes-and-enhancements}
+
+- We have fixed an issue in the **Identities excluded** reporting metrics for file-based destination exports. Customers were receiving all the exported IDs from the activated export as expected. However, the **Identities excluded** reporting metric in the UI was incorrectly displaying high numbers of excluded identities due to incorrectly counting identities that were never supposed to be exported. (PLAT-149774)
+- We have fixed an issue in the Scheduling step of the activation workflow. For destinations that require a mapping ID, customers were not able to add a mapping ID for segments added to existing destination connections. (PLAT-148808)
+
+<!--
+- We have fixed an issue with the beta SFTP destination where the port number was previously hardcoded to 22. The port is now configurable for this destination. 
+
+-->
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
