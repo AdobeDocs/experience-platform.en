@@ -9,6 +9,7 @@ description: The April 2023 release notes for Adobe Experience Platform.
 Updates to existing features in Adobe Experience Platform:
 
 - [Data Prep](#data-prep)
+- [Real-Time Customer Profile](#profile)
 - [Sources](#sources)
 
 ## Data Prep {#data-prep}
