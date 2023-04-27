@@ -13,7 +13,7 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 
 The following new extension has been released:
 
-* **[!Pinterest Conversions API] extension**: The [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) event forwarding extension allows you to leverage data captured in Adobe Experience Platform Edge Network and send it to [!DNL Pinterest] in the form of server-side events using the [!DNL Pinterest Conversions API].
+* **[!DNL Pinterest Conversions API] extension**: The [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) event forwarding extension allows you to leverage data captured in Adobe Experience Platform Edge Network and send it to [!DNL Pinterest] in the form of server-side events using the [!DNL Pinterest Conversions API].
 
 ## March 29, 2023
 
