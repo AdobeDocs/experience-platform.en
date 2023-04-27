@@ -585,6 +585,10 @@ The following is a list of statistical calculations that are available after usi
 | `mean` | The average value of the analyzed table.  |
 | `stdev` | The standard deviation of the analyzed table. |
 
+#### COMPUTE STATISTICS
+
+
+
 ### BEGIN
 
 The `BEGIN` command, or alternatively the `BEGIN WORK` or `BEGIN TRANSACTION` command, initiates a transaction block. Any statements that are inputted after the begin command will be executed in a single transaction until an explicit COMMIT or ROLLBACK command is given. This command is the same as `START TRANSACTION`.
