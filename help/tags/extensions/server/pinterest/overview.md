@@ -42,7 +42,7 @@ To install the extension, [create an event forwarding property](../../../ui/even
 
 In the left navigation, select **[!UICONTROL Extensions]**. Select **[!UICONTROL Install]** on the card for the [!DNL Pinterest] extension in the **[!UICONTROL Catalog]** tab. 
 
-![Installing the [!DNL Pinterest] extension.](../../../images/extensions/server/pinterest/install.png)
+![Catalog displaying the [!DNL Pinterest] extension with [!UICONTROL Install] highlighted.](../../../images/extensions/server/pinterest/install.png)
 
 ### Configure the [!DNL Pinterest] extension
 
@@ -52,23 +52,25 @@ In the left navigation, select **[!UICONTROL Extensions]**. Select **[!UICONTROL
 
 In the left navigation, select **[!UICONTROL Extensions]**. Select **[!UICONTROL Configure]** on the card for the [!DNL Pinterest] extension in the [!UICONTROL Installed]** tab.
 
-![Configuring the [!DNL Pinterest] extension.](../../../images/extensions/server/pinterest/configure.png)
+![[!DNL Pinterest] extension shown in the [!UICONTROL Install] tab with [!UICONTROL Configure] highlighted.](../../../images/extensions/server/pinterest/configure.png)
 
 On the next screen, input the [!UICONTROL Ads Account Id] and [!UICONTROL Conversion Access Token] that you previously gathered in the [configuration details](#configuration-details) section. When you're finished, select **[!UICONTROL Save]**.
 
-![The [!DNL Pinterest] extension input.](../../../images/extensions/server/pinterest/input.png)
+![The [!DNL Pinterest] [!UICONTROL Configure] screen highlighting the [!UICONTROL Ads Account Id] and [!UICONTROL Conversion Access Token] input fields.](../../../images/extensions/server/pinterest/input.png)
 
 ## Configure an event forwarding rule {#config-rule}
 
 Once all your data elements are set up, you can start creating event forwarding rules that determine when and how your events will be sent to [!DNL Pinterest].
 
-Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Pinterest]**. To send Adobe Experience Edge Network events to [!DNL Pinterest], set the **[!UICONTROL Action Type]** to **[!UICONTROL conversion event].**
+Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Pinterest]**. To send Adobe Experience Edge Network events to [!DNL Pinterest], set the **[!UICONTROL Action Type]** to **[!UICONTROL Send Event].**
 
-![The [!DNL Pinterest] creating a conversion event rule.](../../../images/extensions/server/pinterest/rule.png)
+![The [!DNL Pinterest] [!UICONTROL Send Event] rule creation.](../../../images/extensions/server/pinterest/rule.png)
 
 After selection, additional controls appear to further configure the event. You need to map the [!DNL Pinterest] event properties to the data elements that you previously created. 
 
 ### [!UICONTROL Event Data]
+
+The following event data will be required to create the new rule:
 
 | Field name | Description | Example | 
 | --- | --- | --- | 
@@ -78,7 +80,10 @@ After selection, additional controls appear to further configure the event. You 
 | [!UICONTROL Event ID] | A unique id string that identifies this event and can be used for deduping between events ingested via both the conversion API and Pinterest tracking. Without this, the event's data is likely to be double counted and will report metric inflation. | ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad | 
 | [!UICONTROL Event Properties] |  A JSON object containing custom properties of the event. Select from providing raw JSON or using a simplified set of key-value inputs. | { "event_source_url": "http://site.com" } | 
 
-The event properties that can be configured are:
+![The [!DNL Pinterest] [!UICONTROL Event Data] highlighted in the rule action.](../../../images/extensions/server/pinterest/event-data.png)
+
+The following event properties can be configured:
+
 | Field name | Description |
 | --- | --- |
 | Event Source URL | URL of the web conversion event. |
@@ -94,6 +99,8 @@ The event properties that can be configured are:
 
 ### [!UICONTROL User Data]
 
+The following user data can be entered by are not required fields:
+
 | Field name | Description | Example | 
 | --- | --- | --- | 
 | [!UICONTROL Email] | User email address or a SHA256 hash of the user address email. | ebd543592...f2b7e1 | 
@@ -102,7 +109,10 @@ The event properties that can be configured are:
 | [!UICONTROL Client User Agent] | The user agent string of the user's web browser. | Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion |
 | [!UICONTROL Customer information data] | A JSON object containing other customer information. Select from providing raw JSON or using a simplified set of key-value inputs. | { "ph": "122333445" } |
 
+![The [!DNL Pinterest] [!UICONTROL User Data] highlighted in the rule action.](../../../images/extensions/server/pinterest/user-data.png)
+
 The customer information properties that can be configured are:
+
 | Field name | Description |
 | --- | --- |
 | Phone | User contact number. Only digits are accepted and should be entered with country code, area code, and number. |
@@ -123,6 +133,8 @@ The customer information properties that can be configured are:
 
 ### [!UICONTROL Custom Data]
 
+The following custom data can be entered for the rule:
+
 | Field name | Description |
 | --- | --- |
 | Currency | The ISO-4217 currency code. If this is not provided, [!DNL Pinterest] will default to the advertiser's currency that was set during account creation. |
@@ -133,15 +145,7 @@ The customer information properties that can be configured are:
 | Content IDs | List (array) of products IDs. |
 | Contents | A list (array) of objects containing information about products, such as price and quantity. |
 
-![The [!DNL Pinterest] main fields configuration.](../../../images/extensions/server/pinterest/action-configuration-main-fields.png)
-
-The [!UICONTROL Custom Data] tab allows you to specify and send custom data to [!UICONTROL Pinterest].
-
-![The [!DNL Pinterest] custom data configuration.](../../../images/extensions/server/pinterest/action-configurations-custom-data.png)
-
-The [!UICONTROL Content Data] tab allows you to specify and send content data to [!UICONTROL Pinterest] 
-
-![The [!DNL Pinterest] content data configuration.](../../../images/extensions/server/pinterest/action-configurations-user-data.png)
+![The [!DNL Pinterest] [!UICONTROL Custom Data] highlighted in the rule action.](../../../images/extensions/server/pinterest/custom-data.png)
 
 ## Validate data within [!DNL Pinterest]
 
@@ -149,11 +153,11 @@ Once the event forwarding rule has been created and executed, validate whether t
 
 If the event collection and [!DNL Experience Platform] integration were successful, you will see events within the [!DNL Pinterest] UI. 
 
-![The [!DNL Pinterest] event manager](../../../images/extensions/server/pinterest/pinterest-event-history.png)
+![The [!DNL Pinterest] event manager](../../../images/extensions/server/pinterest/event-history.png)
 
 You can further drill through and view the [!DNL Pinterest] event data distribution.
 
-![The [!DNL Pinterest] data distribution](../../../images/extensions/server/pinterest/pinterest-event-history-distribution.png)
+![The [!DNL Pinterest] data distribution](../../../images/extensions/server/pinterest/event-history-distribution.png)
 
 ## Next steps
 
