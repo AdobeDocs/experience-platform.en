@@ -24,6 +24,7 @@ feature: Web SDK
 * Datastreams {#datastreams}
   * [Overview](./datastreams/overview.md)
   * [Configure a datastream](./datastreams/configure.md)
+  * [Configure datastream overrides](./datastreams/overrides.md)
   * [Data Prep for Data Collection](./datastreams/data-prep.md)
   * Data Enrichment {#data-enrichment}
     * [Weather Data by The Weather Channel](./datastreams/data-enrichment/weather.md)
