@@ -12,7 +12,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 **New features**
 
-* Added support for datastream configuration overrides.
+* Added support for [datastream configuration overrides](../datastreams/overrides.md).
 * Add deprecation notice to the `datasetId` option on the `sendEvent` command.
 
 **Fixes and improvements**

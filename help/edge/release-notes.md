@@ -14,7 +14,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-* Added support for datastream configuration overrides.
+* Added support for [datastream configuration overrides](datastreams/overrides.md).
 
 ## Version 2.15.0 - March 30, 2023
 
