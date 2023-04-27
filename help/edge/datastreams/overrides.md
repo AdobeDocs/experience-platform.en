@@ -1,6 +1,6 @@
 ---
 title: Configure datastream overrides
-description: Learn how to configure datastream overrides in the Data Collection UI and activate them via the Web SDK.
+description: Learn how to configure datastream overrides in the Datastreams UI and activate them via the Web SDK.
 ---
 
 # Configure datastream overrides
@@ -9,11 +9,14 @@ Datastream overrides allow you to define additional configurations for your data
 
 This helps you trigger different datastream behaviors than the default ones, without creating a new datastream or modifying your existing settings.
 
-Datastream configuration override is a two step process. First, you must define your datastream configuration overrides in the Data Collection UI. Then, you must send the overrides to the Edge Network via a Web SDK command.
+Datastream configuration override is a two step process:
+
+1. First, you must define your datastream configuration overrides in the [datastream configuration page](configure.md).
+2. Then, you must send the overrides to the Edge Network either via a Web SDK command, or by using the Web SDK [tag extension](../extension/web-sdk-extension-configuration.md).
 
 This article explains the end-to-end datastream configuration override process for every type of supported override.
 
-## Configure datastream overrides in the Data Collection UI {#configure-overrides}
+## Configure datastream overrides in the Datastreams UI {#configure-overrides}
 
 Datastream configuration overrides allow you to modify the following datastream configurations:
 
@@ -79,6 +82,10 @@ After you've added the desired overrides, save your datastream settings.
 You should now have the ID sync container overrides configured. Now you can [send the overrides to the Edge Network via the Web SDK](#send-overrides).
 
 ## Send the overrides to the Edge Network via the Web SDK {#send-overrides}
+
+>[!NOTE]
+>
+>As an alternative to sending the configuration overrides via Web SDK commands, you can add the configuration overrides to the Web SDK [tag extension](../extension/web-sdk-extension-configuration.md).
 
 After [configuring the datastream overrides](#configure-overrides) in the Data Collection UI, you can now send the overrides to the Edge Network, via the Web SDK.
 
