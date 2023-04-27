@@ -9,7 +9,7 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 
 * **User Attribution**: User activity for Tags and Event Forwarding are now tracked and visible in the Rules and Publishing screens.
 
-* **OAuth JWT Secret**: The OAuth JWT Secret allows customers to use Adobe and Google Service tokens to support server-server interactions in Event Forwarding.
+* **OAuth JWT Secret**: The OAuth JWT Secret allows customers to use Adobe and Google Service tokens to support server-to-server interactions in Event Forwarding.
 
 The following new extension has been released:
 
