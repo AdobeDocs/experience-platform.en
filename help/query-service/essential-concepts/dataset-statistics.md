@@ -4,15 +4,15 @@ description: This document describes how to compute column level statistics on A
 ---
 # Dataset statistics computation
 
-You can now compute column level statistics on Azure Data Lake Storage (ADLS) datasets with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. Previously, this functionality was restricted to data warehouse datasets. These commands extend the `analyze table` command. Full details on the `analyze table` command can be found in the [SQL reference documentation](../sql/syntax.md#analyze-table).
+You can now compute column level statistics on Azure Data Lake Storage (ADLS) datasets with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. Previously, this functionality was restricted to data warehouse datasets. These commands extend the `ANALYZE TABLE` command. Full details on the `ANALYZE TABLE` command can be found in the [SQL reference documentation](../sql/syntax.md#analyze-table).
 
-With the `SHOW STATISTICS <alias_name>` command, you can see the statistics that were computed with the `analyze table` command. Through the combination of these commands you can now compute column statistics on the entire dataset, on a subset of a dataset, on all columns, or a subset of columns.
+With the `SHOW STATISTICS <alias_name>` command, you can see the statistics that were computed with the `ANALYZE TABLE` command. Through the combination of these commands you can now compute column statistics on the entire dataset, on a subset of a dataset, on all columns, or a subset of columns.
 
 This guide helps you to structure your queries so that they can compute the column statistics of an ADLS dataset. Using these commands, you can see the statistics generated in your session through a PSQL client using an SQL query.
 
 ## Compute statistics {#compute-statistics}
 
-Additional constructs have been added to the `analyze table` command. To compute statistics for the entire dataset and for all columns you must use the `ANALYZE TABLE <tableName> COMPUTE STATISTICS` format. 
+Additional constructs have been added to the `ANALYZE TABLE` command. To compute statistics for the entire dataset and for all columns you must use the `ANALYZE TABLE <tableName> COMPUTE STATISTICS` format. 
 
 >[!IMPORTANT]
 >
@@ -34,7 +34,7 @@ ANALYZE TABLE tableName COMPUTE STATISTICS FOR columns (commerce, id, timestamp)
 
 ## Add a timestamp filter condition {#filter-condition}
 
-You can add a timestamp filter condition to focus the analysis of your columns. This can be used to filter out historical data or focus your data analysis on a specific period. The `FILTERCONTEXT` command calculates statistics on subset of the dataset based on the filter condition you provide.
+You can add a timestamp filter condition to focus the analysis of your columns. This can be used to filter out historical data or focus your data analysis on a specific period. The `FILTERCONTEXT` command calculates statistics on a subset of the dataset based on the filter condition you provide.
 
 In the example below, statistics are computed on all columns for the dataset `tableName` where the column timestamp has values between the specified range of `2023-04-01 00:00:00` and `2023-04-05 00:00:00`. 
 
@@ -66,7 +66,7 @@ The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The co
 
 ## Show the statistics {#show-statistics}
 
-The alias name used in the query is available as soon as the analyze table command has been run. The alias name is only valid for this particular session and cannot be used across different PSQL sessions as the computed statistics are not currently persisted. To display the statistics, use the command seen below.
+The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run. The alias name is only valid for this particular session and cannot be used across different PSQL sessions as the computed statistics are not currently persisted. To display the statistics, use the command seen below.
 
 ```sql
 SHOW STATISTICS FOR <alias_name>;
