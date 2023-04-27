@@ -123,7 +123,7 @@ dataset3| table
 
 ## Update or remove data assets from a data container
 
-As the amount of data assets in your IMS Organization (or sandbox) grows, it becomes necessary to update or remove data assets from a data container. Individual assets can be removed from the organization container by referencing the appropriate database and schema name using dot notation. The table and view (`t1` and `v1` respectively) added to `databaseA.schema1` in the first example, are removed using the syntax in the following example.
+As the amount of data assets in your organization (or sandbox) grows, it becomes necessary to update or remove data assets from a data container. Individual assets can be removed from the organization container by referencing the appropriate database and schema name using dot notation. The table and view (`t1` and `v1` respectively) added to `databaseA.schema1` in the first example, are removed using the syntax in the following example.
 
 ```sql
 ALTER TABLE databaseA.schema2.t1 REMOVE SCHEMA databaseA.schema2;
@@ -132,7 +132,7 @@ ALTER VIEW databaseA.schema2.v1 REMOVE SCHEMA databaseA.schema2;
 
 ### Remove data assets
 
-The [DROP TABLE](../sql/syntax.md#drop-table) function only physically removes a data asset from the [!DNL Data Lake] when a single reference to the table exists across all databases in your IMS Organization.
+The [DROP TABLE](../sql/syntax.md#drop-table) function only physically removes a data asset from the [!DNL Data Lake] when a single reference to the table exists across all databases in your organization.
 
 ```sql
 DROP TABLE databaseA.schema2.t1;

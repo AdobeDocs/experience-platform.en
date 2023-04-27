@@ -7,13 +7,13 @@ exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 ---
 # Batch ingestion developer guide
 
-This document provides a comprehensive guide to using [batch ingestion API endpoints](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) in Adobe Experience Platform. For an overview of batch ingestion APIs, including prerequisites and best practices, please begin by reading the [batch ingestion API overview](overview.md).
+This document provides a comprehensive guide to using [batch ingestion API endpoints](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) in Adobe Experience Platform. For an overview of batch ingestion APIs, including prerequisites and best practices, please begin by reading the [batch ingestion API overview](overview.md).
 
 The appendix to this document provides information for [formatting data to be used for ingestion](#data-transformation-for-batch-ingestion), including sample CSV and JSON data files.
 
 ## Getting started
 
-The API endpoints used in this guide is part of the [Data Ingestion API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Data ingestion provides a RESTful API through which you can perform basic CRUD operations against the supported object types.
+The API endpoints used in this guide is part of the [Batch Ingestion API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Batch ingestion is provided through a RESTful API where you can perform basic CRUD operations against the supported object types.
 
 Before continuing, please review the [batch ingestion API overview](overview.md) and the [getting started guide](getting-started.md). 
 
@@ -545,7 +545,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{TENANT_ID}` | This ID is used to ensure that resources you create are namespaced properly and contained within your IMS Organization. | 
+| `{TENANT_ID}` | This ID is used to ensure that resources you create are namespaced properly and contained within your organization. | 
 | `{SCHEMA_ID}` | The ID of the schema you've created. |
 
 ### Create batch

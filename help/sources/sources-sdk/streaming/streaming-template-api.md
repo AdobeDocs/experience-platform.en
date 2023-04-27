@@ -3,6 +3,7 @@ title: Documentation Self-Service Template for Streaming SDK API
 description: Learn how to bring streaming data from a source to Adobe Experience Platform using the Flow Service API.
 hide: true
 hidefromtoc: true
+exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
 ---
 # Create a source connection and dataflow to stream *YOURSOURCE* data using the [!DNL Flow Service] API
 
@@ -49,7 +50,7 @@ The following tutorial walks you through the steps to create a *YOURSOURCE* sour
 
 ### Create a source connection {#source-connection}
 
-To create a source connection for your streaming source, make a POST request to the `/sourceConnections` endpoint of the [!DNL Flow Service] API while providing a name for your connection, the connection specification ID of your source, and the format of your data.
+Create a source connection by making a POST request to the [!DNL Flow Service] API, while providing the connection spec ID of your source, details like name and description, and the format of your data.
 
 **API format**
 
@@ -253,9 +254,6 @@ The last step towards bringing data from *YOURSOURCE* to Platform is to create a
 * [Mapping ID](#mapping)
 
 A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
-
-To schedule an ingestion, you must first set the start time value to epoch time in seconds. Then, you must set the frequency value to one of the five options: `once`, `minute`, `hour`, `day`, or `week`. The interval value designates the period between two consecutive ingestions however, creating a one-time ingestion does not require an interval to be set. For all other frequencies, the interval value must be set to equal or greater than `15`.
-
 
 **API format**
 

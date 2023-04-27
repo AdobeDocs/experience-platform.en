@@ -1,6 +1,7 @@
 ---
-title: Create a SugarCRM Events source connection in the UI 
+title: Create a SugarCRM Events source connection in the UI
 description: Learn how to create a SugarCRM Events source connection using the Adobe Experience Platform UI.
+exl-id: db346ec0-2c57-4b82-8a39-f15d4cd377d4
 ---
 # (Beta) Create a [!DNL SugarCRM Events] source connection in the UI
 

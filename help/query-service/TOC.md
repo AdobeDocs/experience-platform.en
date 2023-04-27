@@ -25,11 +25,12 @@ feature: Queries
         - [Create decile-based derived attributes](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - Use cases {#use-cases}
     - [Abandoned browse](use-cases/abandoned-browse.md)
-    - [Activity analysis with Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
     - [Attribution analysis](use-cases/attribution-analysis.md)
     - [Bot filtering](use-cases/bot-filtering.md)
     - [Create a trended report of events](use-cases/trended-report-of-events.md)
+    - [Customer lifetime value](use-cases/customer-lifetime-value.md)
     - [Decile-based derived attributes](use-cases/deciles-use-case.md)
+    - [Fuzzy match](use-cases/fuzzy-match.md)
     - [List the page views of a user](use-cases/list-visitor-sessions.md)
     - [List visitors by their page views](use-cases/visitors-by-number-of-page-views.md)
     - [Propensity score](use-cases/propensity-score.md)

@@ -5,7 +5,12 @@ title: Data Usage Labels Overview
 description: Learn how data usage labels are used to help enforce data governance compliance in Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 ---
-# Data usage labels overview
+# Data usage labels overview {#overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsageLabels_description"
+>title="Control access to sensitive and protected data"
+>abstract="<h2>Description</h2><p>Control access to specific data attributes and/or segments, allowing you to design flexible workflows for the various personas and teams operating Experience Platform use cases.</p>"
 
 Adobe Experience Platform allows you to apply data usage labels to datasets and fields, categorizing each according to related [data governance policies](../policies/overview.md) and [access control policies](../../access-control/abac/ui/policies.md).
 
@@ -36,6 +41,11 @@ For more information on how automatic enforcement works in Platform, see the ove
 For a reference on how specific Data Export Controls map to data usage labels in [!DNL Platform], please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## Managing data usage labels in [!DNL Experience Platform] {#manage-labels}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsageLabels_instructions"
+>title="Instructions"
+>abstract="<ul><li>Label XDM Fields and Segments to classify the fields and or segments that you want to restrict access to.</li><li>Label Roles, adding labels to a role enables you to define the labels members of this role should have restrictions on.</li><li>Create policies, a policy creates a relationship between the labels on labeled objects such as XDM fields and Segments and the labels on roles. If the labels match, then either a permit or a restrict access can be defined.</li></ul>"
 
 You can manage data usage labels using [!DNL Experience Platform] APIs or the user interface. Refer to the subsections below for details on each.
 

@@ -76,6 +76,7 @@ solution: Data Collection
       * [Overview](./extensions/client/product-string/overview.md)
       * [Release notes](./extensions/client/product-string/release-notes.md)    
     * [Adobe Analytics Product String Builder](https://exchange.adobe.com/apps/ec/101461)
+    * [Adobe Analytics via Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
     * Adobe Audience Manager {#audience-manager}
       * [Overview](./extensions/client/audience-manager/overview.md)
     * Adobe Client Data Layer {#client-data-layer}
@@ -205,9 +206,12 @@ solution: Data Collection
       * [Release notes](./extensions/server/cloud-connector/release-notes.md)
     * [!DNL AWS] {#aws}
       * [Overview](./extensions/server/aws/overview.md)
+    * [!DNL Braze] {#braze}
+      * [Overview](./extensions/server/braze/overview.md)
     * [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)
     * Core {#core}
       * [Overview](./extensions/server/core/overview.md)
+    * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)
     * Google Ads Enhanced Conversions {#google-ads-enhanced-conversions}
       * [Overview](./extensions/server/google-ads-enhanced-conversions/overview.md)
     * [!DNL Mailchimp] Edge {#mailchimp}
@@ -216,6 +220,8 @@ solution: Data Collection
       * [Overview](./extensions/server/meta/overview.md)
     * [!UICONTROL Microsoft Azure] {#azure}
       * [Overview](./extensions/server/azure/overview.md)
+    * [!DNL Mixpanel] {#mixpanel}
+      * [Overview](./extensions/server/mixpanel/overview.md)
     * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
     * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
     * [!DNL Splunk] {#splunk}
