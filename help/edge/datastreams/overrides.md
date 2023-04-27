@@ -1,8 +1,8 @@
 ---
 title: Configure datastream overrides
 description: Learn how to configure datastream overrides in the Datastreams UI and activate them via the Web SDK.
+exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
 ---
-
 # Configure datastream overrides
 
 Datastream overrides allow you to define additional configurations for your datastreams, which get passed to the Edge Network via the Web SDK.
@@ -227,4 +227,3 @@ The examples above generate an [!DNL Edge Network] payload that looks like this:
   }
 }
 ```
-
