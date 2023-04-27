@@ -1,8 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Analytics source connector;Analytics connector;Analytics source;analytics
-solution: Experience Platform
 title: Create an Adobe Analytics Source Connection in the UI
-type: Tutorial
 description: Learn how to create an Adobe Analytics source connection in the UI to bring consumer data into Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 ---
@@ -28,6 +25,13 @@ It is important to understand the following key terms used throughout this docum
 * **Friendly names**: Friendly names are human-provided labels for custom variables in an [!DNL Analytics] implementation. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) for more information on friendly names.
 
 ## Create a source connection with Adobe Analytics
+
+>[!NOTE]
+>
+>When you create an Analytics source dataflow in a production sandbox, two dataflows are created:
+>
+>* A dataflow that does a 13-month backfill of historical report suite data into data lake. This dataflow ends when the backfill is complete.
+>* A dataflow flow which sends live data to data lake and to [!DNL Real-Time Customer Profile]. This dataflow runs continuously.
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
 
@@ -153,18 +157,14 @@ The following documentation provides further resources on understanding Data Pre
 * [Data Prep mapping functions](../../../../../data-prep/functions.md)
 * [Add calculated fields](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### Filtering for [!DNL Profile Service] (Beta) {#filtering-for-profile}
+### Filtering for Real-Time Customer Profile {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
 >title="Create filter rules"
 >abstract="Define row and column-level filtering rules when sending data to Real-Time Customer Profile. Use row-level filtering to apply conditions and dictate which data to **include for Profile ingestion**. Use column-level filtering to select the columns of data that you want to **exclude for Profile ingestion**. Filtering rules do not apply to data sent to data lake."
 
->[!IMPORTANT]
->
->Support for filtering [!DNL Analytics] data is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
-
-Once you have completed mappings for your [!DNL Analytics] report suite data, you can apply filtering rules and conditions to selectively include or exclude data from ingestion to the [!DNL Profile Service]. Support for filtering is only available for [!DNL Analytics] data and data is only filtered prior to entering [!DNL Profile.] All data are ingested into the data lake.
+Once you have completed mappings for your [!DNL Analytics] report suite data, you can apply filtering rules and conditions to selectively include or exclude data from ingestion to the Real-Time Customer Profile. Support for filtering is only available for [!DNL Analytics] data and data is only filtered prior to entering [!DNL Profile.] All data are ingested into the data lake.
 
 #### Row-level filtering
 

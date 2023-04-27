@@ -68,7 +68,7 @@ Underneath is a line graph that shows the number of new audiences that were upda
 
 >[!NOTE]
 >
->A segment is considered qualified if it goes from having no status to realized or if it goes from exited to realized. A segment is considered unqualified if it goes from realized to exited or from existing to exited.
+>A segment is considered qualified if it goes from having no status to realized or if it goes from exited to realized. A segment is considered unqualified if it goes from realized to exited.
 >
 >More information about these statuses can be found in the status table within the [segmentation overview](./overview.md#browse).
 

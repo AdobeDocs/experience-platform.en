@@ -157,7 +157,7 @@ By default, propensity scores are generated for all profiles unless an eligible 
 
 ### Custom events (*optional*) {#custom-events}
 
-If you have additional information in addition to the [standard event fields](../input-output.md#standard-events) used by Customer AI to generate propensity scores, a custom events option is provided. Using this option allows you add additional events that you deem influential which may improve the quality of your model and help to provide more accurate results. If the dataset you selected includes custom events defined in your schema, you can add them to your instance.
+If you have additional information in addition to the [standard event fields](../data-requirements.md#standard-events) used by Customer AI to generate propensity scores, a custom events option is provided. Using this option allows you add additional events that you deem influential which may improve the quality of your model and help to provide more accurate results. If the dataset you selected includes custom events defined in your schema, you can add them to your instance.
 
 >[!NOTE]
 >
@@ -181,7 +181,7 @@ Once complete, select **[!UICONTROL Next]** in the top-right to continue.
 
 ### Custom profile attributes (*optional*)
 
-You can define important Profile dataset fields (with timestamps) in your data in addition to the [standard event fields](../input-output.md#standard-events) used by Customer AI to generate propensity scores. Using this option allows you to add additional profile attributes that you deem influential which may improve the quality of your model and provide more accurate results. Additionally, adding custom profile attributes allows Customer AI to better showcase how particular profiles ended up in a propensity bucket.
+You can define important Profile dataset fields (with timestamps) in your data in addition to the [standard event fields](../data-requirements.md#standard-events) used by Customer AI to generate propensity scores. Using this option allows you to add additional profile attributes that you deem influential which may improve the quality of your model and provide more accurate results. Additionally, adding custom profile attributes allows Customer AI to better showcase how particular profiles ended up in a propensity bucket.
 
 >[!NOTE]
 >

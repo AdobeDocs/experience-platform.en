@@ -314,7 +314,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 ## Retrieve a list of audience templates {#retrieve-list}
 
-You can retrieve a list of all audience templates for your IMS Organization by making a GET request to the `/authoring/audience-templates` endpoint.
+You can retrieve a list of all audience templates for your organization by making a GET request to the `/authoring/audience-templates` endpoint.
 
 **API format**
 
@@ -325,7 +325,7 @@ GET /authoring/audience-templates
 
 **Request**
 
-The following request will retrieve the list of audience templates that you have access to, based on IMS Organization and sandbox configuration.
+The following request will retrieve the list of audience templates that you have access to, based on organization and sandbox configuration.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates \
@@ -337,7 +337,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 **Response**
 
-The following response returns HTTP status 200 with a list of audience metadata templates that you have access to, based on the IMS Organization ID and sandbox name that you used. One `instanceId` corresponds to the template for one destination. The response is truncated for brevity. 
+The following response returns HTTP status 200 with a list of audience metadata templates that you have access to, based on the organization ID and sandbox name that you used. One `instanceId` corresponds to the template for one destination. The response is truncated for brevity. 
 
 ```json
 

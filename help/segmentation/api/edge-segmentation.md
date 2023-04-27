@@ -61,7 +61,7 @@ A segment definition will **not** be enabled for edge segmentation in the follow
 
 ## Retrieve all segments enabled for edge segmentation
 
-You can retrieve a list of all segments that are enabled for edge segmentation within your IMS Organization by making a GET request to the `/segment/definitions` endpoint.
+You can retrieve a list of all segments that are enabled for edge segmentation within your organization by making a GET request to the `/segment/definitions` endpoint.
 
 **API format**
 
@@ -84,7 +84,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns an array of segments in your IMS Organization that are enabled for edge segmentation. More detailed information about the segment definition returned can be found in the [segment definitions endpoint guide](./segment-definitions.md).
+A successful response returns an array of segments in your organization that are enabled for edge segmentation. More detailed information about the segment definition returned can be found in the [segment definitions endpoint guide](./segment-definitions.md).
 
 ```json
 {
@@ -206,6 +206,17 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
+    },
+    "evaluationInfo": {
+        "batch": {
+            "enabled": false
+        },
+        "continuous": {
+            "enabled": false
+        },
+        "synchronous": {
+            "enabled": true
+        }
     }
 }'
 ```

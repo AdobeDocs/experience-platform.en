@@ -5,9 +5,20 @@ title: Manage Privacy Jobs in the Privacy Service UI
 description: Learn how to use the Privacy Service user interface to coordinate and monitor privacy requests across various Experience Cloud applications.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 ---
-# Manage privacy jobs in the Privacy Service UI
+# Manage privacy jobs in the Privacy Service UI {#user-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_requests_description"
+>title="Honor data subject privacy requests"
+>abstract="<h2>Description</h2><p>Adobe Experience Platform Privacy Service allows you to create and manage privacy requests on behalf of customers that want to access or delete their personal data in accordance with legal privacy regulations.</p>"
 
 This document provides steps for creating and managing privacy requests using the [!DNL Privacy Service] user interface.
+
+>[!IMPORTANT]
+>
+>Privacy Service is only meant for data subject and consumer rights requests. Any other usage of Privacy Service for data cleanup or maintenance is not supported or allowed. Adobe has a legal obligation to fulfill them in a timely manner. As such, load-testing on Privacy Service is not allowed as it is a production only environment and creates an unnecessary backlog of valid privacy requests.
+>
+>A hard daily upload limit is now in place to help prevent abuse of the service. Users found to abuse the system will have their access to the service disabled. A subsequent meeting will then be held with them to address their actions and discuss the acceptable use for Privacy Service.
 
 ## Browse the [!DNL Privacy Service] UI dashboard
 
@@ -87,7 +98,12 @@ If a solution has provided any additional data, it is viewable in this dialog. Y
 
 To download the complete job data as a CSV file, select **[!UICONTROL Export to CSV]** at the top-right of the dialog.
 
-## Create a new privacy job request
+## Create a new privacy job request {#create-a-new-privacy-job-request}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_requests_instructions"
+>title="Instructions"
+>abstract="<ul><li>Select <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html#logging-in-from-experience-platform">Requests</a> in the left navigation to open the Privacy Ul, then select <b>Create Request</b>.</li><li>From here you can either use the request builder or upload a JSON file of data subjects.</li><li>If using the request builder, select the job type (access and/or delete) then choose the type of identity you are providing (email, ECID, or AAID) or enter a custom identity namespace. Enter the appropriate identity values for the customers and select <b>Create</b> when finished.</li><li>If uploading a JSON file, select the arrow next to Create Request. From the list of options, select <b>Upload JSON</b> and upload your file. If you don't have a JSON file to upload, select <b>Download Adobe-GDPR-Request.json</b> to download a template that you can populate. Upload the JSON and select <b>Create</b> when finished.</li><li>For more help with this feature, refer to the <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html">Privacy Service user guide</a> on Experience League.</li></ul>"
 
 >[!NOTE]
 >

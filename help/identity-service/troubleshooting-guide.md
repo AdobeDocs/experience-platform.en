@@ -198,7 +198,7 @@ This error message displays when a `graph-type` query parameter is given an inva
 }
 ```
 
-This error message displays when your IMS Organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
+This error message displays when your organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
 
 ### Gateway service token is not valid
 
@@ -258,7 +258,7 @@ When [!DNL Identity Service] persists an identity, the identity's ID and associa
 }
 ```
 
-This error message displays when your IMS Organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
+This error message displays when your organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
 
 ### Internal Server Error
 
@@ -276,7 +276,7 @@ This error displays when an unexpected exception occurs in the execution of a [!
 
 [!DNL Identity Service] ingests identity data from record and time series data that is uploaded to [!DNL Platform] using Batch Ingestion. As batch ingestion is an asynchronous process, you must view the details for a batch to view errors. Errors will accumulate as the batch progresses until the batch is complete.
 
-The following is a list of error messages related to [!DNL Identity Service] you may encounter when using the [Data Ingestion API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
+The following is a list of error messages related to [!DNL Identity Service] you may encounter when using the [Batch Ingestion API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
 
 ### Unknown XDM schema
 
@@ -324,7 +324,7 @@ This error displays when the first 100 rows of a batch presented no identities. 
 }
 ```
 
-This error displays when an ingested record presents an identity whose associated namespace does not exist or is inaccessible by your IMS Organization.
+This error displays when an ingested record presents an identity whose associated namespace does not exist or is inaccessible by your organization.
 
 ### Skipping batch ingestion as IMS Org is not provisioned for Private Identity Graph
 
@@ -336,7 +336,7 @@ This error displays when an ingested record presents an identity whose associate
 }
 ```
 
-When ingesting batch data, this error message displays when your IMS Organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
+When ingesting batch data, this error message displays when your organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
 
 ### Internal Error
 

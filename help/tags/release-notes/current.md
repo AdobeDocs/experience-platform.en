@@ -5,6 +5,20 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 ---
 # Release notes for tags and event forwarding
 
+## March 29, 2023
+
+**Quick Stark Workflows (Beta)**
+
+Access new quick start workflows under "Getting Started" from the Data Collection home screen! The following workflows are now available to customers as a public Beta.
+* **[Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**: Event Forwarding customers can rapidly collect and forward event data, server-side to Meta for ad conversions in just a few simple steps.
+* **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: Customers can rapidly implement the Mobile SDK and validate basic mobile events in just a few simple steps.
+
+New extensions have been released:
+
+* **[!DNL Braze] event forwarding extension**: The [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) event forwarding extension allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL Braze] in the form of server-side events using the [!DNL Braze] User Track APIs.
+* **[Epsilon Events API] event forwarding extension**: The [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) extension allows you to leverage event forwarding to capture event information in the Adobe Experience Platform Edge Network and send it to [!DNL Epsilon] using the [!DNL Epsilon] Event API.
+* **[!DNL Mixpanel] event forwarding extension**: The [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) extension allows you to leverage event forwarding to capture event information in the Adobe Experience Platform Edge Network and send it to [!DNL Mixpanel] using the Track Events API.
+
 ## January 25, 2023
 
 * **New home screen**: The home page for Data Collection UI has been updated to include helpful onboarding information and links to streamline productivity. This includes:

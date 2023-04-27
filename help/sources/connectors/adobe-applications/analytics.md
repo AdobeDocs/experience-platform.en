@@ -44,11 +44,16 @@ The expected latency for Analytics Data on Platform is outlined in the table bel
 | Analytics Data | Expected Latency |
 | -------------- | ---------------- |
 | New data to [!DNL Real-Time Customer Profile] (A4T **not** enabled) | < 2 minutes |
-| New data to [!DNL Real-Time Customer Profile] (A4T **is** enabled) | < 15 minutes |
+| New data to [!DNL Real-Time Customer Profile] (A4T **is** enabled) | up to 30 minutes |
 | New data to Data Lake | < 90 minutes |
 | Backfill of less than 10 billion events | < 4 weeks |
 
-Analytics backfills default to 13 months. The limit of 10 billion events mentioned in the table above is strictly with respect to expected latency.
+The Analytics backfill for production sandboxes defaults to 13 months. For Analytics data in non-production sandboxes, backfill is set to three months. The limit of 10 billion events mentioned in the table above is strictly with respect to expected latency. 
+
+When you create an Analytics source dataflow in a production sandbox, two dataflows are created:
+
+* A dataflow that does a 13-month backfill of historical report suite data into data lake. This dataflow ends when the backfill is complete.
+* A dataflow flow which sends live data to data lake and to [!DNL Real-Time Customer Profile]. This dataflow runs continuously.
 
 >[!NOTE]
 >

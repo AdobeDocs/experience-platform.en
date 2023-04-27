@@ -1,7 +1,8 @@
 ---
 title: Create a Source Connection and Dataflow for Pendo using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Pendo using the Flow Service API.
-badge: "Beta"
+badge: Beta
+exl-id: 12b0295d-4b26-4eb7-a02a-a01d825d2a1e
 ---
 # Create a source connection and dataflow for [!DNL Pendo] using the Flow Service API
 

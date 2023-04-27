@@ -59,9 +59,11 @@ For more information on providing user identity information, see the guide on [i
 
 ## Can I use [!DNL Privacy Service] to clean up data that was accidentally sent to [!DNL Platform]?
 
-Adobe does not support using [!DNL Privacy Service] for clearing out data that was accidentally submitted to a product. [!DNL Privacy Service] is designed to assist you in meeting your obligations for data subject (or consumer) access or delete requests. These requests are time-sensitive and are completed related to applicable privacy law. Submission of requests which are not data-subject/consumer access or delete requests impacts all [!DNL Privacy Service] customers and the ability for [!DNL Privacy Service] to support the appropriate legal timelines.
+Adobe does not support using [!DNL Privacy Service] for clearing out data that was accidentally submitted to a product. [!DNL Privacy Service] is designed to assist you in meeting your obligations for data subject (or consumer) access or delete requests. Any other usage of Privacy Service for data cleanup or maintenance is not supported or allowed. 
 
-Please contact your account manager (CDM) to coordinate and provide a level of effort to remove any PII or data issues.
+Privacy requests are time-sensitive and are completed related to applicable privacy law. the submission of requests which are not data-subject/consumer access or delete requests impacts all [!DNL Privacy Service] customers and the ability for [!DNL Privacy Service] to support the appropriate legal timelines. A hard daily upload limit is now in place to help prevent abuse of the service.
+
+Please contact your Adobe account team to coordinate and provide a level of effort to remove any PII or data issues.
 
 ## How do I get information about the status of my privacy request or job?
 
@@ -99,7 +101,7 @@ The following table outlines some common errors in [!DNL Privacy Service], with 
 | Invalid Namespace | A provided identity namespace for a user ID was invalid. See the section on [standard identity namespaces](./api/appendix.md#standard-namespaces) in the [!DNL Privacy Service] API guide appendix for a list of accepted namespaces. If you are using a custom namespace, ensure you are setting the ID's `type` property to "custom". |
 | Partially Completed | The job completed successfully, but some data was not applicable for the given request and was skipped. |
 | The data is not in the required format. | One or more of the data values for the specified application was incorrectly formatted. Check the job details for more info. |
-| The IMS Org has not been provisioned. | This message occurs when your IMS Org has not been provisioned for [!DNL Privacy Service]. Contact your administrator for more information. |
+| The IMS Org has not been provisioned. | This message occurs when your organization has not been provisioned for [!DNL Privacy Service]. Contact your administrator for more information. |
 | Access and permissions are required. | Access and permissions are required in order to use [!DNL Privacy Service]. Contact your administrator to gain access. |
 | There was a problem uploading and archiving the access data. | When this error occurs, re-upload the access data and try again. |
 | The workload was exceeded for the current document rate limit. | When this error occurs, reduce the submission rate and try again. |

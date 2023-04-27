@@ -10,11 +10,27 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](extension/web-sdk-ext-release-notes.md).
 
-## Version 2.14.0 - January 25, 2023
+## Version 2.16.0 - April 25, 2023
 
 **New features**
 
-* (Beta) Added support for AJO surfaces and propositions.
+* Added support for [datastream configuration overrides](datastreams/overrides.md).
+
+## Version 2.15.0 - March 30, 2023
+
+**New features**
+
+* Added support for [`onBeforeLinkClickSend`](fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) link click callback.
+* Added support for Adobe Journey Optimizer click tracking.
+
+**Fixes and improvements**
+
+* Link collection now includes link name and visitor region.
+* Removed console error for failed URL destinations.
+
+## Version 2.14.0 - January 25, 2023
+
+* (Beta) Added support for Adobe Journey Optimizer surfaces and propositions.
 
 **Fixes and improvements**
 

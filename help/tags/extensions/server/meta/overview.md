@@ -74,6 +74,112 @@ If you are sending different event types from the client and server with no over
 
 When sending shared events, make sure that you are including an event ID and name with every event that you send from both the client and server. When multiple events with the same ID and name are received, [!DNL Meta] automatically employs several strategies to deduplicate them and keep the most relevant data. See the [!DNL Meta] documentation on [deduplication for [!DNL Meta Pixel] and [!DNL Conversions API] events](https://www.facebook.com/business/help/823677331451951?id=1205376682832142) for details on this process.
 
+## Quick start workflow: Meta Conversions API Extension (Beta) {#quick-start}
+
+>[!IMPORTANT]
+>
+>* The quick start feature is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Please contact your Adobe representative for more information.
+>* This feature is for net new implementations and does not currently support auto installing extensions and configurations on existing tags and event forwarding properties. 
+
+The quick start feature helps you get set up with ease and efficiency with the Meta Conversions API and the Meta Pixel extensions. This tool automates multiple steps that are performed in Adobe tags and event forwarding, significantly reducing the set up time.
+
+This feature automatically installs and configures both the Meta Conversions API and the Meta Pixel extensions on a newly auto-generated tags and event forwarding property with the necessary rules and data elements. Additionally, it also auto installs and configures the Experience Platform Web SDK and Datastream. Lastly, the quick start feature auto-publishes the library to the designated URL in a development environment, which enables client side data collection and server side event forwarding in real-time via Event Forwarding and Experience Edge.
+
+The following video provides an introduction to the quick start feature.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3416939?quality=12&learn=on)
+
+### Install quick start feature 
+
+>[!NOTE]
+>
+>This feature is designed to help you get started with an event forwarding implementation. It will not deliver an end to end, fully functional implementation that accommodates all use cases.
+
+This setup auto installs both the Meta Conversions API and the Meta Pixel extensions. This hybrid implementation is recommended by Meta to collect and forward event conversions server side.
+The quick setup feature is designed to help customers get started with an event forwarding implementation and is not intended to deliver an end to end, fully functional implementation that accommodates all use cases.
+
+To install the feature, Select **[!UICONTROL Get Started]** for **[!DNL Send Conversions Data to Meta]** on the Adobe Experience Platform Data Collection **[!UICONTROL Home]** page.
+
+![Data collection home page showing conversions data to meta](../../../images/extensions/server/meta/conversion-data-to-meta.png)
+
+Enter your **[!UICONTROL Domain]**, then select **[!UICONTROL Next]**. This domain will be used as a naming convention for your auto generated Tags and Event Forwarding properties, rules, data elements, datastreams, and so on.
+
+![Welcome screen requesting domain name](../../../images/extensions/server/meta/welcome.png)
+
+In the **[!UICONTROL Initial Setup]** dialog enter your **[!UICONTROL Meta Pixel ID]**, **[!UICONTROL Meta Conversion API Access Token]**, and **[!UICONTROL Data Layer Path]**, then select **[!UICONTROL Next]**.
+
+![Initial setup dialog](../../../images/extensions/server/meta/initial-setup.png)
+
+Allow a few minutes for the initial setup process to complete, then select **[!UICONTROL Next]**.
+
+![Initial setup complete confirmation screen](../../../images/extensions/server/meta/setup-complete.png)
+
+From the **[!UICONTROL Add Code on Your Site]** dialog copy the code provided using the copy ![Copy](../../../images/extensions/server/meta/copy-icon.png) function and paste this into the `<head>` of your source website. Once implemented, select **[!UICONTROL Start Validation]**
+
+![Add code on your site dialog](../../../images/extensions/server/meta/add-code-on-your-site.png)
+
+The [!UICONTROL Validation Results] dialog displays the Meta extension implementation results. Select **[!UICONTROL Next]**. You can also see additional validation results by selecting the **[!UICONTROL Assurance]** link.
+
+![Test results dialog displaying implementation results](../../../images/extensions/server/meta/test-results.png)
+
+The **[!UICONTROL Next Steps]** screen display confirms completion of setup. From here you have the option to optimize your implementation by adding new events, which are shown in the next section.
+
+If you do not want to add additional events, select **[!UICONTROL Close]**.
+
+![Next steps dialog](../../../images/extensions/server/meta/next-steps.png)
+
+#### Adding Additional Events
+
+To add new events, select **[!UICONTROL Edit Your Tags Web Property]**.
+
+![Next steps dialog showing edit your tags web property](../../../images/extensions/server/meta/edit-your-tags-web-property.png)
+
+Select the rule that corresponds to the meta event that you would like to edit. For example, **MetaConversion_AddToCart**.
+
+>[!NOTE]
+>
+>If there is no event, this rule will not run. This is true for all rules, with the **MetaConversion_PageView** rule being the exception.
+
+To add an event select **[!UICONTROL Add]** under the [!UICONTROL Events] heading.
+
+![Tag properties page showing no events](../../../images/extensions/server/meta/edit-rule.png)
+
+Select the [!UICONTROL Event Type]. In this example, we have selected the [!UICONTROL Click] event and configured it to trigger when the **.add-to-cart-button** is selected. Select **[!UICONTROL Keep Changes]**.
+
+![Event configuration screen showing click event](../../../images/extensions/server/meta/event-configuration.png)
+
+The new event has been saved. Select **[!UICONTROL Select a working library]** and select the library that you would like to build to.
+
+![Select a working library drop down](../../../images/extensions/server/meta/working-library.png)
+
+Next select the dropdown beside **[!UICONTROL Save to Library]** and select **[!UICONTROL Save to Library and Build]**. This will publish the change in the library.
+
+![Select save to library and build](../../../images/extensions/server/meta/save-and-build.png)
+
+Repeat these steps for any other meta conversion event you would like to configure.
+
+#### Data Layer Configuration {#configuration}
+
+>[!IMPORTANT]
+>
+>The way you update this global data layer depends on your website architecture. A single page application will be different to a server-side rendering app. There is also the possibility that you will be wholly in charge of creating and updating this data inside the Tags product. In all instances the data layer will need to be updated in between running each of the `MetaConversion_* rules`. If you don't update the data between rules, you may also run into a case where you are sending stale data from the last `MetaConversion_* rule` in the current `MetaConversion_* rule`.
+
+During the configuration, you were asked where your data layer lives. By default, this would be `window.dataLayer.meta`, and inside the `meta` object, your data would be expected as shown below.
+
+![Data layer meta information](../../../images/extensions/server/meta/data-layer-meta.png)
+
+This is important to understand as every `MetaConversion_*` rule uses this data structure to pass the relevant pieces of data to the [!DNL Meta Pixel] extension and to the [!DNL Meta Conversions API]. Refer to the documentation on [standard events](https://developers.facebook.com/docs/meta-pixel/reference#standard-events) for more information on what data different meta events require.
+
+For example, if you wanted to use the `MetaConversion_Subscribe` rule, you would need to update `window.dataLayer.meta.currency`, `window.dataLayer.meta.predicted_ltv`, and `window.dataLayer.meta.value` as per the object properties described in the documentation on [standard events](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
+
+Below is an example of what would need to be run on a website to update the data layer before the rule is executed.
+
+![Update data layer meta information](../../../images/extensions/server/meta/update-data-layer-meta.png)
+
+By default, the `<datalayerpath>.conversionData.eventId` will be randomly generated by the "Generate New Event Id" action on any of the `MetaConversion_* rules`.
+
+For a local reference of how the data layer should look, you can open the custom code editor on the `MetaConversion_DataLayer` data element on your property.
+
 ## Next steps
 
 This guide covered how to send server-side event data to [!DNL Meta] using the [!DNL Meta Conversions API] extension. From here, it is recommended to expand your integration by connecting more [!DNL Pixels] and sharing more events when applicable. Doing either of the following can help further improve your ad performance:

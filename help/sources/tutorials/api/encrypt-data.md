@@ -3,6 +3,7 @@ title: Encrypted Data Ingestion
 description: Adobe Experience Platform allows you to ingest encrypted files through cloud storage batch sources.
 hide: true
 hidefromtoc: true
+exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
 ---
 # Encrypted data ingestion
 
@@ -10,11 +11,15 @@ Adobe Experience Platform allows you to ingest encrypted files through cloud sto
 
 The encrypted data ingestion process is as follows:
 
-1. [Create an encryption key pair using Experience Platform APIs](#create-encryption-key-pair). The encryption key pair consists of a private key and a public key. Once created, you can copy or download the public key, alongside its corresponding public key ID and Expiry Time. During this process, the private key will be stored by Experience Platform in a secure vault. 
+1. [Create an encryption key pair using Experience Platform APIs](#create-encryption-key-pair). The encryption key pair consists of a private key and a public key. Once created, you can copy or download the public key, alongside its corresponding public key ID and Expiry Time. During this process, the private key will be stored by Experience Platform in a secure vault. **NOTE:** The public key in the response is Base64-encoded and must be decrypted prior to using.
 2. Use the public key to encrypt the data file that you want to ingest.
 3. Place your encrypted file in your cloud storage.
 4. Once the encrypted file is ready, [create a source connection and a dataflow for your cloud storage source](#create-a-dataflow-for-encrypted-data). During the flow creation step, you must provide an `encryption` parameter and include your public key ID. 
 5. Experience Platform retrieves the private key from the secure vault to decrypt the data at the time of ingestion.
+
+>[!IMPORTANT]
+>
+>The maximum size of a single encrypted file is 100MB. For example, you can ingested 2GB worth of data in a single dataflow run, however, any individual file in that data cannot exceed 100MB.
 
 This document provides steps on how to generate a encryption key pair to encrypt your data, and ingest that encrypted data to Experience Platform using cloud storage sources.
 
@@ -67,7 +72,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns your public key, public key ID, and the expiry time of your keys. The expiry time automatically sets to 180 days after the date of key generation. Expiry time is currently not configurable.
+A successful response returns your Base64-encoded public key, public key ID, and the expiry time of your keys. The expiry time automatically sets to 180 days after the date of key generation. Expiry time is currently not configurable.
 
 ```json
 {

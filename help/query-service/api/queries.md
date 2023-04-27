@@ -13,7 +13,7 @@ The following sections walk through calls you can make using the `/queries` endp
 
 ### Retrieve a list of queries
 
-You can retrieve a list of all queries for your IMS Organization by making a GET request to the `/queries` endpoint. 
+You can retrieve a list of all queries for your organization by making a GET request to the `/queries` endpoint. 
 
 **API format**
 
@@ -40,7 +40,7 @@ The following is a list of available query parameters for listing queries. All o
 
 **Request**
 
-The following request retrieves the latest query created for your IMS organization.
+The following request retrieves the latest query created for your organization.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
@@ -52,7 +52,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 **Response**
 
-A successful response returns HTTP status 200 with a list of queries for the specified IMS Organization as JSON. The following response returns the latest query created for your IMS organization.
+A successful response returns HTTP status 200 with a list of queries for the specified organization as JSON. The following response returns the latest query created for your organization.
 
 ```json
 {
