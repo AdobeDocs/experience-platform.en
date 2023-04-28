@@ -4,7 +4,7 @@ description: This document describes how to compute column level statistics on A
 ---
 # Dataset statistics computation
 
-You can now compute column level statistics on Azure Data Lake Storage (ADLS) datasets with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. Previously, this functionality was restricted to data warehouse datasets. The SQL commands that compute dataset statistics are an extension of the `ANALYZE TABLE` command. Full details on the `ANALYZE TABLE` command can be found in the [SQL reference documentation](../sql/syntax.md#analyze-table).
+You can now compute column level statistics on [!DNL Azure Data Lake Storage] (ADLS) datasets with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. Previously, this functionality was restricted to data warehouse datasets. The SQL commands that compute dataset statistics are an extension of the `ANALYZE TABLE` command. Full details on the `ANALYZE TABLE` command can be found in the [SQL reference documentation](../sql/syntax.md#analyze-table).
 
 With the `SHOW STATISTICS <alias_name>` command, you can see the statistics that were computed with the `COMPUTE STATISTICS` command. Through the combination of these commands you can now compute column statistics on either the entire dataset, on a subset of a dataset, on all columns, or a subset of columns.
 

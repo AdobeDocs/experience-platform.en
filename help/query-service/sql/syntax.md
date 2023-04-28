@@ -585,6 +585,19 @@ The following is a list of statistical calculations that are available after usi
 | `mean` | The average value of the analyzed table.  |
 | `stdev` | The standard deviation of the analyzed table. |
 
+#### Dataset statistics {#dataset-statistics}
+
+Calculate column level statistics on [!DNL Azure Data Lake Storage] (ADLS) and data warehouse datasets with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. You can now compute column statistics on either the entire dataset, on a subset of a dataset, on all columns, or a subset of columns.
+
+See the [dataset statistics documentation](../essential-concepts/dataset-statistics.md) for more information. 
+
+#### Dataset samples {#dataset-samples}
+
+Adobe Experience Platform Query Service provides sample datasets as part of its approximate query processing capabilities. 
+Data set samples are best used when you do not need an exact answer for an aggregate operation over a dataset. This feature allows you to conduct more efficient exploratory queries on large datasets by issuing an approximate query to return an approximate answer.
+
+Sample datasets are created with uniform random samples from existing [!DNL Azure Data Lake Storage] (ADLS) datasets, using only a percentage of records from the original. The dataset sample feature extends the `ANALYZE TABLE` command with the `TABLESAMPLE` and `SAMPLERATE`. See the [dataset samples documentation](../essential-concepts/dataset-samples.md) for more information. 
+
 ### BEGIN
 
 The `BEGIN` command, or alternatively the `BEGIN WORK` or `BEGIN TRANSACTION` command, initiates a transaction block. Any statements that are inputted after the begin command will be executed in a single transaction until an explicit COMMIT or ROLLBACK command is given. This command is the same as `START TRANSACTION`.
