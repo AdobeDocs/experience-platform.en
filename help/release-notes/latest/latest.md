@@ -105,6 +105,33 @@ XDM is an open-source specification that provides common structures and definiti
 
 {style="table-layout:auto"}
 
+**New XDM components**
+
+| Component type | Name | Description |
+| --- | --- | --- |
+|    |    |    |
+|    |    |    |
+|    |    |    |
+<!-- | Class | [[!UICONTROL Media Session Server Timeout]](https://github.com/adobe/xdm/pull/1676/files) | This indicates the amount of time, in seconds, that passed between the user's last known interaction and the moment the session was closed. |
+| Field Group  | [[!UICONTROL XDM Profile Computed Attributes]](https://github.com/adobe/xdm/pull/1686/files) | This adds computed attributes from internal Adobe services to incoming customer data. This should not be used by customers to ingest data.  |
+| Data Type | [[!UICONTROL Refund Item]](https://github.com/adobe/xdm/pull/1685/files) | Indicates whether a refund is associated with an order and defines the type of refund, the amount, and the associated currency. |
+| Schema | [[!UICONTROL Adobe Target Classification Fields]](https://github.com/adobe/xdm/pull/1682/files) | A new XDM schema was created for Target Classification datasets. It contains a set of meta-data fields that classify Target activities and experiences.| -->
+
+{style="table-layout:auto"}
+
+**Updated XDM components**
+
+| Component type | Name | Description |
+| --- | --- | --- |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+<!-- | Field Group | [[!UICONTROL AJO Entity tags]](https://github.com/adobe/xdm/pull/1672/files)  | Added AJO Entity tags to [!UICONTROL AJO Entity Fields], that correspond to a Journey or Campaign  |
+| Field Group | (Multiple) | Added several fields for [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/pull/1671/files) |
+| Data Type | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/pull/1685/files) | The [!UICONTROL Refund Amount] was added to indicate the amount refunded for the item, if any.  | -->
+
+{style="table-layout:auto"}
+
 For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).
 
 ## Real-Time Customer Profile {#profile}
