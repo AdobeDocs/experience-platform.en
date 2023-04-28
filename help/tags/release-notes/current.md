@@ -7,8 +7,6 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 
 ## April 26, 2023
 
-* **User Attribution**: User activity for [Tags](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/overview.html?lang=en) and [Event Forwarding](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html?lang=en) are now tracked and visible in the Rules and Publishing screens.
-
 * **OAuth JWT Secret**: The [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) allows customers to use Adobe and Google Service tokens to support server-to-server interactions in Event Forwarding.
 
 The following new extension has been released:
