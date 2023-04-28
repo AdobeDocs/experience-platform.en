@@ -117,6 +117,8 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 | ------- | ----------- |
 | Pseudonymous profile data expiry | Pseudonymous profile data expiry is now generally available! This release will continuously remove stale pseudonymous profiles from your Experience Platform instance once enabled. To learn more about this feature and Pseudonymous Profiles, please read the [Pseudonymous Profile data expiration guide](../../profile/pseudonymous-profiles.md). |
 
+{style="table-layout:auto"}
+
 ## Sources {#sources}
 
 Adobe Experience Platform can ingest data from external sources and allows you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
