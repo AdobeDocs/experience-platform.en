@@ -91,5 +91,6 @@ feature: Queries
     - [Metadata commands](sql/metadata.md)
     - [Prepared statements](sql/prepared-statements.md)
 - [Frequently asked questions](troubleshooting-guide.md)
+- [IP address allowlist](ip-address-allowlist.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
