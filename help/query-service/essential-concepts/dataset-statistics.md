@@ -6,9 +6,9 @@ description: This document describes how to compute column level statistics on A
 
 You can now compute column level statistics on [!DNL Azure Data Lake Storage] (ADLS) datasets with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. Previously, this functionality was restricted to data warehouse datasets. The SQL commands that compute dataset statistics are an extension of the `ANALYZE TABLE` command. Full details on the `ANALYZE TABLE` command can be found in the [SQL reference documentation](../sql/syntax.md#analyze-table).
 
-With the `SHOW STATISTICS <alias_name>` command, you can see the statistics that were computed with the `COMPUTE STATISTICS` command. Through the combination of these commands you can now compute column statistics on either the entire dataset, on a subset of a dataset, on all columns, or a subset of columns.
+With the `SHOW STATISTICS <alias_name>` command, you can see the statistics that were computed with the `COMPUTE STATISTICS` command. Through the combination of these commands, you can now compute column statistics on either the entire dataset, a subset of a dataset, all columns, or a subset of columns.
 
-This guide helps you to structure your queries so that you can compute the column statistics of an ADLS dataset. Using these commands, you can see the statistics generated in your session through a PSQL client using an SQL query.
+This guide helps you structure your queries so that you can compute the column statistics of an ADLS dataset. Using these commands, you can see the statistics generated in your session through a PSQL client using an SQL query.
 
 ## Compute statistics {#compute-statistics}
 
@@ -16,7 +16,7 @@ Additional constructs have been added to the `ANALYZE TABLE` command that allow 
 
 >[!IMPORTANT]
 >
->The default behavior computes statistics for the **entire dataset** and for **all columns**. You are recommended not to use this on an ADLS dataset as the size of dataset can be very large (potentially, petabytes of data). Instead, you should always consider running the analyze command using `FILTERCONTEXT` and a specified list of columns. See the sections on [limiting analyzed columns](#limit-included-columns) and [adding a filter condition](#filter-condition) for more details.
+>The default behavior computes statistics for the **entire dataset** and for **all columns**. You are recommended not to use this on an ADLS dataset as the size of the dataset can be very large (potentially petabytes of data). Instead, you should always consider running the analyze command using `FILTERCONTEXT` and a specified list of columns. See the sections on [limiting analyzed columns](#limit-included-columns) and [adding a filter condition](#filter-condition) for more details.
 
 The example seen below computes statistics for the `adc_geometric` dataset and for **all** columns in the dataset.
 
@@ -26,7 +26,7 @@ ANALYZE TABLE adc_geometric COMPUTE STATISTICS;
 
 The console output does not display the statistics in response to the analyze table compute statistics command. Instead, the console will display `SUCCESSFULLY COMPLETED` followed by a universally unique identifier or an alias name. See the section on [alias names](#alias-name) for more details.
 
-To see the output you must use the `SHOW STATISTICS` command. Instructions on [how to show the statistics](#show-statistics) are provided later in the document.
+To see the output, you must use the `SHOW STATISTICS` command. Instructions on [how to show the statistics](#show-statistics) are provided later in the document.
 
 ## Limit the included columns {#limit-included-columns}
 
@@ -54,7 +54,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 
 ## Create an alias name {#alias-name}
 
-Since the filter condition and the columns list can target a large amount of data, it is unrealistic to remember the exact values. Instead, you can provide an `<alias_name>` to store this calculated information. If you do not provide an alias name for these calculations, Query Service generates a universally unique identifier for the alias ID. You can then use this alias ID to look up the computed statistics with the `SHOW STATISTICS` command. 
+Since the filter condition and the column list can target a large amount of data, it is unrealistic to remember the exact values. Instead, you can provide an `<alias_name>` to store this calculated information. If you do not provide an alias name for these calculations, Query Service generates a universally unique identifier for the alias ID. You can then use this alias ID to look up the computed statistics with the `SHOW STATISTICS` command. 
 
 >[!NOTE]
 >
@@ -66,11 +66,11 @@ The example below stores the output computed statistics in the `alias_name` for 
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS FOR ALL COLUMNS as alias_name;
 ```
 
-The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of analyze table compute statistics command. To see the output you must use the `SHOW STATISTICS` command discussed below.
+The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the output, you must use the `SHOW STATISTICS` command discussed below.
 
 ## Show the statistics {#show-statistics}
 
-The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run. The alias name is only valid for this particular session and cannot be used across different PSQL sessions as the computed statistics are not currently persisted. To display the statistics, use the command seen below.
+The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run. The alias name is only valid for this particular session and cannot be used across different PSQL sessions as the computed statistics are not currently persistent. To display the statistics, use the command seen below.
 
 ```sql
 SHOW STATISTICS FOR <alias_name>;
@@ -78,4 +78,4 @@ SHOW STATISTICS FOR <alias_name>;
 
 ## Next steps {#next-steps}
 
-By reading this document, you have a better understanding of how to generate column level statistics from both a data warehouse and an ADLS dataset using an SQL query. You are recommended to read the [SQl syntax guide](../sql/syntax.md) to discover more features of Adobe Experience Platform Query Service.
+By reading this document, you now have a better understanding of how to generate column level statistics from both a data warehouse and an ADLS dataset using an SQL query. You are recommended to read the [SQl syntax guide](../sql/syntax.md) to discover more features of the Adobe Experience Platform Query Service.
