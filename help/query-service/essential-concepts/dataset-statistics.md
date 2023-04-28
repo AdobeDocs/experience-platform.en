@@ -4,25 +4,29 @@ description: This document describes how to compute column level statistics on A
 ---
 # Dataset statistics computation
 
-You can now compute column level statistics on Azure Data Lake Storage (ADLS) datasets with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. Previously, this functionality was restricted to data warehouse datasets. These commands extend the `ANALYZE TABLE` command. Full details on the `ANALYZE TABLE` command can be found in the [SQL reference documentation](../sql/syntax.md#analyze-table).
+You can now compute column level statistics on Azure Data Lake Storage (ADLS) datasets with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. Previously, this functionality was restricted to data warehouse datasets. The SQL commands that compute dataset statistics are an extension of the `ANALYZE TABLE` command. Full details on the `ANALYZE TABLE` command can be found in the [SQL reference documentation](../sql/syntax.md#analyze-table).
 
-With the `SHOW STATISTICS <alias_name>` command, you can see the statistics that were computed with the `ANALYZE TABLE` command. Through the combination of these commands you can now compute column statistics on the entire dataset, on a subset of a dataset, on all columns, or a subset of columns.
+With the `SHOW STATISTICS <alias_name>` command, you can see the statistics that were computed with the `COMPUTE STATISTICS` command. Through the combination of these commands you can now compute column statistics on either the entire dataset, on a subset of a dataset, on all columns, or a subset of columns.
 
-This guide helps you to structure your queries so that they can compute the column statistics of an ADLS dataset. Using these commands, you can see the statistics generated in your session through a PSQL client using an SQL query.
+This guide helps you to structure your queries so that you can compute the column statistics of an ADLS dataset. Using these commands, you can see the statistics generated in your session through a PSQL client using an SQL query.
 
 ## Compute statistics {#compute-statistics}
 
-Additional constructs have been added to the `ANALYZE TABLE` command. To compute statistics for the entire dataset and for all columns you must use the `ANALYZE TABLE <tableName> COMPUTE STATISTICS` format. 
+Additional constructs have been added to the `ANALYZE TABLE` command that allow you to compute statistics for the entire dataset and for all columns. To do this, you must use the `ANALYZE TABLE <tableName> COMPUTE STATISTICS` format. 
 
 >[!IMPORTANT]
 >
->The default behavior computes statistics for the **entire dataset** and for **all columns**. You are recommended not to use this on an ADLS dataset as the size of dataset can be very large (potentially, petabytes of data). Instead you should always consider running analyze command using `FILTERCONTEXT` and the columns list specified. See the section on [adding a filter condition](#filter-condition) for more details.
+>The default behavior computes statistics for the **entire dataset** and for **all columns**. You are recommended not to use this on an ADLS dataset as the size of dataset can be very large (potentially, petabytes of data). Instead, you should always consider running the analyze command using `FILTERCONTEXT` and a specified list of columns. See the sections on [limiting analyzed columns](#limit-included-columns) and [adding a filter condition](#filter-condition) for more details.
 
-The example seen below computes statistics for the `<adc_geometric>` dataset and for **all** columns in the dataset.
+The example seen below computes statistics for the `adc_geometric` dataset and for **all** columns in the dataset.
 
 ```sql
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS;
 ```
+
+The console output does not display the statistics in response to the analyze table compute statistics command. Instead, the console will display `SUCCESSFULLY COMPLETED` followed by a universally unique identifier or an alias name. See the section on [alias names](#alias-name) for more details.
+
+To see the output you must use the `SHOW STATISTICS` command. Instructions on [how to show the statistics](#show-statistics) are provided later in the document.
 
 ## Limit the included columns {#limit-included-columns}
 
