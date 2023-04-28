@@ -170,11 +170,13 @@ A successful response returns the current details of your dataflow including its
 
 The components of a target connection differ by destination. For example, for Amazon S3 destinations, you can update the bucket and path where files are exported. For Pinterest destinations, you can update your Pinterest Advertiser ID and for Google Customer Match you can update your Pinterest Account ID.
 
-To update components of a target connection, perform a PATCH request to the `/targetConnections` endpoint while providing your target connection ID, version, and the new values you want to use. Remember, you got your target connection ID in the previous step, when you inspected an existing dataflow to your desired destination.
+To update components of a target connection, perform a PATCH request to the `/targetConnections/{TARGET_CONNECTION_ID}` endpoint while providing your target connection ID, version, and the new values you want to use. Remember, you got your target connection ID in the previous step, when you inspected an existing dataflow to your desired destination.
 
 >[!IMPORTANT]
 >
->The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the target connection you want to update. The etag value updates with every successful update of a dataflow.
+>The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the target connection you want to update. The etag value updates with every successful update of a flow entity such as dataflow, target connection, and others.
+>
+> To get the latest version of the etag value, perform a GET request to the `/targetConnections/{TARGET_CONNECTION_ID}` endpoint, where `{TARGET_CONNECTION_ID}` is the target connection ID that you are looking to update.
 
 Below are a few examples of updating parameters in the target connection spec for different types of destinations. But the general rule to update parameters for any destination is as follows: 
 
@@ -253,10 +255,8 @@ curl -X PATCH \
     -d '[
   {
     "op": "add",
-    "path": "/params",
-    "value": {
-      "appendSegmentId": true
-    }
+    "path": "/params/appendSegmentId",
+    "value": true
   }
 ]'
 ```
@@ -332,7 +332,9 @@ Remember, you got your base connection ID in a previous step, when you inspected
 
 >[!IMPORTANT]
 >
->The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the target connection you want to update. The etag value updates with every successful update of a dataflow.
+>The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the base connection you want to update. The etag value updates with every successful update of a flow entity such as dataflow, base connection, and others.
+>
+> To get the latest version of the etag value, perform a GET request to the `/connections/{BASE_CONNECTION_ID}` endpoint, where `{BASE_CONNECTION_ID}` is the base connection ID that you are looking to update.
 
 Below are a few examples of updating parameters in the base connection spec for different types of destinations. But the general rule to update parameters for any destination is as follows: 
 
