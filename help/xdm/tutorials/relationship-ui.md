@@ -27,6 +27,10 @@ The ability to understand the relationships between your customers and their int
 
 While schema relationships can be inferred through the use of the union schema and [!DNL Real-Time Customer Profile], this only applies to schemas that share the same class. To establish a relationship between two schemas belonging to different classes, a dedicated relationship field must be added to a source schema, which references the identity of the other related schema.
 
+>[!NOTE]
+>
+>If both the source and destination schemas belong to the same class, a dedicated relationship field should **not** be used. In this case, use the union schema UI to see the relationship. Instructions on how to do this can be found in the [view relationships](../../profile/ui/union-schema.md#view-relationships) section of the union schema UI guide.  
+
 This document provides a tutorial for defining a relationship between two schemas using the Schema Editor in the [!DNL Experience Platform] user interface. For steps on defining schema relationships using the API, see the tutorial on [defining a relationship using the Schema Registry API](relationship-api.md).
 
 >[!NOTE]
