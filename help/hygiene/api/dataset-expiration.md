@@ -9,7 +9,7 @@ exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 >
 >Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
 
-The `/ttl` endpoint in the Data Hygiene API allows you to schedule expiration dates for datasets in Adobe Experience Platform.
+The `/ttl` endpoint in the Data Hygiene API allows you to schedule expiration dates for datasets in Adobe Experience Platform. This expiration date is a "time-to-live" (TTL) value ensures a finite lifespan of data within the system.
 
 A dataset expiration is only a timed-delayed delete operation. The dataset is not protected in the interim, so it may be be deleted by other means before its expiry is reached.
 
@@ -66,27 +66,36 @@ A successful response lists the resulting dataset expirations. The following exa
   "ttlDetails": [
     {
       "status": "completed",
-      "workorderId": "SDc17a9501345c4997878c1383c475a77b",
-      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
-      "datasetId": "f440ac301c414bf1b6ba419162866346",
-      "expiry": "2021-07-07T13:14:15Z",
+      "ttlId": "SD-c8e75921-2416-4bc7-9cfd-9eb01ba66c5f",
+      "displayName": "Delete Acme Data before 2025",
+      "description": "The Acme information in this dataset is licensed for our use through the end of 2024.",
+      "datasetName": "Sample Acme dataset",
+      "sandboxName": "hygiene-beta",
+      "expiry": "2024-07-07T13:14:15Z",
       "updatedAt": "2021-07-07T13:14:15Z",
       "updatedBy": "Jane Doe <jane.doe@example.com> d741b5b877bf47cf@AdobeId"
     },
     {
       "status": "pending",
-      "workorderId": "SD8ef60b33dbed444fb81861cced5da10b",
+      "ttlId": "SD-8af60d33-dbed-444f-d818-61ccad5de10d",
+      "displayName": "Delete PQR data at end of century",
+      "description": "This is a long term request to delete PQR data.",
       "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
-      "datasetId": "80f0d38820a74879a2c5be82e38b1a94",
+      "datasetId": "80f0d38820a74879e2c5de82c38b1a94",
+      "datasetName": "Dx 523093 of PQR",
       "expiry": "2099-02-02T00:00:00Z",
       "updatedAt": "2021-02-02T13:00:00Z",
       "updatedBy": "John Q. Public <jqp@example.com> 93220281bad34ed0@AdobeId"
     },
     {
       "status": "pending",
-      "workorderId": "SD2140ad4eaf1f47a1b24c05cce53e303e",
+      "ttlId": "SD2140ad4eaf1f47a1b24c05cce53e303e",
+      "displayName": "Delete LMNOP data at end of century",
+      "description": "This is a long term request to delete LMNOP data.",
       "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
       "datasetId": "9e63f9b25896416ba811657678b4fcb7",
+      "datasetName": "LMNOP v2",
+      "sandboxName": "hygiene-beta",
       "expiry": "2099-01-01T00:00:00Z",
       "updatedAt": "2021-01-01T13:00:00Z",
       "updatedBy": "Jane Doe <jane.doe@example.com> d741b5b877bf47cf@AdobeId"
@@ -142,10 +151,10 @@ A successful response returns the details of the dataset expiration.
     "imsOrg": "{ORG_ID}",
     "status": "pending",
     "expiry": "2023-12-31T23:59:59Z",
-    "updatedAt": "2022-05-11T15:12:40.393115Z",
+    "updatedAt": "2024-05-11T15:12:40.393115Z",
     "updatedBy": "{USER_ID}",
-    "displayName": "Example Dataset Expiration Request",
-    "description": "A dataset expiration request that will execute at the end of 2023"
+    "displayName": "Delete Acme Data before 2025",
+    "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
 }
 ```
 
@@ -212,15 +221,15 @@ curl -X PUT \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-        "expiry": "2022-12-31T23:59:59Z",
-        "displayName": "Example Expiration Request",
-        "description": "Cleanup identities required by JIRA request 12345 across all datasets in the prod sandbox."
+        "expiry": "2024-12-31T23:59:59Z",
+        "displayName": "Delete Acme Data before 2025",
+        "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
       }'
 ```
 
 | Property | Description |
 | --- | --- |
-| `expiry` | An ISO 8601 timestamp for when the dataset will be deleted. |
+| `expiry` | A date and time in ISO 8601 format. If the string has no explicit time zone offset, the time zone is assumed to be UTC. A TTL will be created with the specified expiry. Any previous TTL for the same dataset will be replaced by the new TTL. |
 | `displayName` | A display name for the expiration request. |
 | `description` | An optional description for the expiration request. |
 
