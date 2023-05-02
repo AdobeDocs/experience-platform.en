@@ -115,7 +115,7 @@ In the configuration example below, all the CSV options are predefined. The expo
 
 ## CSV options where users can select configuration options {#file-configuration-templating-pebble}
 
-In the configuration example below, none of the CSV options are predefined. The `value` in each of the `csvOptions` parameters is configured in a corresponding customer data field through the `/destinations` endpoint (for example `customerData.quote` for the `quote` file formatting option) and users can use the Experience Platform UI to select between the various options you configure in the corresponding customer data field. You can see what these options look like in the [file formatting options for file-based destinations](../../../ui/batch-destinations-file-formatting-options.md) documentation.
+In the configuration example below, none of the CSV options are predefined. The `value` in each of the `csvOptions` parameters is configured in a corresponding customer data field through the `/destinations` endpoint (for example [`customerData.quote`](../../functionality/destination-configuration/customer-data-fields.md#conditional-options) for the `quote` file formatting option) and users can use the Experience Platform UI to select between the various options you configure in the corresponding customer data field. You can see what these options look like in the [file formatting options for file-based destinations](../../../ui/batch-destinations-file-formatting-options.md) documentation.
 
 ```json
 {

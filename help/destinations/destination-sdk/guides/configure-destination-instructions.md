@@ -46,7 +46,6 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
       "contentType":"application/json"
    }
 }
-
 ```
 
 ## Step 2: Create destination configuration {#create-destination-configuration}
@@ -112,7 +111,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
          "acceptsCustomNamespaces":true
       }
    },
-   "segmentMappingConfig":{
+   "audienceMetadataConfig":{
       "mapExperiencePlatformSegmentName":false,
       "mapExperiencePlatformSegmentId":false,
       "mapUserInput":false,
@@ -141,7 +140,6 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
       }
    ]
 }
-
 ```
 
 ## Step 3: Create message transformation template - use templating language to specify the message output format {#create-transformation-template}
@@ -150,11 +148,112 @@ Based on the payloads that your destination supports, you must create a template
 
 Once you have crafted a message transformation template that works for you, add it to the server and template configuration you created in step 1.
 
+```json {line-numbers="true" highlight="13-14"}
+{
+   "name":"Moviestar destination server",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
+      }
+   },
+   "httpTemplate":{
+      "requestBody":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{\n    \"users\": [\n        {% for profile in input.profiles %}\n            {{profile|raw}}{% if not loop.last %},{% endif %}\n        {% endfor %}\n    ]\n}"
+      },
+      "contentType":"application/json"
+   }
+}
+```
+
 ## Step 4: Create audience metadata configuration {#create-audience-metadata-configuration}
 
 For some destinations, Destination SDK requires that you configure an audience metadata configuration to programmatically create, update, or delete audiences in your destination. Refer to [Audience metadata management](../functionality/audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
 
 If you use an audience metadata configuration, you must connect it to the destination configuration you created in step 2. Add the instance ID of your audience metadata configuration to your destination configuration as `audienceTemplateId`.
+
+```json {line-numbers="true" highlight="53"} 
+{
+   "name":"Moviestar",
+   "description":"Moviestar is a fictional destination, used for this example.",
+   "status":"TEST",
+   "customerAuthenticationConfigurations":[
+      {
+         "authType":"BEARER"
+      }
+   ],
+   "customerDataFields":[
+      {
+         "name":"endpointsInstance",
+         "type":"string",
+         "title":"Select Endpoint",
+         "description":"Moviestar manages several instances across the globe for REST endpoints that our customers are provisioned for. Select your endpoint in the dropdown list.",
+         "isRequired":true,
+         "enum":[
+            "US",
+            "EU",
+            "APAC",
+            "NZ"
+         ]
+      },
+      {
+         "name":"customerID",
+         "type":"string",
+         "title":"Moviestar Customer ID",
+         "description":"Your customer ID in the Moviestar destination (e.g. abcdef).",
+         "isRequired":true,
+         "pattern":""
+      }
+   ],
+   "uiAttributes":{
+      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+      "category":"mobile",
+      "connectionType":"Server-to-server",
+      "frequency":"Streaming"
+   },
+   "identityNamespaces":{
+      "external_id":{
+         "acceptsAttributes":true,
+         "acceptsCustomNamespaces":true
+      },
+      "another_id":{
+         "acceptsAttributes":true,
+         "acceptsCustomNamespaces":true
+      }
+   },
+   "audienceMetadataConfig":{
+      "mapExperiencePlatformSegmentName":false,
+      "mapExperiencePlatformSegmentId":false,
+      "mapUserInput":false,
+      "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
+   },   
+   "aggregation":{
+      "aggregationType":"CONFIGURABLE_AGGREGATION",
+      "configurableAggregation":{
+         "aggregationPolicyId":null,
+         "aggregationKey":{
+            "includeSegmentId":true,
+            "includeSegmentStatus":true,
+            "includeIdentity":true,
+            "oneIdentityPerGroup":true,
+            "groups":null
+         },
+         "splitUserById":true,
+         "maxBatchAgeInSecs":2400,
+         "maxNumEventsInBatch":5000
+      }
+   },
+   "destinationDelivery":[
+      {
+         "authenticationRule":"CUSTOMER_AUTHENTICATION",
+         "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
+      }
+   ]
+}
+```
+
 
 ## Step 5: Set up authentication {#set-up-authentication}
 

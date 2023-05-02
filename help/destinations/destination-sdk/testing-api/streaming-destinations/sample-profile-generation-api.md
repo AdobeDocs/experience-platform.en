@@ -38,13 +38,13 @@ You can generate sample profiles based on the source schema by making a GET requ
 
 To get the ID of a destination instance, you must first create a connection in the Experience Platform UI to your destination before attempting to test your destination. Read the [activate destination tutorial](../../../ui/activation-overview.md) and see the tip below for how to get the destinations instance ID to use for this API.
 
->[!TIP]
+>[!IMPORTANT]
 >
->* Get the destination instance ID that you should use here from the URL when browsing a connection with your destination.
+>* In order to use this API, you must have an existing connection to your destination in the Experience Platform UI. Read [connect to destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) and [activate profiles and segments to a destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) for more information.
+> * After establishing the connection to your destination, get the destination instance ID that you should use in API calls to this endpoint when [browsing a connection with your destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
 >![UI image how to get destination instance ID](../../assets/testing-api/get-destination-instance-id.png)
 
 **API format**
-
 
 ```http
 GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&count={COUNT}

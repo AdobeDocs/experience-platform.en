@@ -764,7 +764,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 **Create a dynamic schema server**
 
-You need to create a dynamic schema server similar to the one shown below when you configure a destination that retrieves its profile schema from your own API endpoint.
+You need to create a dynamic schema server similar to the one shown below when you configure a destination that retrieves its profile schema from your own API endpoint. As opposed to a static schema, a dynamic schema does not use a `profileFields` array. Instead, dynamic schemas use a dynamic schema server which connects to your own API from where it retrieves the schema configuration.
 
 +++Request
 

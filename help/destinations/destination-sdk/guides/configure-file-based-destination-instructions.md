@@ -118,8 +118,7 @@ To connect the server and file configuration in step 1 to this destination confi
 POST platform.adobe.io/data/core/activation/authoring/destinations
 ``` 
 
-```json
-
+```json {line-numbers="true" highlight="84"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -239,6 +238,127 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 For some destinations, Destination SDK requires that you configure an audience metadata configuration to programmatically create, update, or delete audiences in your destination. Refer to [Audience metadata management](../functionality/audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
 
 If you use an audience metadata configuration, you must connect it to the destination configuration you created in step 2. Add the instance ID of your audience metadata configuration to your destination configuration as `audienceTemplateId`.
+
+```json {line-numbers="true" highlight="91"}
+{
+    "name": "Amazon S3 destination",
+    "description": "Amazon S3 destination is a fictional destination, used for this example.",
+    "status": "Test",
+    "customerAuthenticationConfigurations": [
+        {
+            "authType": "S3"
+        }
+    ],
+    "customerEncryptionConfigurations": [],
+    "customerDataFields": [
+        {
+            "name": "bucketName",
+            "title": "Amazon S3 bucket name",
+            "description": "Enter the Amazon S3 Bucket name that will host the exported files.",
+            "type": "string",
+            "isRequired": true,
+            "pattern": "(?=^.{3,63}$)(?!^(\\d+\\.)+\\d+$)(^(([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])\\.)*([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])$)",
+            "readOnly": false,
+            "hidden": false
+        },
+        {
+            "name": "path",
+            "title": "Amazon S3 path",
+            "description": "Enter Amazon S3 folder path",
+            "type": "string",
+            "isRequired": true,
+            "pattern": "^[0-9a-zA-Z\\/\\!\\-_\\.\\*\\''\\(\\)]*((\\%SEGMENT_(NAME|ID)\\%)?\\/?)+$",
+            "readOnly": false,
+            "hidden": false
+        },
+        {
+            "name": "compression",
+            "title": "Select compression type",
+            "description": "Select the file compression type used by the exported files.",
+            "type": "string",
+            "isRequired": true,
+            "readOnly": false,
+            "enum": [
+                "GZIP",
+                "NONE",
+                "bzip2",
+                "lz4",
+                "snappy",
+                "deflate"
+            ]
+        },
+        {
+            "name": "fileType",
+            "title": "Select a file format",
+            "description": "Select the file format to be used by the exported files.",
+            "type": "string",
+            "isRequired": true,
+            "readOnly": false,
+            "hidden": false,
+            "enum": [
+                "csv",
+                "json",
+                "parquet"
+            ],
+            "default": "csv"
+        }
+    ],
+    "uiAttributes": {
+        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "category": "S3",
+        "iconUrl": "https://dc5tqsrhldvnl.cloudfront.net/2/90048/da276e30c730ce6cd666c8ca78360df21.png",
+        "connectionType": "S3",
+        "flowRunsSupported": true,
+        "monitoringSupported": true,
+        "frequency": "Batch"
+    },
+    "destinationDelivery": [
+        {
+            "deliveryMatchers": [
+                {
+                    "type": "SOURCE",
+                    "value": [
+                        "batch"
+                    ]
+                }
+            ],
+            "authenticationRule": "CUSTOMER_AUTHENTICATION",
+            "destinationServerId": "eec25bde-4f56-4c02-a830-9aa9ec73ee9d"
+        }
+    ],
+    "audienceMetadataConfig":{
+    "mapExperiencePlatformSegmentName":false,
+    "mapExperiencePlatformSegmentId":false,
+    "mapUserInput":false,
+    "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
+    },   
+    "schemaConfig": {
+        "profileRequired": true,
+        "segmentRequired": true,
+        "identityRequired": true
+    },
+    "batchConfig": {
+        "allowMandatoryFieldSelection": true,
+        "allowDedupeKeyFieldSelection": true,
+        "defaultExportMode": "DAILY_FULL_EXPORT",
+        "allowedExportMode": [
+            "DAILY_FULL_EXPORT",
+            "FIRST_FULL_THEN_INCREMENTAL"
+        ],
+        "allowedScheduleFrequency": [
+            "DAILY",
+            "EVERY_3_HOURS",
+            "EVERY_6_HOURS",
+            "EVERY_8_HOURS",
+            "EVERY_12_HOURS",
+            "ONCE"
+        ],
+        "defaultFrequency": "DAILY",
+        "defaultStartTime": "00:00"
+    },
+    "backfillHistoricalProfileData": true
+}
+```
 
 ## Step 4: Set up authentication {#set-up-authentication}
 

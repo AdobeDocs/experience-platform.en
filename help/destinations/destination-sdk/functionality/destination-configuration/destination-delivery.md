@@ -53,7 +53,27 @@ The `deliveryMatchers` section is optional and can be used if you are specifying
 
 |Parameter | Type | Description|
 |---------|----------|------|
+|`deliveryMatchers.type`|||
+|`deliveryMatchers.value`|||
 |`authenticationRule` | String | Indicates how [!DNL Platform] customers connect to your destination. Accepted values are `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` if Platform customers log into your system via any of the following methods: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Use `PLATFORM_AUTHENTICATION` if there is a global authentication system between Adobe and your destination and the [!DNL Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must create a credentials object using the [credentials API](../../credentials-api/create-credential-configuration.md) configuration. </li><li>Use `NONE` if no authentication is required to send data to your destination platform. </li></ul> |
 |`destinationServerId` | String | The `instanceId` of the [destination server configuration](../../authoring-api/destination-server/create-destination-server.md) that you created for this destination. |
 
 {style="table-layout:auto"}
+
+## Next steps {#next-steps}
+
+After reading this article, you should have a better understanding of how you can configure the locations where your destination should export data.
+
+To learn more about the other destination components, see the following articles:
+
+* [Customer authentication](customer-authentication.md)
+* [OAuth2 authentication](oauth2-authentication.md)
+* [UI attributes](ui-attributes.md)
+* [Customer data fields](customer-data-fields.md)
+* [Schema configuration](schema-configuration.md)
+* [Identity namespace configuration](identity-namespace-configuration.md)
+* [Supported mapping configurations](supported-mapping-configurations.md)
+* [Audience metadata configuration](audience-metadata-configuration.md)
+* [Aggregation policy](aggregation-policy.md)
+* [Batch configuration](batch-configuration.md)
+* [Historical profile qualifications](historical-profile-qualifications.md)
