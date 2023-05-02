@@ -259,7 +259,7 @@ A successful response returns the details of the dataset expiration, with HTTP s
 
 | Property | Description |
 | --- | --- |
-| `workorderId` | The ID of the dataset expiration. |
+| `ttlId` | The ID of the dataset expiration. |
 | `datasetId` | The ID of the dataset that this expiration applies to. |
 | `imsOrg` | Your organization's ID. |
 | `status` | The current status of the dataset expiration. |
@@ -285,7 +285,7 @@ DELETE /ttl/{EXPIRATION_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{EXPIRATION_ID}` | The `workorderId` of the dataset expiration that you want to cancel. |
+| `{EXPIRATION_ID}` | The `ttlId` of the dataset expiration that you want to cancel. |
 
 {style="table-layout:auto"}
 
@@ -339,7 +339,7 @@ A successful response returns the details of the dataset expiration, with a `his
 
 ```json
 {
-  "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+  "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
   "datasetId": "62759f2ede9e601b63a2ee14",
   "datasetName": "Example Dataset",
   "sandboxName": "prod",
@@ -375,7 +375,7 @@ A successful response returns the details of the dataset expiration, with a `his
 
 | Property | Description |
 | --- | --- |
-| `workorderId` | The ID of the dataset expiration. |
+| `ttlId` | The ID of the dataset expiration. |
 | `datasetId` | The ID of the dataset that this expiration applies to. |
 | `datasetName` | The display name for the dataset this expiration applies to. |
 | `sandboxName` | The name of the sandbox that the target dataset is located under. |
