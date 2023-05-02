@@ -18,7 +18,7 @@ This tutorial requires you to have a valid dataflow ID. If you do not have a val
 
 >[!NOTE]
 >
-> The terms *flow* and *dataflow* are used interchangeably in this tutorial. In the context of this tutorial, the have the same meaning.
+> The terms *flow* and *dataflow* are used interchangeably in this tutorial. In the context of this tutorial, they have the same meaning.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
@@ -168,7 +168,7 @@ A successful response returns the current details of your dataflow including its
 
 ## Edit target connection components (storage location and other components) {#patch-target-connection}
 
-The components of a target connection differ by destination. For example, for Amazon S3 destinations, you can update the bucket and path where files are exported. For Pinterest destinations, you can update your Pinterest Advertiser ID and for Google Customer Match you can update your Pinterest Account ID.
+The components of a target connection differ by destination. For example, for [!DNL Amazon S3] destinations, you can update the bucket and path where files are exported. For [!DNL Pinterest] destinations, you can update your [!DNL Pinterest Advertiser ID] and for [!DNL Google Customer Match] you can update your [!DNL Pinterest Account ID].
 
 To update components of a target connection, perform a PATCH request to the `/targetConnections/{TARGET_CONNECTION_ID}` endpoint while providing your target connection ID, version, and the new values you want to use. Remember, you got your target connection ID in the previous step, when you inspected an existing dataflow to your desired destination.
 
@@ -199,7 +199,7 @@ PATCH /targetConnections/{TARGET_CONNECTION_ID}
 
 **Request**
 
-The following request updates the `bucketName` and `path` parameters of an [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destination connection.
+The following request updates the `bucketName` and `path` parameters of an [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destination connection.
 
 ```shell
 curl -X PATCH \
@@ -229,7 +229,7 @@ curl -X PATCH \
 
 **Response**
 
-A successful response returns your target connection ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your target connection ID.
+A successful response returns your target connection ID and an updated Etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your target connection ID.
 
 ```json
 {
@@ -242,7 +242,7 @@ A successful response returns your target connection ID and an updated etag. You
 
 **Request**
 
-The following request updates the parameters of a [Google Ad Manager 360 destination](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) connection to add the new append segment ID to segment name field.
+The following request updates the parameters of a [[!DNL Google Ad Manager 360] destination](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) connection to add the new append segment ID to segment name field.
 
 ```shell
 curl -X PATCH \
@@ -282,7 +282,7 @@ A successful response returns your target connection ID and an updated etag. You
 
 **Request**
 
-The following request updates the `advertiserId` parameter of a [Pinterest destination connection](/help/destinations/catalog/advertising/pinterest.md#parameters).
+The following request updates the `advertiserId` parameter of a [[!DNL Pinterest] destination connection](/help/destinations/catalog/advertising/pinterest.md#parameters).
 
 ```shell
 curl -X PATCH \
@@ -324,7 +324,7 @@ A successful response returns your target connection ID and an updated etag. You
 
 ## Edit base connection components (authentication parameters and other components) {#patch-base-connection}
 
-The components of a base connection differ by destination. For example, for Amazon S3 destinations, you can update the access key and secret key to your Amazon S3 location. 
+The components of a base connection differ by destination. For example, for [!DNL Amazon S3] destinations, you can update the access key and secret key to your [!DNL Amazon S3] location. 
 
 To update components of a base connection, perform a PATCH request to the `/connections` endpoint while providing your base connection ID, version, and the new values you want to use.
 
@@ -352,7 +352,7 @@ PATCH /connections/{BASE_CONNECTION_ID}
 
 **Request**
 
-The following request updates the `accessId` and `secretKey` parameters of an [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destination connection.
+The following request updates the `accessId` and `secretKey` parameters of an [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destination connection.
 
 ```shell
 curl -X PATCH \
@@ -395,7 +395,7 @@ A successful response returns your base connection ID and an updated etag. You c
 
 **Request**
 
-The following request updates the parameters of an [Azure Blob destination](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) connection to update the connection string required to connect to an Azure Blob instance.
+The following request updates the parameters of an [[!DNL Azure Blob] destination](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) connection to update the connection string required to connect to an Azure Blob instance.
 
 ```shell
 curl -X PATCH \
