@@ -10,7 +10,7 @@ exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
 >
 >**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
 
-This page lists and describes all the API operations that you can perform using the `/authoring/testing/template/sample` API endpoint, to generate a [message transformation template](../../functionality/destination-server/message-format.md#using-templating) for your destination. For a description of the functionality supported by this endpoint, read [create template](../create-template.md). 
+This page lists and describes all the API operations that you can perform using the `/authoring/testing/template/sample` API endpoint, to generate a [message transformation template](../../functionality/destination-server/message-format.md#using-templating) for your destination. For a description of the functionality supported by this endpoint, read [create template](create-template.md). 
 
 ## Getting started with sample template API operations {#get-started}
 

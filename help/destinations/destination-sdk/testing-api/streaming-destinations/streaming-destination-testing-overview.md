@@ -7,21 +7,21 @@ exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
 
 ## Overview {#overview}
 
-As part of Destination SDK, Adobe provides developer tools to assist you in configuring and testing your destination. This page describes how to test your destination configuration. For information on how to create a message transformation template, read [Create and test a message transformation template](../testing-api/streaming-destinations/create-template.md).
+As part of Destination SDK, Adobe provides developer tools to assist you in configuring and testing your destination. This page describes how to test your destination configuration. For information on how to create a message transformation template, read [Create and test a message transformation template](../../testing-api/streaming-destinations/create-template.md).
 
 To **test if your destination is configured correctly and to verify the integrity of data flows to your configured destination**, use the *Destination testing tool*. With this tool, you can test your destination configuration by sending messages to your REST API endpoint.
 
-Illustrated below is how testing your destination fits into the [destination configuration workflow](../guides/configure-destination-instructions.md) in Destination SDK:
+Illustrated below is how testing your destination fits into the [destination configuration workflow](../../guides/configure-destination-instructions.md) in Destination SDK:
 
 ![Graphic of where the destination testing step fits into the destination configuration workflow](../../assets/testing-api/test-destination-step.png)
 
 ## Destination testing tool - Purpose and prerequisites {#destination-testing-tool}
 
-Use the destination testing tool to test your destination configuration by sending messages to the partner endpoint you provided in the [server configuration](../authoring-api/destination-server/create-destination-server.md).
+Use the destination testing tool to test your destination configuration by sending messages to the partner endpoint you provided in the [server configuration](../../authoring-api/destination-server/create-destination-server.md).
 
 Before using the tool, make sure you:
-* Configure your destination by following the steps outlined in the [destination configuration workflow](../authoring-api/destination-configuration/create-destination-configuration.md) and 
-* Establish a connection to your destination, as detailed in [How to get the destination instance ID](../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id).
+* Configure your destination by following the steps outlined in the [destination configuration workflow](../../authoring-api/destination-configuration/create-destination-configuration.md) and 
+* Establish a connection to your destination, as detailed in [How to get the destination instance ID](../../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id).
 
 With this tool, after having configured your destination, you can:
 * Test if your destination is configured correctly;
@@ -31,16 +31,16 @@ With this tool, after having configured your destination, you can:
 
 >[!NOTE]
 >
->For complete API reference documentation, read [Destination testing API operations](../testing-api/streaming-destinations/destination-testing-api.md).
+>For complete API reference documentation, read [Destination testing API operations](../../testing-api/streaming-destinations/destination-testing-api.md).
 
 You can make calls to the destination testing API endpoint with or without adding profiles on the request.
 
-If you don't add any profiles on the request, Adobe will generate those internally for you and add them to the request. If you want to generate profiles to use in this request, refer to the [Sample profile generation API reference](../testing-api/streaming-destinations/sample-profile-generation-api.md). You need to generate profiles based on the source XDM schema, as shown in the [API reference](../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). Note that the source schema is the [union schema](../../../profile/ui/union-schema.md) of the sandbox that you are using.
+If you don't add any profiles on the request, Adobe will generate those internally for you and add them to the request. If you want to generate profiles to use in this request, refer to the [Sample profile generation API reference](../../testing-api/streaming-destinations/sample-profile-generation-api.md). You need to generate profiles based on the source XDM schema, as shown in the [API reference](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). Note that the source schema is the [union schema](../../../../profile/ui/union-schema.md) of the sandbox that you are using.
 
 The response contains the result of the destination request processing. The request includes three main sections:
 * The request generated by Adobe for the destination.
 * The response received from your destination.
-* The list of profiles sent in the request, whether the profiles were [added by you in the request](../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles), or generated by Adobe if [the body of the destination testing request was empty](../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles).
+* The list of profiles sent in the request, whether the profiles were [added by you in the request](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles), or generated by Adobe if [the body of the destination testing request was empty](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles).
 
 >[!NOTE]
 >
@@ -229,8 +229,8 @@ Note that the content of the `results.httpCalls` parameter is specific to your R
 
 ```
 
-For descriptions of the request and response parameters, refer to [Destination testing API operations](../testing-api/streaming-destinations/destination-testing-api.md).
+For descriptions of the request and response parameters, refer to [Destination testing API operations](../../testing-api/streaming-destinations/destination-testing-api.md).
 
 ## Next steps
 
-After testing your destination and confirming that it is configured correctly, use the [destination publishing API](../publishing-api/create-publishing-request.md) to submit your configuration to Adobe for review.
+After testing your destination and confirming that it is configured correctly, use the [destination publishing API](../../publishing-api/create-publishing-request.md) to submit your configuration to Adobe for review.

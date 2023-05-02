@@ -10,7 +10,7 @@ exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 >
 >**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
-This page lists and describes all the API operations that you can perform using the `/authoring/testing/template/render` API endpoint, to render exported profiles that match your destination's expected format, based on your [message transformation template](../../functionality/destination-server/message-format.md#using-templating). For a description of the functionality supported by this endpoint, read [create template](../create-template.md).
+This page lists and describes all the API operations that you can perform using the `/authoring/testing/template/render` API endpoint, to render exported profiles that match your destination's expected format, based on your [message transformation template](../../functionality/destination-server/message-format.md#using-templating). For a description of the functionality supported by this endpoint, read [create template](create-template.md).
 
 ## Getting started with render template API operations {#get-started}
 

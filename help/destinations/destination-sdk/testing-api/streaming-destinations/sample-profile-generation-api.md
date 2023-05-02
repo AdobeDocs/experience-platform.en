@@ -17,8 +17,8 @@ This page lists and describes all the API operations that you can perform using 
 >[!IMPORTANT]
 >
 >Use this API endpoint to generate sample profiles for two separate use cases. You can either: 
->* generate profiles to use when [crafting and testing a message transformation template](../create-template.md) - by using *destination ID* as a query parameter.
->* generate profiles to use when making calls to [test if your destination is configured correctly](../streaming-destination-testing-overview.md) - by using *destination instance ID* as a query parameter.
+>* generate profiles to use when [crafting and testing a message transformation template](create-template.md) - by using *destination ID* as a query parameter.
+>* generate profiles to use when making calls to [test if your destination is configured correctly](streaming-destination-testing-overview.md) - by using *destination instance ID* as a query parameter.
 
 You can generate sample profiles based on either the Adobe XDM source schema (to use when testing your destination), or the target schema supported by your destination (to use when crafting your template). To understand the difference between Adobe XDM source schema and target schema, read the overview section of the [Message format](../../functionality/destination-server/message-format.md) article.
 
@@ -32,7 +32,7 @@ Before continuing, please review the [getting started guide](../../getting-start
 
 >[!IMPORTANT]
 >
->Add the sample profiles generated here to HTTP calls when [testing your destination](../streaming-destination-testing-overview.md). 
+>Add the sample profiles generated here to HTTP calls when [testing your destination](streaming-destination-testing-overview.md). 
 
 You can generate sample profiles based on the source schema by making a GET request to the `authoring/sample-profiles/` endpoint and providing the ID of a destination instance that you created based on the destination configuration that you want to test. 
 
@@ -379,4 +379,4 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ## Next steps
 
-After reading this document, you now know how to generate sample profiles to be used when [testing a message transformation template](../create-template.md) or when [testing if your destination is configured correctly](../streaming-destination-testing-overview.md).
+After reading this document, you now know how to generate sample profiles to be used when [testing a message transformation template](create-template.md) or when [testing if your destination is configured correctly](streaming-destination-testing-overview.md).
