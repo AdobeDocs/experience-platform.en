@@ -164,8 +164,8 @@ A successful response returns the details of the dataset expiration.
 | --- | --- |
 | `ttlId` | The ID of the dataset expiration. |
 | `datasetId` | The ID of the dataset that this expiration applies to. |
-| `datasetName` |  |
-| `sandboxName` |  |
+| `datasetName` | The display name for the dataset this expiration applies to. |
+| `sandboxName` | The name of the sandbox that the target dataset is located under. |
 | `imsOrg` | Your organization's ID. |
 | `status` | The current status of the dataset expiration. |
 | `expiry` | The scheduled date and time when the dataset will be deleted. |
