@@ -9,7 +9,7 @@ exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 >
 >Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
 
-The `/ttl` endpoint in the Data Hygiene API allows you to schedule expiration dates for datasets in Adobe Experience Platform. This expiration date is a "time-to-live" (TTL) value ensures a finite lifespan of data within the system.
+The `/ttl` endpoint in the Data Hygiene API allows you to schedule expiration dates for datasets in Adobe Experience Platform.
 
 A dataset expiration is only a timed-delayed delete operation. The dataset is not protected in the interim, so it may be be deleted by other means before its expiry is reached.
 
@@ -146,11 +146,13 @@ A successful response returns the details of the dataset expiration.
 
 ```json
 {
-    "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+    "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
     "datasetId": "62759f2ede9e601b63a2ee14",
+    "datasetName": "XtVRwq9-38734",
+    "sandboxName": "prod",
     "imsOrg": "{ORG_ID}",
     "status": "pending",
-    "expiry": "2023-12-31T23:59:59Z",
+    "expiry": "2024-12-31T23:59:59Z",
     "updatedAt": "2024-05-11T15:12:40.393115Z",
     "updatedBy": "{USER_ID}",
     "displayName": "Delete Acme Data before 2025",
@@ -160,8 +162,10 @@ A successful response returns the details of the dataset expiration.
 
 | Property | Description |
 | --- | --- |
-| `workorderId` | The ID of the dataset expiration. |
+| `ttlId` | The ID of the dataset expiration. |
 | `datasetId` | The ID of the dataset that this expiration applies to. |
+| `datasetName` |  |
+| `sandboxName` |  |
 | `imsOrg` | Your organization's ID. |
 | `status` | The current status of the dataset expiration. |
 | `expiry` | The scheduled date and time when the dataset will be deleted. |
@@ -229,7 +233,7 @@ curl -X PUT \
 
 | Property | Description |
 | --- | --- |
-| `expiry` | A date and time in ISO 8601 format. If the string has no explicit time zone offset, the time zone is assumed to be UTC. A TTL will be created with the specified expiry. Any previous TTL for the same dataset will be replaced by the new TTL. |
+| `expiry` | A date and time in ISO 8601 format. If the string has no explicit time zone offset, the time zone is assumed to be UTC. The lifespan of data within the system is set according to the provided expiry value. Any previous expiration timestamp for the same dataset is be replaced by the new expiration value you have provided. |
 | `displayName` | A display name for the expiration request. |
 | `description` | An optional description for the expiration request. |
 
@@ -241,15 +245,15 @@ A successful response returns the details of the dataset expiration, with HTTP s
 
 ```json
 {
-    "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+    "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
     "datasetId": "5b020a27e7040801dedbf46e",
     "imsOrg": "{ORG_ID}",
     "status": "pending",
-    "expiry": "2032-12-31T23:59:59Z",
+    "expiry": "2024-12-31T23:59:59Z",
     "updatedAt": "2022-05-09T22:38:40.393115Z",
     "updatedBy": "{USER_ID}",
-    "displayName": "Example Expiration Request",
-    "description": "Cleanup identities required by JIRA request 12345 across all datasets in the prod sandbox."
+    "displayName": "Delete Acme Data before 2025",
+    "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
 }
 ```
 
@@ -394,9 +398,14 @@ The following table outlines the available query parameters when [listing datase
 | `page` | An integer that indicates which page of expirations to return. | `page=3` |
 | `orgId` | Matches datasets expirations whose organization ID matches that of the parameter. This value defaults to that of the `x-gw-ims-org-id` headers, and is ignored unless the request supplies a service token. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `status` | A comma-separated list of statuses. When included, the response matches dataset expirations whose current status is among those listed. | `status=pending,cancelled` |
-| `author` | Matches expirations whose `created_by` is a match for the search string. If the search string begins with `LIKE` or `NOT LIKE`, the remainder is treated as an SQL search pattern. Otherwise, the entire search string is treated as a literal string that must exactly match the entire content of a `created_by` field. | `author=LIKE %john%` |
+| `author` | Matches expirations whose `created_by` is a match for the search string. If the search string begins with `LIKE` or `NOT LIKE`, the remainder is treated as an SQL search pattern. Otherwise, the entire search string is treated as a literal string that must exactly match the entire content of a `created_by` field. | `author=LIKE %john%`, `author=John Q. Public` |
 | `sandboxName` | Matches dataset expirations whose sandbox name exactly matches the argument. Defaults to the sandbox name in the request's `x-sandbox-name` header. Use `sandboxName=*` to include dataset expirations from all sandboxes. | `sandboxName=dev1` |
 | `datasetId` | Matches expirations that apply to specific dataset. | `datasetId=62b3925ff20f8e1b990a7434` |
+| `ttlId` | Matches the expiration request with the given ID. | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
+| `search`  | Matches expirations where the specified string is an exact match for the expiration ID, or is **contained** in any of these fields:<br><ul><li>author</li><li>display name</li><li>description</li><li>display name</li><li>dataset name</li></ul> | `search=TESTING`  |
+| `displayName`  | Matches expirations whose display name contains the provided search string. The match is case-insensitive. | `displayName=License Expiry`  |
+| `datasetName`  | Matches expirations whose dataset name contains the provided search string. The match is case-insensitive.  | `datasetName=Acme`  |
+| `description`  |   | `description=Handle expiration of Acme information through the end of 2024.`  |
 | `createdDate` | Matches expirations that were created in the 24-hour window starting at the stated time.<br><br>Note that dates without a time (like `2021-12-07`) represent the datetime at the beginning of that day. Thus, `createdDate=2021-12-07` refers to any expiration created on 7 December 2021, from `00:00:00` through `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
 | `createdFromDate` | Matches expirations that were created at, or after, the indicated time. | `createdFromDate=2021-12-07T00:00:00Z` |
 | `createdToDate` | Matches expirations that were created at, or before, the indicated time. | `createdToDate=2021-12-07T23:59:59.999999999Z` |
