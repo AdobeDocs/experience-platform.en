@@ -2,19 +2,18 @@
 title: Zendesk connection
 description: The Zendesk destination allows you to export your account data and activate it within Zendesk for your business needs.
 last-substantial-update: 2023-03-14
-exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
 ---
 # [!DNL Zendesk] connection
 
 [[!DNL Zendesk]](https://www.zendesk.com) is a customer service solution and sales tool.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Zendesk] Contacts API](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/), to create and update identities within a segment as contacts within [!DNL Zendesk].
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Zendesk] Contacts API](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/), to **create and update identities** within a segment as contacts within [!DNL Zendesk].
 
 [!DNL Zendesk] uses bearer tokens as an authentication mechanism to communicate with the [!DNL Zendesk] Contacts API. Instructions to authenticate to your [!DNL Zendesk] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
-As a marketer, you can deliver personalized experiences to your users, based on attributes from their Adobe Experience Platform profiles. You can build segments from your offline data and send these segments to [!DNL Zendesk], to display in the users' feeds as soon as segments and profiles are updated in Adobe Experience Platform.
+The customer service department of a multichannel B2C platform wants to ensure a seamless personalized experience for its customers. The department can build segments from their own offline data to create new user profiles or update existing profile information from different interactions (for example purchases, returns etc.) and send these segments from Adobe Experience Platform to [!DNL Zendesk]. Having the updated information in [!DNL Zendesk] ensures the customer service agent has the recent information of the customer immediately available, enabling quicker responses and resolution.
 
 ## Prerequisites {#prerequisites}
 
@@ -113,21 +112,20 @@ To correctly map your XDM fields to the [!DNL Zendesk] destination fields, follo
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
-1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select custom attributes]** category and select an attribute as needed.
-    * Repeat these steps to add the following mappings between your XDM profile schema and your [!DNL Zendesk] instance:
+1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** category and select a target identity, or choose the **[!UICONTROL Select attributes]** category and select one of the supported schema attributes.
+    * Repeat these steps to add the following mandatory mappings, you can also add any other attributes you want to update between your XDM profile schema and your [!DNL Zendesk] instance:
         |Source Field|Target Field| Mandatory|
         |---|---|---|
-        |`xdm: person.name.lastName`|`Attribute: last_name` <br>or `Attribute: name`| Yes |
+        |`xdm: person.name.lastName`|`xdm: last_name`| Yes |
         |`IdentityMap: Email`|`Identity: email`| Yes |
+        |`xdm: person.name.firstName`|`xdm: first_name`| |
 
     * An example using these mappings is shown below:
     ![Platform UI screenshot example with attribute mappings.](../../assets/catalog/crm/zendesk/mappings.png)
 
-        >[!IMPORTANT]
-        >
-        >Both the target field mappings are mandatory and required for [!DNL Zendesk] to work.
-        >
-        >The mapping for *Last Name* or *Name* is required otherwise the [!DNL Zendesk] API does not respond with any error and any attribute value passed is ignored.
+>[!IMPORTANT]
+>
+>The `Attribute: last_name` and `Identity: email` target mappings are mandatory for this destination. If these mappings are missing, any other mappings are ignored and not sent to [!DNL Zendesk].
 
 When you are finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
@@ -166,3 +164,18 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 Additional useful information from the [!DNL Zendesk] documentation is below:
 * [Making your first call](https://developer.zendesk.com/documentation/sales-crm/first-call/)
 * [Custom Fields](https://developer.zendesk.com/api-reference/sales-crm/requests/#custom-fields)
+
+### Changelog
+
+This section captures the functionality and significant documentation updates made to this destination connector.
+
++++ View changelog
+
+|Release month|Update type|Description|
+|---|---|---|
+|April 2023|Documentation update| <ul><li>We updated the [use-cases](#use-cases) section with a clearer example of when customers would benefit from using this destination.</li> <li>We updated the [mapping](#mapping-considerations-example) section to reflect the correct required mappings. The `Attribute: last_name` and `Identity: email` target mappings are mandatory for this destination. If these mappings are missing, any other mappings are ignored and not sent to [!DNL Zendesk].</li> <li>We updated the [mapping](#mapping-considerations-example) section with clear examples of both mandatory and optional mappings.</li></ul> |
+|March 2023|Initial release|Initial destination release and documentation publish.|
+
+{style="table-layout:auto"}
+
++++
