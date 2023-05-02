@@ -31,7 +31,7 @@ The endpoint used in this guide is part of the Data Hygiene API. Before continui
 
 ## List dataset expirations {#list}
 
-You can list all dataset expirations for your organization by making a GET request.
+You can list all dataset expirations for your organization by making a GET request. Query parameters can be used to filter the response for appropriate results.
 
 **API format**
 
@@ -69,6 +69,8 @@ A successful response lists the resulting dataset expirations. The following exa
       "ttlId": "SD-c8e75921-2416-4bc7-9cfd-9eb01ba66c5f",
       "displayName": "Delete Acme Data before 2025",
       "description": "The Acme information in this dataset is licensed for our use through the end of 2024.",
+      "imsOrgId":    "885737B25DC460C50A49411B@AdobeOrg",
+      "datasetId":   "f440ac301c414bf1b6ba419162866346",
       "datasetName": "Sample Acme dataset",
       "sandboxName": "hygiene-beta",
       "expiry": "2024-07-07T13:14:15Z",
