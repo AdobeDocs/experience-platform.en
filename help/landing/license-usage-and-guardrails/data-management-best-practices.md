@@ -116,8 +116,6 @@ The Profile store is composed of the following components:
 
 {style="table-layout:auto"}
 
-
-
 #### Profile store Composition Reports
 
 There are a number of reports available to help you understand the composition of the Profile store. These reports help you make informed decisions about how and where to set your Experience Event expirations to better optimize your license usage:
@@ -126,6 +124,10 @@ There are a number of reports available to help you understand the composition o
 * **Identity Overlap Report API**: Exposes the identity namespaces that contribute the most to your Addressable Audience. See the tutorial on [generating the identity overlap report](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) for more information.
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
+
+#### Pseudonymous Profile data expirations {#pseudonymous-profile-expirations}
+
+This capability allows you to automatically remove stale Pseudonymous Profiles from the Profile Store. For more information on this feature, please read the [Pseudonymous Profile data expiration overview](../../profile/pseudonymous-profiles.md).
 
 #### Experience Event expirations {#event-expirations}
 
@@ -138,7 +140,7 @@ The following is a list of some recommended best practices that you can follow t
 * Use the [license usage dashboard](../../dashboards/guides/license-usage.md) to track and monitor customer usage trends. This allows you to get ahead of any potential overages that may incur.
 * Configure [ingestion filters](#ingestion-filters) by identifying the events required for your segmentation and personalization use cases. This allows you to send only important events required for your use cases.
 * Ensure that you have only [enabled datasets for profile](#ingestion-filters) that are required for your segmentation and personalization use cases. 
-* Configure an [Experience Event expiration](#event-expirations) for high-frequency data like web data.
+* Configure [Experience Event expirations](#event-expirations) and [Pseudonymous Profile data expirations](#pseudonymous-profile-expirations) for high-frequency data like web data.
 * Periodically check the [Profile Composition Reports](#profile-store-composition-reports) to understand your Profile store composition. This allows you to understand the data sources contributing most to your license usage consumption.
 
 ## Feature summary and availability {#feature-summary}
