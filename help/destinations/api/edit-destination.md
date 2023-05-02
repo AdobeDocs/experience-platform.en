@@ -190,9 +190,6 @@ Get the dataflow ID of the connection > obtain the target connection ID > PATCH 
 PATCH /targetConnections/{TARGET_CONNECTION_ID}
 ```
 
->[!ENDSHADEBOX]
-
-
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
@@ -238,11 +235,11 @@ A successful response returns your target connection ID and an updated Etag. You
 }
 ```
 
->[!TAB Google Ad Manager 360]
+>[!TAB Google Ad Manager and Google Ad Manager 360]
 
 **Request**
 
-The following request updates the parameters of a [[!DNL Google Ad Manager 360] destination](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) connection to add the new append segment ID to segment name field.
+The following request updates the parameters of a [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) or [[!DNL Google Ad Manager 360] destination](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) connection to add the new [**[!UICONTROL Append segment ID to segment name]**](/help/release-notes/2023/april-2023.md#destinations) field.
 
 ```shell
 curl -X PATCH \
@@ -322,6 +319,8 @@ A successful response returns your target connection ID and an updated etag. You
 
 >[!ENDTABS]
 
+>[!ENDSHADEBOX]
+
 ## Edit base connection components (authentication parameters and other components) {#patch-base-connection}
 
 The components of a base connection differ by destination. For example, for [!DNL Amazon S3] destinations, you can update the access key and secret key to your [!DNL Amazon S3] location. 
@@ -334,11 +333,13 @@ Remember, you got your base connection ID in a previous step, when you inspected
 >
 >The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the base connection you want to update. The etag value updates with every successful update of a flow entity such as dataflow, base connection, and others.
 >
-> To get the latest version of the etag value, perform a GET request to the `/connections/{BASE_CONNECTION_ID}` endpoint, where `{BASE_CONNECTION_ID}` is the base connection ID that you are looking to update.
+> To get the latest version of the Etag value, perform a GET request to the `/connections/{BASE_CONNECTION_ID}` endpoint, where `{BASE_CONNECTION_ID}` is the base connection ID that you are looking to update.
 
 Below are a few examples of updating parameters in the base connection spec for different types of destinations. But the general rule to update parameters for any destination is as follows: 
 
 Get the dataflow ID of the connection > obtain the base connection ID > PATCH the base connection with updated values for the desired parameters.
+
+>[!BEGINSHADEBOX]
 
 **API format**
 
@@ -434,6 +435,8 @@ A successful response returns your base connection ID and an updated etag. You c
 ```
 
 >[!ENDTABS]
+
+>[!ENDSHADEBOX]
 
 ## API error handling {#api-error-handling}
 
