@@ -166,7 +166,7 @@ If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, you must crea
 
 ## Step 6: Test your destination {#test-destination}
 
-After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](../testing-api/streaming-destination-testing-overview.md) to test the integration between Adobe Experience Platform and your destination.
+After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) to test the integration between Adobe Experience Platform and your destination.
 
 As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create segments in Experience Platform:
 

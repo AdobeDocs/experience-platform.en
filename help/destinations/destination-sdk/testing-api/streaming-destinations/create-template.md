@@ -12,7 +12,7 @@ As part of Destination SDK, Adobe provides developer tools to assist you in conf
 
 To **create and test a message transformation template** between the target schema in Adobe Experience Platform and the message format supported by your destination, use the *Template authoring tool* described further below.  Read more about the data transformation between source and target schema in the [message format document](../../functionality/destination-server/message-format.md#using-templating).
 
-Illustrated below is how creating and testing a message transformation template fits into the [destination configuration workflow](../guides/configure-destination-instructions.md) in Destination SDK:
+Illustrated below is how creating and testing a message transformation template fits into the [destination configuration workflow](../../guides/configure-destination-instructions.md) in Destination SDK:
 
 ![Graphic of where the create template step fits into the destination configuration workflow](../../assets/testing-api/create-template-step.png)
 
@@ -160,12 +160,12 @@ You can use an online character escaping tool. The demo above uses the [JSON Esc
 
 ## Render template API {#render-template-api}
 
-After creating a message transformation template using the [sample template API](../testing-api/streaming-destinations/create-template.md#sample-template-api), you can [render the template](../testing-api/streaming-destinations/render-template-api.md) to generate exported data based on it. This allows you to verify if the profiles that Adobe Experience Platform would export to your destination match your destination's expected format.
+After creating a message transformation template using the [sample template API](create-template.md#sample-template-api), you can [render the template](render-template-api.md) to generate exported data based on it. This allows you to verify if the profiles that Adobe Experience Platform would export to your destination match your destination's expected format.
 
 Refer to the API reference for examples of calls that you can make:
 
-* [Render a template with no profiles sent in body](../../testing-api/streaming-destinations/render-template-api.md#multiple-profiles-no-body)
-* [Render a template with profiles sent in body](../../testing-api/streaming-destinations/render-template-api.md#multiple-profiles-with-body)
+* [Render a template with no profiles sent in body](render-template-api.md#multiple-profiles-no-body)
+* [Render a template with profiles sent in body](render-template-api.md#multiple-profiles-with-body)
 
 Edit the template and make calls to the render template API endpoint until the exported profiles match your destination's expected data format.
 
