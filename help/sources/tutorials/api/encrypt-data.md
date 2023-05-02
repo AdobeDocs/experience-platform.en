@@ -19,7 +19,7 @@ The encrypted data ingestion process is as follows:
 
 >[!IMPORTANT]
 >
->The maximum size of a single encrypted file is 1 GB. For example, you can ingest 2 GB worth of data in a single dataflow run, however, any individual file in that data cannot exceed 1 GB.
+>The maximum size of a single encrypted file is 1 GB. For example, you can ingest 2 GBs worth of data in a single dataflow run, however, any individual file in that data cannot exceed 1 GB.
 
 This document provides steps on how to generate a encryption key pair to encrypt your data, and ingest that encrypted data to Experience Platform using cloud storage sources.
 
