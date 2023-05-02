@@ -6,8 +6,6 @@ exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
 
 # Generate sample profiles based on a source schema
 
-## Overview {#overview}
-
 The first step in testing your file-based destination is to use the `/sample-profiles` endpoint to generate a sample profile based on your existing source schema.
 
 Sample profiles can help you understand the JSON structure of a profile. Additionally, they give you a default that you can customize with your own profile data, for further destination testing.

@@ -1,11 +1,9 @@
 ---
-description: As part of Destination SDK, Adobe provides developer tools to assist you in configuring and testing your destination. This page describes how to test your destination configuration.
+description: Learn how to use the destination testing API to test your streaming destination configuration before publishing it.
 title: Test your destination configuration
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
 ---
-# Test your destination configuration {#developer-tools}
-
-## Overview {#overview}
+# Test your streaming destination configuration {#developer-tools}
 
 As part of Destination SDK, Adobe provides developer tools to assist you in configuring and testing your destination. This page describes how to test your destination configuration. For information on how to create a message transformation template, read [Create and test a message transformation template](../../testing-api/streaming-destinations/create-template.md).
 
