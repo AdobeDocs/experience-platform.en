@@ -14,6 +14,7 @@ Updates to existing features in Adobe Experience Platform:
 - [Data Collection](#data-collection)
 - [Destinations](#destinations)
 - [Experience Data Model](#xdm)
+- [Real-Time Customer Data Platform](#rtcdp)
 - [Real-Time Customer Profile](#profile)
 - [Sources](#sources)
 
@@ -128,6 +129,19 @@ XDM is an open-source specification that provides common structures and definiti
 {style="table-layout:auto"}
 
 For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).
+
+## Real-Time Customer Data Platform
+
+Built on Experience Platform, Real-Time Customer Data Platform ([!DNL Real-Time CDP]) helps companies bring together known and unknown data to activate customer profiles with intelligent decisioning throughout the customer journey. [!DNL Real-Time CDP] combines multiple enterprise data sources to create customer profiles in real time. Segments built from these profiles can then be sent to downstream destinations in order to provide one-to-one personalized customer experiences across all channels and devices.
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Enhanced Real-Time CDP home page | The [Real-Time CDP home page](https://experience.adobe.com) has been enhanced with a refreshed look and improved performance. The home page is now permissions-aware and will present widgets relevant to the features that you have access to. For more information, read the [Real-Time CDP home page dashboard overview](../../rtcdp/home-page-dashboards.md). |
+| Self-identification survey | The self-identification survey is a short questionnaire presented in the Adobe Experience Platform UI home page. Use the self-identification survey to build your Experience Platform personal profile and receive tailored guidelines based on your selections. For more information, read the [self-identification survey overview](../../landing/self-identification.md). |
+
+For more information on [!DNL Real-Time CDP], see the [[!DNL Real-Time CDP] overview](../../rtcdp/overview.md).
 
 ## Real-Time Customer Profile {#profile}
 
