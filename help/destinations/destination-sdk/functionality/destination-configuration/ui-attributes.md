@@ -72,13 +72,13 @@ Users can see the list of destination categories on the left side of the screen 
 
 ![UI image showing the destination category location.](../../assets/functionality/destination-configuration/ui-attributes-category.png)
 
-### `iconUrl` {#icon-url}
+<!-- ### `iconUrl` {#icon-url}
 
 `iconUrl` is a string parameter that refers to the URL where you hosted the icon to be displayed in the destinations catalog card. For private custom integrations, this is not required. For productized configurations, you need to share an icon with the Adobe team when you [submit the destination for review](../../guides/submit-destination.md#logo).
 
 Users can see the icon on your destination card, as shown in the image below.
 
-![UI image showing the icon location.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+![UI image showing the icon location.](../../assets/functionality/destination-configuration/ui-attributes-icon.png) -->
 
 ### `connectionType` {#connection-type}
 

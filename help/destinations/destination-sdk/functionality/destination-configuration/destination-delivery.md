@@ -50,6 +50,70 @@ The `deliveryMatchers` section is optional and can be used if you are specifying
       }
    ]
 ```
+^ file-based
+
+
+```json
+ "destinationDelivery":[
+      {
+         "deliveryMatchers":[
+            {
+               "type":"SOURCE",
+               "value":[
+                  "realtime"
+               ]
+            }
+         ],
+         "authenticationRule":"CUSTOMER_AUTHENTICATION",
+         "destinationServerId":"{{destinationServerId}}"
+      },
+      {
+         "deliveryMatchers":[
+            {
+               "type":"SOURCE",
+               "value":[
+                  "batch"
+               ]
+            }
+         ],
+         "authenticationRule":"CUSTOMER_AUTHENTICATION",
+         "destinationServerId":"{{destinationServerId}}"
+      }
+   ]
+```
+^realtime
+
+
+```json
+ "destinationDelivery":[
+      {
+         "deliveryMatchers":[
+            {
+               "type":"ACTION",
+               "value":[
+                  "add"
+               ]
+            }
+         ],
+         "authenticationRule":"CUSTOMER_AUTHENTICATION",
+         "destinationServerId":"{{destinationServerId}}"
+      },
+      {
+         "deliveryMatchers":[
+            {
+               "type":"ACTION",
+               "value":[
+                  "remove"
+               ]
+            }
+         ],
+         "authenticationRule":"CUSTOMER_AUTHENTICATION",
+         "destinationServerId":"{{destinationServerId}}"
+      }
+   ]
+```
+
+
 
 |Parameter | Type | Description|
 |---------|----------|------|
@@ -59,6 +123,9 @@ The `deliveryMatchers` section is optional and can be used if you are specifying
 |`destinationServerId` | String | The `instanceId` of the [destination server configuration](../../authoring-api/destination-server/create-destination-server.md) that you created for this destination. |
 
 {style="table-layout:auto"}
+
+DYNAMIC AUTHENTICATION
+* 
 
 ## Next steps {#next-steps}
 

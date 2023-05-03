@@ -18,7 +18,6 @@ You can configure the template specs for your destination via the `/authoring/de
 * [Create a destination server configuration](../../authoring-api/destination-server/create-destination-server.md)
 * [Update a destination server configuration](../../authoring-api/destination-server/update-destination-server.md)
 
-
 ## Supported integration types {#supported-integration-types}
 
 Refer to the table below for details on which types of integrations support the functionality described on this page.
