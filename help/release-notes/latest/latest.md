@@ -56,6 +56,8 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 | --- | --- |
 | IP address obfuscation for datastreams | You can now define partial or full datastream-level IP obfuscation options in the [datastream configuration UI](../../edge/datastreams/configure.md). <br><br>The datastream-level IP obfuscation setting takes precedence over any IP obfuscation configured in Adobe Target and Audience Manager. <br><br>Data sent to Adobe Analytics is not impacted by the datastream-level [!UICONTROL IP Obfuscation] setting. Adobe Analytics currently receives unobfuscated IP addresses. For Analytics to receive obfuscated IP addresses, you must configure IP obfuscation separately, in Adobe Analytics. This behavior will be updated in future releases.<br><br> For more details about IP obfuscation and instructions on how to configure it, see the [datastream configuration documentation](../../edge/datastreams/configure.md#advanced-options). |
 | [Datastream configuration overrides](../../edge/datastreams/overrides.md) | You can now define additional configuration options for datastreams, which you can use to override specific settings, such as event datasets, Target property tokens, ID sync containers, and Analytics report suites. <br><br>Overriding datastream configurations is a two step process: <ol><li>First, you must define your datastream configuration overrides in the [datastream configuration page](../../edge/datastreams/configure.md).</li><li>Then, you must send the overrides to the Edge Network either via a Web SDK command, or by using the Web SDK [tag extension](../../edge/extension/web-sdk-extension-configuration.md).</li></ol>|
+| OAuth JWT Secret | The [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) allows customers to use Adobe and Google Service tokens to support server-to-server interactions in Event Forwarding. |
+| [!DNL Pinterest Conversions API] extension | The [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) event forwarding extension allows you to leverage data captured in Adobe Experience Platform Edge Network and send it to [!DNL Pinterest] in the form of server-side events using the [!DNL Pinterest Conversions API]. |
 
 {style="table-layout:auto"}
 
@@ -105,6 +107,26 @@ XDM is an open-source specification that provides common structures and definiti
 
 {style="table-layout:auto"}
 
+**New XDM components**
+
+| Component type | Name | Description |
+| --- | --- | --- |
+| Schema | [[!UICONTROL Adobe Target Classification Fields]](https://github.com/adobe/xdm/pull/1719/files)  | A new XDM schema for Target Classification datasets containing a set of meta-data fields to classify Target activities and experiences.|
+
+{style="table-layout:auto"}
+
+**Updated XDM components**
+
+| Component type | Name | Description |
+| --- | --- | --- |
+| Field Group | [[!UICONTROL Adobe Unified Profile Service Account Union Extension]](https://github.com/adobe/xdm/pull/1696/files)  | Added an account-extension field group for Real-Time Customer Profile that enables users to add segment membership on Account union. |
+| Schema | [[!UICONTROL Computed Attributes System Schema]](https://github.com/adobe/xdm/pull/1696/files) | The Computed attributes field group used by Real-Time Customer Profile has been updated to a system read-only global schema. |
+| Field Group | Multiple  | Added several events as fields for [[!UICONTROL Time-series Schema]](https://github.com/adobe/xdm/pull/1718/files). |
+| Field Group | Profile Loyalty Details | [Fixed the title](https://github.com/adobe/xdm/pull/1717/files) for `xdm:upgradeDate` from "Program Name" to "Upgrade Date". |
+| Field Group | Multiple | Several fields from [[!UICONTROL Decision Item]](https://github.com/adobe/xdm/pull/1714/files) have been updated to remove the double nested hierarchy. |
+
+{style="table-layout:auto"}
+
 For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).
 
 ## Real-Time Customer Profile {#profile}
@@ -116,6 +138,8 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 | Feature | Description |
 | ------- | ----------- |
 | Pseudonymous profile data expiry | Pseudonymous profile data expiry is now generally available! This release will continuously remove stale pseudonymous profiles from your Experience Platform instance once enabled. To learn more about this feature and Pseudonymous Profiles, please read the [Pseudonymous Profile data expiration guide](../../profile/pseudonymous-profiles.md). |
+
+{style="table-layout:auto"}
 
 ## Sources {#sources}
 
