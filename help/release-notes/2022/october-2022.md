@@ -8,16 +8,11 @@ exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
 **Release date: October 26, 2022**
 
 - [Customer-managed keys](#cmk)
-
-Updates to existing features in Adobe Experience Platform:
-
-- [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
-  - [Customer-managed keys {#cmk}](#customer-managed-keys-cmk)
-  - [Data collection {#data-collection}](#data-collection-data-collection)
-  - [\[!DNL Destinations\] {#destinations}](#dnl-destinations-destinations)
-  - [Experience Data Model (XDM) {#xdm}](#experience-data-model-xdm-xdm)
-  - [Query Service {#query-service}](#query-service-query-service)
-  - [Sources {#sources}](#sources-sources)
+- [Data collection](#data-collection)
+- [Destinations](#destinations)
+- [Experience Data Model](#xdm)
+- [Query Service](#query-service)
+- [Sources](#sources-sources)
 
 ## Customer-managed keys {#cmk}
 
