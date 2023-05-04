@@ -5,9 +5,28 @@ exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
 ---
 # Accessing the ECID
 
-The [!DNL Experience Cloud Identity (ECID)] is a persistent identifier for a visitor to your website. In certain circumstances, you might prefer to access the ECID (to send it to a third party, for example).
+The [!DNL Experience Cloud Identity (ECID)] is a persistent identifier for a visitor to your website. In certain circumstances, you might prefer to access the ECID (to send it to a third party, for example). Another use case is setting the ECID in a custom XDM field, in addition to having it in the Identity Map.
 
-To access the ECID within tags, Adobe recommends the following:
+To access the ECID, Adobe recommends the following:
+
+
+## Data prep (Preferred method)
+
+If you are looking to set the ECID in a custom XDM field, in addition to having it in the Identity Map, this method is for you.
+
+You can access the ECID in [Data Prep](../datastreams/data-prep.md) by setting the `source` to the following path:
+
+```javascript
+xdm.identityMap.ECID[0].id
+```
+
+Set the target to an XDM path where the field is of type string.
+
+
+
+## Tags
+
+If you need to access the ECID on the client side, use this method.
 
 1. Ensure your property is configured with [rule component sequencing](../../tags/ui/managing-resources/rules.md#sequencing) enabled. 
 1. Create a new rule.
