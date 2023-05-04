@@ -56,6 +56,10 @@ A user visits several pages on your website. Based on these interactions, the us
 
 The following day, the user returns to the same customer website. The segments they had qualified for during the previous interaction with all the visited website pages, together with the profile updates determined by the current website visit, will be used to select the next action / decision (for example, which advertising banner to display to the visitor, or, in case of A/B testing, which version of the page to display).
 
+### Personalizing a home page banner {#home-page-banner}
+
+A home rental and sales company wants to personalize their home page with a banner, based on customer segment qualifications in Adobe Experience Platform. The company can select what audiences should get a personalized experience and send those to Adobe Target as targeting criteria for their Target offer.
+
 ## Prerequisites {#prerequisites}
 
 ### Configure a datastream in the Data Collection UI {#configure-datastream}
@@ -72,7 +76,9 @@ For more details on how to set up a datastream, follow the instructions describe
 
 After you have created your destination connection, you must create an [!DNL Active-On-Edge] merge policy. The [!DNL Active-On-Edge] merge policy ensures that segments are constantly evaluated [on the edge](../../segmentation/ui/edge-segmentation.md) and are available for real-time and next-page personalization use case.
 
-Currently, edge destinations only support the activation of segments that use the [Active-on-Edge Merge Policy](../../segmentation/ui/segment-builder.md#merge-policies) set as default.
+>[!IMPORTANT]
+>
+>Currently, edge destinations only support the activation of segments that use the [Active-on-Edge Merge Policy](../../segmentation/ui/segment-builder.md#merge-policies) set as default. If you map segments which use a different merge policy to edge destinations, those segments will not be evaluated.
 
 Follow the instructions on [creating a merge policy](../../profile/merge-policies/ui-guide.md#create-a-merge-policy), and make sure to enable the **[!UICONTROL Active-On-Edge Merge Policy]** toggle.
 
@@ -119,6 +125,14 @@ Use the check boxes to the left of the segment names to select the segments that
 
 ## Map attributes {#map-attributes}
 
+>[!IMPORTANT]
+>
+>Profile attributes may contain sensitive data. To protect this data, the **[!UICONTROL Custom Personalization]** destination requires you to use the [Edge Network Server API](/help/server-api/overview.md) when configuring the destination for attribute-based personalization. All the Server API calls must be made in an [authenticated context](../../../server-api/authentication.md).
+>
+><br>If you are already using Web SDK or Mobile SDK for your integration, you can retrieve attributes via the Server API by adding a server-side integration.
+>
+><br>If you do not follow the requirements above, personalization will be based on segment membership only.
+
 Select the attributes based on which you want to enable personalization use cases for your users. This means that if the value of an attribute changes or if an attribute is added to a profile, that profile will become a member of the segment and will be activated to the personalization destination.
 
 Adding attributes is optional and you can still proceed to the next step and enable same-page and next-page personalization without selecting attributes. If you do not add any attributes in this step, personalization will still occur based on the segment membership and identity map qualifications for profiles.
@@ -132,12 +146,6 @@ To add source attributes, select the **[!UICONTROL Add new field]** control on t
 ![Screen recording showing how to select a target attribute in the mapping step](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
 ### Select target attributes {#select-target-attributes}
-
->[!NOTE]
->
->Some destinations require you to only select source attributes, while others require both source and target attributes.
->
->Currently, the [Adobe Target V2](../catalog/personalization/adobe-target-connection.md) destination requires only source attributes, while [Custom Personalization with Attributes](../catalog/personalization/custom-personalization.md) requires both source and target attributes.
 
 To add target attributes, select the **[!UICONTROL Add new field]** control on the **[!UICONTROL Target field]** column and type in the custom attribute name that you want to map the source attribute to.
 

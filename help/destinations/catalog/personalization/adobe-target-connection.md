@@ -52,12 +52,6 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
-## Use cases {#use-cases}
-
-**Personalizing a home page banner**
-
-A home rental and sales company wants to personalize their home page with a banner, based on customer segment qualifications in Adobe Experience Platform. The company can select what audiences should get a personalized experience and send those to Adobe Target as targeting criteria for their Target offer.
-
 ## Connect to the destination {#connect}
 
 >[!CONTEXTUALHELP]
