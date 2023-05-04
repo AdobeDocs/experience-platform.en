@@ -2,13 +2,12 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment definition;segment definitions;api;API;
 solution: Experience Platform
 title: Segment Definitions API Endpoint
-topic-legacy: developer guide
 description: The segment definitions endpoint in the Adobe Experience Platform Segmentation Service API allows you to programmatically manage segment definitions for your organization.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
 ---
 # Segment definitions endpoint
 
-Adobe Experience Platform allows you to create segments that define a group of specific attributes or behaviors from a group of profiles. A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). This object is also called a PQL predicate. PQL predicates define the rules for the segment based on conditions related to any record or time-series data you supply to [!DNL Real-time Customer Profile]. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
+Adobe Experience Platform allows you to create segments that define a group of specific attributes or behaviors from a group of profiles. A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). This object is also called a PQL predicate. PQL predicates define the rules for the segment based on conditions related to any record or time-series data you supply to [!DNL Real-Time Customer Profile]. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
 
 This guide provides information to help you better understand segment definitions and includes sample API calls for performing basic actions using the API.
 
@@ -18,7 +17,7 @@ The endpoints used in this guide are part of the [!DNL Adobe Experience Platform
 
 ## Retrieve a list of segment definitions {#list}
 
-You can retrieve a list of all segment definitions for your IMS Organization by making a GET request to the `/segment/definitions` endpoint.
+You can retrieve a list of all segment definitions for your organization by making a GET request to the `/segment/definitions` endpoint.
 
 **API format**
 
@@ -41,7 +40,7 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 
 **Request**
 
-The following request will retrieve the last two segment definitions posted within your IMS Organization.
+The following request will retrieve the last two segment definitions posted within your organization.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 \
@@ -53,7 +52,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 **Response**
 
-A successful response returns HTTP status 200 with a list of segment definitions for the specified IMS organization as JSON.
+A successful response returns HTTP status 200 with a list of segment definitions for the specified organization as JSON.
 
 ```json
 {
@@ -173,6 +172,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
             "format": "pql/text",
             "value": "workAddress.country = \"US\""
         },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": true
+            },
+            "continuous": {
+                "enabled": false
+            },
+            "synchronous": {
+                "enabled": false
+            }
+        },
         "schema": {
             "name": "_xdm.context.profile"
         },
@@ -184,6 +194,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | Property | Description |
 | -------- | ----------- |
 | `name` | **Required.** A unique name by which to refer to the segment. |
+| `description` | A description of the segment definition you are creating. |
+| `evaluationInfo` | The type of segment you are creating. If you want to create a batch segment, set `evaluationInfo.batch.enabled` to be true. If you want to create a streaming segment, set `evaluationInfo.continuous.enabled` to be true. If you want to create an edge segment, set `evaluationInfo.synchronous.enabled` to be true. If left empty, the segment will be created as a **batch** segment. |
 | `schema` | **Required.** The schema associated with the entities in the segment. Consists of either an `id` or `name` field. |
 | `expression` | **Required.** An entity that contains fields information about the segment definition. |
 | `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |
@@ -191,11 +203,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
 | `description` | A human-readable description of the definition. |
 
->[!NOTE]
+<!-- >[!NOTE]
 >
 >A segment definition expression may also reference a computed attribute. To learn more, please refer to the [computed attribute API endpoint guide](../../profile/computed-attributes/ca-api.md)
 >
->Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change.
+>Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change. -->
 
 **Response**
 
@@ -246,7 +258,7 @@ A successful response returns HTTP status 200 with details of your newly created
 | Property | Description |
 | -------- | ----------- |
 | `id` | A system-generated ID of your newly created segment definition. |
-| `evaluationInfo` | A system-generated object that tells what type of evaluation the segment definition will undergo. It can be batch, continuous (also known as streaming), or synchronous segmentation. |
+| `evaluationInfo` | An object that indicates what type of evaluation the segment definition will undergo. It can be batch, streaming (also known as continuous), or edge (also known as synchronous) segmentation. |
 
 ## Retrieve a specific segment definition {#get}
 
@@ -328,7 +340,7 @@ A successful response returns HTTP status 200 with detailed information about th
 | `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
 | `description` | A human readable description of the definition. |
-| `evaluationInfo` | A system-generated object that tells what type of evaluation, batch, continuous (also known as streaming), or synchronous, the segment definition will undergo. |
+| `evaluationInfo` | An object that indicates what type of evaluation, batch, streaming (also known as continuous), or edge (also known as synchronous), the segment definition will undergo. |
 
 ## Bulk retrieve segment definitions {#bulk-get}
 
@@ -461,7 +473,7 @@ A successful response returns HTTP status 207 with the requested segment definit
 | `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
 | `description` | A human readable description of the definition. |
-| `evaluationInfo` | A system-generated object that tells what type of evaluation, batch, continuous (also known as streaming), or synchronous, the segment definition will undergo. |
+| `evaluationInfo` | An object that indicates what type of evaluation, batch, streaming (also known as continuous), or edge (also known as synchronous), the segment definition will undergo. |
 
 ## Delete a specific segment definition {#delete}
 

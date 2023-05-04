@@ -2,7 +2,6 @@
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;%dataset;interactive mode;batch mode;Spark sdk;python sdk;access data;notebook data access
 solution: Experience Platform
 title: Data Access in Jupyterlab Notebooks
-topic-legacy: Developer Guide
 description: This guide focuses on how to use Jupyter Notebooks, built within Data Science Workspace to access your data.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
 ---
@@ -514,7 +513,7 @@ df1.show(10)
 | df1 | A variable that represents the Pandas dataframe used to read and write data. |
 | user-token | Your user token that is automatically fetched using `clientContext.getUserToken()`.  |
 | service-token | Your service token that is automatically fetched using `clientContext.getServiceToken()`. |
-| ims-org | Your IMS Org ID that is automatically fetched using `clientContext.getOrgId()`. |
+| ims-org | Your organization ID that is automatically fetched using `clientContext.getOrgId()`. |
 | api-key | Your API key that is automatically fetched using `clientContext.getApiKey()`. |
 
 >[!TIP]
@@ -566,7 +565,7 @@ df1.write.format("com.adobe.platform.query")
 | df1 | A variable that represents the Pandas dataframe used to read and write data. |
 | user-token | Your user token that is automatically fetched using `clientContext.getUserToken()`.  |
 | service-token | Your service token that is automatically fetched using `clientContext.getServiceToken()`. |
-| ims-org | Your IMS Org ID that is automatically fetched using `clientContext.getOrgId()`. |
+| ims-org | Your organization ID that is automatically fetched using `clientContext.getOrgId()`. |
 | api-key | Your API key that is automatically fetched using `clientContext.getApiKey()`. |
 
 >[!TIP]

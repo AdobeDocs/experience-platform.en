@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;Supported validation;Validation;supported validation;
 solution: Experience Platform
 title: Data Quality
-topic-legacy: overview
 description: The following document provides a summary of the supported checks and validation behaviors for batch and streaming ingestion in Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
 ---
@@ -44,7 +43,7 @@ The following validations are done for streaming ingestion:
 | Schema | Ensures that the schema is **not** empty and contains a reference to the union schema, as follows: `"meta:immutableTags": ["union"]` |
 | `identityField` | Ensures that all valid identity descriptors are defined. |
 | JSON | Ensures that the JSON is valid. |
-| IMS Organization | Ensures that the IMS Organization that is listed is a valid organization. |
+| Organization | Ensures that the organization that is listed is a valid organization. |
 | Source name | Ensures that the name of the data source is specified. |
 | Dataset | Ensures that the dataset is specified, enabled, and has not been removed. |
 | Header | Ensures that the header is specified and is valid. |

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;enum;mixin;Field group;Field groups;mixins;data type;data types;Data types;Data type;primary identity;primary idenity;XDM individual profile;XDM fields;enum datatype;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;class;Class;classes;Classes;datatype;Datatype;data type;Data type;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
 solution: Experience Platform
 title: Basics of Schema Composition
-topic-legacy: overview
 description: This document provides an introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas to be used in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 ---
@@ -52,7 +51,7 @@ Both record and time series schemas contain a map of identities (`xdm:identityMa
 
 Schemas are used for ingesting data into [!DNL Experience Platform]. This data can be used across multiple services to create a single, unified view of an individual entity. Therefore, it is important when thinking about schemas to think about customer identities and which fields can be used to identify a subject regardless of where the data may be coming from. 
 
-To help with this process, key fields within your schemas can be marked as identities. Upon data ingestion, the data in those fields is inserted into the "[!UICONTROL Identity Graph]" for that individual. The graph data can then be accessed by [[!DNL Real-time Customer Profile]](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
+To help with this process, key fields within your schemas can be marked as identities. Upon data ingestion, the data in those fields is inserted into the "[!UICONTROL Identity Graph]" for that individual. The graph data can then be accessed by [[!DNL Real-Time Customer Profile]](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
 
 Fields that are commonly marked as "[!UICONTROL Identity]" include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID, or other unique ID fields. You should also consider any unique identifiers specific to your organization, as they may be good "[!UICONTROL Identity]" fields as well.
 
@@ -71,7 +70,7 @@ The main drawback of using `identityMap` is that identities become embedded in t
 
 >[!NOTE]
 >
->A schema that uses `identityMap` can be used as a source schema in a relationship, but cannot be used as a destination schema. This is because all destination schemas must have a visible identity that can be mapped in a reference field within the source schema. Refer to the UI guide on [relationships](../tutorials/relationship-ui.md) for more information on the requirements of source and destination schemas.
+>A schema that uses `identityMap` can be used as a source schema in a relationship, but cannot be used as a reference schema. This is because all reference schemas must have a visible identity that can be mapped in a reference field within the source schema. Refer to the UI guide on [relationships](../tutorials/relationship-ui.md) for more information on the requirements of source and reference schemas.
 
 However, identity maps can be particularly useful if you are bringing in data from sources that store identities together (such as [!DNL Airship] or Adobe Audience Manager), or when there are a variable number of identities for a schema. In addition, identity maps are required if you are using the [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
@@ -82,7 +81,7 @@ An example of a simple identity map would look like the following:
   "email": [
     {
       "id": "jsmith@example.com",
-      "primary": false
+      "primary": true
     }
   ],
   "ECID": [
@@ -95,10 +94,10 @@ An example of a simple identity map would look like the following:
       "primary": false
     }
   ],
-  "loyaltyId": [
+  "CRMID": [
     {
       "id": "2e33192000007456-0365c00000000000",
-      "primary": true
+      "primary": false
     }
   ]
 }
@@ -108,7 +107,7 @@ As the example above shows, each key in the `identityMap` object represents an i
 
 >[!NOTE]
 >
->A boolean value for whether the value is a primary identity (`primary`) can also be provided for each identity value. Primary identities only need to be set for schemas intended to be used in [!DNL Real-time Customer Profile]. See the section on [union schemas](#union) for more information.
+>A boolean value for whether the value is a primary identity (`primary`) can also be provided for each identity value. Primary identities only need to be set for schemas intended to be used in [!DNL Real-Time Customer Profile]. See the section on [union schemas](#union) for more information.
 
 ### Schema evolution principles {#evolution}
 
@@ -118,7 +117,7 @@ Since maintaining backwards compatibility is crucial for schema evolution, [!DNL
 
 >[!NOTE]
 >
->If a schema has not yet been used to ingest data into [!DNL Experience Platform] and hasn't been enabled for use in Real-time Customer Profile, you may introduce a breaking change to that schema. However, once the schema has been used in [!DNL Platform], it must adhere to the additive versioning policy.
+>If a schema has not yet been used to ingest data into [!DNL Experience Platform] and hasn't been enabled for use in Real-Time Customer Profile, you may introduce a breaking change to that schema. However, once the schema has been used in [!DNL Platform], it must adhere to the additive versioning policy.
 
 The following table breaks down which changes are supported when editing schemas, field groups, and data types:
 
@@ -130,7 +129,7 @@ The following table breaks down which changes are supported when editing schemas
 
 ### Required fields
 
-Individual schema fields can be [marked as required](../ui/fields/required.md), which means that any ingested records must contain data in those fields in order to pass validation. For example, setting a schema's primary identity field as required can help ensure that all ingested records will participate in Real-time Customer Profile, while setting a timestamp field as required ensures that all time-series events are chronologically preserved.
+Individual schema fields can be [marked as required](../ui/fields/required.md), which means that any ingested records must contain data in those fields in order to pass validation. For example, setting a schema's primary identity field as required can help ensure that all ingested records will participate in Real-Time Customer Profile, while setting a timestamp field as required ensures that all time-series events are chronologically preserved.
 
 >[!IMPORTANT]
 >
@@ -143,7 +142,7 @@ If a field has been used to ingest data and was not originally set as required, 
 When setting a previously optional field as required, keep the following in mind:
 
 1. If you query historical data and write the results into a new dataset, some rows will fail because they contain null values for the required field.
-1. If the field participates in [Real-time Customer Profile](../../profile/home.md) and you export data before setting it as required, it may be null for some profiles.
+1. If the field participates in [Real-Time Customer Profile](../../profile/home.md) and you export data before setting it as required, it may be null for some profiles.
 1. You can use the Schema Registry API to view a timestamped changelog for all XDM resources in Platform, including new required fields. See the guide on the [audit log endpoint](../api/audit-log.md) for more information.
 
 ### Schemas and data ingestion
@@ -186,13 +185,18 @@ For the most up-to-date list of available standard XDM classes, refer to the [of
 >title="Field group"
 >abstract="Field groups are reusable components that allow you to extend schemas with additional attributes. Most field groups are only compatible with certain classes. You can use standard field groups defined by Adobe or you can manually define your own custom field groups. See the documentation to learn more about how field groups are involved in schema composition."
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup_requiredFieldgroup"
+>title="Required field group"
+>abstract="This field group is required by the source you are using. For this reason, you cannot delete it from your schema."
+
 A field group is a reusable component that defines one or more fields that implement certain functions such as personal details, hotel preferences, or address. Field groups are intended to be included as part of a schema that implements a compatible class. 
 
 Field groups define which class(es) they are compatible with based on the behavior of the data they represent (record or time series). This means that not all field groups are available for use with all classes.
 
 [!DNL Experience Platform] includes many standard Adobe field groups while also allowing vendors to define field groups for their users, and individual users to define field groups for their own specific concepts.
 
-For example, to capture details such as "[!UICONTROL First Name]" and "[!UICONTROL Home Address]" for your "[!UICONTROL Loyalty Members]" schema, you would be able to use standard field groups that define those common concepts. However, concepts that are specific to less-common use cases (such as "[!UICONTROL Loyalty Program Level]") often do not have a pre-defined field group. In this case, you must define your own field group to capture this information.
+For example, to capture details such as "[!UICONTROL First Name]" and "[!UICONTROL Home Address]" for your "[!UICONTROL Loyalty Members]" schema, you would be able to use standard field groups that define those common concepts. However, concepts that are more specific to your organization (such as custom loyalty program details or product attributes) that may not be covered by standard field groups. In this case, you must define your own field group to capture this information.
 
 >[!NOTE]
 >
@@ -210,11 +214,11 @@ For the most up-to-date list of available standard XDM field groups, refer to th
 
 ### Data type {#data-type}
 
-Data types are used as reference field types in classes or schemas in the same way as basic literal fields. The key difference is that data types can define multiple sub-fields. Similar to a field group, a data type allows for the consistent use of a multi-field structure, but has more flexibility than a field group because a data type can be included anywhere in a schema by adding it as the "data type" of a field.
+Data types are used as reference field types in classes or schemas in the same way as basic literal fields. The key difference is that data types can define multiple sub-fields. They can define multiple sub-fields in the same way as field groups, but the key difference is that data types can be included anywhere in a schema by adding it as the "data type" of a field. While field groups are only compatible with certain classes, data types can be included in any parent class or field group.
 
 [!DNL Experience Platform] provides a number of common data types as part of the [!DNL Schema Registry] to support the use of standard patterns for describing common data structures. This is explained in more detail in the [!DNL Schema Registry] tutorials, where it will become clearer as you walk through the steps to define data types.
 
-The following screenshot demonstrates how data types are represented in the Platform UI. One of the fields provided by the [!UICONTROL Demographic Details] field group uses the "[!UICONTROL Person name]" data type, as indicated by the text following the pipe character (`|`) next to the field's name. This particular data type provides several subfields that relate to the name of an individual person, a construct that can be reused for other fields where a person's name needs to be captured.
+The following screenshot demonstrates how data types are represented in the Platform UI. One of the fields provided by the [!UICONTROL Demographic Details] field group uses the "[!UICONTROL Object]" data type, as indicated by the text following the pipe character (`|`) next to the field's name. This particular data type provides several subfields that relate to the name of an individual person, a construct that can be reused for other fields where a person's name needs to be captured.
 
 ![](../images/schema-composition/data-type.png)
 
@@ -247,7 +251,7 @@ The valid ranges of these scalar types can be further constrained to certain pat
 
 >[!NOTE]
 >
->The "map" field type allows for key-value pair data, including multiple values for a single key. Maps can be found in standard XDM classes and field groups, but you can also define custom maps using the Schema Registry API. See the tutorial on [defining custom fields](../tutorials/custom-fields-api.md#maps) for more information.
+>The "map" field type allows for key-value pair data, including multiple values for a single key. Maps can be found in standard XDM classes and field groups, but you can also define custom maps using the Schema Registry API. See the tutorial on [defining custom fields](../tutorials/custom-fields-api.md#custom-maps) for more information.
 
 ## Composition example
 
@@ -267,9 +271,9 @@ While [!DNL Experience Platform] allows you to compose schemas for particular us
 
 ![](../images/schema-composition/union.png)
 
-By enabling a schema for use with [!DNL Real-time Customer Profile], it will be included in the union for that class type. [!DNL Profile] delivers robust, centralized profiles of customer attributes as well as a timestamped account of every event that customer has had across any system integrated with [!DNL Platform]. [!DNL Profile] uses the union view to represent this data and provide a holistic view of each individual customer.
+By enabling a schema for use with [!DNL Real-Time Customer Profile], it will be included in the union for that class type. [!DNL Profile] delivers robust, centralized profiles of customer attributes as well as a timestamped account of every event that customer has had across any system integrated with [!DNL Platform]. [!DNL Profile] uses the union view to represent this data and provide a holistic view of each individual customer.
 
-For more information on working with [!DNL Profile], see the [Real-time Customer Profile overview](../../profile/home.md).
+For more information on working with [!DNL Profile], see the [Real-Time Customer Profile overview](../../profile/home.md).
 
 ## Mapping datafiles to XDM schemas
 

@@ -1,12 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;troubleshooting guide;faq;troubleshooting;
 solution: Experience Platform
-title: Query Service Troubleshooting Guide
-topic-legacy: troubleshooting
+title: Frequently Asked Questions
 description: This document contains common questions and answers related to Query Service. Topics include, exporting data, third-party tools, and PSQL errors.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
-# [!DNL Query Service] troubleshooting guide
+# Frequently asked questions
 
 This document provides answers to frequently asked questions about Query Service and provides a list of commonly seen error codes when using Query Service. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
@@ -34,16 +33,22 @@ No. Turning off the auto-complete feature is not currently supported by the edit
 One potential cause is the auto-complete feature. The feature processes certain metadata commands that can occasionally slow the editor during query editing.
 +++
 
-### Can I use Postman for the Query Service API?
+### Can I use [!DNL Postman] for the Query Service API?
 
 +++Answer
-Yes, you can visualize and interact with all Adobe API services using Postman (a free, third-party application). Watch the [Postman setup guide](https://video.tv.adobe.com/v/28832) for step-by-step instructions on how to set up a project in Adobe Developer Console and acquire all the necessary credentials for use with Postman. See the official documentation for [guidance on starting, running, and sharing Postman collections](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Yes, you can visualize and interact with all Adobe API services using [!DNL Postman] (a free, third-party application). Watch the [[!DNL Postman] setup guide](https://video.tv.adobe.com/v/28832) for step-by-step instructions on how to set up a project in Adobe Developer Console and acquire all the necessary credentials for use with [!DNL Postman]. See the official documentation for [guidance on starting, running, and sharing [!DNL Postman] collections](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Is there a limit to the maximum number of rows returned from a query through the UI?
 
 +++Answer
 Yes, Query Service internally applies a limit of 50,000 rows unless an explicit limit is specified externally. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
++++
+
+### Can I use queries to update rows?
+
++++Answer
+In batch queries, updating a row inside the dataset is not supported.
 +++
 
 ### Is there a data size limit for the resulting output from a query?
@@ -81,6 +86,12 @@ One or more of the following solutions are recommended in case of queries timing
 No. Query Service has an autoscaling capability that ensures concurrent queries do not have any noticeable impact on the performance of the service.
 +++
 
+### Can I use reserved keywords as a column name?
+
++++Answer
+There are certain reserved keywords that cannot be used as column name such as, `ORDER`, `GROUP BY`, `WHERE`, `DISTINCT`. If you want to use these keywords, then you must escape these columns.
++++
+
 ### How do I find a column name from a hierarchical dataset?
 
 +++Answer
@@ -89,17 +100,17 @@ The following steps describe how to display a tabular view of a dataset through 
 - After logging into Experience Platform, select **[!UICONTROL Datasets]** in the left navigation of the UI to navigate to [!UICONTROL Datasets] dashboard.
 - The datasets [!UICONTROL Browse] tab opens. You can use the search bar to refine the available options. Select a dataset from the list displayed.
 
-![A dataset highlighted in the Platform UI.](./images/troubleshooting/dataset-selection.png)
+![The Datasets dashboard in the Platform UI with the search bar and a dataset highlighted.](./images/troubleshooting/dataset-selection.png)
 
-- The [!UICONTROL Datasets activity] screen appears. Select [!UICONTROL Preview dataset] to open a dialog of the XDM schema and tabular view of flattened data from the selected dataset. More details can be found in the [preview a dataset documentation](../catalog/datasets/user-guide.md#preview-a-dataset)
+- The [!UICONTROL Datasets activity] screen appears. Select **[!UICONTROL Preview dataset]** to open a dialog of the XDM schema and tabular view of flattened data from the selected dataset. More details can be found in the [preview a dataset documentation](../catalog/datasets/user-guide.md#preview-a-dataset)
 
-![The XDM schema and tabular view of the flattened data.](./images/troubleshooting/dataset-preview.png)
+![The Dataset activity tab of the Datasets dashboard with Preview dataset highlighted.](./images/troubleshooting/dataset-preview.png)
 
 - Select any field from the schema to display its contents in a flattened column. The name of the column is displayed above its contents on the right side of the page. You should copy this name to use for querying this dataset.
 
-![The column name of a nested dataset highlighted in the UI.](./images/troubleshooting/column-name.png)
+![The XDM schema and tabular view of the flattened data. The column name of a nested dataset is highlighted in the UI.](./images/troubleshooting/column-name.png)
 
-See the documentation for full guidance on [how to work with nested data structures](./best-practices/nested-data-structures.md) using the Query Editor or a third-party client.
+See the documentation for full guidance on [how to work with nested data structures](./essential-concepts/nested-data-structures.md) using the Query Editor or a third-party client.
 +++
 
 ### How do I speed up a query on a dataset that contains arrays?
@@ -124,12 +135,12 @@ There can be any number of reasons for a query to be stuck while processing. To 
 - Navigate to [https://www.adobe.com/](https://www.adobe.com/) in your web browser.
 - On the right side of the top navigation bar, select **[!UICONTROL Sign In]**.
 
-![The Adobe website with sign in highlighted.](./images/troubleshooting/adobe-sign-in.png)
+![The Adobe website with Sign in highlighted.](./images/troubleshooting/adobe-sign-in.png)
 
 - Use your Adobe ID and password that is registered with your Adobe license.
 - Select **[!UICONTROL Help & Support]** from the top navigation bar. 
 
-![The top navigation bar dropdown menu with help and support highlighted.](./images/troubleshooting/help-and-support.png)
+![The top navigation bar dropdown menu with Help and support, Enterprise support and Contact us highlighted.](./images/troubleshooting/help-and-support.png)
 
 A dropdown banner appears containing a [!UICONTROL Help and support] section. Select **[!UICONTROL Contact us]** to open the Adobe Customer Care Virtual Assistant, or select **[!UICONTROL Enterprise support]** for dedicated help for large organizations.
 +++
@@ -139,7 +150,7 @@ A dropdown banner appears containing a [!UICONTROL Help and support] section. Se
 +++Answer
 The anonymous block feature allows you to chain one or more SQL statements that are executed in sequence. They also allow for the option of exception-handling.
 
-See the [anonymous block documentation](./best-practices/anonymous-block.md) for more details.
+See the [anonymous block documentation](./essential-concepts/anonymous-block.md) for more details.
 +++
 
 ### How do I implement custom attribution in Query Service?
@@ -228,7 +239,7 @@ AS SELECT '1' as _id,
 ### How do I quickly process the new data coming into the system every day?
 
 +++Answer
-The [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) clause can be used to incrementally read data on a table based on a snapshot ID. This is ideal for use with the [incremental load](./best-practices/incremental-load.md) design pattern that only processes information in the dataset that has been created or modified since the last load execution. As a result, it increases processing efficiency and can be used with both streaming and batch data processing.
+The [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) clause can be used to incrementally read data on a table based on a snapshot ID. This is ideal for use with the [incremental load](./essential-concepts/incremental-load.md) design pattern that only processes information in the dataset that has been created or modified since the last load execution. As a result, it increases processing efficiency and can be used with both streaming and batch data processing.
 +++
 
 ### Why is there a difference between the numbers shown in Profile UI and the numbers calculated from the profile export dataset? 
@@ -479,6 +490,93 @@ WHERE T2.ID IS NULL
 
 +++Answer
 No, this is an intentional limitation across Experience Platform that applies to all Adobe services, including Query Service. A name with two underscores is acceptable as a schema and dataset name, but the table name for the dataset can only contain a single underscore. 
++++
+
+### How many concurrent queries can you run at a time?  
+
++++Answer
+There is no query concurrency limit as batch queries run as back-end jobs. There is, however, a query timeout limit set to 24 hours. 
++++
+
+### Is there an activity dashboard where you can see query activities and status?
+
++++Answer
+There are monitoring and alerting capabilities to check on query activities and statuses. See the [Query Service audit log integration](./data-governance/audit-log-guide.md) and the [query logs](./ui/overview.md#log) documents for more information.
++++
+
+### Is there any way to roll back updates? For example, if there is an error or some calculations need reconfiguring when writing data back to Platform, how should that scenario be handled?
+
++++Answer
+Currently, we do not support rollbacks or updates in that manner. 
++++
+
+### How can you optimize queries in Adobe Experience Platform?
+
++++Answer
+The system does not have indexes as it is not a database but it does have other optimizations in place tied to the data store. The following options are available to tune your queries:
+
+- A time-based filter on timeseries data.
+- Optimized push down for the struct data type.
+- Optimized cost and memory push-down for arrays and map data types.
+- Incremental processing using snapshots.
+- A persisted data format.
++++
+  
+### Can logins be restricted to certain aspects of Query Service or is it an "all or nothing" solution? 
+
++++Answer
+Query Service is an "all or nothing" solution. Partial access cannot be provided.
++++
+
+### Can I restrict what data Query Service can use, or does it simply access the entire Adobe Experience Platform data lake?
+
++++Answer
+Yes, you can restrict querying to datasets with read-only access. 
++++
+
+### What other options are there for restricting the data that Query Service can access?
+
++++Answer
+There are three approaches to restricting access. They are as follows:
+
+- Use SELECT only statements and give datasets read only access. Also, assign the manage query permission.
+- Use SELECT/INSERT/CREATE statements and give datasets write access. Also, assign the query manage permission.
+- Use an integration account with the previous suggestions above and assign the query integration permission.
+
++++
+    
+### Once the data is returned by Query Service, are there any checks that can be run by Platform to ensure that it hasn't returned any protected data?
+
+- Query Service supports attribute-based access control. You can restrict access to data at the column/leaf level and/or the struct level. See the documentation to learn more about attribute-based access control. 
+
+### Can I specify an SSL mode for the connection to a third-party client? For example, can I use use 'verify-full' with Power BI?
+
++++Answer
+Yes, SSL modes are supported. See the [SSL modes documentation](./clients/ssl-modes.md) for a breakdown of the different SSL modes available and the level of protection they provide.
++++
+
+### Do we use TLS 1.2 for all connections from Power BI clients to query service?
+
++++Answer
+Yes. Data-in-transit is always HTTPS compliant. The currently supported version is TLS1.2.
++++
+
+### Does a connection made on port 80 still use https?
+
++++Answer
+Yes, a connection made on port 80 still uses SSL. You can also use port 5432. 
++++
+
+### Can I control access to specific datasets and columns for a particular connection? How is this configured?
+
++++Answer
+Yes, attribute-based access control is enforced if configured. See the [attribute-based access control overview](../access-control/abac/overview.md) for more information.
++++
+
+### Does Query Service support the "INSERT OVERWRITE INTO" command?
+
++++Answer
+No, Query Service does not support the "INSERT OVERWRITE INTO" command.
 +++
 
 ## Exporting data {#exporting-data}

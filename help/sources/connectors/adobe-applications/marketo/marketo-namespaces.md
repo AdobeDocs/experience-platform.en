@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;Marketo source connector;namespaces;schemas;b2b;B2B
-solution: Experience Platform
 title: B2B namespaces and schemas
-topic-legacy: overview
 description: This document provides an overview of custom namespaces required when creating a B2B source connector.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 ---
 # B2B namespaces and schemas
 
+>[!NOTE]
+>
+>You can use templates in the Adobe Experience Platform UI to expedite your asset creation for B2B and B2C data. For more information, read the guide on [using templates in Platform UI](../../../tutorials/ui/templates.md).
+
 This document provides information on the underlying set up for the namespaces and schemas to be used with B2B sources. This document also provides details around setting up your Postman automation utility required for generating B2B namespaces and schemas.
 
 >[!IMPORTANT]
 >
->You must have access to [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) in order for B2B schemas to participate in [Real-time Customer Profile](../../../../profile/home.md).
+>You must have access to [Adobe Real-Time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) in order for B2B schemas to participate in [Real-Time Customer Profile](../../../../profile/home.md).
 
 ## Set up B2B namespaces and schema auto-generation utility
 
@@ -40,7 +41,7 @@ The following table contains example values as well as additional information on
 | `IMS` | The Identity Management System (IMS) provides the framework for authentication to Adobe services. With regards to [!DNL Marketo], this value is fixed and is always set to: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | A corporate entity that can own or license products and services and allow access to its members. See the tutorial on [setting up developer console and [!DNL Postman]](../../../../landing/postman.md) for instructions on how to retrieve your `{ORG_ID}` information. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | The name of the virtual sandbox partition that you are using. | `prod` |
-| `TENANT_ID` | An ID used to ensure that the resources you create are namespaced properly and are contained within your IMS Organization. | `b2bcdpproductiontest` |
+| `TENANT_ID` | An ID used to ensure that the resources you create are namespaced properly and are contained within your organization. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | The URL endpoint that you are making API calls to. This value is fixed and is always set to: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
 
 {style="table-layout:auto"}

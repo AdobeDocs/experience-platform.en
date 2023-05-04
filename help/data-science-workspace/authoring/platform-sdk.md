@@ -2,7 +2,6 @@
 keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
 solution: Experience Platform
 title: Model Authoring Using the Adobe Experience Platform Platform SDK
-topic-legacy: SDK authoring
 description: This tutorial provides you with information on converting data_access_sdk_python to the new Python platform_sdk in both Python and R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 ---
@@ -16,7 +15,7 @@ This tutorial provides you with information on converting `data_access_sdk_pytho
 
 ## Build authentication {#build-authentication}
 
-Authentication is required to make calls to [!DNL Adobe Experience Platform], and is comprised of API Key, IMS Org ID, a user token, and a service token.
+Authentication is required to make calls to [!DNL Adobe Experience Platform], and is comprised of API Key, organization ID, a user token, and a service token.
 
 ### Python
 
@@ -26,7 +25,7 @@ If you are using Jupyter Notebook, please use the below code to build the `clien
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-If you are not using Jupyter Notebook or you need to change the IMS Org, please use the below code sample:
+If you are not using Jupyter Notebook or you need to change the organization, please use the below code sample:
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -49,7 +48,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-If you are not using Jupyter Notebook or you need to change the IMS Org, please use the below code sample:
+If you are not using Jupyter Notebook or you need to change organization, please use the below code sample:
 
 ```r
 library(reticulate)
@@ -74,7 +73,7 @@ If your read time is taking too long, you can try using one of the following fil
 
 >[!NOTE]
 >
->The IMS Org is set within the `client_context`. 
+>The organization is set within the `client_context`. 
 
 ### Python
 
@@ -190,7 +189,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->The IMS Org is set within the `client_context`. 
+>The organization is set within the `client_context`. 
 
 To write data in Python and R, use one of the following examples below:
 

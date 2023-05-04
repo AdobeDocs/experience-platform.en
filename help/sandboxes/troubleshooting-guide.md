@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;sandbox troubleshooting
 solution: Experience Platform
 title: Sandboxes Troubleshooting Guide
-topic-legacy: troubleshooting guide
 description: This document provides answers to frequently asked questions about sandboxes in Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
 ---
@@ -16,7 +15,13 @@ Sandboxes partition a single Platform instance into separate virtual environment
 
 Sandboxes are virtual partitions within a single instance of Experience Platform. Each sandbox maintains its own independent library of Platform resources (including schemas, datasets, profiles, and so on). All content and actions taken within a sandbox are confined to only that sandbox and do not affect any other sandboxes. See the [sandboxes overview](home.md) for more information.
 
-## What types of sandboxes are available, and what are their differences?
+## What types of sandboxes are available, and what are their differences? {#sandbox-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtypes"
+>title="Sandbox Type"
+>abstract="The sandbox type indicates whether this is a production or development sandbox. Production sandboxes include live data and development sandboxes are used for testing and development."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="Create a sandbox in the UI"
 
 There are two sandbox types available in Experience Platform:
 
@@ -34,7 +39,7 @@ Sandboxes are isolated partitions of a single Platform instance, with each sandb
 
 ## What is the default production sandbox?
 
-The default production sandbox is the first production sandbox that is created when an IMS Organization is first provisioned. The default production sandbox allows you to ingest or consume data from Platform, as well as accept requests that do not include values for a sandbox name or a sandbox ID. The default production sandbox can be reset but not deleted.
+The default production sandbox is the first production sandbox that is created when an organization is first provisioned. The default production sandbox allows you to ingest or consume data from Platform, as well as accept requests that do not include values for a sandbox name or a sandbox ID. The default production sandbox can be reset but not deleted.
 
 ## How many production sandboxes can I have?
 
@@ -52,7 +57,7 @@ You can update the title of a production sandbox. However, a production sandbox 
 
 ## How many development sandboxes can I have?
 
-Experience Platform currently allows a maximum of 75 total sandboxes (production and development) to be active within a single IMS Organization.
+Experience Platform currently allows a maximum of 75 total sandboxes (production and development) to be active within a single organization.
 
 Development sandboxes support both reset and delete functionalities.
 

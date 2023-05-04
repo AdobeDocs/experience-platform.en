@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Apache hive;hive;Hive
 solution: Experience Platform
 title: Create an Apache Hive on Azure HDInsights Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Apache Hive on Azure HDInsights to Adobe Experience Platform using the Flow Service API.
 exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
@@ -35,7 +34,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Hive], you must provide v
 | `host` | The IP address or host name of the [!DNL Hive] server. |
 | `username` | The username that you use to access [!DNL Hive] server.|
 | `password` | The password corresponding to the user. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Hive] is: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Hive] is: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
 
 For more information about getting started refer to [this Hive document](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
 

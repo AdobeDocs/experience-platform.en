@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentation Service Guide
-user-guide-description: Build segments and generate audiences from your Real-time Customer Profile data.
+user-guide-description: Build segments and generate audiences from your Real-Time Customer Profile data.
 feature: Segments
 ---
 

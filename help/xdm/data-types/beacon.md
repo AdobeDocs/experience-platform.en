@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;beacon;interaction details;datatype;data-type;data type;
 solution: Experience Platform
 title: Beacon Data Type
-topic-legacy: overview
 description: This document provides an overview of the XDM Individual Profile class.
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 ---

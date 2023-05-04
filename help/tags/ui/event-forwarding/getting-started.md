@@ -12,7 +12,7 @@ exl-id: f82bfac9-dc2d-44de-a308-651300f107df
 
 To use event forwarding in Adobe Experience Platform, data must be sent to Adobe Experience Platform Edge Network using one or more of the following three options:
 
-* [Adobe Experience Platform Web SDK](../../extensions/web/sdk/overview.md)
+* [Adobe Experience Platform Web SDK](../../extensions/client/sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
 * [Server-to-Server API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=en)
 
@@ -23,7 +23,7 @@ After you send data to Edge network, you can toggle on Adobe solutions to send d
 
 ## Prerequisites
 
-* Adobe Experience Platform Collection Enterprise (Contact your account manager for pricing)
+* Adobe Experience Platform Collection Enterprise (Contact your Adobe account team for pricing)
 * Event forwarding in Adobe Experience Platform
 * Adobe Experience Platform Web or Mobile SDK, configured to send data to Edge Network
 * Map data to Experience Data Model (XDM) (This mapping can be done using tags)
@@ -94,7 +94,7 @@ After configuring, make note of the Environment IDs for the new property.
 
 Create your property in the **[!UICONTROL Tags]** workspace, then navigate to **[!UICONTROL Extensions]** and select the Experience Platform Web SDK extension from the catalog to configure and install it.
 
-See the [Web SDK extension documentation](../../extensions/web/sdk/overview.md) for details on configuration options.
+See the [Web SDK extension documentation](../../extensions/client/sdk/overview.md) for details on configuration options.
 
 ## Create a tag rule to send data to Platform Web SDK
 

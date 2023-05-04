@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;sandbox user guide;sandbox guide
 solution: Experience Platform
 title: Sandbox UI guide
-topic-legacy: user guide
 description: This document provides steps on how to perform various operations related to sandboxes in the Adobe Experience Platform user interface.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
 ---
@@ -30,7 +29,17 @@ Once a sandbox is selected, the screen refreshes and updates to the sandbox you 
 
 ![sandbox-switched](../images/ui/sandbox-switched.png)
 
-## Create a new sandbox
+## Create a new sandbox {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxname"
+>title="Sandbox Name"
+>abstract="The sandbox name is the text that is used on the back end to create a unique ID for this sandbox."
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtitle"
+>title="Sandbox Title"
+>abstract="The sandbox title is the display name that will represent the sandbox in menus and dropdowns throughout the Experience Platform UI."
 
 >[!NOTE]
 >

@@ -7,6 +7,10 @@ exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 ---
 # Alerts overview
 
+>[!NOTE]
+>
+>Alerts are not supported in non-production sandboxes. In order to subscribe to alerts, you must ensure that you are using a production sandbox.
+
 Adobe Experience Platform allows you to subscribe to event-based alerts regarding Adobe Experience Platform activities. Alerts reduce or eliminate the need to poll the [[!DNL Observability Insights] API](../api/overview.md) in order to check if a job has completed, if a certain milestone within a workflow has been reached, or if any errors have occurred.
 
 When a certain set of conditions in your Platform operations is reached (such as a potential problem when the system breaches a threshold), Platform can deliver alert messages to any users in your organization who have subscribed to them. These messages can repeat over a pre-defined time interval until the alert has been resolved.
@@ -76,6 +80,10 @@ To work with alerts in the Platform UI, you must have the following access contr
 With the View Alerts permission, can view received alerts by selecting the the bell icon (![Bell Icon](../images/alerts/overview/icon.png)) in the top-right corner.
 
 ![](../images/alerts/overview/ui.png)
+
+>[!NOTE]
+>
+> Select an alert to navigate to a related dashboard for more detailed information on why the alert has been triggered.
 
 In addition, the [!UICONTROL Alerts] tab in the UI allows individual users to subscribe to specific alert types, and allows admins to enable or disable alert rules altogether. See the [UI guide](./ui.md) for more information on managing alerts.
 

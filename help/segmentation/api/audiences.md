@@ -1,11 +1,16 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;audiences;audience;API;api;
 title: Audiences API Endpoint
-topic-legacy: developer guide
 description: The audiences endpoint in the Adobe Experience Platform Segmentation Service API allows you to programmatically manage audiences for your organization.
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
+hide: true
+hidefromtoc: true
 ---
 # Audiences endpoint
+
+>[!IMPORTANT]
+>
+>The audience endpoint is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
 An audience is a collection of people who share similar behaviors and/or characteristics. These collections of people can be generated either by using Adobe Experience Platform or from external sources. You can use the `/audiences` endpoint in the Segmentation API, which allows you to programmatically retrieve, create, update, and delete audiences.
 
@@ -243,7 +248,7 @@ A successful response returns HTTP status 200 with a list of audiences, with met
                         "crmid": 11400769
                     },
                     "totalProfilesByStatus": {
-                        "existing": 11400769
+                        "realized": 11400769
                     }
                 },
                 "createEpoch": 1653583927,

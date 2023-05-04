@@ -1,17 +1,16 @@
 ---
 keywords: Experience Platform;home;popular topics;onetrust;OneTrust
 solution: Experience Platform
-title: (Beta) Create a OneTrust Source Connection in the UI
-topic-legacy: overview
+title: Create a OneTrust Source Connection in the UI
 type: Tutorial
 description: Learn how to create a OneTrust source connection using the Adobe Experience Platform UI.
 exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
 ---
-# (Beta) Create a [!DNL OneTrust Integration] source connection in the UI
+# Create a [!DNL OneTrust Integration] source connection in the UI
 
 >[!NOTE]
 >
->The [!DNL OneTrust Integration] source is in beta. Its features and documentation are subject to change. For information on using beta-labelled sources, see the [sources overview](../../../../home.md#terms-and-conditions).
+>The [!DNL OneTrust Integration] source only supports ingestion of consent and preferences data and not cookies.
 
 This tutorial provides steps for creating a [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) source connection to ingest both historic and scheduled consent data into Adobe Experience Platform using the Platform user interface.
 
@@ -31,7 +30,7 @@ In order to connect [!DNL OneTrust Integration] to Platform, you must provide va
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| Host name | The environment from which the [!DNL OneTrust Integration] data needs to be pulled from. | `https://uat.onetrust.com/` |
+| Host name | The environment from which the [!DNL OneTrust Integration] data needs to be pulled from. | `app.onetrust.com` |
 | Authorization Test URL | (Optional) The authorization test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. | |
 | Access Token | The access token that corresponds with your [!DNL OneTrust Integration] account. | `ZGFkZDMyMjFhMmEyNDQ2ZGFhNTdkZjNkZjFmM2IyOWE6QjlUSERVUTNjOFVsRmpEZTJ6Vk9oRnF3Sk8xNlNtcm4=` |
 
@@ -43,13 +42,13 @@ For more information on these credentials, see the [[!DNL OneTrust Integration] 
 >
 >The [!DNL OneTrust Integration] API specifications are being shared with Adobe for data ingestion.
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace for a catalog of sources available in Experience Platform.
 
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+Use the *[!UICONTROL Categories]* menu to filter sources by category. Alternatively, enter a source name in the search bar to find a specific source from the catalog.
 
-Under the *[!UICONTROL Consent & Preferences]* category, select [!DNL OneTrust Integration], and then select **[!UICONTROL Add data]**.
+Go to the [!UICONTROL Consent & Preferences] category for the [!DNL OneTrust Integration] source card. To begin, select **[!UICONTROL Add data]**.
 
-![catalog](../../../../images/tutorials/create/onetrust/catalog.png)
+![The Experience Platform UI sources catalog.](../../../../images/tutorials/create/onetrust/catalog.png)
 
 The **[!UICONTROL Connect OneTrust Integration account]** page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -57,13 +56,13 @@ The **[!UICONTROL Connect OneTrust Integration account]** page appears. On this 
 
 To use an existing account, select the [!DNL OneTrust Integration] account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
 
-![existing](../../../../images/tutorials/create/onetrust/existing.png)
+![The existing account authentication step in the sources workflow.](../../../../images/tutorials/create/onetrust/existing.png)
 
 ### New account
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and your credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![new](../../../../images/tutorials/create/onetrust/new.png)
+![The new account authentication step in the sources workflow.](../../../../images/tutorials/create/onetrust/new.png)
 
 ## Next steps
 

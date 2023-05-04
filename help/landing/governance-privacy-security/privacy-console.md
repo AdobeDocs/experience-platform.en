@@ -26,7 +26,7 @@ The function of each widget is explained below:
 
 | Widget name | Description |
 | --- | --- |
-| Data hygiene work order status | Shows the statuses of consumer delete processes under [Data Hygiene](../../hygiene/home.md) for the selected time frame. Use the dropdown menu to change the time frame between the last 7 days, 14 days, and 30 days.  |
+| Data hygiene work order status | Shows the statuses of record delete processes under [Data Hygiene](../../hygiene/home.md) for the selected time frame. Use the dropdown menu to change the time frame between the last 7 days, 14 days, and 30 days.  |
 | Recent data hygiene work orders | Shows the most recent [Data Hygiene](../../hygiene/home.md) work orders being processed by the system. Use the dropdown to switch between recently created work orders and recently updated work orders. |
 | Most frequent actions | Shows the most frequent actions on Platform as captured by [audit logs](./audit-logs/overview.md) for the selected time frame. Use the dropdown menu to change the time frame between the last 7 days, 14 days, and 30 days. |
 | Most active users | Shows the most active Platform users within your organization as captured by [audit logs](./audit-logs/overview.md) for the selected time frame. Use the dropdown menu to change the time frame between the last 7 days, 14 days, and 30 days. |

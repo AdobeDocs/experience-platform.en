@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;DULE;dule
 solution: Experience Platform
 title: Data Governance Overview
-topic-legacy: overview
 description: Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within Experience Platform at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 ---
@@ -11,6 +10,10 @@ exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 One of the core capabilities of Adobe Experience Platform is to bring data from multiple enterprise systems together to better allow marketers to identify, understand, and engage customers. This data may be subject to usage restrictions defined by your organization or by legal regulations. It is therefore important to ensure that your data operations within [!DNL Platform] are compliant with data usage policies. 
 
 Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
+
+>[!NOTE]
+>
+>In Experience Platform, data governance is only concerned with how data is used or activated, regardless of the user performing the action. For information on how to control access to specific data fields for certain Platform users within your organization, see the documentation on [attribute-based access control](../access-control/abac/overview.md) instead.
 
 ## Data governance roles
 
@@ -106,10 +109,10 @@ The following table outlines key terms related to Data Governance and theData Go
 |**Field labels**|Field labels are data governance labels that are either inherited from a dataset or applied directly to a field.  Data governance labels applied to a field are not inherited up to a dataset.|
 |**Geofence**| A geofence is a virtual geographic boundary, defined by GPS or RFID technology, that enables software to trigger a response when a mobile device enters or leaves a particular area.|
 |**Identity labels**|Identity "I" labels are used to categorize data that can identify or contact a specific person.|
-|**Interest-based targeting**|Interest-based targeting, also known as personalization, occurs if the following three conditions are met: data collected on-site is, used to make inferences about a users’ interest, is used in another context, such as on another site or app (off-site) and is used to select which content or ads are served based on those inferences.|
+|**Interest-based targeting**|Interest-based targeting, also known as personalization, occurs if the following three conditions are met: data collected on-site is, used to make inferences about a users' interest, is used in another context, such as on another site or app (off-site) and is used to select which content or ads are served based on those inferences.|
 |**Marketing action**|A marketing action, in the context of the data governance framework, is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies|
 |**Policy**|In the data governance framework, a policy is a rule that describes what kind of marketing actions are allowed or not allowed to be taken on specific data.|
-|**Sensitive Labels**|Sensitive “S” labels are used to categorize data that you, and your organization, consider sensitive.|
+|**Sensitive Labels**|Sensitive "S" labels are used to categorize data that you, and your organization, consider sensitive.|
 
 ## Additional resources
 

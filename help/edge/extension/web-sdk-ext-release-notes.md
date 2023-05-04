@@ -8,6 +8,51 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## Version 2.17.0 - April 25, 2023
+
+**New features**
+
+* Contains version 2.16.0 of the Adobe Experience Platform Web SDK.
+* Added support for [datastream configuration overrides](../datastreams/overrides.md).
+* Add deprecation notice to the `datasetId` option on the `sendEvent` command.
+
+
+**Fixes and improvements**
+
+* Fixed an issue where scrolling in Safari would close the datastream selector.
+
+## Version 2.16.1 - April 14, 2023
+
+* Fixed an issue with XDM Object and Variable data elements where you could not select a schema from a non-default sandbox.
+
+## Version 2.16.0 - March 30, 2023
+
+**New features**
+
+* (Beta) Added **[!UICONTROL Update variable]** action and **[!UICONTROL Variable]** data element.
+* Added configuration for [`onBeforeLinkClickSend`](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) callback function.
+
+**Fixes and improvements**
+
+* Fixed an issue causing clicking on elements within an anchor tag to not work when the **[!UICONTROL Redirect with identity]** action was used.
+* Fixed an issue where XDM object data elements did not work when there was only one schema present.
+* Contains version 2.15.0 of Adobe Experience Platform Web SDK.
+
+
+## Version 2.15.1 - January 26, 2023
+
+* Fixed an issue where users without access to datastreams could not edit the extension configuration.
+* Added support for surfaces in the `sendEvent` action.
+
+Contains version 2.14.0 of Adobe Experience Platform Web SDK.
+
+
+## Version 2.14.1 - October 13, 2022
+
+* Fixed an issue where the Web SDK does not honor the ID from the Experience Cloud ID Service.
+
+Contains version 2.13.1 of the Adobe Experience Platform Web SDK Library.
+
 ## Version 2.14.0 - September 28, 2022
 
 * Added new `targetMigrationEnabled` configuration that enables page by page full migration.

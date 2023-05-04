@@ -2,7 +2,6 @@
 keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;create a model;create a training run
 solution: Experience Platform
 title: Train and Evaluate a Model in the Data Science Workspace UI
-topic-legacy: tutorial
 type: Tutorial
 description: In Adobe Experience Platform Data Science Workspace, a machine learning Model is created by incorporating an existing Recipe that is appropriate for the Model's intent. The Model is then trained and evaluated to optimize its operating efficiency and efficacy by fine-tuning its associated Hyperparameters. Recipes are reusable, meaning that multiple Models can be created and tailored to specific purposes with a single Recipe.
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
@@ -15,7 +14,7 @@ This tutorial walks through the steps to create, train, and evaluate a Model.
 
 ## Getting started
 
-In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 
 This tutorial requires an existing Recipe. If you do not have a Recipe, follow the [Import a packaged Recipe in the UI](./import-packaged-recipe-ui.md) tutorial before continuing.
 
@@ -115,7 +114,7 @@ Additional parameters determine the Model's technical properties:
 | `ACP_DSW_INPUT_FEATURES` | String | List of comma separated input schema attributes. |
 | `ACP_DSW_TARGET_FEATURES` | String | List of comma separated output schema attributes. |
 | `ACP_DSW_FEATURE_UPDATE_SUPPORT` | Boolean | Determines whether input and output features are modifiable |
-| `tenantId` | String | This ID ensures resources you create are namespaced properly and contained within your IMS Organization. [Follow the steps here](../../xdm/api/getting-started.md#know-your-tenant_id) to find your tenant ID. |
+| `tenantId` | String | This ID ensures resources you create are namespaced properly and contained within your organization. [Follow the steps here](../../xdm/api/getting-started.md#know-your-tenant_id) to find your tenant ID. |
 | `ACP_DSW_TRAINING_XDM_SCHEMA` | String | The input schema used for training a Model. |
 | `evaluation.labelColumn` | String | Column label for evaluation visualizations. |
 | `evaluation.metrics` | String | Comma separated list of evaluation metrics to be used for evaluating a Model. |

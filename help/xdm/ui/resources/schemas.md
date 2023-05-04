@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Create and Edit Schemas in the UI
 description: Learn the basics of how to create and edit schemas in the Experience Platform user interface.
-topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 ---
 # Create and edit schemas in the UI
@@ -21,6 +20,10 @@ This guide provides an overview of how to create, edit, and manage Experience Da
 This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) for an overview of how schemas are constructed.
 
 ## Create a new schema {#create}
+
+>[!NOTE]
+>
+>This section covers how to manually create a new schema in the UI. If you are ingesting CSV data into Platform, you can opt to [map that data to an XDM schema created by AI-generated recommendations](../../../ingestion/tutorials/map-csv/recommendations.md) (currently in beta) without having to manually create the schema yourself.
 
 In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner. In the dropdown that appears, you can choose between **[!UICONTROL XDM Individual Profile]** and **[!UICONTROL XDM ExperienceEvent]** as the base class for the schema. Alternatively, you can select **[!UICONTROL Browse]** to select from the full list of available classes, or [create a new custom class](./classes.md#create) instead.
 
@@ -48,6 +51,18 @@ To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then sel
 
 Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add field groups](#add-field-groups) to the schema (or [add individual fields](#add-individual-fields) from those groups), [edit field display names](#display-names), or [edit existing custom field groups](./field-groups.md#edit) if the schema employs any.
 
+## Display name toggle {#display-name-toggle}
+
+For your convenience, the Schema Editor provides a toggle to change between the original field names and the more human-readable display names. This flexibility allows for improved field discoverability and editing of your schemas. The toggle is found at the top right of the Schema Editor view.
+
+>[!NOTE]
+>
+>The change from field names to display names is purely cosmetic and does not change any downstream resources. 
+
+![The Schema Editor with [!UICONTROL Show display names for fields] highlighted.](../../images/ui/resources/schemas/display-name-toggle.png)
+
+The display names for standard field groups are system generated but can be customized, as described in the [display names](#display-names) section. Display names are reflected across multiple UI views, including mapping and dataset previews. The default setting is off, and shows field names by their original values.
+
 ## Add field groups to a schema {#add-field-groups}
 
 >[!NOTE]
@@ -56,7 +71,7 @@ Once you select a schema, the [!DNL Schema Editor] appears with the schema's str
 
 Once you have opened a schema within the [!DNL Schema Editor], you can add fields to the schema through the use of field groups. To start, select **[!UICONTROL Add]** next to **[!UICONTROL Field groups]** in the left rail.
 
-![](../../images/ui/resources/schemas/add-field-group-button.png)
+![The Schema Editor with the [!UICONTROL Add] from the [!UICONTROL Field groups] section highlighted.](../../images/ui/resources/schemas/add-field-group-button.png)
 
 A dialog appears, showing a list of field groups that you can select for the schema. Since field groups are only compatible with one class, only those field groups that are associated with the schema's selected class will be listed. By default, listed field groups are sorted based on their usage popularity within your organization.
 
@@ -132,7 +147,7 @@ The Schema Editor allows you to add individual fields directly to a schema if yo
 
 >[!IMPORTANT]
 >
->Even though the Schema Editor functionally allows you to add individual fields directly to a schema, this does not change the fact that all fields in an XDM schema must be provided by its class or a field group that is compatible with that class. As the sections below explain, all individual fields are still associated with a field group as a key step when they are added to a schema.
+>Even though the Schema Editor functionally allows you to add individual fields directly to a schema, this does not change the fact that all fields in an XDM schema must be provided by its class or a field group that is compatible with that class. As the sections below explain, all individual fields are still associated with a class or field group as a key step when they are added to a schema.
 
 ### Add standard fields {#add-standard-fields}
 
@@ -156,7 +171,7 @@ The canvas updates to show the standard field added to the schema, including any
 
 ### Add custom fields {#add-custom-fields}
 
-Similar to the workflow for standard fields, you can also add your own custom fields directly to a schema. 
+Similar to the workflow for standard fields, you can also add your own custom fields directly to a schema.
 
 To add fields to the root level of a schema, select the plus (**+**) icon next to the schema's name in the canvas. An **[!UICONTROL Untitled Field]** placeholder appears in the schema structure and the right rail updates to reveal controls to configure the field.
 
@@ -166,7 +181,17 @@ Start typing in the name of the field you wish to add, and the system automatica
 
 ![New field](../../images/ui/resources/schemas/custom-field-search.png)
 
-From here, provide a display name and data type for the field. Under **[!UICONTROL Assign field group]**, you must select a field group for the new field to be associated with. Start typing in the name of the field group, and if you have previously [created custom field groups](./field-groups.md#create) they will appear in the dropdown list. Alternatively, you can type a unique name into the field to create a new field group instead.
+After providing a display name and data type for the field, the next step is to assign the field to a parent XDM resource. If your schema uses a custom class, you can choose to [add the field to the assigned class](#add-to-class) or a [field group](#add-to-field-group) instead. If your schema uses a standard class, however, you can only assign the custom field to a field group.
+
+#### Assign the field to a custom field group {#add-to-field-group}
+
+>[!NOTE]
+>
+>This section only covers how to assign the field to a custom field group. If you want to extend a standard field group with the new custom field instead, see the section on [adding custom fields to standard field groups](#custom-fields-for-standard-groups).
+
+Under **[!UICONTROL Assign to]**, select **[!UICONTROL Field Group]**. If your schema uses a standard class, this is the only available option and is selected by default.
+
+Next, you must select a field group for the new field to be associated with. Start typing in the name of the field group in the provided text input. If you have any existing custom field groups that match the input, they will appear in the dropdown list. Alternatively, you can type a unique name to create a new field group instead.
 
 ![Select field group](../../images/ui/resources/schemas/select-field-group.png)
 
@@ -174,7 +199,7 @@ From here, provide a display name and data type for the field. Under **[!UICONTR
 >
 >If you select an existing custom field group, any other schemas that employ that field group will also inherit the newly added field after you save your changes. For this reason, only select an existing field group if you want this type of propagation. Otherwise, you should opt to create a new custom field group instead.
 
-When finished, select **[!UICONTROL Apply]**.
+After selecting the field group from the list, select **[!UICONTROL Apply]**.
 
 ![Apply field](../../images/ui/resources/schemas/apply-field.png)
 
@@ -186,7 +211,21 @@ The new field is added to the canvas, and is namespaced under your [tenant ID](.
 >
 >The rest of the fields provided by the selected custom field group are removed from the schema by default. If you want to add some of these fields to the schema, select a field belonging to the group and then select **[!UICONTROL Manage related fields]** in the right rail.
 
-#### Add custom fields to the structure of standard field groups {#custom-fields-for-standard-groups}
+#### Assign the field to a custom class {#add-to-class}
+
+Under **[!UICONTROL Assign to]**, select **[!UICONTROL Class]**. The input field below is replaced with the name of the current schema's custom class, indicating that the new field will be assigned to this class.
+
+![The [!UICONTROL Class] option being selected for the new field assignment.](../../images/ui/resources/schemas/assign-field-to-class.png)
+
+Continue configuring the field as desired and select **[!UICONTROL Apply]** when finished.
+
+![[!UICONTROL Apply] being selected for the new field.](../../images/ui/resources/schemas/assign-field-to-class-apply.png)
+
+The new field is added to the canvas, and is namespaced under your [tenant ID](../../api/getting-started.md#know-your-tenant_id) to avoid conflicts with standard XDM fields. Selecting the class name in the left rail reveals the new field as part of the class' structure.
+
+![The new field applied to the custom class' structure, represented in the canvas.](../../images/ui/resources/schemas/assign-field-to-class-applied.png)
+
+### Add custom fields to the structure of standard field groups {#custom-fields-for-standard-groups}
 
 If the schema you are working on has an object-type field provided by a standard field group, you can add your own custom fields to that standard object.
 
@@ -214,14 +253,14 @@ After applying your changes, the new field appears under your tenant ID namespac
 
 ![Field added to standard object](../../images/ui/resources/schemas/added-to-standard-object.png)
 
-## Enable a schema for Real-time Customer Profile {#profile}
+## Enable a schema for Real-Time Customer Profile {#profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
 >title="Enable a schema for Profile"
->abstract="When a schema is enabled for Profile, any datasets created from this schema participate in Real-time Customer Profile, which merges data from disparate sources to construct a complete view of each customer. Once a schema is used to ingest data into Profile, it cannot be disabled. See the documentation for more information."
+>abstract="When a schema is enabled for Profile, any datasets created from this schema participate in Real-Time Customer Profile, which merges data from disparate sources to construct a complete view of each customer. Once a schema is used to ingest data into Profile, it cannot be disabled. See the documentation for more information."
 
-[Real-time Customer Profile](../../../profile/home.md) merges data from disparate sources to construct a complete view of each individual customer. If you want the data captured by a schema to participate in this process, you must enable the schema for use in [!DNL Profile].
+[Real-Time Customer Profile](../../../profile/home.md) merges data from disparate sources to construct a complete view of each individual customer. If you want the data captured by a schema to participate in this process, you must enable the schema for use in [!DNL Profile].
 
 >[!IMPORTANT]
 >
@@ -239,13 +278,13 @@ The canvas reappears with the [!UICONTROL Profile] toggle enabled.
 
 >[!IMPORTANT]
 >
->Since the schema is not saved yet, this is the point of no return if you change your mind about letting the schema participate in Real-time Customer Profile: once you save an enabled schema, it can no longer be disabled. Select the **[!UICONTROL Profile]** toggle again to disable the schema.
+>Since the schema is not saved yet, this is the point of no return if you change your mind about letting the schema participate in Real-Time Customer Profile: once you save an enabled schema, it can no longer be disabled. Select the **[!UICONTROL Profile]** toggle again to disable the schema.
 
 To finish the process, select **[!UICONTROL Save]** to save the schema.
 
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
-The schema is now enabled for use in Real-time Customer Profile. When Platform ingests data into datasets based on this schema, that data will be incorporated into your amalgamated Profile data.
+The schema is now enabled for use in Real-Time Customer Profile. When Platform ingests data into datasets based on this schema, that data will be incorporated into your amalgamated Profile data.
 
 ## Edit display names for schema fields {#display-names}
 

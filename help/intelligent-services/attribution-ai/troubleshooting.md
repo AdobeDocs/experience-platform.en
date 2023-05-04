@@ -13,7 +13,7 @@ This document provides answers to frequently asked questions about Attribution A
 
 ## Unable to access Attribution AI in Chrome incognito
 
-Loading errors in Google Chrome's incognito mode are present because of updates in Google Chrome’s incognito mode security settings. The issue is actively being worked on with Chrome to make experience.adobe.com a trusted domain.
+Loading errors in Google Chrome's incognito mode are present because of updates in Google Chrome's incognito mode security settings. The issue is actively being worked on with Chrome to make experience.adobe.com a trusted domain.
 
 <img src='./images/faq/error.PNG' width=500 /><br />
 

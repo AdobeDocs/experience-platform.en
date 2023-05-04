@@ -1,23 +1,23 @@
 ---
-title: Customer Data Platform (CDP) Insights Data Model
-description: Learn how to use SQL queries from CDP Insights Data Models to customize your own CDP reports for your marketing and KPI use cases.
+title: Real-Time Customer Data Platform Insights Data Model
+description: Learn how to use SQL queries with the Real-Time Customer Data Platform Insights Data Models to customize your own Real-Time CDP reports for your marketing and KPI use cases.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
 ---
-# Customer Data Platform (CDP) Insights Data Model
+# Real-Time Customer Data Platform Insights Data Model
 
-The Customer Data Platform (CDP) Insights Data Model feature exposes the data models and SQL that powers the insights for various profile, destination, and segmentation widgets. You can customize these SQL query templates to create CDP reports for your marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your user-defined dashboards.
+The Real-Time Customer Data Platform Insights Data Model feature exposes the data models and SQL that power the insights for various profile, destination, and segmentation widgets. You can customize these SQL query templates to create Real-Time CDP reports for your marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your user-defined dashboards. See the query accelerated store reporting insights documnetation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Prerequisites
 
 This guide requires a working understanding of the [user-defined dashboards feature](./user-defined-dashboards.md). Please read the documentation before continuing with this guide.
 
-## CDP insight reports and use cases
+## Real-Time CDP insight reports and use cases
 
-CDP reporting provides insights into your profile data and its relationship with segments and destinations. Various star schema models were developed to answer a variety of common marketing use cases and each data model can support several use cases.
+Real-Time CDP reporting provides insights into your profile data and its relationship with segments and destinations. Various star schema models were developed to answer a variety of common marketing use cases and each data model can support several use cases.
 
 >[!IMPORTANT]
 >
->The data used for CDP reporting is accurate for a chosen merge policy and from the most recent daily snapshot.
+>The data used for Real-Time CDP reporting is accurate for a chosen merge policy and from the most recent daily snapshot.
 
 ### Profile model {#profile-model}
 
@@ -75,10 +75,10 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 The namespace model is comprised of the following datasets: 
 
-- `adwh_fact_profile_by_namespace`
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_fact_profile_by_namespace`
 - `adwh_dim_merge_policies`
+- `adwh_dim_namespaces`
 
 The image below contains the relevant data fields in each dataset.
 
@@ -143,9 +143,9 @@ GROUP BY
 The segment model is comprised of the following datasets: 
 
 - `adwh_dim_date`
+- `adwh_fact_profile_by_segment`
 - `adwh_dim_merge_policies`
 - `adwh_dim_segments`
-- `adwh_fact_profile_by_segment`
 - `adwh_dim_br_segment_destinations`
 - `adwh_dim_destination`
 - `adwh_dim_destination_platform` 
@@ -254,9 +254,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 The namespace-segment model is comprised of the following datasets:
 
 - `adwh_dim_date`
-- `adwh_dim_merge_policies`
 - `adwh_dim_namespaces`
 - `adwh_fact_profile_by_segment_and_namespace`
+- `adwh_dim_merge_policies`
 - `adwh_dim_segments`
 - `adwh_dim_br_segment_destinations`
 - `adwh_dim_destination`
@@ -264,7 +264,7 @@ The namespace-segment model is comprised of the following datasets:
 
 The image below contains the relevant data fields in each dataset.
 
-![An ERD of the segment model.](./images/cdp-insights/namespace-segment-model.png)
+![An ERD of the namespace-segment model.](./images/cdp-insights/namespace-segment-model.png)
 
 #### Profiles by identity for a segment use case
 
@@ -294,13 +294,13 @@ GROUP BY adwh_dim_namespaces.namespace_description;
 The overlap namespace model is comprised of the following datasets: 
 
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_dim_overlap_namespaces`
 - `adwh_fact_profile_overlap_of_namespace`
 - `adwh_dim_merge_policies`
 
 The image below contains the relevant data fields in each dataset.
 
-![An ERD of the segment model.](./images/cdp-insights/overlap-namespace-model.png)
+![An ERD of the overlap namespace model.](./images/cdp-insights/overlap-namespace-model.png)
 
 #### Identity overlap (profiles) use case
 
@@ -358,7 +358,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 The overlap namespace by segment model is comprised of the following datasets: 
 
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_dim_overlap_namespaces`
 - `adwh_fact_profile_overlap_of_namespace_by_segment`
 - `adwh_dim_merge_policies`
 - `adwh_dim_segments`
@@ -368,7 +368,7 @@ The overlap namespace by segment model is comprised of the following datasets:
 
 The image below contains the relevant data fields in each dataset.
 
-![An ERD of the segment model.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![An ERD of the overlap namespace by segment model.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
 
 #### Identity overlap (segments) use case
 

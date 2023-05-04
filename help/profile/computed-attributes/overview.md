@@ -1,10 +1,11 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 title: Introduction to Computed Attributes
-topic-legacy: guide
 type: Documentation
 description: Computed attributes are functions to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
+hide: true
+hidefromtoc: true
 ---
 # (Alpha) Computed attributes overview
 
@@ -20,7 +21,7 @@ This guide will help you to better understand the role of computed attributes wi
 
 ## Understanding computed attributes
 
-Adobe Experience Platform enables you to easily import and merge data from multiple sources in order to generate [!DNL Real-time Customer Profiles]. Each profile contains important information related to an individual, such as their contact information, preferences, and purchase history, providing a 360-degree view of the customer. 
+Adobe Experience Platform enables you to easily import and merge data from multiple sources in order to generate [!DNL Real-Time Customer Profiles]. Each profile contains important information related to an individual, such as their contact information, preferences, and purchase history, providing a 360-degree view of the customer. 
 
 Some of the information collected in the profile is easily understood when reading the data fields directly (for example, "first name") whereas other data requires performing multiple calculations or relying on other fields and values in order to generate the information (for example, "lifetime purchase total"). To make this data easier to understand at a glance, [!DNL Platform] allows you to create computed attributes that automatically perform these references and calculations, returning the value in the appropriate field.
 

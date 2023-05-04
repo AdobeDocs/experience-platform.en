@@ -2,15 +2,23 @@
 keywords: Experience Platform;home;popular topics;data governance;data usage label;policy service;data usage labels user guide
 solution: Experience Platform
 title: Manage Data Usage Labels in the UI
-topic-legacy: labels
 description: This guide covers steps for working with data usage labels within the Adobe Experience Platform user interface.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 ---
-# Manage data usage labels in the UI
+# Manage data usage labels in the UI {#user-guide}
 
-This user guide covers steps for working with data usage labels within the [!DNL Experience Platform] user interface. Before using the guide, please see the [Data Governance overview](../home.md) for a more robust introduction to the Data Governance framework.
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataGovernance_description"
+>title="Govern data usage in Platform"
+>abstract="<h2>Description</h2><p>The Data Governance framework in Experience Platform allows you to label attributes and datasets according to data usage restrictions and set up policies that identify and honor these restrictions for specific marketing actions.</p>"
+
+This user guide covers steps for working with data usage labels within the [!DNL Experience Platform] user interface.
 
 ## Manage labels at the dataset level
+
+>[!IMPORTANT]
+>
+>Applying labels at the dataset level is only supported for data governance use cases. If you are trying to create access policies for the data, you must [apply labels to the schema](../../xdm/tutorials/labels.md) that the dataset is based on. See the overview on [attribute-based access control](../../access-control/abac/overview.md) for more information.
 
 In order to manage data usage labels at the dataset level, you must select an existing dataset or create a new one. After logging into Adobe Experience Platform, select **[!UICONTROL Datasets]** on the left-navigation to open the **[!UICONTROL Datasets]** workspace. This page lists all created datasets belonging to your organization, along with useful details related to each dataset. 
 
@@ -68,7 +76,16 @@ The **[!UICONTROL Show Inherited Labels]** toggle is on by default, which allows
 
 ![Hide inherited labels](../images/labels/inherited-labels.png)
 
-## Manage labels at the dataset field level
+## Manage labels at the dataset field level {#manage-labels-at-dataset-field-level}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataGovernance_instructions"
+>title="Instructions"
+>abstract="<ol><li>Select <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html">Datasets</a> in the left navigation, then select the dataset whose data you want to restrict.</li><li>From the dataset details view, select the <b>Data governance</b> tab.</li><li>Select the dataset fields that you want to restrict, then select <b>Edit governance labels</b> to label the data based on usage restrictions.</li><li>After labeling your data, select <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html">Policies</a> in the left navigation, then select <b>Create Policy</b>.</li><li>Choose to create a <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Data Governance policy</a>, then select the data usage labels that the policy will apply to the policy.</li><li>Select the marketing action(s) that the policy will deny for any data containing those labels. After the policy is created, select it from the list and enable it using the toggle in the right rail.</li><li>For each enabled policy, Platform prevents any data containing the specified labels from being used for the defined marketing action(s). This enforcement takes place automatically when you attempt to activate labeled data to a destination with associated marketing actions (use cases).</li></ol>"
+
+>[!IMPORTANT]
+>
+>Applying labels at the dataset field level is only supported for data governance use cases. If you are trying to create access policies for the data, you must [apply labels to the schema](../../xdm/tutorials/labels.md) that the dataset is based on. See the overview on [attribute-based access control](../../access-control/abac/overview.md) for more information.
 
 Continuing the workflow for [adding and editing data usage labels at the dataset level](#add-labels), you can also manage field-level labels within the **[!UICONTROL Data Governance]** workspace for that dataset. 
 

@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;audiences ui guide;audience builder;audience;audiences;audiences ui guide;
 solution: Experience Platform
 title: Audiences UI Guide
-topic-legacy: ui guide
 description: The Audience Builder in the Adobe Experience Platform UI provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing audiences for your organization.
 hide: true
 hidefromtoc: true
+exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 ---
 # Audience Builder UI guide
 

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;export jobs;api;
 solution: Experience Platform
 title: Segment Export Jobs API Endpoint
-topic-legacy: developer guide
 description: Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the /export/jobs endpoint in the Adobe Experience Platform Segmentation Service API, which allows you to programmatically retrieve, create, and cancel export jobs.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
 ---
@@ -12,7 +11,7 @@ Export jobs are asynchronous processes that are used to persist audience segment
 
 >[!NOTE]
 >
->This guide covers the use of export jobs in the [!DNL Segmentation API]. For information on how to manage export jobs for [!DNL Real-time Customer Profile] data, see the guide on [export jobs in the Profile API](../../profile/api/export-jobs.md)
+>This guide covers the use of export jobs in the [!DNL Segmentation API]. For information on how to manage export jobs for [!DNL Real-Time Customer Profile] data, see the guide on [export jobs in the Profile API](../../profile/api/export-jobs.md)
 
 ## Getting started
 
@@ -20,7 +19,7 @@ The endpoints used in this guide are part of the [!DNL Adobe Experience Platform
 
 ## Retrieve a list of export jobs {#retrieve-list}
 
-You can retrieve a list of all export jobs for your IMS Organization by making a GET request to the `/export/jobs` endpoint.
+You can retrieve a list of all export jobs for your organization by making a GET request to the `/export/jobs` endpoint.
 
 **API format**
 
@@ -41,7 +40,7 @@ GET /export/jobs?status={STATUS}
 
 **Request**
 
-The following request will retrieve the last two export jobs within your IMS Organization.
+The following request will retrieve the last two export jobs within your organization.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
@@ -139,7 +138,7 @@ The following response returns HTTP status 200 with a list of successfully compl
                     {
                         "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
                         "segmentNs": "AAM",
-                        "status": ["realized", "existing"]
+                        "status": ["realized"]
                     }
                 ]
             },
@@ -195,7 +194,7 @@ The following response returns HTTP status 200 with a list of successfully compl
 | `destination` | Destination information for the exported data:<ul><li>`datasetId`: The ID of the dataset where data was exported.</li><li>`segmentPerBatch`: A Boolean value that shows whether or not segment IDs are consolidated. A value of "false" means all the segment IDs are exported into a single batch ID. A value of "true" means that one segment ID is exported into one batch ID. **Note:** Setting the value to true may affect batch export performance.</li></ul> |
 | `fields` | A list of the exported fields, separated by commas. |
 | `schema.name` | The name of the schema associated with the dataset where data is to be exported. |
-| `filter.segments` | The segments that are exported. The following fields are included:<ul><li>`segmentId`: The segment ID that profiles will be exported to.</li><li>`segmentNs`: Segment namespace for the given `segmentID`.</li><li>`status`: An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized", "existing"]` which represents all profiles that fall into the segment at the current time. Possible values include: "realized", "existing", and "exited". A value of "realized" means the profile is entering the segment. A value of "existing" means the profile continues to be in the segment. A value of "exiting" means the profile is exiting the segment.</li></ul> |
+| `filter.segments` | The segments that are exported. The following fields are included:<ul><li>`segmentId`: The segment ID that profiles will be exported to.</li><li>`segmentNs`: Segment namespace for the given `segmentID`.</li><li>`status`: An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized"]` which represents all profiles that fall into the segment at the current time. Possible values include: `realized` and `exited`. A value of `realized` means the profile qualifies for the segment. A value of `exiting` means the profile is exiting the segment.</li></ul> |
 | `mergePolicy` | Merge policy information for the exported data. | 
 | `metrics.totalTime` | A field indicating the total time that export job took to run. |
 | `metrics.profileExportTime` | A field indicating the time it took for the profiles to export. |
@@ -274,7 +273,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `fields` | A list of the exported fields, separated by commas. If left blank, all fields will be exported. |
 | `mergePolicy` | Specifies the merge policy to govern the exported data. Include this parameter when there are multiple segments being exported. If not provided, the export will take the same merge policy as the given segment. |
 | `filter` | An object that specifies the segments that are going to be included in the export job by ID, qualification time, or ingest time, depending on the subproperties listed below. If left blank, all the data will be exported. |
-| `filter.segments` | Specifies the segments to export. Omitting this value will result in all data from all profiles being exported. Accepts an array of segment objects, each containing the following fields:<ul><li>`segmentId`: **(Required if using `segments`)** Segment ID for profiles to be exported.</li><li>`segmentNs` *(Optional)* Segment namespace for the given `segmentID`.</li><li>`status` *(Optional)* An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized", "existing"]` which represents all profiles that fall into the segment at the current time. Possible values include: `"realized"`, `"existing"`, and `"exited"`.  A value of "realized" means the profile is entering the segment. A value of "existing" means the profile continues to be in the segment. A value of "exiting" means the profile is exiting the segment.</li></ul> |
+| `filter.segments` | Specifies the segments to export. Omitting this value will result in all data from all profiles being exported. Accepts an array of segment objects, each containing the following fields:<ul><li>`segmentId`: **(Required if using `segments`)** Segment ID for profiles to be exported.</li><li>`segmentNs` *(Optional)* Segment namespace for the given `segmentID`.</li><li>`status` *(Optional)* An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized"]` which represents all profiles that fall into the segment at the current time. Possible values include: `realized` and `exited`.  A value of `realized` means the profile qualifies for the segment. A value of `exiting` means the profile is exiting the segment.</li></ul> |
 | `filter.segmentQualificationTime` | Filter based on segment qualification time. The start time and/or end time can be provided. |
 | `filter.segmentQualificationTime.startTime` | Segment qualification start time for a segment ID for a given status. It not provided, there will be no filter on the start time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
 | `filter.segmentQualificationTime.endTime` | Segment qualification end time for a segment ID for a given status. It not provided, there will be no filter on the end time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
@@ -465,7 +464,7 @@ A successful response returns HTTP status 200 with detailed information about th
 | `destination` | Destination information for the exported data:<ul><li>`datasetId`: The ID of the dataset where the data was exported.</li><li>`segmentPerBatch`: A Boolean value that shows whether or not segment IDs are consolidated. A value of `false` means all the segment IDs were into a single batch ID. A value of `true` means that one segment ID is exported into one batch ID.</li></ul> |
 | `fields` | A list of the exported fields, separated by commas.  |
 | `schema.name` | The name of the schema associated with the dataset where data is to be exported. |
-| `filter.segments` | The segments that are exported. The following fields are included:<ul><li>`segmentId`: Segment ID for profiles to be exported.</li><li>`segmentNs`: Segment namespace for the given `segmentID`.</li><li>`status`: An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized", "existing"]` which represents all profiles that fall into the segment at the current time. Possible values include: "realized", "existing", and "exited".  A value of "realized" means the profile is entering the segment. A value of "existing" means the profile continues to be in the segment. A value of "exiting" means the profile is exiting the segment.</li></ul> |
+| `filter.segments` | The segments that are exported. The following fields are included:<ul><li>`segmentId`: Segment ID for profiles to be exported.</li><li>`segmentNs`: Segment namespace for the given `segmentID`.</li><li>`status`: An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized"]` which represents all profiles that fall into the segment at the current time. Possible values include: `realized` and `exited`.  A value of `realized` means the profile qualifies for the segment. A value of `exiting` means the profile is exiting the segment.</li></ul> |
 | `mergePolicy` | Merge policy information for the exported data. | 
 | `metrics.totalTime` | A field indicating the total time that export job took to run. |
 | `metrics.profileExportTime` | A field indicating the time it took for the profiles to export. |

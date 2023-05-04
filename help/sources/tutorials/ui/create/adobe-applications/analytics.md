@@ -1,9 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Analytics source connector;Analytics connector;Analytics source;analytics
-solution: Experience Platform
 title: Create an Adobe Analytics Source Connection in the UI
-topic-legacy: overview
-type: Tutorial
 description: Learn how to create an Adobe Analytics source connection in the UI to bring consumer data into Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 ---
@@ -16,7 +12,7 @@ This tutorial provides steps for creating an Adobe Analytics source connection i
 This tutorial requires a working understanding of the following components of Experience Platform:
 
 * [Experience Data Model (XDM) System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-* [Real-time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [Real-Time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Key terminology
@@ -30,6 +26,13 @@ It is important to understand the following key terms used throughout this docum
 
 ## Create a source connection with Adobe Analytics
 
+>[!NOTE]
+>
+>When you create an Analytics source dataflow in a production sandbox, two dataflows are created:
+>
+>* A dataflow that does a 13-month backfill of historical report suite data into data lake. This dataflow ends when the backfill is complete.
+>* A dataflow flow which sends live data to data lake and to [!DNL Real-Time Customer Profile]. This dataflow runs continuously.
+
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. You can also use the search bar to narrow down the displayed sources.
@@ -39,6 +42,10 @@ Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Ado
 ![catalog](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Select data
+
+>[!IMPORTANT]
+>
+>The report suites listed on the screen may come from various regions. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform cross regions. Please ensure this is permitted by your company.
 
 The **[!UICONTROL Analytics source add data]** step provides you with a list of [!DNL Analytics] report suite data to create a source connection with. 
 
@@ -52,7 +59,7 @@ Multiple in-bound connections can be made to bring multiple report suites into t
 
 >[!NOTE]
 >
->Data from multiple report suites can be enabled for Real-time Customer Data Profile only if there are no data conflicts, such as two custom properties (eVars, lists and props) that have different meaning.
+>Data from multiple report suites can be enabled for Real-Time Customer Profile only if there are no data conflicts, such as two custom properties (eVars, lists and props) that have different meaning.
 
 To create an [!DNL Analytics] source connection, select a report suite and then select **[!UICONTROL Next]** to proceed.
 
@@ -150,13 +157,14 @@ The following documentation provides further resources on understanding Data Pre
 * [Data Prep mapping functions](../../../../../data-prep/functions.md)
 * [Add calculated fields](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### Filtering for [!DNL Profile Service] (Beta)
+### Filtering for Real-Time Customer Profile {#filtering-for-profile}
 
->[!IMPORTANT]
->
->Support for filtering [!DNL Analytics] data is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+>[!CONTEXTUALHELP]
+>id="platform_data_prep_analytics_filtering"
+>title="Create filter rules"
+>abstract="Define row and column-level filtering rules when sending data to Real-Time Customer Profile. Use row-level filtering to apply conditions and dictate which data to **include for Profile ingestion**. Use column-level filtering to select the columns of data that you want to **exclude for Profile ingestion**. Filtering rules do not apply to data sent to data lake."
 
-Once you have completed mappings for your [!DNL Analytics] report suite data, you can apply filtering rules and conditions to selectively include or exclude data from ingestion to the [!DNL Profile Service]. Support for filtering is only available for [!DNL Analytics] data and data is only filtered prior to entering [!DNL Profile.] All data are ingested into the data lake.
+Once you have completed mappings for your [!DNL Analytics] report suite data, you can apply filtering rules and conditions to selectively include or exclude data from ingestion to the Real-Time Customer Profile. Support for filtering is only available for [!DNL Analytics] data and data is only filtered prior to entering [!DNL Profile.] All data are ingested into the data lake.
 
 #### Row-level filtering
 
@@ -275,9 +283,9 @@ To delete a dataflow, head to the [!UICONTROL Dataflows] page and then select th
 
 ## Next steps and additional resources
 
-Once the connection is created, the dataflow is automatically created to contain the incoming data and populate a dataset with your selected schema. Furthermore, data back-filling occurs and ingests up to 13 months of historical data. When the initial ingestion completes, [!DNL Analytics] data and be used by downstream Platform services such as [!DNL Real-time Customer Profile] and Segmentation Service. See the following documents for more details:
+Once the connection is created, the dataflow is automatically created to contain the incoming data and populate a dataset with your selected schema. Furthermore, data back-filling occurs and ingests up to 13 months of historical data. When the initial ingestion completes, [!DNL Analytics] data and be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and Segmentation Service. See the following documents for more details:
 
-* [[!DNL Real-time Customer Profile] overview](../../../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] overview](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] overview](../../../../../segmentation/home.md)
 * [[!DNL Data Science Workspace] overview](../../../../../data-science-workspace/home.md)
 * [[!DNL Query Service] overview](../../../../../query-service/home.md)

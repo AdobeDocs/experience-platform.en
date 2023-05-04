@@ -2,7 +2,6 @@
 keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics;recipes;api;sensei machine learning;create engine
 solution: Experience Platform
 title: Import a Packaged Recipe Using the Sensei Machine Learning API
-topic-legacy: tutorial
 type: Tutorial
 description: This tutorial uses the Sensei Machine Learning API to create an Engine, also known as a Recipe in the user interface.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
@@ -33,7 +32,7 @@ This tutorial requires a packaged Recipe file in the form of a Docker URL. Follo
 This tutorial requires you to have completed the [Authentication to Adobe Experience Platform tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to [!DNL Platform] APIs. Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 -   `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.
--   `{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.
+-   `{ORG_ID}`: Your organization credentials found in your unique Adobe Experience Platform integration.
 -   `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.
 
 ## Create an Engine

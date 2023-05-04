@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Collect payment data;payment data
 solution: Experience Platform
 title: Create a Dataflow for Payments Sources Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a payments application and ingesting it into Platform using source connectors and APIs.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
@@ -695,7 +694,7 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect data from a payments application on a scheduled basis. Incoming data can now be used by downstream Platform services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect data from a payments application on a scheduled basis. Incoming data can now be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
-* [Real-time Customer Profile overview](../../../../profile/home.md)
+* [Real-Time Customer Profile overview](../../../../profile/home.md)
 * [Data Science Workspace overview](../../../../data-science-workspace/home.md)

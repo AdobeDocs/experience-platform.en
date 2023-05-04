@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 title: Profile Export Jobs API Endpoint
-topic-legacy: guide
 type: Documentation
-description: Real-time Customer Profile enables you to build a single view of individual customers within Adobe Experience Platform by bringing together data from multiple sources, including both attribute data and behavioral data. Profile data can then be exported to a dataset for further processing.
+description: Real-Time Customer Profile enables you to build a single view of individual customers within Adobe Experience Platform by bringing together data from multiple sources, including both attribute data and behavioral data. Profile data can then be exported to a dataset for further processing.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
 ---
 # Profile export jobs endpoint
 
-[!DNL Real-time Customer Profile] enables you to build a single view of individual customers by bringing together data from multiple sources, including both attribute data and behavioral data. Profile data can then be exported to a dataset for further processing. For example, audience segments from [!DNL Profile] data can be exported for activation, and profile attributes can be exported for reporting.
+[!DNL Real-Time Customer Profile] enables you to build a single view of individual customers by bringing together data from multiple sources, including both attribute data and behavioral data. Profile data can then be exported to a dataset for further processing. For example, audience segments from [!DNL Profile] data can be exported for activation, and profile attributes can be exported for reporting.
 
 This document provides step-by-step instructions for creating and managing export jobs using the [Profile API](https://www.adobe.com/go/profile-apis-en).
 
@@ -20,11 +19,11 @@ In addition to creating an export job, you can also access [!DNL Profile] data u
 
 ## Getting started
 
-The API endpoints used in this guide are part of the [!DNL Real-time Customer Profile] API. Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoints used in this guide are part of the [!DNL Real-Time Customer Profile] API. Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Create an export job
 
-Exporting [!DNL Profile] data requires first creating a dataset into which the data will be exported, then initiating a new export job. Both of these steps can be achieved using Experience Platform APIs, with the former using the Catalog Service API and the latter using the Real-time Customer Profile API. Detailed instructions for completing each step are outlined in the sections that follow.
+Exporting [!DNL Profile] data requires first creating a dataset into which the data will be exported, then initiating a new export job. Both of these steps can be achieved using Experience Platform APIs, with the former using the Catalog Service API and the latter using the Real-Time Customer Profile API. Detailed instructions for completing each step are outlined in the sections that follow.
 
 ### Create a target dataset
 
@@ -80,7 +79,7 @@ A successful response returns an array containing the read-only, system-generate
 
 ### Initiate export job {#initiate}
 
-Once you have a union-persisting dataset, you can create an export job to persist the Profile data to the dataset by making a POST request to the `/export/jobs` endpoint in the Real-time Customer Profile API and providing the details of the data you wish to export in the body of the request.
+Once you have a union-persisting dataset, you can create an export job to persist the Profile data to the dataset by making a POST request to the `/export/jobs` endpoint in the Real-Time Customer Profile API and providing the details of the data you wish to export in the body of the request.
 
 **API format**
 
@@ -175,7 +174,7 @@ A successful response returns a dataset populated with Profile data as specified
 
 ## List all export jobs
 
-You can return a list of all export jobs for a particular IMS Organization by performing a GET request to the `export/jobs` endpoint. The request also supports the query parameters `limit` and `offset`, as shown below.
+You can return a list of all export jobs for a particular organization by performing a GET request to the `export/jobs` endpoint. The request also supports the query parameters `limit` and `offset`, as shown below.
 
 **API format**
 
@@ -204,7 +203,7 @@ curl -X GET \
 
 **Response**
 
-The response includes a `records` object containing the export jobs created by your IMS Organization.
+The response includes a `records` object containing the export jobs created by your organization.
 
 ```json
 {
@@ -431,7 +430,7 @@ Once the export has completed successfully, your data is available within the Da
 
 For step-by-step instructions on how to use the Data Access API to access and download batch files, follow the [Data Access tutorial](../../data-access/tutorials/dataset-data.md).
 
-You can also access successfully exported Real-time Customer Profile data using Adobe Experience Platform Query Service. Using the UI or RESTful API, Query Service allows you to write, validate, and run queries on data within the Data Lake.
+You can also access successfully exported Real-Time Customer Profile data using Adobe Experience Platform Query Service. Using the UI or RESTful API, Query Service allows you to write, validate, and run queries on data within the Data Lake.
 
 For more information on how to query audience data, please review the [Query Service documentation](../../query-service/home.md).
 

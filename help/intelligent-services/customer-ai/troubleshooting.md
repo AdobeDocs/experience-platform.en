@@ -3,7 +3,6 @@ keywords: Experience Platform;getting started;customer ai;popular topics;custome
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Customer AI error troubleshooting
-topic-legacy: Getting started
 description: Find answers to common errors in Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
@@ -20,7 +19,7 @@ In the event that **[!UICONTROL Failed]** or **[!UICONTROL Training issue]** is 
 
 ## Unable to access Customer AI in Chrome incognito
 
-Loading errors in Google Chrome's incognito mode are present because of updates in Google Chrome’s incognito mode security settings. The issue is actively being worked on with Chrome to make experience.adobe.com a trusted domain.
+Loading errors in Google Chrome's incognito mode are present because of updates in Google Chrome's incognito mode security settings. The issue is actively being worked on with Chrome to make experience.adobe.com a trusted domain.
 
 <img src='./images/errors/error.PNG' width=500 /><br />
 
@@ -43,7 +42,7 @@ If you receive the error "[!UICONTROL Model Quality is poor. We recommend creati
 Start by checking the accuracy of your data. It is important that your data contains the necessary fields needed for your predictive outcome.
 
 - Check whether your dataset has the latest dates. Customer AI always assumes that the data is up-to-date when the model is triggered.
-- Check for missing data within your defined prediction and eligibility window. Your data needs to be complete with no gaps. Also make sure your dataset meets the [Customer AI historical data requirements](./input-output.md#data-requirements).
+- Check for missing data within your defined prediction and eligibility window. Your data needs to be complete with no gaps. Also make sure your dataset meets the [Customer AI historical data requirements](./data-requirements.md#data-requirements).
 - Check for missing data in commerce, application, web, and search, within your schema field properties.
 
 If your data does not seem to be the problem, try changing the eligibility population condition to restrict the model to certain profiles (for example, `_experience.analytics.customDimensions.eVars.eVar142` exists in last 56 Days). This restricts the population and size of the data used in the training window.
