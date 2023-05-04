@@ -22,6 +22,8 @@ xdm.identityMap.ECID[0].id
 
 Set the target to an XDM path where the field is of type string.
 
+![](./assets/access-ecid-data-prep.png)
+
 
 
 ## Tags
