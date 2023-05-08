@@ -36,7 +36,7 @@ Before you are ready to create the template, make sure you complete the steps be
    * Use `maxUsersPerRequest` with a value greater than one if you want an API call to your destination to include multiple profiles, along with their segment qualifications, identities, and profile attributes. 
 2. [Create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md) and add the ID of the destination server configuration in `destinationDelivery.destinationServerId`.
 3. [Get the ID of the destination configuration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) that you just created, so you can use it in the template creation tool.
-4. Understand [which functions and filters you can use](../../functionality/supported-functions.md) in the message transformation template.
+4. Understand [which functions and filters you can use](../../functionality/destination-server/supported-functions.md) in the message transformation template.
 
 ## How to use the sample template API and render template API to create a template for your destination {#iterative-process}
 

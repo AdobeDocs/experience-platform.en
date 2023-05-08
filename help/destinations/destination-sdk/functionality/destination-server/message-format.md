@@ -1215,7 +1215,7 @@ After reading this document, you now know how data exported out of Experience Pl
 
 * [Create and test a message transformation template](../../testing-api/streaming-destinations/create-template.md)
 * [Render template API operations](../../testing-api/streaming-destinations/render-template-api.md)
-* [Supported transformation functions in Destination SDK](../supported-functions.md)
+* [Supported transformation functions in Destination SDK](../destination-server/supported-functions.md)
 
 To learn more about the other destination server components, see the following articles:
 
