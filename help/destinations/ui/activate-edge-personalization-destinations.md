@@ -15,7 +15,7 @@ Examples of edge destinations are the [Adobe Target](../../destinations/catalog/
 
 >[!NOTE]
 >
->When [configuring the Adobe Target connection](../catalog/personalization/adobe-target-connection.md) without using a datastream ID, the use cases described in this article are not supported.
+>When [configuring the Adobe Target connection](../catalog/personalization/adobe-target-connection.md) without using a datastream ID, the use cases described in this article are not supported. Only next-session personalization use cases are supported in the absence of a datastream.
 
 >[!IMPORTANT]
 > 
