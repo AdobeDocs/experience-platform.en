@@ -26,13 +26,18 @@ Examples of edge destinations are the [Adobe Target](../../destinations/catalog/
 
 This article explains the workflow required to activate audience data in Adobe Experience Platform edge destinations. When used together with [edge segmentation](../../segmentation/ui/edge-segmentation.md), these destinations enable same-page and next-page personalization use cases on your web and mobile properties. 
 
-Watch the video below for an overview of the end-to-end configuration process.
+For a brief overview on how to configure the Adobe Target connection for edge personalization, watch the video below.
 
 >[!NOTE]
 >
 >The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, refer to the configuration steps described in the sections below.
 
->[!VIDEO](https://video.tv.adobe.com/v/340091/)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+
+For a brief overview of how to share segments and profile attributes to Adobe Target and custom personalization destinations, watch the video below.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
+
 
 ## Use cases {#use-cases}
 

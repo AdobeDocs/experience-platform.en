@@ -20,6 +20,10 @@ Adobe Target is an application that provides real-time, AI-powered personalizati
 
 Adobe Target is a personalization connection in the Adobe Experience Platform destinations catalog.
 
+For a brief overview on how to configure the Adobe Target connection in Experience Platform, watch the video below.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+
 ## Prerequisites {#prerequisites}
 
 ### Datastream ID {#datastream-id}
