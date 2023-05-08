@@ -24,6 +24,10 @@ You can configure your schema settings via the `/authoring/destinations` endpoin
 
 This article describes all the supported schema configuration options that you can use for your destination, and shows what customers will see in the Platform UI.
 
+>[!IMPORTANT]
+>
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+
 ## Supported integration types {#supported-integration-types}
 
 Refer to the table below for details on which types of integrations support the functionality described on this page.
@@ -151,7 +155,7 @@ For example, you can enforce the email address field to always be sent to the de
 
 >[!NOTE]
 >
->Currently supported combinations of required mappings are: 
+>The following combinations of required mappings are currently supported: 
 >* You can configure a required source field and a required destination field. In this case, users cannot edit or select any of the two fields and can only view the selection.
 >* You can configure a required destination field only. In this case, users will be allowed to select a source field to map to the destination.
 >

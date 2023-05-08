@@ -9,6 +9,10 @@ Destination SDK supports several authentication methods to your destination. Amo
 
 This page describes the various OAuth 2 authentication flows supported by Destination SDK, and provides instructions to set up OAuth 2 authentication for your destination.
 
+>[!IMPORTANT]
+>
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+
 ## Supported integration types {#supported-integration-types}
 
 Refer to the table below for details on which types of integrations support the functionality described on this page.

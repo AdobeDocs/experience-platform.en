@@ -27,6 +27,10 @@ You can configure the file formatting options via the `/authoring/destination-se
 
 This page describes all the supported file formatting settings for exported `CSV` files.
 
+>[!IMPORTANT]
+>
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+
 ## Supported integration types {#supported-integration-types}
 
 Refer to the table below for details on which types of integrations support the functionality described on this page.
@@ -38,7 +42,7 @@ Refer to the table below for details on which types of integrations support the 
 
 ## Supported parameters {#supported-parameters}
 
-You can modify several properties of the exported files to match the requirements of the file reception system on your side, in order to optimally read and interpret the files received from Experience Platform.
+You can modify several properties of the exported files to match the requirements of your destination's file reception system, in order to optimally read and interpret the files received from Experience Platform.
 
 >[!NOTE]
 >

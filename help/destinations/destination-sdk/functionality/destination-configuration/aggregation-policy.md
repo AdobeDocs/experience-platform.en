@@ -22,6 +22,10 @@ This article describes all the supported aggregation policy settings that you ca
 
 After reading through this document, refer to the documentation on [using templating](../../functionality/destination-server/message-format.md#using-templating) and the [aggregation key examples](../../functionality/destination-server/message-format.md#template-aggregation-key) to understand how to include the aggregation policy in your message transformation template based on your selected aggregation policy.
 
+>[!IMPORTANT]
+>
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+
 ## Supported integration types {#supported-integration-types}
 
 Refer to the table below for details on which types of integrations support the functionality described on this page.

@@ -18,6 +18,10 @@ For a detailed description of the capabilities that you can configure through th
 * [Message format](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [File formatting configuration](../../../destination-sdk/functionality/destination-server/file-formatting.md)
 
+>[!IMPORTANT]
+>
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+
 ## Getting started with destination server API operations {#get-started}
 
 Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.

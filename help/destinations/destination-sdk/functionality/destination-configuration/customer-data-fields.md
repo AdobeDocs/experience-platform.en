@@ -28,6 +28,10 @@ You can configure customer data fields via the `/authoring/destinations` endpoin
 
 This article describes all the supported customer data fields configuration types that you can use for your destination, and shows what customers will see in the Experience Platform UI.
 
+>[!IMPORTANT]
+>
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+
 ## Supported integration types {#supported-integration-types}
 
 Refer to the table below for details on which types of integrations support the functionality described on this page.

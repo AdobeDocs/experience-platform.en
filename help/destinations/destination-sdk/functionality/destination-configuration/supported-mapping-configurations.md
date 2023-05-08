@@ -15,6 +15,10 @@ This article describes all the supported mapping configurations that you can use
 
 When building your destination, configure your schema and identity namespaces according to one of the mapping configurations described in this page.
 
+>[!IMPORTANT]
+>
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+
 ## Supported mappings for streaming destinations {#streaming-mappings}
 
 Real-time (streaming) destinations built with Destination SDK support the mapping configurations described in the table below.

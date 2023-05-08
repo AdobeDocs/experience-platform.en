@@ -9,17 +9,21 @@ Experience Platform Destination SDK uses [[!DNL Pebble] templates](https://pebbl
 
 The Experience Platform [!DNL Pebble] implementation has some changes, compared to the out-of-the box version provided by [!DNL Pebble]. Also, in addition to the out-of-the-box functions provided by [!DNL Pebble], Adobe has created some additional functions that you can use with Destination SDK.
 
+>[!IMPORTANT]
+>
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+
 ## Where to use {#where-to-use}
 
-Use the supported functions listed further below on this page when [creating a message transformation template](../testing-api/streaming-destinations/create-template.md) for the data exported out of Experience Platform to your destination. 
+Use the supported functions listed further below on this page when [creating a message transformation template](../../testing-api/streaming-destinations/create-template.md) for the data exported out of Experience Platform to your destination. 
 
-The message transformation template is used in the [destination server configuration](../functionality/destination-server/templating-specs.md) for streaming destinations.
+The message transformation template is used in the [destination server configuration](templating-specs.md) for streaming destinations.
 
 ## Prerequisites {#prerequisites}
 
-To understand the concepts and functions in this reference page, read the [message format](destination-server/message-format.md) document first. You need to understand the [structure of a profile](destination-server/message-format.md#profile-structure) in Experience Platform before you can use [!DNL Pebble] templates to transform and the exported data.
+To understand the concepts and functions in this reference page, read the [message format](message-format.md) document first. You need to understand the [structure of a profile](message-format.md#profile-structure) in Experience Platform before you can use [!DNL Pebble] templates to transform and the exported data.
 
-Before you advance to the functions documented below, review the templating examples in the section [Using a templating language for the identity, attributes, and segment membership transformations](destination-server/message-format.md#using-templating). The examples in there start off very simple and increase in complexity.
+Before you advance to the functions documented below, review the templating examples in the section [Using a templating language for the identity, attributes, and segment membership transformations](message-format.md#using-templating). The examples in there start off very simple and increase in complexity.
 
 ## Supported [!DNL Pebble] functions {#supported-functions}
 
@@ -34,8 +38,8 @@ From the [!DNL Pebble] tags section, Destination SDK only supports:
 >
 >Using `for` is different when iterating through *array* or *map* elements in a template. When you iterate through an array, you can obtain the element directly. When you iterate through a map, you obtain each map entry, which has a key-value pair.
 >
-> * For an example of an array element, think about the identities in an [identityMap](destination-server/message-format.md#identities) namespace, where you could iterate through elements such as `identityMap.gaid`, `identityMap.email`, or similar.
-> * For an example of a map element, think about [segmentMembership](destination-server/message-format.md#segment-membership).
+> * For an example of an array element, think about the identities in an [identityMap](message-format.md#identities) namespace, where you could iterate through elements such as `identityMap.gaid`, `identityMap.email`, or similar.
+> * For an example of a map element, think about [segmentMembership](message-format.md#segment-membership).
 
 From the [!DNL Pebble] filter section, Destination SDK supports all functions. An example further below shows how the `date` function can be used within Destination SDK.
 

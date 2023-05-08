@@ -197,6 +197,7 @@ feature: Destinations
             * [Server specs](./destination-sdk/functionality/destination-server/server-specs.md)
             * [Templating specs](./destination-sdk/functionality/destination-server/templating-specs.md)
             * [Message format](./destination-sdk/functionality/destination-server/message-format.md)
+            * [Supported transformation functions](./destination-sdk/functionality/supported-functions.md)
             * [File formatting configuration](./destination-sdk/functionality/destination-server/file-formatting.md)
         * Destination configuration components {#destination-configuration}
             * [Customer authentication configuration](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
@@ -212,7 +213,6 @@ feature: Destinations
             * [Batch configuration](./destination-sdk/functionality/destination-configuration/batch-configuration.md)
             * [Historical profile qualifications](./destination-sdk/functionality/destination-configuration/historical-profile-qualifications.md)
         * [Rate limiting and retry policy for streaming destinations](./destination-sdk/functionality/rate-limiting-retry-policy.md)
-        * [Supported transformation functions](./destination-sdk/functionality/supported-functions.md)
         * [Audience metadata management](./destination-sdk/functionality/audience-metadata-management.md)
     * Guides {#guides}
         * [Use Destination SDK to configure a streaming destination](./destination-sdk/guides/configure-destination-instructions.md)

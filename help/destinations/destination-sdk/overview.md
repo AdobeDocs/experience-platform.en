@@ -29,9 +29,9 @@ As an Experience Platform customer, you can also author your own private custom 
 
 ## Supported integration types {#supported-integration-types}
 
-### Real-time integrations {#real-time-integrations}
+### Real-time (streaming) integrations {#real-time-integrations}
 
-Through Destination SDK, Adobe Experience Platform supports real-time integrations with destinations that have a REST API endpoint. The real-time integration with Experience Platform supports capabilities like:
+Through Destination SDK, Adobe Experience Platform supports real-time (also referred to as streaming) integrations with destinations that have a REST API endpoint. The real-time integration with Experience Platform supports capabilities like:
 
 * Message transformation and aggregation
 * Profile backfill
@@ -50,7 +50,7 @@ Read about the technical requirements on the destinations side in the [integrati
 
 ## Get access to Destination SDK {#get-access}
 
-Destination SDK access varies based on your status as a partner or Experience Platform, Real-Time CDP customer. Please see the table below for more information.
+Destination SDK access varies based on your status as a partner or Experience Platform, Real-Time CDP customer. See the table below for more information.
 
 |Type of partner or customer | How to access Destination SDK |
 ---------|----------|
@@ -64,7 +64,7 @@ Destination SDK access varies based on your status as a partner or Experience Pl
 
 The process to configure your destination in Experience Platform is outlined below:
 
-1. If you are an ISV or SI, see the getting access information in the section above. [Real-Time CDP Ultimate package](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers can skip this step.
+1. If you are an ISV or SI, see the [getting access](#get-access) information in the section above. [Real-Time CDP Ultimate package](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers can skip this step.
 2. [Request to provision an Experience Platform sandbox](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) and enable the destination authoring permission.
 3. Build your integration. Follow the instructions in the product documentation to configure [streaming destinations](guides/configure-destination-instructions.md) or [file-based destinations](guides/configure-file-based-destination-instructions.md).
 4. Test your integration. Follow the instructions in the product documentation to test [streaming destinations](testing-api/streaming-destinations/streaming-destination-testing-overview.md) or [file-based destinations](testing-api/batch-destinations/file-based-destination-testing-overview.md).

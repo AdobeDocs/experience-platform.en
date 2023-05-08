@@ -185,7 +185,6 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
     "uiAttributes": {
         "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
         "category": "S3",
-        "iconUrl": "https://dc5tqsrhldvnl.cloudfront.net/2/90048/da276e30c730ce6cd666c8ca78360df21.png",
         "connectionType": "S3",
         "flowRunsSupported": true,
         "monitoringSupported": true,
@@ -306,7 +305,6 @@ If you use an audience metadata configuration, you must connect it to the destin
     "uiAttributes": {
         "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
         "category": "S3",
-        "iconUrl": "https://dc5tqsrhldvnl.cloudfront.net/2/90048/da276e30c730ce6cd666c8ca78360df21.png",
         "connectionType": "S3",
         "flowRunsSupported": true,
         "monitoringSupported": true,

@@ -29,6 +29,10 @@ This article describes all the supported UI attributes that you can use for your
 
 ![UI screenshot showing the UI attributes in the Experience Platform interface](../../assets/functionality/destination-configuration/ui-attributes.png)
 
+>[!IMPORTANT]
+>
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+
 ## Supported integration types {#supported-integration-types}
 
 Refer to the table below for details on which types of integrations support the functionality described on this page.
@@ -44,9 +48,9 @@ Refer to the table below for details on which types of integrations support the 
 "uiAttributes":{
       "documentationLink":"http://www.adobe.com/go/YOURDESTINATION-en",
       "category":"cloudStorage",
-      "iconUrl":"https://dc5tqsrhldvnl.cloudfront.net/2/90048/da276e30c730ce6cd666c8ca78360df21.png",
       "connectionType":"S3",
-      "frequency":"batch"
+      "frequency":"batch",
+      "isBeta":"true"
    }
 ```
 
@@ -95,6 +99,14 @@ Users can see the destination connection type in the [Browse](../../../ui/destin
 Users can see the frequency type in the **[!UICONTROL Dataflow runs]** page of each destination connection.
 
 ![UI image showing the frequency type location in the UI.](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
+
+### `isBeta` {#isbeta}
+
+If the destination that you are creating with Destination SDK will be available to a limited number of customers, you might want to mark the destination card from the destination catalog as beta.
+
+To do this, you can use the `isBeta: "true"` parameter in the UI attributes section of the destination configuration to mark the destination card appropriately.
+
+![UI image showing a destination card marked as beta.](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
 
 ## Next steps {#next-steps}
 

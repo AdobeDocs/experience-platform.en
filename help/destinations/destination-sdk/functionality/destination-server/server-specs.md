@@ -23,6 +23,10 @@ You can configure the destination server specs via the `/authoring/destination-s
 
 This page shows all the destination server types supported by Destination SDK, with all their configuration parameters. When creating your destination, replace the parameter values with your own.
 
+>[!IMPORTANT]
+>
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+
 ## Supported integration types {#supported-integration-types}
 
 Refer to the table below for details on which types of integrations support the functionality described on this page.
@@ -311,7 +315,7 @@ The sample below shows an example of a destination server configuration for a [!
 
 {style="table-layout:auto"}
 
-## File-based [!DNL Google Cloud Storage] destination server {#gcs-example}
+## [!DNL Google Cloud Storage] destination server {#gcs-example}
 
 This destination server allows you to export files containing Platform data to your [!DNL Google Cloud Storage] account.
 

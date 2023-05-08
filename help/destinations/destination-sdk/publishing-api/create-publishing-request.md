@@ -20,6 +20,10 @@ Use the publish destinations API endpoint to submit a publishing request when:
 * As a Destination SDK partner, you want to make your productized destination available across all Experience Platform organizations for all Experience Platform customers to use;
 * You make *any updates* to your configurations. Configuration updates are reflected in the destination only after you submit a new publishing request, which is approved by the Experience Platform team.
 
+>[!IMPORTANT]
+>
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+
 ## Getting started with destination publishing API operations {#get-started}
 
 Before continuing, please review the [getting started guide](../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.

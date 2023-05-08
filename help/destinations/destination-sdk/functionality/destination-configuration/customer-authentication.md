@@ -35,6 +35,10 @@ This article describes all the supported customer authentication configurations 
 >
 >The customer authentication configuration does not require you to configure any parameters. You can copy and paste the snippets shown in this page in your API calls when [creating](../../authoring-api/destination-configuration/create-destination-configuration.md) or [updating](../../authoring-api/destination-configuration/update-destination-configuration.md) a destination configuration, and your users will see the corresponding authentication screen in the Platform UI.
 
+>[!IMPORTANT]
+>
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+
 ## Supported integration types {#supported-integration-types}
 
 Refer to the table below for details on which types of integrations support the functionality described on this page.
@@ -46,23 +50,17 @@ Refer to the table below for details on which types of integrations support the 
 
 ## Authentication rule configuration {#authentication-rule}
 
-When using any of the customer authentication configurations described in this page, always configure the `authenticationRule` parameter in [destination delivery](destination-delivery.md) as `"CUSTOMER_AUTHENTICATION"`.
+When using any of the customer authentication configurations described in this page, always set the `authenticationRule` parameter in [destination delivery](destination-delivery.md) to `"CUSTOMER_AUTHENTICATION"`, as shown below.
 
-```json {line-numbers="true" highlight="11"}
- "destinationDelivery":[
+```json {line-numbers="true" highlight="4"
+{
+   "destinationDelivery":[
       {
-         "deliveryMatchers":[
-            {
-               "type":"SOURCE",
-               "value":[
-                  "batch"
-               ]
-            }
-         ],
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
          "destinationServerId":"{{destinationServerId}}"
       }
    ]
+}
 ```
 
 ## Basic authentication {#basic}
@@ -151,7 +149,7 @@ To set up [!DNL Azure Blob] authentication for your destination, configure the `
 ]
 ```
 
-## [!DNL Azure Data Lake Storage] {#adls}
+## [!DNL Azure Data Lake Storage] authentication {#adls}
 
 [!DNL Azure Data Lake Storage] authentication is supported for file-based destinations in Experience Platform.
 
@@ -205,7 +203,7 @@ To set up SFTP authentication with SSH key for your destination, configure the `
 ]
 ```
 
-## [!DNL Google Cloud Storage] {#gcs}
+## [!DNL Google Cloud Storage] authentication {#gcs}
 
 [!DNL Google Cloud Storage] authentication is supported for file-based destinations in Experience Platform.
 

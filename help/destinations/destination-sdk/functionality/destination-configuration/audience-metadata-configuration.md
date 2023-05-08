@@ -20,6 +20,10 @@ See the following API reference pages for detailed API call examples where you c
 * [Create an audience template](../../metadata-api/create-audience-template.md)
 * [Update an audience template](../../metadata-api/update-audience-template.md)
 
+>[!IMPORTANT]
+>
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+
 ## Supported integration types {#supported-integration-types}
 
 Refer to the table below for details on which types of integrations support the functionality described on this page.

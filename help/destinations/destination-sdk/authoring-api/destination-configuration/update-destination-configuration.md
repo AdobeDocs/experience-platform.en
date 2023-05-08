@@ -26,6 +26,10 @@ For a detailed description of the capabilities of a destination configuration, r
 * [Batch configuration](../../functionality/destination-configuration/batch-configuration.md)
 * [Historical profile qualifications](../../functionality/destination-configuration/historical-profile-qualifications.md)
 
+>[!IMPORTANT]
+>
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+
 ## Getting started with destination configuration API operations {#get-started}
 
 Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.

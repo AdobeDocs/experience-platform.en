@@ -28,6 +28,10 @@ You can configure your supported identity namespaces via the `/authoring/destina
 
 This article describes all the supported identity namespaces configuration options that you can use for your destination, and shows what customers will see in the Platform UI.
 
+>[!IMPORTANT]
+>
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+
 ## Supported integration types {#supported-integration-types}
 
 Refer to the table below for details on which types of integrations support the functionality described on this page.
@@ -78,7 +82,7 @@ Read more about identities in the [identity namespace overview](../../../../iden
 
 ## Mapping considerations
 
-If customers select a source identity namespace and do not select a target mapping, Platform automatically populated the target mapping with an attribute with the same name.
+If customers select a source identity namespace and do not select a target mapping, Platform automatically populates the target mapping with an attribute with the same name.
 
 ## Configure optional source field hashing
 
@@ -102,7 +106,7 @@ The configuration below enables the optional [Apply transformation](../../../ui/
    }
 ```
 
-Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
+Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation.
 
 When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have Adobe Experience Platform automatically hash the source attributes on activation.
 
