@@ -197,7 +197,7 @@ feature: Destinations
             * [Server specs](./destination-sdk/functionality/destination-server/server-specs.md)
             * [Templating specs](./destination-sdk/functionality/destination-server/templating-specs.md)
             * [Message format](./destination-sdk/functionality/destination-server/message-format.md)
-            * [Supported transformation functions](./destination-sdk/functionality/supported-functions.md)
+            * [Supported transformation functions](./destination-sdk/functionality/destination-server/supported-functions.md)
             * [File formatting configuration](./destination-sdk/functionality/destination-server/file-formatting.md)
         * Destination configuration components {#destination-configuration}
             * [Customer authentication configuration](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
