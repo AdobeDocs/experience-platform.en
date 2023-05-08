@@ -20,6 +20,7 @@ feature: Destinations
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
     * [Connect to batch cloud storage and email marketing destinations and activate data using the Flow Service API](./api/connect-activate-batch-destinations.md)
     * [(Beta) Activate audience segments to batch destinations via the ad-hoc activation API](./api/ad-hoc-activation-api.md)
+    * [Edit destination](./api/edit-destination.md)
     * [Update destination dataflows](./api/update-destination-dataflows.md)
     * [Delete destination accounts](./api/delete-destination-account.md)
     * [Delete destination dataflows](./api/delete-destination-dataflow.md)
