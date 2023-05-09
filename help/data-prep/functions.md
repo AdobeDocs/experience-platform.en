@@ -355,7 +355,7 @@ The table below outlines a list of device field values and their corresponding d
 | Tablet | A mobile device with a large screen (commonly > 7"). |
 | Phone | A mobile device with a small screen (commonly < 7"). |
 | Watch | A mobile device with a tiny screen (commonly < 2"). These devices normally operate as an additional screen for a Phone/Tablet type of device. |
-| Augmented Reality | A mobile device with AR capabilities (i.e. [!DNL Google Glass]). |
+| Augmented Reality | A mobile device with AR capabilities. |
 | Virtual Reality | A mobile device with VR capabilities. |
 | eReader | A device similar to a Tablet, but usually with an [!DNL eInk] screen. |
 | Set-Top Box | A connected device that allows interaction through a TV-sized screen. |
