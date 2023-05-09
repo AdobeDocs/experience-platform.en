@@ -44,12 +44,6 @@ CREATE TABLE decile_table (id text PRIMARY KEY NAMESPACE 'IDFA',
             decile1Month map<text, integer>) WITH (label='PROFILE');
 ```
 
-<!--        decile3Month map<text, integer>,
-            decile6Month map<text, integer>,
-            decile9month map<text, integer>,
-            decile12month map<text, integer>,
-            decilelifetime map<text, integer> -->
-
 On successful execution of the query, the dataset ID is returned to the console, as seen in the example below. 
 
 ```console
