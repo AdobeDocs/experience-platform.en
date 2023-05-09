@@ -350,16 +350,16 @@ The table below outlines a list of device field values and their corresponding d
 | --- | --- |
 | Desktop | A Desktop or a Laptop type of device. |
 | Anonymized | An anonymous device. In some cases, these are `useragents` that have been altered by an anonymization software. |
-| Unknown | An unknown device. These are usually `useragents` that look normal yet contain no information about the device. |
+| Unknown | An unknown device. These are usually `useragents` that contain no information about the device. |
 | Mobile | A mobile device that is yet to be identified. This mobile device can be an eReader, a tablet, a phone, a watch, etc. |
 | Tablet | A mobile device with a large screen (commonly > 7"). |
 | Phone | A mobile device with a small screen (commonly < 7"). |
-| Watch | A mobile device with a tiny screen (commonly < 2"). These devices normally operate as an additional screen for a Phone/Tablet type of device. |
+| Watch | A mobile device with a tiny screen (commonly < 2"). These devices normally operate as an additional screen for a phone/tablet type of device. |
 | Augmented Reality | A mobile device with AR capabilities. |
 | Virtual Reality | A mobile device with VR capabilities. |
-| eReader | A device similar to a Tablet, but usually with an [!DNL eInk] screen. |
-| Set-Top Box | A connected device that allows interaction through a TV-sized screen. |
-| TV | A device similar to the Set-Top Box, but is built into the TV. |
+| eReader | A device similar to a tablet, but usually with an [!DNL eInk] screen. |
+| Set-top box | A connected device that allows interaction through a TV-sized screen. |
+| TV | A device similar to the Set-top box, but is built into the TV. |
 | Home Appliance | A (usually large) home appliance, like a refrigerator. |
 | Game Console | A fixed gaming system like a [!DNL Playstation] or an [!DNL XBox]. |
 | Handheld Game Console | A mobile gaming system like a [!DNL Nintendo Switch]. |
@@ -368,7 +368,7 @@ The table below outlines a list of device field values and their corresponding d
 | Robot | Robots that visit a website. |
 | Robot Mobile | Robots that visit a website but indicates that they want to be seen as a Mobile visitor. |
 | Robot Imitator | Robots that visit a website, pretending that are robots like [!DNL Google], but they are not. **Note**: In most cases, Robot Imitators are indeed robots. |
-| Cloud | A cloud-based application. These are neither Robots nor Hackers, but are applications that need to connect. This includes [!DNL Mastodon] servers. |
+| Cloud | A cloud-based application. These are neither robots nor hackers, but are applications that need to connect. This includes [!DNL Mastodon] servers. |
 | Hacker | This device value is used in case scripting is detected in the `useragent` string. |
 
 {style="table-layout:auto"}
