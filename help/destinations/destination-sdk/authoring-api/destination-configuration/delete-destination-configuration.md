@@ -35,7 +35,7 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 | --------- | ----------- |
 | `{INSTANCE_ID}` | The `ID` of the destination configuration you want to delete. |
 
-**Request**
++++Request
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
@@ -45,9 +45,10 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**Response**
++++Response
 
 A successful response returns HTTP status 200 along with an empty HTTP response.
+
 
 ## API error handling {#error-handling}
 

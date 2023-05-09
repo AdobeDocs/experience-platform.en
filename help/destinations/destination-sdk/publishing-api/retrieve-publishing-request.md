@@ -56,6 +56,8 @@ Select each tab below to view the corresponding payload.
 
 >[!TAB Retrieve all publishing requests]
 
++++Request
+
 The following request will retrieve the list of publishing requests that you have submitted, based on [!DNL IMS Org ID] and sandbox configuration.
 
 ```shell
@@ -66,25 +68,9 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
->[!TAB Retrieve a specific publishing request]
++++Response
 
-```shell
-curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish/{DESTINATION_ID} \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-| Parameter | Description |
-| -------- | ----------- |
-| `{DESTINATION_ID}` | The ID of the destination for which you want to retrieve the publishing status. |
-
->[!ENDTABS]
-
-**Response**
-
-The following response returns HTTP status 200 with a list of destinations submitted for publishing that you have access to, based on the IMS Organization ID and sandbox name that you used. One `configId` corresponds to the publish request for one destination.
+The following response returns HTTP status 200 with a list of all destinations submitted for publishing that you have access to, based on the IMS Organization ID and sandbox name that you used. One `configId` corresponds to the publish request for one destination.
 
 ```json
 {
@@ -120,6 +106,35 @@ The following response returns HTTP status 200 with a list of destinations submi
 }
 ```
 
+|Parameter | Type | Description|
+|---------|----------|------|
+|`destinationId` | String | The destination ID of the destination configuration that you have submitted for publishing. |
+|`publishDetailsList.configId` | String | The unique ID of the destination publish request for your submitted destination. |
+|`publishDetailsList.allowedOrgs` | String | Returns the Experience Platform organizations for which the destination is available. <br> <ul><li> For `"destinationType": "PUBLIC"`, this parameter returns `"*"`, which means that the destination is available for all Experience Platform organizations.</li><li> For `"destinationType": "DEV"`, this parameter returns the Organization ID of the organization which you used to author and test the destination.</li></ul>|
+|`publishDetailsList.status` | String | The status of your destination publish request. Possible values are `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Destinations with the value `PUBLISHED` are live and can be used by Experience Platform customers.|
+|`publishDetailsList.destinationType` | String | The type of destination. Values can be `DEV` and `PUBLIC`. `DEV` corresponds to the destination in your Experience Platform organization. `PUBLIC` corresponds to the destination that you have submitted for publishing. Think of these two options in Git terms, where the `DEV` version represents your local authoring branch and the `PUBLIC` version represents the remote main branch.|
+|`publishDetailsList.publishedDate` | String | The date when the destination was submitted for publishing, in epoch time.|
+
+{style="table-layout:auto"}
+
+>[!TAB Retrieve a specific publishing request]
+
++++Request
+
+```shell
+curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish/{DESTINATION_ID} \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+| Parameter | Description |
+| -------- | ----------- |
+| `{DESTINATION_ID}` | The ID of the destination for which you want to retrieve the publishing status. |
+
++++Response
+
 If you passed a `DESTINATION_ID` in the API call, the response returns HTTP status 200 with detailed information about the specified destination publish request.
 
 ```json
@@ -150,7 +165,7 @@ If you passed a `DESTINATION_ID` in the API call, the response returns HTTP stat
 
 {style="table-layout:auto"}
 
-
+>[!ENDTABS]
 
 ## API error handling
 

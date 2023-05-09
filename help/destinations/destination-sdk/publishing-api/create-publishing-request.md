@@ -38,7 +38,7 @@ You can submit a destination configuration for publishing by making a POST reque
 POST /authoring/destinations/publish
 ```
 
-**Request**
++++Request
 
 The following request submits a destination for publishing, across the organizations configured by the parameters provided in the payload. The payload below includes all parameters accepted by the `/authoring/destinations/publish` endpoint.
 
@@ -63,7 +63,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 {style="table-layout:auto"}
 
-**Response**
++++Response
 
 A successful response returns HTTP status 201 with details of your destination publish request.
 

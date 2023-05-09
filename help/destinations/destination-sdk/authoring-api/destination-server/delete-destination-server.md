@@ -42,17 +42,17 @@ DELETE /authoring/destination-servers/{INSTANCE_ID}
 | --------- | ----------- |
 | `{INSTANCE_ID}` | The `ID` of the destination server configuration you want to delete. |
 
-**Request**
++++Request
 
 ```shell
-curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destination-servers/bd4ec8f0-e98f-4b6a-8064-dd7adbfffec9 \
+curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**Response**
++++Response
 
 A successful response returns HTTP status 200 along with an empty HTTP response.
 

@@ -49,11 +49,7 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 
 The following request deletes a credential configuration defined by the `{INSTANCE_ID}` parameter.
 
->[!BEGINSHADEBOX]
-
-**Delete a credential configuration**
-
-+++**Request**
++++Request
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -63,15 +59,9 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/credenti
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-+++
-
-+++**Response**
++++Response
 
 A successful response returns HTTP status 200 along with an empty HTTP response.
-
-+++
-
->[!ENDSHADEBOX]
 
 ## API error handling {#error-handling}
 

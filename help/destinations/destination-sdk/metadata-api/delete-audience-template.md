@@ -37,7 +37,7 @@ DELETE /authoring/audience-templates/{INSTANCE_ID}
 | --------- | ----------- |
 | `{INSTANCE_ID}` | The `ID` of the audience template you want to delete. |
 
-**Request**
++++Request
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/audience-templates/{INSTANCE_ID} \
@@ -47,7 +47,7 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/audience
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**Response**
++++Response
 
 A successful response returns HTTP status 200 along with an empty HTTP response.
 
