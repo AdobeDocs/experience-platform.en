@@ -348,7 +348,7 @@ The table below outlines a list of device field values and their corresponding d
 
 | Device | Description |
 | --- | --- |
-| Desktop | A Desktop/Laptop type of device. |
+| Desktop | A Desktop or a Laptop type of device. |
 | Anonymized | An anonymous device. In some cases, these are `useragents` that have been altered by an anonymization software. |
 | Unknown | An unknown device. These are usually `useragents` that look normal yet contain no information about the device. |
 | Mobile | A mobile device that is yet to be identified. This mobile device can be an eReader, a tablet, a phone, a watch, etc. |
