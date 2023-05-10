@@ -35,9 +35,9 @@ Use a Create Table as Select (CTAS) query to create a dataset, assign datatypes,
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
 ```
 
-The data types supported are: boolean, date, datetime, text, float, bigint, integer, map, array, and struct.
+The data types supported are: boolean, date, datetime, text, float, bigint, integer, map, array, and struct/row.
 
-The SQl codeblock below provides examples to define row, map, and array datatypes. Line one demonstrates row syntax. Line two demonstrates map syntax, and line three, array syntax.
+The SQl codeblock below provides examples to define struct/row, map, and array datatypes. Line one demonstrates row syntax. Line two demonstrates map syntax, and line three, array syntax.
 
 ```sql {line-numbers="true"}
 ROW (Column_name <data_type> [, column name <data_type> ]*)
