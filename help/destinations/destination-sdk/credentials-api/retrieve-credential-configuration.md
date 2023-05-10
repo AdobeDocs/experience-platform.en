@@ -57,7 +57,7 @@ Select each tab below to view the corresponding payload.
 
 >[!TAB Retrieve all credential configurations]
 
-+++**Request**
++++Request
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -69,7 +69,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 +++
 
-+++**Response**
++++Response
 
 A successful response returns HTTP status 200 with a list of credential configurations that you have access to, based on the [!DNL IMS Org ID] and sandbox name that you used. One `instanceId` corresponds to one credential configuration.
 
@@ -104,7 +104,7 @@ A successful response returns HTTP status 200 with a list of credential configur
 
 >[!TAB Retrieve a specific credential configuration]
 
-+++**Request**
++++Request
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -120,7 +120,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 +++
 
-+++**Response**
++++Response
 
 A successful response returns HTTP status 200 with the details of the credential configuration corresponding to the `instanceId` provided on the request.
 

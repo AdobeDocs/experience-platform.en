@@ -68,6 +68,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 +++Response
 
 The following response returns HTTP status 200 with a list of all destinations submitted for publishing that you have access to, based on the IMS Organization ID and sandbox name that you used. One `configId` corresponds to the publish request for one destination.
@@ -117,6 +119,8 @@ The following response returns HTTP status 200 with a list of all destinations s
 
 {style="table-layout:auto"}
 
++++
+
 >[!TAB Retrieve a specific publishing request]
 
 +++Request
@@ -132,6 +136,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | Parameter | Description |
 | -------- | ----------- |
 | `{DESTINATION_ID}` | The ID of the destination for which you want to retrieve the publishing status. |
+
++++
 
 +++Response
 
@@ -164,6 +170,8 @@ If you passed a `DESTINATION_ID` in the API call, the response returns HTTP stat
 |`publishDetailsList.publishedDate` | String | The date when the destination was submitted for publishing, in epoch time.|
 
 {style="table-layout:auto"}
+
++++
 
 >[!ENDTABS]
 

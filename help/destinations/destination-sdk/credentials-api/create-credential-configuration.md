@@ -51,7 +51,7 @@ Select each tab below to view the corresponding payload.
 
 **Create a basic credential configuration**
 
-+++**Request**
++++Request
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -80,7 +80,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++
 
-+++**Response**
++++Response
 
 A successful response returns HTTP status 200 with details of your newly created credentials configuration.
 
@@ -117,7 +117,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++
 
-+++**Response**
++++Response
 
 A successful response returns HTTP status 200 with details of your newly created credentials configuration.
 
@@ -127,7 +127,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 **Create an SSH credential configuration**
 
-+++**Request**
++++Request
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -154,7 +154,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++
 
-+++**Response**
++++Response
 
 A successful response returns HTTP status 200 with details of your newly created credentials configuration.
 
@@ -164,7 +164,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 **Create an [!DNL Azure Data Lake Storage] credential configuration**
 
-+++**Request**
++++Request
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -195,7 +195,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++
 
-+++**Response**
++++Response
 
 A successful response returns HTTP status 200 with details of your newly created credentials configuration.
 
@@ -205,7 +205,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 **Create an [!DNL Azure Blob Storage] credential configuration**
 
-+++**Request**
++++Request
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -230,7 +230,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++
 
-+++**Response**
++++Response
 
 A successful response returns HTTP status 200 with details of your newly created credentials configuration.
 

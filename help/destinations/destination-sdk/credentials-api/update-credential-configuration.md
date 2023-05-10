@@ -57,7 +57,7 @@ Select each tab below to view the corresponding payload.
 
 **Update a basic credential configuration**
 
-+++**Request**
++++Request
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -86,7 +86,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 +++
 
-+++**Response**
++++Response
 
 A successful response returns HTTP status 200 with the details of your updated credential configuration.
 
@@ -96,7 +96,7 @@ A successful response returns HTTP status 200 with the details of your updated c
 
 **Update an [!DNL Amazon S3] credential configuration**
 
-+++**Request**
++++Request
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -123,7 +123,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 +++
 
-+++**Response**
++++Response
 
 A successful response returns HTTP status 200 with the details of your updated credential configuration.
 
@@ -133,7 +133,7 @@ A successful response returns HTTP status 200 with the details of your updated c
 
 **Update an [!DNL SSH] credential configuration**
 
-+++**Request**
++++Request
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -160,7 +160,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 +++
 
-+++**Response**
++++Response
 
 A successful response returns HTTP status 200 with the details of your updated credential configuration.
 
@@ -170,7 +170,7 @@ A successful response returns HTTP status 200 with the details of your updated c
 
 **Update an [!DNL Azure Data Lake Storage] credential configuration**
 
-+++**Request**
++++Request
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -201,7 +201,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 +++
 
-+++**Response**
++++Response
 
 A successful response returns HTTP status 200 with the details of your updated credential configuration.
 
@@ -211,7 +211,7 @@ A successful response returns HTTP status 200 with the details of your updated c
 
 **Update an [!DNL Azure Blob] credential configuration**
 
-+++**Request**
++++Request
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -236,7 +236,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 +++
 
-+++**Response**
++++Response
 
 A successful response returns HTTP status 200 with the details of your updated credential configuration.
 
