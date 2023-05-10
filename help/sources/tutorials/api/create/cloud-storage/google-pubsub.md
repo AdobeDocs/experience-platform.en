@@ -44,11 +44,11 @@ The first step in creating a source connection is to authenticate your [!DNL Pub
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL PubSub] authentication credentials as part of the request parameters.
 
-During this step, you can define the data that your account has access to by providing a topic ID. Only the subscriptions associated with that topic ID will be accessible.
+The [!DNL PubSub] source allows you to specify the type of access that you want to allow during authentication. You can set up your account to have root access or restrict access to a particular [!DNL PubSub] topic and subscription.
 
 >[!NOTE]
 >
->Principal (roles) assigned to a pubsub project are inherited in all of the topics and subscriptions created inside a [!DNL PubSub] project. If you want to add a principal (role) to have access to a specific topic, then that principal (role) must also be added to the topic's corresponding subscription as well. For more information, read the [[!DNL PubSub] documentation on access control](https://cloud.google.com/pubsub/docs/access-control).
+>Principal (roles) assigned to a pubsub project are inherited in all of the topics and subscriptions created inside a [!DNL PubSub] project. If you want to add a principal (role) to have access to a specific topic, then that principal (role) must also be added to the topic's corresponding subscription as well. For more information, read the [[!DNL PubSub] documentation on access control](<https://cloud.google.com/pubsub/docs/access-control>).
 
 **API format**
 
@@ -57,6 +57,10 @@ POST /connections
 ```
 
 **Request**
+
+>[!BEGINTABS]
+
+>[!TAB Root access]
 
 ```shell
 curl -X POST \
@@ -73,9 +77,7 @@ curl -X POST \
           "specName": "Google PubSub authentication credentials",
           "params": {
               "projectId": "acme-project",
-              "credentials": "{CREDENTIALS}",
-              "topicId": "acmeProjectAPI",
-              "subscriptionId": "acme-project-api-new"
+              "credentials": "{CREDENTIALS}"
           }
       },
       "connectionSpec": {
@@ -89,9 +91,44 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.projectId` | The project ID required to authenticate [!DNL PubSub]. |
 | `auth.params.credentials` | The credential or key required to authenticate [!DNL PubSub]. |
+| `connectionSpec.id` | The [!DNL PubSub] connection spec ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+
+>[!TAB Scoped access]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Google PubSub connection",
+      "description": "Google PubSub connection",
+      "auth": {
+          "specName": "Google PubSub Scoped authentication credentials",
+          "params": {
+              "credentials": "{CREDENTIALS}",
+              "topicId": "acmeProjectAPI",
+              "subscriptionId": "acme-project-api-demo"
+          }
+      },
+      "connectionSpec": {
+          "id": "70116022-a743-464a-bbfe-e226a7f8210c",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `auth.params.credentials` | The credential or key required to authenticate [!DNL PubSub]. |
 | `auth.params.topicId` | The topic ID of your [!DNL PubSub] source that you want to provide access to. |
 | `auth.params.subscriptionId` | The ID of the subscription against your [!DNL PubSub] topic. |
 | `connectionSpec.id` | The [!DNL PubSub] connection spec ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+
+>[!ENDTABS]
 
 **Response**
 
@@ -138,8 +175,8 @@ curl -X POST \
           "format": "json"
       },
       "params": {
-          "topicId": "acme-project",
-          "subscriptionId": "{SUBSCRIPTION_ID}",
+          "topicId": "acmeProjectApi",
+          "subscriptionId": "acme-project-api-demo",
           "dataType": "raw"
       }
   }'
