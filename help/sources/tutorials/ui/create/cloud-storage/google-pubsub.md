@@ -37,7 +37,7 @@ Once you have gathered your required credentials, you can follow the steps below
 
 ## Connect your [!DNL PubSub] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account..
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -55,15 +55,32 @@ To use an existing account, select the [!DNL PubSub] account you want to create 
 
 ### New account
 
-If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and your [!DNL PubSub] authentication credentials on the input form. During this step, you can define the data that your account has access to by providing a topic ID. Only the subscriptions associated with that topic ID will be accessible.
+If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name and an optional description for your new [!DNL PubSub] account.
+
+![The new account interface for the Google PubSub source in the sources workflow](../../../../images/tutorials/create/google-pubsub/new.png)
+
+The [!DNL PubSub] source allows you to specify the type of access that you want to allow during authentication. You can set up your account to have root access or restrict access to a particular [!DNL PubSub] topic and subscription.
+
+>[!BEGINTABS]
+
+>[!TAB Root access]
+
+To create an account with access to your root [!DNL PubSub] project folder. Select **[!UICONTROL Google PubSub authentication credentials]** as your authentication type and provide your project ID and credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
+
+![The new account interface for the Google PubSub source with root access selected.](../../../../images/tutorials/create/google-pubsub/root.png)
+
+>[!TAB Scoped access]
+
+To create an account with restricted access only to a particular [!DNL PubSub] topic and subscription, select **[!UICONTROL Google PubSub Scoped authentication credentials]** and then provide your credentials, topic ID, and subscription ID. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
+
+![The new account interface for the Google PubSub source with scoped access selected.](../../../../images/tutorials/create/google-pubsub/scoped.png)
+
+>[!ENDTABS]
+
 
 >[!NOTE]
 >
 >Principal (roles) assigned to a pubsub project are inherited in all of the topics and subscriptions created inside a [!DNL PubSub] project. If you want to add a principal (role) to have access to a specific topic, then that principal (role) must also be added to the topic's corresponding subscription as well. For more information, read the [[!DNL PubSub] documentation on access control](https://cloud.google.com/pubsub/docs/access-control).
-
-When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
-
-![The new account interface in the sources workflow.](../../../../images/tutorials/create/google-pubsub/new.png)
 
 ## Next steps
 
