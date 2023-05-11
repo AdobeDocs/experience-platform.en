@@ -7,7 +7,7 @@ exl-id: f18ae032-027a-4c97-868b-e04753237c81
 
 In order to control which marketing actions can be performed on certain datasets and fields in Adobe Experience Platform, you must set up the following:
 
-1. [Apply labels](#labels) to the datasets and fields whose usage you want to restrict.
+1. [Apply labels](#labels) to the schemas and fields whose usage you want to restrict.
 1. [Configure and enable data governance policies](#policy) that determine which kinds of labeled data can be used for certain marketing actions.
 1. [Apply marketing actions to your destinations](#destinations) to indicate which policies apply to data sent to those destinations.
 
@@ -26,9 +26,9 @@ This guide walks through the full process of configuring and enforcing a data go
 
 ## Apply labels {#labels}
 
-If there is a specific dataset that you want to enforce data usage constraints on, you can [apply labels directly to that dataset](#dataset-labels) or specific fields within that dataset.
+<!-- If there is a specific dataset that you want to enforce data usage constraints on, you can [apply labels directly to that dataset](#dataset-labels) or specific fields within that dataset. -->
 
-Alternatively, you can [apply labels to a schema](#schema-labels) so that all datasets based on that schema inherit the same labels.
+You can [apply labels to a schema](#schema-labels) so that all datasets based on that schema inherit the same labels. This allows you to holistically enforce data usage constraints at the schema level and have the effect propagate downstream to all datasets that are based on that schema.
 
 >[!NOTE]
 >
