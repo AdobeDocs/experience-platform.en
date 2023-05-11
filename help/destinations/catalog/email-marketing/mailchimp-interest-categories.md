@@ -14,7 +14,7 @@ Compared to [!DNL Mailchimp Tags] which you would use for internal classificatio
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API to create [interest categories](https://mailchimp.com/developer/marketing/api/interest-categories/)  then add contacts from each of the selected Platform segments into a corresponding interest category. You can **add new contacts** or **update the information of existing [!DNL Mailchimp] contacts**, then **add or remove them from their desired groups** within an existing [!DNL Mailchimp] audience after activating them within a new segment. [!DNL Mailchimp Interest Groups] uses the selected segment names from Platform as interest categories within [!DNL Mailchimp].
 
-[!DNL Mailchimp Interest Group] uses OAuth 2 with Authorization Code to communicate with the [!DNL Mailchimp] API. Instructions to authenticate to your [!DNL Mailchimp Interest Categories] instance are further below, in the [Authenticate to destination](#authenticate) section.
+[!DNL Mailchimp Interest Group] uses Basic Authorization to communicate with the [!DNL Mailchimp] API. Instructions to authenticate to your [!DNL Mailchimp Interest Categories] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
@@ -40,21 +40,26 @@ Note the following prerequisites in order to export data from Platform to your [
 
 Before you can create a [!DNL Mailchimp Interest Categories] destination, you must first ensure that you have a [!DNL Mailchimp] account. If you do not have one already, visit the [[!DNL Mailchimp] signup page](https://login.mailchimp.com/signup/) to register and create your account.
 
-#### Gather [!DNL Mailchimp] credentials {#gather-credentials}
+#### Gather [!DNL Mailchimp] API Key {#gather-credentials}
 
-Note down the items below before you authenticate to the [!DNL Mailchimp Interest Categories] destination.
+You will need your **API Key** to authenticate the [!DNL Mailchimp Interest Categories] destination against your [!DNL Mailchimp] account. 
 
-| Credential | Description |
-| --- | --- |
-| `Username` | Your [!DNL Mailchimp] account username. |
-| `Password` | Your [!DNL Mailchimp] account password. |
+If you do not have your **API key**, Sign in to your account and refer to the [[!DNL Mailchimp] Generate your API key](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) documentation to create one. 
 
-{style="table-layout:auto"}
+An example of an API key is `0123456789abcdef0123456789abcde-us14`. 
+
+Write down the **API Key** as you will not be able to access it after generation. You will need this value when you [authenticate the destination](#authenticate).
 
 #### Identify [!DNL Mailchimp] data center subdomain {#identify-data-center-subdomain}
 
-Next you need to identify your Mailchimp domain. To do this, log in to your [!DNL Mailchimp] account and check the URL in your browser.
-You’ll notice a value similar to *`us14`.admin.mailchimp.com*, Write down the prefix (`us14` in this example). You will need this prefix when connecting to the destination. 
+Next you need to identify your Mailchimp data center subdomain. To do this, log in to your [!DNL Mailchimp] account and navigate to the **API keys section** of your account. 
+
+The value will be the first part of the URL you see in your browser. If the URL is *https://`us14`.mailchimp.com/account/api/*, then the data center subdomain is `us14`. 
+
+It’s also appended to your API key in the form *key-dc*; if your API key is `0123456789abcdef0123456789abcde-us14`, then the data center subdomain is `us14`. 
+
+Write down the data center subdomain value *(`us14` in this example)*, you will need this value when you [fill in destination details](#destination-details).
+
 If you require guidance, refer to the [[!DNL Mailchimp] Fundamentals documentation](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure).
 
 ### Guardrails {#guardrails}
@@ -96,19 +101,18 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, search for [!DN
 
 ### Authenticate to destination {#authenticate}
 
-To authenticate to the destination, select **[!UICONTROL Connect to destination]**. You will be redirected to the [!DNL Mailchimp] authorization page.
+To authenticate to the destination, fill in the required fields below and select **[!UICONTROL Connect to destination]**.
 
-![Platform UI screenshot showing how to authenticate to Mailchimp.](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png)
+| [!DNL Mailchimp] destination | [!DNL Mailchimp] |
+| --- | --- |
+| **[!UICONTROL Username]** | Your [!DNL Salesforce Marketing Cloud] domain prefix. <br>For example if your domain is <br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br> you need to provide `mcq4jrssqdlyc4lph19nnqgzzs84` as the value. |
+| **[!UICONTROL Password]** | Your [!DNL Mailchimp] **API Key**. <br> This is the API Key you had noted down in the [Gather [!DNL Mailchimp] credentials](#gather-credentials) section is of the form *key-dc*. <br>You can provide either the *key* portion or the entire form.<br> For example if your API Key is <br>*`0123456789abcdef0123456789abcde-us14`*,<br> you could provide either *`0123456789abcdef0123456789abcde`* or *`0123456789abcdef0123456789abcde-us14`* as the value. |
 
-Enter your [!DNL Mailchimp] account credentials and select [!DNL Log In].
+{style="table-layout:auto"}
 
-![Platform UI screenshot showing the Mailchimp authorization page.](../../assets/catalog/email-marketing/mailchimp-interest-categories/mailchimp-authorization.png)
+![Platform UI screenshot showing how to authenticate.](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png)
 
-Next, Select [!UICONTROL Allow] in the subsequent window to give permissions to the **Adobe Experience Platform** app to access your [!DNL Mailchimp] account. *You will need to do this only once*.
-
-![Mailchimp App screenshot confirmation popup to give permissions to the Experience Platform app access to Mailchimp.](../../assets/catalog/email-marketing/mailchimp-interest-categories/allow-app.png)
-
-If the details provided are valid, the Platform UI displays the following message along with a **[!UICONTROL Connected]** status with a green check mark: *[!DNL You successfully connected to Mailchimp Interest Categories account]*. You can then proceed to the next step.
+If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.
 
 ### Fill in destination details {#destination-details}
 
@@ -120,11 +124,18 @@ To configure details for the destination, fill in the required and optional fiel
 | --- | --- |
 | **[!UICONTROL Name]** | A name by which you will recognize this destination in the future. |
 | **[!UICONTROL Description]** | A description that will help you identify this destination in the future. |
-| **[!UICONTROL Data Center Subdomain]** | Select your [!DNL Mailchimp] account `Data Center Subdomain`. Refer to the [Identify [!DNL Mailchimp] data center](#identify-data-center-subdomain) section for any guidance. |
+| **[!UICONTROL Data Center Subdomain]** | Your [!DNL Mailchimp] account `Data Center`. Refer to the [Identify [!DNL Mailchimp] data center](#identify-data-center-subdomain) section for any guidance. |
 | **[!UICONTROL Audience Name (Please select Data Center Subdomain first)]** | After you select your **[!UICONTROL Data Center Subdomain]**, this dropdown is automatically populated with the audience names from your [!DNL Mailchimp] account. Select the audience that you want to update with data from Platform. |
 | **[!UICONTROL Interest Category (Please select Data Center Subdomain and Audience Name first)]** | After you select your **[!UICONTROL Audience Name]**, this dropdown is automatically populated with the interest group category names from your [!DNL Mailchimp] account. Select the category name that you want to update with data from Platform. |
 
 {style="table-layout:auto"}
+
+If the API Key you provided in the **[!UICONTROL Password]** field or the **[!UICONTROL Data Center Subdomain]** value are incorrect the UI displays a [!DNL Mailchimp] API error response: *`No options are available. Please verify the values selected for the following dependent fields: apiServer`* as shown below and you will not be able to select a value from the **[!UICONTROL Audience Name (Please select Data Center Subdomain first)]** field.
+
+![Platform UI screenshot showing error if your Mailchimp API Key or Data Center Subdomain values are incorrect.](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
+
+To fix this error and proceed to the next step you need to provide the correct values. Refer to the [Identify [!DNL Mailchimp] data center subdomain](#identify-data-center-subdomain) and 
+[Gather [!DNL Mailchimp] API Key](#gather-credentials) sections if you need guidance.
 
 ### Enable alerts {#enable-alerts}
 
@@ -199,7 +210,20 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
 
-When creating the destination, you might receive the following error messages: `Cannot have more than 60 interests per list (Across all categories)` or `400 BAD_REQUEST`. This happens when you exceed the 60 group names (or interest categories) in a single group or across several groups within the same audience limit, as described in the [guardrails](#guardrails) section. To fix this error, make sure you are not exceeding the group name limit in [!DNL Mailchimp].
+### Error encountered if [!DNL Mailchimp] API Key or Data Center Subdomain values are incorrect {#incorrect-credentials-error}
+
+If the API Key you provided in the **[!UICONTROL Password]** field or the **[!UICONTROL Data Center Subdomain]** value are incorrect the UI displays a [!DNL Mailchimp] API error response: *`No options are available. Please verify the values selected for the following dependent fields: apiServer`* as shown below and you will not be able to select a value from the **[!UICONTROL Audience Name (Please select Data Center Subdomain first)]** field. 
+
+![Platform UI screenshot showing error if your Mailchimp API Key or Data Center Subdomain values are incorrect.](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
+
+To fix this error and proceed to the next step you need to provide the correct values. Refer to the [Identify [!DNL Mailchimp] data center subdomain](#identify-data-center-subdomain) and 
+[Gather [!DNL Mailchimp] API Key](#gather-credentials) sections if you need guidance.
+
+### Error encountered if [!DNL Mailchimp] group name limit is exceeded {#group-name-limits-error}
+
+When creating the destination, you might receive the following error messages: *`Cannot have more than 60 interests per list (Across all categories)`* or *`400 BAD_REQUEST`*. This happens when you exceed the 60 group names (or interest categories) in a single group or across several groups within the same audience limit, as described in the [guardrails](#guardrails) section. To fix this error, make sure you are not exceeding the group name limit in [!DNL Mailchimp].
+
+### [!DNL Mailchimp] Status and Error codes
 
 Refer to the [[!DNL Mailchimp] errors page](https://mailchimp.com/developer/marketing/docs/errors/) for a comprehensive list of status and error codes with explanations.
 
