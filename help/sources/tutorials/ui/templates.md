@@ -126,7 +126,7 @@ Once you have completed configuring your ingestion schedule, select **[!UICONTRO
 
 The [!UICONTROL Review template assets] page displays the assets auto-generated as part of your template. In this page, you can view the auto-generated schemas, datasets, identity namespaces, and dataflows associated with your source connection. It can take up to five minutes to generate all assets. If you choose to leave the page, you will get a notification to return once the assets are completed. You can review the assets once they are generated and make additional configurations to your dataflow at any time.
 
-Auto-generated dataflows are enabled by default. Select the ellipses (`...`) beside the dataflow name and then select **[!UICONTROL Preview mappings]** to see the mapping sets created for your dataflow. 
+By default, auto-generated dataflows are **set to a draft state**. Select the ellipses (`...`) beside the dataflow name and then select **[!UICONTROL Preview mappings]** to see the mapping sets created for your draft dataflow. 
 
 ![A dropdown window with the preview mappings option selected.](../../images/tutorials/templates/preview.png)
 
@@ -139,6 +139,34 @@ You can update your dataflows at any time after execution. Select the ellipses (
 You can use the schema editor view to make updates to your auto-generated schema. Visit the guide on [using the schema editor](../../../xdm/tutorials/create-schema-ui.md) for more information.
 
 ![A dropdown window with the update dataflows option selected.](../../images/tutorials/templates/update.png)
+
+>[!TIP]
+>
+>You can access your draft dataflow through the [!UICONTROL Dataflows] catalog page in the sources workspace. Select **[!UICONTROL Dataflows]** from the top header and then select the dataflow that you want to update from the list. 
+>
+>![A list of existing dataflows in the dataflows catalog of the sources workspace.](../../images/tutorials/templates/dataflows.png)
+
+### Publish your dataflow
+
+Begin the publishing process by going through the sources workflow. After you select [!UICONTROL Update dataflow], you are taken to the *[!UICONTROL Add data]* step of the workflow. Select **[!UICONTROL Next]** to proceed.
+
+![The add data step for a draft dataflow](../../images/tutorials/templates/continue-draft.png)
+
+Next, confirm your dataflow details and configure settings for error diagnostics, partial ingestion, and alert notifications. When finished, select **[!UICONTROL Next]**.
+
+![The dataflow detail step for a draft dataflow.](../../images/tutorials/templates/dataflow-detail.png)
+
+>[!NOTE]
+>
+>You can select **[!UICONTROL Save as draft]** at any point to stop and save the changes you have made to your dataflow.
+
+The mapping step appears. During this step, you can reconfigure the mapping configurations of your dataflow. For a comprehensive guide on the data prep functions used for mapping, visit the [data prep UI guide](../../../data-prep/ui/mapping.md).
+
+![The mapping step for a draft dataflow.](../../images/tutorials/templates/mapping.png)
+
+Finally, review the details of your dataflow and then select **[!UICONTROL Save & ingest]** to publish your draft.
+
+![The review step for a draft dataflow.](../../images/tutorials/templates/review.png)
 
 ## Next steps
 
