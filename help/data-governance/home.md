@@ -11,9 +11,9 @@ One of the core capabilities of Adobe Experience Platform is to bring data from 
 
 Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
 
->[!NOTE]
+<!-- >[!NOTE]
 >
->In Experience Platform, data governance is only concerned with how data is used or activated, regardless of the user performing the action. For information on how to control access to specific data fields for certain Platform users within your organization, see the documentation on [attribute-based access control](../access-control/abac/overview.md) instead.
+>In Experience Platform, data governance is only concerned with how data is used or activated, regardless of the user performing the action. For information on how to control access to specific data fields for certain Platform users within your organization, see the documentation on [attribute-based access control](../access-control/abac/overview.md) instead. -->
 
 ## Data governance roles
 
