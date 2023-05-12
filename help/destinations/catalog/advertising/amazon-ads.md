@@ -79,7 +79,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 Note: on selecting this Amazon Ads Advertiser ID, you will need to create a new destination to change this. If you re-authenticate the OAuth credentials and select a new Advertiser Id, your changes will not apply.
 
-![Configure new destination](../../assets/catalog/advertising/amazon_ads_image_1.png)
+![Configure new destination](../../assets/catalog/advertising/amazon_ads_image_4.png)
 
 ### Enable alerts {#enable-alerts}
 
