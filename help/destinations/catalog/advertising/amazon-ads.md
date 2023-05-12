@@ -12,8 +12,6 @@ Amazon Ads offers a range of options to help you achieve your advertising goals 
 
 The Amazon Ads integration with Adobe Experience Platform provides turn-key integration to Amazon Ads products, including the Amazon DSP (ADSP). Using the Amazon Ads destination in Adobe Experience Platform, users are able to define advertiser audiences for targeting and activation on the Amazon DSP.  
 
-This connection supports Audience creation in the following Amazon Marketplaces: `US`, `CA`, `MX`, `BR`.
-
 >[!IMPORTANT]
 >
 >This documentation page was created by the *Amazon Ads* team. This is currently a beta product and functionality is subject to change. For any inquiries or update requests, please contact them directly at *`amc-support@amazon.com`.*
@@ -24,7 +22,7 @@ To help you better understand how and when you should use the *Amazon Ads* desti
 
 ### Activation and targeting {#activation-and-targeting}
 
-This integration with Amazon DSP allows Amazon Ads advertisers to pass advertiser CDP segments from Adobe Experience Platform to Amazon's DSP to create advertiser audiences for advertising targeting. Audiences may be selected within the Amazon DSP for positive targeting, as well as negative targeting (suppression). Additionally, using signals generated through Amazon Marketing Cloud, advertisers can optimize their advertiser audiences which will synchronize audience changes with Amazon DSP.
+This integration with Amazon DSP allows Amazon Ads advertisers to pass advertiser CDP segments from Adobe Experience Platform to Amazon's DSP to create advertiser audiences for advertising targeting. Audiences may be selected within the Amazon DSP for positive targeting, as well as negative targeting (suppression).
 
 ## Prerequisites {#prerequisites}
 
@@ -77,8 +75,9 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Amazon Ads Advertiser ID]**: Select the ID for the target Amazon Ads account used for the destination.
+*  **[!UICONTROL Advertiser Region]**: Select the appropriate region in which your AdvertiserId is hosted. For more information on the marketplaces supported by each region, visit our [documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
-Note: once selecting this Amazon Ads Advertiser ID, you will need to create a new destination to change this. If you re-authenticate the OAuth credentials and select a new Advertiser Id, your changes will not apply.
+Note: on selecting this Amazon Ads Advertiser ID, you will need to create a new destination to change this. If you re-authenticate the OAuth credentials and select a new Advertiser Id, your changes will not apply.
 
 ![Configure new destination](../../assets/catalog/advertising/amazon_ads_image_1.png)
 
