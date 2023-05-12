@@ -51,7 +51,7 @@ There are three key elements to the Data Governance framework: Labels, Policies,
 
 ## Data usage labels
 
-Data Governance enables data stewards to apply usage labels at the dataset and field level to categorize data according to the type of policies that apply.
+Data Governance enables data stewards to apply usage labels at the schema and field level to categorize data according to the type of policies that apply.
 
 The Data Governance framework includes predefined data usage labels that can be used to categorize data in three ways:
 
@@ -105,14 +105,14 @@ The following table outlines key terms related to Data Governance and theData Go
 |**Data governance**|Data governance encompasses the strategies and technologies used to ensure data is in compliance with regulations and corporate policies with respect to data usage.|
 |**Data steward**|The data steward is the person responsible for the management, oversight, and enforcement of an organization's data assets. A data steward also ensures data governance policies are safeguarded and maintained to be compliant with government regulations and organization policies.|
 |**Data usage labels**|Data usage labels provide users the ability to categorize data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and corporate policies.|
-|**Dataset labels**| Labels can be added to a dataset. All fields within a dataset inherit the dataset's labels.|
-|**Field labels**|Field labels are data governance labels that are either inherited from a dataset or applied directly to a field.  Data governance labels applied to a field are not inherited up to a dataset.|
+|**Dataset labels**| Labels can be added to a schema. All fields within a schema inherit the schema's labels.|
+|**Field labels**|Field labels are data governance labels that are either inherited from a schema or applied directly to a field. Data governance labels applied to a field are not inherited up to the schema level.|
 |**Geofence**| A geofence is a virtual geographic boundary, defined by GPS or RFID technology, that enables software to trigger a response when a mobile device enters or leaves a particular area.|
 |**Identity labels**|Identity "I" labels are used to categorize data that can identify or contact a specific person.|
 |**Interest-based targeting**|Interest-based targeting, also known as personalization, occurs if the following three conditions are met: data collected on-site is, used to make inferences about a users' interest, is used in another context, such as on another site or app (off-site) and is used to select which content or ads are served based on those inferences.|
 |**Marketing action**|A marketing action, in the context of the data governance framework, is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies|
 |**Policy**|In the data governance framework, a policy is a rule that describes what kind of marketing actions are allowed or not allowed to be taken on specific data.|
-| **Schema Labels** | A description is needed. |
+| **Schema Labels** | Manage the labels for data governance, consent, and access control at the schema level. This propogates the labels to every dataset that uses that schema. |
 |**Sensitive Labels**|Sensitive "S" labels are used to categorize data that you, and your organization, consider sensitive.|
 
 ## Additional resources
@@ -121,6 +121,8 @@ The following video is intended to support your understanding of the Data Govern
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
+<!-- A key section of the video is now outdated due to the deprecation of the dataset field level labelling feature.
+
 The following video provides an introduction to various Data Governance features in Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on) -->
