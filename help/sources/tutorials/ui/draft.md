@@ -26,13 +26,13 @@ Once you save your draft, you will be taken to your account's page where you can
 
 ![A list of dataflows for a given account.](../../images/tutorials/draft/draft-dataflow.png)
 
->[!TIP
+>[!TIP]
 >
 >Drafted dataflows will not be enabled and will have their status set to `draft`.
 
 To continue on your draft, select the ellipses (`...`) beside your dataflow's name and then select **[!UICONTROL Update dataflow]**.
 
->[!TIP]
+>[!NOTE]
 >
 >If your draft includes scheduling information, then the dropdown window will also give you the option to **[!UICONTROL Edit schedule]**.
 
