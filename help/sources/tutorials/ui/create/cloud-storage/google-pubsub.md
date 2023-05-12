@@ -24,8 +24,8 @@ In order to connect [!DNL PubSub] to Platform, you must provide a valid value fo
 | ---------- | ----------- |
 | Project ID | The project ID required to authenticate [!DNL PubSub]. |
 | Credentials | The credential or private key ID required to authenticate [!DNL PubSub]. |
-| Topic ID | The ID for the [!DNL PubSub] resource that represents a feed of messages. You must specify a topic ID if you want to provide access to a specific stream of data in your [!DNL Google PubSub] source. |
-| Subscription ID | The ID of your [!DNL PubSub] subscription. In [!DNL PubSub], subscriptions allow you to receive messages, by subscribing to the topic in which messages have been published to. |
+| Topic name | The name for the [!DNL PubSub] resource that represents a feed of messages. You must specify a topic name if you want to provide access to a specific stream of data in your [!DNL Google PubSub] source. |
+| Subscription name | The name of your [!DNL PubSub] subscription. In [!DNL PubSub], subscriptions allow you to receive messages, by subscribing to the topic in which messages have been published to. |
 
 For more information about these values, see the following [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication) document. If you are using service account-based authentication, see the following [PubSub guide](https://cloud.google.com/docs/authentication/production#create_service_account) for steps on how to generate your credentials.
 
@@ -55,6 +55,10 @@ To use an existing account, select the [!DNL PubSub] account you want to create 
 
 ### New account
 
+>[!TIP]
+>
+>When creating an account with restricted access, you must provide at least one of your topic name or subscription name. Authentication will fail if both values are missing.
+
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name and an optional description for your new [!DNL PubSub] account.
 
 ![The new account interface for the Google PubSub source in the sources workflow](../../../../images/tutorials/create/google-pubsub/new.png)
@@ -71,12 +75,11 @@ To create an account with access to your root [!DNL PubSub] project folder. Sele
 
 >[!TAB Scoped access]
 
-To create an account with restricted access only to a particular [!DNL PubSub] topic and subscription, select **[!UICONTROL Google PubSub Scoped authentication credentials]** and then provide your credentials, topic ID, and subscription ID. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
+To create an account with restricted access only to a particular [!DNL PubSub] topic and subscription, select **[!UICONTROL Google PubSub Scoped authentication credentials]** and then provide your credentials, topic name, and/or subscription name. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
 ![The new account interface for the Google PubSub source with scoped access selected.](../../../../images/tutorials/create/google-pubsub/scoped.png)
 
 >[!ENDTABS]
-
 
 >[!NOTE]
 >
