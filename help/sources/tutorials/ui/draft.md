@@ -14,7 +14,7 @@ This document requires a working understanding of the following components of Ad
 
 * [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 
-## Set a dataflow to draft state
+## Save a dataflow as a draft
 
 You can pause your dataflow creation progress at any time after you select the data that you'll be bringing into Platform.
 
