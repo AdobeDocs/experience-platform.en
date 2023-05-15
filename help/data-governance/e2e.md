@@ -30,7 +30,7 @@ This guide walks through the full process of configuring and enforcing a data go
 >
 >Labels can no longer be applied to fields at the dataset level. This workflow has been deprecated in favour of applying labels at the schema level. Any labels previously applied at the dataset object level will still be supported through the Platform UI until 31st May 2024. To ensure that your labels are consistent across all schemas, any labels previously attached to fields at the dataset level must be migrated to the schema level by you over the coming year. See the section on [migrating previously applied labels](#migrate-labels) for instructions on how to do this.
 
-You can [apply labels to a schema](#schema-labels) so that all datasets based on that schema inherit the same labels. This allows you to manage the labels for data governance, consent, and access control in one place. By enforcing data usage constraints at the schema level, the effect propagates downstream to all datasets that are based on that schema. Labels applied at the schema field level support Data Governance use cases and are discoverable in the Datasets workspace [!UICONTROL Data Governance] tab under the [!UICONTOL Field Name] column as read-only labels. 
+You can [apply labels to a schema](#schema-labels) so that all datasets based on that schema inherit the same labels. This allows you to manage the labels for data governance, consent, and access control in one place. By enforcing data usage constraints at the schema level, the effect propagates downstream to all datasets that are based on that schema. Labels applied at the schema field level support Data Governance use cases and are discoverable in the Datasets workspace [!UICONTROL Data Governance] tab under the [!UICONTROL Field Name] column as read-only labels. 
 
 >[!NOTE]
 >
@@ -72,7 +72,7 @@ The details view for the dataset appears. Select the **[!UICONTROL Data governan
 
 ![The Data Governance tab of the Datasets workspace with a label for a field highlighted for removal.](./images/e2e/remove-label.png)
 
-After you have removed the label from your dataset field, navigate to the Schema Editor to add the label to the schema. 
+After you have removed the label from your dataset field, navigate to the Schema Editor to add the label to the schema. Instructions on how to do this, can be found in the [section on applying labels to a schema](#schema-labels).
 
 >[!TIP]
 >

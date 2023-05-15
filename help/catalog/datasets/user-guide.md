@@ -116,10 +116,6 @@ To enable a dataset for Profile, access its **[!UICONTROL Dataset activity]** sc
 
 ![The Profile toggle is highlighted within the dataset details page.](../images/datasets/user-guide/enable-dataset-profiles.png)
 
-## Manage and enforce data governance on a dataset
-
-Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. See the [Data Governance overview](../../data-governance/home.md) to learn more about labels, or refer to the [data usage labels user guide](../../data-governance/labels/overview.md) for instructions on how to apply labels to datasets.
-
 ## Delete a dataset {#delete}
 
 You can delete a dataset by first accessing its **[!UICONTROL Dataset activity]** screen. Then, select **[!UICONTROL Delete dataset]** to delete it. 

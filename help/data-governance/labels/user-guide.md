@@ -10,19 +10,21 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
 >title="Govern data usage in Platform"
->abstract="<h2>Description</h2><p>The Data Governance framework in Experience Platform allows you to label attributes and datasets according to data usage restrictions and set up policies that identify and honor these restrictions for specific marketing actions.</p>"
+>abstract="<h2>Description</h2><p>The Data Governance framework in Experience Platform allows you to label attributes and schemas according to data usage restrictions and set up policies that identify and honor these restrictions for specific marketing actions.</p>"
 
 This user guide covers steps for working with data usage labels within the [!DNL Experience Platform] user interface.
 
-## Manage labels at the dataset level
+## Manage labels at the schema level
 
->[!IMPORTANT]
+<!-- >[!IMPORTANT]
 >
->Applying labels at the dataset level is only supported for data governance use cases. If you are trying to create access policies for the data, you must [apply labels to the schema](../../xdm/tutorials/labels.md) that the dataset is based on. See the overview on [attribute-based access control](../../access-control/abac/overview.md) for more information.
+>Applying labels at the schema level is only supported for data governance use cases. If you are trying to create access policies for the data, you must [apply labels to the schema](../../xdm/tutorials/labels.md) that the dataset is based on. See the overview on [attribute-based access control](../../access-control/abac/overview.md) for more information. -->
 
-In order to manage data usage labels at the dataset level, you must select an existing dataset or create a new one. After logging into Adobe Experience Platform, select **[!UICONTROL Datasets]** on the left-navigation to open the **[!UICONTROL Datasets]** workspace. This page lists all created datasets belonging to your organization, along with useful details related to each dataset. 
+In order to manage data usage labels at the schema level, you must select an existing schema or create a new one. After logging into Adobe Experience Platform, select **[!UICONTROL Schemas]** on the left-navigation to open the **[!UICONTROL Schemas]** workspace. This page lists all created schemas belonging to your organization, along with useful details related to each dataset. 
 
-![Dataset Tab within Data Workspace](../images/labels/datasets-tab.png)
+<!-- image need updating -->
+
+![The Adobe Experience Platform UI with the Schema tab highlighted.](../images/labels/datasets-tab.png)
 
 The next section provides steps for creating a new dataset to apply labels to. If you wish to edit labels for an existing dataset, select the dataset from the list and skip ahead to [adding data usage labels to the dataset](#add-labels).
 
@@ -51,6 +53,8 @@ The **[!UICONTROL Configure Dataset]** screen appears. Provide a name (required)
 The **[!UICONTROL Dataset Activity]** page appears, displaying information about the newly created dataset. In this example, the dataset is named "Loyalty Members", therefore the top-navigation shows **Datasets > Loyalty Members**. 
 
 ![Dataset Activity page](../images/labels/dataset-created.png)
+
+<!-- Changes -->
 
 ### Add data usage labels to the dataset {#add-labels}
 
