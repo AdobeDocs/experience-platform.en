@@ -126,7 +126,7 @@ Once you have completed configuring your ingestion schedule, select **[!UICONTRO
 
 The [!UICONTROL Review template assets] page displays the assets auto-generated as part of your template. In this page, you can view the auto-generated schemas, datasets, identity namespaces, and dataflows associated with your source connection. It can take up to five minutes to generate all assets. If you choose to leave the page, you will get a notification to return once the assets are completed. You can review the assets once they are generated and make additional configurations to your dataflow at any time.
 
-By default, auto-generated dataflows are **set to a draft state**. Select the ellipses (`...`) beside the dataflow name and then select **[!UICONTROL Preview mappings]** to see the mapping sets created for your draft dataflow. 
+By default, auto-generated dataflows are set to a draft state to allow further customization on configurations, such as mapping rules or scheduled frequencies. Select the ellipses (`...`) beside the dataflow name and then select **[!UICONTROL Preview mappings]** to see the mapping sets created for your draft dataflow. 
 
 ![A dropdown window with the preview mappings option selected.](../../images/tutorials/templates/preview.png)
 
@@ -172,14 +172,12 @@ Finally, review the details of your dataflow and then select **[!UICONTROL Save 
 
 By following this tutorial, you have now created dataflows, as well as assets like schemas, datasets, and identity namespaces using templates. For general information on sources, visit the [sources overview](../../home.md).
 
-## Appendix
+## Alerts and notifications {#alerts-and-notifications}
 
-The following section provides additional information regarding templates.
-
-### Use the notifications panel to return to the review page
-
-Templates are supported by Adobe Experience Platform alerts and you can use the notifications panel to receive updates on the status of your assets and also to navigate back to the review page. 
+Templates are supported by Adobe Experience Platform Alerts and you can use the notifications panel to receive updates on the status of your assets and also to navigate back to the review page. 
 
 Select the notification icon the top header of Platform UI and then select the status alert to see the assets that you want to review.
 
 ![The notifications panel in Platform UI with a notification alerting a failed dataflow highlighted.](../../images/tutorials/templates/notifications.png)
+
+You can update the alert settings of your templates to receive both email and in-Platform notifications on the status of your dataflows. For more information on configuring alerts, read the guide on [how to subscribe to alerts for sources dataflows](../ui/alerts.md).
