@@ -132,7 +132,7 @@ Use the check boxes to the left of the segment names to select the segments that
 
 >[!IMPORTANT]
 >
->Profile attributes may contain sensitive data. To protect this data, the **[!UICONTROL Custom Personalization]** destination requires you to use the [Edge Network Server API](/help/server-api/overview.md) when configuring the destination for attribute-based personalization. All the Server API calls must be made in an [authenticated context](../../../server-api/authentication.md).
+>Profile attributes may contain sensitive data. To protect this data, the **[!UICONTROL Custom Personalization]** destination requires you to use the [Edge Network Server API](../../server-api/overview.md) when configuring the destination for attribute-based personalization. All the Server API calls must be made in an [authenticated context](../../server-api/authentication.md).
 >
 ><br>If you are already using Web SDK or Mobile SDK for your integration, you can retrieve attributes via the Server API by adding a server-side integration.
 >
