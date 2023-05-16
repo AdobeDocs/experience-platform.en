@@ -126,3 +126,18 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 For additional help documentation, visit the following Amazon Ads help resources:
 
 * [Amazon DSP Help Center](https://advertising.amazon.com/dsp/help/ss/en/audiences#/)
+
+### Changelog {#changelog}
+
+This section captures the functionality and significant documentation updates made to this destination connector.
+
++++ View changelog
+
+|Release month|Update type|Description|
+|---|---|---|
+|May 2023|Global support update| <ul><li>Added support for the EU/FE regions in the destination connector</li><li>Updated documentation to reflect regional endpoint support. For more information on which regional endpoint to use, see [this page](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
+|March 2023|Initial release|Initial destination release and documentation published.|
+
+{style="table-layout:auto"}
+
++++
