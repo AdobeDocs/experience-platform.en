@@ -31,15 +31,13 @@ Adobe Experience Platform Data Ingestion represents the multiple methods by whic
 
 See the [Data Ingestion overview](../../ingestion/home.md) for more information.
 
-## Migrating data usage labels to schemas {#migrate-usage-labels}
+## Labels applied to datasets from schemas
 
-Adobe Experience Platform Data Governance allows you to manage customer data in order to ensure compliance with regulations, restrictions, and policies applicable to data use. The Data Governance framework allows you to apply usage labels to categorize data according to the usage policies that apply to that data.
+Adobe Experience Platform Data Governance allows you to manage customer data in order to ensure compliance with regulations, restrictions, and policies applicable to data use. The Data Governance framework allows you to apply usage labels to categorize data according to the usage policies that apply to that data. Labels can be applied to individual schemas and fields within those schemas. When labels are applied directly to a schema, those labels are propagated to all existing and future datasets that are based on that schema.
 
 >[!IMPORTANT]
 >
 >Labels can no longer be applied to fields at the dataset level. This workflow has been deprecated in favour of applying labels at the schema level. Any labels previously applied at the dataset object level will still be supported through the Platform UI until 31st May 2024. To ensure that your labels are consistent across all schemas, any labels previously attached to fields at the dataset level must be migrated to the schema level by you over the coming year. See the section on [migrating previously applied labels](../../data-governance/e2e.md#migrate-labels) for instructions on how to do this.
-
-[Data usage labels can be applied to entire schemas](../../data-governance/e2e.md#schema-labels) or individual schema fields and ensures that all datasets based on that schema inherit the same labels. Labels added at the schema level are inherited by all fields within that schema. This allows you to manage the labels for data governance, consent, and access control in one place. By enforcing data usage constraints at the schema level, the effect propagates downstream to all datasets that are based on that schema. Labels applied at the schema field level support Data Governance use cases and are discoverable in the Datasets workspace [!UICONTROL Data Governance] tab under the [!UICONTROL Field Name] column as read-only labels. 
 
 See the [Data Governance overview](../../data-governance/home.md) for more information on the service. For steps on how to work with usage labels in [!DNL Platform], refer to the following guides:
 
