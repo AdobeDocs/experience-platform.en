@@ -83,8 +83,28 @@ To create an account with restricted access only to a particular [!DNL PubSub] t
 
 >[!NOTE]
 >
->Principal (roles) assigned to a pubsub project are inherited in all of the topics and subscriptions created inside a [!DNL PubSub] project. If you want to add a principal (role) to have access to a specific topic, then that principal (role) must also be added to the topic's corresponding subscription as well. For more information, read the [[!DNL PubSub] documentation on access control](https://cloud.google.com/pubsub/docs/access-control).
+>Principal (roles) assigned to a pubsub project are inherited in all of the topics and subscriptions created inside a [!DNL PubSub] project. If you want to add a principal (role) to have access to a specific topic, then that principal (role) must also be added to the topic's corresponding subscription as well. For more information, read the [[!DNL PubSub] documentation on access control](<https://cloud.google.com/pubsub/docs/access-control>).
+
+## Select data
+
+A successful authentication brings you to the [!UICONTROL Select data] step, where you can navigate through your [!DNL PubSub] data hierarchy and select the data that you want to bring to Experience Platform.
+
+>[!BEGINTABS]
+
+>[!TAB Project-based authentication]
+
+If you have authenticated with project-based access, then select the project stream that you want to access from the left interface.
+
+![The select data step of the sources workflow with project-based authentication.](../../../../images/tutorials/create/google-pubsub/root-folders.png)
+
+>[!TAB Topic and subscription-based authentication]
+
+If you have authenticated with a topic and subscription-based access, then select the topic and subscription combination from the left interface.
+
+![The select data step of the sources workflow with topic and subscription-based authentication.](../../../../images/tutorials/create/google-pubsub/scoped-folders.png)
+
+>[!ENDTABS]
 
 ## Next steps
 
-By following this tutorial, you have create a connection between your [!DNL PubSub] account and Platform. You can now continue on to the next tutorial and [configure a dataflow to bring streaming data from your cloud storage into Platform](../../dataflow/streaming/cloud-storage-streaming.md).
+By following this tutorial, you have created a connection between your [!DNL PubSub] account and Platform. You can now continue on to the next tutorial and [configure a dataflow to bring streaming data from your cloud storage into Platform](../../dataflow/streaming/cloud-storage-streaming.md).
