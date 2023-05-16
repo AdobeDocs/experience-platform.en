@@ -228,6 +228,7 @@ solution: Data Collection
     * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
     * [!DNL Splunk] {#splunk}
       * [Overview](./extensions/server/splunk/overview.md)
+    * [Tiktok Conversions](https://exchange.adobe.com/apps/ec/)
     * [!DNL Zendesk] Events API {#zendesk}
       * [Overview](./extensions/server/zendesk/overview.md)
 * Extension development {#extension-dev}
