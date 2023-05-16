@@ -118,7 +118,7 @@ To enable a dataset for Profile, access its **[!UICONTROL Dataset activity]** sc
 
 ## Manage and enforce data governance on a dataset {#manage-and-enforce-data-governance}
 
-Data usage labels applied at the schema level, allow you to categorize datasets and fields according to usage policies that apply to that data. See the [Data Governance overview](../../data-governance/home.md) to learn more about labels, or refer to the [data usage labels user guide](../../data-governance/labels/overview.md) for instructions on how to apply labels to schemas for propagation to datasets.
+Data usage labels, applied at the schema level, allow you to categorize datasets and fields according to usage policies that apply to that data. See the [Data Governance overview](../../data-governance/home.md) to learn more about labels, or refer to the [data usage labels user guide](../../data-governance/labels/overview.md) for instructions on how to apply labels to schemas for propagation to datasets.
 
 ## Delete a dataset {#delete}
 
