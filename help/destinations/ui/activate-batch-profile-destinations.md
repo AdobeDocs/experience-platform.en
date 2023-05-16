@@ -40,12 +40,15 @@ To activate data to destinations, you must have successfully [connected to a des
 
 1. Move to the next section to [select your segments](#select-segments).
 
-## Select your segments {#select-segments}
+## Select your audiences {#select-segments}
 
-Use the check boxes to the left of the segment names to select the segments that you want to activate to the destination, then select **[!UICONTROL Next]**.
+Use the check boxes to the left of the audience names to select the audiences that you want to activate to the destination, then select **[!UICONTROL Next]**.
 
 ![Image highlighting how to select one or multiple segments to activate](../assets/ui/activate-batch-profile-destinations/select-segments.png)
 
+>[!TIP]
+>
+>Selecting audiences originating from **[!UICONTROL Custom uploads]** automatically enables the [Select enrichment attributes](#select-enrichment-attributes) step.
 
 ## Schedule segment export {#scheduling}
 
@@ -455,6 +458,28 @@ Selecting identity namespaces for export, as shown in the image below, is curren
 As a temporary workaround if you need to add identity namespaces to your exported files during the beta, you can either:
 * Use the legacy cloud storage destinations for the dataflows where you want to include identity namespaces in the exports
 * Upload identities as attributes into Experience Platform, to then export them to your cloud storage destinations.
+
+## (Beta) Select enrichment attributes {#select-enrichment-attributes}
+
+>[!IMPORTANT]
+>
+>This step is displayed only if you selected **[!UICONTROL Custom upload]** audiences during the [audience selection](#select-segments) step.
+
+Enrichment attributes correspond to the profiles ingested in Experience Platform as **[!UICONTROL Custom uploads]**. In this step, you can select which attributes you would like to export to your destination, for each selected external audience.
+
+Follow the steps below to select enrichment attributes for each external audience:
+
+1. In the **[!UICONTROL Enrichment attributes]** column, select the ![Edit button](../assets/ui/activate-batch-profile-destinations/edit-button.svg) (Edit) button.
+2. Select **[!UICONTROL Add new field]**. A new empty schema field is shown.
+3. Select the button to the right of the empty field to open the field selection screen.
+4. Select the attributes that you want to export for the audience.
+5. After you have added all the attributes that you want to export, select **[!UICONTROL Save and close]**.
+6. Repeat these steps for each external audience.
+
+
+If you want to activate external audiences to your destinations without exporting any attribute, enable the **[!UICONTROL Exclude enrichment attributes]** toggle. This will export the profiles from the external audiences, but none of their corresponding attributes will be sent to your destination.
+
+Select **[!UICONTROL Next]** to move to the [Review](#review) step.
 
 ## Review {#review}
 
