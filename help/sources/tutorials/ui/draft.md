@@ -1,6 +1,6 @@
 ---
 title: Draft dataflows in the UI
-description: Learn how to save your dataflows as a draft when using the sources workspace.
+description: Learn how to save your dataflows as a draft and publish them at a later time, when using the sources workspace.
 ---
 # Draft dataflows in the UI
 
@@ -22,7 +22,7 @@ For example, if you want to save your progress during the dataflow detail step, 
 
 ![The dataflow detail step of the sources workflow with save as draft selected.](../../images/tutorials/draft/save-as-draft.png)
 
-Once you save your draft, you will be taken to your account's page where you can see a list of your existing dataflows, including your drafts.
+Once you save your draft, you will be taken to your account's page, where you can see a list of your existing dataflows, including your drafts.
 
 ![A list of dataflows for a given account.](../../images/tutorials/draft/draft-dataflow.png)
 
@@ -46,7 +46,7 @@ You can also access your draft dataflows through the dataflows catalog. Select *
 
 ## Publish your draft dataflow
 
-You are then brought back to the [!UICONTROL Add data] step of the sources workflow, where you can re-confirm the format of your data and continue progressing on your dataflow.
+You are returned to the [!UICONTROL Add data] step of the sources workflow, where you can re-confirm the format of your data and continue progressing on your dataflow.
 
 Once you confirm the formatting, delimiter, and compression type of your data, select **[!UICONTROL Next]** to proceed.
 
@@ -60,18 +60,20 @@ Once you have finished your configurations, select **[!UICONTROL Next]** to proc
 
 The [!UICONTROL Mapping] step appears. During this step, you can reconfigure the mapping configurations of your dataflow. For a comprehensive guide on the data prep functions used for mapping, visit the [data prep UI guide](../../../data-prep/ui/mapping.md).
 
+Once you have completed mapping reconfiguration, select **[!UICONTROL Next]** to proceed.
+
 ![The mapping step of the sources workflow.](../../images/tutorials/draft/mapping.png)
 
 Use the [!UICONTROL Scheduling] step to establish an ingestion schedule for your dataflow. You can set your ingestion frequency to `once`, `minute`, `hour`, `day`, or `week`. When finished, select **[!UICONTROL Next]** to proceed.
 
 ![The scheduling step of the sources workflow.](../../images/tutorials/draft/scheduling.png)
 
-Finally, review the details of your dataflow and then select **[!UICONTROL Save & ingest]** to publish your draft.
+Finally, review the details of your dataflow and then select **[!UICONTROL Finish]** to publish your draft.
 
 ![The review step of the sources workflow.](../../images/tutorials/draft/review.png)
 
-After you save and publish a draft, the dataflow will be enabled and you will no longer be able to reset it as a draft.
+After you save and publish a draft, the dataflow will be enabled, and you will no longer be able to reset it as a draft.
 
 ## Next steps
 
-By following this tutorial, you have learned how to save your progress and set a dataflow as a draft. For more information sources, visit the [sources overview](../../home.md).
+By following this tutorial, you have learned how to save your progress and set a dataflow as a draft. For more information on sources, visit the [sources overview](../../home.md).
