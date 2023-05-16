@@ -40,13 +40,15 @@ Before you can create a [!DNL Mailchimp Interest Categories] destination, you mu
 
 #### Gather [!DNL Mailchimp] API Key {#gather-credentials}
 
-You will need your **API Key** to authenticate the [!DNL Mailchimp Interest Categories] destination against your [!DNL Mailchimp] account. 
+You will need your [!DNL Mailchimp] **API Key** to authenticate the [!DNL Mailchimp Interest Categories] destination against your [!DNL Mailchimp] account. The **API Key** serves as the **Password** when you [authenticate the destination](#authenticate).
 
 If you do not have your **API key**, Sign in to your account and refer to the [[!DNL Mailchimp] Generate your API key](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) documentation to create one. 
 
 An example of an API key is `0123456789abcdef0123456789abcde-us14`. 
 
-Write down the **API Key** as you will not be able to access it after generation. You will need this value when you [authenticate the destination](#authenticate).
+>[!IMPORTANT]
+>
+>If you generate the **API Key**, write it down as you will not be able to access it after generation.
 
 #### Identify [!DNL Mailchimp] data center subdomain {#identify-data-center-subdomain}
 
