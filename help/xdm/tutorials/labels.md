@@ -66,15 +66,15 @@ A dialog appears that allows you to edit the labels for the selected field. If y
 
 Use the displayed list to select the labels you want to add to the schema or field. As labels are chosen, the **[!UICONTROL Applied labels]** section updates to show the labels that have been selected so far.
 
-![Applied labels displayed](../images/tutorials/labels/applied-labels.png)
+![The Apply Access and Data Governance Labels dialog with the applied labels highlighted.](../images/tutorials/labels/applied-labels.png)
 
 To filter the displayed labels by type, select the desired category in the left rail. To create a new custom label, select **[!UICONTROL Create label]**.
 
-![Filter displayed labels or create a new label](../images/tutorials/labels/filter-and-create-custom.png)
+![The Apply Access and Data Governance Labels dialog with a label type filter applied and Create label highlighted.](../images/tutorials/labels/filter-and-create-custom.png)
 
-Once you are satisfied with your chosen labels, select **[!UICONTROL Save]** to apply them to the field or schema.
+Once you are satisfied with your chosen labels, select **[!UICONTROL Save]** to apply them to the field or schema. 
 
-![Save the selected labels](../images/tutorials/labels/save-labels.png)
+![The Apply Access and Data Governance Labels dialog with Save highlighted.](../images/tutorials/labels/save-labels.png)
 
 The **[!UICONTROL Labels]** tab reappears, showing the applied labels for the schema.
 
