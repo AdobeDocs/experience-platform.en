@@ -93,13 +93,17 @@ A successful authentication brings you to the [!UICONTROL Select data] step, whe
 
 >[!TAB Project-based authentication]
 
-If you have authenticated with project-based access, then select the project stream that you want to access from the left interface.
+If you have authenticated with project-based access, the [!UICONTROL Select data] interface will display all subscriptions within your project that has a topic attached to them.
 
 ![The select data step of the sources workflow with project-based authentication.](../../../../images/tutorials/create/google-pubsub/root-folders.png)
 
 >[!TAB Topic and subscription-based authentication]
 
-If you have authenticated with a topic and subscription-based access, then select the topic and subscription combination from the left interface.
+If you have authenticated with a topic and subscription-based access, the [!UICONTROL Select data] interface display can vary depending on the information that you provided.
+
+* If you only provide the topic name, then the interface displays all topic-subscription pairs that corresponds to the topic you provided
+* If you only provide the subscription name, then the interface displays all topic-subscription pairs that corresponds to the subscription name you provided.
+* If both topic and subscription names are provided, then the interface displays the topic-subscription pair that corresponds with both values provided.
 
 ![The select data step of the sources workflow with topic and subscription-based authentication.](../../../../images/tutorials/create/google-pubsub/scoped-folders.png)
 
