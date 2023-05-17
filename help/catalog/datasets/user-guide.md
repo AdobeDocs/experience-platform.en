@@ -41,6 +41,14 @@ Select the name of a dataset to access its **[!UICONTROL Dataset activity]** scr
 ![Details of your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-1.png)
 ![Sample batches that belong to your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-2.png)
 
+## Manage dataset tags {#manage-tags}
+
+Add content here.
+
+### Search and filter dataset tags {#search-and-filter}
+
+Add content here.
+
 ## Preview a dataset
 
 From the **[!UICONTROL Dataset activity]** screen, select **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data. If the dataset is empty, the preview link will be deactivated and will instead say that the preview is not available.
