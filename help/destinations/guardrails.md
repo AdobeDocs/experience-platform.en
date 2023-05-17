@@ -88,6 +88,71 @@ The guardrails below apply to activation through [edge personalization destinati
 
 {style="table-layout:auto"}
 
+### Dataset exports {#dataset-exports}
+
+Dataset export is currently supported in "FIRST FULL and then INCREMENTAL" pattern. The guardrails described in this section apply to the first full export that occurs after an export flow is set up.
+
+**Dataset Types**
+
+Datasets exported from Experience Platform can be of two types, as described below:
+
+Timeseries
+Also known as "XDM Experience Events" in AEP terminology
+Dataset schema includes a top level "timestamp" column
+Data is ingested in an append-only fashion 
+
+Record 
+Also known as "XDM Individual Profile" in AEP terminology
+Dataset schema does not include a top level "timestamp" column
+Data is ingested in upsert fashion
+
+The guardrails below are grouped by scheduled or ad-hoc export type, and then further by dataset type and exported file type.
+
+<table>
+<thead>
+  <tr>
+    <th>Output format</th>
+    <th>Dataset type</th>
+    <th>Compression</th>
+    <th>Guardrail</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Parquet</td>
+    <td>Timeseries</td>
+    <td>-</td>
+    <td>Last seven days per file</td>
+    <td>Only the data from the last seven days is exported.</td>
+  </tr>
+  <tr>
+    <td>Record</td>
+    <td>-</td>
+    <td>Five billion records per file</td>
+    <td>The record count of the dataset needs to be less than five billion, otherwise the export fails. Reduce the size of the dataset that you are trying to export.</td>
+  </tr>
+  <tr>
+    <td rowspan="3">JSON</td>
+    <td>Timeseries</td>
+    <td>-</td>
+    <td>Last seven days per file</td>
+    <td>Only the data from the last seven days is exported.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Record</td>
+    <td>Yes</td>
+    <td>Five billion records per file</td>
+    <td>The record count of the dataset needs to be less than one billion, otherwise the export fails. Reduce the size of the dataset that you are trying to export.</td>
+  </tr>
+  <tr>
+    <td>No</td>
+    <td>One million records per file</td>
+    <td>The record count of the dataset needs to be less than one million, otherwise the export fails. Reduce the size of the dataset that you are trying to export.</td>
+  </tr>
+</tbody>
+</table>
+
 ### Destination SDK guardrails {#destination-sdk-guardrails}
 
 [Destination SDK](/help/destinations/destination-sdk/overview.md) is a suite of configuration APIs that allow you to configure destination integration patterns for Experience Platform to deliver audience and profile data to your endpoint, based on data and authentication formats of your choice. The guardrails below apply to the destinations you configure using Destination SDK.
