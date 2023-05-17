@@ -12,7 +12,7 @@ You can now compute column level statistics on [!DNL Azure Data Lake Storage] (A
 
 With the `SHOW STATISTICS FOR <alias_name>` command, you can see the statistics that were computed with the `ANALYZE TABLE COMPUTE STATISTICS` command. Through the combination of these commands, you can now compute column statistics on either the entire dataset, a subset of a dataset, all columns, or a subset of columns.
 
->[IMPORTANT]
+>[!IMPORTANT]
 >
 >The `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, and `SHOW STATISTICS` commands are not supported on data warehouse tables. These extensions for the `ANALYZE TABLE` command are currently only supported for ADLS tables. For more information see the [ANALYZE TABLE section](../sql/syntax.md#analyze-table) of the SQL syntax guide.  
 
@@ -43,10 +43,13 @@ This second example, is a more real-world example as it uses an alias name. See 
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS as <alias_name>;
 ``` -->
 
-The console output does not display the statistics in response to the analyze table compute statistics command. Instead, the console will display `SUCCESSFULLY COMPLETED` followed by a universally unique identifier referenced as `STATISTICS ID`. On successful completion of a `COMPUTE STATISTICS` query, the results are displayed as follows:
+The console output does not display the statistics in response to the analyze table compute statistics command. Instead, the console will display a single row column of `Statistics ID` with a universally unique identifier to reference the results. On successful completion of a `COMPUTE STATISTICS` query, the results are displayed as follows:
 
-```sql
-SUCCESSFULLY COMPLETED, STATISTICS ID: QqMtDfHQOdYJpZlb
+```console
+| Statistics ID    | 
+| ---------------- |
+| QqMtDfHQOdYJpZlb |
+(1 row)
 ```
 
 To see the output, you must use the `SHOW STATISTICS` command. Instructions on [how to show the statistics](#show-statistics) are provided later in the document.

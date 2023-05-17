@@ -585,18 +585,60 @@ The following is a list of statistical calculations that are available after usi
 | `mean` | The average value of the analyzed table.  |
 | `stdev` | The standard deviation of the analyzed table. |
 
-#### Dataset statistics {#dataset-statistics}
+#### COMPUTE STATISTICS {#compute-statistics}
 
-Calculate column level statistics on [!DNL Azure Data Lake Storage] (ADLS) with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. You can now compute column statistics on either the entire dataset, a subset of a dataset, all columns, or a subset of columns.
+You can now calculate column level statistics on [!DNL Azure Data Lake Storage] (ADLS) datasets with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. Compute column statistics on either the entire dataset, a subset of a dataset, all columns, or a subset of columns.
 
-See the [dataset statistics documentation](../essential-concepts/dataset-statistics.md) for more information. 
+`COMPUTE STATISTICS` extends the `ANALYZE TABLE` command. However, the `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, and `SHOW STATISTICS` commands are not supported on data warehouse tables. These extensions for the `ANALYZE TABLE` command are currently only supported for ADLS tables.  
 
-#### Dataset samples {#dataset-samples}
+**Example**
+
+```sql
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  for columns (commerce, id, timestamp);
+```
+
+>[!NOTE]
+>
+>`FILTER CONTEXT` calculates statistics on subset of the dataset based on the filter condition provided and `FOR COLUMNS` targets specific columns for analysis.
+
+The console output appears as below.
+
+```console
+  Statistics ID 
+------------------
+ ULKQiqgUlGbTJWhO
+(1 row)
+```
+
+You can then use the returned statistics ID to look up the computed statistics with the `SHOW STATISTICS` command
+
+```sql
+SHOW STATISTICS FOR <statistics_ID>
+```
+
+>[!NOTE]
+>
+>`COMPUTE STATISTICS` does not support the array or map data types. You can set a `skip_stats_for_complex_datatypes` flag to be notified or error out if the input dataframe has columns with arrays and map data types. By default the flag is set to true. To enable notifications or errors use the following command: `SET skip_stats_for_complex_datatypes = false`.
+
+See the [dataset statistics documentation](../essential-concepts/dataset-statistics.md) for more information.
+
+#### TABLESAMPLE {#tablesample}
 
 Adobe Experience Platform Query Service provides sample datasets as part of its approximate query processing capabilities. 
 Data set samples are best used when you do not need an exact answer for an aggregate operation over a dataset. This feature allows you to conduct more efficient exploratory queries on large datasets by issuing an approximate query to return an approximate answer.
 
-Sample datasets are created with uniform random samples from existing [!DNL Azure Data Lake Storage] (ADLS) datasets, using only a percentage of records from the original. The dataset sample feature extends the `ANALYZE TABLE` command with the `TABLESAMPLE` and `SAMPLERATE` SQL commands. See the [dataset samples documentation](../essential-concepts/dataset-samples.md) for more information. 
+Sample datasets are created with uniform random samples from existing [!DNL Azure Data Lake Storage] (ADLS) datasets, using only a percentage of records from the original. The dataset sample feature extends the `ANALYZE TABLE` command with the `TABLESAMPLE` and `SAMPLERATE` SQL commands.  
+
+In the example below, line one demonstrates how to compute a 5% sample of the table. Line two demonstrates how to compute a 5% sample from a  filtered view of the data within the table.
+
+**example**
+
+```sql {line-numbers="true"}
+ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) tablesample samplerate 5:
+```
+
+See the [dataset samples documentation](../essential-concepts/dataset-samples.md) for more information.
 
 ### BEGIN
 
