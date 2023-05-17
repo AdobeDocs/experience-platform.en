@@ -599,7 +599,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 
 >[!NOTE]
 >
->`FILTER CONTEXT` calculates statistics on subset of the dataset based on the filter condition provided and `FOR COLUMNS` targets specific columns for analysis.
+>`FILTER CONTEXT` calculates statistics on a subset of the dataset based on the filter condition provided, and `FOR COLUMNS` targets specific columns for analysis.
 
 The console output appears as below.
 
@@ -610,7 +610,7 @@ The console output appears as below.
 (1 row)
 ```
 
-You can then use the returned statistics ID to look up the computed statistics with the `SHOW STATISTICS` command
+You can then use the returned statistics ID to look up the computed statistics with the `SHOW STATISTICS` command.
 
 ```sql
 SHOW STATISTICS FOR <statistics_ID>
@@ -618,7 +618,7 @@ SHOW STATISTICS FOR <statistics_ID>
 
 >[!NOTE]
 >
->`COMPUTE STATISTICS` does not support the array or map data types. You can set a `skip_stats_for_complex_datatypes` flag to be notified or error out if the input dataframe has columns with arrays and map data types. By default the flag is set to true. To enable notifications or errors use the following command: `SET skip_stats_for_complex_datatypes = false`.
+>`COMPUTE STATISTICS` does not support the array or map data types. You can set a `skip_stats_for_complex_datatypes` flag to be notified or error out if the input dataframe has columns with arrays and map data types. By default, the flag is set to true. To enable notifications or errors, use the following command: `SET skip_stats_for_complex_datatypes = false`.
 
 See the [dataset statistics documentation](../essential-concepts/dataset-statistics.md) for more information.
 
