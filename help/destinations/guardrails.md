@@ -96,13 +96,13 @@ Dataset export is currently supported in "FIRST FULL and then INCREMENTAL" patte
 
 Datasets exported from Experience Platform can be of two types, as described below:
 
-Timeseries
-Also known as "XDM Experience Events" in AEP terminology
+**Timeseries**
+Timeseries datasets are also known as XDM Experience Events in Experience Platform terminology.
 Dataset schema includes a top level "timestamp" column
 Data is ingested in an append-only fashion 
 
-Record 
-Also known as "XDM Individual Profile" in AEP terminology
+**Record** 
+Record datasets are also known as XDM Individual Profile in Experience Platform terminology.
 Dataset schema does not include a top level "timestamp" column
 Data is ingested in upsert fashion
 
