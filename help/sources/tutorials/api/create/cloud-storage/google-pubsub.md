@@ -24,8 +24,8 @@ In order for [!DNL Flow Service] to connect to [!DNL PubSub], you must provide v
 | ---------- | ----------- |
 | `projectId` | The project ID required to authenticate [!DNL PubSub]. |
 | `credentials` | The credential or key required to authenticate [!DNL PubSub]. |
-| `topicId` | The ID for the [!DNL PubSub] resource that represents a feed of messages. You must specify a topic ID if you want to provide access to a specific stream of data in your [!DNL Google PubSub] source. |
-| `subscriptionId` | The ID of your [!DNL PubSub] subscription. In [!DNL PubSub], subscriptions allow you to receive messages, by subscribing to the topic in which messages have been published to. |
+| `topicName` | The name for the [!DNL PubSub] resource that represents a feed of messages. You must specify a topic name if you want to provide access to a specific stream of data in your [!DNL Google PubSub] source. |
+| `subscriptionName` | The name of your [!DNL PubSub] subscription. In [!DNL PubSub], subscriptions allow you to receive messages, by subscribing to the topic in which messages have been published to. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source target connections. The [!DNL PubSub] connection specification ID is: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 For more information about these values, see this [[!DNL PubSub] authentication](https://cloud.google.com/pubsub/docs/authentication) document. To use service account-based authentication, see this [[!DNL PubSub] guide on creating service accounts](https://cloud.google.com/docs/authentication/production#create_service_account) for steps on how to generate your credentials.
@@ -60,7 +60,7 @@ POST /connections
 
 >[!BEGINTABS]
 
->[!TAB Root access]
+>[!TAB Project-based authentication]
 
 ```shell
 curl -X POST \
@@ -74,9 +74,9 @@ curl -X POST \
       "name": "Google PubSub connection",
       "description": "Google PubSub connection",
       "auth": {
-          "specName": "Google PubSub authentication credentials",
+          "specName": "Project Based Authentication",
           "params": {
-              "projectId": "acme-project",
+              "projectId": "{PROJECT_ID}",
               "credentials": "{CREDENTIALS}"
           }
       },
@@ -93,7 +93,7 @@ curl -X POST \
 | `auth.params.credentials` | The credential or key required to authenticate [!DNL PubSub]. |
 | `connectionSpec.id` | The [!DNL PubSub] connection spec ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
->[!TAB Scoped access]
+>[!TAB Topic and subscription-based authentication]
 
 ```shell
 curl -X POST \
@@ -107,11 +107,11 @@ curl -X POST \
       "name": "Google PubSub connection",
       "description": "Google PubSub connection",
       "auth": {
-          "specName": "Google PubSub Scoped authentication credentials",
+          "specName": "Topic & Subscription Based Authentication",
           "params": {
               "credentials": "{CREDENTIALS}",
-              "topicId": "acmeProjectAPI",
-              "subscriptionId": "acme-project-api-demo"
+              "topicName": "projects/{PROJECT_ID}/topics/{TOPIC_NAME}",
+              "subscriptionName": "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}"
           }
       },
       "connectionSpec": {
@@ -124,8 +124,8 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `auth.params.credentials` | The credential or key required to authenticate [!DNL PubSub]. |
-| `auth.params.topicId` | The topic ID of your [!DNL PubSub] source that you want to provide access to. |
-| `auth.params.subscriptionId` | The ID of the subscription against your [!DNL PubSub] topic. |
+| `auth.params.topicName` | The topic name of your [!DNL PubSub] source that you want to provide access to. |
+| `auth.params.subscriptionName` | The name of the subscription against your [!DNL PubSub] topic. |
 | `connectionSpec.id` | The [!DNL PubSub] connection spec ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 >[!ENDTABS]
@@ -175,8 +175,8 @@ curl -X POST \
           "format": "json"
       },
       "params": {
-          "topicId": "acmeProjectApi",
-          "subscriptionId": "acme-project-api-demo",
+          "topicId": "projects/{PROJECT_ID}/topics/{TOPIC_NAME}",
+          "subscriptionId": "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}",
           "dataType": "raw"
       }
   }'
@@ -189,8 +189,8 @@ curl -X POST \
 | `baseConnectionId` | The base connection ID of your [!DNL PubSub] source that was generated in the previous step. |
 | `connectionSpec.id` | The fixed connection specification ID for [!DNL PubSub]. This ID is: `70116022-a743-464a-bbfe-e226a7f8210c` |
 | `data.format` | The format of the [!DNL PubSub] data that you want to ingest. Currently, the only supported data format is `json`. |
-| `params.topicId` | The name or ID of your [!DNL PubSub] topic. In [!DNL PubSub], a topic is a named resource that represents a feed of messages. |
-| `params.subscriptionId` | The subscription ID that corresponds with a given topic. In [!DNL PubSub], subscriptions allow you to read messages from a topic. One or many subscriptions can be assigned to a single topic. |
+| `params.topicName` | The name of your [!DNL PubSub] topic. In [!DNL PubSub], a topic is a named resource that represents a feed of messages. |
+| `params.subscriptionName` | The subscription name that corresponds with a given topic. In [!DNL PubSub], subscriptions allow you to read messages from a topic. One or many subscriptions can be assigned to a single topic. |
 | `params.dataType` | This parameter defines the type of the data that is being ingested. Supported data types include: `raw` and `xdm`. |
 
 **Response**
