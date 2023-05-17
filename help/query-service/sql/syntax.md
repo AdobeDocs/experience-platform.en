@@ -594,7 +594,7 @@ You can now calculate column level statistics on [!DNL Azure Data Lake Storage] 
 **Example**
 
 ```sql
-ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  for columns (commerce, id, timestamp);
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
 ```
 
 >[!NOTE]
@@ -635,7 +635,7 @@ In the examples below, line one demonstrates how to compute a 5% sample of the t
 
 ```sql {line-numbers="true"}
 ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
-ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) tablesample samplerate 5:
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
 See the [dataset samples documentation](../essential-concepts/dataset-samples.md) for more information.
