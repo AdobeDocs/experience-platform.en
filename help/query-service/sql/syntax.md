@@ -629,7 +629,7 @@ Data set samples are best used when you do not need an exact answer for an aggre
 
 Sample datasets are created with uniform random samples from existing [!DNL Azure Data Lake Storage] (ADLS) datasets, using only a percentage of records from the original. The dataset sample feature extends the `ANALYZE TABLE` command with the `TABLESAMPLE` and `SAMPLERATE` SQL commands.  
 
-In the example below, line one demonstrates how to compute a 5% sample of the table. Line two demonstrates how to compute a 5% sample from a  filtered view of the data within the table.
+In the examples below, line one demonstrates how to compute a 5% sample of the table. Line two demonstrates how to compute a 5% sample from a  filtered view of the data within the table.
 
 **example**
 
