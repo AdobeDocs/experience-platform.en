@@ -12,15 +12,19 @@ You can now compute column level statistics on [!DNL Azure Data Lake Storage] (A
 
 With the `SHOW STATISTICS FOR <alias_name>` command, you can see the statistics that were computed with the `ANALYZE TABLE COMPUTE STATISTICS` command. Through the combination of these commands, you can now compute column statistics on either the entire dataset, a subset of a dataset, all columns, or a subset of columns.
 
+>[IMPORTANT]
+>
+>The `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, and `SHOW STATISTICS` commands are not supported on data warehouse tables. These extensions for the `ANALYZE TABLE` command are currently only supported for ADLS tables. For more information see the [ANALYZE TABLE section](../sql/syntax.md#analyze-table) of the SQL syntax guide.  
+
 This guide helps you structure your queries so that you can compute the column statistics of an ADLS dataset. Using these commands, you can see the statistics generated in your session through a PSQL client using an SQL query.
 
 ## Compute statistics {#compute-statistics}
 
-Additional constructs have been added to the `ANALYZE TABLE` command that allow you to compute statistics for the entire dataset and for all columns. To do this, you must use the `ANALYZE TABLE <tableName> COMPUTE STATISTICS` format. 
+Additional constructs have been added to the `ANALYZE TABLE` command that allow you to **compute statistics for subset of a dataset and for certain columns**. To do this, you must use the `ANALYZE TABLE <tableName> COMPUTE STATISTICS` format. 
 
 >[!IMPORTANT]
 >
->The default behavior computes statistics for the **entire dataset** and for **all columns**. You are recommended not to use this on an ADLS dataset as the size of the dataset can be very large (potentially petabytes of data). Instead, you should always consider running the analyze command using `FILTERCONTEXT` and a specified list of columns. See the sections on [limiting analyzed columns](#limit-included-columns) and [adding a filter condition](#filter-condition) for more details.
+>The default behavior computes statistics for the **entire dataset** and for **all columns**. To computing statistics on all columns, you would use the query format `ANALYZE TABLE COMPUTE STATISTICS`. You are **not** recommended to use this on an ADLS dataset as the size of the dataset can be very large (potentially petabytes of data). Instead, you should always consider running the analyze command using `FILTERCONTEXT` and a specified list of columns. See the sections on [limiting analyzed columns](#limit-included-columns) and [adding a filter condition](#filter-condition) for more details.
 
 The example seen below computes statistics for the `adc_geometric` dataset and for **all** columns in the dataset.
 
@@ -28,13 +32,22 @@ The example seen below computes statistics for the `adc_geometric` dataset and f
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS;
 ```
 
+>[!NOTE]
+>
+>`COMPUTE STATISTICS` does not support the array or map data types. You can set a `skip_stats_for_complex_datatypes` flag to be notified or error out if the input dataframe has columns with arrays and map data types. By default the flag is set to true. To enable notifications or errors use the following command: `SET skip_stats_for_complex_datatypes = false`.
+
+<!-- Commented out until the <alias_name> feature is released.
 This second example, is a more real-world example as it uses an alias name. See the [alias name section](#alias-name) for more details on this feature.
 
 ```sql
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS as <alias_name>;
-```
+``` -->
 
-The console output does not display the statistics in response to the analyze table compute statistics command. Instead, the console will display `SUCCESSFULLY COMPLETED` followed by a universally unique identifier or an alias name. See the section on [alias names](#alias-name) for more details.
+The console output does not display the statistics in response to the analyze table compute statistics command. Instead, the console will display `SUCCESSFULLY COMPLETED` followed by a universally unique identifier referenced as `STATISTICS ID`. On successful completion of a `COMPUTE STATISTICS` query, the results are displayed as follows:
+
+```sql
+SUCCESSFULLY COMPLETED, STATISTICS ID: QqMtDfHQOdYJpZlb
+```
 
 To see the output, you must use the `SHOW STATISTICS` command. Instructions on [how to show the statistics](#show-statistics) are provided later in the document.
 
@@ -68,7 +81,7 @@ You can combine the column limit and the filter to create highly specific comput
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR (columns commerce, id, timestamp);
 ```
 
-## Create an alias name {#alias-name}
+<!-- ## Create an alias name {#alias-name}
 
 Since the filter condition and the column list can target a large amount of data, it is unrealistic to remember the exact values. Instead, you can provide an `<alias_name>` to store this calculated information. If you do not provide an alias name for these calculations, Query Service generates a universally unique identifier for the alias ID. You can then use this alias ID to look up the computed statistics with the `SHOW STATISTICS` command. 
 
@@ -82,14 +95,46 @@ The example below stores the output computed statistics in the `alias_name` for 
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS FOR ALL COLUMNS as alias_name;
 ```
 
-The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the output, you must use the `SHOW STATISTICS` command discussed below.
+The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the output, you must use the `SHOW STATISTICS` command discussed below. -->
 
 ## Show the statistics {#show-statistics}
 
-The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run. The alias name and the statistics generated, are only valid for this particular session and cannot be accessed across different PSQL sessions. The computed statistics are not currently persistent. To display the statistics, use the command seen below.
+<!-- Commented out until the <alias_name> feature is released.
+The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run.  -->
+
+Even with a filter condition and a column list, the computation can target a large amount of data. Query Service generates a universally unique identifier for the statistics ID to store this calculated information. You can then use this statistics ID to look up the computed statistics with the `SHOW STATISTICS` command at any time within that session. 
+
+The statistics ID and the statistics generated, are only valid for this particular session and cannot be accessed across different PSQL sessions. The computed statistics are not currently persistent. To display the statistics, use the command seen below.
 
 ```sql
-SHOW STATISTICS FOR <alias_name>;
+SHOW STATISTICS FOR <STATISTICS_ID>;
+```
+
+An output might appear similar to the example below. 
+
+```console
+  columnName   | mean | max | min | standardDeviation | approxDistinctCount | nullCount | dataType 
+---------------+------+-----+-----+-------------------+---------------------+-----------+----------
+ city          |  0.0 | 0.0 | 0.0 |               0.0 |               178.0 |         0 | String
+ latitude      |  0.0 | 0.0 | 0.0 |               0.0 |              9996.0 |         0 | String
+ email         |  0.0 | 0.0 | 0.0 |               0.0 |              9999.0 |         0 | String
+ username      |  0.0 | 0.0 | 0.0 |               0.0 |               244.0 |         0 | String
+ firstname     |  0.0 | 0.0 | 0.0 |               0.0 |               779.0 |         0 | String
+ country       |  0.0 | 0.0 | 0.0 |               0.0 |                 1.0 |         0 | String
+ longitude     |  0.0 | 0.0 | 0.0 |               0.0 |              9997.0 |         0 | String
+ optin_address |  0.0 | 0.0 | 0.0 |               0.0 |                 2.0 |         0 | String
+ lastname      |  0.0 | 0.0 | 0.0 |               0.0 |               636.0 |         0 | String
+ birthdate     |  0.0 | 0.0 | 0.0 |               0.0 |              7704.0 |         0 | String
+ id            |  0.0 | 0.0 | 0.0 |               0.0 |              9999.0 |         0 | String
+ stateprovince |  0.0 | 0.0 | 0.0 |               0.0 |                46.0 |         0 | String
+ optin_email   |  0.0 | 0.0 | 0.0 |               0.0 |                 2.0 |         0 | String
+ postalcode    |  0.0 | 0.0 | 0.0 |               0.0 |              7874.0 |         0 | String
+ street        |  0.0 | 0.0 | 0.0 |               0.0 |               998.0 |         0 | String
+ mobile        |  0.0 | 0.0 | 0.0 |               0.0 |               998.0 |         0 | String
+ optin_mobile  |  0.0 | 0.0 | 0.0 |               0.0 |                 2.0 |         0 | String
+ created       |  0.0 | 0.0 | 0.0 |               0.0 |              9999.0 |         0 | String
+ gender        |  0.0 | 0.0 | 0.0 |               0.0 |                 2.0 |         0 | String
+(19 rows)
 ```
 
 ## Next steps {#next-steps}

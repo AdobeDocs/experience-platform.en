@@ -561,7 +561,7 @@ To return the value for any setting, use `SET [property key]` without a `propert
 
 The sub-sections below cover the [!DNL PostgreSQL] commands supported by Query Service.
 
-### ANALYZE TABLE
+### ANALYZE TABLE {#analyze-table}
 
 The `ANALYZE TABLE` command computes statistics for a table on the accelerated store. The statistics are calculated on executed CTAS or ITAS queries for a given table on accelerated store.
 
