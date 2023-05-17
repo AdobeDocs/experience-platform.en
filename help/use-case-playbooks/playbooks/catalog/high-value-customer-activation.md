@@ -14,13 +14,13 @@ Use the high-value customer activation playbook to identify and contact high val
 
 ## Start a new project using the playbook
 
-When you are ready to proceed, select **Create new project with this playbook**. The [UI guide](/help/marketer-playground/playbooks/ui-guide.md) contains all the information you need about how to create a new project using the playbooks.
+When you are ready to proceed, select **Create new project with this playbook**. The [UI guide](/help/use-case-playbooks/playbooks/ui-guide.md) contains all the information you need about how to create a new project using the playbooks.
 
 ## Created artifacts
 
 Experience Platform automatically creates several artifacts that you can use to accomplish the use case of this playbook.
 
-![Artifacts created for the re-engage shoppers playbook](/help/marketer-playground/assets/playbooks/catalog/re-engage-shoppers/re-engage-shoppers-artifacts.png)
+![Artifacts created for the re-engage shoppers playbook](/help/use-case-playbooks/assets/playbooks/catalog/re-engage-shoppers/re-engage-shoppers-artifacts.png)
 
 See detailed information about the created artifacts below: 
 
@@ -35,7 +35,7 @@ Experience Platform creates two schemas for you to use as part of this project -
 
 Use these schemas as a base to accomplish the use case in this playbook.
 
-![Schemas for this playbook](/help/marketer-playground/assets/playbooks/catalog/high-value-customer-activation/generated-schemas.png)
+![Schemas for this playbook](/help/use-case-playbooks/assets/playbooks/catalog/high-value-customer-activation/generated-schemas.png)
 
 ### Segments {#segments}
 
