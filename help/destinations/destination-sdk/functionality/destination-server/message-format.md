@@ -1199,13 +1199,16 @@ The context provided to the template contains `input`  (the profiles / data that
 
 The table below provides descriptions for the functions in the examples above.
 
-|Function | Description |
-|---------|----------|
-| `input.profile` | The profile, represented as a [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Follows the partner XDM schema mentioned further above on this page.|
-| `destination.segmentAliases` | Map from segment IDs in the Adobe Experience Platform namespace to segment aliases in the partner's system. |
-| `destination.segmentNames` | Map from segment names in the Adobe Experience Platform namespace to segment names in the partner's system. |
-| `addedSegments(listOfSegments)` | Returns only the segments that have status `realized`. |
-| `removedSegments(listOfSegments)` | Returns only the segments that have status `exited`. |
+|Function | Description | Example |
+|---------|----------|----------|
+| `input.profile` | The profile, represented as a [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Follows the partner XDM schema mentioned further above on this page.||
+|`hasSegments`| This function takes a map of namespace segment IDs as parameter. The function returns `true` if there is at least one segment in the map (regardless of its status), and `false` otherwise. You can use this function to decide whether to iterate over a map of segments or not.|`hasSegments(input.profile.segmentMembership)`|
+|`destination.namespaceSegmentAliases`| Map from segment IDs in a specific Adobe Experience Platform namespace to segment aliases in the partner's system.|`destination.namespaceSegmentAliases["ups"]["seg-id-1"]`|
+|`destination.namespaceSegmentNames`| Map from segment names in specific Adobe Experience Platform namespaces to segment names in the partner's system.|`destination.namespaceSegmentNames["ups"]["seg-name-1"]`|
+| `destination.segmentAliases` | **Deprecated. Replaced by `destination.namespaceSegmentAliases`** <br><br> Map from segment IDs in the Adobe Experience Platform namespace to segment aliases in the partner's system. |`destination.segmentAliases["seg-id-1"]`|
+| `destination.segmentNames` | **Deprecated. Replaced by `destination.namespaceSegmentNames`** <br><br>  Map from segment names in the Adobe Experience Platform namespace to segment names in the partner's system. |`destination.segmentNames["seg-name-1"]`|
+| `addedSegments(mapOfNamespacedSegmentIds)` | Returns only the segments that have status `realized`, across all namespaces. | `addedSegments(input.profile.segmentMembership)` |
+| `removedSegments(mapOfNamespacedSegmentIds)` | Returns only the segments that have status `exited`, across all namespaces. |`removedSegments(input.profile.segmentMembership)` |
 
 {style="table-layout:auto"}
 
