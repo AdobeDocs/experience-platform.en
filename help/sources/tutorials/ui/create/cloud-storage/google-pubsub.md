@@ -101,9 +101,9 @@ If you have authenticated with project-based access, the [!UICONTROL Select data
 
 If you have authenticated with a topic and subscription-based access, the [!UICONTROL Select data] interface display can vary depending on the information that you provided.
 
-* If you only provide the topic name, then the interface displays all topic-subscription pairs that corresponds to the topic you provided
-* If you only provide the subscription name, then the interface displays all topic-subscription pairs that corresponds to the subscription name you provided.
-* If both topic and subscription names are provided, then the interface displays the topic-subscription pair that corresponds with both values provided.
+* If you provide only the topic name, then the interface displays all topic-subscription pairs that correspond to the topic provided.
+* If you only provide the subscription name, then the interface displays all topic-subscription pairs that correspond to the subscription name provided.
+* If both topic and subscription names are provided, then the interface displays the topic-subscription pair that corresponds with both provided values.
 
 ![The select data step of the sources workflow with topic and subscription-based authentication.](../../../../images/tutorials/create/google-pubsub/scoped-folders.png)
 
