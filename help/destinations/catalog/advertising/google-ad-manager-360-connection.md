@@ -92,12 +92,7 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Account Type]**: Select an option, depending on your [!DNL Google] account:
    * Use `AdX buyer` for [!DNL Google AdX]
    * Use `DFP by Google` for [!DNL DoubleClick] for Publishers
-
-<!--
-
-*  **[!UICONTROL Append segment ID to segment name]**: Select this option to have the segment name in Google Ad Manager 360 include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`
-
--->
+*  **[!UICONTROL Append segment ID to segment name]**: Select this option to have the segment name in Google Ad Manager 360 include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`.
 
 ### Enable alerts {#enable-alerts}
 

@@ -76,6 +76,7 @@ solution: Data Collection
       * [Overview](./extensions/client/product-string/overview.md)
       * [Release notes](./extensions/client/product-string/release-notes.md)    
     * [Adobe Analytics Product String Builder](https://exchange.adobe.com/apps/ec/101461)
+    * [Adobe Analytics via Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
     * Adobe Audience Manager {#audience-manager}
       * [Overview](./extensions/client/audience-manager/overview.md)
     * Adobe Client Data Layer {#client-data-layer}
@@ -222,6 +223,8 @@ solution: Data Collection
     * [!DNL Mixpanel] {#mixpanel}
       * [Overview](./extensions/server/mixpanel/overview.md)
     * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
+    * [!DNL Pinterest] {#pinterest}
+      * [Overview](./extensions/server/pinterest/overview.md)
     * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
     * [!DNL Splunk] {#splunk}
       * [Overview](./extensions/server/splunk/overview.md)

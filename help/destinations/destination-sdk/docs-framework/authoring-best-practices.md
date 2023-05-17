@@ -41,7 +41,7 @@ Follow the provided documentation template and don't edit the existing links in 
 * When using screenshots, please ensure that your screenshot captures the entire Platform UI screen.
 * When marking up images to highlight a certain control or label on the page, try to follow the markup style used by the Experience Platform documentation team. Notice how Profile-based is highlighted in [this screenshot](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency).
 * Please use `png` format images.
-* Please don’t use numbered screenshots as filenames. Image filenames should be descriptive.
+* Please don't use numbered screenshots as filenames. Image filenames should be descriptive.
   * **Don't use**: `1.png`, `2.png`, `3.png`
   * **Use**: `yourdestination-authentication-details.png`, `yourdestination-destination-details.png`
 * Please use alt text for any images that you add to the documentation and use proper grammar in the alt text.
@@ -50,5 +50,5 @@ Follow the provided documentation template and don't edit the existing links in 
 
 ## Process {#process}
 
-* The [documentation template](./self-service-template.md) is updated infrequently, based on partner feedback. Before you begin authoring documentation for your destination, make sure that you have downloaded the [latest version of the template](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+* The [documentation template](./self-service-template.md) is updated infrequently, based on partner feedback. Before you begin authoring documentation for your destination, make sure that you have downloaded the [latest version of the template](../assets/docs-framework/yourdestination-template.zip).
 * Author the documentation and create the documentation pull request (PR) from a branch in your fork *other than the main branch*. Refer to the submit destination for review section when authoring in the [GitHub interface](./use-github-interface-to-create-documentation.md#submit-review) or in [your local environment](./work-in-local-environment.md#submit-review).
