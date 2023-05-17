@@ -30,34 +30,34 @@ To activate data to destinations, you must have successfully [connected to a des
     
     ![Image highlighting how to get to the destinations catalog tab](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
-1. Select **[!UICONTROL Activate segments]** on the card corresponding to the destination where you want to activate your segments, as shown in the image below.
+1. Select **[!UICONTROL Activate audiences]** on the card corresponding to the destination where you want to activate your audiences, as shown in the image below.
 
-    ![Image highlighting the Activate segments button](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
+    ![Image highlighting the Activate audiences button](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
 
-1. Select the destination connection that you want to use to activate your segments, then select **[!UICONTROL Next]**.
+1. Select the destination connection that you want to use to activate your audiences, then select **[!UICONTROL Next]**.
 
-    ![Image highlighting how to select one or multiple destinations to activate segments to](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+    ![Image highlighting how to select one or multiple destinations to activate audiences to](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
-1. Move to the next section to [select your segments](#select-segments).
+1. Move to the next section to [select your audiences](#select-audiences).
 
-## Select your audiences {#select-segments}
+## Select your audiences {#select-audiences}
 
 Use the check boxes to the left of the audience names to select the audiences that you want to activate to the destination, then select **[!UICONTROL Next]**.
 
-![Image highlighting how to select one or multiple segments to activate](../assets/ui/activate-batch-profile-destinations/select-segments.png)
+![Image highlighting how to select one or multiple segments to activate](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
 >Selecting audiences originating from **[!UICONTROL Custom uploads]** automatically enables the [Select enrichment attributes](#select-enrichment-attributes) step.
 
-## Schedule segment export {#scheduling}
+## Schedule audience export {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="Schedule"
 >abstract="Use the pencil icon to set the file export type (full files or incremental files) and the export frequency."
 
-[!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations in the form of [!DNL CSV] files. In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
+[!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations in the form of [!DNL CSV] files. In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each audience you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
 
 >[!IMPORTANT]
 > 
@@ -65,7 +65,7 @@ Use the check boxes to the left of the audience names to select the audiences th
 >
 >Split file names are appended with a number that indicates the file is part of a larger export, as such: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
-Select the **[!UICONTROL Create schedule]** button corresponding to the segment that you want to send to your destination.
+Select the **[!UICONTROL Create schedule]** button corresponding to the audience that you want to send to your destination.
 
 ![Image highlighting the Create schedule button](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
@@ -74,7 +74,7 @@ Select the **[!UICONTROL Create schedule]** button corresponding to the segment 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="File export options"
->abstract="Select **Export full files** to export a complete snapshot of all the profiles that qualify for the segment. Select **Export incremental files** to export only the profiles which qualified for the segment since the last export. <br> The first incremental file export includes all profiles that qualify for the segment, acting as a backfill. Future incremental files include only the profiles which qualified for the segment since the first incremental file export."
+>abstract="Select **Export full files** to export a complete snapshot of all the profiles that qualify for the audience. Select **Export incremental files** to export only the profiles which qualified for the audience since the last export. <br> The first incremental file export includes all profiles that qualify for the audience, acting as a backfill. Future incremental files include only the profiles which qualified for the audience since the first incremental file export."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="Export incremental files"
 
 >[!CONTEXTUALHELP]
@@ -87,7 +87,7 @@ Select the **[!UICONTROL Create schedule]** button corresponding to the segment 
 >title="Scheduled activation"
 >abstract="Activation runs at a fixed time of the day."
 
-Select **[!UICONTROL Export full files]** to trigger the export of a file containing a full snapshot of all profile qualifications for the selected segment.
+Select **[!UICONTROL Export full files]** to trigger the export of a file containing a full snapshot of all profile qualifications for the selected audience.
 
 ![Image of the UI with the Export full files toggle selected.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
@@ -157,7 +157,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
 >title="Configure file name"
->abstract="For file-based destinations, a unique file name is generated per segment. Use the file name editor to create and edit a unique file name or keep the default name."
+>abstract="For file-based destinations, a unique file name is generated per audience. Use the file name editor to create and edit a unique file name or keep the default name."
 
 For most destinations, the default file names consist of destination name, segment ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files. Note that some destination developers might select to have different default file name append options shown for their destinations.
 
@@ -173,11 +173,11 @@ In the file name editor, you can select different components to add to the file 
 
 ![Image displaying all the available file name options.](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
 
-The destination name and segment ID cannot be removed from file names. In addition to these, you can add the following:
+The destination name and audience ID cannot be removed from file names. In addition to these, you can add the following:
 
 |File name option | Description |
 |---------|----------|
-| **[!UICONTROL Segment name]** | The name of the exported segment. |
+| **[!UICONTROL Audience name]** | The name of the exported segment. |
 | **[!UICONTROL Date and time]** | Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export. |
 | **[!UICONTROL Custom text]** | Any custom text that you want to add to the file names. |
 | **[!UICONTROL Destination ID]** | The ID of the destination dataflow you use to export the segment. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
@@ -463,21 +463,26 @@ As a temporary workaround if you need to add identity namespaces to your exporte
 
 >[!IMPORTANT]
 >
->This step is displayed only if you selected **[!UICONTROL Custom upload]** audiences during the [audience selection](#select-segments) step.
+>This step is displayed only if you selected **[!UICONTROL Custom upload]** audiences during the [audience selection](#select-audiences) step.
 
 Enrichment attributes correspond to the profiles ingested in Experience Platform as **[!UICONTROL Custom uploads]**. In this step, you can select which attributes you would like to export to your destination, for each selected external audience.
+
+![UI image showing the enrichment attributes selection step.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes-step.png)
 
 Follow the steps below to select enrichment attributes for each external audience:
 
 1. In the **[!UICONTROL Enrichment attributes]** column, select the ![Edit button](../assets/ui/activate-batch-profile-destinations/edit-button.svg) (Edit) button.
-2. Select **[!UICONTROL Add new field]**. A new empty schema field is shown.
+2. Select **[!UICONTROL Add enrichment attribute]**. A new empty schema field is shown.
+  ![UI image showing the enrichment attributes modal screen.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
 3. Select the button to the right of the empty field to open the field selection screen.
 4. Select the attributes that you want to export for the audience.
+  ![UI image showing the enrichment attributes list.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes.png)
 5. After you have added all the attributes that you want to export, select **[!UICONTROL Save and close]**.
 6. Repeat these steps for each external audience.
 
-
 If you want to activate external audiences to your destinations without exporting any attribute, enable the **[!UICONTROL Exclude enrichment attributes]** toggle. This will export the profiles from the external audiences, but none of their corresponding attributes will be sent to your destination.
+
+![UI image showing the exclude enrichment attributes toggle.](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png)
 
 Select **[!UICONTROL Next]** to move to the [Review](#review) step.
 
@@ -510,7 +515,7 @@ Also in this step you can use the available filters on the page to display only 
 
 If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
-## Verify segment activation {#verify}
+## Verify audience activation {#verify}
 
 For email marketing destinations and cloud storage destinations, Adobe Experience Platform creates a `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location according to the schedule you set in the workflow. The default file format is shown below, but you can [edit the components of the file name](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
