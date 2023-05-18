@@ -49,7 +49,7 @@ When a segment is first activated, [!DNL Policy Service] checks for applicable p
 
 Data lineage plays a key role in how policies are enforced in Platform. In general terms, data lineage refers to the origin of a set of data, and what happens to it (or where it moves) over time.
 
-In the context of Data Governance, lineage enables data usage labels to propagate from schemas to downstream services that consume their data, such as Real-Time Customer Profile and destinations. This allows policies to be evaluated and enforced at several key points in the data's journey through Platform, and provides context to data consumers as to why a policy violation occurred.
+In the context of Data Governance, lineage enables data usage labels to propagate from schemas to downstream services that consume their data, such as Real-Time Customer Profile and Destinations. This allows policies to be evaluated and enforced at several key points in the data's journey through Platform, and provides context to data consumers as to why a policy violation occurred.
 
 In Experience Platform, policy enforcement is concerned with the following lineage:
 

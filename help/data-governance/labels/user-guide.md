@@ -32,7 +32,7 @@ To create a new schema, select **[!UICONTROL Create schema]** in the top-right c
 >
 >Labels can no longer be applied to fields at the dataset level. This workflow has been deprecated in favour of applying labels at the schema level. Any labels previously applied at the dataset object level will still be supported through the Platform UI until 31st May 2024. To ensure that your labels are consistent across all schemas, any labels previously attached to fields at the dataset level must be migrated to the schema level by you over the coming year. See the documentation for instructions on [how to migrate previously applied labels from the dataset to the schema level](../e2e.md#migrate-labels).
 
-After creating a new schema, or selecting an existing schema from the list in the [!UICONTROL Browse] tab of the [!UICONTROL Schemas] workspace, select a field from your schema in the Schema Editor. In the [UICONTROL Field properties] sidebar, select **[!UICONTROL Apply Access and Data Governance Labels]**. 
+After creating a new schema, or selecting an existing schema from the list in the [!UICONTROL Browse] tab of the [!UICONTROL Schemas] workspace, select a field from your schema in the Schema Editor. In the [!UICONTROL Field properties] sidebar, select **[!UICONTROL Apply Access and Data Governance Labels]**. 
 
 ![The Schemas workspace Structure tab displaying the visualization of your schema with Apply Access and Data Governance Labels highlighted.](../images/labels/schema-label-governance.png)
 
