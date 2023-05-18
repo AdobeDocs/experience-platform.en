@@ -17,23 +17,6 @@ This guide requires a working understanding of the following components of Adobe
 
 For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
 
-The following section provides additional information that you will need to know in order to successfully connect to [!DNL Snowflake] using the [!DNL Flow Service] API.
-
-### Gather required credentials
-
-In order for [!DNL Flow Service] to connect with [!DNL Snowflake], you must provide the following connection properties:
-
-| Credential | Description |
-| --- | --- |
-| `account` | The full account name associated with your [!DNL Snowflake] account. A fully qualified [!DNL Snowflake] account name includes your account name, region, and cloud platform. For example, `cj12345.east-us-2.azure`. For more information on account names, refer to this [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html).  |
-| `warehouse` | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Platform. |
-| `database` | The [!DNL Snowflake] database contains the data you want to bring the Platform. |
-| `username` | The username for the [!DNL Snowflake] account. |
-| `password` | The password for the [!DNL Snowflake] user account. |
-| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Snowflake] is `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
-
-For more information about getting started, refer to this [[!DNL Snowflake] document](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
-
 ## Create a base connection {#create-a-base-connection}
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
@@ -82,7 +65,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `auth.params.account` |
+| `auth.params.account` | 
 | `auth.params.database` |
 | `auth.params.warehouse` |
 | `auth.params.schema` |
