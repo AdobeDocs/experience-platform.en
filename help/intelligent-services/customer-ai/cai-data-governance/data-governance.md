@@ -18,6 +18,10 @@ Data usage labels and policies that were created on datasets consumed by Platfor
 
 This integration allows you to manage compliance more efficiently. Data stewards in your organization can set policies to restrict usage. As a result, you can use data that complies with policies defined by data stewards. Read the documentation on [Labels and Policies](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html) to learn more.
 
+## Consent Policy {#consent-policy}
+
+Customer AI honors your consent preferences. Once you've setup your consent policy and enabled it as documented here, Customer AI will honor the consent data collected from you. Only consented data is used for scoring the model in subsequent runs of the model. The new scores will replace the old scores and can be used in segmentation. This feature is only available for HealthCare Shield customers, and Privacy and Security shield customers.
+
 You can learn more about this feature here: 
 
 [Getting Started in Customer AI](../../customer-ai/getting-started.md)
