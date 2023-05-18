@@ -10,8 +10,5 @@ feature: Playbooks
 
 * Playbooks {#playbooks}
   * [Overview](/help/use-case-playbooks/playbooks/overview.md)
-  * Catalog {#catalog}
-    * [High value customer activation](/help/use-case-playbooks/playbooks/catalog/high-value-customer-activation.md)
-    * [Re-engage shoppers](/help/use-case-playbooks/playbooks/catalog/re-engage-shoppers.md)
   * [UI guide](/help/use-case-playbooks/playbooks/ui-guide.md)
   * [Troubleshooting](/help/use-case-playbooks/playbooks/troubleshooting.md)
