@@ -90,23 +90,21 @@ The guardrails below apply to activation through [edge personalization destinati
 
 ### Dataset exports {#dataset-exports}
 
-Dataset export is currently supported in "FIRST FULL and then INCREMENTAL" pattern. The guardrails described in this section apply to the first full export that occurs after an export flow is set up.
+Dataset exports are currently supported in a "First Full and then Incremental" [pattern](/help/destinations/ui/export-datasets.md#scheduling). The guardrails described in this section apply to the first full export that occurs after a dataset export workflow is set up.
 
-**Dataset Types**
+## Dataset Types {#dataset-types}
 
 Datasets exported from Experience Platform can be of two types, as described below:
 
 **Timeseries**
-Timeseries datasets are also known as XDM Experience Events in Experience Platform terminology.
-Dataset schema includes a top level "timestamp" column
-Data is ingested in an append-only fashion 
+Timeseries datasets are also known as *XDM Experience Events* in Experience Platform terminology.
+The Dataset schema includes a top level *timestamp* column. Data is ingested in an append-only fashion.
 
 **Record** 
-Record datasets are also known as XDM Individual Profile in Experience Platform terminology.
-Dataset schema does not include a top level "timestamp" column
-Data is ingested in upsert fashion
+Record datasets are also known as *XDM Individual Profile* in Experience Platform terminology.
+The Dataset schema does not include a top level *timestamp* column. Data is ingested in upsert fashion.
 
-The guardrails below are grouped by scheduled or ad-hoc export type, and then further by dataset type and exported file type.
+The guardrails below are grouped by the format of the exported file, and then further by dataset type.
 
 <table>
 <thead>
@@ -130,7 +128,7 @@ The guardrails below are grouped by scheduled or ad-hoc export type, and then fu
     <td>Record</td>
     <td>-</td>
     <td>Five billion records per file</td>
-    <td>The record count of the dataset needs to be less than five billion, otherwise the export fails. Reduce the size of the dataset that you are trying to export.</td>
+    <td>The record count of the dataset must be less than five billion, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
   </tr>
   <tr>
     <td rowspan="3">JSON</td>
@@ -143,12 +141,12 @@ The guardrails below are grouped by scheduled or ad-hoc export type, and then fu
     <td rowspan="2">Record</td>
     <td>Yes</td>
     <td>Five billion records per file</td>
-    <td>The record count of the dataset needs to be less than one billion, otherwise the export fails. Reduce the size of the dataset that you are trying to export.</td>
+    <td>The record count of the dataset must be less than five billion, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
   </tr>
   <tr>
     <td>No</td>
     <td>One million records per file</td>
-    <td>The record count of the dataset needs to be less than one million, otherwise the export fails. Reduce the size of the dataset that you are trying to export.</td>
+    <td>The record count of the dataset must be less than one million, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
   </tr>
 </tbody>
 </table>
