@@ -5,6 +5,12 @@ badge: "Beta"
 ---
 # Computed attributes API endpoint
 
+>[!IMPORTANT]
+>
+>The computed attributes functionality is currently in beta. The documentation and functionality are subject to change. 
+>
+>Additionally, access to the API is restricted. To learn how to get access to the computed attributes API, please contact Adobe Support.
+
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. This guide includes sample API calls for performing basic CRUD operations using the `/attributes` endpoint. 
 
 To learn more about computed attributes, please begin by reading the [computed attributes overview](overview.md).
@@ -18,7 +24,7 @@ Before continuing, please review the [Profile API getting started guide](../api/
 Additionally, please review the documentation for the following service:
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-  -  [Schema Registry getting started guide](../../xdm/api/getting-started.md#know-your-tenant_id): Information about your `{TENANT_ID}`, which appears in responses throughout this guide, is provided.
+  - [Schema Registry getting started guide](../../xdm/api/getting-started.md#know-your-tenant_id): Information about your `{TENANT_ID}`, which appears in responses throughout this guide, is provided.
 
 ## Retrieve a list of computed attributes {#list}
 
