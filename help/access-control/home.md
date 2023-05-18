@@ -7,36 +7,35 @@ exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 ---
 # Access control overview
 
-Access control for [!DNL Experience Platform] is provided through the [Adobe Admin Console](https://adminconsole.adobe.com). This functionality leverages product profiles in [!DNL Admin Console], which link users with permissions and sandboxes.
+Access control for [!DNL Experience Platform] is provided through the **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/). This functionality leverages roles and policies, which link users with permissions and sandboxes.
 
 ## Access control hierarchy and workflow
 
-In order to configure access control for [!DNL Experience Platform], you must have administrator privileges for an organization that has an [!DNL Experience Platform] product integration. The minimum role that grant or withdraw permissions is a product profile administrator. Other administrator roles that can manage permissions are product administrators (can manage all profiles within a product) and system administrators (no restrictions). See the Adobe Help Center article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) for more information.
+In order to configure access control for [!DNL Experience Platform], you must have system or product administrator privileges for an organization that has an [!DNL Experience Platform] product. The minimum role that grant or withdraw permissions is a product administrator. Other administrator roles that can manage permissions is a system administrators (no restrictions). See the Adobe Help Center article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) for more information.
 
 >[!NOTE]
 >
->From this point on, any mentions of "administrator" in this document refer to a product profile administrator or higher (as outlined above).
+>From this point on, any mentions of "administrator" in this document refer to a product administrator or higher (as outlined above).
 
 A high-level workflow for gaining and assigning access permissions can be summarized as follows:
 
 - After licensing Adobe Experience Platform, or an Application/App Service that uses Experience Platform, an email is sent to the administrator specified during licensing.
 - The administrator logs in to [Adobe Admin Console](#adobe-admin-console) and selects **Adobe Experience Platform** from the list of products on the overview page.
-- The administrator can view the default [product profiles](#product-profiles) or create new customer product profiles as needed.
-- The administrator can edit the permissions and users for any existing product profiles.
-- When creating or editing a product profile, the administrator adds users to the profile using the **[!UICONTROL users]** tab, and grants permissions to these users (such as "[!UICONTROL Read Datasets]" or "[!UICONTROL Manage Schemas]") by accessing the **[!UICONTROL permissions]** tab. Similarly, the administrator can assign access to sandboxes using the same permissions tab.
+- The administrator can edit the permissions and users for any existing roles.
+- When creating or editing a role, the administrator adds users to the role using the **[!UICONTROL users]** tab, and grants permissions to these users (such as "[!UICONTROL Read Datasets]" or "[!UICONTROL Manage Schemas]") by editing the role's permissions. Similarly, the administrator can assign access to sandboxes using the same editing option.
 - When users log in to the [!DNL Experience Platform] user interface, their access to [!DNL Platform] capabilities is driven by the permissions that have been granted to them from Step 2. For example, if a user does not have the "[!UICONTROL View Datasets]" permission, the **[!UICONTROL Datasets]** tab in the side menu will not be visible to that user.
 
 For more detailed steps on how to manage access control in [!DNL Experience Platform], see the [access control user guide](./ui/overview.md).
 
 All calls to [!DNL Experience Platform] APIs are validated for permissions, and will return errors if the appropriate permission(s) are not found in the current user context. Within the UI, elements will be hidden or altered depending on permissions granted to the current user.
 
-## Adobe Admin Console
+## Permissions
 
-Adobe Admin Console provides a central location for managing Adobe product entitlements and access for your organization. Through the console, you can grant groups of users access permissions for various [!DNL Platform] capabilities, such as "[!UICONTROL Manage Datasets]", "[!UICONTROL View Datasets]", or "[!UICONTROL Manage Profiles]".
+[!UICONTROL Permissions] provides a central location for managing [!DNL Experience Platform] access for your organization. Through [!UICONTROL Permissions], you can grant groups of users access permissions for various [!DNL Platform] capabilities, such as "[!UICONTROL Manage Datasets]", "[!UICONTROL View Datasets]", or "[!UICONTROL Manage Profiles]".
 
-### Product profiles
+### Roles
 
-In the [!DNL Admin Console], permissions are assigned to users through the use of product profiles. Product profiles allow you to grant permissions to one or multiple users, and also contain their access to the scope of the sandboxes that are assigned to them through product profiles. Users can be assigned to one or multiple product profiles belonging to your organization.
+In the [!UICONTROL Roles] section, permissions are assigned to users through the use of roles. Roles allow you to grant permissions to one or multiple users, and also contain their access to the scope of the sandboxes that are assigned to them through roles. Users can be assigned to one or multiple roles belonging to your organization.
 
 ### Default product profiles
 
@@ -55,21 +54,21 @@ For more information about sandboxes in [!DNL Experience Platform], please refer
 
 ### Access to sandboxes
 
-Access to sandboxes is managed through product profiles. For detailed steps on how to enable access to a sandbox for a product profile, see the [access control user guide](./ui/overview.md).
+Access to sandboxes is managed through roles. For detailed steps on how to enable access to a sandbox for a role, see the [attribute based access control roles guide](./abac/ui/roles.md).
 
-Users can be granted access to one or more sandboxes within a product profile. If one user is included in two or more product profiles, that user will have access to all sandboxes included in those profiles.
+Users can be granted access to one or more sandboxes within a role. If one user is included in two or more roles, that user will have access to all sandboxes included in those roles.
 
 The "Sandbox Management" permission allows users to manage, view, or reset sandboxes.
 
-### Permissions {#permissions}
+### Resource Permissions {#permissions}
 
-The permissions tab within a product profile displays the sandboxes and permissions that are active for that profile:
+The resource **[!UICONTROL Permissions] tab within a role displays the sandboxes and permissions that are active for that role:
 
 ![permissions-overview](./images/permissions.png)
 
-Permissions that are granted through the [!DNL Admin Console] are sorted by category, with some permissions granting access to several low-level functionalities.
+Permissions that are granted through the resource permissions are sorted by category, with some permissions granting access to several low-level functionalities.
 
-The following table outlines the available permissions for [!DNL Experience Platform] in the [!DNL Admin Console], with descriptions of the specific [!DNL Platform] capabilities they grant access to. For detailed steps on how to add permissions to a product profile, see the [access control user guide](./ui/overview.md).
+The following table outlines the available permissions for [!DNL Experience Platform] in the role, with descriptions of the specific [!DNL Platform] capabilities they grant access to. For detailed steps on how to add permissions to a role, see the [attribute based access control roles guide](./abac/ui/roles.md).
 
 | Category | Permission | Description |
 | --- | --- | --- |
@@ -122,4 +121,4 @@ The following table outlines the available permissions for [!DNL Experience Plat
 
 ## Next steps
 
-By reading this guide, you have been introduced to the main principles of access control in [!DNL Experience Platform]. You can now continue to the [access control user guide](./ui/overview.md) for detailed steps on how use the [!DNL Admin Console] to create product profiles and assign permissions for [!DNL Platform].
+By reading this guide, you have been introduced to the main principles of access control in [!DNL Experience Platform]. You can now continue to the [attribute based access control user guide](./abac/overview.md) for detailed steps on how use Experience Cloud to create product profiles and assign permissions for [!DNL Platform].
