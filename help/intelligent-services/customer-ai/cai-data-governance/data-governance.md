@@ -20,7 +20,7 @@ This integration allows you to manage compliance more efficiently. Data stewards
 
 ## Consent Policy {#consent-policy}
 
-Customer AI honors your consent preferences. Once you've setup your consent policy and enabled it as documented here, Customer AI will honor the consent data collected from you. Only consented data is used for scoring the model in subsequent runs of the model. The new scores will replace the old scores and can be used in segmentation. This feature is only available for HealthCare Shield customers, and Privacy and Security shield customers.
+Customer AI honors your consent preferences. Once you've [setup and enabled your consent policy](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=en#consent-policy), Customer AI will honor the consent data collected from you. Only consented data is used for scoring the model in subsequent runs of the model. The new scores will replace the old scores and can be used in segmentation. This feature is currently only available for HealthCare Shield customers, and Privacy and Security shield customers.
 
 You can learn more about this feature here: 
 
