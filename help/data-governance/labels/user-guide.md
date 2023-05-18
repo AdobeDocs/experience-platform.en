@@ -38,6 +38,26 @@ After creating a new schema, or selecting an existing schema from the list in th
 
 A dialog appears that allows you to apply and manage data usage labels at the schema level and field level. See the XDM tutorial for complete instructions on [how to add or edit data usage labels for XDM schemas](../../xdm/tutorials/labels.md#select-schema-field).
 
+### Add data usage labels to a specific dataset {#add-labels}
+
+Labels can be applied to the entire dataset from the **[!UICONTROL Data Governance]** tab of the **[!UICONTROL Datasets]** workspace. The workspace allows you to manage data usage labels at the dataset level.
+
+![The [!UICONTROL Data Governance] tab of the [!UICONTROL Datasets] workspace with Data Governance highlighted.](../images/labels/dataset-governance.png)
+
+To edit data usage labels at the dataset level, start by selecting the pencil icon (![A pencil icon.]()) in the row of the dataset name.
+
+![The [!UICONTROL Data Governance] tab of the [!UICONTROL Datasets] workspace with the edit pencil icon highlighted.](../images/labels/dataset-level-edit.png)
+
+The **[!UICONTROL Edit Governance Labels]** dialog opens. Within the dialog, check the boxes next to the labels you wish to apply to the dataset. Remember that these labels will be inherited by all fields within the dataset. The **[!UICONTROL Applied Labels]** header updates as you check each box, showing the labels you have chosen. Once you have selected the desired labels, select **[!UICONTROL Save Changes]**.
+
+![The Edit Governance Labels dialog with label checkboxes and Save changes highlighted.](../images/labels/apply-labels-dataset.png)
+
+The **[!UICONTROL Data Governance]** workspace reappears, showing the labels that you have applied at the dataset level in the initial row of the table. You can also see the labels, indicated by individual cards, that are inherited down to each of the fields within the dataset.
+
+![The [!UICONTROL Data Governance] tab of the [!UICONTROL Datasets] workspace with applied dataset level labels and inherited dataset filed labels highlighted.](../images/labels/applied-dataset-labels.png)
+
+labels added at the dataset level have an "x" next to their card. This allows you to remove the labels from the entire dataset. Inherited labels beside each field do not have an "x" next to them and appear "greyed out". These **inherited labels are read-only**, meaning they cannot be removed or edited at the field level.
+
 <!-- DONE up to here. Should i put something in about read only labels showing there? -->
 <!-- 
 To edit data usage labels at the dataset level, start by selecting the pencil icon next to the dataset name.
@@ -47,8 +67,6 @@ To edit data usage labels at the dataset level, start by selecting the pencil ic
 The **[!UICONTROL Edit Governance Labels]** dialog opens. Within the dialog, check the boxes next to the labels you wish to apply to the dataset. Remember that these labels will be inherited by all fields within the dataset. The **[!UICONTROL Applied Labels]** header updates as you check each box, showing the labels you have chosen. Once you have selected the desired labels, select **[!UICONTROL Save Changes]**.
 
 ![Apply Governance Labels at the Dataset Level](../images/labels/apply-labels-dataset.png)
-
-
 
  -->
 
