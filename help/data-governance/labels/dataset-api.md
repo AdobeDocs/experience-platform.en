@@ -9,9 +9,9 @@ exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 
 The [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) allows you to apply and edit usage labels for datasets. It is part of Adobe Experience Platform's data catalog capabilities, but is separate from the [!DNL Catalog Service] API which manages dataset metadata.
 
->[!IMPORTANT]
+<!-- >[!IMPORTANT]
 >
->Applying labels at the dataset level is only supported for data governance use cases. If you are trying to create access policies for the data, you must [apply labels to the schema](../../xdm/tutorials/labels.md) that the dataset is based on. See the overview on [attribute-based access control](../../access-control/abac/overview.md) for more information.
+>Applying labels at the dataset level is only supported for data governance use cases. If you are trying to create access policies for the data, you must [apply labels to the schema](../../xdm/tutorials/labels.md) that the dataset is based on. See the overview on [attribute-based access control](../../access-control/abac/overview.md) for more information. -->
 
 This document covers how to manage labels for datasets and fields using the [!DNL Dataset Service API]. For steps on how to manage data usage labels themselves using API calls, see the [labels endpoint guide](../api/labels.md) for the [!DNL Policy Service API].
 
@@ -76,7 +76,7 @@ A successful response returns the data usage labels that have been applied to th
 
 ## Apply labels to a dataset {#apply}
 
-You can create a set of labels for a dataset by providing them in the payload of a POST or PUT request to the [!DNL Dataset Service] API. Using either of these methods overwrites any existing labels and replaces them with those provided in the payload.
+You can apply a set of labels for an entire dataset by providing them in the payload of a POST or PUT request to the [!DNL Dataset Service] API. You can also remove any previously applied labels by updating existing `optinalLabels` with an empty value. You cannot add labels to individual dataset fields. Using either the POST or PUT methods overwrites any existing labels and replaces them with those provided in the payload.
 
 **API format**
 
@@ -127,12 +127,14 @@ curl -X PUT \
 
 | Property | Description |
 | --- | --- |
-| `labels` | A list of data usage labels that you want to add to the dataset. |
-| `optionalLabels` | A list of any individual fields within the dataset that you want to add labels to. Each item in this array must have the following properties: <br/><br/>`option`: An object that contains the [!DNL Experience Data Model] (XDM) attributes of the field. The following three properties are required:<ul><li><code>id</code>: The URI <code>$id</code> value of the schema associated with the field.</li><li><code>contentType</code>: The content type and version number of the schema. This should take the form of one of the valid <a href="../../xdm/api/getting-started.md#accept">Accept headers</a> for an XDM lookup request.</li><li><code>schemaPath</code>: The path to the field within the dataset's schema.</li></ul>`labels`: A list of data usage labels that you want to add to the field. |
+| `labels` | A list of data usage labels that you want to add to the entire dataset. |
+| `optionalLabels` | This parameter is used to remove labels previously applied to a dataset field. A list of any individual fields within the dataset that you want to remove the labels from. Each item in this array must have the following properties: <br/><br/>`option`: An object that contains the [!DNL Experience Data Model] (XDM) attributes of the field. The following three properties are required:<ul><li><code>id</code>: The URI <code>$id</code> value of the schema associated with the field.</li><li><code>contentType</code>: The content type and version number of the schema. This should take the form of one of the valid <a href="../../xdm/api/getting-started.md#accept">Accept headers</a> for an XDM lookup request.</li><li><code>schemaPath</code>: The path to the field within the dataset's schema.</li></ul>`labels`: This value must be empty to remove the label from the dataset. PUT or POST methods now return an error if the `optionalLabels` field has any new or modified labels. |
 
 **Response**
 
 A successful response returns the updated set of labels for the dataset.
+
+<!-- What does a successful response look like when labels are removed in this fashion. -->
 
 ```json
 {
@@ -144,7 +146,7 @@ A successful response returns the updated set of labels for the dataset.
         "contentType": "application/vnd.adobe.xed-full+json;version=1",
         "schemaPath": "/properties/repositoryCreatedBy"
       },
-      "labels": [ "S1", "S2" ]
+      "labels": [ "" ]
     }
   ]
 }
