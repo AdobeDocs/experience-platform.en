@@ -33,7 +33,7 @@ See the [Data Ingestion overview](../../ingestion/home.md) for more information.
 
 ## Labels applied to datasets from schemas
 
-Adobe Experience Platform Data Governance allows you to manage customer data in order to ensure compliance with regulations, restrictions, and policies applicable to data use. The Data Governance framework allows you to apply usage labels to categorize data according to the usage policies that apply to that data. Labels can be applied to individual schemas and fields within those schemas. When labels are applied directly to a schema, those labels are propagated to all existing and future datasets that are based on that schema.
+Adobe Experience Platform Data Governance allows you to manage customer data in order to ensure compliance with regulations, restrictions, and policies applicable to data use. The Data Governance framework allows you to apply usage labels to categorize data according to the usage policies that apply to that data. Labels can be applied to individual schemas, fields within those schemas, and entire individual datasets. When labels are applied directly to a schema, those labels are propagated to all existing and future datasets that are based on that schema.
 
 >[!IMPORTANT]
 >
