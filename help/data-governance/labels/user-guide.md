@@ -26,11 +26,7 @@ The next section provides steps for creating a new schema to apply labels to. If
 
 To create a new schema, select **[!UICONTROL Create schema]** in the top-right corner of the **[!UICONTROL Schemas]** workspace. See the guide on [how to create a schema using the Schema Editor](../../xdm/tutorials/create-schema-ui.md#create) for complete instructions. Alternatively, you can [create a schema using the Schema Registry API](../../xdm/tutorials/create-schema-api.md) if required.  
 
-### Add data usage labels to the schema {#add-labels}
-
->[!IMPORTANT]
->
->Labels can no longer be applied to fields at the dataset level. This workflow has been deprecated in favour of applying labels at the schema level. Any labels previously applied at the dataset object level will still be supported through the Platform UI until 31st May 2024. To ensure that your labels are consistent across all schemas, any labels previously attached to fields at the dataset level must be migrated to the schema level by you over the coming year. See the documentation for instructions on [how to migrate previously applied labels from the dataset to the schema level](../e2e.md#migrate-labels).
+### Add data usage labels to the schema {#add-labels-to-schema}
 
 After creating a new schema, or selecting an existing schema from the list in the [!UICONTROL Browse] tab of the [!UICONTROL Schemas] workspace, select a field from your schema in the Schema Editor. In the [!UICONTROL Field properties] sidebar, select **[!UICONTROL Apply Access and Data Governance Labels]**. 
 
@@ -38,7 +34,16 @@ After creating a new schema, or selecting an existing schema from the list in th
 
 A dialog appears that allows you to apply and manage data usage labels at the schema level and field level. See the XDM tutorial for complete instructions on [how to add or edit data usage labels for XDM schemas](../../xdm/tutorials/labels.md#select-schema-field).
 
-### Add data usage labels to a specific dataset {#add-labels}
+### Add data usage labels to a specific dataset {#add-labels-to-dataset}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataGovernance_instructions"
+>title="Instructions"
+>abstract="<ol><li>Select <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html">Datasets</a> in the left navigation, then select the dataset whose data you want to restrict.</li><li>From the dataset details view, select the <b>Data governance</b> tab.</li><li>Select the dataset fields that you want to restrict, then select <b>Edit governance labels</b> to label the data based on usage restrictions.</li><li>After labeling your data, select <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html">Policies</a> in the left navigation, then select <b>Create Policy</b>.</li><li>Choose to create a <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Data Governance policy</a>, then select the data usage labels that the policy will apply to the policy.</li><li>Select the marketing action(s) that the policy will deny for any data containing those labels. After the policy is created, select it from the list and enable it using the toggle in the right rail.</li><li>For each enabled policy, Platform prevents any data containing the specified labels from being used for the defined marketing action(s). This enforcement takes place automatically when you attempt to activate labeled data to a destination with associated marketing actions (use cases).</li></ol>"
+
+>[!IMPORTANT]
+>
+>Labels can no longer be applied to fields at the dataset level. This workflow has been deprecated in favour of applying labels at the schema level. Any labels previously applied at the dataset object level will still be supported through the Platform UI until 31st May 2024. To ensure that your labels are consistent across all schemas, any labels previously attached to fields at the dataset level must be migrated to the schema level by you over the coming year. See the documentation for instructions on [how to migrate previously applied labels from the dataset to the schema level](../e2e.md#migrate-labels).
 
 Labels can be applied to the entire dataset from the **[!UICONTROL Data Governance]** tab of the **[!UICONTROL Datasets]** workspace. The workspace allows you to manage data usage labels at the dataset level.
 
@@ -54,30 +59,13 @@ The **[!UICONTROL Edit Governance Labels]** dialog opens. Within the dialog, che
 
 The **[!UICONTROL Data Governance]** workspace reappears, showing the labels that you have applied at the dataset level in the initial row of the table. You can also see the labels, indicated by individual cards, that are inherited down to each of the fields within the dataset.
 
-![The [!UICONTROL Data Governance] tab of the [!UICONTROL Datasets] workspace with applied dataset level labels and inherited dataset filed labels highlighted.](../images/labels/applied-dataset-labels.png)
+![The [!UICONTROL Data Governance] tab of the [!UICONTROL Datasets] workspace with applied dataset level labels and inherited dataset filed labels highlighted.](../images/labels/applied-dataset-labels.png) 
 
-labels added at the dataset level have an "x" next to their card. This allows you to remove the labels from the entire dataset. Inherited labels beside each field do not have an "x" next to them and appear "greyed out". These **inherited labels are read-only**, meaning they cannot be removed or edited at the field level.
+Labels added at the dataset level have an "x" next to their card. This allows you to remove the labels from the entire dataset. Inherited labels beside each field do not have an "x" next to them and appear "greyed out". These **inherited labels are read-only**, meaning they cannot be removed or edited at the field level.
 
-<!-- DONE up to here. Should i put something in about read only labels showing there? -->
-<!-- 
-To edit data usage labels at the dataset level, start by selecting the pencil icon next to the dataset name.
+<!-- ## View labels at the dataset field level {#view-labels-at-dataset-field-level} -->
 
-![Edit dataset-level labels](../images/labels/dataset-level-edit.png)
-
-The **[!UICONTROL Edit Governance Labels]** dialog opens. Within the dialog, check the boxes next to the labels you wish to apply to the dataset. Remember that these labels will be inherited by all fields within the dataset. The **[!UICONTROL Applied Labels]** header updates as you check each box, showing the labels you have chosen. Once you have selected the desired labels, select **[!UICONTROL Save Changes]**.
-
-![Apply Governance Labels at the Dataset Level](../images/labels/apply-labels-dataset.png)
-
- -->
-
-## View labels at the dataset field level {#view-labels-at-dataset-field-level}
-
->[!CONTEXTUALHELP]
->id="platform_privacyConsole_dataGovernance_instructions"
->title="Instructions"
->abstract="<ol><li>Select <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html">Datasets</a> in the left navigation, then select the dataset whose data you want to restrict.</li><li>From the dataset details view, select the <b>Data governance</b> tab.</li><li>Select the dataset fields that you want to restrict, then select <b>Edit governance labels</b> to label the data based on usage restrictions.</li><li>After labeling your data, select <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html">Policies</a> in the left navigation, then select <b>Create Policy</b>.</li><li>Choose to create a <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Data Governance policy</a>, then select the data usage labels that the policy will apply to the policy.</li><li>Select the marketing action(s) that the policy will deny for any data containing those labels. After the policy is created, select it from the list and enable it using the toggle in the right rail.</li><li>For each enabled policy, Platform prevents any data containing the specified labels from being used for the defined marketing action(s). This enforcement takes place automatically when you attempt to activate labeled data to a destination with associated marketing actions (use cases).</li></ol>"
-
-To view labels inherited by the dataset from the schema level, select **[!UICONTROL Datasets]** to navigate to the datasets workspace and select the relevant dataset from the list. 
+<!-- To view labels inherited by the dataset from the schema level, select **[!UICONTROL Datasets]** to navigate to the datasets workspace and select the relevant dataset from the list. 
 
 ![The Browse tab of the Datasets workspace with Datasets highlighted in the left sidebar.](../images/labels/dataset-navigation.png)
 
@@ -85,15 +73,17 @@ Next, select the **[!UICONTROL Data Governance]** tab to show the labels that ha
 
 ![Dataset Labels inherited by fields](../images/labels/dataset-labels-applied.png)
 
-The inherited labels beside each field do not have an "x" next to them and appear "greyed out" with no ability to remove or edit. This is because **inherited fields are read-only**, meaning they cannot be removed at the field level.
+The inherited labels beside each field do not have an "x" next to them and appear "greyed out" with no ability to remove or edit. This is because **inherited fields are read-only**, meaning they cannot be removed at the field level. -->
+
+<!--Beleive can cut above here  -->
 
 The **[!UICONTROL Show Inherited Labels]** toggle is on by default, which allows you to see any labels inherited down from the schema to its fields. Switching the toggle off hides any inherited labels within the dataset.
 
-![Hide inherited labels](../images/labels/inherited-labels.png)
+![The Data Governance tab of the Datasets workspace with the Show inherited labels toggle highlighted.](../images/labels/inherited-labels.png)
 
-Labels applied to the dataset appear in read-only form within the **[!UICONTROL Data Governance]** view for that dataset. 
+<!-- Labels applied to the dataset appear in read-only form within the **[!UICONTROL Data Governance]** view for that dataset. 
 
-![The Data Governance tab of the Datasets workspace with labels highlighted.](../images/labels/read-only-governance-labels.png)
+![The Data Governance tab of the Datasets workspace with labels highlighted.](../images/labels/read-only-governance-labels.png) -->
 
 >[!NOTE]
 >
