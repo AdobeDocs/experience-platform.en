@@ -116,28 +116,22 @@ SHOW STATISTICS FOR <STATISTICS_ID>;
 An output might look similar to the example below. 
 
 ```console
-  columnName   | mean | max | min | standardDeviation | approxDistinctCount | nullCount | dataType 
----------------+------+-----+-----+-------------------+---------------------+-----------+----------
- city          |  0.0 | 0.0 | 0.0 |               0.0 |               178.0 |         0 | String
- latitude      |  0.0 | 0.0 | 0.0 |               0.0 |              9996.0 |         0 | String
- email         |  0.0 | 0.0 | 0.0 |               0.0 |              9999.0 |         0 | String
- username      |  0.0 | 0.0 | 0.0 |               0.0 |               244.0 |         0 | String
- firstname     |  0.0 | 0.0 | 0.0 |               0.0 |               779.0 |         0 | String
- country       |  0.0 | 0.0 | 0.0 |               0.0 |                 1.0 |         0 | String
- longitude     |  0.0 | 0.0 | 0.0 |               0.0 |              9997.0 |         0 | String
- optin_address |  0.0 | 0.0 | 0.0 |               0.0 |                 2.0 |         0 | String
- lastname      |  0.0 | 0.0 | 0.0 |               0.0 |               636.0 |         0 | String
- birthdate     |  0.0 | 0.0 | 0.0 |               0.0 |              7704.0 |         0 | String
- id            |  0.0 | 0.0 | 0.0 |               0.0 |              9999.0 |         0 | String
- stateprovince |  0.0 | 0.0 | 0.0 |               0.0 |                46.0 |         0 | String
- optin_email   |  0.0 | 0.0 | 0.0 |               0.0 |                 2.0 |         0 | String
- postalcode    |  0.0 | 0.0 | 0.0 |               0.0 |              7874.0 |         0 | String
- street        |  0.0 | 0.0 | 0.0 |               0.0 |               998.0 |         0 | String
- mobile        |  0.0 | 0.0 | 0.0 |               0.0 |               998.0 |         0 | String
- optin_mobile  |  0.0 | 0.0 | 0.0 |               0.0 |                 2.0 |         0 | String
- created       |  0.0 | 0.0 | 0.0 |               0.0 |              9999.0 |         0 | String
- gender        |  0.0 | 0.0 | 0.0 |               0.0 |                 2.0 |         0 | String
-(19 rows)
+                         columnName                         |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
+------------------------------------------------------------+----------------+----------------+----------------+-------------------+---------------------+-----------+-----------
+ marketing.trackingcode                                     |            0.0 |            0.0 |            0.0 |               0.0 |              1213.0 |         0 | String
+ _experience.analytics.session.timestamp                    |            450 |          -2313 |          21903 |               7.0 |                 0.0 |         0 | Long
+ _experience.analytics.customdimensions.evars.evar13        |            0.0 |            0.0 |            0.0 |               0.0 |              8765.0 |        20 | String
+ _experience.analytics.customdimensions.evars.evar74        |            0.0 |            0.0 |            0.0 |               0.0 |                11.0 |         0 | String
+ web.webpagedetails.name                                    |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | String
+ _experience.analytics.event1to100.event8.value             |            5.0 |         9077.0 |          123.0 |              10.0 |              1001.0 |        80 | Double
+ search.ispaid                                              |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | Boolean
+ commerce.productlistviews.value                            |            0.0 |            0.0 |            0.0 |               0.0 |                 0.0 |        10 | Double
+ device.typeid                                              |            0.0 |            0.0 |            0.0 |               0.0 |                 0.0 |        10 | String
+ commerce.purchases.value                                   |          765.0 |        98760.0 |         -980.0 |              32.0 |                99.0 |        90 | Double
+ _experience.analytics.customdimensions.props.prop45        |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | String
+ environment.browserdetails.javaenabled                     |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | Boolean
+ timestamp                                                  |            0.0 |            0.0 |            0.0 |               0.0 |                98.0 |         3 | Timestamp
+(13 rows)
 ```
 
 ## Next steps {#next-steps}
