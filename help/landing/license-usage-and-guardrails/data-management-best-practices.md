@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;data management;license entitlement;licensing;best practices
 title: Data Management License Entitlement Best Practices
 description: Learn about best practices and tools you can use to better manage your license entitlements with Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
