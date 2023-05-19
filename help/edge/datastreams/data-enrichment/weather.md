@@ -1,8 +1,8 @@
 ---
 title: Use weather data from DNL The Weather Channel
 description: Use weather data from DNL The Weather Channel to enhance the data you collect through datastreams.
+exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
 ---
-
 # Use weather data from [!DNL The Weather Channel]
 
 Adobe has partnered with [!DNL [The Weather Company]](https://www.ibm.com/weather) to bring the additional context of United States weather to the data collected via datastreams. You can use this data for analytics, targeting and segment creation in Experience Platform.

@@ -8,14 +8,11 @@ exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
 **Release date: October 26, 2022**
 
 - [Customer-managed keys](#cmk)
-
-Updates to existing features in Adobe Experience Platform:
-
 - [Data collection](#data-collection)
 - [Destinations](#destinations)
-- [Experience Data Model (XDM)](#xdm)
+- [Experience Data Model](#xdm)
 - [Query Service](#query-service)
-- [Sources](#sources)
+- [Sources](#sources-sources)
 
 ## Customer-managed keys {#cmk}
 
@@ -50,7 +47,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 {style="table-layout:auto"}
 
-**New or updated destinations**
+**New or updated destinations** {#new-or-updated-destinations}
 
 | Destination | Description |
 | ----------- | ----------- |

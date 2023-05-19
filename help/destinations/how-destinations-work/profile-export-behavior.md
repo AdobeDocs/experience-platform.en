@@ -1,6 +1,7 @@
 ---
 title: Profile export behavior
 description: Learn how profile export behavior varies between the different integration patters supported in Experience Platform destinations.
+exl-id: 2be62843-0644-41fa-a860-ccd65472562e
 ---
 # Profile export behavior for different destination types
 
@@ -20,16 +21,16 @@ Experience Platform destinations export data to API-based integrations as HTTPS 
 
 The process by which profiles are aggregated into HTTPS messages before being dispatched to destination API endpoints is called *microbatching*. 
 
-Take the [Facebook destination](/help/destinations/catalog/social/facebook.md) with a *[configurable aggregation](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation)* policy as an example - data is sent in an aggregated fashion, where the destinations service takes all the incoming data from the profile service upstream and aggregates it by one of the following, before dispatching it to Facebook: 
+Take the [Facebook destination](/help/destinations/catalog/social/facebook.md) with a *[configurable aggregation](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* policy as an example - data is sent in an aggregated fashion, where the destinations service takes all the incoming data from the profile service upstream and aggregates it by one of the following, before dispatching it to Facebook: 
 
 * Number of records (maximum of 10.000) or
 * Time window interval (30 minutes) 
   
 Whichever of the thresholds above is first met triggers an export to Facebook. So, in the [!DNL Facebook Custom Audiences] dashboard, you might see audiences coming in from Experience Platform in 10.000 record increments. You might be seeing 10.000 records every 10-15 minutes because the data gets processed and aggregated faster than the 30 minutes export interval, and gets sent faster, so about every 10-15 minutes until all records have been processed. If there are insufficient records to make up a 10.000 batch, then the current number of records will be sent as is when the time window threshold is met, so you might see smaller batches sent to Facebook as well.
 
-As another example, consider the [HTTP API destination](/help/destinations/catalog/streaming/http-destination.md), which has a *[best effort aggregation](/help/destinations/destination-sdk/destination-configuration.md#best-effort-aggregation)* policy, with `maxUsersPerRequest: 10`. This means that a maximum of ten profiles will be aggregated before an HTTP call is fired to this destination, but Experience Platform tries to dispatch profiles to the destination as soon as the destinations service receives updated re-evaluation information from an upstream service. 
+As another example, consider the [HTTP API destination](/help/destinations/catalog/streaming/http-destination.md), which has a *[best effort aggregation](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* policy, with `maxUsersPerRequest: 10`. This means that a maximum of ten profiles will be aggregated before an HTTP call is fired to this destination, but Experience Platform tries to dispatch profiles to the destination as soon as the destinations service receives updated re-evaluation information from an upstream service. 
 
-The aggregation policy is configurable, and destination developers can decide how to configure the aggregation policy to best meet the rate limitations of the API endpoints downstream. Read more about [aggregation policy](/help/destinations/destination-sdk/destination-configuration.md#aggregation) in the Destination SDK documentation. 
+The aggregation policy is configurable, and destination developers can decide how to configure the aggregation policy to best meet the rate limitations of the API endpoints downstream. Read more about [aggregation policy](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) in the Destination SDK documentation. 
 
 ## Streaming profile export (enterprise) destinations {#streaming-profile-destinations}
 
@@ -55,7 +56,7 @@ Regarding the data that is exported for a given profile, it is important to unde
 
 |What determines a destination export | What is included in the destination export |
 |---------|----------|
-|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if any mapped segments change states (from null to realized or from realized/existing to exiting) or any mapped attributes are updated, a destination export would be kicked off.</li><li>Since identities cannot currently be mapped to enterprise destinations, changes in any identity on a given profile also determine destination exports.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li></ul> | <ul><li>The `segmentMembership` object includes the segment mapped in the activation dataflow, for which the status of the profile has changed following a qualification or segment exit event. Note that other unmapped segments for which the profile qualified for can be part of the destination export, if these segments belong to the same [merge policy](/help/profile/merge-policies/overview.md) as the segment mapped in the activation dataflow. </li><li>All identities in the `identityMap` object are included as well (Experience Platform currently does not support identity mapping in the enterprise destination).</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
+|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if any mapped segments change states (from `null` to `realized` or from `realized` to `exiting`) or any mapped attributes are updated, a destination export would be kicked off.</li><li>Since identities cannot currently be mapped to enterprise destinations, changes in any identity on a given profile also determine destination exports.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li></ul> | <ul><li>The `segmentMembership` object includes the segment mapped in the activation dataflow, for which the status of the profile has changed following a qualification or segment exit event. Note that other unmapped segments for which the profile qualified for can be part of the destination export, if these segments belong to the same [merge policy](/help/profile/merge-policies/overview.md) as the segment mapped in the activation dataflow. </li><li>All identities in the `identityMap` object are included as well (Experience Platform currently does not support identity mapping in the enterprise destination).</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -102,7 +103,7 @@ Regarding the data that is exported for a given profile, it is important to unde
 
 |What determines a destination export | What is included in the destination export |
 |---------|----------|
-|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if any mapped segments change states (from null to realized or from realized/existing to exiting) or any mapped attributes are updated, a destination export would be kicked off.</li><li>A change in the identity map is defined as an identity that is added / removed for the [identity graph](/help/identity-service/ui/identity-graph-viewer.md) of the profile, for identity namespaces that are mapped for export.</li><li>A change for an attribute is defined as any update on the attribute, for attributes that are mapped to the destination.</li></ul> | <ul><li>The segments that are mapped to the destination and have changed will be included in the `segmentMembership` object. In some scenarios they might be exported using multiple calls. Also, in some scenarios, some segments that have not changed might be included in the call as well. In any case, only mapped segments will be exported.</li><li>All identities from the namespaces that are mapped to the destination in the `identityMap` object are included as well .</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
+|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if any mapped segments change states (from `null` to `realized` or from `realized` to `exiting`) or any mapped attributes are updated, a destination export would be kicked off.</li><li>A change in the identity map is defined as an identity that is added / removed for the [identity graph](/help/identity-service/ui/identity-graph-viewer.md) of the profile, for identity namespaces that are mapped for export.</li><li>A change for an attribute is defined as any update on the attribute, for attributes that are mapped to the destination.</li></ul> | <ul><li>The segments that are mapped to the destination and have changed will be included in the `segmentMembership` object. In some scenarios they might be exported using multiple calls. Also, in some scenarios, some segments that have not changed might be included in the call as well. In any case, only mapped segments will be exported.</li><li>All identities from the namespaces that are mapped to the destination in the `identityMap` object are included as well .</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -116,7 +117,7 @@ For example, consider this dataflow to a streaming destination where three segme
 
 ![streaming destination dataflow](/help/destinations/assets/how-destinations-work/streaming-destination-example-dataflow.png)
 
-A profile export to the destination can be determined by a profile qualifying for or exiting one of the three mapped segments. If a profile qualified for the **Customer with DeLorean Cars** segment, this will trigger an export. The other segments (**City - Dallas** and **Basic Site Active**) might be exported as well in case the profile has that segment present with one of the possible statuses (`realized`, `existing`, `exited`). Unmapped segments (like **Science fiction fans**) will not be exported.
+A profile export to the destination can be determined by a profile qualifying for or exiting one of the three mapped segments. If a profile qualified for the **Customer with DeLorean Cars** segment, this will trigger an export. The other segments (**City - Dallas** and **Basic Site Active**) might be exported as well in case the profile has that segment present with one of the possible statuses (`realized` or `exited`). Unmapped segments (like **Science fiction fans**) will not be exported.
 
 From a profile attributes point of view, any changes to the three attributes mapped above will determine a destination export.
 
@@ -167,7 +168,7 @@ The full active population of the segment is exported every day.
 
 |What determines a destination export | What is included in the exported file |
 |---------|----------|
-|<ul><li>The export schedule set in the UI or API and user action (selecting [Export file now](/help/destinations/ui/export-file-now.md) in the UI or using the [ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md)) determine the start of a destination export.</li><li>Any changes in segment membership of a profile, whether it qualifies or disqualifies from the segment, qualify a profile to be included in incremental exports.</li></ul> | In full file exports, the entire active profile population of a segment, based on the latest segment evaluation, is included with each file export. The latest values for each XDM attribute selected for export are also included as columns in each file. Note that profiles in exited status are not included in the file export. |
+|<ul><li>The export schedule set in the UI or API and user action (selecting [Export file now](/help/destinations/ui/export-file-now.md) in the UI or using the [ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md)) determine the start of a destination export.</li></ul> | In full file exports, the entire active profile population of a segment, based on the latest segment evaluation, is included with each file export. The latest values for each XDM attribute selected for export are also included as columns in each file. Note that profiles in exited status are not included in the file export. |
 
 {style="table-layout:fixed"}
 

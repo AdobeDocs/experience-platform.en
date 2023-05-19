@@ -12,6 +12,7 @@ feature: Profiles
 * [[!DNL Profile] and Segmentation guardrails](guardrails.md)
 * [[!DNL Profile] dashboard](ui/profile-dashboard.md)
 * [Experience Event expirations](event-expirations.md)
+* [Pseudonymous Profile expirations](pseudonymous-profiles.md)
 * [!DNL Profile] API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
@@ -23,11 +24,6 @@ feature: Profiles
 * Profile UI {#ui}
   * [[!DNL Profile] UI guide](ui/user-guide.md)
   * [[!DNL Profile] detail customization](ui/profile-customization.md)
-* (Alpha) Computed attributes {#computed-attributes}
-  * [Overview](computed-attributes/overview.md)
-  * [Computed attributes API](computed-attributes/ca-api.md)
-  * [Configure a computed attribute field](computed-attributes/configure-api.md)
-  * [Sample expressions](computed-attributes/expressions.md)
 * Merge policies {#merge-policies}
   * [Overview](merge-policies/overview.md)
   * [Merge policies API](api/merge-policies.md)

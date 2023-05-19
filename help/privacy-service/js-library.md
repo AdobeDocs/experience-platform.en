@@ -201,7 +201,7 @@ The following is a list of the accepted configuration parameters for supported A
 
 | Parameter | Description |
 | --- | --- |
-| `imsOrgID` | Your IMS Organization ID. |
+| `imsOrgID` | Your organization ID. |
 
 **Adobe Target**
 

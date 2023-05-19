@@ -3,6 +3,7 @@ solution: Experience Platform
 title: (Beta) Export datasets by using the Flow Service API
 description: Learn how to use the Flow Service API to export datasets to select destinations.
 type: Tutorial
+exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 ---
 # (Beta) Export datasets by using the [!DNL Flow Service API]
 
@@ -17,6 +18,19 @@ This article explains the workflow required to use the [!DNL Flow Service API] t
 >[!TIP]
 >
 >You can also use the Experience Platform user interface to export datasets. Read the [export datasets UI tutorial](/help/destinations/ui/export-datasets.md) for more information.
+
+## Supported destinations {#supported-destinations}
+
+Currently, you can export datasets to the cloud storage destinations highlighted in the screenshot and listed below. 
+
+![Destinations which support dataset exports](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+
+* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) 
+* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
 ## Getting started {#get-started}
 
@@ -959,14 +973,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "name": "Data Landing Zone(DLZ) Base Connection",
-  "auth": {
-    "name": "Data Landing Zone(DLZ) Base Connection",
-    "description": "Data Landing Zone(DLZ) Base Connection",
-    "connectionSpec": {
-        "id": "10440537-2a7b-4583-ac39-ed38d4b848e8",
-        "version": "1.0"
-    }
+  "name": "Data Landing Zone(DLZ) Base Connection"
 }'
 ```
 

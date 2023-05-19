@@ -114,11 +114,15 @@ You can copy the query SQL to your clipboard from this view. Select the copy ico
 
 ### Run details for queries with anonymous block {#anonymous-block-queries}
 
-Queries that use anonymous blocks to comprise their SQL statements are separated into their individual queries. This allows you to inspect the run details for each query block individually. 
+Queries that use anonymous blocks to comprise their SQL statements are separated into their individual subqueries. This allows you to inspect the run details for each query block individually.
+
+>[!NOTE]
+>
+>The run details of an anonymous block that uses the DROP command will **not** be reported as a separate subquery. Separate run details are available for CTAS queries, ITAS queries, and COPY statements used as anonymous block subqueries. Run details for the DROP command are currently not supported.  
 
 Anonymous blocks are denoted through the use of a `$$` prefix before the query. See the [anonymous block document](../essential-concepts/anonymous-block.md) to find out more about anonymous blocks in query service.
 
-Anonymous block queries have tabs to the left of the run status. Select a tab to display the run details..
+Anonymous block subqueries have tabs to the left of the run status. Select a tab to display the run details.
 
 ![The Query run overview displaying an anonymous block query. The multiple query tabs are highlighted.](../images/ui/monitor-queries/anonymous-block-overview.png)
 
