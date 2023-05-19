@@ -18,7 +18,7 @@ Some use case playbooks are tailored to Real-time CDP use cases while others are
 
 ## UI guide
 
-After you decide on the playbook that you want to use, select it from the UI and get started with it. Read the [UI guide](/help/use-case-playbooks/playbooks/ui-guide.md) for extensive information on how to enable and reuse playbooks.  
+After you decide on the playbook that you want to use, select it from the UI and get started with it. Read the UI guide on [how to enable and reuse playbooks](/help/use-case-playbooks/playbooks/ui-guide.md) for more information.  
 
 ## Troubleshooting and known limitations
 
