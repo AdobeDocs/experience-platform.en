@@ -1,15 +1,15 @@
 ---
 solution: Experience Platform
 title: Export XDM Schemas in the UI
-description: Learn how to export an existing schema to a different sandbox or IMS Organization in the Adobe Experience Platform user interface.
+description: Learn how to export an existing schema to a different sandbox or organization in the Adobe Experience Platform user interface.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 ---
 # Export XDM schemas in the UI
 
-All resources within the Schema Library are contained in a specific sandbox within an IMS Organization. In some cases, you may want to share Experience Data Model (XDM) resources between sandboxes and IMS Orgs.
+All resources within the Schema Library are contained in a specific sandbox within an organization. In some cases, you may want to share Experience Data Model (XDM) resources between sandboxes and organizations.
 
-To address this need, the [!UICONTROL Schemas] workspace in the Adobe Experience Platform UI allows you to generate an export payload for any schema within in the Schema Library. This payload can then be used in a call to the Schema Registry API to import the schema (and all dependent resources) into a target sandbox and IMS Org.
+To address this need, the [!UICONTROL Schemas] workspace in the Adobe Experience Platform UI allows you to generate an export payload for any schema within in the Schema Library. This payload can then be used in a call to the Schema Registry API to import the schema (and all dependent resources) into a target sandbox and organization.
 
 >[!NOTE]
 >
@@ -17,19 +17,19 @@ To address this need, the [!UICONTROL Schemas] workspace in the Adobe Experience
 
 ## Prerequisites
 
-While the Platform UI allows you export XDM resources, you must use the Schema Registry API to import those resources into other sandboxes or IMS Orgs to complete the workflow. Refer to guide on [getting started with the Schema Registry API](../api/getting-started.md) for important information regarding required authentication headers before following this guide.
+While the Platform UI allows you export XDM resources, you must use the Schema Registry API to import those resources into other sandboxes or organizations to complete the workflow. Refer to guide on [getting started with the Schema Registry API](../api/getting-started.md) for important information regarding required authentication headers before following this guide.
 
-## Generate an export payload
+## Generate an export payload {#generate-export-payload}
 
-In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. Within the [!UICONTROL Schemas] workspace, locate the schema that you want to export and open it in the [!DNL Schema Editor].
+In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. Within the [!UICONTROL Schemas] workspace, select the row for the schema you want to export to display schema details in the right sidebar.
 
 >[!TIP]
 >
 >See the guide on [exploring XDM resources](./explore.md) for details on how to find the XDM resource you are looking for.
 
-Once you have the schema open, select the **[!UICONTROL Copy JSON]** icon (![Copy Icon](../images/ui/export/icon.png)) in the top-right of the canvas.
+Next, select the **[!UICONTROL Copy JSON]** icon (![Copy Icon](../images/ui/export/icon.png)) from the available options.
 
-![](../images/ui/export/copy-json.png)
+![The Schemas workspace with a schema row and [!UICONTROL Copy to JSON] highlighted.](../images/ui/export/copy-json.png)
 
 This copies a JSON payload to your clipboard, generated based on the schema structure. For the "[!DNL Loyalty Members]" schema shown above, the following JSON is generated:
 
@@ -195,14 +195,14 @@ This copies a JSON payload to your clipboard, generated based on the schema stru
 ]
 ```
 
-The payload takes the form of an array, with each array item being an object that represents a custom XDM resource to be exported. In the example above, the "[!DNL Loyalty details]" custom field group and the "[!DNL Loyalty Members]" schema are included. Any core resources employed by the schema are not included in the export, as these resources are available in all sandboxes and IMS Organizations.
+The payload takes the form of an array, with each array item being an object that represents a custom XDM resource to be exported. In the example above, the "[!DNL Loyalty details]" custom field group and the "[!DNL Loyalty Members]" schema are included. Any core resources employed by the schema are not included in the export, as these resources are available in all sandboxes and organizations.
 
 Note that each instance of your organization's tenant ID appears as `<XDM_TENANTID_PLACEHOLDER>` in the payload. These placeholders will be automatically replaced with the appropriate tenant ID value depending on where you import the schema in the next step.
 
 ## Import the resource using the API
 
-Once you have copied the export JSON for the schema, you can use it as the payload for a POST request to the `/rpc/import` endpoint in the Schema Registry API. See the [import endpoint guide](../api/import.md) for details on how to configure the call to send the schema to the desired IMS Org and sandbox.
+Once you have copied the export JSON for the schema, you can use it as the payload for a POST request to the `/rpc/import` endpoint in the Schema Registry API. See the [import endpoint guide](../api/import.md) for details on how to configure the call to send the schema to the desired organization and sandbox.
 
 ## Next steps
 
-By following this guide, you have successfully exported an XDM schema to a different IMS Org or sandbox. For more information on the capabilities of the [!UICONTROL Schemas] UI, refer to the [[!UICONTROL Schemas] UI overview](./overview.md).
+By following this guide, you have successfully exported an XDM schema to a different organization or sandbox. For more information on the capabilities of the [!UICONTROL Schemas] UI, refer to the [[!UICONTROL Schemas] UI overview](./overview.md).

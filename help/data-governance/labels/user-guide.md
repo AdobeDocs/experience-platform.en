@@ -9,8 +9,8 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
->title="Description"
->abstract=""
+>title="Govern data usage in Platform"
+>abstract="<h2>Description</h2><p>The Data Governance framework in Experience Platform allows you to label attributes and datasets according to data usage restrictions and set up policies that identify and honor these restrictions for specific marketing actions.</p>"
 
 This user guide covers steps for working with data usage labels within the [!DNL Experience Platform] user interface.
 
@@ -81,7 +81,7 @@ The **[!UICONTROL Show Inherited Labels]** toggle is on by default, which allows
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="Instructions"
->abstract=""
+>abstract="<ol><li>Select <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html">Datasets</a> in the left navigation, then select the dataset whose data you want to restrict.</li><li>From the dataset details view, select the <b>Data governance</b> tab.</li><li>Select the dataset fields that you want to restrict, then select <b>Edit governance labels</b> to label the data based on usage restrictions.</li><li>After labeling your data, select <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html">Policies</a> in the left navigation, then select <b>Create Policy</b>.</li><li>Choose to create a <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Data Governance policy</a>, then select the data usage labels that the policy will apply to the policy.</li><li>Select the marketing action(s) that the policy will deny for any data containing those labels. After the policy is created, select it from the list and enable it using the toggle in the right rail.</li><li>For each enabled policy, Platform prevents any data containing the specified labels from being used for the defined marketing action(s). This enforcement takes place automatically when you attempt to activate labeled data to a destination with associated marketing actions (use cases).</li></ol>"
 
 >[!IMPORTANT]
 >

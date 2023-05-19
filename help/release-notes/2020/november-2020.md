@@ -28,7 +28,7 @@ Updates to existing features:
 
 ## Adobe Experience Platform Data Lake migration {#migration}
 
-While Adobe is migrating the Data Lake from Gen1 to Gen2, users will be able to read from the Data Lake, but all capabilities that write into the Data Lake will be impacted. Adobe will be contacting System Administrators to discuss the impact of the migration in detail and to confirm the migration dates and times for specific IMS Organizations. 
+While Adobe is migrating the Data Lake from Gen1 to Gen2, users will be able to read from the Data Lake, but all capabilities that write into the Data Lake will be impacted. Adobe will be contacting System Administrators to discuss the impact of the migration in detail and to confirm the migration dates and times for specific organizations. 
 
 For more information, please read the [Data Lake migration guide](../../landing/adls2-gen2-migration.md).
 
@@ -207,7 +207,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | Hierarchical mapping | You can preview a hierarchical source file, such as JSON or Parquet, during the data ingestion process. See the the tutorial on [configuring a dataflow for cloud storage connectors in the UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) for more information. |
 | API support for mapping in streaming sources | You can now use APIs to perform mapping functions with streaming sources. |
 | API support for custom delimiters for cloud storage sources | You can now collect non-CSV delimited files using cloud storage sources. You can use any single column delimiter such as a tab, comma, pipe, semicolon, or hash to collect flat files in any format. |
-| Sandbox support for Adobe Audience Manager connector | The Audience Manager connector is now sandbox aware. Users can enable the connector to route Audience Manager datasets to the sandbox of their choosing (including non-production sandboxes). The configuration is limited to one sandbox per IMS Org. |
+| Sandbox support for Adobe Audience Manager connector | The Audience Manager connector is now sandbox aware. Users can enable the connector to route Audience Manager datasets to the sandbox of their choosing (including non-production sandboxes). The configuration is limited to one sandbox per organization. |
 | UX improvements | File-based ingestion is now accessible through the sources catalog. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).

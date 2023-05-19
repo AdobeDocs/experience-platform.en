@@ -21,7 +21,7 @@ You can configure various file formatting options for exported files by using th
 * To configure file formatting options for exported files by using the Experience Platform Flow Service API, read [Flow Service API - Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/).
 -->
 
-## File formatting configuration {#file-configuration}
+## File formatting configuration for CSV files {#file-configuration}
 
 To display the file formatting options, start the [connect to destination](/help/destinations/ui/connect-destination.md) workflow. Select **Data type: Segments** and **File type: CSV** to display the file formatting settings available for the exported `CSV` files. 
 
@@ -35,37 +35,121 @@ To display the file formatting options, start the [connect to destination](/help
 
 ### Delimiter {#delimiter}
 
-Sets a separator for each field and value. Available options are:
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_delimiter"
+>title="Delimiter"
+>abstract="Use this control to set a separator for each field and value. View the documentation for examples for each selection."
+
+Use this control to set a separator for each field and value in the exported CSV files. Available options are:
 
 * Colon `(:)`
 * Comma `(,)`
 * Pipe `(|)`
 * Semicolon `(;)`
-* Tab `(\\t)`
+* Tab `(\t)`
 
-### Quote character 
+#### Examples
 
-Sets a single character used for escaping quoted values where the separator can be part of the value.
+View the examples below of the content in the exported CSV files with each of the selections in the UI.
 
-### Escape character
+* Example output with **[!UICONTROL Colon `(:)`]** selected: `male:John:Doe`
+* Example output with **[!UICONTROL Comma `(,)`]** selected: `male,John,Doe`
+* Example output with **[!UICONTROL Pipe `(|)`]** selected: `male|John|Doe`
+* Example output with **[!UICONTROL Semicolon `(;)`]** selected: `male;John;Doe`
+* Example output with **[!UICONTROL Tab `(\t)`]** selected: `male \t John \t Doe`
 
-Sets a single character used for escaping quotes inside an already quoted value.
+### Quote character {#quote-character} 
 
-### Empty value output
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_quoteCharacter"
+>title="Quote character"
+>abstract="Use this option if you want to remove double quotes from exported strings. View the documentation for examples for each selection."
 
-Sets the string representation of an empty value.
+Use this option if you want to remove double quotes from exported strings. Available options are:
 
-### Null value output
+* **[!UICONTROL Null Character (\0000)]**. Use this option to remove double quotes from exported CSV files.
+* **[!UICONTROL Double Quotes (")]**. Use this option to keep double quotes in your exported CSV files.
 
-Sets the string representation of a null value within the exported files. 
+#### Examples
 
-Example output with **[!UICONTROL null]** selected: `male,NULL,TestLastName`
-Example output with **""** selected: `male,"",TestLastName`
-Example output with **[!UICONTROL Empty string]** selected: `male,,TestLastName`
+View the examples below of the content from exported CSV files with each of the selections in the UI.
 
-### Compression format
+* Example output with **[!UICONTROL Null Character (\0000)]** selected: `Test,John,LastName`
+* Example output with **[!UICONTROL Double Quotes (")]** selected: `"Test","John","LastName"`
 
-Sets which compression codec to use when saving data to file. Supported options are GZIP and NONE.
+### Escape character {#escape-character}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_escapeCharacter"
+>title="Escape character"
+>abstract="Sets a single character used for escaping quotes inside an already quoted value. View the documentation for examples for each selection."
+
+Use this option to set a single character for escaping quotes inside an already quoted value. For example, this option is useful when you have a string enclosed in double quotes where part of the string is already enclosed in double quotes. This option determines which character to replace the inner double quotes with. Available options are:
+
+* Back slash `(\)`
+* Single quote `(')`
+
+#### Examples
+
+View the examples below of the content from exported CSV files with each of the selections in the UI.
+
+* Example output with **[!UICONTROL Back slash `(\)`]** selected: `"Test,\"John\",LastName"`
+* Example output with **[!UICONTROL Single quote `(')`]** selected: `"Test,'"John'",LastName"`
+
+### Empty value output {#empty-value-output}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_emptyValueOutput"
+>title="Empty value output"
+>abstract="Use this option to set how empty values should be represented in the exported CSV files. View the documentation for examples for each selection."
+
+Use this control to set the string representation of an empty value. This option determines how empty values are represented in your exported CSV files. Available options are:
+
+* **[!UICONTROL null]**
+* **""**
+* **[!UICONTROL Empty string]** 
+
+#### Examples
+
+View the examples below of the content from exported CSV files with each of the selections in the UI.
+
+* Example output with **[!UICONTROL null]** selected: `male,NULL,TestLastName`. In this case, Experience Platform transforms the empty value into a null value.
+* Example output with **""** selected: `male,"",TestLastName`. In this case, Experience Platform transforms the empty value into a pair of double quotes.
+* Example output with **[!UICONTROL Empty string]** selected: `male,,TestLastName`. In this case, the Experience Platform maintains the empty value and exports it as it is (without double quotes).
+
+>[!TIP]
+>
+>The difference between the empty value output and the null value output in the section below is that an empty value has an actual value which is empty. The NULL value does not have any value at all. Think of the empty value as an empty glass on the table and the null value as not having the glass at all on the table.
+
+### Null value output {#null-value-output}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_nullValueOutput"
+>title="Null value output"
+>abstract="Use this control to set the string representation of a null value within the exported files. View the documentation for examples for each selection."
+
+Use this control to set the string representation of a null value within the exported files. This option determines how null values are represented in your exported CSV files. Available options are:
+
+* **[!UICONTROL null]**
+* **""**
+* **[!UICONTROL Empty string]**
+
+#### Examples
+
+View the examples below of the content from exported CSV files with each of the selections in the UI.
+
+* Example output with **[!UICONTROL null]** selected: `male,NULL,TestLastName`. In this case, no transformation occurs and the CSV file contains the null value.
+* Example output with **""** selected: `male,"",TestLastName`. In this case, Experience Platform replaces the null value with double quotes around an empty string.
+* Example output with **[!UICONTROL Empty string]** selected: `male,,TestLastName`. In this case, Experience Platform replaces the null value with an empty string (without double quotes).
+
+### Compression format {#compression-format}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_compressionFormat"
+>title="Compression format"
+>abstract="Sets which compression type to use when saving data to file. Supported options are GZIP and NONE. View the documentation for examples for each selection."
+
+Sets which compression type to use when saving data to file. Supported options are GZIP and NONE. This option determines whether you will be exporting compressed files or not.
 
 ### Encoding
 

@@ -3,6 +3,7 @@ title: Encrypted Data Ingestion
 description: Adobe Experience Platform allows you to ingest encrypted files through cloud storage batch sources.
 hide: true
 hidefromtoc: true
+exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
 ---
 # Encrypted data ingestion
 
@@ -18,7 +19,7 @@ The encrypted data ingestion process is as follows:
 
 >[!IMPORTANT]
 >
->The maximum size of a single encrypted file is 100MB. For example, you can ingested 2GB worth of data in a single dataflow run, however, any individual file in that data cannot exceed 100MB.
+>The maximum size of a single encrypted file is 1 GB. For example, you can ingest 2 GBs worth of data in a single dataflow run, however, any individual file in that data cannot exceed 1 GB.
 
 This document provides steps on how to generate a encryption key pair to encrypt your data, and ingest that encrypted data to Experience Platform using cloud storage sources.
 

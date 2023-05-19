@@ -2,6 +2,9 @@
 title: Monitor Batch Query License Usage
 description: The Adobe Experience Platform UI provides a dashboard through which you can view important information about your organization's Data Distiller license usage.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
+hide: true
+hidefromtoc: true
+recommendations: noCatalog, display
 ---
 # (Alpha) Monitor batch query license usage {#monitor-license-usage}
 
@@ -34,3 +37,4 @@ The [!UICONTROL Compute hours] widget uses a line graph to visualize your organi
 >The [!UICONTROL Compute hours] widget is only applicable to customers with the Data Distiller license for batch queries.
 
 ![The license usage dashboard with the compute hours widget highlighted.](../images/data-distiller/compute-hours.png)
+

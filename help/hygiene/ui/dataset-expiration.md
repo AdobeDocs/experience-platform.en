@@ -7,12 +7,12 @@ exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
->title="Description"
->abstract=""
+>title="Delete unwanted or expired customer records and datasets"
+>abstract="<h2>Description</h2><p>To manage the lifecycle of your Experience Platform data unrelated to regulatory compliance, you can delete consumer records and schedule expiration dates for datasets. To create or manage data subject requests, please see the 'Honor data subject privacy requests' use case block.</p>"
 
 >[!IMPORTANT]
 >
->Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**. These capabilities are due for general release in the near future. For more information on their upcoming availability, please speak to your Adobe service representative. You can, however, immediately [delete datasets through the [!UICONTROL Datasets] UI](../../catalog/datasets/user-guide.md#delete).
 
 The [[!UICONTROL Data Hygiene] workspace](./overview.md) in the Adobe Experience Platform UI allows you to schedule expirations for datasets. When a dataset reaches its expiration date, the data lake, Identity Service, and Real-Time Customer Profile begin separate processes to remove the dataset's contents from their respective services. Once the data is deleted from all three services, the expiration is marked as complete.
 
@@ -27,7 +27,7 @@ This document covers how to schedule and manage dataset expirations in the Platf
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="Instructions"
->abstract=""
+>abstract="<ul><li>Select <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html">Data Hygiene</a> in the left navigation, then select <b>Create request</b>.</li><li>If you want to delete records:</li>&nbsp;&nbsp;&nbsp;<li>Select <b>Record</b>.</li>&nbsp;&nbsp;&nbsp;<li>Select a specific dataset to delete records from or choose the option to delete them from all datasets.</li>&nbsp;&nbsp;&nbsp;<li>Provide the identities of the consumers whose records are to be deleted. Select <b>Add identity</b> to provide the identities one at a time or select <b>Choose files</b> to upload a JSON file of identities instead.</li>&nbsp;&nbsp;&nbsp;<li>If needed, select <b>Template</b> to view the expected format of the JSON file.</li><li>See the documentation for instructions if you want to <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">schedule expiration dates for datasets</a>.</li></ul>"
 
 To create a new request, select **[!UICONTROL Create request]** from the main page in the workspace.
 

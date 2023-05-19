@@ -229,6 +229,7 @@ For information on the object copy feature, see the section [below](#object-copy
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Generates a pseudo-random ID. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
+| `fpid_to_ecid `| This function takes an FPID string and converts it into an ECID to be used in Adobe Experience Platform and Adobe Experience Cloud applications. | <ul><li>STRING: **Required** The FPID string to be converted into ECID.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
 
 {style="table-layout:auto"}
 
@@ -238,6 +239,8 @@ Any of the user agent functions contained in the table below can return either o
 
 * Phone - A mobile device with a small screen (commonly < 7")
 * Mobile - A mobile device that is yet to be identified. This mobile device can be an eReader, a tablet, a phone, a watch, etc.
+
+For more information on device field values, please read the [list of device field values](#device-field-values) in the appendix of this document.
 
 >[!NOTE]
 >
@@ -336,5 +339,36 @@ The table below outlines a list of reserved characters and their corresponding e
 | ^ | %5E |
 | &#96; | %60 |
 | ~ | %7E |
+
+{style="table-layout:auto"}
+
+### Device field values {#device-field-values}
+
+The table below outlines a list of device field values and their corresponding descriptions.
+
+| Device | Description |
+| --- | --- |
+| Desktop | A Desktop or a Laptop type of device. |
+| Anonymized | An anonymous device. In some cases, these are `useragents` that have been altered by an anonymization software. |
+| Unknown | An unknown device. These are usually `useragents` that contain no information about the device. |
+| Mobile | A mobile device that is yet to be identified. This mobile device can be an eReader, a tablet, a phone, a watch, etc. |
+| Tablet | A mobile device with a large screen (commonly > 7"). |
+| Phone | A mobile device with a small screen (commonly < 7"). |
+| Watch | A mobile device with a tiny screen (commonly < 2"). These devices normally operate as an additional screen for a phone/tablet type of device. |
+| Augmented Reality | A mobile device with AR capabilities. |
+| Virtual Reality | A mobile device with VR capabilities. |
+| eReader | A device similar to a tablet, but usually with an [!DNL eInk] screen. |
+| Set-top box | A connected device that allows interaction through a TV-sized screen. |
+| TV | A device similar to the Set-top box, but is built into the TV. |
+| Home Appliance | A (usually large) home appliance, like a refrigerator. |
+| Game Console | A fixed gaming system like a [!DNL Playstation] or an [!DNL XBox]. |
+| Handheld Game Console | A mobile gaming system like a [!DNL Nintendo Switch]. |
+| Voice | A voice-driven device like an [!DNL Amazon Alexa] or a [!DNL Google Home]. |
+| Car | A vehicle-based browser. |
+| Robot | Robots that visit a website. |
+| Robot Mobile | Robots that visit a website but indicates that they want to be seen as a Mobile visitor. |
+| Robot Imitator | Robots that visit a website, pretending that are robots like [!DNL Google], but they are not. **Note**: In most cases, Robot Imitators are indeed robots. |
+| Cloud | A cloud-based application. These are neither robots nor hackers, but are applications that need to connect. This includes [!DNL Mastodon] servers. |
+| Hacker | This device value is used in case scripting is detected in the `useragent` string. |
 
 {style="table-layout:auto"}
