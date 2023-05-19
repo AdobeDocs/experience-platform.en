@@ -106,6 +106,26 @@ The Dataset schema does not include a top level *timestamp* column. Data is inge
 
 The guardrails below are grouped by the format of the exported file, and then further by dataset type.
 
+**Parquet output**
+
+|Dataset type | Compression | Guardrail | Description |
+|---------|----------|---------|-----------|
+| Timeseries | N/A | Last seven days per file | The data from the last seven days only is exported. |
+| Record | N/A | Five billion records per file | Only the data from the last seven days is exported. |
+
+{style="table-layout:auto"}
+
+**JSON output**
+
+|Dataset type | Compression | Guardrail | Description |
+|---------|----------|---------|-----------|
+| Timeseries | N/A | Last seven days per file | The data from the last seven days only is exported. |
+| Record | <ul><li>Yes</li><li>No</li></ul> | <ul><li>Five billion records per compressed file</li><li>One million records per uncompressed file</li></ul> | The record count of the dataset must be less than five billion for compressed files and one million for uncompressed files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
+
+{style="table-layout:auto"}
+
+<!--
+
 <table>
 <thead>
   <tr>
@@ -150,6 +170,8 @@ The guardrails below are grouped by the format of the exported file, and then fu
   </tr>
 </tbody>
 </table>
+
+-->
 
 ### Destination SDK guardrails {#destination-sdk-guardrails}
 
