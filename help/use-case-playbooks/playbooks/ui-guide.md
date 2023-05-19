@@ -12,7 +12,7 @@ To use a playbook, navigate to **Use Case Playground > Playbooks**. There are se
 
 Use the search window and filters available on the page to find the right playbook for your use case. 
 
-For example, you can find the playbook that will help you launch a new product.
+For example, you can find the playbook that helps you launch a new product.
 
 ![Launch new product](/help/use-case-playbooks/assets/playbooks/ui-guide/new-product-launch-search.gif)
 
@@ -24,7 +24,7 @@ You can also filter playbooks by the product entitlements that you have access t
 
 ## View playbook and generate assets
 
-Before you enable a playbook, you can inspect it to make sure it fits your needs. Before being enabled, all playbooks contain the following sections listed below. When you are ready to proceed with your mindmap and generate assets, 
+Before you enable a playbook, you can inspect it to make sure it fits your needs. Before being enabled, all playbooks contain the following sections listed below. When you are ready to proceed with your mindmap and generate assets, select **[!UICONTROL Enable]**.
 
 ### Mindmap
 
@@ -35,7 +35,7 @@ Use the mindmap section in a playbook to understand the steps of the workflow th
 
 ### Summary
 
-Inspect the summary section to understand which assets are generated for you once you enable the playbook.
+Inspect the summary section to understand which assets are generated for you once you enable the playbook. The assets that get generated for each playbook are tailored to the use case that the playbook enables. For example, for the **[!UICONTROL Send A Birthday Message To Guests]** playbook, the audience that is created has the rule `birthday=today AND year=any`.
 
 ![Playbook summary highlighted](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-summary.png)
 
