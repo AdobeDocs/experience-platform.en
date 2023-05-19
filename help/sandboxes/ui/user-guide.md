@@ -77,17 +77,15 @@ Once you have finished creating the sandbox, refresh the page and the new sandbo
 
 Audience composition is currently not integrated with the sandbox reset capability, so audiences will need to be deleted manually prior to performing the sandbox reset.
 
-Select **[!UICONTROL Audiences]** from the left navigation, followed by the **[!UICONTROL Composition]** tab.
+Select **[!UICONTROL Audiences]** from the left navigation, followed by the **[!UICONTROL Compositions]** tab.
 
-![The [!UICONTROL Composition] tab in the [!UICONTROL Audiences] workspace.](../images/ui/audiences.png)
+![The [!UICONTROL Compositions] tab in the [!UICONTROL Audiences] workspace.](../images/ui/audiences.png)
 
 Next, select the ellipsis (`...`) menu next to the first audience, then select **[!UICONTROL Delete]**. 
 
 ![The audience menu highlighting the [!UICONTROL Delete] option.](../images/ui/delete.png)
 
-You will see a confirmation toast message.
-
-![The confirmation message confirming deletion of the audience composition.](../images/ui/confirmation.png)
+A confirmation of successful deletion is displayed and you are returned to the **[!UICONTROL Compositions]** tab.
 
 Repeat the above steps with all your compositions. This will delete all audiences from the audience inventory. Once complete, you can continue to reset the sandbox.
 
