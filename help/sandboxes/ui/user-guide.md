@@ -87,7 +87,7 @@ Next, select the ellipsis (`...`) menu next to the first audience, then select *
 
 A confirmation of successful deletion is displayed and you are returned to the **[!UICONTROL Compositions]** tab.
 
-Repeat the above steps with all your compositions. This will delete all audiences from the audience inventory. Once complete, you can continue to reset the sandbox.
+Repeat the above steps with all your compositions. This will delete all audiences from the audience inventory. Once all audiences have been removed, you can continue to reset the sandbox.
 
 ### Resetting a sandbox
 
