@@ -132,7 +132,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 >[!TIP]
 >
-> If the API key you provided in the **[!UICONTROL Password]** field or the **[!UICONTROL Data center]** value are incorrect, the UI displays a [!DNL Mailchimp] API error response: *`No options are available. Please verify the values selected for the following dependent fields: apiServer`* as shown below, and are not be able to select a value from the **[!UICONTROL Audience Name (Please select Data center first)]** field. To fix this error, provide the correct values.
+> If the API key you provided in the **[!UICONTROL Password]** field or the **[!UICONTROL Data center]** value are incorrect, the UI displays a [!DNL Mailchimp] API error response: *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* as shown below, and are not be able to select a value from the **[!UICONTROL Audience Name (Please select Data center first)]** field. To fix this error, provide the correct values.
 
 ### Enable alerts {#enable-alerts}
 
@@ -209,7 +209,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ### Error encountered if [!DNL Mailchimp] API key or data center values are incorrect {#incorrect-credentials-error}
 
-If the API key you provided in the **[!UICONTROL Password]** field or the **[!UICONTROL Data center]** value are incorrect, the UI displays a [!DNL Mailchimp] API error response: *`No options are available. Please verify the values selected for the following dependent fields: apiServer`* as shown below, and are not able to select a value from the **[!UICONTROL Audience Name (Please select Data center first)]** field.
+If the API key you provided in the **[!UICONTROL Password]** field or the **[!UICONTROL Data center]** value are incorrect, the UI displays a [!DNL Mailchimp] API error response: *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* as shown below, and are not able to select a value from the **[!UICONTROL Audience Name (Please select Data center first)]** field.
 
 ![Platform UI screenshot showing error if your Mailchimp API key or data center values are incorrect.](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
 
