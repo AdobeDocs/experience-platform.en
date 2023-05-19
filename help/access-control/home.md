@@ -29,7 +29,7 @@ For more detailed steps on how to manage access control in Experience Platform, 
 
 All calls to Experience Platform APIs are validated for permissions, and will return errors if the appropriate permission(s) are not found in the current user context. Within the UI, elements will be hidden or altered depending on permissions granted to the current user.
 
-## Permissions
+## Permissions {#platform-permissions}
 
 [!UICONTROL Permissions] provides a central location for managing Experience Platform access for your organization. Through [!UICONTROL Permissions], you can grant groups of users access permissions for various Experience Platform capabilities, such as [!UICONTROL Manage Datasets], [!UICONTROL View Datasets], or [!UICONTROL Manage Profiles].
 
