@@ -83,7 +83,7 @@ Select **[!UICONTROL Audiences]** from the left navigation, followed by the **[!
 
 Next, select the ellipsis (`...`) menu next to the first audience, then select **[!UICONTROL Delete]**. 
 
-![The audience menu highlighting the [!UICONTROL Delete] option.](../images/ui/delete.png)
+![The audience menu highlighting the [!UICONTROL Delete] option.](../images/ui/delete-composition.png)
 
 A confirmation of successful deletion is displayed and you are returned to the **[!UICONTROL Compositions]** tab.
 
