@@ -48,6 +48,7 @@ Permissions under Adobe Experience Platform Data Collection control access to ta
 | --- | --- | --- |
 | Platforms | Web | Grants access to [web properties](../tags/ui/administration/companies-and-properties.md) when combined with other property rights. |
 | Platforms | Mobile | Grants access to [mobile properties](../tags/ui/administration/companies-and-properties.md) when combined with other property rights. |
+| Platforms | Edge | Grants access to [Event Forwarding Edge properties](../tags/ui/event-forwarding/getting-started.md) when combined with other property rights.
 | Properties | (N/A) | Depending on the properties that have been created under your organization, you can control access to each of them through this permission category in Admin Console.<br><br>A user's assigned property rights only apply to the properties they have been granted access to through this permission category. |
 | Property Rights | Approve | Grants the ability to approve a library build as part of the [publishing flow](../tags/ui/publishing/publishing-flow.md). |
 | Property Rights | Develop | Grants the ability to develop a library build as part of the [publishing flow](../tags/ui/publishing/publishing-flow.md). |
