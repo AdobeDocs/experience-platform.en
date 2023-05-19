@@ -7,7 +7,7 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 
 >[!IMPORTANT]
 >
->The tags and event forwarding release notes have been deprecated. Please refer to the latest [Adobe Experience Platform release notes](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=en) for detailed tags and event forwarding updates.
+>The tags and event forwarding release notes have been deprecated and will **not** be updated any further on this page.. Please refer to the latest [Adobe Experience Platform release notes](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=en) for detailed tags and event forwarding updates.
 
 ## April 26, 2023
 
