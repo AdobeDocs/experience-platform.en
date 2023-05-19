@@ -79,7 +79,7 @@ Audience composition is currently not integrated with the sandbox reset capabili
 
 Select **[!UICONTROL Audiences]** from the left navigation, followed by the **[!UICONTROL Composition]** tab.
 
-![The [!UICONTROL Composition] tab in the [!UICONTOL Audiences] workspace.](../images/ui/audiences.png)
+![The [!UICONTROL Composition] tab in the [!UICONTROL Audiences] workspace.](../images/ui/audiences.png)
 
 Next, select the ellipsis (`...`) menu next to the first audience, then select **[UICONTROL Delete]**. 
 
