@@ -10,5 +10,5 @@ feature: Playbooks
 
 * Playbooks {#playbooks}
   * [Overview](/help/use-case-playbooks/playbooks/overview.md)
-  * [UI guide](/help/use-case-playbooks/playbooks/ui-guide.md)
+  * [How to enable and reuse playbooks](/help/use-case-playbooks/playbooks/ui-guide.md)
   * [Troubleshooting](/help/use-case-playbooks/playbooks/troubleshooting.md)
