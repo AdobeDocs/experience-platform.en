@@ -81,7 +81,7 @@ Select **[!UICONTROL Audiences]** from the left navigation, followed by the **[!
 
 ![The [!UICONTROL Composition] tab in the [!UICONTROL Audiences] workspace.](../images/ui/audiences.png)
 
-Next, select the ellipsis (`...`) menu next to the first audience, then select **[UICONTROL Delete]**. 
+Next, select the ellipsis (`...`) menu next to the first audience, then select **[!UICONTROL Delete]**. 
 
 ![The audience menu highlighting the [!UICONTROL Delete] option.](../images/ui/delete.png)
 
