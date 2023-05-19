@@ -22,6 +22,544 @@ This tutorial requires you to have a working understanding of the following comp
 
 For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
 
+### Check for draft mode support
+
+You must also check if the connection spec ID and corresponding flow spec ID of the source you are using is enabled for draft mode.
+
+>[!BEGINTABS]
+
+>[!TAB Look up connection spec details]
+
++++Request
+The following request retrieves the connection spec information for [!DNL Azure File Storage]:
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/be5ec48c-5b78-49d5-b8fa-7c89ec4569b8' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
++++Response
+
+A successful response returns the connection spec information for your source. To verify if draft mode is supported for your source, check that the `items[0].attributes.isDraftModeSupported` has a value of `true`.
+
+```json
+{
+  "items": [
+    {
+      "id": "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8",
+      "name": "azure-file-storage",
+      "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+      "version": "1.0",
+      "authSpec": [
+        {
+          "name": "Basic Authentication",
+          "type": "basicAuthentication",
+          "spec": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "type": "object",
+            "description": "defines auth params",
+            "properties": {
+              "host": {
+                "type": "string",
+                "description": "Specifies the Azure File Storage endpoint."
+              },
+              "userid": {
+                "type": "string",
+                "description": "Specify the user to access the Azure File Storage."
+              },
+              "password": {
+                "type": "string",
+                "description": "Specify the storage access key",
+                "format": "password"
+              }
+            },
+            "required": [
+              "host",
+              "userid",
+              "password"
+            ]
+          }
+        }
+      ],
+      "sourceSpec": {
+        "name": "CloudStorage",
+        "type": "CloudStorage",
+        "spec": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "input path for copying files, can be a folder path, file path or a wildcard pattern"
+            },
+            "recursive": {
+              "type": "boolean",
+              "description": "indicates recursive copy in case of folder or wild card path, default is false"
+            }
+          },
+          "required": [
+            "path"
+          ]
+        },
+        "attributes": {
+          "uiAttributes": {
+            "documentationLink": "http://www.adobe.com/go/sources-azure-file-storage-en",
+            "isSource": true,
+            "category": {
+              "key": "cloudStorage"
+            },
+            "icon": {
+              "key": "azureFileStorage"
+            },
+            "description": {
+              "key": "azureFileStorageDescription"
+            },
+            "label": {
+              "key": "azureFileStorageLabel"
+            }
+          }
+        }
+      },
+      "exploreSpec": {
+        "name": "FileSystem",
+        "type": "FileSystem",
+        "requestSpec": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "description": "defines explorable objects",
+          "properties": {
+            "objectType": {
+              "type": "string",
+              "enum": [
+                "file",
+                "folder",
+                "root"
+              ]
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "objectType": {
+                    "enum": [
+                      "file"
+                    ]
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "object": {
+                    "type": "string",
+                    "description": "defines file to get schema or preview of."
+                  },
+                  "fileType": {
+                    "type": "string",
+                    "enum": [
+                      "delimited"
+                    ]
+                  },
+                  "preview": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "object",
+                  "fileType"
+                ]
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "objectType": {
+                    "enum": [
+                      "folder"
+                    ]
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "object": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "object"
+                ]
+              }
+            }
+          ]
+        },
+        "responseSpec": {
+          "root": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "type": "array",
+            "description": "lists tables/items under the database/container requested.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "description": "defines type of an item."
+                },
+                "name": {
+                  "type": "string",
+                  "description": "defines display name of an item."
+                },
+                "path": {
+                  "type": "string",
+                  "description": "defines path of an item."
+                },
+                "canPreview": {
+                  "type": "boolean",
+                  "default": false,
+                  "description": "defines whether an item is previewable or not."
+                },
+                "canFetchSchema": {
+                  "type": "boolean",
+                  "default": false,
+                  "description": "defines whether schema can be fetched for an item or not."
+                }
+              }
+            }
+          },
+          "folder": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "canPreview": {
+                  "type": "boolean",
+                  "default": false
+                },
+                "canFetchSchema": {
+                  "type": "boolean",
+                  "default": false
+                }
+              }
+            }
+          },
+          "file": {
+            "delimited": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "type": "object",
+              "properties": {
+                "format": {
+                  "type": "string"
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "columns": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "attributes": {
+        "category": "Cloud Storage",
+        "connectorName": "Azure File Storage",
+        "isSource": true,
+        "uiAttributes": {
+          "apiFeatures": {
+            "explorePaginationSupported": false
+          }
+        }
+      },
+      "permissionsInfo": {
+        "view": [
+          {
+            "@type": "lowLevel",
+            "name": "EnterpriseSource",
+            "permissions": [
+              "read"
+            ]
+          }
+        ],
+        "manage": [
+          {
+            "@type": "lowLevel",
+            "name": "EnterpriseSource",
+            "permissions": [
+              "write"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
++++
+
+>[!TAB Look up flow spec details]
+
++++Request
+The following request retrieves the flow spec details for a cloud storage source:
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/flowSpecs?property=name==%22CloudStorageToAEP%22' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
++++Response
+
+A successful response returns the flow spec information for your source. To verify if draft mode is supported for your source, check that the `items[0].attributes.isDraftModeSupported` has a value of `true`.
+
+```json {line-numbers="true" start-line="1" highlight="167"}
+{
+  "items": [
+    {
+      "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
+      "name": "CloudStorageToAEP",
+      "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+      "version": "1.0",
+      "sourceConnectionSpecIds": [
+        "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
+        "ecadc60c-7455-4d87-84dc-2a0e293d997b",
+        "b7829c2f-2eb0-4f49-a6ee-55e33008b629",
+        "4c10e202-c428-4796-9208-5f1f5732b1cf",
+        "fb2e94c9-c031-467d-8103-6bd6e0a432f2",
+        "32e8f412-cdf7-464c-9885-78184cb113fd",
+        "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+        "998b8ae3-cec0-43b7-8abe-40b1eb4ee069",
+        "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8",
+        "54e221aa-d342-4707-bcff-7a4bceef0001",
+        "c85f9425-fb21-426c-ad0b-405e9bd8a46c",
+        "26f526f2-58f4-4712-961d-e41bf1ccc0e8"
+      ],
+      "targetConnectionSpecIds": [
+        "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
+      ],
+      "optionSpec": {
+        "name": "OptionSpec",
+        "spec": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "errorDiagnosticsEnabled": {
+              "title": "Error diagnostics.",
+              "description": "Flag to enable detailed and sample error diagnostics summary.",
+              "type": "boolean",
+              "default": false
+            },
+            "partialIngestionPercent": {
+              "title": "Partial ingestion threshold.",
+              "description": "Percentage which defines the threshold of errors allowed before the run is marked as failed.",
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          }
+        }
+      },
+      "transformationSpecs": [
+        {
+          "name": "Mapping",
+          "spec": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "type": "object",
+            "description": "defines various params required for different mapping from source to target",
+            "properties": {
+              "mappingId": {
+                "type": "string"
+              },
+              "mappingVersion": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "Encryption",
+          "spec": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "type": "object",
+            "description": "defines various params required for encrypted data ingestion",
+            "properties": {
+              "publicKeyId": {
+                "type": "string",
+                "description": "publicKeyId returned in encryptionKey creation API. One must use the publicKeyId corresponding to the same publicKey they used for encrypting the files"
+              }
+            }
+          }
+        }
+      ],
+      "scheduleSpec": {
+        "name": "PeriodicSchedule",
+        "type": "Periodic",
+        "spec": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "startTime": {
+              "description": "epoch time",
+              "type": "integer"
+            },
+            "frequency": {
+              "type": "string",
+              "enum": [
+                "once",
+                "minute",
+                "hour",
+                "day",
+                "week"
+              ]
+            },
+            "interval": {
+              "type": "integer"
+            },
+            "backfill": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          "required": [
+            "startTime",
+            "frequency"
+          ],
+          "if": {
+            "properties": {
+              "frequency": {
+                "const": "once"
+              }
+            }
+          },
+          "then": {
+            "allOf": [
+              {
+                "not": {
+                  "required": [
+                    "interval"
+                  ]
+                }
+              },
+              {
+                "not": {
+                  "required": [
+                    "backfill"
+                  ]
+                }
+              }
+            ]
+          },
+          "else": {
+            "required": [
+              "interval"
+            ],
+            "if": {
+              "properties": {
+                "frequency": {
+                  "const": "minute"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "interval": {
+                  "minimum": 15
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "interval": {
+                  "minimum": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "attributes": {
+        "isSourceFlow": true,
+        "flacValidationSupported": true,
+        "isDraftModeSupported": true,
+        "frequency": "batch",
+        "notification": {
+          "category": "sources",
+          "flowRun": {
+            "enabled": true
+          }
+        }
+      },
+      "permissionsInfo": {
+        "manage": [
+          {
+            "@type": "lowLevel",
+            "name": "EnterpriseSource",
+            "permissions": [
+              "write"
+            ]
+          }
+        ],
+        "view": [
+          {
+            "@type": "lowLevel",
+            "name": "EnterpriseSource",
+            "permissions": [
+              "read"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
++++
+
+
+
 ## Create a draft base connection {#create-a-draft-base-connection}
 
 To create a draft base connection, make a POST request to the `/connections` endpoint of the [!DNL Flow Service] API and provide `mode=draft` as a query parameter.
