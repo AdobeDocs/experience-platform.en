@@ -5,11 +5,17 @@ badge: "Beta"
 ---
 # Computed attributes overview
 
-Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
+Personalization based on user behavior is a key requirement for digital marketers to maximize returns on their marketing dollars. For instance, personalizing marketing email with the most recently viewed product to drive conversion, or personalizing webpage based on total purchases made by user in the last month. 
 
-Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. These computed attribute values can then be viewed in a profile, used to create a segment, or accessed through a number of different access patterns.
+Computed attributes help quickly convert profile behavioral data into aggregated values at the profile level without dependence on engineering resources for:
 
-This guide will help you to better understand the role of computed attributes within Adobe Experience Platform.
+- Enabling targeted personalization with activation of behavioral aggregates to Real-time Customer Data Platform destinations, usage in journeys, or in segmentation
+- Standardization of aggregated profile behavioral data for usage across platform and apps
+- Better data management with consolidation of old profile events data into meaningful behavioral insights
+
+These aggregates are computed based on profile enabled datasets ingested into Adobe Experience Platform. Each computed attribute is a profile attribute created on your profile union schema, and is grouped under "Computed Attribute" mixin in your union schema.
+
+This guide will help you to better understand the role of computed attributes within Platform, in addition to explaining the basics of computed attributes.
 
 ## Understanding computed attributes
 
@@ -19,26 +25,16 @@ Some of the information collected in the profile is easily understood when readi
 
 Computed attributes include creating an expression, or "rule", that operates on incoming data and stores the resulting value in a profile attribute. Expressions can be defined in multiple different ways, allowing you to specify that a rule evaluate incoming events only, an incoming event and profile data, or an incoming event, profile data, and historical events.
 
-### Use cases
+### Functions
 
-Use cases for computed attributes can range from simple calculations to very complex references. Here are a few example use cases for computed attributes:
+Computed attributes let you define aggregates in a self-serve manner by leveraging pre-defined functions. The details on these functions can be found below:
 
-1. **[!UICONTROL Percentages]:** A simple computed attribute could include taking two numeric fields on a record and dividing them to create a percentage. For example, you could take the total number of emails sent to an individual and divide it by the number of emails the individual opens. Looking at the resulting computed attribute field would quickly show the percentage of total emails opened by the individual.
-1. **[!UICONTROL Application use]:** Another example includes the ability to aggregate the number of times a user opens your application. By tracking the total number of application opens, based on individual open events, you could deliver special offers or messages to users on their 100th open, encouraging deeper engagement with your brand.
-1. **[!UICONTROL Lifetime values]:** Gathering running totals, such as a lifetime purchase value for a customer, can be very difficult. This requires updating the historic total each time a new purchase event occurs. A computed attribute allows you to do this much more easily by maintaining the lifetime value in a single field that is updated automatically following each successful purchase event related to the customer.
+| Function | Description |
+| -------- | ----------- |
+| SUM | A |
+| COUNT | A |
+| MIN | A |
+| MAX | A |
 
-## Known limitations
+### Lookback periods
 
-### Delayed availability of new computed attributes
-
-The availability of new computed attributes may be delayed up to 2 hours after the corresponding schema attribute is added to the union schema.
-
-This delay is due to the current caching configuration. Post-Alpha the cache refresh frequency could be increased.
-
-### Dependency tracking in segments
-
-Schema attributes that have already been used in a segment definition expression, but later turned into a computed attribute will not be tracked as a dependency of that segment. 
-
-Due to the fact that no dependency has been detected, Experience Platform will not automatically evaluate the associated computed attribute each time the segment definition is evaluated.
-
-Alternatively, the creation of computed attributes could be managed through a specific schema field group that adds new computed attributes that do not conflict with existing attributes. Another alternative is to simply recreate the segment with the correct dependency tracking for the new computed attributes.
