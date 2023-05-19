@@ -71,7 +71,27 @@ Once you have finished creating the sandbox, refresh the page and the new sandbo
 
 >[!WARNING]
 >
->The following is a list of exceptions that can prevent you from resetting the default production sandbox or a user-created production sandbox: <ul><li>The default production sandbox cannot be reset if the identity graph hosted in the sandbox is also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature.</li><li>The default production sandbox cannot be reset if the identity graph hosted in the sandbox is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).</li><li>The default production sandbox cannot be reset if it contains data for both CDA and PBD features.</li><li>A user-created production sandbox that is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service can be reset after a warning message.</li></ul>
+>The following is a list of exceptions that can prevent you from resetting the default production sandbox or a user-created production sandbox: <ul><li>The default production sandbox cannot be reset if the identity graph hosted in the sandbox is also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature.</li><li>The default production sandbox cannot be reset if the identity graph hosted in the sandbox is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).</li><li>The default production sandbox cannot be reset if it contains data for both CDA and PBD features.</li><li>A user-created production sandbox that is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service can be reset after a warning message.</li><li>Before initiating a sandbox reset, you will be required to delete your compositions manually to ensure that the associated audience data is cleaned up properly.</li></ul>
+
+### Delete audience compositions
+
+Audience composition is currently not integrated with the sandbox reset capability, so audiences will need to be deleted manually prior to performing the sandbox reset.
+
+Select **[!UICONTROL Audiences]** from the left navigation, followed by the **[!UICONTROL Composition]** tab.
+
+![The [!UICONTROL Composition] tab in the [!UICONTOL Audiences] workspace.](../images/ui/audiences.png)
+
+Next, select the ellipsis (`...`) menu next to the first audience, then select **[UICONTROL Delete]**. 
+
+![The audience menu highlighting the [!UICONTROL Delete] option.](../images/ui/delete.png)
+
+You will see a confirmation toast message.
+
+![The confirmation message confirming deletion of the audience composition.](../images/ui/confirmation.png)
+
+Repeat the above steps with all your compositions. This will delete all audiences from the audience inventory. Once complete, you can continue to reset the sandbox.
+
+### Resetting a sandbox
 
 Resetting a production or development sandbox deletes all resources associated with that sandbox (schemas, datasets, and so on), while maintaining the sandbox's name and associated permissions. This "clean" sandbox continues to be available under the same name for users that have access to it.
 
