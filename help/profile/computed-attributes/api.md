@@ -52,6 +52,8 @@ The following query parameters can be used when retrieving a list of computed at
 
 The following request retrieves the last three computed attributes that were updated in your organization.
 
++++ A sample request to retrieve a list of computed attributes.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ca/attributes?limit=3 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -60,9 +62,13 @@ curl -X GET https://platform.adobe.io/data/core/ca/attributes?limit=3 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Response**
 
 A successful response returns HTTP status 200 with a list of the last 3 updated computed attributes that belong to your organization and sandbox.
+
++++ A sample response for retrieving a list of computed attributes.
 
 ```json
 {
@@ -223,6 +229,8 @@ A successful response returns HTTP status 200 with a list of the last 3 updated 
 | `computedAttributes` | An array that contains the computed attributes based on your query parameters. More information about the computed attributes array can be found in the [retrieve a specific computed attribute section](#get). |
 | `_page` | An object that contains metadata about the returned results. This includes information about the current offset, the count of computed attributes returned, the total count of computed attributes, as well as the limit of computed attributes returned. |
 
++++
+
 ## Create a computed attribute {#create}
 
 To create a computed attribute, begin by making a POST request to the `/attributes` endpoint with a request body containing the details of the computed attribute that you wish to create.
@@ -234,6 +242,8 @@ POST /attributes
 ```
 
 **Request**
+
++++ A sample request to create a new computed attribute.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ca/attributes \
@@ -273,9 +283,13 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 | `duration.unit` | A string that represents the unit of time that will be used for the lookback period. Possible values include: `HOURS`, `DAYS`, `WEEKS`, and `MONTHS`. |
 | `status` | The status of the computed attribute. Possible values include `DRAFT` and `NEW`. |
 
++++
+
 **Response**
 
 A successful response returns HTTP status 200 with information about your newly created computed attribute.
+
++++ A sample response when creating a new computed attribute.
 
 ```json
 {
@@ -333,6 +347,8 @@ A successful response returns HTTP status 200 with information about your newly 
 | `updateEpoch`| The time at which the computed attribute was last updated, in seconds. |
 | `createdBy` | The ID of the user who created the computed attribute. |
 
++++
+
 ## Retrieve a specific computed attribute {#get}
 
 You can retrieve detailed information about a specific computed attribute by making a GET request to the `/attributes` endpoint and providing the ID of the computed attribute you wish to retrieve in the request path.
@@ -345,6 +361,8 @@ GET /attributes/{ATTRIBUTE_ID}
 
 **Request**
 
++++ A sample request to retrieve a specific computed attribute.
+
 ```shell
 curl -X GET 'https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b17-bbe6-2dbc08c1a631' \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -353,9 +371,13 @@ curl -X GET 'https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b1
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Response**
 
 A successful response returns HTTP status 200 with detailed information about the specified computed attribute.
+
++++ A sample response when retrieving a specific computed attribute.
 
 ```json
 {
@@ -423,6 +445,8 @@ A successful response returns HTTP status 200 with detailed information about th
 | `updateEpoch`| The time at which the computed attribute was last updated, in seconds. |
 | `createdBy` | The ID of the user who created the computed attribute. |
 
++++
+
 ## Delete a specific computed attribute {#delete}
 
 You can deleted a specific computed attribute by making a DELETE request to the `/attributes` endpoint and providing the ID of the computed attribute you wish to delete in the request path.
@@ -443,6 +467,8 @@ DELETE /attributes/{ATTRIBUTE_ID}
 
 **Request**
 
++++ A sample request to delete a computed attribute.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b17-bbe6-2dbc08c1a631 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -451,9 +477,13 @@ curl -X DELETE https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Response**
 
 A successful response returns HTTP status 202 with details of the deleted computed attribute.
+
++++ A sample response when deleting a computed attribute.
 
 ```json
 {
@@ -503,6 +533,8 @@ A successful response returns HTTP status 202 with details of the deleted comput
 }
 ```
 
++++
+
 ## Update a specific computed attribute
 
 You can update a specific computed attribute by making a PATCH request to the `/attributes` endpoint and providing the ID of the computed attribute you wish to update in the request path.
@@ -529,6 +561,8 @@ PATCH /attributes/{ATTRIBUTE_ID}
 
 The following request will update the status of the computed attribute from `DRAFT` to `NEW`.
 
++++ A sample request to update a computed attribute.
+
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b17-bbe6-2dbc08c1a631 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -548,9 +582,13 @@ curl -X PATCH https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b
  }'
 ```
 
++++
+
 **Response**
 
 A successful response returns HTTP status 200 with information about your newly updated computed attribute.
+
++++ A sample response when updating a computed attribute.
 
 ```json
 {
@@ -599,6 +637,8 @@ A successful response returns HTTP status 200 with information about your newly 
     "createdBy": "{USER_ID}"
 }
 ```
+
++++
 
 ## Next steps
 

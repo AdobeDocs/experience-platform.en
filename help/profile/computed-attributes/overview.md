@@ -29,12 +29,36 @@ Computed attributes include creating an expression, or "rule", that operates on 
 
 Computed attributes let you define aggregates in a self-serve manner by leveraging pre-defined functions. The details on these functions can be found below:
 
-| Function | Description |
-| -------- | ----------- |
-| SUM | A |
-| COUNT | A |
-| MIN | A |
-| MAX | A |
+| Function | Description | Supported data types | Example usage |
+| -------- | ----------- | -------------------- | ------------- |
+| SUM | A function that **sums** up the values given. | Integers, Longs | Sum of all purchases in the last 7 days |
+| COUNT | A function that **counts** the number of events that have occurred. | N/A | Count of purchases in the last 3 months |
+| MIN | A function that finds the **minimum** value given. | Integers, Longs, Timestamps | First purchase data in the last 7 days<br/>Minimum order amount in the last 4 weeks |
+| MAX | A function that finds the **maximum** value given. | Integers, Longs, Timestamps | Last purchase data in the last 7 days<br/>Maximum order amount in the last 4 weeks |
 
 ### Lookback periods
 
+Computed attributes are calculated in batches, letting you keep your aggregates fresh and using the latest events. In order to support these near real-time scenarios, the refresh frequency varies depending on the event lookback period.
+
+The lookback period refers to the amount of time that is reviewed when aggregating Experience Events for the computed attribute. This period of time can defined in hours, days, weeks, or months.
+
+The refresh frequency refers to the frequency that the computed attributes are refreshed. This value is dependant on the lookback period, and is automatically set.
+
+| Lookback period | Refresh frequency |
+| --------------- | ----------------- |
+| Up to 24 hours | Hourly |
+| Up to 7 days | Daily |
+| Up to 4 weeks | Weekly |
+| Up to 6 months | Monthly |
+
+For example, if your computed attribute has a lookback period of the last 7 days, this value will be calculated based on the values of the last 7 days, and then refreshed on a daily basis.
+
+**Fast refresh**
+
+If fast refresh is enabled, this lets the computed attribute be refreshed on a daily basis, rather than on a weekly, bi-weekly, or monthly basis. This value is only applicable for computed attributes with a lookback period greater than a weekly basis.
+
+Currently, fast refresh is only available to limited customers. Please contact Adobe Support for more information.
+
+## Next steps
+
+To learn more about creating and managing computed attributes, please read the [computed attributes API guide](./api.md) or the [computed attributes UI guide](./ui.md). 

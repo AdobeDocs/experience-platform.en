@@ -20,7 +20,7 @@ This UI guide requires an understanding of the various [!DNL Experience Platform
 
 In the Experience Platform UI, select **[!UICONTROL Profiles]** in the left navigation, followed by **[!UICONTROL Computed attributes]** to see a list of the computed attributes available for your organization. This includes information about the computed attribute's name, description, last evaluation date, and last evaluation status.
 
-![](./images/ui/browse.png)
+![The [!UICONTROL Profile] section and the [!UICONTROL Computed attributes] tabs are highlighted, showing users how to access the computed attributes browse page.](./images/ui/browse.png)
 
 To select which fields are visible, you can select ![the configure columns icon](./images/ui/configure-icon.png) to add or remove which fields you want to be displayed.
 
@@ -40,33 +40,33 @@ Additionally, you can select a computed attribute to see more detailed informati
 
 To create a new computed attribute, select **[!UICONTROL Create computed attribute]** to enter the new computed attribute workflow.
 
-![](./images/ui/create.png)
+![The [!UICONTROL Create computed attributes] button is highlighted, showing users how to reach the create a computed attribute page.](./images/ui/create.png)
 
 The **[!UICONTROL Create computed attribute]** page appears. On this page, you can add the basic information for the computed attribute you want to create.
 
-![](./images/ui/basic-information.png)
+![The [!UICONTROL Basic information] section of the [!UICONTROL Create computed attribute] page is highlighted.](./images/ui/basic-information.png)
 
 After adding the computed attribute details, you can start creating your computed attribute. To create a computed attribute, first select the attribute from the **[!UICONTROL Events]** section.
 
-![](./images/ui/events.png)
+![The [!UICONTROL Events] section is highlighted.](./images/ui/events.png)
 
 After selecting the attribute to use in the computed attribute definition, you can choose what this value will be compared to.
 
-![](./images/ui/select-comparison.png)
+![The available comparison types are displayed.](./images/ui/select-comparison.png)
 
 Now, you can apply a function to the field from the conditional output.
 
-![](./images/ui/select-function.png)
+![The computed attribute functions are displayed.](./images/ui/select-function.png)
 
 With these steps completed, you can now either choose to save this computed attribute as a draft or to immediately publish it.
 
-![](./images/ui/draft-or-publish.png)
+![The [!UICONTROL Save as draft] and [!UICONTROL Publish] buttons are highlighted.](./images/ui/draft-or-publish.png)
 
 ## View a computed attribute's details {#view-details}
 
 To view the details of a computed attribute, select the computed attribute you want to see details about on the [!UICONTROL **Browse**] page.
 
-![](./images/ui/select.png)
+![A computed attribute is highlighted.](./images/ui/select.png)
 
 The content of the page differs, depending if the computed attribute is **[!UICONTROL Published]** or in **[!UICONTROL Draft]**.
 
@@ -74,7 +74,7 @@ The content of the page differs, depending if the computed attribute is **[!UICO
 
 When selecting a published computed attribute, the computed attributes detail page appears.
 
-![](./images/ui/details.png)
+![The details page of the computed attribute is displayed.](./images/ui/details.png)
 
 This page displays a summary of the computed attribute's details, as well as a graph showing the value distribution as well as sample profiles that qualify for the computed attribute.
 
@@ -82,7 +82,7 @@ This page displays a summary of the computed attribute's details, as well as a g
 
 When selecting a draft computed attribute, the **[!UICONTROL Edit computed attributes]** page appears. This page, similarly to the Create computed attributes page, lets you edit your computed attribute's basic information, as well as its definition, before letting you update the draft or publish it.
 
-![](./images/ui/edit.png)
+![The [!UICONTROL Edit computed attributes ]page is displayed.](./images/ui/edit.png)
 
 ## Next steps
 
