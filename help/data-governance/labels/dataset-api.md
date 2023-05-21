@@ -76,7 +76,11 @@ A successful response returns the data usage labels that have been applied to th
 
 ## Apply labels to a dataset {#apply}
 
-You can apply a set of labels for an entire dataset by providing them in the payload of a POST or PUT request to the [!DNL Dataset Service] API. You can also remove any previously applied labels by updating existing `optinalLabels` with an empty value. You cannot add labels to individual dataset fields. Using either the POST or PUT methods overwrites any existing labels and replaces them with those provided in the payload.
+You can apply a set of labels for an entire dataset by providing them in the payload of a POST request to the [!DNL Dataset Service] API. You cannot add labels to individual dataset fields. 
+
+>[!IMPORTANT]
+>
+>A POST operation will throw an error if any `optionalLabel` is present. This feature has been deprecated and it is no longer possible to add data labels to dataset fields. 
 
 **API format**
 
@@ -111,8 +115,12 @@ curl -X PUT \
   -H 'Content-Type: application/json' \
   -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000' \
   -d '{
-        "labels": [ "C1", "C2", "C3", "I1", "I2" ],
-        "optionalLabels": [
+        "labels": [ "C1", "C2", "C3", "I1", "I2" ]        
+      }'
+```
+
+<!-- Removed from example payload
+"optionalLabels": [
           {
             "option": {
               "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c6b1b09bc3f2ad2627c1ecc719826836",
@@ -122,19 +130,15 @@ curl -X PUT \
             "labels": [ "S1", "S2" ]
           }
         ]
-      }'
-```
+ -->
 
 | Property | Description |
 | --- | --- |
 | `labels` | A list of data usage labels that you want to add to the entire dataset. |
-| `optionalLabels` | This parameter is used to remove labels previously applied to a dataset field. A list of any individual fields within the dataset that you want to remove the labels from. Each item in this array must have the following properties: <br/><br/>`option`: An object that contains the [!DNL Experience Data Model] (XDM) attributes of the field. The following three properties are required:<ul><li><code>id</code>: The URI <code>$id</code> value of the schema associated with the field.</li><li><code>contentType</code>: The content type and version number of the schema. This should take the form of one of the valid <a href="../../xdm/api/getting-started.md#accept">Accept headers</a> for an XDM lookup request.</li><li><code>schemaPath</code>: The path to the field within the dataset's schema.</li></ul>`labels`: This value must be empty to remove the label from the dataset. PUT or POST methods now return an error if the `optionalLabels` field has any new or modified labels. |
 
 **Response**
 
 A successful response returns the updated set of labels for the dataset.
-
-<!-- What does a successful response look like when labels are removed in this fashion. -->
 
 ```json
 {
@@ -151,6 +155,20 @@ A successful response returns the updated set of labels for the dataset.
   ]
 }
 ```
+
+## Remove labels from a dataset {#remove}
+
+You can remove any previously applied labels by updating existing `optinalLabels` with an empty value. Make a PUT request to the [!DNL Dataset Service] API.
+
+**API format**
+
+```http
+PUT /datasets/{DATASET_ID}/labels
+```
+
+| Parameter | Description |
+| --- | --- |
+| `optionalLabels` | This parameter is used to remove labels previously applied to a dataset field. A list of any individual fields within the dataset that you want to remove the labels from. Each item in this array must have the following properties: <br/><br/>`option`: An object that contains the [!DNL Experience Data Model] (XDM) attributes of the field. The following three properties are required:<ul><li><code>id</code>: The URI <code>$id</code> value of the schema associated with the field.</li><li><code>contentType</code>: The content type and version number of the schema. This should take the form of one of the valid <a href="../../xdm/api/getting-started.md#accept">Accept headers</a> for an XDM lookup request.</li><li><code>schemaPath</code>: The path to the field within the dataset's schema.</li></ul>`labels`: This value must be empty to remove the label from the dataset. PUT or POST methods now return an error if the `optionalLabels` field has any new or modified labels. |
 
 ## Next steps
 
