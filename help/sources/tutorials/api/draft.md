@@ -15,8 +15,8 @@ This tutorial provides steps on how to set your [!DNL Flow Service] entities to 
 
 This tutorial requires you to have a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Using Platform APIs
 
@@ -49,286 +49,287 @@ curl -X GET \
 
 A successful response returns the connection spec information for your source. To verify if draft mode is supported for your source, check that the `items[0].attributes.isDraftModeSupported` has a value of `true`.
 
-```json
+```json {line-numbers="true" start-line="1" highlight="252"}
 {
-  "items": [
-    {
-      "id": "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8",
-      "name": "azure-file-storage",
-      "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-      "version": "1.0",
-      "authSpec": [
+    "items": [
         {
-          "name": "Basic Authentication",
-          "type": "basicAuthentication",
-          "spec": {
-            "$schema": "http://json-schema.org/draft-07/schema#",
-            "type": "object",
-            "description": "defines auth params",
-            "properties": {
-              "host": {
-                "type": "string",
-                "description": "Specifies the Azure File Storage endpoint."
-              },
-              "userid": {
-                "type": "string",
-                "description": "Specify the user to access the Azure File Storage."
-              },
-              "password": {
-                "type": "string",
-                "description": "Specify the storage access key",
-                "format": "password"
-              }
-            },
-            "required": [
-              "host",
-              "userid",
-              "password"
-            ]
-          }
-        }
-      ],
-      "sourceSpec": {
-        "name": "CloudStorage",
-        "type": "CloudStorage",
-        "spec": {
-          "$schema": "http://json-schema.org/draft-07/schema#",
-          "type": "object",
-          "properties": {
-            "path": {
-              "type": "string",
-              "description": "input path for copying files, can be a folder path, file path or a wildcard pattern"
-            },
-            "recursive": {
-              "type": "boolean",
-              "description": "indicates recursive copy in case of folder or wild card path, default is false"
-            }
-          },
-          "required": [
-            "path"
-          ]
-        },
-        "attributes": {
-          "uiAttributes": {
-            "documentationLink": "http://www.adobe.com/go/sources-azure-file-storage-en",
-            "isSource": true,
-            "category": {
-              "key": "cloudStorage"
-            },
-            "icon": {
-              "key": "azureFileStorage"
-            },
-            "description": {
-              "key": "azureFileStorageDescription"
-            },
-            "label": {
-              "key": "azureFileStorageLabel"
-            }
-          }
-        }
-      },
-      "exploreSpec": {
-        "name": "FileSystem",
-        "type": "FileSystem",
-        "requestSpec": {
-          "$schema": "http://json-schema.org/draft-07/schema#",
-          "type": "object",
-          "description": "defines explorable objects",
-          "properties": {
-            "objectType": {
-              "type": "string",
-              "enum": [
-                "file",
-                "folder",
-                "root"
-              ]
-            }
-          },
-          "allOf": [
-            {
-              "if": {
-                "properties": {
-                  "objectType": {
-                    "enum": [
-                      "file"
-                    ]
-                  }
-                }
-              },
-              "then": {
-                "properties": {
-                  "object": {
-                    "type": "string",
-                    "description": "defines file to get schema or preview of."
-                  },
-                  "fileType": {
-                    "type": "string",
-                    "enum": [
-                      "delimited"
-                    ]
-                  },
-                  "preview": {
-                    "type": "boolean"
-                  }
-                },
-                "required": [
-                  "object",
-                  "fileType"
-                ]
-              }
-            },
-            {
-              "if": {
-                "properties": {
-                  "objectType": {
-                    "enum": [
-                      "folder"
-                    ]
-                  }
-                }
-              },
-              "then": {
-                "properties": {
-                  "object": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "object"
-                ]
-              }
-            }
-          ]
-        },
-        "responseSpec": {
-          "root": {
-            "$schema": "http://json-schema.org/draft-07/schema#",
-            "type": "array",
-            "description": "lists tables/items under the database/container requested.",
-            "items": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "description": "defines type of an item."
-                },
-                "name": {
-                  "type": "string",
-                  "description": "defines display name of an item."
-                },
-                "path": {
-                  "type": "string",
-                  "description": "defines path of an item."
-                },
-                "canPreview": {
-                  "type": "boolean",
-                  "default": false,
-                  "description": "defines whether an item is previewable or not."
-                },
-                "canFetchSchema": {
-                  "type": "boolean",
-                  "default": false,
-                  "description": "defines whether schema can be fetched for an item or not."
-                }
-              }
-            }
-          },
-          "folder": {
-            "$schema": "http://json-schema.org/draft-07/schema#",
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "path": {
-                  "type": "string"
-                },
-                "canPreview": {
-                  "type": "boolean",
-                  "default": false
-                },
-                "canFetchSchema": {
-                  "type": "boolean",
-                  "default": false
-                }
-              }
-            }
-          },
-          "file": {
-            "delimited": {
-              "$schema": "http://json-schema.org/draft-07/schema#",
-              "type": "object",
-              "properties": {
-                "format": {
-                  "type": "string"
-                },
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "columns": {
-                      "type": "array",
-                      "items": {
+            "id": "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8",
+            "name": "azure-file-storage",
+            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+            "version": "1.0",
+            "authSpec": [
+                {
+                    "name": "Basic Authentication",
+                    "type": "basicAuthentication",
+                    "spec": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
                         "type": "object",
+                        "description": "defines auth params",
                         "properties": {
-                          "name": {
-                            "type": "string"
-                          },
-                          "type": {
-                            "type": "string"
-                          }
-                        }
-                      }
+                            "host": {
+                                "type": "string",
+                                "description": "Specifies the Azure File Storage endpoint."
+                            },
+                            "userid": {
+                                "type": "string",
+                                "description": "Specify the user to access the Azure File Storage."
+                            },
+                            "password": {
+                                "type": "string",
+                                "description": "Specify the storage access key",
+                                "format": "password"
+                            }
+                        },
+                        "required": [
+                            "host",
+                            "userid",
+                            "password"
+                        ]
                     }
-                  }
-                },
-                "data": {
-                  "type": "array",
-                  "items": {
-                    "type": "object"
-                  }
                 }
-              }
+            ],
+            "sourceSpec": {
+                "name": "CloudStorage",
+                "type": "CloudStorage",
+                "spec": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "object",
+                    "properties": {
+                        "path": {
+                            "type": "string",
+                            "description": "input path for copying files, can be a folder path, file path or a wildcard pattern"
+                        },
+                        "recursive": {
+                            "type": "boolean",
+                            "description": "indicates recursive copy in case of folder or wild card path, default is false"
+                        }
+                    },
+                    "required": [
+                        "path"
+                    ]
+                },
+                "attributes": {
+                    "uiAttributes": {
+                        "documentationLink": "http://www.adobe.com/go/sources-azure-file-storage-en",
+                        "isSource": true,
+                        "category": {
+                            "key": "cloudStorage"
+                        },
+                        "icon": {
+                            "key": "azureFileStorage"
+                        },
+                        "description": {
+                            "key": "azureFileStorageDescription"
+                        },
+                        "label": {
+                            "key": "azureFileStorageLabel"
+                        }
+                    }
+                }
+            },
+            "exploreSpec": {
+                "name": "FileSystem",
+                "type": "FileSystem",
+                "requestSpec": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "object",
+                    "description": "defines explorable objects",
+                    "properties": {
+                        "objectType": {
+                            "type": "string",
+                            "enum": [
+                                "file",
+                                "folder",
+                                "root"
+                            ]
+                        }
+                    },
+                    "allOf": [
+                        {
+                            "if": {
+                                "properties": {
+                                    "objectType": {
+                                        "enum": [
+                                            "file"
+                                        ]
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "object": {
+                                        "type": "string",
+                                        "description": "defines file to get schema or preview of."
+                                    },
+                                    "fileType": {
+                                        "type": "string",
+                                        "enum": [
+                                            "delimited"
+                                        ]
+                                    },
+                                    "preview": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "required": [
+                                    "object",
+                                    "fileType"
+                                ]
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "objectType": {
+                                        "enum": [
+                                            "folder"
+                                        ]
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "object": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "object"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "responseSpec": {
+                    "root": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "type": "array",
+                        "description": "lists tables/items under the database/container requested.",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "type": "string",
+                                    "description": "defines type of an item."
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "description": "defines display name of an item."
+                                },
+                                "path": {
+                                    "type": "string",
+                                    "description": "defines path of an item."
+                                },
+                                "canPreview": {
+                                    "type": "boolean",
+                                    "default": false,
+                                    "description": "defines whether an item is previewable or not."
+                                },
+                                "canFetchSchema": {
+                                    "type": "boolean",
+                                    "default": false,
+                                    "description": "defines whether schema can be fetched for an item or not."
+                                }
+                            }
+                        }
+                    },
+                    "folder": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "path": {
+                                    "type": "string"
+                                },
+                                "canPreview": {
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "canFetchSchema": {
+                                    "type": "boolean",
+                                    "default": false
+                                }
+                            }
+                        }
+                    },
+                    "file": {
+                        "delimited": {
+                            "$schema": "http://json-schema.org/draft-07/schema#",
+                            "type": "object",
+                            "properties": {
+                                "format": {
+                                    "type": "string"
+                                },
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "columns": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "name": {
+                                                        "type": "string"
+                                                    },
+                                                    "type": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "attributes": {
+                "category": "Cloud Storage",
+                "connectorName": "Azure File Storage",
+                "isSource": true,
+                "isDraftModeSupported": true,
+                "uiAttributes": {
+                    "apiFeatures": {
+                        "explorePaginationSupported": false
+                    }
+                }
+            },
+            "permissionsInfo": {
+                "manage": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "EnterpriseSource",
+                        "permissions": [
+                            "write"
+                        ]
+                    }
+                ],
+                "view": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "EnterpriseSource",
+                        "permissions": [
+                            "read"
+                        ]
+                    }
+                ]
             }
-          }
         }
-      },
-      "attributes": {
-        "category": "Cloud Storage",
-        "connectorName": "Azure File Storage",
-        "isSource": true,
-        "uiAttributes": {
-          "apiFeatures": {
-            "explorePaginationSupported": false
-          }
-        }
-      },
-      "permissionsInfo": {
-        "view": [
-          {
-            "@type": "lowLevel",
-            "name": "EnterpriseSource",
-            "permissions": [
-              "read"
-            ]
-          }
-        ],
-        "manage": [
-          {
-            "@type": "lowLevel",
-            "name": "EnterpriseSource",
-            "permissions": [
-              "write"
-            ]
-          }
-        ]
-      }
-    }
-  ]
+    ]
 }
 ```
 
