@@ -1,11 +1,16 @@
 ---
-title: Connect Your Salesforce Marketing Cloud Account To Experience Platform Using the UI
-description: Learn how to connect your Salesforce Marketing Cloud account to Experience Platform using the UI.
+title: Connect Your Salesforce Marketing Cloud Account To Experience Platform Through the UI
+description: Learn how to connect your Salesforce Marketing Cloud account to Experience Platform through the UI.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
 ---
-# Connect your [!DNL Salesforce Marketing Cloud] account to Experience Platform using the UI
+# Connect your [!DNL Salesforce Marketing Cloud] account to Experience Platform through the UI
 
-This tutorial provides steps on how to connect your [!DNL Salesforce Marketing Cloud] account to Adobe Experience Platform using the UI.
+>[!IMPORTANT]
+>
+>Custom object ingestion is currently not supported by the [!DNL Salesforce Marketing Cloud] source integration.
+
+
+This tutorial provides steps on how to connect your [!DNL Salesforce Marketing Cloud] account to Adobe Experience Platform through the UI.
 
 ## Getting started
 
@@ -59,13 +64,3 @@ If you already have an existing account, select **[!UICONTROL Existing account]*
 ## Next steps
 
 By following this tutorial, you have established a connection between your [!DNL Salesforce Marketing Cloud] account and Experience Platform. You can now continue on to the next tutorial and [create a dataflow to bring your marketing automation data into Experience Platform](../../dataflow/marketing-automation.md).
-
-## Appendix
-
-This section provides additional information on the [!DNL Salesforce Marketing Cloud] source.
-
-### Limitations
-
->[!WARNING]
->
->Custom object ingestion is currently not supported by the [!DNL Salesforce Marketing Cloud] source integration.

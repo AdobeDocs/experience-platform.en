@@ -21,7 +21,7 @@ You can request for scopes by making a call to the `v2/userinfo` resource of the
 
 For more information on scopes including a list of their related permissions and behaviors, see this [[!DNL Salesforce Marketing Cloud] REST API document](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>).
 
->[!WARNING]
+>[!IMPORTANT]
 >
 >Custom object ingestion is currently not supported by the [!DNL Salesforce Marketing Cloud] source integration.
 

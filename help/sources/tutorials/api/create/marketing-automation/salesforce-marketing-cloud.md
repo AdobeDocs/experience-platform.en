@@ -5,6 +5,10 @@ exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
 ---
 # Create a [!DNL Salesforce Marketing Cloud] base connection using the [!DNL Flow Service] API
 
+>[!IMPORTANT]
+>
+>Custom object ingestion is currently not supported by the [!DNL Salesforce Marketing Cloud] source integration.
+
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
 This tutorial walks you through the steps to create a base connection for [!DNL Salesforce Marketing Cloud] using the [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
@@ -100,14 +104,3 @@ By following this tutorial, you have created a [!DNL Salesforce Marketing Cloud]
 
 * [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
 * [Create a dataflow to bring marketing automation data to Platform using the [!DNL Flow Service] API](../../collect/marketing-automation.md)
-
-## Appendix
-
-This section provides additional information on the [!DNL Salesforce Marketing Cloud] source.
-
-### Limitations
-
->[!WARNING]
->
->Custom object ingestion is currently not supported by the [!DNL Salesforce Marketing Cloud] source integration.
-
