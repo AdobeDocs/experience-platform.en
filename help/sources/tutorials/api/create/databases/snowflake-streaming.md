@@ -78,7 +78,7 @@ curl -X POST \
 | `auth.params.username` | The username for your [!DNL Snowflake] streaming account. |
 | `auth.params.schema` | (Optional) The database schema associated with your [!DNL Snowflake] streaming account. |
 | `auth.params.password` | The password for your [!DNL Snowflake] streaming account. |
-| `auth.params.role` | (Optional) The role of the user for this [!DNL Snowflake] connection. If unprovided, this value defaults to `public`.
+| `auth.params.role` | (Optional) The role of the user for this [!DNL Snowflake] connection. If unprovided, this value defaults to `public`. |
 | `connectionSpec.id` | The [!DNL Snowflake] connection specification ID: `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
 **Response**
