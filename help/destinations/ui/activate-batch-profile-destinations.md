@@ -125,7 +125,7 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
 ### Export incremental files {#export-incremental-files}
 
-Select **[!UICONTROL Export incremental files]** to trigger an export where the first file is a full snapshot of all profile qualifications for the selected segment, and subsequent files are incremental profile qualifications since the previous export.
+Select **[!UICONTROL Export incremental files]** to trigger an export where the first file is a full snapshot of all profile qualifications for the selected audience, and subsequent files are incremental profile qualifications since the previous export.
 
 >[!IMPORTANT]
 >
@@ -159,7 +159,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 >title="Configure file name"
 >abstract="For file-based destinations, a unique file name is generated per audience. Use the file name editor to create and edit a unique file name or keep the default name."
 
-For most destinations, the default file names consist of destination name, segment ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files. Note that some destination developers might select to have different default file name append options shown for their destinations.
+For most destinations, the default file names consist of destination name, audience ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files. Note that some destination developers might select to have different default file name append options shown for their destinations.
 
 Select the pencil icon to open a modal window and edit the file names. File names are limited to 255 characters.
 
@@ -177,13 +177,13 @@ The destination name and audience ID cannot be removed from file names. In addit
 
 |File name option | Description |
 |---------|----------|
-| **[!UICONTROL Audience name]** | The name of the exported segment. |
+| **[!UICONTROL Audience name]** | The name of the exported audience. |
 | **[!UICONTROL Date and time]** | Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export. |
 | **[!UICONTROL Custom text]** | Any custom text that you want to add to the file names. |
 | **[!UICONTROL Destination ID]** | The ID of the destination dataflow you use to export the segment. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
 | **[!UICONTROL Destination name]** | The name of the destination dataflow you use to export the segment. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
 | **[!UICONTROL Organization name]** | Your organization name within Experience Platform. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
-| **[!UICONTROL Sandbox name]** | The ID of the sandbox you use to export the segment. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
+| **[!UICONTROL Sandbox name]** | The ID of the sandbox you use to export the audience. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
 
 {style="table-layout:auto"}
 
@@ -453,19 +453,25 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 
 Selecting identity namespaces for export, as shown in the image below, is currently not supported. Selecting any identity namespaces for export will result in an error in the **[!UICONTROL Review]** step.
 
-![Unsupported mapping showing identity exports](/help/destinations/assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+![Unsupported mapping showing identity exports](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
 As a temporary workaround if you need to add identity namespaces to your exported files during the beta, you can either:
 * Use the legacy cloud storage destinations for the dataflows where you want to include identity namespaces in the exports
 * Upload identities as attributes into Experience Platform, to then export them to your cloud storage destinations.
 
-## (Beta) Select enrichment attributes {#select-enrichment-attributes}
+## Select enrichment attributes {#select-enrichment-attributes}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_exclude_enrichment_attributes"
+>title="Exclude enrichment attributes"
+>abstract="Enable this option to export the profiles from the selected custom uploaded audiences to your destination, while excluding all of their attributes."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="Learn more in documentation"
 
 >[!IMPORTANT]
 >
 >This step is displayed only if you selected **[!UICONTROL Custom upload]** audiences during the [audience selection](#select-audiences) step.
 
-Enrichment attributes correspond to the profiles ingested in Experience Platform as **[!UICONTROL Custom uploads]**. In this step, you can select which attributes you would like to export to your destination, for each selected external audience.
+Enrichment attributes correspond to custom uploaded audiences ingested in Experience Platform as **[!UICONTROL Custom uploads]**. In this step, you can select which attributes you would like to export to your destination, for each selected external audience.
 
 ![UI image showing the enrichment attributes selection step.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes-step.png)
 
@@ -480,7 +486,7 @@ Follow the steps below to select enrichment attributes for each external audienc
 5. After you have added all the attributes that you want to export, select **[!UICONTROL Save and close]**.
 6. Repeat these steps for each external audience.
 
-If you want to activate external audiences to your destinations without exporting any attribute, enable the **[!UICONTROL Exclude enrichment attributes]** toggle. This will export the profiles from the external audiences, but none of their corresponding attributes will be sent to your destination.
+If you want to activate external audiences to your destinations without exporting any attribute, enable the **[!UICONTROL Exclude enrichment attributes]** toggle. This will export the profiles from the external audiences, but none of their corresponding attributes are sent to your destination.
 
 ![UI image showing the exclude enrichment attributes toggle.](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png)
 
@@ -507,11 +513,11 @@ In the **[!UICONTROL Review]** step, Experience Platform also checks for any dat
  
 ![data policy violation](../assets/common/data-policy-violation.png)
 
-### Filter segments {#filter-segments}
+### Filter audiences {#filter-segments}
 
 Also in this step you can use the available filters on the page to display only the segments whose schedule or mapping has been updated as part of this workflow. You can also toggle which table columns you want to see. 
 
-![Screen recording showing the available segment filters in the review step.](/help/destinations/assets/ui/activate-batch-profile-destinations/filter-segments-batch-review.gif)
+![Screen recording showing the available segment filters in the review step.](../assets/ui/activate-batch-profile-destinations/filter-segments-batch-review.gif)
 
 If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
