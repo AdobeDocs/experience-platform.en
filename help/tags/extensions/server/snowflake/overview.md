@@ -19,7 +19,7 @@ A Snowflake account can be hosted on any of the following cloud platforms:
 
 Please refer to the [[!DNL AWS] overview](../aws/overview.md) for more information on installing the extension and configuring event forwarding rules. 
 
-- [Microsoft Azure ([!DNL Azure])]((https://azure.microsoft.com/en-us/products/event-hubs/#overview)) - [!DNL Azure] is a cloud computing platform and an online portal that allows you to access and manage cloud services and resources provided by Microsoft. 
+- [Microsoft Azure ([!DNL Azure])](https://azure.microsoft.com/en-us/products/event-hubs/#overview) - [!DNL Azure] is a cloud computing platform and an online portal that allows you to access and manage cloud services and resources provided by Microsoft. 
 
 Please refer to the [[!DNL Azure] overview](../azure/overview.md) for more information on installing the extension and configuring event forwarding rules. 
 
