@@ -559,6 +559,8 @@ A successful response returns the flow spec information for your source. To veri
 
 +++
 
+>[!ENDTABS]
+
 
 
 ## Create a draft base connection {#create-a-draft-base-connection}
