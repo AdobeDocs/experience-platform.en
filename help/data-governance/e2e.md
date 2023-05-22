@@ -66,7 +66,7 @@ Continue following the above steps to apply labels to different fields (or diffe
 
 Select **[!UICONTROL Dataset]** in the left navigation, then select the name of the dataset you want to migrate labels from. You can optionally use the search field to narrow down the list of displayed datasets.
 
-![Image showing a dataset being selected in the Platform UI](./images/e2e/select-dataset.png)
+![The Browse tab of the Datasets workspace with the Loyalty Members Dataset highlighted.](./images/e2e/select-dataset.png)
 
 The details view for the dataset appears. Select the **[!UICONTROL Data governance]** tab to view a list of the dataset's fields and any labels that have already been applied to them. Select the cancel icon next to any label that you want to remove from a field. A confirmation dialog appears, select [!UICONTROL Remove label] to confirm your choices.
 
