@@ -110,8 +110,8 @@ curl -X POST \
           "specName": "Topic & Subscription Based Authentication",
           "params": {
               "credentials": "{CREDENTIALS}",
-              "topicName": "projects/{PROJECT_ID}/topics/{TOPIC_NAME}",
-              "subscriptionName": "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}"
+              "topicName": "projects/{PROJECT_ID}/topics/{TOPIC_ID}",
+              "subscriptionName": "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}"
           }
       },
       "connectionSpec": {
@@ -124,8 +124,8 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `auth.params.credentials` | The credential or key required to authenticate [!DNL PubSub]. |
-| `auth.params.topicName` | The topic name of your [!DNL PubSub] source that you want to provide access to. |
-| `auth.params.subscriptionName` | The name of the subscription against your [!DNL PubSub] topic. |
+| `auth.params.topicName` | The project ID and topic ID pair for the [!DNL PubSub] source that you want to provide access to. |
+| `auth.params.subscriptionName` | The project ID and subscription ID pair for the [!DNL PubSub] source that you want to provide access to. |
 | `connectionSpec.id` | The [!DNL PubSub] connection spec ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 >[!ENDTABS]
@@ -175,8 +175,8 @@ curl -X POST \
           "format": "json"
       },
       "params": {
-          "topicId": "projects/{PROJECT_ID}/topics/{TOPIC_NAME}",
-          "subscriptionId": "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}",
+          "topicName": "projects/{PROJECT_ID}/topics/{TOPIC_ID}",
+          "subscriptionName": "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}",
           "dataType": "raw"
       }
   }'
