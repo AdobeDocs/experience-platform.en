@@ -1,8 +1,15 @@
 ---
 title: Connect Your Snowflake Streaming Account to Adobe Experience Platform
 description: Learn how to connect Adobe Experience Platform to Snowflake Streaming using the Flow Service API.
+badgeBeta: label="Beta" type="Informative"
+badgeUltimate: label="Ultimate" type="Positive"
 ---
 # Stream [!DNL Snowflake] data to Experience Platform using the [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>* The [!DNL Snowflake] streaming source is in beta. Please read the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>* The [!DNL Snowflake] streaming source is available in the sources catalog for customers who have purchased Real-Time CDP Ultimate.
 
 This tutorial provides steps on how to connect and stream data from your [!DNL Snowflake] account to Adobe Experience Platform using the [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
@@ -65,12 +72,13 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `auth.params.account` | 
-| `auth.params.database` |
-| `auth.params.warehouse` |
-| `auth.params.schema` |
-| `auth.params.password` |
-| `auth.params.role` |
+| `auth.params.account` | The name of your [!DNL Snowflake] streaming account. |
+| `auth.params.database` | The name of your [!DNL Snowflake] database where data will be pulled from. |
+| `auth.params.warehouse` | The name of your [!DNL Snowflake] warehouse. The [!DNL Snowflake] warehouse manages the query execution process for the application. Each warehouse is independent from one another and must be accessed individually when bringing data over to Platform. |
+| `auth.params.username` | The username for your [!DNL Snowflake] streaming account. |
+| `auth.params.schema` | (Optional) The database schema associated with your [!DNL Snowflake] streaming account. |
+| `auth.params.password` | The password for your [!DNL Snowflake] streaming account. |
+| `auth.params.role` | (Optional) The role of the user for this [!DNL Snowflake] connection. If unprovided, this value defaults to `public`.
 | `connectionSpec.id` | The [!DNL Snowflake] connection specification ID: `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
 **Response**
@@ -165,6 +173,13 @@ curl -X POST \
   }'
 ```
 
+| Property | Description |
+| --- | --- |
+| `baseConnectionId` | The authenticated base connection ID for your [!DNL Snowflake] streaming source. This ID was generated in an earlier step. |
+| `connectionSpec.id` | The connection spec ID for the [!DNL Snowflake] streaming source. |
+| `params.tableName` | The name of the table in your [!DNL Snowflake] database that you want to bring to Platform. |
+| `params.timestampColumn` | The name of the timestamp column that will be used to fetch incremental values. |
+
 **Response**
 
 A successful response returns your source connection ID and its corresponding etag. The source connection ID will be used in a later step to create a dataflow.
@@ -208,7 +223,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Snowflake Streaming",
+      "name": "Snowflake Streaming Dataflow",
+      "description": "A dataflow for Snowflake streaming data",
       "sourceConnectionIds": [
         "61c0c5f1-bfe5-40f7-8f8c-a4dc175ddac6"
       ],
@@ -231,6 +247,13 @@ curl -X POST \
     }'
 ```
 
+| Property | Description |
+| --- | --- |
+| `sourceConnectionIds` | The source connection ID for your [!DNL Snowflake] streaming source. |
+| `targetConnectionIds` | The target connection ID for your [!DNL Snowflake] streaming source. |
+| `flowSpec.id` | The flow spec ID to create a dataflow for a [!DNL Snowflake] streaming source. This flow spec ID allows you to create a streaming dataflow with mapping transformations. This ID is fixed and is: `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. |
+| `transformations.params.mappingId` | The mapping ID for your dataflow. |
+
 **Response**
 
 A successful response returns your flow ID and its corresponding etag.
@@ -241,3 +264,10 @@ A successful response returns your flow ID and its corresponding etag.
     "etag": "\"770029f8-0000-0200-0000-6019e7d40000\""
 }
 ```
+
+## Next steps
+
+By following this tutorial, you have created a streaming dataflow for your [!DNL Snowflake] data using the [!DNL Flow Service] API. Visit the following documentation for additional information on Adobe Experience Platform Sources:
+
+* [Sources overview](../../../../home.md)
+* [Monitor your dataflow using APIs](../../monitor.md)
