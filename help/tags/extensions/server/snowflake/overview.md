@@ -7,7 +7,7 @@ last-substantial-update: 2023-05-24
 
 [[!DNL Snowflake]](https://www.snowflake.com/en/) is a cloud data warehouse that can store and analyze all your data records in one place. It can be used for data warehousing, data lakes, data engineering, data science, data application development, and secure sharing and consumption of real-time or shared data.
 
-[!Snowflake] is built on top of the Amazon Web Services (AWS), Microsoft Azure (Azure), and Google Cloud Platform (GCP).  
+[!DNL Snowflake] is built on top of the Amazon Web Services (AWS), Microsoft Azure (Azure), and Google Cloud Platform (GCP).  
 
 ![Diagram showing the [!DNL Snowflake] data architecture.](../../../images/extensions/server/snowflake/architecture.png)
 
@@ -15,11 +15,11 @@ last-substantial-update: 2023-05-24
 
 A Snowflake account can be hosted on any of the following cloud platforms:
 
-- [Amazon Web Services ([!AWS])](https://aws.amazon.com/) - [!DNL AWS] is a cloud computing platform that offers a wide variety of services such as distributed computing, database storage, content delivery, and software-as-a-service (SaaS) integration services for customer relationship management (CRM) and enterprise resource planning (ERP). 
+- [Amazon Web Services ([!DNL AWS])](https://aws.amazon.com/) - [!DNL AWS] is a cloud computing platform that offers a wide variety of services such as distributed computing, database storage, content delivery, and software-as-a-service (SaaS) integration services for customer relationship management (CRM) and enterprise resource planning (ERP). 
 
 Please refer to the [[!DNL AWS] overview](../aws/overview.md) for more information on installing the extension and configuring event forwarding rules. 
 
-- [Microsoft Azure ([!Azure])]((https://azure.microsoft.com/en-us/products/event-hubs/#overview)) - [!DNL Azure] is a cloud computing platform and an online portal that allows you to access and manage cloud services and resources provided by Microsoft. 
+- [Microsoft Azure ([!DNL Azure])]((https://azure.microsoft.com/en-us/products/event-hubs/#overview)) - [!DNL Azure] is a cloud computing platform and an online portal that allows you to access and manage cloud services and resources provided by Microsoft. 
 
 Please refer to the [[!DNL Azure] overview](../azure/overview.md) for more information on installing the extension and configuring event forwarding rules. 
 
