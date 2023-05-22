@@ -88,20 +88,20 @@ The guardrails below apply to activation through [edge personalization destinati
 
 {style="table-layout:auto"}
 
-### Dataset exports {#dataset-exports}
+## Dataset exports {#dataset-exports}
 
 Dataset exports are currently supported in a "First Full and then Incremental" [pattern](/help/destinations/ui/export-datasets.md#scheduling). The guardrails described in this section apply to the first full export that occurs after a dataset export workflow is set up.
 
-## Dataset Types {#dataset-types}
+### Dataset Types {#dataset-types}
 
 Datasets exported from Experience Platform can be of two types, as described below:
 
 **Timeseries**
-Timeseries datasets are also known as *XDM Experience Events* in Experience Platform terminology.
+Timeseries datasets are also known as *XDM Experience Events* datasets in Experience Platform terminology.
 The Dataset schema includes a top level *timestamp* column. Data is ingested in an append-only fashion.
 
 **Record** 
-Record datasets are also known as *XDM Individual Profile* in Experience Platform terminology.
+Record datasets are also known as *XDM Individual Profile* datasets in Experience Platform terminology.
 The Dataset schema does not include a top level *timestamp* column. Data is ingested in upsert fashion.
 
 The guardrails below are grouped by the format of the exported file, and then further by dataset type.
@@ -120,7 +120,7 @@ The guardrails below are grouped by the format of the exported file, and then fu
 |Dataset type | Compression | Guardrail | Description |
 |---------|----------|---------|-----------|
 | Timeseries | N/A | Last seven days per file | The data from the last seven days only is exported. |
-| Record | <ul><li>Yes</li><li>No</li></ul> | <ul><li>Five billion records per compressed file</li><li>One million records per uncompressed file</li></ul> | The record count of the dataset must be less than five billion for compressed files and one million for uncompressed files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
+| <p>Record</p> | <p><ul><li>Yes</li><li>No</li></ul></p> | <p><ul><li>Five billion records per compressed file</li><li>One million records per uncompressed file</li></ul></p> | <p>The record count of the dataset must be less than five billion for compressed files and one million for uncompressed files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</p> |
 
 {style="table-layout:auto"}
 
