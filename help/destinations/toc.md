@@ -31,9 +31,9 @@ feature: Destinations
     * [Create a new destination connection](./ui/connect-destination.md)
     * Activate audience data to destinations{#activate}
         * [Activation overview](./ui/activation-overview.md)
-        * [Activate audience data to streaming segment export destinations](./ui/activate-segment-streaming-destinations.md)
-        * [Activate audience data to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
-        * [Activate audience data to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
+        * [Activate audiences to streaming destinations](./ui/activate-segment-streaming-destinations.md)
+        * [Activate audiences to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
+        * [Activate audiences to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
         * [Activate audience data to profile request destinations](./ui/activate-profile-request-destinations.md)
         * [Configure personalization destinations for same-page and next-page personalization](./ui/configure-personalization-destinations.md)
         * [(Beta) Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)

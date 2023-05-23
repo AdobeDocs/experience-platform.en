@@ -1,6 +1,6 @@
 ---
 keywords: activate audience streaming destinations;activate audience streaming destinations;activate data
-title: Activate audience data to streaming audience export destinations
+title: Activate audience data to streaming destinations
 type: Tutorial
 description: Learn how to activate the audiences you have in Adobe Experience Platform by mapping them to streaming destinations.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
@@ -10,8 +10,8 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 
 >[!IMPORTANT]
 > 
-> * To activate data and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
-> * To activate data without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+> * To activate audiences and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+> * To activate audiences without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 > 
 > Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
