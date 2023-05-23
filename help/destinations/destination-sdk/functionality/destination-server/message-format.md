@@ -1021,6 +1021,20 @@ Add the line below to the template to access the exported profiles grouped by au
 customerList={{input.aggregationKey.segmentAlias}}
 ```
 
+#### Use audience namespace aggregation key in the template {#aggregation-key-audience-namespace}
+
+If you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) and set `includeSegmentId` to true, you can also access audience namespaces in the template.
+
+Add the line below to the template to access the exported profiles grouped by audience namespace.
+
+
+Add the line below to the template to access the exported profiles grouped by audience alias.
+
+```python
+audienceNamespace={{input.aggregationKey.segmentNamespace}}
+```
+
+
 #### Use audience status aggregation key in the template {#aggregation-key-segment-status}
 
 If you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) and set `includeSegmentId` and `includeSegmentStatus` to true, you can access the audience status in the template. This way, you can group profiles in the HTTP messages exported to your destination based on whether the profiles should be added or removed from audiences.
