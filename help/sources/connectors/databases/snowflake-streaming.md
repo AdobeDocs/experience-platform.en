@@ -29,20 +29,38 @@ In order for [!DNL Flow Service] to connect with [!DNL Snowflake], you must prov
 
 | Credential | Description |
 | --- | --- |
-| `account` | The full account name associated with your [!DNL Snowflake] account. A fully qualified [!DNL Snowflake] account name includes your account name, region, and cloud platform. For example, `cj12345.east-us-2.azure`. For more information on account names, refer to this [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html).  |
+| `account` | The full account name associated with your [!DNL Snowflake] account. A fully qualified [!DNL Snowflake] account name includes your account name, region, and cloud platform. For example, `cj12345.east-us-2.azure`. For more information on account names, refer to this [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>).  |
 | `warehouse` | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Platform. |
 | `database` | The [!DNL Snowflake] database contains the data you want to bring the Platform. |
 | `username` | The username for the [!DNL Snowflake] account. |
 | `password` | The password for the [!DNL Snowflake] user account. |
+| `role` | (Optional) A custom-defined role that can be provided for a user, for a given connection. If unprovided, this value defaults to `public`. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Snowflake] is `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
 For more information about authentication, refer to this [[!DNL Snowflake] document](<https://docs.snowflake.com/en/user-guide/key-pair-auth.html>).
 
+### Configure role settings {#configure-role-settings}
+
+You must configure privileges to a role, even if the default public role is assigned, to allow your source connection to access the relevant [!DNL Snowflake] database, schema, and table. The various privileges for different [!DNL Snowflake] entities is as follows:
+
+| [!DNL Snowflake] entity | Require role privilege |
+| --- | --- |
+| Warehouse | OPERATE, USAGE |
+| Database | USAGE |
+| Schema | USAGE |
+| Table | SELECT |
+
+For more information on role and privilege management, refer to the [[!DNL Snowflake] API reference](<https://docs.snowflake.com/en/sql-reference/sql/grant-privilege>).
 
 ## Limitations and frequently asked questions
 
-* The data transfer throughput when streaming data from the [!DNL Snowflake] source is 30 MBps, per connection, for big records (~30 KB).
-    * As the size of the record decreases, the write throughput per record increases, but the data transfer throughput decreases.
+* The data throughput for the [!DNL Snowflake] source is 2000 records per second.
+* [!DNL Snowflake] pricing can vary depending on the amount of time that a warehouse is active and the size of the warehouse. For the [!DNL Snowflake] source integration, the smallest size, x-small warehouse is sufficient. The poll frequency is high and the warehouse will be active all the time. This means the cost will be 2 to 3 US dollars per hour, depending on the region and cloud provider of the [!DNL Snowflake] instance.
+* Configuration options:
+    * The [!DNL Snowflake] source polls the database for new data every 10 seconds.
+    * You can enable a `backfill` boolean flag for your [!DNL Snowflake] source when creating a source connection.
+        * If backfill is set to true, then the value for timestamp.initial is set to 0. This means that data with a timestampColumn that's greater than 0 epoch time are fetched.
+        * If backfill is set to false, then the value for timestamp.initial is set to -1. This means that data with a timestampColumn greater than the current time (the time in which the source begins ingesting) are fetched.
 
 ## Next steps
 
