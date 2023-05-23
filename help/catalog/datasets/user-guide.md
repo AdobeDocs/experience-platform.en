@@ -32,32 +32,72 @@ In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the le
 
 ![An image that highlights the Datasets item within the left navigation bar.](../images/datasets/user-guide/browse-datasets.png)
 
-By default, only the datasets that you have ingested into are shown. If you want to see the system-generated datasets, enable the **[!UICONTROL Show system datasets]** toggle. System-generated datasets are only used to process other components. For example, the system-generated profile export dataset is used to process the profile dashboard.
-
-![The toggle that lets you choose whether or not system datasets should be displayed is highlighted.](../images/datasets/user-guide/system-datasets.png)
-
-Select the name of a dataset to access its **[!UICONTROL Dataset activity]** screen and see details of the dataset you selected. The activity tab includes a graph visualizing the rate of messages being consumed as well as a list of successful and failed batches.
+Select the name of a dataset from the [!UICONTROL Browse] tab to access its **[!UICONTROL Dataset activity]** screen and see details of the dataset you selected. The activity tab includes a graph visualizing the rate of messages being consumed as well as a list of successful and failed batches.
 
 ![Details of your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-1.png)
 ![Sample batches that belong to your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-2.png)
 
-## Manage dataset tags {#manage-tags}
+## Add dataset tags {#add-tags}
 
-Add content here.
+You can organize datasets and add custom created tags to improve search, filtering, and sorting capabilities. From the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace, select the ellipsis of a dataset that you want to manage followed by **[!UICONTROL Manage tags]** from the dropdown menu.
 
-### Search and filter dataset tags {#search-and-filter}
+![The Browse tab of the Datasets workspace with the ellipsis and Manage tags option highlighted for the chosen dataset.](../images/datasets/user-guide/manage-tags.png)
 
-Add content here.
+The [!UICONTROL Manage tags] dialog appears. Enter a short description to create a custom tag, or choose from a pre-existing tag to label your dataset. Select **[!UICONTROL Save]** to confirm your settings.
 
-## Preview a dataset
+![The Manage tags dialog with custom tags highlighted.](../images/datasets/user-guide/manage-tags-dialog.png)
 
-From the **[!UICONTROL Dataset activity]** screen, select **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data. If the dataset is empty, the preview link will be deactivated and will instead say that the preview is not available.
+The [!UICONTROL Manage tags] dialog can also remove existing tags from a dataset. Simply select the 'x' next to the tag you wish to remove and select **[!UICONTROL Save]**.  
+
+## Search and filter datasets {#search-and-filter}
+
+To search or filter the list of available datasets, select the filter icon (![The filter icon.](../images/datasets/user-guide/icon.png)) at the top left of the workspace. A set of filter options in the left rail appears. There are several methods to filter your available datasets. These include [!UICONTROL Show System Datasets], [!UICONTROL Included in Profile], [!UICONTROL Tags], [!UICONTROL Creation date], [!UICONTROL Modified date], [!UICONTROL Created by], and [!UICONTROL Schema].
+
+### Filter datasets by tags
+
+Enter your custom tag name in the [!UICONTROL Tags] input.
+
+![The filter options of the Datasets workspace with the [!UICONTROL Tags] input and filter icon highlighted.](../images/datasets/user-guide/filter-tags.png)
+
+Choose your tag from the list of available options to search and filter datasets that correspond to that tag. 
+
+### Show system datasets
+
+By default, only the datasets that you have ingested data into are shown. If you want to see the system-generated datasets, select the **[!UICONTROL Yes]** checkbox in the [!UICONTROL Show system datasets]** section. System-generated datasets are only used to process other components. For example, the system-generated profile export dataset is used to process the profile dashboard.
+
+![The filter options of the Datasets workspace with the [!UICONTROL Show system datasets] section highlighted.](../images/datasets/user-guide/show-system-datasets.png)
+
+### Filter Profile enabled datasets
+
+The datasets that have been enabled for Profile data are used to populate customer profiles after data has been ingested. See the section  on [enabling datasets for Profile](#enable-profile) to learn more. 
+
+To filter your dataset based on whether they have been enabled for Profile select the [!UICONTROL Yes] check box from the filter options.
+
+![The filter options of the Datasets workspace with the [!UICONTROL Included in Profile] section highlighted.](../images/datasets/user-guide/included-in-profile.png)
+
+The list of applied filters are displayed above the filtered results.
+
+![The Browse tab of the Datasets workspace with the list of applied filters highlighted.](../images/datasets/user-guide/applied-filters.png)
+
+## Sort datasets by created date {#sort}
+
+Datasets in the Brose tab can be sorted by either ascending or descending dates. Select the [!UICONTROL Created] or [!UICONTROL Last updated] column headings to alternate between ascending and descending. Once selected, the column indicates this with either an up or down arrow to the side of the column header.
+
+![The Browse tab of the Datasets workspace with the Created and Last updated column highlighted.](../images/datasets/user-guide/ascending-descending-columns.png)
+
+## Preview a dataset {#preview}
+
+You can preview dataset sample data from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] tab, select the ellipses next to the dataset name you wish to preview. A menu list of options appear. Select **[!UICONTROL Preview dataset]** from the list of available options. If the dataset is empty, the preview link will be deactivated and will instead say that the preview is not available.
+
+![The Browse tab of the Datasets workspace with the ellipsis and Preview dataset option highlighted for the chosen dataset.](../images/datasets/user-guide/preview-dataset-option.png)
+
+This opens the preview window where the hierarchical view of the schema for the dataset is shown on the right.
+
+![The dataset preview dialog with information about the structure, as well as sample values, for the dataset are shown.](../images/datasets/user-guide/preview-dataset.png)
+
+Alternatively, from the **[!UICONTROL Dataset activity]** screen, select **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data. 
 
 ![The Preview dataset button is highlighted.](../images/datasets/user-guide/select-preview.png)
-
-In the preview window, the hierarchical view of the schema for the dataset is shown on the right.
-
-![A preview of the dataset is displayed. Information about the structure, as well as sample values, are shown.](../images/datasets/user-guide/preview-dataset.png)
 
 For more robust methods to access your data, [!DNL Experience Platform] provides downstream services such as [!DNL Query Service] and [!DNL JupyterLab] to explore and analyze data. See the following documents for more information:
 
