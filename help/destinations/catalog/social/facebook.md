@@ -10,7 +10,7 @@ exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 
 Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization, and suppression based on hashed emails.
 
-You can use this destination for audience targeting across [!DNL Facebook’s] family of apps that are supported by [!DNL Custom Audiences], including [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], and [!DNL Messenger]. Selection of the app that you want to run campaign against is indicated at the placement level in [!DNL Facebook Ads Manager].
+You can use this destination for audience targeting across [!DNL Facebook's] family of apps that are supported by [!DNL Custom Audiences], including [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], and [!DNL Messenger]. Selection of the app that you want to run campaign against is indicated at the placement level in [!DNL Facebook Ads Manager].
 
 ![Facebook destination in the Adobe Experience Platform UI](../../assets/catalog/social/facebook/catalog.png)
 
@@ -41,6 +41,17 @@ Next, they can use their offline data including associated membership IDs and cu
 |phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 |extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
+
+## Supported audiences {#supported-audiences}
+
+Refer to the table below for information about the types of audiences supported by this destination.
+
+| Audience type | Audience example | Supported by this destination |
+---------|----------|---------|
+| Platform-generated audiences | Audiences generated within Experience Platform, through the [Segmentation Service](../../../segmentation/home.md). | Yes|
+| External audiences | Audiences ingested into Experience Platform from external sources, such as CSV files, or other Adobe solutions, such as Audience Manager or Customer Journey Analytics.  | Yes |
+
+{style="table-layout:auto"}
 
 ## Export type and frequency {#export-type-frequency}
 

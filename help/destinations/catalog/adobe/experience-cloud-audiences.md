@@ -90,6 +90,17 @@ The profiles that are exported to the [!UICONTROL Experience Cloud Audiences] de
 
 {style="table-layout:auto"}
 
+## Supported audiences {#supported-audiences}
+
+Refer to the table below for information about the types of audiences supported by this destination.
+
+| Audience type | Audience example | Supported by this destination |
+---------|----------|---------|
+| Platform-generated audiences | Audiences generated within Experience Platform, through the [Segmentation Service](../../../segmentation/home.md). | Yes|
+| External audiences | Audiences ingested into Experience Platform from external sources, such as CSV files, or other Adobe solutions, such as Audience Manager or Customer Journey Analytics.  | Yes |
+
+{style="table-layout:auto"}
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
