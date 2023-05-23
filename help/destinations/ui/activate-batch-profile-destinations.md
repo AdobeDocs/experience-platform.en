@@ -1,16 +1,17 @@
 ---
 keywords: activate profile destinations;activate destinations;activate data; activate email marketing destinations; activate cloud storage destinations
-title: Activate audience data to batch profile export destinations
+title: Activate audiences to batch profile export destinations
 type: Tutorial
-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
+description: Learn how to activate the audiences you have in Adobe Experience Platform by sending them to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 ---
-# Activate audience data to batch profile export destinations
+
+# Activate audiences to batch profile export destinations
 
 >[!IMPORTANT]
 > 
-> * To activate data and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
-> * To activate data without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+> * To activate audiences and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+> * To activate audiences without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 > 
 > Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >
@@ -18,11 +19,11 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 
 ## Overview {#overview}
 
-This article explains the workflow required to activate audience data in Adobe Experience Platform batch profile-based destinations, such as cloud storage and email marketing destinations.
+This article explains the workflow required to activate audiences in Adobe Experience Platform batch profile-based destinations, such as cloud storage and email marketing destinations.
 
 ## Prerequisites {#prerequisites}
 
-To activate data to destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
+To activate audiences to destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 
 ## Select your destination {#select-destination}
 
@@ -32,7 +33,7 @@ To activate data to destinations, you must have successfully [connected to a des
 
 1. Select **[!UICONTROL Activate audiences]** on the card corresponding to the destination where you want to activate your audiences, as shown in the image below.
 
-    ![Image highlighting the Activate audiences button](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
+    ![Image highlighting the Activate audiences button](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
 1. Select the destination connection that you want to use to activate your audiences, then select **[!UICONTROL Next]**.
 
@@ -44,7 +45,7 @@ To activate data to destinations, you must have successfully [connected to a des
 
 Use the check boxes to the left of the audience names to select the audiences that you want to activate to the destination, then select **[!UICONTROL Next]**.
 
-![Image highlighting how to select one or multiple segments to activate](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
+![Image highlighting how to select one or multiple audiences to activate](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
@@ -129,7 +130,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 
 >[!IMPORTANT]
 >
->The first exported incremental file includes all profiles that qualify for a segment, functioning as a backfill.
+>The first exported incremental file includes all profiles that qualify for an audience, functioning as a backfill.
 
 ![Image of the UI with the Export incremental files toggle selected.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
@@ -180,8 +181,8 @@ The destination name and audience ID cannot be removed from file names. In addit
 | **[!UICONTROL Audience name]** | The name of the exported audience. |
 | **[!UICONTROL Date and time]** | Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export. |
 | **[!UICONTROL Custom text]** | Any custom text that you want to add to the file names. |
-| **[!UICONTROL Destination ID]** | The ID of the destination dataflow you use to export the segment. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
-| **[!UICONTROL Destination name]** | The name of the destination dataflow you use to export the segment. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
+| **[!UICONTROL Destination ID]** | The ID of the destination dataflow you use to export the audience. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
+| **[!UICONTROL Destination name]** | The name of the destination dataflow you use to export the audience. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
 | **[!UICONTROL Organization name]** | Your organization name within Experience Platform. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
 | **[!UICONTROL Sandbox name]** | The ID of the sandbox you use to export the audience. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
 
@@ -193,7 +194,7 @@ Select **[!UICONTROL Apply changes]** to confirm your selection.
 > 
 >If you don't select the **[!UICONTROL Date and Time]** component, the file names will be static and the new exported file will overwrite the previous file in your storage location with each export. When running a recurring import job from a storage location into an email marketing platform, this is the recommended option.
 
-Once you have finished configuring all your segments, select **[!UICONTROL Next]** to continue.
+Once you have finished configuring all your audiences, select **[!UICONTROL Next]** to continue.
 
 ## Select profile attributes {#select-attributes}
 
@@ -205,7 +206,7 @@ For profile-based destinations, you must select the profile attributes that you 
 
 1. Select the arrow to the right of the **[!UICONTROL Schema field]** entry.
 
-    ![Image highlighting how to select a source field.](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
+    ![Image highlighting how to select a source field.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
 1. In the **[!UICONTROL Select field]** page, select the XDM attributes or identity namespaces that you want to send to the destination, then choose **[!UICONTROL Select]**.
 
@@ -217,17 +218,17 @@ For profile-based destinations, you must select the profile attributes that you 
 >
 > Adobe Experience Platform prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
+![Image showing prefilled recommended attributes in the mapping step of the segment activation workflow.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png) 
+
 >[!IMPORTANT] 
 >
 >Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.status` to your file exports. Instead, you need to manually paste the value `xdm: segmentMembership.status` into the schema field, as shown below.
 >
->![Screen recording showing the segment membership workaround in the mapping step of the activation workflow.](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+>![Screen recording showing the segment membership workaround in the mapping step of the activation workflow.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 File exports will vary in the following ways, depending on whether `segmentMembership.status` is selected:
 * If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
 * If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
-
-![Image showing prefilled recommended attributes in the mapping step of the segment activation workflow.](../assets/ui/activate-batch-profile-destinations/mandatory-deduplication.png) 
 
 ### Mandatory attributes {#mandatory-attributes}
 
@@ -353,7 +354,7 @@ Using no deduplication, the export file would contain the following entries.
 
 ### Deduplication use case 2: deduplication based on identity namespace {#deduplication-use-case-2}
 
-Assuming deduplication by the [!DNL Email] namespace, the export file would contain the following entries. Profile B is the latest one that qualified for the segment, so it is the only one getting exported.
+Assuming deduplication by the [!DNL Email] namespace, the export file would contain the following entries. Profile B is the latest one that qualified for the audience, so it is the only one getting exported.
 
 |Email*|personalEmail|firstName|lastName|
 |---|---|---|---|
@@ -362,7 +363,7 @@ Assuming deduplication by the [!DNL Email] namespace, the export file would cont
 
 ### Deduplication use case 3: deduplication based on a single profile attribute {#deduplication-use-case-3}
 
-Assuming deduplication by the `personal Email` attribute, the export file would contain the following entry. Profile B is the latest one that qualified for the segment, so it is the only one getting exported.
+Assuming deduplication by the `personal Email` attribute, the export file would contain the following entry. Profile B is the latest one that qualified for the audience, so it is the only one getting exported.
 
 |personalEmail*|firstName|lastName|
 |---|---|---|
@@ -385,7 +386,7 @@ Adobe recommends selecting an identity namespace such as a [!DNL CRM ID] or emai
 > 
 >If any data usage labels have been applied to certain fields within a dataset (rather than the entire dataset), enforcement of those field-level labels on activation occurs under the following conditions:
 >
->* The fields are used in the segment definition.
+>* The fields are used in the audience definition.
 >* The fields are configured as projected attributes for the target destination.
 >
 > For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing action, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
@@ -439,11 +440,11 @@ In this step, you must select the profile attributes that you want to add to the
 
 The new **[!UICONTROL Mapping]** page has the following known limitations:
 
-#### Segment membership attribute cannot be selected through the mapping workflow
+#### Audience membership attribute cannot be selected through the mapping workflow
 
 Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.status` to your file exports. Instead, you need to manually paste the value `xdm: segmentMembership.status` into the schema field, as shown below.
 
-![Screen recording showing the segment membership workaround in the mapping step of the activation workflow.](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
+![Screen recording showing the segment membership workaround in the mapping step of the activation workflow.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
 File exports will vary in the following ways, depending on whether `segmentMembership.status` is selected:
 * If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
@@ -496,7 +497,7 @@ Select **[!UICONTROL Next]** to move to the [Review](#review) step.
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
-![Selection summary in the review step.](/help/destinations/assets/ui/activate-batch-profile-destinations/review.png)
+![Selection summary in the review step.](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ### Consent policy evaluation {#consent-policy-evaluation}
 
@@ -509,15 +510,15 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 ### Data usage policy checks {#data-usage-policy-checks}
 
-In the **[!UICONTROL Review]** step, Experience Platform also checks for any data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, read about [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in the data governance documentation section.
+In the **[!UICONTROL Review]** step, Experience Platform also checks for any data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the audience activation workflow until you have resolved the violation. For information on how to resolve policy violations, read about [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in the data governance documentation section.
  
 ![data policy violation](../assets/common/data-policy-violation.png)
 
-### Filter audiences {#filter-segments}
+### Filter audiences {#filter-audiences}
 
-Also in this step you can use the available filters on the page to display only the segments whose schedule or mapping has been updated as part of this workflow. You can also toggle which table columns you want to see. 
+Also in this step you can use the available filters on the page to display only the audiences whose schedule or mapping has been updated as part of this workflow. You can also toggle which table columns you want to see. 
 
-![Screen recording showing the available segment filters in the review step.](../assets/ui/activate-batch-profile-destinations/filter-segments-batch-review.gif)
+![Screen recording showing the available audience filters in the review step.](../assets/ui/activate-batch-profile-destinations/filter-audiences-batch-review.gif)
 
 If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
