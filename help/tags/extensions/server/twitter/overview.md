@@ -35,9 +35,9 @@ The [!DNL Twitter] Web Conversions API has a rate limit of 60,000 requests per 1
 
 In order to connect the Experience Platform to [!DNL Twitter], the following inputs are required:
 
-| Credential | Description |
+| Key Type | Description |
 | --- | --- |
-| Consumer Key |​ The app's API Key for accessing the [!DNL Twitter] API. Refer to the [!DNL Twitter] documentation on [api keys and secrets](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) for guidance. |
+| Consumer Key |​ The app's API Key for accessing the [!DNL Twitter] API. Refer to the [!DNL Twitter] documentation on [api keys and secrets](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) for guidance. | |
 | Consumer Secret | The API Secret allows your app to access the [!DNL Twitter] API. Refer to the [!DNL Twitter] documentation on [api keys and secrets](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) for guidance. |
 | Token Secret | The non-expiring token secret of your app, which is used for authenticating to the [!DNL Twitter] API via OAuth. Refer to the [!DNL Twitter] documentation on [obtaining use access tokens](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) for guidance. |
 | Access Token | The non-expiring access token of your app, which is used for authenticating to the [!DNL Twitter] API via OAuth. Refer to the [!DNL Twitter] documentation on [obtaining use access tokens](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) for guidance. |
@@ -47,59 +47,55 @@ In order to connect the Experience Platform to [!DNL Twitter], the following inp
 
 To install the extension, [create an event forwarding property](../../../ui/event-forwarding/overview.md#properties) or choose an existing property to edit instead.
 
-In the left navigation, select **[!UICONTROL Extensions]**. Select **[!UICONTROL Install]** on the card for the [!DNL Twitter] extension in the **[!UICONTROL Catalog]** tab. 
+Select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL Catalog]** tab, select **[!UICONTROL Install]** on the card for the [!DNL Twitter] extension.
 
-![Installing the [!DNL Twitter] extension.](../../../images/extensions/server/twitter/install.png)
-
-### Configure the [!DNL Twitter] extension
+![Catalog showing the [!DNL Twitter] extension highlighting install.](../../../images/extensions/server/twitter/install.png)
 
 >[!IMPORTANT]
 >
 >Depending on your implementation needs, you may need to create a schema, data elements, and a dataset before configuring the extension. Please review all the configuration steps before starting in order to determine which entities you need to set up for your use case.
 
-In the left navigation, select **[!UICONTROL Extensions]**. Select **[!UICONTROL Configure]** on the card for the [!DNL Twitter] extension in the [!UICONTROL Installed]** tab.
-
-![Configuring the [!DNL Twitter] extension.](../../../images/extensions/server/twitter/configure.png)
-
 On the next screen, input the following [configuration values](#configuration-details) that you previously gathered from [!DNL Twitter]:
 
+* **[!UICONTROL Pixel Id]**
 * **[!UICONTROL Consumer Key]**
 * **[!UICONTROL Consumer Secret]**
+* **[!UICONTROL Token]**
 * **[!UICONTROL Token Secret]**
-* **[!UICONTROL Access Token]**
-* **[!UICONTROL Pixel Id]**
 
 When finished, select **[!UICONTROL Save]**.
 
-![The [!DNL Twitter] extension input.](../../../images/extensions/server/twitter/input.png)
+![[!DNL Twitter] configuration screen for the [!DNL Twitter] extension.](../../../images/extensions/server/twitter/configure.png)
 
 ## Configure an event forwarding rule {#config-rule}
 
 Once all your data elements are set up, you can start creating event forwarding rules that determine when and how your events will be sent to [!DNL Twitter].
 
-Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Twitter]**. To send Adobe Experience Edge Network events to [!DNL Twitter], set the **[!UICONTROL Action Type]** to **[!UICONTROL conversion event].**
-
-![The [!DNL Twitter] creating a conversion event rule.](../../../images/extensions/server/twitter/rule.png)
+Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Twitter]**. To send Adobe Experience Edge Network events to [!DNL Twitter], set the **[!UICONTROL Action Type]** to **[!UICONTROL Send Web Conversion].**
 
 After selection, additional controls appear to further configure the event. You need to map the [!DNL Twitter] event properties to the data elements that you previously created. For more information, refer to the [[!DNL Twitter] Web Conversions API](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
 
-The **[!UICONTROL Main fields]** tab contains the following fields: 
+![The [!DNL Twitter] creating a conversion event rule.](../../../images/extensions/server/twitter/action-configuration.png)
 
-| Field name | Description | Example | 
-| --- | --- | --- | 
-| [!UICONTROL Event Id] | The base-36 ID of a specific event. This Id should match a pre-configured event contained within your [!DNL Twitter] ad account. This is known as the ID for the corresponding event in Events Manager. | o87ne or tw-o8z6j-o87ne (tw-pixel_id-event-id) | | 
-[!UICONTROL Email] | Email is used as the identifier to match the conversion event. | eventforwarding@example.com| 
-| [!UICONTROL Phone No] | Phone No is optional and serves as an identifier to match the conversion event. The phone number must be in E164 format [+][country code][area code][local phone number] before hashing. A phone no is required if no other identifier is added. | +911234567875 |
+**[!UICONTROL User Identification]**
 
-![The [!DNL Twitter] main fields configuration.](../../../images/extensions/server/twitter/action-configuration-main-fields.png)
+| Field name | Description | Example | Required |
+| --- | --- | --- | --- |
+| [!UICONTROL [!DNL Twitter] Click ID] | [!DNL Twitter] Click ID as parsed from the click-through URL. | 26l6412g5p4iyj65a2oic2ayg2 | Required if no other identifier is added. |
+| [!UICONTROL Email] | An email address hashed with SHA256. The text must be lowercase and any trailing or leading spaces must be removed before hashing. | eventforwarding@example.com | Required if no other identifier is added. |
+| [!UICONTROL Phone] | Phone serves as an identifier to match the conversion event. The phone number must be in E164 format [+][country code][area code][local phone number] before hashing. | +911234567875 | Required if no other identifier is added. |
 
-The [!UICONTROL Custom Data] tab allows you to specify and send custom data to [!UICONTROL Twitter].
+**[!UICONTROL Conversion Data]**
 
-![The [!DNL Twitter] custom data configuration.](../../../images/extensions/server/twitter/action-configuration-custom-data.png)
-
-The [!UICONTROL Content Data] tab allows you to specify and send content data to [!UICONTROL Twitter].
-
-![The [!DNL Twitter] content data configuration.](../../../images/extensions/server/twitter/action-configuration-contents-data.png)
+| Field name | Description | Example | Required | 
+| --- | --- | --- | --- |
+| [!UICONTROL Conversion Time] | Date-time as string in ISO 8601 or in yyyy-MM-dd'T'HH:mm:ss:SSSZ format. | 2022-02-18T01:14:00.603Z | Yes |
+| [!UICONTROL Event Id] | The base-36 ID of a specific event. This Id should match a pre-configured event contained within your [!DNL Twitter] ad account. This is known as the ID for the corresponding event in Events Manager. | o87ne or tw-o8z6j-o87ne (tw-pixel_id-event-id) | Yes |
+| [!UICONTROL Number of Items] | The number of items being purchased in the event. This must be a positive number greater than 0. | 4 | No |
+| [!UICONTROL Currency] | The currency of the items being purchased in the event. This is expressed in ISO-4217 and if not provided, the default will be USD. | USD | No |
+| [!UICONTROL Value] | The price value of items being purchased in the event. | 100.00 | No |
+| [!UICONTROL Conversion ID] | An identifier for a conversion event that can be used for de-duplication between Web Pixel and Conversion API conversions in the same event tag. | 23294827 | No |
+| [!UICONTROL Description] | A description with any additional information on the conversions. | Test conversion | No |
 
 ## Validate data within [!DNL Twitter]
 
@@ -107,7 +103,7 @@ Once the event forwarding rule has been created and executed, validate whether t
 
 If the event collection and [!DNL Experience Platform] integration were successful, you will see events within the [!DNL Twitter] [!UICONTROL Events manager].
 
-![The [!DNL Twitter] event manager](../../../images/extensions/server/twitter/twitter-event-manager.png)
+![The [!DNL Twitter] event manager](../../../images/extensions/server/twitter/event-manager.png)
 
 ## Next steps
 
