@@ -71,17 +71,17 @@ By default, only the datasets that you have ingested data into are shown. If you
 
 The datasets that have been enabled for Profile data are used to populate customer profiles after data has been ingested. See the section  on [enabling datasets for Profile](#enable-profile) to learn more. 
 
-To filter your dataset based on whether they have been enabled for Profile select the [!UICONTROL Yes] check box from the filter options.
+To filter your dataset based on whether they have been enabled for Profile, select the [!UICONTROL Yes] check box from the filter options.
 
 ![The filter options of the Datasets workspace with the [!UICONTROL Included in Profile] section highlighted.](../images/datasets/user-guide/included-in-profile.png)
 
-The list of applied filters are displayed above the filtered results.
+The list of applied filters is displayed above the filtered results.
 
 ![The Browse tab of the Datasets workspace with the list of applied filters highlighted.](../images/datasets/user-guide/applied-filters.png)
 
 ## Sort datasets by created date {#sort}
 
-Datasets in the Brose tab can be sorted by either ascending or descending dates. Select the [!UICONTROL Created] or [!UICONTROL Last updated] column headings to alternate between ascending and descending. Once selected, the column indicates this with either an up or down arrow to the side of the column header.
+Datasets in the [!UICONTROL Browse] tab can be sorted by either ascending or descending dates. Select the [!UICONTROL Created] or [!UICONTROL Last updated] column headings to alternate between ascending and descending. Once selected, the column indicates this with either an up or down arrow to the side of the column header.
 
 ![The Browse tab of the Datasets workspace with the Created and Last updated column highlighted.](../images/datasets/user-guide/ascending-descending-columns.png)
 
@@ -91,7 +91,7 @@ You can preview dataset sample data from both the inline options of the [!UICONT
 
 ![The Browse tab of the Datasets workspace with the ellipsis and Preview dataset option highlighted for the chosen dataset.](../images/datasets/user-guide/preview-dataset-option.png)
 
-This opens the preview window where the hierarchical view of the schema for the dataset is shown on the right.
+This opens the preview window, where the hierarchical view of the schema for the dataset is shown on the right.
 
 ![The dataset preview dialog with information about the structure, as well as sample values, for the dataset are shown.](../images/datasets/user-guide/preview-dataset.png)
 
