@@ -24,8 +24,8 @@ In order for [!DNL Flow Service] to connect to [!DNL PubSub], you must provide v
 | ---------- | ----------- |
 | `projectId` | The project ID required to authenticate [!DNL PubSub]. |
 | `credentials` | The credential or key required to authenticate [!DNL PubSub]. |
-| `topicName` | The name of the resource that represents a feed of messages. You must specify a topic name if you want to provide access to a specific stream of data in your [!DNL PubSub] source. |
-| `subscriptionName` | The name of your [!DNL PubSub] subscription. In [!DNL PubSub], subscriptions allow you to receive messages, by subscribing to the topic in which messages have been published to. **Note**: A single [!DNL PubSub] subscription can only be used for one dataflow. In order to make multiple dataflows, you must have multiple subscriptions. |
+| `topicName` | The name of the resource that represents a feed of messages. You must specify a topic name if you want to provide access to a specific stream of data in your [!DNL PubSub] source. The topic name format is: `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
+| `subscriptionName` | The name of your [!DNL PubSub] subscription. In [!DNL PubSub], subscriptions allow you to receive messages, by subscribing to the topic in which messages have been published to. **Note**: A single [!DNL PubSub] subscription can only be used for one dataflow. In order to make multiple dataflows, you must have multiple subscriptions. The subscription name format is: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source target connections. The [!DNL PubSub] connection specification ID is: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 For more information about these values, see this [[!DNL PubSub] authentication](https://cloud.google.com/pubsub/docs/authentication) document. To use service account-based authentication, see this [[!DNL PubSub] guide on creating service accounts](https://cloud.google.com/docs/authentication/production#create_service_account) for steps on how to generate your credentials.
@@ -176,7 +176,7 @@ curl -X POST \
       },
       "params": {
           "topicName": "projects/{PROJECT_ID}/topics/{TOPIC_ID}",
-          "subscriptionName": "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}",
+          "subscriptionName": "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}",
           "dataType": "raw"
       }
   }'
