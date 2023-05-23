@@ -42,7 +42,7 @@ Adobe Experience Platform Data Governance allows you to manage customer data in 
 See the [Data Governance overview](../../data-governance/home.md) for more information on the service. For steps on how to work with usage labels in [!DNL Platform], refer to the following guides:
 
 * [Manage labels in the UI](../../data-governance/labels/user-guide.md)
-* [Manage schema labels in the API](../../data-governance/labels/dataset-api.md)
+* [Manage dataset labels in the API](../../data-governance/labels/dataset-api.md)
 
 ## Datasets in downstream [!DNL Platform] services
 

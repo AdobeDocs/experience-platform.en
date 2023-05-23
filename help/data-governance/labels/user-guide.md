@@ -49,7 +49,7 @@ Labels can be applied to the entire dataset from the **[!UICONTROL Data Governan
 
 ![The [!UICONTROL Data Governance] tab of the [!UICONTROL Datasets] workspace with Data Governance highlighted.](../images/labels/dataset-governance.png)
 
-To edit data usage labels at the dataset level, start by selecting the pencil icon (![A pencil icon.]()) in the row of the dataset name.
+To edit data usage labels at the dataset level, start by selecting the pencil icon (![A pencil icon.](../images/labels/edit-icon.png)) in the row of the dataset name.
 
 ![The [!UICONTROL Data Governance] tab of the [!UICONTROL Datasets] workspace with the edit pencil icon highlighted.](../images/labels/dataset-level-edit.png)
 
@@ -60,6 +60,8 @@ The **[!UICONTROL Edit Governance Labels]** dialog opens. Within the dialog, che
 The **[!UICONTROL Data Governance]** workspace reappears, showing the labels that you have applied at the dataset level in the initial row of the table. You can also see the labels, indicated by individual cards, that are inherited down to each of the fields within the dataset.
 
 ![The [!UICONTROL Data Governance] tab of the [!UICONTROL Datasets] workspace with applied dataset level labels and inherited dataset filed labels highlighted.](../images/labels/applied-dataset-labels.png) 
+
+### Remove labels from a dataset {#remove-labels-from-a-dataset}
 
 Labels added at the dataset level have an "x" next to their card. This allows you to remove the labels from the entire dataset. Inherited labels beside each field do not have an "x" next to them and appear "greyed out". These **inherited labels are read-only**, meaning they cannot be removed or edited at the field level.
 

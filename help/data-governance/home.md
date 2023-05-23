@@ -11,9 +11,9 @@ One of the core capabilities of Adobe Experience Platform is to bring data from 
 
 Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
 
-<!-- >[!NOTE]
+>[!NOTE]
 >
->In Experience Platform, data governance is only concerned with how data is used or activated, regardless of the user performing the action. For information on how to control access to specific data fields for certain Platform users within your organization, see the documentation on [attribute-based access control](../access-control/abac/overview.md) instead. -->
+>In Experience Platform, data governance is only concerned with how data is used or activated, regardless of the user performing the action. For information on how to control access to specific data fields for certain Platform users within your organization, see the documentation on [attribute-based access control](../access-control/abac/overview.md) instead.
 
 ## Data governance roles
 
@@ -51,7 +51,7 @@ There are three key elements to the Data Governance framework: Labels, Policies,
 
 ## Data usage labels
 
-Data Governance enables data stewards to apply usage labels at the schema and field level to categorize data according to the type of policies that apply.
+Data Governance enables data stewards to apply usage labels at the schema field level and dataset level to categorize data according to the type of policies that apply.
 
 The Data Governance framework includes predefined data usage labels that can be used to categorize data in three ways:
 
@@ -105,7 +105,7 @@ The following table outlines key terms related to Data Governance and theData Go
 |**Data governance**|Data governance encompasses the strategies and technologies used to ensure data is in compliance with regulations and corporate policies with respect to data usage.|
 |**Data steward**|The data steward is the person responsible for the management, oversight, and enforcement of an organization's data assets. A data steward also ensures data governance policies are safeguarded and maintained to be compliant with government regulations and organization policies.|
 |**Data usage labels**|Data usage labels provide users the ability to categorize data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and corporate policies.|
-|**Dataset labels**| Labels can be added to a schema. All fields within a schema inherit the schema's labels.|
+|**Dataset labels**| Labels can be added to a schema. All fields within a dataset inherit the schema's labels.|
 |**Field labels**|Field labels are data governance labels that are either inherited from a schema or applied directly to a field. Data governance labels applied to a field are not inherited up to the schema level.|
 |**Geofence**| A geofence is a virtual geographic boundary, defined by GPS or RFID technology, that enables software to trigger a response when a mobile device enters or leaves a particular area.|
 |**Identity labels**|Identity "I" labels are used to categorize data that can identify or contact a specific person.|
