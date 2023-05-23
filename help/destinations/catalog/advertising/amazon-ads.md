@@ -75,9 +75,10 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Amazon Ads Advertiser ID]**: Select the ID for the target Amazon Ads account used for the destination.
-*  **[!UICONTROL Advertiser Region]**: Select the appropriate region in which your AdvertiserId is hosted. For more information on the marketplaces supported by each region, visit our [documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
+      Note: After saving the destination configuration, you will not be able to change the Amazon Ads Advertiser ID, even if you re-authenticate through your Amazon account. To use a different Amazon Ads Advertiser ID, you must create a new destination connection.
+*  **[!UICONTROL Advertiser Region]**: Select the appropriate region in which your Advertiser is hosted. For more information on the marketplaces supported by each region, visit our [documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
-Note: on selecting this Amazon Ads Advertiser ID, you will need to create a new destination to change this. If you re-authenticate the OAuth credentials and select a new Advertiser Id, your changes will not apply.
+
 
 ![Configure new destination](../../assets/catalog/advertising/amazon_ads_image_4.png)
 
@@ -135,7 +136,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
-|May 2023|Global support update| <ul><li>Added support for the EU/FE regions in the destination connector</li><li>Updated documentation to reflect regional endpoint support. For more information on which regional endpoint to use, see [this page](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
+|May 2023|Functionality and documentation update| <ul><li>Added support for Advertiser Region selection in the destination connection workflow.</li><li>Updated documentation to reflect the addition of Advertiser Region selection. For more information on selecting the correct Advertiser Region, see the [Amazon documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 |March 2023|Initial release|Initial destination release and documentation published.|
 
 {style="table-layout:auto"}
