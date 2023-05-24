@@ -5,15 +5,15 @@ last-substantial-update: 2023-05-24
 ---
 # [!DNL Mailchimp Interest Categories] connection
 
-[[!DNL Mailchimp]](https://mailchimp.com) *(also known as [!DNL Intuit Mailchimp])* is a popular marketing automation platform and email marketing service used by businesses to manage and talk to contacts *(clients, customers, or other interested parties)* using mailing lists and email marketing campaigns. Use this connector to sort your contacts based on their interests and preferences.
+[[!DNL Mailchimp]](https://mailchimp.com) is a popular marketing automation platform and email marketing service used by businesses to manage and talk to contacts *(clients, customers, or other interested parties)* using mailing lists and email marketing campaigns. Use this connector to sort your contacts based on their interests and preferences.
 
-[!DNL Mailchimp Interest Categories] uses [audiences](https://mailchimp.com/help/getting-started-audience/), [groups](https://mailchimp.com/help/getting-started-with-groups/) and interest categories *(also known as group names or group titles)*. Each [!DNL Mailchimp] group is a list of interest categories. Contacts are associated with an interest category when they subscribe to one or more interest category through a signup form on your website. Within an audience, you can also organize the contacts into groups and associate them with interest categories, and these can then be used to create segments. You can use these segments to broadcast targeted campaign emails to the subscribed contacts.
+[!DNL Mailchimp Interest Categories] uses [audiences](https://mailchimp.com/help/getting-started-audience/), [groups](https://mailchimp.com/help/getting-started-with-groups/), and interest categories *(also known as group names or group titles)*. Each [!DNL Mailchimp] group is a list of interest categories. Contacts are associated with an interest category when they subscribe to one or more interest categories through a signup form on your website. Within an audience, you can also organize the contacts into groups and associate them with interest categories, and these can then be used to create segments. You can use these segments to broadcast targeted campaign emails to the subscribed contacts.
 
 <!--
 Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Categories] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
 -->
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API to create [interest categories](https://mailchimp.com/developer/marketing/api/interest-categories/) and then add contacts from each of the selected Platform segments into a corresponding interest category. You can **add new contacts** or **update the information of existing [!DNL Mailchimp] contacts**, then **add or remove them from their desired groups** within an existing [!DNL Mailchimp] audience after activating them within a new segment. [!DNL Mailchimp Interest Groups] uses the selected segment names from Platform as interest categories within [!DNL Mailchimp].
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) uses the [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API to create [interest categories](https://mailchimp.com/developer/marketing/api/interest-categories/) and then add contacts from each of the selected Platform segments into a corresponding interest category. You can **add new contacts** or **update the information of existing [!DNL Mailchimp] contacts**, then **add or remove them from their desired groups** within an existing [!DNL Mailchimp] audience after activating them within a new segment. [!DNL Mailchimp Interest Groups] uses the selected segment names from Platform as interest categories within [!DNL Mailchimp].
 
 ## Use cases {#use-cases}
 
@@ -25,7 +25,7 @@ The sales department of a sport goods website wants to broadcast an email-based 
 
 ## Prerequisites {#prerequisites}
 
-Refer to the sections below for any prerequisites that you need to set up in Experience Platform and [!DNL Mailchimp] and for information that you need to gather before working with the [!DNL Mailchimp Interest Categories] destination.
+Refer to the sections below for any prerequisites that you need to set up in Experience Platform and [!DNL Mailchimp] and for information that you must gather before working with the [!DNL Mailchimp Interest Categories] destination.
 
 ### Prerequisites in Experience Platform {#prerequisites-in-experience-platform}
 
@@ -35,13 +35,13 @@ Before activating data to the [!DNL Mailchimp Interest Categories] destination, 
 
 Note the following prerequisites in order to export data from Platform to your [!DNL Mailchimp] account:
 
-#### You need to have a [!DNL Mailchimp] account {#prerequisites-account}
+#### You must have a [!DNL Mailchimp] account {#prerequisites-account}
 
 Before you can create a [!DNL Mailchimp Interest Categories] destination, you must first ensure that you have a [!DNL Mailchimp] account. If you do not have one already, visit the [[!DNL Mailchimp] signup page](https://login.mailchimp.com/signup/) to register and create your account.
 
 #### Gather [!DNL Mailchimp] API key {#gather-credentials}
 
-You will need your [!DNL Mailchimp] **API key** to authenticate the [!DNL Mailchimp Interest Categories] destination against your [!DNL Mailchimp] account. The **API key** serves as the **Password** when you [authenticate the destination](#authenticate).
+You need your [!DNL Mailchimp] **API key** to authenticate the [!DNL Mailchimp Interest Categories] destination against your [!DNL Mailchimp] account. The **API key** serves as the **Password** when you [authenticate the destination](#authenticate).
 
 If you do not have your **API key**, Sign in to your account and refer to the [[!DNL Mailchimp] Generate your API key](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) documentation to create one. 
 
@@ -53,19 +53,19 @@ An example of an API key is `0123456789abcdef0123456789abcde-us14`.
 
 #### Identify [!DNL Mailchimp] data center {#identify-data-center}
 
-Next, you need to identify your [!DNL Mailchimp] data center. To do this, log in to your [!DNL Mailchimp] account and navigate to the **API keys section** of your account. 
+Next, you must identify your [!DNL Mailchimp] data center. To do this, log in to your [!DNL Mailchimp] account and navigate to the **API keys section** of your account. 
 
-The value will be the first part of the URL you see in your browser. If the URL is *https://`us14`.mailchimp.com/account/api/*, then the data center is `us14`. 
+The value is the first part of the URL you see in your browser. If the URL is *https://`us14`.mailchimp.com/account/api/*, then the data center is `us14`. 
 
-It’s also appended to your API key in the form *key-dc*; if your API key is `0123456789abcdef0123456789abcde-us14`, then the data center is `us14`. 
+It's also appended to your API key in the form *key-dc*; if your API key is `0123456789abcdef0123456789abcde-us14`, then the data center is `us14`. 
 
-Write down the data center value *(`us14` in this example)*, you will need this value when you [fill in destination details](#destination-details).
+Write down the data center value *(`us14` in this example)*, you need this value when you [fill in destination details](#destination-details).
 
 If you require further guidance, refer to the [[!DNL Mailchimp] Fundamentals documentation](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure).
 
 ### Guardrails {#guardrails}
 
-Each of your [!DNL Mailchimp] audiences can contain up to 60 group names (or interest categories) in a single group or across several groups within the same audience. Refer to [!DNL Mailchimp] [groups](https://mailchimp.com/help/getting-started-with-groups/) for any clarifications required. When you reach this limit, you will get a `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` message as an error response from the [!DNL Mailchimp] API.
+Each of your [!DNL Mailchimp] audiences can contain up to 60 group names (or interest categories) in a single group or across several groups within the same audience. Refer to [!DNL Mailchimp] [groups](https://mailchimp.com/help/getting-started-with-groups/) for any clarifications required. When you reach this limit, you get a `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` message as an error response from the [!DNL Mailchimp] API.
 
 Additionally, refer to the [!DNL Mailchimp] [rate limits](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) for detailed information about the limits imposed by the [!DNL Mailchimp] API.
 
@@ -86,7 +86,7 @@ Refer to the table below for information about the destination export type and f
 | Item | Type | Notes |
 ---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> For each selected segment in Platform, the corresponding [!DNL Mailchimp Interest Categories] segment status gets updated with its segment status from Platform.</li></ul>|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. When a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
@@ -106,7 +106,7 @@ To authenticate to the destination, fill in the required fields below and select
 
 | [!DNL Mailchimp] destination | [!DNL Mailchimp] |
 | --- | --- |
-| **[!UICONTROL Username]** | Your [!DNL Salesforce Marketing Cloud] domain prefix. <br>For example, if your domain is<br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*,<br> you need to provide `mcq4jrssqdlyc4lph19nnqgzzs84` as the username value. |
+| **[!UICONTROL Username]** | Your [!DNL Salesforce Marketing Cloud] domain prefix. <br>For example, if your domain is<br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*,<br> you must provide `mcq4jrssqdlyc4lph19nnqgzzs84` as the username value. |
 | **[!UICONTROL Password]** | Your [!DNL Mailchimp] **API key**, which you had noted down in the [Gather [!DNL Mailchimp] credentials](#gather-credentials) section.<br> Your API key takes the form of `{KEY}-{DC}`, where the `{KEY}` portion refers to the value noted down in the [[!DNL Mailchimp] API key](#gather-credentials) section and the `{DC}` portion refers to the [[!DNL Mailchimp] data center](#identify-data-center). <br>You can provide either the `{KEY}` portion or the entire form.<br> For example, if your API key is <br>*`0123456789abcdef0123456789abcde-us14`*,<br> you could provide either *`0123456789abcdef0123456789abcde`* or *`0123456789abcdef0123456789abcde-us14`* as the value. |
 
 {style="table-layout:auto"}
@@ -133,7 +133,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 >[!TIP]
 >
-> If the API key you provided in the **[!UICONTROL Password]** field or the **[!UICONTROL Data center]** value are incorrect, the UI displays a [!DNL Mailchimp] API error response: *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* as shown below, and are not be able to select a value from the **[!UICONTROL Audience Name (Please select Data center first)]** field. To fix this error, provide the correct values.
+> If the API key you provided in the **[!UICONTROL Password]** field or the **[!UICONTROL Data center]** value are incorrect, the UI displays a [!DNL Mailchimp] API error response: *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* as shown below. In this case, you are not be able to select a value from the **[!UICONTROL Audience Name (Please select Data center first)]** field. To fix this error, provide the correct values.
 
 ### Enable alerts {#enable-alerts}
 
@@ -151,13 +151,13 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL Mailchimp Interest Categories] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination.
+To correctly send your audience data from Adobe Experience Platform to the [!DNL Mailchimp Interest Categories] destination, you must go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination.
 
 To correctly map your XDM fields to the [!DNL Mailchimp Interest Categories] destination fields, follow the steps below:
 
-1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
+1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
-2. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select attributes]** category and select from the list of attributes populated from the [!DNL Mailchimp] API. *Note that any custom attributes that you have added to the selected [!DNL Mailchimp] Audience will also be available for selection as target fields.*
+2. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select attributes]** category and select from the list of attributes populated from the [!DNL Mailchimp] API. *Any custom attributes that you have added to the selected [!DNL Mailchimp] Audience will also be available for selection as target fields.*
 
     The mappings available between your XDM profile schema and [!DNL Mailchimp Interest Categories] are as below:
     | Source Field | Target Field | Notes |
@@ -180,7 +180,7 @@ To correctly map your XDM fields to the [!DNL Mailchimp Interest Categories] des
     | `xdm: workAddress.postalCode` | `Attribute: ADDRESS.zip` |
     | `xdm: workAddress.country` | `Attribute: ADDRESS.country` |
 
-    For example, you want to update the value for `country` with the contact's existing address field `addr1`, `city`, `state`, and `zip` values as `132, My Street, Kingston`, `New York`, `New York` and `12401`. To update the `country` you need to pass the existing values with changes *(if any)* and the new value for country. So the values in your dataset should be `132, My Street, Kingston`, `New York`, `New York`, `12401` and `US`. To reiterate, if you only pass `country` and do not provide values for `addr1`, `city`, `state`, and `zip` they will be overwritten by `NULL`.
+    For example, you want to update the value for `country` with the contact's existing address field `addr1`, `city`, `state`, and `zip` values as `132, My Street, Kingston`, `New York`, `New York` and `12401`. To update the `country` you must pass the existing values with changes *(if any)* and the new value for country. So the values in your dataset should be `132, My Street, Kingston`, `New York`, `New York`, `12401`, and `US`. To reiterate, if you only pass `country` and do not provide values for `addr1`, `city`, `state`, and `zip` they will be overwritten by `NULL`.
 
     An example with the completed mappings is shown below:
     ![Platform UI screenshot example showing field mappings.](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
@@ -196,9 +196,9 @@ To validate that you have correctly set up the destination, follow the steps bel
 ![Mailchimp UI screenshot showing the Audience group page.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
 * Select the Group and check if the selected segments are created as categories with the segment name from Platform, which may be followed by an automatically generated suffix.
-  * This destination uses the selected segments' names to create the interest category by leveraging the [[!DNL Mailchimp] Add interest category API](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). If you create a new destination and activate the same segments again, [!DNL Mailchimp Tags] adds a suffix to distinguish between the existing and the new segments.
+  * This destination uses the selected segments' names to create the interest category by using the [[!DNL Mailchimp] Add interest category API](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). If you create a new destination and activate the same segments again, [!DNL Mailchimp] adds a suffix to distinguish between the existing and the new segments.
 * Contacts whose emails did not exist in the group are added to the newly created category.
-* For contacts that already exist within the group, the attribute field data will be updated, and the contact added to the newly created category.
+* For contacts that already exist within the group, the attribute field data is updated, and the contact added to the newly created category.
 
 ![Mailchimp UI screenshot showing the Audience group categories.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups-category.png)
 
@@ -210,11 +210,11 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ### Error encountered if [!DNL Mailchimp] API key or data center values are incorrect {#incorrect-credentials-error}
 
-If the API key you provided in the **[!UICONTROL Password]** field or the **[!UICONTROL Data center]** value are incorrect, the UI displays a [!DNL Mailchimp] API error response: *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* as shown below, and are not able to select a value from the **[!UICONTROL Audience Name (Please select Data center first)]** field.
+If the API key you provided in the **[!UICONTROL Password]** field or the **[!UICONTROL Data center]** value are incorrect, the UI displays a [!DNL Mailchimp] API error response: *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* as shown below. In this case, you are not able to select a value from the **[!UICONTROL Audience Name (Please select Data center first)]** field.
 
 ![Platform UI screenshot showing error if your Mailchimp API key or data center values are incorrect.](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
 
-To fix this error and proceed to the next step you need to provide the correct values. Refer to the [Identify [!DNL Mailchimp] data center](#identify-data-center) and 
+To fix this error and proceed to the next step, you must provide the correct values. Refer to the [Identify [!DNL Mailchimp] data center](#identify-data-center) and 
 [Gather [!DNL Mailchimp] API key](#gather-credentials) sections if you need guidance.
 
 ### Error encountered if [!DNL Mailchimp] group name limit is exceeded {#group-name-limits-error}
