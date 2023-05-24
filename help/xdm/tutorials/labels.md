@@ -13,7 +13,7 @@ All data that is brought into Adobe Experience Platform is constrained by Experi
 
 A label applied to a schema field indicates the usage policies that apply to the data contained in that specific field. 
 
-While labels can be applied to applied to individual datasets (and fields within those datasets), you can also apply labels at the schema level. When labels are applied directly to a schema, those labels are propagated to all existing and future datasets that are based on that schema.
+Labels can be applied to applied to individual schemas, and fields within those schemas. When labels are applied directly to a schema, those labels are propagated to all existing and future datasets that are based on that schema.
 
 In addition, any field label that you add in one schema propagates to all other schemas that employ the same field from a shared class or field group. This helps to ensure that usage rules for similar fields are consistent across your entire data model.
 
@@ -40,11 +40,11 @@ To edit the labels for an individual field, you can select the field in the canv
 
 ![Select a field from the Schema Editor canvas](../images/tutorials/labels/manage-access.png)
 
-You can also select the **[!UICONTROL Labels]** tab, choose the desired field from the list, and select **[!UICONTROL Edit governance labels]** in the right rail.
+You can also select the **[!UICONTROL Labels]** tab, choose the desired field from the list, and select **[!UICONTROL Apply Access and Data Governance Labels]** in the right rail.
 
 ![Select a field from the [!UICONTROL Labels] tab](../images/tutorials/labels/select-field-on-labels-tab.png)
 
-To edit the labels for the entire schema, select the pencil icon (![](../images/tutorials/labels/pencil-icon.png)) next to the schema's name under the **[!UICONTROL Labels]** tab.
+To edit the labels for the entire schema, in the **[!UICONTROL Labels]** tab, select the checkbox under the filter icon. This selects every available field in the schema. Next, select **[!UICONTROL Apply Access and Data Governance Labels]** in the right rail.
 
 ![Select the schema name from the [!UICONTROL Labels] tab](../images/tutorials/labels/select-schema-on-labels-tab.png)
 
@@ -54,11 +54,11 @@ To edit the labels for the entire schema, select the pencil icon (![](../images/
 >
 >![Label usage disclaimer](../images/tutorials/labels/disclaimer.png)
 
-## Edit the labels for the schema or field
+## Edit the labels for the schema or field {#edit-labels}
 
 A dialog appears that allows you to edit the labels for the selected field. If you selected an individual object-type field, the right rail lists the sub-fields that the applied labels will propagate to.
 
-![Selected fields displayed](../images/tutorials/labels/edit-labels.png)
+![The Apply Access and Data Governance Labels dialog with the selected fields highlighted.](../images/tutorials/labels/edit-labels.png)
 
 >[!NOTE]
 >
@@ -66,19 +66,19 @@ A dialog appears that allows you to edit the labels for the selected field. If y
 
 Use the displayed list to select the labels you want to add to the schema or field. As labels are chosen, the **[!UICONTROL Applied labels]** section updates to show the labels that have been selected so far.
 
-![Applied labels displayed](../images/tutorials/labels/applied-labels.png)
+![The Apply Access and Data Governance Labels dialog with the applied labels highlighted.](../images/tutorials/labels/applied-labels.png)
 
 To filter the displayed labels by type, select the desired category in the left rail. To create a new custom label, select **[!UICONTROL Create label]**.
 
-![Filter displayed labels or create a new label](../images/tutorials/labels/filter-and-create-custom.png)
+![The Apply Access and Data Governance Labels dialog with a label type filter applied and Create label highlighted.](../images/tutorials/labels/filter-and-create-custom.png)
 
-Once you are satisfied with your chosen labels, select **[!UICONTROL Save]** to apply them to the field or schema.
+Once you are satisfied with your chosen labels, select **[!UICONTROL Save]** to apply them to the field or schema. 
 
-![Save the selected labels](../images/tutorials/labels/save-labels.png)
+![The Apply Access and Data Governance Labels dialog with Save highlighted.](../images/tutorials/labels/save-labels.png)
 
 The **[!UICONTROL Labels]** tab reappears, showing the applied labels for the schema.
 
-![Field labels applied](../images/tutorials/labels/field-labels-added.png)
+![The Labels tab of the schemas workspace with the applied field labels highlighted.](../images/tutorials/labels/field-labels-added.png)
 
 ## Next steps
 
