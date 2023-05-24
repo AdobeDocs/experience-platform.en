@@ -157,7 +157,7 @@ To correctly map your XDM fields to the [!DNL Mailchimp Interest Categories] des
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
-2. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select attributes]** category and select from the list of attributes populated from the [!DNL Mailchimp] API. *Any custom attributes that you have added to the selected [!DNL Mailchimp] Audience will also be available for selection as target fields.*
+1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select attributes]** category and select from the list of attributes populated from the [!DNL Mailchimp] API. *Any custom attributes that you have added to the selected [!DNL Mailchimp] Audience will also be available for selection as target fields.*
 
     The mappings available between your XDM profile schema and [!DNL Mailchimp Interest Categories] are as below:
     | Source Field | Target Field | Notes |
