@@ -40,6 +40,10 @@ POST /connections
 
 The following request creates a base connection for [!DNL Snowflake]:
 
+>[!TIP]
+>
+>The `auth.specName` value must be inputted exactly as the example below, including the blank spaces.
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -136,6 +140,11 @@ A successful response returns the structure and contents of your source's data a
 }
 ```
 
+| Property | Description |
+| --- | --- |
+| `items.type` | The type of the table. |
+| `items.names` | The name of the table. |
+
 ## Create a source connection {#create-a-source-connection}
 
 A source connection creates and manages the connection to the external source from where data is ingested.
@@ -168,7 +177,8 @@ curl -X POST \
       },
       "params": {
           "tableName": "ACME",
-          "timestampColumn": "ts"
+          "timestampColumn": "dOb",
+          "backfill": "true"
       }
   }'
 ```
@@ -179,6 +189,7 @@ curl -X POST \
 | `connectionSpec.id` | The connection spec ID for the [!DNL Snowflake] streaming source. |
 | `params.tableName` | The name of the table in your [!DNL Snowflake] database that you want to bring to Platform. |
 | `params.timestampColumn` | The name of the timestamp column that will be used to fetch incremental values. |
+| `params.backfill` | A boolean flag that defines the timestamp column from which data will be fetched. |
 
 **Response**
 
