@@ -113,11 +113,9 @@ Platform automatically detects your mapping sets for any friendly name conflicts
 
 ![mapping](../../../../images/tutorials/create/analytics/mapping.png)
 
-If there are friendly name conflicts between your source Report Suite and your selected schema, you can still continue with your [!DNL Analytics] dataflow, acknowledging that the field descriptors will not be changed. Alternatively, you can opt to create a new schema with a blank set of descriptors.
-
-Select **[!UICONTROL Next]** to proceed.
-
-![caution](../../../../images/tutorials/create/analytics/caution.png)
+>[!TIP]
+>
+>If there are friendly name conflicts between your source Report Suite and your selected schema, you can still continue with your [!DNL Analytics] dataflow, acknowledging that the field descriptors will not be changed. Alternatively, you can opt to create a new schema with a blank set of descriptors.
 
 #### Custom mappings
 
