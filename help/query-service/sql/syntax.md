@@ -563,6 +563,10 @@ The sub-sections below cover the [!DNL PostgreSQL] commands supported by Query S
 
 ### ANALYZE TABLE {#analyze-table}
 
+The `ANALYZE TABLE` command performs a distribution analysis and statistical calculations for the named table or tables. The use of `ANALYZE TABLE` varies depending on whether the datasets are stored on the [accelerated store](#compute-statistics-accelerated-store) or the [data lake](#compute-statistics-data-lake). See their respective sections for more information on its use.
+
+#### COMPUTE STATISTICS on the accelerated store {#compute-statistics-accelerated-store}
+
 The `ANALYZE TABLE` command computes statistics for a table on the accelerated store. The statistics are calculated on executed CTAS or ITAS queries for a given table on accelerated store.
 
 **Example**
@@ -585,7 +589,7 @@ The following is a list of statistical calculations that are available after usi
 | `mean` | The average value of the analyzed table.  |
 | `stdev` | The standard deviation of the analyzed table. |
 
-#### COMPUTE STATISTICS {#compute-statistics}
+#### COMPUTE STATISTICS on the data lake {#compute-statistics-data-lake}
 
 You can now calculate column level statistics on [!DNL Azure Data Lake Storage] (ADLS) datasets with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. Compute column statistics on either the entire dataset, a subset of a dataset, all columns, or a subset of columns.
 
