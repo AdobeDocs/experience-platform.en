@@ -6,7 +6,7 @@ description: Learn how to use the Experience Platform UI to view and enable play
 
 # How to enable and reuse a playbook
 
-To use a playbook, navigate to **Use Case Playground > Playbooks**. Browse and use the various searching and filtering options on the page to select and get started with a specific playbook.
+To use a playbook, navigate to **Use Cases > Playbooks**. Browse and use the various searching and filtering options on the page to select and get started with a specific playbook.
 
 ## Search and filter
 
@@ -30,9 +30,9 @@ Before you enable a playbook, you should inspect it to make sure it fits your ne
 
 Use the mindmap section in a playbook to understand the steps of the workflow that the playbook can help you solve. Visualize the flow of how all the generated objects can help you achieve the use case, from the perspective of the persona targeted in the use case. 
 
-It starts with a definition of who is pulled into the journey and describes at every step if something is delivered by Adobe, like a new message or a reminder, or if it is something that the targeted persona did that triggers the next message or event. 
+The mindmap starts with a definition of who is pulled into the journey and describes at every step if something is delivered by Adobe, like a new message or a reminder, or if it is something that the targeted persona did that triggers the next message or event. 
 
-![Playbook mindmap highlighted](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
+![Playbook mindmap highlighted.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
 
 
 ### Summary
@@ -41,9 +41,9 @@ Inspect the summary section to understand which assets are generated for you onc
 
 | Item | Description |
 ---------|----------|
-| **[!UICONTROL Target audience]** | Describes the personas who you are looking to reach through this use case playbook. |
+| **[!UICONTROL Target audience]** | Describes the personas that you are looking to reach through this use case playbook. |
 | **[!UICONTROL Channels]** | Describes the channels used to reach the personas targeted in the playbook. |
-| **[!UICONTROL Technical assets]** | A list of the technical assets that are generated after you enable the playbook. Note that the generated assets differ by playbook. Refer to the [understand the generated assets](#understand-assets) section further below for more information about how you can use and reuse the generated assets.  |
+| **[!UICONTROL Technical assets]** | A list of the technical assets that are generated after you enable the playbook. Note that the generated assets differ by playbook. Refer to the [Understand the generated assets](#understand-assets) section further below for more information about how you can use and reuse the generated assets.  |
 
 {style="table-layout:auto"}
 
@@ -55,8 +55,8 @@ Scroll down to the projects section to get an overview of the instances of this 
 
 |Item | Description |
 |---------|----------|
-| **[!UICONTROL Name]** | The name of the project based on the playbook. You can customize the name and descriptin of a project. Read the section below on [how to edit project metadata](#edit-project-metadata) for more information. |
-| **[!UICONTROL Status]** | Indicates the current status of the project. A **[!UICONTROL submitted]** project is ready for use. |
+| **[!UICONTROL Name]** | The name of the project based on the playbook. You can customize the name and description of a project. Read the section below on [how to edit project metadata](#edit-project-metadata) for more information. |
+| **[!UICONTROL Status]** | Indicates the status of the project. A **[!UICONTROL submitted]** project is ready for use. |
 | **[!UICONTROL Created]** | Indicates when the project was created. |
 | **[!UICONTROL Created By]** | Indicates who created the project. |
 | **[!UICONTROL Last Modified]** | Indicates when the project was last modified. |
@@ -71,7 +71,7 @@ When you are ready to proceed with a playbook and create a project, select **[!U
 
 ![Enable a playbook.](/help/use-case-playbooks/assets/playbooks/ui-guide/enable-playbook.png)
 
-This action generates a number of assets for you to use to achieve the use case described by the playbook.
+This action generates several assets for you to use to achieve the use case described by the playbook.
 
 ![Playbook view of generated assets after being enabled.](/help/use-case-playbooks/assets/playbooks/ui-guide/play-view.png)
  
@@ -83,7 +83,7 @@ After creating a project based on a playbook, you can personalize it to distingu
 
 ### Understand the generated assets {#understand-assets}
 
-It is important to understand that the generated assets differ based on the use case you are enabling and 
+It is important to understand that the generated assets differ based on the use case you are enabling.
 
 For example, for the **[!UICONTROL Send A Birthday Message To Guests]** playbook, the audience that is created has the rule `birthday=today AND year=any`. 
 
@@ -95,8 +95,12 @@ Similarly, for the **[!UICONTROL Abandoned Cart: Merchandise]** playbook, you ca
 
 Different assets are generated based on the playbook type - Real-Time CDP or Journey Optimizer. These assets are created specifically for the use case achieved through the playbook. For example, generated audiences have the specific segmentation rule to allow them to be used as part of the project. 
 
-You can edit any of the assets created but be aware that if the playbook gets re-enabled, the edited assets are replaced with the newly created ones. This is true for all assets that get created, with the exception of schemas. In the case of schemas, a new one gets created when a playbook is re-enabled, and the edited schema continues to exist.
+You can edit any of the assets created but be aware that if the playbook gets re-enabled, the edited assets are replaced with the newly created ones. This is true for all assets that get created, except for schemas. In the case of schemas, a new one gets created when a playbook is re-enabled, and the edited schema continues to exist.
 
 ### Share the playbook and the generated assets with other team members
 
-You can share the generated project and assets with other team members. To do this, copy the URL link from the browser and share it with your team. 
+You can share the generated project and assets with other team members. To do this, copy the URL link from the browser and share it with your team.
+
+## Next steps
+
+By reading this UI guide, you now know how to interpret the various sections of a playbook and how to use the assets that get generated after a playbook is enabled. Next, you can browse the playbooks catalog to find the right playbook for your use case and read the trubleshooting guide if you encounter any errors.
