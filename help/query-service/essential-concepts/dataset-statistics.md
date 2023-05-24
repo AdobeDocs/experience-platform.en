@@ -1,10 +1,10 @@
 ---
 title: Dataset Statistics Computation 
-description: This document describes how to compute column level statistics on Azure Data Lake Storage (ADLS) datasets with SQL commands.
+description: This document describes how to compute column-level statistics on Azure Data Lake Storage (ADLS) datasets with SQL commands.
 ---
 # Dataset statistics computation
 
-You can now compute column level statistics on [!DNL Azure Data Lake Storage] (ADLS) datasets with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. The SQL commands that compute dataset statistics are an extension of the `ANALYZE TABLE` command. Full details on the `ANALYZE TABLE` command can be found in the [SQL reference documentation](../sql/syntax.md#analyze-table).
+You can now compute column-level statistics on [!DNL Azure Data Lake Storage] (ADLS) datasets with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. The SQL commands that compute dataset statistics are an extension of the `ANALYZE TABLE` command. Full details on the `ANALYZE TABLE` command can be found in the [SQL reference documentation](../sql/syntax.md#analyze-table).
 
 >[!NOTE]
 >
@@ -135,4 +135,4 @@ An output might look similar to the example below.
 
 ## Next steps {#next-steps}
 
-By reading this document, you now have a better understanding of how to generate column level statistics from an ADLS dataset using an SQL query. You are recommended to read the [SQl syntax guide](../sql/syntax.md) to discover more features of the Adobe Experience Platform Query Service.
+By reading this document, you now have a better understanding of how to generate column-level statistics from an ADLS dataset using an SQL query. You are recommended to read the [SQl syntax guide](../sql/syntax.md) to discover more features of the Adobe Experience Platform Query Service.
