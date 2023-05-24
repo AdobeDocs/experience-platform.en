@@ -36,4 +36,5 @@ The following is a list of documentation for sever-side event forwarding extensi
 * [[!DNL Pinterest]](./pinterest/overview.md)
 * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)*
 * [[!DNL Splunk]](./splunk/overview.md)
+* [[!DNL Twitter]](./twitter/overview.md)
 * [[!DNL Zendesk] Events API](./zendesk/overview.md)
