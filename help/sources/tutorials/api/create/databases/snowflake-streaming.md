@@ -20,6 +20,8 @@ This guide requires a working understanding of the following components of Adobe
 * [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
+For prerequisite set up and information on the [!DNL Snowflake] streaming source. Please read the [[!DNL Snowflake] streaming source overview](../../../../connectors/databases/snowflake-streaming.md).
+
 ### Using Platform APIs
 
 For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
@@ -189,7 +191,7 @@ curl -X POST \
 | `connectionSpec.id` | The connection spec ID for the [!DNL Snowflake] streaming source. |
 | `params.tableName` | The name of the table in your [!DNL Snowflake] database that you want to bring to Platform. |
 | `params.timestampColumn` | The name of the timestamp column that will be used to fetch incremental values. |
-| `params.backfill` | A boolean flag that defines the timestamp column from which data will be fetched. |
+| `params.backfill` | A boolean flag that determines whether data is fetched from the beginning (0 epoch time) or from the time the source is initiated. For more information on this value, read the [[!DNL Snowflake] streaming source overview](../../../../connectors/databases/snowflake-streaming.md).  |
 
 **Response**
 

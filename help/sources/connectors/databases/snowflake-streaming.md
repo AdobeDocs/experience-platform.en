@@ -19,24 +19,7 @@ Experience Platform provides support for streaming data from a [!DNL Snowflake] 
 
 The [!DNL Snowflake] streaming source works by having data loaded by periodically executing an SQL query and creating an output record for each row in the resulting set.
 
-Some features of the features that this streaming source supports include:
-
-* Copying tables with a variety of JDBC data types.
-* Dynamically adding and removing tables from the database.
-* Configuring allow lists.
-* Varying polling intervals.
-* Controlling how data is incrementally copied from the database.
-
-By using [!DNL Kafka Connect], the [!DNL Snowflake] streaming source tracks the latest record that it receives from each table, so that it can start in the correct location for the next iteration. The source uses this functionality to filter data and only get the updated rows from a table (or from the output of a custom query) on each iteration.
-
-The [!DNL Snowflake] streaming source supports the following modes of operation:
-
-| Mode of operation | Description |
-| --- | --- |
-| Bulk | Performs a bulk load of the entire table every time the table is polled. |
-| Incrementing | Uses a strictly incrementing column on each table to only detect new rows. This mode does not detect modifications or deletions of existing rows. |
-| Timestamp | Uses a timestamp (or timestamp-like) column to detect new and modified rows. This mode assumes that the column is updated with each write action and that the values are incrementing, but not necessarily unique. |
-| Timestamp and incrementing | Uses two columns: a timestamp column that detects new and modified rows and a strictly incrementing column that provides a globally unique ID for updates, so each row can be assigned a unique streaming offset. |
+By using [!DNL Kafka Connect], the [!DNL Snowflake] streaming source tracks the latest record that it receives from each table, so that it can start in the correct location for the next iteration. The source uses this functionality to filter data and only get the updated rows from a table on each iteration.
 
 ## IP address allow list
 
@@ -73,21 +56,25 @@ You must configure privileges to a role, even if the default public role is assi
 | Schema | USAGE |
 | Table | SELECT |
 
+>[!NOTE]
+>
+>Auto-resume and auto-suspend must be enabled in the advanced settings configuration of your warehouse.
+
 For more information on role and privilege management, refer to the [[!DNL Snowflake] API reference](<https://docs.snowflake.com/en/sql-reference/sql/grant-privilege>).
 
-## Limitations and frequently asked questions
+## Limitations and frequently asked questions {#limitations-and-frequently-asked-questions}
 
 * The data throughput for the [!DNL Snowflake] source is 2000 records per second.
-* [!DNL Snowflake] pricing can vary depending on the amount of time that a warehouse is active and the size of the warehouse. For the [!DNL Snowflake] source integration, the smallest size, x-small warehouse is sufficient. The poll frequency is high and the warehouse will be active all the time. This means the cost will be 2 to 3 US dollars per hour, depending on the region and cloud provider of the [!DNL Snowflake] instance.
+* Pricing can vary depending on the amount of time that a warehouse is active and the size of the warehouse. For the [!DNL Snowflake] source integration, the smallest size, x-small warehouse is sufficient. It is suggested to enable auto-suspend so that the warehouse can suspend on its own when not in use.
+* The [!DNL Snowflake] source polls the database for new data every 10 seconds.
 * Configuration options:
-    * The [!DNL Snowflake] source polls the database for new data every 10 seconds.
     * You can enable a `backfill` boolean flag for your [!DNL Snowflake] source when creating a source connection.
-        * If backfill is set to true, then the value for timestamp.initial is set to 0. This means that data with a timestampColumn that's greater than 0 epoch time are fetched.
-        * If backfill is set to false, then the value for timestamp.initial is set to -1. This means that data with a timestampColumn greater than the current time (the time in which the source begins ingesting) are fetched.
+        * If backfill is set to true, then the value for timestamp.initial is set to 0. This means that data with a timestamp column greater than 0 epoch time are fetched.
+        * If backfill is set to false, then the value for timestamp.initial is set to -1. This means that data with a timestamp column greater than the current time (the time in which the source begins ingesting) are fetched.
 
 ## Next steps
 
 The following tutorial provides steps on how to connect your [!DNL Snowflake] streaming source to Experience Platform using the API:
 
-* [Stream data from a Snowflake database to Experience Platform using the Flow Service API](../../tutorials/api/create/databases/snowflake-streaming.md)
+* [Stream data from a [!DNL Snowflake] database to Experience Platform using the Flow Service API](../../tutorials/api/create/databases/snowflake-streaming.md)
 
