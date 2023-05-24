@@ -27,7 +27,6 @@ The following is a list of documentation for sever-side event forwarding extensi
 * [[!DNL Braze]](./braze/overview.md)
 * [Core](./core/overview.md)
 * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)*
-* [Facebook Conversions API](https://exchange.adobe.com/apps/ec/105509)
 * [Google Ads Enhanced Conversions](./google-ads-enhanced-conversions/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
@@ -36,4 +35,5 @@ The following is a list of documentation for sever-side event forwarding extensi
 * [[!DNL Pinterest]](./pinterest/overview.md)
 * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)*
 * [[!DNL Splunk]](./splunk/overview.md)
+* [[!DNL Twitter]](./twitter/overview.md)
 * [[!DNL Zendesk] Events API](./zendesk/overview.md)
