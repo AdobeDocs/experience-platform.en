@@ -159,7 +159,7 @@ A successful response returns the updated set of labels for the dataset.
 
 ## Remove labels from a dataset {#remove}
 
-You can remove any previously applied labels by updating existing `optionalLabels` with an empty value. Make a PUT request to the [!DNL Dataset Service] API.
+You can remove any previously applied field labels by either updating the existing `optionalLabels` value(s) with a subset of the existing field labels, or an empty list to remove them entirely. Make a PUT request to the [!DNL Dataset Service] API to update or remove previously applied labels. 
 
 **API format**
 
@@ -175,7 +175,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 The below dataset on which PUT operation is applied had C1 optionalLabel on properties/person/properties/address field and C1, C2 optionalLabels on /properties/person/properties/name/properties/fullName field. After the put operation, first field will have no label (C1 label got removed) and second field will have only C1 label (C2 label got removed)
 
-In the example scenario below, a PUT request is used to remove labels aded to individual fields. Before the request was made, the `fullName` field had the `C1` and `C2` labels applied and the `address` field already had a `C1` label applied. The PUT request removes the `C2` label from the `fullName` field and applies a `C1` label using the `optionalLabels.labels` parameter. The request also removes the `C1` label from the `address` field.
+In the example scenario below, a PUT request is used to remove labels aded to individual fields. Before the request was made, the `fullName` field had the `C1` and `C2` labels applied, and the `address` field already had a `C1` label applied. The PUT request overrides existing labels `C1, C2` labels from the `fullName` field with a `C1` label using the `optionalLabels.labels` parameter. The request also overrides the `C1` label from the `address` field with an empty set of field labels.
 
 ```shell
 curl -X PUT \
@@ -224,7 +224,7 @@ curl -X PUT \
 | `entityId` | This identifies the specific dataset entity to be updated. The `entityId` must include the following three values:<br/><br/>`namespace`: This is used to avoid ID collisions. The `namespace` is `AEP`.<br/>`id`: The ID of the resource being updated. This refers to the `datasetId`.<br/>`type`: The type of the resource being updated. This will always be `dataset`. | 
 | `labels` | A list of data usage labels that you want to add to the entire dataset. |
 | `parents` | The `parents` array contains a list of `entityId`s that this dataset will inherit labels from. Datasets can inherit labels from schemas and/or datasets. |
-| `optionalLabels` | This parameter is used to remove labels previously applied to a dataset field. A list of any individual fields within the dataset that you want to remove the labels from. Each item in this array must have the following properties: <br/><br/>`option`: An object that contains the [!DNL Experience Data Model] (XDM) attributes of the field. The following three properties are required:<ul><li><code>id</code>: The URI <code>$id</code> value of the schema associated with the field.</li><li><code>contentType</code>: The content type and version number of the schema. This should take the form of one of the valid <a href="../../xdm/api/getting-started.md#accept">Accept headers</a> for an XDM lookup request.</li><li><code>schemaPath</code>: The path to the field within the dataset's schema.</li></ul>`labels`: This value must be empty to remove the label from the dataset. PUT or POST methods now return an error if the `optionalLabels` field has any new or modified labels. |
+| `optionalLabels` | This parameter is used to remove labels previously applied to a dataset field. A list of any individual fields within the dataset that you want to remove the labels from. Each item in this array must have the following properties: <br/><br/>`option`: An object that contains the [!DNL Experience Data Model] (XDM) attributes of the field. The following three properties are required:<ul><li><code>id</code>: The URI <code>$id</code> value of the schema associated with the field.</li><li><code>contentType</code>: The content type and version number of the schema. This should take the form of one of the valid <a href="../../xdm/api/getting-started.md#accept">Accept headers</a> for an XDM lookup request.</li><li><code>schemaPath</code>: The path to the field within the dataset's schema.</li></ul>`labels`: This value must contain either a subset of the existing field labels applied, or be empty to remove all the existing field labels. PUT or POST methods now return an error if the `optionalLabels` field has any new or modified labels. |
 
 **Response**
 
