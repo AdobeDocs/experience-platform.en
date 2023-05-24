@@ -48,7 +48,7 @@ Select **[!UICONTROL Datasets]** in the left navigation, then select the name of
 
 The details view for the dataset appears. Select the **[!UICONTROL Data governance]** tab to view a list of the dataset's fields and any labels that have already been applied to them. Select the pencil icon to edit the datasets labels.
 
-![The Data governance tab for the Loyalty Members dataset with teh pencil icon highlighted.](./images/e2e/edit-dataset-labels.png)
+![The Data governance tab for the Loyalty Members dataset with the pencil icon highlighted.](./images/e2e/edit-dataset-labels.png)
 
 The [!UICONTROL Edit governance labels] dialog appears. Select the appropriate governance label and select **[!UICONTROL Save]**.
 
