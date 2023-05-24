@@ -15,6 +15,29 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 Experience Platform provides support for streaming data from a [!DNL Snowflake] database.
 
+## Understanding the [!DNL Snowflake] streaming source
+
+The [!DNL Snowflake] streaming source works by having data loaded by periodically executing an SQL query and creating an output record for each row in the resulting set.
+
+Some features of the features that this streaming source supports include:
+
+* Copying tables with a variety of JDBC data types.
+* Dynamically adding and removing tables from the database.
+* Configuring allow lists.
+* Varying polling intervals.
+* Controlling how data is incrementally copied from the database.
+
+By using [!DNL Kafka Connect], the [!DNL Snowflake] streaming source tracks the latest record that it receives from each table, so that it can start in the correct location for the next iteration. The source uses this functionality to filter data and only get the updated rows from a table (or from the output of a custom query) on each iteration.
+
+The [!DNL Snowflake] streaming source supports the following modes of operation:
+
+| Mode of operation | Description |
+| --- | --- |
+| Bulk | Performs a bulk load of the entire table every time the table is polled. |
+| Incrementing | Uses a strictly incrementing column on each table to only detect new rows. This mode does not detect modifications or deletions of existing rows. |
+| Timestamp | Uses a timestamp (or timestamp-like) column to detect new and modified rows. This mode assumes that the column is updated with each write action and that the values are incrementing, but not necessarily unique. |
+| Timestamp and incrementing | Uses two columns: a timestamp column that detects new and modified rows and a strictly incrementing column that provides a globally unique ID for updates, so each row can be assigned a unique streaming offset. |
+
 ## IP address allow list
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
