@@ -59,6 +59,7 @@ Permissions under Adobe Experience Platform Data Collection control access to ta
 >[!NOTE]
 >
 >For more information on how these permissions affect capabilities in tags, including administration strategies for common scenarios, see the tags documentation on [user permissions](../tags/ui/administration/user-permissions.md).
+
 ## Manage permissions {#manage}
 
 Permissions for data collection are managed through two product designations: **Adobe Experience Platform** and **Adobe Experience Platform Data Collection**.
