@@ -21,16 +21,16 @@ Experience Platform destinations export data to API-based integrations as HTTPS 
 
 The process by which profiles are aggregated into HTTPS messages before being dispatched to destination API endpoints is called *microbatching*. 
 
-Take the [Facebook destination](/help/destinations/catalog/social/facebook.md) with a *[configurable aggregation](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation)* policy as an example - data is sent in an aggregated fashion, where the destinations service takes all the incoming data from the profile service upstream and aggregates it by one of the following, before dispatching it to Facebook: 
+Take the [Facebook destination](/help/destinations/catalog/social/facebook.md) with a *[configurable aggregation](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* policy as an example - data is sent in an aggregated fashion, where the destinations service takes all the incoming data from the profile service upstream and aggregates it by one of the following, before dispatching it to Facebook: 
 
 * Number of records (maximum of 10.000) or
 * Time window interval (30 minutes) 
   
 Whichever of the thresholds above is first met triggers an export to Facebook. So, in the [!DNL Facebook Custom Audiences] dashboard, you might see audiences coming in from Experience Platform in 10.000 record increments. You might be seeing 10.000 records every 10-15 minutes because the data gets processed and aggregated faster than the 30 minutes export interval, and gets sent faster, so about every 10-15 minutes until all records have been processed. If there are insufficient records to make up a 10.000 batch, then the current number of records will be sent as is when the time window threshold is met, so you might see smaller batches sent to Facebook as well.
 
-As another example, consider the [HTTP API destination](/help/destinations/catalog/streaming/http-destination.md), which has a *[best effort aggregation](/help/destinations/destination-sdk/destination-configuration.md#best-effort-aggregation)* policy, with `maxUsersPerRequest: 10`. This means that a maximum of ten profiles will be aggregated before an HTTP call is fired to this destination, but Experience Platform tries to dispatch profiles to the destination as soon as the destinations service receives updated re-evaluation information from an upstream service. 
+As another example, consider the [HTTP API destination](/help/destinations/catalog/streaming/http-destination.md), which has a *[best effort aggregation](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* policy, with `maxUsersPerRequest: 10`. This means that a maximum of ten profiles will be aggregated before an HTTP call is fired to this destination, but Experience Platform tries to dispatch profiles to the destination as soon as the destinations service receives updated re-evaluation information from an upstream service. 
 
-The aggregation policy is configurable, and destination developers can decide how to configure the aggregation policy to best meet the rate limitations of the API endpoints downstream. Read more about [aggregation policy](/help/destinations/destination-sdk/destination-configuration.md#aggregation) in the Destination SDK documentation. 
+The aggregation policy is configurable, and destination developers can decide how to configure the aggregation policy to best meet the rate limitations of the API endpoints downstream. Read more about [aggregation policy](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) in the Destination SDK documentation. 
 
 ## Streaming profile export (enterprise) destinations {#streaming-profile-destinations}
 

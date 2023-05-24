@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;google ads;Google Ads;google ads;ads
 title: Create a Google Ads Base Connection Using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Google Ads using the Flow Service API.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
@@ -30,6 +29,7 @@ In order for [!DNL Flow Service] to connect with Google Ads, you must provide va
 | Credential | Description |
 | ---------- | ----------- |
 | `clientCustomerId` | The client customer ID is the account number that  corresponds with the Google Ads client account that you want to manage with the Google Ads API. This ID follows the template of `123-456-7890`. |
+| `loginCustomerId` | The login customer ID is the account number that corresponds with your Google Ads manager account and is used to fetch report data from a specific operating customer. For more information on the login customer ID, read the [Google Ads API documentation](https://developers.google.com/google-ads/api/docs/migration/login-customer-id). |
 | `developerToken` | The developer token allows you to access the Google Ads API. You can use the same developer token to make requests against all of your Google Ads accounts. Retrieve your developer token by [logging in to your manager account](https://ads.google.com/home/tools/manager-accounts/) and then navigating to the [!DNL API Center] page. |
 | `refreshToken` | The refresh token is a part of [!DNL OAuth2] authentication. This token allows you to regenerate your access tokens after they expire. |
 | `clientId` |  The client ID is used in tandem with the client secret as part of [!DNL OAuth2] authentication. Together, the client ID and client secret enables your application to operate on behalf of your account by identifying your application to Google. |
@@ -73,6 +73,7 @@ curl -X POST \
           "specName": "Basic Authentication",
           "params": {
               "clientCustomerID": "{CLIENT_CUSTOMER_ID}",
+              "loginCustomerID": "{LOGIN_CUSTOMER_ID}",
               "developerToken": "{DEVELOPER_TOKEN}",
               "authenticationType": "{AUTHENTICATION_TYPE}"
               "clientId": "{CLIENT_ID}",
@@ -90,6 +91,7 @@ curl -X POST \
 | Property | Description |
 | --------- | ----------- |
 | `auth.params.clientCustomerID` | The client customer ID of your Google Ads account. |
+| `auth.params.loginCustomerID` | The login customer ID that corresponds with your Google Ads manager account. |
 | `auth.params.developerToken` | The developer token of your Google Ads account. |
 | `auth.params.refreshToken` | The refresh token of your Google Ads account. |
 | `auth.params.clientID` | The client ID of your Google Ads account. |

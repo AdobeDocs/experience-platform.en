@@ -35,6 +35,16 @@ Use a Create Table as Select (CTAS) query to create a dataset, assign datatypes,
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
 ```
 
+The data types supported are: boolean, date, datetime, text, float, bigint, integer, map, array, and struct/row.
+
+The SQl codeblock below provides examples to define struct/row, map, and array datatypes. Line one demonstrates row syntax. Line two demonstrates map syntax, and line three, array syntax.
+
+```sql {line-numbers="true"}
+ROW (Column_name <data_type> [, column name <data_type> ]*)
+MAP <data_type, data_type>
+ARRAY <data_type>
+```
+
 Alternatively, datasets can also be enabled for profile through the Platform UI. For more information on marking a dataset as enabled for profile, see the [enable a dataset for Real-Time Customer Profile documentation](../../../catalog/datasets/user-guide.md#enable-profile).
 
 In the example query below, the `decile_table` dataset is created with `id` as the primary identity column and has the namespace `IDFA`. It also has a field named `decile1Month` of the map data type. The table created (`decile_table`) is enabled for profile.
