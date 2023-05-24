@@ -35,11 +35,6 @@ Permissions under Adobe Experience Platform include access to datastreams, ident
 
 {style="table-layout:auto"}
 
-<!-- (Feature not yet available?)
-| Dashboards | Manage Custom Dashboards | |
-| Dashboards | View Custom Dashboards | |
--->
-
 ### Adobe Experience Platform Data Collection permissions
 
 Permissions under Adobe Experience Platform Data Collection control access to tags and event forwarding capabilities, including properties, extensions, and environments. For steps on how to configure Adobe Experience Platform Data Collection permissions, see the [section below](#manage).
@@ -67,16 +62,16 @@ Permissions under Adobe Experience Platform Data Collection control access to ta
 
 ## Manage permissions {#manage}
 
-As outlined in the previous section, permissions for data collection are managed through two product designations in Admin Console: **Adobe Experience Platform** and **Adobe Experience Platform Data Collection**.
+Permissions for data collection are managed through two product designations: **Adobe Experience Platform** and **Adobe Experience Platform Data Collection**.
 
-To manage these permissions, log in to [Admin Console](https://adminconsole.adobe.com/) and select **[!UICONTROL Products]** from the top navigation. From here, select the product card for the permissions you want to configure. Refer to the subsections below for steps on how to manage the relevant permissions under each product in Admin Console:
+Refer to the subsections below for steps on how to manage the relevant permissions under each product in Admin Console:
 
 * [Adobe Experience Platform permissions](#manage-platform)
 * [Adobe Experience Platform Data Collection permissions](#manage-collection)
 
 ### Manage permissions under Adobe Experience Platform {#manage-platform}
 
-From the **[!UICONTROL Products]** view in Admin Console, select **[!UICONTROL Adobe Experience Platform Data Collection]**. Select the product profile that you want to edit permissions for, then navigate to the **[!UICONTROL Permissions]** tab.
+From the **[!UICONTROL Permissions]** area in Adobe Experience Platform select the role that you want to edit.
 
 In order to access data collection features, you must enable all permissions in the **[!UICONTROL Sandboxes]**, **[!UICONTROL Data Modeling]**, **[!UICONTROL Identity Management]**, and **[!UICONTROL Data Collection]** categories.
 
@@ -90,7 +85,7 @@ See the [access control UI guide](../access-control/ui/overview.md) for detailed
 
 ### Manage permissions under Adobe Experience Platform Data Collection {#manage-collection}
 
-From the **[!UICONTROL Products]** view in Admin Console, select **[!UICONTROL Adobe Experience Platform Data Collection]**.
+To manage these permissions, log in to Admin Console and select **[!UICONTROL Products]** from the top navigation, then select **[!UICONTROL Adobe Experience Platform Data Collection]**.
 
 ![Image showing the Data Collection product card in Admin Console](./images/permissions/data-collection-card.png)
 
