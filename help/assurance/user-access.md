@@ -19,8 +19,8 @@ To add a user to a product profile, log into the Admin Console and select **Add 
 
 ![The Add users button is highlighted.](./images/get-access/product-profile-add-users.png)
 
-The **Add users to your team** dialogue appears. On this dialogue, you can enter the details of the user you want to add. Enter the user's email address, first name (optional) and last name (optional).
+The **Add users to your team** dialog appears. On this dialog, you can enter the details of the user you want to add. Enter the user's email address, first name (optional) and last name (optional).
 
 Select the pencil icon to choose the products and user groups. From here, select **Adobe Experience Platform**, then **AEP-Default-All-Users**, followed by **Save**.
 
-![The dialogue which shows how to add the product profile is displayed.](./images/get-access/product-profile-add-profile.png)
+![The dialog which shows how to add the product profile is displayed.](./images/get-access/product-profile-add-profile.png)
