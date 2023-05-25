@@ -21,10 +21,6 @@ The [!DNL Snowflake] streaming source works by having data loaded by periodicall
 
 By using [!DNL Kafka Connect], the [!DNL Snowflake] streaming source tracks the latest record that it receives from each table, so that it can start in the correct location for the next iteration. The source uses this functionality to filter data and only get the updated rows from a table on each iteration.
 
-## IP address allow list
-
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
-
 ## Prerequisites
 
 The following section outlines prerequisite steps to complete before you can stream data from your [!DNL Snowflake] database to Experience Platform:
@@ -71,6 +67,7 @@ For more information on role and privilege management, refer to the [[!DNL Snowf
     * You can enable a `backfill` boolean flag for your [!DNL Snowflake] source when creating a source connection.
         * If backfill is set to true, then the value for timestamp.initial is set to 0. This means that data with a timestamp column greater than 0 epoch time are fetched.
         * If backfill is set to false, then the value for timestamp.initial is set to -1. This means that data with a timestamp column greater than the current time (the time in which the source begins ingesting) are fetched.
+    * The timestamp column should be formatted as type: `TIMESTAMP_LTZ` or `TIMESTAMP_NTZ`. If the timestamp column is set to `TIMESTAMP_NTZ`, then the types should be stored in UTC time in the database.
 
 ## Next steps
 
