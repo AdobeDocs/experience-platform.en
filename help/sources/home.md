@@ -121,6 +121,7 @@ Experience Platform provides support for ingesting data from a third-party datab
 - [[!DNL Oracle]](connectors/databases/oracle.md)
 - [[!DNL Phoenix]](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md)
+- [[!DNL Snowflake Streaming]](connectors/databases//snowflake-streaming.md)
 - [[!DNL Snowflake]](connectors/databases/snowflake.md)
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md)
 

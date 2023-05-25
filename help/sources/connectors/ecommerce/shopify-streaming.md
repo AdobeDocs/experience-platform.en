@@ -2,6 +2,7 @@
 title: Shopify Streaming Source
 description: Learn how to create a source connection and dataflow to ingest streaming data from your Shopify instance to Adobe Experience Platform
 badge: Beta
+last-substantial-update: 2023-04-26
 exl-id: 4c83c08d-c744-4167-9e3b-ed9a995943f4
 ---
 # [!DNL Shopify Streaming]

@@ -3,6 +3,7 @@ title: Snowflake Streaming Source Connector Overview
 description: Learn how to create a source connection and dataflow to ingest streaming data from your Snowflake instance to Adobe Experience Platform
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
+last-substantial-update: 2023-05-25
 ---
 # [!DNL Snowflake] streaming source
 

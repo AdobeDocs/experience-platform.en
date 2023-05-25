@@ -2,7 +2,6 @@
 title: Pendo Source Overview
 description: Learn how to connect Pendo to Adobe Experience Platform using APIs or the user interface by leveraging webhooks
 badge: Beta
-last-substantial-update: 2023-03-29
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
 ---
 # [!DNL Pendo]
