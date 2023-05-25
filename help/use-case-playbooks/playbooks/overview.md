@@ -2,15 +2,20 @@
 solution: Experience Platform
 title: Playbooks overview
 description: Learn how to use the USe CasePlaybooks feature in Experience Platform to get started with various use cases
+badgeBeta: label="Beta" type="Informative"
 ---
 
-# Use case playbooks overview
+# (Beta) Use case playbooks overview
+
+>[!IMPORTANT]
+>
+>This functionality is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
 
 With use case playbooks, benefit from automated workflows to help your data engineering team implement a use case faster. Browse the available playbooks in the **Use Case Playground** section to get started with various use cases that can accelerate your adoption of Experience Platform. 
 
 ![View of all playbooks](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
 
-Each playbook includes information about the specific use case it solves. After you enable it, the playbook generates projects with specific assets like schemas, segments, or journeys that are tailored to your use case and are reusable in Experience Platform. Use these assets or make edits to them before you start using them in Real-time CDP or Journey Optimizer.
+Each playbook includes information about the specific use case it solves. After you enable it, the playbook generates projects with specific assets like schemas, segments, or journeys that are tailored to your use case and are reusable in Experience Platform. Start using these assets or make edits to them before you using them and sharing them with your team in Real-time CDP or Journey Optimizer.
 
 ## Availability
 
