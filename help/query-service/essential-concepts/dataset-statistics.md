@@ -1,10 +1,10 @@
 ---
 title: Dataset Statistics Computation 
-description: This document describes how to compute column level statistics on Azure Data Lake Storage (ADLS) datasets with SQL commands.
+description: This document describes how to compute column-level statistics on Azure Data Lake Storage (ADLS) datasets with SQL commands.
 ---
 # Dataset statistics computation
 
-You can now compute column level statistics on [!DNL Azure Data Lake Storage] (ADLS) datasets with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. The SQL commands that compute dataset statistics are an extension of the `ANALYZE TABLE` command. Full details on the `ANALYZE TABLE` command can be found in the [SQL reference documentation](../sql/syntax.md#analyze-table).
+You can now compute column-level statistics on [!DNL Azure Data Lake Storage] (ADLS) datasets with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. The SQL commands that compute dataset statistics are an extension of the `ANALYZE TABLE` command. Full details on the `ANALYZE TABLE` command can be found in the [SQL reference documentation](../sql/syntax.md#analyze-table).
 
 >[!NOTE]
 >
@@ -81,7 +81,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 You can combine the column limit and the filter to create highly specific computational queries for your dataset columns. For example, the following query computes statistics on the columns `commerce`, `id`, and `timestamp` for the  dataset `tableName`, where the column timestamp has values between the specified range of `2023-04-01 00:00:00` and `2023-04-05 00:00:00`. 
 
 ```sql
-ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR (columns commerce, id, timestamp);
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
 ```
 
 <!-- ## Create an alias name {#alias-name}
@@ -119,7 +119,6 @@ An output might look similar to the example below.
                          columnName                         |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
 ------------------------------------------------------------+----------------+----------------+----------------+-------------------+---------------------+-----------+-----------
  marketing.trackingcode                                     |            0.0 |            0.0 |            0.0 |               0.0 |              1213.0 |         0 | String
- _experience.analytics.session.timestamp                    |            450 |          -2313 |          21903 |               7.0 |                 0.0 |         0 | Long
  _experience.analytics.customdimensions.evars.evar13        |            0.0 |            0.0 |            0.0 |               0.0 |              8765.0 |        20 | String
  _experience.analytics.customdimensions.evars.evar74        |            0.0 |            0.0 |            0.0 |               0.0 |                11.0 |         0 | String
  web.webpagedetails.name                                    |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | String
@@ -131,9 +130,9 @@ An output might look similar to the example below.
  _experience.analytics.customdimensions.props.prop45        |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | String
  environment.browserdetails.javaenabled                     |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | Boolean
  timestamp                                                  |            0.0 |            0.0 |            0.0 |               0.0 |                98.0 |         3 | Timestamp
-(13 rows)
+(12 rows)
 ```
 
 ## Next steps {#next-steps}
 
-By reading this document, you now have a better understanding of how to generate column level statistics from an ADLS dataset using an SQL query. You are recommended to read the [SQl syntax guide](../sql/syntax.md) to discover more features of the Adobe Experience Platform Query Service.
+By reading this document, you now have a better understanding of how to generate column-level statistics from an ADLS dataset using an SQL query. You are recommended to read the [SQl syntax guide](../sql/syntax.md) to discover more features of the Adobe Experience Platform Query Service.
