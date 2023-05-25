@@ -1,6 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces;namespaces;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
-solution: Experience Platform
 title: Identity Namespace Overview
 description: Identity namespaces are a component of Identity Service that serve as indicators of the context to which an identity relates. For example, they distinguish a value of "name@email.com" as an email address or "443522" as a numeric CRM ID.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
@@ -44,6 +42,7 @@ The following identity types are available within [!DNL Platform]:
 | Device ID | Device IDs identify hardware devices, such as IDFA (iPhone and iPad), GAID (Android), and RIDA (Roku), and can be shared by multiple people in households.|
 | Email address | Email addresses are often associated with a single person and therefore can be used to identify that person across different channels. Identities of this type include personally identifiable information (PII). This is an indication to [!DNL Identity Service] to handle the value sensitively.|
 | Non-people identifier | Non-people IDs are used for storing identifiers that require namespaces but are not connected to a person cluster. For example, a product SKU, data related to products, organizations, or stores. |
+| Partner ID | Partner IDs are identifiers used by data partners to represent people. Partner IDs are often pseudonymous so as to not reveal a person's true identity, and may be probabilistic. In Real-Time Customer Data Platform, Partner IDs are used primarily for expanded audience activation and data enrichment, and not for building deterministic identity graph linkages. |
 | Phone number | Phone numbers are often associated with a single person and therefore can be used to identify that person across different channels. Identities of this type include PII. This is indication to [!DNL Identity Service] to handle the value sensitively. |
 
 ### Standard namespaces {#standard}
