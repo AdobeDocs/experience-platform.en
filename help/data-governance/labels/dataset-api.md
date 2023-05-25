@@ -97,7 +97,7 @@ The example POST request below updates the entire dataset with a `C1` label. The
 
 >[!NOTE]
 >
->If labels currently exist for the dataset in question, new labels can only be added through a PUT request, which requires an `If-Match` header. Once labels have been added to a dataset, an `etag` value is assigned which can be used to update or remove the labels at a later time.
+>If labels currently exist for the dataset in question, new labels can only be added through a PUT request, which requires an `If-Match` header. Once labels have been added to a dataset, the most recent `etag` value is required to update or remove the labels at a later time.
 
 To retrieve the most recent version of the dataset-label entity, make a [GET request](#look-up) to the `/datasets/{DATASET_ID}/labels` endpoint. The current value is returned in the response under an `etag` header. When updating existing dataset labels, best practice is to first perform a lookup request for the dataset in order to fetch its latest `etag` value before using that value in the `If-Match` header of your subsequent PUT request.
 
