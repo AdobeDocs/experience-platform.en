@@ -3,6 +3,7 @@ solution: Experience Platform
 title: Salesforce Marketing Cloud Source Overview
 description: Learn how to connect Salesforce Marketing Cloud to Adobe Experience Platform using APIs or the user interface.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
+last-substantial-update: 2023-03-25
 ---
 # [!DNL Salesforce Marketing Cloud]
 
