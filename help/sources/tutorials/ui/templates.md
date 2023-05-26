@@ -4,7 +4,7 @@ title: Create a sources dataflow using templates in the UI
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 ---
-# Create a sources dataflow using templates in the UI
+# Create a sources dataflow using templates in the UI {#create-a-sources-dataflow-using-templates-in-the-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
