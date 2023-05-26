@@ -23,6 +23,10 @@ The tables below provide guidance on guardrails for static limits as well as val
 
 The following table outlines static limits applied to identity data.
 
+| Number of identities in a graph | 50 | When a graph with 50 linked identities is updated, Identity Service will apply a "first-in, first-out" mechanism and deletes the oldest identity to make space for the newest identity. Deletion is based on identity type and timestamp. Read the [appendix](#appendix) for more information on the deletion logic applied to identities when full graphs are updated. |
+
+The limit is applied at the sandbox level. Once the number of identities reach 150 or more, no new identities will be added, and the identity graph will not be updated. Graphs may show identities greater than 150 as a result of linking one or more graphs with less than 150 identities. **Note**: The maximum number of identities in an identity graph **for an individual merged profile** is 50. Merged profiles that are based off identity graphs with more than 50 identities are excluded from Real-Time Customer Profile. For more information, read the guide on [guardrails for Profile data](../profile/guardrails.md).
+
 | Guardrail | Limit | Notes |
 | --- | --- | --- |
 | Number of identities in a graph | 150 | The limit is applied at the sandbox level. The identity graph will not be updated once the limit is reached. **Note**: The maximum number of identities in an identity graph **for an individual merged profile** is 50. Merged profiles that are based off identity graphs with more than 50 identities are excluded from Real-Time Customer Profile. For more information, read the guide on [guardrails for Profile data](../profile/guardrails.md). |
