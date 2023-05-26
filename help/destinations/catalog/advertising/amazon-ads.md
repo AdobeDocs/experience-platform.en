@@ -75,9 +75,9 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Amazon Ads Advertiser ID]**: Select the ID for the target Amazon Ads account used for the destination.
-      [!NOTE]
-      
-      Note: After saving the destination configuration, you will not be able to change the Amazon Ads Advertiser ID, even if you re-authenticate through your Amazon account. To use a different Amazon Ads Advertiser ID, you must create a new destination connection.
+>[!NOTE]
+>
+>After saving the destination configuration, you will not be able to change the Amazon Ads Advertiser ID, even if you re-authenticate through your Amazon account. To use a different Amazon Ads Advertiser ID, you must create a new destination connection.
 *  **[!UICONTROL Advertiser Region]**: Select the appropriate region in which your Advertiser is hosted. For more information on the marketplaces supported by each region, visit our [documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
 
