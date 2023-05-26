@@ -1,20 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics;salesforce marketing cloud;Salesforce Marketing Cloud;marketing automation
 solution: Experience Platform
 title: Salesforce Marketing Cloud Source Overview
-topic-legacy: overview
 description: Learn how to connect Salesforce Marketing Cloud to Adobe Experience Platform using APIs or the user interface.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
+last-substantial-update: 2023-05-25
 ---
-# (Beta) [!DNL Salesforce Marketing Cloud]
-
->[!NOTE]
->
->The [!DNL Salesforce Marketing Cloud] source is in beta. See the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+# [!DNL Salesforce Marketing Cloud]
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-[!DNL Experience Platform] provides support for ingesting data from third-party marketing automation systems. Support for marketing automation providers include [!DNL Salesforce Marketing Cloud].
+Experience Platform provides support for ingesting data from third-party marketing automation systems. Support for marketing automation providers include [!DNL Salesforce Marketing Cloud].
 
 ## Prerequisites
 
@@ -23,9 +18,13 @@ Before you can connect your [!DNL Salesforce Marketing Cloud] source to Platform
 * `campaign_read`
 * `list_and_subscribers_read`
 
-You can request for scopes by making a call to the `v2/userinfo` resource of the [!DNL Salesforce Marketing Cloud] API. See the [[!DNL Salesforce Marketing Cloud] API Integration Permission Scopes document](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html) for guidance on how to request and compare scopes.
+You can request for scopes by making a call to the `v2/userinfo` resource of the [!DNL Salesforce Marketing Cloud] API. See the [[!DNL Salesforce Marketing Cloud] API Integration Permission Scopes document](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) for guidance on how to request and compare scopes.
 
-For more information on scopes including a list of their related permissions and behaviors, see this [[!DNL Salesforce Marketing Cloud] REST API document](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html).
+For more information on scopes including a list of their related permissions and behaviors, see this [[!DNL Salesforce Marketing Cloud] REST API document](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>).
+
+>[!IMPORTANT]
+>
+>Custom object ingestion is currently not supported by the [!DNL Salesforce Marketing Cloud] source integration.
 
 ## IP address allow list
 

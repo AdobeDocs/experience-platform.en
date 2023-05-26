@@ -1,30 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;salesforce marketing cloud;Salesforce Marketing Clud
-solution: Experience Platform
-title: Create a Salesforce Marketing Cloud Source Connection in the UI
-topic-legacy: overview
-type: Tutorial
-description: Learn how to create a Salesforce Marketing Cloud source connection using the Adobe Experience Platform UI.
+title: Connect Your Salesforce Marketing Cloud Account To Experience Platform Through the UI
+description: Learn how to connect your Salesforce Marketing Cloud account to Experience Platform through the UI.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
 ---
-# Create a [!DNL Salesforce Marketing Cloud] source connection in the UI
+# Connect your [!DNL Salesforce Marketing Cloud] account to Experience Platform through the UI
 
->[!NOTE]
+>[!IMPORTANT]
 >
-> The [!DNL Salesforce Marketing Cloud] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>Custom object ingestion is currently not supported by the [!DNL Salesforce Marketing Cloud] source integration.
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Salesforce Marketing Cloud] source connector using the Platform user interface.
+
+This tutorial provides steps on how to connect your [!DNL Salesforce Marketing Cloud] account to Adobe Experience Platform through the UI.
 
 ## Getting started
 
-This tutorial requires a working understanding of the following components of Adobe Experience Platform:
+This tutorial requires a working understanding of the following components of Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-If you already have a [!DNL Salesforce Marketing Cloud] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/marketing-automation.md).
+If you already have a [!DNL Salesforce Marketing Cloud] account, you may skip the remainder of this document and proceed to the tutorial on [bringing marketing automation data to Experience Platform using the UI](../../dataflow/marketing-automation.md).
 
 ### Gather required credentials
 
@@ -32,38 +29,38 @@ In order to access your [!DNL Salesforce Marketing Cloud] account on Platform, y
 
 | Credential | Description |
 | ---------- | ----------- |
-| `host` | The host server of your application. This is often your subdomain. **Note:** When entering your `host` value, you only need to specify the subdomain and not the entire URL. For example, if your host URL is `https://abcd-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, then you only need to enter `abcd-ab12c3d4e5fg6hijk7lmnop8qrst` as your host value. |
-| `clientId` | The client ID associated with your [!DNL Salesforce Marketing Cloud] application. |
-| `clientSecret` | The client secret associated with your [!DNL Salesforce Marketing Cloud] application. |
+| Host | The host server of your application. This is often your subdomain. **Note:** When entering your `host` value, you only need to specify the subdomain and not the entire URL. For example, if your host URL is `https://abcd-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, then you only need to enter `abcd-ab12c3d4e5fg6hijk7lmnop8qrst` as your host value. |
+| Client ID | The client ID associated with your [!DNL Salesforce Marketing Cloud] application. |
+| Client secret | The client secret associated with your [!DNL Salesforce Marketing Cloud] application. |
 
-For more information about getting started, refer to this [[!DNL Salesforce Marketing Cloud] document](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
+For more information about authentication for [!DNL Salesforce Marketing Cloud], visit the [[!DNL Salesforce] authentication documentation](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
 
 ## Connect your [!DNL Salesforce Marketing Cloud] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Salesforce Marketing Cloud] account to Platform.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] displays a variety of sources supported by Experience Platform.
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
-
-You can select the appropriate category from the catalog on the left-hand side of your screen. You can also use the search bar to narrow down the displayed connectors.
+You can select the appropriate category from the list of categories. You can also use the search bar to filter for a specific source.
 
 Under the [!UICONTROL Marketing automation] category, select **[!UICONTROL Salesforce Marketing Cloud]** and then select **[!UICONTROL Set up]**.
 
-![catalog](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
+![The sources catalog with the Salesforce Marketing Cloud source selected.](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 
-The **[!UICONTROL Connect to Salesforce Marketing Cloud]** page appears. On this page, you can either use new credentials or existing credentials.
+The **[!UICONTROL Connect to Salesforce Marketing Cloud]** page appears. On this page, you can either create a new account or use an existing account.
 
 ### New account
 
-If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your [!DNL Salesforce Marketing Cloud] credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new connection to establish.
+To create a new account, select **[!UICONTROL New account]** and provide a name for your account, an optional description, and the authentication credentials that correspond with your [!DNL Salesforce Marketing Cloud] account.
 
-![new](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
+When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
+
+![The new account interface where you can authenticate a new account for Salesforce Marketing Cloud.](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
 
 ### Existing account
 
-To connect an existing account, select the [!DNL Salesforce Marketing Cloud] account you want to connect with, then select **[!UICONTROL Next]** to proceed.
+If you already have an existing account, select **[!UICONTROL Existing account]** and then select the account that you would like to use from the list that appears.
 
-![existing](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
+![The existing account interface where you can select from a list of existing Salesforce Marketing Cloud accounts.](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Salesforce Marketing Cloud] account. You can now continue on to the next tutorial and [configure a dataflow to bring marketing automation system data into Platform](../../dataflow/marketing-automation.md).
+By following this tutorial, you have established a connection between your [!DNL Salesforce Marketing Cloud] account and Experience Platform. You can now continue on to the next tutorial and [create a dataflow to bring your marketing automation data into Experience Platform](../../dataflow/marketing-automation.md).

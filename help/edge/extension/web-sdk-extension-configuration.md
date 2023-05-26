@@ -97,6 +97,23 @@ The SDK can automatically collect link click information for you. By default, th
 
 By default, the SDK collects certain context data regarding device, web, environment, and place context. If you would like to see a list of the information Adobe collects, you can find it [here](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). If you don't want this data collected or you only want certain categories of data collected, you can change these options.  
 
+## [!UICONTROL Datastream Configuration Overrides]
+
+Datastream overrides allow you to define additional configurations for your datastreams, which get passed to the Edge Network via the Web SDK.
+
+This helps you trigger different datastream behaviors than the default ones, without creating a new datastream or modifying your existing settings.
+
+Datastream configuration override is a two step process:
+
+1. First, you must define your datastream configuration overrides in the [datastream configuration page](../datastreams/configure.md).
+2. Then, you must send the overrides to the Edge Network either via a Web SDK command, or by using the Web SDK tag extension.
+
+See the datastream [configuration overrides documentation](../datastreams/overrides.md) for detailed instructions on how to override datastream configurations.
+
+As an alternative to passing the overrides through a Web SDK command, you can configure the overrides in the tag extension screen shown below.
+
+![Image showing the datastream configuration overrides in the Web SDK tag extension page.](../assets/extension/overview/datastream-overrides.png)
+
 ## [!UICONTROL Advanced Settings]
 
 ![](../assets/extension/overview/advanced-settings.png)

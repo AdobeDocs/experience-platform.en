@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Salesforce;salesforce
 solution: Experience Platform
 title: Create a Salesforce  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Salesforce source connection using the Adobe Experience Platform UI.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
@@ -18,7 +17,7 @@ This tutorial requires a working understanding of the following components of Ad
 *   [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     *   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-*   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+*   [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 If you already have a valid [!DNL Salesforce] account, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/crm.md).
 

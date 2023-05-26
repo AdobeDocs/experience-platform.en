@@ -1,27 +1,26 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;XDM graphs
-title: Real-time Customer Profile Overview
-topic-legacy: guide
-description: Real-time Customer Profile merges data from various sources and provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels.
+title: Real-Time Customer Profile Overview
+description: Real-Time Customer Profile merges data from various sources and provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 ---
-# [!DNL Real-time Customer Profile] overview
+# [!DNL Real-Time Customer Profile] overview
 
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. [!DNL Profile] allows you to consolidate your customer data into a unified view offering an actionable, timestamped account of every customer interaction. This overview will help you understand the role and use of [!DNL Real-time Customer Profile] in [!DNL Experience Platform].
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With [!DNL Real-Time Customer Profile], you can see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. [!DNL Profile] allows you to consolidate your customer data into a unified view offering an actionable, timestamped account of every customer interaction. This overview will help you understand the role and use of [!DNL Real-Time Customer Profile] in [!DNL Experience Platform].
 
 ## [!DNL Profile] in Experience Platform
 
-The relationship between Real-time Customer Profile and other services within Experience Platform is highlighted in the following diagram:
+The relationship between Real-Time Customer Profile and other services within Experience Platform is highlighted in the following diagram:
 
-![The relationship between Real-time Customer Profile and other services in Adobe Experience Platform. This diagram shows that Profile is one of the core components of Adobe Experience Platform.](images/profile-overview/profile-in-platform.png) 
+![The relationship between Real-Time Customer Profile and other services in Adobe Experience Platform. This diagram shows that Profile is one of the core components of Adobe Experience Platform.](images/profile-overview/profile-in-platform.png) 
 
 ## Understanding profiles
 
-[!DNL Real-time Customer Profile] merges data from various enterprise systems and then provides access to that data in the form of customer profiles with related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels. The following sections highlight some of the core concepts that you must understand in order to effectively build and maintain profiles within Platform.
+[!DNL Real-Time Customer Profile] merges data from various enterprise systems and then provides access to that data in the form of customer profiles with related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels. The following sections highlight some of the core concepts that you must understand in order to effectively build and maintain profiles within Platform.
 
 ### Profile entity composition
 
-A Real-time Customer Profile is composed of a main entity, called the **primary entity**, and various supporting entities. The primary entity is composed of traits, behaviors, and segment memberships of a profile. Other entities allow the segmentation engine to utilize data outside of the primary entity of the profile, and include the following:
+A Real-Time Customer Profile is composed of a main entity, called the **primary entity**, and various supporting entities. In the context of Experience Platform, the primary entity is typically a **profile entity**, which is composed of traits, behaviors, and segment memberships of an individual person. Other entities allow the segmentation engine to utilize data outside of the primary entity of the profile, and include the following:
 
 - **Dimensional entity**: The entity that is used to simplify the data modelling process for information shared across events or profile records. This is also known as the lookup entity or classification entity.
 - **B2B entity**: Entities that describe the profile's relationship with business-to-business accounts and opportunities.
@@ -32,19 +31,24 @@ A Real-time Customer Profile is composed of a main entity, called the **primary 
 >
 >Since dimensional and B2B entities only exist outside the primary entity, these are only used for batch segmentation.
 
+Dimensional and B2B entities are linked to the primary entity through **schema relationships**. Refer to the following documentation for more information:
+
+- [Create a one-to-one schema relationship for lookup entities](../xdm/tutorials/relationship-ui.md)
+- [Create a many-to-one schema relationship for B2B entities](../xdm/tutorials/relationship-b2b.md)
+
 ### Profile data store
 
-Although [!DNL Real-time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] data store. The [!DNL Profile] store is separate from catalog data in the data lake and [!DNL Identity Service] data in the identity graph.
+Although [!DNL Real-Time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] data store. The [!DNL Profile] store is separate from catalog data in the data lake and [!DNL Identity Service] data in the identity graph.
 
 The Profile store uses a Microsoft Azure Cosmos DB infrastructure and the Platform Data Lake uses Microsoft Azure Data Lake storage.
 
 ### Profile guardrails
 
-Experience Platform provides a series of guardrails to help you avoid creating [Experience Data Model (XDM) schemas](../xdm/home.md) which Real-time Customer Profile cannot support. This includes soft limits that will result in performance degradation, as well has hard limits that will result in errors and system breakages. For more information, including a list of guidelines and example use cases, please read the [Profile guardrails](guardrails.md) documentation.
+Experience Platform provides a series of guardrails to help you avoid creating [Experience Data Model (XDM) schemas](../xdm/home.md) which Real-Time Customer Profile cannot support. This includes soft limits that will result in performance degradation, as well has hard limits that will result in errors and system breakages. For more information, including a list of guidelines and example use cases, please read the [Profile guardrails](guardrails.md) documentation.
 
 ### Profile dashboard {#profile-dashboard}
 
-The Experience Platform UI provides a dashboard through which you can view important information about your Real-time Customer Profile data, as captured during a daily snapshot. To learn how to access and work with the [!DNL Profile] dashboard in the UI, and detailed information regarding the metrics displayed in the dashboard, refer to the [Profile dashboard UI guide](ui/profile-dashboard.md).  
+The Experience Platform UI provides a dashboard through which you can view important information about your Real-Time Customer Profile data, as captured during a daily snapshot. To learn how to access and work with the [!DNL Profile] dashboard in the UI, and detailed information regarding the metrics displayed in the dashboard, refer to the [Profile dashboard UI guide](ui/profile-dashboard.md).  
 
 ### Profile fragments vs merged profiles {#profile-fragments-vs-merged-profiles}
 
@@ -76,33 +80,33 @@ To learn more about merge policies and their role within Experience Platform, pl
 
 ### Union schemas {#profile-fragments-and-union-schemas}
 
-One of the key features of [!DNL Real-time Customer Profile] is the ability to unify multi-channel data. When [!DNL Real-time Customer Profile] is used to access an entity, it can supply you with a merged view of all profile fragments for that entity across datasets, referred to as the "union view" and made possible through what is known as a union schema. 
+One of the key features of [!DNL Real-Time Customer Profile] is the ability to unify multi-channel data. When [!DNL Real-Time Customer Profile] is used to access an entity, it can supply you with a merged view of all profile fragments for that entity across datasets, referred to as the "union view" and made possible through what is known as a union schema. 
 
 To learn more about union schemas, including how to access union schemas in the UI, visit the [union schema UI guide](ui/union-schema.md).
 
-### (Alpha) Computed attributes
+<!-- ### (Alpha) Computed attributes
 
 >[!IMPORTANT]
 >
 >Computed attribute functionality is in alpha. The documentation and functionality are subject to change.
 
-Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md).
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
 ## Profiles and segments
 
-Adobe Experience Platform [!DNL Segmentation Service] produces the audiences needed to power experiences for your individual customers. When an audience segment is created, the ID of that segment is added to the list of segment memberships for all qualifying profiles. Segment rules are built and applied to [!DNL Real-time Customer Profile] data using RESTful APIs and the Segment Builder user interface. To learn more about segmentation, please begin by reading the [Segmentation Service overview](../segmentation/home.md). 
+Adobe Experience Platform [!DNL Segmentation Service] produces the audiences needed to power experiences for your individual customers. When an audience segment is created, the ID of that segment is added to the list of segment memberships for all qualifying profiles. Segment rules are built and applied to [!DNL Real-Time Customer Profile] data using RESTful APIs and the Segment Builder user interface. To learn more about segmentation, please begin by reading the [Segmentation Service overview](../segmentation/home.md). 
   
 ### Streaming ingestion and streaming segmentation
 
-Real-time input is made possible through a process called streaming ingestion. As profile and time series data is ingested, [!DNL Real-time Customer Profile] automatically decides to include or exclude that data from segments through an ongoing process called streaming segmentation, before merging it with existing data and updating the union view. As a result, you can instantaneously perform computations and make decisions to deliver enhanced, individualized experiences to customers as they interact with your brand. While being ingested, the data also undergoes validation to ensure it being ingested properly and conforming to the schema upon which the dataset is based. For more information about what validation is done during ingestion, please begin by reading the [data ingestion quality overview](../ingestion/quality/overview.md).
+Real-time input is made possible through a process called streaming ingestion. As profile and time series data is ingested, [!DNL Real-Time Customer Profile] automatically decides to include or exclude that data from segments through an ongoing process called streaming segmentation, before merging it with existing data and updating the union view. As a result, you can instantaneously perform computations and make decisions to deliver enhanced, individualized experiences to customers as they interact with your brand. While being ingested, the data also undergoes validation to ensure it being ingested properly and conforming to the schema upon which the dataset is based. For more information about what validation is done during ingestion, please begin by reading the [data ingestion quality overview](../ingestion/quality/overview.md).
 
 ## Edge projections
 
-In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real time, the right data needs to be readily available and continuously updated as changes happen. Adobe Experience Platform enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. For example, Adobe applications such as Adobe Target and Adobe Campaign use edges in order to provide personalized customer experiences in real time. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. To learn more and begin working with projections using the [!DNL Real-time Customer Profile] API, refer to the [edge projection endpoints guide](api/edge-projections.md). 
+In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real time, the right data needs to be readily available and continuously updated as changes happen. Adobe Experience Platform enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. For example, Adobe applications such as Adobe Target and Adobe Campaign use edges in order to provide personalized customer experiences in real time. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. To learn more and begin working with projections using the [!DNL Real-Time Customer Profile] API, refer to the [edge projection endpoints guide](api/edge-projections.md). 
 
 ## Ingesting data into [!DNL Profile]
 
-[!DNL Platform] can be configured to send record and time-series data to [!DNL Profile], supporting real-time streaming ingestion and batch ingestion. For more information, see the tutorial outlining how to [add data to Real-time Customer Profile](tutorials/add-profile-data.md). 
+[!DNL Platform] can be configured to send record and time-series data to [!DNL Profile], supporting real-time streaming ingestion and batch ingestion. For more information, see the tutorial outlining how to [add data to Real-Time Customer Profile](tutorials/add-profile-data.md). 
 
 >[!NOTE]
 >
@@ -110,7 +114,7 @@ In order to drive coordinated, consistent, and personalized experiences for your
 
 ### Profile ingestion metrics
 
-Observability Insights allows you to expose key metrics in Adobe Experience Platform. In addition to [!DNL Experience Platform] usage statistics and performance indicators for various [!DNL Platform] functionalities, there are specific profile-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. To learn more, begin by reading the [Observability Insights API overview](../observability/api/overview.md), and for a complete list of Real-time Customer Profile metrics, see the documentation on [available metrics](../observability/api/metrics.md#available-metrics).
+Observability Insights allows you to expose key metrics in Adobe Experience Platform. In addition to [!DNL Experience Platform] usage statistics and performance indicators for various [!DNL Platform] functionalities, there are specific profile-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. To learn more, begin by reading the [Observability Insights API overview](../observability/api/overview.md), and for a complete list of Real-Time Customer Profile metrics, see the documentation on [available metrics](../observability/api/metrics.md#available-metrics).
 
 ## Update Profile Store data
 
@@ -130,8 +134,8 @@ Data Governance is managed at several points. These include deciding what data i
 
 ### Handling opt-out and data privacy requests
 
-[!DNL Experience Platform] enables your customers to send opt-out requests related to the usage and storage of their data within [!DNL Real-time Customer Profile]. For more information on how opt-out requests are handled, please see the documentation on [honoring opt-out requests](../segmentation/consents.md).
+[!DNL Experience Platform] enables your customers to send opt-out requests related to the usage and storage of their data within [!DNL Real-Time Customer Profile]. For more information on how opt-out requests are handled, please see the documentation on [honoring opt-out requests](../segmentation/consents.md).
 
 ## Next steps and additional resources
 
-To learn more about working with Real-time Customer Profile data using the Experience Platform UI or the Profile API, please begin by reading the [Profile UI guide](ui/user-guide.md) or [API developer guide](api/overview.md), respectively.
+To learn more about working with Real-Time Customer Profile data using the Experience Platform UI or the Profile API, please begin by reading the [Profile UI guide](ui/user-guide.md) or [API developer guide](api/overview.md), respectively.

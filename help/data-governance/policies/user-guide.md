@@ -2,13 +2,21 @@
 keywords: Experience Platform;home;popular topics;data governance;data usage policy user guide
 solution: Experience Platform
 title: Manage Data Usage Policies in the UI
-topic-legacy: policies
 description: Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions that you can perform in the Policies workspace in the Experience Platform user interface.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 ---
-# Manage data usage policies in the UI
+# Manage data usage policies in the UI {#user-guide}
 
-Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions that you can perform in the **Policies** workspace in the [!DNL Experience Platform] user interface.
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsagePolicies_description"
+>title="Integrate and enforce customer consent in your profile data"
+>abstract="<h2>Description</h2><p>Platform allows you to integrate the consent data you have collected from your customers into their respective profiles. You can then set up consent policies to determine whether this data can be included in segments that are activated to certain destinations.</p>"
+
+This document covers how to use the **[!UICONTROL Policies]** workspace in the Adobe Experience Platform UI to create and manage data usage policies.
+
+>[!NOTE]
+>
+>For information on how to manage access control policies in the UI, refer to the [attribute-based access control UI guide](../../access-control/abac/ui/policies.md) instead.
 
 >[!IMPORTANT]
 >
@@ -18,7 +26,7 @@ Adobe Experience Platform Data Governance provides a user interface that allows 
 
 This guide requires a working understanding of the following [!DNL Experience Platform] concepts:
 
-* [Data Governance](../home.md)
+* [Data governance](../home.md)
 * [Data usage policies](./overview.md)
 
 ## View existing policies {#view-policies}
@@ -75,9 +83,14 @@ The **[!UICONTROL Browse]** tab reappears, which now lists the newly created pol
 
 ### Create a consent policy {#consent-policy}
 
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsagePolicies_instructions"
+>title="Instructions"
+>abstract="<ul><li>Ensure that you are ingesting preference data into your union schemas via the OneTrust source connector or the standard XDM schema for consent.</li><li>Select <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html">Policies</a> in the left navigation, then select <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Create Policy</a>.</li><li>Under the <b>If</b> section, describe the conditions or actions that will trigger the policy check.</li><li>Under the <b>Then</b> section, enter the consent attributes that must be present for a profile to be included in the action that triggered the policy.</li><li>Select <b>Save</b> to create the policy. To enable the policy, select the <b>Status</b> toggle in the right rail.</li><li>Experience Platform automatically enforces your enabled consent policies when you activate segments to destinations, and provides details on how each policy affects your audience size.</li><li>For more help with this feature, see the guide on <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy">creating consent policies</a> on Experience League.</li></ul>"
+
 >[!IMPORTANT]
 >
->Consent policies are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
+>Consent policies are only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
 
 If you chose to create a consent policy, a new screen appears that allows you to configure the new policy.
 

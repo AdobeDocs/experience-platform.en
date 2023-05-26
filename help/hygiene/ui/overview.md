@@ -7,8 +7,8 @@ exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
->title="Data Hygiene Wheel"
->abstract="This widget shows the status of Data Hygiene record delete jobs for the selected timeframe. For more information on your Data Hygiene processes, select **Data Hygiene** in the left navigation."
+>title="Data Hygiene Requests Status"
+>abstract="This widget shows the total counts of created, failed, and completed Data Hygiene record delete jobs. For more information on your Data Hygiene processes, select **Data Hygiene** in the left navigation."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
@@ -27,4 +27,4 @@ From here, you can browse existing work orders and configure new data hygiene op
 
 * [Browse existing work orders](./browse.md)
 * [Create a dataset expiration request](./dataset-expiration.md)
-* [Create a record delete request](./record-delete.md)
+<!-- * [Create a record delete request](./record-delete.md) -->

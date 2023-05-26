@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;DULE;dule
 solution: Experience Platform
 title: Data Governance Overview
-topic-legacy: overview
 description: Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within Experience Platform at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 ---
@@ -11,6 +10,10 @@ exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 One of the core capabilities of Adobe Experience Platform is to bring data from multiple enterprise systems together to better allow marketers to identify, understand, and engage customers. This data may be subject to usage restrictions defined by your organization or by legal regulations. It is therefore important to ensure that your data operations within [!DNL Platform] are compliant with data usage policies. 
 
 Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
+
+>[!NOTE]
+>
+>In Experience Platform, data governance is only concerned with how data is used or activated, regardless of the user performing the action. For information on how to control access to specific data fields for certain Platform users within your organization, see the documentation on [attribute-based access control](../access-control/abac/overview.md) instead.
 
 ## Data governance roles
 
@@ -48,7 +51,7 @@ There are three key elements to the Data Governance framework: Labels, Policies,
 
 ## Data usage labels
 
-Data Governance enables data stewards to apply usage labels at the dataset and field level to categorize data according to the type of policies that apply.
+Data Governance enables data stewards to apply usage labels at the schema field level and dataset level to categorize data according to the type of policies that apply.
 
 The Data Governance framework includes predefined data usage labels that can be used to categorize data in three ways:
 
@@ -66,11 +69,11 @@ Labels can be applied at any time, providing flexibility in how you choose to go
 
 See the overview on [data usage labels](./labels/overview.md) for more information.
 
-## Data usage policies
+## Data usage policies {#data-usage-policies}
 
 In order for data usage labels to effectively support data compliance, data usage policies must be implemented. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
-An example of a marketing action might be the desire to export a dataset to a third-party service. If there is a policy in place saying that Personally Identifiable Information (PII) cannot be exported, and an "I" label (identity data) has been applied to the dataset, [!DNL Policy Service] prevents any action that would export this dataset to a third-party destination. Should one of these action attempts occur, Policy Service sends a message telling you that a data usage policy has been violated.
+An example of a marketing action might be the desire to export a dataset to a third-party service. If there is a policy in place declaring that Personally Identifiable Information (PII) cannot be exported, and an "I" label (identity data) has been applied to the field level or dataset, [!DNL Policy Service] prevents any action that would export this dataset to a third-party destination. Should one of these action attempts occur, Policy Service sends a message telling you that a data usage policy has been violated.
 
 There are two types of policies available:
 
@@ -91,7 +94,7 @@ This document provided a high-level introduction to Data Governance and theData 
 
 The following section provides additional information regarding Data Governance.
 
-### Data Governance terminology
+### Data Governance terminology {#data-governance-terminology}
 
 The following table outlines key terms related to Data Governance and theData Governance framework.
 
@@ -102,14 +105,15 @@ The following table outlines key terms related to Data Governance and theData Go
 |**Data governance**|Data governance encompasses the strategies and technologies used to ensure data is in compliance with regulations and corporate policies with respect to data usage.|
 |**Data steward**|The data steward is the person responsible for the management, oversight, and enforcement of an organization's data assets. A data steward also ensures data governance policies are safeguarded and maintained to be compliant with government regulations and organization policies.|
 |**Data usage labels**|Data usage labels provide users the ability to categorize data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and corporate policies.|
-|**Dataset labels**|Labels can be added to a dataset. All fields within a dataset inherit the dataset's labels.|
-|**Field labels**|Field labels are data governance labels that are either inherited from a dataset or applied directly to a field.  Data governance labels applied to a field are not inherited up to a dataset.|
+|**Dataset labels**| Labels can be added to a schema. All fields within a dataset inherit the schema's labels.|
+|**Field labels**|Field labels are data governance labels that are either inherited from a schema or applied directly to a field. Data governance labels applied to a field are not inherited up to the schema level.|
 |**Geofence**| A geofence is a virtual geographic boundary, defined by GPS or RFID technology, that enables software to trigger a response when a mobile device enters or leaves a particular area.|
 |**Identity labels**|Identity "I" labels are used to categorize data that can identify or contact a specific person.|
-|**Interest-based targeting**|Interest-based targeting, also known as personalization, occurs if the following three conditions are met: data collected on-site is, used to make inferences about a users’ interest, is used in another context, such as on another site or app (off-site) and is used to select which content or ads are served based on those inferences.|
+|**Interest-based targeting**|Interest-based targeting, also known as personalization, occurs if the following three conditions are met: data collected on-site is, used to make inferences about a users' interest, is used in another context, such as on another site or app (off-site) and is used to select which content or ads are served based on those inferences.|
 |**Marketing action**|A marketing action, in the context of the data governance framework, is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies|
 |**Policy**|In the data governance framework, a policy is a rule that describes what kind of marketing actions are allowed or not allowed to be taken on specific data.|
-|**Sensitive Labels**|Sensitive “S” labels are used to categorize data that you, and your organization, consider sensitive.|
+| **Schema Labels** | Manage the labels for data governance, consent, and access control at the schema level. This propogates the labels to every dataset that uses that schema. |
+|**Sensitive Labels**|Sensitive "S" labels are used to categorize data that you, and your organization, consider sensitive.|
 
 ## Additional resources
 
@@ -117,6 +121,8 @@ The following video is intended to support your understanding of the Data Govern
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
+<!-- A key section of the video is now outdated due to the deprecation of the dataset field level labelling feature.
+
 The following video provides an introduction to various Data Governance features in Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on) -->

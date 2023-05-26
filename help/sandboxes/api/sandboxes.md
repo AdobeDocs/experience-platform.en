@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;sandbox developer guide
 solution: Experience Platform
 title: Sandbox management API Endpoint
-topic-legacy: developer guide
 description: The /sandboxes endpoint in the Sandbox API allows you to  programmatically manage sandboxes in Adobe Experience Platform.
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
 ---
@@ -16,7 +15,7 @@ The API endpoint used in this guide is part of the [[!DNL Sandbox] API](https://
 
 ## Retrieve a list of sandboxes {#list}
 
-You can list all sandboxes belonging to your IMS Organization (active or otherwise), by making a GET request to the `/sandboxes` endpoint.
+You can list all sandboxes belonging to your organization (active or otherwise), by making a GET request to the `/sandboxes` endpoint.
 
 **API format**
 

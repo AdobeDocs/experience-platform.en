@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data prep;api guide;mapping sets;
 solution: Experience Platform
 title: Mapping Sets API Endpoint
-topic-legacy: mapping sets
 description: You can use the `/mappingSets` endpoint in the Adobe Experience Platform API to programmatically retrieve, create, update, and validate mapping sets.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 ---
@@ -12,7 +11,7 @@ Mapping sets can be used to define how data in a source schema maps to that of a
 
 ## List mapping sets
 
-You can retrieve a list of all the mapping sets for your IMS Organization by making a GET request to the `/mappingSets` endpoint.
+You can retrieve a list of all the mapping sets for your organization by making a GET request to the `/mappingSets` endpoint.
 
 **API format**
 
@@ -35,7 +34,7 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 
 **Request**
 
-The following request will retrieve the last two mapping sets within your IMS Organization.
+The following request will retrieve the last two mapping sets within your organization.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \

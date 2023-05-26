@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Privacy Request Processing in Real-time Customer Profile
+title: Privacy Request Processing in Real-Time Customer Profile
 type: Documentation
-description: Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by numerous privacy regulations. This document covers essential concepts related to processing privacy requests for Real-time Customer Profile.
+description: Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by numerous privacy regulations. This document covers essential concepts related to processing privacy requests for Real-Time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 ---
-# Privacy request processing in [!DNL Real-time Customer Profile]
+# Privacy request processing in [!DNL Real-Time Customer Profile]
 
 Adobe Experience Platform [!DNL Privacy Service] processes customer requests to access, opt out of sale, or delete their personal data as delineated by privacy regulations such as the General Data Protection Regulation (GDPR) and [!DNL California Consumer Privacy Act] (CCPA).
 
-This document covers essential concepts related to processing privacy requests for [!DNL Real-time Customer Profile] within Adobe Experience Platform.
+This document covers essential concepts related to processing privacy requests for [!DNL Real-Time Customer Profile] within Adobe Experience Platform.
 
 >[!NOTE]
 >
@@ -20,11 +20,11 @@ This document covers essential concepts related to processing privacy requests f
 
 ## Getting started
 
-It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
+This guide requires a working understanding of the following [!DNL Platform] components:
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Manages customer requests for accessing, opting out of sale, or deleting their personal data across Adobe Experience Cloud applications.
 * [[!DNL Identity Service]](../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
-* [[!DNL Real-time Customer Profile]](home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 ## Understanding identity namespaces {#namespaces}
 
@@ -36,13 +36,13 @@ For more information about identity namespaces in [!DNL Experience Platform], se
 
 ## Submitting requests {#submit}
 
-The sections below outline how to make privacy requests for [!DNL Real-time Customer Profile] using the [!DNL Privacy Service] API or UI. Before reading these sections, it is strongly recommended that you review the [Privacy Service API](../privacy-service/api/getting-started.md) or [Privacy Service UI](../privacy-service/ui/overview.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
+The sections below outline how to make privacy requests for [!DNL Real-Time Customer Profile] using the [!DNL Privacy Service] API or UI. Before reading these sections, it is strongly recommended that you review the [Privacy Service API](../privacy-service/api/getting-started.md) or [Privacy Service UI](../privacy-service/ui/overview.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
 >[!IMPORTANT]
 >
 >Privacy Service is only able to process [!DNL Profile] data using a merge policy that does not perform identity stitching. See the section on [merge policy limitations](#merge-policy-limitations) for more information.
 >
->It is also important to note that the amount of time a privacy request can take to complete cannot be guaranteed. If changes occur in your [!DNL Profile] data while a request is still processing, whether or not those records are processed also cannot be guaranteed.
+>Please note that the amount of time a privacy request can take to complete **cannot** be guaranteed. If changes occur in your [!DNL Profile] data while a request is still processing, whether or not those records are processed also cannot be guaranteed.
 
 ### Using the API
 
@@ -59,6 +59,8 @@ In addition, the `include` array of the request payload must include the product
 >See the section on [profile requests and identity requests](#profile-v-identity) later in this document for more detailed information on the effects of using `ProfileService` and `identity` within the `include` array.
 
 The following request creates a new privacy job for a single customer's data in the [!DNL Profile] store. Two identity values are provided for the customer in the `userIDs` array; one using the standard `Email` identity namespace, and the other using a custom `Customer_ID` namespace. It also includes the product value for [!DNL Profile] (`ProfileService`) in the `include` array:
+
+**Request**
 
 ```shell
 curl -X POST \
@@ -103,9 +105,59 @@ curl -X POST \
 >
 >Platform processes privacy requests across all [sandboxes](../sandboxes/home.md) belonging to your organization. As a result, any `x-sandbox-name` header included in the request is ignored by the system.
 
+**Product response**
+
+For Profile Service, once the privacy job has been completed, a response is returned in JSON format with information regarding the user IDs requested.
+
+```json
+{
+    "privacyResponse": {
+        "jobId": "7467850f-9698-11ed-8635-355435552164",
+        "response": [
+            {
+                "sandbox": "prod",
+                "mergePolicyId": "none",
+                "result": {
+                    "person": {
+                        "gender": "female"           
+                    },
+                    "personalEmail": {
+                        "address": "ajones@acme.com",
+                    },
+                    "identityMap": {
+                        "crmid": [
+                            {
+                                "id": "5b7db37a-bc7a-46a2-a63e-2cfe7e1cc068"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "sandbox": "prod",
+                "mergePolicyId": "none",
+                "result": {
+                    "person": {
+                        "gender": "male"
+                    },
+                    "id": 12345678,
+                    "identityMap": {
+                        "crmid": [
+                            {
+                                "id": "e9d439f2-f5e4-4790-ad67-b13dbd89d52e"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
+```
+
 ### Using the UI
 
-When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under **[!UICONTROL Products]** in order to process jobs for data stored in the data lake or [!DNL Real-time Customer Profile], respectively.
+When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under **[!UICONTROL Products]** in order to process jobs for data stored in the data lake or [!DNL Real-Time Customer Profile], respectively.
 
 ![An access job request being created in the UI, with the Profile option selected under Products](./images/privacy/product-value.png)
 
@@ -128,6 +180,10 @@ To ensure that your privacy requests process all relevant customer attributes, y
 ## Delete request processing {#delete}
 
 When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed once the privacy job has completed.
+
+>[!IMPORTANT]
+>
+>Privacy deletion requests are not instantaneous and can vary depending on the services involved and other impacting factors such as geographical location. The timeframe for the completion of privacy jobs can rage from 15 to 45 days but is not guaranteed.
 
 Depending on whether you also included Identity Service (`identity`) and the data lake (`aepDataLake`) as products in your privacy request for Profile (`ProfileService`), different sets of data related to the profile are removed from the system at potentially different times:
 
@@ -156,6 +212,6 @@ Privacy Service is only able to process [!DNL Profile] data using a merge policy
 
 ## Next steps
 
-By reading this document, you have been introduced to the important concepts involved with processing privacy requests in [!DNL Experience Platform]. It is recommended that you continue reading the documentation provided throughout this guide in order to deepen your understanding of how to manage identity data and create privacy jobs.
+By reading this document, you have been introduced to the important concepts involved with processing privacy requests in [!DNL Experience Platform]. To deepen your understanding of how to manage identity data and create privacy jobs, please continue reading the documentation provided throughout this guide.
 
 For information on processing privacy requests for [!DNL Platform] resources not used by [!DNL Profile], see the document on [privacy request processing in the data lake](../catalog/privacy.md).

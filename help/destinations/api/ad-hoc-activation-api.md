@@ -3,7 +3,6 @@ keywords: Experience Platform;destination api;ad-hoc activation;activate segment
 solution: Experience Platform
 title: Activate audience segments to batch destinations via the ad-hoc activation API
 description: This article illustrates the end-to-end workflow for activating audience segments via the ad-hoc activation API, including the segmentation jobs that take place before activation.
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
 ---
@@ -19,13 +18,13 @@ exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
 
 The ad-hoc activation API allows marketers to programmatically activate audience segments to destinations, in a fast and efficient manner, for situations where immediate activation is required.
 
+Use the ad-hoc activation API to export full files to your desired file reception system. Ad-hoc audience activation is only supported by [batch file-based destinations](../destination-types.md#file-based).
+
 The diagram below illustrates the end-to-end workflow for activating segments via the ad-hoc activation API, including the segmentation jobs that take place in Platform every 24 hours.
 
 ![ad-hoc-activation](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
->[!NOTE]
->
->Ad-hoc audience activation is only supported by [batch file-based destinations](../destination-types.md#file-based).
+
 
 ## Use cases {#use-cases}
 
@@ -57,7 +56,7 @@ Adobe Experience Platform runs scheduled segmentation jobs once every 24 hours. 
 
 Before you can make calls to the Adobe Experience Platform APIs, make sure you meet the following prerequisites:
 
-* You have an IMS Organization account with access to Adobe Experience Platform.
+* You have an organization account with access to Adobe Experience Platform.
 * Your Experience Platform account has the `developer` and `user` roles enabled for the Adobe Experience Platform API product profile. Contact your [Admin Console](../../access-control/home.md) administrator to enable these roles for your account.
 * You have an Adobe ID. If you do not have an Adobe ID, go to the [Adobe Developer Console](https://developer.adobe.com/console) and create a new account.
 
@@ -123,7 +122,7 @@ Adobe Experience Platform runs scheduled segmentation jobs once every 24 hours. 
 >
 >Note the following one-time constraint: Before running an ad-hoc activation job, make sure that at least 20 minutes have passed from the moment that the segment was first activated according to the schedule you set in [Step 3 - Create activation flow in the Platform UI](#activation-flow). 
 
-Before running an ad-hoc activation job, make sure the scheduled segment export job for your segments has finished. See [destination dataflow monitoring](../../dataflows/ui/monitor-destinations.md) for information on how to monitor the status of activation flows. For example, if your activation dataflow shows a **[!UICONTROL Processing]** status, wait for it to finish before running the ad-hoc activation job.
+Before running an ad-hoc activation job, make sure the scheduled segment export job for your segments has finished. See [destination dataflow monitoring](../../dataflows/ui/monitor-destinations.md) for information on how to monitor the status of activation flows. For example, if your activation dataflow shows a **[!UICONTROL Processing]** status, wait for it to finish before running the ad-hoc activation job to export a full file.
 
 Once the segment export job has completed, you can trigger the activation.
 
@@ -247,3 +246,4 @@ When using the ad-hoc activation API, you can come across error messages that ar
 ## Related information {#related-information}
 
 * [Connect to batch destinations and activate data using the Flow Service API](/help/destinations/api/connect-activate-batch-destinations.md)
+* [(Beta) Export files on-demand to batch destinations using the Experience Platform UI](/help/destinations/ui/export-file-now.md)

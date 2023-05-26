@@ -5,13 +5,13 @@ exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
 ---
 # Power BI report templates for dashboards
 
-The Power BI report template feature allows you to create compelling reports populated with data from Adobe Experience Platform. The streamlined installation process automatically installs standard widgets for Real-time Customer Profile, segmentation, and destinations. The installation also connects Power BI to your data models so you can easily customize and extend your report templates. These reports can be shared across your entire organization without the recipients needing credentials for your IMS Organization on Platform.
+The Power BI report template feature allows you to create compelling reports populated with data from Adobe Experience Platform. The streamlined installation process automatically installs standard widgets for Real-Time Customer Profile, segmentation, and destinations. The installation also connects Power BI to your data models so you can easily customize and extend your report templates. These reports can be shared across your entire organization without the recipients needing credentials for your organization on Platform.
 
 This document provides instructions on how to connect Adobe Experience Platform with the Power BI application and use report templates to share key Platform data insights with external users.
 
 ## Getting started
 
-Before continuing with this tutorial it is recommended to have a good understanding of [schema composition](../../xdm/schema/composition.md) in Experience Platform, and how attributes are included in Real-time Customer Profile through the [union schema](../../xdm/schema/composition.md#union).
+Before continuing with this tutorial it is recommended to have a good understanding of [schema composition](../../xdm/schema/composition.md) in Experience Platform, and how attributes are included in Real-Time Customer Profile through the [union schema](../../xdm/schema/composition.md#union).
 
 To install the Power BI application integration, users must first have acquired the following Platform permissions:
 
@@ -26,7 +26,7 @@ You must also have a Power BI account to follow this tutorial. To create an acco
 
 >[!NOTE]
 >
->In order for the Dashboards tab to appear in the left navigation of the Platform UI, and the Dashboard Inventory view to be visible, you must have access to any one of the Profile, Segmentaiton or Destination dashboards as part of your Platform licence. 
+>In order for the Dashboards tab to appear in the left navigation of the Platform UI, and the Dashboard Inventory view to be visible, you must have access to any one of the Profile, Segmentaiton or Destination dashboards as part of your Platform license. 
 
 ## Install the Power BI application integration
 

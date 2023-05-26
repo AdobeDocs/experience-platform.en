@@ -76,6 +76,7 @@ solution: Data Collection
       * [Overview](./extensions/client/product-string/overview.md)
       * [Release notes](./extensions/client/product-string/release-notes.md)    
     * [Adobe Analytics Product String Builder](https://exchange.adobe.com/apps/ec/101461)
+    * [Adobe Analytics via Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
     * Adobe Audience Manager {#audience-manager}
       * [Overview](./extensions/client/audience-manager/overview.md)
     * Adobe Client Data Layer {#client-data-layer}
@@ -149,7 +150,6 @@ solution: Data Collection
     * [Differential Privacy](https://exchange.adobe.com/apps/ec/104535)
     * [Dynamic Media Viewers](https://exchange.adobe.com/apps/ec/103048)
     * [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)
-    * [Facebook Pixel](https://exchange.adobe.com/apps/ec/102804)
     * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)
     * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
     * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
@@ -160,13 +160,15 @@ solution: Data Collection
     * [Google Global Site Tag (gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
     * [InMoment](https://exchange.adobe.com/apps/ec/100847)
     * [JSON Helper](https://exchange.adobe.com/apps/ec/106449)
-    * [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/sdi-toolkit)dobe.com/apps/ec/101523)
+    * [JW Player Analytics](https://exchange.adobe.com/apps/ec/101523)
     * [KickFire](https://exchange.adobe.com/apps/ec/101621)
     * [Mapping Table](https://exchange.adobe.com/apps/ec/103136)
     * [!DNL Marketo Munchkin] {#marketo}
       * [Overview](./extensions/client/marketo/overview.md)
       * [Release notes](./extensions/client/marketo/release-notes.md)
     * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)
+    * [!DNL Meta Pixel] {#meta}
+      * [Overview](./extensions/client/meta/overview.md)
     * [Monita](https://exchange.adobe.com/apps/ec/106544)
     * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
     * [OneTrust Consent Management for Cookies](https://exchange.adobe.com/apps/ec/100340)
@@ -201,22 +203,33 @@ solution: Data Collection
     * [Overview](./extensions/server/overview.md)
     * Adobe Experience Platform Cloud Connector {#cloud-connector}
       * [Overview](./extensions/server/cloud-connector/overview.md)
+      * [Release notes](./extensions/server/cloud-connector/release-notes.md)
     * [!DNL AWS] {#aws}
       * [Overview](./extensions/server/aws/overview.md)
+    * [!DNL Braze] {#braze}
+      * [Overview](./extensions/server/braze/overview.md)
     * [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)
     * Core {#core}
       * [Overview](./extensions/server/core/overview.md)
-    * [Facebook Conversions API](https://exchange.adobe.com/apps/ec/105509)
+    * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)
     * Google Ads Enhanced Conversions {#google-ads-enhanced-conversions}
       * [Overview](./extensions/server/google-ads-enhanced-conversions/overview.md)
     * [!DNL Mailchimp] Edge {#mailchimp}
       * [Overview](./extensions/server/mailchimp/overview.md)
+    * [!DNL Meta Conversions API] {#meta}
+      * [Overview](./extensions/server/meta/overview.md)
     * [!UICONTROL Microsoft Azure] {#azure}
       * [Overview](./extensions/server/azure/overview.md)
+    * [!DNL Mixpanel] {#mixpanel}
+      * [Overview](./extensions/server/mixpanel/overview.md)
     * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
+    * [!DNL Pinterest] {#pinterest}
+      * [Overview](./extensions/server/pinterest/overview.md)
     * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
     * [!DNL Splunk] {#splunk}
       * [Overview](./extensions/server/splunk/overview.md)
+    * [!DNL Twitter] {#twitter}
+      * [Overview](./extensions/server/twitter/overview.md)
     * [!DNL Zendesk] Events API {#zendesk}
       * [Overview](./extensions/server/zendesk/overview.md)
 * Extension development {#extension-dev}
@@ -294,3 +307,4 @@ solution: Data Collection
   * [2020 release notes](./release-notes/2020.md)
   * [2019 release notes](./release-notes/2019.md)
   * [2018 release notes](./release-notes/2018.md)
+

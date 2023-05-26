@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 title: Submit Your Source
-topic-legacy: overview
 description: The following document provides steps on how to test and verify a new source using the Flow Service API and integrate a new source through Self-Serve Sources (Batch SDK).
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
 ---

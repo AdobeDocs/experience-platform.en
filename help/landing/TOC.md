@@ -23,6 +23,7 @@ user-guide-description: Learn how Experience Platform can deliver personalized e
   * [Platform UI tour (Video)](video/platform-ui.md)
   * [Workflows UI guide](workflows.md)
   * [Browser and language support](browser-language-support.md)
+  * [Self-identification Survey](self-identification.md)
 * Experience Platform APIs {#platform-apis}
   * [Getting started with Platform APIs](api-guide.md)
   * [Authenticate and access Platform APIs](api-authentication.md)
@@ -52,6 +53,11 @@ user-guide-description: Learn how Experience Platform can deliver personalized e
     * [Integrate the Platform Web SDK to process consent and preference data](./governance-privacy-security/consent/sdk.md) 
   * Audit logs {#audit-logs}
     * [Overview](./governance-privacy-security/audit-logs/overview.md)
+    * Audit Query API {#audit-api}
+      * [Overview](./governance-privacy-security/audit-logs/api/overview.md)
+      * [Getting started](./governance-privacy-security/audit-logs/api/getting-started.md)
+      * [Events](./governance-privacy-security/audit-logs/api/events.md)
+      * [Export](./governance-privacy-security/audit-logs/api/export.md)
   * [Data encryption](./governance-privacy-security/encryption.md)
   * [Customer-managed keys](./governance-privacy-security/customer-managed-keys.md)
 * License usage and guardrails {#license}

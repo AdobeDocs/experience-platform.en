@@ -184,9 +184,11 @@ feature: Schemas
 * Tutorials {#tutorials}
   * [Create a schema in the UI](tutorials/create-schema-ui.md)
   * [Create a schema in the API](tutorials/create-schema-api.md)
-  * [Define custom fields in the API](./tutorials/custom-fields-api.md)
+  * [Add specific fields to a schema (API)](./tutorials/specific-fields-api.md)
+  * [Define custom fields (API)](./tutorials/custom-fields-api.md)
   * [Add suggested values to a field (API)](tutorials/suggested-values.md)
-  * [Deprecate an XDM field](tutorials/field-deprecation.md)
+  * [Deprecate an XDM field in the UI](tutorials/field-deprecation-ui.md)
+  * [Deprecate an XDM field in the API](tutorials/field-deprecation-api.md)
   * [Define a schema relationship in the UI](tutorials/relationship-ui.md)
   * [Define a schema relationship in the API](tutorials/relationship-api.md)
   * [Define a schema relationship in Real-Time CDP B2B Edition](tutorials/relationship-b2b.md)

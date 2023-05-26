@@ -2,7 +2,6 @@
 keywords: Experience Platform;machine learning model;Data Science Workspace;popular topics;create and publish a model
 solution: Experience Platform
 title: Create and Publish a Machine Learning Model
-topic-legacy: tutorial
 type: Tutorial
 description: The following guide describes the steps required to create and publish a machine learning model.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
@@ -16,7 +15,7 @@ The following guide describes the steps required to create and publish a machine
 
 Before starting this tutorial, you must have the following prerequisites:
 
--   Access to [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+-   Access to [!DNL Adobe Experience Platform]. If you do not have access to an organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 
 -  All Data Science Workspace tutorials use the Luma propensity model. In order to follow along, you must have created the [Luma propenstiy model schemas and datasets](./create-luma-data.md).
 
@@ -74,7 +73,7 @@ To learn how to score your model, visit the score a model [UI tutorial](./score-
 
 ## Publish a scored model as a service
 
-Data Science Workspace allows you to publish your trained model as a service. This enables users within your IMS Organization to score data without the need to create their own models.
+Data Science Workspace allows you to publish your trained model as a service. This enables users within your organization to score data without the need to create their own models.
 
 To learn how to publish a model as a service, visit the [UI tutorial](./publish-model-service-ui.md) or [API tutorial](./publish-model-service-api.md).
 
@@ -90,6 +89,6 @@ Once you have published a model as a service, you can set up scheduled scoring a
 
 Adobe Experience Platform [!DNL Data Science Workspace] provides the tools and resources to create, evaluate, and utilize machine learning models to generate data predictions and insights. When machine learning insights are ingested into a [!DNL Profile]-enabled dataset, that same data is also ingested as [!DNL Profile] records which can then be segmented using [!DNL Adobe Experience Platform Segmentation Service].
 
- As profile and time series data is ingested, Real-time Customer Profile automatically decides to include or exclude that data from segments through an ongoing process called streaming segmentation, before merging it with existing data and updating the union view. As a result, you can instantaneously perform computations and make decisions to deliver enhanced, individualized experiences to customers as they interact with your brand.
+ As profile and time series data is ingested, Real-Time Customer Profile automatically decides to include or exclude that data from segments through an ongoing process called streaming segmentation, before merging it with existing data and updating the union view. As a result, you can instantaneously perform computations and make decisions to deliver enhanced, individualized experiences to customers as they interact with your brand.
 
  Visit the tutorial for [enriching Real-Time Customer Profile with machine learning insights](./enrich-profile.md) to learn more about how you can utilize machine learning insights.

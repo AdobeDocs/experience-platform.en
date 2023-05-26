@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data location;Data Location;Data management;data management;Lineage;lineage;data type;data types;Data types;Data type
 solution: Experience Platform
 title: Datasets Overview
-topic-legacy: datasets
 description: This document provides a high-level overview of datasets in Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 ---
@@ -32,11 +31,13 @@ Adobe Experience Platform Data Ingestion represents the multiple methods by whic
 
 See the [Data Ingestion overview](../../ingestion/home.md) for more information.
 
-## Applying usage labels to datasets
+## Labels applied to datasets from schemas
 
-Adobe Experience Platform Data Governance allows you to manage customer data in order to ensure compliance with regulations, restrictions, and policies applicable to data use. The Data Governance framework allows you to apply usage labels to categorize data according to the usage policies that apply to that data.
+Adobe Experience Platform Data Governance allows you to manage customer data in order to ensure compliance with regulations, restrictions, and policies applicable to data use. The Data Governance framework allows you to apply usage labels to categorize data according to the usage policies that apply to that data. Labels can be applied to individual schemas, fields within those schemas, and entire individual datasets. When labels are applied directly to a schema, those labels are propagated to all existing and future datasets that are based on that schema.
 
-Data usage labels can be applied to entire datasets or individual dataset fields. Labels added at the dataset level are inherited by all fields within that dataset.
+>[!IMPORTANT]
+>
+>Labels can no longer be applied to fields at the dataset level. This workflow has been deprecated in favour of applying labels at the schema level. Any labels previously applied at the dataset object level will still be supported through the Platform UI until 31st May 2024. To ensure that your labels are consistent across all schemas, any labels previously attached to fields at the dataset level must be migrated to the schema level by you over the coming year. See the section on [migrating previously applied labels](../../data-governance/e2e.md#migrate-labels) for instructions on how to do this.
 
 See the [Data Governance overview](../../data-governance/home.md) for more information on the service. For steps on how to work with usage labels in [!DNL Platform], refer to the following guides:
 
@@ -51,10 +52,10 @@ The following is a list of downstream services that use datasets for various ope
 
 * [[!DNL Data Access API]](../../data-access/home.md): Allows you to access and download the contents of files stored within datasets.
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md): Bridges identities across devices and systems, linking datasets together based on the identity fields defined by the XDM schemas they conform to.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): Leverages [!DNL Identity Service] to create detailed customer profiles from your datasets in real time. [!DNL Real-time Customer Profile] pulls data from the [!DNL Data Lake] and persists customer profiles in its own separate data store.
-* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): Allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These audiences can then be exported to their own datasets within the [!DNL Data Lake].
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Leverages [!DNL Identity Service] to create detailed customer profiles from your datasets in real time. [!DNL Real-Time Customer Profile] pulls data from the [!DNL Data Lake] and persists customer profiles in its own separate data store.
+* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): Allows you to build segments and generate audiences from your [!DNL Real-Time Customer Profile] data. These audiences can then be exported to their own datasets within the [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Uses machine learning and artificial intelligence to uncover insights in large datasets.
-* [Adobe Experience Platform Query Service](../../query-service/home.md): Allows you to use standard SQL to query data in [!DNL Experience Platform], joining any datasets within the [!DNL Data Lake] and capturing query results as a new dataset for use in reporting, [!DNL Data Science Workspace], or [!DNL Real-time Customer Profile].
+* [Adobe Experience Platform Query Service](../../query-service/home.md): Allows you to use standard SQL to query data in [!DNL Experience Platform], joining any datasets within the [!DNL Data Lake] and capturing query results as a new dataset for use in reporting, [!DNL Data Science Workspace], or [!DNL Real-Time Customer Profile].
 * [Adobe Experience Platform Destinations Service](../../destinations/home.md): Allows you to [export datasets](/help/destinations/ui/export-datasets.md) to your desired cloud storage or email marketing destinations, for reporting or data science activities.
 
 ## Next steps

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;source connectors;source connector;sources;data sources;data source;data source connection
 solution: Experience Platform
 title: Source Connectors Overview
-topic-legacy: overview
 description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 ---
@@ -13,6 +12,13 @@ Adobe Experience Platform allows data to be ingested from external sources while
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Platform. The service provides a user interface and RESTful API that lets you set-up source connections to various data providers with ease. These source connections enable you to authenticate your third-party systems, set times for ingestion runs, and manage data ingestion throughput.
 
 With Experience Platform, you can centralize data you collect from disparate sources and use the insights gained from it to do more.
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 ## Types of sources
 
@@ -34,6 +40,7 @@ Experience Platform allows data to be ingested from other Adobe applications, in
   - [Create a Customer Attributes source connection in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] source overview](connectors/adobe-applications/marketo/marketo.md)
   - [Create a [!DNL Marketo Engage] source connection in the UI](./tutorials/ui/create/adobe-applications/marketo.md)
+  - [Create a [!DNL Marketo Engage] source connection and dataflow for custom activity data](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
 - [Adobe Workfront source overview](connectors/adobe-applications/workfront.md)
   - [Create a Workfront source connection in the UI](./tutorials/ui/create/adobe-applications/workfront.md)
 
@@ -48,6 +55,7 @@ Experience Platform provides support for ingesting data from a third-party adver
 Experience Platform provides support for ingesting data from a third-party analytics platform. See the following related documents for more information:
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
+- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md)
 
 ### Cloud Storage {#cloud-storage}
 
@@ -79,6 +87,7 @@ CRM systems provide data that can help build customer relationships, which in tu
 
 - [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce]](connectors/crm/salesforce.md)
+- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md)
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 - [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
@@ -112,6 +121,7 @@ Experience Platform provides support for ingesting data from a third-party datab
 - [[!DNL Oracle]](connectors/databases/oracle.md)
 - [[!DNL Phoenix]](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md)
+- [[!DNL Snowflake Streaming]](connectors/databases//snowflake-streaming.md)
 - [[!DNL Snowflake]](connectors/databases/snowflake.md)
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md)
 
@@ -120,6 +130,7 @@ Experience Platform provides support for ingesting data from a third-party datab
 Experience Platform provides support for ingesting data from a third-party eCommerce system. See the following related documents for more information on specific source connectors:
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
+- [[!DNL Shopify Streaming]](connectors/ecommerce/shopify-streaming.md)
 
 ### Local system {#local-system}
 
@@ -131,11 +142,15 @@ Experience Platform provides support for ingesting data from your local system. 
 
 Experience Platform provides support for ingesting data from a third-party marketing automation system. See the following related documents for more information on specific source connectors:
 
+- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md)
+- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md)
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
-<!-- - [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md) -->
+<!-- 
+- [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
+-->
 
 ### Payments {#payments}
 
@@ -171,11 +186,21 @@ The following table outlines how the UI behaves based on different combinations 
 
 For more information about the available permissions granted through Adobe Permissions, read the [access control overview](../access-control/home.md).
 
-### Attribute-based access control for sources
+### Attribute-based access control
 
 Attribute-based access control in Adobe Experience Platform allows administrators to control access to specific objects and/or capabilities based on attributes. 
 
 With attribute-based access control, you can apply mapping configurations to fields that you have permissions to. Furthermore, you cannot ingest data to a dataset if you do not have access to all fields in the dataset.
+
+#### Support for attribute-based access control in sources
+
+>[!TIP]
+>
+>Attribute-based access control works as follows: **roles** are created to categorize the types of users that interact with your Platform instance. **Labels** are applied to **roles** to designate the access of that given role. **Labels** are also applied to resources like schema fields and segments. In order for a user to have access to certain schema fields and segments, they must be added to *a role with the same label that is assigned to the queried resource*. For more information, read the [attribute-based access control end-to-end guide](../access-control/abac/end-to-end-guide.md).
+
+- Apply labels to schema fields to define access to specific schema fields in your organization. Once access to specific schema fields are established, users will only be able to create mappings for the fields that they have access to.
+- Users without the appropriate roles will not be able to create or update dataflows with mappings that involve inaccessible schema fields. Furthermore, unauthorized users cannot update, delete, enable, or disable existing dataflows with inaccessible schema fields.
+- Additionally, a dataflow must have the exact same schema ID and version in its mapping, target dataset, and target connection.
 
 For more information on attribute-based access control, read the [attribute-based access control overview](../access-control/abac/overview.md).
 

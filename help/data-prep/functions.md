@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;mapping fields;mapping functions;
 solution: Experience Platform
 title: Data Prep Mapping Functions
-topic-legacy: overview
 description: This document introduces the mapping functions used with Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 ---
@@ -14,7 +13,11 @@ Data Prep functions can be used to compute and calculate values based on what is
 
 A field name can be any legal identifier - an unlimited-length sequence of Unicode letters and digits, beginning with a letter, the dollar sign (`$`), or the underscore character (`_`). Variable names are also case sensitive.
 
-If a field name does not follow this convention, the field name must be wrapped with `${}`. So, for example, if the field name is "First Name" or "First.Name", then the name must be wrapped like `${First Name}` or `${First.Name}` respectively.
+If a field name does not follow this convention, the field name must be wrapped with `${}`. So, for example, if the field name is "First Name" or "First.Name", then the name must be wrapped like `${First Name}` or `${First\.Name}` respectively.
+
+>[!TIP]
+>
+>When interacting with hierarchies, if a child attribute has a period (`.`), you must use a backslash (`\`) to escape special characters. For more information, read the guide on [escaping special characters](home.md#escape-special-characters).
 
 Additionally, if a field name is **any** of the following reserved keywords, it must be wrapped with `${}`:
 
@@ -95,6 +98,8 @@ The following tables list all supported mapping functions, including sample expr
 | get_url_port | Returns the port of the given URL. If the input is invalid, it returns null. | <ul><li>URL: **Required** The URL from which the port needs to be extracted.</li></ul> | get_url_port(URL) | get_url_port​("sftp://example.com//home/​joe/employee.csv") | 22 |
 | get_url_path | Returns the path of the given URL. By default, the full path is returned. | <ul><li>URL: **Required** The URL from which the path needs to be extracted.</li><li>FULL_PATH: *Optional* A boolean value that determines if the full path is returned. If set to false, only the end of the path is returned.</li></ul> | get_url_path​(URL, FULL_PATH) | get_url_path​("sftp://example.com//​home/joe/employee.csv") | "//home/joe/​employee.csv" |
 | get_url_query_str | Returns the query string of a given URL as a map of query string name and query string value. | <ul><li>URL: **Required** The URL that you are trying to get the query string from.</li><li>ANCHOR: **Required** Determines what will be done with the anchor in the query string. Can be one of three values: "retain", "remove", or "append".<br><br>If the value is "retain", the anchor will be attached to the returned value.<br>If the value is "remove", the anchor will be removed from the returned value.<br>If the value is "append", the anchor will be returned as a separate value.</li></ul> | get_url_query_str​(URL, ANCHOR) | get_url_query_str​("foo://example.com:8042​/over/there?name=​ferret#nose", "retain")<br>get_url_query_str​("foo://example.com:8042​/over/there?name=​ferret#nose", "remove")<br>get_url_query_str​("foo://example.com​:8042/over/there​?name=ferret#nose", "append") | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_encoded | This function takes a URL as input and replaces or encodes the special characters with ASCII characters. For more information on special characters, please read the [list of special characters](#special-characters) in the appendix of this document. | <ul><li>URL: **Required** The input URL with special characters that you want to replace or encode with ASCII characters.</li></ul> | get_url_encoded(URL) | get_url_encoded("https</span>://example.com/partneralliance_asia-pacific_2022") | https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022 |
+| get_url_decoded | This function takes a URL as input and decodes the ASCII characters into special characters.  For more information on special characters, please read the [list of special characters](#special-characters) in the appendix of this document. | <ul><li>URL: **Required** The input URL with ASCII characters that you want to decode into special characters.</li></ul> | get_url_decoded(URL) | get_url_decoded("https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022") | https</span>://example.com/partneralliance_asia-pacific_2022 |
 
 {style="table-layout:auto"}
 
@@ -113,7 +118,7 @@ The following tables list all supported mapping functions, including sample expr
 | date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li><li>FORMAT: **Required** The string representing the format of the source date.**Note:** This does **not** represent the format you want to convert the date string into. </li><li>DEFAULT_DATE: **Required** The default date returned, if the date provided is null.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date("2019-10-23 11:24", "yyyy-MM-dd HH:mm", now()) | `2019-10-23T11:24:00Z` |
 | date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li><li>FORMAT: **Required** The string representing the format of the source date.**Note:** This does **not** represent the format you want to convert the date string into. </li></ul> | date(DATE, FORMAT) | date("2019-10-23 11:24", "yyyy-MM-dd HH:mm") | `2019-10-23T11:24:00Z` |
 | date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li></ul> | date(DATE) | date("2019-10-23 11:24") | "2019-10-23T11:24:00Z" |
-| date_part | Retrieves the parts of the date. The following component values are supported: <br><br>"year"<br>"yyyy"<br>"yy"<br><br>"quarter"<br>"qq"<br>"q"<br><br>"month"<br>"mm"<br>"m"<br><br>"dayofyear"<br>"dy"<br>"y"<br><br>"day"<br>"dd"<br>"d"<br><br>"week"<br>"ww"<br>"w"<br><br>"weekday"<br>"dw"<br>"w"<br><br>"hour"<br>"hh"<br>"hh24"<br>"hh12"<br><br>"minute"<br>"mi"<br>"n"<br><br>"second"<br>"ss"<br>"s"<br><br>"millisecond"<br>"ms" | <ul><li>COMPONENT: **Required** A string representing the part of the date. </li><li>DATE: **Required** The date, in a standard format.</li></ul> | date_part​(COMPONENT, DATE) | date_part("MM", date("2019-10-17 11:55:12")) | 10 |
+| date_part | Retrieves the parts of the date. The following component values are supported: <br><br>"year"<br>"yyyy"<br>"yy"<br><br>"quarter"<br>"qq"<br>"q"<br><br>"month"<br>"mm"<br>"m"<br><br>"dayofyear"<br>"dy"<br>"y"<br><br>"day"<br>"dd"<br>"d"<br><br>"week"<br>"ww"<br>"w"<br><br>"weekday"<br>"dw"<br>"w"<br><br>"hour"<br>"hh"<br>"hh24"<br>"hh12"<br><br>"minute"<br>"mi"<br>"n"<br><br>"second"<br>"ss"<br>"s"<br><br>"millisecond"<br>"SSS" | <ul><li>COMPONENT: **Required** A string representing the part of the date. </li><li>DATE: **Required** The date, in a standard format.</li></ul> | date_part​(COMPONENT, DATE) | date_part("MM", date("2019-10-17 11:55:12")) | 10 |
 | set_date_part | Replaces a component in a given date. The following components are accepted: <br><br>"year"<br>"yyyy"<br>"yy"<br><br>"month"<br>"mm"<br>"m"<br><br>"day"<br>"dd"<br>"d"<br><br>"hour"<br>"hh"<br><br>"minute"<br>"mi"<br>"n"<br><br>"second"<br>"ss"<br>"s" | <ul><li>COMPONENT: **Required** A string representing the part of the date. </li><li>VALUE: **Required** The value to set for the component for a given date.</li><li>DATE: **Required** The date, in a standard format.</li></ul> | set_date_part​(COMPONENT, VALUE, DATE) | set_date_part("m", 4, date("2016-11-09T11:44:44.797") | "2016-04-09T11:44:44Z" |
 | make_date_time | Creates a date from parts. This function can also be induced using make_timestamp. | <ul><li>YEAR: **Required** The year, written in four digits.</li><li>MONTH: **Required** The month. The allowed values are 1 to 12.</li><li>DAY: **Required** The day. The allowed values are 1 to 31.</li><li>HOUR: **Required** The hour. The allowed values are 0 to 23.</li><li>MINUTE: **Required** The minute. The allowed values are 0 to 59.</li><li>NANOSECOND: **Required** The nanosecond values. The allowed values are 0 to 999999999.</li><li>TIMEZONE: **Required** The timezone for the date time.</li></ul> | make_date_time​(YEAR, MONTH, DAY, HOUR, MINUTE, SECOND, NANOSECOND, TIMEZONE) |make_date_time​(2019, 10, 17, 11, 55, 12, 999, "America/Los_Angeles") | `2019-10-17T11:55:12Z` |
 | zone_date_to_utc | Converts a date in any timezone to a date in UTC. | <ul><li>DATE: **Required** The date that you are trying to convert.</li></ul> | zone_date_to_utc​(DATE) | `zone_date_to_utc​(2019-10-17T11:55:​12 PST` | `2019-10-17T19:55:12Z` |
@@ -129,10 +134,10 @@ The following tables list all supported mapping functions, including sample expr
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| is_empty | Checks whether or not an object is empty. | <ul><li>INPUT: **Required** The object that you're trying to check is empty.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
-| arrays_to_object | Creates a list of objects. | <ul><li>INPUT: **Required** A grouping of key and array pairs.</li></ul> | arrays_to_object(INPUT) | need sample | need sample |
+| is_empty | Checks whether or not an object is empty. | <ul><li>INPUT: **Required** The object that you're trying to check is empty.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
+| arrays_to_object | Creates a list of objects. | <ul><li>INPUT: **Required** A grouping of key and array pairs.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
 | to_object | Creates an object based on the flat key/value pairs given. | <ul><li>INPUT: **Required** A flat list of key/value pairs.</li></ul> | to_object(INPUT) | to_object​("firstName", "John", "lastName", "Doe") | `{"firstName": "John", "lastName": "Doe"}` |
-| str_to_object | Creates an object from the input string. | <ul><li>STRING: **Required** The string that is being parsed to create an object.</li><li>VALUE_DELIMITER: *Optional* The delimiter that separates a field from the value. The default delimiter is `:`.</li><li>FIELD_DELIMITER: *Optional* The delimiter that separates field value pairs. The default delimiter is `,`.</li></ul> | str_to_object​(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object("firstName=John,lastName=Doe,phone=123 456 7890", "=", ",") | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
+| str_to_object | Creates an object from the input string. | <ul><li>STRING: **Required** The string that is being parsed to create an object.</li><li>VALUE_DELIMITER: *Optional* The delimiter that separates a field from the value. The default delimiter is `:`.</li><li>FIELD_DELIMITER: *Optional* The delimiter that separates field value pairs. The default delimiter is `,`.</li></ul> | str_to_object​(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Note**: You can use the `get()` function along with `str_to_object()` to retrieve values for the keys in the string. | <ul><li>Example #1: str_to_object("firstName - John ; lastName - ; - 123 345 7890", "-", ";")</li><li>Example #2: str_to_object("firstName - John ; lastName - ; phone - 123 456 7890", "-", ";").get("firstName")</li></ul> | <ul><li>Example #1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Example #2: "John"</li></ul> |
 | contains_key | Checks if the object exists within the source data. **Note:** This function replaces the deprecated `is_set()` function. | <ul><li>INPUT: **Required** The path to be checked if it exists within the source data.</li></ul> | contains_key(INPUT) | contains_key("evars.evar.field1") | true |
 | nullify | Sets the value of the attribute to `null`. This should be used when you do not want to copy the field to the target schema. | | nullify() | nullify() | `null`  |
 | get_keys | Parses the key/value pairs and returns all the keys. | <ul><li>OBJECT: **Required** The object where the keys will be extracted from.</li></ul> | get_keys(OBJECT) | get_keys({"book1": "Pride and Prejudice", "book2": "1984"}) | `["book1", "book2"]` |
@@ -224,6 +229,7 @@ For information on the object copy feature, see the section [below](#object-copy
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Generates a pseudo-random ID. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
+| `fpid_to_ecid `| This function takes an FPID string and converts it into an ECID to be used in Adobe Experience Platform and Adobe Experience Cloud applications. | <ul><li>STRING: **Required** The FPID string to be converted into ECID.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
 
 {style="table-layout:auto"}
 
@@ -233,6 +239,8 @@ Any of the user agent functions contained in the table below can return either o
 
 * Phone - A mobile device with a small screen (commonly < 7")
 * Mobile - A mobile device that is yet to be identified. This mobile device can be an eReader, a tablet, a phone, a watch, etc.
+
+For more information on device field values, please read the [list of device field values](#device-field-values) in the appendix of this document.
 
 >[!NOTE]
 >
@@ -293,3 +301,74 @@ To ensure that the automatic mapping works, the following prerequisites must be 
 * New attributes should have matching names in the source schema and the XDM schema.
 
 If any of the prerequisites are not met, then you must manually map the source schema to the XDM schema using data prep.
+
+## Appendix
+
+The following provides additional information on using Data Prep mapping functions
+
+### Special characters {#special-characters}
+
+The table below outlines a list of reserved characters and their corresponding encoded characters.
+
+| Reserved character | Encoded character |
+| --- | --- |
+| space | %20 |
+| ! | %21 |
+| " | %22 |
+| # | %23 |
+| $ | %24 |
+| % | %25 |
+| & | %26 |
+| ' | %27 |
+| ( | %28 |
+| ) | %29 |
+| * | %2A |
+| + | %2B |
+| , | %2C |
+| / | %2F |
+| : | %3A |
+| ; | %3B |
+| < | %3C |
+| = | %3D |
+| > | %3E |
+| ? | %3F |
+| @ | %40 |
+| &#91; | %5B |
+| &#124; | %5C |
+| &#93; | %5D |
+| ^ | %5E |
+| &#96; | %60 |
+| ~ | %7E |
+
+{style="table-layout:auto"}
+
+### Device field values {#device-field-values}
+
+The table below outlines a list of device field values and their corresponding descriptions.
+
+| Device | Description |
+| --- | --- |
+| Desktop | A Desktop or a Laptop type of device. |
+| Anonymized | An anonymous device. In some cases, these are `useragents` that have been altered by an anonymization software. |
+| Unknown | An unknown device. These are usually `useragents` that contain no information about the device. |
+| Mobile | A mobile device that is yet to be identified. This mobile device can be an eReader, a tablet, a phone, a watch, etc. |
+| Tablet | A mobile device with a large screen (commonly > 7"). |
+| Phone | A mobile device with a small screen (commonly < 7"). |
+| Watch | A mobile device with a tiny screen (commonly < 2"). These devices normally operate as an additional screen for a phone/tablet type of device. |
+| Augmented Reality | A mobile device with AR capabilities. |
+| Virtual Reality | A mobile device with VR capabilities. |
+| eReader | A device similar to a tablet, but usually with an [!DNL eInk] screen. |
+| Set-top box | A connected device that allows interaction through a TV-sized screen. |
+| TV | A device similar to the Set-top box, but is built into the TV. |
+| Home Appliance | A (usually large) home appliance, like a refrigerator. |
+| Game Console | A fixed gaming system like a [!DNL Playstation] or an [!DNL XBox]. |
+| Handheld Game Console | A mobile gaming system like a [!DNL Nintendo Switch]. |
+| Voice | A voice-driven device like an [!DNL Amazon Alexa] or a [!DNL Google Home]. |
+| Car | A vehicle-based browser. |
+| Robot | Robots that visit a website. |
+| Robot Mobile | Robots that visit a website but indicates that they want to be seen as a Mobile visitor. |
+| Robot Imitator | Robots that visit a website, pretending that are robots like [!DNL Google], but they are not. **Note**: In most cases, Robot Imitators are indeed robots. |
+| Cloud | A cloud-based application. These are neither robots nor hackers, but are applications that need to connect. This includes [!DNL Mastodon] servers. |
+| Hacker | This device value is used in case scripting is detected in the `useragent` string. |
+
+{style="table-layout:auto"}

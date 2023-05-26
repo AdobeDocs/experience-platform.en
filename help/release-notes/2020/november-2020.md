@@ -23,12 +23,12 @@ Updates to existing features:
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations] Service](#destinations)
 - [[!DNL Intelligent Services]](#intelligent-services)
-- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## Adobe Experience Platform Data Lake migration {#migration}
 
-While Adobe is migrating the Data Lake from Gen1 to Gen2, users will be able to read from the Data Lake, but all capabilities that write into the Data Lake will be impacted. Adobe will be contacting System Administrators to discuss the impact of the migration in detail and to confirm the migration dates and times for specific IMS Organizations. 
+While Adobe is migrating the Data Lake from Gen1 to Gen2, users will be able to read from the Data Lake, but all capabilities that write into the Data Lake will be impacted. Adobe will be contacting System Administrators to discuss the impact of the migration in detail and to confirm the migration dates and times for specific organizations. 
 
 For more information, please read the [Data Lake migration guide](../../landing/adls2-gen2-migration.md).
 
@@ -54,7 +54,7 @@ For more information, please see the [access control overview](../../access-cont
 | Feature | Description |
 | ------- | ----------- |
 | Centralized offer library | The interface where you create and manage the different elements that compose your offers, and define their rules and constraints. |
-| Offer Decision Engine | The Offer Decision Engine leverages [!DNL Platform] data and [!DNL Real-time Customer Profiles], along with the Offer Library, in order to select the right time, customers and channels to which offers will be delivered. |
+| Offer Decision Engine | The Offer Decision Engine leverages [!DNL Platform] data and [!DNL Real-Time Customer Profiles], along with the Offer Library, in order to select the right time, customers and channels to which offers will be delivered. |
 
 For more information, please see the [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=en) documentation.
 
@@ -173,9 +173,9 @@ Customer AI, as part of Intelligent Services provides marketers with the power t
 
 For more information, please read the [Customer AI overview](../../intelligent-services/customer-ai/overview.md).
 
-## Real-time Customer Profile {#profile}
+## Real-Time Customer Profile {#profile}
 
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-Time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 
 **Key features**
 
@@ -184,7 +184,7 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 | Updated merge policies workflow | Platform has upgraded the merge policy configuration to a new stepwise workflow. This workflow enables users to bring together data fragments from multiple Profile datasets and set priority for how data is merged across those datasets in order to create a comprehensive view of each individual. Users can merge selected XDM Individual Profile datasets by selecting the appropriate merge method (Timestamp ordered or Dataset precedence) and appending ExperienceEvent datasets to the Profile datasets.|
 | Union schema view | In the Experience Platform UI, users can more easily find information regarding all schemas and datasets contributing to the union schema, as well as surface key attributes such as identity and relationship fields. These updates improve the ability to troubleshoot and validate that profiles are correctly configured, identities are correctly stitched, and data has been successfully ingested. |
 
-For more information on Real-time Customer Profile, including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-time Customer Profile overview](../../profile/home.md).
+For more information on Real-Time Customer Profile, including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-Time Customer Profile overview](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -207,7 +207,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | Hierarchical mapping | You can preview a hierarchical source file, such as JSON or Parquet, during the data ingestion process. See the the tutorial on [configuring a dataflow for cloud storage connectors in the UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) for more information. |
 | API support for mapping in streaming sources | You can now use APIs to perform mapping functions with streaming sources. |
 | API support for custom delimiters for cloud storage sources | You can now collect non-CSV delimited files using cloud storage sources. You can use any single column delimiter such as a tab, comma, pipe, semicolon, or hash to collect flat files in any format. |
-| Sandbox support for Adobe Audience Manager connector | The Audience Manager connector is now sandbox aware. Users can enable the connector to route Audience Manager datasets to the sandbox of their choosing (including non-production sandboxes). The configuration is limited to one sandbox per IMS Org. |
+| Sandbox support for Adobe Audience Manager connector | The Audience Manager connector is now sandbox aware. Users can enable the connector to route Audience Manager datasets to the sandbox of their choosing (including non-production sandboxes). The configuration is limited to one sandbox per organization. |
 | UX improvements | File-based ingestion is now accessible through the sources catalog. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).

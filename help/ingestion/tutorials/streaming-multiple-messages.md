@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;streaming multiple messages;multiple messages;
 solution: Experience Platform
 title: Send Multiple Messages in a Single HTTP Request
-topic-legacy: tutorial
 type: Tutorial
 description: This document provides a tutorial for sending multiple messages to Adobe Experience Platform within a single HTTP request using streaming ingestion.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
@@ -503,7 +502,7 @@ The second message failed because it lacked a message body. The collection reque
     },
 ```
 
-The third message failed due to an invalid IMS organization ID being used in the header. The IMS organization must match with the {CONNECTION_ID} that you are trying to post to. To determine which IMS organization ID matches the streaming connection you are using, you can perform a `GET inlet` request using the [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). See [retrieving a streaming connection](./create-streaming-connection.md#get-data-collection-url) for an example of how to retrieve previously created streaming connections. 
+The third message failed due to an invalid organization ID being used in the header. The organization must match with the {CONNECTION_ID} that you are trying to post to. To determine which organization ID matches the streaming connection you are using, you can perform a `GET inlet` request using the [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/). See [retrieving a streaming connection](./create-streaming-connection.md#get-data-collection-url) for an example of how to retrieve previously created streaming connections. 
 
 The fourth message failed because it did not follow the expected XDM schema. The `xdmSchema` included in the header and body of the request do not match the XDM schema of the `{DATASET_ID}`. Correcting the schema in the message header and body allows it to pass DCCS validation and be successfully sent to [!DNL Platform]. The message body must also be updated to match the XDM schema of the `{DATASET_ID}` for it to pass streaming validation on [!DNL Platform]. For more information on what happens to messages that successfully stream to Platform, see the [confirm messages ingested](#confirm-messages-ingested) section of this tutorial.
 

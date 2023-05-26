@@ -11,7 +11,11 @@ Before continuing with this guide, ensure that you have read and understood the 
 
 ## Getting started
 
-The Data Distiller SKU is required to use the query accelerated store. Please see the [packaging](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), and [licensing](../data-distiller/licence-usage.md) documentation that relates to the Data Distiller SKU. If you do not have the Data Distiller SKU please contact your Adobe customer service representative for more information.
+The Data Distiller SKU is required to use the query accelerated store. Please see the [packaging](../packages.md) and [guardrails](../guardrails.md#query-accelerated-store) documentation that relates to the Data Distiller SKU. If you do not have the Data Distiller SKU please contact your Adobe customer service representative for more information.
+
+<!-- Document is hidden temporarily
+Please see the [packaging](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), and [licensing](../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
+-->
 
 The following sections detail the API calls necessary to access the query accelerated store in a stateless manner through the Query Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 

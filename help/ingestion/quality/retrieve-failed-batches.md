@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;retrieve failed batches;failed batches;batch ingestion;Batch ingestion;Failed batches;Get failed batches;get failed batches;Download failed batches;download failed batches;
 solution: Experience Platform
 title: Retrieving Failed Batches Using the Data Access API
-topic-legacy: tutorial
 type: Tutorial
 description: This tutorial covers steps for retrieving information about a failed batch using Data Ingestion APIs.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
@@ -189,9 +188,9 @@ This section contains information about other ingestion error types that can occ
 
 Like the timestamp error in the previous example flow, these errors are due to incorrectly formatted XDM. These error messages will vary, depending on the nature of the problem. As a result, no specific error example can be shown.
 
-### Missing or invalid IMS Org ID
+### Missing or invalid organization ID
 
-This error is shown if the IMS Org ID is either missing from the payload is invalid.
+This error is shown if the organization ID is either missing from the payload is invalid.
 
 ```json
 {

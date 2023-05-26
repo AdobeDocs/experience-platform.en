@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;bigquery;Google;google;Google BigQuery
 solution: Experience Platform
 title: Create a Google BigQuery Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Google BigQuery using the Flow Service API.
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
@@ -33,7 +32,7 @@ In order for [!DNL Flow Service] to connect [!DNL Google BigQuery] to Platform, 
 | `clientSecret` | The secret value used to generate the refresh token. |
 | `refreshToken` | The refresh token obtained from [!DNL Google] used to authorize access to [!DNL Google BigQuery]. |
 | `largeResultsDataSetId` | The pre-created  [!DNL Google BigQuery] dataset ID that is required in order to enable support for large result sets.|
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Google BigQuery] is: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Google BigQuery] is: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
 
 For more information about these values, refer to this [[!DNL Google BigQuery] document](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
 

@@ -2,20 +2,27 @@
 keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
 solution: Experience Platform
 title: Automatic Policy Enforcement
-topic-legacy: guide
 description: This document covers how data usage policies are automatically enforced when activating segments to destinations in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 ---
 # Automatic policy enforcement
 
-Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. When activating audience segments to destinations, Adobe Experience Platform automatically enforces usage policies should any violations occur.
+>[!IMPORTANT]
+>
+>Automatic policy enforcement is only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
+
+Once data is labeled and data usage policies are defined, you can enforce data usage compliance with policies. When activating audience segments to destinations, Adobe Experience Platform automatically enforces usage policies should any violations occur.
+
+>[!NOTE]
+>
+>This document focuses on the enforcement of data governance and consent policies. For information on access control policies, refer to the documentation on [attribute-based access control](../../access-control/abac/overview.md).
 
 ## Prerequisites
 
 This guide requires a working understanding of the Platform services involved in automatic enforcement. Please refer to the following documentation to learn more before continuing with this guide:
 
 * [Adobe Experience Platform Data Governance](../home.md): The framework by which Platform enforces data usage compliance through the use of labels and policies.
-* [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [Real-Time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): The segmentation engine within [!DNL Platform] used to create audience segments from your customer profiles based on customer behaviors and attributes.
 * [Destinations](../../destinations/home.md): Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and more.
 
@@ -42,7 +49,7 @@ When a segment is first activated, [!DNL Policy Service] checks for applicable p
 
 Data lineage plays a key role in how policies are enforced in Platform. In general terms, data lineage refers to the origin of a set of data, and what happens to it (or where it moves) over time.
 
-In the context of Data Governance, lineage enables data usage labels to propagate from datasets to downstream services that consume their data, such as Real-time Customer Profile and destinations. This allows policies to be evaluated and enforced at several key points in the data's journey through Platform, and provides context to data consumers as to why a policy violation occurred.
+In the context of Data Governance, lineage enables data usage labels to propagate from schemas to downstream services that consume their data, such as Real-Time Customer Profile and Destinations. This allows policies to be evaluated and enforced at several key points in the data's journey through Platform, and provides context to data consumers as to why a policy violation occurred.
 
 In Experience Platform, policy enforcement is concerned with the following lineage:
 
@@ -55,7 +62,7 @@ Each stage in the above timeline represents an entity that may contribute to pol
 
 | Data lineage stage | Role in policy enforcement |
 | --- | --- |
-| Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to consent policies, any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. |
+| Dataset | Datasets contain data usage labels (applied at the schema field level or entire dataset level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to consent policies, any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. |
 | Merge policy | Merge policies are the rules that Platform uses to determine how data will be prioritized when merging together fragments from multiple datasets. Policy violations will occur if your merge policies are configured so that datasets with restricted labels are activated to a destination. See the [merge policies overview](../../profile/merge-policies/overview.md) for more information. |
 | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. |
 | Destination | When setting up a destination, a marketing action (sometimes called a marketing use case) can be defined. This use case correlates to a marketing action as defined in a policy. In other words, the marketing action you define for a destination determines which data usage policies and consent policies are applicable to that destination.<br><br>Data usage policy violations occur if you activate a segment whose usage labels are restricted for the target destination's marketing action.<br><br>(Beta) When a segment is activated, any profiles that do not contain the required consent attributes for the marketing action (as defined by your consent policies) are excluded from the activated audience. |
@@ -101,11 +108,17 @@ Select **[!UICONTROL List view]** to display the data lineage as a list. To swit
 
 ### Consent policy evaluation {#consent-policy-evaluation}
 
->[!IMPORTANT]
->
->Consent policies are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
-
 If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies affect the percentage of profiles that are included in the activation.
+
+#### Consent policy enhancement for paid media {#consent-policy-enhancement}
+
+An enhancement to consent policy enforcement on [batch](../../destinations/destination-types.md#file-based) and [streaming](../../destinations/destination-types.md#streaming-destinations) destinations including paid media activations has been made. This enhancement is available to customers of Privacy and Security Shield or Healthcare Shield, and proactively removes profiles from batch and streaming destinations as consent status changes. It also ensures that consent changes are propagated immediately so that the right audience is always targeted.
+
+These improvements allow for greater trust in your marketing strategy as it removes the need for marketers to manually add consent attributes to their segment expression. This ensures that no profiles are inadvertently targeted for any marketing experiences once consent has been withdrawn or no longer qualified for a consent policy. The marketing consent policies that set rules for how consent or preference data should be managed across various marketing workflows are now automatically enforced in activation workflows in downstream solutions.
+
+>[!NOTE]
+>
+>There are no UI changes as a result of this enhancement.
 
 #### Pre-activation evaluation
 

@@ -13,7 +13,7 @@ This document provides information on use and rate limits for [!DNL Identity Ser
 The following Experience Platform services are involved with modeling Identity data: 
 
 * [Identities](home.md): Bridge identities from disparate data sources as they are ingested into Platform.
-* [[!DNL Real-time Customer Profile]](../profile/home.md): Create unified consumer profiles using data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Create unified consumer profiles using data from multiple sources.
 
 ## Data model limits
 
@@ -25,7 +25,7 @@ The following table outlines static limits applied to identity data.
 
 | Guardrail | Limit | Notes |
 | --- | --- | --- |
-| Number of identities in a graph | 50 | When a graph with 50 linked identities is updated, Identity Service will apply a "first-in, first-out" mechanism and deletes the oldest identity to make space for the newest identity. Deletion is based on identity type and timestamp. Read the [appendix](#appendix) for more information on the deletion logic applied to identities when full graphs are updated. |
+| Number of identities in a graph | 150 | The limit is applied at the sandbox level. The identity graph will not be updated once the limit is reached. **Note**: The maximum number of identities in an identity graph **for an individual merged profile** is 50. Merged profiles that are based off identity graphs with more than 50 identities are excluded from Real-Time Customer Profile. For more information, read the guide on [guardrails for Profile data](../profile/guardrails.md). |
 | Number of identities in an XDM record | 20 | The minimum number of XDM records required is two. |
 | Number of custom namespaces | None | There are no limits to the number of custom namespaces you can create. |
 | Number of graphs | None | There are no limits to the number of identity graphs you can create. |
@@ -42,7 +42,7 @@ The following table outlines existing rules you must follow to ensure a successf
 
 ### Identity namespace ingestion
 
-Starting January 31, 2023, Identity Service will block the ingestion of Adobe Analytics ID (AAID) for new customers. This identity is typically ingested through the [Adobe Analytics source](../sources/connectors/adobe-applications/analytics.md) and the [Adobe Audience Manager source](../sources//connectors/adobe-applications/audience-manager.md) and is redundant because the ECID represents the same web browser. If you would like to change this default configuration, please contact your account manager.
+Starting March 31, 2023, Identity Service will block the ingestion of Adobe Analytics ID (AAID) for new customers. This identity is typically ingested through the [Adobe Analytics source](../sources/connectors/adobe-applications/analytics.md) and the [Adobe Audience Manager source](../sources//connectors/adobe-applications/audience-manager.md) and is redundant because the ECID represents the same web browser. If you would like to change this default configuration, please contact your Adobe account team.
 
 ## Next steps
 

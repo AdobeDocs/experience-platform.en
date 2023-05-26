@@ -72,7 +72,7 @@ Depending on the destination that you are connecting to, you might be asked to i
 
 ![Image showing the required and optional input parameters when connecting to a Trade Desk destination.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
-### Set up file formatting options for exported files {#file-formatting-and-compression-options}
+### (Beta) Set up file formatting options for exported files {#file-formatting-and-compression-options}
 
 For file-based destinations, you can configure various settings related to how the exported files are formatted and compressed. For more information about all the available formatting and compression options, read the [Configure file formatting options for file-based destinations tutorial](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 

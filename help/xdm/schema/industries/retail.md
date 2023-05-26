@@ -1,7 +1,6 @@
 ---
 solution: Experience Platform
 title: Retail Industry Data Model
-topic-legacy: overview
 description: View a standardized data model for the retail industry, compatible with Experience Data Model (XDM) for use in Adobe Experience Platform.
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
 ---
@@ -41,5 +40,3 @@ The following table outlines the recommended classes and schema field groups for
 | Retarget cart abandoners through automated and personalized emails. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Commerce Details](../../field-groups/event/commerce-details.md)</li><li>[Web Details](../../field-groups/event/web-details.md)</li></ul></li><li>**[Product](../../classes/product.md)**:<ul><li>[Product Catalog](../../field-groups/product/product-catalog.md)</li><li>[Product Category](../../field-groups/product/product-category.md)</li></ul></li></ul> |
 
 {style="table-layout:auto"}
-
-*\*While a standard product class is planned for a future release, product schemas must currently be built using a custom class instead. You must therefore manually build the structure of the schema's class, as well as that of any field groups you add to it. See the section on [creating a custom class](../../ui/resources/classes.md#create) in the XDM UI guide for more information.*

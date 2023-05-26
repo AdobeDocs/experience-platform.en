@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;subscription;datatype;data-type;data type;
 solution: Experience Platform
 title: Subscription Data Type
-topic-legacy: overview
 description: This document provides an overview of the Subscription Experience Data Model (XDM) data type.
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
 ---

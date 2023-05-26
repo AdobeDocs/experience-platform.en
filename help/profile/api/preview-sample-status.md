@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
 title: Preview Sample Status (Profile Preview) API Endpoint
-description: The preview sample status endpoint of the Real-time Customer Profile API allows you to preview the latest successful sample of your Profile data, list profile distribution by dataset and by identity, and generate reports showing dataset overlap, identity overlap, and unstitched profiles.
+description: The preview sample status endpoint of the Real-Time Customer Profile API allows you to preview the latest successful sample of your Profile data, list profile distribution by dataset and by identity, and generate reports showing dataset overlap, identity overlap, and unstitched profiles.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
 ---
 # Preview sample status endpoint (Profile preview)
 
-Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build a robust, unified profile for each of your individual customers. As data is ingested into Platform, a sample job is run to update the profile count and other Real-time Customer Profile data-related metrics. 
+Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build a robust, unified profile for each of your individual customers. As data is ingested into Platform, a sample job is run to update the profile count and other Real-Time Customer Profile data-related metrics. 
 
-The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate multiple reports in order to gain visibility into the composition of your organization's Profile Store. This guide walks through the steps required to view these metrics using the `/previewsamplestatus` API endpoint.
+The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-Time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate multiple reports in order to gain visibility into the composition of your organization's Profile Store. This guide walks through the steps required to view these metrics using the `/previewsamplestatus` API endpoint.
 
 >[!NOTE]
 >
@@ -16,7 +16,7 @@ The results of this sample job can be viewed using the `/previewsamplestatus` en
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoint used in this guide is part of the [[!DNL Real-Time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Profile fragments vs merged profiles
 
@@ -26,11 +26,11 @@ Each individual customer profile is composed of multiple profile fragments that 
 
 When profile fragments are ingested into Platform, they are merged together (based on a merge policy) in order to create a single profile for that customer. Therefore, the total number of profile fragments is likely to always be higher than the total number of merged profiles, as each profile is composed of multiple fragments.
 
-To learn more about profiles and their role within Experience Platform, please begin by reading the [Real-time Customer Profile overview](../home.md).
+To learn more about profiles and their role within Experience Platform, please begin by reading the [Real-Time Customer Profile overview](../home.md).
 
 ## How the sample job is triggered
 
-As data enabled for Real-time Customer Profile is ingested into [!DNL Platform], it is stored within the Profile data store. When the ingestion of records into the Profile Store increases or decreases the total profile count by more than 5%, a sampling job is triggered to update the count. The way in which the sample is triggered depends on the type of ingestion being used:
+As data enabled for Real-Time Customer Profile is ingested into [!DNL Platform], it is stored within the Profile data store. When the ingestion of records into the Profile Store increases or decreases the total profile count by more than 5%, a sampling job is triggered to update the count. The way in which the sample is triggered depends on the type of ingestion being used:
 
 * For **streaming data workflows**, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a sample job is automatically triggered to update the count. 
 * For **batch ingestion**, within 15 minutes of successfully ingesting a batch into the Profile Store, if the 5% increase or decrease threshold is met, a job is run to update the count. Using the Profile API you can preview the latest successful sample job, as well as list profile distribution by dataset and by identity namespace.
@@ -39,7 +39,7 @@ The profile count and profiles by namespace metrics are also available within th
 
 ## View last sample status {#view-last-sample-status}
 
-You can perform a GET request to the `/previewsamplestatus` endpoint to view the details for the last successful sample job that was run for your IMS Organization. This includes the total number of profiles in the sample, as well as the profile count metric, or total number of profiles your organization has within Experience Platform. 
+You can perform a GET request to the `/previewsamplestatus` endpoint to view the details for the last successful sample job that was run for your organization. This includes the total number of profiles in the sample, as well as the profile count metric, or total number of profiles your organization has within Experience Platform. 
 
 The profile count is generated after merging together profile fragments to form a single profile for each individual customer. In other words, when profile fragments are merged together they return a count of "1" profile because they are all related to the same individual.
 
@@ -363,7 +363,7 @@ This report provides the following information:
 * There are 107 profiles that are comprised only of data from dataset `5eeda0032af7bb19162172a7`.
 * There is a total of 454,642 profiles in the organization.
 
-## Generate the identity namespace overlap report
+## Generate the identity namespace overlap report {#identity-overlap-report}
 
 The identity namespace overlap report provides visibility into the composition of your organization's Profile Store by exposing the identity namespaces that contribute most to your addressable audience (merged profiles). This includes both the standard identity namespaces provided by Adobe, as well as the custom identity namespaces defined by your organization.
 

@@ -31,8 +31,10 @@ feature: Sources
       - [B2B namespaces and schemas](connectors/adobe-applications/marketo/marketo-namespaces.md)
   - Advertising {#advertising}
     - [Google Ads connector](connectors/advertising/ads.md)
+    - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
   - Analytics {#analytics}
     - [Mixpanel connector](connectors/analytics/mixpanel.md)
+    - [Pendo](connectors/analytics/pendo-webhook.md)
   - Cloud storage {#cloud-storage}
     - [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
     - [Amazon S3 connector](connectors/cloud-storage/s3.md)
@@ -53,6 +55,7 @@ feature: Sources
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
+    - [SugarCRM connector](connectors/crm/sugarcrm.md)
     - [Veeva CRM connector](connectors/crm/veeva.md)
     - [Zoho CRM connector](connectors/crm/zoho.md)
   - Customer success {#customer-success}
@@ -78,13 +81,17 @@ feature: Sources
     - [Oracle connector](connectors/databases/oracle.md)
     - [Phoenix connector](connectors/databases/phoenix.md)
     - [PostgreSQL connector](connectors/databases/postgres.md)
+    - [Snowflake Streaming connector](connectors/databases/snowflake-streaming.md)
     - [Snowflake connector](connectors/databases/snowflake.md)
     - [Teradata Vantage connector](connectors/databases/teradata-vantage.md)
   - eCommerce {#ecommerce}
-    - [Shopify connector](connectors/ecommerce/shopify.md)
+    - [Shopify](connectors/ecommerce/shopify.md)
+    - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
   - Local system {#local-system}
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Marketing automation {#marketing-automation}
+    - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
+    - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
     - [Mailchimp connector](connectors/marketing-automation/mailchimp.md)
     - [Oracle Eloqua connector](connectors/marketing-automation/oracle-eloqua.md)
@@ -102,8 +109,10 @@ feature: Sources
   - Create a base connection {#create}
     - Advertising {#advertising}
       - [Google Ads](tutorials/api/create/advertising/ads.md)
+      - [Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
+      - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
       - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -123,6 +132,8 @@ feature: Sources
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
       - [Salesforce](tutorials/api/create/crm/salesforce.md)
+      - [SugarCRM Accounts & Contacts](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
+      - [SugarCRM Events](tutorials/api/create/crm/sugarcrm-events.md)
       - [Veeva CRM](tutorials/api/create/crm/veeva.md)
       - [Zoho CRM](tutorials/api/create/crm/zoho.md)
     - Customer success {#customer-success}
@@ -147,12 +158,16 @@ feature: Sources
       - [Oracle](tutorials/api/create/databases/oracle.md)
       - [Phoenix](tutorials/api/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+      - [Snowflake Streaming](tutorials/api/create/databases/snowflake-streaming.md)
       - [Snowflake](tutorials/api/create/databases/snowflake.md)
       - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
       - [SQL Server](tutorials/api/create/databases/sql-server.md)
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
+      - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
     - Marketing automation {#marketing-automation}
+      - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
+      - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
       - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
       - [MailChimp Campaign](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
       - [MailChimp Members](tutorials/api/create/marketing-automation/mailchimp-members.md)
@@ -197,6 +212,8 @@ feature: Sources
   - [Retry failed dataflow runs](tutorials/api/retry-flows.md)
   - [Delete accounts](tutorials/api/delete.md)
   - [Delete dataflows](tutorials/api/delete-dataflows.md)
+  - [Ingest encrypted data](tutorials/api/encrypt-data.md)
+  - [Save a dataflow as a draft](tutorials/api/draft.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
     - Adobe applications {#adobe-applications}
@@ -206,11 +223,14 @@ feature: Sources
       - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
       - [Customer attributes](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
+      - [Marketo Custom Activities](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
       - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
     - Advertising {#advertising}
       - [Google Ads](tutorials/ui/create/advertising/ads.md)
+      - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
+      - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
       - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
@@ -231,6 +251,8 @@ feature: Sources
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
       - [Salesforce](tutorials/ui/create/crm/salesforce.md)
+      - [SugarCRM Accounts & Contacts](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
+      - [SugarCRM Events](tutorials/ui/create/crm/sugarcrm-events.md)
       - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
       - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
     - Customer Success {#customer-success}
@@ -260,9 +282,12 @@ feature: Sources
       - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
+      - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
     - Local system {#local-system}
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Marketing automation {#marketing-automation}
+      - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
+      - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
       - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
       - [Mailchimp Campaigns](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
       - [Mailchimp Members](tutorials/ui/create/marketing-automation/mailchimp-members.md)
@@ -297,6 +322,7 @@ feature: Sources
   - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
   - [Subscribe to sources alerts](tutorials/ui/alerts.md)
+  - [Save a dataflow as a draft](tutorials/ui/draft.md)
 - Self-Serve Sources (Batch SDK) {#sdk}
   - [Overview](sources-sdk/overview.md)
   - Configure your connection specification {#config}
@@ -317,6 +343,18 @@ feature: Sources
     - [Use a text editor in your local environment to create a sources documentation page](sources-sdk/documentation/text-editor.md)
     - [Documentation self-service API template](sources-sdk/documentation/template.md)
     - [Documentation self-service UI template](sources-sdk/documentation/ui-template.md)
+  - Streaming SDK {#streaming-sdk}
+    - [Get started with Self-Serve Sources (Streaming SDK)](sources-sdk/streaming/getting-started.md)
+    - [Create a connection specification for a streaming source](sources-sdk/streaming/create.md)
+    - [Update a connection specification for a streaming source](sources-sdk/streaming/update-connection-specs.md)
+    - [Update the streaming flow specification](sources-sdk/streaming/update-flow-specs.md)
+    - [Test and submit your connection specification for verification](sources-sdk/streaming/submit.md)
+    - [Document your source (Streaming SDK)](sources-sdk/streaming/document-streaming.md)
+    - [Documentation self-service API streaming template](sources-sdk/streaming/streaming-template-api.md)
+    - [Documentation self-service UI streaming template](sources-sdk/streaming/streaming-template-ui.md)
+- Error messages {#errors}
+  - [Error messages in sources](./errors/sources-errors.md)
+  - [Error messages in Flow Service](./errors/flow-service-errors.md)
 - [Flow run notifications](notifications.md)
 - [IP address allow list](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)

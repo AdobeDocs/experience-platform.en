@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
 solution: Experience Platform
 title: Segment Builder UI Guide
-topic-legacy: ui guide
 description: The Segment Builder in the Adobe Experience Platform UI provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 ---
@@ -49,7 +48,7 @@ You can then easily drag and drop [!DNL ExperienceEvents] and "[!UICONTROL Event
 
 By default, only populated schema fields from your data store are shown. This includes "[!UICONTROL Event Types]". If the "[!UICONTROL Event Types]" list is not visible, or you are only able to select "[!UICONTROL Any]" as an "[!UICONTROL Event Type]", select the **gear icon** next to **[!UICONTROL Fields]**, then select **[!UICONTROL Show full XDM schema]** under **[!UICONTROL Available Fields]**. Select the **gear icon** again to return to the **[!UICONTROL Fields]** tab and you should now be able to view multiple "[!UICONTROL Event Types]" and schema fields, regardless of whether they contain data or not.
 
-![](../images/ui/segment-builder/show-populated.png)
+![Radio buttons that let you choose between only showing fields with data or showing all XDM fields are highlighted.](../images/ui/segment-builder/show-populated.png)
 
 #### Adobe Analytics report suite datasets
 
@@ -120,6 +119,22 @@ When selecting a value for the attribute, you will see a list of enum values tha
 If selecting a value from this list of enums, the value will be outlined with a solid border. However, for fields that use `meta:enum` (soft) enums, you can also select a value which is **not** from the list of enums. If you create your own value, it will be outlined with a dotted border, along with a warning that this value is not in the enum list.
 
 ![A warning that is displayed if you are inserting a value that is not part of the enum list.](../images/ui/segment-builder/enum-warning.png)
+
+If you are creating multiple values, you can add all of them at once by using the bulk upload. Select the ![plus icon](../images/ui/segment-builder/plus-icon.png) to show the **[!UICONTROL Add values in bulk]** popover.
+
+![The plus icon is highlighted, showing the button that you can select to access the bulk upload popover.](../images/ui/segment-builder/add-bulk-values.png)
+
+On the **[!UICONTROL Add values in bulk]** popover, you can upload a CSV or TSV file.
+
+![The Add values in bulk popover is displayed. The dialog you can select to upload a CSV or TSV file is highlighted.](../images/ui/segment-builder/bulk-values-popover.png)
+
+Alternatively, you can manually add comma separated values.
+
+![The Add values in bulk popover is displayed. Both the dialog you can use to insert values and the added values are highlighted.](../images/ui/segment-builder/bulk-values-comma-separated.png)
+
+Please note that there is a maximum of 250 values allowed. If you exceed this amount, you will need to remove some values before adding more.
+
+![A warning that shows that you have reached the maximum number of values is displayed.](../images/ui/segment-builder/maximum-values.png)
 
 ### Adding audiences
 
@@ -248,7 +263,7 @@ More information about the different segment definition evaluation methods can b
 
 ## Next steps {#next-steps}
 
-Segment Builder provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-time Customer Profile] data. After reading this guide you should now be able to:
+Segment Builder provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-Time Customer Profile] data. After reading this guide you should now be able to:
 
 - Create segment definitions using a combination of attributes, events, and existing audiences as building blocks.  
 - Use the rule builder canvas and containers to control the order in which segment rules are executed.

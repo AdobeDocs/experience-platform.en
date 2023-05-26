@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;faq;FAQ;regulation;Regulation;regulations;Regulations;privacy;Privacy;
 solution: Experience Platform
 title: Privacy Regulations FAQ
-topic-legacy: troubleshooting
 description: This document provides answers to frequently asked questions about supported legal privacy regulations and their implementation in Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
 ---
@@ -42,7 +41,7 @@ Personal information can also include internet or other electronic network activ
 * Search history
 * Information regarding a consumer's interaction with a website, application, or advertisement
 
-Even though privacy regulations cover a wide set of personal information, Adobe’s standard contract terms dictate that sensitive personal information (such as SSN, driver’s license information, financial account information, and biometric data) is generally prohibited from import and use in Experience Cloud applications.  
+Even though privacy regulations cover a wide set of personal information, Adobe's standard contract terms dictate that sensitive personal information (such as SSN, driver's license information, financial account information, and biometric data) is generally prohibited from import and use in Experience Cloud applications.  
 
 ### What is the difference between a data controller and a data processor?
 
@@ -52,11 +51,11 @@ A **data controller** is the person or organization who has the power and re
 
 ### What is the difference between explicit and unambiguous data subject consent?
 
-**Explicit consent** refers to a standard of consent which involves a specific, informed and unambiguous indication of the data subject’s wishes in oral or written form. Put simply, the data subject must literally and explicitly say "I consent" or "I agree" in order for the consent to be considered explicit. In addition, it must be as easy to withdraw consent as it is to give it.
+**Explicit consent** refers to a standard of consent which involves a specific, informed and unambiguous indication of the data subject's wishes in oral or written form. Put simply, the data subject must literally and explicitly say "I consent" or "I agree" in order for the consent to be considered explicit. In addition, it must be as easy to withdraw consent as it is to give it.
 
 **Unambiguous (implied) consent** refers to consent that was not explicitly given by the data subject, but is nonetheless unambiguous in nature. For example, during the sign-up process for a company website, a notice is given that by providing an email address, the data subject consents to receiving emails on special offers. If the data subject reads the notice, the affirmative action of entering their email is enough to be considered unambiguous consent. 
 
-For many regulations like the GDPR, explicit consent is required for processing sensitive personal data, where nothing short of “opt in” will suffice. For non-sensitive data, however, unambiguous (implied) consent is acceptable.
+For many regulations like the GDPR, explicit consent is required for processing sensitive personal data, where nothing short of "opt in" will suffice. For non-sensitive data, however, unambiguous (implied) consent is acceptable.
 
 ### Can data subjects under a certain age give consent? 
 
@@ -75,7 +74,11 @@ Many privacy regulations stipulate that if a data subject is below a certain age
 
 Assuming that the business has collected personal information and that it can authenticate or verify the identity of a particular consumer, privacy regulations allow a specific time window for a consumer request to be fulfilled. The following table breaks down the applicable time windows for each regulation, with notes on some exceptions:
 
-| Regulation | Compliance window | Notes |
+>[!NOTE]
+>
+>The timeframe to respond in 'days' are reflective of each regulatory law's mandated timelines to complete a consumers request.
+
+| Regulation | Timeframe to respond | Notes |
 | --- | --- | --- |
 | CCPA (California) | 45 days | |
 | GDPR (European Union) | 30 days | If the request is complex, or numerous requests have been made by the same data subject, then the request can be extended to 60 days. |

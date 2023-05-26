@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;Intelligent Services;popular topics;intelligent service;Intelligent service
 solution: Experience Platform
 title: Prepare Data for Use in Intelligent Services
-topic-legacy: Intelligent Services
 description: In order for Intelligent Services to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. Intelligent Services use Experience Data Model (XDM) schemas in order to achieve this.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 ---
@@ -18,7 +17,7 @@ This document provides general guidance on mapping your marketing events data fr
 
 For example, if you are using Customer AI to predict the propensity to buy a product, the model for Customer AI needs both examples of successful purchase paths and examples of unsuccessful paths. This is because during model training, Customer AI looks to understand what events and journeys lead to a purchase. This also includes the actions taken by customers who did not purchase, such as an individual who stopped their journey at adding an item to the cart. These customers may exhibit similar behaviors however, Customer AI can provide insights and drilldown the major differences and factors that lead to a higher propensity score. Similarly, Attribution AI requires both types of events and journeys in order to display metrics such as touchpoint effectiveness, top conversion paths, and breakdowns by touchpoint position.
 
-For more examples and information on historical data requirements, visit the [Customer AI](./customer-ai/input-output.md#data-requirements) or [Attribution AI](./attribution-ai/input-output.md#data-requirements) historical data requirements section in the input / output documentation.
+For more examples and information on historical data requirements, visit the [Customer AI](./customer-ai/data-requirements.md#data-requirements) or [Attribution AI](./attribution-ai/input-output.md#data-requirements) historical data requirements section in the input / output documentation.
 
 ### Guidelines for stitching data
 
@@ -34,7 +33,7 @@ The preparation process varies depending on whether your data is stored in Adobe
 
 If your data is stored outside of Experience Platform, you need to map your data to the required and relevant fields in a [Consumer ExperienceEvent schema](#cee-schema). This schema can be augmented with custom field groups to better capture your customer data. Once mapped, you can create a dataset using your Consumer ExperienceEvent schema and [ingest your data to Platform](../ingestion/home.md). The CEE dataset can then be selected when configuring an [!DNL Intelligent Service].
 
-Depending on the [!DNL Intelligent Service] you wish to use, different fields may be required. Note that it is a best practice to add data to a field if you have the data available. To learn more about the required fields, visit the [Attribution AI](./attribution-ai/input-output.md) or [Customer AI](./customer-ai/input-output.md) input / output guide.
+Depending on the [!DNL Intelligent Service] you wish to use, different fields may be required. Note that it is a best practice to add data to a field if you have the data available. To learn more about the required fields, visit the [Attribution AI](./attribution-ai/input-output.md) or [Customer AI](./customer-ai/data-requirements.md) data requirements guide.
 
 ### Adobe Analytics data preparation {#analytics-data}
 
@@ -60,7 +59,7 @@ GROUP BY channel.typeAtSource
 
 >[!IMPORTANT]
 >
->The Adobe Analytics connector takes up to four weeks to backfill data. If you recently set up a connection you should verify that the dataset has the minimum length of data required for Customer or Attribution AI. Please review the historical data sections in [Customer AI](./customer-ai/input-output.md#data-requirements) or [Attribution AI](./attribution-ai/input-output.md#data-requirements), and verify you have enough data for your prediction goal.
+>The Adobe Analytics connector takes up to four weeks to backfill data. If you recently set up a connection you should verify that the dataset has the minimum length of data required for Customer or Attribution AI. Please review the historical data sections in [Customer AI](./customer-ai/data-requirements.md#data-requirements) or [Attribution AI](./attribution-ai/input-output.md#data-requirements), and verify you have enough data for your prediction goal.
 
 ### Adobe Audience Manager data preparation (Customer AI only) {#AAM-data}
 
@@ -70,7 +69,7 @@ Once the source connector is streaming your data into Experience Platform, you a
 
 >[!IMPORTANT]
 >
->If you recently set up a connector you should verify that the dataset has the minimum length of data required. Please review the historical data section in the [input/output documentation](./customer-ai/input-output.md) for Customer AI, and verify you have enough data for your prediction goal.
+>If you recently set up a connector you should verify that the dataset has the minimum length of data required. Please review the historical data section in the [input/output documentation](./customer-ai/data-requirements.md) for Customer AI, and verify you have enough data for your prediction goal.
 
 ### [!DNL Experience Platform] data preparation
 

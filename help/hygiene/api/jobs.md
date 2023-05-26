@@ -7,9 +7,9 @@ exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
 ---
 # Delete records using the Data Hygiene API
 
->[!IMPORTANT]
+<!-- >[!IMPORTANT]
 >
->This endpoint represents the beta functionality for record deletes. For the latest functionality, please use the [`/workorder` endpoint](./workorder.md) instead.
+>This endpoint represents the beta functionality for record deletes. For the latest functionality, please use the [`/workorder` endpoint](./workorder.md) instead. -->
 
 The Data Hygiene API allows you to programmatically correct or delete your customers' stored personal data in Adobe Experience Platform.
 
@@ -101,7 +101,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `companyContexts` | An array containing authentication information for your organization. It must contain a single object with the following properties: <ul><li>`namespace`: Must be set to `imsOrgID`.</li><li>`value`: Your IMS Org ID. This is the same value that is provided in the `x-gw-ims-org-id` header.</li></ul> |
+| `companyContexts` | An array containing authentication information for your organization. It must contain a single object with the following properties: <ul><li>`namespace`: Must be set to `imsOrgID`.</li><li>`value`: Your organization ID. This is the same value that is provided in the `x-gw-ims-org-id` header.</li></ul> |
 | `users` | An array containing a collection of at least one user whose information you would like to delete. Each user object contains the following information: <ul><li>`key`: An identifier for a user that is used to qualify the separate job IDs in the response data. It is best practice to choose a unique, easily identifiable string for this value so it can be referenced or looked up later.</li><li>`action`: An array that lists desired actions to take on the user's data. Must contain a single string value: `delete`.</li><li>`userIDs`: A collection of identities for the user. The number of identities a single user can have is limited to nine. Each identity contains the following properties: <ul><li>`namespace`: The [identity namespace](../../identity-service/namespaces.md) associated with the ID. This can be a [standard namespace](../../privacy-service/api/appendix.md#standard-namespaces) recognized by Platform, or it can be a custom namespace defined by your organization. The type of namespace used must be reflected in the `type` property.</li><li>`value`: The identity value.</li><li>`type`: Must be set to `standard` if using a globally recognized namespace, or `custom` if you are using a namespace defined by your organization.</li></ul></li></ul> |
 
 {style="table-layout:auto"}

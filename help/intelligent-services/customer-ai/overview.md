@@ -3,9 +3,9 @@ keywords: Experience Platform;overview;customer ai;popular topics;customer ai ov
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Customer AI overview
-topic-legacy: Customer AI Overview
 description: Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale. This is accomplished without having to transform the business needs to a machine learning problem, pick an algorithm, train, or deploy.
 landing-page-description: Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale.
+short-description: Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
 ---
 
@@ -24,7 +24,7 @@ Customer AI is built to:
 - Provide high accuracy customer propensity models for stronger segmentation and targeting.
 - Help with understanding the influential factors and likelihood behind certain customer behaviors.
 - Provide customizable options for your company's unique use cases and data.
-- Enhance Real-time Customer Profile with customer propensity scores such as churn and conversion.
+- Enhance Real-Time Customer Profile with customer propensity scores such as churn and conversion.
 - Enhance customer profiles with influential factors for propensity scores.
 - Create segments of customers based on influential factors and propensity scores.
 

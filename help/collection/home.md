@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data collection;launch;web sdk
 solution: Experience Platform
 title: Data Collection Overview
-topic-legacy: overview
 description: Learn about the various technologies involved with collect data on customer experiences in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 ---
@@ -58,7 +57,7 @@ In addition, datastreams are integrated with several Platform capabilities that 
 
 >[!NOTE]
 >
->Event forwarding is a paid feature that is only included as part of the Adobe Real-Time Customer Data Platform Connections offering.
+>Event forwarding is a paid feature that is included as part of the Adobe Real-Time Customer Data Platform Connections, Prime, or Ultimate offerings.
 
 ## Next steps
 

@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;monitor segments;monitor dataflows;dataflows;segmentation
-description: Segmentation allows you to create segments and audiences from your Real-time Customer Profile data. This tutorial provides instructions on how you can monitor dataflows during segmentation using the Experience Platform user interface.
+description: Segmentation allows you to create segments and audiences from your Real-Time Customer Profile data. This tutorial provides instructions on how you can monitor dataflows during segmentation using the Experience Platform user interface.
 title: Monitor Dataflows for Segments in the UI
-topic-legacy: overview
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 ---
 # Monitor dataflows for segments in the UI
 
-Segmentation Service allows you to create segments and audiences from your Real-time Customer Profile data in Adobe Experience Platform. Platform provides dataflows to transparently track this flow of data from sources to destinations.
+Segmentation Service allows you to create segments and audiences from your Real-Time Customer Profile data in Adobe Experience Platform. Platform provides dataflows to transparently track this flow of data from sources to destinations.
 
 The monitoring dashboard provides you with a visual representation of the data's activity within a segment, including the status of your data's segmentation. This tutorial provides instructions on how you can use the monitoring dashboard to monitor your data's segmentation using the Experience Platform user interface, allowing you to track the status of segment activation, evaluation, and export jobs.
 
@@ -18,7 +17,7 @@ This guide requires a working understanding of the following components of Adobe
 
 - [Dataflows](../home.md): Dataflows are a representation of data jobs that move data across Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
   - [Dataflow runs](../../sources/notifications.md): Dataflow runs are the recurring scheduled jobs based on the frequency configuration of selected dataflows.
-- [Segmentation](../../segmentation/home.md): Segmentation allows you to create segments and audiences from your Real-time Customer Profile data. 
+- [Segmentation](../../segmentation/home.md): Segmentation allows you to create segments and audiences from your Real-Time Customer Profile data. 
   - [Activation jobs](../../destinations/ui/activation-overview.md): An activation job is used to activate your segment to a specified destination.
   - [Evaluation jobs](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): An evaluation job is an asynchronous process that runs creates an audience segment based on the specified segment.
   - [Export jobs](../../segmentation/api/export-jobs.md): An export job is an asynchronous processes that are used to persist audience segment members to datasets.
@@ -29,7 +28,7 @@ This guide requires a working understanding of the following components of Adobe
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="Segments"
->abstract="The segments view contains information on all your IMS Organization's segments, with further information about their activation and evaluation jobs."
+>abstract="The segments view contains information on all your organization's segments, with further information about their activation and evaluation jobs."
 
 To access the **[!UICONTROL Segments]** dashboard, select **[!UICONTROL Monitoring]** in the left navigation. Once on the **[!UICONTROL Monitoring]** page, select the **[!UICONTROL Segments]** card. 
 
@@ -43,7 +42,7 @@ The dashboard itself contains metrics for both segments and segment jobs. By def
 >
 >Currently, only segments that are activated to [batch (file-based) destinations](../../destinations/destination-types.md#file-based) are supported for the monitoring segments dashboard.
 
-![The segments dashboard. Information about the different segments in your IMS organization and sandbox are displayed.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
+![The segments dashboard. Information about the different segments in your organization and sandbox are displayed.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
 
 The following metrics are available for this dashboard view:
 
@@ -104,7 +103,7 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Dataflow run start]** | The date and time that the activation job started. |
 | **[!UICONTROL Dataflow run end]** | The date and time that the activation job ended. |
 | **[!UICONTROL Dataflow run ID]** | The ID of the current activation job. |
-| **[!UICONTROL IMS org ID]** | The ID of the IMS organization that the activation job belongs to. |
+| **[!UICONTROL IMS org ID]** | The ID of the organization that the activation job belongs to. |
 | **[!UICONTROL Destination name]** | The name of the destination that the data is being activated to. |
 
 Underneath the metrics, a toggle to select between the dataflow run errors and the segments is displayed.
@@ -146,7 +145,7 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Job type]** | The type of segment job. In this case, it will always be a segment evaluation job. |
 | **[!UICONTROL Evaluation type]** | The type of evaluation that is being done. This can be either be **[!UICONTROL Batch]** or **[!UICONTROL Streaming]**. |
 | **[!UICONTROL Job ID]** | The ID of the evaluation job. |
-| **[!UICONTROL IMS org ID]** | The ID of the IMS organization the evaluation job belongs to. |
+| **[!UICONTROL IMS org ID]** | The ID of the organization the evaluation job belongs to. |
 | **[!UICONTROL Segment name]** | The name of the segment that is being evaluated. |
 | **[!UICONTROL Segment ID]** | The ID of the segment that is being evaluated. |
 

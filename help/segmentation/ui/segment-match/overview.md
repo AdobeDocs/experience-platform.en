@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segment Match;segment match
 solution: Experience Platform
 title: Segment Match Overview
-topic-legacy: overview
 description: Segment Match is a segment-sharing service in Adobe Experience Platform that allows for two or more Platform users to exchange segment data in a secure, governed, and privacy-friendly manner.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
 ---
@@ -31,7 +30,7 @@ The first step to getting started with [!DNL Segment Match] is to make sure you'
 
 Identity namespaces are a component of [Adobe Experience Platform Identity Service](../../../identity-service/home.md). Each customer identity contains an associated namespace that indicates the identity's context. For example, a namespace can distinguish a value of "name<span>@email.com" as an email address or "443522" as a numeric CRM ID.
 
-A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments (such as when [!DNL Real-time Customer Profile] merges Profile data), both the identity value and the namespace must match.
+A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments (such as when [!DNL Real-Time Customer Profile] merges Profile data), both the identity value and the namespace must match.
 
 In the context of [!DNL Segment Match], namespaces are used in the overlap process when sharing data.
 
@@ -51,7 +50,7 @@ You must provide a consent configuration and set its default value to either `op
 
 The opt-in and opt-out consent check determines whether you can operate with the consent to share user data by default. If the consent configuration default is set to `opt-out`, then user data can be shared, unless a user explicitly opts out. If the default is set to `opt-in`, then user data cannot be shared, unless a user explicitly opts in.
 
-The default consent configuration for [!DNL Segment Match] is set to `opt-out`. To enforce an opt-in model for your data, please send an email request to your Adobe Account Manager.
+The default consent configuration for [!DNL Segment Match] is set to `opt-out`. To enforce an opt-in model for your data, please send an email request to your Adobe account team.
 
 For more information on the `share` attribute used to set data-sharing consent value, see the the following documentation on [privacy and consents field group](../../../xdm/field-groups/profile/consents.md). For information on the specific field group used to capture consumer consent for collection and use of data related to privacy, personalization and marketing preferences, see the following [Consent for Privacy, Personalization and Marketing Preferences GitHub example](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 
@@ -71,7 +70,7 @@ There are two permissions associated with [!DNL Segment Match]:
 
 | Permission | Description |
 | --- | --- |
-| Manage Audience Share Connections | This permission allows you to complete the partner handshake process, which connects two IMS Organizations to enable [!DNL Segment Match] flows. |
+| Manage Audience Share Connections | This permission allows you to complete the partner handshake process, which connects two organizations to enable [!DNL Segment Match] flows. |
 | Manage Audience Shares | This permission allows you to create, edit, and publish feeds (the package of data used for [!DNL Segment Match]) with active partners (partners who have been connected by the admin user with **[!UICONTROL Audience Share Connections]** access). |
 
 See the [access control overview](../../../access-control/home.md) for more information on access control and permissions.
@@ -198,4 +197,4 @@ By reading this document, you have gained an understanding of [!DNL Segment Matc
 
 * [[!DNL Segmentation Service]](../../home.md)
 * [[!DNL Identity Service]](../../../identity-service/home.md)
-* [[!DNL Real-time Customer Profile] overview](../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] overview](../../../profile/home.md)

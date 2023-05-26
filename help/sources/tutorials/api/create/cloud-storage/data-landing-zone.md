@@ -2,12 +2,15 @@
 keywords: Experience Platform;home;popular topics;
 solution: Experience Platform
 title: Connect Data Landing Zone to Adobe Experience Platform using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Data Landing Zone using the Flow Service API.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
 ---
 # Connect [!DNL Data Landing Zone] to Adobe Experience Platform using the Flow Service API
+
+>[!IMPORTANT]
+>
+>This page is specific to the [!DNL Data Landing Zone] *source* connector in Experience Platform. For information on connecting to the [!DNL Data Landing Zone] *destination* connector, refer to the [[!DNL Data Landing Zone] destination documentation page](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
 [!DNL Data Landing Zone] is a secure, cloud-based file storage facility to bring files into Adobe Experience Platform. Data is automatically deleted from the [!DNL Data Landing Zone] after seven days.
 
@@ -31,7 +34,7 @@ The first step in using APIs to access [!DNL Data Landing Zone] is to make a GET
 **API format**
 
 ```http
-GET /connectors/landingzone?type=user_drop_zone
+GET /data/foundation/connectors/landingzone?type=user_drop_zone
 ```
 
 | Headers | Description |
@@ -75,7 +78,7 @@ To retrieve credentials for a [!DNL Data Landing Zone], make a GET request to th
 **API format**
 
 ```http
-GET /connectors/landingzone/credentials?type=user_drop_zone
+GET /data/foundation/connectors/landingzone/credentials?type=user_drop_zone
 ```
 
 **Request**
@@ -119,7 +122,7 @@ You can update your `SASToken` by making a POST request to the `/credentials` en
 **API format**
 
 ```http
-POST /connectors/landingzone/credentials?type=user_drop_zone&action=refresh
+POST /data/foundation/connectors/landingzone/credentials?type=user_drop_zone&action=refresh
 ```
 
 | Headers | Description |
@@ -443,7 +446,7 @@ A successful response returns the structure of the queried file including file n
 
 ## Create a source connection
 
-A source connection creates and manages the connection to the external source from where data is ingested. A source connection consists of information like data source, data format, and the source connection ID needed to create a dataflow. A source connection instance is specific to a tenant and IMS Organization.
+A source connection creates and manages the connection to the external source from where data is ingested. A source connection consists of information like data source, data format, and the source connection ID needed to create a dataflow. A source connection instance is specific to a tenant and organization.
 
 To create a source connection, make a POST request to the `/sourceConnections` endpoint of the [!DNL Flow Service] API.
 

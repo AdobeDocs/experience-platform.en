@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;ingestion;ingest batch data;tutorial;batch ingestion;tutorial;ui guide;
 solution: Experience Platform
 title: Ingest Data Into Experience Platform
-topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform allows you to easily import data as batch files in the form of Parquet files or data that conforms to a known Experience Data Model (XDM) schema.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
@@ -13,13 +12,13 @@ Adobe Experience Platform allows you to easily import data into [!DNL Platform] 
 
 ## Getting started
 
-In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding. 
+In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an organization in [!DNL Experience Platform], please speak to your system administrator before proceeding. 
 
 If you would prefer to ingest data using Data Ingestion APIs please begin by reading the [Batch Ingestion developer guide](../batch-ingestion/api-overview.md).
 
 ## Datasets workspace
 
-The Datasets workspace within [!DNL Experience Platform] allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones. 
+The Datasets workspace within [!DNL Experience Platform] allows you to view and manage all of the datasets that your organization has made, as well as create new ones. 
 
 View the Datasets workspace by clicking **[!UICONTROL Datasets]** in the left-hand navigation. The Datasets workspace contains a list of datasets, including columns showing name, created (date and time), source, schema, and last batch status, as well as the date and time the dataset was last updated. 
 
@@ -69,23 +68,23 @@ An empty dataset has now been created and you have been returned to the **[!UICO
 
 On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema, streaming, and source. The Info tab also includes information about when the dataset was created and its last modified date. 
 
-Also in the Info tab is a  **[!UICONTROL Profile]** toggle that is used for enabling your dataset for use with [!DNL Real-time Customer Profile]. Use of this toggle, and [!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
+Also in the Info tab is a  **[!UICONTROL Profile]** toggle that is used for enabling your dataset for use with [!DNL Real-Time Customer Profile]. Use of this toggle, and [!DNL Real-Time Customer Profile], will be explained in more detail in the section that follows.
 
 ![Dataset activity](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## Enable dataset for [!DNL Real-time Customer Profile]
+## Enable dataset for [!DNL Real-Time Customer Profile]
 
 Datasets are used for ingesting data into [!DNL Experience Platform], and that data is ultimately used to identify individuals and stitch together information coming from multiple sources. That stitched together information is called a [!DNL Real-Time Customer Profile]. In order for [!DNL Platform] to know which information should be included in the [!DNL Real-Time Profile], datasets can be marked for inclusion using the **[!UICONTROL Profile]** toggle. 
 
 By default, this toggle is off. If you choose to toggle on [!DNL Profile], all data ingested into the dataset will be used to help identify an individual and stitch together their [!DNL Real-Time Profile].
 
-To learn more about [!DNL Real-time Customer Profile] and working with identities, please review the [Identity Service](../../identity-service/home.md) documentation.
+To learn more about [!DNL Real-Time Customer Profile] and working with identities, please review the [Identity Service](../../identity-service/home.md) documentation.
 
-To enable the dataset for [!DNL Real-time Customer Profile], click the **[!UICONTROL Profile]** toggle in the **[!UICONTROL Info]** tab. 
+To enable the dataset for [!DNL Real-Time Customer Profile], click the **[!UICONTROL Profile]** toggle in the **[!UICONTROL Info]** tab. 
 
 ![Profile toggle](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
-A dialog will appear asking you to confirm that you want to enable the dataset for [!DNL Real-time Customer Profile].
+A dialog will appear asking you to confirm that you want to enable the dataset for [!DNL Real-Time Customer Profile].
 
 ![Enable Profile dialog](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 

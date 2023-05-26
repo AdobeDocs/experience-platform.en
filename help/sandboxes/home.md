@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;sandbox;Sandbox;testing;Testing
 solution: Experience Platform
 title: Sandboxes Overview
-topic-legacy: overview
 description: Sandboxes are virtual partitions within a single instance of Experience Platform, which allow for seamless integration with the development process of your digital experience applications.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
 ---
@@ -26,9 +25,9 @@ Sandboxes are virtual partitions within a single instance of Experience Platform
 
 An Experience Platform instance supports multiple production and development sandboxes, with each sandbox maintaining its own independent library of Platform resources (including schemas, datasets, profiles, and so on). In addition, both production and development sandboxes have a reset feature that removes all customer-created resources from the sandbox. Development sandboxes cannot be converted to production sandboxes.
 
-A default Experience Platform license grants you a total of five sandboxes, which you can classify as production or development. You can license additional packs of 10 sandboxes up to a maximum of 75 sandboxes in total. These additional sandboxes can be used to create both production and development sandboxes. Please contact your IMS Org Administrator or your Adobe sales representative for more details.
+A default Experience Platform license grants you a total of five sandboxes, which you can classify as production or development. You can license additional packs of 10 sandboxes up to a maximum of 75 sandboxes in total. These additional sandboxes can be used to create both production and development sandboxes. Please contact your organization administrator or your Adobe sales representative for more details.
 
-Finally, the default production sandbox is the first production sandbox that is created when an IMS Org is first created. The default production sandbox allows you to ingest or consume data from Platform, as well as accept requests that do not include values for a sandbox name or a sandbox ID.
+Finally, the default production sandbox is the first production sandbox that is created when an organization is first created. The default production sandbox allows you to ingest or consume data from Platform, as well as accept requests that do not include values for a sandbox name or a sandbox ID.
 
 >[!NOTE]
 >
@@ -37,7 +36,7 @@ Finally, the default production sandbox is the first production sandbox that is 
 In summary, sandboxes provide the following benefits:
 
 * **Application lifecycle management**: Create separate virtual environments to develop and evolve digital experience applications.
-* **Project and brand management**: Allow multiple projects to run in parallel within the same IMS Org, while providing isolation and access control. Future releases will provide support for deploying in multiple regions.
+* **Project and brand management**: Allow multiple projects to run in parallel within the same organization, while providing isolation and access control. Future releases will provide support for deploying in multiple regions.
 * **Flexible development ecosystem**: Provide sandboxes in a seamless, scalable, and cost-effective way for exploration, enablement, and demonstration purposes.
 
 ## Access control for sandboxes

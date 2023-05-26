@@ -27,7 +27,7 @@ There are two types of default limits within this document:
 
 ## Activation limits {#activation-limits}
 
-The following guardrails provide recommended limits when activating Real-time Customer Profile data to destinations.
+The following guardrails provide recommended limits when activating Real-Time Customer Profile data to destinations.
 
 ### General activation guardrails {#general-activation-guardrails}
 
@@ -83,7 +83,7 @@ The guardrails below apply to activation through [edge personalization destinati
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
 |Maximum number of [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations | 10 | Soft | You can set up dataflows to 10 Custom personalization destinations per sandbox.|
-|Maximum number of attributes mapped to a personalization destination per sandbox | 20 | Hard | A maximum of 20 attributes can be mapped in a dataflow to a personalization destination, per sandbox.|
+|Maximum number of attributes mapped to a personalization destination per sandbox | 30 | Hard | A maximum of 30 attributes can be mapped in a dataflow to a personalization destination, per sandbox.|
 |Maximum number of segments mapped to a single [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destination | 50 | Soft | You can activate a maximum of 50 segments in an activation flow to a single Adobe Target destination.|
 
 {style="table-layout:auto"}
@@ -95,7 +95,7 @@ The guardrails below apply to activation through [edge personalization destinati
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
 | Maximum number of [private custom destinations](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5  | Soft| You can create a maximum of 5 private custom streaming or batch destinations using Destination SDK. Reach out to a custom care representative if you need to create more than 5 such destinations. |
-| Profile export policy for Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimum 1.800 and maximum 3.600)</li><li>`maxNumEventsInBatch` (minimum 1.000, maximum 10.000)</li></ul> | Hard| When using the [configurable aggregation](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation) option for your destination, be mindful of the minimum and maximum values that determine how often HTTP messages are sent to your API-based destination and how many profiles the messages should include.|
+| Profile export policy for Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimum 1.800 and maximum 3.600)</li><li>`maxNumEventsInBatch` (minimum 1.000, maximum 10.000)</li></ul> | Hard| When using the [configurable aggregation](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) option for your destination, be mindful of the minimum and maximum values that determine how often HTTP messages are sent to your API-based destination and how many profiles the messages should include.|
 
 {style="table-layout:auto"}
 
@@ -115,5 +115,5 @@ View guardrails information for other Experience Platform services:
 
 * Guardrails for [data ingestion](/help/ingestion/guardrails.md)
 * Guardrails for [[!DNL Identity Service] data](/help/identity-service/guardrails.md)
-* Guardrails for [[!DNL Real-time Customer Profile] data](/help/profile/guardrails.md)
+* Guardrails for [[!DNL Real-Time Customer Profile] data](/help/profile/guardrails.md)
 * Guardrails for [[!DNL Query Service] data](/help/query-service/guardrails.md)

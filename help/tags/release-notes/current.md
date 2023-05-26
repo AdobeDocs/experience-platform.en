@@ -5,6 +5,47 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 ---
 # Release notes for tags and event forwarding
 
+>[!IMPORTANT]
+>
+>Moving forward the tags and event forwarding release notes will no longer be provided on this page. Please refer to the latest [Adobe Experience Platform release notes](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=en#data-collection) for detailed tags and event forwarding updates.
+
+## April 26, 2023
+
+* **OAuth JWT Secret**: The [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) allows customers to use Adobe and Google Service tokens to support server-to-server interactions in Event Forwarding.
+
+The following new extension has been released:
+
+* **[!DNL Pinterest Conversions API] extension**: The [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) event forwarding extension allows you to leverage data captured in Adobe Experience Platform Edge Network and send it to [!DNL Pinterest] in the form of server-side events using the [!DNL Pinterest Conversions API].
+
+## March 29, 2023
+
+**Quick Stark Workflows (Beta)**
+
+Access new quick start workflows under "Getting Started" from the Data Collection home screen! The following workflows are now available to customers as a public Beta.
+* **[Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**: Event Forwarding customers can rapidly collect and forward event data, server-side to Meta for ad conversions in just a few simple steps.
+* **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: Customers can rapidly implement the Mobile SDK and validate basic mobile events in just a few simple steps.
+
+New extensions have been released:
+
+* **[!DNL Braze] event forwarding extension**: The [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) event forwarding extension allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL Braze] in the form of server-side events using the [!DNL Braze] User Track APIs.
+* **[Epsilon Events API] event forwarding extension**: The [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) extension allows you to leverage event forwarding to capture event information in the Adobe Experience Platform Edge Network and send it to [!DNL Epsilon] using the [!DNL Epsilon] Event API.
+* **[!DNL Mixpanel] event forwarding extension**: The [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) extension allows you to leverage event forwarding to capture event information in the Adobe Experience Platform Edge Network and send it to [!DNL Mixpanel] using the Track Events API.
+
+## January 25, 2023
+
+* **New home screen**: The home page for Data Collection UI has been updated to include helpful onboarding information and links to streamline productivity. This includes:
+    1. Documentation and recommended workflows to get started
+    1. Recent properties, rules, and data elements
+    1. Popular extensions
+    1. New extension updates with a quick install feature
+* **Send data to [!DNL Google Ads] using event forwarding**: You can now use the [[!DNL Google Ads Enhanced Conversions] API extension](../extensions/server/google-ads-enhanced-conversions/overview.md) for event forwarding, combined with [Google Oauth 2 secrets](../ui/event-forwarding/secrets.md#google-oauth2), to securely send server-side data to [!DNL Google Ads] in real time.
+
+## November 23, 2022
+
+* **[!DNL AWS] extension for event forwarding**: You can now send data to [!DNL Amazon Web Services] ([!DNL AWS]) using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL AWS] extension overview](../../tags/extensions/server/aws/overview.md) for more information.
+* **[!DNL Google Ads Enhanced Conversions] extension for event forwarding**: You can now send conversion data to [!DNL Google Ads] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Google Ads Enhanced Conversions] extension overview](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) for more information.
+* **[!DNL Microsoft Azure] extension for event forwarding**: You can now send data to [!DNL Microsoft Azure] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Microsoft Azure] extension overview](../../tags/extensions/server/azure/overview.md) for more information.
+
 ## October 26, 2022
 
 * **Sensitive data handling for datastreams**: Datastreams now leverage several Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../edge/datastreams/overview.md#sensitive) for more information.

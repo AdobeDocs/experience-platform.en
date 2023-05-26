@@ -1,6 +1,6 @@
 ---
 title: User-Agent Client Hints
-description: Learn how User-Agent Client Hints work in Web SDK
+description: Learn how User-Agent Client Hints work in Web SDK. Client hints allow website owners to access much of the same information available in the User-Agent string, but in a more privacy-preserving way.
 keywords: user-agent;client hints; string; user-agent string; low entropy; high entropy
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
 ---
@@ -110,22 +110,13 @@ If you do not enable high entropy client hints in your environment, the Adobe An
 
 ### Adobe Analytics reports relying on high entropy client hints {#analytics}
 
-The following Adobe Analytics reports will not work while high entropy client hints are disabled.
-
-* [Browser](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser.html)
-* [Browser type](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)
-* [Operating system](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html)
-* [Operating system types](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)
-* [Mobile dimensions](https://experienceleague.adobe.com/docs/analytics/components/dimensions/mobile-dimensions.html)
+The [Operating system](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) dimension includes opertating system version which is stored as a high entropy client hint. If high entropy clients hints is not enabled, operating system version may be inaccurate for hits collected from Chromium browsers.
 
 ### Audience Manager traits relying on high entropy client hints {#aam}
 
-If your Audience Manager traits use any of the following properties, you must enable high entropy client hints. Otherwise, the traits will stop working.
+[!DNL Google] has updated the [!DNL Chrome] browser functionality to minimize the information collected via the `User-Agent` header. As a result, Audience Manager customers using [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) will no longer receive reliable information for traits based on [platform-level keys](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=en).
 
-* Operating system version
-* Device model
-* Device manufacturer
-* Device vendor
+Audience Manager customers who use platform-level keys for targeting must switch to [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=en) instead of [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en), and enable [High Entropy  Client Hints](#enabling-high-entropy-client-hints) to continue receiving reliable trait data.
 
 ## Enabling high entropy client hints {#enabling-high-entropy-client-hints}
 

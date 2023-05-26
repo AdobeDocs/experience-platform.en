@@ -10,13 +10,15 @@ Read this page to understand the different types and categories of Adobe Experie
 
 ## Destination types {#destination-types}
 
-In Adobe Experience Platform, we distinguish between two destination types - connections and extensions. There are two types of connection destinations, Profile Export destinations and Segment Export destinations.
+In Adobe Experience Platform, we distinguish between different destination types - connections, dataset exports, and extensions. There are several types of connection destinations, allowing you to export data to API-based destinations, .
 
-![Types of destinations](./assets/destination-types/types-of-destinations.png)
+Finally, connections can also be distinguished between public destinations available across all organizations in the destinations catalog, and private destinations which Real-time CDP Ultimate customers can create to satisfy their specific export use cases.
+
+![Types of destinations diagram.](./assets/destination-types/types-of-destinations-no-highlight.png)
 
 ## Connections {#connections}
 
-**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Segment Export]**, and **[!DNL Edge Personalization]** destinations in Adobe Experience Platform capture event data, combine it with other data sources to form the [Real-time Customer Profile](../profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
+**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Segment Export]**, and **[!DNL Edge Personalization]** destinations in Adobe Experience Platform capture event data, combine it with other data sources to form the [Real-Time Customer Profile](../profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
 
 ## Profile export destinations {#profile-export}
 
@@ -91,4 +93,4 @@ Extensions are helpful when event data is used to trigger an action, or to condu
 
 The connections and extensions in the [destinations catalog](https://platform.adobe.com/destination/catalog) are grouped by destination category (**Advertising**, **Cloud storage**, **Survey platforms**, **Email marketing**, etc.), depending on the marketing action that they help you achieve. For more information on each of the categories, as well as the destinations included in each category, see the [Destinations catalog documentation](./catalog/overview.md).
 
-![Destination categories](./assets/destination-types/destination-categories-menu.png)
+![Destination categories highlighted in the catalog page.](./assets/destination-types/destination-categories-menu.png)
