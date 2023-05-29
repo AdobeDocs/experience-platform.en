@@ -98,3 +98,56 @@ For detailed explanations on the ID matching requirements, see [ID matching requ
 **What kind of identities can I activate in [!DNL LinkedIn]?**
 
 [!DNL LinkedIn Matched Audiences] supports the activation of the following identities: hashed emails, [!DNL GAID], and [!DNL IDFA].
+
+## Attribute-based personalization via Adobe Target and Custom Personalization destinations {#attribute-personalization}
+
+**Do I need to use the Experience Platform Web SDK to send audiences and attributes to Adobe Target?** 
+
+No, Web SDK is not required to activate audiences to Adobe Target.
+
+However, if [!DNL at.js] is used instead of Web SDK, only next-session personalization is supported.
+
+For [same-page and next-page personalization](ui/activate-edge-personalization-destinations.md) use cases, you must use either [Web SDK](../edge/home.md) or the [Edge Network Server API](../server-api/overview.md).
+
+**Is there a limit on the number of attributes that I can send from Real-time Customer Data Platform to Adobe Target or a Custom Personalization destination?**
+
+Yes, same-page and next-page personalization use cases support a maximum of 30 attributes per sandbox, when activating audiences to Adobe Target or Custom Personalization destinations. 
+
+**What types of attributes are supported for activation (e.g. arrays, maps, etc?**
+
+Currently, only leaf-level attributes are supported for activation. 
+
+**Is there a limit on the number of audiences that can be activated to Adobe Target and Custom Personalization destinations?**
+
+Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more information on activation guardrails, see the [default guardrails for activation](guardrails.md). 
+
+**After I create an audience in Experience Platform, how long will it take for that audience to be available for edge segmentation use cases?** 
+
+Audience definitions are propagated to the edge network in up to one hour. However, if an audience is activated within this first hour, some visitors who would have qualified for the audience could be missed. 
+
+**Where can I see the activated attributes in Adobe Target?**
+
+Attributes will be available to use in Target in JSON and HTML offers. 
+
+**Can I create a destination without a datastream and then add a datastream to the same destination at a later point?**
+
+This is currently not supported through the Destinations UI. If you need assistance in this case, please reach out to your Adobe representative.
+
+**What happens if I delete an Adobe Target destination?**
+
+When you delete a destination:
+
+* All audiences and attributes mapped under the destination are deleted from Target.
+* The projection configuration is also deleted.
+
+**Does the integration work using the Edge Network Server API?**
+
+Yes, the Edge Network Server API works with the Custom Personalization destination. Since profile attributes may contain sensitive data, in order to protect this data, the Custom Personalization destination requires you to use the Edge Network Server API for data collection. Furthermore, all API calls must be made in an authenticated context.
+
+**I can only have one merge policy that is active-on-edge. Can I build audiences that use a different merge policy and still send them to Adobe Target as streaming segments?**
+
+No. All audiences that you want to activate to Adobe Target must use an active-on-edge [merge policy](../profile/merge-policies/ui-guide.md).
+
+**Are Data Usage Labeling and Enforcement (DULE) and Consent Policies enforced?**
+
+Yes. The Data Governance and Consent Policies created and associated with the corresponding Marketing Actions will enforce activation of attributes.
