@@ -39,13 +39,13 @@ Once a schema has been created to act as a container for the data assets, each d
 The following example adds `dataset1`, `dataset2`, `dataset3` and `v1` to the `databaseA.schema1` container created in the previous example.
 
 ```SQL
-ALTER TABLE dataset1 SET SCHEMA databaseA.schema1;
+ALTER TABLE dataset1 ADD SCHEMA databaseA.schema1;
  
-ALTER TABLE dataset2 SET SCHEMA databaseA.schema1;
+ALTER TABLE dataset2 ADD SCHEMA databaseA.schema1;
  
-ALTER TABLE dataset3 SET SCHEMA databaseA.schema1;
+ALTER TABLE dataset3 ADD SCHEMA databaseA.schema1;
  
-ALTER VIEW v1  SET SCHEMA databaseA.schema1;
+ALTER VIEW v1  ADD SCHEMA databaseA.schema1;
 ```
 
 ## Accessing data assets from the data container

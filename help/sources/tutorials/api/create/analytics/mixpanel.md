@@ -8,7 +8,7 @@ exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
 
 >[!NOTE]
 >
->The [!DNL Mixpanel] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Mixpanel] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL Mixpanel] data to Adobe Experience Platform using the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 

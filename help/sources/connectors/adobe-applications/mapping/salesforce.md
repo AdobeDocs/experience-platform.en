@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;Salesforce;salesforce;field mapping;Field mapping;mapping;marketo;B2B;b2b
 title: Salesforce Mapping Fields
 description: The tables below contain the mappings between Salesforce source fields and their corresponding XDM fields.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
