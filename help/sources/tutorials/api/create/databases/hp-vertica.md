@@ -10,7 +10,7 @@ exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
 
 >[!NOTE]
 >
->The [!DNL HP Vertica] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The [!DNL HP Vertica] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 

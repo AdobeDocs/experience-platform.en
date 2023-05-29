@@ -9,7 +9,7 @@ exl-id: 4c83c08d-c744-4167-9e3b-ed9a995943f4
 
 >[!NOTE]
 >
->The [!DNL Shopify Streaming] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Shopify Streaming] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Adobe Experience Platform provides support for ingesting data from streaming applications. Support for streaming providers include [!DNL Shopify].
 

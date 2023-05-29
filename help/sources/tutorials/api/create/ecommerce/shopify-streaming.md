@@ -8,7 +8,7 @@ exl-id: d44414a1-48fb-41e2-8cec-23cad867ba7d
 
 >[!NOTE]
 >
->The [!DNL Shopify] streaming source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Shopify] streaming source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 The following tutorial provides steps on how to create a streaming source connection and dataflow to stream data from [[!DNL Shopify]](https://www.shopify.com/) to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
