@@ -27,6 +27,16 @@ Before you configure your [!DNL Twitter Custom Audiences] destination, make sure
 
 {style="table-layout:auto"}
 
+## External audiences support {#external-audiences-support}
+
+All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
+Additionally, this destination also supports the activation of the external audiences described in the table below.
+
+| External audience type | Description | 
+---------|----------|
+| Custom uploads | Audiences ingested into Experience Platform from CSV files. | 
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.

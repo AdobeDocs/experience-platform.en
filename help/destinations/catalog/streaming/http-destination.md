@@ -22,14 +22,15 @@ The HTTP API destination allows you to export XDM profile data and audience segm
 
 HTTP endpoints can be either customers' own systems or third-party solutions.
 
-## Supported audiences {#supported-audiences}
+## External audiences support {#external-audiences-support}
 
-Refer to the table below for information about the types of audiences supported by this destination.
+All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
-| Audience type | Audience example | Supported by this destination |
----------|----------|---------|
-| Platform-generated audiences | Audiences generated within Experience Platform, through the [Segmentation Service](../../../segmentation/home.md). | Yes|
-| External audiences | Audiences ingested into Experience Platform from external sources, such as CSV files, or other Adobe solutions, such as Audience Manager or Customer Journey Analytics.  | Yes |
+Additionally, this destination also supports the activation of the external audiences described in the table below.
+
+| External audience type | Description | 
+---------|----------|
+| Custom uploads | Audiences ingested into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 

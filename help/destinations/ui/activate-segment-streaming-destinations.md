@@ -43,14 +43,6 @@ To activate audiences to destinations, you must have successfully [connected to 
 
 Use the check boxes to the left of the available audiences names to select the audiences that you want to activate to the destination, then select **[!UICONTROL Next]**.
 
-You can activate multiple types of audiences, depending on their origin:
-
-* Bla
-* Bla
-* Bla
-
-See []() for details about what each type of audience origin means.
-
 ![Select audiences](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
 ## Map attributes and identities {#mapping}
