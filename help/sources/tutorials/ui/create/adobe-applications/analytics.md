@@ -26,6 +26,13 @@ It is important to understand the following key terms used throughout this docum
 
 ## Create a source connection with Adobe Analytics
 
+>[!NOTE]
+>
+>When you create an Analytics source dataflow in a production sandbox, two dataflows are created:
+>
+>* A dataflow that does a 13-month backfill of historical report suite data into data lake. This dataflow ends when the backfill is complete.
+>* A dataflow flow which sends live data to data lake and to [!DNL Real-Time Customer Profile]. This dataflow runs continuously.
+
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. You can also use the search bar to narrow down the displayed sources.
@@ -106,14 +113,25 @@ Platform automatically detects your mapping sets for any friendly name conflicts
 
 ![mapping](../../../../images/tutorials/create/analytics/mapping.png)
 
-If there are friendly name conflicts between your source Report Suite and your selected schema, you can still continue with your [!DNL Analytics] dataflow, acknowledging that the field descriptors will not be changed. Alternatively, you can opt to create a new schema with a blank set of descriptors.
-
-Select **[!UICONTROL Next]** to proceed.
-
-![caution](../../../../images/tutorials/create/analytics/caution.png)
+>[!TIP]
+>
+>If there are friendly name conflicts between your source Report Suite and your selected schema, you can still continue with your [!DNL Analytics] dataflow, acknowledging that the field descriptors will not be changed. Alternatively, you can opt to create a new schema with a blank set of descriptors.
 
 #### Custom mappings
 
+You can use Data Prep functions to add new custom mapping or calculated fields for custom attributes. To add custom mappings, select **[!UICONTROL Custom]**.
+
+![custom](../../../../images/tutorials/create/analytics/custom.png)
+
+Depending on your needs, you can select either **[!UICONTROL Add new mapping]** or **[!UICONTROL Add calculated field]** and proceed to create custom mappings for your custom attributes. For comprehensive steps on how to use Data Prep functions, please read the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
+
+The following documentation provides further resources on understanding Data Prep, calculated fields, and mapping functions:
+
+* [Data Prep overview](../../../../../data-prep/home.md)
+* [Data Prep mapping functions](../../../../../data-prep/functions.md)
+* [Add calculated fields](../../../../../data-prep/ui/mapping.md#calculated-fields)
+
+<!-- 
 To use Data Prep functions and add new mapping or calculated fields for custom attributes, select **[!UICONTROL View custom mappings]**.
 
 ![view-custom-mapping](../../../../images/tutorials/create/analytics/view-custom-mapping.png)
@@ -142,13 +160,7 @@ Similar to the source schema, you can use the interface to navigate through the 
 
 With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
-![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png)
-
-The following documentation provides further resources on understanding Data Prep, calculated fields, and mapping functions:
-
-* [Data Prep overview](../../../../../data-prep/home.md)
-* [Data Prep mapping functions](../../../../../data-prep/functions.md)
-* [Add calculated fields](../../../../../data-prep/ui/mapping.md#calculated-fields)
+![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
 ### Filtering for Real-Time Customer Profile {#filtering-for-profile}
 

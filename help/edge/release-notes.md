@@ -10,6 +10,18 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](extension/web-sdk-ext-release-notes.md).
 
+## Version 2.16.0 - May 17, 2023
+
+**Fixes and improvements**
+
+* The Web SDK now encodes the Audience Manager cookie destination values, similar to the [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en).
+
+## Version 2.16.0 - April 25, 2023
+
+**New features**
+
+* Added support for [datastream configuration overrides](datastreams/overrides.md).
+
 ## Version 2.15.0 - March 30, 2023
 
 **New features**

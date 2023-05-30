@@ -2,8 +2,6 @@
 title: Create A Shopify Streaming Connection And Dataflow In The UI
 description: Learn how to create a Shopify Streaming source connection and dataflow using the Platform user interface
 badge: Beta
-hidefromtoc: y
-hide: y
 exl-id: 3368ecf6-0c61-49ce-bc9c-29ee50b3f037
 ---
 # Create a source connection and dataflow for [!DNL Shopify Streaming] data using the UI
