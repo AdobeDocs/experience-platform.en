@@ -28,15 +28,17 @@ By using streaming destinations such as [!DNL Amazon Kinesis], you can easily fe
 
 For example, a prospect downloaded a white-paper which qualifies them into a "high-propensity to convert" segment. By mapping the segment that the prospect falls in to the [!DNL Amazon Kinesis] destination, you would receive this event in [!DNL Amazon Kinesis]. There, you can employ a do-it-yourself approach and describe business logic on top of the event, as you think would work best with your enterprise IT systems.
 
-## External audiences support {#external-audiences-support}
+## Supported audiences {#supported-audiences}
+
+This section describes all the audiences that you can export to this destination.
 
 All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
-Additionally, this destination also supports the activation of the external audiences described in the table below.
+Additionally, this destination also supports the activation of the audiences described in the table below.
 
-| External audience type | Description | 
+| Audience type | Description | 
 ---------|----------|
-| Custom uploads | Audiences ingested into Experience Platform from CSV files. | 
+| Custom uploads | Audiences ingested into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
