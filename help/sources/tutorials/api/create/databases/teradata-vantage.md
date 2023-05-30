@@ -8,7 +8,7 @@ exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
 
 >[!NOTE]
 >
->The [!DNL Teradata Vantage] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Teradata Vantage] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
@@ -34,7 +34,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Teradata Vantage], you mu
 | Credential | Description |
 | --- | --- |
 | `connectionString` | A connection string is a string that provides information about a data source and how you can connect to it. The connection string pattern for [!DNL Teradata Vantage] is `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. | 
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Teradata Vantage] is: `2fa8af9c-2d1a-43ea-a253-f00a00c74412` |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Teradata Vantage] is: `2fa8af9c-2d1a-43ea-a253-f00a00c74412` |
 
 For more information about getting started, refer to this [[!DNL Teradata Vantage] document](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options).
 
