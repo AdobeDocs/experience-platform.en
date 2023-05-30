@@ -10,7 +10,7 @@ exl-id: 8e505ead-4bae-43fe-830b-75620e8fba28
 
 >[!NOTE]
 >
->The FTP connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The FTP connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 This tutorial provides steps for creating an FTP source connection using the Adobe Experience Platform UI.
 

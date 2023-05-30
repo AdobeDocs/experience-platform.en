@@ -8,7 +8,7 @@ exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
 
 >[!NOTE]
 >
->The [!DNL Mixpanel] source is in beta. See the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Mixpanel] source is in beta. See the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
