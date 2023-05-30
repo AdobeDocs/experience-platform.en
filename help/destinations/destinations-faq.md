@@ -113,9 +113,9 @@ For [same-page and next-page personalization](ui/activate-edge-personalization-d
 
 Yes, same-page and next-page personalization use cases support a maximum of 30 attributes per sandbox, when activating audiences to Adobe Target or Custom Personalization destinations. 
 
-**What types of attributes are supported for activation (e.g. arrays, maps, etc?**
+**What types of attributes are supported for activation (e.g. arrays, maps, etc.)?**
 
-Currently, only leaf-level attributes are supported for activation. 
+Currently, only leaf-level attributes are supported for activation.
 
 **Is there a limit on the number of audiences that can be activated to Adobe Target and Custom Personalization destinations?**
 
@@ -135,10 +135,7 @@ This is currently not supported through the Destinations UI. If you need assista
 
 **What happens if I delete an Adobe Target destination?**
 
-When you delete a destination:
-
-* All audiences and attributes mapped under the destination are deleted from Target.
-* The projection configuration is also deleted.
+When you delete a destination, all audiences and attributes mapped under the destination are deleted from Adobe Target and they are also removed from the Edge Network.
 
 **Does the integration work using the Edge Network Server API?**
 
@@ -150,4 +147,4 @@ No. All audiences that you want to activate to Adobe Target must use an active-o
 
 **Are Data Usage Labeling and Enforcement (DULE) and Consent Policies enforced?**
 
-Yes. The Data Governance and Consent Policies created and associated with the corresponding Marketing Actions will enforce activation of attributes.
+Yes. The Data Governance and Consent Policies created and associated with the selected marketing actions will govern the activation of the selected attributes.
