@@ -115,7 +115,7 @@ XDM is an open-source specification that provides common structures and definiti
 | --- | --- | --- |
 | Field Group | (Multiple) | Several fields for [Offer Item](https://github.com/adobe/xdm/pull/1720/files) were updated to remove a double hierarchy from the schema.  |
 | Field group | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1721/files) | The `partnerProspect` option for metadata tags was added to the [!UICONTROL XDM Individual Prospect Profile] class. |
-| Data Type | (Multiple) | Several fields were added for the [!UICONTROL Media details information] datatype. |
+| Data Type | (Multiple) | Several fields were added for the [[!UICONTROL Media details information]](https://github.com/adobe/xdm/pull/1716/files) datatype. |
 | Data Type  |  [[!UICONTROL Session details information]](https://github.com/adobe/xdm/pull/1716/files) | A new field was added to indicate whether a redirect occurred.  |
 | Field group | [[!UICONTROL MediaAnalytics Interaction Details]](https://github.com/adobe/xdm/pull/1716/files) | A new field related to media reporting was added. |
 
