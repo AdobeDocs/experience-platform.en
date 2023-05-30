@@ -27,6 +27,7 @@ Updates to existing features in Adobe Experience Platform:
 - [Data Governance](#data-governance)
 - [Data Ingestion](#data-ingestion)
 - [Destinations](#destinations)
+- [Identity Service](#identity-service)
 - [Query Service](#query-service)
 - [Sources](#sources)
 
@@ -102,6 +103,18 @@ To learn more about data ingestion, read the [data ingestion overview](../../ing
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
+## Identity Service {#identity-service}
+
+Adobe Experience Platform Identity Service provides you with a comprehensive view of your customers and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
+
+**Update features**
+
+| Feature | Description |
+| --- | --- |
+| Support for Partner IDs within Adobe Experience Cloud applications [!BADGE Beta]{type=Informative} | Partner IDs are now available in Identity Service. Partner IDs are identifiers used by data partners to represent people. In Real-Time Customer Data Platform, Partner IDs are used primarily for expanded audience activation and data enrichment. Partner IDs are not stored in the identity graph. For more information, read the documentation on [identity types](../../identity-service/namespaces.md#identity-types). |
+
+To learn more about Identity Service, read the [Identity Service overview](../../identity-service/home.md)
+
 ## Query Service {#query-service}
 
 Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL data lake]. You can join any datasets from data lake and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-Time Customer Profile.
@@ -126,6 +139,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | --- | --- |
+| API support for streaming data from a [!DNL Snowflake] database | You can now stream data from a [[!DNL Snowflake] source](../../sources/connectors/databases/snowflake-streaming.md) using the [!DNL Flow Service] API. |
 | Expanded API support for draft mode | You can now pause and save your progress during the sources workflow when using the [!DNL Flow Service] API at any time. Use the `mode=draft` state to save your base, source, and target connections as drafts. All draft entities can be revisited for completion at a later time. Read the guide on [setting your [!DNL Flow Service] entities to a draft state](../../sources/tutorials/api/draft.md) for more information. |
 | General availability of the [!DNL Salesforce Marketing Cloud] source | The [[!DNL Salesforce Marketing Cloud source] is now in GA](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md). Use this source to bring your [!DNL Salesforce Marketing Cloud] data to Experience Platform. |
 | [!DNL Google Ads] authentication updates | You can now provide a login customer ID when authenticating your [!DNL Google Ads] source account to fetch report data from a specific operating customer. Read the [[!DNL Google Ads] source documentation](../../sources/connectors/advertising/ads.md) for more information. |
@@ -136,5 +150,3 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 {style="table-layout:auto"}
 
 To learn more about sources, read the [sources overview](../../sources/home.md).
-
-<!-- | API support for streaming data from a [!DNL Snowflake] database | You can now stream data from a [[!DNL Snowflake] source](../../sources/connectors/databases/snowflake.md) using the [!DNL Flow Service] API. | -->
