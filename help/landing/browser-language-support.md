@@ -36,8 +36,8 @@ The Platform UI is currently available in the following languages:
 * Japanese
 * Italian
 * Korean
-* Taiwanese
-* Chinese
+* Chinese (Taiwanese)
+* Chinese (Traditional)
 * Brazilian
 
 ### Change default language
