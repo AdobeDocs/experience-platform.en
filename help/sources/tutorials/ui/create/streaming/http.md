@@ -62,7 +62,7 @@ With your data uploaded, you can use the right-side of the interface to preview 
 
 The [!UICONTROL Mapping] step appears, providing an interface to map the source data to a Platform dataset.
 
-The [!DNL HTTP API] source support ingestion of JSON files. JSON files do not require manual configuration if they are marked as XDM-complaint. If not, then you must explicitly configure the mapping.
+The [!DNL HTTP API] source supports ingestion of JSON files. JSON files do not require manual configuration if they are marked as XDM-complaint. If not, then you must explicitly configure the mapping.
 
 Choose a dataset for inbound data to be ingested into. You can either use an existing dataset or create a new one.
 
