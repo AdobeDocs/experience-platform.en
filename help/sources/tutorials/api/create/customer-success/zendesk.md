@@ -9,7 +9,7 @@ exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
 
 >[!NOTE]
 >
->The [!DNL Zendesk] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Zendesk] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL Zendesk] data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

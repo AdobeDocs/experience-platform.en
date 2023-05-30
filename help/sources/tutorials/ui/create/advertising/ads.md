@@ -7,7 +7,7 @@ exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
 
 >[!NOTE]
 >
->The Google Ads source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The Google Ads source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 This tutorial provides steps for creating a Google Ads source connection using the Adobe Experience Platform user interface.
 

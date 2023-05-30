@@ -230,6 +230,8 @@ solution: Data Collection
       * [Overview](./extensions/server/snowflake/overview.md)
     * [!DNL Splunk] {#splunk}
       * [Overview](./extensions/server/splunk/overview.md)
+    * [!DNL Twitter] {#twitter}
+      * [Overview](./extensions/server/twitter/overview.md)
     * [!DNL Zendesk] Events API {#zendesk}
       * [Overview](./extensions/server/zendesk/overview.md)
 * Extension development {#extension-dev}
