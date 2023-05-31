@@ -37,9 +37,13 @@ Select the name of a dataset from the [!UICONTROL Browse] tab to access its **[!
 ![Details of your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-1.png)
 ![Sample batches that belong to your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-2.png)
 
-## Add dataset tags {#add-tags}
+## Inline dataset actions {#inline-actions}
 
-You can organize datasets and add custom created tags to improve search, filtering, and sorting capabilities. From the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace, select the ellipsis of a dataset that you want to manage followed by **[!UICONTROL Manage tags]** from the dropdown menu.
+The datasets UI now offers a collections of inline actions for each available dataset. Select the ellipsis of a dataset that you want to manage to see the available options in a pop-up menu. The available actions include; [!UICONTROL Preview dataset], [!UICONTROL Manage data and access labels], [!UICONTROL Enable unified Profile], [!UICONTROL Manage tags], and [!UICONTROL Delete].
+
+### Add dataset tags {#add-tags}
+
+Add custom created tags to organize datasets and improve search, filtering, and sorting capabilities. From the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace, select the ellipsis of a dataset that you want to manage followed by **[!UICONTROL Manage tags]** from the dropdown menu.
 
 ![The Browse tab of the Datasets workspace with the ellipsis and Manage tags option highlighted for the chosen dataset.](../images/datasets/user-guide/manage-tags.png)
 
@@ -49,21 +53,17 @@ The [!UICONTROL Manage tags] dialog appears. Enter a short description to create
 
 The [!UICONTROL Manage tags] dialog can also remove existing tags from a dataset. Simply select the 'x' next to the tag you wish to remove and select **[!UICONTROL Save]**.  
 
+### Manage data and access labels {#manage labels}
+
+<!-- Needs work -->
+
 ## Search and filter datasets {#search-and-filter}
 
 To search or filter the list of available datasets, select the filter icon (![The filter icon.](../images/datasets/user-guide/icon.png)) at the top left of the workspace. A set of filter options in the left rail appears. There are several methods to filter your available datasets. These include [!UICONTROL Show System Datasets], [!UICONTROL Included in Profile], [!UICONTROL Tags], [!UICONTROL Creation date], [!UICONTROL Modified date], [!UICONTROL Created by], and [!UICONTROL Schema].
 
-### Filter datasets by tags
-
-Enter your custom tag name in the [!UICONTROL Tags] input.
-
-![The filter options of the Datasets workspace with the [!UICONTROL Tags] input and filter icon highlighted.](../images/datasets/user-guide/filter-tags.png)
-
-Choose your tag from the list of available options to search and filter datasets that correspond to that tag. 
-
 ### Show system datasets
 
-By default, only the datasets that you have ingested data into are shown. If you want to see the system-generated datasets, select the **[!UICONTROL Yes]** checkbox in the [!UICONTROL Show system datasets]** section. System-generated datasets are only used to process other components. For example, the system-generated profile export dataset is used to process the profile dashboard.
+By default, only datasets that you have ingested data into are shown. If you want to see the system-generated datasets, select the **[!UICONTROL Yes]** checkbox in the [!UICONTROL Show system datasets]** section. System-generated datasets are only used to process other components. For example, the system-generated profile export dataset is used to process the profile dashboard.
 
 ![The filter options of the Datasets workspace with the [!UICONTROL Show system datasets] section highlighted.](../images/datasets/user-guide/show-system-datasets.png)
 
@@ -79,6 +79,20 @@ The list of applied filters is displayed above the filtered results.
 
 ![The Browse tab of the Datasets workspace with the list of applied filters highlighted.](../images/datasets/user-guide/applied-filters.png)
 
+### Filter datasets by tags
+
+Enter your custom tag name in the [!UICONTROL Tags] input, then select your tag from the list of available options to search and filter datasets that correspond to that tag.
+
+![The filter options of the Datasets workspace with the [!UICONTROL Tags] input and filter icon highlighted.](../images/datasets/user-guide/filter-tags.png) 
+
+### Filter datasets by creation date
+
+Datasets can be filtered by creation date over a custom time period. This can be used to exclude historic data or to generate specific chronological data insights and reporting. Choose a [!UICONTROL Start date] and an [!UICONTROL End date] by selecting the calendar icon for each field. After which, only datasets that conform to that criteria will appear in the Browse tab.
+
+### Filter datasets by modified date
+
+Similar to the filter for creation date, you can filter your datasets based on the date they were last modified. In the [!UICONTROL Modified date] section, Choose a [!UICONTROL Start date] and an [!UICONTROL End date] by selecting the calendar icon for each field. After which, only datasets that were modified during that period will appear in the Browse tab.
+
 ## Sort datasets by created date {#sort}
 
 Datasets in the [!UICONTROL Browse] tab can be sorted by either ascending or descending dates. Select the [!UICONTROL Created] or [!UICONTROL Last updated] column headings to alternate between ascending and descending. Once selected, the column indicates this with either an up or down arrow to the side of the column header.
@@ -86,6 +100,8 @@ Datasets in the [!UICONTROL Browse] tab can be sorted by either ascending or des
 ![The Browse tab of the Datasets workspace with the Created and Last updated column highlighted.](../images/datasets/user-guide/ascending-descending-columns.png)
 
 ## Preview a dataset {#preview}
+
+<!-- Link to here -->
 
 You can preview dataset sample data from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] tab, select the ellipses next to the dataset name you wish to preview. A menu list of options appear. Select **[!UICONTROL Preview dataset]** from the list of available options. If the dataset is empty, the preview link will be deactivated and will instead say that the preview is not available.
 
@@ -156,7 +172,9 @@ Every dataset has the ability to enrich customer profiles with its ingested data
 
 For more information on enabling a schema for [!DNL Profile], see the [Schema Editor user guide](../../xdm/tutorials/create-schema-ui.md).
 
-To enable a dataset for Profile, access its **[!UICONTROL Dataset activity]** screen and select the **[!UICONTROL Profile]** toggle within the **[!UICONTROL Properties]** column. Once enabled, data that is ingested into the dataset will also be used to populate customer profiles.
+<!-- Needs work -->
+
+You can enable a dataset for Profile from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view. From the dataset's **[!UICONTROL Dataset activity]** screen, select the **[!UICONTROL Profile]** toggle within the **[!UICONTROL Properties]** column. Once enabled, data that is ingested into the dataset will also be used to populate customer profiles.
 
 >[!NOTE]
 >
@@ -169,6 +187,10 @@ To enable a dataset for Profile, access its **[!UICONTROL Dataset activity]** sc
 Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. See the [Data Governance overview](../../data-governance/home.md) to learn more about labels, or refer to the [data usage labels user guide](../../data-governance/labels/overview.md) for instructions on how to apply labels to datasets.
 
 ## Delete a dataset {#delete}
+
+<!-- Needs work -->
+
+You can delete a dataset from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view.
 
 You can delete a dataset by first accessing its **[!UICONTROL Dataset activity]** screen. Then, select **[!UICONTROL Delete dataset]** to delete it. 
 
