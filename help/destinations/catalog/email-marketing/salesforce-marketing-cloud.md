@@ -47,15 +47,15 @@ This destination supports the following connection types:
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 * For **[!UICONTROL SFTP with Password]** connections, you must provide:
-  * [!UICONTROL Domain]
-  * [!UICONTROL Port]
-  * [!UICONTROL Username]
-  * [!UICONTROL Password]
+  * **[!UICONTROL Domain]**: The IP address or the domain name of your SFTP account;
+  * **[!UICONTROL Port]**: The port used by your SFTP storage location;
+  * **[!UICONTROL Username]**: The username to log into your SFTP storage location;
+  * **[!UICONTROL Password]**: The password to log into your SFTP storage location.
 * For **[!UICONTROL SFTP with SSH Key]** connections, you must provide:
-  * [!UICONTROL Domain]
-  * [!UICONTROL Port]
-  * [!UICONTROL Username]
-  * [!UICONTROL SSH Key]
+  * **[!UICONTROL Domain]**: The IP address or the domain name of your SFTP account;
+  * **[!UICONTROL Port]**: The port used by your SFTP storage location;
+  * **[!UICONTROL Username]**: The username to log into your SFTP storage location;
+  * **[!UICONTROL SSH Key]**: The private SSH key used to log into your SFTP storage location. The private key must be formatted as a Base64-encoded string and must not be password-protected.
 
 * Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Your public key must be written as a [!DNL Base64] encoded string.
 * **[!UICONTROL Name]**: Pick a relevant name for your destination.
