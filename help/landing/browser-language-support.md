@@ -32,7 +32,13 @@ The Platform UI is currently available in the following languages:
 * English
 * French
 * German
+* Spanish
 * Japanese
+* Italian
+* Korean
+* Chinese (Taiwanese)
+* Chinese (Traditional)
+* Brazilian
 
 ### Change default language
 

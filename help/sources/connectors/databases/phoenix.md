@@ -9,7 +9,7 @@ exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
 
 >[!NOTE]
 >
->The [!DNL Phoenix] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The [!DNL Phoenix] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
