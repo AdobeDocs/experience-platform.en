@@ -235,7 +235,7 @@ You can select on an individual **[!UICONTROL Batch ID]** to access the **[!UICO
 
 ![Details of the selected batch are displayed. This includes the number of records ingested, the number of records failed, the batch status, the file size, the ingestion start and end times, the dataset and batch IDs, the organization ID, the dataset name, and the access information.](../images/datasets/user-guide/batch-overview.png)
 
-If you wish to delete the batch, select **[!UICONTROL Delete batch]** near the top right of the dashboard. Doing so will also remove its records from the dataset the batch was originally ingested to.
+If you wish to delete the batch, select **[!UICONTROL Delete batch]** near the top right of the dashboard. Deleting a batch also removes its records from the dataset that the batch was originally ingested to.
 
 ![The Delete batch button is highlighted on the dataset details page.](../images/datasets/user-guide/delete-batch.png)
 
