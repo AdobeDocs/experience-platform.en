@@ -9,9 +9,17 @@ As your organization evolves to use Adobe Real-Time CDP, explore these considera
 
 ## 1. Consider data architecture within Audience Manager.
 
-This is a critical time to analyze Audience Manager segments and determine what the signals, traits, and rules are that make up those segments. Furthermore, what are the data sources. It is recommended to categorize segments as follows: (1) segments that can be sent to AEP via the AAM Source Connector as they have no data dependencies, no destination/activation challenges, and their segmentation rules can be created through AEP-native data collection later. (2) Segments that have rules that can be supported but may have contain data that won't be available in Real-Time CDP. And, lastly, (3) segments that cannot be created in AEP and are missing functionality.
+As you consider migrating from Audience Manager to Real-Time CDP, this is a critical time to analyze your [Audience Manager segments](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html?lang=en) and determine what the [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html?lang=en), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html?lang=en), and [rules](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html?lang=en#segment-builder-section) are that make up those segments.
 
-It is important to note that Adobe's Real-Time CDP powered by Adobe Experience Platform offers 3 types of segment evaluation: Batch, Streaming, and Edge. Customers that leverage real-time segments in Audience Manager may be restricted by the current limitation of 500 streaming segments in Real-Time CDP.
+Furthermore, think about the data sources that you use for the segments.
+
+We recommend that you categorize your segments as follows: 
+
+* Segments that can be sent to Experience Platform via the [Audience Manager Source Connector](/help/sources/connectors/adobe-applications/audience-manager.md), as they have no data dependencies, no destination/activation challenges, and their segmentation rules can be created through AEP-native data collection later. 
+* (2) Segments that have rules that can be supported but may have contain data that won't be available in Real-Time CDP. And, lastly, 
+* (3) segments that cannot be created in AEP and are missing functionality.
+
+Adobe Real-Time CDP offers 3 types of segment evaluation: Batch, Streaming, and Edge. Customers that leverage real-time segments in Audience Manager may be restricted by the current limitation of 500 streaming segments in Real-Time CDP. Read more about segmentation guardrails.
 
 ## 2. Which segments are critical to send through via Audience Manager Source Connector?
 
