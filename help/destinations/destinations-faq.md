@@ -111,7 +111,7 @@ For [same-page and next-page personalization](ui/activate-edge-personalization-d
 
 **Is there a limit on the number of attributes that I can send from Real-time Customer Data Platform to Adobe Target or a Custom Personalization destination?**
 
-Yes, same-page and next-page personalization use cases support a maximum of 30 attributes per sandbox, when activating audiences to Adobe Target or Custom Personalization destinations. See more information about activation guardrails in the [guardrails documentation](guardrails.md).
+Yes, same-page and next-page personalization use cases support a maximum of 30 attributes per sandbox, when activating audiences to Adobe Target or Custom Personalization destinations. See more information about activation guardrails in the [guardrails documentation](guardrails.md#edge-destinations-activation).
 
 **What types of attributes are supported for activation (e.g. arrays, maps, etc.)?**
 
