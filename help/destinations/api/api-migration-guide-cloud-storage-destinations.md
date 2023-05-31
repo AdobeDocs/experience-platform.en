@@ -426,7 +426,6 @@ The backwards-incompatible changes for the API users are an updated `connection 
 In addition to the updated flow and connection spec above, there are changes to the parameters required when creating SFTP base connections.
 
 * Previously, the base connection for SFTP destinations required a `host` parameter. This parameter has now been renamed to `domain`.
-* For the authentication with SSH key option, the authentication parameters in the base connection required a `port` option. This parameter is now deprecated and not required anymore. 
 
 View the complete legacy and new base connection and target connection examples for SFTP in the tabs below, with the lines that change highlighted. The parameters required to create target connections for SFTP destinations do not change. 
 
@@ -560,7 +559,8 @@ View the complete legacy and new base connection and target connection examples 
       "authorizedDate": "2022-06-02",
       "domain": "ftp-out.demdex.com",
       "username": "DPID12345",
-      "password": "<your-password>"
+      "password": "<your-password>",
+      "port": 22      
     }
   },
   "encryption": {
