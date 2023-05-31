@@ -71,7 +71,7 @@ By default, only datasets that you have ingested data into are shown. If you wan
 
 ### Filter Profile enabled datasets {#filter-profile-enabled-datasets}
 
-The datasets that have been enabled for Profile data are used to populate customer profiles after data has been ingested. See the section  on [enabling datasets for Profile](#enable-profile) to learn more. 
+The datasets that have been enabled for Profile data are used to populate customer profiles after data has been ingested. See the section on [enabling datasets for Profile](#enable-profile) to learn more. 
 
 To filter your dataset based on whether they have been enabled for Profile, select the [!UICONTROL Yes] check box from the filter options.
 
