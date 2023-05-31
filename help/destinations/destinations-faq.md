@@ -117,9 +117,9 @@ Yes, same-page and next-page personalization use cases support a maximum of 30 a
 
 Currently, only leaf-level attributes are supported for activation.
 
-**Is there a limit on the number of audiences that can be activated to Adobe Target and Custom Personalization destinations?**
+<!-- **Is there a limit on the number of audiences that can be activated to Adobe Target and Custom Personalization destinations?**
 
-Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more information on activation guardrails, see the [default guardrails for activation](guardrails.md#edge-destinations-activation).
+Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more information on activation guardrails, see the [default guardrails for activation](guardrails.md#edge-destinations-activation). -->
 
 **After I create an audience in Experience Platform, how long will it take for that audience to be available for edge segmentation use cases?** 
 
