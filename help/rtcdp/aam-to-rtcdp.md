@@ -11,11 +11,11 @@ As your organization evolves to use Adobe Real-Time CDP, explore these considera
 
 As you consider migrating from Audience Manager to Real-Time CDP, this is a critical time to analyze your [Audience Manager segments](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html?lang=en) and determine what the [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html?lang=en), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html?lang=en), and [rules](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html?lang=en#segment-builder-section) are that make up those segments.
 
-Furthermore, think about the data sources that you use for the segments.
+Furthermore, think about the data sources that you currently use in Audience Manager.
 
 We recommend that you categorize your segments as follows: 
 
-* Segments that can be sent to Experience Platform via the [Audience Manager Source Connector](/help/sources/connectors/adobe-applications/audience-manager.md), as they have no data dependencies, no destination/activation challenges, and their segmentation rules can be created through AEP-native data collection later. 
+* Segments that can be sent to Experience Platform via the [Audience Manager Source Connector](/help/sources/connectors/adobe-applications/audience-manager.md), as they have no data dependencies, no destination or activation challenges, and their segmentation rules can be created through the Real-time CDP [segment builder](/help/segmentation/ui/segment-builder.md) later. 
 * Segments that have rules that can be supported but may have contain data that won't be available in Real-Time CDP.
 * Segments that cannot be created in Real-time CDP and are missing functionality.
 
@@ -25,15 +25,15 @@ We recommend that you categorize your segments as follows:
 
 ## 2. Which segments are critical to send through via Audience Manager Source Connector?
 
-Based on their evaluation criteria, segments that have no data dependencies, no destination or activation challenges, and their segmentation rules can be created through Real-Time CDP data collection like Adobe Experience Platform Web SDK, at a later date should be sent through the Audience Manager Source Connector.
+Based on their evaluation criteria, segments that have no data dependencies, no destination or activation challenges, and their segmentation rules can be created through Real-Time CDP data collection like Adobe Experience Platform Web SDK, at a later date should be sent through the Audience Manager  Source Connector.
 
 ## 3. Will you be leveraging the Experience Cloud Audiences Destination Card to bring data back to Audience Manager?
 
-Segments that have rules that can be supported but have activation dependencies to Audience Manager could be sent to Audience Manager via the [Experience Cloud Audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destination card.
+Segments that have rules that can be supported in Real-Time CDP but have activation dependencies to Audience Manager could be sent to Audience Manager via the [Experience Cloud Audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destination card.
 
 ## 4. Which destinations do you have in place in Audience Manager today that you can start moving to Real-Time CDP?
 
-We strongly recommend that segments activated in Audience Manager to [People-based Destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=en) get pushed to Real-Time CDP via the Audience Manager Source Connector, to then activate through Real-Time CDP. 
+We strongly recommend that segments activated in Audience Manager to [people-based destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=en) get pushed to Real-Time CDP via the Audience Manager Source Connector, to then activate through Real-Time CDP. 
 
 All people-based destinations available in Audience Manager - Facebook, [Google Customer Match](/help/destinations/catalog/advertising/google-customer-match.md), LinkedIn - are also available in Real-Time CDP.
 
