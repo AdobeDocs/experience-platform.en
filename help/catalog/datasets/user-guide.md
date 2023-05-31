@@ -28,6 +28,11 @@ This user guide requires a working understanding of the following components of 
 >abstract="Negative numbers in ingested records means that a user has deleted certain batches in a selected time range."
 >text="Learn more in documentation"
 
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_daysRemaining"
+>title="Dataset expiration"
+>abstract="This column indicates the number of days that the target dataset has left before it automatically expires."
+
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and status of the most recent ingestion run.
 
 ![An image that highlights the Datasets item within the left navigation bar.](../images/datasets/user-guide/browse-datasets.png)
@@ -192,7 +197,7 @@ Datasets that have been enabled for Profile can also be filtered on this criteri
 
 You can manage the data governance labels for a dataset by selecting the inline options of the [!UICONTROL Browse] tab. Select the ellipses next to the dataset name you wish to manage, followed by **[!UICONTROL Manage data and access labels]** from the dropdown menu.
 
-Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. See the [Data Governance overview](../../data-governance/home.md) to learn more about labels, or refer to the [data usage labels user guide](../../data-governance/labels/overview.md) for instructions on how to apply labels to datasets.
+Data usage labels, applied at the schema level, allow you to categorize datasets and fields according to usage policies that apply to that data. See the [Data Governance overview](../../data-governance/home.md) to learn more about labels, or refer to the [data usage labels user guide](../../data-governance/labels/overview.md) for instructions on how to apply labels to schemas for propagation to datasets.
 
 ## Delete a dataset {#delete}
 
