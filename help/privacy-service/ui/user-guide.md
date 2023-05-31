@@ -32,7 +32,9 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 
 | UI label | Regulation |
 | --- | --- |
+| [!UICONTROL CPA] | The [!DNL Consumer Privacy Act] |
 | [!UICONTROL CCPA] | The [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CTDPA] | The [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL GDPR] | The European Union's [!DNL General Data Protection Regulation] |
 | [!UICONTROL PDPA_THA] | Thailand's [!DNL Personal Data Protection Act] |
 | [!UICONTROL LGPD_BRA] | Brazil's [!DNL Lei Geral de Proteção de Dados] |
