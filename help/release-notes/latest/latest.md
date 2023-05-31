@@ -26,8 +26,12 @@ Updates to existing features in Adobe Experience Platform:
 - [Data Collection](#data-collection)
 - [Data Governance](#data-governance)
 - [Data Ingestion](#data-ingestion)
+- [Destinations](#destinations)
+- [Experience Data Model (XDM)](#xdm)
+- [Identity Service](#identity-service)
 - [Query Service](#query-service)
 - [Sources](#sources)
+
 
 ## Data collection {#data-collection}
 
@@ -70,6 +74,67 @@ Adobe Experience Platform provides a rich set of features to ingest any type and
 
 To learn more about data ingestion, read the [data ingestion overview](../../ingestion/home.md).
 
+## Destinations {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New destinations** {#new-destinations}
+
+| Destination | Description |
+| ----------- | ----------- |
+| **[[!UICONTROL Mailchimp Interest Categories]](../../destinations/catalog/email-marketing/mailchimp-interest-categories.md)** | **[!UICONTROL Mailchimp]** is a popular marketing automation platform and email marketing service used by businesses to manage and talk to contacts (clients, customers, or other interested parties) using mailing lists and email marketing campaigns. Use this connector to sort your contacts based on their interests and preferences. |
+
+{style="table-layout:auto"}
+
+<!--
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Functionality | Description |
+| ----------- | ----------- |
+| General availability of attribute-based personalization through the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) destinations. | Leverage profile attributes in real-time to deliver one-to-one web and mobile personalization, via Adobe Target or other custom personalization destinations in Experience Platform. See the [dedicated documentation](../../destinations/ui/activate-edge-personalization-destinations.md) for more details. |
+| Destination SDK support for grouping exported audiences based on merge policy. | When building a file-based destination with Destination SDK, you can now configure the grouping of exported audiences into one or multiple files, based on merge policy. <br><br> Additionally, you can now include the merge policy ID and merge policy name in the exported file names, by using the dedicated template macros. <br><br>See the [batch configuration documentation](../../destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md) for more details on how to use the `segmentGroupingEnabled` parameter and the new file name template macros.|
+
+{style="table-layout:auto"}
+
+-->
+
+**Fixes and enhancements** {#destinations-fixes-and-enhancements}
+
+- We fixed a limitation in the (Beta) SFTP cloud storage destination, where users were not able to customize the value of the Port parameter. The value is now editable when setting up a (Beta) SFTP destination connection through the [API](/help/destinations/api/activate-segments-file-based-destinations.md) or [UI](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information).
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+**Updated XDM components**
+
+| Component type | Name | Description |
+| --- | --- | --- |
+| Field Group | (Multiple) | Several fields for [Offer Item](https://github.com/adobe/xdm/pull/1720/files) were updated to remove a double hierarchy from the schema.  |
+| Field group | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1721/files) | The `partnerProspect` option for metadata tags was added to the [!UICONTROL XDM Individual Prospect Profile] class. |
+| Data Type | (Multiple) | Several fields were added for the [[!UICONTROL Media details information]](https://github.com/adobe/xdm/pull/1716/files) datatype. |
+| Data Type  |  [[!UICONTROL Session details information]](https://github.com/adobe/xdm/pull/1716/files) | A new field was added to indicate whether a redirect occurred.  |
+| Field group | [[!UICONTROL MediaAnalytics Interaction Details]](https://github.com/adobe/xdm/pull/1716/files) | A new field related to media reporting was added. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).
+
+## Identity Service {#identity-service}
+
+Adobe Experience Platform Identity Service provides you with a comprehensive view of your customers and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
+
+**Update features**
+
+| Feature | Description |
+| --- | --- |
+| Support for Partner IDs within Adobe Experience Cloud applications [!BADGE Beta]{type=Informative} | Partner IDs are now available in Identity Service. Partner IDs are identifiers used by data partners to represent people. In Real-Time Customer Data Platform, Partner IDs are used primarily for expanded audience activation and data enrichment. Partner IDs are not stored in the identity graph. For more information, read the documentation on [identity types](../../identity-service/namespaces.md#identity-types). |
+
+To learn more about Identity Service, read the [Identity Service overview](../../identity-service/home.md)
+
 ## Query Service {#query-service}
 
 Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL data lake]. You can join any datasets from data lake and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-Time Customer Profile.
@@ -94,6 +159,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | --- | --- |
+| API support for streaming data from a [!DNL Snowflake] database | You can now stream data from a [[!DNL Snowflake] source](../../sources/connectors/databases/snowflake-streaming.md) using the [!DNL Flow Service] API. |
 | Expanded API support for draft mode | You can now pause and save your progress during the sources workflow when using the [!DNL Flow Service] API at any time. Use the `mode=draft` state to save your base, source, and target connections as drafts. All draft entities can be revisited for completion at a later time. Read the guide on [setting your [!DNL Flow Service] entities to a draft state](../../sources/tutorials/api/draft.md) for more information. |
 | General availability of the [!DNL Salesforce Marketing Cloud] source | The [[!DNL Salesforce Marketing Cloud source] is now in GA](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md). Use this source to bring your [!DNL Salesforce Marketing Cloud] data to Experience Platform. |
 | [!DNL Google Ads] authentication updates | You can now provide a login customer ID when authenticating your [!DNL Google Ads] source account to fetch report data from a specific operating customer. Read the [[!DNL Google Ads] source documentation](../../sources/connectors/advertising/ads.md) for more information. |
@@ -104,5 +170,3 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 {style="table-layout:auto"}
 
 To learn more about sources, read the [sources overview](../../sources/home.md).
-
-<!-- | API support for streaming data from a [!DNL Snowflake] database | You can now stream data from a [[!DNL Snowflake] source](../../sources/connectors/databases/snowflake.md) using the [!DNL Flow Service] API. | -->

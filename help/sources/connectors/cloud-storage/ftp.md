@@ -9,7 +9,7 @@ exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
 
 >[!NOTE]
 >
->The FTP connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The FTP connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure], allowing you to bring your data from these systems.
 

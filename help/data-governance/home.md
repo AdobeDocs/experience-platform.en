@@ -73,7 +73,7 @@ See the overview on [data usage labels](./labels/overview.md) for more informati
 
 In order for data usage labels to effectively support data compliance, data usage policies must be implemented. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
-An example of a marketing action might be the desire to export a dataset to a third-party service. If there is a policy in place declaring that Personally Identifiable Information (PII) cannot be exported, and an "I" label (identity data) has been applied to the dataset, [!DNL Policy Service] prevents any action that would export this dataset to a third-party destination. Should one of these action attempts occur, Policy Service sends a message telling you that a data usage policy has been violated.
+An example of a marketing action might be the desire to export a dataset to a third-party service. If there is a policy in place declaring that Personally Identifiable Information (PII) cannot be exported, and an "I" label (identity data) has been applied to the field level or dataset, [!DNL Policy Service] prevents any action that would export this dataset to a third-party destination. Should one of these action attempts occur, Policy Service sends a message telling you that a data usage policy has been violated.
 
 There are two types of policies available:
 
@@ -121,8 +121,6 @@ The following video is intended to support your understanding of the Data Govern
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-<!-- A key section of the video is now outdated due to the deprecation of the dataset field level labelling feature.
+The following video provides guidance on how to apply data usage labels to your schemas and datasets in Experience Platform.
 
-The following video provides an introduction to various Data Governance features in Experience Platform.
-
->[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)

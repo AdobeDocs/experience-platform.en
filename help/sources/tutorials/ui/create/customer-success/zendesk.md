@@ -8,7 +8,7 @@ exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
 
 >[!NOTE]
 >
->The [!DNL Zendesk] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Zendesk] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 This tutorial provides steps for creating a [!DNL Zendesk] source connection using the Adobe Experience Platform user interface.
 
