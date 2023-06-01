@@ -11,6 +11,8 @@ This document provides definitions for key terms related to privacy regulations 
 
 ## A
 
+**[!DNL Australia Privacy Act (Privacy Act)]**: An act that promotes and protects individuals' privacy and regulates how Australian Government agencies and organization handle personal information. The Privacy Act includes principles that apply to private sector organizations. For example, individuals are afforded the right to understand why the personal information is being collected and how it will be used, the ability to access, erase their data, and correct personal information.
+
 ## B
 
 **Binding corporate rules (BCRs)**: A set of binding rules put in place to allow multinational companies and organizations to transfer personal data that they control from the EU to their affiliates outside the EU (but within the organization).
@@ -20,6 +22,10 @@ This document provides definitions for key terms related to privacy regulations 
 ## C
 
 **CCPA**: The [!DNL California Consumer Privacy Act] (CCPA) gives California residents more control over the personal information that businesses collect from then. The law provides several new rights to consumers, including the right to access and the personal information collected from them, and the right to opt out of the sale of their personal information to third parties.
+
+**CPA**: The [[!DNL Colorado Privacy Act] (CPA) provides Colorado consumers additional insight into what personal data controllers collect, share and sell, and how that data is used. The CPA protects the personal data of Colorado residents when they act in an individual or household context. These rules detail the technical specifications for one or more universal opt-out mechanisms that clearly communicate a consumer's affirmative, freely given, and unambiguous choice to opt out of the processing of personal data for purposes of targeted advertising or the sale of personal data.
+
+**CTDPA**: The [!DNL Connecticut Data Privacy Act] (CTDPA) grants Connecticut residents certain rights over their personal data and establishes responsibilities and privacy protection standards for data controllers that process their personal data. The CTDPA grants them the following rights: to access, correct, delete, obtain a copy, or opt-out of the sale; processing; or profiling of their personal data. The CTDPA protects a Connecticut resident acting as an individual or in a household context.
 
 **Consent**: Freely given, specific, informed and explicit consent by statement or action signifying agreement to the processing of their personal data.
 
