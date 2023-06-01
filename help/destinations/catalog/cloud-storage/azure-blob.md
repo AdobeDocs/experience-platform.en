@@ -88,6 +88,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Container]**: enter the name of the [!DNL Azure Blob Storage] container to be used by this destination.
 * **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL Azure Blob beta]** destination. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL Azure Blob beta]** destination.
+* * **[!UICONTROL Include manifest file]**: toggle this option on if you'd like the exports to include a manifest JSON file that contains information abut the export location, export size, and more. This option is only available for the **[!UICONTROL Azure Blob beta]** destination.
 
 ### Enable alerts {#enable-alerts}
 
