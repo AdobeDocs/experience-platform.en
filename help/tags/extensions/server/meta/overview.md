@@ -81,7 +81,12 @@ When sending shared events, make sure that you are including an event ID and nam
 >* The quick start feature is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Please contact your Adobe representative for more information.
 >* This feature is for net new implementations and does not currently support auto installing extensions and configurations on existing tags and event forwarding properties. 
 
-The quick start feature helps you get set up with ease and efficiency with the Meta Conversions API and the Meta Pixel extensions. This tool automates multiple steps that are performed in Adobe tags and event forwarding, significantly reducing the set up time.
+>[!NOTE]
+>
+>Any existing client can use the quick start workflows to create a reference implementation that can be used for the following:
+>* Use it as the start of a brand new implementation.
+Take advantage of it as a reference implementation that you can examine to see how it has been configured and then replicate in your current production implementations.
+>* The quick start feature helps you get set up with ease and efficiency with the Meta Conversions API and the Meta Pixel extensions. This tool automates multiple steps that are performed in Adobe tags and event forwarding, significantly reducing the set up time.
 
 This feature automatically installs and configures both the Meta Conversions API and the Meta Pixel extensions on a newly auto-generated tags and event forwarding property with the necessary rules and data elements. Additionally, it also auto installs and configures the Experience Platform Web SDK and Datastream. Lastly, the quick start feature auto-publishes the library to the designated URL in a development environment, which enables client side data collection and server side event forwarding in real-time via Event Forwarding and Experience Edge.
 
