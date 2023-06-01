@@ -25,7 +25,7 @@ We recommend that you categorize your segments as follows:
 
 ## 2. Which segments are critical to send through via Audience Manager Source Connector?
 
-Based on their evaluation criteria, segments that have no data dependencies, no destination or activation challenges, and their segmentation rules can be created through Real-Time CDP data collection like [Adobe Experience Platform Web SDK](/help/edge/web-sdk-faq.md), at a later date should be sent through the Audience Manager Source Connector.
+Based on their evaluation criteria, segments that have no data dependencies, no destination or activation challenges, and their segmentation rules can be created through Real-Time CDP data collection like [Adobe Experience Platform Web SDK](/help/edge/web-sdk-faq.md) at a later date should be sent through the Audience Manager Source Connector.
 
 ## 3. Will you be leveraging the Experience Cloud Audiences Destination Card to bring data back to Audience Manager?
 
