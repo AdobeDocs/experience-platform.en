@@ -1,12 +1,15 @@
 ---
-description: Adobe Experience Platform provides pre-configured templates that you can use to accelerate your data ingestion process. Templates include auto-generated assets such as schemas, datasets, mapping rules, identities, identity namespaces, and dataflows that you can use when bringing in data from a source to Experience Platform.
-title: (Beta) Create a sources dataflow using templates in the UI
+description: Learn how to use templates in the Adobe Experience Platform UI to accelerate your data ingestion process for B2B data.
+title: Create a sources dataflow using templates in the UI
 badge1: "Beta"
-hide: true
-hidefromtoc: true
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 ---
-# (Beta) Create a sources dataflow using templates in the UI
+# Create a sources dataflow using templates in the UI {#create-a-sources-dataflow-using-templates-in-the-ui}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_marketo_mapping"
+>title="Templates for sources in Platform UI"
+>abstract="Templates include auto-generated assets such as schemas, datasets, identities, mapping rules, identity namespaces, and dataflows that you can use when bringing in data from a source to Experience Platform. You can update auto-generated assets for customization to suit your use cases."
 
 >[!IMPORTANT]
 >
@@ -83,6 +86,88 @@ To create a new account, select **[!UICONTROL New account]**, and then provide y
 
 ### Select templates
 
+With your account authenticated, you can now select the template that you would like to use for your dataflow.
+
++++[!DNL Marketo Engage] templates
+The following table outlines the templates available for the [!DNL Marketo Engage] source.
+
+| [!DNL Marketo Engage] templates | Description |
+| --- | --- |
+| Activities | The Activities template captures event-based snapshots of activities such as email interactions, website interactions, and sales calls. |
+| Companies | The Companies template captures business account details such as company firmographic information, location, and billing information. |
+| Named Accounts | The Named Accounts template captures details for accounts that have been determined as target accounts to pursue. |
+| Opportunities | The Opportunities template captures business opportunity details such as type, sales stage, and related accounts. |
+| Opportunity Contact Roles | The Opportunity Contact Roles template captures details about the roles for leads associated with a particular opportunity. |
+| Persons | The Persons template captures attributes for individual people such as demographic details, contact information, and consent preferences. |
+| Program Memberships | The Program Memberships template captures details for contacts associated with a business campaign, include nurture cadences and contact responses. |
+| Programs | The Programs template captures business campaign details like status, channels, timelines, and costs. |
+| Static List Memberships | The Static List Memberships template captures teh relationships between people and their membership in static lists. |
+| Static Lists | The Static List template captures instantiated lists of people for specific use cases. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Salesforce] B2B templates
+The following table outlines the B2B templates available for the [!DNL Salesforce] source.
+
+| [!DNL Salesforce] B2B templates | Description |
+| --- | --- |
+| Account Contact Relation | The Account Contact Relation template captures the relationship between a contact and one or more accounts. |
+| Accounts | The Account template captures business account details such as company firmographic information, location, and billing information. |
+| Campaign Members | The Campaign Members template captures the relationship between an individual lead or contact and a specific [!DNL Salesforce] campaign. |
+| Campaigns | The Campaigns template captures business account details such as company firmographic information, location, and billing information. |
+| Contacts | The Contact template captures attributes for contacts such as demographics details, contact information, and related business entities. |
+| Leads | The Leads template captures attributes for leads such as demographics details, contact information, and related business entities. |
+| Opportunities | The Opportunities template captures business opportunity details such as type, sales stage, and related account. |
+| Opportunity Contact Roles | The Opportunity Contact Roles template captures details about the roles for leads associated with a particular opportunity. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Salesforce] B2C templates
+The following table outlines the B2C templates available for the [!DNL Salesforce] source.
+
+| [!DNL Salesforce] B2C templates | Description |
+| --- | --- |
+| Contact | The Contact template captures attributes for contacts such as demographics details, contact information, and related business entities. |
+| Lead | The Lead template captures attributes for leads such as demographics details, contact information, and related business entities.  |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Microsoft Dynamics] B2B templates
+The following table outlines the B2B templates available for the [!DNL Microsoft Dynamics] source.
+
+| [!DNL Microsoft Dynamics] B2B templates | Description |
+| --- | --- |
+| Accounts | The Account template captures business account details such as company firmographic information, location, and billing information. |
+| Campaigns | The Campaigns template captures business account details such as company firmographic information, location, and billing information. |
+| Contacts | The Contact template captures attributes for contacts such as demographics details, contact information, and related business entities. |
+| Leads | The Leads template captures attributes for leads such as demographics details, contact information, and related business entities. |
+| Marketing List | The Marketing List template captures a group of existing or potential customers created for a marketing campaign or other sales purposes. |
+| Marketing List Members | The Marketing List Members captures the details of any one type of customer record, such as leads, accounts, or contacts, in a marketing list. |
+| Opportunities | The Opportunities template captures business opportunity details such as type, sales stage, and related account. |
+| Opportunity Contact Roles | The Opportunity Contact Roles template captures details about the roles for leads associated with a particular opportunity. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Microsoft Dynamics] B2C templates
+The following table outlines the B2C templates available for the [!DNL Microsoft Dynamics] source.
+
+| [!DNL Microsoft Dynamics] B2C templates | Description |
+| --- | --- |
+| Contact | The Contact template captures attributes for contacts such as demographics details, contact information, and related business entities. |
+| Lead | The Lead template captures attributes for leads such as demographics details, contact information, and related business entities.  |
+
+{style="table-layout:auto"}
+
++++
+
 Depending on the business type that you selected, a list of templates appears. Select the preview icon ![preview icon](../../images/tutorials/templates/preview-icon.png) beside a template name to preview sample data from the template.
 
 ![A list of templates with the preview icon highlighted.](../../images/tutorials/templates/templates.png)
@@ -126,7 +211,7 @@ Once you have completed configuring your ingestion schedule, select **[!UICONTRO
 
 The [!UICONTROL Review template assets] page displays the assets auto-generated as part of your template. In this page, you can view the auto-generated schemas, datasets, identity namespaces, and dataflows associated with your source connection. It can take up to five minutes to generate all assets. If you choose to leave the page, you will get a notification to return once the assets are completed. You can review the assets once they are generated and make additional configurations to your dataflow at any time.
 
-Auto-generated dataflows are enabled by default. Select the ellipses (`...`) beside the dataflow name and then select **[!UICONTROL Preview mappings]** to see the mapping sets created for your dataflow. 
+By default, auto-generated dataflows are set to a draft state to allow further customization on configurations, such as mapping rules or scheduled frequencies. Select the ellipses (`...`) beside the dataflow name and then select **[!UICONTROL Preview mappings]** to see the mapping sets created for your draft dataflow. 
 
 ![A dropdown window with the preview mappings option selected.](../../images/tutorials/templates/preview.png)
 
@@ -140,18 +225,44 @@ You can use the schema editor view to make updates to your auto-generated schema
 
 ![A dropdown window with the update dataflows option selected.](../../images/tutorials/templates/update.png)
 
+>[!TIP]
+>
+>You can access your draft dataflow through the [!UICONTROL Dataflows] catalog page in the sources workspace. Select **[!UICONTROL Dataflows]** from the top header and then select the dataflow that you want to update from the list. 
+>
+>![A list of existing dataflows in the dataflows catalog of the sources workspace.](../../images/tutorials/templates/dataflows.png)
+
+### Publish your dataflow
+
+Begin the publishing process by going through the sources workflow. After you select [!UICONTROL Update dataflow], you are taken to the *[!UICONTROL Add data]* step of the workflow. Select **[!UICONTROL Next]** to proceed.
+
+![The add data step for a draft dataflow](../../images/tutorials/templates/continue-draft.png)
+
+Next, confirm your dataflow details and configure settings for error diagnostics, partial ingestion, and alert notifications. When finished, select **[!UICONTROL Next]**.
+
+![The dataflow detail step for a draft dataflow.](../../images/tutorials/templates/dataflow-detail.png)
+
+>[!NOTE]
+>
+>You can select **[!UICONTROL Save as draft]** at any point to stop and save the changes you have made to your dataflow.
+
+The mapping step appears. During this step, you can reconfigure the mapping configurations of your dataflow. For a comprehensive guide on the data prep functions used for mapping, visit the [data prep UI guide](../../../data-prep/ui/mapping.md).
+
+![The mapping step for a draft dataflow.](../../images/tutorials/templates/mapping.png)
+
+Finally, review the details of your dataflow and then select **[!UICONTROL Save & ingest]** to publish your draft.
+
+![The review step for a draft dataflow.](../../images/tutorials/templates/review.png)
+
 ## Next steps
 
 By following this tutorial, you have now created dataflows, as well as assets like schemas, datasets, and identity namespaces using templates. For general information on sources, visit the [sources overview](../../home.md).
 
-## Appendix
+## Alerts and notifications {#alerts-and-notifications}
 
-The following section provides additional information regarding templates.
-
-### Use the notifications panel to return to the review page
-
-Templates are supported by Adobe Experience Platform alerts and you can use the notifications panel to receive updates on the status of your assets and also to navigate back to the review page. 
+Templates are supported by Adobe Experience Platform Alerts and you can use the notifications panel to receive updates on the status of your assets and also to navigate back to the review page. 
 
 Select the notification icon the top header of Platform UI and then select the status alert to see the assets that you want to review.
 
 ![The notifications panel in Platform UI with a notification alerting a failed dataflow highlighted.](../../images/tutorials/templates/notifications.png)
+
+You can update the alert settings of your templates to receive both email and in-Platform notifications on the status of your dataflows. For more information on configuring alerts, read the guide on [how to subscribe to alerts for sources dataflows](../ui/alerts.md).

@@ -105,8 +105,8 @@ View the examples below of the content from exported CSV files with each of the 
 
 Use this control to set the string representation of an empty value. This option determines how empty values are represented in your exported CSV files. Available options are:
 
-* **[!UICONTROL null]**
-* **""**
+* **[!UICONTROL Null (null)]**
+* **Empty String in Double Quotes ("")**
 * **[!UICONTROL Empty string]** 
 
 #### Examples
@@ -130,9 +130,9 @@ View the examples below of the content from exported CSV files with each of the 
 
 Use this control to set the string representation of a null value within the exported files. This option determines how null values are represented in your exported CSV files. Available options are:
 
-* **[!UICONTROL null]**
-* **""**
-* **[!UICONTROL Empty string]**
+* **[!UICONTROL Null (null)]**
+* **Empty String in Double Quotes ("")**
+* **[!UICONTROL Empty string]** 
 
 #### Examples
 

@@ -10,7 +10,7 @@ exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
 
 >[!NOTE]
 >
->The [!DNL Generic REST API] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The [!DNL Generic REST API] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 

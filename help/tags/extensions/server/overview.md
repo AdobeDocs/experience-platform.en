@@ -25,15 +25,17 @@ The following is a list of documentation for sever-side event forwarding extensi
 * [Adobe Experience Platform Cloud Connector](./cloud-connector/overview.md)
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
+* [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
 * [Core](./core/overview.md)
 * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)*
-* [Facebook Conversions API](https://exchange.adobe.com/apps/ec/105509)
 * [Google Ads Enhanced Conversions](./google-ads-enhanced-conversions/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
+* [[!DNL Meta] Conversions API](./meta/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
 * [[!DNL Mixpanel]](./mixpanel/overview.md)
 * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)*
 * [[!DNL Pinterest]](./pinterest/overview.md)
 * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)*
 * [[!DNL Splunk]](./splunk/overview.md)
+* [[!DNL Twitter]](./twitter/overview.md)
 * [[!DNL Zendesk] Events API](./zendesk/overview.md)
