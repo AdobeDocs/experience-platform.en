@@ -17,7 +17,11 @@ To use a playbook, navigate to **Use Cases > Playbooks**. Browse and use the var
 
 Use the search window and filters available on the page to find the right playbook for your use case. 
 
-See an example below of how to find a playbook that helps you launch a new product.
+For example, you can filter playbooks that you can use based on the stage in the marketing funnel that you want to target - conversion, engagement, or retention. You could also filter the displayed playbooks by the industry that you are in or the product entitlement that you have access to - Adobe Journey Optimizer or Real-time CDP. 
+
+![Filter playbooks by marketing funnel, industry, or product](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
+
+You can also use the search functionality to find the right playbook for you. See below an example below of how to find a playbook that helps you launch a new product.
 
 ![Launch new product](/help/use-case-playbooks/assets/playbooks/ui-guide/new-product-launch-search.gif)
 
@@ -25,7 +29,7 @@ Or, you can filter the available playbooks by the channels that you plan to use 
 
 ![Filter by channel](/help/use-case-playbooks/assets/playbooks/ui-guide/channel-select-filter.gif)
 
-You can also filter playbooks by the product entitlements that you have access to, Adobe Journey Optimizer or Real-time CDP. 
+Experiment with the filters and search option and find the right playbook for you. 
 
 ## View playbook and generate assets {#view-playbook-generate-assets}
 
@@ -42,13 +46,13 @@ The mindmap starts with a definition of who is pulled into the journey and descr
 
 ### Summary {#summary}
 
-Inspect the summary section to understand which assets are generated for you once you enable the playbook. The assets that get generated for each playbook are tailored to the use case that the playbook enables. Get more information below about all the items in the summary section.
+Inspect the summary section to understand which assets are generated once you enable the playbook. The assets that get generated for each playbook are tailored to the use case that the playbook enables. Get more information below about all the items in the summary section.
 
 | Item | Description |
 ---------|----------|
 | **[!UICONTROL Target audience]** | Describes the personas that you are looking to reach through this use case playbook. |
 | **[!UICONTROL Channels]** | Describes the channels used to reach the personas targeted in the playbook. |
-| **[!UICONTROL Technical assets]** | A list of the technical assets that are generated after you enable the playbook.The generated assets differ by playbook, depending on the use case. Some playbooks might generate schemas, segments, and journeys. Others may generate destinations. Refer to the [Understand the generated assets](#understand-assets) section further below for more information about how you can use and reuse the generated assets.  |
+| **[!UICONTROL Technical assets]** | A list of the technical assets that are generated after you enable the playbook. The generated assets differ by playbook, depending on the use case. Some playbooks might generate schemas, segments, and journeys. Others may generate destinations. Refer to the [Understand the generated assets](#understand-assets) section further below for more information about how you can use and reuse the generated assets.  |
 
 {style="table-layout:auto"}
 
@@ -103,14 +107,21 @@ To illustrate an example, for the **[!UICONTROL Abandoned Cart: Merchandise]** p
 
 ### Use and edit the generated assets {#use-and-edit-assets}
 
-You can edit any of the assets created but be aware that if the playbook gets re-enabled, the edited assets are replaced with the newly created ones. This is true for all assets that get created, except for schemas. In the case of schemas, a new one gets created when a playbook is re-enabled, and the edited schema continues to exist.
+As you explore the assets that get generated after you enable a playbook, you can edit any of the assets created. 
+
+If the playbook then gets re-enabled, either by you or someone on your team, the edited assets are kept and new assets are created for the new instance of the playbook.
+
+The behavior described above is true for all assets that get created, except for schemas. In the case of schemas, new schemas are not created when a playbook is re-enabled, so you will be using the edited schema from another instance of the playbook in the newly created instance.
 
 >[!TIP]
 >
 >Test in the development sandbox, and move to production when ready.
 >
->Once objects are generated, you can continue to test in the development sandboxes by adding data. You can test the assets as long as you want in the development sandbox and you can replicate the asset logic (segment definitions, journeys, schemas, etc.) in the production sandbox when you are ready.
+>Once objects are generated, you can continue to test in the development sandboxes by adding data. You can test the assets as long as you want in the development sandbox and you can replicate the asset logic (segment definitions, journeys, schemas, and so on) in the production sandbox when you are ready.
 
+### Reuse playbooks {#reuse-playbooks}
+
+By enabling multiple instances of the same playbook, you can implement the same use case at a later date, without modifying the details your previous implementation of the use case. 
 
 ### Share the playbook and the generated assets with other team members {#share-playbook}
 
@@ -120,4 +131,4 @@ You can share the generated project and assets with other team members. To do th
 
 ## Next steps {#next-steps}
 
-By reading this UI guide, you now know how to interpret the various sections of a playbook and how to use the assets that get generated after a playbook is enabled. Next, you can browse the playbooks catalog to find the right playbook for your use case and read the trubleshooting guide if you encounter any errors.
+By reading this UI guide, you now know how to interpret the various sections of a playbook and how to use the assets that get generated after a playbook is enabled. Next, you can browse the playbooks catalog to find the right playbook for your use case and read the troubleshooting guide if you encounter any errors.

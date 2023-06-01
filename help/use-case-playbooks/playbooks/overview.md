@@ -15,7 +15,13 @@ With use case playbooks, benefit from automated workflows to help your data engi
 
 ![View of all playbooks](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
 
-Each playbook includes information about the specific use case it solves. After you enable it, the playbook generates projects with specific assets like schemas, segments, or journeys that are tailored to your use case and are reusable in Experience Platform. Start using these assets or make edits to them before you using them and sharing them with your team in Real-time CDP or Journey Optimizer.
+Each playbook includes information about the specific use case that it solves. 
+
+If you select a Real-Time CDP playbook, your objective might be to generate audiences that you can then map to a destination to run a marketing campaign. 
+
+If you select a Journey Optimizer playbook, your objective might be to construct a customer journey within your product, and sending relevant messaging to your customers.  
+
+After you enable it, the playbook generates projects with specific assets  like schemas, segments, or journeys that are tailored to your use case and are reusable in Experience Platform. Start using these assets or make edits to them before using them and sharing them with your team in Real-time CDP or Journey Optimizer.
 
 ## Availability
 
