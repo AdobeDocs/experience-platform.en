@@ -119,4 +119,4 @@ For [!DNL SFTP] destinations, Platform creates a `.csv` file in the storage loca
 
 ## IP address allow list
 
-Refer to [IP address allow list for cloud storage destinations](ip-address-allow-list.md) if you need to add Adobe IPs to an allow list.
+Refer to [IP address allow list for SFTP destinations](ip-address-allow-list.md) if you need to add Adobe IPs to an allow list.
