@@ -88,6 +88,10 @@ After creating a project based on a playbook, you can personalize it to distingu
 
 ### Understand the generated assets {#understand-assets}
 
+>[!IMPORTANT]
+>
+>No need to worry! This is a safe space to experiment and you can't break anything. There is no data associated with any of the 
+
 It is important to understand that the generated assets differ based on the use case you are enabling:
 
 * Different assets are generated for different types of playbooks. These assets are created specifically for the use case achieved through the playbook. For example, a playbook generates a schema, a segment, a journey, and messages. Another playbook generates a schema, a segment, and a destination to activate data to.
@@ -100,6 +104,13 @@ To illustrate an example, for the **[!UICONTROL Abandoned Cart: Merchandise]** p
 ### Use and edit the generated assets {#use-and-edit-assets}
 
 You can edit any of the assets created but be aware that if the playbook gets re-enabled, the edited assets are replaced with the newly created ones. This is true for all assets that get created, except for schemas. In the case of schemas, a new one gets created when a playbook is re-enabled, and the edited schema continues to exist.
+
+>[!TIP]
+>
+>Test in the development sandbox, and move to production when ready.
+>
+>Once objects are generated, you can continue to test in the development sandboxes by adding data. You can test the assets as long as you want in the development sandbox and you can replicate the asset logic (segment definitions, journeys, schemas, etc.) in the production sandbox when you are ready.
+
 
 ### Share the playbook and the generated assets with other team members {#share-playbook}
 
