@@ -51,21 +51,17 @@ You can manage data usage labels using [!DNL Experience Platform] APIs or the us
 
 ### Using the UI
 
-The **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI allows you to view and manage core and custom labels for your organization. You can use the **[!UICONTROL Schemas]** workspace to [apply labels to your Experience Data Model (XDM) schemas](../../xdm/tutorials/labels.md), or you can use the **[!DNL Datasets]** workspace to [apply labels to datasets](./user-guide.md) instead.
+The **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI allows you to view and manage core and custom labels for your organization. You can use the **[!UICONTROL Schemas]** workspace to [apply labels to your Experience Data Model (XDM) schemas](../../xdm/tutorials/labels.md), or learn how to [create and manage custom labels in the **[!UICONTROL Policies] UI](./user-guide.md) by reading the data usage labels user guide instead.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Applying labels at the dataset level is only supported for data governance use cases. If you are trying to create access policies for the data, you must apply labels to the schema that the dataset is based on. See the overview on [attribute-based access control](../../access-control/abac/overview.md) for more information.
+>Labels can no longer be applied to fields at the dataset level. This workflow has been deprecated in favour of applying labels at the schema level. Any labels previously applied at the dataset object level will still be supported through the Platform UI until 31st May 2024. To ensure that your labels are consistent across all schemas, any labels previously attached to fields at the dataset level must be migrated to the schema level by you over the coming year. See the section on [migrating previously applied labels](../e2e.md#migrate-labels) for instructions on how to do this.
 
 ### Using APIs
 
 The `/labels` endpoint in the [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) allows you to programmatically manage data usage labels, including creating custom labels. Refer to the [labels endpoint guide](../api/labels.md) for more information.
 
 The [Dataset Service API](https://www.adobe.io/experience-platform-apis/references/dataset-service/) is used to manage labels for dataset and fields. See the guide on [managing dataset labels](./dataset-api.md) for more information.
-
->[!NOTE]
->
->Applying labels at the dataset level is only supported for data governance use cases. If you are trying to create access policies for the data, you must [apply labels to the schema](../../xdm/tutorials/labels.md) that the dataset is based on. See the overview on [attribute-based access control](../../access-control/abac/overview.md) for more information.
 
 ## Next steps
 
