@@ -25,7 +25,7 @@ We recommend that you categorize your segments as follows:
 
 ## 2. Which segments are critical to send through via Audience Manager Source Connector?
 
-Based on their evaluation criteria, segments that have no data dependencies, no destination or activation challenges, and their segmentation rules can be created through Real-Time CDP data collection like Adobe Experience Platform Web SDK, at a later date should be sent through the Audience Manager  Source Connector.
+Based on their evaluation criteria, segments that have no data dependencies, no destination or activation challenges, and their segmentation rules can be created through Real-Time CDP data collection like [Adobe Experience Platform Web SDK](/help/edge/web-sdk-faq.md), at a later date should be sent through the Audience Manager Source Connector.
 
 ## 3. Will you be leveraging the Experience Cloud Audiences Destination Card to bring data back to Audience Manager?
 
@@ -35,7 +35,7 @@ Segments that have rules that can be supported in Real-Time CDP but have activat
 
 We strongly recommend that segments activated in Audience Manager to [people-based destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=en) get pushed to Real-Time CDP via the Audience Manager Source Connector, to then activate through Real-Time CDP. 
 
-All people-based destinations available in Audience Manager - Facebook, [Google Customer Match](/help/destinations/catalog/advertising/google-customer-match.md), LinkedIn - are also available in Real-Time CDP.
+All people-based destinations available in Audience Manager - [Facebook](/help/destinations/catalog/social/facebook.md), [Google Customer Match](/help/destinations/catalog/advertising/google-customer-match.md), [LinkedIn](/help/destinations/catalog/social/linkedin.md) - are also available in Real-Time CDP.
 
 Additional first-party data and media strategy partners like [Pinterest](/help/destinations/catalog/advertising/pinterest.md), [Snapchat](/help/destinations/catalog/advertising/snap-inc.md), [TikTok](/help/destinations/catalog/social/tiktok.md), [Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md) and [The Trade Desk](/help/destinations/catalog/advertising/tradedesk.md) are available. 
 
