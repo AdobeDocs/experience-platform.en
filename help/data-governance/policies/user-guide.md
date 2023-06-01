@@ -61,9 +61,9 @@ Depending on whether you are part of the beta for consent policies, one of the f
 >
 >Consent policies are currently only available for organizations that have purchased Adobe Healthcare Shield or Adobe Privacy & Security Shield.
 
-Governance and consent policies can be used together to create robust rules for governing audiences mapped to a destination. Consent policies are inclusive in nature, meaning they dictate which profiles can be included in each marketing experience. Conversely, governance policies exclude certain data that have defined or custom labels, from being used in this activation.
+Governance and consent policies can be used together to create robust rules for governing audiences mapped to a destination. Consent policies are inclusive in nature, meaning they dictate which profiles can be included in each marketing experience. Conversely, governance policies exclude the use of specific labelled attributes from being configured for activation.
 
-By using this behavior, you can set up a combination of configured policies and consent rules that include the correct profiles, but prevents you from including data that goes against your set organizational rules. An example scenario would be, where you want to exclude sensitive data from being included but are still able to target consented users for marketing via social media. The necessary steps for this scenario are outlined in the infographic below.
+By using this behavior, you can set up a combination of policies and consent rules that include the correct profiles, but prevents you from including data that goes against your set organizational rules. An example scenario would be, where you want to exclude sensitive data from being included but are still able to target consented users for marketing via social media. The necessary steps for this scenario are outlined in the infographic below.
 
 ![An infographic outlining the steps to use governance and consent policies together to create robust rules for governing audiences.](../images/policies/governance-and-consent-policies-infographic.png)
 
