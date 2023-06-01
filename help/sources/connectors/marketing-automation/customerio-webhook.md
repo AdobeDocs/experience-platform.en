@@ -2,14 +2,13 @@
 title: Customer.io Source Overview
 description: Learn how to connect Customer.io to Adobe Experience Platform using APIs or the user interface by leveraging webhooks
 badge: Beta
-last-substantial-update: 2023-03-29
 exl-id: 0f4ee106-c22b-465c-9c5e-83709e8424f5
 ---
 # [!DNL Customer.io]
 
 >[!NOTE]
 >
->The [!DNL Customer.io] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Customer.io] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
