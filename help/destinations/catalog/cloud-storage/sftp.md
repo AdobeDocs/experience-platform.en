@@ -99,6 +99,7 @@ After establishing the authentication connection to the SFTP location, provide t
 * **[!UICONTROL Folder path]**: enter the path to the folder in your SFTP location where the files will be exported.
 * **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL SFTP beta]** destination. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL SFTP beta]** destination.
+* * **[!UICONTROL Include manifest file]**: toggle this option on if you'd like the exports to include a manifest JSON file that contains information abut the export location, export size, and more. This option is only available for the **[!UICONTROL SFTP beta]** destination.
 
 ## Activate segments to this destination {#activate}
 
