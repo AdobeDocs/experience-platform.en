@@ -280,8 +280,9 @@ The `status` attribute can have one of four values with the following meanings:
 
 By completing the above steps, you have successfully enabled CMK for your organization. Data that is ingested into Platform will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. If you want to revoke Platform access to your data, you can remove the user role associated with the application from the key vault within [!DNL Azure].
 
-<!-- Potentially add note :  revocation would impact the persistent data stores that house the customer data. 
- -->
+>[!NOTE]
+>
+>If you revoke Platform access to your data, it impacts the persistent data stores that house customer data. 
 
 After disabling access to the application, it can take anywhere from a few minutes to 24 hours for data to no longer be accessible in Platform. The same time delay applies for data to become available again when re-enabling access to the application.
 
