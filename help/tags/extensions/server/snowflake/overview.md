@@ -9,7 +9,7 @@ last-substantial-update: 2023-05-24
 
 [!DNL Snowflake] is built on top of the Amazon Web Services (AWS), Microsoft Azure (Azure), and Google Cloud Platform (GCP).  
 
-![Diagram showing the [!DNL Snowflake] data architecture.](../../../images/extensions/server/snowflake/architecture.png)
+![Diagram showing the [!DNL Snowflake] data architecture.](../../../images/extensions/server/snowflake/snowflake.png)
 
 ## Our Snowflake Integration
 
@@ -25,7 +25,7 @@ Please refer to the [[!DNL Azure] overview](../azure/overview.md) for more infor
 
 Our native [AWS](../aws/overview.md) and [Azure](../azure/overview.md) event forwarding extensions enable customers to collect, enrich, and forward their event data server-side in real time to their cloud services to be consumed by [!DNL Snowflake]. See below:
 
-![[!DNL Snowflake] reporting diagram showing the link between [!DNL AWS] and [!DNL  Azure].](../../../images/extensions/server/snowflake/reporting-diagram.png)
+![[!DNL Snowflake] reporting diagram showing the link between [!DNL AWS] and [!DNL  Azure].](../../../images/extensions/server/snowflake/snowflake-workflow.png)
 
 ## Next Steps
 
