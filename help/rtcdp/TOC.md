@@ -56,5 +56,8 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Sources {#sources}
   * [Sources overview](sources/sources-overview.md)
   * [Sources in Real-Time CDP B2B Edition](sources/b2b.md)
+* Use cases {#use-cases}
+  * Prospecting use cases {#prospecting}
+    * [Supplement first-party profiles](/help/rtcdp/prospecting/supplement-first-party-profiles.md)
 * [Experience Platform Release notes](https://www.adobe.com/go/platform-release-notes-en)
 * [Experience Platform Glossary](https://www.adobe.com/go/platform-glossary-en)
