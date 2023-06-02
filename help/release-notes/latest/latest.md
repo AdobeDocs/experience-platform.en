@@ -23,6 +23,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 
 Updates to existing features in Adobe Experience Platform:
 
+- [Dashboards](#dashboards)
 - [Data Collection](#data-collection)
 - [Data Governance](#data-governance)
 - [Data Ingestion](#data-ingestion)
@@ -32,6 +33,16 @@ Updates to existing features in Adobe Experience Platform:
 - [Query Service](#query-service)
 - [Sources](#sources)
 
+## Dashboards {#dashboards}
+
+Adobe Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots. 
+
+| Feature | Description |
+| --- | --- |
+| License entitlement correction  | Adobe has corrected incorrect entries in your product's associated TermSheets to match their corresponding [Product Descriptions](https://helpx.adobe.com/legal/product-descriptions.html). The discrepancies in your term sheets will be corrected on **June 9, 2023** to provide an accurate representation of your license usage and ensure contractual compliance for your organization.<br><br>Adobe have also corrected several **Average Profile Richness base quantities** to be in-line with their corresponding Product Descriptions. The discrepancies in your term sheets will also be corrected on **June 9, 2023**.<br><br>As a result of this update, you may notice a one-time drop in your license usage for **average profile richness** and **total consumed storage** metrics. If this update brings you close to your licensed limit there are several measure you can take to mitigate your usage.<br><ul><li>[Apply expiration times for Pseudonymous Profiles](https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html)</li><li>[Contact support in order to enable Experience Event expirations on your required datasets. Adobe support representatives can configure expiration times for all Experience Events that are ingested into a dataset enabled for Real-Time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html)</li><li>Apply filtering rules and conditions to [selectively include or exclude data from ingestion to the Real-Time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html#filtering-for-profile) for Analytics data before it is ingested into Profile.</li>
+</ul><br><br>Contact your Adobe Support representative to discuss options to reduce your usage or increase your license limits.|
+
+For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
 
 ## Data collection {#data-collection}
 
