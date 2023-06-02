@@ -31,20 +31,20 @@ This overview requires a working understanding of the following components of Ad
 
 Streaming upserts in [!DNL Data Prep] works as follows:
 
-* You must first create and enable a dataset for [!DNL Profile] consumption. See the guide on [enabling a dataset for [!DNL Profile]](../catalog/datasets/enable-for-profile.md) for more information;
-* If new identities must be linked, then you must also create an additional dataset **with the same schema** as your [!DNL Profile] dataset;
+* You must first create and enable a dataset for [!DNL Profile] consumption. See the guide on [enabling a dataset for [!DNL Profile]](../catalog/datasets/enable-for-profile.md) for more information.
+* If new identities must be linked, then you must also create an additional dataset **with the same schema** as your [!DNL Profile] dataset.
 * Once your dataset(s) are prepared, you must create a dataflow to map your incoming request to the [!DNL Profile] dataset;
 * Next, you must update the incoming request to include the necessary headers. These headers define:
-  * The data operation that is needed to be performed with [!DNL Profile]: `create`, `merge`, and `delete`;
-  * The optional identity operation to be performed with [!DNL Identity Service]: `create`.
+    * The data operation that is needed to be performed with [!DNL Profile]: `create`, `merge`, and `delete`.
+    * The optional identity operation to be performed with [!DNL Identity Service]: `create`.
 
 ### Configure the identity dataset
 
 If new identities must be linked, then you must create and pass an additional dataset in the incoming payload. When creating an identity dataset, you must ensure that the following requirements are met:
 
-* The identity dataset must have its associated schema as the [!DNL Profile] dataset. A mismatch of schemas may lead to inconsistent system behavior;
-* However, you must ensure that the identity dataset is different from the [!DNL Profile] dataset. If the datasets are the same, then data will be overwritten instead of updated;
-* While the initial dataset must be enabled for [!DNL Profile], the identity dataset **should not** be enabled for [!DNL Profile]. Otherwise, data will also be overwritten instead of updated.
+* The identity dataset must have its associated schema as the [!DNL Profile] dataset. A mismatch of schemas may lead to inconsistent system behavior.
+* However, you must ensure that the identity dataset is different from the [!DNL Profile] dataset. If the datasets are the same, then data will be overwritten instead of updated.
+* While the initial dataset must be enabled for [!DNL Profile], the identity dataset **should not be enabled** for [!DNL Profile]. Otherwise, data will also be overwritten instead of updated. However, the identity dataset **should be enabled** for [!DNL Identity Service].
 
 #### Required fields in the schemas associated with the identity dataset {#identity-dataset-required-fileds}
 
@@ -58,9 +58,17 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
   -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "tags":{
-        "acp_validationContext": ["disabled"]
-        }
+    "tags": {
+        "acp_validationContext": [
+            "disabled"
+        ],
+        "unifiedProfile": [
+            "enabled:false"
+        ],
+        "unifiedIdentity": [
+            "enabled:true"
+        ]
+    }
 }'
 ```
 
