@@ -1,5 +1,4 @@
 ---
-keywords: Amazon S3;S3 destination;s3;amazon s3
 title: Amazon S3 connection
 description: Create a live outbound connection to your Amazon Web Services (AWS) S3 storage to periodically export CSV data files from Adobe Experience Platform into your own S3 buckets.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
