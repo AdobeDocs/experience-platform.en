@@ -2,7 +2,7 @@
 title: (Beta) Supplement first-party profileswith partner-provided attributes
 description: Learn how to use the partner data support in Real-time CDP to supplement your own first-party profiles
 ---
-# [!BADGE Beta]{type=Informative} Supplement first-party profiles with partner-provided attributes
+# Supplement first-party profiles with partner-provided attributes [!BADGE Beta]{type=Informative}
 
 >[!IMPORTANT]
 >
@@ -30,7 +30,7 @@ See also https://adobe-my.sharepoint.com/personal/giurgiu_adobe_com/_layouts/15/
 
 Read through the sections below which include links to further documentation, to complete each of the steps in the high level overview above.
 
-### License attributes from partner
+### License attributes from the partner
 
 To license attributes from a data partner, you need to {ANSHUMAN TO PROVIDE INFO}
 
@@ -62,7 +62,7 @@ Export the audiences that you want the partner to enrich. Use the cloud storage 
 
 Question - after the export is complete, how does the partner import the audiences from the storage location into wherever they need them for enrichment?
 
-### Partner appends licensed attributes for the profiles that they are able to match against
+### The partner appends licensed attributes for the profiles that they are able to match against
 
 In this step, the partner matches the profiles from your data exports, which were keyed off personally-identifiable information such as email addresses. 
 
