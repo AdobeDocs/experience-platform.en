@@ -1,8 +1,9 @@
 ---
-title: (Beta) Supplement first-party profileswith partner-provided attributes
+title: (Beta) Supplement first-party profiles with partner-provided attributes
 description: Learn how to use the partner data support in Real-time CDP to supplement your own first-party profiles
+badgeBeta: label="Beta" type="informative" before-title="true"
 ---
-# Supplement first-party profiles with partner-provided attributes [!BADGE Beta]{type=Informative}
+# Supplement first-party profiles with partner-provided attributes
 
 >[!IMPORTANT]
 >
@@ -15,6 +16,10 @@ Use the partner data support in Real-Time CDP to supplement first-party profiles
 See also https://adobe-my.sharepoint.com/personal/giurgiu_adobe_com/_layouts/15/stream.aspx?id=%2Fpersonal%2Fgiurgiu%5Fadobe%5Fcom%2FDocuments%2FRecordings%2FPartner%20data%20in%20RTCDP%20%2D%20documentation%20for%20beta%2D20230516%5F133209%2DMeeting%20Recording%2Emp4&ga=1 at around 8 minutes in. 
 
 -->
+
+## Prerequisites and planning
+
+{add information about prereqs and planning that customers need to complete before getting started with the use case}
 
 ## How to achieve the use case: high level overview
 
@@ -72,7 +77,7 @@ To increase the likelihood of matching your existing profiles with data from the
 
 You now need to ingest data from the partner through the sources provided by Real-Time CDP. 
 
-## Limitations
+## Limitations and troubleshooting
 
 Note the following limitations as you explore the use case described on this page:
 
