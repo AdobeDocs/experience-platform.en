@@ -29,7 +29,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
 | `{LIMIT}` | An integer indicating the number of objects to return, ranging from 1 to 100. |
 
 **Request**
@@ -97,7 +97,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
 | `{PROPERTY}` | The name of an attribute to include in the response body. |
 | `{OBJECT_ID}` | The unique identifier of a specific [!DNL Catalog] object being retrieved. |
 
@@ -166,7 +166,7 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of Catalog object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of Catalog object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
 | `{OFFSET}` | An integer indicating the number of objects to offset the response by. |
 
 **Request**
@@ -222,17 +222,6 @@ Below is an example of a dataset that contains a `tags` property. The tags withi
         },
         "name": "Sample Dataset",
         "description": "Same dataset containing sample data.",
-        "dule": {
-            "identity": [
-                "I1"
-            ]
-        },
-        "statsCache": {},
-        "state": "DRAFT",
-        "lastBatchId": "ca12b29612bf4052872edad59573703c",
-        "lastBatchStatus": "success",
-        "lastSuccessfulBatch": "ca12b29612bf4052872edad59573703c",
-        "namespace": "{NAMESPACE}",
         "createdUser": "{CREATED_USER}",
         "createdClient": "{CREATED_CLIENT}",
         "updatedUser": "{UPDATED_USER}",
@@ -258,7 +247,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li></ul>|
 | `{TAG_NAME}` | The name of the tag to filter by. |
 | `{TAG_VALUE}` | The value of the tag to filter by. Supports wildcard characters (`*`). |
 
@@ -298,8 +287,6 @@ A successful response returns a list of datasets that contain `sampleTag` with a
                     "Example tag value"
                 ]
             },
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
@@ -321,8 +308,6 @@ A successful response returns a list of datasets that contain `sampleTag` with a
                     "2.0"
                 ]
             },
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -369,8 +354,6 @@ A successful response contains a list of [!DNL Catalog] objects that fall within
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
@@ -381,8 +364,6 @@ A successful response contains a list of [!DNL Catalog] objects that fall within
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -406,7 +387,7 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of Catalog object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of Catalog object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
 | `{PROPERTY_NAME}` | The name of a property to sort the results by. |
 
 **Request**
@@ -437,8 +418,6 @@ A successful response contains a list of [!DNL Catalog] objects that are sorted 
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
@@ -449,8 +428,6 @@ A successful response contains a list of [!DNL Catalog] objects that are sorted 
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.2",
@@ -461,8 +438,6 @@ A successful response contains a list of [!DNL Catalog] objects that are sorted 
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -493,7 +468,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
 | `{PROPERTY_NAME}` | The name of the property whose value you want to filter by. |
 | `{VALUE}` | A property value that determines which results to include (or exclude, depending on the query). |
 
@@ -525,8 +500,6 @@ A successful response contains a list of datasets, excluding any datasets whose 
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
@@ -537,8 +510,6 @@ A successful response contains a list of datasets, excluding any datasets whose 
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -569,7 +540,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
 | `{CONDITION}` | A conditional expression that indicates which property to query for, and how its value is to be evaluated. Examples are provided below. |
 
 The value of the `property` parameter supports several different kinds of conditional expressions. The following table outlines the basic syntax for supported expressions:
@@ -618,8 +589,6 @@ A successful response contains a list of datasets whose version numbers are grea
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.6",
@@ -630,8 +599,6 @@ A successful response contains a list of datasets whose version numbers are grea
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.4",
@@ -642,8 +609,6 @@ A successful response contains a list of datasets whose version numbers are grea
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
