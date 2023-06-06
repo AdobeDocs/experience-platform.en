@@ -347,7 +347,7 @@ A successfully completed batch returns a blank response body and HTTP Status 200
 
 ## Monitor ingestion
 
-Depending on the size of the data, batches take varying lengths of time to ingest. You can monitor the status of a batch by appending a `batch` request parameter containing the batch's ID to a `GET /batches` request. The API polls the dataset for the status of the batch from ingestion until the `status` in the response indicates completion ("success" or "failure").
+Depending on the size of the data, batches take varying lengths of time to ingest. You can monitor the status of a batch by appending a batch's ID to a `GET /batches` request.
 
 **API format**
 
