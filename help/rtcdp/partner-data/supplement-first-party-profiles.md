@@ -19,27 +19,27 @@ See also https://adobe-my.sharepoint.com/personal/giurgiu_adobe_com/_layouts/15/
 
 ## Prerequisites and planning
 
-{add information about prereqs and planning that customers need to complete before getting started with the use case}
+{add information about prereqs and planning that customers must complete before getting started with the use case}
 
-## How to achieve the use case: high level overview
+## How to achieve the use case: high-level overview
 
 ![Prospecting use case high-level visual overview.](/help/rtcdp/assets/partner-data/enrichment-use-case-overview.png)
 
 1. As a **customer**, you license attributes from the **partner**.
 2. As a **customer**, you extend your profile data and governance model to accommodate **partner**-provided attributes.
-3. As a **customer**, you export audiences that you want enriched keyed off of Personal Identifiable Information (PII) or hashed-PII to the **partner**.
+3. As a **customer**, you export audiences that you want enriched keyed off Personal Identifiable Information (PII) or hashed-PII to the **partner**.
 4. The **partner** appends licensed attributes for the profiles that they are able to match against. Optionally, a Partner ID can be included and ingested into the partner scoped ID namespace.
 5. Real-Time CDP appends enriched attributes into the customer profile.
  
 ## How to achieve the use case: step-by-step instructions
 
-Read through the sections below which include links to further documentation, to complete each of the steps in the high level overview above.
+Read through the sections below which include links to further documentation, to complete each of the steps in the high-level overview above.
 
 ### License attributes from the partner
 
-To license attributes from a data partner, you need to {ANSHUMAN TO PROVIDE INFO}
+To license attributes from a data partner, you must {ANSHUMAN TO PROVIDE INFO}
 
-In this step, you also need to create a new identity type of the type [Partner ID](/help/identity-service/namespaces.md). Link to how to create a new identity and to the Partner ID identity type
+In this step, you also must create a new identity type of the type [Partner ID](/help/identity-service/namespaces.md). Link to how to create an identity and to the Partner ID identity type
 
 ### Extend your profile data and governance model to accommodate partner-provided attributes.
 
@@ -52,11 +52,11 @@ You need to create a new schema or extend an existing schema to include attribut
 
 Also in this step, think about how your data governance model changes as you expand your data management strategy to include third-party data provided by the partner. Explore the considerations in the documentation links below: 
 
-* keeping 3rd party data in a separate dataset so that deleting it and undoing integrations is easy
+* keeping third party data in a separate dataset so that deleting it and undoing integrations is easy
 * Use TTL on the dataset for clients who have the data hygiene add-on
-* Exercising caution when creating derived datasets which pull in 3rd party data, because once mixed together the only solution to remove the 3rd party data is to delete the whole derived dataset
+* Exercising caution when creating derived datasets which pull in third party data, because once mixed together the only solution to remove the 3rd party data is to delete the whole derived dataset
 
-### Export audiences that you want enriched keyed off of Personal Identifiable Information (PII) or hashed-PII
+### Export audiences that you want enriched keyed off Personal Identifiable Information (PII) or hashed-PII
 
 Export the audiences that you want the partner to enrich. Use the cloud storage destinations provided by Real-time CDP, such as Amazon S3 or SFTP. Use the following documentation pages to complete this step: 
 
@@ -69,7 +69,7 @@ Question - after the export is complete, how does the partner import the audienc
 
 ### The partner appends licensed attributes for the profiles that they are able to match against
 
-In this step, the partner matches the profiles from your data exports, which were keyed off personally-identifiable information such as email addresses. 
+In this step, the partner matches the profiles from your data exports, which were keyed off personally identifiable information such as email addresses. 
 
 To increase the likelihood of matching your existing profiles with data from the partner, you can {INSERT RECOMMENDATION HERE}.
 
