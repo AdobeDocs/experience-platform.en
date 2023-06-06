@@ -39,9 +39,7 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 >
 >For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
-All requests that contain a payload (POST, PUT, PATCH) require an additional header:
-
-* Content-Type: application/json
+All requests that contain a payload (POST, PUT, PATCH) require an additional header. POST and PUT requests require the `Content-Type: application/json` header. A PATCH request requires the `Content-Type: application/json+patch` header. 
 
 ## Tutorial
 
@@ -248,7 +246,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Response**
 
-A successful response returns HTTP Status 201 (Created) and a response object containing details of the newly created batch, including its `id`, a read-only, system generated string.
+A successful response returns HTTP Status 201 (Created) and a response object. The response object consists of an array containing the ID of the newly created batch in the format `"@/datasets/{BATCH_ID}"`. The batch ID is a read-only, system-generated string that is used to reference the batch in API calls.
 
 ```JSON
 {
@@ -354,7 +352,7 @@ Depending on the size of the data, batches take varying lengths of time to inges
 **API format**
 
 ```HTTP
-GET /batches?batch={BATCH_ID}
+GET /batches/{BATCH_ID}
 ```
 
 | Parameter | Description |
