@@ -125,6 +125,6 @@ This destination supports dataset exports. For complete information on how to se
 
 For [!DNL SFTP] destinations, Platform creates a `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
 
-## IP address allow list {ip-address-allow-list}
+## IP address allow list {#ip-address-allow-list}
 
 Refer to [IP address allow list for SFTP destinations](ip-address-allow-list.md) if you need to add Adobe IPs to an allow list.
