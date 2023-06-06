@@ -104,7 +104,7 @@ The following filters are available for audit events in the UI:
 
 To remove a filter, select the "X" on the pill icon for the filter in question, or select **[!UICONTROL Clear all]** to remove all filters.
 
-![The Audits dashboard with the clear filter icons highlighted.](../../images/audit-logs/clear-filters.png)
+![The Audits dashboard with clear filter highlighted.](../../images/audit-logs/clear-filters.png)
 
 The returned audit log data contains the following information on all queries that meet your chosen filter criteria.
 
@@ -126,7 +126,7 @@ To export the current list of audit logs, select **[!UICONTROL Download log]**.
 
 In the dialog that appears, select your preferred format (either **[!UICONTROL CSV]** or **[!UICONTROL JSON]**), then select **[!UICONTROL Download]**. The browser downloads the generated file and saves it to your machine.
 
-![THe download file format selection pop up highlighting [!UICONTROL Download].](../../images/audit-logs/select-download-format.png)
+![The file format selection dialog with [!UICONTROL Download] highlighted.](../../images/audit-logs/select-download-format.png)
 
 ## Managing audit logs in the API
 
