@@ -128,7 +128,6 @@ curl -X POST \
       "resource": "/datasetViews",
       "method": "post",
       "body": {
-        "status": "enabled",
         "dataSetId": "<<firstObjectId.id>>"
       }
     }
