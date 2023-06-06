@@ -26,7 +26,7 @@ See also https://adobe-my.sharepoint.com/personal/giurgiu_adobe_com/_layouts/15/
 ![Prospecting use case high-level visual overview.](/help/rtcdp/assets/partner-data/enrichment-use-case-overview.png)
 
 1. As a **customer**, you license attributes from the **partner**.
-2. As a **customer**, you extend your profile data and governance model to accommodate PARTNER-provided attributes.
+2. As a **customer**, you extend your profile data and governance model to accommodate **partner**-provided attributes.
 3. As a **customer**, you export audiences that you want enriched keyed off of Personal Identifiable Information (PII) or hashed-PII to the **partner**.
 4. The **partner** appends licensed attributes for the profiles that they are able to match against. Optionally, a Partner ID can be included and ingested into the partner scoped ID namespace.
 5. Real-Time CDP appends enriched attributes into the customer profile.
