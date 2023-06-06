@@ -1,5 +1,4 @@
 ---
-keywords: Amazon S3;S3 destination;s3;amazon s3
 title: Amazon S3 connection
 description: Create a live outbound connection to your Amazon Web Services (AWS) S3 storage to periodically export CSV data files from Adobe Experience Platform into your own S3 buckets.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
@@ -83,7 +82,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Folder path]**: enter the path to the destination folder that will host the exported files.
 * **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL Amazon S3 beta]** destination. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL Amazon S3 beta]** destination.
-
+* **[!UICONTROL Include manifest file]**: toggle this option on if you'd like the exports to include a manifest JSON file that contains information abut the export location, export size, and more. This option is only available for the **[!UICONTROL Amazon S3 beta]** destination.
 
 >[!TIP]
 >

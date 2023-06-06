@@ -7,7 +7,7 @@ exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
 
 >[!NOTE]
 >
->The Google Ads source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The Google Ads source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
