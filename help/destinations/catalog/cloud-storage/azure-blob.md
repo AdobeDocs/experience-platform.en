@@ -26,6 +26,11 @@ Improvements in the new [!DNL Azure Blob] destination card include:
 
 [!DNL Azure Blob] (hereinafter referred to as [!DNL Blob]) is Microsoft's object storage solution for the cloud. This tutorial provides steps for creating a [!DNL Blob] destination using the [!DNL Platform] user interface.
 
+## Connect to your [!UICONTROL Azure Blob] storage through API or UI {#connect-api-or-ui}
+
+* To connect to your [!UICONTROL Azure Blob] storage location using the Platform user interface, read the sections [Connect to the destination](#connect) and [Activate segments to this destination](#activate) below.
+* To connect to your [!UICONTROL Azure Blob] storage location programmatically, read the [Activate segments to file-based destinations by using the Flow Service API tutorial](../../api/activate-segments-file-based-destinations.md).
+
 ## Getting started
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
@@ -72,7 +77,7 @@ To connect to this destination, follow the steps described in the [destination c
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
 * **[!UICONTROL Connection string]**: the connection string is required to access data in your Blob storage. The [!DNL Blob] connection string pattern starts with: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. 
-    * For more information about configuring your [!DNL Blob] connection string, see [Configure a connection string for an Azure storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) in the Microsoft documentation.
+    * For more information about configuring your [!DNL Blob] connection string, see [Configure a connection string for an Azure storage account](https://learn.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) in the Microsoft documentation.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
   ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -105,7 +110,10 @@ See [Activate audience data to batch profile export destinations](../../ui/activ
 
 ## (Beta) Export datasets {#export-datasets}
 
-This destination supports dataset exports. For complete information on how to set up dataset exports, read the [export datasets tutorial](/help/destinations/ui/export-datasets.md).
+This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
+
+* How to [export datasets using the Platform user interface](/help/destinations/ui/export-datasets.md). 
+* How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
 
 ## Exported data {#exported-data}
 

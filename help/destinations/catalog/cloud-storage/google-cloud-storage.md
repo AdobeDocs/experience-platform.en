@@ -13,6 +13,11 @@ exl-id: ab274270-ae8c-4264-ba64-700b118e6435
 
 Create a live outbound connection to [!DNL Google Cloud Storage] to periodically export data files from Adobe Experience Platform into your own buckets.
 
+## Connect to your [!DNL Google Cloud Storage] storage through API or UI {#connect-api-or-ui}
+
+* To connect to your [!DNL Google Cloud Storage] storage location using the Platform user interface, read the sections [Connect to the destination](#connect) and [Activate segments to this destination](#activate) below.
+* To connect to your [!DNL Google Cloud Storage] storage location programmatically, read the [Activate segments to file-based destinations by using the Flow Service API tutorial](../../api/activate-segments-file-based-destinations.md).
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
@@ -96,7 +101,10 @@ In the **[!UICONTROL Mapping]** step, you can select which attribute and identit
 
 ## (Beta) Export datasets {#export-datasets}
 
-This destination supports dataset exports. For complete information on how to set up dataset exports, read the [export datasets tutorial](/help/destinations/ui/export-datasets.md).
+This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
+
+* How to [export datasets using the Platform user interface](/help/destinations/ui/export-datasets.md). 
+* How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
 
 ## Validate successful data export {#exported-data}
 
