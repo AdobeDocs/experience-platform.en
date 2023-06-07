@@ -1,6 +1,6 @@
 ---
 title: (Beta) Supplement first-party profiles with partner-provided attributes
-description: Learn how to use the partner data support in Real-time CDP to supplement your own first-party profiles
+description: Learn how to supplement first-party profiles with attributes from trusted data partners to improve your data foundation, gain new insights into your customer base, and better audience optimization
 badgeBeta: label="Beta" type="informative" before-title="true"
 ---
 # Supplement first-party profiles with partner-provided attributes
@@ -9,7 +9,7 @@ badgeBeta: label="Beta" type="informative" before-title="true"
 >
 >* This beta functionality is available to customers who have purchased the [Real-Time CDP Prime and Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) package. Please contact your Adobe representative for more information. 
 
-Use the partner data support in Real-Time CDP to supplement first-party profiles with partner-provided attributes to improve the quality of the data and for richer and more precise segmentation.
+Supplement first-party profiles with attributes from trusted data partners to improve your data foundation, gain new insights into your customer base, and better audience optimization.
 
 <!--
 
