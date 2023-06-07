@@ -7,7 +7,7 @@ badgeBeta: label="Beta" type="Informative"
 
 # (Beta) Troubleshooting and known limitations
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 >This functionality is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
 

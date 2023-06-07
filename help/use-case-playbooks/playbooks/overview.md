@@ -7,9 +7,22 @@ badgeBeta: label="Beta" type="Informative"
 
 # (Beta) Use case playbooks overview
 
->[!IMPORTANT]
+>[!BEGINSHADEBOX]
+
+What you'll find in this documentation:
+
+* **[Overview of use case playbooks](#overview)**
+* [View a playbook and generate assets](ui-guide.md#view-playbook-generate-assets)
+* [Enable, use, and reuse an instance of a playbook ](ui-guide.md#enable-playbook)
+* [Troubleshooting and known limitations](troubleshooting.md)
+
+>[!ENDSHADEBOX]
+
+>[!AVAILABILITY]
 >
 >This functionality is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
+
+## Overview {#overview}
 
 With [!UICONTROL Use Case Playbooks], benefit from automated workflows to help your data engineering team implement a use case faster. Browse the available playbooks in the **[!UICONTROL Use Case Playground]** section to get started with various use cases that can accelerate your adoption of Experience Platform. 
 
@@ -21,7 +34,7 @@ If you select a Real-Time CDP playbook, your objective might be to generate audi
 
 If you select an Adobe Journey Optimizer playbook, your objective might be to construct a customer journey within your product, and send relevant messaging to your customers.  
 
-After you enable it, the playbook generates instances with specific assets like schemas, segments, or journeys that are tailored to your use case and are reusable in Experience Platform. Start using these assets or make edits to them before using them and sharing them with your team in Real-time CDP or Journey Optimizer.
+After you enable it, the playbook generates instances with specific assets like schemas, segments, or journeys that are tailored to your use case and are reusable in Experience Platform. The purpose of these objects is to help you understand all the resources that are needed to implement your specific use case. They do not contain any data and are created on development sandboxes. Start using these assets or make edits to them before using them and sharing them with your team in Real-time CDP or Journey Optimizer. 
 
 ## Availability
 
