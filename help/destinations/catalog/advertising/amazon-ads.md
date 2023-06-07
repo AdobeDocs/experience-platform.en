@@ -12,8 +12,6 @@ Amazon Ads offers a range of options to help you achieve your advertising goals 
 
 The Amazon Ads integration with Adobe Experience Platform provides turn-key integration to Amazon Ads products, including the Amazon DSP (ADSP). Using the Amazon Ads destination in Adobe Experience Platform, users are able to define advertiser audiences for targeting and activation on the Amazon DSP.  
 
-This connection supports Audience creation in the following Amazon Marketplaces: `US`, `CA`, `MX`, `BR`.
-
 >[!IMPORTANT]
 >
 >This documentation page was created by the *Amazon Ads* team. This is currently a beta product and functionality is subject to change. For any inquiries or update requests, please contact them directly at *`amc-support@amazon.com`.*
@@ -24,7 +22,7 @@ To help you better understand how and when you should use the *Amazon Ads* desti
 
 ### Activation and targeting {#activation-and-targeting}
 
-This integration with Amazon DSP allows Amazon Ads advertisers to pass advertiser CDP segments from Adobe Experience Platform to Amazon's DSP to create advertiser audiences for advertising targeting. Audiences may be selected within the Amazon DSP for positive targeting, as well as negative targeting (suppression). Additionally, using signals generated through Amazon Marketing Cloud, advertisers can optimize their advertiser audiences which will synchronize audience changes with Amazon DSP.
+This integration with Amazon DSP allows Amazon Ads advertisers to pass advertiser CDP segments from Adobe Experience Platform to Amazon's DSP to create advertiser audiences for advertising targeting. Audiences may be selected within the Amazon DSP for positive targeting, as well as negative targeting (suppression).
 
 ## Prerequisites {#prerequisites}
 
@@ -77,10 +75,14 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Amazon Ads Advertiser ID]**: Select the ID for the target Amazon Ads account used for the destination.
+>[!NOTE]
+>
+>After saving the destination configuration, you will not be able to change the Amazon Ads Advertiser ID, even if you re-authenticate through your Amazon account. To use a different Amazon Ads Advertiser ID, you must create a new destination connection.
+*  **[!UICONTROL Advertiser Region]**: Select the appropriate region in which your Advertiser is hosted. For more information on the marketplaces supported by each region, visit our [documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
-Note: once selecting this Amazon Ads Advertiser ID, you will need to create a new destination to change this. If you re-authenticate the OAuth credentials and select a new Advertiser Id, your changes will not apply.
 
-![Configure new destination](../../assets/catalog/advertising/amazon_ads_image_1.png)
+
+![Configure new destination](../../assets/catalog/advertising/amazon_ads_image_4.png)
 
 ### Enable alerts {#enable-alerts}
 
@@ -127,3 +129,18 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 For additional help documentation, visit the following Amazon Ads help resources:
 
 * [Amazon DSP Help Center](https://advertising.amazon.com/dsp/help/ss/en/audiences#/)
+
+### Changelog {#changelog}
+
+This section captures the functionality and significant documentation updates made to this destination connector.
+
++++ View changelog
+
+|Release month|Update type|Description|
+|---|---|---|
+|May 2023|Functionality and documentation update| <ul><li>Added support for Advertiser Region selection in the destination connection workflow.</li><li>Updated documentation to reflect the addition of Advertiser Region selection. For more information on selecting the correct Advertiser Region, see the [Amazon documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
+|March 2023|Initial release|Initial destination release and documentation published.|
+
+{style="table-layout:auto"}
+
++++
