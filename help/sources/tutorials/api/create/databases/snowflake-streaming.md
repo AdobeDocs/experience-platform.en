@@ -9,7 +9,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 >[!IMPORTANT]
 >
 >* The [!DNL Snowflake] streaming source is in beta. Please read the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
->* The [!DNL Snowflake] streaming source is available in the sources catalog for customers who have purchased Real-Time CDP Ultimate.
+>* API support for [!DNL Snowflake] streaming source is available only to customers who have purchased Real-Time CDP Ultimate.
 
 This tutorial provides steps on how to connect and stream data from your [!DNL Snowflake] account to Adobe Experience Platform using the [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
