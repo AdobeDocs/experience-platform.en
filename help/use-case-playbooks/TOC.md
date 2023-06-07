@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform Use Case Playbooks
 breadcrumb-title: Adobe Experience Platform Use Case Playbooks
-user-guide-description: Use the playbooks in the Adobe Experience Platform Use Case Playbooks to generate assets and started with various marketing use cases
+user-guide-description: Use the playbooks in Adobe Experience Platform to generate assets and get started with various marketing use cases.
 feature: Playbooks
 ---
 

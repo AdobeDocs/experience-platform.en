@@ -11,7 +11,7 @@ badgeBeta: label="Beta" type="Informative"
 >
 >This functionality is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
 
-To use a playbook, navigate to **Use Cases > Playbooks**. Browse and use the various searching and filtering options on the page to select and get started with a specific playbook.
+To use a playbook, navigate to **[!UICONTROL Use Cases] > [!UICONTROL Playbooks]**. Browse and use the various searching and filtering options on the page to select and get started with a specific playbook.
 
 ## Search and filter {#search-and-filter}
 
@@ -21,7 +21,7 @@ For example, you can filter playbooks that you can use based on the stage in the
 
 ![Filter playbooks by marketing funnel, industry, or product](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
 
-You can also use the search functionality to find the right playbook for you. See below an example below of how to find a playbook that helps you launch a new product.
+You can also use the search functionality to find the right playbook for you. See below an example of how to find a playbook that helps you launch a new product.
 
 ![Launch new product](/help/use-case-playbooks/assets/playbooks/ui-guide/new-product-launch-search.gif)
 
@@ -33,13 +33,13 @@ Experiment with the filters and search option and find the right playbook for yo
 
 ## View playbook and generate assets {#view-playbook-generate-assets}
 
-Before you enable a playbook, you should inspect it to make sure it fits your needs. Before being enabled, all playbooks contain the sections listed below. When you are ready to proceed and generate assets, select **[!UICONTROL Enable]**.
+Before you enable a playbook, you should inspect it to make sure it fits your needs. To help you better understand the use cases they cover, all playbooks contain the sections listed below. When you are ready to proceed and generate assets, select **[!UICONTROL Enable]**.
 
 ### Mindmap {#mindmap}
 
 Use the mindmap section in a playbook to understand the steps of the workflow that the playbook can help you solve. Visualize the flow of how all the generated objects can help you achieve the use case, from the perspective of the persona targeted in the use case. 
 
-The mindmap starts with a definition of who is pulled into the journey and describes at every step if something is delivered by Adobe, like a new message or a reminder, or if it is something that the targeted persona did that triggers the next message or event. 
+The mindmap starts with a definition of who is reached in the user journey and describes at every step if something is delivered by Adobe, like a new message or a reminder, or if it is something that the targeted persona did that triggers the next message or event. 
 
 ![Playbook mindmap highlighted.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
 
@@ -51,32 +51,32 @@ Inspect the summary section to understand which assets are generated once you en
 | Item | Description |
 ---------|----------|
 | **[!UICONTROL Target audience]** | Describes the personas that you are looking to reach through this use case playbook. |
-| **[!UICONTROL Channels]** | Describes the channels used to reach the personas targeted in the playbook. |
+| **[!UICONTROL Marketing Channels]** | Describes the channels used to reach the personas targeted in the playbook. |
 | **[!UICONTROL Technical assets]** | A list of the technical assets that are generated after you enable the playbook. The generated assets differ by playbook, depending on the use case. Some playbooks might generate schemas, segments, and journeys. Others may generate destinations. Refer to the [Understand the generated assets](#understand-assets) section further below for more information about how you can use and reuse the generated assets.  |
 
 {style="table-layout:auto"}
 
 ![Playbook summary highlighted](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-summary.png)
 
-### Projects {#projects}
+### Instances {#instances}
 
-Scroll down to the projects section to get an overview of the instances of this playbook which you or members of your team have already enabled. You can use various controls to sort and filter the displayed projects, for example to only see the ones enabled by you. You can also see various information about each project, as listed below.
+Scroll down to the instances section to get an overview of the instances of this playbook which you or members of your team have already enabled. You can use various controls to sort and filter the displayed instances, for example to only see the ones enabled by you. You can also see various information about each instance, as listed below.
 
 |Item | Description |
 |---------|----------|
-| **[!UICONTROL Name]** | The name of the project based on the playbook. You can customize the name and description of a project. Read the section below on [how to edit project metadata](#edit-project-metadata) for more information. |
-| **[!UICONTROL Status]** | Indicates the status of the project. A **[!UICONTROL submitted]** project is ready for use. |
-| **[!UICONTROL Created]** | Indicates when the project was created. |
-| **[!UICONTROL Created By]** | Indicates who created the project. |
-| **[!UICONTROL Last Modified]** | Indicates when the project was last modified. |
+| **[!UICONTROL Name]** | The name of the instance based on the playbook. You can customize the name and description of an instance. Read the section below on [how to edit instance metadata](#edit-project-metadata) for more information. |
+| **[!UICONTROL Status]** | Indicates the status of the instance. A **[!UICONTROL submitted]** instance is ready for use. |
+| **[!UICONTROL Created]** | Indicates when the instance was created. |
+| **[!UICONTROL Created By]** | Indicates who created the instance. |
+| **[!UICONTROL Last Modified]** | Indicates when the instance was last modified. |
 
 {style="table-layout:auto"}
 
-![Playbook projects highlighted](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-projects.png)
+![Playbook instance highlighted.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-instances.png)
 
 ## Enable the playbook {#enable-playbook}
 
-When you are ready to proceed with a playbook and create a project, select **[!UICONTROL Enable]** to proceed with the playbook and generate technical assets.
+When you are ready to proceed with a playbook and create an instance, select **[!UICONTROL Enable]** to proceed with the playbook and generate technical assets.
 
 ![Enable a playbook.](/help/use-case-playbooks/assets/playbooks/ui-guide/enable-playbook.png)
 
@@ -94,7 +94,7 @@ After creating a project based on a playbook, you can personalize it to distingu
 
 >[!IMPORTANT]
 >
->No need to worry! This is a safe space to experiment and you can't break anything. There is no data associated with any of the 
+>No need to worry! This is a safe space to experiment and you can't break anything. There is no data associated yet with any of the assets that you create. You must first ingest data in order to achieve the use cases.
 
 It is important to understand that the generated assets differ based on the use case you are enabling:
 
@@ -121,11 +121,11 @@ The behavior described above is true for all assets that get created, except for
 
 ### Reuse playbooks {#reuse-playbooks}
 
-By enabling multiple instances of the same playbook, you can implement the same use case at a later date, without modifying the details your previous implementation of the use case. 
+By enabling multiple instances of the same playbook, you can implement the same use case later, without modifying the details of your previous implementation of the use case. 
 
 ### Share the playbook and the generated assets with other team members {#share-playbook}
 
-You can share the generated project and assets with other team members. To do this, copy the URL link from the browser and share it with your team to give them access to the generated assets.
+You can share the generated project and assets with other team members. To do this, copy the URL link from the browser and share it with your team to give them an overview of the generated assets.
 
 ![URL highlighted in a use case playbook view.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-url.png)
 

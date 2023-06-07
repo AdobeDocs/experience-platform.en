@@ -11,7 +11,7 @@ badgeBeta: label="Beta" type="Informative"
 >
 >This functionality is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
 
-For the beta release of use case playbooks, note the troubleshooting tips and known limitations.
+For the beta release of [!UICONTROL Use Case Playbooks], note the troubleshooting tips and known limitations.
 
 ## Known limitations {#known-limitations}
 

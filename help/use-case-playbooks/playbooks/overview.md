@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Playbooks overview
-description: Learn how to use the Use Case Playbooks feature in Experience Platform to get started with various use cases
+description: Learn how to use the Use Case Playbooks feature in Experience Platform to get started with various marketing use cases
 badgeBeta: label="Beta" type="Informative"
 ---
 
@@ -11,7 +11,7 @@ badgeBeta: label="Beta" type="Informative"
 >
 >This functionality is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
 
-With use case playbooks, benefit from automated workflows to help your data engineering team implement a use case faster. Browse the available playbooks in the **Use Case Playground** section to get started with various use cases that can accelerate your adoption of Experience Platform. 
+With [!UICONTROL Use Case Playbooks], benefit from automated workflows to help your data engineering team implement a use case faster. Browse the available playbooks in the **[!UICONTROL Use Case Playground]** section to get started with various use cases that can accelerate your adoption of Experience Platform. 
 
 ![View of all playbooks](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
 
@@ -19,13 +19,13 @@ Each playbook includes information about the specific use case that it solves.
 
 If you select a Real-Time CDP playbook, your objective might be to generate audiences that you can then map to a destination to run a marketing campaign. 
 
-If you select a Journey Optimizer playbook, your objective might be to construct a customer journey within your product, and sending relevant messaging to your customers.  
+If you select an Adobe Journey Optimizer playbook, your objective might be to construct a customer journey within your product, and send relevant messaging to your customers.  
 
-After you enable it, the playbook generates projects with specific assets  like schemas, segments, or journeys that are tailored to your use case and are reusable in Experience Platform. Start using these assets or make edits to them before using them and sharing them with your team in Real-time CDP or Journey Optimizer.
+After you enable it, the playbook generates instances with specific assets like schemas, segments, or journeys that are tailored to your use case and are reusable in Experience Platform. Start using these assets or make edits to them before using them and sharing them with your team in Real-time CDP or Journey Optimizer.
 
 ## Availability
 
-Some use case playbooks are tailored to Real-time CDP use cases while others are best suited for customers using Journey Optimizer. Browse the catalog to find the playbooks best suited to your product and use case.
+Some [!UICONTROL Use Case Playbooks] are tailored to Real-time CDP use cases while others are best suited for customers using Journey Optimizer. Browse the catalog to find the playbooks best suited to your product and use case.
 
 ## UI guide
 
