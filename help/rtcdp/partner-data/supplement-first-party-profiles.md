@@ -11,6 +11,8 @@ badgeBeta: label="Beta" type="informative" before-title="true"
 
 Supplement first-party profiles with attributes from trusted data partners to improve your data foundation, gain new insights into your customer base, and better audience optimization.
 
+![Prospecting use case high-level visual overview.](/help/rtcdp/assets/partner-data/enrichment-use-case-overview.png)
+
 <!--
 
 See also https://adobe-my.sharepoint.com/personal/giurgiu_adobe_com/_layouts/15/stream.aspx?id=%2Fpersonal%2Fgiurgiu%5Fadobe%5Fcom%2FDocuments%2FRecordings%2FPartner%20data%20in%20RTCDP%20%2D%20documentation%20for%20beta%2D20230516%5F133209%2DMeeting%20Recording%2Emp4&ga=1 at around 8 minutes in. 
@@ -22,8 +24,6 @@ See also https://adobe-my.sharepoint.com/personal/giurgiu_adobe_com/_layouts/15/
 {add information about prereqs and planning that customers must complete before getting started with the use case}
 
 ## How to achieve the use case: high-level overview
-
-![Prospecting use case high-level visual overview.](/help/rtcdp/assets/partner-data/enrichment-use-case-overview.png)
 
 1. As a **customer**, you license attributes from the **partner**.
 2. As a **customer**, you extend your profile data and governance model to accommodate **partner**-provided attributes.
