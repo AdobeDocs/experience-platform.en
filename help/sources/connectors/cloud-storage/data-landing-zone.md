@@ -157,9 +157,7 @@ The documentation below provides information on how to bring data from your [!DN
 - [Connect [!DNL Data Landing Zone] to Platform using the UI](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Create a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
 
-## Limitations {#limitations}
-
-This section outlines the current known limitations for the [!DNL Data Landing Zone].
-
-- Private links are currently not supported when connecting to Experience Platform using the [!DNL Data Landing Zone]. The only supported methods for access are the methods listed [here](#manage-the-contents-of-your-data-landing-zone).
+>[!IMPORTANT]
+>
+>Private links are currently not supported when connecting to Experience Platform using the [!DNL Data Landing Zone]. The only supported methods for access are the methods listed [here](#manage-the-contents-of-your-data-landing-zone).
 
