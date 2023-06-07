@@ -142,6 +142,9 @@ The following tables list all supported mapping functions, including sample expr
 | nullify | Sets the value of the attribute to `null`. This should be used when you do not want to copy the field to the target schema. | | nullify() | nullify() | `null`  |
 | get_keys | Parses the key/value pairs and returns all the keys. | <ul><li>OBJECT: **Required** The object where the keys will be extracted from.</li></ul> | get_keys(OBJECT) | get_keys({"book1": "Pride and Prejudice", "book2": "1984"}) | `["book1", "book2"]` |
 | get_values | Parses the key/value pairs and returns the value of the string, based on the given key. | <ul><li>STRING: **Required** The string that you want to parse.</li><li>KEY: **Required** The key for which the value has to be extracted.</li><li>VALUE_DELIMITER: **Required** The delimiter that separates the field and the value. If either a `null` or an empty string are provided, this value is `:`.</li><li>FIELD_DELIMITER: *Optional* The delimiter that separates field and value pairs. If either a `null` or an empty string are provided, this value is `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\"firstName - John , lastName - Cena , phone - 555 420 8692\", \"firstName\", \"-\", \",\") | John |
+| map_get_values | DESCRIPTION | PARAMETERS | SYNTAX | EXPRESSION | SAMPLE OUTPUT
+| map_has_keys |
+| add_to_map |
 
 {style="table-layout:auto"}
 
