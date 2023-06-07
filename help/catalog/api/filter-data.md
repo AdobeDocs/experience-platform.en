@@ -73,7 +73,7 @@ Even when filtering the number of objects returned using the `limit` parameter, 
 
 The `properties` parameter filters response objects to return only a set of specified properties. The parameter can be set to return one or multiple properties.
 
-The `properties` parameter only accepts top-level object properties, meaning that for the following sample object, you could apply filters for `name`, `description`, and `subItem`, but NOT for `sampleKey`.
+The `properties` parameter can accept any level object properties. `sampleKey` can be extracted using `?properties=subItem.sampleKey`.
 
 ```json
 {
@@ -518,7 +518,7 @@ A successful response contains a list of datasets, excluding any datasets whose 
 
 The `property` query parameter provides more flexibility for property-based filtering than simple filters. In addition to filtering based on whether a property has a specific value, the `property` parameter can use other comparison operators (such as "more-than" (`>`) and "less-than" (`<`)) as well as regular expressions to filter by property values. It can also filter by whether or not a property exists, regardless of its value.
 
-The `properties` parameter can accept any level object properties. `sampleKey` can be used for filtering, or extracted using `?properties=subItem.sampleKey`.
+The `property` parameter can accept any level object properties. `sampleKey` can be used for filtering using `?properties=subItem.sampleKey`.
 
 ```json
 {
