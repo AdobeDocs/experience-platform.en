@@ -26,7 +26,7 @@ This integration with Amazon DSP allows Amazon Ads advertisers to pass advertise
 
 ## Prerequisites {#prerequisites}
 
-In order to use the Amazon Ads connection with Adobe Experience Platform, users must first have access to an Amazon DSP Advertiser Account.  To provision these instances, please visit the following page on the Amazon Ads website:
+To use the Amazon Ads connection with Adobe Experience Platform, users must first have access to an Amazon DSP Advertiser Account. To provision these instances, visit the following page on the Amazon Ads website:
 
 * [Get started with Amazon DSP](https://advertising.amazon.com/solutions/products/amazon-dsp?ref_=a20m_us_hnav_p_dsp_adtech)
 
@@ -64,7 +64,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-You will be taken to the Amazon Ads connection interface where you will first select the advertiser accounts you wish to connect to.  Upon connection, you will be redirected back to Adobe Experience Platform with a new connection, provided with the ID of the Advertiser Account you selected. Select the appropriate Advertiser Account on the destination configuration screen to proceed.
+You are taken to the Amazon Ads connection interface where you first select the advertiser accounts you wish to connect to. Upon connection, you are redirected back to Adobe Experience Platform with a new connection, provided with the ID of the Advertiser Account you selected. Select the appropriate Advertiser Account on the destination configuration screen to proceed.
 
 * **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination.
 
@@ -77,8 +77,8 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Amazon Ads Advertiser ID]**: Select the ID for the target Amazon Ads account used for the destination.
 >[!NOTE]
 >
->After saving the destination configuration, you will not be able to change the Amazon Ads Advertiser ID, even if you re-authenticate through your Amazon account. To use a different Amazon Ads Advertiser ID, you must create a new destination connection.
-*  **[!UICONTROL Advertiser Region]**: Select the appropriate region in which your Advertiser is hosted. For more information on the marketplaces supported by each region, visit our [documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
+>After saving the destination configuration, you will not be able to change the Amazon Ads Advertiser ID, even if you reauthenticate through your Amazon account. To use a different Amazon Ads Advertiser ID, you must create a new destination connection.
+*  **[!UICONTROL Advertiser Region]**: Select the appropriate region in which your Advertiser is hosted. For more information on the marketplaces supported by each region, visit the [Amazon Ads documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
 
 
@@ -100,7 +100,7 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 ### Map attributes and identities {#map}
 
-The Amazon Ads connection supports hashed email address and hashed phone numbers for identity matching purposes.  The screenshot below provides an example matching that is compatible with the Amazon Ads connection:
+The Amazon Ads connection supports hashed email address and hashed phone numbers for identity matching purposes. The screenshot below provides an example matching that is compatible with the Amazon Ads connection:
 
 ![Adobe to Amazon Ads mapping](../../assets/catalog/advertising/amazon_ads_image_2.png)
 
@@ -108,7 +108,7 @@ The Amazon Ads connection supports hashed email address and hashed phone numbers
 * To map hashed phone numbers, select the `Phone_SHA256` identity namespace as a source field.
 * To map unhashed email addresses or phone numbers, select the corresponding identity namespaces as source fields, and check the `Apply Transformation` option to have Platform hash the identities on activation.
 
-It is strongly recommended that you map as many fields as you have available. If only one source attribute is available, you may map a single field.  The Amazon Ads destination will utilize all mapped fields for mapping purposes, yielding higher match rates if more fields are provided. For more information about the accepted identifiers, visit the [Amazon Ads hashed audience help page](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
+It is strongly recommended that you map as many fields as you have available. If only one source attribute is available, you may map a single field. The Amazon Ads destination utilizes all mapped fields for mapping purposes, yielding higher match rates if more fields are provided. For more information about the accepted identifiers, visit the [Amazon Ads hashed audience help page](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
 
 ## Exported data / Validate data export {#exported-data}
 
@@ -116,7 +116,7 @@ Once your audience has been uploaded, you may validate your audience has been cr
 
 **For Amazon DSP**
 
-Navigate to your Advertiser ID → Audiences → Advertiser Audiences. If your audience was created successfully and meets the minimum number of audience members, you will see a Status of `Active`.  Additional details about your audience size and reach can be found in the Forecasted Reach panel on the right side of the Amazon DSP user interface. 
+Navigate to your Advertiser ID → Audiences → Advertiser Audiences. If your audience was created successfully and meets the minimum number of audience members, you will see a Status of `Active`. Additional details about your audience size and reach can be found in the Forecasted Reach panel on the right side of the Amazon DSP user interface. 
 
 ![Amazon DSP audience creation validation](../../assets/catalog/advertising/amazon_ads_image_3.png)
 
@@ -128,7 +128,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 For additional help documentation, visit the following Amazon Ads help resources:
 
-* [Amazon DSP Help Center](https://advertising.amazon.com/dsp/help/ss/en/audiences#/)
+* [Amazon DSP Help Center](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_bt_desktop_us&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
 
 ### Changelog {#changelog}
 
