@@ -8,7 +8,7 @@ exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 
 >[!NOTE]
 >
->The [!DNL Mixpanel] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Mixpanel] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 This tutorial provides steps for creating a [!DNL Mixpanel] source connection using the Adobe Experience Platform Platform user interface.
 
