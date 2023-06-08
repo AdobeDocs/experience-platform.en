@@ -71,7 +71,6 @@ curl -X POST \
   -d '{
         "name": "Sample dataset",
         "description: "A sample dataset with a sample description.",
-        "fields": [],
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -153,15 +152,6 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
                 "enabled:true"
             ]
         },
-        "lastBatchId": "{BATCH_ID}",
-        "lastBatchStatus": "success",
-        "dule": {},
-        "statsCache": {
-            "startDate": null,
-            "endDate": null
-        },
-        "namespace": "ACP",
-        "state": "DRAFT",
         "version": "1.0.1",
         "created": 1536536917382,
         "updated": 1539793978215,
@@ -169,15 +159,8 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
         "createdUser": "{CREATED_BY}",
         "updatedUser": "{CREATED_BY}",
         "viewId": "{VIEW_ID}",
-        "status": "enabled",
-        "transforms": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/transforms",
         "files": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/files",
         "schema": "{SCHEMA}",
-        "schemaMetadata": {
-            "primaryKey": [],
-            "delta": [],
-            "dule": []
-        },
         "schemaRef": {
             "id": "https://ns.adobe.com/xdm/context/experienceevent",
             "contentType": "application/vnd.adobe.xed+json"
