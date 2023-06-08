@@ -31,7 +31,7 @@ To select which fields are visible, you can select ![the configure columns icon]
 | [!UICONTROL Last evaluated] | This timestamp represents the last successful evaluation run. Only events that ocurred **before** this timestamp are considered in the last successful evaluation. |
 | Refresh frequency | An indication on how frequently the computed attribute is expected to be refreshed. Possible values include hourly, daily, weekly, or monthly. |
 | Last evaluation status | The status that states whether or not the computed attribute was successfully calculated in the last evaluation run. Possible values include **[!UICONTROL Success]** or **[!UICONTROL Failed]**. | 
-| [!UICONTROL Lifecycle status] | The current status of the computed attribute. There are three possible statuses: <ul><li>**[!UICONTROL Draft]:** The computed attribute does **not** have a field created on the schema yet. In this state, the computed attribute can be edited. </li><li>**[!UICONTROL Published]:** The computed attribute has a field created on the schema and is ready to be used. In this state, the computed attribute **cannot** be edited.</li><li>**[!UICONTROL Inactive]:** The computed attribute is disabled. For more information about the inactive status, please read the [frequently asked questions page](). </li> | 
+| [!UICONTROL Lifecycle status] | The current status of the computed attribute. There are three possible statuses: <ul><li>**[!UICONTROL Draft]:** The computed attribute does **not** have a field created on the schema yet. In this state, the computed attribute can be edited. </li><li>**[!UICONTROL Published]:** The computed attribute has a field created on the schema and is ready to be used. In this state, the computed attribute **cannot** be edited.</li><li>**[!UICONTROL Inactive]:** The computed attribute is disabled. For more information about the inactive status, please read the [frequently asked questions page](./faq.md#inactive-status). </li> | 
 
 Additionally, you can select a computed attribute to see more detailed information about it. For more information on the computed attributes details page, please read the [view a computed attribute's details section](#view-details).
 
@@ -45,15 +45,27 @@ To create a new computed attribute, select **[!UICONTROL Create computed attribu
 
 The **[!UICONTROL Create computed attribute]** page appears. On this page, you can add the basic information for the computed attribute you want to create.
 
+| Field | Description |
+| ----- | ----------- |
+| Display name | The name which the computed attribute will be known by. You should keep this display name unique for each computed attribute. As a best practice, this display name should contain identifiers related to the computed attribute. So, for example, "Sum of purchases for shoes in the last 7 days". |
+| Field name | A name which is used to refer to the computed attribute in other downstream services. This name is automatically derived from the display name and is written in camelCase. |
+| Description | A description of the computed attribute you're trying to create. |
+
 ![The [!UICONTROL Basic information] section of the [!UICONTROL Create computed attribute] page is highlighted.](./images/ui/basic-information.png)
 
-After adding the computed attribute details, you can start creating your computed attribute. To create a computed attribute, first select the attribute from the **[!UICONTROL Events]** section.
+After adding the computed attribute details, you can start  defining your rules. 
+
+### Specify event filtering conditions
+
+To create a rule, first select attributes from the **[!UICONTROL Events]** section to filter down events that you want to aggregate on. 
 
 ![The [!UICONTROL Events] section is highlighted.](./images/ui/events.png)
 
 After selecting the attribute to use in the computed attribute definition, you can choose what this value will be compared to.
 
 ![The available comparison types are displayed.](./images/ui/select-comparison.png)
+
+### Apply aggregation function
 
 Now, you can apply a function to the field from the conditional output.
 
