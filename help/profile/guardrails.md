@@ -42,18 +42,20 @@ There are two types of default limits within this document:
 
 The following guardrails provide recommended limits when modeling Real-Time Customer Profile data. To learn more about primary entities and dimension entities, see the section on [entity types](#entity-types) in the Appendix.
 
+![A diagram showing the different guardrails for Profile data in Adobe Experience Platform.](./images/guardrails/profile-guardrails.png)
+
 ### Primary entity guardrails
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|XDM Individual Profile class datasets | 20 | Soft| A maximum of 20 datasets that leverage the XDM Individual Profile class is recommended.|
-|XDM ExperienceEvent class datasets | 20 | Soft| A maximum of 20 datasets that leverage the XDM ExperienceEvent class is recommended.|
-|Adobe Analytics report suite datasets enabled for Profile| 1 | Soft | A maximum of one (1) Analytics report suite dataset should be enabled for Profile. Attempting to enable multiple Analytics report suite datasets for Profile may have unintended consequences for data quality. For more information, see the section on [Adobe Analytics datasets](#aa-datasets) in the Appendix.|
+| XDM Individual Profile class datasets | 20 | Soft| A maximum of 20 datasets that leverage the XDM Individual Profile class is recommended.|
+| XDM ExperienceEvent class datasets | 20 | Soft| A maximum of 20 datasets that leverage the XDM ExperienceEvent class is recommended.|
+| Adobe Analytics report suite datasets enabled for Profile| 1 | Soft | A maximum of one (1) Analytics report suite dataset should be enabled for Profile. Attempting to enable multiple Analytics report suite datasets for Profile may have unintended consequences for data quality. For more information, see the section on [Adobe Analytics datasets](#aa-datasets) in the Appendix.|
 | Multi-entity relationships| 5 | Soft | A maximum of 5 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
 | JSON depth for ID field used in multi-entity relationship| 4 | Soft | The recommended maximum JSON depth for an ID field used in multi-entity relationships is 4. This means that in a highly nested schema, fields that are nested more than 4 levels deep should not be used as an ID field in a relationship.|
-|Array cardinality in a profile fragment|<=500|Soft|The optimal array cardinality in a profile fragment (time-independent data) is <=500.|
-|Array cardinality in ExperienceEvent|<=10|Soft|The optimal array cardinality in an ExperienceEvent (time series data) is <=10.|
-|Identity count for individual profile Identity Graph | 50 | Hard | **The maximum number of identities in an Identity Graph for an individual profile is 50.** Any profiles with more than 50 identities are excluded from segmentation, exports, and lookups.| 
+| Array cardinality in a profile fragment|<=500|Soft|The optimal array cardinality in a profile fragment (time-independent data) is <=500.|
+| Array cardinality in ExperienceEvent | <=10 | Soft | The optimal array cardinality in an ExperienceEvent (time series data) is <=10. |
+| Identity count for individual profile Identity Graph | 50 | Hard | **The maximum number of identities in an Identity Graph for an individual profile is 50.** Any profiles with more than 50 identities are excluded from segmentation, exports, and lookups. | 
 
 {style="table-layout:auto"}
 

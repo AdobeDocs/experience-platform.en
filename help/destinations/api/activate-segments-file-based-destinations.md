@@ -3,6 +3,7 @@ solution: Experience Platform
 title: Activate segments to file-based destinations by using the Flow Service API
 description: Learn how to use the Flow Service API to export files with qualified profiles to cloud storage destinations.
 type: Tutorial
+exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
 ---
 # Activate segments to file-based destinations by using the Flow Service API
 
@@ -948,7 +949,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "password": "<Add password>"
+      "password": "<Add password>",
+      "port": "<Add port>"      
     }
   },
   "connectionSpec": {
@@ -957,6 +959,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| Property | Description |
+| --------- | ----------- |
+|`specName`| Use `SFTP with Password`. |
+|`domain` | The IP address or the domain name of your SFTP storage location. |
+| `username`| The username to log in to your SFTP storage location.|
+| `password`| The password to log in to your SFTP storage location.|
+| `port`| The port used by your SFTP storage location.|
+
+{style="table-layout:auto"}
 
 +++
 
@@ -983,7 +995,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "sshKey": "<Add SSH key>"
+      "sshKey": "<Add SSH key>",
+      "port": "<Add port>"
     }
   },
   "connectionSpec": {
@@ -992,6 +1005,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| Property | Description |
+| --------- | ----------- |
+|`specName`| Use `SFTP with Password`. |
+|`domain` | The IP address or the domain name of your SFTP storage location. |
+| `username`| The username to log in to your SFTP storage location.|
+| `sshKey`| The private SSH key used to log in to your SFTP storage location. The private key must be formatted as a Base64-encoded string and must not be password-protected.|
+| `port`| The port used by your SFTP storage location.|
+
+{style="table-layout:auto"}
 
 +++
 
@@ -3761,7 +3784,6 @@ Inspect the response you obtain when performing the call above. You need to dril
                "properties":{
                   "status":{
                      "enum":[
-                        "existing",
                         "realized",
                         "exited"
                      ],
@@ -3770,7 +3792,6 @@ Inspect the response you obtain when performing the call above. You need to dril
                      "default":"realized",
                      "meta:enum":{
                         "exited":"Entity is exiting the segment.",
-                        "existing":"Entity continues to be in the segment.",
                         "realized":"Entity is entering the segment."
                      },
                      "description":"Is the segment participation realized as part of the current request.",
@@ -4081,11 +4102,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                 "meta:xdmType": "string",
                                 "meta:enum": {
                                     "exited": "Entity is exiting the segment.",
-                                    "realized": "Entity is entering the segment.",
-                                    "existing": "Entity continues to be in the segment."
+                                    "realized": "Entity is entering the segment."
                                 },
                                 "enum": [
-                                    "existing",
                                     "realized",
                                     "exited"
                                 ],

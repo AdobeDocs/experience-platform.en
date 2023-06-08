@@ -4,11 +4,7 @@ title: Create an Oracle Service Cloud Source Connection Using the Flow Service A
 description: Learn how to connect Adobe Experience Platform to Oracle Service Cloud using the Flow Service API.
 exl-id: 00c0bc9c-a740-4bab-a882-2cfed8abe758
 ---
-# (Beta) Create a Oracle Service Cloud source connection using the [!DNL Flow Service] API
-
->[!NOTE]
->
->The Oracle Service Cloud source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+# Create a Oracle Service Cloud source connection using the [!DNL Flow Service] API
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 

@@ -12,7 +12,7 @@ exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 >[!IMPORTANT]
 >
 >* Fill in all the sections in this template, in the order in which they are outlined in the template.
->* This template is updated infrequently, based on partner feedback. Before you begin authoring documentation for your destination, make sure that you have downloaded the [latest version of the template](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+>* This template is updated infrequently, based on partner feedback. Before you begin authoring documentation for your destination, make sure that you have downloaded the [latest version of the template](../assets/docs-framework/yourdestination-template.zip).
 
 ## Overview {#overview}
 
@@ -96,7 +96,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![Sample screenshot showing how to authenticate to the destination](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![Sample screenshot showing how to authenticate to the destination](../assets/docs-framework/authenticate-destination.png)
 
 * **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination.
 
@@ -106,7 +106,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Sample screenshot showing how to fill in details for your destination](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![Sample screenshot showing how to fill in details for your destination](../assets/docs-framework/configure-destination-details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -156,7 +156,7 @@ Read [(Beta) Export datasets](/help/destinations/ui/export-datasets.md) for exte
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
         "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },

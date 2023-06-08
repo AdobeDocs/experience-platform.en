@@ -30,7 +30,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parameter | Description |
 | --- | --- |
-| `{REGULATION}` | The regulation type to query for. Accepted values include: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>See the overview on [supported regulations](../regulations/overview.md) for more information on the privacy regulations that the above values represent. |
+| `{REGULATION}` | The regulation type to query for. Accepted values include: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li><li>`cpa`</li><li>`ctdpa`</li></ul><br>See the overview on [supported regulations](../regulations/overview.md) for more information on the privacy regulations that the above values represent. |
 | `{PAGE}` | The page of data to be displayed, using 0-based numbering. The default is `0`. |
 | `{SIZE}` | The number of results to display on each page. The default is `1` and the maximum is `100`. Exceeding the maximum causes the API to return a 400-code error. |
 
@@ -38,7 +38,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 **Request**
 
-The following request retrieves a paginated list of all jobs within an IMS Organization, starting from the third page with a page size of 50.
+The following request retrieves a paginated list of all jobs within an organization, starting from the third page with a page size of 50.
 
 ```shell
 curl -X GET \
@@ -153,7 +153,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `companyContexts` **(Required)** | An array containing authentication information for your organization. Each listed identifier includes the following attributes: <ul><li>`namespace`: The namespace of an identifier.</li><li>`value`: The value of the identifier.</li></ul>It is **required** that one of the identifiers uses `imsOrgId` as its `namespace`, with its `value` containing the unique ID for your IMS Organization. <br/><br/>Additional identifiers can be product-specific company qualifiers (for example, `Campaign`), which identify an integration with an Adobe application belonging to your organization. Potential values include account names, client codes, tenant IDs, or other application identifiers. |
+| `companyContexts` **(Required)** | An array containing authentication information for your organization. Each listed identifier includes the following attributes: <ul><li>`namespace`: The namespace of an identifier.</li><li>`value`: The value of the identifier.</li></ul>It is **required** that one of the identifiers uses `imsOrgId` as its `namespace`, with its `value` containing the unique ID for your organization. <br/><br/>Additional identifiers can be product-specific company qualifiers (for example, `Campaign`), which identify an integration with an Adobe application belonging to your organization. Potential values include account names, client codes, tenant IDs, or other application identifiers. |
 | `users` **(Required)** | An array containing a collection of at least one user whose information you would like to access or delete. A maximum of 1000 user IDs can be provided in a single request. Each user object contains the following information: <ul><li>`key`: An identifier for a user that is used to qualify the separate job IDs in the response data. It is best practice to choose a unique, easily identifiable string for this value so it can easily be referenced or looked up later.</li><li>`action`: An array that lists desired actions to take on the user's data. Depending on the actions you want to take, this array must include `access`, `delete`, or both.</li><li>`userIDs`: A collection of identities for the user. The number of identities a single user can have is limited to nine. Each identity consists of a `namespace`, a `value`, and a namespace qualifier (`type`). See the [appendix](appendix.md) for more details on these required properties.</li></ul> For a more detailed explanation of `users` and `userIDs`, see the [troubleshooting guide](../troubleshooting-guide.md#user-ids). |
 | `include` **(Required)** | An array of Adobe products to include in your processing. If this value is missing or otherwise empty, the request will be rejected. Only include products that your organization has an integration with. See the section on [accepted product values](appendix.md) in the appendix for more information. |
 | `expandIDs` | An optional property that, when set to `true`, represents an optimization for processing the IDs in the applications (currently only supported by [!DNL Analytics]). If omitted, this value defaults to `false`. |

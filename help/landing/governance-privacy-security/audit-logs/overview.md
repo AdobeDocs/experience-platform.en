@@ -37,7 +37,7 @@ The following table outlines which actions on which resources are recorded by au
 | [Attribution AI instance](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li></ul> |
 | [Audit logs](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Export</li></ul> |
 | [Class](../../../xdm/schema/composition.md#class) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| [Computed attribute](../../../profile/computed-attributes/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| Computed attribute | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Customer AI instance](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li></ul> |
 | [Dataset](../../../catalog/datasets/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable for [Real-Time Customer Profile](../../../profile/home.md)</li><li>Disable for Profile</li><li>Add data</li><li>Delete batch</li></ul> |
 | [Datastream](../../../edge/datastreams/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li><li>[Edit Mapping](../../../edge/datastreams/data-prep.md)</li></ul> |
@@ -73,13 +73,13 @@ In order to view and export audit logs, you must have the **[!UICONTROL View Use
 
 You can view audit logs for different Experience Platform features within the **[!UICONTROL Audits]** workspace in the Platform UI. The workspace shows a list of recorded logs, by default sorted from most recent to least recent.
 
-![Audit logs dashboard](../../images/audit-logs/audits.png)
+![The Audits dashboard highlighting Audits in the left menu.](../../images/audit-logs/audits.png)
 
 Audit logs are retained for 365 days after which they will be deleted from the system. Therefore, you can only go back for a maximum period of 365 days. If you require data of more than 365 days, you should export logs at a regular cadence to meet your internal policy requirements.
 
 Select an event from the list to view its details in the right rail.
 
-![Event details](../../images/audit-logs/select-event.png)
+![Audits dashboard Activity log tab with the event details panel highlighted.](../../images/audit-logs/select-event.png)
 
 ### Filter audit logs
 
@@ -90,31 +90,43 @@ Select an event from the list to view its details in the right rail.
 
 Select the funnel icon (![Filter icon](../../images/audit-logs/icon.png)) to display a list of filter controls to help narrow results. Only the last 1000 records are displayed irrespective of the various filters selected.
 
-![Filters](../../images/audit-logs/filters.png)
+![The Audits dashboard with the filtered activity log highlighted.](../../images/audit-logs/filters.png)
 
 The following filters are available for audit events in the UI:
 
 | Filter | Description |
 | --- | --- |
 | [!UICONTROL Category] | Use the dropdown menu to filter displayed results by [category](#category). |
-| [!UICONTROL Action] | Filter by action. Currently only [!UICONTROL Create] and [!UICONTROL Delete] actions can be filtered. |
+| [!UICONTROL Action] | Filter by action. The actions available for each service can be seen in the resource table above. |
 | [!UICONTROL User] | Enter the complete user ID (for example, `johndoe@acme.com`) to filter by user. |
 | [!UICONTROL Status] | Filter by whether the action was allowed (completed) or denied due to lack of [access control](../../../access-control/home.md) permissions. |
 | [!UICONTROL Date] | Select a start date and/or an end date to define a date range to filter results by. Data can be exported with a 90-day lookback period (for example, 2021-12-15 to 2022-03-15). This can differ by event type. |
 
 To remove a filter, select the "X" on the pill icon for the filter in question, or select **[!UICONTROL Clear all]** to remove all filters.
 
-![Clear filters](../../images/audit-logs/clear-filters.png)
+![The Audits dashboard with clear filter highlighted.](../../images/audit-logs/clear-filters.png)
+
+The returned audit log data contains the following information on all queries that meet your chosen filter criteria.
+
+| Column name  | Description |
+|---|---|
+| [!UICONTROL Timestamp] | The exact date and time of the action performed in a `month/day/year hour:minute AM/PM` format.  |
+| [!UICONTROL Asset Name] | The value for the [!UICONTROL Asset Name] field depends on the category chosen as a filter. |
+| [!UICONTROL Category] | This field matches the category selected in the filter dropdown.  |
+| [!UICONTROL Action] | The available actions depend on the category chosen as a filter. |
+| [!UICONTROL User] | This field provides the user ID that executed the query. | 
+
+![The Audits dashboard with the filtered activity log highlighted.](../../images/audit-logs/filtered.png)
 
 ### Export audit logs
 
 To export the current list of audit logs, select **[!UICONTROL Download log]**.
 
-![Download log](../../images/audit-logs/download.png)
+![The Audits dashboard with the [!UICONTROL Download log] highlighted.](../../images/audit-logs/download.png)
 
 In the dialog that appears, select your preferred format (either **[!UICONTROL CSV]** or **[!UICONTROL JSON]**), then select **[!UICONTROL Download]**. The browser downloads the generated file and saves it to your machine.
 
-![Select download format](../../images/audit-logs/select-download-format.png)
+![The file format selection dialog with [!UICONTROL Download] highlighted.](../../images/audit-logs/select-download-format.png)
 
 ## Managing audit logs in the API
 

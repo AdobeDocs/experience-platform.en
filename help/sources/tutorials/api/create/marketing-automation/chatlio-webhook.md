@@ -1,13 +1,14 @@
 ---
 title: Create a Source Connection and Dataflow for Chatlio using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Chatlio using the Flow Service API.
-badge: "Beta"
+badge: Beta
+exl-id: 867b8096-0841-4462-9888-e60c97c2115e
 ---
 # Create a source connection and dataflow for [!DNL Chatlio] using the Flow Service API
 
 >[!NOTE]
 >
->The [!DNL Chatlio] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Chatlio] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 The following tutorial walks you through the steps to create a source connection and dataflow to bring [[!DNL Chatlio]](https://chatlio.com/) event data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

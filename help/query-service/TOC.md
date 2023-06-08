@@ -25,7 +25,6 @@ feature: Queries
         - [Create decile-based derived attributes](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - Use cases {#use-cases}
     - [Abandoned browse](use-cases/abandoned-browse.md)
-    - [Activity analysis with Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
     - [Attribution analysis](use-cases/attribution-analysis.md)
     - [Bot filtering](use-cases/bot-filtering.md)
     - [Create a trended report of events](use-cases/trended-report-of-events.md)
@@ -84,6 +83,7 @@ feature: Queries
     - [Incremental loading](essential-concepts/incremental-load.md)
     - [Data deduplication](essential-concepts/deduplication.md)
     - [Dataset samples](essential-concepts/dataset-samples.md)
+    - [Dataset statistics computation](essential-concepts/dataset-statistics.md)
 - SQL reference {#sql}
     - [SQL overview](sql/overview.md)
     - [SQL syntax](sql/syntax.md)

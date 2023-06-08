@@ -104,7 +104,7 @@ Using at.js 2.x, if you enable the setting `pageLoadEnabled`, the library will t
 
 Content created within Adobe Target's [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) can be retrieved and rendered automatically by the SDK.
 
-To request and automatically render Target offers, use the `sendEvent` command and set the `renderDecisions` option to `true`. Doing so forces the SDK to automatically render any personalized content that’s eligible for automatic rendering. 
+To request and automatically render Target offers, use the `sendEvent` command and set the `renderDecisions` option to `true`. Doing so forces the SDK to automatically render any personalized content that's eligible for automatic rendering. 
 
 Example:
 
@@ -593,7 +593,7 @@ alloy("sendEvent", {
     // Find the discount proposition, if it exists.
     for (var i = 0; i < propositions.length; i++) {
       var proposition = propositions[i];
-      for (var j = 0; j < proposition.items; j++) {
+      for (var j = 0; j < proposition.items.length; j++) {
         var item = proposition.items[j];
 
         if (item.schema === "https://ns.adobe.com/personalization/measurement") {

@@ -55,7 +55,7 @@ Segment export destinations receive Experience Platform segment data. These dest
 
 Edge personalization destinations in Experience Platform include [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) and the [Custom personalization destination](/help/destinations/catalog/personalization/custom-personalization.md). By using these destinations, you can enable same-page and next-page personalization use cases for your customers.
 
-Read more about how to [configure personalization destinations for same-page and next-page personalization](/help/destinations/ui/configure-personalization-destinations.md).
+Read more about how to [configure personalization destinations for same-page and next-page personalization](/help/destinations/ui/activate-edge-personalization-destinations.md).
 
 ## Profile export and segment export destinations - video overview {#video}
 

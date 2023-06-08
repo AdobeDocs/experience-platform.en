@@ -24,7 +24,7 @@ This tutorial uses the Data Collection UI to create a schema, configure a datast
 
 See the guide on [managing permissions for data collection](./permissions.md) to learn how to grant access to properties and property rights.
 
-To use the various Data Collection products mentioned in this guide, you must also have access to datastreams and the ability to create and manage schemas. If you need access to either of these features, please contact your CSM to help you get the necessary access. Please note that if you have not purchased Adobe Experience Platform, Adobe will provision you with the necessary access to use the SDK at no extra charge.
+To use the various Data Collection products mentioned in this guide, you must also have access to datastreams and the ability to create and manage schemas. If you need access to either of these features, please contact your Adobe account team to help you get the necessary access. Please note that if you have not purchased Adobe Experience Platform, Adobe will provision you with the necessary access to use the SDK at no extra charge.
 
 If you already have access to Platform, you must ensure that you have the all [permissions](../access-control/home.md#permissions) under the following categories enabled:
 

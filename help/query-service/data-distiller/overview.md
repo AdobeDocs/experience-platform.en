@@ -1,18 +1,20 @@
 ---
 title: Data Distiller Overview
 description: A summary of Data Distiller usage limits for Query Service data in relation to your licensing entitlement.
+exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
 ---
 # Data Distiller overview
 
 Data Distiller is a package offering that includes a subset of the functionalities from Adobe Experience Platform. With Data Distiller you can perform post-ingestion data preparation (such as cleaning, shaping, and manipulation) for real-time customer profile or analytical use cases by executing batch queries in Query Service. Your use of Data Distiller is dependent on your entitlement for Platform-based applications.
 
+<!-- Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}
 
-<!-- Commented out references to licence usage dashboard. It is temporarily hidden:
+
 The [Data Distiller license usage dashboard](./license-usage.md) is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours. See the [Data Distiller license usage document](./license-usage.md) to view important information about your organization's Query Service license usage. 
--->
 
 The Data Distiller license usage dashboard is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours.
+-->
 
 <!-- Update these descriptions post 23.3 release
 ## Scoping parameters {#scoping-parameters}
@@ -42,4 +44,3 @@ A static limit is the usage limit that relates to the functional boundaries of A
     * To generate meaningful insights from your data.
 * **Reporting API Call**: To ensure queries run on aggregated data using the reporting API have enough resources to execute efficiently. This includes queries that enhance existing data models such as those provided by Real-Time Customer Data Platform. The reporting API tracks resource utilization by assigning concurrency slots to each query. A maximum of four reporting API calls are available concurrently. If you access the reporting API through a BI tool and require more concurrency slots, a BI server is required.
 -->
-

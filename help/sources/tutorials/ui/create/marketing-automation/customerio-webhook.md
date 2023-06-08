@@ -1,13 +1,14 @@
 ---
-title: Create a Customer.io Source Connection and Dataflow in the UI 
+title: Create a Customer.io Source Connection and Dataflow in the UI
 description: Learn how to create a Customer.io source connection using the Adobe Experience Platform UI.
-badge: "Beta"
+badge: Beta
+exl-id: 7655a34c-808a-46e3-94e3-022a433755a4
 ---
 # Create a [!DNL Customer.io] source connection and dataflow in the UI
 
 >[!NOTE]
 >
->The [!DNL Customer.io] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Customer.io] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 This tutorial provides steps for creating a [!DNL Customer.io] source connection and dataflow using the Adobe Experience Platform user interface.
 

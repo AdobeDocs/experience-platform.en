@@ -67,9 +67,9 @@ If breakdown is selected, the display shows a bar graph outlining the percentage
 
 | Status | Description |
 | ------ | ----------- |
-| Realized | The count of profiles that qualify for the segment in the last 24 hours. So, the number of profiles that qualify for the segment since the last time the batch segment job ran. |
-| Existing | The count of profiles that remained qualified for the segment in the last 24 hours. So, the number of profiles that remained qualified for the segment since the last time the batch segment job ran.  |
-| Exiting | The count of profiles that exited the segment in the last 24 hours. So, the number of profiles that no longer qualify for the segment since the last time the batch segment job ran. |
+| [!UICONTROL Realized] | The count of profiles that **qualified** for the segment in the last 24 hours since the last batch segment job ran. |
+| [!UICONTROL Existing] | The count of profiles which **remained** in the segment in the last 24 hours since the last batch segment job ran. |
+| [!UICONTROL Exiting] | The count of profiles which **exited** the segment in the last 24 hours since the last batch segment job ran. |
 
 The evaluation method can either be streaming, batch, or edge. Streaming segments are constantly evaluated as data enters the system. Batch segments are evaluated according to a set schedule. Edge segments are evaluated in real-time, which allow for same page and next page personalization use cases.
 

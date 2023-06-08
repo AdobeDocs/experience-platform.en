@@ -1,13 +1,14 @@
 ---
 title: Create a Source Connection and Dataflow for Pendo using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Pendo using the Flow Service API.
-badge: "Beta"
+badge: Beta
+exl-id: 12b0295d-4b26-4eb7-a02a-a01d825d2a1e
 ---
 # Create a source connection and dataflow for [!DNL Pendo] using the Flow Service API
 
 >[!NOTE]
 >
->The [!DNL Pendo] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Pendo] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 The following tutorial walks you through the steps to create a source connection and a dataflow to bring [[!DNL Pendo]](https://Pendo.com/) event data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

@@ -69,7 +69,7 @@ curl -X POST \
       "name": "Snowflake base connection",
       "description": "Snowflake base connection",
       "auth": {
-          "specName": "ConnectionString,
+          "specName": "ConnectionString",
           "params": {
               "connectionString": "jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}"
           }

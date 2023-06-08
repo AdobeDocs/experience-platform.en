@@ -81,10 +81,12 @@ feature: Sources
     - [Oracle connector](connectors/databases/oracle.md)
     - [Phoenix connector](connectors/databases/phoenix.md)
     - [PostgreSQL connector](connectors/databases/postgres.md)
+    - [Snowflake Streaming connector](connectors/databases/snowflake-streaming.md)
     - [Snowflake connector](connectors/databases/snowflake.md)
     - [Teradata Vantage connector](connectors/databases/teradata-vantage.md)
   - eCommerce {#ecommerce}
-    - [Shopify connector](connectors/ecommerce/shopify.md)
+    - [Shopify](connectors/ecommerce/shopify.md)
+    - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
   - Local system {#local-system}
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Marketing automation {#marketing-automation}
@@ -156,11 +158,13 @@ feature: Sources
       - [Oracle](tutorials/api/create/databases/oracle.md)
       - [Phoenix](tutorials/api/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+      - [Snowflake Streaming](tutorials/api/create/databases/snowflake-streaming.md)
       - [Snowflake](tutorials/api/create/databases/snowflake.md)
       - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
       - [SQL Server](tutorials/api/create/databases/sql-server.md)
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
+      - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
     - Marketing automation {#marketing-automation}
       - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
       - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -278,6 +282,7 @@ feature: Sources
       - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
+      - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
     - Local system {#local-system}
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Marketing automation {#marketing-automation}
@@ -317,6 +322,7 @@ feature: Sources
   - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
   - [Subscribe to sources alerts](tutorials/ui/alerts.md)
+  - [Save a dataflow as a draft](tutorials/ui/draft.md)
 - Self-Serve Sources (Batch SDK) {#sdk}
   - [Overview](sources-sdk/overview.md)
   - Configure your connection specification {#config}

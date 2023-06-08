@@ -8,6 +8,27 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## Version 2.18.0 - May 18, 2023
+
+* Contains version 2.17.0 of the Adobe Experience Platform Web SDK.
+
+## Version 2.17.0 - April 25, 2023
+
+**New features**
+
+* Contains version 2.16.0 of the Adobe Experience Platform Web SDK.
+* Added support for [datastream configuration overrides](../datastreams/overrides.md).
+* Add deprecation notice to the `datasetId` option on the `sendEvent` command.
+
+
+**Fixes and improvements**
+
+* Fixed an issue where scrolling in Safari would close the datastream selector.
+
+## Version 2.16.1 - April 14, 2023
+
+* Fixed an issue with XDM Object and Variable data elements where you could not select a schema from a non-default sandbox.
+
 ## Version 2.16.0 - March 30, 2023
 
 **New features**

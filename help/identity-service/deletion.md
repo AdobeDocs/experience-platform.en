@@ -1,6 +1,7 @@
 ---
 title: Deletions in Identity Service
 description: This document provides an overview of the various mechanisms that you can use to delete your identity data in Experience Platform, and to provide clarity on how identity graphs may be impacted.
+exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
 ---
 # Deletions in Identity Service
 

@@ -25,7 +25,7 @@ This tutorial covers how to gather the required credentials to authenticate Plat
 
 In order to successfully make calls to Experience Platform APIs, you must have the following:
 
-* An IMS Organization with access to Adobe Experience Platform.
+* An organization with access to Adobe Experience Platform.
 * An Admin Console administrator that is able to add you as a developer and a user for a product profile.
 
 You must also have an Adobe ID to complete this tutorial. If you do not have an Adobe ID, you can create one using the following steps:
@@ -48,7 +48,7 @@ Once you are assigned as a developer, you can start creating integrations in [Ad
 
 Your [!DNL Admin Console] administrator must also add you as a user to the same product profile. See the guide on [managing user groups in [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) for more information.
 
-## Generate an API key, IMS Org ID, and client secret {#api-ims-secret}
+## Generate an API key, organization ID, and client secret {#api-ims-secret}
 
 >[!NOTE]
 >
@@ -191,6 +191,68 @@ If your response is similar to the one shown below, then your credentials are va
 ## Use Postman to authenticate and test API calls
 
 [Postman](https://www.postman.com/) is a popular tool that allows developers to explore and test RESTful APIs. This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform JWT authentication and use it to consume Platform APIs.
+
+## Developer and API access control with Experience Platform permissions
+
+>[!NOTE]
+>
+>Only system administrators have the ability to view and manage API credentials in Permissions.
+
+Before creating integrations on Adobe Developer Console, your account must have developer and user permissions for an Experience Platform product profile in Adobe Admin Console.
+
+### Add developers to product profile
+
+Go to [[!DNL Admin Console]](https://adminconsole.adobe.com/) and sign in with your Adobe ID.
+
+Select **[!UICONTROL Products]**, then select **[!UICONTROL Adobe Experience Platform]** from the list of products.
+
+![Products list on Admin Console](././images/api-authentication/products.png)
+
+From the **[!UICONTROL Product Profiles]** tab, select **[!UICONTROL AEP-Default-All-Users]**. Alternatively, use the search bar to search for the product profile by entering the name.
+
+![Search for the product profile](././images/api-authentication/select-product-profile.png)
+
+Select the **[!UICONTROL Developers]** tab, then select **[!UICONTROL Add Developer]**.
+
+![Add developer from the Developers tab](././images/api-authentication/add-developer1.png)
+
+Enter the developer's **[!UICONTROL Email or username]**. A valid [!UICONTROL Email or username] will display the developer details. Select **[!UICONTROL Save]**.
+
+![Add developer using their email or username](././images/api-authentication/add-developer-email.png)
+
+The developer has been successfully added and appears on the [!UICONTROL Developers] tab.
+
+![Developers listed on the Developers tab](././images/api-authentication/developer-added.png)
+
+### Set up an API
+
+A developer can add and configure an API within a project in the Adobe Developer Console.
+
+Select your project, then select **[!UICONTROL Add API]**.
+
+![Add API to a project](././images/api-authentication/add-api-project.png)
+
+In the **[!UICONTROL Add an API]** dialog box select **[!UICONTROL Adobe Experience Platform]**, then select **[!UICONTROL Experience Platform API]**.
+
+![Add an API in Experience Platform](././images/api-authentication/add-api-platform.png)
+
+In the **[!UICONTROL Configure API]** screen, select **[!UICONTROL AEP-Default-All-Users]**.
+
+### Assign API to a role
+
+A system admin can assign APIs to roles in the Experience Platform UI.
+
+Select **[!UICONTROL Permissions]** and the role you want to add the API to. Select the **[!UICONTROL API credentials]** tab, then select **[!UICONTROL Add API credentials]**.
+
+![API credentials tab in selected role](././images/api-authentication/api-credentials.png)
+
+Select the API you would like to add to the role then select **[!UICONTROL Save]**.
+
+![List of API available for selection](././images/api-authentication/select-api.png)
+
+You are returned to the [!UICONTROL API credentials] tab, where the newly added API is listed.
+
+![API credentials tab with newly added API](././images/api-authentication/api-credentials-with-added-api.png)
 
 ## Next steps
 

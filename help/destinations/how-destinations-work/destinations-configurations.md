@@ -1,8 +1,8 @@
 ---
 title: Configurable and common export settings in destinations
 description: Learn which export settings in destinations are configurable on a destination level and which are fixed and cannot be edited.
+exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
 ---
-
 # Configurable and common export settings in destinations
 
 When thinking about the export behavior to Experience Platform destinations, you need to consider three separate levels on which configurations act.
@@ -26,7 +26,7 @@ What is included in the destination exports varies slightly between destination 
 Destination developers can use [Destination SDK](/help/destinations/destination-sdk/overview.md) to create custom or productized (private or public) destinations. Destination SDK provides developers with great flexibility to configure destinations based on the downstream capabilities of their API endpoints and file reception systems. Based on the downstream capabilities, destination developers have the following configuration options available when configuring a destination using Destination SDK:
 
 * Determine which attributes and identities can be exported out of Experience Platform to the destination. Determine also which identities are required by their destinations for a successful data export.
-* Set an aggregation policy, which determines how long Experience Platform should wait when aggregating HTTP messages to be sent to API integrations. Destination developers can configure different aggregation types to determine how many profiles should be included in outgoing HTTP messages and how long Experience Platform should wait until dispatching the HTTP message. Find extensive information about the [aggregation policy configuration options](/help/destinations/destination-sdk/destination-configuration.md#aggregation) available to destination developers in the Destination SDK documentation.
+* Set an aggregation policy, which determines how long Experience Platform should wait when aggregating HTTP messages to be sent to API integrations. Destination developers can configure different aggregation types to determine how many profiles should be included in outgoing HTTP messages and how long Experience Platform should wait until dispatching the HTTP message. Find extensive information about the [aggregation policy configuration options](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) available to destination developers in the Destination SDK documentation.
 * Determine if HTTP message exports should include profiles that qualify for segments, that are removed from segments, or both.
 * Determine which file name and file formatting configurations should be available to users when exporting files.
 

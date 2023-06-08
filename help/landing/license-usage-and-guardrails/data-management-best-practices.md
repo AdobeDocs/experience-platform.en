@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;data management;license entitlement;licensing;best practices
 title: Data Management License Entitlement Best Practices
 description: Learn about best practices and tools you can use to better manage your license entitlements with Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
@@ -100,6 +99,7 @@ Ingestion filters allow you to bring in only the data that is needed for your us
 | Support for enable/disable datasets for Profile | To ingest data into the Real-Time Customer Profile, you must enable a dataset for use in the Profile store. Doing so, adds to your [!DNL Addressable Audience] and [!DNL Profile Richness] entitlements. Once a dataset is no longer required for customer profile use cases, you can disable that dataset's integration to Profile to ensure that your data remains license compliant. See the guide on [enabling and disabling datasets for Profile](../../catalog/datasets/enable-for-profile.md) for more information. |
 | Web SDK and Mobile SDK data exclusion | There are two types of data collected by Web and Mobile SDK: data that is collected automatically and data that is explicitly collected by your developer. To better manage license compliance, you can disable automatic data collection in the configuration of the SDK through the context setting. Custom data can also be removed or not set by your developer. See the guide on [configuring SDK fundamentals](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) for more information. |
 | Server-side forwarding data exclusion | If you are sending data to Platform using server-side forwarding, you can exclude what data is sent by either removing the mapping in a rule action to exclude it across all events, or by adding conditions to the rule so that data only fires for certain events. See the documentation on [events and conditions](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) for more information. |
+| Filter data at the source level | You can use logical and comparison operators to filter row-level data from your sources before creating a connection and ingesting data to Experience Platform. For more information, read the guide on [filtering row-level data for a source using the [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
 
@@ -116,8 +116,6 @@ The Profile store is composed of the following components:
 
 {style="table-layout:auto"}
 
-
-
 #### Profile store Composition Reports
 
 There are a number of reports available to help you understand the composition of the Profile store. These reports help you make informed decisions about how and where to set your Experience Event expirations to better optimize your license usage:
@@ -126,6 +124,10 @@ There are a number of reports available to help you understand the composition o
 * **Identity Overlap Report API**: Exposes the identity namespaces that contribute the most to your Addressable Audience. See the tutorial on [generating the identity overlap report](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) for more information.
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
+
+#### Pseudonymous Profile data expirations {#pseudonymous-profile-expirations}
+
+This capability allows you to automatically remove stale Pseudonymous Profiles from the Profile Store. For more information on this feature, please read the [Pseudonymous Profile data expiration overview](../../profile/pseudonymous-profiles.md).
 
 #### Experience Event expirations {#event-expirations}
 
@@ -138,7 +140,7 @@ The following is a list of some recommended best practices that you can follow t
 * Use the [license usage dashboard](../../dashboards/guides/license-usage.md) to track and monitor customer usage trends. This allows you to get ahead of any potential overages that may incur.
 * Configure [ingestion filters](#ingestion-filters) by identifying the events required for your segmentation and personalization use cases. This allows you to send only important events required for your use cases.
 * Ensure that you have only [enabled datasets for profile](#ingestion-filters) that are required for your segmentation and personalization use cases. 
-* Configure an [Experience Event expiration](#event-expirations) for high-frequency data like web data.
+* Configure [Experience Event expirations](#event-expirations) and [Pseudonymous Profile data expirations](#pseudonymous-profile-expirations) for high-frequency data like web data.
 * Periodically check the [Profile Composition Reports](#profile-store-composition-reports) to understand your Profile store composition. This allows you to understand the data sources contributing most to your license usage consumption.
 
 ## Feature summary and availability {#feature-summary}
@@ -150,7 +152,7 @@ The following table outlines the list of currently available features at your di
 | Feature | Description |
 | --- | --- |
 | [Enable/Disable Datasets for Profile](../../catalog/datasets/user-guide.md) | Enable or disable dataset ingestion into Real-Time Customer Profile. |
-| [Experience Event expirations](../../profile/event-expirations.md) | Apply an expiration time for all events ingested into a Profile-enabled dataset. Please contact your Adobe Support Representative to enable this feature. |
+| [Experience Event expirations](../../profile/event-expirations.md) | Apply an expiration time for all events ingested into a Profile-enabled dataset. Please contact your Adobe account team or Customer Care to enable this feature. |
 | [Adobe Analytics Data Prep filters](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Apply [!DNL Kafka] filters to exclude unnecessary data from ingestion |
 | [Adobe Audience Manager source connector filters](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Apply Audience Manager source connection filters to exclude unnecessary data from ingestion |
 | [Alloy SDK data filters](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Apply Alloy filters to exclude unnecessary data from ingestion |
