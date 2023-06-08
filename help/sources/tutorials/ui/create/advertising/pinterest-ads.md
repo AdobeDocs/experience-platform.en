@@ -11,7 +11,7 @@ exl-id: ca7b99c8-f1d9-4120-85d5-720f5b9ad41a
 
 >[!NOTE]
 >
->The [!DNL Pinterest Ads] source is in beta. Read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Pinterest Ads] source is in beta. Read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 This tutorial provides steps for creating a [!DNL Pinterest Ads] source connector using the Adobe Experience Platform user interface.
 

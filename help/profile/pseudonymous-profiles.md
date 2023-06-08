@@ -69,9 +69,8 @@ For a typical use case, you can set your Experience Event data expiry based on t
 
 ### What are some caveats you should be aware of before using Pseudonymous profiles data expiration?
 
-- Pseudonymous profile data expiration will run on the **production** sandbox.
+- Pseudonymous profile data expiration runs at a **sandbox** level. You can choose to have different configurations for production and development sandboxes.
 - Once you have activated this feature, the deletion of profiles is **permanent**. There is **no** way to roll back or restore the deleted profiles.
 - This is **not** a one-time cleanup job. Pseudonymous profile data expiry will continually run once per day and delete profiles that match the customer's input.
 - **All** profiles that are defined as Pseudonymous profiles will be affected by the Pseudonymous profile data expiration. It does **not** matter if the profile is Experience Event only or if it only contains profile attributes.
 - This cleanup will **only** occur in Profile. Identity Service may continue to show the deleted identities within the graph after the cleanup in cases where the profile has two or more associated pseudonymous identities (such as `AAID` and `ECID`). This discrepancy will be addressed in the near future.
-

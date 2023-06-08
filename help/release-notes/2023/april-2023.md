@@ -5,6 +5,10 @@ exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
 ---
 # Adobe Experience Platform release notes 
 
+>[!IMPORTANT]
+>
+>Starting May 15th, 2023, the `Existing` status will be deprecated from the segment membership map in order to remove redundancy in the segment membership lifecycle. After this change, profiles qualified in a segment will be represented as `Realized` and profiles disqualified will continue to be represented as `Exited`. For more details on this change, please read the [Segmentation Service section](#segmentation).
+
 **Release date: April 26, 2023**
 
 Updates to existing features in Adobe Experience Platform:
@@ -16,6 +20,7 @@ Updates to existing features in Adobe Experience Platform:
 - [Experience Data Model](#xdm)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Real-Time Customer Profile](#profile)
+- [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
 ## Dashboards {#dashboards}
@@ -155,6 +160,20 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 {style="table-layout:auto"}
 
+## Segmentation Service {#segmentation}
+
+[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Segment membership map | As a follow up to the previous announcement in February, on May 15th, 2023, the `Existing` status will be deprecated from the segment membership map in order to remove redundancy in the segment membership lifecycle. After this change, profiles qualified in a segment will be represented as `Realized` and profiles disqualified will continue to be represented as `Exited`.<br/><br/> This change could impact you if, you're using [enterprise destinations](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API), and might have automated downstream processes in place based on the `Existing` status. If this is the case for you, please review your downstream integrations. If you are interested in identifying newly qualified profiles beyond a certain time, please consider using a combination of the `Realized` status and the `lastQualificationTime` in your segment membership map. For more information, please reach out to your Adobe representative. |
+
+{style="table-layout:auto"}
+
+For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
+
 ## Sources {#sources}
 
 Adobe Experience Platform can ingest data from external sources and allows you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
@@ -165,7 +184,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | --- | --- |
-| API support for filtering row-level data for Microsoft Dynamics, Salesforce CRM, and Salesforce Marketing Cloud | Use logical and comparison operators to filter row-level data for the Microsoft Dynamics, Salesforce CRM, and Salesforce Marketing Cloud sources. Read the guide on [filtering data for a source using the API](../../sources/tutorials/api/filter.md) for more information. |
+| API support for filtering row-level data for Salesforce CRM source. | Use logical and comparison operators to filter row-level data for the Salesforce CRM source. Read the guide on [filtering data for a source using the API](../../sources/tutorials/api/filter.md) for more information. |
 | Beta availability of Shopify Streaming | The [Shopify Streaming source](../../sources/connectors/ecommerce/shopify-streaming.md) is now available in beta. Use the Shopify Streaming source to stream data from your Shopify partners account to Experience Platform. |
 | General availability of OneTrust Integration | The [OneTrust Integration source](../../sources/connectors/consent-and-preferences/onetrust.md) is now GA. Use the OneTrust Integration source to bring consent and preferences data from your OneTrust Integration account to Experience Platform. |
 | General availability of Oracle Service Cloud | The [Oracle Service Cloud source](../../sources/connectors/customer-success/oracle-service-cloud.md) is now GA. Use the Oracle Service Cloud source to bring your Oracle Service Cloud data to Experience Platform. |

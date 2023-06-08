@@ -9,7 +9,7 @@ exl-id: f55f9e9a-779e-426a-bca6-7567ea843698
 
 >[!NOTE]
 >
->The Apache Hive on Azure HDInsights connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The Apache Hive on Azure HDInsights connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
