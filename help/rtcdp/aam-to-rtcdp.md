@@ -15,7 +15,7 @@ As you consider the evolution from Audience Manager to Real-Time CDP, now is a c
 
 Furthermore, think about the data sources that you currently use in Audience Manager.
 
-Adobe recommend that you categorize your segments as follows: 
+Adobe recommends that you categorize your segments as follows: 
 
 * Segments that can be sent to Experience Platform via the [Audience Manager Source Connector](/help/sources/connectors/adobe-applications/audience-manager.md), as they have no data dependencies, no destination or activation challenges, and their segmentation rules can be created through the Real-time CDP [segment builder](/help/segmentation/ui/segment-builder.md) later. 
 * Segments that have rules that can be supported but may have contain data that won't be available in Real-Time CDP.
