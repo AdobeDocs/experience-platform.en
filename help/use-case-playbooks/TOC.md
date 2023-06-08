@@ -11,5 +11,6 @@ hide: yes
 
 * Playbooks {#playbooks}
   * [Overview](/help/use-case-playbooks/playbooks/overview.md)
-  * [How to enable and reuse playbooks](/help/use-case-playbooks/playbooks/ui-guide.md)
-  * [Troubleshooting](/help/use-case-playbooks/playbooks/troubleshooting.md)
+  * [Discover the right playbook](/help/use-case-playbooks/playbooks/discover.md)
+  * [Create, share, and reuse playbook instances](/help/use-case-playbooks/playbooks/create-share-reuse.md)
+  * [Troubleshooting and known limitations](/help/use-case-playbooks/playbooks/troubleshooting.md)
