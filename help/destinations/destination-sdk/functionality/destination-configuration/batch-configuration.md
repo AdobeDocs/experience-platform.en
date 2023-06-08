@@ -76,6 +76,7 @@ The values that you set up here are surfaced in the [Schedule segment export](..
          ],
          "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
       },
+   "segmentGroupingEnabled": true
    }
 ```
 
@@ -91,6 +92,7 @@ The values that you set up here are surfaced in the [Schedule segment export](..
 |`filenameConfig.allowedFilenameAppendOptions`|String|*Required*. List of available file name macros for users to choose from. This determines which items are appended to exported file names (segment ID, organization name, date and time of export, and others). When setting `defaultFilename`, make sure to avoid duplicating macros. <br><br>Supported values: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Regardless of the order in which you define the macros, the Experience Platform UI will always display them in the order presented here. <br><br> If `defaultFilename` is empty, the `allowedFilenameAppendOptions` list must contain at least one macro.|
 |`filenameConfig.defaultFilenameAppendOptions`|String|*Required*. Pre-selected default file name macros that users can uncheck.<br><br> The macros in this list are a subset of the ones defined in `allowedFilenameAppendOptions`. |
 |`filenameConfig.defaultFilename`|String|*Optional*. Defines the default file name macros for the exported files. These cannot be overwritten by users. <br><br>Any macro defined by `allowedFilenameAppendOptions` will be appended after the `defaultFilename` macros. <br><br>If `defaultFilename` is empty, you must define at least one macro in `allowedFilenameAppendOptions`.|
+|`segmentGroupingEnabled`|Boolean|Defines whether the activated audiences should be exported in a single file or multiple files, based on audience [merge policy](../../../../profile/merge-policies/overview.md). Supported values: <ul><li>`true`: exports one file per merge policy.</li><li>`false`: exports one file per audience, regardless of the merge policy. This is the default behavior. You can achieve the same result by ommitting this paramter entirely.</li></ul>|
 
 {style="table-layout:auto"}
 
@@ -114,6 +116,8 @@ Use file name configuration macros to define what the exported file names should
 |`DATETIME` / `TIMESTAMP`|[!UICONTROL Date and time]|`DATETIME` and `TIMESTAMP` both define when the file was generated, but in different formats. <br><br><ul><li>`DATETIME` uses the following format: YYYYMMDD_HHMMSS.</li><li>`TIMESTAMP` uses the 10-digit Unix format. </li></ul> `DATETIME` and `TIMESTAMP` are mutually exclusive, and cannot be used simultaneously. |<ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul>|
 |`CUSTOM_TEXT`|[!UICONTROL Custom text]|User-defined custom text to be included in the file name. Cannot be used in `defaultFilename`.|My_Custom_Text|
 |`TIMESTAMP`|[!UICONTROL Date and time]|10-digit timestamp of the time when the file was generated, in Unix format.|1652131584|
+|`MERGE_POLICY_ID`|[!UICONTROL Merge Policy ID]|The ID of the [merge policy](../../../../profile/merge-policies/overview.md) used to generate the exported audience. Use this macro when you are grouping exported segments in files, based on merge policy. Use this macro together with `segmentGroupingEnabled:true`. |e8591fdb-2873-4b12-b63e-15275b1c1439|
+|`MERGE_POLICY_NAME`|[!UICONTROL Merge Policy Name]|The name of the [merge policy](../../../../profile/merge-policies/overview.md) used to generate the exported audience. Use this macro when you are grouping exported segments in files, based on merge policy. Use this macro together with `segmentGroupingEnabled:true`.|My Custom Merge Policy|
 
 {style="table-layout:auto"}
 

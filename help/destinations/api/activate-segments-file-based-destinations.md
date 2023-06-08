@@ -949,7 +949,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "password": "<Add password>"
+      "password": "<Add password>",
+      "port": "<Add port>"      
     }
   },
   "connectionSpec": {
@@ -958,6 +959,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| Property | Description |
+| --------- | ----------- |
+|`specName`| Use `SFTP with Password`. |
+|`domain` | The IP address or the domain name of your SFTP storage location. |
+| `username`| The username to log in to your SFTP storage location.|
+| `password`| The password to log in to your SFTP storage location.|
+| `port`| The port used by your SFTP storage location.|
+
+{style="table-layout:auto"}
 
 +++
 
@@ -984,7 +995,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "sshKey": "<Add SSH key>"
+      "sshKey": "<Add SSH key>",
+      "port": "<Add port>"
     }
   },
   "connectionSpec": {
@@ -993,6 +1005,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| Property | Description |
+| --------- | ----------- |
+|`specName`| Use `SFTP with Password`. |
+|`domain` | The IP address or the domain name of your SFTP storage location. |
+| `username`| The username to log in to your SFTP storage location.|
+| `sshKey`| The private SSH key used to log in to your SFTP storage location. The private key must be formatted as a Base64-encoded string and must not be password-protected.|
+| `port`| The port used by your SFTP storage location.|
+
+{style="table-layout:auto"}
 
 +++
 
