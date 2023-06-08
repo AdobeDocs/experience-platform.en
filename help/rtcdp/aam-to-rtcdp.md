@@ -5,7 +5,9 @@ description: Understand the considerations before planning your migration from A
 
 # Evolution from Audience Manager to Real-Time CDP
 
-As your organization evolves to use Adobe Real-Time CDP, explore these considerations to prepare your data and to become aware of critical differences between the two technologies. This article is aimed at an administrator audience.
+As your organization evolves to use Adobe Real-Time CDP, explore these considerations to prepare your data and to become aware of critical differences between the two technologies. This article is aimed at a practitioner audience.
+
+![Audience Manager to Real-Time CDP evolution diagram](/help/rtcdp/assets/aam-to-rtcdp-evolution.png)
 
 ## 1. Consider data architecture within Audience Manager
 
