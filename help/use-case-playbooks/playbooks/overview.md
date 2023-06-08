@@ -1,6 +1,6 @@
 ---
 solution: Experience Platform
-title: Playbooks overview
+title: Use case playbooks overview
 description: Learn how to use the Use Case Playbooks feature in Experience Platform to get started with various marketing use cases
 badgeBeta: label="Beta" type="Informative"
 ---
@@ -12,8 +12,8 @@ badgeBeta: label="Beta" type="Informative"
 What you'll find in this documentation guide:
 
 * **[Overview of use case playbooks](#overview)**
-* [View a playbook and generate assets](ui-guide.md#view-playbook-generate-assets)
-* [Enable, use, and reuse an instance of a playbook ](ui-guide.md#enable-playbook)
+* [Discover the right playbook](/help/use-case-playbooks/playbooks/discover.md)
+* [Create, share, and reuse playbook instances](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Troubleshooting and known limitations](troubleshooting.md)
 
 >[!ENDSHADEBOX]
@@ -40,9 +40,9 @@ Create an instance of a playbook to generate specific assets like schemas, segme
 
 Some [!UICONTROL Use Case Playbooks] are tailored to Real-time CDP use cases while others are best suited for customers using Journey Optimizer. Browse the catalog to find the playbooks best suited to your product and use case.
 
-## UI guide
+## UI guides
 
-After you decide on the playbook that you want to use, select it from the UI and get started with it. Read the UI guide on [how to enable and reuse playbooks](/help/use-case-playbooks/playbooks/ui-guide.md) for complete information on how to create instances and make the most of a playbook.  
+After you decide on the playbook that you want to use, select it from the UI and get started with it. Read the UI guides on [how to discover the right playbook](/help/use-case-playbooks/playbooks/discover.md) for you and [how to create, share, and reuse playbook instances](/help/use-case-playbooks/playbooks/create-share-reuse.md) for complete information on how to create instances and make the most of a playbook.  
 
 ## Troubleshooting and known limitations
 
