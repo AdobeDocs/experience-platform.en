@@ -1,11 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics;Snowflake
 title: Create a Snowflake  Source Connection in the UI
 type: Tutorial
 description: Learn how to create a Snowflake source connection using the Adobe Experience Platform UI.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
 ---
 # Create a [!DNL Snowflake] source connection in the UI
+
+>[!IMPORTANT]
+>
+>The [!DNL Snowflake] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
 This tutorial provides steps for creating a [!DNL Snowflake] source connector using the Adobe Experience Platform user interface.
 

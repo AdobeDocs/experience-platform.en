@@ -1,12 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;redshift;Redshift;Amazon Redshift;amazon redshift
-solution: Experience Platform
 title: Create an Amazon Redshift Base Connection Using the Flow Service API
-type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Amazon Redshift using the Flow Service API.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
 ---
 # Create an [!DNL Amazon Redshift] base connection using the [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>The [!DNL Amazon Redshift] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 

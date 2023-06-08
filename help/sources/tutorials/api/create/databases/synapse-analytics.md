@@ -1,12 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Synapse;synapse;Azure Synapse Analytics
-solution: Experience Platform
 title: Create an Azure Synapse Analytics Base Connection Using the Flow Service API
-type: Tutorial
 description: Learn how to connect Azure Synapse Analytics to Adobe Experience Platform using the Flow Service API.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
 ---
 # Create an [!DNL Azure Synapse Analytics] base connection using the [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>The [!DNL Azure Synapse Analytics] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 

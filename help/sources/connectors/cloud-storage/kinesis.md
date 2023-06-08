@@ -1,11 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
-solution: Experience Platform
 title: Amazon Kinesis Source Connector Overview
 description: Learn how to connect Amazon Kinesis to Adobe Experience Platform using APIs or the user interface.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
 ---
-# [!DNL Amazon Kinesis] connector
+# [!DNL Amazon Kinesis] source
+
+>[!IMPORTANT]
+>
+>The [!DNL Amazon Kinesis] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].
 

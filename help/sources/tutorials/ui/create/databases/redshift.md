@@ -1,12 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Amazon Redshift;amazon redshift;Redshift;redshift
-solution: Experience Platform
 title: Create an Amazon Redshift  Source Connection in the UI
-type: Tutorial
 description: Learn how to create a Amazon Redshift source connection using the Adobe Experience Platform UI.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
 ---
 # Create an [!DNL Amazon Redshift] source connection in the UI
+
+>[!IMPORTANT]
+>
+>The [!DNL Amazon Redshift] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Amazon Redshift] (hereinafter referred to as "[!DNL Redshift]") source connector using the [!DNL Platform] user interface.
 
