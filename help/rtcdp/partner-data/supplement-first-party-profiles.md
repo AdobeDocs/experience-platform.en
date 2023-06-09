@@ -9,7 +9,7 @@ badgeBeta: label="Beta" type="informative" before-title="true"
 >
 >* This beta functionality is available to customers who have purchased the [Real-Time CDP Prime and Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) package. Please contact your Adobe representative for more information. 
 
-Supplement first-party profiles with attributes from trusted data partners to improve your data foundation, gain new insights into your customer base, and better audience optimization.
+Supplement first-party profiles with attributes from trusted data partners to improve your data foundation and gain new insights into your customer base and better audience optimization.
 
 ![Prospecting use case high-level visual overview.](/help/rtcdp/assets/partner-data/enrichment-use-case-overview.png)
 
@@ -21,7 +21,16 @@ See also https://adobe-my.sharepoint.com/personal/giurgiu_adobe_com/_layouts/15/
 
 ## Prerequisites and planning
 
-{add information about prereqs and planning that customers must complete before getting started with the use case}
+As you consider supplementing your own first-party profiles with attributes from data vendors, you should work out the following details on the data enrichment loop with the data vendor:
+
+* Think about the location where the audience list will be exported, to be shared with the data vendor. This location needs to support file export.
+* What are the identifiers that are expected by the data vendor so they can layer on additional attributes?
+* How will the file containing partner-provided attributes be ingested back into Real-time CDP? For example, the files can be ingested through cloud storage source connectors such as [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) or [SFTP](/help/sources/connectors/cloud-storage/sftp.md). 
+* What is the cadence with which partner you expect partner-provided attributes to be refreshed?
+
+>[!IMPACT ON PROFILE RICHNESS]
+>
+>Note that the additional attributes will impact the [overall profile richness](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) of your profiles. Read the Real-Time Customer Data Platform Product Description for more information about profile richness.
 
 ## How to achieve the use case: high-level overview
 
@@ -31,21 +40,19 @@ See also https://adobe-my.sharepoint.com/personal/giurgiu_adobe_com/_layouts/15/
 4. The **partner** appends licensed attributes for the profiles that they are able to match against. Optionally, a Partner ID can be included and ingested into the partner scoped ID namespace.
 5. Real-Time CDP appends enriched attributes into the customer profile.
  
-## How to achieve the use case: step-by-step instructions
+## How to achieve the use case: Step-by-step instructions
 
 Read through the sections below which include links to further documentation, to complete each of the steps in the high-level overview above.
 
 ### License attributes from the partner
 
-To license attributes from a data partner, you must {ANSHUMAN TO PROVIDE INFO}
-
-In this step, you also must create a new identity type of the type [Partner ID](/help/identity-service/namespaces.md). Link to how to create an identity and to the Partner ID identity type
+This step is covered in the prerequisites and it is a requirement that must be met between you and the data partner. After you have completed the data license agreements with the partner, proceed to the next steps to augment your first party profiles.
 
 ### Extend your profile data and governance model to accommodate partner-provided attributes.
 
 At this point, you are extending your data management framework in Real-Time CDP to accommodate partner-provided attributes. 
 
-You need to create a new schema or extend an existing schema to include attributes that you are expecting to get back from the partner. Read the links below in order to achieve this task:
+You have the option to create a new schema of the **[!UICONTROL XDM Individual Profile]** class, or extend an existing schema of the same type to include partner-provided attributes. Adobe recommends that you use the first option, since it allows for your schemas to evolve independently of each other. Read the documentation pages below for more information
 
 * Link to extend an exiting schema with a new field group
 * Link to new field group doc when it exists
@@ -56,6 +63,14 @@ Also in this step, think about how your data governance model changes as you exp
 * Use TTL on the dataset for clients who have the data hygiene add-on
 * Exercising caution when creating derived datasets which pull in third party data, because once mixed together the only solution to remove the 3rd party data is to delete the whole derived dataset
 
+>[!TIP]
+>
+>If you choose to supplement your customer profiles with a person based identifier from the data vendor, you can create a new identity type of the type [Partner ID](/help/identity-service/namespaces.md). 
+>
+>Read more about the Partner ID in the [identity types section](/help/identity-service/namespaces.md).
+> Read about [how to define identity fields](/help/xdm/ui/fields/identity.md) in the Experience Platform user interface.
+
+
 ### Export audiences that you want enriched keyed off Personal Identifiable Information (PII) or hashed-PII
 
 Export the audiences that you want the partner to enrich. Use the cloud storage destinations provided by Real-time CDP, such as Amazon S3 or SFTP. Use the following documentation pages to complete this step: 
@@ -65,29 +80,31 @@ Export the audiences that you want the partner to enrich. Use the cloud storage 
 * How to [connect to a destination](/help/destinations/ui/connect-destination.md)
 * How to [export data to a cloud storage destination](/help/destinations/ui/activate-batch-profile-destinations.md)
 
-Question - after the export is complete, how does the partner import the audiences from the storage location into wherever they need them for enrichment?
 
 ### The partner appends licensed attributes for the profiles that they are able to match against
 
-In this step, the partner matches the profiles from your data exports, which were keyed off personally identifiable information such as email addresses. 
-
-To increase the likelihood of matching your existing profiles with data from the partner, you can {INSERT RECOMMENDATION HERE}.
+In this step, the partner enriches the audiences from your data exports, which were keyed off person-based identifiers such as hashed email addresses, with information that they own. 
 
 ### Real-Time CDP appends enriched attributes into the customer profile
 
-You now need to ingest data from the partner through the sources provided by Real-Time CDP. 
+You now need to ingest data from the partner through a source connector to bring the enriched data back into Real-Time CDP and supplement your profiles with partner-provided data.
+
+Some recommended source connectors for this purpose might be: 
+
+* [Amazon S3](//help/sources/connectors/cloud-storage/s3.md)
+* [SFTP](//help/sources/connectors/cloud-storage/sftp.md)
 
 ## Limitations and troubleshooting
 
 Note the following limitations as you explore the use case described on this page:
 
-Partner IDs are not ingested into Identity service. 
+If you select to use Partner IDs, note that these are not used in the Identity graph. 
 
 ## Other use cases achieved through partner data support
 
 Explore further use cases enabled through partner data support in Real-Time CDP:
 
-* [!BADGE Beta]{type=Informative} **Leverage partner aided recognition** for personalizing on-site experiences during the visit, and for off-site retargeting post visit, without the user authenticating or having prior history with your brand.
-* [!BADGE Beta]{type=Informative} **Expanded activation** using Partner IDs to publishing ecosystems that do not accept PII or hashed PII.
+* (**Coming soon**) [!BADGE Beta]{type=Informative} **Leverage partner aided recognition** for personalizing on-site experiences during the visit, and for off-site retargeting post visit, without the user authenticating or having prior history with your brand.
+* (**Coming soon**) [!BADGE Beta]{type=Informative} **Expanded activation** using Partner IDs to publishing ecosystems that do not accept PII or hashed PII.
 
 
