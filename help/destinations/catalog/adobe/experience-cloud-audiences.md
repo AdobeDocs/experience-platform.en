@@ -75,7 +75,14 @@ Note the following known limitations and important callouts in the beta release 
 * When connecting to the destination, you can see an option to [enable dataflow alerts](#enable-alerts). Though visible in the UI, the **enable alerts option is not supported** in the beta release.
 * **Backfills are not supported**. The first export to Audience Manager or other Experience Cloud solutions does not include a historical population of the segments. 
 * In the beta release, you can create **a single destination connection to the Experience Cloud Audiences destination**, across all sandboxes belonging to your Experience Platform organization.
-* There is a **four-hour latency** between the time that data is activated in Experience Platform and the time that data is ready to be used in Audience Manager and other Experience Cloud solutions.
+
+### Latency when activating audiences {#audience-activation-latency}
+
+There is a four-hour latency between the time that audiences are first activated in Experience Platform and the time that they are ready to be used in Audience Manager and other Experience Cloud solutions for certain use cases. 
+
+It can take up to 24 hours for audiences to be fully available in Audience Manager for all use-cases and up to 48 hours for audiences from the Experience Cloud Audiences to appear in Audience Manager reports.
+
+Metadata, such as segment names, is available in Audience Manager within minutes of setting up the export to the Experience Cloud Audiences destination.
 
 ## Supported identities {#supported-identities}
 

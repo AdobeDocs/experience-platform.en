@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;Salesforce;salesforce;field mapping;Field mapping;mapping;marketo;B2B;b2b
 title: Microsoft Dynamics Mapping Fields
 description: The tables below contain the mappings between Microsoft Dynamics source fields and their corresponding XDM fields.
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
