@@ -1,6 +1,6 @@
 ---
 title: Encrypted Data Ingestion
-description: Adobe Experience Platform allows you to ingest encrypted files through cloud storage batch sources.
+description: Learn how to ingest encrypted files through cloud storage batch sources using the API.
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
@@ -34,6 +34,29 @@ This tutorial requires you to have a working understanding of the following comp
 ### Using Platform APIs
 
 For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
+
+### Supported file extensions for encrypted files
+
+The list of supported file extensions for encrypted files are as follows:
+
+* .csv
+* .tsv
+* .json
+* .parquet
+* .csv.gpg
+* .tsv.gpg
+* .json.gpg
+* .parquet.gpg
+* .csv.pgp
+* .tsv.pgp
+* .json.pgp
+* .parquet.pgp
+* .gpg
+* .pgp
+
+>[!NOTE]
+>
+>Encrypted file ingestion in Adobe Experience Platform Sources supports openPGP and not any specific proprietary version of PGP.
 
 ## Create encryption key pair {#create-encryption-key-pair}
 
@@ -106,6 +129,7 @@ After creating a base connection, you must then follow the steps outlined in the
 >[!NOTE]
 >
 >You must have the following, in order to create a dataflow for encrypted data ingestion:
+
 >* [Public key ID](#create-encryption-key-pair)
 >* [Source connection ID](../api/collect/cloud-storage.md#source)
 >* [Target connection ID](../api/collect/cloud-storage.md#target)
