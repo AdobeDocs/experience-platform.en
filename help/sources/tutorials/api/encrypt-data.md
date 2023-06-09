@@ -129,7 +129,7 @@ After creating a base connection, you must then follow the steps outlined in the
 >[!NOTE]
 >
 >You must have the following, in order to create a dataflow for encrypted data ingestion:
-
+>
 >* [Public key ID](#create-encryption-key-pair)
 >* [Source connection ID](../api/collect/cloud-storage.md#source)
 >* [Target connection ID](../api/collect/cloud-storage.md#target)
