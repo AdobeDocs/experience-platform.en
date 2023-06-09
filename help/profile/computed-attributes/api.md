@@ -28,7 +28,7 @@ Additionally, please review the documentation for the following service:
 
 ## Retrieve a list of computed attributes {#list}
 
-You can retrieve a list of all the computed attributes for your organization by making a GET request to the `/ca/attributes` endpoint. 
+You can retrieve a list of all the computed attributes for your organization by making a GET request to the `/attributes` endpoint. 
 
 **API format**
 
@@ -46,7 +46,7 @@ The following query parameters can be used when retrieving a list of computed at
 | `limit` | A parameter that specifies the maximum number of items returned as part of the response. The minimum value of this parameter is 1 and the maximum value is 40. If this parameter is not included, by default, 20 items will be returned. | `limit=20` |
 | `offset` | A parameter that specifies the number of items to skip before returning the items. | `offset=5` |
 | `sortBy` | A parameter that specifies the order in which the returned items are sorted. Available options include `name`, `status`, `updateEpoch`, and `createEpoch`. You can also choose whether to sort in ascending order or descending order by not including or including a `-` in front of the sort option. By default, the items will be sorted by `updateEpoch` in descending order. | `sortBy=name` |
-| `status` | A parameter that lets you filter by the status of the computed attribute. Available options include `draft`, `new`, `processing`, `processed`, `failed`, `disabled`. This option is case insensitive. | `status=draft` | 
+| `status` | A parameter that lets you filter by the status of the computed attribute. Available options include `draft`, `new`, `processing`, `processed`, `failed`, `disabled`, and `initializing`. This option is case insensitive. | `status=draft` | 
 
 **Request**
 
@@ -101,14 +101,10 @@ A successful response returns HTTP status 200 with a list of the last 3 updated 
                 "default": true
             },
             "path": "{TENANT_ID}/ComputedAttributes",
-            "positionPath": [
-                "{TENANT_ID}",
-                "ComputedAttributes"
-            ],
             "expression": {
                 "type": "PQL",
                 "format": "pql/text",
-                "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0) and (timestamp occurs <= 7 days before now)].sum(commerce.order.priceTotal)",
+                "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
                 "meta": " "
             },
             "mergeFunction": {
@@ -118,13 +114,6 @@ A successful response returns HTTP status 200 with a list of the last 3 updated 
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "definedOn": [
-                {
-                    "meta:resourceType": "unions",
-                    "meta:containerId": "tenant",
-                    "$ref": "https://ns.adobe.com/xdm/context/profile__union"
-                }
-            ],
             "createEpoch": 1671223530322,
             "updateEpoch": 1673043640946,
             "createdBy": "{USER_ID}"
@@ -143,14 +132,10 @@ A successful response returns HTTP status 200 with a list of the last 3 updated 
                 "default": true
             },
             "path": "{TENANT_ID}/ComputedAttributes",
-            "positionPath": [
-                "{TENANT_ID}",
-                "ComputedAttributes"
-            ],
             "expression": {
                 "type": "PQL",
                 "format": "pql/text",
-                "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0) and (timestamp occurs <= 7 days before now)].sum(commerce.order.priceTotal)",
+                "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
                 "meta": " "
             },
             "mergeFunction": {
@@ -160,13 +145,6 @@ A successful response returns HTTP status 200 with a list of the last 3 updated 
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "definedOn": [
-                {
-                    "meta:resourceType": "unions",
-                    "meta:containerId": "tenant",
-                    "$ref": "https://ns.adobe.com/xdm/context/profile__union"
-                }
-            ],
             "createEpoch": 1671223586455,
             "updateEpoch": 1671223586455,
             "createdBy": "{USER_ID}"
@@ -185,14 +163,10 @@ A successful response returns HTTP status 200 with a list of the last 3 updated 
                 "default": true
             },
             "path": "{TENANT_ID}/ComputedAttributes",
-            "positionPath": [
-                "{TENANT_ID}",
-                "ComputedAttributes"
-            ],
             "expression": {
                 "type": "PQL",
                 "format": "pql/text",
-                "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0) and (timestamp occurs <= 7 days before now)].sum(commerce.order.priceTotal)",
+                "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
                 "meta": " "
             },
             "mergeFunction": {
@@ -202,13 +176,6 @@ A successful response returns HTTP status 200 with a list of the last 3 updated 
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "definedOn": [
-                {
-                    "meta:resourceType": "unions",
-                    "meta:containerId": "tenant",
-                    "$ref": "https://ns.adobe.com/xdm/context/profile__union"
-                }
-            ],
             "createEpoch": 1671220358902,
             "updateEpoch": 1671220358902,
             "createdBy": "{USER_ID}"
@@ -259,8 +226,9 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
         "expression": {
             "type": "PQL", 
             "format": "pql/text", 
-            "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0) and (timestamp occurs <= 7 days before now)].sum(commerce.order.priceTotal)"
+            "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)"
         },
+        "keepCurrent": false,
         "duration": {
             "count": 4,
             "unit": "DAYS"
@@ -271,13 +239,14 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 
 | Property | Description |
 | -------- | ----------- |
-| `name` | The name of the computed attribute field, as a string. The name of the computed attribute can only be comprised of alphanumeric characters without any spaces or underscores.  |
+| `name` | The name of the computed attribute field, as a string. The name of the computed attribute can only be comprised of alphanumeric characters without any spaces or underscores. This value **must** be unique amongst all the computed attributes. As a best practice, this name should be a camelCase version of the `displayName`.   |
 | `description` | A description of the computed attribute. This is especially useful once multiple computed attributes have been defined as it will help others within your organization to determine the correct computed attribute to use. |
 | `displayName` | The display name for the computed attribute. This is the name that will be displayed when listing your computed attributes within the Adobe Experience Platform UI. |
 | `expression` | An object that represents the query expression of the computed attribute you are trying to create. |
 | `expression.type` | The type of the expression. Currently, only PQL is supported. |
 | `expression.format` | The format of the expression. Currently, only `pql/text` is supported. |
 | `expression.value` | The value of the expression. |
+| `keepCurrent` | A boolean that determines whether or not the computed attribute's value is kept up-to-date. Currently, this value should be set to `false`. |
 | `duration` | An object that represents the lookback period for the computed attribute. The lookback period represents how far back can be looked back to compute the computed attribute. |
 | `duration.count` | A number that represents the duration for the lookback period. The possible values depend on the value of the `duration.unit` field. <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
 | `duration.unit` | A string that represents the unit of time that will be used for the lookback period. Possible values include: `HOURS`, `DAYS`, `WEEKS`, and `MONTHS`. |
@@ -306,10 +275,6 @@ A successful response returns HTTP status 200 with information about your newly 
         "isDefault": true
     },
     "path": "{TENANT_ID}/ComputedAttributes",
-    "positionPath": [
-        "{TENANT_ID}",
-        "ComputedAttributes"
-    ],
     "keepCurrent": false,
     "expression": {
         "type": "PQL",
@@ -323,16 +288,6 @@ A successful response returns HTTP status 200 with information about your newly 
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "returnSchema": {
-        "meta:xdmType": "number"
-    },
-    "definedOn": [
-        {
-            "meta:resourceType": "unions",
-            "meta:containerId": "tenant",
-            "$ref": "https://ns.adobe.com/xdm/context/profile__union"
-        }
-    ],
     "createEpoch": 1680070188696,
     "updateEpoch": 1680070188696,
     "createdBy": "{USER_ID}"
@@ -394,10 +349,6 @@ A successful response returns HTTP status 200 with detailed information about th
         "isDefault": true
     },
     "path": "{TENANT_ID}/ComputedAttributes",
-    "positionPath": [
-        "{TENANT_ID}",
-        "ComputedAttributes"
-    ],
     "keepCurrent": false,
     "expression": {
         "type": "PQL",
@@ -411,16 +362,6 @@ A successful response returns HTTP status 200 with detailed information about th
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "returnSchema": {
-        "meta:xdmType": "number"
-    },
-    "definedOn": [
-        {
-            "meta:resourceType": "unions",
-            "meta:containerId": "tenant",
-            "$ref": "https://ns.adobe.com/xdm/context/profile__union"
-        }
-    ],
     "createEpoch": 1680070188696,
     "updateEpoch": 1680070188696,
     "createdBy": "{USER_ID}"
@@ -434,13 +375,10 @@ A successful response returns HTTP status 200 with detailed information about th
 | `imsOrgId` | The ID of the organization the computed attribute belongs to. |
 | `sandbox` | The sandbox object contains details of the sandbox within which the computed attribute was configured. This information is drawn from the sandbox header sent in the request. For more information, please see the [sandboxes overview](../../sandboxes/home.md). |
 | `path` | The `path` to the computed attribute. |
-| `positionPath` | An array containing the deconstructed `path` to the computed attribute. |
 | `expression` | An object that contains the computed attribute's expression. |
 | `mergeFunction` | An object that contains the merge function for the computed attribute. This value is based off of the corresponding aggregation parameter within the computed attribute's expression. |
-| `status` | The computed attribute's status. This can be one of the following values: `DRAFT`, `NEW`, `PROCESSING`, `PROCESSED`, `FAILED`, `DISABLED`, or `DELETED`. |
+| `status` | The computed attribute's status. This can be one of the following values: `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED`, or `DISABLED`. |
 | `schema` | An object that contains information about the schema where the expression is evaluated in. Currently, only `_xdm.context.profile` is supported. |
-| `returnSchema` | An object that contains the return type supported by the PQL expression. |
-| `definedOn` | An array showing the union schemas upon which the computed attribute has been defined. Contains one object per union schema, meaning there may be multiple objects within the array if the computed attribute has been added to multiple schemas based on different classes. |
 | `createEpoch` | The time at which the computed attribute was created, in seconds. |
 | `updateEpoch`| The time at which the computed attribute was last updated, in seconds. |
 | `createdBy` | The ID of the user who created the computed attribute. |
@@ -453,7 +391,7 @@ You can deleted a specific computed attribute by making a DELETE request to the 
 
 >[!IMPORTANT]
 >
->The delete request can only be used to delete computed attributes that have a status of **draft** (`DRAFT`). This endpoint **cannot** be used to delete computed attributes that are published.
+>The delete request can only be used to delete computed attributes that have a status of **draft** (`DRAFT`). This endpoint **cannot** be used to delete computed attributes in any other state.
 
 **API format**
 
@@ -500,10 +438,6 @@ A successful response returns HTTP status 202 with details of the deleted comput
         "isDefault": true
     },
     "path": "{TENANT_ID}/ComputedAttributes",
-    "positionPath": [
-        "{TENANT_ID}",
-        "ComputedAttributes"
-    ],
     "keepCurrent": false,
     "expression": {
         "type": "PQL",
@@ -517,16 +451,6 @@ A successful response returns HTTP status 202 with details of the deleted comput
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "returnSchema": {
-        "meta:xdmType": "string"
-    },
-    "definedOn": [
-        {
-            "meta:resourceType": "unions",
-            "meta:containerId": "tenant",
-            "$ref": "https://ns.adobe.com/xdm/context/profile__union"
-        }
-    ],
     "createEpoch": 1681365690928,
     "updateEpoch": 1681365690928,
     "createdBy": "{USER_ID}"
@@ -543,8 +467,8 @@ You can update a specific computed attribute by making a PATCH request to the `/
 >
 >When updating a computed attribute, only the following fields can be updated:
 >
->- If the current status is `NEW`, the `displayName` and `description` can be updated. The status can also be changed to `DISABLED`.
->- If the current status is `DRAFT`, the status can only be changed to `NEW`.
+>- If the current status is `NEW`, the status can only be changed to `DISABLED`.
+>- If the current status is `DRAFT`, you can change the values of the following fields: `name`, `description`, `keepCurrent`, `expression`, and `duration`. You can also change the status from `DRAFT` to `NEW`. Any changes to system-generated fields, such as `mergeFunction` or `path` will return an error.
 >- If the current status is either `PROCESSING` or `PROCESSED`, the status can only be changed to `DISABLED`.
 
 **API format**
@@ -605,10 +529,6 @@ A successful response returns HTTP status 200 with information about your newly 
         "isDefault": true
     },
     "path": "{TENANT_ID}/ComputedAttributes",
-    "positionPath": [
-        "{TENANT_ID}",
-        "ComputedAttributes"
-    ],
     "keepCurrent": false,
     "expression": {
         "type": "PQL",
@@ -622,16 +542,6 @@ A successful response returns HTTP status 200 with information about your newly 
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "returnSchema": {
-        "meta:xdmType": "number"
-    },
-    "definedOn": [
-        {
-            "meta:resourceType": "unions",
-            "meta:containerId": "tenant",
-            "$ref": "https://ns.adobe.com/xdm/context/profile__union"
-        }
-    ],
     "createEpoch": 1680071726825,
     "updateEpoch": 1680074429192,
     "createdBy": "{USER_ID}"

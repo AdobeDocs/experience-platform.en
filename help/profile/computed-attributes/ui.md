@@ -67,9 +67,19 @@ After selecting the attribute to use in the computed attribute definition, you c
 
 ### Apply aggregation function
 
-Now, you can apply a function to the field from the conditional output.
+Now, you can apply a function to the field from the conditional output. First, select the aggregation function type. Available options include [!UICONTROL Sum], [!UICONTROL Min], [!UICONTROL Max], [!UICONTROL Count], and [!UICONTROL Most Recent]. More information about these functions can be found in the [functions section](./overview.md#functions) of the computed attributes overview.
 
 ![The computed attribute functions are displayed.](./images/ui/select-function.png)
+
+After choosing a function, you can choose the field to aggregate on. The eligible fields to choose are dependent on the function selected.
+
+IMAGE
+
+### Lookback duration
+
+After applying the aggregation function, you'll need to define the lookback period of the computed attribute. This lookback period specifies the length of time that you want to aggregate events on. This lookback duration can be specified in terms of hours, days, weeks, or months.
+
+IMAGE
 
 With these steps completed, you can now either choose to save this computed attribute as a draft or to immediately publish it.
 
@@ -91,11 +101,21 @@ When selecting a published computed attribute, the computed attributes detail pa
 
 This page displays a summary of the computed attribute's details, as well as a graph showing the value distribution as well as sample profiles that qualify for the computed attribute.
 
+>[!NOTE]
+>
+>The value distribution reflects the distribution of attribute values for profiles at the time of the sampling job. The computed attribute value in the sample profile reflects the latest merged profile value for a few sample profiles.
+
 ### Draft computed attribute {#draft}
 
 When selecting a draft computed attribute, the **[!UICONTROL Edit computed attributes]** page appears. This page, similarly to the Create computed attributes page, lets you edit your computed attribute's basic information, as well as its definition, before letting you update the draft or publish it.
 
 ![The [!UICONTROL Edit computed attributes ]page is displayed.](./images/ui/edit.png)
+
+## Using computed attributes {#usage}
+
+After creating a computed attribute, you can use **published** computed attributes in other downstream services. Since computed attributes are profile attribute fields created on your profile union schema, you can look up computed attribute values for a Real-Time Customer Profile, use them in an audience, activate them to a destination, or use them for personalization in journeys in Adobe Journey Optimizer.
+
+IMAGE
 
 ## Next steps
 
