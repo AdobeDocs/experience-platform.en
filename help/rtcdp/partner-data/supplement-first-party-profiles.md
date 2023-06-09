@@ -30,7 +30,7 @@ As you consider supplementing your own first-party profiles with attributes from
 
 >[!IMPACT ON PROFILE RICHNESS]
 >
->Note that the additional attributes will impact the [overall profile richness](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) of your profiles. Read the Real-Time Customer Data Platform Product Description for more information about profile richness.
+>Note that the additional attributes ingested into Real-Time CDP will impact the overall profile richness of your profiles. Read the [Real-Time Customer Data Platform Product Description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) for more information about profile richness.
 
 ## How to achieve the use case: high-level overview
 
