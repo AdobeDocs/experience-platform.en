@@ -24,9 +24,9 @@ exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 
 This article explains how to use the Experience Platform UI to export files on-demand to batch destinations such as [cloud storage](/help/destinations/catalog/cloud-storage/overview.md) and [email marketing](/help/destinations/catalog/email-marketing/overview.md) destinations.
 
-The **[!UICONTROL Export file now]** control allows you to export a full file without interrupting the current export schedule of a previously scheduled segment. This export happens in addition to previously scheduled exports and does not change the export frequency of the segment. The file export is triggered immediately and it picks up the latest results from Experience Platform segmentation runs.
+The **[!UICONTROL Export file now]** control allows you to export a full file without interrupting the current export schedule of a previously scheduled audience. This export happens in addition to previously scheduled exports and does not change the export frequency of the audience. The file export is triggered immediately and it picks up the latest results from Experience Platform segmentation runs.
 
-You can also use the Experience Platform APIs for this purpose. Read how to [activate audience segments on-demand to batch destinations via the ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md).
+You can also use the Experience Platform APIs for this purpose. Read how to [activate audiences on-demand to batch destinations via the ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md).
 
 ## Prerequisites {#prerequisites}
 
@@ -42,11 +42,11 @@ To export files on-demand to batch destinations, you must have successfully [con
 
     ![Image highlighting a filtered dataflow.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Select the **[!UICONTROL Activation data]** tab and select the segment for which you want to export a file on-demand and select the **[!UICONTROL Export file now]** control to trigger a one-time export which will deliver a file to your batch destination.
+3. Select the **[!UICONTROL Activation data]** tab and select the audience for which you want to export a file on-demand and select the **[!UICONTROL Export file now]** control to trigger a one-time export which will deliver a file to your batch destination.
 
     >[!IMPORTANT]
     >
-    >Selecting multiple segments to export files on-demand in bulk is currently not supported in the UI. Use the [ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md) for that purpose.
+    >Selecting multiple audiences to export files on-demand in bulk is currently not supported in the UI. Use the [ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md) for that purpose.
 
     ![Image highlighting the Export file now button.](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
 
@@ -64,9 +64,9 @@ To export files on-demand to batch destinations, you must have successfully [con
 
 Keep in mind the following considerations when using the **[!UICONTROL Export file now]** control:
 
-* **[!UICONTROL Export file now]** works only for segments whose schedule in the batch activation dataflow overlaps with the present date. This includes segments with schedules that have no end date (export frequency of **[!UICONTROL Once]**), or where the end date has not yet passed.
-* When adding a segment to an existing dataflow, wait for at least 15 minutes until using the **[!UICONTROL Export file now]** control.
-* If you change a segment's merge policy, or if you create a segment which uses a new merge policy, wait 24 hours until using the **[!UICONTROL Export file now]** control.
+* **[!UICONTROL Export file now]** works only for audiences whose schedule in the batch activation dataflow overlaps with the present date. This includes audiences with schedules that have no end date (export frequency of **[!UICONTROL Once]**), or where the end date has not yet passed.
+* When adding an audience to an existing dataflow, wait for at least 15 minutes until using the **[!UICONTROL Export file now]** control.
+* If you change an audience's merge policy, or if you create an audience which uses a new merge policy, wait 24 hours until using the **[!UICONTROL Export file now]** control.
 
 ## UI error messages {#ui-error-messages}
 
@@ -74,10 +74,10 @@ When using the **[!UICONTROL Export file now]** control, you might encounter any
 
 |Error message | Resolution |
 |---------|----------|
-| Run already going on for segment `segment ID` for order `dataflow ID` with run id `flow run ID` | This error message indicates that an ad-hoc activation flow is currently ongoing for a segment. Wait for the job to finish before triggering the activation job again.|
-| Segments `<segment name>` are not part of this dataflow or out of schedule range! | This error message indicates that the segments you selected to activate are not mapped to the dataflow or that the activation schedule set up for the segments has either expired or not yet started. Check if the segment is indeed mapped to the dataflow and verify that the segment activation schedule overlaps with the present date.|
+| Run already going on for audience `segment ID` for order `dataflow ID` with run id `flow run ID` | This error message indicates that an ad-hoc activation flow is currently ongoing for an audience. Wait for the job to finish before triggering the activation job again.|
+| Audiences `<segment name>` are not part of this dataflow or out of schedule range! | This error message indicates that the audiences you selected to activate are not mapped to the dataflow or that the activation schedule set up for the audiences has either expired or not yet started. Check if the audience is indeed mapped to the dataflow and verify that the audience activation schedule overlaps with the present date.|
 
 ## Related information {#related-information}
 
-* [Activate audience segments to batch destinations on-demand using the Experience Platform APIs](/help/destinations/api/ad-hoc-activation-api.md)
+* [Activate audiences to batch destinations on-demand using the Experience Platform APIs](/help/destinations/api/ad-hoc-activation-api.md)
 * [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md)

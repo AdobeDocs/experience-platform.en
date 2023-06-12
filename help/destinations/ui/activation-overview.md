@@ -2,7 +2,7 @@
 keywords: activate destinations;activate data
 title: Activation overview
 type: Tutorial
-description: Learn how to activate the audience data you have in Adobe Experience Platform to various types of destinations.
+description: Learn how to activate the audiences you have in Adobe Experience Platform to various types of destinations.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
 ---
 # Activation overview

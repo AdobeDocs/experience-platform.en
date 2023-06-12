@@ -99,11 +99,11 @@ To see all the audiences being activated to your destination, use the filtering 
 
 ![All audiences](../assets/ui/activate-segment-streaming-destinations/all-audiences.png)
 
-1. On the **[!UICONTROL Audience schedule]** page, select each segment, then use the **[!UICONTROL Start date]** and **[!UICONTROL End date]** selectors to configure the time interval for sending data to your destination.
+1. On the **[!UICONTROL Audience schedule]** page, select each audience, then use the **[!UICONTROL Start date]** and **[!UICONTROL End date]** selectors to configure the time interval for sending data to your destination.
 
     ![Audience schedule](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
 
-    * Some destinations require you to select the **[!UICONTROL Origin of audience]** for each segment, using the drop-down menu underneath the calendar selectors. If your destination does not include this selector, skip this step.
+    * Some destinations require you to select the **[!UICONTROL Origin of audience]** for each audience, using the drop-down menu underneath the calendar selectors. If your destination does not include this selector, skip this step.
 
         ![Mapping ID](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
