@@ -115,7 +115,7 @@ Yes, same-page and next-page personalization use cases support a maximum of 30 a
 
 **What types of attributes are supported for activation (e.g. arrays, maps, etc.)?**
 
-Currently, only leaf-level attributes are supported for activation.
+Currently, only static, single-value attributes are supported, such as `person.name.firstName`. Array attributes are currently not supported.
 
 <!-- **Is there a limit on the number of audiences that can be activated to Adobe Target and Custom Personalization destinations?**
 
