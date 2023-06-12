@@ -9,6 +9,8 @@ Adobe Experience Platform provides improved visibility for the status of all que
 
 ## [!UICONTROL Scheduled Queries] 
 
+<!-- Add info around here somewhere -->
+
 The [!UICONTROL Scheduled Queries] tab provides an overview of all your scheduled CTAS and ITAS queries. Run details can be found for all scheduled queries as well as error codes and messages for any failed queries.
 
 To navigate to the [!UICONTROL Scheduled Queries] tab, select **[!UICONTROL Queries]** from the left navigation bar followed by **[!UICONTROL Scheduled Queries]**

@@ -51,6 +51,8 @@ After confirming all these details, select **[!UICONTROL Save]** to create a sch
 
 ## Delete or disable a schedule {#delete-schedule}
 
+<!-- Add info here -->
+
 You can delete or disable a schedule from the schedules workspace. You must select a query template from either the [!UICONTROL Templates] tab or the [!UICONTROL Scheduled Queries] tab to navigate to the Query Editor and select **[!UICONTROL Schedule]** to access the schedules workspace. 
 
 Select a schedule from the rows of available schedules. You can use the toggle to disable or enable the scheduled query.
