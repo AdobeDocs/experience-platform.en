@@ -44,15 +44,17 @@ Some destinations in Experience Platform have certain rules and obligations for 
 
 {style="table-layout:auto"}
 
-## External audiences support {#external-audiences-support}
+## Supported audiences {#supported-audiences}
+
+This section describes all the audiences that you can export to this destination.
 
 All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
-Additionally, this destination also supports the activation of the external audiences described in the table below.
+Additionally, this destination also supports the activation of the audiences described in the table below.
 
-| External audience type | Description | 
+| Audience type | Description | 
 ---------|----------|
-| Custom uploads | Audiences ingested into Experience Platform from CSV files. | 
+| Custom uploads | Audiences ingested into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 

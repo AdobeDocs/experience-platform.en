@@ -37,6 +37,20 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 
 {style="table-layout:auto"}
 
+## Supported audiences {#supported-audiences}
+
+This section describes all the audiences that you can export to this destination.
+
+All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
+Additionally, this destination also supports the activation of the audiences described in the table below.
+
+| Audience type | Description | 
+---------|----------|
+| Custom uploads | Audiences ingested into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
@@ -65,8 +79,8 @@ Refer to the table below for information about the destination export type and f
 
 Before creating the [!DNL Google Ads] destination in Platform, you must contact [!DNL Google] for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact [!DNL Google] and provide the following information:
 
-* **Account ID**: Adobe’s account ID with Google. Account ID: 87933855.
-* **Customer ID**: Adobe’s customer account ID with Google. Customer ID: 89690775.
+* **Account ID**: Adobe's account ID with Google. Account ID: 87933855.
+* **Customer ID**: Adobe's customer account ID with Google. Customer ID: 89690775.
 * Your account type: **AdWords**
 * **Google AdWords ID**: This is your ID with [!DNL Google]. The ID format is typically 123-456-7890.
 

@@ -42,15 +42,17 @@ Next, they can use their offline data including associated membership IDs and cu
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 |extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
 
-## External audiences support {#external-audiences-support}
+## Supported audiences {#supported-audiences}
+
+This section describes all the audiences that you can export to this destination.
 
 All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
-Additionally, this destination also supports the activation of the external audiences described in the table below.
+Additionally, this destination also supports the activation of the audiences described in the table below.
 
-| External audience type | Description | 
+| Audience type | Description | 
 ---------|----------|
-| Custom uploads | Audiences ingested into Experience Platform from CSV files. | 
+| Custom uploads | Audiences ingested into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
