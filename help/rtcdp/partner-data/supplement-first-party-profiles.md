@@ -98,8 +98,8 @@ You now need to ingest data from the partner through a source connector to bring
 
 Some recommended source connectors for this purpose might be: 
 
-* [Amazon S3](//help/sources/connectors/cloud-storage/s3.md)
-* [SFTP](//help/sources/connectors/cloud-storage/sftp.md)
+* [Amazon S3](/help/sources/connectors/cloud-storage/s3.md)
+* [SFTP](/help/sources/connectors/cloud-storage/sftp.md)
 
 ## Limitations and troubleshooting {#limitations-and-troubleshooting}
 
