@@ -200,12 +200,7 @@ In the above example request, the same `sessionId` that is returned in the previ
 
 For more information on the Buffer Start endpoint parameters and examples, see the Media Edge Swagger file.
 
-### Example response
-
-The successful respone does not include any content, as shown below:
-
-`Status 200. No content.`
-
+The successful respone indicates a status of 200 and does not include any content.
 
 ## Play event request
 
@@ -237,11 +232,8 @@ curl -X 'POST' \
   ]
 }'
 ```
-### Example response
 
-The successful respone does not include any content, as shown below:
-
-`Status 200. No content.`
+The successful respone indicates a status of 200 and does not include any content.
 
 For more information on Play endpoint parameters and examples, see the Media Edge Swagger file.
 
@@ -276,13 +268,7 @@ curl -X 'POST' \
 }'
 ```
 
-### Example response
-
-The successful respone does not include any content, as shown below:
-
-`Status 200. No content.`
-
-For more information on Session Complete endpoint parameters and examples, see the Media Edge Swagger file.
+The successful respone indicates a status of 200 and does not include any content.
 
 ## Response codes
 
