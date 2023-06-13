@@ -23,6 +23,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 
 Updates to existing features in Adobe Experience Platform:
 
+- [Dashboards](#dashboards)
 - [Data Collection](#data-collection)
 - [Data Governance](#data-governance)
 - [Data Ingestion](#data-ingestion)
@@ -32,6 +33,32 @@ Updates to existing features in Adobe Experience Platform:
 - [Query Service](#query-service)
 - [Sources](#sources)
 
+## Dashboards {#dashboards}
+
+Adobe Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots. 
+
+<!-- 
+The [!UICONTROL License Usage] dashboard and individual license data for customers has been updated to resolve previous discrepancies between the license entitlements recorded in the Sales Orders and those originally reported in the Experience Platform [!UICONTROL License Usage] dashboard. The updates of individual license data will happen in phases between June 2023 and June 11, 2023. Your actual usage values remain accurate.<br><br>Experience Platform provides multiple capabilities to manage the usage volume:<br><ul><li>[Review and apply best practices to manage data and license usage](https://experienceleague.adobe.com/docs/experience-platform/landing/license/data-management-best-practices.html)</li><li>Apply filtering rules and conditions to [selectively include or exclude data from ingestion to the Real-Time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html#filtering-for-profile) for Analytics data before it is ingested into Profile.</li><li>[Contact Adobe support to apply expiration times for Pseudonymous Profiles.](https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html)</li><li>[Contact Adobe support to enable Experience Event expirations on desired datasets.](https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html)</li><li>Contact your Adobe representative to discuss options to increase your license entitlements.</li></ul>
+ 
+
+<br><ul><li></li></ul><br><br>
+
+Adobe has corrected erroneous entries in your product's associated TermSheets to match their corresponding [Product Descriptions](https://helpx.adobe.com/legal/product-descriptions.html). Discrepancies in base quantities for the **Average Profile Richness** add-on packs will be corrected on **June 9, 2023**. This will provide an accurate representation of your license usage and ensure contractual compliance for your organization. Note that it can take up to 24-36 hours for the licence usage reports to reflect the update.
+
+As a result of this update, you may notice a one-time drop in your license usage for **Average Profile Richness** and **total consumed storage** metrics. If this update brings you close to your licensed limit there are several measures you can take to mitigate your usage.
+
+-[Apply expiration times for Pseudonymous Profiles](https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html)
+-[Contact support in order to enable Experience Event expirations on your required datasets. Adobe support representatives can configure expiration times for all Experience Events that are ingested into a dataset enabled for Real-Time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html)
+-Apply filtering rules and conditions to [selectively include or exclude data from ingestion to the Real-Time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html#filtering-for-profile) for Analytics data before it is ingested into Profile.
+
+Contact your Adobe Support representative to discuss options to reduce your usage or increase your license limits.
+ -->
+
+| Feature | Description |
+| --- | --- |
+| License entitlement correction  | The [!UICONTROL License Usage] dashboard and individual license data for customers has been updated to resolve previous discrepancies between the license entitlements recorded in the Sales Orders and those originally reported in the Experience Platform [!UICONTROL License Usage] dashboard. The updates of individual license data will happen in phases between June 2023 and June 11, 2023. Your actual usage values remain accurate.<br><br>Experience Platform provides multiple capabilities to manage the usage volume:<br><ul><li>[Review and apply best practices to manage data and license usage](https://experienceleague.adobe.com/docs/experience-platform/landing/license/data-management-best-practices.html).</li><li>Apply filtering rules and conditions to [selectively include or exclude data from ingestion to the Real-Time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html#filtering-for-profile) for Analytics data before it is ingested into Profile.</li><li>[Contact Adobe support to apply expiration times for Pseudonymous Profiles.](https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html)</li><li>[Contact Adobe support to enable Experience Event expirations on desired datasets.](https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html)</li><li>Contact your Adobe representative to discuss options to increase your license entitlements.</li></ul>|
+
+For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
 
 ## Data collection {#data-collection}
 
@@ -74,7 +101,7 @@ Adobe Experience Platform provides a rich set of features to ingest any type and
 
 To learn more about data ingestion, read the [data ingestion overview](../../ingestion/home.md).
 
-## Destinations {#destinations}
+## Destinations (updated May 31st) {#destinations}
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
@@ -86,18 +113,15 @@ To learn more about data ingestion, read the [data ingestion overview](../../ing
 
 {style="table-layout:auto"}
 
-<!--
-
 **New or updated functionality** {#destinations-new-updated-functionality}
 
 | Functionality | Description |
 | ----------- | ----------- |
-| General availability of attribute-based personalization through the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) destinations. | Leverage profile attributes in real-time to deliver one-to-one web and mobile personalization, via Adobe Target or other custom personalization destinations in Experience Platform. See the [dedicated documentation](../../destinations/ui/activate-edge-personalization-destinations.md) for more details. |
+| General availability of attribute-based personalization through the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) destinations. | Leverage profile attributes in real-time to deliver one-to-one web and mobile personalization, via Adobe Target or other custom personalization destinations in Experience Platform. Read the [dedicated documentation](../../destinations/ui/activate-edge-personalization-destinations.md) and the [FAQ](/help/destinations/destinations-faq.md#same-next-page-personalization) for more details. |
 | Destination SDK support for grouping exported audiences based on merge policy. | When building a file-based destination with Destination SDK, you can now configure the grouping of exported audiences into one or multiple files, based on merge policy. <br><br> Additionally, you can now include the merge policy ID and merge policy name in the exported file names, by using the dedicated template macros. <br><br>See the [batch configuration documentation](../../destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md) for more details on how to use the `segmentGroupingEnabled` parameter and the new file name template macros.|
+| Include manifest file in exports to beta cloud storage destinations | You can now include a manifest JSON file that contains information abut the export location, export size, and more when exporting data to the six cloud storage beta destinatins - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br><br> Get more information in the **[!UICONTROL Destination details]** section of the pages linked above. |
 
 {style="table-layout:auto"}
-
--->
 
 **Fixes and enhancements** {#destinations-fixes-and-enhancements}
 
