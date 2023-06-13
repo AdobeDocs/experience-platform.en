@@ -54,11 +54,11 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 
 **Response**
 
-A successful response returns HTTP status 200 with the specified number of sample profiles, with segment membership, identities, and profile attributes that correspond to the source XDM schema.
+A successful response returns HTTP status 200 with the specified number of sample profiles, with audience membership, identities, and profile attributes that correspond to the source XDM schema.
 
 >[!NOTE]
 >
-> The response returns only segment membership, identities, and profile attributes that are used in the destination instance. Even if your source schema has other fields, these are ignored.
+> The response returns only audience membership, identities, and profile attributes that are used in the destination instance. Even if your source schema has other fields, these are ignored.
 
 ```json
 [
@@ -99,9 +99,9 @@ A successful response returns HTTP status 200 with the specified number of sampl
 
 | Property | Description |
 | -------- | ----------- |
-| `segmentMembership` | A map object which describes the individual's segment memberships. For more information on `segmentMembership`, read [Segment Membership Details](../../../../xdm/field-groups/profile/segmentation.md). |
+| `segmentMembership` | A map object which describes the individual's audience memberships. For more information on `segmentMembership`, read [Segment Membership Details](../../../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | A timestamp of the last time this profile qualified for the segment. |
-| `status` | A string field that indicates whether the segment membership has been realized as part of the current request. The following values are accepted: <ul><li>`realized`: The profile is part of the segment.</li><li>`exited`: The profile is exiting the segment as part of the current request.</li></ul> |
+| `status` | A string field that indicates whether the audience membership has been realized as part of the current request. The following values are accepted: <ul><li>`realized`: The profile is part of the segment.</li><li>`exited`: The profile is exiting the audience as part of the current request.</li></ul> |
 | `identityMap` | A map-type field that describes the various identity values for an individual, along with their associated namespaces. For more information on `identityMap`, see [basis of schema composition](../../../../xdm/schema/composition.md#identityMap). |
 
 {style="table-layout:auto"}

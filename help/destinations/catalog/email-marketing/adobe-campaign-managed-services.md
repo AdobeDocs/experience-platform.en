@@ -22,7 +22,7 @@ Use Campaign to:
 >
 >Keep in mind the following guardrails when using the Adobe Campaign Managed Cloud Services connection:
 >
->* A maximum of 50 segments can be [activated](#activate) for the destination,
+>* A maximum of 50 audiences can be [activated](#activate) for the destination,
 >* For each segment, you can add up to 20 fields to [map](#map) to Adobe Campaign,
 >* Data retention on Azure Blob storage Data Landing Zone (DLZ) : 7 day,
 >* The activation frequency is 3 hours minimum.
@@ -33,7 +33,7 @@ To help you better understand how and when you should use the Adobe Campaign Man
 
 Adobe Experience Platform creates a customer profile that incorporates information like the identity graph, behavioral data from analytics, merges offline and online data etc. With this integration, you can augment the segmentation capabilities that are already existing within Adobe Campaign with those Adobe Experience Platform powered audiences, and you can hence activate that data in Campaign.
 
-For example, a sports attire company wants to leverage the Adobe Experience Platform powered smart segments and activate them using Adobe Campaign to reach out to their customer base across the different channels supported by Adobe Campaign. 
+For example, a sports attire company wants to leverage the Adobe Experience Platform powered smart audiences and activate them using Adobe Campaign to reach out to their customer base across the different channels supported by Adobe Campaign. 
 
 Once the messages are sent, they want to enhance the customer profile in Adobe Experience platform with experience data from Adobe Campaign such as sends, open and clicks.
 
@@ -98,7 +98,7 @@ Select the marketing actions applicable to the data that you want to export to t
 
 For more information about marketing actions, see the [data usage policies overview](/help/data-governance/policies/overview.md) page.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 

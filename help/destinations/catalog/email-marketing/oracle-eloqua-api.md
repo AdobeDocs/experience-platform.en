@@ -9,13 +9,13 @@ exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) enables marketers to plan and execute campaigns while delivering a personalized customer experience for their prospects. With integrated lead management and easy campaign creation, it helps marketers engage the right audience at the right time in their buyer's journey and elegantly scales to reach audiences across channels including email, display search, video, and mobile. Sales teams can close more deals at a faster rate, increasing marketing ROI through real-time insight.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Update a contact](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) operation from the [!DNL Oracle Eloqua] REST API, which allows you to **update identities** within a segment into [!DNL Oracle Eloqua].
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Update a contact](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) operation from the [!DNL Oracle Eloqua] REST API, which allows you to **update identities** within an audience into [!DNL Oracle Eloqua].
 
 [!DNL Oracle Eloqua] uses [Basic Authentication](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) to communicate with the [!DNL Oracle Eloqua] REST API. Instructions to authenticate to your [!DNL Oracle Eloqua] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
-The marketing department of an online platform wants to broadcast an email based marketing campaign to a curated audience of leads. The platform's marketing team can update existing lead information through Adobe Experience Platform, build segments from their own offline data, and send these segments to [!DNL Oracle Eloqua], which can then be used to send the marketing campaign email.
+The marketing department of an online platform wants to broadcast an email based marketing campaign to a curated audience of leads. The platform's marketing team can update existing lead information through Adobe Experience Platform, build audiences from their own offline data, and send these audiences to [!DNL Oracle Eloqua], which can then be used to send the marketing campaign email.
 
 ## Prerequisites {#prerequisites}
 
@@ -23,7 +23,7 @@ The marketing department of an online platform wants to broadcast an email based
 
 Before activating data to the [!DNL Oracle Eloqua] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
-Refer to the Experience Platform documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
+Refer to the Experience Platform documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on audience statuses.
 
 ### [!DNL Oracle Eloqua] prerequisites {#prerequisites-destination}
 
@@ -48,10 +48,10 @@ Refer to the [Signing in to [!DNL Oracle Eloqua]](https://docs.oracle.com/en/clo
 
 >[!NOTE]
 >
->* [!DNL Oracle Eloqua] custom contact fields are automatically created using the names of the segments selected during the **[!UICONTROL Select segments]** step.
+>* [!DNL Oracle Eloqua] custom contact fields are automatically created using the names of the audiences selected during the **[!UICONTROL Select segments]** step.
 
 * [!DNL Oracle Eloqua] has a maximum limit of 250 custom contact fields.
-* Before exporting new segments ensure that the number of Platform segments and the number of existing segments within [!DNL Oracle Eloqua] do not exceed this limit.
+* Before exporting new audiences ensure that the number of Platform audiences and the number of existing audiences within [!DNL Oracle Eloqua] do not exceed this limit.
 * If this limit is exceeded, you will encounter an error in Experience Platform. This is because the [!DNL Oracle Eloqua] API fails to validate the request, and responds with a - *400: There was a validation error* - error message describing the issue.
 * If you have reached the limit specified above, you need to remove existing mappings from your destination and delete the corresponding custom contact fields in your [!DNL Oracle Eloqua] account before you can export more segments.
 
@@ -71,8 +71,8 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> For each selected segment in Platform, the corresponding [!DNL Oracle Eloqua] segment status gets updated with its segment status from Platform.</li></ul> |
-| Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> For each selected audience in Platform, the corresponding [!DNL Oracle Eloqua] segment status gets updated with its audience status from Platform.</li></ul> |
+| Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
 {style="table-layout:auto"}
 
@@ -123,13 +123,13 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 >
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
@@ -183,22 +183,22 @@ When you are finished providing the mappings for your destination connection, se
 
 >[!NOTE]
 >
->The destination automatically suffixes a unique identifier to the selected segment names on each execution when sending the contact field information to [!DNL Oracle Eloqua]. This ensures the contact field names corresponding to your segment names do not overlap. Refer to the [Validate data export](#exported-data) section screenshot example of an [!DNL Oracle Eloqua] Contact Details page with custom contact field created using the segment names.
+>The destination automatically suffixes a unique identifier to the selected audience names on each execution when sending the contact field information to [!DNL Oracle Eloqua]. This ensures the contact field names corresponding to your audience names do not overlap. Refer to the [Validate data export](#exported-data) section screenshot example of an [!DNL Oracle Eloqua] Contact Details page with custom contact field created using the audience names.
 
 ## Validate data export {#exported-data}
 
 To validate that you have correctly set up the destination, follow the steps below:
 
 1. Select **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** and navigate to the list of destinations.
-1. Next, select the destination and switch to the **[!UICONTROL Activation data]** tab, then select a segment name.
+1. Next, select the destination and switch to the **[!UICONTROL Activation data]** tab, then select an audience name.
 ![Platform UI screenshot example showing Destinations Activation Data.](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
 
-1. Monitor the segment summary and ensure that the count of profiles corresponds to the count within the segment.
+1. Monitor the audience summary and ensure that the count of profiles corresponds to the count within the segment.
 ![Platform UI screenshot example showing Segment.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
 
-1. Log in to the [!DNL Oracle Eloqua] website, then navigate to the **[!UICONTROL Contacts Overview]** page to check if the profiles from the segment have been added. To see the segment status, drill down into a **[!UICONTROL Contact Detail]** page and check if the contact field with the selected segment name as its prefix has been created.
+1. Log in to the [!DNL Oracle Eloqua] website, then navigate to the **[!UICONTROL Contacts Overview]** page to check if the profiles from the audience have been added. To see the audience status, drill down into a **[!UICONTROL Contact Detail]** page and check if the contact field with the selected audience name as its prefix has been created.
 
-![Oracle Eloqua UI screenshot showing the Contact Details page with custom contact field created with the segment name.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
+![Oracle Eloqua UI screenshot showing the Contact Details page with custom contact field created with the audience name.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
 
 ## Data usage and governance {#data-usage-governance}
 

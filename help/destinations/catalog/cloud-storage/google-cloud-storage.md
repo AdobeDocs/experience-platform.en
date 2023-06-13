@@ -1,6 +1,6 @@
 ---
 title: (Beta) Google Cloud Storage connection
-description: Learn how to connect to Google Cloud Storage and activate segments or export datasets.
+description: Learn how to connect to Google Cloud Storage and activate audiences or export datasets.
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
 ---
 # (Beta) [!DNL Google Cloud Storage] connection
@@ -15,8 +15,8 @@ Create a live outbound connection to [!DNL Google Cloud Storage] to periodically
 
 ## Connect to your [!DNL Google Cloud Storage] storage through API or UI {#connect-api-or-ui}
 
-* To connect to your [!DNL Google Cloud Storage] storage location using the Platform user interface, read the sections [Connect to the destination](#connect) and [Activate segments to this destination](#activate) below.
-* To connect to your [!DNL Google Cloud Storage] storage location programmatically, read the [Activate segments to file-based destinations by using the Flow Service API tutorial](../../api/activate-segments-file-based-destinations.md).
+* To connect to your [!DNL Google Cloud Storage] storage location using the Platform user interface, read the sections [Connect to the destination](#connect) and [Activate audiences to this destination](#activate) below.
+* To connect to your [!DNL Google Cloud Storage] storage location programmatically, read the [Activate audiences to file-based destinations by using the Flow Service API tutorial](../../api/activate-segments-file-based-destinations.md).
 
 ## Supported audiences {#supported-audiences}
 
@@ -97,13 +97,13 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
 ### Scheduling
 

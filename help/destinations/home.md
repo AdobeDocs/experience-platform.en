@@ -89,7 +89,7 @@ For more information about selecting marketing actions in the create destination
 * [Email marketing destinations](./catalog/email-marketing/overview.md)
 * [Social destinations](./catalog/social/overview.md)
 
-For more information about data policy violations in the segment activation workflow, see the **[!UICONTROL Review]** step in the following guides:
+For more information about data policy violations in the audience activation workflow, see the **[!UICONTROL Review]** step in the following guides:
 
 * [Activate audience data to streaming audiences export destinations](./ui/activate-segment-streaming-destinations.md#review)
 * [Activate audience data to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md#review)

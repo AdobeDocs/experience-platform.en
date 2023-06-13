@@ -25,8 +25,8 @@ Before you can send audience data to a destination, you must set up a connection
 2. Destination cards in the catalog might have different action controls, depending on whether you have an existing connection to the destination and whether the destinations support activating audiences, exporting datasets, or both. You might see any of the following controls for destination cards: 
 
    * **[!UICONTROL Set up]**. A connection first needs to be set up to this destination before you can activate audiences or export datasets.
-   * **[!UICONTROL Activate]**. A connection has already been set up to this destination. This destination supports segment activation and dataset exports.
-   * **[!UICONTROL Activate audiences]**. A connection has already been set up to this destination. This destination supports segment activation only.
+   * **[!UICONTROL Activate]**. A connection has already been set up to this destination. This destination supports audience activation and dataset exports.
+   * **[!UICONTROL Activate audiences]**. A connection has already been set up to this destination. This destination supports audience activation only.
    
    For more information about the difference between these controls, you can also refer to the [Catalog](../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.
 
@@ -78,11 +78,11 @@ For file-based destinations, you can configure various settings related to how t
 
 ![Image showing the file type selection and various options for CSV files.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Set up destination connection for segment activation or dataset exports {#segment-activation-or-dataset-exports}
+### Set up destination connection for audience activation or dataset exports {#segment-activation-or-dataset-exports}
 
-Some file-based destinations support segment activation as well as dataset exports. For those destinations, you can choose whether to create a connection that enables you to activate audiences or export datasets.
+Some file-based destinations support audience activation as well as dataset exports. For those destinations, you can choose whether to create a connection that enables you to activate audiences or export datasets.
 
-![Image showing the data type selection control which allows users to select between segment activation and dataset exports.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
+![Image showing the data type selection control which allows users to select between audience activation and dataset exports.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
 ### Enable destination alerts {#enable-alerts}
 

@@ -10,7 +10,7 @@ exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 
 [!DNL Airship] is the leading Customer Engagement Platform, helping you deliver meaningful, personalized omnichannel messaging to your users at every stage of the customer lifecycle.
 
-This integration passes Adobe Experience Platform segment data into [!DNL Airship] as [Tags](https://docs.airship.com/guides/audience/tags/) for targeting or triggering.
+This integration passes Adobe Experience Platform audience data into [!DNL Airship] as [Tags](https://docs.airship.com/guides/audience/tags/) for targeting or triggering.
 
 To learn more about [!DNL Airship], see the [Airship Docs](https://docs.airship.com).
 
@@ -21,7 +21,7 @@ To learn more about [!DNL Airship], see the [Airship Docs](https://docs.airship.
 
 ## Prerequisites
 
-Before you can send your Adobe Experience Platform segments to [!DNL Airship], you must:
+Before you can send your Adobe Experience Platform audiences to [!DNL Airship], you must:
 
 * Create a tag group in your [!DNL Airship] project.
 * Generate a bearer token for authentication.
@@ -48,14 +48,14 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers used in the Airship Tags destination.|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers used in the Airship Tags destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
 ## Tag groups
 
-The concept of segments in Adobe Experience Platorm is similar to [Tags](https://docs.airship.com/guides/audience/tags/) in Airship, with slight differences in implementation. This integration maps the status of a user's [membership in an Experience Platform segment](../../../xdm/field-groups/profile/segmentation.md) to the presence or non-presence of an [!DNL Airship] tag. For example, in a Platform segment where the `xdm:status` changes to `realized`, the tag is added to the [!DNL Airship] channel or named user this profile is mapped to. If the `xdm:status` changes to `exited`, the tag is removed.
+The concept of audiences in Adobe Experience Platorm is similar to [Tags](https://docs.airship.com/guides/audience/tags/) in Airship, with slight differences in implementation. This integration maps the status of a user's [membership in an Experience Platform segment](../../../xdm/field-groups/profile/segmentation.md) to the presence or non-presence of an [!DNL Airship] tag. For example, in a Platform audience where the `xdm:status` changes to `realized`, the tag is added to the [!DNL Airship] channel or named user this profile is mapped to. If the `xdm:status` changes to `exited`, the tag is removed.
 
 To enable this integration, create a *tag group* in [!DNL Airship] named `adobe-segments`.
 
@@ -81,13 +81,13 @@ To help you better understand how and when you should use the [!DNL Airship Tags
 
 ### Use case #1
 
-Retailers or entertainment platforms can create user profiles on their loyalty customers, and pass those segments into [!DNL Airship] for message targeting on mobile campaigns.
+Retailers or entertainment platforms can create user profiles on their loyalty customers, and pass those audiences into [!DNL Airship] for message targeting on mobile campaigns.
 
 ### Use case #2
 
-Trigger one-to-one messages in real time when users fall into or out of specific segments within Adobe Experience Platform.
+Trigger one-to-one messages in real time when users fall into or out of specific audiences within Adobe Experience Platform.
 
-For example, a retailer sets up a jeans brand-specific segment in Platform. That retailer can now trigger a mobile message as soon as someone sets their jeans preference to a specific brand.
+For example, a retailer sets up a jeans brand-specific audience in Platform. That retailer can now trigger a mobile message as soon as someone sets their jeans preference to a specific brand.
 
 ## Connect to the destination {#connect}
 
@@ -117,13 +117,13 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ## Mapping considerations {#mapping-considerations}
 

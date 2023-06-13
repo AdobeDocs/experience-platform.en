@@ -39,7 +39,7 @@ You can find detailed information about each item in the sections below:
 Provide a description of the use cases that your destination solves for Experience Platform customers. Your descriptions can be similar to use cases from existing partners:
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX APIs are available for advertisers that want to target a specific audience group keyed off email addresses in Verizon Media (VMG) can quickly create a new segment and push the desired audience group using VMG's near-real-time API.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX APIs are available for advertisers that want to target a specific audience group keyed off email addresses in Verizon Media (VMG) can quickly create a new audience and push the desired audience group using VMG's near-real-time API.
 
 ## Reason for update {#reason-for-update}
 

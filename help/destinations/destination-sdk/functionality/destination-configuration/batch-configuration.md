@@ -9,7 +9,7 @@ Use the batch configuration options in Destination SDK to allow users to customi
 
 When you create file-based destinations through Destination SDK, you can configure default file naming and export schedules, or you can give users the option to configure these settings from the Platform UI. For instance, you can configure behaviors such as:
 
-* Including specific information in the file name, such as segment IDs, destination IDs, or custom information.
+* Including specific information in the file name, such as audience IDs, destination IDs, or custom information.
 * Allowing users to customize the file naming from the Platform UI.
 * Configure file exports to occur at set time intervals.
 * Define what file naming and export schedule customization options the users can see in the Platform UI.
@@ -40,7 +40,7 @@ Refer to the table below for details on which types of integrations support the 
 
 ## Supported parameters {#supported-parameters}
 
-The values that you set up here are surfaced in the [Schedule segment export](../../../ui/activate-batch-profile-destinations.md#scheduling) step of the file-based destinations activation workflow. 
+The values that you set up here are surfaced in the [Schedule audience export](../../../ui/activate-batch-profile-destinations.md#scheduling) step of the file-based destinations activation workflow. 
 
 ```json
 "batchConfig":{
@@ -107,8 +107,8 @@ Use file name configuration macros to define what the exported file names should
 |Macro|UI label|Description|Example|
 |---|---|---|---|
 |`DESTINATION`|[!UICONTROL Destination]|Destination name in the UI.|Amazon S3|
-|`SEGMENT_ID`|[!UICONTROL Segment ID]|Unique, Platform-generated segment ID|ce5c5482-2813-4a80-99bc-57113f6acde2|
-|`SEGMENT_NAME`|[!UICONTROL Segment Name]|User-defined segment name|VIP subscriber|
+|`SEGMENT_ID`|[!UICONTROL Segment ID]|Unique, Platform-generated audience ID|ce5c5482-2813-4a80-99bc-57113f6acde2|
+|`SEGMENT_NAME`|[!UICONTROL Segment Name]|User-defined audience name|VIP subscriber|
 |`DESTINATION_INSTANCE_ID`|[!UICONTROL Destination ID]|Unique, Platform-generated ID of the destination instance|7b891e5f-025a-4f0d-9e73-1919e71da3b0|
 |`DESTINATION_INSTANCE_NAME`|[!UICONTROL Destination Name]|User-defined name of the destination instance.|My 2022 Advertising Destination|
 |`ORGANIZATION_NAME`|[!UICONTROL Organization Name]|Name of the customer organization in Adobe Experience Platform.|My Organization Name|
@@ -116,8 +116,8 @@ Use file name configuration macros to define what the exported file names should
 |`DATETIME` / `TIMESTAMP`|[!UICONTROL Date and time]|`DATETIME` and `TIMESTAMP` both define when the file was generated, but in different formats. <br><br><ul><li>`DATETIME` uses the following format: YYYYMMDD_HHMMSS.</li><li>`TIMESTAMP` uses the 10-digit Unix format. </li></ul> `DATETIME` and `TIMESTAMP` are mutually exclusive, and cannot be used simultaneously. |<ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul>|
 |`CUSTOM_TEXT`|[!UICONTROL Custom text]|User-defined custom text to be included in the file name. Cannot be used in `defaultFilename`.|My_Custom_Text|
 |`TIMESTAMP`|[!UICONTROL Date and time]|10-digit timestamp of the time when the file was generated, in Unix format.|1652131584|
-|`MERGE_POLICY_ID`|[!UICONTROL Merge Policy ID]|The ID of the [merge policy](../../../../profile/merge-policies/overview.md) used to generate the exported audience. Use this macro when you are grouping exported segments in files, based on merge policy. Use this macro together with `segmentGroupingEnabled:true`. |e8591fdb-2873-4b12-b63e-15275b1c1439|
-|`MERGE_POLICY_NAME`|[!UICONTROL Merge Policy Name]|The name of the [merge policy](../../../../profile/merge-policies/overview.md) used to generate the exported audience. Use this macro when you are grouping exported segments in files, based on merge policy. Use this macro together with `segmentGroupingEnabled:true`.|My Custom Merge Policy|
+|`MERGE_POLICY_ID`|[!UICONTROL Merge Policy ID]|The ID of the [merge policy](../../../../profile/merge-policies/overview.md) used to generate the exported audience. Use this macro when you are grouping exported audiences in files, based on merge policy. Use this macro together with `segmentGroupingEnabled:true`. |e8591fdb-2873-4b12-b63e-15275b1c1439|
+|`MERGE_POLICY_NAME`|[!UICONTROL Merge Policy Name]|The name of the [merge policy](../../../../profile/merge-policies/overview.md) used to generate the exported audience. Use this macro when you are grouping exported audiences in files, based on merge policy. Use this macro together with `segmentGroupingEnabled:true`.|My Custom Merge Policy|
 
 {style="table-layout:auto"}
 
