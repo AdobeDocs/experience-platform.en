@@ -10,7 +10,7 @@ exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
 
 >[!NOTE]
 >
-> The [!DNL Phoenix] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+> The [!DNL Phoenix] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Phoenix] source connector using the [!DNL Platform] user interface.
 

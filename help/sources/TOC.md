@@ -81,6 +81,7 @@ feature: Sources
     - [Oracle connector](connectors/databases/oracle.md)
     - [Phoenix connector](connectors/databases/phoenix.md)
     - [PostgreSQL connector](connectors/databases/postgres.md)
+    - [Snowflake Streaming connector](connectors/databases/snowflake-streaming.md)
     - [Snowflake connector](connectors/databases/snowflake.md)
     - [Teradata Vantage connector](connectors/databases/teradata-vantage.md)
   - eCommerce {#ecommerce}
@@ -157,6 +158,7 @@ feature: Sources
       - [Oracle](tutorials/api/create/databases/oracle.md)
       - [Phoenix](tutorials/api/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+      - [Snowflake Streaming](tutorials/api/create/databases/snowflake-streaming.md)
       - [Snowflake](tutorials/api/create/databases/snowflake.md)
       - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
       - [SQL Server](tutorials/api/create/databases/sql-server.md)
@@ -320,6 +322,7 @@ feature: Sources
   - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
   - [Subscribe to sources alerts](tutorials/ui/alerts.md)
+  - [Save a dataflow as a draft](tutorials/ui/draft.md)
 - Self-Serve Sources (Batch SDK) {#sdk}
   - [Overview](sources-sdk/overview.md)
   - Configure your connection specification {#config}

@@ -1,11 +1,10 @@
 ---
-keywords: IP address, IP range, allow list destinations, allowlist
-title: IP address allow list for cloud storage destinations 
+title: IP address allow list SFTP destinations
 type: Documentation
-description: This page provides IP ranges that you can add to your allow list, to safely export data from Experience Platform to your SFTP server, Amazon S3, or Azure Blob storage.
+description: This page provides IP ranges that you can add to your allow list, to safely export data from Experience Platform to your SFTP server.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 ---
-# IP address allowlist for cloud storage destinations {#ip-address-allow-list}
+# IP address allowlist for SFTP destinations {#ip-address-allow-list-sftp}
 
 >[!IMPORTANT]
 >
