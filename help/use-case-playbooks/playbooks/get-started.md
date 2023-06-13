@@ -25,7 +25,7 @@ If you do not see [!UICONTROL Playbooks] in the left rail as shown above, use th
 
 ### Sandbox configuration for Adobe Journey Optimizer users {#sandbox-configuration-journey-optimizer}
 
-If your organization is licensed for Adobe Journey Optimizer, configure the sandbox for Journey Optimizer presets for email, push, and SMS channels.
+If your organization is licensed for [Adobe Journey Optimizer](https://experienceleague.corp.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=en), you'll need to configure the channel presets in your sandbox, which define the technical parameters required for your messages. [Learn how to set up channel surfaces in Adobe Journey Optimizer](https://experienceleague.corp.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html).
 
 ## Grant your team the required access permissions {#grant-access-permissions}
 
