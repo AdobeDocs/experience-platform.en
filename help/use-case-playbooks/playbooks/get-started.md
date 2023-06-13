@@ -5,7 +5,7 @@ description: Learn how to get started with the Use Case Playbooks functionality.
 badgeBeta: label="Beta" type="Informative"
 ---
 
-# (Beta) Use case playbooks overview
+# (Beta) Get started
 
 >[!AVAILABILITY]
 >
@@ -13,7 +13,7 @@ badgeBeta: label="Beta" type="Informative"
 
 ## Create a development sandbox {#create-development-sandbox}
 
-To get started and get access to the Use Case playbooks functionality, [create a new development sandbox](/help/sandboxes/ui/user-guide.md#create) (make sure you do not select a production sandbox) with the name (not the title) containing either `-ucp` or `-UCP` in the suffix, as shown below.
+To get started and get access to the [[!UICONTROL Use Case Playbooks]](/help/use-case-playbooks/playbooks/overview.md) functionality, [create a new development sandbox](/help/sandboxes/ui/user-guide.md#create) (make sure you do not select a production sandbox) with the name (not the title) containing either `-ucp` or `-UCP` in the suffix, as shown below.
 
 ![Create a development sandbox for use case playbooks](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
