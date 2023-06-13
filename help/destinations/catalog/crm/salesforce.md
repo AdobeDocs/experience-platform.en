@@ -64,7 +64,7 @@ Finally, ensure that the `password` grant is enabled within your [!DNL Salesforc
 
 #### Create custom fields within [!DNL Salesforce] {#prerequisites-custom-field}
 
-When activating audiences to the [!DNL Salesforce CRM] destination, you must input a value in the **[!UICONTROL Mapping ID]** field for each activated segment, in the **[Audience schedule](#schedule-segment-export-example)** step.
+When activating audiences to the [!DNL Salesforce CRM] destination, you must input a value in the **[!UICONTROL Mapping ID]** field for each activated audience, in the **[Audience schedule](#schedule-segment-export-example)** step.
 
 [!DNL Salesforce CRM] requires this value to correctly read and interpret audiences coming in from Experience Platform and to update their audience status within [!DNL Salesforce]. Refer to the Experience Platform documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on audience statuses.
 
