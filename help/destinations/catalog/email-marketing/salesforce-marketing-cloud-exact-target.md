@@ -48,7 +48,7 @@ Reach out to [[!DNL Salesforce] Support](https://www.salesforce.com/company/cont
 
 When activating audiences to the [!DNL (API) Salesforce Marketing Cloud] destination, you must input a value in the **[!UICONTROL Mapping ID]** field for each activated audience, in the **[Audience schedule](#schedule-segment-export-example)** step.
 
-[!DNL Salesforce] requires this value to correctly read and interpret audiences coming in from Experience Platform and to update their audience status within [!DNL Salesforce Marketing Cloud]. Refer to the Experience Platform documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on audience statuses.
+[!DNL Salesforce] requires this value to correctly read and interpret audiences coming in from Experience Platform and to update their audience status within [!DNL Salesforce Marketing Cloud]. Refer to the Experience Platform documentation for [Audience Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on audience statuses.
 
 For each audience that you activate from Platform to [!DNL Salesforce Marketing Cloud], you need to create an attribute of the type `Text` within [!DNL Salesforce]. Use the [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] to create attributes. The attribute field names are used for the [!DNL (API) Salesforce Marketing Cloud] destination field and should be created under the `[!DNL Email Demographics system attribute-set]`. You can define the field character with a maximum of 4000 characters, according to your business requirement. See the [!DNL Salesforce Marketing Cloud] [Data Extensions Data Types](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&type=5) documentation page for additional information on attribute types.
 
@@ -231,7 +231,7 @@ Depending on your use case all activated audiences can be mapped to the same [!D
 | [!DNL (API) Salesforce Marketing Cloud] segment name | [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** | 
 | --- | --- | --- |
 | salesforce mc audience 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
-| salesforce mc Segment 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
+| salesforce mc audience 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
 
 ## Validate data export {#exported-data}
 

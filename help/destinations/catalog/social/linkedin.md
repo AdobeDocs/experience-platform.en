@@ -145,7 +145,7 @@ See [Activate audience data to streaming audience export destinations](../../ui/
 
 ## Exported data {#exported-data}
 
-A successful activation means that a [!DNL LinkedIn] custom audience would be created programmatically in [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated audiences.
+A successful activation means that a [!DNL LinkedIn] custom audience would be created programmatically in [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). Audience membership would be added and removed as users are qualified or disqualified for the activated audiences.
 
 >[!TIP]
 >

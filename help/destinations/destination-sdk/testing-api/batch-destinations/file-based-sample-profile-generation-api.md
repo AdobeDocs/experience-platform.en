@@ -99,7 +99,7 @@ A successful response returns HTTP status 200 with the specified number of sampl
 
 | Property | Description |
 | -------- | ----------- |
-| `segmentMembership` | A map object which describes the individual's audience memberships. For more information on `segmentMembership`, read [Segment Membership Details](../../../../xdm/field-groups/profile/segmentation.md). |
+| `segmentMembership` | A map object which describes the individual's audience memberships. For more information on `segmentMembership`, read [Audience Membership Details](../../../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | A timestamp of the last time this profile qualified for the segment. |
 | `status` | A string field that indicates whether the audience membership has been realized as part of the current request. The following values are accepted: <ul><li>`realized`: The profile is part of the segment.</li><li>`exited`: The profile is exiting the audience as part of the current request.</li></ul> |
 | `identityMap` | A map-type field that describes the various identity values for an individual, along with their associated namespaces. For more information on `identityMap`, see [basis of schema composition](../../../../xdm/schema/composition.md#identityMap). |

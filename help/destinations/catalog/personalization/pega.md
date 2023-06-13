@@ -31,9 +31,9 @@ A marketer wants to optimize the offers for customers who subscribed or unsubscr
 
 Before you can use this destination to export data out of Adobe Experience Platform, make sure you complete the following prerequisites in [!DNL Pega Customer Decision Hub]:
 
-* Configure the [Adobe Experience Platform Profile and Segment Membership integration Component](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) in your [!DNL Pega Customer Decision Hub] instance.
+* Configure the [Adobe Experience Platform Profile and Audience Membership integration Component](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) in your [!DNL Pega Customer Decision Hub] instance.
 * Configure OAuth 2.0 [Client Registration using Client Credentials](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) grant type in your [!DNL Pega Customer Decision Hub] instance.
-* Configure [real-time run data flow](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) for  Adobe Segment Membership data flow in your [!DNL Pega Customer Decision Hub] instance.
+* Configure [real-time run data flow](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) for  Adobe Audience Membership data flow in your [!DNL Pega Customer Decision Hub] instance.
 
 ## Supported identities {#supported-identities}
 
@@ -51,7 +51,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | Export all members of an audience with identifier (*CustomerID*), attributes (last name, first name, location, etc.) and Segment Membership data.|
+| Export type | **[!UICONTROL Profile-based]** | Export all members of an audience with identifier (*CustomerID*), attributes (last name, first name, location, etc.) and Audience Membership data.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are always-on API-based connections. As soon as a profile is updated in Experience Platform, based on audience evaluation, the connector sends the update downstream to the destination platform. For more information, see [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}

@@ -12,7 +12,7 @@ To understand the message format and profile configuration and transformation pr
 * **Experience Data Model (XDM)**. [XDM overview](../../../../xdm/home.md) and  [How to create an XDM schema in Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
 * **Class**. [Create and edit classes in the UI](../../../../xdm/ui/resources/classes.md).
 * **IdentityMap**. The identity map represents a map of all end-user identities in Adobe Experience Platform. Refer to `xdm:identityMap` in the [XDM field dictionary](../../../../xdm/schema/field-dictionary.md).
-* **SegmentMembership**. The [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM attribute informs which audiences a profile is a member of. For the three different values in the `status` field, read the documentation on [Segment Membership Details schema field group](../../../../xdm/field-groups/profile/segmentation.md).
+* **SegmentMembership**. The [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM attribute informs which audiences a profile is a member of. For the three different values in the `status` field, read the documentation on [Audience Membership Details schema field group](../../../../xdm/field-groups/profile/segmentation.md).
 
 >[!IMPORTANT]
 >
@@ -171,7 +171,7 @@ Adobe uses [Pebble templates](https://pebbletemplates.io/), a templating languag
 
 This section provides several examples of how these transformations are made - from the input XDM schema, through the template, and outputting into payload formats accepted by your destination. The examples below are presented by increasing complexity, as follows:
 
-1. Simple transformation examples. Learn how templating works with simple transformations for [Profile attributes](#attributes), [Segment membership](#segment-membership), and [Identity](#identities) fields.
+1. Simple transformation examples. Learn how templating works with simple transformations for [Profile attributes](#attributes), [Audience membership](#segment-membership), and [Identity](#identities) fields.
 2. Increased complexity examples of templates that combine the fields above: [Create a template that sends audiences and identities](./message-format.md#segments-and-identities) and [Create a template that sends segments, identities, and profile attributes](#segments-identities-attributes).
 3. Templates that include the aggregation key. When you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in the destination configuration, Experience Platform groups the profiles exported to your destination based on criteria such as audience ID, audience status, or identity namespaces.
 
@@ -258,10 +258,10 @@ Profile 2:
 }
 ```
 
-### Segment membership {#segment-membership}
+### Audience membership {#segment-membership}
 
 The [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM attribute informs which audiences a profile is a member of.
-For the three different values in the `status` field, read the documentation on [Segment Membership Details schema field group](../../../../xdm/field-groups/profile/segmentation.md).
+For the three different values in the `status` field, read the documentation on [Audience Membership Details schema field group](../../../../xdm/field-groups/profile/segmentation.md).
 
 **Input**
 
