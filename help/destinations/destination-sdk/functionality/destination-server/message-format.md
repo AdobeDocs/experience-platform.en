@@ -258,7 +258,7 @@ Profile 2:
 }
 ```
 
-### Audience membership {#segment-membership}
+### Audience membership {#audience-membership}
 
 The [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM attribute informs which audiences a profile is a member of.
 For the three different values in the `status` field, read the documentation on [Audience Membership Details schema field group](../../../../xdm/field-groups/profile/segmentation.md).
