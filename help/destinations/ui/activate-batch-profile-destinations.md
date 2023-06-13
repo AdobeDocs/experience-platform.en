@@ -15,7 +15,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 > 
 > Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >
-> Some customers participating in the improved file export functionality beta program are seeing the new **[!UICONTROL Mapping]** step as part of their activation workflow to the [new beta cloud storage destinations](/help/release-notes/2022/october-2022.md#destinations). Please also note the [known limitations](#known-limitations) as part of the release.
+> Some customers participating in the improved file export functionality beta program are seeing the new **[!UICONTROL Mapping]** step as part of their activation workflow to the [new beta cloud storage destinations](/help/release-notes/2022/october-2022.md#destinations). Consider the [known limitations](#known-limitations) as part of the release.
 
 ## Overview {#overview}
 
@@ -43,7 +43,7 @@ To activate audiences to destinations, you must have successfully [connected to 
 
 ## Select your audiences {#select-audiences}
 
-Use the check boxes to the left of the audience names to select the audiences that you want to activate to the destination, then select **[!UICONTROL Next]**.
+To select the audiences that you want to activate to the destination, use the check boxes to the left of the audience names, then select **[!UICONTROL Next]**.
 
 ![Image highlighting how to select one or multiple audiences to activate](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
@@ -101,14 +101,14 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
       >[!NOTE]
       >
-      >The **[!UICONTROL After segment evaluation]** option described below is currently available only to select Beta customers.
+      >The **[!UICONTROL After segment evaluation]** option described below is available only to select Beta customers.
 
-    Use the **[!UICONTROL After segment evaluation]** option to have the activation job run immediately after the daily Platform batch segmentation job completes. This ensures that when the activation job runs, the most up-to-date profiles are exported to your destination.
+    Use the **[!UICONTROL After segment evaluation]** option to have the activation job run immediately after the daily Platform batch segmentation job completes. This option ensures that when the activation job runs, the most up-to-date profiles are exported to your destination.
     
     <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
     ![Image highlighting the After segment evaluation option in the activation flow for batch destinations.](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
-    Use the **[!UICONTROL Scheduled]** option to have the activation job run at a fixed time. This ensures that Experience Platform profile data is exported at the same time each day, but the profiles you export may not be the most up-to-date, depending on whether the batch segmentation job has completed before the activation job kicks off.
+    Use the **[!UICONTROL Scheduled]** option to have the activation job run at a fixed time. This option ensures that Experience Platform profile data is exported at the same time each day. However, the profiles you export may not be the most up to date, depending on whether the batch segmentation job has completed before the activation job kicks off.
 
     ![Image highlighting the Scheduled option in the activation flow for batch destinations and showing the time selector.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
@@ -120,7 +120,7 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
       >[!IMPORTANT]
       >
-      > When selecting an export interval, the last day of the interval is not included in the exports. For example, if you select an interval of January 4 - 11, the last file export will take place on January 10th.
+      > When selecting an export interval, the last day of the interval is not included in the exports. For example, if you select an interval of January 4 - 11, the last file export will take place on January 10.
 
 1. Select **[!UICONTROL Create]** to save the schedule.
 
@@ -149,7 +149,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 
       >[!IMPORTANT]
       >
-      >The last day of the interval is not included in the exports. For example, if you select an interval of January 4 - 11, the last file export will take place on January 10th.
+      >The last day of the interval is not included in the exports. For example, if you select an interval of January 4 - 11, the last file export will take place on January 10.
 
 1. Select **[!UICONTROL Create]** to save the schedule.
 
@@ -162,7 +162,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 
 For most destinations, the default file names consist of destination name, audience ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files. Note that some destination developers might select to have different default file name append options shown for their destinations.
 
-Select the pencil icon to open a modal window and edit the file names. File names are limited to 255 characters.
+To open a modal window and edit the file names, select the pencil icon. File names are limited to 255 characters.
 
 >[!NOTE]
 >
@@ -174,12 +174,12 @@ In the file name editor, you can select different components to add to the file 
 
 ![Image displaying all the available file name options.](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
 
-The destination name and audience ID cannot be removed from file names. In addition to these, you can add the following:
+The destination name and audience ID cannot be removed from file names. In addition to these options, you can add the following options:
 
 |File name option | Description |
 |---------|----------|
 | **[!UICONTROL Audience name]** | The name of the exported audience. |
-| **[!UICONTROL Date and time]** | Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export. |
+| **[!UICONTROL Date and time]** | Select between adding a `MMDDYYYY_HHMMSS` format or a UNIX 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export. |
 | **[!UICONTROL Custom text]** | Any custom text that you want to add to the file names. |
 | **[!UICONTROL Destination ID]** | The ID of the destination dataflow you use to export the audience. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
 | **[!UICONTROL Destination name]** | The name of the destination dataflow you use to export the audience. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
@@ -222,11 +222,11 @@ For profile-based destinations, you must select the profile attributes that you 
 
 >[!IMPORTANT] 
 >
->Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.status` to your file exports. Instead, you need to manually paste the value `xdm: segmentMembership.status` into the schema field, as shown below.
+>Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.status` to your file exports. Instead, you must manually paste the value `xdm: segmentMembership.status` into the schema field, as shown below.
 >
 >![Screen recording showing the audience membership workaround in the mapping step of the activation workflow.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
-File exports will vary in the following ways, depending on whether `segmentMembership.status` is selected:
+File exports vary in the following ways, depending on whether `segmentMembership.status` is selected:
 * If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
 * If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
 
@@ -235,7 +235,7 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
 >title="About mandatory attributes"
->abstract="Select the XDM schema attributes that all exported profiles should include. Profiles without the mandatory key are not exported to the destination. Not selecting a mandatory key exports all qualified profiles regardless of their attributes."
+>abstract="Select the XDM schema attributes that all exported profiles should include. Profiles without the mandatory key are not exported to the destination. Not selecting a mandatory key export all qualified profiles regardless of their attributes."
 
 A mandatory attribute is a user-enabled checkbox which ensures all profile records contain the selected attribute. For example: all exported profiles contain an email address.​
 
@@ -487,7 +487,7 @@ Follow the steps below to select enrichment attributes for each external audienc
 5. After you have added all the attributes that you want to export, select **[!UICONTROL Save and close]**.
 6. Repeat these steps for each external audience.
 
-If you want to activate external audiences to your destinations without exporting any attribute, enable the **[!UICONTROL Exclude enrichment attributes]** toggle. This will export the profiles from the external audiences, but none of their corresponding attributes are sent to your destination.
+If you want to activate external audiences to your destinations without exporting any attribute, enable the **[!UICONTROL Exclude enrichment attributes]** toggle. This option exports the profiles from the external audiences, but none of their corresponding attributes are sent to your destination.
 
 ![UI image showing the exclude enrichment attributes toggle.](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png)
 
