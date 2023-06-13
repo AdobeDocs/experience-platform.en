@@ -33,6 +33,7 @@ The table below describes each available column.
 | **[!UICONTROL Created]** | The timestamp when the query was created, in UTC format.  |
 | **[!UICONTROL Last run timestamp]** | The most recent timestamp when the query was run. This column highlights whether a query has been executed according to its current schedule.  |
 | **[!UICONTROL Last run status]** | The status of the most recent query execution. The status values are: `Success`, `Failed`, `In progress`, and `No runs`. |
+| **[!UICONTROL ]** | The current status of the scheduled query. There are three potential values, xxx,xxx, xxx, and hypen. xxx describes a scheduled query that has ...  |
 
 >[!TIP]
 >
