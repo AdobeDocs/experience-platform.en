@@ -91,3 +91,7 @@ Best practice is to avoid using spaces, single quote, and backslash in template 
 >
 >There is no limit in the size of queries that can be stored as templates.
 
+
+>[!NOTE]
+>
+>The Query Editor does not support parameterized templates or nested parameterized templates. To use parameterized templates, or nested parameterized templates, you must use the command line interface.
