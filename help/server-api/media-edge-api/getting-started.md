@@ -3,7 +3,6 @@ keywords: Experience Platform;media edge;popular topics;date range
 solution: Experience Platform
 title: Getting started with Media Edge APIs
 description: Getting started with Media Edge APIs
-exl-id: 
 ---
 
 # Media Edge API getting started
