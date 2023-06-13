@@ -42,7 +42,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 | --- | --- | --- |
-| Export type | Segment export | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL Criteo] destination. |
+| Export type | Audience export | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL Criteo] destination. |
 | Export frequency | Streaming | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](../../destination-types.md#streaming-destinations). |
 
 ## Use cases {#use-cases}
