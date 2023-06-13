@@ -50,7 +50,7 @@ This step is covered in the prerequisites and Adobe assumes that you have the ri
 
 At this point, you are extending your data management framework in Real-Time CDP to accommodate partner-provided attributes. 
 
-You have the option to create a new schema of the **[!UICONTROL XDM Individual Profile]** class, or extend an existing schema of the same type to include partner-provided attributes. Adobe strongly recommends to create a new schema with a new set of field groups that best represent the additional attributes from the data vendor. This ensures that your data schemas are clean and can evolve independent of each other.
+You have the option to create a new schema of the **[!UICONTROL XDM Individual Profile]** class, or extend an existing schema of the same type to include partner-provided attributes. Adobe strongly recommends creating a new schema with a new set of field groups that best represent the additional attributes from the data vendor. This ensures that your data schemas are clean and can evolve independent of each other.
 
 To include partner-provided attributes in a schema, you can either create a new field group with the attributes that you expect, or you can use one of the out-of-the-box field groups provided by Adobe.
 
