@@ -98,7 +98,7 @@ When you are finished providing details for your destination connection, select 
 
 See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
-In the [Segment schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map your audiences to their corresponding ID or friendly name in the destination platform.
+In the [Audience schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map your audiences to their corresponding ID or friendly name in the destination platform.
 
 When mapping segments, we recommend you use the Platform audience name or a shorter form of it, for ease of use. However, the audience ID or name in your destination does not need to match the one in your Platform account. Any value you insert in the mapping field will be reflected by the destination.
 

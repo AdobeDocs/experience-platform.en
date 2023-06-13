@@ -186,8 +186,8 @@ Data usage labels will transfer to applications but marketing actions will not. 
 
 ### Permissions management in Audience Manager
 
-Segments and traits in Audience Manager are subject to [Role-Based Access Controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=en) (RBAC). 
+Audiences and traits in Audience Manager are subject to [Role-Based Access Controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=en) (RBAC). 
 
-Segments exported from Experience Platform are assigned to a specific datasource in Audience Manager called **[!UICONTROL Experience Platform Segments]**.
+Audiences exported from Experience Platform are assigned to a specific datasource in Audience Manager called **[!UICONTROL Experience Platform Segments]**.
 
 To allow only certain users access to the audiences, you can apply access controls to the audiences belonging to the datasource. You must set new access control permissions in Audience Manager for these audiences and traits created from Experience Platform segments.

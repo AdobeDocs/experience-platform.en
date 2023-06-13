@@ -113,7 +113,7 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 ### Scheduling {#scheduling}
 
-In the [!UICONTROL Scheduling] step, create an export schedule for each segment, with the settings shown below.
+In the [!UICONTROL Scheduling] step, create an export schedule for each audience, with the settings shown below.
 
 >[!IMPORTANT]
 >
@@ -172,12 +172,12 @@ Your data is exported to the [!DNL LiveRamp SFTP] storage location that you conf
 
 When exporting files to the [!DNL LiveRamp SFTP] destination, Platform generates one CSV file for each [merge policy ID](../../../profile/merge-policies/overview.md).
 
-For example, let's consider the following segments:
+For example, let's consider the following audiences:
 
-* Segment A (Merge policy 1)
-* Segment B (Merge policy 2)
-* Segment C (Merge policy 1)
-* Segment D (Merge policy 1)
+* Audience A (Merge policy 1)
+* Audience B (Merge policy 2)
+* Audience C (Merge policy 1)
+* Audience D (Merge policy 1)
 
 Platform will export two CSV files to [!DNL LiveRamp SFTP]:
 
@@ -188,9 +188,9 @@ Exported CSV files contain profiles with the selected attributes and the corresp
 
 The profiles included in the exported files can match one the following audience qualification statuses:
 
-* `Active`: The profile is currently qualified for the segment.
-* `Expired`: The profile is no longer qualified for the segment, but has qualified in the past.
-* `""`(empty string): The profile never qualfied for the segment.
+* `Active`: The profile is currently qualified for the audience.
+* `Expired`: The profile is no longer qualified for the audience, but has qualified in the past.
+* `""`(empty string): The profile never qualfied for the audience.
 
 
 For instance, an exported CSV file with one `email` attribute and 3 audiences could look like this:
@@ -207,7 +207,7 @@ abc101@testemailabc.com,active,active,
 
 Since Platform generates one CSV file for each [merge policy ID](../../../profile/merge-policies/overview.md), it also generates a separate dataflow run for each merge policy ID.
 
-This means that the **[!UICONTROL Identities activated]** and **[!UICONTROL Profiles received]** metrics in the [dataflow runs](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) page are aggregated for each group of audiences that use the same merge policy, instead of being displayed for each segment.
+This means that the **[!UICONTROL Identities activated]** and **[!UICONTROL Profiles received]** metrics in the [dataflow runs](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) page are aggregated for each group of audiences that use the same merge policy, instead of being displayed for each audience.
 
 As a consequence of dataflow runs being generated for a group of audiences that use the same merge policy, the audience names are not displayed in the [monitoring dashboard](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 

@@ -17,7 +17,7 @@ Note the following details that are specific to [!DNL Google Ad Manager] destina
 * Activated audiences are created programmatically in the [!DNL Google] platform.
 * [!DNL Platform] does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
 * After mapping an audience to a [!DNL Google Ad Manager] destination, the audience name appears immediately in the [!DNL Google Ad Manager] user interface.
-* Segment population needs 24-48 hours to appear in [!DNL Google Ad Manager]. Additionally, audiences must have an audience size of at least 50 profiles in order to be displayed in [!DNL Google Ad Manager]. Segments with audience sizes smaller than 50 profiles will not be populated in [!DNL Google Ad Manager].
+* Segment population needs 24-48 hours to appear in [!DNL Google Ad Manager]. Additionally, audiences must have an audience size of at least 50 profiles in order to be displayed in [!DNL Google Ad Manager]. Audiences with sizes smaller than 50 profiles will not be populated in [!DNL Google Ad Manager].
 
 ## Supported Identities {#supported-identities}
 

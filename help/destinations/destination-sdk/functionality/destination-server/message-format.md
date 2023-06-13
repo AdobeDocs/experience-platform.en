@@ -173,7 +173,7 @@ This section provides several examples of how these transformations are made - f
 
 1. Simple transformation examples. Learn how templating works with simple transformations for [Profile attributes](#attributes), [Segment membership](#segment-membership), and [Identity](#identities) fields.
 2. Increased complexity examples of templates that combine the fields above: [Create a template that sends audiences and identities](./message-format.md#segments-and-identities) and [Create a template that sends segments, identities, and profile attributes](#segments-identities-attributes).
-3. Templates that include the aggregation key. When you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in the destination configuration, Experience Platform groups the profiles exported to your destination based on criteria such as audience ID, segment status, or identity namespaces.
+3. Templates that include the aggregation key. When you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in the destination configuration, Experience Platform groups the profiles exported to your destination based on criteria such as audience ID, audience status, or identity namespaces.
 
 ### Profile Attributes {#attributes}
 

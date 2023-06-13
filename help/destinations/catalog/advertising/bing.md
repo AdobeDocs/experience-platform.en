@@ -42,7 +42,7 @@ Additionally, this destination also supports the activation of the audiences des
 
 ## Export type and frequency {#export-type-frequency}
 
-**[!DNL Segment Export]** - you are exporting all members of an audience to the [!DNL Microsoft Bing] destination.
+**[!DNL Audience Export]** - you are exporting all members of an audience to the [!DNL Microsoft Bing] destination.
 
 Refer to the table below for information about the destination export type and frequency.
 
@@ -98,7 +98,7 @@ When you are finished providing details for your destination connection, select 
 
 See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
-In the [Segment schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map the audience name in the [!UICONTROL Mapping ID] field. This ensures that audience metadata is correctly passed through to [!DNL Bing]. 
+In the [Audience schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map the audience name in the [!UICONTROL Mapping ID] field. This ensures that audience metadata is correctly passed through to [!DNL Bing]. 
 
 ![UI image showing the audience schedule screen with an example of how to map the audience name to the Bing Mapping ID.](../../assets/catalog/advertising/bing/mapping-id.png)
 

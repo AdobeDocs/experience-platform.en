@@ -46,7 +46,7 @@ Reach out to [[!DNL Salesforce] Support](https://www.salesforce.com/company/cont
 
 #### Create attributes within [!DNL Salesforce Marketing Cloud] {#prerequisites-attribute}
 
-When activating audiences to the [!DNL (API) Salesforce Marketing Cloud] destination, you must input a value in the **[!UICONTROL Mapping ID]** field for each activated segment, in the **[Segment schedule](#schedule-segment-export-example)** step.
+When activating audiences to the [!DNL (API) Salesforce Marketing Cloud] destination, you must input a value in the **[!UICONTROL Mapping ID]** field for each activated segment, in the **[Audience schedule](#schedule-segment-export-example)** step.
 
 [!DNL Salesforce] requires this value to correctly read and interpret audiences coming in from Experience Platform and to update their audience status within [!DNL Salesforce Marketing Cloud]. Refer to the Experience Platform documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on audience statuses.
 

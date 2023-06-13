@@ -24,7 +24,7 @@ An athletic apparel brand wants to reach existing customers through [!DNL Google
 
 A prominent technology company launched a new phone. To promote this new phone model, they are looking to drive awareness of the new features and functionality of the phone to customers who own previous models of their phones. 
 
-To promote the release, they upload email addresses from their CRM database into Experience Platform, using the email addresses as identifiers. Segments are created based on customers who own older phone models. Then audiences get sent to [!DNL Google Customer Match], so the company can target current customers, customers who own older phone models, and similar customers on [!DNL YouTube]. 
+To promote the release, they upload email addresses from their CRM database into Experience Platform, using the email addresses as identifiers. Audiences are created based on customers who own older phone models. Then audiences get sent to [!DNL Google Customer Match], so the company can target current customers, customers who own older phone models, and similar customers on [!DNL YouTube]. 
 
 ## Data governance for [!DNL Google Customer Match] destinations {#data-governance}
 

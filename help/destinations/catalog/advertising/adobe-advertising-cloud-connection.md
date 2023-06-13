@@ -7,7 +7,7 @@ exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
 
 ## Overview {#overview}
 
-The Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) destination allows you to share authenticated first-party audiences with approved advertisers and users for campaign activation with DSP. To learn more about the Real-Time CDP integration with DSP, see [About Activating Authenticated Segments from Audience Sources](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
+The Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) destination allows you to share authenticated first-party audiences with approved advertisers and users for campaign activation with DSP. To learn more about the Real-Time CDP integration with DSP, see [About Activating Authenticated Audiences from Audience Sources](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
 
 >[!IMPORTANT]
 >
