@@ -182,7 +182,7 @@ Your Experience Platform audiences appear in Audience Manager as [signals](https
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
 
 Data governance in Experience Platform is enforced by both [data usage labels](/help/data-governance/labels/reference.md) and marketing actions.
-Data usage labels will transfer to applications but marketing actions will not. This means that once they land in Audience Manager, segments from Experience Platform can be exported to any available destinations. In Audience Manager, you can use [data export controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=en) to block audiences from being exported to certain destinations.
+Data usage labels will transfer to applications but marketing actions will not. This means that once they land in Audience Manager, audiences from Experience Platform can be exported to any available destinations. In Audience Manager, you can use [data export controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=en) to block audiences from being exported to certain destinations.
 
 ### Permissions management in Audience Manager
 

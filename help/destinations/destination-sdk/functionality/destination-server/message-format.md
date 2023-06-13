@@ -855,7 +855,7 @@ The `json` below represents the data exported out of Adobe Experience Platform.
 
 ### Include aggregation key in your template to access exported profiles grouped by various criteria {#template-aggregation-key}
 
-When you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in the destination configuration, you can group the profiles exported to your destination based on criteria such as audience ID, segment alias, segment membership, or identity namespaces.
+When you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in the destination configuration, you can group the profiles exported to your destination based on criteria such as audience ID, audience alias, audience membership, or identity namespaces.
 
 In the message transformation template, you can access the aggregation keys mentioned above, as shown in the examples in the following sections. Use aggregation keys to structure the HTTP message exported out of Experience Platform to match the format and rate limits expected by your destination.
 

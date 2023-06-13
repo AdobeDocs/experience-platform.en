@@ -184,7 +184,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | Property | Type | Description |
 | -------- | ----------- | ----------- |
 | `name` | String | The name of the audience metadata template for your destination. This name will appear in any partner-specific error message in the Experience Platform user interface, followed by the error message parsed from `metadataTemplate.create.errorSchemaMap`. |
-| `url` | String | The URL and endpoint of your API, which is used for creating, updating, deleting, or validating audiences/segments in your platform. Two industry examples are: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` and `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. | 
+| `url` | String | The URL and endpoint of your API, which is used for creating, updating, deleting, or validating audiences in your platform. Two industry examples are: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` and `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. | 
 | `httpMethod` | String | The method used on your endpoint to programmatically create, update, delete, or validate the audience in your destination. For example: `POST`, `PUT`, `DELETE` | 
 | `headers.header` | String | Specifies any HTTP headers that should be added to the call to your API. For example, `"Content-Type"` |
 | `headers.value` | String | Specifies the value of HTTP headers that should be added to the call to your API. For example, `"application/x-www-form-urlencoded"` |

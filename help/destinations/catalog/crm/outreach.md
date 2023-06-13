@@ -16,7 +16,7 @@ This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) 
 
 ## Use cases {#use-cases}
 
-As a marketer, you can deliver personalized experiences to your prospects, based on attributes from their Adobe Experience Platform profiles. You can build audiences from your offline data and send these audiences to [!DNL Outreach], to display in the prospects’ feeds as soon as audiences and profiles are updated in Adobe Experience Platform.
+As a marketer, you can deliver personalized experiences to your prospects, based on attributes from their Adobe Experience Platform profiles. You can build audiences from your offline data and send these audiences to [!DNL Outreach], to display in the prospects' feeds as soon as audiences and profiles are updated in Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
@@ -77,7 +77,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li> You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each segment status in [!DNL Outreach] gets updated with the corresponding audience status from Platform, based on the [!UICONTROL Mapping ID] value provided during the [segment scheduling](#schedule-segment-export-example) step.</li></ul> |
+| Export type | **[!UICONTROL Profile-based]** | <ul><li> You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each segment status in [!DNL Outreach] gets updated with the corresponding audience status from Platform, based on the [!UICONTROL Mapping ID] value provided during the [audience scheduling](#schedule-segment-export-example) step.</li></ul> |
 | Export frequency | **[!UICONTROL Streaming]** | <ul><li> Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
 {style="table-layout:auto"}
@@ -201,7 +201,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Monitor the audience summary and ensure that the count of profiles corresponds to the count created within the segment.
 ![Platform UI screenshot showing Segment summary.](../../assets/catalog/crm/outreach/segment.png)
 
-1. Log in to the [!DNL Outreach] website, then navigate to the [!DNL Apps] > [!DNL Contacts] page and check if the profiles from the audience have been added. You can see that each audience status in [!DNL Outreach] was updated with the corresponding audience status from Platform, based on the [!UICONTROL Mapping ID] value provided during the [segment scheduling](#schedule-segment-export-example) step.
+1. Log in to the [!DNL Outreach] website, then navigate to the [!DNL Apps] > [!DNL Contacts] page and check if the profiles from the audience have been added. You can see that each audience status in [!DNL Outreach] was updated with the corresponding audience status from Platform, based on the [!UICONTROL Mapping ID] value provided during the [audience scheduling](#schedule-segment-export-example) step.
 
 ![Outreach UI screenshot showing the Outreach Prospects page with the updated audience statuses.](../../assets/catalog/crm/outreach/outreach-prospect.png)
 
@@ -215,7 +215,7 @@ When checking a dataflow run, you might see the following error message: `Bad re
 
 ![Platform UI screenshot showing the Bad request Error.](../../assets/catalog/crm/outreach/error.png)
 
-To fix this error, verify that the [!UICONTROL Mapping ID] you provided in Platform for your [!DNL Outreach] segment is valid and exists in [!DNL Outreach].
+To fix this error, verify that the [!UICONTROL Mapping ID] you provided in Platform for your [!DNL Outreach] audience is valid and exists in [!DNL Outreach].
 
 ## Additional resources {#additional-resources}
 

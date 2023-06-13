@@ -46,7 +46,7 @@ See the documentation below for details about each of the destination configurat
 
 ## Audience metadata configuration {#audience-metadata-configuration}
 
-This component allows you to configure how audiences/segments are programmatically created, updated, or deleted in your destination. For file-based destinations, it allows you to set up a notification whenever files are successfully delivered to your destination. You can configure this functionality via the [audience-templates endpoint](../metadata-api/create-audience-template.md).
+This component allows you to configure how audiences are programmatically created, updated, or deleted in your destination. For file-based destinations, it allows you to set up a notification whenever files are successfully delivered to your destination. You can configure this functionality via the [audience-templates endpoint](../metadata-api/create-audience-template.md).
 
 ## Next steps {#next-steps}
 

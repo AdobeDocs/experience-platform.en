@@ -111,7 +111,7 @@ In the response, look for the first record that includes the schema property bel
 
 The audience export job ID is in the `id` property, as shown below.
 
-![segment export job ID](../assets/api/ad-hoc-activation/segment-export-job-id.png)
+![audience export job ID](../assets/api/ad-hoc-activation/segment-export-job-id.png)
 
 
 ## Step 5: Run the ad-hoc activation job {#activation-job}
@@ -202,7 +202,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 | -------- | ----------- |
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | The IDs of the destination instances to which you want to activate audiences. You can get these IDs from the Platform UI, by navigating to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** tab, and clicking on the desired destination row to bring up the destination ID in the right rail. For more information, read the [destinations workspace documentation](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul>  | The IDs of the audiences that you want to activate to the selected destination. |
-| <ul><li>`exportId1`</li></ul> | The ID returned in the response of the [segment export](../../segmentation/api/export-jobs.md#retrieve-list) job. See [Step 4: Obtain the latest audience export job ID](#segment-export-id) for instructions on how to find this ID. |
+| <ul><li>`exportId1`</li></ul> | The ID returned in the response of the [audience export](../../segmentation/api/export-jobs.md#retrieve-list) job. See [Step 4: Obtain the latest audience export job ID](#segment-export-id) for instructions on how to find this ID. |
 
 {style="table-layout:auto"}
 

@@ -129,7 +129,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each segment status in [!DNL Salesforce CRM] gets updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [segment scheduling](#schedule-segment-export-example) step.</li></ul> |
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each audience status in [!DNL Salesforce CRM] gets updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-segment-export-example) step.</li></ul> |
 | Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
 {style="table-layout:auto"}
@@ -279,7 +279,7 @@ To validate that you have correctly set up the destination, follow the steps bel
     * If you have selected *Contacts* within your Platform segment, navigate to the **[!DNL Apps]** > **[!DNL Contacts]** page.
     ![Salesforce CRM screenshot showing the Contacts page with the profiles from the segment.](../../assets/catalog/crm/salesforce/contacts.png)
 
-    * Select a *Contact* and check if the fields are updated. You can see that each audience status in [!DNL Salesforce CRM] was updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [segment scheduling](#schedule-segment-export-example).
+    * Select a *Contact* and check if the fields are updated. You can see that each audience status in [!DNL Salesforce CRM] was updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-segment-export-example).
     ![Salesforce CRM screenshot showing the Contact Details page with updated audience statuses.](../../assets/catalog/crm/salesforce/contact-info.png)
 
     **Working with Leads**
@@ -287,7 +287,7 @@ To validate that you have correctly set up the destination, follow the steps bel
     * If you have selected *Leads* within your Platform segment, then navigate to the **[!DNL Apps]** > **[!DNL Leads]** page.
     ![Salesforce CRM screenshot showing the Leads page with the profiles from the segment.](../../assets/catalog/crm/salesforce/leads.png)
 
-    * Select a *Lead* and check if the fields are updated. You can see that each audience status in [!DNL Salesforce CRM] was updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [segment scheduling](#schedule-segment-export-example).
+    * Select a *Lead* and check if the fields are updated. You can see that each audience status in [!DNL Salesforce CRM] was updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-segment-export-example).
     ![Salesforce CRM screenshot showing the Lead Details page with updated audience statuses.](../../assets/catalog/crm/salesforce/lead-info.png)
 
 ## Data usage and governance {#data-usage-governance}
