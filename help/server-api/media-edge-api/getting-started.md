@@ -95,18 +95,18 @@ curl -i --request POST '{uri}/ee/va/v1/sessionStart?configId={dataStreamId}' \
 
 In the example request above, the `eventType` value contains the prefix `media` according to the [Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) for specifying domains.
 
-Also, the datatypes mapping for `eventType` in the example above are as follows (reporting-only fields should not be present in the payload):
+Also, the datatypes mapping for `eventType` in the example above are as follows:
 
-| eventType | datatypes | reporting-only fields (ignored) |
-| -------- | ------ | ---------- |
-| mediaSessionStart | sessionDetails |ID, adCount, averageMinuteAudience,chapterCount, estimatedStreams, hasPauseImpactedStreams, hasProgress10, hasProgress25, hasProgress50, hasProgress75, hasProgress95, hasSegmentView, isCompleted, isDownloaded, isFederated, isPlayed, isViewed, pauseCount, pauseTime, secondsSinceLastCall, segment, timePlayed, totalTimePlayed, uniqueTimePlayed, pev3, pccr |
-| media.chapterStart | chapterDetails | ID, isCompleted, isStarted, timePlayed |
-| media.adBreakStart | advertisingPodDetails | ID |
-| media.adStart | advertisingDetails | ID, isCompleted, isStarted, timePlayed |
-| media.error | errorDetails | - |
-| media.statesUpdate | statesStart: Array[playerStateData], statesEnd: Array[playerStateData] |playerStateData.isSet, playerStateData.count, playerStateData.time |
-| media.sessionStart, media.chapterStart, media.adStart | customMetadata | - |
-|all | qoeDataDetails |bitrateAverage, bitrateAverageBucket, bitrateChangeCount, bufferCount, bufferTime, errorCount, externalErrors, hasBitrateChangeImpactedStreams, hasBufferImpactedStreams, hasDroppedFrameImpactedStreams, hasErrorImpactedStreams, hasStallImpactedStreams, isDroppedBeforeStart, mediaSdkErrors, playerSdkErrors, stallCount, stallTime |
+| eventType | datatypes |
+| -------- | ------ |
+| mediaSessionStart | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
+| media.chapterStart | [chapterDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/chapterdetails.schema.md) |
+| media.adBreakStart | [advertisingPodDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingpoddetails.schema.md) |
+| media.adStart | [advertisingDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingdetails.schema.md) |
+| media.error | [errorDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/errordetails.schema.md) |
+| media.statesUpdate | [statesStart](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmstatesstart): Array[playerStateData], [statesEnd](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmstatesend): Array[playerStateData] |
+| media.sessionStart, media.chapterStart, media.adStart | [customMetadata](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmcustommetadata) |
+|all | [qoeDataDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/qoedatadetails.schema.md) |
 
 ### Example response
 
@@ -200,6 +200,8 @@ In the above example request, the same `sessionId` that is returned in the previ
 
 For more information on the Buffer Start endpoint parameters and examples, see the Media Edge Swagger file.
 
+The successful respone indicates a status of 200 and does not include any content.
+
 ## Play event request
 
 The Play event is sent when the media player changes its state to "playing" from another state, such as "buffering," "paused," or "error." To make a Play event request, use your `sessionId` in the payload of a call to the following endpoint:
@@ -230,6 +232,8 @@ curl -X 'POST' \
   ]
 }'
 ```
+
+The successful respone indicates a status of 200 and does not include any content.
 
 For more information on Play endpoint parameters and examples, see the Media Edge Swagger file.
 
@@ -264,7 +268,7 @@ curl -X 'POST' \
 }'
 ```
 
-For more information on Session Complete endpoint parameters and examples, see the Media Edge Swagger file.
+The successful respone indicates a status of 200 and does not include any content.
 
 ## Response codes
 
