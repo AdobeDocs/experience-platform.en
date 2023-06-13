@@ -60,15 +60,21 @@ Read the documentation pages below for more information:
 * [Overview of the [!UICONTROL XDM Individual Profile] class](/help/xdm/classes/individual-profile.md)
 * [Create and edit schemas in the UI](/help/xdm/ui/resources/schemas.md)
 * [Create and edit schema field groups in the UI](/help/xdm/ui/resources/field-groups.md) 
+
+<!--
+
+Commenting out links for now
 * [Create and edit schemas using the API](/help/xdm/api/schemas.md#create)
 * [Update an existing schema to add field groups using the API](/help/xdm/api/schemas.md#patch)
 * Link to new field group documentation page when it exists
 
+-->
+
 Also in this step, think about how your data governance model changes as you expand your data management strategy to include third-party data provided by the partner. Explore the considerations in the documentation links below: 
 
-* (**Coming soon**) Keeping third-party data in a separate dataset so that deleting it and undoing integrations is easy
-* (**Coming soon**) Use TTL on the dataset for clients who have the data hygiene add-on
-* (**Coming soon**) Exercising caution when creating derived datasets which pull in third-party data, because once mixed together the only solution to remove the third-party data is to delete the whole derived dataset
+* (**Coming soon**) Keep third-party data in a separate dataset so that deleting it and undoing integrations is easy.
+* (**Coming soon**) Use Time-to-live (TTL) on the dataset for clients who purchased the data hygiene add-on.
+* (**Coming soon**) Exercise caution when creating derived datasets which pull in third-party data, because once mixed together the only solution to remove the third-party data is to delete the whole derived dataset.
 
 >[!TIP]
 >
@@ -105,7 +111,7 @@ Some recommended source connectors for this purpose might be:
 
 Note the following limitations as you explore the use case described on this page:
 
-If you select to use Partner IDs, note that these are not used in to build your [identity graph](/help/identity-service/ui/identity-graph-viewer.md). 
+If you select to use Partner IDs, be aware that these IDs are not used when building your [identity graph](/help/identity-service/ui/identity-graph-viewer.md). 
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 
