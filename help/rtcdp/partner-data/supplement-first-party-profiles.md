@@ -7,9 +7,9 @@ badgeBeta: label="Beta" type="informative" before-title="true"
 ---
 # Supplement first-party profiles with partner-provided attributes
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->* This beta functionality is available to customers who have purchased the [Real-Time CDP Prime and Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) package. Please contact your Adobe representative for more information. 
+>* This beta functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
 
 Supplement first-party profiles with attributes from trusted data partners to improve your data foundation and gain new insights into your customer base and gain better audience optimization.
 
@@ -26,17 +26,17 @@ As you consider supplementing your own first-party profiles with attributes from
 
 >[!WARNING]
 >
->The additional partner-provided attributes ingested into Real-Time CDP impact the *overall profile richness of your profiles*. Read the [Real-Time Customer Data Platform Product Description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) for more information about profile richness.
+>The additional partner-provided attributes ingested into Real-Time CDP impact your *average profile richness*. Read the [Real-Time Customer Data Platform Product Description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) for more information about profile richness.
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
 ![Enrich profiles with partner-provided attributes use case high-level visual overview.](/help/rtcdp/assets/partner-data/enrichment-use-case-steps.png)
 
-1. As a **customer**, you license attributes from the **partner**.
+1. As a **customer**, you license attributes from the **data partner**.
 2. As a **customer**, you extend your profile data and governance model to accommodate **partner**-provided attributes.
-3. As a **customer**, you export audiences that you want enriched keyed off Personal Identifiable Information (PII) or hashed-PII to the **partner**.
-4. The **partner** appends licensed attributes for the profiles that they are able to match against. Optionally, a Partner ID can be included and ingested into the partner scoped ID namespace.
-5. As a **customer**, you bring the enriched data back into Real-Time CDP and Real-time CDP appends enriched attributes into the customer profile.
+3. As a **customer**, you onboard the audiences that you want enriched to the data partner. Generally, these audiences are keyed off input identifiers like Personally Identifiable Information (PII) elements like email, name, address, or others.
+4. The **partner** appends licensed attributes for the profiles that they are able to match against. Optionally, a [Partner ID](/help/identity-service/namespaces.md) can be included and ingested into the partner scoped ID namespace.
+5. As a **customer**, you load attributes from the data partner into customer profiles in Real-Time CDP.
  
 ## How to achieve the use case: Step-by-step instructions {#step-by-step-instructions}
 
@@ -44,13 +44,13 @@ Read through the sections below which include links to further documentation, to
 
 ### License attributes from the partner {#license-attributes-from-partner}
 
-This step is covered in the prerequisites and it is a requirement that must be met between you and the data partner. After you have completed the data license agreements with the partner, proceed to the next steps to augment your profiles with partner-provided attributes.
+This step is covered in the prerequisites and Adobe assumes that you have the right contractual agreements in place with trusted data vendors to augment your first party profiles.
 
 ### Extend your profile data and governance model to accommodate partner-provided attributes. {#extend-governance-model}
 
 At this point, you are extending your data management framework in Real-Time CDP to accommodate partner-provided attributes. 
 
-You have the option to create a new schema of the **[!UICONTROL XDM Individual Profile]** class, or extend an existing schema of the same type to include partner-provided attributes that you are expecting back from the data partner. Adobe recommends that you use the first option, since it allows for your schemas to evolve independently of each other. 
+You have the option to create a new schema of the **[!UICONTROL XDM Individual Profile]** class, or extend an existing schema of the same type to include partner-provided attributes. Adobe strongly recommends to create a new schema with a new set of field groups that best represent the additional attributes from the data vendor. This ensures that your data schemas are clean and can evolve independent of each other.
 
 To include partner-provided attributes in a schema, you can either create a new field group with the attributes that you expect, or you can use one of the out-of-the-box field groups provided by Adobe.
 
@@ -90,7 +90,7 @@ Export the audiences that you want the partner to enrich. Use the cloud storage 
 
 ### The partner appends licensed attributes for the profiles that they are able to match against {#partner-appends-attributes}
 
-In this step, the partner enriches the audiences from your data exports, which were keyed off person-based identifiers such as hashed email addresses, with information that they own. 
+In this step, the partner appends licensed attributes for the exported audience. The output is generally available as a flat file that can be ingested back into Real-Time CDP.
 
 ### Real-Time CDP appends enriched attributes into the customer profile {#ingest-data}
 
