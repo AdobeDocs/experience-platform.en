@@ -27,7 +27,7 @@ If you already have a valid [!DNL SAP Hybris] account, you may skip the remainde
 In order to connect [!DNL SAP Hybris] to Platform, you must provide values for the following connection properties:
 
 | Credential | Description |
-| --- | --- | --- |
+| --- | --- |
 | `Client Id` | The value of `clientid` from the service key. |
 | `Client Secret` | The value of `clientsecret` from the service key. |
 | `tokenEndpoint` | The value of `url` from the service key, it will be similar to `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
