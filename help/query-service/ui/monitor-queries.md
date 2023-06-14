@@ -31,7 +31,7 @@ The table below describes each available column.
 | **[!UICONTROL Created]** | The timestamp when the query was created, in UTC format.  |
 | **[!UICONTROL Last run timestamp]** | The most recent timestamp when the query was run. This column highlights whether a query has been executed according to its current schedule.  |
 | **[!UICONTROL Last run status]** | The status of the most recent query execution. The status values are: `Success`, `Failed`, `In progress`, and `No runs`. |
-| **[!UICONTROL Schedule Status]** | The current status of the scheduled query. There are five potential values, Registering, Active, Inactive, Deleted, and hyphen. <ul><li>The hyphen indicates that the query is a run-once, non-recurring scheduled query.</li><li>The [!UICONTROL Registering] status indicates that the system is still processing the creation of the new schedule for the query. Be aware that you cannot disable or delete a scheduled query while it is registering.</li><li>The [!UICONTROL Active] status indicates that the scheduled query has **not yet passed** its completion date and time.</li><li>The [!UICONTROL Inactive] status indicates that the scheduled query has **passed** its completion date and time.</li><li>The [!UICONTROL Deleted] status indicates that the query schedule has been deleted.</li></ul> |
+| **[!UICONTROL Schedule Status]** | The current status of the scheduled query. There are five potential values, [!UICONTROL Registering], [!UICONTROL Active], [!UICONTROL Inactive], [!UICONTROL Deleted], and a hyphen. <ul><li>The hyphen indicates that the query is a run-once, non-recurring scheduled query.</li><li>The [!UICONTROL Registering] status indicates that the system is still processing the creation of the new schedule for the query. Be aware that you cannot disable or delete a scheduled query while it is registering.</li><li>The [!UICONTROL Active] status indicates that the scheduled query has **not yet passed** its completion date and time.</li><li>The [!UICONTROL Inactive] status indicates that the scheduled query has **passed** its completion date and time.</li><li>The [!UICONTROL Deleted] status indicates that the query schedule has been deleted.</li></ul> |
 
 >[!TIP]
 >
@@ -53,7 +53,7 @@ Toggle the relevant checkboxes to remove or add a table column. Next, select **[
 
 ## Manage scheduled queries with inline actions {#inline-actions}
 
-The [!UICONTROL Scheduled Queries] view offers a variety of inline actions to mange all of your scheduled queries from one location. Inline actions are indicated in each row with either an ellipses or and add alert icon (![An alert icon.](../images/ui/monitor-queries/alerts-icon.png)). Select the ellipsis of a scheduled query that you want to manage to see the available options in a pop-up menu. The available options include [[!UICONTROL Disable schedule]](#disable) or [!UICONTROL Enable schedule], [[!UICONTROL Delete schedule]](#delete), and[[!UICONTROL Subscribe]](#alert-subscription)
+The [!UICONTROL Scheduled Queries] view offers a variety of inline actions to mange all of your scheduled queries from one location. Inline actions are indicated in each row with either an ellipses or and add alert icon (![An alert icon.](../images/ui/monitor-queries/alerts-icon.png)). Select the ellipsis of a scheduled query that you want to manage to see the available options in a pop-up menu. The available options include [[!UICONTROL Disable schedule]](#disable) or [!UICONTROL Enable schedule], [[!UICONTROL Delete schedule]](#delete), and [[!UICONTROL Subscribe]](#alert-subscription) to query alerts.
 
 ### Disable or enable a scheduled query {#disable}
 
@@ -70,6 +70,8 @@ Once a scheduled query is deleted, it is **not** removed from the list of schedu
 If you want to schedule runs for that query template. Select the template name from the appropriate row to navigate to the Query Editor, then follow the [instructions to add a schedule to a query](./query-schedules.md#create-schedule) as described in the documentation. 
 
 ### Subscribe to alerts {#alert-subscription}
+
+<!-- may ned to update this content below to the ellipses workflow depends on what Yan says. -->
 
 You can subscribe to alerts from the [!UICONTROL Scheduled Queries] tab. Select the alert notification icon (![An alert icon.](../images/ui/monitor-queries/alerts-icon.png)) next to a query name to open the [!UICONTROL Alerts] dialog. The [!UICONTROL Alerts] dialog subscribes to both UI notifications and email alerts. Alerts are based on the status of the query. There are three options available: `start`, `success`, and `failure`. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe.
 
