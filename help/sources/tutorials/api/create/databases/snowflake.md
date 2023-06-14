@@ -10,7 +10,7 @@ exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL Snowflake] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial walks you through the steps to create a base connection for [!DNL Snowflake] using the [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Getting started
 
