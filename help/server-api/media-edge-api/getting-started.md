@@ -27,7 +27,7 @@ This guide provides instructions for making successful initial interactions with
 * sessionComplete
 * statesUpdate
 
-Each event has its own endpoint. All Media Edge API endpoints are POST methods, with JSON request bodies for event data. For more information on Media Edge API endpoints, parameters, and examples, see the [Media Edge Swagger file](https://experienceleague.corp.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/swagger.html?lang=en).
+Each event has its own endpoint. All Media Edge API endpoints are POST methods, with JSON request bodies for event data. For more information on Media Edge API endpoints, parameters, and examples, see the [Media Edge Swagger file](swagger.md).
 
 This guide shows how to track the following events after starting the session:
 
@@ -159,7 +159,7 @@ x-content-type-options: nosniff
 
 In the example response above, the `sessionId` is shown as `af8bb22766e458fa0eef98c48ea42c9e351c463318230e851a19946862020333`. You will use this ID in subsequent event requests as a required parameter.
 
-For more information on Session Start endpoint parameters and examples, see the [Media Edge Swagger](https://experienceleague.corp.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/swagger.html?lang=en) file.
+For more information on Session Start endpoint parameters and examples, see the [Media Edge Swagger](swagger.md) file.
 
 For more information on XDM media data parameters, see [Media Details Information Schema](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmplayhead). 
 
@@ -199,7 +199,7 @@ In the example request above, the same `sessionId` that is returned in the previ
 
 The successful respone indicates a status of 200 and does not include any content.
 
-For more information on the Buffer Start endpoint parameters and examples, see the [Media Edge Swagger](https://experienceleague.corp.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/swagger.html?lang=en) file.
+For more information on the Buffer Start endpoint parameters and examples, see the [Media Edge Swagger](swagger.md) file.
 
 
 ## Play event request
@@ -235,7 +235,7 @@ curl -X 'POST' \
 
 The successful respone indicates a status of 200 and does not include any content.
 
-For more information on Play endpoint parameters and examples, see the [Media Edge Swagger](https://experienceleague.corp.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/swagger.html?lang=en) file.
+For more information on Play endpoint parameters and examples, see the [Media Edge Swagger](swagger.md) file.
 
 ## Session Complete event request
 
@@ -270,7 +270,7 @@ curl -X 'POST' \
 
 The successful respone indicates a status of 200 and does not include any content.
 
-For more information on Session Complete endpoint parameters and examples, see the [Media Edge Swagger](https://experienceleague.corp.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/swagger.html?lang=en) file.
+For more information on Session Complete endpoint parameters and examples, see the [Media Edge Swagger](swagger.md) file.
 
 ## Response codes
 
@@ -279,10 +279,10 @@ The following table shows the possible response codes resulting from Media Edge 
 | Status | Description |
 | ---------- | --------- |
 | 200 | Session was successfully created |
-| 207 | Problem with one of the services that connect to Experience Edge Network (see more in the [trouble-shooting guide](https://experienceleague.corp.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/troubleshooting.html?lang=en)) |
+| 207 | Problem with one of the services that connect to Experience Edge Network (see more in the [troubleshooting guide](troubleshooting.md)) |
 | 400-level | Bad request |
 | 500-level | Server error |
 
-For more information on handling errors and unsuccessful response codes, see the [Media Edge Trouble-shooting guide](https://experienceleague.corp.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/troubleshooting.html?lang=en).
+For more information on handling errors and unsuccessful response codes, see the [Media Edge Troubleshooting guide](troubleshooting.md).
 
 

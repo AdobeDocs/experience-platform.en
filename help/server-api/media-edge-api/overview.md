@@ -45,7 +45,7 @@ The following graphic shows the data flows for the two API services:
 ![Media analytics data flows](../assets/edge-api-dataflow.png)
 
 
-For more information on using Media Edge APIs, see the [Getting started documentation](https://experienceleague.corp.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/getting-started.html?lang=en). 
+For more information on using Media Edge APIs, see the [Getting started documentation](getting-started.md). 
 
 For more information on working with Platform Edge, see [Installing Media Analytics with Experience Platform Edge](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html?lang=en).
 
