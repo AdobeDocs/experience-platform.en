@@ -29,13 +29,12 @@ To select which fields are visible, you can select ![the configure columns icon]
 | [!UICONTROL Description] | The description for the computed attribute. |
 | [!UICONTROL Evaluation method] | The evaluation method for the computed attribute. At this time, only **batch** is supported. |
 | [!UICONTROL Last evaluated] | This timestamp represents the last successful evaluation run. Only events that ocurred **before** this timestamp are considered in the last successful evaluation. |
-| Refresh frequency | An indication on how frequently the computed attribute is expected to be refreshed. Possible values include hourly, daily, weekly, or monthly. |
-| Last evaluation status | The status that states whether or not the computed attribute was successfully calculated in the last evaluation run. Possible values include **[!UICONTROL Success]** or **[!UICONTROL Failed]**. | 
+| [!UICONTROL Last evaluation status] | The status that states whether or not the computed attribute was successfully calculated in the last evaluation run. Possible values include **[!UICONTROL Success]** or **[!UICONTROL Failed]**. | 
+| [!UICONTROL Refresh frequency] | An indication on how frequently the computed attribute is expected to be refreshed. Possible values include hourly, daily, weekly, or monthly. |
+| [!UICONTROL Fast refresh] | A value that shows whether or not fast refresh is enabled for this compute attribute. If fast refresh is enabled, this lets the computed attribute be refreshed on a daily basis, rather than on a weekly, bi-weekly, or monthly basis. This value is only applicable for computed attributes with a lookback period greater than a weekly basis. |
 | [!UICONTROL Lifecycle status] | The current status of the computed attribute. There are three possible statuses: <ul><li>**[!UICONTROL Draft]:** The computed attribute does **not** have a field created on the schema yet. In this state, the computed attribute can be edited. </li><li>**[!UICONTROL Published]:** The computed attribute has a field created on the schema and is ready to be used. In this state, the computed attribute **cannot** be edited.</li><li>**[!UICONTROL Inactive]:** The computed attribute is disabled. For more information about the inactive status, please read the [frequently asked questions page](./faq.md#inactive-status). </li> | 
 
 Additionally, you can select a computed attribute to see more detailed information about it. For more information on the computed attributes details page, please read the [view a computed attribute's details section](#view-details).
-
-<!-- | [!UICONTROL Fast refresh] | A value that shows whether or not fast refresh is enabled for this compute attribute. If fast refresh is enabled, this lets the computed attribute be refreshed on a daily basis, rather than on a weekly, bi-weekly, or monthly basis. This value is only applicable for computed attributes with a lookback period greater than a weekly basis. | -->
 
 ## Create a computed attribute {#create}
 
@@ -47,9 +46,9 @@ The **[!UICONTROL Create computed attribute]** page appears. On this page, you c
 
 | Field | Description |
 | ----- | ----------- |
-| Display name | The name which the computed attribute will be known by. You should keep this display name unique for each computed attribute. As a best practice, this display name should contain identifiers related to the computed attribute. So, for example, "Sum of purchases for shoes in the last 7 days". |
-| Field name | A name which is used to refer to the computed attribute in other downstream services. This name is automatically derived from the display name and is written in camelCase. |
-| Description | A description of the computed attribute you're trying to create. |
+| [!UICONTROL Display name] | The name which the computed attribute will be known by. You should keep this display name unique for each computed attribute. As a best practice, this display name should contain identifiers related to the computed attribute. So, for example, "Sum of purchases for shoes in the last 7 days". |
+| [!UICONTROL Field name] | A name which is used to refer to the computed attribute in other downstream services. This name is automatically derived from the display name and is written in camelCase. |
+| [!UICONTROL Description] | A description of the computed attribute you're trying to create. |
 
 ![The [!UICONTROL Basic information] section of the [!UICONTROL Create computed attribute] page is highlighted.](./images/ui/basic-information.png)
 
@@ -73,13 +72,13 @@ Now, you can apply a function to the field from the conditional output. First, s
 
 After choosing a function, you can choose the field to aggregate on. The eligible fields to choose are dependent on the function selected.
 
-IMAGE
+![The highlighted field shows the attribute that you are choosing to aggregate the function on.](./images/ui/select-eligible-field.png)
 
 ### Lookback duration
 
 After applying the aggregation function, you'll need to define the lookback period of the computed attribute. This lookback period specifies the length of time that you want to aggregate events on. This lookback duration can be specified in terms of hours, days, weeks, or months.
 
-IMAGE
+![The lookback duration is highlighted.](./images/ui/select-lookback-duration.png)
 
 With these steps completed, you can now either choose to save this computed attribute as a draft or to immediately publish it.
 
@@ -115,7 +114,7 @@ When selecting a draft computed attribute, the **[!UICONTROL Edit computed attri
 
 After creating a computed attribute, you can use **published** computed attributes in other downstream services. Since computed attributes are profile attribute fields created on your profile union schema, you can look up computed attribute values for a Real-Time Customer Profile, use them in an audience, activate them to a destination, or use them for personalization in journeys in Adobe Journey Optimizer.
 
-IMAGE
+![The Segment Builder is displayed, showing a computed attribute as part of the segment definition composition.](./images/ui/use-ca.png)
 
 ## Next steps
 
