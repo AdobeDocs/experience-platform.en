@@ -1,11 +1,11 @@
 ---
-title: (Beta) Supplement first-party profiles with partner-provided attributes
-description: Learn how to supplement first-party profiles with attributes from trusted data partners to improve your data foundation, gain new insights into your customer base, and better audience optimization
+title: (Beta) Supplement First-party Rrofiles with Partner-provided Attributes
+description: Learn how to supplement first-party profiles with attributes from trusted data partners to improve your data foundation, gain new insights into your customer base, and better audience optimization.
 hide: yes
 hidefromtoc: yes
 badgeBeta: label="Beta" type="informative" before-title="true"
 ---
-# Supplement first-party profiles with partner-provided attributes
+# Supplement First-party Profiles with Partner-provided Attributes
 
 >[!AVAILABILITY]
 >
@@ -34,7 +34,7 @@ As you consider supplementing your own first-party profiles with attributes from
 
 1. As a **customer**, you license attributes from the **data partner**.
 2. As a **customer**, you extend your profile data and governance model to accommodate **partner**-provided attributes.
-3. As a **customer**, you onboard the audiences that you want enriched to the data partner. Generally, these audiences are keyed off input identifiers like Personally Identifiable Information (PII) elements like email, name, address, or others.
+3. As a **customer**, you onboard the audiences that you want to be enriched with the data partner. Generally, these audiences are keyed off input identifiers like Personally Identifiable Information (PII) elements like email, name, address, or others.
 4. The **partner** appends licensed attributes for the profiles that they are able to match against. Optionally, a [Partner ID](/help/identity-service/namespaces.md) can be included and ingested into the partner scoped ID namespace.
 5. As a **customer**, you load attributes from the data partner into customer profiles in Real-Time CDP.
  
@@ -44,15 +44,15 @@ Read through the sections below which include links to further documentation, to
 
 ### License attributes from the partner {#license-attributes-from-partner}
 
-This step is covered in the prerequisites and Adobe assumes that you have the right contractual agreements in place with trusted data vendors to augment your first party profiles.
+This step is covered in the [prerequisites](#prerequisites-and-planning) and Adobe assumes that you have the right contractual agreements in place with trusted data vendors to augment your first-party profiles.
 
 ### Extend your profile data and governance model to accommodate partner-provided attributes. {#extend-governance-model}
 
 At this point, you are extending your data management framework in Real-Time CDP to accommodate partner-provided attributes. 
 
-You have the option to create a new schema of the **[!UICONTROL XDM Individual Profile]** class, or extend an existing schema of the same type to include partner-provided attributes. Adobe strongly recommends creating a new schema with a new set of field groups that best represent the additional attributes from the data vendor. This ensures that your data schemas are clean and can evolve independent of each other.
+You have the option to create a new schema of the **[!UICONTROL XDM Individual Profile]** class, or extend an existing schema of the same type to include partner-provided attributes. Adobe strongly recommends creating a new schema with a new set of field groups that best represent the additional attributes from the data vendor. This ensures that your data schemas are clean and can evolve independently of each other.
 
-To include partner-provided attributes in a schema, you can either create a new field group with the attributes that you expect, or you can use one of the out-of-the-box field groups provided by Adobe.
+To include partner-provided attributes in a schema, you can either create a new field group with the attributes that you expect, or you can use one of the preconfigured field groups provided by Adobe.
 
 Read the documentation pages below for more information:
 
@@ -81,10 +81,9 @@ Also in this step, think about how your data governance model changes as you exp
 >If you choose to supplement your customer profiles with a person-based identifier from the data vendor, you can create a new identity type of the type **[[!UICONTROL Partner ID]](/help/identity-service/namespaces.md)**. 
 >
 >Read more about Partner ID in the [identity types section](/help/identity-service/namespaces.md).
-> Read about [how to define identity fields](/help/xdm/ui/fields/identity.md) in the Experience Platform user interface.
+>Read about [how to define identity fields](/help/xdm/ui/fields/identity.md) in the Experience Platform user interface.
 
-
-### Export audiences that you want enriched keyed off Personal Identifiable Information (PII) or hashed-PII {#export-audiences}
+### Export audiences that you want to be enriched when keyed off Personal Identifiable Information (PII) or hashed-PII {#export-audiences}
 
 Export the audiences that you want the partner to enrich. Use the cloud storage destinations provided by Real-time CDP, such as Amazon S3 or SFTP. Read the following documentation pages to complete this step: 
 
@@ -93,10 +92,9 @@ Export the audiences that you want the partner to enrich. Use the cloud storage 
 * How to [connect to a destination](/help/destinations/ui/connect-destination.md)
 * How to [export data to a cloud storage destination](/help/destinations/ui/activate-batch-profile-destinations.md)
 
+### Your data partner appends licensed attributes for the profiles that they are able to match against {#partner-appends-attributes}
 
-### The partner appends licensed attributes for the profiles that they are able to match against {#partner-appends-attributes}
-
-In this step, the partner appends licensed attributes for the exported audience. The output is generally available as a flat file that can be ingested back into Real-Time CDP.
+In this step, your data partner appends licensed attributes for the exported audience. The output is generally available as a flat file that can be ingested back into Real-Time CDP. Read more about [ingesting files into Real-Time CDP](/help/ingestion/tutorials/ingest-batch-data.md#upload-file).
 
 ### Real-Time CDP appends enriched attributes into the customer profile {#ingest-data}
 
@@ -111,7 +109,7 @@ Some recommended source connectors for this purpose might be:
 
 Note the following limitations as you explore the use case described on this page:
 
-If you select to use Partner IDs, be aware that these IDs are not used when building your [identity graph](/help/identity-service/ui/identity-graph-viewer.md). 
+* If you select to use Partner IDs, be aware that these IDs are not used when building your [identity graph](/help/identity-service/ui/identity-graph-viewer.md). 
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 
