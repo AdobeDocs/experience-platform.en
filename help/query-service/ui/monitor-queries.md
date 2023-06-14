@@ -53,27 +53,31 @@ Toggle the relevant checkboxes to remove or add a table column. Next, select **[
 
 ## Manage scheduled queries with inline actions {#inline-actions}
 
-The [!UICONTROL Scheduled Queries] view offers a variety of inline actions to mange all of your scheduled queries from one location. Inline actions are indicated in each row with either an ellipses or and add alert icon (![An alert icon.](../images/ui/monitor-queries/alerts-icon.png)). Select the ellipsis of a scheduled query that you want to manage to see the available options in a pop-up menu. The available options include [[!UICONTROL Disable schedule]](#disable) or [!UICONTROL Enable schedule], [[!UICONTROL Delete schedule]](#delete), and [[!UICONTROL Subscribe]](#alert-subscription) to query alerts.
+The [!UICONTROL Scheduled Queries] view offers a variety of inline actions to mange all of your scheduled queries from one location. Inline actions are indicated in each row with an ellipses. Select the ellipsis of a scheduled query that you want to manage to see the available options in a pop-up menu. The available options include [[!UICONTROL Disable schedule]](#disable) or [!UICONTROL Enable schedule], [[!UICONTROL Delete schedule]](#delete), and [[!UICONTROL Subscribe]](#alert-subscription) to query alerts.
+
+![The Scheduled Queries tab with the inline action ellipses and popup menu highlighted.](../images/ui/monitor-queries/disable-inline.png)
 
 ### Disable or enable a scheduled query {#disable}
 
-Select the ellipsis of a scheduled query that you want to manage, then select **[!UICONTROL Disable schedule]** from the available options in the pop-up menu. A dialog appears to confirm your action. Select **[!UICONTROL Disable]** to confirm your setting.
+To disable a scheduled query, select the ellipsis of a scheduled query that you want to manage, then select **[!UICONTROL Disable schedule]** from the options in the pop-up menu. A dialog appears to confirm your action. Select **[!UICONTROL Disable]** to confirm your setting.
 
 Once a scheduled query is disabled, you can enable the schedule through the same process. Select the ellipsis, then select **[!UICONTROL Enable schedule]** from the available options.
 
 ### Delete a scheduled query {#delete}
 
-Select the ellipsis of a scheduled query that you want to manage, then select **[!UICONTROL Delete schedule]** from the available options in the pop-up menu. A dialog appears to confirm your action. Select **[!UICONTROL Delete]** to confirm your setting.
+To delete a scheduled query, select the ellipsis of a scheduled query that you want to manage, then select **[!UICONTROL Delete schedule]** from the options in the pop-up menu. A dialog appears to confirm your action. Select **[!UICONTROL Delete]** to confirm your setting.
 
 Once a scheduled query is deleted, it is **not** removed from the list of scheduled queries. The inline actions provided by the ellipses are removed and replaced by the greyed out add alert icon. You cannot subscribe to alerts for the deleted schedule. The row remains in the UI to provide information on runs conducted as part of the scheduled query. 
+
+![The Scheduled Queries tab with a deleted scheduled query and greyed out alert icon highlighted.](../images/ui/monitor-queries/post-delete.png)
 
 If you want to schedule runs for that query template. Select the template name from the appropriate row to navigate to the Query Editor, then follow the [instructions to add a schedule to a query](./query-schedules.md#create-schedule) as described in the documentation. 
 
 ### Subscribe to alerts {#alert-subscription}
 
-<!-- may ned to update this content below to the ellipses workflow depends on what Yan says. -->
+To subscribe to alerts for scheduled query runs, select the ellipsis of a scheduled query that you want to manage, then select **[!UICONTROL Subscribe]** from the options in the pop-up menu.
 
-You can subscribe to alerts from the [!UICONTROL Scheduled Queries] tab. Select the alert notification icon (![An alert icon.](../images/ui/monitor-queries/alerts-icon.png)) next to a query name to open the [!UICONTROL Alerts] dialog. The [!UICONTROL Alerts] dialog subscribes to both UI notifications and email alerts. Alerts are based on the status of the query. There are three options available: `start`, `success`, and `failure`. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe.
+The [!UICONTROL Alerts] dialog opens. The [!UICONTROL Alerts] dialog subscribes you to both UI notifications and email alerts. Alerts are based on the status of the query. There are three options available: `start`, `success`, and `failure`. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe.
 
 ![The alert subscriptions dialog.](../images/ui/monitor-queries/alert-subscription-dialog.png)
 
@@ -82,6 +86,8 @@ See the [alert subscriptions API documentation](../api/alert-subscriptions.md) f
 ### View the query details {#query-details}
 
 Select the 'i' icon to see the details panel for the query. The details panel contains all the relevant information on the query beyond those included in the scheduled queries table. The additional information includes the query ID, the last modified date, the SQL of the query, the schedule ID, and the current set schedule.
+
+![The Scheduled Queries tab with the information icon and the details panel highlighted.](../images/ui/monitor-queries/details-panel.png)
 
 ## Filter queries {#filter}
 
