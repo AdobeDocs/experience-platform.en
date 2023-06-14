@@ -11,7 +11,7 @@ exl-id: 45840d7e-4c19-4720-8629-be446347862d
 
 The following tutorial walks you through the steps to create a [!DNL SAP Hybris] source connection to bring [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) contacts and customer data using the Adobe Experience Platform user interface.
 
-## Getting started
+## Getting started {#getting-started}
 
 This tutorial requires a working understanding of the following components of Experience Platform:
 
@@ -22,7 +22,7 @@ This tutorial requires a working understanding of the following components of Ex
 
 If you already have a valid [!DNL SAP Hybris] account, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/crm.md).
 
-### Gather required credentials
+### Gather required credentials {#gather-credentials}
 
 In order to connect [!DNL SAP Hybris] to Platform, you must provide values for the following connection properties:
 
@@ -35,7 +35,7 @@ In order to connect [!DNL SAP Hybris] to Platform, you must provide values for t
 	
 Refer to the [!DNL SAP Hybris] [documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html) if you need any guidance.
 
-### Create a Platform schema
+### Create a Platform schema {#create-platform-schema}
 
 Before creating a [!DNL SAP Hybris] source connection, you must also ensure that you first create a Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
@@ -134,7 +134,7 @@ Expand the following section to view an example schema.
 
 +++
 
-## Connect your [!DNL SAP Hybris] account
+## Connect your [!DNL SAP Hybris] account {#connect-account}
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
@@ -146,19 +146,19 @@ Under the *CRM* category, select **[!UICONTROL SAP Hybris]**, and then select **
 
 The **[!UICONTROL Connect SAP Hybris account]** page appears. On this page, you can either use new credentials or existing credentials.
 
-### Existing account
+### Existing account {#existing-account}
 
 To use an existing account, select the [!DNL SAP Hybris] account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
 
 ![Platform UI screenshot to connect SAP Hybris account with an existing account](../../../../images/tutorials/create/crm/sap-hybris-subscription-billing-customers-and-contacts/existing.png)
 
-### New account
+### New account {#new-account}
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and your credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
 ![Platform UI screenshot to connect SAP Hybris account with a new account](../../../../images/tutorials/create/crm/sap-hybris-subscription-billing-customers-and-contacts/new.png)
 
-### Select data
+### Select data {#select-data}
 
 Finally, you must select the object type that you want to ingest to Platform.
 
@@ -179,11 +179,11 @@ Finally, you must select the object type that you want to ingest to Platform.
 
 >[!ENDTABS]
 
-## Next steps
+## Next steps {#next-steps}
 
 By following this tutorial, you have established a connection to your [!DNL SAP Hybris] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/crm.md).
 
-## Additional resources
+## Additional resources {#additional-resources}
 
 The sections below provide additional resources that you can refer to when using the [!DNL SAP Hybris] source.
 

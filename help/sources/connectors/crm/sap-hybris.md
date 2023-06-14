@@ -32,10 +32,9 @@ Before you can create a [!DNL SAP Hybris] source connection, you must first ensu
 A [!DNL SAP Subscription Billing] account. You must contact your [!DNL SAP] account manager to obtain a valid [!DNL SAP Subscription Billing] account if you do not already have one. Refer to the [[!DNL SAP] Platform Configuration](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) document for additional details.
 
 [Get the Service Key](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/81a854f1410647fa9a06f46d42f3d8b4.html). You will need the below:
-* `identityzoneid`
-* `identityzone`
 * `clientid`
 * `clientsecret`
+* `url`, matching the pattern similar to `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. This value will be used to obtain the values for `region` and `tokenEndpoint` when you [Create base connection](../../tutorials/api/create/crm/sap-hybris-subscription-billing-customers-and-contacts.md#base-connection) using the API or when you [Connect your [!DNL SAP Hybris] account](../../tutorials/ui/create/crm/sap-hybris-subscription-billing-customers-and-contacts.md#connect-account) through the Platform UI.
   
 Expand the following section to view an example service key.
 
