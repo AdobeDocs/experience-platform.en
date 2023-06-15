@@ -15,6 +15,7 @@ feature: Sources
     - [Analytics source](connectors/adobe-applications/analytics.md)
     - [Audience Manager source](connectors/adobe-applications/audience-manager.md)
     - [Adobe Campaign Managed Cloud Services source](connectors/adobe-applications/campaign.md)
+    - [Adobe Commerce source](connectors/adobe-applications/commerce.md)
     - [Customer attributes source](connectors/adobe-applications/customer-attributes.md)
     - [Data Collection source](connectors/adobe-applications/data-collection.md)
     - [Workfront source](connectors/adobe-applications/workfront.md)
