@@ -30,6 +30,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Amazon Redshift], you mus
 | **Credential** | **Description** |
 | -------------- | --------------- |
 | `server` | The server associated with your [!DNL Amazon Redshift] account. |
+| `port` | The TCP port that a [!DNL Amazon Redshift] server uses to listen for client connections. |
 | `username` | The username associated with your [!DNL Amazon Redshift] account. |
 | `password` | The password associated with your [!DNL Amazon Redshift] account. |
 | `database` | The [!DNL Amazon Redshift] database you are accessing. |
@@ -63,34 +64,36 @@ The following request creates a base connection for [!DNL Amazon Redshift]:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "amazon-redshift base connection",
-        "description": "base connection for amazon-redshift,
-        "auth": {
-            "specName": "Basic Authentication",
-            "params": {
-                "server": "{SERVER}",
-                "database": "{DATABASE}",
-                "password": "{PASSWORD}",
-                "username": "{USERNAME}"
-            }
-        },
-        "connectionSpec": {
-            "id": "3416976c-a9ca-4bba-901a-1f08f66978ff",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "amazon-redshift base connection",
+      "description": "base connection for amazon-redshift,
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "server": "{SERVER}",
+              "port": "{PORT},
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "database": "{DATABASE}"
+          }
+      },
+      "connectionSpec": {
+          "id": "3416976c-a9ca-4bba-901a-1f08f66978ff",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Property | Description |
 | ------------- | --------------- |
 | `auth.params.server` |  Your [!DNL Amazon Redshift] server. |
+| `auth.params.port` | The TCP port that the [!DNL Amazon Redshift] server uses to listen for client connections. |
 | `auth.params.database` | The database associated with your [!DNL Amazon Redshift] account. |
 | `auth.params.password` | The password associated with your [!DNL Amazon Redshift] account. |
 | `auth.params.username` | The username associated with your [!DNL Amazon Redshift] account. |
