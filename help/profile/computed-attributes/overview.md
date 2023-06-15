@@ -5,7 +5,7 @@ badge: "Beta"
 ---
 # Computed attributes overview
 
-Personalization based on user behavior is a key requirement for marketers to maximize the impact of personalization. For instance, personalizing marketing email with the most recently viewed product to drive conversion, or personalizing webpage based on total purchases made by user to drive retention 
+Personalization based on user behavior is a key requirement for marketers to maximize the impact of personalization. For instance, personalizing marketing email with the most recently viewed product to drive conversion, or personalizing webpage based on total purchases made by users to drive retention. 
 
 Computed attributes help quickly convert profile behavioral data into aggregated values at the profile level without dependence on engineering resources for:
 
@@ -14,6 +14,8 @@ Computed attributes help quickly convert profile behavioral data into aggregated
 - Better data management with consolidation of old profile events data into meaningful behavioral insights
 
 These aggregates are computed based on Profile-enabled Experience Event datasets ingested into Adobe Experience Platform. Each computed attribute is a profile attribute created on your profile union schema, and is grouped under "Computed Attribute" mixin in your union schema.
+
+Sample use cases include personalizing ads with the name of the last viewed product for people with no purchases in the last 7 days, personalizing marketing emails with total reward points won to congratulate users on being promoted to a premium tier, or calculating the lifetime value of each customer to drive better targeting.
 
 This guide will help you to better understand the role of computed attributes within Platform, in addition to explaining the basics of computed attributes.
 
@@ -54,11 +56,19 @@ The refresh frequency refers to the frequency that the computed attributes are r
 
 For example, if your computed attribute has a lookback period of the last 7 days, this value will be calculated based on the values of the last 7 days, and then refreshed on a daily basis.
 
-<!-- **Fast refresh**
+>[!NOTE]
+>
+>Both weeks and months are considered as **calendar weeks** and **calendar months** when used in event lookbacks.
 
-If fast refresh is enabled, this lets the computed attribute be refreshed on a daily basis, rather than on a weekly, bi-weekly, or monthly basis. This value is only applicable for computed attributes with a lookback period greater than a weekly basis. -->
+**Fast refresh**
 
-Currently, fast refresh is only available to limited customers. Please contact Adobe Support for more information.
+Fast refresh allows you to keep your attributes up-to-date. Enabling this option lets you refresh your computed attributes on a daily basis, even for longer lookback periods. This allows you to react in near real-time to user activities. This value is only applicable for computed attributes with a lookback period greater than a weekly basis. A maximum of **five** attributes, per sandbox, can have fast refresh enabled. 
+
+>[!NOTE]
+>
+>Enabling fast refresh will vary your event lookback durations, since the lookback period rolls on a weekly or monthly basis respectively.
+>
+>For example, if you create a computed attribute with a two week lookback period with fast refresh enabled, this means that the initial lookback period will be two weeks. However, with each daily refresh, the lookback period will include events from the additional day. This addition of days will continue until the next calendar week starts, in which the lookback window will roll over and return to two weeks.
 
 ## Next steps
 
