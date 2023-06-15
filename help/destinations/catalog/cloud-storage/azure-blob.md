@@ -1,5 +1,4 @@
 ---
-keywords: Azure Blob;Blob destination;s3;azure blob destination
 title: Azure Blob connection
 description: Create a live outbound connection to your Azure Blob storage to periodically export CSV data files from Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
@@ -26,6 +25,11 @@ Improvements in the new [!DNL Azure Blob] destination card include:
 ## Overview {#overview}
 
 [!DNL Azure Blob] (hereinafter referred to as [!DNL Blob]) is Microsoft's object storage solution for the cloud. This tutorial provides steps for creating a [!DNL Blob] destination using the [!DNL Platform] user interface.
+
+## Connect to your [!UICONTROL Azure Blob] storage through API or UI {#connect-api-or-ui}
+
+* To connect to your [!UICONTROL Azure Blob] storage location using the Platform user interface, read the sections [Connect to the destination](#connect) and [Activate segments to this destination](#activate) below.
+* To connect to your [!UICONTROL Azure Blob] storage location programmatically, read the [Activate segments to file-based destinations by using the Flow Service API tutorial](../../api/activate-segments-file-based-destinations.md).
 
 ## Getting started
 
@@ -73,7 +77,7 @@ To connect to this destination, follow the steps described in the [destination c
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
 * **[!UICONTROL Connection string]**: the connection string is required to access data in your Blob storage. The [!DNL Blob] connection string pattern starts with: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. 
-    * For more information about configuring your [!DNL Blob] connection string, see [Configure a connection string for an Azure storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) in the Microsoft documentation.
+    * For more information about configuring your [!DNL Blob] connection string, see [Configure a connection string for an Azure storage account](https://learn.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) in the Microsoft documentation.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
   ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -88,7 +92,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Container]**: enter the name of the [!DNL Azure Blob Storage] container to be used by this destination.
 * **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL Azure Blob beta]** destination. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL Azure Blob beta]** destination.
-* * **[!UICONTROL Include manifest file]**: toggle this option on if you'd like the exports to include a manifest JSON file that contains information abut the export location, export size, and more. This option is only available for the **[!UICONTROL Azure Blob beta]** destination.
+* **[!UICONTROL Include manifest file]**: toggle this option on if you'd like the exports to include a manifest JSON file that contains information abut the export location, export size, and more. This option is only available for the **[!UICONTROL Azure Blob beta]** destination.
 
 ### Enable alerts {#enable-alerts}
 
@@ -106,7 +110,10 @@ See [Activate audience data to batch profile export destinations](../../ui/activ
 
 ## (Beta) Export datasets {#export-datasets}
 
-This destination supports dataset exports. For complete information on how to set up dataset exports, read the [export datasets tutorial](/help/destinations/ui/export-datasets.md).
+This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
+
+* How to [export datasets using the Platform user interface](/help/destinations/ui/export-datasets.md). 
+* How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
 
 ## Exported data {#exported-data}
 

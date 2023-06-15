@@ -14,7 +14,15 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 
 This user guide covers steps for working with data usage labels within the [!DNL Experience Platform] user interface.
 
+## Manage labels {#manage-labels}
+
+To apply labels to your data, you need the **[!UICONTROL Manage Usage Labels]** permission for use on the default production sandbox called "prod". To create a custom label, you must also have administrative rights on the product profile. Each organization only has one list of applicable labels, and currently, deleting labels is not supported.
+
+See the guide on how to [configure permissions](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) or the [access control overview](../../access-control/home.md) for more information on how to assign a permission. If you do not have access to the Admin Console for your organization, please contact your organization admin.
+
 ## Manage labels at the schema level
+
+You can add labels directly to a schema or fields within that schema. Any fields applied at the schema level will propagate to all datasets based on that schema.
 
 In order to manage data usage labels at the schema level, you must select an existing schema or create a new one. After logging into Adobe Experience Platform, select **[!UICONTROL Schemas]** on the left-navigation to open the **[!UICONTROL Schemas]** workspace. This page lists all created schemas belonging to your organization, along with useful details related to each schema. 
 
@@ -26,7 +34,7 @@ The next section provides steps for creating a new schema to apply labels to. If
 
 To create a new schema, select **[!UICONTROL Create schema]** in the top-right corner of the **[!UICONTROL Schemas]** workspace. See the guide on [how to create a schema using the Schema Editor](../../xdm/tutorials/create-schema-ui.md#create) for complete instructions. Alternatively, you can [create a schema using the Schema Registry API](../../xdm/tutorials/create-schema-api.md) if required.  
 
-### Add data usage labels to the schema {#add-labels-to-schema}
+### Add data usage labels to a schema {#add-labels-to-schema}
 
 After creating a new schema, or selecting an existing schema from the list in the [!UICONTROL Browse] tab of the [!UICONTROL Schemas] workspace, select a field from your schema in the Schema Editor. In the [!UICONTROL Field properties] sidebar, select **[!UICONTROL Apply Access and Data Governance Labels]**. 
 
@@ -92,12 +100,6 @@ The **[!UICONTROL Show Inherited Labels]** toggle is on by default, which allows
 >Labels that were applied before the dataset labelling feature was deprecated can be removed from the dataset by finding the relevant dataset and selecting the cancel icon on the label. 
 >![The Data Governance tab of the Datasets workspace with a deletable label highlighted.](../images/labels/remove-governance-labels.png)
 >See the documentation for instructions on [how to migrate previously applied labels from the dataset to the schema level](../e2e.md#migrate-labels).
-
-## Manage labels at the schema level
-
-You can add labels directly to a schema or fields within that schema. Any fields applied at the schema level will propagate to all datasets based on that schema.
-
-See the tutorial on [managing schema-level labels](../../xdm/tutorials/labels.md) for more information.
 
 ## Manage custom labels {#manage-custom-labels}
 
