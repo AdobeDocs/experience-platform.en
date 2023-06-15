@@ -3,7 +3,7 @@ title: SAP Hybris Source Overview
 description: Learn how to connect SAP Hybris to Adobe Experience Platform using APIs or the user interface.
 badge: Beta
 ---
-# (Beta) [!DNL SAP Hybris]
+# [!DNL SAP Hybris]
 
 >[!NOTE]
 >
@@ -13,7 +13,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 Experience Platform provides support for ingesting data from a third-party CRM application. Support for CRM providers include [!DNL SAP Hybris].
 
-[[!DNL SAP Hybris]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html) is a cloud-based e-commerce platform solution for B2B and B2C enterprises is now available as part of the SAP Customer Experience portfolio. [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) is a product under its portfolio and enables complete subscription lifecycle management with simplified selling and payment experiences through standardized integrations.
+[[!DNL SAP Hybris]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), a cloud-based e-commerce platform solution for B2B and B2C enterprises is available as part of the SAP Customer Experience portfolio. [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) is a product under the portfolio and enables complete subscription lifecycle management with simplified selling and payment experiences through standardized integrations.
 
 The [!DNL SAP Hybris] source allows you to ingest customers and contacts information into Platform from the [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) Business Partners API endpoints below:
 * [Customers](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers)
@@ -29,16 +29,17 @@ A list of IP addresses may require to be added to an allow list prior to working
 
 Before you can create a [!DNL SAP Hybris] source connection, you must first ensure that you have the following:
 
-A [!DNL SAP Subscription Billing] account. You must contact your [!DNL SAP] account manager to obtain a valid [!DNL SAP Subscription Billing] account if you do not already have one. Refer to the [[!DNL SAP] Platform Configuration](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) document for additional details.
+* A [!DNL SAP Subscription Billing] account. 
+  * If you do not already have a valid billing account, then please contact your [!DNL SAP] account manager. Refer to the [[!DNL SAP] Platform Configuration](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) document for additional details.
 
-[Get the Service Key](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/81a854f1410647fa9a06f46d42f3d8b4.html). You will need the below:
-* `clientid`
-* `clientsecret`
-* `url`, matching the pattern similar to `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. This value will be used to obtain the values for `region` and `tokenEndpoint` when you [Create base connection](../../tutorials/api/create/crm/sap-hybris-subscription-billing-customers-and-contacts.md#base-connection) using the API or when you [Connect your [!DNL SAP Hybris] account](../../tutorials/ui/create/crm/sap-hybris-subscription-billing-customers-and-contacts.md#connect-account) through the Platform UI.
+* Service key, The Service key allows you to access the [!DNL SAP Subscription Billing] API through Platform. [!DNL SAP Hybris] requires the following:
+  * `Client ID`
+  * `Client Secret`
+  * `URL`, The URL pattern is as follows: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. This value will be used later to obtain values for `region` and `tokenEndpoint` when you [Create base connection](../../tutorials/api/create/crm/sap-hybris-subscription-billing-customers-and-contacts.md#base-connection) using the API or when you [Connect your [!DNL SAP Hybris] account](../../tutorials/ui/create/crm/sap-hybris-subscription-billing-customers-and-contacts.md#connect-account) through the Platform UI.
   
 Expand the following section to view an example service key.
 
-+++ View Service Key
++++ View service key example
 
 ```json
 { 

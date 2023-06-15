@@ -1,8 +1,9 @@
 ---
 title: Create a source connection and dataflow for SAP Hybris using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to SAP Hybris using the Flow Service API.
+badge: Beta
 ---
-# (Beta) Create a source connection and dataflow for [!DNL SAP Hybris] using the Flow Service API
+# Create a source connection and dataflow for [!DNL SAP Hybris] using the Flow Service API
 
 >[!NOTE]
 >
@@ -30,7 +31,7 @@ In order to connect [!DNL SAP Hybris] to Platform, you must provide values for t
 | `tokenEndpoint` | The value of `url` from the service key, it will be similar to `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
 | `region` | Your data center location. The region is present in the `url` and has a value similar to `eu10` or `us10`. For example if the `url` is `https://subscriptionbilling.authentication.eu10.hana.ondemand.com` you will need `eu10`. |
 	
-Refer to the [!DNL SAP Hybris] [documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html) if you need any guidance.
+For more information, please refer to the [[!DNL SAP Hybris] documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
 ## Connect [!DNL SAP Hybris] to Platform using the [!DNL Flow Service] API
 

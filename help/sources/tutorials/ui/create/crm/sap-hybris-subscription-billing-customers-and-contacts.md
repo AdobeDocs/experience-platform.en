@@ -1,9 +1,9 @@
 ---
 title: Create a SAP Hybris source connection in the UI
 description: Learn how to create a SAP Hybris source connection using the Adobe Experience Platform UI.
-exl-id: 45840d7e-4c19-4720-8629-be446347862d
+badge: Beta
 ---
-# (Beta) Create a [!DNL SAP Hybris] source connection in the UI
+# Create a [!DNL SAP Hybris] source connection in the UI
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ In order to connect [!DNL SAP Hybris] to Platform, you must provide values for t
 | `tokenEndpoint` | The value of `url` from the service key, it will be similar to `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
 | `region` | Your data center location. The region is present in the `url` and has a value similar to `eu10` or `us10`. For example if the `url` is `https://eu10.revenue.cloud.sap/api` you will need `eu10`. |
 	
-Refer to the [!DNL SAP Hybris] [documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html) if you need any guidance.
+For more information, please refer to the [[!DNL SAP Hybris] documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
 ### Create a Platform schema {#create-platform-schema}
 
@@ -41,7 +41,7 @@ Before creating a [!DNL SAP Hybris] source connection, you must also ensure that
 
 Expand the following section to view an example schema.
 
-+++ View Service Key
++++ View schema example
 
 ```
 {
@@ -193,7 +193,7 @@ The [!UICONTROL Mapping] step appears, providing you with an interface to map th
 
 Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
-Based on the `object_type` selection *(either `customers` or `contacts`)* and your schema the mappings would be as below. Setup the desired mappings before proceeding to the next stage.
+Based on the `object_type` selection *(either `customers` or `contacts`)* and your schema, the mappings would be as below. Set up the desired mappings before proceeding to the next stage.
 
 >[!NOTE]
 >
