@@ -11,9 +11,9 @@ This tutorial provides steps for creating a RainFocus source connector using the
 
 ## Overview
 
-The RainFocus platform has everything you need to promote your event and build an audience. Create beautiful promotional pages, track campaign performance, and optimize registration conversions.
+RainFocus is a platform that you can use to promote your events and build your audiences. You can use RainFocus to create beautiful promotional pages, track campaign performances, and optimize registration conversions.
 
-Use the RainFocus Source Connector for Adobe Experience Platform (AEP) Real-time Customer Data Profile (RT-CDP) to automatically enrich your Customer Data Profiles with attendee experience events in real-time. Once enabled, experience events are automatically streamed into RT-CDP in real-time, allowing for powerful audience segmentation, analysis and activation of the attendee journey with downstream destinations and applications such as Customer Journey Analytics and Adobe Journey Optimizer. 
+Use the RainFocus source in Adobe Experience Platform and Real-Time Customer Data Platform to automatically enrich your customer data profiles with attendee experience events in real-time. Once enabled, experience events are automatically streamed into Real-Time CDP, allowing for powerful audience segmentation, data analysis, and activation of the attendee journey with downstream destinations and applications such as Customer Journey Analytics and Adobe Journey Optimizer.
 
 >[!IMPORTANT]
 >
@@ -27,7 +27,7 @@ In order to activate this integration, the following steps need to be taken, eac
 
 >[!IMPORTANT]
 >
->Adobe have recently announced the deprecation of JWT tokens in favor of OAuth, the RainFocus Source Connector will be migrating to OAuth in the near future to accommodate this. 
+>Adobe has recently announced the deprecation of JWT tokens in favor of OAuth, the RainFocus Source Connector will be migrating to OAuth in the near future to accommodate this. 
 
 ### Gather required credentials
 
@@ -42,7 +42,7 @@ In order to connect RainFocus to Platform, you must provide values for the follo
 
 ## Create XDM Schema and set the Identity
 
-In order to store the Experience Events from RainFocus in AEP, you must create an XDM Schema to describe a Dataset which can store  the possible fields and data types that will be sent from RainFocus. 
+In order to store the Experience Events from RainFocus in Experience Platform, you must create an XDM Schema to describe a dataset which can store the possible fields and data types that will be sent from RainFocus. 
 
 RainFocus recommends the following fields, which covers all possible data sent by default. 
 
@@ -58,34 +58,34 @@ The following Field Groups are also recommended (denoted by prefix):
 |                           |          |                                                   |                                                              |
 | ------------------------- | -------- | :-----------------------------------------------: | :----------------------------------------------------------: |
 | **Field**                 | **Type** |                    **Example**                    |                        **Description**                       |
-| attendee.registered       | String   |                        Yes                        |     Flag determining if attendee is considered registered    |
-| attendee.attendeeId       | String   |                1619119968857001fvLB               |                   Attendee ID in RainFocus                   |
-| attendee.externalId       | String   |                1666809456617001wyPj               |             External ID specified by Organization            |
-| attendee.clientId         | String   | 8EFC1F57631CAFE70A495ECB@8f3f1f5c631caf3e495fd8.e |                    Attendee SSO Client ID                    |
-| attendee.email            | String   |                  user@company.com                 |                    Attendee email address                    |
-| transmissionId            | String   |                1680309557133001YHhz               |                Unique identifier for data push               |
-| eventType                 | String   |                  SessionScheduled                 | Name of Attendee Experience Event (see Push Type Dictionary) |
-| timestamp                 | DateTime |              2023-04-01T00:41:57.000Z             |                    Timestamp of data push                    |
-| event.name                | String   |                 Adobe Summit 2023                 |     Name of the event in which a transmission took place.    |
-| exhibitor.exhibitorId     | String   |                1680309557133001YHhz               |             RainFocus Identifier of the exhibitor            |
-| exhibitor.externalId      | String   |                1666809514105001lSJN               |           Identifier for exhibitor in client system          |
-| exhibitor.name            | String   |                        IBM                        |                     Name of the exhibitor                    |
-| lead.leadId               | String   |                1666809456617001wyPj               |               RainFocus Identifier of the lead               |
-| lead.note                 | String   |                                                   |                                                              |
-| session.sessionId         | String   |                1666809373585001t4aV               |             RainFocus Identifier for the session             |
-| session.externalId        | String   |                1666809456617001wyPj               |            Identifier for session in client system           |
-| session.code              | String   |                        GS3                        |                        Code of session                       |
-| session.title             | String   |                Inspiration Keynote                |                       Title of session                       |
-| session.length            | Int      |                         90                        |                       Length of session                      |
-| sessiontime.sessiontimeId | String   |                1673033149739001OJLZ               |           RainFocus Identifier for the session time          |
-| sessiontime.startTime     | String   |                2023-03-22 10:00:00                |                      Session start time                      |
-| sessiontime.endTime       | String   |                2023-03-22 10:00:00                |                       Session end time                       |
-| sessiontime.room          | String   |                        B32                        |                       Room for session                       |
+| `attendee.registered`       | String   |                        Yes                        |     Flag determining if attendee is considered registered    |
+| `attendee.attendeeId`       | String   |                1619119968857001fvLB               |                   Attendee ID in RainFocus                   |
+| `attendee.externalId`       | String   |                1666809456617001wyPj               |             External ID specified by Organization            |
+| `attendee.clientId`         | String   | 8EFC1F57631CAFE70A495ECB@8f3f1f5c631caf3e495fd8.e |                    Attendee SSO Client ID                    |
+| `attendee.email`            | String   |                  user@company.com                 |                    Attendee email address                    |
+| `transmissionId`            | String   |                1680309557133001YHhz               |                Unique identifier for data push               |
+| `eventType`                 | String   |                  SessionScheduled                 | Name of Attendee Experience Event (see Push Type Dictionary) |
+| `timestamp`                 | DateTime |              2023-04-01T00:41:57.000Z             |                    Timestamp of data push                    |
+| `event.name`                | String   |                 Adobe Summit 2023                 |     Name of the event in which a transmission took place.    |
+| `exhibitor.exhibitorId`     | String   |                1680309557133001YHhz               |             RainFocus Identifier of the exhibitor            |
+| `exhibitor.externalId`      | String   |                1666809514105001lSJN               |           Identifier for exhibitor in client system          |
+| `exhibitor.name`            | String   |                        IBM                        |                     Name of the exhibitor                    |
+| `lead.leadId`               | String   |                1666809456617001wyPj               |               RainFocus Identifier of the lead               |
+| `lead.note`                 | String   |                                                   |                                                              |
+| `session.sessionId`         | String   |                1666809373585001t4aV               |             RainFocus Identifier for the session             |
+| `session.externalId`        | String   |                1666809456617001wyPj               |            Identifier for session in client system           |
+| `session.code`              | String   |                        GS3                        |                        Code of session                       |
+| `session.title`             | String   |                Inspiration Keynote                |                       Title of session                       |
+| `session.length`            | Int      |                         90                        |                       Length of session                      |
+| `sessiontime.sessiontimeId` | String   |                1673033149739001OJLZ               |           RainFocus Identifier for the session time          |
+| `sessiontime.startTime`     | String   |                2023-03-22 10:00:00                |                      Session start time                      |
+| `sessiontime.endTime`       | String   |                2023-03-22 10:00:00                |                       Session end time                       |
+| `sessiontime.room`          | String   |                        B32                        |                       Room for session                       |
 
-To use the sample Schema from RainFocus, you may take one of the the following steps:
+To create your schema for RainFocus data, read the following documentation for steps on how to create a schema using APIs or the UI.
 
-* [Create the Schema using the UI](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en)
-* [Create the Schema using the API](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-api.html?lang=en)
+* [Create the schema using the UI](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en)
+* [Create the schema using the API](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-api.html?lang=en)
 
 >[!IMPORTANT]
 >
@@ -96,98 +96,110 @@ To use the sample Schema from RainFocus, you may take one of the the following s
 
 ## Enable the Integration Profile in RainFocus
 
-Now that the Service Account and XDM Schema are ready, switch to RainFocus to activate the Integration Profile, which will be responsible for streaming data to AEP. 
+Now that the Service Account and XDM Schema are ready, switch to RainFocus to activate the Integration Profile, which will be responsible for streaming data to Experience Platform. 
 
-1. Log into the **RainFocus** platform
-
-2. In the primary navigation, select **Libraries** and **Integration Profiles** 
+* Log into the [**RainFocus** platform](https://app.rainfocus.com). In the primary navigation, select **Libraries** and **Integration Profiles** 
 ![Screenshot showing the RainFocus platform and the location of the Integration Profile in the main menu](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile.png)
 
-3. Select the **+** icon, in the bottom right corner, to create a new profile.
+* Select the **(`+`)** icon, in the bottom right corner, to create a new profile.
 
-4. Choose the **Adobe Experience Platform CDP** and click **OK**  
-![Screenshot showing the RainFocus platform and the location of the AEP CDP Integtaion Profile](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-select.png)
+* Next, select Adobe Experience Platform CDP and then select OK.
+![Screenshot showing the RainFocus platform and the location of the Experience Platform CDP Integration Profile](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-select.png)
 
-5. Copy the following credential, previously created in the Adobe Developer Portal Project
+* Provide the credentials that were previously created in the Adobe Developer Portal Project:
 
    1. **Client ID**
    2. **Client Secret**
    3. **Technical Account ID**
    4. **Organization ID**
+      
+   Then, select Save. You should now see the new Integration Profile listed.
 
-6. Click **Save.** You should now see the new Integration Profile listed.
+* Select the new Integration Profile and open it again.
 
-7. Select the new Integration Profile and open it again.
-
-8. You will now see a list of predefined **push types** already configured. These are the [Experience Events](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=en) that will be sent to AEP when they occur.   
+* You will now see a list of predefined **push types** already configured. These are the [Experience Events](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=en) that will be sent to Experience Platform when they occur.   
 ![Screenshot showing the RainFocus platform and the Experience Events that are configured automatically](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-setup.png)
 
-9. Select the **Sample JSON Payload** tab
+* Select the **Sample JSON Payload** tab
 
-10. Highlight and copy the Sample JSON Payload and **save it in a new file with a .json extension**. We will use this in AEP to configure our mappings. 
+* Highlight and copy the Sample JSON Payload and **save it in a new file with a .json extension**. This will be used later in Experience Platform for mapping configurations.
 ![Screenshot showing the RainFocus platform and the JSON preview that is generated](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-json.png)
 
-> **Setup is not yet complete** - _we will need to return to complete the integrations profile, keep this tab open and proceed to the next step to install and configure the Source Connector in AEP and to obtain the_ **_Streaming Endpoint_** _and_ **_Dataflow ID._**
+>[!TIP]
+>
+> **Setup is not yet complete** - _we will need to return to complete the integrations profile, keep this tab open and proceed to the next step to install and configure the Source Connector in Experience Platform and to obtain the_ **_Streaming Endpoint_** _and_ **_Dataflow ID._**
 
-## Install and configure the RainFocus Source Connector
+## Connect your RainFocus account in Experience Platform
 
-1. Login into **Adobe Experience Platform**
- 
-2. Locate **Sources** in the main navigation
-![Screenshot showing AEP and the location of Sources](/help/sources/images/tutorials/create/rainfocus/rainfocus_aep-sources.png)
+In the Platform UI, select Sources from the left navigation bar to access the Sources workspace. The Catalog screen displays a variety of sources with which you can create an account.
 
-3. Select to the **Catalog** tab and search for **RainFocus** then click **Setup
-![Screenshot showing how to search for the RainFocus Source Connector](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
+You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-4. You will be prompted to provide a **Sample JSON Payload** to configure mappings, upload the Sample JSON Payload downloaded and saved in the previous step.
+Under the Analytics category, select RainFocus, and then select Setup.
+
+![Screenshot showing the JSON upload step of the RainFocus Source Connector](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
+
+## Select data
+
+The Select data step appears, providing an interface for you to select the data that you bring to Platform.
+
+* The left part of the interface is a browser that allows you to view the available data streams within your account;
+* The right part of the interface lets you preview up to 100 rows of data from a JSON file.
+
+Select Upload files to upload a JSON file from your local system. Alternatively, you can drag and drop the JSON file you want to upload into the Drag and drop files panel.
+
+Upload the Sample JSON Payload downloaded from **RainFocus**.
+
 ![Screenshot showing the JSON upload step of the RainFocus Source Connector](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-json-upload.png)
 
-5. Once uploaded, you should see a visual representation of the payload, as shown below:
+Once your file uploads, the preview interface updates to display a preview of the schema you uploaded. The preview interface allows you to inspect the contents and structure of a file. You can also use the Search field utility to access specific items from within your schema.
+
+When finished, select **Next**.
+
 ![Screenshot showing the JSON preview of the uploaded sample](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-json-preview.png)
 
-6. Click **Next**
-7. **Under Dataset details, select New Dataset.**
-8. Provide a suitable name for your new Dataset e.g **RainFocus Time Series Data**
-9. Choose the Schema created previously in “Create XDM schema and Identity”, e.g **RainFocus Time Series**
-10. Enable the Dataset for Profile
+## Dataflow detail
+
+The **Dataflow detail** step appears, providing you with options to use an existing dataset or establish a new dataset for your dataflow, as well as an opportunity to provide a name and description for your dataflow. During this step, you can also configure settings for Profile ingestion, error diagnostics, partial ingestion, and alerts.
+
+When finished, select **Next**.
+
 ![Screenshot showing how to configure the dataflow](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow-setup.png)
 
-11. (optional) Under dataflow details, provide a suitable name and description for the dataflow 
-12. (optional) Choose any alerts you may wish to subscribe to. 
-13. Click **Next**
-14. Now we need to configure our mappings, most will be configured automatically however you will need to add an additional field for the **\_id** field.
-15. Click **New field type**
-![Screenshot showing where to add a new field](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-mappings.png)
+## Mapping
 
-16. Select **Add new field**
-17. **Select transmissionId from the sample JSON schema and click Select 
-![Screenshot showing the transmissionId that needs to be selected](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-mapping-select.png)
+The Mapping step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
-18. Click **Map target field**
-![Screenshot showing how to select the id from the schema](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-mapping-map-target.png)
+Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html?lang=en).
 
-19. Select **\_id** from the RainFocus Time Series Schema
-![Screenshot showing how to select the id from the schema](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-mapping-select-target.png)
+Once your source data is successfully mapped, select **Next**.
 
-20. Correct any additional missing fields using the steps outlined above. All indicators should be green before proceeding with the next step.
-![Screenshot showing the confirmation dialog present on the mapping view of the source connector](/help/sources/images/tutorials/create/rainfocus/rainfocus_aep-confirmation.png)
+![Screenshot showing how to configure the dataflow](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-mappings.png)
 
-21. Click **Next** in the top right 
+## Review
 
-22. Click **Finish** on the summary screen
+The **Review** step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
+
+* **Connection**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
+* **Assign dataset & map fields**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
+
+Once you have reviewed your dataflow, select **Finish** and allow some time for the dataflow to be created.
+
 ![Screenshot showing the confirmation dialog present on the mapping view of the source connector](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-compelete.png)
 
-23. You will see a summary of the DataFlows you have in place, select the Dataflow associated with the RainFocus connector that was just created. **Select the dataflow name**
-![Screenshot showing the confirmation dialog present on the mapping view of the source connector](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow.png)
+## Get your streaming endpoint URL
 
-24. Scroll down and on the right hand side, you should see the **Dataflow ID** and **Streaming Endpoint**. You will need to copy these details over to the RainFocus Integration Profile. 
+With your streaming dataflow created, you can now retrieve your streaming endpoint URL. This endpoint will be used to subscribe to your webhook, allowing your streaming source to communicate with Experience Platform.
 
-### Activate the Integration Profile
+To retrieve your streaming endpoint, go to the Dataflow activity page of the dataflow that you just created and copy the endpoint from the bottom of the Properties panel.
 
-1. Log into the **RainFocus** platform
-2. In the primary navigation, select **Libraries** and **Integration Profiles**
-3. Open the Integration Profile created previously. 
-4. Paste the **Dataflow ID** and **Streaming Endpoint** copied from the Dataflow in AEP and click **Save**
+![Screenshot showing the API and Dataset values](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow-api.png)
+
+## Activate the Integration Profile in RainFocus
+
+* Log into the [**RainFocus** platform](https://app.rainfocus.com). In the primary navigation, select **Libraries** and **Integration Profiles** 
+* Open the Integration Profile created previously. 
+* Paste the **Dataflow ID** and **Streaming Endpoint** copied from the Dataflow in Experience Platform and select **Save**
 
 ## Next steps
 
