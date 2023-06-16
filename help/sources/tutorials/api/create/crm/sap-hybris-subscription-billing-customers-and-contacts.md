@@ -1,6 +1,6 @@
 ---
 title: Create a source connection and dataflow for SAP Hybris using the Flow Service API
-description: Learn how to connect Adobe Experience Platform to SAP Hybris using the Flow Service API.
+description: Learn how to create a source connection and dataflow to bring SAP Hybris data to Experience Platform using the Flow Service API.
 badge: Beta
 ---
 # Create a source connection and dataflow for [!DNL SAP Hybris] using the Flow Service API
@@ -9,7 +9,7 @@ badge: Beta
 >
 >The [!DNL SAP Hybris] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-The following tutorial walks you through the steps to create a [!DNL SAP Hybris] source connection and create a dataflow to bring [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) contacts and customer data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a [!DNL SAP Hybris] source connection and a dataflow to bring [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) contacts and customer data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 
@@ -22,16 +22,16 @@ The following sections provide additional information that you will need to know
 
 ### Gather required credentials
 
-In order to connect [!DNL SAP Hybris] to Platform, you must provide values for the following connection properties:
+In order to connect [!DNL SAP Hybris] to Experience Platform, you must provide values for the following connection properties:
 
 | Credential | Description |
 | --- | --- |
-| `Client Id` | The value of `clientid` from the service key. |
-| `Client Secret` | The value of `clientsecret` from the service key. |
+| `clientId` | The value of `clientId` from the service key. |
+| `clientSecret` | The value of `clientSecret` from the service key. |
 | `tokenEndpoint` | The value of `url` from the service key, it will be similar to `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
-| `region` | Your data center location. The region is present in the `url` and has a value similar to `eu10` or `us10`. For example if the `url` is `https://subscriptionbilling.authentication.eu10.hana.ondemand.com` you will need `eu10`. |
-	
-For more information, please refer to the [[!DNL SAP Hybris] documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
+| `region` | Your data center location. The region is present in the `url` and has a value similar to `eu10` or `us10`. For example if the `url` is `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`, then you will need `eu10`. |
+  
+For more information on these credentials, please refer to the [[!DNL SAP Hybris] documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
 ## Connect [!DNL SAP Hybris] to Platform using the [!DNL Flow Service] API
 
@@ -63,7 +63,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "SAP Hybris base connection",
-      "description": "Create a live inbound connection to your SAP Hybris instance, to ingest both historic and scheduled data into Experience Platform",
+      "description": "Authenticated base connection for SAP Hybris",
       "connectionSpec": {
           "id": "d8ee38de-7ae9-4058-9610-c79ce75f8e92",
           "version": "1.0"
@@ -71,10 +71,10 @@ curl -X POST \
       "auth": {
           "specName": "OAuth2 Client Credential",
           "params": {
-              "region": "{HYBRIS_REGION}",
-              "clientId": "{HYBRIS_CLIENT_ID}",
-              "clientSecret": "{HYBRIS_CLIENT_SECRET}"
-              "tokenEndpoint": "{HYBRIS_TOKEN_ENDPOINT}"
+              "region": "{REGION}",
+              "clientId": "{CLIENT_ID}",
+              "clientSecret": "{CLIENT_SECRET}"
+              "tokenEndpoint": "{TOKEN_ENDPOINT}"
           }
       }
   }'
@@ -87,8 +87,8 @@ curl -X POST \
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
 | `auth.params.region` | Your data center location. The region is present in the `url` and has a value similar to `eu10` or `us10`. For example, if the `url` is `https://subscriptionbilling.authentication.eu10.hana.ondemand.com` you will need `eu10`. |
-| `auth.params.clientId` | The value of `clientid` from the service key. |
-| `auth.params.clientSecret` | The value of `clientsecret` from the service key. |
+| `auth.params.clientId` | The value of `clientId` from the service key. |
+| `auth.params.clientSecret` | The value of `clientSecret` from the service key. |
 | `auth.params.tokenEndpoint` | The value of `url` from the service key, it will be similar to `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
 
 **Response**
@@ -104,8 +104,7 @@ A successful response returns the newly created base connection, including its u
 
 ### Explore your source {#explore}
 
-Using the base connection ID you generated in the previous step, you can explore files and directories by performing GET requests.
-Use the following calls to find the path of the file you wish to bring into Platform:
+Once you have your base connection ID, you can now exploree the content and structure of your source data by performing a GET request to the `/connections` endpoint while providing your base connection ID as a query parameter.
 
 **API format**
 
@@ -114,7 +113,6 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 ```
 
 When performing GET requests to explore your source's file structure and contents, you must include the query parameters that are listed in the table below:
-
 
 | Parameter | Description |
 | --------- | ----------- |
@@ -127,13 +125,17 @@ When performing GET requests to explore your source's file structure and content
 
 The [!DNL SAP Hybris] source supports multiple APIs. Depending on which object type you are leveraging the request to be sent is as below:
 
-**Request**
+>[!NOTE]
+>
+>Some response records have been truncated to allow for a better presentation.
 
 >[!BEGINTABS]
 
 >[!TAB Customers]
 
-For [!DNL SAP Hybris] Customers API the value for `{SOURCE_PARAMS}` is passed as `{"object_type":"customers"}`. When encoded in base64 it equates to `eyJvYmplY3RfdHlwZSI6ImN1c3RvbWVycyJ9` as shown below.
++++Request
+
+For [!DNL SAP Hybris] Customers API the value for `{SOURCE_PARAMS}` is passed as `{"object_type":"customers"}`. When encoded in base64, it equates to `eyJvYmplY3RfdHlwZSI6ImN1c3RvbWVycyJ9` as shown below.
 
 ```shell
 curl -X GET \
@@ -144,32 +146,11 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
->[!TAB Contacts]
++++
 
-For [!DNL SAP Hybris] Contacts API the value for `{SOURCE_PARAMS}` is passed as `{"object_type":"contacts"}`. When encoded in base64, it equates to `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=` as shown below.
++++Response
 
-```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/connections/f5421911-6f6c-41c7-aafa-5d9d2ce51535/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
->[!ENDTABS]
-
-**Response**
-
-Similarly, depending on which object type you are leveraging the response received is as below:
-
->[!NOTE]
->
->Some records have been truncated to allow for a better presentation.
-
->[!BEGINTABS]
-
->[!TAB Customers]
+A successful response returns a JSON structure like the following: 
 
 ```json
 {
@@ -471,9 +452,28 @@ Similarly, depending on which object type you are leveraging the response receiv
 }
 ```
 
++++
+
 >[!TAB Contacts]
 
-A successful response returns a structure as below. 
++++Request
+
+For [!DNL SAP Hybris] Contacts API the value for `{SOURCE_PARAMS}` is passed as `{"object_type":"contacts"}`. When encoded in base64, it equates to `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=` as shown below.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/connections/f5421911-6f6c-41c7-aafa-5d9d2ce51535/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
++++Response
+
+A successful response returns a JSON structure like the following: 
 
 ```json
 {
@@ -544,11 +544,13 @@ A successful response returns a structure as below.
 
 ```
 
++++
+
 >[!ENDTABS]
 
 ### Create a source connection {#source-connection}
 
-You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
+You can create a source connection by making a POST request to the `/sourceConnections` endpoint of the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
 
 **API format**
 
@@ -556,17 +558,15 @@ You can create a source connection by making a POST request to the [!DNL Flow Se
 POST /sourceConnections
 ```
 
-**Request**
-
-The following request creates a source connection for [!DNL SAP Hybris]:
-
 Depending on which object type you are leveraging, select from the tabs below:
 
 >[!BEGINTABS]
 
 >[!TAB Customers]
 
-For [!DNL SAP Hybris] Customers API the `object_type` property value should be `customers`.
++++Request
+
+The following request creates a source connection for [!DNL SAP Hybris] customers data:
 
 ```shell
 curl -X POST \
@@ -593,9 +593,36 @@ curl -X POST \
   }'
 ```
 
+| Property | Description |
+| --- | --- |
+| `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
+| `description` | An optional value that you can include to provide more information on your source connection. |
+| `baseConnectionId` | The base connection ID of [!DNL SAP Hybris]. This ID was generated in an earlier step. |
+| `connectionSpec.id` | The connection specification ID that corresponds to your source. |
+| `data.format` | The format of the [!DNL SAP Hybris] data that you want to ingest. Currently, the only supported data format is `json`. |
+| `object_type` | [!DNL SAP Hybris] supports multiple APIs. For customers API, the `object_type` parameter should be set to `customers`. |
+| `path` | This will have the same value that you select for `object_type`. |
+
++++
+
++++Response
+
+A successful response returns the unique identifier (`id`) of the newly created source connection. This ID is required in a later step to create a dataflow.
+
+```json
+{
+    "id": "8f1fc72a-f562-4a1d-8597-85b5ca1b1cd3",
+    "etag": "\"ed05f1e1-0000-0200-0000-6368b8710000\""
+}
+```
+
++++
+
 >[!TAB Contacts]
 
-For [!DNL SAP Hybris] Contacts API the `object_type` property value should be `contacts`.
++++Request
+
+The following request creates a source connection for [!DNL SAP Hybris] contacts data:
 
 ```shell
 curl -X POST \
@@ -622,8 +649,6 @@ curl -X POST \
   }'
 ```
 
->[!ENDTABS]
-
 | Property | Description |
 | --- | --- |
 | `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
@@ -631,10 +656,12 @@ curl -X POST \
 | `baseConnectionId` | The base connection ID of [!DNL SAP Hybris]. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
 | `data.format` | The format of the [!DNL SAP Hybris] data that you want to ingest. Currently, the only supported data format is `json`. |
-| `object_type` | [!DNL SAP Hybris] supports multiple APIs. Depending on which object type you are leveraging, pass one of the below : <ul><li>`customers`</li><li>`contacts`</li></ul> |
+| `object_type` | [!DNL SAP Hybris] supports multiple APIs. For contacts API, the `object_type` parameter should be set to `contacts`. |
 | `path` | This will have the same value which you select for *`object_type`*. |
 
-**Response**
++++
+
++++Response
 
 A successful response returns the unique identifier (`id`) of the newly created source connection. This ID is required in a later step to create a dataflow.
 
@@ -645,23 +672,27 @@ A successful response returns the unique identifier (`id`) of the newly created 
 }
 ```
 
++++
+
+>[!ENDTABS]
+
 ### Create a target XDM schema {#target-schema}
 
 In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../../xdm/api/schemas.md#create-a-schema).
 
 ### Create a target dataset {#target-dataset}
 
 A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
 
-For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](../../../../../catalog/api/create-dataset.md).
 
 ### Create a target connection {#target-connection}
 
-A target connection represents the connection to the destination where the ingested data is to be stored. To create a target connection, you must provide the fixed connection specification ID that corresponds to the data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+A target connection represents the connection to the destination where the ingested data is to be stored. To create a target connection, you must provide the fixed connection spec ID that corresponds to the data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 You now have the unique identifiers a target schema a target dataset and the connection spec ID to the data lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
 
@@ -732,13 +763,13 @@ In order for the source data to be ingested into a target dataset, it must first
 POST /conversion/mappingSets
 ```
 
-**Request**
-
 >[!BEGINTABS]
 
 >[!TAB Customers]
 
-For [!DNL SAP Hybris] Customers API the `object_type` property value should be `customers`.
++++Request
+
+The following request creates a mapping for [!DNL SAP Hybris] Customers API data
 
 ```shell
 curl -X POST \
@@ -821,7 +852,37 @@ curl -X POST \
   }'
 ```
 
+| Property | Description |
+| --- | --- |
+| `outputSchema.schemaRef.id` | The ID of the [target XDM schema](#target-schema) generated in an earlier step. |
+| `mappings.sourceType` | The source attribute type that is being mapped. |
+| `mappings.source` | The source attribute that needs to be mapped to a destination XDM path. |
+| `mappings.destination` | The destination XDM path where the source attribute is being mapped to. |
+
++++
+
++++Response
+
+A successful response returns details of the newly created mapping including its unique identifier (`id`). This value is required in a later step to create a dataflow.
+
+```json
+{
+    "id": "ddf0592bcc9d4ac391803f15f2429f87",
+    "version": 0,
+    "createdDate": 1597784069368,
+    "modifiedDate": 1597784069368,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
+}
+```
+
++++
+
 >[!TAB Contacts]
+
++++Request
+
+The following request creates a mapping for [!DNL SAP Hybris] Contacts API data
 
 ```shell
 curl -X POST \
@@ -888,7 +949,6 @@ curl -X POST \
     }
   }'
 ```
->[!ENDTABS]
 
 | Property | Description |
 | --- | --- |
@@ -897,7 +957,9 @@ curl -X POST \
 | `mappings.source` | The source attribute that needs to be mapped to a destination XDM path. |
 | `mappings.destination` | The destination XDM path where the source attribute is being mapped to. |
 
-**Response**
++++
+
++++Response
 
 A successful response returns details of the newly created mapping including its unique identifier (`id`). This value is required in a later step to create a dataflow.
 
@@ -911,6 +973,10 @@ A successful response returns details of the newly created mapping including its
     "modifiedBy": "{MODIFIED_BY}"
 }
 ```
+
++++
+
+>[!ENDTABS]
 
 ### Create a flow {#flow}
 
@@ -993,26 +1059,26 @@ A successful response returns the ID (`id`) of the newly created dataflow. You c
 }
 ```
 
-## Appendix {#appendix}
+## Appendix 
 
 The following section provides information on the steps you can to monitor, update, and delete your dataflow.
 
-### Monitor your dataflow {#monitor-your-dataflow}
+### Monitor your dataflow
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For complete API examples, read the guide on [monitoring your sources dataflows using the API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
+Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For complete API examples, read the guide on [monitoring your sources dataflows using the API](../../monitor.md).
 
-### Update your dataflow {#update-your-dataflow}
+### Update your dataflow
 
-Update the details of your dataflow, such as its name and description, as well as its run schedule and associated mapping sets by making a PATCH request to the `/flows` endpoint of [!DNL Flow Service] API, while providing the ID of your dataflow. When making a PATCH request, you must provide your dataflow's unique `etag` in the `If-Match` header. For complete API examples, read the guide on [updating sources dataflows using the API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+Update the details of your dataflow, such as its name and description, as well as its run schedule and associated mapping sets by making a PATCH request to the `/flows` endpoint of [!DNL Flow Service] API, while providing the ID of your dataflow. When making a PATCH request, you must provide your dataflow's unique `etag` in the `If-Match` header. For complete API examples, read the guide on [updating sources dataflows using the API](../../update-dataflows.md).
 
-### Update your account {#update-your-account}
+### Update your account
 
-Update the name, description, and credentials of your source account by performing a PATCH request to the [!DNL Flow Service] API while providing your base connection ID as a query parameter. When making a PATCH request, you must provide your source account's unique `etag` in the `If-Match` header. For complete API examples, read the guide on [updating your source account using the API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Update the name, description, and credentials of your source account by performing a PATCH request to the [!DNL Flow Service] API while providing your base connection ID as a query parameter. When making a PATCH request, you must provide your source account's unique `etag` in the `If-Match` header. For complete API examples, read the guide on [updating your source account using the API](../../update.md).
 
-### Delete your dataflow {#delete-your-dataflow}
+### Delete your dataflow
 
-Delete your dataflow by performing a DELETE request to the [!DNL Flow Service] API while providing the ID of the dataflow you want to delete as part of the query parameter. For complete API examples, read the guide on [deleting your dataflows using the API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
+Delete your dataflow by performing a DELETE request to the [!DNL Flow Service] API while providing the ID of the dataflow you want to delete as part of the query parameter. For complete API examples, read the guide on [deleting your dataflows using the API](../../delete-dataflows.md).
 
-### Delete your account {#delete-your-account}
+### Delete your account
 
-Delete your account by performing a DELETE request to the [!DNL Flow Service] API while providing the base connection ID of the account you want to delete. For complete API examples, read the guide on [deleting your source account using the API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
+Delete your account by performing a DELETE request to the [!DNL Flow Service] API while providing the base connection ID of the account you want to delete. For complete API examples, read the guide on [deleting your source account using the API](../../delete.md).
