@@ -387,7 +387,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ## Delete a specific computed attribute {#delete}
 
-You can deleted a specific computed attribute by making a DELETE request to the `/attributes` endpoint and providing the ID of the computed attribute you wish to delete in the request path.
+You can delete a specific computed attribute by making a DELETE request to the `/attributes` endpoint and providing the ID of the computed attribute you wish to delete in the request path.
 
 >[!IMPORTANT]
 >

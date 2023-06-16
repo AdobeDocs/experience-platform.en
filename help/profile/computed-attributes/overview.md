@@ -62,7 +62,11 @@ For example, if your computed attribute has a lookback period of the last 7 days
 
 **Fast refresh**
 
-Fast refresh allows you to keep your attributes up-to-date. Enabling this option lets you refresh your computed attributes on a daily basis, even for longer lookback periods. This allows you to react in near real-time to user activities. This value is only applicable for computed attributes with a lookback period greater than a weekly basis. A maximum of **five** attributes, per sandbox, can have fast refresh enabled. 
+>[!IMPORTANT]
+>
+>A maximum of **five** attributes, per sandbox, can have fast refresh enabled. 
+
+Fast refresh allows you to keep your attributes up-to-date. Enabling this option lets you refresh your computed attributes on a daily basis, even for longer lookback periods. This allows you to react in near real-time to user activities. This value is only applicable for computed attributes with a lookback period greater than a weekly basis. 
 
 >[!NOTE]
 >

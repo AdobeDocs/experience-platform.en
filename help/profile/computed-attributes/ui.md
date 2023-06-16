@@ -56,7 +56,7 @@ After adding the computed attribute details, you can start  defining your rules.
 
 ### Specify event filtering conditions
 
-To create a rule, first select attributes from the **[!UICONTROL Events]** section to filter down events that you want to aggregate on. 
+To create a rule, first select attributes from the **[!UICONTROL Events]** section to filter down events that you want to aggregate on. Currently, only non-array events are supported.
 
 ![The [!UICONTROL Events] section is highlighted.](./images/ui/events.png)
 
