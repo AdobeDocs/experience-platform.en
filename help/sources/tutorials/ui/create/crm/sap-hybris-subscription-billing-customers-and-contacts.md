@@ -28,16 +28,16 @@ In order to connect [!DNL SAP Hybris] to Platform, you must provide values for t
 
 | Credential | Description |
 | --- | --- |
-| `Client Id` | The value of `clientid` from the service key. |
-| `Client Secret` | The value of `clientsecret` from the service key. |
-| `tokenEndpoint` | The value of `url` from the service key, it will be similar to `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
-| `region` | Your data center location. The region is present in the `url` and has a value similar to `eu10` or `us10`. For example if the `url` is `https://eu10.revenue.cloud.sap/api` you will need `eu10`. |
-	
+| Client ID | The value of `clientId` from the service key. |
+| Client secret | The value of `clientSecret` from the service key. |
+| Token endpoint | The value of `url` from the service key, it will be similar to `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
+| Region | Your data center location. The region is present in the `url` and has a value similar to `eu10` or `us10`. For example if the `url` is `https://eu10.revenue.cloud.sap/api` you will need `eu10`. |
+  
 For more information, please refer to the [[!DNL SAP Hybris] documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
 ### Create a Platform schema {#create-platform-schema}
 
-Before creating a [!DNL SAP Hybris] source connection, you must also ensure that you first create a Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
+Before creating a [!DNL SAP Hybris] source connection, you must also ensure that you first create an Experience Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
 Expand the following section to view an example schema.
 
