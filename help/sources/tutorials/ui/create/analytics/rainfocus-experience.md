@@ -1,7 +1,6 @@
 ---
-keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 title: Documentation self-service template for the UI
-description: Learn how to create a YOURSOURCE source connection using the Adobe Experience Platform UI.
+description: Learn how to create a RainFocus source connection using the Adobe Experience Platform UI.
 hide: true
 hidefromtoc: true
 ---
@@ -81,6 +80,8 @@ The following Field Groups are also recommended (denoted by prefix):
 | `sessiontime.startTime`     | String   |                2023-03-22 10:00:00                |                      Session start time                      |
 | `sessiontime.endTime`       | String   |                2023-03-22 10:00:00                |                       Session end time                       |
 | `sessiontime.room`          | String   |                        B32                        |                       Room for session                       |
+
+{style="table-layout:auto"}
 
 To create your schema for RainFocus data, read the following documentation for steps on how to create a schema using APIs or the UI.
 
