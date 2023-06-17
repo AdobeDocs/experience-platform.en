@@ -24,7 +24,7 @@ If you already have a valid [!DNL SAP Hybris] account, you may skip the remainde
 
 ### Gather required credentials {#gather-credentials}
 
-In order to connect [!DNL SAP Hybris] to Platform, you must provide values for the following connection properties:
+In order to connect [!DNL SAP Hybris] to Experience Platform, you must provide values for the following connection properties:
 
 | Credential | Description |
 | --- | --- |
@@ -171,9 +171,13 @@ Finally, you must select the object type that you want to ingest to Platform.
 
 >[!TAB Customers]
 
+To ingest customer data, select **[!UICONTROL Customers]** as your object type and then select **[!UICONTROL Next]**.
+
 ![Platform UI screenshot for SAP Hybris showing configuration with Customers option selected](../../../../images/tutorials/create/crm/sap-hybris-subscription-billing-customers-and-contacts/configuration-customers.png)
 
 >[!TAB Contacts]
+
+To ingest contact data, select **[!UICONTROL Contacts]** as your object type and then select **[!UICONTROL Next]**.
 
 ![Platform UI screenshot for SAP Hybris showing configuration with Contacts option selected](../../../../images/tutorials/create/crm/sap-hybris-subscription-billing-customers-and-contacts/configuration-contacts.png)
 
@@ -181,7 +185,7 @@ Finally, you must select the object type that you want to ingest to Platform.
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have established a connection to your [!DNL SAP Hybris] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/crm.md).
+By following this tutorial, you have established a connection to your [!DNL SAP Hybris] account. You can now continue on to the next tutorial and [configure a dataflow to bring CRM data into Platform](../../dataflow/crm.md).
 
 ## Additional resources {#additional-resources}
 
@@ -189,11 +193,9 @@ The sections below provide additional resources that you can refer to when using
 
 ### Mapping {#mapping}
 
-The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
-
 Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
-Based on the `object_type` selection *(either `customers` or `contacts`)* and your schema, the mappings would be as below. Set up the desired mappings before proceeding to the next stage.
+Mapping configurations for your dataflow will differ depending on your schema and the object type that you select to ingest.
 
 >[!NOTE]
 >
@@ -203,9 +205,9 @@ Based on the `object_type` selection *(either `customers` or `contacts`)* and yo
 
 >[!TAB Customers]
 
-[!DNL SAP Hybris] invokes the [Customers](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers) *(refer to this page for the comprehensive list of attributes)* and [Customer-Contact Relationships](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) APIs to retrieve the data.
+For customer data, [!DNL SAP Hybris] uses the [customers](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers) and the [customer-contacts relationships](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) endpoints of the [!DNL SAP Business Partners] API to retrieve the data
 
-After you select the `object_type` as `customers` in [!DNL SAP Hybris] the mappings would be as below:
+The following is an example of mapping configurations for [!DNL SAP Hybris] dataflow for customer data:
 
 | Target Field | Description |
 | --- | --- |
@@ -227,9 +229,9 @@ After you select the `object_type` as `customers` in [!DNL SAP Hybris] the mappi
 
 >[!TAB Contacts]
 
-[!DNL SAP Hybris] invokes the [Contacts](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts) API *(refer to this page for the comprehensive list of attributes)* to retrieve the data.
+For contact data, [!DNL SAP Hybris] uses the [contacts](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts) endpoint of the [!DNL SAP Business Partners] API to retrieve the data.
 
-After you select the `object_type` as `contacts` in [!DNL SAP Hybris] the mappings would be as below:
+The following is an example of mapping configurations for [!DNL SAP Hybris] dataflow for contact data:
 
 | Target Field | Description |
 | --- | --- |
@@ -246,4 +248,3 @@ After you select the `object_type` as `contacts` in [!DNL SAP Hybris] the mappin
 
 >[!ENDTABS]
 
-Once your source data is successfully mapped, select **[!UICONTROL Next]**.
