@@ -6,9 +6,9 @@ type: Documentation
 
 # Prospect profiles
 
-intro blurb
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. 
 
-Prospect profiles can be used to 
+Prospect profiles are used to represent people who have not yet engaged with your company but want to reach out to. With prospect profiles, you can supplement your customer profiles with attributes from trusted partners.
 
 To access prospect profiles, select **[!UICONTROL Profiles]** in the **[!UICONTROL Prospects]** section.
 
