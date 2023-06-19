@@ -49,25 +49,25 @@ Expand the following section to view an example schema.
     "addresses": [
       {
         "addressUUID": "{ADDRESS_UUID}",
-        "city": "",
-        "country": "Sample value",
-        "email": "Sample value",
-        "houseNumber": "Sample value",
+        "city": "Burnaby",
+        "country": "Canada",
+        "email": "chandni@acme.com",
+        "houseNumber": "27",
         "isDefault": false,
-        "phone": "Sample value",
-        "postalCode": "Sample value",
-        "state": "Sample value",
-        "street": "Sample value"
+        "phone": "123-456-7890",
+        "postalCode": "V3J 1X9",
+        "state": "British Columbia",
+        "street": "Beresford"
       }
     ],
-    "changedAt": "Sample value",
-    "changedBy": "Sample value",
-    "contactNumber": "Sample value",
+    "changedAt": "1687204041",
+    "changedBy": "vero@acme.com",
+    "contactNumber": "123-456-7980",
     "corporateInfo": {
-      "company": "Sample value"
+      "company": "acme"
     },
-    "createAt": "Sample value",
-    "createdBy": "Sample value",
+    "createAt": "1687204041",
+    "createdBy": "vero@acme.com",
     "customReferences": [
       {
         "id": "Sample value",
@@ -78,45 +78,45 @@ Expand the following section to view an example schema.
     "customerType": "Sample value",
     "defaultAddress": {
       "addressUUID": "Sample value",
-      "city": "Sample value",
-      "country": "Sample value",
-      "email": "Sample value",
-      "houseNumber": "Sample value",
+      "city": "North Vancouver",
+      "country": "Canada",
+      "email": "chandni@acme.come",
+      "houseNumber": "34",
       "isDefault": false,
-      "phone": "Sample value",
-      "postalCode": "Sample value",
-      "state": "Sample value",
-      "street": "Sample value"
+      "phone": "123-456-7890",
+      "postalCode": "V7H 2P1",
+      "state": "British Columbia",
+      "street": "Maple"
     },
     "externalObjectReferences": [
       {
-        "externalId": "Sample value",
-        "externalIdTypeCode": "Sample value",
-        "externalSystemId": "Sample value"
+        "externalId": "{EXTERNAL_ID}",
+        "externalIdTypeCode": "{EXTERNAL_ID_TYPE_CODE}",
+        "externalSystemId": "{EXTERNAL_SYSTEM_ID}"
       }
     ],
     "markets": [
       {
         "active": false,
-        "country": "Sample value",
-        "currency": "Sample value",
+        "country": "USA",
+        "currency": "USD",
         "marketId": "Sample value",
         "priceinfo": {
-          "incoterms": "Sample value",
-          "incotermsLocation": "Sample value",
-          "priceGroup": "Sample value",
-          "priceListType": "Sample value"
+          "incoterms": "{INCO_TERMS}",
+          "incotermsLocation": "{INCO_TERMS_LOCATION}",
+          "priceGroup": "{PRICE_GROUP}",
+          "priceListType": "{PRICE_LIST_TYPE}"
         },
         "salesArea": {
-          "distributionChannel": "Sample value",
-          "division": "Sample value",
-          "salesOrganization": "Sample value"
+          "distributionChannel": "{DISTRIBUTION_CHANNEL}",
+          "division": "{DIVISION}",
+          "salesOrganization": "{SALES_ORGANIZATION}"
         }
       }
     ],
     "personalInfo": {
-      "firstName": "Sample value",
-      "lastName": "Sample value"
+      "firstName": "Chandni",
+      "lastName": "Kaur"
     }
   },
   "_id": "/uri-reference",
@@ -126,9 +126,9 @@ Expand the following section to view an example schema.
   },
   "createdByBatchID": "/uri-reference",
   "modifiedByBatchID": "/uri-reference",
-  "personID": "Sample value",
-  "repositoryCreatedBy": "Sample value",
-  "repositoryLastModifiedBy": "Sample value"
+  "personID": "{PERSON_ID}",
+  "repositoryCreatedBy": "kevin@acme.com",
+  "repositoryLastModifiedBy": "kevin@acme.com"
 }
 ```
 
