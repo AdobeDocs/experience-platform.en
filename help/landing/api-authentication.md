@@ -80,8 +80,7 @@ Next, select the authentication type to generate access tokens and access the Ex
 
 >[!IMPORTANT]
 >
->Select the OAuth Server-to-Server method as this is the only method supported moving forward. The Service Account (JWT) method is deprecated. Get more information in the section [(DEPRECATED) Generate a JSON Web Token (JWT)](#jwt).
->Select the OAuth Server-to-Server method as this is the only method supported moving forward.
+>Select the **[!UICONTROL OAuth Server-to-Server]** method as this is the only method supported moving forward. The **[!UICONTROL Service Account (JWT)]** method is deprecated. While integrations using the JWT authentication method will continue to work until January 1st, 2025, Adobe strongly recommends that you migrate existing integrations to the new OAuth Server-to-Server method before that date. Get more information in the section [(DEPRECATED) Generate a JSON Web Token (JWT)](#jwt).
 
 ![Select Experience Platform API.](./images/api-authentication/oauth-authentication-method.png)
 
@@ -99,22 +98,11 @@ From here, follow the steps outlined in the tutorial on [adding an API to a proj
 -->
 
 Next, select the product profiles that should apply to your integration.
-Your integration's service account will gain access to granular features through the product profiles selected here.
+Your integration's service account will gain access to granular features through the product profiles selected here. Note that to get access to certain features in Platform, you also need a system administrator to grant you the necessary Attribute-based access control permissions. Read more in the section [Get the necessary Attribute-based access control permissions](#get-abac-permissions).
 
 >[!TIP]
 >
 >If you are expecting to see a certain product profile here, contact your system administrator. System administrators can view and manage API credentials in the Permissions view. For more information, refer to the section [Add developers to product profile](#add-developers-to-product-profile).
-
-![Select product profiles for your integration.](./images/api-authentication/select-product-profiles.png)
-
-Select **Save configured API** when you are ready.
-
-Next, select the product profiles that should apply to your integration.
-Your integration's service account will gain access to granular features through the product profiles selected here.
-
->[!TIP]
->
->If you are expecting but cannot see a certain product profile here, contact your system administrator. System administrators can view and manage API credentials in the Permissions view. For more information, refer to the section [Add developers to product profile](#add-developers-to-product-profile).
 
 ![Select product profiles for your integration.](./images/api-authentication/select-product-profiles.png)
 
@@ -151,7 +139,7 @@ The next step is to generate an `{ACCESS_TOKEN}` credential for use in Platform 
 
 >[!WARNING]
 >
->The JWT method to generate access tokens has been deprecated. All new integrations must be created using the OAuth method. Adobe also recommends that you migrate your existing integrations to the OAuth method. Read the following important documentation:
+>The JWT method to generate access tokens has been deprecated. All new integrations must be created using the OAuth Server-to-Server authentication method. Adobe also recommends that you migrate your existing integrations to the OAuth method. Read the following important documentation:
 > 
 > * [Migration guide for your applications from JWT to OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 >* [Implementation guide for new and old applications with OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
@@ -236,7 +224,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
   -H 'x-api-key: {{API_KEY}}' \
-  -H 'x-gw-ims-org-id: {{IMS_ORG}}'
+  -H 'x-gw-ims-org-id: {{ORG_ID}}'
 ```
 
 **Response**
@@ -266,28 +254,19 @@ If your response is similar to the one shown below, then your credentials are va
 
 >[!IMPORTANT]
 >
->While the call above is sufficient to test your access credentials, be aware that you will not be able to access or modify several resources without having the right Attribute-based access control permissions. Read more in th section [Get the necessary Attribute-based access control permissions](#get-abac-permissions).
+>While the call above is sufficient to test your access credentials, be aware that you will not be able to access or modify several resources without having the right Attribute-based access control permissions. Read more in the [Get the necessary Attribute-based access control permissions](#get-abac-permissions) section.
+
+## Get the necessary Attribute-based access control permissions {#get-abac-permissions}
+
+To access or modify several resources within Experience Platform, you must have the appropriate access control permissions. System administrators can grant you the [permissions you need](/help/access-control/ui/permissions.md). 
 
 ## Use Postman to authenticate and test API calls {#use-postman}
 
-[Postman](https://www.postman.com/) is a popular tool that allows developers to explore and test RESTful APIs.
+[Postman](https://www.postman.com/) is a popular tool that allows developers to explore and test RESTful APIs. You can use Experience Platform Postman collections and environments to speed up your work with Experience Platform APIs. Read more about [using Postman in Experience Platform](/help/landing/postman.md) and getting started with collections and environments.
 
 <!--
 This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform JWT authentication and use it to consume Platform APIs.
 -->
-
-## Get the necessary Attribute-based access control permissions {#get-abac-permissions}
-
-To access or modify several resources within Experience Platform, you must have the appropriate access control permissions. Administrators can grant you the [permissions you need](/help/access-control/ui/permissions.md). 
-
-## Use pre-configured Postman environments to speed up your work
-
-You can download and import preconfigured environments into Postman. This way, you do not need to manually update your header values for every API call that you make. To import and use Postman environments: 
-
-1. In Developer console, navigate to APIs > Experience Platform API
-  ![Download Postman environment](/help/landing/images/api-authentication/download-postman-environment.png)
-2. In Postman, import the environment as shown below and set it as default environment in the dropdown selector:
-  ![Import environment into Postman](/help/landing/images/api-authentication/import-postman-environment.gif)
 
 ## System administrators: Grant developer and API access control with Experience Platform permissions
 
