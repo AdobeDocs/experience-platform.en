@@ -1,26 +1,35 @@
 ---
 title: Inline Templates
-description: 
+description: Learn how to reuse multiple conditions in numerous queries with inline templates.
 ---
 # Inline templates
 
-Inline templates are great if you want to reuse multiple conditions in numerous queries. You can save these criteria in a template and then reuse them in multiple queries. This reduces effort and reduces the risk of errors.
+Inline templates allow you to reuse multiple conditions in numerous queries. You can save criteria in a template and then reuse them in multiple queries. This reduces development effort and the risk of errors from copying long statements between queries as you only need to make changes in one location and have those changes reflect in any query that references this template. 
 
-Inline templates are indicated in your statements through the use of the hash (#) followed by the template name.
+## Prerequisites
 
-Inline templates allows your queries to be parameterized. Query Service replaces the template name starting from the hash tag with the statement saved as a template in that name.
+Inline templates are supported by both the UI and the Query Service API. See the documentation for information on how to [create a query template through the API](https://experienceleague.adobe.com/docs/experience-platform/query/api/query-templates.html?lang=en#create-a-query-template) or with the [Query Editor](https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html?lang=en#query-authoring)
+
+## Create an inline template
+
+Once a query is saved, it is known as a template. When the template references another template within the statement, it is called an inline template. Inline templates are indicated in your SQL through the use of the hash (#) followed by the template name. Query Service replaces the template name starting from the hash tag with the statement saved as a template in that name.
+
+>[!NOTE]
+>
+>Query templates can call any number of other inline templates. There is no restriction on the number of inline templates you can invoke from a single query. Templates can also be nested within other inline templates.
+
+You can use templates to store one, or multiple conditions. They do not need to be a complete query by themselves. If your template contains a valid query, you can execute the query simply by calling the template name preceded with a hash tag. For example, if you stored `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` as a template  named `JUNE_2023_LOYALTY_MEMBERS`, the command  `#JUNE_2023_LOYALTY_MEMBERS;` would execute the valid query contained inside the template. 
 
 
 
+## Next steps
 
+After reading this document, you now know how to reference other templates within your SQL either in the Query Editor or throguh the Query Service API.  
 
-Templates can be used to store one, or multiple conditions, and need not be a complete query by themselves. If your template contains a valid query, you can execute the query simply by calling the template name preceded with a hash tag. For example `#YOUR_TEMPLATE_NAME;` would execute the valid query contain inside the template. 
+After reading this document, you now know when to use the credentials endpoint and how to set up a credentials configuration using the `/authoring/credentials` API endpoint  Read [how to use Destination SDK to configure your destination](../guides/configure-destination-instructions.md) to understand where this step fits into the process of configuring your destination.
 
-
-
-
-Once a query is saved it is known as a template. When the template uses another template in-line, it is called a nested template. Query templates can call any number of other inline templates. There is no restriction on the number of inline templates you can invoke from a single query. Templates can also be nested within other inline templates. 
-
+ 
+<!-- 
 The following SQL demonstrates an example of a pramaterized query. 
 
 ```sql
@@ -36,9 +45,9 @@ template5 = 'city: #cityName;'
 cityName = 'Reykjavík'
 ```
 
-In this scenario, there would be statements saved as query templates for `databaseName`, `tableName`, `template5`, and `cityName`.
+In this scenario, there would be statements saved as query templates for `databaseName`, `tableName`, `template5`, and `cityName`. -->
 
-## Update parameterized templates
+<!-- ## Update parameterized templates
 
 You can replace parameterized templates through either the UI, or the API.
 
@@ -55,7 +64,7 @@ SELECT * FROM csv1000 ROWS WHERE id = '1000' AND firstname = 'elin' AND lastname
 
 ### Update parameters through the UI
 
-<!-- Description -->
+Description
 
 ### Update parameters through the API
 
@@ -68,11 +77,11 @@ If parameter in the query and the parameter in the template may have the same na
 
 If you do not prove a value of parameter inside a nested template, the value is taken from its parent template.
 
-<!--  We could provide them in this in a flat JSON, but if it is using templates we need to provide it in a nested just because parameter in a query and parameter in the in the template right?
+ We could provide them in this in a flat JSON, but if it is using templates we need to provide it in a nested just because parameter in a query and parameter in the in the template right?
 They may have same name, so we need to  right?
 
 
-It's where it's parent or it's it's parents, wherever it in the higher in the up in the hierarchy it will get the parameter reduced from there, otherwise it will use what is provided and it's own element OK. -->
+It's where it's parent or it's it's parents, wherever it in the higher in the up in the hierarchy it will get the parameter reduced from there, otherwise it will use what is provided and it's own element OK.
 
 
 
@@ -94,4 +103,4 @@ Best practice is to avoid using spaces, single quote, and backslash in template 
 
 >[!NOTE]
 >
->The Query Editor does not support parameterized templates or nested parameterized templates. To use parameterized templates, or nested parameterized templates, you must use the command line interface.
+>The Query Editor does not support parameterized templates or nested parameterized templates. To use parameterized templates, or nested parameterized templates, you must use the command line interface. -->
