@@ -51,9 +51,9 @@ After confirming all these details, select **[!UICONTROL Save]** to create a sch
 
 ## Delete or disable a schedule {#delete-schedule}
 
-You can delete or disable a schedule from the schedules workspace of a particular query, or from the the [!UICONTROL Scheduled Queries] workspace that lists all the scheduled queries. 
+You can delete or disable a schedule from the schedules workspace of a particular query or from the [!UICONTROL Scheduled Queries] workspace that lists all the scheduled queries. 
 
-To access the [!UICONTROL Schedules] tab of your chosen query you must select the name of a query template from either the [!UICONTROL Templates] tab or the [!UICONTROL Scheduled Queries] tab. This navigate to the Query Editor for that query. Form the Query Editor, select **[!UICONTROL Schedule]** to access the schedules workspace. 
+To access the [!UICONTROL Schedules] tab of your chosen query, you must select the name of a query template from either the [!UICONTROL Templates] tab or the [!UICONTROL Scheduled Queries] tab. This navigates to the Query Editor for that query. Form the Query Editor, select **[!UICONTROL Schedules]** to access the schedules workspace. 
 
 Select a schedule from the rows of available schedules. You can use the toggle to disable or enable the scheduled query.
 
@@ -65,4 +65,4 @@ Select **[!UICONTROL Delete a schedule]** to delete the disabled schedule.
 
 ![The schedules workspace with Disable schedule and Delete schedule highlighted.](../images/ui/query-schedules/delete-schedule.png)
 
-Alternatively, the [!UICONTROL Scheduled Queries] tab offers a collections of inline actions for each scheduled query. The available inline actions include; [!UICONTROL Disable schedule] or [!UICONTROL Enable schedule], [!UICONTROL Delete schedule], and [!UICONTROL Subscribe] to alerts for the scheduled query. For complete instructions on how to delete or disable a scheduled query through the scheduled Queries tab, please see the [monitor scheduled queried guide](./monitor-queries.md#inline-actions).
+Alternatively, the [!UICONTROL Scheduled Queries] tab offers a collection of inline actions for each scheduled query. The available inline actions include [!UICONTROL Disable schedule] or [!UICONTROL Enable schedule], [!UICONTROL Delete schedule], and [!UICONTROL Subscribe] to alerts for the scheduled query. For complete instructions on how to delete or disable a scheduled query through the scheduled Queries tab, please see the [monitor scheduled queried guide](./monitor-queries.md#inline-actions).
