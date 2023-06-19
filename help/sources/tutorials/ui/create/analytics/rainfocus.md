@@ -1,15 +1,15 @@
 ---
-title: Documentation self-service template for the UI
-description: Learn how to create a RainFocus source connection using the Adobe Experience Platform UI.
+title: Connect Your RainFocus Account To Experience Platform Using the UI
+description: Learn how to connect your RainFocus account to Experience Platform using the UI.
 badge: Beta
 ---
-# Create a RainFocus source connection in the UI
+# Connect your [!DNL RainFocus] account to Experience Platform using the UI
 
 >[!NOTE]
 >
 >The [!DNL RainFocus] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-This tutorial provides steps for creating a RainFocus source connector using the Platform user interface.
+This tutorial provides steps on how to connect your [!DNL RainFocus] account and stream event management and analytics data to Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
@@ -19,10 +19,20 @@ This tutorial provides steps for creating a RainFocus source connector using the
 
 This tutorial requires a working understanding of the following components of Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+
+### Prerequisites
+
+Before you can connect your [!DNL RainFocus] account to Experience Platform, you must first complete the following prerequisite tasks:
+
+* [Gather required credentials](../../../../connectors/analytics/rainfocus.md#gather-required-credentials)
+* [Create an XDM schema and define the identity field](../../../../connectors/analytics/rainfocus.md#create-an-xdm-schema-and-define-the-identity-field)
+* [Create an Integration Profile in RainFocus](../../../../connectors/analytics/rainfocus.md#create-an-integration-profile-in-rainfocus)
+
+Once you have completed the prerequisite setup, you can then proceed to the steps outlined below.
 
 ## Connect your RainFocus account to Experience Platform
 
@@ -61,7 +71,7 @@ When finished, select **[!UICONTROL Next]**.
 
 ![The dataflow detail step of the sources workflow.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow-setup.png)
 
-## Mapping
+## Mapping {#mapping}
 
 The Mapping step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
@@ -82,7 +92,7 @@ Once you have reviewed your dataflow, select **Finish** and allow some time for 
 
 ![The review step of the sources workflow.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-compelete.png)
 
-## Get your streaming endpoint URL
+## Get your streaming endpoint URL {#get-your-streaming-endpoint-url}
 
 With your streaming dataflow created, you can now retrieve your streaming endpoint URL. This endpoint will be used to subscribe to your webhook, allowing your streaming source to communicate with Experience Platform.
 
@@ -90,22 +100,24 @@ To retrieve your streaming endpoint, go to the *[!UICONTROL Dataflow activity]* 
 
 ![The dataflow activity page in the sources workspace, with the streaming endpoint URL highlighted.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow-api.png)
 
-## Activate the integration profile in RainFocus
+## Activate your Integration Profile in RainFocus
 
-Once your dataflow is complete and you have retrieved your streaming endpoint URL, you can now activate the integration profile in [!DNL RainFocus].
+Once your dataflow is complete and you have retrieved your streaming endpoint URL, you can now activate the [!DNL Integration Profile] in [!DNL RainFocus].
 
-* Log into the [**RainFocus** platform](https://app.rainfocus.com). In the primary navigation, select **Libraries** and **Integration Profiles** 
-* Open the Integration Profile created previously. 
+* Log into the [[!DNL RainFocus] platform](https://app.rainfocus.com). In the primary navigation, select **[!DNL Libraries]** and **[!DNL Integration Profiles]** 
+* Open the [!DNL Integration Profile] that you created earlier as part of the [prerequisites](../../../../connectors/analytics/rainfocus.md#create-an-integration-profile-in-rainfocus). 
 * Paste the **Dataflow ID** and **Streaming Endpoint** copied from the Dataflow in Experience Platform and select **Save**
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your RainFocus account. 
+By following this tutorial, you have established a connection for your [!DNL RainFocus] source, allowing you to stream your event management and analytics data to Experience Platform.
 
 ## Additional resources
 
+The following documents provide additional guidance on nuances surrounding the [!DNL RainFocus] source.
+
 * [RainFocus Help Center](https://help.rainfocus.com/hc/en-us)
 * [Create an Adobe Service Account (JWT) in the Adobe Developer Portal](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
-* [Create a Schema in the UI](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html)
-* [Create a Schema in the API](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-api.html)
+* [Create a Schema in the UI](../../../xdm/tutorials/create-schema-ui.md)
+* [Create a Schema in the API](../../../xdm/tutorials/create-schema-api.md)
 * [Define Identity Fields in the UI](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)

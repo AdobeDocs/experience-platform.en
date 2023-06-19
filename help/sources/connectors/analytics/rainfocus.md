@@ -38,7 +38,7 @@ In order to connect [!DNL RainFocus] to Experience Platform, you must provide va
 | Technical Account ID | The technical account ID can be btained from the Adobe Service Account in the Adobe Developer Portal. | `B3F9D2E8A64C573D21ABFE97@techacct.adobe.com` |
 | Organization ID | The organization ID can be obtained from the Adobe Service Account in the Adobe Developer Portal | `D9A6F3BCE82FD147C50E3A19@techacct.adobe.com` |
 
-## Create an XDM schema and define the identity field {#create-an-xdm-schema-and-define-the-identity-field}
+### Create an XDM schema and define the identity field {#create-an-xdm-schema-and-define-the-identity-field}
 
 In order to store the Experience Events from [!DNL RainFocus] in Experience Platform, you must create an Experience Data Model (XDM) schema to describe a dataset which can store the possible fields and data types that will be sent from [!DNL RainFocus]. 
 
@@ -93,7 +93,7 @@ To create your schema for [!DNL RainFocus] data, read the following documentatio
 >* You must ensure that the schema includes a **primary identity**, and is **enabled for Profile**. For more information, read the guide on [defining identity fields in the UI](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
 >* You may substitute the example identity (Email) for another appropriate identifier such as a sha256 email or ECID.
 
-## Create an Integration Profile in RainFocus {#create-an-integration-profile-in-rainfocus}
+### Create an Integration Profile in RainFocus {#create-an-integration-profile-in-rainfocus}
 
 Once your service account and your XDM schema are ready, you can now activate the [!DNL Integration Profile] through the [!DNL RainFocus] platform. The [!DNL Integration Profile] is responsible for streaming data to Experience Platform.
 
@@ -118,7 +118,7 @@ Select the [!DNL Integration Profile] that you just created to see a list of pre
 
 ![A list of predefined push types in the RainFocus dashboard.](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-setup.png)
 
-To retrieve a copy of the sample JSON payload, select **[!DNL Sample JSON Payload]**. Next, highlight and copy the sample JSON payload and **save it in a new file with a .json extension**. This will be used later in Experience Platform for mapping configurations.
+To retrieve a copy of the sample JSON payload, select **[!DNL Sample JSON Payload]**. Next, highlight and copy the sample JSON payload and **save it in a new file with a .json extension**. This will be used later in Experience Platform for [mapping configurations](../../tutorials/ui/create/analytics/rainfocus.md#mapping).
 
 ![A sample JSON payload in the RainFocus dashboard.](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-json.png)
 
@@ -128,4 +128,4 @@ To retrieve a copy of the sample JSON payload, select **[!DNL Sample JSON Payloa
 
 ## Next steps
 
-By reading this document, you have completed prerequisite setup needed in order to stream data from your [!DNL RainFocus] account to Experience Platform. You can now proceed to the guide on [connecting [!DNL RainFocus] to Experience Platform using the user interface](../../tutorials/ui/create/analytics/rainfocus-experience.md).
+By reading this document, you have completed prerequisite setup needed in order to stream data from your [!DNL RainFocus] account to Experience Platform. You can now proceed to the guide on [connecting [!DNL RainFocus] to Experience Platform using the user interface](../../tutorials/ui/create/analytics/rainfocus.md).
