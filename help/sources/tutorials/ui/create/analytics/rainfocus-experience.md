@@ -1,8 +1,7 @@
 ---
 title: Documentation self-service template for the UI
 description: Learn how to create a RainFocus source connection using the Adobe Experience Platform UI.
-hide: true
-hidefromtoc: true
+badge: Beta
 ---
 # Create a RainFocus source connection in the UI
 
@@ -11,6 +10,10 @@ hidefromtoc: true
 >The [!DNL RainFocus] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 This tutorial provides steps for creating a RainFocus source connector using the Platform user interface.
+
+>[!IMPORTANT]
+>
+>This documentation page was created by the [!DNL RainFocus] team. For any inquiries or update requests, please contact them directly at clientcare<span>@rainfocus.com or visit the [[!DNL RainFocus] Help Center](https://help.rainfocus.com/hc/en-us)
 
 ## Getting started
 
