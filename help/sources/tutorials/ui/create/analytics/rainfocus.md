@@ -2,6 +2,8 @@
 title: Connect Your RainFocus Account To Experience Platform Using the UI
 description: Learn how to connect your RainFocus account to Experience Platform using the UI.
 badge: Beta
+hide: true
+hidefromtoc: true
 ---
 # Connect your [!DNL RainFocus] account to Experience Platform using the UI
 
