@@ -56,26 +56,26 @@ The following field groups are also recommended (denoted by prefix):
 
 | Field | Type | Example | Description |
 | --- | --- | --- | --- |
-| `attendee.registered` | String | Yes | Flag determining if the attendee is considered to be registered. |
-| `attendee.attendeeId` | String | 1619119968857001fvLB | The attendee ID in RainFocus. |
-| `attendee.externalId` | String | 1666809456617001wyPj| The external ID specified by organization. |
+| `attendee.registered` | String | Yes | A flag that determines if the attendee is considered to be registered. |
+| `attendee.attendeeId` | String | 1619119968857001fvLB | The attendee ID in [!DNL RainFocus]. |
+| `attendee.externalId` | String | 1666809456617001wyPj| The external ID specified by an organization. |
 | `attendee.clientId` | String | 8EFC1F57631CAFE70A495ECB@8f3f1f5c631caf3e495fd8.e | The attendee SSO client ID. |
 | `attendee.email` | String | user<span>@company.com | The email address of the attendee. |
 | `transmissionId` | String | 1680309557133001YHhz | A unique identifier used for data push. |
-| `eventType` | String | SessionScheduled | The name of the Attendee Experience Event (see Push Type Dictionary). |
+| `eventType` | String | SessionScheduled | The name of the Attendee Experience Event. |
 | `timestamp` | DateTime | 2023-04-01T00:41:57.000Z | The timestamp of the data push. |
 | `event.name` | String | Adobe Summit 2023 | The name of the event in which a transmission took place.  |
-| `exhibitor.exhibitorId`| String | 1680309557133001YHhz | The RainFocus identifier of the exhibitor. |
+| `exhibitor.exhibitorId`| String | 1680309557133001YHhz | The [!DNL RainFocus] identifier of the exhibitor. |
 | `exhibitor.externalId` | String | 1666809514105001lSJN | The identifier for the exhibitor in the client system. |
 | `exhibitor.name` | String | IBM | The name of the exhibitor. |
-| `lead.leadId`| String | 1666809456617001wyPj |The RainFocus identifier for the lead. |
+| `lead.leadId`| String | 1666809456617001wyPj |The [!DNL RainFocus] identifier for the lead. |
 | `lead.note`  | String  | | |
-| `session.sessionId` | String | 1666809373585001t4aV | The RainFocus identifier for the session. |
+| `session.sessionId` | String | 1666809373585001t4aV | The [!DNL RainFocus] identifier for the session. |
 | `session.externalId` | String | 1666809456617001wyPj | The identifier for the session in the client system. |
 | `session.code` | String | GS3 | The code for the session. |
 | `session.title` | String | Inspiration Keynote | The title of the session. |
 | `session.length` | Integer | 90 | The length of the session. |
-| `sessiontime.sessiontimeId` | String | 1673033149739001OJLZ | The RainFocus identifier for the session time. |
+| `sessiontime.sessiontimeId` | String | 1673033149739001OJLZ | The [!DNL RainFocus] identifier for the session time. |
 | `sessiontime.startTime`| String | 2023-03-22 10:00:00 |  The start time of the session. |
 | `sessiontime.endTime`  | String | 2023-03-22 10:00:00 | The end time of the session. |
 | `sessiontime.room`| String | B32 | The room used for the session. |
@@ -127,3 +127,5 @@ To retrieve a copy of the sample JSON payload, select **[!DNL Sample JSON Payloa
 >**Setup is not yet complete**: Once your dataflow is created, you will need to return to the [!DNL RainFocus] dashboard to complete your [!DNL Integration Profile] by providing your **streaming endpoint URL** and **dataflow ID**.
 
 ## Next steps
+
+By reading this document, you have completed prerequisite setup needed in order to stream data from your [!DNL RainFocus] account to Experience Platform. You can now proceed to the guide on [connecting [!DNL RainFocus] to Experience Platform using the user interface](../../tutorials/ui/create/analytics/rainfocus-experience.md).
