@@ -120,6 +120,6 @@ The following documents provide additional guidance on nuances surrounding the [
 
 * [RainFocus Help Center](https://help.rainfocus.com/hc/en-us)
 * [Create an Adobe Service Account (JWT) in the Adobe Developer Portal](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
-* [Create a Schema in the UI](../../../xdm/tutorials/create-schema-ui.md)
-* [Create a Schema in the API](../../../xdm/tutorials/create-schema-api.md)
+* [Create a Schema in the API](../../../../../xdm/tutorials/create-schema-api.md)
+* [Create a Schema in the UI](../../../../../xdm/tutorials/create-schema-ui.md)
 * [Define Identity Fields in the UI](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
