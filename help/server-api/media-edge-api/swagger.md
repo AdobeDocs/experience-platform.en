@@ -3,7 +3,6 @@ keywords: Experience Platform;media edge;popular topics;date range
 solution: Experience Platform
 title: Getting started with Media Edge APIs
 description: Media Edge APIs allow developers to collect data for Media Edge Analytics and Customer Journey Analytics.
-exl-id: 
 ---
 
 # Using the Open API Specification file for Media Edge APIs
