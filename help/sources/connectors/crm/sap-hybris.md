@@ -69,11 +69,11 @@ Before you can bring your [!DNL SAP Hybris] data to Experience Platform, you mus
 
 The documentation below provides information on how to connect [!DNL SAP Hybris] to Platform using APIs or the user interface:
 
-### Connect [!DNL Customer.io] to Platform using APIs {#connect-to-platform-using-api}
+### Connect [!DNL SAP Hybris] to Platform using APIs {#connect-to-platform-using-api}
 
-* [Create a source connection and dataflow to bring [!DNL SAP Hybris] data to Platform using APIs](../../tutorials/api/create/crm/sap-hybris-subscription-billing-customers-and-contacts.md).
+* [Create a source connection and dataflow to bring [!DNL SAP Hybris] data to Platform using APIs](../../tutorials/api/create/crm/sap-hybris.md).
 
-### Connect [!DNL Customer.io] to Platform using the UI {#connect-to-platform-using-ui}
+### Connect [!DNL SAP Hybris] to Platform using the UI {#connect-to-platform-using-ui}
 
-* [Create a source connection to bring [!DNL SAP Hybris] data to Platform using the user interface](../../tutorials/ui/create/crm/sap-hybris-subscription-billing-customers-and-contacts.md).
+* [Create a source connection to bring [!DNL SAP Hybris] data to Platform using the user interface](../../tutorials/ui/create/crm/sap-hybris.md).
 * [Create a dataflow for a CRM source using the Flow Service API](../../tutorials/api/collect/crm.md)
