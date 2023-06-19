@@ -17,7 +17,7 @@ This document provides a step-by-step tutorial for gaining access to an Adobe Ex
 
 >[!TIP]
 >
->In addition to the three credentials above, many Platform APIs also require a valid `{SANDBOX_NAME}` to be provided as a header. See the [sandboxes overview](../sandboxes/home.md) for more information.
+>In addition to the three credentials above, many Platform APIs also require a valid `{SANDBOX_NAME}` to be provided as a header. See the [sandboxes overview](../sandboxes/home.md) for more information about sandboxes and the [sandbox management endpoint](/help/sandboxes/api/sandboxes.md#list) documentation for information about listing the sandboxes available to your organization.
 
 To maintain the security of your applications and users, all requests to Experience Platform APIs must be authenticated and authorized using standards such as OAuth.
 
