@@ -27,7 +27,7 @@ In order to access your Snowflake account on [!DNL Platform], you must provide t
 | Database | The [!DNL Snowflake] database contains the data you want to bring the Platform. |
 | Username | The username for the [!DNL Snowflake] account. |
 | Password | The password for the [!DNL Snowflake] user account. |
-| Role | The default access control role to use in the [!DNL Snowflake] session. The role should be an existing role that has already been assigned to the specified user. The default role is `PUBLIC`. |
+| Role | The default access control role to use in the [!DNL Snowflake] session. The role should be an existing one that has already been assigned to the specified user. The default role is `PUBLIC`. |
 | Connection string | The connection string used to connect to your [!DNL Snowflake] instance. The connection string pattern for [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 For more information about these values, refer to [this Snowflake document](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
