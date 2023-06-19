@@ -2,6 +2,8 @@
 title: Create a SAP Hybris source connection in the UI
 description: Learn how to create a SAP Hybris source connection using the Adobe Experience Platform UI.
 badge: Beta
+hide: true
+hidefromtoc: true
 ---
 # Create a [!DNL SAP Hybris] source connection in the UI
 

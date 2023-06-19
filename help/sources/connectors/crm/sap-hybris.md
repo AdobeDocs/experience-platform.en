@@ -2,16 +2,14 @@
 title: SAP Hybris Source Overview
 description: Learn how to connect SAP Hybris to Adobe Experience Platform using APIs or the user interface.
 badge: Beta
+hide: true
+hidefromtoc: true
 ---
 # [!DNL SAP Hybris]
 
 >[!NOTE]
 >
 >The [!DNL SAP Hybris] source is in beta. See the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
-
-<!-- Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
-
-Experience Platform provides support for ingesting data from a third-party CRM application. Support for CRM providers include [!DNL SAP Hybris]. -->
 
 [[!DNL SAP Hybris]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), a cloud-based e-commerce platform solution for B2B and B2C enterprises is available as part of the SAP Customer Experience portfolio. [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) is a product under the portfolio and enables complete subscription lifecycle management with simplified selling and payment experiences through standardized integrations.
 
@@ -65,15 +63,10 @@ Before you can bring your [!DNL SAP Hybris] data to Experience Platform, you mus
 
 +++
 
-## Connect [!DNL SAP Hybris] to Platform {#connect-to-platform}
+## Next steps
 
 The documentation below provides information on how to connect [!DNL SAP Hybris] to Platform using APIs or the user interface:
 
-### Connect [!DNL SAP Hybris] to Platform using APIs {#connect-to-platform-using-api}
-
 * [Create a source connection and dataflow to bring [!DNL SAP Hybris] data to Platform using APIs](../../tutorials/api/create/crm/sap-hybris.md).
-
-### Connect [!DNL SAP Hybris] to Platform using the UI {#connect-to-platform-using-ui}
-
-* [Create a source connection to bring [!DNL SAP Hybris] data to Platform using the user interface](../../tutorials/ui/create/crm/sap-hybris.md).
-* [Create a dataflow for a CRM source using the Flow Service API](../../tutorials/api/collect/crm.md)
+* [Connect your [!DNL SAP Hybris] account to Experience Platform using the UI](../../tutorials/ui/create/crm/sap-hybris.md).
+* [Create a dataflow for a CRM source using the UI](../../tutorials/ui/dataflow/crm.md)
