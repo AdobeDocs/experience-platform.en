@@ -48,8 +48,8 @@ Expand the following section to view an example schema.
   "_extconndev": {
     "addresses": [
       {
-        "addressUUID": "Sample value",
-        "city": "Sample value",
+        "addressUUID": "{ADDRESS_UUID}",
+        "city": "",
         "country": "Sample value",
         "email": "Sample value",
         "houseNumber": "Sample value",
