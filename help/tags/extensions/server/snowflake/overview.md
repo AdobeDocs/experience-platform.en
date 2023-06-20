@@ -23,7 +23,11 @@ Please refer to the [[!DNL AWS] overview](../aws/overview.md) for more informati
 
 Please refer to the [[!DNL Azure] overview](../azure/overview.md) for more information on installing the extension and configuring event forwarding rules. 
 
-Our native [AWS](../aws/overview.md) and [Azure](../azure/overview.md) event forwarding extensions enable customers to collect, enrich, and forward their event data server-side in real time to their cloud services to be consumed by [!DNL Snowflake]. See below:
+- [[!DNL Google Cloud Platform]](https://cloud.google.com/) - [!DNL Google Cloud Platform] is a cloud computing platform that offers a wide variety of services such as distributed computing, database storage, content delivery, and software-as-a-service (SaaS) integration services for customer relationship management (CRM) and enterprise resource planning (ERP).
+
+Please refer to the [[!DNL Google Cloud Platform] overview](../google-cloud-platform/overview.md) for more information on installing the extension and configuring event forwarding rules. 
+
+Our native [[!DNL AWS]](../aws/overview.md), [[!DNL Azure]](../azure/overview.md), and [[!DNL Google Cloud Platform]](../google-cloud-platform/overview.md) event forwarding extensions enable customers to collect, enrich, and forward their event data server-side in real time to their cloud services to be consumed by [!DNL Snowflake]. See below:
 
 ![[!DNL Snowflake] reporting diagram showing the link between [!DNL AWS] and [!DNL  Azure].](../../../images/extensions/server/snowflake/snowflake-workflow.png)
 
