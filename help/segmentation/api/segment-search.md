@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment;search;segment search;
 title: Segment Search API Endpoint
 description: In the Adobe Experience Platform Segmentation Service API, Segment Search is used to search fields contained across various data sources and return them in near real-time. This guide provides information to help you better understand Segment Search and includes sample API calls for performing basic actions using the API.
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
@@ -217,7 +216,7 @@ After reading this guide you now have a better understanding of how Segment Sear
 
 ## Appendix {#appendix}
 
-The following sections provide additional information about how search terms work. Search queries are written in the following manner: `s={FieldName}:{SearchExpression}`. So, for example, to search for a segment named AAM or [!DNL Platform], you would use the following search query: `s=segmentName:AAM%20OR%20Platform`.
+The following sections provide additional information about how search terms work. Search queries are written in the following manner: `s={FieldName}:{SearchExpression}`. So, for example, to search for a segment definition named AAM or [!DNL Platform], you would use the following search query: `s=segmentName:AAM%20OR%20Platform`.
 
 > ![NOTE] For best practices, the search expression should be HTML encoded, like the example shown above.
 
@@ -229,10 +228,10 @@ The following table lists the fields which can be searched within the search que
 | ---------- | ----------- |
 | folderId | The folder or folders that have the folder ID of your specified search. |
 | folderLocation | The location or locations that have the folder location of your specified search. |
-| parentFolderId | The segment or folder that have the parent folder ID of your specified search. | 
-| segmentId | The segment matches the segment ID of your specified search. |
-| segmentName | The segment matches the segment name of your specified search. |
-| segmentDescription | The segment matches the segment description of your specified search. |
+| parentFolderId | The segment definition or folder that have the parent folder ID of your specified search. | 
+| segmentId | The segment definition that matches the segment ID of your specified search. |
+| segmentName | The segment definition that matches the segment name of your specified search. |
+| segmentDescription | The segment definition that matches the segment description of your specified search. |
 
 ### Search expression {#search-expression}
 

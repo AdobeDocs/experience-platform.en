@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;previews;estimates;previews and estimates;estimates and previews;api;API;
 solution: Experience Platform
 title: Previews and Estimates API Endpoints
 description: As segment definition are developed, you can use the estimate and preview tools within Adobe Experience Platform to view summary-level information to help ensure you are isolating the expected audience.
