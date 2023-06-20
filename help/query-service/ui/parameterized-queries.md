@@ -1,22 +1,22 @@
 ---
 title: Parameterized Queries
-description: Learn how to parameterize queries in the Adobe Experience Platform UI.
+description: Learn how to use parameterized queries in the Adobe Experience Platform UI.
 ---
 # Parameterized queries
 
 >[!IMPORTANT]
 >
->The parameterized queries UI feature is currently available in a **limited release only** and not available to all customers.
+>The parameterized queries UI feature is available in a **limited release only** and not available to all customers.
 
-Query Service supports the use of parameterized queries in the Query Editor. With parameterized queries you can now use placeholders for parameters and add the parameter values at execution time. This allows you to work with dynamic data where you don't know what the values will be until the statement is executed. Or prepare your queries ahead of time and reuse them for similar purposes. This saves considerable effort as you avoid creating distinct SQL queries for each use case.
+Query Service supports the use of parameterized queries in the Query Editor. With parameterized queries, you can now use placeholders for parameters and add the parameter values at execution time. Placeholders allow you to work with dynamic data where you don't know what the values will be until the statement is executed. You can also prepare your queries ahead of time and reuse them for similar purposes. Reusing queries saves considerable effort as you avoid creating distinct SQL queries for each use case.
 
 ## Prerequisites
 
-Before continuing with this guide, please read the [Query Editor UI guide](./user-guide.md). The Query Editor guide provides detailed information on how to write, validate, and run queries for customer experience data within the Experience Platform user interface.
+Before continuing with this guide, read the [Query Editor UI guide](./user-guide.md). The Query Editor guide provides detailed information on how to write, validate, and run queries for customer experience data within the Experience Platform user interface.
 
 >![NOTE]
 >
->Parameterized queries are not supported inside inline/nested templates beyond their immediate parent level. If an inline template is called within a parameterized query, and that inline template uses a parameter, the query will not work.
+>Parameterized queries are not supported inside inline/nested templates beyond their immediate parent level. Parameterized queries only work when used in the original template or within a direct child inline template.
 
 ## Parameterized query syntax {#syntax}
 
@@ -37,39 +37,38 @@ SELECT
 
 ## Create a parameterized query {#create}
 
-<!-- below is probably unnecessary 
-In the Experience Platform UI, select **Queries** in the left navigation menu to open the Query Service workspace. Next, select **Create Query** at the top right of the screen to start writing queries. This link is available from any of the pages in the Query Service workspace. -->
+To create your parameterized query in the UI, navigate to the Query Editor. See the section on [accessing the Query Editor](./user-guide.md#accessing-query-editor) for more instructions.
 
-To create your parameterized query in the UI, navigate to the Query Editor. See the section on [accessing the Query Editor](./user-guide.md#accessing-query-editor) for instruction on how todo this.
-
-Use the `'$'` preface to enter a query parameter into your query in the text editor.  Next, add the missing value for the key in the [!UICONTROL Query parameters] section below the editor. The query cannot be executed if you neglect to add a value to any of the required keys. An alert icon (![An alert icon.](../images/ui/parameterized-queries/alert-icon.png)) appears in the Query Parameters section next to any empty [!UICONTROL Value] input fields.
+Use the `'$'` preface to enter a query parameter into your query in the text editor. Next, add the missing value for the key in the [!UICONTROL Query parameters] section below the editor. The query cannot be executed if you neglect to add a value to any of the required keys. An alert icon (![An alert icon.](../images/ui/parameterized-queries/alert-icon.png)) appears in the Query Parameters section next to any empty [!UICONTROL Value] input fields.
 
 ![The Query Editor with a parameterized query and the Query parameters section highlighted.](../images/ui/parameterized-queries/parameterized-query.png)
 
 >[!TIP]
 >
->You have to change tabs from [!UICONTROL Query parameters] to [!UICONTROL Console] to see the console output of the query. 
+>Change tabs from [!UICONTROL Query parameters] to [!UICONTROL Console] to see the console output of the query. 
 
-If, after running the query once, you remove a parameter and try to execute the query again, an error message is displayed in the [!UICONTROL Query parameters] section to alert you.
+If after running the query once, you remove a parameter and try to execute the query again, an error message is displayed in the [!UICONTROL Query parameters] section to alert you.
 
-![The Query Editor with an empty value Filed and the query parameters error highlighted.](../images/ui/parameterized-queries/query-parameter-error.png)
+![The Query Editor with an empty value field and the query parameters error highlighted.](../images/ui/parameterized-queries/query-parameter-error.png)
 
->[!NOTE]
->
->You cannot save parameters within the templates. The values used are not persisted although parameters are saved when you schedule a parameterized query. See the documentation on [setting parameters for a scheduled parameterized query](./query-schedules.m.md#set-parameters) for more information. You can also check the query log to find the parameter values used in a query run, should you need to.
+## Use query logs details to check parameter values {#check-parameter-values}
+
+You cannot save parameters within templates as the values used are not persisted. However, you can check the [!UICONTROL Query log details] page to find the parameter values used in a query run. In this case, the logs do not indicate that the query was a parameterized query run. See the [query logs documentation](./query-logs.md) for instructions on how to find the values used.
+
+![The query logs view with the SQL of a parameterized query highlighted in the details section.](../images/ui/parameterized-queries/parameterized-query-logs.png)
+
+<!-- improve screenshot above ^ I am waiting for a scheduled run to complete -->
 
 ## Schedule a parameterized query {#schedule}
 
-To schedule a parameterized query, after you follow the typical process to create a scheduled query as described in the guide to [create a query schedule](./query-schedules.md#create-schedule), you have to enter the parameter values to be used in the query run. See the section on [setting parameters for a scheduled parameterized query](./query-schedules.m.md#set-parameters) for specific instructions.
+Parameter values are saved when you schedule a parameterized query. To schedule a parameterized query, follow the typical process to create a scheduled query as described in the guide to [create a query schedule](./query-schedules.md#create-schedule), then enter the parameter values to be used in the query run. This UI section only appears for parameterized queries. See the section on [setting parameters for a scheduled parameterized query](./query-schedules.m.md#set-parameters) for specific instructions.
 
 >[!TIP]
 >
->Query Service supports prepared statements by using a parameterized query. Fort more information on the SQL syntax involved see the [prepared statements syntax guide](../sql/prepared-statements.md).
+>Query Service supports prepared statements through the use of parameterized queries. See the [prepared statements syntax guide](../sql/prepared-statements.md) for more information on the SQL syntax involved.
 
 ## Next steps
 
-By reading this document, you have learned how to parameterize queries in the Adobe Experience Platform UI and use them in scheduled query runs. You should also understand how to check the logs for parameterized query runs.
+By reading this document, you have learned how to parameterize queries in the Adobe Experience Platform UI and use them in scheduled query runs. The document also highlighted how to check the logs for the parameter values used in query executions.
 
-
-
-<!-- Add a note to say doesnt work with inline templates (On both PRs) -->
+If you have not already, you are recommended to read the guide on [monitoring scheduled queries](./monitor-queries.md) to gain a better understanding of the status of all query jobs through the Platform UI.
