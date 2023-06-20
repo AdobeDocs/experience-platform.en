@@ -2,10 +2,19 @@
 title: Parameterized Queries
 description: Learn how to parameterize queries in the Adobe Experience Platform UI.
 ---
-# Parameterized queries
+# Parameterized queries Limited 
+
+>[!IMPORTANT]
+>
+>The parameterized queries UI feature is currently available in a limited release only and not available to all customers.
 
 With parameterized queries you can now use placeholders for parameters and add the parameter values at execution time. When the 
 
 <!-- the system conducts a check before you execute the SQL, execute a query and check to see what parameters are in the query and if you have some that are missing the query parameters tab at the bottom will come into view and you'll see that it's filled in the missing parameters. -->
 
-parameterized templates support is not available with nested templates.
+>![NOTE]
+>
+>Parameterized queries are not supported inside nested templates.
+
+
+<!-- Add a note to say doesnt work with inline templates (On both PRs) -->
