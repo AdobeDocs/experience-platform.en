@@ -1,14 +1,9 @@
 ---
-keywords: Experience Platform;Zendesk;sources;connectors;source connectors;sources sdk;sdk;SDK;zendesk;Zendesk
 title: Create a Zendesk Source Connection in the UI
 description: Learn how to create a Zendesk source connection using the Adobe Experience Platform UI.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
 ---
-# (Beta) Create a [!DNL Zendesk] source connection in the UI
-
->[!NOTE]
->
->The [!DNL Zendesk] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
+# Create a [!DNL Zendesk] source connection in the UI
 
 This tutorial provides steps for creating a [!DNL Zendesk] source connection using the Adobe Experience Platform user interface.
 
