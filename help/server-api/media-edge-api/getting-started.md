@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;media edge;popular topics;date range
 solution: Experience Platform
 title: Getting started with Media Edge APIs
 description: Getting started with Media Edge APIs
@@ -7,49 +6,49 @@ description: Getting started with Media Edge APIs
 
 # Media Edge API getting started
 
-This guide provides instructions for making successful initial interactions with the Media Edge API service. This includes starting a media session and then tracking events that are sent to an Adobe Experience Platform (AEP) solution such as Customer Journey Analytics (CJA). The Media Edge API service is initiated with the Session Start endpoint. Once the session is started, one or more of the following events can be tracked:
+This guide provides instructions for making successful initial interactions with the Media Edge API service. This includes starting a media session and then tracking events that are sent to an Adobe Experience Platform solution such as Customer Journey Analytics (CJA). The Media Edge API service is initiated with the Session Start endpoint. Once the session is started, one or more of the following events can be tracked:
 
-* play 
-* ping
-* bitrateChange
-* bufferStart
-* pauseStart
-* adBreakStart
-* adStart
-* adComplete
-* adSkip
-* adBreakComplete
-* chapterStart
-* chapterComplete
-* chapterSkip
-* error
-* sessionEnd
-* sessionComplete
-* statesUpdate
+* `play` 
+* `ping`
+* `bitrateChange`
+* `bufferStart`
+* `pauseStart`
+* `adBreakStart`
+* `adStart`
+* `adComplete`
+* `adSkip`
+* `adBreakComplete`
+* `chapterStart`
+* `chapterComplete`
+* `chapterSkip`
+* `error`
+* `sessionEnd`
+* `sessionComplete`
+* `statesUpdate`
 
 Each event has its own endpoint. All Media Edge API endpoints are POST methods, with JSON request bodies for event data. For more information on Media Edge API endpoints, parameters, and examples, see the [Media Edge Swagger file](swagger.md).
 
 This guide shows how to track the following events after starting the session:
 
-* Buffer Start
-* Play
-* Session Complete
+* [Buffer Start](#buffer-start-event-request)
+* [Play](#play-event-request)
+* [Session Complete](#session-complete-event-request)
 
-## Implementing the API
+## Implementing the API {#implement-api}
 
-Apart from minor differences in the model and paths called, the Media Edge API has the same implementation as the Media Collection API. The implementation details of Media Collection remain valid for Media Edge API, as described in the following documentation:
+Apart from minor differences in the model and paths called, the Media Edge API has the same implementation as the [Media Collection API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en). The implementation details of Media Collection remain valid for Media Edge API, as described in the following documentation:
 
 * [Setting the HTTP request type in your player](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [Sending ping events](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [Timeout conditions](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html?lang=en)
 * [Controlling the order of events](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html?lang=en)
 
-## Authorization
+## Authorization {#authorization}
 
 Currently, Media Edge APIs do not require Authorization headers in their requests.
 
 
-## Starting the session
+## Starting the session {#start-session}
 
 To start the media session on the server, use the Session Start endpoint. A successful response includes a `sessionId`, which is a required parameter for subsequent event requests.
  
@@ -98,7 +97,7 @@ Also, the datatypes mapping for `eventType` in the example above are as follows:
 
 | eventType | datatypes |
 | -------- | ------ |
-| mediaSessionStart | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
+| media.SessionStart | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
 | media.chapterStart | [chapterDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/chapterdetails.schema.md) |
 | media.adBreakStart | [advertisingPodDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingpoddetails.schema.md) |
 | media.adStart | [advertisingDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingdetails.schema.md) |
@@ -164,7 +163,7 @@ For more information on Session Start endpoint parameters and examples, see the 
 For more information on XDM media data parameters, see [Media Details Information Schema](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmplayhead). 
 
 
-## Buffer Start event request
+## Buffer Start event request {#buffer-start}
 
 The Buffer Start event signals when buffering starts on the media player. Buffer Resume is not an event in the API service; instead, it is inferred when a play event is sent after the Buffer Start. To make a Buffer Start event request, use your `sessionId` in the payload of a call to the following endpoint:
 
@@ -202,7 +201,7 @@ The successful respone indicates a status of 200 and does not include any conten
 For more information on the Buffer Start endpoint parameters and examples, see the [Media Edge Swagger](swagger.md) file.
 
 
-## Play event request
+## Play event request {#play-event}
 
 The Play event is sent when the media player changes its state to "playing" from another state, such as "buffering," "paused," or "error." To make a Play event request, use your `sessionId` in the payload of a call to the following endpoint:
 
@@ -237,7 +236,7 @@ The successful respone indicates a status of 200 and does not include any conten
 
 For more information on Play endpoint parameters and examples, see the [Media Edge Swagger](swagger.md) file.
 
-## Session Complete event request
+## Session Complete event request {#session-complete}
 
 The Session Complete event is sent when the end of the main content is reached. To make a Session Complete event request, use your `sessionId` in the payload of a call to the following endpoint:
 
@@ -283,6 +282,9 @@ The following table shows the possible response codes resulting from Media Edge 
 | 400-level | Bad request |
 | 500-level | Server error |
 
-For more information on handling errors and unsuccessful response codes, see the [Media Edge Troubleshooting guide](troubleshooting.md).
+## More help on this feature
+
+* [Media Edge Troubleshooting guide](troubleshooting.md)
+* [Media Edge API overview](overview.md)
 
 
