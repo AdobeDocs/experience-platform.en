@@ -1,12 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Snowflake;snowflake
-solution: Experience Platform
 title: Create a Snowflake Base Connection Using the Flow Service API
-type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Snowflake using the Flow Service API.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
 ---
 # Create a [!DNL Snowflake] base connection using the [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>The [!DNL Snowflake] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 

@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;media edge;popular topics;date range
 solution: Experience Platform
 title: Getting started with Media Edge APIs
 description: Media Edge APIs allow developers to collect data for Media Edge Analytics and Customer Journey Analytics.
@@ -9,6 +8,7 @@ description: Media Edge APIs allow developers to collect data for Media Edge Ana
 
 This document includes a JSON Open API Specification (OAS), or "Swagger" reference. You can copy and paste this specification into a rendering tool, such as editor.swagger.io to view Media Edge API information. This specification includes parameters, examples, and schema for each endpoint.
 
++++ Select to view and copy Open API Specification
 
 ```
 {
@@ -3902,3 +3902,5 @@ This document includes a JSON Open API Specification (OAS), or "Swagger" referen
   }
 }
 ```
+
++++
