@@ -5,15 +5,19 @@ badge: "Beta"
 ---
 # Computed attributes overview
 
+>[!IMPORTANT]
+>
+>Computed attributes is currently in **beta** and is **not** available to all users.
+
 Personalization based on user behavior is a key requirement for marketers to maximize the impact of personalization. For instance, personalizing marketing email with the most recently viewed product to drive conversion, or personalizing webpage based on total purchases made by users to drive retention. 
 
 Computed attributes help quickly convert profile behavioral data into aggregated values at the profile level without dependence on engineering resources for:
 
-- Enabling targeted personalization with activation of behavioral aggregates to Real-time Customer Data Platform destinations, usage in Adobe Journey Optimizer, or in segmentation
-- Standardization of aggregated profile behavioral data for usage across platform and apps
+- Enabling targeted personalization with activation of behavioral aggregates to Real-Time Customer Data Platform destinations, usage in Adobe Journey Optimizer, or in segmentation
+- Standardization of aggregated profile behavioral data for usage across platforms and apps
 - Better data management with consolidation of old profile events data into meaningful behavioral insights
 
-These aggregates are computed based on Profile-enabled Experience Event datasets ingested into Adobe Experience Platform. Each computed attribute is a profile attribute created on your profile union schema, and is grouped under "Computed Attribute" mixin in your union schema.
+These aggregates are computed based on Profile-enabled Experience Event datasets ingested into Adobe Experience Platform. Each computed attribute is a profile attribute created on your profile union schema, and is grouped under "Computed Attribute" field group in your union schema.
 
 Sample use cases include personalizing ads with the name of the last viewed product for people with no purchases in the last 7 days, personalizing marketing emails with total reward points won to congratulate users on being promoted to a premium tier, or calculating the lifetime value of each customer to drive better targeting.
 
@@ -34,7 +38,7 @@ Computed attributes let you define event aggregates in a self-serve manner by le
 | Function | Description | Supported data types | Example usage |
 | -------- | ----------- | -------------------- | ------------- |
 | SUM | A function that **sums** up the specified value for qualified events. | Integers, Numbers, Longs | Sum of all purchases in the last 7 days |
-| COUNT | A function that **counts** the number of events that have occurred. | N/A | Count of purchases in the last 3 months |
+| COUNT | A function that **counts** the number of events that have occurred for the given rule. | N/A | Count of purchases in the last 3 months |
 | MIN | A function that finds the **minimum** value for the qualified events. | Integers, Numbers, Longs, Timestamps | First purchase data in the last 7 days<br/>Minimum order amount in the last 4 weeks |
 | MAX | A function that finds the **maximum** value for the qualified events. | Integers, Numbers, Longs, Timestamps | Last purchase data in the last 7 days<br/>Maximum order amount in the last 4 weeks |
 | MOST_RECENT | A function the finds the specified attribute value from the latest qualified event. | All primitive values, Arrays of primitive values | Latest product viewed in the last 7 days |

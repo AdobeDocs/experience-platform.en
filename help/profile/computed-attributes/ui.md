@@ -1,10 +1,16 @@
 ---
 title: Computed Attributes UI guide
-description: In Adobe Experience Platform, computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. This guide shows how to create, view, and update computed attributes using the Adobe Experience Platform UI.
+description: Learn how to create, view, and update computed attributes using the Adobe Experience Platform UI.
 badge: "Beta"
 ---
 
 # Computed attributes UI guide
+
+>[!IMPORTANT]
+>
+>Computed attributes is currently in **beta** and is **not** available to all users.
+
+In Adobe Experience Platform, computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
 
 This document provides a guide on how to create and update computed attributes using the Adobe Experience Platform UI.
 
@@ -32,7 +38,7 @@ To select which fields are visible, you can select ![the configure columns icon]
 | [!UICONTROL Last evaluation status] | The status that states whether or not the computed attribute was successfully calculated in the last evaluation run. Possible values include **[!UICONTROL Success]** or **[!UICONTROL Failed]**. | 
 | [!UICONTROL Refresh frequency] | An indication on how frequently the computed attribute is expected to be refreshed. Possible values include hourly, daily, weekly, or monthly. |
 | [!UICONTROL Fast refresh] | A value that shows whether or not fast refresh is enabled for this compute attribute. If fast refresh is enabled, this lets the computed attribute be refreshed on a daily basis, rather than on a weekly, bi-weekly, or monthly basis. This value is only applicable for computed attributes with a lookback period greater than a weekly basis. |
-| [!UICONTROL Lifecycle status] | The current status of the computed attribute. There are three possible statuses: <ul><li>**[!UICONTROL Draft]:** The computed attribute does **not** have a field created on the schema yet. In this state, the computed attribute can be edited. </li><li>**[!UICONTROL Published]:** The computed attribute has a field created on the schema and is ready to be used. In this state, the computed attribute **cannot** be edited.</li><li>**[!UICONTROL Inactive]:** The computed attribute is disabled. For more information about the inactive status, please read the [frequently asked questions page](./faq.md#inactive-status). </li> | 
+| [!UICONTROL Lifecycle status] | The current status of the computed attribute. There are three possible statuses: <ul><li>**[!UICONTROL Draft]:** The computed attribute does **not** have a field created on the schema yet. In this state, the computed attribute can be edited. </li><li>**[!UICONTROL Published]:** The computed attribute has a field created on the schema and is ready to be used. In this state, the computed attribute **cannot** be edited.</li><li>**[!UICONTROL Inactive]:** The computed attribute is disabled. For more information about the inactive status, please read the [FAQ page](./faq.md#inactive-status). </li> | 
 
 Additionally, you can select a computed attribute to see more detailed information about it. For more information on the computed attributes details page, please read the [view a computed attribute's details section](#view-details).
 
@@ -56,7 +62,7 @@ After adding the computed attribute details, you can start  defining your rules.
 
 ### Specify event filtering conditions
 
-To create a rule, first select attributes from the **[!UICONTROL Events]** section to filter down events that you want to aggregate on. Currently, only non-array events are supported.
+To create a rule, first select attributes from the **[!UICONTROL Events]** section to filter down events that you want to aggregate on. Currently, only non-array type event attributes are supported.
 
 ![The [!UICONTROL Events] section is highlighted.](./images/ui/events.png)
 
@@ -106,9 +112,9 @@ This page displays a summary of the computed attribute's details, as well as a g
 
 ### Draft computed attribute {#draft}
 
-When selecting a draft computed attribute, the **[!UICONTROL Edit computed attributes]** page appears. This page, similarly to the Create computed attributes page, lets you edit your computed attribute's basic information, as well as its definition, before letting you update the draft or publish it.
+When selecting a draft computed attribute, the **[!UICONTROL Edit computed attributes]** page appears. This page, similarly to the [!UICONTROL Create computed attributes] page, lets you edit your computed attribute's basic information, as well as its definition, before letting you update the draft or publish it.
 
-![The [!UICONTROL Edit computed attributes ]page is displayed.](./images/ui/edit.png)
+![The [!UICONTROL Edit computed attributes] page is displayed.](./images/ui/edit.png)
 
 ## Using computed attributes {#usage}
 

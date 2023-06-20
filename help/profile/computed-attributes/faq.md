@@ -1,16 +1,20 @@
 ---
 title: Computed Attributes Frequently Asked Questions
-description: In Adobe Experience Platform, computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. This guide answers frequently asked questions about using computed attributes.
+description: Find out answers to frequently asked questions about using computed attributes.
 badge: "Beta"
 ---
 
 # Frequently asked questions
 
-The following is a list of frequently asked questions regarding computed attributes.
+>[!IMPORTANT]
+>
+>Computed attributes is currently in **beta** and is **not** available to all users.
+
+In Adobe Experience Platform, computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. The following is a list of frequently asked questions regarding computed attributes.
 
 ## Which datasets contribute towards computed attribute calculations?
 
-Computed attributes considers Profile-enabled Experience Event datasets for calculating computed attributes.
+Computed attributes considers Real-Time Customer Profile-enabled Experience Event datasets for calculating computed attributes.
 
 ## What Experience Data Model (XDM) fields can be used for creating computed attributes?
 
@@ -30,7 +34,7 @@ Computed attribute calculations are based on the defined lookback period and the
 
 ## Can I create a computed attribute based on another computed attribute?
 
-Since computed attributes are created using Experience Event fields and resides on a Profile field, there is no way to directly use a computed attribute to create another computed attribute.
+Since computed attributes are created using Experience Event fields and resides in a Profile field, there is no way to directly use a computed attribute to create another computed attribute.
 
 ## Are there any limits to the number of computed attributes I can create?
 
@@ -42,7 +46,7 @@ Before disabling your computed attribute, you **should** remove them from your d
 
 ## What happens when I disable a computed attribute? {#inactive-status}
 
-When a computed attribute is disabled or made inactive, it is no longer updated. As a result, this computed attribute is **not** usable in profile lookup or other downstream usages.
+When a computed attribute is disabled or made inactive, it is no longer updated. As a result, this computed attribute **cannot** be used in profile lookup or other downstream usages.
 
 ## How do computed attributes help drive engagement?
 
