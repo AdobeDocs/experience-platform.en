@@ -20,7 +20,9 @@ Once a query is saved, it is known as a template. When the template references a
 
 You can use templates to store one, or multiple conditions. They do not need to be a complete query by themselves. If your template contains a valid query, you can execute the query simply by calling the template name preceded with a hash tag. For example, if you stored `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` as a template  named `JUNE_2023_LOYALTY_MEMBERS`, the command  `#JUNE_2023_LOYALTY_MEMBERS;` would execute the valid query contained inside the template. 
 
-
+>![NOTE]
+>
+>Nested templates do not support the use of parameterized queries.
 
 ## Next steps
 
