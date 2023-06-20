@@ -6,7 +6,7 @@ description: Learn how to use parameterized queries in the Adobe Experience Plat
 
 >[!IMPORTANT]
 >
->The parameterized queries UI feature is available in a **limited release only** and not available to all customers.
+>The parameterized query UI feature is available in a **limited release only** and is not available to all customers.
 
 Query Service supports the use of parameterized queries in the Query Editor. With parameterized queries, you can now use placeholders for parameters and add the parameter values at execution time. Placeholders allow you to work with dynamic data where you don't know what the values will be until the statement is executed. You can also prepare your queries ahead of time and reuse them for similar purposes. Reusing queries saves considerable effort as you avoid creating distinct SQL queries for each use case.
 
@@ -16,15 +16,15 @@ Before continuing with this guide, read the [Query Editor UI guide](./user-guide
 
 >![NOTE]
 >
->Parameterized queries are not supported inside inline/nested templates beyond their immediate parent level. Parameterized queries only work when used in the original template or within a direct child inline template.
+>Parameterized queries are not supported inside inline templates beyond their immediate parent level. Parameterized queries only work when used in the original template or within a direct child inline template.
 
 ## Parameterized query syntax {#syntax}
 
-Parameterized queries use the format `'$YOUR_PARAMETER_NAME'`. Parameterized queries can be concatenated using dot notation. An example SQL statement that uses parameterized queries can be seen below.
+Parameterized queries use the format `'$YOUR_PARAMETER_NAME'` and can be concatenated using dot notation. An example SQL statement that uses parameterized queries can be seen below.
 
 ```sql
 INSERT INTO
-   $Database_Name.$Schema_Name.adwh_lkup_process_delta_log
+   $Database_Name.Schema_Name.adwh_lkup_process_delta_log
    (process_name, merge_policy_id, process_status, process_date, create_ts, change_ts)
 SELECT
    '$Table_Process_Name' process_name,
@@ -45,15 +45,15 @@ Use the `'$'` preface to enter a query parameter into your query in the text edi
 
 >[!TIP]
 >
->Change tabs from [!UICONTROL Query parameters] to [!UICONTROL Console] to see the console output of the query. 
+>Change tabs from [!UICONTROL Query parameters] to [!UICONTROL Console] to view the console output of the query. 
 
-If after running the query once, you remove a parameter and try to execute the query again, an error message is displayed in the [!UICONTROL Query parameters] section to alert you.
+If you remove a parameter and try to execute the query again after it has already been run, an error message is displayed in the [!UICONTROL Query parameters] section to alert you.
 
 ![The Query Editor with an empty value field and the query parameters error highlighted.](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## Use query logs details to check parameter values {#check-parameter-values}
 
-You cannot save parameters within templates as the values used are not persisted. However, you can check the [!UICONTROL Query log details] page to find the parameter values used in a query run. In this case, the logs do not indicate that the query was a parameterized query run. See the [query logs documentation](./query-logs.md) for instructions on how to find the values used.
+You cannot save parameters within templates as the values used are not persistent. However, you can check the [!UICONTROL Query log details] page to find the parameter values used in a query run. In this case, the logs do not indicate that the query was a parameterized query. See the [query logs documentation](./query-logs.md) for instructions on how to find the values used.
 
 ![The query logs view with the SQL of a parameterized query highlighted in the details section.](../images/ui/parameterized-queries/parameterized-query-logs.png)
 
@@ -61,7 +61,7 @@ You cannot save parameters within templates as the values used are not persisted
 
 ## Schedule a parameterized query {#schedule}
 
-Parameter values are saved when you schedule a parameterized query. To schedule a parameterized query, follow the typical process to create a scheduled query as described in the guide to [create a query schedule](./query-schedules.md#create-schedule), then enter the parameter values to be used in the query run. This UI section only appears for parameterized queries. See the section on [setting parameters for a scheduled parameterized query](./query-schedules.m.md#set-parameters) for specific instructions.
+Parameter values are saved when you schedule a parameterized query. To schedule a parameterized query, follow the typical process to create a scheduled query as described in the guide to [create a query schedule](./query-schedules.md#create-schedule), then enter the parameter values to be used in the query run. This UI section only appears for parameterized queries. See the section on [setting parameters for a scheduled parameterized query](./query-schedules.md#set-parameters) for specific instructions.
 
 >[!TIP]
 >

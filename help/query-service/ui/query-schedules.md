@@ -51,9 +51,9 @@ If you do not have access to parameterized queries, continue on to the [delete o
 
 >[!IMPORTANT]
 >
->The parameterized queries UI feature is currently available in a **limited release only** and not available to all customers.
+>The parameterized query UI feature is currently available in a **limited release only** and is not available to all customers.
 
-If you are creating a scheduled query for a parameterized query you must now set the partameter values for these query runs.
+If you are creating a scheduled query for a parameterized query, you must now set the parameter values for these query runs.
 
 ![The Schedule details section of the schedule creation workflow with the Query parameters section highlighted.](../images/ui/query-schedules/scheduled-query-parameter.png)
 
