@@ -254,11 +254,11 @@ If your response is similar to the one shown below, then your credentials are va
 
 >[!IMPORTANT]
 >
->While the call above is sufficient to test your access credentials, be aware that you will not be able to access or modify several resources without having the right Attribute-based access control permissions. Read more in the [Get the necessary Attribute-based access control permissions](#get-abac-permissions) section.
+>While the call above is sufficient to test your access credentials, be aware that you will not be able to access or modify several resources without having the right Attribute-based access control permissions. Read more in the [Get the necessary attribute-based access control permissions](#get-abac-permissions) section.
 
-## Get the necessary Attribute-based access control permissions {#get-abac-permissions}
+## Get the necessary attribute-based access control permissions {#get-abac-permissions}
 
-To access or modify several resources within Experience Platform, you must have the appropriate access control permissions. System administrators can grant you the [permissions you need](/help/access-control/ui/permissions.md). 
+To access or modify several resources within Experience Platform, you must have the appropriate access control permissions. System administrators can grant you the [permissions you need](/help/access-control/ui/permissions.md). Get more information in the section about [managing API credentials for a role](/help/access-control/abac/ui/permissions.md#manage-api-credentials-for-role).
 
 ## Use Postman to authenticate and test API calls {#use-postman}
 
