@@ -41,6 +41,6 @@ You can use templates to store one, or multiple conditions. They do not need to 
 
 ## Next steps
 
-After reading this document, you now know how to reference other templates within your SQL either in the Query Editor or through the Query Service API.  
+After reading this document, you now know how to reference other templates within your SQL, either in the Query Editor or through the Query Service API.  
 
-Next, you are recommended to read the [anonymous block guide](./anonymous-block.md) which explains how to minimize development overheads by chaining one or more SQL statements that are executed in sequence.
+Next, you are recommended to read the [anonymous block guide](./anonymous-block.md), which explains how to minimize development overheads by chaining one or more SQL statements that are executed in sequence.
