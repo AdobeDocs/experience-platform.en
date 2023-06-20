@@ -15,6 +15,7 @@ feature: Sources
     - [Analytics source](connectors/adobe-applications/analytics.md)
     - [Audience Manager source](connectors/adobe-applications/audience-manager.md)
     - [Adobe Campaign Managed Cloud Services source](connectors/adobe-applications/campaign.md)
+    - [Adobe Commerce source](connectors/adobe-applications/commerce.md)
     - [Customer attributes source](connectors/adobe-applications/customer-attributes.md)
     - [Data Collection source](connectors/adobe-applications/data-collection.md)
     - [Workfront source](connectors/adobe-applications/workfront.md)
@@ -55,6 +56,7 @@ feature: Sources
     - [OneTrust Integration](connectors/consent-and-preferences/onetrust.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
+    - [SAP Hybris connector](connectors/crm/sap-hybris.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
     - [SugarCRM connector](connectors/crm/sugarcrm.md)
     - [Veeva CRM connector](connectors/crm/veeva.md)
@@ -132,6 +134,7 @@ feature: Sources
       - [OneTrust Integration](tutorials/api/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
+      - [SAP Hybris](tutorials/api/create/crm/sap-hybris.md)
       - [Salesforce](tutorials/api/create/crm/salesforce.md)
       - [SugarCRM Accounts & Contacts](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
       - [SugarCRM Events](tutorials/api/create/crm/sugarcrm-events.md)
@@ -252,6 +255,7 @@ feature: Sources
       - [OneTrust Integration](tutorials/ui/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
+      - [SAP Hybris](tutorials/ui/create/crm/sap-hybris.md)
       - [Salesforce](tutorials/ui/create/crm/salesforce.md)
       - [SugarCRM Accounts & Contacts](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
       - [SugarCRM Events](tutorials/ui/create/crm/sugarcrm-events.md)
