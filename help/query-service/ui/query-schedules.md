@@ -45,6 +45,18 @@ For the output dataset, you have the option to use either an existing dataset or
 >
 > Since you are using either an existing or creating a new dataset, you do **not** need to include either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of the query, since the datasets are already set. Including either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of your scheduled queries will result in an error.
 
+If you do not have access to parameterized queries, continue on to the [delete or disable a schedule](#delete-schedule) section.
+
+### Set parameters for a scheduled parameterized query {#set-parameters}
+
+>[!IMPORTANT]
+>
+>The parameterized queries UI feature is currently available in a **limited release only** and not available to all customers.
+
+If you are creating a scheduled query for a parameterized query you must now set the partameter values for these query runs.
+
+![The Schedule details section of the schedule creation workflow with the Query parameters section highlighted.](../images/ui/query-schedules/scheduled-query-parameter.png)
+
 After confirming all these details, select **[!UICONTROL Save]** to create a schedule. You are returned to the schedules workspace that displays details of the newly created schedule, including the schedule ID, the schedule itself, and the schedule's output dataset. You can use the schedule ID to look up more information about the runs of the scheduled query itself. To learn more, please read the [scheduled query run endpoints guide](../api/runs-scheduled-queries.md).
 
 ![The schedules workspace with the newly created schedule highlighted.](../images/ui/query-schedules/schedules-workspace.png)
