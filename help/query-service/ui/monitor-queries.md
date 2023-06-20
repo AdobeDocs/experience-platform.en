@@ -41,7 +41,11 @@ The table below describes each available column.
 
 You can adjust the columns on the [!UICONTROL Scheduled Queries] tab to your needs. To open the [!UICONTROL Customize table] settings dialog and edit available columns, select the settings icon (![A settings icon.](../images/ui/monitor-queries/settings-icon.png)) from the top right of the screen.
 
-![The Customize table settings icon.](../images/ui/monitor-queries/customze-table-settings-icon.png)
+>[!NOTE]
+>
+>The [!UICONTROL Created] column that refers to the date the schedule was created, is hidden by default.
+
+![The Scheduled Queries tab with the Customize table settings icon highlighted.](../images/ui/monitor-queries/customze-table-settings-icon.png)
 
 Toggle the relevant checkboxes to remove or add a table column. Next, select **[!UICONTROL Apply]** to confirm your choices.
 
