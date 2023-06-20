@@ -33,7 +33,7 @@ Before you can bring your [!DNL SAP Hybris] data to Experience Platform, you mus
 * [!DNL SAP] service key. The [!DNL SAP] service key allows you to access the [!DNL SAP Subscription Billing] API through Experience Platform. [!DNL SAP Hybris] requires the following:
   * Client ID
   * Client secret
-  * URL. The URL pattern is as follows: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. This value will be used later to obtain values for `region` and `tokenEndpoint` when you [Create base connection](../../tutorials/api/create/crm/sap-hybris-subscription-billing-customers-and-contacts.md#base-connection) using the API or when you [Connect your [!DNL SAP Hybris] account](../../tutorials/ui/create/crm/sap-hybris-subscription-billing-customers-and-contacts.md#connect-account) through the Platform UI.
+  * URL. The URL pattern is as follows: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. This value will be used later to obtain values for `region` and `tokenEndpoint` when you [Create base connection](../../tutorials/api/create/crm/sap-hybris.md#base-connection) using the API or when you [Connect your [!DNL SAP Hybris] account](../../tutorials/ui/create/crm/sap-hybris.md#connect-account) through the Platform UI.
   
 +++Select to see an example of the service key
 
