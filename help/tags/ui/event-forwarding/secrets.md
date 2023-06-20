@@ -117,19 +117,19 @@ When finished, select **[!UICONTROL Create Secret]** to save the secret.
 
 To create an OAuth 2 JWT secret, select **[!UICONTROL OAuth 2 JWT]** from the **[!UICONTROL Type]** dropdown. 
 
-![Create secret tab highlighting OAuth 2 JWT secret in the [!UICONTROL dropdown]](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+![The [!UICONTROL Create Secret] tab with the OAuth 2 JWT secret highlighted in the [!UICONTROL Type] dropdown.](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
 
 In the fields that appear below, provide your [!UICONTROL Issuer], [!UICONTROL Subject], [!UICONTROL Audience], [!UICONTROL Custom Claims], [!UICONTROL TTL], then select the [!UICONTROL Algorithm] from the dropdown. Next, enter the [!UICONTROL Private Key Id], as well as your [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) for your OAuth integration. The [!UICONTROL Token URL] field in the UI is a concatenation between the authorization server host and the token path.
 
-![Create secret tab highlighting OAuth 2 JWT secret in the [!UICONTROL dropdown]](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+![The [!UICONTROL Create Secret] tab with a selection of input fields highlighted.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
 
 Under **[!UICONTROL Credential Options]**, you can provide other credential options such as `scope` and `audience` in the form of key-value pairs. To add more key-value pairs, select **[!UICONTROL Add another]**.
 
-![Create secret tab highlighting [!UICONTROL Credential Options]](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+![The [!UICONTROL Create Secret] tab highlighting the [!UICONTROL Credential Options] fields.](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
 
 Finally, you can configure the **[!UICONTROL Refresh Offset]** value for the secret. This represents the number of seconds before the token expiry that the system will perform an automatic refresh. The equivalent time in hours and minutes is displayed to the right of the field and updates automatically as you type.
 
-![Create secret screen highlighting [!UICONTROL Refresh Offset]](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+![The [!UICONTROL Create Secret] tab highlighting the [!UICONTROL Refresh Offset] field.](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
 
 For example, if the refresh offset is set to the default value of `14400` (four hours) and the access token has an `expires_in` value of `86400` (24 hours), the system will automatically refresh the secret in 20 hours.
 
@@ -141,7 +141,7 @@ For example, if the refresh offset is set to the default value of `14400` (four 
 
 When finished, select **[!UICONTROL Create Secret]** to save the secret.
 
-![Create secret screen highlighting [!UICONTROL Create Secret]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
+![The [!UICONTROL Create Secret] tab highlighting [!UICONTROL Create Secret]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
