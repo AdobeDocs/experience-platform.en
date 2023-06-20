@@ -7,14 +7,15 @@ exl-id: eefd87d7-457f-422a-b159-5b428da54189
 
 In event forwarding, a secret is a resource that represents an authentication credential for another system, allowing for the secure exchange of data. Secrets can only be created within event forwarding properties.
 
-There are currently three supported secret types:
+The following secret types are currently supported:
 
 | Secret type | Description |
 | --- | --- |
-| [!UICONTROL Token] | A single string of characters representing an authentication token value that is known and understood by both systems. |
+| [!UICONTROL Google OAuth 2] | Contains several attributes to support the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec for use in the [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) and [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 | [!UICONTROL HTTP] | Contains two string attributes for a username and password, respectively. |
 | [!UICONTROL OAuth 2] | Contains several attributes to support the [client credentials grant type](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) for the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
-| [!UICONTROL Google OAuth 2] | Contains several attributes to support the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec for use in the [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) and [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
+| [!UICONTROL OAuth 2 JWT] |  |
+| [!UICONTROL Token] | A single string of characters representing an authentication token value that is known and understood by both systems. |
 
 {style="table-layout:auto"}
 
@@ -67,6 +68,7 @@ From here, the steps to create the secret differ depending on the type of secret
 * [[!UICONTROL Token]](#token)
 * [[!UICONTROL HTTP]](#http)
 * [[!UICONTROL OAuth 2]](#oauth2)
+* [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL Token] {#token}
@@ -110,6 +112,10 @@ For example, if the refresh offset is set to the default value of `14400` (four 
 When finished, select **[!UICONTROL Create Secret]** to save the secret.
 
 ![Save OAuth 2 Offset](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+
+### [!UICONTROL OAuth 2 JWT] {#oauth2jwt}
+
+
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
