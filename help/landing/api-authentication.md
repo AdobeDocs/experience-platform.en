@@ -80,7 +80,7 @@ Next, select the authentication type to generate access tokens and access the Ex
 
 >[!IMPORTANT]
 >
->Select the **[!UICONTROL OAuth Server-to-Server]** method as this is the only method supported moving forward. The **[!UICONTROL Service Account (JWT)]** method is deprecated. While integrations using the JWT authentication method will continue to work until January 1st, 2025, Adobe strongly recommends that you migrate existing integrations to the new OAuth Server-to-Server method before that date. Get more information in the section [(DEPRECATED) Generate a JSON Web Token (JWT)](#jwt).
+>Select the **[!UICONTROL OAuth Server-to-Server]** method as will be the only method supported moving forward. The **[!UICONTROL Service Account (JWT)]** method is deprecated. While integrations using the JWT authentication method will continue to work until January 1st, 2025, Adobe strongly recommends that you migrate existing integrations to the new OAuth Server-to-Server method before that date. Get more information in the section [!BADGE Deprecated]{type=negative} [Generate a JSON Web Token (JWT)](#jwt).
 
 ![Select Experience Platform API.](./images/api-authentication/oauth-authentication-method.png)
 
@@ -98,7 +98,7 @@ From here, follow the steps outlined in the tutorial on [adding an API to a proj
 -->
 
 Next, select the product profiles that should apply to your integration.
-Your integration's service account will gain access to granular features through the product profiles selected here. Note that to get access to certain features in Platform, you also need a system administrator to grant you the necessary Attribute-based access control permissions. Read more in the section [Get the necessary Attribute-based access control permissions](#get-abac-permissions).
+Your integration's service account will gain access to granular features through the product profiles selected here. Note that to get access to certain features in Platform, you also need a system administrator to grant you the necessary Attribute-based access control permissions. Read more in the section [Get the necessary attribute-based access control permissions](#get-abac-permissions).
 
 >[!TIP]
 >
@@ -106,7 +106,7 @@ Your integration's service account will gain access to granular features through
 
 ![Select product profiles for your integration.](./images/api-authentication/select-product-profiles.png)
 
-Select **Save configured API** when you are ready.
+Select **[!UICONTROL Save configured API]** when you are ready.
 
 ### Gather credentials {#gather-credentials}
 
@@ -135,7 +135,7 @@ The next step is to generate an `{ACCESS_TOKEN}` credential for use in Platform 
 
 ![Show how to generate access token](././images/api-authentication/generate-access-token.gif)
 
-## (DEPRECATED) Generate a JSON Web Token (JWT) {#jwt}
+## [!BADGE Deprecated]{type=negative} Generate a JSON Web Token (JWT) {#jwt}
 
 >[!WARNING]
 >
