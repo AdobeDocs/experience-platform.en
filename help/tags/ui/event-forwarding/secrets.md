@@ -14,7 +14,7 @@ The following secret types are currently supported:
 | [!UICONTROL Google OAuth 2] | Contains several attributes to support the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec for use in the [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) and [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 | [!UICONTROL HTTP] | Contains two string attributes for a username and password, respectively. |
 | [!UICONTROL OAuth 2] | Contains several attributes to support the [client credentials grant type](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) for the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
-| [!UICONTROL OAuth 2 JWT] |  |
+| [!UICONTROL OAuth 2 JWT] | Contains several attributes to support the client credentials grant type for the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 | [!UICONTROL Token] | A single string of characters representing an authentication token value that is known and understood by both systems. |
 
 {style="table-layout:auto"}
@@ -115,7 +115,33 @@ When finished, select **[!UICONTROL Create Secret]** to save the secret.
 
 ### [!UICONTROL OAuth 2 JWT] {#oauth2jwt}
 
+To create an OAuth 2 JWT secret, select **[!UICONTROL OAuth 2 JWT]** from the **[!UICONTROL Type]** dropdown. 
 
+![Create secret tab highlighting OAuth 2 JWT secret in the [!UICONTROL dropdown]](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+
+In the fields that appear below, provide your [!UICONTROL Issuer], [!UICONTROL Subject], [!UICONTROL Audience], [!UICONTROL Custom Claims], [!UICONTROL TTL], then select the [!UICONTROL Algorithm] from the dropdown. Next, enter the [!UICONTROL Private Key Id], as well as your [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) for your OAuth integration. The [!UICONTROL Token URL] field in the UI is a concatenation between the authorization server host and the token path.
+
+![Create secret tab highlighting OAuth 2 JWT secret in the [!UICONTROL dropdown]](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+
+Under **[!UICONTROL Credential Options]**, you can provide other credential options such as `scope` and `audience` in the form of key-value pairs. To add more key-value pairs, select **[!UICONTROL Add another]**.
+
+![Create secret tab highlighting [!UICONTROL Credential Options]](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+
+Finally, you can configure the **[!UICONTROL Refresh Offset]** value for the secret. This represents the number of seconds before the token expiry that the system will perform an automatic refresh. The equivalent time in hours and minutes is displayed to the right of the field and updates automatically as you type.
+
+![Create secret screen highlighting [!UICONTROL Refresh Offset]](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+
+For example, if the refresh offset is set to the default value of `14400` (four hours) and the access token has an `expires_in` value of `86400` (24 hours), the system will automatically refresh the secret in 20 hours.
+
+>[!IMPORTANT]
+>
+>An OAuth 2 JWT secret requires at least four hours between refreshes and must also be valid for a minimum of eight hours. This restriction gives you a minimum of four hours to intervene if problems arise with the generated token.
+>
+>For example, if the offset is set to `28800` (eight hours) and the access token has an `expires_in` of `36000` (ten hours), the exchange would fail due to the resulting difference being less than four hours.
+
+When finished, select **[!UICONTROL Create Secret]** to save the secret.
+
+![Create secret screen highlighting [!UICONTROL Create Secret]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
