@@ -80,6 +80,7 @@ feature: Queries
     - [Working with nested data structures](essential-concepts/nested-data-structures.md)
     - [Flatten nested data structures](essential-concepts/flatten-nested-data.md)
     - [Anonymous block](essential-concepts/anonymous-block.md)
+    - [Inline template](essential-concepts/inline-templates.md)
     - [Incremental loading](essential-concepts/incremental-load.md)
     - [Data deduplication](essential-concepts/deduplication.md)
     - [Dataset samples](essential-concepts/dataset-samples.md)
