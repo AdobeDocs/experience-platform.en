@@ -199,10 +199,6 @@ Platform provides intelligent recommendations for auto-mapped fields based on th
 
 Mapping configurations for your dataflow will differ depending on your schema and the object type that you select to ingest.
 
->[!NOTE]
->
->The [!DNL SAP Hybris] source supports [[!DNL Iterative array operation]](../../../../../mapping-set.md?lang=en#iterative-array-operation), map the array elements accordingly.
-
 >[!BEGINTABS]
 
 >[!TAB Customers]
