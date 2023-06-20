@@ -209,6 +209,7 @@ solution: Data Collection
     * [!DNL Braze] {#braze}
       * [Overview](./extensions/server/braze/overview.md)
     * [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)
+      * [Cloud Connector for Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
     * Core {#core}
       * [Overview](./extensions/server/core/overview.md)
     * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)
