@@ -49,6 +49,7 @@ Currently, Media Edge APIs do not require Authorization headers in their request
 
 
 ## Starting the session {#start-session}
+
 To start the media session on the server, use the Session Start endpoint. A successful response includes a `sessionId`, which is a required parameter for subsequent event requests.
  
 Before making the session start request, you will need the following:

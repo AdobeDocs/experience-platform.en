@@ -9,6 +9,7 @@ description: Media Edge APIs allow developers to collect data for Media Edge Ana
 This document includes a JSON Open API Specification (OAS), or "Swagger" reference. You can copy and paste this specification into a rendering tool, such as editor.swagger.io to view Media Edge API information. This specification includes parameters, examples, and schema for each endpoint.
 
 +++ Select to view and copy Open API Specification
+
 ```
 {
   "openapi": "3.0.1",
@@ -3901,4 +3902,5 @@ This document includes a JSON Open API Specification (OAS), or "Swagger" referen
   }
 }
 ```
+
 +++
