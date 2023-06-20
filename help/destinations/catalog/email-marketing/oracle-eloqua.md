@@ -25,7 +25,7 @@ Refer to the table below for information about the destination export type and f
 
 When setting up email marketing destinations with SFTP storage, Adobe recommends that you add certain IP ranges to your allow list.
 
-Refer to [IP address allow list for cloud storage destinations](../cloud-storage/ip-address-allow-list.md) if you need to add Adobe IPs to your allow list.
+Refer to [IP address allow list for SFTP destinations](../cloud-storage/ip-address-allow-list.md) if you need to add Adobe IPs to your allow list.
 
 ## Connect to the destination {#connect}
 
