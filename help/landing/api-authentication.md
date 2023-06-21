@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;Authenticate;access
 solution: Experience Platform
 title: Authenticate and Access Experience Platform APIs
 type: Tutorial
@@ -76,6 +75,8 @@ The **[!UICONTROL Add an API]** screen appears. Select the product icon for Adob
 >
 >Select the **[!UICONTROL View docs]** option to navigate in a separate browser window to the complete [Experience Platform API reference documentation](https://developer.adobe.com/experience-platform-apis/).
 
+### Select the OAuth Server-to-Server authentication type {#select-oauth-server-to-server}
+
 Next, select the authentication type to generate access tokens and access the Experience Platform API.
 
 >[!IMPORTANT]
@@ -84,21 +85,12 @@ Next, select the authentication type to generate access tokens and access the Ex
 
 ![Select Experience Platform API.](./images/api-authentication/oauth-authentication-method.png)
 
-<!--
-
-From here, follow the steps outlined in the tutorial on [adding an API to a project using a service account (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (starting from the "Configure API" step) to finish the process.
-
->[!IMPORTANT]
->
->At this point, the tutorial linked to instructions how to get an access token by using the JWT mechanism. This option is now deprecated and all new integrations must be created using the OAuth mechanism. Read the following important documentation:
-> 
-> * [Migration guide for your applications from JWT to OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
-> [Implementation guide for new and old applications with OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
-
--->
+### Select the product profiles for your integration {#select-product-profiles}
 
 Next, select the product profiles that should apply to your integration.
-Your integration's service account will gain access to granular features through the product profiles selected here. Note that to get access to certain features in Platform, you also need a system administrator to grant you the necessary Attribute-based access control permissions. Read more in the section [Get the necessary attribute-based access control permissions](#get-abac-permissions).
+Your integration's service account will gain access to granular features through the product profiles selected here. 
+
+Note that to get access to certain features in Platform, you also need a system administrator to grant you the necessary Attribute-based access control permissions. Read more in the section [Get the necessary attribute-based access control permissions](#get-abac-permissions).
 
 >[!TIP]
 >
@@ -107,6 +99,10 @@ Your integration's service account will gain access to granular features through
 ![Select product profiles for your integration.](./images/api-authentication/select-product-profiles.png)
 
 Select **[!UICONTROL Save configured API]** when you are ready.
+
+A walkthrough of the steps described above to set up an integration with the Experience Platform API is also available in the video tutorial below:
+
+>[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=159)
 
 ### Gather credentials {#gather-credentials}
 
@@ -135,11 +131,15 @@ The next step is to generate an `{ACCESS_TOKEN}` credential for use in Platform 
 
 ![Show how to generate access token](././images/api-authentication/generate-access-token.gif)
 
+>[!TIP]
+>
+>You can also use a Postman environment and collection to generate access tokens. For more information, read the section about [using Postman to authenticate and test API calls](#use-postman).
+
 ## [!BADGE Deprecated]{type=negative} Generate a JSON Web Token (JWT) {#jwt}
 
 >[!WARNING]
 >
->The JWT method to generate access tokens has been deprecated. All new integrations must be created using the OAuth Server-to-Server authentication method. Adobe also recommends that you migrate your existing integrations to the OAuth method. Read the following important documentation:
+>The JWT method to generate access tokens has been deprecated. All new integrations must be created using the [OAuth Server-to-Server authentication method](#select-oauth-server-to-server). Adobe also recommends that you migrate your existing integrations to the OAuth method. Read the following important documentation:
 > 
 > * [Migration guide for your applications from JWT to OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 >* [Implementation guide for new and old applications with OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
@@ -260,15 +260,35 @@ If your response is similar to the one shown below, then your credentials are va
 
 To access or modify several resources within Experience Platform, you must have the appropriate access control permissions. System administrators can grant you the [permissions you need](/help/access-control/ui/permissions.md). Get more information in the section about [managing API credentials for a role](/help/access-control/abac/ui/permissions.md#manage-api-credentials-for-role).
 
+Detailed information about how a system administrator can grant the required permissions to access Platform resources through the API is also available in the video tutorial below:
+
+>[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=159)
+
 ## Use Postman to authenticate and test API calls {#use-postman}
 
 [Postman](https://www.postman.com/) is a popular tool that allows developers to explore and test RESTful APIs. You can use Experience Platform Postman collections and environments to speed up your work with Experience Platform APIs. Read more about [using Postman in Experience Platform](/help/landing/postman.md) and getting started with collections and environments.
+
+Detailed information about using Postman with Experience Platform collections and environments is also available in the video tutorials below:
+
+**Download and import a Postman environment to use with Experience Platform APIs**
+
+>[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=106)
+
+**Use a Postman collection to generate access tokens**
+
+Download the [Identity Management Service Postman collection](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) and watch the video below to learn how to generate access tokens.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29698/?learn=on)
+
+**Download Experience Platform API Postman collections and interact with the APIs**
+
+>[!VIDEO](https://video.tv.adobe.com/v/29704/?learn=on)
 
 <!--
 This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform JWT authentication and use it to consume Platform APIs.
 -->
 
-## System administrators: Grant developer and API access control with Experience Platform permissions
+## System administrators: Grant developer and API access control with Experience Platform permissions {#grant-developer-and-api-access-control}
 
 >[!NOTE]
 >
@@ -330,7 +350,15 @@ You are returned to the [!UICONTROL API credentials] tab, where the newly added 
 
 ![API credentials tab with newly added API](././images/api-authentication/api-credentials-with-added-api.png)
 
-## Next steps
+## Additional resources {#additional-resources}
+
+Refer to the additional resources linked below for further help getting started with Experience Platform APIs
+
+* [Authenticate and access Experience Platform APIs](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html) video tutorials page
+* [Identity Management Service Postman Collection](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) for generating access tokens
+* [Experience Platform API Postman Collections](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform)
+
+## Next steps {#next-steps}
 
 By reading this document, you have gathered and successfully tested your access credentials for Platform APIs. You can now follow along with the example API calls provided throughout the [documentation](../landing/documentation/overview.md).
 
