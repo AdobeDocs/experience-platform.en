@@ -17,15 +17,15 @@ A Snowflake account can be hosted on any of the following cloud platforms:
 
 - [Amazon Web Services ([!DNL AWS])](https://aws.amazon.com/) - [!DNL AWS] is a cloud computing platform that offers a wide variety of services such as distributed computing, database storage, content delivery, and software-as-a-service (SaaS) integration services for customer relationship management (CRM) and enterprise resource planning (ERP). 
 
-Please refer to the [[!DNL AWS] overview](../aws/overview.md) for more information on installing the extension and configuring event forwarding rules. 
+Refer to the [[!DNL AWS] overview](../aws/overview.md) for more information on installing the extension and configuring event forwarding rules. 
 
 - [Microsoft Azure ([!DNL Azure])](https://azure.microsoft.com/en-us/products/event-hubs/#overview) - [!DNL Azure] is a cloud computing platform and an online portal that allows you to access and manage cloud services and resources provided by Microsoft. 
 
-Please refer to the [[!DNL Azure] overview](../azure/overview.md) for more information on installing the extension and configuring event forwarding rules. 
+Refer to the [[!DNL Azure] overview](../azure/overview.md) for more information on installing the extension and configuring event forwarding rules. 
 
 - [[!DNL Google Cloud Platform]](https://cloud.google.com/) - [!DNL Google Cloud Platform] is a cloud computing platform that offers a wide variety of services such as distributed computing, database storage, content delivery, and software-as-a-service (SaaS) integration services for customer relationship management (CRM) and enterprise resource planning (ERP).
 
-Please refer to the [[!DNL Google Cloud Platform] overview](../google-cloud-platform/overview.md) for more information on installing the extension and configuring event forwarding rules. 
+Refer to the [[!DNL Google Cloud Platform] overview](../google-cloud-platform/overview.md) for more information on installing the extension and configuring event forwarding rules. 
 
 Our native [[!DNL AWS]](../aws/overview.md), [[!DNL Azure]](../azure/overview.md), and [[!DNL Google Cloud Platform]](../google-cloud-platform/overview.md) event forwarding extensions enable customers to collect, enrich, and forward their event data server-side in real time to their cloud services to be consumed by [!DNL Snowflake]. See below:
 
