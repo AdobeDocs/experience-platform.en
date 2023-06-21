@@ -170,6 +170,14 @@ For more information on union schemas, please visit the [union schema UI guide](
 
 ![The Union Schema tab is highlighted. Union schemas belonging to the organization are displayed.](../images/user-guide/union-schema.png)
 
+## Computed attributes {#computed-attributes}
+
+From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Computed attributes]** tab to view a list of computed attributes that belong to your organization.
+
+For more information on computed attributes, please read the [computed attributes overview](../computed-attributes/overview.md). For more information on how to use computed attributes within the Platform UI, please read the [computed attributes UI guide](../computed-attributes/ui.md).
+
+IMAGE
+
 ## Next steps
 
 By reading this guide, you know how to view and manage your organization's profile data using the Experience Platform UI. For information on how to work with profile data using Experience Platform APIs, please refer to the [Real-Time Customer Profile API guide](../api/overview.md).
