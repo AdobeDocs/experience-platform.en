@@ -10,7 +10,7 @@ This document covers the use and limitations of inline templates within the Quer
 
 ## Prerequisites
 
-Inline templates are supported by both the UI and the Query Service API. Before continuing with this guide, read the documentation on how to [create a query template through the API](https://experienceleague.adobe.com/docs/experience-platform/query/api/query-templates.html?lang=en#create-a-query-template) or with the [Query Editor](https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html?lang=en#query-authoring).
+Inline templates are supported by both the UI and the Query Service API. Before continuing with this guide, read the documentation on how to [create a query template through the API](../api/query-templates.md#create-a-query-template) or with the [Query Editor](../ui/user-guide.md#query-authoring).
 
 ## Inline template syntax {#syntax}
 
@@ -27,20 +27,20 @@ The following SQL templates demonstrate the utility of inline templates, with an
 #revenue_max: SELECT max(revenue) FROM revenue_table WHERE order_date > '01-06-2023'
 ```
 
-When executing the query, Query Service replaces the template name starting from the hash symbol with the statement saved as a template in that name.
+When executing the query, Query Service replaces the template name starting from the hash symbol with the named template's SQL statement.
 
 >[!NOTE]
 >
 >Query templates can call any number of other inline templates. There is no restriction on the number of inline templates that you can invoke from a single query. Templates can also be nested within other inline templates.
 
-You can use templates to store one, or multiple conditions. They do not need to be a complete query by themselves. If your template contains a valid query, you can execute the query simply by calling the template name preceded with a hash symbol. For example, if you stored `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` as a template  named `JUNE_2023_LOYALTY_MEMBERS`, the command  `#JUNE_2023_LOYALTY_MEMBERS;` would execute the valid query contained inside the template. 
+You can use templates to store one or multiple conditions. They do not need to be a complete query by themselves. If your template contains a valid query, you can execute the query simply by calling the template name preceded with a hash symbol. For example, if you stored `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` as a template  named `JUNE_2023_LOYALTY_MEMBERS`, the command  `#JUNE_2023_LOYALTY_MEMBERS;` would execute the valid query contained inside the template. 
 
 >![NOTE]
 >
->Inline templates only support the use of parameterized queries inside their immediate parent or child level. This means that parameterized queries only work when used in the original template or within a direct child inline template.
+>Within the Adobe Experience Platform UI, inline templates in the form of parameterized queries are only supported at the parent level. This means that parameterized queries only work when used in the original template. The child template must be a static template and cannot have dynamic parameters.
 
 ## Next steps
 
 After reading this document, you now know how to reference other templates within your SQL, either in the Query Editor or through the Query Service API.  
 
-Next, you are recommended to read the [anonymous block guide](./anonymous-block.md), which explains how to minimize development overheads by chaining one or more SQL statements that are executed in sequence.
+Additionally, you should read the [anonymous block guide](./anonymous-block.md), which explains how to minimize development overheads by chaining one or more SQL statements that are executed in sequence.
