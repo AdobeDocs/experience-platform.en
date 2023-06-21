@@ -36,6 +36,7 @@ Experience Platform allows data to be ingested from other Adobe applications, in
   - [Create an Adobe Analytics source connection in the UI](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Adobe Campaign Managed Cloud Services source overview](connectors/adobe-applications/campaign.md)
   - [Create an Adobe Campaign Managed Cloud Services source connection in the UI](./tutorials/ui/create/adobe-applications/campaign.md)
+- [Adobe Commerce source overview](connectors/adobe-applications/commerce.md)
 - [Adobe Data Collection source overview](connectors/adobe-applications/data-collection.md)
   - [Create a Customer Attributes source connection in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] source overview](connectors/adobe-applications/marketo/marketo.md)

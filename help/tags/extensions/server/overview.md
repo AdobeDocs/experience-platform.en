@@ -26,6 +26,7 @@ The following is a list of documentation for sever-side event forwarding extensi
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
 * [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
+* [Cloud Connector for Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)*
 * [Core](./core/overview.md)
 * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)*
 * [Google Ads Enhanced Conversions](./google-ads-enhanced-conversions/overview.md)
