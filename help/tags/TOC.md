@@ -215,6 +215,8 @@ solution: Data Collection
     * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)
     * Google Ads Enhanced Conversions {#google-ads-enhanced-conversions}
       * [Overview](./extensions/server/google-ads-enhanced-conversions/overview.md)
+    * Google Cloud Platform {#google-cloud-platform}
+      * [Overview](./extensions/server/google-cloud-platform/overview.md)
     * [!DNL Mailchimp] Edge {#mailchimp}
       * [Overview](./extensions/server/mailchimp/overview.md)
     * [!DNL Meta Conversions API] {#meta}
