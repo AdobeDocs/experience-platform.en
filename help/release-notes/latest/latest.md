@@ -32,7 +32,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 To learn more about data collections, read the [data collections overview](../../tags/home.md).
 
 ## Query Service {#query-service}
-​
+
 Query Service allows you to use standard SQL to query data in Adobe Experience Platform data lake. You can join any datasets from data lake and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-Time Customer Profile.
 ​
 **Updated features**
