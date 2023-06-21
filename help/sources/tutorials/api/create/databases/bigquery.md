@@ -1,12 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;bigquery;Google;google;Google BigQuery
-solution: Experience Platform
 title: Create a Google BigQuery Base Connection Using the Flow Service API
-type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Google BigQuery using the Flow Service API.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
 ---
 # Create a [!DNL Google BigQuery] base connection using the [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>The [!DNL Google BigQuery] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
