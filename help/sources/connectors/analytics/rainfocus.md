@@ -1,6 +1,7 @@
 ---
 title: RainFocus source overview
 description: Learn how to bring event management and analytics data from your RainFocus account to Experience Platform
+last-substantial-update: 2023-06-21
 badge: Beta
 ---
 # [!DNL RainFocus]
