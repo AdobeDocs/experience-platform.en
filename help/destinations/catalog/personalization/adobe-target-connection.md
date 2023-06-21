@@ -75,6 +75,12 @@ Adobe Experience Platform automatically connects to your company's Adobe Target 
 
 ### Connection parameters {#parameters}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_target_workspace"
+>title="About Adobe Target Workspaces"
+>abstract="Select the Adobe Target workspace to which audiences will be shared. You can select a single workspace for each Adobe Target connection. Upon activation, audiences are routed to the selected workspace while following the applicable Experience Platform data usage labels."
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en" text="Learn more about Adobe Target workspaces"
+
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 *  **Name**: Fill in the preferred name for this destination.
