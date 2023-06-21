@@ -30,6 +30,7 @@ The following is a list of documentation for sever-side event forwarding extensi
 * [Core](./core/overview.md)
 * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)*
 * [Google Ads Enhanced Conversions](./google-ads-enhanced-conversions/overview.md)
+* [Google Cloud Platform](./google-cloud-platform/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
 * [[!DNL Meta] Conversions API](./meta/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
