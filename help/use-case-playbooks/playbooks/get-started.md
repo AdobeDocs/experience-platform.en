@@ -25,7 +25,7 @@ If you do not see [!UICONTROL Playbooks] in the left rail as shown above, use th
 
 ### Sandbox configuration for Adobe Journey Optimizer users {#sandbox-configuration-journey-optimizer}
 
-If your organization is licensed for [Adobe Journey Optimizer](https://experienceleague.corp.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=en), you'll need to configure the channel presets in your sandbox, which define the technical parameters required for your messages. [Learn how to set up channel surfaces in Adobe Journey Optimizer](https://experienceleague.corp.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html).
+If your organization is licensed for [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=en), you'll need to configure the channel presets in your sandbox, which define the technical parameters required for your messages. [Learn how to set up channel surfaces in Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html).
 
 ## Grant your team the required access permissions {#grant-access-permissions}
 
@@ -36,4 +36,4 @@ To get started with [!UICONTROL Use Case Playbooks], the members of your marketi
 
 ## Next steps {#next-steps}
 
-After reading this document, you now know how to get started with Use Case Playbooks. Next, read how to [discover the right playbook](/help/use-case-playbooks/playbooks/discover.md) for you and then [create instances from it](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+After reading this document, you now know how to get started with [!UICONTROL Use Case Playbooks]. Next, read how to [discover the right playbook](/help/use-case-playbooks/playbooks/discover.md) for you and then [create instances from it](/help/use-case-playbooks/playbooks/create-share-reuse.md).
