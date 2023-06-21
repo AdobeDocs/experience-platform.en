@@ -1,5 +1,5 @@
 ---
-title: (Beta) Supplement First-party Rrofiles with Partner-provided Attributes
+title: (Beta) Supplement First-party Profiles with Partner-provided Attributes
 description: Learn how to supplement first-party profiles with attributes from trusted data partners to improve your data foundation, gain new insights into your customer base, and better audience optimization.
 hide: yes
 hidefromtoc: yes
@@ -73,7 +73,7 @@ Commenting out links for now
 Also in this step, think about how your data governance model changes as you expand your data management strategy to include third-party data provided by the partner. Explore the considerations in the documentation links below: 
 
 * (**Coming soon**) Keep third-party data in a separate dataset so that deleting it and undoing integrations is easy.
-* (**Coming soon**) Use [Time-to-live (TTL)](/help/hygiene/ui/dataset-expiration.md) on the dataset for clients who purchased the data hygiene add-on.
+* (**Coming soon**) Use the [dataset expiration](/help/hygiene/ui/dataset-expiration.md) functionality on the dataset for clients who purchased the data hygiene add-on.
 * (**Coming soon**) Exercise caution when creating derived datasets which pull in third-party data, because once mixed together the only solution to remove the third-party data is to delete the whole derived dataset.
 
 >[!TIP]
