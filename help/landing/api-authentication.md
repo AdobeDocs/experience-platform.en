@@ -102,7 +102,7 @@ Select **[!UICONTROL Save configured API]** when you are ready.
 
 A walkthrough of the steps described above to set up an integration with the Experience Platform API is also available in the video tutorial below:
 
->[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=159)
+>[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on)
 
 ### Gather credentials {#gather-credentials}
 
