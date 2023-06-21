@@ -7,13 +7,13 @@ exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 
 This guide provides an introduction to the core concepts you need to know before attempting to make calls to the Adobe Experience Platform Privacy Service API.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 This guide requires a working understanding of [Privacy Service](../home.md) and how it allows you to manage access and delete requests from your data subjects (customers) across Adobe Experience Cloud applications.
 
 In order to create access credentials for the API, an administrator within your organization must have previously set up product profiles for Privacy Service within Adobe Admin Console. The product profile you assign to an API integration determines what permissions that integration has when accessing Privacy Service capabilities. See the guide on [managing Privacy Service permissions](../permissions.md) for more information.
 
-## Gather values for required headers
+## Gather values for required headers {#gather-values-required-headers}
 
 In order to make calls to the Privacy Service API, you must first gather your access credentials to be used in required headers:
 
@@ -25,7 +25,7 @@ These values are generated using [Adobe Developer Console](https://developer.ado
 
 The steps for generating these values are covered in detail below.
 
-### One-time setup
+### One-time setup {#one-time-setup}
 
 Go to [Adobe Developer Console](https://developer.adobe.com/console) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) in the Developer Console documentation.
 
@@ -33,19 +33,24 @@ Once you have created a new project, select **[!UICONTROL Add to Project]** and 
 
 ![The API option being selected from the [!UICONTROL Add to Project] dropdown from the project details page in Developer Console](../images/api/getting-started/add-api-button.png)
 
-#### Select an API and generate a keypair {#keypair}
+#### Select the Privacy Service API {#select-privacy-service-api}
 
 The **[!UICONTROL Add an API]** screen appears. Select **[!UICONTROL Experience Cloud]** to narrow the list of available APIs, then select the card for **[!UICONTROL Privacy Service API]** before selecting **[!UICONTROL Next]**.
 
 ![The Privacy Service API card being selected from the list of available APIs](../images/api/getting-started/add-privacy-service-api.png)
 
-The **[!UICONTROL Configure API]** screen appears. Select the option to **[!UICONTROL Generate a key pair]**, then select **[!UICONTROL Generate keypair]**.
+>[!TIP]
+>
+>Select the **[!UICONTROL View docs]** option to navigate in a separate browser window to the complete [Privacy Service API reference documentation](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
 
-![The [!UICONTROL Generate a key pair] option being selected on the [!UICONTROL Configure API] screen](../images/api/getting-started/generate-key-pair.png)
+Next, select the authentication type to generate access tokens and access the Privacy Service API.
 
-The key pair is automatically generated and a ZIP file containing a private key and a public certificate are downloaded by your browser (to be used in a later step). Select **[!UICONTROL Next]** to continue.
+>[!IMPORTANT]
+>
+>Select the **[!UICONTROL OAuth Server-to-Server]** method as will be the only method supported moving forward. The **[!UICONTROL Service Account (JWT)]** method is deprecated. While integrations using the JWT authentication method will continue to work until January 1st, 2025, Adobe strongly recommends that you migrate existing integrations to the new OAuth Server-to-Server method before that date. Get more information in the section [!BADGE Deprecated]{type=negative} [Generate a JSON Web Token (JWT)](/help/landing/api-authentication.md#jwt).
 
-![The generated keypair shown in the UI, whose values are automatically downloaded by the browser](../images/api/getting-started/key-pair-generated.png)
+![Select Oauth Server-to-Server authentication method.](/help/privacy-service/images/api/getting-started/select-oauth-authentication.png
+)
 
 #### Assign permissions through product profiles {#product-profiles}
 
