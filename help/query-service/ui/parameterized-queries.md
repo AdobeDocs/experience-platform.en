@@ -14,9 +14,9 @@ Query Service supports the use of parameterized queries in the Query Editor. Wit
 
 Before continuing with this guide, read the [Query Editor UI guide](./user-guide.md). The Query Editor guide provides detailed information on how to write, validate, and run queries for customer experience data within the Experience Platform user interface.
 
->![NOTE]
+>[!NOTE]
 >
->Parameterized queries are not supported inside inline templates beyond their immediate parent level. Parameterized queries only work when used in the original template or within a direct child inline template.
+>Within the Adobe Experience Platform UI, parameterized queries are only supported at the parent level of inline templates. This means that parameterized queries only work when used in the original template. Child templates must be a static template and cannot have dynamic parameters. See the [inline templates documentation](../essential-concepts/inline-templates.md) to learn more.
 
 ## Parameterized query syntax {#syntax}
 
