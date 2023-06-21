@@ -2,8 +2,6 @@
 title: RainFocus source overview
 description: Learn how to bring event management and analytics data from your RainFocus account to Experience Platform
 badge: Beta
-hide: true
-hidefromtoc: true
 ---
 # [!DNL RainFocus]
 

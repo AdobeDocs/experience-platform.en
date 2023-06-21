@@ -57,6 +57,7 @@ Experience Platform provides support for ingesting data from a third-party analy
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
 - [[!DNL Pendo]](connectors/analytics/pendo-webhook.md)
+- [[!DNL RainFocus]](connectors/analytics/rainfocus.md)
 
 ### Cloud Storage {#cloud-storage}
 
