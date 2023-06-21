@@ -98,6 +98,10 @@ A successful response returns details of the newly created base connection, incl
 
 ## Create a source connection
 
+>[!TIP]
+>
+>An [!DNL Event Hubs] consumer group can only be used for a single flow at a given time.
+
 A source connection creates and manages the connection to the external source from where data is ingested. A source connection consists of information like data source, data format, and a source connection ID needed to create a dataflow. A source connection instance is specific to a tenant and organization.
 
 To create a source connection, make a POST request to the `/sourceConnections` endpoint of the [!DNL Flow Service] API.
@@ -148,7 +152,7 @@ curl -X POST \
 | `params.eventHubName` | The name for your [!DNL Event Hubs] source. |
 | `params.dataType` | This parameter defines the type of the data that is being ingested. Supported data types include: `raw` and `xdm`. |
 | `params.reset` | This parameter defines how the data will be read. Use `latest` to start reading from the most recent data, and use `earliest` to start reading from the first available data in the stream. This parameter is optional and defaults to `earliest` if unprovided. |
-| `params.consumerGroup` | The publish or subscription mechanism to be used for [!DNL Event Hubs]. This parameter is optional and defaults to `$Default` if unprovided. Refer to this [[!DNL Event Hubs] guide on event consumers](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) for more information. |
+| `params.consumerGroup` | The publish or subscription mechanism to be used for [!DNL Event Hubs]. This parameter is optional and defaults to `$Default` if unprovided. Refer to this [[!DNL Event Hubs] guide on event consumers](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) for more information. **Note**: An [!DNL Event Hubs] consumer group can only be used for a single flow at a given time.  |
 
 ## Next steps
 
