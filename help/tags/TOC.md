@@ -209,11 +209,14 @@ solution: Data Collection
     * [!DNL Braze] {#braze}
       * [Overview](./extensions/server/braze/overview.md)
     * [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)
+    * [Cloud Connector for Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
     * Core {#core}
       * [Overview](./extensions/server/core/overview.md)
     * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)
     * Google Ads Enhanced Conversions {#google-ads-enhanced-conversions}
       * [Overview](./extensions/server/google-ads-enhanced-conversions/overview.md)
+    * Google Cloud Platform {#google-cloud-platform}
+      * [Overview](./extensions/server/google-cloud-platform/overview.md)
     * [!DNL Mailchimp] Edge {#mailchimp}
       * [Overview](./extensions/server/mailchimp/overview.md)
     * [!DNL Meta Conversions API] {#meta}

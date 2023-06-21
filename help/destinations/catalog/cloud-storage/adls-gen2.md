@@ -13,6 +13,11 @@ exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
 
 Read this page to learn to create a live outbound connection to your [[!DNL Azure Data Lake Storage Gen2]](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) ([!DNL ADLS Gen2]) data lake to periodically export data files from Experience Platform.
 
+## Connect to your [!DNL ADLS Gen2] storage through API or UI {#connect-api-or-ui}
+
+* To connect to your [!DNL ADLS Gen2] storage location using the Platform user interface, read the sections [Connect to the destination](#connect) and [Activate segments to this destination](#activate) below.
+* To connect to your [!DNL ADLS Gen2] storage location programmatically, read the [Activate segments to file-based destinations by using the Flow Service API tutorial](../../api/activate-segments-file-based-destinations.md).
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
@@ -55,7 +60,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Folder path]**: Enter the path to the destination folder that will host the exported files.
 * **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files.
-* * **[!UICONTROL Include manifest file]**: toggle this option on if you'd like the exports to include a manifest JSON file that contains information abut the export location, export size, and more.
+* **[!UICONTROL Include manifest file]**: toggle this option on if you'd like the exports to include a manifest JSON file that contains information abut the export location, export size, and more.
 
 ### Enable alerts {#enable-alerts}
 
@@ -81,7 +86,10 @@ In the **[!UICONTROL Mapping]** step, you can select which attribute and identit
 
 ## (Beta) Export datasets {#export-datasets}
 
-This destination supports dataset exports. For complete information on how to set up dataset exports, read the [export datasets tutorial](/help/destinations/ui/export-datasets.md).
+This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
+
+* How to [export datasets using the Platform user interface](/help/destinations/ui/export-datasets.md). 
+* How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
 
 ## Validate successful data export {#exported-data}
 

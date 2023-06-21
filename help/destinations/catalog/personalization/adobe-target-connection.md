@@ -10,7 +10,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 
 |Release month|Update type|Description|
 |---|---|---|
-|April 2023|Functionality and documentation update| As of April 2023, the **[!UICONTROL Adobe Target]** connection supports [attribute-based personalization](../../ui/activate-edge-personalization-destinations.md#map-attributes) and is generally available to all customers.|
+|May 2023|Functionality and documentation update| As of May 2023, the **[!UICONTROL Adobe Target]** connection supports [attribute-based personalization](../../ui/activate-edge-personalization-destinations.md#map-attributes) and is generally available to all customers.|
 
 {style="table-layout:auto"}
 
