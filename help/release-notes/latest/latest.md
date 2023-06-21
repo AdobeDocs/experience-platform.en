@@ -21,15 +21,14 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 | Type | Feature | Description |
 | --- | --- | --- |
-| Extension | [!DNL Google Cloud Platform] event forwarding extension | The [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) event forwarding extension allows you to forward event data to Google for activation via Google pub/sub. |
+| Extension | [!DNL Google Cloud Platform] event forwarding extension | The [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) event forwarding extension allows you to forward event data to Google for activation via [!DNL Google Pub/Sub]. |
 | Extension | [!DNL Cloud connector for Google Analytics 4 (ga4)] extension | The [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) event forwarding extension allows you to track analytics via the new [!DNL Google Analytics 4 (ga4)] standard. |
-| Extension | [!DNL TikTok] conversions API extension | The [!DNL TikTok] Conversions API event forwarding extension allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL Pinterest] in the form of server-side events using the [!DNL TikTok] Conversions API. |
-| Secret | OAuth 2 JWT Secret | The [OAuth 2 JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) allows you to use Adobe and [!DNL Google] Service tokens to support server-server interactions in event forwarding. |
-| Tags and Event Forwarding | User attribution | User attribution delivers key activity data across the [Tags](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=en) and [Event Forwarding](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=en) UI.<br><br>The data includes who made what changes and at what time. This data is visible across the Tags and Event Forwarding UI in the following screens:<br><br>* Properties overview<br><br>* Installed extensions<br><br>* Rules compare and review<br><br>* Data Elements compare review<br><br>* Extensions compare review<br><br>* Library resource changes<br><br>* Library last build and published |
+| Secret | OAuth 2 JWT Secret | The [OAuth 2 JWT Secret](../../tags/ui/event-forwarding/secrets.md) allows you to use Adobe and [!DNL Google] Service tokens to support server-server interactions in event forwarding. |
+| Tags and Event Forwarding | User attribution | User attribution delivers key activity data across the [Tags](../../tags/home.md) and [Event Forwarding](../../tags/ui/event-forwarding/overview.md) UI.<br><br>The data includes who made what changes and at what time. This data is visible across the Tags and Event Forwarding UI in the following screens:<br><br>* Properties overview<br><br><ul><li> Properties overview</li><li> Installed extensions</li><li>Rules compare and review</li><li>Data Elements compare review</li><li>Extensions compare review</li><li>Library resource changes</li><li>Library last build and published</li></ul> |
 
 {style="table-layout:auto"}
 
-To learn more about data collections, read the [data collections overview](../../tags/home.md).
+To learn more about data collection, read the [data collection overview](../../tags/home.md).
 
 ## Query Service {#query-service}
 
