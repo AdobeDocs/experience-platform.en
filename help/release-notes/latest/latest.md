@@ -17,7 +17,7 @@ Updates to existing features in Adobe Experience Platform:
 
 ## Authentication to Experience Platform APIs {#authentication-platform-apis}
 
-For Experience Platform API users, the method to obtain required access tokens to authenticate and make calls to API endpoints is now simplified. The JWT method to obtain access tokens is deprecated and replaced by a simpler OAuth Server-to-Server authentication method.<p>![New OAuth authentication method to get access tokens highighted.](/help/landing/images/api-authentication/oauth-authentication-method.png "New OAuth authentication method to get access tokens highighted."){width="100" zoomable="yes"}</p> 
+For Experience Platform API users, the method to obtain required access tokens to authenticate and make calls to API endpoints is now simplified. The JWT method to obtain access tokens is deprecated and replaced by a simpler OAuth Server-to-Server authentication method.<p>![New OAuth authentication method to get access tokens highlighted.](/help/landing/images/api-authentication/oauth-authentication-method.png "New OAuth authentication method to get access tokens highlighted."){width="100" zoomable="yes"}</p> 
 
 While existing API integrations using the JWT authentication method will continue to work until January 1st, 2025, Adobe strongly recommends that you migrate existing integrations to the new OAuth Server-to-Server method before that date. Read the guide on [migrating from Service Account (JWT) credential to OAuth Server-to-Server credential](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
 
