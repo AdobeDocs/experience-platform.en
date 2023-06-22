@@ -31,6 +31,7 @@ feature: Schemas
   * [Plan](./classes/plan.md)
   * [Policy](./classes/policy.md)
   * [Product](./classes/product.md)
+  * [Prospect](./classes/prospect.md)
   * [Provider](./classes/provider.md)
   * [Segment definition](./classes/segment-definition.md)
   * B2B classes {#b2b}
