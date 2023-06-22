@@ -24,6 +24,11 @@ feature: Profiles
 * Profile UI {#ui}
   * [[!DNL Profile] UI guide](ui/user-guide.md)
   * [[!DNL Profile] detail customization](ui/profile-customization.md)
+* (Beta) Computed attributes {#computed-attributes}
+  * [Overview](computed-attributes/overview.md)
+  * [Computed attributes API guide](computed-attributes/api.md)
+  * [Computed attributes UI guide](computed-attributes/ui.md)
+  * [Frequently asked questions](computed-attributes/faq.md)
 * Merge policies {#merge-policies}
   * [Overview](merge-policies/overview.md)
   * [Merge policies API](api/merge-policies.md)

@@ -229,7 +229,7 @@ solution: Data Collection
     * [!DNL Pinterest] {#pinterest}
       * [Overview](./extensions/server/pinterest/overview.md)
     * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
-    * [Snowflake] {#snowflake}
+    * [!DNL Snowflake] {#snowflake}
       * [Overview](./extensions/server/snowflake/overview.md)
     * [!DNL Splunk] {#splunk}
       * [Overview](./extensions/server/splunk/overview.md)

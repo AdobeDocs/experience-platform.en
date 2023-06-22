@@ -37,7 +37,7 @@ You can use templates to store one or multiple conditions. They do not need to b
 
 >![NOTE]
 >
->Within the Adobe Experience Platform UI, inline templates in the form of parameterized queries are only supported at the parent level. This means that parameterized queries only work when used in the original template. The child template must be a static template and cannot have dynamic parameters.
+>Within the Adobe Experience Platform UI, inline templates in the form of parameterized queries are only supported at the parent level. This means that parameterized queries only work when used in the original template. The child template must be a static template and cannot have dynamic parameters. See the [parameterized queries documentation](../ui/parameterized-queries.md) to learn more.
 
 ## Next steps
 
