@@ -5,7 +5,7 @@ exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
 ---
 # Getting started with the Reactor API
 
-In order to use the [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/), each request must include the following authentication headers:
+In order to use the [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/) to create and manage Tags extensions, each request must include the following authentication headers:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -15,7 +15,7 @@ This guide covers how to use the Adobe Developer Console to gather the values fo
 
 ## Gain developer access to Adobe Experience Platform
 
-Before you can generate authentication values for the Reactor API, you must have developer access to Experience Platform. To gain developer access, follow the beginning steps in the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Once you have finished the "Gain User Access" step, return to this tutorial to generate the credentials specific to the Reactor API.
+Before you can generate authentication values for the Reactor API, you must have developer access to Experience Platform. To gain developer access, follow the beginning steps in the [Experience Platform authentication tutorial](/help/landing/api-authentication.md). Once you have completed the [Gain User Access](//help/landing/api-authentication.md#gain-user-access) step, return to this tutorial to generate the credentials specific to the Reactor API.
 
 ## Generate access credentials
 
@@ -37,7 +37,7 @@ Once you have created a project, select **Add API** on the **Project Overview** 
 
 ![](../images/api/getting-started/add-api-button.png)
 
-The **Add an API** screen appears. Select **Experience Platform Reactor API** from the list of available APIs before selecting **Next**.
+The **Add an API** screen appears. Select **Experience Platform Launch API** from the list of available APIs before selecting **Next**.
 
 ![](../images/api/getting-started/add-launch-api.png)
 

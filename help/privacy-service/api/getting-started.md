@@ -64,14 +64,14 @@ When finished, select **[!UICONTROL Save configured API]**.
 
 ![A single product profile being selected from the list before saving the configuration](../images/api/getting-started/select-product-profiles.png)
 
-Once the API has been added to the project, the project page reappears on the **Privacy Service API overview** page. From here, scroll down to the **[!UICONTROL Service Account (JWT)]** section, which provides the following access credentials that are required in all calls to the Privacy Service API:
+Once the API has been added to the project, the **[!UICONTROL Privacy Service API]** page for the project displays the following credentials that are required in all calls to Privacy Service APIs:
 
-* **[!UICONTROL CLIENT ID]**: The Client ID is the required `{API_KEY}` that must be provided in the `x-api-key` header.
-* **[!UICONTROL ORGANIZATION ID]**: The Organization ID is the `{ORG_ID}` value that must be used in the `x-gw-ims-org-id` header.
+![Integration information after adding an API in Developer Console.](/help/privacy-service/images/api/getting-started/api-integration-information.png)
 
-![The Client ID and Organization ID values as they appear on the project overview page after the API has been configured](../images/api/getting-started/jwt-credentials.png)
+* `{API_KEY}` ([!UICONTROL Client ID])
+* `{ORG_ID}` ([!UICONTROL Organization ID])
 
-### Authentication for each session
+### Authentication for each session {#authentication-each-session}
 
 The final required credential you must gather is your `{ACCESS_TOKEN}`, which is used in the Authorization header. Unlike the values for `{API_KEY}` and `{ORG_ID}`, a new token must be generated every 24 hours to continue using the API.
 
@@ -82,23 +82,21 @@ In general, there are two methods of generating an access token:
 
 #### Generate a token manually {#manual-token}
 
-To manually generate a new `{ACCESS_TOKEN}`, open the previously downloaded private key and paste its contents into the text box beside **[!UICONTROL Generate access token]** before selecting **[!UICONTROL Generate Token]**.
+To manually generate a new `{ACCESS_TOKEN}`, navigate to **[!UICONTROL Credentials]** > **[!UICONTROL OAuth Server-to-Server]** and select **[!UICONTROL Generate access token]**, as shown below.
 
-![The previously generated access token being pasted on the project's overview page, with the [!UICONTROL Generate Token] button being selected after](../images/api/getting-started/paste-private-key.png)
+![Screen recording of how and access token is generated in the Developer Console UI.](/help/privacy-service/images/api/getting-started/generate-access-token.gif)
 
 A new access token is generated, and a button to copy the token to your clipboard is provided. This value is used for the required Authorization header, and must be provided in the format `Bearer {ACCESS_TOKEN}`.
 
-![The generated access token being copied from the UI](../images/api/getting-started/generated-access-token.png)
-
 #### Automate token generation {#auto-token}
 
-You can generate new access tokens for automated processes by sending a JSON Web Token (JWT) through a POST request to Adobe Identity Management Service (IMS). See the Developer Console document on [JWT authentication](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/) for detailed steps.
+You can also use a Postman environment and collection to generate access tokens. For more information, read the section about [using Postman to authenticate and test API calls](/help/landing/api-authentication.md#use-postman) in the Experience Platform API authentication guide..
 
-## Reading sample API calls
+## Reading sample API calls {#read-sample-api-calls}
 
 Each endpoint guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/api-guide.md#sample-api) in the getting started guide for Platform APIs.
 
-## Next steps
+## Next steps {#next-steps}
 
 Now that you understand what headers to use, you are ready to begin making calls to the Privacy Service API. Select one of the endpoint guides to get started:
 
