@@ -17,7 +17,7 @@ Data usage labels allow you to categorize datasets and fields according to [gove
 
 This document outlines the core data usage labels currently provided by Experience Platform.
 
-## Contract labels
+## Contract labels {#contract}
 
 Contract "C" labels are used to categorize data that has contractual obligations or is related to your organization's data governance policies.
 
@@ -36,7 +36,7 @@ Contract "C" labels are used to categorize data that has contractual obligations
 | [C11](#c11) | Data cannot be shared with Segment Match partners. |
 | [C12](#c12) | Data cannot be exported in any way. |
 
-## Identity labels
+## Identity labels {#identity}
 
 Identity "I" labels are used to categorize data that can identify or contact a specific person.
 
@@ -57,6 +57,16 @@ One type of data you may consider to be sensitive may be different types of geog
 | **S2** | Data that can be used to determine a broadly defined geofence area. |
 | **PSPD** | Permitted Sensitive Personal Data (PSPD) refers to data that you are contractually permitted by Adobe to upload that is deemed "sensitive", "special category of data", or a similar term used by applicable laws. This specifically excludes Protected Health Information (PHI) and other regulated health data. |
 | **RHD** | Data that refers to Protected Health Information (PHI) or information about a patient that you are contractually permitted by Adobe to upload. |
+
+## Partner ecosystem {#partner}
+
+Third-Party data labels relate to partner vendor data. 
+
+This label is used to govern the use of prospect data.
+
+| Label | Definition |
+| --- | --- |
+| **Third-Party** | Any data provided to you by a third-party data vendor must be labeled as third-party data. Third-party data, once labeled, is automatically deleted from the system after 25 days. You must still establish data usage policies to prevent the use third-party data from being activated to a destination or used for unauthorized marketing actions.  |
 
 ## Appendix
 
