@@ -61,6 +61,7 @@ Note down the items below before you authenticate to the [!DNL Dynamics 365] CRM
 | `Client ID` | The [!DNL Dynamics 365] Client ID for your [!DNL Azure Active Directory] application. Refer to the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) for guidance. | `ababbaba-abab-baba-acac-acacacacacac` |
 | `Client Secret` | The [!DNL Dynamics 365] Client Secret for your [!DNL Azure Active Directory] application. You would be using option #2 within the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#authentication-two-options). | `abcde~abcdefghijklmnopqrstuvwxyz12345678` for guidance.|
 | `Tenant ID` | The [!DNL Dynamics 365] Tenant ID for your [!DNL Azure Active Directory] application. Refer to the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) for guidance.  | `1234567-aaaa-12ab-ba21-1234567890` |
+| `Region` | Region associated with environment URL| If your domain is as below, you need the highlighted value.<br> *org57771b33.`crm`.dynamics.com* |
 | `Environment URL` | Refer to the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/org-service/discover-url-organization-organization-service?view=op-9-1) for guidance.| If your [!DNL Dynamics 365] domain is as below, you need the highlighted value.<br> *`org57771b33`.crm.dynamics.com* |
 
 ## Guardrails {#guardrails}
@@ -99,12 +100,13 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL
 ### Authenticate to destination {#authenticate}
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
-![Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
+![Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination1.png)
 
 Fill in the required fields below. Refer to the [Gather Dynamics 365 credentials](#gather-credentials) section for any guidance.
 * **[!UICONTROL Client ID]**: The [!DNL Dynamics 365] Client ID for your [!DNL Azure Active Directory] application.
 * **[!UICONTROL Tenant ID]**: The [!DNL Dynamics 365] Tenant ID for your [!DNL Azure Active Directory] application. 
 * **[!UICONTROL Client Secret]**: The [!DNL Dynamics 365] Client Secret for your [!DNL Azure Active Directory] application.
+* **[!UICONTROL Region]**: Your [!DNL Dynamics 365] Region.
 * **[!UICONTROL Environment URL]**: Your [!DNL Dynamics 365] Environment URL.
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.
