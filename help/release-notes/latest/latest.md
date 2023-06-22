@@ -53,8 +53,6 @@ To learn more about data collection, read the [data collection overview](../../t
 
 {style="table-layout:auto"}
 
-<!-- 
-
 **New or updated functionality** {#destinations-new-updated-functionality}
 
 | Functionality | Description |
@@ -62,8 +60,6 @@ To learn more about data collection, read the [data collection overview](../../t
 | Workspace support for [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) destinations. | You can now select the Adobe Target workspace that you want to share audiences to, when configuring a new Adobe Target destination connection. See the [connection parameters](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target for more information about workspaces. |
 
 {style="table-layout:auto"}
-
--->
 
 <!--
 
