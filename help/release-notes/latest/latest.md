@@ -48,7 +48,7 @@ To learn more about data collection, read the [data collection overview](../../t
 
 | Destination | Description |
 | ----------- | ----------- |
-| [(Beta) [!DNL Amazon Ads] connection](../../destinations/catalog/advertising/amazon-ads.md) | The [!DNL Amazon Ads] integration with Adobe Experience Platform now supports regional routing to the various [!DNL Amazon Ads] marketplaces. Read more in the [destination changelog](../../destinations/catalog/advertising/amazon-ads.md#changelog). |
+| [[!BADGE Beta]{type=Informative} [!DNL Amazon Ads] connection](../../destinations/catalog/advertising/amazon-ads.md) | The [!DNL Amazon Ads] integration with Adobe Experience Platform now supports regional routing to the various [!DNL Amazon Ads] marketplaces. Read more in the [destination changelog](../../destinations/catalog/advertising/amazon-ads.md#changelog). |
 
 {style="table-layout:auto"}
 
