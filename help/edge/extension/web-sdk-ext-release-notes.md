@@ -10,7 +10,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 ## Version 2.19.0 - June 21, 2023
 
-* Removed beta label from variable data element and update variable action.
+* The **[!UICONTROL Variable]** data element and **[!UICONTROL Update Variable]** actions are now generally available.
 
 ## Version 2.18.0 - May 18, 2023
 
