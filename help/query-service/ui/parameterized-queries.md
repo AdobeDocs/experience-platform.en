@@ -49,6 +49,10 @@ Use the `'$'` preface to enter a query parameter into your query in the text edi
 
 If you remove a parameter and try to execute the query again after it has already been run, an error message is displayed in the [!UICONTROL Query parameters] section to alert you.
 
+>[!NOTE]
+>
+>If your query does not take parameters, you can still enter unnecessary parameters within the Query Editor. The Query Editor ignores all unnecessary key-value pairs and they have no effect the execution or the results of the query.
+
 ![The Query Editor with an empty value field and the query parameters error highlighted.](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## Use query logs details to check parameter values {#check-parameter-values}
