@@ -143,6 +143,10 @@ alloy("sendEvent", {
 });
 ```
 
+|Parameter|Description|
+|---|---|
+|`edgeConfigOverrides.datastreamId`| Use this parameter to allow a single request to go to a different datastream than the one defined by the `configure` command. |
+
 ### Sending configuration overrides via the `configure` command {#send-configure}
 
 The example below shows what a configuration override could look like on a `configure` command.
