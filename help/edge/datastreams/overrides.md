@@ -115,6 +115,7 @@ alloy("sendEvent", {
     /* ... */
   },
   edgeConfigOverrides: {
+    datastreamId: "{DATASTREAM_ID}"
     com_adobe_experience_platform: {
       datasets: {
         event: {
@@ -151,10 +152,11 @@ alloy("configure", {
   defaultConsent: "in",
   edgeDomain: "etc",
   edgeBasePath: "ee",
-  edgeConfigId: "etc",
+  datastreamId: "{DATASTREAM_ID}",
   orgId: "org",
   debugEnabled: true,
   edgeConfigOverrides: {
+    datastreamId: "{DATASTREAM_ID}",
     "com_adobe_experience_platform": {
       "datasets": {
         "event": { 
@@ -191,6 +193,7 @@ The examples above generate an [!DNL Edge Network] payload that looks like this:
 {
   "meta": {
     "configOverrides": {
+      "datastreamId": "{DATASTREAM_ID}",
       "com_adobe_experience_platform": {
         "datasets": {
           "event": {
