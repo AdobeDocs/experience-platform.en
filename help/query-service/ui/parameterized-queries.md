@@ -75,4 +75,4 @@ Parameter values are saved when you schedule a parameterized query. To schedule 
 
 By reading this document, you have learned how to parameterize queries in the Adobe Experience Platform UI and use them in scheduled query runs. The document also highlighted how to check the logs for the parameter values used in query executions.
 
-If you have not already, you are recommended to read the guide on [monitoring scheduled queries](./monitor-queries.md) to gain a better understanding of the status of all query jobs through the Platform UI.
+Next, you are recommended to read the guide on [monitoring scheduled queries](./monitor-queries.md) to gain a better understanding of the status of all query jobs through the Platform UI.
