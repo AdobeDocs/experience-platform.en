@@ -70,7 +70,7 @@ Once the API has been added to the project, the **[!UICONTROL Experience Platfor
 * `{API_KEY}` ([!UICONTROL Client ID])
 * `{ORG_ID}` ([!UICONTROL Organization ID])
 
-## Generate an access token {#generate-access-token}
+### Generate an access token {#generate-access-token}
 
 The next step is to generate an `{ACCESS_TOKEN}` credential for use in Platform API calls. Unlike the values for `{API_KEY}` and `{ORG_ID}`, a new token must be generated every 24 hours to continue using Platform APIs. 
 
