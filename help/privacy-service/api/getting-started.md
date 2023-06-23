@@ -5,13 +5,13 @@ exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 ---
 # Getting started with the Privacy Service API
 
-This guide provides an introduction to the core concepts you need to know before attempting to make calls to the Adobe Experience Platform Privacy Service API.
+This guide provides an introduction to the core concepts you must know before attempting to make calls to the Adobe Experience Platform Privacy Service API.
 
 ## Prerequisites {#prerequisites}
 
 This guide requires a working understanding of [Privacy Service](../home.md) and how it allows you to manage access and delete requests from your data subjects (customers) across Adobe Experience Cloud applications.
 
-In order to create access credentials for the API, an administrator within your organization must have previously set up product profiles for Privacy Service within Adobe Admin Console. The product profile you assign to an API integration determines what permissions that integration has when accessing Privacy Service capabilities. See the guide on [managing Privacy Service permissions](../permissions.md) for more information.
+In order to create access credentials for the API, an administrator within your organization must have previously set up product profiles for Privacy Service within Adobe Admin Console. The product profile that you assign to an API integration determines what permissions that integration has when accessing Privacy Service capabilities. See the guide on [managing Privacy Service permissions](../permissions.md) for more information.
 
 ## Gather values for required headers {#gather-values-required-headers}
 
@@ -47,7 +47,7 @@ Next, select the authentication type to generate access tokens and access the Pr
 
 >[!IMPORTANT]
 >
->Select the **[!UICONTROL OAuth Server-to-Server]** method as will be the only method supported moving forward. The **[!UICONTROL Service Account (JWT)]** method is deprecated. While integrations using the JWT authentication method will continue to work until January 1st, 2025, Adobe strongly recommends that you migrate existing integrations to the new OAuth Server-to-Server method before that date. Get more information in the section [!BADGE Deprecated]{type=negative} [Generate a JSON Web Token (JWT)](/help/landing/api-authentication.md#jwt).
+>Select the **[!UICONTROL OAuth Server-to-Server]** method as this will be the only method supported moving forward. The **[!UICONTROL Service Account (JWT)]** method is deprecated. While integrations using the JWT authentication method will continue to work until January 1st, 2025, Adobe strongly recommends that you migrate existing integrations to the new OAuth Server-to-Server method before that date. Get more information in the section [!BADGE Deprecated]{type=negative} [Generate a JSON Web Token (JWT)](/help/landing/api-authentication.md#jwt).
 
 ![Select Oauth Server-to-Server authentication method.](/help/privacy-service/images/api/getting-started/select-oauth-authentication.png
 )
@@ -90,7 +90,7 @@ A new access token is generated, and a button to copy the token to your clipboar
 
 #### Automate token generation {#auto-token}
 
-You can also use a Postman environment and collection to generate access tokens. For more information, read the section about [using Postman to authenticate and test API calls](/help/landing/api-authentication.md#use-postman) in the Experience Platform API authentication guide..
+You can also use a Postman environment and collection to generate access tokens. For more information, read the section about [using Postman to authenticate and test API calls](/help/landing/api-authentication.md#use-postman) in the Experience Platform API authentication guide.
 
 ## Reading sample API calls {#read-sample-api-calls}
 
