@@ -61,5 +61,6 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Use cases {#use-cases}
   * Partner data use cases {#partner-data}
     * [Supplement first-party profiles](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+    * [Prospecting support in Real-Time CDP](/help/rtcdp/partner-data/prospecting.md)
 * [Experience Platform Release notes](https://www.adobe.com/go/platform-release-notes-en)
 * [Experience Platform Glossary](https://www.adobe.com/go/platform-glossary-en)
