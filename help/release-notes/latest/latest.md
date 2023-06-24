@@ -113,16 +113,16 @@ For more information on XDM in Platform, see the [XDM System overview](../../xdm
 ## Query Service {#query-service}
 
 Query Service allows you to use standard SQL to query data in Adobe Experience Platform data lake. You can join any datasets from data lake and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-Time Customer Profile.
-​
+
 **Updated features**
-​
+
 | Feature | Description |
 | --- | --- |
-| ​Inline templates | Query Service now supports the use of templates that reference other templates within your SQL. Reduce your workload, and avoid errors by leveraging inline templates in your queries. You can reuse statements or conditions, and reference nested templates for greater flexibility in your SQL. There is no limit in the size of queries that can be stored as templates, or the number of templates that can be referenced from your original query. For more information, read the [inline template guide](../../query-service/essential-concepts/inline-templates.md). |
+| Inline templates | Query Service now supports the use of templates that reference other templates within your SQL. Reduce your workload, and avoid errors by leveraging inline templates in your queries. You can reuse statements or conditions, and reference nested templates for greater flexibility in your SQL. There is no limit in the size of queries that can be stored as templates, or the number of templates that can be referenced from your original query. For more information, read the [inline template guide](../../query-service/essential-concepts/inline-templates.md). |
 | Scheduled query UI updates | Manage all your scheduled queries from one location in the UI with the [[!UICONTROL Scheduled Queries tab]](../../query-service/ui/monitor-queries.md#inline-actions). The [!UICONTROL Scheduled Queries] UI has been improved with the addition of inline query actions and the new query status column. The recent additions include the ability to enable, disable, and delete a schedule, or subscribe to alerts for upcoming query runs directly from the [!UICONTROL Scheduled Queries] view. <p>![Inline actions highlighted in the [!UICONTROL Scheduled Queries] view.](../../query-service/images/ui/monitor-queries/disable-inline.png "Inline actions highlighted in the [!UICONTROL Scheduled Queries] view."){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
-​
+
 For more information on Query Service, refer to the [Query Service overview](../../query-service/home.md).
 
 ## Sources {#sources}
