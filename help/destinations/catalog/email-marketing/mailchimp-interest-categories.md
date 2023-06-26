@@ -104,9 +104,9 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, search for [!DN
 
 To authenticate to the destination, fill in the required fields below and select **[!UICONTROL Connect to destination]**.
 
-| [!DNL Mailchimp] destination | [!DNL Mailchimp] |
+| Field | Description |
 | --- | --- |
-| **[!UICONTROL Username]** | Your [!DNL Salesforce Marketing Cloud] domain prefix. <br>For example, if your domain is<br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*,<br> you must provide `mcq4jrssqdlyc4lph19nnqgzzs84` as the username value. |
+| **[!UICONTROL Username]** | Your [!DNL Mailchimp Interest Categories] username. |
 | **[!UICONTROL Password]** | Your [!DNL Mailchimp] **API key**, which you had noted down in the [Gather [!DNL Mailchimp] credentials](#gather-credentials) section.<br> Your API key takes the form of `{KEY}-{DC}`, where the `{KEY}` portion refers to the value noted down in the [[!DNL Mailchimp] API key](#gather-credentials) section and the `{DC}` portion refers to the [[!DNL Mailchimp] data center](#identify-data-center). <br>You can provide either the `{KEY}` portion or the entire form.<br> For example, if your API key is <br>*`0123456789abcdef0123456789abcde-us14`*,<br> you could provide either *`0123456789abcdef0123456789abcde`* or *`0123456789abcdef0123456789abcde-us14`* as the value. |
 
 {style="table-layout:auto"}
