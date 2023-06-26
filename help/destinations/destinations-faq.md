@@ -127,6 +127,7 @@ For detailed explanations on the ID matching requirements, see [ID matching requ
 
 +++Answer
 [!DNL LinkedIn Matched Audiences] supports the activation of the following identities: hashed emails, [!DNL GAID], and [!DNL IDFA].
+
 +++
 
 ## Same-page and next-page personalization through the Adobe Target and Custom Personalization destinations {#same-next-page-personalization}
@@ -198,3 +199,17 @@ No. All audiences that you want to activate to Adobe Target must use an active-o
 +++Answer
 Yes. The [Data Governance and Consent Policies](../data-governance/home.md) created and associated with the selected marketing actions will govern the activation of the selected attributes.
 +++
+
+### Are the [!DNL Adobe Target] and [!DNL Custom Personalization] destinations [!DNL HIPAA]-compliant?
+
++++Answer
+The [!DNL Adobe Target] and [!DNL Custom Personalization] destinations are integrated with the [Experience Platform Data Usage Labels](../data-governance/labels/overview.md) and the [Consent Policy Enforcement Service](../data-governance/enforcement/overview.md). These features are available for all customers.
+
+For use cases where consent policy management needs to be applied at scale, customers must purchase [!DNL Adobe Privacy & Security Shield]. This service includes customer-managed keys and elevated thresholds to manage the customer data lifecycle.
+
+[!DNL Adobe Privacy & Security Shield] features are sold as an advanced suite of capabilities and may not be purchased separately.
+
+[!DNL Adobe Target] is not [!DNL HIPPA]-compliant with [!DNL Adobe Healthcare Shield]. Customers should check with their own legal teams regarding [!DNL HIPPA]-readiness for custom optimization channels before using edge personalization via [!DNL Adobe Target] or the [!DNL Custom Personalization] destinations.
+The 
++++
+
