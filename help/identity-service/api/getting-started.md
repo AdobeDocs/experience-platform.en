@@ -13,7 +13,7 @@ Adobe Experience Platform [!DNL Identity Service] manages the cross-device, cros
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-- [[!DNL Identity Service]](../home.md): Solves the fundamental challenge posed by the fragmentation of customer profile data. It does this by bridging identities across devices and systems where customers interact with yourr brand.
+- [[!DNL Identity Service]](../home.md): Solves the fundamental challenge posed by the fragmentation of customer profile data. It does this by bridging identities across devices and systems where customers interact with your brand.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources. 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
