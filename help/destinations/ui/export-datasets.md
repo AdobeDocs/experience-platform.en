@@ -136,7 +136,7 @@ In the [connect to destination workflow](//help/destinations/ui/connect-destinat
 
 Note the difference in file format between the two file types, when compressed: 
 
-* When exporting compressed JSON files, the exported file format is `parquet.json`
+* When exporting compressed JSON files, the exported file format is `json.gz`
 * When exporting compressed parquet files, the exported file format is `gz.parquet`
 
 ## Remove dataset from destination {#remove-dataset}

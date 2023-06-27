@@ -2329,7 +2329,7 @@ In the step to [create a target connection](#create-target-connection), you can 
 
 Note the difference in file format between the two file types, when compressed: 
 
-* When exporting compressed JSON files, the exported file format is `parquet.json`
+* When exporting compressed JSON files, the exported file format is `json.gz`
 * When exporting compressed parquet files, the exported file format is `gz.parquet`
 
 ## API error handling {#api-error-handling}
