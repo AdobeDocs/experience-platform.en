@@ -130,7 +130,7 @@ The presence of these files in your storage location is confirmation of a succes
 
 #### Compressed dataset files {#compressed-dataset-files}
 
-In the connect to destination workflow, you can select the exported dataset files to be compressed, as shown below: 
+In the [connect to destination workflow](//help/destinations/ui/connect-destination.md#file-formatting-and-compression-options), you can select the exported dataset files to be compressed, as shown below: 
 
 ![File type and compression selection when connecting to a destination to export datasets.](/help/destinations/assets/ui/export-datasets/compression-format-datasets.gif)
 

@@ -11,7 +11,7 @@ exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 >
 >* The functionality to export datasets is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
 >* This beta functionality supports the export of first generation data, as defined in the Real-Time Customer Data Platform [product description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
->* This functionality is available to customers who have purchased the Real-Time CDP Prime or Ultimate package. Please contact your Adobe representative for more information. 
+>* This functionality is available to customers who have purchased the Real-Time CDP Prime or Ultimate package. Contact your Adobe representative for more information. 
 
 This article explains the workflow required to use the [!DNL Flow Service API] to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage].
 
@@ -41,7 +41,7 @@ This guide requires a working understanding of the following components of Adobe
 *   [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): All data that is successfully ingested into Adobe Experience Platform is persisted within the [!DNL Data Lake] as datasets. A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Datasets also contain metadata that describes various aspects of the data they store. 
 *   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you need to know in order to export datasets to cloud storage destinations in Platform.
+The following sections provide additional information that you must know in order to export datasets to cloud storage destinations in Platform.
 
 ### Required permissions {#permissions}
 
@@ -2308,6 +2308,29 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 >[!ENDSHADEBOX]
 
 You can find information about the [various parameters returned by the Dataflow runs API](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) in the API reference documentation. 
+
+## Verify successful dataset export {#verify}
+
+When exporting datasets, Experience Platform creates a `.json` or `.parquet` file in the storage location that you provided. Expect a new file to be deposited in your storage location according to the export schedule you provided when [creating a dataflow](#create-dataflow). 
+
+Experience Platform creates a folder structure in the storage location you specified, where it deposits the exported dataset files. A new folder is created for each export time, following the pattern below:
+
+`folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
+
+The default file name is randomly generated and ensures that exported file names are unique.
+
+### Sample dataset files {#sample-files}
+
+The presence of these files in your storage location is confirmation of a successful export. To understand how the exported files are structured, you can download a sample [.parquet file](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) or [.json file](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
+
+#### Compressed dataset files {#compressed-dataset-files}
+
+In the step to [create a target connection](#create-target-connection), you can select the exported dataset files to be compressed.
+
+Note the difference in file format between the two file types, when compressed: 
+
+* When exporting compressed JSON files, the exported file format is `parquet.json`
+* When exporting compressed parquet files, the exported file format is `gz.parquet`
 
 ## API error handling {#api-error-handling}
 
