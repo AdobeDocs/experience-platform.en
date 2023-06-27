@@ -92,9 +92,9 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 * **[!UICONTROL Select instance]**: Your **[!DNL Campaign]** marketing instance.
 * **[!UICONTROL Target mapping]**: Select the target mapping that you are using in **[!DNL Adobe Campaign]** to send deliveries. [Learn more](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
-* **[!UICONTROL Select sync type]**: Choose the type of sync that you want to perform:
+* **[!UICONTROL Select sync type]**:
 
-  * **[!UICONTROL Audience sync]**: Use this option to send Adobe Experience Platform audiences over to Adobe Campaign, and send back delivery and tracking logs into Adobe Experience Platform for analysis purpose,
+  * **[!UICONTROL Audience sync]**: Use this option to send Adobe Experience Platform audiences over to Adobe Campaign, and send back delivery,
   * **[!UICONTROL Profile sync (Update only)]**: Use this option to bring Adobe Experience Platform profile attributes into Adobe Campaign and have a sync process in place so that they can be updated on a regular basis. 
 
 ### Enable alerts {#enable-alerts}
