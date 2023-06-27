@@ -1,9 +1,9 @@
 ---
-title: Getting Started with the Privacy Service API
+title: Authenticate and access the Privacy Service API
 description: Learn how to authenticate to the Privacy Service API and how to interpret example API calls in the documentation.
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 ---
-# Getting started with the Privacy Service API
+# Authenticate and access the Privacy Service API
 
 This guide provides an introduction to the core concepts you must know before attempting to make calls to the Adobe Experience Platform Privacy Service API.
 
@@ -47,10 +47,9 @@ Next, select the authentication type to generate access tokens and access the Pr
 
 >[!IMPORTANT]
 >
->Select the **[!UICONTROL OAuth Server-to-Server]** method as this will be the only method supported moving forward. The **[!UICONTROL Service Account (JWT)]** method is deprecated. While integrations using the JWT authentication method will continue to work until January 1st, 2025, Adobe strongly recommends that you migrate existing integrations to the new OAuth Server-to-Server method before that date. Get more information in the section [!BADGE Deprecated]{type=negative} [Generate a JSON Web Token (JWT)](/help/landing/api-authentication.md#jwt).
+>Select the **[!UICONTROL OAuth Server-to-Server]** method, as this will be the only method supported moving forward. The **[!UICONTROL Service Account (JWT)]** method is deprecated. While integrations using the JWT authentication method will continue to work until January 1st, 2025, Adobe strongly recommends that you migrate existing integrations to the new OAuth Server-to-Server method before that date. Get more information in the section [!BADGE Deprecated]{type=negative} [Generate a JSON Web Token (JWT)](/help/landing/api-authentication.md#jwt).
 
-![Select Oauth Server-to-Server authentication method.](/help/privacy-service/images/api/getting-started/select-oauth-authentication.png
-)
+![Select Oauth Server-to-Server authentication method.](/help/privacy-service/images/api/getting-started/select-oauth-authentication.png)
 
 #### Assign permissions through product profiles {#product-profiles}
 
@@ -66,10 +65,10 @@ When finished, select **[!UICONTROL Save configured API]**.
 
 Once the API has been added to the project, the **[!UICONTROL Privacy Service API]** page for the project displays the following credentials that are required in all calls to Privacy Service APIs:
 
-![Integration information after adding an API in Developer Console.](/help/privacy-service/images/api/getting-started/api-integration-information.png)
-
 * `{API_KEY}` ([!UICONTROL Client ID])
 * `{ORG_ID}` ([!UICONTROL Organization ID])
+
+![Integration information after adding an API in Developer Console.](/help/privacy-service/images/api/getting-started/api-integration-information.png)
 
 ### Authentication for each session {#authentication-each-session}
 
@@ -84,9 +83,9 @@ In general, there are two methods of generating an access token:
 
 To manually generate a new `{ACCESS_TOKEN}`, navigate to **[!UICONTROL Credentials]** > **[!UICONTROL OAuth Server-to-Server]** and select **[!UICONTROL Generate access token]**, as shown below.
 
-![Screen recording of how and access token is generated in the Developer Console UI.](/help/privacy-service/images/api/getting-started/generate-access-token.gif)
+![A screen recording of how an access token is generated in the Developer Console UI.](/help/privacy-service/images/api/getting-started/generate-access-token.gif)
 
-A new access token is generated, and a button to copy the token to your clipboard is provided. This value is used for the required Authorization header, and must be provided in the format `Bearer {ACCESS_TOKEN}`.
+A new access token is generated, and a button to copy the token to your clipboard is provided. This value is used for the required [!DNL Authorization] header, and must be provided in the format `Bearer {ACCESS_TOKEN}`.
 
 #### Automate token generation {#auto-token}
 

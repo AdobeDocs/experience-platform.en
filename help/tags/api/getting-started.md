@@ -1,9 +1,9 @@
 ---
-title: Getting started with the Reactor API
+title: Authenticate and access the Reactor API
 description: Learn how to get started with the Reactor API, including steps to generate required access credentials.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
 ---
-# Getting started with the Reactor API
+# Authenticate and access the Reactor API
 
 In order to use the [Reactor API](https://developer.adobe.com/experience-platform-apis/references/reactor/) to create and manage Tags extensions, each request must include the following authentication headers:
 
@@ -45,7 +45,7 @@ Next, select the authentication type to generate access tokens and access the Ex
 
 >[!IMPORTANT]
 >
->Select the **[!UICONTROL OAuth Server-to-Server]** method as this will be the only method supported moving forward. The **[!UICONTROL Service Account (JWT)]** method is deprecated. While integrations using the JWT authentication method will continue to work until January 1st, 2025, Adobe strongly recommends that you migrate existing integrations to the new OAuth Server-to-Server method before that date. Get more information in the section [!BADGE Deprecated]{type=negative} [Generate a JSON Web Token (JWT)](/help/landing/api-authentication.md#jwt) in the Platform API authentication tutorial.
+>Select the **[!UICONTROL OAuth Server-to-Server]** method, as this will be the only method supported moving forward. The **[!UICONTROL Service Account (JWT)]** method is deprecated. While integrations using the JWT authentication method will continue to work until January 1st, 2025, Adobe strongly recommends that you migrate existing integrations to the new OAuth Server-to-Server method before that date. Get more information in the section [!BADGE Deprecated]{type=negative} [Generate a JSON Web Token (JWT)](/help/landing/api-authentication.md#jwt) in the Platform API authentication tutorial.
 
 Select **Next** to continue.
 
@@ -65,10 +65,10 @@ Select the desired product profiles from the list, then select **Save configured
 
 Once the API has been added to the project, the **[!UICONTROL Experience Platform API]** page for the project displays the following credentials that are required in all calls to Experience Platform APIs:
 
-![Integration information after adding an API in Developer Console.](/help/tags/images/api/getting-started/api-integration-information.png)
-
 * `{API_KEY}` ([!UICONTROL Client ID])
 * `{ORG_ID}` ([!UICONTROL Organization ID])
+
+![Integration information after adding an API in Developer Console.](/help/tags/images/api/getting-started/api-integration-information.png)
 
 ### Generate an access token {#generate-access-token}
 

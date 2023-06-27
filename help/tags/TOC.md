@@ -273,7 +273,7 @@ solution: Data Collection
   * [Backwards compatibility standard](./extension-dev/backwards-compatibility.md)
 * Reactor API {#api}
   * [Overview](./api/overview.md)
-  * [Getting started](./api/getting-started.md)
+  * [Authenticate and access the Reactor API](./api/getting-started.md)
   * Endpoints {#endpoints}
     * [Companies](./api/endpoints/companies.md)
     * [Properties](./api/endpoints/properties.md)
