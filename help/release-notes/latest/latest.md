@@ -9,9 +9,20 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 
 Updates to existing features in Adobe Experience Platform:
 
+- [Authentication to Experience Platform APIs](#authentication-platform-apis)
 - [Data collection](#data-collection)
+- [Destinations](#destinations)
+- [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Sources](#sources)
+
+## Authentication to Experience Platform APIs {#authentication-platform-apis}
+
+For Experience Platform API users, the method to obtain required access tokens to authenticate and make calls to API endpoints is now simplified. The JWT method to obtain access tokens is deprecated and replaced by a simpler OAuth Server-to-Server authentication method.<p>![New OAuth authentication method to get access tokens highlighted.](/help/landing/images/api-authentication/oauth-authentication-method.png "New OAuth authentication method to get access tokens highlighted."){width="100" zoomable="yes"}</p> 
+
+While existing API integrations using the JWT authentication method will continue to work until January 1st, 2025, Adobe strongly recommends that you migrate existing integrations to the new OAuth Server-to-Server method before that date. Read the guide on [migrating from Service Account (JWT) credential to OAuth Server-to-Server credential](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
+
+Read the updated [Experience Platform authentication tutorial](/help/landing/api-authentication.md) for more information. 
 
 ## Data collection {#data-collection}
 
@@ -24,25 +35,93 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 | Extension | [!DNL Google Cloud Platform] event forwarding extension | The [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) event forwarding extension allows you to forward event data to Google for activation via [!DNL Google Pub/Sub]. |
 | Extension | [!DNL Cloud connector for Google Analytics 4 (ga4)] extension | The [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) event forwarding extension allows you to track analytics via the new [!DNL Google Analytics 4 (ga4)] standard. |
 | Secret | OAuth 2 JWT Secret | The [OAuth 2 JWT Secret](../../tags/ui/event-forwarding/secrets.md) allows you to use Adobe and [!DNL Google] Service tokens to support server-server interactions in event forwarding. |
-| Tags and Event Forwarding | User attribution | User attribution delivers key activity data across the [Tags](../../tags/home.md) and [Event Forwarding](../../tags/ui/event-forwarding/overview.md) UI.<br><br>The data includes who made what changes and at what time. This data is visible across the Tags and Event Forwarding UI in the following screens:<br><ul><li> Properties overview</li><li> Installed extensions</li><li>Rules compare and review</li><li>Data Elements compare review</li><li>Extensions compare review</li><li>Library resource changes</li><li>Library last build and published</li></ul> |
 
 {style="table-layout:auto"}
 
 To learn more about data collection, read the [data collection overview](../../tags/home.md).
 
+## Destinations {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated destinations** {#new-updated-destinations}
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!BADGE Beta]{type=Informative} [!DNL Amazon Ads] connection](../../destinations/catalog/advertising/amazon-ads.md) | The [!DNL Amazon Ads] integration with Adobe Experience Platform now supports regional routing to the various [!DNL Amazon Ads] marketplaces. Read more in the [destination changelog](../../destinations/catalog/advertising/amazon-ads.md#changelog). |
+
+{style="table-layout:auto"}
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Functionality | Description |
+| ----------- | ----------- |
+| Workspace support for [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) destinations. | You can now select the Adobe Target workspace that you want to share audiences to, when configuring a new Adobe Target destination connection. See the [connection parameters](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target for more information about workspaces. |
+
+{style="table-layout:auto"}
+
+<!--
+
+**Fixes and enhancements** {#destinations-fixes-and-enhancements}
+
+- Placeholder for fixes and enhancements
+
+-->
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+**New XDM components**
+
+| Component type | Name | Description |
+| --- | --- | --- |
+| Extension (Prospect-Profile)  | [[!UICONTROL Adobe Unified Profile Service Prospect-Profile Union Extension]](https://github.com/adobe/xdm/pull/1735/files) | Added required fields for the Prospect-Profile union schema.  |
+| Extension |  [[!UICONTROL Decisioning Asset]](https://github.com/adobe/xdm/pull/1732/files) |  Add a data type to represent assets used in decisioning. [!UICONTROL Decisioning Asset] provides a reference to assets used to render the `decisionItems`. |
+| Data type  | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/pull/1747/files)  | [!UICONTROL Commerce] stores records related to the buying and selling activity. |
+| Field group  | [[!UICONTROL Profile Partner Enrichment(Sample)]](https://github.com/adobe/xdm/pull/1747/files)  | A sample schema was added for profile partner enrichment.  |
+| Field group  | [[!UICONTROL Partner Prospect Details(Sample)]](https://github.com/adobe/xdm/pull/1747/files)  |  A sample schema was added for data vendor prospect profile extensions. |
+| Data type  | [[!UICONTROL Commerce Scope]](https://github.com/adobe/xdm/pull/1747/files)  | [!UICONTROL Commerce Scope] identifies where an event occurred. For example, in the store view, the store, or website, and so on. |
+| Data type  | [[!UICONTROL Billing]](https://github.com/adobe/xdm/pull/1734/files) | Billing information, for one or more payments, was added to the [!UICONTROL Commerce] schema.  |
+
+{style="table-layout:auto"}
+
+**Updated XDM components**
+
+| Component type | Name | Update description |
+| --- | --- | --- |
+| Field group | [[!UICONTROL MediaAnalytics Interaction Details]](https://github.com/adobe/xdm/pull/1736/files) | Changed `bitrateAverageBucket` from 100 to "800-899". |
+| Data type | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/pull/1736/files) | Changed `bitrateAverageBucket` data type to string. |
+| Field Group | [[!UICONTROL Segment Membership Details]](https://github.com/adobe/xdm/pull/1735/files) | Added to Prospect Profile class.  |
+| Schema | [[!UICONTROL Computed Attributes System Schema]](https://github.com/adobe/xdm/pull/1735/files)  | Identity map added to the [!UICONTROL Computed Attributes System Schema]. |
+| Datatype | [[!UICONTROL Content Delivery Network]](https://github.com/adobe/xdm/pull/1733/files) | Field added to [!UICONTROL Session details information] to describe the content delivery network used. | 
+| Extension | [[!UICONTROL Adobe Unified Profile Service Account Union Extension]](https://github.com/adobe/xdm/pull/1731/files)  | Identity map added to the [!UICONTROL Adobe Unified Profile Service Account Union Extension]. |
+| Data type  | [[!UICONTROL Order]](https://github.com/adobe/xdm/pull/1730/files)  | `discountAmount` was added to [!UICONTROL Order]. This conveys the difference between the regular order price and the special price. It is applied to the entire order rather than to individual products.  |
+| Schema  | [[!UICONTROL AEP Hygiene Operation Request]](https://github.com/adobe/xdm/pull/1728/files)  | The `targetServices` field was added to provide the names of services that process the data hygiene operations. |
+| Data type | [[!UICONTROL Shipping]](https://github.com/adobe/xdm/pull/1727/files) | `currencyCode` was added to the shipping information for one or more products. It is an ISO 4217 alphabetic currency code used for pricing the product. |
+| Data type  | [[!UICONTROL Application]](https://github.com/adobe/xdm/pull/1726/files) |  The `language` field was added to provide the user's linguistic, geographical, or cultural preferences to the application. |
+| Extension | [[!UICONTROL AJO Entity Fields]](https://github.com/adobe/xdm/pull/1746/files)  | [!UICONTROL AJO Timestamp Entity] was added to indicate the time when the message was last modified.  |
+| Data type  | (Multiple) | [Removed several media details](https://github.com/adobe/xdm/pull/1739/files) across several data types for consistency. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md)
+
 ## Query Service {#query-service}
 
 Query Service allows you to use standard SQL to query data in Adobe Experience Platform data lake. You can join any datasets from data lake and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-Time Customer Profile.
-​
+
 **Updated features**
-​
+
 | Feature | Description |
 | --- | --- |
-| ​Inline templates | Query Service now supports the use of templates that reference other templates within your SQL. Reduce your workload, and avoid errors by leveraging inline templates in your queries. You can reuse statements or conditions, and reference nested templates for greater flexibility in your SQL. There is no limit in the size of queries that can be stored as templates, or the number of templates that can be referenced from your original query. For more information, read the [inline template guide](../../query-service/essential-concepts/inline-templates.md). |
+| Inline templates | Query Service now supports the use of templates that reference other templates within your SQL. Reduce your workload, and avoid errors by leveraging inline templates in your queries. You can reuse statements or conditions, and reference nested templates for greater flexibility in your SQL. There is no limit in the size of queries that can be stored as templates, or the number of templates that can be referenced from your original query. For more information, read the [inline template guide](../../query-service/essential-concepts/inline-templates.md). |
 | Scheduled query UI updates | Manage all your scheduled queries from one location in the UI with the [[!UICONTROL Scheduled Queries tab]](../../query-service/ui/monitor-queries.md#inline-actions). The [!UICONTROL Scheduled Queries] UI has been improved with the addition of inline query actions and the new query status column. The recent additions include the ability to enable, disable, and delete a schedule, or subscribe to alerts for upcoming query runs directly from the [!UICONTROL Scheduled Queries] view. <p>![Inline actions highlighted in the [!UICONTROL Scheduled Queries] view.](../../query-service/images/ui/monitor-queries/disable-inline.png "Inline actions highlighted in the [!UICONTROL Scheduled Queries] view."){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
-​
+
 For more information on Query Service, refer to the [Query Service overview](../../query-service/home.md).
 
 ## Sources {#sources}
