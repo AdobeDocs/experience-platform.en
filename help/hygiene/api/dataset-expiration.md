@@ -62,47 +62,22 @@ A successful response lists the resulting dataset expirations. The following exa
 
 ```json
 {
-  "totalRecords": 3,
-  "ttlDetails": [
+  "results": [
     {
-      "status": "completed",
-      "ttlId": "SD-c8e75921-2416-4bc7-9cfd-9eb01ba66c5f",
-      "displayName": "Delete Acme Data before 2025",
-      "description": "The Acme information in this dataset is licensed for our use through the end of 2024.",
-      "imsOrgId":    "885737B25DC460C50A49411B@AdobeOrg",
-      "datasetId":   "f440ac301c414bf1b6ba419162866346",
+      "ttlId": "SD-b16c8b48-a15a-45c8-9215-587ea89369bf",
+      "datasetId": "629bd9125b31471b2da7645c",
       "datasetName": "Sample Acme dataset",
       "sandboxName": "hygiene-beta",
-      "expiry": "2024-07-07T13:14:15Z",
-      "updatedAt": "2021-07-07T13:14:15Z",
-      "updatedBy": "Jane Doe <jane.doe@example.com> d741b5b877bf47cf@AdobeId"
-    },
-    {
+      "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
       "status": "pending",
-      "ttlId": "SD-8af60d33-dbed-444f-d818-61ccad5de10d",
-      "displayName": "Delete PQR data at end of century",
-      "description": "This is a long term request to delete PQR data.",
-      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
-      "datasetId": "80f0d38820a74879e2c5de82c38b1a94",
-      "datasetName": "Dx 523093 of PQR",
-      "expiry": "2099-02-02T00:00:00Z",
-      "updatedAt": "2021-02-02T13:00:00Z",
-      "updatedBy": "John Q. Public <jqp@example.com> 93220281bad34ed0@AdobeId"
-    },
-    {
-      "status": "pending",
-      "ttlId": "SD2140ad4eaf1f47a1b24c05cce53e303e",
-      "displayName": "Delete LMNOP data at end of century",
-      "description": "This is a long term request to delete LMNOP data.",
-      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
-      "datasetId": "9e63f9b25896416ba811657678b4fcb7",
-      "datasetName": "LMNOP v2",
-      "sandboxName": "hygiene-beta",
-      "expiry": "2099-01-01T00:00:00Z",
-      "updatedAt": "2021-01-01T13:00:00Z",
-      "updatedBy": "Jane Doe <jane.doe@example.com> d741b5b877bf47cf@AdobeId"
+      "expiry": "2050-01-01T00:00:00Z",
+      "updatedAt": "2023-06-09T16:52:44.136028Z",
+      "updatedBy": "Jane Doe 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
     }
-  ]
+  ],
+  "current_page": 0,
+  "total_pages": 1,
+  "total_count": 1
 }
 ```
 
@@ -115,17 +90,20 @@ A successful response lists the resulting dataset expirations. The following exa
 
 ## Look up a dataset expiration {#lookup}
 
-You can lookup a dataset expiration through a GET request.
+To lookup a dataset expiration, make a GET request with either the `datasetId` or the `ttlId`. 
+<!-- You can look up the expiration status history of a specific dataset by using the query parameter `include=history` in a lookup request. The result includes information about about the creation of the dataset expiration, any updates that have been applied, and its cancellation or execution (if applicable). You can also use the `ttlId` of the dataset expiration. -->
 
 **API format**
 
 ```http
-GET /ttl/{DATASET_ID}
+GET /ttl/{DATASET_ID}?include=history
+GET /ttl/{TTL_ID}
 ```
 
 | Parameter | Description |
 | --- | --- |
 | `{DATASET_ID}` | The ID of the dataset whose expiration you want to look up. |
+| `{TTL_ID}` | The ID of the dataset expiration. |
 
 {style="table-layout:auto"}
 
@@ -145,6 +123,8 @@ curl -X GET \
 **Response**
 
 A successful response returns the details of the dataset expiration.
+
+<!-- Is there a different response from making a GET request to either '/ttl/{DATASET_ID}?include=history' or '/ttl/{TTL_ID}'? If so please can you provide the response for both (or just the ttl endpoint itf it differs from teh example) -->
 
 ```json
 {
@@ -202,17 +182,20 @@ The following JSON represents a truncated response for a dataset's details from 
 
 ## Create or update a dataset expiration {#create-or-update}
 
-You can create or update an expiration date for a dataset through a PUT request.
+Create or update an expiration date for a dataset through a PUT request. The PUT request uses either the `datasetId` or the `ttlId`. 
+<!-- You can look up the expiration status history of a specific dataset by using the query parameter `include=history` in a lookup request. The result includes information about about the creation of the dataset expiration, any updates that have been applied, and its cancellation or execution (if applicable). You can also use the `ttlId` of the dataset expiration. -->
 
 **API format**
 
 ```http
 PUT /ttl/{DATASET_ID}
+PUT /ttl/{TTL_ID}
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `{DATASET_ID}` | The ID of the dataset that you want to schedule an expiration for. | 
+| `{DATASET_ID}` | The ID of the dataset that you want to schedule an expiration for. |
+| `{TTL_ID}` | The ID of the dataset expiration. | 
 
 **Request**
 
@@ -293,11 +276,13 @@ DELETE /ttl/{EXPIRATION_ID}
 
 **Request**
 
-The following request cancels a dataset expiration with ID `SD5cfd7a11b25543a9bcd9ef647db3d8df`:
+The following request cancels a dataset expiration with ID `SD-b16c8b48-a15a-45c8-9215-
+587ea89369bf`:
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/core/hygiene/ttl/SD5cfd7a11b25543a9bcd9ef647db3d8df \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-b16c8b48-a15a-45c8-9215-
+587ea89369bf \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -310,17 +295,19 @@ A successful response returns HTTP status 204 (No Content), and the expiration's
 
 ## Retrieve the expiration status history of a dataset
 
-You can look up the expiration status history of a specific dataset by using the query parameter `include=history` in a lookup request. The result includes information about about the creation of the dataset expiration, any updates that have been applied, and its cancellation or execution (if applicable).
+You can look up the expiration status history of a specific dataset by using the query parameter `include=history` in a lookup request. The result includes information about about the creation of the dataset expiration, any updates that have been applied, and its cancellation or execution (if applicable). You can also use the `ttlId` of the dataset expiration.
 
 **API format**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
+GET /ttl/{TTL_ID}
 ```
 
 | Parameter | Description |
 | --- | --- |
 | `{DATASET_ID}` | The ID of the dataset whose expiration history you want to look up. |
+| `{TTL_ID}` | The ID of the dataset expiration. |
 
 {style="table-layout:auto"}
 
@@ -341,7 +328,8 @@ A successful response returns the details of the dataset expiration, with a `his
 
 ```json
 {
-  "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+  "ttlId": "SD-b16c8b48-a15a-45c8-9215-
+587ea89369bf",
   "datasetId": "62759f2ede9e601b63a2ee14",
   "datasetName": "Example Dataset",
   "sandboxName": "prod",
