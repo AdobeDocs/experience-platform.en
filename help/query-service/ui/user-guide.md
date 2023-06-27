@@ -34,6 +34,19 @@ Using [!DNL Query Editor], you can write, execute, and save queries for customer
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Queries]** in the left navigation menu to open the [!DNL Query Service] workspace. Next, select **[!UICONTROL Create Query]** at the top right of the screen to start writing queries. This link is available from any of the pages in the [!DNL Query Service] workspace. 
 
 ![The Queries workspace overview tab with Create query highlighted.](../images/ui/query-editor/create-query.png)
+
+<!-- 
+### Query Editor legacy toggle {#legacy-toggle}
+ -->
+
+>[!CONTEXTUALHELP]
+>id="platform_queryService_queryEditor_legacyToggle"
+>title="Query Editor legacy toggle"
+>abstract="The toggle allows you to switch between the default legacy and current version of the Query Editor. The current version of Query Editor has better accessibility and multi-theming support. Although there are no UI changes between the two versions, some existing functionalities have been changed. The toggle allows you to adopt the recent back-end changes or fallback to the legacy version should any unexpected issue occur."
+
+<!-- 
+A UI toggle allows you to switch between the legacy and current version of the Query Editor. The legacy version of the Query Editor is enabled by default. The main differences provided by the newer version of Query Editor are better accessibility and multi-theming support. There are no UI changes between the two versions. The toggle provides the freedom to adopt the recent back end changes or fallback to the legacy version should any unexpected issue occur. 
+-->
   
 ### Writing queries {#writing-queries}
 
