@@ -31,13 +31,20 @@ Use Campaign to:
 
 To help you better understand how and when you should use the Adobe Campaign Manage Service destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
 
-Adobe Experience Platform creates a customer profile that incorporates information like the identity graph, behavioral data from analytics, merges offline and online data etc. With this integration, you can augment the segmentation capabilities that are already existing within Adobe Campaign with those Adobe Experience Platform powered audiences, and you can hence activate that data in Campaign.
+* Adobe Experience Platform creates a customer profile that incorporates information like the identity graph, behavioral data from analytics, merges offline and online data etc. With this integration, you can augment the segmentation capabilities that are already existing within Adobe Campaign with those Adobe Experience Platform powered audiences, and you can hence activate that data in Campaign.
 
-For example, a sports attire company wants to leverage the Adobe Experience Platform powered smart segments and activate them using Adobe Campaign to reach out to their customer base across the different channels supported by Adobe Campaign. 
+  For example, a sports attire company wants to leverage the Adobe Experience Platform powered smart segments and activate them using Adobe Campaign to reach out to their customer base across the different channels supported by Adobe Campaign. Once the messages are sent, they want to enhance the customer profile in Adobe Experience platform with experience data from Adobe Campaign such as sends, open and clicks.
 
-Once the messages are sent, they want to enhance the customer profile in Adobe Experience platform with experience data from Adobe Campaign such as sends, open and clicks.
+  The result is cross channel campaigns that are more consistent across the Adobe Experience cloud ecosystem and a rich customer profile that is quickly adapting and learning.
 
-The result is cross channel campaigns that are more consistent across the Adobe Experience cloud ecosystem and a rich customer profile that is quickly adapting and learning.
+
+* In addition to segment activation in Campaign, you canleverage the Adobe Campaign Manage Service destination to bring in additional profile attributes which are tied to a profile on Adobe Experience Platform and have a sync process in place so that they are updated in the Adobe Campaign database. 
+
+  For example, let's say you are capturing opt-in and opt-out values in Adobe Experience Platform. With this connection, you can bring over these values into Adobe Campaign and have a sync process in place so that they are updated on a regular basis.
+
+  >[!NOTE]
+  >
+  >Profile attributes sync is available for profiles that are already present in Adobe Campain database.
 
 [Learn more on Adobe Campaign integration with Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
 
@@ -87,8 +94,8 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Target mapping]**: Select the target mapping that you are using in **[!DNL Adobe Campaign]** to send deliveries. [Learn more](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
 * **[!UICONTROL Select sync type]**: Choose the type of sync that you want to perform:
 
-  * **[!UICONTROL Audience sync]**: Use this option to dend Adobe Experience Platform audiences over to Adobe Campaign, and send back delivery and tracking logs into Adobe Experience Platform for analysis purpose,
-  * **[!UICONTROL Profile sync (Update only)]**: USe this option to bring Adobe Experience Platform profile attributes into Adobe Campaign and have a sync process in place so that they can be updated on a regular basis. 
+  * **[!UICONTROL Audience sync]**: Use this option to send Adobe Experience Platform audiences over to Adobe Campaign, and send back delivery and tracking logs into Adobe Experience Platform for analysis purpose,
+  * **[!UICONTROL Profile sync (Update only)]**: Use this option to bring Adobe Experience Platform profile attributes into Adobe Campaign and have a sync process in place so that they can be updated on a regular basis. 
 
 ### Enable alerts {#enable-alerts}
 
@@ -152,9 +159,11 @@ Navigate to the **[!UICONTROL Administration]** > **[!UICONTROL Audit]** > **[!U
 
 ### Access exported data {#data}
 
-Navigate to the **[!UICONTROL Profile and target]** > **[!UICONTROL List]** > **[!UICONTROL AEP audiences]** menu  to access audiences created after activating a destination.
+For Audience sync type, you can check the exported audience by navigating to the **[!UICONTROL Profile and target]** > **[!UICONTROL List]** > **[!UICONTROL AEP audiences]** menu.
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
+
+For Profile attribute sync type, data is automatically updated into the Campaign database for each profile targeted by the segment activated in the destination.
 
 ## Data usage and governance {#data-usage-governance}
 
