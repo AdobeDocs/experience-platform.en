@@ -35,7 +35,6 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 | Extension | [!DNL Google Cloud Platform] event forwarding extension | The [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) event forwarding extension allows you to forward event data to Google for activation via [!DNL Google Pub/Sub]. |
 | Extension | [!DNL Cloud connector for Google Analytics 4 (ga4)] extension | The [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) event forwarding extension allows you to track analytics via the new [!DNL Google Analytics 4 (ga4)] standard. |
 | Secret | OAuth 2 JWT Secret | The [OAuth 2 JWT Secret](../../tags/ui/event-forwarding/secrets.md) allows you to use Adobe and [!DNL Google] Service tokens to support server-server interactions in event forwarding. |
-| Tags and Event Forwarding | User attribution | User attribution delivers key activity data across the [Tags](../../tags/home.md) and [Event Forwarding](../../tags/ui/event-forwarding/overview.md) UI.<br><br>The data includes who made what changes and at what time. This data is visible across the Tags and Event Forwarding UI in the following screens:<br><ul><li> Properties overview</li><li> Installed extensions</li><li>Rules compare and review</li><li>Data Elements compare review</li><li>Extensions compare review</li><li>Library resource changes</li><li>Library last build and published</li></ul> |
 
 {style="table-layout:auto"}
 
