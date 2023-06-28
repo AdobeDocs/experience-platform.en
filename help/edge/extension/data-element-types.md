@@ -42,7 +42,7 @@ Notice that when you open certain fields of your schema, such as `web.webPageDet
 >
 >Only fill in the pieces of information you are interested in collecting. Anything that is not filled in is omitted when the data is sent to the solutions.
 
-## (Beta) Variable {#variable}
+## Variable {#variable}
 
 >[!IMPORTANT]
 >
