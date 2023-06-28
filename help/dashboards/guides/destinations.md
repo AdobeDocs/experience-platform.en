@@ -111,7 +111,9 @@ To learn more about how to configure specific types of destinations, visit the [
 
 ![The Overview tab of the Destinations dashboard with the Recently created destinations widget highlighted.](../images/destinations/recently-created-destinations.png)
 
-### [!UICONTROL Recently activated segments] {#recently-activated-segments}
+<!-- ### [!UICONTROL Recently activated segments] {#recently-activated-segments} -->
+
+### [!UICONTROL Recently activated audiences] {#recently-activated-audiences}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegments"
