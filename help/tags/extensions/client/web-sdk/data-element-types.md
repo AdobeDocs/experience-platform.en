@@ -18,13 +18,13 @@ In the [!UICONTROL Identity map] data element, you will provide the following pi
 * **[!UICONTROL Authenticated state]**: A selection indicating whether the visitor is authenticated.
 * **[!UICONTROL Primary]**: A selection indicating whether the identifier should be used as the primary identifier for the individual. If no identifier is marked as primary, the ECID will be used as the primary identifier.
 
-![UI image showing the Edit Data Element screen.](./assets/identity-map-data-element.png)
+![UI image showing the Edit Data Element screen.](assets/identity-map-data-element.png)
 
 You should not provide an [!DNL ECID] when building an identity map. When using the SDK, an [!DNL ECID] is automatically generated on the server and included in the identity map.
 
 The identity map data element is often used in tandem with the [[!UICONTROL XDM object] data element type](#xdm-object) and the [[!UICONTROL Set consent] action type](action-types.md#set-consent).
 
-Read more about [Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Read more about [Adobe Experience Platform Identity Service](../../../../identity-service/home.md).
 
 ## XDM object {#xdm-object}
 

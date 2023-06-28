@@ -3,7 +3,8 @@ title: Configure the Adobe Experience Platform Web SDK Extension
 description: How to configure the Adobe Experience Platform Web SDK tag extension in the UI.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
 ---
-# Configure the Adobe Experience Platform Web SDK extension
+
+# Configure the Adobe Experience Platform Web SDK tag extension
 
 The Adobe Experience Platform Web SDK tag extension sends data to Adobe Experience Cloud from web properties through the Adobe Experience Platform Edge Network. The extension allows you to stream data into Platform, synchronize identities, process customer consent signals, and automatically collect context data.
 
@@ -13,15 +14,15 @@ This document covers how to configure the extension in the UI.
 
 If the Platform Web SDK extension has already been installed for a property, open the property in the UI and select the **[!UICONTROL Extensions]** tab. Under the Platform Web SDK, select **[!UICONTROL Configure]**.
 
-![](../assets/extension/overview/configure.png)
+![](assets/configure.png)
 
 If you have not installed the extension yet, select the **[!UICONTROL Catalog]** tab. From the list of available extensions, find the Platform Web SDK extension and select **[!UICONTROL Install]**.
 
-![](../assets/extension/overview/install.png)
+![](assets/install.png)
 
 In both cases, you arrive at the configuration page for the Platform Web SDK. The sections below explain the extension's configuration options.
 
-![](../assets/extension/overview/config-screen.png)
+![](assets/config-screen.png)
 
 ## General configuration options
 
@@ -50,7 +51,7 @@ See the guide on [datastreams](../datastreams/overview.md) for more information.
 
 ## [!UICONTROL Privacy]
 
-![](../assets/extension/overview/privacy.png)
+![](assets/privacy.png)
 
 The [!UICONTROL Privacy] section allows you to configure how the SDK handles user consent signals from your website. Specifically, it allows you to select the default level of consent that is assumed of a user if no other explicit consent preference has been provided. The default consent level is not saved to the user's profile. The following table breaks down what each option entails:
 
@@ -65,7 +66,7 @@ Use Out or Pending if you require explicit user consent for your business operat
 
 ## [!UICONTROL Identity]
 
-![](../assets/extension/overview/identity.png)
+![](assets/identity.png)
 
 ### [!UICONTROL Migrate ECID from VisitorAPI]
 
@@ -77,13 +78,13 @@ This option enables the SDK to attempt to store a user identifier in a third-par
 
 ## [!UICONTROL Personalization]
 
-![](../assets/extension/overview/personalization.png)
+![](assets/personalization.png)
 
 If you would like to hide certain parts if your site while personalized content is loaded, you can specify the elements to hide in the prehiding style editor. You can then copy the default prehiding snippet provided to you and paste it inside the `<head>`element of your HTML site. 
 
 ## [!UICONTROL Data Collection]
 
-![](../assets/extension/overview/data-collection.png)
+![](assets/data-collection.png)
 
 ### [!UICONTROL Callback function]
 
@@ -105,18 +106,18 @@ This helps you trigger different datastream behaviors than the default ones, wit
 
 Datastream configuration override is a two step process:
 
-1. First, you must define your datastream configuration overrides in the [datastream configuration page](../datastreams/configure.md).
+1. First, you must define your datastream configuration overrides in the [datastream configuration page](../../../../edge/datastreams/configure.md).
 2. Then, you must send the overrides to the Edge Network either via a Web SDK command, or by using the Web SDK tag extension.
 
-See the datastream [configuration overrides documentation](../datastreams/overrides.md) for detailed instructions on how to override datastream configurations.
+See the datastream [configuration overrides documentation](../../../../edge/datastreams/overrides.md) for detailed instructions on how to override datastream configurations.
 
 As an alternative to passing the overrides through a Web SDK command, you can configure the overrides in the tag extension screen shown below.
 
-![Image showing the datastream configuration overrides in the Web SDK tag extension page.](../assets/extension/overview/datastream-overrides.png)
+![Image showing the datastream configuration overrides in the Web SDK tag extension page.](assets/datastream-overrides.png)
 
 ## [!UICONTROL Advanced Settings]
 
-![](../assets/extension/overview/advanced-settings.png)
+![](assets/advanced-settings.png)
 
 ### [!UICONTROL Edge base path]
 
