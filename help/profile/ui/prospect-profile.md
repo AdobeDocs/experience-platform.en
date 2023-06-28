@@ -15,15 +15,13 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 Prospect profiles are used to represent people who have not yet engaged with your company but want to reach out to. With prospect profiles, you can supplement your customer profiles with attributes from trusted third-party partners.
 
-To access prospect profiles, select **[!UICONTROL Profiles]** in the **[!UICONTROL Prospects]** section.
-
-IMAGE
-
 ## Browse
+
+To access prospect profiles, select **[!UICONTROL Profiles]** in the **[!UICONTROL Prospects]** section.
 
 The **[!UICONTROL Browse]** page is displayed. A list of all the prospect profiles for the organization is displayed.
 
-IMAGE
+![](../images/prospect-profile/browse-profiles.png)
 
 >[!IMPORTANT]
 >
