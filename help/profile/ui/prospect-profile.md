@@ -1,6 +1,6 @@
 ---
 title: Prospect Profiles
-description: Learn how to create and use prospect profiles to gather information about your 
+description: Learn how to create and use prospect profiles to gather information about unknown customers using third-party information. 
 type: Documentation
 badge: "Beta"
 ---
@@ -21,7 +21,7 @@ To access prospect profiles, select **[!UICONTROL Profiles]** in the **[!UICONTR
 
 The **[!UICONTROL Browse]** page is displayed. A list of all the prospect profiles for the organization is displayed.
 
-![](../images/prospect-profile/browse-profiles.png)
+![The [!UICONTROL Profiles] button is highlighted, displaying the [!UICONTROL Browse] page for prospect profiles.](../images/prospect-profile/browse-profiles.png)
 
 >[!IMPORTANT]
 >
@@ -37,21 +37,21 @@ For more information on browsing profiles, please read the [browse section of th
 
 To view more information about a specific prospect profile, select a profile on the [!UICONTROL Browse] page.
 
-![](../images/prospect-profile/browse-profiles.png)
+![A prospect profile is highlighted on the browse page.](../images/prospect-profile/select-specific-profile.png)
 
 Information about the prospect profile is displayed, including the attributes and audience membership. 
 
-![](../images/prospect-profile/profile-details.png)
+![The prospect profile details page is displayed.](../images/prospect-profile/profile-details.png)
 
 For more information on these tabs, please read the [view Profile details section of the Profile user guide](./user-guide.md#profile-detail).
 
 You can also see all the attributes in JSON format by selecting **[!UICONTROL View JSON]**.
 
-![](../images/prospect-profile/profile-select-view-json.png)
+![The [!UICONTROL View JSON] button is highlighted on the prospect profile details page.](../images/prospect-profile/profile-select-view-json.png)
 
-The attributes of the prospect profile are now displayed.
+The attributes of the prospect profile are now displayed in JSON form.
 
-![](../images/prospect-profile/profile-view-json.png)
+![The prospect profile's attributes are displayed in JSON form.](../images/prospect-profile/profile-view-json.png)
 
 ## Next steps
 
