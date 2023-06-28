@@ -37,13 +37,21 @@ For more information on browsing profiles, please read the [browse section of th
 
 To view more information about a specific prospect profile, select a profile on the [!UICONTROL Browse] page.
 
-IMAGE
+![](../images/prospect-profile/browse-profiles.png)
 
 Information about the prospect profile is displayed, including the attributes and audience membership. 
 
-IMAGE
+![](../images/prospect-profile/profile-details.png)
 
 For more information on these tabs, please read the [view Profile details section of the Profile user guide](./user-guide.md#profile-detail).
+
+You can also see all the attributes in JSON format by selecting **[!UICONTROL View JSON]**.
+
+![](../images/prospect-profile/profile-select-view-json.png)
+
+The attributes of the prospect profile are now displayed.
+
+![](../images/prospect-profile/profile-view-json.png)
 
 ## Next steps
 
