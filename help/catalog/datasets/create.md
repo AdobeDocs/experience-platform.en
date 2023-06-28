@@ -39,9 +39,7 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 >
 >For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
-All requests that contain a payload (POST, PUT, PATCH) require an additional header:
-
-* Content-Type: application/json
+All requests that contain a payload (POST, PUT, PATCH) require an additional `Content-Type: application/json` header. For JSON+PATCH requests, the `Content-Type` should be `application/json-patch+json`.
 
 ## Tutorial
 
@@ -248,7 +246,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Response**
 
-A successful response returns HTTP Status 201 (Created) and a response object containing details of the newly created batch, including its `id`, a read-only, system generated string.
+A successful response returns HTTP Status 201 (Created) and a response object. The response object consists of an array containing the ID of the newly created batch in the format `"@/batches/{BATCH_ID}"`. The batch ID is a read-only, system-generated string that is used to reference the batch in API calls.
 
 ```JSON
 {
@@ -349,12 +347,12 @@ A successfully completed batch returns a blank response body and HTTP Status 200
 
 ## Monitor ingestion
 
-Depending on the size of the data, batches take varying lengths of time to ingest. You can monitor the status of a batch by appending a `batch` request parameter containing the batch's ID to a `GET /batches` request. The API polls the dataset for the status of the batch from ingestion until the `status` in the response indicates completion ("success" or "failure").
+Depending on the size of the data, batches take varying lengths of time to ingest. You can monitor the status of a batch by appending a batch's ID to a `GET /batches` request.
 
 **API format**
 
 ```HTTP
-GET /batches?batch={BATCH_ID}
+GET /batches/{BATCH_ID}
 ```
 
 | Parameter | Description |

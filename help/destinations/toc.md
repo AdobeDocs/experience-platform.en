@@ -34,8 +34,7 @@ feature: Destinations
         * [Activate audience data to streaming segment export destinations](./ui/activate-segment-streaming-destinations.md)
         * [Activate audience data to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
         * [Activate audience data to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
-        * [Activate audience data to profile request destinations](./ui/activate-profile-request-destinations.md)
-        * [Configure personalization destinations for same-page and next-page personalization](./ui/configure-personalization-destinations.md)
+        * [Activate audience data to edge personalization destinations](./ui/activate-edge-personalization-destinations.md)
         * [(Beta) Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
         * [(Beta) Export datasets using the Experience Platform UI](./ui/export-datasets.md)
         * [(Beta) Use the last qualification time XDM attribute in the new beta cloud storage destinations](./ui/activate-last-qualification-time.md)
@@ -116,7 +115,7 @@ feature: Destinations
         * [(Beta) Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
         * [(Beta) Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
-        * [IP address allowlist for cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
+        * [IP address allowlist for SFTP destinations](./catalog/cloud-storage/ip-address-allow-list.md)
     * Customer Relationship Management (CRM) destinations {#crm}
         * [Salesforce CRM connection](./catalog/crm/salesforce.md)
         * [Microsoft Dynamics 365 connection](./catalog/crm/microsoft-dynamics-365.md)

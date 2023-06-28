@@ -115,6 +115,7 @@ alloy("sendEvent", {
     /* ... */
   },
   edgeConfigOverrides: {
+    datastreamId: "{DATASTREAM_ID}"
     com_adobe_experience_platform: {
       datasets: {
         event: {
@@ -142,6 +143,10 @@ alloy("sendEvent", {
 });
 ```
 
+|Parameter|Description|
+|---|---|
+|`edgeConfigOverrides.datastreamId`| Use this parameter to allow a single request to go to a different datastream than the one defined by the `configure` command. |
+
 ### Sending configuration overrides via the `configure` command {#send-configure}
 
 The example below shows what a configuration override could look like on a `configure` command.
@@ -151,7 +156,7 @@ alloy("configure", {
   defaultConsent: "in",
   edgeDomain: "etc",
   edgeBasePath: "ee",
-  edgeConfigId: "etc",
+  datastreamId: "{DATASTREAM_ID}",
   orgId: "org",
   debugEnabled: true,
   edgeConfigOverrides: {
