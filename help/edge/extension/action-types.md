@@ -29,10 +29,6 @@ After you have received consent from your user, this consent must be communicate
 
 In this action, you are also provided with an optional field to include an Identity Map so that identities can be synced once consent is received. Syncing is useful when the consent is configured as "Pending" or "Out" because the consent call is likely the first call to fire.
 
-## Reset event merge ID {#reset-event-merge-id}
-
-If you would like to reset your event merge ID on your page, you can do so with this action. To reset your ID, select the Merge ID you want to reset and fire the action as needed.
-
 ## Update variable {#update-variable}
 
 >[!IMPORTANT]
