@@ -8,10 +8,6 @@ exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
 
 After you set your [action types](action-types.md) in the [Adobe Experience Platform Web SDK tag extension](web-sdk-extension-configuration.md), you must configure your data element types. This page describes the available data element types.
 
-## Event merge ID {#event-merge-id}
-
-This data element provides an event merge ID when used. No configuration is needed for this data element. The data element that is provided stays the same until the visitor leaves the page or until the **[!UICONTROL Reset Event Merge ID]** action type is used.
-
 ## Identity map {#identity-map}
 
 An identity map allows you to establish identities for the visitor of your web page. An identity map consists of namespaces, like _phone_ or _email_, with each namespace containing one or more identifiers. For example, if the individual on your website has provided two phone numbers, your phone namespace should contain two identifiers.
