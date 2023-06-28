@@ -41,14 +41,14 @@ Read through the sections below which include links to further documentation, to
 
 As you complete the steps to implement the use case, you will make use of the following Real-Time CDP functionality and UI elements (listed in the order in which you will use them). Make sure that you have the necessary attribute-based access control permissions for all these areas or ask your system administrator to grant you the necessary permissions. 
 
-* Identities
-* Schemas
-* Data governance labels
-* Datasets
-* Sources
-* Profiles
-* Audiences
-* Destinations
+* [Identities](/help/identity-service/namespaces.md)
+* [Schemas](/help/xdm/home.md)
+* [Data usage labels](/https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en)
+* [Datasets](/help/catalog/datasets/overview.md)
+* [Sources](/help/sources/home.md)
+* Profiles (link to prospect profiles)
+* Audiences (link to prospect audiences)
+* [Destinations](/help/destinations/home.md)
 
 ### License third-party profile details from the partner {#license-profiles-from-partner}
 
@@ -94,19 +94,19 @@ Next, you must select the partnerID identity that you created earlier as the pri
 
 ![Select previously configured Partner ID as primary identity in the schema.](/help/rtcdp/assets/partner-data/select-partner-id-as-primary-identity.gif)
 
-Note that the schema is not yet enabled for profile. Toggle the profile button to enable this schema for inclusion in the profile service. 
+Note that the schema is not yet enabled for profile. Toggle the profile button to enable this schema for inclusion in the profile service. For more information about enabling the schema for use in Real-Time Customer Profile, read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md#profile) 
 
 ![Enable schema for profile.](/help/rtcdp/assets/partner-data/enable-schema-for-profile.png)
 
-MAY NEED A LINK UPDATE AND A SCREEN UPDATE WITH ENABLE SCHEMA FOR PROFILE
-
 #### Add the third-party data governance label to all fields in the schema
 
-You now need to the third-party data governance label to all of the fields that make up the schema. To do this, follow the steps below: 
+You now need to the third-party data governance label to all of the fields that make up the schema. Add the third-party label so that {brief reason}. Find more information about third-party data governance labels (add link to docs by Jordan)
 
-1. Select the Labels tab.
+To do this, follow the steps below: 
+
+1. Navigate to the schema you created and select the **[!UICONTROL Labels]** tab.
 2. Select all the fields in this schema using the checkbox button at the very top and then click the pencil icon on the right to apply data governance labels to this schema. 
-3. Select the Partner Ecosystem Label from the categories on the left. 
+3. Select the **[!UICONTROL Partner Ecosystem]** Label from the categories on the left. 
 4. Choose the label called **[!UICONTROL Third Party]** and select Save.
 5. Notice that all the fields in the schema now carry the label you selected in the previous step.   
 
@@ -126,9 +126,25 @@ After you have your data model prepared for managing prospect profiles, it is ti
 
 #### Create a dataset and load sample prospect data
 
-Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Datasets]** and select **[!UICONTROL Create dataset]**.
+To load some sample data and populate prospect profiles, create a dataset and upload a file that you received from the data partner. Complete the steps below:
 
+1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Datasets]** and select **[!UICONTROL Create dataset]**.
+2. Select Create dataset from schema
+3. Select the schema that you created in a previous step
+4. Give your dataset a name and optionally a description.
+5. Select **[!UICONTROL Finish]**.
 
+![A recording of the steps to create a dataset for prospect profiles.](/help/rtcdp/assets/partner-data/create-dataset-for-prospect-profiles.gif)
+
+Note that similar to the step to create a schema, you need to enable the dataset to be included in the Real-Time Customer Profile. For more information about enabling the dataset for use in Real-Time Customer Profile, read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md#profile) 
+
+![Enable dataset for profile.](/help/rtcdp/assets/partner-data/enable-dataset-for-profile.png)
+
+To load a file that you received from the partner into the dataset, select the dataset, scroll down in the right rail, and select **[!UICONTROL Add data]**. You can drag drop your file or select **[!UICONTROL Choose files]** to navigate to the file location and select it. 
+
+![Add file to dataset.](/help/rtcdp/assets/partner-data/add-file-to-dataset.png)
+
+After loading the list of profiles from the data partner into Real-Time CDP, proceed to the [Inspect the loaded prospect profiles section](#inspect-profiles) to check that the prospect profiles are populating in the UI.
 
 #### Ingest prospect data through source connectors
 
@@ -139,21 +155,45 @@ Some recommended source connectors for this purpose might be:
 * [Amazon S3](/help/sources/connectors/cloud-storage/s3.md)
 * [SFTP](/help/sources/connectors/cloud-storage/sftp.md)
 
-After loading the list of profiles from the data partner into Real-Time CDP, check that the prospect profiles are populating in the UI. (**Coming soon**) Read more about prospect profiles.
+After loading the list of profiles from the data partner into Real-Time CDP, proceed to the next section to check that the prospect profiles are populating in the UI.
 
-### Create prospect audiences 
+#### Inspect the loaded prospect profiles {#inspect-profiles}
 
-Use the segmentation functionality in Real-Time CDP to create audiences from your prospect profiles. Use desired segmentation rules to create tailored audiences. (**Coming soon**) Read more about prospect audiences.
+To see the list of prospect profiles, navigate to **[!UICONTROL Prospects]** > **[!UICONTROL Profiles]** in the left rail.
 
-### Activate prospect profiles to destinations
+It might take up to two hours for the prospect profiles you just loaded into Real-Time CDP to show in the Prospect Profile Browse view. If the page says "There are no prospect profiles to browse right now", please try again after some time. After some wait, prospect profiles should start to show up in the browse view. 
 
-Make use of the prospect audiences by exporting them to destinations, so that the data partner can then further activate them to desired platforms, for your messaging to reach the prospected audiences. 
+>[!TIP]
+>
+>Note the presence of the **[!UICONTROL Identity Namespace]** column. If you're working with multiple data vendors, use this column to infer the origin of prospect profiles. 
+
+![View of the prospect profiles loaded into Real-Time CDP.](/help/rtcdp/assets/partner-data/prospect-profiles-view.png)
+
+You can also select any prospect profile for further inspection, as shown below.
+
+![View of how to inspect prospect profiles.](/help/rtcdp/assets/partner-data/inspect-prospect-profile.gif)
+
+(**Coming soon**) Read more about prospect profiles.
+
+### Create prospect audiences {#create-prospect-audiences}
+
+Use the segmentation functionality in Real-Time CDP to create audiences from your prospect profiles. Use desired segmentation rules to create tailored audiences. 
+
+To get started and build audiences composed of prospect profiles, navigate to **[!UICONTROL Prospects]** > **[!UICONTROL Audiences]**.
+
+![View of prospect audiences.](/help/rtcdp/assets/partner-data/prospect-audiences.png)
 
 Note that the audience building experience for prospect profiles differs from the experience to build audiences from your known, first party customers. This view is limited to: 
 
 * Attributes from the prospect class that you created earlier. 
 * Batch profile evaluation only. 
 * Does not support building audiences based on time-series events. 
+
+(**Coming soon**) Read more about prospect audiences.
+
+### Activate prospect profiles to destinations
+
+Make use of the prospect audiences by exporting them to destinations, so that the data partner can then further activate them to desired platforms, for your messaging to reach the prospected audiences. 
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 
