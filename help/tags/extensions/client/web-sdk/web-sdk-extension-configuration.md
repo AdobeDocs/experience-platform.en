@@ -46,7 +46,7 @@ The [!UICONTROL Edge Domain] is the domain that the Adobe Experience Platform ex
 
 When a request is sent to the Adobe Experience Platform Edge Network, a datastream ID is used to reference the server-side configuration. You can update the configuration without having to make code changes on your website.
 
-See the guide on [datastreams](../datastreams/overview.md) for more information.
+See the guide on [datastreams](../../../../edge/datastreams/overview.md) for more information.
 
 
 ## [!UICONTROL Privacy]
