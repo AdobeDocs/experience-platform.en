@@ -40,10 +40,6 @@ Notice that when you open certain fields of your schema, such as `web.webPageDet
 
 ## Variable {#variable}
 
->[!IMPORTANT]
->
->This is currently a beta functionality and is subject to change. Future versions may contain breaking changes.
-
 Another way to create XDM objects is using the **[!UICONTROL Variable]** data element. While the XDM object data element is created when it is referenced, such as inside a `sendEvent` command, the **[!UICONTROL Variable]** data element can be updated via [!UICONTROL Update variable] actions. To use the data element, select the correct Adobe Experience Platform sandbox and schema.
 
 ![UI image showing the Create Data Element screen.](assets/variable-data-element.png)

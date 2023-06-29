@@ -31,10 +31,6 @@ In this action, you are also provided with an optional field to include an Ident
 
 ## Update variable {#update-variable}
 
->[!IMPORTANT]
->
->This is currently a beta functionality and is subject to change. Future versions may contain breaking changes.
-
 Use this action to modify an XDM object as a result of an event. This action is intended to build up an object that can later be referenced from a **[!UICONTROL Send event]** action, to record the event XDM object.
 
 In order to use this action type you must have defined a [variable](data-element-types.md#variable) data element. Once you choose a variable data element to modify, an editor appears, similar to the editor for the [XDM object](data-element-types.md#xdm-object) data element.
