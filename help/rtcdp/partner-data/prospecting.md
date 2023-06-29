@@ -43,7 +43,7 @@ As you complete the steps to implement the use case, you will make use of the fo
 
 * [Identities](/help/identity-service/namespaces.md)
 * [Schemas](/help/xdm/home.md)
-* [Data usage labels](/https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en)
+* [Data usage labels](/help/data-governance/labels/overview.md)
 * [Datasets](/help/catalog/datasets/overview.md)
 * [Sources](/help/sources/home.md)
 * Profiles (link to prospect profiles)
