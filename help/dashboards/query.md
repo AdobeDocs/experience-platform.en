@@ -58,7 +58,7 @@ The `adwh_dim_merge_policies` dataset contains the following fields:
 
 This dataset can be explored using the Query Editor UI in Experience Platform. To learn more about using the Query Editor, refer to the [Query Editor UI guide](../query-service/ui/user-guide.md).
 
-### Segment metadata dataset
+### Segment metadata dataset 
 
 There is a segment metadata dataset available in the data lake containing metadata for each of your organization's segments.
 
