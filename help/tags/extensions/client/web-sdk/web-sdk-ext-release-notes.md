@@ -8,6 +8,10 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## Version 2.19.0 - June 21, 2023
+
+* The **[!UICONTROL Variable]** data element and **[!UICONTROL Update Variable]** actions are now generally available.
+
 ## Version 2.18.0 - May 18, 2023
 
 * Contains version 2.17.0 of the Adobe Experience Platform Web SDK.
@@ -17,7 +21,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 **New features**
 
 * Contains version 2.16.0 of the Adobe Experience Platform Web SDK.
-* Added support for [datastream configuration overrides](../datastreams/overrides.md).
+* Added support for [datastream configuration overrides](../../../../edge/datastreams/overrides.md).
 * Add deprecation notice to the `datasetId` option on the `sendEvent` command.
 
 
@@ -34,7 +38,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 **New features**
 
 * (Beta) Added **[!UICONTROL Update variable]** action and **[!UICONTROL Variable]** data element.
-* Added configuration for [`onBeforeLinkClickSend`](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) callback function.
+* Added configuration for [`onBeforeLinkClickSend`](../../../../edge/fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) callback function.
 
 **Fixes and improvements**
 
@@ -112,7 +116,7 @@ Contains version 2.8.0 of the Adobe Experience Platform Web SDK library.
 
 Contains version 2.7.0 of the Adobe Experience Platform Web SDK library.
 
-* Additional information from Experience Edge are available in the Send Event Complete event, including `inferences` and `destinations`. The format of these properties may change as these features are currently rolling out as part of a Beta. For more information, see [Tracking Events.](../fundamentals/tracking-events.md)
+* Additional information from Experience Edge are available in the Send Event Complete event, including `inferences` and `destinations`. The format of these properties may change as these features are currently rolling out as part of a Beta. For more information, see [Tracking Events.](../../../../edge/fundamentals/tracking-events.md)
 
 ## Version 2.7.3 - September 7, 2021
 
