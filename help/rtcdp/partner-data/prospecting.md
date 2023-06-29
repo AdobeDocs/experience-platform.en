@@ -37,7 +37,7 @@ As you consider reaching out to and acquiring new customers by using partner dat
 
 Read through the sections below which include links to further documentation, to complete each of the steps in the high-level overview above.
 
-### UI functionality and elements that you will use
+### UI functionality and elements that you will use {#ui-functionality-and-elements}
 
 As you complete the steps to implement the use case, you will make use of the following Real-Time CDP functionality and UI elements (listed in the order in which you will use them). Make sure that you have the necessary attribute-based access control permissions for all these areas or ask your system administrator to grant you the necessary permissions. 
 
@@ -107,7 +107,7 @@ To do this, follow the steps below:
 1. Navigate to the schema you created and select the **[!UICONTROL Labels]** tab.
 2. Select all the fields in this schema using the checkbox button at the very top and then click the pencil icon on the right to apply data governance labels to this schema. 
 3. Select the **[!UICONTROL Partner Ecosystem]** Label from the categories on the left. 
-4. Choose the label called **[!UICONTROL Third Party]** and select Save.
+4. Choose the label called **[!UICONTROL Third Party]** and select **[!UICONTROL Save]**.
 5. Notice that all the fields in the schema now carry the label you selected in the previous step.   
 
 >[!SUCCESS]
@@ -148,7 +148,7 @@ After loading the list of profiles from the data partner into Real-Time CDP, pro
 
 #### Ingest prospect data through source connectors
 
-Ingest data from the partner through a source connector to bring the list of prospect profiles into Real-Time CDP.
+You can set up recurrent file imports to ingest data from the partner through a source connector and bring the list of prospect profiles into Real-Time CDP.
 
 Some recommended source connectors for this purpose might be: 
 
@@ -161,7 +161,7 @@ After loading the list of profiles from the data partner into Real-Time CDP, pro
 
 To see the list of prospect profiles, navigate to **[!UICONTROL Prospects]** > **[!UICONTROL Profiles]** in the left rail.
 
-It might take up to two hours for the prospect profiles you just loaded into Real-Time CDP to show in the Prospect Profile Browse view. If the page says "There are no prospect profiles to browse right now", please try again after some time. After some wait, prospect profiles should start to show up in the browse view. 
+Note that it might take up to two hours for the prospect profiles you just loaded into Real-Time CDP to show in the **[!UICONTROL Browse]** view of the Prospect Profile screen. If the page displays the message "There are no prospect profiles to browse right now", please try again after some time. After some wait, prospect profiles should start to show up in the **[!UICONTROL Browse]** view. 
 
 >[!TIP]
 >
@@ -191,7 +191,7 @@ Note that the audience building experience for prospect profiles differs from th
 
 (**Coming soon**) Read more about prospect audiences.
 
-### Activate prospect profiles to destinations
+### Activate prospect profiles to destinations {#activate-to-destinations}
 
 Make use of the prospect audiences by exporting them to destinations, so that the data partner can then further activate them to desired platforms, for your messaging to reach the prospected audiences. 
 
