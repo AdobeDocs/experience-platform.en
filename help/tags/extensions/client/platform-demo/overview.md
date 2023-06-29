@@ -11,7 +11,7 @@ exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
 
 >[!NOTE]
 >
->This extension has been deprecated in favor of the [Adobe Experience Platform Web SDK](../sdk/overview.md).
+>This extension has been deprecated in favor of the [Adobe Experience Platform Web SDK](../web-sdk/overview.md).
 
 The features of this extension are being ported over to new extension. Here is a quick comparison of current features. 
 

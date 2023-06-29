@@ -21,7 +21,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 **New features**
 
 * Contains version 2.16.0 of the Adobe Experience Platform Web SDK.
-* Added support for [datastream configuration overrides](../datastreams/overrides.md).
+* Added support for [datastream configuration overrides](../../../../edge/datastreams/overrides.md).
 * Add deprecation notice to the `datasetId` option on the `sendEvent` command.
 
 
@@ -38,7 +38,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 **New features**
 
 * (Beta) Added **[!UICONTROL Update variable]** action and **[!UICONTROL Variable]** data element.
-* Added configuration for [`onBeforeLinkClickSend`](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) callback function.
+* Added configuration for [`onBeforeLinkClickSend`](../../../../edge/fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) callback function.
 
 **Fixes and improvements**
 
@@ -116,7 +116,7 @@ Contains version 2.8.0 of the Adobe Experience Platform Web SDK library.
 
 Contains version 2.7.0 of the Adobe Experience Platform Web SDK library.
 
-* Additional information from Experience Edge are available in the Send Event Complete event, including `inferences` and `destinations`. The format of these properties may change as these features are currently rolling out as part of a Beta. For more information, see [Tracking Events.](../fundamentals/tracking-events.md)
+* Additional information from Experience Edge are available in the Send Event Complete event, including `inferences` and `destinations`. The format of these properties may change as these features are currently rolling out as part of a Beta. For more information, see [Tracking Events.](../../../../edge/fundamentals/tracking-events.md)
 
 ## Version 2.7.3 - September 7, 2021
 
