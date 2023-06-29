@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;media edge;popular topics;date range
 solution: Experience Platform
 title: Getting started with Media Edge APIs
 description: Media Edge APIs Trouble-shooting guide 
@@ -16,11 +15,11 @@ To help troubleshoot unsuccessful responses, errors are accompanied by a respons
 
 ## Validating session starts
 
-Most problems in building Session Start requests results in a 207 Multi-Status response.
+Most problems with Session Start requests result in a 207 Multi-Status response.
 The payload is similar to Experience Edge Network Server API's non-fatal errors. All
 Media Analytics errors have the following type:  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. The numbers displayed in the response correspond to the error status.
 
-The following example shows a response body for a Session Start request that both lacks a mandatory field, and has an invalid one.
+The following example shows a response body for a Session Start request that both lacks a mandatory field and has an invalid one.
 
 ```
 {
