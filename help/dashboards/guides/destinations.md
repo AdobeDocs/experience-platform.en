@@ -92,8 +92,6 @@ The number of mapped audiences shown in the [!UICONTROL Audience count] column i
 
 Select the name of a destination from the list shown on the widget to navigate to the destination details for that particular destination. You can also select **[!UICONTROL View All]** to navigate to the **[!UICONTROL Browse]** tab and then select the name of a destination to view its details.
 
-<!-- Update image below -->
-
 ![The Overview tab of the Destinations dashboard with the Most used destinations widget highlighted.](../images/destinations/most-used-destinations.png)
 
 ### [!UICONTROL Recently created destinations] {#recently-created-destinations}
@@ -128,8 +126,6 @@ Selecting the name of an audience from the list shown on the widget takes you to
 
 For more information on working with audiences in Experience Platform, please refer to the [Segmentation Service overview](../../segmentation/home.md).
 
-<!-- Update image below -->
-
 ![The Overview tab of the Destinations dashboard with the Recently activated audiences widget highlighted.](../images/destinations/recently-activated-audiences.png)
 
 ### [!UICONTROL Recently activated audiences by destination] {#recently-activated-audiences-by-destination}
@@ -144,8 +140,6 @@ The **[!UICONTROL Recently activated audiences by destination]** widget displays
 This widget contains two metrics: the audiences name and the date that the audiences was last activated to the destination. The data displayed is correct as of the last daily snapshot. 
 
 You can view an audience's details by selecting the name of the audience from the list shown.
-
-<!-- Update image below -->
 
 ![The Recently activated audiences by destination widget.](../images/destinations/recently-activated-audiences-by-destination.png)
 
@@ -164,13 +158,9 @@ A time period for the audience trend over the past 30 days, 90 days, or 12 month
 
 The second dropdown menu lists every available audience that can be sent to the destination account chosen at the top of the dashboard. 
 
-<!-- update image below. Y axis should read Audience size -->
-
 ![The Audience size trend widget.](../images/destinations/audience-size-trend.png)
 
 The **[!UICONTROL Audience size trend]** widget provides a [!UICONTROL Captions] button in the top right of the widget. Select **[!UICONTROL Captions]** to open the automatic captions dialog. A machine learning model automatically generates captions to describe the key trends and important events by analyzing the chart and audience data.
-
-<!-- update image below. Y axis should read Audience size -->
 
 ![The automatic captions dialog for the Audience size trend widget.](../images/destinations/audience-size-trend-captions.png)
 
@@ -186,8 +176,6 @@ The **[!UICONTROL Unmapped audiences by identity]** widget lists the top five **
 The destination ID dropdown filters your available audiences. The filter IDs listed in the dropdown change depending on the destination account selected at the top of the overview page.
 
 The identities column counts the number of source IDs within the audience that could map to the ID chosen in the widget ID dropdown. 
-
-<!-- Update image below -->
 
 ![The Unmapped audiences by identity widget.](../images/destinations/unmapped-audiences-by-identity.png)
 
@@ -216,8 +204,6 @@ The **[!UICONTROL Mapped audiences by identity]** widget highlights at a glance,
 The **[!UICONTROL Common audiences]** widget provides a list of the top five audiences activated across the destination account chosen at the top of the page, and the destination selected in the widget dropdown. The list of audiences is ordered according to how recently they were activated. The most recently activated audience is displayed at the top. 
 
 The [!UICONTROL AUDIENCE SIZE] column provides the total profile count of each listed audience.
-
-<!-- Update image below -->
 
 ![The Common audiences widget.](../images/destinations/common-audiences.png)
 
@@ -249,8 +235,6 @@ If an audience within the [!UICONTROL Mapped audience health] widget is deviatin
 >[!NOTE]
 >
 >The default size of the Mapped audience health widget can obstruct the table information. Please modify the size of the widget to improve the legibility of your mapped audience names and column titles. See the modify dashboards documentation for guidance on [how to resize a widget](../customize/modify.md).
-
-<!-- Update image below -->
 
 ![The Mapped audience health widget.](../images/destinations/mapped-audience-health.png)
 
@@ -298,8 +282,6 @@ This widget provides a single metric for the total number of audiences activated
 ![The Activated audiences widget.](../images/destinations/activated-audiences.png)
 
 Select **[!UICONTROL Audiences]** to navigate to the details page of the destinations dashboard. The [!UICONTROL Activation data] tab displays a list of audiences that have been mapped to the destination, including their start date and end date (if applicable), and other relevant information for the data export, such as export type, schedule, and frequency. To view the details about a particular audience, select its name from the [!UICONTROL Audience Name] column. 
-
-<!-- Update image below -->
 
 ![The destinations dashboard details page with Activation data tab highlighted.](../images/destinations/activation-data-tab.png)
 
