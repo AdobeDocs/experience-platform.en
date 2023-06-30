@@ -44,7 +44,7 @@ To help you better understand how and when you should use the Adobe Campaign Man
 
   >[!NOTE]
   >
-  >Profile attributes sync is available for profiles that are already present in the Adobe Campain database.
+  >Profile attributes sync is available for profiles that are already present in the Adobe Campaign database.
 
 [Learn more on Adobe Campaign integration with Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
 
