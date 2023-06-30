@@ -63,7 +63,7 @@ Refer to the table below for information about the destination export type and f
 >id="platform_destinations_target_datastream"
 >title="About datastream IDs"
 >abstract="This option determines in which data collection datastream the segments will be included. The drop-down menu shows only datastreams which have the Target configuration enabled. To use edge segmentation, you must select a datastream ID. Selecting None disables all use cases that use edge segmentation."
->additional-url="<https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters>" text="Learn more about selecting datastreams"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Learn more about selecting datastreams"
 
 >[!IMPORTANT]
 > 
@@ -79,7 +79,7 @@ Adobe Experience Platform automatically connects to your company's Adobe Target 
 >id="platform_destinations_target_workspace"
 >title="About Adobe Target Workspaces"
 >abstract="Select the Adobe Target workspace to which audiences will be shared. You can select a single workspace for each Adobe Target connection. Upon activation, audiences are routed to the selected workspace while following the applicable Experience Platform data usage labels."
->additional-url="<https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en>" text="Learn more about Adobe Target workspaces"
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en" text="Learn more about Adobe Target workspaces"
 
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
