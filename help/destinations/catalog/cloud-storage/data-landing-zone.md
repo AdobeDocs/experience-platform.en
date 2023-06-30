@@ -65,6 +65,10 @@ You must use the Platform APIs to retrieve your [!DNL Data Landing Zone] credent
 GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 ```
 
+| Query parameters | Description |
+| --- | --- |
+| `dlz_destination` |  The `dlz_destination` type allows the API to distinguish a landing zone destination container from the other types of containers that are available to you. |
+
 **Request**
 
 The following request example retrieves credentials for an existing landing zone.
@@ -110,9 +114,9 @@ You can also refresh your credentials when desired. You can update your `SASToke
 POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh
 ```
 
-| Headers | Description |
+| Query parameters | Description |
 | --- | --- |
-| `user_drop_zone` |  The `user_drop_zone` type allows the API to distinguish a landing zone container from the other types of containers that are available to you. |
+| `dlz_destination` |  The `dlz_destination` type allows the API to distinguish a landing zone destination container from the other types of containers that are available to you. |
 | `refresh` | The `refresh` action allows you to reset your landing zone credentials and automatically generate a new `SASToken`. |
 
 {style="table-layout:auto"}
