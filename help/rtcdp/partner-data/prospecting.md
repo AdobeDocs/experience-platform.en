@@ -20,18 +20,21 @@ Use third party data support in Real-Time CDP to expand your profile base with p
 As you consider reaching out to and acquiring new customers by using partner data support in Real-Time CDP, consider the following prerequisites in your planning process:
 
 * What is the cadence with which you expect partner-provided profiles to be ingested into Real-Time CDP and refreshed?
+* What identities do your downstream destinations require?
+* Ensure that the identifiers ingested are actionable downstream
+* Is the partner data that you are ingesting tied to a widely accepted durable identifier, such as Personal Identifiable Information (PII), hashed PII, or a partner identifier?
+* What data usage policies do you need be aware of from the partner perspective and from your own legal, privacy, or compliance team?
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
 ![Customer prospecting use case high-level visual overview.](/help/rtcdp/assets/partner-data/prospecting-use-case-steps.png)
 
-1. As a **customer**, you license prospect profiles from the **data partner**.
-2. The **partner** builds a prospect list to your needs.
-3. As a **customer**, you extend your profile data and governance model to ingest the **partner**-provided list of prospect profiles.
-4. As a **customer**, you load the list of prospect profiles into Real-Time CDP.
-5. As a **customer**, you build focused audiences from the list of prospect profiles.
-6. As a **customer**, you activate segments to destinations which accept the Partner ID used for the profiles.
-7. The **partner** activates the audiences exported to them to destinations in their ecosystem.
+1. As a **customer**, you license prospect profiles from one or more **data partners** to help drive top of the funnel customer acquisition.
+2. As a **customer**, you extend your profile data and governance model to ingest the **partner**-provided list of prospect profiles.
+3. As a **customer**, you load prospect profiles into Real-Time CDP and build governance policies to ensure responsible use.
+4. As a **customer**, you build focused audiences from the list of prospect profiles.
+5. As a **customer**, you activate prospect audiences to destinations which are accepting of the identities available in your prospect list.
+6. If needed, work with the **data partner** for last-mile activation of audiences to desired paid-media destinations.
  
 ## How to achieve the use case: Step-by-step instructions {#step-by-step-instructions}
 
@@ -53,10 +56,6 @@ As you complete the steps to implement the use case, you will make use of the fo
 ### License third-party profile details from the partner {#license-profiles-from-partner}
 
 This step is covered in the [prerequisites](#prerequisites-and-planning) and Adobe assumes that you have the right contractual agreements in place with trusted data vendors to ingest prospect profiles provided by the data partner.
-
-### The partner prepares a list of prospect profiles for you {#partner-builds-prospect-list}
-
-Add brief information for this step. 
 
 ### Extend your profile data and governance model to accommodate partner-provided prospect profiles {#extend-governance-model}
 
