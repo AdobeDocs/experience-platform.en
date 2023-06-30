@@ -121,7 +121,17 @@ Selecting **[!UICONTROL Create audience]** will let you create an audience. To l
 
 ### Filtering and tagging {#manage-audiences}
 
-To improve your work efficiency, you can add user-defined tags to audiences, put audiences in folders, and filter the displayed audiences.
+To improve your work efficiency, you can search for existing audiences, add user-defined tags to audiences, put audiences in folders, and filter the displayed audiences.
+
+**Search** {#search}
+
+You can search your existing audiences in up to 9 different languages with [!DNL Unified Search]. 
+
+To use [!DNL Unified Search], add the term you want to search in the highlighted search bar.
+
+![The search bar is highlighted.](../images/ui/overview/browse-audience-search.png)
+
+For more information about [!DNL Unified Search], including supported features, please read the [Unified Search documentation](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
 
 **Tags** {#tags}
 
@@ -131,13 +141,20 @@ To add a tag, select **[!UICONTROL Manage tags]** on the audience you want to ta
 
 ![The [!UICONTROL Manage tags] button is selected for a specified audience.](../images/ui/overview/browse-manage-tags.png)
 
-The **[!UICONTROL Manage tags]** popover appears. On this popover, you can either select an already defined tag or create your own tag to attach to the audience.
+The **[!UICONTROL Manage tags]** popover appears. On this popover, you can either select a categorized tag or an uncategorized tag.
 
-![The [!UICONTROL Manage tags] popover is displayed. The options to choose an already existing tag or to create a new tag are highlighted.](../images/ui/overview/create-tag.png)
+| Tag type | Description |
+| -------- | ----------- |
+| Categorized | A tag that is created and managed by your organization's administrators. |
+| Uncategorized | A tag that is created within the [!UICONTROL Manage tags] popover. Anyone can create or manage these types of tags. |
+
+![The [!UICONTROL Manage tags] popover is displayed. The options to choose a categorized or uncategorized are highlighted.](../images/ui/overview/create-tag.png)
 
 After adding all the tags you want to attach to the audience, select **[!UICONTROL Save]**.
 
 ![On the [!UICONTROL Manage tags] popover, the added tags are highlighted.](../images/ui/overview/created-tags.png)
+
+For more information on creating and managing tags, please read the [Managing Tags guide](../../administrative-tags/ui/managing-tags.md).
 
 **Folders** {#folders}
 
