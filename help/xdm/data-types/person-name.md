@@ -16,9 +16,9 @@ In addition, the data type provides a number of optional properties that can be 
 | Property | Description |
 | --- | --- |
 | `courtesyTitle` | An abbreviation of a person's title, honorific, or salutation (such as `Mr.`, `Miss.`, or `Dr.`). |
-| `firstName` | The first segment of the name in the writing order most commonly accepted in the language of the name. |
+| `firstName` | The first section of the name in the writing order most commonly accepted in the language of the name. |
 | `fullName` | The full name of the person, in the writing order most commonly accepted in the language of the name. |
-| `lastName` | The last segment of the name in the writing order most commonly accepted in the language of the name. |
+| `lastName` | The last section of the name in the writing order most commonly accepted in the language of the name. |
 | `middleName` | Middle, alternative, or additional names supplied between the first name and last name. |
 | `suffix` | A group of letters provided after a person's name to provide additional information (such as `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III`, and so on). |
 
