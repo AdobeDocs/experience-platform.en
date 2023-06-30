@@ -69,6 +69,8 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 | --- | --- |
 | `dlz_destination` |  The `dlz_destination` type allows the API to distinguish a landing zone destination container from the other types of containers that are available to you. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request example retrieves credentials for an existing landing zone.
