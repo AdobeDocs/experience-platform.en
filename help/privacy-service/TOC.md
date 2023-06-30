@@ -15,7 +15,7 @@ feature: Privacy
 * [Privacy JS Library overview](./js-library.md)
 * Privacy Service API {#api}
   * [Overview](./api/overview.md)
-  * [Getting started](./api/getting-started.md)
+  * [Authenticate and access the Privacy Service API](./api/getting-started.md)
   * [Privacy jobs](./api/privacy-jobs.md)
   * [Consent](./api/consent.md)
   * [Appendix](./api/appendix.md)

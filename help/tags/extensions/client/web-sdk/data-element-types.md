@@ -8,10 +8,6 @@ exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
 
 After you set your [action types](action-types.md) in the [Adobe Experience Platform Web SDK tag extension](web-sdk-extension-configuration.md), you must configure your data element types. This page describes the available data element types.
 
-## Event merge ID {#event-merge-id}
-
-This data element provides an event merge ID when used. No configuration is needed for this data element. The data element that is provided stays the same until the visitor leaves the page or until the **[!UICONTROL Reset Event Merge ID]** action type is used.
-
 ## Identity map {#identity-map}
 
 An identity map allows you to establish identities for the visitor of your web page. An identity map consists of namespaces, like _phone_ or _email_, with each namespace containing one or more identifiers. For example, if the individual on your website has provided two phone numbers, your phone namespace should contain two identifiers.
@@ -22,13 +18,13 @@ In the [!UICONTROL Identity map] data element, you will provide the following pi
 * **[!UICONTROL Authenticated state]**: A selection indicating whether the visitor is authenticated.
 * **[!UICONTROL Primary]**: A selection indicating whether the identifier should be used as the primary identifier for the individual. If no identifier is marked as primary, the ECID will be used as the primary identifier.
 
-![UI image showing the Edit Data Element screen.](./assets/identity-map-data-element.png)
+![UI image showing the Edit Data Element screen.](assets/identity-map-data-element.png)
 
 You should not provide an [!DNL ECID] when building an identity map. When using the SDK, an [!DNL ECID] is automatically generated on the server and included in the identity map.
 
 The identity map data element is often used in tandem with the [[!UICONTROL XDM object] data element type](#xdm-object) and the [[!UICONTROL Set consent] action type](action-types.md#set-consent).
 
-Read more about [Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Read more about [Adobe Experience Platform Identity Service](../../../../identity-service/home.md).
 
 ## XDM object {#xdm-object}
 
@@ -42,11 +38,7 @@ Notice that when you open certain fields of your schema, such as `web.webPageDet
 >
 >Only fill in the pieces of information you are interested in collecting. Anything that is not filled in is omitted when the data is sent to the solutions.
 
-## (Beta) Variable {#variable}
-
->[!IMPORTANT]
->
->This is currently a beta functionality and is subject to change. Future versions may contain breaking changes.
+## Variable {#variable}
 
 Another way to create XDM objects is using the **[!UICONTROL Variable]** data element. While the XDM object data element is created when it is referenced, such as inside a `sendEvent` command, the **[!UICONTROL Variable]** data element can be updated via [!UICONTROL Update variable] actions. To use the data element, select the correct Adobe Experience Platform sandbox and schema.
 
