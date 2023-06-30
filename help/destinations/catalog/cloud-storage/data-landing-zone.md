@@ -209,10 +209,6 @@ In the **[!UICONTROL Scheduling]** step, you can [set up the export schedule](/h
 
 In the **[!UICONTROL Mapping]** step, you can select which attribute and identity fields to export for your profiles. You can also select to change the headers in the exported file to any friendly name that you wish. For more information, view the [mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in the activate batch destinations UI tutorial.
 
-## Perform API operations on your Data Landing Zone location {#api-operations}
-
-You cam perform various API operations to explore the contents of your Data Landing Zone, download files, and more. 
-
 ## (Beta) Export datasets {#export-datasets}
 
 This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
