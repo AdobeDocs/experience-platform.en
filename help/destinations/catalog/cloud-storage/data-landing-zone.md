@@ -55,7 +55,7 @@ After selecting your connection method, you must provide a **display name** and 
 
 >[!BEGINSHADEBOX]
 
-### Retrieve the credentials for your [!DNL Data Landing Zone]
+### Retrieve the credentials for your [!DNL Data Landing Zone] {#retrieve-dlz-credentials}
 
 You must use the Platform APIs to retrieve your [!DNL Data Landing Zone] credentials. The API call to retrieve your credentials is described below. For information about getting the required values for your headers, refer the [Getting started with Adobe Experience Platform APIs](/help/landing/api-guide.md) guide.
 
@@ -106,7 +106,7 @@ The following response returns the credential information for your landing zone,
 
 {style="table-layout:auto"}
 
-## Update [!DNL Data Landing Zone] credentials
+### Update [!DNL Data Landing Zone] credentials {#update-dlz-credentials}
 
 You can also refresh your credentials when desired. You can update your `SASToken` by making a POST request to the `/credentials` endpoint of the [!DNL Connectors] API.
 
