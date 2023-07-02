@@ -9,7 +9,7 @@ exl-id: 6052603b-1537-4dc7-9278-969d892ca15b
 >
 >The extension is intended to be used with the Adobe Experience Platform Web SDK extension. To see information on the version intended to be used with AppMeasurement, refer to the overview on the [Common Analytics Plugins extension](../plugins/overview.md).
 
-This document covers how to configure the Web SDK Plugins tag extension and use it to augment the [Adobe Experience Platform Web SDK extension](../sdk/overview.md).
+This document covers how to configure the Web SDK Plugins tag extension and use it to augment the [Adobe Experience Platform Web SDK extension](../web-sdk/overview.md).
 
 ## Configure the Common Web SDK Plugins extension
 

@@ -18,7 +18,7 @@ When a [!UICONTROL Send event complete] event triggers a rule, it provides data 
 
 Your rule for handling data returned from Edge Network might look something like this:
 
-![](./assets/send-event-complete.png)
+![](assets/send-event-complete.png)
 
 Below are some examples of how to perform certain tasks using the [!UICONTROL Custom code] action in this rule.
 
