@@ -34,7 +34,7 @@ In the Experience Platform UI, select **[!UICONTROL Segments]** in the left navi
 
 The **[!UICONTROL Segments]** dashboard outlines key metrics related to your organization's segment data. 
 
-To learn more, visit the [segment dashboard guide](../../dashboards/guides/segments.md).
+To learn more, visit the [segment dashboard guide](../../dashboards/guides/audiences.md).
 
 ![The segment dashboard is displayed. It shows various widgets, including the audience size, profiles by identity, identity overlay, and the audience size change trend.](../../dashboards/images/segments/dashboard-overview.png)
 
