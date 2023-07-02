@@ -18,13 +18,13 @@ In the [!UICONTROL Identity map] data element, you will provide the following pi
 * **[!UICONTROL Authenticated state]**: A selection indicating whether the visitor is authenticated.
 * **[!UICONTROL Primary]**: A selection indicating whether the identifier should be used as the primary identifier for the individual. If no identifier is marked as primary, the ECID will be used as the primary identifier.
 
-![UI image showing the Edit Data Element screen.](./assets/identity-map-data-element.png)
+![UI image showing the Edit Data Element screen.](assets/identity-map-data-element.png)
 
 You should not provide an [!DNL ECID] when building an identity map. When using the SDK, an [!DNL ECID] is automatically generated on the server and included in the identity map.
 
 The identity map data element is often used in tandem with the [[!UICONTROL XDM object] data element type](#xdm-object) and the [[!UICONTROL Set consent] action type](action-types.md#set-consent).
 
-Read more about [Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Read more about [Adobe Experience Platform Identity Service](../../../../identity-service/home.md).
 
 ## XDM object {#xdm-object}
 
@@ -39,10 +39,6 @@ Notice that when you open certain fields of your schema, such as `web.webPageDet
 >Only fill in the pieces of information you are interested in collecting. Anything that is not filled in is omitted when the data is sent to the solutions.
 
 ## Variable {#variable}
-
->[!IMPORTANT]
->
->This is currently a beta functionality and is subject to change. Future versions may contain breaking changes.
 
 Another way to create XDM objects is using the **[!UICONTROL Variable]** data element. While the XDM object data element is created when it is referenced, such as inside a `sendEvent` command, the **[!UICONTROL Variable]** data element can be updated via [!UICONTROL Update variable] actions. To use the data element, select the correct Adobe Experience Platform sandbox and schema.
 

@@ -90,8 +90,16 @@ solution: Data Collection
       * [Release notes](./extensions/client/id-service/release-notes.md)
     * Adobe Experience Platform Demo {#platform-demo}
       * [Overview](./extensions/client/platform-demo/overview.md)
-    * Adobe Experience Platform Web SDK {#sdk}
-      * [Overview](./extensions/client/sdk/overview.md)
+    * Adobe Experience Platform Web SDK {#web-sdk}
+      * [Overview](./extensions/client/web-sdk/overview.md)
+      * [Configure the Web SDK tag extension](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
+      * [Event types](./extensions/client/web-sdk/event-types.md)
+      * [Action types](./extensions/client/web-sdk/action-types.md)
+      * [Data element types](./extensions/client/web-sdk/data-element-types.md)
+      * [Accessing the ECID](./extensions/client/web-sdk/accessing-the-ecid.md)
+      * [Web SDK plug-ins](./extensions/client/web-sdk/web-sdk-plugins.md)
+      * [Web SDK extension release notes](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
+      * [Web SDK plug-ins release notes](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
     * Adobe Experience Manager Asset Insights {#asset-insights}
       * [Overview](./extensions/client/asset-insights/overview.md)
       * [Release notes](./extensions/client/asset-insights/release-notes.md)
@@ -131,10 +139,7 @@ solution: Data Collection
     * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
     * Common Analytics Plugins {#plugins}
       * [Overview](./extensions/client/plugins/overview.md)
-      * [Release notes](./extensions/client/plugins/release-notes.md)
-    * Common Web SDK Plugins {#web-sdk-plugins}
-      * [Overview](./extensions/client/web-sdk-plugins/overview.md)
-      * [Release notes](./extensions/client/web-sdk-plugins/release-notes.md)
+      * [Release notes](./extensions/client/plugins/release-notes.md)     
     * [Concat](https://exchange.adobe.com/apps/ec/104690)
     * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
     * [Cookie Consent Management by Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/107037)

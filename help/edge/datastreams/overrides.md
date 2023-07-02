@@ -12,7 +12,7 @@ This helps you trigger different datastream behaviors than the default ones, wit
 Datastream configuration override is a two step process:
 
 1. First, you must define your datastream configuration overrides in the [datastream configuration page](configure.md).
-2. Then, you must send the overrides to the Edge Network either via a Web SDK command, or by using the Web SDK [tag extension](../extension/web-sdk-extension-configuration.md).
+2. Then, you must send the overrides to the Edge Network either via a Web SDK command, or by using the Web SDK [tag extension](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 This article explains the end-to-end datastream configuration override process for every type of supported override.
 
@@ -85,7 +85,7 @@ You should now have the ID sync container overrides configured. Now you can [sen
 
 >[!NOTE]
 >
->As an alternative to sending the configuration overrides via Web SDK commands, you can add the configuration overrides to the Web SDK [tag extension](../extension/web-sdk-extension-configuration.md).
+>As an alternative to sending the configuration overrides via Web SDK commands, you can add the configuration overrides to the Web SDK [tag extension](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 After [configuring the datastream overrides](#configure-overrides) in the Data Collection UI, you can now send the overrides to the Edge Network, via the Web SDK.
 
