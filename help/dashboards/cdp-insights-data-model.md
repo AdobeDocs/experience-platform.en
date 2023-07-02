@@ -156,7 +156,7 @@ The image below contains the relevant data fields in each dataset.
 
 #### Audience size use case
 
-The logic used for the [!UICONTROL Audience size] widget returns the total number of merged profiles within the selected audience at the time of the most recent snapshot. See the [[!UICONTROL Audience size] widget documentation](./guides/segments.md#audience-size) for more information.
+The logic used for the [!UICONTROL Audience size] widget returns the total number of merged profiles within the selected audience at the time of the most recent snapshot. See the [[!UICONTROL Audience size] widget documentation](./guides/audiences.md#audience-size) for more information.
 
 The SQL that generates the [!UICONTROL Audience size] widget is seen in the collapsible section below.
 
@@ -185,7 +185,7 @@ LIMIT 20;
 
 #### Audience size change trend use case
 
-The logic used for the [!UICONTROL Audience size change trend] widget provides a line graph illustration of the difference in the total number of profiles that qualified for a given audience between the most recent daily snapshots. See the [[!UICONTROL Audience size change trend] widget documentation](./guides/segments.md#audience-size-change-trend) for more information.
+The logic used for the [!UICONTROL Audience size change trend] widget provides a line graph illustration of the difference in the total number of profiles that qualified for a given audience between the most recent daily snapshots. See the [[!UICONTROL Audience size change trend] widget documentation](./guides/audiences.md#audience-size-change-trend) for more information.
 
 The SQL that generates the [!UICONTROL Audience size change trend] widget is seen in the collapsible section below.
 
@@ -268,7 +268,7 @@ The image below contains the relevant data fields in each dataset.
 
 #### Profiles by identity for an audience use case
 
-The logic used in the [!UICONTROL Profiles by identity] widget provides a breakdown of identities across all of the merged profiles in your Profile Store for a given audience. See the [[!UICONTROL Profiles by identity] widget documentation](./guides/segments.md#profiles-by-identity) for more information.
+The logic used in the [!UICONTROL Profiles by identity] widget provides a breakdown of identities across all of the merged profiles in your Profile Store for a given audience. See the [[!UICONTROL Profiles by identity] widget documentation](./guides/audiences.md#profiles-by-identity) for more information.
 
 The SQL that generates the [!UICONTROL Profiles by identity] widget is seen in the collapsible section below.
 
@@ -372,7 +372,7 @@ The image below contains the relevant data fields in each dataset.
 
 #### Identity overlap (audiences) use case
 
-The logic used in the [!UICONTROL Audiences] dashboard [!UICONTROL Identity overlap] widget illustrates the overlap of profiles that contain the two selected identities for a particular audience. For more information, see the [[!UICONTROL Identity overlap] widget section of the [!UICONTROL Audiences] dashboard documentation](./guides/segments.md#identity-overlap).
+The logic used in the [!UICONTROL Audiences] dashboard [!UICONTROL Identity overlap] widget illustrates the overlap of profiles that contain the two selected identities for a particular audience. For more information, see the [[!UICONTROL Identity overlap] widget section of the [!UICONTROL Audiences] dashboard documentation](./guides/audiences.md#identity-overlap).
 
 The SQL that generates the [!UICONTROL Identity overlap] widget is seen in the collapsible section below.
 

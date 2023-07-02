@@ -75,13 +75,13 @@ The next step is to build a segment definition and generate audiences from your 
 * Enable all segment definitions for scheduled segmentation.
 * Enable specified segment definitions for streaming segmentation.
 
-Alternatively, there is also a [segment builder video tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) available for more information.
+Alternatively, there is also a [segment builder video tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) available for more information.
 
 ## Activate your audience for an email campaign {#activate-audience-for-campaign}
 
 Once you have built your audience, you are ready to activate it to a destination. Platform supports a variety of Email Service Providers (ESPs) that enable you to manage your email marketing activities, such as sending promotional email campaigns. 
 
-Check the [email marketing destinations overview](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/overview.html?lang=en#connect-destination) for a list of the supported destinations that you want to export data to (for example the [Oracle Eloqua](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/oracle-eloqua-api.html?lang=en) page).
+Check the [email marketing destinations overview](../../destinations/catalog/email-marketing/overview.md#connect-destination) for a list of the supported destinations that you want to export data to (for example the [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) page).
 
 ## See the returned analysis data from your campaign {#post-campaign-data-analysis} 
 
