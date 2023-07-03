@@ -203,6 +203,9 @@ To correctly map your XDM fields to the [!DNL (API) Salesforce Marketing Cloud] 
         |`IdentityMap: contactKey`|`Identity: salesforceContactKey`| `Mandatory` |        
         |`xdm: person.name.firstName`|`Attribute: Email Demographics.First Name`| - |
         |`xdm: personalEmail.address`|`Attribute: Email Addresses.Email Address`| - |
+>[!IMPORTANT]
+>
+>Note that the schema displays a maximum number of 2000 attributes however extra attributes will be ignored in the schema.
 
     * An example using these mappings is shown below:
     ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
