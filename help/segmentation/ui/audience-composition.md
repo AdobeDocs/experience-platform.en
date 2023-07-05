@@ -10,19 +10,35 @@ Audience Composition provides a workspace to build and edit audiences, using blo
 
 ![The Audience Composition UI.](../images/ui/audience-composition/audience-composition.png)
 
-The audience composition canvas is comprised of five different types of blocks: **[[!UICONTROL Audience]](#audience-block)**, **[[!UICONTROL Exclude]](#exclude-block)**, **[[!UICONTROL Join]](#join-block)**, **[[!UICONTROL Rank]](#rank-block)**, and **[[!UICONTROL Split]](#split-block)**.
+To change the details of the composition, including the name and description, select the ![sliders]() button.
+
+The **[!UICONTROL Composition properties]** popover appears. You can insert details of your composition, including title and description here. 
+
+>[!NOTE]
+>
+>If you do **not** give your composition a title, the composition will have a title of "Composition", followed by the creation date and time by default.
+
+After updating your composition's details, select **[!UICONTROL Save]** to confirm these updates. The audience composition canvas re-appears.
+
+The audience composition canvas is comprised of four different types of blocks: **[[!UICONTROL Audience]](#audience-block)**, **[[!UICONTROL Exclude]](#exclude-block)**, **[[!UICONTROL Rank]](#rank-block)**, and **[[!UICONTROL Split]](#split-block)**.
 
 ## [!UICONTROL Audience] {#audience-block}
 
 The **[!UICONTROL Audience]** block type allows you to add the sub-audiences that you want to compose your new larger audience. By default, an **[!UICONTROL Audience]** block is included at the top of the composition canvas.
 
-When you select the **[!UICONTROL Audience]** block, the right rail displays controls for labeling and adding audiences to the block.
+When you select the **[!UICONTROL Audience]** block, the right rail displays controls for labeling the audience, adding audiences to the block, as well as building custom rules for the audience block.
+
+>[!NOTE]
+>
+>You can either add audiences **or** create a custom rule. These two functionalities **cannot** be used together.
 
 ![The Audience block details are displayed.](../images/ui/audience-composition/select-audience.png)
 
-After selecting **[!UICONTROL Add Audience]**, a list of audiences appears. Select the audiences you want to include, followed by **[!UICONTROL Add]** to append them to your audience block.
+### [!UICONTROL Add audience] {#add-audience}
 
-![A list of audiences appears. You can select which audience you want to add from this dialog.](../images/ui/audience-composition/select-audience.png)
+If you select **[!UICONTROL Add Audience]**, a list of audiences appears. Select the audiences you want to include, followed by **[!UICONTROL Add]** to append them to your audience block.
+
+![A list of audiences appears. You can select which audience you want to add from this dialog.](../images/ui/audience-composition/add-audience.png)
 
 Your selected audiences now appear within the right rail when the **[!UICONTROL Audience]** block is selected. From here, you can change the merge type of the combined audiences.
 
@@ -33,6 +49,14 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 | [!UICONTROL Union] | The audiences are combined into one audience. This would be the equivalent of an OR operation. |
 | [!UICONTROL Intersection] | The audiences are combined, with only the audiences that are shared in **all** of them being added. This would be the equivalent of an AND operation. |
 | [!UICONTROL Exclude overlap] | The audiences are combined, with only the audiences that are shared in **one, but not all** of them being added. This would be the equivalent of a XOR operation. |
+
+### [!UICONTROL Build rule] {#build-rule}
+
+If you select **[!UICONTROL Build rule]**, the Segment Builder appears.
+
+IMAGE
+
+You can use the Segment Builder to create your own custom rule for the audience to follow. More information about using the Segment Builder can be found in the [Segment Builder guide](./segment-builder.md).
 
 ## [!UICONTROL Exclude] {#exclude-block}
 
@@ -66,7 +90,7 @@ A list of profile attributes appears. Select the attribute type you want to excl
 
 ![A list of attributes is shown.](../images/ui/audience-composition/select-attribute.png)
 
-## [!UICONTROL Join] {#join-block}
+<!-- ## [!UICONTROL Join] {#join-block}
 
 The **[!UICONTROL Join]** block type allows you to add in external audiences from datasets that have not yet been processed by Adobe Experience Platform.
 
@@ -84,11 +108,11 @@ After selecting **[!UICONTROL Add Audience]**, a list of audiences appears. Sele
 
 Your selected audiences now appear within the right rail when the **[!UICONTROL Join]** block is selected. 
 
-![The audiences that were added as part of the Join are shown.](../images/ui/audience-composition/selected-audiences.png)
+![The audiences that were added as part of the Join are shown.](../images/ui/audience-composition/selected-audiences.png) -->
 
 ## [!UICONTROL Rank] {#rank-block}
 
-The **[!UICONTROL Rank]** block type allows you to rank and sort the audiences before your new audience is published. 
+The **[!UICONTROL Rank]** block type allows you to rank and sort profiles based on a specified attribute and include these ranked profiles to your composition.
 
 To add a **[!UICONTROL Rank]** block, select the **+** icon, followed by **[!UICONTROL Rank]**.
 
