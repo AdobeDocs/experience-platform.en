@@ -76,7 +76,7 @@ The backwards-incompatible changes for the API users are an updated `connection 
 
 |[!DNL Amazon S3] | Legacy | New |
 |---------|----------|---------|
-| Flow spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 269ba276-16fc-47db-92b0-c1049a3c131f |
+| Flow spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 1a0514a6-33d4-4c7f-aff8-594799c47549 |
 | Connection spec | 4890fc95-5a1f-4983-94bb-e060c08e3f81 | 4fce964d-3f37-408f-9778-e597338a21ee |
 
 View the complete legacy and new base connection and target connection examples for [!DNL Amazon S3] in the tabs below. The parameters required to create base connections for [!DNL Amazon S3] destinations do not change. 
@@ -248,7 +248,7 @@ The backwards-incompatible changes for the API users are an updated `connection 
 
 |[!DNL Azure Blob] | Legacy | New |
 |---------|----------|---------|
-| Flow spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
+| Flow spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 752d422f-b16f-4f0d-b1c6-26e448e3b388 |
 | Connection spec | e258278b-a4cf-43ac-b158-4fa0ca0d948b | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
 
 View the complete legacy and new base connection and target connection examples for [!DNL Azure Blob] in the tabs below. The parameters required to create base connections for Azure Blob destinations do not change. 
@@ -420,13 +420,12 @@ The backwards-incompatible changes for the API users are an updated `connection 
 
 |SFTP | Legacy | New |
 |---------|----------|---------|
-| Flow spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 354d6aad-4754-46e4-a576-1b384561c440 |
+| Flow spec | 71471eba-b620-49e4-90fd-23f1fa0174d8 | fd36aaa4-bf2b-43fb-9387-43785eeeb799 |
 | Connection spec | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
 
 In addition to the updated flow and connection spec above, there are changes to the parameters required when creating SFTP base connections.
 
 * Previously, the base connection for SFTP destinations required a `host` parameter. This parameter has now been renamed to `domain`.
-* For the authentication with SSH key option, the authentication parameters in the base connection required a `port` option. This parameter is now deprecated and not required anymore. 
 
 View the complete legacy and new base connection and target connection examples for SFTP in the tabs below, with the lines that change highlighted. The parameters required to create target connections for SFTP destinations do not change. 
 
@@ -560,7 +559,8 @@ View the complete legacy and new base connection and target connection examples 
       "authorizedDate": "2022-06-02",
       "domain": "ftp-out.demdex.com",
       "username": "DPID12345",
-      "password": "<your-password>"
+      "password": "<your-password>",
+      "port": 22      
     }
   },
   "encryption": {
@@ -780,7 +780,7 @@ Notice in the configuration example below how `profileSelectors` fields have bee
 
 ## Migration timeline and action items {#timeline-and-action-items}
 
-The migration of legacy dataflows to the new destination cards for [!DNL Amazon S3], [!DNL Azure Blob], and SFTP destinations will occur as soon as your organization is ready to migrate and no later than **June 30th, 2023**.
+The migration of legacy dataflows to the new destination cards for [!DNL Amazon S3], [!DNL Azure Blob], and SFTP destinations will occur as soon as your organization is ready to migrate and no later than **July 26th, 2023**.
 
 You will receive reminder emails from Adobe as the migration date approaches. In preparation, read the Action items section below to get ready for the migration. 
 
@@ -788,11 +788,11 @@ You will receive reminder emails from Adobe as the migration date approaches. In
 
 In preparation for the migration of the [!DNL Amazon S3], [!DNL Azure Blob], and SFTP cloud storage destinations to the new cards, please prepare to update your scripts and automated API calls as suggested below. 
 
-1. Update any scripts or automated API calls for any existing [!DNL Amazon S3], [!DNL Azure Blob], or SFTP cloud storage destinations by June 30, 2023. Any automated API calls or scripts which leverage the legacy connection specs or flow specs need to be updated to the new connection specs or flow specs.
-2. Reach out to your Adobe account representative when your scripts have been updated before June 30th.
+1. Update any scripts or automated API calls for any existing [!DNL Amazon S3], [!DNL Azure Blob], or SFTP cloud storage destinations by July 26, 2023. Any automated API calls or scripts which leverage the legacy connection specs or flow specs need to be updated to the new connection specs or flow specs.
+2. Reach out to your Adobe account representative when your scripts have been updated before July 26th.
 3. For example, the `targetConnectionSpecId` can be used as a flag to determine if the dataflow has been migrated to the new destination card. You could update your scripts with an `if` condition to look at the legacy and updated target connection specs in `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` and determine if your dataflow has been migrated. You can see the legacy and new connection spec IDs in the specific sections on this page for each destination.
 4. Your Adobe account team will reach out with further information about when your dataflows will be migrated.
-5. After June 30th, all dataflows will be migrated. All your exiting dataflows will now have new flow entities (connection specs, flow specs, base connections, and target connections). Any scripts or API calls on your side that use the legacy flow entities will stop working.
+5. After July 26th, all dataflows will be migrated. All your exiting dataflows will now have new flow entities (connection specs, flow specs, base connections, and target connections). Any scripts or API calls on your side that use the legacy flow entities will stop working.
 
 ## Other migration considerations {#other-considerations}
 

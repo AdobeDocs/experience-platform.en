@@ -1,5 +1,4 @@
 ---
-keywords: Amazon S3;S3 destination;s3;amazon s3
 title: Amazon S3 connection
 description: Create a live outbound connection to your Amazon Web Services (AWS) S3 storage to periodically export CSV data files from Adobe Experience Platform into your own S3 buckets.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
@@ -26,6 +25,11 @@ Improvements in the new [!DNL Amazon S3] destination card include:
 ## Overview {#overview}
 
 Create a live outbound connection to your [!DNL Amazon S3] storage to periodically export data files from Adobe Experience Platform into your own S3 buckets.
+
+## Connect to your [!DNL Amazon S3] storage through API or UI {#connect-api-or-ui}
+
+* To connect to your [!DNL Amazon S3] storage location using the Platform user interface, read the sections [Connect to the destination](#connect) and [Activate segments to this destination](#activate) below.
+* To connect to your [!DNL Amazon S3] storage location programmatically, read the [Activate segments to file-based destinations by using the Flow Service API tutorial](../../api/activate-segments-file-based-destinations.md).
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -83,7 +87,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Folder path]**: enter the path to the destination folder that will host the exported files.
 * **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL Amazon S3 beta]** destination. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL Amazon S3 beta]** destination.
-
+* **[!UICONTROL Include manifest file]**: toggle this option on if you'd like the exports to include a manifest JSON file that contains information abut the export location, export size, and more. This option is only available for the **[!UICONTROL Amazon S3 beta]** destination.
 
 >[!TIP]
 >
@@ -126,7 +130,10 @@ See [Activate audience data to batch profile export destinations](../../ui/activ
 
 ## (Beta) Export datasets {#export-datasets}
 
-This destination supports dataset exports. For complete information on how to set up dataset exports, read the [export datasets tutorial](/help/destinations/ui/export-datasets.md).
+This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
+
+* How to [export datasets using the Platform user interface](/help/destinations/ui/export-datasets.md). 
+* How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
 
 ## Exported data {#exported-data}
 

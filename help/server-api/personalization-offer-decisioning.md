@@ -11,6 +11,10 @@ The Edge Network Server API can deliver personalized experiences managed in [Off
 
 [!DNL Offer Decisioning] supports a non-visual interface to create, activate, and deliver your activities and personalization experiences.
 
+## Prerequisites {#prerequisites}
+
+Personalization via [!DNL Offer Decisioning] requires that you have access to [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=en) before you configure your integration.
+
 ## Configure your datastream {#configure-your-datastream}
 
 Before you can use the Server API in conjunction with Offer Decisioning, you must enable Adobe Experience Platform personalization on your datastream configuration, and enable the **[!UICONTROL Offer Decisioning]** option.

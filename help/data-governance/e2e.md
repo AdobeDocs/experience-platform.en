@@ -7,7 +7,7 @@ exl-id: f18ae032-027a-4c97-868b-e04753237c81
 
 In order to control which marketing actions can be performed on certain datasets and fields in Adobe Experience Platform, you must set up the following:
 
-1. [Apply labels](#labels) to the datasets and fields whose usage you want to restrict.
+1. [Apply labels](#labels) to the schemas fields or entire datasets, whose usage you want to restrict.
 1. [Configure and enable data governance policies](#policy) that determine which kinds of labeled data can be used for certain marketing actions.
 1. [Apply marketing actions to your destinations](#destinations) to indicate which policies apply to data sent to those destinations.
 
@@ -26,6 +26,12 @@ This guide walks through the full process of configuring and enforcing a data go
 
 ## Apply labels {#labels}
 
+>[!IMPORTANT]
+>
+>Labels can no longer be applied to individual fields at the dataset level. This workflow has been deprecated in favour of applying labels at the schema level. However, you can still label an entire dataset. Any labels previously applied to individual dataset fields will still be supported through the Platform UI until 31st May 2024. To ensure that your labels are consistent across all schemas, any labels previously attached to fields at the dataset level must be migrated to the schema level by you over the coming year. See the section on [migrating previously applied labels](#migrate-labels) for instructions on how to do this.
+
+You can [apply labels to a schema](#schema-labels) so that all datasets based on that schema inherit the same labels. This allows you to manage the labels for data governance, consent, and access control in one place. By enforcing data usage constraints at the schema level, the effect propagates downstream to all datasets that are based on that schema. Labels applied at the schema field level support Data Governance use cases and are discoverable in the Datasets workspace [!UICONTROL Data Governance] tab under the [!UICONTROL Field Name] column as read-only labels. 
+
 If there is a specific dataset that you want to enforce data usage constraints on, you can [apply labels directly to that dataset](#dataset-labels) or specific fields within that dataset.
 
 Alternatively, you can [apply labels to a schema](#schema-labels) so that all datasets based on that schema inherit the same labels.
@@ -34,27 +40,19 @@ Alternatively, you can [apply labels to a schema](#schema-labels) so that all da
 >
 >For more information on the different data usage labels and their intended use, see the [data usage labels reference](./labels/reference.md). If the available core labels do not cover all of your desired use cases, you can [define your own custom labels](./labels/user-guide.md#manage-custom-labels) as well.
 
-### Apply labels to a dataset {#dataset-labels}
+### Apply labels to an entire dataset {#dataset-labels}
 
 Select **[!UICONTROL Datasets]** in the left navigation, then select the name of the dataset you want to apply labels to. You can optionally use the search field to narrow down the list of displayed datasets.
 
-![Image showing a dataset being selected in the Platform UI](./images/e2e/select-dataset.png)
+![The Datasets workspace Browse tab with Datasets and a dataset row highlighted.](./images/e2e/select-dataset.png)
 
-The details view for the dataset appears. Select the **[!UICONTROL Data governance]** tab to view a list of the dataset's fields and any labels that have already been applied to them. Select the checkboxes next to the fields that you want to add labels to, then select **[!UICONTROL Edit governance labels]** in the right rail.
+The details view for the dataset appears. Select the **[!UICONTROL Data governance]** tab to view a list of the dataset's fields and any labels that have already been applied to them. Select the pencil icon to edit the datasets labels.
 
-![Image showing several dataset fields selected for labeling](./images/e2e/dataset-field-label.png)
+![The Data governance tab for the Loyalty Members dataset with the pencil icon highlighted.](./images/e2e/edit-dataset-labels.png)
 
->[!NOTE]
->
->If you want to add labels to the entire dataset, select the checkbox next to **[!UICONTROL Field name]** to highlight all fields before selecting **[!UICONTROL Edit governance labels]**.
->
->![Image showing all fields highlighted for a dataset](./images/e2e/label-whole-dataset.png)
+The [!UICONTROL Edit governance labels] dialog appears. Select the appropriate governance label and select **[!UICONTROL Save]**.
 
-In the next dialog, select the labels that you want to apply to the dataset fields that you chose earlier. When finished, select **[!UICONTROL Save changes]**.
-
-![Image showing all fields highlighted for a dataset](./images/e2e/save-dataset-labels.png)
-
-Continue following the above steps to apply labels to different fields (or different datasets) as needed. When finished, you can continue to the next step of [enabling data governance policies](#policy).
+![The Edit governance labels dialog with the label checkbox and Save highlighted.](./images/e2e/edit-dataset-governance-labels.png)
 
 ### Apply labels to a schema {#schema-labels}
 
@@ -66,9 +64,9 @@ Select **[!UICONTROL Schemas]** in the left navigation, then select the schema t
 >
 >![Image showing a link to a dataset's schema](./images/e2e/schema-from-dataset.png)
 
-The schema's structure appears in the Schema Editor. From here, select the **[!UICONTROL Labels]** tab to show a list view of the schema's fields and the labels that have already been applied to them. Select the checkboxes next to the fields that you want to add labels to, then select **[!UICONTROL Edit governance labels]** in the right rail.
+The schema's structure appears in the Schema Editor. From here, select the **[!UICONTROL Labels]** tab to show a list view of the schema's fields and the labels that have already been applied to them. Select the checkboxes next to the fields that you want to add labels to, then select **[!UICONTROL Apply access and data governance labels]** in the right rail.
 
-![Image showing a single schema field being selected for governance labels](./images/e2e/schema-field-label.png)
+![The Labels tab of the Schema workspace with a single schema field selected and Apply access and data governance labels highlighted.](./images/e2e/schema-field-label.png)
 
 >[!NOTE]
 >
@@ -76,11 +74,30 @@ The schema's structure appears in the Schema Editor. From here, select the **[!U
 >
 >![Image showing the pencil icon being selected from the schema labels view](./images/e2e/label-whole-schema.png)
 
-In the next dialog, select the labels that you want to apply to the schema fields that you chose earlier. When finished, select **[!UICONTROL Save]**.
+The [!UICONTROL Apply access and data governance labels] dialog appears. Select the labels that you want to apply to the chosen schema field. When finished, select **[!UICONTROL Save]**.
 
-![Image showing multiple labels being added to a schema field](./images/e2e/save-schema-labels.png)
+![The Apply access and data governance labels dialog showing multiple labels being added to a schema field.](./images/e2e/save-schema-labels.png)
 
 Continue following the above steps to apply labels to different fields (or different schemas) as needed. When finished, you can continue to the next step of [enabling data governance policies](#policy).
+
+### Migrate labels previously applied at the dataset level {#migrate-labels}
+
+Select **[!UICONTROL Dataset]** in the left navigation, then select the name of the dataset you want to migrate labels from. You can optionally use the search field to narrow down the list of displayed datasets.
+
+![The Browse tab of the Datasets workspace with the Loyalty Members Dataset highlighted.](./images/e2e/select-dataset.png)
+
+The details view for the dataset appears. Select the **[!UICONTROL Data governance]** tab to view a list of the dataset's fields and any labels that have already been applied to them. Select the cancel icon next to any label that you want to remove from a field. A confirmation dialog appears, select [!UICONTROL Remove label] to confirm your choices.
+
+![The Data Governance tab of the Datasets workspace with a label for a field highlighted for removal.](./images/e2e/remove-label.png)
+
+After you have removed the label from your dataset field, navigate to the Schema Editor to add the label to the schema. Instructions on how to do this, can be found in the [section on applying labels to a schema](#schema-labels).
+
+>[!TIP]
+>
+>You can select the schema name in the right rail, followed by the link in the dialog that appears to navigate to the appropriate schema.
+>![The Data Governance tab of the Datasets workspace with the schema name in the sidebar and dialog link highlighted.](./images/e2e/navigate-to-schema.png)
+
+After you have migrated the necessary labels, ensure that you have the correct [data governance policies enabled](#policy).
 
 ## Enable data governance policies {#policy}
 

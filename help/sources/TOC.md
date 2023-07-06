@@ -15,6 +15,7 @@ feature: Sources
     - [Analytics source](connectors/adobe-applications/analytics.md)
     - [Audience Manager source](connectors/adobe-applications/audience-manager.md)
     - [Adobe Campaign Managed Cloud Services source](connectors/adobe-applications/campaign.md)
+    - [Adobe Commerce source](connectors/adobe-applications/commerce.md)
     - [Customer attributes source](connectors/adobe-applications/customer-attributes.md)
     - [Data Collection source](connectors/adobe-applications/data-collection.md)
     - [Workfront source](connectors/adobe-applications/workfront.md)
@@ -35,6 +36,7 @@ feature: Sources
   - Analytics {#analytics}
     - [Mixpanel connector](connectors/analytics/mixpanel.md)
     - [Pendo](connectors/analytics/pendo-webhook.md)
+    - [RainFocus](connectors/analytics/rainfocus.md)
   - Cloud storage {#cloud-storage}
     - [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
     - [Amazon S3 connector](connectors/cloud-storage/s3.md)
@@ -54,6 +56,7 @@ feature: Sources
     - [OneTrust Integration](connectors/consent-and-preferences/onetrust.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
+    - [SAP Hybris connector](connectors/crm/sap-hybris.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
     - [SugarCRM connector](connectors/crm/sugarcrm.md)
     - [Veeva CRM connector](connectors/crm/veeva.md)
@@ -81,6 +84,7 @@ feature: Sources
     - [Oracle connector](connectors/databases/oracle.md)
     - [Phoenix connector](connectors/databases/phoenix.md)
     - [PostgreSQL connector](connectors/databases/postgres.md)
+    - [Snowflake Streaming connector](connectors/databases/snowflake-streaming.md)
     - [Snowflake connector](connectors/databases/snowflake.md)
     - [Teradata Vantage connector](connectors/databases/teradata-vantage.md)
   - eCommerce {#ecommerce}
@@ -130,6 +134,7 @@ feature: Sources
       - [OneTrust Integration](tutorials/api/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
+      - [SAP Hybris](tutorials/api/create/crm/sap-hybris.md)
       - [Salesforce](tutorials/api/create/crm/salesforce.md)
       - [SugarCRM Accounts & Contacts](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
       - [SugarCRM Events](tutorials/api/create/crm/sugarcrm-events.md)
@@ -157,6 +162,7 @@ feature: Sources
       - [Oracle](tutorials/api/create/databases/oracle.md)
       - [Phoenix](tutorials/api/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+      - [Snowflake Streaming](tutorials/api/create/databases/snowflake-streaming.md)
       - [Snowflake](tutorials/api/create/databases/snowflake.md)
       - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
       - [SQL Server](tutorials/api/create/databases/sql-server.md)
@@ -229,6 +235,7 @@ feature: Sources
     - Analytics {#analytics}
       - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
+      - [RainFocus](tutorials/ui/create/analytics/rainfocus.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
       - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
@@ -248,6 +255,7 @@ feature: Sources
       - [OneTrust Integration](tutorials/ui/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
+      - [SAP Hybris](tutorials/ui/create/crm/sap-hybris.md)
       - [Salesforce](tutorials/ui/create/crm/salesforce.md)
       - [SugarCRM Accounts & Contacts](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
       - [SugarCRM Events](tutorials/ui/create/crm/sugarcrm-events.md)
@@ -320,6 +328,7 @@ feature: Sources
   - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
   - [Subscribe to sources alerts](tutorials/ui/alerts.md)
+  - [Save a dataflow as a draft](tutorials/ui/draft.md)
 - Self-Serve Sources (Batch SDK) {#sdk}
   - [Overview](sources-sdk/overview.md)
   - Configure your connection specification {#config}

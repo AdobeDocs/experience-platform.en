@@ -323,11 +323,11 @@ A successful response returns your target connection ID and an updated etag. You
 
 ## Edit base connection components (authentication parameters and other components) {#patch-base-connection}
 
-The components of a base connection differ by destination. For example, for [!DNL Amazon S3] destinations, you can update the access key and secret key to your [!DNL Amazon S3] location. 
+Edit the base connection when you want to update a destination's credentials. The components of a base connection differ by destination. For example, for [!DNL Amazon S3] destinations, you can update the access key and secret key to your [!DNL Amazon S3] location. 
 
 To update components of a base connection, perform a PATCH request to the `/connections` endpoint while providing your base connection ID, version, and the new values you want to use.
 
-Remember, you got your base connection ID in a previous step, when you inspected an existing dataflow to your desired destination.
+Remember, you got your base connection ID in a [previous step](#look-up-dataflow-details), when you inspected an existing dataflow to your desired destination for the parameter `baseConnection`.
 
 >[!IMPORTANT]
 >
