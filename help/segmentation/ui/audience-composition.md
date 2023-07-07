@@ -10,9 +10,11 @@ Audience Composition provides a workspace to build and edit audiences, using blo
 
 ![The Audience Composition UI.](../images/ui/audience-composition/audience-composition.png)
 
-To change the details of the composition, including the name and description, select the ![sliders]() button.
+To change the details of the composition, including the name and description, select the ![sliders](../images/ui/audience-composition/sliders.png) button.
 
 The **[!UICONTROL Composition properties]** popover appears. You can insert details of your composition, including title and description here. 
+
+![The Composition properties popover is displayed.](../images/ui/audience-composition/composition-properties.png)
 
 >[!NOTE]
 >
@@ -32,13 +34,17 @@ When you select the **[!UICONTROL Audience]** block, the right rail displays con
 >
 >You can either add audiences **or** create a custom rule. These two functionalities **cannot** be used together.
 
-![The Audience block details are displayed.](../images/ui/audience-composition/select-audience.png)
+![The Audience block details are displayed.](../images/ui/audience-composition/audience-block.png)
 
 ### [!UICONTROL Add audience] {#add-audience}
 
-If you select **[!UICONTROL Add Audience]**, a list of audiences appears. Select the audiences you want to include, followed by **[!UICONTROL Add]** to append them to your audience block.
+To add audiences, to the Audience block. select **[!UICONTROL Add Audience]**.
 
-![A list of audiences appears. You can select which audience you want to add from this dialog.](../images/ui/audience-composition/add-audience.png)
+![The Add audience button is highlighted.](../images/ui/audience-composition/add-audience.png)
+
+A list of audiences appears. Select the audiences you want to include, followed by **[!UICONTROL Add]** to append them to your audience block.
+
+![A list of audiences appears. You can select which audience you want to add from this dialog.](../images/ui/audience-composition/select-audience.png)
 
 Your selected audiences now appear within the right rail when the **[!UICONTROL Audience]** block is selected. From here, you can change the merge type of the combined audiences.
 
@@ -52,11 +58,17 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ### [!UICONTROL Build rule] {#build-rule}
 
-If you select **[!UICONTROL Build rule]**, the Segment Builder appears.
+To add a custom rule to the Audience block, select **[!UICONTROL Build rule]**.
 
-IMAGE
+![The Build rule button is highlighted.](../images/ui/audience-composition/build-rule.png)
 
-You can use the Segment Builder to create your own custom rule for the audience to follow. More information about using the Segment Builder can be found in the [Segment Builder guide](./segment-builder.md).
+The Segment Builder appears. You can use the Segment Builder to create a custom rule for the audience to follow. More information about using the Segment Builder can be found in the [Segment Builder guide](./segment-builder.md).
+
+![The Segment Builder UI is displayed.](../images/ui/audience-composition/segment-builder.png)
+
+After adding a custom rule, select **[!UICONTROL Save]** to add the rule to your audience.
+
+![](../images/ui/audience-composition/custom-rule.png)
 
 ## [!UICONTROL Exclude] {#exclude-block}
 
@@ -126,7 +138,7 @@ To select which attribute to rank the audiences by, select the ![filter](../imag
 
 ![The filter icon is highlighted, showing you what to select to access the profile attribute selection screen.](../images/ui/audience-composition/select-rank-attribute.png)
 
-A list of profile attributes appears. On this popover, you can select the attribute type you want to rank your audience by. Select **[!UICONTROL Select]** to add it to your rank block. Please note that the selected attribute can **only** be of type `int`.
+A list of profile attributes appears. On this popover, you can select the attribute type you want to rank your audience by. Select **[!UICONTROL Select]** to add it to your rank block. Please note that the selected attribute can **only** be numbers.
 
 ![A list of attributes is shown.](../images/ui/audience-composition/select-attribute.png)
 
@@ -152,15 +164,11 @@ For example, you could have three paths, each with a differing percentage of pro
 
 ![The breakdown in number of saved audiences and percentages is shown.](../images/ui/audience-composition/percentages.png)
 
-Additionally, you can mark one of the split audiences to be the control group.
-
-![The control group toggle is enabled. This lets you mark one of the split audiences to be a control group.](../images/ui/audience-composition/control-group.png)
-
 ### Split by attribute {#split-attribute}
 
 When splitting by attribute, the audiences will be split based on the provided attributes. To select the attribute to split by, select the **[!UICONTROL Split]** block, followed by the ![filter](../images/ui/audience-composition/filter-attribute.png) icon. 
 
-![The filter button is selected, showing how to filter by attribute.](../images/ui/audience-composition/select-attribute-split.png)
+![The filter button is selected, showing how to filter by attribute.](../images/ui/audience-composition/select-split-attribute.png)
 
 A list of profile attributes appears. Select the attribute type, followed by **[!UICONTROL Select]** to add it to your split block. 
 
@@ -172,13 +180,13 @@ After selecting the attribute, you can choose which profiles will belong to whic
 
 Additionally, you can enable the **[!UICONTROL Other profiles]** toggle to create a sub-audience that comprises of all the non-selected profiles.
 
-![The Other profiles toggle is highlighted.](../images/ui/audience-composition/attribute-split-other-profiles.png)
+![The Other profiles toggle is highlighted.](../images/ui/audience-composition/split-other-profiles.png)
 
 ## Publishing your audience
 
 After composing your audience, you can save and publish it by selecting **[!UICONTROL Publish]**. 
 
-![The Publish button is highlighted, showing you how to save and publish your audience.](../images/ui/audience-composition/publish-audience.png)
+![The Publish button is highlighted, showing you how to save and publish your audience.](../images/ui/audience-composition/publish.png)
 
 If there are any errors in creating the audience, an alert appears, letting you know how to resolve the issue.
 
