@@ -60,13 +60,13 @@ One type of data you may consider to be sensitive may be different types of geog
 
 ## Partner ecosystem {#partner}
 
-Third-Party data labels relate to partner vendor data. 
+Partner Ecosystem labels are used to categorize data obtained from sources external to your organization
 
 This label is used to govern the use of prospect data.
 
 | Label | Definition |
 | --- | --- |
-| **Third-Party** | Any data provided to you by a third-party data vendor must be labeled as third-party data. Third-party data, once labeled, is automatically deleted from the system after 25 days. You must still establish data usage policies to prevent the use third-party data from being activated to a destination or used for unauthorized marketing actions.  |
+| **Third-Party** | Third-party data is data provided to you by a third-party data vendor. A third-party data vendor is an entity that has entered into an agreement with your organization authorizing you to access, use, display, and transmit the third party's data in conjunction with Adobe Experience Platform.  |
 
 ## Appendix
 
