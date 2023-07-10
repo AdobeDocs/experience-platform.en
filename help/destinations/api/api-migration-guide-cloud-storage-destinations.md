@@ -426,7 +426,6 @@ The backwards-incompatible changes for the API users are an updated `connection 
 In addition to the updated flow and connection spec above, there are changes to the parameters required when creating SFTP base connections.
 
 * Previously, the base connection for SFTP destinations required a `host` parameter. This parameter has now been renamed to `domain`.
-* For the authentication with SSH key option, the authentication parameters in the base connection required a `port` option. This parameter is now deprecated and not required anymore. 
 
 View the complete legacy and new base connection and target connection examples for SFTP in the tabs below, with the lines that change highlighted. The parameters required to create target connections for SFTP destinations do not change. 
 
@@ -560,7 +559,8 @@ View the complete legacy and new base connection and target connection examples 
       "authorizedDate": "2022-06-02",
       "domain": "ftp-out.demdex.com",
       "username": "DPID12345",
-      "password": "<your-password>"
+      "password": "<your-password>",
+      "port": 22      
     }
   },
   "encryption": {
@@ -780,7 +780,7 @@ Notice in the configuration example below how `profileSelectors` fields have bee
 
 ## Migration timeline and action items {#timeline-and-action-items}
 
-The migration of legacy dataflows to the new destination cards for [!DNL Amazon S3], [!DNL Azure Blob], and SFTP destinations will occur as soon as your organization is ready to migrate and no later than **June 30th, 2023**.
+The migration of legacy dataflows to the new destination cards for [!DNL Amazon S3], [!DNL Azure Blob], and SFTP destinations will occur as soon as your organization is ready to migrate and no later than **July 26th, 2023**.
 
 You will receive reminder emails from Adobe as the migration date approaches. In preparation, read the Action items section below to get ready for the migration. 
 
@@ -788,11 +788,11 @@ You will receive reminder emails from Adobe as the migration date approaches. In
 
 In preparation for the migration of the [!DNL Amazon S3], [!DNL Azure Blob], and SFTP cloud storage destinations to the new cards, please prepare to update your scripts and automated API calls as suggested below. 
 
-1. Update any scripts or automated API calls for any existing [!DNL Amazon S3], [!DNL Azure Blob], or SFTP cloud storage destinations by June 30, 2023. Any automated API calls or scripts which leverage the legacy connection specs or flow specs need to be updated to the new connection specs or flow specs.
-2. Reach out to your Adobe account representative when your scripts have been updated before June 30th.
+1. Update any scripts or automated API calls for any existing [!DNL Amazon S3], [!DNL Azure Blob], or SFTP cloud storage destinations by July 26, 2023. Any automated API calls or scripts which leverage the legacy connection specs or flow specs need to be updated to the new connection specs or flow specs.
+2. Reach out to your Adobe account representative when your scripts have been updated before July 26th.
 3. For example, the `targetConnectionSpecId` can be used as a flag to determine if the dataflow has been migrated to the new destination card. You could update your scripts with an `if` condition to look at the legacy and updated target connection specs in `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` and determine if your dataflow has been migrated. You can see the legacy and new connection spec IDs in the specific sections on this page for each destination.
 4. Your Adobe account team will reach out with further information about when your dataflows will be migrated.
-5. After June 30th, all dataflows will be migrated. All your exiting dataflows will now have new flow entities (connection specs, flow specs, base connections, and target connections). Any scripts or API calls on your side that use the legacy flow entities will stop working.
+5. After July 26th, all dataflows will be migrated. All your exiting dataflows will now have new flow entities (connection specs, flow specs, base connections, and target connections). Any scripts or API calls on your side that use the legacy flow entities will stop working.
 
 ## Other migration considerations {#other-considerations}
 

@@ -25,3 +25,8 @@ feature: Data Collection
 * [Location hints](location-hints.md)
 * [Error handling](error-handling.md)
 * [Troubleshooting](troubleshooting.md)
+* Media Edge APIs {#media-edge-apis}
+  * [Media Edge API overview](media-edge-api/overview.md)
+  * [Media Edge API getting started](media-edge-api/getting-started.md)
+  * [Media Edge API troubleshooting](media-edge-api/troubleshooting.md)
+  * [Media Edge API Open API specification resource](media-edge-api/swagger.md)
