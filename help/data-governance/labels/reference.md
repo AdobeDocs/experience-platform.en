@@ -66,7 +66,7 @@ This label is used to govern the use of prospect data.
 
 | Label | Definition |
 | --- | --- |
-| **Third-Party** | Third-party data is data provided to you by a third-party data vendor. A third-party data vendor is an entity that has entered into an agreement with your organization authorizing you to access, use, display, and transmit the third party's data in conjunction with Adobe Experience Platform.  |
+| **Third-Party** | Third-party data is data provided to you by a third-party data vendor. A third-party data vendor is an entity that has entered into an agreement with your organization authorizing you to access, use, display, and transmit the third party's data in conjunction with Platform.  |
 
 ## Appendix
 
