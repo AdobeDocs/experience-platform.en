@@ -1,17 +1,17 @@
 ---
-title: Prospect Class
-description: This document provides an overview of the Prospect class in Experience Data Model (XDM).
+title: XDM Individual Prospect Profile Class
+description: This document provides an overview of the XDM Individual Prospect Profile class in Experience Data Model (XDM).
 badgeBeta: label="Beta" type="Informative"
 ---
-# [!UICONTROL Prospect] class
+# [!UICONTROL XDM Individual Prospect Profile] class
 
 >[!IMPORTANT]
 >
->The [!UICONTROL Prospect] class is in beta and is not available to all users. The documentation and the functionality are subject to change.
+>The [!UICONTROL XDM Individual Prospect Profile] class is in beta and is not available to all users. The documentation and the functionality are subject to change.
 
-In Experience Data Model (XDM), the [!UICONTROL Prospect] class captures prospect profiles sourced from data vendors to funnel customer acquisition use cases.
+In Experience Data Model (XDM), the [!UICONTROL XDM Individual Prospect Profile] class captures prospect profiles sourced from data vendors to funnel customer acquisition use cases.
 
-![The schema diagram of the XDM Prospect class.](../images/classes/prospect.png)
+![The schema diagram of the XDM Prospect class.](../images/classes/individual-prospect-profile.png)
 
 | Property | Data type | Description |
 | --- | --- | --- |
@@ -21,7 +21,7 @@ In Experience Data Model (XDM), the [!UICONTROL Prospect] class captures prospec
 | `_id` | [!UICONTROL String] | A unique, system-generated string identifier for the record. This field is used to track the uniqueness of an individual record, prevent duplication of data, and to look up that record in downstream services.<br><br>Since this field is system-generated, it does not supply an explicit value during data ingestion. However, you can opt to supply your own unique ID values if you wish. |
 | `createdByBatchID` | [!UICONTROL String] | The ID of the ingested batch that caused the record to be created. |
 | `modifiedByBatchID` | [!UICONTROL String] | The ID of the last ingested batch that caused the record to be updated. |
-| `partnerID` | [!UICONTROL String] | Typically, a unique pseudonymous identifier which identifies an individual prospect. |
+| `partnerID` | [!UICONTROL String] | Typically, a unique pseudonymous identifier which identifies an individual prospect. See the documentation on [identity types](../../identity-service/namespaces.md#identity-types) to learn more about the Partner ID and the other identity types that are available within Adobe Experience Platform. |
 | `repositoryCreatedBy` | [!UICONTROL String] | The ID of the user who created the record. |
 | `repositoryLastModifiedBy` | [!UICONTROL String] | The ID of the user who last modified the record. When the record is created, the `modifiedByUser` value is set as the `createdByUser` value. |
 
