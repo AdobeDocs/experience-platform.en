@@ -1,11 +1,11 @@
 ---
-title: (Beta) Engage with new customers through prospecting use cases
-description: Learn how to engage with new customers through prospecting use cases, enabled by the partner data support in Real-Time CDP.
+title: (Beta) Engage and acquire new customers through prospecting use cases
+description: Learn how to engage and acquire new customers through prospecting use cases, enabled by the partner data support in Real-Time CDP.
 hide: yes
 hidefromtoc: yes
 badgeBeta: label="Beta" type="informative" before-title="true"
 ---
-# Engage with new customers through prospecting use cases
+# Engage and acquire new customers through prospecting use cases
 
 >[!AVAILABILITY]
 >
@@ -26,6 +26,8 @@ As you consider reaching out to and acquiring new customers by using partner dat
 * What data usage policies do you need be aware of from the partner perspective and from your own legal, privacy, or compliance team?
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
+
+Before you expand Real-Time CDP to engage and acquire new customers, make sure to use Real-Time CDP to build a robust foundation for your first-part data. The workflows to achieve this use case are similar to workflows to engage with your known customers.
 
 ![Customer prospecting use case high-level visual overview.](/help/rtcdp/assets/partner-data/prospecting-use-case-steps.png)
 
@@ -89,7 +91,11 @@ The **[!UICONTROL XDM Individual Prospect Profile]** class comes pre-configured 
 
 ![Preconfigured fields for the XDM Individual Prospect Profile class.](/help/rtcdp/assets/partner-data/preconfigured-fields-individual-prospect-class.png)
 
-Next, you must select the partnerID identity that you created earlier as the primary identity for the schema. (Why?). 
+Next, you must select the partnerID identity that you created earlier as the primary identity for the schema. Profile records must carry a primary identifier. This step is required to make sure that prospect data can be loaded into the profile store and made available for segmentation and activation.
+
+>[!AVAILABILITY]
+>
+>Prospect profiles are automatically restricted to only use ID namespaces of the Partner ID type. This is by design and ensures clean separation between your first-party and prospect profiles.
 
 ![Select previously configured Partner ID as primary identity in the schema.](/help/rtcdp/assets/partner-data/select-partner-id-as-primary-identity.gif)
 
@@ -99,7 +105,7 @@ Note that the schema is not yet enabled for profile. Toggle the profile button t
 
 #### Add the third-party data governance label to all fields in the schema
 
-You now need to the third-party data governance label to all of the fields that make up the schema. Add the third-party label so that {brief reason}. Find more information about third-party data governance labels (add link to docs by Jordan)
+Consider adding third-party data governance labels to all of the fields that make up the schema. This is important in order to ensure responsible use of third-party data and minimize the risk of data leakage. Find more information about third-party data governance labels (add link to docs by Jordan)
 
 To do this, follow the steps below: 
 
@@ -149,7 +155,7 @@ After loading the list of profiles from the data partner into Real-Time CDP, pro
 
 You can set up recurrent file imports to ingest data from the partner through a source connector and bring the list of prospect profiles into Real-Time CDP.
 
-Some recommended source connectors for this purpose might be: 
+Some recommended source connectors for this purpose are listed below but note that any file-based ingestion method into Real-Time CDP works for your purpose. 
 
 * [Amazon S3](/help/sources/connectors/cloud-storage/s3.md)
 * [SFTP](/help/sources/connectors/cloud-storage/sftp.md)
@@ -192,7 +198,7 @@ Note that the audience building experience for prospect profiles differs from th
 
 ### Activate prospect profiles to destinations {#activate-to-destinations}
 
-Make use of the prospect audiences by exporting them to destinations, so that the data partner can then further activate them to desired platforms, for your messaging to reach the prospected audiences. 
+Make use of the prospect audiences by exporting them to destinations. Currently, only certain destinations such as [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) or the [!BADGE Alpha]{type=Informative} [LiveRamp](/help/destinations/catalog/advertising/liveramp.md) destination support activation of prospect profiles. 
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 
