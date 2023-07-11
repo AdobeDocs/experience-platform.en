@@ -9,7 +9,7 @@ badgeBeta: label="Beta" type="Informative"
 >
 >The [!UICONTROL XDM Individual Prospect Profile] class is in beta and is not available to all users. The documentation and the functionality are subject to change.
 
-In Experience Data Model (XDM), the [!UICONTROL XDM Individual Prospect Profile] class captures prospect profiles sourced from data vendors to funnel customer acquisition use cases.
+In Experience Data Model (XDM), the [!UICONTROL XDM Individual Prospect Profile] class captures prospect profiles typically sourced from data partners for top-of-the-funnel customer acquisition use-cases.
 
 ![The schema diagram of the XDM Prospect class.](../images/classes/individual-prospect-profile.png)
 
