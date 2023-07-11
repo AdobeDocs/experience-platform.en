@@ -312,7 +312,7 @@ The **[!UICONTROL Import audience CSV]** workflow appears. You can select a CSV 
 
 >[!NOTE]
 >
->The external generated audience **must** be in CSV format and less than 1GB.
+>The external generated audience **must** be in CSV format, have a **maximum** of 11 columns, and be less than 1GB.
 
 After selecting the CSV file to import, a list of sample data is shown for this externally generated audience. After confirming that the sample data is correct, select **[!UICONTROL Next]**.
 
