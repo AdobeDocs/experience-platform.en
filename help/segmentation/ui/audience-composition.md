@@ -10,15 +10,15 @@ Audience Composition provides a workspace to build and edit audiences, using blo
 
 ![The Audience Composition UI.](../images/ui/audience-composition/audience-composition.png)
 
-To change the details of the composition, including the name and description, select the ![sliders](../images/ui/audience-composition/sliders.png) button.
+To change the details of the composition, including the title and description, select the ![sliders](../images/ui/audience-composition/sliders.png) button.
 
-The **[!UICONTROL Composition properties]** popover appears. You can insert details of your composition, including title and description here. 
+The **[!UICONTROL Composition properties]** popover appears. You can insert details of your composition, including the title and description here. 
 
 ![The Composition properties popover is displayed.](../images/ui/audience-composition/composition-properties.png)
 
 >[!NOTE]
 >
->If you do **not** give your composition a title, the composition will have a title of "Composition", followed by the creation date and time by default.
+>If you do **not** give your composition a title, it will have a title of "Composition" followed by the creation date and time by default.
 
 After updating your composition's details, select **[!UICONTROL Save]** to confirm these updates. The audience composition canvas re-appears.
 
@@ -38,7 +38,7 @@ When you select the **[!UICONTROL Audience]** block, the right rail displays con
 
 ### [!UICONTROL Add audience] {#add-audience}
 
-To add audiences, to the Audience block. select **[!UICONTROL Add Audience]**.
+To add audiences to the Audience block. select **[!UICONTROL Add Audience]**.
 
 ![The Add audience button is highlighted.](../images/ui/audience-composition/add-audience.png)
 
@@ -86,7 +86,7 @@ The **[!UICONTROL Exclude]** block is added. When this block is selected, detail
 
 If you exclude by audience, you can select which audiences you want to exclude by selecting **[!UICONTROL Add Audience]**.
 
-![The Add audience button is selected, which lets you choose which audience you want to exclude.](../images/ui/audience-composition/add-excluded-audience.png)
+![The [!UICONTROL Add audience] button is selected, which lets you choose which audience you want to exclude.](../images/ui/audience-composition/add-excluded-audience.png)
 
 A list of audiences appears. Select **[!UICONTROL Add]** to add the audiences you want to exclude to your exclude block.
 
@@ -100,7 +100,7 @@ If you exclude by attribute, you can select which attributes you want to exclude
 
 A list of profile attributes appears. Select the attribute type you want to exclude, followed by **[!UICONTROL Select]** to add them to your exclude block.
 
-![A list of attributes is shown.](../images/ui/audience-composition/select-attribute.png)
+![A list of attributes is shown.](../images/ui/audience-composition/select-attribute-exclude.png)
 
 <!-- ## [!UICONTROL Join] {#join-block}
 
@@ -140,7 +140,7 @@ To select which attribute to rank the audiences by, select the ![filter](../imag
 
 A list of profile attributes appears. On this popover, you can select the attribute type you want to rank your audience by. Select **[!UICONTROL Select]** to add it to your rank block. Please note that the selected attribute can **only** be numbers.
 
-![A list of attributes is shown.](../images/ui/audience-composition/select-attribute.png)
+![A list of attributes is shown.](../images/ui/audience-composition/select-attribute-rank.png)
 
 After selecting the attribute, you can select the order to rank it by. This is either in ascending (from lowest to highest) or descending (from highest to lowest) order.
 
@@ -172,7 +172,7 @@ When splitting by attribute, the audiences will be split based on the provided a
 
 A list of profile attributes appears. Select the attribute type, followed by **[!UICONTROL Select]** to add it to your split block. 
 
-![A list of attributes is shown.](../images/ui/audience-composition/select-attribute.png)
+![A list of attributes is shown.](../images/ui/audience-composition/select-attribute-exclude.png)
 
 After selecting the attribute, you can choose which profiles will belong to which sub-audience by adding the values within the **[!UICONTROL Values]** field.
 
