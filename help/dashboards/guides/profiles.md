@@ -101,6 +101,8 @@ Adobe provides multiple standard widgets that you can use to visualize different
 
 To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
+* [[!UICONTROL Customer AI scoring summary]](#customer-ai-scoring-summary)
+* [[!UICONTROL Customer AI distribution of scores]](#customer-ai-distribution-of-scores)
 * [[!UICONTROL Profile count]](#profile-count)
 * [[!UICONTROL Profile count trend]](#profile-count-trend)
 * [[!UICONTROL Profile count change]](#profile-count-change)
@@ -118,6 +120,31 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Audiences size]](#audiences-size)
 * [[!UICONTROL Audience overlap by merge policy]](#audience-overlap-by-merge-policy)
 * [[!UICONTROL Audience overlap report]](#audience-overlap-report)
+
+### [!UICONTROL Customer AI distribution of scores] {#customer-ai-distribution-of-scores}
+
+<!-- a drop down with list of all configured Customer AI models
+If not Customer AI models are available, then drop down will be empty / unselected with message in widget "Please configure at least one Customer AI model to get insights: Here"
+The Here will be a hyperlink taking the customer to start of Customer AI model configuration; Screenshot of Customer AI landing page attached
+Customer selects the desired Customer AI model from the drop-down [The list will come from Anil SQL]
+Widget shows insights for High / Medium / Low propensity scores at a Profile level for the selected merge policy as a distribution
+The widget will have a hyper link that will re-direct to the detailed insights pages of the selected Customer AI model page
+Widget Filters: Dropdown with the list of available customer ai model in the client instance. If not model configured, then display "No model configured" -->
+
+![The Experience Platform Profiles dashboard with the Customer AI distribution of scores widget highlighted.](../images/profiles/customer-ai-distribution-of-scores.png)
+
+### [!UICONTROL Customer AI scoring summary] {#customer-ai-scoring-summary}
+
+<!-- a drop down with list of all configured Customer AI models
+If not Customer AI models are available, then drop down will be empty / unselected with message in widget "Please configure at least one Customer AI model to get insights: Here"
+The Here will be a hyperlink taking the customer to start of Customer AI model configuration; Screenshot of Customer AI landing page attached
+Customer selects the desired Customer AI model from the drop-down [The list will come from Anil SQL]
+Widget shows insights for High / Medium / Low propensity scores at a Profile level for the selected merge policy
+The propensity buckets are determined based on score range, low is less than 24, medium is 25 to 74, and high is above 74. Each bucket has a color corresponding to the legend.
+The widget will have a hyper link that will re-direct to the detailed insights pages of the selected Customer AI model page
+Widget Filters: Dropdown with the list of available customer ai model in the client instance. If not model configured, then display "No model configured" -->
+
+![The Experience Platform Profiles dashboard with the Customer AI scoring summary widget highlighted.](../images/profiles/customer-ai-scoring-summary.png)
 
 ### [!UICONTROL Profile count] {#profile-count}
 
