@@ -36,7 +36,7 @@ The **[!UICONTROL Segments]** dashboard outlines key metrics related to your org
 
 To learn more, visit the [segment dashboard guide](../../dashboards/guides/audiences.md).
 
-![The segment dashboard is displayed. It shows various widgets, including the audience size, profiles by identity, identity overlay, and the audience size change trend.](../../dashboards/images/audiences/dashboard-overview.png)
+![The segment dashboard is displayed. It shows various widgets, including the audience size, profiles by identity, identity overlay, and the audience size change trend.](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Browse {#browse}
 

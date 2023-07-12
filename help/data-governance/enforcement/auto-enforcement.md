@@ -42,7 +42,7 @@ When an audience is first activated, [!DNL Policy Service] checks for applicable
 >
 >If there are data usage labels that have only been applied to certain fields within a dataset (rather than the entire dataset), enforcement of those field-level labels on activation only occurs under the following conditions:
 >
->* The fields are used in the audience definition.
+>* The fields are used in the audience.
 >* The fields are configured as projected attributes for the target destination.
 
 ## Data lineage {#lineage}

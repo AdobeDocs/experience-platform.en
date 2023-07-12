@@ -41,7 +41,7 @@ Please refer to the [modifying dashboards](../customize/modify.md) and [Widget l
 
 Select **[!UICONTROL Add widget]** to navigate to the widget library and see a list of the available widgets to add to your dashboard.
 
-![The [!UICONTROL Audiences] dashboard overview with Add widget highlighted.](../images/audiences/audiences-overview-add-widget.png)
+![The [!UICONTROL Audiences] dashboard overview with [!UICONTROL Add widget] highlighted.](../images/audiences/audiences-overview-add-widget.png)
 
 From the widget library, you can browse the selection of standard and custom audience widgets. For information on how to add widgets, please see the widget library documentation on how to [add a widget](../customize/widget-library.md#add-widgets). 
 
@@ -104,7 +104,7 @@ For more information on fragments and merged profiles, refer to the [Real-Time C
 >title="Audience size trend"
 >abstract="This widget provides information regarding the total number of profiles that meet the criteria of **any** segment definition, as captured during the daily snapshot, for the last 30 days, 90 days, or 12 months."
 
-The **[!UICONTROL Audience size trend]** widget provides a line graph illustration for the total number of profiles that meet the criteria of **any** segment definition over a given period of time. The audience size trend can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The audience size is reflected on the y-axis and time on the x-axis.
+The **[!UICONTROL Audience size trend]** widget provides a line graph illustration for the total number of profiles that qualify for **any** audience over a given period of time. The audience size trend can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The audience size is reflected on the y-axis and time on the x-axis.
 
 This widget also includes the automatic [!UICONTROL Captions] feature where a machine learning model analyzes the chart and audience data and automatically generates captions to describe the key trends and important events. Select **[!UICONTROL Captions]** to open the automatic captions dialog. 
 
@@ -130,13 +130,13 @@ This widget illustrates the audience size trend for a particular audience based 
 
 ### [!UICONTROL Audience activation order] {#audience-activation-order}
 
-The [!UICONTROL Audience activation order] widget provides a three-column table that lists the [!UICONTROL destination name], the [!UICONTROL platform], and the activation [!UICONTROL date] of the audience. The list is ordered from high to low according to recency and can accommodate up to 10 rows.
+The [!UICONTROL Audience activation order] widget provides a three-column table that lists the destination name, the platform, and the activation date of the audience. The list is ordered from high to low according to recency and can accommodate up to 10 rows.
 
 ![The Audience activation order widget.](../images/audiences/audience-activation-order.png)
 
 ### [!UICONTROL Audience overlap] {#audience-overlap}
 
-This widget represents the number of profiles from two audiences that meet the criteria for both segment definitions. The audiences used for comparison are selected from the widget dropdown menus. The total number of profiles contained within the the relevant segment definition can be seen by hovering over a circle or the intersection of the Venn diagram.
+This widget uses a Venn diagram to visualize the number of people that match the criteria for both audiences. The audiences used for comparison are selected from the widget dropdown menus. The total number of profiles contained within the the relevant segment definition can be seen by hovering over a circle or the intersection of the Venn diagram.
 
 This widget enables you to optimize your segmentation strategy by visualizing the similarities in the results of your segment definitions.
 
@@ -181,9 +181,9 @@ The **[!UICONTROL Identity overlap]** widget displays a Venn diagram, or set dia
 
 Use the dropdown menus on the widget to select the identities that you wish to compare. The circles display the relative size of each chosen identity, with the number of profiles containing both namespaces being represented by the size of the overlap between the circles.
 
-If a customer interacts with your brand on more than one channel, multiple identities will be associated with that individual customer, therefore it is likely that your organization will have multiple profiles containing fragments from more than one identity.
+If a customer interacts with your brand on more than one channel, multiple identities will be associated with that individual customer. This situation makes it likely that your organization will have multiple profiles containing fragments from more than one identity.
 
-To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
+To learn more about identities, please visit the [Identity Service documentation](../../identity-service/home.md).
 
 ![The [!UICONTROL Audiences] dashboard overview with the Identity overlap widget highlighted.](../images/audiences/identity-overlap.png)
 
@@ -202,7 +202,7 @@ Select **[!UICONTROL Captions]** to open the automatic captions dialog.
 
 A machine learning model automatically generates data insights by analyzing the overall distribution and key dimensions of the data.
 
-To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
+To learn more about identities, please visit the [Identity Service documentation](../../identity-service/home.md).
 
 ### Scheduled activations {#scheduled-activations}
 

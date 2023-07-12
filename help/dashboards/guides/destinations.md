@@ -54,7 +54,7 @@ Adobe provides multiple standard widgets that you can use to visualize different
 Before continuing with the descriptions of standard widgets, please ensure that you are familiar with the definitions of the following key terms used throughout the documentation:
 
 * **Segment definition:** A segment definition is a **set of rules** used to describe key characteristics or behavior of a target audience. These rules include attribute and event data that qualify the profiles as part of an audience.
-* **Audience**: A set of people, accounts, households, or other entities that share common characteristics and behaviors. An audience is comprised of a **set of profiles** that meet the criteria of a segment definition.
+* **Audience**: A set of people, accounts, households, or other entities that share common characteristics and behaviors.
 * **Mapped / Mapping**: Data mapping is the process of mapping source data fields to related target fields in a destination.
 * **Identity**: An identity is an identifier that uniquely represents an individual customer, such as a cookie ID, device ID, or email ID.
 * **Activate**: Activate is the action taken by a user to map an audience or profiles to a destination such as Oracle Eloqua, Google, or Salesforce Marketing Cloud.
@@ -211,7 +211,7 @@ The [!UICONTROL AUDIENCE SIZE] column provides the total profile count of each l
 
 The [!UICONTROL Mapped audiences] widget displays the total number of mapped audiences that can be activated to the destination selected at the top of the page.
 
-Select **[!UICONTROL Audiences]** to navigate to Audiences dashboard [!UICONTROL Browse] tab. This workspace displays a list of all the segment definitions for your organization. 
+Select **[!UICONTROL Audiences]** to navigate to the Audiences dashboard [!UICONTROL Browse] tab. This workspace displays a list of all the segment definitions for your organization. 
 
 ![The Mapped audiences widget.](../images/destinations/mapped-audiences.png)
 
