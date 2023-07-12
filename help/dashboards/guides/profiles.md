@@ -123,17 +123,25 @@ To learn more about each of the available standard widgets, select the name of a
 
 ### [!UICONTROL Customer AI distribution of scores] {#customer-ai-distribution-of-scores}
 
-<!-- a drop down with list of all configured Customer AI models
-If not Customer AI models are available, then drop down will be empty / unselected with message in widget "Please configure at least one Customer AI model to get insights: Here"
-The Here will be a hyperlink taking the customer to start of Customer AI model configuration; Screenshot of Customer AI landing page attached
-Customer selects the desired Customer AI model from the drop-down [The list will come from Anil SQL]
-Widget shows insights for High / Medium / Low propensity scores at a Profile level for the selected merge policy as a distribution
-The widget will have a hyper link that will re-direct to the detailed insights pages of the selected Customer AI model page
-Widget Filters: Dropdown with the list of available customer ai model in the client instance. If not model configured, then display "No model configured" -->
+The [!UICONTROL Customer AI distribution of scores] widget categorizes the total number of profiles by their propensity to buy. The distribution of the profile count is determined by the AI model and the selected merge policy, then visualized in five percent increments that indicate their propensity to buy. Profile propensity is color coded to high, medium, and low as green, yellow, and red respectively. The count of profiles is provided along the Y-axis and the propensity to buy scores are provided along the X axis. 
+
+The AI model that determines the propensity scores is chosen from the dropdown selector under the widget title. The dropdown contains a list of all configured Customer AI models. If no Customer AI model is available, a message within the widget directs you to configure at least one Customer AI model and provides a hyperlink to the Customer AI model configuration page.
+
+<!-- Q) Do we have any info/documentation on how to configure one of these models? -->
+
+You can also change the merge policy that determines the profiles included in the analysis frm the dropdown immediately below the overview tab. See the section on [merge policies](#merge-policies) for a brief description, or the [merge policy overview](../../profile/merge-policies/overview.md) for more details. 
 
 ![The Experience Platform Profiles dashboard with the Customer AI distribution of scores widget highlighted.](../images/profiles/customer-ai-distribution-of-scores.png)
 
+Select **[!UICONTROL View model details]** to navigate to the detailed insights page for the selected Customer AI model.
+
+<!-- More info is needed about this page and what it provides. Q) Is there any documentation? -->
+
 ### [!UICONTROL Customer AI scoring summary] {#customer-ai-scoring-summary}
+
+The [!UICONTROL Customer AI scoring summary] widget displays the total number of profiles analyzed for their propensity to buy in a single metric, and uses a doughnut chart to illustrate the proportional difference between their high, medium, and low propensities. Profile propensity is determined by percentage and color coded to high, medium, and low as green, yellow, and red respectively. A profile qualifies for high propensity at over 75%, medium propensity between 25 and 74%, and low propensity under 24%. Individual counts for each high, medium, and low propensity to buy are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
+
+The total number of profiles calculated is dependent on the chosen merge policy.
 
 <!-- a drop down with list of all configured Customer AI models
 If not Customer AI models are available, then drop down will be empty / unselected with message in widget "Please configure at least one Customer AI model to get insights: Here"
