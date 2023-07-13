@@ -1,7 +1,6 @@
 ---
-keywords: Experience Platform;home;popular topics;flow service;
 title: Retry Failed Dataflow Runs
-description: This tutorial covers steps on how to retry failed dataflow runs using the Flow Service API
+description: Learn how to retry failed dataflow runs using the Flow Service API.
 exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
 ---
 # Retry failed dataflow runs
@@ -16,8 +15,8 @@ This tutorial covers steps on how to retry failed dataflow runs using the [[!DNL
 
 This tutorial requires you to have a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Using Platform APIs
 
@@ -25,7 +24,7 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 ## Retry a failed dataflow run
 
-To retry a failed dataflow run, make a POST request to the `/runs` endpoint while providing the run ID of your dataflow and the `re-trigger` operation as part of your query paramters.
+To retry a failed dataflow run, make a POST request to the `/runs` endpoint while providing the run ID of your dataflow and the `re-trigger` operation as part of your query parameters.
 
 **API format**
 
@@ -39,6 +38,10 @@ POST /runs/{RUN_ID}/action?op=re-trigger
 | `op` | An operation that determines the action to be performed. To retry a failed dataflow run, you must specify `re-trigger` as your operation. |
 
 **Request**
+
+>[!NOTE]
+>
+>You can use the `re-trigger` operation to retry successful dataflow runs as well, given that the successful dataflow run has zero ingested records.
 
 The following request retries the dataflow run for run ID `4fb0418e-1804-45d6-8d56-dd51f05c0baf`.
 
