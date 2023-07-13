@@ -66,13 +66,6 @@ feature: Web SDK
     * [Overview](consent/iab-tcf/overview.md)
     * [Integrate with tags](consent/iab-tcf/with-launch.md)
     * [Integrate without tags](consent/iab-tcf/without-launch.md)
-* Web SDK tag extension {#extension}
-  * [Web SDK extension](extension/web-sdk-extension-configuration.md)
-  * [Event types](extension/event-types.md)
-  * [Action types](extension/action-types.md)
-  * [Data element types](extension/data-element-types.md)
-  * [Accessing the ECID](extension/accessing-the-ecid.md)
-  * [Web SDK extension release notes](extension/web-sdk-ext-release-notes.md)
 * [Release notes](release-notes.md)
 * [Frequently Asked Questions](web-sdk-faq.md)
 * [Resources](resources.md)

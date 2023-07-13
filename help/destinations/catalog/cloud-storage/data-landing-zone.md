@@ -19,6 +19,11 @@ exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
 
 Platform enforces a strict seven-day time-to-live (TTL) on all files uploaded to a [!DNL Data Landing Zone] container. All files are deleted after seven days.
 
+## Connect to your [!UICONTROL Data Landing Zone] storage through API or UI {#connect-api-or-ui}
+
+* To connect to your [!UICONTROL Data Landing Zone] storage location using the Platform user interface, read the sections [Connect to the destination](#connect) and [Activate segments to this destination](#activate) below.
+* To connect to your [!UICONTROL Data Landing Zone] storage location programmatically, read the [Activate segments to file-based destinations by using the Flow Service API tutorial](../../api/activate-segments-file-based-destinations.md).
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
@@ -36,7 +41,7 @@ Note the following prerequisites that must be met before you can use the [!DNL D
 
 ### Connect your [!DNL Data Landing Zone] container to [!DNL Azure Storage Explorer]
 
-You can use [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) to manage the contents of your [!DNL Data Landing Zone] container. To start using [!DNL Data Landing Zone], you first need to retrieve your credentials, input them in [!DNL Azure Storage Explorer], and connect your [!DNL Data Landing Zone] container to [!DNL Azure Storage Explorer].
+You can use [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) to manage the contents of your [!DNL Data Landing Zone] container. To start using [!DNL Data Landing Zone], you must first retrieve your credentials, input them in [!DNL Azure Storage Explorer], and connect your [!DNL Data Landing Zone] container to [!DNL Azure Storage Explorer].
 
 In the [!DNL Azure Storage Explorer] UI, select the connection icon in the left navigation bar. The **Select Resource** window appears, providing you with options to connect to. Select **[!DNL Blob container]** to connect to your [!DNL Data Landing Zone] storage.
 
@@ -50,7 +55,7 @@ After selecting your connection method, you must provide a **display name** and 
 
 >[!BEGINSHADEBOX]
 
-### Retrieve the credentials for your [!DNL Data Landing Zone]
+### Retrieve the credentials for your [!DNL Data Landing Zone] {#retrieve-dlz-credentials}
 
 You must use the Platform APIs to retrieve your [!DNL Data Landing Zone] credentials. The API call to retrieve your credentials is described below. For information about getting the required values for your headers, refer the [Getting started with Adobe Experience Platform APIs](/help/landing/api-guide.md) guide.
 
@@ -59,6 +64,12 @@ You must use the Platform APIs to retrieve your [!DNL Data Landing Zone] credent
 ```http
 GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 ```
+
+| Query parameters | Description |
+| --- | --- |
+| `dlz_destination` |  The `dlz_destination` type allows the API to distinguish a landing zone destination container from the other types of containers that are available to you. |
+
+{style="table-layout:auto"}
 
 **Request**
 
@@ -76,7 +87,7 @@ curl -X GET \
 
 **Response**
 
-The following response returns the credential information for your landing zone, including your current `SASToken` and `SASUri`, as well as the `storageAccountName` that corresponds to your landing zone container.
+The following response returns the credential information for your landing zone, including your current `SASToken` and `SASUri`, and the `storageAccountName` that corresponds to your landing zone container.
 
 ```json
 {
@@ -90,8 +101,54 @@ The following response returns the credential information for your landing zone,
 | Property | Description |
 | --- | --- |
 | `containerName` | The name of your landing zone. |
-| `SASToken` | The shared access signature token for your landing zone. This string contains all of the information necessary to authorize a request. |
+| `SASToken` | The shared access signature token for your landing zone. This string contains all the information necessary to authorize a request. |
 | `SASUri` | The shared access signature URI for your landing zone. This string is a combination of the URI to the landing zone for which you are being authenticated to and its corresponding SAS token, |
+
+{style="table-layout:auto"}
+
+### Update [!DNL Data Landing Zone] credentials {#update-dlz-credentials}
+
+You can also refresh your credentials when desired. You can update your `SASToken` by making a POST request to the `/credentials` endpoint of the [!DNL Connectors] API.
+
+**API format**
+
+```http
+POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh
+```
+
+| Query parameters | Description |
+| --- | --- |
+| `dlz_destination` |  The `dlz_destination` type allows the API to distinguish a landing zone destination container from the other types of containers that are available to you. |
+| `refresh` | The `refresh` action allows you to reset your landing zone credentials and automatically generate a new `SASToken`. |
+
+{style="table-layout:auto"}
+
+**Request**
+
+The following request updates your landing zone credentials.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
+**Response**
+
+The following response returns updated values for your `SASToken` and `SASUri`.
+
+```json
+{
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
+    "storageAccountName": "dlblobstore99hh25i3dflek",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
+}
+```
 
 >[!ENDSHADEBOX]
 
@@ -107,7 +164,7 @@ A successful connection updates your [!DNL Azure Storage Explorer] UI with your 
 
 ![dlz-user-container](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
-With your [!DNL Data Landing Zone] container connected to [!DNL Azure Storage Explorer], you can now start exporting files from Experience Platform to your [!DNL Data Landing Zone] container. To export files, you need to establish a connection to the [!DNL Data Landing Zone] destination in the Experience Platform UI, as described in the section below. 
+With your [!DNL Data Landing Zone] container connected to [!DNL Azure Storage Explorer], you can now start exporting files from Experience Platform to your [!DNL Data Landing Zone] container. To export files, you must establish a connection to the [!DNL Data Landing Zone] destination in the Experience Platform UI, as described in the section below. 
 
 ## Connect to the destination {#connect}
 
@@ -130,6 +187,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Folder path]**: Enter the path to the destination folder that will host the exported files.
 * **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files.
+* **[!UICONTROL Include manifest file]**: toggle this option on if you'd like the exports to include a manifest JSON file that contains information abut the export location, export size, and more.
 
 ### Enable alerts {#enable-alerts}
 
@@ -155,7 +213,10 @@ In the **[!UICONTROL Mapping]** step, you can select which attribute and identit
 
 ## (Beta) Export datasets {#export-datasets}
 
-This destination supports dataset exports. For complete information on how to set up dataset exports, read the [export datasets tutorial](/help/destinations/ui/export-datasets.md).
+This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
+
+* How to [export datasets using the Platform user interface](/help/destinations/ui/export-datasets.md). 
+* How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
 
 ## Validate successful data export {#exported-data}
 
