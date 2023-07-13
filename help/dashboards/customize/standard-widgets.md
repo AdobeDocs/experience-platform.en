@@ -8,12 +8,12 @@ exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
 
 In Adobe Experience Platform you can view and interact with your organization's data using multiple dashboards. You can also update certain dashboards by adding new widgets to your dashboard view. Adobe provides a selection of standard widgets that you can choose to add to your dashboards.
 
-The [!UICONTROL Profiles], [!UICONTROL Segments], and [!UICONTROL Destinations] dashboards each have a default load-out when a new Platform instance is created. This guide provides step-by-step instructions for adding standard widgets to customize the [!UICONTROL Profiles], [!UICONTROL Segments], and [!UICONTROL Destinations] dashboards in the Platform UI.
+The [!UICONTROL Profiles], [!UICONTROL Segments], and [!UICONTROL Destinations] dashboards each have a default widget load-out when a new Platform instance is created. This guide provides step-by-step instructions for adding standard widgets to customize the [!UICONTROL Profiles], [!UICONTROL Segments], and [!UICONTROL Destinations] dashboards in the Platform UI.
 
 >[!NOTE]
 >
->For all users who have not modified their views in the last 6 months, the Profiles, Segments, and Destinations Overview pages will be reset to a new default widget load-out that highlights the latest available insights. You can continue to modify your view using the steps provided below.
-Please see the documentation in the [Profiles](../guides/profiles.md#default-widgets), [Segments](../guides/segments.md#default-widgets), and [Destinations](../guides/destinations.md#default-widgets) default widget sections for details on which widgets are included as part of the default widget load-outs.
+>As of July 26th 2023, the [!UICONTROL Profiles], [!UICONTROL Segments], and [!UICONTROL Destinations] Overview dashboards have been reset to a new default widget load-out for all users who did not modify their views in the previous 6 months.
+>Please see the documentation in the [Profiles](../guides/profiles.md#default-widgets), [Segments](../guides/segments.md#default-widgets), and [Destinations](../guides/destinations.md#default-widgets) default widget sections for details on which widgets are included as part of the default widget load-outs.
 
 To learn more about custom widgets, please refer to the guide for [creating custom widgets](custom-widgets.md).
 
