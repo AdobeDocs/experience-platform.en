@@ -20,7 +20,7 @@ This document provides a high-level overview of event forwarding in Platform.
 >
 >For information on how event forwarding fits within the data collection ecosystem in Platform, see the [data collection overview](../../../collection/home.md).
 
-Event forwarding combined with the Adobe Experience Platform [Web SDK](../../../edge/home.md) and [Mobile SDK](https://aep-sdks.gitbook.io/docs/) provides the following benefits:
+Event forwarding combined with the Adobe Experience Platform [Web SDK](../../../edge/home.md) and [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) provides the following benefits:
 
 **Performance**:
 
