@@ -59,5 +59,6 @@ feature: Segments
   - [Importing and using external audiences](tutorials/using-external-audiences.md)
   - [Create a dataset to export data](tutorials/create-dataset-export-segment.md)
   - [Enforce data usage compliance for segments](tutorials/governance.md)
+- [Frequently asked questions](./faq.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
