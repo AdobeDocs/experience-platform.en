@@ -84,3 +84,7 @@ For more information on the Split block, please read the [Audience Composition U
 ## Can I use all segmentation types in the Audience Composition workflow?
 
 Yes, you can! All segmentation types (batch segmentation, streaming segmentation, and edge segmentation) are supported in the Audience Composition workflow. However, since compositions are currently only run once per day, even if streaming- or edge-evaluated audiences are included, the result will be based on audience membership at the time the composition was executed.
+
+## How can I confirm a profile's membership in an audience?
+
+To confirm a profile's audience membership, visit the profile details page of the profile you want to confirm. Select **[!UICONTROL Attributes]**, followed by **[!UICONTROL View JSON]**, and you can confirm that the `segmentMembership` object contains the ID of the audience.
