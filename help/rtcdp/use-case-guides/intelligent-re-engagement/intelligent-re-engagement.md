@@ -37,13 +37,13 @@ Also, divisional data lakes fuel the CDP with division-specific client and  beha
 >
 >While AADC is listed, we are assuming Web SDK is our approach.
 
+<!-- **TOUCH ON CONSENT AND DATA GOVERNANCE BETWEEN 2 AND 3**-->
+
 1.  Data Ingestion  
     -   Data Ingestion (Streaming) – Web SDK/ Mobile SDK/ Edge Network API ingestion via Edge Network (preferred method).
     -   Data Ingestion (Batch) – Offline data is loaded into AEP. Assumption data is loaded via batch, but can be streamed into AEP.
 
 2.  Unified Profile – Once the data is ingested, it lands in their appropriate datasets marked for Profile.
-
-touch on consent and data governance.
 
 3.  Segment Qualification – The Add to cart event kicks off a time that waits for 30 mins, then checks for purchase (abandon cart), then adds to the Abandon Cart Segment.
 
@@ -56,7 +56,7 @@ touch on consent and data governance.
     -   Journey Actions – If AJO is being used, it checks consent and send out to the various Actions configured (for example, email, SMS).
     -   Destination – If Destinations Framework is being used, it checks consent and send out to the various Destinations configured (for example, email, direct mail).
 
-6.  Interaction Feedback – The downstream application sending the email (paid media ad or push notification), in-App message, or SMS sends its activities back to AEP for measurement of activities. **SPEAK TO DANNY MILLER**
+6.  Interaction Feedback – The downstream application sending the email (paid media ad or push notification), in-App message, or SMS sends its activities back to AEP for measurement of activities. <!--**SPEAK TO DANNY MILLER**-->
 
 ## How to achieve the use case: Step-by-step instructions
 
