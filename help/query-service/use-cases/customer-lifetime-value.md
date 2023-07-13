@@ -11,7 +11,7 @@ The following infographic depicts the cycle of data collection, manipulation, an
 
 ![The round trip infographic of data from observation to analysis to action.](../images/use-cases/infographic-use-case-cycle.png)
 
-This end-to-end use case demonstrates how data signals can be captured and modified to calculate the customer lifetime value derived attribute. These derived attributes can then be applied to your Real-Time CDP profile data and are available for use with user-defined dashboards to build a dashboard for insight analysis. Through Data Distiller, you can extend the Real-Time CDP insights data model and use the CLV derived attribute and dashboard insights to build a new segment and activate it to a desired destination. These segments can then be used to create high-performance audiences to power your next marketing campaign.
+This end-to-end use case demonstrates how data signals can be captured and modified to calculate the customer lifetime value derived attribute. These derived attributes can then be applied to your Real-Time CDP profile data and are available for use with user-defined dashboards to build a dashboard for insight analysis. Through Data Distiller, you can extend the Real-Time CDP insights data model and use the CLV derived attribute and dashboard insights to build a new audience and activate it to a desired destination. These high-performance audiences can then be used to power your next marketing campaign.
 
 This guide is designed to help you to better understand your customer experience by measuring data signals across key touchpoints that drive CLV and implement a similar use case in your environment. The entire process is summarized in the image below.
 
@@ -22,7 +22,7 @@ This guide is designed to help you to better understand your customer experience
 This guide requires that you have a working understanding of the following components of Adobe Experience Platform:
 
 * [Query Service](../home.md): Provides a user interface and a RESTful API where you can use SQL queries to analyze and enrich your data. 
-* [Segmentation Service](../../segmentation/home.md): Allows you to build segments and generate audiences from your Real-Time Customer Profile data.
+* [Segmentation Service](../../segmentation/home.md): Allows you to generate audiences from your Real-Time Customer Profile data.
 
 ## Prerequisites
 
@@ -65,23 +65,23 @@ Examples of custom CLV widgets that use decile buckets can be seen below.
 
 ![A collection of custom decile-based CLTV widgets.](../images/use-cases/deciles-user-defined-dashboard.png)
 
-## Create and activate segments to build high-performance audiences {#create-and-activate-segments}
+## Create and activate high-performance audiences {#create-and-activate-audiences}
 
-The next step is to build segments and generate audiences from your Real-Time Customer Profile data. See the Segment Builder UI guide to learn how to [create and activate segments in Platform](../../segmentation/ui/segment-builder.md). The guide provides sections on how to:
+The next step is to build a segment definition and generate audiences from your Real-Time Customer Profile data. See the Segment Builder UI guide to learn how to [create and activate audiences in Platform](../../segmentation/ui/segment-builder.md). The guide provides sections on how to:
 
 * Create segment definitions using a combination of attributes, events, and existing audiences as building blocks.
-* Use the rule builder canvas and containers to control the order in which segment rules are executed.
+* Use the rule builder canvas and containers to control the order in which the segmentation rules are executed.
 * View estimates of your prospective audience, allowing you to adjust your segment definitions as required.
 * Enable all segment definitions for scheduled segmentation.
 * Enable specified segment definitions for streaming segmentation.
 
-Alternatively, there is also a [segment builder video tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) available for more information.
+Alternatively, there is also a [segment builder video tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) available for more information.
 
-## Activate your segment for an email campaign {#activate-segment-for-campaign}
+## Activate your audience for an email campaign {#activate-audience-for-campaign}
 
-Once you have built your segment, you are ready to activate it to a destination. Platform supports a variety of Email Service Providers (ESPs) that enable you to manage your email marketing activities, such as sending promotional email campaigns. 
+Once you have built your audience, you are ready to activate it to a destination. Platform supports a variety of Email Service Providers (ESPs) that enable you to manage your email marketing activities, such as sending promotional email campaigns. 
 
-Check the [email marketing destinations overview](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/overview.html?lang=en#connect-destination) for a list of the supported destinations that you want to export data to (for example the [Oracle Eloqua](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/oracle-eloqua-api.html?lang=en) page).
+Check the [email marketing destinations overview](../../destinations/catalog/email-marketing/overview.md#connect-destination) for a list of the supported destinations that you want to export data to (for example the [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) page).
 
 ## See the returned analysis data from your campaign {#post-campaign-data-analysis} 
 
@@ -89,7 +89,7 @@ The data from sources can now be [incrementally processed](../essential-concepts
 
 Once your data model is updated, your custom dashboard widgets provide meaningful signals that allow you to measure and visualize customer lifetime value.
 
-![A custom widget to show the number of emails opened according to their segment and email campaign.](../images/use-cases/post-activation-and-email-response-kpis.png)
+![A custom widget to show the number of emails opened according to their audience and email campaign.](../images/use-cases/post-activation-and-email-response-kpis.png)
 
 A variety of visualization options are provided for your custom analysis. 
 

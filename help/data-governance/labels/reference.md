@@ -128,11 +128,11 @@ Some contracts include explicit prohibitions on data use for data science. Somet
 
 #### C10 {#c10}
 
-Some data governance policies restrict the use of stitched identity data for personalization. The C10 label is automatically applied to segments if their merge policies use the "private graph" option.
+Some data governance policies restrict the use of stitched identity data for personalization. The C10 label is automatically applied to audiences if their merge policies use the "private graph" option.
 
 #### C11 {#c11}
 
-Adobe Experience Platform Segment Match allows you to match first-party segments with privacy and consent preferences, facilitating enriched profiling and downstream insights. The C11 label denotes data that should not be used in [!DNL Segment Match] processes. After you have determined which datasets and/or fields you want to exclude from Segment Match and added the C11 label accordingly, the label is automatically enforced by the Segment Match workflow.
+Adobe Experience Platform Segment Match allows you to match Platform generated audiences with privacy and consent preferences, facilitating enriched profiling and downstream insights. The C11 label denotes data that should not be used in [!DNL Segment Match] processes. After you have determined which datasets and/or fields you want to exclude from Segment Match and added the C11 label accordingly, the label is automatically enforced by the Segment Match workflow.
 
 #### C12 {#c12}
 
