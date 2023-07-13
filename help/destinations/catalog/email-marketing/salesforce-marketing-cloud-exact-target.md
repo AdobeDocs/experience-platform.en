@@ -14,7 +14,7 @@ exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
 >
 >Note the difference between this connection and the other [[!DNL Salesforce Marketing Cloud] connection](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) that exists within the Email marketing catalog section. The other Salesforce Marketing Cloud connection allows you to export files to a specified storage location, whereas this is an API-based streaming connection.
 
-Compared to [!DNL Salesforce Marketing Cloud Account Engagement] which is more oriented towards **B2B** marketing, the [!DNL (API) Salesforce Marketing Cloud] destination is ideal for **B2C** use cases with shorter transactional decision-making cycles. You can consolidate larger datasets representing your target audience’s behavior to adjust and improve marketing campaigns by prioritizing and segmenting contacts, especially from datasets outside [!DNL Salesforce]. *Note, Experience Platform also has a connection for the [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md).*
+Compared to [!DNL Salesforce Marketing Cloud Account Engagement] which is more oriented towards **B2B** marketing, the [!DNL (API) Salesforce Marketing Cloud] destination is ideal for **B2C** use cases with shorter transactional decision-making cycles. You can consolidate larger datasets representing your target audience's behavior to adjust and improve marketing campaigns by prioritizing and segmenting contacts, especially from datasets outside [!DNL Salesforce]. *Note, Experience Platform also has a connection for the [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md).*
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [!DNL Salesforce Marketing Cloud] [update contacts](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API, which allows you to **add contacts and update contact data** for your business needs after activating them within a new [!DNL Salesforce Marketing Cloud] segment.
 
@@ -50,7 +50,7 @@ When activating segments to the [!DNL (API) Salesforce Marketing Cloud] destinat
 
 [!DNL Salesforce] requires this value to correctly read and interpret segments coming in from Experience Platform and to update their segment status within [!DNL Salesforce Marketing Cloud]. Refer to the Experience Platform documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
 
-For each segment that you activate from Platform to [!DNL Salesforce Marketing Cloud], you need to create an attribute of the type `Text` within [!DNL Salesforce]. Use the [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] to create attributes. The attribute field names are used for the [!DNL (API) Salesforce Marketing Cloud] destination field and should be created under the `[!DNL Email Demographics system attribute-set]`. You can define the field character with a maximum of 4000 characters, according to your business requirement. See the [!DNL Salesforce Marketing Cloud] [Data Extensions Data Types](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&type=5) documentation page for additional information on attribute types.
+For each segment that you activate from Platform to [!DNL Salesforce Marketing Cloud], you need to create an attribute of the type `Text` within [!DNL Salesforce]. Use the [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] to create attributes. The attribute field names are used for the [!DNL (API) Salesforce Marketing Cloud] target field during the **[!UICONTROL Mapping]** step. You can define the field character with a maximum of 4000 characters, according to your business requirement. See the [!DNL Salesforce Marketing Cloud] [Data Extensions Data Types](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&type=5) documentation page for additional information on attribute types.
 
 Refer to the [!DNL Salesforce Marketing Cloud] documentation to [create attributes](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US) if you need guidance on creating attributes.
 
@@ -62,7 +62,7 @@ A view of the [!DNL Salesforce Marketing Cloud] [!DNL Email Demographics] attrib
 
 The [!DNL (API) Salesforce Marketing Cloud] destination uses the [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) to dynamically retrieve the attributes and their Attribute-Sets' defined within [!DNL Salesforce Marketing Cloud]. 
 
-These are displayed in the **[!UICONTROL Target field]** selection window when you set up the [mapping](#mapping-considerations-example) in the workflow to [activate segments to the destination](#activate). Note that only mappings for the attributes defined within the [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` attribute-set are supported.
+These are displayed in the **[!UICONTROL Target field]** selection window when you set up the [mapping](#mapping-considerations-example) in the workflow to [activate segments to the destination](#activate).
 
 >[!IMPORTANT]
 >
@@ -84,7 +84,8 @@ As [!DNL Salesforce Marketing Cloud] supports custom roles depending on your use
 
 Depending on which roles your [!DNL Salesforce Marketing Cloud] user has been assigned, you would also need to assign permissions to the [!DNL Salesforce Marketing Cloud] attribute-sets which contain the fields you are looking to update. 
 
-As this destination requires access to the `[!DNL Email Demographics system attribute-set]`, you need to allow `Email` as shown below:
+As this destination requires access to the `[!DNL attribute-set]`, you need to allow them. For Example for the `Email` [!DNL attribute-set] you need to allow as shown below:
+
 ![Salesforce Marketing Cloud UI showing email attribute-set with allowed permissions.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
 
 To restrict the level of access, you can also override individual accesses by using granular privileges.
@@ -190,19 +191,22 @@ To correctly map your XDM fields to the [!DNL (API) Salesforce Marketing Cloud] 
 
 >[!IMPORTANT]
 >
->Although your attribute names would be as per your [!DNL Salesforce Marketing Cloud] account, the mappings for both `contactKey` and `personalEmail.address` are mandatory. When mapping attributes, only attributes from the Experience Platform `Email Demographics` attribute-set should be used within the target fields.
+>* Although your attribute names would be as per your [!DNL Salesforce Marketing Cloud] account, the mappings for both `contactKey` and `personalEmail.address` are mandatory.
+>
+>* The integration with the [!DNL Salesforce Marketing Cloud] API is subject to a pagination limit of how many attributes Experience Platform can retrieve from Salesforce. This means during the **[!UICONTROL Mapping]** step, the target field schema can display a maximum of 2000 attributes from your Salesforce account.
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 ![Platform UI screenshot example for Add new mapping.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
-1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select custom attributes]** category and select an attribute from the `Email Demographics` attributes displayed as needed. The [!DNL (API) Salesforce Marketing Cloud] destination uses the [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) to dynamically retrieve the attributes and their attribute sets defined within [!DNL Salesforce Marketing Cloud]. These are displayed in the **[!UICONTROL Target field]** popup when you set up the [mapping](#mapping-considerations-example) in the [activate segments to workflow](#activate). Note, only mappings for the attributes defined within the [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` attribute set are supported.
+1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select attributes]** category and select an attribute from the attribute sets displayed as needed. The [!DNL (API) Salesforce Marketing Cloud] destination uses the [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) to dynamically retrieve the attributes and their attribute sets defined within [!DNL Salesforce Marketing Cloud]. These are displayed in the **[!UICONTROL Target field]** popup when you set up the [mapping](#mapping-considerations-example) in the [activate segments to workflow](#activate). 
 
     * Repeat these steps to add the following mappings between your XDM profile schema and [!DNL (API) Salesforce Marketing Cloud]:
+    
         |Source Field|Target Field| Mandatory|
         |---|---|---|
         |`IdentityMap: contactKey`|`Identity: salesforceContactKey`| `Mandatory` |        
-        |`xdm: person.name.firstName`|`Attribute: Email Demographics.First Name`| - |
-        |`xdm: personalEmail.address`|`Attribute: Email Addresses.Email Address`| - |
+        |`xdm: person.name.firstName`|`Attribute: First Name` from your desired attribute set.| - |
+        |`xdm: personalEmail.address`|`Attribute: Email Address` from your desired attribute set.| - |
 
     * An example using these mappings is shown below:
     ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
