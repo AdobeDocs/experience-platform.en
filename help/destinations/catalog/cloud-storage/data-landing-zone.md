@@ -55,7 +55,7 @@ After selecting your connection method, you must provide a **display name** and 
 
 >[!BEGINSHADEBOX]
 
-### Retrieve the credentials for your [!DNL Data Landing Zone]
+### Retrieve the credentials for your [!DNL Data Landing Zone] {#retrieve-dlz-credentials}
 
 You must use the Platform APIs to retrieve your [!DNL Data Landing Zone] credentials. The API call to retrieve your credentials is described below. For information about getting the required values for your headers, refer the [Getting started with Adobe Experience Platform APIs](/help/landing/api-guide.md) guide.
 
@@ -64,6 +64,12 @@ You must use the Platform APIs to retrieve your [!DNL Data Landing Zone] credent
 ```http
 GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 ```
+
+| Query parameters | Description |
+| --- | --- |
+| `dlz_destination` |  The `dlz_destination` type allows the API to distinguish a landing zone destination container from the other types of containers that are available to you. |
+
+{style="table-layout:auto"}
 
 **Request**
 
@@ -97,6 +103,52 @@ The following response returns the credential information for your landing zone,
 | `containerName` | The name of your landing zone. |
 | `SASToken` | The shared access signature token for your landing zone. This string contains all the information necessary to authorize a request. |
 | `SASUri` | The shared access signature URI for your landing zone. This string is a combination of the URI to the landing zone for which you are being authenticated to and its corresponding SAS token, |
+
+{style="table-layout:auto"}
+
+### Update [!DNL Data Landing Zone] credentials {#update-dlz-credentials}
+
+You can also refresh your credentials when desired. You can update your `SASToken` by making a POST request to the `/credentials` endpoint of the [!DNL Connectors] API.
+
+**API format**
+
+```http
+POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh
+```
+
+| Query parameters | Description |
+| --- | --- |
+| `dlz_destination` |  The `dlz_destination` type allows the API to distinguish a landing zone destination container from the other types of containers that are available to you. |
+| `refresh` | The `refresh` action allows you to reset your landing zone credentials and automatically generate a new `SASToken`. |
+
+{style="table-layout:auto"}
+
+**Request**
+
+The following request updates your landing zone credentials.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
+**Response**
+
+The following response returns updated values for your `SASToken` and `SASUri`.
+
+```json
+{
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
+    "storageAccountName": "dlblobstore99hh25i3dflek",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
+}
+```
 
 >[!ENDSHADEBOX]
 

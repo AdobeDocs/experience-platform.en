@@ -11,7 +11,7 @@ The [!DNL Google Cloud Platform] [event forwarding](../../../ui/event-forwarding
 
 ## Prerequisites
 
-In order to use this extension, you must have an [!DNL Google Cloud Platform] account with an existing [!DNL Cloud Pub/Sub] topic. If you do not have a pre-existing data stream, see the [!DNL AWS] documentation on [creating a new data stream using the [!DNL AWS] Management Console](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
+In order to use this extension, you must have an [!DNL Google Cloud Platform] account with an existing [!DNL Cloud Pub/Sub] topic. If you do not have a pre-existing topic, see the [[!DNL Google Cloud Platform]](https://cloud.google.com/pubsub/docs/create-topic) documentation on creating and manage topics.
 
 ### Create a secret and a data element
 
