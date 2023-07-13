@@ -5,7 +5,7 @@ description: Adobe Experience Platform provides a dashboard through which you ca
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 ---
-# [!UICONTROL Segments] dashboard {#segment-dashboard}
+# [!UICONTROL Segments] dashboard {#segment-dashboard} 
 
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your segments, as captured during a daily snapshot. This guide outlines how to access and work with the segments dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.  
 
@@ -66,6 +66,20 @@ The segments dashboard is composed of widgets, which are read-only metrics provi
 The date and time of the most recent snapshot are displayed at the top of the [!UICONTROL Overview] tab next to the segment dropdown. All widget data is accurate as of that date and time. The timestamp of the snapshot is provided in UTC; it is not in the timezone of the individual user or organization.
 
 ![The Segments Overview tab with a widget timestamp highlighted.](../images/segments/widget-timestamp.png)
+
+## Default widgets {#default-widgets}
+
+A default widget load-out is provided for all new instances of Adobe Experience Platform that highlights the latest available insights from your data. The following widgets are pre-configured in your segments view from the outset. Full details on the purpose and function of the widgets can be found below.
+
+<!-- add in links -->
+
+* widget 1
+* widget 2
+* widget 3
+
+>[!NOTE]
+>
+>For all users who have not modified their views in the last 6 months, the Profiles, Segments, and Destinations Overview pages will be reset to a new default widget load-out. PLease see the the documentation in the [Profiles](./profiles.md#default-widgets) and and [Destinations](./destinations.md#default-widgets) default widget sections for details on which widgets are included as part of the default widget load-outs.
 
 ## Standard widgets {#standard-widgets}
 

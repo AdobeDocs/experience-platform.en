@@ -95,6 +95,18 @@ The date and time of the most recent snapshot is displayed at the top of the [!U
 
 ![The Profiles dashboard overview tab with the most recent snapshot timestamp highlighted.](../images/profiles/snapshot-timestamp.png)
 
+## Default widgets {#default-widgets}
+
+A default widget load-out is provided for all new instances of Adobe Experience Platform that highlights the latest available insights from your data. The following widgets are pre-configured in your segments view from the outset. Full details on the purpose and function of the widgets can be found below.
+
+* widget 1
+* widget 2
+* widget 3
+
+>[!NOTE]
+>
+>For all users who have not modified their views in the last 6 months, the Profiles, Segments, and Destinations Overview pages will be reset to a new default widget load-out. PLease see the the documentation in the [Segments](./segments.md#default-widgets) and and [Destinations](./destinations.md#default-widgets) default widget sections for details on which widgets are included as part of the default widget load-outs.
+
 ## Standard widgets {#standard-widgets}
 
 Adobe provides multiple standard widgets that you can use to visualize different metrics related to your Profile data. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [Widget library overview](../customize/widget-library.md).
