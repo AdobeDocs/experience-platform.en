@@ -43,7 +43,7 @@ Select **[!UICONTROL Add widget]** to navigate to the widget library and see a l
 
 ![The Profiles dashboard overview with add widget highlighted.](../images/profiles/profiles-overview-add-widget.png)
 
-From the widget library, you can browse the selection of standard and custom segment widgets. For information on how to add widgets, refer to the widget library documentation on how to [add a widget](../customize/widget-library.md#add-widgets).
+From the widget library you can browse the selection of standard and custom audience widgets. For information on how to add widgets, please see the widget library documentation on how to [add a widget](../customize/widget-library.md#add-widgets).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -61,7 +61,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ## Browse profiles {#browse-profiles}
 
-The [!UICONTROL Browse] tab allows you to search and view the read-only profiles ingested into your organization. From here you can see important information belonging to the profile regarding their preferences, past events, interactions, and segments 
+The [!UICONTROL Browse] tab allows you to search and view the read-only profiles ingested into your organization. From here you can see important information belonging to the profile regarding their preferences, past events, interactions, and audiences. 
 
 To learn more about the profile viewing capabilities provided in the Platform UI, refer to the documentation on [browsing profiles in Adobe Real-Time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
@@ -264,9 +264,9 @@ To see a dialog detailing the total count of profiles for an identity, use the c
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Unsegmented profiles"
->abstract="This widget provides the total number of all profiles not attached to any segment and represents the opportunity for profile activation across your organization."
+>abstract="This widget provides the total number of all profiles not attached to any audience and represents the opportunity for profile activation across your organization."
 
-The [!UICONTROL Unsegmented Profiles] widget provides the total number of all profiles not attached to any segment. The number generated is accurate as of the last snapshot and represents the opportunity for profile activation across your organization. It also indicates the opportunity to expunge profiles that do not provide adequate ROI.
+The [!UICONTROL Unsegmented Profiles] widget provides the total number of all profiles not attached to any audience. The number generated is accurate as of the last snapshot and represents the opportunity for profile activation across your organization. It also indicates the opportunity to expunge profiles that do not provide adequate ROI.
 
 ![The Unsegmented Profiles widget.](../images/profiles/unsegmented-profiles.png)
 
@@ -275,9 +275,9 @@ The [!UICONTROL Unsegmented Profiles] widget provides the total number of all pr
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Unsegmented profiles trend"
->abstract="This widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, 90 days, and 12 month periods."
+>abstract="This widget provides a line graph illustration for the number of profiles that are not attached to any audience over a given period of time. The trend of profiles not attached to an audience can be visualized over 30 days, 90 days, and 12 month periods."
 
-The [!UICONTROL Unsegmented profiles change trend] widget uses a line graph to illustrate the number of profiles added since the last daily snapshot that is not attached to any segment. The change-trend of profiles not attached to any segment can be visualized over 30 days, 90 days, and 12-month periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected on the y-axis and time on the x-axis.
+The [!UICONTROL Unsegmented profiles change trend] widget uses a line graph to illustrate the number of profiles added since the last daily snapshot that are not attached to any audience. The change-trend of profiles not attached to any audience can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected on the y-axis and time on the x-axis.
 
 ![The Unsegmented profiles change trend widget.](../images/profiles/unsegmented-profiles-change-trend.png)
 
@@ -300,7 +300,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 ### [!UICONTROL Audiences] {#audiences}
 
-This widget provides the total number of segments that are ready to be activated, according to the chosen merge policy applied to your profile data. 
+This widget provides the total number of audiences that are ready to be activated, according to the chosen merge policy applied to your profile data. 
 
 Select **[!UICONTROL Audiences]** to navigate to the [!UICONTROL Segments] dashboard [!UICONTROL Browse] tab. From there, you can see a list of all the segment definitions for your organization.
 
@@ -319,9 +319,9 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ### [!UICONTROL Audience overlap report] {#audience-overlap-report}
 
-This widget tabularizes the audience overlap data from all available segments filtered by merge policy. A list of five audiences ranked from highest to lowest overlap percentages is provided for the merge policy chosen from the dropdown menu at the top of the screen. The two analyzed segments are listed in the [!UICONTROL SEGMENT A NAME] and [!UICONTROL SEGMENT B NAME] columns. The percentage overlap is provided in the third column accurate to 12 decimal places.
+This widget tabularizes the data overlap from all available audiences filtered by merge policy. A list of five audiences ranked from highest to lowest overlap percentages is provided for the merge policy chosen from the dropdown menu at the top of the screen. The two analyzed audiences are listed in the [!UICONTROL AUDIENCE A NAME] and [!UICONTROL AUDIENCE B NAME] columns. The percentage overlap is provided in the third column accurate to twelve decimal places.
 
-The audience overlap report helps you to build new, high-performance segments. Observing high percentage overlaps enables you to suppress audiences and prevent sending the same audience to different destinations. They also help you identify hidden insights that might help with better segmentation. Low percentage overlap helps to locate unique profiles to pursue.
+The audience overlap report helps you to build new, high-performance audiences. Observing high percentage overlaps enables you to suppress audiences and prevent sending the same audience to different destinations. They also help you identify hidden insights that might help with better segmentation. Low percentage overlap helps to locate unique profiles to pursue.
 
 Select **[!UICONTROL View more]** to open a full-screen dialog that contains more audience overlap data.
 
@@ -355,23 +355,23 @@ Individual counts for either mapped or unmapped audiences are displayed in a dia
 
 ### [!UICONTROL Audiences size] {#audiences-size}
 
-The [!UICONTROL Audiences size] widget provides a two-column table that lists up to 20 segments and the total number of audiences contained in each segment. The list is ordered from high to low according to the total number of audiences. The total audience size number depends on the merge policy applied.
+The [!UICONTROL Audiences size] widget provides a two-column table that lists the names of up to 20 audiences and the total number of profiles contained in each audience. The list is ordered from high to low according to the total number of profiles contained within the audience. The total audience size count is dependent on the merge policy applied.
 
 ![The Audiences size widget.](../images/profiles/audiences-size.png)
 
-To see comprehensive information on a segment, select a segment name from the list provided to navigate to the [!UICONTROL Segments] [!UICONTROL Detail] page. Also, by selecting **[!UICONTROL View all segments]** from the end of the widget, you can navigate to the [!UICONTROL Segments] [!UICONTROL Browse] tab to find any existing segment. 
+To see comprehensive information on an audience, select an audience name from the list provided to navigate to the [!UICONTROL Audiences] [!UICONTROL Detail] page. Also, by selecting **[!UICONTROL View all audiences]** from the end of the widget, you can navigate to the [!UICONTROL Audiences] [!UICONTROL Browse] tab to find any existing audience. 
 
-![The Audiences size widget with a segment name and view all segments text highlighted.](../images/profiles/audiences-size-view-all-segments.png)
+![The Audiences size widget with an audience name and the View all audiences text highlighted.](../images/profiles/audiences-size-view-all-audiences.png)
 
-See the documentation for more information on the [[!UICONTROL Segments] [!UICONTROL Browse] tab](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
+See the documentation for more information on the [[!UICONTROL Audiences] [!UICONTROL  Browse] tab](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
 
 ### [!UICONTROL Audience overlap by merge policy] {#audience-overlap-by-merge-policy}
 
-This widget uses a Venn diagram to display the overlap of two selected segments. The merge policy is chosen from the overview dropdown at the top of the page and the segments for analysis are selected from two dropdown menus within the widget. The total number of profiles contained within the relevant segment definition can be seen by hovering over a circle or the intersection.
+This widget uses a Venn diagram to display the overlap of two selected audiences. The merge policy is chosen from the overview dropdown at the top of the page and the audiences for analysis are selected from two dropdown menus within the widget. The total number of profiles contained within the the relevant segment definition can be seen by hovering over a circle or the intersection.
 
 As the widget displays the visual crossover of segment definitions, you can optimize your segmentation strategy by studying similarities between your segment definitions.
 
-![The Platform UI Profiles dashboard with the merge policy dropdown and the widget segment dropdowns highlighted.](../images/profiles/audience-overlap-by-merge-policy.png)
+![The Platform UI Profiles dashboard with the merge policy dropdown and the widget audience dropdowns highlighted.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}

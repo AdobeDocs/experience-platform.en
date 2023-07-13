@@ -9,7 +9,7 @@ The query accelerated store allows you to reduce the time and processing power r
 
 The query accelerated store allows you to build a custom data model and/or extend an existing Adobe Real-Time Customer Data Platform data model. You can then engage with or embed your reporting insights into a reporting/visualization framework of your choice. Please see the Real-Time Customer Data Platform Insights Data Model documentation to learn how to [customize your SQL query templates to create Real-Time CDP reports for your marketing and key performance indicator (KPI) use cases](../../../dashboards/cdp-insights-data-model.md).
 
-The Real-Time CDP data model from Adobe Experience Platform provides insights on profiles, segments, and destinations and enables the Real-Time CDP insight dashboards. This document guides you through the process of creating your reporting insights data model and also how to extend Real-Time CDP data models as needed.
+The Real-Time CDP data model from Adobe Experience Platform provides insights on profiles, audiences, and destinations and enables the Real-Time CDP insight dashboards. This document guides you through the process of creating your reporting insights data model and also how to extend Real-Time CDP data models as needed.
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ At the outset, you have an initial data model from your sources (potentially fro
 
 ![An entity relational diagram (ERD) of the audience insight user model.](../../images/query-accelerated-store/audience-insight-user-model.png)
 
-In this example, the `externalaudiencereach` table/dataset is based on an ID and tracks the lower and upper bounds for match count. The `externalaudiencemapping` dimension table/dataset maps the external ID to a destination and segment on Platform. 
+In this example, the `externalaudiencereach` table/dataset is based on an ID and tracks the lower and upper bounds for match count. The `externalaudiencemapping` dimension table/dataset maps the external ID to a destination and audience on Platform. 
 
 ## Create a model for reporting insights with Data Distiller
 
@@ -68,7 +68,7 @@ WITH ( DISTRIBUTION = REPLICATE ) AS
  
 CREATE TABLE IF NOT exists audienceinsight.audiencemodel.externalaudiencemapping
 WITH ( DISTRIBUTION = REPLICATE ) AS
-SELECT cast(null as int) segment_id,
+SELECT cast(null as int) audience_id,
        cast(null as int) destination_id,
        cast(null as int) ext_custom_audience_id
  WHERE false;
@@ -127,7 +127,7 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 ## Extend your data model with the Real-Time CDP insights data model
 
-You can extend your audience model with additional details to create a richer dimension table. For example, you can map the segment name and destination name to the external audience identifier. To do this, use Query Service to create or refresh a new dataset and add it to the audience model that combines segments and destinations with an external identity. The diagram below illustrates the concept of this data model extension.
+You can extend your audience model with additional details to create a richer dimension table. For example, you can map the audience name and destination name to the external audience identifier. To do this, use Query Service to create or refresh a new dataset and add it to the audience model that combines audiences and destinations with an external identity. The diagram below illustrates the concept of this data model extension.
 
 ![An ERD diagram linking the Real-Time CDP insight data model and the Query accelerated store model.](../../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
@@ -139,13 +139,13 @@ Use Query Service to add key descriptive attributes from the enriched Real-Time 
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
   SELECT ext_custom_audience_id,
          destination_name,
-         segment_name,
+         audience_name,
          destination_status,
          a.destination_id,
-         a.segment_id
+         a.audience_id
   FROM   externalaudiencemapping AS a
-         LEFT OUTER JOIN adwh_dim_segments AS b
-                      ON ( ( a.segment_id ) = ( b.segment_id ) )
+         LEFT OUTER JOIN adwh_dim_audiences AS b
+                      ON ( ( a.audience_id ) = ( b.audience_id ) )
          LEFT OUTER JOIN adwh_dim_destination AS c
                       ON ( ( a.destination_id ) = ( c.destination_id ) );
  
@@ -164,15 +164,15 @@ Use the `SHOW datagroups;` command to confirm the creation of the additional `ex
 
 ## Query your extended accelerated store reporting insights data model
 
-Now that the `audienceinsight` data model has been augmented, it is ready to be queried. The following SQL shows the list of mapped destinations and segments.
+Now that the `audienceinsight` data model has been augmented, it is ready to be queried. The following SQL shows the list of mapped destinations and audiences.
 
 ```sql
 SELECT a.ext_custom_audience_id,
        b.destination_name,
-       b.segment_name,
+       b.audience_name,
        b.destination_status,
        b.destination_id,
-       b.segment_id
+       b.audience_id
 FROM   audiencemodel.externalaudiencereach1 AS a
        LEFT OUTER JOIN audiencemodel.external_seg_dest_map AS b
                     ON ( ( a.ext_custom_audience_id ) = (
@@ -183,7 +183,7 @@ LIMIT  25;
 The query returns all the datasets on the query accelerated store:
 
 ```console
-ext_custom_audience_id | destination_name |       segment_name        | destination_status | destination_id | segment_id 
+ext_custom_audience_id | destination_name |       audience_name        | destination_status | destination_id | audience_id 
 ------------------------+------------------+---------------------------+--------------------+----------------+-------------
  23850808595110554      | FCA_Test2        | United States             | enabled            |     -605911558 | -1357046572
  23850799115800554      | FCA_Test2        | Born in 1980s             | enabled            |     -605911558 | -1224554872
@@ -205,26 +205,26 @@ ext_custom_audience_id | destination_name |       segment_name        | destinat
 
 Now that you have created your custom data model, you are ready to visualize your data with custom queries and user-defined dashboards. 
 
-The following SQL provides a breakdown of the match count by audiences in a destination and a breakdown of each destination of audiences by segment.
+The following SQL provides a breakdown of the match count by audiences in a destination and a breakdown of each destination of audiences by audience.
 
 ```sql
 
 SELECT b.destination_name,
        a.approximate_count_upper_bound,
-       b.segment_name
+       b.audience_name
 FROM   audiencemodel.externalaudiencereach AS a
        LEFT OUTER JOIN audiencemodel.external_seg_dest_map AS b
                     ON ( ( a.ext_custom_audience_id ) = (
                          b.ext_custom_audience_id ) )
 GROUP  BY b.destination_name,
           a.approximate_count_upper_bound,
-          b.segment_name
+          b.audience_name
 ORDER BY b.destination_name
 LIMIT  5000
 ```
 
 The image below provides an example of the possible custom visualizations using your reporting insights data model.
 
-![A match count by destination and segment widget created from the new reporting insights data model.](../../images/query-accelerated-store/user-defined-dashboard-widget.png)
+![A match count by destination and audience widget created from the new reporting insights data model.](../../images/query-accelerated-store/user-defined-dashboard-widget.png)
 
 Your custom data model can be found in the list of available data models in the user-defined dashboard workspace. See the [user-defined dashboard guide](../../../dashboards/user-defined-dashboards.md) for guidance on how to utilize your custom data model.
