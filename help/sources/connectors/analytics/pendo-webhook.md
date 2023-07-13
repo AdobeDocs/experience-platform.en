@@ -8,7 +8,7 @@ exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
 
 >[!NOTE]
 >
->The [!DNL Pendo] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Pendo] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 

@@ -28,28 +28,99 @@ This user guide requires a working understanding of the following components of 
 >abstract="Negative numbers in ingested records means that a user has deleted certain batches in a selected time range."
 >text="Learn more in documentation"
 
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_daysRemaining"
+>title="Dataset expiration"
+>abstract="This column indicates the number of days that the target dataset has left before it automatically expires."
+
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and status of the most recent ingestion run.
 
 ![An image that highlights the Datasets item within the left navigation bar.](../images/datasets/user-guide/browse-datasets.png)
 
-By default, only the datasets that you have ingested into are shown. If you want to see the system-generated datasets, enable the **[!UICONTROL Show system datasets]** toggle. System-generated datasets are only used to process other components. For example, the system-generated profile export dataset is used to process the profile dashboard.
-
-![The toggle that lets you choose whether or not system datasets should be displayed is highlighted.](../images/datasets/user-guide/system-datasets.png)
-
-Select the name of a dataset to access its **[!UICONTROL Dataset activity]** screen and see details of the dataset you selected. The activity tab includes a graph visualizing the rate of messages being consumed as well as a list of successful and failed batches.
+Select the name of a dataset from the [!UICONTROL Browse] tab to access its **[!UICONTROL Dataset activity]** screen and see details of the dataset you selected. The activity tab includes a graph visualizing the rate of messages being consumed as well as a list of successful and failed batches.
 
 ![Details of your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-1.png)
 ![Sample batches that belong to your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-2.png)
 
-## Preview a dataset
+## Inline dataset actions {#inline-actions}
 
-From the **[!UICONTROL Dataset activity]** screen, select **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data. If the dataset is empty, the preview link will be deactivated and will instead say that the preview is not available.
+The datasets UI now offers a collections of inline actions for each available dataset. Select the ellipsis of a dataset that you want to manage to see the available options in a pop-up menu. The available actions include; [[!UICONTROL Preview dataset]](#preview), [[!UICONTROL Manage data and access labels]](#manage-and-enforce-data-governance), [[!UICONTROL Enable unified profile]](#enable-profile), [[!UICONTROL Manage tags]](#add-tags), and [[!UICONTROL Delete]](#delete). More information on these available actions can be found in their respective sections.
+
+### Add dataset tags {#add-tags}
+
+Add custom created tags to organize datasets and improve search, filtering, and sorting capabilities. From the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace, select the ellipsis of a dataset that you want to manage followed by **[!UICONTROL Manage tags]** from the dropdown menu.
+
+![The Browse tab of the Datasets workspace with the ellipsis and Manage tags option highlighted for the chosen dataset.](../images/datasets/user-guide/manage-tags.png)
+
+The [!UICONTROL Manage tags] dialog appears. Enter a short description to create a custom tag, or choose from a pre-existing tag to label your dataset. Select **[!UICONTROL Save]** to confirm your settings.
+
+![The Manage tags dialog with custom tags highlighted.](../images/datasets/user-guide/manage-tags-dialog.png)
+
+The [!UICONTROL Manage tags] dialog can also remove existing tags from a dataset. Simply select the 'x' next to the tag you wish to remove and select **[!UICONTROL Save]**. 
+
+Once a tag has been aded to a dataset, the datasets can be filtered based on the corresponding tag. See the section on how to [filter datasets by tags](#enable-profile) for more information.
+
+For more information on how to classify business objects for easier discovery and categorization, see the guide on [managing metadata taxonomies](../../administrative-tags/ui/managing-tags.md). This guide details how a user with appropriate permissions can create pre-defined tags, assigning categories to tags, and perform all related CRUD operations on tags and tag categories in the Platform UI.
+
+## Search and filter datasets {#search-and-filter}
+
+To search or filter the list of available datasets, select the filter icon (![The filter icon.](../images/datasets/user-guide/icon.png)) at the top left of the workspace. A set of filter options in the left rail appears. There are several methods to filter your available datasets. These include: [[!UICONTROL Show System Datasets]](#show-system-datasets), [[!UICONTROL Included in profile]](#filter-profile-enabled-datasets), [[!UICONTROL Tags]](#filter-by-tag), [[!UICONTROL Creation date]](#filter-by-creation-date), [[!UICONTROL Modified date], [!UICONTROL Created by]](#filter-by-creation-date), and [[!UICONTROL Schema]](#filter-by-schema).
+
+The list of applied filters is displayed above the filtered results.
+
+![The Browse tab of the Datasets workspace with the list of applied filters highlighted.](../images/datasets/user-guide/applied-filters.png)
+
+### Show system datasets {#show-system-datasets}
+
+By default, only datasets that you have ingested data into are shown. If you want to see the system-generated datasets, select the **[!UICONTROL Yes]** checkbox in the [!UICONTROL Show system datasets] section. System-generated datasets are only used to process other components. For example, the system-generated profile export dataset is used to process the profile dashboard.
+
+![The filter options of the Datasets workspace with the [!UICONTROL Show system datasets] section highlighted.](../images/datasets/user-guide/show-system-datasets.png)
+
+### Filter Profile enabled datasets {#filter-profile-enabled-datasets}
+
+The datasets that have been enabled for Profile data are used to populate customer profiles after data has been ingested. See the section on [enabling datasets for Profile](#enable-profile) to learn more. 
+
+To filter your dataset based on whether they have been enabled for Profile, select the [!UICONTROL Yes] check box from the filter options.
+
+![The filter options of the Datasets workspace with the [!UICONTROL Included in Profile] section highlighted.](../images/datasets/user-guide/included-in-profile.png)
+
+### Filter datasets by tag {#filter-by-tag}
+
+Enter your custom tag name in the [!UICONTROL Tags] input, then select your tag from the list of available options to search and filter datasets that correspond to that tag.
+
+![The filter options of the Datasets workspace with the [!UICONTROL Tags] input and filter icon highlighted.](../images/datasets/user-guide/filter-tags.png) 
+
+### Filter datasets by creation date {#filter-by-creation-date}
+
+Datasets can be filtered by creation date over a custom time period. This can be used to exclude historic data or to generate specific chronological data insights and reporting. Choose a [!UICONTROL Start date] and an [!UICONTROL End date] by selecting the calendar icon for each field. After which, only datasets that conform to that criteria will appear in the Browse tab.
+
+### Filter datasets by modified date {#filter-by-modified-date}
+
+Similar to the filter for creation date, you can filter your datasets based on the date they were last modified. In the [!UICONTROL Modified date] section, Choose a [!UICONTROL Start date] and an [!UICONTROL End date] by selecting the calendar icon for each field. After which, only datasets that were modified during that period will appear in the Browse tab.
+
+### Filter by schema {#filter-by-schema}
+
+You can filter datasets based on the schema that defines their structure. Either select the dropdown icon or input the schema name into the text field. A list of potential matches appears. Select the appropriate schema from the list.  
+
+## Sort datasets by created date {#sort}
+
+Datasets in the [!UICONTROL Browse] tab can be sorted by either ascending or descending dates. Select the [!UICONTROL Created] or [!UICONTROL Last updated] column headings to alternate between ascending and descending. Once selected, the column indicates this with either an up or down arrow to the side of the column header.
+
+![The Browse tab of the Datasets workspace with the Created and Last updated column highlighted.](../images/datasets/user-guide/ascending-descending-columns.png)
+
+## Preview a dataset {#preview}
+
+You can preview dataset sample data from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] tab, select the ellipses next to the dataset name you wish to preview. A menu list of options appears. Next, select **[!UICONTROL Preview dataset]** from the list of available options. If the dataset is empty, the preview link will be deactivated and will instead say that the preview is not available.
+
+![The Browse tab of the Datasets workspace with the ellipsis and Preview dataset option highlighted for the chosen dataset.](../images/datasets/user-guide/preview-dataset-option.png)
+
+This opens the preview window, where the hierarchical view of the schema for the dataset is shown on the right.
+
+![The dataset preview dialog with information about the structure, as well as sample values, for the dataset are shown.](../images/datasets/user-guide/preview-dataset.png)
+
+Alternatively, from the **[!UICONTROL Dataset activity]** screen, select **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data. 
 
 ![The Preview dataset button is highlighted.](../images/datasets/user-guide/select-preview.png)
-
-In the preview window, the hierarchical view of the schema for the dataset is shown on the right.
-
-![A preview of the dataset is displayed. Information about the structure, as well as sample values, are shown.](../images/datasets/user-guide/preview-dataset.png)
 
 For more robust methods to access your data, [!DNL Experience Platform] provides downstream services such as [!DNL Query Service] and [!DNL JupyterLab] to explore and analyze data. See the following documents for more information:
 
@@ -81,6 +152,8 @@ The **[!UICONTROL Configure dataset]** step appears. Provide the dataset with a 
 
 ![Configuration details of the dataset are inserted. This includes details such as the dataset name and description.](../images/datasets/user-guide/configure-dataset-schema.png)
 
+Datasets can be filtered from the list of available datasets in the UI with the schema filter. See the section on how to [filter datasets by schema](#filter-by-schema) for more information.
+
 ### Create a dataset with a CSV file {#csv}
 
 When a dataset is created using a CSV file, an ad hoc schema is created to provide the dataset with a structure that matches the provided CSV file. In the **[!UICONTROL Create dataset]** screen, select **[!UICONTROL Create dataset from CSV file]**.
@@ -108,7 +181,11 @@ Every dataset has the ability to enrich customer profiles with its ingested data
 
 For more information on enabling a schema for [!DNL Profile], see the [Schema Editor user guide](../../xdm/tutorials/create-schema-ui.md).
 
-To enable a dataset for Profile, access its **[!UICONTROL Dataset activity]** screen and select the **[!UICONTROL Profile]** toggle within the **[!UICONTROL Properties]** column. Once enabled, data that is ingested into the dataset will also be used to populate customer profiles.
+You can enable a dataset for Profile from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace, select the ellipsis of a dataset that you want to enable for Profile. A menu list of options appears. Next, select **[!UICONTROL Enable unified profile]** from the list of available options.
+
+![The Browse tab of the Datasets workspace with the ellipses and Enable unified profile highlighted.](../images/datasets/user-guide/enable-for-profile.png)
+
+Alternatively, from the dataset's **[!UICONTROL Dataset activity]** screen, select the **[!UICONTROL Profile]** toggle within the **[!UICONTROL Properties]** column. Once enabled, data that is ingested into the dataset will also be used to populate customer profiles.
 
 >[!NOTE]
 >
@@ -116,13 +193,23 @@ To enable a dataset for Profile, access its **[!UICONTROL Dataset activity]** sc
 
 ![The Profile toggle is highlighted within the dataset details page.](../images/datasets/user-guide/enable-dataset-profiles.png)
 
+Datasets that have been enabled for Profile can also be filtered on this criteria. See the section on how to [filter Profile enabled datasets](#filter-profile-enabled-datasets) for more information.
+
 ## Manage and enforce data governance on a dataset {#manage-and-enforce-data-governance}
+
+You can manage the data governance labels for a dataset by selecting the inline options of the [!UICONTROL Browse] tab. Select the ellipses next to the dataset name you wish to manage, followed by **[!UICONTROL Manage data and access labels]** from the dropdown menu.
 
 Data usage labels, applied at the schema level, allow you to categorize datasets and fields according to usage policies that apply to that data. See the [Data Governance overview](../../data-governance/home.md) to learn more about labels, or refer to the [data usage labels user guide](../../data-governance/labels/overview.md) for instructions on how to apply labels to schemas for propagation to datasets.
 
 ## Delete a dataset {#delete}
 
-You can delete a dataset by first accessing its **[!UICONTROL Dataset activity]** screen. Then, select **[!UICONTROL Delete dataset]** to delete it. 
+You can delete a dataset from either the dataset inline actions in the [!UICONTROL Browse] tab or the top right of the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] view, select the ellipses next to the dataset name you wish to delete. A menu list of options appears. Next, select **[!UICONTROL Delete]** from the dropdown menu.
+
+![The Browse tab of the Datasets workspace with the ellipsis and the Delete option highlighted for the chosen dataset.](../images/datasets/user-guide/inline-delete-dataset.png)
+
+A confirmation dialog appears. Select **[!UICONTROL Delete]** to confirm.
+
+Alternatively, select **[!UICONTROL Delete dataset]** from the **[!UICONTROL Dataset activity]** screen. 
 
 >[!NOTE]
 >
@@ -150,7 +237,7 @@ You can select on an individual **[!UICONTROL Batch ID]** to access the **[!UICO
 
 ![Details of the selected batch are displayed. This includes the number of records ingested, the number of records failed, the batch status, the file size, the ingestion start and end times, the dataset and batch IDs, the organization ID, the dataset name, and the access information.](../images/datasets/user-guide/batch-overview.png)
 
-If you wish to delete the batch, you can do so by selecting **[!UICONTROL Delete batch]** found near the top right of the dashboard. Doing so will also remove its records from the dataset the batch was originally ingested to.
+If you wish to delete the batch, select **[!UICONTROL Delete batch]** near the top right of the dashboard. Deleting a batch also removes its records from the dataset that the batch was originally ingested to.
 
 ![The Delete batch button is highlighted on the dataset details page.](../images/datasets/user-guide/delete-batch.png)
 

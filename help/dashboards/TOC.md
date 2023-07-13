@@ -16,7 +16,7 @@ feature: Dashboards
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)
   * [Account Profiles](guides/account-profiles.md)
-  * [Segments](guides/segments.md)
+  * [Audiences](guides/audiences.md)
   * [Destinations](guides/destinations.md)
   * [License usage](guides/license-usage.md)
 * Customize dashboards {#customize}  
