@@ -145,6 +145,10 @@ POST /flows
 
 **Request**
 
+>[!BEGINTABS]
+
+>[!TAB Create a dataflow for encrypted data ingestion]
+
 The following request creates a dataflow to ingest encrypted data for a cloud storage source.
 
 ```shell
@@ -200,6 +204,59 @@ curl -X POST \
 | `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
 | `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
 | `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
+
+
+>[!TAB Create a dataflow to ingest encrypted and signed data]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "ACME Customer Data",
+    "description": "ACME Customer Data (Encrypted)",
+    "flowSpec": {
+        "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "655f7c1b-1977-49b3-a429-51379ecf0e15"
+    ],
+    "targetConnectionIds": [
+        "de688225-d619-481c-ae3b-40c250fd7c79"
+    ],
+    "transformations": [
+        {
+            "name": "Mapping",
+            "params": {
+                "mappingId": "6b6e24213dbe4f57bd8207d21034ff03",
+                "mappingVersion":"0"
+            }
+        },
+        {
+            "name": "Encryption",
+            "params": {
+                "publicKeyId":"311ef6f8-9bcd-48cf-a9e9-d12c45fb7a17",
+                "signVerificationKeyId":"e31ae895-7896-469a-8e06-eb9207ddf1c2"
+            }
+        }
+    ],
+    "scheduleParams": {
+        "startTime": "1675793392",
+        "frequency": "once"
+    }
+}'
+```
+
+| Property | Description |
+| --- | --- |
+| `params.signVerificationKeyId` |
+
+
+>[!ENDTABS]
 
 **Response**
 
