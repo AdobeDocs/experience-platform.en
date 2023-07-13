@@ -220,7 +220,7 @@ FROM
    qsaccel.profile_agg.adwh_dim_destination
    join qsaccel.profile_agg.adwh_dim_br_segment_destinations
  ON
-   adwh_dim_destination.destination_id = adwh_dim_br_audience_destinations.destination_id
+   adwh_dim_destination.destination_id = adwh_dim_br_segment_destinations.destination_id
  WHERE
    adwh_dim_destination.destination_name is not null
  group by
@@ -442,9 +442,9 @@ FROM
             and adwh_fact_profile_by_segment_and_namespace.merge_policy_id = adwh_dim_namespaces.merge_policy_id
       WHERE
          adwh_dim_namespaces.namespace_description = '${namespace2}'
-         and adwh_fact_profile_by_audience_and_namespace.audience_id = $ {audienceId}
-         and adwh_fact_profile_by_audience_and_namespace.merge_policy_id =$ {mergePolicyId}
-         and adwh_fact_profile_by_audience_and_namespace.date_key = '${lastProcessDate}'
+         and adwh_fact_profile_by_segment_and_namespace.segment_id = $ {segmentId}
+         and adwh_fact_profile_by_segment_and_namespace.merge_policy_id =$ {mergePolicyId}
+         and adwh_fact_profile_by_segment_and_namespace.date_key = '${lastProcessDate}'
    )
    a;
 ```
