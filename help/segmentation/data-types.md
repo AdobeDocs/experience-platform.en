@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;Segmentation data types;Segmentation;segmentation;Segmentation Service;Segmentation service data types;
 solution: Experience Platform
 title: Supported Data Types in Segmentation Service
 description: All Experience Data Model (XDM) data types are supported within Adobe Segmentation Service. The rules that constitute a segment definition are contextualized by the following data types.
@@ -11,7 +10,7 @@ All Experience Data Model (XDM) data types are supported within Adobe Experience
 
 ## String data
 
-Segment definitions use string data to define non-numerical constraints for segment audiences, such as "country name" or "loyalty program level". 
+Segment definitions use string data to define non-numerical constraints for audiences, such as "country name" or "loyalty program level". 
 
 String data is included in segment definitions using logical, inclusive/exclusive, and comparison statements. Once a string attribute is added to your segment definition, you can use string-relevant statements to evaluate it against other string fields.
 
@@ -27,7 +26,7 @@ Date data allows you to assign time-based context to your segment definitions, e
 
 | Example field | Date-relevant statements | Timeline |
 | ------------- | ------------------------ | --------- |
-| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | Relevant to the day the segment was built. |
+| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | Relevant to the day the segment definition was built. |
 | person.lastPurchase | `in last`, `during`, `before`, `after`, `within` | Relevant within any given week/month. |
 
 ## Experience Events
@@ -39,19 +38,19 @@ As seen in the table below, event data is rendered using keywords which help ref
 | Keyword | Use |
 | ------- | --- |
 | Include/exclude | Describes the behavior of the event through the inclusion or omission of data. |
-| Any/all | Helps determine the number of qualifying segments. |
+| Any/all | Helps determine the number of qualifying segment definitions. |
 | "Apply time rule" toggle button | Incorporates date data. |
 | Equals, does not equal, starts with, does not start with, ends with, does not end with, contains, does not contain, exists, does not exist | Incorporates string data. |
 
 ### Audience sharing
 
-External audiences can also be used as components of a new segment definition, adding their attribute rules to the new segment.
+External audiences can also be used as components of a new segment definition, adding their attribute rules to the new segment definitions.
 
 Currently, only Adobe Audience Manager is supported as an external audience, with additional sources being enabled in the future. More information about using Adobe Audience Manager audiences with Platform can be found in the [audience sharing guide within the Adobe Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
-### Segment sharing
+### Segment definition sharing
 
-Segments created in Platform can be used within other [Adobe Experience Cloud Core Services](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html). To enable this feature, you will need to contact your solution architect or your consultant.
+Segment definitions created in Platform can be used within other [Adobe Experience Cloud Core Services](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html). To enable this feature, you will need to contact your solution architect or your consultant.
 
 ## Other data types
 

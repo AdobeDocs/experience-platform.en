@@ -1,11 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;opt-out;Segmentation;Segmentation service;segmentation service;honor opt-outs;opt-outs;opt out;opt outs;consent;share;collect;
 solution: Experience Platform
 title: Honoring Consent in Segments
 description: Learn how to honor customer consent preferences for personal data collection and sharing in segment operations.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 ---
 # Honoring consent in segments
+
+>[!NOTE]
+>
+>This guide explains how to honor consents within **segment definitions**. 
 
 Legal privacy regulations such as the [!DNL California Consumer Privacy Act] (CCPA) provide consumers the right to opt out of having their personal data collected or shared with third parties. Adobe Experience Platform provides standard Experience Data Model (XDM) components that are intended to capture these customer consent preferences in Real-Time Customer Profile data.
 
@@ -17,7 +20,7 @@ Honoring customer consent values requires an understanding of the various [!DNL 
 
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Allows you to build audience segments from [!DNL Real-Time Customer Profile] data.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Allows you to build audiences from [!DNL Real-Time Customer Profile] data.
 
 ## Consent schema fields
 
@@ -29,7 +32,7 @@ Once the field group has been added to a [Profile-enabled schema](../xdm/ui/reso
 
 ## Handling consent in segmentation 
 
-In order to ensure that opted-out profiles are not included in segments, special fields must be added to existing segments and included when creating any new segments.
+In order to ensure that opted-out profiles are not included in segment definitions, special fields must be added to existing segment definitions and included when creating any new segment definitions.
 
 The steps below demonstrate how to add the appropriate fields for two types of opt-out flags:
 
@@ -38,13 +41,13 @@ The steps below demonstrate how to add the appropriate fields for two types of o
 
 >[!NOTE]
 >
->While this guide focuses on the two opt-out flags above, you can configure your segments to incorporate additional consent signals as well. The [consents and preferences reference guide](../xdm/field-groups/profile/consents.md) provides more information on each of these options and their intended use cases.
+>While this guide focuses on the two opt-out flags above, you can configure your segment definitions to incorporate additional consent signals as well. The [consents and preferences reference guide](../xdm/field-groups/profile/consents.md) provides more information on each of these options and their intended use cases.
 
-When building a segment in the UI, under **[!UICONTROL Attributes]**, navigate to **[!UICONTROL XDM Individual Profile]**, then select **[!UICONTROL Consents and Preferences]**. From here, you can see the options for **[!UICONTROL Data Collection]** and **[!UICONTROL Share Data]**.
+When building a segment definition in the UI, under **[!UICONTROL Attributes]**, navigate to **[!UICONTROL XDM Individual Profile]**, then select **[!UICONTROL Consents and Preferences]**. From here, you can see the options for **[!UICONTROL Data Collection]** and **[!UICONTROL Share Data]**.
 
 ![](./images/opt-outs/consents.png)
 
-Start by selecting the **[!UICONTROL Data Collection]** category, then drag **[!UICONTROL Choice Value]** into the segment builder. When adding the attribute to the segment, you can specify the [consent values](../xdm/field-groups/profile/consents.md#choice-values) that must be included or excluded.
+Start by selecting the **[!UICONTROL Data Collection]** category, then drag **[!UICONTROL Choice Value]** into the segment builder. When adding the attribute to the segment definition, you can specify the [consent values](../xdm/field-groups/profile/consents.md#choice-values) that must be included or excluded.
 
 ![](./images/opt-outs/consent-values.png)
 
@@ -60,11 +63,11 @@ Under **[!UICONTROL Attributes]** in the left rail, navigate back to the **[!UIC
 
 ![](./images/opt-outs/share.png)
 
-With both the **[!UICONTROL Data Collection]** and **[!UICONTROL Share Data]** consent values added to the segment, any customers that have opted out of having their data used will be excluded from the resulting audience. From here, you can continue customizing the segment definition before selecting **[!UICONTROL Save]** to finish the process.
+With both the **[!UICONTROL Data Collection]** and **[!UICONTROL Share Data]** consent values added to the segment definition, any customers that have opted out of having their data used will be excluded from the resulting audience. From here, you can continue customizing the segment definition before selecting **[!UICONTROL Save]** to finish the process.
 
 ## Next steps
 
-By following this tutorial, you should now have a better understanding of how to honor customer consents and preferences when building segments in Experience Platform.
+By following this tutorial, you should now have a better understanding of how to honor customer consents and preferences when building segment definitions in Experience Platform.
 
 For more information on managing consent in Platform, refer to the following documentation:
 

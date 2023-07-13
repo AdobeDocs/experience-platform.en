@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;profile;segment;segments;segmentation;user interface;UI;customization;segment dashboard;dashboard
 title: Segments Dashboard
 description: The Adobe Experience Platform UI provides a dashboard through which you can view important metrics related to segments created and maintained by your organization. 
 type: Documentation
@@ -13,4 +12,4 @@ For detailed instructions on how to access and interact with the segments dashbo
 
 For an overview of all of the dashboard features within the Experience Platform user interface, please begin by reading the [dashboards overview](../../dashboards/home.md).
 
-![The segments dashboard. This is showing three widgets - the audience size widget, the audience size change trend widget, and the profiles by identity widget.](../images/ui/segment-dashboard/dashboard-overview.png)
+![The segments dashboard. This is showing three widgets - the audience size widget, the audience size change trend widget, and the profiles by identity widget.](../../dashboards/images/segments/dashboard-overview.png)
