@@ -192,7 +192,7 @@ To correctly map your XDM fields to the [!DNL (API) Salesforce Marketing Cloud] 
 >
 >* Although your attribute names would be as per your [!DNL Salesforce Marketing Cloud] account, the mappings for both `contactKey` and `personalEmail.address` are mandatory.
 >
->* If your [!DNL Salesforce Marketing Cloud] account has more than 2000 attributes the **[!UICONTROL Mapping]** step, will display only upto 2000 and the remainder will not be shown in the schema.
+>* The integration with the [!DNL Salesforce Marketing Cloud] API is subject to a pagination limit of how many attributes Experience Platform can retrieve from Salesforce. This means during the **[!UICONTROL Mapping]** step, the target field schema can display a maximum of 2000 attributes from your Salesforce account.
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 ![Platform UI screenshot example for Add new mapping.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
