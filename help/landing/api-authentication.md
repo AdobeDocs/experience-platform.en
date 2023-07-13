@@ -49,7 +49,9 @@ Once you are assigned as a developer, you can start creating integrations in [Ad
 
 ### Gain user access {#gain-user-access}
 
-Your [!DNL Admin Console] administrator must also add you as a user to the same product profile. See the guide on [managing user groups in [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) for more information.
+Your [!DNL Admin Console] administrator must also add you as a user to the same product profile. With user access, you can see in the UI the outcome of the API operations that you perform. 
+
+See the guide on [managing user groups in [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) for more information.
 
 ## Generate an API key (client ID) and organization ID {#generate-credentials}
 
@@ -65,7 +67,11 @@ Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and si
 
 Once you have created a new project, select **[!UICONTROL Add API]** on the **[!UICONTROL Project Overview]** screen.
 
-![](./images/api-authentication/add-api.png)
+>[!TIP]
+>
+>If you are provisioned for several organizations, use the organization selector in the upper right corner of the interface to make sure that you are in the organization you need.
+
+![Developer Console screen with the Add API option highlighted.](./images/api-authentication/add-api.png)
 
 The **[!UICONTROL Add an API]** screen appears. Select the product icon for Adobe Experience Platform, then choose **[!UICONTROL Experience Platform API]** before selecting **[!UICONTROL Next]**.
 
@@ -88,13 +94,11 @@ Next, select the authentication type to generate access tokens and access the Ex
 ### Select the product profiles for your integration {#select-product-profiles}
 
 Next, select the product profiles that should apply to your integration.
-Your integration's service account will gain access to granular features through the product profiles selected here. 
+Your integration's service account will gain access to granular features through the product profiles selected here.
 
-Note that to get access to certain features in Platform, you also need a system administrator to grant you the necessary Attribute-based access control permissions. Read more in the section [Get the necessary attribute-based access control permissions](#get-abac-permissions).
-
->[!TIP]
+>[!IMPORTANT]
 >
->If you are expecting to see a certain product profile here, contact your system administrator. System administrators can view and manage API credentials in the Permissions view. For more information, refer to the section [Add developers to product profile](#add-developers-to-product-profile).
+>Note that to get access to certain features in Platform, you also need a system administrator to grant you the necessary Attribute-based access control permissions. Read more in the section [Get the necessary attribute-based access control permissions](#get-abac-permissions).
 
 ![Select product profiles for your integration.](./images/api-authentication/select-product-profiles.png)
 
@@ -254,7 +258,7 @@ If your response is similar to the one shown below, then your credentials are va
 
 >[!IMPORTANT]
 >
->While the call above is sufficient to test your access credentials, be aware that you will not be able to access or modify several resources without having the right Attribute-based access control permissions. Read more in the [Get the necessary attribute-based access control permissions](#get-abac-permissions) section.
+>While the call above is sufficient to test your access credentials, be aware that you will not be able to access or modify several resources without having the right Attribute-based access control permissions. Read more in the **Get the necessary attribute-based access control permissions** section below.
 
 ## Get the necessary attribute-based access control permissions {#get-abac-permissions}
 
