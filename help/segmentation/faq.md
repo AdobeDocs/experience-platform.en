@@ -5,25 +5,25 @@ description: Find out answers to frequently asked questions about audiences.
 
 # Frequently asked questions
 
-Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. The following is a list of frequently asked questions regarding audiences and segmentation.
+Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on Platform, and are readily accessible by any Adobe solution. The following is a list of frequently asked questions regarding audiences and segmentation.
 
 ## Do I have access to Audience Portal and Audience Composition?
 
-Audience Portal and Audience Composition are available to all  Real-Time CDP Prime and Ultimate customers (B2C, B2B, and B2P Editions) and Journey Optimizer Select, Prime, Ultimate Starter, and Ultimate customers.
+Audience Portal and Audience Composition are available to all Real-Time CDP Prime and Ultimate customers (B2C, B2B, and B2P Editions) and Journey Optimizer Select, Prime, Ultimate Starter, and Ultimate customers.
 
-At this point in time, only profile-based audiences are supported. Support for account-based audiences will be added in 2024.
+At this point in time, only profile-based audiences are supported. Support for account-based audiences will be added in a later release.
 
 ## Are externally generated pre-built audiences supported with Audience Portal?
 
-Yes! At this point in time, you can import an externally generated pre-built audience through a CSV file. In the future, you'll be able to add audiences through batch or streaming-based source connectors.
+Yes, externally generated pre-built audiences are supported with Audience Portal. At this point in time, you can import an externally generated audience through a CSV file. In the future, you'll be able to add audiences through batch or streaming-based source connectors.
 
 ## Can I reconcile externally generated audience data with an existing profile in Platform?
 
-Yes! If the data in the externally generated audience matches existing profiles in Platform, the newly uploaded profile will be merged with the existing profile if the primary identifiers match. This data can take up to 24 hours to be reconciled. If profile data does not already exist, a new profile will be created as the data is ingested.
+Yes, the externally generated audience will be merged with the existing profile in Platform if the primary identifiers match.This data can take up to 24 hours to be reconciled. If profile data does not already exist, a new profile will be created as the data is ingested.
 
 ## Can I use an externally generated audience to build other audiences?
 
-Yes! Any externally generated audience will appear within the audience inventory and can be used when building audiences within the Segment Builder.
+Yes, any externally generated audience will appear within the audience inventory and can be used when building audiences within the [Segment Builder](./ui/segment-builder.md).
 
 ## Can I use externally uploaded attributes as part of segmentation?
 
@@ -33,9 +33,11 @@ The externally generated audience's contextual data, or enrichment attributes, a
 
 However when mapping your audiences to batch or file-based destinations, you can use these externally generated enrichment attributes to augment your audiences and further downstream activations.
 
+To learn more about this capability, please read the guide on [activating audience data to batch profile export destinations](../destinations/ui/activate-batch-profile-destinations.md#mapping).
+
 ## Can I activate externally generated audiences to Adobe Journey Optimizer?
 
-At this point in time, no. However, this capability will be available in H2 2023.
+At this point in time, no. However, this capability will be available in the near future.
 
 ## Can I delete an externally generated audience?
 
@@ -50,11 +52,11 @@ Audience Portal and Audience Composition will interact with Partner Data in two 
 
 ## Can I use externally generated audiences in Audience Composition?
 
-At this point in time, no. However, this capability should be available in H2 2023.
+At this point in time, no. However, this capability should be available in the near future.
 
 ## Can I send audiences from Audience Composition to all downstream destinations and channels?
 
-At this point in time, no. Currently, you can use audiences from Audience Composition in AJO Campaigns and Real-time CDP destinations. AJO Journeys are presently **not** supported.
+At this point in time, no. Currently, you can use audiences from Audience Composition in Adobe Journey Optimizer Campaigns and Real-time CDP destinations. Adobe Journey Optimizer Journeys will be supported in a future release.
 
 ## Are there any guardrails on the number of compositions?
 
@@ -64,16 +66,16 @@ At this point in time, you can only have **10** published compositions per sandb
 
 The composition component placing follows a rigid structure as follows:
 
-1. You **always** start with the Audience block to select your starting activity. You can have a maximum of **one** Audience block.
-2. You can optionally add an Exclude block that follows the Audience block.
-3. You can optionally add a Rank or Split block. You can **only** have one of these blocks per composition.
-4. You **always** end with a Save block to save your audience.
+1. You **always** start with the [!UICONTROL Audience] block to select your starting activity. You can have a maximum of **one** [!UICONTROL Audience] block.
+2. You can optionally add an [!UICONTROL Exclude] block that follows the [!UICONTROL Audience] block.
+3. You can optionally add a [!UICONTROL Rank] or [!UICONTROL Split] block. You can **only** have one of these blocks per composition.
+4. You **always** end with a [!UICONTROL Save] block to save your audience.
 
 For more details about using Audience Composition, please read the [Audience Composition UI guide](./ui/audience-composition.md).
 
 ## Can I use an Audience Composition in another composition?
 
-No. Audiences created using Audience Composition **cannot** be used as an input in another audience composition.
+No, audiences created using Audience Composition **cannot** be used as an input in another audience composition.
 
 ## How does splitting work in Audience Composition?
 
@@ -83,7 +85,7 @@ For more information on the Split block, please read the [Audience Composition U
 
 ## Can I use all segmentation types in the Audience Composition workflow?
 
-Yes, you can! All segmentation types (batch segmentation, streaming segmentation, and edge segmentation) are supported in the Audience Composition workflow. However, since compositions are currently only run once per day, even if streaming- or edge-evaluated audiences are included, the result will be based on audience membership at the time the composition was executed.
+Yes, all segmentation types (batch segmentation, streaming segmentation, and edge segmentation) are supported in the Audience Composition workflow. However, since compositions are currently only run once per day, even if streaming- or edge-evaluated audiences are included, the result will be based on audience membership at the time the composition was executed.
 
 ## How can I confirm a profile's membership in an audience?
 
