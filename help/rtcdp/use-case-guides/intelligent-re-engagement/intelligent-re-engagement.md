@@ -47,8 +47,8 @@ Also, divisional data lakes fuel the CDP with division-specific client and  beha
     -   Segment Qualification – The journey checks if customer is in Abandon Cart segment.
 
 5.  Actions
-    -   Journey Actions – If AJO is being used, it checks consent and send out to the various Actions configured (for example, email, SMS, and so on).
-    -   Destination – If Destinations Framework is being used, it checks consent and send out to the various Destinations configured (for example, email, direct mail, and so on).
+    -   Journey Actions – If AJO is being used, it checks consent and send out to the various Actions configured (for example, email, SMS).
+    -   Destination – If Destinations Framework is being used, it checks consent and send out to the various Destinations configured (for example, email, direct mail).
 
 6.  Interaction Feedback – The downstream application sending the email (paid media ad or push notification), in-App message, or SMS sends its activities back to AEP for measurement of activities.
 
