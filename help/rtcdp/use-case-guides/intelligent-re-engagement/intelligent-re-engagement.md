@@ -31,27 +31,26 @@ Also, divisional data lakes fuel the CDP with division-specific client and  beha
 
 ![step by step](../intelligent-re-engagement/images/step-by-step.png) 
 
-1a.  Data Ingestion (Streaming) – Web SDK/ Mobile SDK/ Edge Network API ingestion via Edge Network (preferred method)
-
 >[!NOTE]
 >
 >While AADC is listed, we are assuming Web SDK is our approach.
 
-1b. Data Ingestion (Batch) – Offline data is loaded into AEP. Assumption data is loaded via batch, but can be streamed into AEP.
+1.  Data Ingestion  
+    -   Data Ingestion (Streaming) – Web SDK/ Mobile SDK/ Edge Network API ingestion via Edge Network (preferred method).
+    -   Data Ingestion (Batch) – Offline data is loaded into AEP. Assumption data is loaded via batch, but can be streamed into AEP.
 
 2.  Unified Profile – Once the data is ingested, it will land in their appropriate datasets marked for Profile.
 
 3.  Segment Qualification – The Add to cart event kicks off a time that waits for 30 mins, then checks for purchase (abandon cart), then adds to the Abandon Cart Segment.
 
-4a. Journey Trigger – Qualification for the Segment enters the customer into a triggered journey in Adobe Journey Optimizer.
+4.  Qualifications
+    -   Journey Trigger – Qualification for the Segment enters the customer into a triggered journey in Adobe Journey Optimizer.
+    -   Segment Trigger – Qualification for the segment adds customer to destination via RTCDP for re-targeting via paid media ads.
+    -   Segment Qualification – The journey checks if customer is in Abandon Cart segment.
 
-4b. Segment Trigger – Qualification for the segment adds customer to destination via RTCDP for re-targeting via paid media ads.
-
-4c. Segment Qualification – The journey checks if customer is in Abandon Cart segment.
-
-5a. Journey Actions – If AJO is being used, it will check consent and send out to the various Actions configured (e.g., email, SMS, and so on).
-
-5b. Destination – If Destinations Framework is being used, it will check consent and send out to the various Destinations configured (e.g., email, direct mail, and so on).
+5.  Actions
+    -   Journey Actions – If AJO is being used, it will check consent and send out to the various Actions configured (e.g., email, SMS, and so on).
+    -   Destination – If Destinations Framework is being used, it will check consent and send out to the various Destinations configured (e.g., email, direct mail, and so on).
 
 6.  Interaction Feedback – The downstream application sending the email (or paid media ad or push notification, in-App message or SMS) sends its activities back to AEP for measurement of activities.
 
