@@ -14,7 +14,7 @@ This connector helps set up the initial export of profile data and also helps sy
 
 >[!IMPORTANT]
 >
->This documentation page was created by Pegasystems. For any inquiries or update requests, please contact Pega directly [here](mailto:support@pega.com).
+>The destination connector and documentation page are created and maintained by Pegasystems. For any inquiries or update requests, please contact Pega directly [here](mailto:support@pega.com).
 
 ## Use cases 
 

@@ -14,7 +14,7 @@ The Amazon Ads integration with Adobe Experience Platform provides turn-key inte
 
 >[!IMPORTANT]
 >
->This documentation page was created by the *Amazon Ads* team. This is currently a beta product and functionality is subject to change. For any inquiries or update requests, please contact them directly at *`amc-support@amazon.com`.*
+>The destination connector and documentation page are created and maintained by the *Amazon Ads* team. This is currently a beta product and functionality is subject to change. For any inquiries or update requests, please contact them directly at *`amc-support@amazon.com`.*
 
 ## Use cases {#use-cases}
 

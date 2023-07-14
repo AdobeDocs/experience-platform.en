@@ -20,7 +20,7 @@ exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 
 >[!IMPORTANT]
 >
->This documentation page was created by the *YourDestination* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates, for example `support@YourDestination.com`.*
+>The destination connector and documentation page are created and maintained by the *YourDestination* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates, for example `support@YourDestination.com`.*
 
 ## Use cases {#use-cases}
 

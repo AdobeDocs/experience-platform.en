@@ -16,7 +16,7 @@ exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
 
 >[!IMPORTANT]
 >
->This documentation page was created by the *YOURSOURCE* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates*.
+>The source connector and documentation page are created and maintained by the *YourSource* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates*.
 
 ## Prerequisites
 

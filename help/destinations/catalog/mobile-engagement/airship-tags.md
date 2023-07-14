@@ -17,7 +17,7 @@ To learn more about [!DNL Airship], see the [Airship Docs](https://docs.airship.
 
 >[!TIP]
 >
->This documentation page was created by the [!DNL Airship] team. For any inquiries or update requests, please contact them directly at [support.airship.com](https://support.airship.com/).
+>The destination connector and documentation page are created and maintained by the [!DNL Airship] team. For any inquiries or update requests, please contact them directly at [support.airship.com](https://support.airship.com/).
 
 ## Prerequisites
 

@@ -11,7 +11,7 @@ exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
 
 >[!IMPORTANT]
 >
->This documentation page was created by [!DNL Verizon Media/Yahoo]'s [!DNL DataX] team. For any inquiries or update requests, please contact them directly at [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
+>The destination connector and documentation page are created and maintained by [!DNL Verizon Media/Yahoo]'s [!DNL DataX] team. For any inquiries or update requests, please contact them directly at [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
 
 ## Prerequisites {#prerequisites}
 

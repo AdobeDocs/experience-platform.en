@@ -11,7 +11,7 @@ exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
 
 >[!IMPORTANT]
 >
->This documentation page was created by the *Snap Inc* team. For any inquiries or update requests, please contact them directly at *dev-support@snap.com*
+>The destination connector and documentation page are created and maintained by the *Snap Inc* team. For any inquiries or update requests, please contact them directly at *dev-support@snap.com*
 
 ## Use cases {#use-cases}
 
