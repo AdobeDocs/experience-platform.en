@@ -55,7 +55,7 @@ A default widget load-out is provided for all new instances of Adobe Experience 
 
 >[!NOTE]
 >
->As of July 26th 2023, the [!UICONTROL Profiles], [!UICONTROL Segments], and [!UICONTROL Destinations] Overview dashboards have been reset to a new default widget load-out for all users who did not modify their views in the previous 6 months. Please see the the documentation in the [Profiles](./profiles.md#default-widgets) and [Segments](./segments.md#default-widgets) default widget sections for details on which widgets are included as part of the default widget load-outs. You can continue to customize your dashboard widgets as before.
+>As of July 26th 2023, the [!UICONTROL Profiles], [!UICONTROL Audiences], and [!UICONTROL Destinations] Overview dashboards have been reset to a new default widget load-out for all users who did not modify their views in the previous 6 months. Please see the the documentation in the [Profiles](./profiles.md#default-widgets) and [Segments](./segments.md#default-widgets) default widget sections for details on which widgets are included as part of the default widget load-outs. You can continue to customize your dashboard widgets as before.
 
 ## Standard widgets {#standard-widgets}
 

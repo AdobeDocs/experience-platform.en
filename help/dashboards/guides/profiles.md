@@ -107,7 +107,7 @@ A default widget load-out is provided for all new instances of Adobe Experience 
 
 >[!NOTE]
 >
->As of July 26th 2023, the [!UICONTROL Profiles], [!UICONTROL Segments], and [!UICONTROL Destinations] Overview dashboards have been reset to a new default widget load-out for all users who did not modify their views in the previous six months. Refer to the documentation in the [Destinations](./destinations.md#default-widgets) and [Segments](./segments.md#default-widgets) default widget sections for details on which widgets are included as part of the default widget load-outs. You can continue to customize your dashboard widgets as before.
+>As of July 26th 2023, the [!UICONTROL Profiles], [!UICONTROL Audiences], and [!UICONTROL Destinations] Overview dashboards have been reset to a new default widget load-out for all users who did not modify their views in the previous six months. Refer to the documentation in the [Destinations](./destinations.md#default-widgets) and [Audiences](./audiences.md#default-widgets) default widget sections for details on which widgets are included as part of the default widget load-outs. You can continue to customize your dashboard widgets as before.
 
 ## Standard widgets {#standard-widgets}
 
@@ -302,7 +302,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 This widget provides the total number of audiences that are ready to be activated, according to the chosen merge policy applied to your profile data. 
 
-Select **[!UICONTROL Audiences]** to navigate to the [!UICONTROL Segments] dashboard [!UICONTROL Browse] tab. From there, you can see a list of all the segment definitions for your organization.
+Select **[!UICONTROL Audiences]** to navigate to the [!UICONTROL Audiences] dashboard [!UICONTROL Browse] tab. From there, you can see a list of all the segment definitions for your organization.
 
 ![The Audiences widget.](../images/profiles/audiences.png)
 
