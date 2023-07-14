@@ -453,7 +453,9 @@ FROM
 
 ### Overlap Namespace-Audience model {#overlap-namespace-audience-model}
 
-<!-- Q) What is the difference between the Overlap Namespace-Audience model and the overlap namespace by audience (segment) model? -->
+<!-- Q) What is the difference between the Overlap Namespace-Audience model and the overlap namespace by audience (segment) model?
+
+A) Purnaram "These are 2 different metrics. one overlap count by namespace as well segment and other one overlap of a particular namespace by given segment" -->
 
 The overlap namespace-audience model is comprised of the following datasets: 
 
