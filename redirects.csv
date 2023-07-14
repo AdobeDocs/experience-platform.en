@@ -1,4 +1,5 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html,https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/audiences.html
 https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/activity-analysis-with-adobe-target.html,https://experienceleague.adobe.com/docs/experience-platform/query/home.html
 https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/license-usage.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/query/data-governance.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-governance/overview.html
@@ -415,3 +416,12 @@ https://experienceleague.adobe.com/docs/experience-platform/destinations/destina
 https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/api/developer-tools-reference/file-based-destination-testing-api/file-based-render-template-api.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/testing-api/batch-destinations/file-based-render-template-api.html
 https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/configure-personalization-destinations.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-edge-personalization-destinations.html
 https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-profile-request-destinations.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-edge-personalization-destinations.html
+https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/sdk/overview.html,https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/overview.html
+https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk-plugins/overview.html,https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/web-sdk-plugins.html
+https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk-plugins/release-notes.html,https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/web-sdk-plugins-release-notes.html
+https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension-configuration.html,https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/web-sdk-extension-configuration.html
+https://experienceleague.adobe.com/docs/experience-platform/edge/extension/event-types.html,https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/event-types.html
+https://experienceleague.adobe.com/docs/experience-platform/edge/extension/action-types.html,https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html
+https://experienceleague.adobe.com/docs/experience-platform/edge/extension/data-element-types.html,https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types.html
+https://experienceleague.adobe.com/docs/experience-platform/edge/extension/accessing-the-ecid.html,https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/accessing-the-ecid.html
+https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-ext-release-notes.html,https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.html

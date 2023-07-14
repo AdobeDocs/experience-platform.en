@@ -245,7 +245,7 @@ The [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) clause can be used to incremen
 ### Why is there a difference between the numbers shown in Profile UI and the numbers calculated from the profile export dataset? 
 
 +++Answer
-The numbers displayed in the profile dashboard are accurate as of the last snapshot. The numbers generated in the profile export table are dependent entirely on the export query. As a result, querying the number of profiles that qualify for a particular segment is a common cause for this discrepancy.
+The numbers displayed in the profile dashboard are accurate as of the last snapshot. The numbers generated in the profile export table are dependent entirely on the export query. As a result, querying the number of profiles that qualify for a particular audience is a common cause for this discrepancy.
 
 >[!NOTE]
 >

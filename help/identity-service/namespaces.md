@@ -42,8 +42,10 @@ The following identity types are available within [!DNL Platform]:
 | Device ID | Device IDs identify hardware devices, such as IDFA (iPhone and iPad), GAID (Android), and RIDA (Roku), and can be shared by multiple people in households.|
 | Email address | Email addresses are often associated with a single person and therefore can be used to identify that person across different channels. Identities of this type include personally identifiable information (PII). This is an indication to [!DNL Identity Service] to handle the value sensitively.|
 | Non-people identifier | Non-people IDs are used for storing identifiers that require namespaces but are not connected to a person cluster. For example, a product SKU, data related to products, organizations, or stores. |
-| Partner ID [!BADGE Beta]{type=Informative} | Partner IDs are identifiers used by data partners to represent people. Partner IDs are often pseudonymous so as to not reveal a person's true identity, and may be probabilistic. In Real-Time Customer Data Platform, Partner IDs are used primarily for expanded audience activation and data enrichment, and not for building deterministic identity graph linkages. |
+| Partner ID [!BADGE Beta]{type=Informative} | <ul><li>Partner IDs are identifiers used by data partners to represent people. Partner IDs are often pseudonymous so as to not reveal a person's true identity, and may be probabilistic. In Real-Time Customer Data Platform, Partner IDs are used primarily for expanded audience activation and data enrichment, and not for building identity graph linkages.</li><li>Identity graphs are not generated when ingesting an identity that includes an identity namespace specified as Partner ID type.</li><li>Failure to ingest partner data using the identity type of Partner ID could result in reaching system graph limitations on Identity Service, as well as unwanted merging of profiles.</li><ul> |
 | Phone number | Phone numbers are often associated with a single person and therefore can be used to identify that person across different channels. Identities of this type include PII. This is indication to [!DNL Identity Service] to handle the value sensitively. |
+
+{style="table-layout:auto"}
 
 ### Standard namespaces {#standard}
 

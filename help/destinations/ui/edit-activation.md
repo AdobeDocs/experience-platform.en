@@ -7,7 +7,7 @@ exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 ---
 # Edit activation dataflows {#edit-activation-flows}
 
-In Adobe Experience Platform, you can edit various components of existing activation dataflows to destinations, like the exported segments and profile attributes, the export frequency, whether the activation dataflow is enabled or disabled, and more.
+In Adobe Experience Platform, you can edit various components of existing activation dataflows to destinations, like the exported audiences and profile attributes, the export frequency, whether the activation dataflow is enabled or disabled, and more.
 
 ## Edit dataflows {#edit-dataflows}
 
@@ -27,8 +27,8 @@ Follow the steps below to edit existing activation dataflows:
 
 4. The **[!UICONTROL Dataflow runs]** page for the destination appears, showing its available controls. At this point, you can edit several components of the destination dataflow: 
 
-    * Select **[!UICONTROL Activate segments]** in the right rail to change which segments or profile attributes to send to the destination. This action takes you to the activation workflow, which differs depending on destination type. For more information, see the guides on: 
-      * [activating audience data to segment streaming destinations](./activate-segment-streaming-destinations.md) (for example, Facebook or Twitter);
+    * Select **[!UICONTROL Activate audiences]** in the right rail to change which audiences or profile attributes to send to the destination. This action takes you to the activation workflow, which differs depending on destination type. For more information, see the guides on: 
+      * [activating audience data to audience streaming destinations](./activate-segment-streaming-destinations.md) (for example, Facebook or Twitter);
       * [activating audience data to batch profile-based destinations](./activate-batch-profile-destinations.md) (for example, Amazon S3 or Oracle Eloqua);
       * [activating audience data to streaming profile-based destinations](./activate-streaming-profile-destinations.md) (for example, HTTP API or Amazon Kinesis).
 

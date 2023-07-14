@@ -10,7 +10,7 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 >
 >* The functionality to export datasets is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
 >* This beta functionality supports the export of first generation data, as defined in the Real-Time Customer Data Platform [product description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
->* This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Please contact your Adobe representative for more information. 
+>* This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Contact your Adobe representative for more information. 
 
 This article explains the workflow required to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage] by using the Experience Platform UI. 
 
@@ -29,14 +29,14 @@ Currently, you can export datasets to the cloud storage destinations highlighted
 * [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) 
 * [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-## When to activate segments or export datasets {#when-to-activate-segments-or-activate-datasets}
+## When to activate audiences or export datasets {#when-to-activate-audiences-or-activate-datasets}
 
-Some file-based destinations in the Experience Platform catalog support both segment activation and dataset export. 
+Some file-based destinations in the Experience Platform catalog support both audience activation and dataset export. 
 
-* Consider activating segments when you want your data structured into profiles grouped by audience interests or qualifications. 
+* Consider activating audiences when you want your data structured into profiles grouped by audience interests or qualifications. 
 * Alternatively, consider dataset exports when you are looking to export raw datasets, which are not grouped or structured by audience interests or qualifications. You could use this data for reporting, data science workflows, to satisfy compliance requirements, and many other use cases.
 
-This document contains all the information necessary to export datasets. If you want to activate segments to cloud storage or email marketing destinations, read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md).
+This document contains all the information necessary to export datasets. If you want to activate audiences to cloud storage or email marketing destinations, read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## Prerequisites {#prerequisites}
 
@@ -83,7 +83,7 @@ Use the check boxes to the left of the dataset names to select the datasets that
 >title="File export options for datasets"
 >abstract="Select **Export incremental files** to export only the data which was added to the dataset since the last export. <br> The first incremental file export includes all the data in the dataset, acting as a backfill. Future incremental files include only the data which was added to the dataset since the first export."
 
-In the **[!UICONTROL Scheduling]** step, you can set a start date as well as an export cadence for your dataset exports.
+In the **[!UICONTROL Scheduling]** step, you can set a start date and an export cadence for your dataset exports.
 
 The **[!UICONTROL Export incremental files]** option is automatically selected. This triggers an export where the first file is a full snapshot of the dataset and subsequent files are incremental additions to the dataset since the previous export.
 
@@ -128,11 +128,22 @@ The default file name is randomly generated and ensures that exported file names
 
 The presence of these files in your storage location is confirmation of a successful export. To understand how the exported files are structured, you can download a sample [.parquet file](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) or [.json file](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
 
+#### Compressed dataset files {#compressed-dataset-files}
+
+In the [connect to destination workflow](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options), you can select the exported dataset files to be compressed, as shown below: 
+
+![File type and compression selection when connecting to a destination to export datasets.](/help/destinations/assets/ui/export-datasets/compression-format-datasets.gif)
+
+Note the difference in file format between the two file types, when compressed: 
+
+* When exporting compressed JSON files, the exported file format is `json.gz`
+* When exporting compressed parquet files, the exported file format is `gz.parquet`
+
 ## Remove dataset from destination {#remove-dataset}
 
 To remove a dataset from an existing dataflow, follow the steps below:
 
-1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destination dataflows.
+1. Log in to the [Experience Platform UI](https://experience.adobe.com/platform/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destination dataflows.
 
     ![Destination browse view with a destination connection shown and the rest blurred out.](../assets/ui/export-datasets/browse-dataset-connections.png)
 
