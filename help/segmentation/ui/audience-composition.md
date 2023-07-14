@@ -104,51 +104,53 @@ A list of profile attributes appears. Select the attribute type you want to excl
 
 ## [!UICONTROL Enrich] {#enrich-block}
 
-The **[!UICONTROL Enrich]** block type allows you to enrich your audience with additional attributes from a dataset.
+>[!IMPORTANT]
+>
+>At this point in time, enrichment attributes can **only** be used in downstream Adobe Journey Optimizer scenarios.
+
+The **[!UICONTROL Enrich]** block type allows you to enrich your audience with additional attributes from a dataset. You can use these attributes in personalization use cases.
 
 To add an **[!UICONTROL Enrich]** block, select the **+** icon, followed by **[!UICONTROL Enrich]**.
 
-IMAGE
+![The [!UICONTROL Enrich] option is selected.](../images/ui/audience-composition/add-enrich-block.png)
 
 The **[!UICONTROL Enrich]** block is added. When this block is selected, details about the enrichment appear in the right rail. This includes the block's label and the enrichment dataset.
 
-IMAGE
+To select the dataset to enrich the audience with, select the ![filter](../images/ui/audience-composition/filter-attribute.png) icon. 
 
-To select the dataset to enrich the audience with, select the ICON icon. 
-
-IMAGE
+![The filter button is highlighted. Selecting this leads you to the [!UICONTROL Select dataset] popover.](../images/ui/audience-composition/enrich-select-dataset.png)
 
 The **[!UICONTROL Select dataset]** popover appears. Select the dataset that you want to add for enrichment, followed by **[!UICONTROL Select]** to add the dataset for enrichment.
 
-IMAGE
+![The chosen dataset is selected.](../images/ui/audience-composition/enrich-dataset-selected.png)
 
-The **[!UICONTROL Enrichment criteria]** section now appears on the right rail. In this section, you can select the **[!UICONTROL Source join key]** and the **[!UICONTROL Enrichment dataset join key]**, which ???.
+The **[!UICONTROL Enrichment criteria]** section now appears on the right rail. In this section, you can select the **[!UICONTROL Source join key]** and the **[!UICONTROL Enrichment dataset join key]**, which lets you link the enrichment dataset with the audience you're trying to create.
 
-IMAGE
+![The [!UICONTROL Enrichment criteria] area is highlighted.](../images/ui/audience-composition/enrichment-criteria.png)
 
-To select the **[!UICONTROL Source join key]**, select the ICON. 
+To select the **[!UICONTROL Source join key]**, select the ![filter](../images/ui/audience-composition/filter-attribute.png) icon. 
 
-IMAGE
+![The filter icon for the [!UICONTROL Source join key] is highlighted.](../images/ui/audience-composition/enrich-select-source-join-key.png)
 
 The **[!UICONTROL Select a profile attribute]** popover appears. Select the profile attribute you want to use as the source join key, followed by **[!UICONTROL Select]** to choose that attribute as your source join key.
 
-IMAGE
+![The attribute you want to use as the source join key is highlighted.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
 
-To select the **[!UICONTROL Enrichment dataset join key]**, select the ICON.
+To select the **[!UICONTROL Enrichment dataset join key]**, select the ![filter](../images/ui/audience-composition/filter-attribute.png) icon.
 
-IMAGE
+![The filter icon for the [!UICONTROL Enrichment dataset join key] is highlighted.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
 
 The **[!UICONTROL Enrichment attributes]** popover appears. Select the attribute you want to use as the enrichment dataset join key, followed by **[!UICONTROL Select]** to choose that attribute as your enrichment dataset join key.
 
-IMAGE
+![The attribute you want to use as the enrichment dataset join key is highlighted.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
 
 Now that you've added both of your join keys, the **[!UICONTROL Enrichment attributes]** section appears. You can now add the attribute you want to enhance your audience with. To add these attributes, select **[!UICONTROL Add attribute]**.
 
-IMAGE
+![The [!UICONTROL Add attribute] button is highlighted.](../images/ui/audience-composition/enrich-select-add-attribute.png)
 
 The **[!UICONTROL Enrichment attributes]** popover appears. You can select the attributes from the dataset to enrich your audience with, followed by **[!UICONTROL Select]** to add the attributes to your audience.
 
-IMAGE
+![The enrichment attributes you want to add are highlighted.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
 
 <!-- ## [!UICONTROL Join] {#join-block}
 
