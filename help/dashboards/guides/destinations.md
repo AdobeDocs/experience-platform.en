@@ -45,8 +45,6 @@ Select **[!UICONTROL Add widget]** to navigate to the widget library and see a l
 
 From the widget library, you can browse the selection of standard and custom audience widgets. For information on how to add widgets, please see the widget library documentation on how to [add a widget](../customize/widget-library.md#add-widgets).
 
-<!-- Reorganize the headings on this page. -->
-
 ## Default widgets {#default-widgets}
 
 A default widget load-out is provided for all new instances of Adobe Experience Platform that highlights the latest available insights from your data. The following widgets are pre-configured in your segments view from the outset. Full details on the purpose and function of the widgets can be found below.
