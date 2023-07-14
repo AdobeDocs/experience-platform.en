@@ -50,7 +50,7 @@ Read more about the different options and steps available in the activation work
 
 * [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md)
 * [Activate audience data to enterprise destinations](/help/destinations/ui/activate-streaming-profile-destinations.md)
-* [Activate audience data to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md)
+* [Activate audience data to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [Export files on-demand to batch destinations](/help/destinations/ui/export-file-now.md)
 * [(Beta) Export datasets to cloud storage destinations](/help/destinations/ui/export-datasets.md)
 

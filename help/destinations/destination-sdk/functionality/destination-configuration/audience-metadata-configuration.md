@@ -5,13 +5,13 @@ title: Audience metadata configuration
 
 # Audience metadata configuration
 
-When exporting data from Experience Platform to your destination, you might need specific audience metadata, like segment names or segment IDs, to be shared between Experience Platform and your destination.
+When exporting data from Experience Platform to your destination, you might need specific audience metadata, like audience names or audience IDs, to be shared between Experience Platform and your destination.
 
 Destination SDK offers tools that you can use to programmatically create, update, or delete audiences in your destination platform.
 
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the the guide on how to [use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
-You can configure the audience metadata template via the `/authoring/audience-templates` endpoint. After creating your audience metadata configuration, you can use the `/authoring/destinations` endpoint to configure the `audienceMetadataConfig` section. This section tells your destination what segment metadata it should map to your audience template.
+You can configure the audience metadata template via the `/authoring/audience-templates` endpoint. After creating your audience metadata configuration, you can use the `/authoring/destinations` endpoint to configure the `audienceMetadataConfig` section. This section tells your destination what audience metadata it should map to your audience template.
 
 See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
 
@@ -35,7 +35,7 @@ Refer to the table below for details on which types of integrations support the 
 
 ## Supported parameters {#supported-parameters}
 
-When creating your audience metadata configuration, you can use the parameters described in the table below to configure the segment mapping settings.
+When creating your audience metadata configuration, you can use the parameters described in the table below to configure the audience mapping settings.
 
 ```json
   "audienceMetadataConfig":{
@@ -48,8 +48,8 @@ When creating your audience metadata configuration, you can use the parameters d
 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`mapExperiencePlatformSegmentName` | Boolean | Indicates whether the [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) value in the destination activation workflow should be the Experience Platform segment name. |
-|`mapExperiencePlatformSegmentId` | Boolean | Indicates whether the [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) value in the destination activation workflow should be the Experience Platform segment ID. |
+|`mapExperiencePlatformSegmentName` | Boolean | Indicates whether the [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) value in the destination activation workflow should be the Experience Platform audience name. |
+|`mapExperiencePlatformSegmentId` | Boolean | Indicates whether the [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) value in the destination activation workflow should be the Experience Platform audience ID. |
 |`mapUserInput` | Boolean | Enables or disables user input for the [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) value in the destination activation workflow. If set to `true`, `audienceTemplateId` cannot be present. |
 |`audienceTemplateId` | Boolean | The `instanceId` of the [audience metadata template](../../metadata-api/create-audience-template.md) used for your destination. |
 
