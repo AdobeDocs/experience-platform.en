@@ -102,6 +102,54 @@ A list of profile attributes appears. Select the attribute type you want to excl
 
 ![A list of attributes is shown.](../images/ui/audience-composition/select-attribute-exclude.png)
 
+## [!UICONTROL Enrich] {#enrich-block}
+
+The **[!UICONTROL Enrich]** block type allows you to enrich your audience with additional attributes from a dataset.
+
+To add an **[!UICONTROL Enrich]** block, select the **+** icon, followed by **[!UICONTROL Enrich]**.
+
+IMAGE
+
+The **[!UICONTROL Enrich]** block is added. When this block is selected, details about the enrichment appear in the right rail. This includes the block's label and the enrichment dataset.
+
+IMAGE
+
+To select the dataset to enrich the audience with, select the ICON icon. 
+
+IMAGE
+
+The **[!UICONTROL Select dataset]** popover appears. Select the dataset that you want to add for enrichment, followed by **[!UICONTROL Select]** to add the dataset for enrichment.
+
+IMAGE
+
+The **[!UICONTROL Enrichment criteria]** section now appears on the right rail. In this section, you can select the **[!UICONTROL Source join key]** and the **[!UICONTROL Enrichment dataset join key]**, which ???.
+
+IMAGE
+
+To select the **[!UICONTROL Source join key]**, select the ICON. 
+
+IMAGE
+
+The **[!UICONTROL Select a profile attribute]** popover appears. Select the profile attribute you want to use as the source join key, followed by **[!UICONTROL Select]** to choose that attribute as your source join key.
+
+IMAGE
+
+To select the **[!UICONTROL Enrichment dataset join key]**, select the ICON.
+
+IMAGE
+
+The **[!UICONTROL Enrichment attributes]** popover appears. Select the attribute you want to use as the enrichment dataset join key, followed by **[!UICONTROL Select]** to choose that attribute as your enrichment dataset join key.
+
+IMAGE
+
+Now that you've added both of your join keys, the **[!UICONTROL Enrichment attributes]** section appears. You can now add the attribute you want to enhance your audience with. To add these attributes, select **[!UICONTROL Add attribute]**.
+
+IMAGE
+
+The **[!UICONTROL Enrichment attributes]** popover appears. You can select the attributes from the dataset to enrich your audience with, followed by **[!UICONTROL Select]** to add the attributes to your audience.
+
+IMAGE
+
 <!-- ## [!UICONTROL Join] {#join-block}
 
 The **[!UICONTROL Join]** block type allows you to add in external audiences from datasets that have not yet been processed by Adobe Experience Platform.
@@ -155,6 +203,8 @@ The **[!UICONTROL Split]** block type allows you to split your new audience into
 To add a **[!UICONTROL Split]** block, select the **+** icon, followed by **[!UICONTROL Split]**.
 
 ![The Split option is selected.](../images/ui/audience-composition/add-split-block.png)
+
+When splitting your audience, you can either split by percentage or split by attribute.
 
 ### Split by percentage {#split-percentage}
 
