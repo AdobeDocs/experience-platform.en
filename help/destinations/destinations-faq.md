@@ -17,9 +17,9 @@ This document provides answers to frequently asked questions about Adobe Experie
 +++Answer
 This is a normal behavior due to the way Experience Platform performs segmentation.
 
-Streaming segmentation updates the profile count for streaming segments throughout the day, while batch segmentation updates the profile count for batch segments once every 24 hours.
+Streaming segmentation updates the profile count for streaming audiences throughout the day, while batch segmentation updates the profile count for batch audiences once every 24 hours.
 
-When the segment export schedule differs from the segmentation schedule, the profile counts between the UI and the exported [!DNL CSV] file will be different, especially when it comes to streaming segments.
+When the audience export schedule differs from the segmentation schedule, the profile counts between the UI and the exported [!DNL CSV] file will be different, especially when it comes to streaming audiences.
 
 See the [Segmentation Service documentation](../segmentation/home.md) for more details.
 +++
@@ -29,7 +29,7 @@ See the [Segmentation Service documentation](../segmentation/home.md) for more d
 ### What do I need to do before I can activate audiences in [!DNL Facebook Custom Audiences]?
 
 +++Answer
-Before you can send your audience segments to [!DNL Facebook], make sure you meet the following requirements:
+Before you can send your audiences to [!DNL Facebook], make sure you meet the following requirements:
 
 * Your [!DNL Facebook] user account must have the **[!DNL Manage campaigns]** permission enabled for the Ad account that you plan to use.
 * The **Adobe Experience Cloud** business account must be added as an advertising partner in your [!DNL Facebook Ad Account]. Use `business ID=206617933627973`. See [Add Partners to Your Business Manager](https://www.facebook.com/business/help/1717412048538897) in the Facebook documentation for details.
@@ -93,10 +93,10 @@ Yes. A Facebook destination in Experience Platform is 1:1 to an ad account in Fa
 
 ## Google Customer Match {#google-customer-match}
 
-### When exporting segments to Google Customer Match, why am I seeing extra numbers appended at the end of the segment names in the Google interface?
+### When exporting audiences to Google Customer Match, why am I seeing extra numbers appended at the end of the audience names in the Google interface?
 
 +++Answer
-Google requires segment names to be unique. The numbers that you are seeing are [UNIX timestamps](https://www.unixtimestamp.com/) and they are appended to keep the segment names unique, if you mapped the same segment to multiple Google destinations.
+Google requires audience names to be unique. The numbers that you are seeing are [UNIX timestamps](https://www.unixtimestamp.com/) and they are appended to keep the audience names unique, if you mapped the same audience to multiple Google destinations.
 +++
 
 ## LinkedIn Matched Audiences {#linkedin}
@@ -187,7 +187,7 @@ When you delete a destination, all audiences and attributes mapped under the des
 Yes, the Edge Network Server API works with the Custom Personalization destination. Since profile attributes may contain sensitive data, in order to protect this data, the Custom Personalization destination requires you to use the Edge Network Server API for data collection. Furthermore, all API calls must be made in an [authenticated context](../server-api/authentication.md).
 +++
 
-### I can only have one merge policy that is active-on-edge. Can I build audiences that use a different merge policy and still send them to Adobe Target as streaming segments?
+### I can only have one merge policy that is active-on-edge. Can I build audiences that use a different merge policy and still send them to Adobe Target as streaming audiences?
 
 +++Answer
 No. All audiences that you want to activate to Adobe Target must use an active-on-edge [merge policy](../profile/merge-policies/ui-guide.md).

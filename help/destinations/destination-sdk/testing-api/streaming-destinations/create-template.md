@@ -18,7 +18,7 @@ Illustrated below is how creating and testing a message transformation template 
 
 ## Why you need to create and test a message transformation template {#why-create-message-transformation-template}
 
-One of the first steps in creating your destination in Destination SDK is to think about how the data format for segment membership, identities, and profile attributes is transformed when exported from Adobe Experience Platform to your destination. Find information about the transformation between Adobe XDM schema and your destination schema in the [message format document](../../functionality/destination-server/message-format.md#using-templating). 
+One of the first steps in creating your destination in Destination SDK is to think about how the data format for audience membership, identities, and profile attributes is transformed when exported from Adobe Experience Platform to your destination. Find information about the transformation between Adobe XDM schema and your destination schema in the [message format document](../../functionality/destination-server/message-format.md#using-templating). 
 
 For the transformation to succeed, you must provide a transformation template, similar to this example: [Create a template that sends segments, identities, and profile attributes](../../functionality/destination-server/message-format.md#segments-identities-attributes). 
 
@@ -32,8 +32,8 @@ Adobe provides a template tool that allows you to create and test the message te
 Before you are ready to create the template, make sure you complete the steps below:
 
 1. [Create a destination server configuration](../../authoring-api/destination-server/create-destination-server.md). The template that you will generate differs, based on the value that you provide for the `maxUsersPerRequest` parameter. 
-   * Use `maxUsersPerRequest=1` if you want an API call to your destination to include a single profile, along with its segment qualifications, identities, and profile attributes. 
-   * Use `maxUsersPerRequest` with a value greater than one if you want an API call to your destination to include multiple profiles, along with their segment qualifications, identities, and profile attributes. 
+   * Use `maxUsersPerRequest=1` if you want an API call to your destination to include a single profile, along with its audience qualifications, identities, and profile attributes. 
+   * Use `maxUsersPerRequest` with a value greater than one if you want an API call to your destination to include multiple profiles, along with their audience qualifications, identities, and profile attributes. 
 2. [Create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md) and add the ID of the destination server configuration in `destinationDelivery.destinationServerId`.
 3. [Get the ID of the destination configuration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) that you just created, so you can use it in the template creation tool.
 4. Understand [which functions and filters you can use](../../functionality/destination-server/supported-functions.md) in the message transformation template.
@@ -97,7 +97,7 @@ If the destination ID you provide corresponds to a destination configuration wit
         {% endfor %}
         ],
         "remove": [
-        {#- Alternative syntax for filtering segments by status: -#}
+        {#- Alternative syntax for filtering audiences by status: -#}
         {% for segment in removedSegments(input.profile.segmentMembership.ups) %}
             "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
         {% endfor %}
@@ -137,7 +137,7 @@ If the destination ID you provide corresponds to a destination server template w
                 {% endfor %}
                 ],
                 "remove": [
-                {#- Alternative syntax for filtering segments by status: -#}
+                {#- Alternative syntax for filtering audiences by status: -#}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
                 {% endfor %}

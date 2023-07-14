@@ -1,7 +1,7 @@
 ---
 keywords: destinations;destination;destinations detail page;destinations details page
 title: View destination details
-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow. 
+description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, audiences mapped to the destination, and controls to edit the activation and to enable and disable the data flow. 
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
 ---
 # View destination details
@@ -44,8 +44,8 @@ The following table covers the controls and details provided by the right rail:
 
 | Right rail item | Description |
 | --- | --- |
-| [!UICONTROL Activate segments] | Select this control to edit which segments are mapped to the destination, update export schedules, or add and remove mapped attributes and identities. See the guides on [activating audience data to segment streaming destinations](./activate-segment-streaming-destinations.md), [activating audience data to batch profile-based destinations](./activate-batch-profile-destinations.md), and [activating audience data to streaming profile-based destinations](./activate-streaming-profile-destinations.md) for more information. |
-| [!UICONTROL Delete] | Allows you to delete this dataflow and unmaps the segments that were previously activated, if any exist. |
+| [!UICONTROL Activate audiences] | Select this control to edit which audiences are mapped to the destination, update export schedules, or add and remove mapped attributes and identities. See the guides on [activating audience data to audience streaming destinations](./activate-segment-streaming-destinations.md), [activating audience data to batch profile-based destinations](./activate-batch-profile-destinations.md), and [activating audience data to streaming profile-based destinations](./activate-streaming-profile-destinations.md) for more information. |
+| [!UICONTROL Delete] | Allows you to delete this dataflow and unmaps the audiences that were previously activated, if any exist. |
 | [!UICONTROL Destination name] | This field can be edited in order to update the destination's name. |
 | [!UICONTROL Description] |  This field can be edited in order to update or add an optional description to the destination. |
 | [!UICONTROL Destination] | Represents the destination platform that audiences are sent to. See the [destinations catalog](../catalog/overview.md) for more information. |
@@ -91,7 +91,7 @@ For more information, read about [dataflow runs to streaming destinations](/help
 
 ### File-based destinations {#file-based}
 
-For dataflow runs to file-based destinations, the **[!UICONTROL Processing duration]** depends on the size of the data being exported and the system load. Notice also that the dataflow runs to file-based destinations are broken down per segment.
+For dataflow runs to file-based destinations, the **[!UICONTROL Processing duration]** depends on the size of the data being exported and the system load. Notice also that the dataflow runs to file-based destinations are broken down per audience.
 
 ![Image of the Dataflow runs page with the Processing time column highlighted for a file-based destination.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
@@ -99,11 +99,11 @@ For more information, read about [dataflow runs to batch (file-based) destinatio
 
 ## [!UICONTROL Activation data] {#activation-data}
 
-The [!UICONTROL Activation data] tab displays a list of segments that have been mapped to the destination, including their start date and end date (if applicable), and other relevant information for the data export, such as export type, schedule, and frequency. To view the details about a particular segment, select its name from the list.
+The [!UICONTROL Activation data] tab displays a list of audiences that have been mapped to the destination, including their start date and end date (if applicable), and other relevant information for the data export, such as export type, schedule, and frequency. To view the details about a particular audience, select its name from the list.
 
 >[!TIP]
 >
->To view and edit details about the attributes and identities mapped to a destination, select **[!UICONTROL Activate segments]** in the [right rail](#right-rail).
+>To view and edit details about the attributes and identities mapped to a destination, select **[!UICONTROL Activate audiences]** in the [right rail](#right-rail).
 
 ![Activation data view batch destination](../assets/ui/details-page/activation-data-batch.png)
 
@@ -111,4 +111,4 @@ The [!UICONTROL Activation data] tab displays a list of segments that have been 
 
 >[!NOTE]
 >
->For details on exploring the details page of a segment, refer to the [Segmentation UI overview](../../segmentation/ui/overview.md#segment-details).
+>For details on exploring the details page of a audience, refer to the [Segmentation UI overview](../../segmentation/ui/overview.md#segment-details).

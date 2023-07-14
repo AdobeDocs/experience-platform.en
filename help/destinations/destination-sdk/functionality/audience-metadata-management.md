@@ -17,23 +17,23 @@ Depending on your API configuration, you may or may not need to use the audience
 
 ## Use cases supported by audience metadata management {#use-cases}
 
-With audience metadata support in Destination SDK, when you configure your Experience Platform destination, you can give Platform users one of several options when they map and activate segments to your destination. You can control the options available to the user via the parameters in the [Audience metadata configuration](../functionality/destination-configuration/audience-metadata-configuration.md) section of the destination configuration.
+With audience metadata support in Destination SDK, when you configure your Experience Platform destination, you can give Platform users one of several options when they map and activate audiences to your destination. You can control the options available to the user via the parameters in the [Audience metadata configuration](../functionality/destination-configuration/audience-metadata-configuration.md) section of the destination configuration.
 
 ### Use case 1 - You have a 3rd party API and users don't need to input mapping IDs
 
-If you have an API endpoint to create/update/delete segments or audiences, you can use audience metadata templates to configure Destination SDK to match the specs of your segment create/update/delete endpoint. Experience Platform can programmatically create/update/delete segments and synchronize metadata back to Experience Platform.
+If you have an API endpoint to create/update/delete audiences or audiences, you can use audience metadata templates to configure Destination SDK to match the specs of your audience create/update/delete endpoint. Experience Platform can programmatically create/update/delete audiences and synchronize metadata back to Experience Platform.
 
-When activating segments to your destination in the Experience Platform user interface (UI), users don't need to manually fill in a segment mapping ID field in the activation workflow.
+When activating audiences to your destination in the Experience Platform user interface (UI), users don't need to manually fill in an audience mapping ID field in the activation workflow.
 
-### Use case 2 - Users need to create a segment in your destination first and are required to manually input mapping ID
+### Use case 2 - Users need to create an audience in your destination first and are required to manually input mapping ID
 
-If segments and other metadata need to be created by partners or users manually in your destination, then users must manually fill in the segment mapping ID field in the activation workflow to sync the segment metadata between your destination and Experience Platform.
+If audiences and other metadata need to be created by partners or users manually in your destination, then users must manually fill in the audience mapping ID field in the activation workflow to sync the audiencemetadata between your destination and Experience Platform.
 
 ![Input mapping ID](../assets/functionality/input-mapping-id.png)
 
-### Use case 3 - Your destination accepts the Experience Platform segment ID, users don't need to manually input mapping ID  
+### Use case 3 - Your destination accepts the Experience Platform audience ID, users don't need to manually input mapping ID  
 
-If your destination system accepts the Experience Platform segment ID, you can configure this in your audience metadata template. Users do not have to populate a segment mapping ID when activating a segment.
+If your destination system accepts the Experience Platform audience ID, you can configure this in your audience metadata template. Users do not have to populate an audience mapping ID when activating a segment.
 
 ## Generic and extensible audience template {#generic-and-extensible}
 
@@ -521,13 +521,13 @@ Find descriptions of all parameters in the template in the [Create an audience t
 
 ## Macros used in audience metadata templates
 
-To pass information such as segment IDs, access tokens, error messages, and more between Experience Platform and your API, the audience templates include macros that you can use. Read below a description of the macros that are used in the three configuration examples on this page:
+To pass information such as audience IDs, access tokens, error messages, and more between Experience Platform and your API, the audience templates include macros that you can use. Read below a description of the macros that are used in the three configuration examples on this page:
 
 |Macro | Description |
 |--- |--- |
-|`{{segment.alias}}` | Allows you to access the segment alias in Experience Platform. |
-|`{{segment.name}}` | Allows you to access the segment name in Experience Platform. |
-|`{{segment.id}}` | Allows you to access the segment id in Experience Platform. |
+|`{{segment.alias}}` | Allows you to access the audience alias in Experience Platform. |
+|`{{segment.name}}` | Allows you to access the audience name in Experience Platform. |
+|`{{segment.id}}` | Allows you to access the audience ID in Experience Platform. |
 |`{{customerData.accountId}}` | Allows you to access the account Id field that you set up in the destination configuration. |
 |`{{oauth2ServiceAccessToken}}` | Allows you to dynamically generate an access token based on your OAuth 2 configuration. |
 |`{{authData.accessToken}}` | Allows you to pass the access token to your API endpoint. Use `{{authData.accessToken}}` if Experience Platform should use non-expiring tokens to connect to your destination, otherwise use `{{oauth2ServiceAccessToken}}` to generate an access token. |
