@@ -52,15 +52,28 @@ The console output does not display the statistics in response to the analyze ta
 (1 row)
 ```
 
-You can query the statistics output directly by refernecing the `Statistics ID` as seen below: 
+You can query the statistics output directly by referencing the `Statistics ID` as seen below: 
 
 ```sql
 SELECT * FROM adc_geometric_stats_1; 
 ```
 
-This statement allows you to view the output in a similar way to the SHOW STATISTICS command when used with the `Statistics ID`.
+This statement allows you to view the output in a similar way to the SHOW STATISTICS command when used with the `Statistics ID`. 
 
-To see the output, you must use the `SHOW STATISTICS` command. Instructions on [how to show the statistics](#show-statistics) are provided later in the document.
+You can view a list of all the computed statistics within the session by executing the SHOW STATISTICS command. An example output of the SHOW STATISTICS command is seen below.
+
+```console
+statsId | tableName | columnSet | filterContext | timestamp
+-----------+---------------+-----------+---------------------------------------+---------------
+adc_geometric_stats_1 |adc_geometric | (age) | | 25/06/2023 09:22:26
+demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
+```
+
+<!-- Commented out until the <alias_name> feature is released.
+
+To see the output, you must use the `SHOW STATISTICS` command. Instructions on [how to show the statistics](#show-statistics) are provided later in the document. 
+
+-->
 
 ## Limit the included columns {#limit-included-columns}
 
@@ -143,6 +156,7 @@ An output might look similar to the example below.
  timestamp                                                  |            0.0 |            0.0 |            0.0 |               0.0 |                98.0 |         3 | Timestamp
 (12 rows)
 ```
+
 -->
 
 ## Next steps {#next-steps}
