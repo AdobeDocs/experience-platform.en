@@ -5,7 +5,7 @@ title: Historical profile qualifications
 
 # Historical profile qualifications
 
-All destinations created through Destination SDK support historical profile qualifications by default. This means that when users first set up an activation dataflow to your destinations, the first export contains all members of the segment that have ever qualified for that segment.
+All destinations created through Destination SDK support historical profile qualifications by default. This means that when users first set up an activation dataflow to your destinations, the first export contains all members of the audience that have ever qualified for that segment.
 
 This behavior is defined by the `"backfillHistoricalProfileData":true` parameter in the destination configuration.
 
@@ -27,14 +27,14 @@ Refer to the table below for details on which types of integrations support the 
 <!-- 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
+|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when audiences are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the audience before the audience is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the audience after the audience is activated. </li></ul> |
 
 {style="table-layout:auto"} -->
 
 
 ## Next steps {#next-steps}
 
-After reading this article, you should know that Experience Platform automatically exports a historical population of all profiles that have ever qualified for an activated segment when the segment is first exported to the destination. This option is not configurable in Destination SDK or in the Experience Platform UI.
+After reading this article, you should know that Experience Platform automatically exports a historical population of all profiles that have ever qualified for an activated audience when the audience is first exported to the destination. This option is not configurable in Destination SDK or in the Experience Platform UI.
 
 To learn more about the other destination components, see the following articles:
 

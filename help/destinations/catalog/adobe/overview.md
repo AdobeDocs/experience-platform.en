@@ -39,8 +39,8 @@ To understand the difference between connections and extensions, see [Connection
 * [Marketo Munchkin extension](../email/marketo-munchkin.md)
 * [Marketo Web Personalization extension](../personalization/marketo-web-personalization.md)
 
-## Experience Platform segment sharing
+## Experience Platform audience sharing
 
-Use the Experience Platform segment sharing capability to share your Experience Platform segments to additional Adobe destinations. Refer the page below for more information (opens in the Audience Manager documentation portal):
+Use the Experience Platform audience sharing capability to share your Experience Platform audiences to additional Adobe destinations. Refer the page below for more information (opens in the Audience Manager documentation portal):
 
-* [Experience Platform segment sharing with Adobe Audience Manager, Adobe Advertising Cloud, and Adobe Target through the Core Services integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [Experience Platform audience sharing with Adobe Audience Manager, Adobe Advertising Cloud, and Adobe Target through the Core Services integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
