@@ -249,7 +249,7 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 +++
 
-### Namespace-audience model 
+### Namespace-audience model {#namespace-audience-model}
 
 The namespace-audience model is comprised of the following datasets:
 
@@ -450,3 +450,31 @@ FROM
 ```
 
 +++
+
+### Overlap Namespace-Audience model {#overlap-namespace-audience-model}
+
+<!-- Q) What is the difference between the Overlap Namespace-Audience model and the overlap namespace by audience (segment) model? -->
+
+The overlap namespace-audience model is comprised of the following datasets: 
+
+- `adwh_dim_date`
+- `adwh_dim_overlap_namespaces`
+- `adwh dim overlap namespaces`
+
+<!-- also needs the SQL. Does this apply to any particular widget? -->
+
+### Custom Model {#custom-model}
+
+The overlap namespace by audience model is comprised of the following datasets: 
+
+- `list of table names`
+
+<!-- also needs the SQL. Does this apply to any particular widget? -->
+
+### AI model {#ai-model}
+
+The overlap namespace by audience model is comprised of the following datasets: 
+
+- `list of table names`
+
+<!-- also needs the SQL. Does this apply to any particular widget? -->
