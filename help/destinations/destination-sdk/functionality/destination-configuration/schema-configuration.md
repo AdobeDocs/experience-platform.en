@@ -85,7 +85,10 @@ To create a static schema with profile attributes, define the target attributes 
       "useCustomerSchemaForAttributeMapping":false,
       "profileRequired":true,
       "segmentRequired":true,
-      "identityRequired":true
+      "identityRequired":true,
+      "segmentNamespaceAllowList": ["someNamespace"],
+      "segmentNamespaceDenyList": ["someOtherNamespace"]
+
 }
 ```
 
@@ -96,6 +99,8 @@ To create a static schema with profile attributes, define the target attributes 
 |`profileRequired` | Boolean | Optional | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination platform. |
 |`segmentRequired` | Boolean | Required | This parameter is required by Destination SDK and should always be set to `true`. |
 |`identityRequired` | Boolean | Required | Set to `true` if users should be able to map [identity types](identity-namespace-configuration.md) from Experience Platform to the attributes you defined in the `profileFields` array . |
+|`segmentNamespaceAllowList`| Array | Optional | Defines specific audience namespaces from which users can map audiences to the destination. Use this parameter to restrict Platform users to export audiences from only the audience namespaces that you define in the array. This parameter cannot be used together with `segmentNamespaceDenyList`.<br> <br> Example: `"segmentNamespaceAllowList": ["AudienceManager"]` will allow users to map only audiences from the `AudienceManager` namespace to this destination. <br> <br> To allow users to export any audience to your destination, you can ignore this parameter. <br> <br> If both `segmentNamespaceAllowList` and `segmentNamespaceDenyList` are missing from your configuration, users will only be able to export audiences originating from the [Segmentation Service](../../../../segmentation/home.md).|
+|`segmentNamespaceDenyList`| Array | Optional | Restricts users from mapping audiences to the destination, from the audience namespaces defined in the array. Cannot be used together with `segmentNamespaceAllowed`. <br> <br> Example: `"segmentNamespaceDenyList": ["AudienceManager"]` will block users from mapping audiences from the `AudienceManager` namespace to this destination. <br> <br> To allow users to export any audience to your destination, you can ignore this parameter. <br> <br> If both `segmentNamespaceAllowed` and `segmentNamespaceDenyList` are missing from your configuration, users will only be able to export audiences originating from the [Segmentation Service](../../../../segmentation/home.md). <br> <br> To allow the export of all audiences, regardless of the origin, set `"segmentNamespaceDenyList":[]`.|
 
 {style="table-layout:auto"}
 

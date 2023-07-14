@@ -40,7 +40,7 @@ Adobe uses a templating language similar to [Jinja](https://jinja.palletsproject
 For more information about the transformation, visit the links below:
 
 * [Message format](message-format.md)
-* [Using a templating language for the identity, attributes, and segment membership transformations ](message-format.md#using-templating)
+* [Using a templating language for the identity, attributes, and audience membership transformations ](message-format.md#using-templating)
 
 >[!TIP]
 >

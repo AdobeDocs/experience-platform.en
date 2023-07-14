@@ -239,7 +239,7 @@ A successful response returns your target connection ID and an updated Etag. You
 
 **Request**
 
-The following request updates the parameters of a [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) or [[!DNL Google Ad Manager 360] destination](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) connection to add the new [**[!UICONTROL Append segment ID to segment name]**](/help/release-notes/2023/april-2023.md#destinations) field.
+The following request updates the parameters of a [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) or [[!DNL Google Ad Manager 360] destination](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) connection to add the new [**[!UICONTROL Append audience ID to audience name]**](/help/release-notes/2023/april-2023.md#destinations) field.
 
 ```shell
 curl -X PATCH \
