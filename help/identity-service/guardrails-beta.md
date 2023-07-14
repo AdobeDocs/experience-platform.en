@@ -55,7 +55,7 @@ See the following documentation for more information on [!DNL Identity Service]:
 
 The following section contains additional information on guardrails for Identity Service.
 
-### Understanding the deletion logic when an identity graph at capacity is updated [!BADGE Beta]{type=Informative}
+### [!BADGE Beta]{type=Informative} Understanding the deletion logic when an identity graph at capacity is updated {#deletion-logic}
 
 When a full identity graph is updated, Identity Service deletes the oldest identity in the graph before adding the latest identity. This is to maintain accuracy and relevance of identity data. This process of deletion follows two primary rules:
 
