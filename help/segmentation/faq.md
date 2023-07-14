@@ -68,8 +68,9 @@ The composition component placing follows a rigid structure as follows:
 
 1. You **always** start with the [!UICONTROL Audience] block to select your starting activity. You can have a maximum of **one** [!UICONTROL Audience] block.
 2. You can optionally add an [!UICONTROL Exclude] block that follows the [!UICONTROL Audience] block.
-3. You can optionally add a [!UICONTROL Rank] or [!UICONTROL Split] block. You can **only** have one of these blocks per composition.
-4. You **always** end with a [!UICONTROL Save] block to save your audience.
+3. You can optionally add an [!UICONTROL Enrich] block that follows the [!UICONTROL Exclude] block.
+4. You can optionally add a [!UICONTROL Rank] or [!UICONTROL Split] block. You can **only** have one of these blocks per composition.
+5. You **always** end with a [!UICONTROL Save] block to save your audience.
 
 For more details about using Audience Composition, please read the [Audience Composition UI guide](./ui/audience-composition.md).
 
