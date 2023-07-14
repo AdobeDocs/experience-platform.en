@@ -23,10 +23,6 @@ The tables below provide guidance on guardrails for static limits as well as val
 
 The following table outlines static limits applied to identity data.
 
-| Number of identities in a graph | 50 | When a graph with 50 linked identities is updated, Identity Service will apply a "first-in, first-out" mechanism and deletes the oldest identity to make space for the newest identity. Deletion is based on identity type and timestamp. Read the [appendix](#appendix) for more information on the deletion logic applied to identities when full graphs are updated. |
-
-The limit is applied at the sandbox level. Once the number of identities reach 150 or more, no new identities will be added, and the identity graph will not be updated. Graphs may show identities greater than 150 as a result of linking one or more graphs with less than 150 identities. **Note**: The maximum number of identities in an identity graph **for an individual merged profile** is 50. Merged profiles that are based off identity graphs with more than 50 identities are excluded from Real-Time Customer Profile. For more information, read the guide on [guardrails for Profile data](../profile/guardrails.md).
-
 | Guardrail | Limit | Notes |
 | --- | --- | --- |
 | Number of identities in a graph | 150 | The limit is applied at the sandbox level. Once the number of identities reaches 150 or more, no new identities will be added, and the identity graph will not be updated. Graphs may show identities greater than 150 as a result of linking one or more graphs with less than 150 identities. **Note**: The maximum number of identities in an identity graph **for an individual merged profile** is 50. Merged profiles that are based off identity graphs with more than 50 identities are excluded from Real-Time Customer Profile. For more information, read the guide on [guardrails for Profile data](../profile/guardrails.md). |
@@ -54,37 +50,3 @@ See the following documentation for more information on [!DNL Identity Service]:
 
 * [[!DNL Identity Service] overview](home.md)
 * [Identity graph viewer](ui/identity-graph-viewer.md)
-
-## Appendix {#appendix}
-
-The following section contains additional information on guardrails for Identity Service.
-
-### Understanding the deletion logic when an identity graph at capacity is updated
-
-When a full identity graph is updated, Identity Service deletes the oldest identity in the graph before adding the latest identity. This is to maintain accuracy and relevance of identity data. This process of deletion follows two primary rules:
-
-#### Rule #1 Deletion is prioritized based on the identity type of a namespace
-
-The deletion priority is as follows:
-
-1. Cookie ID
-2. Device ID
-3. Cross-Device ID, Email, and Phone
-
-#### Rule #2 Deletion is based on the timestamp stored on the identity
-
-Each identity linked in a graph has its own corresponding timestamp. When a full graph is updated, Identity Service deletes the identity with the oldest timestamp.
-
-When a full graph is updated with a new identity, these two rules work in tandem to designate which older identity will be deleted. Identity Service first deletes the oldest Cookie ID, then the oldest Device ID, and finally the oldest Cross-Device ID/Email/Phone. 
-
->[!NOTE]
->
->If the identity designated to be deleted is linked to multiple other identities in the graph, then the links connecting that identity will also be deleted.
-
-In the example below, before the graph on the left can be updated with a new identity, Identity Service must first deletes the existing identity with the oldest timestamp. However, because the oldest identity is a device ID, Identity Service skips that identity until it gets to the namespace with a type that is higher on the deletion priority list, which in this case is `ecid-3`. Once the oldest identity with a higher deletion priority type is removed, the graph then gets updated with a new link, `ecid-51`.
-
->[!NOTE]
->
->In the rare case that there are two identities with the same timestamp and identity type, Identity Service will sort the IDs based on XID and conduct deletion.
-
-![An example of the oldest identity being deleted to accommodate the latest identity](./images/graph-limits-v3.png)
