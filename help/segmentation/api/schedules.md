@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;schedules;schedule;api;API;
 solution: Experience Platform
 title: Schedules API Endpoint
 description: Schedules are a tool that can be used to automatically run batch segmentation jobs once a day.

@@ -33,7 +33,7 @@ From the [!UICONTROL Account Profiles] dashboard you can either [browse the acco
 
 ## Browse account profiles {#browse-account-profiles}
 
-The [!UICONTROL Browse] tab allows you to search and view the read-only account profiles ingested into your organization using an account ID from a connected enterprise source or by entering source details directly. From here you can see important information belonging to the account profile including, their name, industry, revenue, and segment among others.
+The [!UICONTROL Browse] tab allows you to search and view the read-only account profiles ingested into your organization using an account ID from a connected enterprise source or by entering source details directly. From here you can see important information belonging to the account profile including, their name, industry, revenue, and audience among others.
 
 Select the [!UICONTROL Profile ID] from the results displayed on the [!UICONTROL Browse] tab to open the [!UICONTROL Details] tab for the account profile.
 
