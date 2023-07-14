@@ -9,7 +9,7 @@ title: Create an audience template
 >
 >**API endpoint**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-For some destinations created using Destination SDK, you need to create an audience metadata configuration to programmatically create, update, or delete segment metadata in the destination. This page shows you how to use the `/authoring/audience-templates` API endpoint to create the configuration.
+For some destinations created using Destination SDK, you need to create an audience metadata configuration to programmatically create, update, or delete audience metadata in the destination. This page shows you how to use the `/authoring/audience-templates` API endpoint to create the configuration.
 
 For a detailed description of the capabilities that you can configure through this endpoint, see [audience metadata management](../functionality/audience-metadata-management.md).
 
@@ -184,8 +184,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | Property | Type | Description |
 | -------- | ----------- | ----------- |
 | `name` | String | The name of the audience metadata template for your destination. This name will appear in any partner-specific error message in the Experience Platform user interface, followed by the error message parsed from `metadataTemplate.create.errorSchemaMap`. |
-| `url` | String | The URL and endpoint of your API, which is used for creating, updating, deleting, or validating audiences/segments in your platform. Two industry examples are: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` and `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. | 
-| `httpMethod` | String | The method used on your endpoint to programmatically create, update, delete, or validate the segment/audience in your destination. For example: `POST`, `PUT`, `DELETE` | 
+| `url` | String | The URL and endpoint of your API, which is used for creating, updating, deleting, or validating audiences in your platform. Two industry examples are: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` and `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. | 
+| `httpMethod` | String | The method used on your endpoint to programmatically create, update, delete, or validate the audience in your destination. For example: `POST`, `PUT`, `DELETE` | 
 | `headers.header` | String | Specifies any HTTP headers that should be added to the call to your API. For example, `"Content-Type"` |
 | `headers.value` | String | Specifies the value of HTTP headers that should be added to the call to your API. For example, `"application/x-www-form-urlencoded"` |
 | `requestBody` | String | Specifies the content of the message body that should be sent to your API. The parameters that should be added to the `requestBody` object depend on which fields your API accepts. For an example, refer to the [first template example](../functionality/audience-metadata-management.md#example-1) in the Audience metadata functionality document. |

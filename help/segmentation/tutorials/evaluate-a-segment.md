@@ -1,21 +1,20 @@
 ---
-keywords: Experience Platform;home;popular topics;segment evaluation;Segmentation Service;segmentation;Segmentation;evaluate a segment;access segment results;evaluate and access segment;
 solution: Experience Platform
 title: Evaluate and Access Segment Results
 type: Tutorial
-description: Follow this tutorial to learn how to evaluate segments and access segment results using the Adobe Experience Platform Segmentation Service API.
+description: Follow this tutorial to learn how to evaluate segment definitions and access segmentation results using the Adobe Experience Platform Segmentation Service API.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
 ---
-# Evaluate and access segment results
+# Evaluate and access segment definition results
 
-This document provides a tutorial for evaluating segments and accessing segment results using the [[!DNL Segmentation API]](../api/getting-started.md). 
+This document provides a tutorial for evaluating segment definitions and accessing these results using the [[!DNL Segmentation API]](../api/getting-started.md). 
 
 ## Getting started
 
-This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. Before beginning this tutorial, please review the documentation for the following services:
+This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audiences. Before beginning this tutorial, please review the documentation for the following services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Allows you to build audience segments from [!DNL Real-Time Customer Profile] data.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Allows you to build audiences from [!DNL Real-Time Customer Profile] data.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
@@ -39,13 +38,13 @@ All POST, PUT, and PATCH requests require an additional header:
 
 - Content-Type: application/json
 
-## Evaluate a segment {#evaluate-a-segment}
+## Evaluate a segment definition {#evaluate-a-segment}
 
-Once you have developed, tested, and saved your segment definition, you can then evaluate the segment through either scheduled evaluation or on-demand evaluation.
+Once you have developed, tested, and saved your segment definition, you can then evaluate the segment definition through either scheduled evaluation or on-demand evaluation.
 
 [Scheduled evaluation](#scheduled-evaluation) (also known as 'scheduled segmentation') allows you to create a recurring schedule for running an export job at a specific time, whereas [on-demand evaluation](#on-demand-evaluation) involves creating a segment job to build the audience immediately. Steps for each are outlined below.
 
-If you have not yet completed the [create a segment using the Segmentation API](./create-a-segment.md) tutorial or created a segment definition using [Segment Builder](../ui/overview.md), please do so before proceeding with this tutorial.
+If you have not yet completed the [create a segment definition using the Segmentation API](./create-a-segment.md) tutorial or created a segment definition using [Segment Builder](../ui/overview.md), please do so before proceeding with this tutorial.
 
 ## Scheduled evaluation {#scheduled-evaluation}
 
@@ -75,11 +74,11 @@ More detailed information about using this endpoint can be found in the [schedul
 
 ## On-demand evaluation
 
-On-demand evaluation allows you to create a segment job in order to generate an audience segment whenever you require it. Unlike scheduled evaluation, this will happen only when requested and is not recurring.
+On-demand evaluation allows you to create a segment job in order to generate an audience whenever you require it. Unlike scheduled evaluation, this will happen only when requested and is not recurring.
 
 ### Create a segment job
 
-A segment job is an asynchronous process that creates an audience segment on demand. It references a segment definition, as well as any merge policies controlling how [!DNL Real-Time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience. A segment job needs to be run every time you want to refresh the audience that currently qualifies for the segment definition.
+A segment job is an asynchronous process that creates an audience segment on demand. It references a segment definition, as well as any merge policies controlling how [!DNL Real-Time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment definition, such as any errors that may have occurred during processing and the ultimate size of your audience. A segment job needs to be run every time you want to refresh the audience that the segment definition currently qualifies.
 
 You can create a new segment job by making a POST request to the `/segment/jobs` endpoint in the [!DNL Real-Time Customer Profile] API.
 
@@ -91,9 +90,9 @@ You can use the `id` for a specific segment job to perform a lookup request (GET
 
 More detailed information about using this endpoint can be found in the [segment jobs endpoint guide](../api/segment-jobs.md#get)
 
-## Interpret segment results
+## Interpret segment job results
 
-When segment jobs are successfully run, the `segmentMembership` map is updated for each profile included within the segment. `segmentMembership` also stores any pre-evaluated audience segments that are ingested into [!DNL Platform], allowing for integration with other solutions like [!DNL Adobe Audience Manager].
+When segment jobs are successfully run, the `segmentMembership` map is updated for each profile included within the segment definition. `segmentMembership` also stores any pre-evaluated audiences that are ingested into [!DNL Platform], allowing for integration with other solutions like [!DNL Adobe Audience Manager].
 
 The following example shows what the `segmentMembership` attribute looks like for each individual profile record:
 
@@ -122,14 +121,14 @@ The following example shows what the `segmentMembership` attribute looks like fo
 
 | Property | Description |
 | -------- | ----------- |
-| `lastQualificationTime` | The timestamp when the assertion of segment membership was made and the profile entered or exited the segment. |
-| `status` | The status of segment participation as part of the current request. Must be equal to one of the following known values: <ul><li>`realized`: Entity qualifies for the segment.</li><li>`exited`: Entity is exiting the segment.</li></ul> |
+| `lastQualificationTime` | The timestamp when the assertion of segment membership was made and the profile entered or exited the segment definition. |
+| `status` | The segment definition's participation status as part of the current request. Must be equal to one of the following known values: <ul><li>`realized`: Entity qualifies for the segment definition.</li><li>`exited`: Entity is exiting the segment definition.</li></ul> |
 
 >[!NOTE]
 >
 >Any segment membership that is in the `exited` status for more than 30 days, based on the `lastQualificationTime`, will be subject to deletion.
 
-## Access segment results
+## Access segment job results
 
 The results of a segment job can be accessed in one of two ways: you can access individual profiles or export an entire audience to a dataset.
 
@@ -154,7 +153,7 @@ The following steps are required to export your audience:
 
 When exporting an audience, a target dataset must first be created. It is important that the dataset be configured correctly to ensure the export is successful. 
 
-One of the key considerations is the schema upon which the dataset is based (`schemaRef.id` in the API sample request below). In order to export a segment, the dataset must be based on the [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). A union schema is a system-generated, read-only schema that aggregates the fields of schemas which share the same class, in this case that is the XDM Individual Profile class. For more information on union view schemas, please see the [Real-Time Customer Profile section of the Schema Registry developer guide](../../xdm/api/getting-started.md).
+One of the key considerations is the schema upon which the dataset is based (`schemaRef.id` in the API sample request below). In order to export a segment definition, the dataset must be based on the [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). A union schema is a system-generated, read-only schema that aggregates the fields of schemas which share the same class, in this case that is the XDM Individual Profile class. For more information on union view schemas, please see the [Real-Time Customer Profile section of the Schema Registry developer guide](../../xdm/api/getting-started.md).
 
 There are two ways to create the necessary dataset:
 
@@ -207,7 +206,7 @@ A successful response returns an array containing the read-only, system-generate
 
 ### Generate profiles for audience members {#generate-profiles}
 
-Once you have a union-persisting dataset, you can create an export job to persist the audience members to the dataset by making a POST request to the `/export/jobs` endpoint in the [!DNL Real-Time Customer Profile] API and providing the dataset ID and the segment information for the segments that you wish to export.
+Once you have a union-persisting dataset, you can create an export job to persist the audience members to the dataset by making a POST request to the `/export/jobs` endpoint in the [!DNL Real-Time Customer Profile] API and providing the dataset ID and the segment definition information for the segment definitions that you wish to export.
 
 More detailed information about using this endpoint can be found in the [export jobs endpoint guide](../api/export-jobs.md#create)
 
@@ -219,10 +218,10 @@ More detailed information about using this endpoint can be found in the [export 
 
 ## Next steps
 
-Once the export has completed successfully, your data is available within the [!DNL Data Lake] in [!DNL Experience Platform]. You can then use the [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) to access the data using the `batchId` associated with the export. Depending on the size of the segment, the data may be in chunks and the batch may consist of several files.
+Once the export has completed successfully, your data is available within the [!DNL Data Lake] in [!DNL Experience Platform]. You can then use the [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) to access the data using the `batchId` associated with the export. Depending on the size of the segment definition, the data may be in chunks and the batch may consist of several files.
 
 For step-by-step instructions on how to use the [!DNL Data Access] API to access and download batch files, follow the [Data Access tutorial](../../data-access/tutorials/dataset-data.md).
 
-You can also access successfully exported segment data using [!DNL Adobe Experience Platform Query Service]. Using the UI or RESTful API, [!DNL Query Service] allows you to write, validate, and run queries on data within the [!DNL Data Lake].
+You can also access successfully exported segment definition data using [!DNL Adobe Experience Platform Query Service]. Using the UI or RESTful API, [!DNL Query Service] allows you to write, validate, and run queries on data within the [!DNL Data Lake].
 
 For more information on how to query audience data, please review the documentation on [[!DNL Query Service]](../../query-service/home.md).

@@ -35,13 +35,13 @@ The [!DNL Platform] user interface provides several search and filter options on
 
 ![Destinations catalog showing a few advertising and cloud storage destinations.](../assets/ui/workspace/catalog.png)
 
-The destination cards contain primary and secondary control options. The primary controls include [!UICONTROL Set up], [!UICONTROL Activate], [!UICONTROL Activate segments], or [!UICONTROL Export datasets]. The secondary controls allow for viewing options. These controls are described below:
+The destination cards contain primary and secondary control options. The primary controls include [!UICONTROL Set up], [!UICONTROL Activate], [!UICONTROL Activate audiences], or [!UICONTROL Export datasets]. The secondary controls allow for viewing options. These controls are described below:
 
 | Control | Description | 
 |---------|----------|
 |[!UICONTROL Set up] | Allows you to create a connection to the destination.|
-|[!UICONTROL Activate] | Once you have established a connection to the destination, you can activate segments or export datasets to this destination.|
-|[!UICONTROL Activate segments] | Once you have established a connection to the destination, you can activate segments to this destination.|
+|[!UICONTROL Activate] | Once you have established a connection to the destination, you can activate audiences or export datasets to this destination.|
+|[!UICONTROL Activate audiences] | Once you have established a connection to the destination, you can activate audiences to this destination.|
 |[!UICONTROL Export datasets] | Once you have established a connection to the destination, you can export datasets to this destination.|    
 |[!UICONTROL View account] | View the accounts you have connected for a destination.|
 |[!UICONTROL View dataflows] | View the data activation flows that exist for a destination.|
@@ -63,7 +63,7 @@ The **[!UICONTROL Accounts]** tab shows you details about the connections that y
 
 >[!TIP]
 >
-> * Select the ellipsis (`...`) in the [!UICONTROL Platform] column and use the ![Activate control](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate segments]**/**[!UICONTROL Export datasets]** control to export segments or datasets to that destination.
+> * Select the ellipsis (`...`) in the [!UICONTROL Platform] column and use the ![Activate control](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]** control to export audiences or datasets to that destination.
 > * Select the ellipsis (`...`) in the [!UICONTROL Platform] column and use the ![Edit details control](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Edit details]** control to [update](update-accounts.md) the details of an existing destination account.
 > * Select the ellipsis (`...`) in the [!UICONTROL Platform] column and use the ![Delete control](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]** control to [delete](delete-destination-account.md) an existing destination account.
 
@@ -81,11 +81,11 @@ The **[!UICONTROL Accounts]** tab shows you details about the connections that y
 
 ## [!UICONTROL Browse] {#browse}
 
-The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Destinations with the **[!UICONTROL Enabled/Disabled]** toggle turned on set the destination to active or inactive, respectively. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. See the table below for all the information that is provided for each destination in the [!UICONTROL Browse] tab:
+The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Destinations with the **[!UICONTROL Enabled/Disabled]** toggle turned on set the destination to active or inactive, respectively. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Audiences]** > **[!UICONTROL Browse]** and selecting an audience to inspect. See the table below for all the information that is provided for each destination in the [!UICONTROL Browse] tab:
 
 >[!TIP]
 >
-> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Activate segments control](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate]** control to export segments or datasets to that destination.
+> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Activate audiences control](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate]** control to export audiences or datasets to that destination.
 > * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Delete control](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]** control to [remove](delete-destinations.md) an existing connection to a destination.
 > * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![View in monitoring control](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL View in monitoring]** control to view activation information for this destination in the [monitoring dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 > * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Subscribe to alerts ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Subscribe to alerts]** control to subscribe to destination dataflow alerts. You can subscribe to alerts to receive messages regarding the status, success, or failure of your flow run. See [Subscribe to in-context destination alerts](alerts.md) for detailed information on destination dataflow alerts..
@@ -100,7 +100,7 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 |[!UICONTROL Destination] | The destination platform that you selected for your activation flow.|
 |[!UICONTROL Connection Type] | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3, FTP, or [!DNL Azure Blob].</li><li>For real-time advertising destinations: Server-to-server.</li><li>For streaming destinations: Can be [!DNL Azure Event Hubs] or [!DNL Amazon Kinesis].</li></ul>|
 |[!UICONTROL Username] | The account credentials you selected for the destination flow.|
-|[!UICONTROL Activation Data] | Indicates the number of segments that are being activated to this destination. Select this control to find out more about the activated segments. Refer to [Activation Data](/help/destinations/ui/destination-details-page.md#activation-data) in the destination details page for more information about the activated segments.|
+|[!UICONTROL Activation Data] | Indicates the number of audiences that are being activated to this destination. Select this control to find out more about the activated audiences. Refer to [Activation Data](/help/destinations/ui/destination-details-page.md#activation-data) in the destination details page for more information about the activated audiences.|
 |[!UICONTROL Created] | The date and UTC time when the activation flow to the destination was created. Select the up/down arrow symbol to sort the activation flows by newest first or oldest first.|
 | [!UICONTROL Status] | `Enabled` or `Disabled`. Indicates whether data is being activated to this destination.|
 
@@ -108,7 +108,7 @@ Click on a destination row to bring up more information about the destination in
 
 ![Click destination row](../assets/ui/workspace/click-destination-row.png)
 
-Select the destination name to see information about the segments activated to this destination. Click **[!UICONTROL Edit activation]** to modify or add to the segments that are being sent to this destination.
+Select the destination name to see information about the audiences activated to this destination. Click **[!UICONTROL Edit activation]** to modify or add to the audiences that are being sent to this destination.
  
 ## [!UICONTROL System View] {#system-view}
 

@@ -12,7 +12,7 @@ This document and accompanying video presentation provide a high-level end-to-en
 * Ways to build the query based on your existing data architecture.
 * Ensure data quality that meets your needs, and methods to mitigate any shortfalls.
 * The process to schedule a query to run at a set frequency for use downstream in segmentation and destinations for personalization.
-* The ease for marketers to include derived attributes in their segments through the power of [!DNL Query Service].
+* The ease for marketers to include derived attributes in their audiences through the power of [!DNL Query Service].
 
 ## Objectives {#objectives}
 
@@ -57,9 +57,9 @@ The video presentation seen below provides a holistic, real-world use case for y
 
 ## Benefits of [!DNL Query Service] {#benefits}
 
-The features provided by [!DNL Query Service] serves many purposes. You can use it to accommodate complex logic for segmentation, for calculating various personalized attributes for use downstream, or to greatly simplify how you build out your segments. 
+The features provided by [!DNL Query Service] serves many purposes. You can use it to accommodate complex logic for segmentation, for calculating various personalized attributes for use downstream, or to greatly simplify how you build out your audiences. 
 
-[!DNL Query Service] enables you to include constraints in your queries to simplify your segment building process. This improves data quality by ensuring the right data qualifies for your segments and creates more accurate audiences. Maintaining the quality of your query results in an accurate audience and helps with data reliability. You can also save your audience by creating schemas and custom tables based on attributes derived from your query. A custom table can be enabled for Profile and you can use these data points for segmentation and personalization. This feature assists marketers who want to create a clear-cut audience of people.
+[!DNL Query Service] enables you to include constraints in your queries to simplify your audience building process. This improves data quality by ensuring the right data qualifies for your audiences. Maintaining the quality of your query results in an accurate audience and helps with data reliability. You can also save your audience by creating schemas and custom tables based on attributes derived from your query. A custom table can be enabled for Profile and you can use these data points for segmentation and personalization. This feature assists marketers who want to create a clear-cut audience of people.
 
 Also, by including logic in your query that satisfies any recurring or static conditions, [!DNL Query Service] extracts the burden of elaborate segmentation.
 

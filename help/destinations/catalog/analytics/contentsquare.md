@@ -8,7 +8,7 @@ exl-id: bf836a15-b87c-4a4b-a3fc-92d3cf9bc90e
 
 ## Overview {#overview}
 
-Visualize in-page behaviors, see WHY customers abandon and HOW you can improve. Attribute revenue to UX and content elements for each Analytics segment and Target test. Install the [!DNL Contentsquare] tag, setup custom variables and events. Start gathering data for your UX analysis in a few clicks.
+Visualize in-page behaviors, see WHY customers abandon and HOW you can improve. Attribute revenue to UX and content elements for each Analytics audience and Target test. Install the [!DNL Contentsquare] tag, setup custom variables and events. Start gathering data for your UX analysis in a few clicks.
 
 [!DNL Contentsquare] is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html).
 

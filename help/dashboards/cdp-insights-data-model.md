@@ -5,7 +5,7 @@ exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
 ---
 # Real-Time Customer Data Platform Insights Data Model
 
-The Real-Time Customer Data Platform Insights Data Model feature exposes the data models and SQL that power the insights for various profile, destination, and segmentation widgets. You can customize these SQL query templates to create Real-Time CDP reports for your marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your user-defined dashboards. See the query accelerated store reporting insights documnetation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
+The Real-Time Customer Data Platform Insights Data Model feature exposes the data models and SQL that power the insights for various profile, destination, and segmentation widgets. You can customize these SQL query templates to create Real-Time CDP reports for your marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your user-defined dashboards. See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Prerequisites
 
@@ -13,7 +13,7 @@ This guide requires a working understanding of the [user-defined dashboards feat
 
 ## Real-Time CDP insight reports and use cases
 
-Real-Time CDP reporting provides insights into your profile data and its relationship with segments and destinations. Various star schema models were developed to answer a variety of common marketing use cases and each data model can support several use cases.
+Real-Time CDP reporting provides insights into your profile data and its relationship with audiences and destinations. Various star schema models were developed to answer a variety of common marketing use cases and each data model can support several use cases.
 
 >[!IMPORTANT]
 >
@@ -138,9 +138,9 @@ GROUP BY
 
 +++
 
-### Segment model {#segment-model}
+### Audience model {#audience-model}
 
-The segment model is comprised of the following datasets: 
+The audience model is comprised of the following datasets: 
 
 - `adwh_dim_date`
 - `adwh_fact_profile_by_segment`
@@ -152,11 +152,11 @@ The segment model is comprised of the following datasets:
 
 The image below contains the relevant data fields in each dataset.
 
-![An ERD of the segment model.](./images/cdp-insights/segment-model.png)
+![An ERD of the audience model.](./images/cdp-insights/audience-model.png)
 
 #### Audience size use case
 
-The logic used for the [!UICONTROL Audience size] widget returns the total number of merged profiles within the selected segment at the time of the most recent snapshot. See the [[!UICONTROL Audience size] widget documentation](./guides/segments.md#audience-size) for more information.
+The logic used for the [!UICONTROL Audience size] widget returns the total number of merged profiles within the selected audience at the time of the most recent snapshot. See the [[!UICONTROL Audience size] widget documentation](./guides/audiences.md#audience-size) for more information.
 
 The SQL that generates the [!UICONTROL Audience size] widget is seen in the collapsible section below.
 
@@ -185,7 +185,7 @@ LIMIT 20;
 
 #### Audience size change trend use case
 
-The logic used for the [!UICONTROL Audience size change trend] widget provides a line graph illustration of the difference in the total number of profiles that qualified for a given segment between the most recent daily snapshots. See the [[!UICONTROL Audience size change trend] widget documentation](./guides/segments.md#audience-size-change-trend) for more information.
+The logic used for the [!UICONTROL Audience size change trend] widget provides a line graph illustration of the difference in the total number of profiles that qualified for a given audience between the most recent daily snapshots. See the [[!UICONTROL Audience size change trend] widget documentation](./guides/audiences.md#audience-size-change-trend) for more information.
 
 The SQL that generates the [!UICONTROL Audience size change trend] widget is seen in the collapsible section below.
 
@@ -206,7 +206,7 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 
 #### Most used destinations use case
 
-The logic used in the [!UICONTROL Most used destinations] widget lists your organization's most used destinations according to the number of segments mapped to them. This ranking provides insight into which destinations are being utilized while also potentially showing those that may be underutilized. See the documentation on the [[!UICONTROL Most used destinations] widget](./guides/destinations.md#most-used-destinations) for more information.
+The logic used in the [!UICONTROL Most used destinations] widget lists your organization's most used destinations according to the number of audiences mapped to them. This ranking provides insight into which destinations are being utilized while also potentially showing those that may be underutilized. See the documentation on the [[!UICONTROL Most used destinations] widget](./guides/destinations.md#most-used-destinations) for more information.
 
 The SQL that generates the [!UICONTROL Most used destinations] widget is seen in the collapsible section below.
 
@@ -231,11 +231,11 @@ FROM
 
 +++
 
-#### Recently activated segments use case
+#### Recently activated audiences use case
 
-The logic for the [!UICONTROL Recently activated segments] widget provides a list of the segments most recently mapped to a destination. This list provides a snapshot of the segments and destinations that are actively in use in the system and can help in troubleshooting any erroneous mappings. See the [[!UICONTROL Recently activated segments] widget documentation](./guides/destinations.md#recently-activated-segments) for more information.
+The logic for the [!UICONTROL Recently activated audiences] widget provides a list of the audiences most recently mapped to a destination. This list provides a snapshot of the audiences and destinations that are actively in use in the system and can help in troubleshooting any erroneous mappings. See the [[!UICONTROL Recently activated audiences] widget documentation](./guides/destinations.md#recently-activated-audiences) for more information.
 
-The SQL that generates the [!UICONTROL Recently activated segments] widget is seen in the collapsible section below.
+The SQL that generates the [!UICONTROL Recently activated audiences] widget is seen in the collapsible section below.
 
 +++SQL query
 
@@ -249,9 +249,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 +++
 
-### Namespace-segment model 
+### Namespace-audience model 
 
-The namespace-segment model is comprised of the following datasets:
+The namespace-audience model is comprised of the following datasets:
 
 - `adwh_dim_date`
 - `adwh_dim_namespaces`
@@ -264,11 +264,11 @@ The namespace-segment model is comprised of the following datasets:
 
 The image below contains the relevant data fields in each dataset.
 
-![An ERD of the namespace-segment model.](./images/cdp-insights/namespace-segment-model.png)
+![An ERD of the namespace-audience model.](./images/cdp-insights/namespace-audience-model.png)
 
-#### Profiles by identity for a segment use case
+#### Profiles by identity for an audience use case
 
-The logic used in the [!UICONTROL Profiles by identity] widget provides a breakdown of identities across all of the merged profiles in your Profile Store for a given segment. See the [[!UICONTROL Profiles by identity] widget documentation](./guides/segments.md#profiles-by-identity) for more information.
+The logic used in the [!UICONTROL Profiles by identity] widget provides a breakdown of identities across all of the merged profiles in your Profile Store for a given audience. See the [[!UICONTROL Profiles by identity] widget documentation](./guides/audiences.md#profiles-by-identity) for more information.
 
 The SQL that generates the [!UICONTROL Profiles by identity] widget is seen in the collapsible section below.
 
@@ -353,9 +353,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-### Overlap Namespace by segment model 
+### Overlap Namespace by audience model 
 
-The overlap namespace by segment model is comprised of the following datasets: 
+The overlap namespace by audience model is comprised of the following datasets: 
 
 - `adwh_dim_date`
 - `adwh_dim_overlap_namespaces`
@@ -368,11 +368,11 @@ The overlap namespace by segment model is comprised of the following datasets:
 
 The image below contains the relevant data fields in each dataset.
 
-![An ERD of the overlap namespace by segment model.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![An ERD of the overlap namespace by audience model.](./images/cdp-insights/overlap-namespace-by-audience-model.png)
 
-#### Identity overlap (segments) use case
+#### Identity overlap (audiences) use case
 
-The logic used in the [!UICONTROL Segments] dashboard [!UICONTROL Identity overlap] widget illustrates the overlap of profiles that contain the two selected identities for a particular segment. For more information, see the [[!UICONTROL Identity overlap] widget section of the [!UICONTROL Segmentation] dashboard documentation](./guides/segments.md#identity-overlap).
+The logic used in the [!UICONTROL Audiences] dashboard [!UICONTROL Identity overlap] widget illustrates the overlap of profiles that contain the two selected identities for a particular audience. For more information, see the [[!UICONTROL Identity overlap] widget section of the [!UICONTROL Audiences] dashboard documentation](./guides/audiences.md#identity-overlap).
 
 The SQL that generates the [!UICONTROL Identity overlap] widget is seen in the collapsible section below.
 

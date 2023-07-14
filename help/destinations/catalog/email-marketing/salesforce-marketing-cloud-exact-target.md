@@ -26,7 +26,7 @@ To help you better understand how and when you should use the [!DNL (API) Salesf
 
 ### Send emails to contacts for marketing campaigns {#use-case-send-emails}
 
-The sales department of a home rental platform wants to broadcast a marketing email to a targeted customer audience. The platform's marketing team can add new contacts / update existing contacts *(and their email addresses)* through Adobe Experience Platform, build segments from their own offline data, and send these segments to [!DNL Salesforce Marketing Cloud], which can then be used to send the marketing campaign email.
+The sales department of a home rental platform wants to broadcast a marketing email to a targeted customer audience. The platform's marketing team can add new contacts / update existing contacts *(and their email addresses)* through Adobe Experience Platform, build audiences from their own offline data, and send these audiences to [!DNL Salesforce Marketing Cloud], which can then be used to send the marketing campaign email.
 
 ## Prerequisites {#prerequisites}
 
@@ -46,9 +46,9 @@ Reach out to [[!DNL Salesforce] Support](https://www.salesforce.com/company/cont
 
 #### Create attributes within [!DNL Salesforce Marketing Cloud] {#prerequisites-attribute}
 
-When activating segments to the [!DNL (API) Salesforce Marketing Cloud] destination, you must input a value in the **[!UICONTROL Mapping ID]** field for each activated segment, in the **[Segment schedule](#schedule-segment-export-example)** step.
+When activating audiences to the [!DNL (API) Salesforce Marketing Cloud] destination, you must input a value in the **[!UICONTROL Mapping ID]** field for each activated audience, in the **[Audience schedule](#schedule-segment-export-example)** step.
 
-[!DNL Salesforce] requires this value to correctly read and interpret segments coming in from Experience Platform and to update their segment status within [!DNL Salesforce Marketing Cloud]. Refer to the Experience Platform documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
+[!DNL Salesforce] requires this value to correctly read and interpret audiences coming in from Experience Platform and to update their audience status within [!DNL Salesforce Marketing Cloud]. Refer to the Experience Platform documentation for [Audience Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on audience statuses.
 
 For each segment that you activate from Platform to [!DNL Salesforce Marketing Cloud], you need to create an attribute of the type `Text` within [!DNL Salesforce]. Use the [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] to create attributes. The attribute field names are used for the [!DNL (API) Salesforce Marketing Cloud] target field during the **[!UICONTROL Mapping]** step. You can define the field character with a maximum of 4000 characters, according to your business requirement. See the [!DNL Salesforce Marketing Cloud] [Data Extensions Data Types](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&type=5) documentation page for additional information on attribute types.
 
@@ -66,7 +66,7 @@ These are displayed in the **[!UICONTROL Target field]** selection window when y
 
 >[!IMPORTANT]
 >
->Within [!DNL Salesforce Marketing Cloud], you must create attributes with a **[!UICONTROL FIELD NAME]** that exactly matches the value specified within **[!UICONTROL Mapping ID]** for each activated Platform segment. For example, the screenshot below shows an attribute named `salesforce_mc_segment_1`. When activating a segment to this destination, add `salesforce_mc_segment_1` as **[!UICONTROL Mapping ID]** to populate segment audiences from Experience Platform into this attribute.
+>Within [!DNL Salesforce Marketing Cloud], you must create attributes with a **[!UICONTROL FIELD NAME]** that exactly matches the value specified within **[!UICONTROL Mapping ID]** for each activated Platform segment. For example, the screenshot below shows an attribute named `salesforce_mc_segment_1`. When activating an audience to this destination, add `salesforce_mc_segment_1` as **[!UICONTROL Mapping ID]** to populate audience audiences from Experience Platform into this attribute.
 
 An example of attribute creation in [!DNL Salesforce Marketing Cloud], is shown below:
 ![Salesforce Marketing Cloud UI screenshot showing an attribute.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
@@ -74,8 +74,8 @@ An example of attribute creation in [!DNL Salesforce Marketing Cloud], is shown 
 >[!TIP]
 >
 >* When creating the attribute, do not include whitespace characters in the field name. Instead, use the underscore `(_)` character as a separator.
->* To distinguish between attributes used for Platform segments and other attributes within [!DNL Salesforce Marketing Cloud], you could include a recognizable prefix or suffix for the attributes used for Adobe segments. For example, instead of `test_segment`, use `Adobe_test_segment` or `test_segment_Adobe`.
->* If you already have other attributes created in [!DNL Salesforce Marketing Cloud], you can use the same name as the Platform segment, to easily identify the segment in [!DNL Salesforce Marketing Cloud].
+>* To distinguish between attributes used for Platform audiences and other attributes within [!DNL Salesforce Marketing Cloud], you could include a recognizable prefix or suffix for the attributes used for Adobe segments. For example, instead of `test_segment`, use `Adobe_test_segment` or `test_segment_Adobe`.
+>* If you already have other attributes created in [!DNL Salesforce Marketing Cloud], you can use the same name as the Platform segment, to easily identify the audience in [!DNL Salesforce Marketing Cloud].
 
 #### Assign user roles and permissions within [!DNL Salesforce Marketing Cloud] {#prerequisites-roles-permissions}
 
@@ -116,7 +116,7 @@ Note down the items below before you authenticate to the [!DNL (API) Salesforce 
     * Refer to the [!DNL Salesforce] [documentation](https://help.salesforce.com/s/articleView?id=sf.custom_field_allocations.htm&type=5) for additional guidance.
     * If you have reached the limit defined for *custom fields allowed per object* within [!DNL Salesforce Marketing Cloud] you will need to
         * Remove older attributes before adding new attributes in [!DNL Salesforce Marketing Cloud]. 
-        * Update or remove any activated segments in Platform destinations which use these older attribute names as the value provided for **[!UICONTROL Mapping ID]** during the [segment scheduling](#schedule-segment-export-example) step.
+        * Update or remove any activated audiences in Platform destinations which use these older attribute names as the value provided for **[!UICONTROL Mapping ID]** during the [audience scheduling](#schedule-segment-export-example) step.
 
 ## Supported identities {#supported-identities}
 
@@ -132,8 +132,8 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each segment status in [!DNL Salesforce Marketing Cloud] gets updated with the corresponding segment status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [segment scheduling](#schedule-segment-export-example) step.</li></ul>|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each segment status in [!DNL Salesforce Marketing Cloud] gets updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-segment-export-example) step.</li></ul>|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
@@ -175,13 +175,13 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 >
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
@@ -213,29 +213,29 @@ To correctly map your XDM fields to the [!DNL (API) Salesforce Marketing Cloud] 
 
 When you have finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
-### Schedule segment export and example {#schedule-segment-export-example}
+### Schedule audience export and example {#schedule-segment-export-example}
 
-When performing the [Schedule segment export](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map Platform segments to the [attributes](#prerequisites-attribute) in [!DNL Salesforce Marketing Cloud].
+When performing the [Schedule audience export](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map Platform audiences to the [attributes](#prerequisites-attribute) in [!DNL Salesforce Marketing Cloud].
 
 To do this, select each segment, then enter name of the attribute from [!DNL Salesforce Marketing Cloud] in the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** field. Refer to the [Create attribute within [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field) section for guidance and best practices on creating attributes in [!DNL Salesforce Marketing Cloud].
 
-For example, if your [!DNL Salesforce Marketing Cloud] attribute is `salesforce_mc_segment_1`, specify this value in the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** to populate segment audiences from Experience Platform into this attribute.
+For example, if your [!DNL Salesforce Marketing Cloud] attribute is `salesforce_mc_segment_1`, specify this value in the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** to populate audience audiences from Experience Platform into this attribute.
 
 An example attribute from [!DNL Salesforce Marketing Cloud] is shown below:
 ![Salesforce Marketing Cloud UI screenshot showing a attribute.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
 
 An example indicating the location of the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** is shown below:
-![Platform UI screenshot example showing Schedule segment export.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
+![Platform UI screenshot example showing Schedule audience export.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
 
 As shown the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** should exactly match the value specified within [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]**.
 
 Repeat this section for each activated Platform segment.
 
-Depending on your use case all activated segments can be mapped to the same [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]** or to different **[!UICONTROL FIELD NAME]** in [!DNL (API) Salesforce Marketing Cloud]. A typical example based on the image shown above could be.
+Depending on your use case all activated audiences can be mapped to the same [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]** or to different **[!UICONTROL FIELD NAME]** in [!DNL (API) Salesforce Marketing Cloud]. A typical example based on the image shown above could be.
 | [!DNL (API) Salesforce Marketing Cloud] segment name | [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** | 
 | --- | --- | --- |
-| salesforce mc segment 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
-| salesforce mc Segment 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
+| salesforce mc audience 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
+| salesforce mc audience 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
 
 ## Validate data export {#exported-data}
 
@@ -247,17 +247,17 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Select the destination and validate that the status is **[!UICONTROL enabled]**.
 ![Platform UI screenshot showing Destinations Dataflow Run.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-dataflow-run.png)
 
-1. Switch to the **[!DNL Activation data]** tab, then select a segment name.
+1. Switch to the **[!DNL Activation data]** tab, then select an audience name.
 ![Platform UI screenshot example showing Destinations Activation Data.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destinations-activation-data.png)
 
-1. Monitor the segment summary and ensure that the count of profiles corresponds to the count created within the segment.
+1. Monitor the audience summary and ensure that the count of profiles corresponds to the count created within the segment.
 ![Platform UI screenshot example showing Segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/segment.png)
 
-1. Log in to the [[!DNL Salesforce Marketing Cloud]](https://mc.exacttarget.com/) website. Then navigate to the **[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** page and check if the profiles from the segment have been added.
+1. Log in to the [[!DNL Salesforce Marketing Cloud]](https://mc.exacttarget.com/) website. Then navigate to the **[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** page and check if the profiles from the audience have been added.
 ![Salesforce Marketing Cloud UI screenshot showing the Contacts page with profiles used in the segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contacts.png)
 
-1. To check if any profiles have been updated, navigate to the **[!UICONTROL Email]** page and verify if the attribute values for the profile from the segment have been updated. If successful, you can see that each segment status in [!DNL Salesforce Marketing Cloud] was updated with the corresponding segment status from Platform, based on the **[!UICONTROL Mapping ID]** value provided in the [segment scheduling](#schedule-segment-export-example) step.
-![Salesforce Marketing Cloud UI screenshot showing the selected Contacts Email page with updated segment statuses.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contact-detail.png)
+1. To check if any profiles have been updated, navigate to the **[!UICONTROL Email]** page and verify if the attribute values for the profile from the audience have been updated. If successful, you can see that each audience status in [!DNL Salesforce Marketing Cloud] was updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided in the [audience scheduling](#schedule-segment-export-example) step.
+![Salesforce Marketing Cloud UI screenshot showing the selected Contacts Email page with updated audience statuses.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contact-detail.png)
 
 ## Data usage and governance {#data-usage-governance}
 
@@ -291,7 +291,7 @@ This section captures the functionality and significant documentation updates ma
 |April 2023|Documentation update|<ul><li>We corrected a statement and reference link in the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section to call out that [!DNL Salesforce Marketing Cloud Engagement] is a mandatory subscription to use this destination. The section previously called out erroneously that users need a subscription to the Marketing Cloud **Account** Engagement to proceed.</li> <li>We added a section under [prerequisites](#prerequisites) for [roles and permissions](#prerequisites-roles-permissions) to be assigned to the [!DNL Salesforce] user for this destination to work. (PLATIR-26299)</li></ul>|
 |February 2023|Documentation update|We updated the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section to include a reference link calling out that [!DNL Salesforce Marketing Cloud Engagement] is a mandatory subscription to use this destination.|
 |February 2023|Functionality update|We fixed an issue where an incorrect configuration in the destination was causing a malformed JSON to be sent to Salesforce. This resulted in some users seeing high numbers of identities failed on activation. (PLATIR-26299)|
-|January 2023|Documentation update| <ul><li>We updated the [Prerequisites in [!DNL Salesforce]](#prerequisites-destination) section to call out that attributes need to be created on the [!DNL Salesforce] side. This section now includes detailed instructions on how to do that and best practices around naming the attributes in [!DNL Salesforce]. (PLATIR-25602)</li><li>We added clear instructions on how to use the Mapping ID for each activated segment in the [segment scheduling](#schedule-segment-export-example) step. (PLATIR-25602)</li></ul> |
+|January 2023|Documentation update| <ul><li>We updated the [Prerequisites in [!DNL Salesforce]](#prerequisites-destination) section to call out that attributes need to be created on the [!DNL Salesforce] side. This section now includes detailed instructions on how to do that and best practices around naming the attributes in [!DNL Salesforce]. (PLATIR-25602)</li><li>We added clear instructions on how to use the Mapping ID for each activated audience in the [audience scheduling](#schedule-segment-export-example) step. (PLATIR-25602)</li></ul> |
 |October 2022|Initial release|Initial destination release and documentation publish.|
 
 {style="table-layout:auto"}
