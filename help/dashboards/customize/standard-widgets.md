@@ -12,8 +12,8 @@ The [!UICONTROL Profiles], [!UICONTROL Audiences], and [!UICONTROL Destinations]
 
 >[!NOTE]
 >
->As of July 26th 2023, the [!UICONTROL Profiles], [!UICONTROL Audiences], and [!UICONTROL Destinations] Overview dashboards have been reset to a new default widget load-out for all users who did not modify their views in the previous 6 months.
->Please see the documentation in the [Profiles](../guides/profiles.md#default-widgets), [Audiences](../guides/audiences.md#default-widgets), and [Destinations](../guides/destinations.md#default-widgets) default widget sections for details on which widgets are included as part of the default widget load-outs.
+>As of July 26th 2023, [!UICONTROL Profiles], [!UICONTROL Audiences], and [!UICONTROL Destinations] Overview dashboards have been reset to a new default widget load-out for all users who did not modify their views in the previous six months.
+>Refer to the documentation in the [Profiles](../guides/profiles.md#default-widgets), [Audiences](../guides/audiences.md#default-widgets), and [Destinations](../guides/destinations.md#default-widgets) default widget sections for details on which widgets are included as part of the default widget load-outs.
 
 To learn more about custom widgets, please refer to the guide for [creating custom widgets](custom-widgets.md).
 
