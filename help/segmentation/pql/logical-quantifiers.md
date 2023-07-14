@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;logical quantifiers;logical quantifier;
 solution: Experience Platform
 title: PQL Logical Quantifiers
 description: Logical quantifiers can be used to assert conditions with arrays in Profile Query Language (PQL).
