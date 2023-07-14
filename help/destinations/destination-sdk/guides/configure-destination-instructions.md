@@ -144,7 +144,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Step 3: Create message transformation template - use templating language to specify the message output format {#create-transformation-template}
 
-Based on the payloads that your destination supports, you must create a template that transforms the format of the exported data from Adobe XDM format into a format supported by your destination. See template examples in the section [Using a templating language for the identity, attributes, and segment membership transformations](../functionality/destination-server/message-format.md#using-templating) and use the [template authoring tool](../testing-api/streaming-destinations/create-template.md) provided by Adobe.
+Based on the payloads that your destination supports, you must create a template that transforms the format of the exported data from Adobe XDM format into a format supported by your destination. See template examples in the section [Using a templating language for the identity, attributes, and audience membership transformations](../functionality/destination-server/message-format.md#using-templating) and use the [template authoring tool](../testing-api/streaming-destinations/create-template.md) provided by Adobe.
 
 Once you have crafted a message transformation template that works for you, add it to the server and template configuration you created in step 1.
 
@@ -267,10 +267,10 @@ If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, you must crea
 
 After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) to test the integration between Adobe Experience Platform and your destination.
 
-As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create segments in Experience Platform:
+As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create audiences in Experience Platform:
 
-* [Create a segment documentation page](/help/segmentation/ui/overview.md#create-segment)
-* [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
+* [Create an audience documentation page](/help/segmentation/ui/overview.md#create-segment)
+* [Create an audience video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
 ## Step 7: Publish your destination {#publish-destination}
 

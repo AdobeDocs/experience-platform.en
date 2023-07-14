@@ -12,7 +12,7 @@ To understand the message format and profile configuration and transformation pr
 * **Experience Data Model (XDM)**. [XDM overview](../../../../xdm/home.md) and  [How to create an XDM schema in Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
 * **Class**. [Create and edit classes in the UI](../../../../xdm/ui/resources/classes.md).
 * **IdentityMap**. The identity map represents a map of all end-user identities in Adobe Experience Platform. Refer to `xdm:identityMap` in the [XDM field dictionary](../../../../xdm/schema/field-dictionary.md).
-* **SegmentMembership**. The [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM attribute informs which audiences a profile is a member of. For the three different values in the `status` field, read the documentation on [Segment Membership Details schema field group](../../../../xdm/field-groups/profile/segmentation.md).
+* **SegmentMembership**. The [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM attribute informs which audiences a profile is a member of. For the three different values in the `status` field, read the documentation on [Audience Membership Details schema field group](../../../../xdm/field-groups/profile/segmentation.md).
 
 >[!IMPORTANT]
 >
@@ -171,8 +171,8 @@ Adobe uses [Pebble templates](https://pebbletemplates.io/), a templating languag
 
 This section provides several examples of how these transformations are made - from the input XDM schema, through the template, and outputting into payload formats accepted by your destination. The examples below are presented by increasing complexity, as follows:
 
-1. Simple transformation examples. Learn how templating works with simple transformations for [Profile attributes](#attributes), [Segment membership](#segment-membership), and [Identity](#identities) fields.
-2. Increased complexity examples of templates that combine the fields above: [Create a template that sends audiences and identities](./message-format.md#segments-and-identities) and [Create a template that sends audiences, identities, and profile attributes](#segments-identities-attributes).
+1. Simple transformation examples. Learn how templating works with simple transformations for [Profile attributes](#attributes), [Audience membership](#segment-membership), and [Identity](#identities) fields.
+2. Increased complexity examples of templates that combine the fields above: [Create a template that sends audiences and identities](./message-format.md#segments-and-identities) and [Create a template that sends segments, identities, and profile attributes](#segments-identities-attributes).
 3. Templates that include the aggregation key. When you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in the destination configuration, Experience Platform groups the profiles exported to your destination based on criteria such as audience ID, audience status, or identity namespaces.
 
 ### Profile Attributes {#attributes}
@@ -330,7 +330,7 @@ Profile 2:
                 {% endfor %}
                 ],
                 "remove": [
-                {# Alternative syntax for filtering segments by status: #}
+                {# Alternative syntax for filtering audiences by status: #}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                 "{{ segment.key }}"{% if not loop.last %},{% endif %}
                 {% endfor %}
@@ -485,7 +485,7 @@ Profile 2:
 }
 ```
 
-### Create a template that sends audiences and identities {#audiences-and-identities}
+### Create a template that sends audiences and identities {#segments-and-identities}
 
 This section provides an example of a commonly used transformation between the Adobe XDM schema and partner destination schema.
 The example below shows you how to transform the audience membership and identities format and output them to your destination.
@@ -590,7 +590,7 @@ Profile 2:
                     {% endfor %}
                 ],
                 "remove": [
-                    {# Alternative syntax for filtering segments by status: #}
+                    {# Alternative syntax for filtering audiences by status: #}
                     {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{% if not loop.last %},{% endif %}
                     {% endfor %}
@@ -653,7 +653,7 @@ The `json` below represents the data exported out of Adobe Experience Platform.
 }
 ```
 
-### Create a template that sends audiences, identities, and profile attributes {#audiences-identities-attributes}
+### Create a template that sends segments, identities, and profile attributes {#segments-identities-attributes}
 
 This section provides an example of a commonly used transformation between the Adobe XDM schema and partner destination schema.
 
@@ -784,7 +784,7 @@ Profile 2:
                 {% endfor %}
                 ],
                 "remove": [
-                {# Alternative syntax for filtering segments by status: #}
+                {# Alternative syntax for filtering audiences by status: #}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{% if not loop.last %},{% endif %}
                 {% endfor %}
@@ -859,7 +859,7 @@ When you use [configurable aggregation](../../functionality/destination-configur
 
 In the message transformation template, you can access the aggregation keys mentioned above, as shown in the examples in the following sections. Use aggregation keys to structure the HTTP message exported out of Experience Platform to match the format and rate limits expected by your destination.
 
-#### Use audience ID aggregation key in the template {#aggregation-key-audience-id}
+#### Use audience ID aggregation key in the template {#aggregation-key-segment-id}
 
 If you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) and set `includeSegmentId` to true, the profiles in the HTTP messages exported to your destination are grouped by audience ID. See below how you can access the audience ID in the template.
 
@@ -1011,7 +1011,7 @@ When exported to your destination, the profiles are split into two groups, based
 }
 ```
 
-#### Use audience alias aggregation key in the template {#aggregation-key-audience-alias}
+#### Use audience alias aggregation key in the template {#aggregation-key-segment-alias}
 
 If you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) and set `includeSegmentId` to true, you can also access audience alias in the template.
 
@@ -1021,23 +1021,9 @@ Add the line below to the template to access the exported profiles grouped by au
 customerList={{input.aggregationKey.segmentAlias}}
 ```
 
-#### Use audience namespace aggregation key in the template {#aggregation-key-audience-namespace}
-
-If you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) and set `includeSegmentId` to true, you can also access audience namespaces in the template.
-
-Add the line below to the template to access the exported profiles grouped by audience namespace.
-
-
-Add the line below to the template to access the exported profiles grouped by audience alias.
-
-```python
-audienceNamespace={{input.aggregationKey.segmentNamespace}}
-```
-
-
 #### Use audience status aggregation key in the template {#aggregation-key-segment-status}
 
-If you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) and set `includeSegmentId` and `includeSegmentStatus` to true, you can access the audience status in the template. This way, you can group profiles in the HTTP messages exported to your destination based on whether the profiles should be added or removed from audiences.
+If you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) and set `includeSegmentId` and `includeSegmentStatus` to true, you can access the audience status in the template. This way, you can group profiles in the HTTP messages exported to your destination based on whether the profiles should be added or removed from segments.
 
 Possible values are:
 
@@ -1045,7 +1031,7 @@ Possible values are:
 * existing
 * exited
 
-Add the line below to the template to add or remove profiles from audiences, based on the values above:
+Add the line below to the template to add or remove profiles from segments, based on the values above:
 
 ```python
 action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}
@@ -1213,18 +1199,13 @@ The context provided to the template contains `input`  (the profiles / data that
 
 The table below provides descriptions for the functions in the examples above.
 
-|Function | Description | Example |
-|---------|----------|----------|
-| `input.profile` | The profile, represented as a [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Follows the partner XDM schema mentioned further above on this page.||
-|`hasSegments`| This function takes a map of namespace audience IDs as parameter. The function returns `true` if there is at least one audience in the map (regardless of its status), and `false` otherwise. You can use this function to decide whether to iterate over a map of audiences or not.|`hasSegments(input.profile.segmentMembership)`|
-|`destination.namespaceSegmentAliases`| Map from audience IDs in a specific Adobe Experience Platform namespace to audience aliases in the partner's system.|`destination.namespaceSegmentAliases["ups"]["seg-id-1"]`|
-|`destination.namespaceSegmentNames`| Map from audience names in specific Adobe Experience Platform namespaces to audience names in the partner's system.|`destination.namespaceSegmentNames["ups"]["seg-name-1"]`|
-|`destination.namespaceSegmentTimestamps`|Returns the time when a audience was created, updated, or activated, in UNIX timestamp format.|<ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: returns the time when the segment with the ID `seg-id-1`, from the `ups` namespace, was created, in UNIX timestamp format.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: returns the time when the audience with the ID `seg-id-1`, from the `ups` namespace, was updated, in UNIX timestamp format.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: returns the time when the audience with the ID `seg-id-1`, from the `ups` namespace, was activated to the destination, in UNIX timestamp format.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`: returns the time when the audience activation was updated on the destination, in UNIX timestamp format.</li></ul>|
-| `addedSegments(mapOfNamespacedSegmentIds)` | Returns only the audiences that have status `realized`, across all namespaces. | `addedSegments(input.profile.segmentMembership)`|
-| `removedSegments(mapOfNamespacedSegmentIds)` | Returns only the audiences that have status `exited`, across all namespaces. |`removedSegments(input.profile.segmentMembership)`|
-| `destination.segmentAliases` | **Deprecated. Replaced by `destination.namespaceSegmentAliases`** <br><br> Map from audience IDs in the Adobe Experience Platform namespace to audience aliases in the partner's system. |`destination.segmentAliases["seg-id-1"]`|
-| `destination.segmentNames` | **Deprecated. Replaced by `destination.namespaceSegmentNames`** <br><br>  Map from audience names in the Adobe Experience Platform namespace to audience names in the partner's system. |`destination.segmentNames["seg-name-1"]`|
-|`destination.segmentTimestamps`| **Deprecated. Replaced by `destination.namespaceSegmentTimestamps`** <br><br> Returns the time when a audience was created, updated, or activated, in UNIX timestamp format.|<ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: returns the time when the audience with the ID `seg-id-1` was created, in UNIX timestamp format.</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: returns the time when the audience with the ID `seg-id-1` was updated, in UNIX timestamp format.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: returns the time when the audience with the ID `seg-id-1` was activated to the destination, in UNIX timestamp format.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`: returns the time when the audience activation was updated on the destination, in UNIX timestamp format.</li></ul>|
+|Function | Description |
+|---------|----------|
+| `input.profile` | The profile, represented as a [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Follows the partner XDM schema mentioned further above on this page.|
+| `destination.segmentAliases` | Map from audience IDs in the Adobe Experience Platform namespace to audience aliases in the partner's system. |
+| `destination.segmentNames` | Map from audience names in the Adobe Experience Platform namespace to audience names in the partner's system. |
+| `addedSegments(listOfSegments)` | Returns only the audiences that have status `realized`. |
+| `removedSegments(listOfSegments)` | Returns only the audiences that have status `exited`. |
 
 {style="table-layout:auto"}
 

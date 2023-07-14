@@ -28,8 +28,8 @@ Improvements in the new [!DNL Azure Blob] destination card include:
 
 ## Connect to your [!UICONTROL Azure Blob] storage through API or UI {#connect-api-or-ui}
 
-* To connect to your [!UICONTROL Azure Blob] storage location using the Platform user interface, read the sections [Connect to the destination](#connect) and [Activate segments to this destination](#activate) below.
-* To connect to your [!UICONTROL Azure Blob] storage location programmatically, read the [Activate segments to file-based destinations by using the Flow Service API tutorial](../../api/activate-segments-file-based-destinations.md).
+* To connect to your [!UICONTROL Azure Blob] storage location using the Platform user interface, read the sections [Connect to the destination](#connect) and [Activate audiences to this destination](#activate) below.
+* To connect to your [!UICONTROL Azure Blob] storage location programmatically, read the [Activate audiences to file-based destinations by using the Flow Service API tutorial](../../api/activate-segments-file-based-destinations.md).
 
 ## Getting started
 
@@ -40,7 +40,21 @@ This tutorial requires a working understanding of the following components of Ad
   * [Schema Editor tutorial](../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-Time Customer Profile]](../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-If you already have a valid [!DNL Blob] destination, you may skip the remainder of this document and proceed to the tutorial on [activating segments to your destination](../../ui/activate-batch-profile-destinations.md).
+If you already have a valid [!DNL Blob] destination, you may skip the remainder of this document and proceed to the tutorial on [activating audiences to your destination](../../ui/activate-batch-profile-destinations.md).
+
+## Supported audiences {#supported-audiences}
+
+This section describes all the audiences that you can export to this destination.
+
+All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
+Additionally, this destination also supports the activation of the audiences described in the table below.
+
+| Audience type | Description | 
+---------|----------|
+| Custom uploads | Audiences ingested into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -100,13 +114,13 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
 ## (Beta) Export datasets {#export-datasets}
 
@@ -117,4 +131,4 @@ This destination supports dataset exports. For complete information on how to se
 
 ## Exported data {#exported-data}
 
-For [!DNL Azure Blob Storage] destinations, [!DNL Platform] creates a `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
+For [!DNL Azure Blob Storage] destinations, [!DNL Platform] creates a `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the audience activation tutorial.

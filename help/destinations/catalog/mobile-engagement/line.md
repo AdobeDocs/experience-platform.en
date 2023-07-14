@@ -1,7 +1,7 @@
 ---
 keywords: mobile;mobile engagement destinations;LINE;LINE mobile engagement destination
 title: LINE connection
-description: The LINE destination allows you to add profiles to your Platform segment and deliver personalized experiences to connected users.
+description: The LINE destination allows you to add profiles to your Platform audience and deliver personalized experiences to connected users.
 last-substantial-update: 2022-11-08
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
 ---
@@ -11,13 +11,13 @@ exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
 
 [[!DNL LINE]](https://line.me/en/) is a popular communication platform that connects people, services and information and has grown from a chat app into a hub for entertainment, social, and day-to-day activities.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL LINE] Messaging API](https://developers.line.biz/en/reference/messaging-api/). You can activate profiles from your Experience Platform segments as connections within [!DNL LINE] for your business needs.
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL LINE] Messaging API](https://developers.line.biz/en/reference/messaging-api/). You can activate profiles from your Experience Platform audiences as connections within [!DNL LINE] for your business needs.
 
 [!DNL LINE] uses Bearer Tokens as the authentication mechanism to communicate with the [!DNL LINE] Messaging API. Instructions to authenticate to your [!DNL LINE] instance are further below, within [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
-As a marketer, you can target users in a mobile engagement destination, with segments built in [!DNL Adobe Experience Platform]. Additionally, you can deliver personalized experiences to them, based on attributes from their [!DNL Adobe Experience Platform] profiles, as soon as segments and profiles are updated in [!DNL Adobe Experience Platform].
+As a marketer, you can target users in a mobile engagement destination, with audiences built in [!DNL Adobe Experience Platform]. Additionally, you can deliver personalized experiences to them, based on attributes from their [!DNL Adobe Experience Platform] profiles, as soon as audiences and profiles are updated in [!DNL Adobe Experience Platform].
 
 ## Prerequisites {#prerequisites}
 
@@ -61,8 +61,8 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the [!DNL LINE] destination. |
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL LINE] destination. |
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -101,13 +101,13 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 >
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ### Map attributes and identities {#map}
 
@@ -127,13 +127,13 @@ If your target identity is *ID for Advertisers(IFAs)* you will need the below:
 
 ## Validate data export {#exported-data}
 
-Upon a successful data export out of Experience Platform, the [!DNL LINE] destination creates a new audience within [!DNL LINE] using the selected segment name.
+Upon a successful data export out of Experience Platform, the [!DNL LINE] destination creates a new audience within [!DNL LINE] using the selected audience name.
 
 To validate that you have correctly set up the destination, follow the steps below:
 
 1. In [!DNL LINE], log in to the [Manager console](https://manager.line.biz/).
 
-1. Next, navigate to **[!UICONTROL Data Controls]** > **[!UICONTROL Audiences]** and check the name matching the selected segment within the **[!UICONTROL Audience name]** column.
+1. Next, navigate to **[!UICONTROL Data Controls]** > **[!UICONTROL Audiences]** and check the name matching the selected audience within the **[!UICONTROL Audience name]** column.
 
 1. The updated volume would match the count within the segment.
 
