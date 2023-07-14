@@ -43,14 +43,22 @@ This second example, is a more real-world example as it uses an alias name. See 
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS as <alias_name>;
 ``` -->
 
-The console output does not display the statistics in response to the analyze table compute statistics command. Instead, the console will display a single row column of `Statistics ID` with a universally unique identifier to reference the results. On successful completion of a `COMPUTE STATISTICS` query, the results are displayed as follows:
+The console output does not display the statistics in response to the analyze table compute statistics command. Instead, the console will display a single row column of `Statistics ID` with a universally unique identifier to reference the results. You can also choose to **query directly on the `Statistics ID`**. On successful completion of a `COMPUTE STATISTICS` query, the results are displayed as follows:
 
 ```console
 | Statistics ID    | 
 | ---------------- |
-| QqMtDfHQOdYJpZlb |
+| adc_geometric_stats_1 |
 (1 row)
 ```
+
+You can query the statistics output directly by refernecing the `Statistics ID` as seen below: 
+
+```sql
+SELECT * FROM adc_geometric_stats_1; 
+```
+
+This statement allows you to view the output in a similar way to the SHOW STATISTICS command when used with the `Statistics ID`.
 
 To see the output, you must use the `SHOW STATISTICS` command. Instructions on [how to show the statistics](#show-statistics) are provided later in the document.
 
@@ -84,7 +92,8 @@ You can combine the column limit and the filter to create highly specific comput
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
 ```
 
-<!-- ## Create an alias name {#alias-name}
+<!-- Commented out until the <alias_name> feature is released.
+## Create an alias name {#alias-name}
 
 Since the filter condition and the column list can target a large amount of data, it is unrealistic to remember the exact values. Instead, you can provide an `<alias_name>` to store this calculated information. If you do not provide an alias name for these calculations, Query Service generates a universally unique identifier for the alias ID. You can then use this alias ID to look up the computed statistics with the `SHOW STATISTICS` command. 
 
@@ -98,12 +107,14 @@ The example below stores the output computed statistics in the `alias_name` for 
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS FOR ALL COLUMNS as alias_name;
 ```
 
-The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the output, you must use the `SHOW STATISTICS` command discussed below. -->
+The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the output, you must use the `SHOW STATISTICS` command discussed below. 
+-->
+
+<!-- Commented out until the <alias_name> feature is released.
 
 ## Show the statistics {#show-statistics}
 
-<!-- Commented out until the <alias_name> feature is released.
-The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run.  -->
+The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run.  
 
 Even with a filter condition and a column list, the computation can target a large amount of data. Query Service generates a universally unique identifier for the statistics ID to store this calculated information. You can then use this statistics ID to look up the computed statistics with the `SHOW STATISTICS` command at any time within that session. 
 
@@ -132,6 +143,7 @@ An output might look similar to the example below.
  timestamp                                                  |            0.0 |            0.0 |            0.0 |               0.0 |                98.0 |         3 | Timestamp
 (12 rows)
 ```
+-->
 
 ## Next steps {#next-steps}
 
