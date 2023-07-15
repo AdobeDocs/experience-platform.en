@@ -70,7 +70,7 @@ POST /data/foundation/connectors/encryption/keys
 
 **Request**
 
-The following request generates a encryption key pair using the PGP encryption algorithm.
+The following request generates an encryption key pair using the PGP encryption algorithm.
 
 ```shell
 curl -X POST \
@@ -103,6 +103,46 @@ A successful response returns your Base64-encoded public key, public key ID, and
     ​"publicKeyId": "{PUBLIC_KEY_ID}",
     ​"expiryTime": "1684843168"
 }
+```
+
+| Property | Description |
+| --- | --- |
+| `publicKey` | The public key is the key that you will use to encrypt your data file in your cloud storage. This key corresponds with the private key that was also created during this step. However, the private key immediately goes to Experience Platform. |
+| `publicKeyId` |
+| `expiryTime` |
+
+### Share your public key
+
+INTRO ON USE CASE - WHY?
+
+**API format**
+
+```http
+POST /data/foundation/connectors/encryption/keys/custom-key
+```
+
+**Request**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/custom-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' 
+  -d '{
+      "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+    }'
+```
+
+**Response**
+
+```json
+{    
+  "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2" 
+} 
 ```
 
 ## Connect your cloud storage source to Experience Platform using the [!DNL Flow Service] API
@@ -216,8 +256,8 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' \
   -d '{
-    "name": "ACME Customer Data",
-    "description": "ACME Customer Data (Encrypted)",
+    "name": "ACME Customer Data (with Sign Verification)",
+    "description": "ACME Customer Data (with Sign Verification)",
     "flowSpec": {
         "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
         "version": "1.0"
@@ -253,7 +293,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `params.signVerificationKeyId` |
+| `params.signVerificationKeyId` | The sign verification key ID is the same ID as the public key ID that was retrieved  |
 
 
 >[!ENDTABS]
