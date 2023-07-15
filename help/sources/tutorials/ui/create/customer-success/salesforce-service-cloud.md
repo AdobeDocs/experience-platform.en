@@ -34,7 +34,7 @@ For more information on authentication, refer to [this [!DNL Salesforce] authent
 
 ## Connect your [!DNL Salesforce Service Cloud] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Salesforce] account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Salesforce] account to Experience Platform.
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the sources workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources available on the Experience Platform sources catalog.
 
@@ -42,7 +42,7 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Select **[!UICONTROL Customer success]** from the list of sources categories and then select **[!UICONTROL Add data]** from the [!DNL Salesforce Service Cloud] card.
 
-![catalog](../../../../images/tutorials/create/[!DNL Salesforce Service Cloud]/catalog.png)
+![catalog](../../../../images/tutorials/create/salesforce-service-cloud/catalog.png)
 
 The **[!UICONTROL Connect to Salesforce Service Cloud]** page appears. On this page, you can either use new credentials or existing credentials.
 
