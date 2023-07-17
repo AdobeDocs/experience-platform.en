@@ -124,6 +124,14 @@ The **[!UICONTROL Select dataset]** popover appears. Select the dataset that you
 
 ![The chosen dataset is selected.](../images/ui/audience-composition/enrich-dataset-selected.png)
 
+>[!IMPORTANT]
+>
+>The selected dataset **must** meet the following criteria:
+>
+>- The dataset **must** be of record type.
+>   - The dataset **cannot** be of event type, be system-generated, or be marked for Profile.
+>- The dataset **must** be 1 GB or smaller.
+
 The **[!UICONTROL Enrichment criteria]** section now appears on the right rail. In this section, you can select the **[!UICONTROL Source join key]** and the **[!UICONTROL Enrichment dataset join key]**, which lets you link the enrichment dataset with the audience you're trying to create.
 
 ![The [!UICONTROL Enrichment criteria] area is highlighted.](../images/ui/audience-composition/enrichment-criteria.png)
