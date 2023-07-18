@@ -29,7 +29,53 @@ You can access the AI Assistant from the header navigation in the Experience Pla
 
 Select the **[!UICONTROL AI Assistant icon]** from the header to launch the AI Assistant panel.
 
-![The Experience Platform UI home page with the AI Assistant icon selected](./images/ai-assistant/ai-assistant.png).
+![The Experience Platform UI home page with the AI Assistant icon selected.](./images/ai-assistant/ai-assistant.png)
+
+From here, you can input your question in the text box and query the AI Assistant for information regarding data or audience.
+
+>[!NOTE]
+>
+>The following example workflow uses the ExperienceEvent schema creation process to illustrate how you can use the AI Assistant when using the Experience Platform UI.
+
+### STEPS
+
+Consider a use case in which you are creating a **Device Trade in Event Schema**. During the ExperienceEvent schema creation process, you come across the `eventType` field. At this point, you can either leave your workflow and refer to the the documentation on the [basics of a schema composition](../xdm/schema/composition.md), or you can use the AI Assistant to retrieve immediate answers for your questions. 
+
+To begin, select the AI Assistant icon from the top header and then input your question in the text box provided. In the example below, the AI Assistant is provided the question: "What is the eventType field in an Experience Event schema?"
+
+![The AI Assistant for Experience Platform with the following question prepared for querying: "What is the eventType field in an ExperienceEvent schema?](./images/ai-assistant/question.png)
+
+The AI Assistant then queries its knowledge base and computes an answer. After a few moments, the AI Assistant returns the following:
+
+![The AI Assistant for Experience Platform with an answer to the previous query.](./images/ai-assistant/answer.png)
+
+You can further learn more about a particular topic by asking a follow up question. In the next example, the AI Assistant is asked how the eventType can be used in segmentation.
+
+![A follow up question and answer displayed on the AI Assistant for Experience Platform.](./images/ai-assistant/follow-up-question.png)
+
+With every answer, the AI Assistant provides you with the option to view the documentation that it cites for information and provide feedback.
+
+![The AI Assistant for Experience Platform displaying options you can choose from after a query.](./images/ai-assistant/options.png)
+
+>[!BEGINTABS]
+
+>[!TAB Show sources]
+
+![The links to the citations displayed in the AI Assistant.](./images/ai-assistant/citations.png)
+
+>[!TAB Thumbs up]
+
+![The positive feedback window.](./images/ai-assistant/positive-feedback.png)
+
+>[!TAB Thumbs down]
+
+![The negative feedback window.](./images/ai-assistant/negative-feedback.png)
+
+>[!TAB Flag]
+
+![The report results window.](./images/ai-assistant/report-results.png)
+
+>[!ENDTABS]
 
 ### Ideas to get started
 
