@@ -29,14 +29,14 @@ Currently, you can export datasets to the cloud storage destinations highlighted
 * [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) 
 * [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-## When to activate segments or export datasets {#when-to-activate-segments-or-activate-datasets}
+## When to activate audiences or export datasets {#when-to-activate-audiences-or-activate-datasets}
 
-Some file-based destinations in the Experience Platform catalog support both segment activation and dataset export. 
+Some file-based destinations in the Experience Platform catalog support both audience activation and dataset export. 
 
-* Consider activating segments when you want your data structured into profiles grouped by audience interests or qualifications. 
+* Consider activating audiences when you want your data structured into profiles grouped by audience interests or qualifications. 
 * Alternatively, consider dataset exports when you are looking to export raw datasets, which are not grouped or structured by audience interests or qualifications. You could use this data for reporting, data science workflows, to satisfy compliance requirements, and many other use cases.
 
-This document contains all the information necessary to export datasets. If you want to activate segments to cloud storage or email marketing destinations, read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md).
+This document contains all the information necessary to export datasets. If you want to activate audiences to cloud storage or email marketing destinations, read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## Prerequisites {#prerequisites}
 

@@ -1,6 +1,6 @@
 ---
 title: Snap Inc connection
-description: Learn how to connect to the Snapchat Ads Platform and export your audience segments from Experience Platform.
+description: Learn how to connect to the Snapchat Ads Platform and export your audiences from Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
 ---
 # Snap Inc connection
@@ -15,7 +15,7 @@ exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
 
 ## Use cases {#use-cases}
 
-This destination allows marketers to import user segments created in Experience Platform into Snapchat Ads and use them to target their ads. 
+This destination allows marketers to import user audiences created in Experience Platform into Snapchat Ads and use them to target their ads. 
 
 ## Prerequisites {#prerequisites}
 
@@ -27,7 +27,7 @@ To use this destination, you must have a Snapchat Ads account. Please refer to t
 
 * Snap Inc does not support multiple identities for a given audience segment. Please map only one identity when activating a segment.
 * Snap Inc does not support renaming segments. To rename a segment, you must deactivate, rename it, and then activate it.
-* It is not possible to define a retention period for an audience segment's members. All members have lifetime retention and will be in the segment until they are removed.
+* It is not possible to define a retention period for an audience segment's members. All members have lifetime retention and will be in the audienceuntil they are removed.
 
 ## Supported identities {#supported-identities}
 
@@ -59,8 +59,8 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the *YOURDESTINATION* destination.|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the *YOURDESTINATION* destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
@@ -92,11 +92,11 @@ To configure details for the destination, fill in the required fields and select
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Account ID]**: The Ad Account ID that is associated with the Ad Account that you will like to import your segments to. For more information about how to find this, please refer to [this documentation on the Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+*  **[!UICONTROL Account ID]**: The Ad Account ID that is associated with the Ad Account that you will like to import your audiences to. For more information about how to find this, please refer to [this documentation on the Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
 > 
->Entering an incorrect or invalid Snapchat Ad Account ID will cause segment activation to fail. Please double check that you have entered the proper Ad Account ID.
+>Entering an incorrect or invalid Snapchat Ad Account ID will cause audience activation to fail. Please double check that you have entered the proper Ad Account ID.
 
 ### Enable alerts {#enable-alerts}
 
@@ -104,24 +104,24 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ## Validate data export {#exported-data}
 
-After activating segments to the *Snap Inc* destination, you will be able to see the segments in the Snap Ads Manager's [**Audiences** section](https://businesshelp.snapchat.com/s/article/audience-sharing). To navigate to this section, follow these steps:
+After activating audiences to the *Snap Inc* destination, you will be able to see the audiences in the Snap Ads Manager's [**Audiences** section](https://businesshelp.snapchat.com/s/article/audience-sharing). To navigate to this section, follow these steps:
 
 1. Log into the [Snap Ads Manager](https://ads.snapchat.com/)
-2. Select **Audiences** from the pulldown menu in the upper left corner of the screen. You will see the segments that you activated in Adobe Experience Platform in the Audience Library:
+2. Select **Audiences** from the pulldown menu in the upper left corner of the screen. You will see the audiences that you activated in Adobe Experience Platform in the Audience Library:
 
 ![Audiences](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Please note that when an Adobe segment is first activated to Snap Inc, you will initially see it as an empty audience. This is because Adobe Experience Platform does not export member data to Snap Inc until it evaluates the segment. For more information about how segments are evaluated in Experience Platform, please refer to the [Segmentation Service overview](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
+Please note that when an Adobe audience is first activated to Snap Inc, you will initially see it as an empty audience. This is because Adobe Experience Platform does not export member data to Snap Inc until it evaluates the audience. For more information about how audiences are evaluated in Experience Platform, please refer to the [Segmentation Service overview](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
 
 ## Data usage and governance {#data-usage-governance}
 
