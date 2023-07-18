@@ -43,9 +43,9 @@ Follow the steps below to activate data to your destinations from the **[!UICONT
     * [Activate audience data to streaming profile export destinations](activate-streaming-profile-destinations.md)
     * [Activate audience data to batch profile export destinations](activate-batch-profile-destinations.md)
 
-### Activate audiences from the audiencedetails page {#activate-segment-details}
+### Activate audiences from the audience details page {#activate-audience-details}
 
-You can activate audiences to destinations from the audiencedetails page. See [Segment details](../../segmentation/ui/overview.md#segment-details) for more information.
+You can activate audiences to destinations from the audience details page. See [Audience details](../../segmentation/ui/overview.md#audience-details) for more information.
 
 Depending on the selected destination, follow the steps described in the articles below to finish the activation workflow:
     
