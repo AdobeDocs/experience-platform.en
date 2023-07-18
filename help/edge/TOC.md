@@ -66,6 +66,7 @@ feature: Web SDK
     * [Overview](consent/iab-tcf/overview.md)
     * [Integrate with tags](consent/iab-tcf/with-launch.md)
     * [Integrate without tags](consent/iab-tcf/without-launch.md)
+* [Web SDK tag extension](web-sdk-tag-extension-overview.md)
 * [Release notes](release-notes.md)
 * [Frequently Asked Questions](web-sdk-faq.md)
 * [Resources](resources.md)
