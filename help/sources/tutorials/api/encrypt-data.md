@@ -107,9 +107,9 @@ A successful response returns your Base64-encoded public key, public key ID, and
 
 | Property | Description |
 | --- | --- |
-| `publicKey` | The public key is the key that you will use to encrypt your data file in your cloud storage. This key corresponds with the private key that was also created during this step. However, the private key immediately goes to Experience Platform. |
-| `publicKeyId` |
-| `expiryTime` |
+| `publicKey` | The public key is used to encrypt the data in your cloud storage. This key corresponds with the private key that was also created during this step. However, the private key immediately goes to Experience Platform. |
+| `publicKeyId` | The public key ID is used to create a dataflow and ingest your encrypted cloud storage data to Experience Platform. |
+| `expiryTime` | The expiry time defines the expiration date of your encryption key pair. This date is automatically set to 180 days after the date of key generation and is displayed in unix timestamp format. |
 
 ### Share your public key
 
@@ -137,6 +137,11 @@ curl -X POST \
     }'
 ```
 
+| Parameter | Description |
+| --- | --- |
+| `encryptionAlgorithm` | The type of encryption algorithm that you are using. The supported encryption types are `PGP` and `GPG`. |
+| `publicKey` | The Base64-encoded public key that was generated in the previous step. |
+
 **Response**
 
 ```json
@@ -144,6 +149,10 @@ curl -X POST \
   "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2" 
 } 
 ```
+
+| Property | Description |
+| --- | --- |
+| `publicKeyId` | This public key ID represents your sign verification key ID and can be provided along with initial public key ID that was generated, in order to create a dataflow for encrypted and signed data. |
 
 ## Connect your cloud storage source to Experience Platform using the [!DNL Flow Service] API
 
@@ -293,8 +302,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `params.signVerificationKeyId` | The sign verification key ID is the same ID as the public key ID that was retrieved  |
-
+| `params.signVerificationKeyId` | The sign verification key ID is the same ID as the public key ID that was retrieved after sharing your Base64-encoded public key with Experience Platform. |
 
 >[!ENDTABS]
 
