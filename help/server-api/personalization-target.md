@@ -45,9 +45,9 @@ Given the following XDM sample:
 
 When creating audiences in Target, the following values will be available as custom parameters:
 
-* `xdm.marketing.campaignGroup`
-* `xdm.marketing.campaignName`
-* `xdm.marketing.trackingCode`
+* `marketing.campaignGroup`
+* `marketing.campaignName`
+* `marketing.trackingCode`
 
 ## Target profile updates {#profile-update}
 
