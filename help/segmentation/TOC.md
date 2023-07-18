@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentation Service Guide
-user-guide-description: Build segments and generate audiences from your Real-Time Customer Profile data.
+user-guide-description: Build audiences from your Real-Time Customer Profile data using Adobe Experience Platform generated segment definitions or external sources.
 feature: Segments
 ---
 
@@ -24,7 +24,7 @@ feature: Segments
     - [Streaming segmentation](api/streaming-segmentation.md)
 - Segmentation UI {#ui}
     - [Overview](ui/overview.md)
-    - [Audience Builder](ui/audience-builder.md)
+    - [Audience Composition](ui/audience-composition.md)
     - [Segment dashboard](ui/segment-dashboard.md)
     - [Segment Builder](ui/segment-builder.md)
     - [Edge segmentation](ui/edge-segmentation.md)
@@ -59,5 +59,6 @@ feature: Segments
   - [Importing and using external audiences](tutorials/using-external-audiences.md)
   - [Create a dataset to export data](tutorials/create-dataset-export-segment.md)
   - [Enforce data usage compliance for segments](tutorials/governance.md)
+- [Frequently asked questions](./faq.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

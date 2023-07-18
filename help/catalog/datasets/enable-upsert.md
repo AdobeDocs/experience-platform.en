@@ -11,7 +11,7 @@ This tutorial covers the process of enabling a dataset with "upsert" capabilitie
 
 >[!NOTE]
 >
->The upsert workflow only works for batch ingestion. Streaming ingestion is **not** supported.
+>The workflow described in this tutorial only works for batch ingestion. For streaming ingestion upserts, please refer to the guide on [sending partial row updates to Real-Time Customer Profile using Data Prep](../../data-prep/upserts.md).
 
 ## Getting started
 
