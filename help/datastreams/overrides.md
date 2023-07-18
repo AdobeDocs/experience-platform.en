@@ -31,7 +31,7 @@ To configure datastream overrides for an Adobe Target datastream, you must first
 
 Once you've created the datastream, edit the [Adobe Target](configure.md#target) service that you have added and use the **[!UICONTROL Property Token Overrides]** section to add the desired datastream overrides, as shown in the image below. Add one property token per line.
 
-![Datastreams UI screenshot showing the Adobe Target service settings, with the property token overrides highlighted.](../assets/datastreams/overrides/override-target.png)
+![Datastreams UI screenshot showing the Adobe Target service settings, with the property token overrides highlighted.](assets/overrides/override-target.png)
 
 After you've added the desired overrides, save your datastream settings.
 
@@ -45,7 +45,7 @@ Once you've created the datastream, edit the [Adobe Analytics](configure.md#targ
 
 Select **[!UICONTROL Show Batch Mode]** to enable batch editing of the report suite overrides. You can copy and paste a list of report suite overrides, entering one report suite per line.
 
-![Datastreams UI screenshot showing the Adobe Analytics service settings, with the report suite overrides highlighted.](../assets/datastreams/overrides/override-analytics.png)
+![Datastreams UI screenshot showing the Adobe Analytics service settings, with the report suite overrides highlighted.](assets/overrides/override-analytics.png)
 
 After you've added the desired overrides, save your datastream settings.
 
@@ -57,7 +57,7 @@ To configure datastream overrides for Experience Platform event datasets, you mu
 
 Once you've created the datastream, edit the [Adobe Experience Platform](configure.md#aep) service that you have added and select the **[!UICONTROL Add Event Dataset]** option to add one or more override event datasets, as shown in the image below.
 
-![Datastreams UI screenshot showing the Adobe Experience Platform service settings, with the event dataset overrides highlighted.](../assets/datastreams/overrides/override-aep.png)
+![Datastreams UI screenshot showing the Adobe Experience Platform service settings, with the event dataset overrides highlighted.](assets/overrides/override-aep.png)
 
 After you've added the desired overrides, save your datastream settings.
 
@@ -75,7 +75,7 @@ Then, use the **[!UICONTROL Container ID Overrides]** section to add the contain
 >
 >Container IDs must be numeric values, like `1234567`, and not strings, such as `"1234567"`. If you send a string value through the Web SDK as a container ID override, you will receive an error.
 
-![Datastreams UI screenshot showing the datastream settings, with the third party ID sync container overrides highlighted.](../assets/datastreams/overrides/override-container.png)
+![Datastreams UI screenshot showing the datastream settings, with the third party ID sync container overrides highlighted.](assets/overrides/override-container.png)
 
 After you've added the desired overrides, save your datastream settings.
 

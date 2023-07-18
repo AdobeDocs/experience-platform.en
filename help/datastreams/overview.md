@@ -4,13 +4,14 @@ description: Connect your client-side Experience Platform SDK integration with A
 keywords: configuration;datastreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;Data Prep for Data Collection;Data Prep;Mapper;XDM Mapper;Mapper on Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 ---
+
 # Datastreams overview
 
 A datastream represents the server-side configuration when implementing the Adobe Experience Platform Web and Mobile SDKs. While the [configure command](../fundamentals/configuring-the-sdk.md) in the SDK controls things that must be handled on the client (such as the `edgeDomain`), datastreams handle all other configurations for the SDK. When a request is sent to the Adobe Experience Platform Edge Network, the `edgeConfigId` is used to reference the datastream. This allows you to update the server-side configuration without having to make code changes on your website. 
 
 You can create and manage datastreams by selecting **[!UICONTROL Datastreams]** in the left navigation within the Adobe Experience Platform UI or Data Collection UI.
 
-![Datastreams tab in the UI](../assets/datastreams/overview/datastreams-tab.png)
+![Datastreams tab in the UI](assets/overview/datastreams-tab.png)
 
 For more information on how to configure a datastream in the UI, see the [configuration guide](./configure.md).
 
