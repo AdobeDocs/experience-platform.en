@@ -6,6 +6,12 @@ exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 ---
 # Audience Composition UI guide
 
+>[!BEGINSHADEBOX]
+
+If you are an Adobe Journey Optimizer customer, [click here](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) for more information on how to work with audience composition in the context of Journey Optimizer.
+
+>[!ENDSHADEBOX]
+
 Audience Composition provides a workspace to build and edit audiences, using blocks that are used to represent different actions.
 
 ![The Audience Composition UI.](../images/ui/audience-composition/audience-composition.png)
