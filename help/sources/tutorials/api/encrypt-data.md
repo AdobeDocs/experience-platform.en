@@ -111,9 +111,17 @@ A successful response returns your Base64-encoded public key, public key ID, and
 | `publicKeyId` | The public key ID is used to create a dataflow and ingest your encrypted cloud storage data to Experience Platform. |
 | `expiryTime` | The expiry time defines the expiration date of your encryption key pair. This date is automatically set to 180 days after the date of key generation and is displayed in unix timestamp format. |
 
-### Share your public key
++++(Optional) Create encryption key pair for signed data
 
-INTRO ON USE CASE - WHY?
+### Create customer managed key pair
+
+You can create another encryption key pair to sign and ingest your signed and encrypted data.
+
+During this stage, you can use the private key to sign your encrypted and then send your public key to Experience Platform to verify the signature.
+
+### Share your public key to Experience Platform
+
+To share your public key, make a POST request to the `/custom-key` endpoint while providing your encryption algorithm and your Base64-encoded public key.
 
 **API format**
 
@@ -140,7 +148,7 @@ curl -X POST \
 | Parameter | Description |
 | --- | --- |
 | `encryptionAlgorithm` | The type of encryption algorithm that you are using. The supported encryption types are `PGP` and `GPG`. |
-| `publicKey` | The Base64-encoded public key that was generated in the previous step. |
+| `publicKey` | The public key that corresponds to your customer managed keys used for signing your encrypted. This key must be Base64-encoded.|
 
 **Response**
 
@@ -152,7 +160,9 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `publicKeyId` | This public key ID represents your sign verification key ID and can be provided along with initial public key ID that was generated, in order to create a dataflow for encrypted and signed data. |
+| `publicKeyId` | This public key ID is returned in response to sharing your customer managed key with Experience Platform. You can provide this public key ID as the sign verification key ID when creating a dataflow for signed and encrypted data. |
+
++++
 
 ## Connect your cloud storage source to Experience Platform using the [!DNL Flow Service] API
 
