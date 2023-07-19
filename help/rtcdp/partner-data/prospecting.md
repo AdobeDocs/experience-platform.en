@@ -13,7 +13,7 @@ badgeBeta: label="Beta" type="informative" before-title="true"
 
 Use third party data support in Real-Time CDP to expand your profile base with prospect profiles from data partners and engage with them to acquire or reach new customers.
 
-![Customer prospecting use case high-level visual overview.](/help/rtcdp/assets/partner-data/prospecting-use-case-overview.png)
+![Customer prospecting use case high-level visual overview.](/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png)
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
@@ -29,7 +29,7 @@ As you consider reaching out to and acquiring new customers by using partner dat
 
 Before you expand Real-Time CDP to engage and acquire new customers, make sure to use Real-Time CDP to build a robust foundation for your first-part data. The workflows to achieve this use case are similar to workflows to engage with your known customers.
 
-![Customer prospecting use case high-level visual overview.](/help/rtcdp/assets/partner-data/prospecting-use-case-steps.png)
+![Customer prospecting use case high-level visual overview.](/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-steps.png)
 
 1. As a **customer**, you license prospect profiles from one or more **data partners** to help drive top of the funnel customer acquisition.
 2. As a **customer**, you extend your profile data and governance model to ingest the **partner**-provided list of prospect profiles.
@@ -74,7 +74,7 @@ The identity, data management, and governance components that you will be using 
 
 Begin by creating a new identity type for the profiles that you will be receiving from the partner. To do this, in the Identity section, you must create a new identity namespace of the type **[!UICONTROL Partner ID]**. 
 
-![Create a new Partner ID identity namespace.](/help/rtcdp/assets/partner-data/create-partner-identity-namespace.png)
+![Create a new Partner ID identity namespace.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
 * Read more about Partner ID namespaces in the [identity types section](/help/identity-service/namespaces.md).
 * Read about [how to define identity fields](/help/xdm/ui/fields/identity.md) in the Experience Platform user interface.
@@ -83,13 +83,13 @@ Begin by creating a new identity type for the profiles that you will be receivin
 
 Next, in **[!UICONTROL Data Management]** > **[!UICONTROL Schemas]**, create a new schema and assign it the **[!UICONTROL XDM Individual Prospect Profile]** class. 
 
-![Search for XDM Individual Prospect Profile class in the XDM schema builder.](/help/rtcdp/assets/partner-data/xdm-individual-prospect-class.png)
+![Search for XDM Individual Prospect Profile class in the XDM schema builder.](/help/rtcdp/assets/partner-data/prospecting/xdm-individual-prospect-class.png)
 
-Read how to [create and edit schemas in the UI](/help/xdm/ui/resources/schemas.md) and get complete information about the XDM Individual Prospect Profile class (add link here to material by Jordan).
+Read how to [create and edit schemas in the UI](/help/xdm/ui/resources/schemas.md) and get complete information about the XDM Individual Prospect Profile class (link upcoming).
 
-The **[!UICONTROL XDM Individual Prospect Profile]** class comes pre-configured with the fields shown below. To enrich your schema with partner-provided attributes for the prospect profiles, you can either create a new field group with the attributes that you expect and add it to the schema, or you can use one of the pre-configured field groups provided by Adobe. (link to docs by Jordan about field groups).
+The **[!UICONTROL XDM Individual Prospect Profile]** class comes pre-configured with the fields shown below. To enrich your schema with partner-provided attributes for the prospect profiles, you can either create a new field group with the attributes that you expect and add it to the schema, or you can use one of the pre-configured field groups provided by Adobe.
 
-![Preconfigured fields for the XDM Individual Prospect Profile class.](/help/rtcdp/assets/partner-data/preconfigured-fields-individual-prospect-class.png)
+![Preconfigured fields for the XDM Individual Prospect Profile class.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
 Next, you must select the partnerID identity that you created earlier as the primary identity for the schema. Profile records must carry a primary identifier. This step is required to make sure that prospect data can be loaded into the profile store and made available for segmentation and activation.
 
@@ -97,11 +97,11 @@ Next, you must select the partnerID identity that you created earlier as the pri
 >
 >Prospect profiles are automatically restricted to only use ID namespaces of the Partner ID type. This is by design and ensures clean separation between your first-party and prospect profiles.
 
-![Select previously configured Partner ID as primary identity in the schema.](/help/rtcdp/assets/partner-data/select-partner-id-as-primary-identity.gif)
+![Select previously configured Partner ID as primary identity in the schema.](/help/rtcdp/assets/partner-data/prospecting/select-partner-id-as-primary-identity.gif)
 
 Note that the schema is not yet enabled for profile. Toggle the profile button to enable this schema for inclusion in the profile service. For more information about enabling the schema for use in Real-Time Customer Profile, read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md#profile) 
 
-![Enable schema for profile.](/help/rtcdp/assets/partner-data/enable-schema-for-profile.png)
+![Enable schema for profile.](/help/rtcdp/assets/partner-data/prospecting/enable-schema-for-profile.png)
 
 #### Add the third-party data governance label to all fields in the schema
 
@@ -139,15 +139,15 @@ To load some sample data and populate prospect profiles, create a dataset and up
 4. Give your dataset a name and optionally a description.
 5. Select **[!UICONTROL Finish]**.
 
-![A recording of the steps to create a dataset for prospect profiles.](/help/rtcdp/assets/partner-data/create-dataset-for-prospect-profiles.gif)
+![A recording of the steps to create a dataset for prospect profiles.](/help/rtcdp/assets/partner-data/prospecting/create-dataset-for-prospect-profiles.gif)
 
 Note that similar to the step to create a schema, you need to enable the dataset to be included in the Real-Time Customer Profile. For more information about enabling the dataset for use in Real-Time Customer Profile, read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md#profile) 
 
-![Enable dataset for profile.](/help/rtcdp/assets/partner-data/enable-dataset-for-profile.png)
+![Enable dataset for profile.](/help/rtcdp/assets/partner-data/prospecting/enable-dataset-for-profile.png)
 
 To load a file that you received from the partner into the dataset, select the dataset, scroll down in the right rail, and select **[!UICONTROL Add data]**. You can drag drop your file or select **[!UICONTROL Choose files]** to navigate to the file location and select it. 
 
-![Add file to dataset.](/help/rtcdp/assets/partner-data/add-file-to-dataset.png)
+![Add file to dataset.](/help/rtcdp/assets/partner-data/prospecting/add-file-to-dataset.png)
 
 After loading the list of profiles from the data partner into Real-Time CDP, proceed to the [Inspect the loaded prospect profiles section](#inspect-profiles) to check that the prospect profiles are populating in the UI.
 
@@ -172,11 +172,11 @@ Note that it might take up to two hours for the prospect profiles you just loade
 >
 >Note the presence of the **[!UICONTROL Identity Namespace]** column. If you're working with multiple data vendors, use this column to infer the origin of prospect profiles. 
 
-![View of the prospect profiles loaded into Real-Time CDP.](/help/rtcdp/assets/partner-data/prospect-profiles-view.png)
+![View of the prospect profiles loaded into Real-Time CDP.](/help/rtcdp/assets/partner-data/prospecting/prospect-profiles-view.png)
 
 You can also select any prospect profile for further inspection, as shown below.
 
-![View of how to inspect prospect profiles.](/help/rtcdp/assets/partner-data/inspect-prospect-profile.gif)
+![View of how to inspect prospect profiles.](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
 (**Coming soon**) Read more about prospect profiles.
 
@@ -186,7 +186,7 @@ Use the segmentation functionality in Real-Time CDP to create audiences from you
 
 To get started and build audiences composed of prospect profiles, navigate to **[!UICONTROL Prospects]** > **[!UICONTROL Audiences]**.
 
-![View of prospect audiences.](/help/rtcdp/assets/partner-data/prospect-audiences.png)
+![View of prospect audiences.](/help/rtcdp/assets/partner-data/prospecting/prospect-audiences.png)
 
 Note that the audience building experience for prospect profiles differs from the experience to build audiences from your known, first party customers. This view is limited to: 
 
