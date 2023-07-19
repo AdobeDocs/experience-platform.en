@@ -8,7 +8,7 @@ exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 
 >[!BEGINSHADEBOX]
 
-If you are an Adobe Journey Optimizer customer, [click here](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) for more information on how to work with audience composition in the context of Journey Optimizer.
+If you are an Adobe Journey Optimizer customer, please read the [get started with audience composition guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) in the Adobe Journey Optimizer documentation for more information on working with audience composition in that context.
 
 >[!ENDSHADEBOX]
 
