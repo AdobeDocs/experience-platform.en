@@ -40,6 +40,25 @@ When you hover over a specific point in the graph, it'll display the similarity 
 
 The look-alike audiences section displays a list of all the look-alike audiences that have been previously created for the selected base audience.
 
+IMAGE
+
+### Influential factors
+
+The influential factors section displays both the positive and negative factors that influence the look-alike model for the selected base audience. These influential factors are Profile data fields, values, and value ranges that are the most important in explaining similarities in the base audience, which lets you better personalize your marketing content for this audience and any look-alike audience you create from it.
+
+IMAGE
+
+>[!NOTE]
+>
+>The influential factors are sorted in order of importance.
+
+| Field | Description | 
+| ----- | ----------- |
+| Type | The type of data that influential factor is derived from. This can be a profile attribute, an experience event, or an audience membership. |
+| Key | The name of the data field. |
+| Value | The value or value range of the data field that indicates the similarity to the members of the base audience. |
+| Importance | The relative level of importance of the influential factor. This can be high, medium, or low. |
+
 ## Create a look-alike audience
 
 To create a look-alike audience, you'll need to select the audience you want to base the look-alike audience off of. To access the audience, select **[!UICONTROL Audiences]** in the left navigation bar, followed by **[!UICONTROL Browse]**, and the base audience.
@@ -70,6 +89,21 @@ IMAGE
 
 The newly created look-alike audience can be accessed in the **[!UICONTROL Look-alike audiences]** section of the audience details page, and is also available in the Audience Portal and other downstream usages.
 
-## View look-alike audiences
+## View look-alike audience details
+
+To view details of a look-alike audience, select the look-alike audience in the **[!UICONTROL Look-alike audiences]** section of the base audience.
+
+IMAGE
+
+The audience details page appears. For more information on this page, please read the [audience details section of the Segmentation Service UI guide](./overview.md#audience-details).
+
+IMAGE
+
+## Exclude data fields from look-alike modeling
+
+The modeling process for look-alike audiences will exclude **any** field, dataset, or segment with the C9 contract label. 
+
+As a result, if you want to exclude any data that is sensitive or otherwise inappropriate for look-alike modeling, apply the C9 contract label to that data. For more information on managing data usage labels, please read the [data usage labels UI guide](../../data-governance/labels/user-guide.md).
 
 ## Next steps
+
