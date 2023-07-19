@@ -123,7 +123,7 @@ To learn more about each of the available standard widgets, select the name of a
 
 ### [!UICONTROL Customer AI distribution of scores] {#customer-ai-distribution-of-scores}
 
-The [!UICONTROL Customer AI distribution of scores] widget categorizes the total number of profiles by their propensity to buy. The distribution of the profile count is determined by the AI model and the selected merge policy, then visualized in five percent increments that indicate their propensity to buy. Profile propensity is color coded to high, medium, and low as green, yellow, and red respectively. The count of profiles is provided along the Y-axis and the propensity to buy scores are provided along the X axis. 
+The [!UICONTROL Customer AI distribution of scores] widget categorizes the total number of profiles by their propensity to buy. The distribution of the profile count is determined by the AI model and the selected merge policy, then visualized in five percent increments that indicate their propensity to buy. Profile propensity is color coded to high, medium, and low as green, yellow, and red respectively. The count of profiles is provided along the Y-axis, and the propensity to buy scores are provided along the X-axis. 
 
 The AI model that determines the propensity scores is chosen from the dropdown selector under the widget title. The dropdown contains a list of all configured Customer AI models. Select the appropriate AI model for your analysis from the list of available models. If no Customer AI model is available, a message within the widget directs you to configure at least one Customer AI model and provides a hyperlink to the Customer AI model configuration page. See the documentation for instructions on [how to configure a Customer AI instance](../../intelligent-services/customer-ai/user-guide/configure.md).
 
@@ -131,9 +131,11 @@ The AI model that determines the propensity scores is chosen from the dropdown s
 >
 >Select the dropdown immediately below the overview tab to change the merge policy that determines which profiles are included in the analysis. See the section on [merge policies](#merge-policies) for a brief description, or the [merge policy overview](../../profile/merge-policies/overview.md) for more details. 
 
-![The Experience Platform Profiles dashboard with the Customer AI distribution of scores widget highlighted.](../images/profiles/customer-ai-distribution-of-scores.png)
+To navigate to the detailed insights page for the selected Customer AI model, select **[!UICONTROL View model details]**.
 
-Select **[!UICONTROL View model details]** to navigate to the detailed insights page for the selected Customer AI model.
+![The Experience Platform Profiles dashboard with the Customer AI distribution of scores widget and View model details highlighted.](../images/profiles/customer-ai-distribution-of-scores.png)
+
+The detailed model insights page appears.
 
 ![The insights page for the Customer AI.](../images/profiles/customer-ai-insights-page.png)
 
@@ -153,7 +155,7 @@ The drop down menu underneath the widget title provides a list of all configured
 
 ![The Experience Platform Profiles dashboard with the Customer AI scoring summary widget highlighted.](../images/profiles/customer-ai-scoring-summary.png)
 
-Select **[!UICONTROL View model details]** to navigate to the detailed insights page for the selected Customer AI model. More information on Customer AI can be found on the [discover insights UI guide](../../intelligent-services/customer-ai/user-guide/discover-insights.md)
+To navigate to the detailed insights page for the selected Customer AI model, select **[!UICONTROL View model details]**. More information on Customer AI can be found on the [discover insights UI guide](../../intelligent-services/customer-ai/user-guide/discover-insights.md)
 
 ### [!UICONTROL Profile count] {#profile-count}
 

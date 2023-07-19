@@ -96,11 +96,13 @@ The AI model that determines the propensity scores is chosen from the dropdown s
 >
 >Select the dropdown immediately below the overview tab to change the merge policy that determines which profiles are included in the analysis. See the section on [merge policies](#merge-policies) for a brief description, or the [merge policy overview](../../profile/merge-policies/overview.md) for more details. 
 
+To navigate to the detailed insights page for the selected Customer AI model, select **[!UICONTROL View model details]**.
+
 ![The Experience Platform Audiences dashboard with the Customer AI distribution of scores widget highlighted.](../images/segments/customer-ai-distribution-of-scores.png)
 
-Select **[!UICONTROL View model details]** to navigate to the detailed insights page for the selected Customer AI model.
+The detailed model insights page appears.
 
-![The insights page for the Customer AI.](../images/profiles/customer-ai-insights-page.png)
+![The insights page for the Customer AI with View model details highlighted.](../images/profiles/customer-ai-insights-page.png)
 
 More information on Customer AI can be found on the [discover insights UI guide](../../intelligent-services/customer-ai/user-guide/discover-insights.md)
 
