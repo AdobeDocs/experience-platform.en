@@ -68,8 +68,9 @@ The composition component placing follows a rigid structure as follows:
 
 1. You **always** start with the [!UICONTROL Audience] block to select your starting activity. You can have a maximum of **one** [!UICONTROL Audience] block.
 2. You can optionally add an [!UICONTROL Exclude] block that follows the [!UICONTROL Audience] block.
-3. You can optionally add a [!UICONTROL Rank] or [!UICONTROL Split] block. You can **only** have one of these blocks per composition.
-4. You **always** end with a [!UICONTROL Save] block to save your audience.
+3. You can optionally add an [!UICONTROL Enrich] block that follows the [!UICONTROL Exclude] block.
+4. You can optionally add a [!UICONTROL Rank] or [!UICONTROL Split] block. You can **only** have one of these blocks per composition.
+5. You **always** end with a [!UICONTROL Save] block to save your audience.
 
 For more details about using Audience Composition, please read the [Audience Composition UI guide](./ui/audience-composition.md).
 
@@ -85,7 +86,7 @@ For more information on the Split block, please read the [Audience Composition U
 
 ## Can I use all segmentation types in the Audience Composition workflow?
 
-Yes, all segmentation types (batch segmentation, streaming segmentation, and edge segmentation) are supported in the Audience Composition workflow. However, since compositions are currently only run once per day, even if streaming- or edge-evaluated audiences are included, the result will be based on audience membership at the time the composition was executed.
+Yes, all segmentation types ([batch segmentation, streaming segmentation, and edge segmentation](./home.md#evaluate-segments)) are supported in the Audience Composition workflow. However, since compositions are currently only run once per day, even if streaming- or edge-evaluated audiences are included, the result will be based on audience membership at the time the composition was executed.
 
 ## How can I confirm a profile's membership in an audience?
 
