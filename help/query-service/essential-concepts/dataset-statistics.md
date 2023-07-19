@@ -43,7 +43,7 @@ This second example, is a more real-world example as it uses an alias name. See 
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS as <alias_name>;
 ``` -->
 
-The console output does not display the statistics in response to the analyze table compute statistics command. Instead, the console will display a single row column of `Statistics ID` with a universally unique identifier to reference the results. You can also choose to **query directly on the `Statistics ID`**. On successful completion of a `COMPUTE STATISTICS` query, the results are displayed as follows:
+The console output does not display the statistics in response to the analyze table compute statistics command. Instead, the console will display a single row column of `Statistics ID` with a universally unique identifier to reference the results. You can also **query the computed statistics directly** using the `Statistics ID`. On successful completion of a `COMPUTE STATISTICS` query, the results are displayed as follows:
 
 ```console
 | Statistics ID    | 
