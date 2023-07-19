@@ -59,25 +59,35 @@ With every answer, the AI Assistant provides you with the option to view the doc
 
 >[!BEGINTABS]
 
->[!TAB Show sources]
+>[!TAB Show source]
+
+Select **[!UICONTROL Show source]** for a list of links to the documentation that the AI Assistant references to compute its response.
 
 ![The links to the citations displayed in the AI Assistant.](./images/ai-assistant/citations.png)
 
 >[!TAB Thumbs up]
 
+Select the thumbs up icon to provide feedback on what went well with your experience with the AI Assistant.
+
 ![The positive feedback window.](./images/ai-assistant/positive-feedback.png)
 
 >[!TAB Thumbs down]
 
+Select the thumbs down icon to provide feedback on what could be improved upon based on your experience with the AI Assistant.
+
 ![The negative feedback window.](./images/ai-assistant/negative-feedback.png)
 
 >[!TAB Flag]
+
+Select the flag icon to provide further reports on your experience using the AI Assistant.
 
 ![The report results window.](./images/ai-assistant/report-results.png)
 
 >[!ENDTABS]
 
 ### Ideas to get started
+
+The AI Assistant for Experience Platform also provides you with prompts that you can use to get started with Experience Platform.
 
 >[!BEGINTABS]
 
