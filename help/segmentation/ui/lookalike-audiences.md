@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
 title: Look-alike Audiences
-description: Learn how to target new high-value audiences in Real-Time Customer Data Platform using look-alike audiences.
+description: Learn how to target new high-value audiences in Adobe Experience Platform using look-alike audiences.
 ---
 
 # Look-alike audiences guide
 
-In Real-Time Customer Data Platform, look-alike audiences provide intelligent insights on each of your audiences, leveraging machine-learning-based insights to identify and target high-value customers with your marketing campaigns. 
+In Adobe Experience Platform, look-alike audiences provide intelligent insights on each of your audiences, leveraging machine-learning-based insights to identify and target high-value customers with your marketing campaigns. 
 
 With look-alike audiences, you can create expanded audiences that target customers similar to your high-performing audiences or target customers similar to previously converted audiences.
 
@@ -107,3 +107,4 @@ As a result, if you want to exclude any data that is sensitive or otherwise inap
 
 ## Next steps
 
+After reading this guide, you have learned how to view look-alike insights and create look-alike audiences based on these insights. For more information on audiences in the Adobe Experience Platform UI, please read the [Segmentation Service UI guide](./overview.md).
