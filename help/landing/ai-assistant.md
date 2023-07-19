@@ -3,7 +3,7 @@ title: AI Assistant for Adobe Experience Platform
 description: Learn how to use the AI Assistant for Adobe Experience Platform.
 badge: Alpha
 hide: true
-hidefromtoc:true
+hidefromtoc: true
 ---
 # AI Assistant for Adobe Experience Platform
 
