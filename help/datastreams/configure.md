@@ -28,7 +28,7 @@ To create a datastream, start by selecting **[!UICONTROL New Datastream]**.
 
 The datastream creation workflow appears, starting at the configuration step. From here, you must provide a name and optional description for the datastream.
 
-If you are configuring this datastream for use in Experience Platform and are using the Platform Web SDK, you must also select an [event-based Experience Data Model (XDM) schema](../../xdm/classes/experienceevent.md) to represent the data you plan on ingesting.
+If you are configuring this datastream for use in Experience Platform and are using the Platform Web SDK, you must also select an [event-based Experience Data Model (XDM) schema](../xdm/classes/experienceevent.md) to represent the data you plan on ingesting.
 
 ![Basic configuration for a datastream](assets/configure/configure.png)
 
@@ -44,7 +44,7 @@ Select **[!UICONTROL Advanced Options]** to reveal additional controls to config
 | [!UICONTROL Third Party ID Sync] | ID syncs can be grouped into containers to allow different ID syncs to be run at different times. When enabled, this setting lets you specify which container of ID syncs is run for this datastream.|
 | [!UICONTROL Third Party ID Sync Container ID] | The numeric ID of the container to be used for third party ID sync.|
 | [!UICONTROL Container ID Overrides] | In this section you can define additional third party ID sync container IDs which you can use to override the default one. |
-| [!UICONTROL Access Type] | Defines the authentication type that the Edge Network accepts for the datastream. <ul><li>**[!UICONTROL Mixed Authentication]**: When this option is selected, the Edge Network accepts both authenticated and unauthenticated requests. Select this option when you plan to use the Web SDK or [Mobile SDK](https://aep-sdks.gitbook.io/docs/), along with the [Server API](../../server-api/overview.md). </li><li>**[!UICONTROL Authenticated Only]**: When this option is selected, the Edge Network only accepts authenticated requests. Select this option when you plan to use only the Server API and want to prevent any unauthenticated requests from being processed by the Edge Network.</li></ul>|
+| [!UICONTROL Access Type] | Defines the authentication type that the Edge Network accepts for the datastream. <ul><li>**[!UICONTROL Mixed Authentication]**: When this option is selected, the Edge Network accepts both authenticated and unauthenticated requests. Select this option when you plan to use the Web SDK or [Mobile SDK](https://aep-sdks.gitbook.io/docs/), along with the [Server API](../server-api/overview.md). </li><li>**[!UICONTROL Authenticated Only]**: When this option is selected, the Edge Network only accepts authenticated requests. Select this option when you plan to use only the Server API and want to prevent any unauthenticated requests from being processed by the Edge Network.</li></ul>|
 
 From here, if you are configuring your datastream for Experience Platform, follow the tutorial on [Data Prep for Data Collection](./data-prep.md) to map your data to a Platform event schema before returning to this guide. Otherwise, select **[!UICONTROL Save]** and continue to the next section.
 
@@ -106,7 +106,7 @@ This service controls whether and how data is sent to Adobe Audience Manager. Al
 >
 >![Selected sandbox](assets/configure/platform-sandbox.png)
 >
->Sandboxes are virtual partitions in Adobe Experience Platform that allow you to isolate your data and implementations from others in your organization. Once a datastream is created, its sandbox cannot be changed. For more details about the role of sandboxes in Experience Platform, see the [sandboxes documentation](../../sandboxes/home.md). 
+>Sandboxes are virtual partitions in Adobe Experience Platform that allow you to isolate your data and implementations from others in your organization. Once a datastream is created, its sandbox cannot be changed. For more details about the role of sandboxes in Experience Platform, see the [sandboxes documentation](../sandboxes/home.md). 
 
 This service controls whether and how data is sent to Adobe Experience Platform.
 
@@ -114,11 +114,11 @@ This service controls whether and how data is sent to Adobe Experience Platform.
 
 | Setting | Description |
 |---| --- |
-| [!UICONTROL Event Dataset] | **(Required)** Select the Platform dataset that customer event data will be streamed to. This schema must use the [XDM ExperienceEvent class](../../xdm/classes/experienceevent.md). To add additional datasets, select **[!UICONTROL Add Event Dataset]**. |
-| [!UICONTROL Profile Dataset] | Select the Platform dataset that customer attribute data will be sent to. This schema must use the [XDM Individual Profile class](../../xdm/classes/individual-profile.md). |
+| [!UICONTROL Event Dataset] | **(Required)** Select the Platform dataset that customer event data will be streamed to. This schema must use the [XDM ExperienceEvent class](../xdm/classes/experienceevent.md). To add additional datasets, select **[!UICONTROL Add Event Dataset]**. |
+| [!UICONTROL Profile Dataset] | Select the Platform dataset that customer attribute data will be sent to. This schema must use the [XDM Individual Profile class](../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Select this checkbox to enable Offer Decisioning for a Platform Web SDK implementation. See the guide on [using Offer Decisioning with the Platform Web SDK](../personalization/offer-decisioning/offer-decisioning-overview.md) for more implementation details.<br><br>For more information on Offer Decisioning capabilities, refer to the [Adobe Journey Optimizer documentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html). |
-| [!UICONTROL Edge Segmentation] | Select this checkbox to enable [edge segmentation](../../segmentation/ui/edge-segmentation.md) for this datastream. When the SDK sends data through an edge-segmentation-enabled datastream, any updated segment memberships for the profile in question are sent back in the response.<br><br>This option can be used in combination with [!UICONTROL Personalization Destinations] for [next-page personalization use cases](../../destinations/ui/activate-edge-personalization-destinations.md). |
-| [!UICONTROL Personalization Destinations] | When enabling this after enabling the [!UICONTROL Edge Segmentation] checkbox, this option allows the datastream to connect to personalization destinations, such as [Custom Personalization](../../destinations/catalog/personalization/custom-personalization.md).<br><br>Refer to the destinations documentation for specific steps on [configuring personalization destinations](../../destinations/ui/activate-edge-personalization-destinations.md). |
+| [!UICONTROL Edge Segmentation] | Select this checkbox to enable [edge segmentation](../segmentation/ui/edge-segmentation.md) for this datastream. When the SDK sends data through an edge-segmentation-enabled datastream, any updated segment memberships for the profile in question are sent back in the response.<br><br>This option can be used in combination with [!UICONTROL Personalization Destinations] for [next-page personalization use cases](../destinations/ui/activate-edge-personalization-destinations.md). |
+| [!UICONTROL Personalization Destinations] | When enabling this after enabling the [!UICONTROL Edge Segmentation] checkbox, this option allows the datastream to connect to personalization destinations, such as [Custom Personalization](../destinations/catalog/personalization/custom-personalization.md).<br><br>Refer to the destinations documentation for specific steps on [configuring personalization destinations](../destinations/ui/activate-edge-personalization-destinations.md). |
 | [!UICONTROL Adobe Journey Optimizer] | Select this checkbox to enable [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) for this datastream. <br><br> Enabling this option allows the datastream to return personalized content from web and app-based inbound campaigns in [!DNL Adobe Journey Optimizer]. This option requires [!UICONTROL Edge Segmentation] to be active. If [!UICONTROL Edge Segmentation] is unchecked, this option is greyed out. |
 
 ### Adobe Target settings {#target}
@@ -136,7 +136,7 @@ This service controls whether and how data is sent to Adobe Target.
 
 ### [!UICONTROL Event Forwarding] settings
 
-This service controls whether and how data is sent to [event forwarding](../../tags/ui/event-forwarding/overview.md).
+This service controls whether and how data is sent to [event forwarding](../tags/ui/event-forwarding/overview.md).
 
 ![Event Forwarding section of the configuration UI](assets/configure/event-forwarding-config.png)
 
@@ -155,7 +155,7 @@ You can create a copy of an existing datastream and alter its details as needed.
 
 >[!NOTE]
 >
->Datastreams can only be copied within the same [sandbox](../../sandboxes/home.md). In other words, you cannot copy a datastream from one sandbox to another.
+>Datastreams can only be copied within the same [sandbox](../sandboxes/home.md). In other words, you cannot copy a datastream from one sandbox to another.
 
 From the main page in the [!UICONTROL Datastreams] workspace, select the ellipsis (**....**) for the datastream in question, then select **[!UICONTROL Copy]**.
 
@@ -173,4 +173,4 @@ The main page of the [!UICONTROL Datastreams] workspace reappears with the new d
 
 ## Next steps
 
-This guide covered how to manage datastreams in the Data Collection UI. For more information on how to install and configure the Web SDK after setting up a datastream, refer to the [Data Collection E2E guide](../../collection/e2e.md#install).
+This guide covered how to manage datastreams in the Data Collection UI. For more information on how to install and configure the Web SDK after setting up a datastream, refer to the [Data Collection E2E guide](../collection/e2e.md#install).

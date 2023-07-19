@@ -5,15 +5,15 @@ exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
 ---
 # Data Prep for Data Collection
 
-Data Prep is an Adobe Experience Platform service that allows you to map, transform, and validate data to and from [Experience Data Model (XDM)](../../xdm/home.md). When configuring a Platform-enabled [datastream](./overview.md), you can use Data Prep capabilities to map your source data to XDM when sending it to the Platform Edge Network.
+Data Prep is an Adobe Experience Platform service that allows you to map, transform, and validate data to and from [Experience Data Model (XDM)](../xdm/home.md). When configuring a Platform-enabled [datastream](./overview.md), you can use Data Prep capabilities to map your source data to XDM when sending it to the Platform Edge Network.
 
 >[!NOTE]
 >
 >For comprehensive guidance on all Data Prep capabilities, including transformation functions for calculated fields, refer to the following documentation:
 >
->* [Data Prep overview](../../data-prep/home.md)
->* [Data Prep mapping functions](../../data-prep/functions.md)
->* [Handling data formats with Data Prep](../../data-prep/data-handling.md)
+>* [Data Prep overview](../data-prep/home.md)
+>* [Data Prep mapping functions](../data-prep/functions.md)
+>* [Handling data formats with Data Prep](../data-prep/data-handling.md)
 
 This guide covers how to map your data within the UI. To follow along with the steps, start the process of creating a datastream up to (and including) the [basic configuration step](./overview.md#create).
 
@@ -176,7 +176,7 @@ In the dialog that appears, select the datastream whose mapping rules you want t
 
 >[!NOTE]
 >
->Datastreams can only be imported within the same [sandbox](../../sandboxes/home.md). In other words, you cannot import a datastream from one sandbox to another.
+>Datastreams can only be imported within the same [sandbox](../sandboxes/home.md). In other words, you cannot import a datastream from one sandbox to another.
 
 The next screen shows a preview of the saved mapping rules for the selected datastream. Make sure that the displayed mappings are what you expect, and then select **[!UICONTROL Import]** to confirm and add the mappings to the new datastream.
 

@@ -31,7 +31,7 @@ Datastreams provides three methods to assist you with securely handling your sen
 
 ### Enhanced encryption {#encryption}
 
-All data in transit though the Edge Network is conducted over secure, encrypted connections using [HTTPS TLS 1.2](https://datatracker.ietf.org/doc/html/rfc5246). If the datastream is bringing data into Experience Platform, the data is then encrypted at rest in the Experience Platform data lake. See the document on [data encryption in Experience Platform](../../landing/governance-privacy-security/encryption.md) for more information.
+All data in transit though the Edge Network is conducted over secure, encrypted connections using [HTTPS TLS 1.2](https://datatracker.ietf.org/doc/html/rfc5246). If the datastream is bringing data into Experience Platform, the data is then encrypted at rest in the Experience Platform data lake. See the document on [data encryption in Experience Platform](../landing/governance-privacy-security/encryption.md) for more information.
 
 ### Data governance {#governance}
 
@@ -41,11 +41,11 @@ The following video provides a brief overview of how data usage restrictions are
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409588/?quality=12&learn=on&speedcontrol=on)
 
-In Experience Platform, you can apply [sensitive data usage labels](../../data-governance/labels/reference.md#sensitive) to schemas and fields containing data that your organization deems sensitive. For example, the `RHD` label is used to denote Protected Health Information (PHI), and the `S1` label represents geolocation data.
+In Experience Platform, you can apply [sensitive data usage labels](../data-governance/labels/reference.md#sensitive) to schemas and fields containing data that your organization deems sensitive. For example, the `RHD` label is used to denote Protected Health Information (PHI), and the `S1` label represents geolocation data.
 
 >[!NOTE]
 >
->For details on how to apply data usage labels within the [!UICONTROL Schemas] tab in the Experience Platform UI or Data Collection UI, see the [schema labeling tutorial](../../xdm/tutorials/labels.md).
+>For details on how to apply data usage labels within the [!UICONTROL Schemas] tab in the Experience Platform UI or Data Collection UI, see the [schema labeling tutorial](../xdm/tutorials/labels.md).
 
 When creating a new datastream, if the selected schema contains sensitive data usage labels, the datastream can only be configured to send that data to HIPAA-ready destinations. Currently, the only HIPAA-ready destination supported by datastreams is Adobe Experience Platform. Other destination services including Adobe Target, Adobe Analytics, Adobe Audience Manager, event forwarding, and edge destinations are disabled for datastreams containing sensitive data usage labels.
 
@@ -57,7 +57,7 @@ In Experience Platform, datastream activities can be monitored in the form of au
 
 Whenever a user creates, updates, or deletes a datastream, an audit log is created to record the action. The same occurs whenever a user creates, updates, or deletes a mapping through [Data Prep for Data Collection](./data-prep.md). Regardless of whether it was a datastream or a mapping that was updated, the resulting audit log is categorized under the [!UICONTROL Datastreams] resource type.
 
-See the documentation on [audit logs](../../landing/governance-privacy-security/audit-logs/overview.md) for more information on how to interpret logs from datastreams and other supported services.
+See the documentation on [audit logs](../landing/governance-privacy-security/audit-logs/overview.md) for more information on how to interpret logs from datastreams and other supported services.
 
 ## Next steps
 
