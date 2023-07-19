@@ -86,9 +86,13 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 * [[!UICONTROL Scheduled activations]](#scheduled-activations)
 
-### [!UICONTROL Customer AI distribution of scores] {#customer-ai-distribution-of-scores}
+## Customer AI widgets
 
-The [!UICONTROL Customer AI distribution of scores] widget categorizes the total number of profiles by their propensity to buy. The distribution of the profile count is determined by the AI model and the selected merge policy, then visualized in five percent increments that indicate their propensity to buy. Profile propensity is color coded to high, medium, and low as green, yellow, and red respectively. The count of profiles is provided along the Y-axis, and the propensity to buy scores are provided along the X axis. 
+Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale. Customer AI does this by analyzing existing consumer Experience Event data to predict churn or conversion propensity scores. These high accuracy customer propensity models allow for more exact segmentation and targeting. The [distribution of scores](#customer-ai-distribution-of-scores) and [scoring summary](#customer-ai-scoring-summary) insights demonstrate the division in your audience. They highlight which profiles are the high/low/medium propensity and how they are distributed across your profile counts.
+
+### [!UICONTROL Customer AI distribution of scores] {#customer-ai-distribution-of-scores} 
+
+The [!UICONTROL Customer AI distribution of scores] widget categorizes the total number of profiles by their propensity scores. The distribution of the profile count is determined by the AI model and the selected merge policy, then visualized in five percent increments that indicate their propensity. Profile propensity is color coded to high, medium, and low as green, yellow, and red respectively. The count of profiles is provided along the Y-axis, and the propensity scores are provided along the X-axis. 
 
 The AI model that determines the propensity scores is chosen from the dropdown selector under the widget title. The dropdown contains a list of all configured Customer AI models. Select the appropriate AI model for your analysis from the list of available models. If no Customer AI model is available, a message within the widget directs you to configure at least one Customer AI model and provides a hyperlink to the Customer AI model configuration page. See the documentation for instructions on [how to configure a Customer AI instance](../../intelligent-services/customer-ai/user-guide/configure.md). 
 
@@ -98,21 +102,19 @@ The AI model that determines the propensity scores is chosen from the dropdown s
 
 To navigate to the detailed insights page for the selected Customer AI model, select **[!UICONTROL View model details]**.
 
-![The Experience Platform Audiences dashboard with the Customer AI distribution of scores widget highlighted.](../images/segments/customer-ai-distribution-of-scores.png)
+![The Experience Platform Audiences dashboard with the [!UICONTROL Customer AI distribution of scores] widget and [!UICONTROL View model details] highlighted.](../images/segments/customer-ai-distribution-of-scores.png)
 
 The detailed model insights page appears.
 
-![The insights page for the Customer AI with View model details highlighted.](../images/profiles/customer-ai-insights-page.png)
+![The insights page for the Customer AI.](../images/profiles/customer-ai-insights-page.png)
 
-More information on Customer AI can be found on the [discover insights UI guide](../../intelligent-services/customer-ai/user-guide/discover-insights.md)
+More information on Customer AI can be found on the [discover insights UI guide](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
 ### [!UICONTROL Customer AI scoring summary] {#customer-ai-scoring-summary}
 
-This widget displays the total number of profiles analyzed for their propensity to buy in a single metric, and uses a doughnut chart to illustrate the proportional composition of total profiles between high, medium, and low propensities. 
+This widget displays the total number of profiles scored, and categorizes them into buckets containing high, medium, and low propensity as green, yellow, and red respectively. A doughnut chart is used to illustrate the proportional composition of total profiles between high, medium, and low propensities as green, yellow, and red respectively. A profile qualifies for high propensity at over 75, medium propensity between 25 and 74, and low propensity under 24. A legend indicates the colour code and thresholds of propensities. Profile counts for the high, medium, and low propensities are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
 
-Profile propensity is determined by percentage and color coded to high, medium, and low as green, yellow, and red respectively. A profile qualifies for high propensity at over 75%, medium propensity between 25 and 74%, and low propensity under 24%.  A legend indicates the colour code and thresholds of propensities. Individual counts for the high, medium, and low propensities are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
-
-The drop down menu underneath the widget title provides a list of all configured Customer AI models. Select the appropriate AI model for your analysis from the list of available models. If no Customer AI model is available, a message within the widget directs you to configure at least one Customer AI model and provides a hyperlink to the Customer AI model configuration page. See the documentation for instructions on [how to configure a Customer AI instance](../../intelligent-services/customer-ai/user-guide/configure.md).
+The drop down menu underneath the widget title provides a list of all configured Customer AI models. Select the appropriate AI model for your analysis from the list of available models. If no Customer AI model is available, a message within the widget directs you to configure at least one Customer AI model and provides a hyperlink to the Customer AI model configuration page. See the documentation on [how to configure a Customer AI instance](../../intelligent-services/customer-ai/user-guide/configure.md) for detailed instructions.
 
 >[!NOTE]
 >
@@ -120,7 +122,7 @@ The drop down menu underneath the widget title provides a list of all configured
 
 ![The Experience Platform Audiences dashboard with the Customer AI scoring summary widget highlighted.](../images/segments/customer-ai-scoring-summary.png)
 
-Select **[!UICONTROL View model details]** to navigate to the detailed insights page for the selected Customer AI model. More information on Customer AI can be found on the [discover insights UI guide](../../intelligent-services/customer-ai/user-guide/discover-insights.md)
+Select **[!UICONTROL View model details]** to navigate to the detailed insights page for the selected Customer AI model. More information on Customer AI can be found on the [discover insights UI guide](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
 ### [!UICONTROL Audience size] {#audience-size}
 

@@ -121,9 +121,15 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Audience overlap by merge policy]](#audience-overlap-by-merge-policy)
 * [[!UICONTROL Audience overlap report]](#audience-overlap-report)
 
+## Customer AI widgets
+
+Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale. Customer AI does this by analyzing existing consumer Experience Event data to predict churn or conversion propensity scores. These high accuracy customer propensity models allow for more exact segmentation and targeting. The [distribution of scores](#customer-ai-distribution-of-scores) and [scoring summary](#customer-ai-scoring-summary) insights demonstrate the division in your audience. They highlight which profiles are the high/low/medium propensity and how they are distributed across your profile counts.
+
 ### [!UICONTROL Customer AI distribution of scores] {#customer-ai-distribution-of-scores}
 
-The [!UICONTROL Customer AI distribution of scores] widget categorizes the total number of profiles by their propensity to buy. The distribution of the profile count is determined by the AI model and the selected merge policy, then visualized in five percent increments that indicate their propensity to buy. Profile propensity is color coded to high, medium, and low as green, yellow, and red respectively. The count of profiles is provided along the Y-axis, and the propensity to buy scores are provided along the X-axis. 
+Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale. It does this by analyzing existing Consumer Experience Event data to predict churn or conversion propensity scores. These high accuracy customer propensity models allow for more exact segmentation and targeting.
+
+The [!UICONTROL Customer AI distribution of scores] widget categorizes the total number of profiles by their propensity scores. The distribution of the profile count is determined by the AI model and the selected merge policy, then visualized in five percent increments that indicate their propensity to buy. Profile propensity is color coded to high, medium, and low as green, yellow, and red respectively. The count of profiles is provided along the Y-axis, and the propensity to buy scores are provided along the X-axis. 
 
 The AI model that determines the propensity scores is chosen from the dropdown selector under the widget title. The dropdown contains a list of all configured Customer AI models. Select the appropriate AI model for your analysis from the list of available models. If no Customer AI model is available, a message within the widget directs you to configure at least one Customer AI model and provides a hyperlink to the Customer AI model configuration page. See the documentation for instructions on [how to configure a Customer AI instance](../../intelligent-services/customer-ai/user-guide/configure.md).
 
