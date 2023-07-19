@@ -89,12 +89,26 @@ Select the flag icon to provide further reports on your experience using the AI 
 
 The AI Assistant for Experience Platform also provides you with prompts that you can use to get started with Experience Platform.
 
+![The provided prompts in the AI Assistant panel.](./images/ai-assistant/ideas-to-get-started.png)
+
 >[!BEGINTABS]
 
 >[!TAB How do I get started ingesting data?]
 
+To query the AI Assistant regarding data ingestion, select **[!UICONTROL How do I get started ingesting data?]**
+
+![The given prompt on ingesting data and the answer from the AI Assistant.](./images/ai-assistant/ingest-data.png)
+
 >[!TAB Guide me on building a journey]
 
+For a guide on building a journey, select **[!UICONTROL Guide me on building a journey.]**
+
+![The given prompt on building a journey and the answer from the AI Assistant.](./images/ai-assistant/build-a-journey.png)
+
 >[!TAB Tell me the most common use cases for campaigns]
+
+You can also query the AI Assistant for use case examples. For example, select **[!UICONTROL Tell me the most common use cases for campaigns.]**
+
+![The given prompt on use cases for campaigns and the answer from the AI Assistant.](./images/ai-assistant/campaigns-use-cases.png)
 
 >[!ENDTABS]
