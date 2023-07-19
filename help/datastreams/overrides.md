@@ -95,13 +95,13 @@ The datastream configuration overrides are sent to the Edge Network through the 
 
 The `edgeConfigOverrides` command creates datastream overrides that are passed on to the [!DNL Edge Network] on the next command, or, in the case of `configure`, for every request.
 
-When a configuration override is sent with the `configure` command, it is included on the following supported commands.
+When a configuration override is sent with the `configure` command, it is included on the following Web SDK commands.
 
-* [sendEvent](../fundamentals/tracking-events.md)
-* [setConsent](../consent/iab-tcf/overview.md)
-* [getIdentity](../identity/overview.md)
-* [appendIdentityToUrl](../identity/id-sharing.md#cross-domain-sharing)
-* [configure](../fundamentals/configuring-the-sdk.md)
+* [sendEvent](../edge/fundamentals/tracking-events.md)
+* [setConsent](../edge/consent/iab-tcf/overview.md)
+* [getIdentity](../edge/identity/overview.md)
+* [appendIdentityToUrl](../edge/identity/id-sharing.md#cross-domain-sharing)
+* [configure](../edge/fundamentals/configuring-the-sdk.md)
 
 Options specified globally can be overridden by the configuration option on individual commands.
 
