@@ -18,6 +18,8 @@ user-guide-description: Bring together known and anonymous data from multiple en
     * [Example use case](./b2b-use-case.md)
     * [End-to-end tutorial](./b2b-tutorial.md)
     * [Real-Time CDP B2B Edition guardrails](b2b-guardrails.md)
+* Audience Manager and Real-time CDP {#evolution}
+  * [Evolution from Audience Manager](aam-to-rtcdp.md)
 * Account profiles {#account}
   * [Account profile overview](accounts/account-profile-overview.md)
   * [Account profile UI guide](accounts/account-profile-ui-guide.md)
@@ -56,5 +58,8 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Sources {#sources}
   * [Sources overview](sources/sources-overview.md)
   * [Sources in Real-Time CDP B2B Edition](sources/b2b.md)
+* Use cases {#use-cases}
+  * Partner data use cases {#partner-data}
+    * [Supplement first-party profiles](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * [Experience Platform Release notes](https://www.adobe.com/go/platform-release-notes-en)
 * [Experience Platform Glossary](https://www.adobe.com/go/platform-glossary-en)

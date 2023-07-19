@@ -88,7 +88,7 @@ To configure details for the destination, fill in the required fields and select
 
 >[!TIP]
 >
->In the connect destination workflow, you can create a custom folder in your Amazon S3 storage per exported segment file. Read [Use macros to create a folder in your storage location](/help/destinations/catalog/cloud-storage/overview.md#use-macros) for instructions.
+>In the connect destination workflow, you can create a custom folder in your Amazon S3 storage per exported audience file. Read [Use macros to create a folder in your storage location](/help/destinations/catalog/cloud-storage/overview.md#use-macros) for instructions.
 
 ### Enable alerts {#enable-alerts}
 
@@ -96,13 +96,13 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
 ### Map attributes and identities {#map}
 
@@ -110,7 +110,7 @@ In the **[!UICONTROL Mapping]** step, you can select which attribute and identit
 
 ## Validate data export {#exported-data}
 
-For [!DNL Pega Profile Connector] destinations, [!DNL Platform] creates a `.csv` file in Amazon S3 storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
+For [!DNL Pega Profile Connector] destinations, [!DNL Platform] creates a `.csv` file in Amazon S3 storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the audience activation tutorial.
 
 A successful import of profile data from S3 inserts data in the [!DNL Pega Customer] profile datastore. The imported customer profile data can be validated in [!DNL Pega Customer Profile Designer] , as shown in the following figure.
 ![Image of the UI screen where you can validate Adobe profile data in Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)

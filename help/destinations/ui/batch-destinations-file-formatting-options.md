@@ -31,7 +31,7 @@ To display the file formatting options, start the [connect to destination](/help
 > 
 >The new cloud storage destinations - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - currently only support the six CSV options highlighted below.
 
-![Image showing some of the available file formatting options.](/help/destinations/assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
+![Image showing some of the available file formatting options.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
 ### Delimiter {#delimiter}
 

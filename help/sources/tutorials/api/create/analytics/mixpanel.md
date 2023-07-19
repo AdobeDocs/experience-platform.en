@@ -1,14 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: (Beta) Create a Source Connection and Dataflow for Mixpanel using the Flow Service API
+title: Create a Source Connection and Dataflow for Mixpanel using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Mixpanel using the Flow Service API.
 exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
 ---
-# (Beta) Create a source connection and dataflow for [!DNL Mixpanel] using the [!DNL Flow Service] API
-
->[!NOTE]
->
->The [!DNL Mixpanel] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
+# Create a source connection and dataflow for [!DNL Mixpanel] using the [!DNL Flow Service] API
 
 The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL Mixpanel] data to Adobe Experience Platform using the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 

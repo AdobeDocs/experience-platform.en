@@ -22,16 +22,16 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
 | `{OBJECT_ID}` | The identifier of the specific object you want to retrieve. |
 
 **Request**
 
-The following request retrieves a dataset by its ID, returning its `name`, `description`, `state`, `tags`, and `files` properties.
+The following request retrieves a dataset by its ID, returning its `name`, `description`, `tags`, and `files` properties.
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a?properties=name,description,state,tags,files' \
+  'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a?properties=name,description,tags,files' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -47,7 +47,6 @@ A successful response returns the specified dataset with only the requested `pro
     "5ba9452f7de80400007fc52a": {
         "name": "Sample Dataset",
         "description": "Sample dataset containing important data.",
-        "state": "DRAFT",
         "tags": {
             "adobe/pqs/table": [
                 "sample_dataset"

@@ -125,6 +125,14 @@ After you completed the prerequisites, you can now select the edge personalizati
 
 Use the check boxes to the left of the audience names to select the audiences that you want to activate to the destination, then select **[!UICONTROL Next]**.
 
+To select the audiences that you want to activate to the destination, use the check boxes to the left of the audience names, then select **[!UICONTROL Next]**.
+
+You can select from multiple types of audiences, depending on their origin:
+
+* **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [segmentation documentation](../../segmentation/ui/overview.md) for more details.
+* **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/overview.md#import-audience).
+* Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
+
 ![Select audiences](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
 ## Map attributes {#mapping}
