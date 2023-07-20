@@ -2,20 +2,15 @@
 title: Prospect Profiles
 description: Learn how to create and use prospect profiles to gather information about unknown customers using third-party information. 
 type: Documentation
-badge: "Beta"
 ---
 
 # Prospect profiles
-
->[!IMPORTANT]
->
->Prospect profiles is currently in **beta** and is **not** available to all users.
 
 Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. 
 
 Prospect profiles are used to represent people who have not yet engaged with your company but want to reach out to. With prospect profiles, you can supplement your customer profiles with attributes from trusted third-party partners.
 
-## Browse
+## Browse {#browse}
 
 To access prospect profiles, select **[!UICONTROL Profiles]** in the **[!UICONTROL Prospects]** section.
 
@@ -25,11 +20,11 @@ The **[!UICONTROL Browse]** page is displayed. A list of all the prospect profil
 
 >[!IMPORTANT]
 >
->While most of the browsing functionality between customer profiles and prospect profiles is the same, you **cannot** browse profiles by merge policy. This is because for prospect profiles, only the default merge policy exists.
+>While most of the browsing functionality between customer profiles and prospect profiles is the same, you **cannot** browse prospect profiles by merge policy. This is because prospect profiles are automatically governed by a system-designed time-based merge policy. More information about merge policies can be found in the [merge policy overview](../merge-policies/overview.md).
 
 For more information on browsing profiles, please read the [browse section of the Profile user guide](./user-guide.md#browse-identity).
 
-## Prospect profile details
+## Prospect profile details {#profile-details}
 
 >[!IMPORTANT]
 >
@@ -39,7 +34,7 @@ To view more information about a specific prospect profile, select a profile on 
 
 ![A prospect profile is highlighted on the browse page.](../images/prospect-profile/select-specific-profile.png)
 
-Information about the prospect profile is displayed, including the attributes and audience membership. 
+Information about the prospect profile is displayed, including the attributes associated with the profile and audience membership. 
 
 ![The prospect profile details page is displayed.](../images/prospect-profile/profile-details.png)
 

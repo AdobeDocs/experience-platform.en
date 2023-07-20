@@ -2,18 +2,13 @@
 title: Prospect Audiences
 description: Learn how to create and use prospect audiences to target unknown customers using third-party information. 
 type: Documentation
-badge: "Beta"
 ---
 
 # Prospect audiences
 
->[!IMPORTANT]
->
->Prospect audiences is currently in **beta** and is **not** available to all users.
+Adobe Experience Platform allows you to bring the full ease and sophistication of the marketer-friendly segmentation experience to prospect profiles. You can drastically reduce the time spent assembling audiences by creating your own prospect audiences while responsibly using partner data.
 
-Prospect audiences are used to segment your prospect profiles, allowing you to market towards people who haven't engaged with your product at this point in time.
-
-## Browse 
+## Browse {#browse}
 
 To access prospect audiences, select **[!UICONTROL Audiences]** in the **[!UICONTROL Prospects]** section.
 
@@ -29,7 +24,7 @@ You can add additional fields to this display by selecting ![the filter attribut
 
 More information about the browse page, including detailed information about the listed fields, can be found in the [browse section of the Segmentation UI guide](./overview.md#browse).
 
-## Audience details
+## Audience details {#details}
 
 To view details about a specific prospect audience, select an audience on the [!UICONTROL Browse] page.
 
@@ -41,7 +36,7 @@ The prospect audience details page is displayed. Information, including the pros
 
 For more information about the audience details page, please read the [audience details section of the Segmentation UI guide](./overview.md).
 
-## Create audience
+## Create audience {#create}
 
 To create a prospect audience, on the [!UICONTROL Browse] page, select **[!UICONTROL Create audience]**.
 
