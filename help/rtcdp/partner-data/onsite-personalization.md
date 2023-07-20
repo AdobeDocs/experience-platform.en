@@ -52,6 +52,10 @@ An unauthenticated visitor might have moved recently into a new home and might b
 
 Read through the sections below which include links to further documentation, to complete each of the steps in the high-level overview above.
 
+### Implement event data collection on your web property 
+
+First, you need to set up Web SDK on your web properties and set up datastreams, as well as tag properties
+
 
 
 ## Limitations and troubleshooting {#limitations-and-troubleshooting}
