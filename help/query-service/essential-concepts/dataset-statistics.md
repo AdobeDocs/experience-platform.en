@@ -36,12 +36,11 @@ ANALYZE TABLE adc_geometric COMPUTE STATISTICS;
 >
 >`COMPUTE STATISTICS` does not support the array or map data types. You can set a `skip_stats_for_complex_datatypes` flag to be notified or error out if the input dataframe has columns with arrays and map data types. By default, the flag is set to true. To enable notifications or errors, use the following command: `SET skip_stats_for_complex_datatypes = false`.
 
-<!-- Commented out until the <alias_name> feature is released.
 This second example, is a more real-world example as it uses an alias name. See the [alias name section](#alias-name) for more details on this feature.
 
 ```sql
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS as <alias_name>;
-``` -->
+``` 
 
 The console output does not display the statistics in response to the analyze table compute statistics command. Instead, the console will display a single row column of `Statistics ID` with a universally unique identifier to reference the results. You can also **query the computed statistics directly** using the `Statistics ID`. On successful completion of a `COMPUTE STATISTICS` query, the results are displayed as follows:
 
@@ -69,11 +68,7 @@ adc_geometric_stats_1 |adc_geometric | (age) | | 25/06/2023 09:22:26
 demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
 ```
 
-<!-- Commented out until the <alias_name> feature is released.
-
 To see the output, you must use the `SHOW STATISTICS` command. Instructions on [how to show the statistics](#show-statistics) are provided later in the document. 
-
--->
 
 ## Limit the included columns {#limit-included-columns}
 
@@ -105,7 +100,6 @@ You can combine the column limit and the filter to create highly specific comput
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
 ```
 
-<!-- Commented out until the <alias_name> feature is released.
 ## Create an alias name {#alias-name}
 
 Since the filter condition and the column list can target a large amount of data, it is unrealistic to remember the exact values. Instead, you can provide an `<alias_name>` to store this calculated information. If you do not provide an alias name for these calculations, Query Service generates a universally unique identifier for the alias ID. You can then use this alias ID to look up the computed statistics with the `SHOW STATISTICS` command. 
@@ -121,9 +115,6 @@ ANALYZE TABLE adc_geometric COMPUTE STATISTICS FOR ALL COLUMNS as alias_name;
 ```
 
 The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the output, you must use the `SHOW STATISTICS` command discussed below. 
--->
-
-<!-- Commented out until the <alias_name> feature is released.
 
 ## Show the statistics {#show-statistics}
 
@@ -156,8 +147,6 @@ An output might look similar to the example below.
  timestamp                                                  |            0.0 |            0.0 |            0.0 |               0.0 |                98.0 |         3 | Timestamp
 (12 rows)
 ```
-
--->
 
 ## Next steps {#next-steps}
 
