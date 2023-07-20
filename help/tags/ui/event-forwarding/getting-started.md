@@ -23,7 +23,7 @@ After you send data to Edge network, you can toggle on Adobe solutions to send d
 
 ## Prerequisites
 
-* Adobe Experience Platform Collection Enterprise (Contact your Adobe account team for pricing)
+* Adobe Real-Time CDP Connections, Prime, or Ultimate (Contact your Adobe account team for pricing)
 * Event forwarding in Adobe Experience Platform
 * Adobe Experience Platform Web or Mobile SDK, configured to send data to Edge Network
 * Map data to Experience Data Model (XDM) (This mapping can be done using tags)
