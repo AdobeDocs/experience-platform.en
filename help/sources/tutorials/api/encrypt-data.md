@@ -111,11 +111,11 @@ A successful response returns your Base64-encoded public key, public key ID, and
 | `publicKeyId` | The public key ID is used to create a dataflow and ingest your encrypted cloud storage data to Experience Platform. |
 | `expiryTime` | The expiry time defines the expiration date of your encryption key pair. This date is automatically set to 180 days after the date of key generation and is displayed in unix timestamp format. |
 
-+++(Optional) Create encryption key pair for signed data
++++(Optional) Create sign verification key pair for signed data
 
 ### Create customer managed key pair
 
-You can create another encryption key pair to sign and ingest your signed and encrypted data.
+You can create a sign verification key pair to sign and ingest your encrypted data.
 
 During this stage, you can use the private key to sign your encrypted and then send your public key to Experience Platform to verify the signature.
 
