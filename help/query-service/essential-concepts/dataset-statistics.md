@@ -8,9 +8,9 @@ You can now compute column-level statistics on [!DNL Azure Data Lake Storage] (A
 
 >[!NOTE]
 >
->Currently, the statistics generated are valid for that session only and are not persistent between sessions. They cannot be accessed across different PSQL sessions.
+>Computed statistics are stored in temporary tables that have session level persistence. You can access the results of the computations as any time during that session. They cannot be accessed across different PSQL sessions.
 
-With the `SHOW STATISTICS FOR <alias_name>` command, you can see the statistics that were computed with the `ANALYZE TABLE COMPUTE STATISTICS` command. Through the combination of these commands, you can now compute column statistics on either the entire dataset, a subset of a dataset, all columns, or a subset of columns.
+You can see the statistics that were computed with the `ANALYZE TABLE COMPUTE STATISTICS` command with the `SHOW STATISTICS FOR <alias_name>` command. Through the combination of these commands, you can now compute column statistics on either the entire dataset, a subset of a dataset, all columns, or a subset of columns.
 
 >[!IMPORTANT]
 >
@@ -36,13 +36,23 @@ ANALYZE TABLE adc_geometric COMPUTE STATISTICS;
 >
 >`COMPUTE STATISTICS` does not support the array or map data types. You can set a `skip_stats_for_complex_datatypes` flag to be notified or error out if the input dataframe has columns with arrays and map data types. By default, the flag is set to true. To enable notifications or errors, use the following command: `SET skip_stats_for_complex_datatypes = false`.
 
-This second example, is a more real-world example as it uses an alias name. See the [alias name section](#alias-name) for more details on this feature.
+<!-- 
+On successful completion of a `COMPUTE STATISTICS` query, the console output does not display the statistics directly. Instead, the console displays a single row column of `Statistics ID` with a universally unique identifier to reference the results. If no alias name is provided the automatic name generation of the `Statistics ID` follows the format of `<tableName_stats_{incremental_number}>`.  
+-->
+
+Since the results of calculations can be a large amount of data, it is unreasonable to return the computed data directly in the console output. Instead, a `Statistics ID` is used to store this calculated information or you can provide an alias name to reference the results. See the [alias name section](#alias-name) for more details on this feature. 
+
+This second example, is a more real-world example as it uses an alias name. 
 
 ```sql
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS as <alias_name>;
 ``` 
 
-The console output does not display the statistics in response to the analyze table compute statistics command. Instead, the console will display a single row column of `Statistics ID` with a universally unique identifier to reference the results. You can also **query the computed statistics directly** using the `Statistics ID`. On successful completion of a `COMPUTE STATISTICS` query, the results are displayed as follows:
+## Output of computed statistics {#output-of-computed-statistics}
+
+If you do not provide an alias name in advance, Query Service automatically generates a name for the `Statistics ID` that follows the format of `<tableName_stats_{incremental_number}>`. If an alias name is provided it appears in the `Statistics ID` column. 
+
+An example output of a `COMPUTE STATISTICS` query are as follows:
 
 ```console
 | Statistics ID    | 
@@ -51,28 +61,26 @@ The console output does not display the statistics in response to the analyze ta
 (1 row)
 ```
 
-You can query the statistics output directly by referencing the `Statistics ID` as seen below: 
+You can then **query the computed statistics directly** by referencing the `Statistics ID`. The statement below allows you to view the output in a similar way to the [`SHOW STATISTICS`](#show-statistics) command when used with the `Statistics ID`. As seen in the example below:
 
 ```sql
 SELECT * FROM adc_geometric_stats_1; 
 ```
 
-This statement allows you to view the output in a similar way to the SHOW STATISTICS command when used with the `Statistics ID`. 
+To see the output, you must use the `SHOW STATISTICS` command. This displays a list of all the computed statistics within the session. Instructions on [how to show the statistics](#show-statistics) are provided later in the document. 
 
-You can view a list of all the computed statistics within the session by executing the SHOW STATISTICS command. An example output of the SHOW STATISTICS command is seen below.
+Example output of the `SHOW STATISTICS` command is seen below.
 
 ```console
 statsId | tableName | columnSet | filterContext | timestamp
 -----------+---------------+-----------+---------------------------------------+---------------
-adc_geometric_stats_1 |adc_geometric | (age) | | 25/06/2023 09:22:26
+adc_geometric_stats_1 | adc_geometric | (age) | | 25/06/2023 09:22:26
 demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
 ```
 
-To see the output, you must use the `SHOW STATISTICS` command. Instructions on [how to show the statistics](#show-statistics) are provided later in the document. 
-
 ## Limit the included columns {#limit-included-columns}
 
-You can compute statistics for particular dataset columns by referencing them by name. Use the `FOR COLUMNS (<col1>, <col2>)` syntax to target specific columns. The example below computes statistics for the columns  `commerce`, `id`, and `timestamp` for the  dataset `tableName`.
+To focus your analysis, you can compute statistics for particular dataset columns by referencing them by name. Use the `FOR COLUMNS (<col1>, <col2>)` syntax to target specific columns. The example below computes statistics for the columns  `commerce`, `id`, and `timestamp` for the  dataset `tableName`.
 
 ```sql
 ANALYZE TABLE tableName COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
@@ -86,7 +94,7 @@ ANALYZE TABLE adcgeometric COMPUTE STATISTICS FOR columns (commerce, commerce.pu
 
 ## Add a timestamp filter condition {#filter-condition}
 
-You can add a timestamp filter condition to focus the analysis of your columns. This can be used to filter out historical data or focus your data analysis on a specific period. The `FILTERCONTEXT` command calculates statistics on a subset of the dataset based on the filter condition you provide.
+To focus the analysis of your columns based on chronology, you can add a timestamp filter condition. This can be used to filter out historical data or focus your data analysis on a specific period. The `FILTERCONTEXT` command calculates statistics on a subset of the dataset based on the filter condition you provide.
 
 In the example below, statistics are computed on all columns for the dataset `tableName`, where the column timestamp has values between the specified range of `2023-04-01 00:00:00` and `2023-04-05 00:00:00`. 
 
@@ -102,7 +110,9 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 
 ## Create an alias name {#alias-name}
 
-Since the filter condition and the column list can target a large amount of data, it is unrealistic to remember the exact values. Instead, you can provide an `<alias_name>` to store this calculated information. If you do not provide an alias name for these calculations, Query Service generates a universally unique identifier for the alias ID. You can then use this alias ID to look up the computed statistics with the `SHOW STATISTICS` command. 
+<!-- Since the filter condition and the column list can target a large amount of data, it is unreasonable to return the computed data directly in the console output. Instead, a `Statistics ID` is used to store this calculated information or you can provide an alias name to reference the results. If you do not provide an alias name in advance, Query Service automatically generates a name for the `Statistics ID` that follows the format of `<tableName_stats_{incremental_number}>`. -->
+
+To conveniently reference the results of your analysis, you can provide an alias name or use the `Statistics ID` for use with the `SHOW STATISTICS` command. 
 
 >[!NOTE]
 >
