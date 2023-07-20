@@ -40,13 +40,31 @@ ANALYZE TABLE adc_geometric COMPUTE STATISTICS;
 On successful completion of a `COMPUTE STATISTICS` query, the console output does not display the statistics directly. Instead, the console displays a single row column of `Statistics ID` with a universally unique identifier to reference the results. If no alias name is provided the automatic name generation of the `Statistics ID` follows the format of `<tableName_stats_{incremental_number}>`.  
 -->
 
-Since the results of calculations can be a large amount of data, it is unreasonable to return the computed data directly in the console output. Instead, a `Statistics ID` is used to store this calculated information or you can provide an alias name to reference the results. See the [alias name section](#alias-name) for more details on this feature. 
+## Create an alias name {#alias-name}
 
-This second example, is a more real-world example as it uses an alias name. 
+<!-- Since the filter condition and the column list can target a large amount of data, it is unreasonable to return the computed data directly in the console output. Instead, a `Statistics ID` is used to store this calculated information or you can provide an alias name to reference the results. If you do not provide an alias name in advance, Query Service automatically generates a name for the `Statistics ID` that follows the format of `<tableName_stats_{incremental_number}>`. -->
+
+Since the results of calculations can be a large amount of data, it is unreasonable to return the computed data directly in the console output. When you compute statistics you can provide an alias name in the statement to reference the results. Alternatively, an automatically generated `Statistics ID` is generated and used to store the calculated information. 
+
+<!-- See the [alias name section](#alias-name) for more details on this feature. -->
+
+<!-- To conveniently reference the results of your analysis, you can provide an alias name or use the `Statistics ID` for use with the `SHOW STATISTICS` command.  -->
+
+>[!NOTE]
+>
+>Although alias names are optional, you are recommended to use them as best practice.
+
+The example below stores the output computed statistics in the `alias_name` for later reference. The alias name used in the query is available to be referenced as soon as the `ANALYZE TABLE` command has been run.
 
 ```sql
-ANALYZE TABLE adc_geometric COMPUTE STATISTICS as <alias_name>;
-``` 
+ANALYZE TABLE adc_geometric COMPUTE STATISTICS AS <alias_name>;
+```
+
+<!-- ```sql
+ANALYZE TABLE adc_geometric COMPUTE STATISTICS FOR ALL COLUMNS as alias_name;
+``` -->
+
+The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the detailed results, you must use the `SHOW STATISTICS` command. See the [Show results section](#show-results) for more details on this feature.
 
 ## Output of computed statistics {#output-of-computed-statistics}
 
@@ -78,6 +96,40 @@ adc_geometric_stats_1 | adc_geometric | (age) | | 25/06/2023 09:22:26
 demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
 ```
 
+## Show the statistics {#show-statistics}
+
+You can use the statistics ID or alias name to look up the computed statistics with the `SHOW STATISTICS` command at any time within that session. The statistics ID and the statistics generated are only valid for this particular session and cannot be accessed across different PSQL sessions. The computed statistics are not currently persistent. To display the statistics, use the command seen below.
+
+```sql
+SHOW STATISTICS FOR <STATISTICS_ID>;
+```
+
+or 
+
+```sql
+SHOW STATISTICS FOR <alias_name>;
+```
+
+An output might look similar to the example below. 
+
+```console
+                         columnName                         |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
+------------------------------------------------------------+----------------+----------------+----------------+-------------------+---------------------+-----------+-----------
+ marketing.trackingcode                                     |            0.0 |            0.0 |            0.0 |               0.0 |              1213.0 |         0 | String
+ _experience.analytics.customdimensions.evars.evar13        |            0.0 |            0.0 |            0.0 |               0.0 |              8765.0 |        20 | String
+ _experience.analytics.customdimensions.evars.evar74        |            0.0 |            0.0 |            0.0 |               0.0 |                11.0 |         0 | String
+ web.webpagedetails.name                                    |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | String
+ _experience.analytics.event1to100.event8.value             |            5.0 |         9077.0 |          123.0 |              10.0 |              1001.0 |        80 | Double
+ search.ispaid                                              |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | Boolean
+ commerce.productlistviews.value                            |            0.0 |            0.0 |            0.0 |               0.0 |                 0.0 |        10 | Double
+ device.typeid                                              |            0.0 |            0.0 |            0.0 |               0.0 |                 0.0 |        10 | String
+ commerce.purchases.value                                   |          765.0 |        98760.0 |         -980.0 |              32.0 |                99.0 |        90 | Double
+ _experience.analytics.customdimensions.props.prop45        |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | String
+ environment.browserdetails.javaenabled                     |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | Boolean
+ timestamp                                                  |            0.0 |            0.0 |            0.0 |               0.0 |                98.0 |         3 | Timestamp
+(12 rows)
+```
+
 ## Limit the included columns {#limit-included-columns}
 
 To focus your analysis, you can compute statistics for particular dataset columns by referencing them by name. Use the `FOR COLUMNS (<col1>, <col2>)` syntax to target specific columns. The example below computes statistics for the columns  `commerce`, `id`, and `timestamp` for the  dataset `tableName`.
@@ -106,56 +158,6 @@ You can combine the column limit and the filter to create highly specific comput
 
 ```sql
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
-```
-
-## Create an alias name {#alias-name}
-
-<!-- Since the filter condition and the column list can target a large amount of data, it is unreasonable to return the computed data directly in the console output. Instead, a `Statistics ID` is used to store this calculated information or you can provide an alias name to reference the results. If you do not provide an alias name in advance, Query Service automatically generates a name for the `Statistics ID` that follows the format of `<tableName_stats_{incremental_number}>`. -->
-
-To conveniently reference the results of your analysis, you can provide an alias name or use the `Statistics ID` for use with the `SHOW STATISTICS` command. 
-
->[!NOTE]
->
->Although alias names are optional, you are recommended to use them as best practice.
-
-The example below stores the output computed statistics in the `alias_name` for later reference.
-
-```sql
-ANALYZE TABLE adc_geometric COMPUTE STATISTICS FOR ALL COLUMNS as alias_name;
-```
-
-The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the output, you must use the `SHOW STATISTICS` command discussed below. 
-
-## Show the statistics {#show-statistics}
-
-The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run.  
-
-Even with a filter condition and a column list, the computation can target a large amount of data. Query Service generates a universally unique identifier for the statistics ID to store this calculated information. You can then use this statistics ID to look up the computed statistics with the `SHOW STATISTICS` command at any time within that session. 
-
-The statistics ID and the statistics generated are only valid for this particular session and cannot be accessed across different PSQL sessions. The computed statistics are not currently persistent. To display the statistics, use the command seen below.
-
-```sql
-SHOW STATISTICS FOR <STATISTICS_ID>;
-```
-
-An output might look similar to the example below. 
-
-```console
-                         columnName                         |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
-------------------------------------------------------------+----------------+----------------+----------------+-------------------+---------------------+-----------+-----------
- marketing.trackingcode                                     |            0.0 |            0.0 |            0.0 |               0.0 |              1213.0 |         0 | String
- _experience.analytics.customdimensions.evars.evar13        |            0.0 |            0.0 |            0.0 |               0.0 |              8765.0 |        20 | String
- _experience.analytics.customdimensions.evars.evar74        |            0.0 |            0.0 |            0.0 |               0.0 |                11.0 |         0 | String
- web.webpagedetails.name                                    |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | String
- _experience.analytics.event1to100.event8.value             |            5.0 |         9077.0 |          123.0 |              10.0 |              1001.0 |        80 | Double
- search.ispaid                                              |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | Boolean
- commerce.productlistviews.value                            |            0.0 |            0.0 |            0.0 |               0.0 |                 0.0 |        10 | Double
- device.typeid                                              |            0.0 |            0.0 |            0.0 |               0.0 |                 0.0 |        10 | String
- commerce.purchases.value                                   |          765.0 |        98760.0 |         -980.0 |              32.0 |                99.0 |        90 | Double
- _experience.analytics.customdimensions.props.prop45        |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | String
- environment.browserdetails.javaenabled                     |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | Boolean
- timestamp                                                  |            0.0 |            0.0 |            0.0 |               0.0 |                98.0 |         3 | Timestamp
-(12 rows)
 ```
 
 ## Next steps {#next-steps}
