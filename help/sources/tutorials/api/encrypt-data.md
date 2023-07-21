@@ -117,7 +117,7 @@ A successful response returns your Base64-encoded public key, public key ID, and
 
 You can create a sign verification key pair to sign and ingest your encrypted data.
 
-During this stage, you can use the private key to sign your encrypted and then send your public key to Experience Platform to verify the signature.
+During this stage, you must generate your own private key and public key combination and then use your private key to sign your encrypted data. Next, you must encode your public key in Base64 and then share it to Experience Platform in order for Experience Platform to verify your signature.
 
 ### Share your public key to Experience Platform
 
