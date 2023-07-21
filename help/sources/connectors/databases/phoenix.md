@@ -1,15 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;Phoenix;phoenix
-solution: Experience Platform
 title: Phoenix Source Connector Overview
 description: Learn how to connect Phoenix to Adobe Experience Platform using APIs or the user interface.
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
 ---
-# (Beta) [!DNL Phoenix] connector
-
->[!NOTE]
->
->The [!DNL Phoenix] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
+# [!DNL Phoenix] connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
