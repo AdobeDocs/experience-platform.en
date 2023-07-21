@@ -386,12 +386,12 @@ The table below outlines a list of device field values and their corresponding d
  example = "map_get_values(book_details,\"author\") where input is : {\n" +
         "    \"book_details\":\n" +
         "    {\n" +
-        "        \"author\": \"author 1\",\n" +
-        "        \"price\": 100,\n" +
-        "        \"ISBN\": \"ISBN-1234\"\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
         "    }\n" +
         "}",
-      result = "{\"author\": \"author 1\"}"
+      result = "{\"author\": \"George R. R. Martin\"}"
 ```
 
 +++
@@ -404,9 +404,9 @@ The table below outlines a list of device field values and their corresponding d
  example = "map_has_keys(book_details,\"author\")where input is : {\n" +
         "    \"book_details\":\n" +
         "    {\n" +
-        "        \"author\": \"author 1\",\n" +
-        "        \"price\": 100,\n" +
-        "        \"ISBN\": \"ISBN-1234\"\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
         "    }\n" +
         "}",
       result = "true"
@@ -422,27 +422,27 @@ The table below outlines a list of device field values and their corresponding d
 example = "add_to_map(book_details, book_details2) where input is {\n" +
         "    \"book_details\":\n" +
         "    {\n" +
-        "        \"author\": \"author 1\",\n" +
-        "        \"price\": 100,\n" +
-        "        \"ISBN\": \"ISBN-1234\"\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
         "    }\n" +
         "}" +
         "{\n" +
         "    \"book_details2\":\n" +
         "    {\n" +
-        "        \"author\": \"author 2\",\n" +
-        "        \"price\": 200,\n" +
-        "        \"ISBN\": \"ISBN-2234\"\n" +
-        "        \"publisher\": \"pb1\"\n" +
+        "        \"author\": \"Neil Gaiman\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-0-380-97365-0\"\n" +
+        "        \"publisher\": \"William Morrow\"\n" +
         "    }\n" +
         "}",
       result = "{\n" +
         "    \"book_details\":\n" +
         "    {\n" +
-        "        \"author\": \"author 1\",\n" +
-        "        \"price\": 100,\n" +
-        "        \"ISBN\": \"ISBN-1234\"\n" +
-        "        \"publisher\": \"pb1\"\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "        \"publisher\": \"William Morrow\"\n" +
         "    }\n" +
         "}",
       returns = "A new map with all elements from map and addends"
