@@ -48,10 +48,6 @@ Since the results of calculations can be a large amount of data, it is unreasona
 
 <!-- To conveniently reference the results of your analysis, you can provide an alias name or use the `Statistics ID` for use with the `SHOW STATISTICS` command.  -->
 
->[!NOTE]
->
->
-
 The example below stores the output computed statistics in the `alias_name` for later reference. The alias name used in the query is available for reference as soon as the `ANALYZE TABLE` command has been run.
 
 ```sql
