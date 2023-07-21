@@ -10,7 +10,7 @@ You can now compute column-level statistics on [!DNL Azure Data Lake Storage] (A
 >
 >Computed statistics are stored in temporary tables that have session-level persistence. You can access the results of the computations at any time during that session. They cannot be accessed across different PSQL sessions.
 
-You can see the statistics that were computed with the `ANALYZE TABLE COMPUTE STATISTICS` command with the `SHOW STATISTICS FOR <alias_name>` command. You can also limit the scope of the statistical analysis to either the entire dataset, a subset of a dataset, all columns, or a subset of columns.
+To see the statistics that were computed with the `ANALYZE TABLE COMPUTE STATISTICS` command, you can use a SELECT query on the alias name or Statistics ID. You can also limit the scope of the statistical analysis to either the entire dataset, a subset of a dataset, all columns, or a subset of columns.
 
 >[!IMPORTANT]
 >
@@ -44,7 +44,7 @@ On successful completion of a `COMPUTE STATISTICS` query, the console output doe
 
 <!-- Since the filter condition and the column list can target a large amount of data, it is unreasonable to return the computed data directly in the console output. Instead, a `Statistics ID` is used to store this calculated information or you can provide an alias name to reference the results. If you do not provide an alias name in advance, Query Service automatically generates a name for the `Statistics ID` that follows the format of `<tableName_stats_{incremental_number}>`. -->
 
-Since the results of calculations can be a large amount of data, it is unreasonable to return the computed data directly in the console output. Although alias names are optional, you are recommended to use them as best practice when you compute statistics.Provide an alias name in the statement to descriptively reference the results in your SQL queries. Alternatively, an automatically generated `Statistics ID` is generated and used to store the calculated information. 
+Since the results of calculations can be a large amount of data, it is unreasonable to return the computed data directly in the console output. Although alias names are optional, you are recommended to use them as best practice when you compute statistics. Provide an alias name in the statement to descriptively reference the results in your SQL queries. Alternatively, an automatically generated `Statistics ID` is generated and used to store the calculated information. 
 
 <!-- To conveniently reference the results of your analysis, you can provide an alias name or use the `Statistics ID` for use with the `SHOW STATISTICS` command.  -->
 
@@ -58,9 +58,11 @@ ANALYZE TABLE adc_geometric COMPUTE STATISTICS AS alias_name;
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS FOR ALL COLUMNS as alias_name;
 ``` -->
 
-The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response to the analyze table compute statistics command. To see the detailed results, you must use the `SHOW STATISTICS` command. See the [Show results section](#show-results) for more details on this feature.
+The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response to the analyze table compute statistics command. To see the detailed results, you must use a SELECT query on the alias name or Statistics ID. 
 
-## Output of computed statistics {#output-of-computed-statistics}
+<!-- See the [Show results section](#show-results) for more details on this feature. -->
+
+## View the output of computed statistics {#view-output-of-computed-statistics}
 
 If you do not provide an alias name in advance, Query Service automatically generates a name for the `Statistics ID` that follows the format of `<tableName_stats_{incremental_number}>`. If an alias name is provided it appears in the `Statistics ID` column. 
 
@@ -73,42 +75,16 @@ An example output of a `COMPUTE STATISTICS` query is as follows:
 (1 row)
 ```
 
-You can then **query the computed statistics directly** by referencing the `Statistics ID`. The statement below allows you to view the output in a similar way to the `SHOW STATISTICS` command when used with the `Statistics ID`. As seen in the example below:
+You can then **query the computed statistics directly** by referencing the `Statistics ID`. The example statement below allows you to view the output in full when used with the `Statistics ID` or the alias name.
 
 ```sql
 SELECT * FROM adc_geometric_stats_1; 
 ```
 
-To see the output in full, you must use the `SHOW STATISTICS` command.
-
-## Show the statistics {#show-statistics}
-
-You can use the `SHOW STATISTICS` command on its own to displays a list of all the computed statistics within the session. An example output of the `SHOW STATISTICS` command is seen below.
+The computed statistics output might look similar to the example below. 
 
 ```console
-statsId | tableName | columnSet | filterContext | timestamp
---------+-----------+-----------+---------------+---------------
-adc_geometric_stats_1 | adc_geometric | (age) | | 25/06/2023 09:22:26
-demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
-age_stats | castedtitanic | (age) | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
-```
-
-You can use the statistics ID or alias name to look up the computed statistics with the `SHOW STATISTICS` command at any time within that session. The statistics ID and the statistics generated are only valid for this particular session and cannot be accessed across different PSQL sessions. The computed statistics are not currently persistent. To display the statistics, use the command seen below.
-
-```sql
-SHOW STATISTICS FOR adc_geometric_stats_1;
-```
-
-Or
-
-```sql
-SHOW STATISTICS FOR alias_name;
-```
-
-An output might look similar to the example below. 
-
-```console
-                         columnName                         |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
+ columnName                                                 |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
 ------------------------------------------------------------+----------------+----------------+----------------+-------------------+---------------------+-----------+-----------
  marketing.trackingcode                                     |            0.0 |            0.0 |            0.0 |               0.0 |              1213.0 |         0 | String
  _experience.analytics.customdimensions.evars.evar13        |            0.0 |            0.0 |            0.0 |               0.0 |              8765.0 |        20 | String
@@ -124,6 +100,44 @@ An output might look similar to the example below.
  timestamp                                                  |            0.0 |            0.0 |            0.0 |               0.0 |                98.0 |         3 | Timestamp
 (12 rows)
 ```
+
+## Show the statistical analysis metadata {#show-statistics}
+
+You can use the `SHOW STATISTICS` command on its own to display the metadata for any statistics tables generated in the session. This command can hep you refine the scope of your statistical analysis. 
+
+To display the statistical analysis metadata for particular tables, use the statement format seen below.
+
+```sql
+SHOW STATISTICS FOR adc_geometric_stats_1;
+```
+
+Or
+
+```sql
+SHOW STATISTICS FOR alias_name;
+```
+
+The `SHOW STATISTICS` command list all the temporary statistics tables generated in that session. An example output is seen below.
+
+```console
+statsId | tableName | columnSet | filterContext | timestamp
+--------+-----------+-----------+---------------+---------------
+adc_geometric_stats_1 | adc_geometric | (age) |  | 25/06/2023 09:22:26
+demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
+age_stats | castedtitanic | (age) | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
+```
+
+A description of the metadata column names is provided below.
+
+| Column name  | Description |
+|---|---|
+| `statsId`  | This is the reference to the temporary statistics table generated by the `COMPUTE STATISTICS` command.  |
+| `tableName`  | The original table used for analysis.  |
+|  `columnSet` | This lists any columns specifically chosen for analysis. An empty value indicates that all columns were analysed. See the section on [limiting columns](#limit-included-columns) for more information. |
+| `filterContext`  | This provides details for any filters applied to the analysis. |
+| `timestamp`  | Any chronological filters applied to your data analysis to focus on a specific period. See the [timestamp filter condition section](#filter-condition) for more details. |
+
+You can use the statistics ID or alias name to look up the computed statistics with a SELECT statement at any time within that session. The statistics ID and the statistics generated are only valid for this particular session and cannot be accessed across different PSQL sessions. The computed statistics are not currently persistent. See the section on how to [view the output of your computed statistics](#view-output-of-computed-statistics) for more details.  
 
 ## Limit the included columns {#limit-included-columns}
 
