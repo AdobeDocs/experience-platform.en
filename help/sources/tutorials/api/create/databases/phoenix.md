@@ -1,16 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;Phoenix;phoenix
-solution: Experience Platform
 title: Create a Phoenix Base Connection Using the Flow Service API
-type: Tutorial
 description: Learn how to connect a Phoenix database to Adobe Experience Platform using the Flow Service API.
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
 ---
 # Create a [!DNL Phoenix] base connection using the [!DNL Flow Service] API
-
->[!NOTE]
->
->The [!DNL Phoenix] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
