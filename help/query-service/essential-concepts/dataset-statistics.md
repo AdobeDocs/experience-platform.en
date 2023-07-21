@@ -36,17 +36,9 @@ ANALYZE TABLE adc_geometric COMPUTE STATISTICS;
 >
 >The `COMPUTE STATISTICS` command does not support the array or map data types. You can set a `skip_stats_for_complex_datatypes` flag to be notified or to error out if the input data frame has columns with arrays and map data types. By default, the flag is set to true. To enable notifications or errors, use the following command: `SET skip_stats_for_complex_datatypes = false`.
 
-<!-- 
-On successful completion of a `COMPUTE STATISTICS` query, the console output does not display the statistics directly. Instead, the console displays a single row column of `Statistics ID` with a universally unique identifier to reference the results. If no alias name is provided the automatic name generation of the `Statistics ID` follows the format of `<tableName_stats_{incremental_number}>`.  
--->
-
 ## Create an alias name {#alias-name}
 
-<!-- Since the filter condition and the column list can target a large amount of data, it is unreasonable to return the computed data directly in the console output. Instead, a `Statistics ID` is used to store this calculated information or you can provide an alias name to reference the results. If you do not provide an alias name in advance, Query Service automatically generates a name for the `Statistics ID` that follows the format of `<tableName_stats_{incremental_number}>`. -->
-
 Since the results of calculations can be a large amount of data, it is unreasonable to return the computed data directly in the console output. Although alias names are optional, you are recommended to use them as best practice when you compute statistics. Provide an alias name in the statement to descriptively reference the results in your SQL queries. Alternatively, an automatically generated `Statistics ID` is generated and used to store the calculated information. 
-
-<!-- To conveniently reference the results of your analysis, you can provide an alias name or use the `Statistics ID` for use with the `SHOW STATISTICS` command.  -->
 
 The example below stores the output computed statistics in the `alias_name` for later reference. The alias name used in the query is available for reference as soon as the `ANALYZE TABLE` command has been run.
 
@@ -54,13 +46,7 @@ The example below stores the output computed statistics in the `alias_name` for 
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS AS alias_name;
 ```
 
-<!-- ```sql
-ANALYZE TABLE adc_geometric COMPUTE STATISTICS FOR ALL COLUMNS as alias_name;
-``` -->
-
 The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response to the analyze table compute statistics command. To see the detailed results, you must use a SELECT query on the alias name or Statistics ID. 
-
-<!-- See the [Show results section](#show-results) for more details on this feature. -->
 
 ## View the output of computed statistics {#view-output-of-computed-statistics}
 
