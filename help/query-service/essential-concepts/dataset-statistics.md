@@ -83,18 +83,19 @@ You can then **query the computed statistics directly** by referencing the `Stat
 SELECT * FROM adc_geometric_stats_1; 
 ```
 
-To see the output in full, you must use the `SHOW STATISTICS` command. This command displays a list of all the computed statistics within the session. Instructions on [how to show the statistics](#show-statistics) are provided later in the document. 
+To see the output in full, you must use the `SHOW STATISTICS` command.
 
-An example output of the `SHOW STATISTICS` command is seen below.
+## Show the statistics {#show-statistics}
+
+You can use the `SHOW STATISTICS` command on its own to displays a list of all the computed statistics within the session. An example output of the `SHOW STATISTICS` command is seen below.
 
 ```console
 statsId | tableName | columnSet | filterContext | timestamp
------------+---------------+-----------+---------------------------------------+---------------
+--------+-----------+-----------+---------------+---------------
 adc_geometric_stats_1 | adc_geometric | (age) | | 25/06/2023 09:22:26
 demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
+age_stats | castedtitanic | (age) | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
-
-## Show the statistics {#show-statistics}
 
 You can use the statistics ID or alias name to look up the computed statistics with the `SHOW STATISTICS` command at any time within that session. The statistics ID and the statistics generated are only valid for this particular session and cannot be accessed across different PSQL sessions. The computed statistics are not currently persistent. To display the statistics, use the command seen below.
 
