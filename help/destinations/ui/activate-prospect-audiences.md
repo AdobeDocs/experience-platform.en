@@ -11,7 +11,7 @@ description: Learn how to activate prospect audiences to destinations
 >
 >This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Contact your Adobe representative for more information. 
 
-This article explains the workflow required to export [prospect audiences](/insert-link.md) from Adobe Experience Platform. 
+This article explains the workflow required to export [prospect audiences](/insert-link.md) from Adobe Experience Platform to your preferred destination. 
 
 ## Supported destinations {#supported-destinations}
 
@@ -44,7 +44,7 @@ Follow the instructions to select a destination where you can export your datase
   >
   >The destinations that can export profile audiences are indicated with an icon in the catalog, similar to the destination highlighted below, or you can use the data type filter, as shown higher on the page.
 
-    ![Destination catalog tab with Activate control highlighted.](/help/destinations/assets/ui/export-datasets/activate-button.png)
+  ![Amazon S3 destination page that can export profile audiences highlighted.](/help/destinations/assets/ui/activate-prospect-audiences/amazon-s3-icon-activate-prospect-audiences.png)
 
 1. Select **[!UICONTROL Data type Prospects]** and select the destination connection that you want to export datasets to, then select **[!UICONTROL Next]**.
 
@@ -52,13 +52,13 @@ Follow the instructions to select a destination where you can export your datase
   > 
   >If you want to set up a new destination to activate prospect audiences, select **[!UICONTROL Configure new destination]** to trigger the [Connect to destination](/help/destinations/ui/connect-destination.md) workflow. 
 
-  ![Destination activation workflow with Datasets control highlighted.](/help/destinations/assets/ui/export-datasets/select-datatype-datasets.png)
+  ![Destination activation workflow with Prospects control highlighted.](/help/destinations/assets/ui/activate-prospect-audiences/activate-prospects-highlighted.png)
 
-1. The **[!UICONTROL Select datasets]** view appears. Proceed to the next section to [select your profile audiences](#select-profile-audiences) for export.
+1. Proceed to the next section to [select your profile audiences](#select-profile-audiences) for export.
 
 ## Select your profile audiences {#select-datasets}
 
-Use the check boxes to the left of the prospect audiences names to select the audiences that you want to export to the destination, then select **[!UICONTROL Next]**. Note that only the prospect audiences are shown in this view, and no other audiences are displayed
+Use the check boxes to the left of the prospect audiences names to select the audiences that you want to export to the destination, then select **[!UICONTROL Next]**. Note that only the prospect audiences are shown in this view, and no other audiences are displayed. 
 
 ![Dataset export workflow showing the Select datasets step where you can select which datasets to export.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
