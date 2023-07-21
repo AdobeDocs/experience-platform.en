@@ -80,7 +80,7 @@ To connect to this destination, follow the steps described in the [destination c
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="Private SSH key"
->abstract="The private SSH key must be formatted as a Base64-encoded string and must not be password-protected."
+>abstract="The private SSH key must be an RSA-formatted, Base64-encoded string, and must not be password-protected."
 
 If you select the **[!UICONTROL SFTP with password]** authentication type to connect to your SFTP location:
 
@@ -102,7 +102,7 @@ If you select the **[!UICONTROL SFTP with SSH key]** authentication type to conn
 * **[!UICONTROL Domain]**: Fill in the IP address or the domain name of your SFTP account
 * **[!UICONTROL Port]**: The port used by your SFTP storage location;
 * **[!UICONTROL Username]**: The username to log into your SFTP storage location;
-* **[!UICONTROL SSH Key]**: The private SSH key used to log into your SFTP storage location. The private key must be formatted as a Base64-encoded string and must not be password-protected.
+* **[!UICONTROL SSH Key]**: The private SSH key used to log into your SFTP storage location. The private key must be an RSA-formatted, Base64-encoded string, and must not be password-protected.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
     ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
