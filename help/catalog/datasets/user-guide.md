@@ -44,7 +44,7 @@ Select the name of a dataset from the [!UICONTROL Browse] tab to access its **[!
 
 ## Inline dataset actions {#inline-actions}
 
-The datasets UI now offers a collections of inline actions for each available dataset. Select the ellipsis of a dataset that you want to manage to see the available options in a pop-up menu. The available actions include; [[!UICONTROL Preview dataset]](#preview), [[!UICONTROL Manage data and access labels]](#manage-and-enforce-data-governance), [[!UICONTROL Enable unified profile]](#enable-profile), [[!UICONTROL Manage tags]](#add-tags), and [[!UICONTROL Delete]](#delete). More information on these available actions can be found in their respective sections.
+The datasets UI now offers a collections of inline actions for each available dataset. Select the ellipsis of a dataset that you want to manage to see the available options in a pop-up menu. The available actions include; [[!UICONTROL Preview dataset]](#preview), [[!UICONTROL Manage data and access labels]](#manage-and-enforce-data-governance), [[!UICONTROL Enable unified profile]](#enable-profile), [[!UICONTROL Manage tags]](#add-tags), [[!UICONTROL Move to folders]](#move-to-folders), and [[!UICONTROL Delete]](#delete). More information on these available actions can be found in their respective sections.
 
 ### Add dataset tags {#add-tags}
 
@@ -200,6 +200,16 @@ Datasets that have been enabled for Profile can also be filtered on this criteri
 You can manage the data governance labels for a dataset by selecting the inline options of the [!UICONTROL Browse] tab. Select the ellipses next to the dataset name you wish to manage, followed by **[!UICONTROL Manage data and access labels]** from the dropdown menu.
 
 Data usage labels, applied at the schema level, allow you to categorize datasets and fields according to usage policies that apply to that data. See the [Data Governance overview](../../data-governance/home.md) to learn more about labels, or refer to the [data usage labels user guide](../../data-governance/labels/overview.md) for instructions on how to apply labels to schemas for propagation to datasets.
+
+### Move to folders {#move-to-folders}
+
+You can place datasets within folders for better dataset management. To move a dataset into a folder, Select the ellipses next to the dataset name you wish to manage, followed by **[!UICONTROL Move to folder]** from the dropdown menu.
+
+![The datasets dashboard with the ellipses and [!UICONTROL Move to folder] highlighted.]()
+
+The [!UICONTROL Move] dataset to folder dialog appears. Select the folder you want to move the audience to, then select **[!UICONTROL Move]**.
+
+
 
 ## Delete a dataset {#delete}
 
