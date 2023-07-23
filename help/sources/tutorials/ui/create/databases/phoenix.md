@@ -24,12 +24,12 @@ In order to access your [!DNL Phoenix] account on Experience Platform, you must 
 
 | Credential | Description |
 | --- | --- |
-| `host` | The IP address or hostname of the [!DNL Phoenix] server. |
-| `port` | The TCP port that the [!DNL Phoenix] server uses to listen for client connections. If you connect to [!DNL Azure HDInsights], specify the port as 443. |
-| `httpPath` | The partial URL corresponding to the [!DNL Phoenix] server. Specify /hbasephoenix0 if you are using the [!DNL Azure HDInsights] cluster. |
-| `username` | The username that you use to access the [!DNL Phoenix] server. |
-| `password` | The password that corresponds to the user. |
-| `enableSsl` | A toggle that specifies whether he connections to the server are encrypted using SSL. |
+| Host | The IP address or hostname of the [!DNL Phoenix] server. |
+| Port | The TCP port that the [!DNL Phoenix] server uses to listen for client connections. If you are connecting to [!DNL Azure HDInsights], then specify the port as 443. If this parameter is unprovided, the value defaults to 8765. |
+| HTTP Path | The partial URL corresponding to the [!DNL Phoenix] server. Specify /hbasephoenix0 if you are using the [!DNL Azure HDInsights] cluster. |
+| Username | The username that you use to access the [!DNL Phoenix] server. |
+| Password | The password that corresponds to the user. |
+| Enable SSL | A toggle that specifies whether the connections to the server are encrypted using SSL. |
 
 For more information about getting started, refer to [this [!DNL Phoenix] document](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 
@@ -57,13 +57,13 @@ The **[!UICONTROL Connect to Phoenix]** page appears. On this page, you can eith
 
 To use an existing account, select [!UICONTROL Existing account] and then select the account that you want to use from the list that appears. When finished, select [!UICONTROL Next] to proceed.
 
-![existing](../../../../images/tutorials/create/phoenix/existing.png)
+![A list of authenticated Phoenix database accounts that already exist in your organization.](../../../../images/tutorials/create/phoenix/existing.png)
 
 >[!TAB Create a new Phoenix account]
 
 To use a new account, select [!UICONTROL New account] and provide a name, description, and your [!DNL Phoenix] authentication credentials. When finished, select [!UICONTROL Connect to source] and allow for a few seconds for the new connection to establish.
 
-![connect](../../../../images/tutorials/create/phoenix/new.png)
+![The new account interface where you can provide authentication credentials and create a Phoenix account.](../../../../images/tutorials/create/phoenix/new.png)
 
 >[!ENDTABS]
 
