@@ -89,21 +89,9 @@ The computed statistics output might look similar to the example below.
 
 ## Show the statistical analysis metadata {#show-statistics}
 
-You can use the `SHOW STATISTICS` command on its own to display the metadata for any statistics tables generated in the session. This command can hep you refine the scope of your statistical analysis. 
+You can use the `SHOW STATISTICS` command to display the metadata for all the temporary statistics tables generated in the session. This command can help you refine the scope of your statistical analysis. 
 
-To display the statistical analysis metadata for particular tables, use the statement format seen below.
-
-```sql
-SHOW STATISTICS FOR adc_geometric_stats_1;
-```
-
-Or
-
-```sql
-SHOW STATISTICS FOR alias_name;
-```
-
-The `SHOW STATISTICS` command list all the temporary statistics tables generated in that session. An example output is seen below.
+An example output of `SHOW STATISTICS` is seen below.
 
 ```console
 statsId | tableName | columnSet | filterContext | timestamp
