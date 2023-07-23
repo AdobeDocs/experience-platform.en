@@ -207,9 +207,9 @@ You can place datasets within folders for better dataset management. To move a d
 
 ![The datasets dashboard with the ellipses and [!UICONTROL Move to folder] highlighted.]()
 
-The [!UICONTROL Move] dataset to folder dialog appears. Select the folder you want to move the audience to, then select **[!UICONTROL Move]**.
+The [!UICONTROL Move] dataset to folder dialog appears. Select the folder you want to move the audience to, then select **[!UICONTROL Move]**. 
 
-
+![The Move dataset dialog with Move highlighted.]()
 
 ## Delete a dataset {#delete}
 
