@@ -205,7 +205,7 @@ Data usage labels, applied at the schema level, allow you to categorize datasets
 
 You can place datasets within folders for better dataset management. To move a dataset into a folder, select the ellipses next to the dataset name you wish to manage, followed by **[!UICONTROL Move to folder]** from the dropdown menu.
 
-![The datasets dashboard with the ellipses and [!UICONTROL Move to folder] highlighted.](../images/datasets/user-guide/move-to-folder.png)
+![The [!UICONTROL Datasets] dashboard with the ellipses and [!UICONTROL Move to folder] highlighted.](../images/datasets/user-guide/move-to-folder.png)
 
 The [!UICONTROL Move] dataset to folder dialog appears. Select the folder you want to move the audience to, then select **[!UICONTROL Move]**. A popup notification informs you that the dataset  move has been successful.
 
@@ -218,7 +218,7 @@ The [!UICONTROL Move] dataset to folder dialog appears. Select the folder you wa
 
 Once the dataset is in a folder, you can choose to only display datasets that belong to a specific folder. To open your folder structure, select the show folders icon (![The show folders icon](../images/datasets/user-guide/show-folders-icon.png)). Next, select your chosen folder to see all associated datasets.
 
-![The datasets dashboards with the datasets folder structure displayed, the show folders icon, and a selected folder highlighted.](../images/datasets/user-guide/folder-structure.png)
+![The [!UICONTROL Datasets] dashboards with the datasets folder structure displayed, the show folders icon, and a selected folder highlighted.](../images/datasets/user-guide/folder-structure.png)
 
 ## Delete a dataset {#delete}
 
