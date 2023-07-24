@@ -11,11 +11,11 @@ description: Learn how to activate prospect audiences to destinations
 >
 >This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Contact your Adobe representative for more information. 
 
-This article explains the workflow required to export [prospect audiences](/insert-link.md) from Adobe Experience Platform to your preferred destination. 
+This article explains the workflow required to export [prospect audiences](/help/segmentation/ui/prospect-audience.md) from Adobe Experience Platform to your preferred destination. 
 
 ## Supported destinations {#supported-destinations}
 
-Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab. Use the **[!UICONTROL Data types]** filter and select **[!UICONTROL Prospects]** to see the destinations which support the activation of prospect audiences. Currently, exporting prospect audiences is available only to the [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) destination.  
+Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select the **[!UICONTROL Catalog]** tab. Use the **[!UICONTROL Data types]** filter and select **[!UICONTROL Prospects]** to see the destinations which support the activation of prospect audiences. Currently, exporting prospect audiences is available only to the [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) destination.  
 
 ![Destinations which support dataset exports](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
@@ -46,7 +46,7 @@ Follow the instructions to select a destination where you can export your datase
 
   ![Amazon S3 destination page that can export profile audiences highlighted.](/help/destinations/assets/ui/activate-prospect-audiences/amazon-s3-icon-activate-prospect-audiences.png)
 
-1. Select **[!UICONTROL Data type Prospects]** and select the destination connection that you want to export datasets to, then select **[!UICONTROL Next]**.
+1. Select **[!UICONTROL Data type Prospects]**, followed by the destination connection that you want to export datasets to, then select **[!UICONTROL Next]**.
 
   >[!TIP]
   > 
