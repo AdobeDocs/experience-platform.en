@@ -97,7 +97,7 @@ Select **[!UICONTROL Datastreams]** in the left navigation. From here, you can s
 
 ![Datastreams](./images/e2e/datastreams.png)
 
-The configuration requirements for a datastream depend on which products and capabilities you are sending data to. For detailed information on the configuration options for each product, refer to the [datastreams overview](../edge/datastreams/overview.md).
+The configuration requirements for a datastream depend on which products and capabilities you are sending data to. For detailed information on the configuration options for each product, refer to the [datastreams overview](../datastreams/overview.md).
 
 ## Install and configure the Web SDK {#install}
 
