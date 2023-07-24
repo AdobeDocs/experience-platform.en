@@ -12,7 +12,7 @@ This helps you trigger different datastream behaviors than the default ones, wit
 Datastream configuration override is a two step process:
 
 1. First, you must define your datastream configuration overrides in the [datastream configuration page](configure.md).
-2. Then, you must send the overrides to the Edge Network either via a Web SDK command, or by using the Web SDK [tag extension](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+2. Then, you must send the overrides to the Edge Network either via a Web SDK command, or by using the Web SDK [tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 This article explains the end-to-end datastream configuration override process for every type of supported override.
 
@@ -31,7 +31,7 @@ To configure datastream overrides for an Adobe Target datastream, you must first
 
 Once you've created the datastream, edit the [Adobe Target](configure.md#target) service that you have added and use the **[!UICONTROL Property Token Overrides]** section to add the desired datastream overrides, as shown in the image below. Add one property token per line.
 
-![Datastreams UI screenshot showing the Adobe Target service settings, with the property token overrides highlighted.](../assets/datastreams/overrides/override-target.png)
+![Datastreams UI screenshot showing the Adobe Target service settings, with the property token overrides highlighted.](assets/overrides/override-target.png)
 
 After you've added the desired overrides, save your datastream settings.
 
@@ -45,7 +45,7 @@ Once you've created the datastream, edit the [Adobe Analytics](configure.md#targ
 
 Select **[!UICONTROL Show Batch Mode]** to enable batch editing of the report suite overrides. You can copy and paste a list of report suite overrides, entering one report suite per line.
 
-![Datastreams UI screenshot showing the Adobe Analytics service settings, with the report suite overrides highlighted.](../assets/datastreams/overrides/override-analytics.png)
+![Datastreams UI screenshot showing the Adobe Analytics service settings, with the report suite overrides highlighted.](assets/overrides/override-analytics.png)
 
 After you've added the desired overrides, save your datastream settings.
 
@@ -57,7 +57,7 @@ To configure datastream overrides for Experience Platform event datasets, you mu
 
 Once you've created the datastream, edit the [Adobe Experience Platform](configure.md#aep) service that you have added and select the **[!UICONTROL Add Event Dataset]** option to add one or more override event datasets, as shown in the image below.
 
-![Datastreams UI screenshot showing the Adobe Experience Platform service settings, with the event dataset overrides highlighted.](../assets/datastreams/overrides/override-aep.png)
+![Datastreams UI screenshot showing the Adobe Experience Platform service settings, with the event dataset overrides highlighted.](assets/overrides/override-aep.png)
 
 After you've added the desired overrides, save your datastream settings.
 
@@ -75,7 +75,7 @@ Then, use the **[!UICONTROL Container ID Overrides]** section to add the contain
 >
 >Container IDs must be numeric values, like `1234567`, and not strings, such as `"1234567"`. If you send a string value through the Web SDK as a container ID override, you will receive an error.
 
-![Datastreams UI screenshot showing the datastream settings, with the third party ID sync container overrides highlighted.](../assets/datastreams/overrides/override-container.png)
+![Datastreams UI screenshot showing the datastream settings, with the third party ID sync container overrides highlighted.](assets/overrides/override-container.png)
 
 After you've added the desired overrides, save your datastream settings.
 
@@ -85,7 +85,7 @@ You should now have the ID sync container overrides configured. Now you can [sen
 
 >[!NOTE]
 >
->As an alternative to sending the configuration overrides via Web SDK commands, you can add the configuration overrides to the Web SDK [tag extension](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+>As an alternative to sending the configuration overrides via Web SDK commands, you can add the configuration overrides to the Web SDK [tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 After [configuring the datastream overrides](#configure-overrides) in the Data Collection UI, you can now send the overrides to the Edge Network, via the Web SDK.
 
@@ -95,13 +95,13 @@ The datastream configuration overrides are sent to the Edge Network through the 
 
 The `edgeConfigOverrides` command creates datastream overrides that are passed on to the [!DNL Edge Network] on the next command, or, in the case of `configure`, for every request.
 
-When a configuration override is sent with the `configure` command, it is included on the following supported commands.
+When a configuration override is sent with the `configure` command, it is included on the following Web SDK commands.
 
-* [sendEvent](../fundamentals/tracking-events.md)
-* [setConsent](../consent/iab-tcf/overview.md)
-* [getIdentity](../identity/overview.md)
-* [appendIdentityToUrl](../identity/id-sharing.md#cross-domain-sharing)
-* [configure](../fundamentals/configuring-the-sdk.md)
+* [sendEvent](../edge/fundamentals/tracking-events.md)
+* [setConsent](../edge/consent/iab-tcf/overview.md)
+* [getIdentity](../edge/identity/overview.md)
+* [appendIdentityToUrl](../edge/identity/id-sharing.md#cross-domain-sharing)
+* [configure](../edge/fundamentals/configuring-the-sdk.md)
 
 Options specified globally can be overridden by the configuration option on individual commands.
 
