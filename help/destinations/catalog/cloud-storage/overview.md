@@ -60,3 +60,7 @@ Folder path in your storage location: `acme/campaigns/2021/Luxury Audience/25768
 ## Data export type {#export-type}
 
 Cloud storage destinations support **Profile-based export**. This means that you are exporting details about the individuals in the audience. These details are needed for personalization and can include attributes, events, audience memberships, and more.
+
+## Next steps {#next-steps}
+
+After selecting which one of the [supported cloud destinations](#supported-destinations) you would like to use, read the [connect to destinations tutorial](/help/destinations/ui/connect-destination.md) to learn how to establish a connection to the destination. Then, read the activation tutorial to file-based destinations to learn how to start [exporting](/help/destinations/ui/activate-batch-profile-destinations.md) data to your cloud storage destination.
