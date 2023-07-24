@@ -1,6 +1,8 @@
 ---
 title: Create a SAP Commerce source connection in the UI
 description: Learn how to create a SAP Commerce source connection using the Adobe Experience Platform UI.
+hide: true
+hidefromtoc: true
 badge: Beta
 ---
 # Create a [!DNL SAP Commerce] source connection in the UI
