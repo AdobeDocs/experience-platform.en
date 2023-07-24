@@ -1,24 +1,19 @@
 ---
-title: (Alpha) [!DNL LiveRamp SFTP] connection
+title: [!DNL LiveRamp SFTP] connection
 description: Learn how to use the LiveRamp connector to onboard audiences from Adobe Real-Time Customer Data Platform to LiveRamp Connect.
 hidefromtoc: yes
 hide: yes
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
 ---
-# (Alpha) [!DNL LiveRamp - SFTP] connection {#liveramp-destination}
+# [!DNL LiveRamp - SFTP] connection {#liveramp-destination}
 
 Use the LiveRamp connection to onboard audiences from Adobe Real-Time Customer Data Platform to [!DNL LiveRamp Connect].
-
->[!IMPORTANT]
->
-><p>This destination connection is currently in alpha stage and only available to a limited selection of customers. The functionality and documentation are subject to change.</p>
-><p>The final version of this destination connection may require customer migration.</p>
 
 ## Use cases {#use-cases}
 
 To help you better understand how and when you should use the [!DNL LiveRamp SFTP] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
 
-As a marketer, I want to send audiences from Adobe Experience Platform to onboard identities into [!DNL LiveRamp Connect] so that I can target users on [!DNL CTV] platforms, using the [!DNL Ramp ID] identifier. 
+As a marketer, I want to send audiences from Adobe Experience Platform to onboard identities into [!DNL LiveRamp Connect] so that I can target users on Mobile, Open Web, Social, and [!DNL CTV] platforms, using the [!DNL Ramp ID] identifier. 
 
 ## Prerequisites {#prerequisites}
 
@@ -92,7 +87,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Folder path]**: The path to the [!DNL LiveRamp] `uploads` subfolder that will host the exported files. The `uploads` prefix is automatically added to the folder path.
+*  **[!UICONTROL Folder path]**: The path to the [!DNL LiveRamp] `uploads` subfolder that will host the exported files. The `uploads` prefix is automatically added to the folder path. LiveRamp recommends creating a dedicated subfolder for deliveries from Adobe Real-Time CDP to keep the files separate from any other existing feeds and to ensure all automation runs smoothly. 
     *  For example, if you want to export your files to `uploads/my_export_folder`, type in `my_export_folder` in the **[!UICONTROL Folder path]** field.
 *  **[!UICONTROL Compression format]**: Select the compression type that Experience Platform should use for the exported files. Available options are **[!UICONTROL GZIP]** or **[!UICONTROL None]**.
 *  **[!UICONTROL Encryption subkey ID]**: The subkey used for encryption, based on the [!DNL LiveRamp] public encryption key. This field is required if you provided an encryption key in the [authentication](#authenticate) step. See the [!DNL LiveRamp] [encryption documentation](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) to learn how to obtain the subkey ID.
@@ -124,7 +119,7 @@ In the [!UICONTROL Scheduling] step, create an export schedule for each audience
 * Set the export time to **[!UICONTROL After segment evaluation]**. Scheduled audience exports and [on-demand file exports](../../ui/export-file-now.md) are currently not supported for the [!DNL LiveRamp] destination.
 * **[!UICONTROL Date]**: Select the export start and end times as you wish.
 
-![Platform UI screenshot showing the audience scheduling step.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
+![Platform UI screenshot showing the audience scheduling step.](help/destinations/assets/catalog/advertising/liveramp/liveramp_scheduling_screenshot.png)
 
 The exported file name is currently not user-configurable. All files exported to the [!DNL LiveRamp SFTP] destination are automatically named based on the following template:
 
@@ -147,6 +142,10 @@ In the **[!UICONTROL Mapping]** step, you can select which attributes and identi
 >This destination supports the activation of one source identity namespace per activation flow. If you need to export multiple identity namespaces, like `Email` and `Phone`, you must [create a separate activation flow](../../ui/activate-batch-profile-destinations.md) for each identity.
 
 In the **[!UICONTROL Mapping]** step, the **[!UICONTROL Target field]** mapping defines the name of the column header in the exported CSV file. You can change the CSV column headers in the exported file to any friendly name that you want, by providing a custom name for the **[!UICONTROL Target field]**.
+
+>[!IMPORTANT]
+>
+>For any changes made to the Target Field/Headers after your initial file delivery to LiveRamp, please notify your LiveRamp account team or [submit a ticket to LiveRamp Support](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#creating-a-support-case) to ensure the changes are reflected in the automation process.
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 
