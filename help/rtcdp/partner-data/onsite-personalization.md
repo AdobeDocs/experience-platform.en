@@ -52,11 +52,35 @@ An unauthenticated visitor might have moved recently into a new home and might b
 
 Read through the sections below which include links to further documentation, to complete each of the steps in the high-level overview above.
 
-### Implement event data collection on your web property 
+### Create a new identity namespace and schema for Partner ID
 
-First, you need to set up Web SDK on your web properties and set up datastreams, as well as tag properties
+First, you need to create a partner ID identity namespace. Read abput how to [create a partner ID identity namespace](/help/rtcdp/partner-data/prospecting.md#create-partner-id-namespace).
 
+Next, create an experience event schema to hold the time-series data that you will later be collecting from your web properties.
 
+As you create your schema, from the set of available field groups, add the following two into your schema. 
+
+* [Visit Web Page ](/help/xdm/field-groups/event/web-details.md)
+* [Identity Map ](/help/xdm/field-groups/profile/identitymap.md)
+ 
+#### Create a dataset and load sample prospect data
+
+Datasets > Create dataset 
+Choose the "Create dataset from schema" option
+Search for the schema you just created. Check to make sure it is enabled for profile and click Next. 
+Give the dataset a name and enable it for profile 
+  
+Step 18: Enable the dataset for profile. 
+
+### Implement event data collection on your web property - 
+
+You now need to set up Web SDK on your web properties and set up datastreams, as well as tag properties. 
+
+Note that this tutorial indicates how you can instrument your website with 
+
+### Integrate with Adobe Target or other custom personalization destination
+
+You are now ready to integrate with 
 
 ## Limitations and troubleshooting {#limitations-and-troubleshooting}
 
