@@ -28,7 +28,7 @@ This document is designed to help you activate profiles to your [!DNL Trade Desk
 
 ## Prerequisites {#prerequisites}
 
-Before you can activate segments to [!DNL The Trade Desk], you must contact your [!DNL The Trade Desk] account manager to sign the CRM Onboarding contract. [!DNL The Trade Desk] will then give permission and share your advertiser ID to configure your destination.  
+Before you can activate audiences to [!DNL The Trade Desk], you must contact your [!DNL The Trade Desk] account manager to sign the CRM Onboarding contract. [!DNL The Trade Desk] will then give permission and share your advertiser ID to configure your destination.  
 
 ## ID Matching Requirements {#id-matching-requirements}
 
@@ -67,8 +67,8 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (email or hashed email) used in the Trade Desk destination. |
-| Export frequency | **[!UICONTROL Daily Batch]** | As a profile is updated in Experience Platform based on segment evaluation, the profile (identities) are updated once a day downstream to the destination platform. Read more about [batch exports](/help/destinations/destination-types.md#file-based).|
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (email or hashed email) used in the Trade Desk destination. |
+| Export frequency | **[!UICONTROL Daily Batch]** | As a profile is updated in Experience Platform based on audience evaluation, the profile (identities) are updated once a day downstream to the destination platform. Read more about [batch exports](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
 
@@ -91,25 +91,25 @@ Before you can send, or activate, audience data to a destination, you must set u
 
 When connecting to the destination, setting a data governance policy is completely optional. Please review the Experience Platform [data governance overview](/help/data-governance/policies/overview.md) for more details.  
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
-Read [activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to a destination. 
+Read [activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audiences to a destination. 
 
-In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional. 
+In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each audience you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional. 
 
-![Platform UI screenshot to schedule segment activation.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![Platform UI screenshot to schedule audience activation.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE] 
 >
->All segments activated to [!DNL The Trade Desk] CRM Destination are automatically set to a daily frequency and full file export.
+>All audiences activated to [!DNL The Trade Desk] CRM Destination are automatically set to a daily frequency and full file export.
 
-![Platform UI screenshot to schedule segment activation.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![Platform UI screenshot to schedule audience activation.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
 In the **[!UICONTROL Mapping]** page, you must select attributes or identity namespaces from the source column and map to the target column.  
 
-![Platform UI screenshot to map segment activation.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![Platform UI screenshot to map audience activation.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
-Below is an example of correct identity mapping when activating segments to [!DNL The Trade Desk] CRM destination. 
+Below is an example of correct identity mapping when activating audiences to [!DNL The Trade Desk] CRM destination. 
 
 >[!IMPORTANT]
 >
@@ -127,11 +127,11 @@ Selecting target fields:
 
 ## Validate Data Export {#validate}
 
-To validate that data is correctly exported out of Experience Platform and into [!DNL The Trade Desk], please find the segments under the Adobe 1PD data tile within [!DNL The Trade Desk] Data Management Platform (DMP). Here are the steps to finding the corresponding ID within the [!DNL Trade Desk] UI: 
+To validate that data is correctly exported out of Experience Platform and into [!DNL The Trade Desk], please find the audiences under the Adobe 1PD data tile within [!DNL The Trade Desk] Data Management Platform (DMP). Here are the steps to finding the corresponding ID within the [!DNL Trade Desk] UI: 
 
 1. First, click on the **[!UICONTROL Data]** Tab, and review **[!UICONTROL First-Party]**.
 2. Scroll down the page, under **[!UICONTROL Imported Data]**, you will find the **[!UICONTROL Adobe 1PD Tile]**.
-3. Click on the**[!UICONTROL Adobe 1PD]** tile, and it will list out all segments activated to the [!DNL Trade Desk] destination for your advertiser. You may also use the search function.
+3. Click on the**[!UICONTROL Adobe 1PD]** tile, and it will list out all audiences activated to the [!DNL Trade Desk] destination for your advertiser. You may also use the search function.
 4. The Segment ID # from Experience Platform will appear as the Segment Name in the [!DNL Trade Desk] UI. 
 
 ## Data usage and governance {#data-usage-governance}

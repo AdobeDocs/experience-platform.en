@@ -31,7 +31,7 @@ Follow the steps below to update connection details to existing destinations.
 
     ![Filter destination accounts](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Select the ellipses (`...`) beside the name of the account you intend to update. A pop-up panel appears, providing options to **[!UICONTROL Activate segments]**, **[!UICONTROL Edit details]**, and **[!UICONTROL Delete]** the account. Select the ![Edit details button](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Edit details]** button to edit the account information.
+3. Select the ellipses (`...`) beside the name of the account you intend to update. A pop-up panel appears, providing options to **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]**, and **[!UICONTROL Delete]** the account. Select the ![Edit details button](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Edit details]** button to edit the account information.
 
     ![Edit account](../assets/ui/update-accounts/accounts-edit.png)
 

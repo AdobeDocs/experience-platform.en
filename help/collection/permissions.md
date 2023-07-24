@@ -30,7 +30,7 @@ Permissions under Adobe Experience Platform include access to datastreams, ident
 | Data Modeling | View Schemas | Grants read-only access to schemas. |
 | Identity Management | Manage Identity Namespaces | Grants the ability to view, create, and edit [identity namespaces](../identity-service/namespaces.md). |
 | Identity Management | View Identity Namespaces | Grants read-only access to identity namespaces. |
-| Data Collection | Manage Datastreams | Grants the ability to view, create, and edit [datastreams](../edge/datastreams/overview.md). |
+| Data Collection | Manage Datastreams | Grants the ability to view, create, and edit [datastreams](../datastreams/overview.md). |
 | Data Collection | View Datastreams | Grants read-only access to datastreams. |
 
 {style="table-layout:auto"}

@@ -24,7 +24,7 @@ The following Experience Platform services are involved with modeling Real-Time 
 * [[!DNL Real-Time Customer Profile]](home.md): Create unified consumer profiles using data from multiple sources.
 * [Identities](../identity-service/home.md): Bridge identities from disparate data sources as they are ingested into Platform.
 * [Schemas](../xdm/home.md): Experience Data Model (XDM) schemas are the standardized framework by which Platform organizes customer experience data.
-* [Segments](../segmentation/home.md): The segmentation engine within Platform is used to create segments from your customer profiles based on customer behaviors and attributes.
+* [Audiences](../segmentation/home.md): The segmentation engine within Platform is used to create audiences from your customer profiles based on customer behaviors and attributes.
 
 ## Limit types
 
@@ -102,14 +102,14 @@ The following guardrails refer to data size and provide recommended limits for d
 
 ## Segmentation guardrails
 
-The guardrails outlined in this section refer to the number and nature of segments an organization can create within Experience Platform, as well as mapping and activating segments to destinations.
+The guardrails outlined in this section refer to the number and nature of audiences an organization can create within Experience Platform, as well as mapping and activating audiences to destinations.
 
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
-| Segments per sandbox | 4000 | Soft | An organization can have more than 4000 segments in total, as long as there are less than 4000 segments in each individual sandbox. Attempting to create additional segments may affect system performance.|
-| Edge segments per sandbox | 150 | Soft | An organization can have more than 150 edge segments in total, as long as there are less than 150 edge segments in each individual sandbox. Attempting to create additional edge segments may affect system performance. | 
-| Streaming segments per sandbox | 500 | Soft | An organization can have more than 500 streaming segments in total, as long as there are less than 500 streaming segments in each individual sandbox. Attempting to create additional streaming segments may affect system performance.|
-| Batch segments per sandbox | 4000 | Soft | An organization can have more than 4000 batch segments in total, as long as there are less than 4000 batch segments in each individual sandbox. Attempting to create additional batch segments may affect system performance.|
+| Audiences per sandbox | 4000 | Soft | An organization can have more than 4000 audiences in total, as long as there are less than 4000 audiences in each individual sandbox. Attempting to create additional audiences may affect system performance.|
+| Edge audiences per sandbox | 150 | Soft | An organization can have more than 150 edge audiences in total, as long as there are less than 150 edge audiences in each individual sandbox. Attempting to create additional edge audiences may affect system performance. | 
+| Streaming audiences per sandbox | 500 | Soft | An organization can have more than 500 streaming audiences in total, as long as there are less than 500 streaming audiences in each individual sandbox. Attempting to create additional streaming audiences may affect system performance.|
+| Batch audiences per sandbox | 4000 | Soft | An organization can have more than 4000 batch audiences in total, as long as there are less than 4000 batch audiences in each individual sandbox. Attempting to create additional batch audiences may affect system performance.|
 
 {style="table-layout:auto"}
 
@@ -131,7 +131,7 @@ Time-independent attributes, also known as "record data" are modeled using [!DNL
 
 #### Dimension entity
 
-While the Profile data store maintaining profile data is not a relational store, Profile permits integration with small dimension entities in order to create segments in a simplified and intuitive manner. This integration is known as [multi-entity segmentation](../segmentation/multi-entity-segmentation.md).
+While the Profile data store maintaining profile data is not a relational store, Profile permits integration with small dimension entities in order to create audiences in a simplified and intuitive manner. This integration is known as [multi-entity segmentation](../segmentation/multi-entity-segmentation.md).
 
 Your organization may also define XDM classes to describe things other than individuals, such as stores, products, or properties. These non-[!DNL XDM Individual Profile] schemas are called "dimension entities" (also known as "lookup entities") and do not contain time-series data. Schemas that represent dimension entities are linked to profile entities through the use of [schema relationships](../xdm/tutorials/relationship-ui.md).
 

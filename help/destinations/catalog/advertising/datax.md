@@ -48,7 +48,7 @@ Read more about [Taxonomy Metadata](https://developer.verizonmedia.com/datax/gui
 
 >[!IMPORTANT]
 >
->When activating more than 100 segments to [!DNL Verizon Media/Yahoo DataX], you might receive rate limiting errors from the destination. When activating segments to this destination, try to activate less than 100 segments in one activation dataflow. If you need to activate more segments, create a new destination on the same account.
+>When activating more than 100 audiences to [!DNL Verizon Media/Yahoo DataX], you might receive rate limiting errors from the destination. When activating audiences to this destination, try to activate less than 100 audiences in one activation dataflow. If you need to activate more segments, create a new destination on the same account.
 
 [!DNL DataX] is rate-limited per the quota limits for taxonomy and audience posts outlined in the [DataX documentation](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 
@@ -77,14 +77,14 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (Email, GAID, IDFA) used in the Verizon Media destination.|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (Email, GAID, IDFA) used in the Verizon Media destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
 ## Use Cases {#use-cases}
 
-[!DNL DataX] APIs are available for advertisers that want to target a specific audience group keyed off email addresses in [!DNL Verizon Media] (VMG) can quickly create a new segment and push the desired audience group using VMG's near-real-time API.
+[!DNL DataX] APIs are available for advertisers that want to target a specific audience group keyed off email addresses in [!DNL Verizon Media] (VMG) can quickly create a new audience and push the desired audience group using VMG's near-real-time API.
 
 ## Connect to destination {#connect}
 
@@ -110,13 +110,13 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [Activate profiles and segments to a destination](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to destinations.
+Read [Activate profiles and audiences to a destination](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to destinations.
 
 ## Data usage and governance {#data-usage-governance}
 
