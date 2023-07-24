@@ -46,7 +46,7 @@ The [!UICONTROL Edge Domain] is the domain that the Adobe Experience Platform ex
 
 When a request is sent to the Adobe Experience Platform Edge Network, a datastream ID is used to reference the server-side configuration. You can update the configuration without having to make code changes on your website.
 
-See the guide on [datastreams](../../../../edge/datastreams/overview.md) for more information.
+See the guide on [datastreams](../../../../datastreams/overview.md) for more information.
 
 
 ## [!UICONTROL Privacy]
@@ -106,10 +106,10 @@ This helps you trigger different datastream behaviors than the default ones, wit
 
 Datastream configuration override is a two step process:
 
-1. First, you must define your datastream configuration overrides in the [datastream configuration page](../../../../edge/datastreams/configure.md).
+1. First, you must define your datastream configuration overrides in the [datastream configuration page](../../../../datastreams/configure.md).
 2. Then, you must send the overrides to the Edge Network either via a Web SDK command, or by using the Web SDK tag extension.
 
-See the datastream [configuration overrides documentation](../../../../edge/datastreams/overrides.md) for detailed instructions on how to override datastream configurations.
+See the datastream [configuration overrides documentation](../../../../datastreams/overrides.md) for detailed instructions on how to override datastream configurations.
 
 As an alternative to passing the overrides through a Web SDK command, you can configure the overrides in the tag extension screen shown below.
 
