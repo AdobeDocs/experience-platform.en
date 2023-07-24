@@ -208,11 +208,11 @@ In this step, you must select the profile attributes that you want to add to the
     
     ![Add new field control highlighted in the mapping workflow.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
-2. Select the arrow to the right of the **[!UICONTROL Source field]** entry.
+1. Select the arrow to the right of the **[!UICONTROL Source field]** entry.
 
     ![Select source field control highlighted in the mapping workflow.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
-3. In the **[!UICONTROL Select source field]** page, select the profile attributes and identities that you want to include in the exported files to the destination, then choose **[!UICONTROL Select]**.
+1. In the **[!UICONTROL Select source field]** page, select the profile attributes and identities that you want to include in the exported files to the destination, then choose **[!UICONTROL Select]**.
 
     >[!TIP] 
     > 
