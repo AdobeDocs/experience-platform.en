@@ -8,34 +8,36 @@ Learn how to use partner-provided probabilistic attributes to deliver personaliz
 
 ![Use partner-provided probabilistic attributes to deliver personalized experiences to your visitors.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
 
+## Industry example {#industry-example}
+
+As an example of how this use case might be implemented and a challenge that it solves, consider that your company is a home improvement brand and has low customer authentication rates. Yet, you still want to deliver personalized experiences to your unauthenticated visitors. 
+
+In a scenario, an unauthenticated visitor might have moved recently into a new home and might be looking for materials for DIY projects around the house. By leveraging partner-provided probabilistic data, on their first browsing session on your website or app, you can welcome the visitor with a 10% discount coupon for materials related to DIY projects.
+
 ## Prerequisites and planning {#prerequisites-and-planning}
 
 As you consider using partner-provided probabilistic attributes to deliver personalized experiences to your authenticated and unauthenticated visitors, consider the following prerequisites in your planning process:
-
 
 * What are the identifiers that are expected by the data vendor so they can layer on additional attributes?
 * Can you share some things to think about?
 
 ### UI functionality, Platform components, and Experience Cloud products that you will use {#ui-functionality-and-elements}
 
-As you complete the steps to implement the use case, you will make use of the following Real-Time CDP functionality, UI elements, and Experience Cloud products (listed in the order in which you will use them). Make sure that you have the necessary attribute-based access control permissions for all these areas or ask your system administrator to grant you the necessary permissions. 
+To successfully implement this use case, you must use multiple areas of Real-Time CDP and other Experience Cloud solutions. Make sure that you have the necessary attribute-based access control permissions for all these areas or ask your system administrator to grant you the necessary permissions. 
 
-* Web SDK
-* [Identities](/help/identity-service/namespaces.md)
-* [Schemas](/help/xdm/home.md)
-* [Data usage labels](/help/data-governance/labels/overview.md)
-* [Datasets](/help/catalog/datasets/overview.md)
-* [Sources](/help/sources/home.md)
-* Profiles (link to prospect profiles)
-* Edge segmentation
-* [Edge Personalization destinations](/help/destinations/home.md)
-* Adobe Target (or a personalization platform of your choice. This use case tutorial highlights Adobe Target)
-
-## Industry example {#industry-example}
-
-As an example of how this use case might be implemented, your company is a home improvement brand and has low customer authentication rates. Yet, you still want to deliver personalized experiences to your unauthenticated visitors. 
-
-An unauthenticated visitor might have moved recently into a new home and might be looking for materials for DIY projects around the house. By leveraging partner-provided probabilistic data, on their first browsing session on your website or app, you can welcome the visitor with a 10% discount coupon for materials related to DIY projects.
+* Data Collection
+  * Web SDK
+  * Tags
+  * Datastreams
+* Data Management in Real-Time CDP
+  * [Identities](/help/identity-service/namespaces.md)
+  * [Schemas](/help/xdm/home.md)
+  * [Data usage labels](/help/data-governance/labels/overview.md)
+  * [Datasets](/help/catalog/datasets/overview.md)
+* Web property personalization
+  * Edge segmentation
+  * [Edge Personalization destinations](/help/destinations/home.md)
+  * Adobe Target (or a personalization platform of your choice. This use case tutorial highlights Adobe Target)
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
@@ -54,14 +56,14 @@ Read through the sections below which include links to further documentation, to
 
 ### Create a new identity namespace and schema for Partner ID
 
-First, you need to create a partner ID identity namespace. Read abput how to [create a partner ID identity namespace](/help/rtcdp/partner-data/prospecting.md#create-partner-id-namespace).
+First, you need to create a partner ID identity namespace. Read about how to [create a partner ID identity namespace](/help/rtcdp/partner-data/prospecting.md#create-partner-id-namespace).
 
-Next, create an experience event schema to hold the time-series data that you will later be collecting from your web properties.
+Next, create an Experience Event schema to hold the time-series data that you will later be collecting from your web properties. Read abut how to [create a schema using the Experience Platform UI](/help/xdm/ui/resources/schemas.md#create) and make sure to use **[!UICONTROL XDM ExperienceEvent]** as the base class for the schema. 
 
-As you create your schema, from the set of available field groups, add the following two into your schema. 
+As you create your schema and [add field groups to it](/help/xdm/ui/resources/schemas.md#add-field-groups) from the set of available field groups, add the following two into your schema. 
 
-* [Visit Web Page ](/help/xdm/field-groups/event/web-details.md)
-* [Identity Map ](/help/xdm/field-groups/profile/identitymap.md)
+* [Visit Web Page](/help/xdm/field-groups/event/web-details.md)
+* [Identity Map](/help/xdm/field-groups/profile/identitymap.md)
  
 #### Create a dataset and load sample prospect data
 
@@ -74,13 +76,35 @@ Step 18: Enable the dataset for profile.
 
 ### Implement event data collection on your web property - 
 
+help/collection/home.md
+
+#### Create datastream
+
+Create a new datastream and in the Event schema field, select the schema that you created previously. 
+
+Select the event dataset you created earlier from the dropdown, and check the boxes 
+next to "Edge Segmenta(on" and "Personaliza(on Des(na(ons" and click Save. Not that you do 
+not have to select a profile dataset in this scenario since we're only bringing in event based 
+(me-series data.
+
+### Install WEB SDK 
+
+
+Use the solution switcher to navigate to Data Collection.
+
 You now need to set up Web SDK on your web properties and set up datastreams, as well as tag properties. 
 
-Note that this tutorial indicates how you can instrument your website with 
+Note that this tutorial indicates how you can instrument your website with WebSDK. You can also use Mobile SDK on your website to tailor the experience to your website visitors.
+
+For more information on installing WebSDK, see:
+
+https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=en
+
+
 
 ### Integrate with Adobe Target or other custom personalization destination
 
-You are now ready to integrate with 
+You are now ready to integrate with a personalization engine, to display personalized content to your website or app visitors. 
 
 ## Limitations and troubleshooting {#limitations-and-troubleshooting}
 
