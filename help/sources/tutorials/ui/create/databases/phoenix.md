@@ -33,11 +33,11 @@ In order to access your [!DNL Phoenix] account on Experience Platform, you must 
 
 For more information about getting started, refer to [this [!DNL Phoenix] document](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Phoenix] account to connect to Experience Platform.
+Once you have gathered your required credentials, you can follow the steps below to connect your [!DNL Phoenix] account to Experience Platform.
 
 ## Connect your [!DNL Phoenix] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the sources workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources available on the Experience Platform sources catalog.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the sources workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources available in the Experience Platform sources catalog.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find a specific source using the search option.
 
@@ -45,7 +45,11 @@ Select **[!UICONTROL Databases]** from the list of sources categories and then s
 
 >[!TIP]
 >
->Sources cards in the sources catalog may display different prompts depending on the status of the source. **[!UICONTROL Add data]** means that there are existing authenticated accounts associated with your selected source, while **[!UICONTROL Set up]** means that you must provide credentials and authenticate a new account.
+>Sources in the sources catalog may display different prompts depending on the status of the source.
+> 
+>* **[!UICONTROL Add data]** means that there are existing authenticated accounts associated with your selected source. 
+>
+>* **[!UICONTROL Set up]** means that you must provide credentials and authenticate a new account in order to use your selected source.
 
 ![The sources catalog on the Experience Platform UI with the Phoenix source card selected.](../../../../images/tutorials/create/phoenix/catalog.png)
 
