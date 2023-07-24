@@ -119,7 +119,7 @@ In the [!UICONTROL Scheduling] step, create an export schedule for each audience
 * Set the export time to **[!UICONTROL After segment evaluation]**. Scheduled audience exports and [on-demand file exports](../../ui/export-file-now.md) are currently not supported for the [!DNL LiveRamp] destination.
 * **[!UICONTROL Date]**: Select the export start and end times as you wish.
 
-![Platform UI screenshot showing the audience scheduling step.](help/destinations/assets/catalog/advertising/liveramp/liveramp_scheduling_screenshot.png)
+![Platform UI screenshot showing the audience scheduling step.](../../assets/catalog/advertising/liveramp/liveramp_scheduling_screenshot.png)
 
 The exported file name is currently not user-configurable. All files exported to the [!DNL LiveRamp SFTP] destination are automatically named based on the following template:
 
