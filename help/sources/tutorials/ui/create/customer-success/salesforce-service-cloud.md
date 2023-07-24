@@ -42,7 +42,7 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Select **[!UICONTROL Customer success]** from the list of sources categories and then select **[!UICONTROL Add data]** from the [!DNL Salesforce Service Cloud] card.
 
-![catalog](../../../../images/tutorials/create/salesforce-service-cloud/catalog.png)
+![The sources catalog on the Experience Platform UI with the Salesforce Service Cloud source card selected.](../../../../images/tutorials/create/salesforce-service-cloud/catalog.png)
 
 The **[!UICONTROL Connect to Salesforce Service Cloud]** page appears. On this page, you can either use new credentials or existing credentials.
 

@@ -18,7 +18,7 @@ This tutorial requires a working understanding of the following components of Ex
 
 If you already have an authenticated [!DNL Salesforce] account, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow for CRM data](../../dataflow/crm.md).
 
-### Gather required credentials
+### Gather required credentials {#gather-required-credentials}
 
 In order to authenticate your [!DNL Salesforce] account against Experience Platform, you must provide values that correspond to the following [!DNL Salesforce] credentials:
 
@@ -32,11 +32,11 @@ In order to authenticate your [!DNL Salesforce] account against Experience Platf
 
 For more information on authentication, refer to [this [!DNL Salesforce] authentication guide](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 
+Once you have gathered your required credentials, you can follow the steps below to connect your [!DNL Salesforce] account to Experience Platform.
+
 ## Connect your [!DNL Salesforce] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Salesforce] account to [!DNL Platform].
-
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the sources workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources available on the Experience Platform sources catalog.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the sources workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources available in the Experience Platform sources catalog.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find a specific source using the search option.
 
