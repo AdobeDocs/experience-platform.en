@@ -31,7 +31,7 @@ Follow the steps below to delete existing destination accounts.
 
     ![Filter destinations](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. Select the ellipses (`...`) beside the name of the account you intend to delete. A pop-up panel appears, providing options to **[!UICONTROL Activate segments]**, **[!UICONTROL Edit details]**, and **[!UICONTROL Delete]** the account. Select the ![Delete button](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Delete]** button to delete the desired account.
+3. Select the ellipses (`...`) beside the name of the account you intend to delete. A pop-up panel appears, providing options to **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]**, and **[!UICONTROL Delete]** the account. Select the ![Delete button](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Delete]** button to delete the desired account.
 
     ![Delete destination account](../assets/ui/delete-accounts/delete-accounts.png)
 

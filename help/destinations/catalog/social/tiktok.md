@@ -1,6 +1,6 @@
 ---
 title: TikTok connection
-description: Build custom audiences on TikTok with your data for targeting with your ad campaigns. These audiences could be of people who visited your website or interacted with your content. Quickly and securely push the desired segment from Adobe Experience Platform to TikTok using Adobe's real-time integration with TikTok Ads Manager.
+description: Build custom audiences on TikTok with your data for targeting with your ad campaigns. These audiences could be of people who visited your website or interacted with your content. Quickly and securely push the desired audience from Adobe Experience Platform to TikTok using Adobe's real-time integration with TikTok Ads Manager.
 last-substantial-update: 2023-03-20
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
 ---
@@ -8,7 +8,7 @@ exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
 
 ## Overview {#overview}
 
-Build custom audiences on TikTok with your data for targeting with your ad campaigns. These audiences could be of people who visited your website or interacted with your content. Quickly and securely push the desired segment from Adobe Experience Platform to TikTok using Adobe's real-time integration with TikTok Ads Manager. Visit [TikTok's business help center](https://ads.tiktok.com/help/article/audiences?lang=en) for more information. 
+Build custom audiences on TikTok with your data for targeting with your ad campaigns. These audiences could be of people who visited your website or interacted with your content. Quickly and securely push the desired audience from Adobe Experience Platform to TikTok using Adobe's real-time integration with TikTok Ads Manager. Visit [TikTok's business help center](https://ads.tiktok.com/help/article/audiences?lang=en) for more information. 
 
 >[!IMPORTANT]
 >
@@ -20,7 +20,7 @@ To help you better understand how and when you should use the TikTok destination
 
 ### Use case {#use-case-1}
 
-An athletic apparel brand wants to reach existing customers through their social media accounts. The apparel brand can ingest email addresses from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to TikTok to display ads in their customers' social media feeds.
+An athletic apparel brand wants to reach existing customers through their social media accounts. The apparel brand can ingest email addresses from their own CRM to Adobe Experience Platform, build audiences from their own offline data, and send these audiences to TikTok to display ads in their customers' social media feeds.
 
 ## Prerequisites {#prerequisites}
 
@@ -45,8 +45,8 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the TikTok destination.|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the TikTok destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
@@ -82,17 +82,17 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ### Map identities {#map}
 
-Below is an example of correct identity mapping when exporting segments to TikTok Ads Manager.
+Below is an example of correct identity mapping when exporting audiences to TikTok Ads Manager.
 
 Selecting source fields:
 
@@ -106,7 +106,7 @@ Selecting target fields:
 
 ## Exported data {#exported-data}
 
-Check your [!DNL TikTok Ads Manager] account (under **Assets > Audiences**) to verify if your Experience Platform segment was exported successfully. The audience will be populated as an audience type: `Partner Audience`.
+Check your [!DNL TikTok Ads Manager] account (under **Assets > Audiences**) to verify if your Experience Platform audience was exported successfully. The audience will be populated as an audience type: `Partner Audience`.
 
 ## Data usage and governance {#data-usage-governance}
 

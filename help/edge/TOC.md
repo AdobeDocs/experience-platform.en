@@ -21,14 +21,6 @@ feature: Web SDK
   * [Configure a CSP](fundamentals/configuring-a-csp.md)
   * [Interact with multiple properties](fundamentals/interacting-with-multiple-properties.md)
   * [User-Agent Client Hints](fundamentals/user-agent-client-hints.md)
-* Datastreams {#datastreams}
-  * [Overview](./datastreams/overview.md)
-  * [Configure a datastream](./datastreams/configure.md)
-  * [Configure datastream overrides](./datastreams/overrides.md)
-  * [Data Prep for Data Collection](./datastreams/data-prep.md)
-  * Data Enrichment {#data-enrichment}
-    * [Weather Data by The Weather Channel](./datastreams/data-enrichment/weather.md)
-    * [Weather data field mappings](./datastreams/data-enrichment/weather-reference.md)
 * Identity {#identity}
   * [Overview](identity/overview.md)
   * [First-party device IDs](identity/first-party-device-ids.md)
@@ -66,6 +58,7 @@ feature: Web SDK
     * [Overview](consent/iab-tcf/overview.md)
     * [Integrate with tags](consent/iab-tcf/with-launch.md)
     * [Integrate without tags](consent/iab-tcf/without-launch.md)
+* [Web SDK tag extension](web-sdk-tag-extension-overview.md)
 * [Release notes](release-notes.md)
 * [Frequently Asked Questions](web-sdk-faq.md)
 * [Resources](resources.md)

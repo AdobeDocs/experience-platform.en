@@ -32,14 +32,28 @@ LiveRamp SFTP supports the activation of identities such as PII-based identifier
 
 In the [mapping step](#map) of the activation workflow, you must define the target mappings as custom attributes.
 
+## Supported audiences {#supported-audiences}
+
+This section describes all the audiences that you can export to this destination.
+
+All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
+Additionally, this destination also supports the activation of the audiences described in the table below.
+
+| Audience type | Description | 
+---------|----------|
+| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#importing-an-audience) into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the [!DNL LiveRamp SFTP] destination.|
-| Export frequency | **[!UICONTROL Daily batch]** | As profiles are updated in Experience Platform based on segment evaluation, the profiles (identities) are updated once a day downstream to the destination platform. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL LiveRamp SFTP] destination.|
+| Export frequency | **[!UICONTROL Daily batch]** | As profiles are updated in Experience Platform based on audience evaluation, the profiles (identities) are updated once a day downstream to the destination platform. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
 
@@ -103,28 +117,28 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
 ### Scheduling {#scheduling}
 
-In the [!UICONTROL Scheduling] step, create an export schedule for each segment, with the settings shown below.
+In the [!UICONTROL Scheduling] step, create an export schedule for each audience, with the settings shown below.
 
 >[!IMPORTANT]
 >
->All segments activated to this destination must be configured with the exact same schedule, as shown below.
+>All audiences activated to this destination must be configured with the exact same schedule, as shown below.
 
 * **[!UICONTROL File export options]**: [!UICONTROL Export full files]. [Incremental file exports](../../ui/activate-batch-profile-destinations.md#export-incremental-files) are currently not supported for the [!DNL LiveRamp] destination.
 * **[!UICONTROL Frequency]**: [!UICONTROL Daily]
-* Set the export time to **[!UICONTROL After segment evaluation]**. Scheduled segment exports and [on-demand file exports](../../ui/export-file-now.md) are currently not supported for the [!DNL LiveRamp] destination.
+* Set the export time to **[!UICONTROL After segment evaluation]**. Scheduled audience exports and [on-demand file exports](../../ui/export-file-now.md) are currently not supported for the [!DNL LiveRamp] destination.
 * **[!UICONTROL Date]**: Select the export start and end times as you wish.
 
-![Platform UI screenshot showing the segment scheduling step.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
+![Platform UI screenshot showing the audience scheduling step.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
 
 The exported file name is currently not user-configurable. All files exported to the [!DNL LiveRamp SFTP] destination are automatically named based on the following template:
 
@@ -172,31 +186,32 @@ Your data is exported to the [!DNL LiveRamp SFTP] storage location that you conf
 
 When exporting files to the [!DNL LiveRamp SFTP] destination, Platform generates one CSV file for each [merge policy ID](../../../profile/merge-policies/overview.md).
 
-For example, let's consider the following segments:
+For example, let's consider the following audiences:
 
-* Segment A (Merge policy 1)
-* Segment B (Merge policy 2)
-* Segment C (Merge policy 1)
-* Segment D (Merge policy 1)
+* Audience A (Merge policy 1)
+* Audience B (Merge policy 2)
+* Audience C (Merge policy 1)
+* Audience D (Merge policy 1)
 
 Platform will export two CSV files to [!DNL LiveRamp SFTP]:
 
-* One CSV file containing segments A, C, and D;
-* One CSV file containing segment B.
+* One CSV file containing audiences A, C, and D;
+* One CSV file containing audience B.
 
-Exported CSV files contain profiles with the selected attributes and the corresponding segment status, on separate columns, with the attribute name and segment IDs as a column headers.
+Exported CSV files contain profiles with the selected attributes and the corresponding audience status, on separate columns, with the attribute name, and `audience_namespace:audience_ID` pairs as column headers, as shown in the example below:
 
-The profiles included in the exported files can match one the following segment qualification statuses:
+`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1:AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2:AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X:AUDIENCE_ID_X`
 
-* `Active`: The profile is currently qualified for the segment.
-* `Expired`: The profile is no longer qualified for the segment, but has qualified in the past.
-* `""`(empty string): The profile never qualfied for the segment.
+The profiles included in the exported files can match one the following audience qualification statuses:
 
+* `Active`: The profile is currently qualified for the audience.
+* `Expired`: The profile is no longer qualified for the audience, but has qualified in the past.
+* `""`(empty string): The profile never qualfied for the audience.
 
-For instance, an exported CSV file with one `email` attribute and 3 segments could look like this:
+For instance, an exported CSV file with one `email` attribute, two audiences originating from the Experience Platform [Segmentation Service](../../../segmentation/home.md), and one [imported](../../../segmentation/ui/overview.md#importing-an-audience) external audience, could look like this:
 
 ```csv
-email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
+email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e
 abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
@@ -205,11 +220,13 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
+In the example above, the `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` and `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` sections describe audiences originating from the Segmentation Service, while `CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e` describes an audience imported into Platform as a [custom upload](../../../segmentation/ui/overview.md#importing-an-audience).
+
 Since Platform generates one CSV file for each [merge policy ID](../../../profile/merge-policies/overview.md), it also generates a separate dataflow run for each merge policy ID.
 
-This means that the **[!UICONTROL Identities activated]** and **[!UICONTROL Profiles received]** metrics in the [dataflow runs](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) page are aggregated for each group of segments that use the same merge policy, instead of being displayed for each segment.
+This means that the **[!UICONTROL Identities activated]** and **[!UICONTROL Profiles received]** metrics in the [dataflow runs](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) page are aggregated for each group of audiences that use the same merge policy, instead of being displayed for each audience.
 
-As a consequence of dataflow runs being generated for a group of segments that use the same merge policy, the segment names are not displayed in the [monitoring dashboard](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
+As a consequence of dataflow runs being generated for a group of audiences that use the same merge policy, the audience names are not displayed in the [monitoring dashboard](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 
 ![Experience Platform UI screeshot showing the identities activated metric.](../../assets/catalog/advertising/liveramp/liveramp-metrics.png)
 

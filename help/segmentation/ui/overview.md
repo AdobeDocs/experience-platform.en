@@ -35,7 +35,7 @@ In the Experience Platform UI, select **[!UICONTROL Audiences]** in the left nav
 
 The **[!UICONTROL Audiences]** dashboard outlines key metrics related to your organization's audience data. 
 
-To learn more, visit the [audiences dashboard guide](../../dashboards/guides/segments.md).
+To learn more, visit the [audiences dashboard guide](../../dashboards/guides/audiences.md).
 
 ![The audience dashboard is displayed. It shows various widgets, including the audience size, profiles by identity, identity overlap, and the audience size change trend.](../../dashboards/images/segments/dashboard-overview.png)
 
