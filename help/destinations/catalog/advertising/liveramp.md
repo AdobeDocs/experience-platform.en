@@ -208,11 +208,10 @@ The profiles included in the exported files can match one the following audience
 * `Expired`: The profile is no longer qualified for the audience, but has qualified in the past.
 * `""`(empty string): The profile never qualfied for the audience.
 
-
 For instance, an exported CSV file with one `email` attribute, two audiences originating from the Experience Platform [Segmentation Service](../../../segmentation/home.md), and one [imported](../../../segmentation/ui/overview.md#importing-an-audience) external audience, could look like this:
 
 ```csv
-email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,audience-manager:7729e537-4e42-418e-be3b-dce5e47aaa1e
+email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e
 abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
@@ -221,7 +220,7 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-In the example above, the `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` and `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` sections describe audiences originating from the Segmentation Service, while `audience-manager:7729e537-4e42-418e-be3b-dce5e47aaa1e` describes an audience originating from Adobe Audience Manager, imported into Platform as a [custom upload](../../../segmentation/ui/overview.md#importing-an-audience).
+In the example above, the `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` and `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` sections describe audiences originating from the Segmentation Service, while `CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e` describes an audience imported into Platform as a [custom upload](../../../segmentation/ui/overview.md#importing-an-audience).
 
 Since Platform generates one CSV file for each [merge policy ID](../../../profile/merge-policies/overview.md), it also generates a separate dataflow run for each merge policy ID.
 
