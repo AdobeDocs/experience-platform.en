@@ -2,9 +2,9 @@
 title: Use partner-provided attributes to deliver personalized experiences
 description: Learn how to use partner-provided probabilistic attributes to deliver personalized experiences to your visitors.
 ---
-# Use partner-provided attributes to deliver personalized experiences
+# Use partner-provided attributes to deliver personalized experiences 
 
-Learn how to use partner-provided probabilistic attributes to deliver personalized experiences to your visitors.
+Learn how to use partner-provided probabilistic attributes to deliver personalized experiences to your web property visitors.
 
 ![Use partner-provided probabilistic attributes to deliver personalized experiences to your visitors.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
 
