@@ -16,6 +16,11 @@ The links when required:
 
 ## [!UICONTROL Customer AI distribution of scores] {#customer-ai-distribution-of-scores} 
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_distributionOfScores"
+>title="Distribution of scores"
+>abstract="This widget visualizes the distribution of the total number of profiles by their propensity scores in five percent increments. The distribution of the profile count is determined by the AI model and the selected merge policy. You can change the AI model from the dropdown menu under the widget title."
+
 The [!UICONTROL Customer AI distribution of scores] widget categorizes the total number of profiles by their propensity scores. The distribution of the profile count is determined by the AI model and the selected merge policy, then visualized in five percent increments that indicate their propensity. Profile propensity is color coded to high, medium, and low as green, yellow, and red respectively. The count of profiles is provided along the Y-axis, and the propensity scores are provided along the X-axis. 
 
 >[!NOTE]
@@ -39,6 +44,11 @@ The detailed model insights page appears.
 More information on Customer AI can be found on the [discover insights UI guide](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
 ## [!UICONTROL Customer AI scoring summary] {#customer-ai-scoring-summary}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_scoringSummary"
+>title="Scoring summary"
+>abstract="This widget displays the total number of scored profiles, and categorizes them into buckets containing high, medium, and low propensity. The donut chart illustrates the proportional composition of total profiles across high, medium, and low propensity."
 
 This widget displays the total number of profiles scored, and categorizes them into buckets containing high, medium, and low propensity as green, yellow, and red respectively. A donut chart illustrates the proportional composition of profiles between high, medium, and low propensities. A profile qualifies for high propensity at over 75, medium propensity between 25 and 74, and low propensity under 24. A legend indicates the colour code and thresholds of propensities. Profile counts for the high, medium, and low propensities are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
 
