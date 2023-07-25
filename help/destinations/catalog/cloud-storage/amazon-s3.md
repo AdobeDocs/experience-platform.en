@@ -7,7 +7,7 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 
 ## Destination changelog {#changelog}
 
-With the July 2023 Experience Platform release, the [!DNL Azure Blob] destination provides new functionality, as listed below:
+With the July 2023 Experience Platform release, the [!DNL Amazon S3] destination provides new functionality, as listed below:
 
 * [!BADGE Beta]{type=Informative} [Dataset export support](/help/destinations/ui/export-datasets.md).
 * Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
