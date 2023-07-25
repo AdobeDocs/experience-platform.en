@@ -1,34 +1,29 @@
 ---
-title: (Alpha) [!DNL LiveRamp SFTP] connection
+title: LiveRamp - Onboarding connection
 description: Learn how to use the LiveRamp connector to onboard audiences from Adobe Real-Time Customer Data Platform to LiveRamp Connect.
 hidefromtoc: yes
 hide: yes
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
 ---
-# (Alpha) [!DNL LiveRamp - SFTP] connection {#liveramp-destination}
+# [!DNL LiveRamp - Onboarding] connection {#liveramp-destination}
 
-Use the LiveRamp connection to onboard audiences from Adobe Real-Time Customer Data Platform to [!DNL LiveRamp Connect].
-
->[!IMPORTANT]
->
-><p>This destination connection is currently in alpha stage and only available to a limited selection of customers. The functionality and documentation are subject to change.</p>
-><p>The final version of this destination connection may require customer migration.</p>
+Use the [!DNL LiveRamp - Onboarding] connection to onboard audiences from Adobe Real-Time Customer Data Platform to [!DNL LiveRamp Connect].
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL LiveRamp SFTP] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL LiveRamp - Onboarding] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
 
 As a marketer, I want to send audiences from Adobe Experience Platform to onboard identities into [!DNL LiveRamp Connect] so that I can target users on [!DNL CTV] platforms, using the [!DNL Ramp ID] identifier. 
 
 ## Prerequisites {#prerequisites}
 
-The [!DNL LiveRamp - SFTP] connection exports files using [LiveRamp's SFTP](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html) storage.
+The [!DNL LiveRamp - Onboarding] connection exports files using [LiveRamp's SFTP](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html) storage.
 
-Before you can send data from Experience Platform to [!DNL LiveRamp SFTP], you need your [!DNL LiveRamp] credentials. Please reach out to your [!DNL LiveRamp] representative to obtain your credentials, if you don't already have them.
+Before you can send data from Experience Platform to [!DNL LiveRamp - Onboarding], you need your [!DNL LiveRamp] credentials. Please reach out to your [!DNL LiveRamp] representative to obtain your credentials, if you don't already have them.
 
 ## Supported identities {#supported-identities}
 
-LiveRamp SFTP supports the activation of identities such as PII-based identifiers, known identifiers, and custom IDs, described in the official [LiveRamp documentation](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers).
+[!DNL LiveRamp - Onboarding] supports the activation of identities such as PII-based identifiers, known identifiers, and custom IDs, described in the official [LiveRamp documentation](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers).
 
 In the [mapping step](#map) of the activation workflow, you must define the target mappings as custom attributes.
 
@@ -52,7 +47,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL LiveRamp SFTP] destination.|
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL LiveRamp - Onboarding] destination.|
 | Export frequency | **[!UICONTROL Daily batch]** | As profiles are updated in Experience Platform based on audience evaluation, the profiles (identities) are updated once a day downstream to the destination platform. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
@@ -73,8 +68,8 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 ![Sample screenshot showing how to authenticate to the destination using SFTP with password](../../assets/catalog/advertising/liveramp/liveramp-sftp-password.png)
 
-* **[!UICONTROL Username]**: The username for your [!DNL LiveRamp SFTP] storage location.
-* **[!UICONTROL Password]**: The password for your [!DNL LiveRamp SFTP] storage location.
+* **[!UICONTROL Username]**: The username for your [!DNL LiveRamp - Onboarding] storage location.
+* **[!UICONTROL Password]**: The password for your [!DNL LiveRamp - Onboarding] storage location.
 * **[!UICONTROL PGP/GPG encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below. If you provide an encryption key, you must also provide an **[!UICONTROL Encryption subkey ID]** in the [destination details](#destination-details) section.
 
     ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/advertising/liveramp/pgp-key.png)
@@ -83,10 +78,10 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 ![Sample screenshot showing how to authenticate to the destination using SSH key](../../assets/catalog/advertising/liveramp/liveramp-sftp-ssh.png)
 
-* **[!UICONTROL Username]**: The username for your [!DNL LiveRamp SFTP] storage location.
-* **[!UICONTROL SSH Key]**: The private [!DNL SSH] key used to log in to your [!DNL LiveRamp SFTP] storage location. The private key must be formatted as a [!DNL Base64]-encoded string and must not be password protected.
+* **[!UICONTROL Username]**: The username for your [!DNL LiveRamp - Onboarding] storage location.
+* **[!UICONTROL SSH Key]**: The private [!DNL SSH] key used to log in to your [!DNL LiveRamp - Onboarding] storage location. The private key must be formatted as a [!DNL Base64]-encoded string and must not be password protected.
 
-    * To connect your [!DNL SSH] key to the [!DNL LiveRamp SFTP] server, you must submit a ticket through [!DNL LiveRamp]'s technical support portal, and provide your public key. See more information in the [LiveRamp documentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
+    * To connect your [!DNL SSH] key to the [!DNL LiveRamp - Onboarding] server, you must submit a ticket through [!DNL LiveRamp]'s technical support portal, and provide your public key. See more information in the [LiveRamp documentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
 
 * **[!UICONTROL PGP/GPG encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. If you provide an encryption key, you must also provide an **[!UICONTROL Encryption subkey ID]** in the [destination details](#destination-details) section. View an example of a correctly formatted encryption key in the image below.
 
@@ -140,7 +135,7 @@ In the [!UICONTROL Scheduling] step, create an export schedule for each audience
 
 ![Platform UI screenshot showing the audience scheduling step.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
 
-The exported file name is currently not user-configurable. All files exported to the [!DNL LiveRamp SFTP] destination are automatically named based on the following template:
+The exported file name is currently not user-configurable. All files exported to the [!DNL LiveRamp - Onboarding] destination are automatically named based on the following template:
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
@@ -182,9 +177,9 @@ Once you've added all your desired mappings, select **[!UICONTROL Next]** and fi
 
 ## Exported data / Validate data export {#exported-data}
 
-Your data is exported to the [!DNL LiveRamp SFTP] storage location that you configured, as CSV files.
+Your data is exported to the [!DNL LiveRamp - Onboarding] storage location that you configured, as CSV files.
 
-When exporting files to the [!DNL LiveRamp SFTP] destination, Platform generates one CSV file for each [merge policy ID](../../../profile/merge-policies/overview.md).
+When exporting files to the [!DNL LiveRamp - Onboarding] destination, Platform generates one CSV file for each [merge policy ID](../../../profile/merge-policies/overview.md).
 
 For example, let's consider the following audiences:
 
@@ -193,7 +188,7 @@ For example, let's consider the following audiences:
 * Audience C (Merge policy 1)
 * Audience D (Merge policy 1)
 
-Platform will export two CSV files to [!DNL LiveRamp SFTP]:
+Platform will export two CSV files to [!DNL LiveRamp - Onboarding]:
 
 * One CSV file containing audiences A, C, and D;
 * One CSV file containing audience B.
@@ -232,9 +227,9 @@ As a consequence of dataflow runs being generated for a group of audiences that 
 
 ## Upload exported data to LiveRamp {#upload-to-liveramp}
 
-After your data was successfully exported to the [!DNL LiveRamp - SFTP] storage, you must upload the data to the [!DNL LiveRamp] platform.
+After your data was successfully exported to the [!DNL LiveRamp - Onboarding] storage, you must upload the data to the [!DNL LiveRamp] platform.
 
-For more information on how to upload your files from the [!DNL LiveRamp - SFTP] storage to a [!DNL LiveRamp] audience, see the following documentation: [Considerations When Uploading the First File to an Audience](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#considerations-when-uploading-the-first-file-to-an-audience).
+For more information on how to upload your files from the [!DNL LiveRamp - Onboarding] storage to a [!DNL LiveRamp] audience, see the following documentation: [Considerations When Uploading the First File to an Audience](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#considerations-when-uploading-the-first-file-to-an-audience).
 
 ## Data usage and governance {#data-usage-governance}
 
@@ -242,4 +237,4 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-For more details on how to configure your LiveRamp SFTP storage, see the [official documentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).
+For more details on how to configure your [!DNL LiveRamp - Onboarding] storage, see the [official documentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).
