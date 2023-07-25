@@ -772,6 +772,8 @@ A successful response returns HTTP status 200 with details of your newly created
 
 ### Create dynamic schema destination servers {#dynamic-schema-servers}
 
+Dynamic schemas allow you to dynamically retrieve the supported target attributes and generate schemas based on your own API. You need to configure a destination server for dynamic schemas before you can configure the schema.
+
 See in the tab below an example of a destination server for destinations which use [dynamic schemas](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
 
 The sample payload below includes all parameters required for a dynamic schema server.
