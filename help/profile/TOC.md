@@ -11,6 +11,7 @@ feature: Profiles
 * [Profile overview (Video)](video/profile-overview.md)
 * [[!DNL Profile] and Segmentation guardrails](guardrails.md)
 * [[!DNL Profile] dashboard](ui/profile-dashboard.md)
+* [Edge profiles](edge-profiles.md)
 * [Experience Event expirations](event-expirations.md)
 * [Pseudonymous Profile expirations](pseudonymous-profiles.md)
 * [!DNL Profile] API {#api}
