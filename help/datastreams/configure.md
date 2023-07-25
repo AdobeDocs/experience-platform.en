@@ -36,6 +36,12 @@ Select **[!UICONTROL Advanced Options]** to reveal additional controls to config
 
 ![Advanced configuration options](assets/configure/advanced-options.png) {#advanced-options}
 
+>[!IMPORTANT]
+>
+> You are responsible for ensuring you have obtained all necessary permissions, consents, clearances, and authorization required under applicable laws and regulations to collect, process, and transmit personal data, including precise geolocation information.
+> 
+> Your IP address obfuscation selection affects the level of geolocation information that will be retrieved. If no obfuscation is selected, geolocation lookups will be performed based on the full IP address. If partial obfuscation is selected, less precise geolocation lookups will be performed based on the remaining portion of the IP address. If full obfuscation is selected, no geolocation lookups will be performed.
+
 | Setting | Description |
 | --- | --- |
 | [!UICONTROL Geo Lookup] | Enables geolocation lookups for the selected options, based on the visitor IP address. Available options: <ul><li>Country</li><li>Postal Code</li><li>State/Provinde</li><li>DMA</li><li>City</li><li>Latitude </li><li>Longitude</li></ul>Selecting **[!UICONTROL City]**, **[!UICONTROL Latitude]**, or **[!UICONTROL Longitude]** provides coordinates up to two decimal points, regardless of what other options are selected. This is considered city-level granularity. <br> <br>Not selecting any option disables any geolocation lookups. Geolocation occurs before [!UICONTROL IP Obfuscation] and is not impacted by the  [!UICONTROL IP Obfuscation] setting.|
