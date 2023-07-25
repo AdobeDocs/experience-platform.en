@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;streaming segmentation;Streaming segmentation;Continuous evaluation;
 solution: Experience Platform
 title: Evaluate Events in Near Real-Time with Streaming Segmentation 
 description: This document contains examples on how to use streaming segmentation with the Adobe Experience Platform Segmentation Service API.
@@ -19,14 +18,14 @@ Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to d
 >
 >Streaming segmentation works on all data that was ingested using a streaming source. Segments ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation.
 >
->Additionally, segments evaluated with streaming segmentation may drift between ideal and actual membership if the segment is based off of another segment that is evaluated using batch segmentation. For example, if Segment A is based off of Segment B, and Segment B is evaluated using batch segmentation, since Segment B only updates every 24 hours, Segment A will move further away from the actual data until it re-syncs with the Segment B update.
+>Additionally, segment definitions evaluated with streaming segmentation may drift between ideal and actual membership if the segment definition is based off of another segment definition that is evaluated using batch segmentation. For example, if Segment A is based off of Segment B, and Segment B is evaluated using batch segmentation, since Segment B only updates every 24 hours, Segment A will move further away from the actual data until it re-syncs with the Segment B update.
 
 ## Getting started
 
 This developer guide requires a working understanding of the various [!DNL Adobe Experience Platform] services involved with streaming segmentation. Before beginning this tutorial, please review the documentation for the following services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified consumer profile in real time, based on aggregated data from multiple sources.
-- [[!DNL Segmentation]](../home.md): Provides the ability to create segments and audiences from your [!DNL Real-Time Customer Profile] data.
+- [[!DNL Segmentation]](../home.md): Provides the ability to create audiences using segment definitions and other external sources from your [!DNL Real-Time Customer Profile] data.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
@@ -63,7 +62,7 @@ Additional headers may be required to complete specific requests. The correct he
 >
 >You will need to enable scheduled segmentation for the organization in order for streaming segmentation to work. Information about enabling scheduled segmentation can be found in the [enable scheduled segmentation section](#enable-scheduled-segmentation)
 
-In order for a segment to be evaluated using streaming segmentation, the query must conform to the following guidelines.
+In order for a segment definition to be evaluated using streaming segmentation, the query must conform to the following guidelines.
 
 | Query type | Details |
 | ---------- | ------- |
@@ -92,15 +91,15 @@ Please note the following guidelines apply when doing streaming segmentation:
 
 If a segment definition is modified so it no longer meets the criteria for streaming segmentation, the segment definition will automatically switch from "Streaming" to "Batch".
 
-Additionally, segment unqualification, similarly to segment qualification, happens in real-time. As a result, if an audience no longer qualifies for a segment, it will be immediately unqualified. For example, if the segment definition asks for "All users who bought red shoes in the last three hours", after three hours, all the profiles that initially qualified for the segment definition will be unqualified.
+Additionally, segment unqualification, similarly to segment qualification, happens in real-time. As a result, if a profile no longer qualifies for a segment definition, it will be immediately unqualified. For example, if the segment definition asks for "All users who bought red shoes in the last three hours", after three hours, all the profiles that initially qualified for the segment definition will be unqualified.
 
-## Retrieve all segments enabled for streaming segmentation
+## Retrieve all segment definitions enabled for streaming segmentation
 
-You can retrieve a list of all your segments that are enabled for streaming segmentation within your organization by making a GET request to the `/segment/definitions` endpoint.
+You can retrieve a list of all your segment definitions that are enabled for streaming segmentation within your organization by making a GET request to the `/segment/definitions` endpoint.
 
 **API format**
 
-To retrieve streaming-enabled segments, you must include the query parameter `evaluationInfo.continuous.enabled=true` in the request path.
+To retrieve streaming-enabled segment definitions, you must include the query parameter `evaluationInfo.continuous.enabled=true` in the request path.
 
 ```http
 GET /segment/definitions?evaluationInfo.continuous.enabled=true
@@ -120,7 +119,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns an array of segments in your organization that are enabled for streaming segmentation.
+A successful response returns an array of segment definitions in your organization that are enabled for streaming segmentation.
 
 ```json
 {
@@ -207,9 +206,9 @@ A successful response returns an array of segments in your organization that are
 }
 ```
 
-## Create a streaming-enabled segment
+## Create a streaming-enabled segment definition
 
-A segment will automatically be streaming-enabled if it matches one of the [streaming segmentation types listed above](#query-types).
+A segment definition will automatically be streaming-enabled if it matches one of the [streaming segmentation types listed above](#query-types).
 
 **API format**
 
@@ -255,7 +254,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->This is a standard "create a segment" request. For more information about creating a segment definition, please read the tutorial on [creating a segment](../tutorials/create-a-segment.md).
+>This is a standard "create a segment definition" request. For more information about creating a segment definition, please read the tutorial on [creating a segment definition](../tutorials/create-a-segment.md).
 
 **Response**
 
@@ -301,7 +300,7 @@ A successful response returns the details of the newly created streaming-enabled
 
 ## Enable scheduled evaluation {#enable-scheduled-segmentation}
 
-Once streaming evaluation has been enabled, a baseline must be created (after which the segment will always be up-to-date). Scheduled evaluation (also known as scheduled segmentation) must first be enabled in order for the system to automatically perform baselining. With scheduled segmentation, your organization can adhere to a recurring schedule to automatically run export jobs to evaluate segments.
+Once streaming evaluation has been enabled, a baseline must be created (after which the segment definition will always be up-to-date). Scheduled evaluation (also known as scheduled segmentation) must first be enabled in order for the system to automatically perform baselining. With scheduled segmentation, your organization can adhere to a recurring schedule to automatically run export jobs to evaluate segment definitions.
 
 >[!NOTE]
 >
@@ -345,7 +344,7 @@ curl -X POST \
 | `name` | **(Required)** The name of schedule. Must be a string. |
 | `type` | **(Required)** The job type in string format. The supported types are `batch_segmentation` and `export`. |
 | `properties` | **(Required)** An object containing additional properties related to the schedule. |
-| `properties.segments` | **(Required when `type` equals `batch_segmentation`)** Using `["*"]` ensures all segments are included. |
+| `properties.segments` | **(Required when `type` equals `batch_segmentation`)** Using `["*"]` ensures all segment definitions are included. |
 | `schedule` | **(Required)** A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. The example shown (`0 0 1 * * ?`) means the job is triggered every day at 1:00:00 UTC. For more information, please review the appendix on the [cron expression format](./schedules.md#appendix) within the documentation on schedules within segmentation. |
 | `state` | *(Optional)* String containing the schedule state. Available values: `active` and `inactive`. Default value is `inactive`. An organization can only create one schedule. Steps for updating the schedule are available later in this tutorial. |
 
@@ -416,9 +415,9 @@ The same operation can be used to disable a schedule by replacing the "value" in
 
 ## Next steps
 
-Now that you have enabled both new and existing segments for streaming segmentation, and enabled scheduled segmentation to develop a baseline and perform recurring evaluations, you can begin to create streaming-enabled segments for your organization. 
+Now that you have enabled both new and existing segment definitions for streaming segmentation, and enabled scheduled segmentation to develop a baseline and perform recurring evaluations, you can begin to create streaming-enabled segment definitions for your organization. 
 
-To learn how to perform similar actions and work with segments using the Adobe Experience Platform user interface, please visit the [Segment Builder user guide](../ui/segment-builder.md).
+To learn how to perform similar actions and work with segment definitions using the Adobe Experience Platform user interface, please visit the [Segment Builder user guide](../ui/segment-builder.md).
 
 ## Appendix
 
@@ -426,26 +425,26 @@ The following section lists frequently asked questions regarding streaming segme
 
 ### Does streaming segmentation "unqualification" also happen in real time?
 
-For most instances, streaming segmentation unqualification happens in real-time. However, streaming segments that use segments of segments do **not** unqualify in real-time, instead unqualifying after 24 hours.
+For most instances, streaming segmentation unqualification happens in real-time. However, streaming segment definitions that use segments of segments do **not** unqualify in real-time, instead unqualifying after 24 hours.
 
 ### What data does streaming segmentation work on?
 
 Streaming segmentation works on all data that was ingested using a streaming source. Segments ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation. Events streamed into the system with a timestamp older than 24 hours will be processed in the subsequent batch job.
 
-### How are segments defined as batch or streaming segmentation?
+### How are segment definitions defined as batch or streaming segmentation?
 
-A segment is defined as either batch or streaming segmentation based on a combination of query type and event history duration. A list of which segments will be evaluated as a streaming segment can be found in the [streaming segmentation query types section](#query-types).
+A segment definition is defined as either batch or streaming segmentation based on a combination of query type and event history duration. A list of which segment definitions will be evaluated as a streaming segment can be found in the [streaming segmentation query types section](#query-types).
 
-Please note that if a segment contains **both** an `inSegment` expression and a direct single-event chain, it cannot qualify for streaming segmentation. If you want to have this segment qualify for streaming segmentation, you should make the direct single-event chain its own segment.
+Please note that if a segment contains **both** an `inSegment` expression and a direct single-event chain, it cannot qualify for streaming segmentation. If you want to have this segment definition qualify for streaming segmentation, you should make the direct single-event chain its own segment definition.
 
-### Why does the number of "total qualified" segments keep increasing while the number under "Last X days" remains at zero within the segment details section?
+### Why does the number of "total qualified" segment definitions keep increasing while the number under "Last X days" remains at zero within the segment definition details section?
 
-The number of total qualified segments is drawn from the daily segmentation job, which includes audiences that qualify for both batch and streaming segments. This value is shown for both batch and streaming segments.
+The number of total qualified segment definitions is drawn from the daily segmentation job, which includes audiences that qualify for both batch and streaming segment definitions. This value is shown for both batch and streaming segment definitions.
 
-The number under the "Last X days" **only** includes audiences that are qualified in streaming segmentation, and **only** increases if you have streamed data into the system and it counts toward that streaming definition. This value is **only** shown for streaming segments. As a result, this value **may** display as 0 for batch segments.
+The number under the "Last X days" **only** includes audiences that are qualified in streaming segmentation, and **only** increases if you have streamed data into the system and it counts toward that streaming definition. This value is **only** shown for streaming segment definitions. As a result, this value **may** display as 0 for batch segment definitions.
 
-As a result, if you see that the number under "Last X days" is zero, and the line graph is also reporting zero, you have **not** streamed any profiles into the system that would qualify for that segment.
+As a result, if you see that the number under "Last X days" is zero, and the line graph is also reporting zero, you have **not** streamed any profiles into the system that would qualify for that segment definition.
 
-### How long does it take for a segment to be available?
+### How long does it take for a segment definition to be available?
 
-It takes up to one hour for a segment to be available.
+It takes up to one hour for a segment definition to be available.

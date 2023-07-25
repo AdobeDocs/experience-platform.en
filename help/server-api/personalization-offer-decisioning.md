@@ -19,7 +19,7 @@ Personalization via [!DNL Offer Decisioning] requires that you have access to [A
 
 Before you can use the Server API in conjunction with Offer Decisioning, you must enable Adobe Experience Platform personalization on your datastream configuration, and enable the **[!UICONTROL Offer Decisioning]** option.
 
-See the [guide on adding services to a datastream](../edge/datastreams/overview.md#adobe-experience-platform-settings), for detailed information on how to enable Offer Decisioning.
+See the [guide on adding services to a datastream](../datastreams/overview.md#adobe-experience-platform-settings), for detailed information on how to enable Offer Decisioning.
 
 ![UI image showing the datastream service configuration screen, with Offer Decisioning selected](assets/aep-od-datastream.png)
 
