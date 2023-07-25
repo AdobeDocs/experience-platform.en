@@ -11,7 +11,7 @@ The [!DNL Edge Network Server API] handles both authenticated and unauthenticate
 
 For each request, the [!DNL Server API] verifies the datastream [!DNL access type] setting. Using this setting, customers can configure a datastream to accept either authenticated data, or both authenticated and unauthenticated data. By default, both types of data are accepted.
 
-For details on configuring the datastream access type, see the documentation on how to [create and configure a datastream](../edge/datastreams/overview.md#create).
+For details on configuring the datastream access type, see the documentation on how to [create and configure a datastream](../datastreams/overview.md#create).
 
 Below is a summary of the behavior, based on the datastream [!DNL Access Type] configuration and the endpoint on which the request is received.
 

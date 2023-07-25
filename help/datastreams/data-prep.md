@@ -5,15 +5,15 @@ exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
 ---
 # Data Prep for Data Collection
 
-Data Prep is an Adobe Experience Platform service that allows you to map, transform, and validate data to and from [Experience Data Model (XDM)](../../xdm/home.md). When configuring a Platform-enabled [datastream](./overview.md), you can use Data Prep capabilities to map your source data to XDM when sending it to the Platform Edge Network.
+Data Prep is an Adobe Experience Platform service that allows you to map, transform, and validate data to and from [Experience Data Model (XDM)](../xdm/home.md). When configuring a Platform-enabled [datastream](./overview.md), you can use Data Prep capabilities to map your source data to XDM when sending it to the Platform Edge Network.
 
 >[!NOTE]
 >
 >For comprehensive guidance on all Data Prep capabilities, including transformation functions for calculated fields, refer to the following documentation:
 >
->* [Data Prep overview](../../data-prep/home.md)
->* [Data Prep mapping functions](../../data-prep/functions.md)
->* [Handling data formats with Data Prep](../../data-prep/data-handling.md)
+>* [Data Prep overview](../data-prep/home.md)
+>* [Data Prep mapping functions](../data-prep/functions.md)
+>* [Handling data formats with Data Prep](../data-prep/data-handling.md)
 
 This guide covers how to map your data within the UI. To follow along with the steps, start the process of creating a datastream up to (and including) the [basic configuration step](./overview.md#create).
 
@@ -125,7 +125,7 @@ To capture properties from an XDM object data element, the same rules apply to t
 
 You can select the option to upload the object as a file, or paste the raw object into the provided textbox instead. If the JSON is valid, a preview schema is displayed in the right panel. Select **[!UICONTROL Next]** to continue.
 
-![JSON sample of expected incoming data](../assets/datastreams/data-prep/select-data.png)
+![JSON sample of expected incoming data](assets/data-prep/select-data.png)
 
 ## [!UICONTROL Mapping]
 
@@ -138,25 +138,25 @@ The **[!UICONTROL Mapping]** step appears, allowing you to map the fields in you
 
 To get started, select **[!UICONTROL Add new mapping]** to create a new mapping row.
 
-![Adding a new mapping](../assets/datastreams/data-prep/add-new-mapping.png)
+![Adding a new mapping](assets/data-prep/add-new-mapping.png)
 
-Select the source icon (![Source icon](../assets/datastreams/data-prep/source-icon.png)), and in the dialog that appears select the source field that you want to map in the provided canvas. Once you have chosen a field, use the **[!UICONTROL Select]** button to continue.
+Select the source icon (![Source icon](assets/data-prep/source-icon.png)), and in the dialog that appears select the source field that you want to map in the provided canvas. Once you have chosen a field, use the **[!UICONTROL Select]** button to continue.
 
-![Selecting the field to be mapped in the source schema](../assets/datastreams/data-prep/source-mapping.png)
+![Selecting the field to be mapped in the source schema](assets/data-prep/source-mapping.png)
 
-Next, select the schema icon (![Schema icon](../assets/datastreams/data-prep/schema-icon.png)) to open a similar dialog for the target event schema. Choose the field that you want to map the data to before confirming with **[!UICONTROL Select]**.
+Next, select the schema icon (![Schema icon](assets/data-prep/schema-icon.png)) to open a similar dialog for the target event schema. Choose the field that you want to map the data to before confirming with **[!UICONTROL Select]**.
 
-![Selecting the field to be mapped in the target schema](../assets/datastreams/data-prep/target-mapping.png)
+![Selecting the field to be mapped in the target schema](assets/data-prep/target-mapping.png)
 
 The mapping page reappears with the completed field mapping shown. The **[!UICONTROL Mapping progress]** section updates to reflect the total number of fields that have been successfully mapped.
 
-![Field successfully mapped with progress reflected](../assets/datastreams/data-prep/field-mapped.png)
+![Field successfully mapped with progress reflected](assets/data-prep/field-mapped.png)
 
 >[!TIP]
 >
 >If you want to map an array of objects (in the source field) to an array of different objects (in the target field), add `[*]` after the array name in the source and destination field paths, as shown below.
 >
->![Array object mapping](../assets/datastreams/data-prep/array-object-mapping.png)
+>![Array object mapping](assets/data-prep/array-object-mapping.png)
 
 ### Import existing mapping rules {#import-mapping}
 
@@ -168,19 +168,19 @@ If you have previously created a datastream, you can re-use its configured mappi
 
 To start, select **[!UICONTROL Import Mapping]**.
 
-![Image showing the [!UICONTROL Import Mapping] button being selected](../assets/datastreams/data-prep/import-mapping-button.png)
+![Image showing the [!UICONTROL Import Mapping] button being selected](assets/data-prep/import-mapping-button.png)
 
 In the dialog that appears, select the datastream whose mapping rules you want to import. Once the datastream is chosen, select **[!UICONTROL Preview]**.
 
-![Image showing an existing datastream being selected](../assets/datastreams/data-prep/select-mapping-rules.png)
+![Image showing an existing datastream being selected](assets/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
->Datastreams can only be imported within the same [sandbox](../../sandboxes/home.md). In other words, you cannot import a datastream from one sandbox to another.
+>Datastreams can only be imported within the same [sandbox](../sandboxes/home.md). In other words, you cannot import a datastream from one sandbox to another.
 
 The next screen shows a preview of the saved mapping rules for the selected datastream. Make sure that the displayed mappings are what you expect, and then select **[!UICONTROL Import]** to confirm and add the mappings to the new datastream.
 
-![Image showing the mapping rules to be imported](../assets/datastreams/data-prep/import-mapping-rules.png)
+![Image showing the mapping rules to be imported](assets/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -192,7 +192,7 @@ Continue following the above steps to map the rest of the fields to the target s
 
 Once the required fields count reaches zero and you are satisfied with your mapping, select **[!UICONTROL Save]** to finalize your changes.
 
-![Mapping complete](../assets/datastreams/data-prep/mapping-complete.png)
+![Mapping complete](assets/data-prep/mapping-complete.png)
 
 ## Next steps
 
