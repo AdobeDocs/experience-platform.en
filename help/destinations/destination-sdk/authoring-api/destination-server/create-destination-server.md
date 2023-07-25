@@ -38,7 +38,11 @@ You can create a new destination server configuration by making a `POST` request
 POST /authoring/destination-servers
 ```
 
-Depending on the destination type that you create, you need to configure a slightly different type of destination server. See in the tabs below examples of destination servers for every destination type supported in Destination SDK.
+Depending on the destination type that you create, you need to configure a slightly different type of destination server.
+
+### Create static schema destination servers {#static-destination-servers}
+
+See in the tabs below examples of destination servers for destinations which use [static schemas](../../functionality/destination-configuration/schema-configuration.md#attributes-schema).
 
 The sample payloads below include all parameters supported by each destination server type. You do not need to include all the parameters in your request. The payload is customizable based on your needs.
 
@@ -764,6 +768,18 @@ A successful response returns HTTP status 200 with details of your newly created
 
 +++
 
+>[!ENDTABS]
+
+### Create dynamic schema destination servers {#dynamic-schema-servers}
+
+Dynamic schemas allow you to dynamically retrieve the supported target attributes and generate schemas based on your own API. You need to configure a destination server for dynamic schemas before you can configure the schema.
+
+See in the tab below an example of a destination server for destinations which use [dynamic schemas](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
+
+The sample payload below includes all parameters required for a dynamic schema server.
+
+>[!BEGINTABS]
+
 >[!TAB Dynamic schema server]
 
 **Create a dynamic schema server**
@@ -821,6 +837,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 A successful response returns HTTP status 200 with details of your newly created destination server configuration.
 
 +++
+
 
 >[!ENDTABS]
 

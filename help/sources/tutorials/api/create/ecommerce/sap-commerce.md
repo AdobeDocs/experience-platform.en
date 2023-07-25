@@ -1,17 +1,17 @@
 ---
-title: Create a source connection and dataflow for SAP Hybris using the Flow Service API
-description: Learn how to create a source connection and dataflow to bring SAP Hybris data to Experience Platform using the Flow Service API.
-badge: Beta
+title: Create a source connection and dataflow for SAP Commerce using the Flow Service API
+description: Learn how to create a source connection and dataflow to bring SAP Commerce data to Experience Platform using the Flow Service API.
 hide: true
 hidefromtoc: true
+badge: Beta
 ---
-# Create a source connection and dataflow for [!DNL SAP Hybris] using the Flow Service API
+# Create a source connection and dataflow for [!DNL SAP Commerce] using the Flow Service API
 
 >[!NOTE]
 >
->The [!DNL SAP Hybris] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
+>The [!DNL SAP Commerce] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-The following tutorial walks you through the steps to create a [!DNL SAP Hybris] source connection and a dataflow to bring [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) contacts and customer data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a [!DNL SAP Commerce] source connection and a dataflow to bring [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) contacts and customer data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 
@@ -20,11 +20,11 @@ This guide requires a working understanding of the following components of Exper
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to [!DNL SAP Hybris] using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully connect to [!DNL SAP Commerce] using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 
-In order to connect [!DNL SAP Hybris] to Experience Platform, you must provide values for the following connection properties:
+In order to connect [!DNL SAP Commerce] to Experience Platform, you must provide values for the following connection properties:
 
 | Credential | Description |
 | --- | --- |
@@ -33,17 +33,17 @@ In order to connect [!DNL SAP Hybris] to Experience Platform, you must provide v
 | `tokenEndpoint` | The value of `url` from the service key, it will be similar to `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
 | `region` | Your data center location. The region is present in the `url` and has a value similar to `eu10` or `us10`. For example if the `url` is `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`, then you will need `eu10`. |
   
-For more information on these credentials, please refer to the [[!DNL SAP Hybris] documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
+For more information on these credentials, please refer to the [[!DNL SAP Commerce] documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
-## Connect [!DNL SAP Hybris] to Platform using the [!DNL Flow Service] API
+## Connect [!DNL SAP Commerce] to Platform using the [!DNL Flow Service] API
 
-The following outlines the steps you need to make in order to authenticate your [!DNL SAP Hybris] source, create a source connection, and create a dataflow to bring your accounts and contacts data to Experience Platform.
+The following outlines the steps you need to make in order to authenticate your [!DNL SAP Commerce] source, create a source connection, and create a dataflow to bring your accounts and contacts data to Experience Platform.
 
 ### Create a base connection {#base-connection}
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL SAP Hybris] authentication credentials as part of the request body.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL SAP Commerce] authentication credentials as part of the request body.
 
 **API format**
 
@@ -53,7 +53,7 @@ POST /connections
 
 **Request**
 
-The following request creates a base connection for [!DNL SAP Hybris]:
+The following request creates a base connection for [!DNL SAP Commerce]:
 
 ```shell
 curl -X POST \
@@ -64,8 +64,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "SAP Hybris base connection",
-      "description": "Authenticated base connection for SAP Hybris",
+      "name": "SAP Commerce base connection",
+      "description": "Authenticated base connection for SAP Commerce",
       "connectionSpec": {
           "id": "d8ee38de-7ae9-4058-9610-c79ce75f8e92",
           "version": "1.0"
@@ -123,9 +123,9 @@ When performing GET requests to explore your source's file structure and content
 | `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. For this source the value would be `json`. |
 | `fileType=json` | The file type of the file you want to bring to Platform. Currently, `json` is the only supported file type. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
-| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire string in base64. <br> [!DNL SAP Hybris] supports multiple APIs. Depending on which object type you are leveraging, pass one of the below : <ul><li>`customers`</li><li>`contacts`</li></ul>|
+| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire string in base64. <br> [!DNL SAP Commerce] supports multiple APIs. Depending on which object type you are leveraging, pass one of the below : <ul><li>`customers`</li><li>`contacts`</li></ul>|
 
-The [!DNL SAP Hybris] source supports multiple APIs. Depending on which object type you are leveraging the request to be sent is as below:
+The [!DNL SAP Commerce] source supports multiple APIs. Depending on which object type you are leveraging the request to be sent is as below:
 
 >[!NOTE]
 >
@@ -137,7 +137,7 @@ The [!DNL SAP Hybris] source supports multiple APIs. Depending on which object t
 
 +++Request
 
-For [!DNL SAP Hybris] Customers API the value for `{SOURCE_PARAMS}` is passed as `{"object_type":"customers"}`. When encoded in base64, it equates to `eyJvYmplY3RfdHlwZSI6ImN1c3RvbWVycyJ9` as shown below.
+For [!DNL SAP Commerce] Customers API the value for `{SOURCE_PARAMS}` is passed as `{"object_type":"customers"}`. When encoded in base64, it equates to `eyJvYmplY3RfdHlwZSI6ImN1c3RvbWVycyJ9` as shown below.
 
 ```shell
 curl -X GET \
@@ -460,7 +460,7 @@ A successful response returns a JSON structure like the following:
 
 +++Request
 
-For [!DNL SAP Hybris] Contacts API the value for `{SOURCE_PARAMS}` is passed as `{"object_type":"contacts"}`. When encoded in base64, it equates to `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=` as shown below.
+For [!DNL SAP Commerce] Contacts API the value for `{SOURCE_PARAMS}` is passed as `{"object_type":"contacts"}`. When encoded in base64, it equates to `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=` as shown below.
 
 ```shell
 curl -X GET \
@@ -568,7 +568,7 @@ Depending on which object type you are leveraging, select from the tabs below:
 
 +++Request
 
-The following request creates a source connection for [!DNL SAP Hybris] customers data:
+The following request creates a source connection for [!DNL SAP Commerce] customers data:
 
 ```shell
 curl -X POST \
@@ -579,8 +579,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "SAP Hybris Source Connection",
-      "description": "SAP Hybris Source Connection",
+      "name": "SAP Commerce Source Connection",
+      "description": "SAP Commerce Source Connection",
       "baseConnectionId": "f5421911-6f6c-41c7-aafa-5d9d2ce51535",
       "connectionSpec": {
           "id": "63d2b27b-69a5-45c9-a7fe-78148a25de3c",
@@ -599,10 +599,10 @@ curl -X POST \
 | --- | --- |
 | `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
 | `description` | An optional value that you can include to provide more information on your source connection. |
-| `baseConnectionId` | The base connection ID of [!DNL SAP Hybris]. This ID was generated in an earlier step. |
+| `baseConnectionId` | The base connection ID of [!DNL SAP Commerce]. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
-| `data.format` | The format of the [!DNL SAP Hybris] data that you want to ingest. Currently, the only supported data format is `json`. |
-| `object_type` | [!DNL SAP Hybris] supports multiple APIs. For customers API, the `object_type` parameter should be set to `customers`. |
+| `data.format` | The format of the [!DNL SAP Commerce] data that you want to ingest. Currently, the only supported data format is `json`. |
+| `object_type` | [!DNL SAP Commerce] supports multiple APIs. For customers API, the `object_type` parameter should be set to `customers`. |
 | `path` | This will have the same value that you select for `object_type`. |
 
 +++
@@ -624,7 +624,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 +++Request
 
-The following request creates a source connection for [!DNL SAP Hybris] contacts data:
+The following request creates a source connection for [!DNL SAP Commerce] contacts data:
 
 ```shell
 curl -X POST \
@@ -635,8 +635,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "SAP Hybris Source Connection",
-      "description": "SAP Hybris Source Connection",
+      "name": "SAP Commerce Source Connection",
+      "description": "SAP Commerce Source Connection",
       "baseConnectionId": "f5421911-6f6c-41c7-aafa-5d9d2ce51535",
       "connectionSpec": {
           "id": "63d2b27b-69a5-45c9-a7fe-78148a25de3c",
@@ -655,10 +655,10 @@ curl -X POST \
 | --- | --- |
 | `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
 | `description` | An optional value that you can include to provide more information on your source connection. |
-| `baseConnectionId` | The base connection ID of [!DNL SAP Hybris]. This ID was generated in an earlier step. |
+| `baseConnectionId` | The base connection ID of [!DNL SAP Commerce]. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
-| `data.format` | The format of the [!DNL SAP Hybris] data that you want to ingest. Currently, the only supported data format is `json`. |
-| `object_type` | [!DNL SAP Hybris] supports multiple APIs. For contacts API, the `object_type` parameter should be set to `contacts`. |
+| `data.format` | The format of the [!DNL SAP Commerce] data that you want to ingest. Currently, the only supported data format is `json`. |
+| `object_type` | [!DNL SAP Commerce] supports multiple APIs. For contacts API, the `object_type` parameter should be set to `contacts`. |
 | `path` | This will have the same value which you select for *`object_type`*. |
 
 +++
@@ -706,7 +706,7 @@ POST /targetConnections
 
 **Request**
 
-The following request creates a target connection for [!DNL SAP Hybris]:
+The following request creates a target connection for [!DNL SAP Commerce]:
 
 ```shell
 curl -X POST \
@@ -717,8 +717,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "SAP Hybris Target Connection Generic Rest",
-      "description": "SAP Hybris Target Connection Generic Rest",
+      "name": "SAP Commerce Target Connection Generic Rest",
+      "description": "SAP Commerce Target Connection Generic Rest",
       "connectionSpec": {
           "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
           "version": "1.0"
@@ -741,7 +741,7 @@ curl -X POST \
 | `name` | The name of your target connection. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
 | `description` | An optional value that you can include to provide more information on your target connection. |
 | `connectionSpec.id` | The connection specification ID that corresponds to data lake. This fixed ID is: `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
-| `data.format` | The format of the [!DNL SAP Hybris] data that you want to ingest. |
+| `data.format` | The format of the [!DNL SAP Commerce] data that you want to ingest. |
 | `params.dataSetId` | The target dataset ID retrieved in a previous step. |
 
 **Response**
@@ -771,7 +771,7 @@ POST /conversion/mappingSets
 
 +++Request
 
-The following request creates a mapping for [!DNL SAP Hybris] Customers API data
+The following request creates a mapping for [!DNL SAP Commerce] Customers API data
 
 ```shell
 curl -X POST \
@@ -884,7 +884,7 @@ A successful response returns details of the newly created mapping including its
 
 +++Request
 
-The following request creates a mapping for [!DNL SAP Hybris] Contacts API data
+The following request creates a mapping for [!DNL SAP Commerce] Contacts API data
 
 ```shell
 curl -X POST \
@@ -982,7 +982,7 @@ A successful response returns details of the newly created mapping including its
 
 ### Create a flow {#flow}
 
-The last step towards bringing data from [!DNL SAP Hybris] to Platform is to create a dataflow. By now, you have the following required values prepared:
+The last step towards bringing data from [!DNL SAP Commerce] to Platform is to create a dataflow. By now, you have the following required values prepared:
 
 * [Source connection ID](#source-connection)
 * [Target connection ID](#target-connection)
@@ -1006,8 +1006,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "SAP Hybris Connector Description Flow Generic Rest",
-      "description": "SAP Hybris Connector Description Flow Generic Rest",
+      "name": "SAP Commerce Connector Description Flow Generic Rest",
+      "description": "SAP Commerce Connector Description Flow Generic Rest",
       "flowSpec": {
           "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
           "version": "1.0"
