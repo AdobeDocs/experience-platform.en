@@ -10,7 +10,7 @@ Learn how to use partner-provided probabilistic attributes to deliver personaliz
 
 ## Industry example {#industry-example}
 
-As an example of how this use case might be implemented and a challenge that it solves, consider that your company is a home improvement brand and has low customer authentication rates. Yet, you still want to deliver personalized experiences to your unauthenticated visitors. 
+As an example of how this use case might be implemented and a challenge that it solves, consider that your company is a home improvement brand and has low customer authentication rates. Yet, you still want to deliver personalized experiences to your unauthenticated visitors on their first visit to your website. 
 
 In a scenario, an unauthenticated visitor might have moved recently into a new home and might be looking for materials for DIY projects around the house. By leveraging partner-provided probabilistic data, on their first browsing session on your website or app, you can welcome the visitor with a 10% discount coupon for materials related to DIY projects.
 
