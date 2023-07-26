@@ -3,12 +3,11 @@ title: Data Landing Zone destination
 description: Learn how to connect to Data Landing Zone to activate audiences and export datasets.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
 ---
-# (Beta) Data Landing Zone destination
+# Data Landing Zone destination
 
 >[!IMPORTANT]
 >
->* This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Data Landing Zone] connection, contact your Adobe representative and provide your [!DNL Organization ID].
->* This documentation page refers to the [!DNL Data Landing Zone] *destination*. There is also a [!DNL Data Landing Zone] *source* in the sources catalog. For more information, read the [[!DNL Data Landing Zone] source](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentation.
+>This documentation page refers to the [!DNL Data Landing Zone] *destination*. There is also a [!DNL Data Landing Zone] *source* in the sources catalog. For more information, read the [[!DNL Data Landing Zone] source](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentation.
 
 
 ## Overview {#overview}
