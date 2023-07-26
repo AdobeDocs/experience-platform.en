@@ -12,7 +12,7 @@ Learn how to use partner-provided probabilistic attributes to deliver personaliz
 
 As an example of how this use case might be implemented and a challenge that it solves, consider that your company is a home improvement brand and has low customer authentication rates. Yet, you still want to deliver personalized experiences to your unauthenticated visitors on their first visit to your website. 
 
-In a scenario, an unauthenticated visitor might have moved recently into a new home and might be looking for materials for DIY projects around the house. By leveraging partner-provided probabilistic data, on their first browsing session on your website or app, you can welcome the visitor with a 10% discount coupon for materials related to DIY projects.
+In a scenario, an unauthenticated visitor might have recently moved into a new home and might be looking for materials for DIY projects around the house. By leveraging partner-provided probabilistic data, on their first browsing session on your website or app, you can welcome the visitor with a 10% discount coupon for materials related to DIY projects.
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
@@ -26,9 +26,9 @@ As you consider using partner-provided probabilistic attributes to deliver perso
 To successfully implement this use case, you must use multiple areas of Real-Time CDP and other Experience Cloud solutions. Make sure that you have the necessary attribute-based access control permissions for all these areas or ask your system administrator to grant you the necessary permissions. 
 
 * Data Collection
-  * Web SDK
-  * Tags
-  * Datastreams
+  * [Adobe Experience Platform Web SDK](/help/edge/home.md)
+  * [Tags](/help/tags/home.md)
+  * [Datastreams](/help/datastreams/overview.md)
 * Data Management in Real-Time CDP
   * [Identities](/help/identity-service/namespaces.md)
   * [Schemas](/help/xdm/home.md)
@@ -37,7 +37,7 @@ To successfully implement this use case, you must use multiple areas of Real-Tim
 * Web property personalization
   * Edge segmentation
   * [Edge Personalization destinations](/help/destinations/home.md)
-  * Adobe Target (or a personalization platform of your choice. This use case tutorial highlights Adobe Target)
+  * Adobe Target (or a personalization platform of your choice. This use case tutorial highlights Adobe Target as personalization engine)
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
@@ -56,38 +56,56 @@ Read through the sections below which include links to further documentation, to
 
 ### Create a new identity namespace and schema for Partner ID
 
+#### Create Partner ID identity namespace
+
 First, you need to create a partner ID identity namespace. Read about how to [create a partner ID identity namespace](/help/rtcdp/partner-data/prospecting.md#create-partner-id-namespace).
+
+#### Create a schema
 
 Next, create an Experience Event schema to hold the time-series data that you will later be collecting from your web properties. Read abut how to [create a schema using the Experience Platform UI](/help/xdm/ui/resources/schemas.md#create) and make sure to use **[!UICONTROL XDM ExperienceEvent]** as the base class for the schema. 
 
-As you create your schema and [add field groups to it](/help/xdm/ui/resources/schemas.md#add-field-groups) from the set of available field groups, add the following two into your schema. 
+As you create your schema and [add field groups to it](/help/xdm/ui/resources/schemas.md#add-field-groups) from the set of available field groups, add the following two into your schema. This will ensure that identity and web visit information from the visitor are captured in the data schema. 
 
 * [Visit Web Page](/help/xdm/field-groups/event/web-details.md)
 * [Identity Map](/help/xdm/field-groups/profile/identitymap.md)
- 
-#### Create a dataset and load sample prospect data
 
-Datasets > Create dataset 
-Choose the "Create dataset from schema" option
-Search for the schema you just created. Check to make sure it is enabled for profile and click Next. 
-Give the dataset a name and enable it for profile 
-  
-Step 18: Enable the dataset for profile. 
+Create a new field group with any other information that you want to capture about your web property visitor and add it to your schema. Read how to [create a field group](/help/xdm/ui/resources/field-groups.md) and how to [add fields](/help/xdm/ui/resources/field-groups.md) to the field group. 
 
-### Implement event data collection on your web property - 
+Make sure to set the Partner ID field as an identity and set the identity namespace to the one you created in the earlier step. Remember also to [enable the schema to be included in Profile](help/xdm/ui/resources/schemas.md#profile).
 
-help/collection/home.md
+#### Create a dataset
+
+Next, you must create a dataset to hold the data that you collect from your web property visitors and that you will use for onsite personalization.
+
+Read the tutorial on [how to create a dataset](/help/catalog/datasets/user-guide.md#create) and remember to select the option to create the dataset from a schema.
+
+Note that similar to the step to create a schema, you need to enable the dataset to be included in the Real-Time Customer Profile. For more information about enabling the dataset for use in Real-Time Customer Profile, read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md#profile) 
+
+### Implement event data collection on your web property
+
+As a next step, you now need to implement [data collection](/help/collection/home.md) on your web property. This item consists of a few separate tasks across a few data collection components.
+
+Use the app switcher to navigate to the Data Collection section. 
+
+![App switcher to get to Data Collection section](/help/rtcdp/assets/partner-data/onsite-personalization/app-switcher-data-collection.png)
+
+The data collection section of the UI looks similar to the image below.
+
+![Data collection section of the UI](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
 
 #### Create datastream
 
-Create a new datastream and in the Event schema field, select the schema that you created previously. 
+Next, [create a new datastream](/help/datastreams/configure.md) and in the **[!UICONTROL Event schema]** field, select the schema that you created previously. 
 
-Select the event dataset you created earlier from the dropdown, and check the boxes 
-next to "Edge Segmenta(on" and "Personaliza(on Des(na(ons" and click Save. Not that you do 
-not have to select a profile dataset in this scenario since we're only bringing in event based 
-(me-series data.
+[Select the event dataset](/https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en#aep) you created earlier from the dropdown, and check the boxes next to **[!UICONTROL Edge Segmentation]** and **[!UICONTROL Personalization Destinations]** and select **[!UICONTROL Save]**. 
 
-### Install WEB SDK 
+Note that you do not have to select a profile dataset in this scenario since you are bringing in event-based time-series data.
+
+#### Create Tag properties
+
+[Create a tag property](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html)
+
+#### Install WEB SDK 
 
 
 Use the solution switcher to navigate to Data Collection.
