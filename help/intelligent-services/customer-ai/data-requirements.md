@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output; data requirements
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Data Requirements in Customer AI
 topic-legacy: Getting started

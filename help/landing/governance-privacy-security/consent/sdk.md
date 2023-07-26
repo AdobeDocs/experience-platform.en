@@ -18,7 +18,7 @@ This tutorial assumes that you have already determined how to generate consent d
 
 This guide follows the workflow for setting up the SDK using the tag extension in the UI. If you do not want to use the extension and would prefer to directly embed the standalone version of the SDK on your site, please refer to the following docs instead of this guide:
 
-* [Configure a datastream](../../../edge/datastreams/overview.md)
+* [Configure a datastream](../../../datastreams/overview.md)
 * [Install the SDK](../../../edge/fundamentals/installing-the-sdk.md)
 * [Configure the SDK for consent commands](../../../edge/consent/supporting-consent.md)
 
