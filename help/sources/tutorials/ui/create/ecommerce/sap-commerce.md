@@ -1,17 +1,15 @@
 ---
-title: Create a SAP Hybris source connection in the UI
-description: Learn how to create a SAP Hybris source connection using the Adobe Experience Platform UI.
+title: Create a SAP Commerce source connection in the UI
+description: Learn how to create a SAP Commerce source connection using the Adobe Experience Platform UI.
 badge: Beta
-hide: true
-hidefromtoc: true
 ---
-# Create a [!DNL SAP Hybris] source connection in the UI
+# Create a [!DNL SAP Commerce] source connection in the UI
 
 >[!NOTE]
 >
->The [!DNL SAP Hybris] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
+>The [!DNL SAP Commerce] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-The following tutorial walks you through the steps to create a [!DNL SAP Hybris] source connection to bring [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) contacts and customer data using the Adobe Experience Platform user interface.
+The following tutorial walks you through the steps to create a [!DNL SAP Commerce] source connection to bring [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) contacts and customer data using the Adobe Experience Platform user interface.
 
 ## Getting started {#getting-started}
 
@@ -22,11 +20,11 @@ This tutorial requires a working understanding of the following components of Ex
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-If you already have a valid [!DNL SAP Hybris] account, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/crm.md).
+If you already have a valid [!DNL SAP Commerce] account, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/ecommerce.md).
 
 ### Gather required credentials {#gather-credentials}
 
-In order to connect [!DNL SAP Hybris] to Experience Platform, you must provide values for the following connection properties:
+In order to connect [!DNL SAP Commerce] to Experience Platform, you must provide values for the following connection properties:
 
 | Credential | Description |
 | --- | --- |
@@ -35,11 +33,11 @@ In order to connect [!DNL SAP Hybris] to Experience Platform, you must provide v
 | Token endpoint | The value of `url` from the service key, it will be similar to `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
 | Region | Your data center location. The region is present in the `url` and has a value similar to `eu10` or `us10`. For example if the `url` is `https://eu10.revenue.cloud.sap/api` you will need `eu10`. |
   
-For more information, please refer to the [[!DNL SAP Hybris] documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
+For more information, please refer to the [[!DNL SAP Commerce] documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
 ### Create a Platform schema {#create-platform-schema}
 
-Before creating a [!DNL SAP Hybris] source connection, you must also ensure that you first create an Experience Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
+Before creating a [!DNL SAP Commerce] source connection, you must also ensure that you first create an Experience Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
 Expand the following section to view an example schema.
 
@@ -136,29 +134,29 @@ Expand the following section to view an example schema.
 
 +++
 
-## Connect your [!DNL SAP Hybris] account {#connect-account}
+## Connect your [!DNL SAP Commerce] account {#connect-account}
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *CRM* category, select **[!UICONTROL SAP Hybris]**, and then select **[!UICONTROL Add data]**.
+Under the *eCommerce* category, select **[!UICONTROL SAP Commerce]**, and then select **[!UICONTROL Add data]**.
 
-![Platform UI screenshot for catalog with SAP Hybris card](../../../../images/tutorials/create/crm/sap-hybris-subscription-billing-customers-and-contacts/catalog-card.png)
+![Platform UI screenshot for catalog with SAP Commerce card](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
 
-The **[!UICONTROL Connect SAP Hybris account]** page appears. On this page, you can either use new credentials or existing credentials.
+The **[!UICONTROL Connect SAP Commerce account]** page appears. On this page, you can either use new credentials or existing credentials.
 
 ### Existing account {#existing-account}
 
-To use an existing account, select the [!DNL SAP Hybris] account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
+To use an existing account, select the [!DNL SAP Commerce] account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
 
-![Platform UI screenshot to connect SAP Hybris account with an existing account](../../../../images/tutorials/create/crm/sap-hybris-subscription-billing-customers-and-contacts/existing.png)
+![Platform UI screenshot to connect SAP Commerce account with an existing account](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
 
 ### New account {#new-account}
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and your credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![Platform UI screenshot to connect SAP Hybris account with a new account](../../../../images/tutorials/create/crm/sap-hybris-subscription-billing-customers-and-contacts/new.png)
+![Platform UI screenshot to connect SAP Commerce account with a new account](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
 
 ### Select data {#select-data}
 
@@ -175,23 +173,23 @@ Finally, you must select the object type that you want to ingest to Platform.
 
 To ingest customer data, select **[!UICONTROL Customers]** as your object type and then select **[!UICONTROL Next]**.
 
-![Platform UI screenshot for SAP Hybris showing configuration with Customers option selected](../../../../images/tutorials/create/crm/sap-hybris-subscription-billing-customers-and-contacts/configuration-customers.png)
+![Platform UI screenshot for SAP Commerce showing configuration with Customers option selected](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
 
 >[!TAB Contacts]
 
 To ingest contact data, select **[!UICONTROL Contacts]** as your object type and then select **[!UICONTROL Next]**.
 
-![Platform UI screenshot for SAP Hybris showing configuration with Contacts option selected](../../../../images/tutorials/create/crm/sap-hybris-subscription-billing-customers-and-contacts/configuration-contacts.png)
+![Platform UI screenshot for SAP Commerce showing configuration with Contacts option selected](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
 
 >[!ENDTABS]
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have established a connection to your [!DNL SAP Hybris] account. You can now continue on to the next tutorial and [configure a dataflow to bring CRM data into Platform](../../dataflow/crm.md).
+By following this tutorial, you have established a connection to your [!DNL SAP Commerce] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/ecommerce.md).
 
 ## Additional resources {#additional-resources}
 
-The sections below provide additional resources that you can refer to when using the [!DNL SAP Hybris] source.
+The sections below provide additional resources that you can refer to when using the [!DNL SAP Commerce] source.
 
 ### Mapping {#mapping}
 
@@ -203,9 +201,9 @@ Mapping configurations for your dataflow will differ depending on your schema an
 
 >[!TAB Customers]
 
-For customer data, [!DNL SAP Hybris] uses the [customers](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers) and the [customer-contacts relationships](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) endpoints of the [!DNL SAP Business Partners] API to retrieve the data
+For customer data, [!DNL SAP Commerce] uses the [customers](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers) and the [customer-contacts relationships](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) endpoints of the [!DNL SAP Business Partners] API to retrieve the data
 
-The following is an example of mapping configurations for [!DNL SAP Hybris] dataflow for customer data:
+The following is an example of mapping configurations for [!DNL SAP Commerce] dataflow for customer data:
 
 | Target Field | Description |
 | --- | --- |
@@ -223,13 +221,13 @@ The following is an example of mapping configurations for [!DNL SAP Hybris] data
 | `customReferences[*].id` | Additional data, retrieved as an array object. |
 | `customReferences[*].typeCode` | Additional data, retrieved as an array object. |
 
-![The mapping step of the sources workflow.](../../../../images/tutorials/create/crm/sap-hybris-subscription-billing-customers-and-contacts//mapping-customers.png)
+![The mapping step of the sources workflow.](../../../../images/tutorials/create/ecommerce/sap-commerce/mapping-customers.png)
 
 >[!TAB Contacts]
 
-For contact data, [!DNL SAP Hybris] uses the [contacts](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts) endpoint of the [!DNL SAP Business Partners] API to retrieve the data.
+For contact data, [!DNL SAP Commerce] uses the [contacts](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts) endpoint of the [!DNL SAP Business Partners] API to retrieve the data.
 
-The following is an example of mapping configurations for [!DNL SAP Hybris] dataflow for contact data:
+The following is an example of mapping configurations for [!DNL SAP Commerce] dataflow for contact data:
 
 | Target Field | Description |
 | --- | --- |
@@ -242,7 +240,7 @@ The following is an example of mapping configurations for [!DNL SAP Hybris] data
 | `externalObjectReferences[*].externalId` | Additional data, retrieved as an array object. |
 | `externalObjectReferences[*].externalIdTypeCode` | Additional data, retrieved as an array object. |
 
-![The mapping step of the sources workflow.](../../../../images/tutorials/create/crm/sap-hybris-subscription-billing-customers-and-contacts/mapping-contacts.png)
+![The mapping step of the sources workflow.](../../../../images/tutorials/create/ecommerce/sap-commerce/mapping-contacts.png)
 
 >[!ENDTABS]
 
