@@ -40,7 +40,7 @@ Select **[!UICONTROL Advanced Options]** to reveal additional controls to config
 >
 > You are responsible for ensuring you have obtained all necessary permissions, consents, clearances, and authorization required under applicable laws and regulations to collect, process, and transmit personal data, including precise geolocation information.
 > 
-> Your IP address obfuscation selection does not affect the level of geolocation information that will be retrieved.
+> Your IP address obfuscation selection does not affect the level of geolocation information that will be derived from the IP address and sent to your configured Adobe solutions. Geolocation lookups must be limited or disabled separately.
 
 | Setting | Description |
 | --- | --- |
