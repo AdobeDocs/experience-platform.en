@@ -115,9 +115,9 @@ A successful response returns your Base64-encoded public key, public key ID, and
 
 ### Create customer managed key pair
 
-You can create a sign verification key pair to sign and ingest your encrypted data.
+You can optionally create a sign verification key pair to sign and ingest your encrypted data.
 
-During this stage, you must generate your own private key and public key combination and then use your private key to sign your encrypted data. Next, you must encode your public key in Base64 and then share it to Experience Platform in order for Experience Platform to verify your signature.
+During this stage, you must generate your own private key and public key combination and then use your private key to sign your encrypted data. Next, you must encode your public key in Base64 and then share it to Experience Platform in order for Platform to verify your signature.
 
 ### Share your public key to Experience Platform
 
@@ -312,7 +312,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `params.signVerificationKeyId` | The sign verification key ID is the same ID as the public key ID that was retrieved after sharing your Base64-encoded public key with Experience Platform. |
+| `params.signVerificationKeyId` | The sign verification key ID is the same as the public key ID that was retrieved after sharing your Base64-encoded public key with Experience Platform. |
 
 >[!ENDTABS]
 
