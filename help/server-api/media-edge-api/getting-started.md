@@ -54,7 +54,7 @@ To start the media session on the server, use the Session Start endpoint. A succ
  
 Before making the session start request, you will need the following:
 
-* The `datastreamId`--a required  parameter for the POST Session Start request. To retrieve a `datastreamId`, see [Configure a datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en).
+* The `datastreamId`--a required  parameter for the POST Session Start request. To retrieve a `datastreamId`, see [Configure a datastream](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en).
 
 * A JSON object for the request payload that contains the minimum data required (as shown in the example request below).
 
