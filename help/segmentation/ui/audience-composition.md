@@ -8,7 +8,7 @@ exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 
 >[!NOTE]
 >
->This guide explains how to create audiences using Audience Composition. To learn how to create audiences, through segment definitions, using the Segment Builder please read the [Segment Builder UI guide](./segment-builder.md).
+>This guide explains how to create audiences using Audience Composition. To learn how to create audiences through segment definitions using the Segment Builder please read the [Segment Builder UI guide](./segment-builder.md).
 
 Audience Composition provides a workspace to build and edit audiences, using blocks that are used to represent different actions.
 
