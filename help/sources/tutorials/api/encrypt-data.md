@@ -133,7 +133,7 @@ POST /data/foundation/connectors/encryption/customer-keys
 
 ```shell
 curl -X POST \
-  'https://platform.adobe.io/data/foundation/connectors/encryption/custom-keys' \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
   -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
   -H 'x-api-key: {{API_KEY}}' \
   -H 'x-gw-ims-org-id: {{ORG_ID}}' \
