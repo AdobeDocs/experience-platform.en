@@ -1,71 +1,76 @@
 ---
-keywords: Experience Platform;home;popular topics;Phoenix;phoenix
-solution: Experience Platform
-title: Create a Phoenix  Source Connection in the UI
-type: Tutorial
-description: Learn how to create a Phoenix source connection using the Adobe Experience Platform UI.
+title: Connect Your Phoenix Account Using the Experience Platform User Interface
+description: Learn how to connect your Phoenix account and bring data from your Phoenix database to Experience Platform using the user interface.
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
 ---
-# Create a [!DNL Phoenix] source connection in the UI
+# Connect your [!DNL Phoenix] account to Experience Platform using the UI
 
->[!NOTE]
->
-> The [!DNL Phoenix] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
-
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Phoenix] source connector using the [!DNL Platform] user interface.
+This tutorial provides steps on how to connect your [!DNL Phoenix] account and bring data from your [!DNL Phoenix] database to Experience Platform.
 
 ## Getting started
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-    *   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-*   [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+    * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+    * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-If you already have a valid [!DNL Phoenix] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/databases.md)
+If you already have an authenticated [!DNL Phoenix] account, then you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow for a database](../../dataflow/databases.md).
 
 ### Gather required credentials
 
-In order to access your [!DNL Phoenix] account on [!DNL Platform], you must provide the following values:
+In order to access your [!DNL Phoenix] account on Experience Platform, you must provide the following values:
 
 | Credential | Description |
-| ---------- | ----------- |
-| `host` | The IP address or hostname of the [!DNL Phoenix] server. |
-| `port` | The TCP port that the [!DNL Phoenix] server uses to listen for client connections. If you connect to [!DNL Azure HDInsights], specify the port as 443. |
-| `httpPath` | The partial URL corresponding to the [!DNL Phoenix] server. Specify /hbasephoenix0 if you are using the [!DNL Azure HDInsights] cluster. |
-| `username` | The username that you use to access the [!DNL Phoenix] server. |
-| `password` | The password that corresponds to the user. |
-| `enableSsl` | A toggle that specifies whether he connections to the server are encrypted using SSL. |
+| --- | --- |
+| Host | The IP address or hostname of the [!DNL Phoenix] server. |
+| Port | The TCP port that the [!DNL Phoenix] server uses to listen for client connections. If you are connecting to [!DNL Azure HDInsights], then specify the port as 443. If this parameter is unprovided, the value defaults to 8765. |
+| HTTP Path | The partial URL corresponding to the [!DNL Phoenix] server. Specify /hbasephoenix0 if you are using the [!DNL Azure HDInsights] cluster. |
+| Username | The username that you use to access the [!DNL Phoenix] server. |
+| Password | The password that corresponds to the user. |
+| Enable SSL | A toggle that specifies whether the connections to the server are encrypted using SSL. |
 
 For more information about getting started, refer to [this [!DNL Phoenix] document](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 
+Once you have gathered your required credentials, you can follow the steps below to connect your [!DNL Phoenix] account to Experience Platform.
+
 ## Connect your [!DNL Phoenix] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Phoenix] account to connect to [!DNL Platform].
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the sources workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources available in the Experience Platform sources catalog.
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
+You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find a specific source using the search option.
 
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+Select **[!UICONTROL Databases]** from the list of sources categories and then select **[!UICONTROL Add data]** from the [!DNL Phoenix] card.
 
-Under the **[!UICONTROL Databases]** category, select **[!UICONTROL Phoenix]**. If this is your first time using this connector, select **[!UICONTROL Configure]**. Otherwise, select **[!UICONTROL Add data]** to create a new [!DNL Phoenix] account.
+>[!TIP]
+>
+>Sources in the sources catalog may display different prompts depending on the status of the source.
+> 
+>* **[!UICONTROL Add data]** means that there are existing authenticated accounts associated with your selected source. 
+>
+>* **[!UICONTROL Set up]** means that you must provide credentials and authenticate a new account in order to use your selected source.
 
-![catalog](../../../../images/tutorials/create/phoenix/catalog.png)
+![The sources catalog on the Experience Platform UI with the Phoenix source card selected.](../../../../images/tutorials/create/phoenix/catalog.png)
 
 The **[!UICONTROL Connect to Phoenix]** page appears. On this page, you can either use new credentials or existing credentials.
 
-### New account
+>[!BEGINTABS]
 
-If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your [!DNL Phoenix] credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new connection to establish.
+>[!TAB Use an existing Phoenix account]
 
-![connect](../../../../images/tutorials/create/phoenix/new.png)
+To use an existing account, select [!UICONTROL Existing account] and then select the account that you want to use from the list that appears. When finished, select [!UICONTROL Next] to proceed.
 
-### Existing account
+![A list of authenticated Phoenix database accounts that already exist in your organization.](../../../../images/tutorials/create/phoenix/existing.png)
 
-To connect an existing account, select the [!DNL Phoenix] account you want to connect with, then select **[!UICONTROL Next]** to proceed.
+>[!TAB Create a new Phoenix account]
 
-![existing](../../../../images/tutorials/create/phoenix/existing.png)
+To use a new account, select [!UICONTROL New account] and provide a name, description, and your [!DNL Phoenix] authentication credentials. When finished, select [!UICONTROL Connect to source] and allow for a few seconds for the new connection to establish.
+
+![The new account interface where you can provide authentication credentials and create a Phoenix account.](../../../../images/tutorials/create/phoenix/new.png)
+
+>[!ENDTABS]
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Phoenix] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your [!DNL Phoenix] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Experience Platform](../../dataflow/databases.md).
