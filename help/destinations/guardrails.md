@@ -96,6 +96,8 @@ Dataset exports are currently supported in a "First Full and then Incremental" [
 >
 >All the limits described in this section for dataset exports are *soft guardrails*. For example, while the user interface will not block you from exporting  datasets larger than 5 billion records, the behavior is unpredictable and exports might either fail or have very long export latency.
 
+<!--
+
 ### Dataset Types {#dataset-types}
 
 Datasets exported from Experience Platform can be of two types, as described below:
@@ -127,6 +129,8 @@ The guardrails below are grouped by the format of the exported file, and then fu
 | <p>Record</p> | <p><ul><li>Yes</li><li>No</li></ul></p> | <p><ul><li>Five billion records per compressed file</li><li>One million records per uncompressed file</li></ul></p> | <p>The record count of the dataset must be less than five billion for compressed files and one million for uncompressed files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</p> |
 
 {style="table-layout:auto"}
+
+-->
 
 <!--
 
