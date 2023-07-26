@@ -88,7 +88,7 @@ The guardrails below apply to activation through [edge personalization destinati
 
 {style="table-layout:auto"}
 
-## Dataset exports {#dataset-exports}
+## [!BADGE Beta]{type=Informative} Dataset exports {#dataset-exports}
 
 Dataset exports are currently supported in a "First Full and then Incremental" [pattern](/help/destinations/ui/export-datasets.md#scheduling). The guardrails described in this section apply to the first full export that occurs after a dataset export workflow is set up.
 
