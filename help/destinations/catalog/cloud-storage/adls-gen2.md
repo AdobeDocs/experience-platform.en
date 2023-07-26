@@ -1,6 +1,6 @@
 ---
 title: (Beta) Azure Data Lake Storage Gen2 connection
-description: Learn how to connect to Azure Data Lake Storage Gen2 to activate segments and export datasets.
+description: Learn how to connect to Azure Data Lake Storage Gen2 to activate audiences and export datasets.
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
 ---
 # (Beta) [!DNL Azure Data Lake Storage Gen2] connection
@@ -15,8 +15,22 @@ Read this page to learn to create a live outbound connection to your [[!DNL Azur
 
 ## Connect to your [!DNL ADLS Gen2] storage through API or UI {#connect-api-or-ui}
 
-* To connect to your [!DNL ADLS Gen2] storage location using the Platform user interface, read the sections [Connect to the destination](#connect) and [Activate segments to this destination](#activate) below.
-* To connect to your [!DNL ADLS Gen2] storage location programmatically, read the [Activate segments to file-based destinations by using the Flow Service API tutorial](../../api/activate-segments-file-based-destinations.md).
+* To connect to your [!DNL ADLS Gen2] storage location using the Platform user interface, read the sections [Connect to the destination](#connect) and [Activate audiences to this destination](#activate) below.
+* To connect to your [!DNL ADLS Gen2] storage location programmatically, read the [Activate audiences to file-based destinations by using the Flow Service API tutorial](../../api/activate-segments-file-based-destinations.md).
+
+## Supported audiences {#supported-audiences}
+
+This section describes all the audiences that you can export to this destination.
+
+All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
+Additionally, this destination also supports the activation of the audiences described in the table below.
+
+| Audience type | Description | 
+---------|----------|
+| Custom uploads | Audiences ingested into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -68,13 +82,13 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
 ### Scheduling {#scheduling}
 

@@ -49,6 +49,10 @@ Use the `'$'` preface to enter a query parameter into your query in the text edi
 
 If you remove a parameter and try to execute the query again after it has already been run, an error message is displayed in the [!UICONTROL Query parameters] section to alert you.
 
+>[!NOTE]
+>
+>If your query does not take parameters, you can still enter unnecessary parameters within the Query Editor. The Query Editor ignores all unnecessary key-value pairs and they have no effect on the execution or the results of the query.
+
 ![The Query Editor with an empty value field and the query parameters error highlighted.](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## Use query logs details to check parameter values {#check-parameter-values}
@@ -71,4 +75,4 @@ Parameter values are saved when you schedule a parameterized query. To schedule 
 
 By reading this document, you have learned how to parameterize queries in the Adobe Experience Platform UI and use them in scheduled query runs. The document also highlighted how to check the logs for the parameter values used in query executions.
 
-If you have not already, you are recommended to read the guide on [monitoring scheduled queries](./monitor-queries.md) to gain a better understanding of the status of all query jobs through the Platform UI.
+Next, you are recommended to read the guide on [monitoring scheduled queries](./monitor-queries.md) to gain a better understanding of the status of all query jobs through the Platform UI.

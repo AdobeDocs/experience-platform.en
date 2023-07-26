@@ -27,14 +27,28 @@ Before you configure your [!DNL Twitter Custom Audiences] destination, make sure
 
 {style="table-layout:auto"}
 
+## Supported audiences {#supported-audiences}
+
+This section describes all the audiences that you can export to this destination.
+
+All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
+Additionally, this destination also supports the activation of the audiences described in the table below.
+
+| Audience type | Description | 
+---------|----------|
+| Custom uploads | Audiences ingested into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers used in the Twitter Custom Audiences destination.|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers used in the Twitter Custom Audiences destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
@@ -80,13 +94,13 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ## Data usage and governance {#data-usage-governance}
 
@@ -94,9 +108,9 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-When mapping audience segments to Twitter, make sure to meet the following segment naming requirements:
+When mapping audiences to Twitter, make sure to meet the following audience naming requirements:
 
-1. Provide human-readable segment mapping names. We recommend using the same name that you used for the Experience Platform segments.
-2. Do not use special characters (+ & , % : ; @ / = ? $) in segment and segment mapping names. If your Experience Platform segment name contains these characters, please remove them before mapping the segment to a Twitter destination.
+1. Provide human-readable audience mapping names. We recommend using the same name that you used for the Experience Platform segments.
+2. Do not use special characters (+ & , % : ; @ / = ? $) in audience and audience mapping names. If your Experience Platform audience name contains these characters, please remove them before mapping the audience to a Twitter destination.
 
 More information about [!DNL List Custom Audiences] in Twitter can be found in the [Twitter documentation](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).
