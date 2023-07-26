@@ -211,7 +211,7 @@ The [!UICONTROL Move] dataset to folder dialog appears. Select the folder you wa
 
 ![The [!UICONTROL Move] dataset dialog with [!UICONTROL Move] highlighted.](../images/datasets/user-guide/move-dialog.png)
 
->![TIP]
+>![NOTE]
 >
 >You can create folders directly from the Move dataset dialog. To create a folder, select the create folder icon (![The create folder icon.](../images/datasets/user-guide/create-folder-icon.png)) in the top right of the dialog.
 ><p>![The Move dataset dialog with the create folder icon highlighted.](/help/catalog/images/datasets/user-guide/create-folder.png "The Move dataset dialog with the create folder icon highlighted."){width="100" zoomable="yes"}</p>
