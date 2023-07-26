@@ -74,7 +74,7 @@ When configuring the datastream, under **[!UICONTROL Adobe Experience Platform]*
 
 ![Datastream configuration](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-For more details on how to set up a datastream, follow the instructions described in the [Platform Web SDK documentation](../../edge/datastreams/configure.md#aep).
+For more details on how to set up a datastream, follow the instructions described in the [Platform Web SDK documentation](../../datastreams/configure.md#aep).
 
 ### Create an [!DNL Active-On-Edge] merge policy {#create-merge-policy}
 
