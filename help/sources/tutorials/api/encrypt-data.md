@@ -121,19 +121,19 @@ During this stage, you must generate your own private key and public key combina
 
 ### Share your public key to Experience Platform
 
-To share your public key, make a POST request to the `/custom-key` endpoint while providing your encryption algorithm and your Base64-encoded public key.
+To share your public key, make a POST request to the `/customer-keys` endpoint while providing your encryption algorithm and your Base64-encoded public key.
 
 **API format**
 
 ```http
-POST /data/foundation/connectors/encryption/keys/custom-key
+POST /data/foundation/connectors/encryption/customer-keys
 ```
 
 **Request**
 
 ```shell
 curl -X POST \
-  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/custom-keys' \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/custom-keys' \
   -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
   -H 'x-api-key: {{API_KEY}}' \
   -H 'x-gw-ims-org-id: {{ORG_ID}}' \
