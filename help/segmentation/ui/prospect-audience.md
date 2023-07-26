@@ -6,7 +6,7 @@ type: Documentation
 
 # Prospect audiences
 
-Adobe Experience Platform allows you to bring the full ease and sophistication of the marketer-friendly segmentation experience to prospect profiles. You can drastically reduce the time spent assembling audiences by creating your own prospect audiences while responsibly using partner data.
+Adobe Experience Platform allows you to bring the full ease and sophistication of the marketer-friendly segmentation experience to [prospect profiles](../../profile/ui/prospect-profile.md). You can drastically reduce the time spent assembling audiences by creating your own prospect audiences while responsibly using partner data.
 
 ## Browse {#browse}
 
@@ -50,4 +50,4 @@ For more information on using the Segment Builder, please read the [Segment Buil
 
 ## Next steps
 
-After reading this guide, you now know how to create and manage your prospect audiences in Adobe Experience Platform. To learn how to activate a prospect audience to other downstream services, please read the guide on [activating prospect audiences](../../destinations/ui/activate-prospect-audiences.md).
+<!-- After reading this guide, you now know how to create and manage your prospect audiences in Adobe Experience Platform. To learn how to activate a prospect audience to other downstream services, please read the guide on [activating prospect audiences](../../destinations/ui/activate-prospect-audiences.md). -->
