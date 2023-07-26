@@ -1,8 +1,6 @@
 ---
 title: LiveRamp - Onboarding connection
 description: Learn how to use the LiveRamp connector to onboard audiences from Adobe Real-Time Customer Data Platform to LiveRamp Connect.
-hidefromtoc: yes
-hide: yes
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
 ---
 # [!DNL LiveRamp - Onboarding] connection {#liveramp-onboarding}
