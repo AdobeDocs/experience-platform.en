@@ -14,15 +14,15 @@ Adobe Experience Platform can deliver your audiences as data files to your cloud
 
 ## Supported cloud storage destinations {#supported-destinations}
 
-Adobe Experience Platform supports the following cloud storage destinations:
+Adobe Experience Platform supports data exports to the following cloud storage destinations:
 
 * [Amazon Kinesis connection](amazon-kinesis.md)
 * [Amazon S3 connection](amazon-s3.md)
 * [Azure Blob connection](azure-blob.md)
-* [(Beta) Azure Data Lake Storage Gen2](adls-gen2.md)
+* [Azure Data Lake Storage Gen2](adls-gen2.md)
 * [Azure Event Hubs connection](azure-event-hubs.md)
-* [(Beta) Data Landing Zone](data-landing-zone.md)
-* [(Beta) Google Cloud Storage](google-cloud-storage.md)
+* [Data Landing Zone](data-landing-zone.md)
+* [Google Cloud Storage](google-cloud-storage.md)
 * [SFTP connection](sftp.md)
 
 ## Connect to a new cloud storage destination {#connect-destination}
@@ -59,4 +59,10 @@ Folder path in your storage location: `acme/campaigns/2021/Luxury Audience/25768
 
 ## Data export type {#export-type}
 
-Cloud storage destinations support **Profile-based export**. This means that you are exporting details about the individuals in the audience. These details are needed for personalization and can include attributes, events, audience memberships, and more.
+Cloud storage destinations support the following export types: 
+* **Profile-based export**. This means that you are exporting details about the individuals in the audience. These details are needed for personalization and can include attributes, events, audience memberships, and more.
+* [!BADGE Beta]{type=Informative} **Dataset export**. This functionality allows you to export entire datasets to cloud storage destinations. [Read more](/help/destinations/ui/export-datasets.md) about the functionality. 
+
+## Next steps {#next-steps}
+
+After selecting which one of the [supported cloud destinations](#supported-destinations) you would like to use, read the [connect to destinations tutorial](/help/destinations/ui/connect-destination.md) to learn how to establish a connection to the destination. Then, read the activation tutorial to file-based destinations to learn how to start [exporting](/help/destinations/ui/activate-batch-profile-destinations.md) data to your cloud storage destination.
