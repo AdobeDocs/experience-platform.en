@@ -113,5 +113,5 @@ Note the following limitations as you explore the use case described on this pag
 Explore further use cases enabled through partner data support in Real-Time CDP:
 
 * Use third party data support in Real-Time CDP to expand your profile base with prospect profiles from data partners and engage with them to acquire or reach new customers. [Read more](/help/rtcdp/partner-data/prospecting.md).
-* **Expanded activation** of prospect profiles and prospect audiences to seleect destinations.
+* **Expanded activation** of prospect profiles and prospect audiences to select destinations.
 * (**Coming soon**) [!BADGE Beta]{type=Informative} **Leverage partner aided recognition** for personalizing on-site experiences during the visit, and for off-site retargeting post visit, without the user authenticating or having prior history with your brand.
