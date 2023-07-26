@@ -32,6 +32,20 @@ LiveRamp SFTP supports the activation of identities such as PII-based identifier
 
 In the [mapping step](#map) of the activation workflow, you must define the target mappings as custom attributes.
 
+## Supported audiences {#supported-audiences}
+
+This section describes all the audiences that you can export to this destination.
+
+All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
+Additionally, this destination also supports the activation of the audiences described in the table below.
+
+| Audience type | Description | 
+---------|----------|
+| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#importing-an-audience) into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
@@ -184,7 +198,9 @@ Platform will export two CSV files to [!DNL LiveRamp SFTP]:
 * One CSV file containing audiences A, C, and D;
 * One CSV file containing audience B.
 
-Exported CSV files contain profiles with the selected attributes and the corresponding audience status, on separate columns, with the attribute name and audience IDs as a column headers.
+Exported CSV files contain profiles with the selected attributes and the corresponding audience status, on separate columns, with the attribute name, and `audience_namespace:audience_ID` pairs as column headers, as shown in the example below:
+
+`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1:AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2:AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X:AUDIENCE_ID_X`
 
 The profiles included in the exported files can match one the following audience qualification statuses:
 
@@ -192,11 +208,10 @@ The profiles included in the exported files can match one the following audience
 * `Expired`: The profile is no longer qualified for the audience, but has qualified in the past.
 * `""`(empty string): The profile never qualfied for the audience.
 
-
-For instance, an exported CSV file with one `email` attribute and 3 audiences could look like this:
+For instance, an exported CSV file with one `email` attribute, two audiences originating from the Experience Platform [Segmentation Service](../../../segmentation/home.md), and one [imported](../../../segmentation/ui/overview.md#importing-an-audience) external audience, could look like this:
 
 ```csv
-email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
+email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e
 abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
@@ -204,6 +219,8 @@ abc116@testemailabc.com,active,,
 abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
+
+In the example above, the `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` and `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` sections describe audiences originating from the Segmentation Service, while `CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e` describes an audience imported into Platform as a [custom upload](../../../segmentation/ui/overview.md#importing-an-audience).
 
 Since Platform generates one CSV file for each [merge policy ID](../../../profile/merge-policies/overview.md), it also generates a separate dataflow run for each merge policy ID.
 
