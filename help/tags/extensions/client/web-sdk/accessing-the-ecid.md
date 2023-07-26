@@ -8,7 +8,7 @@ exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
 
 The [!DNL Experience Cloud Identity (ECID)] is a persistent identifier assigned to a user when they visit your website. In certain circumstances, you might prefer to access the [!DNL ECID] (to send it to a third party, for example). Another use case is setting the [!DNL ECID] in a custom XDM field, in addition to having it in the identity map.
 
-You can access the ECID either via [Data Prep for Data Collection](../../../../edge/datastreams/data-prep.md) (recommended) or via tags.
+You can access the ECID either via [Data Prep for Data Collection](../../../../datastreams/data-prep.md) (recommended) or via tags.
 
 ## Accessing the ECID via Data Prep (preferred method) {#accessing-ecid-data-prep}
 

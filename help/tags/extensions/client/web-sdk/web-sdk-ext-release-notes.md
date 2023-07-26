@@ -21,7 +21,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 **New features**
 
 * Contains version 2.16.0 of the Adobe Experience Platform Web SDK.
-* Added support for [datastream configuration overrides](../../../../edge/datastreams/overrides.md).
+* Added support for [datastream configuration overrides](../../../../datastreams/overrides.md).
 * Add deprecation notice to the `datasetId` option on the `sendEvent` command.
 
 
