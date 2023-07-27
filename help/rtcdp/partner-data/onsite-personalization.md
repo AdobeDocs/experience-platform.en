@@ -77,7 +77,7 @@ As you create your schema and [add field groups to it](/help/xdm/ui/resources/sc
 * [Visit Web Page](/help/xdm/field-groups/event/web-details.md)
 * [Identity Map](/help/xdm/field-groups/profile/identitymap.md)
 
-Additionally, create a new field group with any other information that you want to capture about your web property visitor and add it to your schema. Read how to [create a field group](/help/xdm/ui/resources/field-groups.md) and how to [add fields](/help/xdm/ui/resources/field-groups.md) to the field group. For example, if you are expecting to retrieve from your partner information regarding fields such as `married`, `householdIncome`, `buyingPropensity`, or `homePurchase`, you need these manually to the field group that you are creating.
+Additionally, create a new field group with any other information that you want to capture about your web property visitor and add it to your schema. Read how to [create a field group](/help/xdm/ui/resources/field-groups.md) and how to [add fields](/help/xdm/ui/resources/field-groups.md) to the field group. For example, if you are expecting to retrieve from your partner information regarding fields such as `married`, `householdIncome`, `buyingPropensity`, or `homePurchase`, you need to add these manually to the field group that you are creating.
 
 Before saving the schema, make sure to set the **[!UICONTROL Partner ID]** field as an identity and set the identity namespace to the one you created in the earlier step. Remember also to [enable the schema to be included in Profile](help/xdm/ui/resources/schemas.md#profile).
 
@@ -85,13 +85,13 @@ Before saving the schema, make sure to set the **[!UICONTROL Partner ID]** field
 
 Next, you must create a dataset to hold the data that you collect from your web property visitors and that you will use for onsite personalization.
 
-Read the tutorial on [how to create a dataset](/help/catalog/datasets/user-guide.md#create) and remember to select the option to create the dataset from a schema.
+Read the tutorial on [how to create a dataset](/help/catalog/datasets/user-guide.md#create) and remember to select the option to create the dataset from a schema. Create the dataset based on the schema that you created in the previous step.
 
 Note that similar to the step when creating a schema, you need to enable the dataset to be included in the [!UICONTROL Real-Time Customer Profile]. For more information about enabling the dataset for use in [!UICONTROL Real-Time Customer Profile], read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md#profile) 
 
 ### Implement event data collection on your web property
 
-After setting up your data management configuration, you now need to implement real-time event [data collection](/help/collection/home.md) on your web property. You need to instrument your property with the Adobe data collection library, Web SDK, to collect real-time event calls and send them back to Real-Time CDP. This item consists of a few separate tasks across a few data collection components.
+After setting up your data management configuration, you now need to implement real-time event [data collection](/help/collection/home.md) on your web property. You need to instrument your property with the Adobe data collection library - [!UICONTROL Web SDK] - to collect real-time event calls and send them back to Real-Time CDP. This item consists of a few separate tasks across a few data collection components.
 
 >[!IMPORTANT]
 >
@@ -117,7 +117,7 @@ Note that you do not have to select a profile dataset in this scenario since you
 
 #### Create Tag property
 
-A property is basically a container that you fill with extensions, rules, data elements, and libraries as you deploy tags to your site. 
+Think of a property as a container that you fill with extensions, rules, data elements, and libraries as you deploy tags to your site. 
 
 Navigate to **[!UICONTROL Tags]** and select **[!UICONTROL New property]**.
 
@@ -169,6 +169,8 @@ You must add this code snippet to the very top of your website. As a result, you
 #### Set up edge segmentation
 
 Set up edge segmentation so the audience membership of your visitors is evaluated in real-time, as they visit your web property.  
+
+Make sure to set up active-on-edge merge policy.
 
 #### Integrate with Adobe Target or other custom personalization destination
 
