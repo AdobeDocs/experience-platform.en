@@ -54,7 +54,7 @@ The [!UICONTROL View JSON] dialog appears. The attributes of the prospect profil
 
 To learn how you can use the prospect profiles functionality in Experience Platform in combination with other Platform functionality, please read the following use case documentation:
 
-- [Engage and acquire new customers through the prospecting functionality]()
+- [Engage and acquire new customers through the prospecting functionality](../../rtcdp/partner-data/prospecting.md)
 
 ## Next steps
 
