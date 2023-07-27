@@ -11,6 +11,7 @@ feature: Identities
 - [Identity Service overview](home.md)
 - [Identity namespace overview](namespaces.md)
 - [Guardrails for Identity data](guardrails.md)
+- [Guardrails for Identity data with deletion logic](guardrails-beta.md)
 - Identity Service API {#api}
   - [Getting Started](api/getting-started.md)
   - [Label a field as identity](api/label-identities.md)
