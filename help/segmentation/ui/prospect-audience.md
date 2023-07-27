@@ -50,6 +50,12 @@ The Segment Builder appears. The prospect profile attributes appear on the left 
 
 For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md).
 
+## Suggested use cases {#use-cases}
+
+To learn how you can use the prospect audiences functionality in Experience Platform in combination with other Platform functionality, please read the following use case documentation:
+
+- [Engage and acquire new customers through the prospecting functionality](../../rtcdp/partner-data/prospecting.md)
+
 ## Next steps
 
 <!-- After reading this guide, you now know how to create and manage your prospect audiences in Adobe Experience Platform. To learn how to activate a prospect audience to other downstream services, please read the guide on [activating prospect audiences](../../destinations/ui/activate-prospect-audiences.md). -->
