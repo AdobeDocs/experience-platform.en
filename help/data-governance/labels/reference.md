@@ -62,7 +62,7 @@ One type of data you may consider to be sensitive may be different types of geog
 
 >[!IMPORTANT]
 >
->The third-party data label is in beta. It is not available to all users the documentation is subject to change.
+>The third-party data label is in beta. It is not available to all users and the documentation is subject to change.
 
 Partner Ecosystem labels are used to categorize data obtained from sources external to your organization.
 
