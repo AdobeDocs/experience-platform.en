@@ -29,7 +29,7 @@ While each organization can potentially have multiple merge policies per schema 
 >
 >When you set a new merge policy as the default, any existing merge policy that was previously set as the default will automatically be updated to no longer be used as the default.
 
-To ensure all profile consumers are working with the same view on edges, merge policies can be marked as active on edge. In order for a segment to be activated on edge (marked as an edge segment), it must be tied to a merge policy that is marked as active on edge. If a segment is **not** tied to a merge policy that is marked as active on edge, the segment will not be marked as active on edge, and will be marked as a streaming segment.
+To ensure all profile consumers are working with the same view on edges, merge policies can be marked as active on edge. In order for an audience to be activated on edge (marked as an edge audience), it must be tied to a merge policy that is marked as active on edge. If an audience is **not** tied to a merge policy that is marked as active on edge, the audience will not be marked as active on edge, and will be marked as a streaming audience.
 
 Additionally, each organization can only have **one** merge policy that is active on edge. If a merge policy is active on edge, it can be used for other systems on edge, such as Edge Profile, Edge Segmentation, and Destinations on Edge. 
 
@@ -755,6 +755,6 @@ A successful delete request returns HTTP Status 200 (OK) and an empty response b
 
 ## Next steps
 
-Now that you know how to create and configure merge policies for your organization, you can use them to adjust the view of customer profiles within Platform and to create audience segments from your [!DNL Real-Time Customer Profile] data. 
+Now that you know how to create and configure merge policies for your organization, you can use them to adjust the view of customer profiles within Platform and to create audiences from your [!DNL Real-Time Customer Profile] data. 
 
-Please see the [Adobe Experience Platform Segmentation Service documentation](../../segmentation/home.md) to begin defining and working with segments.
+Please see the [Adobe Experience Platform Segmentation Service documentation](../../segmentation/home.md) to begin defining and working with audiences.

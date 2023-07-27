@@ -1,15 +1,15 @@
 ---
 title: Pega Customer Decision Hub connection
-description: Use the Pega Customer Decision Hub destination in Adobe Experience Platform to send profile attributes and segment membership data to Pega Customer Decision Hub for next-best-action decisioning.
+description: Use the Pega Customer Decision Hub destination in Adobe Experience Platform to send profile attributes and audience membership data to Pega Customer Decision Hub for next-best-action decisioning.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
 ---
 # Pega Customer Decision Hub connection
 
 ## Overview {#overview}
 
-Use the [!DNL Pega Customer Decision Hub] destination in Adobe Experience Platform to send profile attributes and segment membership data to [!DNL Pega Customer Decision Hub] for next-best-action decisioning. 
+Use the [!DNL Pega Customer Decision Hub] destination in Adobe Experience Platform to send profile attributes and audience membership data to [!DNL Pega Customer Decision Hub] for next-best-action decisioning. 
 
-Profile segment membership from Adobe Experience Platform, when loaded into [!DNL Pega Customer Decision Hub], can be used as predictor in adaptive models and help deliver the right contextual and behavioral data for next-best-action decisioning purposes.
+Profile audience membership from Adobe Experience Platform, when loaded into [!DNL Pega Customer Decision Hub], can be used as predictor in adaptive models and help deliver the right contextual and behavioral data for next-best-action decisioning purposes.
 
 >[!IMPORTANT]
 >
@@ -25,15 +25,15 @@ A marketer wants to leverage insights from data science model-based next best ac
 
 ### Financial services
 
-A marketer wants to optimize the offers for customers who subscribed or unsubscribed from Pension Plan or Retirement Plan newsletters. Financial services companies can ingest multiple Customer IDs from their own CRMs into Adobe Experience Platform, build segments from their own offline data, and send profiles that are entering and exiting the segments to [!DNL Pega Customer Decision Hub] for next-best-action (NBA) decisioning in outbound channels.
+A marketer wants to optimize the offers for customers who subscribed or unsubscribed from Pension Plan or Retirement Plan newsletters. Financial services companies can ingest multiple Customer IDs from their own CRMs into Adobe Experience Platform, build audiences from their own offline data, and send profiles that are entering and exiting the audiences to [!DNL Pega Customer Decision Hub] for next-best-action (NBA) decisioning in outbound channels.
 
 ## Prerequisites {#prerequisites}
 
 Before you can use this destination to export data out of Adobe Experience Platform, make sure you complete the following prerequisites in [!DNL Pega Customer Decision Hub]:
 
-* Configure the [Adobe Experience Platform Profile and Segment Membership integration Component](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) in your [!DNL Pega Customer Decision Hub] instance.
+* Configure the [Adobe Experience Platform Profile and Audience Membership integration Component](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) in your [!DNL Pega Customer Decision Hub] instance.
 * Configure OAuth 2.0 [Client Registration using Client Credentials](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) grant type in your [!DNL Pega Customer Decision Hub] instance.
-* Configure [real-time run data flow](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) for  Adobe Segment Membership data flow in your [!DNL Pega Customer Decision Hub] instance.
+* Configure [real-time run data flow](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) for  Adobe Audience Membership data flow in your [!DNL Pega Customer Decision Hub] instance.
 
 ## Supported identities {#supported-identities}
 
@@ -51,8 +51,8 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | Export all members of a segment with identifier (*CustomerID*), attributes (last name, first name, location, etc.) and Segment Membership data.|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are always-on API-based connections. As soon as a profile is updated in Experience Platform, based on segment evaluation, the connector sends the update downstream to the destination platform. For more information, see [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export type | **[!UICONTROL Profile-based]** | Export all members of an audience with identifier (*CustomerID*), attributes (last name, first name, location, etc.) and Audience Membership data.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are always-on API-based connections. As soon as a profile is updated in Experience Platform, based on audience evaluation, the connector sends the update downstream to the destination platform. For more information, see [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
@@ -84,13 +84,13 @@ To configure details for the destination, fill in the required fields and select
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Host Name]**: The Pega Customer Decision Hub Host Name to which the profile gets exported as json data.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-See [Activate audience data to streaming profile export destinations](../../ui/activate-streaming-profile-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to streaming profile export destinations](../../ui/activate-streaming-profile-destinations.md) for instructions on activating audiences to this destination.
 
 ### Destination attributes {#attributes}
 
@@ -114,14 +114,14 @@ Selecting target fields:
 
 ## Exported data / Validate data export {#exported-data}
 
-A successful segment membership update for a profile would insert the segment identifier, name and statuses in the Pega marketing segment membership datastore. The membership data is associated to a customer using Customer Profile Designer in [!DNL Pega Customer Decision Hub], as shown below.
-![Image of the UI screen where you can associate Adobe Segment Membership data to Customer, using Customer Profile Designer](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
+A successful audience membership update for a profile would insert the audience identifier, name and statuses in the Pega marketing audience membership datastore. The membership data is associated to a customer using Customer Profile Designer in [!DNL Pega Customer Decision Hub], as shown below.
+![Image of the UI screen where you can associate Adobe Audience Membership data to Customer, using Customer Profile Designer](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
-The segment membership data is used in Pega Next-Best-Action Designer Engagement polices for next-best-action decisioning, as shown below.
-![Image of the UI screen where you can add Segment membership fields as conditions in Engagement Policies of Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+The audience membership data is used in Pega Next-Best-Action Designer Engagement polices for next-best-action decisioning, as shown below.
+![Image of the UI screen where you can add Audience membership fields as conditions in Engagement Policies of Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
 
-The customer segment membership data fields are added as predictors in Adaptive models, as shown below.
-![Image of the UI screen where you can add Segment membership fields as predicators in Adaptive models, using Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
+The customer audience membership data fields are added as predictors in Adaptive models, as shown below.
+![Image of the UI screen where you can add Audience membership fields as predicators in Adaptive models, using Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Additional resources {#additional-resources}
 

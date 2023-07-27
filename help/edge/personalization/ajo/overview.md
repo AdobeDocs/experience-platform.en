@@ -24,7 +24,7 @@ To start using [!DNL Adobe Journey Optimizer], follow the steps below.
 
 1. Go through the [prerequisites](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) from the [!DNL Adobe Journey Optimizer] [Web Experiences Guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), specifically:
    * Set up [!DNL Adobe Experience Cloud Visual Editing Helper].
-   * Enable [!DNL Adobe Journey Optimizer] in your [datastream](../../datastreams/overview.md).
+   * Enable [!DNL Adobe Journey Optimizer] in your [datastream](../../../datastreams/overview.md).
    * Enable the [!UICONTROL Active-On-Edge Merge Policy] option.
 
 2. Add the `renderDecisions` option to your events. Set `renderDecisions` to `true` for automatic rendering of delivered Journey Optimizer content propositions on your web page surfaces.
@@ -36,7 +36,7 @@ To start using [!DNL Adobe Journey Optimizer], follow the steps below.
     })
     ```
 
-3. Optionally, specify additional surfaces in your events. By default, the Web SDK will automatically generate the web surface for the current web page and include it in the request to the Edge Network. If required, additional surfaces can be included in the request by specifying these in the `personalization.surfaces` option of the `sendEvent` command, or in the corresponding **[!UICONTROL Surfaces]** [[!UICONTROL Send event] action](../../extension/action-types.md#send-event) configuration of the Web SDK Extension.
+3. Optionally, specify additional surfaces in your events. By default, the Web SDK will automatically generate the web surface for the current web page and include it in the request to the Edge Network. If required, additional surfaces can be included in the request by specifying these in the `personalization.surfaces` option of the `sendEvent` command, or in the corresponding **[!UICONTROL Surfaces]** [[!UICONTROL Send event] action](../../../tags/extensions/client/web-sdk/action-types.md#send-event) configuration of the Web SDK Extension.
 
     ```javascript
     alloy("sendEvent", {
