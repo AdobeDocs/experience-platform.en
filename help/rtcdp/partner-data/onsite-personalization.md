@@ -117,17 +117,52 @@ Note that you do not have to select a profile dataset in this scenario since you
 
 #### Create Tag property
 
-A property is basically a container that you fill with extensions, rules, data elements, and libraries as you deploy tags to your site. Get complete information about how to [create a tag property](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html)
+A property is basically a container that you fill with extensions, rules, data elements, and libraries as you deploy tags to your site. 
 
-Next, you must install various extensions within the property.
+Navigate to **[!UICONTROL Tags]** and select **[!UICONTROL New property]**.
 
-#### Install WEB SDK 
+![Create a new tag property.](/help/rtcdp/assets/partner-data/onsite-personalization/create-tag-property.png)
+
+Fill in the required fields and select **[!UICONTROL Save]**.
+
+![Fill in required fields for your new property.](/help/rtcdp/assets/partner-data/onsite-personalization/tag-property-fields.png)
+
+Get complete information about how to [create a tag property](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html).
+
+Next, you must install various extensions within the property. Select your tag property and navigate to the [!UICONTROL Extensions] section. 
+
+![Select your new tag property.](/help/rtcdp/assets/partner-data/onsite-personalization/select-tag-property.png)
+
+Notice that the [!UICONTROL Core] extension is already installed. You must install two further extensions, as detailed in the next sections.
+
+![View installed extensions.](/help/rtcdp/assets/partner-data/onsite-personalization/view-existing-extensions.png)
+
+#### Install Web SDK extension
 
 Note that this tutorial indicates how you can instrument your website with WebSDK. You can also use Mobile SDK on your app to personalize the experience to your app visitors.
 
-For more information on installing WebSDK, see:
+![View of the Web SDK extension in the extensions catalog.](/help/rtcdp/assets/partner-data/onsite-personalization/web-sdk-extension.png)
 
-https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=en
+Navigate down to the **[!UICONTROL Datastreams]** section and provide information on the Experience Platform sandbox that you are using. Select the appropriate sandbox and the datastream created in the previous 
+steps from the next dropdown. You can choose the same sandbox and datastream values for all other environments. Leave the other settings unchanged and select **[!UICONTROL Save]**. 
+
+Get complete information on [how to install WebSDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html).
+
+#### Install ID Service extension
+
+Use this extension to create a unique device-based first-party identity for visitors across all Experience Cloud solutions. Search for **[!UICONTROL ID Service]** in the extension catalog, and install it. Keep all the default settings then installing the extension.
+  
+![View of the ID Service extension in the extensions catalog.](/help/rtcdp/assets/partner-data/onsite-personalization/id-service-extension.png)
+
+#### Set up environments
+
+Next, head on over to the **[!UICONTROL Environments]** section from the left-hand navigation. In this step you must connect your website to Adobe's Edge Network.
+
+Select the box icon on the right for the development environment, and copy the standard version of the JavaScript code snippet.  
+
+![Select box icon in Environments section.](/help/rtcdp/assets/partner-data/onsite-personalization/select-box-icon.png)
+
+You must add this code snippet to the very top of your website. As a result, your website will make a call to the Adobe Edge Network to retrieve JavaScript logic that will be loaded and executed on the page. This allows for functionality like visitor ID generation, data collection, and real-time experience personalization to work.
 
 ### Personalization
 
