@@ -2,19 +2,21 @@
 title: Prospect Profiles
 description: Learn how to create and use prospect profiles to gather information about unknown customers using third-party information. 
 type: Documentation
+hide: true
+hidefromtoc: true
 ---
 
 # Prospect profiles
 
 Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. 
 
-Prospect profiles are used to represent people who have not yet engaged with your company but want to reach out to. With prospect profiles, you can supplement your customer profiles with attributes from trusted third-party partners.
+Prospect profiles are used to represent people who have not yet engaged with your company but you want to reach out to. With prospect profiles, you can supplement your customer profiles with attributes from trusted third-party partners.
 
 ## Browse {#browse}
 
 To access prospect profiles, select **[!UICONTROL Profiles]** in the **[!UICONTROL Prospects]** section.
 
-The **[!UICONTROL Browse]** page is displayed. A list of all the prospect profiles for the organization is displayed.
+The **[!UICONTROL Browse]** page is displayed. A list of all the prospect profiles for your organization is displayed.
 
 ![The [!UICONTROL Profiles] button is highlighted, displaying the [!UICONTROL Browse] page for prospect profiles.](../images/prospect-profile/browse-profiles.png)
 
@@ -28,7 +30,7 @@ For more information on browsing profiles, please read the [browse section of th
 
 >[!IMPORTANT]
 >
->A prospect profile will expire after 25 days of residing in Adobe Experience Platform.
+>A prospect profile will automatically expire after 25 days of residing in Adobe Experience Platform.
 
 To view more information about a specific prospect profile, select a profile on the [!UICONTROL Browse] page.
 
@@ -44,9 +46,15 @@ You can also see all the attributes in JSON format by selecting **[!UICONTROL Vi
 
 ![The [!UICONTROL View JSON] button is highlighted on the prospect profile details page.](../images/prospect-profile/profile-select-view-json.png)
 
-The attributes of the prospect profile are now displayed in JSON form.
+The [!UICONTROL View JSON] dialog appears. The attributes of the prospect profile are now displayed in JSON form.
 
 ![The prospect profile's attributes are displayed in JSON form.](../images/prospect-profile/profile-view-json.png)
+
+## Suggested use cases {#use-cases}
+
+To learn how you can use the prospect profiles functionality in Experience Platform in combination with other Platform functionality, please read the following use case documentation:
+
+- [Engage and acquire new customers through the prospecting functionality]()
 
 ## Next steps
 
