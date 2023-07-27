@@ -2,6 +2,8 @@
 title: XDM Individual Prospect Profile Class
 description: This document provides an overview of the XDM Individual Prospect Profile class in Experience Data Model (XDM).
 badgeBeta: label="Beta" type="Informative"
+hide: true
+hidefromtoc: true
 ---
 # [!UICONTROL XDM Individual Prospect Profile] class
 
