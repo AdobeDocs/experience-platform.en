@@ -10,6 +10,14 @@ In Adobe Experience Platform, look-alike audiences provide intelligent insights 
 
 With look-alike audiences, you can create expanded audiences that target customers similar to your high-performing audiences or target customers similar to previously converted audiences.
 
+## Terminology
+
+Before getting started with look-alike audiences, make sure to understand the following concepts:
+
+- **Base audience**: The base audience is the audience that you want to find out more insights about. This is the audience that the look-alike model is **based** on. 
+- **Look-alike model**: A look-alike model is a machine learning model that is trained on every eligible base audience without any customer input. Each look-alike model creates the influential factors and similarity graphs. A look-alike model does **not** get scored.
+- **Look-alike audience**: A look-alike audience is the audience that is created when a look-alike model with a selected similarity threshold is applied to the base audience. The look-alike audience is what gets scored.
+
 ## View look-alike insights
 
 Look-alike insights is built-in with the audience details page. To look at the look-alike insights for an audience, select **[!UICONTROL Audiences]** in the left navigation bar, followed by **[!UICONTROL Browse]**, and the audience you want to view the insights for.
