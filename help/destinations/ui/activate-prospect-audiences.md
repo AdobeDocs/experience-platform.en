@@ -2,6 +2,8 @@
 
 title: Activate prospect audiences to destinations
 type: Tutorial
+hide: yes
+hidefromtoc: yes
 description: Learn how to activate prospect audiences to destinations
 ---
 
@@ -64,7 +66,11 @@ Use the check boxes to the left of the prospect audiences names to select the au
 
 ## Scheduling and next steps
 
-For the rest of the activation workflow to export prospect audiences, read the tutorial on activating data to file based-destinations. Continue from the [scheduling step](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+For the rest of the activation workflow to export prospect audiences, read the tutorial on activating data to file based-destinations. Continue from the [schedule audience export step](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+
+>[!NOTE]
+>
+>Note that in the scheduling step, the workflow to activate prospect audiences only allows you to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files). Incremental file exports are not supported.
 
 <!--
 
