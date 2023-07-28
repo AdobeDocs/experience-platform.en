@@ -10,7 +10,6 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 Updates to existing features in Adobe Experience Platform:
 
 - [Data collection](#data-collection)
-- [Data Prep](#data-prep)
 - [Destinations](#data-prep)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
@@ -29,7 +28,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 {style="table-layout:auto"}
 
 For more information on data collection, please read the [data collections overview](../../tags/home.md).
-
+<!-- 
 ## Data Prep {#data-prep}
 
 Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
@@ -42,7 +41,7 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 {style="table-layout:auto"}
 
-For more information on Data Prep, please read the [Data Prep overview](../../data-prep/home.md).
+For more information on Data Prep, please read the [Data Prep overview](../../data-prep/home.md). -->
 
 ## Destinations {#destinations}
 
