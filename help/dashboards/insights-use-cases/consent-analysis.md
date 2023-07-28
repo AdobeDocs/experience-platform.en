@@ -21,21 +21,21 @@ The use cases covered in this guide are consent trending and consent overlap.
 
 First navigate to the audience section of Real-Time CDP and click on the "Create segment" button on the top right.
 
-![]()
+![The [!UICONTROL Audiences] dashboard with [!UICONTROL Customer], [!UICONTROL Audiences], and [!UICONTROL Create segment] highlighted.](../images/insights-use-cases/consent-analysis/create-segment.png)
 
 Select "XDM Individual Profile" form the option. Note if you have maintained your user consent in a attribute that is not as per Adobe recommended field group, then you might need to select those attributes instead of the ones shown below.
 
-![]()
+![The Segment Builder with the [!UICONTROL XDM Individual Profile] attribute folder highlighted.](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
 
 Then select "Consents and Preferences".
 
 More information can be found on the [handling consent in segmentation](https://experienceleague.adobe.com/docs/experience-platform/segmentation/consents.html#handling-consent-in-segmentation) documentation.
 
-![]()
+![The Segment Builder with the [!UICONTROL Consent and Preferences] attribute folder highlighted.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 
 This will show the various Consent and Preferences available. For this demonstrations we are going to focus on "Marketing Preferences" so select that
 
-![]()
+![The Segment Builder with the [!UICONTROL Marketing Preferences] folder highlighted.](../images/insights-use-cases/consent-analysis/marketing-preferences.png)
 
 Then the list of marketing preferences are displayed. For this use cases we will focus on Email, SMS, and Calls. Note you can build insights for any other combination or infact all of these options as well.
 
