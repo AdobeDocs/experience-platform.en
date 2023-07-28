@@ -10,7 +10,6 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 Updates to existing features in Adobe Experience Platform:
 
 - [Data collection](#data-collection)
-- [Data Prep](#data-prep)
 - [Destinations](#data-prep)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
@@ -29,7 +28,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 {style="table-layout:auto"}
 
 For more information on data collection, please read the [data collections overview](../../tags/home.md).
-
+<!-- 
 ## Data Prep {#data-prep}
 
 Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
@@ -42,7 +41,7 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 {style="table-layout:auto"}
 
-For more information on Data Prep, please read the [Data Prep overview](../../data-prep/home.md).
+For more information on Data Prep, please read the [Data Prep overview](../../data-prep/home.md). -->
 
 ## Destinations {#destinations}
 
@@ -50,16 +49,9 @@ For more information on Data Prep, please read the [Data Prep overview](../../da
 
 **New or updated destinations** {#new-updated-destinations}
 
-<!--
-
-LiveRamp commented out until it is officially released tomorrow
-
-| [[!DNL LiveRamp - Onboarding]](../../destinations/catalog/advertising/liveramp-onboarding.md) | New | Onboard identities from Adobe Experience Platform into [!DNL LiveRamp Connect] so that you can target users on mobile, open web, social, and [!DNL CTV] platforms, using the [!DNL Ramp ID] identifier. |
-
--->
-
 | Destination | New or Updated |Description |
 | ----------- |----------------|----------- |
+| [[!DNL LiveRamp - Onboarding]](../../destinations/catalog/advertising/liveramp-onboarding.md) | New | Onboard identities from Adobe Experience Platform into [!DNL LiveRamp Connect] so that you can target users on mobile, open web, social, and [!DNL CTV] platforms, using the [!DNL Ramp ID] identifier. |
 | [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | New | Create a live outbound connection to [!DNL Azure Data Lake Storage Gen2] to periodically export data files from Adobe Experience Platform into your own storage location. This new destination provides enhanced file export functionality and supports [!BADGE Beta]{type=Informative} dataset exports. |
 | [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | New | [!DNL Data Landing Zone] is an [!DNL Azure Blob] storage interface provisioned by Adobe Experience Platform, granting you access to a secure, cloud-based file storage facility to export files out of Platform. This new destination provides enhanced file export functionality and supports [!BADGE Beta]{type=Informative} dataset exports. |
 | [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | New | Create a live outbound connection to [!DNL Google Cloud Storage] to periodically export data files from Adobe Experience Platform into your own buckets. This new destination provides enhanced file export functionality and supports [!BADGE Beta]{type=Informative} dataset exports. |
