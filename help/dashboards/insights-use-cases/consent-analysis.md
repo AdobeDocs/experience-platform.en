@@ -15,17 +15,19 @@ The use cases covered in this guide are consent trending and consent overlap.
 - **Consent Trending**: This tracks how user consent has trended over time. Analyzing consent preference changes helps marketers plan and execute campaigns that adapt to those user preference changes. For example, you may want to run targeted educational campaigns, transparency and trust campaigns, or incentive campaigns to respectfully drive consent choices. You could also correlate campaigns that might have been negatively impacting consent to proactively reduce the frequency of those campaigns.
 - **Consent Overlap**: You can use the overlap among consent channels to deliver consistent personalized messaging on multiple channels for the users who have consented to multiple channels. Marketers can prioritize and allocate resources to certain channels where there is a higher degree of consent and personalized messaging might resonate with customers thereby generating higher response rates.
 
-## Build a consent dashboard {#build-a-consent-dashboard}
+<!-- ## Build a consent dashboard {#build-a-consent-dashboard} -->
+
+## Create consented audiences {#create-consent-audiences}
 
 To build a consent dashboard, you must first create an audience of all the profiles that have consented to contact. To navigate to the Real-Time Customer Data Platform Segment Builder, select **Customer**, then **Audiences** in the left navigation of the Platform UI. From the Audiences dashboard, select **[!UICONTROL Create segment]** in the top right of the view.
 
 ![The [!UICONTROL Audiences] dashboard with [!UICONTROL Customer], [!UICONTROL Audiences], and [!UICONTROL Create segment] highlighted.](../images/insights-use-cases/consent-analysis/create-segment.png)
 
-The Segment Builder appears. Next, select **[!UICONTROL XDM Individual Profile]** from the available options. 
+The Segment Builder appears. Next, select **[!UICONTROL XDM Individual Profile]** from the available options. See the documentation for more information on the [rule builder canvas](../../segmentation/ui/segment-builder.md#rule-builder-canvas). 
 
 ![The Segment Builder with the [!UICONTROL XDM Individual Profile] attribute folder highlighted.](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
 
-Locate your consent attributes from the options available. Select **[!UICONTROL Consents and Preferences]**.
+Locate your consent attributes from the options available. Select **[!UICONTROL Consents and Preferences]**. 
 
 >[!NOTE]
 >
@@ -39,29 +41,22 @@ The various consent and preference options are displayed. As this demonstration 
 
 ![The Segment Builder with the [!UICONTROL Marketing Preferences] folder highlighted.](../images/insights-use-cases/consent-analysis/marketing-preferences.png)
 
-Then the list of marketing preferences are displayed. This example use case focuses on Email, SMS, and Calls however, you can build insights for any other combination or the entirity of options as well. For each of the channels, perform the below steps to create a segment for each.
+Then the list of marketing preferences are displayed. Although, this example use case focuses on email, SMS, and calls, you can build insights for any other combination or the entirity of options as well. For each of the channels, perform the below steps to create an audience for each.
 
-Select **[!UICONTROL Receive email]**, **[!UICONTROL Receive SMS]**, and **[!UICONTROL Receive calls]**.
+To begin configuring an audience select **[!UICONTROL Receive SMS]** / **[!UICONTROL Receive email]** / **[!UICONTROL Receive calls]**.
 
 ![The available contact channels for marketing are highlighted in the audience builder.](../images/insights-use-cases/consent-analysis/channels.png)
 
-Select and drag the "Choice Value" attribute to the center pane. Then from the drop-down select the desired value ["Yes (opt in)"].
+The [!UICONTROL Subscriptions] folder appears. From the options available, select and drag the **[!UICONTROL Choice Value]** attribute to the center pane, then select the desired value from the drop-down. In this case, select **Yes (opt in)**. Next, name the audience according to your business needs and provide a user friendly description.
 
-Then name the segment as follow:
+>[!NOTE]
+>
+>There is a soft limit on the number of audiences you are recommended to create. More information can be found in the [segmentation guardrails documentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=en#segmentation-guardrails).
 
-for email, we will create a segment called "Users Consented to Email"
-for SMS, we will create a segment called "Users Consented to SMS"
-for Calls, we will create a segment called "Users Consented to Calls"
-Note:
+![The [!UICONTROL Choice Value] attribute with the [!UICONTROL Yes (opt-in)] value highlighted in the segment builder. The name and description of the audience are also highlighted.](../images/insights-use-cases/consent-analysis/choice-value.png)
 
-you can use segment names that suite your business needs
-these is a soft limit on the number of segments you are recommended to create - review Segmentation guardrails
-Optionally add a description to this segment
+Once you have created the necessary audiences, they are listed in the [!UICONTROL Audiences] [!UICONTROL Browse] tab. 
 
-![The [!UICONTROL Choice Value] attribute highlighted in the segment builder with the [!UICONTROL Yes (opt-in)] value highlighted. The name and description of the audience are also highlighted.]()
-
-Once you have created the desired segments, they will be listed in the Audiences - Browse tab. Please note that you have to wait for the batch segmentation job to complete before starting to build the dashboards in the following sections.
-
-<!--  -->
-
-
+>[!NOTE]
+>
+>When creating an audience, you have to wait for the batch segmentation job to complete before the data is available to start building your consent dashboard. Batch segmentation describes the process of moving all your profile data at once through your segment definitions to produce the corresponding audiences. Once created, this audience is saved and stored for you to export and use. Batch segments are automatically evaluated every 24 hours.
