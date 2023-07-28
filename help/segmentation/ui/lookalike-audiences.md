@@ -10,7 +10,7 @@ In Adobe Experience Platform, look-alike audiences provide intelligent insights 
 
 With look-alike audiences, you can create expanded audiences that target customers similar to your high-performing audiences or target customers similar to previously converted audiences.
 
-## Terminology
+## Terminology {#terminology}
 
 Before getting started with look-alike audiences, make sure to understand the following concepts:
 
@@ -19,7 +19,7 @@ Before getting started with look-alike audiences, make sure to understand the fo
 - **Look-alike audience**: A look-alike audience is the audience that is created when a look-alike model with a selected similarity threshold is applied to the base audience. The look-alike audience is what gets scored.
 - **Total addressable audience size**: The total addressable audience size is the total number of profiles in the past 30 days minus the base audience population in the past 30 days. For example, if a customer has 10 million profiles in the past 30 days, and the base audience has 1 million profiles in the past 30 days, the total addressable audience size is 9 million profiles.
 
-## Look-alike model details
+## Look-alike model details {#details}
 
 In Adobe Experience Platform, the look-alike model consumes three different types of data points:
 
@@ -33,7 +33,17 @@ The look-alike model is run on a frequent basis, creating and re-creating the in
 
 For a more detailed explanation on how the look-alike model works, please read (link to the tech blog).
 
-## View look-alike insights
+## Entitlements {#entitlements}
+
+The following entitlements apply for usage of look-alike audiences:
+
+- Real-Time CDP Prime customers are entitled to **5** active look-alike audiences in production sandboxes
+- Real-Time CDP Ultimate customers are entitled to **20** active look-alike audiences in production sandboxes
+- Development sandboxes are limited to **5** look-alike audiences for all Real-Time CDP customers
+
+Add-on packs are available which increase the entitlements for production sandboxes by 20 look-alike audiences per pack.
+
+## View look-alike insights {#view}
 
 Look-alike insights is built-in with the audience details page. To look at the look-alike insights for an audience, select **[!UICONTROL Audiences]** in the left navigation bar, followed by **[!UICONTROL Browse]**, and the audience you want to view the insights for.
 
@@ -43,7 +53,7 @@ The audience details page appears. Select **[!UICONTROL Look-alike insights]** t
 
 ![The Look-alike insights tab is highlighted, displaying the look-alike insights for the base audience.](../images/ui/lookalike-audiences/look-alike-insights.png)
 
-### Similarity and reach
+### Similarity and reach {#similarity-and-reach}
 
 The similarity and reach section displays a graph that plots the expected reach of a look-alike audience consisting of profiles above a given similarity score. The similarity score represents the **distance** of similarity between the base audience's profile and the look-alike insight's profile.
 
@@ -57,13 +67,13 @@ Please note that the graph is **cumulative** from right to left. This means that
 
 When you hover over a specific point in the graph, it'll display the similarity percentage and the expected profile count for the currently highlighted point.
 
-### Look-alike audiences
+### Look-alike audiences {#list}
 
 The look-alike audiences section displays a list of all the look-alike audiences that have been previously created for the selected base audience.
 
 ![The look-alike audiences section is highlighted.](../images/ui/lookalike-audiences/select-laa.png)
 
-### Influential factors
+### Influential factors {#influential-factors}
 
 The influential factors section displays both the top 100 positive and negative factors that influence the look-alike model for the selected base audience. These influential factors are profile attributes, experience events, and audience memberships that are the most important in explaining similarities in the base audience, which lets you better personalize your marketing content for this audience and any look-alike audience you create from it.
 
@@ -84,7 +94,7 @@ These buckets are regularly re-computed to ensure the data is kept up-to-date.
 | Value | For profile attributes or experience event, this field represents the value or value range of the data field that indicates the similarity to the members of the base audience. The value range is written in the form `[A -> B]`, where `A` represents the lower range while `B` represents the higher range. For audience memberships, this field is the name of the audience. |
 | Importance | The relative level of importance of the influential factor. This can be high, medium, or low. |
 
-## Create a look-alike audience
+## Create a look-alike audience {#create}
 
 >[!IMPORTANT]
 >
@@ -118,7 +128,7 @@ Select **[!UICONTROL Create]** to finish creating your look-alike audience.
 
 The newly created look-alike audience can be accessed in the **[!UICONTROL Look-alike audiences]** section of the audience details page, and is also available in the Audience Portal and other downstream usages. Please note that it will take some time for the look-alike audience to be scored. Until it is scored, the profile count will be appear to be 0.
 
-## View look-alike audience details
+## View look-alike audience details {#view-details}
 
 To view details of a look-alike audience, select the look-alike audience in the **[!UICONTROL Look-alike audiences]** section of the base audience.
 
@@ -128,7 +138,7 @@ The audience details page appears. For more information on this page, please rea
 
 ![Details of the look-alike audience are displayed.](../images/ui/lookalike-audiences/laa-details.png)
 
-## Exclude data fields from look-alike modeling
+## Exclude data fields from look-alike modeling {#exclude}
 
 By default, the modeling process for look-alike audiences will exclude **any** field, dataset, or audience based on the enabled privacy policy for your organization. If the base audience has no contract labels, the modeling process will exclude **any** field, dataset, or audience based on the enabled privacy policy for your organization. 
 
