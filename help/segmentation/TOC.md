@@ -28,6 +28,7 @@ feature: Segments
     - [Audience Composition](ui/audience-composition.md)
     - [Segment Builder](ui/segment-builder.md)
     - [Edge segmentation](ui/edge-segmentation.md)
+    - [Prospect audiences](ui/prospect-audience.md)
     - [Streaming segmentation](ui/streaming-segmentation.md)
     - [Streaming segmentation (Video)](video/streaming-segmentation-overview.md)
     - [Time constraints refactoring](ui/segment-refactoring.md)
