@@ -20,7 +20,7 @@ The relationship between Real-Time Customer Profile and other services within Ex
 
 ### Profile entity composition
 
-A Real-Time Customer Profile is composed of a main entity, called the **primary entity**, and various supporting entities. In the context of Experience Platform, the primary entity is typically a **profile entity**, which is composed of traits, behaviors, and segment memberships of an individual person. Other entities allow the segmentation engine to utilize data outside of the primary entity of the profile, and include the following:
+A Real-Time Customer Profile is composed of a main entity, called the **primary entity**, and various supporting entities. In the context of Experience Platform, the primary entity is typically a **profile entity**, which is composed of traits, behaviors, and audience memberships of an individual person. Other entities allow the segmentation engine to utilize data outside of the primary entity of the profile, and include the following:
 
 - **Dimensional entity**: The entity that is used to simplify the data modelling process for information shared across events or profile records. This is also known as the lookup entity or classification entity.
 - **B2B entity**: Entities that describe the profile's relationship with business-to-business accounts and opportunities.
@@ -92,13 +92,13 @@ To learn more about union schemas, including how to access union schemas in the 
 
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
-## Profiles and segments
+## Profiles and audiences
 
-Adobe Experience Platform [!DNL Segmentation Service] produces the audiences needed to power experiences for your individual customers. When an audience segment is created, the ID of that segment is added to the list of segment memberships for all qualifying profiles. Segment rules are built and applied to [!DNL Real-Time Customer Profile] data using RESTful APIs and the Segment Builder user interface. To learn more about segmentation, please begin by reading the [Segmentation Service overview](../segmentation/home.md). 
+Adobe Experience Platform [!DNL Segmentation Service] produces the audiences needed to power experiences for your individual customers. When an audience is created, the ID of that audience is added to the list of audience memberships for all qualifying profiles. Segment rules are built and applied to [!DNL Real-Time Customer Profile] data using RESTful APIs and the Segment Builder user interface. To learn more about segmentation, please begin by reading the [Segmentation Service overview](../segmentation/home.md). 
   
 ### Streaming ingestion and streaming segmentation
 
-Real-time input is made possible through a process called streaming ingestion. As profile and time series data is ingested, [!DNL Real-Time Customer Profile] automatically decides to include or exclude that data from segments through an ongoing process called streaming segmentation, before merging it with existing data and updating the union view. As a result, you can instantaneously perform computations and make decisions to deliver enhanced, individualized experiences to customers as they interact with your brand. While being ingested, the data also undergoes validation to ensure it being ingested properly and conforming to the schema upon which the dataset is based. For more information about what validation is done during ingestion, please begin by reading the [data ingestion quality overview](../ingestion/quality/overview.md).
+Real-time input is made possible through a process called streaming ingestion. As profile and time series data is ingested, [!DNL Real-Time Customer Profile] automatically decides to include or exclude that data from audiences through an ongoing process called streaming segmentation, before merging it with existing data and updating the union view. As a result, you can instantaneously perform computations and make decisions to deliver enhanced, individualized experiences to customers as they interact with your brand. While being ingested, the data also undergoes validation to ensure it being ingested properly and conforming to the schema upon which the dataset is based. For more information about what validation is done during ingestion, please begin by reading the [data ingestion quality overview](../ingestion/quality/overview.md).
 
 ## Edge projections
 

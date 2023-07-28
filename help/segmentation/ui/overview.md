@@ -35,7 +35,7 @@ In the Experience Platform UI, select **[!UICONTROL Audiences]** in the left nav
 
 The **[!UICONTROL Audiences]** dashboard outlines key metrics related to your organization's audience data. 
 
-To learn more, visit the [audiences dashboard guide](../../dashboards/guides/segments.md).
+To learn more, visit the [audiences dashboard guide](../../dashboards/guides/audiences.md).
 
 ![The audience dashboard is displayed. It shows various widgets, including the audience size, profiles by identity, identity overlap, and the audience size change trend.](../../dashboards/images/segments/dashboard-overview.png)
 
@@ -119,7 +119,7 @@ Selecting **[!UICONTROL Create audience]** will let you create an audience. To l
 >
 > You will **not** be able to delete an audience that is used in a destination activation.
 
-### Filtering and tagging {#manage-audiences}
+### Filtering, folders, and tagging {#manage-audiences}
 
 To improve your work efficiency, you can search for existing audiences, add user-defined tags to audiences, put audiences in folders, and filter the displayed audiences.
 

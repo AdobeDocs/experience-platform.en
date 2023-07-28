@@ -39,14 +39,14 @@ See the documentation below for details about each of the destination configurat
 * [Schema configuration](destination-configuration/schema-configuration.md): Learn how to define your destination's target schema to which users can map profile attributes and identities.
 * [Identity namespace configuration](destination-configuration/identity-namespace-configuration.md): Learn how to configure the identities supported by your destination. This configuration populates the target identities in the [mapping step](../../ui/activate-segment-streaming-destinations.md#mapping) of the Experience Platform user interface, where users map identities and attributes from their XDM schemas to the schema in your destination.
 * [Destination delivery](destination-configuration/destination-delivery.md): Learn how to configure where exactly the exported data goes and what authentication rule is used in the location where the data will land.
-* [Audience metadata configuration](destination-configuration/audience-metadata-configuration.md): Learn how segment metadata like segment names or IDs should be shared between Experience Platform and your destination.
+* [Audience metadata configuration](destination-configuration/audience-metadata-configuration.md): Learn how audience metadata like audience names or IDs should be shared between Experience Platform and your destination.
 * [Aggregation policy](destination-configuration/aggregation-policy.md): Learn how to set up an aggregation policy to determine how HTTP requests to your destination should be grouped and batched.
 * [Batch configuration](destination-configuration/batch-configuration.md): Set up various file naming and export scheduling settings available to users when connecting to your destination in the Experience Platform user interface.
 * [Historical profile qualifications](destination-configuration/historical-profile-qualifications.md): Learn about the historical profile qualifications supported by destinations built with Destination SDK.
 
 ## Audience metadata configuration {#audience-metadata-configuration}
 
-This component allows you to configure how audiences/segments are programmatically created, updated, or deleted in your destination. For file-based destinations, it allows you to set up a notification whenever files are successfully delivered to your destination. You can configure this functionality via the [audience-templates endpoint](../metadata-api/create-audience-template.md).
+This component allows you to configure how audiences are programmatically created, updated, or deleted in your destination. For file-based destinations, it allows you to set up a notification whenever files are successfully delivered to your destination. You can configure this functionality via the [audience-templates endpoint](../metadata-api/create-audience-template.md).
 
 ## Next steps {#next-steps}
 

@@ -61,7 +61,7 @@ TBD if we keep this link but will likely remove it
 [Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore)
 
 --> 
-* [API tutorial to export segments to cloud storage destinations](/help/destinations/api/activate-segments-file-based-destinations.md)
+* [API tutorial to export audiences to cloud storage destinations](/help/destinations/api/activate-segments-file-based-destinations.md)
 * [Destinations Flow Service API reference documentation](https://developer.adobe.com/experience-platform-apis/references/destinations/) 
 
 ## Summary of backwards-incompatible changes {#summary-backwards-incompatible-changes}
@@ -679,7 +679,7 @@ Find complete information about setting up the `profileMapping` object in the [A
 ```json{line-numbers="true" start-line="1" highlight="4-40, 45-53"}
 
 {
-  "segmentSelectors": { // shortened for brevity since nothing changes in the segment selectors
+  "segmentSelectors": { // shortened for brevity since nothing changes in the audience selectors
   },  
   "profileSelectors": {
     "selectors": [
@@ -749,7 +749,7 @@ Notice in the configuration example below how `profileSelectors` fields have bee
 ```json {line-numbers="true" start-line="1" highlight="4-12, 18-20"}
 
 {
-  "segmentSelectors": { // shortened for brevity since nothing changes in the segment selectors
+  "segmentSelectors": { // shortened for brevity since nothing changes in the audience selectors
   },  
   "mandatoryFields": [
     "CORE",
