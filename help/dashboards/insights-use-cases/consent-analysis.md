@@ -15,9 +15,7 @@ The use cases covered in this guide are consent trending and consent overlap.
 - **Consent Trending**: This tracks how user consent has trended over time. Analyzing consent preference changes helps marketers plan and execute campaigns that adapt to those user preference changes. For example, you may want to run targeted educational campaigns, transparency and trust campaigns, or incentive campaigns to respectfully drive consent choices. You could also correlate campaigns that might have been negatively impacting consent to proactively reduce the frequency of those campaigns.
 - **Consent Overlap**: You can use the overlap among consent channels to deliver consistent personalized messaging on multiple channels for the users who have consented to multiple channels. Marketers can prioritize and allocate resources to certain channels where there is a higher degree of consent and personalized messaging might resonate with customers thereby generating higher response rates.
 
-## Build a consent dashboard {build-a-consent-dashboard}
-
-<!--  -->
+## Build a consent dashboard {#build-a-consent-dashboard}
 
 First navigate to the audience section of Real-Time CDP and click on the "Create segment" button on the top right.
 
@@ -39,11 +37,11 @@ This will show the various Consent and Preferences available. For this demonstra
 
 Then the list of marketing preferences are displayed. For this use cases we will focus on Email, SMS, and Calls. Note you can build insights for any other combination or infact all of these options as well.
 
-For each of the channels peform the below steps to create a segment each.
+For each of the channels perform the below steps to create a segment each.
 
 Select "Receive email" / "Receive SMS" / "Receive calls"
 
-![]()
+![The available contact channels for marketing are highlighted in the audience builder.](../images/insights-use-cases/consent-analysis/channels.png)
 
 Select and drag the "Choice Value" attribute to the center pane. Then from the drop-down select the desired value ["Yes (opt in)"].
 
@@ -58,7 +56,7 @@ you can use segment names that suite your business needs
 these is a soft limit on the number of segments you are recommended to create - review Segmentation guardrails
 Optionally add a description to this segment
 
-
+![The [!UICONTROL Choice Value] attribute highlighted in the segment builder with the [!UICONTROL Yes (opt-in)] value highlighted. The name and description of the audience are also highlighted.]()
 
 Once you have created the desired segments, they will be listed in the Audiences - Browse tab. Please note that you have to wait for the batch segmentation job to complete before starting to build the dashboards in the following sections.
 
