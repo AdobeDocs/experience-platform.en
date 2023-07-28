@@ -22,7 +22,7 @@ With Experience Platform, you can centralize data you collect from disparate sou
 
 ## Adobe-built and partner-built sources {#adobe-and-partner-built-sources}
 
-Some of the connectors in the Experience Platform sources catalog are built and maintained by Adobe, while others are built and maintained by partner companies by using [Sources SDK](/help/sources/sources-sdk/overview.md). A note at the top of the documentation page for each connector calls out whether a source is created and maintained by Adobe or a partner. For example, the [Amazon S3 connector](/help/sources/connectors/cloud-storage/s3.md) is created by Adobe, while the [RainFocus connector](/help/sources/connectors/analytics/rainfocus.md) is created and maintained by the TikTok team. 
+Some of the connectors in the Experience Platform sources catalog are built and maintained by Adobe, while others are built and maintained by partner companies by using [Sources SDK](/help/sources/sources-sdk/overview.md). A note at the top of the documentation page for each partner-built connector calls out if a source is created and maintained by the partner. For example, the [Amazon S3 connector](/help/sources/connectors/cloud-storage/s3.md) is created by Adobe, while the [RainFocus connector](/help/sources/connectors/analytics/rainfocus.md) is created and maintained by the RainFocus team. 
 
 For partner-authored and maintained connectors, this means that issues with the connector might need to be resolved by the partner team (contact method provided in the note in the documentation page). For issues with Adobe-authored and maintained connectors, contact your Adobe representative or Customer Care.
 
