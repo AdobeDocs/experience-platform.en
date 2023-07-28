@@ -10,7 +10,7 @@ After you set your [action types](action-types.md) in the [Adobe Experience Plat
 
 ## Identity map {#identity-map}
 
-An identity map allows you to establish identities for the visitor of your web page. An identity map consists of namespaces, like _CRMID_, _phone_ or _email_, with each namespace containing one or more identifiers. For example, if the individual on your website has provided two phone numbers, your phone namespace should contain two identifiers.
+An identity map allows you to establish identities for the visitor of your web page. An identity map consists of namespaces, like `CRMID`, `Phone` or `Email`, with each namespace containing one or more identifiers. For example, if the individual on your website has provided two phone numbers, your phone namespace should contain two identifiers.
 
 In the [!UICONTROL Identity map] data element, you will provide the following pieces of information for each identifier:
 
