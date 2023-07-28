@@ -86,7 +86,7 @@ The software development kit (SDK) identifier.  This field uses a URI to improve
 
 When the standalone library is used, the value is simply the library version. When the library is used as part of the tag extension, this is the library version and the tag extension version joined with a "+". For example, if the library version were 2.1.0, and the tag extension version were 2.1.3, the value would be `2.1.0+2.1.3`.
 
-### Environment
+### Environment {#environment}
 
 | **Path in Payload:**                             | **Example:** |
 | ------------------------------------------------ | ------------ |
@@ -94,7 +94,7 @@ When the standalone library is used, the value is simply the library version. Wh
 
 The environment where the data was collected. This is always set to `browser`.
 
-## Place context (`placeContext`)
+## Place context (`placeContext`) {#place-context}
 
 Information about the location of the end user.
 
