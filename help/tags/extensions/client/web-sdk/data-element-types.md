@@ -24,7 +24,7 @@ In the [!UICONTROL Identity map] data element, you will provide the following pi
 >
 >Adobe recommends sending identities which represent a person, such as `Luma CRM Id` as the primary identity.
 >
->If the identity mpa contains the person identifier (e.g. `Luma CRM Id`), then the person identifier will become the primary identifier. Otherwise, `ECID` becomes the primary identity.
+>If the identity map contains the person identifier (e.g. `Luma CRM Id`), then the person identifier will become the primary identifier. Otherwise, `ECID` becomes the primary identity.
 
 You should not provide an [!DNL ECID] when building an identity map. When using the SDK, an [!DNL ECID] is automatically generated on the server and included in the identity map.
 
