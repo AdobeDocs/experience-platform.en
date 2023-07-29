@@ -60,3 +60,38 @@ Once you have created the necessary audiences, they are listed in the [!UICONTRO
 >[!NOTE]
 >
 >When creating an audience, you have to wait for the batch segmentation job to complete before the data is available to start building your consent dashboard. Batch segmentation describes the process of moving all your profile data at once through your segment definitions to produce the corresponding audiences. Once created, this audience is saved and stored for you to export and use. Batch segments are automatically evaluated every 24 hours.
+
+
+## Consume insights
+
+Adobe had created a variety of insights that are automatically available for you in the Profiles, Audiences, and Destinations dashboards. Any audience that you create is then automatically usable with these preconfigured insights. See the standard widget documentation for a list of the insights available in the [Profiles](../guides/profiles.md#standard-widgets), [Audiences](../guides/audiences.md#standard-widgets), and [Destinations](../guides/destinations.md) dashboards.
+
+## Audience Overlap
+
+To review the overlap between any two consent audiences, add the [!UICONTROL Audience overlap by merge policy] to your Profiles dashboard and select the desired audiences in the dropdown menus. See the documentation for instructions on how to add a widget to your dashboard the [*Audience overlap by merge policy*](../guides/profiles.md#audience-overlap-by-merge-policy) for more information on the insight.
+
+![The Profiles dashboard with the Audience overlap my merge policy widget highlighted.]()
+ 
+You can view the overlap of all audiences where users have consented to receive calls across all other audiences, with the *Audience overlap report* in the Audiences dashboard. To do this, first navigate to the [!UICONTROL Audiences] [!UICONTROL Overview] tab. From there you can add the [!UICONTROL Audience overlap report] widget to the Audiences dashboard. Once the widget has been added, select the *User consented to calls* audience from the overview of audience dropdown menu at the top of the page. Next, select **[!UICONTROL View more]** in the *Audience overlap report* widget to see up to 50 of the top overlaps and up to 50 of the least overlaps with respect to the selected segment.
+
+![The Audiences dashboard with the Audience overlap report widget displayed. The User consented to calls audience and View more link are highlighted.]()
+
+The *Audience overlap report* dialog expands to show additional audience overlap data.
+
+![The Audience overlap report with the Users consented to email audience highlighted.]()
+
+<!--  -->
+
+## Audience Size Trends
+
+Any consent based audiences you have created will automatically be trended up to 12 months from the date you created the respectuve audience. Once you visit Segments Overview page add the following widgets, you should have a fully functionaly trend of your conset. This is a powerful way of tracking how your consent is changing over time and even correlating with campaigns you might be running in parallel that might have impacts in a positve or negative manner to consent.
+
+- [Audience size trend](../guides/audiences.md#audience-size-trend) : In the use case of Consent, this is a way to track how your respective consent has changed over time
+- [Audience size change trend](../guides/audiences.md#audience-size-change-trend) : In the use case of Consent, this is a way to track how your respective consent has changed on a daily basis. For ex: if your consent dropped by 100K then you can see that change over daily basis
+- [Audience size trend by identity](../guides/audiences.md#audience-size-trend-by-identity) : In the use case of Consent, this is a way to track how your respective consent has changed over time further filtered by a specific identity such as email
+
+![The Audiences dashboard with the Audience size trend, Audience size trend by identity and Audience size change trend widget displayed. The Users consented to email audience is highlighted.]()
+
+## Segment Overview Dashboard
+
+Once you have created a concent realted segment such as "Users Consented to SMS", you can go to Segments Overivew and add the widgets you like to monitor from the widget library using "Add widget". Any widget added to your view of the dashboard can be re-sized and moved as per your desire using "Modify dashboard". Once done you could be having a personalized view to review key information about your audinece who have consented to SMS such as the trend over time (up to 12 months), the overlaps with other audiences and the identity composition. An example view is shown below:
