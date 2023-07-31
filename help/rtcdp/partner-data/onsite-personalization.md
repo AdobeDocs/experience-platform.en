@@ -234,17 +234,21 @@ Input `interact` in the search box, refresh the page, and you should see network
 
 ### Personalization
 
-You are ready to create audiences for personalization.
+You are now ready to create and activate audiences for personalization.
 
 #### Set up edge segmentation
 
-Set up edge segmentation so the audience membership of your visitors is evaluated in real-time, as they visit your web property.  
+Set up [edge segmentation](/help/segmentation/ui/edge-segmentation.md) so the audience membership of your visitors is evaluated in real-time, as they visit your web property.  
 
-Make sure to set up active-on-edge merge policy.
+Make sure to also set up and active-on-edge merge policy for the edge audiences 
 
 #### Integrate with Adobe Target or other custom personalization destination
 
-You are now ready to integrate with a personalization engine, to display personalized content to your website or app visitors. 
+You are now ready to integrate with a personalization engine, to display personalized content to your website or app visitors. Adobe recommends using the [Adobe Target destination](/help/destinations/catalog/personalization/adobe-target-connection.md) for this purpose. 
+
+>[!IMPORTANT]
+>
+>Read the tutorial on [activating audiences to edge personalization destinations](/help/destinations/ui/activate-edge-personalization-destinations.md) for a complete view of steps necessary to activate your audiences.
 
 ## Limitations and troubleshooting {#limitations-and-troubleshooting}
 
