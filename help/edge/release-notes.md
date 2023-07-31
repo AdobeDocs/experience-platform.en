@@ -19,7 +19,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **Fixes and improvements**
 
 * Fixed issue where exit links failed to qualify due to domain being part of query.
-* Deprecated `edgeConfigId` in favor of `datastreamId`.
+* Deprecated `edgeConfigId` in favor of `datastreamId` in the Web SDK configuration.
 
 ## Version 2.17.0 - May 17, 2023
 
