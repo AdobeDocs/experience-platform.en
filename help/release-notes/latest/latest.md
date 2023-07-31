@@ -148,16 +148,6 @@ XDM is an open-source specification that provides common structures and definiti
 | --- | --- | --- |
 | Class | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files)  | Use this class to bring in prospect profiles sourced from data vendors' top-of-the-funnel customer acquisition use cases. |
 |  Field Group   |  [[!UICONTROL Enriched Event Segment Details]](https://github.com/adobe/xdm/pull/1754/files)   | A list of audiences that the profile qualifies for at the moment of event collection.  |
-|     |     |     |
-|     |     |     |
-
-| Extension (Prospect-Profile)  | [[!UICONTROL Adobe Unified Profile Service Prospect-Profile Union Extension]](https://github.com/adobe/xdm/pull/1735/files) | Added required fields for the Prospect-Profile union schema.  |
-| Extension |  [[!UICONTROL Decisioning Asset]](https://github.com/adobe/xdm/pull/1732/files) |  Add a data type to represent assets used in decisioning. [!UICONTROL Decisioning Asset] provides a reference to assets used to render the `decisionItems`. |
-| Data type  | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/pull/1747/files)  | [!UICONTROL Commerce] stores records related to the buying and selling activity. |
-| Field group  | [[!UICONTROL Profile Partner Enrichment(Sample)]](https://github.com/adobe/xdm/pull/1747/files)  | A sample schema was added for profile partner enrichment.  |
-| Field group  | [[!UICONTROL Partner Prospect Details(Sample)]](https://github.com/adobe/xdm/pull/1747/files)  |  A sample schema was added for data vendor prospect profile extensions. |
-| Data type  | [[!UICONTROL Commerce Scope]](https://github.com/adobe/xdm/pull/1747/files)  | [!UICONTROL Commerce Scope] identifies where an event occurred. For example, in the store view, the store, or website, and so on. |
-| Data type  | [[!UICONTROL Billing]](https://github.com/adobe/xdm/pull/1734/files) | Billing information, for one or more payments, was added to the [!UICONTROL Commerce] schema.  |
 
 {style="table-layout:auto"}
 
@@ -180,20 +170,7 @@ XDM is an open-source specification that provides common structures and definiti
 | Data type  |   [[!UICONTROL Advertising details information](https://github.com/adobe/xdm/pull/1756/files)   |  The `meta:status` was updated from `experimental` to `stable`. |
 | Extension (Customer Journey Management)  | [[!UICONTROL Domain](https://github.com/adobe/xdm/pull/1756/files)  | `Domain` field added to [!UICONTROL Adobe CJM ExperienceEvent - Message Profile Details] to record the domain of the recipient's email address.  |
 | Extension (Customer Journey Management)  | [[!UICONTROL Channel's variant Name]](https://github.com/adobe/xdm/pull/1753/files) | This field was added to [!UICONTROL AJO Entity Fields] to represent the channel variant name.  |
-
-
-| Field group | [[!UICONTROL MediaAnalytics Interaction Details]](https://github.com/adobe/xdm/pull/1736/files) | Changed `bitrateAverageBucket` from 100 to "800-899". |
-| Data type | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/pull/1736/files) | Changed `bitrateAverageBucket` data type to string. |
-| Field Group | [[!UICONTROL Segment Membership Details]](https://github.com/adobe/xdm/pull/1735/files) | Added to Prospect Profile class.  |
-| Schema | [[!UICONTROL Computed Attributes System Schema]](https://github.com/adobe/xdm/pull/1735/files)  | Identity map added to the [!UICONTROL Computed Attributes System Schema]. |
-| Datatype | [[!UICONTROL Content Delivery Network]](https://github.com/adobe/xdm/pull/1733/files) | Field added to [!UICONTROL Session details information] to describe the content delivery network used. | 
-| Extension | [[!UICONTROL Adobe Unified Profile Service Account Union Extension]](https://github.com/adobe/xdm/pull/1731/files)  | Identity map added to the [!UICONTROL Adobe Unified Profile Service Account Union Extension]. |
-| Data type  | [[!UICONTROL Order]](https://github.com/adobe/xdm/pull/1730/files)  | `discountAmount` was added to [!UICONTROL Order]. This conveys the difference between the regular order price and the special price. It is applied to the entire order rather than to individual products.  |
-| Schema  | [[!UICONTROL AEP Hygiene Operation Request]](https://github.com/adobe/xdm/pull/1728/files)  | The `targetServices` field was added to provide the names of services that process the data hygiene operations. |
-| Data type | [[!UICONTROL Shipping]](https://github.com/adobe/xdm/pull/1727/files) | `currencyCode` was added to the shipping information for one or more products. It is an ISO 4217 alphabetic currency code used for pricing the product. |
-| Data type  | [[!UICONTROL Application]](https://github.com/adobe/xdm/pull/1726/files) |  The `language` field was added to provide the user's linguistic, geographical, or cultural preferences to the application. |
-| Extension | [[!UICONTROL AJO Entity Fields]](https://github.com/adobe/xdm/pull/1746/files)  | [!UICONTROL AJO Timestamp Entity] was added to indicate the time when the message was last modified.  |
-| Data type  | (Multiple) | [Removed several media details](https://github.com/adobe/xdm/pull/1739/files) across several data types for consistency. |
+| Extension (Adobe Analytics) |  [[!UICONTROL Context value]](https://github.com/adobe/xdm/pull/1761/files)  | `Context value` was added to [!UICONTROL `Adobe Analytics ExperienceEvent Full Extension`]. |
 
 {style="table-layout:auto"}
 
