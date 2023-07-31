@@ -10,6 +10,17 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.18.0 - July 31, 2023
+
+**New features**
+
+* Added support for [per-command overrides of the datastream ID](../datastreams/overrides.md).
+
+**Fixes and improvements**
+
+* Fixed issue where exit links failed to qualify due to domain being part of query.
+* Deprecated `edgeConfigId` in favor of `datastreamId`.
+
 ## Version 2.17.0 - May 17, 2023
 
 **Fixes and improvements**
