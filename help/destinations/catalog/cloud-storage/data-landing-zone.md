@@ -1,6 +1,7 @@
 ---
 title: Data Landing Zone destination
 description: Learn how to connect to Data Landing Zone to activate audiences and export datasets.
+last-substantial-update: 2023-07-26
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
 ---
 # Data Landing Zone destination
