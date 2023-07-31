@@ -80,7 +80,7 @@ As you create your schema and [add field groups to it](/help/xdm/ui/resources/sc
 
 Additionally, create or re-use an existing field group to capture partner provided insights about the visitor and add it to your schema. Read how to [create a field group](/help/xdm/ui/resources/field-groups.md) and how to [add fields](/help/xdm/ui/resources/field-groups.md) to the field group. For instance, if you are expecting to personalize against partner provided insights like age range, employment status, monthly spending power, or buying behaviors, have your field group include appropriate fields.
 
-Assuming that the data partner provides a stable identifier for the visitor and you'd like to bring that into Real-Time CDP, be sure to have an appropriately named field in your custom field group, and mark it as an identity in the identity namespace you created earlier. Remember also to [enable the schema to be included in Profile](help/xdm/ui/resources/schemas.md#profile).
+Assuming that the data partner provides a stable identifier for the visitor and you'd like to bring that into Real-Time CDP, be sure to have an appropriately named field in your custom field group, and mark it as an identity in the identity namespace you created earlier. Remember also to [enable the schema to be included in Profile](/help/xdm/ui/resources/schemas.md#profile).
 
 #### Create a dataset
 
