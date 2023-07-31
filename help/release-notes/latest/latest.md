@@ -11,7 +11,7 @@ Updates to existing features in Adobe Experience Platform:
 
 - [Catalog Service](#catalog-service)
 - [Data collection](#data-collection)
-- [Destinations](#data-prep)
+- [Destinations](#destinations)
 - [Query Service](#query-service)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
@@ -89,7 +89,7 @@ The update and general availability release of the six cloud storage destination
 **Fixes and enhancements** {#destinations-fixes-and-enhancements}
 
 - We fixed an issue with the (API) Salesforce Marketing Cloud destination where in the mapping step not all available target attributes were returned from Salesforce. There is now an [upper limit of 2000 target attributes](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md#mapping-considerations-example) from Salesforce that can be displayed.
-- We fixed an issue with the Microsoft Dynamics 365 destination. The destination now supports regional routing of data via the [Region selector](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate), so you can route your data exports depending on which region your company is provisioned in within the Microsoft ecosystem. ![New Region selector highlighted.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "New Region selector highlighted."){width="100" zoomable="yes"}
+- We fixed an issue with the Microsoft Dynamics 365 destination. The destination now supports regional routing of data via the [Region selector](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate), so you can route your data exports depending on which region your company is provisioned in within the Microsoft ecosystem. <br> ![New Region selector highlighted.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "New Region selector highlighted."){width="100" zoomable="yes"}
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
