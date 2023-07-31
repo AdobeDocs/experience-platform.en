@@ -17,7 +17,7 @@ THe links when required
 ## [!UICONTROL Customer AI distribution of scores] {#customer-ai-distribution-of-scores} 
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_audiences_distributionOfScores"
+>id="platform_dashboards_segments_distributionOfScores"
 >title="Distribution of scores"
 >abstract="This widget visualizes the distribution of the total number of profiles by their propensity scores in five percent increments. The distribution of the profile count is determined by the AI model and the selected merge policy. You can change the AI model from the dropdown menu under the widget title."
 
@@ -46,7 +46,7 @@ More information on Customer AI can be found on the [discover insights UI guide]
 ## [!UICONTROL Customer AI scoring summary] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_audiences_scoringSummary"
+>id="platform_dashboards_segments_scoringSummary"
 >title="Scoring summary"
 >abstract="This widget displays the total number of scored profiles and categorizes them into buckets containing high, medium, and low propensity. The donut chart illustrates the proportional composition of total profiles across high, medium, and low propensity."
 
