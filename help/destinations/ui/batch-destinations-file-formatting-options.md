@@ -6,9 +6,6 @@ exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 # (Beta) Configure file formatting options for file-based destinations
 
 >[!IMPORTANT]
->
->The **[!UICONTROL File formatting options]** functionality in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
->Contact your Adobe representative for access to this functionality.
 > 
 >The file formatting options described in this document are currently available for CSV files only. 
 
@@ -29,7 +26,7 @@ To display the file formatting options, start the [connect to destination](/help
 >
 >The destination that you are connecting to may not have all these options available. It is up to the destination developer to determine which file formatting options they want to support in their destination. The destination developer can determine which options are available when connecting to the destination. Required options are marked with an asterisk in the Experience Platform UI.
 > 
->The new cloud storage destinations - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - currently only support the six CSV options highlighted below.
+>The Adobe-built cloud storage destinations - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - currently only support the six CSV options highlighted below.
 
 ![Image showing some of the available file formatting options.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 

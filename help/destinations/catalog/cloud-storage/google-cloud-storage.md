@@ -1,6 +1,7 @@
 ---
 title: Google Cloud Storage connection
 description: Learn how to connect to Google Cloud Storage and activate audiences or export datasets.
+last-substantial-update: 2023-07-26
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
 ---
 # [!DNL Google Cloud Storage] connection
