@@ -158,17 +158,17 @@ XDM is an open-source specification that provides common structures and definiti
 |  Field group   | [[!UICONTROL MediaAnalytics Interaction Details]](https://github.com/adobe/xdm/pull/1756/files) |  The `meta:status` was updated from experimental to `stable`. |
 |  Field group  |  [[!UICONTROL Media Interaction Details]](https://github.com/adobe/xdm/pull/1756/files)  |  The `meta:status` was updated from `stable` to `deprecated`.  |
 |  Data type   |  [[!UICONTROL Session details information]](https://github.com/adobe/xdm/pull/1756/files)  |  The `meta:status` was updated from `experimental` to `stable`.   |
-|  Data type  |   [[!UICONTROL Qoe Data details information](https://github.com/adobe/xdm/pull/1756/files)  | The `meta:status` was updated from `experimental` to `stable`. |
-| Data type  |   [[!UICONTROL Player state data information](https://github.com/adobe/xdm/pull/1756/files)   |  The `meta:status` was updated from `experimental`to `stable`.  |
-| Data type  |   [[!UICONTROL Media event information](https://github.com/adobe/xdm/pull/1756/files)   |  The `meta:status` was updated from `experimental` to `stable`. |
-| Data type  |   [[!UICONTROL Media details information](https://github.com/adobe/xdm/pull/1756/files)   |  The `meta:status` was updated from `experimental` to `stable`. | 
-| Data type  |   [[!UICONTROL Error details information](https://github.com/adobe/xdm/pull/1756/files)   |  The `meta:status` was updated from `experimental` to `stable`. |
-| Data type  |   [[!UICONTROL Error details information](https://github.com/adobe/xdm/pull/1756/files)   |  The `meta:status` was updated from `stable` to `deprecated`. |
-| Data type  |   [[!UICONTROL Custom metadata details information](https://github.com/adobe/xdm/pull/1756/files)   |  The `meta:status` was updated from `experimental` to `stable`. |
+|  Data type  |   [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/pull/1756/files)  | The `meta:status` was updated from `experimental` to `stable`. |
+| Data type  | [[!UICONTROL Player state data information]](https://github.com/adobe/xdm/pull/1756/files)   |  The `meta:status` was updated from `experimental`to `stable`.  |
+| Data type  |   [[!UICONTROL Media event information]](https://github.com/adobe/xdm/pull/1756/files)   |  The `meta:status` was updated from `experimental` to `stable`. |
+| Data type  |   [[!UICONTROL Media details information]](https://github.com/adobe/xdm/pull/1756/files)   |  The `meta:status` was updated from `experimental` to `stable`. | 
+| Data type  |   [[!UICONTROL Error details information]](https://github.com/adobe/xdm/pull/1756/files)   |  The `meta:status` was updated from `experimental` to `stable`. |
+| Data type  |   [[!UICONTROL Error details information]](https://github.com/adobe/xdm/pull/1756/files)   |  The `meta:status` was updated from `stable` to `deprecated`. |
+| Data type  |   [[!UICONTROL Custom metadata details information]](https://github.com/adobe/xdm/pull/1756/files)   |  The `meta:status` was updated from `experimental` to `stable`. |
 | Data type  |   [[!UICONTROL Chapter details information](https://github.com/adobe/xdm/pull/1756/files)   |  The `meta:status` was updated from `experimental` to `stable`. |
-| Data type  |   [[!UICONTROL Advertising Pod details information](https://github.com/adobe/xdm/pull/1756/files)   |  The `meta:status` was updated from `experimental` to `stable`. |
-| Data type  |   [[!UICONTROL Advertising details information](https://github.com/adobe/xdm/pull/1756/files)   |  The `meta:status` was updated from `experimental` to `stable`. |
-| Extension (Customer Journey Management)  | [[!UICONTROL Domain](https://github.com/adobe/xdm/pull/1756/files)  | `Domain` field added to [!UICONTROL Adobe CJM ExperienceEvent - Message Profile Details] to record the domain of the recipient's email address.  |
+| Data type  |   [[!UICONTROL Advertising Pod details information]](https://github.com/adobe/xdm/pull/1756/files)   |  The `meta:status` was updated from `experimental` to `stable`. |
+| Data type  |   [[!UICONTROL Advertising details information]](https://github.com/adobe/xdm/pull/1756/files)   |  The `meta:status` was updated from `experimental` to `stable`. |
+| Extension (Customer Journey Management)  | [[!UICONTROL Domain]](https://github.com/adobe/xdm/pull/1756/files)  | `Domain` field added to [!UICONTROL Adobe CJM ExperienceEvent - Message Profile Details] to record the domain of the recipient's email address.  |
 | Extension (Customer Journey Management)  | [[!UICONTROL Channel's variant Name]](https://github.com/adobe/xdm/pull/1753/files) | This field was added to [!UICONTROL AJO Entity Fields] to represent the channel variant name.  |
 | Extension (Adobe Analytics) |  [[!UICONTROL Context value]](https://github.com/adobe/xdm/pull/1761/files)  | `Context value` was added to [!UICONTROL `Adobe Analytics ExperienceEvent Full Extension`]. |
 
