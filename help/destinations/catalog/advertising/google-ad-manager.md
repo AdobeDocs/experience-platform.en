@@ -39,7 +39,7 @@ Note the following details that are specific to [!DNL Google Ad Manager] destina
 
 This section describes all the audiences that you can export to this destination.
 
-All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+This destination support the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
 Additionally, this destination also supports the activation of the audiences described in the table below.
 
