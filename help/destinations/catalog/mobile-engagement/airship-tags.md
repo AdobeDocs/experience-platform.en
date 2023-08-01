@@ -38,7 +38,7 @@ Additionally, this destination also supports the activation of the audiences des
 
 | External audience type | Description | 
 ---------|----------|
-| Custom uploads | Audiences ingested into Experience Platform from CSV files. | 
+| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. | 
 
 {style="table-layout:auto"}
 
