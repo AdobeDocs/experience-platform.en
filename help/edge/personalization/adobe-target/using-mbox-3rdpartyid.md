@@ -6,16 +6,16 @@ exl-id: 677d1054-0769-4ec6-811e-e02d4b247c2a
 ---
 # What is `mbox3rdPartyId`
 
-The mbox3rdPartyId in Adobe Target is your company’s visitor ID, such as the membership ID for your company’s loyalty program.
+The mbox3rdPartyId in Adobe Target is your company's visitor ID, such as the membership ID for your company's loyalty program.
 
-When a visitor logs in to a company’s site, the company typically creates an ID that is tied to the visitor’s account, loyalty card, membership number, or other applicable identifiers for that company. [Learn more](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=en#)
+When a visitor logs in to a company's site, the company typically creates an ID that is tied to the visitor's account, loyalty card, membership number, or other applicable identifiers for that company. [Learn more](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=en#)
 
 
 ## How to use `mbox3rdPartyId` with the Web SDK
 
 ### Step 1: Configure the `Target Third Party ID Namespace`
 
-Configure the `Target Third Party ID Namespace` in your [Datastream](../../datastreams/overview.md), using the ID Namespace you want to use as an mbox 3rd party ID. 
+Configure the `Target Third Party ID Namespace` in your [Datastream](../../../datastreams/overview.md), using the ID Namespace you want to use as an mbox 3rd party ID. 
 [Learn more about ID namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html)
 
 ![](assets/mbox3rdpartyid.png)

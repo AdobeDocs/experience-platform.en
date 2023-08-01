@@ -561,9 +561,13 @@ To return the value for any setting, use `SET [property key]` without a `propert
 
 The sub-sections below cover the [!DNL PostgreSQL] commands supported by Query Service.
 
-### ANALYZE TABLE
+### ANALYZE TABLE {#analyze-table}
 
-The `ANALYZE TABLE` command computes statistics for a table on the accelerated store. The statistics are calculated on executed CTAS or ITAS queries for a given table on accelerated store.
+The `ANALYZE TABLE` command performs a distribution analysis and statistical calculations for the named table or tables. The use of `ANALYZE TABLE` varies depending on whether the datasets are stored on the [accelerated store](#compute-statistics-accelerated-store) or the [data lake](#compute-statistics-data-lake). See their respective sections for more information on its use.
+
+#### COMPUTE STATISTICS on the accelerated store {#compute-statistics-accelerated-store}
+
+The `ANALYZE TABLE` command computes statistics for a table on the accelerated store. The statistics are calculated on executed CTAS or ITAS queries for a given table on the accelerated store.
 
 **Example**
 
@@ -584,6 +588,61 @@ The following is a list of statistical calculations that are available after usi
 | `min` | The minimum value from the analyzed table. |
 | `mean` | The average value of the analyzed table.  |
 | `stdev` | The standard deviation of the analyzed table. |
+
+#### COMPUTE STATISTICS on the data lake {#compute-statistics-data-lake}
+
+You can now calculate column-level statistics on [!DNL Azure Data Lake Storage] (ADLS) datasets with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. Compute column statistics on either the entire dataset, a subset of a dataset, all columns, or a subset of columns.
+
+`COMPUTE STATISTICS` extends the `ANALYZE TABLE` command. However, the `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, and `SHOW STATISTICS` commands are not supported on data warehouse tables. These extensions for the `ANALYZE TABLE` command are currently only supported for ADLS tables.  
+
+**Example**
+
+```sql
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
+```
+
+>[!NOTE]
+>
+>`FILTER CONTEXT` calculates statistics on a subset of the dataset based on the filter condition provided, and `FOR COLUMNS` targets specific columns for analysis.
+
+The console output appears as seen below.
+
+```console
+  Statistics ID 
+------------------
+ ULKQiqgUlGbTJWhO
+(1 row)
+```
+
+You can then use the returned statistics ID to look up the computed statistics with the `SHOW STATISTICS` command.
+
+```sql
+SHOW STATISTICS FOR <statistics_ID>
+```
+
+>[!NOTE]
+>
+>`COMPUTE STATISTICS` does not support the array or map data types. You can set a `skip_stats_for_complex_datatypes` flag to be notified or error out if the input dataframe has columns with arrays and map data types. By default, the flag is set to true. To enable notifications or errors, use the following command: `SET skip_stats_for_complex_datatypes = false`.
+
+See the [dataset statistics documentation](../essential-concepts/dataset-statistics.md) for more information.
+
+#### TABLESAMPLE {#tablesample}
+
+Adobe Experience Platform Query Service provides sample datasets as part of its approximate query processing capabilities. 
+Data set samples are best used when you do not need an exact answer for an aggregate operation over a dataset. This feature allows you to conduct more efficient exploratory queries on large datasets by issuing an approximate query to return an approximate answer.
+
+Sample datasets are created with uniform random samples from existing [!DNL Azure Data Lake Storage] (ADLS) datasets, using only a percentage of records from the original. The dataset sample feature extends the `ANALYZE TABLE` command with the `TABLESAMPLE` and `SAMPLERATE` SQL commands.  
+
+In the examples below, line one demonstrates how to compute a 5% sample of the table. Line two demonstrates how to compute a 5% sample from a  filtered view of the data within the table.
+
+**example**
+
+```sql {line-numbers="true"}
+ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
+```
+
+See the [dataset samples documentation](../essential-concepts/dataset-samples.md) for more information.
 
 ### BEGIN
 

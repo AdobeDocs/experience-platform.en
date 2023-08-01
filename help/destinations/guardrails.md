@@ -35,7 +35,7 @@ The guardrails below generally apply to activation through [all destination type
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Maximum number of segments to a single destination | 250 | Soft | The recommendation is to map a maximum of 250 segments to a single destination in a dataflow. <br><br> If you need to activate more than 250 segments to a destination, you can either: <ul><li> Unmap segments that you don't want to activate anymore, or</li><li>Create a new dataflow to the desired destination and map segments to this new dataflow.</li></ul> <br> Note that in the case of some destinations, you may be limited to fewer than 250 segments mapped to the destination. Those destinations are called out further below on the page, in their respective sections. |
+|Maximum number of audiences to a single destination | 250 | Soft | The recommendation is to map a maximum of 250 audiences to a single destination in a dataflow. <br><br> If you need to activate more than 250 audiences to a destination, you can either: <ul><li> Unmap audiences that you don't want to activate anymore, or</li><li>Create a new dataflow to the desired destination and map audiences to this new dataflow.</li></ul> <br> Note that in the case of some destinations, you may be limited to fewer than 250 audiences mapped to the destination. Those destinations are called out further below on the page, in their respective sections. |
 |Maximum number of destinations | 100 | Soft | The recommendation is to create a maximum of 100 destinations that you can connect and activate data to *per sandbox*. [Edge personalization destinations (Custom personalization)](#edge-destinations-activation) can make up a maximum of 10 of the 100 recommended destinations.|
 |Maximum number of attributes mapped to a destination | 50 | Soft | In the case of several destinations and destination types, you can select profile attributes and identities to map for export. For optimal performance, a maximum of 50 attributes should be mapped in a dataflow to a destination.|
 |Type of data activated to destinations | Profile data, including identities and identity map | Hard| Currently, it is only possible to export *profile record attributes* to destinations. XDM attributes that describe event data are not supported for export at this time.|
@@ -60,7 +60,7 @@ The guardrails below apply to activation through [batch (file-based) destination
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
 |Activation frequency | One daily full export or more frequent incremental exports every 3, 6, 8, or 12 hours. | Hard| Read the [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) documentation sections for more information about the frequency increments for batch exports.|
-|Maximum number of segments that can pe exported at a given hour | 100 | Soft | The recommendation is to add a maximum of 100 segments to batch destination dataflows. |
+|Maximum number of audiences that can pe exported at a given hour | 100 | Soft | The recommendation is to add a maximum of 100 audiences to batch destination dataflows. |
 |Maximum number of rows (records) per file to activate | 5 million | Hard| Adobe Experience Platform automatically splits the exported files at 5 million records (rows) per file. Each row represents one profile. Split file names are appended with a number that indicates the file is part of a larger export, as such: `filename.csv`, `filename_2.csv`, `filename_3.csv`. For more information, read the [scheduling section](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) of the activate batch destinations tutorial.|
 
 {style="table-layout:auto"}
@@ -71,8 +71,8 @@ The guardrails below apply to the [ad-hoc activation](/help/destinations/api/ad-
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| Segments activated per ad-hoc activation job | 80 | Hard| Currently, each ad-hoc activation job can activate up to 80 segments. Attempting to activate more than 80 segments per job will cause the job to fail. This behavior is subject to change in future releases.|
-| Concurrent ad-hoc activation jobs per segment | 1 | Hard| Do not run more than one concurrent ad-hoc activation job per segment.|
+| Audiences activated per ad-hoc activation job | 80 | Hard| Currently, each ad-hoc activation job can activate up to 80 audiences. Attempting to activate more than 80 audiences per job will cause the job to fail. This behavior is subject to change in future releases.|
+| Concurrent ad-hoc activation jobs per audience | 1 | Hard| Do not run more than one concurrent ad-hoc activation job per audience.|
 
 {style="table-layout:auto"}
 
@@ -84,7 +84,7 @@ The guardrails below apply to activation through [edge personalization destinati
 | --- | --- | --- | --- |
 |Maximum number of [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations | 10 | Soft | You can set up dataflows to 10 Custom personalization destinations per sandbox.|
 |Maximum number of attributes mapped to a personalization destination per sandbox | 30 | Hard | A maximum of 30 attributes can be mapped in a dataflow to a personalization destination, per sandbox.|
-|Maximum number of segments mapped to a single [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destination | 50 | Soft | You can activate a maximum of 50 segments in an activation flow to a single Adobe Target destination.|
+|Maximum number of audiences mapped to a single [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destination | 50 | Soft | You can activate a maximum of 50 audiences in an activation flow to a single Adobe Target destination.|
 
 {style="table-layout:auto"}
 

@@ -15,6 +15,7 @@ feature: Sources
     - [Analytics source](connectors/adobe-applications/analytics.md)
     - [Audience Manager source](connectors/adobe-applications/audience-manager.md)
     - [Adobe Campaign Managed Cloud Services source](connectors/adobe-applications/campaign.md)
+    - [Adobe Commerce source](connectors/adobe-applications/commerce.md)
     - [Customer attributes source](connectors/adobe-applications/customer-attributes.md)
     - [Data Collection source](connectors/adobe-applications/data-collection.md)
     - [Workfront source](connectors/adobe-applications/workfront.md)
@@ -35,6 +36,7 @@ feature: Sources
   - Analytics {#analytics}
     - [Mixpanel connector](connectors/analytics/mixpanel.md)
     - [Pendo](connectors/analytics/pendo-webhook.md)
+    - [RainFocus](connectors/analytics/rainfocus.md)
   - Cloud storage {#cloud-storage}
     - [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
     - [Amazon S3 connector](connectors/cloud-storage/s3.md)
@@ -81,9 +83,11 @@ feature: Sources
     - [Oracle connector](connectors/databases/oracle.md)
     - [Phoenix connector](connectors/databases/phoenix.md)
     - [PostgreSQL connector](connectors/databases/postgres.md)
+    - [Snowflake Streaming connector](connectors/databases/snowflake-streaming.md)
     - [Snowflake connector](connectors/databases/snowflake.md)
     - [Teradata Vantage connector](connectors/databases/teradata-vantage.md)
   - eCommerce {#ecommerce}
+    - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
     - [Shopify](connectors/ecommerce/shopify.md)
     - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
   - Local system {#local-system}
@@ -157,10 +161,12 @@ feature: Sources
       - [Oracle](tutorials/api/create/databases/oracle.md)
       - [Phoenix](tutorials/api/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+      - [Snowflake Streaming](tutorials/api/create/databases/snowflake-streaming.md)
       - [Snowflake](tutorials/api/create/databases/snowflake.md)
       - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
       - [SQL Server](tutorials/api/create/databases/sql-server.md)
     - eCommerce {#ecommerce}
+      - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
     - Marketing automation {#marketing-automation}
@@ -229,6 +235,7 @@ feature: Sources
     - Analytics {#analytics}
       - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
+      - [RainFocus](tutorials/ui/create/analytics/rainfocus.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
       - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
@@ -279,6 +286,7 @@ feature: Sources
       - [Snowflake](tutorials/ui/create/databases/snowflake.md)
       - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
     - eCommerce {#ecommerce}
+      - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
     - Local system {#local-system}
@@ -320,6 +328,7 @@ feature: Sources
   - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
   - [Subscribe to sources alerts](tutorials/ui/alerts.md)
+  - [Save a dataflow as a draft](tutorials/ui/draft.md)
 - Self-Serve Sources (Batch SDK) {#sdk}
   - [Overview](sources-sdk/overview.md)
   - Configure your connection specification {#config}

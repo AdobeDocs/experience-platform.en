@@ -9,7 +9,7 @@ exl-id: 03fbc4e9-974d-494e-8463-756c96665fd5
 
 >[!NOTE]
 >
->The [!DNL SugarCRM] source is in beta. See the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL SugarCRM] source is in beta. See the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 

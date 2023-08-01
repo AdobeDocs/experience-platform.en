@@ -8,7 +8,7 @@ exl-id: f82e852a-c9d1-4ecc-bc54-2b39d3b4cc1e
 
 >[!NOTE]
 >
->The Adobe Workfront source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The Adobe Workfront source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 This tutorial provides steps to create an Adobe Workfront source connection to bring your Workfront data to Adobe Experience Platform using the user interface.
 

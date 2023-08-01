@@ -8,7 +8,7 @@ exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
 
 >[!NOTE]
 >
->The [!DNL Google Ads] source is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The [!DNL Google Ads] source is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 

@@ -1,39 +1,44 @@
 ---
-keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Importing and using external audiences
 description: Follow this tutorial to learn how to use external audiences with Adobe Experience Platform.
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
+hide: yes
+hidefromtoc: yes
 ---
 # Importing and using external audiences
 
-Adobe Experience Platform supports the ability to import external audience, which can subsequently be used as components for a new segment definition. This document provides a tutorial for setting up Experience Platform to import and use external audiences.
+>[!IMPORTANT]
+>
+>This documentation contains information from a previous version of the Audiences documentation, and as a result, is out of date.
+
+Adobe Experience Platform supports the ability to import external audience, which can subsequently be used as components for a new audience. This document provides a tutorial for setting up Experience Platform to import and use external audiences.
 
 ## Getting started
 
-This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. Before beginning this tutorial, please review the documentation for the following services:
+This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audiences. Before beginning this tutorial, please review the documentation for the following services:
 
-- [Segmentation Service](../home.md): Allows you to build audience segments from Real-Time Customer Profile data.
+- [Segmentation Service](../home.md): Allows you to build audiences from Real-Time Customer Profile data.
 - [Real-Time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
 - [Datasets](../../catalog/datasets/overview.md): The storage and management construct for data persistence in Experience Platform.
 - [Streaming ingestion](../../ingestion/streaming-ingestion/overview.md): How Experience Platform ingests and stores data from client- and server-side devices in real time.
 
-### Segment data vs segment metadata
+### Audiences vs segment definitions
 
-Before you start importing and using external audiences, it is important to understand the difference between segment data and segment metadata.
+Before you start importing and using external audiences, it is important to understand the difference between audiences and segment definitions.
 
-Segment data refers to the profiles that meet the segment qualification criteria, and are therefore part of the audience.
+Audiences refer to the group of profiles that you are trying to filter towards. When using segment definitions, you can create an audience by creating a segment definition that filters your profiles to the subset that meets the segment qualification criteria.
 
-Segment metadata is information about the segment itself, which includes the name, description, expression (if applicable), the creation date, the last modified date, and an ID. The ID links the segment metadata to the individual profiles that meet the segment qualification and are part of the resulting audience. 
+Segment definitions includes information such as the name, description, expression (if applicable), the creation date, the last modified date, and an ID. The ID links the segment metadata to the individual profiles that meet the segment qualification and are part of the resulting audience. 
 
-| Segment data | Segment metadata |
-| ------------ | ---------------- |
-| Profiles that meet segment qualification | Information about the segment itself |
+| Audiences | Segment definition |
+| --------- | ---------------- |
+| The group of profiles that you are trying to find. When using segment definitions, this means that it'll be the group of profiles that meet segment qualification. | The group of rules used to segment the audience you're looking for. |
 
 ## Create an identity namespace for the external audience
 
-The first step for using external audiences is creating an identity namespace. Identity namespaces allow Platform to associate where a segment originates from.
+The first step for using external audiences is creating an identity namespace. Identity namespaces allow Platform to associate where an audience originates from.
 
 To create an identity namespace, follow the instructions in the [identity namespace guide](../../identity-service/namespaces.md#manage-namespaces). When creating your identity namespace, add the source details to the identity namespace, and mark its [!UICONTROL Type] as a **[!UICONTROL Non-people identifier]**.
 

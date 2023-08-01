@@ -7,7 +7,7 @@ exl-id: db346ec0-2c57-4b82-8a39-f15d4cd377d4
 
 >[!NOTE]
 >
->The [!DNL SugarCRM Events] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL SugarCRM Events] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 This tutorial provides steps for creating a [!DNL SugarCRM Events] source connection using the Adobe Experience Platform user interface.
 
