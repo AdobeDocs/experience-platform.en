@@ -153,7 +153,7 @@ Finally, select **[!UICONTROL Enable]** in the confirmation popover to enable th
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-The dataset is now saved and enabled for use in [!DNL Profile]. If you are planning using the Platform Web SDK to send consent data to Profile, you must select this dataset as the [!UICONTROL Profile Dataset] when setting up your [datastream](../../../../edge/datastreams/overview.md).
+The dataset is now saved and enabled for use in [!DNL Profile]. If you are planning using the Platform Web SDK to send consent data to Profile, you must select this dataset as the [!UICONTROL Profile Dataset] when setting up your [datastream](../../../../datastreams/overview.md).
 
 ## Next steps
 

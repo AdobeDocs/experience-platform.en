@@ -11,7 +11,7 @@ Activate profiles for targeted Medallia surveys and feedback collection to bette
 
 >[!IMPORTANT]
 >
->This documentation page was created by the Medallia team. For any inquiries or update requests, please contact them directly at adobe-integrations@medallia.com.
+>This destination connector and documentation page are created and maintained by the Medallia team. For any inquiries or update requests, please contact them directly at adobe-integrations@medallia.com.
 
 ## Use cases {#use-cases}
 
@@ -134,8 +134,8 @@ A sample JSON of the exported data is provided below, which uses the example map
         "aep_segments_new": ["c1c3edcc-07cb-4f66-b5dd-aff485148aba"],
         "aep_segments_existing": [],
         "aep_segments_removed": [],
-        "firstname":  “John” ,
-        "lastname":  “Smith”,
+        "firstname":  "John" ,
+        "lastname":  "Smith",
         "contactId": "jsmith120002",
     }
 ]

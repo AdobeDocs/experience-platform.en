@@ -13,7 +13,7 @@ Profile audience membership from Adobe Experience Platform, when loaded into [!D
 
 >[!IMPORTANT]
 >
->This documentation page was created by Pegasystems. For any inquiries or update requests, please contact Pega directly [here](mailto:support@pega.com).
+>This destination connector and documentation page are created and maintained by Pegasystems. For any inquiries or update requests, please contact Pega directly [here](mailto:support@pega.com).
 
 ## Use cases 
 
