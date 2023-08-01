@@ -48,8 +48,6 @@ Experience Platform allows data to be ingested from other Adobe applications, in
 - [[!DNL Marketo Engage] source overview](connectors/adobe-applications/marketo/marketo.md)
   - [Create a [!DNL Marketo Engage] source connection in the UI](./tutorials/ui/create/adobe-applications/marketo.md)
   - [Create a [!DNL Marketo Engage] source connection and dataflow for custom activity data](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-- [Adobe Workfront source overview](connectors/adobe-applications/workfront.md)
-  - [Create a Workfront source connection in the UI](./tutorials/ui/create/adobe-applications/workfront.md)
 
 ### Advertising {#advertising}
 
