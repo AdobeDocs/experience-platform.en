@@ -50,7 +50,7 @@ Experience Platform allows data to be ingested from other Adobe applications, in
   - [Create a [!DNL Marketo Engage] source connection and dataflow for custom activity data](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
 
 ### Advertising {#advertising}
-
+ 
 Experience Platform provides support for ingesting data from a third-party advertising system. See the following related documents for more information on specific source connectors:
 
 - [Google Ads](connectors/advertising/ads.md)
