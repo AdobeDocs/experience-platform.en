@@ -1,13 +1,10 @@
 ---
-title: (Beta) Google Cloud Storage connection
+title: Google Cloud Storage connection
 description: Learn how to connect to Google Cloud Storage and activate audiences or export datasets.
+last-substantial-update: 2023-07-26
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
 ---
-# (Beta) [!DNL Google Cloud Storage] connection
-
->[!IMPORTANT]
->
->This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Google Cloud Storage] connection, contact your Adobe representative and provide your [!DNL Organization ID].
+# [!DNL Google Cloud Storage] connection
 
 ## Overview {#overview}
 

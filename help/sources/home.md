@@ -20,6 +20,12 @@ With Experience Platform, you can centralize data you collect from disparate sou
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
+## Adobe-built and partner-built sources {#adobe-and-partner-built-sources}
+
+Some of the connectors in the Experience Platform sources catalog are built and maintained by Adobe, while others are built and maintained by partner companies by using [Sources SDK](/help/sources/sources-sdk/overview.md). A note at the top of the documentation page for each partner-built connector calls out if a source is created and maintained by the partner. For example, the [Amazon S3 connector](/help/sources/connectors/cloud-storage/s3.md) is created by Adobe, while the [RainFocus connector](/help/sources/connectors/analytics/rainfocus.md) is created and maintained by the RainFocus team. 
+
+For partner-authored and maintained connectors, this means that issues with the connector might need to be resolved by the partner team (contact method provided in the note in the documentation page). For issues with Adobe-authored and maintained connectors, contact your Adobe representative or Customer Care.
+
 ## Types of sources
 
 Sources in Experience Platform are grouped into the following categories:
@@ -42,11 +48,9 @@ Experience Platform allows data to be ingested from other Adobe applications, in
 - [[!DNL Marketo Engage] source overview](connectors/adobe-applications/marketo/marketo.md)
   - [Create a [!DNL Marketo Engage] source connection in the UI](./tutorials/ui/create/adobe-applications/marketo.md)
   - [Create a [!DNL Marketo Engage] source connection and dataflow for custom activity data](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-- [Adobe Workfront source overview](connectors/adobe-applications/workfront.md)
-  - [Create a Workfront source connection in the UI](./tutorials/ui/create/adobe-applications/workfront.md)
 
 ### Advertising {#advertising}
-
+ 
 Experience Platform provides support for ingesting data from a third-party advertising system. See the following related documents for more information on specific source connectors:
 
 - [Google Ads](connectors/advertising/ads.md)
@@ -131,6 +135,7 @@ Experience Platform provides support for ingesting data from a third-party datab
 
 Experience Platform provides support for ingesting data from a third-party eCommerce system. See the following related documents for more information on specific source connectors:
 
+- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md)
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 - [[!DNL Shopify (Streaming)]](connectors/ecommerce/shopify-streaming.md)
 

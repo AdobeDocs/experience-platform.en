@@ -119,7 +119,7 @@ Selecting **[!UICONTROL Create audience]** will let you create an audience. To l
 >
 > You will **not** be able to delete an audience that is used in a destination activation.
 
-### Filtering and tagging {#manage-audiences}
+### Filtering, folders, and tagging {#manage-audiences}
 
 To improve your work efficiency, you can search for existing audiences, add user-defined tags to audiences, put audiences in folders, and filter the displayed audiences.
 

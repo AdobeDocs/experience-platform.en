@@ -1,13 +1,10 @@
 ---
-title: (Beta) Azure Data Lake Storage Gen2 connection
+title: Azure Data Lake Storage Gen2 connection
 description: Learn how to connect to Azure Data Lake Storage Gen2 to activate audiences and export datasets.
+last-substantial-update: 2023-07-26
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
 ---
-# (Beta) [!DNL Azure Data Lake Storage Gen2] connection
-
->[!IMPORTANT]
->
->This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Azure Data Lake Storage Gen2] connection, contact your Adobe representative and provide your [!DNL Organization ID].
+# [!DNL Azure Data Lake Storage Gen2] connection
 
 ## Overview {#overview}
 
