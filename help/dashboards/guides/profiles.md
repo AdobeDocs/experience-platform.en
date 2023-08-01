@@ -347,7 +347,7 @@ Select **[!UICONTROL Close]** to return to the [!UICONTROL Profiles] dashboard.
 
 ### [!UICONTROL Audiences mapped to destination status] {#audiences-mapped-to-destination-status}
 
-The [!UICONTROL Audiences mapped to destination status] widget displays the total number of both mapped and unmapped audiences in a single metric and uses a doughnut chart to illustrate the proportional difference between their totals. The numbers calculated depend on the chosen merge policy. 
+The [!UICONTROL Audiences mapped to destination status] widget displays the total number of both mapped and unmapped audiences in a single metric and uses a donut chart to illustrate the proportional difference between their totals. The numbers calculated are dependent on the chosen merge policy. 
 
 Individual counts for either mapped or unmapped audiences are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
 

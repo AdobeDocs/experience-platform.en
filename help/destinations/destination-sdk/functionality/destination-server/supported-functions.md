@@ -23,7 +23,7 @@ The message transformation template is used in the [destination server configura
 
 To understand the concepts and functions in this reference page, read the [message format](message-format.md) document first. You need to understand the [structure of a profile](message-format.md#profile-structure) in Experience Platform before you can use [!DNL Pebble] templates to transform and the exported data.
 
-Before you advance to the functions documented below, review the templating examples in the section [Using a templating language for the identity, attributes, and segment membership transformations](message-format.md#using-templating). The examples in there start off very simple and increase in complexity.
+Before you advance to the functions documented below, review the templating examples in the section [Using a templating language for the identity, attributes, and audience membership transformations](message-format.md#using-templating). The examples in there start off very simple and increase in complexity.
 
 ## Supported [!DNL Pebble] functions {#supported-functions}
 
@@ -85,7 +85,7 @@ In addition to the out-of-the-box functions provided by [!DNL Pebble], see below
 
 #### Use case
 
-These functions can be used on order to obtain a list of segments that were added to or removed from a profile.
+These functions can be used on order to obtain a list of audiences that were added to or removed from a profile.
 
 #### Example
 
@@ -136,7 +136,7 @@ added: <111111><333333>; removed: <222222>
 
 <!--
 
-### Added and removed segments filters {#added-and-removed-segmnts-filters}
+### Added and removed audiences filters {#added-and-removed-segmnts-filters}
 
 #### Use case {#use-case}
 

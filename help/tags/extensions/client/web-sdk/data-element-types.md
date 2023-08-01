@@ -10,7 +10,7 @@ After you set your [action types](action-types.md) in the [Adobe Experience Plat
 
 ## Identity map {#identity-map}
 
-An identity map allows you to establish identities for the visitor of your web page. An identity map consists of namespaces, like _phone_ or _email_, with each namespace containing one or more identifiers. For example, if the individual on your website has provided two phone numbers, your phone namespace should contain two identifiers.
+An identity map allows you to establish identities for the visitor of your web page. An identity map consists of namespaces, like `CRMID`, `Phone` or `Email`, with each namespace containing one or more identifiers. For example, if the individual on your website has provided two phone numbers, your phone namespace should contain two identifiers.
 
 In the [!UICONTROL Identity map] data element, you will provide the following pieces of information for each identifier:
 
@@ -19,6 +19,12 @@ In the [!UICONTROL Identity map] data element, you will provide the following pi
 * **[!UICONTROL Primary]**: A selection indicating whether the identifier should be used as the primary identifier for the individual. If no identifier is marked as primary, the ECID will be used as the primary identifier.
 
 ![UI image showing the Edit Data Element screen.](assets/identity-map-data-element.png)
+
+>[!TIP]
+>
+>Adobe recommends sending identities which represent a person, such as `Luma CRM Id` as the primary identity.
+>
+>If the identity map contains the person identifier (e.g. `Luma CRM Id`), then the person identifier will become the primary identifier. Otherwise, `ECID` becomes the primary identity.
 
 You should not provide an [!DNL ECID] when building an identity map. When using the SDK, an [!DNL ECID] is automatically generated on the server and included in the identity map.
 

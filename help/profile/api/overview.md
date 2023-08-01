@@ -22,7 +22,7 @@ For a guide to working with [!DNL Real-Time Customer Profile] data in the [!DNL 
 
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
 
-Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. These computed attribute values can then be viewed in a profile, used to create a segment, or accessed through a number of different access patterns.
+Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. These computed attribute values can then be viewed in a profile, used to create an audience, or accessed through a number of different access patterns.
 
 You can create, view, edit, and delete computed attributes using the `ca/attributes/` endpoint. To learn how to use computed attributes, refer to the [computed attributes overview](../computed-attributes/overview.md). For API operations, visit the [computed attributes API endpoint guide](../computed-attributes/api.md).
 
@@ -36,7 +36,7 @@ Through Adobe Experience Platform you can access [!DNL Real-Time Customer Profil
 
 ## Export jobs ([!DNL Profile] export) {#profile-export}
 
-[!DNL Real-Time Customer Profile] data can be exported to a dataset for further processing, such as exporting audience segments for activation or profile attributes for reporting. Export jobs for audience segments are part of the [!DNL Adobe Experience Platform Segmentation Service] API, please read the [segmentation export jobs endpoint guide](../../profile/api/export-jobs.md) to learn more. For step-by-step instructions on how to create and manage export jobs for profile attributes, please visit the [export jobs endpoint guide](export-jobs.md). 
+[!DNL Real-Time Customer Profile] data can be exported to a dataset for further processing, such as exporting audiences for activation or profile attributes for reporting. Export jobs for audiences are part of the [!DNL Adobe Experience Platform Segmentation Service] API, please read the [segmentation export jobs endpoint guide](../../profile/api/export-jobs.md) to learn more. For step-by-step instructions on how to create and manage export jobs for profile attributes, please visit the [export jobs endpoint guide](export-jobs.md). 
 
 ## Merge policies {#merge-policies}
 
