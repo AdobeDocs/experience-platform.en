@@ -12,7 +12,7 @@ Learn how to use partner-provided attributes to deliver personalized experiences
 
 As an example of how this use case might be implemented and a challenge that it solves, consider that your company is a home improvement brand and has low customer authentication rates. Yet, you still want to deliver personalized experiences to your unauthenticated visitors on their first visit to your website. 
 
-By leveraging valuable signals from a data partner, such as census and recent home sale data, the brand can meaningfully personalize browsing sessions on a website or app. For instance, it might want to use copy that appeals to people who have moved recently and and offer a discount on popular DIY products.
+By leveraging valuable signals from a data partner, such as census and recent home sale data, the brand can meaningfully personalize browsing sessions on a website or app. For instance, it might want to use copy that appeals to people who have moved recently and offer a discount on popular DIY products.
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
@@ -55,9 +55,9 @@ To successfully implement this use case, you must use multiple areas of Real-Tim
 
 Read through the sections below which include links to further documentation, to complete each of the steps in the high-level overview above.
 
-### Data management - Create a new identity namespace, schema, and dataset to manage data attributes {#data-management}
+### Data management - Create an identity namespace, schema, and dataset to manage data attributes {#data-management}
 
-In preparation for achieving the use case to personalize unauthenticated visitors' experience, you must first set up the data management stucture in Real-Time CDP in order to receive the incoming real-time event and audience qualification data.
+In preparation for achieving the use case to personalize unauthenticated visitors' experience, you must first set up the data management structure in Real-Time CDP to receive the incoming real-time event and audience qualification data.
 
 #### Create Partner ID identity namespace
 
@@ -73,14 +73,14 @@ Next, create an **[!UICONTROL Experience Event]** schema to hold the time-series
 
 ![Create Experience Event schema.](/help/rtcdp/assets/partner-data/onsite-personalization/create-experience-event-schema.png)
 
-As you create your schema and [add field groups to it](/help/xdm/ui/resources/schemas.md#add-field-groups) from the set of available groups, consider adding the following two into your schema, in addition to others which are applicable to your digital property and data collection practices. This will ensure that identity and web visit information from the visitor are captured in the data schema. 
+As you create your schema and [add field groups to it](/help/xdm/ui/resources/schemas.md#add-field-groups) from the set of available groups, consider adding the following two into your schema, in addition to others which are applicable to your digital property and data collection practices. This ensures that identity and web visit information from the visitor are captured in the data schema. 
 
 * [Visit Web Page](/help/xdm/field-groups/event/web-details.md)
 * [Identity Map](/help/xdm/field-groups/profile/identitymap.md)
 
-Additionally, create or re-use an existing field group to capture partner provided insights about the visitor and add it to your schema. Read how to [create a field group](/help/xdm/ui/resources/field-groups.md) and how to [add fields](/help/xdm/ui/resources/field-groups.md) to the field group. For instance, if you are expecting to personalize against partner provided insights like age range, employment status, monthly spending power, or buying behaviors, have your field group include appropriate fields.
+Additionally, create or reuse an existing field group to capture partner provided insights about the visitor and add it to your schema. Read how to [create a field group](/help/xdm/ui/resources/field-groups.md) and how to [add fields](/help/xdm/ui/resources/field-groups.md) to the field group. For instance, if you are expecting to personalize against partner provided insights like age range, employment status, monthly spending power, or buying behaviors, have your field group include appropriate fields.
 
-Assuming that the data partner provides a stable identifier for the visitor and you'd like to bring that into Real-Time CDP, be sure to have an appropriately named field in your custom field group, and mark it as an identity in the identity namespace you created earlier. Remember also to [enable the schema to be included in Profile](/help/xdm/ui/resources/schemas.md#profile).
+Assuming that the data partner provides a stable identifier for the visitor and you'd like to bring that into Real-Time CDP, be sure to have an appropriately named field for the identifier in your custom field group. You should also mark the field as an identity in the identity namespace you created earlier. Remember also to [enable the schema to be included in Profile](/help/xdm/ui/resources/schemas.md#profile).
 
 #### Create a dataset
 
@@ -88,15 +88,15 @@ Next, you must create a dataset to hold the time-series data that you collect fr
 
 Read the tutorial on [how to create a dataset](/help/catalog/datasets/user-guide.md#create) and remember to select the option to create the dataset from a schema. Create the dataset based on the schema that you created in the previous step.
 
-Note that similar to the step when creating a schema, you need to enable the dataset to be included in the [!UICONTROL Real-Time Customer Profile]. For more information about enabling the dataset for use in [!UICONTROL Real-Time Customer Profile], read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md#profile) 
+Similar to the step when creating a schema, you need to enable the dataset to be included in the [!UICONTROL Real-Time Customer Profile]. For more information about enabling the dataset for use in [!UICONTROL Real-Time Customer Profile], read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md#profile) 
 
-### Implement event data collection on your web property
+### Implement event data collection on your web property {#implement-data-collection}
 
 After setting up your data management configuration, you now need to implement real-time event [data collection](/help/collection/home.md) on your web property. You need to instrument your property with the Adobe data collection library - [!UICONTROL Web SDK] - to collect real-time event calls and send them back to Real-Time CDP. This item consists of a few separate tasks across a few data collection components.
 
 >[!IMPORTANT]
 >
->In order to retrieve partner-provided attributes, you must also *integrate your web property with partner APIs or other methods to call and retrieve attributes from data partners in real-time*. Please discuss this aspect with your partner of choice as it is not subject of this tutorial.
+>To retrieve partner-provided attributes, you must also *integrate your web property with partner APIs or other methods to call and retrieve attributes from data partners in real-time*. Please discuss this aspect with your partner of choice as it is not subject of this tutorial.
 
 First, use the app switcher to navigate to the **[!UICONTROL Data Collection]** section. 
 
@@ -163,7 +163,7 @@ Use the [Experience Cloud ID Service extension](/help/tags/extensions/client/id-
 
 #### Set up environments
 
-Next, head on over to the **[!UICONTROL Environments]** section from the left-hand navigation. In this step you must connect your website to the Adobe Edge Network to retrieve and deliver visitor information in real-time.
+Next, head on over to the **[!UICONTROL Environments]** section from the left-hand navigation. In this step, you must connect your website to the Adobe Edge Network to retrieve and deliver visitor information in real-time.
 
 Select the box icon on the right for the development environment, and copy the standard version of the JavaScript code snippet that appears in a modal window.  
 
@@ -193,8 +193,7 @@ From the schema, select the third-party attributes that correspond to the values
 
 #### Set up rules
 
-In the **[!UICONTROL Rules]** section, you can configure your website to 
-send a personalization request to Adobe with the attributes loaded into the data elements that you just created. Read more about [creating rules](/help/tags/ui/managing-resources/rules.md).
+In the **[!UICONTROL Rules]** section, you can configure your website to send a personalization request to Adobe with the attributes loaded into the data elements that you just created. Read more about [creating rules](/help/tags/ui/managing-resources/rules.md).
 
 Select **[!UICONTROL Create new Rule]**. Name this rule **[!UICONTROL Personalize]** and select the + sign next to Events. Select **[!UICONTROL Page Bottom]** as the event and save.
 
@@ -232,7 +231,7 @@ Input `interact` in the search box, refresh the page, and you should see network
 
 ![View of network events populating in developer tools.](/help/rtcdp/assets/partner-data/onsite-personalization/events-filtered.png)
 
-### Personalization
+### Personalization {#personalization}
 
 You are now ready to create and activate audiences for personalization.
 
@@ -240,7 +239,7 @@ You are now ready to create and activate audiences for personalization.
 
 Set up [edge segmentation](/help/segmentation/ui/edge-segmentation.md) so the audience membership of your visitors is evaluated in real-time, as they visit your web property.  
 
-Make sure to also set up and active-on-edge merge policy for the edge audiences 
+Make sure to also set up an [active-on-edge merge policy](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) for the edge audiences.
 
 #### Integrate with Adobe Target or other custom personalization destination
 
@@ -261,5 +260,5 @@ Note the following limitations as you explore the use case described on this pag
 Explore further use cases enabled through partner data support in Real-Time CDP:
 
 * [Supplement first-party profiles with attributes from trusted data partners](/help/rtcdp/partner-data/supplement-first-party-profiles.md) to improve your data foundation and gain new insights into your customer base and gain better audience optimization.
-* Use third party data support in Real-Time CDP to [expand your profile base with prospect profiles from data partners and engage with them to acquire or reach new customers](/help/rtcdp/partner-data/prospecting.md).
+* Use third-party data support in Real-Time CDP to [expand your profile base with prospect profiles from data partners and engage with them to acquire or reach new customers](/help/rtcdp/partner-data/prospecting.md).
 * (**Coming soon**) [!BADGE Beta]{type=Informative} **Expanded activation** using Partner IDs to publishing ecosystems that do not accept PII or hashed PII.
