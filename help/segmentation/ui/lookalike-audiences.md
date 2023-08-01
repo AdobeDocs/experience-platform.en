@@ -5,11 +5,11 @@ description: Learn how to target new high-value audiences in Adobe Experience Pl
 badgeLimitedAvailability: label="Limited availability" type=Caution
 ---
 
+# Look-alike audiences guide
+
 >[!IMPORTANT]
 >
 >Please note that look-alike insights and look-alike audiences are in **limited availability**.
-
-# Look-alike audiences guide
 
 In Adobe Experience Platform, look-alike audiences provide intelligent insights on each of your audiences, leveraging machine-learning-based insights to identify and target high-value customers with your marketing campaigns. 
 
