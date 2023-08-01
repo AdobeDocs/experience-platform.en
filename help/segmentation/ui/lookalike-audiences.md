@@ -2,8 +2,12 @@
 solution: Experience Platform
 title: Look-alike Audiences
 description: Learn how to target new high-value audiences in Adobe Experience Platform using look-alike audiences.
-badge: Limited availability
+badgeLimitedAvailability: label="Limited availability" type=Caution
 ---
+
+>[!IMPORTANT]
+>
+>Please note that look-alike insights and look-alike audiences are in **limited availability**.
 
 # Look-alike audiences guide
 
