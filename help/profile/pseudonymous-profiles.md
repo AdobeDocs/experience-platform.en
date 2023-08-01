@@ -16,7 +16,7 @@ A profile is considered for Pseudonymous data expiration if it meets the followi
 - The stitched profile's identity namespaces match what the customer has specified as a pseudonymous or unknown identity namespace. 
   - For example, if the profile's identity namespace is `ECID`, `GAID`, or `AAID`. The stitched profile has no IDs from any other identity namespace. In this example, a stitched profile does **not** have either an email or CRM identity. 
 - No activity has taken place in a user-defined amount of time. Activity is defined either by any Experience Events being ingested or customer-initiated updates to the profile attributes. 
-  - For example, a new page view event or age attribute update is considered as an activity. However, a non-user-initiated segment membership update is **not** considered as an activity. Currently, to compute data expiration, the tracking at a profile level is based on the time of event for Experience Events and time of ingestion for profile attributes.
+  - For example, a new page view event or age attribute update is considered as an activity. However, a non-user-initiated audience membership update is **not** considered as an activity. Currently, to compute data expiration, the tracking at a profile level is based on the time of event for Experience Events and time of ingestion for profile attributes.
 
 ## Access {#access}
 
@@ -69,9 +69,8 @@ For a typical use case, you can set your Experience Event data expiry based on t
 
 ### What are some caveats you should be aware of before using Pseudonymous profiles data expiration?
 
-- Pseudonymous profile data expiration will run on the **production** sandbox.
+- Pseudonymous profile data expiration runs at a **sandbox** level. You can choose to have different configurations for production and development sandboxes.
 - Once you have activated this feature, the deletion of profiles is **permanent**. There is **no** way to roll back or restore the deleted profiles.
 - This is **not** a one-time cleanup job. Pseudonymous profile data expiry will continually run once per day and delete profiles that match the customer's input.
 - **All** profiles that are defined as Pseudonymous profiles will be affected by the Pseudonymous profile data expiration. It does **not** matter if the profile is Experience Event only or if it only contains profile attributes.
 - This cleanup will **only** occur in Profile. Identity Service may continue to show the deleted identities within the graph after the cleanup in cases where the profile has two or more associated pseudonymous identities (such as `AAID` and `ECID`). This discrepancy will be addressed in the near future.
-

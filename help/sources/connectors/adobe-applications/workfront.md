@@ -8,7 +8,7 @@ exl-id: ea714278-d84d-4929-9a34-81fc5fb70871
 
 >[!NOTE]
 >
->The Adobe Workfront source is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The Adobe Workfront source is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 Adobe Workfront is a marketing work management application that helps you manage the entire lifecycle of work in one place. Workfront includes reporting and analytics tools that you can use to better understand and optimize the flow of work in your organization. 
 

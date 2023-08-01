@@ -19,6 +19,10 @@ It is strongly recommended to use [!DNL Meta Pixel] and the [!DNL Conversions AP
 
 In order to use the [!DNL Conversions API] extension, you must have access to event forwarding and have a valid [!DNL Meta] account with access to [!DNL Ad Manager] and [!DNL Event Manager]. Specifically, you must copy the ID of an existing [[!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755?id=1205376682832142) (or [create a new [!DNL Pixel]](https://www.facebook.com/business/help/952192354843755) instead) so the extension can be configured to your account.
 
+>[!INFO]
+>
+>If you're planning to use this extension with mobile app data, or if you also work with offline event data in your [!DNL Meta] campaigns, you'll need to create your dataset through an existing app and select **Create from a pixel ID** when prompted. See the article [Decide which dataset creation option is right for your business](https://www.facebook.com/business/help/5270377362999582?id=490360542427371) for details. Refer to the [Conversions API for App Events](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events) document for all the required and optional app tracking parameters.
+
 ## Install the extension
 
 To install the [!DNL Meta Conversions API] extension, navigate to the Data Collection UI or Experience Platform UI and select **[!UICONTROL Event Forwarding]** from the left navigation. From here, select a property to add the extension to, or create a new property instead.
@@ -39,7 +43,7 @@ The extension is installed and you can now employ its capabilities in your event
 
 ## Configure an event forwarding rule {#rule}
 
-This section covers how to use the [!DNL Conversions API] extension in a generic event forwarding rule. In practice, you should configure several rules in order to send all accepted [standard events](https://developers.facebook.com/docs/meta-pixel/reference) via [!DNL Meta Pixel] and [!DNL Conversions API].
+This section covers how to use the [!DNL Conversions API] extension in a generic event forwarding rule. In practice, you should configure several rules in order to send all accepted [standard events](https://developers.facebook.com/docs/meta-pixel/reference) via [!DNL Meta Pixel] and [!DNL Conversions API]. For mobile app data, please see the required fields, app data fields, customer information parameters, and custom data details [here](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events).
 
 >[!NOTE]
 >

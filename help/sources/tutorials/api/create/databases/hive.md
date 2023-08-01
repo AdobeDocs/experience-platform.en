@@ -10,7 +10,7 @@ exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
 
 >[!NOTE]
 >
->The [!DNL Apache Hive] on [!DNL Azure HDInsights] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The [!DNL Apache Hive] on [!DNL Azure HDInsights] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 

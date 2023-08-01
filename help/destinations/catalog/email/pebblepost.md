@@ -8,7 +8,7 @@ exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
 
 ## Overview {#overview}
 
-[!DNL PebblePost's Programmatic Direct Mail®] solution helps digital marketers connect online interest and intent to offline, tangible media that converts. Marketers can leverage the custom data segments they have created in Adobe to now target consumers with a relevant, longer-lasting, in-home media impression. Analyze performance in real time based on response path activity and on-site conversions.
+[!DNL PebblePost's Programmatic Direct Mail®] solution helps digital marketers connect online interest and intent to offline, tangible media that converts. Marketers can leverage the custom data audiences they have created in Adobe to now target consumers with a relevant, longer-lasting, in-home media impression. Analyze performance in real time based on response path activity and on-site conversions.
 
 [!DNL PebblePost] is an email extension in Adobe Experience Platform. For more information about PebblePost, read the [integration blog post](https://blog.adobe.com/en/publish/2017/11/16/pebblepost-builds-integration-launch-adobe.html#gs.7lejiq).
 

@@ -1,12 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Google Big Query;google big query;GBQ;gbq
-solution: Experience Platform
-title: Create a Google Big Query  Source Connection in the UI
-type: Tutorial
+title: Create a Google Big Query Source Connection in the UI
 description: Learn how to create a Google Big Query source connection using the Adobe Experience Platform UI.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
 ---
 # Create a [!DNL Google Big Query] source connection in the UI
+
+>[!IMPORTANT]
+>
+>The [!DNL Google BigQuery] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Google Big Query] source connection using the Platform user interface.
 

@@ -1,26 +1,27 @@
 ---
-keywords: activate segment streaming destinations;activate segment streaming destinations;activate data
-title: Activate audience data to streaming segment export destinations
+keywords: activate audience streaming destinations;activate audience streaming destinations;activate data
+title: Activate audience data to streaming destinations
 type: Tutorial
-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
+description: Learn how to activate the audiences you have in Adobe Experience Platform by mapping them to streaming destinations.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 ---
-# Activate audience data to streaming segment export destinations
+
+# Activate audiences to streaming destinations
 
 >[!IMPORTANT]
 > 
-> * To activate data and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
-> * To activate data without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+> * To activate audiences and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+> * To activate audiences without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 > 
 > Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 ## Overview {#overview}
 
-This article explains the workflow required to activate audience data in Adobe Experience Platform segment streaming destinations.
+This article explains the workflow required to activate audiences in Adobe Experience Platform streaming destinations.
 
 ## Prerequisites {#prerequisites}
 
-To activate data to destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
+To activate audiences to destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 
 ## Select your destination {#select-destination}
 
@@ -28,29 +29,35 @@ To activate data to destinations, you must have successfully [connected to a des
     
     ![Destination Catalog tab](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. Select **[!UICONTROL Activate segments]** on the card corresponding to the destination where you want to activate your segments, as shown in the image below.
+1. Select **[!UICONTROL Activate audiences]** on the card corresponding to the destination where you want to activate your audiences, as shown in the image below.
 
-    ![Activate buttons](../assets/ui/activate-segment-streaming-destinations/activate-segments-button.png)
+    ![Activate buttons](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
 
-1. Select the destination connection that you want to use to activate your segments, then select **[!UICONTROL Next]**.
+1. Select the destination connection that you want to use to activate your audiences, then select **[!UICONTROL Next]**.
 
     ![Select destination](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
-1. Move to the next section to [select your segments](#select-segments).
+1. Move to the next section to [select your audiences](#select-audiences).
 
-## Select your segments {#select-segments}
+## Select your audiences {#select-audiences}
 
-Use the check boxes to the left of the segment names to select the segments that you want to activate to the destination, then select **[!UICONTROL Next]**.
+To select the audiences that you want to activate to the destination, use the check boxes to the left of the audience names, then select **[!UICONTROL Next]**.
 
-![Select segments](../assets/ui/activate-segment-streaming-destinations/select-segments.png)
+You can select from multiple types of audiences, depending on their origin:
+
+* **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [segmentation documentation](../../segmentation/ui/overview.md) for more details.
+* **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/overview.md#import-audience).
+* Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
+
+![Select audiences](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
 ## Map attributes and identities {#mapping}
 
 >[!IMPORTANT]
 >
->This step only applies to some segment streaming destinations. If your destination does not have a **[!UICONTROL Mapping]** step, skip to [Schedule segment export](#scheduling).
+>This step only applies to some audience streaming destinations. If your destination does not have a **[!UICONTROL Mapping]** step, skip to [audience scheduling](#scheduling).
 
-Some segment streaming destinations require you to select source attributes or identity namespaces to map as target identities in the destination.
+Some audience streaming destinations require you to select source attributes or identity namespaces to map as target identities in the destination.
 
 1. In the **[!UICONTROL Mapping]** page, select **[!UICONTROL Add new mapping]**.
     
@@ -85,34 +92,32 @@ When you are mapping unhashed source attributes to target attributes that the de
 
 ![Identity mapping](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
-## Schedule segment export {#scheduling}
+## Schedule audience export {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="End date"
->abstract="Adding an end date for segment schedule is not available."
+>abstract="Adding an end date for audience schedule is not available."
 
-By default, the [!UICONTROL Segment schedule] page shows only the newly selected segments that you chose in the current activation flow.
+By default, the **[!UICONTROL Audience schedule]** page shows only the newly selected audiences that you chose in the current activation flow.
 
-![New segments](../assets/ui/activate-segment-streaming-destinations/new-segments.png)
+To see all the audiences being activated to your destination, use the filtering option and disable the **[!UICONTROL Show new audiences only]** filter.
 
-To see all the segments being activated to your destination, use the filtering option and disable the **[!UICONTROL Show new segments only]** filter.
+![All audiences](../assets/ui/activate-segment-streaming-destinations/all-audiences.png)
 
-![All segments](../assets/ui/activate-segment-streaming-destinations/all-segments.png)
+1. On the **[!UICONTROL Audience schedule]** page, select each audience, then use the **[!UICONTROL Start date]** and **[!UICONTROL End date]** selectors to configure the time interval for sending data to your destination.
 
-1. On the **[!UICONTROL Segment schedule]** page, select each segment, then use the **[!UICONTROL Start date]** and **[!UICONTROL End date]** selectors to configure the time interval for sending data to your destination.
+    ![Audience schedule](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
 
-    ![Segment schedule](../assets/ui/activate-segment-streaming-destinations/segment-schedule.png)
-
-    * Some destinations require you to select the **[!UICONTROL Origin of audience]** for each segment, using the drop-down menu underneath the calendar selectors. If your destination does not include this selector, skip this step.
+    * Some destinations require you to select the **[!UICONTROL Origin of audience]** for each audience, using the drop-down menu underneath the calendar selectors. If your destination does not include this selector, skip this step.
 
         ![Mapping ID](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
-    * Some destinations require you to manually map [!DNL Platform] segments to their counterpart in the target destination. To do this, select each segment, then enter the corresponding segment ID from the destination platform in the **[!UICONTROL Mapping ID]** field. If your destination does not include this field, skip this step.
+    * Some destinations require you to manually map [!DNL Platform] audiences to their counterpart in the target destination. To do this, select each audience, then enter the corresponding audience ID from the destination platform in the **[!UICONTROL Mapping ID]** field. If your destination does not include this field, skip this step.
 
         ![Mapping ID](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
-    * Some destinations require you to enter an **[!UICONTROL App ID]** when activating [!DNL IDFA] or [!DNL GAID] segments. If your destination does not include this field, skip this step.
+    * Some destinations require you to enter an **[!UICONTROL App ID]** when activating [!DNL IDFA] or [!DNL GAID] audiences. If your destination does not include this field, skip this step.
 
         ![App ID](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
 
@@ -122,7 +127,7 @@ To see all the segments being activated to your destination, use the filtering o
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
-![Selection summary in the review step.](/help/destinations/assets/ui/activate-segment-streaming-destinations/review.png)
+![Selection summary in the review step.](../assets/ui/activate-segment-streaming-destinations/review.png)
 
 ### Consent policy evaluation {#consent-policy-evaluation}
 
@@ -130,26 +135,26 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 ### Data usage policy checks {#data-usage-policy-checks}
 
-In the **[!UICONTROL Review]** step, Experience Platform also checks for any data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, read about [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in the data governance documentation section.
+In the **[!UICONTROL Review]** step, Experience Platform also checks for any data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the audience activation workflow until you have resolved the violation. For information on how to resolve policy violations, read about [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in the data governance documentation section.
  
 ![data policy violation](../assets/common/data-policy-violation.png)
 
-### Filter segments {#filter-segments}
+### Filter audiences {#filter-audiences}
 
-Also in this step you can use the available filters on the page to display only the segments whose schedule or mapping has been updated as part of this workflow. You can also toggle which table columns you want to see. 
+Also in this step you can use the available filters on the page to display only the audiences whose schedule or mapping has been updated as part of this workflow. You can also toggle which table columns you want to see. 
 
-![Screen recording showing the available segment filters in the review step.](/help/destinations/assets/ui/activate-segment-streaming-destinations/filter-segments-review-step.gif)
+![Screen recording showing the available audience filters in the review step.](../assets/ui/activate-segment-streaming-destinations/filter-audiences-review-step.gif)
 
 If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
-## Verify segment activation {#verify}
+## Verify audience activation {#verify}
 
 Check the [destination monitoring documentation](../../dataflows/ui/monitor-destinations.md) for detailed information on how to monitor the flow of data to your destinations.
 
 <!-- 
-For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
+For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Audience membership in the audience would be added and removed as users are qualified or disqualified for the activated audiences.
 
 >[!TIP]
 >
->The integration between Adobe Experience Platform and [!DNL Facebook] supports historical audience backfills. All historical segment qualifications are sent to [!DNL Facebook] when you activate the segments to the destination.
+>The integration between Adobe Experience Platform and [!DNL Facebook] supports historical audience backfills. All historical audience qualifications are sent to [!DNL Facebook] when you activate the audiences to the destination.
 -->

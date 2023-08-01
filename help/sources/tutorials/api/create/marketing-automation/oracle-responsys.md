@@ -10,7 +10,7 @@ exl-id: 76659f5a-c923-488c-88f6-1919bc6a7bb5
 
 >[!NOTE]
 >
->The [!DNL Oracle Responsys] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The [!DNL Oracle Responsys] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 

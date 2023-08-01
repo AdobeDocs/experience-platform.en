@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;insights;customer ai;popular topics;customer ai segments
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Create Customer Segments with Predicted Scores
 description: When a prediction run completes, predicted propensity scores are automatically consumed by Profiles. Enriching Profiles with Customer AI scores allows for the creation of customer segments to find audiences based on their propensity scores. This section provides steps for creating segments using the Segment Builder.
