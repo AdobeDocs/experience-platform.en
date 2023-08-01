@@ -11,7 +11,7 @@ Activate profiles for targeted Medallia surveys and feedback collection to bette
 
 >[!IMPORTANT]
 >
->The destination connector and documentation page are created and maintained by the Medallia team. For any inquiries or update requests, please contact them directly at adobe-integrations@medallia.com.
+>This destination connector and documentation page are created and maintained by the Medallia team. For any inquiries or update requests, please contact them directly at adobe-integrations@medallia.com.
 
 ## Use cases {#use-cases}
 
