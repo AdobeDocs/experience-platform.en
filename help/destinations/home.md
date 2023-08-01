@@ -41,6 +41,12 @@ The controls in the [destinations workspace](./ui/destinations-workspace.md) all
 
 With Experience Platform, you can activate data to various types of destinations, to satisfy your activation use cases. Destinations range from API-based integrations, to integrations with file reception systems, profile lookup destinations, and more. For detailed information about all available destinations, see the [destination types and categories overview](./destination-types.md).
 
+## Adobe-built and partner-built destinations {#adobe-and-partner-built-destinations}
+
+Some of the connectors in the Experience Platform destinations catalog are built and maintained by Adobe, while others are built and maintained by partner companies using [Destination SDK](/help/destinations/destination-sdk/overview.md). A note at the top of the documentation page for each partner-built connector calls out if a destination is created and maintained by the partner. For example, the [Amazon S3 connector](/help/destinations/catalog/cloud-storage/amazon-s3.md) is created by Adobe, while the [TikTok connector](/help/destinations/catalog/social/tiktok.md) is created and maintained by the TikTok team. 
+
+For partner-authored and maintained connectors, this means that issues with the connector might need to be resolved by the partner team (contact method provided in the note in the documentation page). For issues with Adobe-authored and maintained connectors, contact your Adobe representative or Customer Care.
+
 ## Destinations and access controls {#access-controls}
 
 The destinations functionality in Platform works with Adobe Experience Platform access control permissions. Depending on your user's permission level, you can view, manage, and activate destinations. For information about the individual permissions, see [Access control in Adobe Experience Platform](../access-control/home.md) and scroll down to the bottom of the page.
