@@ -92,9 +92,11 @@ The guardrails below apply to activation through [edge personalization destinati
 
 Dataset exports are currently supported in a **[!UICONTROL First Full and then Incremental]** [pattern](/help/destinations/ui/export-datasets.md#scheduling). The guardrails described in this section apply to the first full export that occurs after a dataset export workflow is set up.
 
->[!IMPORTANT]
->
->All the limits described in this section for dataset exports are *soft guardrails*. For example, while the user interface will not block you from exporting  datasets larger than 5 billion records, the behavior is unpredictable and exports might either fail or have very long export latency.
+| Guardrail | Limit | Limit Type | Description |
+| --- | --- | --- | --- |
+| Size of exported datasets | 5 billion records | Soft | The limit described here for dataset exports is a *soft guardrail*. For example, while the user interface will not block you from exporting datasets larger than 5 billion records, the behavior is unpredictable and exports might either fail or have very long export latency. |
+
+{style="table-layout:auto"}
 
 <!--
 
