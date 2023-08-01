@@ -7,10 +7,6 @@ exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
 ---
 # Activate audiences to file-based destinations by using the Flow Service API
 
->[!IMPORTANT]
->
->* This beta functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Please contact your Adobe representative for more information. 
-
 Use the enhanced file export capabilities (currently in beta) to access enhanced customization functionality when exporting files out of Experience Platform: 
 
 * Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
@@ -18,14 +14,14 @@ Use the enhanced file export capabilities (currently in beta) to access enhanced
 * Ability to select the [file type](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) of the exported file.
 * [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
-This functionality is supported by the six new beta cloud storage cards listed below: 
+This functionality is supported by the six cloud storage cards listed below: 
 
-* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
-* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
-* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
-* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
-* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) 
-* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
+* [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) 
+* [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
 This article explains the workflow required to use the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) to export qualified profiles from Adobe Experience Platform to one of the cloud storage locations linked above.
 
