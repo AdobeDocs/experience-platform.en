@@ -92,7 +92,7 @@ To learn more about edge segmentation, please read either the [API documentation
 
 ## Access segmentation results
 
-To learn how to access an exported audience, see the [segment evaluation tutorial](./tutorials/evaluate-a-segment.md).
+To learn how to access an exported audience, see the [segment definition evaluation tutorial](./tutorials/evaluate-a-segment.md).
   
 ## Segment definition metadata
 
