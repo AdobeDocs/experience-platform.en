@@ -16,6 +16,10 @@ Datastream configuration override is a two step process:
 
 This article explains the end-to-end datastream configuration override process for every type of supported override.
 
+>[!IMPORTANT]
+>
+>Datastream overrides should be used when you need different data sent to different datastreams. You should not use datastream overrides for personalization use cases or consent data.
+
 ## Use cases {#use-cases}
 
 To help you better understand how and when to use datastream overrides, here are some use cases that Adobe Experience Platform customers can solve by using this feature.
@@ -27,7 +31,6 @@ A company has different websites or subdomains for different countries in which 
 By using datastream overrides, the company can dynamically switch the flow of data to different datastreams, instead of the default behavior of sending data to one datastream.
 
 A common use case could be to send data to a country-specific datastream and also send data to a global datastream where customers perform an important action, such as placing an order or updating their user profile.
-
 
 **Differentiating profiles and identities for different business units**
 
