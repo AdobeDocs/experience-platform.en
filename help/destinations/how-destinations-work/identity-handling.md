@@ -76,7 +76,7 @@ Advertising destinations relying on third party cookies (for example: [!DNL Goog
 
 These destinations require an ID sync to happen through either the [!UICONTROL Experience Cloud ID service] or through [!UICONTROL Experience Platform Web SDK]. 
 
-If you are using [!UICONTROL Experience Platform Web SDK] and the legacy [!UICONTROL Experience Cloud ID service] is not implemented on the page, then you need to ensure that the datastream for the website in question is enabled to allow for Third Party ID syncing, as outlined in the [configure datastream documentation](/help/edge/datastreams/configure.md#create).
+If you are using [!UICONTROL Experience Platform Web SDK] and the legacy [!UICONTROL Experience Cloud ID service] is not implemented on the page, then you need to ensure that the datastream for the website in question is enabled to allow for Third Party ID syncing, as outlined in the [configure datastream documentation](/help/datastreams/configure.md#create).
 
 When configuring a datastream as described in the documentation linked above, you need to ensure that the **[!UICONTROL Third Party ID Sync]** slider is enabled. Most customers would leave the `container_id` field blank (it will default to 0). You only need to change this value if your legacy Audience Manager implementation used a specific container ID (note, however, that this would be the vast minority of customers).
 

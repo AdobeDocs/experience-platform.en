@@ -11,7 +11,7 @@ Adobe Analytics data collection works by translating XDM data into a format that
 
 You can also [manually map XDM values](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) to legacy Analytics variables.
 
-To enable Adobe Analytics to receive data from Server API, you need to [configure your datastream](../edge/datastreams/overview.md#adobe-analytics-settings) to forward events to Adobe Analytics, by entering the report suite ID in the datastream configuration page.
+To enable Adobe Analytics to receive data from Server API, you need to [configure your datastream](../datastreams/overview.md#adobe-analytics-settings) to forward events to Adobe Analytics, by entering the report suite ID in the datastream configuration page.
 
 ![Adobe Analytics Datastream Configuration](assets/analytics-datastream.png)
 
@@ -25,7 +25,7 @@ POST /ee/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### Request {#request}
 
-The sample below includes several automatically mapped values from the `_experience.analytics` field group. It also includes JSON-based data layers. While these data layers cannot be mapped automatically, it is possible to use [Data Prep for Data Collection](../edge/datastreams/data-prep.md) to map these values to a schema that contains field groups referenced above.
+The sample below includes several automatically mapped values from the `_experience.analytics` field group. It also includes JSON-based data layers. While these data layers cannot be mapped automatically, it is possible to use [Data Prep for Data Collection](../datastreams/data-prep.md) to map these values to a schema that contains field groups referenced above.
 
 All values that users map to those fields will automatically map to the appropriate Analytics values, as if they were included in the API request.
 
