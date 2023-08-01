@@ -38,7 +38,7 @@ As a marketer, I want to target users in a mobile engagement destination, with a
 
 {style="table-layout:auto"}
 
-## External audiences support {#external-audiences-support}
+## Supported audiences {#supported-audiences}
 
 This destination support the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 

@@ -45,7 +45,7 @@ The destination enables marketers to push audiences created in Adobe Experience 
 
 You can map attributes from Experience Platform to any of the attributes that your organization has access to in Marketo. In Marketo, you can use the [Describe API request](https://developers.marketo.com/rest-api/lead-database/leads/#describe) to retrieve the attribute fields that your organization has access to.
 
-## External audiences support {#external-audiences-support}
+## Supported audiences {#supported-audiences}
 
 This destination support the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 

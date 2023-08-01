@@ -29,7 +29,7 @@ Before you can send your audiences to [!DNL Airship], you must:
 >
 >Create an [!DNL Airship] account via [this signup link](https://go.airship.eu/accounts/register/plan/starter/) if you have not already.
 
-## External audiences support {#external-audiences-support}
+## Supported audiences {#supported-audiences}
 
 This destination support the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
