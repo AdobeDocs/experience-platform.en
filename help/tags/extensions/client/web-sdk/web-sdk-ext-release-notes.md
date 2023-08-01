@@ -17,7 +17,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 **Fixes and improvements**
 
 * Deprecated `edgeConfigId` in favor of `datastreamId` in the SDK configuration.
-* Enhanced the config overrides UI.
+* Multiple user experience enhancements for the datastream configuration overrides user interface.
 
 ## Version 2.19.0 - June 21, 2023
 
