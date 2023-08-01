@@ -55,8 +55,8 @@ If you do not provide an alias name in advance, Query Service automatically gene
 An example output of a `COMPUTE STATISTICS` query is as follows:
 
 ```console
-| Statistics ID    | 
-| ---------------- |
+| Statistics ID         | 
+| --------------------- |
 | adc_geometric_stats_1 |
 (1 row)
 ```
@@ -94,11 +94,11 @@ You can use the `SHOW STATISTICS` command to display the metadata for all the te
 An example output of `SHOW STATISTICS` is seen below.
 
 ```console
-statsId | tableName | columnSet | filterContext | timestamp
---------+-----------+-----------+---------------+---------------
-adc_geometric_stats_1 | adc_geometric | (age) |  | 25/06/2023 09:22:26
-demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
-age_stats | castedtitanic | (age) | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
+      statsId         |   tableName   | columnSet |         filterContext       |      timestamp
+----------------------+---------------+-----------+-----------------------------+--------------------
+adc_geometric_stats_1 | adc_geometric |   (age)   |                             | 25/06/2023 09:22:26
+demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          | 25/06/2023 12:50:26
+age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
 A description of the metadata column names is provided below.
