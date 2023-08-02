@@ -9,7 +9,7 @@ Data stored on Adobe Experience Platform is encrypted at rest using system-level
 
 >[!NOTE]
 >
->Data in Adobe Experience Platform data lake and Profile Store (CosmosDB) are encrypted using CMK.
+>Data in Adobe Experience Platform data lake and Profile Store are encrypted using CMK. These are regarded as your primary data stores as data lost from these stores is not recoverable.
 
 This document covers the process for enabling the customer-managed keys (CMK) feature in Platform.
 
@@ -276,14 +276,23 @@ The `status` attribute can have one of four values with the following meanings:
 1. `COMPLETED`: The key vault and key name have been added to the datastores.
 1. `FAILED`: A problem occurred, primarily related to the key, key vault, or multi-tenant app setup.
 
+## Revoke access {#revoke-access}
+
+If you want to revoke Platform access to your data, you can remove the user role associated with the application from the key vault within [!DNL Azure].
+
+>[!WARNING]
+>
+>Disabling the key vault, Key, or CMK app can result in a breaking change. Once the key vault, Key, or CMK app is disabled and data is no longer accessible in Platform, any downstream operations related to that data will no longer be possible. Ensure that you understand the downstream impacts of revoking Platform access to your data before you make any changes to your configuration.
+
+After removing key access or disabling/deleting the key from your [!DNL Azure] key vault, it may take anywhere from a few minutes, to 24 hours for this configuration to propagate to primary data stores. Platform workflows also include cached and transient data stores required for performance and core application functionality. The propagation of CMK revocation takes up to seven days due to their refresh cycles. For example, this means that the Profile dashboard would retain and display data from its cache data store and take seven days to expire the data held in cache data stores as part of the refresh cycle. The same time delay applies for data to become available again when re-enabling access to the application.
+
+>[!NOTE]
+>
+>There are two use-case-specific exceptions to the seven day dataset expiration on non-primary (cached/transient) data. <ul><li>[Adobe Journey Optimizer URL Shortener](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html#message-preset-sms)</li><li>[Edge Projections](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+
+For these exceptional cases, you are recommended to remove application access in conjunction with CMK revocation or key disablement/deletion, to provide further safeguards to your data through user login.
+
 ## Next steps
 
 By completing the above steps, you have successfully enabled CMK for your organization. Data that is ingested into Platform will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. 
 
-If you want to revoke Platform access to your data, you can remove the user role associated with the application from the key vault within [!DNL Azure]. If you do decide to disable Platform's access to your data, revoking its access to the CMK application or by disabling the key prevents Adobe solutions from being able to decrypt your data or interact with persistent data stores such as data lake and [!DNL Cosmos DB]. 
-
-Once you revoke access, it can take anywhere from a few minutes, up to 24 hours (which is the upper bound limit) for the denied access to take effect on data held in persistent data stores. Cache data stores and transient data stores that are there in Adobe's ecosystem are not immediately affected by this disabled access. Once you deny access to Platform applications, it can take up to seven days to reflect these changes if the application holds data in cached or transient data stores due to their refresh cycle. For example, this means that the Profile dashboard would retain and display data from its cache data store and take seven days to nullify the data held in cache data stores as part of the refresh cycle. The same time delay applies for data to become available again when re-enabling access to the application.
-
->[!WARNING]
->
->Once the Key Vault, Key, or CMK app is disabled and data is no longer accessible in Platform, any downstream operations related to that data will no longer be possible. Disabling the Key Vault, Key, or CMK app can result in a breaking change. Ensure that you understand the downstream impacts of revoking Platform access to your data before you make any changes to your configuration.
