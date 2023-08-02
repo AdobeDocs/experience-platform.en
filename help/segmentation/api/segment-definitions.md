@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment definition;segment definitions;api;API;
 solution: Experience Platform
 title: Segment Definitions API Endpoint
 description: The segment definitions endpoint in the Adobe Experience Platform Segmentation Service API allows you to programmatically manage segment definitions for your organization.
@@ -7,7 +6,7 @@ exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
 ---
 # Segment definitions endpoint
 
-Adobe Experience Platform allows you to create segments that define a group of specific attributes or behaviors from a group of profiles. A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). This object is also called a PQL predicate. PQL predicates define the rules for the segment based on conditions related to any record or time-series data you supply to [!DNL Real-Time Customer Profile]. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
+Adobe Experience Platform allows you to create segment definitions that define a group of specific attributes or behaviors from a group of profiles. A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). Segment definitions are applied to profiles to create audiences. This object (segment definition) is also called a PQL predicate. PQL predicates define the rules for the segment definition based on conditions related to any record or time-series data you supply to [!DNL Real-Time Customer Profile]. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
 
 This guide provides information to help you better understand segment definitions and includes sample API calls for performing basic actions using the API.
 
@@ -193,15 +192,14 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 | Property | Description |
 | -------- | ----------- |
-| `name` | **Required.** A unique name by which to refer to the segment. |
-| `description` | A description of the segment definition you are creating. |
-| `evaluationInfo` | The type of segment you are creating. If you want to create a batch segment, set `evaluationInfo.batch.enabled` to be true. If you want to create a streaming segment, set `evaluationInfo.continuous.enabled` to be true. If you want to create an edge segment, set `evaluationInfo.synchronous.enabled` to be true. If left empty, the segment will be created as a **batch** segment. |
-| `schema` | **Required.** The schema associated with the entities in the segment. Consists of either an `id` or `name` field. |
-| `expression` | **Required.** An entity that contains fields information about the segment definition. |
+| `name` | A unique name by which to refer to the segment definition. |
+| `description` | (Optional.) A description of the segment definition you are creating. |
+| `evaluationInfo` | (Optional.) The type of segment definition you are creating. If you want to create a batch segment, set `evaluationInfo.batch.enabled` to be true. If you want to create a streaming segment, set `evaluationInfo.continuous.enabled` to be true. If you want to create an edge segment, set `evaluationInfo.synchronous.enabled` to be true. If left empty, the segment definition will be created as a **batch** segment. |
+| `schema` | The schema associated with the entities in the segment. Consists of either an `id` or `name` field. |
+| `expression` | An entity that contains fields information about the segment definition. |
 | `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |
 | `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
-| `description` | A human-readable description of the definition. |
 
 <!-- >[!NOTE]
 >
@@ -333,7 +331,7 @@ A successful response returns HTTP status 200 with detailed information about th
 | Property | Description |
 | -------- | ----------- |
 | `id` | A system-generated read-only ID of the segment definition. |
-| `name` | A unique name by which to refer to the segment. |
+| `name` | A unique name by which to refer to the segment definition. |
 | `schema` | The schema associated with the entities in the segment. Consists of either an `id` or `name` field. |
 | `expression` | An entity that contains fields information about the segment definition. |
 | `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |
@@ -466,7 +464,7 @@ A successful response returns HTTP status 207 with the requested segment definit
 | Property | Description |
 | -------- | ----------- |
 | `id` | A system-generated read-only ID of the segment definition. |
-| `name` | A unique name by which to refer to the segment. |
+| `name` | A unique name by which to refer to the segment definition. |
 | `schema` | The schema associated with the entities in the segment. Consists of either an `id` or `name` field. |
 | `expression` | An entity that contains fields information about the segment definition. |
 | `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |
@@ -481,7 +479,7 @@ You can request to delete a specific segment definition by making a DELETE reque
 
 >[!NOTE]
 >
-> You will **not** be able to delete a segment that is used in a destination activation.
+> A segment definition that is used in a destination activation **cannot** be deleted.
 
 **API format**
 
