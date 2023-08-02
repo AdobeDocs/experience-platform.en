@@ -19,6 +19,26 @@ This article explains the end-to-end datastream configuration override process f
 >[!IMPORTANT]
 >
 >Datastream overrides are only supported for [Web SDK](../edge/home.md) integrations. [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) and [Server API](../server-api/overview.md) integrations do not currently support datastream overrides.
+><br><br>
+>Datastream overrides should be used when you need different data sent to different datastreams. You should not use datastream overrides for personalization use cases or consent data.
+
+## Use cases {#use-cases}
+
+To help you better understand how and when to use datastream overrides, here are some use cases that Adobe Experience Platform customers can solve by using this feature.
+
+**Multi-region data collection**
+
+A company has different websites or subdomains for different countries in which they operate. They have [configured](configure.md) separate datastreams with corresponding analytics-specific report suites, country-specific Adobe Target property tokens, country-specific schemas, datasets, Journey Optimizer configurations, and so on. The company also has a global set of configurations where all country-specific data is aggregated.
+
+By using datastream overrides, the company can dynamically switch the flow of data to different datastreams, instead of the default behavior of sending data to one datastream.
+
+A common use case could be to send data to a country-specific datastream and also send data to a global datastream where customers perform an important action, such as placing an order or updating their user profile.
+
+**Differentiating profiles and identities for different business units**
+
+A company with multiple business units wants to use multiple Experience Platform sandboxes to store data specific to each business unit.
+
+Instead of sending data to a default datastream, the company can use datastream overrides to make sure each business unit has its own datastream to receive data through.
 
 ## Configure datastream overrides in the Datastreams UI {#configure-overrides}
 
