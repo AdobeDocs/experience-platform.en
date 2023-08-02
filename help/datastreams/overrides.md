@@ -18,6 +18,8 @@ This article explains the end-to-end datastream configuration override process f
 
 >[!IMPORTANT]
 >
+>Datastream overrides are only supported for [Web SDK](../edge/home.md) integrations. [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) and [Server API](../server-api/overview.md) integrations do not currently support datastream overrides.
+><br><br>
 >Datastream overrides should be used when you need different data sent to different datastreams. You should not use datastream overrides for personalization use cases or consent data.
 
 ## Use cases {#use-cases}
