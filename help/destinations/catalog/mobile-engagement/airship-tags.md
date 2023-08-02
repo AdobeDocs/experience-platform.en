@@ -34,7 +34,7 @@ Before you can send your Adobe Experience Platform audiences to [!DNL Airship], 
 
 This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
-Additionally, this destination also supports the activation of the audiences described in the table below.
+*Additionally*, this destination also supports the activation of the audiences described in the table below.
 
 | External audience type | Description | 
 ---------|----------|

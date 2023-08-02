@@ -76,7 +76,7 @@ This destination supports the activation of all audiences generated through the 
 
 *If your destination does not support the activation of any external audience, remove the phrase below along with the table.*
 
-Additionally, this destination also supports the activation of the audiences described in the table below.
+*Additionally*, this destination also supports the activation of the audiences described in the table below.
 
 | Audience type | Description | 
 ---------|----------|

@@ -41,7 +41,7 @@ This section describes all the audiences that you can export to this destination
 
 This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
-Additionally, this destination also supports the activation of the audiences described in the table below.
+*Additionally*, this destination also supports the activation of the audiences described in the table below.
 
 | Audience type | Description | 
 ---------|----------|

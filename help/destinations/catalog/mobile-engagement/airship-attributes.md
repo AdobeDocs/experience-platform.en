@@ -33,7 +33,7 @@ Before you can send your audiences to [!DNL Airship], you must:
 
 This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
-Additionally, this destination also supports the activation of the audiences described in the table below.
+*Additionally*, this destination also supports the activation of the audiences described in the table below.
 
 | External audience type | Description | 
 ---------|----------|
