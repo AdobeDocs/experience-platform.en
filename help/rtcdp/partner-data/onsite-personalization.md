@@ -1,12 +1,12 @@
 ---
-title: Use partner-provided attributes to deliver personalized onsite experiences
+title: Use Partner-provided Attributes to Deliver Personalized Onsite Experiences
 description: Learn how to use partner-provided attributes to deliver personalized onsite experiences to your visitors.
 ---
 # Use partner-provided attributes to deliver personalized onsite experiences 
 
-Learn how to use partner-provided attributes to deliver personalized experiences to your web property visitors.
+Learn how to use partner-provided attributes to deliver personalized experiences to your web property visitors. Use this tutorial to understand the implementation sequence of various elements in Experience Platform and other Experience Cloud solutions to display a personalized experience to authenticated and unauthenticated visitors.
 
-![Use partner-provided attributes to deliver personalized experiences to your visitors.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
+![An infographic that describes how to use partner-provided attributes to deliver personalized experiences to your visitors.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
 
 ## Industry example {#industry-example}
 
@@ -16,15 +16,15 @@ By leveraging valuable signals from a data partner, such as census and recent ho
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
-As you consider using partner-provided attributes to deliver personalized experiences to your authenticated and unauthenticated visitors, consider the following prerequisites in your planning process:
+When planning to use partner-provided attributes to deliver personalized experiences to your authenticated and unauthenticated visitors, consider the following prerequisites in your planning process:
 
 * What inputs are expected by the vendor so they can layer on additional attributes?
-* To what extent are you comfortable delivering personalization in different channels and for different use cases based on probabilistically derived attributes vs. deterministically confirmed attributes?
+* To what extent are you comfortable delivering personalization in different channels and for different use cases based on probabilistically derived attributes, versus deterministically confirmed attributes?
 * How should the experience for a pre-authenticated but recognized visitor change when they authenticate?
 
 ### UI functionality, Platform components, and Experience Cloud products that you will use {#ui-functionality-and-elements}
 
-To successfully implement this use case, you must use multiple areas of Real-Time CDP and other Experience Cloud solutions. Make sure that you have the necessary [attribute-based access control permissions](/help/access-control/abac/overview.md) for all these areas or ask your system administrator to grant you the necessary permissions. 
+To successfully implement this use case, you must use multiple areas of Real-Time Customer Data Platform and other Experience Cloud solutions. Make sure that you have the necessary [attribute-based access control permissions](/help/access-control/abac/overview.md) for all these areas, or ask your system administrator to grant you the necessary permissions. 
 
 * Data Collection
   * [Adobe Experience Platform Web SDK](/help/edge/home.md)
@@ -42,12 +42,12 @@ To successfully implement this use case, you must use multiple areas of Real-Tim
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
-![Use partner-provided attributes to deliver personalized experiences to your visitors.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
+![An infographic that describes how to use partner-provided attributes to deliver personalized experiences to your visitors.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
 
 1. As a **customer**, you license from the **data partner** the ability to fetch insights in real-time on otherwise anonymous website visitors.
-2. As a **customer**, you deploy client-side libraries on your properties to call **partner** APIs and you configure WebSDK or Mobile SDK to send partner-provided signals to Real-Time CDP.
+2. As a **customer**, you deploy client-side libraries on your properties to call **partner** APIs and you configure Web SDK or Mobile SDK to send partner-provided signals to Real-Time CDP.
 3. When browsing your website or app, the **visitor** is probabilistically recognized by the **partner**, who returns attributes along with an ID.
-4. Real-Time CDP runs edge segmentation to evaluate incoming event hits and persists results against the [ECID identifier](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
+4. Real-Time CDP runs edge segmentation to evaluate incoming event hits and persists results against the [ECID identifier](https://experienceleague.adobe.com/docs/id-service/using/home.html).
 5. Adobe Target uses edge segmentation output to render the experience back to the **visitor** for in-session personalization.
 6. The event is persisted in its entirety for downstream workflows like analysis and retargeting.
 
@@ -63,24 +63,21 @@ In preparation for achieving the use case to personalize unauthenticated visitor
 
 First, you need to create a partner ID identity namespace. Navigate to **[!UICONTROL Customer]** > **[!UICONTROL Identities]** in the left rail and then select **[!UICONTROL Create identity namespace]** in the upper right corner of the screen.
 
-![Create partner ID identity namespace](/help/rtcdp/assets/partner-data/onsite-personalization/create-identity-namespace.png)
+![The Create identity namespace dialog with partner ID highlighted.](/help/rtcdp/assets/partner-data/onsite-personalization/create-identity-namespace.png)
 
 Read more about how to [create a partner ID identity namespace](/help/rtcdp/partner-data/prospecting.md#create-partner-id-namespace).
 
 #### Create a schema
 
-Next, create an **[!UICONTROL Experience Event]** schema to hold the time-series data that you will later be collecting from your web properties. Read abut how to [create a schema using the Experience Platform UI](/help/xdm/ui/resources/schemas.md#create) and make sure to use **[!UICONTROL XDM ExperienceEvent]** as the base class for the schema. 
+Next, create an [!UICONTROL Experience Event] schema to hold the time-series data that you will later be collecting from your web properties, and make sure to use [!UICONTROL XDM ExperienceEvent] as the base class for the schema. Read about how to [create a schema using the Experience Platform UI](/help/xdm/ui/resources/schemas.md#create).
 
-![Create Experience Event schema.](/help/rtcdp/assets/partner-data/onsite-personalization/create-experience-event-schema.png)
+![The Schemas workspace with Create schema, and XDM Experience event highlighted..](/help/rtcdp/assets/partner-data/onsite-personalization/create-experience-event-schema.png)
 
-As you create your schema and [add field groups to it](/help/xdm/ui/resources/schemas.md#add-field-groups) from the set of available groups, consider adding the following two into your schema, in addition to others which are applicable to your digital property and data collection practices. This ensures that identity and web visit information from the visitor are captured in the data schema. 
+As you create your schema and [add field groups to to your schema](/help/xdm/ui/resources/schemas.md#add-field-groups), consider adding the [Visit Web Page](/help/xdm/field-groups/event/web-details.md) and [Identity Map](/help/xdm/field-groups/profile/identitymap.md) field groups. This is in addition to other field groups which are applicable to your digital property and data collection practices. 
 
-* [Visit Web Page](/help/xdm/field-groups/event/web-details.md)
-* [Identity Map](/help/xdm/field-groups/profile/identitymap.md)
+Additionally, you can create or re-use an existing field group and add it to your schema, to capture partner-provided insights about the visitor. Read how to [create a field group](/help/xdm/ui/resources/field-groups.md) and how to [add fields](/help/xdm/ui/resources/field-groups.md) to the field group. For instance, if you are expecting to personalize against partner-provided insights like age range, employment status, monthly spending power, or buying behaviors, have your field group include appropriate fields.
 
-Additionally, create or reuse an existing field group to capture partner provided insights about the visitor and add it to your schema. Read how to [create a field group](/help/xdm/ui/resources/field-groups.md) and how to [add fields](/help/xdm/ui/resources/field-groups.md) to the field group. For instance, if you are expecting to personalize against partner provided insights like age range, employment status, monthly spending power, or buying behaviors, have your field group include appropriate fields.
-
-Assuming that the data partner provides a stable identifier for the visitor and you'd like to bring that into Real-Time CDP, be sure to have an appropriately named field for the identifier in your custom field group. You should also mark the field as an identity in the identity namespace you created earlier. Remember also to [enable the schema to be included in Profile](/help/xdm/ui/resources/schemas.md#profile).
+Assuming that the data partner provides a stable identifier for the visitor and you would like to bring that into Real-Time CDP, be sure to have an appropriately named field for the identifier in your custom field group. You should also mark the field as an identity in the identity namespace you created earlier. Remember also to [enable the schema to be included in Profile](/help/xdm/ui/resources/schemas.md#profile).
 
 #### Create a dataset
 
@@ -98,17 +95,17 @@ After setting up your data management configuration, you now need to implement r
 >
 >To retrieve partner-provided attributes, you must also *integrate your web property with partner APIs or other methods to call and retrieve attributes from data partners in real-time*. Please discuss this aspect with your partner of choice as it is not subject of this tutorial.
 
-First, use the app switcher to navigate to the **[!UICONTROL Data Collection]** section. 
+First, use the application switcher in the upper right corner of the screen to navigate to the **[!UICONTROL Data Collection]** section. 
 
 >[!TIP]
 >
->Contact your system administrator to ask for access if you are not able to see [!UICONTROL Data Collection] in the app switcher.
+>Contact your system administrator to ask for access if you are not able to see [!UICONTROL Data Collection] in the application switcher.
 
 ![App switcher to get to Data Collection section.](/help/rtcdp/assets/partner-data/onsite-personalization/app-switcher-data-collection.png)
 
 The **[!UICONTROL Data Collection]** section of the UI looks similar to the image below.
 
-![Data collection section of the UI.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
+![Data collection section of the Platform UI.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
 
 #### Create datastream
 
@@ -118,12 +115,11 @@ As you create the datastream, in the **[!UICONTROL Event schema]** field, select
 
 ![Event schema selector highlighted when configuring a new datastream.](/help/rtcdp/assets/partner-data/onsite-personalization/event-schema-selector-datastream.png)
 
-
 [Select the event dataset](/help/datastreams/configure.md#aep) that you created earlier from the dropdown, check the boxes next to **[!UICONTROL Edge Segmentation]** and **[!UICONTROL Personalization Destinations]**, and select **[!UICONTROL Save]**. 
 
 Note that you do not have to select a profile dataset in this scenario since you are bringing in event-based time-series data.
 
-#### Create Tag property
+#### Create tag property
 
 Think of a property as a container that you fill with extensions, rules, data elements, and libraries as you deploy tags to your site. 
 
@@ -147,13 +143,13 @@ Notice that the [!UICONTROL Core] extension is already installed. You must insta
 
 #### Install Web SDK extension
 
-Note that this tutorial indicates how you can instrument your website with WebSDK. You can also use [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) on your app to personalize the experience to your app visitors.
+Note that this tutorial indicates how you can instrument your website with Web SDK. You can also use [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) on your app to personalize the experience to your app visitors.
 
 ![View of the Web SDK extension in the extensions catalog.](/help/rtcdp/assets/partner-data/onsite-personalization/web-sdk-extension.png)
 
-Navigate down to the **[!UICONTROL Datastreams]** section and provide information on the Experience Platform sandbox that you are using. Select the appropriate sandbox and the datastream created in the previous steps from the next dropdown. You can choose the same sandbox and datastream values for all other environments. Leave the other settings unchanged and select **[!UICONTROL Save]**. 
+In the screen to configure Web SDK, navigate down to the **[!UICONTROL Datastreams]** section and provide information on the Experience Platform sandbox that you are using. Select the appropriate sandbox and the datastream created in the previous steps from the next dropdown. You can choose the same sandbox and datastream values for all other environments. Leave the other settings unchanged and select **[!UICONTROL Save]**. 
 
-Get complete information on [how to install WebSDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html).
+Get complete information on [how to install Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html).
 
 #### Install ID Service extension
 
@@ -167,11 +163,11 @@ Next, head on over to the **[!UICONTROL Environments]** section from the left-ha
 
 Select the box icon on the right for the development environment, and copy the standard version of the JavaScript code snippet that appears in a modal window.  
 
-![Select box icon in Environments section.](/help/rtcdp/assets/partner-data/onsite-personalization/select-box-icon.png)
+![Select box icon highlighted in the Environments section of the Data Collection UI.](/help/rtcdp/assets/partner-data/onsite-personalization/select-box-icon.png)
 
 You must add this code snippet to the very top of your website. As a result, your website will make a call to the Adobe Edge Network to retrieve JavaScript logic that will be loaded and executed on the page. This allows for functionality like visitor ID generation, data collection, and real-time experience personalization to work.
 
-#### Set up Data Elements
+#### Set up data elements
 
 Data elements are the building blocks for your data dictionary (or data map). A single data element is a variable whose value can be mapped to query strings, URLs, cookie values, JavaScript variables, and so on. Read more about [data elements](/help/tags/ui/managing-resources/data-elements.md).
 
@@ -181,13 +177,13 @@ First, set up a `partnerData` element. Navigate to the **[!UICONTROL Data Elemen
 
 ![Create a new data element.](/help/rtcdp/assets/partner-data/onsite-personalization/create-data-element.gif)
 
-Name the data element `partnerData`, leave the Extension value as [!UICONTROL Core], and set **[!UICONTROL Data Element Type]** as **[!UICONTROL JavaScript Variable]**. Enter `partnerData` in the field titled **[!UICONTROL JavaScript variable name]** and select **[!UICONTROL Save]**. 
+Name the data element `partnerData`, leave the [!UICONTROL extension] value as [!UICONTROL Core], and set **[!UICONTROL Data Element Type]** as **[!UICONTROL JavaScript Variable]**. Enter `partnerData` in the field titled **[!UICONTROL JavaScript variable name]** and select **[!UICONTROL Save]**. 
 
-![Selections for the partnerData data element.](/help/rtcdp/assets/partner-data/onsite-personalization/create-partnerdata-data-element.png)
+![Highlighted selections to correctly configure the partnerData data element.](/help/rtcdp/assets/partner-data/onsite-personalization/create-partnerdata-data-element.png)
 
 To set up the second data element, name the new variable `pageVisit`, set the **[!UICONTROL Extension]** to **[!UICONTROL Adobe Experience Platform]** and choose **[!UICONTROL XDM Object]** as the data type. 
 
-![Selections for the pageVisit data element.](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
+![Highlighted selections to correctly configure the the pageVisit data element.](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
 
 From the schema, select the third-party attributes that correspond to the values that you are expecting from the data partner. Then, select the radio button titled **[!UICONTROL Provide entire object]**. Select the icon that looks like a database and choose the `partnerData` data element that you created previously.
 
@@ -195,21 +191,21 @@ From the schema, select the third-party attributes that correspond to the values
 
 In the **[!UICONTROL Rules]** section, you can configure your website to send a personalization request to Adobe with the attributes loaded into the data elements that you just created. Read more about [creating rules](/help/tags/ui/managing-resources/rules.md).
 
-Select **[!UICONTROL Create new Rule]**. Name this rule **[!UICONTROL Personalize]** and select the + sign next to Events. Select **[!UICONTROL Page Bottom]** as the event and save.
+Select **[!UICONTROL Create new Rule]**. Name this rule **[!UICONTROL Personalize]** and select the + sign next to **[!UICONTROL Events]**. Select **[!UICONTROL Page Bottom]** as the event and save.
 
 ![Selections for the event type part of a rule.](/help/rtcdp/assets/partner-data/onsite-personalization/add-events-rule.png)
 
-Select the + sign next to Actions. Update the Extension to **[!UICONTROL Adobe Experience Platform Web SDK]** and set **[!UICONTROL Action Type]** to **[!UICONTROL Send event]**.
+Select the + sign next to **[!UICONTROL Actions]**. Update the extension to **[!UICONTROL Adobe Experience Platform Web SDK]** and set **[!UICONTROL Action Type]** to **[!UICONTROL Send event]**.
 
 ![Selections for the action type part of a rule.](/help/rtcdp/assets/partner-data/onsite-personalization/add-action-rule.png)
 
-From the Type dropdown selector on the right, select `web.webpagedetails.pageViews` as the event type.  
+From the **[!UICONTROL Type]** dropdown selector on the right, select `web.webpagedetails.pageViews` as the event type.  
 
 ![Select event type.](/help/rtcdp/assets/partner-data/onsite-personalization/add-pageview-type-rule.png)
 
 Select the database icon next to XDM data and select the `pageVisit` data element.
 
-Scroll down and be sure to check the box titled **[!UICONTROL Render visual personalization decisions]**. This is important to allow experiences delivered via Adobe Target or other similar products to be rendered visually on the web page. Select **[!UICONTROL Keep Changes]**, and then **[!UICONTROL Save]** the rule.
+Scroll down the list of Action configurations and be sure to check the box titled **[!UICONTROL Render visual personalization decisions]**. This is important to allow experiences delivered via Adobe Target or other similar products to be rendered visually on the web page. Select **[!UICONTROL Keep Changes]**, and then **[!UICONTROL Save]** the rule.
   
 ![Select Render visual personalization decisions checkbox.](/help/rtcdp/assets/partner-data/onsite-personalization/render-visual-personalization-toggle.png)
 
@@ -243,7 +239,7 @@ Make sure to also set up an [active-on-edge merge policy](/help/destinations/ui/
 
 #### Integrate with Adobe Target or other custom personalization destination
 
-You are now ready to integrate with a personalization engine, to display personalized content to your website or app visitors. Adobe recommends using the [Adobe Target destination](/help/destinations/catalog/personalization/adobe-target-connection.md) for this purpose. 
+You are now ready to integrate with a personalization engine to display personalized content to your website or app visitors. Adobe recommends using the [Adobe Target destination](/help/destinations/catalog/personalization/adobe-target-connection.md) for this purpose. 
 
 >[!IMPORTANT]
 >
@@ -253,7 +249,7 @@ You are now ready to integrate with a personalization engine, to display persona
 
 Note the following limitations as you explore the use case described on this page:
 
-* If you select to use Partner IDs, be aware that these IDs are not used when building your [identity graph](/help/identity-service/ui/identity-graph-viewer.md). 
+* If you use Partner IDs, be aware that these IDs are not used when building your [identity graph](/help/identity-service/ui/identity-graph-viewer.md). 
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 
