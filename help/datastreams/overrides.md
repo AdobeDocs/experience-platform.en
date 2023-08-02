@@ -16,6 +16,10 @@ Datastream configuration override is a two step process:
 
 This article explains the end-to-end datastream configuration override process for every type of supported override.
 
+>[!IMPORTANT]
+>
+>Datastream overrides are only supported for [Web SDK](../edge/home.md) integrations. [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) and [Server API](../server-api/overview.md) integrations are currently not supported.
+
 ## Configure datastream overrides in the Datastreams UI {#configure-overrides}
 
 Datastream configuration overrides allow you to modify the following datastream configurations:
