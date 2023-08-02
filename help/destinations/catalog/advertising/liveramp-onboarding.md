@@ -1,6 +1,7 @@
 ---
 title: LiveRamp - Onboarding connection
 description: Learn how to use the LiveRamp connector to onboard audiences from Adobe Real-Time Customer Data Platform to LiveRamp Connect.
+last-substantial-update: 2023-07-26
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
 ---
 # [!DNL LiveRamp - Onboarding] connection {#liveramp-onboarding}
@@ -29,9 +30,9 @@ In the [mapping step](#map) of the activation workflow, you must define the targ
 
 This section describes all the audiences that you can export to this destination.
 
-All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+This destination supports the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
-Additionally, this destination also supports the activation of the audiences described in the table below.
+Additionally, this destination also supports the activation of the additional audiences described in the table below.
 
 | Audience type | Description | 
 ---------|----------|
@@ -122,13 +123,8 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 In the [!UICONTROL Scheduling] step, create an export schedule for each audience, with the settings shown below.
 
->[!IMPORTANT]
->
->All audiences activated to this destination must be configured with the exact same schedule, as shown below.
-
 * **[!UICONTROL File export options]**: [!UICONTROL Export full files]. [Incremental file exports](../../ui/activate-batch-profile-destinations.md#export-incremental-files) are currently not supported for the [!DNL LiveRamp] destination.
 * **[!UICONTROL Frequency]**: [!UICONTROL Daily]
-* Set the export time to **[!UICONTROL After segment evaluation]**. Scheduled audience exports and [on-demand file exports](../../ui/export-file-now.md) are currently not supported for the [!DNL LiveRamp] destination.
 * **[!UICONTROL Date]**: Select the export start and end times as you wish.
 
 ![Platform UI screenshot showing the audience scheduling step.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
