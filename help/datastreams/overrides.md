@@ -18,7 +18,7 @@ This article explains the end-to-end datastream configuration override process f
 
 >[!IMPORTANT]
 >
->Datastream overrides are only supported for [Web SDK](../edge/home.md) integrations. [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) and [Server API](../server-api/overview.md) integrations are currently not supported.
+>Datastream overrides are only supported for [Web SDK](../edge/home.md) integrations. [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) and [Server API](../server-api/overview.md) integrations do not currently support datastream overrides.
 
 ## Configure datastream overrides in the Datastreams UI {#configure-overrides}
 
