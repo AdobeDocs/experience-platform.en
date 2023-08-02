@@ -6,9 +6,8 @@ exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
 ---
 # Track links
 
-Links can be set manually or tracked [automatically](#automaticLinkTracking). Manual tracking is done by adding the details under the `web.webInteraction` part of the schema. There are three required variables: 
+Links can be set manually or tracked [automatically](#automaticLinkTracking). Manual tracking is done by adding the details under the `web.webInteraction` part of the schema. There are two required variables: 
 
-* `web.webInteraction.name`
 * `web.webInteraction.type`
 * `web.webInteraction.linkClicks.value`
 
