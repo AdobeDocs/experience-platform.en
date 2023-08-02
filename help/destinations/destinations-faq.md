@@ -210,6 +210,5 @@ For use cases where consent policy management needs to be applied at scale, cust
 [!DNL Adobe Privacy & Security Shield] features are sold as an advanced suite of capabilities and may not be purchased separately.
 
 [!DNL Adobe Target] is not [!DNL HIPPA]-compliant with [!DNL Adobe Healthcare Shield]. Customers should check with their own legal teams regarding [!DNL HIPPA]-readiness for custom optimization channels before using edge personalization via [!DNL Adobe Target] or the [!DNL Custom Personalization] destinations.
-The 
 +++
 
