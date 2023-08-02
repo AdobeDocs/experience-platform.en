@@ -23,7 +23,7 @@ With the July 2023 Experience Platform release, the [!DNL Amazon S3] destination
 
 This section describes all the audiences that you can export to this destination.
 
-This destination support the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
 Additionally, this destination also supports the activation of the audiences described in the table below.
 

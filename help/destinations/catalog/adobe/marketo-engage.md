@@ -47,7 +47,7 @@ You can map attributes from Experience Platform to any of the attributes that yo
 
 ## Supported audiences {#supported-audiences}
 
-This destination support the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
 Additionally, this destination also supports the activation of the audiences described in the table below.
 
