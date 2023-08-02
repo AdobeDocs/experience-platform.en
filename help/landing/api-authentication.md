@@ -30,6 +30,7 @@ In order to successfully make calls to Experience Platform APIs, you must have t
 
 * An organization with access to Adobe Experience Platform.
 * An Admin Console administrator that is able to add you as a developer and a user for a product profile.
+* An Experience Platform system administrator who can grant you the necessary attribute based access controls to perform read or write operations on different parts of Experience Platform through APIs.
 
 You must also have an Adobe ID to complete this tutorial. If you do not have an Adobe ID, you can create one using the following steps:
 
@@ -93,12 +94,16 @@ Next, select the authentication type to generate access tokens and access the Ex
 
 ### Select the product profiles for your integration {#select-product-profiles}
 
-Next, select the product profiles that should apply to your integration.
+In the **[!UICONTROL Configure API]** screen, select **[!UICONTROL AEP-Default-All-Users]**.
+
+<!--
 Your integration's service account will gain access to granular features through the product profiles selected here.
+
+-->
 
 >[!IMPORTANT]
 >
->Note that to get access to certain features in Platform, you also need a system administrator to grant you the necessary Attribute-based access control permissions. Read more in the section [Get the necessary attribute-based access control permissions](#get-abac-permissions).
+>Note that to get access to certain features in Platform, you also need a system administrator to grant you the necessary attribute-based access control permissions. Read more in the section [Get the necessary attribute-based access control permissions](#get-abac-permissions).
 
 ![Select product profiles for your integration.](./images/api-authentication/select-product-profiles.png)
 
@@ -323,6 +328,10 @@ Enter the developer's **[!UICONTROL Email or username]**. A valid [!UICONTROL Em
 The developer has been successfully added and appears on the [!UICONTROL Developers] tab.
 
 ![Developers listed on the Developers tab](././images/api-authentication/developer-added.png)
+
+<!--
+
+Commenting out this part since it duplicates information from the section Add Experience Platform to a project
 
 ### Set up an API
 
