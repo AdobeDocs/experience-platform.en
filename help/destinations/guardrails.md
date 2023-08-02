@@ -106,11 +106,11 @@ Datasets exported from Experience Platform can be of two types, as described bel
 
 **Timeseries**
 Timeseries datasets are also known as *XDM Experience Events* datasets in Experience Platform terminology.
-The Dataset schema includes a top level *timestamp* column. Data is ingested in an append-only fashion.
+The dataset schema includes a top level *timestamp* column. Data is ingested in an append-only fashion.
 
 **Record** 
 Record datasets are also known as *XDM Individual Profile* datasets in Experience Platform terminology.
-The Dataset schema does not include a top level *timestamp* column. Data is ingested in upsert fashion.
+The dataset schema does not include a top level *timestamp* column. Data is ingested in upsert fashion.
 
 The guardrails below are grouped by the format of the exported file, and then further by dataset type.
 
