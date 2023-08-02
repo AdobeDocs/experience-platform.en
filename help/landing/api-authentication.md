@@ -347,6 +347,8 @@ In the **[!UICONTROL Add an API]** dialog box select **[!UICONTROL Adobe Experie
 
 In the **[!UICONTROL Configure API]** screen, select **[!UICONTROL AEP-Default-All-Users]**.
 
+-->
+
 ### Assign API to a role
 
 A system admin can assign APIs to roles in the Experience Platform UI.
