@@ -103,7 +103,7 @@ Your integration's service account will gain access to granular features through
 
 >[!IMPORTANT]
 >
->Note that to get access to certain features in Platform, you also need a system administrator to grant you the necessary attribute-based access control permissions. Read more in the section [Get the necessary attribute-based access control permissions](#get-abac-permissions).
+>To get access to certain features in Platform, you also need a system administrator to grant you the necessary attribute-based access control permissions. Read more in the section [Get the necessary attribute-based access control permissions](#get-abac-permissions).
 
 ![Select product profiles for your integration.](./images/api-authentication/select-product-profiles.png)
 
@@ -263,7 +263,7 @@ If your response is similar to the one shown below, then your credentials are va
 
 >[!IMPORTANT]
 >
->While the call above is sufficient to test your access credentials, be aware that you will not be able to access or modify several resources without having the right Attribute-based access control permissions. Read more in the **Get the necessary attribute-based access control permissions** section below.
+>While the call above is sufficient to test your access credentials, be aware that you will not be able to access or modify several resources without having the right attribute-based access control permissions. Read more in the **Get the necessary attribute-based access control permissions** section below.
 
 ## Get the necessary attribute-based access control permissions {#get-abac-permissions}
 
