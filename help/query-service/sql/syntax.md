@@ -605,8 +605,7 @@ The `FILTER CONTEXT` command calculates statistics on a subset of the dataset ba
 
 >[!NOTE]
 >
->The statistics ID and the statistics generated are only valid for this particular session and cannot be accessed across different PSQL sessions. The computed statistics are not currently persistent.
-> Also, `COMPUTE STATISTICS` does not support the array or map data types. You can set a `skip_stats_for_complex_datatypes` flag to be notified or error out if the input dataframe has columns with arrays and map data types. By default, the flag is set to true. To enable notifications or errors, use the following command: `SET skip_stats_for_complex_datatypes = false`.
+>The statistics ID and the statistics generated are only valid for this particular session and cannot be accessed across different PSQL sessions. The computed statistics are not currently persistent.<br>Also, `COMPUTE STATISTICS` does not support the array or map data types. You can set a `skip_stats_for_complex_datatypes` flag to be notified or error out if the input dataframe has columns with arrays and map data types. By default, the flag is set to true. To enable notifications or errors, use the following command: `SET skip_stats_for_complex_datatypes = false`.
 
 The console output appears as seen below.
 
@@ -617,7 +616,7 @@ The console output appears as seen below.
 (1 row)
 ```
 
-You can then query the computed statistics directly by referencing the `Statistics ID`. The example statement below allows you to view the output in full when used with the `Statistics ID` or the alias name. To learn more about this feature, see tha [alias name documentation](https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-statistics.html?lang=en .md#alias-name).
+You can then query the computed statistics directly by referencing the `Statistics ID`. The example statement below allows you to view the output in full when used with the `Statistics ID` or the alias name. To learn more about this feature, see tha [alias name documentation](../essential-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 SELECT * FROM adc_geometric_stats_1;
