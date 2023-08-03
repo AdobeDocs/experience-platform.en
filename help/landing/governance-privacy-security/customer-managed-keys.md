@@ -9,7 +9,7 @@ Data stored on Adobe Experience Platform is encrypted at rest using system-level
 
 >[!NOTE]
 >
->Data in Adobe Experience Platform data lake and Profile Store are encrypted using CMK. These are regarded as your primary data stores as data lost from these stores is not recoverable.
+>Data in Adobe Experience Platform data lake and Profile Store are encrypted using CMK. These are regarded as your primary data stores.
 
 This document covers the process for enabling the customer-managed keys (CMK) feature in Platform.
 
@@ -282,9 +282,9 @@ If you want to revoke Platform access to your data, you can remove the user role
 
 >[!WARNING]
 >
->Disabling the key vault, Key, or CMK app can result in a breaking change. Once the key vault, Key, or CMK app is disabled and data is no longer accessible in Platform, any downstream operations related to that data will no longer be possible. Ensure that you understand the downstream impacts of revoking Platform access to your data before you make any changes to your configuration.
+>Disabling the key vault, Key, or CMK app can result in a breaking change. Once the key vault, Key, or CMK app is disabled and data is no longer accessible in Platform, any downstream operations related to that data will no longer be possible. Ensure that you understand the downstream impacts of revoking Platform access to your key before you make any changes to your configuration.
 
-After removing key access or disabling/deleting the key from your [!DNL Azure] key vault, it may take anywhere from a few minutes, to 24 hours for this configuration to propagate to primary data stores. Platform workflows also include cached and transient data stores required for performance and core application functionality. The propagation of CMK revocation takes up to seven days due to their refresh cycles. For example, this means that the Profile dashboard would retain and display data from its cache data store and take seven days to expire the data held in cache data stores as part of the refresh cycle. The same time delay applies for data to become available again when re-enabling access to the application.
+After removing key access or disabling/deleting the key from your [!DNL Azure] key vault, it may take anywhere from a few minutes, to 24 hours for this configuration to propagate to primary data stores. Platform workflows also include cached and transient data stores required for performance and core application functionality. The propagation of CMK revocation through such cached and transient stores may take up to seven days as determined by their data processing workflows. For example, this means that the Profile dashboard would retain and display data from its cache data store and take seven days to expire the data held in cache data stores as part of the refresh cycle. The same time delay applies for data to become available again when re-enabling access to the application.
 
 >[!NOTE]
 >
