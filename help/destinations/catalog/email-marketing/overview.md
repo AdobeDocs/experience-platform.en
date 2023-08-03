@@ -9,7 +9,7 @@ exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
 
 ## Overview {#overview}
 
-Email Service Providers (ESPs) enable you to manage your email marketing activities, such as sending promotional email campaigns. Adobe Experience Platform integrates with ESPs by allowing you to activate segments to email marketing destinations.
+Email Service Providers (ESPs) enable you to manage your email marketing activities, such as sending promotional email campaigns. Adobe Experience Platform integrates with ESPs by allowing you to activate audiences to email marketing destinations.
 
 ## Supported email marketing destinations {#supported-destinations}
 
@@ -28,7 +28,7 @@ Adobe Experience Platform supports the following email marketing destinations:
 
 ## Connect to a new email marketing destination {#connect-destination}
 
-To send segments to email marketing destinations for your campaigns, Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.
+To send audiences to email marketing destinations for your campaigns, Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.
 
 ## Best practices when activating audiences to email marketing destinations {#best-practices}
 
@@ -61,13 +61,13 @@ In the Schema field selector, choose which other fields you want to export to th
 
 {style="table-layout:auto"}
 
-## Activate segments to email marketing destinations {#activate}
+## Activate audiences to email marketing destinations {#activate}
 
 Some email marketing destinations in the catalog export profiles in a streaming manner, through an API integration with the destination. 
 
 Other destinations export files to a cloud storage location. After the export completes, you need to import data from the cloud storage location into your email marketing destination. 
 
-Follow the links in the [supported email marketing destinations](#supported-destinations) section to learn how to activate segments to each email marketing destination.
+Follow the links in the [supported email marketing destinations](#supported-destinations) section to learn how to activate audiences to each email marketing destination.
 
 ## Additional resources {#additional-resources}
 

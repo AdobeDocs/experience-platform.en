@@ -63,9 +63,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 {style="table-layout:auto"}
 
++++
+
 +++Response
 
 A successful response returns HTTP status 201 with details of your destination publish request.
+
++++
 
 ## API error handling
 

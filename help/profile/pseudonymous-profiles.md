@@ -16,7 +16,7 @@ A profile is considered for Pseudonymous data expiration if it meets the followi
 - The stitched profile's identity namespaces match what the customer has specified as a pseudonymous or unknown identity namespace. 
   - For example, if the profile's identity namespace is `ECID`, `GAID`, or `AAID`. The stitched profile has no IDs from any other identity namespace. In this example, a stitched profile does **not** have either an email or CRM identity. 
 - No activity has taken place in a user-defined amount of time. Activity is defined either by any Experience Events being ingested or customer-initiated updates to the profile attributes. 
-  - For example, a new page view event or age attribute update is considered as an activity. However, a non-user-initiated segment membership update is **not** considered as an activity. Currently, to compute data expiration, the tracking at a profile level is based on the time of event for Experience Events and time of ingestion for profile attributes.
+  - For example, a new page view event or age attribute update is considered as an activity. However, a non-user-initiated audience membership update is **not** considered as an activity. Currently, to compute data expiration, the tracking at a profile level is based on the time of event for Experience Events and time of ingestion for profile attributes.
 
 ## Access {#access}
 
