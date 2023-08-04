@@ -10,7 +10,9 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 ## Version 2.20.1 - August 3, 2023
 
-* Improve the validation of saved override settings.
+**Fixes and improvements**
+
+* Improved the validation of saved datastream override settings.
 
 ## Version 2.20.0 - July 31, 2023
 
