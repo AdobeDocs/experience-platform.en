@@ -1,14 +1,14 @@
 ---
 title: Data Landing Zone destination
 description: Learn how to connect to Data Landing Zone to activate audiences and export datasets.
+last-substantial-update: 2023-07-26
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
 ---
-# (Beta) Data Landing Zone destination
+# Data Landing Zone destination
 
 >[!IMPORTANT]
 >
->* This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Data Landing Zone] connection, contact your Adobe representative and provide your [!DNL Organization ID].
->* This documentation page refers to the [!DNL Data Landing Zone] *destination*. There is also a [!DNL Data Landing Zone] *source* in the sources catalog. For more information, read the [[!DNL Data Landing Zone] source](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentation.
+>This documentation page refers to the [!DNL Data Landing Zone] *destination*. There is also a [!DNL Data Landing Zone] *source* in the sources catalog. For more information, read the [[!DNL Data Landing Zone] source](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentation.
 
 
 ## Overview {#overview}
@@ -28,13 +28,13 @@ Platform enforces a strict seven-day time-to-live (TTL) on all files uploaded to
 
 This section describes all the audiences that you can export to this destination.
 
-All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
-Additionally, this destination also supports the activation of the audiences described in the table below.
+*Additionally*, this destination also supports the activation of the audiences described in the table below.
 
 | Audience type | Description | 
 ---------|----------|
-| Custom uploads | Audiences ingested into Experience Platform from CSV files. |
+| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 

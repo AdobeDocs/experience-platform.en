@@ -20,7 +20,7 @@ exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 
 >[!IMPORTANT]
 >
->This documentation page was created by the *YourDestination* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates, for example `support@YourDestination.com`.*
+>This destination connector and documentation page are created and maintained by the *YourDestination* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates, for example `support@YourDestination.com`.*
 
 ## Use cases {#use-cases}
 
@@ -63,6 +63,24 @@ To help you better understand how and when you should use the *YourDestination* 
 |phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 |extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
+
+{style="table-layout:auto"}
+
+## Supported audiences {#supported-audiences}
+
+*Add information in this section about the audiences supported by your destination. We have prefilled the table with some standard values. Delete the values that don't apply to your destination and any values that are not prefilled.*
+
+This section describes all the audiences that you can export to this destination.
+
+This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
+*If your destination does not support the activation of any external audience, remove the phrase below along with the table.*
+
+*Additionally*, this destination also supports the activation of the audiences described in the table below.
+
+| Audience type | Description | 
+---------|----------|
+| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 

@@ -12,7 +12,7 @@ Build custom audiences on TikTok with your data for targeting with your ad campa
 
 >[!IMPORTANT]
 >
->This documentation page was created by the TikTok team. For any inquiries or update requests, please contact them directly at [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
+>This destination connector and documentation page are created and maintained by the TikTok team. For any inquiries or update requests, please contact them directly at [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
 
 ## Use cases {#use-cases}
 

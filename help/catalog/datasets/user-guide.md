@@ -13,12 +13,12 @@ This user guide provides instructions on performing common actions when working 
 
 This user guide requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [Datasets](overview.md): The storage and management construct for data persistence in [!DNL Experience Platform].
-*   [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-    *   [Basics of schema composition](../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    *   [Schema Editor](../../xdm/tutorials/create-schema-ui.md): Learn how to build your own custom XDM schemas using the [!DNL Schema Editor] within the [!DNL Platform] user interface.
-*   [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-*   [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Ensure compliancy with regulations, restrictions, and policies regarding the usage of customer data.
+* [Datasets](overview.md): The storage and management construct for data persistence in [!DNL Experience Platform].
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+    * [Basics of schema composition](../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+    * [Schema Editor](../../xdm/tutorials/create-schema-ui.md): Learn how to build your own custom XDM schemas using the [!DNL Schema Editor] within the [!DNL Platform] user interface.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Ensure compliancy with regulations, restrictions, and policies regarding the usage of customer data.
 
 ## View datasets {#view-datasets}
 
@@ -44,7 +44,7 @@ Select the name of a dataset from the [!UICONTROL Browse] tab to access its **[!
 
 ## Inline dataset actions {#inline-actions}
 
-The datasets UI now offers a collections of inline actions for each available dataset. Select the ellipsis of a dataset that you want to manage to see the available options in a pop-up menu. The available actions include; [[!UICONTROL Preview dataset]](#preview), [[!UICONTROL Manage data and access labels]](#manage-and-enforce-data-governance), [[!UICONTROL Enable unified profile]](#enable-profile), [[!UICONTROL Manage tags]](#add-tags), and [[!UICONTROL Delete]](#delete). More information on these available actions can be found in their respective sections.
+The datasets UI now offers a collections of inline actions for each available dataset. Select the ellipsis (...) of a dataset that you want to manage to see the available options in a pop-up menu. The available actions include; [[!UICONTROL Preview dataset]](#preview), [[!UICONTROL Manage data and access labels]](#manage-and-enforce-data-governance), [[!UICONTROL Enable unified profile]](#enable-profile), [[!UICONTROL Manage tags]](#add-tags), [[!UICONTROL Move to folders]](#move-to-folders), and [[!UICONTROL Delete]](#delete). More information on these available actions can be found in their respective sections.
 
 ### Add dataset tags {#add-tags}
 
@@ -100,7 +100,7 @@ Similar to the filter for creation date, you can filter your datasets based on t
 
 ### Filter by schema {#filter-by-schema}
 
-You can filter datasets based on the schema that defines their structure. Either select the dropdown icon or input the schema name into the text field. A list of potential matches appears. Select the appropriate schema from the list.  
+You can filter datasets based on the schema that defines their structure. Either select the dropdown icon or input the schema name into the text field. A list of potential matches appears. Select the appropriate schema from the list.
 
 ## Sort datasets by created date {#sort}
 
@@ -110,7 +110,7 @@ Datasets in the [!UICONTROL Browse] tab can be sorted by either ascending or des
 
 ## Preview a dataset {#preview}
 
-You can preview dataset sample data from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] tab, select the ellipses next to the dataset name you wish to preview. A menu list of options appears. Next, select **[!UICONTROL Preview dataset]** from the list of available options. If the dataset is empty, the preview link will be deactivated and will instead say that the preview is not available.
+You can preview dataset sample data from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] tab, select the ellipses (...) next to the dataset name you wish to preview. A menu list of options appears. Next, select **[!UICONTROL Preview dataset]** from the list of available options. If the dataset is empty, the preview link will be deactivated and will instead say that the preview is not available.
 
 ![The Browse tab of the Datasets workspace with the ellipsis and Preview dataset option highlighted for the chosen dataset.](../images/datasets/user-guide/preview-dataset-option.png)
 
@@ -124,8 +124,8 @@ Alternatively, from the **[!UICONTROL Dataset activity]** screen, select **[!UIC
 
 For more robust methods to access your data, [!DNL Experience Platform] provides downstream services such as [!DNL Query Service] and [!DNL JupyterLab] to explore and analyze data. See the following documents for more information:
 
-*   [Query Service overview](../../query-service/home.md)
-*   [JupyterLab user guide](../../data-science-workspace/jupyterlab/overview.md)
+* [Query Service overview](../../query-service/home.md)
+* [JupyterLab user guide](../../data-science-workspace/jupyterlab/overview.md)
 
 ## Create a dataset {#create}
 
@@ -135,8 +135,8 @@ To create a new dataset, start by selecting **[!UICONTROL Create dataset]** in t
 
 In the next screen, you are presented with the following two options for creating a new dataset:
 
-*   [Create dataset from schema](#schema)
-*   [Create dataset from CSV file](#csv)
+* [Create dataset from schema](#schema)
+* [Create dataset from CSV file](#csv)
 
 ### Create a dataset with an existing schema {#schema}
 
@@ -176,8 +176,8 @@ The **[!UICONTROL Add data]** step appears. Upload the CSV file by either draggi
 
 Every dataset has the ability to enrich customer profiles with its ingested data. To do so, the schema that the dataset adheres to must be compatible for use in [!DNL Real-Time Customer Profile]. A compatible schema satisfies the following requirements:
 
-*   The schema has at least one attribute specified as an identity property.
-*   The schema has an identity property defined as the primary identity.
+* The schema has at least one attribute specified as an identity property.
+* The schema has an identity property defined as the primary identity.
 
 For more information on enabling a schema for [!DNL Profile], see the [Schema Editor user guide](../../xdm/tutorials/create-schema-ui.md).
 
@@ -197,13 +197,33 @@ Datasets that have been enabled for Profile can also be filtered on this criteri
 
 ## Manage and enforce data governance on a dataset {#manage-and-enforce-data-governance}
 
-You can manage the data governance labels for a dataset by selecting the inline options of the [!UICONTROL Browse] tab. Select the ellipses next to the dataset name you wish to manage, followed by **[!UICONTROL Manage data and access labels]** from the dropdown menu.
+You can manage the data governance labels for a dataset by selecting the inline options of the [!UICONTROL Browse] tab. Select the ellipses (...) next to the dataset name you wish to manage, followed by **[!UICONTROL Manage data and access labels]** from the dropdown menu.
 
 Data usage labels, applied at the schema level, allow you to categorize datasets and fields according to usage policies that apply to that data. See the [Data Governance overview](../../data-governance/home.md) to learn more about labels, or refer to the [data usage labels user guide](../../data-governance/labels/overview.md) for instructions on how to apply labels to schemas for propagation to datasets.
 
+### Move to folders {#move-to-folders}
+
+You can place datasets within folders for better dataset management. To move a dataset into a folder, select the ellipses (...) next to the dataset name you wish to manage, followed by **[!UICONTROL Move to folder]** from the dropdown menu.
+
+![The [!UICONTROL Datasets] dashboard with the ellipses and [!UICONTROL Move to folder] highlighted.](../images/datasets/user-guide/move-to-folder.png)
+
+The [!UICONTROL Move] dataset to folder dialog appears. Select the folder you want to move the audience to, then select **[!UICONTROL Move]**. A popup notification informs you that the dataset move has been successful.
+
+![The [!UICONTROL Move] dataset dialog with [!UICONTROL Move] highlighted.](../images/datasets/user-guide/move-dialog.png)
+
+>![TIP]
+>
+>You can also create folders directly from the Move dataset dialog. To create a folder, select the create folder icon (![The create folder icon.](../images/datasets/user-guide/create-folder-icon.png)) in the top right of the dialog.
+>
+>![The [!UICONTROL Move] dataset dialog with the create folder icon highlighted.](/help/catalog/images/datasets/user-guide/create-folder.png)
+
+Once the dataset is in a folder, you can choose to only display datasets that belong to a specific folder. To open your folder structure, select the show folders icon (![The show folders icon](../images/datasets/user-guide/show-folders-icon.png)). Next, select your chosen folder to see all associated datasets.
+
+![The [!UICONTROL Datasets] dashboards with the datasets folder structure displayed, the show folders icon, and a selected folder highlighted.](../images/datasets/user-guide/folder-structure.png)
+
 ## Delete a dataset {#delete}
 
-You can delete a dataset from either the dataset inline actions in the [!UICONTROL Browse] tab or the top right of the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] view, select the ellipses next to the dataset name you wish to delete. A menu list of options appears. Next, select **[!UICONTROL Delete]** from the dropdown menu.
+You can delete a dataset from either the dataset inline actions in the [!UICONTROL Browse] tab or the top right of the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] view, select the ellipses (...) next to the dataset name you wish to delete. A menu list of options appears. Next, select **[!UICONTROL Delete]** from the dropdown menu.
 
 ![The Browse tab of the Datasets workspace with the ellipsis and the Delete option highlighted for the chosen dataset.](../images/datasets/user-guide/inline-delete-dataset.png)
 
@@ -245,6 +265,6 @@ If you wish to delete the batch, select **[!UICONTROL Delete batch]** near the t
 
 This user guide provided instructions for performing common actions when working with datasets in the [!DNL Experience Platform] user interface. For steps on performing common [!DNL Platform] workflows involving datasets, please refer to the following tutorials:
 
-*   [Create a dataset using APIs](create.md)
-*   [Query dataset data using the Data Access API](../../data-access/home.md)
-*   [Configure a dataset for Real-Time Customer Profile and Identity Service using APIs](../../profile/tutorials/dataset-configuration.md)
+* [Create a dataset using APIs](create.md)
+* [Query dataset data using the Data Access API](../../data-access/home.md)
+* [Configure a dataset for Real-Time Customer Profile and Identity Service using APIs](../../profile/tutorials/dataset-configuration.md)

@@ -1,13 +1,10 @@
 ---
-title: (Beta) Google Cloud Storage connection
+title: Google Cloud Storage connection
 description: Learn how to connect to Google Cloud Storage and activate audiences or export datasets.
+last-substantial-update: 2023-07-26
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
 ---
-# (Beta) [!DNL Google Cloud Storage] connection
-
->[!IMPORTANT]
->
->This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Google Cloud Storage] connection, contact your Adobe representative and provide your [!DNL Organization ID].
+# [!DNL Google Cloud Storage] connection
 
 ## Overview {#overview}
 
@@ -22,13 +19,13 @@ Create a live outbound connection to [!DNL Google Cloud Storage] to periodically
 
 This section describes all the audiences that you can export to this destination.
 
-All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
-Additionally, this destination also supports the activation of the audiences described in the table below.
+*Additionally*, this destination also supports the activation of the audiences described in the table below.
 
 | Audience type | Description | 
 ---------|----------|
-| Custom uploads | Audiences ingested into Experience Platform from CSV files. |
+| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
