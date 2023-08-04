@@ -30,9 +30,9 @@ In the [mapping step](#map) of the activation workflow, you must define the targ
 
 This section describes all the audiences that you can export to this destination.
 
-All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+This destination supports the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
-Additionally, this destination also supports the activation of the audiences described in the table below.
+Additionally, this destination also supports the activation of the additional audiences described in the table below.
 
 | Audience type | Description | 
 ---------|----------|
@@ -69,9 +69,9 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 * **[!UICONTROL Username]**: The username for your [!DNL LiveRamp - Onboarding] storage location.
 * **[!UICONTROL Password]**: The password for your [!DNL LiveRamp - Onboarding] storage location.
-* **[!UICONTROL PGP/GPG encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below. If you provide an encryption key, you must also provide an **[!UICONTROL Encryption subkey ID]** in the [destination details](#destination-details) section.
-
+* **[!UICONTROL PGP/GPG encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
     ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL Subkey ID]**:If you provide an encryption key, you must also provide an encryption **[!UICONTROL Subkey ID]**. See the [!DNL LiveRamp] [encryption documentation](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) to learn how to obtain the subkey ID.
 
 **SFTP with SSH key authentication** {#sftp-ssh}
 
@@ -82,9 +82,9 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
     * To connect your [!DNL SSH] key to the [!DNL LiveRamp - Onboarding] server, you must submit a ticket through [!DNL LiveRamp]'s technical support portal, and provide your public key. See more information in the [LiveRamp documentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
 
-* **[!UICONTROL PGP/GPG encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. If you provide an encryption key, you must also provide an **[!UICONTROL Encryption subkey ID]** in the [destination details](#destination-details) section. View an example of a correctly formatted encryption key in the image below.
-
+* **[!UICONTROL PGP/GPG encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
     ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL Subkey ID]**:If you provide an encryption key, you must also provide an encryption **[!UICONTROL Subkey ID]**. See the [!DNL LiveRamp] [encryption documentation](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) to learn how to obtain the subkey ID.
 
 ### Fill in destination details {#destination-details}
 
@@ -103,7 +103,6 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Folder path]**: The path to the [!DNL LiveRamp] `uploads` subfolder that will host the exported files. The `uploads` prefix is automatically added to the folder path. [!DNL LiveRamp] recommends creating a dedicated subfolder for deliveries from Adobe Real-Time CDP to keep the files separate from any other existing feeds and to ensure all automation runs smoothly. 
     *  For example, if you want to export your files to `uploads/my_export_folder`, type in `my_export_folder` in the **[!UICONTROL Folder path]** field.
 *  **[!UICONTROL Compression format]**: Select the compression type that Experience Platform should use for the exported files. Available options are **[!UICONTROL GZIP]** or **[!UICONTROL None]**.
-*  **[!UICONTROL Encryption subkey ID]**: The subkey used for encryption, based on the [!DNL LiveRamp] public encryption key. This field is required if you provided an encryption key in the [authentication](#authenticate) step. See the [!DNL LiveRamp] [encryption documentation](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) to learn how to obtain the subkey ID.
 
 ### Enable alerts {#enable-alerts}
 
@@ -123,13 +122,8 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 In the [!UICONTROL Scheduling] step, create an export schedule for each audience, with the settings shown below.
 
->[!IMPORTANT]
->
->All audiences activated to this destination must be configured with the exact same schedule, as shown below.
-
 * **[!UICONTROL File export options]**: [!UICONTROL Export full files]. [Incremental file exports](../../ui/activate-batch-profile-destinations.md#export-incremental-files) are currently not supported for the [!DNL LiveRamp] destination.
 * **[!UICONTROL Frequency]**: [!UICONTROL Daily]
-* Set the export time to **[!UICONTROL After segment evaluation]**. Scheduled audience exports and [on-demand file exports](../../ui/export-file-now.md) are currently not supported for the [!DNL LiveRamp] destination.
 * **[!UICONTROL Date]**: Select the export start and end times as you wish.
 
 ![Platform UI screenshot showing the audience scheduling step.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)

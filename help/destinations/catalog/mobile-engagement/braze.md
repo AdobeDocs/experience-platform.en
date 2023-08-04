@@ -38,15 +38,15 @@ As a marketer, I want to target users in a mobile engagement destination, with a
 
 {style="table-layout:auto"}
 
-## External audiences support {#external-audiences-support}
+## Supported audiences {#supported-audiences}
 
-All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
-Additionally, this destination also supports the activation of the external audiences described in the table below.
+*Additionally*, this destination also supports the activation of the audiences described in the table below.
 
 | External audience type | Description | 
 ---------|----------|
-| Custom uploads | Audiences ingested into Experience Platform from CSV files. | 
+| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. | 
 
 {style="table-layout:auto"}
 

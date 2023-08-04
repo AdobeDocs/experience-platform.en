@@ -8,6 +8,23 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## Version 2.20.1 - August 3, 2023
+
+**Fixes and improvements**
+
+* Improved the validation of saved datastream override settings.
+
+## Version 2.20.0 - July 31, 2023
+
+**New features**
+
+* Added support for [per-command overrides of the datastream ID](../../../../datastreams/overrides.md).
+
+**Fixes and improvements**
+
+* Deprecated `edgeConfigId` in favor of `datastreamId` in the SDK configuration.
+* Multiple user experience enhancements for the datastream configuration overrides user interface.
+
 ## Version 2.19.0 - June 21, 2023
 
 * The **[!UICONTROL Variable]** data element and **[!UICONTROL Update Variable]** actions are now generally available.
