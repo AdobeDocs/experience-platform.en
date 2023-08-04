@@ -8,7 +8,7 @@ exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
 
 >[!NOTE]
 >
->The [!DNL Pendo] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Pendo] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 This tutorial provides steps for creating a [!DNL Pendo] source connection and dataflow using the Adobe Experience Platform user interface.
 

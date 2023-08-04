@@ -9,7 +9,7 @@ exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
 
 >[!NOTE]
 >
->The IBM DB2 connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The IBM DB2 connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 Adobe Experience Platform provides native connectivity for database providers like [!DNL Microsoft], MySQL, and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].
 

@@ -8,7 +8,7 @@ exl-id: 12b0295d-4b26-4eb7-a02a-a01d825d2a1e
 
 >[!NOTE]
 >
->The [!DNL Pendo] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Pendo] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 The following tutorial walks you through the steps to create a source connection and a dataflow to bring [[!DNL Pendo]](https://Pendo.com/) event data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

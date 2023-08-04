@@ -279,12 +279,12 @@ For more information on working with [!DNL Profile], see the [Real-Time Customer
 
 All datafiles that are ingested into [!DNL Experience Platform] must conform to the structure of an XDM schema. For more information on how to format datafiles to comply with XDM hierarchies (including sample files), see the document on [sample ETL transformations](../../etl/transformations.md). For general information about ingesting datafiles into [!DNL Experience Platform], see the [batch ingestion overview](../../ingestion/batch-ingestion/overview.md).
 
-## Schemas for external segments
+## Schemas for external audiences
 
-If you are bringing segments from external systems into Platform, you must use the following components to capture them in your schemas:
+If you are bringing audiences from external systems into Platform, you must use the following components to capture them in your schemas:
 
 * [[!UICONTROL Segment definition] class](../classes/segment-definition.md): Use this standard class to capture key attributes of an external segment definition.
-* [[!UICONTROL Segment Membership Details] field group](../field-groups/profile/segmentation.md): Add this field group to your [!UICONTROL XDM Individual Profile] schema in order to associate customer profiles with specific segments.
+* [[!UICONTROL Segment Membership Details] field group](../field-groups/profile/segmentation.md): Add this field group to your [!UICONTROL XDM Individual Profile] schema in order to associate customer profiles with specific audiences.
 
 ## Next steps
 

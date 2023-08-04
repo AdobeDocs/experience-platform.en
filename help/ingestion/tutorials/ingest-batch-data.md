@@ -104,7 +104,7 @@ To begin adding data to the dataset, click on the **[!UICONTROL Add Data]** tab.
 
 ![Add Data tab](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
-## Upload a file
+## Upload a file {#upload-file}
 
 Once you drag and drop (or browse and select) a Parquet or JSON file that you wish to upload, [!DNL Platform] will immediately begin to process the file and an **[!UICONTROL Uploading]** dialog will appear on the **[!UICONTROL Add Data]** tab showing the progress of your file upload.
 

@@ -8,7 +8,7 @@ exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
 
 >[!NOTE]
 >
-> The [!DNL Teradata Vantage] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+> The [!DNL Teradata Vantage] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 This tutorial provides steps for creating a [!DNL Teradata Vantage] source connector using the Adobe Experience Platform user interface.
 
