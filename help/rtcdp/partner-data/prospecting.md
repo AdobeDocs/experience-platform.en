@@ -67,7 +67,7 @@ The identity, data management, and governance components that you will be using 
 * **(Documentation coming soon)** Field groups tailored to partner data support
 * **(Documentation coming soon)** Third party labels which you will add on the attributes coming in from partners
 
-#### Create a Partner ID identity namespace
+#### Create a Partner ID identity namespace {#create-partner-id-namespace}
 
 Begin by creating a new identity type for the profiles that you will be receiving from the partner. To do this, in the Identity section, you must create a new identity namespace of the type **[!UICONTROL Partner ID]**. 
 
@@ -195,7 +195,7 @@ Read more about [prospect audiences](/help/segmentation/ui/prospect-audience.md)
 
 ### Activate prospect profiles to destinations {#activate-to-destinations}
 
-Make use of the prospect audiences by exporting them to destinations. Currently, only certain destinations such as [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) or the [!BADGE Alpha]{type=Informative} [LiveRamp](/help/destinations/catalog/advertising/liveramp.md) destination support activation of prospect profiles. 
+Make use of the prospect audiences by exporting them to destinations. Currently, only certain destinations such as [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) or the [!BADGE Alpha]{type=Informative} [LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md) destination support activation of prospect profiles. 
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 

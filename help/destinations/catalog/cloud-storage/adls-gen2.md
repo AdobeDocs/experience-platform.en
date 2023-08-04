@@ -1,13 +1,10 @@
 ---
-title: (Beta) Azure Data Lake Storage Gen2 connection
+title: Azure Data Lake Storage Gen2 connection
 description: Learn how to connect to Azure Data Lake Storage Gen2 to activate audiences and export datasets.
+last-substantial-update: 2023-07-26
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
 ---
-# (Beta) [!DNL Azure Data Lake Storage Gen2] connection
-
->[!IMPORTANT]
->
->This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Azure Data Lake Storage Gen2] connection, contact your Adobe representative and provide your [!DNL Organization ID].
+# [!DNL Azure Data Lake Storage Gen2] connection
 
 ## Overview {#overview}
 
@@ -22,13 +19,13 @@ Read this page to learn to create a live outbound connection to your [[!DNL Azur
 
 This section describes all the audiences that you can export to this destination.
 
-All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
-Additionally, this destination also supports the activation of the audiences described in the table below.
+*Additionally*, this destination also supports the activation of the audiences described in the table below.
 
 | Audience type | Description | 
 ---------|----------|
-| Custom uploads | Audiences ingested into Experience Platform from CSV files. |
+| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 

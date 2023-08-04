@@ -7,24 +7,12 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 
 ## Destination changelog {#changelog}
 
->[!IMPORTANT]
->
->With the beta release of the export datasets functionality and the improved file export functionality, you may now be seeing two [!DNL Amazon S3] cards in the destinations catalog.
->* If you are already exporting files to the **[!UICONTROL Amazon S3]** destination, please create new dataflows to the new **[!UICONTROL Amazon S3 beta]** destination.
->* If you have not yet created any dataflows to the **[!UICONTROL Amazon S3]** destination, please use the new **[!UICONTROL Amazon S3 beta]** card to export files to **[!UICONTROL Amazon S3]**.
+With the July 2023 Experience Platform release, the [!DNL Amazon S3] destination provides new functionality, as listed below:
 
-![Image of the two Amazon S3 destination cards in a side-by-side view.](../../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
-
-Improvements in the new [!DNL Amazon S3] destination card include:
-
-* [Dataset export support](/help/destinations/ui/export-datasets.md).
+* [!BADGE Beta]{type=Informative} [Dataset export support](/help/destinations/ui/export-datasets.md).
 * Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
-
-## Overview {#overview}
-
-Create a live outbound connection to your [!DNL Amazon S3] storage to periodically export data files from Adobe Experience Platform into your own S3 buckets.
 
 ## Connect to your [!DNL Amazon S3] storage through API or UI {#connect-api-or-ui}
 
@@ -35,13 +23,13 @@ Create a live outbound connection to your [!DNL Amazon S3] storage to periodical
 
 This section describes all the audiences that you can export to this destination.
 
-All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
-Additionally, this destination also supports the activation of the audiences described in the table below.
+*Additionally*, this destination also supports the activation of the audiences described in the table below.
 
 | Audience type | Description | 
 ---------|----------|
-| Custom uploads | Audiences ingested into Experience Platform from CSV files. |
+| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -99,9 +87,9 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Description]**: enter a description of this destination.
 * **[!UICONTROL Bucket name]**: enter the name of the [!DNL Amazon S3] bucket to be used by this destination.
 * **[!UICONTROL Folder path]**: enter the path to the destination folder that will host the exported files.
-* **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL Amazon S3 beta]** destination. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL Amazon S3 beta]** destination.
-* **[!UICONTROL Include manifest file]**: toggle this option on if you'd like the exports to include a manifest JSON file that contains information abut the export location, export size, and more. This option is only available for the **[!UICONTROL Amazon S3 beta]** destination.
+* **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files.
+* **[!UICONTROL Include manifest file]**: toggle this option on if you'd like the exports to include a manifest JSON file that contains information abut the export location, export size, and more.
 
 >[!TIP]
 >
