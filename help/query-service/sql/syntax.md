@@ -593,7 +593,7 @@ The following is a list of statistical calculations that are available after usi
 
 You can now calculate column-level statistics on [!DNL Azure Data Lake Storage] (ADLS) datasets with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. Compute column statistics on either the entire dataset, a subset of a dataset, all columns, or a subset of columns.
 
-`COMPUTE STATISTICS` extends the `ANALYZE TABLE` command. However, the `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, and `SHOW STATISTICS` commands are not supported on data warehouse tables. These extensions for the `ANALYZE TABLE` command are currently only supported for ADLS tables. 
+`COMPUTE STATISTICS` extends the `ANALYZE TABLE` command. However, the `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, and `SHOW STATISTICS` commands are not supported on accelerated store tables. These extensions for the `ANALYZE TABLE` command are currently only supported for ADLS tables. 
 
 **Example**
 
@@ -605,7 +605,7 @@ The `FILTER CONTEXT` command calculates statistics on a subset of the dataset ba
 
 >[!NOTE]
 >
->The statistics ID and the statistics generated are only valid for this particular session and cannot be accessed across different PSQL sessions. The computed statistics are not currently persistent.<br>Also, `COMPUTE STATISTICS` does not support the array or map data types. You can set a `skip_stats_for_complex_datatypes` flag to be notified or error out if the input dataframe has columns with arrays and map data types. By default, the flag is set to true. To enable notifications or errors, use the following command: `SET skip_stats_for_complex_datatypes = false`.
+>The `Statistics ID` and the statistics generated are only valid for each session and cannot be accessed across different PSQL sessions.<br><br>Limitations:<ul><li>Statistics generation is not supported for array or map data types</li><li>Computed statistics are not persisted</li></ul><br><br>Options:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>By default, the flag is set to true. As a result, when statistics are requested on a datatype that is not supported, it does not error out but instead it fails silently.<br>To enable notifications on errors when statistics are requested on unsupported datatype, use: `SET skip_stats_for_complex_datatypes = false`.
 
 The console output appears as seen below.
 
@@ -619,6 +619,7 @@ The console output appears as seen below.
 You can then query the computed statistics directly by referencing the `Statistics ID`. The example statement below allows you to view the output in full when used with the `Statistics ID` or the alias name. To learn more about this feature, see tha [alias name documentation](../essential-concepts/dataset-statistics.md#alias-name).
 
 ```sql
+-- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
 SELECT * FROM adc_geometric_stats_1;
 ```
 
