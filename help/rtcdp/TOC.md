@@ -62,6 +62,6 @@ user-guide-description: Bring together known and anonymous data from multiple en
   * Partner data use cases {#partner-data}
     * [Engage and acquire new customers through prospecting support](/help/rtcdp/partner-data/prospecting.md)  
     * [Supplement first-party profiles with partner-provided attributes](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-    * [Use partner-provided attributes to deliver personalized onsite experiences](/help/rtcdp/partner-data/onsite-personalization.md)
+    * [Use partner-aided visitor recognition to personalize onsite experiences](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Experience Platform Release notes](https://www.adobe.com/go/platform-release-notes-en)
 * [Experience Platform Glossary](https://www.adobe.com/go/platform-glossary-en)

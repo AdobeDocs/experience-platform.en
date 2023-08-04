@@ -1,24 +1,26 @@
 ---
-title: Use Partner-provided Attributes to Deliver Personalized Onsite Experiences
-description: Learn how to use partner-provided attributes to deliver personalized onsite experiences to your visitors.
+title: Use Partner-Aided Visitor Recognition to Personalize Onsite Experiences
+description: Learn how to use partner-aided visitor recognition to deliver personalized onsite experiences to your visitors.
+hide: yes
+hidefromtoc: yes
 ---
-# Use partner-provided attributes to deliver personalized onsite experiences 
+# Use partner-aided visitor recognition to personalize onsite experiences
 
-Learn how to use partner-provided attributes to deliver personalized experiences to your web property visitors. Use this tutorial to understand the implementation sequence of various elements in Experience Platform and other Experience Cloud solutions to display a personalized experience to authenticated and unauthenticated visitors.
+Learn how to use partner-aided recognition to deliver personalized experiences to your web property visitors. Use this tutorial to understand the implementation sequence of various elements in Experience Platform and other Experience Cloud solutions to display a personalized experience to authenticated and unauthenticated visitors.
 
 ![An infographic that describes how to use partner-provided attributes to deliver personalized experiences to your visitors.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
 
 ## Industry example {#industry-example}
 
-As an example of how this use case might be implemented and a challenge that it solves, consider that your company is a home improvement brand and has low customer authentication rates. Yet, you still want to deliver personalized experiences to your unauthenticated visitors on their first visit to your website. 
+As an example, consider a home improvement brand that has low authentication rates. This brand would like to deliver personalized experiences to first time visitors, without prior history or authentication, and without the fading reliance on third-party cookies.
 
-By leveraging valuable signals from a data partner, such as census and recent home sale data, the brand can meaningfully personalize browsing sessions on a website or app. For instance, it might want to use copy that appeals to people who have moved recently and offer a discount on popular DIY products.
+This brand chooses to leverage partner recognition technology to probabilistically recognize the visitor and serve a more personalized experience. This helps advance consideration, as the visitor moves down the marketing funnel. For instance, the brand might use partner-provided demographic signals for on-site content that appeals to people who have moved recently and offer a discount on popular DIY products.
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
 When planning to use partner-provided attributes to deliver personalized experiences to your authenticated and unauthenticated visitors, consider the following prerequisites in your planning process:
 
-* What inputs are expected by the vendor so they can layer on additional attributes?
+* What inputs are expected by your partner's recognition technology so they can layer on additional attributes?
 * To what extent are you comfortable delivering personalization in different channels and for different use cases based on probabilistically derived attributes, versus deterministically confirmed attributes?
 * How should the experience for a pre-authenticated but recognized visitor change when they authenticate?
 
