@@ -21,9 +21,6 @@ In order to enable CMK, your [!DNL Azure] Key Vault must be configured with the 
 * [Enable soft-delete](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
 * [Configure access using [!DNL Azure] role-based access control](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 
-You must also have the [!UICONTROL Manage Customer Managed Keys] permission in order to execute requests to Platform. Permissions that are granted through the [!DNL Admin Console] are sorted by category, with some permissions granting access to several low-level functionalities.
-For more information on the available permissions see the [permissions section](home.md#permissions) in the access control overview.
-
 ## Process summary
 
 CMK is included in the Healthcare Shield and the Privacy and Security Shield offerings from Adobe. After your organization purchases a license for one of these offerings, you can begin a one-time process for setting up the feature.
@@ -291,11 +288,9 @@ After removing key access or disabling/deleting the key from your [!DNL Azure] k
 
 >[!NOTE]
 >
->There are two use-case-specific exceptions to the seven day dataset expiration on non-primary (cached/transient) data. <ul><li>[Adobe Journey Optimizer URL Shortener](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html#message-preset-sms)</li><li>[Edge Projections](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
-
-For these exceptional cases, you are recommended to remove application access in conjunction with CMK revocation or key disablement/deletion, to provide further safeguards to your data through user login.
+>There are two use-case-specific exceptions to the seven day dataset expiration on non-primary (cached/transient) data. See their respective documentation for more information on these features.<ul><li>[Adobe Journey Optimizer URL Shortener](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html#message-preset-sms)</li><li>[Edge Projections](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
 
 ## Next steps
 
-By completing the above steps, you have successfully enabled CMK for your organization. Data that is ingested into Platform will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. 
+By completing the above steps, you have successfully enabled CMK for your organization. Data that is ingested into primary data stores will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. 
 
