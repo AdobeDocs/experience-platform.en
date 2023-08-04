@@ -21,6 +21,9 @@ In order to enable CMK, your [!DNL Azure] Key Vault must be configured with the 
 * [Enable soft-delete](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
 * [Configure access using [!DNL Azure] role-based access control](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 
+You must also have the [!UICONTROL Manage Customer Managed Keys] permission in order to execute requests to Platform. Permissions that are granted through the [!DNL Admin Console] are sorted by category, with some permissions granting access to several low-level functionalities.
+For more information on the available permissions see the [permissions section](home.md#permissions) in the access control overview.
+
 ## Process summary
 
 CMK is included in the Healthcare Shield and the Privacy and Security Shield offerings from Adobe. After your organization purchases a license for one of these offerings, you can begin a one-time process for setting up the feature.
