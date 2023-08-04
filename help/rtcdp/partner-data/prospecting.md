@@ -202,5 +202,5 @@ Make use of the prospect audiences by exporting them to destinations. Currently,
 Explore further use cases enabled through partner data support in Real-Time CDP:
 
 * [Supplement first-party profiles with attributes from trusted data partners](/help/rtcdp/partner-data/supplement-first-party-profiles.md) to improve your data foundation and gain new insights into your customer base and gain better audience optimization.
-* **Expanded activation** of prospect profiles and prospect audiences to select destinations.
-* (**Coming soon**) **Leverage partner aided recognition** for personalizing on-site experiences during the visit, and for off-site retargeting post visit, without the user authenticating or having prior history with your brand.
+* [Leverage partner aided recognition for personalizing on-site experiences](/help/rtcdp/partner-data/onsite-personalization.md) during the visit without the user authenticating or having prior history with your brand.
+* [Expanded activation of prospect profiles and prospect audiences](/help/destinations/ui/activate-prospect-audiences.md) to select destinations.
