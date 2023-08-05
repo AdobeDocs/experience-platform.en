@@ -47,10 +47,7 @@ The following table outlines the different object types supported by [!DNL Catal
 
 |Object|API endpoint|Definition|
 |---|---|---|
-|Account|`/accounts`|When creating source connections, authentication credentials must be provided. An account represents a collection of authentication credentials that were used to create a connection of a specific type. Each connection has a set of unique parameters that are persisted by [!DNL Catalog] and secured in an [!DNL Azure Key Vault].|
 |Batch|`/batches`|Batches are units of data that consist of one or more files to be ingested as a single unit. A batch object in [!DNL Catalog] outlines the batch's ingestion metrics (such as the number of records processed or size on disk) and may also include links to datasets, views, and other resources that were affected by the batch operation.|
-|Connection|`/connections`|A connection is a single instance of a source connector, unique to your organization and configured using the appropriate authentication credentials for the connector type.|
-|Connector|`/connectors`|Connectors define how source connections are to gather data from other Adobe applications (such as Adobe Analytics and Adobe Audience Manager), third-party cloud storage sources (such as [!DNL Azure Blob], [!DNL Amazon S3], FTP servers, and SFTP servers), and third-party CRM systems (such as [!DNL Microsoft Dynamics] and [!DNL Salesforce]).|
 |Dataset|`/dataSets`|A dataset is a storage and management construct used for the collection of data (typically a table) that contains a schema (columns) and fields (rows). See the [datasets overview](./datasets/overview.md) for more information.|
 |Dataset File|`/datasetFiles`|Dataset files represent blocks of data that has been saved on [!DNL Platform]. As records of literal files, these are where you can find the file's size, the number of records it contains, and a reference to the batch that ingested the file.|
 

@@ -20,9 +20,9 @@ Updates to existing features in Adobe Experience Platform:
 
 ## [!DNL Dashboards] {#dashboards}
 
-Platform provides multiple dashboards through which you can view important information about your organization’s data, as captured during daily snapshots.
+Platform provides multiple dashboards through which you can view important information about your organization's data, as captured during daily snapshots.
 
-Dashboards provide pre-configured reporting options for your organization’s data and are built directly into the marketer workflow within Platform. These dashboards are available without the need for additional IT support or the time and effort it would otherwise take to export and process data with additional data warehousing design and implementation.
+Dashboards provide pre-configured reporting options for your organization's data and are built directly into the marketer workflow within Platform. These dashboards are available without the need for additional IT support or the time and effort it would otherwise take to export and process data with additional data warehousing design and implementation.
 
 The following widgets are available through the Widget library on their respective dashboards. See the documentation for more information on [how to add widgets through the Widget library](../../dashboards/customize/widget-library.md).
 
@@ -51,7 +51,7 @@ The following widgets are available through the Widget library on their respecti
 
 {style="table-layout:auto"}
 
-See the documentation for more information on [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), and [[!DNL Segments]](../../dashboards/guides/segments.md) dashboards.
+See the documentation for more information on [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), and [[!DNL Segments]](../../dashboards/guides/audiences.md) dashboards.
 
 ## Dataflows {#dataflows}
 
@@ -167,7 +167,7 @@ For more information on XDM in Platform, see the [XDM System overview](../../xdm
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-AI/ML services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company’s needs using business-level configurations without the need for data science expertise.
+AI/ML services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise.
 
 ### Attribution AI
 

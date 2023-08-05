@@ -10,7 +10,7 @@ exl-id: 69c99f94-9cb9-43ff-9315-ce166ab35a60
 
 >[!NOTE]
 >
-> The IBM DB2 connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+> The IBM DB2 connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an IBM DB2 (hereinafter referred to as "DB2") source connector using the [!DNL Platform] user interface.
 

@@ -17,7 +17,7 @@ Labels allow you to categorize datasets and fields according to usage and access
 
 >[!NOTE]
 >
->You must have administrative rights to create a custom label. Currently, deleting labels is not supported.
+>There is one single list of labels for a whole organization. To create a custom label, you will need **[!UICONTROL Manage Usage Labels]** permissions on the production sandbox. Label deletion is currently not supported.
 
 To create a new label, select the **[!UICONTROL Labels]** tab in the sidebar and select **[!UICONTROL Create Label]**.
 

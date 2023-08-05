@@ -9,7 +9,7 @@ You can automate query runs by creating query schedules. Scheduled queries run o
 
 >[!IMPORTANT]
 >
->The following is a list of limitations for scheduled queries when using the Query Editor. They do not apply to the [!DNL Query Service] API:<br/>You can only add a schedule to a query that has already been created, saved, and run.<br/>You **cannot** add a schedule to a parameterized query.<br/>Scheduled queries **cannot** contain an anonymous block.
+>You can only add a schedule to a query that has already been created, saved, and run.
 
 Any scheduled queries are added to the list in the [!UICONTROL Scheduled queries] tab. From that workspace you can monitor the status of all scheduled query jobs through the UI. On the [!UICONTROL Scheduled queries] tab you can find important information about your query runs and subscribe to alerts. The available information includes the status, schedule details, and error messages/codes should a run fail. See the [Monitor scheduled queries document](./monitor-queries.md) for more information.
 
@@ -45,13 +45,27 @@ For the output dataset, you have the option to use either an existing dataset or
 >
 > Since you are using either an existing or creating a new dataset, you do **not** need to include either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of the query, since the datasets are already set. Including either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of your scheduled queries will result in an error.
 
+If you do not have access to parameterized queries, continue on to the [delete or disable a schedule](#delete-schedule) section.
+
+### Set parameters for a scheduled parameterized query {#set-parameters}
+
+>[!IMPORTANT]
+>
+>The parameterized query UI feature is currently available in a **limited release only** and is not available to all customers.
+
+If you are creating a scheduled query for a parameterized query, you must now set the parameter values for these query runs.
+
+![The Schedule details section of the schedule creation workflow with the Query parameters section highlighted.](../images/ui/query-schedules/scheduled-query-parameter.png)
+
 After confirming all these details, select **[!UICONTROL Save]** to create a schedule. You are returned to the schedules workspace that displays details of the newly created schedule, including the schedule ID, the schedule itself, and the schedule's output dataset. You can use the schedule ID to look up more information about the runs of the scheduled query itself. To learn more, please read the [scheduled query run endpoints guide](../api/runs-scheduled-queries.md).
 
 ![The schedules workspace with the newly created schedule highlighted.](../images/ui/query-schedules/schedules-workspace.png)
 
 ## Delete or disable a schedule {#delete-schedule}
 
-You can delete or disable a schedule from the schedules workspace. You must select a query template from either the [!UICONTROL Templates] tab or the [!UICONTROL Scheduled Queries] tab to navigate to the Query Editor and select **[!UICONTROL Schedule]** to access the schedules workspace. 
+You can delete or disable a schedule from the schedules workspace of a particular query or from the [!UICONTROL Scheduled Queries] workspace that lists all the scheduled queries. 
+
+To access the [!UICONTROL Schedules] tab of your chosen query, you must select the name of a query template from either the [!UICONTROL Templates] tab or the [!UICONTROL Scheduled Queries] tab. This navigates to the Query Editor for that query. Form the Query Editor, select **[!UICONTROL Schedules]** to access the schedules workspace. 
 
 Select a schedule from the rows of available schedules. You can use the toggle to disable or enable the scheduled query.
 
@@ -62,3 +76,5 @@ Select a schedule from the rows of available schedules. You can use the toggle t
 Select **[!UICONTROL Delete a schedule]** to delete the disabled schedule.
 
 ![The schedules workspace with Disable schedule and Delete schedule highlighted.](../images/ui/query-schedules/delete-schedule.png)
+
+Alternatively, the [!UICONTROL Scheduled Queries] tab offers a collection of inline actions for each scheduled query. The available inline actions include [!UICONTROL Disable schedule] or [!UICONTROL Enable schedule], [!UICONTROL Delete schedule], and [!UICONTROL Subscribe] to alerts for the scheduled query. For complete instructions on how to delete or disable a scheduled query through the scheduled Queries tab, please see the [monitor scheduled queried guide](./monitor-queries.md#inline-actions).

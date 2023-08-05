@@ -95,7 +95,7 @@ To remove a user from a role, select the **X** icon next to the users name.
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
 
-## Managing API credentials for role
+## Managing API credentials for role {#manage-api-credentials-for-role}
 
 Select the **[!UICONTROL API credentials]** tab to open the roles API credentials page, then select **[!UICONTROL Add API credentials]** to assign API credentials to the role.
 
@@ -153,7 +153,7 @@ To add a user to a product profile, log into the Admin Console and select **[!UI
 
 The **[!UICONTROL Add users to your team]** dialogue appears. Enter the users email address, first name (optional) and last name (optional).
 
-Select the pencil icon to select products and user groups, select **[!UICONTROL Adobe Exoerience Platform]**, then select **[!UICONTROL AEP-Default-All-Users]**, then select  **[!UICONTROL Save]**.
+Select the pencil icon to select products and user groups, select **[!UICONTROL Adobe Experience Platform]**, then select **[!UICONTROL AEP-Default-All-Users]**, then select  **[!UICONTROL Save]**.
 
 ![product-profile](../../images/flac-ui/product-profile.png)
 

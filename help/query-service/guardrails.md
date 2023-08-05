@@ -28,8 +28,6 @@ Before continuing with this document, you should have a good understanding of th
 
 The illustration below summarizes how Query Service capabilities are currently packaged and licensed:
 
-![A diagram to explain the distribution and packaging of Query Service capabilities in relation to licensing.](./images/guardrails/query-capabilities.png)
-
 ## Limit types
 
 There are two types of default limits within this document:

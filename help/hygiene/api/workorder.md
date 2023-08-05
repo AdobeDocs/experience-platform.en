@@ -210,7 +210,7 @@ PUT /workorder{WORK_ORDER_ID}
 **Request**
 
 ```shell
-curl -X GET \
+curl -X PUT \
   https://platform.adobe.io/data/core/hygiene/workorder/BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \

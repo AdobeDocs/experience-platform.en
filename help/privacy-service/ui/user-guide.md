@@ -32,7 +32,9 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 
 | UI label | Regulation |
 | --- | --- |
+| [!UICONTROL CPA] | The [!DNL Colorado Privacy Act] |
 | [!UICONTROL CCPA] | The [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CTDPA] | The [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL GDPR] | The European Union's [!DNL General Data Protection Regulation] |
 | [!UICONTROL PDPA_THA] | Thailand's [!DNL Personal Data Protection Act] |
 | [!UICONTROL LGPD_BRA] | Brazil's [!DNL Lei Geral de Proteção de Dados] |
@@ -50,7 +52,7 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 
 Jobs for each regulation type are tracked separately. To switch between regulation types, select the **[!UICONTROL Regulation Type]** dropdown menu and select the desired regulation from the list.
 
-![Regulation Type dropdown](../images/user-guide/regulation.png)
+![The Privacy Service console with the Regulation Type dropdown.](../images/user-guide/regulation.png)
 
 Upon changing the regulation type, the dashboard updates to show all operations, filters, widgets, and job-creation dialogs that apply to the selected regulation.
 
