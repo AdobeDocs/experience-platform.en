@@ -77,15 +77,15 @@ feature: Queries
 - Best practices {#best-practices}
     - [Query execution](best-practices/writing-queries.md)
     - [Data asset organization](./best-practices/organize-data-assets.md)
-- Essential concepts {#essential-concepts}
-    - [Working with nested data structures](essential-concepts/nested-data-structures.md)
-    - [Flatten nested data structures](essential-concepts/flatten-nested-data.md)
-    - [Anonymous block](essential-concepts/anonymous-block.md)
-    - [Inline template](essential-concepts/inline-templates.md)
-    - [Incremental loading](essential-concepts/incremental-load.md)
-    - [Data deduplication](essential-concepts/deduplication.md)
-    - [Dataset samples](essential-concepts/dataset-samples.md)
-    - [Dataset statistics computation](essential-concepts/dataset-statistics.md)
+- Essential concepts {#key-concepts}
+    - [Working with nested data structures](key-concepts/nested-data-structures.md)
+    - [Flatten nested data structures](key-concepts/flatten-nested-data.md)
+    - [Anonymous block](key-concepts/anonymous-block.md)
+    - [Inline template](key-concepts/inline-templates.md)
+    - [Incremental loading](key-concepts/incremental-load.md)
+    - [Data deduplication](key-concepts/deduplication.md)
+    - [Dataset samples](key-concepts/dataset-samples.md)
+    - [Dataset statistics computation](key-concepts/dataset-statistics.md)
 - SQL reference {#sql}
     - [SQL overview](sql/overview.md)
     - [SQL syntax](sql/syntax.md)
