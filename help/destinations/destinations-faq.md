@@ -224,12 +224,16 @@ Yes. The [Data Governance and Consent Policies](../data-governance/home.md) crea
 ### Are the [!DNL Adobe Target] and [!DNL Custom Personalization] destinations [!DNL HIPAA]-compliant?
 
 +++Answer
+[!DNL Adobe Target] is not [!DNL HIPPA]-compliant with [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). Customers should check with their own legal teams regarding [!DNL HIPPA]-readiness for custom optimization channels before using edge personalization via [!DNL Adobe Target] or the [!DNL Custom Personalization] destinations.
+
+For use cases where consent policy management needs to be applied at scale, customers must purchase [!DNL Adobe Privacy & Security Shield]. [!DNL Adobe Privacy & Security Shield] features are sold as an advanced suite of capabilities and may not be purchased separately.
+
+This service includes customer-managed keys and elevated thresholds to manage the customer data lifecycle.
+
 The [!DNL Adobe Target] and [!DNL Custom Personalization] destinations are integrated with the [Experience Platform Data Usage Labels](../data-governance/labels/overview.md) and the [Consent Policy Enforcement Service](../data-governance/enforcement/overview.md). These features are available for all customers.
 
-For use cases where consent policy management needs to be applied at scale, customers must purchase [!DNL Adobe Privacy & Security Shield]. This service includes customer-managed keys and elevated thresholds to manage the customer data lifecycle.
 
-[!DNL Adobe Privacy & Security Shield] features are sold as an advanced suite of capabilities and may not be purchased separately.
 
-[!DNL Adobe Target] is not [!DNL HIPPA]-compliant with [!DNL Adobe Healthcare Shield]. Customers should check with their own legal teams regarding [!DNL HIPPA]-readiness for custom optimization channels before using edge personalization via [!DNL Adobe Target] or the [!DNL Custom Personalization] destinations.
+
 +++
 
