@@ -52,7 +52,7 @@ This journey targets products that have been placed in the cart but not purchase
 1. Data is aggregated into Web SDK/ Mobile SDK/ Edge Network API ingestion via Edge Network (preferred method).
 2. As a **customer**, you create datasets that are marked for [!UICONTROL Profile].
 3. As a **customer**, you load profiles into Real-Time CDP and build governance policies to ensure responsible use.
-4. As a **customer**, you build focused audiences from the list of profiles to check if a **user** has placed an item in their cart but has not completed the purchase. The **[!UICONTROL Add to cart]** event kicks off a timer that waits for 30 mins, then checks for purchase. If no purchase has been made then the **user** is added to the **[!UICONTOL Abandon Cart]** audiences.
+4. As a **customer**, you build focused audiences from the list of profiles to check if a **user** has placed an item in their cart but has not completed the purchase. The **[!UICONTROL Add to cart]** event kicks off a timer that waits for 30 mins, then checks for purchase. If no purchase has been made then the **user** is added to the **[!UICONTROL Abandon Cart]** audiences.
 5. As a **customer**, you will create a abandoned cart journey in Adobe Journey Optimizer
 6. If needed, work with the **data partner** for activation of audiences to desired paid-media destinations.
 7. Adobe Journey Optimizer checks for consent and sends out the various actions configured.
