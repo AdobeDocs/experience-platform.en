@@ -4,104 +4,783 @@ description: Deliver compelling and connected experiences during the key convers
 hide: yes
 hidefromtoc: yes
 ---
-# Intelligently re-engage your customers to return 
+# Intelligently re-engage your customers to return
 
-Intelligent re-engagement allows you to set up a tailored, cross-channel drip campaign to persuade clients to perform a particular action. The nudging campaign is intended to operate for a limited amount of time. Once the customer takes the appropriate action, the nudge campaign ends right away.
+Intelligent re-engagement allows you to set up a tailored, cross-channel drip campaign to persuade clients to perform a particular action. The nudging campaign is intended to operate for a limited amount of time which includes sending customer who showed intent emails, sms, and serving paid ads. Once the customer has taken the appropriate action, the nudge campaign will end right away.
 
-## Prerequisites and planning
+![Step by step intelligent re-engagement high level visual overview.](../intelligent-re-engagement/images/step-by-step.png) 
 
-Use UI functionality and elements intro from Vic's doc.
+## Prerequisites and planning {#prerequisites-and-planning}
 
-In order to achieve this use case you will need the following products.....
+As you complete the steps to implement the use case, you will make use of the following Real-Time CDP functionality and UI elements (listed in the order in which you will use them). Make sure that you have the necessary attribute-based access control permissions for all these areas or ask your system administrator to grant you the necessary permissions.
 
--   Adobe Experience Platform 
-Adobe Real-Time Customer Data Platform (Real-Time CDP) – Aggregates data across data sources to fuel the campaign. This data is then used to create the campaign segments and surface personalized data elements used in the email and the web promo tiles (for example, name or account-related info). The CDP is also used to activate the segments across email and the web (via Adobe Target).
-    -   Profiles
-    -   Segmentation
--   Adobe Journey Optimizer
-    -   Event or Segment Trigger
-    -   Segments/ Events
-    -   Journey Actions
--   Adobe Experience Manager – Self-service authoring, hosting for the landing page, and integrates with Target for other pages on the site that includes the web promo tiles.
--   Enterprise landing page template – A reusable landing page template in AEM that is pre-integrated with Adobe Target, Claravine, CDP, and Adobe Analytics.
--   Adobe Target – Personalizes key website pages via web promo tiles.
--   Adobe Analytics – Tracks website activity for campaign performance reporting.
--   AWS Data Lake – Aggregates campaign performance reporting as per the global marketing standard to fuel Tableau dashboard.
-Also, divisional data lakes fuel the CDP with division-specific client and  behavioral data
+* [Adobe Real-Time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Aggregates data across data sources to fuel the campaign. This data is then used to create the campaign audiences and surface personalized data elements used in the email and the web promo tiles (for example, name or account-related info). The CDP is also used to activate the audiences across email and the web (via Adobe Target).
+    * [Schemas](/help/xdm/home.md)
+    * [Profiles](/help/profile/home.md)
+    * [Audiences](/help/segmentation/home.md)
+* [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+    * [Event or Audience Trigger](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
+    * [Audiences/ Events](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
+    * [Journey Actions](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
-## How to achieve the use case: high-level overview
+### How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
-![step by step](../intelligent-re-engagement/images/step-by-step.png) 
+There are three re-engagement journeys that have been created.
+
+>[!BEGINTABS]
+
+>[!TAB Re-Engagement Journey]
+
+The re-engagement journey targets abandoned product browse on both the website and app. This journey is triggered when a product has been viewed with no product purchased or added to cart. Brand engagement is triggered after three days if there are no list adds within the last 24 hours.
+
+![Customer intelligent re-engagement journey high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png) 
+
+1. Data is aggregated into Web SDK/ Mobile SDK/ Edge Network API ingestion via Edge Network (preferred method).
+2. As a **customer**, you create datasets that are marked for [!UICONTROL Profile].
+3. As a **customer**, you load profiles into Real-Time CDP and build governance policies to ensure responsible use.
+4. As a **customer**, you build focused audiences from the list of profiles to check if a **user** has made a brand engagement in the last three days.
+5. As a **customer**, you will create a re-engagement journey in Adobe Journey Optimizer.
+6. If needed, work with the **data partner** for activation of audiences to desired paid-media destinations.
+7. Adobe Journey Optimizer checks for consent and sends out the various actions configured.
+
+>[!TAB Abandoned Cart Journey]
+
+This journey targets products that have been placed in the cart but not purchased on both the website and app. Used for starting and stopping Paid Media campaigns
+
+![Customer abandoned cart journey high level visual overview.](../intelligent-re-engagement/images/abandoned-cart-journey.png) 
+
+1. Data is aggregated into Web SDK/ Mobile SDK/ Edge Network API ingestion via Edge Network (preferred method).
+2. As a **customer**, you create datasets that are marked for [!UICONTROL Profile].
+3. As a **customer**, you load profiles into Real-Time CDP and build governance policies to ensure responsible use.
+4. As a **customer**, you build focused audiences from the list of profiles to check if a **user** has placed an item in their cart but has not completed the purchase. The **[!UICONTROL Add to cart]** event kicks off a timer that waits for 30 mins, then checks for purchase. If no purchase has been made then the **user** is added to the **[!UICONTOL Abandon Cart]** audiences.
+5. As a **customer**, you will create a abandoned cart journey in Adobe Journey Optimizer
+6. If needed, work with the **data partner** for activation of audiences to desired paid-media destinations.
+7. Adobe Journey Optimizer checks for consent and sends out the various actions configured.
+
+>[!TAB Order Confirmation Journey]
+
+This journey targets product purchases on both the website and app.
+
+![Customer order confirmation journey high level visual overview.](../intelligent-re-engagement/images/order-confirmation-journey.png) 
+
+1. Data is aggregated into Web SDK/ Mobile SDK/ Edge Network API ingestion via Edge Network (preferred method).
+2. As a **customer**, you create datasets that are marked for [!UICONTROL Profile].
+3. As a **customer**, you load profiles into Real-Time CDP and build governance policies to ensure responsible use.
+4. As a **customer**, you build focused audiences from the list of profiles to check if a **user** has made a purchase.
+5. As a **customer**, you will create a confirmation journey in Adobe Journey Optimizer..
+6. Adobe Journey Optimizer sends out an order confirmation message using the preferred channel.
+
+>[!ENDTABS]
+
+## How to achieve the use case: Step-by-step instructions {#step-by-step-instructions}
+
+Read through the sections below which include links to further documentation, to complete each of the steps in the high-level overviews above.
+
+### UI functionality and elements that you will use {#ui-functionality-and-elements}
+
+As you complete the steps to implement the use case, you will make use of the following Real-Time CDP functionality and UI elements (listed in the order in which you will use them). Make sure that you have the necessary attribute-based access control permissions for all these areas or ask your system administrator to grant you the necessary permissions. 
+
+* [Schemas](/help/xdm/home.md)
+* [Profiles](/help/profile/home.md)
+* [Datasets](/help/catalog/datasets/overview.md)
+* [Audiences](/help/segmentation/home.md)
+* [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+* [Destinations](/help/destinations/home.md)
+
+### Setting up a schema design and field groups
+
+There are 4 schema designs used for the intelligent re-engagement journeys. Each schema requires specific fields to be set up, as well as some fields which are strongly suggested.
+
+>[!BEGINTABS]
+
+>[!TAB Customer attributes (Profile schema)]
+
+The field groups required for Profile schema are:
+
++++Personal Contact Details (Field Group)
+
+[Personal Contact Details](/help/xdm/field-groups/profile/personal-contact-details.md) is a standard schema field group for the XDM Individual Profile class which describes the contact information for an individual person.
+
+| Fields | Requirement | Description |
+| --- | --- | --- |
+| mobilePhone.number | Required | The person's mobile phone number, which will be used for SMS. |
+| personalEmail.address | Required | The person's email address. |
+
++++
+
++++Demographic Details (Field Group)
+
+[Demographic Details](/help/xdm/field-groups/profile/demographic-details.md) is a standard schema field group for the XDM Individual Profile class. The field group provides a root-level person object, whose sub-fields describe information about an individual person.
+
+| Fields | Requirement |
+| --- | --- |
+| person.name.firstName| Suggested | 
+| person.name.lastName | Suggested |
+
++++
+
++++External Source System Audit Details (Field Group)
+
+[External Source System Audit Attributes](/help/xdm/data-types/external-source-system-audit-attributes.md) is a standard Experience Data Model (XDM) data type that captures audit details about an external source system.
+
++++
+
++++Consent and Preference Field Groups (Field Group)
+
+[The Consents and Preferences](/help/xdm/field-groups//profile/consents.md) field group provides a single object-type field, consents, to capture consent and preference information.
+
+| Fields | Requirement |
+| --- | --- |
+| consents.marketing.email.val | Required |
+| consents.marketing.preferred | Required |
+| consents.marketing.push.val | Required |
+| consents.marketing.sms.val | Required |
+| consents.personalize.content.val | Required |
+| consents.share.val | Required |
+
++++
+
++++Profile Test Details (Field Group)
+
+This field group is used for best practice.
+
++++
+
+![A recording of the customer attributes schema showing a list of field groups.](../intelligent-re-engagement/images/customer-attributes.gif) 
+
+>[!TAB Customer digital transactions]
+
+The field groups required for Experience Event Schema for Online Activity (not Adobe Analytics Connector) are:
+
++++Adobe Experience Platform Web SDK ExperienceEvent (Field Group)
+
+| Fields | Requirement |
+| --- | --- |
+| device.model | Suggested |
+| environment.browserDetails.userAgent | Suggested |
+
++++
+
++++Web Details (Field Group)
+
+Web Details is a standard schema field group for the XDM ExperienceEvent class, used to describe information regarding web details events such as interaction, page details, and referrer.
+
+| Fields | Requirement | Description |
+| --- | --- | --- |
+| web.webInteraction.linkClicks.id | Suggested | The id for the web link or URL that corresponds to the interaction. |
+| web.webInteraction.linkClicks.value | Suggested | The number of clicks for the web link or URL that corresponds to the interaction. |
+| web.webInteraction.name | Suggested | The name of the web page. |
+| web.webInteraction.URL | Suggested | The URL for the web page. |
+| web.webPageDetails.name | Suggested | The name of the web page where the web interaction occurred. |
+| web.webPageDetails.URL | Suggested | The URL of the web page where the web interaction occurred. |
+| web.webReferrer.URL | Suggested | Describes the referrer of a web interaction, which is the URL a visitor came from immediately before the current web interaction was recorded. |
+
++++
+
++++Consumer Experience Event (Field Group)
+
+| Fields | Requirement |
+| --- | --- |
+| commerce.cart.cartID | Suggested |
+| commerce.cart.cartSource | Suggested |
+| commerce.cartAbandons.id | Suggested |
+| commerce.cartAbandons.value | Suggested |
+| commerce.order.orderType | Suggested |
+| commerce.order.payments.paymentAmount | Suggested |
+| commerce.order.payments.paymentType | Suggested |
+| commerce.order.payments.transactionID | Suggested |
+| commerce.order.priceTotal | Suggested |
+| commerce.order.purchaseID | Suggested |
+| commerce.productListAdds.id | Suggested |
+| commerce.productListAdds.value | Suggested |
+| commerce.productListOpens.id | Suggested |
+| commerce.productListOpens.value | Suggested |
+| commerce.productListRemoval.id | Suggested |
+| commerce.productListRemoval.value | Suggested |
+| commerce.productListViews.id | Suggested |
+| commerce.productListViews.value | Suggested |
+| commerce.productViews.id | Suggested |
+| commerce.productViews.value | Suggested |
+| commerce.purchases.id | Suggested |
+| commerce.purchases.value | Suggested |
+| marketing.campaignGroup | Suggested |
+| marketing.campaignName | Suggested |
+| marketing.trackingCode | Suggested |
+| productListItems.name | Suggested |
+| productListItems.priceTotal | Suggested |
+| productListItems.product | Suggested |
+| productListItems.quantity | Suggested |
+
++++
+
++++End User ID Details (Field Group)
+
+| Fields | Requirement | Description |
+| --- | --- | --- |
+| endUserIDs._experience.emailid.authenticatedState | Required | End user email address ID authenticated state. |
+| endUserIDs._experience.emailid.id | Required | End user email address ID. |
+| endUserIDs._experience.emailid.namespace.code | Required | End user email address ID namespace code. |
+| endUserIDs._experience.mcid.authenticatedState | Required | Adobe Marketing Cloud ID (MCID) authenticated state. The MCID is now known as the Experience Cloud ID (ECID). |
+| endUserIDs._experience.mcid.id | Required | Adobe Marketing Cloud ID (MCID). The MCID is now known as the Experience Cloud ID (ECID). |
+| endUserIDs._experience.mcid.namespace.code | Required | Adobe Marketing Cloud ID (MCID) namespace code. |
+
++++
+
++++Class Value (Field Group)
+
+| Fields | Requirement |
+| --- | --- |
+| eventType | Required |
+| timestamp | Required |
+
++++
+
++++External Source System Audit Details (Field Group)
+
+External Source System Audit Attributes is a standard Experience Data Model (XDM) data type that captures audit details about an external source system.
+
++++
+
+![A recording of the customer digital transactions schema showing a list of field groups.](../intelligent-re-engagement/images/customer-digital-transactions.gif) 
+
+>[!TAB Customer offline transactions]
+
+The field groups required for Experience Event Schema for Offline Activity are:
+
++++Commerce Details (Field Group)
+
+| Fields | Requirement | Description |
+| --- | --- | --- |
+| commerce.cart.cartID | Required | An ID for the shopping cart. |
+| commerce.order.orderType | Required | An object that describes product order type. |
+| commerce.order.payments.paymentAmount | Required | An object that describes product order payment amount. |
+| commerce.order.payments.paymentType | Required | An object that describes product order payment type. |
+| commerce.order.payments.transactionID | Required | An object product order transaction ID. |
+| commerce.order.purchaseID | Required | An object product order purchase ID. |
+| productListItems.name | Required | A list of item names representing the product(s) selected by a customer. |
+| productListItems.priceTotal | Required | The total price of list of items representing the product(s) selected by a customer. |
+| productListItems.product | Required | The product(s) selected. |
+| productListItems.quantity | Required | The quantity of list of items representing the product(s) selected by a customer. |
+
++++
+
++++Personal Contact Details (Field Group)
+
+| Fields | Requirement | Description |
+| --- | --- | --- |
+| mobilePhone.number | Required | The person's mobile phone number, which will be used for SMS. |
+| personalEmail.address | Required | The person's email address. |
+
++++
+
++++Class Value (Field Group)
+
+| Fields | Requirement |
+| --- | --- |
+| eventType | Required |
+| timestamp | Required |
+
++++
+
++++External Source System Audit Details (Field Group) 
+
+External Source System Audit Attributes is a standard Experience Data Model (XDM) data type that captures audit details about an external source system.
+
++++
+
+![A recording of the customer offline transactions schema showing a list of field groups.](../intelligent-re-engagement/images/customer-offline-transactions.gif) 
+
+>[!TAB Adobe web connector schema]
+
+The field groups required for Experience Event Schema for Adobe Analytics Data Feed are:
+
++++Adobe Analytics ExperienceEvent Template (Field Group)
+
+| Fields | Requirement | Description |
+| --- | --- | --- |
+| web.webInteraction.linkClicks.id | Suggested | The id for the web link or URL that corresponds to the interaction. |
+| web.webInteraction.linkClicks.value | Suggested | The number of clicks for the web link or URL that corresponds to the interaction. |
+| web.webInteraction.name | Suggested | The name of the web page. |
+| web.webInteraction.URL | Suggested | The URL for the web page. |
+| web.webPageDetails.name | Suggested | The name of the web page where the web interaction occurred. |
+| web.webPageDetails.URL | Suggested | The URL of the web page where the web interaction occurred. |
+| web.webReferrer.URL | Suggested | Describes the referrer of a web interaction, which is the URL a visitor came from immediately before the current web interaction was recorded. |
+| commerce.cart.cartID | Suggested | |
+| commerce.cart.cartSource | Suggested | |
+| commerce.cartAbandons.id | Suggested | |
+| commerce.cartAbandons.value | Suggested | |
+| commerce.order.orderType | Suggested | |
+| commerce.order.payments.paymentAmount | Suggested | |
+| commerce.order.payments.paymentType | Suggested | |
+| commerce.order.payments.transactionID | Suggested | |
+| commerce.order.priceTotal | Suggested | |
+| commerce.order.purchaseID | Suggested | |
+| commerce.productListAdds.id | Suggested | |
+| commerce.productListAdds.value | Suggested | |
+| commerce.productListOpens.id | Suggested | |
+| commerce.productListOpens.value | Suggested | |
+| commerce.productListRemoval.id | Suggested | |
+| commerce.productListRemoval.value | Suggested | |
+| commerce.productListViews.id | Suggested | |
+| commerce.productListViews.value | Suggested | |
+| commerce.productViews.id | Suggested | |
+| commerce.productViews.value | Suggested | |
+| commerce.purchases.id | Suggested | |
+| commerce.purchases.value | Suggested | |
+| marketing.campaignGroup | Suggested | |
+| marketing.campaignName | Suggested | |
+| marketing.trackingCode | Suggested | |
+| productListItems.name | Suggested | |
+| productListItems.priceTotal | Suggested | |
+| productListItems.product | Suggested | |
+| productListItems.quantity | Suggested | |
+| endUserIDs._experience.emailid.authenticatedState | Required | End user email address ID authenticated state. |
+| endUserIDs._experience.emailid.id | Required | End user email address ID. |
+| endUserIDs._experience.emailid.namespace.code | Required | End user email address ID namespace code. |
+| endUserIDs._experience.mcid.authenticatedState | Required | Adobe Marketing Cloud ID (MCID) authenticated state. The MCID is now known as the Experience Cloud ID (ECID). |
+| endUserIDs._experience.mcid.id | Required | Adobe Marketing Cloud ID (MCID). The MCID is now known as the Experience Cloud ID (ECID). |
+| endUserIDs._experience.mcid.namespace.code | Required | Adobe Marketing Cloud ID (MCID) namespace code. |
+
++++
+
++++Class Value (Field Group)
+
+| Fields | Requirement |
+| --- | --- |
+| eventType | Required |
+| timestamp | Required |
+
++++
+
++++External Source System Audit Details (Field Group)
+
+External Source System Audit Attributes is a standard Experience Data Model (XDM) data type that captures audit details about an external source system.
+
++++
+
+![A recording of the Adobe Web Connector schema showing a list of field groups.](../intelligent-re-engagement/images/adobe-web-connector.png) 
+
+>[!ENDTABS]
+
+### Create a dataset from a schema
+
+A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). For intelligent re-engagement journeys, each schema will have one dataset.
+
+To create a dataset from a schema, complete the steps below:
+
+1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Datasets]** and select **[!UICONTROL Create dataset]**.
+2. Select **[!UICONTROL Create dataset from schema]**.
+3. Select the relevant re-engagement schema you created.
+4. Give your dataset a name and optionally a description.
+5. Select **[!UICONTROL Finish]**.
+
+![A recording of the steps to create a dataset from a schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
+
+Note that similar to the step to create a schema, you need to enable the dataset to be included in the Real-Time Customer Profile. For more information about enabling the dataset for use in Real-Time Customer Profile, read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md#profile) 
+
+![Enable dataset for profile.](../intelligent-re-engagement/images/enable-dataset-for-profile.png)
+
+### Privacy, consent and data governance
+
+#### Consent policies
+
+>[!IMPORTANT]
+>
+>Providing customers with the capability to unsubscribe from receiving communications from a brand is a legal requirement, as well as ensuring this choice is honored. Learn more about the applicable legislation in the [Experience Platform documentation](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+
+The following consent policies need to be taken into account and used when setting up a re-engagement journey:
+
+* If consents.marketing.email.val = "Y" then Can Email
+* If consents.marketing.sms.val = "Y" then Can SMS
+* If consents.marketing.push.val = "Y" then Can Push
+* If consents.share.val = "Y" then Can Advertise
+* Need defined by Customer Implementation
+
+#### DULE label and enforcement
+
+The personal email address is used as directly identifiable data that can be used to identify or contact a specific person, rather than a device.
+
+* personalEmail.address = I1
+
+#### Marketing policies
+
+There are no additional marketing policies for the re-engagement journeys, however the following should be considered as desired:
+
+* Consider as desired
+* Restrict Sensitive Data
+* Restrict Onsite Advertising
+* Restrict Email Targeting
+* Restrict cross site Targeting
+* Restrict combining directly identifiable data with anonymous data
+
+### Audience creation for brand re-engagement journeys
+
+Audiences for each re-engagement journey need to be set up with specific events for segment qualification.  These specifics can be found below on the corresponding tabs for each journey.
+
+>[!BEGINTABS]
+
+>[!TAB Re-Engagement Journey]
+
+The following events are used for the re-engagement journey where profiles viewed products online, and did not add to cart in the next 24 hours, followed by no brand engagement in the 3 days following.
+
+Include audience who have at least 1 EventType = ProductViews event THEN have at least 1 Any event where (EventType does not equal commerce.productListAdds) and occurs in last 24 hour(s) then after 3 days do not have any Any event where (EventType = application.launch or web.webpagedetails.pageViews or commerce.purchases) and occurs in last 2 day(s).
+
+![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/re-engagement-audience.png) 
+
+>[!TAB Abandoned Cart Journey]
+
+The following events are used for profiles that added a product to their cart, but did not complete the purchase or clear their cart in the last 24 hours.
+
+include EventType = commerce.productListAdds between 30 min and 1440 minutes before now
+exclude EventType = commerce.purchases 30 minutes before now OR EventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).
+
+![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/abandoned-cart-audience.png) 
+
+>[!ENDTABS]
+
+For more information about building audiences, read the [Audience Builder UI guide](/help/segmentation/ui/segment-builder.md).
+
+### Journey setup in Adobe Journey Optimizer
 
 >[!NOTE]
 >
->While AADC is listed, we are assuming Web SDK is our approach.
+>Adobe Journey Optimizer does not encompass everything shown in the diagrams at the top of this page. All paid media ads are created in [!UICONTROL Destinations].
 
-<!-- **TOUCH ON CONSENT AND DATA GOVERNANCE BETWEEN 2 AND 3**-->
+Specific information is required for the multiple journeys that each use case can have. The specific data required for each Journey branch can be found below on the corresponding tabs.
 
-1.  Data Ingestion  
-    -   Data Ingestion (Streaming) – Web SDK/ Mobile SDK/ Edge Network API ingestion via Edge Network (preferred method).
-    -   Data Ingestion (Batch) – Offline data is loaded into AEP. Assumption data is loaded via batch, but can be streamed into AEP.
+>[!BEGINTABS]
 
-2.  Unified Profile – Once the data is ingested, it lands in their appropriate datasets marked for Profile.
+>[!TAB Re-Engagement Journey]
 
-3.  Segment Qualification – The Add to cart event kicks off a time that waits for 30 mins, then checks for purchase (abandon cart), then adds to the Abandon Cart Segment.
+![Customer re-engagemnt journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/re-engagement-ajo.png) 
 
-4.  Qualifications
-    -   Journey Trigger – Qualification for the Segment enters the customer into a triggered journey in Adobe Journey Optimizer.
-    -   Segment Trigger – Qualification for the segment adds customer to destination via RTCDP for re-targeting via paid media ads.
-    -   Segment Qualification – The journey checks if customer is in Abandon Cart segment.
++++Events
 
-5.  Actions
-    -   Journey Actions – If AJO is being used, it checks consent and send out to the various Actions configured (for example, email, SMS).
-    -   Destination – If Destinations Framework is being used, it checks consent and send out to the various Destinations configured (for example, email, direct mail).
+* Product Views
+    * Schema: Customer Digital Transactions
+    * Fields:
+        * EventType
+    * Condition: 
+        * EventType = commerce.productViews
+        * Fields:
+            * Commerce.productViews.id
+            * Commerce.productViews.value
+            * eventType
+            * identityMap.authenticatedState
+            * identityMap.id
+            * identityMap.primary
+            * productListItems.SKU
+            * productListItems.currencyCode
+            * productListItems.name
+            * productListItems.priceTotal
+            * productListItems.product
+            * productListItems.productImageUrl
+            * productListItems.quantity
+            * timestamp
+            * endUserIDs._experience.emailid.authenticatedState
+            * endUserIDs._experience.emailid.id
+            * endUserIDs._experience.emailid.namespace.code
+            * _id
 
-6.  Interaction Feedback – The downstream application sending the email (paid media ad or push notification), in-App message, or SMS sends its activities back to AEP for measurement of activities. <!--**SPEAK TO DANNY MILLER**-->
+* Add to Cart
+    * Schema: Customer Digital Transactions
+    * Fields:
+        * Event Type
+    * Condition:
+        * Event Type = commerce.productListAdds
+        * Fields:
+            * Commerce.productListAdds.id
+            * Commerce.productListAdds.value
+            * eventType
+            * identityMap.authenticatedState
+            * identityMap.id
+            * identityMap.primary
+            * productListItems.SKU
+            * productListItems.currencyCode
+            * productListItems.name
+            * productListItems.priceTotal
+            * productListItems.product
+            * productListItems.productImageUrl
+            * productListItems.quantity
+            * timestamp
+            * commerce.cart.cartID
+            * endUserIDs._experience.emailid.authenticatedState
+            * endUserIDs._experience.emailid.id
+            * endUserIDs._experience.emailid.namespace.code
+            * _id
 
-## How to achieve the use case: Step-by-step instructions
+* Brand Engagement
+    * Schema: Customer Digital Transactions
+    * Fields:
+        * EventType
+    * Condition: 
+        * EventType in application.launch, commerce.purchases, web.webpagedetails.pageViews
+        * Fields:
+            * eventType
+            * identityMap.authenticatedState
+            * identityMap.id
+            * identityMap.primary
+            * productListItems.SKU
+            * productListItems.currencyCode
+            * productListItems.name
+            * productListItems.priceTotal
+            * productListItems.product
+            * productListItems.productImageUrl
+            * productListItems.quantity
+            * timestamp
+            * web.webpagedetails.URL
+            * web.webpagedetails.isHomePage
+            * web.webpagedetails.name
+            * endUserIDs._experience.emailid.authenticatedState
+            * endUserIDs._experience.emailid.id
+            * endUserIDs._experience.emailid.namespace.code
+            * _id
+            * Commerce.purchases.id
+            * Commerce.purchases.value
+            * shipping.address.city
+            * shipping.address.countryCode
+            * shipping.address.postalCode
+            * shipping.address.state
+            * shipping.address.street1
+            * shipping.address.street2
+            * shipping.shipDate
+            * shipping.trackingNumber
+            * shipping.trackingURL
 
-### Use case overview
++++
 
-You will go through an example intelligent re-engagement workflow where you will:
++++Key Journey logic
 
-1. Develop the campaign brief 
-2. Campaign project management
-3. Creating segments in CDP
-4. Developing creative asset
-5. Authoring/publishing AEM land pages
-6. Configuring web personalization in Adobe Target
-7. Generating campaign metadata in Claravine
-8. Managing the media agency relationship.
+* Journey Entry Logic
+    * Product View Event
 
-This use case is outlined below:
+* Conditions 
+    * Check for at least one online or offline purchase event since the product was last viewed.
+        * Schema: Customer Digital Transactions
+        * eventType = commerce.purchases 
+        * timestamp > timestamp of product last viewed
+    
+    * Check for at least one offline purchase since product last viewed: 
+        * Schema: Customer Offline Transactions v.1
+        * eventType = commerce.purchases 
+        * timestamp > timestamp of product last viewed
 
-#### Data Preparation & Audience Segmentation
+    * Conditions - Select the Target channel
+        * Email
+            * consents.marketing.email.val = y 
+        * Push 
+            * consents.marketing.push.val=y
+        * SMS
+            * consents.marketing.sms.val = y
 
-You are a part of the marketing team and need to identify the types of data that are needed for the campaign. You check to see which existing audiences, profile attributes and events already exist in CDP customer profiles.
+    * Channel Personalization
+        * Personalized channel content based on product view.
 
-Source New Data: If new data attributes are needed, Marketing works with MarTech and CDAO to identify data sources for the new attributes. MarTech is responsible for sourcing digital data produced by MarTech platforms. CDAO is responsible for all other data sources. Some data attributes may not be feasible to collect in time for the campaign. If so, the campaign approach may need to change.
++++
 
-Gather New Data: CDAO and MarTech work on ingesting into the CDP. In some cases, data will land in a data lake first, in other cases data may land directly into the CDP, depending to the type of data.
+>[!TAB Abandoned Cart Journey]
 
-Create Segments: After the data is available in the CDP, marketing creates audience segments in the CDP. Make sure to:
-    1. Reuse existing foundational "building block" segments as much as possible, and 
-    2. Adhere to Vanguard segment naming conventions 
+![Customer abandoned cart journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/abandoned-cart-ajo.png) 
 
-#### Email Template and Journey Development
++++Events
 
-- Create the Email: Marketing determines if there is an existing email template available or if a new template will need to be created for the campaign. Make sure to:
-    1. update the images, URLs and text as appropriate to fit the email campaign, 
-    2. work with ETO to proof and test the email to ensure copy renders correctly.
- 
-- Import the Segment: Marketing will engage with MarTech to confirm that any "net new" CDP segment has been imported into SFMC and has been mapped correctly and is ready to use in Journey Builder.
- 
-- Create the Journey: Marketing and ETO will work to set up the Journey Builder canvas.
-    1. Determine the type of Journey appropriate for the campaign 
-    2. Identify the Journey entry data source 
-    3. Manage how contacts proceed through the Journey by assigning decision points / splits 
-    4. Create schedule automation to send messages.
+* Add to Cart
+    * Schema: Customer Digital Transactions
+    * Fields:
+        * Event Type
+    * Condition:
+        * Event Type = commerce.productListAdds
+        * Fields:
+            * Commerce.productListAdds.id
+            * Commerce.productListAdds.value
+            * eventType
+            * identityMap.authenticatedState
+            * identityMap.id
+            * identityMap.primary
+            * productListItems.SKU
+            * productListItems.currencyCode
+            * productListItems.name
+            * productListItems.priceTotal
+            * productListItems.product
+            * productListItems.productImageUrl
+            * productListItems.quantity
+            * timestamp
+            * commerce.cart.cartID
+            * endUserIDs._experience.emailid.authenticatedState
+            * endUserIDs._experience.emailid.id
+            * endUserIDs._experience.emailid.namespace.code
+            * _id
 
-- Configure the Email Message(s): Select the corresponding email message from Content Builder, set send configurations and delivery options (repeat for each engagement split).
+* Online Purchases
+    * Schema: Customer Digital Transactions
+    * Fields:
+        * Event Type
+    * Condition:
+        * Event Type = commerce.purchases
+        * Fields: 
+            * Commerce.purchases.id
+            * Commerce.purchases.value
+            * eventType
+            * identityMap.authenticatedState
+            * identityMap.id
+            * identityMap.primary
+            * productListItems.SKU
+            * productListItems.currencyCode
+            * productListItems.name
+            * productListItems.priceTotal
+            * productListItems.product
+            * productListItems.productImageUrl
+            * productListItems.quantity
+            * timestamp
+            * endUserIDs._experience.emailid.authenticatedState
+            * endUserIDs._experience.emailid.id
+            * endUserIDs._experience.emailid.namespace.code
+            * _id
 
-### UI functionality and elements that you use
+* Brand Engagement
+    * Schema: Customer Digital Transactions
+    * Fields:
+        * EventType
+    * Condition:
+        * EventType in application.launch, commerce.purchases, web.webpagedetails.pageViews
+        * Fields:
+            * eventType
+            * identityMap.authenticatedState
+            * identityMap.id
+            * identityMap.primary
+            * productListItems.SKU
+            * productListItems.currencyCode
+            * productListItems.name
+            * productListItems.priceTotal
+            * productListItems.product
+            * productListItems.productImageUrl
+            * productListItems.quantity
+            * timestamp
+            * web.webpagedetails.URL
+            * web.webpagedetails.isHomePage
+            * web.webpagedetails.name
+            * endUserIDs._experience.emailid.authenticatedState
+            * endUserIDs._experience.emailid.id
+            * endUserIDs._experience.emailid.namespace.code
+            * _id
+            * Commerce.purchases.id
+            * Commerce.purchases.value
+            * shipping.address.city
+            * shipping.address.countryCode
+            * shipping.address.postalCode
+            * shipping.address.state
+            * shipping.address.street1
+            * shipping.address.street2
+            * shipping.shipDate
+            * shipping.trackingNumber
+            * shipping.trackingURL
 
++++
+
++++Key Journey Logic 
+
+* Journey Entry Logic
+    * AddToCart Event
+
+* AuthenticatedState in authenticated
+
+* Condition: Offline purchases since the cart was last abandoned: 
+    * Schema: Customer Offline Transactions v.1
+    * eventType = commerce.purchases 
+    * timestamp > timestamp of cart was last abandoned
+
+* Condition: Cart cleared since the cart was last abandoned:
+    * Schema: Customer Digital Transactions v.1
+    * eventType = commerce.cartCleared
+    * cartID (ID of the cart)
+    * timestamp > timestamp of cart was last abandoned
+
+* Select Target Channel (Select one or multiple channels for wider reach)
+    * Email
+        * consents.marketing.email.val = y
+    * Push
+        * consents.marketing.push.val = y
+    * SMS
+        * consents.marketing.sms.val = y
+    * Channel Personalization
+        * Display cart detail information and can display multiple products in a table format.
+
++++
+
+>[!TAB Order Confirmation Journey]
+
+![Customer order confirmation journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/order-confirmation-ajo.png) 
+
++++Events
+
+* Online Purchases
+    * Schema: Customer Digital Transactions
+    * Fields:
+        * EventType
+    * Condition: 
+        * Event Type = commerce.purchases
+        * Fields: 
+            * Commerce.purchases.id
+            * Commerce.purchases.value
+            * eventType
+            * identityMap.authenticatedState
+            * identityMap.id
+            * identityMap.primary
+            * productListItems.SKU
+            * productListItems.currencyCode
+            * productListItems.name
+            * productListItems.priceTotal
+            * productListItems.product
+            * productListItems.productImageUrl
+            * productListItems.quantity
+            * timestamp
+            * endUserIDs._experience.emailid.authenticatedState
+            * endUserIDs._experience.emailid.id
+            * endUserIDs._experience.emailid.namespace.code
+            * _id
+
++++
+
++++Key Journey logic
+
+* Journey Entry Logic
+    * Order Event
+
+* Conditions 
+    * Select Target Channel (Select one, or multiple channels for wider reach).
+        * Order confirmation is considered serving in nature, so consent checking is usually unnecessary.
+        * Email
+        * Push
+        * SMS
+
+    * Channel Content Personalization
+        * Display order details information and can display a list of products using a table format. 
+
++++
+
+>[!ENDTABS]
+
+For more information about creating journeys in [Adobe Journey Optimizer], read the [Get started with journeys guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
+
+### Setting up paid media ads in Destinations
+
+The destinations framework is used for paid media ads. Once consent has been checked it will send out to the various destinations configured. For example direct mail, email, and so on.
+
+#### Data required for destinations
+
+Streaming segment export destinations (such as Facebook, Google Customer Match, Google DV360) support various identities from customer data: 
+
+* personalEmail.address
+* ECID
+* mobilePhone.number
+
+The Abandon Cart Segment is streaming and therefore can be used by the Destination framework for this use case.
+
+* Stream/Triggered
+    * [Advertising](/help/destinations/catalog/advertising/overview.md)/[Paid Media & Social](/help/destinations/catalog/social/overview.md)
+    * [Mobile](/help/destinations/catalog/mobile-engagement/overview.md)
+    * [Streaming Destination](/help/destinations/catalog/streaming/http-destination.md)
+    * [Custom Destination SDK](/help/destinations/destination-sdk/overview.md)
+
+* File/Scheduled every three hours
+    * [Email Marketing](/help/destinations/catalog/email-marketing/overview.md)
