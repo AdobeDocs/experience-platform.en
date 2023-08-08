@@ -70,7 +70,7 @@ The identity, data management, and governance components that you will be using 
 * **(Documentation coming soon)** Field groups tailored to partner data support
 * **(Documentation coming soon)** Third party labels which you will add on the attributes coming in from partners
 
-#### Create a Partner ID identity namespace
+#### Create a Partner ID identity namespace {#create-partner-id-namespace}
 
 Begin by creating a new identity type for the profiles that you will be receiving from the partner. To do this, in the Identity section, you must create a new identity namespace of the type **[!UICONTROL Partner ID]**. 
 

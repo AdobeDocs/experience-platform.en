@@ -24,6 +24,27 @@ When the audience export schedule differs from the segmentation schedule, the pr
 See the [Segmentation Service documentation](../segmentation/home.md) for more details.
 +++
 
+### Why do I see low match rates upon de-activating and re-activating an updated audience to the same destination?
+
++++Answer
+
+The de-activation and of an audience from a streaming destination does not trigger a backfill upon audience re-activation to the same streaming destination.
+
+**Example**
+
+You activated an audience consisting of 10 profiles to a streaming destination.
+
+After activating the audience, you realize you want to change the audience configuration, so you de-activate the audience and change its population criteria, leading to an audience population of 100 profiles.
+
+You re-activate the updated audience to the same destination, but since there is no backfill triggered, your destination does not receive the additional 90 profiles.
+
+**Solution**
+
+To ensure all the profiles are sent to your destination, you must create a new audience with the new configuration, and then activate it to your destination.
+
++++
+
+
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
 ### What do I need to do before I can activate audiences in [!DNL Facebook Custom Audiences]?
