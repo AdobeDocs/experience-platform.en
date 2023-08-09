@@ -11,17 +11,21 @@ hidefromtoc: true
 >
 >The AI Assistant for Adobe Experience Platform is currently in Alpha. The feature and documentation are subject to change.
 
-The AI Assistant for Adobe Experience Platform is a functionality of the Experience Platform UI that you can use to expedite your understanding of Experience Platform and Real-Time Customer Data Platform concepts.
+The AI Assistant for Adobe Experience Platform is a functionality of the Experience Platform UI that you can use to expedite your understanding of Experience Platform and Real-Time Customer Data Platform concepts. You can use the AI Assistant to query for information regarding your data and metadata. For example, you can ask the AI Assistant for steps on how to create a schema or how to segment an audience. You can also ask the AI Assistant for guidance on concepts such as data is downstream or how objects like datasets, attributes, and schemas relate to each other. 
 
 You can ask the AI Assistant questions regarding data and audiences. The AI Assistant then provides answers to your questions, based on the documentation, while also providing references that you can then turn to for more information.
 
 This document provides information on how you can use the AI Assistant to ask questions and receive answers about an Adobe Experience Platform and Real-Time Customer Data Platform concept relating to data and audiences.
 
->[!IMPORTANT]
->
->*AI Assistant uses an automated chatbot. Your use of this automated chatbot constitutes consent that the personal information you provide in the chat session will be collected, used, disclosed, and retained by Adobe and service providers acting on Adobe's behalf in accordance with the [Adobe Privacy Policy](https://www.adobe.com/privacy/policy.html). Please do not provide sensitive personal information (such as financial or health information) in the chatbot.*
->
->*AI Assistant is integrated with Azure OpenAI, and your chatbot inputs are shared with Azure and may be used to improve chatbot performance. Please note that for AI Assistant to work, you must have read access to data within the service*
+>[!BEGINSHADEBOX]
+
+**A note about using the AI Assistant for Experience Platform**
+
+*AI Assistant uses an automated chatbot. Your use of this automated chatbot constitutes consent that the personal information you provide in the chat session will be collected, used, disclosed, and retained by Adobe and service providers acting on Adobe's behalf in accordance with the [Adobe Privacy Policy](https://www.adobe.com/privacy/policy.html). Please do not provide sensitive personal information (such as financial or health information) in the chatbot.*
+
+*AI Assistant is integrated with Azure OpenAI, and your chatbot inputs are shared with Azure and may be used to improve chatbot performance. Please note that for AI Assistant to work, you must have read access to data within the service*
+
+>[!ENDSHADEBOX]
 
 ## Access the AI Assistant for Experience Platform in the UI
 
@@ -31,7 +35,7 @@ Select the **[!UICONTROL AI Assistant icon]** from the header to launch the AI A
 
 ![The Experience Platform UI home page with the AI Assistant icon selected.](./images/ai-assistant/ai-assistant.png)
 
-From here, you can input your question in the text box and query the AI Assistant for information regarding data or audience.
+From here, you can input your question in the text box and query the AI Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case. 
 
 >[!NOTE]
 >
