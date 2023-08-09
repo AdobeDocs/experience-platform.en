@@ -18,7 +18,7 @@ As you complete the steps to implement the use case, you will make use of the fo
     * [Schemas](/help/xdm/home.md)
     * [Profiles](/help/profile/home.md)
     * [Audiences](/help/segmentation/home.md)
-* [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
     * [Event or Audience Trigger](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
     * [Audiences/ Events](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
     * [Journey Actions](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
@@ -45,7 +45,7 @@ The re-engagement journey targets abandoned product browse on both the website a
 
 >[!TAB Abandoned Cart Journey]
 
-This journey targets products that have been placed in the cart but not purchased on both the website and app. Used for starting and stopping Paid Media campaigns
+This abandoned cart journey targets products that have been placed in the cart but not purchased on both the website and app. Used for starting and stopping Paid Media campaigns
 
 ![Customer abandoned cart journey high level visual overview.](../intelligent-re-engagement/images/abandoned-cart-journey.png) 
 
@@ -59,7 +59,7 @@ This journey targets products that have been placed in the cart but not purchase
 
 >[!TAB Order Confirmation Journey]
 
-This journey targets product purchases on both the website and app.
+This order confirmation journey targets product purchases on both the website and app.
 
 ![Customer order confirmation journey high level visual overview.](../intelligent-re-engagement/images/order-confirmation-journey.png) 
 
@@ -87,15 +87,30 @@ As you complete the steps to implement the use case, you will make use of the fo
 * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 * [Destinations](/help/destinations/home.md)
 
-### Setting up a schema design and field groups
+### Create a schema design and specify field groups
 
-There are 4 schema designs used for the intelligent re-engagement journeys. Each schema requires specific fields to be set up, as well as some fields which are strongly suggested.
+Experience Data Model (XDM) resources are managed in the [!UICONTROL Schemas] workspace in Adobe Experience Platform. You can view and explore core resources provided by Adobe, and create custom resources and schemas for your organization.
 
->[!BEGINTABS]
+To create a schema, complete the steps below:
 
->[!TAB Customer attributes (Profile schema)]
+1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Schemas]** and select **[!UICONTROL Create schema]**.
+2. Select **[!UICONTROL XDM Individual Profile]/[!UICONTROL XDM ExperienceEvent]**.
+3. Navigate to **[UICONTROL Field groups]** and select **[!UICONTROL Add]**.
+4. Use the search box to find and select the field group, then select **[!UICONTROL Add field groups]**.
+5. Give your schema a name and optionally a description.
+6. Select **[!UICONTROL Save]**.
 
-The field groups required for Profile schema are:
+![A recording of the steps to create a schema.](../intelligent-re-engagement/images/create-a-schema.gif)
+
+For more information about creating schemas, read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md) 
+
+There are 4 schema designs that are used for the re-engagement journey. 
+
+Each schema requires specific fields to be set up, as well as some fields which are strongly suggested.
+
+#### Field group requirements for the customer attributes schema
+
+The customer attributes schema is a [!UICONTROL XDM Individual Profile] schema, containing the following field groups:
 
 +++Personal Contact Details (Field Group)
 
@@ -146,11 +161,11 @@ This field group is used for best practice.
 
 +++
 
-![A recording of the customer attributes schema showing a list of field groups.](../intelligent-re-engagement/images/customer-attributes.gif) 
+![Customer attributes schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-attributes.png) 
 
->[!TAB Customer digital transactions]
+#### Field group requirements for the customer digital transactions schema
 
-The field groups required for Experience Event Schema for Online Activity (not Adobe Analytics Connector) are:
+The customer digital transactions schema is a [!UICONTROL XDM ExperienceEvent] schema, containing the following field groups:
 
 +++Adobe Experience Platform Web SDK ExperienceEvent (Field Group)
 
@@ -241,11 +256,11 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 +++
 
-![A recording of the customer digital transactions schema showing a list of field groups.](../intelligent-re-engagement/images/customer-digital-transactions.gif) 
+![Customer digital transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-digital-transactions.png) 
 
->[!TAB Customer offline transactions]
+#### Field group requirements for the customer offline transactions schema
 
-The field groups required for Experience Event Schema for Offline Activity are:
+The customer offline transactions schema is a [!UICONTROL XDM ExperienceEvent] schema, containing the following field groups:
 
 +++Commerce Details (Field Group)
 
@@ -288,9 +303,11 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 +++
 
-![A recording of the customer offline transactions schema showing a list of field groups.](../intelligent-re-engagement/images/customer-offline-transactions.gif) 
+![Customer offline transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-offline-transactions.png) 
 
->[!TAB Adobe web connector schema]
+#### Field group requirements for the Adobe web connector schema
+
+The Adobe web connector schema is a [!UICONTROL XDM ExperienceEvent] schema, containing the following field groups:
 
 The field groups required for Experience Event Schema for Adobe Analytics Data Feed are:
 
@@ -358,7 +375,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 +++
 
-![A recording of the Adobe Web Connector schema showing a list of field groups.](../intelligent-re-engagement/images/adobe-web-connector.png) 
+![Adobe web connector schema highlighting the list of field groups.](../intelligent-re-engagement/images/adobe-web-connector.png) 
 
 >[!ENDTABS]
 
@@ -413,15 +430,30 @@ There are no additional marketing policies for the re-engagement journeys, howev
 * Restrict cross site Targeting
 * Restrict combining directly identifiable data with anonymous data
 
-### Audience creation for brand re-engagement journeys
+### Create an audience
 
-Audiences for each re-engagement journey need to be set up with specific events for segment qualification.  These specifics can be found below on the corresponding tabs for each journey.
+To create an audience, complete the steps below:
+
+1. Navigate to **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** and select **[!UICONTROL Create audience]**.
+2. Select **[!UICONTROL Build rule]** and select **[!UICONTROL Create]**.
+3. Navigate to **[UICONTROL Field]** and select **[!UICONTROL Events]** tab.
+4. Navigate or use the search box to find the event type, then drag this to the builder. Finally add event rules by dragging event types.
+5. Give your schema a name and optionally a description.
+6. Select **[!UICONTROL Save]**.
+
+![A recording of the steps to create an audience.](../intelligent-re-engagement/images/create-an-audience.gif)
+
+For more information on how to build audiences, read the [Audience Builder UI guide](/help/segmentation/ui/segment-builder.md).
+
+#### Audience creation for brand re-engagement journeys
+
+Audiences for each re-engagement journey need to be set up with specific events for segment qualification. These specifics can be found below on the corresponding tabs for each journey.
 
 >[!BEGINTABS]
 
 >[!TAB Re-Engagement Journey]
 
-The following events are used for the re-engagement journey where profiles viewed products online, and did not add to cart in the next 24 hours, followed by no brand engagement in the 3 days following.
+The following events are used for the re-engagement journey where users viewed products online, and did not add to cart in the next 24 hours, followed by no brand engagement in the 3 days following.
 
 Include audience who have at least 1 EventType = ProductViews event THEN have at least 1 Any event where (EventType does not equal commerce.productListAdds) and occurs in last 24 hour(s) then after 3 days do not have any Any event where (EventType = application.launch or web.webpagedetails.pageViews or commerce.purchases) and occurs in last 2 day(s).
 
@@ -770,9 +802,9 @@ The destinations framework is used for paid media ads. Once consent has been che
 
 Streaming segment export destinations (such as Facebook, Google Customer Match, Google DV360) support various identities from customer data: 
 
-* personalEmail.address
-* ECID
-* mobilePhone.number
+* `personalEmail.address`
+* `ECID`
+* `mobilePhone.number`
 
 The Abandon Cart Segment is streaming and therefore can be used by the Destination framework for this use case.
 
