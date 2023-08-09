@@ -60,10 +60,10 @@ The audience details page appears. Select **[!UICONTROL Look-alike insights]** t
 
 ### Similarity and reach {#similarity-and-reach}
 
->[!CONTEXTUALHELP]
+<!-- >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
 >title="Similarity and reach"
->abstract=""
+>abstract="" -->
 
 The similarity and reach section displays a graph that plots the expected reach of a Look-Alike Audience consisting of profiles above a given similarity score. The similarity score represents the **distance** of similarity between the base audience's profile and the look-alike insight's profile.
 
@@ -85,11 +85,11 @@ The Look-Alike Audiences section displays a list of all the Look-Alike Audiences
 
 ### Influential factors {#influential-factors}
 
->[!CONTEXTUALHELP]
+<!-- >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="Influential factors"
 >abstract="Influential factors are attributes, events and audience memberships that are important in explaining similarity of a profile to members of the base audience. Data usage labels and policies can be used to exclude certain data from being considered as influential factors in look-alike models."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Exclude data"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Exclude data" -->
 
 The influential factors section displays the top 100 factors that influence the look-alike model for the selected base audience. These influential factors are the profile attributes, the experience events, and the audience memberships that are the most important in explaining similarities in the base audience. Understanding the top influential factors lets you better personalize your marketing content for this audience and any Look-Alike Audience you create from it. Please note that not all the influential factors that affect the look-alike model will be displayed.
 
