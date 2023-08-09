@@ -104,9 +104,7 @@ To create a schema, complete the steps below:
 
 For more information about creating schemas, read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md) 
 
-There are 4 schema designs that are used for the re-engagement journey. 
-
-Each schema requires specific fields to be set up, as well as some fields which are strongly suggested.
+There are 4 schema designs that are used for the re-engagement journey. Each schema requires specific fields to be set up, as well as some fields which are strongly suggested.
 
 #### Field group requirements for the customer attributes schema
 
@@ -309,8 +307,6 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 The Adobe web connector schema is a [!UICONTROL XDM ExperienceEvent] schema, containing the following field groups:
 
-The field groups required for Experience Event Schema for Adobe Analytics Data Feed are:
-
 +++Adobe Analytics ExperienceEvent Template (Field Group)
 
 | Fields | Requirement | Description |
@@ -376,8 +372,6 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 +++
 
 ![Adobe web connector schema highlighting the list of field groups.](../intelligent-re-engagement/images/adobe-web-connector.png) 
-
->[!ENDTABS]
 
 ### Create a dataset from a schema
 
