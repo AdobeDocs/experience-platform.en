@@ -27,6 +27,21 @@ To navigate to the license usage dashboard within the Platform UI, select **[!UI
 >
 >The license usage dashboard is not enabled by default. Users must be granted "View License Usage Dashboard" permission in order to be able to view the dashboard. For steps on granting access permissions for viewing the license usage dashboard, please refer to the [dashboard permissions guide](../permissions.md).
 
+<!-- The new report provides more granularity by providing usage metrics for (a) each product purchased by the customer, (b) consolidated usage of metrics all production or dev sandboxes and (c) usage metric from a specific sandbox. -->
+
+You'll se all the licensed AEP products here. A table is used to priviuded the keyb information about your licence usage.
+
+| Column name  | Description |
+|---|---|
+| **[!UICONTROL Product]**  |   |
+| **[!UICONTROL Primary Metric]**  |   |
+| **[!UICONTROL Licence amount]**  | Is a contracted value for the maximum amount of the Primary Metric as agreed in your product licence agreement.  |
+| **[!UICONTROL Usage]**  | The amount of your primary metric used. |
+| **[!UICONTROL Usage %]**  | The percentage of your primary metric used according to your license amount. |
+
+The table indicates the primary metric for each product. As each product can track numerous metrics
+The licence amount is a 
+
 ![The License usage dashboard Overview tab.](../images/license-usage/dashboard-overview.png)
 
 ### Select a sandbox
