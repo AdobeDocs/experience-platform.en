@@ -231,4 +231,4 @@ The following is an example of a completed authentication specification using a 
 
 ## Next steps
 
-With your authentication specifications populated, you can proceed to configure the source specifications for the source that you want to integrate to Platform. See the the document on [configuring source specifications](./sourcespec.md) for more information.
+With your authentication specifications populated, you can proceed to configure the source specifications for the source that you want to integrate to Platform. See the document on [configuring source specifications](./sourcespec.md) for more information.

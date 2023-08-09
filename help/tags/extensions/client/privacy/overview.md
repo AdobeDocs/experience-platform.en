@@ -15,7 +15,7 @@ This guide covers how to install and configure the Adobe Privacy extension in th
 
 >[!NOTE]
 >
->If you prefer to install these functionalities without using tags, see the the [Privacy JavaScript Library overview](../../../../privacy-service/js-library.md) for steps on how to implement using raw code.
+>If you prefer to install these functionalities without using tags, see the [Privacy JavaScript Library overview](../../../../privacy-service/js-library.md) for steps on how to implement using raw code.
 
 ## Install and configure the extension
 
