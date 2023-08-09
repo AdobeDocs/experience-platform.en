@@ -431,7 +431,7 @@ Include audience who have at least 1 EventType = ProductViews event THEN have at
 
 The following events are used for profiles that added a product to their cart, but did not complete the purchase or clear their cart in the last 24 hours.
 
-include EventType = commerce.productListAdds between 30 min and 1440 minutes before now
+include EventType = commerce.productListAdds between 30 min and 1440 minutes before now.
 exclude EventType = commerce.purchases 30 minutes before now OR EventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).
 
 ![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/abandoned-cart-audience.png) 
