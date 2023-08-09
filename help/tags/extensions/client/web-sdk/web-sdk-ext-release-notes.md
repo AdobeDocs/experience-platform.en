@@ -8,6 +8,18 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## Version 2.20.3 - August 8, 2023
+
+**Fixes and improvements**
+
+* Fixed issue where data elements could not be saved in ID sync container ID override field.
+
+## Version 2.20.1 - August 3, 2023
+
+**Fixes and improvements**
+
+* Improved the validation of saved datastream override settings.
+
 ## Version 2.20.0 - July 31, 2023
 
 **New features**

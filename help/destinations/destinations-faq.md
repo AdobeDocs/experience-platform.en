@@ -24,6 +24,27 @@ When the audience export schedule differs from the segmentation schedule, the pr
 See the [Segmentation Service documentation](../segmentation/home.md) for more details.
 +++
 
+### Why do I see low match rates upon de-activating and re-activating an updated audience to the same destination?
+
++++Answer
+
+The de-activation and of an audience from a streaming destination does not trigger a backfill upon audience re-activation to the same streaming destination.
+
+**Example**
+
+You activated an audience consisting of 10 profiles to a streaming destination.
+
+After activating the audience, you realize you want to change the audience configuration, so you de-activate the audience and change its population criteria, leading to an audience population of 100 profiles.
+
+You re-activate the updated audience to the same destination, but since there is no backfill triggered, your destination does not receive the additional 90 profiles.
+
+**Solution**
+
+To ensure all the profiles are sent to your destination, you must create a new audience with the new configuration, and then activate it to your destination.
+
++++
+
+
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
 ### What do I need to do before I can activate audiences in [!DNL Facebook Custom Audiences]?
@@ -127,6 +148,7 @@ For detailed explanations on the ID matching requirements, see [ID matching requ
 
 +++Answer
 [!DNL LinkedIn Matched Audiences] supports the activation of the following identities: hashed emails, [!DNL GAID], and [!DNL IDFA].
+
 +++
 
 ## Same-page and next-page personalization through the Adobe Target and Custom Personalization destinations {#same-next-page-personalization}
@@ -198,3 +220,20 @@ No. All audiences that you want to activate to Adobe Target must use an active-o
 +++Answer
 Yes. The [Data Governance and Consent Policies](../data-governance/home.md) created and associated with the selected marketing actions will govern the activation of the selected attributes.
 +++
+
+### Are the [!DNL Adobe Target] and [!DNL Custom Personalization] destinations [!DNL HIPAA]-compliant?
+
++++Answer
+[!DNL Adobe Target] is not [!DNL HIPPA]-compliant with [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). Customers should check with their own legal teams regarding [!DNL HIPPA]-readiness for custom optimization channels before using edge personalization via [!DNL Adobe Target] or the [!DNL Custom Personalization] destinations.
+
+For use cases where consent policy management needs to be applied at scale, customers must purchase [!DNL Adobe Privacy & Security Shield]. [!DNL Adobe Privacy & Security Shield] features are sold as an advanced suite of capabilities and may not be purchased separately.
+
+This service includes customer-managed keys and elevated thresholds to manage the customer data lifecycle.
+
+The [!DNL Adobe Target] and [!DNL Custom Personalization] destinations are integrated with the [Experience Platform Data Usage Labels](../data-governance/labels/overview.md) and the [Consent Policy Enforcement Service](../data-governance/enforcement/overview.md). These features are available for all customers.
+
+
+
+
++++
+
