@@ -4,7 +4,7 @@ description: This document describes how to compute column-level statistics on A
 ---
 # Dataset statistics computation
 
-You can now compute column-level statistics on [!DNL Azure Data Lake Storage] (ADLS) datasets with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. The SQL commands that compute dataset statistics are an extension of the `ANALYZE TABLE` command. Full details on the `ANALYZE TABLE` command can be found in the [SQL reference documentation](../sql/syntax.md#analyze-table).
+You can now compute column-level statistics on [!DNL Azure Data Lake Storage] (ADLS) datasets with the `COMPUTE STATISTICS` SQL command. The SQL commands that compute dataset statistics are an extension of the `ANALYZE TABLE` command. Full details on the `ANALYZE TABLE` command can be found in the [SQL reference documentation](../sql/syntax.md#analyze-table).
 
 >[!NOTE]
 >
@@ -14,7 +14,7 @@ To see the statistics that were computed with the `ANALYZE TABLE COMPUTE STATIST
 
 >[!IMPORTANT]
 >
->The `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, and `SHOW STATISTICS` commands are not supported on data warehouse tables. These extensions for the `ANALYZE TABLE` command are currently only supported for ADLS tables. For more information, see the [ANALYZE TABLE section](../sql/syntax.md#analyze-table) of the SQL syntax guide.  
+>The `COMPUTE STATISTICS`, `FILTERCONTEXT`, and `FOR COLUMNS` commands are not supported on accelerated store tables. These extensions for the `ANALYZE TABLE` command are currently only supported for ADLS tables. For more information, see the [ANALYZE TABLE section](../sql/syntax.md#analyze-table) of the SQL syntax guide.  
 
 This guide helps you structure your queries so that you can compute the column statistics of an ADLS dataset. Using these commands, you can see the statistics generated in your session through a PSQL client using an SQL query.
 
@@ -89,7 +89,7 @@ The computed statistics output might look similar to the example below.
 
 ## Show the statistical analysis metadata {#show-statistics}
 
-You can use the `SHOW STATISTICS` command to display the metadata for all the temporary statistics tables generated in the session. This command can help you refine the scope of your statistical analysis. 
+You can use the `SHOW STATISTICS` command to display the metadata for all the temporary statistics generated in the session. This command can help you refine the scope of your statistical analysis. 
 
 An example output of `SHOW STATISTICS` is seen below.
 
