@@ -95,7 +95,7 @@ To create a schema, complete the steps below:
 
 1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Schemas]** and select **[!UICONTROL Create schema]**.
 2. Select **[!UICONTROL XDM Individual Profile]/[!UICONTROL XDM ExperienceEvent]**.
-3. Navigate to **[UICONTROL Field groups]** and select **[!UICONTROL Add]**.
+3. Navigate to **[!UICONTROL Field groups]** and select **[!UICONTROL Add]**.
 4. Use the search box to find and select the field group, then select **[!UICONTROL Add field groups]**.
 5. Give your schema a name and optionally a description.
 6. Select **[!UICONTROL Save]**.
@@ -436,7 +436,7 @@ To create an audience, complete the steps below:
 
 1. Navigate to **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** and select **[!UICONTROL Create audience]**.
 2. Select **[!UICONTROL Build rule]** and select **[!UICONTROL Create]**.
-3. Navigate to **[UICONTROL Field]** and select **[!UICONTROL Events]** tab.
+3. Navigate to **[!UICONTROL Field]** and select **[!UICONTROL Events]** tab.
 4. Navigate or use the search box to find the event type, then drag this to the builder. Finally add event rules by dragging event types.
 5. Give your schema a name and optionally a description.
 6. Select **[!UICONTROL Save]**.
