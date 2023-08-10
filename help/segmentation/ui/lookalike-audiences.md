@@ -13,21 +13,6 @@ hidefromtoc: true
 >
 >Please note that look-alike insights and Look-Alike Audiences are in **limited availability**.
 
->[!CONTEXTUALHELP]
->id="platform_audiences_lookAlike_notEligible"
->title="Not eligible"
->abstract="This audience is currently not eligible for look-alike insights since it may have less than the minimum number of profiles required for training or the profile export has not yet been triggered."
-
->[!CONTEXTUALHELP]
->id="platform_audiences_lookAlike_processing"
->title="Processing"
->abstract="This audience is currently being processed. The model may take up to 24 hours to finish processing. Please check again later."
-
->[!CONTEXTUALHELP]
->id="platform_audiences_lookAlike_error"
->title="Error"
->abstract="There was an error processing this model. Please delete and re-build this model or try again later."
-
 In Adobe Experience Platform, Look-Alike Audiences provide intelligent insights on each of your audiences, leveraging machine-learning-based insights to identify and target high-value customers with your marketing campaigns. 
 
 With Look-Alike Audiences, you can create expanded audiences that target customers similar to your high-performing audiences or target customers similar to previously converted audiences.
@@ -66,6 +51,21 @@ Add-on packs, which will be available at a later date, increase the entitlements
 To confirm if you have access to Look-Alike Audiences, please contact your Adobe representative.
 
 ## View look-alike insights {#view}
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_notEligible"
+>title="Not eligible"
+>abstract="This audience is currently not eligible for look-alike insights since it may have less than the minimum number of profiles required for training or the profile export has not yet been triggered."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_processing"
+>title="Processing"
+>abstract="This audience is currently being processed. The model may take up to 24 hours to finish processing. Please check again later."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_error"
+>title="Error"
+>abstract="There was an error processing this model. Please delete and re-build this model or try again later."
 
 Look-alike insights is built-in with the audience details page. To look at the look-alike insights for an audience, select **[!UICONTROL Audiences]** in the left navigation bar, followed by **[!UICONTROL Browse]**, and the audience you want to view the insights for.
 
