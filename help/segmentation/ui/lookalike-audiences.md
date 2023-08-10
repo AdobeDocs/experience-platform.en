@@ -13,6 +13,21 @@ hidefromtoc: true
 >
 >Please note that look-alike insights and Look-Alike Audiences are in **limited availability**.
 
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_notEligible"
+>title="Not eligible"
+>abstract="This audience is currently not eligible for look-alike insights since it may have less than the minimum number of profiles required for training or the profile export has not yet been triggered."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_processing"
+>title="Processing"
+>abstract="This audience is currently being processed. The model may take up to 24 hours to finish processing. Please check again later."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_error"
+>title="Error"
+>abstract="There was an error processing this model. Please delete and re-build this model or try again later."
+
 In Adobe Experience Platform, Look-Alike Audiences provide intelligent insights on each of your audiences, leveraging machine-learning-based insights to identify and target high-value customers with your marketing campaigns. 
 
 With Look-Alike Audiences, you can create expanded audiences that target customers similar to your high-performing audiences or target customers similar to previously converted audiences.
@@ -36,7 +51,7 @@ In Adobe Experience Platform, the look-alike model consumes three different type
 
 All of these data points are turned into key value pairs which are fed into the look-alike model. Only the key value pairs with a significant percentage of profiles matching will be kept.
 
-The look-alike model is run on a frequent basis, creating and re-creating the influential factors and similarity graphs for the base audiences. Scoring for the Look-Alike Audiences is also run frequently.
+At this time, the look-alike model is run every 24 hours, creating and re-creating the influential factors and similarity graphs for the base audiences. Scoring for the Look-Alike Audiences is also run frequently.
 
 ## Entitlements {#entitlements}
 
@@ -46,7 +61,7 @@ The following entitlements apply for usage of Look-Alike Audiences:
 - Real-Time CDP Ultimate customers are entitled to **20** active Look-Alike Audiences in production sandboxes
 - Development sandboxes are limited to **5** Look-Alike Audiences for all Real-Time CDP customers
 
-Add-on packs are available which increase the entitlements for production sandboxes by 20 Look-Alike Audiences per pack.
+Add-on packs, which will be available at a later date, increase the entitlements for production sandboxes by 20 Look-Alike Audiences per pack.
 
 To confirm if you have access to Look-Alike Audiences, please contact your Adobe representative.
 
@@ -62,10 +77,10 @@ The audience details page appears. Select **[!UICONTROL Look-alike insights]** t
 
 ### Similarity and reach {#similarity-and-reach}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
 >title="Similarity and reach"
->abstract="" -->
+>abstract="The similarity and reach graph plots the expected reach of a Look-Alike Audience consisting of profiles above a given similarity score. You can hover over a specific point in the graph to display the similarity percentage and the expected profile count for the currently highlighted point."
 
 The similarity and reach section displays a graph that plots the expected reach of a Look-Alike Audience consisting of profiles above a given similarity score. The similarity score represents the **distance** of similarity between the base audience's profile and the look-alike insight's profile.
 
@@ -87,11 +102,11 @@ The Look-Alike Audiences section displays a list of all the Look-Alike Audiences
 
 ### Influential factors {#influential-factors}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="Influential factors"
 >abstract="Influential factors are attributes, events and audience memberships that are important in explaining similarity of a profile to members of the base audience. Data usage labels and policies can be used to exclude certain data from being considered as influential factors in look-alike models."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Exclude data" -->
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Exclude data"
 
 The influential factors section displays the top 100 factors that influence the look-alike model for the selected base audience. These influential factors are the profile attributes, the experience events, and the audience memberships that are the most important in explaining similarities in the base audience. Understanding the top influential factors lets you better personalize your marketing content for this audience and any Look-Alike Audience you create from it. Please note that not all the influential factors that affect the look-alike model will be displayed.
 
