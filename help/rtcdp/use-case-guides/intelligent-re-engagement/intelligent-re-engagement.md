@@ -156,7 +156,7 @@ This field group is used for best practice.
 
 +++
 
-<!-->
+<!--
 ![Customer attributes schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-attributes.png) 
 -->
 
@@ -253,7 +253,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 +++
 
-<!-->
+<!--
 ![Customer digital transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-digital-transactions.png) 
 -->
 
@@ -302,7 +302,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 +++
 
-<!-->
+<!--
 ![Customer offline transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-offline-transactions.png) 
 -->
 
@@ -374,7 +374,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 +++
 
-<!-->
+<!--
 ![Adobe web connector schema highlighting the list of field groups.](../intelligent-re-engagement/images/adobe-web-connector.png) 
 -->
 
