@@ -13,7 +13,7 @@ This tutorial provides steps on how to connect your [!DNL RainFocus] account and
 
 >[!IMPORTANT]
 >
->This documentation page was created by the [!DNL RainFocus] team. For any inquiries or update requests, please contact them directly at clientcare<span>@rainfocus.com or visit the [[!DNL RainFocus] Help Center](https://help.rainfocus.com/hc/en-us)
+>This source connector and documentation page are created and maintained by the [!DNL RainFocus] team. For any inquiries or update requests, please contact them directly at clientcare<span>@rainfocus.com or visit the [[!DNL RainFocus] Help Center](https://help.rainfocus.com/hc/en-us)
 
 ## Getting started
 
