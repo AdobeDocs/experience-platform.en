@@ -62,7 +62,7 @@ Many PATCH operations in [!DNL Platform] APIs use [JSON Pointer](https://tools.i
 
 ## What are the system requirements for [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
-Depending on whether you are using the the UI or API, the following system requirements apply:
+Depending on whether you are using the UI or API, the following system requirements apply:
 
 **For UI based operations:**
 - A modern, standard web browser. While the latest version of [!DNL Chrome] is recommended, current and previous major releases of [!DNL Firefox], [!DNL Internet Explorer], and Safari are also supported.

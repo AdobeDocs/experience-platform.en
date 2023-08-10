@@ -32,4 +32,4 @@ If you want a nested field to always be required in a schema, you must also set 
 
 ## Next steps
 
-This guide covered how to define a required field in the the UI. See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor].
+This guide covered how to define a required field in the UI. See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor].
