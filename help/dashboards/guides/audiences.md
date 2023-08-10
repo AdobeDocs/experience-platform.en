@@ -150,7 +150,7 @@ The [!UICONTROL Audience activation order] widget provides a three-column table 
 
 ### [!UICONTROL Audience overlap] {#audience-overlap}
 
-This widget uses a Venn diagram to visualize the number of people that match the criteria for both audiences. The audiences used for comparison are selected from the widget dropdown menus. The total number of profiles contained within the the relevant segment definition can be seen by hovering over a circle or the intersection of the Venn diagram.
+This widget uses a Venn diagram to visualize the number of people that match the criteria for both audiences. The audiences used for comparison are selected from the widget dropdown menus. The total number of profiles contained within the relevant segment definition can be seen by hovering over a circle or the intersection of the Venn diagram.
 
 This widget enables you to optimize your segmentation strategy by visualizing the similarities in the results of your segment definitions.
 
