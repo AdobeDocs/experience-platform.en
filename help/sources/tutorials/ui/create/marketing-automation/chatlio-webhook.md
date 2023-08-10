@@ -141,7 +141,7 @@ Next, select the **[!DNL Behavior]** tab and add your webhook URL to the *[!DNL 
 
 >[!TIP]
 >
->You can subscribe to a variety of different events for your [!DNL Chatlio] webhook. For more information on the different events, please refer to the the [[!DNL Chatlio] events documentation](https://chatlio.com/docs/webhooks/).
+>You can subscribe to a variety of different events for your [!DNL Chatlio] webhook. For more information on the different events, please refer to the [[!DNL Chatlio] events documentation](https://chatlio.com/docs/webhooks/).
 
 ## Next steps {#next-steps}
 

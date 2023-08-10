@@ -605,4 +605,4 @@ The following is an example of a custom schema that you can add to your source's
 
 ## Next steps
 
-With your source specifications populated, you can proceed to configure the explore specifications for the source that you want to integrate to Platform. See the the document on [configuring explore specifications](./explorespec.md) for more information.
+With your source specifications populated, you can proceed to configure the explore specifications for the source that you want to integrate to Platform. See the document on [configuring explore specifications](./explorespec.md) for more information.

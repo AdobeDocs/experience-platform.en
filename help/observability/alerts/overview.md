@@ -77,7 +77,7 @@ To work with alerts in the Platform UI, you must have the following access contr
 >
 >For more information on how to manage permissions in Platform, refer to the [access control documentation](../../access-control/ui/overview.md).
 
-With the View Alerts permission, can view received alerts by selecting the the bell icon (![Bell Icon](../images/alerts/overview/icon.png)) in the top-right corner.
+With the View Alerts permission, can view received alerts by selecting the bell icon (![Bell Icon](../images/alerts/overview/icon.png)) in the top-right corner.
 
 ![](../images/alerts/overview/ui.png)
 
