@@ -38,7 +38,7 @@ In the [!DNL Experience Platform] UI, select **[!UICONTROL Queries]** in the lef
 ### Enhanced Query Editor toggle {#enhanced-editor-toggle}
 
 >[!CONTEXTUALHELP]
->id="platform_queryService_queryEditor_enhancedEditorToggle"
+>id="platform_queryservice_queryeditor_enhancededitortoggle"
 >title="Enhanced editor toggle"
 >abstract="Toggle between the legacy and enhanced version of the Query Editor. The legacy version is enabled by default, although the enhanced version provides better accessibility and multi-theming support. To learn more about these changes, see the documentation."
 
