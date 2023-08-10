@@ -395,7 +395,7 @@ To create a dataset from a schema, complete the steps below:
 ![A recording of the steps to create a dataset from a schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
 -->
 
->Note 
+>[!NOTE] 
 >
 >Similar to the step to create a schema, you need to enable the dataset to be included in the Real-Time Customer Profile. For more information about enabling the dataset for use in Real-Time Customer Profile, read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
