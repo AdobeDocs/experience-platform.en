@@ -9,7 +9,7 @@ When exporting data from Experience Platform to your destination, you might need
 
 Destination SDK offers tools that you can use to programmatically create, update, or delete audiences in your destination platform.
 
-To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the the guide on how to [use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration).
+To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the guide on how to [use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
 You can configure the audience metadata template via the `/authoring/audience-templates` endpoint. After creating your audience metadata configuration, you can use the `/authoring/destinations` endpoint to configure the `audienceMetadataConfig` section. This section tells your destination what audience metadata it should map to your audience template.
 
