@@ -35,7 +35,7 @@ To navigate to the license usage dashboard within the Platform UI, select **[!UI
 
 ![The License usage dashboard Overview tab, with License usage highlighted in the left navigation sidebar.](../images/license-usage/dashboard-overview.png)
 
-## [!UICONTORL Overview] tab {#overview-tab}
+## [!UICONTROL Overview] tab {#overview-tab}
 
 This dashboard displays all of your licensed Adobe Experience Platform products in a table format. The table provides key information about your license usage across all your available profiles.
 
