@@ -11,19 +11,37 @@ hidefromtoc: true
 >
 >The AI Assistant for Adobe Experience Platform is currently in Alpha. The feature and documentation are subject to change.
 
-The AI Assistant for Adobe Experience Platform is a functionality of the Experience Platform UI that you can use to expedite your understanding of Experience Platform and Real-Time Customer Data Platform concepts. You can use the AI Assistant to query for information regarding your data and metadata. For example, you can ask the AI Assistant for steps on how to create a schema or how to segment an audience. You can also ask the AI Assistant for guidance on concepts such as data is downstream or how objects like datasets, attributes, and schemas relate to each other. 
+The AI Assistant for Adobe Experience Platform is a UI feature that you can use to navigate and understand Experience Platform and Real-Time Customer Data Platform concepts.
 
-You can ask the AI Assistant questions regarding data and audiences. The AI Assistant then provides answers to your questions, based on the documentation, while also providing references that you can then turn to for more information.
+You can query the AI Assistant for information such as:
 
-This document provides information on how you can use the AI Assistant to ask questions and receive answers about an Adobe Experience Platform and Real-Time Customer Data Platform concept relating to data and audiences.
+* Guidance on how to perform tasks pertaining to data and audiences.
+* Statuses and metrics of the existing data objects in your organization.
+* Use case examples and nuances to better understand your data objects, such as segments, schemas, datasets, attributes, and destinations.
+
+This document provides information on how you can access and use the AI Assistant to ask questions and receive answers about Experience Platform and Real-Time CDP concepts.
+
+>[!IMPORTANT]
+>
+>* *AI Assistant uses an automated chatbot. Your use of this automated chatbot constitutes consent that the personal information you provide in the chat session will be collected, used, disclosed, and retained by Adobe and service providers acting on Adobe's behalf in accordance with the [Adobe Privacy Policy](https://www.adobe.com/privacy/policy.html). Please do not provide sensitive personal information (such as financial or health information) in the chatbot.*
+>
+>* *AI Assistant is integrated with Azure OpenAI, and your chatbot inputs are shared with Azure and may be used to improve chatbot performance. Please note that for AI Assistant to work, you must have read access to data within the service*
 
 >[!BEGINSHADEBOX]
 
-**A note about using the AI Assistant for Experience Platform**
+**How does the AI Assistant work?**
 
-*AI Assistant uses an automated chatbot. Your use of this automated chatbot constitutes consent that the personal information you provide in the chat session will be collected, used, disclosed, and retained by Adobe and service providers acting on Adobe's behalf in accordance with the [Adobe Privacy Policy](https://www.adobe.com/privacy/policy.html). Please do not provide sensitive personal information (such as financial or health information) in the chatbot.*
+The AI Assistant responds to your submitted questions by querying a database and then translating data from the database into a human-readable answer.
 
-*AI Assistant is integrated with Azure OpenAI, and your chatbot inputs are shared with Azure and may be used to improve chatbot performance. Please note that for AI Assistant to work, you must have read access to data within the service*
+This internal representation of underlying data is also known as the Knowledge Graph - a comprehensive web of concepts, data, and metadata for a given answer. 
+
+The Knowledge Graph consists of sub-graphs that are referenced whenever queries submitted:
+
+* Customer data and metadata.
+* Customer usage data across various meta-stores.
+* Merged profiles (including IDs, attributes, events, segment memberships) and B2B objects across Real-Time Customer Profile.
+* Data sizes (at rest) and rates (in motion) observed across various time frames (seconds to days).
+* Metadata of system jobs such as ingestion, segmentation, exports, activation, audits, and data governance enforcements.
 
 >[!ENDSHADEBOX]
 
@@ -41,7 +59,7 @@ From here, you can input your question in the text box and query the AI Assistan
 >
 >The following example workflow uses the ExperienceEvent schema creation process to illustrate how you can use the AI Assistant when using the Experience Platform UI.
 
-### STEPS
+### Use the AI Assistant to expedite your schema creation process
 
 Consider a use case in which you are creating a **Device Trade in Event Schema**. During the ExperienceEvent schema creation process, you come across the `eventType` field. At this point, you can either leave your workflow and refer to the the documentation on the [basics of a schema composition](../xdm/schema/composition.md), or you can use the AI Assistant to retrieve immediate answers for your questions. 
 
@@ -116,3 +134,4 @@ You can also query the AI Assistant for use case examples. For example, select *
 ![The given prompt on use cases for campaigns and the answer from the AI Assistant.](./images/ai-assistant/campaigns-use-cases.png)
 
 >[!ENDTABS]
+
