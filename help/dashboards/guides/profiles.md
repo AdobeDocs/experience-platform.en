@@ -367,7 +367,7 @@ See the documentation for more information on the [[!UICONTROL Audiences] [!UICO
 
 ### [!UICONTROL Audience overlap by merge policy] {#audience-overlap-by-merge-policy}
 
-This widget uses a Venn diagram to display the overlap of two selected audiences. The merge policy is chosen from the overview dropdown at the top of the page and the audiences for analysis are selected from two dropdown menus within the widget. The total number of profiles contained within the the relevant segment definition can be seen by hovering over a circle or the intersection.
+This widget uses a Venn diagram to display the overlap of two selected audiences. The merge policy is chosen from the overview dropdown at the top of the page and the audiences for analysis are selected from two dropdown menus within the widget. The total number of profiles contained within the relevant segment definition can be seen by hovering over a circle or the intersection.
 
 As the widget displays the visual crossover of segment definitions, you can optimize your segmentation strategy by studying similarities between your segment definitions.
 
