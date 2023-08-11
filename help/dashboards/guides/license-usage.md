@@ -7,17 +7,17 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 ---
 # License usage dashboard {#license-usage-dashboard}
 
-You can view important information about your organization's license usage through the Adobe Experience Platform [!UICONTROL Licence usage] dashboard. Information displayed here is captured during a daily snapshot of your Platform instance. 
+You can view important information about your organization's license usage through the Adobe Experience Platform [!UICONTROL License usage] dashboard. Information displayed here is captured during a daily snapshot of your Platform instance. 
 
-Licence usage reports provide a high degree of granularity by providing usage metrics for each purchased product, the consolidated usage of metrics all production or development sandboxes, and the usage metric from a specific sandbox.
+License usage reports provide a high degree of granularity by providing usage metrics for each purchased product, the consolidated usage of metrics in all production or development sandboxes, and the usage metric from a specific sandbox.
 
 This guide outlines how to access and work with the license usage dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.  
 
-For a general overview of the Platform UI, please visit the [Experience Platform UI guide](../../landing/ui-guide.md).
+For a general overview of the Platform UI, refer to the [Experience Platform UI guide](../../landing/ui-guide.md).
 
-## [!UICONTROL Licence usage] dashboard data
+## [!UICONTROL License usage] dashboard data
 
-The [!UICONTROL Licence usage] dashboard displays a list of all the Experience Platform products that you have purchased. From this list you can find a snapshot of your organization's license-related data for Experience Platform across any associated sandbox. 
+The [!UICONTROL License usage] dashboard displays a list of all the Experience Platform products that you have purchased. From this list, you can find a snapshot of your organization's license-related data for Experience Platform across any associated sandbox. 
 
 The data in this dashboard is displayed exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the dashboard is not updating in real time.
 
@@ -31,33 +31,33 @@ To navigate to the license usage dashboard within the Platform UI, select **[!UI
 
 >[!NOTE]
 >
->The license usage dashboard is not enabled by default. Users must be granted "[!UICONTROL View License Usage Dashboard]" permission in order to be able to view the dashboard. For steps on granting access permissions for viewing the license usage dashboard, please refer to the [dashboard permissions guide](../permissions.md).
+>The license usage dashboard is not enabled by default. Users must be granted "[!UICONTROL View License Usage Dashboard]" permission to be able to view the dashboard. For steps on granting access permissions for viewing the license usage dashboard, refer to the [dashboard permissions guide](../permissions.md).
 
-![The License usage dashboard Overview tab, with Licence usage highlighted in the left navigation sidebar.](../images/license-usage/dashboard-overview.png)
+![The License usage dashboard Overview tab, with License usage highlighted in the left navigation sidebar.](../images/license-usage/dashboard-overview.png)
 
-## The [!UICONTORL Overview] tab {#overview-tab}
+## [!UICONTORL Overview] tab {#overview-tab}
 
-This dashboard displays all of your licensed Adobe Experience Platform products in a table format. The table provides key information about your licence usage across all your available profiles.
+This dashboard displays all of your licensed Adobe Experience Platform products in a table format. The table provides key information about your license usage across all your available profiles.
 
 <!-- Q) Do users name the products? I assume so based on the QA environment. -->
 
 | Column name  | Description |
 |---|---|
-| **[!UICONTROL Product]**  | ...  |
+| **[!UICONTROL Product]**  | The Adobe solution licensed by your oganization. |
 | **[!UICONTROL Primary Metric]**  | The primary metric used for tracking within for that product.   |
-| **[!UICONTROL Licence Amount]**  | Is a contracted value for the maximum amount of the Primary Metric as agreed in your product licence agreement.  |
+| **[!UICONTROL Licence Amount]**  | Is a contracted value for the maximum amount of the Primary Metric as agreed in your product license agreement.  |
 | **[!UICONTROL Usage]**  | The amount of your primary metric used. This value provides the total usage of that metric across all sandboxes, either production or development. |
 | **[!UICONTROL Usage %]**  | The percentage of your primary metric used according to your license amount. |
 
-The table indicates the primary metric for each product as each product can track numerous metrics. To view more metrics and detailed insights on your product licence usage, select a product name from the list. The *[!UICONTROL Summary]* view for that product appears.
+The table indicates the primary metric for each product, as each product can track numerous metrics. To view more metrics and detailed insights on your product license usage, select a product name from the list. The *[!UICONTROL Summary]* view for that product appears.
 
 ## [!UICONTROL Summary] tab {#summary-tab}
 
-All available metrics are displayed on the [!UICONTROL Summary] tab. The metrics available are dependant on the licenced product. This view provides **a consolidated view of all metrics across all production or development sandboxes**. The same level of analysis is provided for both production and development sandboxes. 
+All available metrics are displayed on the [!UICONTROL Summary] tab. The metrics available are dependent on the licensed product. This view provides **a consolidated view of all metrics across all production or development sandboxes**. The same level of analysis is provided for both production and development sandboxes. 
 
 ![The summary view of a Platform Product that displays all available metrics for that product.]()
 
-On the summary tab, the table includes the *[!UICONTROL Metric]* column. These human readable descriptions indicate all metrics used for that type of sandbox.
+On the summary tab, the table includes the *[!UICONTROL Metric]* column. These human-readable descriptions indicate all metrics used for that type of sandbox.
 
 ### Select a sandbox {#select-sandbox}
 
@@ -71,7 +71,7 @@ Consumption reporting for sandboxes is cumulative for all sandboxes of the same 
 
 >[!WARNING]
 >
->Permission to view the license usage dashboard must be specified at a sandbox level. This means that permission to view the dashboard must be added to each individual sandbox. This limitation will be addressed in a future release. In the meantime, the following workaround is available:
+>Permission to view the license usage dashboard must be specified at a sandbox level. You must add permissions to each individual sandbox to view them within the dashboard. This limitation will be addressed in a future release. In the meantime, the following workaround is available:
 >
 >1. Create a product profile in the Adobe Admin Console.
 >2. Under Permission in the Sandbox category, add all sandboxes you wish to view in the license usage dashboard.
@@ -81,9 +81,9 @@ Consumption reporting for sandboxes is cumulative for all sandboxes of the same 
 
 To see **a particular usage metric from a specific sandbox**, navigate to the [!UICONTROL Details] tab. The [!UICONTROL Details] tab shows all the available sandboxes within either the Production or Development sandboxes. 
 
-![The Details tab.](../images/license-usage/details-tab.png)
+![The Details tab of the License usage dashboard.](../images/license-usage/details-tab.png)
 
-From ths view, you can select the inspect icon (![The inspect icon.](../images/license-usage/inspect-icon.png)) next to a sandbox name to view the visulization for that metric. A dialog opens with a visualisation for that Metric. 
+From ths view, you can select the inspect icon (![The inspect icon.](../images/license-usage/inspect-icon.png)) next to a sandbox name to view the visualization for that metric. A dialog opens with a visualization for that Metric. 
 
 ### Visualizations {#visualizations}
 
@@ -96,7 +96,7 @@ Each visualization widget includes the following aspects:
 
 The line graphs compare usage numbers for your organization to the total available with your organization's licensing and provide a percentage of total usage.
 
-![The visulatisation of a metric.](../images/license-usage/visualization.png)
+![The visualization of a metric.](../images/license-usage/visualization.png)
 
 The look back period of analysis can be adjusted from the dropdown menu. The default value of the last 30 days
 
@@ -114,12 +114,13 @@ The license usage dashboard reports on several key metrics and do not apply to e
 
 <!-- Q)  what other metrics are there to be included? You said that it depends on the product. Can we get a list of all metrics for each product please? -->
 
-* [!UICONTROL Addressable Audience]
-* [!UICONTROL Average profile richness]
-* [!UICONTROL Data scanned per segmentation ratio]
-* [!UICONTROL Total consumed storage]
+- [!UICONTROL Addressable Audience]
+- [!UICONTROL Average profile richness]
+- [!UICONTROL Data scanned per segmentation ratio]
+- [!UICONTROL Total consumed storage]
+- [!UICONTROL Business person profile]
 
-The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased. For detailed definitions of each metric, please reference the appropriate Product Description documentation:
+The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased. For detailed definitions of each metric, refer to the appropriate Product Description documentation:
 
 |License|Product Description|
 |---|---|
@@ -136,6 +137,6 @@ The availability of these metrics and the specific definition of each of these m
 
 ## Next steps
 
-After reading this document, you are able to locate the license usage dashboard and view usage metrics for each purchased product, the consolidated usage of metrics for all production or development sandboxes, and the usage metric from a specific sandbox. You can find more information about available metrics for your organization, based on the licensing your organization has purchased. 
+After reading this document, you are able to locate the license usage dashboard and view usage metrics for each purchased product, for all production or development sandboxes, and for a specific sandbox. You can find more information about available metrics for your organization, based on the licensing your organization has purchased. 
 
 To learn more about other features available in the Experience Platform UI, please refer to the [Platform UI guide](../../landing/ui-guide.md).
