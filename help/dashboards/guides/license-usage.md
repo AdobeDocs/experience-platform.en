@@ -9,7 +9,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 
 You can view important information about your organization's license usage through the Adobe Experience Platform [!UICONTROL License usage] dashboard. Information displayed here is captured during a daily snapshot of your Platform instance. 
 
-License usage reports provide a high degree of granularity by providing usage metrics for each purchased product, the consolidated usage of metrics in all production or development sandboxes, and the usage metric from a specific sandbox.
+License usage reports provide a high degree of granularity over your licence usage metrics. The dashboard provides usage metrics for each purchased product, the consolidated usage of metrics in all production or development sandboxes, and the usage metric from a specific sandbox.
 
 This guide outlines how to access and work with the license usage dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.  
 
@@ -27,7 +27,7 @@ The data in this dashboard is displayed exactly as it appears at the specific po
 
 ## Exploring the license usage dashboard {#explore}
 
-To navigate to the license usage dashboard within the Platform UI, select **[!UICONTROL License usage]** in the left rail. The *[!UICONTROL Overview]* tab opens, displaying a list of available products.
+To navigate to the license usage dashboard within the Platform UI, select **[!UICONTROL License usage]** in the left rail. The [!UICONTROL Overview] tab opens, displaying a list of available products.
 
 >[!NOTE]
 >
@@ -43,21 +43,21 @@ This dashboard displays all of your licensed Adobe Experience Platform products 
 
 | Column name  | Description |
 |---|---|
-| **[!UICONTROL Product]**  | The Adobe solution licensed by your oganization. |
+| **[!UICONTROL Product]**  | The Adobe solution licensed by your organizations. |
 | **[!UICONTROL Primary Metric]**  | The primary metric used for tracking within for that product.   |
-| **[!UICONTROL Licence Amount]**  | Is a contracted value for the maximum amount of the Primary Metric as agreed in your product license agreement.  |
+| **[!UICONTROL Licence Amount]**  | The contracted value for the maximum amount of the Primary Metric as agreed in your product license agreement.  |
 | **[!UICONTROL Usage]**  | The amount of your primary metric used. This value provides the total usage of that metric across all sandboxes, either production or development. |
 | **[!UICONTROL Usage %]**  | The percentage of your primary metric used according to your license amount. |
 
-The table indicates the primary metric for each product, as each product can track numerous metrics. To view more metrics and detailed insights on your product license usage, select a product name from the list. The *[!UICONTROL Summary]* view for that product appears.
+The table indicates the primary metric for each product, as each product can track numerous metrics. To view more metrics and detailed insights on your product license usage, select a product name from the list. The [!UICONTROL Summary] view for that product appears.
 
 ## [!UICONTROL Summary] tab {#summary-tab}
 
-All available metrics are displayed on the [!UICONTROL Summary] tab. The metrics available are dependent on the licensed product. This view provides **a consolidated view of all metrics across all production or development sandboxes**. The same level of analysis is provided for both production and development sandboxes. 
+All available metrics are displayed on the [!UICONTROL Summary] tab. The metrics available depend on the licensed product. This view provides **a consolidated view of all metrics across all production or development sandboxes**. The same level of analysis is provided for both production and development sandboxes. 
 
 ![The summary view of a Platform Product that displays all available metrics for that product.]()
 
-On the summary tab, the table includes the *[!UICONTROL Metric]* column. These human-readable descriptions indicate all metrics used for that type of sandbox.
+On the summary tab, the table includes the [!UICONTROL Metric] column. These human-readable descriptions indicate all metrics used for that type of sandbox.
 
 ### Select a sandbox {#select-sandbox}
 
@@ -83,7 +83,7 @@ To see **a particular usage metric from a specific sandbox**, navigate to the [!
 
 ![The Details tab of the License usage dashboard.](../images/license-usage/details-tab.png)
 
-From ths view, you can select the inspect icon (![The inspect icon.](../images/license-usage/inspect-icon.png)) next to a sandbox name to view the visualization for that metric. A dialog opens with a visualization for that Metric. 
+From this view, you can select ![The inspect icon.](../images/license-usage/inspect-icon.png) next to a sandbox name to view the visualization for that metric. A dialog opens with a visualization for that metric. 
 
 ### Visualizations {#visualizations}
 
@@ -98,7 +98,7 @@ The line graphs compare usage numbers for your organization to the total availab
 
 ![The visualization of a metric.](../images/license-usage/visualization.png)
 
-The look back period of analysis can be adjusted from the dropdown menu. The default value of the last 30 days
+The lookback period of analysis can be adjusted from the dropdown menu. The default value of the last 30 days
 
 To select a date range, you can use the date range dropdown to select the time period to display in the dashboard. There are multiple options available, including the default value of the last 30 days.
 
@@ -139,4 +139,4 @@ The availability of these metrics and the specific definition of each of these m
 
 After reading this document, you are able to locate the license usage dashboard and view usage metrics for each purchased product, for all production or development sandboxes, and for a specific sandbox. You can find more information about available metrics for your organization, based on the licensing your organization has purchased. 
 
-To learn more about other features available in the Experience Platform UI, please refer to the [Platform UI guide](../../landing/ui-guide.md).
+To learn more about other features available in the Experience Platform UI, refer to the [Platform UI guide](../../landing/ui-guide.md).
