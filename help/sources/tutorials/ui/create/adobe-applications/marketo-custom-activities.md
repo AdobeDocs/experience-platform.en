@@ -121,7 +121,7 @@ Navigate through the source data structure and find the custom activity field th
 
 ![The source data structure.](../../../../images/tutorials/create/marketo-custom-activities/select-new-mapping-field.png)
 
-To add a target field, select the schema icon ![schema icon](../../../../images/tutorials/create/marketo-custom-activities/schema-icon.png) and then select the the custom activity fields from the target schema.
+To add a target field, select the schema icon ![schema icon](../../../../images/tutorials/create/marketo-custom-activities/schema-icon.png) and then select the custom activity fields from the target schema.
 
 ![The target schema structure.](../../../../images/tutorials/create/marketo-custom-activities/add-target-mapping-field.png)
 

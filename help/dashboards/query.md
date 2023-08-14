@@ -76,12 +76,8 @@ To understand the full schema of the DIM destination dataset, you can preview an
 
 ![A preview of the DIM_Destination dataset.](images/query/destinations-metadata.png)
 
-## (Beta) Customer Data Platform (CDP) insights reports
+## Customer Data Platform (CDP) insights reports
 
->[!IMPORTANT]
->
->The CDP Insights Data Models feature is in beta. Its features and documentation are subject to change.
- 
 The CDP Insights Data Models feature exposes the SQL that powers the insights for various profile, destination and segmentation widgets. You can customize these SQl query templates to create CDP reports for your marketing and KPI use cases.
 
 CDP reporting provides insights into your profile data and its relationship with audiences and destinations. See the CDP Insights Data Model documentation for detailed information on how to [apply the he CDP Insights Data Models to your particular KPI use cases](./cdp-insights-data-model.md). 
