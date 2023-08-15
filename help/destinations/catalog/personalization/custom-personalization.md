@@ -39,13 +39,13 @@ This integration is powered by the [Adobe Experience Platform Web SDK](../../../
 
 This section describes all the audiences that you can export to this destination.
 
-All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
-Additionally, this destination also supports the activation of the audiences described in the table below.
+*Additionally*, this destination also supports the activation of the audiences described in the table below.
 
 | Audience type | Description | 
 ---------|----------|
-| Custom uploads | Audiences ingested into Experience Platform from CSV files. |
+| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -53,7 +53,7 @@ Additionally, this destination also supports the activation of the audiences des
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!DNL Profile request]** | You are requesting all the audiences that are mapped in the custom personalization destination for a single profile. Different custom personalization destinations can be set up for different [Adobe Data Collection datastreams](../../../edge/datastreams/overview.md).|
+| Export type | **[!DNL Profile request]** | You are requesting all the audiences that are mapped in the custom personalization destination for a single profile. Different custom personalization destinations can be set up for different [Adobe Data Collection datastreams](../../../datastreams/overview.md).|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 ## Connect to the destination {#connect}
@@ -62,7 +62,7 @@ Additionally, this destination also supports the activation of the audiences des
 >id="platform_destinations_custom_personalization_datastream"
 >title="About datastream IDs"
 >abstract="This option determines in which data collection datastream the audiences will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. You must configure a datastream before you can configure your destination."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Learn how to configure a datastream"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en" text="Learn how to configure a datastream"
 
 >[!IMPORTANT]
 > 
@@ -77,7 +77,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
 *  **[!UICONTROL Integration alias]**: This value is sent to the Experience Platform Web SDK as a JSON object name. 
-*  **[!UICONTROL Datastream ID]**: This determines in which Data Collection datastream the audiences will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../edge/datastreams/overview.md) for more details.
+*  **[!UICONTROL Datastream ID]**: This determines in which Data Collection datastream the audiences will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../datastreams/overview.md) for more details.
 
 ### Enable alerts {#enable-alerts}
 

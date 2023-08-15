@@ -72,7 +72,7 @@ The workEmail attribute can be found as a top-level field group in the B2B perso
 
 Profiles will be best matched only if the match score is over an internal confidence threshold. The results are saved in a new system dataset of the existing account person relation XDM. 
 
-The lead to account matching service runs when a new person profile snapshot becomes available which is once every 24 hours. See the documentation for more information about the the [configuration of lead to account matching](/help/rtcdp/accounts/account-profile-ui-guide.md).
+The lead to account matching service runs when a new person profile snapshot becomes available which is once every 24 hours. See the documentation for more information about the [configuration of lead to account matching](/help/rtcdp/accounts/account-profile-ui-guide.md).
 
 ## How to view lead to account matching output {#how-to-view}
 

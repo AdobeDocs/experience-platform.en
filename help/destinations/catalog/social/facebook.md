@@ -46,13 +46,13 @@ Next, they can use their offline data including associated membership IDs and cu
 
 This section describes all the audiences that you can export to this destination.
 
-All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
-Additionally, this destination also supports the activation of the audiences described in the table below.
+*Additionally*, this destination also supports the activation of the audiences described in the table below.
 
 | Audience type | Description | 
 ---------|----------|
-| Custom uploads | Audiences ingested into Experience Platform from CSV files. |
+| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -71,6 +71,7 @@ Refer to the table below for information about the destination export type and f
 
 Before you can send your audiences to [!DNL Facebook], make sure you meet the following requirements:
 
+* Your [!DNL Facebook] user account must have full access to the [!DNL Facebook Business Account] which owns the Ad account that you will be using.
 * Your [!DNL Facebook] user account must have the **[!DNL Manage campaigns]** permission enabled for the Ad account that you plan to use.
 * The **Adobe Experience Cloud** business account must be added as an advertising partner in your [!DNL Facebook Ad Account]. Use `business ID=206617933627973`. See [Add Partners to Your Business Manager](https://www.facebook.com/business/help/1717412048538897) in the Facebook documentation for details.
     >[!IMPORTANT]

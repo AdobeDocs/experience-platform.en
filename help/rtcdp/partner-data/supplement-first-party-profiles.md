@@ -13,7 +13,7 @@ badgeBeta: label="Beta" type="informative" before-title="true"
 
 Supplement first-party profiles with attributes from trusted data partners to improve your data foundation and gain new insights into your customer base and gain better audience optimization.
 
-![Enrich profiles with partner-provided attributes use case high-level visual overview.](/help/rtcdp/assets/partner-data/enrichment-use-case-overview.png)
+![Enrich profiles with partner-provided attributes use case high-level visual overview.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
@@ -30,7 +30,7 @@ As you consider supplementing your own first-party profiles with attributes from
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
-![Enrich profiles with partner-provided attributes use case high-level visual overview.](/help/rtcdp/assets/partner-data/enrichment-use-case-steps.png)
+![Enrich profiles with partner-provided attributes use case high-level visual overview.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)
 
 1. As a **customer**, you license attributes from the **data partner**.
 2. As a **customer**, you extend your profile data and governance model to accommodate **partner**-provided attributes.

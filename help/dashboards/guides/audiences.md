@@ -67,6 +67,20 @@ The date and time of the most recent snapshot are displayed at the top of the [!
 
 ![The Audiences Overview tab with a widget timestamp highlighted.](../images/audiences/widget-timestamp.png)
 
+## Default widgets {#default-widgets}
+
+A default widget load-out is provided for all new instances of Adobe Experience Platform that highlights the latest available insights from your data. The following widgets are pre-configured in your segments view from the outset. Full details on the purpose and function of the widgets can be found in their respective sections.
+
+* [[!UICONTROL Audience size]](#audience-size)
+* [[!UICONTROL Audience size change trend]](#audience-size-change-trend)
+* [[!UICONTROL Identity overlap]](#identity-overlap)
+* [[!UICONTROL Profiles by identity]](#profiles-by-identity)
+
+>[!NOTE]
+>
+>As of July 26th 2023, [!UICONTROL Profiles], [!UICONTROL Audiences], and [!UICONTROL Destinations] Overview dashboards have been reset to a new default widget load-out for all users who did not modify their views in the previous six months. 
+>Refer to the documentation in the [Profiles](./profiles.md#default-widgets) and [Destinations](./destinations.md#default-widgets) default widget sections for details on which widgets are included as part of the default widget load-outs. You can continue to customize your dashboard widgets as before.
+
 ## Standard widgets {#standard-widgets}
 
 Adobe provides multiple standard widgets that you can use to visualize different metrics related to your audiences. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [Widget library overview](../customize/widget-library.md).
@@ -136,7 +150,7 @@ The [!UICONTROL Audience activation order] widget provides a three-column table 
 
 ### [!UICONTROL Audience overlap] {#audience-overlap}
 
-This widget uses a Venn diagram to visualize the number of people that match the criteria for both audiences. The audiences used for comparison are selected from the widget dropdown menus. The total number of profiles contained within the the relevant segment definition can be seen by hovering over a circle or the intersection of the Venn diagram.
+This widget uses a Venn diagram to visualize the number of people that match the criteria for both audiences. The audiences used for comparison are selected from the widget dropdown menus. The total number of profiles contained within the relevant segment definition can be seen by hovering over a circle or the intersection of the Venn diagram.
 
 This widget enables you to optimize your segmentation strategy by visualizing the similarities in the results of your segment definitions.
 

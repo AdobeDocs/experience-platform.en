@@ -10,7 +10,7 @@ Whereas in the past there were different functions to distinguish between a page
 
 ## Sending a page view
 
-You can specify a page view by setting the the `web.webPageDetails.pageViews.value=1` variable.
+You can specify a page view by setting the `web.webPageDetails.pageViews.value=1` variable.
 
 ```javascript
 alloy("sendEvent", {
