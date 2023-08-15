@@ -187,8 +187,8 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
 |`data.schema.version` | The version of the schema. This value must be set `application/vnd.adobe.xed-full+json;version=1`, which returns the latest minor version of the schema. |
-| `params.dataSetId` | The ID of the target dataset. |
-| `connectionSpec.id` | The connection spec ID used to connect to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `params.dataSetId` | The ID of the target dataset generated in the previous step. **Note**: You must provide a valid dataset ID when creating a target connection. An invalid dataset ID will result in an error. |
+| `connectionSpec.id` | The connection spec ID used to connect to the data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Response**
 

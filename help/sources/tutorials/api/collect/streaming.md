@@ -240,9 +240,9 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `connectionSpec.id` | The connection specification ID used to connect to the [!DNL Data Lake]. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | The specified format of the data you are bringing to [!DNL Data Lake]. |
-| `params.dataSetId` | The ID of the target dataset retrieved in the previous step. |
+| `data.format` | The specified format of the data you are bringing to data lake. |
+| `params.dataSetId` | The ID of the target dataset generated in the previous step. **Note**: You must provide a valid dataset ID when creating a target connection. An invalid dataset ID will result in an error. |
+| `connectionSpec.id` | The connection spec ID used to connect to the data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Response**
 

@@ -13,7 +13,7 @@ exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 
 | Property | Data type | Description |
 | --- | --- | --- |
-| `namespace` | Object | An object that contains a single string field (`code`), which indicates the the namespace associated with the provided `id` attribute. |
+| `namespace` | Object | An object that contains a single string field (`code`), which indicates the namespace associated with the provided `id` attribute. |
 | `authenticatedState` | String | The authenticated state for this identity at the time of the observed Experience Event. See the [appendix](#authenticatedState) for accepted values and definitions. |
 | `id` | String | The identity of the consumer in the related namespace. |
 | `primary` | Boolean | Indicates whether this is the primary identity for the individual. Each individual can only have one primary identity. |

@@ -74,7 +74,7 @@ You can add additional fields to this display by selecting ![the filter attribut
 | [!UICONTROL Tags] | The user-defined tags that belong to the audience. More information about these tags can be found in the [section on tags](#tags). |
 | [!UICONTROL Breakdown] | The profile status breakdown for the audience. A more detailed description of this profile status breakdown can be found below. |
 | [!UICONTROL Lifecycle status] | The status of the audience. Possible values for this field include `Draft`, `Published`, and `Archived`. |
-| [!UICONTROL Update frequency] | A value that states how often the audience's data is updated. Possible values for this field include `On Demand`, `Scheduled`, and `Continuous`. |
+| [!UICONTROL Update frequency] | A value that states how often the audience's data is updated. Possible values for this field include `On Demand` (Batch), `Scheduled` (Streaming), and `Continuous` (Edge). |
 | [!UICONTROL Last updated by] | The name of the person who last updated the audience. |
 | [!UICONTROL Description] | The description of the audience. |
 | [!UICONTROL Created by] | The name of the person who created the audience. |
@@ -119,7 +119,7 @@ Selecting **[!UICONTROL Create audience]** will let you create an audience. To l
 >
 > You will **not** be able to delete an audience that is used in a destination activation.
 
-### Filtering and tagging {#manage-audiences}
+### Filtering, folders, and tagging {#manage-audiences}
 
 To improve your work efficiency, you can search for existing audiences, add user-defined tags to audiences, put audiences in folders, and filter the displayed audiences.
 

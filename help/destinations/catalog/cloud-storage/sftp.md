@@ -7,17 +7,9 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 
 ## Destination changelog {#changelog}
 
->[!IMPORTANT]
->
->With the beta release of the export datasets functionality and the improved file export functionality, you may now be seeing two [!DNL SFTP] cards in the destinations catalog.
->* If you are already exporting files to the **[!UICONTROL SFTP]** destination: Please create new dataflows to the new **[!UICONTROL SFTP beta]** destination.
->* If you have not yet created any dataflows to the **[!UICONTROL SFTP]** destination, use the new **[!UICONTROL SFTP beta]** card to export files to **[!UICONTROL SFTP]**.
+With the July 2023 Experience Platform release, the SFTP destination provides new functionality, as listed below:
 
-![Image of the two SFTP destination cards in a side-by-side view.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
-
-Improvements in the new [!DNL SFTP] destination card include:
-
-* [Dataset export support](/help/destinations/ui/export-datasets.md).
+* [!BADGE Beta]{type=Informative} [Dataset export support](/help/destinations/ui/export-datasets.md).
 * Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -39,13 +31,13 @@ Create a live outbound connection to your SFTP server to periodically export del
 
 This section describes all the audiences that you can export to this destination.
 
-All destinations support the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
-Additionally, this destination also supports the activation of the audiences described in the table below.
+*Additionally*, this destination also supports the activation of the audiences described in the table below.
 
 | Audience type | Description | 
 ---------|----------|
-| Custom uploads | Audiences ingested into Experience Platform from CSV files. |
+| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -80,7 +72,7 @@ To connect to this destination, follow the steps described in the [destination c
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="Private SSH key"
->abstract="The private SSH key must be formatted as a Base64-encoded string and must not be password-protected."
+>abstract="The private SSH key must be an RSA-formatted, Base64-encoded string, and must not be password-protected."
 
 If you select the **[!UICONTROL SFTP with password]** authentication type to connect to your SFTP location:
 
@@ -102,7 +94,7 @@ If you select the **[!UICONTROL SFTP with SSH key]** authentication type to conn
 * **[!UICONTROL Domain]**: Fill in the IP address or the domain name of your SFTP account
 * **[!UICONTROL Port]**: The port used by your SFTP storage location;
 * **[!UICONTROL Username]**: The username to log into your SFTP storage location;
-* **[!UICONTROL SSH Key]**: The private SSH key used to log into your SFTP storage location. The private key must be formatted as a Base64-encoded string and must not be password-protected.
+* **[!UICONTROL SSH Key]**: The private SSH key used to log into your SFTP storage location. The private key must be an RSA-formatted, Base64-encoded string, and must not be password-protected.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
     ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -116,9 +108,9 @@ After establishing the authentication connection to the SFTP location, provide t
 * **[!UICONTROL Name]**: enter a name that helps you identify this destination in the Experience Platform user interface;
 * **[!UICONTROL Description]**: enter a description for this destination;
 * **[!UICONTROL Folder path]**: enter the path to the folder in your SFTP location where the files will be exported.
-* **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL SFTP beta]** destination. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files. This option is only available for the **[!UICONTROL SFTP beta]** destination.
-* **[!UICONTROL Include manifest file]**: toggle this option on if you'd like the exports to include a manifest JSON file that contains information abut the export location, export size, and more. This option is only available for the **[!UICONTROL SFTP beta]** destination.
+* **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files.
+* **[!UICONTROL Include manifest file]**: toggle this option on if you'd like the exports to include a manifest JSON file that contains information abut the export location, export size, and more.
 
 ## Activate audiences to this destination {#activate}
 
