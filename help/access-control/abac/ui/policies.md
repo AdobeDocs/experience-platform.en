@@ -116,11 +116,11 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 >
 >By default all Sandboxes are added to a policy.
 
-To configure a policy for a selected sandbox, select the policy from the **[!UICONTROL Policies]** tab.
+To view sandboxes associated to a policy, select the policy from the **[!UICONTROL Policies]** tab.
 
 ![The policies page showing a list of existing policies available.](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-Nex, select the policy, then select the **[!UICONTROL Sandboxes]** tab. 
+Next, select the policy, then select the **[!UICONTROL Sandboxes]** tab. A list of sandboxes associated with the policy are displayed.
 
 ![The policies page showing a list of existing policies available.](../../images/flac-ui/abac-policies-sandboxes-tab.png)
 
@@ -142,7 +142,7 @@ The **[!UICONTROL Enable Auto-include]** dialog appears prompting you to confirm
 
 From the **[!UICONTROL Sandboxes]** tab, select **[!UICONTROL Add Sandboxes]** to select sandboxes that this policy will apply to.
 
-![The [!UICONTROL Sandboxes] tab showing a list of sandboxes added to the policy.](../../images/flac-ui/abac-policies-sandboxes-tab.png)
+![The [!UICONTROL Sandboxes] tab showing a list of sandboxes added to the policy.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
 
 A list of sandboxes appears. Select the sandbox you would like to add from the list. Alternatively, use the search bar to search for the sandbox. Select **[!UICONTROL Save]**.
 
