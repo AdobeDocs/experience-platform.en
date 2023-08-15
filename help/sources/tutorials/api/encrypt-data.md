@@ -329,4 +329,4 @@ A successful response returns the ID (`id`) of the newly created dataflow for yo
 
 ## Next steps
 
-By following this tutorial, you have created an encryption key pair for your cloud storage data, and a dataflow to ingested your encrypted data using the [!DNL Flow Service API]. For status updates on your dataflow's completeness, errors, and metrics, read the the guide on [monitoring your dataflow using the [!DNL Flow Service] API](./monitor.md).
+By following this tutorial, you have created an encryption key pair for your cloud storage data, and a dataflow to ingested your encrypted data using the [!DNL Flow Service API]. For status updates on your dataflow's completeness, errors, and metrics, read the guide on [monitoring your dataflow using the [!DNL Flow Service] API](./monitor.md).
