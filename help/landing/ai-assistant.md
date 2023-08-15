@@ -23,9 +23,9 @@ This document provides information on how you can access and use the AI Assistan
 
 >[!IMPORTANT]
 >
->* *AI Assistant uses an automated chatbot. Your use of this automated chatbot constitutes consent that the personal information you provide in the chat session will be collected, used, disclosed, and retained by Adobe and service providers acting on Adobe's behalf in accordance with the [Adobe Privacy Policy](https://www.adobe.com/privacy/policy.html). Please do not provide sensitive personal information (such as financial or health information) in the chatbot.*
+>* *AI Assistant uses an automated chatbot. Your use of this automated chatbot constitutes consent that the information you provide in the chat session will be collected, used, disclosed, and retained by Adobe and service providers acting on Adobe's behalf in accordance with the terms of Adobe's Customer Feedback Program (as amended). Please do not provide any personal information about yourself or other parties (including your name or contact information) in the chatbot.*
 >
->* *AI Assistant is integrated with Azure OpenAI, and your chatbot inputs are shared with Azure and may be used to improve chatbot performance. Please note that for AI Assistant to work, you must have read access to data within the service*
+>* *Your AI Assistant chatbot inputs may be retained for up to 18 months and used to improve chatbot performance. Before accessing AI Assistant, you must have read access to data within the service.*
 
 >[!BEGINSHADEBOX]
 
@@ -42,6 +42,17 @@ The Knowledge Graph consists of sub-graphs that are referenced whenever queries 
 * Merged profiles (including IDs, attributes, events, segment memberships) and B2B objects across Real-Time Customer Profile.
 * Data sizes (at rest) and rates (in motion) observed across various time frames (seconds to days).
 * Metadata of system jobs such as ingestion, segmentation, exports, activation, audits, and data governance enforcements.
+
+There are two kinds of questions to consider before querying the AI Assistant:
+
+* **Concept Questions**: Concept questions are about Adobe concepts related to data or audiences. Some examples of concept questions include:
+  * What is the difference between batch and streaming segmentation?
+  * Are there industry data models and how do I use them?
+  * What is Real-Time CDP best used for?
+* **Usage Questions**: Usage questions are about the data objects inside your organization. Some examples of usage questions include:
+  * How many datasets do I have?
+  * How many schema attributes have never been used?
+  * Which segments have been activated?
 
 >[!ENDSHADEBOX]
 
@@ -95,7 +106,7 @@ Select the thumbs up icon to provide feedback on what went well with your experi
 
 >[!TAB Thumbs down]
 
-Select the thumbs down icon to provide feedback on what could be improved upon based on your experience with the AI Assistant.
+Select the thumbs down icon to provide feedback on what could be improved upon based on your experience with the AI Assistant. During this step, you can also provide specific comments regarding your experience. Feedback provided in the comments is reviewed daily.
 
 ![The negative feedback window.](./images/ai-assistant/negative-feedback.png)
 
@@ -135,3 +146,110 @@ You can also query the AI Assistant for use case examples. For example, select *
 
 >[!ENDTABS]
 
+## Appendix {#appendix}
+
+Refer to this section for additional information on the AI Assistant for Experience Platform.
+
+### Example questions
+
++++Segments
+
+* Are there duplicate segments?
+* Show me all streaming segments.
+* Is Segment with segment id {SEGMENT_ID} evaluated in Batch OR Stream?
+* Which Segments are duplicates?
+* How many Segments are Streaming types?
+* How many segments are there in total?
+* Are there any segments with the same name but different IDs?
+* What is the distribution of evaluation methods (batch, edge, streaming) across segments? 
+* Show me a list of segments that were last modified in the last month.  
+* Which segments have been modified in the last week?  
+* Are there any segments that haven't been modified in the last six months?
+* List segments that were created in the last year.
+* Show me segments that were last modified before today.  
+* Are there any patterns or trends in segment creation dates over the past year?
+* Can you identify segments that have not been modified since their creation?  
+* Are there any segments that have not been modified since their creation?  
+* What is the trend in segment creation over time? 
+* What is the distribution of segment creation dates?
+* What is the distribution of segment modification dates?
+* What segments have the most users?
+* What segments have the most profiles?
+* What segments have the fewest users?
+* What segments have the least profiles?
+* List all batch segments.
+* List all edge segments.
+* What segments are activated?
+* What segments are forwarded to Facebook?
+* Is the APAC Customers segment batch or streaming?
+* How many profiles does the Active Work segment have?
+* Do any of my segments have 0 profiles?
+* What datasets are impacting the bronze loyalty segment?
+* Which Segments use "gender" XDM fields?
+* Which populated XDM fields occur in Streaming Segments?
+* How many XDM fields are there across all Segment Definitions?
+* What segments do the professional users dataset influence?
+* Which segments are forwarded to HTTP API?
+* Of the Segments that are activated, which are activated to the most number of Destination types?
+* What is the total count of activated segments?
+* How many Segments are activated?
+* How many duplicate Segments are activated?
+* How many segments are activated for each destination?
+* Which segments are activated to 0, 1 or multiple destinations? Show the distribution.
+* Which Segments are activated to the most number of Destinations?
+* What duplicate segments are activated?
+* What segments are activated to Adobe Target?
+* Which merge policies are used for which segments?
+* How many XDM schemas are defined?
+* What are the most recently created schemas?
+* What are the different types of schemas, and what are their counts?
+* What schema does the Segment Ingestion dataset use?
+* Which schemas are not used by any datasets?
+
++++
+
++++Destinations
+
+* How many Destinations are present?
+* What are the most recently created Destinations?
+* What destinations are associated with each segment?
+
++++
+
++++Sources
+
+* How many Sources have been created?
+* What are the most recently created Sources?
+* How many Sources are available, broken down by category?
+* Can I create a source connection from S3?
+* What sources contributed to the Mutual365 dataset?
+
++++
+
++++Datasets
+
+* How many datasets are there?
+* What are the most recently created datasets?
+* What datasets are enabled for unified profile?
+* Is there a TTL set for the Segment Ingestion dataset?
+* What is the TTL for the Professional users dataset?
+* What datasets use the Professional Users schema?
+
++++
+
++++Attributes
+
+* What fields and attributes are most commonly used across datasets?
+* What fields and attributes are most commonly used across schemas?
+* What fields and attributes are used in the Professional Users schema?
+* List the attributes used for this segment with id {SEGMENT_ID}.
+* How many XDM fields are used in 2+ Segments?
+* Which fields are most commonly used across segments?
+* Are there any fields that are used in only one segment?
+* What attributes are used for the Bronze loyalty segment?
+* What attributes are not used in any segment?
+* What attributes are most commonly used in segments?  
+
++++
+
+### Limitations
