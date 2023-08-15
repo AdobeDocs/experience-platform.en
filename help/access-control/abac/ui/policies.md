@@ -114,13 +114,13 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 >[!NOTE]
 >
->By default all Sandboxes are added to a policy.
+>By default all sandboxes are added to a policy.
 
 To view sandboxes associated to a policy, select the policy from the **[!UICONTROL Policies]** tab.
 
 ![The policies page showing a list of existing policies available.](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-Next, select the policy, then select the **[!UICONTROL Sandboxes]** tab. A list of sandboxes associated with the policy are displayed.
+Next, select the policy, then select **[!UICONTROL Sandboxes]** tab. A list of sandboxes associated with the policy are displayed.
 
 ![The policies page showing a list of existing policies available.](../../images/flac-ui/abac-policies-sandboxes-tab.png)
 
