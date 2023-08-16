@@ -112,7 +112,7 @@ Select the flag icon to provide further reports on your experience using the AI 
 
 >[!ENDTABS]
 
-### Ideas to get started
+<!-- ### Ideas to get started
 
 The AI Assistant for Experience Platform also provides you with prompts that you can use to get started with Experience Platform.
 
@@ -138,9 +138,9 @@ You can also query the AI Assistant for use case examples. For example, select *
 
 ![The given prompt on use cases for campaigns and the answer from the AI Assistant.](./images/ai-assistant/campaigns-use-cases.png)
 
->[!ENDTABS]
+>[!ENDTABS] -->
 
-## Appendix {#appendix}
+## Additional information 
 
 Refer to this section for additional information on the AI Assistant for Experience Platform.
 
@@ -248,19 +248,21 @@ Refer to this section for additional information on the AI Assistant for Experie
 
 ### Scope
 
-Based on internal testing, the AI Assistant is 48% accurate and 37% partially accurate regarding **unambiguous** documentation questions based on Real-Time Customer Data Platform and Audiences. Questions submitted outside of this scope will have dramatically lower correctness due to either the documentation not being part of the index or the documentation retrieval model not being trained in that area.
+The AI Assistant can answer queries based on the documentation and your data usage.
 
-Currently, the documentation index contains:
+#### Documentation
+
+You can ask documentation questions based on Real-Time Customer Data Platform and Audiences. Currently, the documentation index contains:
 
 * Adobe Experience Platform (Real-Time CDP and Audiences)
 * Adobe Journey Optimizer
 * Customer Journey Analytics
 
-The documentation retrieval model is trained on Experience Platform (Real-Time CDP and Audiences).
+The documentation retrieval model is trained on Experience Platform (Real-Time CDP and Audiences). Questions regarding Creative Cloud or non-Adobe topics cannot be answered.
 
-### Usage data scope
+#### Data usage
 
-You can ask the AI Assistant questions about your usage data in the following domains: 
+You can ask the AI Assistant questions about your data usage in the following domains: 
 
 * Attributes
 * Datasets
@@ -271,29 +273,11 @@ You can ask the AI Assistant questions about your usage data in the following do
 
 >[!TIP]
 >
->You may need it to format your questions like: "When was the segment with the title {TITLE} created?" instead of "When was the {TITLE} segment created?"
+>* The documentation in the AI Assistant's index is updated periodically.
+>* For usage data queries, answers may not reflect the current state in the UI. The data backing these questions is updated every 12 to 24 hours.
+>* You may need it to format your questions like: "When was the segment with the title {TITLE} created?" instead of "When was the {TITLE} segment created?"
 
-Currently, you can only ask questions regarding data usage within Experience Platform. This is because you must be within an active sandbox in order to ask data usage questions.
-
-### Questions may be answered with the wrong information source
-
-There are instances when your question about your usage data can result in an answer based on the documentation. This is because the AI Assistant can incorrectly route your question to the wrong information source. You can prevent this by:
-
-* Rephrasing your question to use more SQL-like language
-* Explicitly calling out the information source to use.
-
-Read the table below for examples:
-
-| Bad question | Good question | Notes |
-| --- | --- | --- |
-| What is my biggest segment? | What is my biggest segment? Using data. | Explicitly tell the AI Assistant that you want the answer to be based on data. |
-| What is my biggest segment? | List my biggest segment. | There are instances where a "what..." question can be mistaken for a documentation-based question. Using a command like "list" is a stronger indicator that you are asking a question with data in context. |
-| How many datasets do I have? | Count my datasets. | While the original question segments, it does not work with datasets. |
-
-### Answers may be stale
-
-* The documentation in the AI Assistant's index is updated periodically.
-* For usage data queries, answers may not reflect the current state in the UI. The data backing these questions is updated every 12 to 24 hours.
+Currently, you can only ask questions regarding data usage within Experience Platform, because you must be within an active sandbox in order to ask data usage questions.
 
 ### Conversational experience
 
@@ -307,17 +291,39 @@ The AI Assistant currently cannot reference prior discussions as context for a g
 
 | Ambiguous question | Clear question | Note |
 | --- | --- | --- |
-| | | |
+| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of them?"</li></ul>| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of **segments**?"</li></ul> | The AI Assistant cannot infer what "them" means. |
+| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you elaborate more?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Explain what a segment is in depth"</li></ul> | The AI Assistant cannot intelligently reference documentation based on "more". |
+| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of one?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of a segment?"</li></ul> | The AI Assistant cannot infer what you want an example of.|
+| <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "How does it compare to a streaming segment?"</li></ul> | <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "Can you compare a streaming segment to a batch segment?"</li></ul> | The AI Assistant cannot infer what "it" is referring to and thus cannot compare the streaming segment. |
+| <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of them use Facebook as a destination?"</li></ul> | <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of the segments that I have are using Facebook as a destination?"</li></ul> | The AI Assistant is cannot infer what "them" is referring to. |
+
+{style="table-layout:auto"}
 
 >[!TAB Unable to infer context from a page]
 
+When asking the AI Assistant about a particular element of the Experience Platform UI page that you are on, you must clearly define the specific element within your question. 
+
+| Ambiguous question | Clear question | Note |
+| --- | --- | --- |
+| "What does this do?" | "What does {PAGE_NAME} do? | The AI Assistant cannot infer what "this" is referring to. You must provide the specific page element that you are querying about. |
+| "Why won't it save?" | "Why can't I save a new sandbox called {NAME}?" | The AI Assistant cannot infer what "it" is referring to and cannot know that you are having issues with an entity. |
+
+{style="table-layout:auto"}
+
+Furthermore, the AI Assistant can only answer questions regarding error messages, given that the error is documented in Experience League.
+
 >[!TAB Ambiguity]
 
+You must phrase your questions clearly and scope them within a product, application, or domain, as the AI Assistant currently cannot disambiguate questions.
+
+| Ambiguous question | Clear question | Note |
+| --- | --- | --- |
+| "How do I create a filter? | How do I create a filter in Profile Query Language? | You must specify the feature that which you are filtering for because a variety of Experience Platform features support filtering. |
+| "How do I get started? | How do I get started using destinations? | You must provide clarity on your goals and use case because overly broad concepts may result in generic or unnecessarily specific answers. |
+
+{style="table-layout:auto"}
+
 >[!ENDTABS]
-
-### Non-Experience Platform questions
-
-You can use the AI Assistant for questions about Experience Platform concepts, but not Creative Cloud or non-Adobe questions.
 
 ### Limited small talk
 
@@ -333,7 +339,19 @@ The AI Assistant may give an inaccurate impression of what it can do. It may ans
 | "Do you know **x** language?" | The AI Assistant currently only supports English, but may answer "yes" due to the underlying model being able to support it. |
 | "Can you do...?" | The AI Assistant may answer yes, even though it cannot. |
 
-### Public entities
+### Tips
 
-The AI Assistant currently relies on Azure's content filtering. Asking ideation questions about other public entities (companies, people, places etc.) should be refrained from.
+#### Questions may be answered with the wrong information source
 
+There are instances when your question about your usage data can result in an answer based on the documentation. This is because the AI Assistant can incorrectly route your question to the wrong information source. You can prevent this by:
+
+* Rephrasing your question to use more SQL-like language
+* Explicitly calling out the information source to use.
+
+Read the table below for examples:
+
+| Bad question | Good question | Notes |
+| --- | --- | --- |
+| What is my biggest segment? | What is my biggest segment? Using data. | Explicitly tell the AI Assistant that you want the answer to be based on data. |
+| What is my biggest segment? | List my biggest segment. | There are instances where a "what..." question can be mistaken for a documentation-based question. Using a command like "list" is a stronger indicator that you are asking a question with data in context. |
+| How many datasets do I have? | Count my datasets. | While the original question segments, it does not work with datasets. |
