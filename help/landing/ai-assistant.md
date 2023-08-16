@@ -21,12 +21,6 @@ You can query the AI Assistant for information such as:
 
 This document provides information on how you can access and use the AI Assistant to ask questions and receive answers about Experience Platform and Real-Time CDP concepts.
 
->[!IMPORTANT]
->
->* *AI Assistant uses an automated chatbot. Your use of this automated chatbot constitutes consent that the information you provide in the chat session will be collected, used, disclosed, and retained by Adobe and service providers acting on Adobe's behalf in accordance with the terms of Adobe's Customer Feedback Program (as amended). Please do not provide any personal information about yourself or other parties (including your name or contact information) in the chatbot.*
->
->* *Your AI Assistant chatbot inputs may be retained for up to 18 months and used to improve chatbot performance. Before accessing AI Assistant, you must have read access to data within the service.*
-
 >[!BEGINSHADEBOX]
 
 **How does the AI Assistant work?**
@@ -253,3 +247,94 @@ Refer to this section for additional information on the AI Assistant for Experie
 +++
 
 ### Limitations
+
+The following is a list of limitations to the current iteration of the AI Assistant:
+
+#### Documentation scope
+
+Based on internal testing, the AI Assistant is 48% accurate and 37% partially accurate regarding **unambiguous** documentation questions based on Real-Time Customer Data Platform and Audiences. Questions submitted outside of this scope will have dramatically lower correctness due to either the documentation not being part of the index or the documentation retrieval model not being trained in that area.
+
+Currently, the documentation index contains:
+
+* Adobe Experience Platform (Real-Time CDP and Audiences)
+* Adobe Journey Optimizer
+* Customer Journey Analytics
+
+The documentation retrieval model is trained on Experience Platform (Real-Time CDP and Audiences).
+
+#### Usage data scope
+
+You can ask the AI Assistant questions about your usage data in the following domains: 
+
+* Attributes
+* Datasets
+* Destinations
+* Schemas
+* Segments
+* Sources
+
+>[!TIP]
+>
+>You may need it to format your questions like: "When was the segment with the title {TITLE} created?" instead of "When was the {TITLE} segment created?"
+
+Currently, you can only ask questions regarding data usage within Experience Platform. This is because you must be within an active sandbox in order to ask data usage questions.
+
+#### Questions may be answered with the wrong information source
+
+There are instances when your question about your usage data can result in an answer based on the documentation. This is because the AI Assistant can incorrectly route your question to the wrong information source. You can prevent this by:
+
+* Rephrasing your question to use more SQL-like language
+* Explicitly calling out the information source to use.
+
+Read the table below for examples:
+
+| Bad question | Good question | Notes |
+| --- | --- | --- |
+| What is my biggest segment? | What is my biggest segment? Using data. | Explicitly tell the AI Assistant that you want the answer to be based on data. |
+| What is my biggest segment? | List my biggest segment. | There are instances where a "what..." question can be mistaken for a documentation-based question. Using a command like "list" is a stronger indicator that you are asking a question with data in context. |
+| How many datasets do I have? | Count my datasets. | While the original question segments, it does not work with datasets. |
+
+#### Answers may be stale
+
+* The documentation in the AI Assistant's index is updated periodically.
+* For usage data queries, answers may not reflect the current state in the UI. The data backing these questions is updated every 12 to 24 hours.
+
+#### Conversational Experience
+
+>[!BEGINTABS]
+
+>[!TAB Unable to infer context from prior discussion]
+
+>[!TAB Unable to infer context from a page]
+
+>[!TAB Ambiguity]
+
+>[!ENDTABS]
+
+#### Non-Experience Platform questions
+
+You can use the AI Assistant for questions about Experience Platform concepts, but not Creative Cloud or non-Adobe questions.
+
+#### Limited small talk
+
+You can engage in small talk with the AI Assistant, but this capacity is currently limited.
+
+#### Capability questions
+
+The AI Assistant may give an inaccurate impression of what it can do. It may answer the following types of questions incorrectly:
+
+| Example question | Note |
+| --- | --- |
+| "Can you answer questions on {ENTITY}?" | As long as the AI Assistant is able to find a single page referencing a given entity in its index, then it will respond yes. |
+| "Do you know **x** language?" | The AI Assistant currently only supports English, but may answer "yes" due to the underlying model being able to support it. |
+| "Can you do...?" | The AI Assistant may answer yes, even though it cannot. |
+
+#### Public entities
+
+The AI Assistant currently relies on Azure's content filtering. Asking ideation questions about other public entities (companies, people, places etc.) should be refrained from.
+
+#### Security
+
+>[!IMPORTANT]
+>
+>Do not attempt to hijack the prompt or ask questions to get the AI Assistant to leak the prompt.
