@@ -80,19 +80,6 @@ As you complete the steps to implement the use case, you will make use of the Re
 
 Experience Data Model (XDM) resources are managed in the [!UICONTROL Schemas] workspace in Adobe Experience Platform. You can view and explore core resources provided by Adobe and create custom resources and schemas for your organization.
 
-<!--
-To create a schema, complete the steps below:
-
-1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Schemas]** and select **[!UICONTROL Create schema]**.
-2. Select **[!UICONTROL XDM Individual Profile]/[!UICONTROL XDM ExperienceEvent]**.
-3. Navigate to **[!UICONTROL Field groups]** and select **[!UICONTROL Add]**.
-4. Use the search box to find and select the field group, then select **[!UICONTROL Add field groups]**.
-5. Give your schema a name and optionally a description.
-6. Select **[!UICONTROL Save]**.
-
-![A recording of the steps to create a schema.](../intelligent-re-engagement/images/create-a-schema.gif) 
--->
-
 For more information about creating schemas, read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md) 
 
 There are four schema designs that are used for the re-engagement journey. Each schema requires specific fields to be set up, as well as some fields that are strongly suggested.
@@ -149,10 +136,6 @@ The customer attributes schema is represented by a [!UICONTROL XDM Individual Pr
 This field group is used for best practice.
 
 +++
-
-<!--
-![Customer attributes schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-attributes.png) 
--->
 
 #### Customer digital transactions schema
 
@@ -247,10 +230,6 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 +++
 
-<!--
-![Customer digital transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-digital-transactions.png) 
--->
-
 #### Customer offline transactions schema
 
 The customer offline transactions schema is represented by a [!UICONTROL XDM ExperienceEvent] class, which includes the following field groups:
@@ -295,10 +274,6 @@ The customer offline transactions schema is represented by a [!UICONTROL XDM Exp
 External Source System Audit Attributes is a standard Experience Data Model (XDM) data type that captures audit details about an external source system.
 
 +++
-
-<!--
-![Customer offline transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-offline-transactions.png) 
--->
 
 #### Adobe web connector schema
 
@@ -368,34 +343,15 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 +++
 
-<!--
-![Adobe web connector schema highlighting the list of field groups.](../intelligent-re-engagement/images/adobe-web-connector.png) 
--->
-
 ### Create a dataset from a schema
 
 A dataset is a storage and management structure for a group of data, often a table with fields (rows) and a schema (columns). Every schema for intelligent re-engagement journeys will have a single dataset. 
 
 For more information on how to create a dataset from a schema, read the [Datasets UI guide](/help/catalog/datasets/user-guide.md).
-<!-- 
-To create a dataset from a schema, complete the steps below:
-
-1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Datasets]** and select **[!UICONTROL Create dataset]**.
-2. Select **[!UICONTROL Create dataset from schema]**.
-3. Select the relevant re-engagement schema you created.
-4. Give your dataset a name and optionally a description.
-5. Select **[!UICONTROL Finish]**.
-
-![A recording of the steps to create a dataset from a schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
--->
 
 >[!NOTE] 
 >
 >Similar to the step to create a schema, you need to enable the dataset to be included in the Real-Time Customer Profile. For more information about enabling the dataset for use in Real-Time Customer Profile, read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md#profile).
-
-<!-- 
-![Enable dataset for profile.](../intelligent-re-engagement/images/enable-dataset-for-profile.png)
--->
 
 ### Privacy, consent and data governance
 
@@ -431,19 +387,6 @@ There are no additional marketing policies required for the re-engagement journe
 
 ### Create an audience
 
-<!--
-To create an audience, complete the steps below:
-
-1. Navigate to **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** and select **[!UICONTROL Create audience]**.
-2. Select **[!UICONTROL Build rule]** and select **[!UICONTROL Create]**.
-3. Navigate to **[!UICONTROL Field]** and select **[!UICONTROL Events]** tab.
-4. Navigate or use the search box to find the event type, then drag this to the builder. Finally add event rules by dragging event types.
-5. Give your schema a name and optionally a description.
-6. Select **[!UICONTROL Save]**.
-
-![A recording of the steps to create an audience.](../intelligent-re-engagement/images/create-an-audience.gif)
--->
-
 #### Audience creation for brand re-engagement journeys
 
 The re-engagement journeys use audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in two different ways on Adobe Experience Platform - either directly composed as audiences or through Platform-derived segment definitions.
@@ -471,10 +414,6 @@ The descriptor for this audience will appear as:
 
 `Include audience who have at least 1 EventType = ProductViews event THEN have at least 1 Any event where (EventType does not equal commerce.productListAdds) and occurs in last 24 hour(s) then after 3 days do not have any Any event where (EventType = application.launch or web.webpagedetails.pageViews or commerce.purchases) and occurs in last 2 day(s).`
 
-<!--
-![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/re-engagement-audience.png) 
--->
-
 >[!TAB Abandoned Cart Journey]
 
 The following events are used for the abandoned cart journey where users added a product to their cart, but did not complete the purchase or clear their cart in the last 24 hours.
@@ -491,10 +430,6 @@ The following fields and conditions will be required when setting up this audien
 The descriptor for the abandoned cart journey will appear as:
 
 `Include EventType = commerce.productListAdds between 30 min and 1440 minutes before now. exclude EventType = commerce.purchases 30 minutes before now OR EventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
-
-<!--
-![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/abandoned-cart-audience.png) 
--->
 
 >[!ENDTABS]
 
@@ -636,10 +571,6 @@ Adobe Journey Optimizer helps you deliver connected, contextual, and personalize
 
 >[!TAB Abandoned Cart Journey]
 
-<!--
-![Customer abandoned cart journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/abandoned-cart-ajo.png) 
--->
-
 +++Events
 
 * Add to Cart
@@ -766,10 +697,6 @@ Adobe Journey Optimizer helps you deliver connected, contextual, and personalize
 +++
 
 >[!TAB Order Confirmation Journey]
-
-<!--
-![Customer order confirmation journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/order-confirmation-ajo.png) 
--->
 
 +++Events
 
