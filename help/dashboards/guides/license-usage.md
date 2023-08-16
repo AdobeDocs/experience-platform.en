@@ -9,7 +9,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 
 You can view important information about your organization's license usage through the Adobe Experience Platform [!UICONTROL License usage] dashboard. Information displayed here is captured during a daily snapshot of your Platform instance. 
 
-License usage reports provide a high degree of granularity over your licence usage metrics. The dashboard provides usage metrics for each purchased product, the consolidated usage of metrics in all production or development sandboxes, and the usage metric from a specific sandbox.
+License usage reports provide a high degree of granularity over your licence usage metrics. The dashboard provides usage metrics for each purchased product, the consolidated usage of metrics in all production or development sandboxes, and the usage metric from a specific sandbox. The following Experience Platform applications can be tracked with usage metrics: Real-Time Customer Data Profile, Adobe Journey Optimizer, and Customer Journey Analytics.
 
 This guide outlines how to access and work with the license usage dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.  
 
@@ -37,9 +37,7 @@ To navigate to the license usage dashboard within the Platform UI, select **[!UI
 
 ## [!UICONTROL Overview] tab {#overview-tab}
 
-This dashboard displays all of your licensed Adobe Experience Platform products in a table format. The table provides key information about your license usage across all your available profiles.
-
-<!-- Q) Do users name the products? I assume so based on the QA environment. -->
+This dashboard displays all of your licensed Adobe Experience Platform products, including add-ons, in a table format. The table provides key information about your license usage across all your available profiles.
 
 | Column name  | Description |
 |---|---|
@@ -48,6 +46,10 @@ This dashboard displays all of your licensed Adobe Experience Platform products 
 | **[!UICONTROL Licence Amount]**  | The contracted value for the maximum amount of the Primary Metric as agreed in your product license agreement.  |
 | **[!UICONTROL Usage]**  | The amount of your primary metric used. This value provides the total usage of that metric across all sandboxes, either production or development. |
 | **[!UICONTROL Usage %]**  | The percentage of your primary metric used according to your license amount. |
+
+>[!NOTE]
+>
+>Additions to the [!UICONTROL Licence Amount] as a result of add-ons, are added on top of the [!UICONTROL Licence Amount] for the base products such as Real-Time Customer Data Profile, Adobe Journey Optimizer, and Customer Journey Analytics. The usage of that licensed amount (after the add-ons) is tracked through the base products. For example, if you buy one pack of five sandboxes, the quantity of five is added to that of the base product's. In this case, the add-on shows a [!UICONTROL Licence Amount] of one, and the usage for that add-on is "blank" as the usage is tracked through the base product.
 
 The table indicates the primary metric for each product, as each product can track numerous metrics. To view more metrics and detailed insights on your product license usage, select a product name from the list. The [!UICONTROL Summary] view for that product appears.
 
