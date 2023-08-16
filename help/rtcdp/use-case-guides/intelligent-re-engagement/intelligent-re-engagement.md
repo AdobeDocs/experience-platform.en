@@ -6,7 +6,7 @@ hidefromtoc: yes
 ---
 # Intelligently re-engage your customers to return
 
-Intelligent re-engagement allows you to set up a tailored, cross-channel drip campaign to persuade clients to perform a particular action. The nudging campaign is intended to operate for a limited amount of time, which includes sending customers who showed intent emails, push, SMS, and serving paid ads. Once the customer has taken the appropriate action, the nudge campaign will end right away.
+Intelligently and responsibly re-engage customers who have abandoned a conversion before completing it. Act with intelligence and empathy to create experiences, not reminders.
 
 ![Step by step intelligent re-engagement high level visual overview.](../intelligent-re-engagement/images/step-by-step.png) 
 
