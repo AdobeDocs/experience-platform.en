@@ -6,7 +6,7 @@ hidefromtoc: yes
 ---
 # Intelligently re-engage your customers to return
 
-Intelligently and responsibly re-engage customers who have abandoned a conversion before completing it. Act with intelligence and empathy to create experiences, not reminders.
+Intelligently and responsibly re-engage customers who have abandoned a conversion before completing it. Act with intelligence and empathy to create experiences rather than reminders.
 
 ![Step by step intelligent re-engagement high level visual overview.](../intelligent-re-engagement/images/step-by-step.png) 
 
@@ -315,7 +315,7 @@ The Adobe web connector schema is represented by a [!UICONTROL XDM ExperienceEve
 | `web.webPageDetails.name` | Suggested | The name of the web page where the web interaction occurred. |
 | `web.webPageDetails.URL` | Suggested | The URL of the web page where the web interaction occurred. |
 | `web.webReferrer.URL` | Suggested | Describes the referrer of a web interaction, which is the URL a visitor came from immediately before the current web interaction was recorded. |
-| `commerce.cart.cartID | Suggested | |
+| `commerce.cart.cartID` | Suggested | |
 | `commerce.cart.cartSource` | Suggested | |
 | `commerce.cartAbandons.id` | Suggested | |
 | `commerce.cartAbandons.value` | Suggested | |
@@ -490,8 +490,7 @@ The following fields and conditions will be required when setting up this audien
 
 The descriptor for the abandoned cart journey will appear as:
 
-`Include EventType = commerce.productListAdds between 30 min and 1440 minutes before now.
-exclude EventType = commerce.purchases 30 minutes before now OR EventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
+`Include EventType = commerce.productListAdds between 30 min and 1440 minutes before now. exclude EventType = commerce.purchases 30 minutes before now OR EventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
 
 <!--
 ![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/abandoned-cart-audience.png) 
