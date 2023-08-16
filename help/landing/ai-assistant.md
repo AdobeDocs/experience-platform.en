@@ -299,11 +299,19 @@ Read the table below for examples:
 * The documentation in the AI Assistant's index is updated periodically.
 * For usage data queries, answers may not reflect the current state in the UI. The data backing these questions is updated every 12 to 24 hours.
 
-#### Conversational Experience
+#### Conversational experience
+
+You must consider several nuances regarding the conversational experience when querying the AI Assistant.
 
 >[!BEGINTABS]
 
 >[!TAB Unable to infer context from prior discussion]
+
+The AI Assistant currently cannot reference prior discussions as context for a given question. See the table below for examples:
+
+| Ambiguous question | Clear question | Note |
+| --- | --- | --- |
+| 
 
 >[!TAB Unable to infer context from a page]
 
