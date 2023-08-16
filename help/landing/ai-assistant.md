@@ -246,11 +246,7 @@ Refer to this section for additional information on the AI Assistant for Experie
 
 +++
 
-### Limitations
-
-The following is a list of limitations to the current iteration of the AI Assistant:
-
-#### Documentation scope
+### Scope
 
 Based on internal testing, the AI Assistant is 48% accurate and 37% partially accurate regarding **unambiguous** documentation questions based on Real-Time Customer Data Platform and Audiences. Questions submitted outside of this scope will have dramatically lower correctness due to either the documentation not being part of the index or the documentation retrieval model not being trained in that area.
 
@@ -262,7 +258,7 @@ Currently, the documentation index contains:
 
 The documentation retrieval model is trained on Experience Platform (Real-Time CDP and Audiences).
 
-#### Usage data scope
+### Usage data scope
 
 You can ask the AI Assistant questions about your usage data in the following domains: 
 
@@ -279,7 +275,7 @@ You can ask the AI Assistant questions about your usage data in the following do
 
 Currently, you can only ask questions regarding data usage within Experience Platform. This is because you must be within an active sandbox in order to ask data usage questions.
 
-#### Questions may be answered with the wrong information source
+### Questions may be answered with the wrong information source
 
 There are instances when your question about your usage data can result in an answer based on the documentation. This is because the AI Assistant can incorrectly route your question to the wrong information source. You can prevent this by:
 
@@ -294,12 +290,12 @@ Read the table below for examples:
 | What is my biggest segment? | List my biggest segment. | There are instances where a "what..." question can be mistaken for a documentation-based question. Using a command like "list" is a stronger indicator that you are asking a question with data in context. |
 | How many datasets do I have? | Count my datasets. | While the original question segments, it does not work with datasets. |
 
-#### Answers may be stale
+### Answers may be stale
 
 * The documentation in the AI Assistant's index is updated periodically.
 * For usage data queries, answers may not reflect the current state in the UI. The data backing these questions is updated every 12 to 24 hours.
 
-#### Conversational experience
+### Conversational experience
 
 You must consider several nuances regarding the conversational experience when querying the AI Assistant.
 
@@ -311,7 +307,7 @@ The AI Assistant currently cannot reference prior discussions as context for a g
 
 | Ambiguous question | Clear question | Note |
 | --- | --- | --- |
-| 
+| | | |
 
 >[!TAB Unable to infer context from a page]
 
@@ -319,15 +315,15 @@ The AI Assistant currently cannot reference prior discussions as context for a g
 
 >[!ENDTABS]
 
-#### Non-Experience Platform questions
+### Non-Experience Platform questions
 
 You can use the AI Assistant for questions about Experience Platform concepts, but not Creative Cloud or non-Adobe questions.
 
-#### Limited small talk
+### Limited small talk
 
 You can engage in small talk with the AI Assistant, but this capacity is currently limited.
 
-#### Capability questions
+### Capability questions
 
 The AI Assistant may give an inaccurate impression of what it can do. It may answer the following types of questions incorrectly:
 
@@ -337,12 +333,7 @@ The AI Assistant may give an inaccurate impression of what it can do. It may ans
 | "Do you know **x** language?" | The AI Assistant currently only supports English, but may answer "yes" due to the underlying model being able to support it. |
 | "Can you do...?" | The AI Assistant may answer yes, even though it cannot. |
 
-#### Public entities
+### Public entities
 
 The AI Assistant currently relies on Azure's content filtering. Asking ideation questions about other public entities (companies, people, places etc.) should be refrained from.
 
-#### Security
-
->[!IMPORTANT]
->
->Do not attempt to hijack the prompt or ask questions to get the AI Assistant to leak the prompt.
