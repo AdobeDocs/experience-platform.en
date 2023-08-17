@@ -19,7 +19,7 @@ Working with identity namespaces requires an understanding of the various Adobe 
 
 A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments, as when [!DNL Real-Time Customer Profile] merges profile data, both the identity value and the namespace must match.
 
-For example, two profile fragments may contain different primary IDs but they share the same value for the "Email" namespace, therefore [!DNL Platform] is able to see that these fragments are actually the same individual and and brings the data together in the identity graph for the individual.
+For example, two profile fragments may contain different primary IDs but they share the same value for the "Email" namespace, therefore [!DNL Platform] is able to see that these fragments are actually the same individual and brings the data together in the identity graph for the individual.
 
 ![](images/identity-service-stitching.png)
 

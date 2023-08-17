@@ -62,7 +62,7 @@ By design, Customer AI uses Adobe Analytics, Adobe Audience Manager, Experience 
 
 ![Select and search for dataset](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
-After selecting the datasets you wish to use, select the **[!UICONTROL Add]** button to add the datasets to the the dataset preview pane.
+After selecting the datasets you wish to use, select the **[!UICONTROL Add]** button to add the datasets to the dataset preview pane.
 
 ![Select datasets](../images/user-guide/select-datasets.png)
 

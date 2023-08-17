@@ -11,7 +11,7 @@ Use configurable aggregation to dive deep into the settings provided by Destinat
 
 When building a real-time (streaming) destination with Destination SDK, you can configure how the exported profiles should be combined in the resulting exports. This behavior is determined by the aggregation policy settings.
 
-To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the the guide on how to [use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration).
+To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the guide on how to [use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
 You can configure the aggregation policy settings via the `/authoring/destinations` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
 

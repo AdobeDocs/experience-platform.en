@@ -127,7 +127,7 @@ Experience Data Model (XDM) is an open-source specification that is designed to 
 
 With attribute-based access control, you can:
 
-* [Apply data usage labels to field groups and classes](../../xdm/tutorials/labels.md). This allows multiple schemas with the same field groups or classes, to have fields tagged with the same attributes, depending on the the configurations at the field group or class level;
+* [Apply data usage labels to field groups and classes](../../xdm/tutorials/labels.md). This allows multiple schemas with the same field groups or classes, to have fields tagged with the same attributes, depending on the configurations at the field group or class level;
 * Configure user access to specific XDM schema fields depending on the permission sets applied to roles assigned to users.
 
 For more information on XDM, refer to the [XDM overview](../../xdm/home.md).
