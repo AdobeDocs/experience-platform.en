@@ -7,7 +7,7 @@ exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
 
 When you use an [Adobe-managed host](./hosts/managed-by-adobe-host.md) to deliver your Adobe Experience Platform tags assets on your website, these assets are distributed amongst various content delivery networks (CDNs) around the world to deliver the quickest download speed. However, there are certain regions that require all website assets to be replicated and hosted on a server within that region.
 
-To account for this, tags in Experience Platform provides a Experience Platform Tags (China) feature which allows you to deliver content to these special regions.
+To account for this, tags in Experience Platform provides an Experience Platform Tags (China) feature which allows you to deliver content to these special regions.
 
 Experience Platform Tags (China) support is a paid feature, and must be purchased by your organization in order to enable and use it. This guide covers how to configure and use this feature in the Experience Platform UI or Data Collection UI after it has been purchased.
 
