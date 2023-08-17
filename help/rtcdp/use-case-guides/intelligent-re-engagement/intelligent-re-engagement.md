@@ -6,9 +6,19 @@ hidefromtoc: yes
 ---
 # Intelligently re-engage your customers to return
 
-Intelligently and responsibly re-engage customers who have abandoned a conversion before completing it. Act with intelligence and empathy to create experiences rather than reminders.
+Re-engage clients who have abandoned a conversion before finishing it in an intelligent and responsible way. Engage lapsed customers through experiences rather than reminders to enhance conversion and propel the growth of client lifetime value.
+
+Employ real-time considerations, take into account all consumer qualities and behaviors, and offer fast re-qualification based on both online and offline events.
 
 ![Step by step intelligent re-engagement high level visual overview.](../intelligent-re-engagement/images/step-by-step.png) 
+
+## Use case overview
+
+You will construct schemas, datasets, and audiences as you work through examples of re-engagement journeys. Additionally, you will discover the features needed to set up the example journeys in [!DNL Adobe Journey Optimizer] as well as the ones needed to create paid media advertisements in destinations. This guide uses examples of re-engaging customers in the use case journeys outlined below:
+
+* **Re-engagement journey** - Targets customers who have abandoned product browsing on both the website and mobile app.
+* **Abandoned cart journey** - Targets customers who have placed products in the cart but have not yet been purchased on both the website and mobile app.
+* **Order confirmation journey** - Focuses on product purchases made through the website and mobile app.
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
@@ -27,44 +37,44 @@ As you complete the steps to implement the use case, you will make use of the fo
 
 ### How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
-There are currently three different re-engagement journeys that have been developed.
+Below is a high level overview of the three example re-engagement journeys.
 
 >[!BEGINTABS]
 
 >[!TAB Re-Engagement Journey]
 
-The re-engagement journey targets abandoned product browsing on both the website and app. This journey is triggered when a product has been viewed but not purchased or added to the cart. Brand engagement is triggered after three days if there are no list additions within the last 24 hours.<p>![Customer intelligent re-engagement journey high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent re-engagement journey high level visual overview."){width="1920" zoomable="yes"}</p>
+The re-engagement journey targets abandoned product browsing on both the website and mobile app. This journey is triggered when a product has been viewed but not purchased or added to the cart. Brand engagement is triggered after three days if there are no list additions within the last 24 hours.<p>![Customer intelligent re-engagement journey high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent re-engagement journey high level visual overview."){width="1920" zoomable="yes"}</p>
 
-1. As a **customer**, you create schemas and datasets that are marked for [!UICONTROL Profile].
+1. You create schemas and datasets that are marked for [!UICONTROL Profile].
 2. Data is aggregated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
-3. As a **customer**, you load profiles into Real-Time CDP and build governance policies to ensure responsible use.
-4. As a **customer**, you build focused audiences from the list of profiles to check if a **user** has made a brand engagement in the last three days.
-5. As a **customer**, you will create a re-engagement journey in Adobe Journey Optimizer.
+3. You load profiles into Real-Time CDP and build governance policies to ensure responsible use.
+4. You build focused audiences from the list of profiles to check if a **customer** has made an engagement in the last three days.
+5. You will create a re-engagement journey in [!DNL Adobe Journey Optimizer].
 6. If needed, work with the **data partner** for the activation of audiences to desired paid-media destinations.
-7. Adobe Journey Optimizer checks for consent and sends out the various actions configured.
+7. [!DNL Adobe Journey Optimizer] checks for consent and sends out the various actions configured.
 
 >[!TAB Abandoned Cart Journey]
 
-The abandoned cart journey targets products that have been placed in the cart but have not yet been purchased on both the website and app. Additionally, Paid Media campaigns are started and stopped using this method.<p>![Customer abandoned cart journey high level visual overview.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Customer abandoned cart journey high level visual overview."){width="1920" zoomable="yes"}</p> 
+The abandoned cart journey targets products that have been placed in the cart but have not yet been purchased on both the website and mobile app. Additionally, Paid Media campaigns are started and stopped using this method.<p>![Customer abandoned cart journey high level visual overview.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Customer abandoned cart journey high level visual overview."){width="1920" zoomable="yes"}</p> 
 
-1. As a **customer**, you create schemas and datasets that are marked for [!UICONTROL Profile].
+1. You create schemas and datasets that are marked for [!UICONTROL Profile].
 2. Data is aggregated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
-3. As a **customer**, you load profiles into Real-Time CDP and build governance policies to ensure responsible use.
-4. As a **customer**, you build focused audiences from the list of profiles to check if a **user** has placed an item in their cart but has not completed the purchase. The **[!UICONTROL Add to cart]** event kicks off a timer that waits for 30 minutes, then checks for purchase. If no purchase has been made, then the **user** is added to the **[!UICONTROL Abandon Cart]** audiences.
-5. As a **customer**, you will create an abandoned cart journey in Adobe Journey Optimizer
+3. You load profiles into Real-Time CDP and build governance policies to ensure responsible use.
+4. You build focused audiences from the list of profiles to check if a **customer** has placed an item in their cart but has not completed the purchase. The **[!UICONTROL Add to cart]** event kicks off a timer that waits for 30 minutes, then checks for purchase. If no purchase has been made, then the **customer** is added to the **[!UICONTROL Abandon Cart]** audiences.
+5. You will create an abandoned cart journey in Adobe Journey Optimizer
 6. If needed, work with the **data partner** for the activation of audiences to desired paid-media destinations.
-7. Adobe Journey Optimizer checks for consent and sends out the various actions configured.
+7. [!DNL Adobe Journey Optimizer] checks for consent and sends out the various actions configured.
 
 >[!TAB Order Confirmation Journey]
 
 The order confirmation journey focuses on product purchases made through the website and mobile app.<p>![Customer order confirmation journey high level visual overview.](../intelligent-re-engagement/images/order-confirmation-journey.png "Customer order confirmation journey high level visual overview."){width="1920" zoomable="yes"}</p>
 
-1. As a **customer**, you create schemas and datasets that are marked for [!UICONTROL Profile].
+1. You create schemas and datasets that are marked for [!UICONTROL Profile].
 2. Data is aggregated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
-3. As a **customer**, you load profiles into Real-Time CDP and build governance policies to ensure responsible use.
-4. As a **customer**, you build focused audiences from the list of profiles to check if a **user** has made a purchase.
-5. As a **customer**, you will create a confirmation journey in Adobe Journey Optimizer.
-6. Adobe Journey Optimizer sends out an order confirmation message using the preferred channel.
+3. You load profiles into Real-Time CDP and build governance policies to ensure responsible use.
+4. You build focused audiences from the list of profiles to check if a **customer** has made a purchase.
+5. You will create a confirmation journey in Adobe Journey Optimizer.
+6. [!DNL Adobe Journey Optimizer] sends out an order confirmation message using the preferred channel.
 
 >[!ENDTABS]
 
@@ -749,7 +759,7 @@ Adobe Journey Optimizer helps you deliver connected, contextual, and personalize
 
 For more information about creating journeys in [Adobe Journey Optimizer], read the [Get started with journeys guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
-### Setting up paid media ads in Destinations
+### Setting up paid media ads in destinations
 
 The destinations framework is used for paid media ads. Once consent has been checked it will send out to the various destinations configured. For example direct mail, email, and so on.
 
