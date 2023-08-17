@@ -11,13 +11,13 @@ hidefromtoc: true
 >
 >The AI Assistant for Adobe Experience Platform is currently in Alpha. The feature and documentation are subject to change.
 
-The AI Assistant for Adobe Experience Platform is a UI feature that you can use to navigate and understand Experience Platform and Real-Time Customer Data Platform concepts.
+The AI Assistant for Adobe Experience Platform is a UI feature that you can use to navigate and understand Experience Platform and Real-Time Customer Data Platform concepts, and usage information about your objects.
 
 You can query the AI Assistant for information such as:
 
 * Guidance on how to perform tasks pertaining to data and audiences.
 * Statuses and metrics of the existing data objects in your organization.
-* Use case examples and nuances to better understand your data objects, such as segments, schemas, datasets, attributes, and destinations.
+* Use case examples and nuances to better understand your data objects, including attributes, datasets, destinations, schemas, segments, and sources.
 
 This document provides information on how you can access and use the AI Assistant to ask questions and receive answers about Experience Platform and Real-Time CDP concepts.
 
@@ -31,13 +31,11 @@ This internal representation of underlying data is also known as the Knowledge G
 
 The Knowledge Graph consists of sub-graphs that are referenced whenever queries submitted:
 
-* Customer data and metadata.
+* Customer usage data.
 * Customer usage data across various meta-stores.
-* Merged profiles (including IDs, attributes, events, segment memberships) and B2B objects across Real-Time Customer Profile.
-* Data sizes (at rest) and rates (in motion) observed across various time frames (seconds to days).
-* Metadata of system jobs such as ingestion, segmentation, exports, activation, audits, and data governance enforcements.
+* Experience League documentation.
 
-There are two kinds of questions to consider before querying the AI Assistant:
+There are two classes of questions to consider before querying the AI Assistant:
 
 * **Concept Questions**: Concept questions are about Adobe concepts related to data or audiences. Some examples of concept questions include:
   * What is the difference between batch and streaming segmentation?
@@ -150,11 +148,10 @@ Refer to this section for additional information on the AI Assistant for Experie
 
 * Are there duplicate segments?
 * Show me all streaming segments.
-* Is Segment with segment id {SEGMENT_ID} evaluated in Batch OR Stream?
+* Is Segment named {SEGMENT_ID} evaluated in Batch OR Stream?
 * Which Segments are duplicates?
-* How many Segments are Streaming types?
 * How many segments are there in total?
-* Are there any segments with the same name but different IDs?
+* Are there any segments with the same names but different IDs?
 * What is the distribution of evaluation methods (batch, edge, streaming) across segments? 
 * Show me a list of segments that were last modified in the last month.  
 * Which segments have been modified in the last week?  
@@ -167,22 +164,20 @@ Refer to this section for additional information on the AI Assistant for Experie
 * What is the trend in segment creation over time? 
 * What is the distribution of segment creation dates?
 * What is the distribution of segment modification dates?
-* What segments have the most users?
-* What segments have the most profiles?
-* What segments have the fewest users?
-* What segments have the least profiles?
+* Which segments have the most user profiles?
+* Which segments hve the fewest user profiles?
 * List all batch segments.
 * List all edge segments.
 * What segments are activated?
 * What segments are forwarded to Facebook?
-* Is the APAC Customers segment batch or streaming?
+* Is the Segment named "APAC Customers" batch or streaming?
 * How many profiles does the Active Work segment have?
 * Do any of my segments have 0 profiles?
 * What datasets are impacting the bronze loyalty segment?
-* Which Segments use "gender" XDM fields?
+* Which Segment definitions use XDM fields that contain "gender"?
 * Which populated XDM fields occur in Streaming Segments?
 * How many XDM fields are there across all Segment Definitions?
-* What segments do the professional users dataset influence?
+* What segments do the "Professional Users" dataset impact?
 * Which segments are forwarded to HTTP API?
 * Of the Segments that are activated, which are activated to the most number of Destination types?
 * What is the total count of activated segments?
@@ -193,11 +188,16 @@ Refer to this section for additional information on the AI Assistant for Experie
 * Which Segments are activated to the most number of Destinations?
 * What duplicate segments are activated?
 * What segments are activated to Adobe Target?
-* Which merge policies are used for which segments?
+* Across all Segments, how many times is each Merge Policy used?
+
++++
+
++++Schemas
+
 * How many XDM schemas are defined?
 * What are the most recently created schemas?
-* What are the different types of schemas, and what are their counts?
-* What schema does the Segment Ingestion dataset use?
+* How many Schemas for each XDM class?
+* What schema does the "Segment Ingestion" dataset use?
 * Which schemas are not used by any datasets?
 
 +++
@@ -233,16 +233,16 @@ Refer to this section for additional information on the AI Assistant for Experie
 
 +++Attributes
 
-* What fields and attributes are most commonly used across datasets?
-* What fields and attributes are most commonly used across schemas?
-* What fields and attributes are used in the Professional Users schema?
-* List the attributes used for this segment with id {SEGMENT_ID}.
+* What XDM fields are most commonly populated across all DataSets?
+* What XDM fields and Attributes are most commonly used across schemas?
+* What XDM fields and Attributes are used in the Professional Users schema?
+* List the Attributes used for this segment with id {SEGMENT_ID}.
 * How many XDM fields are used in 2+ Segments?
 * Which fields are most commonly used across segments?
 * Are there any fields that are used in only one segment?
-* What attributes are used for the Bronze loyalty segment?
-* What attributes are not used in any segment?
-* What attributes are most commonly used in segments?  
+* What Attributes are used for the Bronze loyalty segment?
+* What Attributes are not used in any segment?
+* What Attributes are most commonly used in segments?  
 
 +++
 
