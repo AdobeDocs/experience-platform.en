@@ -135,7 +135,7 @@ To correctly map your XDM fields to the [!DNL HubSpot] destination fields, follo
   ![Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
    1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity.
   ![Platform UI screenshot selecting email as a source attribute to map as identity.](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
-   1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select `email`.
+   1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select attributes]** and select `email`.
   ![Platform UI screenshot selecting email as a target attribute to map as identity.](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
 
     | Source Field | Target Field | Mandatory |
