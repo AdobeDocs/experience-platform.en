@@ -69,8 +69,6 @@ Consumption reporting for sandboxes is cumulative for all sandboxes of the same 
 
 ![The summary view of a Platform Product with Production sandboxes and Development sandboxes highlighted.](../images/license-usage/summary-tab.png)
 
-<!-- Q) is this warning still valid? -->
-
 >[!WARNING]
 >
 >Permission to view the license usage dashboard must be specified at a sandbox level. You must add permissions to each individual sandbox to view them within the dashboard. This limitation will be addressed in a future release. In the meantime, the following workaround is available:
@@ -112,15 +110,39 @@ You can also select **[!UICONTROL Custom date]** to choose the time period that 
 
 ## Available metrics
 
-The license usage dashboard reports on several key metrics and do not apply to every product. The available metrics are:
+The license usage dashboard reports on several unique metrics and do not apply to every product. The available metrics are:
 
-<!-- Q)  what other metrics are there to be included? You said that it depends on the product. Can we get a list of all metrics for each product please? -->
-
+- [!UICONTROL Number of sandboxes]
 - [!UICONTROL Addressable Audience]
 - [!UICONTROL Average profile richness]
+- [!UICONTROL Core hours]
+- [!UICONTROL Data lake storage]
+- [!UICONTROL Data scanned]
 - [!UICONTROL Data scanned per segmentation ratio]
+- [!UICONTROL Engageable audience]
 - [!UICONTROL Total consumed storage]
-- [!UICONTROL Business person profile]
+- [!UICONTROL Total storage]
+<!-- acpB2cProfAdd : Q) what does this one mean? -->
+
+The following metrics apply to Real-Time CDP B2B Edition: 
+
+- [!UICONTROL Average Profile Richness]
+- [!UICONTROL Query Service Compute Hours]
+- [!UICONTROL Number of Sandboxes]
+- [!UICONTROL Total Storage]
+
+<!-- - [!UICONTROL Business person profile] -->
+<!-- - [!UICONTROL Advanced destinations profiles] -->
+<!-- - [!UICONTROL Businessperson profiles] -->
+<!-- - [!UICONTROL Destination service profiles] -->
+<!-- - [!UICONTROL Streaming segmentation packs] -->
+<!-- - [!UICONTROL Advanced destinations profiles] -->
+<!-- - [!UICONTROL Businessperson profiles] -->
+<!-- - [!UICONTROL Destination service profiles] -->
+<!-- - [!UICONTROL Streaming segmentation packs] -->
+<!-- - [!UICONTROL Advanced destinations profiles] -->
+<!-- - [!UICONTROL Destination service profiles] -->
+<!-- - [!UICONTROL Streaming segmentation packs] -->
 
 The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased. For detailed definitions of each metric, refer to the appropriate Product Description documentation:
 
