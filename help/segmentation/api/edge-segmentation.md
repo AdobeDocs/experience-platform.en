@@ -1,8 +1,6 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;edge segmentation;Edge segmentation;streaming edge;
 solution: Experience Platform
 title: Edge Segmentation using the API 
-topic-legacy: developer guide
 description: This document contains examples on how to use edge segmentation with the Adobe Experience Platform Segmentation Service API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
 ---
@@ -12,9 +10,9 @@ exl-id: effce253-3d9b-43ab-b330-943fb196180f
 >
 >The following document states how to perform edge segmentation using the API. For information performing edge segmentation using the UI, please read the [edge segmentation UI guide](../ui/edge-segmentation.md). 
 >
->Edge segmentation is now generally available to all Platform users. If you created edge segments during the beta, these segments will continue to be operational.
+>Edge segmentation is now generally available to all Platform users. If you created edge segment definitions during the beta, these segment definitions will continue to be operational.
 
-Edge segmentation is the ability to evaluate segments in Adobe Experience Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
+Edge segmentation is the ability to evaluate segment definitions in Adobe Experience Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
 
 >[!IMPORTANT]
 >
@@ -26,8 +24,8 @@ Edge segmentation is the ability to evaluate segments in Adobe Experience Platfo
 
 This developer guide requires a working understanding of the various [!DNL Adobe Experience Platform] services involved with edge segmentation. Before beginning this tutorial, please review the documentation for the following services:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
-- [[!DNL Segmentation]](../home.md): Provides the ability to create segments and audiences from your [!DNL Real-time Customer Profile] data.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Allows you to build audiences from [!DNL Real-Time Customer Profile] data.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 In order to successfully make calls to any Experience Platform API endpoints, please read the guide on [getting started with Platform APIs](../../landing/api-guide.md) to learn about required headers and how to read sample API calls.
@@ -55,9 +53,14 @@ In order for a segment to be evaluated using edge segmentation, the query must c
 
 Additionally, the segment **must** be tied to a merge policy that is active on edge. For more information about merge policies, please read the [merge policies guide](../../profile/api/merge-policies.md).
 
+A segment definition will **not** be enabled for edge segmentation in the following scenarios:
+
+- The segment definition includes a combination of a single event and an `inSegment` event.
+  - However, if the segment contained in the `inSegment` event is profile only, the segment definition **will** be enabled for edge segmentation.
+
 ## Retrieve all segments enabled for edge segmentation
 
-You can retrieve a list of all segments that are enabled for edge segmentation within your IMS Organization by making a GET request to the `/segment/definitions` endpoint.
+You can retrieve a list of all segments that are enabled for edge segmentation within your organization by making a GET request to the `/segment/definitions` endpoint.
 
 **API format**
 
@@ -80,7 +83,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns an array of segments in your IMS Organization that are enabled for edge segmentation. More detailed information about the segment definition returned can be found in the [segment definitions endpoint guide](./segment-definitions.md).
+A successful response returns an array of segments in your organization that are enabled for edge segmentation. More detailed information about the segment definition returned can be found in the [segment definitions endpoint guide](./segment-definitions.md).
 
 ```json
 {
@@ -202,6 +205,17 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
+    },
+    "evaluationInfo": {
+        "batch": {
+            "enabled": false
+        },
+        "continuous": {
+            "enabled": false
+        },
+        "synchronous": {
+            "enabled": true
+        }
     }
 }'
 ```
@@ -253,3 +267,11 @@ A successful response returns the details of the newly created segment definitio
 Now that you know how to create edge-segmentation-enabled segments, you can use them to enable same-page and next-page personalization use cases. 
 
 To learn how to perform similar actions and work with segments using the Adobe Experience Platform user interface, please visit the [Segment Builder user guide](../ui/segment-builder.md).
+
+## Appendix
+
+The following section lists frequently asked questions regarding edge segmentation:
+
+### How long does it take for a segment to be available on the Edge Network?
+
+It takes up to one hour for a segment to be available on the Edge Network.

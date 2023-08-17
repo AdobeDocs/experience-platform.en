@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Define Array Fields in the UI
 description: Learn how to define an array field in the Experience Platform user interface.
-topic-legacy: user guide
 exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
 ---
 # Define array fields in the UI
@@ -38,4 +37,4 @@ The canvas updates to reflect the changes made to the field. Note that the data 
 
 ## Next steps
 
-This guide covered how to define an array field in the the UI. See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor].
+This guide covered how to define an array field in the UI. See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor].

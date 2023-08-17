@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataf
 description: Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing dataflows from the Sources workspace.
 solution: Experience Platform
 title: Monitor Dataflows in the UI
-topic-legacy: overview
 type: Tutorial
 exl-id: 5fc4d98b-811e-42e7-8342-0cdac1027ca5
 ---

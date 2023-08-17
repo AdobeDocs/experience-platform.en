@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data access;data access api;query data access
 solution: Experience Platform
 title: View Dataset Data Using the Data Access API
-topic-legacy: tutorial
 type: Tutorial
 description: Learn how to locate, access, and download data stored within a dataset using the Data Access API in Adobe Experience Platform. You will also be introduced to some of the unique features of the Data Access API, such as paging and partial downloads.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
@@ -57,7 +56,7 @@ Before you can begin to use the [!DNL Data Access] API, you need to identify the
 
 For a comprehensive list of endpoints in the [!DNL Catalog] API, please refer to the [API Reference](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
-## Retrieve a list of batches under your IMS Organization
+## Retrieve a list of batches under your organization
 
 Using the [!DNL Catalog] API, you can return a list of batches under your organization:
 
@@ -79,7 +78,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
 
 **Response**
 
-The response includes an object that lists of all of the batches related to the IMS Organization, with each top-level value representing a batch. The individual batch objects contain the details for that specific batch. The response below has been minimized for space.
+The response includes an object that lists of all of the batches related to the organization, with each top-level value representing a batch. The individual batch objects contain the details for that specific batch. The response below has been minimized for space.
 
 ```json
 {

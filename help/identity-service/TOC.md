@@ -11,6 +11,7 @@ feature: Identities
 - [Identity Service overview](home.md)
 - [Identity namespace overview](namespaces.md)
 - [Guardrails for Identity data](guardrails.md)
+- [Guardrails for Identity data with deletion logic](guardrails-beta.md)
 - Identity Service API {#api}
   - [Getting Started](api/getting-started.md)
   - [Label a field as identity](api/label-identities.md)
@@ -25,6 +26,7 @@ feature: Identities
   - [Shared device detection](ui/shared-device-detection.md)
   - [Define identity fields in the UI](ui/label-identities.md)
 - [ECID overview](ecid.md)
+- [Deletions in Identity Service](deletion.md)
 - [Privacy request processing](privacy.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/identity-service)

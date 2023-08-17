@@ -9,12 +9,13 @@ feature: Privacy
 # Adobe Experience Platform Privacy Service {#privacy}
 
 * [Privacy Service overview](./home.md)
+* [Manage permissions for Privacy Service](./permissions.md)
 * [Privacy Service and Experience Cloud applications](./experience-cloud-apps.md)
 * [Identity data for privacy requests](./identity-data.md)
 * [Privacy JS Library overview](./js-library.md)
 * Privacy Service API {#api}
   * [Overview](./api/overview.md)
-  * [Getting started](./api/getting-started.md)
+  * [Authenticate and access the Privacy Service API](./api/getting-started.md)
   * [Privacy jobs](./api/privacy-jobs.md)
   * [Consent](./api/consent.md)
   * [Appendix](./api/appendix.md)

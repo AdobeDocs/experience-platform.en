@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;mapper;mapping set;mapping;
 solution: Experience Platform
 title: Mapping sets overview
-topic-legacy: overview
 description: Learn how to use mapping sets with Adobe Experience Platform Data Prep.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
 ---

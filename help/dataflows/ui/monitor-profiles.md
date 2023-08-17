@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;monitor profiles;monitor dataflows;dataflows;profile;real time customer profile;
-description: Real-time Customer Profile lets you see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. This tutorial provides instructions on how you can monitor dataflows with Profiles using the Experience Platform user interface.
+description: Real-Time Customer Profile lets you see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. This tutorial provides instructions on how you can monitor dataflows with Profiles using the Experience Platform user interface.
 title: Monitor Dataflows for Profiles in the UI
-topic-legacy: overview
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
 ---
 # Monitor dataflows for Profiles in the UI 
 
-Real-time Customer Profile lets you see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. Profile allows you to consolidate your customer data into a unified view offering an actionable, timestamped account of every customer interaction. 
+Real-Time Customer Profile lets you see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. Profile allows you to consolidate your customer data into a unified view offering an actionable, timestamped account of every customer interaction. 
 
 The monitoring dashboard provides you with a visual representation of the data's activity within Profile, including the status of your data's Profiles. This tutorial provides instructions on how you can use the monitoring dashboard to monitor your data's profiles using the Experience Platform user interface, allowing you to track the status of Profile processing.
 
@@ -18,7 +17,7 @@ This guide requires a working understanding of the following components of Adobe
 
 - [Dataflows](../home.md): Dataflows are a representation of data jobs that move data across Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
   - [Dataflow runs](../../sources/notifications.md): Dataflow runs are the recurring scheduled jobs based on the frequency configuration of selected dataflows.
-- [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [Real-Time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Monitoring profiles dashboard {#profile-metrics}

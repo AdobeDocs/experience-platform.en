@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;MariaDB;mariadb
 solution: Experience Platform
 title: Create a MariaDB Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to MariaDB using the Flow Service API.
 exl-id: 9b7ff394-ca55-4ab4-99ef-85c80b04a6df
@@ -29,7 +28,7 @@ In order for [!DNL Flow Service] to connect with [!DNL MariaDB], you must provid
 | Credential | Description |
 | ---------- | ----------- |
 | `connectionString` | The connection string associated with your [!DNL MariaDB] authentication. The [!DNL MariaDB] connection string pattern is: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL MariaDB] is `3000eb99-cd47-43f3-827c-43caf170f015`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL MariaDB] is `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
 For more information about obtaining a connection string, refer to this [[!DNL MariaDB] document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
 

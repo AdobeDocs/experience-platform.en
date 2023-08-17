@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;commerce;datatype;data-type;data type;
 solution: Experience Platform
 title: Commerce Data Type
-topic-legacy: overview
 description: This document provides an overview of the Commerce Experience Data Model (XDM) data type.
 exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
 ---

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data source connection
 solution: Experience Platform
 title: Ingest Parquet Data from a Third-Party Cloud Storage System Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: This tutorial uses the Flow Service API to walk you through the steps to ingest Apache Parquet data from a third-party cloud storage system.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
@@ -422,7 +421,7 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect Parquet data from your third-party cloud storage system on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect Parquet data from your third-party cloud storage system on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
-- [Real-time Customer Profile overview](../../../profile/home.md)
+- [Real-Time Customer Profile overview](../../../profile/home.md)
 - [Data Science Workspace overview](../../../data-science-workspace/home.md)

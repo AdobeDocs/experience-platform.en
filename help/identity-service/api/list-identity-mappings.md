@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;identity;Identity
 solution: Experience Platform
 title: List Identity Mappings
-topic-legacy: API guide
 description: A mapping is a collection of all identities in a cluster, for a specified namespace.
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
 ---

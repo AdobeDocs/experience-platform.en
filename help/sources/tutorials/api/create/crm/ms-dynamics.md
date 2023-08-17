@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Create a Microsoft Dynamics Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Platform to a Microsoft Dynamics account using the Flow Service API.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
@@ -33,7 +32,7 @@ In order for [!DNL Flow Service] to connect to [!DNL Dynamics], you must provide
 | `password` | The password for your [!DNL Dynamics] account. |
 | `servicePrincipalId` | The client ID of your [!DNL Dynamics] account. This ID is required when using service principal and key-based authentication. |
 | `servicePrincipalKey` | The service principal secret key. This credential is required when using service principal and key-based authentication. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Dynamics] is: `38ad80fe-8b06-4938-94f4-d4ee80266b07`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Dynamics] is: `38ad80fe-8b06-4938-94f4-d4ee80266b07`. |
 
 For more information on getting started, visit [this [!DNL Dynamics] document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 

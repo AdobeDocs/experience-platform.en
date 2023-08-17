@@ -1,14 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics;PQL;pql;profile query language
 solution: Experience Platform
 title: Profile Query Language (PQL) Overview
-topic-legacy: developer guide
 description: This guide provides a general overview of PQL, covering formatting guidelines and providing example PQL expressions.
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
 ---
 # [!DNL Profile Query Language] (PQL) overview
 
-[!DNL Profile Query Language] (PQL) is an [!DNL Experience Data Model] (XDM) compliant query language which is designed to support the definition and execution of segmentation queries for [!DNL Real-time Customer Profile] data.
+[!DNL Profile Query Language] (PQL) is an [!DNL Experience Data Model] (XDM) compliant query language which is designed to support the definition and execution of segmentation queries for [!DNL Real-Time Customer Profile] data.
 
 This guide provides a general overview of PQL, covering formatting guidelines and providing example PQL expressions.
 
@@ -62,7 +60,6 @@ PQL provides support for the following literal types:
 | Array | A data type that is comprised as a group of other literal values. It uses square brackets to group and commas to delimit between different values. <br> **Note:** You cannot directly access properties of items within an array. So, if you need to access a property within an array, the supported method is `select X from array where X.item = ...`. <br> PQL reserves the word `xEvent` to refer to an array of experience events linked to a profile. | `[1, 4, 7]`, `["US", "CA"]` |  
 | Relative time references | Reserved words that can be used to form timestamp and time interval references. <ul><li>now, today, yesterday, tomorrow</li><li>this, last, next</li><li>before, after, from</li><li>millisecond(s), second(s), minute(s), hour(s), day(s), week(s), month(s), year(s), decade(s), century/centuries, millennium/millennia</li></ul>| `X.timestamp occurs before today`, `X.timestamp occurs last month`, `X.timestamp occurs <= 3 days before now` |
 
-
 ## PQL functions
 
 The following table outlines the different categories of supported PQL functions, including links to further documentation for more information.
@@ -84,4 +81,4 @@ The following table outlines the different categories of supported PQL functions
 
 ## Next steps
 
-Now that you've learned how to use [!DNL Profile Query Language], you can use PQL when creating and modifying segments. For more information on segmentation, please read the [segmentation overview](../home.md).
+Now that you've learned how to use [!DNL Profile Query Language], you can use PQL when creating and modifying segment definitions. For more information on segmentation, please read the [segmentation overview](../home.md).

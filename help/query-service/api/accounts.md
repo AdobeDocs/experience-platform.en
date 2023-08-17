@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;query service;api guide;Query service;query service accounts;accounts;
 solution: Experience Platform
 title: Accounts API Endpoint
-topic-legacy: connection parameters
 description: You can create a Query Service account for persistent .
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
 ---
@@ -26,7 +25,7 @@ POST /accounts
 
 **Request**
 
-The following request will create a new Query Service integration account for your IMS Organization. 
+The following request will create a new Query Service integration account for your organization. 
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \

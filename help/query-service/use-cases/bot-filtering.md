@@ -163,6 +163,6 @@ The example model determined with a high degree of accuracy that any visitors wi
 
 ## Next steps
 
-By reading this document you have a better understanding of how to use [!DNL Query Service] and machine learning to determine and filter bot activity. 
+By reading this document, you have a better understanding of how to use [!DNL Query Service] and machine learning to determine and filter bot activity. 
 
 Other documents that demonstrate the benefits of [!DNL Query Service] to your organization's strategic business insights are the [abandoned browse use case](./abandoned-browse.md) example.

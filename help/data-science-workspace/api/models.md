@@ -2,7 +2,6 @@
 keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;models;sensei machine learning api
 solution: Experience Platform
 title: Models API Endpoint
-topic-legacy: Developer guide
 description: A model is an instance of a machine learning recipe that is trained using historical data and configurations to solve for a business use case.
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
 ---

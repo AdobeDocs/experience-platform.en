@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
 title: Adobe Experience Platform End-to-End Example Workflow
-topic-legacy: getting started
 description: Learn the basic end-to-end workflow for Adobe Experience Platform at a high level.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
 ---
@@ -21,7 +20,7 @@ This end-to-end workflow uses multiple Adobe Experience Platform services. The f
 - [[!DNL Identity Service]](../identity-service/home.md): Provides you with a comprehensive view of your customers and their behavior by bridging identities across devices and systems.
 - [Sources](../sources/home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
 - [[!DNL Segmentation Service]](../segmentation/home.md): [!DNL Segmentation Service] allows you to divide data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into smaller groups.
-- [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [[!DNL Real-Time Customer Profile]](../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [Datasets](../catalog/datasets/overview.md): The storage and management construct for data persistence in [!DNL Experience Platform].
 - [Destinations](../destinations/home.md): Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
@@ -29,15 +28,15 @@ This end-to-end workflow uses multiple Adobe Experience Platform services. The f
 
 Before you ingest data into Platform, you must first create an XDM schema to describe the structure of that data. When you ingest your data in the next step, you will map your incoming data to this schema. To learn how to create an example XDM schema, please read the tutorial on [creating a schema using the Schema Editor](../xdm/tutorials/create-schema-ui.md).
 
-The above tutorial shows how to set identity fields for your schemas. An identity field represents a field that can be used to identify an individual person related to a record or time-series event. Identity fields are a crucial component in how customer identity graphs are constructed in Platform, which ultimately affects how Real-time Customer Profile merges disparate data fragments together to gain a complete view of the customer. For more details on how to view identity graphs in Platform, see the tutorial on [how to use the identity graph viewer](../identity-service/ui/identity-graph-viewer.md).
+The above tutorial shows how to set identity fields for your schemas. An identity field represents a field that can be used to identify an individual person related to a record or time-series event. Identity fields are a crucial component in how customer identity graphs are constructed in Platform, which ultimately affects how Real-Time Customer Profile merges disparate data fragments together to gain a complete view of the customer. For more details on how to view identity graphs in Platform, see the tutorial on [how to use the identity graph viewer](../identity-service/ui/identity-graph-viewer.md).
 
-You need to enable your schema for use in Real-time Customer Profile so that customer profiles can be constructed from the data based on your schema. See the section on [enabling a schema for Profile](../xdm/ui/resources/schemas.md#profile) in the schemas UI guide for more information.
+You need to enable your schema for use in Real-Time Customer Profile so that customer profiles can be constructed from the data based on your schema. See the section on [enabling a schema for Profile](../xdm/ui/resources/schemas.md#profile) in the schemas UI guide for more information.
 
 ## Ingest your data into Platform
 
 Once you have created an XDM schema, you can start bringing your data into the system. 
 
-All data brought into Platform is stored to individual datasets upon ingestion. A dataset is a collection of data records that map to a specific XDM schema. Before your data can be used by [!DNL Real-time Customer Profile], the dataset in question has to be specifically configured. For complete instructions on how to enable a dataset for Profile, see the [Datasets UI guide](../catalog/datasets/user-guide.md#enable-profile) and the [dataset configuration API tutorial](../profile/tutorials/dataset-configuration.md). Once the dataset has been configured, you can start ingesting data into it.
+All data brought into Platform is stored to individual datasets upon ingestion. A dataset is a collection of data records that map to a specific XDM schema. Before your data can be used by [!DNL Real-Time Customer Profile], the dataset in question has to be specifically configured. For complete instructions on how to enable a dataset for Profile, see the [Datasets UI guide](../catalog/datasets/user-guide.md#enable-profile) and the [dataset configuration API tutorial](../profile/tutorials/dataset-configuration.md). Once the dataset has been configured, you can start ingesting data into it.
 
 Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storages, databases, and many others. For instance, you can ingest your data by using [Amazon S3](../sources/tutorials/api/create/cloud-storage/s3.md). A full list of available sources can be found in the [source connectors overview](../sources/home.md).
 
@@ -47,7 +46,7 @@ For more detailed instructions on source connectors, please read the [source con
 
 Once your data is brought into Platform through the source connector and stored in your Profile-enabled dataset, customer profiles are automatically created based on the identity data you configured in your XDM schema.
 
-When uploading data to a new dataset for the first time, or when setting up a new ETL process or data source, it is recommended to carefully check the data to ensure it has been uploaded correctly and that the generated profiles contain the data you expect. For more information on how to access customer profiles in the Platform UI, see the [Real-time Customer Profile UI guide](../profile/ui/user-guide.md). For the details on how to access profiles using the Real-time Customer Profile API, see the guide on [using the entities endpoint](../profile/api/entities.md).
+When uploading data to a new dataset for the first time, or when setting up a new ETL process or data source, it is recommended to carefully check the data to ensure it has been uploaded correctly and that the generated profiles contain the data you expect. For more information on how to access customer profiles in the Platform UI, see the [Real-Time Customer Profile UI guide](../profile/ui/user-guide.md). For the details on how to access profiles using the Real-Time Customer Profile API, see the guide on [using the entities endpoint](../profile/api/entities.md).
 
 ## Evaluate your data
 
@@ -87,7 +86,7 @@ For instructions on how to activate data to batch or email marketing destination
 
 ## Monitor your Platform data activities
 
-Platform allows you to track how data is being processed through the use of dataflows, which are representations of jobs that move data across Platform's various components. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by [!DNL Identity Service] and [!DNL Real-time Customer Profile] before ultimately being activated to destinations. The monitoring dashboard provides you with a visual representation of the journey of a dataflow. To learn how to monitor dataflows within the Platform UI, see the tutorials on [monitoring dataflows for sources](../dataflows/ui/monitor-sources.md) and [monitoring dataflows for destinations](../dataflows/ui/monitor-destinations.md).
+Platform allows you to track how data is being processed through the use of dataflows, which are representations of jobs that move data across Platform's various components. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by [!DNL Identity Service] and [!DNL Real-Time Customer Profile] before ultimately being activated to destinations. The monitoring dashboard provides you with a visual representation of the journey of a dataflow. To learn how to monitor dataflows within the Platform UI, see the tutorials on [monitoring dataflows for sources](../dataflows/ui/monitor-sources.md) and [monitoring dataflows for destinations](../dataflows/ui/monitor-destinations.md).
 
 You can also monitor Platform activities through the use of statistical metrics and event notifications by using [!DNL Observability Insights]. You can subscribe to alert notifications through Platform UI or send them to a configured webhook. For more details on how to view, enable, disable, and subscribe to available alerts from the Experience Platform UI, see the [[!UICONTROL Alerts] UI guide](../observability/alerts/ui.md). For details on how to receive alerts through webhooks, see the guide on [subscribing to Adobe I/O Event notifications](../observability/alerts/subscribe.md).
 

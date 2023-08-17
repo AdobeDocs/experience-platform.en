@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;IBM [!DNL IBM DB2];IBM;ibm [!DNL IBM DB2];[!DNL IBM DB2];[!DNL IBM DB2]
 solution: Experience Platform
 title: Create an IBM [!DNL IBM DB2] Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect IBM [!DNL IBM DB2] to Adobe Experience Platform using the Flow Service API.
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
@@ -11,7 +10,7 @@ exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
 
 >[!NOTE]
 >
->The IBM [!DNL IBM DB2] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The IBM [!DNL IBM DB2] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 

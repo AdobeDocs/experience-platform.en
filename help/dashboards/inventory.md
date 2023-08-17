@@ -19,10 +19,6 @@ You can view an individual dashboard by selecting the name of the dashboard from
 
 When selected, the dashboard opens either in the Platform UI or in a fully integrated application workspace that requires you to log in using the necessary credentials.
 
-## Create custom dashboards (Beta)
-
->[!IMPORTANT]
->
->The user-defined dashboards feature is in beta. Its features and documentation are subject to change.
+## Create custom dashboards
 
 Adobe Experience Platform Dashboards enables you to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics relevant to your organization. See the [user defined dashboards guide](./user-defined-dashboards.md) for complete instructions on creating and configuring custom dashboards.

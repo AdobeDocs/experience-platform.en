@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;OData;odata;oData;Generic OData;generic odata
 solution: Experience Platform
 title: Generic OData Source Overview
-topic-legacy: overview
 description: Learn how to connect Generic OData to Adobe Experience Platform using APIs or the user interface.
 exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
 ---

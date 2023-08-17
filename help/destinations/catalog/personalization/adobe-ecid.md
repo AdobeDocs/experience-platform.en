@@ -10,7 +10,7 @@ exl-id: 4cc49c14-66ec-43e0-a106-70d9c3646d87
 
 This extension implements the [!DNL Experience Cloud] ID Service, which identifies visitors across all [!DNL Experience Cloud] solutions.
 
-[!DNL Experience Cloud] ID Service is a personalization extension in Adobe Experience Platform. For more information about the extension functionality, see the [Experience Cloud ID Service extension page](../../../tags/extensions/web/id-service/overview.md) in the tags documentation.
+[!DNL Experience Cloud] ID Service is a personalization extension in Adobe Experience Platform. For more information about the extension functionality, see the [Experience Cloud ID Service extension page](../../../tags/extensions/client/id-service/overview.md) in the tags documentation.
 
 This destination is a tag extension. For more information about how tags extensions work in Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
@@ -36,7 +36,7 @@ Select the tag property in which you want to install the extension. You also hav
 
 The workflow takes you to the Data Collection UI to complete the installation. 
 
-For information about the extension configuration options and installation support, see the [Experience Cloud ID Service extension page](../../../tags/extensions/web/id-service/overview.md) in the tags documentation.
+For information about the extension configuration options and installation support, see the [Experience Cloud ID Service extension page](../../../tags/extensions/client/id-service/overview.md) in the tags documentation.
 
 You can also install the extension directly in the [Data Collection UI](https://experience.adobe.com/#/data-collection/). See the guide on [adding a new extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) for more information.
 

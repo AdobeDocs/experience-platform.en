@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Ad-hoc Schemas
 description: In specific circumstances, it may be necessary to create an XDM schema with fields that are namespaced for usage only by a single dataset. This is referred to as an ad-hoc schema.
-topic-legacy: developer guide
 exl-id: 8ee43bdc-3f16-4ec9-b17a-9942e4599023
 ---
 # Ad-hoc schemas

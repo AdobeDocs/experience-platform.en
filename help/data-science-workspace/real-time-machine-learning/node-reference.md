@@ -2,7 +2,6 @@
 keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real-time Machine Learning;node reference;
 solution: Experience Platform
 title: Real-time Machine Learning Node Reference
-topic-legacy: Nodes reference
 description: A node is the fundamental unit of which graphs are formed. Each node performs a specific task and they can be chained together using links to form a graph that represents an ML pipeline. The task performed by a node represents an operation on input data such as a transformation of data or schema, or a machine learning inference. The node outputs the transformed or inferred value to the next node(s).
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
 ---
@@ -126,7 +125,7 @@ msg6 = model_train.process(msg5)
 
 ### Split
 
-Use the following node to split your dataframe into train and test by passing `train_size` or `test_size`. This returns a dataframe with a multi-index. You can access train and test dataframes using the following example, `msg5.data.xs(“train”)`.
+Use the following node to split your dataframe into train and test by passing `train_size` or `test_size`. This returns a dataframe with a multi-index. You can access train and test dataframes using the following example, `msg5.data.xs("train")`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})

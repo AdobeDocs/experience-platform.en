@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;Tutorial;feature pipeline;Data Science Workspace;popular topics
 title: Create a Feature Pipeline Using the Model Authoring SDK
-topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform allows you to build and create custom feature pipelines to perform feature engineering at scale through the Sensei Machine Learning Framework Runtime. This document describes the various classes found in a feature pipeline, and provides a step-by-step tutorial for creating a custom feature pipeline using the Model Authoring SDK in PySpark.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98

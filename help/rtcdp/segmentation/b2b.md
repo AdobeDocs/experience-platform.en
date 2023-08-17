@@ -1,15 +1,15 @@
 ---
-title: Segmentation Use Cases for Real-time CDP B2B Edition
-description: An overview of the various available Real-time CDP B2B Edition use cases.
+title: Segmentation Use Cases for Real-Time Customer Data Platform B2B Edition
+description: An overview of the various available Adobe Real-Time Customer Data Platform B2B Edition use cases.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
 ---
-# Segmentation use cases for Real-time Customer Data Platform B2B Edition
+# Segmentation use cases for Real-Time Customer Data Platform B2B Edition
 
-This document provides examples of segment definitions in Real-time CDP B2B Edition and how different types of attributes can be combined for common B2B use cases. To understand how destinations fit into your B2B workflow, please see the [end-to-end tutorial](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
+This document provides examples of segment definitions in Adobe Real-Time Customer Data Platform B2B Edition and how different types of attributes can be combined for common B2B use cases. To understand how destinations fit into your B2B workflow, please see the [end-to-end tutorial](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
 >[!NOTE]
 >
->The attributes required for these segmentation use cases are only available to Real-time Customer Data Platform B2B Edition customers. If you are not using Real-time Customer Data Platform B2B Edition, see the [segmentation overview](./segmentation-overview.md) instead.
+>The attributes required for these segmentation use cases are only available to Real-Time Customer Data Platform B2B Edition customers. If you are not using Real-Time Customer Data Platform B2B Edition, see the [segmentation overview](./segmentation-overview.md) instead.
 
 ## Prerequisites {#prerequisites}
 
@@ -26,17 +26,17 @@ Once these requirements have been met you are able to combine these attributes f
 
 Once the union schemas for the B2B classes have relationships established and have been used to ingest data, their attributes are made available in the left rail of the Segment Builder. 
 
-B2B classes and their attributes are appended with a `B2B` label within the Segmentation workspace to differentiate them from those available as standard within Real-time Customer Data Platform. 
+B2B classes and their attributes are appended with a `B2B` label within the Segmentation workspace to differentiate them from those available as standard within Real-Time Customer Data Platform. 
 
 In order to effectively create segments for B2B use cases, it is important to have an intimate knowledge of the schema and understand what the data model looks like. It is also useful to be aware of the path that the data takes from one data object to another.
 
-The image below illustrates the relationships between the B2B classes available within Real-time CDP B2B Edition.
+The image below illustrates the relationships between the B2B classes available within Real-Time CDP B2B Edition.
 
 ![B2B class ERD](../assets/segmentation/b2b-classes.png)
 
 Since your data model can be complicated, you can use the Platform UI to view a more detailed visual representation of your data model in order to help find the relevant attributes for your use case. To start, go to the Platform UI and select Schemas in the left navigation.
 
-Select the appropriate schema from the available list and select the appropriate relationship from the [!UICONTROL Composition] side rail. In the example below, selecting the "Person" relationship reveals which attribute in the current schema references the related "Person" schema (if it is the source schema in the relationship), or is referenced by the "Person" schema (if it is the destination schema in the relationship).
+Select the appropriate schema from the available list and select the appropriate relationship from the [!UICONTROL Composition] side rail. In the example below, selecting the "Person" relationship reveals which attribute in the current schema references the related "Person" schema (if it is the source schema in the relationship), or is referenced by the "Person" schema (if it is the reference schema in the relationship).
 
 ![source-key example using the people relationship in the schema workspace](../assets/segmentation/source-key-schema-relationship-example.png)
 
@@ -44,7 +44,7 @@ This relationship is reflected within the Segment Builder through the use of `Ke
 
 ![source-key example using the segment builder in the segmentation workspace](../assets/segmentation/source-key-segmentation-example.png)
 
-Please refer to the [schemas in Real-time Customer Data Platform B2B Edition documentation](../schemas/b2b.md) for more information on the available B2B classes.
+Please refer to the [schemas in Real-Time Customer Data Platform B2B Edition documentation](../schemas/b2b.md) for more information on the available B2B classes.
 
 The use cases below provide information on which classes are used to establish relationships between the different schemas to achieve these results. These examples can be used to help you create your own segments.
 
@@ -78,13 +78,13 @@ Find all the people who are a "Decision Maker" of any opportunity where the acco
 
 ### Example 5: Find B2B profiles for opportunities by department name and opportunity amount {#find-department-opportunity-amount}
 
-Find all the people who work in a Human Resources (HR) department and are related to any account that has at least one open opportunity worth the given amount ($1 million) or more. This segment requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Account] class, and [!UICONTROL XDM Business Opportunity] class.
+Find all the people who work in a Human Resources (HR) department and have any account that has at least one open opportunity worth the given amount ($1 million) or more. This segment requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Account] class, and [!UICONTROL XDM Business Opportunity] class.
 
 ![UI displaying example 5 settings](../assets/segmentation/example-5.png)
 
 ### Example 6: Find B2B profiles by job title and annual account revenue {#find-by-job-title-and-revenue}
 
-Find all the people whose job title is Vice President and are related to any account with annual revenue of the given amount ($100 million) or more, and have visited the pricing page at least 3 times in the last month. This segment requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Account] class, and [!UICONTROL XDM ExperienceEvent] class.
+Find all the people whose job title is Vice President and have any account with annual revenue of the given amount ($100 million) or more, and have visited the pricing page at least 3 times in the last month. This segment requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Account] class, and [!UICONTROL XDM ExperienceEvent] class.
 
 ![UI displaying example 6 settings](../assets/segmentation/example-6.png)
 
@@ -98,14 +98,38 @@ Find all the people who are a "Decision Maker" of any closed-lost opportunity, a
 
 Find all the people who work in a Human Resources (HR) department and are related to any account *or any one of the account's related accounts* that has at least one open opportunity worth the given amount ($1 million) or more. This segment requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Account] class, and [!UICONTROL XDM Business Opportunity] class.
 
-![UI displaying segmentation for related accounts](../assets/segmentation/segmentation-related-accounts.png)
+![UI displaying segmentation for related accounts](../assets/segmentation/example-8.png)
 
 ### Example 9: Use lead scores and/or account scores to qualify profile {#account-scoring}
 
 Find all profiles with the lead score over 80. 
 
-![UI displaying segmentation for predictive lead and account scoring](../assets/segmentation/segmentation-predictive-lead-and-account-scoring.png)
+![UI displaying segmentation for predictive lead and account scoring](../assets/segmentation/example-9.png)
+
+### Example 10: Find B2B profiles associated with accounts whose parent org have revenue over a certain dollar amount {#find-parent-org-amount}
+
+Find all people that are associated with accounts whose Parent Org has a revenue more than the given amount ($100,000,000).
+
+![UI displaying segmentation parent org](../assets/segmentation/example-10.png)
+
+### Example 11: Find B2B profiles by job title and account name with an active relationship {#find-by-job-title-and-account-name}
+
+Find all the people who are a "Manager" on the account "Acme", where the account relationship is "Active". 
+
+![UI displaying segmentation parent org](../assets/segmentation/example-11.png)
+
+### Example 12: Find B2B profiles targeted for campaigns where the actualCost exceeds the budgetedCost {#find-actualcost-exceed-budgetcost}
+
+Find all the people who are targeted for campaigns where the actualCost exceeded the budgetedCost.
+
+![UI displaying segmentation parent org](../assets/segmentation/example-12.png)
+
+### Example 13: Find B2B profiles belonging to a Marketo Static list and isDeleted=false {#find-marketo-static-list}
+
+Find all the people belonging to the Marketo Static list "Anniversary users" where isDeleted=false.
+
+![UI displaying segmentation parent org](../assets/segmentation/example-13.png)
 
 ## Next steps {#next-steps}
 
-After reading this overview, you now have an understanding of the segmentation possibilities that are available using Real-time CDP, B2B Edition. For more information about the Segmentation Service, please read the [Segmentation documentation](../../segmentation/home.md).
+After reading this overview, you now have an understanding of the segmentation possibilities that are available using Real-Time CDP, B2B Edition. For more information about the Segmentation Service, please read the [Segmentation documentation](../../segmentation/home.md).

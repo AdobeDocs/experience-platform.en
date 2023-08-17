@@ -2,13 +2,12 @@
 keywords: Experience Platform;home;popular topics;sandbox developer guide
 solution: Experience Platform
 title: Sandbox API Guide
-topic-legacy: developer guide
 description: Sandboxes in Adobe Experience Platform provide isolated development environments that allow you to test features, run experiments, and make custom configurations without impacting your production environment.
 exl-id: c77e96dc-d138-4126-bbb0-b67beb0a02d6
 ---
 # [!DNL Sandbox] API guide
 
-The [!DNL Sandbox] API provides several endpoints that allow you to programmatically manage all sandboxes available to you within your IMS organization. These endpoints are outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
+The [!DNL Sandbox] API provides several endpoints that allow you to programmatically manage all sandboxes available to you within your organization. These endpoints are outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
 
 To see all available endpoints and CRUD operations, visit the [[!DNL Sandbox] API reference](https://www.adobe.io/experience-platform-apis/references/sandbox).
 

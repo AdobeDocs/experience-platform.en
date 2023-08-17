@@ -1,7 +1,7 @@
 ---
 title: Related accounts in Real-Time CDP B2B Edition
 type: Documentation
-description: An overview and more information about the related accounts feature in Experience Platform Real-time CDP B2B.
+description: An overview and more information about the related accounts feature in Experience Platform Real-Time CDP B2B.
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
 ---
 # Related accounts in Real-Time CDP B2B Edition
@@ -20,11 +20,21 @@ B2B enterprises often have their customer information stored in multiple systems
 
 {style="table-layout:auto"}
 
-With related accounts, [!DNL Real-time CDP B2B] now shows you a list of accounts that are similar to the account you are browsing.
+With related accounts, [!DNL Real-Time CDP B2B] now shows you a list of accounts that are similar to the account you are browsing.
 
 ![Screen showing Related accounts in the Experience Platform UI.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
 Use this feature to view related account profiles for an account profile in the Experience Platform UI and then include the related accounts in your segment definitions to broaden your reach or apply wider criteria in your segments.
+
+## Enable the related accounts service {#enable}
+
+To enable the service, select **[!UICONTROL Profiles]** in the sidebar followed by **[!UICONTROL Settings]**.
+
+![Experience Platform UI highlighting profiles and settings.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+
+Select the toggle beside [!UICONTROL Enable related accounts] to enable the service, and then select **[!UICONTROL Save]**.
+
+![Account settings screen highlighting the toggle and save.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
 ## How it works {#how-it-works}
 

@@ -8,13 +8,13 @@ exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
 
 >[!NOTE]
 >
->The use of Offer Decisioning in Adobe Experience Platform Web SDK is available in early access to select users. This functionality is not available to all IMS organizations.
+>The use of Offer Decisioning in Adobe Experience Platform Web SDK is available in early access to select users. This functionality is not available to all organizations.
 
 Adobe Experience Platform [!DNL Web SDK] can deliver and render personalized offers that are managed in Offer Decisioning. You can create your offers and other related objects using the Offer Decisioning user interface (UI) or APIs.
 
 ## Prerequisites
 
-* IMS organization is enabled for edge decisioning
+* Organization is enabled for edge decisioning
 * Offers, Activities created
 * Datastream is published
 
@@ -47,7 +47,7 @@ It is important to understand the following terminology when working with Offer 
 
   ![](assets/decision-scope-copy.png)
 
-* **Datastreams:** For more information, please read the [datastreams](../../datastreams/overview.md) documentation.
+* **Datastreams:** For more information, please read the [datastreams](../../../datastreams/overview.md) documentation.
 
 * **Identity**: For more information, please read this documentation outlining how [Platform Web SDK uses Identity Service](../../identity/overview.md).
 
@@ -55,7 +55,7 @@ It is important to understand the following terminology when working with Offer 
 
 To enable Offer Decisioning, perform the following steps:
 
-1. Enabled Adobe Experience Platform in your [datastream](../../datastreams/overview.md) and check the "Offer Decisioning" box
+1. Enabled Adobe Experience Platform in your [datastream](../../../datastreams/overview.md) and check the "Offer Decisioning" box
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 

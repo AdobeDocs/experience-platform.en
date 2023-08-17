@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;xdm;experience data model;namespace;namespaces;compatibility mode;xed;
 solution: Experience Platform
 title: Namespacing in Experience Data Model (XDM)
-topic-legacy: overviews
 description: Learn how namespacing in Experience Data Model (XDM) allows you to extend your schemas and prevent field collisions as different schema components are brought together.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
 ---
@@ -22,7 +21,7 @@ The following sections demonstrate how namespaces are assigned in XDM syntax.
 
 The standard XDM syntax provides insight into how namespaces are represented in schemas (including [how they are translated in Adobe Experience Platform](#compatibility)).
 
-Standard XDM uses [JSON-LD](https://json-ld.org/) syntax to assign namespaces to fields. This namespace comes in the form of a URI (such as `https://ns.adobe.com/xdm` for the `xdm` namespace), or as a shorthand prefix which is configured in the `@context` attribute of a schema.
+Standard XDM uses [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) syntax to assign namespaces to fields. This namespace comes in the form of a URI (such as `https://ns.adobe.com/xdm` for the `xdm` namespace), or as a shorthand prefix which is configured in the `@context` attribute of a schema.
 
 The following is an example schema for a product in standard XDM syntax. With the exception of `@id` (the unique identifier as defined by the JSON-LD spec), each field under `properties` starts with a namespace and ends with the field name. If using a shorthand prefix defined under `@context`, the namespace and the field name are separated by a colon (`:`). If not using a prefix, the namespace and field name are separated by a slash (`/`). 
 
@@ -70,7 +69,7 @@ The following is an example schema for a product in standard XDM syntax. With th
 | Property | Description |
 | --- | --- |
 | `@context` | An object that defines the shorthand prefixes that can be used instead of a full namespace URI under `properties`.  |
-| `@id` | A unique identifier for the record as defined by the [JSON-LD spec](https://json-ld.org/spec/latest/json-ld/#node-identifiers). |
+| `@id` | A unique identifier for the record as defined by the [JSON-LD spec](https://www.w3.org/TR/json-ld11/#node-identifiers). |
 | `xdm:sku` | An example of a field that uses a shorthand prefix to denote a namespace. In this case, `xdm` is the namespace (`https://ns.adobe.com/xdm`), and `sku` is the field name. |
 | `https://ns.adobe.com/xdm/channels/application` | An example of a field that uses the full namespace URI. In this case, `https://ns.adobe.com/xdm/channels` is the namespace, and `application` is the field name.  |
 | `https://ns.adobe.com/vendorA/product/stockNumber` | Fields provided by vendor resources use their own unique namespaces. In this example, `https://ns.adobe.com/vendorA/product` is the vendor namespace, and `stockNumber` is the field name.  |

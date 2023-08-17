@@ -15,14 +15,14 @@ Updates to existing features in Adobe Experience Platform:
 - [[!DNL Data Prep]](#data-prep)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [Real-time Customer Data Platform B2B Edition](#B2B)
+- [Real-Time Customer Data Platform B2B Edition](#B2B)
 - [Sources](#sources)
 
 ## [!DNL Dashboards] {#dashboards}
 
-Platform provides multiple dashboards through which you can view important information about your organization’s data, as captured during daily snapshots.
+Platform provides multiple dashboards through which you can view important information about your organization's data, as captured during daily snapshots.
 
-Dashboards provide pre-configured reporting options for your organization’s data and are built directly into the marketer workflow within Platform. These dashboards are available without the need for additional IT support or the time and effort it would otherwise take to export and process data with additional data warehousing design and implementation.
+Dashboards provide pre-configured reporting options for your organization's data and are built directly into the marketer workflow within Platform. These dashboards are available without the need for additional IT support or the time and effort it would otherwise take to export and process data with additional data warehousing design and implementation.
 
 The following widgets are available through the Widget library on their respective dashboards. See the documentation for more information on [how to add widgets through the Widget library](../../dashboards/customize/widget-library.md).
 
@@ -51,13 +51,13 @@ The following widgets are available through the Widget library on their respecti
 
 {style="table-layout:auto"}
 
-See the documentation for more information on [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), and [[!DNL Segments]](../../dashboards/guides/segments.md) dashboards.
+See the documentation for more information on [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), and [[!DNL Segments]](../../dashboards/guides/audiences.md) dashboards.
 
 ## Dataflows {#dataflows}
 
 In Platform, data is ingested from many different sources, analyzed within the system, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows.
 
-Dataflows are a representation of jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by Identity Service and Real-time Customer Profile before ultimately being activated to destinations.
+Dataflows are a representation of jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by Identity Service and Real-Time Customer Profile before ultimately being activated to destinations.
 
 **New features**
 
@@ -167,7 +167,7 @@ For more information on XDM in Platform, see the [XDM System overview](../../xdm
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-AI/ML services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company’s needs using business-level configurations without the need for data science expertise.
+AI/ML services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise.
 
 ### Attribution AI
 
@@ -183,7 +183,7 @@ For more information on [!DNL Intelligent Services], please see the [[!DNL Intel
 
 ### Customer AI
 
-Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale. This is accomplished without having to transform the business needs to a machine learning problem, pick an algorithm, train, or deploy.
+Customer AI available in Real-Time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale. This is accomplished without having to transform the business needs to a machine learning problem, pick an algorithm, train, or deploy.
 
 **Updated features**
 
@@ -194,9 +194,9 @@ Customer AI available in Real-time Customer Data Platform, is used to generate c
 
 For more information on [!DNL Intelligent Services], please see the [[!DNL Intelligent Services] overview](../../intelligent-services/home.md).
 
-## Real-time Customer Data Platform B2B Edition {#B2B}
+## Real-Time Customer Data Platform B2B Edition {#B2B}
 
-Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
+Built on Real-Time Customer Data Platform (Real-Time CDP), Real-Time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
 
 **Updated features**
 
@@ -204,7 +204,7 @@ Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edi
 | --- | --- |
 | Support for `isDeleted` functionality | All [!DNL Marketo] datasets except `Activities` now support the `isDeleted` mapping. The new mapping is automatically added to your existing B2B dataflows. You can use the `isDeleted` mapping to filter out records that have been deleted so that your data in the [!DNL Data Lake] is consistent with your source data. See the [[!DNL Marketo] mapping fields guide](../../sources/connectors/adobe-applications/mapping/marketo.md) for more information on `isDeleted`. |
 
-To learn more about Real-time Customer Data Platform B2B Edition, see the [B2B overview](../../rtcdp/b2b-overview.md).
+To learn more about Real-Time Customer Data Platform B2B Edition, see the [B2B overview](../../rtcdp/b2b-overview.md).
 
 ## Sources {#sources}
 

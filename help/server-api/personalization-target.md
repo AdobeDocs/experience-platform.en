@@ -11,26 +11,17 @@ The Edge Network Server API can deliver and render personalized experiences crea
 
 >[!IMPORTANT]
 >
->Personalization experiences created through the [Target Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) are not supported by the Server API.
+>Personalization experiences created through the [Target Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) are not fully supported by the Server API. The Server API can **retrieve** activities created by VEC, but Server API cannot **render** activities created by VEC. If you want to render activities created by VEC, please implement [hybrid personalization](../edge/personalization/hybrid-personalization.md) using the Web SDK and the Edge Network Server API.
 
 ## Configure your datastream {#configure-your-datastream}
 
 Before you can use the Server API in conjunction with Adobe Target, you must enable Adobe Target personalization on your datastream configuration.
 
-See the [guide on adding services to a datastream](../edge/datastreams/overview.md#adobe-target-settings), for detailed information on how to enable Adobe Target.
+See the [guide on adding services to a datastream](../datastreams/overview.md#adobe-target-settings), for detailed information on how to enable Adobe Target.
 
 When configuring your datastream, you can (optionally) provide values for [!DNL Property Token], [!DNL Target Environment ID], and [!DNL Target Third Party ID Namespace].
 
 ![UI image showing the datastream service configuration screen, with Adobe Target selected](assets/target-datastream.png)
-
-You can choose between the following [!DNL Analytics Logging] options:
-
-* **[!DNL Server Side]**: This is the default option for [[!DNL A4T]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html). When this option is selected, each time personalization content is returned by Target, the relevant [!DNL A4T] data is automatically sent to Analytics, based on the response from the Target personalization engine. 
-* **[!DNL Client Side]**: When this option is selected, each time personalization content is returned by Target, the relevant [!DNL A4T] data is returned to the calling application. If your intention is to record this data in Analytics, you need to ensure it is reported on a subsequent call to [!DNL Analytics].
-
-    >[!IMPORTANT]
-    >
-    >In addition to selecting **[!UICONTROL Client Side]** in the Target Configuration, you must also disable Analytics, for the Edge Network to return the [!DNL A4T] information back to the response.
 
 
 ## Custom parameters {#custom-parameters}
@@ -54,9 +45,9 @@ Given the following XDM sample:
 
 When creating audiences in Target, the following values will be available as custom parameters:
 
-* `xdm.marketing.campaignGroup`
-* `xdm.marketing.campaignName`
-* `xdm.marketing.trackingCode`
+* `marketing.campaignGroup`
+* `marketing.campaignName`
+* `marketing.trackingCode`
 
 ## Target profile updates {#profile-update}
 

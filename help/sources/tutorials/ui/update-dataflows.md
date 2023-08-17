@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;update dataflows;edit schedule
 description: This tutorial covers the steps for updating a dataflow schedule, including its ingestion frequency and interval rate, using the Sources workspace.
 solution: Experience Platform
 title: Update a Source Connection Dataflow in the UI
-topic-legacy: overview
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 ---
@@ -18,7 +17,12 @@ This tutorial requires a working understanding of the following components of Ad
 * [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 * [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-## Update dataflows
+## Update dataflows {#update-dataflows}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_dataflows_daysRemaining"
+>title="Dataset expiration"
+>abstract="This column indicates the number of days that the target dataset has left before it automatically expires.<br>A dataflow will fail if the target dataset is expired. To prevent a dataflow from failing, ensure that a target dataset is set to expire on the correct date. See the documentation to learn how to update expiration dates."
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. Select **[!UICONTROL Dataflows]** from the top header to view a list of existing dataflows.
 

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;flow service;delete accounts;delete;api
 solution: Experience Platform
 title: Delete an Account Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to delete an account using the Flow Service API.
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba

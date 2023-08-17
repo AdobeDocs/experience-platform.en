@@ -81,6 +81,6 @@ Available filters vary depending on the category selected in the dropdown. The f
 
 ## Next steps
 
-By reading this document you have a better understanding of the [!DNL Query Service] audit log capability and how it can be used to filter your [!DNL Query Service] user actions.
+By reading this document, you have a better understanding of the [!DNL Query Service] audit log capability and how it can be used to filter your [!DNL Query Service] user actions.
 
 If you are using the [!DNL Query Service] audit log capability for troubleshooting purposes, you are recommended to read the [troubleshooting guide](../troubleshooting-guide.md).

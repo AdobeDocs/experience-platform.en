@@ -52,7 +52,7 @@ solution: Experience Platform
   * [Score a model (UI)](models-recipes/score-model-ui.md)
   * [Score a model (API)](models-recipes/score-model-api.md)
   * [Optimize a model](models-recipes/optimize-model.md)
-  * [Enrich Real-time Customer Profile with machine learning insights](models-recipes/enrich-profile.md)
+  * [Enrich Real-Time Customer Profile with machine learning insights](models-recipes/enrich-profile.md)
   * [Publish a model as a service (UI)](models-recipes/publish-model-service-ui.md)
   * [Publish a model as a service (API)](models-recipes/publish-model-service-api.md)
   * [Schedule automated training and scoring on a service (UI)](models-recipes/schedule-models-ui.md)

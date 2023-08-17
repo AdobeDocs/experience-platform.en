@@ -2,9 +2,9 @@
 keywords: Experience Platform;attribution ai overview;popular topics;attribution ai;Attribution ai
 feature: Attribution AI
 title: Attribution AI Overview
-topic-legacy: Attribution AI
 description: Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys. Examples of touchpoints include display ad impressions, email sends, email opens and paid search clicks.
 landing-page-description: Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
+short-description: Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
 ---
 # Attribution AI overview

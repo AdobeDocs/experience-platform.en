@@ -2,13 +2,12 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;enum;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;best practices
 solution: Experience Platform
 title: Best Practices For Data Modeling
-topic-legacy: overview
 description: This document provides an introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas to be used in Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 ---
 # Best practices for data modeling
 
-[!DNL Experience Data Model] (XDM) is the core framework that standardizes customer experience data by providing common structures and definitions for use in downstream Adobe Experience Platform services. By adhering to XDM standards, all customer experience data can be incorporated into a common representation that allows you to gain valuable insights from customer actions, define customer audiences through segments, and express customer attributes for personalization purposes.
+[!DNL Experience Data Model] (XDM) is the core framework that standardizes customer experience data by providing common structures and definitions for use in downstream Adobe Experience Platform services. By adhering to XDM standards, all customer experience data can be incorporated into a common representation that allows you to gain valuable insights from customer actions, define customer audiences, and express customer attributes for personalization purposes.
 
 Since XDM is extremely versatile and customizable by design, it is therefore important to follow best practices for data modeling when designing your schemas. This document covers the key decisions and considerations you must make when mapping your customer experience data to XDM.
 
@@ -45,7 +44,7 @@ Once you have created an ERD to identify the essential entities you would like t
 | Category | Description |
 | --- | --- |
 | Profile entities | Profile entities represent attributes relating to an individual person, typically a customer. Entities that fall under this category should be represented by schemas based on the **[!DNL XDM Individual Profile] class**. |
-| Lookup entities | Lookup entities represent concepts that can relate to an individual person, but cannot be directly used to identify the individual. Entities that fall under this category should be represented by schemas based on **custom classes**. |
+| Lookup entities | Lookup entities represent concepts that can relate to an individual person, but cannot be directly used to identify the individual. Entities that fall under this category should be represented by schemas based on **custom classes**, and are linked to profiles and events through [schema relationships](../tutorials/relationship-ui.md). |
 | Event entities | Event entities represent concepts related to actions a customer can take, system events, or any other concept where you may want to track changes over time. Entities that fall under this category should be represented by schemas based on the **[!DNL XDM ExperienceEvent] class**. |
 
 {style="table-layout:auto"}
@@ -87,24 +86,24 @@ If you want to analyze how certain attributes within an entity change over time,
 
 #### Segmentation use cases
 
-When categorizing your entities, it is important to think about the audience segments you may want to build to address your particular business use cases.
+When categorizing your entities, it is important to think about the audiences you may want to build to address your particular business use cases.
 
-For example, a company wants to know all of the "Gold" or "Platinum" members of their loyalty program that have made more than five purchases in the last year. Based on this segment logic, the following conclusions can be made regarding how relevant entities should be represented:
+For example, a company wants to know all of the "Gold" or "Platinum" members of their loyalty program that have made more than five purchases in the last year. Based on this segmentation logic, the following conclusions can be made regarding how relevant entities should be represented:
 
-* "Gold" and "Platinum" represent loyalty statuses applicable to an individual customer. Since the segment logic is only concerned with the current loyalty status of customers, this data can be modeled as part of a profile schema. If you wished to track changes in loyalty status over time, you could also create an additional event schema for loyalty status changes.
-* Purchases are events which occur at a particular time, and the segment logic is concerned with purchase events within a specified time window. This data should therefore be modeled as an event schema.
+* "Gold" and "Platinum" represent loyalty statuses applicable to an individual customer. Since the segmentation logic is only concerned with the current loyalty status of customers, this data can be modeled as part of a profile schema. If you wished to track changes in loyalty status over time, you could also create an additional event schema for loyalty status changes.
+* Purchases are events which occur at a particular time, and the segmentation logic is concerned with purchase events within a specified time window. This data should therefore be modeled as an event schema.
 
 #### Activation use cases
 
-In addition to considerations regarding segmentation use cases, you should also review the activation use cases for those segments in order to identify additional relevant attributes.
+In addition to considerations regarding segmentation use cases, you should also review the activation use cases for those audiences in order to identify additional relevant attributes.
 
-For example, a company has built an audience segment based on the rule that `country = US`. Then, when activating that segment to certain downstream targets, the company wants to filter all exported profiles based on home state. Therefore, a `state` attribute should also be captured in the applicable profile entity.
+For example, a company has built an audience based on the rule that `country = US`. Then, when activating that audience to certain downstream targets, the company wants to filter all exported profiles based on home state. Therefore, a `state` attribute should also be captured in the applicable profile entity.
 
 #### Aggregated values
 
 Based on the use case and granularity of your data, you should decide whether certain values need to be pre-aggregated before being included in a profile or event entity.
 
-For example, a company wants to build a segment based on the number of cart purchases. You can choose to incorporate this data at the lowest granularity by including each timestamped purchase event as its own entity. However, this can sometimes increase the number of recorded events exponentially. To reduce the number of ingested events, you can choose to create an aggregate value `numberOfPurchases` over a weeklong or monthlong period. Other aggregate functions like MIN and MAX can also apply to these situations.
+For example, a company wants to build an audience based on the number of cart purchases. You can choose to incorporate this data at the lowest granularity by including each timestamped purchase event as its own entity. However, this can sometimes increase the number of recorded events exponentially. To reduce the number of ingested events, you can choose to create an aggregate value `numberOfPurchases` over a weeklong or monthlong period. Other aggregate functions like MIN and MAX can also apply to these situations.
 
 >[!CAUTION]
 >
@@ -168,8 +167,8 @@ The second approach would be to use event schemas to represent subscriptions. Th
 
 **Cons**
 
-* Segmentation becomes more complex for the original intended use case (identifying the status of customers' most recent subscriptions). The segment now needs additional logic to flag the last subscription event for a customer in order to check its status.
-* Events have a higher risk of automatically expiring and being purged from the Profile store. See the guide on [Profile TTL](../../profile/apply-ttl.md) for more information.
+* Segmentation becomes more complex for the original intended use case (identifying the status of customers' most recent subscriptions). The audience now needs additional logic to flag the last subscription event for a customer in order to check its status.
+* Events have a higher risk of automatically expiring and being purged from the Profile store. See the guide on [Experience Event expirations](../../profile/event-expirations.md) for more information.
 
 ## Create schemas based on your categorized entities
 
@@ -181,7 +180,7 @@ The category that an entity has been sorted under should determine the XDM class
 
 * Profile entities should use the [!DNL XDM Individual Profile] class.
 * Event entities should use the [!DNL XDM ExperienceEvent] class.
-* Lookup entities should use custom XDM classes defined by your organization.
+* Lookup entities should use custom XDM classes defined by your organization. Profile and event entities can then reference these lookup entities through schema relationships.
 
 >[!NOTE]
 >
@@ -199,7 +198,7 @@ If you are not sure whether a particular field is necessary to include in a sche
 
 ### Identity fields
 
-In Experience Platform, XDM fields marked as identities are used to stitch together information about individual customers coming from multiple data sources. Although a schema can have multiple fields marked as identities, a single primary identity must be defined in order for the schema to be enabled for use in [!DNL Real-time Customer Profile]. See the section on [identity fields](./composition.md#identity) in the basics of schema composition for more detailed information on the use case of these fields.
+In Experience Platform, XDM fields marked as identities are used to stitch together information about individual customers coming from multiple data sources. Although a schema can have multiple fields marked as identities, a single primary identity must be defined in order for the schema to be enabled for use in [!DNL Real-Time Customer Profile]. See the section on [identity fields](./composition.md#identity) in the basics of schema composition for more detailed information on the use case of these fields.
 
 When designing your schemas, any primary keys in your relational database tables will be likely candidates for primary identities. Other examples of applicable identity fields are customer email addresses, phone numbers, account IDs, and [ECID](../../identity-service/ecid.md).
 

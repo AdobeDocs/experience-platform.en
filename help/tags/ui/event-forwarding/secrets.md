@@ -7,14 +7,15 @@ exl-id: eefd87d7-457f-422a-b159-5b428da54189
 
 In event forwarding, a secret is a resource that represents an authentication credential for another system, allowing for the secure exchange of data. Secrets can only be created within event forwarding properties.
 
-There are currently three supported secret types:
+The following secret types are currently supported:
 
 | Secret type | Description |
 | --- | --- |
-| [!UICONTROL Token] | A single string of characters representing an authentication token value that is known and understood by both systems. |
+| [!UICONTROL Google OAuth 2] | Contains several attributes to support the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec for use in the [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) and [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 | [!UICONTROL HTTP] | Contains two string attributes for a username and password, respectively. |
 | [!UICONTROL OAuth 2] | Contains several attributes to support the [client credentials grant type](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) for the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
-| [!UICONTROL Google OAuth 2] | Contains several attributes to support the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec for use in the [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) and [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
+| [!UICONTROL OAuth 2 JWT] | Contains several attributes to support JSON Web Token (JWT) Profile for [OAuth 2.0 Authorization](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) grants. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
+| [!UICONTROL Token] | A single string of characters representing an authentication token value that is known and understood by both systems. |
 
 {style="table-layout:auto"}
 
@@ -31,6 +32,12 @@ This guide assumes that you are already familiar with how to manage resources fo
 You should also have a working understanding of the publishing flow for tags and event forwarding, including how to add resources to a library and install a build onto your website for testing. See the [publishing overview](../publishing/overview.md) for more details.
 
 ## Create a secret {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_eventforwarding_secrets_environments"
+>title="Environments for secrets"
+>abstract="In order for a secret to be usable by event forwarding, it must be assigned to an existing environment. If you do not have any environments created for your event forwarding property, you must configure them before continuing."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="Environments overview"
 
 To create a secret, select **[!UICONTROL Event Forwarding]** in the left navigation, then open the event forwarding property you want to add the secret under. Next, select **[!UICONTROL Secrets]** in the left navigation, followed by **[!UICONTROL Create New Secret]**.
 
@@ -61,6 +68,7 @@ From here, the steps to create the secret differ depending on the type of secret
 * [[!UICONTROL Token]](#token)
 * [[!UICONTROL HTTP]](#http)
 * [[!UICONTROL OAuth 2]](#oauth2)
+* [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL Token] {#token}
@@ -105,6 +113,40 @@ When finished, select **[!UICONTROL Create Secret]** to save the secret.
 
 ![Save OAuth 2 Offset](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
 
+### [!UICONTROL OAuth 2 JWT] {#oauth2jwt}
+
+To create an OAuth 2 JWT secret, select **[!UICONTROL OAuth 2 JWT]** from the **[!UICONTROL Type]** dropdown. 
+
+![The [!UICONTROL Create Secret] tab with the OAuth 2 JWT secret highlighted in the [!UICONTROL Type] dropdown.](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+
+>[!NOTE]
+>
+>The only [!UICONTROL Algorithm] that is currently supported for signing the JWT is RS256.
+
+In the fields that appear below, provide your [!UICONTROL Issuer], [!UICONTROL Subject], [!UICONTROL Audience], [!UICONTROL Custom Claims], [!UICONTROL TTL], then select the [!UICONTROL Algorithm] from the dropdown. Next, enter the [!UICONTROL Private Key Id], as well as your [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) for your OAuth integration. The [!UICONTROL Token URL] field is not a mandatory field. If a value is provided, the JWT is exchanged with an access token. The secret will be refreshed according to the `expires_in` attribute from the response and the [!UICONTROL Refresh Offset] value. If a value is not provided, the secret pushed to the edge is the JWT. The JWT will be refreshed according to the [!UICONTROL TTL] and [!UICONTROL Refresh Offset] values.
+
+![The [!UICONTROL Create Secret] tab with a selection of input fields highlighted.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+
+Under **[!UICONTROL Credential Options]**, you can provide other credential options such as `jwt_param` in the form of key-value pairs. To add more key-value pairs, select **[!UICONTROL Add another]**.
+
+![The [!UICONTROL Create Secret] tab highlighting the [!UICONTROL Credential Options] fields.](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+
+Finally, you can configure the **[!UICONTROL Refresh Offset]** value for the secret. This represents the number of seconds before the token expiry that the system will perform an automatic refresh. The equivalent time in hours and minutes is displayed to the right of the field and updates automatically as you type.
+
+![The [!UICONTROL Create Secret] tab highlighting the [!UICONTROL Refresh Offset] field.](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+
+For example, if the refresh offset is set to the default value of `1800` (30 minutes) and the access token has an `expires_in` value of `3600` (one hour), the system will automatically refresh the secret in one hour.
+
+>[!IMPORTANT]
+>
+>An OAuth 2 JWT secret requires at least 30 minutes between refreshes and must also be valid for a minimum of one hour. This restriction gives you a minimum of 30 minutes to intervene if problems arise with the generated token.
+>
+>For example, if the offset is set to `1800` (30 minutes) and the access token has an `expires_in` of `2700` (45 minutes), the exchange would fail due to the resulting difference being less than 30 minutes.
+
+When finished, select **[!UICONTROL Create Secret]** to save the secret.
+
+![The [!UICONTROL Create Secret] tab highlighting [!UICONTROL Create Secret]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
+
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
 To create a Google OAuth 2 secret, select **[!UICONTROL Google OAuth 2]** from the **[!UICONTROL Type]** dropdown. Under **[!UICONTROL Scopes]**, select the Google APIs that you want to use this secret to grant access to. The following products are currently supported:
@@ -121,6 +163,12 @@ A popover appears informing you that the secret needs to be manually authorized 
 ![Google authorization popover](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
 A dialog appears that allows you to enter the credentials for your Google account. Follow the prompts to grant event forwarding access to your data under the selected scope. Once the authorization process is complete, the secret is created.
+
+>[!IMPORTANT]
+>
+>If your organization has a re-authentication policy set for Google Cloud applications, the created secrets will not be refreshed successfully after the authentication expires (between 1 and 24 hours depending on the policy configuration).
+>
+>To resolve this issue, sign in to the Google Admin console and navigate to the **[!DNL App access control]** page so you can mark the event forwarding app (Adobe Real-Time CDP Event Forwarding) as [!DNL Trusted]. Refer to the Google documentation on [setting session lengths for Google Cloud services](https://support.google.com/a/answer/9368756) for more information.
 
 ## Edit a secret
 

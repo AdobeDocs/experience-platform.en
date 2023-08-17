@@ -11,7 +11,7 @@ For an overview of all of the features within the account profile user interface
 
 ## Getting started
 
-You must be entitled to [Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) in order to access the B2B [!UICONTROL Account Profiles] dashboard. 
+You must be entitled to [Adobe Real-Time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) in order to access the B2B [!UICONTROL Account Profiles] dashboard. 
 
 ## Account profiles data
 
@@ -33,13 +33,13 @@ From the [!UICONTROL Account Profiles] dashboard you can either [browse the acco
 
 ## Browse account profiles {#browse-account-profiles}
 
-The [!UICONTROL Browse] tab allows you to search and view the read-only account profiles ingested into your organization using an account ID from a connected enterprise source or by entering source details directly. From here you can see important information belonging to the account profile including, their name, industry, revenue, and segment among others.
+The [!UICONTROL Browse] tab allows you to search and view the read-only account profiles ingested into your organization using an account ID from a connected enterprise source or by entering source details directly. From here you can see important information belonging to the account profile including, their name, industry, revenue, and audience among others.
 
 Select the [!UICONTROL Profile ID] from the results displayed on the [!UICONTROL Browse] tab to open the [!UICONTROL Details] tab for the account profile.
 
 ![The Account Profiles browse tab with results displayed and the Profile ID highlighted.](../images/account-profiles/account-profiles-browse-tab.png)
 
-The account profile information displayed on the [!UICONTROL Details] tab has been merged together from multiple profile fragments to form a single view of the individual account. See the documentation on [browsing account profiles in Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) to learn more about account profile viewing capabilities in the Platform UI. 
+The account profile information displayed on the [!UICONTROL Details] tab has been merged together from multiple profile fragments to form a single view of the individual account. See the documentation on [browsing account profiles in Adobe Real-Time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) to learn more about account profile viewing capabilities in the Platform UI. 
 
 ## The [!UICONTROL Account Profiles] [!UICONTROL Overview] {#overview}
 

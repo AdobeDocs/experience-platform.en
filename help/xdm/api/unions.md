@@ -3,12 +3,11 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Unions API Endpoint
 description: The /unions endpoint in the Schema Registry API allows you to programmatically manage XDM union schemas in your experience application.
-topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 ---
 # Unions endpoint
 
-Unions (or union views) are system-generated, read-only schemas that aggregate the fields of all schemas which share the same class ([!DNL XDM ExperienceEvent] or [!DNL XDM Individual Profile]) and are enabled for [[!DNL Real-time Customer Profile]](../../profile/home.md).
+Unions (or union views) are system-generated, read-only schemas that aggregate the fields of all schemas which share the same class ([!DNL XDM ExperienceEvent] or [!DNL XDM Individual Profile]) and are enabled for [[!DNL Real-Time Customer Profile]](../../profile/home.md).
 
 This document covers essential concepts for working with unions in the Schema Registry API, including sample calls for various operations. For more general information about unions in XDM, see the section on unions in the [basics of schema composition](../schema/composition.md#union).
 
@@ -26,7 +25,7 @@ The `timeSeriesEvents` array is a list of time-series events that relate to the 
 
 ### Segment membership map
 
-The `segmentMembership` map stores the results of segment evaluations. When segment jobs are successfully run using the [Segmentation API](https://www.adobe.io/experience-platform-apis/references/segmentation/), the map is updated. `segmentMembership` also stores any pre-evaluated audience segments that are ingested into Platform, allowing for integration with other solutions like Adobe Audience Manager. See the tutorial on [creating segments using APIs](../../segmentation/tutorials/create-a-segment.md) for more information.
+The `segmentMembership` map stores the results of evaluating a segment definition. When segment jobs are successfully run using the [Segmentation API](https://www.adobe.io/experience-platform-apis/references/segmentation/), the map is updated. `segmentMembership` also stores any pre-evaluated audiences that are ingested into Platform, allowing for integration with other solutions like Adobe Audience Manager. See the tutorial on [creating audiences using APIs](../../segmentation/tutorials/create-a-segment.md) for more information.
 
 ## Retrieve a list of unions {#list}
 

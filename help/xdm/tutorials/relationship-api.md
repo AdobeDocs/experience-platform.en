@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;relationship;Relationship;relationship descriptor;Relationship descriptor;reference identity;Reference identity;
 title: Define a Relationship Between Two Schemas Using the Schema Registry API
 description: This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the Schema Registry API.
-topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 ---
@@ -10,7 +9,11 @@ exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 
 The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
 
-While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. To establish a relationship between two schemas belonging to different classes, a dedicated relationship field must be added to a source schema, which references the identity of a destination schema.
+While schema relationships can be inferred through the use of the union schema and [!DNL Real-Time Customer Profile], this only applies to schemas that share the same class. To establish a relationship between two schemas belonging to different classes, a dedicated relationship field must be added to a **source schema**, which indicates the identity of a separate **reference schema**.
+
+>[!NOTE]
+>
+>The Schema Registry API refers to reference schemas as "destination schemas". These are not to be confused with destination schemas in [Data Prep mapping sets](../../data-prep/mapping-set.md) or schemas for [destination connections](../../destinations/home.md).
 
 This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 
 
@@ -20,20 +23,20 @@ This tutorial requires a working understanding of [!DNL Experience Data Model] (
 
 * [XDM System in Experience Platform](../home.md): An overview of XDM and its implementation in [!DNL Experience Platform].
     * [Basics of schema composition](../schema/composition.md): An introduction of the building blocks of XDM schemas.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Schema Registry] API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the [!DNL Accept] header and its possible values).
 
-## Define a source and destination schema {#define-schemas}
+## Define a source and reference schema {#define-schemas}
 
 It is expected that you have already created the two schemas that will be defined in the relationship. This tutorial creates a relationship between members of an organization's current loyalty program (defined in a "[!DNL Loyalty Members]" schema) and their favorite hotels (defined in a "[!DNL Hotels]" schema).
 
-Schema relationships are represented by a **source schema** having a field that refers to another field within a **destination schema**. In the steps that follow, "[!DNL Loyalty Members]" will be the source schema, while "[!DNL Hotels]" will act as the destination schema.
+Schema relationships are represented by a **source schema** having a field that refers to another field within a **reference schema**. In the steps that follow, "[!DNL Loyalty Members]" will be the source schema, while "[!DNL Hotels]" will act as the reference schema.
 
 >[!IMPORTANT]
 >
->In order to establish a relationship, both schemas must have defined primary identities and be enabled for [!DNL Real-time Customer Profile]. See the section on [enabling a schema for use in Profile](./create-schema-api.md#profile) in the schema creation tutorial if you require guidance on how to configure your schemas accordingly.
+>In order to establish a relationship, both schemas must have defined primary identities and be enabled for [!DNL Real-Time Customer Profile]. See the section on [enabling a schema for use in Profile](./create-schema-api.md#profile) in the schema creation tutorial if you require guidance on how to configure your schemas accordingly.
 
 In order to define a relationship between two schemas, you must first acquire the `$id` values for both schemas. If you know the display names (`title`) of the schemas, you can find their `$id` values by making a GET request to the `/tenant/schemas` endpoint in the [!DNL Schema Registry] API.
 
@@ -103,13 +106,13 @@ Record the `$id` values of the two schemas you want to define a relationship bet
 
 ## Define a reference field for the source schema
 
-Within the [!DNL Schema Registry], relationship descriptors work similarly to foreign keys in relational database tables: a field in the source schema acts as a reference to the primary identity field of a destination schema. If your source schema does not have a field for this purpose, you may need to create a schema field group with the new field and add it to the schema. This new field must have a `type` value of `string`.
+Within the [!DNL Schema Registry], relationship descriptors work similarly to foreign keys in relational database tables: a field in the source schema acts as a reference to the primary identity field of a reference schema. If your source schema does not have a field for this purpose, you may need to create a schema field group with the new field and add it to the schema. This new field must have a `type` value of `string`.
 
 >[!IMPORTANT]
 >
 >The source schema cannot use its primary identity as a reference field.
 
-In this tutorial, the destination schema "[!DNL Hotels]" contains an `hotelId` field that serves as the schema's primary identity. However, the source schema "[!DNL Loyalty Members]" does not have a dedicated field to be used as a reference to `hotelId`, and therefore a custom field group needs to be created in order to add a new field to the schema: `favoriteHotel`.
+In this tutorial, the reference schema "[!DNL Hotels]" contains an `hotelId` field that serves as the schema's primary identity. However, the source schema "[!DNL Loyalty Members]" does not have a dedicated field to be used as a reference to `hotelId`, and therefore a custom field group needs to be created in order to add a new field to the schema: `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -373,8 +376,8 @@ curl -X POST \
 | `@type` | The type of descriptor being defined. For reference descriptors the value must be `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | The `$id` URL of the source schema. |
 | `xdm:sourceVersion` | The version number of the source schema. |
-| `sourceProperty` | The path to the field in the source schema that will be used to refer to the destination schema's primary identity. |
-| `xdm:identityNamespace` | The identity namespace of the reference field. This must be the same namespace as the destination schema's primary identity. See the [identity namespace overview](../../identity-service/home.md) for more information. |
+| `sourceProperty` | The path to the field in the source schema that will be used to refer to the reference schema's primary identity. |
+| `xdm:identityNamespace` | The identity namespace of the reference field. This must be the same namespace as the reference schema's primary identity. See the [identity namespace overview](../../identity-service/home.md) for more information. |
 
 {style="table-layout:auto"}
 
@@ -396,7 +399,7 @@ A successful response returns the details of the newly created reference descrip
 
 ## Create a relationship descriptor {#create-descriptor}
 
-Relationship descriptors establish a one-to-one relationship between a source schema and a destination schema. Once you have defined a reference identity descriptor for the appropriate field in the source schema, you can create a new relationship descriptor by making a POST request to the `/tenant/descriptors` endpoint.
+Relationship descriptors establish a one-to-one relationship between a source schema and a reference schema. Once you have defined a reference identity descriptor for the appropriate field in the source schema, you can create a new relationship descriptor by making a POST request to the `/tenant/descriptors` endpoint.
 
 **API format**
 
@@ -406,7 +409,7 @@ POST /tenant/descriptors
 
 **Request**
 
-The following request creates a new relationship descriptor, with "[!DNL Loyalty Members]" as the source schema and "[!DNL Hotels]" as the destination schema.
+The following request creates a new relationship descriptor, with "[!DNL Loyalty Members]" as the source schema and "[!DNL Hotels]" as the reference schema.
 
 ```shell
 curl -X POST \
@@ -433,9 +436,9 @@ curl -X POST \
 | `xdm:sourceSchema` | The `$id` URL of the source schema. |
 | `xdm:sourceVersion` | The version number of the source schema. |
 | `xdm:sourceProperty` | The path to the reference field in the source schema. |
-| `xdm:destinationSchema` | The `$id` URL of the destination schema. |
-| `xdm:destinationVersion` | The version number of the destination schema. |
-| `xdm:destinationProperty` | The path to the primary identity field in the destination schema. |
+| `xdm:destinationSchema` | The `$id` URL of the reference schema. |
+| `xdm:destinationVersion` | The version number of the reference schema. |
+| `xdm:destinationProperty` | The path to the primary identity field in the reference schema. |
 
 {style="table-layout:auto"}
 

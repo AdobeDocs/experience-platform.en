@@ -2,7 +2,6 @@
 keywords: Experience Platform;score a model;Data Science Workspace;popular topics;ui;scoring run;scoring results
 solution: Experience Platform
 title: Score a Model in the Data Science Workspace UI
-topic-legacy: tutorial
 type: Tutorial
 description: Scoring in Adobe Experience Platform Data Science Workspace can be achieved by feeding input data into an existing trained Model. Scoring results are then stored and viewable in a specified output dataset as a new batch.
 exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
@@ -15,7 +14,7 @@ This tutorial demonstrates the steps required to score a Model in the [!DNL Data
 
 ## Getting started
 
-In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 
 This tutorial requires a trained Model. If you do not have a trained Model, follow the [train and evaluate a Model in the UI](./train-evaluate-model-ui.md) tutorial before continuing.
 

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;SFTP;sftp
 solution: Experience Platform
 title: SFTP Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect an SFTP server to Adobe Experience Platform using APIs or the user interface.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
 ---

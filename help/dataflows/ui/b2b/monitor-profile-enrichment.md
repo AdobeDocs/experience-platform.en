@@ -87,7 +87,7 @@ Use the **[!UICONTROL Show failures only]** toggle to only display the failed pr
 
 By following this tutorial, you can now successfully monitor and understand metrics for profile enrichment jobs. See the following documents for more details:
 
-* [Related accounts in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
+* [Related accounts in Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [Related accounts tab in the Account profile UI guide](/help/rtcdp/accounts/account-profile-ui-guide.md)
-* [Lead to account matching in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
-* [Predictive lead and account scoring in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+* [Lead to account matching in Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [Predictive lead and account scoring in Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)

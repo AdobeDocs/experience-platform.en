@@ -20,11 +20,11 @@ Selecting **[!UICONTROL Modify dashboard]** from the profiles, segments, or dest
 
 The widget library within Experience Platform is where you can view all of the [standard](#standard-widgets) and [custom](#custom-widgets) widgets available to your organization. From your dashboards (for example, the profiles dashboard), you can select **[!UICONTROL Modify dashboard]** in order to display the **[!UICONTROL Widget library]** button.
 
-![](../images/customization/modify-dashboard.png)
+![The Profiles dashboard with Modify dashboard highlighted.](../images/customization/modify-dashboard.png)
 
 Select **[!UICONTROL Widget library]** to open the widget library and view all available standard metrics or begin creating custom widgets.
 
-![](../images/customization/widget-library-button.png)
+![The Profiles dashboard with Widget library highlighted.](../images/customization/widget-library-button.png)
 
 ### Standard widgets {#standard-widgets}
 
@@ -38,11 +38,11 @@ Custom widgets refer to widgets that are created and shared by members of your o
 
 For complete steps to creating your own widgets, refer to the [custom widgets for dashboards guide](custom-widgets.md).
 
-![](../images/customization/widget-library.png)
+![The widget library workspace with Standard and Custom highlighted.](../images/customization/widget-library.png)
 
 #### Edit schema {#edit-schema}
 
-In order to create a [custom widget](#custom-widgets) for your dashboards, you must first identify the Real-time Customer Profile attribute upon which the widget will be based.
+In order to create a [custom widget](#custom-widgets) for your dashboards, you must first identify the Real-Time Customer Profile attribute upon which the widget will be based.
 
 For step-by-step instructions for editing your organization's schema in order to create custom dashboard widgets, please visit the guide for [editing your dashboard schema](edit-schema.md).
 

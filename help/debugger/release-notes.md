@@ -51,7 +51,7 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 ## Version 1.1.0 - October 5, 2021
 
 * Remote debugging visualization - Organize the remote debugging events into a visual flow chart in the Adobe Experience Platform Web SDK > Edge Transactions section.
-* Require the Adobe Experience Platform Web SDK IMS org used on the page match the logged in org when starting a new remote debugging session.
+* Require the Adobe Experience Platform Web SDK organization used on the page match the logged in org when starting a new remote debugging session.
 * Only show the edge transactions for the connected tab. Target trace logs are still available in the Logs > Edge section.
 * Allow separate data stream ID config override for each instance of the Adobe Experience Platform Web SDK on the page. Add debug enabled toggle.
 * Fixed an issue where the Adobe Target trace token was not always sent with remote debugging sessions for the Adobe Experience Platform Web SDK.

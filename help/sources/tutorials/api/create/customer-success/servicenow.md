@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;servicenow;ServiceNow
 solution: Experience Platform
 title: Create a ServiceNow Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to a ServiceNow server using the Flow Service API.
 exl-id: 39d0e628-5c07-4371-a5af-ac06385db891
@@ -31,7 +30,7 @@ In order for [!DNL Flow Service] to connect to [!DNL ServiceNow], you must provi
 | `endpoint` | The endpoint of the [!DNL ServiceNow] server. |
 | `username` | The username used to connect to the [!DNL ServiceNow] server for authentication. |
 | `password` | The password to connect to the [!DNL ServiceNow] server for authentication. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL ServiceNow] is: `eb13cb25-47ab-407f-ba89-c0125281c563`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL ServiceNow] is: `eb13cb25-47ab-407f-ba89-c0125281c563`. |
 
 For more information about getting started, refer to [this ServiceNow document](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&id=r_TableAPI-GET).
 

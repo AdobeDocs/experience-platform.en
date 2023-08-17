@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Getting Started with the Schema Registry API
 description: This document provides an introduction to the core concepts you need to know before attempting to make calls to the Schema Registry API.
-topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 ---
 # Getting started with the [!DNL Schema Registry] API
@@ -16,7 +15,7 @@ Using the developer guide requires a working understanding of the following comp
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     * [Basics of schema composition](../schema/composition.md): Learn about the basic building blocks of XDM schemas.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 XDM uses JSON Schema formatting to describe and validate the structure of ingested customer experience data. It is therefore strongly recommended that you review the [official JSON Schema documentation](https://json-schema.org/) for a better understanding of this underlying technology.
@@ -49,7 +48,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Know your TENANT_ID {#know-your-tenant_id}
 
-Throughout the API guides you will see references to a `TENANT_ID`. This ID is used to ensure that resources you create are namespaced properly and contained within your IMS Organization. If you do not know your ID, you can access it by performing the following GET request:
+Throughout the API guides you will see references to a `TENANT_ID`. This ID is used to ensure that resources you create are namespaced properly and contained within your organization. If you do not know your ID, you can access it by performing the following GET request:
 
 **API format**
 
@@ -163,7 +162,7 @@ GET /global/classes
 
 ### Tenant container
 
-Not to be confused with your unique `TENANT_ID`, the `tenant` container holds all classes, field groups, data types, schemas, and descriptors defined by an IMS Organization. These are unique to each organization, meaning they are not visible or manageable by other IMS Orgs. You may perform all CRUD operations (GET, POST, PUT, PATCH, DELETE) against resources that you create in the `tenant` container.
+Not to be confused with your unique `TENANT_ID`, the `tenant` container holds all classes, field groups, data types, schemas, and descriptors defined by an organization. These are unique to each organization, meaning they are not visible or manageable by other organizations. You may perform all CRUD operations (GET, POST, PUT, PATCH, DELETE) against resources that you create in the `tenant` container.
 
 An example of a call that uses the `tenant` container would look like the following:
 
@@ -224,7 +223,7 @@ Currently, Platform only supports a single major version (`1`) for each schema. 
 >The non-destructive requirement for schema evolution is only enforced after the schema has been referenced by a dataset and one of the following cases is true:
 >
 >* Data has been ingested into the dataset.
->* The dataset has been enabled for use in Real-time Customer Profile (even if no data has been ingested).
+>* The dataset has been enabled for use in Real-Time Customer Profile (even if no data has been ingested).
 >
 >If the schema has not been associated with a dataset that meets one of the above criteria, then any change can be made to it. However, in all cases the `version` component still remains at `1`.
 

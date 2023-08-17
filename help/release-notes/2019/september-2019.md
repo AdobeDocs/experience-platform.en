@@ -30,7 +30,7 @@ For more information, visit the [Data Ingestion documentation](../../ingestion/h
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] is a fully managed service within [!DNL Experience Platform] that enables data scientists to seamlessly generate insights from data and content across Adobe solutions and third-party systems by building and operationalizing Machine Learning Models. [!DNL Data Science Workspace] is tightly integrated with [!DNL Platform] and powers the end-to-end data science lifecycle, including exploration and preparation of XDM data, followed by the development and operationalization of Models to automatically enrich [!DNL Real-time Customer Profile] with Machine Learning Insights.
+Adobe Experience Platform [!DNL Data Science Workspace] is a fully managed service within [!DNL Experience Platform] that enables data scientists to seamlessly generate insights from data and content across Adobe solutions and third-party systems by building and operationalizing Machine Learning Models. [!DNL Data Science Workspace] is tightly integrated with [!DNL Platform] and powers the end-to-end data science lifecycle, including exploration and preparation of XDM data, followed by the development and operationalization of Models to automatically enrich [!DNL Real-Time Customer Profile] with Machine Learning Insights.
 
 **New features**
 
@@ -50,7 +50,7 @@ For more information, visit the [Data Science Workspace Overview](../../data-sci
 
 ## [!DNL Query Service] {#query}
 
-[!DNL Query Service] provides the ability to use standard SQL to query data in Adobe Experience Platform to support a variety of analysis and data management use cases. It is a serverless tool that allows you to join datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, [!DNL Data Science Workspace], or for ingestion into [!DNL Real-time Customer Profile].
+[!DNL Query Service] provides the ability to use standard SQL to query data in Adobe Experience Platform to support a variety of analysis and data management use cases. It is a serverless tool that allows you to join datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, [!DNL Data Science Workspace], or for ingestion into [!DNL Real-Time Customer Profile].
 
 You can use [!DNL Query Service] to build data analysis ecosystems, creating a picture of customers across their various interaction channels. These channels might include point-of-sale systems, web, mobile, or CRM systems.
 

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
 title: Create a dataflow for Mailchimp Members using the Flow Service API
-topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to MailChimp Members using the Flow Service API.
 exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
 ---

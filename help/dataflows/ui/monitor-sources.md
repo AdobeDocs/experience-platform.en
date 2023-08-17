@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataf
 description: This tutorial provides steps to monitor your dataflow, using both aggregated monitoring view and cross-service monitoring.
 solution: Experience Platform
 title: Monitor Dataflows for Sources in the UI
-topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 ---
@@ -27,7 +26,7 @@ This tutorial requires a working understanding of the following components of Ad
   * [Dataflow runs](../../sources/notifications.md): Dataflow runs are the recurring scheduled jobs based on the frequency configuration of selected dataflows.
 * [Sources](../../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 * [Identity Service](../../identity-service/home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
-* [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [Real-Time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Aggregated monitoring view {#aggregated-monitoring-view}

@@ -21,7 +21,7 @@ This guide covers the different methods for adding individual fields to a schema
 
 This tutorial assumes that you are familiar with the [composition of XDM schemas](../schema/composition.md) and how to use the Schema Editor in the Platform UI. To follow along, you should start the process of [creating a new schema](./resources/schemas.md) and assigning it to a standard class before continuing with this guide.
 
-## Remove fields added from standard field groups
+## Remove fields added from standard field groups {#remove-field-group}
 
 After you have added a standard field group to a schema, you can remove any standard fields that you do not need. 
 

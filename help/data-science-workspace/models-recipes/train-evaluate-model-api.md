@@ -2,7 +2,6 @@
 keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;Sensei Machine Learning API
 solution: Experience Platform
 title: Train and Evaluate a Model using the Sensei Machine Learning API
-topic-legacy: tutorial
 type: Tutorial
 description: This tutorial will show you how to create, train, and evaluate a Model using Sensei Machine Learning API calls.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
@@ -21,7 +20,7 @@ Follow the [Experience Platform API authentication tutorial](https://www.adobe.c
 From the tutorial you should now have the following values:
 
 - `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.
-- `{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.
+- `{ORG_ID}`: Your organization credentials found in your unique Adobe Experience Platform integration.
 - `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.
 
 - Link to a Docker image of an intelligent service
@@ -60,7 +59,7 @@ curl -X POST \
 ```
 
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
-`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your organization credentials found in your unique Adobe Experience Platform integration.  
 `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.  
 `{JSON_PAYLOAD}`: The configuration of our MLInstance. The example we use in our tutorial is shown here:
 
@@ -173,7 +172,7 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your organization credentials found in your unique Adobe Experience Platform integration.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
 `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.  
 `{JSON_PAYLOAD}`: Experiment object that is created. The example we use in our tutorial is shown here:
@@ -230,7 +229,7 @@ curl -X POST \
 
 ```
 
-`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your organization credentials found in your unique Adobe Experience Platform integration.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
 `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.  
 `{JSON_PAYLOAD}`: Data set to be posted. The example we use in our tutorial is shown here:
@@ -318,7 +317,7 @@ curl -X POST \
 ```
 
 `{EXPERIMENT_ID}`: The ID corresponding to the Experiment you want to target. This can be found in the response when creating your Experiment.  
-`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your organization credentials found in your unique Adobe Experience Platform integration.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
 `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.  
 `{JSON_PAYLOAD}`: To create a training run, you will have to include the following in the body:
@@ -389,7 +388,7 @@ curl -X GET \
 `{EXPERIMENT_ID}`: The ID that represents the Experiment.  
 `{EXPERIMENT_RUN_ID}`: The ID that represents the Experiment Run.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
-`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your organization credentials found in your unique Adobe Experience Platform integration.  
 `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.  
 
 **Response**
@@ -452,7 +451,7 @@ curl -X GET \
 
 `{EXPERIMENT_RUN_ID}`: The ID corresponding to the Experiment Run you want to target. This can be found in the response when creating your Experiment Run.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
-`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your organization credentials found in your unique Adobe Experience Platform integration.  
 
 The response represents the trained Model that was created.
 
@@ -499,7 +498,7 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`:  The ID corresponding to the Experiment.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
-`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your organization credentials found in your unique Adobe Experience Platform integration.  
 
 >[!NOTE]
 >

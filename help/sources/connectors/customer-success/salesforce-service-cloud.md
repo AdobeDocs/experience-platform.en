@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Salesforce Service Cloud;salesforce service cloud
 solution: Experience Platform
 title: Salesforce Service Cloud Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect Salesforce Service Cloud to Adobe Experience Platform using APIs or the user interface.
 exl-id: 9bebbc00-55b3-4aec-9357-4127c05844e2
 ---

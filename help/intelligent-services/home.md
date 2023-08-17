@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;intelligent services;popular topics;intelligent service;Intelligent service
 solution: Experience Platform
 title: Intelligent Services Overview
-topic-legacy: Intelligent Services overview
 description: Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in Adobe Experience Cloud, Adobe Experience Platform, and 3rd party applications.
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
 ---

@@ -1,12 +1,12 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: Example Use Case for Real-time Customer Data Platform B2B Edition
-description: This sample scenario provides an example for the configuration of your implementation of Real-time Customer Data Platform B2B Edition.
+keywords: RTCDP;CDP;Real-Time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
+title: Example Use Case for Real-Time Customer Data Platform B2B Edition
+description: This sample scenario provides an example for the configuration of your implementation of Adobe Real-Time Customer Data Platform B2B Edition.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 ---
-# Example Use Case for Real-time Customer Data Platform B2B Edition
+# Example Use Case for Real-Time Customer Data Platform B2B Edition
 
-Real-time Customer Data Platform B2B Edition expands the existing Real-time CDP and Adobe Experience Platform offerings to support B2B data and workflows. This document provides an example use case that demonstrates the additional benefits provided by the B2B Edition. They include:
+Real-Time Customer Data Platform B2B Edition expands the existing Real-Time CDP and Adobe Experience Platform offerings to support B2B data and workflows. This document provides an example use case that demonstrates the additional benefits provided by the B2B Edition. They include:
 
 - Combine person and account data from different siloed data sources to produce a comprehensive view that enables a better understanding of the customers and more accurate segmentation. See the documentation on [creating XDM schema relationships](./schemas/b2b.md) for use with varied B2B sources for more information. 
 - Segment an audience based on attributes of related entities. This includes Accounts, Opportunities, Campaigns, and Marketing Lists. Segments are no longer limited to just Person attributes and Experience Events. See the [B2B segmentation documentation](./segmentation/b2b.md) for more examples of creating B2B-specific audiences.
@@ -36,7 +36,7 @@ In the last month, `p2@townsend.com` visited the new product page and the web vi
 
 ## The problem
 
-Line 1 has just released a new software product and would like to up-sell it to Bodea’s existing top-tier customer base. Bodea launches a marketing campaign with that specific target audience in mind.
+Line 1 has just released a new software product and would like to up-sell it to Bodea's existing top-tier customer base. Bodea launches a marketing campaign with that specific target audience in mind.
 
 As the relevant Townsend information is recorded as Account 1 in Marketo 1 and Account 2 in Marketo 2, Bodea's marketing team is unable to efficiently utilize the siloed information.
 
@@ -46,11 +46,11 @@ To date, Townsend has spent more than a million dollars cumulatively on Bodea pr
 
 As Townsend's spending is split across different sales systems and does not individually total more than one million, the segment would not find anyone qualified in either Marketo 1 or Marketo 2.
 
-### How Real-time CDP B2B Edition solves the problem
+### How Real-Time CDP B2B Edition solves the problem
 
-With Real-time CDP B2B Edition, Bodea's marketing team can:
+With Real-Time CDP B2B Edition, Bodea's marketing team can:
 
-- Combine the data from all disparate sources (multiple Marketo and CRM instances, and the Master Data Management) into Real-time CDP B2B Edition.
+- Combine the data from all disparate sources (multiple Marketo and CRM instances, and the Master Data Management) into Real-Time CDP B2B Edition.
 
 With RT-CDP B2B Edition, Bodea can use the Marketo Engage Source Connector to bring B2B data from Marketo 1 and Marketo 2 into Experience Platform and keep this data current using Platform connected applications. See the [Marketo source connector](../sources/connectors/adobe-applications/marketo/marketo.md) documentation for more information. 
 
@@ -81,14 +81,14 @@ By using the Marketo Engage and LinkedIn destinations, Bodea has an end-to-end c
 
 ## Next steps
 
-By reading this document you have now been introduced to the types of objectives and problems that can be solved using Real-time CDP B2B Edition. 
+By reading this document, you have now been introduced to the types of objectives and problems that can be solved using Real-Time CDP B2B Edition. 
 
 The following documentation is recommended to improve your understanding of B2B specific features: 
 
-- [Real-time Customer Data Platform B2B Edition end-to-end tutorial](./b2b-tutorial.md)
-- [Sources in Real-time Customer Data Platform B2B Edition](./sources/b2b.md)
-- [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
+- [Real-Time Customer Data Platform B2B Edition end-to-end tutorial](./b2b-tutorial.md)
+- [Sources in Real-Time Customer Data Platform B2B Edition](./sources/b2b.md)
+- [Schemas in Real-Time Customer Data Platform B2B Edition](./schemas/b2b.md)
 - [B2B Segmentation examples](./segmentation/b2b.md)
 - [Account Profiles Overview](./accounts/account-profile-overview.md)
-- [Destinations in Real-time Customer Data Platform B2B Edition](./destinations/b2b.md)
+- [Destinations in Real-Time Customer Data Platform B2B Edition](./destinations/b2b.md)
 - [Configure a LinkedIn Matched Audiences destination](../destinations/catalog/social/linkedin.md)

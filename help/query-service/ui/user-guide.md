@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Query editor;query editor;Query service;query service;
 solution: Experience Platform
 title: Query Editor UI Guide
-topic-legacy: query editor
 description: The Query Editor is an interactive tool provided by Adobe Experience Platform Query Service, which allows you to write, validate, and run queries for customer experience data within the Experience Platform user interface. Query Editor supports developing queries for analysis and data exploration, and allows you to run interactive queries for development purposes as well as non-interactive queries to populate datasets in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 ---
@@ -14,17 +13,17 @@ For more information about the concepts and features of [!DNL Query Service], se
 
 ## Getting started {#getting-started}
 
-[!DNL Query Editor] provides flexible execution of queries by connecting to [!DNL Query Service], and queries will only run while this connection is active.
+[!DNL Query Editor] provides flexible execution of queries by connecting to [!DNL Query Service], and queries only run while this connection is active.
 
 ### Connecting to [!DNL Query Service] {#connecting-to-query-service}
 
 [!DNL Query Editor] takes a few seconds to initialize and connect to [!DNL Query Service] when it is opened. The console tells you when it is connected, as shown below. If you attempt to run a query before the editor has connected, it delays execution until the connection is complete. 
 
-![Image](../images/ui/query-editor/connect.png)
+![The console output of the Query Editor upon initial connection.](../images/ui/query-editor/connect.png)
 
 ### How queries are run from [!DNL Query Editor] {#run-a-query}
 
-Queries executed from [!DNL Query Editor] run interactively. This means that if you close the browser or navigate away, the query is canceled. This is also true for queries made to generate datasets from query outputs. 
+Queries executed from [!DNL Query Editor] run interactively which means that if you close the browser or navigate away, the query is canceled. The same is true for queries made to generate datasets from query outputs. 
 
 ## Query authoring using [!DNL Query Editor] {#query-authoring}
 
@@ -32,15 +31,36 @@ Using [!DNL Query Editor], you can write, execute, and save queries for customer
 
 ### Accessing [!DNL Query Editor] {#accessing-query-editor}
 
-In the [!DNL Experience Platform] UI, select **[!UICONTROL Queries]** in the left navigation menu to open the [!DNL Query Service] workspace. Next, select **[!UICONTROL Create Query]** at the top right of the screen to start writing queries. This link is available from any of the pages in the [!DNL Query Service] workspace. 
+In the [!DNL Experience Platform] UI, select **[!UICONTROL Queries]** in the left navigation menu to open the [!DNL Query Service] workspace. Next, to start writing queries, select **[!UICONTROL Create Query]** at the top right of the screen. This link is available from any of the pages in the [!DNL Query Service] workspace. 
 
-![Image](../images/ui/query-editor/create-query.png)
-  
+![The Queries workspace overview tab with Create query highlighted.](../images/ui/query-editor/create-query.png)
+
+### Enhanced Query Editor toggle {#enhanced-editor-toggle}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryService_queryEditor_enhancedEditorToggle"
+>title="Enhanced editor toggle"
+>abstract="Toggle between the legacy and enhanced version of the Query Editor. The legacy version is enabled by default, although the enhanced version provides better accessibility and multi-theming support. To learn more about these changes, see the documentation."
+
+A UI toggle allows you to switch between the legacy and enhanced version of the Query Editor. The legacy version is enabled by default, although the enhanced version provides better accessibility and multi-theming support. Enable the enhanced version to access to the Query Editor settings.
+
+![The Query Editor with the enhanced Query Editor toggle highlighted.](../images/ui/query-editor/enhanced-query-editor-toggle.png)
+
+Activating the toggle switches the editor to light theme and improves the legibility of your syntax. A settings icon also appears above the Query Editor input field that incorporates the auto-complete toggle. From the settings icon, you can enable dark theme or disable/enable auto-complete.
+
+>[!TIP]
+>
+>With the enhanced Query Editor, you can [!UICONTROL Disable syntax auto complete] while authoring a query without losing your progress. Typically, if you disable the auto-complete feature while editing, all changes to the query are lost.
+
+To enable dark or light themes, select the settings icon (![A settings icon.](../images/ui/query-editor/settings-icon.png)) followed by the option in the dropdown menu that appears.
+
+![The Query Editor with the settings icon and Enable dark theme dropdown menu option highlighted.](../images/ui/query-editor/query-editor-settings.png)
+
 ### Writing queries {#writing-queries}
 
-[!UICONTROL Query Editor] is organized to make writing queries as easy as possible. The screenshot below shows how the editor appears in the UI, with the **Play** button and SQL entry field highlighted.
+[!UICONTROL Query Editor] is organized to make writing queries as easy as possible. The screenshot below shows how the editor appears in the UI, with the SQL entry field and **Play** highlighted.
 
-![Image](../images/ui/query-editor/editor.png)
+![The Query Editor with the SQL input field and Play highlighted.](../images/ui/query-editor/editor.png)
 
 To minimize your development time, it is recommended that you develop your queries with limits on the rows returned. For example, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. After you have verified that your query produces the expected output, remove the limits and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. 
 
@@ -48,15 +68,15 @@ To minimize your development time, it is recommended that you develop your queri
 
 - **Automatic syntax highlighting:** Makes reading and organizing SQL easier.
 
-![Image](../images/ui/query-editor/syntax-highlight.png)
+![An SQL statement in the Query Editor demonstrating syntax colour highlighting.](../images/ui/query-editor/syntax-highlight.png)
 
 - **SQL keyword auto-complete:** Start typing your query then use the arrow keys to navigate to the desired term and press **Enter**.
 
-![Image](../images/ui/query-editor/syntax-auto.png)
+![A few characters of SQL with the auto complete dropdown menu providing options from the Query Editor.](../images/ui/query-editor/syntax-auto.png)
 
-- **Table and field auto-complete:** Start typing the table name you want to `SELECT` from, then use the arrow keys to navigate to the table you are looking for, and press **Enter**. Once a table is selected, autocomplete will recognize fields in that table. 
+- **Table and field auto-complete:** Start typing the table name you want to `SELECT` from, then use the arrow keys to navigate to the table you are looking for, and press **Enter**. Once a table is selected, autocomplete recognizes fields in that table. 
 
-![The Query Editor command line interface displaying drop down suggestions.](../images/ui/query-editor/tables-auto.png)
+![The Query Editor input displaying drop down table name suggestions.](../images/ui/query-editor/tables-auto.png)
 
 ### Auto-complete UI configurational toggle {#auto-complete}
 
@@ -68,7 +88,7 @@ The auto-complete configuration setting is per user and remembered for the conse
 
 Disabling this feature stops several metadata commands from being processed and providing recommendations that typically benefit the speed of the author when editing queries.
 
-When you use the toggle to enable the auto-complete feature, recommended suggestions for table and column names as well as SQL keywords become available after a short pause. A success message in the console beneath the Query Editor indicates the feature is active. 
+When you use the toggle to enable the auto-complete feature, recommended suggestions for table and column names as well as SQL keywords become available after a short pause. A success message in the console beneath the Query Editor indicates that the feature is active. 
 
 If you disable the auto-complete feature, a page refresh is required for the feature to take effect. A confirmation dialog appears with three options when you disable the [!UICONTROL Syntax auto-complete] toggle :
 
@@ -78,93 +98,55 @@ If you disable the auto-complete feature, a page refresh is required for the fea
 
 >[!IMPORTANT]
 >
->If you are writing or editing a query when disabling this feature, you must save any changes to your query before refreshing the page or all progress will be lost.  
+>If you are writing or editing a query when disabling this feature, you must save any changes to your query before refreshing the page or all of your progress will be lost.  
 
 ![The confirmation dialog to disable the auto-complete feature.](../images/ui/query-editor/confirmation-dialog.png)
 
-Select the appropriate option to disable the auto-complete feature.
+To disable the auto-complete feature, select the appropriate confirmation option.
 
 ### Error detection {#error-detection}
 
 [!DNL Query Editor] automatically validates a query as you write it, providing generic SQL validation and specific execution validation. If a red underline appears below the query (as shown in the image below), it represents an error within the query.
 
-![Image](../images/ui/query-editor/syntax-error-highlight.png)
+![The Query Editor input displaying SQL underlined in red to indicate an error.](../images/ui/query-editor/syntax-error-highlight.png)
 
 When errors are detected, you can view the specific error messages by hovering over the SQL code.
 
-![Image](../images/ui/query-editor/linting-error.png)
+![A dialog with an error message.](../images/ui/query-editor/linting-error.png)
 
 ### Query details {#query-details}
 
-While you are viewing a query in [!DNL Query Editor], the **[!UICONTROL Query Details]** panel provides tools to manage the selected query.
+To view a query in the Query Editor, select any saved template from the [!UICONTROL Templates] tab. The query details panel provides more information and tools to manage the selected query.
 
-![Image](../images/ui/query-editor/query-details.png)
+![The Query Editor with the query details panel highlighted.](../images/ui/query-editor/query-details.png)
 
 This panel allows you to generate an output dataset directly from the UI, delete or name the displayed query, and add a schedule to the query. 
 
-This panel also shows useful metadata such as the last time the query was modified and who modified it, if applicable. To generate a dataset, select **[!UICONTROL Output Dataset]**. The **[!UICONTROL Output Dataset]** dialog appears. Enter a name and description, then select **[!UICONTROL Run Query]**. The new dataset is displayed in the **[!UICONTROL Datasets]** tab on the [!DNL Query Service] user interface on [!DNL Platform].
+This panel also shows useful metadata such as the last time that the query was modified and who modified it, if applicable. To generate a dataset, select **[!UICONTROL Output Dataset]**. The **[!UICONTROL Output Dataset]** dialog appears. Enter a name and description, then select **[!UICONTROL Run Query]**. The new dataset is displayed in the **[!UICONTROL Datasets]** tab on the [!DNL Query Service] user interface on [!DNL Platform].
 
 ### Scheduled queries {#scheduled-queries}
 
->[!IMPORTANT]
->
->The following is a list of limitations for scheduled queries when using the Query Editor. They do not apply to the [!DNL Query Service] API:<br/>You can only add a schedule to a query that has already been created, saved, and run.<br/>You **cannot** add a schedule to a parameterized query.<br/>Scheduled queries **cannot** contain an anonymous block.
+Queries that have been saved as a template can be scheduled from the Query Editor. Scheduling queries allows you to automate query runs on a custom cadence. You can schedule queries based on frequency, date, and time, and also choose an output dataset for your results if necessary. Query schedules can also be disabled or deleted through the UI.
 
-To add a schedule to a query, select **[!UICONTROL Add schedule]**. 
+Schedules are set in the Query Editor. When using the Query Editor, you can only add a schedule to a query that has already been created, saved, and run. The same limitation does not apply to the [!DNL Query Service] API:
 
-![Image](../images/ui/query-editor/add-schedule.png)
+See the query schedules documentation to learn how to [create query schedules in the UI](./query-schedules.md). Alternatively, to learn how to add schedules using the API, read the [scheduled queries endpoint guide](../api/scheduled-queries.md).
 
-The **[!UICONTROL Schedule details]** page appears. On this page, you can choose the frequency of the scheduled query, the dates the scheduled query will run, as well as what dataset to export the query to.
-
-![Image](../images/ui/query-editor/schedule-details.png)
-
-You can choose the following options for **[!UICONTROL Frequency]**:
-
-- **[!UICONTROL Hourly]**: The scheduled query will run every hour for the date period you selected.
-- **[!UICONTROL Daily]**: The scheduled query will run every X days at the time and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
-- **[!UICONTROL Weekly]**: The selected query will run on the days of the week, time, and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
-- **[!UICONTROL Monthly]**: The selected query will run every month at the day, time, and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
-- **[!UICONTROL Yearly]**: The selected query will run every year at the day, month, time, and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
-
-For the dataset, you have the option to use either an existing dataset or create a new dataset.
-
->[!IMPORTANT]
->
-> Since you are using either an existing or creating a new dataset, you do **not** need to include either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of the query, since the datasets are already set. Including either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of your scheduled queries will result in an error.
-
-After confirming all these details, select **[!UICONTROL Save]** to create a schedule.
-
-The query details page re-appears, and now shows the details of the newly created schedule, including the schedule ID, the schedule itself, and the schedule's output dataset. You can use the schedule ID to look up more information about the runs of the scheduled query itself. To learn more, please read the [scheduled query run endpoints guide](../api/runs-scheduled-queries.md).
-
->[!NOTE]
->
-> You can only schedule **one** query template using the UI. If you want to add additional schedules to a query template, you will need to use the API. If a schedule has already been added using the API, you will **not** be able to add additional schedules using the UI. If multiple schedules are already attached to a query template, only the oldest schedule will be displayed. To learn how to add schedules using the API, please read the [scheduled queries endpoint guide](../api/scheduled-queries.md). 
->
-> Additionally, you should refresh the page if you want to ensure you have the latest state for the schedule you are viewing.
-
-#### Delete a schedule {#delete-schedule}
-
-You can delete a schedule by selecting **[!UICONTROL Delete a schedule]**.
-
-![Image](../images/ui/query-editor/delete-schedule.png)
-
->[!IMPORTANT]
->
-> If you want to delete a schedule for a query, you must disable the schedule first.
+Any scheduled queries are added to the list in the [!UICONTROL Scheduled queries] tab. From that workspace you can monitor the status of all scheduled query jobs through the UI. On the [!UICONTROL Scheduled queries] tab, you can find important information about your query runs and subscribe to alerts. The available information includes the status, schedule details, and error messages/codes if a run failed. See the [Monitor scheduled queries document](./monitor-queries.md) for more information.
 
 ### Saving queries {#saving-queries}
 
-[!DNL Query Editor] provides a save function that allows you to save a query and work on it later. To save a query, select **[!UICONTROL Save]** in the top right corner of [!DNL Query Editor]. Before a query can be saved, a name must be provided for the query using the **[!UICONTROL Query Details]** panel.
+The [!DNL Query Editor] provides a save function that allows you to save a query and work on it later. To save a query, select **[!UICONTROL Save]** in the top-right corner of [!DNL Query Editor]. Before a query can be saved, a name must be provided for the query using the **[!UICONTROL Query Details]** panel.
 
 >[!NOTE]
 >
->Queries named and saved in using the Query Editor are available as templates within the Query dashboard [!UICONTROL Browse] tab. See the [templates documentation](./query-templates.md) for more information.
+>Queries named and saved in using the Query Editor are available as templates within the Query dashboard [!UICONTROL Templates] tab. See the [templates documentation](./query-templates.md) for more information.
 
 ### How to find previous queries {#previous-queries}
 
-All queries executed from [!DNL Query Editor] are captured in the Log table. You can use the search functionality in the **[!UICONTROL Log]** tab to find query executions. Saved queries are listed in the **[!UICONTROL Browse]** tab. 
+All queries executed from [!DNL Query Editor] are captured in the Log table. You can use the search functionality in the **[!UICONTROL Log]** tab to find query executions. Saved queries are listed in the **[!UICONTROL Templates]** tab. 
 
-See the [Query Service UI overview](./overview.md) for more information. 
+If a query was scheduled, then the [!UICONTROL Scheduled Queries] tab provides improved visibility through the UI for those query jobs. See the [query monitoring documentation](./monitor-queries.md) for more information. 
 
 >[!NOTE]
 >
@@ -172,27 +154,27 @@ See the [Query Service UI overview](./overview.md) for more information.
 
 ## Executing queries using Query Editor {#executing-queries}
 
-To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the **[!UICONTROL Log]** or **[!UICONTROL Browse]** tab, and select **Play**. The status of query execution is displayed in the **[!UICONTROL Console]** tab below, and output data is shown in the **[!UICONTROL Results]** tab.
+To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the **[!UICONTROL Log]** or **[!UICONTROL Templates]** tab, and select **Play**. The status of query execution is displayed in the **[!UICONTROL Console]** tab below, and output data is shown in the **[!UICONTROL Results]** tab.
 
 ### Console {#console}
 
 The console provides information on the status and operation of [!DNL Query Service]. The console displays the connection status to [!DNL Query Service], query operations being executed, and any error messages that result from those queries.
 
-![Image](../images/ui/query-editor/console.png)
+![The Console tab of the Query Editor console.](../images/ui/query-editor/console.png)
 
 >[!NOTE]
 >
->The console only shows errors that resulted from executing a query. It does not show query validation errors before a query is executed.
+>The console only shows errors that resulted from the execution of a query. It does not show the query validation errors that occur before a query is executed.
 
 ### Query results {#query-results}
 
 After a query has been completed, the results are displayed in the **[!UICONTROL Results]** tab, next to the **[!UICONTROL Console]** tab. This view shows the tabular output of your query, displaying up to 100 rows. This view allows you to verify that your query produces the expected output. To generate a dataset with your query, remove limits on rows returned, and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. See the [generating datasets tutorial](./create-datasets.md) for instructions on how to generate a dataset from query results in [!DNL Query Editor].
 
-![Image](../images/ui/query-editor/query-results.png)
+![The Results tab of the Query Editor console displaying the results of a query run.](../images/ui/query-editor/query-results.png)
 
 ## Run queries with [!DNL Query Service] tutorial video {#query-tutorial-video}
 
-The following video shows how to run queries in the Adobe Experience Platform interface and in a PSQL client. Additionally, using individual properties in an XDM object, using Adobe-defined functions, and using CREATE TABLE AS SELECT (CTAS) are demonstrated.
+The following video shows how to run queries in the Adobe Experience Platform interface and in a PSQL client. The video also demonstrates the use of individual properties in an XDM object, Adobe-defined functions, and how to use CREATE TABLE AS SELECT (CTAS) queries.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 

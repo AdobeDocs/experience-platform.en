@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
 title: Getting Started with Self-Serve Sources (Batch SDK)
-topic-legacy: developer guide
 description: This document provides an introduction to the prerequisite information you need to know before attempting to create a new source using Self-Serve Sources (Batch SDK).
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
 ---
@@ -12,7 +11,7 @@ Self-Serve Sources (Batch SDK) allows you to integrate your own REST-based sourc
 
 ## Prerequisites
 
-To use Self-Serve Sources (Batch SDK), you must ensure that you have access to an IMS Organization Sandbox provisioned with Adobe Experience Platform Sources.
+To use Self-Serve Sources (Batch SDK), you must ensure that you have access to an organization Sandbox provisioned with Adobe Experience Platform Sources.
 
 This guide also requires a working understanding of the following components of Adobe Experience Platform:
 

@@ -18,8 +18,12 @@ To understand the difference between connections and extensions, see [Connection
 
 ### Connections
 
+* [Adobe Advertising Cloud DSP connection](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
 * [Adobe Campaign connection](../email-marketing/adobe-campaign.md)
+* [Adobe Target connection](/help/destinations/catalog/personalization/adobe-target-connection.md)
+* [(Beta) Experience Cloud audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Marketo Engage connection](/help/destinations/catalog/adobe/marketo-engage.md)
+* [Marketo Measure Ultimate connection](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
 
 ### Extensions
 
@@ -35,8 +39,8 @@ To understand the difference between connections and extensions, see [Connection
 * [Marketo Munchkin extension](../email/marketo-munchkin.md)
 * [Marketo Web Personalization extension](../personalization/marketo-web-personalization.md)
 
-## Experience Platform segment sharing
+## Experience Platform audience sharing
 
-Use the Experience Platform segment sharing capability to share your Experience Platform segments to additional Adobe destinations. Refer the page below for more information (opens in the Audience Manager documentation portal):
+Use the Experience Platform audience sharing capability to share your Experience Platform audiences to additional Adobe destinations. Refer the page below for more information (opens in the Audience Manager documentation portal):
 
-* [Experience Platform segment sharing with Adobe Audience Manager, Adobe Advertising Cloud, and Adobe Target through the Core Services integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [Experience Platform audience sharing with Adobe Audience Manager, Adobe Advertising Cloud, and Adobe Target through the Core Services integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

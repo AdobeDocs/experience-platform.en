@@ -2,13 +2,12 @@
 keywords: Experience Platform;home;popular topics;PSQL;psql;Query service;query service;metadata;commands;metadata commands;
 solution: Experience Platform
 title: Metadata PostgreSQL Commands in Query Service
-topic-legacy: metadata
 description: A list of PostgreSQL commands that are currently supported for querying metadata in Adobe Experience Platform Query Service.
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
 ---
-# Metadata PostgreSQL commands in Query Service
+# Metadata [!DNL PostgreSQL] commands in Query Service
 
-For metadata on your dataset, the following PostgreSQL commands are currently supported for querying:
+For metadata on your dataset, the following [!DNL PostgreSQL] commands are currently supported for querying:
 
 >[!NOTE]
 >
@@ -37,4 +36,4 @@ For metadata on your dataset, the following PostgreSQL commands are currently su
 
 All of the commands that start with `\d` can be combined. For example, you can issue `\dtsn` to display a list of all tables, sequences, and schemas. `\d` by itself shows all visible tables, views, materialized views, and sequences.
 
-For additional information about the commands listed above, please refer to the documentation at [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). However, please be aware that not all the options shown in the PostgreSQL documentation are supported by [!DNL Experience Platform].
+For additional information about the commands listed above, please refer to the documentation at [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). However, please be aware that not all the options shown in the [!DNL PostgreSQL] documentation are supported by [!DNL Experience Platform].

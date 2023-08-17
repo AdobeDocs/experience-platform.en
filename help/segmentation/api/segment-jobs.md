@@ -1,14 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment jobs;segment job;API;api;
 solution: Experience Platform
 title: Segment Jobs API Endpoint
-topic-legacy: developer guide
 description: The segment jobs endpoint in the Adobe Experience Platform Segmentation Service API allows you to programmatically manage segment jobs for your organization.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
 ---
 # Segment jobs endpoint
 
-A segment job is an asynchronous process that creates an audience segment on demand. It references a [segment definition](./segment-definitions.md), as well as any [merge policies](../../profile/api/merge-policies.md) controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience.
+A segment job is an asynchronous process that creates an audience segment on demand. It references a [segment definition](./segment-definitions.md), as well as any [merge policies](../../profile/api/merge-policies.md) controlling how [!DNL Real-Time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience.
 
 This guide provides information to help you better understand segment jobs and includes sample API calls for performing basic actions using the API.
 
@@ -51,11 +49,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Response**
 
-A successful response returns HTTP status 200 with a list of segment jobs for the specified IMS organization as JSON. However, the response will differ, depending on the number of segments within the segment job.
+A successful response returns HTTP status 200 with a list of segment jobs for the specified organization as JSON. However, the response will differ, depending on the number of segment definitions within the segment job.
 
-**Less than or equal to 1500 segments in your segment job**
+**Less than or equal to 1500 segment definitions in your segment job**
 
-If you have less than 1500 segments being run in your segment job, a full list of all the segments will be displayed within the `children.segments` attribute.
+If you have less than 1500 segment definitions being run in your segment job, a full list of all the segment definitions will be displayed within the `children.segments` attribute.
 
 >[!NOTE]
 >
@@ -125,7 +123,6 @@ If you have less than 1500 segments being run in your segment job, a full list o
                 "segmentedProfileByStatusCounter":{
                     "94509dba-7387-452f-addc-5d8d979f6ae8":{
                         "exited":144646,
-                        "existing":10,
                         "realized":2056
                     }
                 },
@@ -162,9 +159,9 @@ If you have less than 1500 segments being run in your segment job, a full list o
 }
 ```
 
-**More than 1500 segments**
+**More than 1500 segment definitions**
 
-If you have more than 1500 segments being run in your segment job, the `children.segments` attribute will display `*`, indicating that all the segments are being evaluated.
+If you have more than 1500 segment definitions being run in your segment job, the `children.segments` attribute will display `*`, indicating that all the segment definitions are being evaluated.
 
 >[!NOTE]
 >
@@ -221,7 +218,6 @@ If you have more than 1500 segments being run in your segment job, the `children
                 "segmentedProfileByStatusCounter":{
                     "94509dba-7387-452f-addc-5d8d979f6ae8":{
                         "exited":144646,
-                        "existing":10,
                         "realized":2056
                     }
                 },
@@ -269,8 +265,8 @@ If you have more than 1500 segments being run in your segment job, the `children
 | `metrics.totalTime` | An object that contains information on the times the segmentation job started and ended, as well as the total time taken. |
 | `metrics.profileSegmentationTime` | An object that contains information on the times the segmentation evaluation started and ended, as well as the total time taken. | 
 | `metrics.segmentProfileCounter` | The number of profiles qualified on a per segment basis. | 
-| `metrics.segmentedProfileByNamespaceCounter` | The number of profiles qualified for each identity namespace on a per segment basis. |
-| `metrics.segmentProfileByStatusCounter` | The count of profiles for each statuses. The following three statuses are supported: <ul><li>"realized" - The number of new profiles that entered into the segment.</li><li>"existing" - The number of profiles that continue to exist in the segment.</li><li>"exited" - The number of profile segments that no longer exist in the segment.</li></ul>|
+| `metrics.segmentedProfileByNamespaceCounter` | The number of profiles qualified for each identity namespace on a per segment definition basis. |
+| `metrics.segmentProfileByStatusCounter` | The count of profiles for each statuses. The following three statuses are supported: <ul><li>"realized" - The number of profiles that qualify for the segment definition.</li><li>"exited" - The number of profiles  that no longer exist in the segment definition.</li></ul>|
 | `metrics.totalProfilesByMergePolicy` | The total number of merged profiles on a per merge policy basis. | 
 
 ## Create a new segment job {#create}
@@ -283,9 +279,9 @@ You can create a new segment job by making a POST request to the `/segment/jobs`
 POST /segment/jobs
 ```
 
-When creating a new segment job, the request and response will differ depending on the number of segments within the segment job.
+When creating a new segment job, the request and response will differ depending on the number of segment definitions within the segment job.
 
-**Less than or equal to 1500 segments in your segment job**
+**Less than or equal to 1500 segment definitions in your segment job**
 
 **Request**
 
@@ -368,7 +364,6 @@ A successful response returns HTTP status 200 with information about your newly 
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },
@@ -409,13 +404,13 @@ A successful response returns HTTP status 200 with information about your newly 
 | `segments.segment.id` | The ID of the segment definition that you provided. |
 | `segments.segment.expression` | An object that contains information about the segment definition's expression, written in PQL. |
 
-**More than 1500 segments**
+**More than 1500 segment definitions**
 
 **Request**
 
 >[!NOTE]
 >
->While you can create a segment job with more than 1500 segments, this is **highly not recommended**.
+>While you can create a segment job with more than 1500 segment definitions, this is **highly not recommended**.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -438,7 +433,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Property | Description |
 | -------- | ----------- |
-| `schema.name` | The name of the schema for the segments. |
+| `schema.name` | The name of the schema for the segment definitions. |
 | `segments.segmentId` | When running a segment job with more than 1500 segments, you will need to pass `*` as the segment ID to signify that you want to run a segmentation job with all the segments. |
 
 **Response**
@@ -489,7 +484,6 @@ A successful response returns HTTP status 200 with details of your newly created
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },
@@ -527,7 +521,7 @@ A successful response returns HTTP status 200 with details of your newly created
 | `id` | A system-generated read-only identifier for the newly created segment job. | 
 | `status` | The current status for the segment job. Since the segment job is newly created, the status will always be `NEW`. |
 | `segments` | An object that contains information about the segment definitions that this segment job is running for. |
-| `segments.segment.id` | The `*` means that this segment job is running for all the segments within your organization. |
+| `segments.segment.id` | The `*` means that this segment job is running for all the segment definitions within your organization. |
 
 ## Retrieve a specific segment job {#get}
 
@@ -555,11 +549,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Response**
 
-A successful response returns HTTP status 200 with detailed information about the specified segment job.  However, the response will differ depending on the number of segments within the segment job.
+A successful response returns HTTP status 200 with detailed information about the specified segment job.  However, the response will differ depending on the number of segment definitions within the segment job.
 
-**Less than or equal to 1500 segments in your segment job**
+**Less than or equal to 1500 segment definitions in your segment job**
 
-If you have less than 1500 segments being run in your segment job, a full list of all the segments will be displayed within the `children.segments` attribute.
+If you have less than 1500 segment definitions being run in your segment job, a full list of all the segment definitions will be displayed within the `children.segments` attribute.
 
 ```json
 {
@@ -621,9 +615,9 @@ If you have less than 1500 segments being run in your segment job, a full list o
 }
 ```
 
-**More than 1500 segments**
+**More than 1500 segment definitions**
 
-If you have more than 1500 segments being run in your segment job, the `children.segments` attribute will display `*`, indicating that all the segments are being evaluated.
+If you have more than 1500 segment definitions being run in your segment job, the `children.segments` attribute will display `*`, indicating that all the segment definitions are being evaluated.
 
 ```json
 {
@@ -669,7 +663,6 @@ If you have more than 1500 segments being run in your segment job, the `children
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },
@@ -744,7 +737,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **Response**
 
-A successful response returns HTTP status 207 with the requested segment jobs. However, the value of the `children.segments` attribute differs depending if the segment job is running for more than 1500 segments.
+A successful response returns HTTP status 207 with the requested segment jobs. However, the value of the `children.segments` attribute differs depending if the segment job is running for more than 1500 segment definitions.
 
 >[!NOTE]
 >

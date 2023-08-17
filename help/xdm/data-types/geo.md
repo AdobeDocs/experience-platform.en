@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;geo;datatype;data-type;data type;
 solution: Experience Platform
 title: Geo Data Type
-topic-legacy: overview
 description: This document provides an overview of the Geo XDM data type.
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 ---

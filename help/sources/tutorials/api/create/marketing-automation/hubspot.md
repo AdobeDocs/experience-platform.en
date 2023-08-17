@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;hubspot;Hubspot
 solution: Experience Platform
 title: Create a HubSpot Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to HubSpot using the Flow Service API.
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
@@ -32,7 +31,7 @@ In order for [!DNL Flow Service] to connect with [!DNL HubSpot], you must provid
 | `clientSecret` | The client secret associated with your [!DNL HubSpot] application. |
 | `accessToken` | The access token obtained when initially authenticating your OAuth integration. |
 | `refreshToken` | The refresh token obtained when initially authenticating your OAuth integration. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL HubSpot] is: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL HubSpot] is: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
 
 For more information about getting started, refer to this [HubSpot document](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview).
 

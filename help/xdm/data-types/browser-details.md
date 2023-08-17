@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;browser;browser details;datatype;data-type;data type;
 solution: Experience Platform
 title: Browser Details Data Type
-topic-legacy: overview
 description: This document provides an overview of the Browser Details XDM data type.
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 ---

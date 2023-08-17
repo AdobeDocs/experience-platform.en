@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;query service;Query service;query
 title: Example Use Case for Adobe Experience Platform Query Service
-topic-legacy: tutorial
 description: An end-to-end example to demonstrate the versatility and benefits of Adobe Experience Platform Query Service.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
 ---
@@ -13,7 +12,7 @@ This document and accompanying video presentation provide a high-level end-to-en
 * Ways to build the query based on your existing data architecture.
 * Ensure data quality that meets your needs, and methods to mitigate any shortfalls.
 * The process to schedule a query to run at a set frequency for use downstream in segmentation and destinations for personalization.
-* The ease for marketers to include derived attributes in their segments through the power of [!DNL Query Service].
+* The ease for marketers to include derived attributes in their audiences through the power of [!DNL Query Service].
 
 ## Objectives {#objectives}
 
@@ -58,9 +57,9 @@ The video presentation seen below provides a holistic, real-world use case for y
 
 ## Benefits of [!DNL Query Service] {#benefits}
 
-The features provided by [!DNL Query Service] serves many purposes. You can use it to accommodate complex logic for segmentation, for calculating various personalized attributes for use downstream, or to greatly simplify how you build out your segments. 
+The features provided by [!DNL Query Service] serves many purposes. You can use it to accommodate complex logic for segmentation, for calculating various personalized attributes for use downstream, or to greatly simplify how you build out your audiences. 
 
-[!DNL Query Service] enables you to include constraints in your queries to simplify your segment building process. This improves data quality by ensuring the right data qualifies for your segments and creates more accurate audiences. Maintaining the quality of your query results in an accurate audience and helps with data reliability. You can also save your audience by creating schemas and custom tables based on attributes derived from your query. A custom table can be enabled for Profile and you can use these data points for segmentation and personalization. This feature assists marketers who want to create a clear-cut audience of people.
+[!DNL Query Service] enables you to include constraints in your queries to simplify your audience building process. This improves data quality by ensuring the right data qualifies for your audiences. Maintaining the quality of your query results in an accurate audience and helps with data reliability. You can also save your audience by creating schemas and custom tables based on attributes derived from your query. A custom table can be enabled for Profile and you can use these data points for segmentation and personalization. This feature assists marketers who want to create a clear-cut audience of people.
 
 Also, by including logic in your query that satisfies any recurring or static conditions, [!DNL Query Service] extracts the burden of elaborate segmentation.
 
@@ -68,11 +67,11 @@ Adobe Experience Platform provides a data repository and the necessary tools to 
 
 ## Next steps
 
-By reading this document, you should now understand how [!DNL Query Service] impacts not only the quality of your data and ease of segmentation but also its importance within your data architecture for the entire end-to-end workflow. For more applicable SQL examples that use Adobe Analytics with [!DNL Query Service], see the [Adobe Analytics sample queries documentation](../sample-queries/adobe-analytics.md).
+By reading this document, you should now understand how [!DNL Query Service] impacts not only the quality of your data and ease of segmentation but also its importance within your data architecture for the entire end-to-end workflow. For more applicable SQL examples that use Adobe Analytics with [!DNL Query Service], see the [Adobe Analytics merchandising variables use case](./merchandising-variables.md).
 
-Other documents that demonstrate the benefits of [!DNL Query Service] to your organization’s strategic business insights are the [bot filtering use case](./bot-filtering.md) example. 
+Other documents that demonstrate the benefits of [!DNL Query Service] to your organization's strategic business insights are the [bot filtering use case](./bot-filtering.md) example. 
 
-Alternatively, these documents that will benefit your understanding of [!DNL Query Service] features: 
+Alternatively, these documents can benefit your understanding of [!DNL Query Service] features: 
 
 * [Guidance for query execution](../best-practices/writing-queries.md)
 * [Guidance for data asset organization](../best-practices/organize-data-assets.md).

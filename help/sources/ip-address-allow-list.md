@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;ip address;ip addresses;ip add
 description: IP addresses must be added to an allow list prior to working with source connectors.
 solution: Experience Platform
 title: IP Address Allow List for Source Connections
-topic-legacy: overview
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 ---
 # IP address allow list
@@ -24,6 +23,7 @@ You can define network access controls through your network firewall. By specify
 - `20.49.102.16/29`
 - `40.70.148.160/28`
 - `52.167.107.224/28`
+- `52.138.119.167`
 
 ## NLD2: Europe
 
@@ -45,3 +45,14 @@ You can define network access controls through your network firewall. By specify
 - `20.53.46.0/26`
 - `40.79.163.80/28`
 - `40.79.171.160/28`
+
+## CAN2: Canada
+
+- `13.71.175.80/28`
+- `20.38.147.224/28`
+- `20.48.201.0/26`
+- `20.116.47.72/29`
+- `52.228.80.128/25`
+- `52.228.81.0/26`
+- `52.228.86.144/29`
+- `52.246.155.224/28`

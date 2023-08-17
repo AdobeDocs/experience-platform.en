@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;Generic REST API
 title: Create a Generic REST API  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Generic REST API source connection using the Adobe Experience Platform UI.
 ---
@@ -9,7 +8,7 @@ description: Learn how to create a Generic REST API source connection using the 
 
 >[!NOTE]
 >
-> The [!DNL Generic REST API] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+> The [!DNL Generic REST API] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 This tutorial provides steps for creating a [!DNL Generic REST API] source connector using the Adobe Experience Platform user interface.
 

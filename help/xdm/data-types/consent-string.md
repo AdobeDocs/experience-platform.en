@@ -1,7 +1,6 @@
 ---
 solution: Experience Platform
 title: Consent String Data Type
-topic-legacy: overview
 description: This document provides an overview of the Consent String XDM data type.
 exl-id: 288ec79e-074a-4d72-9c5f-e9cd8485b804
 ---

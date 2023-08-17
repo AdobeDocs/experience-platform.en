@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;sandbox overview
 solution: Experience Platform
 title: Sandbox UI Overview
-topic-legacy: user guide
 description: Adobe Experience Platform provides virtual sandboxes that partition a single Platform instance into separate, isolated  virtual environments. The Sandbox user interface can be found within the Experience Platform UI.
 exl-id: d86e282c-6231-490f-a6c8-dbd12bf2341e
 ---

@@ -17,12 +17,12 @@ In order to configure access control for [!DNL Experience Platform], you must ha
 
 ## Available dashboard permissions {#available-permissions}
 
-The [!DNL Dashboards] service provides three permissions that, when combined, provide full access to the [!UICONTROL Profiles], [!UICONTROL Segments], [!UICONTROL Destinations], and [!UICONTROL Licence Usage] dashboards within Adobe Experience Platform. These permissions are:
+The [!DNL Dashboards] service provides three permissions that, when combined, provide full access to the [!UICONTROL Profiles], [!UICONTROL Segments], [!UICONTROL Destinations], and [!UICONTROL License Usage] dashboards within Adobe Experience Platform. These permissions are:
 
 | Permission  | Description  |
 |---|---|
 | **Manage Standard Dashboards**  | This permission is a **global read and write permission**. It allows you to [create custom widgets](./customize/custom-widgets.md) and [edit the widget schema](./customize/edit-schema.md) through the [!UICONTROL Widget library]. |
-| **View Standard Dashboards**  | This provides **read-only** functionality for the [!UICONTROL Profiles], [!UICONTROL Destinations], and [!UICONTROL Segments] dashboards and allows access to them through Platform’s left navigation. It also adds [!UICONTROL Dashboards] to the left navigation and access to the [!UICONTROL Dashboards] inventory and integrations tab. |
+| **View Standard Dashboards**  | This provides **read-only** functionality for the [!UICONTROL Profiles], [!UICONTROL Destinations], and [!UICONTROL Segments] dashboards and allows access to them through Platform's left navigation. It also adds [!UICONTROL Dashboards] to the left navigation and access to the [!UICONTROL Dashboards] inventory and integrations tab. |
 | **View License Usage Dashboard** | This permission allows users **read-only** access to [the license usage dashboard](./guides/license-usage.md) within the Experience Platform UI. |
 
 There are five permissions not included in the [!DNL Dashboard] category that are potentially required depending on your needs. The following table outlines their category locations in the Admin Console:

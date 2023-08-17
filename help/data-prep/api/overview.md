@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;data prep;data prep api;troubleshooting;API
 title: Data Prep API Overview
-topic-legacy: guide
 description: The Data Prep API lets you programatically create mapping sets and functions, allowing you to transform your data between source and destination schemas.
 exl-id: 740944ae-93ba-4099-a65e-18d6b384c307
 ---

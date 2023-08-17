@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 title: Self-Serve Sources (Batch SDK) API Guide
-topic-legacy: overview
 description: This document provides an overview of the process of creating a new source, including steps on how to retrieve, write, and submit a new connection specification using the Flow Service API.
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
 ---
@@ -17,7 +16,7 @@ The [!DNL Flow Service] API provides several endpoints that allow you to program
 
 The first step in configuring a new source is to create a new connection specification. 
 
-Connection specifications return a source's connector properties. They include authentication specifications related to creating the base and source connections and a fixed connection specification ID that is assigned to a particular source. Connection specifications are tenant and IMS Organization agnostic. A typical connection specification contains basic information on a given source, as well as three distinct sections: `authSpec`, `sourceSpec`, and `exploreSpec`.
+Connection specifications return a source's connector properties. They include authentication specifications related to creating the base and source connections and a fixed connection specification ID that is assigned to a particular source. Connection specifications are tenant and organization agnostic. A typical connection specification contains basic information on a given source, as well as three distinct sections: `authSpec`, `sourceSpec`, and `exploreSpec`.
 
 For detailed instructions, see the guide on [creating a new connection specification](./create.md). For information on the properties and values used for a connection specification, including details on configuring authentication, source, and explore specifications, see the [configuration options document](../config/config.md).
 

@@ -41,6 +41,10 @@ Once you have identified and selected the segments you want to use, a new panel 
 
 Alternatively, you can select the **[!UICONTROL Select all segments]** and **[!UICONTROL Select all traits]** boxes. Selecting all segments will bring Audience Manager segments to Platform, while selecting all traits enables all first party traits from Audience Manager.
 
+>[!WARNING]
+>
+>The ingestion of sizeable Audience Manager segment populations has a direct impact on your total profile count when you first send an Audience Manager segment to Platform using the Audience Manager source. This means that selecting all segments can potentially lead to a Profile count in excess of your license usage entitlement. Please review your [license usage allowance](../../../../../dashboards/guides/license-usage.md) before proceeding.
+
 Once you are finished, select **[!UICONTROL Next]**
 
 ![all-segments](../../../../images/tutorials/create/aam/all-segments.png)
@@ -56,7 +60,7 @@ Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow s
 
 ## Next steps
 
-While an Audience Manager dataflow is active, incoming data is automatically ingested into Real-time Customer Profiles. You can now utilize this incoming data and create audience segments using Platform Segmentation Service. See the following documents for more details:
+While an Audience Manager dataflow is active, incoming data is automatically ingested into Real-Time Customer Profiles. You can now utilize this incoming data and create audience segments using Platform Segmentation Service. See the following documents for more details:
 
-* [Real-time Customer Profile overview](../../../../../profile/home.md)
+* [Real-Time Customer Profile overview](../../../../../profile/home.md)
 * [Segmentation Service overview](../../../../../segmentation/home.md)

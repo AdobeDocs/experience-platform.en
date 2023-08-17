@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
 title: Create a PostgreSQL Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to PostgreSQL using the Flow Service API.
 exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
@@ -30,7 +29,7 @@ In order for [!DNL Flow Service] to connect with [!DNL PostgreSQL], you must pro
 | Credential | Description |
 | ---------- | ----------- |
 | `connectionString` | The connection string associated with your [!DNL PostgreSQL] account. The [!DNL PostgreSQL] connection string pattern is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
 For more information about obtaining a connection string, refer to this [[!DNL PostgreSQL] document](https://www.postgresql.org/docs/9.2/app-psql.html).
 

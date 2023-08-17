@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Microsoft SQL;microsoft sql;sql server;SQL server
 solution: Experience Platform
 title: Create a SQL Server Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to a Microsoft SQL Server using the Flow Service API.
 exl-id: 00455a61-c8c1-42f4-a962-fc16f7370cbd
@@ -29,7 +28,7 @@ In order to connect to [!DNL Microsoft SQL Server], you must provide the followi
 | Credential | Description |
 | ---------- | ----------- |
 | `connectionString` | The connection string associated with your [!DNL Microsoft SQL Server] account. The [!DNL Microsoft SQL Server] connection string pattern is: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Microsoft SQL Server] is `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Microsoft SQL Server] is `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 For more information about obtaining a connection string, refer to this [[!DNL Microsoft SQL Server] document](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 

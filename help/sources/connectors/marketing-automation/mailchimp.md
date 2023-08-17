@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;mailchimp;mailchimp campaigns;mailchimp members
 solution: Experience Platform
 title: Mailchimp Connector Overview
-topic-legacy: overview
 description: Learn how to connect Mailchimp to Adobe Experience Platform using APIs or the user interface.
 exl-id: eedb4fe0-3aae-4e93-bf13-c095171e2d11
 ---

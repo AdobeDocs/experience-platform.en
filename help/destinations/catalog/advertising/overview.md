@@ -21,6 +21,7 @@ To understand the difference between connections and extensions, see [Connection
 ### Connections
 
 * [Adobe Advertising Cloud connection](adobe-advertising-cloud-connection.md)
+* [(Beta) Amazon Ads connection](amazon-ads.md)
 * [(Beta) Criteo connection](criteo.md)
 * [Google Display & Video 360 connection](google-dv360.md)
 * [Google Ads connection](google-ads-destination.md)
@@ -52,4 +53,4 @@ To understand the difference between connections and extensions, see [Connection
 
 ## Connect to a new advertising destination {#connect-destination}
 
-To send segments to advertising destinations for your campaigns, Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.
+To send audiences to advertising destinations for your campaigns, Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.

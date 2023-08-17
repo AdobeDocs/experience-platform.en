@@ -7,7 +7,7 @@ exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 
 >[!IMPORTANT]
 >
->Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Healthcare Shield.
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
 
 The `/ttl` endpoint in the Data Hygiene API allows you to schedule expiration dates for datasets in Adobe Experience Platform.
 
@@ -19,7 +19,7 @@ A dataset expiration is only a timed-delayed delete operation. The dataset is no
 
 At any time before the dataset-delete is actually initiated, you can cancel the expiration or modify its trigger time. After cancelling a dataset expiration, you can reopen it by setting a new expiry.
 
-Once the dataset deletion is initiated, its expiration job will be marked as `executing`, and it may not be further altered. The dataset itself may be recoverable for up to seven days, but only through a manual process initiated through an Adobe service request. As the request executes, the data lake, Identity Service, and Real-time Customer Profile begin separate processes to remove the dataset's contents from their respective services. Once the data is deleted from all three services, the expiration is marked as `executed`.
+Once the dataset deletion is initiated, its expiration job will be marked as `executing`, and it may not be further altered. The dataset itself may be recoverable for up to seven days, but only through a manual process initiated through an Adobe service request. As the request executes, the data lake, Identity Service, and Real-Time Customer Profile begin separate processes to remove the dataset's contents from their respective services. Once the data is deleted from all three services, the expiration is marked as `executed`.
 
 >[!WARNING]
 >
@@ -172,7 +172,7 @@ The following JSON represents a truncated response for a dataset's details from 
 ```json
 {
   "63212313c308d51b997858ba": {
-    "name": "TTL Test Dataset",
+    "name": "Test Dataset",
     "description": "A piecrust promise, made to be broken",
     "imsOrg": "0FCC747E56F59C747F000101@AdobeOrg",
     "sandboxId": "8dc51b90-d0f9-11e9-b164-ed6a398c8b35",

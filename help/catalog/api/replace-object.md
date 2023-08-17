@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;catalog;api;replace an object
 solution: Experience Platform
 title: Replace a Catalog Object
-topic-legacy: developer guide
 description: You can overwrite the contents of a Catalog object using a PUT request, wherein the entire resource is replaced with the request payload.
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
 ---
@@ -22,7 +21,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be replaced. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be replaced. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | The identifier of the specific object you want to update. |
 
 **Request**
@@ -40,7 +39,6 @@ curl -X PUT \
   -d '{
         "name": "New Dataset Name",
         "description": "New description for dataset",
-        "state": "DRAFT",
         "tags": {
             "adobe/pqs/table": [
                 "sample_dataset"

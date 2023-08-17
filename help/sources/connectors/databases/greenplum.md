@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;greenplum;GreenPlum
 solution: Experience Platform
 title: GreenPlum Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect GreenPlum to Adobe Experience Platform using APIs or the user interface.
 exl-id: 41757062-9ac8-42d3-91f6-a00866195882
 ---

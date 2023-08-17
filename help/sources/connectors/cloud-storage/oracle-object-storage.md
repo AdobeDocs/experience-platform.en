@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Oracle Object Storage;oracle object storage
 solution: Experience Platform
 title: Oracle Object Storage Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect Oracle Object Storage to Adobe Experience Platform using APIs or the user interface.
 exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
 ---

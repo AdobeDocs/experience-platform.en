@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Zoho CRM;zoho crm;Zoho;zoho
 solution: Experience Platform
 title: Create a Zoho CRM Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Zoho CRM using the Flow Service API.
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
@@ -34,7 +33,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Zoho CRM], you must provi
 | `clientSecret` | The client secret that corresponds with your [!DNL Zoho CRM] user account. |
 | `accessToken` | The access token authorizes your secure and temporary access to your [!DNL Zoho CRM] account. |
 | `refreshToken` | A refresh token is a token used to generate a new access token, once your access token has expired. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Zoho CRM] is: `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Zoho CRM] is: `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
 
 For more information on these credentials, see the documentation on [[!DNL Zoho CRM] authentication](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
 

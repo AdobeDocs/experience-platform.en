@@ -1,14 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: (Beta )Create a Mixpanel Source Connection in the UI
+title: Create a Mixpanel Source Connection in the UI
 description: Learn how to create a Mixpanel source connection using the Adobe Experience Platform UI.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 ---
-# (Beta) Create a [!DNL Mixpanel] source connection in the UI
-
->[!NOTE]
->
->The [!DNL Mixpanel] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+# Create a [!DNL Mixpanel] source connection in the UI
 
 This tutorial provides steps for creating a [!DNL Mixpanel] source connection using the Adobe Experience Platform Platform user interface.
 
@@ -19,7 +14,7 @@ This tutorial requires a working understanding of the following components of Ex
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 ### Gather required credentials
 

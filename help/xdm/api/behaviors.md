@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Behaviors API Endpoint
 description: The /behaviors endpoint in the Schema Registry API allows you to retrieve all available behaviors in the global container.
-topic-legacy: developer guide
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 ---
 # Behaviors endpoint

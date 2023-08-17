@@ -1,12 +1,12 @@
 ---
 title: IAB TCF 2.0 Support in the Adobe Experience Platform Web SDK
 description: Learn how to support IAB TCF 2.0 consent preferences using the Adobe Experience Platform Web SDK
-keywords: consent;setConsent;Profile Privacy Field group;Experience Event Privacy Field group;Privacy Field group;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
+keywords: consent;setConsent;Profile Privacy Field group;Experience Event Privacy Field group;Privacy Field group;IAB TCF 2.0;Real-Time CDP;
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
 ---
 # IAB TCF 2.0 support in the Adobe Experience Platform Web SDK
 
-The Adobe Experience Platform Web SDK has support for the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows the requirements for supporting IAB TCF 2.0 through Adobe Experience Platform Web SDK integrating with Real-time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics, and Experience Edge.
+The Adobe Experience Platform Web SDK has support for the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows the requirements for supporting IAB TCF 2.0 through Adobe Experience Platform Web SDK integrating with Adobe Real-Time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics, and Experience Edge.
 
 Additionally, the following guides are available to assist in learning how to integrate IAB TCF 2.0 with and without tags.
 
@@ -23,7 +23,7 @@ In order to implement the Web SDK with IAB TCF 2.0, you are required to have a w
 
 To send consent data to Adobe Experience Platform using the SDK, the following is required:
 
-- A dataset whose schema is based on the [!DNL XDM Individual Profile] class and contains TCF 2.0 consent fields, enabled for use in [!DNL Real-time Customer Profile].
+- A dataset whose schema is based on the [!DNL XDM Individual Profile] class and contains TCF 2.0 consent fields, enabled for use in [!DNL Real-Time Customer Profile].
 - A datastream set up with Platform and the Profile-enabled dataset mentioned above.
 
 Please refer to the guide on [TCF 2.0 compliance](../../../landing/governance-privacy-security/consent/iab/overview.md) for instructions on creating the required datasets and datastream.
@@ -38,7 +38,7 @@ Adobe Audience Manager (AAM) includes support for IAB TCF 2.0, which enables you
 
 ## Experience Events and Adobe Analytics integration
 
-Whereas the Real-time CDP and Audience Manager's audiences keep track of a customer's current consent preferences, Experience Events can hold a customer's consent preferences that were active when the event was collected.
+Whereas the Real-Time CDP and Audience Manager's audiences keep track of a customer's current consent preferences, Experience Events can hold a customer's consent preferences that were active when the event was collected.
 
 To collect consent information on events, the following is required:
 
@@ -53,7 +53,7 @@ The sections below describe the main integration points between IAB TCF 2.0 and 
 
 >[!NOTE]
 >
->Even without Real-time CDP or Audience Manager set up, you can still integrate IAB TCF 2.0 with the Web SDK. The consent preferences can be used to control the collection of Experience Events and setting an identity cookie.
+>Even without Real-Time CDP or Audience Manager set up, you can still integrate IAB TCF 2.0 with the Web SDK. The consent preferences can be used to control the collection of Experience Events and setting an identity cookie.
 
 ### Default consent
 
@@ -65,7 +65,7 @@ For more information on default consent, refer to the [default consent section](
 
 ### Setting consent when it changes
 
-Adobe Experience Platform Web SDK has a `setConsent` command, which communicates your customer's consent preferences to all the Adobe services using IAB TCF 2.0. If you are integrating with Real-time CDP, this updates your customer's profile. If you are integrating with Audience Manager, this updates your customer's information. Calling this also sets a cookie with an all-or-nothing consent preference that controls whether future Experience Events are allowed to be sent. It is intended that this action is called whenever consent changes. On future page loads, the Experience Edge consent cookie will be read to determine whether Experience Events can be sent, and whether an identity cookie can be set.
+Adobe Experience Platform Web SDK has a `setConsent` command, which communicates your customer's consent preferences to all the Adobe services using IAB TCF 2.0. If you are integrating with Real-Time CDP, this updates your customer's profile. If you are integrating with Audience Manager, this updates your customer's information. Calling this also sets a cookie with an all-or-nothing consent preference that controls whether future Experience Events are allowed to be sent. It is intended that this action is called whenever consent changes. On future page loads, the Experience Edge consent cookie will be read to determine whether Experience Events can be sent, and whether an identity cookie can be set.
 
 Similar to Audience Manager's IAB TCF 2.0 integration, Experience Edge gives consent when a customer has provided their explicit consent to the following purposes:
 

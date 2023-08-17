@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;Webpage details;datatype;data-type;data type;webpage
 solution: Experience Platform
 title: Web Information Data Type
-topic-legacy: overview
 description: This document provides an overview of the web information Experience Data Model (XDM) data type.
 exl-id: bfb00835-5908-4baf-af2a-6d845710e340
 ---

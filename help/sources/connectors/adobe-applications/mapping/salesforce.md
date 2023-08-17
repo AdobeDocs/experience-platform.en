@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;Salesforce;salesforce;field mapping;Field mapping;mapping;marketo;B2B;b2b
 title: Salesforce Mapping Fields
 description: The tables below contain the mappings between Salesforce source fields and their corresponding XDM fields.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
@@ -9,6 +8,8 @@ exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
 The tables below contain the mappings between [!DNL Salesforce] source fields and their corresponding Experience Data Model (XDM) fields.
 
 ## Contact {#contact}
+
+Read the [XDM Individual Profile overview](../../../../xdm/classes/individual-profile.md) for more information on the XDM class. For more information on the XDM field groups, read the [XDM Business Person Details schema field group](../../../../xdm/field-groups/profile/business-person-details.md) guide and [XDM Business Person Components schema field group](../../../../xdm/field-groups/profile/business-person-components.md) guide.
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
@@ -68,6 +69,8 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 
 ## Lead {#lead}
 
+Read the [XDM Individual Profile overview](../../../../xdm/classes/individual-profile.md) for more information on the XDM class. For more information on the XDM field groups, read the [XDM Business Person Details schema field group](../../../../xdm/field-groups/profile/business-person-details.md) guide and [XDM Business Person Components schema field group](../../../../xdm/field-groups/profile/business-person-components.md) guide.
+
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
 | `City`| `workAddress.city`|
@@ -116,6 +119,8 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 {style="table-layout:auto"}
 
 ## Account {#account}
+
+Read the [XDM Business Account details overview](../../../../xdm/classes/b2b/business-account.md) for more information on the XDM class.
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
@@ -171,6 +176,8 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 
 ## Opportunity {#opportunity}
 
+Read the [XDM Business Opportunity overview](../../../../xdm/classes/b2b/business-opportunity.md) for more information on the XDM class.
+
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityKey.sourceType` |
@@ -210,6 +217,8 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 
 ## Opportunity contact role {#opportunity-contact-role}
 
+Read the [XDM Business Opportunity Person Relation class overview](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) for more information on the XDM class.
+
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityPersonKey.sourceType` |
@@ -233,6 +242,8 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 {style="table-layout:auto"}
 
 ## Campaign {#campaign}
+
+Read the [XDM Business Campaign class overview](../../../../xdm/classes/b2b/business-campaign.md) for more information on the XDM class. For more information on the XDM field groups, read the [XDM Business Campaign details schema field group](../../../../xdm/field-groups/b2b-campaign/details.md) guide.
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
@@ -263,6 +274,8 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 
 ## Campaign member {#campaign-member}
 
+Read the [XDM Business Campaign Members overview](../../../../xdm/classes/b2b/business-campaign-members.md) for more information on the XDM class. For more information on the XDM field groups, read the [XDM Business Campaign Member details schema field group](../../../../xdm/field-groups/b2b-campaign/details.md) document.
+
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
@@ -286,6 +299,8 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `Type` | `b2b.personType` |
 
 ## Account contact relation {#account-contact-relation}
+
+Read the [XDM Business Account Person Relation class](../../../../xdm/classes/b2b/business-account-person-relation.md) for more information on the XDM class. 
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |

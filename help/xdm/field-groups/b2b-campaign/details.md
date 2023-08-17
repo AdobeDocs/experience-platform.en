@@ -23,7 +23,7 @@ exl-id: 3ef6c0b9-cba1-449e-8868-46446c00465f
 | `expectedResponse` | [!UICONTROL String] | The expected response for the campaign. |
 | `integrationPartnerName` | [!UICONTROL String] | The name of the partner that has integrated with this campaign. |
 | `isActive` | [!UICONTROL Boolean] | Indicates whether this campaign is active. |
-| `isDeleted` | [!UICONTROL Boolean]  | Indicates whether this campaign has been deleted in Marketo Engage.<br><br>When using the [Marketo source connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), any records that are deleted in Marketo are automatically reflected in Real-time Customer Profile. However, records relating to these profiles may still persist in the Data Lake. By setting `isDeleted` to `true`, you can use the field to filter out which records have been deleted from your sources when querying the Data Lake. |
+| `isDeleted` | [!UICONTROL Boolean]  | Indicates whether this campaign has been deleted in Marketo Engage.<br><br>When using the [Marketo source connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), any records that are deleted in Marketo are automatically reflected in Real-Time Customer Profile. However, records relating to these profiles may still persist in the Data Lake. By setting `isDeleted` to `true`, you can use the field to filter out which records have been deleted from your sources when querying the Data Lake. |
 | `lastActivityDate` | [!UICONTROL DateTime] | An ISO 8601 timestamp of the last activity associated with the campaign. |
 | `timeZone` | [!UICONTROL String] | The timezone that the campaign operates in. |
 | `timeZoneDelivery` | [!UICONTROL String] | The delivery timezone that the campaign operates in. |

@@ -1,10 +1,10 @@
 ---
-title: Manage predictive lead and account scoring in Real-time CDP B2B
+title: Manage predictive lead and account scoring in Real-Time CDP B2B
 type: Documentation
 description: This document provides information on managing the predictive lead and account scoring feature in Experience Platform CDP B2B.
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
 ---
-# Manage predictive lead and account scoring in Real-time Customer Data Platform, B2B Edition
+# Manage predictive lead and account scoring in Adobe Real-Time Customer Data Platform, B2B Edition
 
 >[!NOTE]
 >

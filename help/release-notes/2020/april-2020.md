@@ -83,16 +83,16 @@ For more information, please see the [Data Governance overview](../../data-gover
 
 ## Destinations {#destinations}
 
-In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+In [Real-Time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **New destinations**
 
-Real-time CDP now supports data activation to over fifty [!DNL Experience Cloud Launch] extensions, enabling analytics, personalization, and other use cases. See below for details:
+Real-Time CDP now supports data activation to over fifty [!DNL Experience Cloud Launch] extensions, enabling analytics, personalization, and other use cases. See below for details:
 
 |Documentation | Description|
 |--- | ---|
-|[Destination types and categories](../../destinations/destination-types.md) | This article explains the difference between connections and extensions in the Real-time CDP interface and recommends when to use each of these destinations.|
-|[Experience Platform Launch extensions](../../destinations/catalog/launch-extensions/overview.md) | This page explains what [!DNL Launch] extensions are, lists use cases for using them, and links to documentation for each [!DNL Launch] extension in Real-time CDP.|
+|[Destination types and categories](../../destinations/destination-types.md) | This article explains the difference between connections and extensions in the Real-Time CDP interface and recommends when to use each of these destinations.|
+|[Experience Platform Launch extensions](../../destinations/catalog/launch-extensions/overview.md) | This page explains what [!DNL Launch] extensions are, lists use cases for using them, and links to documentation for each [!DNL Launch] extension in Real-Time CDP.|
 
 For more information, please see the [Destinations overview](../../destinations/home.md).
 

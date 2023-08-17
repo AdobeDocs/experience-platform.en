@@ -1,17 +1,17 @@
 ---
-title: Schemas in Real-time Customer Data Platform B2B Edition
-description: An overview of the role of Experience Data Model (XDM) schemas in Real-time Customer Data Platform B2B Edition.
+title: Schemas in Real-Time Customer Data Platform B2B Edition
+description: An overview of the role of Experience Data Model (XDM) schemas in Adobe Real-Time Customer Data Platform B2B Edition.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
 ---
-# Schemas in Real-time Customer Data Platform B2B Edition
+# Schemas in Real-Time Customer Data Platform B2B Edition
 
-Real-time Customer Data Platform B2B Edition provides several standard [Experience Data Model (XDM) classes](../../xdm/schema/composition.md#class) that capture details about essential B2B data entities, such as accounts, opportunities, campaigns, and more. In addition, Real-time CDP B2B Edition allows you to define many-to-one relationships between these schemas so they can participate in advanced segmentation use cases.
+Adobe Real-Time Customer Data Platform B2B Edition provides several standard [Experience Data Model (XDM) classes](../../xdm/schema/composition.md#class) that capture details about essential B2B data entities, such as accounts, opportunities, campaigns, and more. In addition, Real-Time CDP B2B Edition allows you to define many-to-one relationships between these schemas so they can participate in advanced segmentation use cases.
 
 >[!IMPORTANT]
 >
->You must have access to Real-time CDP B2B Edition in order for B2B schemas to participate in [Real-time Customer Profile](../../profile/home.md).
+>You must have access to Real-Time CDP B2B Edition in order for B2B schemas to participate in [Real-Time Customer Profile](../../profile/home.md).
 
-The following standard classes are provided in Real-time CDP B2B Edition:
+The following standard classes are provided in Real-Time CDP B2B Edition:
 
 * [XDM Business Account](../../xdm/classes/b2b/business-account.md)
 * [XDM Business Account Person Relation](../../xdm/classes/b2b/business-account-person-relation.md)

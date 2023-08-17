@@ -8,7 +8,14 @@ exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
 
 The destinations catalog provides a list of available destination platforms that are ready to receive data. These destination platforms include Adobe solutions, advertising platforms, survey platforms, email marketing platforms, Experience Platform extensions, and more. 
 
-Browse the catalog to determine which destination platforms are best for your advertising and personalization use cases, then set up flows to activate your segments to destinations.
+Browse the catalog to determine which destination platforms are best for your advertising and personalization use cases, then set up flows to activate your audiences to destinations.
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 ## Destination categories
 

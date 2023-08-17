@@ -2,7 +2,6 @@
 keywords: Experience Platform;insights;attribution ai;popular topics;attribution ai insights
 feature: Attribution AI
 title: Discover Insights in Attribution AI
-topic-legacy: Attribution AI insights
 description: This document serves as a guide for interacting with service instance insights in the Adobe Intelligent Services user interface.
 exl-id: 6b8e51e7-1b56-4f4e-94cf-96672b426c88
 ---

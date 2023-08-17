@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;enduserids;end-user;end user;ids;updates;
 solution: Experience Platform
 title: Schema Field Group Name Updates
-topic-legacy: overview
 description: A list of recent XDM schema field group name changes.
 exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
 ---

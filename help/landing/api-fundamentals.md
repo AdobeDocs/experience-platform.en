@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Experience Platform API fundamentals
-topic-legacy: getting started
 description: This document provides a brief overview of some the underlying technologies and syntaxes involved with Experience Platform APIs.
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 ---

@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Classes API Endpoint
 description: The /classes endpoint in the Schema Registry API allows you to programmatically manage XDM classes within your experience application.
-topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 ---
 # Classes endpoint
@@ -249,7 +248,7 @@ You can define a custom class under the `tenant` container by making a POST requ
 >
 >When composing a schema based on a custom class that you define, you will not be able to use standard field groups. Each field group defines the classes they are compatible with in their `meta:intendedToExtend` attribute. Once you begin defining field groups that are compatible with your new class (by using the `$id` of your new class in the `meta:intendedToExtend` field of the field group), you will be able to reuse those field groups every time you define a schema that implements the class you defined. See the sections on [creating field groups](./field-groups.md#create) and [creating schemas](./schemas.md#create) in their respective endpoint guides for more information.
 >
->If you are planning to use schemas based on custom classes in Real-time Customer Profile, it is also important to keep in mind that union schemas are only constructed based on schemas that share the same class. If you want to include a custom-class schema in the union for another class like [!UICONTROL XDM Individual Profile] or [!UICONTROL XDM ExperienceEvent], you must establish a relationship with another schema that employs that class. See the tutorial on [establishing a relationship between two schemas in the API](../tutorials/relationship-api.md) for more information.
+>If you are planning to use schemas based on custom classes in Real-Time Customer Profile, it is also important to keep in mind that union schemas are only constructed based on schemas that share the same class. If you want to include a custom-class schema in the union for another class like [!UICONTROL XDM Individual Profile] or [!UICONTROL XDM ExperienceEvent], you must establish a relationship with another schema that employs that class. See the tutorial on [establishing a relationship between two schemas in the API](../tutorials/relationship-api.md) for more information.
 
 **API format**
 

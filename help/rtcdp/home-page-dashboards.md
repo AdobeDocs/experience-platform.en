@@ -1,65 +1,67 @@
 ---
 keywords: metrics overview; rtcdp metrics overview
-title: Real-time Customer Data Platform Home Page and Dashboards
+title: Real-Time Customer Data Platform Home Page and Dashboards
 description: Dashboards, Home Page, and First-Time User Experience of Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 ---
-# [!DNL Real-time Customer Data Platform] home page and dashboards
+# [!DNL Real-Time Customer Data Platform] home page
 
-The Real-time Customer Data Platform (Real-time CDP) home page, which includes a metrics dashboard, appears when you log in to Real-time CDP.
+The Adobe Real-Time Customer Data Platform (Real-Time CDP) home page is the first page that appears after logging in to Real-Time CDP.
 
-The home page is only one of the places where metric cards appear. Real-time CDP provides metric cards throughout your experience. These metrics inform you about the data, profile, and segment audiences in the system. 
+The Real-Time CDP home page includes a getting started widget that allows you to quickly access several different features and a metrics section that displays up-to-date up-to-date information on data within your organization.
 
-![image](assets/home.png)
+This document provides an overview of the Real-Time CDP home page and metrics dashboard.
 
-If there is no data in the system when you log in to Real-time CDP, the dashboard on the home page does not appear. In this case, the home page provides learning material for a first time user experience. As data is collected--in other words, as <!--sources-->datasets, profiles, segments, and destinations are created and data flows into the system--the dashboard automatically updates to display information about that data<!-- in metric cards-->. 
+![The Platform UI home page.](assets/platform-home/home.png)
 
-## Home page dashboard view
+## Getting started widget
 
-<!--The dashboard shows information in several areas. Each category of information displays for the time range shown beneath the data.-->
+The [!UICONTROL Getting started with Real-Time Customer Profile] widget is divided into four sections: 
 
-The dashboard is divided into<!-- two areas.-->:
+* **Ingest data into Platform**: This widget directs you to the sources catalog. Use the sources catalog to select a source and ingest your data to Experience Platform. For more information, read the [sources overview](../sources/home.md)
+* **Model data structures**: This widget directs you to the schemas overview. Use the schemas overview to browse for existing schemas or create building blocks that describe the structure of your data. For more information, read the [schemas overview](../xdm/home.md).
+* **Segment audiences**: This widget directs you to the [!DNL Segment Builder] in the UI. Use the [!DNL Segment Builder] to interact with Profile data elements and define rules for your segments. For more information, read the [Segmentation Service overview](../segmentation/home.md).
+* **Send data to destinations**: This widget directs you to the destinations catalog. Use the destinations catalog to select a destination that you can then connect to and send segments to. For more information, read the [destinations overview](../destinations/home.md)
 
-* **The leaderboard** is across the top of the dashboard. The leaderboard shows the number of datasets, profiles, segments, and destinations in the system. 
+![The Platform UI home page displaying the getting started widget](assets/platform-home/getting-started-widget.png)
 
-    ![image](assets/leaderboard.png)
+## Metrics dashboard
 
-<!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
-    ![image](assets/home-metrics.jpg)
-Some information is shown in different ways on both the leaderboard and metric cards. -->
-* **Recent items** lists the five most recent datasets, sources, segments, and destinations added to the system.
+The metrics dashboard displays up-to-date information on your Experience Platform data. The dashboard is divided into two sections:
 
-    ![image](assets/recent.png)
+### The leaderboard
 
-Additional metrics--for example for profiles and segments--are available in other parts of Real-time Customer Data Platform.
+The leaderboard shows the current total number of schemas, datasets, profiles, and segments in your organization as well as their most recent update date.
 
-### Datasets
+![The leaderboard section in the Platform UI home page.](assets/platform-home/leaderboard.png)
 
-The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in [!DNL Platform]. This counter is updated when a dataset is created.
+* **Total schemas**: The **Total Schemas** counter displays the number of schemas in the system. This counter is updated when a schema is created. For more information, read the [schemas overview](../xdm/home.md).
+* **Total datasets**: The **Total Datasets** counter shows the number of datasets in the system and the amount of data in [!DNL Platform]. This counter is updated when a dataset is created. For more information about datasets, read the [datasets overview](../catalog/datasets/overview.md).
+* **Total profiles**: The **Profiles** count shows the total number of people with profiles in the [!DNL Real-Time Customer Profile]. It does not include profile fragments. This is your total addressable audience. This count uses the default [merge policy](profile/merge-policies.md) as set in the merge policy configuration in Unified Profile. The number of profiles is updated once every 24 hours. For more information about profiles, read the [Real-Time Customer Profile overview](../profile/home.md).
+* **Total segments**: **Segments** shows the total number of segments created for the organization. This number is updated when new segments are created. For more information about segments, read the [Segmentation Service overview](../segmentation/home.md).
 
-For more information about datasets, see the [datasets overview](../catalog/datasets/overview.md).
+### Recent items
 
-### Profiles
+Recent items lists the most recent changes in your organization. In the example below, the most recent changes pertain to datasets, sources, segments, and destinations.
 
-The **[!UICONTROL Profiles]** count shows the total number of people with profiles in the [!DNL Real-time Customer Profile]. It does not include profile fragments. This is your total addressable audience.
+![The recent items section in the Platform UI home page.](assets/platform-home/recent-items.png)
 
-This count uses the default [merge policy](profile/merge-policies.md) as set in the merge policy configuration in Unified Profile. 
+* **Recent datasets**: The **[!UICONTROL Recent datasets]** card shows the five most recent datasets created within the organization. This list is updated when a new dataset is created. Select a dataset to view the details for that item, or select **[!UICONTROL View all]** for a list of datasets. From there, you can select a specific source for details. For more information about datasets, see the [datasets overview](../catalog/datasets/overview.md).
+* **Recent sources**: The **[!UICONTROL Recent sources]** metric card shows the five most recent sources created within the organization. This list is updated when a new source is created. Select a source to view the details for that item, or select **[!UICONTROL View all]** for a list of sources. From there, you can select a specific source for details. For more information about sources, see [Sources overview](../sources/home.md).
+* **Recent segments**: The **[!UICONTROL Recent segments]** metric card shows the five most recent segments created within the organization. This list is updated when a new segment is created. Select a segment to view the details for that item, or select **[!UICONTROL View all]** for a list of segments. For more information about segments, see [Segmentation Service overview](../segmentation/home.md).
+* **Recent destinations**: The **[!UICONTROL Recent destinations]** metric card shows the five most recent destinations created within the organization. This list is updated when a new destination is created. Select a destination to view the details for that item, or select **[!UICONTROL View all]** for a list of destinations. For more information, read the [destinations overview](../destinations/home.md).
 
-The number of profiles is updated once every 24 hours.  
+## Resources
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+Finally, the resources widget provides you with additional documentation resources that you can refer to. These include:
 
-### Segments
+![The resources section in the Platform UI home page.](assets/platform-home/resources.png)
 
-**[!UICONTROL Segments]** shows the total number of segments created for the organization. This number is updated when new segments are created.
-
-For more information about segments, see [Segmentation Service overview](segmentation/segmentation-overview.md).
-
-### Destinations
-
-**[!UICONTROL Destinations]** shows the total number of destinations created for the organization. This number is updated when new destinations are created.
-
-For more information about destinations, see [Destinations overview](destinations/overview.md).
+* [Understanding schemas](../xdm/schema/composition.md)
+* [Connecting sources](../sources/home.md)
+* [How to populate your Real-Time Customer Profile](../profile/home.md)
+* [Connecting destinations](../destinations/home.md)
+* [Manage access](../access-control/abac/overview.md)
 
 <!-- ### Successful profile records
 
@@ -71,7 +73,7 @@ There is also a metric card that shows the percentage of successful records. Sel
 
 The number of successful profile records is updated hourly. 
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 ### Total profile records
 
@@ -83,7 +85,7 @@ The **[!UICONTROL Total profile records]** metric card shows the total number of
 
 Select **[!UICONTROL View profiles]** to see more details about the profile records.
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 For more information about viewing a specific profile, see [Profile viewer](profile/profile-viewer.md).
 
@@ -94,35 +96,3 @@ In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of
 The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Select **[!UICONTROL View datasets]** to see more details about the profile records.
 
 The number of failed profile records is updated hourly. -->
-
-### Recent datasets
-
-The **[!UICONTROL Recent datasets]** card shows the five most recent datasets created within the organization. This list is updated when a new dataset is created.
-
-Select a dataset to view the details for that item, or **[!UICONTROL View all]** to see the list of datasets. From there, you can select a specific source for details.
-
-For more information about datasets, see the [datasets overview](../catalog/datasets/overview.md).
-
-### Recent sources
-
-The **[!UICONTROL Recent sources]** metric card shows the five most recent sources created within the organization. This list is updated when a new source is created.
-
-Select a source to view the details for that item, or **[!UICONTROL View all]** to see the list of sources. From there, you can select a specific source for details.
-
-For more information about sources, see [Sources overview](sources/sources-overview.md).
-
-### Recent segments
-
-The **[!UICONTROL Recent segments]** metric card shows the five most recent segments created within the organization. This list is updated when a new segment is created.
-
-Select a segment to view the details for that item, or **[!UICONTROL View all]** to see information about more segments.
-
-For more information about segments, see [Segmentation Service overview](segmentation/segmentation-overview.md).
-
-### Recent destinations
-
-The **[!UICONTROL Recent destinations]** metric card shows the five most recent destinations created within the organization. This list is updated when a new destination is created.
-
-Select a destination to view the details for that item, or **[!UICONTROL View all]** to see information about more destinations.
-
-For more information about destinations, see [Destinations overview](destinations/overview.md).

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;emailAddress;xdm:emailAddress;email;email address;datatype;data-type;data type;
 solution: Experience Platform
 title: Email Address Data Type
-topic-legacy: overview
 description: This document provides an overview of the Email Address XDM data type.
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
 ---

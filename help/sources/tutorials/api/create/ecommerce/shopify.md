@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Shopify;shopify;ecommerce
 solution: Experience Platform
 title: Create a Shopify connector Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Shopify to Adobe Experience Platform using the Flow Service API.
 exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
@@ -30,7 +29,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Shopify], you must provid
 | ---------- | ----------- |
 | `host` | The end point of your [!DNL Shopify] server. |
 | `accessToken` | The access token for your [!DNL Shopify] user account. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Shopify] is: `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Shopify] is: `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. |
 
 For more information about getting started, refer to this [Shopify authentication document](https://shopify.dev/concepts/about-apis/authentication).
 

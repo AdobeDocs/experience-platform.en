@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
 title: Create a dataflow for Mailchimp Campaign using the Flow Service API
-topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to MailChimp Campaign using the Flow Service API.
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
 ---

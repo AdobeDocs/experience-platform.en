@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 title: Profile Export Jobs API Endpoint
-topic-legacy: guide
 type: Documentation
-description: Real-time Customer Profile enables you to build a single view of individual customers within Adobe Experience Platform by bringing together data from multiple sources, including both attribute data and behavioral data. Profile data can then be exported to a dataset for further processing.
+description: Real-Time Customer Profile enables you to build a single view of individual customers within Adobe Experience Platform by bringing together data from multiple sources, including both attribute data and behavioral data. Profile data can then be exported to a dataset for further processing.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
 ---
 # Profile export jobs endpoint
 
-[!DNL Real-time Customer Profile] enables you to build a single view of individual customers by bringing together data from multiple sources, including both attribute data and behavioral data. Profile data can then be exported to a dataset for further processing. For example, audience segments from [!DNL Profile] data can be exported for activation, and profile attributes can be exported for reporting.
+[!DNL Real-Time Customer Profile] enables you to build a single view of individual customers by bringing together data from multiple sources, including both attribute data and behavioral data. Profile data can then be exported to a dataset for further processing. For example, [!DNL Profile] data can be exported for activation by creating audiences, and profile attributes can be exported for reporting.
 
 This document provides step-by-step instructions for creating and managing export jobs using the [Profile API](https://www.adobe.com/go/profile-apis-en).
 
@@ -20,11 +19,11 @@ In addition to creating an export job, you can also access [!DNL Profile] data u
 
 ## Getting started
 
-The API endpoints used in this guide are part of the [!DNL Real-time Customer Profile] API. Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoints used in this guide are part of the [!DNL Real-Time Customer Profile] API. Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Create an export job
 
-Exporting [!DNL Profile] data requires first creating a dataset into which the data will be exported, then initiating a new export job. Both of these steps can be achieved using Experience Platform APIs, with the former using the Catalog Service API and the latter using the Real-time Customer Profile API. Detailed instructions for completing each step are outlined in the sections that follow.
+Exporting [!DNL Profile] data requires first creating a dataset into which the data will be exported, then initiating a new export job. Both of these steps can be achieved using Experience Platform APIs, with the former using the Catalog Service API and the latter using the Real-Time Customer Profile API. Detailed instructions for completing each step are outlined in the sections that follow.
 
 ### Create a target dataset
 
@@ -32,7 +31,7 @@ When exporting [!DNL Profile] data, a target dataset must first be created. It i
 
 One of the key considerations is the schema upon which the dataset is based (`schemaRef.id` in the API sample request below). In order to export profile data, the dataset must be based on the [!DNL XDM Individual Profile] Union Schema (`https://ns.adobe.com/xdm/context/profile__union`). A union schema is a system-generated, read-only schema that aggregates the fields of schemas which share the same class. In this case, that is the [!DNL XDM Individual Profile] class. For more information on union view schemas, please see the [union section in the basics of schema composition guide](../../xdm/schema/composition.md#union).
 
-The steps that follow in this tutorial outline how to create a dataset that references the [!DNL XDM Individual Profile] Union Schema using the [!DNL Catalog] API. You may also use the [!DNL Platform] user interface to create a dataset that references the union schema. Steps for using the UI are outlined in [this UI tutorial for exporting segments](../../segmentation/tutorials/create-dataset-export-segment.md) but are applicable here as well. Once completed, you can return to this tutorial to proceed with the steps for [initiating a new export job](#initiate).
+The steps that follow in this tutorial outline how to create a dataset that references the [!DNL XDM Individual Profile] Union Schema using the [!DNL Catalog] API. You may also use the [!DNL Platform] user interface to create a dataset that references the union schema. Steps for using the UI are outlined in [this UI tutorial for exporting audiences](../../segmentation/tutorials/create-dataset-export-segment.md) but are applicable here as well. Once completed, you can return to this tutorial to proceed with the steps for [initiating a new export job](#initiate).
 
 If you already have a compatible dataset and know its ID, you can proceed directly to the step for [initiating a new export job](#initiate).
 
@@ -80,7 +79,7 @@ A successful response returns an array containing the read-only, system-generate
 
 ### Initiate export job {#initiate}
 
-Once you have a union-persisting dataset, you can create an export job to persist the Profile data to the dataset by making a POST request to the `/export/jobs` endpoint in the Real-time Customer Profile API and providing the details of the data you wish to export in the body of the request.
+Once you have a union-persisting dataset, you can create an export job to persist the Profile data to the dataset by making a POST request to the `/export/jobs` endpoint in the Real-Time Customer Profile API and providing the details of the data you wish to export in the body of the request.
 
 **API format**
 
@@ -127,11 +126,11 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `fields` | *(Optional)* Limits the data fields to be included in the export to only those provided in this parameter. Omitting this value will result in all fields being included in the exported data. |
-| `mergePolicy` | *(Optional)* Specifies the merge policy to govern the exported data. Include this parameter when there are multiple segments being exported. |
+| `mergePolicy` | *(Optional)* Specifies the merge policy to govern the exported data. Include this parameter when there are multiple audiences being exported. |
 | `mergePolicy.id` | The ID of the merge policy. |
 | `mergePolicy.version` | The specific version of the merge policy to use. Omitting this value will default to the most recent version.|
 | `additionalFields.eventList` | *(Optional)* Controls the time-series event fields exported for child or associated objects by providing one or more of the following settings:<ul><li>`eventList.fields`: Control the fields to export.</li><li>`eventList.filter`: Specifies criteria that limits the results included from associated objects. Expects a minimum value required for export, typically a date.</li><li>`eventList.filter.fromIngestTimestamp`: Filters time-series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events.</li></ul> |
-| `destination` | **(Required)** Destination information for the exported data:<ul><li>`destination.datasetId`: **(Required)** The ID of the dataset where data is to be exported.</li><li>`destination.segmentPerBatch`: *(Optional)* A Boolean value that, if not provided, defaults to `false`. A value of `false` exports all segment IDs into a single batch ID. A value of `true` exports one segment ID into one batch ID. Note that setting the value to be `true` may affect batch export performance.</li></ul> |
+| `destination` | **(Required)** Destination information for the exported data:<ul><li>`destination.datasetId`: **(Required)** The ID of the dataset where data is to be exported.</li><li>`destination.segmentPerBatch`: *(Optional)* A Boolean value that, if not provided, defaults to `false`. A value of `false` exports all segment definition IDs into a single batch ID. A value of `true` exports one segment definition ID into one batch ID. Note that setting the value to be `true` may affect batch export performance.</li></ul> |
 | `schema.name` | **(Required)** The name of the schema associated with the dataset where data is to be exported. |
 
 >[!NOTE]
@@ -175,7 +174,7 @@ A successful response returns a dataset populated with Profile data as specified
 
 ## List all export jobs
 
-You can return a list of all export jobs for a particular IMS Organization by performing a GET request to the `export/jobs` endpoint. The request also supports the query parameters `limit` and `offset`, as shown below.
+You can return a list of all export jobs for a particular organization by performing a GET request to the `export/jobs` endpoint. The request also supports the query parameters `limit` and `offset`, as shown below.
 
 **API format**
 
@@ -204,7 +203,7 @@ curl -X GET \
 
 **Response**
 
-The response includes a `records` object containing the export jobs created by your IMS Organization.
+The response includes a `records` object containing the export jobs created by your organization.
 
 ```json
 {
@@ -431,7 +430,7 @@ Once the export has completed successfully, your data is available within the Da
 
 For step-by-step instructions on how to use the Data Access API to access and download batch files, follow the [Data Access tutorial](../../data-access/tutorials/dataset-data.md).
 
-You can also access successfully exported Real-time Customer Profile data using Adobe Experience Platform Query Service. Using the UI or RESTful API, Query Service allows you to write, validate, and run queries on data within the Data Lake.
+You can also access successfully exported Real-Time Customer Profile data using Adobe Experience Platform Query Service. Using the UI or RESTful API, Query Service allows you to write, validate, and run queries on data within the Data Lake.
 
 For more information on how to query audience data, please review the [Query Service documentation](../../query-service/home.md).
 
@@ -489,6 +488,6 @@ To create an export job that only contains event data (no profile attributes), t
   }
 ```
 
-### Exporting segments
+### Exporting audiences
 
-You can also use the export jobs endpoint to export audience segments instead of [!DNL Profile] data. See the guide on [export jobs in the Segmentation API](../../segmentation/api/export-jobs.md) for more information.
+You can also use the export jobs endpoint to export audiences instead of [!DNL Profile] data. See the guide on [export jobs in the Segmentation API](../../segmentation/api/export-jobs.md) for more information.

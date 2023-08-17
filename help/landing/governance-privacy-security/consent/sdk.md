@@ -1,6 +1,5 @@
 ---
 title: Process Customer Consent Data Using the Adobe Experience Platform Web SDK
-topic-legacy: getting started
 description: Learn how to integrate the Adobe Experience Platform Web SDK to process customer consent data in Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
 ---
@@ -19,7 +18,7 @@ This tutorial assumes that you have already determined how to generate consent d
 
 This guide follows the workflow for setting up the SDK using the tag extension in the UI. If you do not want to use the extension and would prefer to directly embed the standalone version of the SDK on your site, please refer to the following docs instead of this guide:
 
-* [Configure a datastream](../../../edge/datastreams/overview.md)
+* [Configure a datastream](../../../datastreams/overview.md)
 * [Install the SDK](../../../edge/fundamentals/installing-the-sdk.md)
 * [Configure the SDK for consent commands](../../../edge/consent/supporting-consent.md)
 
@@ -40,7 +39,6 @@ After creating a new datastream or selecting an existing one to edit, select the
 | Datastream field | Value |
 | --- | --- |
 | [!UICONTROL Sandbox] | The name of the Platform [sandbox](../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the datastream. |
-| [!UICONTROL Streaming Inlet] | A valid streaming connection for Experience Platform. See the tutorial on [creating a streaming connection](../../../ingestion/tutorials/create-streaming-connection-ui.md) if you do not have an existing streaming inlet. |
 | [!UICONTROL Event Dataset] | An [!DNL XDM ExperienceEvent] dataset that you plan on sending event data to using the SDK. While you are required to provide an event dataset in order to create a Platform datastream, please note that consent data sent via events is not honored in downstream enforcement workflows. |
 | [!UICONTROL Profile Dataset] | The [!DNL Profile]-enabled dataset with customer consent fields that you created [earlier](#prerequisites). |
 

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Azure File Storage;azure file storage
 solution: Experience Platform
 title: Azure File Storage Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect Azure File Storage to Adobe Experience Platform using APIs or the user interface.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
 ---

@@ -8,7 +8,12 @@ exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
 
 In Adobe Experience Platform you can view and interact with your organization's data using multiple dashboards. You can also update certain dashboards by adding new widgets to your dashboard view. Adobe provides a selection of standard widgets that you can choose to add to your dashboards.
 
-This guide provides step-by-step instructions for adding standard widgets to customize the [!UICONTROL Profiles], [!UICONTROL Segments], and [!UICONTROL Destinations] dashboards in the Platform UI.
+The [!UICONTROL Profiles], [!UICONTROL Audiences], and [!UICONTROL Destinations] dashboards each have a default widget load-out when a new Platform instance is created. This guide provides step-by-step instructions for adding standard widgets to customize the [!UICONTROL Profiles], [!UICONTROL Audiences], and [!UICONTROL Destinations] dashboards in the Platform UI.
+
+>[!NOTE]
+>
+>As of July 26th 2023, [!UICONTROL Profiles], [!UICONTROL Audiences], and [!UICONTROL Destinations] Overview dashboards have been reset to a new default widget load-out for all users who did not modify their views in the previous six months.
+>Refer to the documentation in the [Profiles](../guides/profiles.md#default-widgets), [Audiences](../guides/audiences.md#default-widgets), and [Destinations](../guides/destinations.md#default-widgets) default widget sections for details on which widgets are included as part of the default widget load-outs.
 
 To learn more about custom widgets, please refer to the guide for [creating custom widgets](custom-widgets.md).
 
@@ -32,7 +37,7 @@ The standard widgets for the selected category are displayed. Each widget appear
 >
 >Widgets may only be added to the dashboard that matches the selected category. For example, only widgets from the [!UICONTROL Profiles] category may be added to the [!UICONTROL Profiles] dashboard.
 
-![](../images/customization/standard-widgets.png)
+![The widget library workspace with the Standard tab and available categories highlighted.](../images/customization/standard-widgets.png)
 
 ## Add standard widget to dashboard
 
@@ -44,7 +49,7 @@ To choose a standard widget to add to your dashboard, highlight the widget and s
 
 Select **[!UICONTROL Add widget]** to add the selected widgets to your dashboard.
 
-![](../images/customization/add-widget.png)
+![The widget library workspace with a widget selected and Add widget and Cancel highlighted.](../images/customization/add-widget.png)
 
 ## Next steps
 

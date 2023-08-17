@@ -1,22 +1,21 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Real-time Customer Profile Troubleshooting Guide
-topic-legacy: guide
+title: Real-Time Customer Profile Troubleshooting Guide
 type: Documentation
-description: This document provides answers to frequently asked questions about Real-time Customer Profile, as well as a troubleshooting guide for common errors when working with Profile data using Adobe Experience Platform.
+description: This document provides answers to frequently asked questions about Real-Time Customer Profile, as well as a troubleshooting guide for common errors when working with Profile data using Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
 ---
-# Real-time Customer Profile troubleshooting guide
+# Real-Time Customer Profile troubleshooting guide
 
-This document provides answers to frequently asked questions about Real-time Customer Profile, as well as a troubleshooting guide for common errors. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about Real-Time Customer Profile, as well as a troubleshooting guide for common errors. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
-With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. This enables marketers to drive coordinated, consistent, and relevant experiences for customers across multiple channels.
+With [!DNL Real-Time Customer Profile], you can see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. This enables marketers to drive coordinated, consistent, and relevant experiences for customers across multiple channels.
 
 ## FAQ
 
-The following is a list of answers to frequently asked questions about Real-time Customer Profile.
+The following is a list of answers to frequently asked questions about Real-Time Customer Profile.
 
-### What kinds of data are accepted for Real-time Customer Profile?
+### What kinds of data are accepted for Real-Time Customer Profile?
 
 Profile accepts both **record** and **time-series** data, as long as the data in question contains at least one identity value that associates the data with a unique individual person.
 
@@ -26,7 +25,7 @@ If you are unfamiliar with XDM, start with the [XDM overview](../xdm/home.md) to
 
 ### Where is Profile data stored?
 
-Real-time Customer Profile maintains its own data store (referred to as the "Profile store"), separate from the Data Lake that contains other ingested Platform data. 
+Real-Time Customer Profile maintains its own data store (referred to as the "Profile store"), separate from the Data Lake that contains other ingested Platform data. 
 
 ### If I have already ingested data into Platform, can I make it available in the Profile store?
 
@@ -42,17 +41,17 @@ There are multiple methods of viewing Profile data, depending on whether you are
 
 If you know the IDs of the Profile entities you want to access, you can use the `/entities` (Profile access) endpoint in the Profile API to look up those entities. See the section on [entities](./api/entities.md) in the developer guide for more information.
 
-You can also use the Adobe Experience Platform Segmentation Service API to access the individual profiles of customers who have qualified for a segment membership. See the [Segmentation Service overview](../segmentation/home.md) for more information.
+You can also use the Adobe Experience Platform Segmentation Service API to access the individual profiles of customers who have qualified for an audience membership. See the [Segmentation Service overview](../segmentation/home.md) for more information.
 
 #### Using the UI
 
 In the Experience Platform UI, the **[!UICONTROL Browse]** tab in the **[!UICONTROL Profiles]** workspace allows you to view the total profile count and search for individual profiles by their identity value. See the [Profile user guide](./ui/user-guide.md) for more information.
 
-You can also view a list of your segments under the **[!UICONTROL Browse]** tab in the **[!UICONTROL Segments]** workspace. After selecting a segment, a sample of profiles qualified for that segment is displayed. You can then select any of these listed profiles to view their details. See the [Segmentation UI overview](../segmentation/ui/overview.md) for more information.
+You can also view a list of your audiences under the **[!UICONTROL Browse]** tab in the **[!UICONTROL Audiences]** workspace. After selecting an audience, a sample of profiles qualified for that audience is displayed. You can then select any of these listed profiles to view their details. See the [Segmentation UI overview](../segmentation/ui/overview.md) for more information.
 
 ## Error codes
 
-The following is a list of error messages that you may encounter when working with the Real-time Customer Profile API. If the error you are encountering is not listed here, you may find it in the general [Platform troubleshooting guide](../landing/troubleshooting.md) instead.
+The following is a list of error messages that you may encounter when working with the Real-Time Customer Profile API. If the error you are encountering is not listed here, you may find it in the general [Platform troubleshooting guide](../landing/troubleshooting.md) instead.
 
 ### Could not lookup schema of the computed attribute for the provided path
 

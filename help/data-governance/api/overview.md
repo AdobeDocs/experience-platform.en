@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Policy Service API Guide
-topic-legacy: developer guide
 description: The Policy Service API allows developers to manage data usage labels and policies in Experience Platform. Follow this guide to learn how to perform key operations using the API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 ---
@@ -16,7 +15,7 @@ To view all available endpoints and CRUD operations, visit the [[!DNL Policy Ser
 
 ## Labels
 
-Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available for use in [!DNL Platform]. You can created, view, edit, and delete labels using the `/labels` endpoint. To learn how to use this endpoint, visit the [labels endpoint guide](./labels.md).
+Apply data usage labels to schemas to categorize datasets and fields according to usage policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available for use in [!DNL Platform]. You can created, view, edit, and delete labels using the `/labels` endpoint. To learn how to use this endpoint, visit the [labels endpoint guide](./labels.md).
 
 ## Marketing actions
 
@@ -24,7 +23,13 @@ Marketing actions (also called marketing use cases), in the context of the Data 
 
 ## Policies
 
-Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform]. A policy is defined by the following:
+Data governance policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
+
+>[!NOTE]
+>
+>Data governance policies are not to be confused with access control policies, which determine the specific data attributes that can be accessed by certain Platform users in your organization. See the guide on [attribute-based access control](../../access-control/abac/overview.md) for more information.
+
+A data governance policy is defined by the following:
 
 1. A specific marketing action
 1. The data usage label(s) that action is restricted from being performed against
@@ -33,7 +38,7 @@ To learn how to manage policies in the API, see the [policies endpoint guide](./
 
 ## Evaluation
 
-Once data usage labels have been applied to [!DNL Platform] datasets, and data usage policies have been defined for marketing actions against those labels, Data Governance capabilities allow you to enforce those policies and prevent data operations that constitute policy violations.
+Once data usage labels have been applied to Platform schemas, and data usage policies have been defined for marketing actions against those labels, Data Governance capabilities allow you to enforce those policies and prevent data operations that constitute policy violations.
 
 The [!DNL Policy Service] API provides endpoints that allow you to test marketing actions against datasets or arbitrary combinations of data usage labels in order to check if any policy violations occur. Based on the API response, you can then set up protocols within your experience application to appropriately enforce data usage policy compliance. See the [evaluation endpoints guide](./evaluation.md) for more information.
 

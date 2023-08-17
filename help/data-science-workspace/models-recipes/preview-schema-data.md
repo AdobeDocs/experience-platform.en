@@ -2,7 +2,6 @@
 keywords: Experience Platform;preview schema data;Data Science Workspace;popular topics
 solution: Experience Platform
 title: Preview the Retail Sales Schema and Dataset
-topic-legacy: tutorial
 type: Tutorial
 description: The following document outlines previewing schemas and datasets on Adobe Experience Platform.
 exl-id: dca9835b-4f76-42cc-b262-b20323bf4356

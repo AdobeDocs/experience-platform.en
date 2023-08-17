@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
 title: Query Service API Guide
-topic-legacy: query templates
 description: The Query Service API allows developers to query their Adobe Experience Platform data using standard SQL. Follow this guide to learn how to perform key operations using the API.
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
 ---
@@ -49,7 +48,8 @@ Now that you understand what headers to use, you are ready to begin making calls
 - [Scheduled queries](scheduled-queries.md)
 - [Runs for scheduled queries](runs-scheduled-queries.md)
 - [Query templates](query-templates.md)
-<!-- - [Alert subscriptions](./alert-subscriptions.md) -->
+- [Accelerated queries](./accelerated-queries.md)
+- [Alert subscriptions](./alert-subscriptions.md)
 
 ## Next steps
 

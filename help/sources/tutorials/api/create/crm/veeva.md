@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;veeva crm;Veeva CRM;Veeva;
 solution: Experience Platform
 title: Create a Veeva CRM Base Connection Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Veeva CRM using the Flow Service API.
 exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
@@ -32,7 +31,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Veeva CRM], you must prov
 | `username` | The username value of your [!DNL Veeva CRM] account. |
 | `password` | The password value of your [!DNL Veeva CRM] account. |
 | `securityToken` | The security token for your [!DNL Veeva CRM] instance. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Veeva CRM] is: `fcad62f3-09b0-41d3-be11-449d5a621b69`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Veeva CRM] is: `fcad62f3-09b0-41d3-be11-449d5a621b69`. |
 
 For more information about these values, refer to this [[!DNL Veeva CRM] document](https://developer.veevacrm.com/doc/Content/rest-api.htm).
 

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;Couchbase;couchbase
 solution: Experience Platform
 title: Create a Couchbase  Source Connection in the UI
-topic-legacy: overview
 type: Tutorial
 description: Learn how to create an Couchbase source connection using the Adobe Experience Platform UI.
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
@@ -11,7 +10,7 @@ exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
 
 >[!NOTE]
 >
-> The [!DNL Couchbase] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+> The [!DNL Couchbase] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 Source connectors in [!DNL Adobe Experience Platform] provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Couchbase] source connector using the [!DNL Platform] user interface.
 
@@ -22,7 +21,7 @@ This tutorial requires a working understanding of the following components of [!
 *   [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     *   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-*   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+*   [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 If you already have a valid [!DNL Couchbase] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/databases.md).
 

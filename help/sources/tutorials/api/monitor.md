@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;monitor dataflows;flow service api;Flow Service
 solution: Experience Platform
 title: Monitor Sources Dataflows Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the Flow Service API.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d

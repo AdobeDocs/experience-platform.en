@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;query service;api guide;queries;query;Query service;
 solution: Experience Platform
 title: Queries API Endpoint
-topic-legacy: queries
 description: The following sections walk through calls you can make using the /queries endpoint in the Query Service API.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
 ---
@@ -14,7 +13,7 @@ The following sections walk through calls you can make using the `/queries` endp
 
 ### Retrieve a list of queries
 
-You can retrieve a list of all queries for your IMS Organization by making a GET request to the `/queries` endpoint. 
+You can retrieve a list of all queries for your organization by making a GET request to the `/queries` endpoint. 
 
 **API format**
 
@@ -37,10 +36,11 @@ The following is a list of available query parameters for listing queries. All o
 | `property` | Filter results based on fields. The filters **must** be HTML escaped. Commas are used to combine multiple sets of filters. The supported fields are `created`, `updated`, `state`, and `id`. The list of supported operators are `>` (greater than), `<` (less than), `>=` (greater than or equal to), `<=` (less than or equal to), `==` (equal to), `!=` (not equal to), and `~` (contains). For example, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` will return all queries with the specified ID. |
 | `excludeSoftDeleted` | Indicates whether a query which has been soft deleted should be included. For example, `excludeSoftDeleted=false` will **include** soft deleted queries. (*Boolean, default value: true*) |
 | `excludeHidden` | Indicates whether non-user driven queries should be displayed. Having this value set to false will **include** non-user driven queries, such as CURSOR definitions, FETCH, or metadata queries. (*Boolean, default value: true*) |
+| `isPrevLink` | The `isPrevLink` query parameter is used for pagination. Results of the API call are sorted using their `created` timestamp and the `orderby` property. When navigating the pages of results, `isPrevLink` is set to true when paging backwards. It reverses the order of the query. See "next" and "prev" links as examples. |
 
 **Request**
 
-The following request retrieves the latest query created for your IMS organization.
+The following request retrieves the latest query created for your organization.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
@@ -52,7 +52,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 **Response**
 
-A successful response returns HTTP status 200 with a list of queries for the specified IMS Organization as JSON. The following response returns the latest query created for your IMS organization.
+A successful response returns HTTP status 200 with a list of queries for the specified organization as JSON. The following response returns the latest query created for your organization.
 
 ```json
 {
@@ -123,7 +123,7 @@ POST /queries
 
 **Request**
 
-The following request creates a new query, configured by the values provided in the payload:
+The following request creates a new query, with an SQL statement provided in the payload:
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
@@ -134,7 +134,27 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
         "dbName": "prod:all",
-        "sql": "SELECT * FROM accounts;",
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
+        "queryParameters": {
+            user_id : {USER_ID}
+            }
+        "name": "Sample Query",
+        "description": "Sample Description"
+    }  
+```
+
+The request example below creates a new query using an existing query template ID.
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/query/queries \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+        "dbName": "prod:all",
+        "templateID": "f7cb5155-29da-4b95-8131-8c5deadfbe7f",
         "name": "Sample Query",
         "description": "Sample Description"
     }  
@@ -146,6 +166,10 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 | `sql` | The SQL query you want to create. |
 | `name` | The name of your SQL query. |
 | `description` | The description of your SQL query. |
+| `queryParameters` | A key value pairing to replace any parameterized values in the SQL statement. It is only required **if** you are using parameter replacements within the SQL you provide. No value type checking will be done on these key value pairs. |
+| `templateId` | The unique identifier for a pre-existing query. You can provide this instead of an SQL statement.  |
+| `insertIntoParameters` | (Optional) If this property is defined, then this query will be converted into an INSERT INTO query. |
+| `ctasParameters` | (Optional) If this property is defined, this query will be converted into a CTAS query. |
 
 **Response**
 
@@ -265,9 +289,9 @@ A successful response returns HTTP status 200 with detailed information about th
 >
 >You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
 
-### Cancel a query
+### Cancel or soft delete a query
 
-You can request to delete a specified query by making a PATCH request to the `/queries` endpoint and providing the query's `id` value in the request path.
+You can request to cancel or soft delete a specified query by making a PATCH request to the `/queries` endpoint and providing the query's `id` value in the request path.
 
 **API format**
 
@@ -275,9 +299,9 @@ You can request to delete a specified query by making a PATCH request to the `/q
 PATCH /queries/{QUERY_ID}
 ```
 
-| Property | Description |
+| Parameter | Description |
 | -------- | ----------- |
-| `{QUERY_ID}` | The `id` value of the query you want to cancel. |
+| `{QUERY_ID}` | The `id` value of the query you want to perform the operation on. |
 
 
 **Request**
@@ -298,7 +322,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Property | Description |
 | -------- | ----------- |
-| `op` | In order to cancel the query, you must set the op parameter with the value `cancel `. |
+| `op` | The type of operation to perform on the resource. Accepted values are `cancel` and `soft_delete`. To cancel the query, you must set the op parameter with the value `cancel `. Note that the soft delete operation stops the query from being returned on GET requests but does not delete it from the system. |
 
 **Response**
 

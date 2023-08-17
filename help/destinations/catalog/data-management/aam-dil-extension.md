@@ -10,7 +10,7 @@ exl-id: 7e1099de-0650-4ee2-b746-721afe194097
 
 This is the Adobe Audience Manager Data Integration Library extension (client-side implementation). Note: This extension is not meant to be used for server-side forwarding (SSF) of Adobe Analytics data. For SSF, use the Adobe Analytics extension. Important: Starting with version 8.0, DIL has a hard dependency on the [!DNL Experience Cloud] ID Service, version 3.3 or higher. Please implement both [!DNL Experience Cloud] ID Service and DIL for full [!DNL Audience Manager] data integration capabilities.
 
-[!DNL Audience Manager] DIL is a Data Management Platform (DMP) extension in Adobe Experience Platform. For more information about the extension functionality, see the [Audience Manager extension page](../../../tags/extensions/web/audience-manager/overview.md) in the tags documentation.
+[!DNL Audience Manager] DIL is a Data Management Platform (DMP) extension in Adobe Experience Platform. For more information about the extension functionality, see the [Audience Manager extension page](../../../tags/extensions/client/audience-manager/overview.md) in the tags documentation.
 
 This destination is a tag extension. For more information about how extensions work in Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
@@ -36,7 +36,7 @@ Select the property in which you want to install the extension. You also have th
 
 The workflow walks you through the steps to complete the installation. 
 
-For information about the extension configuration options, see the [Audience Manager extension page](../../../tags/extensions/web/audience-manager/overview.md) in the tags documentation.
+For information about the extension configuration options, see the [Audience Manager extension page](../../../tags/extensions/client/audience-manager/overview.md) in the tags documentation.
 
 You can also install the extension directly in the [Data Collection UI](https://experience.adobe.com/#/data-collection/). See the guide on [adding a new extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) for more information.
 

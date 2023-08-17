@@ -85,13 +85,13 @@ For more information about sources, see the [sources overview](../../sources/hom
 
 ## Destinations {#destinations}
 
-In [Real-time CDP](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+In [Real-Time CDP](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **New features**
 
 |Feature | Description|
 |--- | ---|
-|Support for access control permissions | The Destinations functionality in Real-time CDP works with Adobe Experience Platform access control permissions. Depending on your user's permission level, you can view, manage, and activate destinations.|
+|Support for access control permissions | The Destinations functionality in Real-Time CDP works with Adobe Experience Platform access control permissions. Depending on your user's permission level, you can view, manage, and activate destinations.|
 
 **Access control permissions**
 

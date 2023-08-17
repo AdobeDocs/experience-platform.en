@@ -36,7 +36,7 @@ Select the tag property in which you want to install the extension. You also hav
 
 The workflow takes you to the Data Collection UI to complete the installation. 
 
-For information about the extension configuration options, see the [Adobe Target extension page](../../../tags/extensions/web/target/overview.md) in the tags documentation.
+For information about the extension configuration options, see the [Adobe Target extension page](../../../tags/extensions/client/target/overview.md) in the tags documentation.
 
 You can also install the extension directly in the [Data Collection UI](https://experience.adobe.com/#/data-collection/). See the guide on [adding a new extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) for more information.
 

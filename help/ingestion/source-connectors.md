@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Source Connectors
-topic-legacy: overview
 description: Source connections enable you to authenticate your storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 exl-id: 6e4f1688-6fe8-4ee7-996e-bcdf942cea17
 ---

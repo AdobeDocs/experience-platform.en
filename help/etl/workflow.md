@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;ETL;etl;etl workflow;ETL workflow
 solution: Experience Platform
 title: ETL Workflow
-topic-legacy: overview
 description: Various extract, transform, and load (ETL) tools may differ in format, but most expose similar functionality to assist with the combining of multiple data sources.
 exl-id: 09de6c50-ad04-4d7c-99e6-33784fb0dd58
 ---

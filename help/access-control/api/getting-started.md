@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;access control;api;getting started
 solution: Experience Platform
 title: Access Control API Guide
-topic-legacy: developer guide
 description: Access control in Adobe Experience Platform allows you to manage roles and permissions for various Platform capabilities by using the Adobe Admin Console. The following sections provide additional information that developers will need to know in order to successfully make calls to the Schema Registry API.
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
 ---
@@ -13,7 +12,7 @@ exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
 This developer guide provides information on how to format your requests to the [[!DNL Access Control API]](https://www.adobe.io/experience-platform-apis/references/access-control/), and covers the following operations:
 
 - [List names of permissions and resource types](./permissions-and-resource-types.md)
-- [View effective policies for the current user](./effective-policies.md)
+- [View effective access policies for the current user](./effective-policies.md)
 
 ## Getting started
 

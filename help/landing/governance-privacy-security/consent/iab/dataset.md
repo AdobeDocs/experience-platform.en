@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;IAB;IAB 2.0;consent;Consent
 solution: Experience Platform
 title: Create Datasets for Capturing IAB TCF 2.0 Consent Data
-topic-legacy: privacy events
 description: This document provides steps for setting up the two required datasets to collect IAB TCF 2.0 consent data.
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 ---
@@ -12,7 +11,7 @@ In order for Adobe Experience Platform to process customer consent data in accor
 
 Specifically, two datasets are required for capturing TCF 2.0 consent data:
 
-* A dataset based on the [!DNL XDM Individual Profile] class, enabled for use in [!DNL Real-time Customer Profile].
+* A dataset based on the [!DNL XDM Individual Profile] class, enabled for use in [!DNL Real-Time Customer Profile].
 * A dataset based on the [!DNL XDM ExperienceEvent] class.
 
 >[!IMPORTANT]
@@ -29,7 +28,7 @@ This tutorial requires a working understanding of the following components of Ad
     * [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas.
 * [Adobe Experience Platform Identity Service](../../../../identity-service/home.md): Allows you to bridge customer identities from your disparate data sources across devices and systems.
     * [Identity namespaces](../../../../identity-service/namespaces.md): Customer identity data must be provided under a specific identity namespace recognized by Identity Service.
-* [Real-time Customer Profile](../../../../profile/home.md): Leverages [!DNL Identity Service] to let you create detailed customer profiles from your datasets in real time. [!DNL Real-time Customer Profile] pulls data from the Data Lake and persists customer profiles in its own separate data store.
+* [Real-Time Customer Profile](../../../../profile/home.md): Leverages [!DNL Identity Service] to let you create detailed customer profiles from your datasets in real time. [!DNL Real-Time Customer Profile] pulls data from the Data Lake and persists customer profiles in its own separate data store.
 
 ## TCF 2.0 field groups {#field-groups}
 
@@ -39,7 +38,7 @@ The sections below explain the structure of each of these field groups, includin
 
 ### Profile field group {#profile-field-group}
 
-For schemas based on [!DNL XDM Individual Profile], the [!UICONTROL IAB TCF 2.0 Consent Details] field group provides a single map-type field, `identityPrivacyInfo`, which maps customer identities to their TCF consent preferences. This field group must be included in a record-based schema that is enabled for Real-time Customer Profile in order for automatic enforcement to take place.
+For schemas based on [!DNL XDM Individual Profile], the [!UICONTROL IAB TCF 2.0 Consent Details] field group provides a single map-type field, `identityPrivacyInfo`, which maps customer identities to their TCF consent preferences. This field group must be included in a record-based schema that is enabled for Real-Time Customer Profile in order for automatic enforcement to take place.
 
 See the [reference guide](../../../../xdm/field-groups/profile/iab.md) for this field group to learn more about its structure and use case.
 
@@ -61,7 +60,7 @@ In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to op
 
 >[!NOTE]
 >
->If you have existing XDM schemas that you want to use to capture consent data instead, you can edit those schemas instead of creating new ones. However, if an existing schema has been enabled for use in Real-time Customer Profile, its primary identity cannot be a directly identifiable field that is prohibited from use in interest-based advertising, such as an email address. Consult your legal counsel if you are unsure which fields are restricted.
+>If you have existing XDM schemas that you want to use to capture consent data instead, you can edit those schemas instead of creating new ones. However, if an existing schema has been enabled for use in Real-Time Customer Profile, its primary identity cannot be a directly identifiable field that is prohibited from use in interest-based advertising, such as an email address. Consult your legal counsel if you are unsure which fields are restricted.
 >
 >Additionally, when editing existing schemas, only additive (non-breaking) changes can be made. See the section on the [principles of schema evolution](../../../../xdm/schema/composition.md#evolution) for more information.
 
@@ -91,11 +90,11 @@ After you've provided a name and description, you can optionally add more fields
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-profile.png)
 
-If you are editing an existing schema that has already been enabled for use in [!DNL Real-time Customer Profile], select **[!UICONTROL Save]** to confirm your changes before skipping ahead to the section on [creating a dataset based on your consent schema](#dataset). If you are creating a new schema, continue following the steps outlined in the subsection below.
+If you are editing an existing schema that has already been enabled for use in [!DNL Real-Time Customer Profile], select **[!UICONTROL Save]** to confirm your changes before skipping ahead to the section on [creating a dataset based on your consent schema](#dataset). If you are creating a new schema, continue following the steps outlined in the subsection below.
 
-#### Enable the schema for use in [!DNL Real-time Customer Profile]
+#### Enable the schema for use in [!DNL Real-Time Customer Profile]
 
-In order for Platform to associate the consent data it receives to specific customer profiles, the consent schema must be enabled for use in [!DNL Real-time Customer Profile].
+In order for Platform to associate the consent data it receives to specific customer profiles, the consent schema must be enabled for use in [!DNL Real-Time Customer Profile].
 
 >[!NOTE]
 >
@@ -152,7 +151,7 @@ Once the field groups that you require have been added, finish by selecting **[!
 
 ## Create datasets based on your consent schemas {#datasets}
 
-For each of the required schemas described above, you must create a dataset that will ultimately ingest your customers' consent data. The dataset based on the record schema must be enabled for [!DNL Real-time Customer Profile], while the dataset based on the time-series schema **should not** be [!DNL Profile]-enabled.
+For each of the required schemas described above, you must create a dataset that will ultimately ingest your customers' consent data. The dataset based on the record schema must be enabled for [!DNL Real-Time Customer Profile], while the dataset based on the time-series schema **should not** be [!DNL Profile]-enabled.
 
 To begin, select **[!UICONTROL Datasets]** in the left navigation, then select **[!UICONTROL Create dataset]** in the top-right corner.
 
@@ -170,7 +169,7 @@ The **[!UICONTROL Configure dataset]** step appears. Provide a unique, easily id
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-configure.png)
 
-The details page for the newly created dataset appears. If the dataset is based on your time-series schema, then the process is complete. If the dataset is based on your record schema, the final step in the process is to enable the dataset for use in [!DNL Real-time Customer Profile].
+The details page for the newly created dataset appears. If the dataset is based on your time-series schema, then the process is complete. If the dataset is based on your record schema, the final step in the process is to enable the dataset for use in [!DNL Real-Time Customer Profile].
 
 In the right rail, select the **[!UICONTROL Profile]** toggle, then select **[!UICONTROL Enable]** in the confirmation popover to enable the schema for [!DNL Profile].
 
@@ -182,7 +181,7 @@ Follow the above steps again to create an event-based dataset if you created a s
 
 By following this tutorial, you have created at least one dataset that can now be used to collect customer consent data:
 
-* A record-based dataset that is enabled for use in Real-time Customer Profile. **(Required)**
+* A record-based dataset that is enabled for use in Real-Time Customer Profile. **(Required)**
 * A time-series-based dataset that is not enabled for [!DNL Profile]. (Optional)
 
 You can now return to the [IAB TCF 2.0 overview](./overview.md#merge-policies) to continue the process of configuring Platform for TCF 2.0 compliance.

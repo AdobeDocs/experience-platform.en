@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;sources;ingestion;troubleshooting;sources troubleshooting;sources faq;faq;source connectors;source connector;source connectors faqs;source connectors troubleshooting;
 solution: Experience Platform
 title: Sources troubleshooting
-topic-legacy: troubleshooting
 description: This document provides answers to frequently asked questions about sources on Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 ---

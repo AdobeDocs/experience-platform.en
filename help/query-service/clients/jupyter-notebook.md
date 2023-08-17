@@ -1,6 +1,7 @@
 ---
 title: Connect Jupyter Notebook to Query Service
 description: Learn how to connect Jupyter Notebook with Adobe Experience Platform Query Service.
+exl-id: 358eab67-538f-4ada-931f-783b92db4a1c
 ---
 # Connect [!DNL Jupyter Notebook] to Query Service
 
@@ -15,16 +16,15 @@ To acquire the necessary credentials for connecting [!DNL Jupyter Notebook] to E
 >[!TIP]
 >
 >[!DNL Anaconda Navigator] is a desktop graphical user interface (GUI) that provides an easier way to install and launch common [!DNL Python] programs such as [!DNL Jupyter Notebook]. It also helps to manage packages, environments, and channels without using command-line commands.
->You can [install your preferred version of the application](https://docs.anaconda.com/anaconda/install/) from their website. 
->Follow the guided installation process. From the Anaconda Navigator home screen, select **[!DNL Jupyter Notebook]** from the list of supported applications to launch the program.
->![The [!DNL Anaconda Navigator] home screen with [!DNL Jupyter Notebook] highlighted.](../images/clients/jupyter-notebook/anaconda-navigator-home.png)
->More information can be found in their [official documentation](https://docs.anaconda.com/anaconda/navigator/).
+>Follow the guided installation process on their website to [install your preferred version of the application](https://docs.anaconda.com/anaconda/install/). 
+>From the Anaconda Navigator home screen, select **[!DNL Jupyter Notebook]** from the list of supported applications to launch the program.
+>More information can be found in the [official Anaconda documentation](https://docs.anaconda.com/anaconda/navigator/).
+
+The official Jupyter documentation provides instructions to [run the notebook from the command line interface](https://docs.jupyter.org/en/latest/running.html#how-do-i-open-a-specific-notebook) (CLI).
 
 ## Launch [!DNL Jupyter Notebook]
 
-After you have opened a new [!DNL Jupyter Notebook] web application, select the **[!DNL New]** dropdown followed by **[!DNL Python 3]** to create a new Notebook. The [!DNL Notebook] editor appears.
-
-![The [!DNL Jupiter Notebook] File tab with the [!DNL New dropdown] and [!DNL Python] 3 highlighted.](../images/clients/jupyter-notebook/new-notebook.png)
+After you have opened a new [!DNL Jupyter Notebook] web application, select the **[!DNL New]** dropdown from the UI, followed by **[!DNL Python 3]** to create a new Notebook. The [!DNL Notebook] editor appears.
 
 On the first line of the [!DNL Notebook] editor, enter the following value: `pip install psycopg2-binary` and select **[!DNL Run]** from the command bar. A success message appears below the input line. 
 
@@ -32,11 +32,7 @@ On the first line of the [!DNL Notebook] editor, enter the following value: `pip
 >
 >As part of this process to form a connection, you must select **[!DNL Run]** to execute each line of code.
 
-![The [!DNL Notebook] UI with the install libraries command highlighted.](../images/clients/jupyter-notebook/install-library.png)
-
 Next, import a [!DNL PostgreSQL] database adapter for [!DNL Python]. Enter the value: `import psycopg2`and select **[!DNL Run]**. There is no success message for this process. If there is no error message, continue to the next step. 
-
-![The [!DNL Notebook] UI with the import database driver code highlighted.](../images/clients/jupyter-notebook/import-dbdriver.png)
 
 You must now provide your Adobe Experience Platform credentials by entering the value: `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. Your connection credentials can be found in the [!UICONTROL Queries] section, under the [!UICONTROL Credentials] tab of the Platform UI. See the documentation on how to [find your organization credentials](../ui/credentials.md) for detailed instructions.
 
@@ -44,9 +40,11 @@ The use of non-expiring credentials is recommended when using third-party client
 
 >[!IMPORTANT]
 >
->When copying credentials from the Platform UI, ensure that there is no additional formatting of the credentials. They should all be in one line, with a single space between the properties and values. The credentials are enclosed in quotation marks and **not** comma-separated.
+>When copying credentials from the Platform UI, there is no need for additional formatting of the credentials. They can be given in one line, with a single space between the properties and values. The credentials are enclosed in quotation marks and **not** comma-separated.
 
-![The [!DNL Notebook] UI with the connection credentials highlighted.](../images/clients/jupyter-notebook/provide-credentials.png)
+```python
+conn = psycopg2.connect('''sslmode=require host=<YOUR_HOST_CREDENTIAL> port=80 dbname=prod:all user=<YOUR_ORGANIZATION_ID> password=<YOUR_PASSWORD>''')"
+```
 
 Your [!DNL Jupyter Notebook] instance is now connected to Query Service.
 
@@ -56,29 +54,25 @@ Now that you have connected [!DNL Jupyter Notebook] to Query Service, you can pe
 
 Enter the following values: 
 
-```console
+```python
 cur = conn.cursor()
-cur.execute('''{YOUR_QUERY_HERE}''')
+cur.execute('''<YOUR_QUERY_HERE>''')
 data = [r for r in cur]
 ```
 
 Next, call the parameter (`data` in the example above) to display the query results in an unformatted response.
-
-![The [!DNL Notebook] UI with commands to return and display SQL results within the Notebook.](../images/clients/jupyter-notebook/example-query.png)
 
 To format the results in a more human-readable way, use the following commands:
 
 - `colnames = [desc[0] for desc in cur.description]`
 - `import pandas as pd`
 - `import numpy as np`
+- `df = pd.DataFrame(samples,columns=colnames)`
+- `df.fillna(0,inplace=True)`
 
 These commands do not generate a success message. If there is no error message you can then use a function to output the results of your SQL query in a table format.
 
-![The commands required to format the SQL results.](../images/clients/jupyter-notebook/format-results-commands.png)
-
 Enter and run the `df.head()` function to see the tabularized query results.
-
-![Tabularized results of your SQL query within [!DNL Jupyter Notebook].](../images/clients/jupyter-notebook/format-results-output.png)
 
 ## Next steps
 

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;data ingestion;data location;Data Location;Data management;data management;Lineage;lineage;batch;Batch;ingested data
 solution: Experience Platform
 title: Data Ingestion Overview
-topic-legacy: overview
 description: This document introduces the three main ways in which data is ingested into Platform, with links to their respective overview documentation for more detailed information.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
 ---
@@ -40,6 +39,6 @@ This document provided a brief introduction to the different aspects of [!DNL Da
 
 >[!WARNING]
 >
->The term "Unified Profile" thats used in the following video is out-of-date. The terms [!DNL "Profile"] or [!DNL "Real-time Customer Profile"] are the correct terms used in the [!DNL Experience Platform] documentation. Please refer to the documentation for the latest functionality.
+>The term "Unified Profile" thats used in the following video is out-of-date. The terms [!DNL "Profile"] or [!DNL "Real-Time Customer Profile"] are the correct terms used in the [!DNL Experience Platform] documentation. Please refer to the documentation for the latest functionality.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)

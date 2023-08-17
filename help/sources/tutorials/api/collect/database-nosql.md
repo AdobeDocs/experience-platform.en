@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;database database;third party database
 solution: Experience Platform
 title: Create a Dataflow for Database Sources Using the Flow Service API
-topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a database and ingesting it into Platform using source connectors and APIs.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
@@ -180,8 +179,8 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
 |`data.schema.version` | The version of the schema. This value must be set `application/vnd.adobe.xed-full+json;version=1`, which returns the latest minor version of the schema. |
-| `params.dataSetId` | The ID of the target dataset gathered in the previous step. |
-| `connectionSpec.id` | The connection specification ID used to connect to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `params.dataSetId` | The ID of the target dataset generated in the previous step. **Note**: You must provide a valid dataset ID when creating a target connection. An invalid dataset ID will result in an error. |
+| `connectionSpec.id` | The connection specification ID used to connect to the data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Response**
 
@@ -682,9 +681,9 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect data from a database on a scheduled basis. Incoming data can now be used by downstream Platform services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect data from a database on a scheduled basis. Incoming data can now be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
-* [Real-time Customer Profile overview](../../../../profile/home.md)
+* [Real-Time Customer Profile overview](../../../../profile/home.md)
 * [Data Science Workspace overview](../../../../data-science-workspace/home.md)
 
 ## Appendix

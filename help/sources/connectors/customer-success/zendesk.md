@@ -1,15 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics;Zendesk;zendesk
-solution: Experience Platform
 title: Zendesk Source Connector Overview
 description: Learn how to connect Zendesk to Adobe Experience Platform using APIs or the user interface.
+last-substantial-update: 2023-06-21
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
 ---
-# (Beta) [!DNL Zendesk]
-
->[!NOTE]
->
->The [!DNL Zendesk] source is in beta. See the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+# [!DNL Zendesk]
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
@@ -34,7 +29,7 @@ This section outlines prerequisite steps to complete in order to authenticate yo
 
 ![Zendesk API token](../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
-See the [[!DNL Zendesk documentation on subdomains]](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-) for information on how to retrieve your subdomain. For information on generating your API token, see the [[!DNL Zendesk] guide on generating a new API token](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).
+See the [[!DNL Zendesk documentation on subdomains]](<https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain->) for information on how to retrieve your subdomain. For information on generating your API token, see the [[!DNL Zendesk] guide on generating a new API token](<https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token>).
 
 The documentation below provides information on how to connect [!DNL Zendesk] to Platform using APIs or the user interface:
 

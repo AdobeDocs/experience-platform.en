@@ -1,7 +1,7 @@
 ---
 keywords: destinations;destination;destinations detail page;destinations details page
 title: View destination details
-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow. 
+description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, audiences mapped to the destination, and controls to edit the activation and to enable and disable the data flow. 
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
 ---
 # View destination details
@@ -44,8 +44,8 @@ The following table covers the controls and details provided by the right rail:
 
 | Right rail item | Description |
 | --- | --- |
-| [!UICONTROL Activate segments] | Select this control to edit which segments are mapped to the destination, update export schedules, or add and remove mapped attributes and identities. See the guides on [activating audience data to segment streaming destinations](./activate-segment-streaming-destinations.md), [activating audience data to batch profile-based destinations](./activate-batch-profile-destinations.md), and [activating audience data to streaming profile-based destinations](./activate-streaming-profile-destinations.md) for more information. |
-| [!UICONTROL Delete] | Allows you to delete this dataflow and unmaps the segments that were previously activated, if any exist. |
+| [!UICONTROL Activate audiences] | Select this control to edit which audiences are mapped to the destination, update export schedules, or add and remove mapped attributes and identities. See the guides on [activating audience data to audience streaming destinations](./activate-segment-streaming-destinations.md), [activating audience data to batch profile-based destinations](./activate-batch-profile-destinations.md), and [activating audience data to streaming profile-based destinations](./activate-streaming-profile-destinations.md) for more information. |
+| [!UICONTROL Delete] | Allows you to delete this dataflow and unmaps the audiences that were previously activated, if any exist. |
 | [!UICONTROL Destination name] | This field can be edited in order to update the destination's name. |
 | [!UICONTROL Description] |  This field can be edited in order to update or add an optional description to the destination. |
 | [!UICONTROL Destination] | Represents the destination platform that audiences are sent to. See the [destinations catalog](../catalog/overview.md) for more information. |
@@ -72,18 +72,38 @@ The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to
 
 >[!NOTE]
 >
->* Destinations monitoring functionality is currently supported for all destinations in Experience Platform *except* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
->* For the [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), and [HTTP API](/help/destinations/catalog/streaming/http-destination.md) destinations, identities excluded are currently not displayed.
+>* Destinations monitoring functionality is currently supported for all destinations in Experience Platform *except* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) and [Experience Cloud Audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinations.
+>* For the [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), and [HTTP API](/help/destinations/catalog/streaming/http-destination.md) destinations, the metrics related to identities excluded, failed, and activated are estimated. Higher volumes of activation data lead to higher accuracy of the metrics.
 
 ![Dataflow runs view](../assets/ui/details-page/dataflow-runs.png)
 
+### Dataflow runs duration {#dataflow-runs-duration}
+
+There is a difference in the displayed duration of dataflow runs between streaming and file-based destinations. 
+
+### Streaming destinations {#streaming}
+
+While the **[!UICONTROL Processing duration]** indicated for most streaming dataflow runs is about four hours, as shown in the image below, the actual processing time for any dataflow run is much shorter. Dataflow run windows stay open for longer in the event that Experience Platform needs to retry making calls to the destination and also ensure to ensure it does not miss out on any late arriving data for same time window.  
+
+![Image of the Dataflow runs page with the Processing time column highlighted for a streaming destination.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
+
+For more information, read about [dataflow runs to streaming destinations](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) in the monitoring documentation.
+
+### File-based destinations {#file-based}
+
+For dataflow runs to file-based destinations, the **[!UICONTROL Processing duration]** depends on the size of the data being exported and the system load. Notice also that the dataflow runs to file-based destinations are broken down per audience.
+
+![Image of the Dataflow runs page with the Processing time column highlighted for a file-based destination.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+
+For more information, read about [dataflow runs to batch (file-based) destinations](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) in the monitoring documentation.
+
 ## [!UICONTROL Activation data] {#activation-data}
 
-The [!UICONTROL Activation data] tab displays a list of segments that have been mapped to the destination, including their start date and end date (if applicable), and other relevant information for the data export, such as export type, schedule, and frequency. To view the details about a particular segment, select its name from the list.
+The [!UICONTROL Activation data] tab displays a list of audiences that have been mapped to the destination, including their start date and end date (if applicable), and other relevant information for the data export, such as export type, schedule, and frequency. To view the details about a particular audience, select its name from the list.
 
 >[!TIP]
 >
->To view and edit details about the attributes and identities mapped to a destination, select **[!UICONTROL Activate segments]** in the [right rail](#right-rail).
+>To view and edit details about the attributes and identities mapped to a destination, select **[!UICONTROL Activate audiences]** in the [right rail](#right-rail).
 
 ![Activation data view batch destination](../assets/ui/details-page/activation-data-batch.png)
 
@@ -91,4 +111,4 @@ The [!UICONTROL Activation data] tab displays a list of segments that have been 
 
 >[!NOTE]
 >
->For details on exploring the details page of a segment, refer to the [Segmentation UI overview](../../segmentation/ui/overview.md#segment-details).
+>For details on exploring the details page of a audience, refer to the [Segmentation UI overview](../../segmentation/ui/overview.md#segment-details).

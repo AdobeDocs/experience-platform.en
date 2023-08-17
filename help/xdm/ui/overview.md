@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Schemas UI Overview
 description: This overview covers the major capabilities of the Schemas workspace in Experience Platform.
-topic-legacy: user guide
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
 ---
 # [!UICONTROL Schemas] UI overview
@@ -31,7 +30,7 @@ The [!UICONTROL Schemas] workspace provides powerful tools for creating and cust
 
 ## Defining XDM fields
 
-Classes, field groups, and data types all contribute fields to a schema. You can choose from a list of standard field types when adding fields to these resources, and can also define specialized fields for certain use cases. Refer to the the guide on [defining XDM fields in the UI](./fields/overview.md) for more information.
+Classes, field groups, and data types all contribute fields to a schema. You can choose from a list of standard field types when adding fields to these resources, and can also define specialized fields for certain use cases. Refer to the guide on [defining XDM fields in the UI](./fields/overview.md) for more information.
 
 ## Next steps
 

@@ -2,7 +2,6 @@
 keywords: Experience Platform;home;popular topics;hubspot;Hubspot;HubSpot
 solution: Experience Platform
 title: HubSpot Source Connector Overview
-topic-legacy: overview
 description: Learn how to connect HubSpot to Adobe Experience Platform using APIs or the user interface.
 exl-id: 4bc279ac-9388-4bac-bfae-98878625a554
 ---

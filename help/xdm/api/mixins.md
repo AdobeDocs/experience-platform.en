@@ -3,7 +3,6 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Mixins API Endpoint
 description: The /mixins endpoint in the Schema Registry API allows you to programmatically manage XDM mixins within your experience application.
-topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 ---
 
