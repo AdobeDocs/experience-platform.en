@@ -58,11 +58,11 @@ Select the **[!UICONTROL AI Assistant icon]** from the header to launch the AI A
 
 From here, you can input your question in the text box and query the AI Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case. 
 
+### Example use case: Use the AI Assistant to expedite your schema creation process
+
 >[!NOTE]
 >
 >The following example workflow uses the ExperienceEvent schema creation process to illustrate how you can use the AI Assistant when using the Experience Platform UI.
-
-### Use the AI Assistant to expedite your schema creation process
 
 Consider a use case in which you are creating a **Device Trade in Event Schema**. During the ExperienceEvent schema creation process, you come across the `eventType` field. At this point, you can either leave your workflow and refer to the the documentation on the [basics of a schema composition](../xdm/schema/composition.md), or you can use the AI Assistant to retrieve immediate answers for your questions. 
 
@@ -70,7 +70,7 @@ To begin, input your question in the text box provided. In the example below, th
 
 ![The AI Assistant for Experience Platform with the following question prepared for querying: "What is the eventType field in an ExperienceEvent schema?](./images/ai-assistant/question.png)
 
-The AI Assistant then queries its knowledge base and computes an answer. After a few moments, the AI Assistant returns the following:
+The AI Assistant then queries its knowledge base and computes an answer. After a few moments, the AI Assistant returns an answer and related suggestions that you can use as follow up prompts.
 
 ![The AI Assistant for Experience Platform with an answer to the previous query.](./images/ai-assistant/answer.png)
 
@@ -82,7 +82,7 @@ You can also ask the AI Assistant questions regarding your data usage. When inqu
 
 ![A data usage question, asking how many segments a user has.](./images/ai-assistant/data-usage-question.png)
 
-With every answer, the AI Assistant provides you with the option to view the documentation that it cites for information and provide feedback.
+With every answer the AI assistant provides you with a way to validate your answer by viewing its source. Links to the documentation are provided for concept questions, while data usage questions can be verified with an SQL query that demonstrates how the answer was computed.
 
 >[!BEGINSHADEBOX]
 
@@ -262,6 +262,10 @@ The following is a list of currently supported data usage questions grouped by d
 ### Conversational experience
 
 You must consider several nuances regarding the conversational experience when querying the AI Assistant.
+
+>[!NOTE]
+>
+>These limitations are temporary and are being improved upon throughout the course of the alpha.
 
 >[!BEGINTABS]
 
