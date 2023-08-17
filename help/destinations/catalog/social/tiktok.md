@@ -24,7 +24,9 @@ An athletic apparel brand wants to reach existing customers through their social
 
 ## Prerequisites {#prerequisites}
 
-Before sending data to your [!DNL TikTok Ads Manager] account, you will need to give Adobe Experience Platform permission to access your Ad Account for `Audience Management`. This permission can be provided by entering your advertiser ID in Experience Platform and following the redirect to grant the permission. You can find more instructions can be found in the [TikTok API documentation](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378).
+You need to have [!DNL Admin] or [!DNL Operator] access to the TikTok Ads Manager account you want to send audiences to. More instructions can be found on the [TikTok Help Center](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+
+Before sending data to your TikTok Ads Manager account, you will need to give Adobe Experience Platform permission to access your Ad Account for `Audience Management`. This permission can be provided by [entering your Ads Manager ID](#authenticate) in the Experience Platform UI and granting the permission after being redirected to your TikTok Ads Manager Account. 
 
 ## Supported identities {#supported-identities}
 
