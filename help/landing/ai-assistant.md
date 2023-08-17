@@ -66,7 +66,7 @@ From here, you can input your question in the text box and query the AI Assistan
 
 Consider a use case in which you are creating a **Device Trade in Event Schema**. During the ExperienceEvent schema creation process, you come across the `eventType` field. At this point, you can either leave your workflow and refer to the the documentation on the [basics of a schema composition](../xdm/schema/composition.md), or you can use the AI Assistant to retrieve immediate answers for your questions. 
 
-To begin, select the AI Assistant icon from the top header and then input your question in the text box provided. In the example below, the AI Assistant is provided the question: "What is the eventType field in an Experience Event schema?"
+To begin, input your question in the text box provided. In the example below, the AI Assistant is provided the question: "What is the eventType field in an Experience Event schema?"
 
 ![The AI Assistant for Experience Platform with the following question prepared for querying: "What is the eventType field in an ExperienceEvent schema?](./images/ai-assistant/question.png)
 
@@ -78,7 +78,21 @@ You can further learn more about a particular topic by asking a follow up questi
 
 ![A follow up question and answer displayed on the AI Assistant for Experience Platform.](./images/ai-assistant/follow-up-question.png)
 
+You can also ask the AI Assistant questions regarding your data usage. When inquiring about data usage, you must be in an active sandbox in order for the AI Assistant to answer your query.
+
+![A data usage question, asking how many segments a user has.](./images/ai-assistant/data-usage-question.png)
+
 With every answer, the AI Assistant provides you with the option to view the documentation that it cites for information and provide feedback.
+
+>[!BEGINSHADEBOX]
+
+**Your feedback is requested**
+
+During this Alpha stage, you are invited to provide feedback on the responses that you receive from the AI Assistant. All responses and submitted feedback are reviewed in order to continue to improve the AI Assistant experience.
+
+To provide feedback, select either thumbs up or thumbs down after receiving a response from the AI Assistant, and then input your feedback in the provided text box. Next, select **[!UICONTROL Submit feedback]** to submit.
+
+>[!ENDSHADEBOX]
 
 ![The AI Assistant for Experience Platform displaying options you can choose from after a query.](./images/ai-assistant/options.png)
 
@@ -110,41 +124,48 @@ Select the flag icon to provide further reports on your experience using the AI 
 
 >[!ENDTABS]
 
-<!-- ### Ideas to get started
+### Ideas to get started
 
-The AI Assistant for Experience Platform also provides you with prompts that you can use to get started with Experience Platform.
+You can also use the pre-set prompts that the AI Assistant provides to get started.
 
 ![The provided prompts in the AI Assistant panel.](./images/ai-assistant/ideas-to-get-started.png)
-
->[!BEGINTABS]
-
->[!TAB How do I get started ingesting data?]
-
-To query the AI Assistant regarding data ingestion, select **[!UICONTROL How do I get started ingesting data?]**
-
-![The given prompt on ingesting data and the answer from the AI Assistant.](./images/ai-assistant/ingest-data.png)
-
->[!TAB Guide me on building a journey]
-
-For a guide on building a journey, select **[!UICONTROL Guide me on building a journey.]**
-
-![The given prompt on building a journey and the answer from the AI Assistant.](./images/ai-assistant/build-a-journey.png)
-
->[!TAB Tell me the most common use cases for campaigns]
-
-You can also query the AI Assistant for use case examples. For example, select **[!UICONTROL Tell me the most common use cases for campaigns.]**
-
-![The given prompt on use cases for campaigns and the answer from the AI Assistant.](./images/ai-assistant/campaigns-use-cases.png)
-
->[!ENDTABS] -->
 
 ## Additional information 
 
 Refer to this section for additional information on the AI Assistant for Experience Platform.
 
-### Example questions
+### Scope
 
-+++Segments
+The AI Assistant can answer queries based on the documentation and your data usage.
+
+#### Documentation
+
+You can ask documentation questions based on Real-Time Customer Data Platform and Audiences. Currently, the documentation index covers Adobe Experience Platform (Real-Time CDP and Audiences). The index is updated periodically.
+
+The documentation retrieval model is trained on Experience Platform (Real-Time CDP and Audiences). Questions outside the scope of Adobe Experience Platform such as, questions about other Adobe products like Adobe Target and the Creative Cloud suite cannot be answered.
+
+#### Data usage
+
+You can also ask the AI Assistant questions about your data usage in the following domains: 
+
+* Attributes
+* Datasets
+* Destinations
+* Schemas
+* Segments
+* Sources
+
+For usage data queries, answers may not reflect the current state of the UI. The data backing these questions is updated every 12 to 24 hours. You may need to format your questions like: "When was the segment with the title {TITLE} created?" instead of, "When was the {TITLE} segment created?"
+
+You will need to log into a sandbox to inquire about specific data related to objects like schemas, datasets, attributes, destinations and segments.
+
++++Select for a list of supported data usage questions
+
+The following is a list of currently supported data usage questions grouped by domain. 
+
+>[!BEGINTABS]
+
+>[!TAB Segments]
 
 * Are there duplicate segments?
 * Show me all streaming segments.
@@ -190,9 +211,7 @@ Refer to this section for additional information on the AI Assistant for Experie
 * What segments are activated to Adobe Target?
 * Across all Segments, how many times is each Merge Policy used?
 
-+++
-
-+++Schemas
+>[!TAB Schemas]
 
 * How many XDM schemas are defined?
 * What are the most recently created schemas?
@@ -200,17 +219,13 @@ Refer to this section for additional information on the AI Assistant for Experie
 * What schema does the "Segment Ingestion" dataset use?
 * Which schemas are not used by any datasets?
 
-+++
-
-+++Destinations
+>[!TAB Destinations]
 
 * How many Destinations are present?
 * What are the most recently created Destinations?
 * What destinations are associated with each segment?
 
-+++
-
-+++Sources
+>[!TAB Sources]
 
 * How many Sources have been created?
 * What are the most recently created Sources?
@@ -218,9 +233,7 @@ Refer to this section for additional information on the AI Assistant for Experie
 * Can I create a source connection from S3?
 * What sources contributed to the Mutual365 dataset?
 
-+++
-
-+++Datasets
+>[!TAB Datasets]
 
 * How many datasets are there?
 * What are the most recently created datasets?
@@ -229,9 +242,7 @@ Refer to this section for additional information on the AI Assistant for Experie
 * What is the TTL for the Professional users dataset?
 * What datasets use the Professional Users schema?
 
-+++
-
-+++Attributes
+>[!TAB Attributes]
 
 * What XDM fields are most commonly populated across all DataSets?
 * What XDM fields and Attributes are most commonly used across schemas?
@@ -244,40 +255,9 @@ Refer to this section for additional information on the AI Assistant for Experie
 * What Attributes are not used in any segment?
 * What Attributes are most commonly used in segments?  
 
+>[!ENDTABS]
+
 +++
-
-### Scope
-
-The AI Assistant can answer queries based on the documentation and your data usage.
-
-#### Documentation
-
-You can ask documentation questions based on Real-Time Customer Data Platform and Audiences. Currently, the documentation index contains:
-
-* Adobe Experience Platform (Real-Time CDP and Audiences)
-* Adobe Journey Optimizer
-* Customer Journey Analytics
-
-The documentation retrieval model is trained on Experience Platform (Real-Time CDP and Audiences). Questions regarding Creative Cloud or non-Adobe topics cannot be answered.
-
-#### Data usage
-
-You can ask the AI Assistant questions about your data usage in the following domains: 
-
-* Attributes
-* Datasets
-* Destinations
-* Schemas
-* Segments
-* Sources
-
->[!TIP]
->
->* The documentation in the AI Assistant's index is updated periodically.
->* For usage data queries, answers may not reflect the current state in the UI. The data backing these questions is updated every 12 to 24 hours.
->* You may need it to format your questions like: "When was the segment with the title {TITLE} created?" instead of "When was the {TITLE} segment created?"
-
-Currently, you can only ask questions regarding data usage within Experience Platform, because you must be within an active sandbox in order to ask data usage questions.
 
 ### Conversational experience
 
