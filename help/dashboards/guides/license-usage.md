@@ -41,7 +41,7 @@ This dashboard displays all of your licensed Adobe Experience Platform products,
 
 | Column name  | Description |
 |---|---|
-| **[!UICONTROL Product]**  | The Adobe solution licensed by your organizations. |
+| **[!UICONTROL Product]**  | The Adobe solution licensed by your organization. |
 | **[!UICONTROL Primary Metric]**  | The primary metric used for tracking within for that product.   |
 | **[!UICONTROL Licence Amount]**  | The contracted value for the maximum amount of the Primary Metric as agreed in your product license agreement.  |
 | **[!UICONTROL Usage]**  | The amount of your primary metric used. This value provides the total usage of that metric across all sandboxes, either production or development. |
