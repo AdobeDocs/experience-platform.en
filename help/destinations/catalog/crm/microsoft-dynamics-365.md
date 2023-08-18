@@ -41,7 +41,7 @@ Create the custom field of type `Simple` with field data type as `Single Line of
 
 Refer to the [!DNL Dynamics 365] [Create or edit a field (attribute)](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) documentation if you need additional guidance.
 
-The part of the name of any custom field you create in [!DNL Dynamics 365] is the **[!UICONTROL Customization prefix]**. Note down this value as it is required during the [Fill in destination details](#destination-details) step. Refer to the [Create and edit fields](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) section of the [!DNL Dynamics 365] documentation for further details.
+You will need the part of the name of the custom field you create in [!DNL Dynamics 365], which is the **[!UICONTROL Customization prefix]**. Note down this value as it is required during the [Fill in destination details](#destination-details) step. Refer to the [Create and edit fields](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) section of the [!DNL Dynamics 365] documentation for further details.
 ![Dynamics 365 UI screenshot showing the customization prefix.](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-customization-prefix.png)
 
 An example setup within [!DNL Dynamics 365] is shown below:
@@ -132,7 +132,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Customization Prefix]**: The part of the name of any custom field you create in [!DNL Dynamics 365] is the customization prefix. Refer to the [Create and edit fields](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) section of the [!DNL Dynamics 365] documentation for further details.
+* **[!UICONTROL Customization Prefix]**: You will need the part of the name of the custom field you created in [!DNL Dynamics 365], which is the customization prefix. Refer to the [Create field within [!DNL Dynamics 365]](#prerequisites-custom-field) for guidance.
 
 ### Enable alerts {#enable-alerts}
 
@@ -144,7 +144,7 @@ When you are finished providing details for your destination connection, select 
 
 >[!IMPORTANT]
 >
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Audiences]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
@@ -211,7 +211,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 ![Platform UI screenshot example showing Destinations Activation Data.](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
 
 1. Monitor the audience summary and ensure that the count of profiles corresponds to the count created within the audience.
-![Platform UI screenshot example showing Audience.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
+![Platform UI screenshot example showing audience.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
 
 1. Log in to the [!DNL Dynamics 365] website, then navigate to the [!DNL Customers] > [!DNL Contacts] page and check if the profiles from the audience have been added. You can see that each audience status in [!DNL Dynamics 365] was updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-audience-export-example) step.
 ![Dynamics 365 UI screenshot showing the Contacts page with updated audience statuses.](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
@@ -244,7 +244,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
-|August 2023|Functionality update| We fixed an issue where the user is unable to leverage a [!DNL Dynamics 365] custom field if it is not created within the default solution. An input field, **[!UICONTROL Customization Prefix]** has been introduced in the [Fill in destination details](#destination-details) step where the user would input the required prefix. (PLATIR-31602) |
+|August 2023|Functionality and documentation update| <ul><li>Fixed an issue where users were unable to use a [!DNL Dynamics 365] custom field if it was not created within the default solution.</li><li> A new input field, **[!UICONTROL Customization Prefix]**, has been added in the [Fill in destination details](#destination-details) step, where the user would input the required prefix. (PLATIR-31602)</li></ul> |
 |Nov 2022|Initial release|Initial destination release and documentation publish.|
 
 {style="table-layout:auto"}
