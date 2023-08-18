@@ -23,9 +23,10 @@ Data collection focuses on the discoverability and accessibility of ingested dat
 * [Event forwarding](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)
+* [Edge Network Server API](../server-api/overview.md)
 * [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
-* [Experience Data Model (XDM)](../xdm/home.md)
-* [Adobe Experience Platform Identity Service](../identity-service/home.md)
+* [Experience Platform Assurance](../assurance/home.md)
+
 
 This guide provides a high-level introduction to data collection and how it works to send data to Adobe Experience Cloud products and non-Adobe applications through the Platform Edge Network.
 

@@ -15,7 +15,7 @@ When configuring the partner schema for your destination, you can fine tune the 
 * Create dynamic partner schemas that Experience Platform can dynamically call to retrieve a list of all supported attributes within your destination.
 * Define mandatory field mappings that your destination platform requires.
 
-To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the the guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 You can configure your schema settings via the `/authoring/destinations` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
 
@@ -42,7 +42,7 @@ Refer to the table below for details on which types of integrations support the 
 Destination SDK supports multiple schema configurations:
 
 * Static schemas are defined through the `profileFields` array in the `schemaConfig` section. In a static schema, you define every target attribute that should be shown in the Experience Platform UI in the `profileFields` array. If you need to update your schema, you must [update the destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md).
-* Dynamic schemas use an additional destination server type, called a [dynamic schema server](../../authoring-api/destination-server/create-destination-server.md), to dynamically generate schemas based on your own API. Dynamic schemas do not use the `profileFields` array. If you need to update your schema, there is no need to [update the destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md). Instead, the dynamic schema server retrieves the updated schema from your API.
+* Dynamic schemas use an additional destination server type, called a [dynamic schema server](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers), to dynamically retrieve the supported target attributes and generate schemas based on your own API. Dynamic schemas do not use the `profileFields` array. If you need to update your schema, there is no need to [update the destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md). Instead, the dynamic schema server retrieves the updated schema from your API.
 * Within the schema configuration, you have the option of adding required (or predefined) mappings. These are mappings that users are able to view in the Platform UI, but they cannot modify them when setting up a connection to your destination. For example, you can enforce the email address field to always be sent to the destination.
 
 The `schemaConfig` section uses multiple configuration parameters, depending on the type of schema that you need, as shown in the sections below.
@@ -120,7 +120,7 @@ Destination SDK supports the creation of dynamic partner schemas. As opposed to 
 
 >[!IMPORTANT]
 >
->Before you create a dynamic schema, you must [create a dynamic schema server](../../authoring-api/destination-server/create-destination-server.md).
+>Before you create a dynamic schema, you must [create a dynamic schema server](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers).
 
 In a dynamic schema configuration, the `profileFields` array is replaced by the `dynamicSchemaConfig` section, as shown below.
 
