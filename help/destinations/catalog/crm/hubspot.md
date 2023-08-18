@@ -130,43 +130,43 @@ To correctly map your XDM fields to the [!DNL HubSpot] destination fields, follo
 
 #### Mapping the `Email` identity
 
-* The `Email` identity is a mandatory mapping for this destination. Follow the steps below to map it:
-   1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
-  ![Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
-   1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity.
-  ![Platform UI screenshot selecting email as a source attribute to map as identity.](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
-   1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select attributes]** and select `email`.
-  ![Platform UI screenshot selecting email as a target attribute to map as identity.](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
+The `Email` identity is a mandatory mapping for this destination. Follow the steps below to map it:
+1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
+![Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity.
+![Platform UI screenshot selecting email as a source attribute to map as identity.](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
+1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select attributes]** and select `email`.
+![Platform UI screenshot selecting email as a target attribute to map as identity.](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
 
-    | Source Field | Target Field | Mandatory |
-    | --- | --- | --- |
-    | `IdentityMap: Email` | `Identity: email` | Yes |
+| Source Field | Target Field | Mandatory |
+| --- | --- | --- |
+| `IdentityMap: Email` | `Identity: email` | Yes |
 
-  An example with the identity mapping is shown below:
-  ![Platform UI screenshot example with email identity mapping.](../../assets/catalog/crm/hubspot/mapping-identities.png)
+An example with the identity mapping is shown below:
+![Platform UI screenshot example with email identity mapping.](../../assets/catalog/crm/hubspot/mapping-identities.png)
 
 #### Mapping **optional** attributes
 
-* To add any other attributes you want to update between your XDM profile schema and your [!DNL HubSpot] account repeat the steps below:
-  1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
-  ![Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
-  1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute.
-  ![Platform UI screenshot selecting First Name as a source attribute.](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
-  1. In the **[!UICONTROL Select target field]** window, choose **[!UICONTROL Select attributes]** category and select from the list of attributes which are automatically populated from your [!DNL HubSpot] account. *(The destination uses the [[!DNL HubSpot] Properties](https://developers.hubspot.com/docs/api/crm/properties) API to retrieve this information)*. Both [!DNL HubSpot] [default properties](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties) and any custom properties are retrieved for selection as target fields.
-  ![Platform UI screenshot selecting First Name as a target attribute.](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
+To add any other attributes you want to update between your XDM profile schema and your [!DNL HubSpot] account repeat the steps below:
+1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
+![Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute.
+![Platform UI screenshot selecting First Name as a source attribute.](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
+1. In the **[!UICONTROL Select target field]** window, choose **[!UICONTROL Select attributes]** category and select from the list of attributes which are automatically populated from your [!DNL HubSpot] account. The destination uses the [[!DNL HubSpot] Properties](https://developers.hubspot.com/docs/api/crm/properties) API to retrieve this information. Both [!DNL HubSpot] [default properties](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties) and any custom properties are retrieved for selection as target fields.
+![Platform UI screenshot selecting First Name as a target attribute.](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
   
-  A few available mappings between your XDM profile schema and [!DNL Hubspot] are shown below:
+A few available mappings between your XDM profile schema and [!DNL Hubspot] are shown below:
 
-    | Source Field | Target Field |
-    | --- | --- |
-    | `xdm: person.name.firstName` | `Attribute: firstname` |
-    | `xdm: person.name.lastName` | `Attribute: lastname` |
-    | `xdm: workAddress.street1` | `Attribute: address` |
-    | `xdm: workAddress.city` | `Attribute: city` |
-    | `xdm: workAddress.country` | `Attribute: country` |
+| Source Field | Target Field |
+| --- | --- |
+| `xdm: person.name.firstName` | `Attribute: firstname` |
+| `xdm: person.name.lastName` | `Attribute: lastname` |
+| `xdm: workAddress.street1` | `Attribute: address` |
+| `xdm: workAddress.city` | `Attribute: city` |
+| `xdm: workAddress.country` | `Attribute: country` |
 
-  An example using these attributes mappings is shown below:
-  ![Platform UI screenshot example with attribute mappings.](../../assets/catalog/crm/hubspot/mapping-attributes.png)
+An example using these attributes mappings is shown below:
+![Platform UI screenshot example with attribute mappings.](../../assets/catalog/crm/hubspot/mapping-attributes.png)
 
 When you are finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
