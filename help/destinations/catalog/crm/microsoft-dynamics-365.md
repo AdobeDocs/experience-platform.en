@@ -244,7 +244,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
-|August 2023|Functionality update| We fixed an issue where the user is unable to leverage a [!DNL Dynamics 365] custom field if it is not created within the default solution. An attribute **[!UICONTROL Customization Prefix]** has been introduced in the [Fill in destination details](#destination-details) step where the user would input the required prefix. |
+|August 2023|Functionality update| We fixed an issue where the user is unable to leverage a [!DNL Dynamics 365] custom field if it is not created within the default solution. An input field, **[!UICONTROL Customization Prefix]** has been introduced in the [Fill in destination details](#destination-details) step where the user would input the required prefix. (PLATIR-31602) |
 |Nov 2022|Initial release|Initial destination release and documentation publish.|
 
 {style="table-layout:auto"}
