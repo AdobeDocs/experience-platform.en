@@ -47,6 +47,17 @@ At this point in time, no. However, this capability will be available in the nea
 
 At this point in time, no. You can either deactivate or archive this audience instead. In this state, profiles **will** remain active for use in downstream applications. Support for deleting externally generated audiences will be added in a subsequent release.
 
+### What do the different lifecycle states represent?
+
+The following chart explains the different lifecycle statuses, what they represent, where audiences with that status can be used, as well as impact on segmentation guardrails.
+
+| State | Definition | Visible in Audience Portal? | Visible in Destinations? | Affects segmentation limits? | Impact on file-based audiences | Impact on audience evaluation | Usable within other audiences? |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Draft | An audience in the **Draft** state is an audience that is still in development and is not yet ready to be used in other services. | Yes, but can be hidden. | No | Yes | Can be imported or updated during the refinement process. | Can be evaluated in order to get accurate publishing counts. | Yes, but not recommended to be used. |
+| Published | An audience in the **Published** state is an audience that is ready for use across all downstream services. | Yes | Yes | Yes | Can be imported or updated. | Evaluated using batch, streaming, or edge segmentation. | Yes |
+| Inactive | An audience in the **Inactive** state is an audience that is currently not in use. It still exists within Platform, but it will **not** be useable until it's marked as draft or published. | No, but can be shown. | No | No | No longer updated. | No longer evaluated or updated by Platform. | Yes |
+| Deleted | An audience in the **Deleted** state is an audience that has been deleted. The actual deletion of the data may take up to a few minutes to execute. | No | No | No | Underlying data is deleted. | No data evaluation or execution occurs after the deletion is completed. | No |
+
 ### How will Audience Portal and Audience Composition interact with the release of Real-Time CDP Partner Data?
 
 Audience Portal and Audience Composition will interact with Partner Data in two ways:
@@ -54,17 +65,34 @@ Audience Portal and Audience Composition will interact with Partner Data in two 
 1. If you ingest a partner-provided prospect list using the Prospect Profile class and workflow, the prospects will be kept **separately** from merge customer profiles in Profile Service. As a result, this means that prospect lists will **not** appear in either Audience Portal or Audience Composition for use.
 2. If you are leveraging partner-provided attributes to enrich **existing** first-party profiles, those partner-data-enriched audiences **will** appear in both Audience Portal and Audience Composition for use.
 
+### How can I use additional attributes with my audiences?
+
+With audiences, there are **two** different types of additional attributes you can add - payload (contextual) attributes and enrichment attributes.
+
+Payload attributes are attributes that are ingested as part of the CSV upload of an externally generated audience. These attributes are **not** ingested into the Real-Time Customer Profile, but can be used as a part of a downstream destination.
+
+Enrichment attributes are attributes that come from a dataset and are joined with an audience in Audience Composition. These attributes can currently only be used in Adobe Journey Optimizer campaigns. Support for Adobe Journey Optimizer journeys is coming soon, with support for downstream destinations pending future release.
+
+| Activation channel | Audiences from CSV custom upload | Audiences from Audience Composition | 
+| --- | --- | --- |
+| Real-Time CDP Destinations | Both the payload attributes and the audiences can be activated. | Only the audience can be activated. Enrichment attributes **cannot** be activated. |
+| Adobe Journey Optimizer Campaigns | Neither the audience nor the payload attributes can be activated. | Both the audience and the enrichment attributes can be activated. |
+
 ## Audience inventory
 
 The following sections lists questions related to audience inventory within the Audience Portal.
 
+### Do I need additional permissions to use audience inventory features?
+
+No, you do not. So long as you have edit permissions for audiences, you'll be able to create, update, and manage your folders and tags within the Audience Portal. For more information about managing permissions, please read the [manage permissions guide](../access-control/ui/permissions.md).
+
 ### Is there a limit to the number of folders I can create?
 
-No, there is no limit to the number of folders you can create. For more information on folders, please read the [audience inventory section](./ui/overview.md#folders) of the Segmentation Service overview.
+No, there is no limit to the number of folders you can create. For more information on folders, please read the [audience inventory section](./ui/overview.md#folders) of the Segmentation Service UI overview.
 
 ### Is there a limit to the number of tags that can be added to an audience?
 
-No, there is no limit to the number of tags that can be added to an audience. For more information on tags, please read the [audience inventory section](./ui/overview.md#tags) of the Segmentation Service overview.
+No, there is no limit to the number of tags that can be added to an audience. For more information on tags, please read the [audience inventory section](./ui/overview.md#tags) of the Segmentation Service UI overview.
 
 ### Is there a limit to the number of tags I can create?
 
@@ -72,7 +100,15 @@ No, there is no limit to the number of tags that you can create. However, you ca
 
 ### When I search for an audience by name or tag in a parent folder, can I also search through the related child folders?
 
-No, this behavior is not supported. However, you can change the audience inventory view to view **All Audiences**, then search across all the folders.
+No, this behavior is not supported. However, you can change the audience inventory view to look at **All Audiences**, then search across all the folders. For more information on using search in audience inventory, please read the [search section](./ui/overview.md#search) of the Segmentation Service UI overview.
+
+### Can I automatically assign an audience into a folder at the time of creation?
+
+At this point in time, no. However, this capability may be available in the future.
+
+### Can I move multiple audiences into a folder at the same time?
+
+At this point in time, no. However, this capability may be available in the future.
 
 ## Audience Composition
 
