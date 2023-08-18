@@ -5,13 +5,13 @@ description: Learn about edge profiles, as well as related terminology, availabl
 
 # Edge profiles
 
-In Adobe Experience Platform, the Real-Time Customer Profile is the single source of truth for entity data. This profile data sits in a central hub, and caters to use cases that rely on the comprehensiveness and completeness of your data. However, in more real-time use cases, where time sensitivity is more important, Edge profiles are the preferred option. Edge profiles are lightweight profiles that sits on edges and helps in real-time personalization use cases. 
+In Adobe Experience Platform, the Real-Time Customer Profile is the single source of truth for entity data. This profile data sits in a central hub, and caters to use cases that rely on the comprehensiveness and completeness of your data. However, in more real-time use cases, where time sensitivity is more important, Edge profiles are the preferred option. Edge profiles are lightweight profiles that sit on edges and help in real-time personalization use cases. 
 
-For example, Adobe applications such as Adobe Target and Adobe Campaign use edges in order to provide personalized customer experiences in real-time. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. 
+For example, Adobe applications such as Adobe Target, Custom Personalization Destination, and Adobe Campaign use edges in order to provide personalized customer experiences in real-time. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. 
 
 ## Terminology {#terminology}
 
-When dealing with edge, make sure to understand the following concepts:
+When working with edges, make sure to understand the following concepts:
 
 - **Edge**: An edge is a geographically placed server that stores data and makes it readily accessible to applications.
 - **Projection configuration**: A projection configuration describes how a given entity should be replicated to the edges for a given customer and under what conditions. For example, for Luma (a sample customer), only the fields age and gender from the dataset following the Profile schema should propagate to the edges.
@@ -37,13 +37,13 @@ All of these regions are valid options for profiles to land in.
 
 The following services are enabled for Profile lookup on Edge:
 
-- [Edge Profile Configuration Service](#meps)
+- [Edge Profile Configuration Service](#edge-profile-configuration-service)
 - [Projection Worker Service](#mepw)
 - [Express Profile Service](#xps)
 
-### Edge Profile Configuration Service {#meps}
+### Edge Profile Configuration Service {#edge-profile-configuration-service}
 
-The Edge Profile Configuration Service (MEPS) exposes APIs for downstream solutions and applications to create projection configurations. You can use these APIs to specify the attributes and audiences of a profile that should be sent to the edges, as well as the edge regions where the projection should be sent. At this point in time, you can specify **any** of the edge regions for projections.
+The Edge Profile Configuration Service exposes APIs for downstream solutions and applications to create projection configurations. You can use these APIs to specify the attributes and audiences of a profile that should be sent to the edges, as well as the edge regions where the projection should be sent. At this point in time, you can specify **any** of the edge regions for projections.
 
 ### Projection Worker Service {#mepw}
 
@@ -51,7 +51,7 @@ The Projection Worker Service (MEPW) monitors changes happening on the hub on pr
 
 ### Express Profile Service {#xps}
 
-The Express Profile Service (XPS) retrieves the profiles on the different edges. This service receives requests from downstream solutions, looks up the profiles from the databases on the edges, and sends the requested profile to the requesting solution. If the profile isn't found, a refresh request is send to the associated hub.
+The Express Profile Service (XPS) retrieves the profiles on the different edges. This service receives requests from downstream solutions, such as Adobe Target, and looks up the profiles from the databases on the edges, and sends the requested profile to the requesting solution. If the profile isn't found, a refresh request is send to the associated hub.
 
 ## Next steps
 
