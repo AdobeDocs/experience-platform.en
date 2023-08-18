@@ -112,9 +112,13 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 ## Configure policy for a sandbox
 
+>[!IMPORTANT]
+>
+>By default, the [!UICONTROL Auto-include] feature is turned on for all customers, which means all sandboxes are added to the policy.
+
 >[!NOTE]
 >
->By default all sandboxes are added to a policy.
+>The **[!UICONTROL Default-Label-Based-Access-Control-Policy]** policy is currently the only one available for configuration.
 
 To view sandboxes associated to a policy, select the policy from the **[!UICONTROL Policies]** tab.
 
@@ -139,6 +143,14 @@ The **[!UICONTROL Enable Auto-include]** dialog appears prompting you to confirm
 >The policy is activated for all existing sandboxes and will be automatically be added to any new sandboxes when they become available.
 
 ### Add policy to select sandboxes
+
+>[!IMPORTANT]
+>
+>Future sandboxes will not be included in the policy by default if the [!UICONTROL Auto-include] toggle is switched off. You will need to manage and add sandboxes manually to the policy.
+
+Use the **[!UICONTROL Auto-include]** toggle on the **[!UICONTROL Sandboxes]** tab to disable the policy for all sandboxes.
+
+![The [!UICONTROL Sandboxes] tab showing the [!UICONTROL Auto-include] toggle.](../../images/flac-ui/abac-policies-auto-include.png)
 
 From the **[!UICONTROL Sandboxes]** tab, select **[!UICONTROL Add Sandboxes]** to select sandboxes that this policy will apply to.
 
