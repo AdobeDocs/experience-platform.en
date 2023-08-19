@@ -8,7 +8,7 @@ In today's marketing landscape, it is critical to understand and respect custome
 
 This document details how to build a consent dashboard for a variety of marketing use cases for Real-Time CDP data. Specifically, it focusses on how to create a segment with the appropriate attributes for your business needs, and then consume the insights through the use of pre-configured widgets in the Adobe Experience Platform UI. Additionally, an alternative method of building your own custom widget with the user-defined dashboards feature is also presented.
 
-## Use cases
+## Use cases {#use-cases}
 
 The use cases covered in this guide are consent trending and consent overlap.
 
@@ -61,11 +61,11 @@ Once you have created the necessary audiences, they are listed in the [!UICONTRO
 >
 >When creating an audience, you have to wait for the batch segmentation job to complete before the data is available to start building your consent dashboard. Batch segmentation describes the process of moving all your profile data at once through your segment definitions to produce the corresponding audiences. Once created, this audience is saved and stored for you to export and use. Batch segments are automatically evaluated every 24 hours.
 
-## Consume insights
+## Consume insights {#consume-insights}
 
 Adobe had created a variety of insights that are automatically available for you in the Profiles, Audiences, and Destinations dashboards. Any audience that you create is then automatically usable with these preconfigured insights. See the standard widget documentation for a list of the insights available in the [Profiles](../guides/profiles.md#standard-widgets), [Audiences](../guides/audiences.md#standard-widgets), and [Destinations](../guides/destinations.md) dashboards.
 
-## Audience Overlap
+## Audience Overlap {#audience-overlap}
 
 To review the overlap between any two consent audiences, add the [!UICONTROL Audience overlap by merge policy] to your Profiles dashboard and select the desired audiences in the dropdown menus. See the documentation for instructions on how to add a widget to your dashboard the [*Audience overlap by merge policy*](../guides/profiles.md#audience-overlap-by-merge-policy) for more information on the insight.
 
@@ -85,9 +85,9 @@ The *Audience overlap report* dialog expands to show additional audience overlap
 
 ![The Audience overlap report with the Users consented to email audience highlighted.](../images/insights-use-cases/consent-analysis/additional-audience-overlap-reports.png)
 
-## Audience Size Trends
+## Audience size trends {#audience-size-trends}
 
-Whe  you create a consent-based audience, it automatically trends up to 12 months from the date you created the audience. To have a fully functional trend of your customer consent, add the following widgets to the [!UICONTROL Segments] [!UICONTROL Overview] page. These insights offer a powerful means of tracking how your consent is changing over time. They even correlate with any campaigns that you run in parallel that might positively or negatively impact consent. The descriptions offerd for these widgets apply to a consent use case.
+When you create a consent-based audience, it automatically trends up to 12 months from the date you created the audience. To have a fully functional trend of your customer consent, add the following widgets to the [!UICONTROL Segments] [!UICONTROL Overview] page. These insights offer a powerful means of tracking how your consent is changing over time. They even correlate with any campaigns that you run in parallel that might positively or negatively impact consent. The descriptions offerd for these widgets apply to a consent use case.
 
 - [Audience size trend](../guides/audiences.md#audience-size-trend): This widget offers a way to track how your respective consent has changed over time.
 - [Audience size change trend](../guides/audiences.md#audience-size-change-trend): This widget tracks how your customer consent has changed on a daily basis. For example, if your consent dropped by 100K then you can see how that change occurred over a daily basis.
@@ -97,8 +97,50 @@ Whe  you create a consent-based audience, it automatically trends up to 12 month
 
 ![The Audiences dashboard with the Audience size trend, Audience size trend by identity and Audience size change trend widget displayed. The Users consented to email audience is highlighted.](../images/insights-use-cases/consent-analysis/three-audience-trend-widgets.png)
 
-<!--  -->
+## Audiences Overview dashboard {#audiences-overview-dashboard}
 
-## Segment Overview Dashboard
+Once you have created a consent related audience such as "Users Consented to SMS", you can view key personalized consent information about your audience by adding the appropriate widgets to your Audiences Overview dashboard.Navigate to the Audiences Overview and add your chosen widgets from the widget library. Any widget added to your view of the dashboard can be re-sized and moved using the [!UICONTROL Modify dashboard] feature. Your personalized view can contain insights such as the trend over time (up to 12 months), the overlaps with other audiences, and the identity composition of the audience. An example view is shown below.
 
-Once you have created a concent related segment such as "Users Consented to SMS", you can go to Segments Overivew and add the widgets you like to monitor from the widget library using "Add widget". Any widget added to your view of the dashboard can be re-sized and moved as per your desire using "Modify dashboard". Once done you could be having a personalized view to review key information about your audinece who have consented to SMS such as the trend over time (up to 12 months), the overlaps with other audiences and the identity composition. An example view is shown below:
+![The audiences dashboard with the Users consented to SMS audience highlighted in the global audience dropdown menu.](../images/insights-use-cases/consent-analysis/audience-dashboard-user-consent-to-sms.png)
+
+## User-defined dashboards {#usr-defioned-dashbaords}
+
+You can also build out your own widgets with user-defined dashboards. Building your own widget gives you complete control over the type of widget, along with flexibility to add filters and much more, directly within Adobe Real-Time CDP. 
+
+For example, if you want to trend multiple consent audiences in the same chart so that you can see over time how each of your consent preferences has changed, you can do that with user-defined dashboards in minimal steps and a one time setup. First, select **[!UICONTROL Dashboards]** in the left navigation. The Dashboards workspace appears. Then select **[!UICONTROL Create dashboard]**. Full instructions on how to [create a dashboard and custom widget](../user-defined-dashboards.md) can be found in the the user-defined dashboards guide. 
+
+![The dashboards workspace with Dashboards and Create dashboard highlighted.](../images/user-defined-dashboards/create-dashboard.png)
+
+When you [select your data model](../user-defined-dashboards.md#select-data-model) in the widget composer, select `CDPInsights` followed by **[!UICONTROL Next]**. The [!UICONTROL Select table] dialog appears.
+
+![The Select data model dialog with the CDPInsights model highlighted.](../images/user-defined-dashboards/select-data-model-dialog.png)
+
+The next view displays a list of the available tables in the left rail. Select the `adwh_fact_profile_by_segment_and_namespace_trendlines`.
+
+![The Select table dialog with the 'adwh_fact_profile_by_segment_and_namespace_trendlines' table highlighted.](../images/insights-use-cases/consent-analysis/select-table.png)
+
+After the widget composer is populated with data from your chosen table, perform the steps below:
+
+1. [Search [!UICONTROL Attributes](../user-defined-dashboards.md#add-filter-attributes) for `[!UICONTROL date]`, then use the + icon to add the `[!UICONTROL date]` attribute to the X-axis from the dropdown menu.
+![The widget composer with the add-icon and dropdown menu highlighted.](../images/user-defined-dashboards/attributes-dropdown.png)
+1. Search [!UICONTROL Attributes] for `[!UICONTROL count_of_profiles]`, then use the + icon to add the `[!UICONTROL count_of_profiles]` attribute to the Y-axis from the dropdown menu.
+1. Select the `...` (ellipses) icon in the [!UICONTROL Y-axis] field, then select the [!UICONTROL SUM] aggregate function from the dropdown menu.
+![The widget composer Consent trends widget with the data model, table, and the Y-axis dropdown menu and SUM feature highlighted. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
+1. Select the [!UICONTROL Marks] dropdown menu, and change chart type to [!UICONTROL Line]. 
+1. Search [!UICONTROL Attributes] for the `[!UICONTROL segment_name]`, then use the + icon to add the `segment_name` as a [!UICONTROL Filter] from the dropdown menu. The [UICONTROL Filter: Segment_name] dialog appears. Select the audiences created earlier that relate to consent. For this example, select **[!UICONTROL Users Consented to Calls]**, **[!UICONTROL Users Consented to SMS]**, and **[!UICONTROL Users Consented to Email]**, followed by **[!UICONTROL Apply]**.
+1. Search [!UICONTROL Attributes] for `[!UICONTROL segment_name]`, then select the + icon to add `segment_name` as a [!UICONTROL Color] from the drop down menu. 
+1. Open [the [!UICONTROL Properties] panel](../user-defined-dashboards.md#widget-properties) and provide an appropriate [!UICONTROL Widget title] and [!UICONTROL Axis label].
+![The widget composer with the properties icon and Widget title highlighted.](../images/user-defined-dashboards/properties-panel.png)
+1. Select **[!UICONTROL Save and close]** to confirm your settings.
+
+>[!TIP]
+>
+>You can now resize or move the widget to the desired size and position before you save the dashboard.
+
+
+The image below demonstrates how your finished widget appears. For more details on the types of widgets that can be created, refer to the [data model documentation](../cdp-insights-data-model.md).
+
+
+<!-- The diagram shows straight lines due to a lack of data, however in your environment the trends will reflect the actual changes over time. -->
+
+![The finished custom Consent trends widget.](../images/insights-use-cases/consent-analysis/consent-trends-widget.png)
