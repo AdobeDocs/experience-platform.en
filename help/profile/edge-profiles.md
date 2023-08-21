@@ -47,11 +47,11 @@ The Edge Profile Configuration Service exposes APIs for downstream solutions and
 
 ### Projection Worker Service {#mepw}
 
-The Projection Worker Service (MEPW) monitors changes happening on the hub on profiles. After examining the changes in the configurations, this service prepares the projections and sends them out to the previously specified edge regions. Additionally, this service processes the entity refresh requests and sends out the required projections to the necessary regions.
+The Projection Worker Service (MEPW) monitors changes happening on the hub on profiles. After examining the changes in the configurations, this service prepares the projections and sends them out to the previously specified edge regions. Additionally, this service processes the entity refresh requests and sends out the required projections to the necessary regions. Entity refreshes are used to ensure the entity can be accessed with high availability.
 
 ### Express Profile Service {#xps}
 
-The Express Profile Service (XPS) retrieves the profiles on the different edges. This service receives requests from downstream solutions, such as Adobe Target, and looks up the profiles from the databases on the edges, and sends the requested profile to the requesting solution. If the profile isn't found, a refresh request is send to the associated hub.
+The Express Profile Service (XPS) retrieves the profiles on the different edges. This service receives requests from downstream solutions, such as Adobe Target or Custom Personalization destinations, and looks up the profiles from the databases on the edges, and sends the requested profile to the requesting solution. If the profile isn't found, a refresh request is send to the associated hub.
 
 ## Next steps
 
@@ -66,7 +66,5 @@ The following section lists frequently asked questions regarding edge profiles:
 Edge profiles can land in different regions depending on the situation at hand.
 
 For projection configurations, any changes to the profile will be propagated to all regions mentioned within the profile configuration.
-
-For entity refresh requests, the edge profile will land in the region from which the entity refresh request arrives in. For example, if a person shows up in the Japan region and the request arrives to the JPN3 edge, a refresh request will be sent to the relevant hub if the profile doesn't already exist on the JPN3 edge's database, and the requested profile will be sent to the JPN3 edge.
 
 Additionally, every edge profile has a schema attribute called the User Activity Region (UAR). All the edges this profile has visited in the last 14 days are listed in this profile attribute. As a result, when this attribute is present in a profile, any changes to the profile are also sent to all the regions listed in the UAR.
