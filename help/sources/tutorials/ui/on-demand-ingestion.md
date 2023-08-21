@@ -26,24 +26,24 @@ This document requires a working understanding of the following components of Ex
 
 ## Create a dataflow on demand {#create-a-dataflow-on-demand}
 
-Navigate to the Dataflows tab of the sources workspace. From here, find the dataflow that you want to run on demand and then select the  the ellipses (**`...`**) beside your dataflow name.
+Navigate to the *[!UICONTROL Dataflows]* tab of the sources workspace. From here, find the dataflow that you want to run on demand and then select the  the ellipses (**`...`**) beside your dataflow name.
 
-![]()
+![A list of dataflows in the sources workspace.](../../images/tutorials/on-demand/select-dataflow.png)
 
 Next, select **[!UICONTROL Run on-demand]** from the dropdown menu that appears.
 
-![]()
+![A dropdown menu with the Run on-demand option selected.](../../images/tutorials/on-demand/run-on-demand.png)
 
 Configure the schedule of your on-demand ingestion. Select the **[!UICONTROL Ingestion start time]**, the **[!UICONTROL Date range start time]** and the **[!UICONTROL Date range end time]**.
 
 Select **[!UICONTROL Schedule]** and allow for a few moments for your on-demand dataflow to trigger.
 
-![]()
+![The scheduling configuration window for on-demand ingestion.](../../images/tutorials/on-demand/configure-schedule.png)
 
 Select your dataflow name to view your dataflow activity. Here you will see a list of your dataflow runs that have been processed. Select a dataflow run, then select **[!UICONTROL Retry]** from the right rail to retry ingestion for a selected dataflow run iteration.
 
-![]()
+![A list of processed flow runs for a selected dataflow.](../../images/tutorials/on-demand/processed.png)
 
 Select **[!UICONTROL Scheduled]** to see a list of dataflow runs that are scheduled for future ingestion.
 
-![]()
+![A list of scheduled flow runs for a selected dataflow.](../../images/tutorials/on-demand/scheduled.png)
