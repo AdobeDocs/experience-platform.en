@@ -43,7 +43,7 @@ Below is a high level overview of the three example re-engagement journeys.
 
 >[!TAB Re-Engagement Journey]
 
-The re-engagement journey targets abandoned product browsing on both the website and mobile app. This journey is triggered when a product has been viewed but not purchased or added to the cart. Brand engagement is triggered after three days if there are no list additions within the last 24 hours.<p>![Customer intelligent re-engagement journey high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent re-engagement journey high level visual overview."){width="1920" zoomable="yes"}</p>
+The re-engagement journey targets abandoned product browsing on both the website and mobile app. This journey is triggered when a product has been viewed but not purchased or added to the cart. Brand engagement is triggered after three days if there are no list additions within the last 24 hours.<p>![Customer intelligent re-engagement journey high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent re-engagement journey high level visual overview."){width="2560" zoomable="yes"}</p>
 
 1. You create schemas and datasets that are marked for [!UICONTROL Profile].
 2. Data is aggregated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
@@ -55,7 +55,7 @@ The re-engagement journey targets abandoned product browsing on both the website
 
 >[!TAB Abandoned Cart Journey]
 
-The abandoned cart journey targets products that have been placed in the cart but have not yet been purchased on both the website and mobile app. Also, Paid Media campaigns are started and stopped using this method.<p>![Customer abandoned cart journey high level visual overview.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Customer abandoned cart journey high level visual overview."){width="1920" zoomable="yes"}</p> 
+The abandoned cart journey targets products that have been placed in the cart but have not yet been purchased on both the website and mobile app. Also, Paid Media campaigns are started and stopped using this method.<p>![Customer abandoned cart journey high level visual overview.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Customer abandoned cart journey high level visual overview."){width="2560" zoomable="yes"}</p> 
 
 1. You create schemas and datasets that are marked for [!UICONTROL Profile].
 2. Data is aggregated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
@@ -67,7 +67,7 @@ The abandoned cart journey targets products that have been placed in the cart bu
 
 >[!TAB Order Confirmation Journey]
 
-The order confirmation journey focuses on product purchases made through the website and mobile app.<p>![Customer order confirmation journey high level visual overview.](../intelligent-re-engagement/images/order-confirmation-journey.png "Customer order confirmation journey high level visual overview."){width="1920" zoomable="yes"}</p>
+The order confirmation journey focuses on product purchases made through the website and mobile app.<p>![Customer order confirmation journey high level visual overview.](../intelligent-re-engagement/images/order-confirmation-journey.png "Customer order confirmation journey high level visual overview."){width="2560" zoomable="yes"}</p>
 
 1. You create schemas and datasets that are marked for [!UICONTROL Profile].
 2. Data is aggregated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
@@ -95,6 +95,8 @@ For more information about creating schemas, read the [create schema tutorial.](
 There are four schema designs that are used for the re-engagement journey. Each schema requires specific fields to be set up, and some fields that are strongly suggested.
 
 #### Customer attributes schema
+
+This schema is used to structure and reference the profile data that makes up your customer information. This data is typically ingested into [!DNL Adobe Experience Platform] via your CRM or similar system and is necessary to reference customer details that are used for personalization, marketing consent, and enhanced segmentation capabilities.
 
 The customer attributes schema is represented by an [!UICONTROL XDM Individual Profile] class, which includes the following field groups:
 
@@ -148,6 +150,8 @@ This field group is used for best practice.
 +++
 
 #### Customer digital transactions schema
+
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via Web SDK and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, and enhanced segmentation capabilities.
 
 The customer digital transactions schema is represented by an [!UICONTROL XDM ExperienceEvent] class, which includes the following field groups:
 
@@ -242,6 +246,8 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 #### Customer offline transactions schema
 
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on platforms outside of your website. This data is typically ingested into [!DNL Adobe Experience Platform] from a POS (or similar system) and most often streamed into Platform via an API connection. Its purpose is to reference the various offline conversion events that are used for triggering journeys, deep online and offline customer analysis, and enhanced segmentation capabilities.
+
 The customer offline transactions schema is represented by an [!UICONTROL XDM ExperienceEvent] class, which includes the following field groups:
 
 +++Commerce Details (Field Group)
@@ -286,6 +292,8 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 +++
 
 #### Adobe web connector schema
+
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This schema is similar to the Customer Digital Transactions schema but differs in that it is intended to be used when Web SDK is not an option for data collection; thus, this schema is needed when you are utilizing the Adobe Analytics Data Connector to send your online data into [!DNL Adobe Experience Platform] either as a primary or secondary datastream.
 
 The Adobe web connector schema is represented by a [!UICONTROL XDM ExperienceEvent] class, which includes the following field groups:
 
@@ -409,13 +417,15 @@ For more information on how to build audiences through Platform-derived segment 
 
 >[!TAB Re-Engagement Journey]
 
+This audience is created as an enhancement to the classic "Cart Abandonment" scenario. Whereas cart abandonment typically focuses on a cart addition without a subsequent purchase in a certain period of time, this audience looks for an earlier engagement, specifically those who may have browsed a particular product but did not add it to their cart and had no follow-up activity on your site within a certain time frame. This audience helps to keep your brand "top of mind" for customers who meet this inclusion criteria and can also be leveraged for customers whose digital properties may differ from a traditional e-commerce model.
+
 The following events are used for the re-engagement journey where users viewed products online, and did not add to cart in the next 24 hours, followed by no brand engagement in the 3 days following.
 
 The following fields and conditions are required when setting up this audience:
 
 * `EventType: commerce.productViews`
     * `Timestamp: <= 24 hours before now`
-* `EventType is not: commerce.productListAdds`
+* `EventType is not: commerce.procuctListAdds`
     * `Timestamp: <= 24 hours before now, GAP(>= 3 days)`
 * `EventType: application.launch or web.webpagedetails.pageViews or commerce.purchases`
     * `Timestamp: <= 2 days before now`
@@ -426,16 +436,18 @@ The descriptor for the re-engagement journey appears as:
 
 >[!TAB Abandoned Cart Journey]
 
+This audience is created to support the classic "Cart Abandonment" scenario. Its purpose is to find customers who added a product to their shopping cart but ultimately did not follow through with a purchase. This audience will help keep not only your brand "top of mind" for your customers but also the products that they left behind without a subsequent purchase.
+
 The following events are used for the abandoned cart journey where users added a product to their cart, but did not complete the purchase or clear their cart in the last 24 hours.
 
 The following fields and conditions are required when setting up this audience:
 
 * `EventType: commerce.productListAdds`
-    * `Timestamp: >= 30 minutes before now and <= 1440 minutes before now`
+    * `Timestamp: >= 1 days before now and <= 4 days before now `
 * `EventType: commerce.purchases`
-    * `Timestamp: <= 30 minutes before now` 
+    * `Timestamp: <= 4 days before now` 
 * `EventType: commerce.productListRemovals`
-    * `Timestamp: <= 30 minutes before now`
+    * `Timestamp: <= 4 days before now`
 
 The descriptor for the abandoned cart journey appears as:
 
