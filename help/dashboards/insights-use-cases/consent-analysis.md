@@ -33,7 +33,7 @@ Locate your consent attributes from the options available. Select **[!UICONTROL 
 >
 >If you have maintained your user consent in an attribute different to the Adobe recommended field group, then you must select those attributes instead of the ones shown below.
 
-More information can be found on the [handling consent in segmentation](../../segmentation/consents.md#handling-consent-in-segmentation) documentation.
+More information can be found on the [handling of consent in segmentation](../../segmentation/consents.md#handling-consent-in-segmentation) documentation.
 
 ![The Segment Builder with the [!UICONTROL Consent and Preferences] attribute folder highlighted.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 
@@ -43,7 +43,7 @@ The various consent and preference options are displayed. As this demonstration 
 
 The list of marketing preferences are displayed. Although, this example use case focuses on email, SMS, and calls, you can build insights for any other combination or the entirety of options as well. For each of the channels, perform the below steps to create an audience for each.
 
-To begin configuring an audience select **[!UICONTROL Receive SMS]** / **[!UICONTROL Receive email]** / **[!UICONTROL Receive calls]**.
+To begin configuring an audience, select **[!UICONTROL Receive SMS]** / **[!UICONTROL Receive email]** / **[!UICONTROL Receive calls]**.
 
 ![The available contact channels for marketing are highlighted in the audience builder.](../images/insights-use-cases/consent-analysis/channels.png)
 
@@ -83,7 +83,7 @@ The *Audience overlap report* dialog expands to show additional audience overlap
 
 <!-- Image needs updating to night mode -->
 
-![The Audience overlap report with the Users consented to email audience highlighted.](../images/insights-use-cases/consent-analysis/additional-audience-overlap-reports.png)
+![The Audience overlap report, with the Users consented to email audience highlighted.](../images/insights-use-cases/consent-analysis/additional-audience-overlap-reports.png)
 
 ## Audience size trends {#audience-size-trends}
 
@@ -107,7 +107,7 @@ Once you have created a consent-related audience such as "Users Consented to SMS
 
 You can also build out your own widgets with user-defined dashboards. Building your own widget gives you complete control over the type of widget, along with flexibility to add filters and much more, directly within Adobe Real-Time CDP. 
 
-For example, if you want to trend multiple consent audiences in the same chart so that you can see over time how each of your consent preferences has changed. This type of visualization is possible with user-defined dashboards in minimal steps and a one time setup. First, select **[!UICONTROL Dashboards]** in the left navigation. The Dashboards workspace appears. Then select **[!UICONTROL Create dashboard]**. Full instructions on how to [create a dashboard and custom widget](../user-defined-dashboards.md) can be found in the user-defined dashboards guide. 
+For example, if you want to trend multiple consent audiences in the same chart so that you can see over time how each of your consent preferences has changed. This type of visualization is possible with user-defined dashboards in minimal steps and a one time setup. First, select **[!UICONTROL Dashboards]** in the left navigation. The [!UICONTROL Dashboards] workspace appears. Then select **[!UICONTROL Create dashboard]**. Full instructions on how to [create a dashboard and custom widget](../user-defined-dashboards.md) can be found in the user-defined dashboards guide. 
 
 ![The dashboards workspace with Dashboards and Create dashboard highlighted.](../images/user-defined-dashboards/create-dashboard.png)
 
@@ -128,7 +128,7 @@ After the widget composer is populated with data from your chosen table, perform
 ![The widget composer Consent trends widget with the data model, table, and the Y-axis dropdown menu and SUM feature highlighted. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
 1. Select the [!UICONTROL Marks] dropdown menu, and change chart type to [!UICONTROL Line]. 
 1. Search [!UICONTROL Attributes] for the `[!UICONTROL segment_name]`, then use the + icon to add the `segment_name` as a [!UICONTROL Filter] from the dropdown menu. The [UICONTROL Filter: Segment_name] dialog appears. Select the audiences created earlier that relate to consent. For this example, select **[!UICONTROL Users Consented to Calls]**, **[!UICONTROL Users Consented to SMS]**, and **[!UICONTROL Users Consented to Email]**, followed by **[!UICONTROL Apply]**.
-1. Search [!UICONTROL Attributes] for `[!UICONTROL segment_name]`, then select the + icon to add `segment_name` as a [!UICONTROL Color] from the drop down menu. 
+1. Search [!UICONTROL Attributes] for `[!UICONTROL segment_name]`, then select the + icon to add `segment_name` as a [!UICONTROL Color] from the dropdown menu. 
 1. Open [the [!UICONTROL Properties] panel](../user-defined-dashboards.md#widget-properties) and provide an appropriate [!UICONTROL Widget title] and [!UICONTROL Axis label].
 ![The widget composer with the properties icon and Widget title highlighted.](../images/user-defined-dashboards/properties-panel.png)
 1. Select **[!UICONTROL Save and close]** to confirm your settings.
