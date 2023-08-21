@@ -36,6 +36,12 @@ Next, select **[!UICONTROL Run on-demand]** from the dropdown menu that appears.
 
 Configure the schedule of your on-demand ingestion. Select the **[!UICONTROL Ingestion start time]**, the **[!UICONTROL Date range start time]** and the **[!UICONTROL Date range end time]**.
 
+| Scheduling configuration | Description |
+| --- | --- |
+| [!UICONTROL Ingestion start time] | The scheduled start time in UTC of when the on-demand dataflow will start. |
+| [!UICONTROL Date range start time] | The starting date and time from which data will be pulled from. |
+| [!UICONTROL Date range end time] | The ending date and time from which data will be pulled until. |
+
 Select **[!UICONTROL Schedule]** and allow for a few moments for your on-demand dataflow to trigger.
 
 ![The scheduling configuration window for on-demand ingestion.](../../images/tutorials/on-demand/configure-schedule.png)
@@ -47,3 +53,7 @@ Select your dataflow name to view your dataflow activity. Here you will see a li
 Select **[!UICONTROL Scheduled]** to see a list of dataflow runs that are scheduled for future ingestion.
 
 ![A list of scheduled flow runs for a selected dataflow.](../../images/tutorials/on-demand/scheduled.png)
+
+## Next steps
+
+By reading this document, you have learned how to create flow runs on demand for existing sources dataflows. For more information on sources, read the [sources overview](../../home.md)
