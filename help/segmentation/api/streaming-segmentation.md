@@ -70,8 +70,7 @@ In order for a segment definition to be evaluated using streaming segmentation, 
 | Single event within a relative time window | Any segment definition that refers to a single incoming event. |
 | Single event with a time window | Any segment definition that refers to a single incoming event with a time window. |
 | Profile only | Any segment definition that refers to only a profile attribute. |
-| Single event with a profile attribute | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. **Note:** The query is immediately evaluated when the event comes. In the case of a profile event, however, it must wait 24 hours to be incorporated. |
-| Single event with a profile attribute within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes.  |
+| Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. |
 | Segment of segments | Any segment definition that contains one or more batch or streaming segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. |
 | Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. |
 
