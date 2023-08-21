@@ -41,7 +41,7 @@ Create the custom field of type `Simple` with field data type as `Single Line of
 
 Refer to the [!DNL Dynamics 365] [Create or edit a field (attribute)](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) documentation if you need additional guidance.
 
-You will need the part of the name of the custom field you create in [!DNL Dynamics 365], which is the **[!UICONTROL Customization prefix]**. Note down this value as it is required during the [Fill in destination details](#destination-details) step. Refer to the [Create and edit fields](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) section of the [!DNL Dynamics 365] documentation for further details.
+Write down the **[!UICONTROL Customization prefix]** of the custom field that you create in [!DNL Dynamics 365]. You will need this prefix during the [Fill in destination details](#destination-details) step. Refer to the [Create and edit fields](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) section of the [!DNL Dynamics 365] documentation for further details.
 ![Dynamics 365 UI screenshot showing the customization prefix.](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-customization-prefix.png)
 
 An example setup within [!DNL Dynamics 365] is shown below:
@@ -132,7 +132,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Customization Prefix]**: You will need the part of the name of the custom field you created in [!DNL Dynamics 365], which is the customization prefix. Refer to the [Create field within [!DNL Dynamics 365]](#prerequisites-custom-field) for guidance.
+* **[!UICONTROL Customization Prefix]**: The `Customization prefix` of the custom field that you created in [!DNL Dynamics 365]. Refer to the [Create and edit fields](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) section of the [!DNL Dynamics 365] documentation for further details.
 
 ### Enable alerts {#enable-alerts}
 
@@ -244,7 +244,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
-|August 2023|Functionality and documentation update| <ul><li>Fixed an issue where users were unable to use a [!DNL Dynamics 365] custom field if it was not created within the default solution.</li><li> A new input field, **[!UICONTROL Customization Prefix]**, has been added in the [Fill in destination details](#destination-details) step, where the user would input the required prefix. (PLATIR-31602)</li></ul> |
+|August 2023|Functionality and documentation update| Added support for [!DNL Dynamics 365] custom field prefixes for custom fields which were not created within the default solution in [!DNL Dynamics 365]. A new input field, **[!UICONTROL Customization Prefix]**, has been added in the [Fill in destination details](#destination-details) step. (PLATIR-31602). |
 |Nov 2022|Initial release|Initial destination release and documentation publish.|
 
 {style="table-layout:auto"}
