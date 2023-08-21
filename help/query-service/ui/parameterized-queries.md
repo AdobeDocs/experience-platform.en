@@ -4,6 +4,11 @@ description: Learn how to use parameterized queries in the Adobe Experience Plat
 ---
 # Parameterized queries (limited release)
 
+>[!CONTEXTUALHELP]
+>id="platform_queryService_queryEditor_parameterizedQueries"
+>title="Parameterized queries"
+>abstract="Use parameterized queries to add parameter values at the time of execution. This allows you to work with dynamic data and reuse queries for different use cases. Use the `'$'` preface to enter a query parameter into your query in the text editor. Next, add a value for the key in the Query parameters section below the editor."
+
 >[!IMPORTANT]
 >
 >The parameterized query UI feature is available in a **limited release only** and is not available to all customers.
