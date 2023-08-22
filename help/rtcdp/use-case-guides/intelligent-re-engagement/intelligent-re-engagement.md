@@ -350,7 +350,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 A dataset is a storage and management structure for a group of data. Each schema for intelligent re-engagement journeys have a single dataset. 
 
-For more information on how to create a dataset from a schema, read the [Datasets UI guide](/help/catalog/datasets/user-guide.md).
+For more information on how to create a [dataset](/help/catalog/datasets/overview.md) from a schema, read the [Datasets UI guide](/help/catalog/datasets/user-guide.md).
 
 >[!NOTE] 
 >
@@ -394,7 +394,7 @@ There are no marketing policies required for the re-engagement journeys however,
 
 The re-engagement journeys use audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways on [!DNL Adobe Experience Platform].
 
-For more information on how to directly compose audiences, read the [Audience Composition UI guide](/help/segmentation/ui/audience-composition.md).
+For more information on how to directly compose [Audiences](/help/segmentation/home.md), read the [Audience Composition UI guide](/help/segmentation/ui/audience-composition.md).
 
 For more information on how to build audiences through Platform-derived segment definitions, read the [Audience Builder UI guide](/help/segmentation/ui/segment-builder.md).
 
@@ -446,7 +446,7 @@ The descriptor for the abandoned cart journey appears as:
 >
 >Adobe Journey Optimizer does not encompass everything shown in the diagrams. All paid media ads are created in [!UICONTROL Destinations].
 
-Adobe Journey Optimizer helps you deliver connected, contextual, and personalized experiences to your customers. The customer journey is the entire process of a customer's interactions with the brand. Each use case journey requires specific information. Listed below is the precise data needed for each Journey branch.
+[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) helps you deliver connected, contextual, and personalized experiences to your customers. The customer journey is the entire process of a customer's interactions with the brand. Each use case journey requires specific information. Listed below is the precise data needed for each Journey branch.
 
 >[!BEGINTABS]
 
@@ -760,11 +760,11 @@ The order confirmation journey focuses on product purchases made through the web
 
 >[!ENDTABS]
 
-For more information about creating journeys in [Adobe Journey Optimizer], read the [Get started with journeys guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
+For more information about creating journeys in [!DNL Adobe Journey Optimizer], read the [Get started with journeys guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
 ### Setting up paid media ads in destinations
 
-The destinations framework is used for paid media ads. Once consent has been checked it sends out to the various destinations configured.
+The destinations framework is used for paid media ads. Once consent has been checked it sends out to the various destinations configured. For more information about destinations, read the [Destinations overview](/help/destinations/home.md) document.
 
 #### Data required for destinations
 
