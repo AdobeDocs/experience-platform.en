@@ -110,39 +110,18 @@ You can also select **[!UICONTROL Custom date]** to choose the time period that 
 
 ## Available metrics
 
-The license usage dashboard reports on several unique metrics and do not apply to every product. The available metrics are:
+The license usage dashboard reports on several unique metrics that are applicable to multiple products in the organization. The available metrics are:
 
 - [!UICONTROL Number of sandboxes]
 - [!UICONTROL Addressable Audience]
 - [!UICONTROL Average profile richness]
 - [!UICONTROL Core hours]
 - [!UICONTROL Data lake storage]
-- [!UICONTROL Data scanned]
 - [!UICONTROL Data scanned per segmentation ratio]
 - [!UICONTROL Engageable audience]
 - [!UICONTROL Total consumed storage]
 - [!UICONTROL Total storage]
-<!-- acpB2cProfAdd : Q) what does this one mean? -->
-
-The following metrics apply to Real-Time CDP B2B Edition: 
-
-- [!UICONTROL Average Profile Richness]
 - [!UICONTROL Query Service Compute Hours]
-- [!UICONTROL Number of Sandboxes]
-- [!UICONTROL Total Storage]
-
-<!-- - [!UICONTROL Business person profile] -->
-<!-- - [!UICONTROL Advanced destinations profiles] -->
-<!-- - [!UICONTROL Businessperson profiles] -->
-<!-- - [!UICONTROL Destination service profiles] -->
-<!-- - [!UICONTROL Streaming segmentation packs] -->
-<!-- - [!UICONTROL Advanced destinations profiles] -->
-<!-- - [!UICONTROL Businessperson profiles] -->
-<!-- - [!UICONTROL Destination service profiles] -->
-<!-- - [!UICONTROL Streaming segmentation packs] -->
-<!-- - [!UICONTROL Advanced destinations profiles] -->
-<!-- - [!UICONTROL Destination service profiles] -->
-<!-- - [!UICONTROL Streaming segmentation packs] -->
 
 The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased. For detailed definitions of each metric, refer to the appropriate Product Description documentation:
 
