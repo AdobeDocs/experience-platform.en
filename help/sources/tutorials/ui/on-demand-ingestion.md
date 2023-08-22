@@ -1,6 +1,8 @@
 ---
 title: On-demand Ingestion for Sources Dataflows In The UI
 description: Learn how to create dataflows on demand for your source connections using the Experience Platform user interface.
+hide: true
+hidefromtoc: true
 ---
 # On-demand ingestion for sources dataflows in the UI
 
