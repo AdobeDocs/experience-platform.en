@@ -591,9 +591,9 @@ The following is a list of statistical calculations that are available after usi
 
 #### COMPUTE STATISTICS on the data lake {#compute-statistics-data-lake}
 
-You can now calculate column-level statistics on [!DNL Azure Data Lake Storage] (ADLS) datasets with the `COMPUTE STATISTICS` and `SHOW STATISTICS` SQL commands. Compute column statistics on either the entire dataset, a subset of a dataset, all columns, or a subset of columns.
+You can now calculate column-level statistics on [!DNL Azure Data Lake Storage] (ADLS) datasets with the `COMPUTE STATISTICS` SQL command. Compute column statistics on either the entire dataset, a subset of a dataset, all columns, or a subset of columns.
 
-`COMPUTE STATISTICS` extends the `ANALYZE TABLE` command. However, the `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, and `SHOW STATISTICS` commands are not supported on accelerated store tables. These extensions for the `ANALYZE TABLE` command are currently only supported for ADLS tables. 
+`COMPUTE STATISTICS` extends the `ANALYZE TABLE` command. However, the `COMPUTE STATISTICS`, `FILTERCONTEXT`, and `FOR COLUMNS` commands are not supported on accelerated store tables. These extensions for the `ANALYZE TABLE` command are currently only supported for ADLS tables. 
 
 **Example**
 
@@ -605,7 +605,7 @@ The `FILTER CONTEXT` command calculates statistics on a subset of the dataset ba
 
 >[!NOTE]
 >
->The `Statistics ID` and the statistics generated are only valid for each session and cannot be accessed across different PSQL sessions.<br><br>Limitations:<ul><li>Statistics generation is not supported for array or map data types</li><li>Computed statistics are not persisted</li></ul><br><br>Options:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>By default, the flag is set to true. As a result, when statistics are requested on a datatype that is not supported, it does not error out but instead it fails silently.<br>To enable notifications on errors when statistics are requested on unsupported datatype, use: `SET skip_stats_for_complex_datatypes = false`.
+>The `Statistics ID` and the statistics generated are only valid for each session and cannot be accessed across different PSQL sessions.<br><br>Limitations:<ul><li>Statistics generation is not supported for array or map data types</li><li>Computed statistics are **not** persisted across sessions.</li></ul><br><br>Options:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>By default, the flag is set to true. As a result, when statistics are requested on a datatype that is not supported, it does not error out but silently skips fields with the unsupported datatypes.<br>To enable notifications on errors when statistics are requested on unsupported datatype, use: `SET skip_stats_for_complex_datatypes = false`.
 
 The console output appears as seen below.
 
@@ -623,7 +623,7 @@ You can then query the computed statistics directly by referencing the `Statisti
 SELECT * FROM adc_geometric_stats_1;
 ```
 
-Use the `SHOW STATISTICS` command to display the metadata for all the temporary statistics tables generated in the session. This command can help you refine the scope of your statistical analysis.
+Use the `SHOW STATISTICS` command to display the metadata for all the temporary statistics generated in the session. This command can help you refine the scope of your statistical analysis.
 
 ```sql
 SHOW STATISTICS;
@@ -887,24 +887,45 @@ COPY query
 
 The `ALTER TABLE` command lets you add or drop primary or foreign key constraints as well as add columns to the table.
 
-
 #### ADD or DROP CONSTRAINT
 
-The following SQL queries show examples of adding or dropping constraints to a table. 
+The following SQL queries show examples of adding or dropping constraints to a table. Primary key and foreign key constraints can be added to multiple columns with comma separated values. You can create composite keys by passing two or more column name values as seen in the examples below.
+
+**Define primary or composite keys**
 
 ```sql
 
 ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name ) NAMESPACE namespace
 
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name1, column_name2 ) NAMESPACE namespace
+```
+
+**Define a relationship between tables based on one or more keys**
+
+```sql
 ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
 
+ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name1, column_name2 ) REFERENCES referenced_table_name ( primary_column_name1, primary_column_name2 )
+```
+
+**Define an identity column**
+
+```sql
 ALTER TABLE table_name ADD CONSTRAINT PRIMARY IDENTITY ( column_name ) NAMESPACE namespace
 
 ALTER TABLE table_name ADD CONSTRAINT IDENTITY ( column_name ) NAMESPACE namespace
+```
 
+**Drop a constraint/relationship/identity**
+
+```sql
 ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name )
 
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name1, column_name2 )
+
 ALTER TABLE table_name DROP CONSTRAINT FOREIGN KEY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT FOREIGN KEY ( column_name1, column_name2 )
 
 ALTER TABLE table_name DROP CONSTRAINT PRIMARY IDENTITY ( column_name )
 

@@ -3221,7 +3221,7 @@ This document includes a JSON Open API Specification (OAS), or "Swagger" referen
     },
     "/sessionStart": {
       "post": {
-        "description": "Signals the the start of a new session. When the response returns, the \"sessionId\" must be extracted and sent for all subsequent event calls to the Edge API server.",
+        "description": "Signals the start of a new session. When the response returns, the \"sessionId\" must be extracted and sent for all subsequent event calls to the Edge API server.",
         "parameters": [
           {
             "name": "configId",

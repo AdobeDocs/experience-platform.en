@@ -9,7 +9,7 @@ Data stored on Adobe Experience Platform is encrypted at rest using system-level
 
 >[!NOTE]
 >
->Data in Adobe Experience Platform data lake and Profile Store (CosmosDB) are encrypted using CMK.
+>Data in Adobe Experience Platform data lake and Profile Store are encrypted using CMK. These are regarded as your primary data stores.
 
 This document covers the process for enabling the customer-managed keys (CMK) feature in Platform.
 
@@ -86,7 +86,7 @@ Once you have created a key vault, you can generate a new key. Navigate to the *
 
 ![Generate a key](../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-Use the provided form to provide a name for the key, and select **RSA** for the key type. At a minimum, the the **[!DNL RSA key size]** must be at least **3072** bits as required by [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] is also compatible with RSA 3027.
+Use the provided form to provide a name for the key, and select **RSA** for the key type. At a minimum, the **[!DNL RSA key size]** must be at least **3072** bits as required by [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] is also compatible with RSA 3027.
 
 >[!NOTE]
 >
@@ -276,12 +276,21 @@ The `status` attribute can have one of four values with the following meanings:
 1. `COMPLETED`: The key vault and key name have been added to the datastores.
 1. `FAILED`: A problem occurred, primarily related to the key, key vault, or multi-tenant app setup.
 
-## Next steps
+## Revoke access {#revoke-access}
 
-By completing the above steps, you have successfully enabled CMK for your organization. Data that is ingested into Platform will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. If you want to revoke Platform access to your data, you can remove the user role associated with the application from the key vault within [!DNL Azure].
-
-After disabling access to the application, it can take anywhere from a few minutes to 24 hours for data to no longer be accessible in Platform. The same time delay applies for data to become available again when re-enabling access to the application.
+If you want to revoke Platform access to your data, you can remove the user role associated with the application from the key vault within [!DNL Azure].
 
 >[!WARNING]
 >
->Once the Key Vault, Key, or CMK app is disabled and data is no longer accessible in Platform, any downstream operations related to that data will no longer be possible. Ensure that you understand the downstream impacts of revoking Platform access to your data before you make any changes to your configuration.
+>Disabling the key vault, Key, or CMK app can result in a breaking change. Once the key vault, Key, or CMK app is disabled and data is no longer accessible in Platform, any downstream operations related to that data will no longer be possible. Ensure that you understand the downstream impacts of revoking Platform access to your key before you make any changes to your configuration.
+
+After removing key access or disabling/deleting the key from your [!DNL Azure] key vault, it may take anywhere from a few minutes, to 24 hours for this configuration to propagate to primary data stores. Platform workflows also include cached and transient data stores required for performance and core application functionality. The propagation of CMK revocation through such cached and transient stores may take up to seven days as determined by their data processing workflows. For example, this means that the Profile dashboard would retain and display data from its cache data store and take seven days to expire the data held in cache data stores as part of the refresh cycle. The same time delay applies for data to become available again when re-enabling access to the application.
+
+>[!NOTE]
+>
+>There are two use-case-specific exceptions to the seven day dataset expiration on non-primary (cached/transient) data. See their respective documentation for more information on these features.<ul><li>[Adobe Journey Optimizer URL Shortener](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html#message-preset-sms)</li><li>[Edge Projections](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+
+## Next steps
+
+By completing the above steps, you have successfully enabled CMK for your organization. Data that is ingested into primary data stores will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. 
+

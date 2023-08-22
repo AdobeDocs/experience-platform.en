@@ -187,7 +187,7 @@ Name the data element `partnerData`, leave the [!UICONTROL extension] value as [
 
 To set up the second data element, name the new variable `pageVisit`, set the **[!UICONTROL Extension]** to **[!UICONTROL Adobe Experience Platform]** and choose **[!UICONTROL XDM Object]** as the data type. 
 
-![Highlighted selections to correctly configure the the pageVisit data element.](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
+![Highlighted selections to correctly configure the pageVisit data element.](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
 
 From the schema, select the third-party attributes that correspond to the values that you are expecting from the data partner. Then, select the radio button titled **[!UICONTROL Provide entire object]**. Select the icon that looks like a database and choose the `partnerData` data element that you created previously.
 

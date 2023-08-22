@@ -87,4 +87,4 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-Please refer to the the [Pinterest Help Center page](https://help.pinterest.com/en/business/article/audience-targeting) for additional information.
+Please refer to the [Pinterest Help Center page](https://help.pinterest.com/en/business/article/audience-targeting) for additional information.
