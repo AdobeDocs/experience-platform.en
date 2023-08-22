@@ -49,7 +49,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | General availability of Chatlio | The [!DNL Chatlio] source is now available. Use the [!DNL Chatlio] source to stream your [!DNL Chatlio] events data to Experience Platform. For more information, read the [[!DNL Chatlio] overview](../../sources/connectors/marketing-automation/chatlio-webhook.md). |
 | General availability of Pendo | The [!DNL Pendo] source is now available. Use the [!DNL Pendo] source to stream your product analytics data to Experience Platform. For more information, read the [[!DNL Pendo] overview](../../sources/connectors/analytics/pendo-webhook.md). |
 | General availability of SugarCRM | [!DNL SugarCRM] sources are now available. Use the [!DNL SugarCRM Accounts & Contacts] and the [!DNL SugarCRM Events] sources to bring data from your [!DNL SugarCRM] account to Experience Platform. For more information, read the [[!DNL SugarCRM] overview](../../sources/connectors/crm/sugarcrm.md). |
-| Support for on-demand ingestion for sources dataflows in the UI | You can now create flow runs on demand for an existing sources dataflow in the UI. For more information, read the guide on [creating an on-demand flow run for sources using the UI]|
+| Support for on-demand ingestion for sources dataflows in the UI | You can now create flow runs on demand for an existing sources dataflow in the UI. For more information, read the guide on [creating an on-demand flow run for sources using the UI](../../sources/tutorials/ui/on-demand-ingestion.md). |
 
 {style="table-layout:auto"}
 
