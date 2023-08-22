@@ -8,9 +8,22 @@ description: The August 2023 release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
+- [Data Ingestion](#data-ingestion)
 - [Data Prep](#data-prep)
 - [Identity Service](#identity-service)
 - [Sources](#sources)
+
+## Data Ingestion {#data-ingestion}
+
+Adobe Experience Platform provides a rich set of features to ingest any type and any latency of data. You can ingest using Batch or Streaming APIs, using Adobe-built sources, data integration partners or the Adobe Experience Platform UI.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| Changes to data ingestion workflows | Rows of data containing values larger than the specified data type (for example, long data passed as integer data type) will noe be rejected and error messages will be reported. Previously, these rows were rejected without warning. |
+
+To learn more about data ingestion, read the [data ingestion overview](../../ingestion/home.md).
 
 ## Data Prep {#data-prep}
 
