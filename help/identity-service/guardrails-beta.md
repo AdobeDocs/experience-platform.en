@@ -9,6 +9,9 @@ hidefromtoc: true
 >[!IMPORTANT]
 >
 >The deletion logic detailed in this document is an upcoming behavior of Identity Service. If you need to reconfigure identity types, please contact your account manager.
+>
+> *
+> * 
 
 This document provides information on use and rate limits for [!DNL Identity Service] data to help you optimize your use of the identity graph. When reviewing the following guardrails, it is assumed that you have modeled the data correctly. If you have questions on how to model your data, please contact your customer service representative.
 
@@ -29,7 +32,8 @@ The following table outlines static limits applied to identity data.
 
 | Guardrail | Limit | Notes |
 | --- | --- | --- |
-| Number of identities in a graph [!BADGE Beta]{type=Informative} | 50 | When a graph with 50 linked identities is updated, Identity Service will apply a "first-in, first-out" mechanism and deletes the oldest identity to make space for the newest identity. Deletion is based on identity type and timestamp. The limit is applied at the sandbox level. Read the [appendix](#appendix) for more information on how Identity Service deletes identities once the limit is reached. |
+| (Current behavior) Number of identities in a graph | 150 | 
+| (Upcoming behavior) Number of identities in a graph [!BADGE Beta]{type=Informative} | 50 | When a graph with 50 linked identities is updated, Identity Service will apply a "first-in, first-out" mechanism and deletes the oldest identity to make space for the newest identity. Deletion is based on identity type and timestamp. The limit is applied at the sandbox level. Read the [appendix](#appendix) for more information on how Identity Service deletes identities once the limit is reached. |
 | Number of identities in an XDM record | 20 | The minimum number of XDM records required is two. |
 | Number of custom namespaces | None | There are no limits to the number of custom namespaces you can create. |
 | Number of characters for a namespace display name or identity symbol | None | There are no limits to the number of characters of a namespace display name or identity symbol. |
