@@ -2,7 +2,7 @@
 title: Parameterized Queries
 description: Learn how to use parameterized queries in the Adobe Experience Platform UI.
 ---
-# Parameterized queries (limited release)
+# Parameterized queries (limited release) {#parameterized-queries}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_parameterizedQueries"
