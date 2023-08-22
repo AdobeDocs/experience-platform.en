@@ -6,6 +6,10 @@ hidefromtoc: true
 ---
 # Guardrails for [!DNL Identity Service] data (with deletion logic)
 
+>[!IMPORTANT]
+>
+>The deletion logic detailed in this document is an upcoming behavior of Identity Service. If you need to reconfigure identity types, please contact your account manager.
+
 This document provides information on use and rate limits for [!DNL Identity Service] data to help you optimize your use of the identity graph. When reviewing the following guardrails, it is assumed that you have modeled the data correctly. If you have questions on how to model your data, please contact your customer service representative.
 
 ## Getting started
@@ -28,7 +32,6 @@ The following table outlines static limits applied to identity data.
 | Number of identities in a graph [!BADGE Beta]{type=Informative} | 50 | When a graph with 50 linked identities is updated, Identity Service will apply a "first-in, first-out" mechanism and deletes the oldest identity to make space for the newest identity. Deletion is based on identity type and timestamp. The limit is applied at the sandbox level. Read the [appendix](#appendix) for more information on how Identity Service deletes identities once the limit is reached. |
 | Number of identities in an XDM record | 20 | The minimum number of XDM records required is two. |
 | Number of custom namespaces | None | There are no limits to the number of custom namespaces you can create. |
-| Number of graphs | None | There are no limits to the number of identity graphs you can create. |
 | Number of characters for a namespace display name or identity symbol | None | There are no limits to the number of characters of a namespace display name or identity symbol. |
 
 ### Identity value validation
@@ -77,10 +80,21 @@ When a full graph is updated with a new identity, these two rules work in tandem
 >
 >If the identity designated to be deleted is linked to multiple other identities in the graph, then the links connecting that identity will also be deleted.
 
-In the example below, before the graph on the left can be updated with a new identity, Identity Service must first deletes the existing identity with the oldest timestamp. However, because the oldest identity is a device ID, Identity Service skips that identity until it gets to the namespace with a type that is higher on the deletion priority list, which in this case is `ecid-3`. Once the oldest identity with a higher deletion priority type is removed, the graph then gets updated with a new link, `ecid-51`.
+>[!BEGINSHADEBOX]
 
->[!NOTE]
->
->In the rare case that there are two identities with the same timestamp and identity type, Identity Service will sort the IDs based on XID and conduct deletion.
+**A visual representation of the deletion logic**
 
 ![An example of the oldest identity being deleted to accommodate the latest identity](./images/graph-limits-v3.png)
+
+*Diagram notes:*
+
+* `t` = timestamp. 
+* The value of a timestamp corresponds with the recency of a given identity. For example, `t1` represents the first linked identity (oldest) and `t51` would represent the newest linked identity.
+
+In this example, before the graph on the left can be updated with a new identity, Identity Service first deletes the existing identity with the oldest timestamp. However, because the oldest identity is a device ID, Identity Service skips that identity until it gets to the namespace with a type that is higher on the deletion priority list, which in this case is `ecid-3`. Once the oldest identity with a higher deletion priority type is removed, the graph then gets updated with a new link, `ecid-51`.
+
+* In the rare case that there are two identities with the same timestamp and identity type, Identity Service will sort the IDs based on [XID](./api/list-native-id.md) and conduct deletion.
+
+
+
+>[!ENDSHADEBOX]
