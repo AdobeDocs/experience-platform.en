@@ -24,12 +24,12 @@ You will construct schemas, datasets, and audiences as you work through examples
 
 As you complete the steps to implement the use case, you will make use of the following Real-Time CDP functionality and UI elements (listed in the order in which you will use them). Make sure that you have the necessary attribute-based access control permissions for all these areas, or ask your system administrator to grant you the necessary permissions.
 
-* [Adobe Real-Time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Integrates data across data sources to fuel the campaign. This data is then used to create the campaign audiences and surface personalized data elements used in the email and the web promo tiles (for example, name or account-related information). The CDP is also used to activate audiences across email and the web (via Adobe Target).
+* [!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Integrates data across data sources to fuel the campaign. This data is then used to create the campaign audiences and surface personalized data elements used in the email and the web promo tiles (for example, name or account-related information). The CDP is also used to activate audiences across email and the web (via [!DNL Adobe Target]).
     * [Schemas](/help/xdm/home.md)
     * [Profiles](/help/profile/home.md)
     * [Datasets](/help/catalog/datasets/overview.md)
     * [Audiences](/help/segmentation/home.md)
-    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+    * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
     * [Destinations](/help/destinations/home.md)
     * [Event or Audience Trigger](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
     * [Audiences/ Events](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
@@ -61,7 +61,7 @@ The abandoned cart journey targets products that have been placed in the cart bu
 2. Data is integrated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
 3. You load profiles into Real-Time CDP and build governance policies to ensure responsible use.
 4. You build focused audiences from the list of profiles to check if a **customer** has placed an item in their cart but has not completed the purchase. The **[!UICONTROL Add to cart]** event kicks off a timer that waits for 30 minutes, then checks for purchase. If no purchase has been made, then the **customer** is added to the **[!UICONTROL Abandon Cart]** audiences.
-5. You create an abandoned cart journey in Adobe Journey Optimizer
+5. You create an abandoned cart journey in [!DNL Adobe Journey Optimizer].
 6. If needed, work with the **data partner** for the activation of audiences to desired paid-media destinations.
 7. [!DNL Adobe Journey Optimizer] checks for consent and sends out the various actions configured.
 
@@ -72,7 +72,7 @@ The order confirmation journey focuses on product purchases made through the web
 1. You create schemas and datasets, then mark for [!UICONTROL Profile].
 2. Data is integrated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
 3. You load profiles into Real-Time CDP and build governance policies to ensure responsible use.
-4. You create a confirmation journey in Adobe Journey Optimizer.
+4. You create a confirmation journey in [!DNL Adobe Journey Optimizer].
 5. [!DNL Adobe Journey Optimizer] sends out an order confirmation message using the preferred channel.
 
 >[!ENDTABS]
@@ -87,7 +87,7 @@ As you complete the steps to implement the use case, you will make use of the Re
 
 ### Create a schema design and specify field groups
 
-Experience Data Model (XDM) resources are managed in the [!UICONTROL Schemas] workspace in [!DNL Adobe Experience Platform]. You can view and explore core resources provided by Adobe (for example, [!UICONTROL Field Groups]) and create custom resources and schemas for your organization.
+Experience Data Model (XDM) resources are managed in the [!UICONTROL Schemas] workspace in [!DNL Adobe Experience Platform]. You can view and explore core resources provided by [!DNL Adobe] (for example, [!UICONTROL Field Groups]) and create custom resources and schemas for your organization.
 
 For more information about creating [schemas](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html), read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md) 
 
@@ -222,9 +222,9 @@ Web Details is a standard schema field group for the XDM ExperienceEvent class, 
 | `endUserIDs._experience.emailid.authenticatedState` | Required | End user email address ID authenticated state. |
 | `endUserIDs._experience.emailid.id` | Required | End user email address ID. |
 | `endUserIDs._experience.emailid.namespace.code` | Required | End user email address ID namespace code. |
-| `endUserIDs._experience.mcid.authenticatedState` | Required | Adobe Marketing Cloud ID (MCID) authenticated state. The MCID is now known as the Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.id` | Required | Adobe Marketing Cloud ID (MCID). The MCID is now known as the Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.namespace.code` | Required | Adobe Marketing Cloud ID (MCID) namespace code. |
+| `endUserIDs._experience.mcid.authenticatedState` | Required | [!DNL Adobe] Marketing Cloud ID (MCID) authenticated state. The MCID is now known as the Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.id` | Required | [!DNL Adobe] Marketing Cloud ID (MCID). The MCID is now known as the Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.namespace.code` | Required | [!DNL Adobe] Marketing Cloud ID (MCID) namespace code. |
 
 +++
 
@@ -278,9 +278,9 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 >
 >This is an optional implementation if you are using the [!DNL Adobe Analytics Data Connector].
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This schema is similar to the Customer Digital Transactions schema but differs in that it is intended to be used when Web SDK is not an option for data collection; thus, this schema is needed when you are utilizing the Adobe Analytics Data Connector to send your online data into [!DNL Adobe Experience Platform] either as a primary or secondary datastream.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This schema is similar to the Customer Digital Transactions schema but differs in that it is intended to be used when Web SDK is not an option for data collection; thus, this schema is needed when you are utilizing the [!DNL Adobe Analytics Data Connector] to send your online data into [!DNL Adobe Experience Platform] either as a primary or secondary datastream.
 
-The Adobe web connector schema is represented by a [!UICONTROL XDM ExperienceEvent] class, which includes the following field groups:
+The [!DNL Adobe] web connector schema is represented by a [!UICONTROL XDM ExperienceEvent] class, which includes the following field groups:
 
 +++Adobe Analytics ExperienceEvent Template (Field Group)
 
@@ -325,9 +325,9 @@ The Adobe web connector schema is represented by a [!UICONTROL XDM ExperienceEve
 | `endUserIDs._experience.emailid.authenticatedState` | Required | End user email address ID authenticated state. |
 | `endUserIDs._experience.emailid.id` | Required | End user email address ID. |
 | `endUserIDs._experience.emailid.namespace.code` | Required | End user email address ID namespace code. |
-| `endUserIDs._experience.mcid.authenticatedState` | Required | Adobe Marketing Cloud ID (MCID) authenticated state. The MCID is now known as the Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.id` | Required | Adobe Marketing Cloud ID (MCID). The MCID is now known as the Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.namespace.code` | Required | Adobe Marketing Cloud ID (MCID) namespace code. |
+| `endUserIDs._experience.mcid.authenticatedState` | Required | [!DNL Adobe] Marketing Cloud ID (MCID) authenticated state. The MCID is now known as the Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.id` | Required | [!DNL Adobe] Marketing Cloud ID (MCID). The MCID is now known as the Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.namespace.code` | Required | [!DNL Adobe] Marketing Cloud ID (MCID) namespace code. |
 
 +++
 
@@ -444,9 +444,9 @@ The descriptor for the abandoned cart journey appears as:
 
 >[!NOTE]
 >
->Adobe Journey Optimizer does not encompass everything shown in the diagrams. All paid media ads are created in [!UICONTROL Destinations].
+>[!DNL Adobe Journey Optimizer] does not encompass everything shown in the diagrams. All paid media ads are created in [!UICONTROL Destinations].
 
-[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) helps you deliver connected, contextual, and personalized experiences to your customers. The customer journey is the entire process of a customer's interactions with the brand. Each use case journey requires specific information. Listed below is the precise data needed for each Journey branch.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) helps you deliver connected, contextual, and personalized experiences to your customers. The customer journey is the entire process of a customer's interactions with the brand. Each use case journey requires specific information. Listed below is the precise data needed for each Journey branch.
 
 >[!BEGINTABS]
 
