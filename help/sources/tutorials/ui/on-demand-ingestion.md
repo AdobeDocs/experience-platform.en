@@ -22,11 +22,11 @@ This document requires a working understanding of the following components of Ex
 
 * [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 * [Dataflows](../../../dataflows/home.md): A dataflow is a representation of data jobs that move data across Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to Identity Service and Real-Time Customer Profile, and to Destinations.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Create a dataflow on demand {#create-a-dataflow-on-demand}
 
-Navigate to the *[!UICONTROL Dataflows]* tab of the sources workspace. From here, find the dataflow that you want to run on demand and then select the  the ellipses (**`...`**) beside your dataflow name.
+Navigate to the *[!UICONTROL Dataflows]* tab of the sources workspace. From here, find the dataflow that you want to run on demand, and then select the ellipses (**`...`**) beside your dataflow name.
 
 ![A list of dataflows in the sources workspace.](../../images/tutorials/on-demand/select-dataflow.png)
 
@@ -34,7 +34,7 @@ Next, select **[!UICONTROL Run on-demand]** from the dropdown menu that appears.
 
 ![A dropdown menu with the Run on-demand option selected.](../../images/tutorials/on-demand/run-on-demand.png)
 
-Configure the schedule of your on-demand ingestion. Select the **[!UICONTROL Ingestion start time]**, the **[!UICONTROL Date range start time]** and the **[!UICONTROL Date range end time]**.
+Configure the schedule of your on-demand ingestion. Select the **[!UICONTROL Ingestion start time]**, the **[!UICONTROL Date range start time]**, and the **[!UICONTROL Date range end time]**.
 
 | Scheduling configuration | Description |
 | --- | --- |
@@ -42,7 +42,7 @@ Configure the schedule of your on-demand ingestion. Select the **[!UICONTROL Ing
 | [!UICONTROL Date range start time] | The starting date and time from which data will be pulled from. |
 | [!UICONTROL Date range end time] | The ending date and time from which data will be pulled until. |
 
-Select **[!UICONTROL Schedule]** and allow for a few moments for your on-demand dataflow to trigger.
+Select **[!UICONTROL Schedule]** and allow a few moments for your on-demand dataflow to trigger.
 
 ![The scheduling configuration window for on-demand ingestion.](../../images/tutorials/on-demand/configure-schedule.png)
 
