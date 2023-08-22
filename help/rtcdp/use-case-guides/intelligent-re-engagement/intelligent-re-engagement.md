@@ -24,7 +24,7 @@ You will construct schemas, datasets, and audiences as you work through examples
 
 As you complete the steps to implement the use case, you will make use of the following Real-Time CDP functionality and UI elements (listed in the order in which you will use them). Make sure that you have the necessary attribute-based access control permissions for all these areas, or ask your system administrator to grant you the necessary permissions.
 
-* [Adobe Real-Time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Aggregates data across data sources to fuel the campaign. This data is then used to create the campaign audiences and surface personalized data elements used in the email and the web promo tiles (for example, name or account-related information). The CDP is also used to activate audiences across email and the web (via Adobe Target).
+* [Adobe Real-Time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Integrates data across data sources to fuel the campaign. This data is then used to create the campaign audiences and surface personalized data elements used in the email and the web promo tiles (for example, name or account-related information). The CDP is also used to activate audiences across email and the web (via Adobe Target).
     * [Schemas](/help/xdm/home.md)
     * [Profiles](/help/profile/home.md)
     * [Datasets](/help/catalog/datasets/overview.md)
@@ -45,8 +45,8 @@ Below is a high level overview of the three example re-engagement journeys.
 
 The re-engagement journey targets abandoned product browsing on both the website and mobile app. This journey is triggered when a product has been viewed but not purchased or added to the cart. Brand engagement is triggered after three days if there are no list additions within the last 24 hours.<p>![Customer intelligent re-engagement journey high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent re-engagement journey high level visual overview."){width="2560" zoomable="yes"}</p>
 
-1. You create schemas and datasets that are marked for [!UICONTROL Profile].
-2. Data is aggregated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
+1. You create schemas and datasets, then mark for [!UICONTROL Profile].
+2. Data is integrated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
 3. You load profiles into Real-Time CDP and build governance policies to ensure responsible use.
 4. You build focused audiences from the list of profiles to check if a **customer** has made an engagement in the last three days.
 5. You create a re-engagement journey in [!DNL Adobe Journey Optimizer].
@@ -57,8 +57,8 @@ The re-engagement journey targets abandoned product browsing on both the website
 
 The abandoned cart journey targets products that have been placed in the cart but have not yet been purchased on both the website and mobile app. Also, Paid Media campaigns are started and stopped using this method.<p>![Customer abandoned cart journey high level visual overview.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Customer abandoned cart journey high level visual overview."){width="2560" zoomable="yes"}</p> 
 
-1. You create schemas and datasets that are marked for [!UICONTROL Profile].
-2. Data is aggregated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
+1. You create schemas and datasets, the mark for [!UICONTROL Profile].
+2. Data is integrated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
 3. You load profiles into Real-Time CDP and build governance policies to ensure responsible use.
 4. You build focused audiences from the list of profiles to check if a **customer** has placed an item in their cart but has not completed the purchase. The **[!UICONTROL Add to cart]** event kicks off a timer that waits for 30 minutes, then checks for purchase. If no purchase has been made, then the **customer** is added to the **[!UICONTROL Abandon Cart]** audiences.
 5. You create an abandoned cart journey in Adobe Journey Optimizer
@@ -69,12 +69,11 @@ The abandoned cart journey targets products that have been placed in the cart bu
 
 The order confirmation journey focuses on product purchases made through the website and mobile app.<p>![Customer order confirmation journey high level visual overview.](../intelligent-re-engagement/images/order-confirmation-journey.png "Customer order confirmation journey high level visual overview."){width="2560" zoomable="yes"}</p>
 
-1. You create schemas and datasets that are marked for [!UICONTROL Profile].
-2. Data is aggregated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
+1. You create schemas and datasets, then mark for [!UICONTROL Profile].
+2. Data is integrated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
 3. You load profiles into Real-Time CDP and build governance policies to ensure responsible use.
-4. You build focused audiences from the list of profiles to check if a **customer** has made a purchase.
-5. You create a confirmation journey in Adobe Journey Optimizer.
-6. [!DNL Adobe Journey Optimizer] sends out an order confirmation message using the preferred channel.
+4. You create a confirmation journey in Adobe Journey Optimizer.
+5. [!DNL Adobe Journey Optimizer] sends out an order confirmation message using the preferred channel.
 
 >[!ENDTABS]
 
@@ -88,11 +87,11 @@ As you complete the steps to implement the use case, you will make use of the Re
 
 ### Create a schema design and specify field groups
 
-Experience Data Model (XDM) resources are managed in the [!UICONTROL Schemas] workspace in Adobe Experience Platform. You can view and explore core resources provided by Adobe and create custom resources and schemas for your organization.
+Experience Data Model (XDM) resources are managed in the [!UICONTROL Schemas] workspace in [!DNL Adobe Experience Platform]. You can view and explore core resources provided by Adobe (for example, [!UICONTROL Field Groups]) and create custom resources and schemas for your organization.
 
-For more information about creating schemas, read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md) 
+For more information about creating [schemas](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html), read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md) 
 
-There are four schema designs that are used for the re-engagement journey. Each schema requires specific fields to be set up, and some fields that are strongly suggested.
+There are four schema designs that are used for the re-engagement use case. Each schema requires specific fields to be set up, and some fields that are strongly suggested.
 
 #### Customer attributes schema
 
@@ -229,15 +228,6 @@ Web Details is a standard schema field group for the XDM ExperienceEvent class, 
 
 +++
 
-+++Class Value (Field Group)
-
-| Fields | Requirement |
-| --- | --- |
-| `eventType` | Required |
-| `timestamp` | Required |
-
-+++
-
 +++External Source System Audit Details (Field Group)
 
 External Source System Audit Attributes is a standard Experience Data Model (XDM) data type that captures audit details about an external source system.
@@ -276,15 +266,6 @@ The customer offline transactions schema is represented by an [!UICONTROL XDM Ex
 
 +++
 
-+++Class Value (Field Group)
-
-| Fields | Requirement |
-| --- | --- |
-| `eventType` | Required |
-| `timestamp` | Required |
-
-+++
-
 +++External Source System Audit Details (Field Group) 
 
 External Source System Audit Attributes is a standard Experience Data Model (XDM) data type that captures audit details about an external source system.
@@ -292,6 +273,10 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 +++
 
 #### Adobe web connector schema
+
+>[!NOTE]
+>
+>This is an optional implementation if you are using the [!DNL Adobe Analytics Data Connector].
 
 This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This schema is similar to the Customer Digital Transactions schema but differs in that it is intended to be used when Web SDK is not an option for data collection; thus, this schema is needed when you are utilizing the Adobe Analytics Data Connector to send your online data into [!DNL Adobe Experience Platform] either as a primary or secondary datastream.
 
@@ -363,7 +348,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 ### Create a dataset from a schema
 
-A dataset is a storage and management structure for a group of data, often a table with fields (rows) and a schema (columns). Every schema for intelligent re-engagement journeys have a single dataset. 
+A dataset is a storage and management structure for a group of data. Each schema for intelligent re-engagement journeys have a single dataset. 
 
 For more information on how to create a dataset from a schema, read the [Datasets UI guide](/help/catalog/datasets/user-guide.md).
 
@@ -379,23 +364,23 @@ For more information on how to create a dataset from a schema, read the [Dataset
 >
 >Providing customers with the capability to unsubscribe from receiving communications from a brand is a legal requirement, as well as ensuring this choice is honored. Learn more about the applicable legislation in the [Experience Platform documentation](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-When creating a re-engagement path, the following consent policies must be considered and used:
+When creating a re-engagement path, the following consent policies should be considered:
 
 * If `consents.marketing.email.val = "Y"` then Can Email
 * If `consents.marketing.sms.val = "Y"` then Can SMS
 * If `consents.marketing.push.val = "Y"` then Can Push
 * If `consents.share.val = "Y"` then Can Advertise
-* Need defined by Customer Implementation
 
 #### DULE label and enforcement
 
-Personal email addresses are utilized as direct identifiable data that is used for identifying or getting in touch with a specific individual rather than a device.
+When creating a re-engagement path, the following DULE labels should be considered:
 
-* `personalEmail.address = I1`
+* Personal email addresses are utilized as direct identifiable data that is used for identifying or getting in touch with a specific individual rather than a device.
+    * `personalEmail.address = I1`
 
 #### Marketing policies
 
-There are no additional marketing policies required for the re-engagement journeys however, the following should be considered as desired:
+There are no marketing policies required for the re-engagement journeys however, the following should be considered as desired:
 
 * Restrict Sensitive Data
 * Restrict Onsite Advertising
@@ -407,7 +392,7 @@ There are no additional marketing policies required for the re-engagement journe
 
 #### Audience creation for brand re-engagement journeys
 
-The re-engagement journeys use audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in two different ways on Adobe Experience Platform - either directly composed as audiences or through Platform-derived segment definitions.
+The re-engagement journeys use audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways on [!DNL Adobe Experience Platform].
 
 For more information on how to directly compose audiences, read the [Audience Composition UI guide](/help/segmentation/ui/audience-composition.md).
 
@@ -459,7 +444,7 @@ The descriptor for the abandoned cart journey appears as:
 
 >[!NOTE]
 >
->Adobe Journey Optimizer does not encompass everything shown in the diagrams at the top of this page. All paid media ads are created in [!UICONTROL Destinations].
+>Adobe Journey Optimizer does not encompass everything shown in the diagrams. All paid media ads are created in [!UICONTROL Destinations].
 
 Adobe Journey Optimizer helps you deliver connected, contextual, and personalized experiences to your customers. The customer journey is the entire process of a customer's interactions with the brand. Each use case journey requires specific information. Listed below is the precise data needed for each Journey branch.
 
@@ -467,9 +452,11 @@ Adobe Journey Optimizer helps you deliver connected, contextual, and personalize
 
 >[!TAB Re-Engagement Journey]
 
+The re-engagement journey targets abandoned product browsing on both the website and mobile app.<p>![Customer intelligent re-engagement journey high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent re-engagement journey high level visual overview."){width="2560" zoomable="yes"}</p>
+
 +++Events
 
-* Product Views
+* Event 1: Product Views
     * Schema: Customer Digital Transactions
     * Fields:
         * `EventType`
@@ -495,7 +482,7 @@ Adobe Journey Optimizer helps you deliver connected, contextual, and personalize
             * `endUserIDs._experience.emailid.namespace.code`
             * `_id`
 
-* Add to Cart
+* Event 2: Add to Cart
     * Schema: Customer Digital Transactions
     * Fields:
         * `EventType`
@@ -522,7 +509,7 @@ Adobe Journey Optimizer helps you deliver connected, contextual, and personalize
             * `endUserIDs._experience.emailid.namespace.code`
             * `_id`
 
-* Brand Engagement
+* Event 3: Brand Engagement
     * Schema: Customer Digital Transactions
     * Fields:
         * `EventType`
@@ -574,7 +561,7 @@ Adobe Journey Optimizer helps you deliver connected, contextual, and personalize
         * `timestamp > timestamp of product last viewed`
     
     * Check for at least one offline purchase since product last viewed: 
-        * Schema: Customer Offline Transactions v.1
+        * Schema: Customer Offline Transactions
         * `eventType = commerce.purchases`
         * `timestamp > timestamp of product last viewed`
 
@@ -593,9 +580,11 @@ Adobe Journey Optimizer helps you deliver connected, contextual, and personalize
 
 >[!TAB Abandoned Cart Journey]
 
+The abandoned cart journey targets products that have been placed in the cart but have not yet been purchased on both the website and mobile app.<p>![Customer abandoned cart journey high level visual overview.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Customer abandoned cart journey high level visual overview."){width="2560" zoomable="yes"}</p>
+
 +++Events
 
-* Add to Cart
+* Event 2: Add to Cart
     * Schema: Customer Digital Transactions
     * Fields:
         * `EventType`
@@ -622,7 +611,7 @@ Adobe Journey Optimizer helps you deliver connected, contextual, and personalize
             * `endUserIDs._experience.emailid.namespace.code`
             * `_id`
 
-* Online Purchases
+* Event 4: Online Purchases
     * Schema: Customer Digital Transactions
     * Fields:
         * `EventType`
@@ -648,7 +637,7 @@ Adobe Journey Optimizer helps you deliver connected, contextual, and personalize
             * `endUserIDs._experience.emailid.namespace.code`
             * `_id`
 
-* Brand Engagement
+* Event 3: Brand Engagement
     * Schema: Customer Digital Transactions
     * Fields:
         * `EventType`
@@ -696,12 +685,12 @@ Adobe Journey Optimizer helps you deliver connected, contextual, and personalize
 * AuthenticatedState in authenticated
 
 * Condition: Offline purchases since the cart was last abandoned: 
-    * Schema: Customer Offline Transactions v.1
+    * Schema: Customer Offline Transactions
     * `eventType = commerce.purchases` 
     * `timestamp > timestamp of cart was last abandoned`
 
 * Condition: Cart cleared since the cart was last abandoned:
-    * Schema: Customer Digital Transactions v.1
+    * Schema: Customer Digital Transactions
     * `eventType = commerce.cartCleared`
     * `cartID` (ID of the cart)
     * `timestamp > timestamp of cart was last abandoned`
@@ -720,9 +709,11 @@ Adobe Journey Optimizer helps you deliver connected, contextual, and personalize
 
 >[!TAB Order Confirmation Journey]
 
+The order confirmation journey focuses on product purchases made through the website and mobile app.<p>![Customer order confirmation journey high level visual overview.](../intelligent-re-engagement/images/order-confirmation-journey.png "Customer order confirmation journey high level visual overview."){width="2560" zoomable="yes"}</p>
+
 +++Events
 
-* Online Purchases
+* Event 4: Online Purchases
     * Schema: Customer Digital Transactions
     * Fields:
         * `EventType`
@@ -773,7 +764,7 @@ For more information about creating journeys in [Adobe Journey Optimizer], read 
 
 ### Setting up paid media ads in destinations
 
-The destinations framework is used for paid media ads. Once consent has been checked it sends out to the various destinations configured. For example direct mail, email, push, and SMS.
+The destinations framework is used for paid media ads. Once consent has been checked it sends out to the various destinations configured.
 
 #### Data required for destinations
 
