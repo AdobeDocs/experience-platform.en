@@ -12,14 +12,14 @@ This document details how to build a consent dashboard for various marketing use
 
 The use cases covered in this guide are consent trending and consent overlap.
 
-- **Consent trending** tracks how user consent has trended over time. Analyzing consent preference changes helps marketers plan and executing campaigns that adapt to those user preference changes. For example, you may want to run targeted educational campaigns, transparency and trust campaigns, or incentive campaigns to respectfully drive consent choices. You could also correlate campaigns that might have been negatively impacting consent to proactively reduce the frequency of those campaigns.
-- **Consent overlap** uses the overlap among consent channels to deliver consistent personalized messaging on multiple channels for the users who have consented to multiple channels. Marketers can prioritize and allocate resources to certain channels where a higher degree of consent and personalized messaging might resonate with customers and generating higher response rates.
+- **Consent trending** tracks how user consent has trended over time. Analyzing consent preference changes helps marketers plan and executing campaigns that adapt to those user preference changes. For example, you may want to run targeted educational campaigns, transparency and trust campaigns, or incentive campaigns to drive consent choices. You could also correlate campaigns that might have been negatively impacting consent to proactively reduce the frequency of those campaigns.
+- **Consent overlap** uses the overlap among consent channels to deliver consistent personalized messaging on multiple channels for your customers who have consented to multiple channels. Marketers can prioritize and allocate resources to certain channels where a higher degree of consent and personalized messaging might resonate with customers and generating higher response rates.
 
 <!-- ## Build a consent dashboard {#build-a-consent-dashboard} -->
 
 ## Create consented audiences {#create-consent-audiences}
 
-To build a consent dashboard, you must first create an audience of all the profiles that have consented to contact. To navigate to the Real-Time Customer Data Platform Segment Builder, **[!UICONTROL Audiences]** in the left navigation of the Platform UI. From the the [!UICONTROL Customer] tab of the [!UICONTROL Audiences] dashboard, select **[!UICONTROL Create audience]** in the top right of the view, then **[!UICONTROL Build rules]**.
+To build a consent dashboard, you must first create an audience of all the profiles that have consented to contact. To navigate to the Real-Time Customer Data Platform Segment Builder, select **[!UICONTROL Audiences]** in the left navigation of the Platform UI. From the the [!UICONTROL Customer] tab of the [!UICONTROL Audiences] dashboard, select **[!UICONTROL Create audience]** in the top right of the view, then **[!UICONTROL Build rules]**.
 
 <!-- Update screenshot below to include Create audience -->s
 
@@ -43,7 +43,7 @@ The various consent and preference options are displayed. As this demonstration 
 
 ![The Segment Builder with the [!UICONTROL Marketing Preferences] folder highlighted.](../images/insights-use-cases/consent-analysis/marketing-preferences.png)
 
-The list of marketing preferences are displayed. Although, this example use case focuses on email, SMS, and calls, you can build insights for any other combination or the entirety of options as well. For each of the channels, perform the below steps to create an audience for each.
+The list of marketing preferences are displayed. Although this example use case focuses on email, SMS, and calls, you can build insights for any other combination or the entirety of options as well. For each of the channels, perform the below steps to create an audience.
 
 To begin configuring an audience, select **[!UICONTROL Receive SMS]** / **[!UICONTROL Receive email]** / **[!UICONTROL Receive calls]**.
 
@@ -57,7 +57,7 @@ The [!UICONTROL Subscriptions] folder appears. From the options available, selec
 
 ![The [!UICONTROL Choice Value] attribute with the [!UICONTROL Yes (opt-in)] value highlighted in the segment builder. The name and description of the audience are also highlighted.](../images/insights-use-cases/consent-analysis/choice-value.png)
 
-Once you have created the necessary audiences, they are listed in the [!UICONTROL Audiences] [!UICONTROL Browse] tab. 
+After you have created the necessary audiences, they are listed in the [!UICONTROL Audiences] [!UICONTROL Browse] tab. 
 
 >[!NOTE]
 >
@@ -75,7 +75,7 @@ To review the overlap between any two consent audiences, add the [!UICONTROL Aud
 
 ![The Profiles dashboard with the Audience overlap by merge policy widget highlighted. The widget visulaizes overlaps between two consent audiences.](../images/insights-use-cases/consent-analysis/audience-overlap-by-merge-policy.png)
  
-You can view the overlap of all audiences where users have consented to receive calls across all other audiences, with the Audience overlap report in the Audiences dashboard. To view the overlap of consent audiences, first navigate to the [!UICONTROL Audiences] [!UICONTROL Overview] tab. From there, you can add the [!UICONTROL Audience overlap report] widget to the Audiences dashboard. Once the widget has been added, select the **[!UICONTROL User consented to calls]** audience from the overview of audience dropdown menu at the top of the page. Next, select **[!UICONTROL View more]** in the Audience overlap report widget to see up to 50 of the top overlaps, and up to 50 of the least overlaps regarding the selected segment.
+You can view the overlap of all audiences where users have consented to receive calls across all other audiences, with the Audience overlap report in the Audiences dashboard. To view the overlap of consent audiences, first navigate to the [!UICONTROL Audiences] [!UICONTROL Overview] tab. From there, you can add the [!UICONTROL Audience overlap report] widget to the Audiences dashboard. After the widget has been created, select the **[!UICONTROL User consented to calls]** audience from the overview of audience dropdown menu at the top of the page. Next, select **[!UICONTROL View more]** in the Audience overlap report widget to see up to 50 of the top overlaps, and up to 50 of the least overlaps regarding the selected segment.
 
 <!-- Image needs updating to night mode -->
 
@@ -101,7 +101,7 @@ When you create a consent-based audience, it automatically trends up to 12 month
 
 ## Audiences Overview dashboard {#audiences-overview-dashboard}
 
-Once you have created a consent-related audience such as "Users Consented to SMS", you can view key personalized consent information about your audience by adding the appropriate widgets to your Audiences Overview dashboard. Navigate to the [!UICONTROL Audiences] [!UICONTROL Overview] and add your chosen widgets from the widget library. Any widget added to your view of the dashboard can be resized and moved using the [!UICONTROL Modify dashboard] feature. Your personalized view can contain insights such as the trend over time (up to 12 months), the overlaps with other audiences, and the identity composition of the audience. An example view is shown below.
+After you have created a consent-related audience such as "Users Consented to SMS", you can view key personalized consent information about your audience by adding the appropriate widgets to your Audiences Overview dashboard. Navigate to the [!UICONTROL Audiences] [!UICONTROL Overview] and add your chosen widgets from the widget library. Any widget added to your view of the dashboard can be resized and moved using the [!UICONTROL Modify dashboard] feature. Your personalized view can contain insights such as the trend over time (up to 12 months), the overlaps with other audiences, and the identity composition of the audience. An example view is shown below.
 
 ![The audiences dashboard with the Users consented to SMS audience highlighted in the global audience dropdown menu.](../images/insights-use-cases/consent-analysis/audience-dashboard-user-consent-to-sms.png)
 
@@ -128,7 +128,7 @@ After the widget composer is populated with data from your chosen table, perform
 - Search [!UICONTROL Attributes] for `[!UICONTROL count_of_profiles]`, then use the + icon to add the `[!UICONTROL count_of_profiles]` attribute to the Y-axis from the dropdown menu.
 - Select the `...` (ellipses) icon in the [!UICONTROL Y-axis] field, then select the [!UICONTROL SUM] aggregate function from the dropdown menu.
 ![The widget composer Consent trends widget with the data model, table, and the Y-axis dropdown menu and SUM feature highlighted. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
-- Select the [!UICONTROL Marks] dropdown menu, and change chart type to [!UICONTROL Line]. 
+- Select the [!UICONTROL Marks] dropdown menu, and change the chart type to [!UICONTROL Line]. 
 - Search [!UICONTROL Attributes] for the `[!UICONTROL segment_name]`, then use the + icon to add the `segment_name` as a [!UICONTROL Filter] from the dropdown menu. The [!UICONTROL Filter: Segment_name] dialog appears. Select the audiences created earlier that relate to consent. For this example, select **[!UICONTROL Users Consented to Calls]**, **[!UICONTROL Users Consented to SMS]**, and **[!UICONTROL Users Consented to Email]**, followed by **[!UICONTROL Apply]**.
 - Search [!UICONTROL Attributes] for `[!UICONTROL segment_name]`, then select the + icon to add `segment_name` as a [!UICONTROL Color] from the dropdown menu. 
 - Open [the [!UICONTROL Properties] panel](../user-defined-dashboards.md#widget-properties) and provide an appropriate [!UICONTROL Widget title] and [!UICONTROL Axis label].
@@ -148,7 +148,7 @@ The image below demonstrates how your finished widget appears and other potentia
 
 ## Tracking consent policies {#consent-policies}
 
-The consent dashboards that you create, capture the **distribution of consent and preference attributes only**.
+The consent dashboards that you create capture the **distribution of consent and preference attributes only**.
 
 >[!NOTE]
 >
