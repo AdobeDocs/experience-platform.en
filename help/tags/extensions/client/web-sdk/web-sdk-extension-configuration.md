@@ -113,6 +113,10 @@ See the datastream [configuration overrides documentation](../../../../datastrea
 
 As an alternative to passing the overrides through a Web SDK command, you can configure the overrides in the tag extension screen shown below.
 
+>[!IMPORTANT]
+>
+> Datastream overrides must be configured on a per-environment basis. The development, staging, and production environments all have separate overrides. You can copy the settings between them using the dedicated options shown in the screen below.
+
 ![Image showing the datastream configuration overrides in the Web SDK tag extension page.](assets/datastream-overrides.png)
 
 ## [!UICONTROL Advanced Settings]
