@@ -112,7 +112,21 @@ At this point in time, no. However, this capability may be available in the futu
 
 ## Audience Composition
 
-The following section lists question related to Audience Composition.
+The following section lists questions related to Audience Composition.
+
+### When should I use Audience Composition as opposed to using the Segment Builder?
+
+Both Audience Composition and Segment Builder have important roles in the creation of building audiences in Platform.
+
+The Segment Builder is more suited for audience **creation** (for building an audience from scratch), while Audience Composition is more suited for audience **curation** (for creating new audiences based on an existing audience).
+
+The following table illustrates the difference between the two services:
+
+| Segment Builder | Audience Composition |
+| --------------- | -------------------- |
+| <ul><li>Single stage audience generation</li><li>Creates the basic blocks of audiences from profile, time-series, and multi-entity data</li><li>Used to create **one** audience</li></ul> | <ul><li>Multi-stage audience generation, using set based operations</li><li>Uses the audiences created by the Segment Builder and applies data enrichment options such as ranking profile attributes</li><li>Used to create **multiple** audiences at once</li></ul> |
+
+To learn more about the Segment Builder, please read the [Segment Builder guide](./ui/segment-builder.md). To learn more about Audience Composition, please read the [Audience Composition guide](./ui/audience-composition.md).
 
 ### Can I use externally generated audiences in Audience Composition?
 
