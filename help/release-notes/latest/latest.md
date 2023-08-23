@@ -47,7 +47,7 @@ Through attribute-based access control, administrators of your organization can 
 
 | Feature | Description |
 | --- | --- |
-| Permissions Policy Sandbox configuration | The new [permission policies sandbox configuration](/help/accee-control/abac/ui/policies.md) feature allows you to enforce an attribute based access control policy on all or a select number of sandboxes, depending on your needs and requirements.|
+| Permissions Policy Sandbox configuration | The new [permission policies sandbox configuration](../../access-control/abac/ui/policies.md) feature allows you to enforce an attribute based access control policy on all or a select number of sandboxes, depending on your needs and requirements.|
 
 {style="table-layout:auto"}
 
