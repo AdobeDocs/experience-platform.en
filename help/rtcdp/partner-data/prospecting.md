@@ -1,15 +1,12 @@
 ---
-title: (Beta) Engage and acquire new customers through prospecting use cases
+title: Engage and acquire new customers through prospecting use cases
 description: Learn how to engage and acquire new customers through prospecting use cases, enabled by the partner data support in Real-Time CDP.
-hide: yes
-hidefromtoc: yes
-badgeBeta: label="Beta" type="informative" before-title="true"
 ---
 # Engage and acquire new customers through prospecting use cases
 
 >[!AVAILABILITY]
 >
->* This beta functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
+>* This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
 
 Use third party data support in Real-Time CDP to expand your profile base with prospect profiles from data partners and engage with them to acquire or reach new customers.
 
@@ -51,8 +48,8 @@ As you complete the steps to implement the use case, you will make use of the fo
 * [Data usage labels](/help/data-governance/labels/overview.md)
 * [Datasets](/help/catalog/datasets/overview.md)
 * [Sources](/help/sources/home.md)
-* Profiles (link to prospect profiles)
-* Audiences (link to prospect audiences)
+* [Prospect profiles](/help/profile/ui/prospect-profile.md)
+* [Prospect audiences](/help/segmentation/ui/prospect-audience.md)
 * [Destinations](/help/destinations/home.md)
 
 ### License third-party profile details from the partner {#license-profiles-from-partner}
@@ -178,7 +175,7 @@ You can also select any prospect profile for further inspection, as shown below.
 
 ![View of how to inspect prospect profiles.](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-(**Coming soon**) Read more about prospect profiles.
+Read more about [prospect profiles](/help/profile/ui/prospect-profile.md).
 
 ### Create prospect audiences {#create-prospect-audiences}
 
@@ -194,7 +191,7 @@ Note that the audience building experience for prospect profiles differs from th
 * Batch profile evaluation only. 
 * Does not support building audiences based on time-series events. 
 
-(**Coming soon**) Read more about prospect audiences.
+Read more about [prospect audiences](/help/segmentation/ui/prospect-audience.md).
 
 ### Activate prospect profiles to destinations {#activate-to-destinations}
 
@@ -204,5 +201,6 @@ Make use of the prospect audiences by exporting them to destinations. Currently,
 
 Explore further use cases enabled through partner data support in Real-Time CDP:
 
-* [!BADGE Beta]{type=Informative} [Supplement first-party profiles with attributes from trusted data partners](/help/rtcdp/partner-data/supplement-first-party-profiles.md) to improve your data foundation and gain new insights into your customer base and gain better audience optimization.
-* (**Coming soon**) [!BADGE Beta]{type=Informative} **Leverage partner aided recognition** for personalizing on-site experiences during the visit, and for off-site retargeting post visit, without the user authenticating or having prior history with your brand.
+* [Supplement first-party profiles with attributes from trusted data partners](/help/rtcdp/partner-data/supplement-first-party-profiles.md) to improve your data foundation and gain new insights into your customer base and gain better audience optimization.
+* [Leverage partner aided recognition for personalizing on-site experiences](/help/rtcdp/partner-data/onsite-personalization.md) during the visit without the user authenticating or having prior history with your brand.
+* [Expanded activation of prospect profiles and prospect audiences](/help/destinations/ui/activate-prospect-audiences.md) to select destinations.
