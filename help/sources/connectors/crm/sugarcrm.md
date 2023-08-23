@@ -1,15 +1,10 @@
 ---
 title: SugarCRM Source Overview
 description: Learn how to connect SugarCRM to Adobe Experience Platform using APIs or the user interface.
-badge: Beta
-last-substantial-update: 2023-01-25
+last-substantial-update: 2023-08-23
 exl-id: 03fbc4e9-974d-494e-8463-756c96665fd5
 ---
-# (Beta) [!DNL SugarCRM]
-
->[!NOTE]
->
->The [!DNL SugarCRM] source is in beta. See the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
+# [!DNL SugarCRM]
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
@@ -22,7 +17,6 @@ The [!DNL SugarCRM] source allows you to ingest accounts, contacts, and events d
 * [Accounts](https://market.apidocs.sugarcrm.com/#b0aeb0cd-80ea-4688-8474-54e4873f32f3)
 * [Contacts](https://market.apidocs.sugarcrm.com/#308c5025-9478-4de3-8a41-1fc3cff1d8d1)
 * [Events](https://market.apidocs.sugarcrm.com/#516ec3b1-8e70-43d4-8bf2-38a2ae74c0a5)
-
 
 [!DNL SugarCRM] uses bearer tokens as an authentication mechanism to communicate with the [!DNL SugarCRM] Account and Contact APIs and the [!DNL SugarCRM] Events API.
 
@@ -47,6 +41,6 @@ Before you can create a [!DNL SugarCRM] source connection, you must first ensure
 
 ## Connect [!DNL SugarCRM Events] to Platform
 
-* [Create a source connection to bring [!DNL SugarCRM Events] data to Platform using APIs](../../tutorials/api/create/crm/sugarcrm-events.md).
+* [Create a source connection to bring [!DNL SugarCRM Events] data to Platform using APIs](../../tutorials/ui/create/crm/sugarcrm-events.md).
 * [Create a source connection to bring [!DNL SugarCRM Events] data to Platform using the user interface](../../tutorials/ui/create/crm/sugarcrm-events.md).
 * [Create a dataflow for a CRM source connection in the UI](../../tutorials/ui/dataflow/crm.md)
