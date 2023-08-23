@@ -1,12 +1,10 @@
 ---
 title: Intelligent Re-engagement
 description: Deliver compelling and connected experiences during the key conversion moments to intelligently re-engage infrequent customers.
-hide: yes
-hidefromtoc: yes
 ---
 # Intelligently re-engage your customers to return
 
-Re-engage clients who have abandoned a conversion before finishing it in an intelligent and responsible way. Engage lapsed customers through experiences rather than reminders to enhance conversion and propel the growth of client lifetime value.
+Re-engage customers who have abandoned a conversion before completing it in an intelligent and responsible way. Engage lapsed customers through experiences rather than reminders to enhance conversion and propel the growth of client lifetime value.
 
 Employ real-time considerations, take into account all consumer qualities and behaviors, and offer fast re-qualification based on both online and offline events.
 
