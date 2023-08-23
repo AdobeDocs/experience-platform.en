@@ -66,7 +66,7 @@ From here, you can input your question in the text box and query the AI Assistan
 
 Consider a use case in which you are creating a **Device Trade in Event Schema**. During the ExperienceEvent schema creation process, you come across the `eventType` field. At this point, you can either leave your workflow and refer to the the documentation on the [basics of a schema composition](../xdm/schema/composition.md), or you can use the AI Assistant to retrieve immediate answers for your questions. 
 
-To begin, input your question in the text box provided. In the example below, the AI Assistant is provided the question: "What is the eventType field in an Experience Event schema?"
+To begin, input your question in the text box provided. In the example below, the AI Assistant is provided the question: "**What is the eventType field in an Experience Event schema?**"
 
 ![The AI Assistant for Experience Platform with the following question prepared for querying: "What is the eventType field in an ExperienceEvent schema?](./images/ai-assistant/question.png)
 
@@ -76,7 +76,7 @@ The AI Assistant then queries its knowledge base and computes an answer. After a
 
 You can further learn more about a particular topic by asking a follow up question. In the next example, the AI Assistant is asked how the eventType can be used in segmentation.
 
-![A follow up question and answer displayed on the AI Assistant for Experience Platform.](./images/ai-assistant/follow-up-question.png)
+![A follow up question and answer displayed on the AI Assistant for Experience Platform.](./images/ai-assistant/follow-up-answer.png)
 
 You can also ask the AI Assistant questions regarding your data usage. When inquiring about data usage, you must be in an active sandbox in order for the AI Assistant to answer your query.
 
@@ -94,15 +94,13 @@ To provide feedback, select either thumbs up or thumbs down after receiving a re
 
 >[!ENDSHADEBOX]
 
-![The AI Assistant for Experience Platform displaying options you can choose from after a query.](./images/ai-assistant/options.png)
-
 >[!BEGINTABS]
 
 >[!TAB Show source]
 
 Select **[!UICONTROL Show source]** for a list of links to the documentation that the AI Assistant references to compute its response.
 
-![The links to the citations displayed in the AI Assistant.](./images/ai-assistant/citations.png)
+![The links to the source displayed in the AI Assistant.](./images/ai-assistant/show-sources.png)
 
 >[!TAB Thumbs up]
 
@@ -128,7 +126,7 @@ Select the flag icon to provide further reports on your experience using the AI 
 
 You can also use the pre-set prompts that the AI Assistant provides to get started.
 
-![The provided prompts in the AI Assistant panel.](./images/ai-assistant/ideas-to-get-started.png)
+![The provided prompts in the AI Assistant panel.](./images/ai-assistant/ideas.png)
 
 ## Additional information 
 
