@@ -43,7 +43,7 @@ Below is a high level overview of the three example re-engagement journeys.
 
 >[!TAB Re-Engagement Journey]
 
-The re-engagement journey targets abandoned product browsing on both the website and mobile app. This journey is triggered when a product has been viewed but not purchased or added to the cart. Brand engagement is triggered after three days if there are no list additions within the last 24 hours.<p>![Customer intelligent re-engagement journey high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent re-engagement journey high level visual overview."){width="2560" zoomable="yes"}</p>
+The re-engagement journey targets abandoned product browsing on both the website and mobile app. This journey is triggered when a product has been viewed but not purchased or added to the cart. Brand engagement is triggered after three days if there are no list additions within the last 24 hours.<p>![Customer intelligent re-engagement journey high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent re-engagement journey high level visual overview."){width="1920" zoomable="yes"}</p>
 
 1. You create schemas and datasets, then mark for [!UICONTROL Profile].
 2. Data is integrated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
