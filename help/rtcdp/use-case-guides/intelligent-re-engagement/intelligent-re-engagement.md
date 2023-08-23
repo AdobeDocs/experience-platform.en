@@ -77,7 +77,7 @@ The order confirmation journey focuses on product purchases made through the web
 
 >[!ENDTABS]
 
-## How to achieve the use case: Step-by-step instructions {#step-by-step-instructions}
+## How to achieve the use case {#achieve-use-case-instruction}
 
 To complete each of the steps in the high-level overviews above, read through the sections below, which offer links to more information and more detailed instructions.
 
@@ -85,7 +85,7 @@ To complete each of the steps in the high-level overviews above, read through th
 
 As you complete the steps to implement the use case, you will make use of the Real-Time CDP functionality and UI elements listed at the beginning of this document. Make sure that you have the necessary attribute-based access control permissions for all these areas, or ask your system administrator to grant you the necessary permissions. 
 
-### Create a schema design and specify field groups
+### Create a schema design and specify field groups {#schema-design}
 
 Experience Data Model (XDM) resources are managed in the [!UICONTROL Schemas] workspace in [!DNL Adobe Experience Platform]. You can view and explore core resources provided by [!DNL Adobe] (for example, [!UICONTROL Field Groups]) and create custom resources and schemas for your organization.
 
@@ -331,22 +331,13 @@ The [!DNL Adobe] web connector schema is represented by a [!UICONTROL XDM Experi
 
 +++
 
-+++Class Value (Field Group)
-
-| Fields | Requirement |
-| --- | --- |
-| `eventType` | Required |
-| `timestamp` | Required |
-
-+++
-
 +++External Source System Audit Details (Field Group)
 
 External Source System Audit Attributes is a standard Experience Data Model (XDM) data type that captures audit details about an external source system.
 
 +++
 
-### Create a dataset from a schema
+### Create a dataset from a schema {#dataset-from-schema}
 
 A dataset is a storage and management structure for a group of data. Each schema for intelligent re-engagement journeys have a single dataset. 
 
@@ -356,31 +347,31 @@ For more information on how to create a [dataset](/help/catalog/datasets/overvie
 >
 >Similar to the step to create a schema, you need to enable the dataset to be included in the Real-Time Customer Profile. For more information about enabling the dataset for use in Real-Time Customer Profile, read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
-### Privacy, consent and data governance
+### Privacy, consent and data governance {#privacy-consent}
 
 #### Consent policies
 
 >[!IMPORTANT]
 >
->Providing customers with the capability to unsubscribe from receiving communications from a brand is a legal requirement, as well as ensuring this choice is honored. Learn more about the applicable legislation in the [Experience Platform documentation](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+>Providing customers with the capability to unsubscribe from receiving communications from a brand is a legal requirement, as well as ensuring this choice is honored. Learn more about the applicable legislation in the [Privacy regulations overview](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-When creating a re-engagement path, the following consent policies should be considered:
+When creating a re-engagement path, the following [consent policies](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) should be considered:
 
 * If `consents.marketing.email.val = "Y"` then Can Email
 * If `consents.marketing.sms.val = "Y"` then Can SMS
 * If `consents.marketing.push.val = "Y"` then Can Push
 * If `consents.share.val = "Y"` then Can Advertise
 
-#### DULE label and enforcement
+#### Data Governance label and enforcement
 
-When creating a re-engagement path, the following DULE labels should be considered:
+When creating a re-engagement path, the following [Data Governance labels](/help/data-governance/labels/overview.md) should be considered:
 
 * Personal email addresses are utilized as direct identifiable data that is used for identifying or getting in touch with a specific individual rather than a device.
     * `personalEmail.address = I1`
 
 #### Marketing policies
 
-There are no marketing policies required for the re-engagement journeys however, the following should be considered as desired:
+There are no [marketing policies](/help/data-governance/policies/overview.md) required for the re-engagement journeys however, the following should be considered as desired:
 
 * Restrict Sensitive Data
 * Restrict Onsite Advertising
@@ -388,11 +379,13 @@ There are no marketing policies required for the re-engagement journeys however,
 * Restrict cross site Targeting
 * Restrict combining directly identifiable data with anonymous data
 
-### Create an audience
+### Create an audience {#create-audience}
 
 #### Audience creation for brand re-engagement journeys
 
 The re-engagement journeys use audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways on [!DNL Adobe Experience Platform].
+
+For more information on how to create an audience, read the [Audience service UI guide](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
 For more information on how to directly compose [Audiences](/help/segmentation/home.md), read the [Audience Composition UI guide](/help/segmentation/ui/audience-composition.md).
 
@@ -438,13 +431,17 @@ The descriptor for the abandoned cart journey appears as:
 
 `Include EventType = commerce.productListAdds between 30 min and 1440 minutes before now. exclude EventType = commerce.purchases 30 minutes before now OR EventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
 
+>[!TAB Order Confirmation Journey]
+
+This journey does not require any audiences to be created.
+
 >[!ENDTABS]
 
-### Journey setup in Adobe Journey Optimizer
+### Journey setup in Adobe Journey Optimizer {#journey-setup}
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] does not encompass everything shown in the diagrams. All paid media ads are created in [!UICONTROL Destinations].
+>[!DNL Adobe Journey Optimizer] does not encompass everything shown in the diagrams. All [paid media ads](/help/destinations/catalog/social/overview.md) are created in [!UICONTROL Destinations].
 
 [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) helps you deliver connected, contextual, and personalized experiences to your customers. The customer journey is the entire process of a customer's interactions with the brand. Each use case journey requires specific information. Listed below is the precise data needed for each Journey branch.
 
@@ -762,7 +759,7 @@ The order confirmation journey focuses on product purchases made through the web
 
 For more information about creating journeys in [!DNL Adobe Journey Optimizer], read the [Get started with journeys guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
-### Setting up paid media ads in destinations
+### Setting up paid media ads in destinations {#paid-media-ads}
 
 The destinations framework is used for paid media ads. Once consent has been checked it sends out to the various destinations configured. For more information about destinations, read the [Destinations overview](/help/destinations/home.md) document.
 
@@ -781,6 +778,3 @@ The Abandon Cart Segment is streaming and therefore can be used by the Destinati
     * [Mobile](/help/destinations/catalog/mobile-engagement/overview.md)
     * [Streaming Destination](/help/destinations/catalog/streaming/http-destination.md)
     * [Custom Destination SDK](/help/destinations/destination-sdk/overview.md)
-
-* File/Scheduled every three hours
-    * [Email Marketing](/help/destinations/catalog/email-marketing/overview.md)
