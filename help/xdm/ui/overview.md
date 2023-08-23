@@ -30,7 +30,7 @@ The [!UICONTROL Schemas] workspace provides powerful tools for creating and cust
 
 ## Defining XDM fields
 
-Classes, field groups, and data types all contribute fields to a schema. You can choose from a list of standard field types when adding fields to these resources, and can also define specialized fields for certain use cases. Refer to the the guide on [defining XDM fields in the UI](./fields/overview.md) for more information.
+Classes, field groups, and data types all contribute fields to a schema. You can choose from a list of standard field types when adding fields to these resources, and can also define specialized fields for certain use cases. Refer to the guide on [defining XDM fields in the UI](./fields/overview.md) for more information.
 
 ## Next steps
 

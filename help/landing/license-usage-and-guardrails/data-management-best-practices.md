@@ -145,7 +145,7 @@ The following is a list of some recommended best practices that you can follow t
 
 ## Feature summary and availability {#feature-summary}
 
-The best practices and and tools outlined in this document will help you better manage your license entitlement usage within Adobe Experience Platform. This document will be updated as additional features are released to help provide visibility and control to all Experience Platform customers.
+The best practices and tools outlined in this document will help you better manage your license entitlement usage within Adobe Experience Platform. This document will be updated as additional features are released to help provide visibility and control to all Experience Platform customers.
 
 The following table outlines the list of currently available features at your disposal, to better manage your license usage entitlement.
 

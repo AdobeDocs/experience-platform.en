@@ -128,7 +128,7 @@ The default fields shown can also be changed at an organizational-level to displ
 
 ![The Details tab is highlighted. The profile details are displayed.](../images/user-guide/profile-detail.png)
 
-You can view additional information related to the individual customer profile by selecting another of the available tabs. These tabs include attributes, events, and the segment membership tab that shows the segments for which the profile is currently qualified.
+You can view additional information related to the individual customer profile by selecting another of the available tabs. These tabs include attributes, events, and the audience membership tab that shows the audiences for which the profile is currently qualified.
 
 ### Attributes tab
 
@@ -146,13 +146,13 @@ Events can also be viewed as a JSON object by selecting to **[!UICONTROL View JS
 
 ![The Events tab is highlighted. The profile events are displayed.](../images/user-guide/events.png)
 
-### Segment membership tab
+### Audience membership tab
 
-The **[!UICONTROL Segment membership]** tab displays a list with the name and description of segments to which the individual customer profile currently belongs. This list is updated automatically as the profile qualifies or expires from segments. The total count of segments for which the profile is currently qualified is shown on the right-hand side of the tab.
+The **[!UICONTROL Audience membership]** tab displays a list with the name and description of audiences to which the individual customer profile currently belongs. This list is updated automatically as the profile qualifies or expires from audiences. The total count of audiences for which the profile is currently qualified is shown on the right-hand side of the tab.
 
 For more information about segmentation in Experience Platform, please refer to the [Adobes Experience Platform Segmentation Service documentation](../../segmentation/home.md).
 
-![The Segment membership tab is highlighted. The profile segment membership details are displayed.](../images/user-guide/segment-membership.png)
+![The Audience membership tab is highlighted. The profile's audience membership details are displayed.](../images/user-guide/segment-membership.png)
 
 ## Merge policies
 

@@ -3,11 +3,7 @@ title: Create a source connection and dataflow for SugarCRM Accounts & Contacts 
 description: Learn how to connect Adobe Experience Platform to SugarCRM Accounts & Contacts using the Flow Service API.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
 ---
-# (Beta) Create a source connection and dataflow for [!DNL SugarCRM Accounts & Contacts] using the Flow Service API
-
->[!NOTE]
->
->The [!DNL SugarCRM Accounts & Contacts] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
+# Create a source connection and dataflow for [!DNL SugarCRM Accounts & Contacts] using the Flow Service API
 
 The following tutorial walks you through the steps to create a [!DNL SugarCRM Accounts & Contacts] source connection and create a dataflow to bring [[!DNL SugarCRM]](https://www.sugarcrm.com/) accounts and contacts data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
