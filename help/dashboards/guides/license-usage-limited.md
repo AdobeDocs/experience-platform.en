@@ -62,7 +62,7 @@ The table indicates the primary metric for each product, as each product can tra
 
 All available metrics are displayed on the [!UICONTROL Summary] tab. The metrics available depend on the licensed product. This view provides **a consolidated view of all metrics across all production or development sandboxes**. The same level of analysis is provided for both production and development sandboxes. 
 
-![The summary view of a Platform Product that displays all available metrics for that product.]()
+![The summary view of a Platform Product that displays all available metrics for that product.](../images/license-usage/summary-tab.png)
 
 On the summary tab, the table includes the [!UICONTROL Metric] column. These human-readable descriptions indicate all metrics used for that type of sandbox.
 
@@ -72,7 +72,7 @@ To change the view between production and development sandbox types, select eith
 
 Consumption reporting for sandboxes is cumulative for all sandboxes of the same type. In other words, selecting [!UICONTROL Production] or [!UICONTROL Development] provides consumption reports for all production or development sandboxes, respectively.
 
-![The summary view of a Platform Product with Production sandboxes and Development sandboxes highlighted.](../images/license-usage/summary-tab.png)
+![The summary view of a Platform Product with Production sandboxes and Development sandboxes highlighted.](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >
