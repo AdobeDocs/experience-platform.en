@@ -58,13 +58,13 @@ For more information on attribute-based access control, see the [attribute-based
 Adobe Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots. 
 
 **New or updated features**
-​
+
 | Feature | Description |
 | --- | --- |
 |Consent-analysis and tracking use case | Learn how to build a consent dashboard for various marketing use cases for Real-Time CDP data with the [consent-analysis and tracking document](../../dashboards/insights-use-cases/consent-analysis.md). It details how to create an audience with the appropriate attributes for your business needs, and then consume the insights through the use of pre-configured widgets in the Adobe Experience Platform UI. It also provides instructions on how to build your own custom widget with the user-defined dashboards feature. The document covers consent trending and consent overlap use cases. |
 
 {style="table-layout:auto"}
-​
+
 For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
 
 ## Data collection {#data-collection}
