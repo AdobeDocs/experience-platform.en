@@ -118,6 +118,17 @@ XDM is an open-source specification that provides common structures and definiti
 | --- | --- | --- |
 | Class | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files)  | Use this class to bring in prospect profiles sourced from data vendors' top-of-the-funnel customer acquisition use cases. |
 
+{style="table-layout:auto"}
+
+**Updated XDM components**
+
+| Component type | Name | Update description |
+| --- | --- | --- |
+| Extension ([!UICONTROL Adobe Analytics ExperienceEvent Full Extension]) | [[!UICONTROL Context Data]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL Context Data] map object added to [!UICONTROL Adobe Analytics ExperienceEvent Full Extension] to provide context data for Adobe Analytics. |
+|  Field group  | Multiple | Several fields added to [[!UICONTROL Enriched Event Segment Details]](https://github.com/adobe/xdm/pull/1760/files). |
+
+{style="table-layout:auto"}
+
 For more information, please read the [XDM System overview](../../xdm/home.md).
 
 ## Identity Service {#identity-service}
