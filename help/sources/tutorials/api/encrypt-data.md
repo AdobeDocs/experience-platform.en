@@ -1,6 +1,6 @@
 ---
 title: Encrypted Data Ingestion
-description: Adobe Experience Platform allows you to ingest encrypted files through cloud storage batch sources.
+description: Learn how to ingest encrypted files through cloud storage batch sources using the API.
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
@@ -19,7 +19,7 @@ The encrypted data ingestion process is as follows:
 
 >[!IMPORTANT]
 >
->The maximum size of a single encrypted file is 100MB. For example, you can ingested 2GB worth of data in a single dataflow run, however, any individual file in that data cannot exceed 100MB.
+>The maximum size of a single encrypted file is 1 GB. For example, you can ingest 2 GBs worth of data in a single dataflow run, however, any individual file in that data cannot exceed 1 GB.
 
 This document provides steps on how to generate a encryption key pair to encrypt your data, and ingest that encrypted data to Experience Platform using cloud storage sources.
 
@@ -35,6 +35,29 @@ This tutorial requires you to have a working understanding of the following comp
 
 For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
 
+### Supported file extensions for encrypted files
+
+The list of supported file extensions for encrypted files are as follows:
+
+* .csv
+* .tsv
+* .json
+* .parquet
+* .csv.gpg
+* .tsv.gpg
+* .json.gpg
+* .parquet.gpg
+* .csv.pgp
+* .tsv.pgp
+* .json.pgp
+* .parquet.pgp
+* .gpg
+* .pgp
+
+>[!NOTE]
+>
+>Encrypted file ingestion in Adobe Experience Platform Sources supports openPGP and not any specific proprietary version of PGP.
+
 ## Create encryption key pair {#create-encryption-key-pair}
 
 The first step in ingesting encrypted data to Experience Platform is to create your encryption key pair by making a POST request to the `/encryption/keys` endpoint of the [!DNL Connectors] API.
@@ -47,7 +70,7 @@ POST /data/foundation/connectors/encryption/keys
 
 **Request**
 
-The following request generates a encryption key pair using the PGP encryption algorithm.
+The following request generates an encryption key pair using the PGP encryption algorithm.
 
 ```shell
 curl -X POST \
@@ -82,6 +105,65 @@ A successful response returns your Base64-encoded public key, public key ID, and
 }
 ```
 
+| Property | Description |
+| --- | --- |
+| `publicKey` | The public key is used to encrypt the data in your cloud storage. This key corresponds with the private key that was also created during this step. However, the private key immediately goes to Experience Platform. |
+| `publicKeyId` | The public key ID is used to create a dataflow and ingest your encrypted cloud storage data to Experience Platform. |
+| `expiryTime` | The expiry time defines the expiration date of your encryption key pair. This date is automatically set to 180 days after the date of key generation and is displayed in unix timestamp format. |
+
++++(Optional) Create sign verification key pair for signed data
+
+### Create customer managed key pair
+
+You can optionally create a sign verification key pair to sign and ingest your encrypted data.
+
+During this stage, you must generate your own private key and public key combination and then use your private key to sign your encrypted data. Next, you must encode your public key in Base64 and then share it to Experience Platform in order for Platform to verify your signature.
+
+### Share your public key to Experience Platform
+
+To share your public key, make a POST request to the `/customer-keys` endpoint while providing your encryption algorithm and your Base64-encoded public key.
+
+**API format**
+
+```http
+POST /data/foundation/connectors/encryption/customer-keys
+```
+
+**Request**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' 
+  -d '{
+      "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+    }'
+```
+
+| Parameter | Description |
+| --- | --- |
+| `encryptionAlgorithm` | The type of encryption algorithm that you are using. The supported encryption types are `PGP` and `GPG`. |
+| `publicKey` | The public key that corresponds to your customer managed keys used for signing your encrypted. This key must be Base64-encoded.|
+
+**Response**
+
+```json
+{    
+  "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2" 
+} 
+```
+
+| Property | Description |
+| --- | --- |
+| `publicKeyId` | This public key ID is returned in response to sharing your customer managed key with Experience Platform. You can provide this public key ID as the sign verification key ID when creating a dataflow for signed and encrypted data. |
+
++++
+
 ## Connect your cloud storage source to Experience Platform using the [!DNL Flow Service] API
 
 Once you have retrieved your encryption key pair, you can now proceed and create a source connection for your cloud storage source and bring your encrypted data to Platform. 
@@ -106,6 +188,7 @@ After creating a base connection, you must then follow the steps outlined in the
 >[!NOTE]
 >
 >You must have the following, in order to create a dataflow for encrypted data ingestion:
+>
 >* [Public key ID](#create-encryption-key-pair)
 >* [Source connection ID](../api/collect/cloud-storage.md#source)
 >* [Target connection ID](../api/collect/cloud-storage.md#target)
@@ -120,6 +203,10 @@ POST /flows
 ```
 
 **Request**
+
+>[!BEGINTABS]
+
+>[!TAB Create a dataflow for encrypted data ingestion]
 
 The following request creates a dataflow to ingest encrypted data for a cloud storage source.
 
@@ -177,6 +264,58 @@ curl -X POST \
 | `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
 | `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
 
+
+>[!TAB Create a dataflow to ingest encrypted and signed data]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "ACME Customer Data (with Sign Verification)",
+    "description": "ACME Customer Data (with Sign Verification)",
+    "flowSpec": {
+        "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "655f7c1b-1977-49b3-a429-51379ecf0e15"
+    ],
+    "targetConnectionIds": [
+        "de688225-d619-481c-ae3b-40c250fd7c79"
+    ],
+    "transformations": [
+        {
+            "name": "Mapping",
+            "params": {
+                "mappingId": "6b6e24213dbe4f57bd8207d21034ff03",
+                "mappingVersion":"0"
+            }
+        },
+        {
+            "name": "Encryption",
+            "params": {
+                "publicKeyId":"311ef6f8-9bcd-48cf-a9e9-d12c45fb7a17",
+                "signVerificationKeyId":"e31ae895-7896-469a-8e06-eb9207ddf1c2"
+            }
+        }
+    ],
+    "scheduleParams": {
+        "startTime": "1675793392",
+        "frequency": "once"
+    }
+}'
+```
+
+| Property | Description |
+| --- | --- |
+| `params.signVerificationKeyId` | The sign verification key ID is the same as the public key ID that was retrieved after sharing your Base64-encoded public key with Experience Platform. |
+
+>[!ENDTABS]
+
 **Response**
 
 A successful response returns the ID (`id`) of the newly created dataflow for your encrypted data.
@@ -190,4 +329,4 @@ A successful response returns the ID (`id`) of the newly created dataflow for yo
 
 ## Next steps
 
-By following this tutorial, you have created an encryption key pair for your cloud storage data, and a dataflow to ingested your encrypted data using the [!DNL Flow Service API]. For status updates on your dataflow's completeness, errors, and metrics, read the the guide on [monitoring your dataflow using the [!DNL Flow Service] API](./monitor.md).
+By following this tutorial, you have created an encryption key pair for your cloud storage data, and a dataflow to ingested your encrypted data using the [!DNL Flow Service API]. For status updates on your dataflow's completeness, errors, and metrics, read the guide on [monitoring your dataflow using the [!DNL Flow Service] API](./monitor.md).

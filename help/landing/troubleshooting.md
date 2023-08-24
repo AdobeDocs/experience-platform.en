@@ -62,7 +62,7 @@ Many PATCH operations in [!DNL Platform] APIs use [JSON Pointer](https://tools.i
 
 ## What are the system requirements for [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
-Depending on whether you are using the the UI or API, the following system requirements apply:
+Depending on whether you are using the UI or API, the following system requirements apply:
 
 **For UI based operations:**
 - A modern, standard web browser. While the latest version of [!DNL Chrome] is recommended, current and previous major releases of [!DNL Firefox], [!DNL Internet Explorer], and Safari are also supported.
@@ -84,7 +84,7 @@ The following status codes may be encountered on any [!DNL Experience Platform] 
 |--- | --- | ---|
 |400 | Bad request | The request was improperly constructed, missing key information, and/or contained incorrect syntax.|
 |401 | Authentication failed | The request did not pass an authentication check. Your access token may be missing or invalid. See the [OAuth token errors](#oauth-token-is-missing) section below for more details.|
-|403 | Forbidden | The resource was found, but you do not have the right credentials to view it.|
+|403 | Forbidden | The resource was found, but you do not have the right credentials to view it. <br> A likely cause of this error is that you might not have the required [access control permissions](/help/access-control/home.md) to access or edit the resource. Read how to [get the necessary attribute-based access control permissions](/help/landing/api-authentication.md#get-abac-permissions) to use Platform APIs. </p> |
 |404 | Not found | The requested resource could not be found on the server. The resource may have been deleted, or the requested path was entered incorrectly.|
 |500 | Internal server error | This is a server-side error. If you are making many simultaneous calls, you may be reaching the API limit and need to filter your results. (See the [!DNL Catalog Service] API developer guide sub-guide on [filtering data](../catalog/api/filter-data.md) to learn more.) Wait for a moment before trying your request again, and contact your administrator if the problem persists.|
 

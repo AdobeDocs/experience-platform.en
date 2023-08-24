@@ -35,7 +35,7 @@ The guardrails below generally apply to activation through [all destination type
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Maximum number of segments to a single destination | 250 | Soft | The recommendation is to map a maximum of 250 segments to a single destination in a dataflow. <br><br> If you need to activate more than 250 segments to a destination, you can either: <ul><li> Unmap segments that you don't want to activate anymore, or</li><li>Create a new dataflow to the desired destination and map segments to this new dataflow.</li></ul> <br> Note that in the case of some destinations, you may be limited to fewer than 250 segments mapped to the destination. Those destinations are called out further below on the page, in their respective sections. |
+|Maximum number of audiences to a single destination | 250 | Soft | The recommendation is to map a maximum of 250 audiences to a single destination in a dataflow. <br><br> If you need to activate more than 250 audiences to a destination, you can either: <ul><li> Unmap audiences that you don't want to activate anymore, or</li><li>Create a new dataflow to the desired destination and map audiences to this new dataflow.</li></ul> <br> Note that in the case of some destinations, you may be limited to fewer than 250 audiences mapped to the destination. Those destinations are called out further below on the page, in their respective sections. |
 |Maximum number of destinations | 100 | Soft | The recommendation is to create a maximum of 100 destinations that you can connect and activate data to *per sandbox*. [Edge personalization destinations (Custom personalization)](#edge-destinations-activation) can make up a maximum of 10 of the 100 recommended destinations.|
 |Maximum number of attributes mapped to a destination | 50 | Soft | In the case of several destinations and destination types, you can select profile attributes and identities to map for export. For optimal performance, a maximum of 50 attributes should be mapped in a dataflow to a destination.|
 |Type of data activated to destinations | Profile data, including identities and identity map | Hard| Currently, it is only possible to export *profile record attributes* to destinations. XDM attributes that describe event data are not supported for export at this time.|
@@ -60,7 +60,7 @@ The guardrails below apply to activation through [batch (file-based) destination
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
 |Activation frequency | One daily full export or more frequent incremental exports every 3, 6, 8, or 12 hours. | Hard| Read the [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) documentation sections for more information about the frequency increments for batch exports.|
-|Maximum number of segments that can pe exported at a given hour | 100 | Soft | The recommendation is to add a maximum of 100 segments to batch destination dataflows. |
+|Maximum number of audiences that can pe exported at a given hour | 100 | Soft | The recommendation is to add a maximum of 100 audiences to batch destination dataflows. |
 |Maximum number of rows (records) per file to activate | 5 million | Hard| Adobe Experience Platform automatically splits the exported files at 5 million records (rows) per file. Each row represents one profile. Split file names are appended with a number that indicates the file is part of a larger export, as such: `filename.csv`, `filename_2.csv`, `filename_3.csv`. For more information, read the [scheduling section](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) of the activate batch destinations tutorial.|
 
 {style="table-layout:auto"}
@@ -71,8 +71,8 @@ The guardrails below apply to the [ad-hoc activation](/help/destinations/api/ad-
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| Segments activated per ad-hoc activation job | 80 | Hard| Currently, each ad-hoc activation job can activate up to 80 segments. Attempting to activate more than 80 segments per job will cause the job to fail. This behavior is subject to change in future releases.|
-| Concurrent ad-hoc activation jobs per segment | 1 | Hard| Do not run more than one concurrent ad-hoc activation job per segment.|
+| Audiences activated per ad-hoc activation job | 80 | Hard| Currently, each ad-hoc activation job can activate up to 80 audiences. Attempting to activate more than 80 audiences per job will cause the job to fail. This behavior is subject to change in future releases.|
+| Concurrent ad-hoc activation jobs per audience | 1 | Hard| Do not run more than one concurrent ad-hoc activation job per audience.|
 
 {style="table-layout:auto"}
 
@@ -84,9 +84,104 @@ The guardrails below apply to activation through [edge personalization destinati
 | --- | --- | --- | --- |
 |Maximum number of [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations | 10 | Soft | You can set up dataflows to 10 Custom personalization destinations per sandbox.|
 |Maximum number of attributes mapped to a personalization destination per sandbox | 30 | Hard | A maximum of 30 attributes can be mapped in a dataflow to a personalization destination, per sandbox.|
-|Maximum number of segments mapped to a single [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destination | 50 | Soft | You can activate a maximum of 50 segments in an activation flow to a single Adobe Target destination.|
+|Maximum number of audiences mapped to a single [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destination | 50 | Soft | You can activate a maximum of 50 audiences in an activation flow to a single Adobe Target destination.|
 
 {style="table-layout:auto"}
+
+### [!BADGE Beta]{type=Informative} Dataset exports {#dataset-exports}
+
+Dataset exports are currently supported in a **[!UICONTROL First Full and then Incremental]** [pattern](/help/destinations/ui/export-datasets.md#scheduling). The guardrails described in this section apply to the first full export that occurs after a dataset export workflow is set up.
+
+| Guardrail | Limit | Limit Type | Description |
+| --- | --- | --- | --- |
+| Size of exported datasets | 5 billion records | Soft | The limit described here for dataset exports is a *soft guardrail*. For example, while the user interface will not block you from exporting datasets larger than 5 billion records, the behavior is unpredictable and exports might either fail or have very long export latency. |
+
+{style="table-layout:auto"}
+
+<!--
+
+### Dataset Types {#dataset-types}
+
+Datasets exported from Experience Platform can be of two types, as described below:
+
+**Timeseries**
+Timeseries datasets are also known as *XDM Experience Events* datasets in Experience Platform terminology.
+The dataset schema includes a top level *timestamp* column. Data is ingested in an append-only fashion.
+
+**Record** 
+Record datasets are also known as *XDM Individual Profile* datasets in Experience Platform terminology.
+The dataset schema does not include a top level *timestamp* column. Data is ingested in upsert fashion.
+
+The guardrails below are grouped by the format of the exported file, and then further by dataset type.
+
+**Parquet output**
+
+|Dataset type | Compression | Guardrail | Description |
+|---------|----------|---------|-----------|
+| Timeseries | N/A | Last seven days per file | The data from the last seven days only is exported. |
+| Record | N/A | Five billion records per file | Only the data from the last seven days is exported. |
+
+{style="table-layout:auto"}
+
+**JSON output**
+
+|Dataset type | Compression | Guardrail | Description |
+|---------|----------|---------|-----------|
+| Timeseries | N/A | Last seven days per file | The data from the last seven days only is exported. |
+| <p>Record</p> | <p><ul><li>Yes</li><li>No</li></ul></p> | <p><ul><li>Five billion records per compressed file</li><li>One million records per uncompressed file</li></ul></p> | <p>The record count of the dataset must be less than five billion for compressed files and one million for uncompressed files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</p> |
+
+{style="table-layout:auto"}
+
+-->
+
+<!--
+
+<table>
+<thead>
+  <tr>
+    <th>Output format</th>
+    <th>Dataset type</th>
+    <th>Compression</th>
+    <th>Guardrail</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Parquet</td>
+    <td>Timeseries</td>
+    <td>-</td>
+    <td>Last seven days per file</td>
+    <td>Only the data from the last seven days is exported.</td>
+  </tr>
+  <tr>
+    <td>Record</td>
+    <td>-</td>
+    <td>Five billion records per file</td>
+    <td>The record count of the dataset must be less than five billion, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
+  </tr>
+  <tr>
+    <td rowspan="3">JSON</td>
+    <td>Timeseries</td>
+    <td>-</td>
+    <td>Last seven days per file</td>
+    <td>Only the data from the last seven days is exported.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Record</td>
+    <td>Yes</td>
+    <td>Five billion records per file</td>
+    <td>The record count of the dataset must be less than five billion, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
+  </tr>
+  <tr>
+    <td>No</td>
+    <td>One million records per file</td>
+    <td>The record count of the dataset must be less than one million, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
+  </tr>
+</tbody>
+</table>
+
+-->
 
 ### Destination SDK guardrails {#destination-sdk-guardrails}
 
@@ -95,7 +190,7 @@ The guardrails below apply to activation through [edge personalization destinati
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
 | Maximum number of [private custom destinations](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5  | Soft| You can create a maximum of 5 private custom streaming or batch destinations using Destination SDK. Reach out to a custom care representative if you need to create more than 5 such destinations. |
-| Profile export policy for Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimum 1.800 and maximum 3.600)</li><li>`maxNumEventsInBatch` (minimum 1.000, maximum 10.000)</li></ul> | Hard| When using the [configurable aggregation](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation) option for your destination, be mindful of the minimum and maximum values that determine how often HTTP messages are sent to your API-based destination and how many profiles the messages should include.|
+| Profile export policy for Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimum 1.800 and maximum 3.600)</li><li>`maxNumEventsInBatch` (minimum 1.000, maximum 10.000)</li></ul> | Hard| When using the [configurable aggregation](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) option for your destination, be mindful of the minimum and maximum values that determine how often HTTP messages are sent to your API-based destination and how many profiles the messages should include.|
 
 {style="table-layout:auto"}
 

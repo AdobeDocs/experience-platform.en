@@ -45,7 +45,7 @@ At a high level, to create documentation for your destination, you need to [crea
 
 To assist you in creating your documentation page, Adobe has prefilled a [documentation template](./self-service-template.md) for you. Further below, you can find instructions how to edit the template and open a pull request. The Adobe documentation team will review and publish the documentation for your new destination.
 
-[Download the template here](assets/yourdestination-template.zip) and unzip the file to extract the `yourdestination.md` file.
+[Download the template here](../assets/docs-framework/yourdestination-template.zip) and unzip the file to extract the `yourdestination.md` file.
 
 Instructions on using the template to create your documentation page are further below.
 

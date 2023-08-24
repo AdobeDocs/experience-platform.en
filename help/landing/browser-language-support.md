@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
 solution: Experience Platform
 title: Browser and Language Support for the Experience Platform UI
 description: Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
@@ -32,7 +31,13 @@ The Platform UI is currently available in the following languages:
 * English
 * French
 * German
+* Spanish
 * Japanese
+* Italian
+* Korean
+* Chinese (Simplified)
+* Chinese (Traditional)
+* Brazilian Portuguese
 
 ### Change default language
 

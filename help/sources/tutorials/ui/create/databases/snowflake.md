@@ -1,11 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics;Snowflake
 title: Create a Snowflake  Source Connection in the UI
 type: Tutorial
 description: Learn how to create a Snowflake source connection using the Adobe Experience Platform UI.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
 ---
 # Create a [!DNL Snowflake] source connection in the UI
+
+>[!IMPORTANT]
+>
+>The [!DNL Snowflake] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
 This tutorial provides steps for creating a [!DNL Snowflake] source connector using the Adobe Experience Platform user interface.
 
@@ -27,9 +31,14 @@ In order to access your Snowflake account on [!DNL Platform], you must provide t
 | Database | The [!DNL Snowflake] database contains the data you want to bring the Platform. |
 | Username | The username for the [!DNL Snowflake] account. |
 | Password | The password for the [!DNL Snowflake] user account. |
+| Role | The default access control role to use in the [!DNL Snowflake] session. The role should be an existing one that has already been assigned to the specified user. The default role is `PUBLIC`. |
 | Connection string | The connection string used to connect to your [!DNL Snowflake] instance. The connection string pattern for [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 For more information about these values, refer to [this Snowflake document](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!NOTE]
+>
+>You must set the `PREVENT_UNLOAD_TO_INLINE_URL` flag to `FALSE` to allow data unloading from your [!DNL Snowflake] database to Experience Platform.
 
 ## Connect your  Snowflake account
 

@@ -51,7 +51,7 @@ The **[!UICONTROL Analytics source add data]** step provides you with a list of 
 
 A report suite is a container of data that forms the basis of [!DNL Analytics] reporting. An organization can have many report suites, each containing different datasets. 
 
-You can ingest report suites from any region (United States, United Kingdom, or Singapore) as long as they are mapped to the same organization as the Experience Platform sandbox instance in which the source connection is being created in. A report suite can be ingested using only a single active dataflow. A report suite that is not selectable has already been ingested, either in the the sandbox that you are using or in a different sandbox.
+You can ingest report suites from any region (United States, United Kingdom, or Singapore) as long as they are mapped to the same organization as the Experience Platform sandbox instance in which the source connection is being created in. A report suite can be ingested using only a single active dataflow. A report suite that is not selectable has already been ingested, either in the sandbox that you are using or in a different sandbox.
 
 Multiple in-bound connections can be made to bring multiple report suites into the same sandbox. If the report suites have differing schemas for variables (such as eVars or events), they should be mapped to specific fields in the custom field groups and avoid data conflicts using [Data Prep](../../../../../data-prep/ui/mapping.md). Report suites can only be added to a single sandbox.
 
@@ -113,14 +113,25 @@ Platform automatically detects your mapping sets for any friendly name conflicts
 
 ![mapping](../../../../images/tutorials/create/analytics/mapping.png)
 
-If there are friendly name conflicts between your source Report Suite and your selected schema, you can still continue with your [!DNL Analytics] dataflow, acknowledging that the field descriptors will not be changed. Alternatively, you can opt to create a new schema with a blank set of descriptors.
-
-Select **[!UICONTROL Next]** to proceed.
-
-![caution](../../../../images/tutorials/create/analytics/caution.png)
+>[!TIP]
+>
+>If there are friendly name conflicts between your source Report Suite and your selected schema, you can still continue with your [!DNL Analytics] dataflow, acknowledging that the field descriptors will not be changed. Alternatively, you can opt to create a new schema with a blank set of descriptors.
 
 #### Custom mappings
 
+You can use Data Prep functions to add new custom mapping or calculated fields for custom attributes. To add custom mappings, select **[!UICONTROL Custom]**.
+
+![custom](../../../../images/tutorials/create/analytics/custom.png)
+
+Depending on your needs, you can select either **[!UICONTROL Add new mapping]** or **[!UICONTROL Add calculated field]** and proceed to create custom mappings for your custom attributes. For comprehensive steps on how to use Data Prep functions, please read the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
+
+The following documentation provides further resources on understanding Data Prep, calculated fields, and mapping functions:
+
+* [Data Prep overview](../../../../../data-prep/home.md)
+* [Data Prep mapping functions](../../../../../data-prep/functions.md)
+* [Add calculated fields](../../../../../data-prep/ui/mapping.md#calculated-fields)
+
+<!-- 
 To use Data Prep functions and add new mapping or calculated fields for custom attributes, select **[!UICONTROL View custom mappings]**.
 
 ![view-custom-mapping](../../../../images/tutorials/create/analytics/view-custom-mapping.png)
@@ -149,13 +160,7 @@ Similar to the source schema, you can use the interface to navigate through the 
 
 With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
-![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png)
-
-The following documentation provides further resources on understanding Data Prep, calculated fields, and mapping functions:
-
-* [Data Prep overview](../../../../../data-prep/home.md)
-* [Data Prep mapping functions](../../../../../data-prep/functions.md)
-* [Add calculated fields](../../../../../data-prep/ui/mapping.md#calculated-fields)
+![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
 ### Filtering for Real-Time Customer Profile {#filtering-for-profile}
 
