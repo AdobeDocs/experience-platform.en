@@ -116,7 +116,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 | Component type | Name | Description |
 | --- | --- | --- |
-| Class | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files)  | Use this class to bring in prospect profiles sourced from data vendors' top-of-the-funnel customer acquisition use cases. |
+| Class | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files)  | Use this class to bring in prospect profiles sourced from data vendors' top-of-the-funnel customer acquisition use cases. Refer to the [[!UICONTROL XDM Individual Prospect Profile]](../../xdm/classes/prospect.md) documentation to see examples and learn more. |
 
 {style="table-layout:auto"}
 
