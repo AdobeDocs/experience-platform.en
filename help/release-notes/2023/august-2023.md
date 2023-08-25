@@ -101,7 +101,6 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 | Feature | Description |
 | --- | --- |
 | Support for filtering secondary identities | You can now use Data Prep to filter out identities coming from Adobe Analytics, such as AAID and AACUSTOMID. If filtered out, these identities do not get ingested into Real-Time Customer Profile. Unfiltered data will continue to be ingested into the data lake. |
-| Support for new `correlationID` field for Adobe Analytics | The `_experience.decisioning.propositions.scopeDetails.correlationID` field is now available in the Adobe Analytics source connector schema. This field is used in support of A4T classifications and will be populated starting September 2023. |
 
 {style="table-layout:auto"}
 
@@ -166,6 +165,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | --- | --- |
 | General availability of [!DNL SugarCRM] | [!DNL SugarCRM] sources are now available. Use the [!DNL SugarCRM Accounts & Contacts] and the [!DNL SugarCRM Events] sources to bring data from your [!DNL SugarCRM] account to Experience Platform. For more information, read the [[!DNL SugarCRM] overview](../../sources/connectors/crm/sugarcrm.md). |
 | Support for on-demand ingestion for sources dataflows in the UI | You can now create flow runs on demand for an existing sources dataflow in the UI. For more information, read the guide on [creating an on-demand flow run for sources using the UI](../../sources/tutorials/ui/on-demand-ingestion.md). |
+| Support for new `correlationID` field for Adobe Analytics | The `_experience.decisioning.propositions.scopeDetails.correlationID` field is now available in the Adobe Analytics source connector schema. This field is used in support of A4T classifications and will be populated starting September 2023. |
 
 {style="table-layout:auto"}
 
