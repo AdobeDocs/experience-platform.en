@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform Web SDK Overview
-description: Learn how to use Adobe Experience Platform Web SDK to integrate Platform capabilities into your website.
+title: Adobe Experience Platform Web Software Development Kit (SDK) Overview
+description: Learn how to use the Adobe Experience Platform Web SDK to integrate Platform capabilities into your website.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
 ---
@@ -19,11 +19,11 @@ The Adobe Experience Platform Web SDK is part of the collection that makes up th
 * **[Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/):** An extension to the v5 mobile SDK to allow customers to use the new deployment methodology
 * **[Adobe Experience Platform Edge Network](../server-api/overview.md):** A global distributed network of servers that enable a new methodology of deploying [!DNL Adobe] products
 
-The [!DNL Adobe Experience Edge] is a new framework for low-latency data collection, pluggable computing and rapid data activation across all addressable channels.
+The Adobe Experience Edge is a framework for low-latency data collection, pluggable computing, and rapid data activation across all addressable channels.
 
 [!DNL Adobe Experience Edge] provides a single consolidated SDK for every channel (JavaScript, Mobile, Server-side), which sends data to a common Adobe domain (`adobedc.net`) and receives a single payload back for data and experience delivery.
 
-On the server-side, a unified edge gateway and a common platform service framework helps make it easy to plug-in and deploy new capabilities into this real-time computing environment. This architecture:
+On the server-side, a unified edge gateway and a common platform service framework help make it easy to deploy new capabilities into this real-time computing environment. This architecture:
 
 * Decreases customer time to value
 * Ends the need for "point" integrations
@@ -59,13 +59,11 @@ The following video demonstrates Adobe Experience Platform [!DNL Web SDK] and Ad
 
 ## Migrating from existing libraries to Web SDK {#migrating-to-web-sdk}
 
-To simplify your migration from any of the [existing libraries](#sdks) to Web SDK, Adobe offers a streamlined upgrade path. This path allows you to migrate each individual page of your website to Web SDK without the need of migrating your entire website at once.
-
-This means you can use Web SDK on a page and leave the existing libraries on the other pages, until you can migrate them as well.
+To simplify your migration from any of the [existing libraries](#sdks) to Web SDK, Adobe offers a streamlined upgrade path. This path allows you to migrate each individual page of your website to Web SDK without the need of migrating your entire website at once. You can use the Web SDK on a given page while existing libraries reside on other pages. Once you are ready, you can migrate those other pages as well.
 
 ### Migration of `AT.js` to Web SDK considerations {#considerations}
 
-Before migrating pages that use `AT.js` to Web SDK, make sure to enable the following Web SDK configuration options. This ensures the visitor profile is kept while navigating from pages with `AT.js` to pages using Web SDK.
+Before migrating pages that use `AT.js` to Web SDK, make sure to enable the following Web SDK configuration options. These options ensure that the visitor profile is kept while navigating from pages with `AT.js` to pages using Web SDK.
 
 * [`idMigrationEnabled`](fundamentals/configuring-the-sdk.md#id-migration-enabled)
 * [`targetMigrationEnabled`](fundamentals/configuring-the-sdk.md#targetMigrationEnabled)
