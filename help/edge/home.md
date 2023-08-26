@@ -6,7 +6,7 @@ exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
 ---
 # Adobe Experience Platform Web SDK overview {#overview}
 
-Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with its services through the Adobe Experience Platform Edge Network. Adobe offers two methods to implement the Web SDK:
+Adobe Experience Platform Web Software Development Kit (SDK) is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with its services through the Adobe Experience Platform Edge Network. Adobe offers two methods to implement the Web SDK:
 
 * Manual implementation using `alloy.js`. This user guide provides documentation for this implementation method.
 * The [Web SDK tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). See [Implement Adobe Experience Cloud with Web SDK tutorial](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) for more information.
@@ -21,9 +21,9 @@ The Adobe Experience Platform Web SDK is part of the collection that makes up th
 
 The [!DNL Adobe Experience Edge] is a new framework for low-latency data collection, pluggable computing and rapid data activation across all addressable channels.
 
-[!DNL Adobe Experience Edge] provides a single consolidated SDK for every channel (JavaScript, Mobile, Server-side), which sends data to a common Adobe domain (`adobedc.net`) and receives a single payload back for data and experience delivery.  
+[!DNL Adobe Experience Edge] provides a single consolidated SDK for every channel (JavaScript, Mobile, Server-side), which sends data to a common Adobe domain (`adobedc.net`) and receives a single payload back for data and experience delivery.
 
-On the server-side, a unified edge gateway and a common platform services framework makes it easy to plug-in and deploy new capabilities into this real-time computing environment.  This architecture:
+On the server-side, a unified edge gateway and a common platform service framework helps make it easy to plug-in and deploy new capabilities into this real-time computing environment. This architecture:
 
 * Decreases customer time to value
 * Ends the need for "point" integrations
@@ -32,7 +32,7 @@ On the server-side, a unified edge gateway and a common platform services framew
 * Increases the speed of innovation
 * Creates sustained competitive advantages for Adobe customers
 
-A single consolidated edge system allows customers to manage their advertising, marketing or personalization campaigns across all channels as an integrated experience. It allows [!DNL Adobe] to deliver services with lower total cost of ownership for customers.  It also helps increase the speed of product innovation by making the real-time edge pluggable and allowing [!DNL Adobe] and its customers to more rapidly add new capabilities and customer-defined logic to that real time system. 
+A single consolidated edge system allows customers to manage their advertising, marketing, or personalization campaigns across all channels as an integrated experience. It also allows Adobe to deliver services with lower total cost of ownership for customers. The edge system is designed to accommodate most types of data, allowing you to map your own data model to be ingested by multiple Experience Cloud products.
 
 ## Video overview {#video}
 
@@ -42,7 +42,7 @@ The following video gives an overview of the Adobe Experience Platform [!DNL Web
 
 ## Libraries replaced by the Web SDK {#sdks}
 
-The Web SDK is not just a wrapper around existing libraries. It is a completely new library, written from the ground up to incorporate functionalities of existing libraries. Its purpose is to end challenges with tags having to fire in the right order, inconsistency with library versioning challenges, and better dependency management. It is a new way to implement the [!DNL Experience Cloud] and it is [open source](https://github.com/adobe/alloy).
+The Web SDK is not just a wrapper around existing libraries. It is a new library, written from the ground up to incorporate functionalities of existing libraries. Its purpose is to end challenges with tags having to fire in the right order, inconsistency with library versioning challenges, and better dependency management. It is a new way to implement the [!DNL Experience Cloud] and it is [open source](https://github.com/adobe/alloy).
 
 The Web SDK replaces the following SDKs:
 
@@ -59,11 +59,11 @@ The following video demonstrates Adobe Experience Platform [!DNL Web SDK] and Ad
 
 ## Migrating from existing libraries to Web SDK {#migrating-to-web-sdk}
 
-To simplify your migration from any of the [existing libraries](#sdks) to Web SDK, Adobe offers a streamlined upgrade path, allowing you to migrate each individual page of your website to Web SDK, without the need of migrating your entire website at once.
+To simplify your migration from any of the [existing libraries](#sdks) to Web SDK, Adobe offers a streamlined upgrade path. This path allows you to migrate each individual page of your website to Web SDK without the need of migrating your entire website at once.
 
 This means you can use Web SDK on a page and leave the existing libraries on the other pages, until you can migrate them as well.
 
-### `AT.js` to Web SDK migration considerations {#considerations}
+### Migration of `AT.js` to Web SDK considerations {#considerations}
 
 Before migrating pages that use `AT.js` to Web SDK, make sure to enable the following Web SDK configuration options. This ensures the visitor profile is kept while navigating from pages with `AT.js` to pages using Web SDK.
 
@@ -76,6 +76,6 @@ Before migrating pages that use `AT.js` to Web SDK, make sure to enable the foll
 >The following Target features are not supported when migrating from at.js to Web SDK:
 >
 >* [Redirect offers](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html)
->* [CNAME and cross-domain support](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/?lang=en)
+>* [CNAME and cross-domain support](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/atjs-cookies.html)
 
 After migrating from `AT.js` to the Web SDK, remove the `targetMigrationEnabled` option from your configuration.
