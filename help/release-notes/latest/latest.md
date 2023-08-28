@@ -15,6 +15,7 @@ Updates to existing features in Adobe Experience Platform:
 - [Data Collection](#data-collection)
 - [Data Ingestion](#data-ingestion)
 - [Data Prep](#data-prep)
+- [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Segmentation Service](#segmentation)
@@ -107,6 +108,17 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 For more information, please read the [Data Prep overview](../../data-prep/home.md).
 
+## Destinations {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+- You can now [activate prospect audiences](../../destinations/ui/activate-prospect-audiences.md) to file-based destinations.
+- The general [activation guardrail](../../destinations/guardrails.md#general-activation-guardrails) of maximum 100 destinations per sandbox has been updated to be a _hard limit_.
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
 ## Experience Data Model (XDM) {#xdm}
 
 XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
@@ -115,7 +127,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 | Component type | Name | Description |
 | --- | --- | --- |
-| Class | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files)  | Use this class to bring in prospect profiles sourced from data vendors' top-of-the-funnel customer acquisition use cases. |
+| Class | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files)  | Use this class to bring in prospect profiles sourced from data vendors' top-of-the-funnel customer acquisition use cases. Refer to the [[!UICONTROL XDM Individual Prospect Profile]](../../xdm/classes/prospect.md) documentation to see examples and learn more. |
 
 {style="table-layout:auto"}
 
