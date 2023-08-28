@@ -336,4 +336,4 @@ Read the table below for examples:
 | --- | --- | --- |
 | What is my biggest segment? | What is my biggest segment? Using data. | Explicitly tell the AI Assistant that you want the answer to be based on data. |
 | What is my biggest segment? | List my biggest segment. | There are instances where a "what..." question can be mistaken for a documentation-based question. Using a command like "list" is a stronger indicator that you are asking a question with data in context. |
-| How many datasets do I have? | Count my datasets. | While the original question segments, it does not work with datasets. |
+| How many datasets do I have? | Count my datasets. | The original question works for segments, but it may not work with datasets. |
