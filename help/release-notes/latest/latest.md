@@ -15,6 +15,7 @@ Updates to existing features in Adobe Experience Platform:
 - [Data Collection](#data-collection)
 - [Data Ingestion](#data-ingestion)
 - [Data Prep](#data-prep)
+- [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Segmentation Service](#segmentation)
@@ -106,6 +107,17 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 {style="table-layout:auto"}
 
 For more information, please read the [Data Prep overview](../../data-prep/home.md).
+
+## Destinations {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+- You can now activate prospect audiences to downstream destinations. Currently, exporting prospect audiences is available only to the [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md) destination.
+- The general [activation guardrail](../../destinations/guardrails.md#general-activation-guardrails) of maximum 100 destinations per sandbox has been updated to be a _hard limit_.
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
