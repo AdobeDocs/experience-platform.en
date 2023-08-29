@@ -10,43 +10,47 @@ hidefromtoc: yes
 
 Use the [!DNL LiveRamp - Distribution] connection to activate audiences previously onboarded into LiveRamp through the [LiveRamp - Onboarding](liveramp-onboarding.md) connection, to destinations which use the [!DNL Ramp ID] identifier.
 
+## Supported destinations {#supported-destinations}
+
 [!DNL LiveRamp - Distribution] currently supports audience activation to the following platforms:
 
+* 4C Insights
+* Acast
+* Amobee
+* Ampersand.tv
+* Captify
+* Cardlytics
+* DAX
+* [Disney](#disney)
 * Hulu
-* Roku
-* ...
-* ...
-* ...
+* Ibotta
+* iHeartMedia
+* Index Exchange
+* Magnite
+* One Fox
+* Pandora
+* Reddit
+* Rhythm One (Unruly)
+* [Roku](#roku)
+* Spotify
+* Taboola
+* TargetSpot
+* Teads
+* WB Discovery
 
 ## Use cases {#use-cases}
 
 To help you better understand how and when you should use the [!DNL LiveRamp - Distribution] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
 
-The marketing team of a sports apparel retailer used the [LiveRamp - Onboarding](liveramp-onboarding.md) connection to send audiences from Experience Platform to their LiveRamp account. Through the [!DNL LiveRamp - Distribution] connection they can now trigger the activation of the onboarded audiences so that they can target users on mobile, open web, social, and [!DNL CTV] platforms, using the [!DNL Ramp ID] identifier. 
+The marketing team of a sports apparel retailer used the [LiveRamp - Onboarding](liveramp-onboarding.md) connection to send audiences from Experience Platform to their LiveRamp account.
+
+Through the [!DNL LiveRamp - Distribution] connection they can now trigger the activation of the onboarded audiences to the destinations mentioned at the top of this page, so that they can target users on mobile, open web, social, and [!DNL CTV] platforms.
 
 ## Prerequisites {#prerequisites}
 
 The [!DNL LiveRamp - Distribution] connection requires you to have already onboarded audiences from Experience Platform into LiveRamp. To do that, see the [LiveRamp - Onboarding](liveramp-onboarding.md) documentation.
 
 Before you can send data from Experience Platform to [!DNL LiveRamp - Onboarding], you need your [!DNL LiveRamp] credentials. Please reach out to your [!DNL LiveRamp] representative to obtain your credentials, if you don't already have them.
-
-## Supported identities {#supported-identities}
-
-[!DNL LiveRamp - Distribution] supports the activation of identities such as PII-based identifiers, known identifiers, and custom IDs, described in the official [LiveRamp documentation](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers).
-
-## Supported audiences {#supported-audiences}
-
-This section describes all the audiences that you can export to this destination.
-
-This destination supports the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
-
-Additionally, this destination also supports the activation of the additional audiences described in the table below.
-
-| Audience type | Description | 
----------|----------|
-| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#importing-an-audience) into Experience Platform from CSV files. |
-
-{style="table-layout:auto"}
 
 ## Connect to the destination {#connect}
 
@@ -60,46 +64,69 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-**SFTP authentication with password** {#sftp-password}
+* **[!UICONTROL Username]**: Your LiveRamp account username.
+* **[!UICONTROL Password]**: Your LiveRamp account password.
+* **[!UICONTROL Token URL]**: Your LiveRamp token URL.
+* **[!UICONTROL LiveRamp organization ID]**: The organization ID assigned to your LiveRamp account.
 
-![Sample screenshot showing how to authenticate to the destination using SFTP with password](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
 
-* **[!UICONTROL Username]**: The username for your [!DNL LiveRamp - Onboarding] storage location.
-* **[!UICONTROL Password]**: The password for your [!DNL LiveRamp - Onboarding] storage location.
-* **[!UICONTROL PGP/GPG encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
-    ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL Subkey ID]**:If you provide an encryption key, you must also provide an encryption **[!UICONTROL Subkey ID]**. See the [!DNL LiveRamp] [encryption documentation](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) to learn how to obtain the subkey ID.
+## Destination-specific settings {#destination-settings}
 
-**SFTP with SSH key authentication** {#sftp-ssh}
+Each of the destinations [supported](#supported-destinations) by [!DNL LiveRamp - Onboarding] requires you to fill in specific configuration options.
 
-![Sample screenshot showing how to authenticate to the destination using SSH key](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png)
+See the sections below for detailed guidance on how to configure each destination.
 
-* **[!UICONTROL Username]**: The username for your [!DNL LiveRamp - Onboarding] storage location.
-* **[!UICONTROL SSH Key]**: The private [!DNL SSH] key used to log in to your [!DNL LiveRamp - Onboarding] storage location. The private key must be formatted as a [!DNL Base64]-encoded string and must not be password protected.
-
-    * To connect your [!DNL SSH] key to the [!DNL LiveRamp - Onboarding] server, you must submit a ticket through [!DNL LiveRamp]'s technical support portal, and provide your public key. See more information in the [LiveRamp documentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
-
-* **[!UICONTROL PGP/GPG encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
-    ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL Subkey ID]**:If you provide an encryption key, you must also provide an encryption **[!UICONTROL Subkey ID]**. See the [!DNL LiveRamp] [encryption documentation](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) to learn how to obtain the subkey ID.
-
-### Fill in destination details {#destination-details}
+### Disney {#disney}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_liveramp_subkey"
->title="Encryption subkey ID"
->abstract="The subkey ID used for encryption, based on the LiveRamp public encryption key. This field is required if you provided an encryption key in the authentication step."
->additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="Learn how to obtain the subkey ID"
+>id="platform_destinations_liveramp_distribution_agreement"
+>title="Advertiser data terms agreement"
+>abstract="Type in `I AGREE` to confirm the acknowledgement and agreement to the Disney advertiser data terms."
+>additional-url="" text="Read the agreement"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_disney_client"
+>title="Distribution account"
+>abstract="Select your Disney distribution account from the list."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_disney_email"
+>title="Email address"
+>abstract="Enter an email address tied to an individual. This email address serves as a signature to the advertiser data terms agreement."
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Platform UI screenshot showing how to fill in details for your destination](../../assets/catalog/advertising/liveramp-onboarding/liveramp-connection-details.png)
+* **[!UICONTROL Advertiser data terms agreement]**: Type in `I AGREE` to confirm the acknowledgement and agreement to the Disney advertiser data terms.
+* **[!UICONTROL Distribution account]**: Select your Disney distribution account from the list.
+* **[!UICONTROL Email address]**: Enter an email address tied to an individual. This email address serves as a signature to the advertiser data terms agreement.
 
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Folder path]**: The path to the [!DNL LiveRamp] `uploads` subfolder that will host the exported files. The `uploads` prefix is automatically added to the folder path. [!DNL LiveRamp] recommends creating a dedicated subfolder for deliveries from Adobe Real-Time CDP to keep the files separate from any other existing feeds and to ensure all automation runs smoothly. 
-    *  For example, if you want to export your files to `uploads/my_export_folder`, type in `my_export_folder` in the **[!UICONTROL Folder path]** field.
-*  **[!UICONTROL Compression format]**: Select the compression type that Experience Platform should use for the exported files. Available options are **[!UICONTROL GZIP]** or **[!UICONTROL None]**.
+![Platform UI image showing the destination connection screen]()
+
+### Roku {#Roku}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_roku_email"
+>title="Roku account email address"
+>abstract="Enter the email address tied to your Roku account."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_roku_representative-email"
+>title="Roku account representative email address"
+>abstract="Enter the email address of your Roku account representative. To enter multiple addresses, separate them by commas."
+
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
+
+* **[!UICONTROL Roku account email address]**: Enter the email address tied to your Roku account.
+* **[!UICONTROL Roku account representative email address]**: Enter the email address of your Roku account representative. To enter multiple addresses, separate them by commas.
+
+![Platform UI image showing the destination connection screen]()
+
+## Configure identifier settings {#identifier-settings}
+
+Each of the destinations [supported](#supported-destinations) by [!DNL LiveRamp - Onboarding] supports specific identifiers.
+
+Before you can connect to the destination, select the identifiers supported by your destination.
+
 
 ### Enable alerts {#enable-alerts}
 
@@ -113,8 +140,13 @@ When you are finished providing details for your destination connection, select 
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
+The [!DNL LiveRamp - Distribution] connection activates audiences which have already been onboarded to your LiveRamp account through the [LiveRamp - Onboarding](liveramp-onboarding.md) connection.
 
+To successfully activate your audiences, in this step, you must select the same audiences that you have already onboarded to LiveRamp.
+
+>[!IMPORTANT]
+>
+>Selecting audiences which have not been previously onboarded to LiveRamp will not trigger the onboarding of the new audiences.
 
 ## Exported data / Validate data export {#exported-data}
 
