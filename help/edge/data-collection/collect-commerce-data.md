@@ -6,9 +6,7 @@ exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
 ---
 # Collect commerce, product, and order information
 
-If you have products on your site, you can use this page as a guidance for data collection to get the most value out of the Adobe Experience Cloud.
-
-This document uses the XDM [Commerce Schema](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md) field group. This field group consists of two main parts: the `commerce` object, and the `productListItems` array. The `commerce` object lets you indicate which actions happen to the `productListItems` array.
+If your organization sells products or services, you can use this page as a guide around how to track those products and services. This document uses the XDM [Commerce Schema](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md) field group. This field group consists of two main parts: the `commerce` object, and the `productListItems` array. The `commerce` object lets you indicate which actions happen to the `productListItems` array.
 
 >[!TIP]
 >
@@ -20,7 +18,7 @@ Fields available in the `commerce` object.
 
 >[!TIP]
 >
->A measure has two fields: `id` and `value`. Most of the time, you only use the `value` field (for example, `'value':1`). The `id` field allows you to set a unique identifier that you can use to keep track of when the measure was sent. See the XDM documentation for [Measure](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/measure.schema.md) for more information.
+>A measure has two fields: `id` and `value`. Most of the time, you only use the `value` field (for example, `'value':1`). The `id` field allows you to set a unique identifier for tracking when the measure was sent. See the XDM documentation for [Measure](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/measure.schema.md) for more information.
 
 | Measure | Recommendation | Description |
 |---|---|---|
@@ -29,7 +27,7 @@ Fields available in the `commerce` object.
 |[productListAdds](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistadds)|Highly Recommended|A product is added to a list. Be sure to set the product in the `productListItems` at the same time.|
 |[productListOpens](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistopens)|Optional|A new product list is created. (For example, a new shopping cart is created.)|
 |[productListRemovals](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistremovals)|Highly Recommended|A product is removed from a product list.|
-|[productListReopens](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistreopens)|Optional|A product list is reactivated by the user. This often happens in remarketing campaigns.|
+|[productListReopens](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistreopens)|Optional|A product list is reactivated by the user. This action often happens in remarketing campaigns.|
 |[productListViews](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistviews)|Highly Recommended|A list of products is viewed.|
 |[productViews](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductviews)|Highly Recommended|A view of a product occured. Be sure to set the product viewed in the `productListItems`.|
 |[purchases](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmpurchases)|Highly Recommended|An order is accepted. Must have a product list.|
@@ -57,17 +55,77 @@ alloy("sendEvent", {
 
 +++
 
+## Order object
+
+The commerce object has a dedicated object for collecting order details.
+
+| Order | Option | Recommendation | Description |
+|---|---|---|---|
+|[currencyCode](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmcurrencycode)|||The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency for the order total.|
+|[payments[]](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmpayments)|||The list of payments on an order. A [paymentItem](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md) includes the following.|
+||[currencyCode](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmcurrencycode)|Optional|The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency for this payment method.|
+||[paymentAmount](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmpaymentamount)|Highly Recommended|The value of the payment in the currency code specified.|
+||[paymentType](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmpaymenttype)|Highly Recommended|The type of payment (for example, `credit_card`, `gift_card`, `paypal`). See the list of [known values](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmpaymenttype-known-values) for details.|
+||[transactionID](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmtransactionid)|Optional|A unique ID for this payment transaction.|
+|[priceTotal](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmpricetotal)||Highly Recommended|The total for this order after all discounts and taxes have been applied.|
+|[purchaseID](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmpurchaseid)||Highly Recomended|The unique identifier assigned by the seller for this purchase.|
+|[purchaseOrderNumber](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmpurchaseordernumber)||Optional|A unique identifier assigned by the purchaser for this purchase.|
+
+### Order object examples
+
++++**`order`**
+
+A Web SDK `sendEvent` call setting the `order` object that applies to multiple products in the `productListItems` array:
+
+```javascript
+alloy("sendEvent",{
+  "xdm":{
+    "commerce":{
+      "order":{
+        "purchaseID":"123456789",
+        "currencyCode":"USD",
+        "priceTotal":39.98,
+        "payments":[
+          {
+            "transactionID":"amx12345",
+            "paymentAmount":39.98,
+            "paymentType":"credit_card",
+            "currencyCode":"USD"
+          }
+        ]
+      }
+    },
+    "productListItems":[
+      {
+        "SKU":"HT105",
+        "name":"The Big Floppy Hat",
+        "priceTotal":29.99,
+        "quantity":1
+      },
+      {
+        "SKU":"HT104",
+        "name":"The Small Floppy Hat",
+        "priceTotal":9.99,
+        "quantity":1
+      }
+    ]
+  }
+});
+```
+
++++
+
 ## Product list object
 
-The product list indicates which products are related to the corresponding action. It is a list of [productListItems](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md). Each product has a number of optional fields.
+The product list indicates which products are related to the corresponding action. It is a list of [productListItems](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md). Each product has several optional fields.
 
 | Field | Recommendation | Description |
 |---|---|---|
-|[currencyCode](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmcurrencycode)|Optional|The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency for for the product. This is only useful when you can have products with different currency codes and when it applies. For example, when there is a purchase or add to cart.|
+|[currencyCode](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmcurrencycode)|Optional|The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency for for the product. This field typically only applies when you have multiple products in the product list with different currency codes.|
 |[priceTotal](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmpricetotal)|Highly Recommended|Should only be set when applicable. For example, it might not be possible to set on `productView` event because different variations of the product can have different prices but on a `productListAdds` event.|
 |[product](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmproduct)|Highly Recommended|The XDM ID for the product.|
 |[productAddMethod](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmproductaddmethod)|Highly Recommended|The method that was used to add a product item to the list by the visitor. Set with `productListAdds` measures, and should only be used when a product is added to the list. Examples include `add to cart button`, `quick add`, and `upsell`.|
-|[productName](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmname)|Highly Recommended|This is set to the display name or human-readable name of the product.|
+|[productName](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmname)|Highly Recommended| The display name or human-readable name of the product.|
 |[quantity](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmquantity)|Highly Recommended|The number of units the customer has indicated they require of the product. Should be set on `productListAdds`, `productListRemoves`, `purchases`, `saveForLaters`, and so on.|
 |[SKU](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmsku)|Highly Recommended|Store Keeping Unit. It is the unique identifier for the product.|
 
@@ -159,66 +217,6 @@ alloy("sendEvent",{
         "name":"The Small Floppy Hat",
         "quantity":1,
         "priceTotal":9.99
-      }
-    ]
-  }
-});
-```
-
-+++
-
-## Order object
-
-The commerce object also has a field for collecting order details called `order`.
-
-| Order | Option | Recommendation | Description |
-|---|---|---|---|
-|[currencyCode](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmcurrencycode)|||The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency for the order total.|
-|[payments[]](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmpayments)|||The list of payments on an order. A [paymentItem](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md) includes the following.|
-||[currencyCode](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmcurrencycode)|Optional|The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency for this payment method.|
-||[paymentAmount](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmpaymentamount)|Highly Recommended|The value of the payment in the currency code specified.|
-||[paymentType](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmpaymenttype)|Highly Recommended|The type of payment (for example, `credit_card`, `gift_card`, `paypal`). See the list of [known values](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmpaymenttype-known-values) for details.|
-||[transactionID](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmtransactionid)|Optional|A unique ID for this payment transaction.|
-|[priceTotal](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmpricetotal)||Highly Recommended|The total for this order after all discounts and taxes have been applied.|
-|[purchaseID](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmpurchaseid)||Highly Recomended|The unique identifier assigned by the seller for this purchase.|
-|[purchaseOrderNumber](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmpurchaseordernumber)||Optional|A unique identifier assigned by the purchaser for this purchase.|
-
-### Order object examples
-
-+++**`order`**
-
-A Web SDK `sendEvent` call setting the `order` object that applies to multiple products in the `productListItems` array:
-
-```javascript
-alloy("sendEvent",{
-  "xdm":{
-    "commerce":{
-      "order":{
-        "purchaseID":"123456789",
-        "currencyCode":"USD",
-        "priceTotal":39.98,
-        "payments":[
-          {
-            "transactionID":"amx12345",
-            "paymentAmount":39.98,
-            "paymentType":"credit_card",
-            "currencyCode":"USD"
-          }
-        ]
-      }
-    },
-    "productListItems":[
-      {
-        "SKU":"HT105",
-        "name":"The Big Floppy Hat",
-        "priceTotal":29.99,
-        "quantity":1
-      },
-      {
-        "SKU":"HT104",
-        "name":"The Small Floppy Hat",
-        "priceTotal":9.99,
-        "quantity":1
       }
     ]
   }
