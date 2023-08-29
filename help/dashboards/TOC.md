@@ -19,8 +19,7 @@ feature: Dashboards
   * [Audiences](guides/audiences.md)
   * [Destinations](guides/destinations.md)
   * [License usage](guides/license-usage.md)
-  * [Customer AI profile insights](guides/customer-ai-profiles.md)
-  * [Customer AI audience insights](guides/customer-ai-audiences.md)
+  * [License usage (limited release)](guides/license-usage-limited.md)
 * Customize dashboards {#customize}  
   * [Customization overview](customize/overview.md)
   * [Modify dashboards](customize/modify.md)
@@ -28,6 +27,8 @@ feature: Dashboards
   * [Standard widgets](customize/standard-widgets.md)
   * [Custom widgets](customize/custom-widgets.md)
   * [Edit schema](customize/edit-schema.md)
+* Insights use cases {#insights-use-cases}
+  * [Consent analysis](insights-use-cases/consent-analysis.md)
 * Application integrations {#integrations}
   * [Power BI](integrations/power-bi.md)
 * [Query dashboard datasets](query.md)

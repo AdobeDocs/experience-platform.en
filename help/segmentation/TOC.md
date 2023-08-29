@@ -27,7 +27,7 @@ feature: Segments
     - [Audience dashboard](ui/audience-dashboard.md)
     - [Audience Composition](ui/audience-composition.md)
     - [Segment Builder](ui/segment-builder.md)
-    - [Look-Alike Audiences](ui/lookalike-audiences.md)
+    - [Look-alike audiences](ui/lookalike-audiences.md)
     - [Prospect audiences](ui/prospect-audience.md)
     - [Edge segmentation](ui/edge-segmentation.md)
     - [Streaming segmentation](ui/streaming-segmentation.md)
