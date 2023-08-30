@@ -20,7 +20,7 @@ This document covers essential concepts related to processing privacy requests f
 
 >[!IMPORTANT]
 >
->The privacy request in this guide does **not** cover account deletion for B2B account profiles.
+>The privacy request in this guide does **not** cover B2B non-person entities.
 
 ## Getting started
 
