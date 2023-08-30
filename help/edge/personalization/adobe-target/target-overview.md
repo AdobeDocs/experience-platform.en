@@ -47,7 +47,7 @@ The following diagram helps you understand the workflow of [!DNL Target] and [!D
 
 To enable [!DNL Target], do the following:
 
-1. Enable [!DNL Target] in your [datastream](../../datastreams/overview.md) with the appropriate client code.
+1. Enable [!DNL Target] in your [datastream](../../../datastreams/overview.md) with the appropriate client code.
 1. Add the `renderDecisions` option to your events.
 
 Then, optionally, you can also add the following options:

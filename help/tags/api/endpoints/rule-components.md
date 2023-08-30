@@ -782,7 +782,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the the specified rule component's extension.
+A successful response returns the details of the specified rule component's extension.
 
 ```json
 {
@@ -902,7 +902,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the the specified rule component's origin.
+A successful response returns the details of the specified rule component's origin.
 
 ```json
 {

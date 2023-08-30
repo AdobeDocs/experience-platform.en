@@ -6,7 +6,7 @@ exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
 ---
 # Adobe Experience Platform Web SDK overview {#overview}
 
-Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe Experience Platform Edge Network. In addition to the JavaScript library, there is a [tag extension](./extension/web-sdk-extension-configuration.md) to help with your Web SDK configurations.
+Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe Experience Platform Edge Network. In addition to the JavaScript library, there is a [tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) to help with your Web SDK configurations.
 
 For a step by step guide to setting up the Web SDK with tags and sending data to the solutions please see our [Implement Adobe Experience Cloud with Web SDK tutorial](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=en).
 
@@ -19,7 +19,7 @@ For a step by step guide to setting up the Web SDK with tags and sending data to
 [!DNL Adobe Experience Platform Web SDK] is part of the collection that makes up the [!DNL Adobe Experience Edge]. [!DNL Experience Edge] consists of the following technologies:
 
 * **[[!DNL Adobe Experience Platform Web SDK]](#overview):** A JavaScript SDK and tag extension to dramatically simplify deploying [!DNL Adobe] technologies.
-* **[[!DNL Adobe Experience Platform Mobile SDK]](https://aep-sdks.gitbook.io/docs/getting-started/overview):** An extension to the v5 mobile SDK to allow customers to use the new deployment methodology
+* **[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/):** An extension to the v5 mobile SDK to allow customers to use the new deployment methodology
 * **[[!DNL Adobe Experience Platform Edge Network]](../server-api/overview.md):** A global distributed network of servers that enable a new methodology of deploying [!DNL Adobe] products
 
 The [!DNL Adobe Experience Edge] is a new framework for low-latency data collection, pluggable computing and rapid data activation across all addressable channels.

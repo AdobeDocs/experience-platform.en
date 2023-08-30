@@ -27,7 +27,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning an
 
 ### [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] allows users to divide their customers into smaller groups that share similar traits. These segments can subsequently be evaluated to provide better analysis on your [!DNL Real-Time Customer Profile] data. [!DNL Query Service] can be used to provide this analysis by running queries on this segment data within the [!DNL Data Lake]. Please read the [!DNL Segmentation Service] overview for more information about segmentation, and the [!DNL Profile Query Language] (PQL) guide for more information on how to analyze segments.
+Adobe Experience Platform [!DNL Segmentation Service] allows users to divide their customers into smaller groups that share similar traits. These audiences can subsequently be evaluated to provide better analysis on your [!DNL Real-Time Customer Profile] data. [!DNL Query Service] can be used to provide this analysis by running queries on this audience data within the [!DNL Data Lake]. Please read the [!DNL Segmentation Service] overview for more information about segmentation, and the [!DNL Profile Query Language] (PQL) guide for more information on how to analyze audiences.
 
 ## Use cases
 
@@ -35,7 +35,7 @@ Adobe Experience Platform [!DNL Segmentation Service] allows users to divide the
 
 ### Adobe Analytics browse abandonment
 
-This [browse abandonment example centers on using Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) data to create a particular actionable audience. [!DNL Query Service] accommodates complex logic for segmentation to calculate various personalized attributes for use downstream, or to greatly simplify how you build out your segments. 
+This [browse abandonment example centers on using Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) data to create a particular actionable audience. [!DNL Query Service] accommodates complex logic for segmentation to calculate various personalized attributes for use downstream, or to greatly simplify how you build out your audiences. 
 
 ### Looker BI dashboards
 

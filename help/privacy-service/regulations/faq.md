@@ -138,7 +138,7 @@ The following questions relate specifically to the GDPR.
 
 A **regulation** is a binding legislative act and must be applied in its entirety across the EU. A **directive** is a legislative act that sets out a goal that all EU countries must achieve, but it is up to the individual countries to decide how.
 
-It is important to note that the GDPR is a regulation, in contrast the the previous legislation (the Data Protection Directive), which is a directive.
+It is important to note that the GDPR is a regulation, in contrast the previous legislation (the Data Protection Directive), which is a directive.
 
 ### How does GDPR affect policy surrounding data breaches?
 

@@ -1,9 +1,14 @@
 ---
 title: Create a Google PubSub Source Connection in the UI
 description: Learn how to create a Google PubSub source connector using the Platform user interface.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
 ---
 # Create a [!DNL Google PubSub] source connection in the UI
+
+>[!IMPORTANT]
+>
+>The [!DNL Google PubSub] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
 This tutorial provides steps for creating a [!DNL Google PubSub] (hereinafter referred to as "[!DNL PubSub]") using the Platform user interface.
 

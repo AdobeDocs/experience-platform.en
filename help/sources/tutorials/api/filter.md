@@ -11,6 +11,7 @@ exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
 >Support for filtering row-level data is currently only available to the following sources:
 >
 >* [Google BigQuery](../../connectors/databases/bigquery.md)
+>* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
 >* [Salesforce](../../connectors/crm/salesforce.md)
 >* [Snowflake](../../connectors/databases/snowflake.md)
 

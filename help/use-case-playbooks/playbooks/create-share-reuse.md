@@ -58,11 +58,11 @@ The behavior described above is true for all assets that get created, except for
 >
 >Once objects are generated, you can continue to test in the development sandboxes by adding data. You can test the assets as long as you want in the development sandbox and you can replicate the asset logic (segment definitions, journeys, schemas, and so on) in the production sandbox when you are ready.
 
-### Reuse playbooks {#reuse-playbooks}
+## Reuse playbooks {#reuse-playbooks}
 
 By creating multiple instances of the same playbook, you can implement the same use case later, without modifying the details of your previous implementation of the use case. 
 
-### Share the playbook and the generated assets with other team members {#share-playbook}
+## Share the playbook and the generated assets with other team members {#share-playbook}
 
 You can share the generated instance and assets with other team members. To do this, copy the URL link from the browser and share it with your team to give them an overview of the generated assets.
 
