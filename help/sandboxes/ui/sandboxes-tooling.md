@@ -1,6 +1,6 @@
 ---
 title: Sandboxes Tooling
-description: Seamlessly export and import Sandbox configurations between sandboxes
+description: Seamlessly export and import Sandbox configurations between sandboxes.
 ---
 
 # [!BADGE Beta] Sandbox tooling
@@ -13,9 +13,9 @@ description: Seamlessly export and import Sandbox configurations between sandbox
 >
 >Sandbox tooling is a foundational capability that supports both [!DNL Real-Time Customer Data Platform] and [!DNL Journey Optimizer].
 
-The sandbox tooling feature allows you to improve configuration accuracy across sandboxes by allowing for the seamless export and import of sandbox configurations between sandboxes, while also reducing time to value for the implementation process to move successful configurations across sandboxes.
+Improve configuration accuracy across sandboxes and seamlessly export and import sandbox configurations between sandboxes with the sandbox tooling feature. Use sandbox tooling to reduce the time to value for the implementation process and move successful configurations across sandboxes.
 
-Allows users to select different objects and export them into a package. A package can consist of a single object, multiple objects, or an entire sandbox.
+You can use sandbox tooling to select different objects and export them into a package. A package can consist of a single object, multiple objects, or an entire sandbox.
 
 ## Import objects into a package
 
@@ -23,7 +23,7 @@ Allows users to select different objects and export them into a package. A packa
 >
 >You can only import a package if you have permission to access the objects.
 
-For this example, we will go through the process of importing a schema that has been created and adding it to a package. You can use the same process to import other objects, for example, datasets, journey, and many more.
+This example documents the process of importing a schema that has been created and adding it to a package. You can use the same process to import other objects, for example, datasets, journey, and many more.
 
 ### Add object to a new package
 
@@ -31,9 +31,9 @@ Select **[!UICONTROL Schemas]** from the left navigation and then select **[!UIC
 
 ![List of schemas showing the dropdown menu highlighting the [!UICONTROL Add to package] control.](../images/ui/sandbox-tooling/add-to-package.png)
 
-From the **[!UICONTROL Add to package]** page, select **[!UICONTROL Create new package]**. Provide a [!UICONTROL Name] for your package and an optional [!UICONTROL Description], then select **[!UICONTROL Add]**.
+From the **[!UICONTROL Add to package]** dialog, select **[!UICONTROL Create new package]**. Provide a [!UICONTROL Name] for your package and an optional [!UICONTROL Description], then select **[!UICONTROL Add]**.
 
-![[!UICONTROL Add to package] page, showing [!UICONTROL Add to package] selected and highlighting [!UICONTROL Add].](../images/ui/sandbox-tooling/create-new-package.png)
+![[!UICONTROL Add to package] dialog, showing [!UICONTROL Add to package] selected and highlighting [!UICONTROL Add].](../images/ui/sandbox-tooling/create-new-package.png)
 
 You are returned to the **[!UICONTROL Schemas]** environment. You can now add additional objects to the package you created by following the next steps listed below.
 
@@ -43,9 +43,9 @@ Select **[!UICONTROL Schemas]** from the left navigation and then select **[!UIC
 
 ![List of schemas showing the dropdown menu highlighting the [!UICONTROL Add to package] control.](../images/ui/sandbox-tooling/add-to-package.png)
 
-The **[!UICONTROL Add to package]** page appears, select **[!UICONTROL Existing package]**. Select the **[!UICONTROL Package name]** drop down and select the package required, then select **[!UICONTROL Add]**.
+The **[!UICONTROL Add to package]** dialog appears, select **[!UICONTROL Existing package]**. Select the **[!UICONTROL Package name]** drop down and select the package required, then select **[!UICONTROL Add]**.
 
-![[!UICONTROL Add to package] page, showing a selected package from the drop down.](../images/ui/sandbox-tooling/add-to-existing-package.png)
+![[!UICONTROL Add to package] dialog, showing a selected package from the drop down.](../images/ui/sandbox-tooling/add-to-existing-package.png)
 
 The list of objects added to the package is listed. To publish the package and make it available to be imported into sandboxes, select **[!UICONTROL Publish]**.
 
@@ -53,7 +53,7 @@ The list of objects added to the package is listed. To publish the package and m
 
 Select **[!UICONTROL Publish]** to confirm to publication of the package.
 
-![Publish package confirmation page, highlighting the [!UICONTROL Publish] option.](../images/ui/sandbox-tooling/publish-package-confirmation.png)
+![Publish package confirmation dialog, highlighting the [!UICONTROL Publish] option.](../images/ui/sandbox-tooling/publish-package-confirmation.png)
 
 You are returned to the **[!UICONTROL Packages]** tab in the [!UICONTROL Sandboxes] environment, where you can see the new published package.
 
@@ -77,7 +77,7 @@ The [!UICONTROL Package object and dependencies] page shows a list of all assets
 >
 >Dependent objects can be replaced with existing ones in the target sandbox. This allows you to reuse existing objects rather than creating a new version.
 
-To use an existing object, select the pencil icon beside the dependent object. Here you will see the options to create new or use existing. Select **[!UICONTROL Use existing].
+To use an existing object, select the pencil icon beside the dependent object. Here you will see the options to create new or use existing. Select **[!UICONTROL Use existing]**.
 
 ![The [!UICONTROL Package object and dependencies] page showing dependent object options [!UICONTROL Create new] and [!UICONTROL Use existing].](../images/ui/sandbox-tooling/use-existing-object.png)
 
@@ -103,7 +103,7 @@ Select **[!UICONTROL View imported objects]** from the right details pane on the
 
 Use the arrows to expand objects to view the full list of fields that have been imported into the package.
 
-![The sandboxes [!UICONTROL Imported page] show a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)
+![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)
 
 #### View import details
 
@@ -111,9 +111,9 @@ Select **[!UICONTROL View import details]** from the right details pane in the *
 
 ![The sandboxes [!UICONTROL Imports] tab highlights the [!UICONTROL View import details] selection in the right pane.](../images/ui/sandbox-tooling/view-import-details.png)
 
-The **[!UICONTROL Import details]** page shows a detailed breakdown of the import.
+The **[!UICONTROL Import details]** dialog shows a detailed breakdown of the import.
 
-![The [!UICONTROL Import details] page showing a detailed breakdown of the import.](../images/ui/sandbox-tooling/import-details.png)
+![The [!UICONTROL Import details] dialog showing a detailed breakdown of the import.](../images/ui/sandbox-tooling/import-details.png)
 
 >[!NOTE]
 >
