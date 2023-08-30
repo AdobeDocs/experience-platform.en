@@ -3,7 +3,7 @@ title: Sandboxes Tooling
 description: Seamlessly export and import Sandbox configurations between sandboxes
 ---
 
-# [!BADGE Beta]{type=Informative} Sandbox tooling
+# [!BADGE Beta] Sandbox tooling
 
 >[!IMPORTANT]
 >
