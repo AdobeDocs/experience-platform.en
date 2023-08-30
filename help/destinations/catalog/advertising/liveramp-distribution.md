@@ -14,29 +14,29 @@ Use the [!DNL LiveRamp - Distribution] connection to activate audiences previous
 
 [!DNL LiveRamp - Distribution] currently supports audience activation to the following platforms:
 
-* 4C Insights
-* Acast
-* Amobee
-* Ampersand.tv
-* Captify
-* Cardlytics
-* DAX
-* [Disney](#disney)
-* Hulu
-* Ibotta
-* iHeartMedia
-* Index Exchange
-* Magnite
-* One Fox
-* Pandora
-* Reddit
-* Rhythm One (Unruly)
-* [Roku](#roku)
-* Spotify
-* Taboola
-* TargetSpot
-* Teads
-* WB Discovery
+* [!DNL 4C Insights]
+* [!DNL Acast]
+* [!DNL Amobee]
+* [!DNL Ampersand.tv]
+* [!DNL Captify]
+* [!DNL Cardlytics]
+* [!DNL DAX]
+* [[!DNL Disney]](#disney)
+* [!DNL Hulu]
+* [!DNL Ibotta]
+* [!DNL iHeartMedia]
+* [!DNL Index Exchange]
+* [!DNL Magnite]
+* [!DNL One Fox]
+* [!DNL Pandora]
+* [!DNL Reddit]
+* [!DNL Rhythm One (Unruly)]
+* [[!DNL Roku]](#roku)
+* [!DNL Spotify]
+* [!DNL Taboola]
+* [!DNL TargetSpot]
+* [!DNL Teads]
+* [!DNL WB Discovery]
 
 ## Use cases {#use-cases}
 
@@ -75,8 +75,6 @@ Each of the destinations [supported](#supported-destinations) by [!DNL LiveRamp 
 
 See the sections below for detailed guidance on how to configure each destination.
 
-
-
 ### DESTINATION NAME {#destination-name}
 
 >[!CONTEXTUALHELP]
@@ -86,9 +84,7 @@ See the sections below for detailed guidance on how to configure each destinatio
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-
-
-### 4C Insights {#4cinsights}
+### [!DNL 4C Insights] {#4cinsights}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_4cinsights_profile_id"
@@ -97,7 +93,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-### Acast {#acast}
+### [!DNL Acast] {#acast}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_acast_client"
@@ -106,7 +102,17 @@ To configure details for the destination, fill in the required and optional fiel
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-### Disney {#disney}
+### [!DNL Amobee] {#amobee}
+
+### [!DNL Ampersand.tv] {#ampersand-tv}
+
+### [!DNL Captify] {#captify}
+
+### [!DNL Cardlytics] {#aardlytics}
+
+### [!DNL DAX] {#dax}
+
+### [!DNL Disney] {#disney}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_agreement"
@@ -132,7 +138,25 @@ To configure details for the destination, fill in the required and optional fiel
 
 ![Platform UI image showing the destination connection screen]()
 
-### Roku {#Roku}
+### [!DNL Hulu] {#hulu}
+
+### [!DNL Ibotta] {#Ibotta}
+
+### [!DNL iHeartMedia] {#iheartmedia}
+
+### [!DNL Index Exchange] {#index-exchange}
+
+### [!DNL Magnite] {#magnite}
+
+### [!DNL One Fox] {#one-fox}
+
+### [!DNL Pandora] {#pandora}
+
+### [!DNL Reddit] {#reddit}
+
+### [!DNL Rhythm One (Unruly)] {#rhythm-one}
+
+### Roku {#roku}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_roku_email"
@@ -150,6 +174,16 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Roku account representative email address]**: Enter the email address of your Roku account representative. To enter multiple addresses, separate them by commas.
 
 ![Platform UI image showing the destination connection screen]()
+
+### [!DNL Spotify] {#spotify}
+
+### [!DNL Taboola] {#taboola}
+
+### [!DNL TargetSpot] {#targetspot}
+
+### [!DNL Teads] {#teads}
+
+### [!DNL WB Discovery] {#wb-discovery}
 
 ## Configure identifier settings {#identifier-settings}
 
