@@ -69,34 +69,64 @@ To authenticate to the destination, fill in the required fields and select **[!U
 * **[!UICONTROL Token URL]**: Your LiveRamp token URL.
 * **[!UICONTROL LiveRamp organization ID]**: The organization ID assigned to your LiveRamp account.
 
-
 ## Destination-specific settings {#destination-settings}
 
 Each of the destinations [supported](#supported-destinations) by [!DNL LiveRamp - Onboarding] requires you to fill in specific configuration options.
 
 See the sections below for detailed guidance on how to configure each destination.
 
+
+
+### DESTINATION NAME {#destination-name}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_<DESTINATION_NAME>_<FIELD_NAME>"
+>title="POPOVER TITLE. VISIBLE IN THE UI. USE THE FIELD NAME."
+>abstract="ENTER FIELD DESCRIPTION"
+
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
+
+
+
+### 4C Insights {#4cinsights}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_4cinsights_profile_id"
+>title="4C Brand Profile ID"
+>abstract="Enter the numeric ID associated with your 4C Brand Profile. If you do not have this ID, please contact your 4C client services representative."
+
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
+
+### Acast {#acast}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_acast_client"
+>title="Client name"
+>abstract="Enter the name of the client distributing data. Do not use spaces in the client name."
+
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
+
 ### Disney {#disney}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_agreement"
->title="Advertiser data terms agreement"
+>title="Advertiser data destination terms agreement"
 >abstract="Type in `I AGREE` to confirm the acknowledgement and agreement to the Disney advertiser data terms."
->additional-url="" text="Read the agreement"
+>additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Read the agreement"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_client"
 >title="Distribution account"
->abstract="Select your Disney distribution account from the list."
+>abstract="The name of your company/distribution account as you would like it to appear to the partner. Use your company name by default, but please contact your partner account representative if unsure. Do not use whitespace or special characters."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_email"
 >title="Email address"
->abstract="Enter an email address tied to an individual. This email address serves as a signature to the advertiser data terms agreement."
+>abstract="Enter an email address tied to an individual. This email address serves as a signature to the advertiser data terms agreement. This email address will also be used to contact you if needed."
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-* **[!UICONTROL Advertiser data terms agreement]**: Type in `I AGREE` to confirm the acknowledgement and agreement to the Disney advertiser data terms.
+* **[!UICONTROL Advertiser data destination terms agreement]**: Type in `I AGREE` to confirm the acknowledgement and agreement to the Disney advertiser data terms.
 * **[!UICONTROL Distribution account]**: Select your Disney distribution account from the list.
 * **[!UICONTROL Email address]**: Enter an email address tied to an individual. This email address serves as a signature to the advertiser data terms agreement.
 
@@ -112,7 +142,7 @@ To configure details for the destination, fill in the required and optional fiel
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_roku_representative-email"
 >title="Roku account representative email address"
->abstract="Enter the email address of your Roku account representative. To enter multiple addresses, separate them by commas."
+>abstract="Enter the email address of your Roku account representative. This address is used to send taxonomy updates. To enter multiple addresses, separate them by commas."
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
@@ -125,8 +155,21 @@ To configure details for the destination, fill in the required and optional fiel
 
 Each of the destinations [supported](#supported-destinations) by [!DNL LiveRamp - Onboarding] supports specific identifiers.
 
-Before you can connect to the destination, select the identifiers supported by your destination.
+Before you can connect to the destination, select the identifiers supported by your destination, from the list below.
 
+|Destination|Supported identifiers|
+|---|---|
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|Roku|<ul><li>[!UICONTROL [Platform ID]]</li></ul>|
 
 ### Enable alerts {#enable-alerts}
 
