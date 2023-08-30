@@ -25,12 +25,21 @@ This guide requires a working understanding of XDM System. Refer to the [XDM ove
 >
 >This section covers how to manually create a new schema in the UI. If you are ingesting CSV data into Platform, you can opt to [map that data to an XDM schema created by AI-generated recommendations](../../../ingestion/tutorials/map-csv/recommendations.md) (currently in beta) without having to manually create the schema yourself.
 
-In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner. 
+In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner.
 
-<!-- Obsolete:
-In the dropdown that appears, you can choose between **[!UICONTROL XDM Individual Profile]** and **[!UICONTROL XDM ExperienceEvent]** as the base class for the schema. Alternatively, you can select **[!UICONTROL Browse]** to select from the full list of available classes, or [create a new custom class](./classes.md#create) instead. -->
+<!-- Update image below: -->
 
-<!-- ![](../../images/ui/resources/schemas/create-schema.png) -->
+![The Schemas workspace with [!UICONTROL Create Schema] highlighted.](../../images/ui/resources/schemas/create-schema.png)
+
+The [!UICONTROL Create schema] workflow appears.
+
+<!-- Provide correct image below: -->
+
+![The [!UICONTROL Create schema] workflow with the three class options highlighted.](../../images/ui/resources/schemas/create-schema.png)
+
+You can choose a base class for the schema by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**. See the [XDM individual profile)(../../classes/individual-profile.md) and [XDM ExperienceEvent](../../classes/experienceevent.md) documentation for more information on these classes.
+
+<!-- confirm workflow below -->
 
 Once you select a class, the [!DNL Schema Editor] appears and the schema's base structure (provided by the class) is shown in the canvas. From here, you can use the right rail to add a **[!UICONTROL Display name]** and **[!UICONTROL Description]** for the schema.
 
