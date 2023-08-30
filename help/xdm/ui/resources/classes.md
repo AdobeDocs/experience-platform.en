@@ -21,15 +21,21 @@ While not required for this guide, it is recommended that you also follow the tu
 
 ## Create a new class {#create}
 
-In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**, then select **[!UICONTROL Browse]** from the dropdown.
+In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**, then select ...
 
-![](../../images/ui/resources/classes/browse-classes.png)
+ <!-- **[!UICONTROL Browse]** from the dropdown. -->
+
+<!-- ![](../../images/ui/resources/classes/browse-classes.png) -->
+
+<!-- Below is probably obsolete: -->
 
 A dialog appears that allows you select from a list of available classes. At the top of the dialog, select **[!UICONTROL Create new class]**. You can then give your new class a display name (a short, descriptive, unique, and user-friendly name for the class), a description, and a behavior for the data that the schema will define (**[!UICONTROL Record]** or **[!UICONTROL Time-series]**).
 
 When finished, select **[!UICONTROL Assign class]**.
 
 ![](../../images/ui/resources/classes/class-details.png)
+
+<!-- Hopefully below is still accurate -->
 
 The [!DNL Schema Editor] appears, showing a new schema in the canvas that is based on the custom class you just created. Since no fields have been added to the class yet, the schema only contains an `_id` field, which represents the system-generated unique identifier that is automatically applied to all resources in the [!DNL Schema Registry].
 
