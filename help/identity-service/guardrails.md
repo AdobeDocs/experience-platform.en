@@ -65,7 +65,7 @@ The following section contains additional information on guardrails for Identity
 > * A custom namespace where the person identifiers (such as CRM IDs) are configured as cookie/device identity type.
 > * A custom namespace where cookie/device identifiers are configured as cross-device identity type.
 >
->Once this feature is available, graphs that exceed the limit of 50 identities will be reduced down to 50 identities. This could result in a minimal increase in the number of profiles qualifying for an audience, as these profiles were previously ignored from Segmentation and Activation.
+>Once this feature is available, graphs that exceed the limit of 50 identities will be reduced down to up to 50 identities. For Real-time CDP B2C Edition, this could result in a minimal increase in the number of profiles qualifying for an audience, as these profiles were previously ignored from Segmentation and Activation.
 
 When a full identity graph is updated, Identity Service deletes the oldest identity in the graph before adding the latest identity. This is to maintain accuracy and relevance of identity data. This process of deletion follows two primary rules:
 
