@@ -9,7 +9,7 @@ exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 
 >[!IMPORTANT]
 >
->Automatic consent policy enforcement is only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
+>Automatic policy enforcement is only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
 
 Once data is labeled and data usage policies are defined, you can enforce data usage compliance with policies. When activating audiences to destinations, Adobe Experience Platform automatically enforces usage policies should any violations occur.
 
