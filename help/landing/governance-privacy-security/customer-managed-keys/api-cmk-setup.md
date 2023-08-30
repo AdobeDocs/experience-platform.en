@@ -1,17 +1,10 @@
 ---
-title: Customer-Managed Keys in Adobe Experience Platform
-description: Learn how to set up your own encryption keys for data stored in Adobe Experience Platform.
-exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
+title: Setup and Configure Customer-Managed Keys using the API
+description: Learn how to set up your CMK app with your Azure tenant and send your encryption key ID to Adobe Experience Platform.
 ---
-# Customer-managed keys in Adobe Experience Platform
+# Setup and configure customer-managed keys using the API
 
-Data stored on Adobe Experience Platform is encrypted at rest using system-level keys. If you are using an application built on top of Platform, you can opt to use your own encryption keys instead, giving you greater control over your data security.
-
->[!NOTE]
->
->Data in Adobe Experience Platform data lake and Profile Store are encrypted using CMK. These are regarded as your primary data stores.
-
-This document covers the process for enabling the customer-managed keys (CMK) feature in Platform.
+This document covers the process for enabling the customer-managed keys (CMK) feature in Platform using the API. For instructions on how to complete this process using the UI, refer to the [UI CMK setup document](./ui-cmk-setup.md).
 
 ## Prerequisites
 
@@ -20,89 +13,11 @@ In order to enable CMK, your [!DNL Azure] Key Vault must be configured with the 
 * [Enable purge protection](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Enable soft-delete](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
 * [Configure access using [!DNL Azure] role-based access control](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
-
-## Process summary
-
-CMK is included in the Healthcare Shield and the Privacy and Security Shield offerings from Adobe. After your organization purchases a license for one of these offerings, you can begin a one-time process for setting up the feature.
-
->[!WARNING]
->
->After setting up CMK, you cannot revert to system-managed keys. You are responsible for securely managing your keys and providing access to your Key Vault, Key, and CMK app within [!DNL Azure] to prevent losing access to your data.
-
-The process is as follows:
-
-1. [Configure an [!DNL Azure] Key Vault](#create-key-vault) based on your organization's policies, then [generate an encryption key](#generate-a-key) that will ultimately be shared with Adobe.
-1. Use API calls to [set up the CMK app](#register-app) with your [!DNL Azure] tenant. 
-1. Use API calls to [send your encryption key ID to Adobe](#send-to-adobe) and start the enablement process for the feature.
-1. [Check the status of the configuration](#check-status) to verify whether CMK has been enabled.
-
-Once the setup process is complete, all data onboarded into Platform across all sandboxes will be encrypted using your [!DNL Azure] key setup. To use CMK, you will leverage [!DNL Microsoft Azure] functionality that may be part of their [public preview program](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
-
-## Configure an [!DNL Azure] Key Vault {#create-key-vault}
-
-CMK only supports keys from a [!DNL Microsoft Azure] Key Vault. To get started, you must work with [!DNL Azure] to create a new enterprise account, or use an existing enterprise account  and follow the steps below to create the Key Vault.
-
->[!IMPORTANT]
->
->Only the Premium and Standard service tiers for [!DNL Azure] Key Vault are supported. [!DNL Azure Managed HSM], [!DNL Azure Dedicated HSM] and [!DNL Azure Payments HSM] are not supported. Refer to the [[!DNL Azure] documentation](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) for more information on offered key management services.
-
->[!NOTE]
->
->The documentation below only covers the basic steps to create the key vault. Outside of this guidance, you should configure the key vault as per your organization's policies.
-
-Log in to the [!DNL Azure] portal and use the search bar to locate **[!DNL Key vaults]** under the list of services.
-
-![Search and select key vaults](../images/governance-privacy-security/customer-managed-keys/access-key-vaults.png)
-
-The **[!DNL Key vaults]** page appears after selecting the service. From here, select **[!DNL Create]**.
-
-![Create key vault](../images/governance-privacy-security/customer-managed-keys/create-key-vault.png)
-
-Using the provided form, fill in the basic details for the key vault, including a name and an assigned resource group.
-
->[!WARNING]
->
->While most options can be left as their default values, **make sure that you enable the soft-delete and purge protection options**. If you do not turn these features on, you could risk losing access to your data if the key vault is deleted.
->
->![Enable purge protection](../images/governance-privacy-security/customer-managed-keys/basic-config.png)
-
-From here, continue going through the key vault creation workflow and configure the different options according to your organization's policies.
-
-Once you arrive at the **[!DNL Review + create]** step, you can review the details of the key vault while it goes through validation. Once validation passes, select **[!DNL Create]** to complete the process.
-
-![Basic config for the key vault](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
-
-### Configure networking options
-
-If your key vault is configured to restrict public access to certain virtual networks or disable public access entirely, you must grant Microsoft a firewall exception.
-
-Select **[!DNL Networking]** in the left navigation. Under **[!DNL Firewalls and virtual networks]**, select the checkbox **[!DNL Allow trusted Microsoft services to bypass this firewall]**, then select **[!DNL Apply]**.
-
-![Basic config for the key vault](../images/governance-privacy-security/customer-managed-keys/networking.png)
-
-### Generate a key {#generate-a-key}
-
-Once you have created a key vault, you can generate a new key. Navigate to the **[!DNL Keys]** tab and select **[!DNL Generate/Import]**.
-
-![Generate a key](../images/governance-privacy-security/customer-managed-keys/view-keys.png)
-
-Use the provided form to provide a name for the key, and select **RSA** for the key type. At a minimum, the **[!DNL RSA key size]** must be at least **3072** bits as required by [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] is also compatible with RSA 3027.
-
->[!NOTE]
->
->Remember the name you provide for the key, as it will be used in later step when [sending the key to Adobe](#send-to-adobe).
-
-Use the remaining controls to configure the key you want to generate or import as desired. When finished, select **[!DNL Create]**.
-
-![Configure key](../images/governance-privacy-security/customer-managed-keys/configure-key.png)
-
-The configured key appears in the list of keys for the vault.
-
-![Key added](../images/governance-privacy-security/customer-managed-keys/key-added.png)
+* [Configure an [!DNL Azure] Key Vault](./azure-key-vault-config.md)
 
 ## Set up the CMK app {#register-app}
 
-Once you have your key vault configured, the next step is to register for the CMK application that will link to your [!DNL Azure] tenant.
+After you have your key vault configured, the next step is to register for the CMK application that will link to your [!DNL Azure] tenant.
 
 ### Getting started
 
@@ -276,21 +191,4 @@ The `status` attribute can have one of four values with the following meanings:
 1. `COMPLETED`: The key vault and key name have been added to the datastores.
 1. `FAILED`: A problem occurred, primarily related to the key, key vault, or multi-tenant app setup.
 
-## Revoke access {#revoke-access}
-
-If you want to revoke Platform access to your data, you can remove the user role associated with the application from the key vault within [!DNL Azure].
-
->[!WARNING]
->
->Disabling the key vault, Key, or CMK app can result in a breaking change. Once the key vault, Key, or CMK app is disabled and data is no longer accessible in Platform, any downstream operations related to that data will no longer be possible. Ensure that you understand the downstream impacts of revoking Platform access to your key before you make any changes to your configuration.
-
-After removing key access or disabling/deleting the key from your [!DNL Azure] key vault, it may take anywhere from a few minutes, to 24 hours for this configuration to propagate to primary data stores. Platform workflows also include cached and transient data stores required for performance and core application functionality. The propagation of CMK revocation through such cached and transient stores may take up to seven days as determined by their data processing workflows. For example, this means that the Profile dashboard would retain and display data from its cache data store and take seven days to expire the data held in cache data stores as part of the refresh cycle. The same time delay applies for data to become available again when re-enabling access to the application.
-
->[!NOTE]
->
->There are two use-case-specific exceptions to the seven day dataset expiration on non-primary (cached/transient) data. See their respective documentation for more information on these features.<ul><li>[Adobe Journey Optimizer URL Shortener](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html#message-preset-sms)</li><li>[Edge Projections](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
-
-## Next steps
-
-By completing the above steps, you have successfully enabled CMK for your organization. Data that is ingested into primary data stores will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. 
 
