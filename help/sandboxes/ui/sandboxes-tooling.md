@@ -17,7 +17,7 @@ Improve configuration accuracy across sandboxes and seamlessly export and import
 
 You can use sandbox tooling to select different objects and export them into a package. A package can consist of a single object, multiple objects, or an entire sandbox.
 
-## Objects  supported for sandbox tooling
+## Objects supported for sandbox tooling
 
 The table below lists objects that are currently supported for sandbox tooling:
 
