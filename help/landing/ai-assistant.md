@@ -176,12 +176,11 @@ The following is a list of currently supported data usage questions grouped by d
 * How many duplicate segments are activated?
 * List segments that were created in the last year.
 * Show me segments that were last modified before {DATE}.
-* Which fields are used across all activated segments?
-* How many unique segment names are associated with the schema?
+* How many unique segment names are associated with the {SCHEMA_NAME} schema?
 * Which schemas are most commonly used across segments?
 * How many schemas do I have?
-* Which dataset uses {SCHEMA_NAME} schema?
-* List all schemas modified in the last 1 week?
+* Which dataset(s) use {SCHEMA_NAME} schema?
+* List all schemas modified in the last week.
 * How many schemas are profile enabled?
 * List all the experience event class schemas?
 * Which datasets are ingested into the {SCHEMA_NAME} schema?
