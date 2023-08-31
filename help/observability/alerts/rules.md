@@ -17,7 +17,7 @@ The following alert rules are specific to [Data Ingestion](../../ingestion/home.
 
 | I/O Event subscription | Alert rule | Description |
 | --- | --- | --- |
-| Source Flow Run Info | Sources Flow Run Start | This alert triggers when a source connection starts processing data. |
+| Source Flow Run Info | Sources Flow Run Start | This alert triggers when a source connection starts processing data. **Note**: Alert notifications for Sources Flow Run Start is currently only supported for batch sources. You cannot use this alert for streaming sources. |
 | Source Flow Run Info | Sources Flow Run Success | This alert triggers when data is successfully ingested from a source connection. |
 | Source Flow Run Delays, Failures and Errors | Sources Flow Run Failure | This alert triggers when an error occurs while ingesting data from a source connection. |
 | Source Flow Run Delays, Failures and Errors | Ingestion Delay | This alert triggers when a batch ingestion flow run takes longer than 150 minutes to process. |
